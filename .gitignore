@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.lock
+# Lane caches and bulk outputs are rebuilt from code and a data manifest, never committed.
+experiments/*/cache/
+experiments/*/data/
+experiments/*/results/*.npy

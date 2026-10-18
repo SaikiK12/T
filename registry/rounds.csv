@@ -1,0 +1,7 @@
+id,date,lane,title,status,verdict,trials,prereg_sha,path,notes
+R143,,funded,funded-account translation to crypto perps,DONE,PARTIAL,,,experiments/funded,Not actionable. FINDINGS and ROADMAP entry written.
+R144,,challengeoption,challenge-option translation to crypto perps,DONE,PARTIAL,,,experiments/challengeoption,A random start loses about -80 USD per challenge on average.
+R180,2026-10-12,unlocks_sf,unlock-short paper forward,ARMED,PENDING,,,experiments/unlocks_sf,364 tickets appended 2026-10-12T19:23Z; first ZRO entry 2026-10-13 scored 2026-10-20. Go-real gate after 20 scored: mean>0 hit>=55% no event < -40% unlevered.
+R181,2026-10-12,unlocks_deep,what drives the unlock short,DONE,CONFIRMED,,d07ca6d6,experiments/unlocks_deep,In-sample. Unlock USD / daily volume: top tercile (ratio>=0.82) +5.84% n138 t4.06 vs bottom +0.47%. prereg_sha is the 8-char prefix quoted in ROADMAP. Forward scores split at ratio 0.82.
+R182,2026-10-13,hypermine,38-feature search over 900 Binance USD-M perps 2021-2026,DONE,NULL,139377,91e690edcd71470730c51e531c125c52cadea4970c3bd4e366d37480f9f1c6d4,experiments/hypermine,NOISE: n_disc 1777; n_val 2 vs null q95 4; p_search 0.2167; 0 candidates. GPU replay matches stored CPU summaries.
+R183,2026-10-13,hypermine_expand,Bybit perps cross-listed on MEXC: data coverage for 22 new labels,DONE,DATA_PASS,,,experiments/hypermine_expand,Coverage only; no backtest or edge claim. Current-survivor selection.

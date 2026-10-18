@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Frozen specs are hashed byte for byte: git must never rewrite their line endings.
+PREREG.md -text
+FORWARD.md -text
+*.sha256 -text
