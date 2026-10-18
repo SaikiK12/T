@@ -1,20 +1,29 @@
 # T
 
-A structured foundation for a crypto-perps research program. The goal is positive PnL, and the rule is that nothing counts as an edge until it survives pre-registration, a null, held-out data and a forward paper test.
+A research lab for crypto perpetual futures (Binance USD-M archive, the full survivorship-free set of USDT perps,
+hourly, 2021 to 2026). The goal is positive PnL; the rule is that nothing counts as an edge until it survives
+pre-registration, a placebo, data it never saw and a forward paper test.
 
-**Status:** a scaffold. It was built from reading an earlier Claude Code session, not from the original code and data, which stay on the owner's machine. Start with [`docs/FOUNDATION.md`](docs/FOUNDATION.md) for the conventions and [`docs/AUDIT.md`](docs/AUDIT.md) for the weak points found.
+The working question is no longer "which rule wins?" but a map: which signals predict returns before fees, with what
+confidence, in which context (hour and market opens, BTC regime, market-wide flushes, order flow), how far each is
+from paying its costs, and which routes (stacking, context gating, limit-order entries, carry) close that gap.
+
+- [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
+- [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
+  [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
+- `registry/rounds.csv`: one row per round with its trial count (append-only).
+- `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
 
 ## Use
 
 ```
-python3 -m unittest discover -s tests -t .     # needs numpy
-```
-
-```python
-from lab import prereg, registry, gate
-prereg.freeze("experiments/<lane>/PREREG.md")                  # once, before any statistic
-registry.append("registry/rounds.csv", lane="<lane>", title="...", status="REGISTERED", verdict="PENDING")
-gate.go_real(scored_returns, entry_days=entry_days)            # forward tickets, unlevered
+python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
+.venv/bin/python -m unittest discover -s tests -t .
+.venv/bin/python -m lab.data build klines 1h      # archive fetcher (also fundingRate, premiumIndexKlines)
+.venv/bin/python -m lab.flow metrics              # order flow: open interest, long/short, taker ratio; bookDepth
+.venv/bin/python scripts/build_views.py           # research universe + feature tensor
+.venv/bin/python scripts/build_extra_views.py clock|ctx|flow
+.venv/bin/python scripts/run_atlas.py discovery   # and the other scripts/run_*.py, one per lane
 ```
 
 Rules for contributors: [`AGENTS.md`](AGENTS.md). New lane: copy `templates/lane/`.

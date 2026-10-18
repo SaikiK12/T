@@ -99,9 +99,9 @@ def build(kind, symbols, start="2020-01-01", end=data.END, workers=48, root=None
         for i, s in enumerate(symbols, 1):
             if s in manifest or (out / f"{s}.parquet").exists():
                 continue
-            day = lambda k: data._DATE.search(k).group(1) + data._DATE.search(k).group(2)
-            keys = [k for k in data.list_zips(f"{data.UM}/daily/{kind}/{s}/")
-                    if start <= day(k) <= end and (days is None or day(k) in days.get(s, ()))]
+            stamped = [(k, data._DATE.search(k)) for k in data.list_zips(f"{data.UM}/daily/{kind}/{s}/")]
+            stamped = [(k, m.group(1) + m.group(2)) for k, m in stamped if m and m.group(2)]   # skip odd names
+            keys = [k for k, d in stamped if start <= d <= end and (days is None or d in days.get(s, ()))]
             parts = [p for p in ex.map(lambda k: _one(k, kind), keys) if p is not None]
             if not parts:
                 continue

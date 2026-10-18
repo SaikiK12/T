@@ -231,6 +231,59 @@ def stats(acc, names, horizons, eras, group_names, time_only=None, min_symbol_ce
     return df
 
 
+def lift_stats(acc, names, horizons, eras, group_names, min_days=10):
+    """Context lift: for a pass whose groups are the codes of a context view, compare each cell inside context code k
+    with the same cell outside it, day by day. One row per (view, bin, horizon, code, measure):
+      base_bp:  the cell's mean over all codes (its edge without the context)
+      cond_bp, cond_t:  the cell's mean and NW t inside code k
+      lift_bp, lift_t:  mean and NW t of the daily difference inside k minus outside k (days with both)
+      lift_eras_same_sign, lift_eras: half-years where the lift has the sign of the whole-sample lift
+      share: the fraction of the cell's observations that fall in code k; support: the cell's share of its view"""
+    nb, views = acc["nb"], acc["views"]
+    NF, H, G, D = acc["sf"].shape
+    vi = np.repeat(np.arange(len(views)), nb)
+    bi = np.concatenate([np.arange(n) for n in nb])
+    eras = np.asarray(eras, np.int64)
+    whole = np.array([0, D], np.int64)
+    cost_rt = 2e4 * acc["cs"][:, 0] / np.maximum(acc["cs"][:, 1], 1)
+    support = acc["cs"][:, 1] / np.maximum(np.bincount(vi, weights=acc["cs"][:, 1])[vi], 1)
+    out = []
+    for hi, h in enumerate(horizons):
+        lag = lag_for(h)
+        cnt = acc["cnt"][:, hi].astype(np.float64)        # [NF, G, D]
+        C = cnt.sum(axis=1)
+        for meas, key in (("raw", "sf"), ("excess", "sx")):
+            s = acc[key][:, hi].astype(np.float64)
+            S_ = s.sum(axis=1)
+            base = np.where(C > 0, S_ / np.maximum(C, 1), np.nan)
+            m_base = nw_skip(base, lag, whole)[0][:, 0]
+            for gi, gname in enumerate(group_names):
+                ck, sk = cnt[:, gi], s[:, gi]
+                yin = np.where(ck > 0, sk / np.maximum(ck, 1), np.nan)
+                co = C - ck
+                yout = np.where(co > 0, (S_ - sk) / np.maximum(co, 1), np.nan)
+                m_in, t_in, n_in = nw_skip(yin, lag, whole)
+                dif = yin - yout
+                m_l, t_l, n_l = nw_skip(dif, lag, whole)
+                m_le, _, n_le = nw_skip(dif, lag, eras)
+                sign = np.sign(m_l[:, 0])
+                tot = C.sum(axis=1)
+                out.append(pd.DataFrame({
+                    "view": views[vi], "name": np.asarray(names)[views[vi]], "bin": bi, "h": h, "code": gi,
+                    "context_code": gname, "measure": meas, "base_bp": m_base * 1e4,
+                    "cond_bp": m_in[:, 0] * 1e4, "cond_t": t_in[:, 0], "cond_days": n_in[:, 0],
+                    "lift_bp": m_l[:, 0] * 1e4, "lift_t": t_l[:, 0], "lift_days": n_l[:, 0],
+                    "lift_eras_same_sign": np.sum(np.sign(m_le) == sign[:, None], axis=1),
+                    "lift_eras": np.sum(np.isfinite(m_le), axis=1),
+                    "share": ck.sum(axis=1) / np.maximum(tot, 1), "cells": ck.sum(axis=1), "support": support,
+                    "cost_rt_bp": cost_rt}))
+    df = pd.concat(out, ignore_index=True)
+    df.loc[df.lift_days < min_days, ["lift_bp", "lift_t"]] = np.nan
+    df["amplifies"] = np.sign(df.lift_bp) == np.sign(df.base_bp)
+    df["cond_edge_cost"] = df.cond_bp.abs() / df.cost_rt_bp
+    return df
+
+
 def placebo_fdr(real_t, null_ts, grid=None):
     """Thresholds on |t|, the estimated FDR (mean placebo count at or above / real count) and the real count."""
     grid = np.arange(2.0, 10.01, 0.25) if grid is None else grid

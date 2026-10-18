@@ -76,6 +76,33 @@ class AtlasTests(unittest.TestCase):
         self.assertEqual(atlas.threshold(rng.standard_normal(1000), nulls, 0.1), np.inf)
 
 
+class LiftTests(unittest.TestCase):
+    def test_context_that_switches_an_edge_on_is_found(self):
+        T, S = 24 * 300, 40
+        rng = np.random.default_rng(5)
+        bins = rng.integers(0, 5, (4, T, S)).astype(np.int8)
+        ctx = rng.integers(0, 3, T).astype(np.int8)                        # a time-only context with 3 codes
+        ret = (rng.standard_normal((T, S)) * 0.01).astype(np.float32)
+        ret += 0.0006 * ((bins[0] == 4) & (ctx == 1)[:, None])              # the edge exists only in code 1
+        elig = np.ones((T, S), bool)
+        F, X = atlas.forward(ret, elig, 0, T, horizons=(1,))
+        group = np.ascontiguousarray(np.broadcast_to(ctx[:, None], (T, S)))
+        acc = atlas.run(bins, np.arange(4), F, X, np.full((T, S), 0.0006, np.float32), engine.eligible_index(elig),
+                        group, 3, 0, T)
+        df = atlas.lift_stats(acc, ["a", "b", "c", "d"], (1,), np.array([0, 100, 200, 300]), ("c0", "c1", "c2"))
+        d = df[df.measure == "excess"].set_index(["view", "bin", "code"])
+        on, off = d.loc[(0, 4, 1)], d.loc[(0, 4, 0)]
+        self.assertGreater(on.lift_t, 5)
+        self.assertAlmostEqual(on.lift_bp, 6 * 0.8, delta=1.5)                # inside minus outside, net of dilution
+        self.assertTrue(on.amplifies)
+        self.assertLess(off.lift_t, -2)                                      # outside code 1 the edge is weaker
+        self.assertAlmostEqual(on.share, 1 / 3, delta=0.03)
+        self.assertEqual(on.lift_eras_same_sign, 3)
+        noise = df[(df.measure == "excess") & df.view.isin([1, 2, 3])].lift_t.values
+        self.assertLess(np.abs(noise).max(), 4.0)
+        self.assertLess(abs(np.std(noise) - 1), 0.35)
+
+
 class GroupTests(unittest.TestCase):
     def test_sessions_follow_new_york(self):
         def g(stamp):
