@@ -16,7 +16,7 @@ sample = [rules[i] for i in np.random.default_rng(0).choice(len(rules), 512, rep
 edges = search.half_year_edges(u.p, t0, t1)
 t = time.time(); sc = search.score_rules(u, bins, sample, t0, t1, edges); dt = time.time() - t
 print(f"512 single rules: {dt:.1f}s = {dt/512*1000:.0f} ms/rule  -> full singles ~ {len(rules)*dt/512/60:.1f} min")
-print("eras:", len(edges)-1, "| peak t quantiles of the sample (50/90/99/max):", np.round(np.quantile(sc.peak, [.5, .9, .99, 1]), 2))
+print("eras:", len(edges)-1)
 pairs = search.pairs([(int(a), int(b), int(c)) for a, b, c in zip(cat[0][:60], cat[1][:60], cat[2][:60])])
 sample2 = [pairs[i] for i in np.random.default_rng(1).choice(len(pairs), 256, replace=False)]
 t = time.time(); sc2 = search.score_rules(u, bins, sample2, t0, t1, edges); dt = time.time() - t

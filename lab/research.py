@@ -28,6 +28,11 @@ class Universe:
     ret: np.ndarray          # [T, S] next-bar return net of funding paid by longs
     rank: np.ndarray         # [T, S] trailing liquidity rank (1 = most liquid)
     bank: features.Bank
+    index: tuple = None      # engine.eligible_index(elig), computed once
+
+    def __post_init__(self):
+        if self.index is None:
+            self.index = engine.eligible_index(self.elig)
 
     @property
     def holdout_row(self):
@@ -55,7 +60,7 @@ def eval_rules(u, bins, rules, t0, t1, slots=10, cmult=1.0, batch=128, allow_hol
     D = (t1 - t0) // 24
     ret_d, cost_d, act_d = (np.zeros((len(rules), D), np.float32) for _ in range(3))
     for a in range(0, len(rules), batch):
-        out = engine.run_rules(bins, u.ret, u.elig, u.cmat, rules[a:a + batch], t0, t1, slots, cmult)
+        out = engine.run_rules(bins, u.ret, u.elig, u.cmat, rules[a:a + batch], t0, t1, slots, cmult, index=u.index)
         seg = out[:, t0:t1].reshape(len(out), D, 24, 3)
         ret_d[a:a + batch] = seg[..., 0].sum(axis=2)
         cost_d[a:a + batch] = seg[..., 1].sum(axis=2)

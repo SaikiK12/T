@@ -104,14 +104,18 @@ class RegistryTests(unittest.TestCase):
     def test_seed_file_is_valid(self):
         path = ROOT / "registry" / "rounds.csv"
         registry.validate(path)
-        self.assertEqual(registry.program_trials(path), 139377)
+        seed = [r for r in registry.rows(path) if int(r["id"][1:]) <= 183]   # rows imported from the original project
+        self.assertEqual(sum(int(r["trials"]) for r in seed if r["trials"]), 139377)
+        self.assertGreaterEqual(registry.program_trials(path), 139377)       # the journal only grows
         self.assertNotIn(b"\r", path.read_bytes())
 
     def test_ids_continue_and_never_repeat(self):
         with tempfile.TemporaryDirectory() as d:
             path = Path(d) / "rounds.csv"
             registry.append(path, id="R183", lane="a", title="t", status="DONE", verdict="NULL")
-            self.assertEqual(registry.append(path, lane="b", title="t", status="PLANNED", verdict="PENDING"), "R184")
+            self.assertEqual(registry.append(path, lane="b", title="t", status="PLANNED", verdict="PENDING",
+                                             path="experiments/b"), "R184")
+            self.assertEqual(registry.rows(path)[-1]["path"], "experiments/b")
             with self.assertRaises(registry.RegistryError):
                 registry.append(path, id="R184", lane="c", title="t", status="DONE", verdict="NULL")
             with self.assertRaises(registry.RegistryError):

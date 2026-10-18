@@ -65,10 +65,17 @@ class CatalogAndSearch(unittest.TestCase):
         best = rules[int(np.argmax(real.peak))]
         self.assertEqual(best.view, (0,))
         self.assertGreater(float(real.peak.max()), 6.0)
-        null = search.score_rules(planted, bins, rules, t0, t1, edges, ret_override=search.shifted_returns(planted, 24 * 137 + 5))
+        null = search.score_rules(planted, bins, rules, t0, t1, edges, ret_override=search.shifted_returns(planted, 24 * 137 + 5, limit=t1))
         self.assertLess(float(null.peak.max()), 4.0)
         grid, fdr, counts = search.empirical_fdr(real.peak, [null.peak])
         self.assertTrue(fdr[np.searchsorted(grid, 6.0)] < 0.05)
+
+    def test_placebo_shift_stays_inside_its_window(self):
+        u, limit = self.u, 24 * 300
+        out = search.shifted_returns(u, 24 * 50 + 3, limit)
+        self.assertTrue(np.isnan(out[limit:]).all())                         # nothing from later periods
+        np.testing.assert_array_equal(out[0], u.ret[24 * 50 + 3])           # row 0 holds the return from `shift` rows later
+        np.testing.assert_array_equal(out[limit - 1], u.ret[(24 * 50 + 3) - 1])   # wraps around inside the window
 
     def test_pairs_and_triples_are_built_from_distinct_features(self):
         conds = [(0, 5, 7), (1, 0, 2), (2, 3, 3), (0, 0, 1)]

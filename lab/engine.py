@@ -48,7 +48,7 @@ def cost_matrix(rank, tiers=((20, 6e-4), (50, 8e-4), (100, 12e-4)), beyond=20e-4
 
 
 @njit(cache=True)
-def _run(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
+def _run_dense(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
     T, S = ret.shape
     K = len(vidx)
     pos = np.zeros(S, np.int8)
@@ -99,14 +99,106 @@ def _run(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, 
         out[t, 2] = n_act
 
 
+@njit(cache=True)
+def eligible_index(elig):
+    """Per row, the columns that are tradable: (idx [T, max count], count [T])."""
+    T, S = elig.shape
+    cnt = np.zeros(T, np.int32)
+    for t in range(T):
+        for s in range(S):
+            if elig[t, s]:
+                cnt[t] += 1
+    idx = np.zeros((T, max(int(cnt.max()), 1)), np.int32)
+    for t in range(T):
+        j = 0
+        for s in range(S):
+            if elig[t, s]:
+                idx[t, j] = s
+                j += 1
+    return idx, cnt
+
+
+@njit(cache=True)
+def _run(bins, ret, elig, eidx, ecnt, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
+    """Same result as _run_dense, but visits only tradable symbols and the ones currently held (about 10x faster
+    when a tenth of the columns trade at any time)."""
+    T, S = ret.shape
+    K = len(vidx)
+    pos = np.zeros(S, np.int8)
+    age = np.zeros(S, np.int32)
+    wprev = np.zeros(S, np.float32)
+    held = np.empty(S, np.int32)
+    fresh = np.empty(S, np.int32)
+    stamp = np.full(S, -1, np.int64)
+    nheld = 0
+    for t in range(t0, t1):
+        for i in range(nheld):                 # held but no longer tradable: forced out
+            s = held[i]
+            if not elig[t, s]:
+                pos[s] = 0
+        nn = 0
+        for j in range(ecnt[t]):
+            s = eidx[t, j]
+            cnt = 0
+            for k in range(K):
+                x = bins[vidx[k], t, s]
+                if x >= lo[k] and x <= hi[k]:
+                    cnt += 1
+            sig = direction if cnt >= need else 0
+            p = pos[s]
+            if p != 0:
+                age[s] += 1
+                if sig != p and age[s] >= hold:
+                    p = 0
+            elif sig != 0:
+                p = sig
+                age[s] = 0
+            pos[s] = p
+            if p != 0:
+                fresh[nn] = s
+                nn += 1
+        denom = max(nn, slots)
+        r = 0.0
+        tc = 0.0
+        for i in range(nn):
+            s = fresh[i]
+            w = pos[s] / denom
+            x = ret[t, s]
+            if not np.isnan(x):
+                r += w * x
+            d = w - wprev[s]
+            if d != 0.0:
+                tc += abs(d) * cmat[t, s] * cmult
+            wprev[s] = w
+            stamp[s] = t
+        for i in range(nheld):                 # closed this row: pay to unwind
+            s = held[i]
+            if stamp[s] != t and wprev[s] != 0.0:
+                tc += abs(wprev[s]) * cmat[t, s] * cmult
+                wprev[s] = 0.0
+        for i in range(nn):
+            held[i] = fresh[i]
+        nheld = nn
+        out[t, 0] = r - tc
+        out[t, 1] = tc
+        out[t, 2] = nn
+
+
 @njit(parallel=True, cache=True)
-def _run_many(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
+def _run_many(bins, ret, elig, eidx, ecnt, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
     for i in prange(len(need)):
-        _run(bins, ret, elig, cmat, vidx[i], lo[i], hi[i], need[i], direction[i], hold[i], slots, t0, t1, cmult, out[i])
+        _run(bins, ret, elig, eidx, ecnt, cmat, vidx[i], lo[i], hi[i], need[i], direction[i], hold[i], slots, t0, t1, cmult, out[i])
 
 
-def run_rules(bins, ret, elig, cmat, rules, t0, t1, slots=10, cmult=1.0):
-    """Hourly results for each rule: array [R, T, 3] of (net return, cost paid, active positions)."""
+@njit(parallel=True, cache=True)
+def _run_many_dense(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out):
+    for i in prange(len(need)):
+        _run_dense(bins, ret, elig, cmat, vidx[i], lo[i], hi[i], need[i], direction[i], hold[i], slots, t0, t1, cmult, out[i])
+
+
+def run_rules(bins, ret, elig, cmat, rules, t0, t1, slots=10, cmult=1.0, index=None, dense=False):
+    """Hourly results for each rule: array [R, T, 3] of (net return, cost paid, active positions).
+    `index` is eligible_index(elig), worth passing when calling repeatedly."""
     R, K = len(rules), max(len(r.view) for r in rules)
     vidx = np.zeros((R, K), np.int64)
     lo = np.full((R, K), 127, np.int8)   # unused slots can never match
@@ -116,8 +208,13 @@ def run_rules(bins, ret, elig, cmat, rules, t0, t1, slots=10, cmult=1.0):
         vidx[i, :n], lo[i, :n], hi[i, :n] = r.view, r.lo, r.hi
     need = np.array([r.need for r in rules], np.int64)
     out = np.zeros((R, ret.shape[0], 3), np.float32)
-    _run_many(bins, ret, elig, cmat, vidx, lo, hi, need, np.array([r.direction for r in rules], np.int64),
-              np.array([r.hold for r in rules], np.int64), slots, t0, t1, cmult, out)
+    direction = np.array([r.direction for r in rules], np.int64)
+    hold = np.array([r.hold for r in rules], np.int64)
+    if dense:
+        _run_many_dense(bins, ret, elig, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out)
+    else:
+        eidx, ecnt = index if index is not None else eligible_index(elig)
+        _run_many(bins, ret, elig, eidx, ecnt, cmat, vidx, lo, hi, need, direction, hold, slots, t0, t1, cmult, out)
     return out
 
 

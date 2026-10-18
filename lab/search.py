@@ -129,9 +129,13 @@ def _with_ret(u, ret):
     return replace(u, ret=ret)
 
 
-def shifted_returns(u, shift):
-    """Placebo: the same return panel moved `shift` hours in time against the features and eligibility."""
-    return np.roll(u.ret, -shift, axis=0)
+def shifted_returns(u, shift, limit=None):
+    """Placebo: returns moved `shift` hours in time against the features and eligibility, circularly inside rows
+    [0, limit). Pass limit = the end of the discovery window so no later return (test, holdout) leaks into it."""
+    limit = len(u.ret) if limit is None else limit
+    out = np.full_like(u.ret, np.nan)
+    out[:limit] = np.roll(u.ret[:limit], -shift, axis=0)
+    return out
 
 
 # ---- stage 2 and 3: conjunctions ----------------------------------------------------------------------------------

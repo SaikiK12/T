@@ -77,13 +77,17 @@ def persistence_ic(R, L=60, H=20, gap=0, start=None):
     return float(ics.mean()), ics
 
 
-def persistence_test(R, L=60, H=20, far_gap=250, n_perm=200, block=20, rng=None):
+def persistence_test(R, L=60, H=20, far_gap=250, n_perm=200, block=20, rng=None, min_dates=8):
     """Recent-vs-distant predictive power. diff = IC(gap 0) - IC(gap far_gap). A strategy with a fixed edge predicts
     equally well at both gaps; a regime-bound one predicts better when the trailing window is recent. The null permutes
     whole blocks of days jointly across strategies, which keeps each strategy's returns and the cross-correlations but
     removes any dependence of performance on recent history longer than `block` days."""
     rng = rng or np.random.default_rng(0)
     D = len(R)
+    n_dates = len(range(L + far_gap, D - H + 1, H))
+    if n_dates < min_dates:
+        return {"diff": np.nan, "ic_recent": np.nan, "ic_far": np.nan, "p": np.nan, "null_mean": np.nan,
+                "insufficient": f"{n_dates} rebalance dates after the {L + far_gap}-day warm-up (need {min_dates})"}
 
     def stat(M):
         return persistence_ic(M, L, H, 0, start=L + far_gap)[0] - persistence_ic(M, L, H, far_gap, start=L + far_gap)[0]

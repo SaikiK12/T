@@ -49,6 +49,11 @@ class BuildingBlocks(unittest.TestCase):
         a, b = eps[1][0]
         self.assertTrue(190 < a < 260 and 300 < b < 380)
 
+    def test_persistence_refuses_a_window_that_is_too_short(self):
+        out = policy.persistence_test(noise(180, 30, seed=6), L=40, H=14, far_gap=100, n_perm=20)
+        self.assertTrue(np.isnan(out["p"]))
+        self.assertIn("insufficient", out)
+
     def test_policy_never_uses_the_future(self):
         R = noise(400, 30, seed=5)
         base = policy.run_policy(R, L=40, K=5, H=7)

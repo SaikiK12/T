@@ -98,6 +98,21 @@ class NoLookAheadTests(unittest.TestCase):
         np.testing.assert_array_equal(base[:25], run(b2, rets, elig, cm, rule)[:25])
 
 
+class SparseKernelTests(unittest.TestCase):
+    def test_sparse_kernel_matches_the_dense_reference(self):
+        rng = np.random.default_rng(0)
+        V, T, S = 5, 1500, 60
+        bins = rng.integers(-1, 5, (V, T, S)).astype(np.int8)
+        ret = (rng.standard_normal((T, S)) * 0.01).astype(np.float32)
+        ret[rng.random((T, S)) < 0.01] = np.nan
+        elig = rng.random((T, S)) < 0.2
+        cmat = rng.uniform(0.0005, 0.002, (T, S)).astype(np.float32)
+        rules = [Rule((0, 1), (0, 2), (1, 4), n, d, h) for n in (1, 2) for d in (1, -1) for h in (1, 4, 24)]
+        a = engine.run_rules(bins, ret, elig, cmat, rules, 50, 1450, slots=7, dense=True)
+        b = engine.run_rules(bins, ret, elig, cmat, rules, 50, 1450, slots=7)
+        np.testing.assert_allclose(a, b, atol=1e-6)
+
+
 class ReturnsAndStats(unittest.TestCase):
     def test_forward_returns_charge_funding_at_the_next_bar(self):
         close = np.array([[100.0], [101.0], [102.0], [103.0]], np.float32)
