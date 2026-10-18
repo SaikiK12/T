@@ -61,6 +61,17 @@ class PackTests(unittest.TestCase):
         self.assertAlmostEqual(o["exposure"][10], 1.0)
         self.assertAlmostEqual(o["exposure"][14], 0.0)
 
+    def test_universe_hedge_takes_the_basket_mean(self):
+        a = toy(S=2)
+        bins, close = a[0], a[1]
+        bins[0, 10, 0] = 1
+        close[11:, 0] = 98.0                           # the short's coin falls 2%, the other one rises 1%
+        close[11:, 1] = 101.0
+        o = run([[0, 1, 4, -1]], a, kappa=-1, slots=1, hedge_col=-2)
+        self.assertAlmostEqual(o["gross"][11], 0.02)
+        self.assertAlmostEqual(o["hedge"][11], (-0.02 + 0.01) / 2)   # long the basket of both eligible coins
+        self.assertAlmostEqual(o["hedge_cost"].sum(), 2 * 6e-4)
+
     def test_priority_slots_and_gates(self):
         a = toy(S=2)
         bins = np.zeros((2, 48, 2), np.int8)

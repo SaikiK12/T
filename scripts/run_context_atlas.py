@@ -1,6 +1,7 @@
 """atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 
 usage: python scripts/run_context_atlas.py discovery [--families clock,crowd,market,flow]   (resumable, per context)
+       add --lane atlas_mtf --families mtf --base 1h for the multi-timeframe lane (R195)
        python scripts/run_context_atlas.py flag          thresholds and the discovery lists
        python scripts/run_context_atlas.py validation    freeze the lists, then one pass per listed context
        python scripts/run_context_atlas.py report        replication tables
@@ -25,6 +26,12 @@ RD = data.ROOT / "research"
 VAL_START, VAL_END = "2024-01-01", "2025-07-01"
 Q, MIN_REAL, MIN_SUPPORT, MIN_SHARE, MIN_DAYS, MIN_ERAS = 0.10, 5, 0.01, 0.02, 100, 4
 MARKET = ("btc_ret[", "disp[", "breadth[", "funding_clock[")
+# atlas_mtf (R195): the symbol's own slower state as the context of its fast signals
+MTF = ("ret[7]@24h/z30", "ret[30]@24h/z30", "ema_ratio[21]@24h/z30", "ema_ratio[55]@24h/z30",
+       "ema_cross[21,55]@24h/z30", "donch[50]@24h/fix", "rsi[14]@24h/fix", "struct[5,state]@24h/fix",
+       "atrp[14]@24h/z30", "volz[24]@24h/z30", "fund[0]@24h/z30", "prem[0]@24h/z30",
+       "ret[30]@4h/z180", "ema_ratio[55]@4h/z180", "ema_cross[21,55]@4h/z180", "donch[50]@4h/fix",
+       "rsi[14]@4h/fix", "struct[5,state]@4h/fix")
 KEEP = ["view", "name", "bin", "h", "code", "measure", "base_bp", "cond_bp", "cond_t", "cond_days", "lift_bp", "lift_t",
         "lift_days", "lift_eras_same_sign", "lift_eras", "share", "cells", "support", "cost_rt_bp", "amplifies",
         "cond_edge_cost"]
@@ -32,12 +39,13 @@ KEY = ["context", "view", "bin", "h", "code", "measure"]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
-def setup():
+def setup(base_tf="all"):
     u, bins, names = research.load_universe()
     t_end = research.row_of(u.p, VAL_END)
     assert t_end <= u.holdout_row
     to = atlas._time_only(bins, np.arange(bins.shape[0], dtype=np.int64), *u.index, 0, t_end, 7)
-    base = np.flatnonzero(to == 0).astype(np.int64)
+    keep = (to == 0) & (np.array(["@1h/" in n for n in names]) if base_tf == "1h" else True)
+    base = np.flatnonzero(keep).astype(np.int64)
     nb = atlas.max_bins(bins, base, *u.index, 0, t_end) + 1
     return u, bins, names, to, base, nb
 
@@ -57,6 +65,10 @@ def contexts(bins, names, to, families):
         for i, n in enumerate(names):
             if to[i] and n.startswith(MARKET):
                 out.append(("market", n, lambda i=i: np.ascontiguousarray(bins[i])))
+    if "mtf" in families:
+        for n in MTF:
+            i = names.index(n)
+            out.append(("mtf", n, lambda i=i: np.ascontiguousarray(bins[i])))
     if "flow" in families:
         path = RD / "bins_flow.npy"
         if path.exists():
@@ -86,7 +98,7 @@ def passes_filters(df):
 
 
 def discovery(a):
-    u, bins, names, to, base, nb = setup()
+    u, bins, names, to, base, nb = setup(a.base)
     t0, t1 = 0, research.row_of(u.p, research.DISC_END)
     eras = search.half_year_edges(u.p, t0, t1)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -153,7 +165,7 @@ def validation(a):
     (OUT / "validation_hashes.json").write_text(json.dumps({path.name: sha}, indent=1))
     log("frozen discovery lists", sha[:12])
     lists = pd.read_csv(path)
-    u, bins, names, to, base, nb = setup()
+    u, bins, names, to, base, nb = setup(a.base)
     t0, t1 = research.row_of(u.p, VAL_START), research.row_of(u.p, VAL_END)
     eras = search.half_year_edges(u.p, t0, t1)
     F, X = atlas.forward(u.ret, u.elig, t0, t1)
@@ -199,12 +211,59 @@ def report(a):
                         "baseline": float(base_rate), "placebo_cl": int(len(pp)), "signal": bool(ok)}
     (OUT / "report.json").write_text(json.dumps(verdict, indent=1))
     log(json.dumps(verdict, indent=1))
+    uni = OUT / "universe_lift.parquet"
+    if uni.exists():
+        # exploratory (not in the PREREG): a cell's lift = the context's own lift on every cell + the interaction
+        ul = pd.read_parquet(uni)
+        k = ["context", "code", "h", "measure"]
+        for split, col, suf in (("discovery", "lift_bp", "d"), ("validation", "lift_bp_v", "v")):
+            x = ul[ul.split == split][k + ["lift_bp"]].rename(columns={"lift_bp": f"uni_{suf}"})
+            m = m.merge(x, on=k, how="left")
+            m[f"inter_{suf}"] = m[col] - m[f"uni_{suf}"]
+        m["inter_rep"] = m.rep & (np.sign(m.inter_d) == np.sign(m.inter_v)) & (m.inter_v.abs() >= 0.5 * m.lift_bp_v.abs())
+        m.to_csv(OUT / "replication.csv", index=False)
+        d = m.groupby(["family", "measure", "kind"]).agg(
+            cl=("rep", "size"), rep=("rep", "mean"), inter_rep=("inter_rep", "mean"),
+            inter_share_d=("inter_d", lambda s: np.nanmedian(np.abs(s) / np.abs(m.loc[s.index, "lift_bp"]))))
+        log("decomposition (exploratory): inter_rep = replicated and the interaction keeps its sign and at least half "
+            "the validation lift\n" + d.round(3).to_string())
+
+
+def decompose(a):
+    """Exploratory, not in the PREREG: each context's lift on every tradable cell with no signal (one dummy view), per
+    period, so that a cell's lift can be split into the context's own effect and the interaction with the signal."""
+    lists = pd.read_csv(OUT / "discovery_lists.csv", usecols=["family", "context"]).drop_duplicates()
+    want = set(lists.context)
+    u, bins, names, to, base, nb = setup(a.base)
+    dummy = np.zeros((1,) + u.ret.shape, np.int8)
+    rows = []
+    for split, (s0, s1) in {"discovery": (None, research.DISC_END), "validation": (VAL_START, VAL_END)}.items():
+        t0 = 0 if s0 is None else research.row_of(u.p, s0)
+        t1 = research.row_of(u.p, s1)
+        eras = search.half_year_edges(u.p, t0, t1)
+        F, X = atlas.forward(u.ret, u.elig, t0, t1)
+        for fam, ctx, load_ctx in contexts(bins, names, to, sorted(set(lists.family))):
+            if ctx not in want:
+                continue
+            group = load_ctx()
+            G = int(group[:t1].max()) + 1
+            acc = atlas.run(dummy, np.zeros(1, np.int64), F, X, u.cmat, u.index, group, G, t0, t1,
+                            nb=np.ones(1, np.int64))
+            v = atlas.lift_stats(acc, ["universe"], atlas.HORIZONS, eras, [str(k) for k in range(G)])
+            rows.append(v.assign(context=ctx, family=fam, split=split))
+        log(f"decompose {split}: {len(want)} contexts")
+        del F, X
+    pd.concat(rows, ignore_index=True).to_parquet(OUT / "universe_lift.parquet")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("step", choices=["discovery", "flag", "validation", "report"])
+    ap.add_argument("step", choices=["discovery", "flag", "validation", "decompose", "report"])
     ap.add_argument("--families", default="clock,crowd,market,flow")
+    ap.add_argument("--lane", default="atlas_ctx")
+    ap.add_argument("--base", default="all", choices=["all", "1h"])
     a = ap.parse_args()
+    LANE = ROOT / "experiments" / a.lane
+    OUT = LANE / "results"
     log("prereg sha", prereg.verify(LANE / "PREREG.md")[:12])
-    {"discovery": discovery, "flag": flag, "validation": validation, "report": report}[a.step](a)
+    {"discovery": discovery, "flag": flag, "validation": validation, "decompose": decompose, "report": report}[a.step](a)
