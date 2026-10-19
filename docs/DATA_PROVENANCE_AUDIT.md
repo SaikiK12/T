@@ -4,9 +4,9 @@ Reviewed 2026-10-19 by static inspection only. No market data were downloaded, n
 
 ## Findings
 
-### 1. A strict fetch can trust a cached file without checking its source checksum
+### 1. Strict-cache verification was missing; PR #11 addresses it
 
-`lab/data.py:112` returns immediately if an archive file already exists. That bypasses the later `strict=True` checksum verification for the cached path. The ordinary build path also defaults to `strict=False`, where ZIP integrity is not the same as verifying Binance's published SHA-256. The processed-data manifest at `lab/data.py:173-184` records hashes for generated files, but not the source archive key, source checksum, retrieval time, or exact parser revision.
+In the audited base, `lab/data.py:112` returned immediately if an archive file already existed, bypassing the later `strict=True` checksum verification for cached files. **PR #11 now verifies cached bytes against Binance's published SHA-256 in strict mode and CRC-checks cached ZIPs in the normal mode.** This protects the cache read, but the ordinary build path still defaults to `strict=False`, and ZIP integrity is not the same as matching the official SHA-256. The processed-data manifest at `lab/data.py:173-184` records hashes for generated files, but not the source archive key, source checksum, retrieval time, or exact parser revision.
 
 **Risk:** a reproducible hash of a processed Parquet file proves which local bytes were used, but not that those bytes match the official source archive or how they were produced.
 
@@ -38,7 +38,7 @@ Both MEXC and Binance paths floor funding settlement timestamps to an hour and d
 
 ## Work order
 
-1. **Before another archive result:** make strict mode verify existing cached bytes and add expected-shard plus per-symbol cadence coverage to the source manifest.
+1. **Before another archive result:** land or review PR #11's cache verification, then add expected-shard plus per-symbol cadence coverage to the source manifest.
 2. **Before a forward return decision:** retain exact funding timestamps and distinguish complete zero-event windows from missing history. For MEXC, run gap checks over cached interiors as well as the newest tail.
 3. **Before promotion of a signal:** require each lane to fail closed on unresolved input, eligibility, target-window, lifecycle or settlement gaps; report coverage by instrument age and liquidity group.
 
