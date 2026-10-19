@@ -20,6 +20,14 @@ For binary outcomes (y_i\in\{0,1\}) and forecasts (p_i\in[0,1]), the Brier score
 
 For continuous return distributions, use a proper distributional score such as CRPS, and report quantile scores and interval coverage if the model emits quantiles or intervals. A probability of an up move does not communicate the size of a possible loss. For tail-sensitive claims, predefine a tail score or quantile target rather than choosing one after a stress event. Gneiting and Raftery discuss proper scores for both categorical and continuous forecasts.
 
+## Make the baseline comparison explicit
+
+For every frozen coin, horizon and decision time, compare the forecast against a small ladder: zero-return/no-change; an expanding past-only mean return; an expanding past-only up-rate or majority-sign rule; a simple per-coin lagged-return model; a broad-crypto-market-only forecast; a market-plus-coin-history forecast; and the nominated model. Fit every baseline from information available at that decision time. For market-conditioned forecasts, forecast the market leg as well; using the realized future market return as a control leaks the answer. Report raw returns alongside market-adjusted or beta-matched results so shared movement is not presented as coin-specific skill.
+
+For return forecasts, report out-of-sample (R^2) against both zero return and the recursively estimated mean: (1-\sum_t(y_t-\hat y_t)^2/\sum_t(y_t-b_t)^2), with (b_t) fixed by the named benchmark. Use Clark–West's adjusted one-sided comparison for nested models, retaining raw out-of-sample (R^2) so the realized error change remains visible; use a Diebold–Mariano comparison for nonnested forecasts. For a sign claim, compare hit rate with the forecast's and outcome's past-only sign base rates, not an assumed 50/50 market. The Pesaran–Timmermann test evaluates sign association while accounting for those marginal rates. Report up and down performance separately, plus prespecified large-move results.
+
+Do not make mean directional accuracy the profit gate. Arain and Snudden's daily real-time BTC study (October 2021–February 2024) finds that higher average directional accuracy can still conceal breakdowns during large moves; their results apply to one spot-BTC sample, not this project's altcoin perps. Christoffersen and Diebold also show how volatility dynamics affect direction-of-change forecasting. Freeze the forecast-to-position mapping, then compare net results with cash, buy-and-hold, market-only and beta-matched baselines after fees, spread, impact and funding. Statistical skill and economic value answer different questions.
+
 ## Calibration and uncertainty
 
 Plot predicted probability against observed frequency with uncertainty intervals. Dimitriadis, Gneiting and Jordan’s CORP reliability diagrams use isotonic regression and uncertainty quantification; they are a more principled calibration diagnostic than an arbitrary expected-calibration-error binning choice ([PNAS 2021](https://doi.org/10.1073/pnas.2016191118)). Still report score distributions and sample coverage: flexible calibration curves are noisy when there are few independent dates, and a good-looking plot is not a pass criterion by itself.
@@ -49,3 +57,8 @@ The repository still has to satisfy its own rules: freeze a new specification be
 - Giacomini & Rossi (2009), [Detecting and Predicting Forecast Breakdowns](https://doi.org/10.1111/j.1467-937X.2009.00545.x).
 - Pesaran & Timmermann (2007), [Selection of Estimation Window in the Presence of Breaks](https://doi.org/10.1016/j.jeconom.2006.03.010).
 - Hyndman & Athanasopoulos, [Forecasting: Principles and Practice](https://otexts.com/fpp3/) (rolling-origin evaluation).
+- Pesaran & Timmermann (1992), [A Simple Nonparametric Test of Predictive Performance](https://doi.org/10.1080/07350015.1992.10509922).
+- Christoffersen & Diebold (2006), [Financial Asset Returns, Direction-of-Change Forecasting, and Volatility Dynamics](https://doi.org/10.1287/mnsc.1060.0520).
+- Clark & West (2007), [Approximately Normal Tests for Equal Predictive Accuracy in Nested Models](https://doi.org/10.1016/j.jeconom.2006.05.023).
+- Yae & Tian (2022), [Out-of-Sample Forecasting of Cryptocurrency Returns: A Comprehensive Comparison of Predictors and Algorithms](https://doi.org/10.1016/j.physa.2022.127379).
+- Arain & Snudden (2026), [When Are Statistical Forecast Gains Economically Relevant? Evidence From Bitcoin Returns](https://doi.org/10.1002/for.70077).
