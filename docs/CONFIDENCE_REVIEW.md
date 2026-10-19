@@ -4,7 +4,7 @@ Review of the R212 repository snapshot dated 2026-10-19. This is an independent 
 
 ## Decision
 
-The project has found promising cross-sectional signals, especially top traders positioned against their own crowd, but it has not yet established a reliable, executable edge. R198’s registered primary book did not meet its holdout rule, the R200 forward test is only at an early checkpoint, and the evidence is mainly Binance-specific while the stated project goal is primarily MEXC altcoins. Keep the work in paper mode. Treat any later real-money decision as an owner decision after a fresh, venue-matched paper result and practical risk checks.
+The project has found promising cross-sectional signals, especially top traders positioned against their own crowd, but it has not yet established a reliable, executable edge. R198’s registered primary book did not meet its holdout rule; R200 had only 18 scored days at the snapshot, all recovered from recent endpoint history and marked `late`; and the evidence is mainly Binance-specific while the stated project goal is primarily MEXC altcoins. The live-paper score also starts at the hourly close before the delayed signal is ready. Keep the work in paper mode. Treat any later real-money decision as an owner decision after a fresh, venue-matched paper result and practical risk checks.
 
 The current evidence supports a narrower statement than “predict the market on whatever coin”: some frozen ranks distinguish average future returns across a changing set of liquid Binance contracts. It does not show that every coin’s return can be forecast reliably, or that the same signal is profitable after execution on another exchange.
 
