@@ -75,12 +75,14 @@ def map_symbols(binance_symbols, table):
     return out
 
 
-def fetch_klines(symbol, start, end):
-    """Hourly bars with open time in [start, end) (ms): DataFrame t, open, high, low, close, vol, amount."""
+def fetch_klines(symbol, start, end, kind=""):
+    """Hourly bars with open time in [start, end) (ms): DataFrame t, open, high, low, close, vol, amount. kind
+    "index_price" gives the index price bars instead of the contract's last price."""
     out, s = [], start
     while s < end:
         e = min(end, s + 2000 * HOUR)
-        d = get(f"kline/{symbol}", {"interval": "Min60", "start": s // 1000, "end": (e - HOUR) // 1000})
+        d = get(f"kline/{kind + '/' if kind else ''}{symbol}", {"interval": "Min60", "start": s // 1000,
+                                                                "end": (e - HOUR) // 1000})
         if d and d.get("time"):
             out.append(pd.DataFrame({"t": np.asarray(d["time"], np.int64) * 1000,
                                      **{k: np.asarray(d[k], np.float64)
@@ -92,14 +94,14 @@ def fetch_klines(symbol, start, end):
     return df[(df.t >= start) & (df.t < end)].reset_index(drop=True)
 
 
-def klines_cached(symbol, start, end):
+def klines_cached(symbol, start, end, kind=""):
     """As fetch_klines, refetching from the last cached bar (it may have been open when cached)."""
-    p = ROOT / "klines_1h" / f"{symbol}.parquet"
+    p = ROOT / (f"{kind}_1h" if kind else "klines_1h") / f"{symbol}.parquet"
     have = pd.read_parquet(p) if p.exists() else None
     s = start
     if have is not None and len(have) and int(have.t.min()) <= start:
         s = max(start, int(have.t.max()))
-    new = fetch_klines(symbol, s, end) if s < end else None
+    new = fetch_klines(symbol, s, end, kind) if s < end else None
     if new is not None and len(new):
         df = new if have is None else pd.concat([have, new]).drop_duplicates("t", keep="last").sort_values("t")
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -126,3 +128,19 @@ def funding_history(symbol, start, end):
                        "rate": [float(r["fundingRate"]) for r in out],
                        "cycle_h": [r.get("collectCycle") for r in out]})
     return df[(df.t >= start) & (df.t < end)].drop_duplicates("t").sort_values("t").reset_index(drop=True)
+
+
+def spot_usdt():
+    """MEXC spot USDT pairs open for trading today {symbol: taker fee}, snapshotted daily to data/mexc/spot/{date}.json.
+    The spot API lives on its own host."""
+    day = time.strftime("%Y-%m-%d", time.gmtime())
+    p = ROOT / "spot" / f"{day}.json"
+    if not p.exists():
+        req = urllib.request.Request("https://api.mexc.com/api/v3/exchangeInfo", headers={"User-Agent": "lab-paper/1"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            rows = json.loads(r.read())["symbols"]
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps({x["symbol"]: float(x.get("takerCommission") or "nan") for x in rows
+                                 if x.get("quoteAsset") == "USDT" and x.get("status") == "1"
+                                 and x.get("isSpotTradingAllowed")}))
+    return json.loads(p.read_text())

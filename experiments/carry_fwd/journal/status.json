@@ -1,0 +1,122 @@
+{
+ "last_scored_hour": "2026-10-19T12:00:00+00:00",
+ "days_ticketed": 18,
+ "BIN": {
+  "coverage": {
+   "symbols": 58,
+   "with_spot_pair": 35
+  },
+  "held_now": [],
+  "market_mean_apr_now": -0.06668231336547147,
+  "top_apr_now": [
+   {
+    "symbol": "SOXLUSDT",
+    "apr": 0.40179078372602817,
+    "spot": false
+   },
+   {
+    "symbol": "INTCUSDT",
+    "apr": 0.2383340612019917,
+    "spot": false
+   },
+   {
+    "symbol": "CRCLUSDT",
+    "apr": 0.19827287008714242,
+    "spot": false
+   },
+   {
+    "symbol": "AKEUSDT",
+    "apr": 0.16563943330159722,
+    "spot": false
+   },
+   {
+    "symbol": "\u9f99\u867eUSDT",
+    "apr": 0.14255804586355225,
+    "spot": false
+   }
+  ],
+  "replay": {
+   "days": 18,
+   "days_invested": 0,
+   "total": 0.0,
+   "total_2x": 0.0,
+   "total_3x": 0.0,
+   "total_spot5": 0.0,
+   "total_r191_timing": 0.0,
+   "funding": 0.0,
+   "basis": 0.0,
+   "cost": 0.0,
+   "avg_open": 0.0,
+   "go_real_invested": null
+  }
+ },
+ "MEXC": {
+  "coverage": {
+   "symbols": 58,
+   "with_spot_pair": 38,
+   "mapped": 40,
+   "spot_taker_mean": 0.0005578947368421052
+  },
+  "held_now": [
+   {
+    "symbol": "AKEUSDT",
+    "apr": 0.16400666730381394
+   }
+  ],
+  "market_mean_apr_now": -0.1442929809501541,
+  "top_apr_now": [
+   {
+    "symbol": "AKEUSDT",
+    "apr": 0.16400666730381394,
+    "spot": true
+   },
+   {
+    "symbol": "STRKUSDT",
+    "apr": 0.0995233308412935,
+    "spot": true
+   },
+   {
+    "symbol": "HYPEUSDT",
+    "apr": 0.08261166582182493,
+    "spot": true
+   },
+   {
+    "symbol": "ZECUSDT",
+    "apr": 0.06642999937582772,
+    "spot": true
+   },
+   {
+    "symbol": "BTCUSDT",
+    "apr": 0.06630833320741658,
+    "spot": true
+   }
+  ],
+  "replay": {
+   "days": 18,
+   "days_invested": 18,
+   "total": -6.2441743358441344e-06,
+   "total_2x": -0.0009062441642308107,
+   "total_3x": -0.0018062441541259102,
+   "total_spot5": 0.0002437558256641271,
+   "total_r191_timing": 0.00028743983140151015,
+   "funding": 0.0010263999920423648,
+   "basis": -0.00013264417648315417,
+   "cost": 0.000899999989895,
+   "avg_open": 1.3796296296296298,
+   "go_real_invested": {
+    "n": 18,
+    "mean": -3.4689857421356303e-07,
+    "hit": 0.6111111111111112,
+    "worst": -0.0004200810205977,
+    "n_clusters": null,
+    "checks": {
+     "enough_scored": false,
+     "mean_positive": false,
+     "hit_rate": true,
+     "no_tail_event": true
+    },
+    "pass": false
+   }
+  }
+ }
+}
