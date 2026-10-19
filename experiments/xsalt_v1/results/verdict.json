@@ -1,0 +1,39 @@
+{
+ "stages": {
+  "BETA": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "RESMOM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MOM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MAX_POS": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MAX_NEG": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "PREM": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "confirmed": [],
+ "beta_persistence_spearman_90d": {
+  "discovery": 0.38307070942711496,
+  "validation": 0.522416120078643
+ },
+ "resmom_minus_mom": {
+  "discovery": {
+   "mean_bp_day": -11.027921342399468,
+   "t_nw30": -1.6091468677647978
+  }
+ }
+}

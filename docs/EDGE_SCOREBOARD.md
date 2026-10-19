@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-19, after R221. Program trials: 9,471,739. Every number below comes from that lane's FINDINGS or
+As of 2026-10-19, after R223. Program trials: 9,471,747. Every number below comes from that lane's FINDINGS or
 journal, cited by round. The first draft was a read-only subagent pass; key numbers were re-checked against the
 files.
 
@@ -36,6 +36,8 @@ files.
 | **Context slice books** | 12-24 h slices +39.4%/yr, t 3.85 (selection-biased) (R201) | Holdout -6.5%/yr, t -0.13 (R204) | Holdout 2x -46% | n/a | none | NULL |
 | **Merges of atlas cells** | Gross +50%/180 d, t 2.68; net about 0 (R186, R187) | n/a | Break-even cost 0.42-1.01x | n/a | none | NULL: gross below cost |
 | **New-listing short** | Discovery t -3.06 (R188) | Holdout 7 d net short -2.6%, t -0.78: NOT CONFIRMED (R189) | Right tail, not cost, decides | MEXC lists faster; 6-name sample positive (subagent) | none | NULL; holdout spent |
+| **Slow altcoin cross-sections** (low beta, residual momentum, MAX, premium net of funding) | Plain 30 d momentum +7.7 bp/day, alpha t 1.23 (R222) | not reached | Costs only 0.6-2.9 bp/day | n/a | none | NULL: the gross is too small |
+| **Funding-settlement capture** (hold across a settlement at ±0.20%) | Funding +47.6 bp per event collected, price -72.3 (R223) | not reached | Net 1x -38.5 bp per event | MEXC rates match Binance, so it is closed there too | none | NULL: the price moves against the payment by more than it pays |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | best t 1.06-2.08 in-sample (R205-R210, R203) | all fail or reverse out of sample | — | — | none | NULL (stop rules: HARMFUL, R208) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06, in-sample (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 

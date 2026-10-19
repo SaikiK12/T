@@ -87,9 +87,8 @@ Read from the public `contract/detail` endpoint on 2026-10-19.
    - **Report:** hedged and unhedged results.
    - **Evidence:** R193 found the same entry on Binance-replicated cells gained +20 bp per trade over a taker entry,
      but the book was long-alt beta.
-2. **Negative-funding capture around settlement.** Long when funding is at most -0.20% per 8 h, from 1 h before
-   settlement to 1 h after. A subagent is researching whether the price moves against the funding at settlement;
-   the Binance archive can test it, since its funding matches MEXC's.
+2. **Negative-funding capture around settlement: tested, NULL (R223).** The funding is paid, but the price moves
+   against the holder by 1.5-2.3 times the payment. Top 50: long on -0.20% nets -38.5 bp per event.
 3. **Day-14 listing short with a stop.** Weak:
    - the Binance listing holdout failed (R189);
    - ICO and cross-listing studies show positive early drift (Benedetti & Kostovetsky 2021; Ante & Meyer 2021; B).

@@ -162,6 +162,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     the 2x total > 0; Bonferroni over 3.
   - Power by day 365: 19% at annual Sharpe 1.5, 73% at 3.
   - It is the first frozen decision on crypto-only top-vs-crowd, the lab's best holdout t.
+- **R222 (xsalt_v1)** tested four slow altcoin cross-sections from `docs/ALTCOIN_LEADS.md`: low beta, residual
+  momentum, MAX and premium net of funding. Weekly or monthly holds cost only 0.6-2.9 bp/day, but none earns gross.
+  All six variants fail discovery on BTC-adjusted alpha t (best: plain 30-day momentum +7.7 bp/day, t 1.23).
+  Residual momentum does worse than plain momentum.
+- **R223 (settle_v1)** held across a funding settlement when the last rate was beyond ±0.20%. The payment arrives,
+  but the price moves against the holder by 1.5-2.3 times it (top 50: long -38.5 bp per event, short -43.4). Funding
+  capture is closed on Binance, and on MEXC, whose rates match.
 - MEXC fees (`docs/MEXC_EDGES.md`):
   - Manual web orders pay 0-4 bp, with 634 contracts at 0 maker.
   - API orders pay 6 bp maker and 8 bp taker since 2026-06-01.
@@ -222,11 +229,10 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - R221 judges the MEXC books at 90/182/365 days. R220 runs carry forward.
 - MEXC-specific lanes to pre-register (`docs/MEXC_EDGES.md`):
   - maker-dip entries on zero-maker contracts (paper fills only on trade-through);
-  - negative-funding capture around settlement (a subagent is researching the settlement-hour price effect; the
-    Binance archive can test it);
   - a MEXC open-interest recorder (needs a process that runs continuously).
-- Altcoin-specific lanes not yet run (`docs/ALTCOIN_LEADS.md`): cross-coin "seesaw" lead-lag from the big coins'
-  last hours, low-minus-high beta, residual momentum by liquidity tier, MAX sign contest, premium orthogonal to funding.
+- Altcoin leads (`docs/ALTCOIN_LEADS.md`) 1-5 are run (R219, R222): all NULL. Open: two 24 h contrarian spreads seen
+  in R222 (residual momentum, premium net of funding). A lane on them would be chosen after seeing them, so its only
+  clean test is the unread holdout.
 - Confidence-scaled sizing (`docs/SIZING_EVIDENCE.md`): no peer-reviewed out-of-sample support for scaling by a
   model's own confidence; shrunk half-Kelly and volatility targeting first, each against a matched constant multiplier.
 - The next brute-force grammar (`docs/NEXT_SEARCH_SPACE.md`): cross-coin residual and catch-up, positioning changes,
@@ -259,5 +265,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,739 after R221 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,747 after R223 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
