@@ -41,7 +41,7 @@ No new market data, forecast score, backtest or margin-breach statistic was comp
 - Bergsli, Lind, Molnár & Polasik (2022), [Forecasting volatility of Bitcoin](https://doi.org/10.1016/j.ribaf.2021.101540).
 - Brauneis & Sahiner (online 2024; issue 2026), [Crypto Volatility Forecasting: Mounting a HAR, Sentiment, and Machine Learning Horserace](https://doi.org/10.1007/s10690-024-09510-6).
 - Corsi (2009), [A simple approximate long-memory model of realized volatility](https://doi.org/10.1093/jjfinec/nbp001).
-- Gkillas, Gupta & Pierdzioch (2021), [Forecasting realized volatility of Bitcoin: The role of the tails](https://doi.org/10.1080/1351847X.2021.1906728).
+- Gkillas, Gupta & Pierdzioch (2021), [Forecasting realized volatility of bitcoin returns: Tail events and asymmetric loss](https://doi.org/10.1080/1351847X.2021.1906728).
 - Hoang & Baur (2020), [Forecasting bitcoin volatility: Evidence from the options market](https://doi.org/10.1002/fut.22144).
 - Chi & Hao (2021), [Volatility models for cryptocurrencies and applications in the options market](https://doi.org/10.1016/j.intfin.2021.101421).
 - Chen, Deng & Nie (2024), [Implied volatility slopes and jumps in bitcoin options market](https://doi.org/10.1016/j.orl.2024.107135).
