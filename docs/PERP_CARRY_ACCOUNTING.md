@@ -12,7 +12,7 @@ Reviewed 2026-10-19. The project has Binance spot–perpetual carry experiments,
 
 ## Venue accounting to freeze
 
-For a linear USDT contract with signed base quantity (q) (long positive, short negative), fair price (P), and a positive settled funding rate (r), the account cash flow is `−q × P × r`: longs pay, shorts receive. For a contract-denominated venue, first convert contracts into the contract’s base or quote exposure using its current contract-size and quantity-step fields. Do not reuse this linear formula for inverse/quanto instruments without the correct multiplier and settlement asset.
+For a linear USDT contract, let `q` be signed base quantity (long positive, short negative), `P` fair price, and `r` a positive settled funding rate. The account cash flow is `−q × P × r`: longs pay, shorts receive. For a contract-denominated venue, first convert contracts into the contract’s base or quote exposure using its current contract-size and quantity-step fields. Do not reuse this linear formula for inverse/quanto instruments without the correct multiplier and settlement asset.
 
 Use the rate known at entry only for an entry-time forecast. For realized PnL, apply each actual settled rate to the position exposure that was open at that settlement, with the contract’s own cycle and fair price. Do not charge a full interval to a trade that closed beforehand. Record event time, funding cycle, symbol, position side/quantity, settlement price and fee. A current/next predicted rate and a historical settled rate are different data fields.
 
