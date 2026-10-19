@@ -31,7 +31,7 @@ R221's Bonferroni correction addresses its three books only if each book/look st
 
 I ran a reproducible, outcome-free null simulation in [`research/r221_sequential_null.py`](../research/r221_sequential_null.py). It reproduces `lab.stats.newey_west_t` (checked against its scalar implementation), uses R221's exact 90/182/365-day boundaries, and generates 100,000 Gaussian paths per case with seed `917221`. The table reports a single-book rate before the separate `total_2x > 0` requirement; it is therefore a boundary-crossing diagnostic, not R221's realized family-wise error or its full pass probability.
 
-| Null process and statistic | Stop at day 90 | Raw day-365 boundary tail | Any efficacy-boundary crossing by day 365 |
+| Null process and statistic | Stop at day 90 | Raw day-365 boundary tail | Any efficacy-boundary crossing by day 365, applying day-90 stop |
 |---|---:|---:|---:|
 | Independent, known variance (normal reference) | 2.31% | 0.831% | 0.839% |
 | Independent, estimated variance (NW lag 0) | 2.46% | 0.888% | 0.896% |

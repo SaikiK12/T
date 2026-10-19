@@ -73,20 +73,23 @@ def calibrate(kind: str, lag: int | None, *, simulations: int, batch: int, seed:
     rng = np.random.default_rng(seed)
     stopped = crossed_182 = crossed_365 = raw_182 = raw_365 = 0
     done = 0
+    stop_day, _, stop_boundary = LOOKS[0]
+    interim_day, _, interim_boundary = LOOKS[1]
+    final_day, _, final_boundary = LOOKS[2]
     while done < simulations:
         size = min(batch, simulations - done)
-        x = draw(kind, rng, size, 365)
-        z90 = statistic(x[:, :90], lag)
-        z182 = statistic(x[:, :182], lag)
+        x = draw(kind, rng, size, final_day)
+        z90 = statistic(x[:, :stop_day], lag)
+        z182 = statistic(x[:, :interim_day], lag)
         z365 = statistic(x, lag)
-        stop = z90 <= -2.0
-        pass_182 = (z182 >= 3.558) & ~stop
-        pass_365 = (z365 >= 2.397) & ~stop & ~pass_182
+        stop = z90 <= stop_boundary
+        pass_182 = (z182 >= interim_boundary) & ~stop
+        pass_365 = (z365 >= final_boundary) & ~stop & ~pass_182
         stopped += int(stop.sum())
         crossed_182 += int(pass_182.sum())
         crossed_365 += int(pass_365.sum())
-        raw_182 += int((z182 >= 3.558).sum())
-        raw_365 += int((z365 >= 2.397).sum())
+        raw_182 += int((z182 >= interim_boundary).sum())
+        raw_365 += int((z365 >= final_boundary).sum())
         done += size
     return {
         "stop90": stopped / simulations,
