@@ -23,7 +23,7 @@ def trailing_apr(fund_event, look=72):
 
 
 @njit(cache=True)
-def _run(apr, fund, basis, elig, ok, perp_cost, spot_cost, th_in, th_out, slots, t0, t1, out):
+def _run(apr, fund, basis, elig, ok, perp_cost, spot_cost, th_in, th_out, slots, t0, t1, out, require_complete):
     """out[t] = (net, funding, basis, cost, n_open). Positions open when apr > th_in and close when apr < th_out or the
     symbol stops being eligible; the next hour's funding and basis change accrue to positions held at the close of t."""
     T, S = apr.shape
@@ -42,11 +42,14 @@ def _run(apr, fund, basis, elig, ok, perp_cost, spot_cost, th_in, th_out, slots,
         fr = 0.0
         br = 0.0
         tc = 0.0
+        complete = True
         for s in range(S):
             nw = pos[s] / max(n, slots) if pos[s] else 0.0
             d = abs(nw - w[s])
             if d > 0:
                 tc += d * (perp_cost[t, s] + spot_cost)
+                if require_complete and not np.isfinite(perp_cost[t, s] + spot_cost):
+                    complete = False
             w[s] = nw
             if nw > 0:
                 f = fund[t + 1, s]
@@ -55,20 +58,32 @@ def _run(apr, fund, basis, elig, ok, perp_cost, spot_cost, th_in, th_out, slots,
                 b0, b1 = basis[t, s], basis[t + 1, s]
                 if not np.isnan(b0) and not np.isnan(b1):
                     br -= nw * (b1 - b0)
+                if require_complete and (not np.isfinite(b0) or not np.isfinite(b1) or np.isinf(f)):
+                    complete = False
         out[t, 0] = fr + br - tc
         out[t, 1] = fr
         out[t, 2] = br
         out[t, 3] = tc
         out[t, 4] = n
+        if require_complete and not complete:
+            for k in range(4):
+                out[t, k] = np.nan
 
 
-def run(apr, fund, basis, elig, has_spot, perp_cost, spot_cost, th_in, th_out, t0, t1, slots=10):
-    """has_spot: [S] or [T, S] bool, whether the coin can be held spot (at that hour)."""
+def run(apr, fund, basis, elig, has_spot, perp_cost, spot_cost, th_in, th_out, t0, t1, slots=10,
+        require_complete=False):
+    """has_spot: [S] or [T, S] bool, whether the coin can be held spot (at that hour).
+
+    ``require_complete`` leaves a held hour's PnL/cost components unknown when its basis endpoints or traded cost
+    are unavailable. Sparse NaN funding still means no settlement; the caller must first verify that funding
+    requests succeeded. The default retains the legacy archive calculation.
+    """
     ok = np.asarray(has_spot, np.bool_)
     if ok.ndim == 1:
         ok = np.broadcast_to(ok, apr.shape)
     out = np.zeros((apr.shape[0], 5))
-    _run(apr, fund, basis, elig, np.ascontiguousarray(ok), perp_cost, float(spot_cost), th_in, th_out, slots, t0, t1, out)
+    _run(apr, fund, basis, elig, np.ascontiguousarray(ok), perp_cost, float(spot_cost), th_in, th_out, slots, t0, t1,
+         out, require_complete)
     return out[t0:t1]
 
 
