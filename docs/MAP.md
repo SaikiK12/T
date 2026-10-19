@@ -137,6 +137,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     for live size.
 - **R218 (mexc_fwd_sq)** runs the k² book forward on MEXC next to R215. Replay: +6.2% against A's +4.7%.
 - `scripts/forward_all.sh` runs one forward tick: R200, then R214, R215, R218.
+- **R219 (seesaw_v1)** asked whether the 5 biggest coins' last hour predicts the alts ranked 6-50. It does, by +1.45 bp
+  per hour in 2021-23 and +0.93 in 2024-25H1 (top-minus-bottom quintile). But hourly taker trading costs 370 bp/day
+  against 35 bp/day of gross, so it is NULL as a book. A slower catch-up version decays to zero. The only routes
+  left are maker-only entries (MEXC lists a 0 maker fee) or using it as an overlay.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -222,5 +226,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,729 after R218 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,734 after R219 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
