@@ -203,6 +203,11 @@ challenge; `docs/CONCEPTS.md` plans `lab/propfirm.py`. CLAIMS C15/C16 give exact
 - **Kim and Hansen, "The Quarter-Hour Effect" (2026)**, [arXiv:2607.09426](https://arxiv.org/abs/2607.09426). Six Binance
   perps: activity bursts at 1-, 5- and 15-minute marks; quarter-hour opening imbalance predicts 4-12 h returns; the
   short-horizon effect is about 0.5 bp (already in CONCEPTS).
+- **Binance USDⓈ-M Compressed/Aggregate Trades List**, [official REST documentation](https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Compressed-Aggregate-Trades-List).
+  The current API aggregates same-price/same-side fills within 100 ms, caps responses at 1,000 rows, and only serves
+  trade history from the previous 48 hours. Its `q` and `nq` fields differ on retail-price-improvement volume. See the
+  [quarter-hour flow data gate](QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md#current-binance-capture-and-repair-limits); this
+  documents capture constraints, not new predictive evidence.
 - **Kitron and Wengrowicz, "Short-horizon mean reversion in cryptocurrency markets" (2026)**,
   [arXiv:2608.21888](https://arxiv.org/abs/2608.21888). 183 Binance pairs vs 187 US stocks, strictly out of sample with a
   frozen six-month holdout: 90% of pairs show significant 15-minute directional reversal (2.7% of stocks), strongest
