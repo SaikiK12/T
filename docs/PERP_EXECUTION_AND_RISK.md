@@ -25,6 +25,14 @@ MEXC publishes a live perpetual depth stream with 200 ms updates, matching-engin
 
 This supports a prospective shadow capture. It does **not** reveal historical queue priority or passive order fill probability. A static book walk estimates the immediate cost conditional on displayed depth staying available; it is not an observed fill. Invalidate samples with unrepaired sequence gaps. Record both event and local receipt times, mark/index/local trade prices, contract size, quantity step, and the fee schedule in effect.
 
+## USDT quote and collateral are separate exposures
+
+USDT-M PnL is denominated and settled in USDT. That makes the quote unit part of the account result even when a relative-price signal is unchanged. Let `X_t` be USD per USDT, `S_t` the token's USD price, and `P_t` its USDT quote price. Then `P_t = S_t / X_t`, so `Δlog(P) = Δlog(S) − Δlog(X)`. A common USDT/USD move cancels in a same-time ratio of two USDT-quoted token prices. It does not cancel when valuing collateral, realized PnL, fees or funding in USD.
+
+MEXC's USDT-M contract documentation identifies quote and settlement coin, and its PnL guide states the linear USDT calculation. Its public market endpoints separately expose last, fair and index prices. For a USD-account confidence assessment, record USDT/USD independently and translate every account cash flow at its event-time conversion rate. Do not treat a USDT balance as a fixed USD balance. References: [contract metadata](https://www.mexc.io/api-docs/futures/market-endpoints/get-contract-info), [futures PnL and account guide](https://www.mexc.com/support/futures-trading/account-and-funds), and [futures guide](https://www.mexc.com/support/futures-trading?handleDefaultLocale=keep).
+
+Stablecoin-risk studies add a reason to preserve that unit explicitly. Perez Riaza and Gnabo's five-minute study of 70 non-stablecoin assets reports that following a stablecoin depeg, the probability of a BTC/USD jump nearly quintuples within five minutes and co-jump probability rises about 6.5 times. Foley, Lee and Milunovich find significant cryptocurrency-return responses to USDT deviations in a ten-coin sample; in their rolling-window specification, the BTC-return coefficient is −1.103% for a one-standard-deviation downward USDT deviation and −2.424% for a three-standard-deviation deviation. These are study-specific associations, not causal estimates or MEXC execution effects ([Perez Riaza & Gnabo, 2025](https://doi.org/10.1016/j.jimonfin.2025.103339); [Foley, Lee & Milunovich, 2026](https://doi.org/10.1111/acfi.70201)).
+
 MEXC lists API Futures fees of 0.06% maker and 0.08% taker in its [June 2026 notice](https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742). A taker entry and exit therefore implies 16 bp before spread, book sweep, funding or slippage. The notice’s worked example still refers to an older fee schedule, and the contract-info example differs; verify current pair/account charges through the account-specific [fee endpoint](https://www.mexc.com/api-docs/futures/account-and-trading-endpoints/get-fee-details) or fill records before freezing the cost model.
 
 ## Account risk does not follow from mark-to-market portfolio returns
@@ -38,6 +46,8 @@ The project’s own review already notes that R198’s reported 47% drawdown and
 ## Synthetic checks (not venue or strategy estimates)
 
 **Fee arithmetic.** The documented BTC contract-size example is 0.0001 BTC per contract. At a hypothetical price of 50,000 USDT, 1,000 contracts represent 0.1 BTC, or 5,000 USDT notional. An 0.08% taker fee is 4 USDT per side; a taker round trip is 8 USDT before other costs. This is arithmetic only.
+
+**Quote-unit arithmetic.** Suppose the token stays at USD 100 while USDT moves from USD 1.00 to USD 0.98. Its USDT quote moves from 100 to 102.0408, a 2.0408% quoted return despite a zero USD token return. A one-token linear long entered at 100 USDT earns 2.0408 USDT on exit, worth USD 2 at the exit conversion rate. Meanwhile, 100 USDT of collateral is worth USD 98. This is invented arithmetic; the conversion rate, token price and contract are not market observations.
 
 **Book-walk illustration.** With a fictional mid of $1 and ask-side quote depth of $5,000 at $1.0005, $7,500 at $1.0010, $15,000 at $1.0050 and $30,000 at $1.0200, a static walk produces shortfalls of 5.00, 7.50, 29.02 and 107.26 bp for $5k, $10k, $25k and $50k target notionals. The convexity follows from walking further levels; the example assumes all quoted size remains and excludes fees, latency, cancellations and exit costs.
 
