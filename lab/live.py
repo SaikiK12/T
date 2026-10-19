@@ -94,7 +94,7 @@ def tradfi():
     underlyingType other than COIN and PREMARKET (stocks, commodities, indices)."""
     info = get("fapi/v1/exchangeInfo")
     return {s["symbol"] for s in info["symbols"] if s.get("contractType") == "TRADIFI_PERPETUAL"
-            or s.get("underlyingType") not in ("COIN", "PREMARKET")}
+            or s.get("underlyingType") not in ("COIN", "PREMARKET", None)}
 
 
 def parse_klines(rows):

@@ -92,7 +92,8 @@ def compute_hours(todo, tt, names, close, qv, rank, elig, shift):
         s = names[j]
         f = live.ratios_cached(s, int(todo[0]) - WARM, int(todo[-1]) + H + live.FIVE)
         frames[s] = live.hourly_metrics(f, shift)
-        for ep, key in (("topLongShortPositionRatio", "n_top"), ("takerlongshortRatio", "n_taker")):
+        for ep, key in (("topLongShortPositionRatio", "n_top"), ("takerlongshortRatio", "n_taker"),
+                        ("globalLongShortAccountRatio", "n_ls")):
             d = f.get(ep)
             if d is not None and len(d):
                 ts = d["timestamp"].values + shift.get(ep, 0)
@@ -114,6 +115,7 @@ def compute_hours(todo, tt, names, close, qv, rank, elig, shift):
                         **{c: float(m[c][r, j]) for c in flowfeat.METRIC_COLS},
                         "n_top": int(cover.get((s, "n_top"), pd.Series(dtype=int)).get(t, 0)),
                         "n_taker": int(cover.get((s, "n_taker"), pd.Series(dtype=int)).get(t, 0)),
+                        "n_ls": int(cover.get((s, "n_ls"), pd.Series(dtype=int)).get(t, 0)),
                         **{k: int(b[k][r, j]) for k in CELLS}, "late": late})
         ticks.append({"t": int(t), "utc": pd.Timestamp(int(t), unit="ms", tz="UTC").strftime("%Y-%m-%d %H:%M"),
                       "n_elig": int(len(idx)), "n_feat": int((b["tvc"][r, idx] >= 0).sum()),
@@ -240,9 +242,13 @@ def main():
     log(f"{len(names)} perpetuals, grid {len(tt)} h, {len(todo)} hours to compute")
     if len(todo):
         sig, tk = compute_hours(todo, tt, names, close, qv, rank, elig, shift)
+    if len(todo) and sig.empty:
+        log("no eligible rows in the hours to compute; nothing journaled")
+    elif len(todo):
         # an hour is averaged over all twelve 5-minute rows (PREREG); the newest rows publish minutes after the
-        # close, so an hour waits until 95% of its coins have 12 rows of both ratios, or until 3 h after its close
-        full = ((sig.n_top >= 12) & (sig.n_taker >= 12)).groupby(sig.t).mean()
+        # close, so an hour waits until 95% of its coins have 12 rows of all three ratios (top, crowd, taker), or
+        # until 3 h after its close. n_ls (crowd rows) gates only; it is not journaled (fixed signals.csv columns).
+        full = ((sig.n_top >= 12) & (sig.n_taker >= 12) & (sig.n_ls >= 12)).groupby(sig.t).mean()
         short = [t for t in todo if full.get(t, 0.0) < 0.95 and now < t + H + 3 * H]
         if short:
             log(f"deferred {len(todo) - list(todo).index(short[0])} hours from "
@@ -251,7 +257,7 @@ def main():
         have = read("signals.csv")
         if not have.empty:                         # a run killed between the two appends must not duplicate rows
             sig = sig[~sig.t.isin(set(have.t))]
-        append("signals.csv", sig)
+        append("signals.csv", sig.drop(columns="n_ls"))
         append("ticks.csv", tk)
         if len(tk):
             log(f"journaled {len(tk)} hours, {len(sig)} rows; last {tk.utc.iloc[-1]}")

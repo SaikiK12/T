@@ -62,7 +62,11 @@ def fetch(fn, keys):
             return k, None
 
     with ThreadPoolExecutor(4) as ex:
-        return {k: v for k, v in ex.map(one, keys) if v is not None}
+        got = dict(ex.map(one, keys))
+    failed = sorted(k for k, v in got.items() if v is None)
+    if failed:                         # a missing coin would book zero funding or close a position: write nothing
+        raise SystemExit(f"fetch failed for {failed}; no carry tickets this run")
+    return got
 
 
 def venue_binance(g):
