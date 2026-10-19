@@ -11,6 +11,9 @@ from paying its costs, and which routes (stacking, context gating, limit-order e
 - [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
 - [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
   [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
+- The current confidence supplements cover [forecast scoring](docs/FORECAST_EVALUATION_PLAYBOOK.md), [venue and
+  execution integrity](docs/PERP_EXECUTION_AND_RISK.md), [volatility and tail risk](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),
+  [adaptive selection](docs/ADAPTIVE_SELECTION_AND_DRIFT.md), and [operational/API controls](docs/OPERATIONAL_API_RISK.md).
 - `registry/rounds.csv`: one row per round with its trial count (append-only).
 - `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
 

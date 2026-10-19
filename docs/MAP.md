@@ -159,12 +159,15 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   Hyperliquid leaderboard (accounts >= USD 1M, about 7k rows) and hourly positions of 87 picks (top 50 by month and by
   all-time PnL) from 2026-10-19, as a change log (`scripts/scrape_hyperliquid.py`).
 - Carry: forward monitor; reverse carry needs borrow data.
-- Adaptive selection (battery_v1, R184, planned).
+- Adaptive selection (battery_v1, R184, planned): [adaptive selection and drift](ADAPTIVE_SELECTION_AND_DRIFT.md)
+  specifies a nested, turnover-aware policy lane; recent performance is not a license to retune a spent holdout.
 
 ## Known data defects
 - The archive has no metrics (order flow) for coins with non-ASCII names; their flow features are missing (0.16% of
   eligible cells). Live data include them.
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
+- MEXC has no API sandbox; an order timeout can leave an accepted or partially filled order. The required shadow-ledger,
+  reconciliation and fail-closed controls are documented in [operational/API risk](OPERATIONAL_API_RISK.md).
 
 ## Program
 Program trials: 9,471,705 after R212 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
