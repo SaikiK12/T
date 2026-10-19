@@ -140,13 +140,24 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - Pattern: one- or two-asset timing rules (C08, C13, C18, C23) cannot reach t 2 in five years at daily frequency;
     every lead the lab has comes from a cross-section of many coins.
 
+### Inside top-vs-crowd (posfam_v1 R211, posfam_v2 R212)
+- top_vs_crowd = (top traders' positions vs their headcount) + (top traders' headcount vs the crowd). The first half
+  *is* the signal (its short book correlates 0.96 with top_vs_crowd's); the second half fails validation (t 0.85).
+  A few large positions leaning short against the other top accounts is what pays; headcounts are crowd-like.
+- The top-account ratio alone is contrarian in discovery (t -3.0); reversed, it keeps its sign on validation
+  (+20 bp/day) but t 1.13, and its residual over top_vs_crowd is ~0. Three Binance positioning ratios, one story.
+- Data coverage: Binance's archived positioning ratios cover 10-13% of eligible coin-hours in 2021-2022 and 99% from
+  2023, so every top-trader result's "discovery" is mostly 2023.
+
 ## Routes still open
 - Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
   90 scored days.
 - Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
 - Gate data from 2026-10 on are unseen (Gate keeps 180 days; refetch before 2027-03): a forward score of Gate's
   top-vs-crowd and of the long-cascade continuation / short-squeeze fade (both chosen after R206, so new lanes).
-- Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22).
+- Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22), and on-chain whales (C04): daily
+  Hyperliquid leaderboard (accounts >= USD 1M, about 7k rows) and hourly positions of 87 picks (top 50 by month and by
+  all-time PnL) from 2026-10-19, as a change log (`scripts/scrape_hyperliquid.py`).
 - Carry: forward monitor; reverse carry needs borrow data.
 - Adaptive selection (battery_v1, R184, planned).
 
@@ -156,5 +167,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
 
 ## Program
-Program trials: 9,471,695 after R210 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,705 after R212 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
