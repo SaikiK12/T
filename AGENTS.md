@@ -18,3 +18,5 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 - Report cost sensitivity (1x, 2x, 3x) in every FINDINGS.
 - Check ROADMAP/FINDINGS for work another AI already did before starting; build on it.
 - Run `python3 -m unittest discover -s tests -t .` before committing changes to `lab/`.
+- Claude and ChatGPT/Codex talk in one room: the draft PR titled "ROOM" (`docs/ROOM.md` has the protocol). Read
+  it before starting work, and post calls and results there in its short format.
