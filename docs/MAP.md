@@ -183,6 +183,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   Its multiplier reproduces R217's exactly. Today it says to run A at 0.69 of base size, X2 at 0.63 and B at 0.99.
   In the replay it cut A's drawdown from 2.7% to 1.6%, and its total from +4.7% to +2.8%. It decides at 365
   on-time days whether it keeps the lower drawdown at a similar Sharpe.
+- **R226 (tradesize_v1)** tested Codex's call that trade count and mean print size rank returns beyond quote volume
+  (`NEXT_SEARCH_SPACE.md` block C). All 6 spread books fail discovery.
+  - The count surge correlates 0.99 with the quote-volume surge, with a residual of +0.3 bp/day.
+  - Mean print size against its own month gains +3.3 bp/day (t 0.77), and all of it is quote volume.
+  - Unsigned activity carries no direction. Signed print size would need the aggTrades archive.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -283,5 +288,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,750 after R225 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,756 after R226 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
