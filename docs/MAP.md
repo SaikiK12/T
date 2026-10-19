@@ -100,6 +100,8 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   8th by volume). R200 fixes both: bins match 99.98% / 99.53% / 99.58% on common coverage, top-50 overlap 100%.
 - R200 runs books A (flow72 primary) and B (top-vs-crowd alone) from 2026-10-01, hourly, journal committed; decision at
   90 scored days through `lab.gate.go_real` plus NW t >= 2.
+- First 18 scored days (2026-10-01..18, scored on 2026-10-19; not decisive): book A +22.2% at 1x (2x +21.0%, 3x
+  +19.8%; top-10 hedge +26.6%, BTC hedge +46.5%), book B +9.7%. The only failing go_real check is the number of days.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -119,16 +121,24 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   from 2026-10-19 for a forward persistence test (C02, C21, C22).
 - Base rates: under 1% of day traders are reliably profitable (Barber et al.); Topstep 16.8% of Combines passed in
   2025; FPFX 7% of 300k accounts paid.
-- 22 claims, each with a mechanical rule; tested so far: C13 intraday momentum (itsm_v1 R203): NULL.
+- 22 claims, each with a mechanical rule. Tested so far, all NULL:
+  - C13 intraday momentum (itsm_v1 R203).
+  - C06 top-vs-crowd on Gate (xvenue_v1 R205): same gross as Binance's (+25 bp/day over 157 days) but t 1.43 and 3x
+    the drawdown; Gate-only coins earn nothing. Weak support that the signal is market-wide; Gate adds nothing.
+  - C07 liquidation fade (liq_v1 R206): long cascades *continue* (buying after them loses before costs at 4-72 h);
+    short squeezes revert +10-26 bp/day gross at 4-24 h, below taker costs.
+  - C08 carry as a crash signal (carrycrash_v1 R207): reversed. Top-decile market carry was followed by no -20% BTC
+    crash in 138 signal days (base rate 16%); shorting BTC on it lost -74% in-sample (t -2.06). High carry marked the
+    2023-2024 rallies.
 
 ## Routes still open
 - Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
   90 scored days.
 - Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
-- Cross-venue top-vs-crowd on Gate (180 days hourly) and OKX (C06), and liquidations from Gate (C07): discovery only on
-  the spent window, fresh from 2026-10.
+- Gate data from 2026-10 on are unseen (Gate keeps 180 days; refetch before 2027-03): a forward score of Gate's
+  top-vs-crowd and of the long-cascade continuation / short-squeeze fade (both chosen after R206, so new lanes).
 - Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22).
-- Carry: forward monitor; reverse carry needs borrow data. High aggregate carry as a crash signal (C08).
+- Carry: forward monitor; reverse carry needs borrow data.
 - Adaptive selection (battery_v1, R184, planned).
 
 ## Known data defects
@@ -137,5 +147,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
 
 ## Program
-Program trials: 9,471,642 after R204 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,653 after R207 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.

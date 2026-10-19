@@ -44,7 +44,10 @@ def gate_grid(u, cols):
 
 def book_row(name, o, extra=None):
     n = o["daily"]
-    return {"book": name, "days": len(n), "total": float(n.sum()), "mean_bp_day": float(n.mean() * 1e4),
+    D = len(n)
+    per_day = lambda x: float(x[: D * 24].sum() / D * 1e4)
+    return {"book": name, "days": D, "total": float(n.sum()), "mean_bp_day": float(n.mean() * 1e4),
+            "gross_bp_day": per_day(o["gross"] + o["hedge"]), "cost_bp_day": per_day(o["cost"] + o["hedge_cost"]),
             **events.summary(n), "gross_exposure": float(o["gross_exposure"].mean()), **(extra or {})}
 
 
