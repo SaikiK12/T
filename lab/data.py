@@ -112,9 +112,16 @@ def plan_files(symbol, kind, interval="", list_fn=list_zips, end=END):
 def fetch(key, raw=None, strict=False):
     """Download one archive file into the cache; None when the archive does not have it."""
     dest = Path(raw or ROOT / "raw") / key
-    if dest.exists():
-        return dest
     quoted = urllib.parse.quote(key)
+    if dest.exists():
+        if strict:
+            want = _published_sha256(key, quoted)
+            got = hashlib.sha256(dest.read_bytes()).hexdigest()
+            if got != want:
+                raise FetchError(f"{key}: cached SHA-256 mismatch")
+        else:
+            _verify_zip(dest.read_bytes(), key)
+        return dest
     try:
         blob = _get(f"{BASE}/{quoted}")
     except urllib.error.HTTPError as e:
@@ -122,16 +129,41 @@ def fetch(key, raw=None, strict=False):
             return None
         raise
     if strict:
-        want = _get(f"{BASE}/{quoted}.CHECKSUM").split()[0].decode()
+        want = _published_sha256(key, quoted)
         if hashlib.sha256(blob).hexdigest() != want:
             raise FetchError(f"{key}: SHA-256 mismatch")
-    elif zipfile.ZipFile(io.BytesIO(blob)).testzip() is not None:
-        raise FetchError(f"{key}: corrupt zip")
+    else:
+        _verify_zip(blob, key)
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".part")
     tmp.write_bytes(blob)
     tmp.replace(dest)
     return dest
+
+
+def _published_sha256(key, quoted=None):
+    """Fetch the archive's published checksum; strict mode never trusts an unverified cache."""
+    quoted = quoted or urllib.parse.quote(key)
+    fields = _get(f"{BASE}/{quoted}.CHECKSUM").split()
+    if not fields:
+        raise FetchError(f"{key}: empty published checksum")
+    try:
+        digest = fields[0].decode("ascii").lower()
+    except UnicodeDecodeError as e:
+        raise FetchError(f"{key}: invalid published checksum") from e
+    if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
+        raise FetchError(f"{key}: invalid published SHA-256")
+    return digest
+
+
+def _verify_zip(blob, key):
+    """Verify a cached or freshly downloaded archive's ZIP CRC without contacting the source."""
+    try:
+        bad = zipfile.ZipFile(io.BytesIO(blob)).testzip()
+    except (OSError, zipfile.BadZipFile) as e:
+        raise FetchError(f"{key}: invalid zip") from e
+    if bad is not None:
+        raise FetchError(f"{key}: corrupt zip ({bad})")
 
 
 def parse(path, kind):
