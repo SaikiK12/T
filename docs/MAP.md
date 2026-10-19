@@ -1,6 +1,6 @@
 # Map: what is known, and the routes still open
 
-Updated 2026-10-18. Every line points to a lane with a frozen PREREG, a FINDINGS file and a registry row. Splits:
+Updated 2026-10-19. Every line points to a lane with a frozen PREREG, a FINDINGS file and a registry row. Splits:
 discovery 2021-2023, validation 2024-2025H1, holdout 2025-07..2026-09 (read once per lane). "Replicates" = picked on
 discovery, same sign and |t| >= 2 on validation. Universe: the 50 most liquid Binance USD-M perps at each hour (499 coins
 over time, delisted ones included). Round trip at the tier costs: about 12-16 bp.
@@ -19,6 +19,14 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
 5. **Funding carry is real and regime-bound**: +35% in 2021, ~0 in 2022-23, +8% in 2024, ~1%/yr since (R190, R191).
 6. **How you measure decides what you find**: day-weighted, all-hours atlas means overstate what an entry rule earns;
    the same edge can be captured by a book that holds the state (slices), not by one that trades the entry.
+7. **Context matters, and mostly as an interaction for market-neutral bets** (R192, R195): the coin's own 4 h / 24 h
+   state and its order flow change how its 1 h signals pay; a few hundred market-neutral (signal, context) pairs keep a
+   validation edge above 2x costs. Market-wide contexts mostly time the whole market. Clocks switch signals off.
+8. **Live data match the archive**: the public endpoints rebuild the flow signals' bins at 99.5-99.98% (R199/R200),
+   and a forward paper test of the flow book and of top-vs-crowd runs from 2026-10-01 (R200).
+9. **Where money could come from** (R202): if top-vs-crowd holds, a crypto prop challenge (a few hundred dollars for a
+   100k account) is worth far more than the same edge on own capital; spot has no candidate (every surviving lead is
+   short-side or market-neutral); carry cannot run in a prop account.
 
 ## 1. What predicts returns before fees (atlas_v1, R185)
 | family | replicates | reading |
@@ -64,20 +72,68 @@ costs). Session-specific means overfit. Best Deflated Sharpe 0.77.
 - **New listings** (R188, R189): trail the market in every year (median -9% over 14 days), squeezes (+700%) keep it
   insignificant; the holdout did not confirm.
 
-## 6. Context: when does a signal get stronger? (atlas_ctx R192, atlas_mtf R195, running)
-Lift of every signal inside vs outside: market clocks, market-wide crowding (share of coins at extreme lows/highs), BTC
-trend and volatility, dispersion, breadth, the coin's own order flow (R192), and the coin's own 4 h / 24 h state: trend,
-range, RSI, structure, volatility, volume, funding (R195). For market-wide contexts the raw lift includes the context's
-own market timing; an exploratory decomposition separates the interaction.
+## 6. Context: when does a signal get stronger? (atlas_ctx R192, atlas_mtf R195)
+Lift of every signal inside vs outside a context, discovery 2021-2023, replication 2024-2025H1, placebo-calibrated.
+| family | confident lifts | replicate | placebo replicate | excess pairs above cost, 1x / 2x / 3x (placebo 1x) |
+|---|---|---|---|---|
+| clock (hours, opens, expiries, FOMC) | 17,187 | 50% | 6% | - (directional only: 77 / 56 / 30) |
+| crowd (share of coins at extremes) | 408,132 | 85% | 49% (not SIGNAL) | 452 / 153 / 62 (2) |
+| market (BTC trend/vol, dispersion, breadth) | 321,432 | 71% | 11% | 93 / 43 / 16 (0) |
+| flow (the coin's OI, positioning, taker) | 115,453 | 68% | 9% | 188 / 119 / 66 (0) |
+| mtf (the coin's 4 h / 24 h state) | 55,592 | 54% | 7% | 431 / 232 / 131 (2) |
+- Market-wide contexts time the market: only ~5% of their raw lifts survive as interactions. Excess (market-neutral)
+  lifts are interactions (36-46% replicate vs 3-7% placebo).
+- Clocks dampen: 8,208 replicated clock lifts switch a signal off, 353 amplify it.
+- Patterns: **exhaustion** (1 h overbought while the 4 h EMA cross is most stretched: the coin trails the market by
+  ~100 bp over 24 h); **dip in a strong trend** (1 h oversold, daily RSI top bucket: +117 bp over 4 h); **low leverage
+  crowding + 1 h overbought** (-122 bp over 12 h); **crowd most short + price below the day open** (+142 bp over 24 h).
+- These are day-weighted means of rare states; ctxslice_v1 (R201) turns the 547 pairs into one slice book.
+
+## 7. Live data and forward paper trading (R199, R200)
+- Public endpoints on www.binance.com (fapi.binance.com is geo-blocked) carry the same 5-minute metrics as the
+  archive, with snapshots stamped 5 minutes later; taker rows match. With the clock fixed the hourly ratios match to
+  3e-6 (top traders) and 3e-5 (all accounts).
+- R199 was abandoned at its data gate: the archive lacks metrics for coins with non-ASCII names (4 coins, 0.16% of
+  eligible cells, all from 2025-10), and the live filter missed Binance's TradFi perps (oil, gold, NVDA... CLUSDT is
+  8th by volume). R200 fixes both: bins match 99.98% / 99.53% / 99.58% on common coverage, top-50 overlap 100%.
+- R200 runs books A (flow72 primary) and B (top-vs-crowd alone) from 2026-10-01, hourly, journal committed; decision at
+  90 scored days through `lab.gate.go_real` plus NW t >= 2.
+
+## 8. Where money could come from (propfirm_v1 R202)
+| route | what it needs | today |
+|---|---|---|
+| crypto prop challenge (HyroTrader, CFT, Breakout: exchange perps) | an edge whose drawdown fits 5-10% at a size that reaches the target | top-vs-crowd (holdout stream): ~88-95% pass, ~USD 15-19k expected payouts per 100k attempt; flow book ~67%, ~6k; zero edge ~28%, ~1.9k (model optimistic: real buyers ~7% paid) |
+| own capital, futures | the same edge at a 10% drawdown budget | top-vs-crowd ~+45%/yr at size 0.63; flow book ~+18%/yr at size 0.21 |
+| spot (long-only) | a long-only edge | none: surviving leads are short-side or market-neutral |
+| carry | spot leg + perp short | real but ~1%/yr since 2025; not possible in a prop account |
+Every number in this table assumes a stream that is not confirmed; R200 is the gate.
+
+## 9. Outside sources (docs/SOURCES.md, docs/CLAIMS.md)
+- Tarek El Marhri: sub-5-minute order-book scalping on Eurex/CME index and bond futures; no verifiable record; sells
+  EUR 3,900-9,900 courses and promotes a prop firm. Nothing transfers to hourly perps except a daily loss/profit limit
+  overlay (C17).
+- Verifiable records exist on-chain (Hyperliquid leaderboard, HLP vault) and on platform copy-trading lists (Binance,
+  OKX, Bitget). Copy-trading ROI rankings favour tiny accounts; leads can win while copiers lose. Daily snapshots run
+  from 2026-10-19 for a forward persistence test (C02, C21, C22).
+- Base rates: under 1% of day traders are reliably profitable (Barber et al.); Topstep 16.8% of Combines passed in
+  2025; FPFX 7% of 300k accounts paid.
+- 22 claims, each with a mechanical rule; tested so far: C13 intraday momentum (itsm_v1 R203): NULL.
 
 ## Routes still open
-- Forward paper test of the flow slice book and of top-vs-crowd alone (the next real evidence; no money before
-  `lab.gate.go_real`).
-- Context gating, if atlas_ctx / atlas_mtf lifts replicate as interactions.
-- Slice books for other slow, cross-sectional cells; the slice construction is the cheap way to hold a state.
-- Carry: forward monitor; reverse carry needs borrow data.
-- Adaptive selection (battery_v1, R184, planned): does recent performance pick the next winners?
+- Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
+  90 scored days.
+- ctxslice_v1 (R201): the replicated context pairs as one slice book; in-sample filter, then a one-shot holdout.
+- Cross-venue top-vs-crowd on Gate (180 days hourly) and OKX (C06), and liquidations from Gate (C07): discovery only on
+  the spent window, fresh from 2026-10.
+- Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22).
+- Carry: forward monitor; reverse carry needs borrow data. High aggregate carry as a crash signal (C08).
+- Adaptive selection (battery_v1, R184, planned).
+
+## Known data defects
+- The archive has no metrics (order flow) for coins with non-ASCII names; their flow features are missing (0.16% of
+  eligible cells). Live data include them.
+- Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
 
 ## Program
-Program trials: 507,088 after R198 (`registry.program_trials()`), most of them atlas cells. Read every t above against
-that count; only the forward ledger is confirmatory.
+Program trials: 9,471,640 after R203 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+t above against that count; only the forward ledger is confirmatory.

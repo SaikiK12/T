@@ -50,7 +50,9 @@ def append(name, df):
 
 def gate_shift():
     par = json.loads((LANE / "parity.json").read_text())
-    bad = {k: v["match"] for k, v in par["bins_common"].items() if v["match"] is None or v["match"] < 0.99}
+    gated = [f"flow:{v}/xs8" for v in CELLS.values()]          # the PREREG gates the book's three specs only
+    bad = {k: par["bins_common"][k]["match"] for k in gated
+           if par["bins_common"][k]["match"] is None or par["bins_common"][k]["match"] < 0.99}
     if bad:
         raise SystemExit(f"data gate failed, forward test not started: {bad}")
     return {k: int(v) for k, v in par["shifts_ms"].items()}

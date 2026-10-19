@@ -1,0 +1,177 @@
+09:48:59 rows 2026-09-24..2026-10-01 (168 h, warm-up 36 h), 56 symbols eligible
+09:49:01 ratios 1/56 1000PEPEUSDT
+09:49:13 ratios 11/56 BTRUSDT
+09:49:26 ratios 21/56 HYPEUSDT
+09:49:39 ratios 31/56 NVDAUSDT
+09:49:51 ratios 41/56 SOLUSDT
+09:50:04 ratios 51/56 XAGUSDT
+09:50:13 alignment {"topLongShortPositionRatio": {"-10": 0.1261671335200747, "-5": 0.9953314659197012, "0": 0.12873482726423902, "5": 0.0680438842203548}, "globalLongShortAccountRatio": {"-10": 0.0799486461251167, "-5": 0.9835434173669467, "0": 0.0780812324929972, "5": 0.04330065359477124}, "takerlongshortRatio": {"-10": 0.0008169934640522876, "-5": 0.0018674136321195146, "0": 0.4096638655462185, "5": 0.0022175536881419234}, "openInterestHist": {"-10": 0.06840999299556386, "-5": 0.197058136819986, "0": 0.20476301657716553, "5": 0.1914545879056736}} chosen {'topLongShortPositionRatio': -300000, 'globalLongShortAccountRatio': -300000, 'takerlongshortRatio': 0, 'openInterestHist': 0}
+09:50:13 raw parity {
+ "oi": {
+  "cells_archive": 8568,
+  "cells_both": 8566,
+  "live_missing": 0,
+  "median_rel_diff": 0.0007937848567962646,
+  "share_within_1e-3": 0.5445949101097362
+ },
+ "oi_value": {
+  "cells_archive": 8568,
+  "cells_both": 8566,
+  "live_missing": 0,
+  "median_rel_diff": 0.00197678804397583,
+  "share_within_1e-3": 0.35734298388979685
+ },
+ "top_ls_sum": {
+  "cells_archive": 8568,
+  "cells_both": 8568,
+  "live_missing": 0,
+  "median_rel_diff": 2.682209014892578e-06,
+  "share_within_1e-3": 0.9997665732959851
+ },
+ "ls_count": {
+  "cells_archive": 8568,
+  "cells_both": 8568,
+  "live_missing": 0,
+  "median_rel_diff": 2.6345252990722656e-05,
+  "share_within_1e-3": 0.9991830065359477
+ },
+ "taker_ls_vol": {
+  "cells_archive": 8568,
+  "cells_both": 8568,
+  "live_missing": 0,
+  "median_rel_diff": 0.0001379847526550293,
+  "share_within_1e-3": 0.9858776844070962
+ }
+}
+09:50:13 bin parity (all) {
+ "flow:top_vs_crowd/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.933531746031746,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1008
+ },
+ "flow:taker[4]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.8804563492063492,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 912,
+  "bin0_agree": 911
+ },
+ "flow:taker[24]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.8676835317460317,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 916,
+  "bin0_agree": 915
+ },
+ "flow:crowd_ls/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.830109126984127,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 961,
+  "bin0_agree": 961
+ },
+ "flow:top_ls/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.9652777777777778,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1008
+ },
+ "flow:oi_chg[24]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8062,
+  "match": 0.7970726866782436,
+  "within_one": 0.987968246092781,
+  "bin0_archive": 1006,
+  "bin0_live": 986,
+  "bin0_agree": 935
+ }
+}
+09:50:13 bin parity (common) {
+ "flow:top_vs_crowd/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.9997519841269841,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1008
+ },
+ "flow:taker[4]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.9952876984126984,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1007
+ },
+ "flow:taker[24]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.9957837301587301,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1004
+ },
+ "flow:crowd_ls/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 1.0,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1008
+ },
+ "flow:top_ls/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8064,
+  "match": 0.9997519841269841,
+  "within_one": 1.0,
+  "bin0_archive": 1008,
+  "bin0_live": 1008,
+  "bin0_agree": 1008
+ },
+ "flow:oi_chg[24]/xs8": {
+  "eligible_cells": 8400,
+  "archive_binned": 8062,
+  "match": 0.8181592656908956,
+  "within_one": 0.9875961299925576,
+  "bin0_archive": 1006,
+  "bin0_live": 1008,
+  "bin0_agree": 949
+ }
+}
+09:50:15 klines 1/877
+09:50:33 klines 51/877
+09:50:49 klines 101/877
+09:51:07 klines 151/877
+09:51:24 klines 201/877
+09:51:42 klines 251/877
+09:51:59 klines 301/877
+09:52:16 klines 351/877
+09:52:34 klines 401/877
+09:52:50 klines 451/877
+09:53:07 klines 501/877
+09:53:24 klines 551/877
+09:53:41 klines 601/877
+09:53:58 klines 651/877
+09:54:15 klines 701/877
+09:54:33 klines 751/877
+09:54:53 klines 801/877
+09:55:14 klines 851/877
+09:55:23 rank parity {'perpetuals_live': 877, 'top50_overlap_mean': 1.0, 'top50_overlap_min': 1.0}
+09:55:23 written /home/user/T/experiments/flow72_fwd2/parity.json

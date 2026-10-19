@@ -22,12 +22,17 @@ def positions(ind, hold, t0, t1, unit, side):
 def book(ind, ret, elig, cmat, hold, unit, t0, t1, side=-1, hedge=True, cmult=1.0, basket=None):
     """ind: [T, S] bool, a slice opens at (t, s) when true (pass it already masked by eligibility). Returns a dict of
     hourly arrays over [t0, t1) and `daily` (sum of hours)."""
-    P = positions(ind, hold, t0, t1, unit, side)
+    return run(positions(ind, hold, t0, t1, unit, side), ret, elig, cmat, t0, t1, hedge, cmult, basket)
+
+
+def run(P, ret, elig, cmat, t0, t1, hedge=True, cmult=1.0, basket=None):
+    """The book's hourly results for positions P [t1 - t0, S] (e.g. a sum of several cells' positions, so opposite
+    slices net out before costs)."""
     r = np.nan_to_num(np.asarray(ret[t0:t1], np.float64))
     c = np.asarray(cmat[t0:t1], np.float64)
     dP = np.diff(np.vstack([np.zeros((1, P.shape[1])), P]), axis=0)
     out = {"gross": (P * r).sum(axis=1), "cost": cmult * (np.abs(dP) * c).sum(axis=1),
-           "gross_exposure": np.abs(P).sum(axis=1), "net_exposure": P.sum(axis=1)}
+           "gross_exposure": np.abs(P).sum(axis=1), "net_exposure": P.sum(axis=1), "turnover": np.abs(dP).sum(axis=1)}
     out["hedge"] = np.zeros(len(P))
     out["hedge_cost"] = np.zeros(len(P))
     if hedge:
