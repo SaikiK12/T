@@ -126,6 +126,17 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - In the archive, TradFi is about 0% of the holdout: crypto-only top-vs-crowd makes +18.3 bp/day, t 2.74. But BEAT
     and LAB carry about 68% of book A's holdout gross.
   - **Reference for the owner: R215, crypto on MEXC.**
+- **R217 (sizing_v1)**, the confidence multiplier, run on crypto-only books entered one bar late. The verdict is
+  NULL against the frozen bar (+0.3 Sharpe in both discovery and validation). Two patterns stand out:
+  - **Across coins, more agreement → more size works.** A coin flagged by k of the three flow cells gets k² slices
+    instead of k, at the same gross. Sharpe rises from 1.81 / 1.39 / 1.05 to 1.96 / 1.68 / 1.49 (discovery /
+    validation / holdout), and one slice per flagged coin is worse everywhere. The cost is concentration: holdout max
+    DD is 62%.
+  - **Over time, scaling by the book's own confidence hurts.** Shrunk Kelly and "size up after gains" lower Sharpe
+    everywhere. A volatility target keeps Sharpe about flat and nearly halves drawdowns (A holdout 47% → 27%): use it
+    for live size.
+- **R218 (mexc_fwd_sq)** runs the k² book forward on MEXC next to R215. Replay: +6.2% against A's +4.7%.
+- `scripts/forward_all.sh` runs one forward tick: R200, then R214, R215, R218.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -211,5 +222,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,718 after R216 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,729 after R218 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.

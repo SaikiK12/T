@@ -1,0 +1,138 @@
+14:33:40 prereg sha 3d04ff8b992e
+14:33:54 gross exposure on discovery (before rescale): {'A': np.float64(0.997), 'B': np.float64(0.258), 'X1': np.float64(0.804), 'X2': np.float64(1.413)}
+/usr/local/lib/python3.13/dist-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/user/T/scripts/run_sizing.py:92: RuntimeWarning: Mean of empty slice
+  idx = np.nanmean(rd_, axis=1)
+14:34:08 A_C0 {'discovery': 1.81, 'validation': 1.39, 'holdout': 1.05}
+14:34:15 A_R1 {'discovery': 1.72, 'validation': 1.19, 'holdout': 1.06}
+14:34:21 A_R2 {'discovery': 1.06, 'validation': 0.55, 'holdout': 0.77}
+14:34:28 A_R3 {'discovery': 1.66, 'validation': 1.29, 'holdout': 0.87}
+14:34:34 A_R4 {'discovery': 1.81, 'validation': 1.35, 'holdout': 1.12}
+14:34:41 B_C0 {'discovery': 1.28, 'validation': 1.2, 'holdout': 2.46}
+14:34:48 B_R1 {'discovery': 1.46, 'validation': 1.16, 'holdout': 2.47}
+14:34:54 B_R2 {'discovery': 0.79, 'validation': 0.57, 'holdout': 0.92}
+14:35:00 B_R3 {'discovery': 0.74, 'validation': 0.72, 'holdout': 2.08}
+14:35:06 B_R4 {'discovery': 1.28, 'validation': 1.21, 'holdout': 2.47}
+14:35:13 X1 {'discovery': 1.46, 'validation': 0.99, 'holdout': 0.54}
+14:35:19 X2 {'discovery': 1.96, 'validation': 1.68, 'holdout': 1.49}
+14:35:19 
+ run book rule  cmult     window  days  mean_bp_day  t_nw10  sharpe  max_dd  mean_abs_m  gross_exposure  mean_per_m_bp
+A_C0    A   C0    1.0  discovery  1095       11.189   2.877   1.812   0.240       1.000           0.997         11.189
+A_C0    A   C0    1.0 validation   547       13.599   1.900   1.389   0.261       1.000           1.928         13.599
+A_C0    A   C0    1.0    holdout   457       21.851   1.218   1.048   0.468       1.000           1.699         21.851
+A_R1    A   R1    1.0  discovery  1095        6.829   2.821   1.718   0.145       0.769           0.634          8.886
+A_R1    A   R1    1.0 validation   547        8.311   1.629   1.189   0.231       0.731           1.410         11.370
+A_R1    A   R1    1.0    holdout   457       11.144   1.247   1.063   0.273       0.527           0.910         21.139
+A_R2    A   R2    1.0  discovery  1095        7.862   1.976   1.063   0.329       0.879           0.813          8.945
+A_R2    A   R2    1.0 validation   547        3.964   0.810   0.550   0.191       0.512           0.986          7.741
+A_R2    A   R2    1.0    holdout   457        2.780   0.828   0.770   0.112       0.147           0.269         18.887
+A_R3    A   R3    1.0  discovery  1095       14.164   2.579   1.658   0.396       1.044           1.316         13.563
+A_R3    A   R3    1.0 validation   547       17.149   1.744   1.287   0.357       1.266           2.440         13.546
+A_R3    A   R3    1.0    holdout   457       24.402   1.042   0.873   0.839       1.183           1.987         20.632
+A_R4    A   R4    1.0  discovery  1095       11.189   2.877   1.812   0.240       1.000           0.997         11.189
+A_R4    A   R4    1.0 validation   547       12.370   1.816   1.353   0.265       0.909           1.751         13.615
+A_R4    A   R4    1.0    holdout   457       17.408   1.321   1.123   0.425       0.708           1.200         24.592
+B_C0    B   C0    1.0  discovery  1095        3.901   2.096   1.282   0.108       1.000           0.258          3.901
+B_C0    B   C0    1.0 validation   547        6.993   1.711   1.201   0.156       1.000           0.643          6.993
+B_C0    B   C0    1.0    holdout   457       17.987   2.691   2.464   0.162       1.000           0.508         17.987
+B_R1    B   R1    1.0  discovery  1095        2.442   2.335   1.457   0.048       0.844           0.143          2.893
+B_R1    B   R1    1.0 validation   547        4.285   1.648   1.157   0.118       0.653           0.420          6.566
+B_R1    B   R1    1.0    holdout   457       11.666   2.698   2.475   0.100       0.658           0.333         17.719
+B_R2    B   R2    1.0  discovery  1095        2.608   1.443   0.792   0.112       1.008           0.264          2.587
+B_R2    B   R2    1.0 validation   547        2.105   0.864   0.571   0.121       0.395           0.254          5.326
+B_R2    B   R2    1.0    holdout   457        4.791   0.931   0.917   0.208       0.497           0.205          9.634
+B_R3    B   R3    1.0  discovery  1095        3.077   1.153   0.736   0.252       0.987           0.319          3.118
+B_R3    B   R3    1.0 validation   547        5.694   1.066   0.717   0.217       1.202           0.773          4.737
+B_R3    B   R3    1.0    holdout   457       21.861   2.232   2.080   0.299       1.434           0.720         15.241
+B_R4    B   R4    1.0  discovery  1095        3.901   2.096   1.282   0.108       1.000           0.258          3.901
+B_R4    B   R4    1.0 validation   547        6.574   1.700   1.206   0.156       0.909           0.584          7.235
+B_R4    B   R4    1.0    holdout   457       12.780   2.618   2.465   0.113       0.708           0.354         18.055
+  X1    X   X1    1.0  discovery  1095        7.638   2.404   1.459   0.251       1.000           0.997          7.638
+  X1    X   X1    1.0 validation   547        8.723   1.389   0.990   0.266       1.000           1.938          8.723
+  X1    X   X1    1.0    holdout   457        8.767   0.638   0.541   0.489       1.000           1.669          8.767
+  X2    X   X2    1.0  discovery  1095       15.467   2.988   1.959   0.246       1.000           0.997         15.467
+  X2    X   X2    1.0 validation   547       19.682   2.216   1.681   0.275       1.000           1.920         19.682
+  X2    X   X2    1.0    holdout   457       42.509   1.696   1.494   0.616       1.000           1.742         42.509
+14:35:19 {
+ "A_R1": {
+  "sharpe_gain": {
+   "discovery": -0.09412357786818504,
+   "validation": -0.20037063987900705,
+   "holdout": 0.014247043678995652
+  },
+  "passed": false
+ },
+ "A_R2": {
+  "sharpe_gain": {
+   "discovery": -0.748998989412321,
+   "validation": -0.8391196036143076,
+   "holdout": -0.2786260461139758
+  },
+  "passed": false
+ },
+ "A_R3": {
+  "sharpe_gain": {
+   "discovery": -0.15454378280468406,
+   "validation": -0.10271877431740162,
+   "holdout": -0.17506021308718833
+  },
+  "passed": false
+ },
+ "A_R4": {
+  "sharpe_gain": {
+   "discovery": 0.0,
+   "validation": -0.036692267602270734,
+   "holdout": 0.07491942951569341
+  },
+  "passed": false
+ },
+ "B_R1": {
+  "sharpe_gain": {
+   "discovery": 0.17491714009788595,
+   "validation": -0.04417580176371816,
+   "holdout": 0.010715841901566048
+  },
+  "passed": false
+ },
+ "B_R2": {
+  "sharpe_gain": {
+   "discovery": -0.48976798764879315,
+   "validation": -0.6300070402218478,
+   "holdout": -1.546361019606083
+  },
+  "passed": false
+ },
+ "B_R3": {
+  "sharpe_gain": {
+   "discovery": -0.5465363868219878,
+   "validation": -0.4837186877403925,
+   "holdout": -0.3836087033641715
+  },
+  "passed": false
+ },
+ "B_R4": {
+  "sharpe_gain": {
+   "discovery": 0.0,
+   "validation": 0.004804111601492966,
+   "holdout": 0.0016798965531097387
+  },
+  "passed": false
+ },
+ "X1": {
+  "sharpe_gain": {
+   "discovery": -0.3532005882792566,
+   "validation": -0.3994894009025366,
+   "holdout": -0.5072919523627284
+  },
+  "passed": false
+ },
+ "X2": {
+  "sharpe_gain": {
+   "discovery": 0.14633608335005666,
+   "validation": 0.2918328523462137,
+   "holdout": 0.44528523134698617
+  },
+  "passed": false
+ }
+}

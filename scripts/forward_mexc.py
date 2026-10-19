@@ -30,7 +30,8 @@ H = ft.H
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
-def score():
+def load():
+    """Signals, MEXC prices and funding on the forward grid, and the one-bar-late slice indicators per cell."""
     sig, ticks = ft.read("signals.csv"), ft.read("ticks.csv")
     syms, t0 = sorted(sig.symbol.unique()), ft.FWD_START
     last = int(ticks.t.max())
@@ -79,16 +80,27 @@ def score():
         ind[k] = shift_rows(x & trad, trad, np.ones(T, int))
     known = np.isfinite(c[1:]).any(axis=1)
     D = (int(np.flatnonzero(known).max()) + 1 if known.any() else 0) // 24
+    return dict(t0=t0, last=last, syms=syms, mp=mp, mx=mx, table=table, ret=ret, fe=fe, trad=trad, cmat=cmat,
+                ind=ind, ind_all=ind_all, D=D)
+
+
+def flow_books(st, unit):
+    """R215's books: {name: (positions, cells)} with k slices for a coin flagged by k cells."""
+    return {b: (sum(slices.positions(st["ind"][k], ft.HOLD, 0, st["D"] * 24, unit, -1) for k in ft.BOOKS[b]),
+                ft.BOOKS[b]) for b in ("A", "B")}
+
+
+def score(st, books, J, gate_book="A", ref=R214):
+    """Append tickets for complete days not yet ticketed and write status.json; books: {name: (P, cells)}."""
+    t0, last, syms, mp, mx, table = (st[k] for k in ("t0", "last", "syms", "mp", "mx", "table"))
+    ret, fe, trad, cmat, ind_all, D = (st[k] for k in ("ret", "fe", "trad", "cmat", "ind_all", "D"))
     if D == 0:
         return None
-    unit = 1.0 / (ft.HOLD * ft.K)
     have = pd.read_csv(J / "tickets.csv") if (J / "tickets.csv").exists() else pd.DataFrame()
     done = set(zip(have.day, have.book)) if not have.empty else set()
     rows = []
-    for book in ("A", "B"):
-        cells = ft.BOOKS[book]
+    for book, (P, cells) in books.items():
         res = {}
-        P = sum(slices.positions(ind[k], ft.HOLD, 0, D * 24, unit, -1) for k in cells)
         for name, cmult in (("1x", 1.0), ("2x", 2.0), ("3x", 3.0)):
             res[name] = slices.run(P, ret, trad, cmat, 0, D * 24, cmult=cmult)
         fund = -(P * fe[1:D * 24 + 1]).sum(axis=1)                     # the book's funding, before the hedge
@@ -115,25 +127,25 @@ def score():
     fees = table[table.symbol.isin(mx)][["taker", "maker"]].describe().loc[["mean", "min", "max"]].to_dict()
     status = {"last_hour": pd.Timestamp(last, unit="ms", tz="UTC").isoformat(), "mapped": len(mx),
               "dropped": dropped, "mexc_fee": fees}
-    r214 = pd.read_csv(R214) if R214.exists() else pd.DataFrame()
-    for book in ("A", "B"):
+    r214 = pd.read_csv(ref) if ref is not None and ref.exists() else pd.DataFrame()
+    for book in books:
         for kind in ("replay", "ontime"):
             n = tk[(tk.book == book) & (tk.kind == kind)].sort_values("day")
             if n.empty:
                 continue
             x = n.net.values
-            st = {"days": int(len(x)), "total": float(x.sum()), "total_2x": float(n.net_2x.sum()),
+            s_ = {"days": int(len(x)), "total": float(x.sum()), "total_2x": float(n.net_2x.sum()),
                   "total_3x": float(n.net_3x.sum()), "funding": float(n.funding.sum()),
                   "coverage": float(n.coverage.mean()), **events.summary(x)}
-            if kind == "ontime" and book == "A":
-                st["go_real"] = gate.go_real(x)
-            if not r214.empty:
-                ref = r214[r214.book == book].set_index("day").net.reindex(n.day).values
-                ok = np.isfinite(ref)
+            if kind == "ontime" and book == gate_book:
+                s_["go_real"] = gate.go_real(x)
+            if not r214.empty and book in set(r214.book):
+                rv = r214[r214.book == book].set_index("day").net.reindex(n.day).values
+                ok = np.isfinite(rv)
                 if ok.sum() >= 3:
-                    st["r214_same_days_total"] = float(ref[ok].sum())
-                    st["corr_r214"] = float(np.corrcoef(x[ok], ref[ok])[0, 1])
-            status[f"{book}_{kind}"] = st
+                    s_["r214_same_days_total"] = float(rv[ok].sum())
+                    s_["corr_r214"] = float(np.corrcoef(x[ok], rv[ok])[0, 1])
+            status[f"{book}_{kind}"] = s_
     (J / "status.json").write_text(json.dumps(status, indent=1, default=float))
     return status
 
@@ -141,7 +153,8 @@ def score():
 def main():
     log("prereg sha", prereg.verify(LANE / "PREREG.md")[:12])
     J.mkdir(parents=True, exist_ok=True)
-    st = score()
+    state = load()
+    st = score(state, flow_books(state, 1.0 / (ft.HOLD * ft.K)), J)
     if st:
         log({k: (v["days"], round(v["total"], 4), round(v.get("corr_r214", np.nan), 2))
              for k, v in st.items() if isinstance(v, dict) and "days" in v}, "dropped", st["dropped"])
