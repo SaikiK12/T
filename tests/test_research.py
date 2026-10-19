@@ -35,6 +35,28 @@ class UniverseTests(unittest.TestCase):
         finally:
             research.HOLDOUT = old
 
+    def test_exact_holdout_boundary_already_depends_on_its_first_bar(self):
+        u = small_universe()
+        bins = np.zeros((1, u.p.T, u.p.S), np.int8)
+        rule = Rule(view=(0,), lo=(0,), hi=(0,), need=1, direction=1, hold=1)
+        old = research.HOLDOUT
+        research.HOLDOUT = "2021-06-01"
+        try:
+            boundary = u.holdout_row
+            with self.assertRaises(PermissionError):
+                research.eval_rules(u, bins, [rule], 0, boundary)
+            research.eval_rules(u, bins, [rule], 0, boundary - 24)
+            research.eval_rules(u, bins, [rule], 0, boundary, allow_holdout=True)
+        finally:
+            research.HOLDOUT = old
+
+    def test_panel_ending_before_holdout_is_not_mistaken_for_a_boundary_bar(self):
+        u = small_universe()
+        bins = np.zeros((1, u.p.T, u.p.S), np.int8)
+        rule = Rule(view=(0,), lo=(0,), hi=(0,), need=1, direction=1, hold=1)
+        self.assertEqual(u.holdout_row, u.p.T)
+        research.eval_rules(u, bins, [rule], 0, u.p.T)
+
     def test_daily_results_add_up_to_hourly(self):
         u = small_universe()
         specs = [s for s in features.default_specs() if s.family == "ret" and s.k == 1][:3]

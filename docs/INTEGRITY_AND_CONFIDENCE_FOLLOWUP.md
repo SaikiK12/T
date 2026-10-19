@@ -25,6 +25,10 @@ frozen lane or turn an exploratory result into a trading approval.
 - Bootstrap inference rejects incomplete/non-finite matrices. An invalid statistic must not become a tiny p-value when
   every comparison with NaN evaluates false. The plus-one correction controls Monte Carlo resolution; it does not make
   a wrongly designed null exchangeable or remove serial dependence.
+- The shared research holdout guard also checks the next-close dependency: `ret[t1-1]` uses `close[t1]`, so an
+  evaluation ending exactly at an existing first holdout row is rejected unless the registered caller explicitly opts
+  in. A synthetic panel ending before the cutoff remains usable. Battery R184 stays held; this fix does not implement
+  its missing cost runs, decision rule or fold aggregator, or quantify historical impact.
 
 These are integrity changes. Historical result files were not silently rewritten; any lane that uses the corrected
 semantics needs a new run and a before/after record under its own ownership rules.
@@ -96,6 +100,11 @@ R215/R218 still follow their frozen missing-return treatment described in
 [`mexc_fwd/DEVIATIONS.md`](../experiments/mexc_fwd/DEVIATIONS.md). `run_exact` is not substituted into their existing
 PnL or gates. A fresh lane is needed to compare the changed accounting and any new sizing rule on unseen outcomes.
 
+R225's daily-net scaling and mean-gross resize charge are also explicitly approximate. The difference from position
+accounting can arise without a hedge: base positions `1 -> 0.5` and multipliers `1 -> 2` keep the actual target at `1`,
+so the exact rebalance cost is zero. A separate `abs(delta_m) * gross` charge would still be positive. The regression
+fixture covers this interaction; preserve R225's frozen formula and use full target positions for a future comparison.
+
 ## Search discipline
 
 The project has already run millions of correlated program trials. Brute force can generate hypotheses, but the null
@@ -109,7 +118,9 @@ positioning changes remain possible small mechanistic studies, with complete win
 - A newly registered strict forward lane: actual signal receipt time, complete outcomes, contract lifecycle, and a fixed
   champion/challenger comparison. Existing replay or spent holdout results cannot confirm the replacement.
 - Execution on MEXC: account-specific manual/API fees, spread/depth, quantity steps, capacity, fair-price margin and
-  liquidation stress. Listed fees and hourly close markouts do not measure executable PnL.
+  liquidation stress. R224 now records book-depth costs; use that collector's prospective data rather than creating a
+  duplicate. R225 independently runs R217's volatility-target rule forward. The stricter ledger here does not change
+  either lane's specification. Listed fees and hourly close markouts do not measure executable PnL.
 - Funding event timestamps/cycle changes and interior cache gaps; these still need dedicated collection/coverage tests.
 - Dependence-aware uncertainty and purged validation for overlapping strategies. DSR's raw row count and CSCV's
   unpurged block splits are still diagnostics with limitations.
@@ -117,8 +128,8 @@ positioning changes remain possible small mechanistic studies, with complete win
 The pinned Python 3.12 test dependencies and GitHub Actions now make the complete suite reproducible without market
 downloads. The regression tests use invented feeds, temporary journals and synthetic returns.
 
-Verified locally: all 186 unit/synthetic tests pass, Python compilation passes, and the research-integrity checker
-reports zero errors (39 frozen specifications verified; existing legacy warnings remain). Frozen specifications and
-journals match Claude's `737448d` base byte for byte.
+Verified locally: all 188 unit/synthetic tests pass, Python compilation passes, and the research-integrity checker
+reports zero errors (existing legacy warnings remain). Frozen specifications and journals match Claude's `e8c3189`
+base byte for byte.
 
 No new market statistic or real-order action was taken for this note.

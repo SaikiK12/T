@@ -53,9 +53,18 @@ def make_universe(p, elig_top=100, col_top=150, window=24 * 30):
 
 
 def eval_rules(u, bins, rules, t0, t1, slots=10, cmult=1.0, batch=128, allow_holdout=False):
-    """Daily results for each rule over hour rows [t0, t1): net return [R, D], cost [R, D] and mean positions [R, D]."""
-    if t1 > u.holdout_row and not allow_holdout:
-        raise PermissionError(f"rows through {t1} reach the holdout (from row {u.holdout_row}); register the lane first")
+    """Daily results over [t0,t1), guarding the next-close dependency too.
+
+    ret[t1-1] uses close/funding[t1], so ending exactly on the first holdout
+    row already reads a holdout observation. If the panel ends before the
+    cutoff, searchsorted instead returns its length; there is no holdout row
+    in that panel to leak.
+    """
+    boundary = u.holdout_row
+    reaches_holdout = t1 > boundary or (t1 == boundary and boundary < u.p.T)
+    if reaches_holdout and not allow_holdout:
+        raise PermissionError(f"return dependencies through row {t1} reach the holdout "
+                              f"(from row {boundary}); register the lane first")
     assert t0 % 24 == 0 and t1 % 24 == 0
     D = (t1 - t0) // 24
     ret_d, cost_d, act_d = (np.zeros((len(rules), D), np.float32) for _ in range(3))

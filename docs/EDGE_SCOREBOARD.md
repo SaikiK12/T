@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-19, after R223. Program trials: 9,471,747. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-19, after R225. Program trials: 9,471,750. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -70,7 +70,7 @@ overstatements are corrected here.
 | Refinement | Effect | Where |
 |---|---|---|
 | X2 agreement sizing on A | Sharpe +0.15 / +0.29 / +0.45 (disc / val / holdout); misses the frozen bar | R217 |
-| Volatility target on A | Holdout max DD 47% to 27%, Sharpe flat | R217 |
+| Volatility target on A | Holdout max DD 47% to 27%, Sharpe flat. Now runs forward on A, B and X2 (R225); today's multiplier A 0.69, X2 0.63, B 0.99 | R217, R225 |
 | Crypto only | B holdout t 2.74 (vs 2.73 all symbols). A's 18-day replay drops from +22.5% to +8.7% | R216 |
 | Entry one or two hours late | Costs 1-2% of net | R213 |
 | Daily loss/profit stops | Harmful in 30 of 30 variants | R208 |
@@ -89,5 +89,8 @@ overstatements are corrected here.
   - Manual MEXC web orders pay 0-4 bp maker and 0-10 bp taker (2 bp on most contracts).
   - API orders pay 6 bp maker and 8 bp taker since 2026-06-01.
   - The model is conservative for manual trading and about right for API trading.
+  - **R224 now measures this from MEXC's order book at every tick.** The first snapshot (32 crypto contracts) gives a
+    median one-way cost for a $10k order of 2.5 bp on the web and 9.6 bp through the API, against 8 bp assumed. The
+    report starts 2026-11-03.
 - **Forward pipeline audit (2026-10-19).** Fixes and the journal rows they leave behind are in each lane's
   `DEVIATIONS.md`: partial newest hours, XAU traded as crypto on MEXC, a forming-bar risk and a lag-unit bug.
