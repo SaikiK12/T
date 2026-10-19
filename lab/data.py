@@ -160,7 +160,7 @@ def _verify_zip(blob, key):
     """Verify a cached or freshly downloaded archive's ZIP CRC without contacting the source."""
     try:
         bad = zipfile.ZipFile(io.BytesIO(blob)).testzip()
-    except (OSError, zipfile.BadZipFile) as e:
+    except (OSError, zipfile.BadZipFile, NotImplementedError) as e:
         raise FetchError(f"{key}: invalid zip") from e
     if bad is not None:
         raise FetchError(f"{key}: corrupt zip ({bad})")

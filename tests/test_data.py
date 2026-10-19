@@ -87,6 +87,17 @@ class FetchTests(unittest.TestCase):
                     data.fetch(key, raw=d)
             get.assert_not_called()
 
+    def test_default_cached_archive_rejects_unsupported_compression(self):
+        with tempfile.TemporaryDirectory() as d:
+            key = "cached.zip"
+            blob = bytearray(self.archive_bytes(d))
+            for signature, method_offset in ((bytes((80, 75, 3, 4)), 8), (bytes((80, 75, 1, 2)), 10)):
+                header = blob.index(signature)
+                blob[header + method_offset:header + method_offset + 2] = (99).to_bytes(2, "little")
+            (Path(d) / key).write_bytes(blob)
+            with self.assertRaisesRegex(data.FetchError, "invalid zip"):
+                data.fetch(key, raw=d)
+
     def test_default_cached_archive_checks_zip_crc(self):
         with tempfile.TemporaryDirectory() as d:
             key = "cached.zip"
