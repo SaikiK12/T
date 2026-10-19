@@ -1,0 +1,84 @@
+# PREREG: kronos_v1 (R227), one Kronos-small 24-hour cross-sectional test
+
+> **DRAFT — UNFROZEN — NO EVALUATION AUTHORIZED.** This proposal is not frozen. Do not generate forecasts for scored dates, inspect their returns, or download model weights until the owner has reviewed and frozen the completed specification. Large model downloads require the owner's explicit approval.
+
+- **Registry id:** R227
+- **Status:** PLANNED
+- **Owner / single writer after review:** project owner (Claude is the designated runner)
+- **Drafted:** 2026-10-19 UTC by Codex; pending owner review
+- **Candidate trials:** 2 (Kronos book and the fixed 30-day-momentum control); zero-return persistence is a forecast diagnostic, not a portfolio trial
+- **Program trials before this lane:** 9,471,756 after R226. R227 adds two fixed portfolio configurations; there is no parameter search.
+- **Code:** no Kronos runner exists yet. Before freeze, pin the runner commit and the exact Python/PyTorch/dependency lock; changing the runner, environment, or model settings after seeing outputs is a new trial.
+
+## Question and scope
+
+On the frozen Binance USDⓈ-M point-in-time crypto top-50, does the fixed Kronos-small forecast of each coin's next 24-hour return produce a positive, cost-adjusted top-minus-bottom quintile portfolio that adds to a fixed trailing-30-day-momentum portfolio?
+
+This is a **Binance historical signal screen**, because that is where the archived point-in-time top-50 and delisted-contract history exist. It does not establish MEXC execution or transfer. The current MEXC forward-cost lane remains the source for MEXC cost observations; any MEXC implementation or transfer test needs its own frozen venue specification. This experiment places no orders.
+
+## Evidence and fixed artifact identity
+
+Use only the following official model pair and immutable artifacts:
+
+| Component | Pin |
+|---|---|
+| Kronos source | [`shiyu-coder/Kronos` commit `67b630e67f6a18c9e9be918d9b4337c960db1e9a`](https://github.com/shiyu-coder/Kronos/tree/67b630e67f6a18c9e9be918d9b4337c960db1e9a) |
+| Model | [`NeoQuasar/Kronos-small`, snapshot `901c26c1332695a2a8f243eb2f37243a37bea320`](https://huggingface.co/NeoQuasar/Kronos-small/tree/901c26c1332695a2a8f243eb2f37243a37bea320); `model.safetensors` SHA-256 `b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020` |
+| Tokenizer | [`NeoQuasar/Kronos-Tokenizer-base`, snapshot `0e0117387f39004a9016484a186a908917e22426`](https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/tree/0e0117387f39004a9016484a186a908917e22426); `model.safetensors` SHA-256 `59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee` |
+
+The official README pairs Kronos-small with the base tokenizer, gives it a 512-bar maximum context, and says `sample_count` averages generated paths. Use the official predictor from the pinned source commit with `max_context=512`, `pred_len=24`, `T=1.0`, `top_p=0.9`, and `sample_count=1` (the README example default). Run in a fixed CPU environment, single-process and in sorted `(signal_time, symbol)` order, with seed `20261019`. Record the exact package lock, platform, and weight-file lengths before freezing. Do not try another seed, sample count, device, precision, model size, or tokenizer in this lane.
+
+The paper reports pretraining through 2024-06, but the public model card does not tie that cutoff to these exact weights. The pinned model and tokenizer weight files first appeared on 2025-06-30 (`ac5c409a313c4eadd1ca78201322f5cadb9c34ab` and `9ef143b98ee3c2488eebd85404e0c215c112b46a`); upstream issue [#265](https://github.com/shiyu-coder/Kronos/issues/265) asks for checkpoint-vintage confirmation and had no maintainer confirmation in this review. Before freeze, choose and record exactly one historical start date:
+
+1. Use **2024-07-01** only if written provenance confirms that the exact pinned model weights were trained with no data later than 2024-06-30.
+2. Otherwise use **2025-07-01**, the first full day after the exact weight files were published.
+
+The choice must be documented before any forecast or outcome is generated; do not run both windows. End the historical screen at **2026-09-30** inclusive. The project has already examined this broad market period for other families. Under the owner's one-read allowance, R227 may read its chosen archive window once as a **new-family exploratory screen**, but this is not a fresh program-wide holdout and cannot confirm an edge. Confirmation requires the prospective phase below.
+
+## Universe and data gate
+
+- **Venue/instrument:** Binance USDⓈ-M linear perpetuals, using the owner's hourly archive. Exclude symbols in the frozen TradFi instrument mapping; do not use spot, inverse contracts, or a current-only listing API.
+- **Eligible universe:** use the archive's point-in-time top-50 mask exactly as supplied, including contracts later delisted. Do not rebuild membership using future liquidity or replace a missing/delisted contract with a current survivor. Break equal liquidity ranks by the archive's frozen symbol ordering.
+- **Manifest required before freeze:** the owner will record one manifest and SHA-256 covering the hourly OHLCV/quote-volume files, funding events, point-in-time eligibility mask, symbol metadata, and TradFi exclusion list. It must identify all delisted names and the history cut. The Codex checkout has no Binance candle archive, so this hash must come from the runner's data environment. No freeze or scoring without it.
+- **Inputs:** hourly `open`, `high`, `low`, `close`, `volume`, and `amount`; map Binance `quote_volume` to `amount`. Use no funding, premium, open-interest, order-flow, technical-indicator, or other external feature as a model input. Do not fill missing candles or prices.
+- **History requirement:** a coin-date is usable only when it has 720 consecutive valid hourly bars through the signal bar. The most recent 512 bars go to Kronos; the full 720-bar history also makes the fixed 30-day-momentum control available. New listings remain in the eligible denominator but have no score until this requirement is met.
+- **Coverage-only pass before sizing:** first generate forecasts and inspect only availability/finite-positive-output flags, not future prices or returns. Coverage passes only if (a) valid matched scores cover at least 90% of all eligible coin-date rows and (b) at least 45 of 50 eligible coins have usable scores on at least 95% of eligible signal dates. On a date with fewer than 45 usable scores, both books abstain and that date remains in the return series with zero strategy PnL. If either coverage condition fails, stop with `INCONCLUSIVE / DATA COVERAGE`; do not relax the history rule, impute, drop the date, or size a partial book. This is data/model-output coverage only, not probability calibration.
+
+## Forecast, signal clock, and portfolio
+
+- **Clock:** one signal per UTC day. The final input is the one-hour candle whose close is the UTC 00:00 boundary. At row `i`, where `t` is the bar open, use rows `i-511..i`; request forecasts for rows `i+1..i+24`. The forecast is computed only after row `i` closes. The first actionable archive price is the next bar's open at that boundary; the project hourly return convention treats it as `close[i]`.
+- **Score:** for each usable coin, `s_i = log(predicted_close[i+24] / observed_close[i])`. Use only the Kronos predicted `close` at step 24. A non-finite or non-positive terminal forecast is unavailable. The 24 future hourly bars are held once, without overlapping cohorts.
+- **Ranks and weights:** on each date with at least 45 usable names, let `k=floor(N/5)`. Long the highest `k` scores and short the lowest `k`; equal weights `+1/k` and `-1/k`, respectively (gross exposure 2, signed dollar exposure 0). Break ties by symbol ascending. Rebalance once daily; otherwise hold the prior weights. The momentum control uses the same dates, same matched names, same ranking, weights, and rebalance rule.
+- **Universe hedge:** apply the repository convention `H_t=-sum_i(w_i)` in the equal-weight basket of eligible crypto contracts at that date, with the basket's actual returns and costs. The equal long and short legs make `H_t` zero by construction in normal operation. This is dollar-neutral; it is **not** beta-neutral. Report beta to the equal-weight eligible-universe return as a diagnostic, without changing weights to improve it.
+- **Persistence baseline:** forecast the terminal close as `close[i]` (zero log return). Compare Kronos and persistence with MAE and RMSE on exactly the same valid coin-date rows. All persistence scores are tied, so it does not define a quintile book and must not be given an arbitrary portfolio ranking.
+- **30-day-momentum control:** score `m_i = log(close[i] / close[i-720])`; top-minus-bottom quintiles as above. This is the fixed portfolio comparator. No additional momentum horizon or alternate ranking is allowed.
+
+## Returns, funding, costs, and endpoints
+
+- Realized 24-hour asset returns use the existing hourly Binance close-to-close convention from `lab.engine.forward_returns`, for rows `i..i+23`; it includes the funding settlement on the following bar, charging longs and crediting shorts as the lab does. Position at the signal close earns the next bar's return. Do not use the target-bar close before the position is entered.
+- **Latency limit:** an hourly archive cannot measure inference, network, and order-arrival delay inside the hour. The boundary fill is an idealized earliest-entry proxy, not a fill simulation. Report no executable-edge claim from it; any deployment candidate needs a separate prospective paper lane with measured end-to-end delay and venue-specific costs/fills.
+- Use the existing one-way tier matrix from `lab.engine.cost_matrix` as the **research cost proxy**: 6 bp for liquidity ranks 1–20, 8 bp for 21–50, 12 bp for 51–100, and 20 bp thereafter. Apply it to every absolute change in signed position weight, including the universe overlay, and report **1x, 2x, and 3x**. These are assumed fee-plus-slippage tiers, not measured Binance fills, and are not MEXC costs. Report turnover, gross return, funding, cost, net return, drawdown, and both legs separately.
+- **Primary statistic:** paired daily net return difference at 1x, `Delta_t = Kronos_t - MOM30_t`, with one observation per UTC date. Use `lab.stats.newey_west_t(Delta, lag=30)`. The prospective result is `CONFIRMED` only if the coverage gate passed, Kronos mean net return is positive at 1x, mean `Delta` is positive, and its preregistered Newey–West t is at least 2.0. Otherwise the result is `NULL` or `INCONCLUSIVE` under the gate above. The 2x/3x results are mandatory and cannot be omitted; positive 3x net return is required before the owner can consider any separate capital-gate review.
+- **Fixed diagnostics only:** mean daily RankIC (one Spearman correlation across the eligible cross-section per date, then a Newey–West t with lag 30); MAE/RMSE versus zero-return persistence; equal-weight-universe beta; turnover; long/short contribution; gross, funding, costs, net, total return, and drawdown at all three cost multiples. No confidence score, probability, interval calibration, threshold, or sizing rule is inferred from stochastic path spread.
+- **Dependence and missing dates:** the date, not coin, is the inference unit. Keep the cross-section together and retain abstention dates as zero book returns. Never treat coin-date rows as independent observations. The daily books do not overlap; if the implementation introduces overlap, stop and amend under a new lane before reading outcomes.
+
+## Stages, decisions, and stop rules
+
+1. **Before freeze:** owner reviews this draft, records the selected date rule above, the data-manifest SHA, the exact runtime lock, the runner commit, and the provenance evidence (or the explicit no-confirmation fallback). The owner freezes the final file and sidecar. The frozen file is never edited.
+2. **Historical screen:** after freeze and owner approval for downloads, run the coverage-only gate first. If it passes, score the one selected date range through 2026-09-30 once. This read is exploratory due to prior program-wide exposure; no parameter or model choice may follow it. Record all fixed outputs and 1x/2x/3x costs, including nulls.
+3. **Prospective confirmation:** regardless of the historical return sign, first collect 30 consecutive on-time UTC dates as a coverage-only warm-up. Do not size a book or access their future returns. Proceed only if the coverage gate passes. Then collect 365 consecutive on-time UTC daily outcomes; before freeze, record the exact warm-up, first scored, and final signal dates. During scoring, a day below 45 valid forecasts is an abstention with zero PnL. At the end, the same overall coverage thresholds must still pass. Write daily data append-only; monitoring may check pipeline health and coverage but may not inspect performance summaries or retune. The final decision is made once, on the fixed end date. No optional stopping or replacing missed days.
+4. A failed manifest, symbol map, price/funding alignment, artifact hash, or coverage gate is `INCONCLUSIVE`, not a trading null. Any change to weights, dates, universe, latency, costs, horizon, baseline, seed, forecast parameters, or position rule requires a new registered round. Never route orders or describe the historical screen as an executable MEXC edge.
+
+## Freeze blockers for owner review
+
+- Confirm whether the exact pinned checkpoint's 2024-06 cutoff can be verified; otherwise freeze the 2025-07-01 fallback.
+- Attach the owner's Binance archive manifest/hash and verify that its eligibility mask includes delisted contracts and uses no future information.
+- Commit and pin the no-lookahead runner and exact CPU/PyTorch environment before any scoring; the upstream requirements allow an unpinned `torch>=2.0.0` and are insufficient as a runtime lock.
+- Record the exact prospective start/end dates and confirm that the coverage-only output is separated from return access.
+- The historical 2025-07..2026-09 interval has been examined for other families. R227's result can motivate research follow-up but cannot alone justify real-money deployment or a clean holdout claim.
+
+## Sources reviewed
+
+- [Kronos upstream README at the pinned source commit](https://github.com/shiyu-coder/Kronos/blob/67b630e67f6a18c9e9be918d9b4337c960db1e9a/README.md) and [requirements at that commit](https://github.com/shiyu-coder/Kronos/blob/67b630e67f6a18c9e9be918d9b4337c960db1e9a/requirements.txt).
+- [Kronos paper](https://arxiv.org/abs/2508.02739) for the authors' reported training cutoff; [upstream issue #265](https://github.com/shiyu-coder/Kronos/issues/265) for the unresolved released-checkpoint provenance question.
+- Repository rules in `AGENTS.md`, the existing point-in-time universe and cost code in `lab/panel.py` / `lab/engine.py`, and the earlier cross-sectional book protocol in `experiments/xsalt_v1/PREREG.md`.
