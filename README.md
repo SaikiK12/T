@@ -13,6 +13,10 @@ from paying its costs, and which routes (stacking, context gating, limit-order e
   [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
 - `registry/rounds.csv`: one row per round with its trial count (append-only).
 - `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
+- [`docs/RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md): exact tested cells and remaining questions;
+  [`docs/QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md): source-checked mechanisms beyond the completed lanes.
+- [`R228 allocation_v1`](experiments/allocation_v1/FINDINGS.md): a frozen 30-alternative flow-book allocation study;
+  the discovery-selected mixture did not improve validation enough to pass.
 
 ## Use
 
