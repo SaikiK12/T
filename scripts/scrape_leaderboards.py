@@ -21,7 +21,7 @@ from lab import live  # noqa: E402
 OUT = ROOT / "experiments" / "copylead_data" / "snapshots"
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 BN_LIST = "bapi/futures/v1/friendly/future/copy-trade/home-page/query-list"
-BN_KEEP = ("leadPortfolioId", "nickname", "currentCopyCount", "maxCopyCount", "roi", "pnl", "aum", "mdd", "winRate",
+BN_KEEP = ("leadPortfolioId", "currentCopyCount", "maxCopyCount", "roi", "pnl", "aum", "mdd", "winRate",
            "copierPnl", "sharpRatio", "portfolioType", "startTime", "apiKeyTag", "tradFiTag")
 
 
@@ -61,12 +61,13 @@ def binance(time_range):
 def okx():
     rows, page, pages = [], 1, 1
     while page <= pages:
-        with urllib.request.urlopen(f"https://www.okx.com/api/v5/copytrading/public-lead-traders?instType=SWAP"
-                                    f"&sortType=pnl&limit=20&page={page}", timeout=30) as r:
+        url = f"https://www.okx.com/api/v5/copytrading/public-lead-traders?instType=SWAP&sortType=pnl&limit=20&page={page}"
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 lab-paper/1"}),
+                                    timeout=30) as r:
             d = json.loads(r.read())["data"][0]
         pages = int(d.get("totalPage") or 1)
         for x in d["ranks"]:
-            rows.append({k: x.get(k) for k in ("uniqueCode", "nickName", "pnl", "pnlRatio", "aum", "winRatio",
+            rows.append({k: x.get(k) for k in ("uniqueCode", "pnl", "pnlRatio", "aum", "winRatio",
                                                "leadDays", "copyTraderNum", "accCopyTraderNum", "copyState")}
                         | {"insts": ",".join(x.get("traderInsts") or [])})
         page += 1
@@ -81,7 +82,7 @@ def main():
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     OUT.mkdir(parents=True, exist_ok=True)
-    jobs = {"binance": lambda: pd.concat([binance("30D"), binance("90D")], ignore_index=True), "okx": okx}
+    jobs = {"binance": lambda: binance("30D"), "okx": okx}
     for venue in a.venues.split(","):
         path = OUT / venue / f"{day}.csv.gz"
         if path.exists():

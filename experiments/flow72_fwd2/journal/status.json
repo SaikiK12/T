@@ -1,0 +1,70 @@
+{
+ "last_hour": "2026-10-19T09:00:00+00:00",
+ "days_scored": 18,
+ "short_now": {
+  "tvc": [
+   "AKEUSDT",
+   "BNBUSDT",
+   "KORUUSDT",
+   "NVDAUSDT",
+   "SKHYNIXUSDT",
+   "XAGUSDT"
+  ],
+  "t24": [
+   "QUSDT",
+   "RLCUSDT",
+   "SANDUSDT",
+   "SOXLUSDT",
+   "ZECUSDT",
+   "\u9f99\u867eUSDT"
+  ],
+  "t4": [
+   "ADAUSDT",
+   "RLCUSDT",
+   "SANDUSDT",
+   "SKHYNIXUSDT",
+   "SNDKUSDT",
+   "XAGUSDT"
+  ]
+ },
+ "A": {
+  "days": 18,
+  "total": 0.22180767832921,
+  "total_2x": 0.20980544795584719,
+  "total_3x": 0.19780321758248431,
+  "go_real": {
+   "n": 18,
+   "mean": 0.012322648796067223,
+   "hit": 0.7222222222222222,
+   "worst": -0.0310079557600521,
+   "n_clusters": null,
+   "checks": {
+    "enough_scored": false,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": false
+  }
+ },
+ "B": {
+  "days": 18,
+  "total": 0.0971705939483926,
+  "total_2x": 0.09484597916281501,
+  "total_3x": 0.09252136437723786,
+  "go_real": {
+   "n": 18,
+   "mean": 0.005398366330466256,
+   "hit": 0.7222222222222222,
+   "worst": -0.0164287423129772,
+   "n_clusters": null,
+   "checks": {
+    "enough_scored": false,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": false
+  }
+ }
+}

@@ -8,6 +8,7 @@ import argparse
 import json
 import sys
 import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -44,7 +45,7 @@ def gate_name(binance_symbol):
 def fetch(contract, start, end):
     rows, s = [], start
     while s < end:
-        d = get(f"{API}/contract_stats?contract={contract}&interval=1h&from={s}&limit=1000")
+        d = get(f"{API}/contract_stats?contract={urllib.parse.quote(contract)}&interval=1h&from={s}&limit=1000")
         if not d:
             break
         rows += d
