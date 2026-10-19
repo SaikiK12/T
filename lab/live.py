@@ -89,6 +89,14 @@ def perpetuals(quote="USDT", statuses=("TRADING",)):
                   and s.get("quoteAsset") == quote and s.get("status") in statuses)
 
 
+def tradfi():
+    """Binance USD-M contracts that are not crypto, as R216 defines them: contractType TRADIFI_PERPETUAL or an
+    underlyingType other than COIN and PREMARKET (stocks, commodities, indices)."""
+    info = get("fapi/v1/exchangeInfo")
+    return {s["symbol"] for s in info["symbols"] if s.get("contractType") == "TRADIFI_PERPETUAL"
+            or s.get("underlyingType") not in ("COIN", "PREMARKET")}
+
+
 def parse_klines(rows):
     df = pd.DataFrame(rows, columns=KLINE_COLS).drop(columns=["ignore", "close_time"])
     for c in df.columns:
@@ -97,13 +105,13 @@ def parse_klines(rows):
     return df
 
 
-def fetch_klines(symbol, start, end, interval="1h"):
-    """Closed and open 1 h bars with open time in [start, end) ms."""
+def fetch_klines(symbol, start, end, interval="1h", path="fapi/v1/klines"):
+    """Closed and open 1 h bars with open time in [start, end) ms. path="fapi/v1/premiumIndexKlines" gives the
+    premium index bars (the archive's premium column is their close)."""
     out, s = [], start
     while s < end:
         limit = int(min(1500, (end - s) // HOUR + 1))     # the request weight grows with the limit asked, not returned
-        rows = get("fapi/v1/klines", {"symbol": symbol, "interval": interval, "startTime": s, "endTime": end - 1,
-                                      "limit": limit})
+        rows = get(path, {"symbol": symbol, "interval": interval, "startTime": s, "endTime": end - 1, "limit": limit})
         if not rows:
             break
         out.append(parse_klines(rows))
@@ -214,6 +222,18 @@ def ratios_cached(symbol, start, end, endpoints=("topLongShortPositionRatio", "g
         _note_from(path, s)
         out[ep] = None if df is None else df[(df["timestamp"] >= start) & (df["timestamp"] < end)]
     return out
+
+
+def spot_usdt():
+    """Binance spot USDT pairs trading today, snapshotted daily to data/live/spot/{date}.json."""
+    day = time.strftime("%Y-%m-%d", time.gmtime())
+    p = ROOT / "spot" / f"{day}.json"
+    if not p.exists():
+        info = get("api/v3/exchangeInfo", {"permissions": "SPOT"})
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(sorted(x["symbol"] for x in info["symbols"]
+                                       if x.get("quoteAsset") == "USDT" and x.get("status") == "TRADING")))
+    return set(json.loads(p.read_text()))
 
 
 def funding_history(symbol, start, end):

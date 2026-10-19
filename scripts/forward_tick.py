@@ -72,6 +72,9 @@ def universe(end):
 
     with ThreadPoolExecutor(6) as ex:
         kl = dict(ex.map(one, perps))
+    failed = sorted(s for s, df in kl.items() if df is None)
+    if failed:                                     # a dropped coin would shift every rank: write nothing this tick
+        raise SystemExit(f"klines failed for {failed}; tick aborted, the hours are computed on the next run")
     kl = {s: df for s, df in kl.items() if df is not None and len(df)}
     tt = np.arange(k0, end, H)
     close = live.grid(kl, tt, "close")
@@ -87,7 +90,7 @@ def compute_hours(todo, tt, names, close, qv, rank, elig, shift):
     frames, cover = {}, {}
     for i, j in enumerate(cols):
         s = names[j]
-        f = live.ratios_cached(s, int(todo[0]) - WARM, int(todo[-1]) + H)
+        f = live.ratios_cached(s, int(todo[0]) - WARM, int(todo[-1]) + H + live.FIVE)
         frames[s] = live.hourly_metrics(f, shift)
         for ep, key in (("topLongShortPositionRatio", "n_top"), ("takerlongshortRatio", "n_taker")):
             d = f.get(ep)
@@ -128,6 +131,9 @@ def funding_event(names, tt):
 
     with ThreadPoolExecutor(4) as ex:
         fr = dict(ex.map(one, names))
+    failed = sorted(s for s, df in fr.items() if df is None)
+    if failed:                                     # missing funding would score as zero funding: write no ticket
+        raise SystemExit(f"funding failed for {failed}; scoring aborted, tickets are written on the next run")
     return live.grid(fr, tt, "rate")
 
 
@@ -202,6 +208,13 @@ def score(tt, names, close):
         x = n.net.values
         status[book] = {"days": int(len(x)), "total": float(x.sum()), "total_2x": float(n.net_2x.sum()),
                         "total_3x": float(n.net_3x.sum()), "go_real": gate.go_real(x), **events.summary(x)}
+        eq = np.cumsum(x)
+        peak = np.maximum.accumulate(eq)
+        hit = np.flatnonzero((peak > 0) & (eq <= 0.5 * peak))
+        t_nw = status[book].get("t_nw")
+        status[book]["prereg"] = {"pass_now": bool(status[book]["go_real"]["pass"] and t_nw is not None and t_nw >= 2),
+                                  "decision_at_days": 90,
+                                  "stop_rule_hit_day": n.day.iloc[hit[0]] if len(hit) and book == "A" else None}
     (J / "status.json").write_text(json.dumps(status, indent=1, default=float))
     return status
 
@@ -227,9 +240,21 @@ def main():
     log(f"{len(names)} perpetuals, grid {len(tt)} h, {len(todo)} hours to compute")
     if len(todo):
         sig, tk = compute_hours(todo, tt, names, close, qv, rank, elig, shift)
+        # an hour is averaged over all twelve 5-minute rows (PREREG); the newest rows publish minutes after the
+        # close, so an hour waits until 95% of its coins have 12 rows of both ratios, or until 3 h after its close
+        full = ((sig.n_top >= 12) & (sig.n_taker >= 12)).groupby(sig.t).mean()
+        short = [t for t in todo if full.get(t, 0.0) < 0.95 and now < t + H + 3 * H]
+        if short:
+            log(f"deferred {len(todo) - list(todo).index(short[0])} hours from "
+                f"{pd.Timestamp(int(short[0]), unit='ms', tz='UTC')}: complete share {full.get(short[0], 0.0):.2f}")
+            sig, tk = sig[sig.t < short[0]], tk[tk.t < short[0]]
+        have = read("signals.csv")
+        if not have.empty:                         # a run killed between the two appends must not duplicate rows
+            sig = sig[~sig.t.isin(set(have.t))]
         append("signals.csv", sig)
         append("ticks.csv", tk)
-        log(f"journaled {len(tk)} hours, {len(sig)} rows; last {tk.utc.iloc[-1]}")
+        if len(tk):
+            log(f"journaled {len(tk)} hours, {len(sig)} rows; last {tk.utc.iloc[-1]}")
     if not a.no_score:
         st = score(tt, names, close)
         if st:

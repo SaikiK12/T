@@ -32,6 +32,13 @@ class CarryTests(unittest.TestCase):
                         np.zeros((T, S)), 0.0, 0.5, 0.25, 0, T)
         self.assertEqual(out[:, 1].sum(), 0)
 
+    def test_spot_pair(self):
+        spot = {"BONKUSDT", "BTCUSDT", "FILUSDT"}
+        self.assertEqual(carry.spot_pair(["1000BONK"], spot), "BONKUSDT")
+        self.assertEqual(carry.spot_pair(["BTC"], spot), "BTCUSDT")
+        self.assertEqual(carry.spot_pair(["FILECOIN", "FIL"], spot), "FILUSDT")
+        self.assertIsNone(carry.spot_pair(["XAU"], spot))
+
 
 if __name__ == "__main__":
     unittest.main()

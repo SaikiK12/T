@@ -70,6 +70,11 @@ class NullTests(unittest.TestCase):
     def test_empty_familywise_null_is_undefined(self):
         self.assertTrue(np.isnan(nulls.familywise_p(1.0, [])))
 
+    def test_invalid_null_statistics_cannot_look_significant(self):
+        self.assertTrue(np.isnan(nulls.familywise_p(np.nan, np.arange(100.0))))
+        with self.assertRaises(ValueError):
+            nulls.familywise_p(10.0, [0.0, np.nan])
+
 
 class GateTests(unittest.TestCase):
     def test_passes_when_every_rule_holds(self):

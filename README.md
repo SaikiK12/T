@@ -29,3 +29,6 @@ python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
 ```
 
 Rules for contributors: [`AGENTS.md`](AGENTS.md). New lane: copy `templates/lane/`.
+
+For the tested Python 3.12 dependency versions, install `requirements-test.txt`. GitHub Actions runs the full
+synthetic/unit suite and the read-only research-integrity checker; no market download or forward journal is needed.

@@ -101,7 +101,6 @@ def _run(bins, ctx, cv, cb, ch, cside, gk, gc, gm, close, low, high, fund, vol, 
             sr = 0.0
             nr = 0
             sf = 0.0
-            nf = 0
             for j in range(ecnt[t - 1]):
                 s = eidx[t - 1, j]
                 r = close[t, s] / close[t - 1, s] - 1.0
@@ -111,11 +110,12 @@ def _run(bins, ctx, cv, cb, ch, cside, gk, gc, gm, close, low, high, fund, vol, 
                 f = fund[t, s]
                 if not np.isnan(f):
                     sf += f
-                    nf += 1
             if nr > 0:
                 hp = hpos * sr / nr
-            if nf > 0:
-                hp -= hpos * sf / nf
+            if ecnt[t - 1] > 0:
+                # Every basket member has the same weight. A member with no
+                # settlement contributes zero; do not divide by event count.
+                hp -= hpos * sf / ecnt[t - 1]
         # 2) at the close of bar t: new signals
         for i in range(len(cv)):
             for j in range(ecnt[t]):

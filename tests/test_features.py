@@ -69,6 +69,16 @@ class PanelTests(unittest.TestCase):
             self.assertAlmostEqual(float(a[d * 24 + h, j]), float(daily[d - 1, j]), places=4)
         self.assertAlmostEqual(float(a[d * 24 + 23, j]), float(daily[d, j]), places=4)   # final once the day has closed
 
+    def test_alignment_and_smoothed_features_do_not_extend_past_missing_bar(self):
+        x = np.array([[1.0], [np.nan], [3.0]], np.float32)
+        np.testing.assert_array_equal(panel.align(x, 4)[:, 0],
+                                      [np.nan] * 3 + [1.0] * 4 + [np.nan] * 4 + [3.0])
+        p = synthetic(T=24 * 40, S=2)
+        p["close"][600, 1] = np.nan
+        f = features.Bank(p).get("ema_cross", 4, (3, 5))
+        self.assertTrue(np.isfinite(f[602, 1]))
+        self.assertTrue(np.isnan(f[603:607, 1]).all())
+
     def test_prev_bar_hides_the_current_bar(self):
         x = np.arange(5, dtype=np.float32).reshape(-1, 1)
         out = features.prev_bar(x, 3)[:, 0]
@@ -142,7 +152,7 @@ class FeatureTests(unittest.TestCase):
 
     def test_fixed_bins_reject_infinities(self):
         got = features.bins_fixed(np.array([[-np.inf, -1.0, 0.0, 1.0, np.inf, np.nan]]), (-0.5, 0.5))
-        np.testing.assert_array_equal(got, [-1, 0, 1, 2, -1, -1])
+        np.testing.assert_array_equal(got, [[-1, 0, 1, 2, -1, -1]])
 
     def test_default_spec_names_are_unique(self):
         names = [s.name for s in features.default_specs()]

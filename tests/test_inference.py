@@ -56,6 +56,24 @@ class PboTests(unittest.TestCase):
 
 
 class SpaTests(unittest.TestCase):
+    def test_incomplete_data_cannot_generate_a_small_bootstrap_pvalue(self):
+        for bad in (np.nan, np.inf, -np.inf):
+            x = np.zeros((30, 2))
+            x[5, 1] = bad
+            for function in (inf.spa, inf.model_confidence_set):
+                with self.subTest(function=function.__name__, bad=bad):
+                    with self.assertRaises(ValueError):
+                        function(x, n_boot=10)
+
+    def test_bootstrap_resolution_and_parameters_are_explicit(self):
+        rng = np.random.default_rng(45)
+        x = rng.normal(0.2, 0.01, (100, 2))
+        out = inf.spa(x, n_boot=10)
+        self.assertGreaterEqual(out["consistent"], 1.0 / 11)
+        for kwargs in ({"n_boot": 1}, {"block": 0}, {"block": np.nan}):
+            with self.assertRaises(ValueError):
+                inf.spa(x, **kwargs)
+
     def test_size_and_power_under_a_noise_universe(self):
         rng = np.random.default_rng(3)
         n, K, sims = 300, 20, 60

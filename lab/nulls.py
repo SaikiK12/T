@@ -31,6 +31,8 @@ def familywise_p(t_real: float, null_max_t):
     zero p-value.  Its smallest attainable value is therefore ``1/(B+1)``.
     """
     a = np.asarray(null_max_t, dtype=float)
-    if a.size == 0:
+    if a.ndim != 1 or not np.isfinite(a).all():
+        raise ValueError("null maxima must be a finite vector")
+    if a.size == 0 or not np.isfinite(t_real):
         return float("nan")
     return float((1 + np.count_nonzero(a >= t_real)) / (a.size + 1))

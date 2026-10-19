@@ -33,6 +33,11 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
     - But half of the forward replay's profit came from Binance stock and commodity perps. Book B's whole +9.7% is
       stocks. The crypto book that can trade on MEXC made +4.7% over the 18 replayed days, not +22%.
     - The archive holdout is crypto: top-vs-crowd crypto-only has t 2.74. It is concentrated in two coins.
+11. **Every edge's evidence in one table**: `docs/EDGE_SCOREBOARD.md`.
+    - Only funding carry is confirmed on a holdout (R191). It now runs forward on MEXC, where spot pairs exist for
+      small alts that Binance lacks (R220).
+    - Paper days alone confirm slowly. At 90 days the gate only detects an annual Sharpe of about 5; a Sharpe of 1.5
+      has a 19% chance to pass R221's frozen test by day 365 (`docs/PAPER_REFINEMENT.md`).
 
 ## 1. What predicts returns before fees (atlas_v1, R185)
 | family | replicates | reading |
@@ -136,11 +141,40 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     everywhere. A volatility target keeps Sharpe about flat and nearly halves drawdowns (A holdout 47% → 27%): use it
     for live size.
 - **R218 (mexc_fwd_sq)** runs the k² book forward on MEXC next to R215. Replay: +6.2% against A's +4.7%.
-- `scripts/forward_all.sh` runs one forward tick: R200, then R214, R215, R218.
+- `scripts/forward_all.sh` runs one forward tick: R200, then R214, R215, R218, R220, R221.
 - **R219 (seesaw_v1)** asked whether the 5 biggest coins' last hour predicts the alts ranked 6-50. It does, by +1.45 bp
   per hour in 2021-23 and +0.93 in 2024-25H1 (top-minus-bottom quintile). But hourly taker trading costs 370 bp/day
   against 35 bp/day of gross, so it is NULL as a book. A slower catch-up version decays to zero. The only routes
   left are maker-only entries (MEXC lists a 0 maker fee) or using it as an overlay.
+- **R220 (carry_fwd)** runs the confirmed carry rule (R191) forward on paper, entered one bar late, as two books:
+  - Binance: funding, premium index and spot.
+  - MEXC: funding, last/index basis and spot.
+  - Funding agrees across the venues: median gap in trailing APR 0.0004 over 40 mapped coins
+    (`experiments/carry_fwd/venue_check.json`).
+  - The coins with carry above 20% APR in October are small alts (AKE, BTW, Q, USELESS). Binance has no spot pair for
+    them; MEXC does.
+  - Replay 10-01..18: the Binance book never held a position. The MEXC book held 1-2 on every day: funding +0.10%,
+    basis -0.01%, costs -0.09%, net about 0 (2x -0.09%).
+  - Decision at 90 on-time days: PASS needs total > 0, t >= 2 and go_real on invested days. Under 20 invested days it
+    is INCONCLUSIVE.
+- **R221 (mexc_seq)** adds a frozen sequential test to the MEXC books A, X2 and crypto-only B, which the 90-day
+  go_real screen cannot provide.
+  - Looks: futility at 90 on-time days (stop if t <= -2); efficacy at 182 (z >= 3.558) and 365 (z >= 2.397), with
+    the 2x total > 0; Bonferroni over 3.
+  - Power by day 365: 19% at annual Sharpe 1.5, 73% at 3.
+  - It is the first frozen decision on crypto-only top-vs-crowd, the lab's best holdout t.
+- **R222 (xsalt_v1)** tested four slow altcoin cross-sections from `docs/ALTCOIN_LEADS.md`: low beta, residual
+  momentum, MAX and premium net of funding. Weekly or monthly holds cost only 0.6-2.9 bp/day, but none earns gross.
+  All six variants fail discovery on BTC-adjusted alpha t (best: plain 30-day momentum +7.7 bp/day, t 1.23).
+  Residual momentum does worse than plain momentum.
+- **R223 (settle_v1)** held across a funding settlement when the last rate was beyond ±0.20%. The payment arrives,
+  but the price moves against the holder by 1.5-2.3 times it (top 50: long -38.5 bp per event, short -43.4). Funding
+  capture is closed on Binance, and on MEXC, whose rates match.
+- MEXC fees (`docs/MEXC_EDGES.md`):
+  - Manual web orders pay 0-4 bp maker and 0-10 bp taker (2 bp on most contracts). 1,106 of 1,200 contracts have
+    0 maker.
+  - API orders pay 6 bp maker and 8 bp taker since 2026-06-01.
+  - The books' tier costs (6-20 bp one way) are conservative for orders placed by hand.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -189,11 +223,17 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   2023, so every top-trader result's "discovery" is mostly 2023.
 
 ## Routes still open
-- Forward paper tests: R215 (crypto on MEXC prices, one bar late) is the one that matches the owner's venue; R200
-  (frozen, Binance, includes stock perps) and R214 (R200 one bar late) run beside it. Checkpoints at 30, 60, 90 days;
-  report per-coin contributions (two coins carried the archive holdout).
-- Altcoin-specific lanes not yet run (`docs/ALTCOIN_LEADS.md`): cross-coin "seesaw" lead-lag from the big coins'
-  last hours, low-minus-high beta, residual momentum by liquidity tier, MAX sign contest, premium orthogonal to funding.
+- Forward paper tests:
+  - R215 (crypto on MEXC prices, one bar late) is the one that matches the owner's venue. R200 (frozen, Binance,
+    includes stock perps) and R214 (R200 one bar late) run beside it.
+  - Checkpoints are at 30, 60 and 90 days, with per-coin contributions reported (two coins carried the archive
+    holdout).
+  - R221 judges the MEXC books at 90/182/365 days. R220 runs carry forward.
+- MEXC-specific lanes to pre-register (`docs/MEXC_EDGES.md`):
+  - maker-dip entries on zero-maker contracts (paper fills only on trade-through);
+  - a MEXC open-interest recorder (needs a process that runs continuously).
+- Altcoin leads (`docs/ALTCOIN_LEADS.md`) 1-5 are run (R219, R222): all NULL. R222's 24 h spreads are not pursued:
+  a literature check found no prior for either sign.
 - Confidence-scaled sizing (`docs/SIZING_EVIDENCE.md`): no peer-reviewed out-of-sample support for scaling by a
   model's own confidence; shrunk half-Kelly and volatility targeting first, each against a matched constant multiplier.
 - The next brute-force grammar (`docs/NEXT_SEARCH_SPACE.md`): cross-coin residual and catch-up, positioning changes,
@@ -204,10 +244,18 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22), and on-chain whales (C04): daily
   Hyperliquid leaderboard (accounts >= USD 1M, about 7k rows) and hourly positions of 87 picks (top 50 by month and by
   all-time PnL) from 2026-10-19, as a change log (`scripts/scrape_hyperliquid.py`).
-- Carry: forward monitor; reverse carry needs borrow data.
+- Carry: forward monitor running (R220); reverse carry needs borrow data.
 - Adaptive selection (battery_v1, R184, planned).
 
 ## Known data defects
+- **Forward pipeline audit (2026-10-19).** The fixes are recorded in each lane's `DEVIATIONS.md`.
+  - Before about 15:30 UTC, the newest hour of each tick was averaged over 11 of its 12 five-minute rows: all coins
+    at 10-19 08:00, 09:00 and 13:00. Hours now wait until complete.
+  - XAUUSDT was traded as crypto on MEXC in R215 and R218's replay tickets. It is excluded from 10-19 on.
+  - MEXC days could have closed on a forming bar; no ticket was affected.
+  - R214's realized-lag book used the wrong time unit; no ticket was affected.
+  - A failed fetch now aborts the tick instead of scoring a zero.
+  - Production bins (all coins) agree with the archive's 87-93%. The 99% gate tested only the coins common to both.
 - The archive has no metrics (order flow) for coins with non-ASCII names; their flow features are missing (0.16% of
   eligible cells). Live data include them.
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
@@ -228,5 +276,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,734 after R219 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,747 after R223 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.

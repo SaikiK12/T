@@ -90,6 +90,10 @@ def cscv_pbo(returns, n_blocks=16, max_combos=None, rng=None, chunk=512):
 
 def stationary_counts(n, n_boot, block, rng):
     """Politis-Romano stationary bootstrap: returns [n_boot, n] counts of how often each observation is drawn."""
+    if (not isinstance(n, (int, np.integer)) or n < 1 or
+            not isinstance(n_boot, (int, np.integer)) or n_boot < 2 or
+            not np.isfinite(block) or block < 1):
+        raise ValueError("bootstrap requires n >= 1, n_boot >= 2 and finite block >= 1")
     p = 1.0 / block
     idx = np.empty((n_boot, n), dtype=np.int64)
     idx[:, 0] = rng.integers(0, n, n_boot)
@@ -106,6 +110,8 @@ def stationary_counts(n, n_boot, block, rng):
 def boot_means(X, n_boot=1000, block=10, rng=None):
     rng = rng or np.random.default_rng(0)
     X = np.asarray(X, dtype=np.float32)
+    if X.ndim not in (1, 2) or len(X) == 0 or not np.isfinite(X).all():
+        raise ValueError("bootstrap observations must be finite and nonempty")
     return (stationary_counts(len(X), n_boot, block, rng) @ X) / len(X)
 
 
@@ -114,6 +120,8 @@ def spa(d, n_boot=1000, block=10, rng=None):
     just the strategy returns). Returns dict of p-values: 'consistent' (Hansen SPA), 'upper' (White's reality check),
     'lower', plus the studentized best statistic and the index of the best strategy."""
     d = np.asarray(d, dtype=np.float64)
+    if d.ndim != 2 or d.shape[0] < 3 or d.shape[1] < 1 or not np.isfinite(d).all():
+        raise ValueError("SPA requires a finite [observation, candidate] matrix with at least three rows")
     n, K = d.shape
     dbar = d.mean(axis=0)
     bm = boot_means(d, n_boot, block, rng).astype(np.float64)               # [B, K]
@@ -137,6 +145,10 @@ def model_confidence_set(loss, alpha=0.10, n_boot=1000, block=10, rng=None):
     """Hansen-Lunde-Nason MCS with the T_max statistic. loss: [n, K], lower is better. Returns (surviving model indices,
     MCS p-value of every model: a model is in the set at level alpha when its p-value is at least alpha)."""
     loss = np.asarray(loss, dtype=np.float64)
+    if loss.ndim != 2 or loss.shape[0] < 2 or loss.shape[1] < 1 or not np.isfinite(loss).all():
+        raise ValueError("MCS requires a finite [observation, candidate] matrix with at least two rows")
+    if not np.isfinite(alpha) or not 0 < alpha < 1:
+        raise ValueError("alpha must be between zero and one")
     n, K = loss.shape
     bm = boot_means(loss, n_boot, block, rng).astype(np.float64)
     lbar = loss.mean(axis=0)

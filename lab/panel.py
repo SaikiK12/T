@@ -125,7 +125,11 @@ def resample(p, k):
 
 
 def align(x, k):
-    """Put k-hour values on the hourly clock: each is placed on its bar's last hour, then carried forward."""
+    """Expose each k-hour value from its closing hour until the next close.
+
+    Missing completed bars stay missing; they must not extend an older value
+    indefinitely through an outage.
+    """
     out = np.full((len(x) * k,) + x.shape[1:], np.nan, np.float32)
-    out[k - 1::k] = x
-    return ffill(out)
+    out[k - 1:] = np.repeat(x, k, axis=0)[:len(out) - k + 1]
+    return out

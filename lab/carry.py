@@ -70,3 +70,13 @@ def run(apr, fund, basis, elig, has_spot, perp_cost, spot_cost, th_in, th_out, t
     out = np.zeros((apr.shape[0], 5))
     _run(apr, fund, basis, elig, np.ascontiguousarray(ok), perp_cost, float(spot_cost), th_in, th_out, slots, t0, t1, out)
     return out[t0:t1]
+
+
+def spot_pair(bases, spot, quote="USDT", prefixes=("1000000", "1000")):
+    """The first spot pair in `spot` for any of the candidate bases (each also tried without a 1000/1000000 prefix,
+    as 1000BONKUSDT perp -> BONKUSDT spot), or None."""
+    for b in bases:
+        for c in [b] + [b[len(p):] for p in prefixes if b.startswith(p)]:
+            if c + quote in spot:
+                return c + quote
+    return None

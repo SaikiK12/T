@@ -78,7 +78,13 @@ class Bank:
         key = (family, k, tuple(args))
         if key not in self._cache:
             x = FAMILIES[family](self, k, *args)
-            self._cache[key] = x if (k == 1 or family in HOURLY) else align(x, k)
+            if k == 1 or family in HOURLY:
+                self._cache[key] = x
+            else:
+                # EWM-based features may remain finite on an incomplete bar.
+                # Availability is determined by the underlying price block.
+                x = np.where(self.bars(k)["coverage"] == k, x, np.nan)
+                self._cache[key] = align(x, k)
         return self._cache[key]
 
 

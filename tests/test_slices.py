@@ -45,5 +45,107 @@ class SliceTests(unittest.TestCase):
         np.testing.assert_allclose(P, [1, 2, 3, 4, 4])
 
 
+class ExactAccountingTests(unittest.TestCase):
+    def setup_book(self):
+        p = np.zeros((24, 3))
+        p[:, 0] = -1.0
+        r = np.zeros_like(p)
+        b = np.zeros_like(p, dtype=bool)
+        b[:, 1] = True
+        c = np.full_like(p, 0.01)
+        return p, r, b, c
+
+    def test_basket_switch_charges_constituent_turnover_and_counts_hedge_gross(self):
+        p, r, b, c = self.setup_book()
+        b[1:, 1], b[1:, 2] = False, True
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        np.testing.assert_allclose(out["turnover"][:3], [2.0, 2.0, 0.0])
+        self.assertAlmostEqual(out["daily"][0], -0.04)
+        np.testing.assert_allclose(out["gross_exposure"], 2.0)
+        np.testing.assert_allclose(out["net_exposure"], 0.0)
+        np.testing.assert_allclose(out["hedge_gross_exposure"], 1.0)
+
+    def test_costs_net_offsetting_legs_before_venue_orders(self):
+        p, r, b, c = self.setup_book()
+        b[:, 0] = True
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        np.testing.assert_allclose(out["positions"][0], [-0.5, 0.5, 0.0])
+        self.assertAlmostEqual(out["cost"].sum(), 0.01)
+        np.testing.assert_allclose(out["leg_gross_exposure"], 2.0)
+        np.testing.assert_allclose(out["gross_exposure"], 1.0)
+
+    def test_missing_held_return_invalidates_day_without_reshuffling_hedge(self):
+        p, r, b, c = self.setup_book()
+        base = slices.run_exact(p, r, b, c, 0, 24)
+        r[7, 1] = np.nan
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        np.testing.assert_array_equal(out["positions"], base["positions"])
+        self.assertFalse(out["valid"][7])
+        self.assertFalse(out["daily_valid"][0])
+        self.assertTrue(np.isnan(out["daily"][0]))
+        self.assertEqual(out["missing_return_exposure"][7], 1.0)
+
+    def test_missing_unheld_return_and_unused_cost_do_not_poison_pnl(self):
+        p, r, b, c = self.setup_book()
+        r[:, 2], c[:, 2] = np.nan, np.nan
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        self.assertTrue(out["valid"].all())
+        self.assertAlmostEqual(out["daily"][0], -0.02)
+
+    def test_missing_execution_cost_and_missing_hedge_are_explicit(self):
+        p, r, b, c = self.setup_book()
+        c[0, 1] = np.nan
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        self.assertFalse(out["valid"][0])
+        self.assertTrue(np.isnan(out["daily"][0]))
+        self.assertEqual(out["missing_cost_turnover"][0], 1.0)
+        c[0, 1] = 0.01
+        b[8] = False
+        out = slices.run_exact(p, r, b, c, 0, 24)
+        self.assertTrue(out["missing_hedge"][8])
+        self.assertFalse(out["valid"][8])
+
+    def test_exit_costs_are_explicit_and_apply_at_the_boundary(self):
+        p, r, b, c = self.setup_book()
+        with self.assertRaises(ValueError):
+            slices.run_exact(p, r, b, c, 0, 24, liquidate=True)
+        with self.assertRaises(ValueError):
+            slices.run_exact(p, r, b, c, 0, 24, terminal_cmat=np.full(3, 0.02))
+        out = slices.run_exact(p, r, b, c, 0, 24, liquidate=True, terminal_cmat=np.full(3, 0.02))
+        self.assertAlmostEqual(out["terminal_cost"].sum(), 0.04)
+        self.assertAlmostEqual(out["daily"][0], -0.06)
+        self.assertAlmostEqual(out["turnover"].sum(), 4.0)
+        np.testing.assert_array_equal(out["closing_positions"], 0.0)
+
+    def test_unknown_basket_membership_cannot_become_a_phantom_hedge(self):
+        p, r, b, c = self.setup_book()
+        mask = b.astype(float)
+        for invalid in (np.nan, np.inf, -1.0, 0.5):
+            mask[3, 0] = invalid
+            with self.subTest(invalid=invalid):
+                with self.assertRaises(ValueError):
+                    slices.run_exact(p, r, b, c, 0, 24, basket=mask)
+
+    def test_daily_output_requires_a_calendar_aligned_window(self):
+        p, r, b, c = self.setup_book()
+        with self.assertRaisesRegex(ValueError, "UTC day"):
+            slices.run_exact(p, r, b, c, 1, 25)
+
+    def test_continuation_does_not_pay_a_second_entry(self):
+        p, r, b, c = self.setup_book()
+        out = slices.run_exact(p, r, b, c, 0, 24, initial_positions=[-1.0, 1.0, 0.0])
+        self.assertEqual(out["cost"].sum(), 0.0)
+
+    def test_cost_stress_uses_exact_scaled_position_changes(self):
+        p, r, b, c = self.setup_book()
+        p[1:, 0] = -0.5
+        multiplier = np.r_[1.0, np.full(23, 2.0)]
+        for cmult in (1.0, 2.0, 3.0):
+            out = slices.run_exact(p * multiplier[:, None], r, b, c, 0, 24, cmult=cmult)
+            # Base size halves while multiplier doubles: there is no rebalance.
+            self.assertAlmostEqual(out["cost"].sum(), 0.02 * cmult)
+            self.assertEqual(out["turnover"][1:].sum(), 0.0)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -71,6 +71,13 @@ class PackTests(unittest.TestCase):
         o = run([[0, 1, 4, 1]], a, kappa=-1, slots=1, hedge_col=1)
         self.assertAlmostEqual(o["hedge"][12], 0.002)
 
+    def test_basket_funding_uses_all_constituent_weights(self):
+        a = toy(S=2)
+        a[0][0, 10, 0] = 1
+        a[4][12, 1] = 0.002       # only one of two members settles
+        o = run([[0, 1, 4, -1]], a, kappa=-1, slots=1, hedge_col=-2)
+        self.assertAlmostEqual(o["hedge"][12], -0.001)
+
     def test_universe_hedge_takes_the_basket_mean(self):
         a = toy(S=2)
         bins, close = a[0], a[1]

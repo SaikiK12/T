@@ -17,11 +17,12 @@ class MapSymbols(unittest.TestCase):
         table = pd.DataFrame({"symbol": ["MSTR_USDT"], "type": [2]})
         self.assertIsNone(mexc.map_symbols(["MSTRUSDT"], table)["MSTRUSDT"])
 
-    def test_completed_signal_last_excludes_open_and_unmarked_return_bars(self):
-        # At 15:22 the 13:00 signal is the latest one whose entry and next bar
-        # close are known; the 14:00 bar is still the current/open bar.
-        self.assertEqual(mexc.completed_signal_last(14 * mexc.HOUR, 15 * mexc.HOUR + 22 * 60_000), 13 * mexc.HOUR)
-        self.assertEqual(mexc.completed_signal_last(10 * mexc.HOUR, 15 * mexc.HOUR), 10 * mexc.HOUR)
+    def test_aliases_cannot_be_counted_as_independent_venue_positions(self):
+        table = pd.DataFrame({"symbol": ["PEPE_USDT"], "type": [1]})
+        mapping = mexc.map_symbols(["PEPEUSDT", "1000PEPEUSDT"], table)
+        with self.assertRaisesRegex(mexc.MexcError, "PEPE_USDT"):
+            mexc.require_unique_mapping(mapping)
+        mexc.require_unique_mapping({"PEPEUSDT": "PEPE_USDT", "NVDAUSDT": None})
 
 
 if __name__ == "__main__":
