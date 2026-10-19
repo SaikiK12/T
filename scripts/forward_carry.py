@@ -20,16 +20,20 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 import forward_tick as ft  # noqa: E402
-from lab import carry, engine, events, gate, live, mexc, panel, prereg  # noqa: E402
+from lab import carry, engine, events, gate, live, mexc, panel, prereg, stats  # noqa: E402
 
 LANE = ROOT / "experiments" / "carry_fwd"
 J = LANE / "journal"
 ON_TIME = panel.ms("2026-10-20")
 H = ft.H
 LOOK, TH_IN, TH_OUT, SPOT = 72, 0.20, 0.10, 0.0010
+DECIDE_DAYS = 90
+TRADFI = set(json.loads((ROOT / "experiments" / "venue_gap_v1" / "results" / "tradfi_symbols.json").read_text()))
 # variant -> (cost multiple, spot cost, bars of delay); "1x" is the decided one
 VARIANTS = {"1x": (1.0, SPOT, 1), "2x": (2.0, 2 * SPOT, 1), "3x": (3.0, 3 * SPOT, 1), "spot5": (1.0, 0.0005, 1),
             "r191_timing": (1.0, SPOT, 0)}
+TICKET_COLUMNS = ["day", "book", "kind", "net", "funding", "basis", "cost", "avg_open",
+                  *[f"net_{k}" for k in VARIANTS if k != "1x"], "n_elig", "n_elig_spot"]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
@@ -41,7 +45,14 @@ def read(name):
 def journal_grid():
     """R200's eligibility and rank on a grid that starts LOOK hours before the forward start (the signal's warm-up)."""
     sig, ticks = ft.read("signals.csv"), ft.read("ticks.csv")
-    syms, t0, last = sorted(sig.symbol.unique()), ft.FWD_START, int(ticks.t.max())
+    if sig.empty or ticks.empty:
+        raise SystemExit("R200 signals/ticks are empty; no carry tickets this run")
+    last_closed = int(time.time() * 1000) // H * H - H
+    t0, last = ft.FWD_START, min(int(ticks.t.max()), last_closed)
+    sig = sig[(sig.t >= t0) & (sig.t <= last)]
+    if sig.empty:
+        raise SystemExit("No closed R200 signal hours; no carry tickets this run")
+    syms = sorted(sig.symbol.unique())
     T = (last - t0) // H + 1
     tt = np.arange(t0 - LOOK * H, last + H, H)
     col = {s: i for i, s in enumerate(syms)}
@@ -54,6 +65,7 @@ def journal_grid():
 
 
 def fetch(fn, keys):
+    """An empty successful response can mean no settlement; a failed response must never become zero funding."""
     def one(k):
         try:
             return k, fn(k)
@@ -62,7 +74,11 @@ def fetch(fn, keys):
             return k, None
 
     with ThreadPoolExecutor(4) as ex:
-        return {k: v for k, v in ex.map(one, keys) if v is not None}
+        got = list(ex.map(one, keys))
+    failed = [k for k, v in got if v is None]
+    if failed:
+        raise SystemExit(f"Carry fetch failed for {failed}; no tickets this run")
+    return dict(got)
 
 
 def venue_binance(g):
@@ -83,8 +99,12 @@ def venue_mexc(g):
     a, b = int(tt[0]), int(tt[-1]) + H
     table = mexc.contracts()
     mp = mexc.map_symbols(syms, table)
-    for s in live.tradfi() & set(mp):              # Binance TradFi contracts are not carried (MEXC types XAU as crypto)
+    for s in (TRADFI | live.tradfi()) & set(mp):    # R215's static and current TradFi exclusions
         mp[s] = None
+    try:
+        mexc.require_unique_mapping(mp)
+    except mexc.MexcError as e:
+        raise SystemExit(f"{e}; no carry tickets this run") from e
     spot = mexc.spot_usdt()
     pair = {s: carry.spot_pair([s[:-4], mp[s][:-5]], spot) if mp[s] else None for s in syms}
     mx = sorted({m for m in mp.values() if m})
@@ -113,6 +133,8 @@ def place(x, have, want):
 
 def book(g, v, cm, spot_cost, delay):
     """Hourly (net, funding, basis, cost, n_open) on the forward grid, scored rows only, and the symbols held last."""
+    if np.isinf(v["fund"]).any():
+        raise SystemExit("Non-finite funding rate; no carry tickets this run")
     apr = carry.trailing_apr(v["fund"], LOOK)
     elig = v["elig"]
     if delay:
@@ -121,8 +143,68 @@ def book(g, v, cm, spot_cost, delay):
     rank = panel.ffill(g["rank"])
     cost = engine.cost_matrix(rank).astype(np.float64) * cm
     o = carry.run(apr, np.asarray(v["fund"], np.float64), np.asarray(v["basis"], np.float64), elig, v["has"], cost,
-                  spot_cost, TH_IN, TH_OUT, LOOK, len(g["tt"]))
+                  spot_cost, TH_IN, TH_OUT, LOOK, len(g["tt"]), require_complete=True)
     return o[: g["T"] - 1]                                 # the last row needs the next hour's basis: not scored yet
+
+
+def day_tickets(g, name, v, out, done):
+    """Build only complete 24-hour tickets, preserving the existing journal column order."""
+    D = (g["T"] - 1) // 24
+    day = {k: o[:D * 24].reshape(D, 24, 5) for k, o in out.items()}
+    valid = np.logical_and.reduce([np.isfinite(x).all(axis=(1, 2)) for x in day.values()])
+    daily = np.where(valid, day["1x"][..., 0].sum(1), np.nan)
+    elig = v["elig"][LOOK:LOOK + D * 24].reshape(D, 24, -1)
+    rows = []
+    for d in range(D):
+        ts = ft.FWD_START + d * 24 * H
+        key = pd.Timestamp(ts, unit="ms", tz="UTC").strftime("%Y-%m-%d")
+        if (key, name) in done:
+            continue
+        if not valid[d]:
+            log("deferred incomplete carry day", name, key)
+            continue
+        x = day["1x"][d]
+        rows.append({"day": key, "book": name, "kind": "ontime" if ts >= ON_TIME else "replay",
+                     "net": float(x[:, 0].sum()), "funding": float(x[:, 1].sum()), "basis": float(x[:, 2].sum()),
+                     "cost": float(x[:, 3].sum()), "avg_open": float(x[:, 4].mean()),
+                     **{f"net_{k}": float(day[k][d][:, 0].sum()) for k in VARIANTS if k != "1x"},
+                     "n_elig": int(elig[d].any(0).sum()),
+                     "n_elig_spot": int((elig[d].any(0) & v["has"]).sum())})
+    return rows, daily
+
+
+def decision(tickets):
+    """R220's frozen rule on the first 90 complete UTC on-time days, independent of later observations."""
+    if tickets.empty:
+        tickets = pd.DataFrame(columns=["day", "kind", "net", "avg_open"])
+    if tickets.day.duplicated().any():
+        raise ValueError("Duplicate carry day; refusing to decide")
+    dates = pd.to_datetime(tickets.day, format="%Y-%m-%d", utc=True, errors="raise")
+    if not dates.dt.strftime("%Y-%m-%d").equals(tickets.day):
+        raise ValueError("Carry days must be canonical UTC dates")
+    expected_kind = np.where(dates.astype("int64") // 1_000_000 >= ON_TIME, "ontime", "replay")
+    if not np.array_equal(tickets.kind.values, expected_kind):
+        raise ValueError("Carry ticket kind disagrees with frozen on-time cutoff")
+    values = tickets[["net", "avg_open"]].to_numpy(dtype=float)
+    if not np.isfinite(values).all() or (values[:, 1] < 0).any():
+        raise ValueError("Invalid carry net/position count; refusing to decide")
+    expected = pd.date_range(pd.Timestamp(ON_TIME, unit="ms", tz="UTC"), periods=DECIDE_DAYS, freq="D")
+    days = expected.strftime("%Y-%m-%d").tolist()
+    first = tickets.set_index("day").reindex(days)
+    missing = first.kind.isna()
+    result = {"decision": "PENDING", "required_days": DECIDE_DAYS, "days": int((~missing).sum()),
+              "missing_days": int(missing.sum()), "through_day": days[-1]}
+    if missing.any():
+        return result
+    inv = first[first.avg_open > 0]
+    total = float(first.net.sum())
+    t = float(stats.newey_west_t(first.net.values, 10)[2])
+    g = gate.go_real(inv.net.values) if len(inv) else None
+    checks = {"total_positive": total > 0, "nw_t_at_least_2": bool(np.isfinite(t) and t >= 2),
+              "go_real_invested": bool(g and g["pass"])}
+    verdict = "INCONCLUSIVE" if len(inv) < 20 else "PASS" if all(checks.values()) else "FAIL"
+    return {**result, "decision": verdict, "days_invested": int(len(inv)), "total": total,
+            "t_nw": t if np.isfinite(t) else None, "go_real_invested": g, "checks": checks}
 
 
 def held_now(g, v):
@@ -149,45 +231,42 @@ def held_now(g, v):
 
 def main():
     log("prereg sha", prereg.verify(LANE / "PREREG.md")[:12])
-    J.mkdir(parents=True, exist_ok=True)
     g = journal_grid()
     D = (g["T"] - 1) // 24
     if D == 0:
+        log("no full scored carry day yet")
         return
     venues = {"BIN": venue_binance(g), "MEXC": venue_mexc(g)}
     have = read("tickets.csv")
+    if not have.empty and ("day" not in have or "book" not in have):
+        raise SystemExit("Malformed carry tickets journal; no tickets this run")
     done = set(zip(have.day, have.book)) if not have.empty else set()
-    rows, daily = [], {}
+    rows, daily, coverage = [], {}, {}
     for name, v in venues.items():
         out = {k: book(g, v, *p) for k, p in VARIANTS.items()}
-        day = {k: o[: D * 24].reshape(D, 24, 5) for k, o in out.items()}
-        daily[name] = day["1x"][..., 0].sum(1)
-        elig_fwd = v["elig"][LOOK:LOOK + D * 24].reshape(D, 24, -1)
-        for d in range(D):
-            ts = ft.FWD_START + d * 24 * H
-            key = pd.Timestamp(ts, unit="ms", tz="UTC").strftime("%Y-%m-%d")
-            if (key, name) in done:
-                continue
-            x = day["1x"][d]
-            rows.append({"day": key, "book": name, "kind": "ontime" if ts >= ON_TIME else "replay",
-                         "net": float(x[:, 0].sum()), "funding": float(x[:, 1].sum()), "basis": float(x[:, 2].sum()),
-                         "cost": float(x[:, 3].sum()), "avg_open": float(x[:, 4].mean()),
-                         **{f"net_{k}": float(day[k][d][:, 0].sum()) for k in VARIANTS if k != "1x"},
-                         "n_elig": int(elig_fwd[d].any(0).sum()),
-                         "n_elig_spot": int((elig_fwd[d].any(0) & v["has"]).sum())})
+        new_rows, daily[name] = day_tickets(g, name, v, out, done)
+        rows.extend(new_rows)
+        coverage[name] = v
+    J.mkdir(parents=True, exist_ok=True)
     if rows:
         new = pd.DataFrame(rows)
         new.to_csv(J / "tickets.csv", mode="a", header=have.empty, index=False)
         log(f"ticketed {len(new)} rows, days {new.day.min()}..{new.day.max()}")
-    tk = read("tickets.csv")
+    tk = read("tickets.csv") if (J / "tickets.csv").exists() else pd.DataFrame(columns=TICKET_COLUMNS)
+    if tk.empty:
+        tk = pd.DataFrame(columns=TICKET_COLUMNS)
+    if tk.duplicated(["day", "book"]).any():
+        raise SystemExit("Duplicate carry day/book journal rows; refusing to report")
     status = {"last_scored_hour": pd.Timestamp(int(g["tt"][-2]), unit="ms", tz="UTC").isoformat(),
-              "days_ticketed": int(tk.day.nunique())}
+              "days_ticketed": int(tk.day.nunique()), "decision_at_90_days": {}}
     for name, v in venues.items():
         n = tk[tk.book == name].sort_values("day")
         held, mkt, top = held_now(g, v)
         s = {"coverage": {"symbols": len(g["syms"]), "with_spot_pair": int(v["has"].sum()),
                           **({"mapped": v["mapped"], "spot_taker_mean": v["spot_taker_mean"]} if name == "MEXC" else {})},
              "held_now": held, "market_mean_apr_now": mkt, "top_apr_now": top}
+        ontime = n[n.kind == "ontime"].sort_values("day")
+        status["decision_at_90_days"][name] = decision(ontime)
         for kind in ("replay", "ontime"):
             x = n[n.kind == kind]
             if x.empty:
