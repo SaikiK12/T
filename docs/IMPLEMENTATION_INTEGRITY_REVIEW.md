@@ -39,6 +39,6 @@ The R200 specification also says that hours before its 2026-10-19 freeze were re
 
 ## Tests and limits
 
-Two deterministic Python fixtures were run with invented values: the interior-gap prefix-sum case above and the 14:00/14:12/15:00 timing case. Both reproduced the identified discrepancies. These are implementation reproductions, not unit tests of a repaired function, market statistics or strategy backtests. The repository’s full unit suite was not rerun for this documentation-only review; the earlier attempt recorded 61 passes and 12 environment errors due to missing `numba` and `pyarrow`.
+Three deterministic Python fixtures were run with invented values: the interior-gap prefix-sum case, the 14:00/14:12/15:00 timing case, and the 14:05/14:07/14:10 cross-venue as-of join above. They reproduced the identified discrepancies. These are implementation reproductions, not unit tests of a repaired function, market statistics or strategy backtests. The repository’s full unit suite was not rerun for this documentation-only review; the earlier attempt recorded 61 passes and 12 environment errors due to missing `numba` and `pyarrow`.
 
 The immediate implication is to treat the associated historical multi-hour labels and current live-paper markout as **under review** until a code owner verifies the exact active branch, confirms whether these semantics were intended, and assesses affected observations. This note recommends review; it does not declare R200 invalid or quantify a correction.
