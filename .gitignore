@@ -14,3 +14,4 @@ experiments/*/results/*.npz
 # context-lift lists are hundreds of MB; their sha256 is kept in results/validation_hashes.json
 experiments/atlas_ctx/results/*.csv
 experiments/atlas_mtf/results/*.csv
+.forward.lock

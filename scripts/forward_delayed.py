@@ -53,7 +53,8 @@ def score(tt, names, close):
         x[ri, ci] = sig[k].values == 0
         ind[k] = x & elig
     # realized lag: first bar closing at or after R200's run_at (on-time rows); one bar before ON_TIME (warm-up)
-    run_at = pd.to_datetime(ticks.run_at, utc=True).astype("int64").values // 10**6
+    run_at = ((pd.to_datetime(ticks.run_at, utc=True) - pd.Timestamp(0, tz="UTC"))
+              // pd.Timedelta(milliseconds=1)).to_numpy(np.int64)       # ms whatever unit pandas parses to
     ready = (-(-run_at // H)) * H                                   # run_at rounded up to the hour
     lag_rt = np.ones(T, int)
     rows = ((ticks.t.values - t0) // H).astype(int)

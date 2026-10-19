@@ -26,6 +26,7 @@ LANE = ROOT / "experiments" / "mexc_fwd"
 J = LANE / "journal"
 ON_TIME = panel.ms("2026-10-20")
 R214 = ROOT / "experiments" / "flow72_fwd3" / "journal" / "tickets.csv"
+TRADFI = set(json.loads((ROOT / "experiments" / "venue_gap_v1" / "results" / "tradfi_symbols.json").read_text()))
 H = ft.H
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
@@ -38,8 +39,10 @@ def load():
     T, S = (last - t0) // H + 1, len(syms)
     table = mexc.contracts()
     mp = mexc.map_symbols(syms, table)
+    for s in (TRADFI | live.tradfi()) & set(mp):     # Binance TradFi (R216 list + today's): MEXC types XAU as crypto
+        mp[s] = None
     mx = sorted({m for m in mp.values() if m})
-    end = last + 2 * H
+    end = min(last + 2 * H, int(time.time() * 1000) // H * H)      # closed MEXC bars only, never the forming one
 
     def one(m):
         try:
@@ -50,7 +53,10 @@ def load():
 
     with ThreadPoolExecutor(4) as ex:
         got = list(ex.map(one, mx))
-    tt = np.arange(t0, end, H)
+    failed = sorted(m for m, k, f in got if k is None or f is None)
+    if failed:                                     # a missing contract would score as a zero return: write nothing
+        raise SystemExit(f"MEXC fetch failed for {failed}; no tickets this run")
+    tt = np.arange(t0, last + 2 * H, H)            # full grid; a bar not closed yet stays NaN
     kl = {m: k for m, k, _ in got if k is not None}
     fr = {m: f for m, _, f in got if f is not None}
     cm_, fm_ = live.grid(kl, tt, "close"), live.grid(fr, tt, "rate")

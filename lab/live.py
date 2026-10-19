@@ -89,6 +89,14 @@ def perpetuals(quote="USDT", statuses=("TRADING",)):
                   and s.get("quoteAsset") == quote and s.get("status") in statuses)
 
 
+def tradfi():
+    """Binance USD-M contracts that are not crypto, as R216 defines them: contractType TRADIFI_PERPETUAL or an
+    underlyingType other than COIN and PREMARKET (stocks, commodities, indices)."""
+    info = get("fapi/v1/exchangeInfo")
+    return {s["symbol"] for s in info["symbols"] if s.get("contractType") == "TRADIFI_PERPETUAL"
+            or s.get("underlyingType") not in ("COIN", "PREMARKET")}
+
+
 def parse_klines(rows):
     df = pd.DataFrame(rows, columns=KLINE_COLS).drop(columns=["ignore", "close_time"])
     for c in df.columns:

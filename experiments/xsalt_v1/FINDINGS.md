@@ -44,12 +44,16 @@ are bp/day. Alpha t is the NW t of the net after removing its BTC beta (the deci
 | PREM | -6.5 | -47.4 |
 
 - A negative spread means the top quintile did worse the next day.
-- Two scores have the same sign in both windows: **RESMOM's residual reverses at 24 h**, and **high premium net of
-  funding underperforms over the next 24 h** (-6.5 / -47.4).
+- Four of the five scores keep their sign across the two windows; only MOM flips. The two largest are RESMOM
+  (-16 / -20) and PREM (-6.5 / -47.4). They sum the lab's `ret` over 24 rows, which already deducts the funding a
+  long pays (`engine.forward_returns`).
+- **No outside support.** A literature check found no paper predicting either sign for a top-50 universe. Large,
+  liquid coins show daily and weekly momentum, not reversal (Zaremba et al. 2021; Fičura 2023), which leans against
+  RESMOM's sign. Nothing tests a perp premium net of funding.
 - These spreads are not tests: daily quintile spreads of about 8 coins have a standard error of roughly 8-10 bp/day
   before autocorrelation.
-- A 24 h contrarian lane on either score would be chosen after seeing these numbers. Its only clean test is the
-  unread holdout, and it needs its own registration.
+- A 24 h contrarian lane on either score would be chosen after seeing these numbers, with no prior behind it. It is
+  not registered.
 
 ## Costs
 Net at 2x/3x is in the table. Costs are not what failed these books; the gross is.

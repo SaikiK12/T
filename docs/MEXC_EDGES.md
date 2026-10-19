@@ -12,19 +12,20 @@ Grades:
 Nothing here is a tested edge. Each rule at the end needs its own frozen PREREG.
 
 ## Fees
-Read from the public `contract/detail` endpoint on 2026-10-19.
+Counted from the contract snapshot `data/mexc/contracts/2026-10-19.json` (re-counted after a verifier found the
+first table wrong).
 
 **Web and app orders (1,200 contracts):**
 
 | Contracts | Taker | Maker |
 |---|---|---|
-| 476 | 2 bp | 0 |
-| 546 | 4 bp | 1 bp |
+| 956 | 2 bp | 0 |
+| 142 | 0 | 0 (`isZeroFeeSymbol`: DOGE, ADA, LINK, AVAX, ARB, OP, APT, ONDO and others) |
+| 74 | 4 bp | 1 bp |
 | 20 | 10 bp | 4 bp |
-| 4 | 1 bp | 0 |
-| 154 | 0 | 0 (`isZeroFeeSymbol`: DOGE, ADA, LINK, AVAX, ARB, OP, APT, ONDO and others) |
+| 8 | 1 bp | 0 |
 
-- 634 contracts have a maker fee of 0.
+- 1,106 contracts have a maker fee of 0, including 524 of the 611 USDT crypto contracts.
 - Five are marked `TEMP` (promotional).
 
 **API orders** (MEXC notice of 2026-05-28, effective 2026-06-01, https://www.mexc.com/ro-RO/announcements/api-updates/futures-19):
@@ -41,18 +42,22 @@ Read from the public `contract/detail` endpoint on 2026-10-19.
 - The owner places real orders by hand (AGENTS rule 6), so the web fees apply.
 
 ## Funding
-- **Cycle.** Every contract the subagent sampled (8 of 1,200) settles every 8 h at 00/08/16 UTC. Caps vary: BTC
+- **Cycle** (subagent observation, not stored in the repo). Every contract it sampled (8 of 1,200) settles every 8 h at 00/08/16 UTC. Caps vary: BTC
   ±0.18% per 8 h, SOL ±0.75%, small alts up to ±3% (D).
 - **Same as Binance.** MEXC's settled rates matched Binance's:
   - for BTC, SAND, DOGE and SOL over Sep 17-30, 2026, correlation was 0.9997 or more and the mean gap under 0.02 bp
     (D);
-  - across all 58 R200 symbols, the median gap in trailing 72 h APR was 0.0008 [lab, R220 data check].
+  - over the 40 R200 symbols mapped to MEXC, 446 forward hours, the trailing 72 h APR gap has median 0.0004, 95th
+    percentile 0.0047 and maximum 0.10 [lab, `experiments/carry_fwd/venue_check.json`, from
+    `scripts/check_carry_venues.py`].
   - There is no funding spread to harvest between the two venues. Zhivkov (2026, *Mathematics* 14(2):346; B) finds
-    that cross-venue funding spreads rarely survive costs.
+    that cross-venue funding spreads often do not survive costs, over a window too short to establish persistence.
 - **The difference is spot.** MEXC lists USDT spot pairs for small alts that Binance spot does not: AKE, BTW, Q and
   USELESS among the top-50 perps in October 2026.
   - So the confirmed carry (R191) has more coins to hold on MEXC.
   - In R220's replay the MEXC book held a position on 18 of 18 days, and the Binance book on none [lab].
+  - Spot pairs on MEXC only: AKE, BR, BTW, Q, USELESS. On Binance only: LSK and one non-ASCII name. 33 pairs exist on
+    both [lab, `venue_check.json`].
 - **Extremes on 2026-10-19** (D):
   - Crypto: SAND -0.25% per 8 h (last five settlements -19 to -113 bp), BTW -0.21%, CT -0.19%.
   - TradFi stock tokens (BMYSTOCK, PWRSTOCK) show about +0.77%.
@@ -85,8 +90,8 @@ Read from the public `contract/detail` endpoint on 2026-10-19.
    - **Exit:** after 4 h, or at limit + sigma.
    - **Costs:** web 0 / 2 bp, or API 6 / 8 bp.
    - **Report:** hedged and unhedged results.
-   - **Evidence:** R193 found the same entry on Binance-replicated cells gained +20 bp per trade over a taker entry,
-     but the book was long-alt beta.
+   - **Evidence:** R193 found the same entry on Binance-replicated cells beat a taker entry per trade. Median net was
+     +11.4 vs -9.8 bp in validation and +23.5 vs -3.4 in discovery, but the book was long-alt beta.
 2. **Negative-funding capture around settlement: tested, NULL (R223).** The funding is paid, but the price moves
    against the holder by 1.5-2.3 times the payment. Top 50: long on -0.20% nets -38.5 bp per event.
 3. **Day-14 listing short with a stop.** Weak:

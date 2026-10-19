@@ -83,11 +83,13 @@ def venue_mexc(g):
     a, b = int(tt[0]), int(tt[-1]) + H
     table = mexc.contracts()
     mp = mexc.map_symbols(syms, table)
+    for s in live.tradfi() & set(mp):              # Binance TradFi contracts are not carried (MEXC types XAU as crypto)
+        mp[s] = None
     spot = mexc.spot_usdt()
     pair = {s: carry.spot_pair([s[:-4], mp[s][:-5]], spot) if mp[s] else None for s in syms}
     mx = sorted({m for m in mp.values() if m})
     fr = fetch(lambda m: mexc.funding_history(m, a, b), mx)
-    cl = fetch(lambda m: mexc.klines_cached(m, a, b), mx)
+    cl = fetch(lambda m: mexc.fetch_klines(m, a, b), mx)  # uncached: R215 is the one writer of the MEXC price cache
     ix = fetch(lambda m: mexc.klines_cached(m, a, b, kind="index_price"), mx)
     by = lambda d: place(live.grid(d, tt, "close" if d is not fr else "rate"), list(d), [mp[s] for s in syms])
     fund, close, index = by(fr), by(cl), by(ix)

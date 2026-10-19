@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-10-19T13:00:00+00:00",
+ "last_hour": "2026-10-19T14:00:00+00:00",
  "days_scored": 18,
  "short_now": {
   "tvc": [
@@ -11,7 +11,7 @@
    "XAGUSDT"
   ],
   "t24": [
-   "QNTUSDT",
+   "ADAUSDT",
    "QUSDT",
    "RLCUSDT",
    "SANDUSDT",
@@ -19,11 +19,11 @@
    "\u9f99\u867eUSDT"
   ],
   "t4": [
-   "1000PEPEUSDT",
    "QNTUSDT",
-   "RLCUSDT",
-   "SUIUSDT",
-   "TAOUSDT",
+   "QUSDT",
+   "SOXSUSDT",
+   "STRKUSDT",
+   "XAGUSDT",
    "\u9f99\u867eUSDT"
   ]
  },
@@ -45,6 +45,11 @@
     "no_tail_event": true
    },
    "pass": false
+  },
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "stop_rule_hit_day": null
   }
  },
  "B": {
@@ -65,6 +70,11 @@
     "no_tail_event": true
    },
    "pass": false
+  },
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "stop_rule_hit_day": null
   }
  }
 }
