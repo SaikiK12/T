@@ -1,9 +1,10 @@
 """ctxslice_v1 (R201): the replicated excess context edges of atlas_ctx (R192) and atlas_mtf (R195) as one slice book,
-as set out in experiments/ctxslice_v1/PREREG.md.
+as set out in experiments/ctxslice_v1/PREREG.md; ctxslice_v2 (R204): its 12-24 h pairs, one-shot holdout.
 
 usage: python scripts/run_ctxslice.py list        write and hash the cell list (no statistic)
        python scripts/run_ctxslice.py insample    stage 1, 2021-01-01..2025-06-30 (selection-biased filter)
        python scripts/run_ctxslice.py holdout     stage 2, one shot, only if stage 1 passed its gate
+       python scripts/run_ctxslice.py --lane ctxslice_v2 list|holdout
 """
 import argparse
 import hashlib
@@ -26,18 +27,26 @@ OUT = LANE / "results"
 SOURCES = {"ctx": ROOT / "experiments" / "atlas_ctx" / "results" / "replication.csv",
            "mtf": ROOT / "experiments" / "atlas_mtf" / "results" / "replication.csv"}
 GROUPS = ("all", "ctx", "mtf", "h1_4", "h12_24", "h72")
+V2_GROUPS = ("all", "ctx", "mtf", "h12", "h24")
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
-def make_list():
-    frames = []
-    for src, path in SOURCES.items():
-        m = pd.read_csv(path)
-        x = m[(m.kind == "real") & (m.measure == "excess") & (m.cce_rep_2x == True)]  # noqa: E712
-        frames.append(x.assign(source=src)[["source", "family", "context", "code", "view", "name", "bin", "h",
-                                            "cond_bp", "cond_bp_v", "share"]])
-    cells = pd.concat(frames, ignore_index=True)
-    cells["side"] = np.sign(cells.cond_bp).astype(int)
+def make_list(lane):
+    if lane == "ctxslice_v2":
+        src = ROOT / "experiments" / "ctxslice_v1" / "results"
+        sha = hashlib.sha256((src / "cells.csv").read_bytes()).hexdigest()
+        assert sha == (src / "cells.sha256").read_text().strip(), "v1 cells.csv changed"
+        cells = pd.read_csv(src / "cells.csv")
+        cells = cells[cells.h.isin([12, 24])].reset_index(drop=True)
+    else:
+        frames = []
+        for src, path in SOURCES.items():
+            m = pd.read_csv(path)
+            x = m[(m.kind == "real") & (m.measure == "excess") & (m.cce_rep_2x == True)]  # noqa: E712
+            frames.append(x.assign(source=src)[["source", "family", "context", "code", "view", "name", "bin", "h",
+                                                "cond_bp", "cond_bp_v", "share"]])
+        cells = pd.concat(frames, ignore_index=True)
+        cells["side"] = np.sign(cells.cond_bp).astype(int)
     path = OUT / "cells.csv"
     OUT.mkdir(parents=True, exist_ok=True)
     cells.to_csv(path, index=False)
@@ -55,6 +64,8 @@ def load_cells():
 
 def groups_of(c):
     g = ["all", c.source]
+    if GROUPS is V2_GROUPS:
+        return g + [f"h{int(c.h)}"]
     g.append("h1_4" if c.h <= 4 else "h12_24" if c.h <= 24 else "h72")
     return g
 
@@ -118,10 +129,16 @@ def run_books(P, u, t0, t1, period):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=("list", "insample", "holdout"))
+    ap.add_argument("--lane", default="ctxslice_v1", choices=("ctxslice_v1", "ctxslice_v2"))
     a = ap.parse_args()
+    global LANE, OUT, GROUPS
+    LANE = ROOT / "experiments" / a.lane
+    OUT = LANE / "results"
+    if a.lane == "ctxslice_v2":
+        GROUPS = V2_GROUPS
     log("prereg sha", prereg.verify(LANE / "PREREG.md")[:12])
     if a.stage == "list":
-        return make_list()
+        return make_list(a.lane)
     cells = load_cells()
     u, bins, names, to, _, _ = rca.setup("all")
     ho = u.holdout_row
@@ -137,17 +154,24 @@ def main():
                                                       indent=1, default=float))
         name = "insample"
     else:
-        ins = json.loads((OUT / "insample.json").read_text())
-        if not ins["gate_pass"]:
-            raise SystemExit("stage 1 did not pass its gate: the holdout is not read")
         assert not (OUT / "holdout.csv").exists(), "the holdout was already run once"
+        if a.lane == "ctxslice_v2":                  # no stage 1: the size normalizer from 2021-2025H1 counts
+            _, counts = build_positions(cells, u, bins, names, to, 0, ho, M=None)
+            M = float(sum(counts.values()))
+            log(f"M2 = {M:.3f} coin-states per hour")
+        else:
+            ins = json.loads((OUT / "insample.json").read_text())
+            if not ins["gate_pass"]:
+                raise SystemExit("stage 1 did not pass its gate: the holdout is not read")
+            M = ins["M"]
         t1 = len(u.p.t) - len(u.p.t) % 24
-        P, _ = build_positions(cells, u, bins, names, to, ho, t1, M=ins["M"])
+        P, _ = build_positions(cells, u, bins, names, to, ho, t1, M=M)
         df, keep, by = run_books(P, u, ho, t1, "holdout")
         p = df[(df.book == "all") & (df.hedge == "universe") & (df.cmult == 1.0)].iloc[0]
         confirmed = bool(p.mean_bp_day > 0 and p.t_nw >= 2)
         (OUT / "verdict.json").write_text(json.dumps({"confirmed": confirmed, "t_nw": p.t_nw, "ann": p.ann,
-                                                      "total": p.total, "days": int(p.days)}, indent=1, default=float))
+                                                      "total": p.total, "days": int(p.days), "M": M}, indent=1,
+                                                     default=float))
         log("CONFIRMED" if confirmed else "NOT CONFIRMED")
         name = "holdout"
     df.to_csv(OUT / f"{name}.csv", index=False)

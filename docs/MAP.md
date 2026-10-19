@@ -19,9 +19,9 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
 5. **Funding carry is real and regime-bound**: +35% in 2021, ~0 in 2022-23, +8% in 2024, ~1%/yr since (R190, R191).
 6. **How you measure decides what you find**: day-weighted, all-hours atlas means overstate what an entry rule earns;
    the same edge can be captured by a book that holds the state (slices), not by one that trades the entry.
-7. **Context matters, and mostly as an interaction for market-neutral bets** (R192, R195): the coin's own 4 h / 24 h
-   state and its order flow change how its 1 h signals pay; a few hundred market-neutral (signal, context) pairs keep a
-   validation edge above 2x costs. Market-wide contexts mostly time the whole market. Clocks switch signals off.
+7. **Context matters before fees, not as a book** (R192, R195, R201, R204): the coin's own 4 h / 24 h state and its
+   order flow change how its 1 h signals pay, and hundreds of market-neutral pairs replicate above 2x costs from 2021-23
+   to 2024-25H1; but as a slice book the slow pairs lose on the holdout (-6.5%/yr) and the fast ones lose to costs.
 8. **Live data match the archive**: the public endpoints rebuild the flow signals' bins at 99.5-99.98% (R199/R200),
    and a forward paper test of the flow book and of top-vs-crowd runs from 2026-10-01 (R200).
 9. **Where money could come from** (R202): if top-vs-crowd holds, a crypto prop challenge (a few hundred dollars for a
@@ -87,7 +87,9 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
 - Patterns: **exhaustion** (1 h overbought while the 4 h EMA cross is most stretched: the coin trails the market by
   ~100 bp over 24 h); **dip in a strong trend** (1 h oversold, daily RSI top bucket: +117 bp over 4 h); **low leverage
   crowding + 1 h overbought** (-122 bp over 12 h); **crowd most short + price below the day open** (+142 bp over 24 h).
-- These are day-weighted means of rare states; ctxslice_v1 (R201) turns the 547 pairs into one slice book.
+- **As books they do not pay out of sample.** All 547 pairs as one slice book lose in-sample (-32%/yr: the fast 1-4 h
+  pairs earn 1-2 bp/day gross against 14-16 bp of costs; R201). The slow 12-24 h pairs made +39%/yr in-sample (t 3.85)
+  but -6.5%/yr on the holdout (t -0.13; gross 7 bp/day against 8 bp of costs; R204).
 
 ## 7. Live data and forward paper trading (R199, R200)
 - Public endpoints on www.binance.com (fapi.binance.com is geo-blocked) carry the same 5-minute metrics as the
@@ -122,7 +124,7 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 ## Routes still open
 - Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
   90 scored days.
-- ctxslice_v1 (R201): the replicated context pairs as one slice book; in-sample filter, then a one-shot holdout.
+- Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
 - Cross-venue top-vs-crowd on Gate (180 days hourly) and OKX (C06), and liquidations from Gate (C07): discovery only on
   the spent window, fresh from 2026-10.
 - Copy-trader persistence from forward leaderboard snapshots (C02, C21, C22).
@@ -135,5 +137,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
 
 ## Program
-Program trials: 9,471,640 after R203 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,642 after R204 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
