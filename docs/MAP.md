@@ -133,6 +133,12 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - C17 daily loss/profit limits (daylimit_v1 R208): harmful. All 30 stop rules on the flow books lose against the
     unfiltered book in both windows (primary -22.5 bp/day, t -8.3); the books' hourly results are uncorrelated and
     each stop pays a round trip. Meet a prop firm's daily limit by sizing, not by an intraday kill switch.
+  - C23 volatility risk premium (vrp_v1 R209, Deribit DVOL): BTC +7.5 bp/day in-sample (t 1.06), +1.1 on the
+    holdout; 7 of 8 variants lose on the holdout.
+  - C18 Coinbase premium (cbprem_v1 R210): book +0.2 bp/day (t 0.34) in-sample; the gross 24 h spread after +/-2 z
+    extremes has the claimed sign in both windows (BTC +28 bp in, +57 out) but the signal is rare and noisy.
+  - Pattern: one- or two-asset timing rules (C08, C13, C18, C23) cannot reach t 2 in five years at daily frequency;
+    every lead the lab has comes from a cross-section of many coins.
 
 ## Routes still open
 - Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
@@ -150,5 +156,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
 
 ## Program
-Program trials: 9,471,683 after R208 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,695 after R210 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
