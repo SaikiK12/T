@@ -9,6 +9,8 @@ confidence, in which context (hour and market opens, BTC regime, market-wide flu
 from paying its costs, and which routes (stacking, context gating, limit-order entries, carry) close that gap.
 
 - [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
+- [`docs/INTEGRITY_AND_CONFIDENCE_FOLLOWUP.md`](docs/INTEGRITY_AND_CONFIDENCE_FOLLOWUP.md): code-level integrity fixes
+  and the bounded sizing rules that remain admissible after R217.
 - [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
   [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
 - `registry/rounds.csv`: one row per round with its trial count (append-only).

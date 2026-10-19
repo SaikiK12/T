@@ -26,6 +26,18 @@ class MexcError(RuntimeError):
     pass
 
 
+def completed_signal_last(signal_last, now_ms=None, horizon=HOUR):
+    """Latest signal-bar open whose one-bar-late return is fully observable.
+
+    A signal on bar ``t`` needs the close at ``t + 2*horizon`` when the
+    position is entered on the next bar.  The wall-clock cap prevents an open
+    MEXC kline from being journaled as a completed paper result.
+    """
+    now_ms = int(time.time() * 1000) if now_ms is None else int(now_ms)
+    wall = (now_ms // horizon) * horizon
+    return min(int(signal_last), wall - 2 * horizon)
+
+
 def get(path, params=None, tries=5, timeout=30):
     url = f"{BASE}/{path}" + ("?" + urllib.parse.urlencode(params) if params else "")
     delay, err = 1.0, None

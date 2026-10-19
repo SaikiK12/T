@@ -211,10 +211,12 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - The archive has no metrics (order flow) for coins with non-ASCII names; their flow features are missing (0.16% of
   eligible cells). Live data include them.
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
-- Multi-hour labels (`lab/atlas.forward`) count a missing return inside the window as zero.
-  - 0.12% of eligible 72 h windows contain one (0.04% at 24 h), on 69 symbols.
-  - There are no infinite returns.
-  - Resampled 4 h / 24 h bars can be partial: 0 of the eligible 4 h blocks are, and 2 of the 24 h blocks.
+- Older multi-hour labels (`lab/atlas.forward`) counted a missing return inside the window as zero. The current default
+  rejects incomplete windows; `require_complete=False` is retained only for reproducing old results. The measured old
+  incidence was 0.12% of eligible 72 h windows (0.04% at 24 h), on 69 symbols.
+  - There are no infinite returns in the measured archive; the corrected path rejects them as well.
+  - Older resampled 4 h / 24 h bars could be partial: 0 of the eligible 4 h blocks were, and 2 of the 24 h blocks
+    were measured. The current resampler marks incomplete OHLC blocks missing and records close coverage.
   - Both were found by the Codex review and measured on 2026-10-19. They are too rare to move any result, and kept for
     reproducibility.
 - Returns are Binance traded-close to traded-close minus funding. They are not mark-price, index or fill PnL.

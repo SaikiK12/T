@@ -34,11 +34,18 @@ def load():
     """Signals, MEXC prices and funding on the forward grid, and the one-bar-late slice indicators per cell."""
     sig, ticks = ft.read("signals.csv"), ft.read("ticks.csv")
     syms, t0 = sorted(sig.symbol.unique()), ft.FWD_START
-    last = int(ticks.t.max())
-    T, S = (last - t0) // H + 1, len(syms)
+    S = len(syms)
     table = mexc.contracts()
     mp = mexc.map_symbols(syms, table)
     mx = sorted({m for m in mp.values() if m})
+    signal_last = int(ticks.t.max())
+    last = mexc.completed_signal_last(signal_last)
+    if last < t0:
+        return dict(t0=t0, last=last, signal_last=signal_last, syms=syms, mp=mp, mx=mx, table=table,
+                    ret=np.empty((0, S)), fe=np.empty((0, S)), trad=np.empty((0, S), dtype=bool),
+                    cmat=np.empty((0, S)), ind={k: np.empty((0, S), dtype=bool) for k in ft.CELLS},
+                    ind_all={k: np.empty((0, S), dtype=bool) for k in ft.CELLS}, D=0)
+    T = (last - t0) // H + 1
     end = last + 2 * H
 
     def one(m):
@@ -66,21 +73,23 @@ def load():
     ret = c[1:] / c[:-1] - 1 - fe[1:]
     col = {s: i for i, s in enumerate(syms)}
     ri, ci = ((sig.t.values - t0) // H).astype(int), sig.symbol.map(col).values
+    ok = (ri >= 0) & (ri < T)
+    rr, cc = ri[ok], ci[ok]
     elig = np.zeros((T, S), bool)
-    elig[ri, ci] = True
+    elig[rr, cc] = True
     rank = np.full((T, S), np.nan, np.float32)
-    rank[ri, ci] = sig["rank"].values
+    rank[rr, cc] = sig["rank"].values[ok]
     trad = elig & np.isfinite(c[:T])
     cmat = engine.cost_matrix(rank)
     ind, ind_all = {}, {}
     for k in ft.CELLS:
         x = np.zeros((T, S), bool)
-        x[ri, ci] = sig[k].values == 0
+        x[rr, cc] = sig[k].values[ok] == 0
         ind_all[k] = x & elig
         ind[k] = shift_rows(x & trad, trad, np.ones(T, int))
     known = np.isfinite(c[1:]).any(axis=1)
     D = (int(np.flatnonzero(known).max()) + 1 if known.any() else 0) // 24
-    return dict(t0=t0, last=last, syms=syms, mp=mp, mx=mx, table=table, ret=ret, fe=fe, trad=trad, cmat=cmat,
+    return dict(t0=t0, last=last, signal_last=signal_last, syms=syms, mp=mp, mx=mx, table=table, ret=ret, fe=fe, trad=trad, cmat=cmat,
                 ind=ind, ind_all=ind_all, D=D)
 
 
@@ -105,7 +114,9 @@ def score(st, books, J, gate_book="A", ref=R214):
             res[name] = slices.run(P, ret, trad, cmat, 0, D * 24, cmult=cmult)
         fund = -(P * fe[1:D * 24 + 1]).sum(axis=1)                     # the book's funding, before the hedge
         n_sig = sum(ind_all[k][:D * 24].sum(axis=1) for k in cells)
-        n_trad = sum((ind_all[k] & trad)[:D * 24].sum(axis=1) for k in cells)
+        # Coverage is measured at the actual delayed entry row, not at the
+        # signal row. A signal can be tradable at t and unavailable at t+1.
+        n_trad = sum(ind[k][:D * 24].sum(axis=1) for k in cells)
         for d in range(D):
             ms = t0 + d * 24 * H
             day = pd.Timestamp(ms, unit="ms", tz="UTC").strftime("%Y-%m-%d")
@@ -125,7 +136,9 @@ def score(st, books, J, gate_book="A", ref=R214):
     tk = pd.read_csv(J / "tickets.csv")
     dropped = sorted(s for s in syms if not mp[s])
     fees = table[table.symbol.isin(mx)][["taker", "maker"]].describe().loc[["mean", "min", "max"]].to_dict()
-    status = {"last_hour": pd.Timestamp(last, unit="ms", tz="UTC").isoformat(), "mapped": len(mx),
+    status = {"last_hour": pd.Timestamp(last, unit="ms", tz="UTC").isoformat(),
+              "signal_last_hour": pd.Timestamp(st.get("signal_last", last), unit="ms", tz="UTC").isoformat(),
+              "mapped": len(mx),
               "dropped": dropped, "mexc_fee": fees}
     r214 = pd.read_csv(ref) if ref is not None and ref.exists() else pd.DataFrame()
     for book in books:

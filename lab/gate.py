@@ -11,9 +11,11 @@ def go_real(returns, entry_days=None, rules=GO_REAL):
     (the rule is the owner's); see docs/AUDIT.md.
     """
     r = np.asarray(returns, dtype=float)
+    has_inf = bool(np.isinf(r).any())
     r = r[~np.isnan(r)]
     n = int(r.size)
     checks = {
+        "finite_returns": not has_inf,
         "enough_scored": n >= rules["min_scored"],
         "mean_positive": n > 0 and float(r.mean()) > rules["min_mean"],
         "hit_rate": n > 0 and float((r > 0).mean()) >= rules["min_hit"],

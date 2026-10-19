@@ -52,6 +52,14 @@ class PanelTests(unittest.TestCase):
         self.assertAlmostEqual(float(b["close"][n, j]), float(p["close"][win.stop - 1, j]), places=4)
         self.assertAlmostEqual(float(b["volume"][n, j]), float(p["volume"][win, j].sum()), places=2)
 
+    def test_resample_marks_partial_price_blocks_missing(self):
+        p = synthetic(T=24 * 12, S=4)
+        j, n = 1, 3
+        p["close"][n * 4 + 2, j] = np.nan
+        b = panel.resample(p, 4)
+        self.assertEqual(int(b["coverage"][n, j]), 3)
+        self.assertTrue(np.isnan(b["close"][n, j]))
+
     def test_align_shows_a_bar_only_after_it_closes(self):
         p = synthetic()
         daily = panel.resample(p, 24)["close"]
@@ -131,6 +139,10 @@ class FeatureTests(unittest.TestCase):
         xs = features.bins_xs(self.bank.get("ret", 1, (24,)), elig, 8)
         used = np.unique(xs[xs >= 0])
         self.assertEqual(list(used), list(range(8)))                         # every bucket, including 0, gets used
+
+    def test_fixed_bins_reject_infinities(self):
+        got = features.bins_fixed(np.array([[-np.inf, -1.0, 0.0, 1.0, np.inf, np.nan]]), (-0.5, 0.5))
+        np.testing.assert_array_equal(got, [-1, 0, 1, 2, -1, -1])
 
     def test_default_spec_names_are_unique(self):
         names = [s.name for s in features.default_specs()]

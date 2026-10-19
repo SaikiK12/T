@@ -77,6 +77,10 @@ class CatalogAndSearch(unittest.TestCase):
         np.testing.assert_array_equal(out[0], u.ret[24 * 50 + 3])           # row 0 holds the return from `shift` rows later
         np.testing.assert_array_equal(out[limit - 1], u.ret[(24 * 50 + 3) - 1])   # wraps around inside the window
 
+    def test_placebo_requires_an_explicit_window_limit(self):
+        with self.assertRaises(ValueError):
+            search.shifted_returns(self.u, 5)
+
     def test_pairs_and_triples_are_built_from_distinct_features(self):
         conds = [(0, 5, 7), (1, 0, 2), (2, 3, 3), (0, 0, 1)]
         rs = search.pairs(conds, directions=(1,), holds=(24,))

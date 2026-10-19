@@ -104,7 +104,8 @@ def main():
     plac = []
     for k in range(a.placebos):
         shift = int(rng.integers(24 * 120, (d1 - d0) - 24 * 120))
-        shift -= shift % 24
+        # Keep the phase random.  Rounding to whole days leaves hour/session/
+        # funding-clock features aligned with the returns in the placebo.
         plac.append(pipeline(u, bins, d0, d1, edges, search.shifted_returns(u, shift, d1), f"placebo{k}"))
         n_trials += sum(len(s.rules) for s in plac[-1])
 

@@ -279,7 +279,7 @@ HOURLY = {"hour", "dow", "session", "funding_clock", "dayopen", "prevday", "prev
 
 def bins_fixed(x, edges):
     out = np.digitize(x, edges).astype(np.int8)
-    out[np.isnan(x)] = -1
+    out[~np.isfinite(x)] = -1
     return out
 
 

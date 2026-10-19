@@ -94,17 +94,28 @@ def _run(bins, ctx, cv, cb, ch, cside, gk, gc, gm, close, low, high, fund, vol, 
             r = close[t, hedge_col] / close[t - 1, hedge_col] - 1.0
             if not np.isnan(r):
                 hp = hpos * r
+            f = fund[t, hedge_col]
+            if not np.isnan(f):
+                hp -= hpos * f
         elif hedge_col == -2 and t > t0 and hpos != 0.0:
             sr = 0.0
             nr = 0
+            sf = 0.0
+            nf = 0
             for j in range(ecnt[t - 1]):
                 s = eidx[t - 1, j]
                 r = close[t, s] / close[t - 1, s] - 1.0
                 if not np.isnan(r):
                     sr += r
                     nr += 1
+                f = fund[t, s]
+                if not np.isnan(f):
+                    sf += f
+                    nf += 1
             if nr > 0:
                 hp = hpos * sr / nr
+            if nf > 0:
+                hp -= hpos * sf / nf
         # 2) at the close of bar t: new signals
         for i in range(len(cv)):
             for j in range(ecnt[t]):

@@ -131,8 +131,13 @@ def _with_ret(u, ret):
 
 def shifted_returns(u, shift, limit=None):
     """Placebo: returns moved `shift` hours in time against the features and eligibility, circularly inside rows
-    [0, limit). Pass limit = the end of the discovery window so no later return (test, holdout) leaks into it."""
-    limit = len(u.ret) if limit is None else limit
+    [0, limit). The limit is mandatory so a discovery placebo cannot silently
+    pull validation or holdout returns into its circular window."""
+    if limit is None:
+        raise ValueError("pass the discovery-window limit explicitly")
+    limit = int(limit)
+    if not 0 < limit <= len(u.ret):
+        raise ValueError("limit must be inside the return panel")
     out = np.full_like(u.ret, np.nan)
     out[:limit] = np.roll(u.ret[:limit], -shift, axis=0)
     return out

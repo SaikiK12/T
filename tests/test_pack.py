@@ -61,6 +61,16 @@ class PackTests(unittest.TestCase):
         self.assertAlmostEqual(o["exposure"][10], 1.0)
         self.assertAlmostEqual(o["exposure"][14], 0.0)
 
+    def test_hedge_funding_is_charged(self):
+        a = toy(S=2)
+        bins, close, fund = a[0], a[1], a[4]
+        bins[0, 10, 0] = 1
+        close[11:, 0] = 102.0
+        close[11:, 1] = 101.0
+        fund[12, 1] = 0.002                              # the short hedge receives funding
+        o = run([[0, 1, 4, 1]], a, kappa=-1, slots=1, hedge_col=1)
+        self.assertAlmostEqual(o["hedge"][12], 0.002)
+
     def test_universe_hedge_takes_the_basket_mean(self):
         a = toy(S=2)
         bins, close = a[0], a[1]

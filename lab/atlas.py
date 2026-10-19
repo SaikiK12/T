@@ -23,20 +23,37 @@ HORIZONS = (1, 4, 12, 24, 72)
 
 # ---- forward returns ----------------------------------------------------------------------------------------------
 
-def forward(ret, elig, t0, t1, horizons=HORIZONS):
-    """F[h, t - t0, s]: sum of next-bar returns over h bars from row t (NaN when the window passes t1 or the symbol has
-    no return at t); X: F minus the mean of F over eligible symbols at t. Both float32."""
+def forward(ret, elig, t0, t1, horizons=HORIZONS, require_complete=True):
+    """Build forward labels and cross-sectional excess labels.
+
+    ``F[h, t - t0, s]`` is the sum of the next ``h`` returns from row ``t``.
+    A label is missing when its window runs past ``t1`` or contains an invalid
+    return.  Older callers could reproduce the historical partial-window
+    treatment with ``require_complete=False``; new research should keep the
+    strict default because treating an interior data gap as a zero return can
+    manufacture an edge.
+    """
     T = t1 - t0
     r = np.asarray(ret[t0:t1], np.float64)
+    horizons = tuple(int(h) for h in horizons)
+    if any(h < 1 for h in horizons):
+        raise ValueError("horizons must be positive")
+    valid = np.isfinite(r)
+    bad = np.vstack([np.zeros((1, r.shape[1]), np.int64), np.cumsum(~valid, axis=0, dtype=np.int64)])
     c = np.zeros((T + 1, r.shape[1]))
-    c[1:] = np.cumsum(np.nan_to_num(r), axis=0)
+    c[1:] = np.cumsum(np.where(valid, r, 0.0), axis=0)
     F = np.full((len(horizons), T, r.shape[1]), np.nan, np.float32)
     X = np.full_like(F, np.nan)
     e = np.asarray(elig[t0:t1])
     for i, h in enumerate(horizons):
         f = np.full((T, r.shape[1]), np.nan)
-        f[:T - h + 1] = c[h:] - c[:T - h + 1]
-        f[np.isnan(r)] = np.nan
+        nwin = T - h + 1
+        if nwin > 0:
+            f[:nwin] = c[h:] - c[:nwin]
+            if require_complete:
+                complete = (bad[h:] - bad[:nwin]) == 0
+                f[:nwin] = np.where(complete, f[:nwin], np.nan)
+        f[~valid] = np.nan
         m = np.where(e & np.isfinite(f), f, np.nan)
         with np.errstate(invalid="ignore"), warnings.catch_warnings():
             warnings.simplefilter("ignore", RuntimeWarning)

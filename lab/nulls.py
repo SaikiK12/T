@@ -6,8 +6,11 @@ from .config import NULL_SHIFT_MARGIN
 
 def null_shifts(n_days: int, n_null: int, seed: int, margin: int = NULL_SHIFT_MARGIN):
     """[0] is the real run; the rest are common circular shifts in [margin, n_days - margin)."""
+    choices = np.arange(margin, n_days - margin, dtype=np.int64)
+    if n_null > len(choices):
+        raise ValueError("n_null exceeds the number of admissible unique shifts")
     rng = np.random.default_rng(seed)
-    return [0] + [int(s) for s in rng.integers(margin, n_days - margin, n_null)]
+    return [0] + [int(s) for s in rng.choice(choices, size=n_null, replace=False)]
 
 
 def shift_panel(fwd, shift: int, axis: int = 1):
@@ -22,5 +25,12 @@ def search_verdict(real_count: int, null_counts):
 
 
 def familywise_p(t_real: float, null_max_t):
-    """Share of null replicas whose best validation t is at least the survivor's. Resolution is 1/len(null_max_t)."""
-    return float((np.asarray(null_max_t, dtype=float) >= t_real).mean())
+    """Finite-sample corrected share of null maxima at least as large as ``t_real``.
+
+    The plus-one correction prevents a finite null from reporting an impossible
+    zero p-value.  Its smallest attainable value is therefore ``1/(B+1)``.
+    """
+    a = np.asarray(null_max_t, dtype=float)
+    if a.size == 0:
+        return float("nan")
+    return float((1 + np.count_nonzero(a >= t_real)) / (a.size + 1))

@@ -126,7 +126,8 @@ def spa(d, n_boot=1000, block=10, rng=None):
     out = {}
     for name, mu in (("consistent", np.where(poor, dbar, 0.0)), ("upper", np.zeros(K)), ("lower", np.minimum(dbar, 0.0))):
         t_star = np.maximum((centred + np.sqrt(n) * mu / omega).max(axis=1), 0.0)
-        out[name] = float((t_star >= stat).mean())
+        # Finite bootstrap samples must not produce a literal zero p-value.
+        out[name] = float((1 + np.count_nonzero(t_star >= stat)) / (len(t_star) + 1))
     out["stat"] = stat
     out["best"] = int(np.argmax(dbar / omega))
     return out
@@ -150,7 +151,7 @@ def model_confidence_set(loss, alpha=0.10, n_boot=1000, block=10, rng=None):
         centred = boot_i - boot_i.mean(axis=0)
         se = np.sqrt(np.maximum((centred ** 2).mean(axis=0), 1e-30))
         t_i = d_i / se
-        p = float(((centred / se).max(axis=1) >= t_i.max()).mean())
+        p = float((1 + np.count_nonzero((centred / se).max(axis=1) >= t_i.max())) / (len(centred) + 1))
         running = max(running, p)
         worst = alive[int(np.argmax(t_i))]
         if p >= alpha:

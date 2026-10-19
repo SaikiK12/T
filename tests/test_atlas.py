@@ -28,6 +28,22 @@ class ForwardTests(unittest.TestCase):
         self.assertTrue(np.isnan(F[0, 3, 0]))                    # no return at the start
         np.testing.assert_allclose(X[1, 0], [0.005, -0.005], atol=1e-7)
 
+    def test_forward_rejects_internal_and_infinite_returns(self):
+        ret = np.array([[0.01], [0.02], [np.nan], [np.inf], [0.03], [0.04]], np.float32)
+        elig = np.ones_like(ret, dtype=bool)
+        F, _ = atlas.forward(ret, elig, 0, len(ret), horizons=(2,))
+        self.assertTrue(np.isfinite(F[0, 0, 0]))
+        self.assertTrue(np.isnan(F[0, 1:4, 0]).all())
+        self.assertTrue(np.isfinite(F[0, 4, 0]))
+
+    def test_forward_can_reproduce_partial_window_compatibility_mode(self):
+        ret = np.array([[0.01], [np.nan], [0.03]], np.float32)
+        elig = np.ones_like(ret, dtype=bool)
+        strict, _ = atlas.forward(ret, elig, 0, 3, horizons=(2,))
+        partial, _ = atlas.forward(ret, elig, 0, 3, horizons=(2,), require_complete=False)
+        self.assertTrue(np.isnan(strict[0, 0, 0]))
+        self.assertAlmostEqual(float(partial[0, 0, 0]), 0.01, places=7)
+
 
 class AtlasTests(unittest.TestCase):
     @classmethod

@@ -96,22 +96,32 @@ def _first_valid(r):
 
 
 def resample(p, k):
-    """Aggregate hour bars into k-hour bars that start on multiples of k hours from the UTC day start."""
+    """Aggregate complete k-hour bars on the UTC-day clock.
+
+    A partial block is marked missing instead of being presented as a full
+    bar. ``coverage`` exposes the number of finite hourly closes in each block
+    for diagnostics.
+    """
     assert p.T % k == 0 and 24 % k == 0
     n = p.T // k
     r = {name: x.reshape(n, k, -1) for name, x in p.f.items()}
+    price_complete = (np.isfinite(r["open"]) & np.isfinite(r["high"]) &
+                      np.isfinite(r["low"]) & np.isfinite(r["close"])).all(axis=1)
     out = {
-        "open": _first_valid(r["open"]),
-        "high": np.fmax.reduce(r["high"], axis=1),
-        "low": np.fmin.reduce(r["low"], axis=1),
-        "close": _first_valid(r["close"][:, ::-1]),
+        "open": np.where(price_complete, _first_valid(r["open"]), np.nan),
+        "high": np.where(price_complete, np.fmax.reduce(r["high"], axis=1), np.nan),
+        "low": np.where(price_complete, np.fmin.reduce(r["low"], axis=1), np.nan),
+        "close": np.where(price_complete, _first_valid(r["close"][:, ::-1]), np.nan),
+        "coverage": np.isfinite(r["close"]).sum(axis=1).astype(np.int16),
     }
     for name in ("volume", "quote_volume", "count", "taker_buy_volume", "taker_buy_quote_volume"):
-        none = np.isnan(r[name]).all(axis=1)
-        out[name] = np.where(none, np.nan, np.nansum(r[name], axis=1)).astype(np.float32)
+        complete = np.isfinite(r[name]).all(axis=1)
+        summed = np.sum(np.where(np.isfinite(r[name]), r[name], 0.0), axis=1)
+        out[name] = np.where(complete, summed, np.nan).astype(np.float32)
     for name in ("premium", "funding"):
-        out[name] = _first_valid(r[name][:, ::-1])
-    return {name: x.astype(np.float32) for name, x in out.items()}
+        if name in r:
+            out[name] = _first_valid(r[name][:, ::-1])
+    return {name: (x.astype(np.float32) if name != "coverage" else x) for name, x in out.items()}
 
 
 def align(x, k):

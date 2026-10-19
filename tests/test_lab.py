@@ -60,7 +60,15 @@ class NullTests(unittest.TestCase):
         null_counts = [0, 1, 1, 2, 3, 0, 1, 4, 1, 0] * 6
         self.assertEqual(nulls.search_verdict(2, null_counts)[0], "NOISE")
         self.assertEqual(nulls.search_verdict(9, null_counts)[0], "SIGNAL")
-        self.assertEqual(nulls.familywise_p(3.0, [1.0, 2.0, 3.0, 4.0]), 0.5)
+        self.assertEqual(nulls.familywise_p(3.0, [1.0, 2.0, 3.0, 4.0]), 0.6)
+        self.assertEqual(nulls.familywise_p(99.0, [1.0, 2.0, 3.0, 4.0]), 0.2)
+
+    def test_shifts_are_unique(self):
+        shifts = nulls.null_shifts(2099, 60, 20261012)
+        self.assertEqual(len(set(shifts[1:])), 60)
+
+    def test_empty_familywise_null_is_undefined(self):
+        self.assertTrue(np.isnan(nulls.familywise_p(1.0, [])))
 
 
 class GateTests(unittest.TestCase):
@@ -76,6 +84,7 @@ class GateTests(unittest.TestCase):
         self.assertFalse(gate.go_real([0.2] * 10 + [-0.01] * 10)["pass"])        # hit rate 50%
         self.assertFalse(gate.go_real([0.05] * 19 + [-0.41])["pass"])            # tail event
         self.assertFalse(gate.go_real([])["pass"])
+        self.assertFalse(gate.go_real([0.1] * 20 + [np.inf])["pass"])
 
     def test_clusters_expose_correlated_tickets(self):
         out = gate.go_real([0.05] * 20, entry_days=["2026-10-13"] * 10 + ["2026-10-16"] * 10)
