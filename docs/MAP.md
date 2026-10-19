@@ -175,6 +175,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     0 maker.
   - API orders pay 6 bp maker and 8 bp taker since 2026-06-01.
   - The books' tier costs (6-20 bp one way) are conservative for orders placed by hand.
+- **R224 (mexc_costs)** snapshots MEXC's order book at every tick for the coins the forward books can trade. It
+  measures the one-way taker cost (fee plus walking the book) at $1k, $10k and $50k, and compares it with the tier
+  cost. First snapshot, 32 crypto contracts, $10k order: median 2.5 bp on the web, 9.6 bp via the API, 8 bp
+  assumed. A $50k order already empties the shown book on AKE. The report starts 2026-11-03.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -274,5 +278,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,747 after R223 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,747 after R224 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
