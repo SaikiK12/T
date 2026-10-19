@@ -27,6 +27,24 @@ These historical-family tests describe a completed search. They do not substitut
 
 R221's Bonferroni correction addresses its three books only if each book/look statistic has a valid null distribution. Its power table assumes independent daily returns, while its 72-hour positions overlap and its test uses Newey-West statistics. The group-sequential boundaries therefore have not been shown to control error at their nominal rate under the observed dependence. Do not revise R221 after observing forward outcomes. In a replacement design, calibrate the maximum over books and looks under a predeclared dependent-data simulation or joint block bootstrap, and validate date uniqueness and continuity before every look.
 
+### Synthetic boundary check
+
+I ran a reproducible, outcome-free null simulation in [`research/r221_sequential_null.py`](../research/r221_sequential_null.py). It reproduces `lab.stats.newey_west_t` (checked against its scalar implementation), uses R221's exact 90/182/365-day boundaries, and generates 100,000 Gaussian paths per case with seed `917221`. The table reports a single-book rate before the separate `total_2x > 0` requirement; it is therefore a boundary-crossing diagnostic, not R221's realized family-wise error or its full pass probability.
+
+| Null process and statistic | Stop at day 90 | Raw day-365 boundary tail | Any efficacy-boundary crossing by day 365 |
+|---|---:|---:|---:|
+| Independent, known variance (normal reference) | 2.31% | 0.831% | 0.839% |
+| Independent, estimated variance (NW lag 0) | 2.46% | 0.888% | 0.896% |
+| Independent, R221 NW lag 10 | 4.24% | 1.121% | 1.171% |
+| AR(1), rho 0.1, NW lag 10 | 4.40% | 1.204% | 1.267% |
+| AR(1), rho 0.2, NW lag 10 | 4.58% | 1.199% | 1.259% |
+| AR(1), rho 0.3, NW lag 10 | 4.75% | 1.357% | 1.423% |
+| Three-day rolling-average shocks (MA(2)), NW lag 10 | 5.07% | 1.421% | 1.518% |
+
+R221 allocates 0.833% to each book. The known-variance reference is close to that allocation; using its finite-sample NW lag-10 statistic instead produces a 1.171% crossing rate even for independent returns, and 1.518% under the stylized three-day-overlap process. Monte Carlo standard errors for these two estimates are 0.034 and 0.039 percentage points. This illustrates finite-sample studentization and dependence sensitivity; it does not establish that the MEXC returns follow any of these distributions. The additional 2x-net hurdle can only remove crossings under the assumed monotone cost tiers, but its reduction was not modeled. The actual R221 error rate therefore remains unknown.
+
+For a future replacement decision, set cutoffs from a frozen null calibration that resamples the three books jointly in contiguous date blocks, preserves their cross-book dependence, applies the same HAC statistic and futility rule, and includes the 2x-net hurdle. Validate the exact daily calendar before any look. Keep R221's frozen thresholds and eventual verdict intact.
+
 ## Minimum ledger for future searches
 
 Append an immutable row for every generated candidate, not just each promoted round. At minimum record:
