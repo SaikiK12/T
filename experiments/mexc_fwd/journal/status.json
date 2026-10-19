@@ -1,0 +1,56 @@
+{
+ "last_hour": "2026-10-19T13:00:00+00:00",
+ "mapped": 40,
+ "dropped": [
+  "BZUSDT",
+  "CLUSDT",
+  "CRCLUSDT",
+  "INTCUSDT",
+  "KORUUSDT",
+  "MSTRUSDT",
+  "MUUSDT",
+  "NVDAUSDT",
+  "SKHYNIXUSDT",
+  "SKHYUSDT",
+  "SNDKUSDT",
+  "SNXXUSDT",
+  "SOXLUSDT",
+  "SOXSUSDT",
+  "SPCXUSDT",
+  "XAGUSDT",
+  "\u725b\u6765USDT",
+  "\u9f99\u867eUSDT"
+ ],
+ "mexc_fee": {
+  "taker": {
+   "mean": 0.0001375,
+   "min": 0.0,
+   "max": 0.0004
+  },
+  "maker": {
+   "mean": 1.25e-05,
+   "min": 0.0,
+   "max": 0.0001
+  }
+ },
+ "A_replay": {
+  "days": 18,
+  "total": 0.04674874066584309,
+  "total_2x": 0.037874597080562594,
+  "total_3x": 0.029000453495282207,
+  "funding": -0.005588712446958814,
+  "coverage": 0.5627572016460906,
+  "r214_same_days_total": 0.22532185452393558,
+  "corr_r214": 0.4004574703870181
+ },
+ "B_replay": {
+  "days": 18,
+  "total": -0.0010145273017525991,
+  "total_2x": -0.0023535142434666983,
+  "total_3x": -0.003692501185180997,
+  "funding": 0.0005894846340659047,
+  "coverage": 0.3302469135802468,
+  "r214_same_days_total": 0.09710885353161651,
+  "corr_r214": 0.11096717554074949
+ }
+}

@@ -27,6 +27,12 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
 9. **Where money could come from** (R202): if top-vs-crowd holds, a crypto prop challenge (a few hundred dollars for a
    100k account) is worth far more than the same edge on own capital; spot has no candidate (every surviving lead is
    short-side or market-neutral); carry cannot run in a prop account.
+10. **On the owner's venue, the forward lead is much smaller** (R213-R216):
+    - Entering one or two hours late costs only 1-2% of the books' net.
+    - MEXC's prices and funding track Binance's on the same coins.
+    - But half of the forward replay's profit came from Binance stock and commodity perps. Book B's whole +9.7% is
+      stocks. The crypto book that can trade on MEXC made +4.7% over the 18 replayed days, not +22%.
+    - The archive holdout is crypto: top-vs-crowd crypto-only has t 2.74. It is concentrated in two coins.
 
 ## 1. What predicts returns before fees (atlas_v1, R185)
 | family | replicates | reading |
@@ -102,6 +108,24 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   90 scored days through `lab.gate.go_real` plus NW t >= 2.
 - First 18 scored days (2026-10-01..18, scored on 2026-10-19; not decisive): book A +22.2% at 1x (2x +21.0%, 3x
   +19.8%; top-10 hedge +26.6%, BTC hedge +46.5%), book B +9.7%. The only failing go_real check is the number of days.
+  **These 18 days are a replay**: they were rebuilt on 2026-10-19 from about 28 days of endpoint history (tagged `late`),
+  not observed in real time.
+- **Codex review** (`docs/CONFIDENCE_REVIEW.md`, `docs/IMPLEMENTATION_INTEGRITY_REVIEW.md`, merged 2026-10-19) found
+  that R200 credits a slice from the close of its signal bar, while the signal is ready 12 minutes or more later
+  (`run_at` shows hours when the loop slept).
+- **R213 (delay_v1):** a 1-2 h later entry costs 1-2% of the net (A in-sample +12.10 → +11.99 bp/day; holdout
+  23.1 → 22.7), so the edge is not front-loaded.
+- **R214 (flow72_fwd3):** scores R200's signals entered one bar late. Replay: A +22.5%, B +9.7%. Decision at 90
+  on-time days from 2026-10-20.
+- **R215 (mexc_fwd):** trades the same signals on MEXC hourly closes and MEXC funding (`lab/mexc.py`, public endpoints).
+  Replay: A +4.7%, B -0.1%. Coverage is 56% / 33%, because Binance's stock perps have no MEXC crypto contract.
+- **R216 (venue_gap_v1)** splits the R215 gap:
+  - Stock and commodity perps (KORU, SOXL, SNDK, SK Hynix, ...) carried 49% of A's replay gross and all of B's.
+  - Crypto-only on Binance: A +8.7%, B -0.5%.
+  - The MEXC-mapped crypto book makes +4.66% on Binance prices and +4.67% on MEXC prices.
+  - In the archive, TradFi is about 0% of the holdout: crypto-only top-vs-crowd makes +18.3 bp/day, t 2.74. But BEAT
+    and LAB carry about 68% of book A's holdout gross.
+  - **Reference for the owner: R215, crypto on MEXC.**
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -150,8 +174,15 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   2023, so every top-trader result's "discovery" is mostly 2023.
 
 ## Routes still open
-- Forward paper test R200 (books A and B): the only confirmatory evidence the lab can produce; checkpoints at 30, 60,
-  90 scored days.
+- Forward paper tests: R215 (crypto on MEXC prices, one bar late) is the one that matches the owner's venue; R200
+  (frozen, Binance, includes stock perps) and R214 (R200 one bar late) run beside it. Checkpoints at 30, 60, 90 days;
+  report per-coin contributions (two coins carried the archive holdout).
+- Altcoin-specific lanes not yet run (`docs/ALTCOIN_LEADS.md`): cross-coin "seesaw" lead-lag from the big coins'
+  last hours, low-minus-high beta, residual momentum by liquidity tier, MAX sign contest, premium orthogonal to funding.
+- Confidence-scaled sizing (`docs/SIZING_EVIDENCE.md`): no peer-reviewed out-of-sample support for scaling by a
+  model's own confidence; shrunk half-Kelly and volatility targeting first, each against a matched constant multiplier.
+- The next brute-force grammar (`docs/NEXT_SEARCH_SPACE.md`): cross-coin residual and catch-up, positioning changes,
+  trade size, multi-timeframe sign agreement, typed pair interactions, dispersion regimes; about 93k trials.
 - Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
 - Gate data from 2026-10 on are unseen (Gate keeps 180 days; refetch before 2027-03): a forward score of Gate's
   top-vs-crowd and of the long-cascade continuation / short-squeeze fade (both chosen after R206, so new lanes).
@@ -165,7 +196,14 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
 - The archive has no metrics (order flow) for coins with non-ASCII names; their flow features are missing (0.16% of
   eligible cells). Live data include them.
 - Live open interest does not yet line up with the archive hour by hour (OI is not used by the live books).
+- Multi-hour labels (`lab/atlas.forward`) count a missing return inside the window as zero.
+  - 0.12% of eligible 72 h windows contain one (0.04% at 24 h), on 69 symbols.
+  - There are no infinite returns.
+  - Resampled 4 h / 24 h bars can be partial: 0 of the eligible 4 h blocks are, and 2 of the 24 h blocks.
+  - Both were found by the Codex review and measured on 2026-10-19. They are too rare to move any result, and kept for
+    reproducibility.
+- Returns are Binance traded-close to traded-close minus funding. They are not mark-price, index or fill PnL.
 
 ## Program
-Program trials: 9,471,705 after R212 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,718 after R216 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.
