@@ -53,9 +53,13 @@ def make_universe(p, elig_top=100, col_top=150, window=24 * 30):
 
 
 def eval_rules(u, bins, rules, t0, t1, slots=10, cmult=1.0, batch=128, allow_holdout=False):
-    """Daily results for each rule over hour rows [t0, t1): net return [R, D], cost [R, D] and mean positions [R, D]."""
-    if t1 > u.holdout_row and not allow_holdout:
-        raise PermissionError(f"rows through {t1} reach the holdout (from row {u.holdout_row}); register the lane first")
+    """Daily results over return rows [t0, t1): net return, cost and mean positions, each [R, D].
+
+    The final return uses close[t1], so ending exactly at a present holdout boundary also requires opt-in.
+    """
+    holdout = u.holdout_row
+    if not allow_holdout and (t1 > holdout or (t1 == holdout and holdout < u.p.T)):
+        raise PermissionError(f"returns ending at row {t1} reach a holdout price (from row {holdout}); register the lane first")
     assert t0 % 24 == 0 and t1 % 24 == 0
     D = (t1 - t0) // 24
     ret_d, cost_d, act_d = (np.zeros((len(rules), D), np.float32) for _ in range(3))

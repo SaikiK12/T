@@ -18,6 +18,40 @@ def toy(T=24 * 300, S=40, V=6, effect=0.0003, seed=0):
 
 
 class ForwardTests(unittest.TestCase):
+    def test_missing_or_infinite_return_invalidates_every_overlapping_window(self):
+        for invalid in (np.nan, np.inf, -np.inf):
+            for gap in range(3):
+                with self.subTest(invalid=invalid, gap=gap):
+                    ret = np.full((6, 2), 0.01, np.float64)
+                    ret[gap, 0] = invalid
+                    F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 6, horizons=(3,))
+                    self.assertTrue(np.isnan(F[0, 0, 0]))
+                    self.assertTrue(np.isnan(X[0, 0, 0]))
+                    invalid_windows = [start <= gap < start + 3 for start in range(4)]
+                    np.testing.assert_array_equal(np.isnan(F[0, :4, 0]), invalid_windows)
+                    np.testing.assert_array_equal(np.isnan(X[0, :4, 0]), invalid_windows)
+                    self.assertAlmostEqual(float(F[0, 0, 1]), 0.03, places=7)
+                    self.assertAlmostEqual(float(X[0, 0, 1]), 0.0, places=7)
+                    np.testing.assert_allclose(F[0, 3], [0.03, 0.03])
+
+    def test_horizon_longer_than_segment_has_no_complete_labels(self):
+        ret = np.full((3, 2), 0.01)
+        F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(6,))
+        self.assertTrue(np.isnan(F).all())
+        self.assertTrue(np.isnan(X).all())
+
+    def test_nonpositive_horizon_is_rejected(self):
+        ret = np.zeros((3, 1))
+        for horizon in (0, -1):
+            with self.subTest(horizon=horizon), self.assertRaises(ValueError):
+                atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(horizon,))
+
+    def test_forward_uses_only_the_requested_segment(self):
+        ret = np.array([[np.nan], [0.01], [0.02], [0.03], [np.inf]])
+        F, _ = atlas.forward(ret, np.ones_like(ret, bool), 1, 4, horizons=(2,))
+        np.testing.assert_allclose(F[0, :2, 0], [0.03, 0.05])
+        self.assertTrue(np.isnan(F[0, 2, 0]))
+
     def test_forward_sums_next_bars_and_subtracts_the_eligible_mean(self):
         ret = np.array([[0.01, 0.0], [0.02, 0.02], [0.03, -0.01], [np.nan, 0.0]], np.float32)
         elig = np.ones((4, 2), bool)

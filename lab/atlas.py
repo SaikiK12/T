@@ -25,18 +25,28 @@ HORIZONS = (1, 4, 12, 24, 72)
 
 def forward(ret, elig, t0, t1, horizons=HORIZONS):
     """F[h, t - t0, s]: sum of next-bar returns over h bars from row t (NaN when the window passes t1 or the symbol has
-    no return at t); X: F minus the mean of F over eligible symbols at t. Both float32."""
+    any nonfinite return in that window); X: F minus the mean of F over eligible symbols at t. Both float32.
+
+    Bounds refer to return rows: ret[t1 - 1] still depends on the price at row t1. Callers must protect price splits.
+    """
     T = t1 - t0
     r = np.asarray(ret[t0:t1], np.float64)
+    valid = np.isfinite(r)
     c = np.zeros((T + 1, r.shape[1]))
-    c[1:] = np.cumsum(np.nan_to_num(r), axis=0)
+    c[1:] = np.cumsum(np.where(valid, r, 0.0), axis=0)
+    missing = np.zeros((T + 1, r.shape[1]), np.int64)
+    missing[1:] = np.cumsum(~valid, axis=0)
     F = np.full((len(horizons), T, r.shape[1]), np.nan, np.float32)
     X = np.full_like(F, np.nan)
     e = np.asarray(elig[t0:t1])
     for i, h in enumerate(horizons):
+        if h <= 0:
+            raise ValueError("forward horizons must be positive")
         f = np.full((T, r.shape[1]), np.nan)
-        f[:T - h + 1] = c[h:] - c[:T - h + 1]
-        f[np.isnan(r)] = np.nan
+        if h <= T:
+            n = T - h + 1
+            complete = missing[h:] == missing[:n]
+            f[:n] = np.where(complete, c[h:] - c[:n], np.nan)
         m = np.where(e & np.isfinite(f), f, np.nan)
         with np.errstate(invalid="ignore"), warnings.catch_warnings():
             warnings.simplefilter("ignore", RuntimeWarning)

@@ -13,6 +13,41 @@ def small_universe(T=24 * 300, S=14):
 
 
 class UniverseTests(unittest.TestCase):
+    def boundary_universe(self, holdout_close=100.0, days=3):
+        t = panel.ms("2025-06-29") + np.arange(days * 24) * panel.HOUR
+        close = np.full((len(t), 1), 100.0, np.float32)
+        if len(t) > 48:
+            close[48:] = holdout_close
+        p = panel.Panel(t, ["SYNTHUSDT"], {"close": close})
+        elig = np.ones_like(close, bool)
+        return research.Universe(p, elig, np.zeros_like(close),
+                                 engine.forward_returns(close, np.full_like(close, np.nan)),
+                                 np.ones_like(close), None)
+
+    def test_end_at_holdout_reads_its_first_close_and_requires_opt_in(self):
+        rule = Rule(view=(0,), lo=(0,), hi=(0,), need=1, direction=1, hold=1)
+        totals = []
+        for price in (100.0, 200.0):
+            u = self.boundary_universe(price)
+            bins = np.zeros((1, u.p.T, 1), np.int8)
+            self.assertEqual(u.holdout_row, 48)
+            with self.assertRaises(PermissionError):
+                research.eval_rules(u, bins, [rule], 0, 48, slots=1)
+            result = research.eval_rules(u, bins, [rule], 0, 48, slots=1, allow_holdout=True)
+            totals.append(float(result[0].sum()))
+            before, _, _ = research.eval_rules(u, bins, [rule], 0, 24, slots=1)
+            self.assertEqual(float(before.sum()), 0.0)
+        self.assertAlmostEqual(totals[1] - totals[0], 1.0)
+
+    def test_data_ending_before_holdout_does_not_trigger_boundary_guard(self):
+        u = self.boundary_universe(days=2)
+        bins = np.zeros((1, u.p.T, 1), np.int8)
+        rule = Rule(view=(0,), lo=(0,), hi=(0,), need=1, direction=1, hold=1)
+        result, _, _ = research.eval_rules(u, bins, [rule], 0, u.p.T, slots=1)
+        self.assertEqual(result.shape, (1, 2))
+        with self.assertRaises(PermissionError):
+            research.eval_rules(u, bins, [rule], 0, u.p.T + 24, slots=1)
+
     def test_columns_and_eligibility_are_point_in_time(self):
         u = small_universe()
         self.assertEqual(u.elig.shape, u.p["close"].shape)
