@@ -6,7 +6,7 @@ Reviewed 2026-10-19. The project has Binance spot–perpetual carry experiments,
 
 - Schmeling, Schrimpf and Todorov’s peer-reviewed [*Crypto Carry*](https://doi.org/10.1287/mnsc.2024.05069), *Management Science* (online 2026; earlier BIS paper in the repository), documents large and volatile crypto futures–spot carry. The authors link variation to leveraged trend-following demand and limits to arbitrage. This frames high carry as compensation for risk and financing frictions, not a dependable yield. The study does not validate the project’s venue, fills or altcoin capacity.
 - Inan’s [“Predictability of Funding Rates”](https://doi.org/10.1016/j.irfa.2026.105464), *International Review of Financial Analysis* (2026), evaluates BTCUSDT funding on Binance and Bybit over 384 out-of-sample periods from 2024-11-10 to 2025-03-17. Double-autoregressive models improve one-step rate forecasts against a no-change benchmark, with stability varying across periods. Forecasting the next rate is not forecasting net return: realized basis movement, funding settlement, fees and funding-cycle changes still matter.
-- Erez and Smirnov’s [“No-Arbitrage Bounds in Decentralized Perpetual Markets”](https://doi.org/10.1016/j.frl.2026.110598) distinguishes funding known or guaranteed when a trade opens from funding determined later. Only the former belongs in a one-period bound. Its empirical venues are Drift and dYdX, so its key use here is the information-timing principle, not a CEX return result.
+- Erez and Smirnov’s [May 2026 SSRN working paper, “Funding Timing and No-Arbitrage Bounds in Decentralized Perpetual Markets”](https://ssrn.com/abstract=6805838) distinguishes funding known or guaranteed when a trade opens from funding determined later. Only the former belongs in a one-period bound. Its empirical venues are Drift and dYdX, so its key use here is the information-timing principle, not a CEX return result. As of this review date, the retitled journal version is assigned to the November 2026 issue and is not counted here as already published evidence.
 - Zhivkov’s [“The Two-Tiered Structure of Cryptocurrency Funding Rate Markets”](https://doi.org/10.3390/math14020346) studies 26 exchanges over eight days; reported large cross-venue funding spreads often do not survive costs and spread reversal. The window is too short to establish persistence, but it cautions against treating a displayed funding difference as locked arbitrage.
 - Ackerer, Hugonnier and Jermann’s peer-reviewed [“Perpetual Futures Pricing”](https://doi.org/10.1111/mafi.70018) (2025/2026) treats linear, inverse and quanto contracts and shows funding conventions affect no-arbitrage pricing. It is a contract-pricing framework, not empirical evidence of a strategy edge.
 
@@ -34,7 +34,7 @@ For any future carry lane, compute position PnL from actual entry/exit prices an
 
 - [Crypto Carry](https://doi.org/10.1287/mnsc.2024.05069)
 - [Predictability of Funding Rates](https://doi.org/10.1016/j.irfa.2026.105464)
-- [No-Arbitrage Bounds in Decentralized Perpetual Markets](https://doi.org/10.1016/j.frl.2026.110598)
+- [Funding Timing and No-Arbitrage Bounds in Decentralized Perpetual Markets](https://ssrn.com/abstract=6805838) (working paper, posted 2026-05-21)
 - [The Two-Tiered Structure of Cryptocurrency Funding Rate Markets](https://doi.org/10.3390/math14020346)
 - [Perpetual Futures Pricing](https://doi.org/10.1111/mafi.70018)
 - [MEXC funding guide](https://www.mexc.com/support/article/mexc-futures-funding-rate-305432020820705280)
