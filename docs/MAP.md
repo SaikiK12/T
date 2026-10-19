@@ -179,6 +179,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   measures the one-way taker cost (fee plus walking the book) at $1k, $10k and $50k, and compares it with the tier
   cost. First snapshot, 32 crypto contracts, $10k order: median 2.5 bp on the web, 9.6 bp via the API, 8 bp
   assumed. A $50k order already empties the shown book on AKE. The report starts 2026-11-03.
+- **R225 (vt_fwd)** runs R217's volatility target forward on the MEXC books, warmed up on the archive's daily nets.
+  Its multiplier reproduces R217's exactly. Today it says to run A at 0.69 of base size, X2 at 0.63 and B at 0.99.
+  In the replay it cut A's drawdown from 2.7% to 1.6%, and its total from +4.7% to +2.8%. It decides at 365
+  on-time days whether it keeps the lower drawdown at a similar Sharpe.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -249,7 +253,8 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   Hyperliquid leaderboard (accounts >= USD 1M, about 7k rows) and hourly positions of 87 picks (top 50 by month and by
   all-time PnL) from 2026-10-19, as a change log (`scripts/scrape_hyperliquid.py`).
 - Carry: forward monitor running (R220); reverse carry needs borrow data.
-- Adaptive selection (battery_v1, R184, planned).
+- Adaptive selection (battery_v1, R184): **held**. Its draft PREREG and code disagree on 10 points, including no
+  decision code, no 2x costs and a holdout-boundary read (`experiments/battery_v1/REVIEW.md`).
 
 ## Known data defects
 - **Forward pipeline audit (2026-10-19).** The fixes are recorded in each lane's `DEVIATIONS.md`.
@@ -278,5 +283,5 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,747 after R224 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
+Program trials: 9,471,750 after R225 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
 t above against that count; only the forward ledger is confirmatory.

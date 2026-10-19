@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-19, after R223. Program trials: 9,471,747. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-19, after R225. Program trials: 9,471,750. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -70,7 +70,7 @@ overstatements are corrected here.
 | Refinement | Effect | Where |
 |---|---|---|
 | X2 agreement sizing on A | Sharpe +0.15 / +0.29 / +0.45 (disc / val / holdout); misses the frozen bar | R217 |
-| Volatility target on A | Holdout max DD 47% to 27%, Sharpe flat | R217 |
+| Volatility target on A | Holdout max DD 47% to 27%, Sharpe flat. Now runs forward on A, B and X2 (R225); today's multiplier A 0.69, X2 0.63, B 0.99 | R217, R225 |
 | Crypto only | B holdout t 2.74 (vs 2.73 all symbols). A's 18-day replay drops from +22.5% to +8.7% | R216 |
 | Entry one or two hours late | Costs 1-2% of net | R213 |
 | Daily loss/profit stops | Harmful in 30 of 30 variants | R208 |
