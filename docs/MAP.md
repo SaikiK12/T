@@ -203,6 +203,12 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - Both were found by the Codex review and measured on 2026-10-19. They are too rare to move any result, and kept for
     reproducibility.
 - Returns are Binance traded-close to traded-close minus funding. They are not mark-price, index or fill PnL.
+- Binance public-data issue #491 reports a 2026-06-25 change in the metrics `create_time` convention (cited by the
+  Codex review). We checked SOLUSDT archive files for 06-10, 06-23..27 and 09-15:
+  - Each day has 288 rows, with no duplicate midnight stamps.
+  - The taker ratio matches the 5-minute kline that opens at the same stamp (correlation 1.000 at lag 0, about 0.15
+    at ±1) on every day, before and after the date.
+  - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
 Program trials: 9,471,718 after R216 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
