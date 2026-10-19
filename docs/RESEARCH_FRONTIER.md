@@ -59,3 +59,5 @@ Record public MEXC book snapshots/deltas, signal timestamp, modeled arrival, quo
 ## What was and was not tested here
 
 The local checkout contains no raw market-data archive, so no new historical return statistic or backtest was calculated. The available Python suite was attempted earlier: 61 tests passed and 12 errored because this environment lacks `numba` and `pyarrow`. That is an environment-limited code check, not evidence for or against an edge. No package was installed, no market data was downloaded, and no frozen specification or journal was changed.
+
+Focused supplements in this review: [recent cross-sectional factor evidence](CRYPTO_CROSS_SECTION_EVIDENCE.md), a [coin-level forecast scorecard](FORECAST_EVALUATION_PLAYBOOK.md), an [implementation integrity review](IMPLEMENTATION_INTEGRITY_REVIEW.md), [perpetual carry accounting](PERP_CARRY_ACCOUNTING.md), and [execution/capacity/liquidation constraints](PERP_EXECUTION_AND_RISK.md). These distinguish published studies, preprints, official venue mechanics and synthetic-only checks.
