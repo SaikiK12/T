@@ -291,6 +291,50 @@ challenge; `docs/CONCEPTS.md` plans `lab/propfirm.py`. CLAIMS C15/C16 give exact
   model + portfolio construction + execution; alpha types are trend, reversion, yield (carry), growth and quality.
   Much of the edge is implementation and costs; regime change and crowding (the 2007 quant crash) are the main risks.
 
+### 4.8 Adaptation, drift and portfolio selection
+- **Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia, "A survey on concept drift adaptation" (2014)**,
+  [*ACM Computing Surveys*](https://doi.org/10.1145/2523813). A taxonomy of abrupt, gradual, recurring and incremental
+  drift, plus the distinction between detection and adaptation. It is a methods survey, not evidence that a crypto
+  return process has a detectable drift regime.
+- **Bifet and Gavaldà, "Learning from time-changing data with adaptive windowing" (2007)**,
+  [*SDM*](https://doi.org/10.1137/1.9781611972771.42). ADWIN-style windows compare recent and older data while
+  adapting the window length. Any use here would need a frozen threshold, an outcome-availability delay and a
+  turnover/cost audit.
+- **Tashman, "Out-of-sample tests of forecasting accuracy" (2000)**,
+  [*International Journal of Forecasting*](https://doi.org/10.1016/S0169-2070(00)00065-0), and **Pesaran and
+  Timmermann, "Selection of estimation window in forecasting" (2007)**,
+  [*Journal of Econometrics*](https://doi.org/10.1016/j.jeconom.2006.03.010). Rolling-origin evaluation and
+  past-only window selection are the relevant safeguards when relationships change.
+- **Giacomini and White, "Tests of Conditional Predictive Ability" (2006)**,
+  [*Econometrica*](https://doi.org/10.1111/j.1468-0262.2006.00718.x). A framework for evaluating forecasts selected
+  from information available at the time; useful for a policy that switches among frozen candidate streams.
+- **Koop and Korobilis, "Forecasting inflation using dynamic model averaging" (2012)**,
+  [*International Economic Review*](https://doi.org/10.1111/j.1468-2354.2012.00704.x), and **Freund and Schapire,
+  "A decision-theoretic generalization of on-line learning" (1997)**,
+  [*Journal of Computer and System Sciences*](https://doi.org/10.1006/jcss.1997.1504). Dynamic weights and
+  expert-regret methods are comparison families; their guarantees do not imply positive net crypto returns.
+- **Li and Hoi, "Online portfolio selection: A survey" (2014)**,
+  [*ACM Computing Surveys*](https://doi.org/10.1145/2512962). Online-selection families differ in memory, switching
+  and transaction-cost treatment. The survey supplies comparison methods, not crypto-perpetual performance evidence.
+- **Meta-labeling evidence:** a 2026 futures preprint reports near-chance AUC and no paired-bootstrap interval
+  excluding zero across five contracts ([study](https://doi.org/10.2139/ssrn.7356724)); a 2025 BTC/ETH study using
+  triple-barrier labels reports after-cost results on two liquid assets ([study](https://doi.org/10.1186/s40854-025-00866-w)).
+  Neither validates an altcoin-perpetual filter here.
+- **Wang and Pang, "Predictability on the Move: The Cryptocurrency Cross-Section" (October 2026 preprint),**
+  [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7556359). The abstract reports different selected
+  signals in rolling windows and none selected by its full-sample StepM threshold. It is preliminary and does not
+  settle persistence for this repository.
+
+### 4.9 Venue/API operations
+- **MEXC API FAQ and futures documentation:** the API connects directly to live trading and has no sandbox; order
+  submission, external-ID reconciliation, open-position queries, cancel-all controls, depth versions and sequence-gap
+  recovery are documented in the [API FAQ](https://www.mexc.co/mexc-api), [batch order endpoint](https://www.mexc.co/api-docs/futures/account-and-trading-endpoints/batch-place-order),
+  [external-ID query](https://www.mexc.co/api-docs/futures/account-and-trading-endpoints/get-order-by-external-id),
+  [open-position endpoint](https://www.mexc.co/api-docs/futures/account-and-trading-endpoints/get-open-positions),
+  [cancel-all endpoint](https://www.mexc.co/api-docs/futures/account-and-trading-endpoints/cancel-all-orders-under-a-contract),
+  [depth stream](https://www.mexc.co/api-docs/futures/websocket-api/order-book-depth) and [book-maintenance procedure](https://www.mexc.co/api-docs/futures/websocket-api/incremental-order-book-maintenance-mechanism).
+  These are interface rules, not evidence of fill quality, uptime or private-account behavior.
+
 ## 5. Scrapeable data beyond the Binance archive
 
 | Source | URL pattern (tested) | History | What it adds |

@@ -11,6 +11,8 @@ from paying its costs, and which routes (stacking, context gating, limit-order e
 - [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
 - [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
   [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
+- Research supplements: [adaptive selection and concept drift](docs/ADAPTIVE_SELECTION_AND_DRIFT.md) and
+  [MEXC API and operational risk](docs/OPERATIONAL_API_RISK.md) cover future policy tests and execution controls.
 - `registry/rounds.csv`: one row per round with its trial count (append-only).
 - `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
 
