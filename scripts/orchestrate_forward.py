@@ -67,12 +67,17 @@ def forward_tasks(python=".venv/bin/python"):
     its failure must not stop the MEXC book. R218 unconditionally reads R215's
     tickets after scoring (forward_mexc_sq.main), so R215 is mandatory there.
     R220 builds eligibility/ranks from R200 (forward_carry.journal_grid); it
-    does not need R215. R224 reads only R200's latest signal universe.
+    does not need R215. R224 reads only R200's latest signal universe. The
+    point-in-time recorders read nothing from the lanes and run first; the
+    digest reads only their files and runs last.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         return Task(name, (python, "scripts/" + script), needs, optional, timeout, files)
 
     return (
+        task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
+        task("REC_NOTICES", "record_notices.py", timeout=300),
+        task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
         task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),
@@ -86,6 +91,7 @@ def forward_tasks(python=".venv/bin/python"):
              files=(Requirement("experiments/sizing_v1/results/daily.npz", SEED_SHA256),)),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", ("LAG",), timeout=120),
+        task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_NOTICES", "REC_UNLOCKS"), timeout=300),
     )
 
 

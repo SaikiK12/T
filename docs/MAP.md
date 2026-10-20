@@ -369,6 +369,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - A and X2 lose half their net near $12M and all of it near $50M. That uses Binance volumes; MEXC capacity is lower
     in proportion to its volume.
   - DATA_PASS. [Findings](../experiments/impact_v1/FINDINGS.md).
+- **R264 (accounting_v1)** checked whether the legacy zero-fill of a missing next return inflates books A, B and X2 (a
+  measurement, 0 trials; PR #25 audit item 4).
+  - No held position meets a gap in discovery or validation, so bridged and legacy nets are identical at 1x/2x/3x.
+  - The only held gaps are the archive's last row in the spent window (35 / 4 / 35 positions).
+  - Wider universes and event lanes near delistings are not covered; they must use `missing="raise"` or bridge.
+  - DATA_PASS. [Findings](../experiments/accounting_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -474,6 +480,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,061 after R262 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,061 after R264 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

@@ -1,0 +1,7 @@
+12:15:50 prereg sha f0726c626aec
+12:15:55 242 coins are ever members; members per row mean 19.21
+12:15:58 member cells with a missing next return (legacy zero): 29
+/home/user/T/scripts/run_brute5k.py:356: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  mon = pd.to_datetime(days, unit="ms", utc=True).to_period("M")
+12:16:29 timeframe 1 h: 50376 bars
+12:16:39 parity strategy 0: max |diff| 1.11e-16

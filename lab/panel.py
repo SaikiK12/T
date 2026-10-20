@@ -13,6 +13,7 @@ import pandas as pd
 from . import data
 
 START = "2021-01-01"
+RESERVED_TOKEN = "RESERVED-2020-READ"  # a frozen PREREG must contain this to read the reserved window (docs/GATES.md)
 HOUR = 3_600_000
 FIELDS = ("open", "high", "low", "close", "volume", "quote_volume", "count", "taker_buy_volume", "taker_buy_quote_volume")
 
@@ -53,7 +54,21 @@ def ffill(x):
     return np.take_along_axis(x, idx, axis=0)
 
 
-def load_panel(symbols=None, root=None, start=START, end=data.END):
+def check_reserved(start, reserved=None):
+    """Rows before START are the reserved confirmation window (docs/GATES.md). Reading them needs a frozen PREREG
+    that declares RESERVED_TOKEN; anything else raises."""
+    if ms(start) >= ms(START):
+        return
+    from . import prereg
+    if reserved is None:
+        raise PermissionError(f"rows before {START} are reserved; pass reserved=<frozen PREREG declaring {RESERVED_TOKEN}>")
+    prereg.verify(reserved)
+    if RESERVED_TOKEN not in Path(reserved).read_text():
+        raise PermissionError(f"{reserved} does not declare {RESERVED_TOKEN}")
+
+
+def load_panel(symbols=None, root=None, start=START, end=data.END, reserved=None):
+    check_reserved(start, reserved)
     root = Path(root or data.ROOT)
     t0 = ms(start)
     t = np.arange(t0, ms(end) + 24 * HOUR, HOUR)
