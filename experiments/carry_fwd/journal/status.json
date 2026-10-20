@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-10-19T17:00:00+00:00",
+ "last_scored_hour": "2026-10-19T22:00:00+00:00",
  "days_ticketed": 18,
  "BIN": {
   "coverage": {
-   "symbols": 58,
+   "symbols": 59,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.07930316180392225,
+  "market_mean_apr_now": -0.0900369354319873,
   "top_apr_now": [
    {
     "symbol": "SOXLUSDT",
@@ -25,13 +25,13 @@
     "spot": false
    },
    {
-    "symbol": "AKEUSDT",
-    "apr": 0.17288589990736608,
+    "symbol": "\u9f99\u867eUSDT",
+    "apr": 0.14255804586355225,
     "spot": false
    },
    {
-    "symbol": "\u9f99\u867eUSDT",
-    "apr": 0.14255804586355225,
+    "symbol": "SKHYNIXUSDT",
+    "apr": 0.12704311471831414,
     "spot": false
    }
   ],
@@ -52,32 +52,22 @@
  },
  "MEXC": {
   "coverage": {
-   "symbols": 58,
+   "symbols": 59,
    "with_spot_pair": 38,
    "mapped": 39,
    "spot_taker_mean": 0.0005578947368421052
   },
-  "held_now": [
-   {
-    "symbol": "AKEUSDT",
-    "apr": 0.17155000097773154
-   }
-  ],
-  "market_mean_apr_now": -0.16815474115878953,
+  "held_now": [],
+  "market_mean_apr_now": -0.1943683887361536,
   "top_apr_now": [
    {
-    "symbol": "AKEUSDT",
-    "apr": 0.17155000097773154,
-    "spot": true
-   },
-   {
     "symbol": "STRKUSDT",
-    "apr": 0.10378166428836266,
+    "apr": 0.09769833110870726,
     "spot": true
    },
    {
     "symbol": "HYPEUSDT",
-    "apr": 0.08686999931038979,
+    "apr": 0.08747833240704495,
     "spot": true
    },
    {
@@ -88,6 +78,11 @@
    {
     "symbol": "BTCUSDT",
     "apr": 0.07080999962757537,
+    "spot": true
+   },
+   {
+    "symbol": "ENAUSDT",
+    "apr": 0.06509166590755437,
     "spot": true
    }
   ],

@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-19, after R226. Program trials: 9,471,756. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R230. Program trials: 9,471,884. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -43,6 +43,9 @@ overstatements are corrected here.
 | **Slow altcoin cross-sections** (low beta, residual momentum, MAX, premium net of funding) | Plain 30 d momentum +7.7 bp/day, alpha t 1.23 (R222) | Not read | Costs only 0.6-2.9 bp/day | n/a | none | NULL: the gross is too small |
 | **Funding-settlement capture** (hold across a settlement at ±0.20%) | Funding +47.6 bp collected per event, price -72.3 (R223) | Not read | Net 1x -38.5 bp per event | MEXC rates match Binance, so it is closed there too | none | NULL: the price moves against the payment by more than it pays |
 | **Trade count and mean print size** (activity, not signed flow; Codex's call) | count surge +6.1 bp/day, t 1.13, but corr 0.99 with quote volume; residual +0.3 (R226) | Not read | Costs 1.4-2.9 bp/day | MEXC klines have no trade count | none | NULL: count is quote volume in disguise |
+| **Static allocation among flow books A/B/X2** (Codex) | Discovery picks 30% B / 70% X2; validation Sharpe 1.688 vs 1.681 for X2 alone, interval spans zero (R228) | Already viewed, descriptive only: mixture +35.2 bp/day vs X2 +42.5 | Not the deciding factor | n/a | none | NULL: mixing adds nothing over X2 |
+| **Slow spot trend ensemble, six major coins** (Codex) | Validation Sharpe 1.261 vs 1.227 risk-matched passive (needs +0.15); drawdown 9.7% vs 7.2% (R229) | Already viewed, descriptive only: -0.51 bp/day | Validation positive at 2x | Spot only | none | NULL: fails risk-matched passive Sharpe and drawdown |
+| **Weekly spot rotation, 96 rules** (Codex) | Selected 28 d momentum top 3 with BTC gate; validation Sharpe 0.83 vs 1.11 passive, family p = 1 (R230) | Already viewed, descriptive only: also loses | 2x mean +13.4 bp/day, market exposure | Spot only | none | NULL |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 
