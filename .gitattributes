@@ -5,3 +5,4 @@ FORWARD.md -text
 *.sha256 -text
 # These immutable experiment tables are bound by byte hashes in their manifest.
 experiments/allocation_v1/results/*.csv -text
+experiments/optimizer_v1/results/*.csv -text whitespace=cr-at-eol

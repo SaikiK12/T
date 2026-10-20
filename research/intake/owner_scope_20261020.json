@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "record_kind": "received_owner_scope",
+  "received_utc_date": "2026-10-20",
+  "canonical_panel": "docs/PANEL.md",
+  "canonical_queue": "registry/methods.csv",
+  "notice": "Source-scope reconciliation only, not another queue. Categories and workflow requests are not additional tested methods or permission for large downloads. Existing queue IDs are family aliases; exact tested/open scope stays in canonical CSV and frozen studies.",
+  "source_versions": [
+    {
+      "id": "owner_message_1",
+      "version": "literal received text",
+      "utf8_sha256": "b0b37bed90bf377a90cfb34db85d3874e2b2156c33ef47d8f1e562b490e96904",
+      "text": "Claude va bientôt être a court de tokens donc sa sera à toi de reprendre et étendre tes trop en retrait hère IS what i Saïd for him to run right now Yeah but remember all thé complexity that take to find évidence on all things that complète trading liké spot for basic users futures for Real traders propfirms quant chartiste stratégies etc that could mixed UP etc and in those words im saying you could expand them to find other words to go down and try to better our edges from those liké know facts about propfirms etc that rely on thé same things as others charts and so work on all lanes maybe AT thé same Time and WE Can also handle forex NASDAQ etc WE just need more data or other and with all fo those still maintain our one objective as Said to find thé best edges on all trading methods or have thé best pnl figures out etc from whatever methods so thats why im taking about brute force"
+    },
+    {
+      "id": "owner_message_2",
+      "version": "literal received text",
+      "utf8_sha256": "30bb10d86c16c6e1a5d2e7522b72281152577eb1009e17b644058ae239c4a4a1",
+      "text": "Dude lets think better on those how could WE find better edges and refine in this objectif with subagents researches and exploiting AT max power thé Sandbox perfs"
+    }
+  ],
+  "extractions": [
+    {
+      "id": "OWNER-SPOT",
+      "received_concept": "Spot trading for basic users",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M147",
+        "M148",
+        "M149"
+      ],
+      "missing_mechanics_or_scope": "No asset list, signal, execution schedule or fee rule supplied.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-PERPETUALS",
+      "received_concept": "Futures/perpetual strategies",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M126",
+        "M127",
+        "M130",
+        "M134"
+      ],
+      "missing_mechanics_or_scope": "No new contract, signal or leverage/margin rule supplied.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-PROP_FIRMS",
+      "received_concept": "Prop-firm economics and rule constraints",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M028",
+        "M211"
+      ],
+      "missing_mechanics_or_scope": "Specify firm, account type, policy version, eligibility, fees and payout mechanics.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-SYSTEMATIC_QUANT",
+      "received_concept": "Quantitative strategy families",
+      "kind": "method_family",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "Umbrella term; does not enumerate additional executable rules beyond the canonical queue.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-CHARTIST",
+      "received_concept": "Mechanized chart-pattern strategies",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M200",
+        "M201",
+        "M202",
+        "M203",
+        "M204",
+        "M205",
+        "M206",
+        "M207",
+        "M208",
+        "M209",
+        "M210"
+      ],
+      "missing_mechanics_or_scope": "Individual indicators, parameters, entries/exits and comparisons must be fixed per study.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-COMBINATION",
+      "received_concept": "Mixing strategies and trading approaches",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M026",
+        "M027",
+        "M158"
+      ],
+      "missing_mechanics_or_scope": "Portfolio weights, learning clock, exposure constraints and incremental costs need finite definitions.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-FOREX",
+      "received_concept": "Forex strategies",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M193",
+        "M210",
+        "M219"
+      ],
+      "missing_mechanics_or_scope": "Pairs, spot versus futures, session calendar, carry/roll and costs are unspecified.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-NASDAQ",
+      "received_concept": "NASDAQ/index strategies",
+      "kind": "method_family",
+      "queue_family_aliases": [
+        "M196",
+        "M210",
+        "M218",
+        "M226"
+      ],
+      "missing_mechanics_or_scope": "Index level versus QQQ/futures/CFD, session, dividends, roll and costs are unspecified.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-DATA_ACQUISITION",
+      "received_concept": "Acquire data when needed",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "A workflow direction; no source, scope, volume or point-in-time schema supplied. No approval for large downloads inferred.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-FINITE_SEARCH",
+      "received_concept": "Exhaustively test declared candidate sets",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "A research protocol; no new executable grid supplied. Every tried variant is counted and prior tests reconciled.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-BROADER_AXES",
+      "received_concept": "Extend research vocabulary into related axes",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "An exploration direction; do not invent unreceived rules or mark umbrella coverage complete.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-OBJECTIVE",
+      "received_concept": "Best net PnL/edges across tradable methods",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "Matches docs/PANEL.md objective; no second panel or objective is introduced.",
+      "source_ids": [
+        "owner_message_1"
+      ]
+    },
+    {
+      "id": "OWNER-DELEGATION",
+      "received_concept": "Use subagent research and reviews",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "Explicit delegation authorization, not a trading hypothesis. Three focused readers/reviewers launched.",
+      "source_ids": [
+        "owner_message_2"
+      ]
+    },
+    {
+      "id": "OWNER-SANDBOX_COMPUTE",
+      "received_concept": "Use sandbox performance for evidence",
+      "kind": "scope_or_workflow",
+      "queue_family_aliases": [],
+      "missing_mechanics_or_scope": "Execution instruction, not a trading rule. Observed quota: 2 CPU cores and 8 GiB RAM; no raw historical tensors in this sandbox.",
+      "source_ids": [
+        "owner_message_2"
+      ]
+    }
+  ]
+}
