@@ -229,6 +229,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - turn-of-month: +1.2 to +1.7 bp/day of alpha, t 1.2-1.5;
   - QQQ overnight: +1.8 bp/day at 1x, -0.2 at 2x.
   NULL. 2013-2026 stays unread. [Findings](../experiments/usindex_calendar_v1/FINDINGS.md).
+- **R236 (amihud_v1)** tested queue M002, a one-week Amihud illiquidity spread book. Long illiquid / short liquid
+  passed discovery: +11.9 bp/day, t 2.28, every year positive. It then lost in validation: -9.2 bp/day, with 2025H1 at
+  -19.4. Most of the book is inverse volume (corr -0.52). NULL. [Findings](../experiments/amihud_v1/FINDINGS.md).
+- **R237 (tsmom_v1)** tested queue M194, cross-asset time-series momentum on 23 equity-ETF, FX, metal and bond
+  series. Discovery 2001-2012 gave Sharpe 0.28 (t 1.00), with 2008 the only big year. FX (spot only) and bonds
+  (unadjusted futures) added nothing. NULL. [Findings](../experiments/tsmom_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -334,6 +340,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,901 after R235 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,905 after R237 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

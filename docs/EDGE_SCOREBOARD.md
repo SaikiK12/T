@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R235. Program trials: 9,471,901. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R237. Program trials: 9,471,905. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -52,6 +52,8 @@ overstatements are corrected here.
 | **Regime gate on the flow books** (MacroHFT: trend x volatility sub-agents and a mixing hyper-agent) | No gate selected: A, B and X2 positive at 2x in all 4 regimes. Mix: validation Sharpe 1.80 vs 1.68 for X2 (bar +0.15) (R233) | Not read | Mix trails X2 by 0.7-1.5 bp/day at 2x-3x | Same books as R215/R218 | none | NULL |
 | **Positioning impulse** (24 h / 72 h change in top-vs-crowd, queue M001) | All 4 fail discovery: best imp72/H +5.2 bp/day, t 0.90; residual vs level +2.8 (R234). 2023 alone about +24 bp/day (seen after the run) | Not read | imp72/H +1.0 at 2x, -3.1 at 3x | Same data as R215's B | none | NULL; follow-up M223 |
 | **US index calendar** (turn-of-month, overnight drift; SPY/QQQ, first non-crypto lane) | Discovery 2000-12: TOM alpha +1.2 to +1.7 bp/day, t 1.2-1.5; QQQ overnight +1.8, t 1.36 (R235) | 2013-2026 not read | TOM alpha +1.0 at 3x; overnight negative at 2x | not on MEXC (ETFs or index futures) | none | NULL |
+| **Amihud illiquidity** (long illiquid / short liquid, one-week hold, queue M002) | Discovery +11.9 bp/day, t 2.28; validation -9.2, t -1.07 (R236) | Not read | Costs 0.8 bp/day; loss is gross | MEXC lists more illiquid coins (untested there) | none | NULL |
+| **Cross-asset trend** (12-month TSMOM, 23 ETF/FX/metal/bond series, queue M194) | Discovery 2001-12: Sharpe 0.28, t 1.00 (R237) | 2013-2026 not read | Costs 0.03-0.1 bp/day | not on MEXC | none | NULL |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 
