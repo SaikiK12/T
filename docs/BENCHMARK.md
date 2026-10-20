@@ -88,10 +88,17 @@ docs, read on 2026-10-20 (sources at the end). Claims about the lab were checked
    (`scripts/record_funding_board.py`, hourly). Its first use is R275, a cross-venue funding carry family on
    `qx spread`.
 4. **`qx` cross-sections:** a factor report in the alphalens / Qlib style (IC, rank IC by horizon, quantile spreads,
-   turnover) and cross-sectional books, so a cross-sectional family is one spec.
+   turnover) and cross-sectional books, so a cross-sectional family is one spec. **Done 2026-10-20:** `qx factors`
+   (`engine/src/factors.rs`), first lane R276.
 5. **Free data, small first:** DefiLlama, alternative.me, FRED, Binance BVOL, then OKX / Bitget / KuCoin / dYdX
    history. **DefiLlama, alternative.me and FRED done 2026-10-20** (`scripts/fetch_macro.py`, 20 daily series).
-   DefiLlama's derivatives and bridge charts are paid. Binance BVOL is next; Deribit DVOL is already held.
+   DefiLlama's derivatives and bridge charts are paid. Deribit DVOL is already held.
+   **KuCoin and dYdX started 2026-10-20** (`scripts/fetch_venue_history.py`):
+   - KuCoin: every funding settlement since listing and daily candles for 692 live USDT perps.
+   - dYdX v4: hourly funding, and daily and hourly candles with open interest, for 296 markets, 223 of them delisted.
+   - Bitget's funding history API serves only about four months, and OKX's three: both are recorded forward by
+     the funding board instead.
+   - Binance BVOL is left: low value next to DVOL.
 
 ## Sources
 - [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) and [R&D-Agent-Quant, arXiv 2505.15155](https://arxiv.org/html/2505.15155v2)
