@@ -78,6 +78,45 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
   months to reach 10% at low drift.
 - **Overnight index drift:** impossible at futures firms, which require being flat by the close.
 
+## How much edge a challenge needs (synthetic map, M211 first pass, 2026-10-20)
+`scripts/prop_edge_map.py` writes `experiments/propsim_v1/edge_map.csv`. It is a model with no market data, so it is
+not a trial and has no registry row.
+- **Setup:** a 20-year synthetic daily stream (1% daily vol at size 1, normal or Student t4) at each annual Sharpe from
+  -1 to 3. It runs through each `lab/propfirm` preset, at the size with the best expected value (or break-even fee where
+  the fee is unknown). Challenge horizon 365 days, then 180 funded days.
+
+| Annual Sharpe | -1 | -0.5 | 0 | 0.5 | 1 | 2 | 3 |
+|---|---|---|---|---|---|---|---|
+| HyroTrader 2-step, paid (normal) | 6% | 11% | 24% | 41% | 59% | 68% | 83% |
+| HyroTrader 2-step, EV USD (normal / t4) | -147 / -363 | +366 / -32 | +1,538 / +855 | +3,975 / +2,839 | +7,337 / +6,076 | +16,811 / +14,442 | +30,464 / +22,620 |
+| FTMO 2-step, paid (normal) | 7% | 13% | 21% | 31% | 58% | 69% | 84% |
+| FTMO 2-step, EV USD (normal / t4) | -66 / -83 | +649 / +404 | +1,928 / +1,361 | +4,114 / +3,306 | +7,366 / +6,557 | +18,166 / +14,383 | +31,709 / +23,019 |
+| Topstep 50K, paid (normal) | 8% | 7% | 13% | 25% | 42% | 67% | 85% |
+| Topstep 50K, EV USD (normal / t4) | +155 / +159 | +274 / +261 | +414 / +413 | +726 / +707 | +1,247 / +1,385 | +3,264 / +3,387 | +6,192 / +6,329 |
+
+Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
+(Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
+
+**Reading:**
+- **The model is too kind to the trader.** At the 100K firms it breaks even between Sharpe -1 and -0.5; at Topstep it
+  stays positive even at -1. So even a losing trader looks profitable.
+  - It assumes no trading costs, every payout honoured, i.i.d. days, one fee per attempt and the best size, chosen
+    with hindsight.
+  - None of the rule features listed below is modelled yet: payout caps, consistency in the funded stage, intraday
+    breaches, recurring monthly fees and resets.
+  - The positive EV at negative Sharpe is the option in the contract: the loss is capped at the fee, while variance can
+    still reach a payout. At negative Sharpe the best size is large (1.5-2x), which is that option being priced.
+- **The paid rates firms publish sit at the model's Sharpe -1 to 0.**
+  - Topstep: 16.8% pass x 33% paid is about 5.6% of Combines. FPFX: 7%.
+  - Typical buyers therefore trade like a Sharpe -1 book *after* everything this model leaves out. The firms' own
+    numbers, not this map, say what the average attempt is worth.
+- **What the map does say:**
+  - The chance of being paid roughly doubles from Sharpe 0 to Sharpe 1 (HyroTrader 24% to 59%, FTMO 21% to 58%).
+  - At Sharpe 1, the modelled EV per 100K attempt is about USD 7k. That is an upper bound, not a forecast.
+  - Fat tails (t4) cut EV by 11-44% at the 100K firms for Sharpe 0-3; Topstep's small account barely moves.
+- **The constraint is having the edge, not the firm.** A book with Sharpe ≥ 1 *after* costs, confirmed on unseen data,
+  is the entry ticket. The lab has none confirmed: flow book A is unconfirmed (holdout t 1.22).
+
 ## Simulations to run (queue M211)
 `lab/propfirm.py` needs these rule features first:
 - Breakout's balance-based daily loss reset at 00:30 UTC;
