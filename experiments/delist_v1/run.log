@@ -1,0 +1,22 @@
+16:48:44 prereg sha fe2595ffbc6b
+16:48:44 inputs match the frozen hashes; legs rebuild byte for byte
+16:48:44 sample: 72 notices, 170 legs on 142 perps
+16:49:06 priced legs 160, no_market 10, clusters 68; stale exits 1h 0 / 24h 7, delisted in 24h hold 6
+16:49:06 V1 all     1h  net    n  68 mean -0.12% t -0.06 halves -1.38/+1.14 2025+ +2.22% (2x -0.52%, 3x -0.92%)
+16:49:06 V2 all     24h net    n  68 mean +0.54% t 0.18 halves -5.72/+6.80 2025+ +4.28% (2x +0.14%, 3x -0.26%)
+16:49:06 V3 all     1h  hedged n  68 mean -0.29% t -0.14 halves -1.43/+0.86 2025+ +1.96% (2x -0.79%, 3x -1.29%)
+16:49:06 V4 all     24h hedged n  68 mean +0.23% t 0.08 halves -5.96/+6.42 2025+ +3.88% (2x -0.27%, 3x -0.77%)
+16:49:06 V5 spot    1h  net    n  25 mean +4.15% t 3.07 halves +3.90/+4.38 2025+ +5.61% (2x +3.75%, 3x +3.35%)
+16:49:06 V6 futures 1h  net    n  43 mean -2.60% t -0.82 halves -5.05/-0.27 2025+ +0.01% (2x -3.00%, 3x -3.40%)
+16:49:06 V7 spot    24h net    n  25 mean +3.58% t 0.93 halves +1.81/+5.22 2025+ +4.70% (2x +3.18%, 3x +2.78%)
+16:49:06 V8 futures 24h net    n  43 mean -1.23% t -0.30 halves -11.79/+8.85 2025+ +4.00% (2x -1.63%, 3x -2.03%)
+16:49:07 G4 null: 68/68 clusters with >= 10 admissible days; observed -0.12%, null mean -0.39%, 95th pct -0.11%, p 0.0575
+16:49:07 rob drop_top3_legs_1h    n  68 mean -0.34% t -0.16
+16:49:07 rob drop_top3_legs_24h   n  67 mean -0.43% t -0.15
+16:49:07 rob no_crash_1h          n  65 mean +1.69% t 1.07
+16:49:07 rob no_crash_24h         n  65 mean +2.57% t 1.03
+16:49:07 rob premove_short_sign   n  68 mean +2.49% t 0.92
+16:49:07 rob gross_1h             n  68 mean +0.30% t 0.14
+16:49:07 rob gross_24h            n  68 mean +1.58% t 0.54
+16:49:07 per year {"1h": {"2022": {"n": 11, "mean_pct": -10.156124181253755}, "2023": {"n": 1, "mean_pct": -3.6755297176041424}, "2024": {"n": 13, "mean_pct": 0.8863594672775863}, "2025": {"n": 25, "mean_pct": 1.9624537383630365}, "2026": {"n": 18, "mean_pct": 2.5862954271804126}}, "24h": {"2022": {"n": 11, "mean_pct": -13.544660660201144}, "2023": {"n": 1, "mean_pct": -4.318607211235115}, "2024": {"n": 13, "mean_pct": 0.4669393112908495}, "2025": {"n": 25, "mean_pct": 5.183648132372871}, "2026": {"n": 18, "mean_pct": 3.0253792873599408}}}
+16:49:07 VERDICT NULL gates {'G1': False, 'G2': False, 'G3': True, 'G4': False}

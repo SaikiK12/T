@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R264. Program trials: 9,472,061 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R268. Program trials: 9,472,081 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -74,7 +74,8 @@ overstatements are corrected here.
 | **TradFi perps lead crypto** (gold/oil and US equity perps' last hour -> crypto market or beta cross-section, 1-24 h; queue M004) | All 12 selected books fail discovery 2026-01..05; best EQ/TS/24 -0.1 bp/day, t -0.08. Same-hour corr +0.34 (EQ), next-hour corr -0.007 (R261) | Not read (2026-06..09 unread) | 1-4 h holds pay 10-116 bp/day; 24 h cost exceeds gross | Any | none | NULL |
 | **Variance risk premium, S&P 500** (measurement; queue M215) | VIX² minus next-month realised variance: +116 %², t 2.55; validation +70, t 5.71 (R239) | Holdout +82, t 1.11 (2020 loss) | Not tradeable with free data before 2011 | not on MEXC | none | Measured, not a book; short-vol lane M224 |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
-| **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
+| **Unlock short**: short at the close of D-7, cover at the close of an insider/private-sale cliff unlock of at least 1% of max supply (old R179/R181) | **Replicated here, gate 0: +3.24% net per event, week-cluster t 3.19, null p 0.0005, 422 events 2021-26** (R265). Codex's daily-bar run gives +3.26%, t 3.20 (R258, PR #29). Dose: >=5% of supply +9.9%; unlock >= 0.82 days of ADV +6.3% | None clean: the old session read 2021-26 and the calendar is today's snapshot. Reserved: 30 events in 2020, 41 MEXC-only, 15 after the archive | 2x +3.04% (t 2.99), 3x +2.84% (t 2.79). Funding -0.43% per event; Codex bounds it at 23-82 bp (R259) | 367 of 437 calendar events from 2026-10-21 have a MEXC contract | **R266** unlocks_fwd (MEXC, point-in-time calendar), decision at 120 scored tickets; first ticket RESOLV (2026-10-27) | **Largest per-event edge on file, in-sample only.** Tail: six closes lost over 40% (RIVER -132%); intraday highs far worse (STO +1,623%, R258). Needs a frozen sizing and protective model before any stake |
+| **Delisting-notice short**: short the USD-M perp at the first hourly open after a Binance "Will Delist" notice, cover +1 h / +24 h (old E03) | Gate 0, NULL: +1 h -0.12% per notice, t -0.06 (68 clusters, 2022-26; R267). Spot notices alone at +1 h: +4.15%, t 3.07, n 25 (logged variant, 1 of 8) | None clean: the old session read 2022-26. No reserved notices (the catalog starts in 2022) | Primary 2x -0.52%, 3x -0.92%. Spot +1 h: 2x +3.75%, 3x +3.35% | Not checked: MEXC spreads after a Binance notice | **R268** delist_fwd (spot notices, MEXC, from 2026-10-20 18:00 UTC), decision at 12 scored notices | Futures notices carry a squeeze tail (ANC -95%, SLERF -87% in an hour). Spot +1 h was picked after the run |
 
 ## The best achievable edges, ranked
 1. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
@@ -83,17 +84,25 @@ overstatements are corrected here.
    - **Falsified by:** R220 failing at 90 on-time days. At 2x costs it was not significant even on the holdout.
    - **To trade it:** a MEXC spot buy plus a perp short of the same size, placed by hand by the owner, only after
      `go_real`.
-2. **Flow book A, or X2, on MEXC crypto.**
+2. **Unlock short on MEXC (new, 2026-10-20).** It replicates at gate 0 with the largest per-event edge in the lab:
+   +3.24% net per event, t 3.19 (R265), and Codex's independent daily-bar run agrees (R258).
+   - **Size:** about 150 events a year in 2025-26. At 10% of capital per event that is roughly +45%/yr before tail
+     losses. This is in-sample arithmetic, not a forecast.
+   - **Falsified by:** R266 failing at 120 scored tickets (futility check at 60), or the reserved batch (2020,
+     MEXC-only coins, post-archive events).
+   - **Risk:** short squeezes. Six of 422 closes lost over 40%, and intraday highs were far worse. A liquidation at
+     2x would have hit several events. Sizing and protection must be frozen before any stake.
+3. **Flow book A, or X2, on MEXC crypto.**
    - **Size:** the largest returns in the archive, not confirmed. Crypto-only holdout +22.3 bp/day (about +80%/yr
      simple), t 1.25, drawdowns of 47-62% across versions.
    - **Falsified by:** R215 or R218 failing their 90-day screen, or R221's futility stop at day 90.
    - **Evidence needed:** confirmation needs R221's look at 182 or 365 days.
    - **Risk:** two coins carried two thirds of the holdout gross.
-3. **top_vs_crowd, crypto only, on MEXC.**
+4. **top_vs_crowd, crypto only, on MEXC.**
    - **Size:** holdout t 2.74 on crypto only, but it is the best of 7 series reported after the holdout was read.
      Without its 10 best days of 457 it falls to t 1.6, and its MEXC replay is -0.6 bp/day. The all-symbol drawdown was 16%.
    - **Status:** the forward replay is about zero. It is now decided by R221.
-4. **Everything else is NULL net of costs.**
+5. **Everything else is NULL net of costs.**
    - The gross edges (atlas cells, lead-lag spread) are real but smaller than a taker's cost.
    - The route left open for them is execution: maker orders placed by hand on MEXC at 0 fee, or an overlay on books
      that trade anyway.

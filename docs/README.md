@@ -26,7 +26,7 @@ python scripts/check_research_integrity.py
 
 `--find` searches filenames, document headings and recorded experiment metadata. It does not search full papers, result payloads or market caches. After adding or renaming tracked files, stage them and run `--write`, then `--check`. Commands below are navigation links, not an execution queue.
 
-## Documents (45)
+## Documents (46)
 
 ### Operating rules and decisions
 
@@ -91,6 +91,10 @@ python scripts/check_research_integrity.py
 - [Selection and trial-accounting audit](../docs/SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md)
 - [Opt-in gap-aware labels and protected holdout prices](../docs/TARGET_INTEGRITY_FIX.md)
 
+### New / unclassified documents
+
+- [Data sources: what was downloaded, from where, and how to check it](../docs/DATA_SOURCES.md)
+
 ## Source inputs (3)
 
 These are received-source catalogs and provenance, not additional methods queues. A provider catalog is not a fully read corpus or evidence of access to its paid data.
@@ -99,18 +103,19 @@ These are received-source catalogs and provenance, not additional methods queues
 - [owner_scope_20261020.json](../research/intake/owner_scope_20261020.json)
 - [source_methods_20261020.json](../research/intake/source_methods_20261020.json)
 
-## Commands (100)
+## Commands (107)
 
 Acquisition may consume network/storage; study runners may consume reserved data. Read AGENTS, GATES and the lane's protocol before running either. Forward runners and journals remain owned by their registered writer.
 
 <details>
-<summary>Acquisition (network and volume approval may be required) (10)</summary>
+<summary>Acquisition (network and volume approval may be required) (11)</summary>
 
 - [fetch_coinm.py](../scripts/fetch_coinm.py)
 - [fetch_extra.py](../scripts/fetch_extra.py)
 - [fetch_gate.py](../scripts/fetch_gate.py)
 - [fetch_hyperliquid_history.py](../scripts/fetch_hyperliquid_history.py)
 - [fetch_mexc_history.py](../scripts/fetch_mexc_history.py)
+- [fetch_notice_bodies.py](../scripts/fetch_notice_bodies.py)
 - [fetch_spot.py](../scripts/fetch_spot.py)
 - [fetch_trend_daily.py](../scripts/fetch_trend_daily.py)
 - [fetch_unlocks.py](../scripts/fetch_unlocks.py)
@@ -120,10 +125,12 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Builders and supporting tools (5)</summary>
+<summary>Builders and supporting tools (7)</summary>
 
 - [build_extra_views.py](../scripts/build_extra_views.py)
 - [build_views.py](../scripts/build_views.py)
+- [data_provenance.py](../scripts/data_provenance.py)
+- [delist_events.py](../scripts/delist_events.py)
 - [prop_edge_map.py](../scripts/prop_edge_map.py)
 - [speed_test.py](../scripts/speed_test.py)
 - [unlock_events.py](../scripts/unlock_events.py)
@@ -152,17 +159,19 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Prospective paper and orchestration (12)</summary>
+<summary>Prospective paper and orchestration (14)</summary>
 
 - [forward_all.sh](../scripts/forward_all.sh)
 - [forward_carry.py](../scripts/forward_carry.py)
 - [forward_delayed.py](../scripts/forward_delayed.py)
+- [forward_delist.py](../scripts/forward_delist.py)
 - [forward_lag.py](../scripts/forward_lag.py)
 - [forward_loop.sh](../scripts/forward_loop.sh)
 - [forward_mexc.py](../scripts/forward_mexc.py)
 - [forward_mexc_sq.py](../scripts/forward_mexc_sq.py)
 - [forward_seq.py](../scripts/forward_seq.py)
 - [forward_tick.py](../scripts/forward_tick.py)
+- [forward_unlocks.py](../scripts/forward_unlocks.py)
 - [forward_vt.py](../scripts/forward_vt.py)
 - [live_parity.py](../scripts/live_parity.py)
 - [orchestrate_forward.py](../scripts/orchestrate_forward.py)
@@ -170,7 +179,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Research runners (read the frozen specification first) (64)</summary>
+<summary>Research runners (read the frozen specification first) (66)</summary>
 
 - [atlas_replication.py](../scripts/atlas_replication.py)
 - [run_accounting.py](../scripts/run_accounting.py)
@@ -190,6 +199,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 - [run_ctxslice.py](../scripts/run_ctxslice.py)
 - [run_daylimit.py](../scripts/run_daylimit.py)
 - [run_delay.py](../scripts/run_delay.py)
+- [run_delist.py](../scripts/run_delist.py)
 - [run_dispgate.py](../scripts/run_dispgate.py)
 - [run_dow.py](../scripts/run_dow.py)
 - [run_flow72.py](../scripts/run_flow72.py)
@@ -227,6 +237,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 - [run_tradlead.py](../scripts/run_tradlead.py)
 - [run_tsbattery.py](../scripts/run_tsbattery.py)
 - [run_tsmom.py](../scripts/run_tsmom.py)
+- [run_unlocks.py](../scripts/run_unlocks.py)
 - [run_usindex_calendar.py](../scripts/run_usindex_calendar.py)
 - [run_venue_gap.py](../scripts/run_venue_gap.py)
 - [run_volrisk.py](../scripts/run_volrisk.py)
@@ -239,7 +250,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 
 </details>
 
-## Experiment locations (87)
+## Experiment locations (90)
 
 Recorded status/verdict comes only from this checkout's rounds.csv. A findings link means the file exists, not that a study passed. Unregistered folders and missing specs stay visible. Use the integrity audit to verify frozen digests; this index does not.
 
@@ -270,6 +281,8 @@ Recorded status/verdict comes only from this checkout's rounds.csv. A findings l
 | [ctxslice_v2](../experiments/ctxslice_v2/PREREG.md) | R204 / DONE / NULL | [spec](../experiments/ctxslice_v2/PREREG.md) · [findings](../experiments/ctxslice_v2/FINDINGS.md) |
 | [daylimit_v1](../experiments/daylimit_v1/PREREG.md) | R208 / DONE / NULL | [spec](../experiments/daylimit_v1/PREREG.md) · [findings](../experiments/daylimit_v1/FINDINGS.md) |
 | [delay_v1](../experiments/delay_v1/PREREG.md) | R213 / DONE / NULL | [spec](../experiments/delay_v1/PREREG.md) · [findings](../experiments/delay_v1/FINDINGS.md) |
+| [delist_fwd](../experiments/delist_fwd/PREREG.md) | R268 / RUNNING / PENDING | [spec](../experiments/delist_fwd/PREREG.md) |
+| [delist_v1](../experiments/delist_v1/PREREG.md) | R267 / DONE / NULL | [spec](../experiments/delist_v1/PREREG.md) · [findings](../experiments/delist_v1/FINDINGS.md) |
 | [dispgate_v1](../experiments/dispgate_v1/PREREG.md) | R260 / DONE / NULL | [spec](../experiments/dispgate_v1/PREREG.md) · [findings](../experiments/dispgate_v1/FINDINGS.md) |
 | [dow_v1](../experiments/dow_v1/PREREG.md) | R256 / DONE / NULL | [spec](../experiments/dow_v1/PREREG.md) · [findings](../experiments/dow_v1/FINDINGS.md) |
 | [flow72_fwd](../experiments/flow72_fwd/PREREG.md) | R199 / REGISTERED / PENDING | [spec](../experiments/flow72_fwd/PREREG.md) · [findings](../experiments/flow72_fwd/FINDINGS.md) |
@@ -322,8 +335,9 @@ Recorded status/verdict comes only from this checkout's rounds.csv. A findings l
 | [tsbattery_v1](../experiments/tsbattery_v1/PREREG.md) | R242 / DONE / NULL | [spec](../experiments/tsbattery_v1/PREREG.md) · [findings](../experiments/tsbattery_v1/FINDINGS.md) |
 | [tsmom_v1](../experiments/tsmom_v1/PREREG.md) | R237 / DONE / NULL | [spec](../experiments/tsmom_v1/PREREG.md) · [findings](../experiments/tsmom_v1/FINDINGS.md) |
 | unlocks_deep | R181 / DONE / CONFIRMED | Registered folder absent from this checkout |
+| [unlocks_fwd](../experiments/unlocks_fwd/PREREG.md) | R266 / RUNNING / PENDING | [spec](../experiments/unlocks_fwd/PREREG.md) |
 | unlocks_sf | R180 / ARMED / PENDING | Registered folder absent from this checkout |
-| [unlocks_v1](../experiments/unlocks_v1/PREREG.md) | No registry row in this checkout | [spec](../experiments/unlocks_v1/PREREG.md) |
+| [unlocks_v1](../experiments/unlocks_v1/PREREG.md) | R265 / DONE / PARTIAL | [spec](../experiments/unlocks_v1/PREREG.md) · [findings](../experiments/unlocks_v1/FINDINGS.md) |
 | [usindex_calendar_v1](../experiments/usindex_calendar_v1/PREREG.md) | R235 / DONE / NULL | [spec](../experiments/usindex_calendar_v1/PREREG.md) · [findings](../experiments/usindex_calendar_v1/FINDINGS.md) |
 | [venue_gap_v1](../experiments/venue_gap_v1/PREREG.md) | R216 / DONE / DATA_PASS | [spec](../experiments/venue_gap_v1/PREREG.md) · [findings](../experiments/venue_gap_v1/FINDINGS.md) |
 | [volrisk_v1](../experiments/volrisk_v1/PREREG.md) | R241 / DONE / NULL | [spec](../experiments/volrisk_v1/PREREG.md) · [findings](../experiments/volrisk_v1/FINDINGS.md) |

@@ -358,7 +358,23 @@ def compute():
     rows_month_end = np.flatnonzero(first)[1:] * 24 - 1          # last row of each month except the final one
     check = {0, 2000, 4000}
     parity = {}
+    cache = LANE / "cache"
+    cache.mkdir(exist_ok=True)
+    key = prereg.verify(LANE / "PREREG.md")[:16]
     for k in TFS:
+        part = cache / f"part_{key}_{k}h.npz"        # resume: a container restart kills long runs; results are unchanged
+        if part.exists():
+            z = np.load(part, allow_pickle=False)
+            meta = json.loads(str(z["meta"]))
+            assert meta["first_id"] == len(names), f"checkpoint {part.name} out of order"
+            names += meta["names"]
+            parity.update({int(a): b for a, b in meta["parity"].items()})
+            G += list(z["gross"])
+            Cst += list(z["cost"])
+            E += list(z["expo"])
+            log(f"timeframe {k} h: {len(meta['names'])} strategies loaded from {part.name}")
+            continue
+        first_id, par0 = len(names), dict(parity)
         B = Bars(o, h, l, c, v, k, ema200)
         jidx = (np.arange(T) + 1) // k - 1
         valid = jidx >= 0
@@ -393,8 +409,12 @@ def compute():
                 E.append(np.abs(P[rows_month_end]).sum(axis=1).astype(np.float32))
             if len(names) % 360 == 0:
                 log(f"{len(names)} strategies done")
-    cache = LANE / "cache"
-    cache.mkdir(exist_ok=True)
+        meta = {"first_id": first_id, "names": names[first_id:],
+                "parity": {str(a): b for a, b in parity.items() if a not in par0}}
+        tmp = cache / f"part_{key}_{k}h.tmp.npz"
+        np.savez(tmp, gross=np.array(G[first_id:]), cost=np.array(Cst[first_id:]), expo=np.array(E[first_id:]),
+                 meta=np.array(json.dumps(meta)))
+        tmp.replace(part)
     np.savez(cache / "nets.npz", gross=np.array(G), cost=np.array(Cst), expo=np.array(E), days=days)
     pd.DataFrame(names).to_csv(LANE / "results" / "strategies.csv", index=False)
     (LANE / "results" / "parity.json").write_text(json.dumps(parity, indent=1))

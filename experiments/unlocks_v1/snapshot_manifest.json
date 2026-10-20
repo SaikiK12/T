@@ -1,0 +1,1497 @@
+{
+ "source": "https://defillama-datasets.llama.fi",
+ "fetched_utc": "2026-10-20T12:38:05Z",
+ "files": {
+  "emissionsProtocolsList.json.gz": {
+   "bytes": 4319,
+   "sha256": "af45b4b5dc79f132e31da6c4f7d683810fe8df1046ccbaeddfb4719f4084dab7"
+  },
+  "emissionsIndex.json.gz": {
+   "bytes": 22382745,
+   "sha256": "5600e62eadc79099e0fb98f0405bbc9e9a5e94a532e924b80297c31df7063cff"
+  },
+  "protocols/ethena.json.gz": {
+   "bytes": 988556,
+   "sha256": "09ab8f87b90ba3975afcd4d8f63b8510b324664fae76dfc6d876839f5eab6e22"
+  },
+  "protocols/flare.json.gz": {
+   "bytes": 2630965,
+   "sha256": "82166d66e4d1d00c31fd90aba5bd1a73cc0db58b23921adce0d2cf5387c88b3e"
+  },
+  "protocols/equilibria.json.gz": {
+   "bytes": 63994,
+   "sha256": "78a595120581059d79b40cfcdc2eae92a08f0328d6d7339cf68b9298d81748c0"
+  },
+  "protocols/hybra.json.gz": {
+   "bytes": 505366,
+   "sha256": "9844aef43eedc6844d4aef2aa4e82f77e93cb10fc5c58580d02e82122d93042c"
+  },
+  "protocols/lista-dao.json.gz": {
+   "bytes": 4234406,
+   "sha256": "9ca942d63b0c876889f27fee29b7d7d87a380f396cc7332b5d198e24b26d9175"
+  },
+  "protocols/filecoin.json.gz": {
+   "bytes": 11605326,
+   "sha256": "6fd75dcb42e2a54a7c13ad6dd8344a3588ca066831b19de620e52f938a47b8c4"
+  },
+  "protocols/gnd-protocol.json.gz": {
+   "bytes": 629226,
+   "sha256": "ae5a667e0f6f6579cd7c27d5212715d8c7bf654137d027856ef162b1e4748af5"
+  },
+  "protocols/mantra-dao.json.gz": {
+   "bytes": 1175944,
+   "sha256": "555e27df4b2ad84282f006f87618efa243a48addd76837854a6c04ed33e9d4b9"
+  },
+  "protocols/smardex-ecosystem.json.gz": {
+   "bytes": 1032216,
+   "sha256": "dfb75f7757c988eb73000aefd1eda83c769d89286cebc02e31c4918cc4c0c49e"
+  },
+  "protocols/blur.json.gz": {
+   "bytes": 699925,
+   "sha256": "36e038c5c95e49ddd36353a70d2975df3f4559e7f116aed9dc8a2b6fd6e25d30"
+  },
+  "protocols/debridge.json.gz": {
+   "bytes": 737783,
+   "sha256": "4d40b3db5e3dd10b2c797e30634b99241fb4f3d0a5fbeb25bf7cdc19170ccc98"
+  },
+  "protocols/lombard.json.gz": {
+   "bytes": 904374,
+   "sha256": "555cb81b79971dd10496adca20f20f49fd37f5b8323cb17c96d7fa71a86817e7"
+  },
+  "protocols/edgex.json.gz": {
+   "bytes": 850197,
+   "sha256": "284f0107e618b29436acd7ec110d8fed9e63963728b4731e4a260a9ea0ed9040"
+  },
+  "protocols/cheelee.json.gz": {
+   "bytes": 1953641,
+   "sha256": "460275da4ef5c14585281c1d5b5121ed513cec4840cbee27a52239e6d11ac394"
+  },
+  "protocols/kwenta.json.gz": {
+   "bytes": 1229321,
+   "sha256": "655fc9275b9f6795bce65771bbb0e7467a41c3a6aef2b960b62b18ac7f946a41"
+  },
+  "protocols/aave.json.gz": {
+   "bytes": 2317285,
+   "sha256": "92d8cb6d772e7cdd36c16239a06f0f49fbcf72e9e28362194a8c6f0b6223358a"
+  },
+  "protocols/exactly.json.gz": {
+   "bytes": 980776,
+   "sha256": "1699f464b015076300e9fdc50e53e7f3119b80067f56d71d0a17fd7e71420d49"
+  },
+  "protocols/clearpool.json.gz": {
+   "bytes": 1559756,
+   "sha256": "e32c2605fe3b65d5690406db6ee84a2c60fd67e2b6ce75712c176e266952881e"
+  },
+  "protocols/arbitrum-exchange.json.gz": {
+   "bytes": 407591,
+   "sha256": "c77577ad19cf464771d2973714a546ac6e14eb7059d3fd5eef0aed242da05de6"
+  },
+  "protocols/balancer.json.gz": {
+   "bytes": 1939470,
+   "sha256": "23deb327e6e4c48b990cb3d2c43c5e9788e474bb7753481ea8ec2a6f6fffeffa"
+  },
+  "protocols/alex.json.gz": {
+   "bytes": 479530,
+   "sha256": "efe783d61e5a2cdcad835f614ff6d75b30733bf011f1854a4eb720cda831e344"
+  },
+  "protocols/layer3.json.gz": {
+   "bytes": 714129,
+   "sha256": "ad369bf543e2b035a7c1d3ca49907fea94468f630d653f738a384e00e35a553f"
+  },
+  "protocols/ens.json.gz": {
+   "bytes": 537643,
+   "sha256": "72527d2b812d8b2335be87e1839e020b1ec457c88b7f0e4a0b032ff9dc4aafe8"
+  },
+  "protocols/aura.json.gz": {
+   "bytes": 2398752,
+   "sha256": "6266c81fb516164a49025aaad62cead4e94827975813db2b704ae2e832f4cba3"
+  },
+  "protocols/hashflow.json.gz": {
+   "bytes": 820932,
+   "sha256": "3217a3ae70ce36011605556b55ba48647ddcaa9855575fe6e6de8e7867910286"
+  },
+  "protocols/hop-protocol.json.gz": {
+   "bytes": 615345,
+   "sha256": "9945b5f0d0071bbe75c91dfa131bfc86552154d299f5bff7f140aecdfe7ca7b2"
+  },
+  "protocols/cellana-finance.json.gz": {
+   "bytes": 507552,
+   "sha256": "712a2072a6fd92e39e0493b32bac9d543311d004e63bbd936db8f44e4cb73b92"
+  },
+  "protocols/iota.json.gz": {
+   "bytes": 1314306,
+   "sha256": "91b94b5dd8fea268e4d97b5dbdf9e36bd924184e5328c649e3f47537964e13e6"
+  },
+  "protocols/jade.json.gz": {
+   "bytes": 22215,
+   "sha256": "0df1d3bab87f616a8cc476092c34d48bcaf359355d4a7fc80b6b67ff14c2eacc"
+  },
+  "protocols/dolomite.json.gz": {
+   "bytes": 1069111,
+   "sha256": "a131a3c7c7c4d05e2acaa099ae8120957b426859729196f1fb97109371c33139"
+  },
+  "protocols/hyperswap.json.gz": {
+   "bytes": 208493,
+   "sha256": "2906fccade58d5ede5c5746fcba7164c9d5e1797d681dfc721df02c80e45d082"
+  },
+  "protocols/gmx.json.gz": {
+   "bytes": 1335467,
+   "sha256": "4dd1faa9b88cf645bf9574e71a9530be9fd16e68932bccdad56d517629fd4e58"
+  },
+  "protocols/bluefin.json.gz": {
+   "bytes": 1194085,
+   "sha256": "64d7fb4859df8f728afb7a9ec279914c4da36d187ca826dcee14fe2a8364cd74"
+  },
+  "protocols/kamino.json.gz": {
+   "bytes": 825622,
+   "sha256": "afdc62fa524045e08752941ea2bc517b96a3b916551b24434ad62ee87c5aa03f"
+  },
+  "protocols/litecoin.json.gz": {
+   "bytes": 726904,
+   "sha256": "6b3d09ca56b3645f7d2f1306035f6a62e1a6aa9bdcece95cf5b10b28a5fcdca3"
+  },
+  "protocols/velo-finance.json.gz": {
+   "bytes": 1098842,
+   "sha256": "972353d8757ade869bbca7145951df9b1bcf68cbd9cafc8490efb47e56d0278d"
+  },
+  "protocols/contango.json.gz": {
+   "bytes": 688584,
+   "sha256": "fc4463cdd4510b6233685ff9211fe7b4ec963b3d7c647dfdb4f7d4d8de4d74c6"
+  },
+  "protocols/equilibre.json.gz": {
+   "bytes": 1061819,
+   "sha256": "e06d99a0216c9e619f01a34e3c2406df9bc63bbeac57febe34f2f742556c95d6"
+  },
+  "protocols/fluid.json.gz": {
+   "bytes": 1652844,
+   "sha256": "0087c276df281cce8e3238fb49cf6fcb65b412c156ac9ccd8b217d6d80697842"
+  },
+  "protocols/fei-protocol.json.gz": {
+   "bytes": 836101,
+   "sha256": "77145dc575150972e27fca3a0f2fe617b94c05b01bcb5ce3fa757e89ffcc050f"
+  },
+  "protocols/layerzero.json.gz": {
+   "bytes": 352010,
+   "sha256": "07535940320b67925867a0b26537629e2977ef65f48971832fbde7be88215aa8"
+  },
+  "protocols/arkham.json.gz": {
+   "bytes": 1420559,
+   "sha256": "6e26f395111de3bb161ab7a2136d519f2bb1ccdaa66b34ae934c0daa4a388040"
+  },
+  "protocols/arbitrum-foundation.json.gz": {
+   "bytes": 821662,
+   "sha256": "2285cf93b8e281b4700b0d0ae8da24a37a0cda52af596f83029858b7536b8783"
+  },
+  "protocols/benddao.json.gz": {
+   "bytes": 975854,
+   "sha256": "a2f96a8f275d49cdb16508c0ee3fb1c96689a2b0d6340ed4d2220942a909f049"
+  },
+  "protocols/pea.json.gz": {
+   "bytes": 10513,
+   "sha256": "58b253a95b226a399a03ca637b3cf170470fa84b715b0718da2c5f0f6a3f6faa"
+  },
+  "protocols/usd-ai.json.gz": {
+   "bytes": 399511,
+   "sha256": "7aca3373a428771da26c28530eb8a091cdf2286e63e7e6c61ef29d43d851d21e"
+  },
+  "protocols/vvs-finance.json.gz": {
+   "bytes": 930576,
+   "sha256": "1dad085477f115c50c63e066304bd9a09feffb72063a5298cb597ff04483edd9"
+  },
+  "protocols/layerbank.json.gz": {
+   "bytes": 1186593,
+   "sha256": "9681838c5b0a2f41aa341b0701b7c6933678743f18e69bb317184cbc721506a3"
+  },
+  "protocols/sosovalue.json.gz": {
+   "bytes": 823060,
+   "sha256": "bbf68e4512012c8903df3099f950ae58a344a35c1a8bf834848708983b174a63"
+  },
+  "protocols/frax-finance.json.gz": {
+   "bytes": 1184205,
+   "sha256": "eadde3432c7e0aae4623f4fa75e80e873dd5c1350e0d0e33ac9490596d950ba5"
+  },
+  "protocols/desk.json.gz": {
+   "bytes": 817845,
+   "sha256": "6f8132137ceef3b67601f62f596edb214fb2121dddf57a4b25808ae669a758c7"
+  },
+  "protocols/basic-attention.json.gz": {
+   "bytes": 804506,
+   "sha256": "b1f79b8f8e79d3314f13b5783a550044519e38a400dd703ec9c7429312a8372e"
+  },
+  "protocols/sun.json.gz": {
+   "bytes": 984714,
+   "sha256": "d4f4e47202f96e4d3525e62f830dedbbd5bfafa4afa792397691c2f1a869cd02"
+  },
+  "protocols/helium-network.json.gz": {
+   "bytes": 7220850,
+   "sha256": "d70953f48f294ebbf8097c1a7bbbd2ac73edcdd1376fb0506f2c78abdc4a5b17"
+  },
+  "protocols/legacy-network.json.gz": {
+   "bytes": 2111437,
+   "sha256": "fc953b234e0e615adeb310d70c4a6c19dba7f4a14a90466e30c2d0ef51024cb9"
+  },
+  "protocols/asymetrix-protocol.json.gz": {
+   "bytes": 401603,
+   "sha256": "cf53b183c1275fd91eeb5c98aaf4f3e487dcf3a16d92789250d94e9fc420dc02"
+  },
+  "protocols/fx-protocol.json.gz": {
+   "bytes": 16678174,
+   "sha256": "cb096801547f174dabf7a79894ef0eb5eb856cfcf1d99e2f870734b443698942"
+  },
+  "protocols/tangible.json.gz": {
+   "bytes": 956453,
+   "sha256": "b11008ac9e5e24a9ed25ff2edb1dd4a1b194b766f6eaf34cfd5135bb102a6ab6"
+  },
+  "protocols/alaya-ai.json.gz": {
+   "bytes": 1638020,
+   "sha256": "8c11a75c9f5191fbca418ad14f4218cde1db289edc5f56ed582f11408df2f9da"
+  },
+  "protocols/vana.json.gz": {
+   "bytes": 680177,
+   "sha256": "5fab68c8248c72c98e151298be02f142bf8a9cce77e26f3f23df7c41c354a54d"
+  },
+  "protocols/tranchess.json.gz": {
+   "bytes": 800086,
+   "sha256": "a61006e7581fb0da6d054b53f6058c824933fd06e43912043ed173313663fc8b"
+  },
+  "protocols/solstice.json.gz": {
+   "bytes": 506851,
+   "sha256": "36c4539727b7eb4e17bce6a5775585b45fded4b731a55092e8d696d1aa2190bb"
+  },
+  "protocols/babylon-protocol.json.gz": {
+   "bytes": 939228,
+   "sha256": "641dfcc549eb81a47ccd29d168cc39b0a166e3ea89cfae40b08614d71dd341b7"
+  },
+  "protocols/uwu-lend.json.gz": {
+   "bytes": 424296,
+   "sha256": "9e53a63143b080b732194b20c670e17ace71735144baf6ca15647fe361b26570"
+  },
+  "protocols/lfj.json.gz": {
+   "bytes": 775420,
+   "sha256": "3b94639131cfb71a9073c0a9d7f0c1836fafb42528067b7b8533e9e9b43d66e5"
+  },
+  "protocols/xdc-network.json.gz": {
+   "bytes": 1649059,
+   "sha256": "107a4ea7e15c130908923ca9412b3caf0eb5d86f9d7a491503ffb31cc5bdfe21"
+  },
+  "protocols/zksync-era.json.gz": {
+   "bytes": 375252,
+   "sha256": "124a8077566a5a7ee4d00a134fa35f8d449a1e1c2909f66064d4b2d9399a2362"
+  },
+  "protocols/world-of-dypians.json.gz": {
+   "bytes": 1264112,
+   "sha256": "e11a532dedfc7b14de0f72fae34a70ed05592878df841a2a92de519db0ab98ec"
+  },
+  "protocols/venice.json.gz": {
+   "bytes": 558119,
+   "sha256": "389f2b6a08db7c100b0a09645c09a6edaf4b3ee2a4dd14cd2f8f0049e338d363"
+  },
+  "protocols/synthswap.json.gz": {
+   "bytes": 510349,
+   "sha256": "9c960930d224c938069bdd51aa2bab4f7d19d8dbeb163fe8b16e68a3dbfa6265"
+  },
+  "protocols/up.json.gz": {
+   "bytes": 42381,
+   "sha256": "64370ee61738ff4a0e36a0ae6a2e4325d576510958f000373a271657010f3b10"
+  },
+  "protocols/hedera.json.gz": {
+   "bytes": 825905,
+   "sha256": "f9154853f8415d9fb4574313c72f88cce191b60b9b4f5dcc8054758957ca71b0"
+  },
+  "protocols/billions-network.json.gz": {
+   "bytes": 672579,
+   "sha256": "8f7b213d63d1a8684a185f4c401889d4e1aab1dba918f1b6a0339cff4330379b"
+  },
+  "protocols/blackhole.json.gz": {
+   "bytes": 75461,
+   "sha256": "a67e70d3f9ae8f13d71630b5cada9263f90c6a8c0b35925fdac2db672cc40816"
+  },
+  "protocols/stader.json.gz": {
+   "bytes": 1564159,
+   "sha256": "34912f336aa2c267d8612adc9233689f2ac87da72a0b9bf6aa4297803ccb2cd3"
+  },
+  "protocols/portal.json.gz": {
+   "bytes": 997117,
+   "sha256": "a737e7f843570dca00b110547e4b3f720906c3884f22b031dfeb7e758cb7d4f9"
+  },
+  "protocols/land-bid.json.gz": {
+   "bytes": 17379,
+   "sha256": "68e5bf398a5bdda948d788b552e600ac0a205b6041c7161eb11d125c36b3d636"
+  },
+  "protocols/vector-finance.json.gz": {
+   "bytes": 2015452,
+   "sha256": "bd52b5dfece821ba4b8bca223049ffa43fac0e251804423f9a14e32b0c8fe2a8"
+  },
+  "protocols/spcx.json.gz": {
+   "bytes": 170936,
+   "sha256": "a271981b1899e1d70d44ede23afa02b242eac3db23787baa4a018c140d5922eb"
+  },
+  "protocols/stonx.json.gz": {
+   "bytes": 25602,
+   "sha256": "cf2b47e35bde3771ab7ad8ff565c86d3447be4346bc93314921229d31397287f"
+  },
+  "protocols/maple-finance.json.gz": {
+   "bytes": 306172,
+   "sha256": "1581b6fe0dfa88e650caeb6d8a5eba46f2fcbfd7703cfd016a9fef1f052b218b"
+  },
+  "protocols/curve-finance.json.gz": {
+   "bytes": 1210385,
+   "sha256": "c8ea2fb0b86cb6f094329f530315cba5dad7c3eaaec0c3ee1eeac58a9a1628e1"
+  },
+  "protocols/stargate-finance.json.gz": {
+   "bytes": 2208688,
+   "sha256": "8c3bdbca891619bf75b44366cdfbb2e4d3d71e9c74387e2b5eefd7a6a1b57cc1"
+  },
+  "protocols/topaz.json.gz": {
+   "bytes": 62685,
+   "sha256": "6661e03800996599528e6c152d8e4e7864af42968674dd4d733851efdad43616"
+  },
+  "protocols/nest.json.gz": {
+   "bytes": 143154,
+   "sha256": "8768e4762963b8d05af7169ca00aadcdc4fee33dce0dc0b8bd4b995c0f668635"
+  },
+  "protocols/the-graph.json.gz": {
+   "bytes": 4010191,
+   "sha256": "2db07d8273226d64654e49f68e3bb730ce68efb99994c24fc29cadd745ba37f6"
+  },
+  "protocols/convex-finance.json.gz": {
+   "bytes": 3206027,
+   "sha256": "88291d9ecfe91a2c842406c4089f717e4c690908dd2476f13468dbefb4721470"
+  },
+  "protocols/official-trump.json.gz": {
+   "bytes": 788070,
+   "sha256": "e78a54f2cae3495b9094c466d6a3657af1ecca88505dda26dd4511c2a6a9929b"
+  },
+  "protocols/dodo.json.gz": {
+   "bytes": 558988,
+   "sha256": "f95b8843a26971b830b6f8152f15f0c6ffb906341d4257e93582b97e299c1329"
+  },
+  "protocols/based.json.gz": {
+   "bytes": 473952,
+   "sha256": "89628162c2ce1b0c9cd254df9e7ed5eb0f56bce78a336a6641b1121c069ed29e"
+  },
+  "protocols/pike.json.gz": {
+   "bytes": 1092102,
+   "sha256": "701da90626434c34ad66b11c63a833841a8fe0463bb18b034c60dc1409dec6e7"
+  },
+  "protocols/perpetual-protocol.json.gz": {
+   "bytes": 524223,
+   "sha256": "be1e69ce313c7a196b6290851760f4b3ca0d06aa8015819f8dfc4e2fc654ebc2"
+  },
+  "protocols/pancakeswap.json.gz": {
+   "bytes": 690656,
+   "sha256": "00280f6d23f40ebf6f6bf7ed4d4cd1982495fcafa5197a1ac21e34e69b01adbe"
+  },
+  "protocols/tezos.json.gz": {
+   "bytes": 1558301,
+   "sha256": "5d1a8f74a9abe97bcba40af33c12eb4002bb260a2141fd4b65f34175f6e3073d"
+  },
+  "protocols/lybra-finance.json.gz": {
+   "bytes": 692695,
+   "sha256": "19460c32ce652c1059be5b9dd5c9324dede6fda75648467876818628b73d9f6d"
+  },
+  "protocols/spectra.json.gz": {
+   "bytes": 1002607,
+   "sha256": "620f6bc782aaa0a87154f126dcdc7722e199ff4b35922d947d2103a101b980de"
+  },
+  "protocols/limitless-exchange.json.gz": {
+   "bytes": 702466,
+   "sha256": "33e1ea192c14aa40d8693a128a118204da82f1331d51c873e541a530236c308a"
+  },
+  "protocols/ethereum.json.gz": {
+   "bytes": 2119758,
+   "sha256": "6586db81cc1e49495dc6ec7ebff4186b8e8ea3772013dae863f5e292baa8a4c0"
+  },
+  "protocols/euler.json.gz": {
+   "bytes": 1452653,
+   "sha256": "4f10dd8666b6f50b3aa50907179058ebb5ab0d50b96a98060ea1c9951185332b"
+  },
+  "protocols/morpheusai.json.gz": {
+   "bytes": 3058320,
+   "sha256": "7632ecb5b245f99354b6508323d4cd65e7b7f943104c5a6dc800cdd80cfaf05e"
+  },
+  "protocols/cyberconnect.json.gz": {
+   "bytes": 1403196,
+   "sha256": "897ee86c78f83b825c1c233e5ef91f687f280218fd6581c9bc40701352d1a477"
+  },
+  "protocols/axie-infinity.json.gz": {
+   "bytes": 1108391,
+   "sha256": "e9124cf602a20193a890c6b4fe727290d49f0954823e33b0e4a29872af331462"
+  },
+  "protocols/moonbeam.json.gz": {
+   "bytes": 3170118,
+   "sha256": "58a9146dc85388ca833490a182a4b83a25541f04e1c15e20fed211227c8d6edd"
+  },
+  "protocols/gensyn.json.gz": {
+   "bytes": 480119,
+   "sha256": "b89e11a28b0524a5f569ada27e2fa3664c7cd443b72b22c779a154819fb59c59"
+  },
+  "protocols/solv-protocol.json.gz": {
+   "bytes": 1424541,
+   "sha256": "9ff337fe669c56b38150b7cd60d20bc1152b28d916255ea3826a1a54d4d2c726"
+  },
+  "protocols/jpegd.json.gz": {
+   "bytes": 325399,
+   "sha256": "43ff41eb85364d43e52901863171027ae071be5cc4334ab9b7180ceeb8786b2b"
+  },
+  "protocols/backpack.json.gz": {
+   "bytes": 2830,
+   "sha256": "e4045dd613304eefe60f5f240b57d8a2304722db7793ce743ebf561a97d7145c"
+  },
+  "protocols/pudgy-penguins.json.gz": {
+   "bytes": 1067070,
+   "sha256": "75f182227f6a6418039c17e82457470428f708a901b8c16e2a0a0d5d08e3576f"
+  },
+  "protocols/resolv.json.gz": {
+   "bytes": 784228,
+   "sha256": "99ca4b220cbb21cd23533e99d3762c3b489ff951765fb546f6b04b6a59080a12"
+  },
+  "protocols/pendle.json.gz": {
+   "bytes": 1618767,
+   "sha256": "b27e2d38687bd757d6a0546c3832cf92331debfa95fec9a7f557a8b41ea58b8d"
+  },
+  "protocols/movement.json.gz": {
+   "bytes": 823219,
+   "sha256": "d8ad1d60340ef2a4d119a419be2edde5f52d9ac50693691343f44eb2431e6066"
+  },
+  "protocols/omni-network.json.gz": {
+   "bytes": 547513,
+   "sha256": "10dcc4d30a7d91a2ef0a3a6ff44be0dfdb90d13b1355b89d89b3db56d8f9b9dc"
+  },
+  "protocols/holdstation.json.gz": {
+   "bytes": 969000,
+   "sha256": "ba230fea1f692bf23757c8f00d372879076ecb327c56c13d761eb4dd35a66686"
+  },
+  "protocols/maia-dao-ecosystem.json.gz": {
+   "bytes": 594917,
+   "sha256": "e009bc4ab9a2ae027f5f1551df3f29785f7b5f114ad10a326dd07412c4a55d3b"
+  },
+  "protocols/prisma-finance.json.gz": {
+   "bytes": 804001,
+   "sha256": "fe884cb59b5acf7254c0fb3e446ee990fa050d3152228bee54e188e7085155b6"
+  },
+  "protocols/humanity.json.gz": {
+   "bytes": 1006044,
+   "sha256": "f2d625e5169384d935df22092ea3e8c28ece1addc4740ad15f962028207d1400"
+  },
+  "protocols/manta-pacific.json.gz": {
+   "bytes": 2131530,
+   "sha256": "2e557a9d32e5b1014410d9932669387930189704c53c7d1d69e710b25d5d8e23"
+  },
+  "protocols/vela-exchange.json.gz": {
+   "bytes": 4676419,
+   "sha256": "89ab2ddc1d833f054789b050c0af65dc67679638eec8ca28161625f784d3b6d3"
+  },
+  "protocols/zkswap-finance.json.gz": {
+   "bytes": 1398842,
+   "sha256": "8ff695c4e5398f1b2be5d964fe4569fef8ee8f5f630bd7fa8b6bd629b2cfbe38"
+  },
+  "protocols/dymension.json.gz": {
+   "bytes": 564736,
+   "sha256": "aff4f32ddbdcfaa6361407799b8a4102ff9827aabec9e7f2eef24213ce6ae710"
+  },
+  "protocols/celo.json.gz": {
+   "bytes": 5889474,
+   "sha256": "ac714ed8a58afca0650fea2f705caf869c6f293945dcc4f1493183830c26844d"
+  },
+  "protocols/merit-circle.json.gz": {
+   "bytes": 1049645,
+   "sha256": "1da5a1b263618b1c5b5ce1c04933e7a44d30e6dec65b0dbf115728b0851091a2"
+  },
+  "protocols/gearbox.json.gz": {
+   "bytes": 610197,
+   "sha256": "10cd2250ccbf26b53111e356ed519878b3505228e3edb6e982cda9d6a346a4dc"
+  },
+  "protocols/dfx-finance.json.gz": {
+   "bytes": 1997633,
+   "sha256": "059c3b0b2607bf3391c9ccd808cd8eae98b86b0c08c307073bac4b22f87625b0"
+  },
+  "protocols/shadow-exchange.json.gz": {
+   "bytes": 517149,
+   "sha256": "e6b2f8356d410f9eba099b32fe4b19632a118073afce3230cb59c0ec562799b0"
+  },
+  "protocols/raydium.json.gz": {
+   "bytes": 553265,
+   "sha256": "68220700283cf6b9978de6e241db9c48fc7b2a2c6828e2bf4a52057c5578bddf"
+  },
+  "protocols/berachain.json.gz": {
+   "bytes": 1231176,
+   "sha256": "61d8bafa7884e7ffedea42ca733e0c0f9d4f7398581bdd25735e17a8de2bc213"
+  },
+  "protocols/sei.json.gz": {
+   "bytes": 2471070,
+   "sha256": "c283aac7093a56cee709c7e8f3ca1340d6d3f217a88b1f5b7b8462773e14efe8"
+  },
+  "protocols/yearn.json.gz": {
+   "bytes": 398203,
+   "sha256": "ef4fcf5c023390266727c11c14d51121748f76c8f6443d5139119834077f2e00"
+  },
+  "protocols/apriori.json.gz": {
+   "bytes": 832498,
+   "sha256": "4b0162f6fc67b8a68a4a5ddc429811daea06bee80742c7ba51835d20f7a11e43"
+  },
+  "protocols/baseswap.json.gz": {
+   "bytes": 330346,
+   "sha256": "b6ed7a437bfbc92c65732a9052bc3b345aeb9b712186a52ef64627de29fda542"
+  },
+  "protocols/meteora.json.gz": {
+   "bytes": 1827945,
+   "sha256": "8eeb075db4a35c3d81896c67fe6f59d7e2ea42fb4a9518d1516b034487a050c2"
+  },
+  "protocols/minebean.json.gz": {
+   "bytes": 29812,
+   "sha256": "80068af986352b1cccfda227e547358907aafc09094f0181c42a0ae2fade3278"
+  },
+  "protocols/hyperliquid.json.gz": {
+   "bytes": 371812,
+   "sha256": "c944aaf54d6113ea66bbe0ef56d810a9cba460aa8f86c968fcc2db66273196c8"
+  },
+  "protocols/level-finance.json.gz": {
+   "bytes": 1579656,
+   "sha256": "075e21e62e068c8b79785597611440d5388dbd17d6d5e92485d667923922bf34"
+  },
+  "protocols/bittensor.json.gz": {
+   "bytes": 1741872,
+   "sha256": "3d3003a634ec9ccf32b647c0da15c0e1860ba2ca4e2524145af6f085a29653c5"
+  },
+  "protocols/doublezero.json.gz": {
+   "bytes": 1037838,
+   "sha256": "4dff69841d8e1b5fc1e89c8895dfec5c96eb296b1e2c7c97c949fc2eccf0c01c"
+  },
+  "protocols/chainlink.json.gz": {
+   "bytes": 617875,
+   "sha256": "680ef41581a428cfbe97ce5e9d1889a6b837959fe7cab858288118f224232db5"
+  },
+  "protocols/thorchain-dex.json.gz": {
+   "bytes": 1587034,
+   "sha256": "a295f0c487004bd1e759c42bd5be921127dc465f1d5dc69830f14c2857bcc106"
+  },
+  "protocols/salty.io.json.gz": {
+   "bytes": 6440866,
+   "sha256": "e63e78a090620446168d0bbf00fd2c46bba48fd37df26798c96158a81bc871b6"
+  },
+  "protocols/auki.json.gz": {
+   "bytes": 3391557,
+   "sha256": "864cc5ae54b28a2b47f02bc279d8fa94f1319b4de1e8c80751a7537b2362b896"
+  },
+  "protocols/chainflip.json.gz": {
+   "bytes": 800187,
+   "sha256": "f333bd72e9771b5debe10eb9f6b626e28765af8e47392aed748065c32d74cd1c"
+  },
+  "protocols/infrared-finance.json.gz": {
+   "bytes": 746189,
+   "sha256": "cf886b9c271405ef8137809992c52ecf3cb70f37f8455e961452407cf21afbf6"
+  },
+  "protocols/pinksale.json.gz": {
+   "bytes": 1989562,
+   "sha256": "c7121fa5d14ca42a70643f2ca0de54915e4dda41149bc237b9e9c71b9c0d801a"
+  },
+  "protocols/river.json.gz": {
+   "bytes": 1558508,
+   "sha256": "d2e4294dfd0fd1c083f07bb1ae5b6779e5bcd4a096ab77defae445932669ef2d"
+  },
+  "protocols/solana.json.gz": {
+   "bytes": 3154902,
+   "sha256": "905430693f290dbcdf20fc75c09b0444a3f3e924ec9b80d2ddb7a636d9cdd39d"
+  },
+  "protocols/dinero.json.gz": {
+   "bytes": 1537909,
+   "sha256": "35a9f9337c9c80f32e00c471c98f0a863d66032a7330e3bdccea2e7840de85e6"
+  },
+  "protocols/jones-dao.json.gz": {
+   "bytes": 575388,
+   "sha256": "57c9fbf9a7349baf21035c7bae941640b9d1c4e91ec1aa27591431da7efccbec"
+  },
+  "protocols/dydx.json.gz": {
+   "bytes": 1426167,
+   "sha256": "0af42a2fd9dccae104639667626db98f59bde11e6020417857d68c0b0afdb067"
+  },
+  "protocols/drift.json.gz": {
+   "bytes": 680367,
+   "sha256": "fcd5fa710db69f6cd98af57c50a3c7c291c586c81831d9fb6e2396e80150f99a"
+  },
+  "protocols/flowx-finance.json.gz": {
+   "bytes": 1057513,
+   "sha256": "2f30c05c0ff50c09658914b9a74882cfc759072201a8fcff0245e9a1dec5b3fa"
+  },
+  "protocols/credbull.json.gz": {
+   "bytes": 1358981,
+   "sha256": "11c51b871be82485053947fc1807820634601b77153727ba2fd2658a4a3f7dbf"
+  },
+  "protocols/jupiter.json.gz": {
+   "bytes": 494540,
+   "sha256": "5d0d3107e1e6bd6df618975a5888c6bd424fcda956a43e00b81d65da6efde8e7"
+  },
+  "protocols/blast-l2.json.gz": {
+   "bytes": 958106,
+   "sha256": "f3ceed38d26fa6405d026e31ee59017b0116ace9655b0f6c6e01bdd8795e61f2"
+  },
+  "protocols/carv.json.gz": {
+   "bytes": 956137,
+   "sha256": "d78b198686b0777adc8f7138950a36a524e2c63de610828f243b1846c1c412ad"
+  },
+  "protocols/stryke.json.gz": {
+   "bytes": 379702,
+   "sha256": "56c721082c89045710b700997131762eda6ee26fead91e78ae9d1894cae8b0c3"
+  },
+  "protocols/apecoin.json.gz": {
+   "bytes": 711677,
+   "sha256": "0e899e70f15da1d6999e61dff277fc674277442b5c005673dd0965ab21c81519"
+  },
+  "protocols/goldfinch.json.gz": {
+   "bytes": 1671092,
+   "sha256": "e3004a790322fa5c6ec66f239c950c39eceea2024388848e86d00f8631a35e14"
+  },
+  "protocols/liquity.json.gz": {
+   "bytes": 2089786,
+   "sha256": "ba253132b9a2670cb50088cfdfe8a6f931fa8a6d98b91edfe254b67f4cfba96e"
+  },
+  "protocols/melania-meme.json.gz": {
+   "bytes": 145037,
+   "sha256": "bcf3cdd6f21232d935714a23b3966091bd845aaa44ac5624664b4095b8824d7a"
+  },
+  "protocols/falcon-finance.json.gz": {
+   "bytes": 1013903,
+   "sha256": "7a3e3a7561cc11f8fb8a6c30dbbd78dd46143c979f84c4183bee01a7991cfda9"
+  },
+  "protocols/numbers-protocol.json.gz": {
+   "bytes": 1192099,
+   "sha256": "80b44c1ef53f78734852ff328e3013da97319bbbbf1664002844aa8f225ee4a0"
+  },
+  "protocols/safe.json.gz": {
+   "bytes": 2228013,
+   "sha256": "b8ac9e45769991eb7ec67cd502bd2105870a0c64e8cf8c3273326d8494408457"
+  },
+  "protocols/polygon-bridge.json.gz": {
+   "bytes": 2347852,
+   "sha256": "876553aaea91c4485acabe007c3df132e080a368299c352957254654e099ac77"
+  },
+  "protocols/ondo-finance.json.gz": {
+   "bytes": 658381,
+   "sha256": "0fa35c26f7453766ce49fa9a9d3292d06bc06f8e90c759eafefb3fbcb80a2fab"
+  },
+  "protocols/maverick-protocol.json.gz": {
+   "bytes": 1967104,
+   "sha256": "915ab11f86361afb61dd28a55421b63f1d128618437fd6a14fdef7fd2f3a2843"
+  },
+  "protocols/walrus-protocol.json.gz": {
+   "bytes": 1626816,
+   "sha256": "02c1065c7686cd60744767eda579d4868291c5a1db42123280bcc4ea1fffacf0"
+  },
+  "protocols/quickswap.json.gz": {
+   "bytes": 568246,
+   "sha256": "fdcfb4ed103a312efd46c8815a40b92189d3a7a9eefb0b549c99efd1051a0af1"
+  },
+  "protocols/redbelly-network.json.gz": {
+   "bytes": 831054,
+   "sha256": "acd7a3f7f91a1c53f935fdcc5f7e64fab5e000dee7a97963c0c1670a5ec2b54f"
+  },
+  "protocols/tron.json.gz": {
+   "bytes": 2312183,
+   "sha256": "a5d220f8c168d4be64c7487e574c3178fc42109f5e4a8c08638512031af9048a"
+  },
+  "protocols/stella.json.gz": {
+   "bytes": 1095416,
+   "sha256": "39b4b6258886b62ab81988e96006782664d3a395f2afdc58405435a2e7ad9d7e"
+  },
+  "protocols/sushi.json.gz": {
+   "bytes": 552408,
+   "sha256": "d4e49347837056e53cf625bfcb71ee2a8e583fa83cbd06afd7027531172d1d4b"
+  },
+  "protocols/polkadot-treasury.json.gz": {
+   "bytes": 3408261,
+   "sha256": "7d10403639027bd93f4b430822970757002bc2069b0c02784d6139b3750026ac"
+  },
+  "protocols/megaeth-bridge.json.gz": {
+   "bytes": 1093959,
+   "sha256": "1c8cd6c51d432055ffead6e4d99c5781f5b6e06c90e6839dada0145288f34f47"
+  },
+  "protocols/superfarm.json.gz": {
+   "bytes": 1099153,
+   "sha256": "68d220ef4834247be218137b7926f9bfbf4e7fd625597671ad20e835a7853e12"
+  },
+  "protocols/rarible.json.gz": {
+   "bytes": 423733,
+   "sha256": "c4070e21301d46f56e2d6aee168c4908822705f52d40a35cd09fd25ed9e41f52"
+  },
+  "protocols/magpie-ecosystem.json.gz": {
+   "bytes": 969923,
+   "sha256": "ce6c7a698d4275e9d8160cdf526980a3ee7cda3fae478666fed92fd7a68dff4b"
+  },
+  "protocols/mantle-bridge.json.gz": {
+   "bytes": 185634,
+   "sha256": "ccb8054893b0ca756de7f649d2bdc120cdf780bf409b9a3f37ca584f89d087de"
+  },
+  "protocols/murasaki.json.gz": {
+   "bytes": 811872,
+   "sha256": "c23d604d49b3086d7a926188bbe50e993fa4954349d4e88ebb5108ed7465db2b"
+  },
+  "protocols/synfutures.json.gz": {
+   "bytes": 1061411,
+   "sha256": "fe5d6924610e62f1aa5c7484bbda86eae57e414480aa3b815557966bd0e228f0"
+  },
+  "protocols/spacefi.json.gz": {
+   "bytes": 978323,
+   "sha256": "cba3462d44e715ff039784bd90183adcad0d2ae1e6405edaa87640a77b6692c5"
+  },
+  "protocols/pharaoh-exchange.json.gz": {
+   "bytes": 61265,
+   "sha256": "70efc7ca2442ddfbf54e9664633996ee7cf0d671f8ea08b88ceab3588610cbf4"
+  },
+  "protocols/zinc.json.gz": {
+   "bytes": 11392,
+   "sha256": "8b7db0ff64e76d590c2cb44c005f588d97eab07b2206ecfe7088a3334a3f24ed"
+  },
+  "protocols/sophon-bridge.json.gz": {
+   "bytes": 1207432,
+   "sha256": "7feb254ac552f631bd130fcc48a03396e2c365416c183d1606cd5b527ec7dc46"
+  },
+  "protocols/mercury.json.gz": {
+   "bytes": 3540,
+   "sha256": "f71aeb9d25877391dcbd38d5fdbcb1e2b2274ecb15999cfa6a5a0aa4c34c3fbd"
+  },
+  "protocols/plume-mainnet.json.gz": {
+   "bytes": 518288,
+   "sha256": "30c02bb4358e2c040a2db44537597c1d6ba2d987f3e581c3a1466701b83008c9"
+  },
+  "protocols/kyan.json.gz": {
+   "bytes": 1473500,
+   "sha256": "7ffb941627576ca96cd495209365a277ff705933cd3ebb36e3b93004acd3a112"
+  },
+  "protocols/pharos.json.gz": {
+   "bytes": 1342310,
+   "sha256": "f24090bd899cdb1af74434e622160711ede85f01089af01f83ef72b51ffd8a87"
+  },
+  "protocols/x2y2.json.gz": {
+   "bytes": 814772,
+   "sha256": "60be1b6b98c651c778662a33b70227412b9561ce07680c1dda766d04bcf4c172"
+  },
+  "protocols/pharaoh-legacy.json.gz": {
+   "bytes": 405000,
+   "sha256": "c1428aba2c5c3cf7c5dc7ececce156f07e64921bfc868489fa08c7312a11c341"
+  },
+  "protocols/pyth.json.gz": {
+   "bytes": 528402,
+   "sha256": "99fd58f9f213033ebf1d2fb489661b513a9e8fb25d78f99280ae557fe8b2e317"
+  },
+  "protocols/rainbow.json.gz": {
+   "bytes": 607079,
+   "sha256": "a1da596400552d329ec2e80c720eec14a17e4e388dbe3b4dfd595a68806ba906"
+  },
+  "protocols/polyhedra-network.json.gz": {
+   "bytes": 1413235,
+   "sha256": "6461a18916dc088b7bbd91724b98f6eb5c76798670b96e12417a244b02c6dda7"
+  },
+  "protocols/resupply.json.gz": {
+   "bytes": 1498989,
+   "sha256": "2dd2d35d906c12d32caa8a575de5a251fed8d6ceb0564b3ba4f150f1aa9a3f56"
+  },
+  "protocols/truefi.json.gz": {
+   "bytes": 442858,
+   "sha256": "0ef9c724ad693d8573f23f0c51133d00443bdc3376a26fc6341a58d0a5ead1d0"
+  },
+  "protocols/spark.json.gz": {
+   "bytes": 396894,
+   "sha256": "305c376e0b69ea3de4f71dc0a1d3aa81486c12ffaa6bc2d633eca6718f62d7fc"
+  },
+  "protocols/saucerswap.json.gz": {
+   "bytes": 1841847,
+   "sha256": "d83cfe97e3e3a3e4319e1f06a2b11cd29092d0ca1faaf78756916790b72de5b8"
+  },
+  "protocols/zetachain.json.gz": {
+   "bytes": 948762,
+   "sha256": "abd92694e1198bf38c772dc9572e3945da92cf7c41b8a0201034b5541941f328"
+  },
+  "protocols/sonic.json.gz": {
+   "bytes": 3197198,
+   "sha256": "73c513612bf774018876909f9cee1dbde4e20b211b5663f2296af341a01f1aaf"
+  },
+  "protocols/oasys.json.gz": {
+   "bytes": 1051004,
+   "sha256": "f9775aefbf6923f5251d586e2db48d67a3c4730ec27644fa2aefab148279a6f4"
+  },
+  "protocols/stable.json.gz": {
+   "bytes": 567634,
+   "sha256": "c386dc84e64c67f93877497394c5f8c117b8e4a02b8f78eb276b417a135d7a30"
+  },
+  "protocols/binance-smart-chain.json.gz": {
+   "bytes": 2364475,
+   "sha256": "799fe778ab158002ac334e63b5817b41a63b36d0cb82081e512b9dc2b3502b66"
+  },
+  "protocols/sign.json.gz": {
+   "bytes": 1323854,
+   "sha256": "5369fa04f70a090867f8aded53573a6d8d133f11929ac649bccbf20ada49c367"
+  },
+  "protocols/neverland.json.gz": {
+   "bytes": 639264,
+   "sha256": "98d0c38bc5f028b7ae81876c3cf304c50b69ba25bff6b049a8ee090f2ab59f0f"
+  },
+  "protocols/metars-go.json.gz": {
+   "bytes": 739740,
+   "sha256": "47ae5dab15affdc9ebcb6c9751f28a8ff09b61b41943fc3aa9e32b98e3aa0c9e"
+  },
+  "protocols/wbtc.json.gz": {
+   "bytes": 542299,
+   "sha256": "a9865e77f46736286d43845062c68c6569e46a00adff9d3caa5b8c616f13fdb3"
+  },
+  "protocols/stakestone.json.gz": {
+   "bytes": 1373919,
+   "sha256": "0ff7e1974b97cc9af6aa92aa5acf8fd7eee9cd8a3f181ff2cf696255c97c11de"
+  },
+  "protocols/swell.json.gz": {
+   "bytes": 672213,
+   "sha256": "217eacb8a021dd4df7a8bed34643dec1bf3ccec4b1fdb2c532ef81fb4514ee3c"
+  },
+  "protocols/rhea-finance.json.gz": {
+   "bytes": 733483,
+   "sha256": "d94f437b44fbff7b6de30fe74d6e471e7fec336642efccfcbca45c0109a5a6cd"
+  },
+  "protocols/scallop.json.gz": {
+   "bytes": 1398453,
+   "sha256": "7c056a161d5b2785dd26b4c279c32ecddc7b51ba8947fe48c9f2805e8df620b4"
+  },
+  "protocols/renzo.json.gz": {
+   "bytes": 556344,
+   "sha256": "d7c81c5769bb2901cf6b75f0cc867a3b30353f943e15d3af5d6c69c83ec116c0"
+  },
+  "protocols/plexus.json.gz": {
+   "bytes": 1683349,
+   "sha256": "8676e5f18aca19aafe8822b4d5d755030f63f427245ed9e1871546e1c9da6f2f"
+  },
+  "protocols/plasma.json.gz": {
+   "bytes": 421595,
+   "sha256": "158dfd2c71028934f8b943fa095ffcd8751180b0bfbfd9d791844beeb225e6b1"
+  },
+  "protocols/fantom.json.gz": {
+   "bytes": 2020546,
+   "sha256": "59477e8a02f142852b10ca23cbc18a14846a243bdefc74cc26fd9b766dba1c43"
+  },
+  "protocols/turtle-club.json.gz": {
+   "bytes": 529987,
+   "sha256": "80d619540530569ed22e4b3e776efc77eb929817edfe1d8bb378a69112ddbc50"
+  },
+  "protocols/dune-protocol.json.gz": {
+   "bytes": 5038,
+   "sha256": "e06fb69d23cd863b054a5d751b2ba9850c41bbb1accb30a8b7906dfba563ce5e"
+  },
+  "protocols/silo-finance.json.gz": {
+   "bytes": 486815,
+   "sha256": "7e1bdc10c54f6b0b4355d8db8cfe238a2badb0f74a2f092d66aa13c02cae4aeb"
+  },
+  "protocols/redstone-finance.json.gz": {
+   "bytes": 780313,
+   "sha256": "c41e2d9ae696b7db58377c5399f5172b2c61cffeae75704085d70e50307c3159"
+  },
+  "protocols/heyelsa.json.gz": {
+   "bytes": 661969,
+   "sha256": "661db3f2705804338040fa180aa204d6cdb0edcc6a21d43ac7302e116e5cfef8"
+  },
+  "protocols/big-time.json.gz": {
+   "bytes": 1025924,
+   "sha256": "f7be9b83376a087d19e93e0a650e1c7ecbd3f779cf983567aff33e5340ea02ba"
+  },
+  "protocols/ramsesx.json.gz": {
+   "bytes": 167677,
+   "sha256": "cdcc1b41e2cd77d11b9091f7a0054203be06d2c958ac03d64b119f70311b0946"
+  },
+  "protocols/myshell.json.gz": {
+   "bytes": 1585776,
+   "sha256": "57e7bf676173362d9e643641b30d720e4d49046b9652a17ff8d2f38f2cf685ba"
+  },
+  "protocols/ipor-protocol.json.gz": {
+   "bytes": 1007705,
+   "sha256": "75fc18ef9f2dfe136406abcd6b3f39cf81bfadae1314c3b1292c6b0936fb93fa"
+  },
+  "protocols/compound-finance.json.gz": {
+   "bytes": 789431,
+   "sha256": "ccde245790ef237a187c0605442c5438627788c0d0668d3cf84043effe1d025f"
+  },
+  "protocols/uxlink.json.gz": {
+   "bytes": 367009,
+   "sha256": "7bb8ee887636840d984113e07524bb6001107acfb0164e56bab0f6263bc5cff6"
+  },
+  "protocols/zora-protocol.json.gz": {
+   "bytes": 857664,
+   "sha256": "3e66ea30acf9d05dca5007d2050bb4595b962a4bc5fce5d5aae43cddb2907e7f"
+  },
+  "protocols/data-network.json.gz": {
+   "bytes": 744703,
+   "sha256": "1228f6beb62b7a7ea0c87db37391c95d48343adaae7d5ea1c132460aa6c1242e"
+  },
+  "protocols/ton.json.gz": {
+   "bytes": 1025983,
+   "sha256": "41fa2e2e32ea450b2825011bab3f9615a6f7a2f25c6bfacae365c19712712c67"
+  },
+  "protocols/virtuals-protocol.json.gz": {
+   "bytes": 2360,
+   "sha256": "aefb3e881387746f71bf4313f6c34e7addc227620100532c3957efe95c705909"
+  },
+  "protocols/echelon-prime.json.gz": {
+   "bytes": 704611,
+   "sha256": "0bac53e43aa25fcdcef42217cbcb6787fa0ae49c6eb6f899347954a20a48a227"
+  },
+  "protocols/zest.json.gz": {
+   "bytes": 671243,
+   "sha256": "786383efbe450106d5a6b0f8d7b9f6a2bde0ce7f08cd83649710bf1e65aba865"
+  },
+  "protocols/superrare.json.gz": {
+   "bytes": 532258,
+   "sha256": "f4d56725154a500d2316cab3e03be8229136a5567c8392c1828bb63269df0754"
+  },
+  "protocols/memecoin.json.gz": {
+   "bytes": 892813,
+   "sha256": "bc634dd53dcb1c5b831049f7330080da3c0b8b16e9a29b530a2ff9fad56e6a3c"
+  },
+  "protocols/wombex-finance.json.gz": {
+   "bytes": 2979767,
+   "sha256": "ce065dde781e48f722f71ad6faa791ec87a5c05a9cc33e92ab3b126b32ca8d42"
+  },
+  "protocols/ribbon-finance.json.gz": {
+   "bytes": 853578,
+   "sha256": "a626ac35402f380255390ed94c28fd56b9c50248de8cf7a21d0ff65d5277c5aa"
+  },
+  "protocols/gaib.json.gz": {
+   "bytes": 842621,
+   "sha256": "5b91e6d0cff612374bea144fcd2b69fce487ba921009fe91abe1dc2ac9c61199"
+  },
+  "protocols/eigencloud.json.gz": {
+   "bytes": 494842,
+   "sha256": "2628e6f6e808a8f871445cdc0b0b956a449dfe3c8f24cfe2a6e165090c65ae3d"
+  },
+  "protocols/meridian.json.gz": {
+   "bytes": 743887,
+   "sha256": "82878afd942a7d26ad71efd6ef1b03d5bb3050189b8aaa075d3e15e26fb1aa6c"
+  },
+  "protocols/forta.json.gz": {
+   "bytes": 1497470,
+   "sha256": "c0441005cc6042218015d580d276da992de4fa32183b52294fae39cd9c807bb0"
+  },
+  "protocols/sanctum.json.gz": {
+   "bytes": 563351,
+   "sha256": "4b4288506d067e4fde69a80f85a963c21709bfa59d12bf2ef78dbed607b69586"
+  },
+  "protocols/starknet-bridge.json.gz": {
+   "bytes": 2404988,
+   "sha256": "d0fadc7d575e596a091c618efaf752d80ca8a10d3f9120854c404072028d8b21"
+  },
+  "protocols/api3.json.gz": {
+   "bytes": 1488168,
+   "sha256": "cd520de62548839685f887223c322dae287ba62d19afe6f04772db6651975c49"
+  },
+  "protocols/xai-bridge.json.gz": {
+   "bytes": 1430966,
+   "sha256": "853b1aebfa5975b4c95bc491de9458ce517d6ba8a541de8eea3cc7a23ff53615"
+  },
+  "protocols/maha.xyz.json.gz": {
+   "bytes": 2581144,
+   "sha256": "568242a4d7dccc122da0f5848798e4b3797d3c18fd0426a0cd949e6aacd128ae"
+  },
+  "protocols/canto.json.gz": {
+   "bytes": 2184138,
+   "sha256": "111b68bf3867f0dc56cc02e44d1fab0ee913349e6cc402c0ea2eab305b639713"
+  },
+  "protocols/common-wealth.json.gz": {
+   "bytes": 1387050,
+   "sha256": "be758a3f33a340ce551ff27c26c5433e08ac37b5f835df236ef5156cc1d52850"
+  },
+  "protocols/cowswap.json.gz": {
+   "bytes": 1067752,
+   "sha256": "84af4594b2837b0b94b8860c119b33c7865fe119ebc476b298efb5530cf5781f"
+  },
+  "protocols/arcium.json.gz": {
+   "bytes": 1045345,
+   "sha256": "abf12232719d0cda4d00bd4b476bb77d40148fc900bf8c386ee97767728cf1ee"
+  },
+  "protocols/slvr.json.gz": {
+   "bytes": 44062,
+   "sha256": "722b737c77aa3d29dd8249f506ca0cf15d948704526db3ecb5df61797349b72d"
+  },
+  "protocols/celestia.json.gz": {
+   "bytes": 2671686,
+   "sha256": "ec92346b99ee1d57934fe4e32ce8a8fe6ffc51d130aba36c5ca7b972be9d271a"
+  },
+  "protocols/rain.json.gz": {
+   "bytes": 462726,
+   "sha256": "23d2f907218be4f7c595922d3d50f803ec5138b98fc83059044b197400a817b8"
+  },
+  "protocols/aethir.json.gz": {
+   "bytes": 1138940,
+   "sha256": "d40d7cef0bcfd4ebb9fed148c169eec3af853053d10cb46008b8cd6ec257ce2b"
+  },
+  "protocols/altlayer.json.gz": {
+   "bytes": 1020379,
+   "sha256": "c5a8a1306227e85032b01f79d4484b654406c159d9e05e9a96d90f4cb3254509"
+  },
+  "protocols/ore-protocol.json.gz": {
+   "bytes": 54123,
+   "sha256": "2282ea7ec630a74907c9e3a2d7b0d42f59135c8a371b0db1f546a4f43d230a48"
+  },
+  "protocols/axelar-network.json.gz": {
+   "bytes": 1245393,
+   "sha256": "e3426627fa5e77d52b43abe3c4ff3f8b0a0586eee20e6b88679c019320e1c656"
+  },
+  "protocols/etherex.json.gz": {
+   "bytes": 295991,
+   "sha256": "705dddfc684d3058b5c0ee239a7ff46e3f6063eaed559f800b8d75b0522918e2"
+  },
+  "protocols/thorswap.json.gz": {
+   "bytes": 777690,
+   "sha256": "da1efa293d7dfa424bd90807e371fabeeff6f9981ce2a8a44e2a4839e7ea940f"
+  },
+  "protocols/moca-network.json.gz": {
+   "bytes": 1101546,
+   "sha256": "19895f9e4ed4f8b51bd6bc606047894e6c5322082b10d2e49c39cd6d9153dbe7"
+  },
+  "protocols/ether.fi.json.gz": {
+   "bytes": 706945,
+   "sha256": "3f3ab74684620d1bebbfff135804c4270661bd341dd995aa19932d2e2c1f26b7"
+  },
+  "protocols/tornado-cash.json.gz": {
+   "bytes": 710008,
+   "sha256": "c72f8c709bbaa94e2c342e9937c5f00d8b7776613f0d4c0c97c44c000b1ee186"
+  },
+  "protocols/woofi.json.gz": {
+   "bytes": 1266741,
+   "sha256": "e269ef4335dc6874d7731a42ef1c649ddcf9f11ad12a8706c942db1df501c858"
+  },
+  "protocols/aptos.json.gz": {
+   "bytes": 1889194,
+   "sha256": "755412371c671b9c0872317486e144a6665bdf11ae884b0531ed806027a4f4ff"
+  },
+  "protocols/valas-finance.json.gz": {
+   "bytes": 811205,
+   "sha256": "dad39b67f458e89c6cc6179a66770d5e23fa5a9283b381d5d26e994e63b68646"
+  },
+  "protocols/flashstake.json.gz": {
+   "bytes": 335781,
+   "sha256": "e7cdf6b0f32a5ab344b8883d6f08376764cf8e6473368f690e7e5e6ed140f560"
+  },
+  "protocols/aster.json.gz": {
+   "bytes": 585564,
+   "sha256": "fb42545503c986cec254aaf7262736654beac15835e7e26549c52e79e5efa300"
+  },
+  "protocols/qidao.json.gz": {
+   "bytes": 326310,
+   "sha256": "35a113b9c45c7ea272cc6c5896c38df89a21eee1dcac174593b3676249c076a4"
+  },
+  "protocols/beam.json.gz": {
+   "bytes": 647424,
+   "sha256": "1b421e898b101b92f1afabb649c1499c250219ef8ca691ecaf8824a670d93a8a"
+  },
+  "protocols/claimrush.json.gz": {
+   "bytes": 42114,
+   "sha256": "fb6d977981f78b1604ad747de678f88c54bd95035589e594957becc861d4aa95"
+  },
+  "protocols/yield-basis.json.gz": {
+   "bytes": 934470,
+   "sha256": "1b697dbee6c165fbed26c2a8fd8589f5411fbf007a5d032a50067867b5da5d01"
+  },
+  "protocols/quai-network.json.gz": {
+   "bytes": 2016382,
+   "sha256": "e0cb57be6029006686e7c98a1063ae5ae8d392b080cf1652c717915d25c1577e"
+  },
+  "protocols/uniswap.json.gz": {
+   "bytes": 1354504,
+   "sha256": "26082976c14a56d9852780d53af73819364a2096e060fca21faf7a6fded3b74f"
+  },
+  "protocols/fake-world-assets.json.gz": {
+   "bytes": 49003,
+   "sha256": "d3e685262fa0dc6306ca1b14d8dcc42607fca638211b7e21b9361fbcaf0aea78"
+  },
+  "protocols/radiant.json.gz": {
+   "bytes": 982607,
+   "sha256": "7a6d27b853b6a167ccade7536d124d357fe170baccdd0756f5509ac2b3822091"
+  },
+  "protocols/opinion.json.gz": {
+   "bytes": 683162,
+   "sha256": "d330544f613c7b3d53635dafb32e2869542e2971adbcb5d585ee433ceb1a4050"
+  },
+  "protocols/lido.json.gz": {
+   "bytes": 980487,
+   "sha256": "049d7cda78651e3f06bf7403baae9e5bfe61a33fcabca5fb5529d1cd2de41ade"
+  },
+  "protocols/internet-computer.json.gz": {
+   "bytes": 1962565,
+   "sha256": "739abf6d7fcd0f7ce8f90befbc0e46d13fe9acf4e9af5d1e03d4bf3672f24053"
+  },
+  "protocols/pump.json.gz": {
+   "bytes": 913971,
+   "sha256": "9c3406a11a107e842b7afc72ec60008c31ec0b1fbb20e590775910470c9d90bf"
+  },
+  "protocols/cetus.json.gz": {
+   "bytes": 526438,
+   "sha256": "c58d1f28e2a2bd321874000d7873011af059df0fcc653b0a6ad8715ff27b866c"
+  },
+  "protocols/abracadabra.json.gz": {
+   "bytes": 575350,
+   "sha256": "3c376dff1160fc71e7793de3caaf3dee7a1e48de17c2f6d1a022166fb7650500"
+  },
+  "protocols/memecore.json.gz": {
+   "bytes": 1136672,
+   "sha256": "dae63c495ff266c561613757a513dcb36596a727134c4d5fdbd1952cf11b515d"
+  },
+  "protocols/zealousswap.json.gz": {
+   "bytes": 3054475,
+   "sha256": "75d0729b67a59718cff4b3a940dff541de326075b1bdd4ade9867c2fe5fd4493"
+  },
+  "protocols/rocket-pool.json.gz": {
+   "bytes": 1669181,
+   "sha256": "b2a0fd6f6db02a45ef19426e428a8a05781ff86406c84023d2f4b813b46f8ce6"
+  },
+  "protocols/avalanche.json.gz": {
+   "bytes": 3643319,
+   "sha256": "9516f2f8746567dec4ef3fbedb57287cdae92cfa46b8a2d363f4ee32f1d0e8f0"
+  },
+  "protocols/cbrs.json.gz": {
+   "bytes": 86035,
+   "sha256": "eb03d7d34106aa1fcff6462b2ee85783437353eb7a4a1b3a32a512b6b3402417"
+  },
+  "protocols/acala.json.gz": {
+   "bytes": 1810653,
+   "sha256": "0a510fbf2a7940aae6ee4c5216954af8863c52df626d890e1207134f88d1285a"
+  },
+  "protocols/synthetix.json.gz": {
+   "bytes": 2491048,
+   "sha256": "10fea5b86b308765f960c671efaee2fda51b7973e9bfd2d294fb9bee36b1d89f"
+  },
+  "protocols/centrifuge.json.gz": {
+   "bytes": 875552,
+   "sha256": "b8d554f2bfd62468528248d9e427f68bef5ef25ad390f786bad1040b84ba5b7d"
+  },
+  "protocols/dogecoin.json.gz": {
+   "bytes": 1006052,
+   "sha256": "14d33ee88f89611e3624352aacfaefee7265915579b9f396c98d36ea6cb2ab46"
+  },
+  "protocols/ronin-bridge.json.gz": {
+   "bytes": 1352677,
+   "sha256": "85d728311baa5165d3af9a5f72dc5ffd40d693d62a0ce4520970a35c1afea983"
+  },
+  "protocols/orderly.json.gz": {
+   "bytes": 1822887,
+   "sha256": "a911976c6908458de1ec225dfce0868505a9158c64d7fe1095c3be6edb9130ad"
+  },
+  "protocols/canton.json.gz": {
+   "bytes": 2022483,
+   "sha256": "3039279ea58abe9d1cf5347eaa4e7abb1e26567245a6eadcce8b937455d825d2"
+  },
+  "protocols/connex.json.gz": {
+   "bytes": 693984,
+   "sha256": "29d1ae08481d8c8474bf44e8f534c272d5e39423a71f923023332f1b52b36f55"
+  },
+  "protocols/myria.json.gz": {
+   "bytes": 2011588,
+   "sha256": "94ac0fb1d0fdf8c08783096d67ef2d2615e4b33528b9dd1a26ec313c6c5e5532"
+  },
+  "protocols/jito.json.gz": {
+   "bytes": 508808,
+   "sha256": "a3c8441d1abe47f3ca79f7525d88b8f28d7bbad49b705e290df036c0e5ef612f"
+  },
+  "protocols/tectonic.json.gz": {
+   "bytes": 1720057,
+   "sha256": "8632b98495290e7094a97feaa95cd3bd07c8d698744c016b401f85a82c3f6d94"
+  },
+  "protocols/injective-orderbook.json.gz": {
+   "bytes": 693898,
+   "sha256": "ee7f15d685a274ca875d1cbf69f781d36b799e74a758f756e59e17ff074795c7"
+  },
+  "protocols/sky.json.gz": {
+   "bytes": 212703,
+   "sha256": "0e14dd43fbfedd74a520ac63bae100b1394bb20385f593c287fb7991abbc05b9"
+  },
+  "protocols/bitcoin.json.gz": {
+   "bytes": 846276,
+   "sha256": "13318f1488bfa69294ecd4f24142b227d4bb1dfa081ef8f1240cb7db21633ac5"
+  },
+  "protocols/across.json.gz": {
+   "bytes": 851581,
+   "sha256": "506b9eedfea61b97837b2ddf323572143f765a313771deb2148bade58c4f310a"
+  },
+  "protocols/bidgrid.json.gz": {
+   "bytes": 11641,
+   "sha256": "b6ff1224a004f041a21211098a699655d424c643733ecd6ba35edb6f469964c4"
+  },
+  "protocols/saga.json.gz": {
+   "bytes": 548946,
+   "sha256": "f4ceb0e1a1f82f22543ec067d5dcfc343ec19786292b2394e1fdcd425f5c2a83"
+  },
+  "protocols/ankr.json.gz": {
+   "bytes": 1043609,
+   "sha256": "5e70c9b84b93beab522759617066269717ee0359a7fc481f71272a413743b5e6"
+  },
+  "protocols/uxd.json.gz": {
+   "bytes": 503453,
+   "sha256": "a913206f7c73f2944dfabf35e94fd462896ce452ae9cfb48086c290bd5c5541d"
+  },
+  "protocols/y2k-finance.json.gz": {
+   "bytes": 995743,
+   "sha256": "2b2692a82191410ae368ce1f952486fa9304deee40b11b3a2778221c538982b0"
+  },
+  "protocols/quantixai.json.gz": {
+   "bytes": 328494,
+   "sha256": "cbb2cf5d91d20e9da588a02e5087b9a198538acf6af7bf83d18fd0e17edd0975"
+  },
+  "protocols/looksrare.json.gz": {
+   "bytes": 504282,
+   "sha256": "498db976b0df50a0b7463c40535f4501ac33c0631ffb845377dcbda7aed0bc08"
+  },
+  "protocols/peaq.json.gz": {
+   "bytes": 4964629,
+   "sha256": "3b17cceb5577aa8a6efc34c0b5c64eede35f77d21fa73595edfa1316121a8a8a"
+  },
+  "protocols/golem-network.json.gz": {
+   "bytes": 789374,
+   "sha256": "108e20f7fb2659a225e7ddd10f960ccab27c13b6d8e95bb759a72876637030c0"
+  },
+  "protocols/agility-lsd.json.gz": {
+   "bytes": 387230,
+   "sha256": "420b65e81f86e19002f54682b7be49c601beb89728f14f812114638395c78f93"
+  },
+  "protocols/monad.json.gz": {
+   "bytes": 1035379,
+   "sha256": "b357463a3ffae44e1cc5fb5093ea107fc17eb1f621973554772664e092534fe5"
+  },
+  "protocols/thala.json.gz": {
+   "bytes": 3013225,
+   "sha256": "298be92f1ca9d828a25f15c6dda23c9d86a3c1e1f99437dd51a5dcdea3ba4a67"
+  },
+  "protocols/clever.json.gz": {
+   "bytes": 2514260,
+   "sha256": "b349c2a8e3008835d5e1f19618aa44d9de6abc3ea315f6ed20ed45949730d45b"
+  },
+  "protocols/venus.json.gz": {
+   "bytes": 1493502,
+   "sha256": "a719393ebfaca4a701678a6fb0365569b80a66fe7008aaffa3899914e1608959"
+  },
+  "protocols/navi-protocol.json.gz": {
+   "bytes": 697724,
+   "sha256": "687873027e7c7febc810340013433bf231389df6ef6ee4f0312c50288576f6d8"
+  },
+  "protocols/geodnet.json.gz": {
+   "bytes": 1594440,
+   "sha256": "2ea1517b34908c6cc101abbda2ffa34936a8f783b170c3bed45fe1607d6faa7d"
+  },
+  "protocols/benqi.json.gz": {
+   "bytes": 1069760,
+   "sha256": "05bc71d9052f173093dc3ac5d948cb64169a63d5c2d92579aef85e2f0425f912"
+  },
+  "protocols/core-bridge.json.gz": {
+   "bytes": 16311545,
+   "sha256": "a047dbe525ca4f0e5ebac1ec624963442c1aca746c3be7fa83975ea41fc4c00a"
+  },
+  "protocols/kodiak.json.gz": {
+   "bytes": 806792,
+   "sha256": "b79f0c1cfa764d7d799a7a8c4b04d06be466e91b7ae4269daa769abe4a79d5e1"
+  },
+  "protocols/grvt.json.gz": {
+   "bytes": 615284,
+   "sha256": "638f231cb9a29095eaf62c6595e86ce58ace30f46c7c4b308889ceae2e3b2137"
+  },
+  "protocols/tokenlon.json.gz": {
+   "bytes": 1644892,
+   "sha256": "c2c37d27855cd40e82640d716ebad8ad54f6b06fb763cc79aa60de562ef7e532"
+  },
+  "protocols/godl-protocol.json.gz": {
+   "bytes": 40709,
+   "sha256": "b33822b3505abf26751d645c8f43d7d9fdf1d8aba8ccff3c4edbcecad072a7fa"
+  },
+  "protocols/magic-eden.json.gz": {
+   "bytes": 527753,
+   "sha256": "bf2d0efc96a140ef2ec7524da77c5bbfc207c01f5a47b9e4b0a00be5138fc4ea"
+  },
+  "protocols/usual.json.gz": {
+   "bytes": 709875,
+   "sha256": "694557d094eb117ff5ebba0d1ca2efe933ba58fa37b0d10356e9e854907c27f3"
+  },
+  "protocols/re.json.gz": {
+   "bytes": 445175,
+   "sha256": "a1e85df421e09813570acbdb34382a17adcd7f0c7d8f69ed09326ffbc5b7d626"
+  },
+  "protocols/hypha.json.gz": {
+   "bytes": 895769,
+   "sha256": "5736ccf81b18fbeaa804e159dd5ec838228697d4561c938572410dcee8f751f5"
+  },
+  "protocols/solayer.json.gz": {
+   "bytes": 770941,
+   "sha256": "8a2367ce3cb490e6747f7d154f71253b6413b7d5cbd9b4fd54a2d3ba505f2ba0"
+  },
+  "protocols/overnight.json.gz": {
+   "bytes": 417534,
+   "sha256": "c98476bbdb98a519c4055150b880ca9970d7e235b7f00b96377473e34ee40520"
+  },
+  "protocols/morpho.json.gz": {
+   "bytes": 1685503,
+   "sha256": "6555d1caa304aa8bb3921a58a71a6e2c8f895afc04486b323a5c76f6febc3e2f"
+  },
+  "protocols/near-protocol.json.gz": {
+   "bytes": 2359627,
+   "sha256": "44a141bdaa671249c0359c8d6cae51bb19130ab13a5f86bf65d719fe1ee13b82"
+  },
+  "protocols/fast-token.json.gz": {
+   "bytes": 731698,
+   "sha256": "77d3c55211aa68f8070bd810b0217e27140987f8f97d84388afb2319eedf1032"
+  },
+  "protocols/metis.json.gz": {
+   "bytes": 3898270,
+   "sha256": "2331f387558bbff3a3d46e58eb2576665c682e91ddb8561bd86b27bac4894c62"
+  },
+  "protocols/justlend.json.gz": {
+   "bytes": 632301,
+   "sha256": "790878544550fe3a68a13d15079d2834f758cad5efd27700f963417664922a77"
+  },
+  "protocols/optimism-foundation.json.gz": {
+   "bytes": 1834087,
+   "sha256": "b71e2816a0ba4c8f95b4e44934f811b864d0bd9196aa62ad7a119881d0e89c1b"
+  },
+  "protocols/cap.json.gz": {
+   "bytes": 786022,
+   "sha256": "8c60b59fe6d400c49edb9e941a7824ee5d13b96bc56734b40204a0d694f483e6"
+  },
+  "protocols/flowr.json.gz": {
+   "bytes": 9220,
+   "sha256": "34eb22f4f9a1d74d86928fbd66e16faceb0b6ab091b7ba92b00b50fbc61b4f77"
+  },
+  "protocols/immutablex.json.gz": {
+   "bytes": 773157,
+   "sha256": "3bd9c7b3268a53b5bc4143ea1a359d94b99e77c0b43b0b3f4db33b57b1cc940f"
+  },
+  "protocols/bouncebit.json.gz": {
+   "bytes": 2429160,
+   "sha256": "9de2cd0cfbbf8ae7b79a3458da61357a645692850a40415805ad92e010b4b5f4"
+  },
+  "protocols/citrea-staking.json.gz": {
+   "bytes": 509429,
+   "sha256": "678ad1eac6d2dd846b38ee184be4f6537703eceb24618c5b96c6154eb6839d61"
+  },
+  "protocols/ignore-fud.json.gz": {
+   "bytes": 3132,
+   "sha256": "040c81666bf89c20302b9ba8d78d75eafba2e0d49d547ece2602eca4af60ec18"
+  },
+  "protocols/suilend-protocol.json.gz": {
+   "bytes": 636400,
+   "sha256": "737837be8847307b576e17eef077a5d24370ec6f25c5930610ff4155cf2fc163"
+  },
+  "protocols/osmosis-dex.json.gz": {
+   "bytes": 5620073,
+   "sha256": "0d06eff52314dbc5c54cc4e5a4a8942f9126a27d692ae24a618fc1deed97136d"
+  },
+  "protocols/initia.json.gz": {
+   "bytes": 5044427,
+   "sha256": "3c5ae937b7e4650627c09ac735c0e9465256c6040e81e9e4d07a3ac0b1118475"
+  },
+  "protocols/worldcoin.json.gz": {
+   "bytes": 2552794,
+   "sha256": "7097b1d04336c1c6939fea15a265eaaacb42e088aa74b6c59fe512a4e8a03d6e"
+  },
+  "protocols/streamflow.json.gz": {
+   "bytes": 629210,
+   "sha256": "49d1e201a2bd181c10d8a98e222b1da5ebc2c6deddb94e4341695e3060ec512e"
+  },
+  "protocols/zyberswap.json.gz": {
+   "bytes": 285721,
+   "sha256": "c68217b6b71a68248be6214df1434900b534c7799f753206694a002f6d5cc22d"
+  },
+  "protocols/sui-foundation.json.gz": {
+   "bytes": 1709465,
+   "sha256": "f8387103e34fc68d466a34f9856c4099b0467bbed628e0c870690fffcaec75ab"
+  },
+  "protocols/onchain-trade.json.gz": {
+   "bytes": 964961,
+   "sha256": "921cf8f4924804f980494ad1ba6eee875f52d7389c61082364f4bf7846a96022"
+  },
+  "protocols/deepbook.json.gz": {
+   "bytes": 1191587,
+   "sha256": "3529fd3020e96f2faec5a9be15408eadd3e0505fe0ac7e4a6ead914062d7a12b"
+  },
+  "protocols/stepn.json.gz": {
+   "bytes": 1671972,
+   "sha256": "3b03bf99eadfea1b50cb00a6ccd44e807c1594cea188fb152497374e240ac8d0"
+  },
+  "protocols/grass.json.gz": {
+   "bytes": 1210463,
+   "sha256": "3b006e1da3725f41fb69b453b8ebc48e3be73077ac196788a931272dafc36284"
+  },
+  "protocols/delysium.json.gz": {
+   "bytes": 746743,
+   "sha256": "df0a1a04242d1a0c6de3bdcd85c20769070dbd04420c4db70407388ac1b9ee55"
+  },
+  "protocols/humidifi.json.gz": {
+   "bytes": 238142,
+   "sha256": "e73b125f6583431dfff7119849b12633baa42425e47c9ea8329ca3bc622d4164"
+  },
+  "protocols/b2-buzz.json.gz": {
+   "bytes": 1767484,
+   "sha256": "3c87e5652dcab5522e1f2e348f1374fcb0d87a04f21ac826314f9b91bb53b051"
+  },
+  "protocols/gunz.json.gz": {
+   "bytes": 1404729,
+   "sha256": "c431331532372339262e54a967cfb53d89650fc70334b755adb817783c8c1b4f"
+  },
+  "protocols/moonwell.json.gz": {
+   "bytes": 1431256,
+   "sha256": "9a33761b9d05d67e7382e809aeeb5e1c8401fc51a236a520621047ad29959559"
+  },
+  "protocols/camelot.json.gz": {
+   "bytes": 960665,
+   "sha256": "ebb744886ec161d3db809dc836113fecb17ad28ed53c4833d6b1469c4f0b6d0f"
+  },
+  "protocols/orca.json.gz": {
+   "bytes": 1740402,
+   "sha256": "4daf4ba7b659d79eaec33233e7ea24af47d49e3f71496baf343f6d43b10b0d6f"
+  },
+  "protocols/hyphen.json.gz": {
+   "bytes": 1102496,
+   "sha256": "5a4653458f118080894380715e842ac703e061af0b242d36e0c2c2ee2e26397f"
+  },
+  "protocols/mineloot.json.gz": {
+   "bytes": 29400,
+   "sha256": "6cf6c93600c1909b3f4983f590736ee7316dd2e6888b4bfba19e0857105984f3"
+  },
+  "protocols/velora.json.gz": {
+   "bytes": 818829,
+   "sha256": "b40c48af4a5f683759c100b8805e642142501fa47fa713f1e4efbc0a0d88b0c0"
+  },
+  "protocols/lighter.json.gz": {
+   "bytes": 384140,
+   "sha256": "ebf1d2c1349de3fe676ac5ec05634c84870df3709c419cd93bb09c273e8ed4a8"
+  },
+  "protocols/thena.json.gz": {
+   "bytes": 966053,
+   "sha256": "f2012484d4ca365b82baec29f4ae1fb31891a284a90b8b7bfae35116a0dd5d83"
+  },
+  "protocols/whitebit.json.gz": {
+   "bytes": 414291,
+   "sha256": "56f291936e113ea5c43b3296f6bf11a3bfbe267dadabd6e7edd26de5b161503f"
+  },
+  "protocols/tensor.json.gz": {
+   "bytes": 580505,
+   "sha256": "5b62d13c5f03194a7a5e90d1aee4e8c5cb7ff444f5a06eaf28568e4d2cd90753"
+  },
+  "protocols/kinetiq.json.gz": {
+   "bytes": 444840,
+   "sha256": "e125595ce8d24643b94231441a81c8743095c0d8fad5cd2f71ca10f890fcfee3"
+  },
+  "protocols/stakewise.json.gz": {
+   "bytes": 537024,
+   "sha256": "56a9065cddc54f479903f6119683e6fecffaa0542f15b1a185dfcc9cf7aa8660"
+  },
+  "protocols/kaito.json.gz": {
+   "bytes": 1037400,
+   "sha256": "a22196127fe6abc20dd01c8aed2b5ddfac4aa79cef8b62e2e9925839ba3a63fd"
+  },
+  "protocols/flowswap.json.gz": {
+   "bytes": 2251550,
+   "sha256": "1d280a17089894b750b37b1df15965fd40bb5f1130126b1c684f3337e8e77a0e"
+  },
+  "protocols/pareto.json.gz": {
+   "bytes": 1283631,
+   "sha256": "bf98cdf009f777b26f41826ea3c4ecd26ecfcc067511eda2b985deb08af7b6ae"
+  },
+  "protocols/mode-bridge.json.gz": {
+   "bytes": 428199,
+   "sha256": "794fb73963fa96f24757cc67f7bbc34c55411a088ae46bd24aca006aa66ad770"
+  }
+ },
+ "expected_protocols": 370,
+ "got_protocols": 370,
+ "errors": []
+}
