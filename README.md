@@ -13,6 +13,7 @@ handoffs are recorded in [issue #7](https://github.com/SaikiK12/T/issues/7).
 | Question | Canonical source |
 |---|---|
 | Where are we now? | [Panel](docs/PANEL.md), generated from committed registries and lane status |
+| Where is a document, command or experiment? | [Repository navigation](docs/README.md); `python scripts/repository_index.py --find funding` |
 | What is the current direction? | [Direction](docs/DIRECTION.md) |
 | What has been tested, and what remains open? | [Live methods queue](registry/methods.csv); [queue conventions and original snapshot](docs/METHODS_QUEUE.md) |
 | What would justify paper or real execution? | [Gates](docs/GATES.md) and [critique](docs/CRITIQUE.md) |
@@ -42,11 +43,17 @@ python3 -m venv .venv
 .venv/bin/pip install numpy pandas numba scipy pyarrow
 .venv/bin/python -m unittest discover -s tests -t .
 .venv/bin/python scripts/check_research_integrity.py
+.venv/bin/python scripts/repository_index.py --check
 ```
 
 Use the package versions recorded in a study's manifest when reproducing its artifacts. Fetching data and running
 market studies are separate operations; read the lane's frozen protocol and input requirements first. Reserved
 samples follow their explicit read budget in [GATES](docs/GATES.md).
+
+Navigation is generated from tracked files. After adding documents, commands or lanes, stage the new paths and run
+`python scripts/repository_index.py --write`. Existing filenames remain stable because frozen studies and source
+hashes depend on them. New research sources go through `research/intake/`, then reconcile with `registry/methods.csv`;
+keep historical notes as dated provenance and use the panel for current operating status.
 
 Contributor rules: [AGENTS.md](AGENTS.md). Freeze and commit a finite specification/code before measuring outcomes;
 retain cost sensitivity, controls, exclusions and provenance. Existing frozen files and append-only journals remain
