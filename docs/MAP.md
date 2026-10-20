@@ -1,6 +1,6 @@
 # Map: what is known, and the routes still open
 
-Updated 2026-10-20. Historical entries below retain their reported evidence; new exploratory rounds R228–R231 are linked separately. Splits:
+Updated 2026-10-20. Historical entries below retain their reported evidence; new exploratory rounds R228–R232 are linked separately. Splits:
 original discovery 2021-2023, validation 2024-2025H1, historical holdout 2025-07..2026-09 (now spent at program level). New studies declare their own splits. "Replicates" = picked on
 discovery, same sign and |t| >= 2 on validation. Universe: the 50 most liquid Binance USD-M perps at each hour (499 coins
 over time, delisted ones included). Round trip at the tier costs: about 12-16 bp.
@@ -203,6 +203,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   Discovery chooses half adjustment. It saves validation costs but loses more gross return at 1x/2x; paired excess
   -0.090 bp/day, interval [-0.412,+0.226]. NULL. All 5,202 full-control rows reproduce R229 exactly.
   [Findings](../experiments/partial_execution_v1/FINDINGS.md). The raw-flow version remains a separate input-dependent question.
+- **R232 (rebalancing_v1)** tests daily/weekly/monthly equal-weight spot resets against fixed-unit buy-and-hold.
+  Discovery selects monthly; validation paired gain +0.965 bp/day, interval [-2.350,+4.764], Sharpe gain +0.088
+  below +0.15. NULL. [Findings](../experiments/rebalancing_v1/FINDINGS.md). The source's full-universe long/short
+  construction remains untested; monthly's previous use as R229's comparator is disclosed.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -308,6 +312,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,886 after R231 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
-bookkeeping total is not a count of independent hypotheses. R228–R231 use previously viewed dates and are
+Program trials: 9,471,889 after R232 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
