@@ -214,8 +214,10 @@ def score(tt, names, close):
         peak = np.maximum.accumulate(eq)
         hit = np.flatnonzero((peak > 0) & (eq <= 0.5 * peak))
         t_nw = status[book].get("t_nw")
-        status[book]["prereg"] = {"pass_now": bool(status[book]["go_real"]["pass"] and t_nw is not None and t_nw >= 2),
-                                  "decision_at_days": 90,
+        pass_now = bool(status[book]["go_real"]["pass"] and t_nw is not None and t_nw >= 2)
+        # pass_now is a checkpoint reading; the PREREG decides only at 90 scored days
+        status[book]["prereg"] = {"pass_now": pass_now, "decision_at_days": 90,
+                                  "verdict": ("PASS" if pass_now else "FAIL") if len(x) >= 90 else "PENDING",
                                   "stop_rule_hit_day": n.day.iloc[hit[0]] if len(hit) and book == "A" else None}
     (J / "status.json").write_text(json.dumps(status, indent=1, default=float))
     return status

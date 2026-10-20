@@ -16,8 +16,10 @@ from lab import registry  # noqa: E402
 
 OUT = ROOT / "docs" / "PANEL.md"
 EXP = ROOT / "experiments"
-OBJECTIVE = ("Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody "
-             "had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.")
+OBJECTIVE = ("The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, "
+             "prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is "
+             "evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only "
+             "through the four gates in `docs/GATES.md`, at stakes the owner sets.")
 # forward lanes: (registry id, lane, status file, {book key: label}, what decides it)
 FORWARD = [
     ("R215", "mexc_fwd", "journal/status.json", {"A": "flow book A on MEXC", "B": "top-vs-crowd on MEXC"},
@@ -37,6 +39,10 @@ WAITING = [
     "Download the DefiLlama unlock calendar (old source: 372 protocol files): replicates the old session's unlock short"
     " (E01, R179/R181, +2.5% per event), the strongest edge in `docs/OLD_SESSION_EDGES.md`.",
     "Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).",
+    "Yes or no: 20-30 tiny live MEXC orders placed by the owner to measure real fills against paper (a carve-out from"
+    " rule 6; `docs/CRITIQUE.md`).",
+    "Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a"
+    " stop at 25% of the stake).",
 ]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
@@ -110,12 +116,15 @@ def main():
          " freeze it, run it (`lab/screen.py` for a cross-sectional feature), write FINDINGS at 1x/2x/3x costs, append"
          " the registry row and mark the method tested. Finish it before starting another. A bad-looking idea is"
          " still tested: a null is evidence.",
-         "4. A method that passes validation becomes a forward paper lane on MEXC under a new id. Real money only"
-         " after `go_real`, placed by the owner.",
+         "4. A method that passes its screen becomes one frozen forward paper lane under a new id (gate 1). Real money"
+         " only after gates 1-3, placed by the owner (gate 4).",
          "5. Commit and push.", "",
-         "Roles: Claude runs the lanes and the forward pipeline; Codex reviews and drafts on `codex/` branches; Haiku"
-         " agents read and extract sources (at most 3 at a time).", "",
-         "## 1. The funnel", "", "Ideas → frozen test → result → forward paper → go_real → owner places small stakes.", ""]
+         "Roles: Claude runs the lanes and the forward pipeline; Codex reviews and drafts on `codex/` branches;"
+         " subagents (Haiku preferred) read, extract and critique (at most 3 at a time). No Workflows.", "",
+         "## 1. The funnel", "",
+         "Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution on MEXC (gate 2, `go_real` here) →"
+         " account risk (gate 3) → the owner (gate 4). Rules and dates: [GATES](GATES.md); what the critics found:"
+         " [CRITIQUE](CRITIQUE.md).", ""]
     funnel = [("Ideas in the queue, untested", "-" if m is None else str((m.status == "UNTESTED").sum())),
               ("Ideas partly tested", "-" if m is None else str((m.status == "PARTIAL").sum())),
               ("Ideas blocked (data, download, compute)", "-" if m is None else str((m.status == "BLOCKED").sum())),
@@ -123,7 +132,8 @@ def main():
               ("Program trials", f"{trials:,}"),
               ("Forward paper lanes running", str((reg.status == "RUNNING").sum() + 1)),
               ("Strict on-time paper days so far", str(lag.get("strict_ontime_days", 0))),
-              ("Passed go_real", "none yet")]
+              ("Passed gate 1 (unseen days)", "none yet"),
+              ("Next decision date", "2027-01-18: first 90-on-time-day looks (R215, R218, R220, R221 futility)")]
     L += [table(pd.DataFrame(funnel, columns=["stage", "now"])), ""]
     L += ["## 2. Forward paper lanes (the only road to money)", "",
           "Replay days were scored after the freeze on days the archive did not hold; on-time days are the evidence.", "",
@@ -143,6 +153,7 @@ def main():
     last = reg.tail(8)[["id", "lane", "status", "verdict", "trials"]]
     L += ["## 5. Latest rounds", "", table(last), "",
           "Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), "
+          "[GATES](GATES.md), [CRITIQUE](CRITIQUE.md), "
           "[room #7](https://github.com/SaikiK12/T/issues/7).", ""]
     OUT.write_text("\n".join(L))
     log(f"panel: {len(reg)} rounds, {trials:,} trials, queue {'-' if m is None else len(m)}")

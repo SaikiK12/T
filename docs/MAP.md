@@ -15,7 +15,7 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
    alts with beta 1 (R193, R194).
 4. **The best lead is order flow, traded as a slow neutral book**: short the coins where takers sold most, or top
    traders lean short against the crowd, as overlapping 72 h slices hedged with the market. In-sample +42.6%/yr (t 3.25,
-   5/5 years). Holdout +104% over 457 days but t 1.22: positive, not confirmed (R196-R198).
+   5/5 years; the cells were chosen on these years). Holdout +104% over 457 days but t 1.22: positive, not confirmed (R196-R198).
 5. **Funding carry is real and regime-bound**: +35% in 2021, ~0 in 2022-23, +8% in 2024, ~1%/yr since (R190, R191).
 6. **How you measure decides what you find**: day-weighted, all-hours atlas means overstate what an entry rule earns;
    the same edge can be captured by a book that holds the state (slices), not by one that trades the entry.
@@ -24,8 +24,9 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
    to 2024-25H1; but as a slice book the slow pairs lose on the holdout (-6.5%/yr) and the fast ones lose to costs.
 8. **Live data match the archive**: the public endpoints rebuild the flow signals' bins at 99.5-99.98% (R199/R200),
    and a forward paper test of the flow book and of top-vs-crowd runs from 2026-10-01 (R200).
-9. **Where money could come from** (R202): if top-vs-crowd holds, a crypto prop challenge (a few hundred dollars for a
-   100k account) is worth far more than the same edge on own capital; spot has no candidate (every surviving lead is
+9. **Where money could come from** (R202, scenario illustrations only: an unconfirmed stream, a daily-step simulator,
+   and real challenge buyers are about 7% paid): if top-vs-crowd holds, a crypto prop challenge (a few hundred dollars
+   for a 100k account) is worth more than the same edge on own capital; spot has no candidate (every surviving lead is
    short-side or market-neutral); carry cannot run in a prop account.
 10. **On the owner's venue, the forward lead is much smaller** (R213-R216):
     - Entering one or two hours late costs only 1-2% of the books' net.
@@ -34,7 +35,7 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
       stocks. The crypto book that can trade on MEXC made +4.7% over the 18 replayed days, not +22%.
     - The archive holdout is crypto: top-vs-crowd crypto-only has t 2.74. It is concentrated in two coins.
 11. **Every edge's evidence in one table**: `docs/EDGE_SCOREBOARD.md`.
-    - Only funding carry is confirmed on a holdout (R191). It now runs forward on MEXC, where spot pairs exist for
+    - Only funding carry passed its holdout test (R191: t 2.07 at 1x, about 1%/yr; t 1.14 at 2x). It now runs forward on MEXC, where spot pairs exist for
       small alts that Binance lacks (R220).
     - Paper days alone confirm slowly. At 90 days the gate only detects an annual Sharpe of about 5; a Sharpe of 1.5
       has a 19% chance to pass R221's frozen test by day 365 (`docs/PAPER_REFINEMENT.md`).
@@ -162,7 +163,7 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Looks: futility at 90 on-time days (stop if t <= -2); efficacy at 182 (z >= 3.558) and 365 (z >= 2.397), with
     the 2x total > 0; Bonferroni over 3.
   - Power by day 365: 19% at annual Sharpe 1.5, 73% at 3.
-  - It is the first frozen decision on crypto-only top-vs-crowd, the lab's best holdout t.
+  - It is the first frozen decision on crypto-only top-vs-crowd, the highest holdout t of 7 series read after the holdout (exploratory).
 - **R222 (xsalt_v1)** tested four slow altcoin cross-sections from `docs/ALTCOIN_LEADS.md`: low beta, residual
   momentum, MAX and premium net of funding. Weekly or monthly holds cost only 0.6-2.9 bp/day, but none earns gross.
   All six variants fail discovery on BTC-adjusted alpha t (best: plain 30-day momentum +7.7 bp/day, t 1.23).

@@ -8,8 +8,9 @@ overstatements are corrected here.
 - **Windows:**
   - **In-sample** is 2021-01..2025-06: discovery 2021-23 plus validation 2024-25H1, where cells were chosen or gated.
     Validation is in-sample here.
-  - **Holdout** is 2025-07..2026-09. It is the only out-of-sample window in the archive. It was read once per family
-    for that family's decision.
+  - **Holdout** is 2025-07..2026-09. It was the only out-of-sample window in the archive. More than ten lanes read it
+    (R189-R233), and what they saw shaped later choices (X2, book B, R218). As of 2026-10-20 it is **spent at program
+    level**: every holdout number below is exploratory, not a confirmation (`docs/CRITIQUE.md`).
     - It is spent for flow cells, listings, carry, context slices, VRP and the Coinbase premium.
     - The flow books' holdout was re-read later for descriptions (R213, R216, R217).
   - **Forward** is paper on live data from 2026-10-01.
@@ -23,14 +24,15 @@ overstatements are corrected here.
   1. it checks that the live signal, fills and costs match the archive;
   2. it catches a book that fails;
   3. it adds evidence slowly.
-  The holdout gave one clear verdict each way: carry confirmed (t 2.07) and the flow book not confirmed (t 1.22).
+  On the holdout, carry passed a single test at 1x costs (t 2.07, about 1%/yr; t 1.14 at 2x) and the flow book did
+  not (t 1.22).
 
 ## Scoreboard
 
 | Edge | Best in-sample (where) | Holdout (out of sample) | Costs 2x / 3x | On the owner's venue (MEXC) | Paper lane now | Verdict |
 |---|---|---|---|---|---|---|
-| **Funding carry**: short perp + long spot when trailing 72 h funding > 20% APR | Discovery +12.7%/yr, t 3.80; validation +5.9%/yr, t 2.82 (R190) | **+1.45% over 457 d, t 2.07: CONFIRMED** (R191) | Holdout 2x +0.66%, t 1.14 | Funding on MEXC matches Binance (median trailing-APR gap 0.0004 on 40 coins, `experiments/carry_fwd/venue_check.json`). **MEXC lists spot pairs for small alts Binance lacks** (AKE, BR, BTW, Q, USELESS). Replay: MEXC invested 18/18 days, net about 0; Binance 0/18 (R220) | **R220** carry_fwd (Binance and MEXC), decision at 90 on-time days | **The only edge confirmed on a holdout.** Small (about 1%/yr since 2025; "economically small", R191), very low risk (holdout max DD 0.07%). Not usable in a prop account (R202) |
-| **Flow book A**: three 72 h order-flow cells, short the crowded coins, universe-hedged | +42.6%/yr, t 3.25, positive all 5 years (R197) | All symbols on Binance: +82.9%/yr (sum +103.8%), **t 1.22: NOT CONFIRMED**, DD 47% (R198). **Crypto only: +22.33 bp/day, t 1.25** (R216) | In-sample 2x +26.9% (t 2.07), 3x +11.3%. Holdout crypto 2x +17.3, 3x +12.3 bp/day | MEXC crypto replay: +4.67% in 18 d, 2x +3.8%, 3x +2.9% (R215). BEAT and LAB carry about 68% of the holdout gross (R216) | **R215** (go_real at 90 d), **R221** (sequential, 365 d) | Strongest in-sample edge. Holdout positive, too noisy to confirm, concentrated in two coins |
+| **Funding carry**: short perp + long spot when trailing 72 h funding > 20% APR | Discovery +12.7%/yr, t 3.80; validation +5.9%/yr, t 2.82 (R190) | **+1.45% over 457 d, t 2.07: passed at 1x only** (R191) | Holdout 2x +0.66%, t 1.14 | Funding on MEXC matches Binance (median trailing-APR gap 0.0004 on 40 coins, `experiments/carry_fwd/venue_check.json`). **MEXC lists spot pairs for small alts Binance lacks** (AKE, BR, BTW, Q, USELESS). Replay: MEXC invested 18/18 days, net about 0; Binance 0/18 (R220) | **R220** carry_fwd (Binance and MEXC), decision at 90 on-time days | **The only edge confirmed on a holdout.** Small (about 1%/yr since 2025; "economically small", R191), very low risk (holdout max DD 0.07%). Not usable in a prop account (R202) |
+| **Flow book A**: three 72 h order-flow cells, short the crowded coins, universe-hedged | +42.6%/yr, t 3.25, positive all 5 years (R197); cells were chosen on these years, so this is selection-contaminated | All symbols on Binance: +82.9%/yr (sum +103.8%), **t 1.22: NOT CONFIRMED**, DD 47% (R198). **Crypto only: +22.33 bp/day, t 1.25** (R216) | In-sample 2x +26.9% (t 2.07), 3x +11.3%. Holdout crypto 2x +17.3, 3x +12.3 bp/day | MEXC crypto replay: +4.67% in 18 d, 2x +3.8%, 3x +2.9% (R215). BEAT and LAB carry about 68% of the holdout gross (R216) | **R215** (go_real at 90 d), **R221** (sequential, 365 d) | Strongest in-sample edge. Holdout positive, too noisy to confirm, concentrated in two coins |
 | **X2**: book A sized by k² (coins where all three cells agree count more) | Sharpe 1.96 / 1.68 vs A 1.81 / 1.39 (disc / val, R217) | Sharpe 1.49 vs 1.05, DD 62% (R217; holdout already known) | Positive at 3x in every window (R217) | MEXC replay +6.2% vs A +4.7% (R218) | **R218** (go_real at 90 d), **R221** | **NULL by R217's frozen bar** (+0.15 / +0.29 missed +0.3 in both). Chosen afterwards to run forward as a hypothesis. Concentrated |
 | **top_vs_crowd alone (B)**: short coins whose top traders are short against the crowd | +69.3%, t 2.64 (R197) | All symbols: t 2.72, DD 16% (R198, reported, not decided). **Crypto only: +18.25 bp/day, t 2.74** (R216; crypto-only DD not computed). Best holdout t in the lab | R197 2x +58.4%, 3x +47.5%; holdout crypto 2x +17.4, 3x +16.5 bp/day | MEXC crypto replay -0.10% (R215). R200's Binance replay +9.7% came entirely from TradFi (stock and commodity) perps (R216) | **R221** decides it (crypto only, MEXC); R215 reports it | Best holdout t, but never decided until R221. Forward replay is about zero |
 | **Top-account positioning** (whale vs top, top accounts vs crowd, headcount) | Discovery: whale_vs_top bin 7 long +22.8 bp/day, t 2.07; topacct_vs_crowd short +16.1, t 2.54 (R211) | Not read. Validation t 1.31 and 0.85, stop (R211). Headcount book validation +20.1 bp/day, t 1.13 (R212) | R212 validation 2x +15.8, 3x +11.5 | not tested | none | NULL. The headcount book is mostly top_vs_crowd (residual +5.6, t 0.33, R212) |
@@ -52,8 +54,8 @@ overstatements are corrected here.
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 
 ## The best achievable edges, ranked
-1. **Funding carry on MEXC.** It is the only edge confirmed on a holdout, and the MEXC version has more coins to
-   carry.
+1. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
+   not significant at 2x), and the MEXC version has more coins to carry.
    - **Size:** about 1%/yr in the 2025-26 regime, +8% in 2024, +35% in 2021. It is the safest edge, not the largest.
    - **Falsified by:** R220 failing at 90 on-time days. At 2x costs it was not significant even on the holdout.
    - **To trade it:** a MEXC spot buy plus a perp short of the same size, placed by hand by the owner, only after
@@ -65,7 +67,8 @@ overstatements are corrected here.
    - **Evidence needed:** confirmation needs R221's look at 182 or 365 days.
    - **Risk:** two coins carried two thirds of the holdout gross.
 3. **top_vs_crowd, crypto only, on MEXC.**
-   - **Size:** the best holdout t, 2.74 on crypto only. The all-symbol drawdown was 16%.
+   - **Size:** holdout t 2.74 on crypto only, but it is the best of 7 series reported after the holdout was read.
+     Without its 10 best days of 457 it falls to t 1.6, and its MEXC replay is -0.6 bp/day. The all-symbol drawdown was 16%.
    - **Status:** the forward replay is about zero. It is now decided by R221.
 4. **Everything else is NULL net of costs.**
    - The gross edges (atlas cells, lead-lag spread) are real but smaller than a taker's cost.
