@@ -297,6 +297,8 @@ class ForwardOrchestratorTests(unittest.TestCase):
         actual = []
         for line in shell.read_text().splitlines():
             words = shlex.split(line, comments=True)
+            if words[:2] == ["flock", "-w"]:                  # lanes that read the notice catalogs hold its lock
+                words = words[4:]
             if words and words[0] == "timeout":
                 self.assertGreaterEqual(len(words), 4)
                 self.assertEqual(words[2], "$PY")

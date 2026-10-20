@@ -41,6 +41,8 @@ FORWARD = [
     ("R266", "unlocks_fwd", "unlock short, D-7 to unlock", "MEXC", "manual-web", 120, "120 scored tickets"),
     ("R268", "delist_fwd", "spot delisting-notice short +1 h", "MEXC", "API", 12, "12 scored notices"),
     ("R270", "montag_fwd", "Monitoring Tag short +24 h", "MEXC", "manual-web", 12, "12 scored notices"),
+    ("R272", "announce_fwd", "funding-frequency long 1 h; pre-listing short 168 h", "MEXC", "API + manual-web", 12,
+     "12 scored notices per book"),
 ]
 
 
@@ -212,9 +214,10 @@ def event_tickets():
         if not any(sym in t["symbol"] and t["entry_at"][:10] == at[:10] for t in out):
             out.append({"key": key, "round": "R266", "lane": "unlocks_fwd", "symbol": sym, "entry_at": at,
                         "exit_at": None, "state": "upcoming on the calendar", "size_pct_supply": None, "net_pct": None})
-    for lane, rid in (("delist_fwd", "R268"), ("montag_fwd", "R270")):
+    for lane, rid in (("delist_fwd", "R268"), ("montag_fwd", "R270"), ("announce_fwd", "R272")):
+        scores = {r["ticket"]: r for r in rows_csv(EXP / lane / "journal" / "scores.csv")}
         for r in rows_csv(EXP / lane / "journal" / "tickets.csv"):
-            net = num(r.get("net_1x", r.get("net")))
+            net = num(scores.get(r["ticket"], {}).get("net"))
             out.append({"key": r["ticket"], "round": rid, "lane": lane, "symbol": r.get("contract"),
                         "entry_at": ISO(int(r["entry_ms"]) / 1000), "exit_at": ISO(int(r["exit_ms"]) / 1000),
                         "state": "scored" if net is not None else "open", "size_pct_supply": None,
