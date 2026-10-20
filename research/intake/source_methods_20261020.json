@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-20",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -11,7 +11,7 @@
     "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
     "Video and public-source intake is limited to accessible captions, official transcripts/recaps, documentation, repository descriptions or indexed summaries; several videos have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials.",
+  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -8376,6 +8376,246 @@
           "label": "Public source: https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf"
         }
       ]
+    },
+    {
+      "id": "AR26-ND-CROSS",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Net Drift call/put activity crossover",
+      "method_type": "signal_component",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Monitor a change in the ordering of cumulative signed call and put premium.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Time window, filters, session reset, trigger, exit and costs unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Time window, filters, session reset, trigger, exit and costs unspecified."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ]
+    },
+    {
+      "id": "AR26-ND-DIVERGENCE",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Net Drift convergence/divergence",
+      "method_type": "signal_component",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Monitor widening or narrowing of call/put activity separation.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Change threshold, normalization, holding period and decision mapping absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Change threshold, normalization, holding period and decision mapping absent."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ]
+    },
+    {
+      "id": "AR26-ND-VOLUME",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Net Drift volume confirmation",
+      "method_type": "signal_component",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Condition a premium crossover on aligned signed option volume.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Volume cutoff and full execution rule absent; midpoint and complex trades need explicit treatment.",
+      "status": "blocked",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Volume cutoff and full execution rule absent; midpoint and complex trades need explicit treatment."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "label": "vendor documentation; not a verified creator transcript"
+        }
+      ]
+    },
+    {
+      "id": "AR26-GEX-MODEL",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "GEX signing and snapshot-versus-intraday provenance",
+      "method_type": "methodology",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Retain estimator signing convention and point-in-time intraday levels, rather than substituting a later snapshot.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Vendor model is not observed dealer inventory; documentation access does not grant feed entitlement.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Vendor model is not observed dealer inventory; documentation access does not grant feed entitlement."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/15807345-gamma-exposure-gex-api-python-quickstart-dealer-positioning-guide",
+          "label": "official API guide; no authenticated request"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://help.quantdata.us/en/articles/15807345-gamma-exposure-gex-api-python-quickstart-dealer-positioning-guide",
+          "label": "official API guide; no authenticated request"
+        }
+      ]
+    },
+    {
+      "id": "AR26-FOOTPRINT",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Price-level footprint and volume-profile inputs",
+      "method_type": "methodology",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Preserve bid/ask trade classification, tick grouping, filters and value-area settings.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Platform capability only; no creator-specific absorption threshold or entry rule obtained.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Platform capability only; no creator-specific absorption threshold or entry rule obtained."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://www.deepcharts.com/helpcenter/article/deep-print-%28footprint%C2%AE%29",
+          "label": "official Deep Print settings documentation"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.deepcharts.com/helpcenter/article/deep-print-%28footprint%C2%AE%29",
+          "label": "official Deep Print settings documentation"
+        }
+      ]
+    },
+    {
+      "id": "AR26-STARTER",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "2024 Starter Strategy: M15 entry / H1 area / 2R",
+      "method_type": "under_specified_strategy",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Brochure specifies M15 entry, H1 point of interest and 2R.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Underlying strategy file not obtained; direction, POI, entry, stop, session and spread rules unknown. Claimed win rate unverified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Underlying strategy file not obtained; direction, POI, entry, stop, session and spread rules unknown. Claimed win rate unverified."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://aleksrosme.gumroad.com/l/strategy",
+          "label": "indexed creator product-page description only; no checkout or download"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://aleksrosme.gumroad.com/l/strategy",
+          "label": "indexed creator product-page description only; no checkout or download"
+        }
+      ]
+    },
+    {
+      "id": "AR26-JOURNAL",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Creator journal and trade-factor attribution",
+      "method_type": "workflow",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Record trade outcomes, factors, winners/losers and backtesting separately.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Product description does not establish complete trade reporting or validate performance.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Product description does not establish complete trade reporting or validate performance."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://aleksrosme.gumroad.com/l/journal",
+          "label": "indexed creator journal-product description only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://aleksrosme.gumroad.com/l/journal",
+          "label": "indexed creator journal-product description only"
+        }
+      ]
+    },
+    {
+      "id": "AR26-TOOLS",
+      "parent_claim_id": "AR26-ACCOUNT",
+      "title": "Creator tool directory: options flow, dark pools and execution displays",
+      "method_type": "tool_context",
+      "hypothesis": "Source-derived research or reproducibility lead; no demonstrated project edge.",
+      "testable_rule": "Creator links Quant Data and Deepcharts for options and executed-flow displays.",
+      "exact_tested_scope": "No new study was run. This account request is an expansion of the three previously received Aleks Rosme TikToks, not an exhaustive account transcript.",
+      "unrun_scope": "Dark-pool, replay and copier feature names do not specify additional strategies; affiliate links disclosed.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete mechanical rule and appropriate point-in-time inputs before registering a trading test."
+      ],
+      "blockers": [
+        "Dark-pool, replay and copier feature names do not specify additional strategies; affiliate links disclosed."
+      ],
+      "next_action": "Reconcile with the existing parent method; formalize a finite variant only after the missing mechanics and inputs are supplied.",
+      "source_refs": [
+        {
+          "path": "https://www.aleksrosme.com/",
+          "label": "creator official homepage; linked tools and latest-video title only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.aleksrosme.com/",
+          "label": "creator official homepage; linked tools and latest-video title only"
+        }
+      ]
     }
   ],
   "sources": [
@@ -8680,9 +8920,9 @@
     },
     {
       "path": "docs/REELS_TRANSCRIPT.md",
-      "sha256": "d547c58a72b646c6be4d73fba22103ca333c70f3617ecedf251fa5c5d89960fd",
+      "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
       "review_status": "reviewed_video_leads_not_performance_evidence",
-      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source.",
+      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source. Later account follow-up adds eight AR26 records with explicit channel-access limitations and vendor/creator attribution.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -8754,7 +8994,15 @@
         "SV26-31-COST-REALISM",
         "SV26-32-MEXC-API-FEE",
         "SV26-33-PAPER-FUNDING-ARB",
-        "SV26-34-CARRY-RISK-ACCOUNTING"
+        "SV26-34-CARRY-RISK-ACCOUNTING",
+        "AR26-ND-CROSS",
+        "AR26-ND-DIVERGENCE",
+        "AR26-ND-VOLUME",
+        "AR26-GEX-MODEL",
+        "AR26-FOOTPRINT",
+        "AR26-STARTER",
+        "AR26-JOURNAL",
+        "AR26-TOOLS"
       ],
       "unextracted_limitations": [
         "No full internet survey; several videos and indexed pages have no verified full transcript.",
@@ -8763,7 +9011,7 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "d547c58a72b646c6be4d73fba22103ca333c70f3617ecedf251fa5c5d89960fd"
+      "current_sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf"
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -9240,6 +9488,67 @@
       ],
       "provenance_note": "Three subagents plus a targeted web pass performed read-only discovery. Sources were reconciled against the live queue; no media/audio, market dataset, model weight, credential or outcome was downloaded or computed. Weak generic sources remain catalogued with low confidence rather than silently promoted.",
       "media_source_count": 39
+    },
+    {
+      "intake_id": "aleks_rosme_account_20261020",
+      "captured_utc_date": "2026-10-20",
+      "records_added": [
+        "AR26-ND-CROSS",
+        "AR26-ND-DIVERGENCE",
+        "AR26-ND-VOLUME",
+        "AR26-GEX-MODEL",
+        "AR26-FOOTPRINT",
+        "AR26-STARTER",
+        "AR26-JOURNAL",
+        "AR26-TOOLS"
+      ],
+      "media_sources": [
+        {
+          "url": "https://www.aleksrosme.com/",
+          "title": "Aleks Rosme official creator directory",
+          "basis": "homepage only; establishes creator cross-links, not full channel coverage"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=xzoQc4lWAkA",
+          "title": "Net Drift guide linked by creator",
+          "basis": "title/link only; no speech transcript obtained"
+        },
+        {
+          "url": "https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading",
+          "title": "Quant Data Net Drift documentation",
+          "basis": "official documentation, not creator strategy speech"
+        },
+        {
+          "url": "https://help.quantdata.us/en/articles/15807345-gamma-exposure-gex-api-python-quickstart-dealer-positioning-guide",
+          "title": "Quant Data GEX API guide",
+          "basis": "official documentation, no API invocation"
+        },
+        {
+          "url": "https://www.deepcharts.com/helpcenter/article/deep-print-%28footprint%C2%AE%29",
+          "title": "Deepcharts Deep Print",
+          "basis": "official indicator settings documentation"
+        },
+        {
+          "url": "https://aleksrosme.gumroad.com/l/strategy",
+          "title": "2024 Starter Strategy",
+          "basis": "indexed product-description excerpt only"
+        },
+        {
+          "url": "https://aleksrosme.gumroad.com/l/journal",
+          "title": "Trades Journal",
+          "basis": "indexed product-description excerpt only"
+        }
+      ],
+      "media_source_count": 7,
+      "previous_reels_digest_sha256": "d547c58a72b646c6be4d73fba22103ca333c70f3617ecedf251fa5c5d89960fd",
+      "requested_scope": "Owner supplied https://www.tiktok.com/@aleks_rosme?_r=1&_t=ZG-9AifdTRrHXt and requested account-wide strategy assessment.",
+      "received_scope": "Seven enumerated pages/link references only, plus prior three TikTok records already retained. No full account enumeration or new speech transcript.",
+      "access_limitations": [
+        "TikTok profile/video pages inaccessible via browser.",
+        "YouTube page exposed title/footer; bounded public channel-metadata request failed with proxy 403; no media downloaded.",
+        "Third-party mirrored Instagram captions and a 13-title video listing were discovery only, not verified creator rules or performance."
+      ],
+      "provenance_note": "Keep vendor-described Net Drift applications separate from creator-attributed rules. No credentials, paid data, new market outcomes, strategy trials or queue IDs."
     }
   ]
 }

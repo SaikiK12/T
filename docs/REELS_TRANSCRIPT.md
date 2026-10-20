@@ -26,6 +26,28 @@ mapped to one composite queue row; the value-area-low component is related to M2
 
 ## Additional public video leads
 
+### Follow-up: Aleks Rosme account request
+
+The owner later supplied the [whole TikTok profile](https://www.tiktok.com/@aleks_rosme). The profile was inaccessible;
+a bounded YouTube channel-metadata request also failed with proxy 403. No new speech transcript or exhaustive list of
+posts was obtained. The three clips above remain the directly received TikTok scope. Third-party repost captions and
+video-title listings are discovery leads only; viewer comments are not creator rules or performance evidence.
+
+His [official site](https://www.aleksrosme.com/) links a [Net Drift guide](https://www.youtube.com/watch?v=xzoQc4lWAkA)
+and affiliate tools Quant Data and Deepcharts. Eight follow-up records `AR26-*` retain these distinctions:
+
+| Received material | Retained scope / existing queue |
+|---|---|
+| [Quant Data Net Drift documentation](https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading) | Crossover, convergence/divergence and volume-confirmation components relate to M235; these are vendor applications, not newly verified Aleks rules. Filters, midpoint uncertainty and multi-leg treatment matter. |
+| [Quant Data GEX guide](https://help.quantdata.us/en/articles/15807345-gamma-exposure-gex-api-python-quickstart-dealer-positioning-guide) | Model signing and snapshot/intraday distinction: context for M235/M175. GEX is estimated positioning, not observed dealer inventory. No authenticated feed accessed. |
+| [Deep Print settings](https://www.deepcharts.com/helpcenter/article/deep-print-%28footprint%C2%AE%29) | Tick grouping, bid/ask volume and profile settings: context for M238/M207. These capabilities supply neither his thresholds nor an automatic absorption strategy. |
+| [2024 Starter Strategy](https://aleksrosme.gumroad.com/l/strategy) | Indexed brochure specifies M15 entry, H1 area and 2R. Actual rule file unavailable; no definition of area, entry or stop. CONTEXT, related timeframe idea M022 only. |
+| [Trades Journal](https://aleksrosme.gumroad.com/l/journal) and official tool directory | Workflow/tool context. Journal features, dark-pool labels, replay and copier listings do not establish additional executable rules or a track record. |
+
+Assessment: retain the options/flow composite as an unresolved lead. MEXC hourly candles cannot reproduce US-options
+premium or price-level footprint data. A crypto adaptation would be a separate rule, with its own data and frozen
+test; weak or incomplete source ideas remain retained. No strategy outcomes, costs or profits were computed here.
+
 | Source | Transcript basis | Extracted methods / queue mapping |
 |---|---|---|
 | [SPX 0DTE: Gamma Zero, order flow and key levels](https://www.youtube.com/watch?v=E_PSlPIq0R4) | Public description/chapter summary; no full transcript verified | Prior-session/Asia/London levels with Gamma Zero/Call/Put walls; order-flow confirmation; SPX 0DTE spread scalping. New M235/M237; flow component M238. |
