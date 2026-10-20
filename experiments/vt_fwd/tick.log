@@ -4,3 +4,14 @@
 == tick 2026-10-20T00:37:26Z code babe092
 00:43:40 prereg sha 3605a4028e85
 00:43:40 {'A': (0.69, 0), 'B': (0.99, 0), 'X2': (0.63, 0)}
+== tick 2026-10-20T01:12:20Z code 174e1a9
+01:17:25 prereg sha 3605a4028e85
+01:17:25 journaled 3 rows
+01:17:25 {'A': (0.7, 0), 'B': (1.0, 0), 'X2': (0.64, 0)}
+01:17:25 on-time days 1, strict 0; hour lag {'n': 1, 'median': 14.583333333333334, 'p90': 14.583333333333334, 'max': 14.583333333333334} order problems: none
+01:17:26 panel: 55 rounds, 9,471,893 trials, queue -
+== tick 2026-10-20T06:17:13Z code 174e1a9
+06:22:43 prereg sha 3605a4028e85
+06:22:43 {'A': (0.7, 0), 'B': (1.0, 0), 'X2': (0.64, 0)}
+06:22:44 on-time days 1, strict 0; hour lag {'n': 6, 'median': 109.88333333333333, 'p90': 229.88333333333333, 'max': 259.8833333333333} order problems: none
+06:22:44 panel: 55 rounds, 9,471,893 trials, queue 199
