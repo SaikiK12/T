@@ -283,6 +283,18 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - At 7 days the literature's pattern appears (illiquid coins reverse a little, liquid ones continue), too weakly to
     trade.
   - NULL. [Findings](../experiments/xsrev_v1/FINDINGS.md).
+- **R246 (ictlevels_v1)** tested ICT-style levels on hourly bars, 8 trials:
+  - round-number crosses and rejections;
+  - SMT divergence against BTC (24 h and 168 h, fade and follow);
+  - the 8 AM New York range (fade and follow).
+
+  Results:
+  - The round-number books turn over all day and lose 40-85 bp/day.
+  - SMT fade at 24 h grosses +11.3 bp/day but nets +2.0 (t 0.29).
+  - The 8 AM range lost both ways.
+  - Post hoc: closes through round numbers reverse 10.8 bp/day more than closes through a half-step-shifted grid
+    (t -3.30, every year). This is queued as M230 with a pre-registered control.
+  - NULL. [Findings](../experiments/ictlevels_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -388,6 +400,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,957 after R245 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,965 after R246 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
