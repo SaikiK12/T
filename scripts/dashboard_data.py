@@ -334,7 +334,35 @@ def jobs(state_dir=None):
         from scripts.dashboard_jobs import build_jobs
     except ModuleNotFoundError:
         from dashboard_jobs import build_jobs
-    return build_jobs(ROOT, now=NOW, state_dir=state_dir)
+    return build_jobs(ROOT, now=NOW, state_dir=state_dir) + running()
+
+
+def running(proc=Path("/proc")):
+    """Lab scripts and qx runs alive now (downloads, family runs, loops), by script name and start time only: no
+    command line, argument or environment is exported. A running process says nothing about success."""
+    out = []
+    try:
+        pids = [p for p in os.listdir(proc) if p.isdigit()]
+    except OSError:
+        return out
+    for pid in pids:
+        try:
+            cmd = (proc / pid / "cmdline").read_bytes().split(b"\0")
+            start = (proc / pid).stat().st_mtime
+        except OSError:
+            continue
+        words = [w.decode(errors="replace") for w in cmd if w]
+        name = next((Path(w).name for w in words if re.fullmatch(r"scripts/[A-Za-z0-9_]+\.(?:py|sh)", w)), None)
+        if name is None and any(w.endswith("target/release/qx") for w in words):
+            name = "qx engine"
+        if name is None or name == "dashboard_data.py":
+            continue
+        out.append({"key": f"process {name} {pid}", "task_id": f"process {pid}", "job": name, "display_name": name,
+                    "category": "Background processes", "kind": "Background processes", "lane": None, "run_id": None,
+                    "state": "RUNNING", "status_source": "process_table", "returncode": None, "at": ISO(start),
+                    "age_h": round(max(0, NOW - start) / 3600, 2), "stale": None, "ok": None, "log_path": None,
+                    "note": "Running now. The process table shows that it runs, not that it succeeds."})
+    return sorted(out, key=lambda r: r["key"])
 
 
 TITLES = {
@@ -354,7 +382,8 @@ TITLES = {
     "methods": ("Method queue", "registry/methods.csv: every method from the literature, old sessions and both AIs, "
                 "with its status."),
     "data_sources": ("Data folders", "Size, newest file and provenance note of each folder under data/."),
-    "jobs": ("Operations by responsibility", "Categorized task reports; legacy activity is unverified. No raw logs or process command lines are exported."),
+    "jobs": ("Operations by responsibility", "Categorized task reports (legacy activity is unverified) and the lab "
+             "scripts running now, by script name only. No raw logs or process command lines are exported."),
 }
 
 

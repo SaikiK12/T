@@ -204,3 +204,24 @@ class DashboardData(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RunningProcessesTest(unittest.TestCase):
+    def test_script_names_only(self):
+        import tempfile
+        from scripts import dashboard_data as dd
+        with tempfile.TemporaryDirectory() as d:
+            proc = Path(d)
+            for pid, argv in {"11": [".venv/bin/python", "scripts/fetch_hyperliquid_history.py", "--secret", "x"],
+                              "12": ["engine/target/release/qx", "events", "experiments/a/spec.toml"],
+                              "13": ["/usr/bin/python3", "-c", "print(1)"],
+                              "14": [".venv/bin/python", "scripts/dashboard_data.py"],
+                              "self": ["ignored"]}.items():
+                (proc / pid).mkdir()
+                (proc / pid / "cmdline").write_bytes(b"\0".join(a.encode() for a in argv) + b"\0")
+            rows = dd.running(proc)
+        self.assertEqual([r["job"] for r in rows], ["fetch_hyperliquid_history.py", "qx engine"])
+        text = repr(rows)
+        self.assertNotIn("--secret", text)
+        self.assertNotIn("spec.toml", text)
+        self.assertTrue(all(r["state"] == "RUNNING" and r["ok"] is None for r in rows))
