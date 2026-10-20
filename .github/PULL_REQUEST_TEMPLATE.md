@@ -11,3 +11,6 @@ input hashes, compact artifacts and 1x/2x/3x cost results. Preserve a NULL verdi
 
 Name unrun checks, missing data, prerequisite PRs and remaining questions. Distinguish historical, replay and
 genuinely new on-time evidence. Keep current method status in the canonical queue.
+
+For source/queue changes, report `python scripts/check_method_intake.py` and retain pending-review warnings.
+For added tracked paths, regenerate navigation and run `python scripts/repository_index.py --check`.

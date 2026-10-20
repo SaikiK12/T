@@ -203,7 +203,8 @@ def render(entries):
         "python scripts/repository_index.py --find funding",
         "python scripts/repository_index.py --find R225 --json",
         "python scripts/repository_index.py --check",
-        "python scripts/check_research_integrity.py", "```", "",
+        "python scripts/check_research_integrity.py",
+        "python scripts/check_method_intake.py", "```", "",
         "`--find` searches filenames, document headings, recorded experiment metadata, the live methods queue, "
         "source aliases and tracked provider catalogs. Those records are searched in place, not copied into this page. "
         "It does not search full papers, result payloads or market caches. After adding or renaming tracked files, "

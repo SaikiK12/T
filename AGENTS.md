@@ -26,3 +26,6 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
   `python scripts/repository_index.py --find TEXT`. After adding tracked paths, stage them, regenerate with
   `--write` and verify with `--check`. Keep existing evidence/source paths stable; classify new docs in the index
   rather than moving frozen or hashed inputs to make the tree look tidy.
+- Before publishing an intake/queue change, run `python scripts/check_method_intake.py`. Keep source-snapshot
+  statuses separate from current queue status, and label catalog/description access as such. Source drift and
+  missing mechanics remain open until reconciled; the audit does not validate profitability or authorize data access.

@@ -22,6 +22,7 @@ python scripts/repository_index.py --find funding
 python scripts/repository_index.py --find R225 --json
 python scripts/repository_index.py --check
 python scripts/check_research_integrity.py
+python scripts/check_method_intake.py
 ```
 
 `--find` searches filenames, document headings, recorded experiment metadata, the live methods queue, source aliases and tracked provider catalogs. Those records are searched in place, not copied into this page. It does not search full papers, result payloads or market caches. After adding or renaming tracked files, stage them and run `--write`, then `--check`. Commands below are navigation links, not an execution queue.
@@ -103,7 +104,7 @@ These are received-source catalogs and provenance, not additional methods queues
 - [owner_scope_20261020.json](../research/intake/owner_scope_20261020.json)
 - [source_methods_20261020.json](../research/intake/source_methods_20261020.json)
 
-## Commands (107)
+## Commands (108)
 
 Acquisition may consume network/storage; study runners may consume reserved data. Read AGENTS, GATES and the lane's protocol before running either. Forward runners and journals remain owned by their registered writer.
 
@@ -138,9 +139,10 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Checks and navigation (4)</summary>
+<summary>Checks and navigation (5)</summary>
 
 - [check_carry_venues.py](../scripts/check_carry_venues.py)
+- [check_method_intake.py](../scripts/check_method_intake.py)
 - [check_research_integrity.py](../scripts/check_research_integrity.py)
 - [panel.py](../scripts/panel.py)
 - [repository_index.py](../scripts/repository_index.py)

@@ -43,6 +43,7 @@ python3 -m venv .venv
 .venv/bin/pip install numpy pandas numba scipy pyarrow
 .venv/bin/python -m unittest discover -s tests -t .
 .venv/bin/python scripts/check_research_integrity.py
+.venv/bin/python scripts/check_method_intake.py
 .venv/bin/python scripts/repository_index.py --check
 ```
 
@@ -54,6 +55,10 @@ Navigation is generated from tracked files. After adding documents, commands or 
 `python scripts/repository_index.py --write`. Existing filenames remain stable because frozen studies and source
 hashes depend on them. New research sources go through `research/intake/`, then reconcile with `registry/methods.csv`;
 keep historical notes as dated provenance and use the panel for current operating status.
+
+`check_method_intake.py` validates queue/alias/source links, received and open scope, source digests and provider
+access boundaries without changing any record. Its `--strict` option also fails on pending source reviews.
+A clean audit checks metadata consistency; it does not certify a source's claims, data access or a trading edge.
 
 Contributor rules: [AGENTS.md](AGENTS.md). Freeze and commit a finite specification/code before measuring outcomes;
 retain cost sensitivity, controls, exclusions and provenance. Existing frozen files and append-only journals remain
