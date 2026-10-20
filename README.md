@@ -1,39 +1,53 @@
-# T
+# T — quant research lab
 
-A research lab for crypto perpetual futures (Binance USD-M archive, the full survivorship-free set of USDT perps,
-hourly, 2021 to 2026). The goal is positive PnL; the rule is that nothing counts as an edge until it survives
-pre-registration, a placebo, data it never saw and a forward paper test.
+The objective is net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper
+evidence. Spot, prop challenges, forex and index futures extend the research when their data and execution can be
+tested. A historical return is a research result; it earns confidence through the gates below.
 
-The working question is no longer "which rule wins?" but a map: which signals predict returns before fees, with what
-confidence, in which context (hour and market opens, BTC regime, market-wide flushes, order flow), how far each is
-from paying its costs, and which routes (stacking, context gating, limit-order entries, carry) close that gap.
+Development currently lives on [`claude/yo-9a1k5w`](https://github.com/SaikiK12/T/tree/claude/yo-9a1k5w), tracked by
+[PR #1](https://github.com/SaikiK12/T/pull/1). Proposed changes target that working branch. Active writers and
+handoffs are recorded in [issue #7](https://github.com/SaikiK12/T/issues/7).
 
-- [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
-- [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
-  [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
-- Research supplements: [adaptive selection and concept drift](docs/ADAPTIVE_SELECTION_AND_DRIFT.md) and
-  [MEXC API and operational risk](docs/OPERATIONAL_API_RISK.md) cover future policy tests and execution controls.
-- `registry/rounds.csv`: one row per round with its trial count (append-only).
-- `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
-- [`docs/RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md): exact tested cells and remaining questions;
-  [`docs/QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md): source-checked mechanisms beyond the completed lanes.
-- [`R228 allocation_v1`](experiments/allocation_v1/FINDINGS.md): a frozen 30-alternative flow-book allocation study;
-  the discovery-selected mixture did not improve validation enough to pass.
-- [`R229 slow_trend_v1`](experiments/slow_trend_v1/FINDINGS.md): a source-driven daily spot trend screen on six coins;
-  full 1x/2x/3x accounting failed the frozen comparison with a training-risk-matched passive portfolio.
-- [`R230 weekly_rotation_v1`](experiments/weekly_rotation_v1/FINDINGS.md): a frozen 96-rule weekly rotation search;
-  the train-selected winner underperformed its scaled passive control in validation. NULL.
+## Start here
 
-## Use
+| Question | Canonical source |
+|---|---|
+| Where are we now? | [Panel](docs/PANEL.md), generated from committed registries and lane status |
+| What is the current direction? | [Direction](docs/DIRECTION.md) |
+| What has been tested, and what remains open? | [Live methods queue](registry/methods.csv); [queue conventions and original snapshot](docs/METHODS_QUEUE.md) |
+| What would justify paper or real execution? | [Gates](docs/GATES.md) and [critique](docs/CRITIQUE.md) |
+| What evidence supports each result? | [Round registry](registry/rounds.csv), [map](docs/MAP.md) and [scoreboard](docs/EDGE_SCOREBOARD.md) |
+| Who owns the next change? | [Coordination room](https://github.com/SaikiK12/T/issues/7) and [room protocol](docs/ROOM.md) |
 
-```
-python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
+Use the existing panel and queue when adding ideas. A method's record names its exact tested scope, aliases,
+remaining mechanics and data blockers. NULL results remain part of the evidence.
+
+## Repository layout
+
+- `lab/`: data, accounting, inference and gate primitives.
+- `scripts/`: explicit acquisition, study, recorder and paper-runner commands.
+- `experiments/<lane>/`: frozen `PREREG.md` and digest, findings and reproducible result artifacts.
+- `registry/`: append-only research rounds and the canonical methods queue.
+- `research/intake/`: versioned source extraction and aliases for reconciliation with that queue.
+- `docs/`: current navigation, research interpretation and historical provenance.
+- `tests/`: offline unit and synthetic checks; `templates/lane/`: a starting point for a new lane.
+
+Bulk source archives and caches stay outside Git. Each study states the required local inputs and hashes;
+opening this repository does not make Claude's separate sandbox data available here.
+
+## Local checks
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install numpy pandas numba scipy pyarrow
 .venv/bin/python -m unittest discover -s tests -t .
-.venv/bin/python -m lab.data build klines 1h      # archive fetcher (also fundingRate, premiumIndexKlines)
-.venv/bin/python -m lab.flow metrics              # order flow: open interest, long/short, taker ratio; bookDepth
-.venv/bin/python scripts/build_views.py           # research universe + feature tensor
-.venv/bin/python scripts/build_extra_views.py clock|ctx|flow
-.venv/bin/python scripts/run_atlas.py discovery   # and the other scripts/run_*.py, one per lane
+.venv/bin/python scripts/check_research_integrity.py
 ```
 
-Rules for contributors: [`AGENTS.md`](AGENTS.md). New lane: copy `templates/lane/`.
+Use the package versions recorded in a study's manifest when reproducing its artifacts. Fetching data and running
+market studies are separate operations; read the lane's frozen protocol and input requirements first. Reserved
+samples follow their explicit read budget in [GATES](docs/GATES.md).
+
+Contributor rules: [AGENTS.md](AGENTS.md). Freeze and commit a finite specification/code before measuring outcomes;
+retain cost sensitivity, controls, exclusions and provenance. Existing frozen files and append-only journals remain
+intact. The owner places any real trades only after the required gates.

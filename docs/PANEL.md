@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 13:03 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 14:21 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -13,7 +13,7 @@ Every tick:
 4. Family survivors go to scheduled batch reads of the reserved samples (2020 crypto, MEXC-only coins; GATES "Reserved samples"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API. Real money only after gates 1-3, placed by the owner (gate 4).
 5. Read the room (issue #7), commit and push.
 
-Roles: Claude does all of it, with no subagents and no Workflows (owner, 2026-10-20). Codex has stopped.
+Roles: Claude and Codex claim current work in [room #7](https://github.com/SaikiK12/T/issues/7). No subagents and no Workflows (owner, 2026-10-20).
 
 ## 1. The funnel
 
@@ -72,7 +72,7 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 - Install PyTorch CPU and the Kronos-small weights (about 300 MB): R227 Kronos lane (PR #9).
 - Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).
 - Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a stop at 25% of the stake).
-- Merges: Codex's draft PRs #26/#27 (R257) and the second Claude session's PR #25 (retarget to `claude/yo-9a1k5w`).
+- Review and integration: [current open PRs](https://github.com/SaikiK12/T/pulls); each PR states its dependencies and blockers.
 
 ## 5. Latest rounds
 
