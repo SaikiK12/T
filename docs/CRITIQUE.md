@@ -65,7 +65,7 @@ a year, and nothing defined a stop, a budget or a loss limit.
   - **Breadth is budgeted.** One method is in test at a time, finished before the next (one-piece flow). Forward lanes
     are capped by the 2027-01-31 freeze.
 
-## Untried axes (scout, added to the queue as M170-M199)
+## Untried axes (added to the queue as M170-M222: scout, owner breadth, chartist, prop and forex research)
 The scout's top picks are now in the queue:
 - weekly momentum and reversal split by OHLC-liquidity tier (M034, M178, M181);
 - next-funding revision (M172);

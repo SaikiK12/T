@@ -22,7 +22,8 @@ UNIVERSE = {
               "GBPJPY=X", "EURGBP=X", "AUDJPY=X", "USDMXN=X", "USDZAR=X", "USDTRY=X"],
     "commodity": ["GC=F", "SI=F", "CL=F", "NG=F", "HG=F", "ZC=F", "ZW=F"],
     "rates": ["ZN=F", "ZB=F", "^TNX", "^IRX"],
-    "volatility": ["^VIX", "^VXN"],
+    "volatility": ["^VIX", "^VXN", "^VIX3M", "SVXY", "VXX"],
+    "dollar": ["DX-Y.NYB"],
     "crypto_spot": ["BTC-USD", "ETH-USD"],
 }
 
