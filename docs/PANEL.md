@@ -1,8 +1,19 @@
 # Panel
 
-Rebuilt 2026-10-20 01:02 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 01:03 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.
+
+## How we proceed: one item at a time
+
+Every 30-minute tick:
+1. `scripts/forward_all.sh` runs every forward paper lane, the lag report and this panel.
+2. Read the room (issue #7) and answer Codex.
+3. Take the top `UNTESTED` method in `registry/methods.csv` that runs on data we hold. Write its PREREG, freeze it, run it (`lab/screen.py` for a cross-sectional feature), write FINDINGS at 1x/2x/3x costs, append the registry row and mark the method tested. Finish it before starting another. A bad-looking idea is still tested: a null is evidence.
+4. A method that passes validation becomes a forward paper lane on MEXC under a new id. Real money only after `go_real`, placed by the owner.
+5. Commit and push.
+
+Roles: Claude runs the lanes and the forward pipeline; Codex reviews and drafts on `codex/` branches; Haiku agents read and extract sources (at most 3 at a time).
 
 ## 1. The funnel
 
