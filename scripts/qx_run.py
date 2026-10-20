@@ -159,6 +159,24 @@ def spread_summary(rep, rid, psha):
     return "\n".join(lines) + "\n"
 
 
+def factor_summary(rep, rid, psha):
+    lines = [f"# {rep['name']} ({rid}): {'PARTIAL' if rep['survivors'] else 'NULL'}", "",
+             f"- **Family:** {rep['trials']} factor x horizon series over {rep['dates']} dates and {rep['coins']} coins.",
+             f"- **Reality check:** max |t| of rank IC, blocks of {rep['block']} dates; null 95th percentile "
+             f"{rep['rc_null_p95']:.2f}.",
+             f"- **Survivors (p_RC < {rep['spec']['alpha']}):** {', '.join(rep['survivors']) or 'none'}.",
+             f"- **Prereg sha:** {psha[:12]}. Cost {rep['spec']['cost'] * 1e4:.0f} bp per side.", "",
+             "| Factor | h | Dates | Names | IC | Rank IC | t | IR | IC > 0 | Quantile means bp | LS bp | LS t | "
+             "Turnover top / bottom | Net %/yr | RC p |", "|" + "---|" * 15]
+    for r in rep["results"]:
+        lines.append(f"| {r['factor']} | {r['horizon_h']} | {r['dates']} | {fmt(r['mean_names'], 0, False)} | "
+                     f"{fmt(r['ic'], 4)} | {fmt(r['rank_ic'], 4)} | {fmt(r['rank_ic_t'])} | {fmt(r['rank_ic_ir'], 3)} | "
+                     f"{r['rank_ic_pos']:.0%} | {' / '.join(fmt(x, 1) for x in r['q_mean_bp'])} | {fmt(r['ls_bp'], 1)} | "
+                     f"{fmt(r['ls_t'])} | {fmt(r['turnover_top'], 2, False)} / {fmt(r['turnover_bottom'], 2, False)} | "
+                     f"{fmt(r['ls_net_ann_pct'], 1)} | {r['p_rc']:.4f} |")
+    return "\n".join(lines) + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("lane")
@@ -174,18 +192,24 @@ def main():
         subprocess.run(["cargo", "build", "--release", "--manifest-path", str(ROOT / "engine" / "Cargo.toml")], check=True)
     out = lane / "results"
     out.mkdir(exist_ok=True)
-    kind = "spread" if "sets" in tomllib.loads((lane / "spec.toml").read_text()) else "events"
+    sp = tomllib.loads((lane / "spec.toml").read_text())
+    kind = "spread" if "sets" in sp else "factors" if "factors" in sp else "events"
     with open(lane / "run.log", "a") as f:
         subprocess.run([str(QX), kind, str(lane / "spec.toml")], cwd=ROOT, check=True, stderr=f,
                        env={**os.environ, "QX_DATA": str(ROOT / "data")})
     rep = json.loads((out / "report.json").read_text())
     rid = re.search(r"Registry id:\*?\*?\s*(R\d+)", text).group(1)
-    (out / "SUMMARY.md").write_text((spread_summary if kind == "spread" else summary)(rep, rid, psha))
+    (out / "SUMMARY.md").write_text({"spread": spread_summary, "factors": factor_summary}.get(kind, summary)(rep, rid, psha))
     log(f"{rid} {rep['verdict']}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
         best = rep["strategies"][0]
-        if kind == "spread":
+        if kind == "factors":
+            note = (f"qx factor report; {rep['trials']} factor x horizon series; survivors {rep['survivors'] or 'none'}; "
+                    f"best {best['factor']} {best['horizon_h']}h rank IC {best['rank_ic']:+.4f} t {best['rank_ic_t']:.2f} "
+                    f"RC p {best['p_rc']:.3f}")
+            best = {"label": f"{best['factor']} {best['horizon_h']}h"}
+        elif kind == "spread":
             b = best["stats"]
             note = (f"qx spread family; survivors {rep['survivors'] or 'none'}; best {best['label']} "
                     f"{b[0]['ann_pct']:+.2f}%/yr t {b[0]['t']:.2f} NW {b[0]['t_nw']:.2f} RC p {best['p_rc']:.3f}; "

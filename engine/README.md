@@ -12,12 +12,14 @@ variant's trial count. A lane runs it through `scripts/qx_run.py experiments/<la
 cargo build --release --manifest-path engine/Cargo.toml
 QX_DATA=data engine/target/release/qx events <spec.toml>   # event family
 QX_DATA=data engine/target/release/qx spread <spec.toml>   # cross-venue funding carry family
+QX_DATA=data engine/target/release/qx factors <spec.toml>  # factor report over a factor family
 cargo test --release --manifest-path engine/Cargo.toml     # before every commit that touches engine/
 ```
 
 | Subcommand | Source | What a strategy is | Decision | Lanes |
 |---|---|---|---|---|
 | `events` | `src/events.rs` | event kind x direction x horizon x line (x cover), priced on hourly bars as the Python lab does (`scripts/run_delist.py`) | max-t cluster bootstrap, halves, 2025+, matched same-hour null, 2x | R271, R273, R274; `specs/parity_r269.toml` reproduces R269 |
+| `factors` | `src/factors.rs` | factor x horizon over a long table of factor values (t, sym, one column per factor), alphalens / Qlib style: IC, rank IC, IR, quantile returns, long-short, turnover, net at the rebalancing horizon | moving-block bootstrap max \|t\| of rank IC over the family | none yet |
 | `spread` | `src/spread.rs` | venue set x lookback x entry threshold x slots: a daily book long the lower-funding venue and short the higher one, per coin | moving-block bootstrap max-t over days, NW t, halves, 2025+, trimmed mean, hurdle, 2x | R275 |
 
 Shared code:

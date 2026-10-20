@@ -2,9 +2,11 @@
 //!
 //! usage: qx events <spec.toml>      run an event family (see engine/README.md)
 //!        qx spread <spec.toml>      run a cross-venue funding carry family
+//!        qx factors <spec.toml>     factor report (IC, rank IC, quantiles, turnover) over a factor family
 
 mod data;
 mod events;
+mod factors;
 mod spread;
 mod stats;
 
@@ -25,6 +27,8 @@ enum Cmd {
     Events { spec: String },
     /// Run a cross-venue funding carry family; writes report.json, strategies.csv, daily.csv and trades.csv to its `out`.
     Spread { spec: String },
+    /// Factor report over a factor family; writes report.json and ic.csv to its `out`.
+    Factors { spec: String },
 }
 
 fn main() -> Result<()> {
@@ -55,6 +59,18 @@ fn main() -> Result<()> {
                     b.map(|x| x.ann_pct).unwrap_or(f64::NAN), r.funding_share, r.avg_held));
             }
             log(format!("VERDICT {}; survivors {:?}", rep.verdict, rep.survivors));
+        }
+        Cmd::Factors { spec } => {
+            let s: factors::Spec = toml::from_str(&std::fs::read_to_string(&spec)?)?;
+            let rep = factors::run(s, &log)?;
+            log(format!("{} factor x horizon series on {} dates; max |t| null 95th pct {:.2} (blocks of {})",
+                rep.trials, rep.dates, rep.rc_null_p95, rep.block));
+            for r in rep.results.iter().take(15) {
+                log(format!("{:28} {:4}h rankIC {:+.4} t {:+6.2} IR {:+.3} LS {:+7.1} bp t {:+5.2} turn {:.2}/{:.2} net {} p_rc {:.4}",
+                    r.factor, r.horizon_h, r.rank_ic, r.rank_ic_t, r.rank_ic_ir, r.ls_bp, r.ls_t, r.turnover_top,
+                    r.turnover_bottom, r.ls_net_ann_pct.map(|x| format!("{x:+.1}%/yr")).unwrap_or("-".into()), r.p_rc));
+            }
+            log(format!("survivors (p_rc < alpha): {:?}", rep.survivors));
         }
     }
     Ok(())
