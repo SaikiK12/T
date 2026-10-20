@@ -323,6 +323,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - 59-78% of trades ended at the week's end without reverting: one-week idiosyncratic moves in crypto drift rather
     than mean-revert.
   - NULL. [Findings](../experiments/pairs_v1/FINDINGS.md).
+- **R251 (lmw_v1)** ran Lo-Mamaysky-Wang kernel chart patterns (head-and-shoulders, broadening, triangles,
+  rectangles) on daily crypto, forex and world indices.
+  - Head-and-shoulders on indices predicted in 2001-12 (-82 bp over 5 days after an HS, book alpha t 2.27). It earned
+    nothing in 2013-19 (t -0.18).
+  - Crypto and forex books were flat.
+  - NULL. [Findings](../experiments/lmw_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -428,6 +434,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,991 after R250 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,997 after R251 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
