@@ -22,8 +22,9 @@ Freeze with `lab.prereg.freeze()` before any forward return is read. Never edite
   (top-trader positioning).
 - **The Binance funding level** as a carry signal: R190 / R191.
 - **The inputs below:** counts only. 294,367 rows, 2,069 days, 700 coins. Non-missing values: fund_gap_3d 273,590,
-  fund_gap_7d 272,184, hl_fund_gap_3d 92,822, price_gap_dev 248,053, vshare_chg 272,983, bn_fund_3d 293,050. Counted
-  on a draft symbol table with fewer Hyperliquid coins. No distribution, no IC, no return.
+  fund_gap_7d 272,184, hl_fund_gap_3d 102,121, price_gap_dev 248,053, vshare_chg 272,983, bn_fund_3d 293,050 (the
+  frozen table; a draft table with fewer Hyperliquid coins gave the same counts except hl_fund_gap_3d 92,822). No
+  distribution, no IC, no return.
 - **The engine:** unit tests and one synthetic run (a planted factor found, noise not), never on real data.
 - **R275 (cross-venue carry):** frozen the same day with the same symbol rule. Its result is not known when this file
   is frozen.
@@ -33,22 +34,22 @@ Freeze with `lab.prereg.freeze()` before any forward return is read. Never edite
 ## Inputs (frozen)
 
 ```inputs
-experiments/xvfac_v1/symbols.csv  SYMBOLS_SHA
-experiments/xvfac_v1/factors.parquet  FACTORS_PARQUET_SHA
-experiments/xvfac_v1/spec.toml  SPEC_SHA
-scripts/venue_symbols.py  VS_SHA
-scripts/xvenue_factors.py  XF_SHA
-engine/src/factors.rs  FACTORS_SHA
-engine/src/spread.rs  SPREAD_SHA
-engine/src/data.rs  DATA_SHA
-engine/src/events.rs  EVENTS_SHA
-engine/src/stats.rs  STATS_SHA
-engine/src/main.rs  MAIN_SHA
-engine/Cargo.lock  LOCK_SHA
+experiments/xvfac_v1/symbols.csv  78201a341b9fc498b67f4893f1dd30d67d790d94ca8257a4b1a2ce8f569ab8e0
+experiments/xvfac_v1/factors.parquet  6a7578ca5d2c9d91d53778d34075f7f830943454c2eed4443fd19a0445e9ec7c
+experiments/xvfac_v1/spec.toml  b68cd0cf5bb3aea2c246c97b505a60c978b06498f9bf27a338bdf2b264235e7e
+scripts/venue_symbols.py  e7479df3f3a004e253c7e6632e942d55f116223388b0776365f533042464b06c
+scripts/xvenue_factors.py  2668dc66fa9775c3b84f60ab01a42df330a4352309077b1c8f7e8a9d03b799ef
+engine/src/factors.rs  c88beac9b02464cfda09203a42716cf9861dffb060182796e17266a5d72c61e1
+engine/src/spread.rs  4055ceacd7949b742f864a35dfc1698262c1163200ccf0e5386a3dc726711074
+engine/src/data.rs  4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146
+engine/src/events.rs  31bc1b59ac055a164256b606e88dad4cd2f1e3ad8280fab3e914b4f725911474
+engine/src/stats.rs  bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47
+engine/src/main.rs  42184bc6302dd9c71f4a804d7882d7a549a8e6d958571c2e49e54baf49d5f8c2
+engine/Cargo.lock  9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f
 rebuild: bash -c ".venv/bin/python scripts/venue_symbols.py {tmp}/symbols.csv > /dev/null && .venv/bin/python scripts/xvenue_factors.py {tmp}/symbols.csv {tmp}/factors.parquet > /dev/null"
 ```
 
-Data digests at freezing (`docs/provenance/<folder>.json`, combined sha256): PROVENANCE_LINES
+Data digests at freezing (`docs/provenance/<folder>.json`, combined sha256): `klines_1h` 77fffa8a9d94cae2 (901 files, recorded 2026-10-20T21:45:26Z); `fundingRate` d80aa377b9283329 (901 files, recorded 2026-10-20T21:46:49Z); `gate_hist` d7c9146708710203 (3330 files, recorded 2026-10-20T22:16:48Z); `hyperliquid` 9c8ca0af334b0e3b (703 files, recorded 2026-10-20T23:06:46Z); `mexc_hist` f40c28647bf74481 (1823 files, recorded 2026-10-20T16:55:30Z).
 
 ## Factors (`scripts/xvenue_factors.py`)
 - **Decision:** each day at 00:00 UTC. A row's t is the open of the hourly bar that ends then; entry is its close.
