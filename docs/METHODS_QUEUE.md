@@ -7,7 +7,7 @@
 2. Set TESTED only when the registry row is DONE, and copy its verdict word (CONFIRMED, NULL, PARTIAL, DATA_PASS) from `rounds.csv`. Never write a verdict the registry does not have.
 3. Old-session results (`docs/OLD_SESSION_EDGES.md`) have no registry rows, so they stay UNTESTED here. They become TESTED only after a registry row exists.
 4. Do not delete or renumber rows. Add a new idea at the end with the next free M-number. Table order is the rank at build time: runnable-now UNTESTED/PARTIAL first, then blocked, then TESTED, then N/A.
-5. **`registry/methods.csv` is the live queue** (columns id, method, data_held, status, cheap, note, source, rid); `scripts/panel.py` shows its first 12 UNTESTED/PARTIAL rows. This file is the 2026-10-20 snapshot of rows M001-M169 with their sources. Rows M170-M210 (scout axes, forex/NASDAQ/prop rows and chartist families, `docs/CRITIQUE.md`) exist only in the CSV. Update the CSV first.
+5. **`registry/methods.csv` is the live queue** (columns id, method, data_held, status, cheap, note, source, rid); `scripts/panel.py` shows its first 12 UNTESTED/PARTIAL rows. This file is the 2026-10-20 snapshot of rows M001-M169 with their sources. Rows M170-M229 (scout axes, forex/NASDAQ/prop rows and chartist families, `docs/CRITIQUE.md`) exist only in the CSV. Update the CSV first. `registry/methods_aliases.csv` maps the 164 records of Codex PR #20 (`research/intake/`) onto these ids: aliases, context, and the new rows M227-M229.
 
 **Status.** TESTED: a registry row tests this mechanism (verdict shown). PARTIAL: part tested, gap named. UNTESTED: no test, data held. BLOCKED: blocker named (data not held, owner's yes for a download, compute, or no frozen spec). N/A: a claim, tool or record with no testable mechanism.
 

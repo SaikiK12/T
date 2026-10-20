@@ -259,6 +259,16 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The calm-VIX filter failed discovery, and R239's VIX reversal had no alpha in 2013-19.
   - NULL. It is the closest cross-market result, and it is a crash-risk premium, not a prop-compatible book.
   [Findings](../experiments/volrisk_v1/FINDINGS.md).
+- **R242 (tsbattery_v1)** tested four crypto time-series rules on the top-50 perps: week-open bias, pre-FOMC drift,
+  the ETH/BTC alt-season regime and vol-managed trend.
+  - Vol-managed trend passed discovery (+6.0 bp/day, t 2.07, beta near 0), but at 0.37 gross exposure that is about
+    2%/yr. It failed validation (t 0.52).
+  - The other three failed discovery.
+  - NULL. [Findings](../experiments/tsbattery_v1/FINDINGS.md).
+- **Queue import (Codex PR #20):** 164 source-method records were mapped onto `registry/methods.csv`.
+  - 132 are aliases of existing rows and 27 are context (`registry/methods_aliases.csv`).
+  - 3 are new rows, M227-M229.
+  - ALT1's negative-sign seesaw rule is the mirror of R219 F1, so it loses about 35 bp/day before costs.
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -364,6 +374,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,933 after R241 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,937 after R242 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
