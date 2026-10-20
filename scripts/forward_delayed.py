@@ -25,14 +25,18 @@ log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
 def shift_rows(ind, elig, lag):
-    """ind[t] opens at row t + lag[t] (lag per row), kept only if the symbol is eligible there."""
-    out = np.zeros_like(ind)
+    """Count slices entering at t + lag[t], keeping only symbols eligible at entry.
+
+    A backlog can send several signal rows to the same execution close. Each
+    remains a separate fixed-size slice, including its full holding period.
+    """
+    out = np.zeros(ind.shape, dtype=np.int64)
     T = len(ind)
     for t in np.flatnonzero(ind.any(axis=1)):
         e = t + int(lag[t])
         if e < T:
-            out[e] |= ind[t]
-    return out & elig
+            out[e] += ind[t]
+    return np.where(elig, out, 0)
 
 
 def score(tt, names, close):
