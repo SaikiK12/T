@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 07:37 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 07:47 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 34 |
 | Ideas partly tested | 31 |
 | Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 73 (NULL 50, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,997 |
+| Rounds in the registry | 74 (NULL 51, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,472,001 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -79,7 +79,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R244 | weekendlink_v1 | DONE | NULL | 2 |
 | R245 | xsrev_v1 | DONE | NULL | 4 |
 | R246 | ictlevels_v1 | DONE | NULL | 8 |
 | R247 | chartxm_v1 | DONE | NULL | 14 |
@@ -87,5 +86,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | R249 | rnfade_v1 | DONE | NULL | 4 |
 | R250 | pairs_v1 | DONE | NULL | 4 |
 | R251 | lmw_v1 | DONE | NULL | 6 |
+| R252 | oiwick_v1 | DONE | NULL | 4 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

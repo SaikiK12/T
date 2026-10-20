@@ -329,6 +329,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     nothing in 2013-19 (t -0.18).
   - Crypto and forex books were flat.
   - NULL. [Findings](../experiments/lmw_v1/FINDINGS.md).
+- **R252 (oiwick_v1)** faded liquidation-cascade proxies on the top-50 perps: an hourly open-interest drop of 3% or more
+  plus a wick of at least 3 ATR (lower wick: buy; upper wick: sell), held 4 h or 24 h.
+  - Both sides reverted in raw price terms (long cascades +143 bp over 24 h, 658 cases; squeezes -391 bp, 166 cases).
+  - The best book, ALL/24, reached t 1.93 in discovery, which is effectively 2022-23 because OI data covers little of
+    2021.
+  - Post hoc, the long-side bounce is mostly the whole market's (+23 bp market-adjusted). A cascade-count market-timing
+    rule is queued as M233.
+  - NULL. [Findings](../experiments/oiwick_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -434,6 +442,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,997 after R251 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,001 after R252 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
