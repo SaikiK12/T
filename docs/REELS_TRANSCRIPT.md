@@ -106,3 +106,27 @@ their limitations, remains in the JSON so they are not silently discarded.
 All media-derived ideas remain leads. Historical examples, demo rankings, captioned R-multiples, and promotional
 statements are not validated returns. Any study still needs a finite frozen rule, appropriate controls, executable
 prices, and 1x/2x/3x costs before outcomes are read.
+
+## MEXC mechanics follow-up: finite proposals, not results
+
+Seven official pages support six `XM26-*` records in the existing bundle. These rules are **our unregistered
+proposals**, not exchange recommendations. No outcome, market download or synthetic implementation is claimed. Three distinct scopes have canonical BLOCKED
+rows M280–M282; other controls retain existing parents/context. Related does not mean exactly tested.
+
+| Source mechanics | Proposed bounded work / relationship |
+|---|---|
+| [MMR adjustment](https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452) and [leverage-only cut](https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535) | Separate the events: the former can change existing-position liquidation exposure; the latter does not prove forced selling. Proposed first-seen-notice short, 24-hour exit, opposite-sign and unaffected-coin controls; new M280, related M079/M209. |
+| [Tick-size change](https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119) | Hold an existing reversal signal fixed and compare executable net around the change. Old orders retain their original grid. Related M058/M232/M240; books and fill modeling required. |
+| [Trigger-order FAQ](https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952) | Compare the same 15% cover under last/fair/index triggers, executing on the book. Relevant to Claude's remote M261; no dangling M261 alias is added to this branch. |
+| Trigger FAQ, leverage notice, [price-protection definition](https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2) | Build synthetic triggered/submitted/partial/filled/rejected states; retain exposure until a fill. Cover gaps, margin, disabled trading and changed-leverage rejection. Protective-order activation does not ensure execution. |
+| [Index/fair/last FAQ](https://www.mexc.com/support/article/faq-on-index-price-fair-price-and-last-price-7950960183961) | Related M173 variant: gate dislocation entries on recorded constituent/source health, versus identical ungated rules. Unknown source state stays unknown; current weights cannot reconstruct history. |
+| [IN funding-frequency notice](https://www.mexc.com/announcements/article/adjustment-to-inusdt-funding-rate-settlement-frequency-jul-1-2026-18-17827791536624) | Transport the already chosen Binance candidate to prospective MEXC notices, without a new horizon search; normalize actual intervals/caps. This is not another generic funding study. |
+
+The IN page displays **July 2 publication but July 1 effectiveness**. An entry at effective time would precede its
+displayed publication date; prospective local first-seen time must govern availability. The general trigger FAQ also
+describes fair price loosely; the dedicated price FAQ supplies the formula. Neither marketing language nor a
+displayed last price proves an executable fill. Mutable page versions and actual excerpt scope are identified in
+the supplement; original HTML was not archived. Full rules, eligibility, controls and 1x/2x/3x costs must be frozen
+before any new strategy outcome.
+
+These three distinct scopes are retained as BLOCKED canonical rows M280 (margin notices), M281 (tick-size execution) and M282 (funding-notice venue transport). Trigger/rejection controls and index-state variants retain existing parent relationships; no study was run.

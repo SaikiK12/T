@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-20",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -11,7 +11,7 @@
     "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
     "Video and public-source intake is limited to accessible captions, official transcripts/recaps, documentation, repository descriptions or indexed summaries; several videos have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage.",
+  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage. XM26 entries are our finite proposals, not exchange-recommended trading rules or measured results.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -8616,6 +8616,249 @@
           "label": "creator official homepage; linked tools and latest-video title only"
         }
       ]
+    },
+    {
+      "id": "XM26-MMR-EVENT",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "MEXC maintenance-margin increases separated from leverage-ceiling reductions",
+      "method_type": "event_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "Study an MMR increase separately from a leverage-only cut. Proposed short at the first executable hourly open after a prospectively received notice, exit after 24 hours; opposite-sign and unaffected-coin controls; cluster each notice and report BTC-hedged returns at 1x/2x/3x costs.",
+      "proposed_rule": "Study an MMR increase separately from a leverage-only cut. Proposed short at the first executable hourly open after a prospectively received notice, exit after 24 hours; opposite-sign and unaffected-coin controls; cluster each notice and report BTC-hedged returns at 1x/2x/3x costs.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "Official notices document changes; direction and 24-hour horizon are our proposals, not exchange recommendations. An MMR increase can change existing-position liquidation exposure; a lower leverage ceiling alone does not prove forced selling.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "First-seen notice and effective times; before/after tiers and affected crypto contracts",
+        "Matched hourly executable prices, funding and unaffected-coin controls"
+      ],
+      "blockers": [
+        "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Retained in canonical M280: obtain point-in-time inputs and freeze a finite study before outcomes.",
+      "alias_kind": "distinct_unregistered_scope",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ],
+      "queue_allocation": "M280"
+    },
+    {
+      "id": "XM26-TICK-CHANGE",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "Tick-size change as a treatment on fixed reversal execution",
+      "method_type": "execution_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "Around announced tick-size reductions, hold one already chosen reversal signal fixed and compare its next-24-hour executable net with matched non-event hours; compare passive and taker execution at identical size and 1x/2x/3x costs.",
+      "proposed_rule": "Around announced tick-size reductions, hold one already chosen reversal signal fixed and compare its next-24-hour executable net with matched non-event hours; compare passive and taker execution at identical size and 1x/2x/3x costs.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "The reviewed notice preserves old orders on their original tick grid. Spread/depth and adverse-selection effects are unknown; an OHLC touch is not evidence of a maker fill.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Before/after tick metadata and effective times",
+        "Timestamped depth, trades, order grid and queue/fill assumptions"
+      ],
+      "blockers": [
+        "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Retained in canonical M281: obtain point-in-time inputs and freeze a finite study before outcomes.",
+      "alias_kind": "distinct_unregistered_scope",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ],
+      "queue_allocation": "M281"
+    },
+    {
+      "id": "XM26-TRIGGER-RACE",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "Last/fair/index trigger comparison for an unchanged protective cover",
+      "method_type": "risk_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "Compare one fixed existing strategy and identical 15% cover under last, fair and index triggers; execution must still occur against the book. Compare trigger incidence, fill time, funding, liquidation breaches and worst loss without a threshold sweep.",
+      "proposed_rule": "Compare one fixed existing strategy and identical 15% cover under last, fair and index triggers; execution must still occur against the book. Compare trigger incidence, fill time, funding, liquidation breaches and worst loss without a threshold sweep.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "This is a proposed prerequisite for Claude remote M261, not a test of M173 fair/index ranking. M261 is not an alias target here because this branch does not contain that canonical row.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Synthetic trigger-gap fixtures can be built without market data. Historical comparison and registration have not occurred.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized last/fair/index and books",
+        "Point-in-time trigger, margin, liquidation and order rules"
+      ],
+      "blockers": [
+        "Synthetic trigger-gap fixtures can be built without market data. Historical comparison and registration have not occurred.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Use the canonical queue and allocate only a truly distinct complete method; otherwise retain this source variant under the existing parent. Prioritize synthetic trigger/rejection invariants.",
+      "alias_kind": "context_pending_allocation_or_engineering",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ]
+    },
+    {
+      "id": "XM26-REJECTED-COVER",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "Exposure-preserving trigger and rejected-exit state machine",
+      "method_type": "engineering_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "Implement triggered -> submitted -> filled/partial/rejected states. Keep exposure until an actual fill; compare with an instant-fill-at-stop control using synthetic gap, price-protection, margin, contract-state and changed-leverage fixtures.",
+      "proposed_rule": "Implement triggered -> submitted -> filled/partial/rejected states. Keep exposure until an actual fill; compare with an instant-fill-at-stop control using synthetic gap, price-protection, margin, contract-state and changed-leverage fixtures.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "Current official pages distinguish trigger activation from execution. Enabled price protection may reject TP/SL under excessive last/fair divergence; a leverage-cut notice separately invalidates old noncompliant trigger/trailing orders while some old limits may still fill.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Risk-engineering context, not directional alpha. No new strategy trial or performance claim; synthetic implementation still open.",
+      "status": "untested",
+      "required_inputs": [
+        "Deterministic synthetic order states, exposure and margin fixtures",
+        "Exact contract-specific rejection threshold and rule vintage for eventual market validation"
+      ],
+      "blockers": [
+        "Risk-engineering context, not directional alpha. No new strategy trial or performance claim; synthetic implementation still open.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Use the canonical queue and allocate only a truly distinct complete method; otherwise retain this source variant under the existing parent. Prioritize synthetic trigger/rejection invariants.",
+      "alias_kind": "context_pending_allocation_or_engineering",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        },
+        {
+          "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ]
+    },
+    {
+      "id": "XM26-INDEX-STATE",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "Index-source health gate for existing fair/index dislocation method",
+      "method_type": "risk_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "For the existing M173 signal, suppress new entries while required index-source coverage is unknown and compare with the identical ungated rule; distinguish healthy source states from observable constituent exclusion/restoration.",
+      "proposed_rule": "For the existing M173 signal, suppress new entries while required index-source coverage is unknown and compare with the identical ungated rule; distinguish healthy source states from observable constituent exclusion/restoration.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "The official FAQ documents stale/deviating-source exclusion and exceptions. State cannot be inferred from future returns or assumed from current constituent lists.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Related variant of M173, not an exact alias or completed test. Blocked until source-state provenance is available.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time constituents/weights and source quote age",
+        "Fair/index/last with recorded exclusions and unchanged signal definition"
+      ],
+      "blockers": [
+        "Related variant of M173, not an exact alias or completed test. Blocked until source-state provenance is available.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Use the canonical queue and allocate only a truly distinct complete method; otherwise retain this source variant under the existing parent. Prioritize synthetic trigger/rejection invariants.",
+      "alias_kind": "related_variant",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/faq-on-index-price-fair-price-and-last-price-7950960183961",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/faq-on-index-price-fair-price-and-last-price-7950960183961",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ]
+    },
+    {
+      "id": "XM26-FUND-TRANSPORT",
+      "parent_claim_id": "XM26-MEXC-MECHANICS",
+      "title": "MEXC-native funding-frequency transport with first-seen-time guard",
+      "method_type": "event_proposal",
+      "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+      "testable_rule": "Transport the already selected Binance funding-frequency candidate to prospectively captured MEXC-native notices without re-searching horizons. Enter only after local first-seen time and normalize each actual settlement interval and changed cap; retain the parent control and 1x/2x/3x costs.",
+      "proposed_rule": "Transport the already selected Binance funding-frequency candidate to prospectively captured MEXC-native notices without re-searching horizons. Enter only after local first-seen time and normalize each actual settlement interval and changed cap; retain the parent control and 1x/2x/3x costs.",
+      "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+      "received_scope": "R271/R272 already cover Binance notices, so this is venue transport, not a duplicate generic funding search. The reviewed IN notice displays publication July 2, 2026 but an effective adjustment July 1 at 18:10 UTC: entering at effective time would precede the displayed publication date.",
+      "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+      "unrun_scope": "Canonical M282 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "MEXC notice first-seen/effective times and notice revisions",
+        "Before/after funding cycle/cap, settled funding and executable prices"
+      ],
+      "blockers": [
+        "Canonical M282 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+        "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+      ],
+      "next_action": "Retained in canonical M282: obtain point-in-time inputs and freeze a finite study before outcomes.",
+      "alias_kind": "distinct_unregistered_scope",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/adjustment-to-inusdt-funding-rate-settlement-frequency-jul-1-2026-18-17827791536624",
+          "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/article/adjustment-to-inusdt-funding-rate-settlement-frequency-jul-1-2026-18-17827791536624",
+          "label": "Exchange mechanics only; no strategy performance evidence"
+        }
+      ],
+      "queue_allocation": "M282"
     }
   ],
   "sources": [
@@ -8920,9 +9163,9 @@
     },
     {
       "path": "docs/REELS_TRANSCRIPT.md",
-      "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
+      "sha256": "dd907fab181fe31b7761a31dd628ee5b72d65a25ed76f38bdb6cc27a9ad532ba",
       "review_status": "reviewed_video_leads_not_performance_evidence",
-      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source. Later account follow-up adds eight AR26 records with explicit channel-access limitations and vendor/creator attribution.",
+      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source. Later account follow-up adds eight AR26 records with explicit channel-access limitations and vendor/creator attribution. Six XM26 primary-source mechanics proposals added; rules are unregistered proposals rather than exchange recommendations or results.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -9002,7 +9245,13 @@
         "AR26-FOOTPRINT",
         "AR26-STARTER",
         "AR26-JOURNAL",
-        "AR26-TOOLS"
+        "AR26-TOOLS",
+        "XM26-MMR-EVENT",
+        "XM26-TICK-CHANGE",
+        "XM26-TRIGGER-RACE",
+        "XM26-REJECTED-COVER",
+        "XM26-INDEX-STATE",
+        "XM26-FUND-TRANSPORT"
       ],
       "unextracted_limitations": [
         "No full internet survey; several videos and indexed pages have no verified full transcript.",
@@ -9011,7 +9260,15 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf"
+      "current_sha256": "dd907fab181fe31b7761a31dd628ee5b72d65a25ed76f38bdb6cc27a9ad532ba",
+      "reviewed_version_history": [
+        {
+          "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
+          "reviewed_utc_date": "2026-10-20",
+          "superseded_by_intake": "mexc_mechanics_proposals_20261020",
+          "preservation": "Previous Git commit and supplemental_intakes.previous_reels_digest_sha256"
+        }
+      ]
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -9549,6 +9806,84 @@
         "Third-party mirrored Instagram captions and a 13-title video listing were discovery only, not verified creator rules or performance."
       ],
       "provenance_note": "Keep vendor-described Net Drift applications separate from creator-attributed rules. No credentials, paid data, new market outcomes, strategy trials or queue IDs."
+    },
+    {
+      "intake_id": "mexc_mechanics_proposals_20261020",
+      "captured_utc_date": "2026-10-20",
+      "records_added": [
+        "XM26-MMR-EVENT",
+        "XM26-TICK-CHANGE",
+        "XM26-TRIGGER-RACE",
+        "XM26-REJECTED-COVER",
+        "XM26-INDEX-STATE",
+        "XM26-FUND-TRANSPORT"
+      ],
+      "media_sources": [
+        {
+          "url": "https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452",
+          "title": "July 3 MMR adjustment",
+          "basis": "Official announcement, displayed publication June 24, 2026; effective July 3 08:00 UTC; reviewed mechanics/table excerpt only",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+          "title": "CVC maximum-leverage reduction",
+          "basis": "Official announcement; stated effective September 13, 2026 14:30 UTC; reviewed position and order-type consequences",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119",
+          "title": "October 12 tick-size changes",
+          "basis": "Official announcement; stated October 12, 2026; reviewed tick table and old-order behavior",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952",
+          "title": "MEXC trigger order FAQs",
+          "basis": "Official FAQ dated September 7, 2026; reviewed activation, pricing reference and execution failure mechanics",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2",
+          "title": "MEXC futures terminology",
+          "basis": "Official guide dated September 21, 2026; reviewed price-protection, margin and limit definitions; not blanket adoption of its marketing claims",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/support/article/faq-on-index-price-fair-price-and-last-price-7950960183961",
+          "title": "Index/fair/last FAQ",
+          "basis": "Official FAQ dated February 16, 2026; reviewed index protection and fair-vs-execution price distinction",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        },
+        {
+          "url": "https://www.mexc.com/announcements/article/adjustment-to-inusdt-funding-rate-settlement-frequency-jul-1-2026-18-17827791536624",
+          "title": "IN funding-frequency adjustment",
+          "basis": "Official notice displays July 2, 2026 publication and July 1, 2026 18:10 UTC effectiveness; contradiction retained rather than backdating availability",
+          "checked_utc_date": "2026-10-20",
+          "version_limit": "Mutable official webpage; no original HTML/version hash captured."
+        }
+      ],
+      "media_source_count": 7,
+      "previous_reels_digest_sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
+      "requested_scope": "Owner asked for additional actionable leads while improving project organization.",
+      "received_scope": "Seven enumerated public MEXC official pages, specific mechanics/excerpts only; six finite research/engineering proposals. No comprehensive exchange-history or performance audit.",
+      "provenance_note": "All finite rules are our unregistered proposals, not MEXC recommendations. No credentials, private data, market dataset, media, model weights or outcomes used. No new R ID or dangling M261 target. Parent allocated M280-M282 after a room claim, skipping Claude's reserved range; all three are BLOCKED and unregistered.",
+      "source_conflicts": [
+        "IN effective time predates displayed publication date; prospective first-seen time must govern information availability.",
+        "General trigger FAQ describes fair price loosely; use the dedicated index/fair/last FAQ formula for precise modeling.",
+        "MEXC terminology marketing/general statements are not accepted as guarantees of fills, profits, funding intervals or position permanence."
+      ],
+      "queue_allocations": {
+        "XM26-MMR-EVENT": "M280",
+        "XM26-TICK-CHANGE": "M281",
+        "XM26-FUND-TRANSPORT": "M282"
+      }
     }
   ]
 }
