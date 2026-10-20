@@ -145,3 +145,6 @@ was read separately: adaptive 20–60-day lookback, channel plus Bollinger confi
 retained as M283 with source commit/blob/hash. Prose says 30-day volatility while the snippet uses the adaptive
 window from 31 requested observations; full indicator updates, sizing and execution were not received. This is
 a BLOCKED composite lead, not a tested rule or a replication of an existing fixed-window indicator result.
+
+
+A pinned third-party [Backtrader reproduction](https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py) was then read in full (commit `79bbf6a8`, blob `c581f127`, SHA-256 `04c09f26…7d2a`), strictly as a code-fidelity check. It is not official QuantConnect code. Its volatility update `(today_std / yesterday_std) / today_std` simplifies to `1 / yesterday_std`, so it is not a relative volatility change; the Donchian comparisons are commented out, leaving close-versus-Bollinger entries. The driver names a Yahoo SPX CSV for 2010–2019 and 0.1% commission, but no run output or data was received. M283 remains BLOCKED: this derivative does not resolve the official Method's 30-day versus adaptive-N/history-window conflict. No outcomes or tests were run.

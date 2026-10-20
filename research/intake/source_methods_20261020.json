@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-20",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -11,7 +11,7 @@
     "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
     "Video and public-source intake is limited to accessible captions, official transcripts/recaps, documentation, repository descriptions or indexed summaries; several videos have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage. XM26 entries are our finite proposals, not exchange-recommended trading rules or measured results.",
+  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage. XM26 entries are our finite proposals, not exchange-recommended trading rules or measured results. The M283 follow-up audits one pinned secondary implementation; it does not add a method or validate performance.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -8867,27 +8867,37 @@
       "method_type": "strategy",
       "hypothesis": "Adaptive lookback and joint channel/band confirmation are an untested composite lead, not evidence of net MEXC profitability.",
       "testable_rule": "StartN20; adjustN by relative closing-price volatility change, clamp20–60. Long after prior close exceeds upper2-sigma band and ask exceedsN-day high; mirror short below lower band/channel. Exit long belowN-close SMA, short above it.",
-      "exact_tested_scope": "No project test of this exact composite identified; no outcomes computed.",
-      "unrun_scope": "Prose specifies30-day volatility; snippet uses adaptiveN with31 fetched closes. EMA-band initialization/update, completed-bar timing, sizing and execution remain unresolved.",
+      "exact_tested_scope": "No project test of this exact composite identified; no outcomes computed. The secondary source contains a Yahoo SPX CSV driver dated 2010-01 through 2019-12, but no result or run provenance was received or verified.",
+      "unrun_scope": "Official prose says 30-day closing-price volatility while its snippet requests 31 closes and slices by adaptive N up to 60, which cannot supply two N-day windows above N=15 from those observations. EMA-band initialization/update, completed-bar timing and bid/ask direction remain unresolved. A pinned third-party Backtrader reproduction is materially different: its volatility formula simplifies to 1/yesterday_std and its Donchian comparisons are commented out; it is not an authoritative resolution.",
       "status": "blocked",
       "required_inputs": [
         "Pinned full algorithm and resolved window/update mechanics",
         "Past-only daily OHLC; executable bid/ask, funding, size and costs for an explicit MEXC adaptation"
       ],
       "blockers": [
-        "Source prose/snippet disagreement must be resolved in a finite specification, not optimized against outcomes."
+        "Official text and snippet conflict on volatility window/history length; retain both and resolve in a finite specification before outcomes.",
+        "The pinned third-party implementation changes the entry rule and has a dimensionally scale-dependent volatility update; do not use it as the official rule or performance evidence.",
+        "MEXC bar timing, bid-versus-ask, sizing, funding, fees, spread and executable fills need explicit specification."
       ],
-      "next_action": "M283: inspect full implementation, define one finite adaptation and controls, freeze before any outcome.",
+      "next_action": "M283: preserve the official-source ambiguity; if pursued, freeze one explicitly documented interpretation and MEXC execution/data contract before any outcome.",
       "source_refs": [
         {
           "path": "https://github.com/QuantConnect/Tutorials/blob/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy/02%20Method.html",
           "label": "Official Method source only; pinned commit and blob"
+        },
+        {
+          "path": "https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py",
+          "label": "Independent third-party Backtrader reproduction, pinned source commit/blob/SHA-256; audited for source fidelity, not treated as official QuantConnect code"
         }
       ],
       "evidence_refs": [
         {
           "path": "https://github.com/QuantConnect/Tutorials/blob/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy/02%20Method.html",
           "label": "Source mechanics; no performance evidence"
+        },
+        {
+          "path": "https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py",
+          "label": "Static code audit only: implementation deviations and a volatility-formula defect; no benchmark or strategy result accepted"
         }
       ],
       "source_version": {
@@ -8899,7 +8909,25 @@
         "N_next=clamp(round(N*(1+(sigma_today-sigma_yesterday)/sigma_today)),20,60); initialN20",
         "Previous close outside2-sigma band; current ask beyondN-day high/low; EMA-band snippet supplied",
         "Close long belowN-close SMA; close short above it"
-      ]
+      ],
+      "secondary_source_version": {
+        "repository": "letianzj/QuantResearch",
+        "repository_commit": "79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e",
+        "path": "backtest/bt/dynamic_breakout_ii.py",
+        "git_blob": "c581f1275721ddf1c8fc7ee73dac5942d76aae0e",
+        "sha256": "04c09f26493182a62ba7fe7d2a93aad78dd1a8bc4026ae228045efffedd7c617",
+        "bytes": 10401
+      },
+      "source_audit": {
+        "review_date_utc": "2026-10-20",
+        "basis": "Pinned source code read in full; source-only static inspection, no execution.",
+        "findings": [
+          "delta_vol=(today_std/yesterday_std)/today_std algebraically equals 1/yesterday_std; it is not a relative volatility change and depends on price scale.",
+          "The Donchian high/low are computed, but both channel comparisons are commented out; entries use current close versus Bollinger bands alone.",
+          "The driver points to a Yahoo SPX daily CSV for 2010-01-01 through 2019-12-31 and sets commission to 0.001; data, run output, slippage, funding and MEXC execution evidence were not received."
+        ],
+        "interpretation": "This is a materially divergent and defective reproduction, not confirmation of the official rule and not a distinct strategy allocation."
+      }
     }
   ],
   "sources": [
@@ -9205,8 +9233,8 @@
     {
       "path": "docs/REELS_TRANSCRIPT.md",
       "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
-      "review_status": "reviewed_video_leads_not_performance_evidence",
-      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source. Later account follow-up adds eight AR26 records with explicit channel-access limitations and vendor/creator attribution. Six XM26 primary-source mechanics proposals added; rules are unregistered proposals rather than exchange recommendations or results. One pinned QC Method and a bounded library-directory pass; no whole-library ingestion.",
+      "review_status": "reviewed_bounded_code_fidelity_audit_not_performance_evidence",
+      "scope": "Compact digest of owner videos and bounded public sources; latest update includes one pinned secondary Dynamic Breakout II code-fidelity audit, not a performance test.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -9302,13 +9330,19 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
+      "current_sha256": "fc11d51827ff4871b473ed2f8fe9d34749382d9d82682976f689f610cec3c51e",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
           "reviewed_utc_date": "2026-10-20",
           "superseded_by_intake": "mexc_mechanics_proposals_20261020",
           "preservation": "Previous Git commit and supplemental_intakes.previous_reels_digest_sha256"
+        },
+        {
+          "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
+          "reviewed_utc_date": "2026-10-20",
+          "superseded_by_intake": "strategy_hubs_code_audit_20261020",
+          "preservation": "Git commit b1b3df8 and supplemental intake record"
         }
       ]
     }
@@ -9944,6 +9978,35 @@
       "received_scope": "Ten directory/provider entrypoints added to existing catalog; directory listing access is not mechanism extraction. One pinned Method source separately extracted.",
       "provenance_note": "No copied strategy corpus, market data, model weights, account access, outcomes or trial count. Prior249 method records retained. M283 claimed in room; unresolved mechanics stay BLOCKED.",
       "previous_reels_digest_sha256": "dd907fab181fe31b7761a31dd628ee5b72d65a25ed76f38bdb6cc27a9ad532ba"
+    },
+    {
+      "intake_id": "strategy_hubs_code_audit_20261020",
+      "captured_utc_date": "2026-10-20",
+      "records_updated": [
+        "HUB26-QC-DB2"
+      ],
+      "canonical_allocation": "Existing M283 only; no new method ID, alias row or trial.",
+      "media_sources": [
+        {
+          "url": "https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py",
+          "title": "Dynamic Breakout II Backtrader reproduction",
+          "basis": "Complete code file reviewed at pinned commit; third-party implementation, not official QuantConnect algorithm code",
+          "git_blob": "c581f1275721ddf1c8fc7ee73dac5942d76aae0e",
+          "sha256": "04c09f26493182a62ba7fe7d2a93aad78dd1a8bc4026ae228045efffedd7c617"
+        }
+      ],
+      "media_source_count": 1,
+      "received_scope": "One source-code file (10,401 bytes) from one public repository, pinned to commit 79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e; code read in full for fidelity, no dataset or result artifact received.",
+      "findings": [
+        "Volatility update algebra reduces to reciprocal of yesterday standard deviation.",
+        "Donchian comparisons are commented out; implemented entry uses close versus Bollinger only.",
+        "Driver names Yahoo SPX 2010-2019 and 0.1% commission, but no run/result provenance was received."
+      ],
+      "limitations": [
+        "Third-party and non-authoritative; this does not resolve official source conflicts.",
+        "No code execution, market data, outcomes, or project tests."
+      ],
+      "previous_reels_digest_sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02"
     }
   ]
 }
