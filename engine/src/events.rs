@@ -80,6 +80,13 @@ pub struct Spec {
     pub g3_min: usize,
     #[serde(default = "d_y25")]
     pub recent_from: String,
+    /// Winsorize each strategy's cluster observations at (q, 1 - q) for the reality check only (0 = off).
+    #[serde(default)]
+    pub winsor: f64,
+    /// Drop a leg if any one-bar move of its instrument in [r0 - 24, r0 + max h] exceeds this factor (0 = off):
+    /// redenominations and token swaps (COCOS 1:1000 in 2021) are not returns.
+    #[serde(default)]
+    pub max_bar_jump: f64,
 }
 
 #[derive(Clone, Debug)]
@@ -158,6 +165,7 @@ fn read_events(spec: &Spec) -> Result<Vec<Ev>> {
 
 pub struct Family {
     pub spec: Spec,
+    pub suspect: Vec<String>,
     pub sources: Vec<Source>,
     pub legs: Vec<PLeg>,
     pub no_market: usize,
@@ -188,7 +196,8 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
     let mut evs = evs;
     evs.sort_by(|a, b| (a.t, &a.notice, &a.ticker).cmp(&(b.t, &b.notice, &b.ticker)));
     let mut seen = BTreeSet::new();
-    let (mut legs, mut no_market) = (Vec::new(), 0usize);
+    let (mut legs, mut no_market, mut suspect) = (Vec::new(), 0usize, Vec::new());
+    let hmax = *spec.horizons.iter().max().unwrap_or(&1);
     let hedge = spec.hedge.as_ref().and_then(|h| sources[0].get(h));
     for e in &evs {
         let r0 = axis.row(e.t);
@@ -203,6 +212,23 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
             continue; // one leg per instrument per cluster
         }
         let s = sources[k].get(&e.syms[k]).unwrap();
+        if spec.max_bar_jump > 0.0 {
+            let (lo, hi) = ((r0 - 24).max(0) as usize, ((r0 + hmax) as usize).min(s.close.len() - 1));
+            let mut prev = f64::NAN;
+            let mut bad = false;
+            for r in lo..=hi {
+                if s.traded[r] {
+                    if prev.is_finite() && (s.close[r] / prev > spec.max_bar_jump || prev / s.close[r] > spec.max_bar_jump) {
+                        bad = true;
+                    }
+                    prev = s.close[r];
+                }
+            }
+            if bad {
+                suspect.push(format!("{} {} {} {}", e.kind, e.ticker, spec.venues[k].name, e.t));
+                continue;
+            }
+        }
         let mut leg = PLeg {
             notice: e.notice.clone(), kind: e.kind.clone(), ticker: e.ticker.clone(), t0: e.t, r0,
             venue: spec.venues[k].name.clone(), sym: e.syms[k].clone(), sg: vec![], hedge: vec![], stale: vec![],
@@ -228,7 +254,7 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
         }
         legs.push(leg);
     }
-    Ok(Family { events_in: evs.len(), spec, sources, legs, no_market })
+    Ok(Family { events_in: evs.len(), spec, suspect, sources, legs, no_market })
 }
 
 impl Family {
@@ -306,7 +332,19 @@ impl Family {
             let per: Vec<BTreeMap<i64, f64>> = cols.iter().map(|&j| self.obs(&strats[j], 1).into_iter().map(|(r, o)| (r, o.obs)).collect()).collect();
             let rows: Vec<i64> = per.iter().flat_map(|m| m.keys().copied()).collect::<BTreeSet<_>>().into_iter().collect();
             let n = rows.len();
-            let x: Vec<Vec<f64>> = rows.iter().map(|r| per.iter().map(|m| *m.get(r).unwrap_or(&f64::NAN)).collect()).collect();
+            let mut x: Vec<Vec<f64>> = rows.iter().map(|r| per.iter().map(|m| *m.get(r).unwrap_or(&f64::NAN)).collect()).collect();
+            if self.spec.winsor > 0.0 {
+                for j in 0..cols.len() {
+                    let mut v: Vec<f64> = x.iter().map(|r| r[j]).filter(|v| v.is_finite()).collect();
+                    v.sort_by(|a, b| a.partial_cmp(b).unwrap());
+                    let (lo, hi) = (percentile(&v, 100.0 * self.spec.winsor), percentile(&v, 100.0 * (1.0 - self.spec.winsor)));
+                    for r in x.iter_mut() {
+                        if r[j].is_finite() {
+                            r[j] = r[j].clamp(lo, hi);
+                        }
+                    }
+                }
+            }
             let mu: Vec<f64> = (0..cols.len()).map(|j| {
                 let v: Vec<f64> = x.iter().map(|r| r[j]).filter(|v| v.is_finite()).collect();
                 stats::mean(&v)
@@ -503,6 +541,8 @@ pub struct Report {
     pub clusters: BTreeMap<String, usize>,
     pub legs_by_venue: BTreeMap<String, usize>,
     pub rc_null_p95: f64,
+    pub rc_t: Vec<(String, f64)>,
+    pub suspect: Vec<String>,
     pub verdict: String,
     pub survivors: Vec<String>,
     pub strategies: Vec<StratResult>,
@@ -513,8 +553,8 @@ pub fn run(spec: Spec, log: &dyn Fn(String)) -> Result<Report> {
     let fam = build(spec, log)?;
     let y25 = data::ms(&fam.spec.recent_from)?;
     let strats = fam.strategies();
-    log(format!("{} events, {} priced legs, {} no market; clusters {:?}; {} strategies",
-        fam.events_in, fam.legs.len(), fam.no_market, fam.clusters_by_kind(), strats.len()));
+    log(format!("{} events, {} priced legs, {} no market, {} suspect; clusters {:?}; {} strategies",
+        fam.events_in, fam.legs.len(), fam.no_market, fam.suspect.len(), fam.clusters_by_kind(), strats.len()));
     let (tobs, tmax) = fam.reality_check(&strats);
     let mut sorted = tmax.clone();
     sorted.sort_by(|a, b| a.partial_cmp(b).unwrap());
@@ -558,6 +598,8 @@ pub fn run(spec: Spec, log: &dyn Fn(String)) -> Result<Report> {
         name: fam.spec.name.clone(), trials: strats.len(), events_in: fam.events_in, priced_legs: fam.legs.len(),
         no_market: fam.no_market, clusters: fam.clusters_by_kind(), legs_by_venue: lv,
         rc_null_p95: percentile(&sorted, 95.0),
+        rc_t: strats.iter().zip(tobs.iter()).map(|(s, t)| (s.label(), *t)).collect(),
+        suspect: fam.suspect.clone(),
         verdict: if survivors.is_empty() { "NULL".into() } else { "PASS (gate 0)".into() },
         survivors, strategies: results, spec: fam.spec.clone(),
     };
