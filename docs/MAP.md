@@ -356,6 +356,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     February-May 2025, when they still earned 67-82% of it.
   - Crowd-fading short books profit from the stress that hurts momentum, so the rule removes profit.
   - NULL. [Findings](../experiments/dispgate_v1/FINDINGS.md).
+- **R261 (tradlead_v1)** asked whether the last hour of TradFi perps (gold, silver, oil; US equity perps such as QQQ and
+  NVDA) leads crypto. It tested a market-timing book and a beta cross-section, held 1, 4 or 24 h.
+  - The data starts in 2025-12, so the whole read lies in the spent holdout.
+  - Equity perps and crypto move together within the hour (correlation +0.34), with no lead into the next hour
+    (-0.007).
+  - All 12 selected books fail discovery. The best is -0.1 bp/day at 24 h; the 1-4 h books lose to costs.
+  - NULL. [Findings](../experiments/tradlead_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -461,6 +468,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,037 after R260 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,061 after R261 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

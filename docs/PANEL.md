@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 11:46 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 11:58 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 32 |
+| Ideas in the queue, untested | 31 |
 | Ideas partly tested | 31 |
 | Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 78 (NULL 55, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,472,037 |
+| Rounds in the registry | 79 (NULL 56, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,472,061 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -53,7 +53,6 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 
 | id | method | data_held | status | cheap | note |
 |---|---|---|---|---|---|
-| M004 | TradFi commodity/equity perps (CL, XAU, NVDA...) 1 h return leads the crypto cross-section, next 1-24 h | Y klines_1h (TradFi perps present) | UNTESTED | 1 | Transfer test of R216's TradFi gross. A proxy for the news claim, not the claim. |
 | M006 | Square-root impact cost at target size (Donier & Bonart) to size books against the tier cost | Y klines_1h (quote_volume) | UNTESTED | 1 | Cost realism, not an edge. MEXC book-walk version is R224 (running). |
 | M007 | Conviction-weighted sleeves: score weights clip(z,-2,2) vs equal weights at the same gross | Y flow bins (data/research); daily nets | UNTESTED | 1 | 1/N is hard to beat (DeMiguel et al.). Low prior. |
 | M014 | Chan half-life and ADF filter to select mean-reverting coins before a reversal book | Y klines_1h | UNTESTED | 1 | Selection filter. Weak prior. Count its trials. |
@@ -65,6 +64,7 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 | M021 | OI change as a crash/risk-state variable (P of -20% in 30 d), not a direction call | Y metrics_1h OI; klines_1h | PARTIAL | 1 | Claimed OOS AUC 0.677 in one 10-asset study. Risk use only. |
 | M022 | Multi-timeframe sign agreement (1 h, 4 h, 24 h same sign) as entry or size filter | Y klines_1h | PARTIAL | 1 | Agreement count never run. Low prior. |
 | M023 | BTC clock rules: long BTC 21-23 UTC; month-of-year effects | Y klines_1h | PARTIAL | 1 | Clock family null. Low prior. |
+| M024 | OI quadrant model, L/S ratio and top-trader positioning (old F1-F3) | Y metrics_1h | PARTIAL | 1 | Folk quadrant model killed (old). Similar to R196-R198. |
 
 ## 4. Waiting on the owner
 
@@ -79,7 +79,6 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R249 | rnfade_v1 | DONE | NULL | 4 |
 | R250 | pairs_v1 | DONE | NULL | 4 |
 | R251 | lmw_v1 | DONE | NULL | 6 |
 | R252 | oiwick_v1 | DONE | NULL | 4 |
@@ -87,5 +86,6 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 | R255 | cascmkt_v1 | DONE | NULL | 1 |
 | R256 | dow_v1 | DONE | NULL | 29 |
 | R260 | dispgate_v1 | DONE | NULL | 3 |
+| R261 | tradlead_v1 | DONE | NULL | 24 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
