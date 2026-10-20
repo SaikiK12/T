@@ -91,19 +91,28 @@ not a trial and has no registry row.
 | HyroTrader 2-step, EV USD (normal / t4) | -147 / -363 | +366 / -32 | +1,538 / +855 | +3,975 / +2,839 | +7,337 / +6,076 | +16,811 / +14,442 | +30,464 / +22,620 |
 | FTMO 2-step, paid (normal) | 7% | 13% | 21% | 31% | 58% | 69% | 84% |
 | FTMO 2-step, EV USD (normal / t4) | -66 / -83 | +649 / +404 | +1,928 / +1,361 | +4,114 / +3,306 | +7,366 / +6,557 | +18,166 / +14,383 | +31,709 / +23,019 |
-| Topstep 50K, paid (normal) | 8% | 7% | 13% | 25% | 42% | 67% | 85% |
-| Topstep 50K, EV USD (normal / t4) | +155 / +159 | +274 / +261 | +414 / +413 | +726 / +707 | +1,247 / +1,385 | +3,264 / +3,387 | +6,192 / +6,329 |
+| Topstep 50K, paid (normal) | 8% | 7% | 7% | 9% | 11% | 16% | 22% |
+| Topstep 50K, EV USD (normal / t4) | +92 / +88 | +218 / +149 | +358 / +298 | +486 / +559 | +822 / +908 | +1,890 / +2,329 | +3,570 / +4,362 |
 
 Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
 (Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
+
+Topstep rows include the payout rules added to `lab/propfirm` on 2026-10-20: a USD 2,000 cap per payout (the low end
+of USD 2-6k) and the loss limit moving to the starting balance after the first payout.
+- Under those rules the EV-best size is the largest one tried (3x, about 3% daily vol) at every Sharpe from 0 up.
+  The account passes in about 6 days or blows up.
+- Before those rules, the EV-best size at Sharpe 1-3 was 0.5x, with 42-85% paid.
+- EV at Sharpe 1 fell from USD 1,247 to 822. The optimum sits at the edge of the sizes tried, so it may be higher
+  still.
+- **So the contract rewards a lottery, not a steady book.** That is one more reason a pass says little about skill.
 
 **Reading:**
 - **The model is too kind to the trader.** At the 100K firms it breaks even between Sharpe -1 and -0.5; at Topstep it
   stays positive even at -1. So even a losing trader looks profitable.
   - It assumes no trading costs, every payout honoured, i.i.d. days, one fee per attempt and the best size, chosen
     with hindsight.
-  - None of the rule features listed below is modelled yet: payout caps, consistency in the funded stage, intraday
-    breaches, recurring monthly fees and resets.
+  - Most rule features listed below are not modelled yet: consistency in the funded stage, intraday breaches,
+    recurring monthly fees and resets. Payout caps and the post-payout floor are modelled for Topstep only.
   - The positive EV at negative Sharpe is the option in the contract: the loss is capped at the fee, while variance can
     still reach a payout. At negative Sharpe the best size is large (1.5-2x), which is that option being priced.
 - **The paid rates firms publish sit at the model's Sharpe -1 to 0.**
