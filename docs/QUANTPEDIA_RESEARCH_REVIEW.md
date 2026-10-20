@@ -28,6 +28,8 @@ Horizons: `5,10,20,30,60,90,150,250,360` days, equally weighted. Sizing: `min(0.
 
 **Why distinct.** R203 tests first-hour/last-hour intraday momentum; R222 tests cross-sectional rankings; the atlas studies shorter-horizon features and contexts. Their nulls do not settle this stateful daily portfolio question. Its contribution still has to survive market-beta attribution and fresh evaluation.
 
+**Completed bounded test, 2026-10-20.** [R229](../experiments/slow_trend_v1/FINDINGS.md) tests a fixed six-coin spot adaptation with no leverage, a full daily execution delay and a discovery-risk-scaled passive comparator. It fails its frozen validation comparison. This result applies to that adaptation; the futures and full rotating-universe questions above remain untested.
+
 ## 2. Slower execution of an unchanged slow flow target
 
 **Sources.** [Quantpedia's cost-optimization review](https://quantpedia.com/transaction-costs-optimization-for-currency-factor-strategies/) summarizes Melvin, Pan and Wikstrom's [primary FX study](https://www.ifo.de/DocDL/cesifo1_wp8143.pdf). Gârleanu and Pedersen's [Journal of Finance paper](https://doi.org/10.1111/jofi.12080), with a [public manuscript](https://archive.nyu.edu/bitstream/2451/28346/2/DynamicTrading.pdf), derives partial adjustment when signals decay and trading incurs costs. FX or commodity findings do not establish a crypto result; their liquidity and cost structures differ.

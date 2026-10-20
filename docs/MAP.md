@@ -1,7 +1,7 @@
 # Map: what is known, and the routes still open
 
-Updated 2026-10-19. Every line points to a lane with a frozen PREREG, a FINDINGS file and a registry row. Splits:
-discovery 2021-2023, validation 2024-2025H1, holdout 2025-07..2026-09 (read once per lane). "Replicates" = picked on
+Updated 2026-10-20. Historical entries below retain their reported evidence; new exploratory rounds R228/R229 are linked separately. Splits:
+original discovery 2021-2023, validation 2024-2025H1, historical holdout 2025-07..2026-09 (now spent at program level). New studies declare their own splits. "Replicates" = picked on
 discovery, same sign and |t| >= 2 on validation. Universe: the 50 most liquid Binance USD-M perps at each hour (499 coins
 over time, delisted ones included). Round trip at the tier costs: about 12-16 bp.
 
@@ -188,6 +188,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The count surge correlates 0.99 with the quote-volume surge, with a residual of +0.3 bp/day.
   - Mean print size against its own month gains +3.3 bp/day (t 0.77), and all of it is quote volume.
   - Unsigned activity carries no direction. Signed print size would need the aggTrades archive.
+- **R228 (allocation_v1)** tested 30 static allocations among the archived A/B/X2 flow books. Discovery selected
+  30% B / 70% X2, but validation Sharpe improved only 0.007 versus X2; its confidence interval spans zero. NULL.
+  The mixture's validation drawdown was worse than a discovery-risk-scaled X2 control. [Findings](../experiments/allocation_v1/FINDINGS.md).
+- **R229 (slow_trend_v1)** tested one literature-fixed daily spot trend ensemble and an unscaled diagnostic on six
+  surviving major coins. Validation net remains positive at 2x costs, but the primary fails its risk-matched passive
+  Sharpe, drawdown and paired-mean requirements. NULL. This is a bounded adaptation, not all trend following.
+  [Findings and source limits](../experiments/slow_trend_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -247,10 +254,14 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - a MEXC open-interest recorder (needs a process that runs continuously).
 - Altcoin leads (`docs/ALTCOIN_LEADS.md`) 1-5 are run (R219, R222): all NULL. R222's 24 h spreads are not pursued:
   a literature check found no prior for either sign.
-- Confidence-scaled sizing (`docs/SIZING_EVIDENCE.md`): no peer-reviewed out-of-sample support for scaling by a
-  model's own confidence; shrunk half-Kelly and volatility targeting first, each against a matched constant multiplier.
-- The next brute-force grammar (`docs/NEXT_SEARCH_SPACE.md`): cross-coin residual and catch-up, positioning changes,
-  trade size, multi-timeframe sign agreement, typed pair interactions, dispersion regimes; about 93k trials.
+- Confidence-scaled sizing (`docs/SIZING_EVIDENCE.md`): R217 already tested the specified Kelly/own-performance
+  overlays without meeting its bar. Do not repeat them unchanged. A volatility overlay needs a training-fixed
+  constant-risk/exposure comparator before attributing lower drawdown to timing skill or confidence.
+- The old 93k-cell grammar is not a current run plan. Use the [coverage ledger](RESEARCH_COVERAGE_LEDGER.md) to
+  distinguish tested cells from open mechanisms. R226 closes six unsigned activity variants; R228 closes its fixed
+  allocation grid; R229 closes its registered spot adaptation. Positioning changes, a flow context gate, partial
+  execution and weekly C14 remain separate questions with specific input requirements. R222's MOM signal is a
+  150-day formation window skipping the latest 30 days, not the weekly C14 portfolio.
 - Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
 - Gate data from 2026-10 on are unseen (Gate keeps 180 days; refetch before 2027-03): a forward score of Gate's
   top-vs-crowd and of the long-cascade continuation / short-squeeze fade (both chosen after R206, so new lanes).
@@ -288,5 +299,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,756 after R226 (`registry.program_trials()`), almost all of them context-atlas cells. Read every
-t above against that count; only the forward ledger is confirmatory.
+Program trials: 9,471,788 after R229 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+bookkeeping total is not a count of independent hypotheses. R228/R229 use previously viewed dates and are
+exploratory; future confirmation requires outcomes collected after a frozen decision.

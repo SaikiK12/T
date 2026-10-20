@@ -1,7 +1,7 @@
 # Research coverage: tested cells, open mechanisms and data dependencies
 
-Read-only coverage audit dated 2026-10-19, after R226; R228 is specified separately below.
-This ledger reports existing evidence and specifications. It computes no new market result.
+Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228/R229 findings.
+This ledger summarizes linked evidence; its own text computes no new market result.
 “Closed” means do not repeat the tested rule unchanged; it does not falsify every rule in its broad family.
 Calendar dates examined by prior research are spent for program-level confirmation, even for a new feature.
 
@@ -58,9 +58,14 @@ The atlas includes weekly return features but target horizons only through 72 ho
 - MEXC flow/carry journals contain only the 18 replay dates October 1–18; copy/whale snapshots cover one date.
   These are collection seeds, not enough evidence to choose or confirm a new mix.
 - [R228 allocation_v1](../experiments/allocation_v1/PREREG.md) specifies a bounded convex allocation study on the
-  existing A/B/X2 archive. Its own frozen protocol governs measurement and verdict; this ledger claims no outcome.
+  existing A/B/X2 archive. The completed [study](../experiments/allocation_v1/FINDINGS.md) is NULL: the discovery-selected
+  mix gained only 0.007 validation Sharpe and did not beat its risk-matched control's drawdown.
   A already includes B's positioning signal and X2 reweights A's three signals: this tests allocation among
   overlapping sleeves, not diversification across independently discovered economic edges.
+- [R229 slow_trend_v1](../experiments/slow_trend_v1/FINDINGS.md) collected a bounded six-coin daily spot sample and
+  tested a literature-fixed nine-horizon long/cash ensemble plus an unscaled diagnostic. Its frozen validation
+  comparison failed. These daily candles are now available locally; raw flow tensors and funding remain absent.
+  This does not close all trend variants, weekly C14 or a full point-in-time-universe replication.
 
 ## Search accounting and stopping
 
