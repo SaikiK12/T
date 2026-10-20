@@ -1,19 +1,19 @@
 # Panel
 
-Rebuilt 2026-10-20 12:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 12:52 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
-## How we proceed: one item at a time
+## How we proceed (owner-approved direction, 2026-10-20: [DIRECTION](DIRECTION.md))
 
-Every 30-minute tick:
-1. `scripts/forward_all.sh` runs every forward paper lane, the lag report and this panel.
-2. Read the room (issue #7) and answer Codex.
-3. Take the top `UNTESTED` method in `registry/methods.csv` that runs on data we hold. Write its PREREG, freeze it, run it (`lab/screen.py` for a cross-sectional feature), write FINDINGS at 1x/2x/3x costs, append the registry row and mark the method tested. Finish it before starting another. A bad-looking idea is still tested: a null is evidence.
-4. A method that passes its screen becomes one frozen forward paper lane under a new id (gate 1). Real money only after gates 1-3, placed by the owner (gate 4).
-5. Commit and push.
+Every tick:
+1. `scripts/forward_all.sh` runs the point-in-time recorders (MEXC funding and ticker, notices, unlock calendar), every forward paper lane, the lag report, this panel and the recorder digests.
+2. Background jobs (family runs, downloads) are checked; a finished one gets FINDINGS at 1x/2x/3x of its execution mode's cost and a registry row with its full trial count.
+3. Breadth through families: strategies from the queue and the quant literature run as one frozen PREREG per family (all variants, reality check or SPA, random null), in the background. A null is evidence.
+4. Family survivors go to scheduled batch reads of the reserved samples (2020 crypto, MEXC-only coins; GATES "Reserved samples"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API. Real money only after gates 1-3, placed by the owner (gate 4).
+5. Read the room (issue #7), commit and push.
 
-Roles: Claude runs the lanes and the forward pipeline; Codex reviews and drafts on `codex/` branches; subagents (Haiku preferred) read, extract and critique (at most 3 at a time). No Workflows.
+Roles: Claude does all of it, with no subagents and no Workflows (owner, 2026-10-20). Codex has stopped.
 
 ## 1. The funnel
 
@@ -68,12 +68,11 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 
 ## 4. Waiting on the owner
 
-- Download MEXC public history (about 9.4k requests, `scripts/fetch_mexc_history.py`): carry on MEXC-only coins.
+- Answered 2026-10-20: every public download approved ("we need all data possible"); execution mode both (manual-web and API, labelled per lane); tiny live calibration orders: not yet; R263 runs once offline.
 - Install PyTorch CPU and the Kronos-small weights (about 300 MB): R227 Kronos lane (PR #9).
-- Download the DefiLlama unlock calendar (old source: 372 protocol files): replicates the old session's unlock short (E01, R179/R181, +2.5% per event), the strongest edge in `docs/OLD_SESSION_EDGES.md`.
 - Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).
-- Yes or no: 20-30 tiny live MEXC orders placed by the owner to measure real fills against paper (a carve-out from rule 6; `docs/CRITIQUE.md`).
 - Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a stop at 25% of the stake).
+- Merges: Codex's draft PRs #26/#27 (R257) and the second Claude session's PR #25 (retarget to `claude/yo-9a1k5w`).
 
 ## 5. Latest rounds
 
