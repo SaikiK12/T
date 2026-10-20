@@ -82,3 +82,19 @@ exit 0
 12:06:03 prereg sha 06dc7b412b06
 12:07:15 744 perpetuals, grid 1212 h, 0 hours to compute
 12:07:21 {"last_hour": "2026-10-20T10:00:00+00:00", "days_scored": 19} {'A': (19, 0.2223), 'B': (19, 0.0946)}
+== tick 2026-10-20T13:06:00Z code bb4859c
+13:06:05 prereg sha 06dc7b412b06
+13:07:01 744 perpetuals, grid 1213 h, 1 hours to compute
+13:07:02 ratios 1/50 1000PEPEUSDT
+13:07:38 ratios 21/50 LTCUSDT
+13:08:10 ratios 41/50 STRKUSDT
+13:08:23 journaled 1 hours, 50 rows; last 2026-10-20 11:00
+13:08:30 {"last_hour": "2026-10-20T11:00:00+00:00", "days_scored": 19} {'A': (19, 0.2223), 'B': (19, 0.0946)}
+== tick 2026-10-20T16:15:31Z code 83554e1
+16:15:41 prereg sha 06dc7b412b06
+16:16:46 744 perpetuals, grid 1216 h, 4 hours to compute
+16:16:48 ratios 1/51 1000PEPEUSDT
+16:17:24 ratios 21/51 LTCUSDT
+16:18:01 ratios 41/51 SPCXUSDT
+16:18:20 journaled 4 hours, 200 rows; last 2026-10-20 15:00
+16:18:26 {"last_hour": "2026-10-20T15:00:00+00:00", "days_scored": 19} {'A': (19, 0.2223), 'B': (19, 0.0946)}

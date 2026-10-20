@@ -69,7 +69,8 @@ def forward_tasks(python=".venv/bin/python"):
     R220 builds eligibility/ranks from R200 (forward_carry.journal_grid); it
     does not need R215. R224 reads only R200's latest signal universe. The
     point-in-time recorders read nothing from the lanes and run first; the
-    digest reads only their files and runs last.
+    digest reads only their files and runs last. R266 reads only the recorders'
+    calendar snapshot and ticker files, so they are optional for it.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         return Task(name, (python, "scripts/" + script), needs, optional, timeout, files)
@@ -89,6 +90,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R221", "forward_seq.py", ("R215", "R218"), timeout=300),
         task("R225", "forward_vt.py", ("R215", "R218"), timeout=300,
              files=(Requirement("experiments/sizing_v1/results/daily.npz", SEED_SHA256),)),
+        task("R266", "forward_unlocks.py", (), ("REC_TICKER", "REC_UNLOCKS"), timeout=600),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", ("LAG",), timeout=120),
         task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_NOTICES", "REC_UNLOCKS"), timeout=300),

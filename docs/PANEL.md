@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 13:03 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 16:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 30 |
 | Ideas partly tested | 31 |
 | Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 81 (NULL 56, PENDING 11, CONFIRMED 7, DATA_PASS 4, PARTIAL 3) |
-| Program trials | 9,472,061 |
+| Rounds in the registry | 82 (NULL 56, PENDING 11, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
+| Program trials | 9,472,071 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -47,7 +47,7 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 | R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 0 d | - | same days as R200, a delay check |
 | R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 0 d | - | same days as R200, a delay check |
 
-Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.8833333333333 min; days with late hours: 2026-10-20.
+Processing lag of on-time hours: 16 hours, median 109.10833333333335 min, max 259.8833333333333 min; days with late hours: 2026-10-20.
 
 ## 3. Next in the queue
 
@@ -78,7 +78,6 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R252 | oiwick_v1 | DONE | NULL | 4 |
 | R253 | optimizer_v1 | DONE | NULL | 3 |
 | R255 | cascmkt_v1 | DONE | NULL | 1 |
 | R256 | dow_v1 | DONE | NULL | 29 |
@@ -86,5 +85,6 @@ Processing lag of on-time hours: 11 hours, median 138.8 min, max 259.88333333333
 | R261 | tradlead_v1 | DONE | NULL | 24 |
 | R262 | impact_v1 | DONE | DATA_PASS | 0 |
 | R264 | accounting_v1 | DONE | DATA_PASS | 0 |
+| R265 | unlocks_v1 | DONE | PARTIAL | 10 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
