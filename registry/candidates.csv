@@ -1,0 +1,12 @@
+id,edge,rounds,stage,best_evidence,t,unit,cost_2x_3x,forward_lane,next_step,due
+C01,Unlock short: short D-7 close to unlock close (cliff >= 1% of max supply),R265,forward paper,+3.24% per event 2021-26 (422 events; null p 0.0005),3.19,per event,+3.04% / +2.84%,R266 unlocks_fwd,120 scored MEXC tickets; 2020 batch (30 events),2026-11-03
+C02,Funding carry: short perp + long spot when 72 h funding > 20% APR,R190 R191,forward paper,holdout +1.45% over 457 d (passed at 1x only),2.07,per period,t 1.14 at 2x,R220 carry_fwd,90 on-time days through go_real,2027-01-18
+C03,Flow book A: three 72 h order-flow cells short the crowded coins,R197 R198 R216,forward paper,holdout crypto +22.33 bp/day (not confirmed),1.25,per day,+17.3 / +12.3 bp/day,R215 mexc_fwd; R221 mexc_seq,90-day futility look,2027-01-18
+C04,X2: book A sized by agreement squared,R217 R218,forward paper,holdout Sharpe 1.49 (NULL by R217's frozen bar),,per day,positive at 3x,R218 mexc_fwd_sq; R221 mexc_seq,90-day futility look,2027-01-18
+C05,Top-vs-crowd book B: short coins whose top traders are short against the crowd,R197 R198 R216,forward paper,holdout crypto +18.25 bp/day,2.74,per day,+17.4 / +16.5 bp/day,R221 mexc_seq,90-day futility look,2027-01-18
+C06,Monitoring Tag short +24 h,R269,forward paper,+4.36% per notice 2023-26 (24 clusters; logged variant),3.81,per event,+3.96% / +3.56%,R270 montag_fwd,12 scored MEXC notices,
+C07,Spot delisting-notice short +1 h,R267,forward paper,+4.15% per notice 2022-26 (25 clusters; logged variant),3.07,per event,+3.75% / +3.35%,R268 delist_fwd,12 scored MEXC notices,
+C08,Funding-frequency change long +1 h,R271,needs a forward lane,+3.59% per notice 2021-26 (35 clusters; family RC failed),3.31,per event,+3.19% / +2.79%,,freeze a forward lane and a signed archive lane (new ids),
+C09,Pre-listing (Launchpool / HODLer) short +168 h,R271,needs a forward lane,+11.48% per notice (45 clusters; median +18.05%; family RC failed),2.03,per event,+11.08% / +10.68%,,freeze a forward lane; 2020 batch (23 notices),2026-11-03
+C10,Earn-product add short +168 h,R271,2020 batch,+3.85% per notice (143 clusters; family RC failed),1.75,per event,+3.45% / +3.05%,,2020 batch (11 notices),2026-11-03
+C11,Best brute-force chart rule and its walk-forward stream,R263,2020 batch,walk-forward +1.18 bp/day (RC p 0.334 for the best single),0.96,per day,+0.29 / -0.61 bp/day,,2020 batch,2026-11-03
