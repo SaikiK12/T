@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 18:12 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 21:19 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -47,7 +47,7 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 | R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 0 d | - | same days as R200, a delay check |
 | R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 0 d | - | same days as R200, a delay check |
 
-Processing lag of on-time hours: 17 hours, median 79.88333333333334 min, max 259.8833333333333 min; days with late hours: 2026-10-20.
+Processing lag of on-time hours: 21 hours, median 79.88333333333334 min, max 259.8833333333333 min; days with late hours: 2026-10-20.
 
 ## 3. Next in the queue
 

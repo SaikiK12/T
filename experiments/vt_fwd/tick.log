@@ -56,3 +56,9 @@ program 1 rounds 91 candidates 11 strategies 123 forward_lanes 9 forward_days 22
 18:12:35 on-time days 1, strict 0; hour lag {'n': 17, 'median': 79.88333333333334, 'p90': 223.45000000000002, 'max': 259.8833333333333} order problems: none
 18:12:36 panel: 91 rounds, 9,477,669 trials, queue 235
 program 1 rounds 91 candidates 11 strategies 123 forward_lanes 9 forward_days 228 event_tickets 8 methods 235 data_sources 21 jobs 13
+== tick 2026-10-20T21:14:12Z code d5200f6+dirty
+21:19:05 prereg sha 3605a4028e85
+21:19:06 {'A': (0.7, 0), 'B': (1.0, 0), 'X2': (0.64, 0)}
+21:19:10 on-time days 1, strict 0; hour lag {'n': 21, 'median': 79.88333333333334, 'p90': 199.88333333333333, 'max': 259.8833333333333} order problems: none
+21:19:11 panel: 91 rounds, 9,477,669 trials, queue 235
+program 1 rounds 91 candidates 11 strategies 123 forward_lanes 10 forward_days 228 event_tickets 8 methods 235 data_sources 21 jobs 18
