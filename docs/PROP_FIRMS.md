@@ -79,15 +79,6 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
 - **Overnight index drift:** impossible at futures firms, which require being flat by the close.
 
 ## How much edge a challenge needs (synthetic map, M211 first pass, 2026-10-20)
-**Model-version note (Codex review, 2026-10-20).** The table and CSV below retain the model results from
-`0fe29ed`; they have not been rerun after the payout-eligibility fix. The current 50K XFA Standard preset also
-requires USD 0.01 of new profit since the last successful withdrawal (first payout exempt) and a minimum gross
-request of USD 125. See the [official payout policy](https://help.topstep.com/en/articles/8284233-topstep-payout-policy)
-and [minimum-request FAQ](https://www.topstep.com/instant-payouts). The gross interpretation follows the FAQ's
-request terminology and the policy's separate request-versus-received example. The archived Topstep EV figures
-therefore describe the earlier, looser eligibility model, not the current implementation. Its 14-day proxy for
-five qualifying winning days remains an approximation; legacy, Consistency, Live and optional-DLL accounts differ.
-
 `scripts/prop_edge_map.py` writes `experiments/propsim_v1/edge_map.csv`. It is a model with no market data, so it is
 not a trial and has no registry row.
 - **Setup:** a 20-year synthetic daily stream (1% daily vol at size 1, normal or Student t4) at each annual Sharpe from
@@ -100,30 +91,38 @@ not a trial and has no registry row.
 | HyroTrader 2-step, EV USD (normal / t4) | -147 / -363 | +366 / -32 | +1,538 / +855 | +3,975 / +2,839 | +7,337 / +6,076 | +16,811 / +14,442 | +30,464 / +22,620 |
 | FTMO 2-step, paid (normal) | 7% | 13% | 21% | 31% | 58% | 69% | 84% |
 | FTMO 2-step, EV USD (normal / t4) | -66 / -83 | +649 / +404 | +1,928 / +1,361 | +4,114 / +3,306 | +7,366 / +6,557 | +18,166 / +14,383 | +31,709 / +23,019 |
-| Topstep 50K, paid (normal) | 8% | 7% | 7% | 12% | 20% | 23% | 39% |
-| Topstep 50K, EV USD (normal / t4) | +60 / +71 | +199 / +146 | +321 / +292 | +494 / +563 | +801 / +912 | +1,983 / +2,266 | +3,771 / +4,508 |
+| Topstep 50K, paid (normal) | 7% | 7% | 13% | 12% | 20% | 23% | 53% |
+| Topstep 50K, EV USD (normal / t4) | +50 / +31 | +149 / +94 | +254 / +200 | +414 / +379 | +734 / +700 | +1,670 / +1,908 | +3,620 / +4,185 |
 
 Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
 (Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
 
-The archived Topstep rows use this subset of the rules read on 2026-10-20, implemented in `0fe29ed`:
-- Each request is at most 50% of the balance and USD 2,000 (50K Standard path), applied before the 90% split.
-- The loss limit moves to the starting balance after the first payout.
+The Topstep rows use the 50K XFA Standard payout rules read on 2026-10-20 (help.topstep.com payout policy, loss-limit
+article and the instant-payouts FAQ):
+- Each request is at most 50% of the balance and USD 2,000, applied before the 90% split. The minimum gross request is
+  USD 125.
+- After the first payout, a request needs new profit since the last successful payout. The loss limit moves to the
+  starting balance.
 - The payout condition, 5 winning days of USD 150+ restarting after each request, is approximated by a 14-day cycle.
+- The eligibility rules (new profit since the last payout, the USD 125 minimum) came from Codex's review (PR #24). The
+  map was rerun with them.
 
 What the rules do to the map:
-- **EV is nearly flat from 1.5x to 3x size (about 1.5-3% daily vol).**
-  - With normal tails the EV-best size moves between 1.5x and 3x from one Sharpe to the next. With t4 tails it is 3x
-    at most Sharpes.
-  - The gaps are within simulation noise, so the best size is not well determined. Large sizes pass in about 6 days
-    or blow up.
-- **Earlier runs, for comparison:**
-  - Without the 50% share, and with the cap applied after the split: EV at Sharpe 1 was USD 822 (normal) and 908
-    (t4). Now it is 801 and 912, a change within noise.
-  - Before any payout rules: the EV-best size at Sharpe 1-3 was 0.5x, with 42-85% paid, and EV at Sharpe 1 was
-    USD 1,247.
-- **So the payout rules push toward large size, not a steady book.** A large size pays about as much as a moderate
-  one, while most such accounts blow up within weeks. That is one more reason a pass says little about skill.
+- **The eligibility rules cut Topstep's EV by 8-56%.**
+  - At Sharpe 1, EV is USD 734 (normal) and 700 (t4). Before the eligibility fix it was 801 and 912.
+  - A cushion can no longer be paid out after a losing cycle.
+- **The best size is not well determined.**
+  - At Sharpe 0.5 and below, the EV-best size is 1.5-3x (about 1.5-3% daily vol). There the contract's option value
+    dominates.
+  - From Sharpe 1 up it falls to 1-2x, with about 20-57% paid.
+  - Gaps between neighbouring sizes are often within simulation noise.
+- **Earlier runs, for comparison (EV at Sharpe 1, normal / t4):**
+  - No payout rules: EV-best size 0.5x at Sharpe 1-3, USD 1,247 (normal).
+  - Cap and floor only (cap after the split): 822 / 908.
+  - 50% share, cap before the split: 801 / 912.
+  - Plus eligibility: 734 / 700.
+- **Payout rules still reward size at low Sharpe.** For a trader without an edge, a large size is worth more than a
+  moderate one, and most such accounts blow up within weeks. That is one more reason a pass says little about skill.
 
 **Reading:**
 - **The model is too kind to the trader.** At the 100K firms it breaks even between Sharpe -1 and -0.5; at Topstep it
