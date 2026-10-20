@@ -1,0 +1,59 @@
+{
+  "bootstrap": {
+    "blocks": [
+      30,
+      10,
+      60
+    ],
+    "method": "paired circular moving-block, ordinary percentile",
+    "replicates": 5000,
+    "seed": "20261019228 + block_length"
+  },
+  "claims": "exploratory spent-sample diagnostic; no fresh holdout or execution claim",
+  "dates": {
+    "first": "2021-01-01",
+    "last": "2026-09-30",
+    "source": "reconstructed from frozen source"
+  },
+  "inputs_sha256": {
+    "experiments/sizing_v1/results/daily.npz": "3ea686670c35c9946a560cc29cd1087b79cbeef40a78208840ab3b3e86aa0ec5",
+    "experiments/sizing_v1/results/results.csv": "f0c37dcd37b1b850586dbc4da504282b2370d2cb2369d8ab67228709f023a64e",
+    "scripts/run_sizing.py": "bd728f138ecc40aaf650c4c2688b22b500b8229fd9f672c2a60e3ae511110c76"
+  },
+  "outputs_sha256": {
+    "bootstrap.json": "99663567ffa931b71511524aaec8c314042c0a3140c1590cd2d03c3481fa68fc",
+    "candidates.csv": "237a3d617f1af2856b914427b450918400b7236fe875036137dbf1af72280741",
+    "correlations.csv": "1eb980040eb968a8ed9c83e99452a06469c00482c43cd4d183e590ac23246676",
+    "risk_matched.csv": "71f7290656cbbdbd4cc3bac4c7b11fa10cc9e47757ac47d8cf721e8d50cc79bf",
+    "selection.json": "37f4d7b2cf9260dd3ebb9b81f2944d53dc5b1011317a5b0a7a77833a5ed771e5",
+    "verdict.json": "cc0ad03febfda3cfaba7f0bf18670cf7c167c8ad4272c12a2027e905b582af67"
+  },
+  "runner_sha256": "2e0bd37ec44587b3e152418e7925183d688278fbaf0d4550624125b0f3d854f9",
+  "software": {
+    "byteorder": "little",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "source_prereg_sha256": "3d04ff8b992e5f24bf4ff9ffb164e774cef013538b1eabec436fd96242253ef1",
+  "spec_sha256": "4627ac3649db6f7be4d02e1af3edcbee037a47e93fdbf66bb41a10b564656bd8",
+  "support_code_sha256": {
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34"
+  },
+  "trials": 30,
+  "windows": {
+    "discovery": [
+      0,
+      1095
+    ],
+    "holdout": [
+      1642,
+      2099
+    ],
+    "validation": [
+      1095,
+      1642
+    ]
+  }
+}

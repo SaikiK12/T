@@ -1,0 +1,1199 @@
+{
+  "calendar_rows_per_coin": 2099,
+  "cost_one_way": [
+    0.0012,
+    0.0024,
+    0.0036
+  ],
+  "data_manifest_sha256": "fc90fe4886608cbc090231374bcaf593082d54959bdc25de2ed1566d86fd42cd",
+  "dependencies": {
+    "experiments/slow_trend_v1/PREREG.md": "ad247ec8676b8ae817fea41a6a6a82303cedf298e49cdaaea35bfd55625f169b",
+    "experiments/slow_trend_v1/results/data_manifest.json": "fc90fe4886608cbc090231374bcaf593082d54959bdc25de2ed1566d86fd42cd",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34",
+    "scripts/fetch_trend_daily.py": "3377186f143bcc322d5e3b4bf67adca62edf8087700deef76cdcdfe0f0853f82",
+    "scripts/run_slow_trend.py": "3f5b658dbb9bc6991e2c59507f457e6ff5c5720ef1228d1f2cc23cb83cbf724b"
+  },
+  "grid": [
+    {
+      "candidate": "h07_mom_k1_gate0_a1",
+      "candidate_scale": 0.7221396312974642,
+      "config": [
+        7,
+        1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k1_gate0_a0.5",
+      "candidate_scale": 0.8586245928127079,
+      "config": [
+        7,
+        1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.8960720876772315
+    },
+    {
+      "candidate": "h07_mom_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6859003881698212
+    },
+    {
+      "candidate": "h07_mom_k2_gate0_a1",
+      "candidate_scale": 0.8532147068519645,
+      "config": [
+        7,
+        1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k2_gate0_a0.5",
+      "candidate_scale": 0.9450174823096545,
+      "config": [
+        7,
+        1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7065586094089654
+    },
+    {
+      "candidate": "h07_mom_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5808449082484327
+    },
+    {
+      "candidate": "h07_mom_k3_gate0_a1",
+      "candidate_scale": 0.9114905395099928,
+      "config": [
+        7,
+        1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k3_gate0_a0.5",
+      "candidate_scale": 0.9945985566613299,
+      "config": [
+        7,
+        1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_mom_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7145386795097609
+    },
+    {
+      "candidate": "h07_mom_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5691417050984077
+    },
+    {
+      "candidate": "h07_rev_k1_gate0_a1",
+      "candidate_scale": 0.8403196847378364,
+      "config": [
+        7,
+        -1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k1_gate0_a0.5",
+      "candidate_scale": 0.867625381837757,
+      "config": [
+        7,
+        -1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.643281239177635
+    },
+    {
+      "candidate": "h07_rev_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6084245496821244
+    },
+    {
+      "candidate": "h07_rev_k2_gate0_a1",
+      "candidate_scale": 0.9597763824690693,
+      "config": [
+        7,
+        -1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k2_gate0_a0.5",
+      "candidate_scale": 0.9658737091354678,
+      "config": [
+        7,
+        -1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.5996710107223838
+    },
+    {
+      "candidate": "h07_rev_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5383810451383639
+    },
+    {
+      "candidate": "h07_rev_k3_gate0_a1",
+      "candidate_scale": 0.9967048452990405,
+      "config": [
+        7,
+        -1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k3_gate0_a0.5",
+      "candidate_scale": 0.9924370410437797,
+      "config": [
+        7,
+        -1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h07_rev_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.5775382492467593
+    },
+    {
+      "candidate": "h07_rev_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        7,
+        -1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.515628067006202
+    },
+    {
+      "candidate": "h14_mom_k1_gate0_a1",
+      "candidate_scale": 0.7614141622122346,
+      "config": [
+        14,
+        1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_mom_k1_gate0_a0.5",
+      "candidate_scale": 0.8606341577404226,
+      "config": [
+        14,
+        1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_mom_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.9350878922455939
+    },
+    {
+      "candidate": "h14_mom_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.7598282826172651
+    },
+    {
+      "candidate": "h14_mom_k2_gate0_a1",
+      "candidate_scale": 0.8840054034493324,
+      "config": [
+        14,
+        1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_mom_k2_gate0_a0.5",
+      "candidate_scale": 0.9552687972595546,
+      "config": [
+        14,
+        1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_mom_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.734940333177326
+    },
+    {
+      "candidate": "h14_mom_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6263507898421944
+    },
+    {
+      "candidate": "h14_mom_k3_gate0_a1",
+      "candidate_scale": 0.9631380185416143,
+      "config": [
+        14,
+        1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_mom_k3_gate0_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 0.9858967212060888
+    },
+    {
+      "candidate": "h14_mom_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.6331225695629286
+    },
+    {
+      "candidate": "h14_mom_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5509530030053047
+    },
+    {
+      "candidate": "h14_rev_k1_gate0_a1",
+      "candidate_scale": 0.7136535634720699,
+      "config": [
+        14,
+        -1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k1_gate0_a0.5",
+      "candidate_scale": 0.7603664180848062,
+      "config": [
+        14,
+        -1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.9704016299489941
+    },
+    {
+      "candidate": "h14_rev_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.8469068607502448
+    },
+    {
+      "candidate": "h14_rev_k2_gate0_a1",
+      "candidate_scale": 0.8844592551691224,
+      "config": [
+        14,
+        -1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k2_gate0_a0.5",
+      "candidate_scale": 0.9077740636362849,
+      "config": [
+        14,
+        -1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7159268195444066
+    },
+    {
+      "candidate": "h14_rev_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6353239558830374
+    },
+    {
+      "candidate": "h14_rev_k3_gate0_a1",
+      "candidate_scale": 0.9535900102617793,
+      "config": [
+        14,
+        -1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k3_gate0_a0.5",
+      "candidate_scale": 0.9594588215244065,
+      "config": [
+        14,
+        -1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h14_rev_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.6361446767623778
+    },
+    {
+      "candidate": "h14_rev_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        14,
+        -1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5596896199403777
+    },
+    {
+      "candidate": "h28_mom_k1_gate0_a1",
+      "candidate_scale": 0.7979038552809035,
+      "config": [
+        28,
+        1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_mom_k1_gate0_a0.5",
+      "candidate_scale": 0.8545731077725245,
+      "config": [
+        28,
+        1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_mom_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.8673141434667284
+    },
+    {
+      "candidate": "h28_mom_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.7435467083484332
+    },
+    {
+      "candidate": "h28_mom_k2_gate0_a1",
+      "candidate_scale": 0.9496665331643707,
+      "config": [
+        28,
+        1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_mom_k2_gate0_a0.5",
+      "candidate_scale": 0.9768808456144003,
+      "config": [
+        28,
+        1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_mom_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7029055594046986
+    },
+    {
+      "candidate": "h28_mom_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6289982773789832
+    },
+    {
+      "candidate": "h28_mom_k3_gate0_a1",
+      "candidate_scale": 0.9888557682016192,
+      "config": [
+        28,
+        1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_mom_k3_gate0_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 0.9852806197102252
+    },
+    {
+      "candidate": "h28_mom_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.648319530868464
+    },
+    {
+      "candidate": "h28_mom_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5745384227460081
+    },
+    {
+      "candidate": "h28_rev_k1_gate0_a1",
+      "candidate_scale": 0.7209115041794937,
+      "config": [
+        28,
+        -1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k1_gate0_a0.5",
+      "candidate_scale": 0.8169340350964284,
+      "config": [
+        28,
+        -1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.9697263457665131
+    },
+    {
+      "candidate": "h28_rev_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.7032701878786751
+    },
+    {
+      "candidate": "h28_rev_k2_gate0_a1",
+      "candidate_scale": 0.839547034171497,
+      "config": [
+        28,
+        -1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k2_gate0_a0.5",
+      "candidate_scale": 0.9032472676150469,
+      "config": [
+        28,
+        -1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7608551669919473
+    },
+    {
+      "candidate": "h28_rev_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5908428971241076
+    },
+    {
+      "candidate": "h28_rev_k3_gate0_a1",
+      "candidate_scale": 0.9190502181763194,
+      "config": [
+        28,
+        -1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k3_gate0_a0.5",
+      "candidate_scale": 0.9487426356204238,
+      "config": [
+        28,
+        -1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h28_rev_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.643182528711446
+    },
+    {
+      "candidate": "h28_rev_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        28,
+        -1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5535322555057817
+    },
+    {
+      "candidate": "h56_mom_k1_gate0_a1",
+      "candidate_scale": 0.7986381922014271,
+      "config": [
+        56,
+        1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k1_gate0_a0.5",
+      "candidate_scale": 0.8601906850078913,
+      "config": [
+        56,
+        1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.8556711163385428
+    },
+    {
+      "candidate": "h56_mom_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.7508621727956071
+    },
+    {
+      "candidate": "h56_mom_k2_gate0_a1",
+      "candidate_scale": 0.8987287575933773,
+      "config": [
+        56,
+        1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k2_gate0_a0.5",
+      "candidate_scale": 0.9238403560686365,
+      "config": [
+        56,
+        1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7908150939606305
+    },
+    {
+      "candidate": "h56_mom_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.7042821402215518
+    },
+    {
+      "candidate": "h56_mom_k3_gate0_a1",
+      "candidate_scale": 0.9250998084818637,
+      "config": [
+        56,
+        1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k3_gate0_a0.5",
+      "candidate_scale": 0.95830795676674,
+      "config": [
+        56,
+        1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_mom_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.6981697899070877
+    },
+    {
+      "candidate": "h56_mom_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6116946618433855
+    },
+    {
+      "candidate": "h56_rev_k1_gate0_a1",
+      "candidate_scale": 0.8075067941437334,
+      "config": [
+        56,
+        -1,
+        1,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k1_gate0_a0.5",
+      "candidate_scale": 0.8532208155563658,
+      "config": [
+        56,
+        -1,
+        1,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k1_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        1,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.7341465854382148
+    },
+    {
+      "candidate": "h56_rev_k1_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        1,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.6004260012606166
+    },
+    {
+      "candidate": "h56_rev_k2_gate0_a1",
+      "candidate_scale": 0.9582146555357343,
+      "config": [
+        56,
+        -1,
+        2,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k2_gate0_a0.5",
+      "candidate_scale": 0.9563114604042409,
+      "config": [
+        56,
+        -1,
+        2,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k2_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        2,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.5938827881439447
+    },
+    {
+      "candidate": "h56_rev_k2_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        2,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5254221829408402
+    },
+    {
+      "candidate": "h56_rev_k3_gate0_a1",
+      "candidate_scale": 0.9977518445283842,
+      "config": [
+        56,
+        -1,
+        3,
+        false,
+        1.0
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k3_gate0_a0.5",
+      "candidate_scale": 0.9909557978972824,
+      "config": [
+        56,
+        -1,
+        3,
+        false,
+        0.5
+      ],
+      "passive_scale": 1.0
+    },
+    {
+      "candidate": "h56_rev_k3_gate1_a1",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        3,
+        true,
+        1.0
+      ],
+      "passive_scale": 0.5683958522088328
+    },
+    {
+      "candidate": "h56_rev_k3_gate1_a0.5",
+      "candidate_scale": 1.0,
+      "config": [
+        56,
+        -1,
+        3,
+        true,
+        0.5
+      ],
+      "passive_scale": 0.5011911436366283
+    }
+  ],
+  "numba": "0.68.0",
+  "numpy": "2.3.5",
+  "output_sha256": {
+    "discovery_selection.csv": "d803ec08ab4904f95f48bcfb31165fb7f6f14dbec199731dab4ad5adbc6042f7",
+    "grid_metrics.csv": "1af88f07ee6027320e1a7a345e28b74fd02a37217c3d091e52c20b97991f7c92",
+    "paired_differences.csv": "59c529e1dc70b38b497ce1e8cd62c642454c5d35f8cb07438a3b3c0ce5ee06d7",
+    "search_returns.npz": "036a27066f325ca1cc38c588f12c57e5e3add10a00bbff3fa7615b8d95f2155c",
+    "selected_daily.csv": "3ecbdd94100c2b1bd628e62fef4ecd8ed7edc45247f54902a21f62598eb35dcb",
+    "verdict.json": "931425f995a0b7a4b8cd471f4206c1a413a59278a1459286e660e684e7bee252"
+  },
+  "prereg_sha256": "0af8c351c90aba9b995b10d3070c488d24b2ba744eb85df1b3eb4600b586e9e4",
+  "python": "3.12.14",
+  "runner_sha256": "9084d30faa615d8e02a0b482f60d774537adc868c90cd13f95f23486cda7e8c3",
+  "source_archives": 414,
+  "splits": {
+    "discovery": [
+      "2022-01-01",
+      "2024-01-01"
+    ],
+    "known_holdout": [
+      "2025-07-01",
+      "2026-10-01"
+    ],
+    "validation": [
+      "2024-01-01",
+      "2025-07-01"
+    ]
+  }
+}

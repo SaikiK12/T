@@ -15,6 +15,14 @@ from paying its costs, and which routes (stacking, context gating, limit-order e
   [MEXC API and operational risk](docs/OPERATIONAL_API_RISK.md) cover future policy tests and execution controls.
 - `registry/rounds.csv`: one row per round with its trial count (append-only).
 - `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
+- [`docs/RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md): exact tested cells and remaining questions;
+  [`docs/QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md): source-checked mechanisms beyond the completed lanes.
+- [`R228 allocation_v1`](experiments/allocation_v1/FINDINGS.md): a frozen 30-alternative flow-book allocation study;
+  the discovery-selected mixture did not improve validation enough to pass.
+- [`R229 slow_trend_v1`](experiments/slow_trend_v1/FINDINGS.md): a source-driven daily spot trend screen on six coins;
+  full 1x/2x/3x accounting failed the frozen comparison with a training-risk-matched passive portfolio.
+- [`R230 weekly_rotation_v1`](experiments/weekly_rotation_v1/FINDINGS.md): a frozen 96-rule weekly rotation search;
+  the train-selected winner underperformed its scaled passive control in validation. NULL.
 
 ## Use
 
