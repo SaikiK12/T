@@ -56,8 +56,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
       <span data-source="program" data-field="candidates" data-row="0" data-fmt="int">—</span> candidate edges are in the funnel,
       <span data-source="stage_counts" data-field="n" data-where="stage=forward paper" data-fmt="int">—</span> of them on forward paper;
       <span data-source="gate1" data-field="passed" data-row="0" data-fmt="int">—</span> have passed unseen days (gate 1).
-      Highest t on the watchlist: <span data-source="top_candidate" data-field="edge" data-row="0" data-fmt="text">—</span>
-      (t <span data-source="top_candidate" data-field="t" data-row="0" data-fmt="t">—</span>, in-sample).
+      Candidates remain hypotheses; archive, holdout and prospective evidence are shown separately in their study records.
       Next scheduled read: <span data-source="program" data-field="next_due" data-row="0" data-fmt="day">—</span>.
     </p>
     <div class="qx-asof">Lab state exported <span data-source="program" data-field="generated_at" data-row="0" data-fmt="dt">—</span> UTC; re-exported every hourly loop tick.</div>
@@ -105,8 +104,8 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
         <div class="qx-chart short" id="chart-lanes" data-source="forward_lanes"></div>
       </div>
       <div class="qx-card wide" id="card-watchlist">
-        <h2>Watchlist</h2>
-        <p class="qx-note">Every edge still alive, its best evidence, and what decides it next. t is in-sample unless the stage says otherwise.</p>
+        <h2>Candidate follow-ups</h2>
+        <p class="qx-note">Selected follow-ups, not a second methods queue or proof of an edge. Evidence may be exploratory or holdout; read the evidence column and the linked round before comparing t values.</p>
         <div class="qx-tablebox">
           <table class="qx-t" id="tbl-cands" data-source="candidates" data-row-key="id">
             <thead><tr>
@@ -130,7 +129,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     <div class="qx-grid">
       <div class="qx-card wide" id="card-edgemap">
         <h2>Every event strategy tested: size against strength</h2>
-        <p class="qx-note">One dot per strategy: mean net return per event at 1x cost (symmetric log scale) against its t. Ringed dots passed every gate of their round. Above the dashed line is t 2, which by itself is what dozens of tries give by chance.</p>
+        <p class="qx-note">One dot per strategy: mean net return per event at 1x cost (symmetric log scale) against its t. Rings indicate an explicit pass in the source report, not approval for live trading. t = 2 alone does not account for the research search.</p>
         <div class="qx-chart" id="chart-edgemap" data-source="strategies"></div>
       </div>
       <div class="qx-card wide" id="card-strats">
@@ -163,7 +162,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     <div class="qx-grid">
       <div class="qx-card wide" id="card-cum">
         <h2>Cumulative paper net, daily books</h2>
-        <p class="qx-note">Sum of daily net returns at 1x cost, not compounded. Days left of the dashed line were replayed after the freeze; days right of it were traded on time.</p>
+        <p class="qx-note">Sum of daily net returns at 1x cost, not compounded. Replay and on-time rows retain their own labels. A missing return makes the subsequent cumulative total unknown.</p>
         <div class="qx-tools"><select class="qx-select" id="sel-group" aria-label="Book group" data-source="cum_paper"></select></div>
         <div class="qx-chart" id="chart-cum" data-source="cum_paper"></div>
       </div>
@@ -174,17 +173,18 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
           <table class="qx-t" id="tbl-lanes" data-source="forward_lanes" data-row-key="lane">
             <thead><tr>
               <th data-field="round"><button>Round</button></th>
-              <th data-field="lane"><button>Lane</button></th>
+              <th data-field="display_name"><button>Paper study</button></th>
               <th data-field="what" class="opt"><button>Trades</button></th>
               <th data-field="venue" class="opt"><button>Venue</button></th>
               <th data-field="mode" class="opt"><button>Mode</button></th>
               <th data-field="scored" class="n"><button>Scored</button></th>
-              <th data-field="needed" class="n"><button>Needed</button></th>
+              <th data-field="needed" class="n"><button>Milestone</button></th>
               <th data-field="unit" class="opt"><button>Unit</button></th>
               <th data-field="net_pct" class="n"><button>Net 1x</button></th>
               <th data-field="net_2x_pct" class="n opt"><button>2x</button></th>
               <th data-field="net_3x_pct" class="n opt"><button>3x</button></th>
-              <th data-field="age_h" class="n"><button>Last tick</button></th>
+              <th data-field="age_h" class="n"><button>Status file age</button></th>
+              <th data-field="decision" class="opt w"><button>Decision rule</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
@@ -246,8 +246,10 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
       </div>
       <div class="qx-card wide" id="card-methods">
         <h2>Method queue</h2>
-        <p class="qx-note">Untested and partial methods are what the next families draw from.</p>
-        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search methods" aria-label="Search methods" data-for="tbl-methods"></div>
+        <p class="qx-note">The canonical methods registry. Untested and partial rules remain candidates; blocked rows retain the missing input or mechanics.</p>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search methods, sources or blockers" aria-label="Search methods" data-for="tbl-methods">
+          <select class="qx-select qx-filter" data-for="tbl-methods" data-field="status" aria-label="Method status"><option value="">All statuses</option></select>
+        </div>
         <div class="qx-tablebox">
           <table class="qx-t" id="tbl-methods" data-source="methods" data-row-key="id">
             <thead><tr>
@@ -256,6 +258,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
               <th data-field="status"><button>Status</button></th>
               <th data-field="data_held" class="opt"><button>Data</button></th>
               <th data-field="round" class="opt w"><button>Result</button></th>
+              <th data-field="note" class="opt w"><button>Open scope / blocker</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
@@ -266,33 +269,49 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
   <section id="health" class="qx-page" hidden>
     <div class="qx-grid">
       <div class="qx-card wide" id="card-jobs">
-        <h2>Loop and background jobs</h2>
-        <p class="qx-note">Running processes and each forward lane's last tick. A tick older than two hours or an error in its log is flagged.</p>
+        <h2>Operations by responsibility</h2>
+        <p class="qx-note">Collection, paper scoring, decisions and reporting have distinct categories. A recent legacy log is unverified activity, not a successful run. Structured success means exit zero only; observation quality is assessed separately. Process command lines and raw log contents are not exported.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search tasks or stable IDs" aria-label="Search operations" data-for="tbl-jobs">
+          <select class="qx-select qx-filter" data-for="tbl-jobs" data-field="category" aria-label="Operation category"><option value="">All categories</option></select>
+          <select class="qx-select qx-filter" data-for="tbl-jobs" data-field="state" aria-label="Operation state"><option value="">All states</option></select>
+        </div>
         <div class="qx-tablebox">
           <table class="qx-t" id="tbl-jobs" data-source="jobs" data-row-key="key">
             <thead><tr>
-              <th data-field="job"><button>Job</button></th>
-              <th data-field="kind"><button>Kind</button></th>
+              <th data-field="display_name"><button>Task</button></th>
+              <th data-field="category"><button>Category</button></th>
               <th data-field="state"><button>State</button></th>
               <th data-field="age_h" class="n"><button>Age</button></th>
-              <th data-field="note" class="w opt"><button>Last line</button></th>
+              <th data-field="status_source" class="opt"><button>Evidence source</button></th>
+              <th data-field="returncode" class="n opt"><button>Exit code</button></th>
+              <th data-field="log_path" class="w opt"><button>Log reference</button></th>
+              <th data-field="note" class="w opt"><button>Interpretation</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
       </div>
       <div class="qx-card wide" id="card-data">
         <h2>Data sources</h2>
-        <p class="qx-note">Each folder under data/: size, newest file and whether a provenance note exists. Live recorders are stale after two hours.</p>
+        <p class="qx-note">Folder metadata grouped by purpose. File activity does not prove recent market observations or complete history. Partial scans exclude unreadable entries and symbolic links; provenance means a note exists, not that its contents were verified.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search datasets or folder names" aria-label="Search data sources" data-for="tbl-data">
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="category" aria-label="Data category"><option value="">All data categories</option></select>
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="inventory_state" aria-label="Inventory state"><option value="">All scan states</option></select>
+        </div>
         <div class="qx-tablebox">
           <table class="qx-t" id="tbl-data" data-source="data_sources" data-row-key="source">
             <thead><tr>
-              <th data-field="source"><button>Source</button></th>
-              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="display_name"><button>Dataset</button></th>
+              <th data-field="category" class="opt"><button>Category</button></th>
               <th data-field="files" class="n"><button>Files</button></th>
               <th data-field="size_gb" class="n"><button>Size</button></th>
-              <th data-field="age_h" class="n"><button>Newest file</button></th>
-              <th data-field="stale"><button>Stale</button></th>
-              <th data-field="provenance" class="opt"><button>Provenance</button></th>
+              <th data-field="age_h" class="n"><button>File activity age</button></th>
+              <th data-field="stale"><button>File activity overdue</button></th>
+              <th data-field="inventory_state"><button>Scan state</button></th>
+              <th data-field="skipped_links" class="n opt"><button>Links excluded</button></th>
+              <th data-field="scan_errors" class="n opt"><button>Scan errors</button></th>
+              <th data-field="provenance" class="opt"><button>Provenance note</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
@@ -348,7 +367,8 @@ dash.calc('cum_paper', {
   fn: (forward_days) => {
     const sum = {};
     return forward_days.slice().sort((a, b) => (a.series + a.day).localeCompare(b.series + b.day)).map((d) => {
-      sum[d.series] = (sum[d.series] || 0) + (d.net || 0) * 100;
+      const previous = Object.hasOwn(sum, d.series) ? sum[d.series] : 0;
+      sum[d.series] = previous == null || !Number.isFinite(d.net) ? null : previous + d.net * 100;
       return { key: d.key, series: d.series, group: d.group, day: d.day, kind: d.kind, cum_pct: sum[d.series] };
     });
   },
@@ -363,10 +383,10 @@ const F = {
   p: (v) => (v == null ? '' : v < 0.001 ? '< 0.001' : d3.format('.3f')(v)),
   day: (v) => (v ? d3.utcFormat('%b %-d, %Y')(new Date(v)) : ''),
   dt: (v) => (v ? d3.utcFormat('%b %-d, %H:%M')(new Date(v)) : ''),
-  hours: (v) => (v == null ? '' : v < 1 ? Math.round(v * 60) + ' min ago' : v < 48 ? d3.format('.1f')(v) + ' h ago' : d3.format('.0f')(v / 24) + ' d ago'),
+  hours: (v) => (v == null ? '' : v < 0 ? 'clock ahead' : v < 1 ? Math.round(v * 60) + ' min ago' : v < 48 ? d3.format('.1f')(v) + ' h ago' : d3.format('.0f')(v / 24) + ' d ago'),
   gb: (v) => (v == null ? '' : d3.format(',.1f')(v) + ' GB'),
   size: (v) => (v == null ? '' : v < 1 ? d3.format(',.0f')(v * 1000) + ' MB' : d3.format(',.2f')(v) + ' GB'),
-  yes: (v) => (v ? 'yes' : 'no'),
+  yes: (v) => (v == null ? 'unknown' : v ? 'yes' : 'no'),
 };
 const ok = (id) => dash.data(id).status === 'ok';
 const rowsOf = (id) => (ok(id) ? dash.data(id).data || [] : []);
@@ -411,7 +431,7 @@ function fillMarks() {
 const TABLES = {};
 function table(id, source, key, cols) {
   const tbl = document.getElementById(id);
-  TABLES[id] = { tbl, source, key, cols, sort: null, q: '' };
+  TABLES[id] = { tbl, source, key, cols, sort: null, q: '', filters: {} };
   tbl.querySelectorAll('th').forEach((th, i) => {
     th.querySelector('button').addEventListener('click', () => {
       const t = TABLES[id];
@@ -426,9 +446,18 @@ function drawTable(id) {
   const tb = t.tbl.tBodies[0];
   if (!ok(t.source)) { tb.replaceChildren(); return; }
   let rows = rowsOf(t.source);
+  document.querySelectorAll(`.qx-filter[data-for="${id}"]`).forEach((select) => {
+    const value = select.value;
+    const label = select.options[0].text;
+    const values = Array.from(new Set(rows.map((r) => r[select.dataset.field]).filter((v) => v != null))).sort();
+    select.replaceChildren(new Option(label, ''), ...values.map((v) => new Option(v, v)));
+    select.value = values.includes(value) ? value : '';
+    t.filters[select.dataset.field] = select.value;
+  });
+  rows = rows.filter((r) => Object.entries(t.filters).every(([field, value]) => !value || String(r[field]) === value));
   if (t.q) {
     const q = t.q.toLowerCase();
-    rows = rows.filter((r) => t.cols.some((c) => String(r[c.f] ?? '').toLowerCase().includes(q)));
+    rows = rows.filter((r) => Object.values(r).some((v) => String(v ?? '').toLowerCase().includes(q)));
   }
   if (t.sort) {
     const c = t.cols[t.sort.i];
@@ -466,6 +495,12 @@ function drawTable(id) {
         }
       }
       td.append(document.createTextNode((c.fmt || F.text)(v)));
+      if (c.secondary && r[c.secondary]) {
+        const small = document.createElement('div');
+        small.className = 'qx-asof';
+        small.textContent = r[c.secondary];
+        td.append(small);
+      }
       tr.append(td);
     });
     return tr;
@@ -473,6 +508,9 @@ function drawTable(id) {
 }
 document.querySelectorAll('#qx .qx-search').forEach((inp) => {
   inp.addEventListener('input', () => { TABLES[inp.dataset.for].q = inp.value; drawTable(inp.dataset.for); });
+});
+document.querySelectorAll('#qx .qx-filter').forEach((select) => {
+  select.addEventListener('change', () => drawTable(select.dataset.for));
 });
 const maxAbs = (f) => (rows) => d3.max(rows, (r) => Math.abs(r[f] ?? 0)) || 1;
 table('tbl-cands', 'candidates', 'id', [
@@ -485,22 +523,30 @@ table('tbl-strats', 'strategies', 'key', [
   { f: 'p_rc', fmt: F.p, num: true }, { f: 'null_p', fmt: F.p, num: true }, { f: 'y2025_pct', fmt: F.pct, num: true },
   { f: 'passed', fmt: F.yes, dot: (v) => (v ? 'ok' : null) }]);
 table('tbl-lanes', 'forward_lanes', 'lane', [
-  { f: 'round' }, { f: 'lane' }, { f: 'what' }, { f: 'venue' }, { f: 'mode' },
+  { f: 'round' }, { f: 'display_name', secondary: 'lane' }, { f: 'what' }, { f: 'venue' }, { f: 'mode' },
   { f: 'scored', fmt: F.int, num: true }, { f: 'needed', fmt: F.int, num: true }, { f: 'unit' },
   { f: 'net_pct', fmt: F.pct, num: true }, { f: 'net_2x_pct', fmt: F.pct, num: true }, { f: 'net_3x_pct', fmt: F.pct, num: true },
-  { f: 'age_h', fmt: F.hours, num: true, dot: (v) => (v == null ? null : v > 2 ? 'bad' : 'ok') }]);
+  { f: 'age_h', fmt: F.hours, num: true, dot: (v) => (v == null ? null : v > 2 ? 'warn' : null) },
+  { f: 'decision' }]);
 table('tbl-tickets', 'event_tickets', 'key', [
   { f: 'round' }, { f: 'symbol' }, { f: 'state' }, { f: 'entry_at', fmt: F.dt }, { f: 'exit_at', fmt: F.dt },
   { f: 'size_pct_supply', fmt: (v) => (v == null ? '' : d3.format('.2f')(v) + '%'), num: true }, { f: 'net_pct', fmt: F.pct, num: true }]);
 table('tbl-rounds', 'rounds', 'id', [
   { f: 'id' }, { f: 'date', fmt: F.day }, { f: 'lane' }, { f: 'verdict' }, { f: 'trials', fmt: F.int, num: true },
   { f: 'title' }, { f: 'notes' }]);
-table('tbl-methods', 'methods', 'id', [{ f: 'id' }, { f: 'method' }, { f: 'status' }, { f: 'data_held' }, { f: 'round' }]);
+table('tbl-methods', 'methods', 'id', [{ f: 'id' }, { f: 'method' }, { f: 'status' }, { f: 'data_held' }, { f: 'round' }, { f: 'note' }]);
 table('tbl-jobs', 'jobs', 'key', [
-  { f: 'job' }, { f: 'kind' }, { f: 'state', dot: (v, r) => (r.ok ? 'ok' : 'bad') }, { f: 'age_h', fmt: F.hours, num: true }, { f: 'note' }]);
+  { f: 'display_name', secondary: 'task_id' }, { f: 'category' },
+  { f: 'state', dot: (v, r) => (r.stale || r.ok == null ? 'warn' : r.ok === true ? 'ok' : 'bad') },
+  { f: 'age_h', fmt: F.hours, num: true }, { f: 'status_source' }, { f: 'returncode', fmt: F.int, num: true },
+  { f: 'log_path' }, { f: 'note' }]);
 table('tbl-data', 'data_sources', 'source', [
-  { f: 'source' }, { f: 'kind' }, { f: 'files', fmt: F.int, num: true }, { f: 'size_gb', fmt: F.size, num: true },
-  { f: 'age_h', fmt: F.hours, num: true }, { f: 'stale', fmt: F.yes, dot: (v) => (v ? 'bad' : null) }, { f: 'provenance', fmt: F.yes }]);
+  { f: 'display_name', secondary: 'source' }, { f: 'category' }, { f: 'files', fmt: F.int, num: true },
+  { f: 'size_gb', fmt: F.size, num: true }, { f: 'age_h', fmt: F.hours, num: true },
+  { f: 'stale', fmt: F.yes, dot: (v) => (v === true ? 'warn' : null) },
+  { f: 'inventory_state', dot: (v) => (v === 'PARTIAL' ? 'warn' : null) },
+  { f: 'skipped_links', fmt: F.int, num: true }, { f: 'scan_errors', fmt: F.int, num: true },
+  { f: 'provenance', fmt: F.yes }]);
 
 // charts
 function svgIn(el, W, H) {
@@ -665,7 +711,7 @@ function drawCum(el) {
   const fy = (v) => d3.format('+.0f')(v) + '%';
   const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
   const series = names.map((n) => ({ n, pts: rows.filter((r) => r.series === n).sort((a, b) => a.d - b.d) }));
-  const ends = series.map((s) => ({ n: s.n, v: s.pts[s.pts.length - 1].cum_pct, label: `${s.n} ${F.pct(s.pts[s.pts.length - 1].cum_pct)}` }));
+  const ends = series.filter((s) => Number.isFinite(s.pts[s.pts.length - 1].cum_pct)).map((s) => ({ n: s.n, v: s.pts[s.pts.length - 1].cum_pct, label: `${s.n} ${F.pct(s.pts[s.pts.length - 1].cum_pct)}` }));
   const mr = (d3.max(ends, (e) => textW(svg, e.label)) || 0) + 14;
   const x = d3.scaleUtc(d3.extent(rows, (r) => r.d), [ml, W - mr]);
   svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
@@ -680,7 +726,7 @@ function drawCum(el) {
     svg.append('line').attr('x1', x(firstOn)).attr('x2', x(firstOn)).attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
     svg.append('text').attr('x', x(firstOn) - 6).attr('y', 12).attr('dy', '0.7em').attr('text-anchor', 'end').text('on time →');
   }
-  const line = d3.line().x((r) => x(r.d)).y((r) => y(r.cum_pct));
+  const line = d3.line().defined((r) => Number.isFinite(r.cum_pct)).x((r) => x(r.d)).y((r) => y(r.cum_pct));
   series.forEach((s) => {
     svg.append('path').datum(s.pts).attr('d', line).style('fill', 'none').style('stroke', color(s.n))
       .style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round');
@@ -702,7 +748,7 @@ function drawCum(el) {
       const [px] = d3.pointer(ev);
       const t = +x.invert(px);
       const day = days[d3.minIndex(days, (d) => Math.abs(d - t))];
-      const at = series.map((s) => ({ n: s.n, p: s.pts.find((r) => +r.d === day) })).filter((a) => a.p);
+      const at = series.map((s) => ({ n: s.n, p: s.pts.find((r) => +r.d === day) })).filter((a) => a.p && Number.isFinite(a.p.cum_pct));
       rule.attr('x1', x(day)).attr('x2', x(day)).style('opacity', 1);
       dots.selectAll('circle').data(at).join('circle').attr('cx', x(day)).attr('cy', (a) => y(a.p.cum_pct)).attr('r', 4)
         .style('fill', (a) => color(a.n)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
@@ -722,7 +768,7 @@ function render() {
   if ((el = vis('chart-stages')) && stateBox(el, ['stage_counts'])) drawBars(el, rowsOf('stage_counts'), (r) => r.stage, (r) => r.n, F.int, 'candidates');
   if ((el = vis('chart-lanes')) && stateBox(el, ['forward_lanes'])) {
     const rows = rowsOf('forward_lanes').filter((r) => r.net_pct != null);
-    if (rows.length) drawBars(el, rows, (r) => `${r.round} ${r.lane}`, (r) => r.net_pct, F.pct, 'net 1x');
+    if (rows.length) drawBars(el, rows, (r) => `${r.round} ${r.display_name || r.what}`, (r) => r.net_pct, F.pct, 'net 1x');
     else el.replaceChildren();
   }
   if ((el = vis('chart-verdicts')) && stateBox(el, ['verdict_counts'])) drawBars(el, rowsOf('verdict_counts'), (r) => r.verdict, (r) => r.n, F.int, 'rounds');
