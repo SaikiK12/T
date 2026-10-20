@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 17:14 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 17:29 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 30 |
-| Ideas partly tested | 34 |
+| Ideas in the queue, untested | 28 |
+| Ideas partly tested | 36 |
 | Ideas blocked (data, download, compute) | 72 |
-| Rounds in the registry | 85 (NULL 57, PENDING 13, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
-| Program trials | 9,472,081 |
+| Rounds in the registry | 87 (NULL 59, PENDING 13, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
+| Program trials | 9,477,562 |
 | Forward paper lanes running | 10 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -78,13 +78,13 @@ Processing lag of on-time hours: 16 hours, median 109.10833333333335 min, max 25
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R260 | dispgate_v1 | DONE | NULL | 3 |
-| R261 | tradlead_v1 | DONE | NULL | 24 |
 | R262 | impact_v1 | DONE | DATA_PASS | 0 |
 | R264 | accounting_v1 | DONE | DATA_PASS | 0 |
 | R265 | unlocks_v1 | DONE | PARTIAL | 10 |
 | R266 | unlocks_fwd | RUNNING | PENDING | 1 |
 | R267 | delist_v1 | DONE | NULL | 8 |
 | R268 | delist_fwd | RUNNING | PENDING | 1 |
+| R263 | brute5k_v1 | DONE | NULL | 5475 |
+| R269 | montag_v1 | DONE | NULL | 6 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

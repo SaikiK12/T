@@ -104,7 +104,7 @@ These are received-source catalogs and provenance, not additional methods queues
 - [owner_scope_20261020.json](../research/intake/owner_scope_20261020.json)
 - [source_methods_20261020.json](../research/intake/source_methods_20261020.json)
 
-## Commands (108)
+## Commands (110)
 
 Acquisition may consume network/storage; study runners may consume reserved data. Read AGENTS, GATES and the lane's protocol before running either. Forward runners and journals remain owned by their registered writer.
 
@@ -126,12 +126,13 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Builders and supporting tools (7)</summary>
+<summary>Builders and supporting tools (8)</summary>
 
 - [build_extra_views.py](../scripts/build_extra_views.py)
 - [build_views.py](../scripts/build_views.py)
 - [data_provenance.py](../scripts/data_provenance.py)
 - [delist_events.py](../scripts/delist_events.py)
+- [montag_events.py](../scripts/montag_events.py)
 - [prop_edge_map.py](../scripts/prop_edge_map.py)
 - [speed_test.py](../scripts/speed_test.py)
 - [unlock_events.py](../scripts/unlock_events.py)
@@ -181,7 +182,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 </details>
 
 <details>
-<summary>Research runners (read the frozen specification first) (66)</summary>
+<summary>Research runners (read the frozen specification first) (67)</summary>
 
 - [atlas_replication.py](../scripts/atlas_replication.py)
 - [run_accounting.py](../scripts/run_accounting.py)
@@ -218,6 +219,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 - [run_maker.py](../scripts/run_maker.py)
 - [run_merge.py](../scripts/run_merge.py)
 - [run_merge_v2.py](../scripts/run_merge_v2.py)
+- [run_montag.py](../scripts/run_montag.py)
 - [run_oiwick.py](../scripts/run_oiwick.py)
 - [run_optimizer.py](../scripts/run_optimizer.py)
 - [run_pack.py](../scripts/run_pack.py)
@@ -252,7 +254,7 @@ Acquisition may consume network/storage; study runners may consume reserved data
 
 </details>
 
-## Experiment locations (90)
+## Experiment locations (91)
 
 Recorded status/verdict comes only from this checkout's rounds.csv. A findings link means the file exists, not that a study passed. Unregistered folders and missing specs stay visible. Use the integrity audit to verify frozen digests; this index does not.
 
@@ -268,7 +270,7 @@ Recorded status/verdict comes only from this checkout's rounds.csv. A findings l
 | [atlas_mtf](../experiments/atlas_mtf/PREREG.md) | R195 / DONE / CONFIRMED | [spec](../experiments/atlas_mtf/PREREG.md) · [findings](../experiments/atlas_mtf/FINDINGS.md) |
 | [atlas_v1](../experiments/atlas_v1/PREREG.md) | R185 / DONE / CONFIRMED | [spec](../experiments/atlas_v1/PREREG.md) · [findings](../experiments/atlas_v1/FINDINGS.md) |
 | [battery_v1](../experiments/battery_v1/PREREG.md) | R184 / PLANNED / PENDING | [spec](../experiments/battery_v1/PREREG.md) |
-| [brute5k_v1](../experiments/brute5k_v1/PREREG.md) | No registry row in this checkout | [spec](../experiments/brute5k_v1/PREREG.md) |
+| [brute5k_v1](../experiments/brute5k_v1/PREREG.md) | R263 / DONE / NULL | [spec](../experiments/brute5k_v1/PREREG.md) · [findings](../experiments/brute5k_v1/FINDINGS.md) |
 | [carry_fwd](../experiments/carry_fwd/PREREG.md) | R220 / RUNNING / PENDING | [spec](../experiments/carry_fwd/PREREG.md) |
 | [carry_holdout](../experiments/carry_holdout/PREREG.md) | R191 / DONE / CONFIRMED | [spec](../experiments/carry_holdout/PREREG.md) · [findings](../experiments/carry_holdout/FINDINGS.md) |
 | [carry_v1](../experiments/carry_v1/PREREG.md) | R190 / DONE / CONFIRMED | [spec](../experiments/carry_v1/PREREG.md) · [findings](../experiments/carry_v1/FINDINGS.md) |
@@ -312,6 +314,7 @@ Recorded status/verdict comes only from this checkout's rounds.csv. A findings l
 | [mexc_fwd](../experiments/mexc_fwd/PREREG.md) | R215 / RUNNING / PENDING | [spec](../experiments/mexc_fwd/PREREG.md) |
 | [mexc_fwd_sq](../experiments/mexc_fwd_sq/PREREG.md) | R218 / RUNNING / PENDING | [spec](../experiments/mexc_fwd_sq/PREREG.md) |
 | [mexc_seq](../experiments/mexc_seq/PREREG.md) | R221 / RUNNING / PENDING | [spec](../experiments/mexc_seq/PREREG.md) |
+| [montag_v1](../experiments/montag_v1/PREREG.md) | R269 / DONE / NULL | [spec](../experiments/montag_v1/PREREG.md) · [findings](../experiments/montag_v1/FINDINGS.md) |
 | [oiwick_v1](../experiments/oiwick_v1/PREREG.md) | R252 / DONE / NULL | [spec](../experiments/oiwick_v1/PREREG.md) · [findings](../experiments/oiwick_v1/FINDINGS.md) |
 | [optimizer_v1](../experiments/optimizer_v1/PREREG.md) | R253 / DONE / NULL | [spec](../experiments/optimizer_v1/PREREG.md) · [findings](../experiments/optimizer_v1/FINDINGS.md) |
 | [pack_v1](../experiments/pack_v1/PREREG.md) | R194 / DONE / NULL | [spec](../experiments/pack_v1/PREREG.md) · [findings](../experiments/pack_v1/FINDINGS.md) |
