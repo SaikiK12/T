@@ -387,6 +387,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Events come from the daily calendar snapshot recorded since 2026-10-20, and each ticket is frozen before its
     entry bar.
   - Decision at 120 scored tickets. RUNNING. [PREREG](../experiments/unlocks_fwd/PREREG.md).
+- **R267 (delist_v1)** tested the old delisting-notice short (E03): short the USD-M perp at the first hourly open after
+  a Binance "Will Delist" notice, and cover at +1 h (primary) or +24 h.
+  - The events are 68 notice clusters and 160 legs, 2022-26, from the notice catalog plus article text.
+  - **Primary:** -0.12% / -0.52% / -0.92% at 1x/2x/3x, t -0.06. The matched same-hour null gives p 0.0575.
+  - Squeezes on perps that are themselves being delisted dominate the mean (ANC -95%, SLERF -87% in an hour).
+  - **Logged variant:** spot notices at +1 h, +4.15%, t 3.07 (n 25), with both halves positive. It is 1 of 8 variants,
+    so it is a forward candidate, not a pass.
+  - NULL. [Findings](../experiments/delist_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -492,6 +500,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,072 after R266 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,080 after R267 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
