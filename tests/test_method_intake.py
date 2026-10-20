@@ -142,6 +142,22 @@ class MethodIntakeTests(unittest.TestCase):
         self.write('registry/methods.csv', 'id,method\nM001,incomplete\n')
         self.assertIn('TABLE_INVALID', self.codes())
 
+    def test_conflict_markers_fail_without_a_cascade_of_false_alias_errors(self):
+        self.write('registry/methods.csv', '<<<<<<< HEAD\ninvalid\n=======\nother\n>>>>>>> branch\n')
+        self.assertEqual(self.codes(), {'TABLE_INVALID'})
+
+    def test_documented_collision_preserves_original_rule_and_checks_new_target(self):
+        row = self.queue[0]
+        annotation = dict(declared_id='M247', canonical_id='M001', reason='Collision on import',
+                          source_commit='abc1234', round='R269',
+                          original_header=list(row), original_row=['M247']+list(row.values())[1:])
+        self.write('registry/method_id_reassignment_R269.json', json.dumps(annotation))
+        self.assertEqual(audit(self.root)['summary']['id_reassignments'], 1)
+        self.assertEqual(audit(self.root)['summary']['errors'], 0)
+        annotation['canonical_id'] = 'M999'
+        self.write('registry/method_id_reassignment_R269.json', json.dumps(annotation))
+        self.assertIn('ID_REASSIGNMENT_INVALID', self.codes())
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -27,7 +27,8 @@ INTAKE_STATES = {"untested", "blocked", "partial", "null", "forward", "confirmed
 def audit(root):
     root = Path(root).resolve()
     report = {"summary": {"queue_rows": 0, "source_methods": 0, "aliases": 0,
-                          "source_files": 0, "provider_entries": 0, "errors": 0, "warnings": 0},
+                          "source_files": 0, "provider_entries": 0, "id_reassignments": 0,
+                          "errors": 0, "warnings": 0},
               "issues": []}
 
     def issue(level, code, message, path, record_id=None):
@@ -81,11 +82,14 @@ def audit(root):
         if not isinstance(value, str):
             issue('error', 'TARGET_INVALID', 'Queue targets must be text', path, identifier)
             return
+        if not queue_readable:
+            return  # A malformed queue is reported once, not as hundreds of false dangling targets.
         for target in value.split(';'):
             if target and target != 'CONTEXT' and target not in queue:
                 issue('error', 'QUEUE_TARGET_MISSING', f"Unknown queue target {target}", path, identifier)
 
     queue_rows = table(QUEUE, ['id', 'method', 'status', 'data_held', 'rid'])
+    queue_readable = not any(i['path'] == QUEUE and i['code'] == 'TABLE_INVALID' for i in report['issues'])
     queue = unique(queue_rows, 'id', QUEUE)
     report['summary']['queue_rows'] = len(queue_rows)
     for identifier, row in queue.items():
@@ -236,6 +240,26 @@ def audit(root):
                 if not row['existing_queue'].strip():
                     issue('error', 'QUEUE_TARGET_EMPTY', 'Provider must name related queue IDs or CONTEXT', relative, identifier)
                 targets(row['existing_queue'], relative, identifier)
+    for path in sorted((root/'registry').glob('method_id_reassignment_*.json')):
+        relative = path.relative_to(root).as_posix()
+        try:
+            record = json.loads(local(relative).read_text(encoding='utf-8'))
+            if not isinstance(record, dict) or not all(isinstance(record.get(k), str) and record[k].strip()
+                                                       for k in ('declared_id', 'canonical_id', 'reason', 'source_commit', 'round')):
+                raise ValueError('ID collision record lacks explicit provenance and reason')
+            header, original = record.get('original_header'), record.get('original_row')
+            if (not isinstance(header, list) or not isinstance(original, list) or len(header) != len(original)
+                    or not all(isinstance(k, str) for k in header) or len(set(header)) != len(header)):
+                raise ValueError('Collision record must preserve the original row and columns')
+            before = dict(zip(header, original))
+            if before.get('id') != record['declared_id'] or not before.get('method'):
+                raise ValueError('Original row does not match the declared ID')
+            canonical = queue.get(record['canonical_id'])
+            if queue_readable and (not canonical or canonical['method'] != before['method']):
+                raise ValueError('Mapped canonical method is absent or describes a different rule')
+            report['summary']['id_reassignments'] += 1
+        except (OSError, ValueError) as exc:
+            issue('error', 'ID_REASSIGNMENT_INVALID', str(exc), relative)
     return report
 
 
