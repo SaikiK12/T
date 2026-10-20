@@ -18,13 +18,14 @@ def toy(T=24 * 300, S=40, V=6, effect=0.0003, seed=0):
 
 
 class ForwardTests(unittest.TestCase):
-    def test_missing_or_infinite_return_invalidates_every_overlapping_window(self):
+    def test_explicit_policy_rejects_interior_nonfinite_windows_and_recovers(self):
         for invalid in (np.nan, np.inf, -np.inf):
             for gap in range(3):
                 with self.subTest(invalid=invalid, gap=gap):
                     ret = np.full((6, 2), 0.01, np.float64)
                     ret[gap, 0] = invalid
-                    F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 6, horizons=(3,))
+                    F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 6, horizons=(3,),
+                                         missing="terminal_prefix")
                     self.assertTrue(np.isnan(F[0, 0, 0]))
                     self.assertTrue(np.isnan(X[0, 0, 0]))
                     invalid_windows = [start <= gap < start + 3 for start in range(4)]
@@ -36,15 +37,74 @@ class ForwardTests(unittest.TestCase):
 
     def test_horizon_longer_than_segment_has_no_complete_labels(self):
         ret = np.full((3, 2), 0.01)
-        F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(6,))
-        self.assertTrue(np.isnan(F).all())
-        self.assertTrue(np.isnan(X).all())
+        for policy in ("legacy", "terminal_prefix"):
+            with self.subTest(policy=policy):
+                F, X = atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(6,), missing=policy)
+                self.assertTrue(np.isnan(F).all())
+                self.assertTrue(np.isnan(X).all())
 
     def test_nonpositive_horizon_is_rejected(self):
         ret = np.zeros((3, 1))
-        for horizon in (0, -1):
-            with self.subTest(horizon=horizon), self.assertRaises(ValueError):
-                atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(horizon,))
+        for policy in ("legacy", "terminal_prefix"):
+            for horizon in (0, -1):
+                with self.subTest(horizon=horizon, policy=policy), self.assertRaises(ValueError):
+                    atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(horizon,), missing=policy)
+
+    def test_default_preserves_legacy_interior_zero_and_terminal_prefix(self):
+        ret = np.array([[.1], [np.nan], [.2], [.3], [np.nan]])
+        elig = np.ones_like(ret, bool)
+        default = atlas.forward(ret, elig, 0, 5, horizons=(2,))
+        explicit = atlas.forward(ret, elig, 0, 5, horizons=(2,), missing="legacy")
+        for a, b in zip(default, explicit):
+            np.testing.assert_array_equal(a, b)
+        np.testing.assert_allclose(default[0][0, :, 0], [.1, np.nan, .5, .3, np.nan])
+        strict, _ = atlas.forward(ret, elig, 0, 5, horizons=(2,), missing="terminal_prefix")
+        np.testing.assert_allclose(strict[0, :, 0], [np.nan, np.nan, .5, .3, np.nan])
+
+    def test_terminal_loss_stays_in_the_target_and_eligible_benchmark(self):
+        ret = np.column_stack(([.01, -.41, np.nan, np.nan, np.nan, np.nan],
+                               np.full(6, .02), np.full(6, .04)))
+        elig = np.ones_like(ret, bool)
+        elig[0, 2] = False
+        F, X = atlas.forward(ret, elig, 0, 6, horizons=(4,), missing="terminal_prefix")
+        np.testing.assert_allclose(F[0, 0], [-.4, .08, .16], atol=1e-7)
+        np.testing.assert_allclose(X[0, 0], [-.24, .24, .32], atol=1e-7)
+        self.assertAlmostEqual(float(F[0, 1, 0]), -.41, places=7)
+        self.assertTrue(np.isnan(F[0, 2:, 0]).all())
+
+    def test_nan_at_window_end_is_interior_if_the_series_resumes_later(self):
+        ret = np.array([[.1], [.2], [np.nan], [np.nan], [.3], [.1]])
+        F, _ = atlas.forward(ret, np.ones_like(ret, bool), 0, 6, horizons=(3,), missing="terminal_prefix")
+        self.assertTrue(np.isnan(F[0, 0, 0]))
+        self.assertTrue(np.isnan(F[0, 1, 0]))
+
+    def test_infinity_is_not_a_terminal_exit_observation(self):
+        for invalid in (np.inf, -np.inf):
+            ret = np.array([[.1], [invalid], [np.nan], [np.nan]])
+            F, _ = atlas.forward(ret, np.ones_like(ret, bool), 0, 4, horizons=(3,), missing="terminal_prefix")
+            self.assertTrue(np.isnan(F).all())
+
+    def test_missing_start_and_all_missing_symbol_never_become_zero_labels(self):
+        ret = np.column_stack(([np.nan, .1, .2, np.nan, np.nan], np.full(5, np.nan)))
+        F, _ = atlas.forward(ret, np.ones_like(ret, bool), 0, 5, horizons=(3,), missing="terminal_prefix")
+        self.assertTrue(np.isnan(F[0, 0]).all())
+        self.assertAlmostEqual(float(F[0, 1, 0]), .3, places=7)
+        self.assertTrue(np.isnan(F[0, :, 1]).all())
+
+    def test_terminal_classification_cannot_read_beyond_the_selected_segment(self):
+        ret = np.array([[.1], [.2], [np.nan], [np.nan], [.9]])
+        first = atlas.forward(ret, np.ones_like(ret, bool), 0, 4, horizons=(3,), missing="terminal_prefix")
+        ret[-1] = np.inf
+        second = atlas.forward(ret, np.ones_like(ret, bool), 0, 4, horizons=(3,), missing="terminal_prefix")
+        for a, b in zip(first, second):
+            np.testing.assert_array_equal(a, b)
+        np.testing.assert_allclose(first[0][0, :2, 0], [.3, .2])
+        self.assertTrue(np.isnan(first[0][0, 2:, 0]).all())
+
+    def test_unknown_missing_policy_is_rejected(self):
+        ret = np.zeros((3, 1))
+        with self.assertRaises(ValueError):
+            atlas.forward(ret, np.ones_like(ret, bool), 0, 3, horizons=(1,), missing="silent_fill")
 
     def test_forward_uses_only_the_requested_segment(self):
         ret = np.array([[np.nan], [0.01], [0.02], [0.03], [np.inf]])
