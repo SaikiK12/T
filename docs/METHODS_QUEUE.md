@@ -9,7 +9,7 @@
 4. Do not delete or renumber rows. Add a new idea at the end with the next free M-number. Table order is the rank at build time: runnable-now UNTESTED/PARTIAL first, then blocked, then TESTED, then N/A.
 5. **`registry/methods.csv` is the live queue** (columns id, method, data_held, status, cheap, note, source, rid); `scripts/panel.py` shows its first 12 UNTESTED/PARTIAL rows. The table and summary below are only the older M001-M169 snapshot. Rows M170 and later exist only in the CSV. Update the CSV first. `registry/methods_aliases.csv` maps the original and supplemental source records onto the live IDs; source aliases may be related variants, not exact duplicates.
 
-**Status.** TESTED: a registry row tests this mechanism (verdict shown). PARTIAL: part tested, gap named. UNTESTED: no test, data held. BLOCKED: blocker named (data not held, owner's yes for a download, compute, or no frozen spec). N/A: a claim, tool or record with no testable mechanism.
+**Status.** TESTED: a registry row tests this mechanism (verdict shown). PARTIAL: part tested, gap named. UNTESTED: no test, data held. BLOCKED: blocker named (data not held, owner's yes for a download, compute, or no frozen spec). QUEUED: a named draft is pending; this label alone proves neither a frozen specification nor a registry result. N/A: a claim, tool or record with no testable mechanism.
 
 **Cheap.** 1 = runs on data held in under an hour. 2 = a day of coding or a fetch. 3 = download, live capture or heavy compute. **Data held.** Y = in `data/` of this checkout; P = partly; N = not held.
 

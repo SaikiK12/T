@@ -5,13 +5,18 @@ A pre-registered strategy-discovery lab for crypto perpetual futures. The goal i
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
+Development targets [`claude/yo-9a1k5w`](https://github.com/SaikiK12/T/tree/claude/yo-9a1k5w)
+([PR #1](https://github.com/SaikiK12/T/pull/1)). Writer claims and handoffs are in
+[issue #7](https://github.com/SaikiK12/T/issues/7).
+
 ## Where things are
 
 | Path | What it holds |
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | The hard rules for anyone working here, human or AI |
 | [`docs/PANEL.md`](docs/PANEL.md) | Live status: objective, forward lanes, next decisions (`scripts/panel.py`) |
-| `registry/` | `rounds.csv` (every round and its trial count, append-only), `methods.csv` (the method queue), `candidates.csv` (edges still alive) |
+| `registry/` | [`rounds.csv`](registry/rounds.csv) (every round and its trial count, append-only), [`methods.csv`](registry/methods.csv) (the live queue), `candidates.csv` (edges still alive) |
+| [`research/intake/`](research/intake/README.md) | Received-source versions, exact tested/open scope and aliases to the live queue; catalog access does not imply full extraction or data possession |
 | `experiments/<lane>/` | `PREREG.md` (frozen before any statistic), `FINDINGS.md`, `results/`; forward lanes keep a `journal/` |
 | `lab/` | Python research library: data, panel, features, backtester, inference (DSR, SPA/MCS, PBO), prereg, registry, gates, live paper |
 | `engine/` | `qx`, the Rust engine: event, factor and cross-venue spread families from one TOML spec ([`engine/README.md`](engine/README.md)) |
@@ -19,6 +24,11 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 | `dashboard/` | The Control Room page; `scripts/dashboard_data.py` exports its datasets |
 | `data/` | Downloaded and recorded data (not in git). Reserved samples sit under `reserved/` folders and are read only by a frozen batch PREREG |
 | `templates/lane/` | Starting point for a new lane |
+| `tests/` | Offline unit and synthetic checks; reproduction uses the dependencies recorded by each study |
+
+The README is the maintained document index. `python scripts/repository_index.py --find funding [--json]`
+queries tracked headings, commands, experiment metadata and canonical source/method records in place. It prints a
+temporary view and saves no second queue or index. Bulk caches stay outside Git and can differ between sandboxes.
 
 ## Docs
 
@@ -81,6 +91,9 @@ Docs stay at their paths because frozen PREREGs link to them.
 ```
 python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
 .venv/bin/python -m unittest discover -s tests -t .              # before every commit to lab/ or scripts/
+.venv/bin/python scripts/check_research_integrity.py             # registry/specification metadata
+.venv/bin/python scripts/check_method_intake.py                  # source versions, aliases and live queue
+.venv/bin/python scripts/repository_index.py --find funding      # read-only metadata lookup
 cargo test --release --manifest-path engine/Cargo.toml           # before every commit to engine/
 .venv/bin/python -m lab.data build klines 1h                     # Binance archive (also fundingRate, premiumIndexKlines)
 .venv/bin/python scripts/qx_run.py experiments/<lane> --register # run a frozen qx lane and append its registry row

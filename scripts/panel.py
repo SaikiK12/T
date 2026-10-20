@@ -40,7 +40,7 @@ WAITING = [
     "Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).",
     "Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a"
     " stop at 25% of the stake).",
-    "Merges: Codex's draft PRs #26/#27 (R257) and the second Claude session's PR #25 (retarget to `claude/yo-9a1k5w`).",
+    "Review and integration: [current open PRs](https://github.com/SaikiK12/T/pulls); each PR states its dependencies and blockers.",
 ]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
@@ -118,7 +118,8 @@ def main():
          " \"Reserved samples\"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API."
          " Real money only after gates 1-3, placed by the owner (gate 4).",
          "5. Read the room (issue #7), commit and push.", "",
-         "Roles: Claude does all of it, with no subagents and no Workflows (owner, 2026-10-20). Codex has stopped.", "",
+         "Roles: Claude and Codex claim current work in [room #7](https://github.com/SaikiK12/T/issues/7). "
+         "Read the latest writer claims and owner instructions before taking a lane.", "",
          "## 1. The funnel", "",
          "Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution on MEXC (gate 2, `go_real` here) →"
          " account risk (gate 3) → the owner (gate 4). Rules and dates: [GATES](GATES.md); what the critics found:"

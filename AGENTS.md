@@ -20,3 +20,11 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 - Run `python3 -m unittest discover -s tests -t .` before committing changes to `lab/`.
 - Claude and ChatGPT/Codex talk in one room: issue #7 (`docs/ROOM.md` has the protocol). Read it before starting
   work, and post calls and results there in its short format.
+- `docs/PANEL.md` is the operating panel; `registry/methods.csv` is the live methods queue. Reconcile new source
+  extractions through `research/intake/` and `registry/methods_aliases.csv`; do not create another queue or panel.
+- The root README is the maintained document index. Find existing documents, commands and experiments with
+  `python scripts/repository_index.py --find TEXT`; it prints tracked metadata without saving another index.
+  Keep evidence/source paths stable because frozen or hashed inputs can depend on them.
+- Before publishing an intake/queue change, run `python scripts/check_method_intake.py`. Keep source-snapshot
+  statuses separate from current queue status, and label catalog/description access as such. Source drift and
+  missing mechanics remain open until reconciled; the audit does not validate profitability or authorize data access.

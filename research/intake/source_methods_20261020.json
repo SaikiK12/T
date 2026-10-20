@@ -517,7 +517,8 @@
         "Captions/official transcripts/recaps/descriptions are labeled per source in docs/REELS_TRANSCRIPT.md.",
         "No raw media or market data was downloaded or committed.",
         "No video claim establishes an edge."
-      ]
+      ],
+      "historical_allocation_notice": "queue_rows_added preserves the original source-intake allocation. Source-IV M234 was later reassigned to M284 because original M234 was already reserved for R257; current mappings and provenance are in registry/method_id_reassignment_source_iv_M234.json."
     }
   },
   "methods": [
@@ -6001,7 +6002,14 @@
           "path": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
           "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
         }
-      ]
+      ],
+      "queue_allocation": "M284",
+      "allocation_history": {
+        "declared_id": "M234",
+        "current_id": "M284",
+        "provenance_path": "registry/method_id_reassignment_source_iv_M234.json",
+        "reason": "Earlier M234 is reserved for R257; source record ID and rule are unchanged."
+      }
     },
     {
       "id": "TT26-02-GEX-IV-MODEL",
@@ -7223,7 +7231,7 @@
       "blockers": [
         "No option-chain history is held."
       ],
-      "next_action": "Map to M234 and retain the OIC source as a skew-specific alias.",
+      "next_action": "Map to M284 and retain the OIC source as a skew-specific alias.",
       "source_refs": [
         {
           "path": "docs/REELS_TRANSCRIPT.md",
@@ -7239,7 +7247,14 @@
           "path": "https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew",
           "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew"
         }
-      ]
+      ],
+      "queue_allocation": "M284",
+      "allocation_history": {
+        "declared_id": "M234",
+        "current_id": "M284",
+        "provenance_path": "registry/method_id_reassignment_source_iv_M234.json",
+        "reason": "Earlier M234 is reserved for R257; source record ID and rule are unchanged."
+      }
     },
     {
       "id": "SV26-03-PARITY-ARB",
@@ -7367,7 +7382,7 @@
       "blockers": [
         "Only DVOL is held; it is not the full strike/expiry surface required by the source."
       ],
-      "next_action": "Map to M249 and keep the IV-percentile rule separate from M234 surface relative value.",
+      "next_action": "Map to M249 and keep the IV-percentile rule separate from M284 surface relative value.",
       "source_refs": [
         {
           "path": "docs/REELS_TRANSCRIPT.md",
@@ -8868,7 +8883,7 @@
       "hypothesis": "Adaptive lookback and joint channel/band confirmation are an untested composite lead, not evidence of net MEXC profitability.",
       "testable_rule": "StartN20; adjustN by relative closing-price volatility change, clamp20–60. Long after prior close exceeds upper2-sigma band and ask exceedsN-day high; mirror short below lower band/channel. Exit long belowN-close SMA, short above it.",
       "exact_tested_scope": "No project test of this exact composite identified; no outcomes computed. The secondary source contains a Yahoo SPX CSV driver dated 2010-01 through 2019-12, but no result or run provenance was received or verified.",
-      "unrun_scope": "Official prose says 30-day closing-price volatility while its snippet requests 31 closes and slices by adaptive N up to 60, which cannot supply two N-day windows above N=15 from those observations. EMA-band initialization/update, completed-bar timing and bid/ask direction remain unresolved. A pinned third-party Backtrader reproduction is materially different: its volatility formula simplifies to 1/yesterday_std and its Donchian comparisons are commented out; it is not an authoritative resolution.",
+      "unrun_scope": "Official prose says 30-day closing-price volatility while its snippet requests 31 closes and slices by adaptive N up to 60, which cannot supply the two adjacent N-day windows for N>30: they overlap and require N+1 closes. EMA-band initialization/update, completed-bar timing and bid/ask direction remain unresolved. A pinned third-party Backtrader reproduction is materially different: its volatility formula simplifies to 1/yesterday_std and its Donchian comparisons are commented out; it is not an authoritative resolution.",
       "status": "blocked",
       "required_inputs": [
         "Pinned full algorithm and resolved window/update mechanics",
@@ -8926,7 +8941,15 @@
           "The Donchian high/low are computed, but both channel comparisons are commented out; entries use current close versus Bollinger bands alone.",
           "The driver points to a Yahoo SPX daily CSV for 2010-01-01 through 2019-12-31 and sets commission to 0.001; data, run output, slippage, funding and MEXC execution evidence were not received."
         ],
-        "interpretation": "This is a materially divergent and defective reproduction, not confirmation of the official rule and not a distinct strategy allocation."
+        "interpretation": "This is a materially divergent and defective reproduction, not confirmation of the official rule and not a distinct strategy allocation.",
+        "extraction_corrections": [
+          {
+            "prior_extraction_commit": "b2011a61c2edb1cae09be0a7d86a19bd2062df6b",
+            "original_claim": "31 closes cannot supply two N-day windows above N=15.",
+            "correction": "Adjacent windows overlap by N-1 observations and require N+1 closes, so 31 closes suffice through N=30; N>30 remains undersupplied.",
+            "basis": "Counting the received snippet slices [1:N+1] and [0:N]; no market data or outcome."
+          }
+        ]
       }
     }
   ],
@@ -9330,7 +9353,7 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "fc11d51827ff4871b473ed2f8fe9d34749382d9d82682976f689f610cec3c51e",
+      "current_sha256": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
@@ -9343,13 +9366,24 @@
           "reviewed_utc_date": "2026-10-20",
           "superseded_by_intake": "strategy_hubs_code_audit_20261020",
           "preservation": "Git commit b1b3df8 and supplemental intake record"
+        },
+        {
+          "sha256": "fc11d51827ff4871b473ed2f8fe9d34749382d9d82682976f689f610cec3c51e",
+          "reviewed_utc_date": "2026-10-20",
+          "intake_id": "strategy_hubs_code_audit_20261020",
+          "superseded_by_intake": "intake_hygiene_20261020"
+        },
+        {
+          "sha256": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
+          "reviewed_utc_date": "2026-10-20",
+          "intake_id": "intake_hygiene_20261020"
         }
       ]
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
   "canonical_panel": "docs/PANEL.md",
-  "canonical_queue": "registry/methods.csv (live canonical queue through M246; source intake JSON and alias CSV are review inputs, not a second priority list).",
+  "canonical_queue": "registry/methods.csv (live canonical queue; source intake JSON and alias CSV are reconciliation inputs, not another priority list).",
   "provenance": {
     "received_source_base": "ee25bfecc98e51cd90e7c31ffcd7dd01de512024",
     "reconciled_against": "174e1a96d929ec9399e1830fcd70ce18054d3469",
@@ -10007,6 +10041,30 @@
         "No code execution, market data, outcomes, or project tests."
       ],
       "previous_reels_digest_sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02"
+    },
+    {
+      "intake_id": "intake_hygiene_20261020",
+      "captured_utc_date": "2026-10-20",
+      "records_added": [],
+      "records_updated": [
+        "TT26-02-IVSURFACE-RV",
+        "SV26-02-SKEW-RV",
+        "SV26-06-IV-PERCENTILE",
+        "HUB26-QC-DB2"
+      ],
+      "media_sources": [],
+      "media_source_count": 0,
+      "received_scope": "Metadata reconciliation only: preserve source-IV M234 history under current M284 and correct the Dynamic Breakout window-count extraction from N>15 to N>30. No new external source or market data.",
+      "previous_reels_digest_sha256": "fc11d51827ff4871b473ed2f8fe9d34749382d9d82682976f689f610cec3c51e",
+      "current_reels_digest_sha256": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
+      "provenance_path": "registry/method_id_reassignment_source_iv_M234.json",
+      "limitations": [
+        "Source-only M284 remains BLOCKED. Original R257 M234 stays reserved and is not imported.",
+        "No strategy outcome or trial added."
+      ]
     }
+  ],
+  "reassignment_refs": [
+    "registry/method_id_reassignment_source_iv_M234.json"
   ]
 }
