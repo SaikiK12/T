@@ -69,5 +69,32 @@ class PropFirmTests(unittest.TestCase):
         self.assertLess(p[0], p[1])
         self.assertLess(p[1], p[2])
 
+    def funded(self, r, n=400, **kw):
+        rules = self.rules(payout_days=10, split=1.0, **kw)
+        return pf.funded_payouts(r, rules, 1.0, n, 60, 1, 1, np.random.default_rng(6))
+
+    def test_payout_cap_limits_each_payment(self):
+        r = np.full(1000, 0.01)                                # +1% a day: 10% profit per 10-day cycle
+        free = self.funded(r)
+        capped = self.funded(r, payout_cap=2_000)
+        self.assertAlmostEqual(free.mean(), 6 * 10_000, delta=1e-6)   # 6 cycles x (10% of 100k), split 1
+        self.assertTrue(np.all(capped <= 6 * 2_000 + 1e-6))
+
+    def test_partial_payout_leaves_a_cushion(self):
+        r = np.full(1000, 0.01)
+        half = self.funded(r, payout_share=0.5)
+        # cycle k withdraws half of 10% plus the cushion left before it: 0.1 x (1 - 0.5^k)
+        self.assertAlmostEqual(half[0], 100_000 * sum(0.1 * (1 - 0.5 ** k) for k in range(1, 7)), delta=1.0)
+
+    def test_denied_payouts_pay_nothing(self):
+        r = np.full(1000, 0.01)
+        self.assertEqual(self.funded(r, payout_deny=1.0).sum(), 0.0)
+
+    def test_floor_after_payout_ends_accounts_sooner(self):
+        r = np.random.default_rng(7).normal(0.0, 0.01, 50_000)
+        free = self.funded(r, n=2000)
+        locked = self.funded(r, n=2000, floor_after_payout=1.0)
+        self.assertLess(locked.mean(), free.mean())
+
 if __name__ == "__main__":
     unittest.main()

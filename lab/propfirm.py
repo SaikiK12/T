@@ -36,6 +36,10 @@ class Rules:
     payout_days: int = 30
     refund_fee: bool = False             # fee refunded with the first payout
     activation: float = 0.0              # USD paid on passing, before funded trading
+    payout_share: float = 1.0            # share of the profit above the initial balance withdrawn at a payout
+    payout_cap: float = float("inf")     # USD cap on the trader's payment per payout
+    floor_after_payout: float = float("nan")  # equity floor (units of the initial balance) once one payout is made
+    payout_deny: float = 0.0             # chance a payout request is refused and the account closed unpaid
     source: str = "illustrative"
 
 
@@ -65,9 +69,12 @@ PRESETS = {
                           payout_days=14, source="third-party: proptradingvibes.com"),
     # Topstep 50K Combine (CME futures; a benchmark, our crypto books cannot trade there): USD 3,000 target, USD 2,000
     # end-of-day trailing locking at the start, best day < 55% of target; USD 49 a month, USD 149 activation (third-party)
+    # funded: the loss limit resets to the starting balance after the first payout (help.topstep.com); payouts capped
+    # at USD 2-6k each, the low end assumed
     "topstep_50k": Rules("topstep_50k", 50_000, 49, targets=(0.06,), daily_loss=0.0, max_dd=0.04,
                          dd_mode="trailing_lock", trail_eod=True, consistency=0.55, split=0.9, payout_days=14,
-                         activation=149, source="help.topstep.com (rules), third-party (prices)"),
+                         activation=149, payout_cap=2_000,
+                         floor_after_payout=1.0, source="help.topstep.com (rules), third-party (prices)"),
     "illustrative_2step": Rules("illustrative_2step", 100_000, 500, targets=(0.08, 0.05), daily_loss=0.05,
                                 max_dd=0.10, split=0.8, refund_fee=True),
 }
@@ -93,9 +100,10 @@ def bootstrap(r, n, length, block, steps_per_day=1, rng=None):
     return days[idx].reshape(n, length * steps_per_day)
 
 
-def run_phase(paths, rules, target, steps_per_day=1, check_target=True, eq0=None, peak0=None):
-    """Simulate one phase on [n, steps] paths of scaled returns, from equity eq0 and peak peak0 (default 1). Returns
-    Outcome with the final equity, peak and alive mask in `extra`."""
+def run_phase(paths, rules, target, steps_per_day=1, check_target=True, eq0=None, peak0=None, floor_min=None):
+    """Simulate one phase on [n, steps] paths of scaled returns, from equity eq0 and peak peak0 (default 1); an
+    optional per-path floor_min raises the drawdown floor. Returns Outcome with the final equity, peak and alive mask
+    in `extra`."""
     n, L = paths.shape
     spd = steps_per_day
     eq = np.ones(n) if eq0 is None else np.array(eq0, float)
@@ -120,6 +128,8 @@ def run_phase(paths, rules, target, steps_per_day=1, check_target=True, eq0=None
             floor = peak - rules.max_dd
         else:
             floor = np.minimum(peak - rules.max_dd, 1.0)
+        if floor_min is not None:
+            floor = np.maximum(floor, floor_min)
         base = day_start if rules.daily_base == "day_start" else 1.0
         hit_daily = alive & (rules.daily_loss > 0) & (eq <= base - rules.daily_loss)
         hit_dd = alive & ~hit_daily & (eq <= floor)
@@ -176,23 +186,36 @@ def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, ste
 
 
 def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
-    """USD paid to the trader over `days` funded days. At each payout date a profit above the initial balance is split
-    and withdrawn and the account restarts from the initial balance; a loss carries over. A broken rule ends it."""
+    """USD paid to the trader over `days` funded days. At each payout date, if equity is above the initial balance,
+    payout_share of that profit (capped so the trader's payment is at most payout_cap) is withdrawn and split; the rest
+    stays as cushion and the trailing peak restarts from the new balance. A loss carries over. With probability
+    payout_deny a request is refused and the account closed unpaid. Once one payout is made, the floor rises to
+    floor_after_payout when that is set. A broken rule ends the account."""
     total = np.zeros(n)
     alive = np.ones(n, bool)
+    paid = np.zeros(n, bool)
     eq, peak = np.ones(n), np.ones(n)
     cycle = rules.payout_days
+    cap = rules.payout_cap / (rules.split * rules.account)
+    after = rules.floor_after_payout
     for start in range(0, days, cycle):
         L = min(cycle, days - start)
         paths = scale * bootstrap(r, n, L, block, steps_per_day, rng)
+        fmin = np.where(paid, after, -np.inf) if np.isfinite(after) else None
         o = run_phase(paths, replace(rules, min_days=0, consistency=0.0, max_days=L), np.inf, steps_per_day,
-                      check_target=False, eq0=eq, peak0=peak)
+                      check_target=False, eq0=eq, peak0=peak, floor_min=fmin)
         alive = alive & o.extra["alive"]
         eq, peak = o.extra["equity"], o.extra["peak"]
         win = alive & (eq > 1)
-        total += np.where(win, (eq - 1) * rules.split * rules.account, 0)
-        eq = np.where(win, 1.0, eq)
-        peak = np.where(win, 1.0, peak)
+        if rules.payout_deny > 0:
+            denied = win & (rng.random(n) < rules.payout_deny)
+            alive &= ~denied
+            win &= ~denied
+        out = np.where(win, np.minimum(rules.payout_share * (eq - 1), cap), 0.0)
+        total += out * rules.split * rules.account
+        eq = eq - out
+        peak = np.where(win, eq, peak)
+        paid |= win
     return total
 
 
