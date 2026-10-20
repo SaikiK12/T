@@ -1,5 +1,7 @@
 # Implementation integrity review: labels, clocks and risk limits
 
+Implementation follow-up: [opt-in gap-aware labels and holdout-price guard](TARGET_INTEGRITY_FIX.md) preserves the historical default and retains observed terminal losses. The complete-window recommendation below is an earlier proposal, not the revised policy: dropping terminal observations can select survivors. This original review remains a historical record; market-result impact is still unmeasured.
+
 Read-only check of the project’s `claude/yo-9a1k5w` working branch on 2026-10-19. This note records code-path hazards and their synthetic reproductions for the active pipeline review. It does not edit code, change an active preregistration, or estimate how many historical results were affected. The checkout has no raw market-data archive, so prevalence and PnL impact are unknown.
 
 ## Findings to resolve before relying on confidence estimates

@@ -23,20 +23,44 @@ HORIZONS = (1, 4, 12, 24, 72)
 
 # ---- forward returns ----------------------------------------------------------------------------------------------
 
-def forward(ret, elig, t0, t1, horizons=HORIZONS):
-    """F[h, t - t0, s]: sum of next-bar returns over h bars from row t (NaN when the window passes t1 or the symbol has
-    no return at t); X: F minus the mean of F over eligible symbols at t. Both float32."""
+def forward(ret, elig, t0, t1, horizons=HORIZONS, *, missing="legacy"):
+    """F[h, t - t0, s]: sum of next-bar returns from row t; X subtracts the eligible mean. Both float32.
+
+    The default preserves the historical NaN-to-zero sum and missing-start mask. Explicit missing="terminal_prefix"
+    rejects interior NaNs and all infinities, but retains a finite prefix followed only by a terminal NaN suffix.
+    A missing start or a horizon crossing t1 is unavailable under either policy. Terminal means within [t0,t1): it
+    is an observation-boundary convention, not independent evidence of delisting or an executable liquidation.
+
+    Bounds refer to return rows: ret[t1 - 1] still depends on the price at row t1. Callers must protect price splits.
+    """
+    if missing not in ("legacy", "terminal_prefix"):
+        raise ValueError("unknown forward missing-return policy")
     T = t1 - t0
     r = np.asarray(ret[t0:t1], np.float64)
     c = np.zeros((T + 1, r.shape[1]))
-    c[1:] = np.cumsum(np.nan_to_num(r), axis=0)
+    if missing == "legacy":
+        c[1:] = np.cumsum(np.nan_to_num(r), axis=0)
+    else:
+        valid = np.isfinite(r)
+        c[1:] = np.cumsum(np.where(valid, r, 0.0), axis=0)
+        terminal_nan = np.logical_and.accumulate(np.isnan(r)[::-1], axis=0)[::-1]
+        bad = np.zeros((T + 1, r.shape[1]), np.int64)
+        bad[1:] = np.cumsum(~valid & ~terminal_nan, axis=0)
     F = np.full((len(horizons), T, r.shape[1]), np.nan, np.float32)
     X = np.full_like(F, np.nan)
     e = np.asarray(elig[t0:t1])
     for i, h in enumerate(horizons):
+        if h <= 0:
+            raise ValueError("forward horizons must be positive")
         f = np.full((T, r.shape[1]), np.nan)
-        f[:T - h + 1] = c[h:] - c[:T - h + 1]
-        f[np.isnan(r)] = np.nan
+        if h <= T:
+            n = T - h + 1
+            f[:n] = c[h:] - c[:n]
+            if missing == "terminal_prefix":
+                usable = valid[:n] & (bad[h:] == bad[:n])
+                f[:n] = np.where(usable, f[:n], np.nan)
+        if missing == "legacy":
+            f[np.isnan(r)] = np.nan
         m = np.where(e & np.isfinite(f), f, np.nan)
         with np.errstate(invalid="ignore"), warnings.catch_warnings():
             warnings.simplefilter("ignore", RuntimeWarning)
