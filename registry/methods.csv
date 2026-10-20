@@ -193,8 +193,8 @@ M191,"Pre-FOMC drift, pooled over 50 coins",Y klines_1h; static FOMC calendar,UN
 M192,Stablecoin supply weekly z-score -> market,N DefiLlama stablecoins API (small),BLOCKED,2,Griffin-Shams vs the VoxEU rebuttal. Low prior.,SCOUT E36,-
 M193,"G10 forex carry, momentum and value (14 pairs, daily)",P Yahoo daily via lab/markets (few MB),UNTESTED,1,Owner's breadth ask: forex. Carry needs a rate series (FRED).,OWNER 2026-10-20,-
 M194,"Time-series momentum across asset classes (index futures, FX, commodities, rates), Moskowitz-Ooi-Pedersen style",P Yahoo daily via lab/markets,UNTESTED,1,Owner's breadth ask. A classic with decades of evidence; net of futures costs.,OWNER 2026-10-20,-
-M195,NASDAQ overnight vs intraday split (night effect) on QQQ/NQ,P Yahoo daily open/close,UNTESTED,1,Owner's breadth ask: NASDAQ.,OWNER 2026-10-20,-
-M196,Turn-of-month and pre-holiday effects on index futures,P Yahoo daily,UNTESTED,1,Owner's breadth ask. Old equity anomaly; may have decayed.,OWNER 2026-10-20,-
+M195,NASDAQ overnight vs intraday split (night effect) on QQQ/NQ,P Yahoo daily open/close,TESTED,1,Owner's breadth ask: NASDAQ.,OWNER 2026-10-20,"R235 NULL (ON-QQQ alpha +1.76 bp/day t 1.36 at 1x, -0.24 at 2x; ON-SPY -0.38)"
+M196,Turn-of-month and pre-holiday effects on index futures,P Yahoo daily,TESTED,1,Owner's breadth ask. Old equity anomaly; may have decayed.,OWNER 2026-10-20,R235 NULL (TOM-SPY alpha +1.21 bp/day t 1.45; TOM-QQQ +1.68 t 1.24)
 M197,VIX spike mean reversion -> NDX/SPX next 5 d,"P Yahoo daily (^VIX, ^VXN)",UNTESTED,1,Owner's breadth ask.,OWNER 2026-10-20,-
 M198,BTC weekend return -> NQ Monday open gap,P Yahoo daily,UNTESTED,1,Cross-market link between crypto and NASDAQ.,OWNER 2026-10-20,-
 M199,Prop-challenge EV with the actual candidate books on index futures (NQ/ES daily) under current firm rules,P Yahoo daily; firm rules (prop research),UNTESTED,2,Extends M028 from crypto streams to futures accounts.,OWNER 2026-10-20,-

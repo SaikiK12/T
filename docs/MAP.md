@@ -223,6 +223,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   nearly uncorrelated with the level (0.00-0.20). Discovery is effectively 2023, because positioning covers about 10%
   of coin-hours in 2021-22. In 2023 the H books made about +24 bp/day, which was seen after the run and is queued as
   M223. NULL. [Findings](../experiments/posimpulse_v1/FINDINGS.md).
+- **R235 (usindex_calendar_v1)** was the first lane outside crypto. It tested turn-of-month and overnight drift on
+  SPY and QQQ (2000-2012), as alpha against buy-and-hold. Both effects show the expected sign but fall short of
+  t 2:
+  - turn-of-month: +1.2 to +1.7 bp/day of alpha, t 1.2-1.5;
+  - QQQ overnight: +1.8 bp/day at 1x, -0.2 at 2x.
+  NULL. 2013-2026 stays unread. [Findings](../experiments/usindex_calendar_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -328,6 +334,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,897 after R234 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,901 after R235 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

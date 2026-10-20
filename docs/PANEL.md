@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 06:33 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 06:34 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 65 |
+| Ideas in the queue, untested | 63 |
 | Ideas partly tested | 24 |
 | Ideas blocked (data, download, compute) | 72 |
-| Rounds in the registry | 56 (NULL 33, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,897 |
+| Rounds in the registry | 57 (NULL 34, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,901 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -79,7 +79,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R226 | tradesize_v1 | DONE | NULL | 6 |
 | R228 | allocation_v1 | DONE | NULL | 30 |
 | R229 | slow_trend_v1 | DONE | NULL | 2 |
 | R230 | weekly_rotation_v1 | DONE | NULL | 96 |
@@ -87,5 +86,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | R232 | rebalancing_v1 | DONE | NULL | 3 |
 | R233 | regime_v1 | DONE | NULL | 4 |
 | R234 | posimpulse_v1 | DONE | NULL | 4 |
+| R235 | usindex_calendar_v1 | DONE | NULL | 4 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
