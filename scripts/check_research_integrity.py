@@ -31,8 +31,15 @@ _ID = re.compile(r"R[0-9]+\Z")
 _SHA = re.compile(r"[0-9a-f]{8,64}\Z")
 _FULL_SHA = re.compile(r"[0-9a-f]{64}\Z")
 _META = re.compile(
-    r"^\s*(?:[-*+]\s+)?(?:\*\*)?Registry\s+id\s*:\s*(?:\*\*)?\s*(.*?)\s*$",
+    r"^[ \t]*(?:[-*+][ \t]+)?(?:\*\*)?Registry[ \t]+id[ \t]*:"
+    r"[ \t]*(?:\*\*)?[ \t]*(.*?)[ \t]*$",
     re.IGNORECASE | re.MULTILINE,
+)
+# One bare or backtick-quoted id, optionally followed by a single annotation.
+# Keep the full-value match: arbitrary trailing text must not hide another id.
+_META_ID = re.compile(
+    r"(?P<quote>`?)(?P<id>R[0-9]+)(?P=quote)"
+    r"(?:[ \t]+\([^()\r\n]*\))?\Z"
 )
 
 
@@ -217,18 +224,18 @@ def audit(root: Path) -> dict:
                 text = None
             if text is not None:
                 metadata = _META.findall(text)
-                metadata = [value.strip().strip("` ") for value in metadata]
+                declared = _META_ID.fullmatch(metadata[0].strip()) if len(metadata) == 1 else None
                 if not metadata:
                     add("warning", "REGISTRY_ID_MISSING", "PREREG has no explicit Registry id metadata.",
                         spec)
-                elif len(metadata) != 1 or not _ID.fullmatch(metadata[0]):
+                elif declared is None:
                     add("error", "REGISTRY_ID_INVALID", "PREREG must declare one valid Registry id.",
                         spec)
                 else:
                     for row in lane_rows:
-                        if metadata[0] != row["id"]:
+                        if declared["id"] != row["id"]:
                             add("error", "REGISTRY_ID_MISMATCH",
-                                f"PREREG declares {metadata[0]}, registry row is {row['id']}.",
+                                f"PREREG declares {declared['id']}, registry row is {row['id']}.",
                                 spec, row["id"])
             frozen = None
             if side_exists:
