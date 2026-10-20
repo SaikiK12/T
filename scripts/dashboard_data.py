@@ -420,6 +420,8 @@ TITLES = {
                  "(provenance records) and each live recorder."),
     "funding_board": ("Cross-venue funding board", "Latest hourly snapshot of funding on seven venues, 8-hour "
                       "equivalent, widest spreads first. Descriptive only."),
+    "factor_ic": ("Factor IC by month", "Monthly mean IC, rank IC and long-short of each factor and horizon in a "
+                  "registered qx factor report, for IC decay and stability."),
     "jobs": ("Operations by responsibility", "Categorized task reports (legacy activity is unverified) and the lab "
              "scripts running now, by script name only. No raw logs or process command lines are exported."),
 }
@@ -495,6 +497,7 @@ def main():
     sets["leaderboard"] = perf.leaderboard(rnd, sets["strategies"])
     sets["coverage"] = perf.coverage()
     sets["funding_board"] = perf.funding_board()
+    sets["factor_ic"] = perf.factor_ic()
     for r in sets["candidates"]:
         r["t"] = num(r["t"])
     manifest = {}

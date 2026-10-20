@@ -9,6 +9,8 @@
   something above both bars.
 - coverage: per data folder and subfolder, the first and last bar, files, bars and interior holes, from the
   provenance records (docs/provenance/*.json); recorder folders by their first and last recorded day.
+- factor_ic: per qx factor report (experiments/*/results/ic.csv), monthly mean IC, rank IC and long-short per factor
+  and horizon, with the month's days, for IC-decay and stability charts.
 - funding_board: the latest cross-venue funding snapshot (scripts/record_funding_board.py plus the MEXC ticker
   recorder) as the widest spreads first. Descriptive: same ticker is not proven the same coin, and a spread is not
   an edge until a frozen lane prices it.
@@ -70,6 +72,54 @@ RESEARCH = [
 ]
 
 
+def _lane_ids():
+    """experiments/<lane> path -> registry id."""
+    with open(ROOT / "registry" / "rounds.csv", newline="") as f:
+        return {r["path"].rstrip("/"): r["id"] for r in csv.DictReader(f)}
+
+
+def qx_streams():
+    """The best book (first by 1x t) of every registered qx spread family, as a research stream."""
+    ids, out = _lane_ids(), []
+    for rep in sorted(EXP.glob("*/results/report.json")):
+        lane = f"experiments/{rep.parent.parent.name}"
+        daily = rep.parent / "daily.csv"
+        if lane not in ids or not daily.exists():
+            continue
+        try:
+            best = json.loads(rep.read_text())["strategies"][0]
+        except (OSError, ValueError, KeyError, IndexError):
+            continue
+        rid, label = ids[lane], best["label"]
+
+        def load(daily=daily, label=label):
+            d = pd.read_csv(daily, usecols=["strategy", "date", "cost_multiple", "net"])
+            d = d[(d.strategy == label) & (d.cost_multiple == 1)].sort_values("date")
+            return pd.Series(d.net.values, index=pd.to_datetime(d.date))
+        out.append((f"{rid} {label}", rid, f"{rep.parent.parent.name} best book by t: {label} (backtest, 1x)", load))
+    return out
+
+
+def factor_ic():
+    """Monthly IC, rank IC and long-short per factor and horizon of every registered qx factor report."""
+    ids, out = _lane_ids(), []
+    for ic in sorted(EXP.glob("*/results/ic.csv")):
+        lane = f"experiments/{ic.parent.parent.name}"
+        if lane not in ids:
+            continue
+        d = pd.read_csv(ic)
+        d["month"] = pd.to_datetime(d.t, unit="ms", utc=True).dt.strftime("%Y-%m")
+        g = d.groupby(["factor", "horizon_h", "month"], sort=True).agg(
+            days=("t", "size"), names=("names", "mean"), ic=("ic", "mean"), rank_ic=("rank_ic", "mean"),
+            ls=("ls", "mean")).reset_index()
+        for r in g.itertuples(index=False):
+            out.append({"key": f"{ids[lane]}|{r.factor}|{r.horizon_h}|{r.month}", "round": ids[lane],
+                        "factor": r.factor, "horizon_h": int(r.horizon_h), "month": r.month, "days": int(r.days),
+                        "names": round(float(r.names), 1), "ic": clean(round(r.ic, 6)),
+                        "rank_ic": clean(round(r.rank_ic, 6)), "ls": clean(round(r.ls, 8))})
+    return out
+
+
 def tearsheets(days, n_trials):
     """(tearsheets, equity, monthly) rows."""
     sheets, equity, monthly = [], [], []
@@ -85,7 +135,7 @@ def tearsheets(days, n_trials):
         ontime = sum(r["kind"] == "ontime" for r in rows)
         streams.append((sid, rows[0]["round"], f"{rows[0]['group']} · book {rows[0]['book']} (paper)", "forward paper",
                         s, f"{ontime} on-time of {len(rows)} days"))
-    for sid, rid, label, load in RESEARCH:
+    for sid, rid, label, load in RESEARCH + qx_streams():
         try:
             streams.append((sid, rid, label, "backtest", load(), "gate 0: in-sample and spent windows"))
         except (OSError, KeyError, ValueError):
