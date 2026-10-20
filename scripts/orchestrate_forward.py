@@ -71,7 +71,8 @@ def forward_tasks(python=".venv/bin/python"):
     point-in-time recorders read nothing from the lanes and run first; the
     digest reads only their files and runs last. R266 reads only the recorders'
     calendar snapshot and ticker files, so they are optional for it. R268 reads the
-    notice journal and ticker files the same way and runs right after them.
+    notice journal and ticker files the same way and runs right after them; so
+    does R270.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         return Task(name, (python, "scripts/" + script), needs, optional, timeout, files)
@@ -81,6 +82,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_NOTICES", "record_notices.py", timeout=300),
         task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
         task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
+        task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),

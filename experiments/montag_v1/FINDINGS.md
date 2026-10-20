@@ -95,7 +95,7 @@ after the notice, and covering an hour later, earned +0.61% per notice at 1x (t 
   - Forward notices are the only clean test.
 
 ## Next
-- **Forward lane (new id, frozen before its first ticket):** short the MEXC perp of each newly tagged coin at the
+- **Forward lane R270 `montag_fwd` (frozen before its first ticket, sha 2913cf21):** short the MEXC perp of each newly tagged coin at the
   first hourly open after the recorder sees the notice, and cover at +24 h. It is modelled on R268.
   - The notice recorder (`scripts/record_notices.py`) already journals the news catalog every hour with
     `first_seen_utc`.

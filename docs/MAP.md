@@ -419,6 +419,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     +24 h line also clears G1-G3. They are 2 of 6 variants, so a forward candidate, not a pass.
   - **It fades in 2026:** +1.31% over 11 clusters, and -0.92% over the last 5.
   - NULL. [Findings](../experiments/montag_v1/FINDINGS.md).
+- **R270 (montag_fwd)** runs R269's +24 h variant forward on MEXC paper.
+  - Tickets come from the notice recorder's `first_seen_utc` (from 2026-10-20 19:00 UTC), with R268's ticket rules.
+  - Short at the first hourly open after detection, and cover 24 hours later (+1 h logged).
+  - Decision at 12 scored notices (about a year). At 2026's level the expected t is under 1. RUNNING.
+    [PREREG](../experiments/montag_fwd/PREREG.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -524,6 +529,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,477,562 after R269 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,477,563 after R270 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
