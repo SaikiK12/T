@@ -1,0 +1,16 @@
+# Parity check: R269 montag_v1 rebuilt by qx. Must match experiments/montag_v1/results/verdict.json.
+name = "parity_r269"
+events = "experiments/montag_v1/legs.csv"
+filter = { kind = "tag", window = "archive", in_archive = "True" }
+venues = [{ name = "perp", col = "perp", klines = "klines_1h", funding = "fundingRate" }]
+horizons = [1, 24, 72]
+directions = ["short"]
+lines = ["net", "hedged"]
+costs = [0.004, 0.008, 0.012]
+hedge = "BTCUSDT"
+hedge_cost = 0.001
+min_clusters = 10
+reps = 2000
+seed = 269
+null_for = "all"
+out = "/tmp/claude-0/-home-user-T/a4c99094-0eba-54d5-9f6a-3abc85cabed2/scratchpad/parity_r269"
