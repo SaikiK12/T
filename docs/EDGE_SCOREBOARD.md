@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R244. Program trials: 9,471,953. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R245. Program trials: 9,471,957. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -61,6 +61,7 @@ overstatements are corrected here.
 | **Crypto time-series rules** (week-open bias, pre-FOMC drift, ETH/BTC regime, vol-managed trend; queue M013/M191/M009/M184) | Vol-managed trend +6.0 bp/day, t 2.07, beta -0.03 at 0.37 gross exposure; the other three t <= 0.54 (R242) | Not read; trend validation +2.0, t 0.52 | Trend costs 0.6 bp/day; week-open loses at 3x | Same coins on MEXC | none | NULL |
 | **Classic chart rules** (Supertrend+RSI, MACD, Stochastic, CCI, Bollinger, Ichimoku, pivots; 4 h and 1 d; queue M005/M200/M202/M203) | All 14 fail discovery; best Supertrend+RSI 1d +11.3 bp/day, t 1.23; fades and pivot breaks lose (R243) | Not read | 4 h trend rules lose to 6-9 bp/day cost | Same coins on MEXC | none | NULL |
 | **BTC weekend move to US equities** (queue M198) | Correlation +0.46 with the QQQ opening gap (priced), +0.07 with the session; rule t -0.14 (R244) | Not read | 2 bp per trade | ETFs, not MEXC | none | NULL |
+| **Reversal by liquidity tercile** (1 d and 7 d; queue M008/M181) | 1 d books -13.6 to -17.5 bp/day (cost 9-12); 7 d illiquid 0.0, liquid -6.2 (R245) | Not read | A 24 h hold costs more than any gross | Same coins on MEXC | none | NULL |
 | **Variance risk premium, S&P 500** (measurement; queue M215) | VIX² minus next-month realised variance: +116 %², t 2.55; validation +70, t 5.71 (R239) | Holdout +82, t 1.11 (2020 loss) | Not tradeable with free data before 2011 | not on MEXC | none | Measured, not a book; short-vol lane M224 |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |

@@ -278,6 +278,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
 - **R244 (weekendlink_v1)** asked whether BTC's weekend move sets the direction of QQQ/SPY for the week's first
   session. It goes with the opening gap (correlation +0.46), which is already priced, but not with the session after
   the open (+0.07). Trading it lost slightly. NULL. [Findings](../experiments/weekendlink_v1/FINDINGS.md).
+- **R245 (xsrev_v1)** tested short-term reversal inside the liquid and illiquid thirds of the top 50.
+  - The 1-day books lost 13-17 bp/day, mostly to 9-12 bp/day of cost.
+  - At 7 days the literature's pattern appears (illiquid coins reverse a little, liquid ones continue), too weakly to
+    trade.
+  - NULL. [Findings](../experiments/xsrev_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -383,6 +388,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,953 after R244 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,957 after R245 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
