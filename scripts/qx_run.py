@@ -21,6 +21,7 @@ usage: python scripts/qx_run.py experiments/<lane> [--register]
 import argparse
 import hashlib
 import json
+import math
 import os
 import re
 import shlex
@@ -161,31 +162,56 @@ def spread_summary(rep, rid, psha):
 
 def factor_passes(rep):
     """Factors with a horizon past the reality check whose daily (h = step) book, in the direction of its rank IC, is
-    positive at 1x and 2x cost: s x LS - 2 x m x cost x (top + bottom turnover) > 0 for m = 1, 2."""
-    step, c = rep["spec"]["step_h"], rep["spec"]["cost"] * 1e4
+    positive at 1x and 2x cost. The engine's daily gross/net means use the same valid Cross dates, so their difference
+    recovers every paid charge, including initial entry. Turnover means omit that first date and cannot recover it.
+    Reversing the factor swaps top and bottom: gross changes sign, while the symmetric paid cost stays positive.
+    Missing or invalid costed evidence aborts the decision instead of falling back to turnover or registering a null.
+    """
+    step = rep["spec"]["step_h"]
     out = {}
     for f in sorted({r["factor"] for r in rep["results"] if r["rc_pass"]}):
         d = next((r for r in rep["results"] if r["factor"] == f and r["horizon_h"] == step), None)
-        if d is None or d["rank_ic"] is None or d["ls_bp"] is None:
+        if d is None:
+            raise ValueError(f"factor {f}: daily costed book is unavailable")
+        for field in ("rank_ic", "ls_bp", "ls_net_bp"):
+            v = d.get(field)
+            if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v):
+                raise ValueError(f"factor {f}: daily {field} is unavailable or nonfinite")
+        if d["rank_ic"] == 0:
             continue
         s = 1.0 if d["rank_ic"] > 0 else -1.0
-        nets = [s * d["ls_bp"] - 2 * m * c * (d["turnover_top"] + d["turnover_bottom"]) for m in (1, 2)]
+        paid = d["ls_bp"] - d["ls_net_bp"]
+        if not math.isfinite(paid) or paid < -1e-9:
+            raise ValueError(f"factor {f}: recovered daily paid cost is invalid")
+        paid = max(paid, 0.0)              # permit only subtraction round-off below 1e-9 bp
+        nets = [s * d["ls_bp"] - m * paid for m in (1, 2, 3)]
+        if not all(math.isfinite(x) for x in nets):
+            raise ValueError(f"factor {f}: signed daily net is nonfinite")
         out[f] = {"direction": "long top" if s > 0 else "long bottom", "net_1x_bp_day": nets[0],
-                  "net_2x_bp_day": nets[1], "pass": all(x > 0 for x in nets)}
+                  "net_2x_bp_day": nets[1], "net_3x_bp_day": nets[2], "paid_cost_bp_day": paid,
+                  "pass": all(x > 0 for x in nets[:2])}
     return out
 
 
-def factor_summary(rep, rid, psha):
+def factor_decision(rep):
     fp = factor_passes(rep)
+    return ("PARTIAL" if any(v["pass"] for v in fp.values()) else "NULL"), fp
+
+
+def factor_summary(rep, rid, psha, *, decision=None):
+    verdict, fp = factor_decision(rep) if decision is None else decision
     passed = [f for f, v in fp.items() if v["pass"]]
-    lines = [f"# {rep['name']} ({rid}): {'PARTIAL' if passed else 'NULL'}", "",
+    lines = [f"# {rep['name']} ({rid}): {verdict}", "",
              f"- **Family:** {rep['trials']} factor x horizon series over {rep['dates']} dates and {rep['coins']} coins.",
              f"- **Reality check:** max |t| of rank IC, blocks of {rep['block']} dates; null 95th percentile "
              f"{rep['rc_null_p95']:.2f}.",
              f"- **Reality check survivors (p_RC < {rep['spec']['alpha']}):** {', '.join(rep['survivors']) or 'none'}.",
              f"- **Pass (RC and a positive daily book at 1x and 2x):** {', '.join(passed) or 'none'}.",
-             *[f"  - {f}: {v['direction']}, net {v['net_1x_bp_day']:+.1f} / {v['net_2x_bp_day']:+.1f} bp/day at 1x / 2x"
+             *[f"  - {f}: {v['direction']}, net {v['net_1x_bp_day']:+.1f} / {v['net_2x_bp_day']:+.1f} / "
+               f"{v['net_3x_bp_day']:+.1f} bp/day at 1x / 2x / 3x"
                for f, v in fp.items()],
+             "- **Daily paid costs:** engine gross minus net on the same dates, including initial entry; multiplied "
+             "in full at 1x / 2x / 3x.",
              f"- **Prereg sha:** {psha[:12]}. Cost {rep['spec']['cost'] * 1e4:.0f} bp per side.", "",
              "| Factor | h | Dates | Names | IC | Rank IC | t | IR | IC > 0 | Quantile means bp | LS bp | LS t | "
              "Turnover top / bottom | Net %/yr | RC p |", "|" + "---|" * 15]
@@ -220,17 +246,22 @@ def main():
                        env={**os.environ, "QX_DATA": str(ROOT / "data")})
     rep = json.loads((out / "report.json").read_text())
     rid = re.search(r"Registry id:\*?\*?\s*(R\d+)", text).group(1)
-    (out / "SUMMARY.md").write_text({"spread": spread_summary, "factors": factor_summary}.get(kind, summary)(rep, rid, psha))
-    log(f"{rid} {rep['verdict']}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
+    decision = factor_decision(rep) if kind == "factors" else None
+    result = (factor_summary(rep, rid, psha, decision=decision) if kind == "factors"
+              else {"spread": spread_summary}.get(kind, summary)(rep, rid, psha))
+    (out / "SUMMARY.md").write_text(result)
+    run_verdict = decision[0] if decision is not None else rep["verdict"]
+    log(f"{rid} {run_verdict}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
         best = (rep.get("strategies") or rep.get("results"))[0]
         if kind == "factors":
-            passed = [f for f, v in factor_passes(rep).items() if v["pass"]]
-            verdict = "PARTIAL" if passed else "NULL"
+            verdict, fp = decision
+            passed = [f for f, v in fp.items() if v["pass"]]
             note = (f"qx factor report; {rep['trials']} factor x horizon series; RC survivors {rep['survivors'] or 'none'}; "
                     f"pass {passed or 'none'}; "
-                    f"best {best['factor']} {best['horizon_h']}h rank IC {best['rank_ic']:+.4f} t {best['rank_ic_t']:.2f} "
+                    f"best {best['factor']} {best['horizon_h']}h rank IC {fmt(best['rank_ic'], 4)} "
+                    f"t {fmt(best['rank_ic_t'], 2, False)} "
                     f"RC p {best['p_rc']:.3f}")
             best = {"label": f"{best['factor']} {best['horizon_h']}h"}
         elif kind == "spread":
