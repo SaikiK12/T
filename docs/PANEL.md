@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 00:55 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 01:02 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.
 
@@ -13,8 +13,8 @@ Ideas → frozen test → result → forward paper → go_real → owner places 
 | Ideas in the queue, untested | - |
 | Ideas partly tested | - |
 | Ideas blocked (data, download, compute) | - |
-| Rounds in the registry | 54 (NULL 31, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,889 |
+| Rounds in the registry | 55 (NULL 32, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,893 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed go_real | none yet |
@@ -50,7 +50,6 @@ Processing lag of on-time hours: 0 hours, median - min, max - min; days with lat
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R224 | mexc_costs | RUNNING | PENDING | 0 |
 | R225 | vt_fwd | RUNNING | PENDING | 3 |
 | R226 | tradesize_v1 | DONE | NULL | 6 |
 | R228 | allocation_v1 | DONE | NULL | 30 |
@@ -58,5 +57,6 @@ Processing lag of on-time hours: 0 hours, median - min, max - min; days with lat
 | R230 | weekly_rotation_v1 | DONE | NULL | 96 |
 | R231 | partial_execution_v1 | DONE | NULL | 2 |
 | R232 | rebalancing_v1 | DONE | NULL | 3 |
+| R233 | regime_v1 | DONE | NULL | 4 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

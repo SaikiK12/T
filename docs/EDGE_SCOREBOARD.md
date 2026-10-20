@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R232. Program trials: 9,471,889. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R233. Program trials: 9,471,893. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -47,6 +47,7 @@ overstatements are corrected here.
 | **Slow spot trend ensemble, six major coins** (Codex) | Validation Sharpe 1.261 vs 1.227 risk-matched passive (needs +0.15); drawdown 9.7% vs 7.2% (R229) | Already viewed, descriptive only: -0.51 bp/day | Validation positive at 2x | Spot only | none | NULL: fails risk-matched passive Sharpe and drawdown |
 | **Weekly spot rotation, 96 rules** (Codex) | Selected 28 d momentum top 3 with BTC gate; validation Sharpe 0.83 vs 1.11 passive, family p = 1 (R230) | Already viewed, descriptive only: also loses | 2x mean +13.4 bp/day, market exposure | Spot only | none | NULL |
 | **Execution and rebalancing of six-coin spot books** (Codex) | R231: half-step toward the R229 target, validation Sharpe 1.246 vs 1.261. R232: monthly equal-weight reset, validation Sharpe 1.053 vs 0.965 buy-and-hold (needs +0.15), paired interval spans zero | Already viewed, descriptive only | R231 saves 30% of cost but loses more gross | Spot only | none | NULL |
+| **Regime gate on the flow books** (MacroHFT: trend x volatility sub-agents and a mixing hyper-agent) | No gate selected: A, B and X2 positive at 2x in all 4 regimes. Mix: validation Sharpe 1.80 vs 1.68 for X2 (bar +0.15) (R233) | Not read | Mix trails X2 by 0.7-1.5 bp/day at 2x-3x | Same books as R215/R218 | none | NULL |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 

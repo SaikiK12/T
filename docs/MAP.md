@@ -212,6 +212,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   Discovery selects monthly; validation paired gain +0.965 bp/day, interval [-2.350,+4.764], Sharpe gain +0.088
   below +0.15. NULL. [Findings](../experiments/rebalancing_v1/FINDINGS.md). The source's full-universe long/short
   construction remains untested; monthly's previous use as R229's comparator is disclosed.
+- **R233 (regime_v1)** tested MacroHFT's idea on the flow books: trade them only in some trend x volatility
+  regimes, or switch book by regime. No gate was selected, because A, B and X2 each earned at 2x costs in all four
+  regimes in discovery. The regime-wise mix raised validation Sharpe by 0.12 against X2 (bar 0.15), and trailed it at
+  2x-3x. NULL. Described, not tested: B (top-vs-crowd) earns almost only in falling low-volatility markets (t 3.68).
+  [Findings](../experiments/regime_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -317,6 +322,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,889 after R232 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,893 after R233 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
