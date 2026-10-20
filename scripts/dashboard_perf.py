@@ -152,7 +152,12 @@ def coverage():
         except (OSError, ValueError):
             continue
         hourly = prov.get("hourly_coverage") or {}
-        for sub, s in (prov.get("subfolders") or {}).items():
+        subs = dict(prov.get("subfolders") or {})
+        for sub in hourly:                                   # nested hourly folders (gate_hist/open/candlesticks_1h)
+            if "/" in sub and sub not in subs:
+                hit = [r["bytes"] for r in prov.get("file_hashes") or [] if r["path"].startswith(sub + "/")]
+                subs[sub] = {"files": len(hit), "bytes": sum(hit)}
+        for sub, s in subs.items():
             h = hourly.get(sub) or (hourly.get("") if sub == "." else None) or {}
             out.append({"key": p.stem if sub == "." else f"{p.stem}/{sub}", "folder": p.stem, "subfolder": sub, "files": s.get("files"),
                         "gb": round(s.get("bytes", 0) / 1e9, 3),

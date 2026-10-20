@@ -144,7 +144,7 @@ impl Source {
     }
 }
 
-fn read_cols(path: &Path, names: &[&str]) -> Result<Vec<Vec<f64>>> {
+pub(crate) fn read_cols(path: &Path, names: &[&str]) -> Result<Vec<Vec<f64>>> {
     let file = File::open(path).with_context(|| format!("open {}", path.display()))?;
     let b = ParquetRecordBatchReaderBuilder::try_new(file)?;
     let schema = b.schema().clone();

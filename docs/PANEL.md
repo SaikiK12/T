@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 21:19 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 22:08 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 29 |
+| Ideas in the queue, untested | 28 |
 | Ideas partly tested | 36 |
 | Ideas blocked (data, download, compute) | 72 |
-| Rounds in the registry | 91 (NULL 61, PENDING 15, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
-| Program trials | 9,477,669 |
+| Rounds in the registry | 92 (NULL 62, PENDING 15, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
+| Program trials | 9,477,741 |
 | Forward paper lanes running | 12 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -78,7 +78,6 @@ Processing lag of on-time hours: 21 hours, median 79.88333333333334 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R267 | delist_v1 | DONE | NULL | 8 |
 | R268 | delist_fwd | RUNNING | PENDING | 1 |
 | R263 | brute5k_v1 | DONE | NULL | 5475 |
 | R269 | montag_v1 | DONE | NULL | 6 |
@@ -86,5 +85,6 @@ Processing lag of on-time hours: 21 hours, median 79.88333333333334 min, max 259
 | R271 | announce_v1 | DONE | NULL | 64 |
 | R273 | fundext_v1 | DONE | NULL | 40 |
 | R272 | announce_fwd | RUNNING | PENDING | 2 |
+| R274 | squeeze_v1 | DONE | NULL | 72 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

@@ -11,9 +11,10 @@ A lane is a folder experiments/<lane>/ with:
       ```
 - spec.toml, the qx spec (its hash is one of the inputs).
 
-Steps: prereg.verify -> input hashes -> optional byte-for-byte rebuild -> `qx events spec.toml` -> results/report.json,
-strategies.csv, legs_priced.csv -> results/SUMMARY.md (1x/2x/3x, reality check, null, survivors) -> with --register,
-the registry row (trials = the family's strategy count, verdict PARTIAL if any strategy passes gate 0, else NULL).
+Steps: prereg.verify -> input hashes -> optional byte-for-byte rebuild -> `qx events spec.toml` (or `qx spread` when the
+spec has venue `sets`) -> results/report.json and the tables -> results/SUMMARY.md (1x/2x/3x, reality check, null,
+survivors) -> with --register, the registry row (trials = the family's strategy count, verdict PARTIAL if any strategy
+passes gate 0, else NULL).
 
 usage: python scripts/qx_run.py experiments/<lane> [--register]
 """
@@ -27,6 +28,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,6 +122,43 @@ def summary(rep, rid, psha):
     return "\n".join(lines) + "\n"
 
 
+def spread_summary(rep, rid, psha):
+    S = rep["strategies"]
+    c = rep["spec"]["costs"]
+    lines = [f"# {rep['name']} ({rid}): {rep['verdict']}", "",
+             f"- **Family:** {rep['trials']} books; {rep['coins']} coins on 2+ venues ("
+             + ", ".join(f"{k} {v}" for k, v in rep["coins_by_venue"].items()) + ").",
+             f"- **Reality check:** the family's max-t null (blocks of {rep['spec']['block_days']} days) has its 95th "
+             f"percentile at {rep['rc_null_p95']:.2f}.",
+             f"- **Survivors (all gates):** {', '.join(rep['survivors']) or 'none'}.",
+             f"- **Prereg sha:** {psha[:12]}. Costs {', '.join(f'{x * 1e4:.0f}' for x in c)} bp per leg per side at "
+             f"1x/2x/3x; hurdle {rep['spec']['hurdle_ann_pct']}%/yr.", "",
+             "## Venue sets", "", "| Set | Lookback | From | Coins ever eligible | Mean coins per day at or above threshold |",
+             "|---|---|---|---|---|"]
+    for x in rep["sets"]:
+        lines.append(f"| {x['set']} | {x['lookback']} d | {x['window_from']} | {x['coins_ever']} | "
+                     + ", ".join(f">={float(k) * 100:.0f}%: {v:.1f}" for k, v in x["mean_candidates"].items()) + " |")
+    lines += ["", "## Top 15 by t (1x)", "",
+              "| Book | From | 1x %/yr | 2x | 3x | Sharpe | t | NW t | RC p | Halves bp/day | 2025+ bp/day | Trimmed | Max DD | "
+              "Funding share | Held | Trades | Pass |", "|" + "---|" * 17]
+    for r in S[:15]:
+        s = r["stats"]
+        lines.append(f"| {r['label']} | {r['window_from']} | {fmt(s[0]['ann_pct'])} | {fmt(s[1]['ann_pct'])} | "
+                     f"{fmt(s[2]['ann_pct'])} | {fmt(s[0]['sharpe'])} | {fmt(s[0]['t'])} | {fmt(s[0]['t_nw'])} | "
+                     f"{r['p_rc']:.4f} | {fmt(s[0]['half1_bp'])} / {fmt(s[0]['half2_bp'])} | {fmt(s[0]['recent_bp'])} | "
+                     f"{fmt(s[0]['trimmed_bp'])} | {fmt(s[0]['max_dd_pct'], 1)}% | {fmt(r['funding_share'], 2, False)} | "
+                     f"{fmt(r['avg_held'], 1, False)} | {r['trades']} | {'**yes**' if r['pass'] else 'no'} |")
+    lines += ["", "## Bottom 5 by t (1x)", ""]
+    for r in S[-5:]:
+        s = r["stats"][0]
+        lines.append(f"- {r['label']}: {fmt(s['ann_pct'])}%/yr, t {fmt(s['t'])}")
+    near = [r for r in S if r["gates"].get("RC")]
+    if near:
+        lines += ["", "## Books that clear the reality check", ""]
+        lines += [f"- **{r['label']}**: gates {r['gates']}" for r in near]
+    return "\n".join(lines) + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("lane")
@@ -135,22 +174,30 @@ def main():
         subprocess.run(["cargo", "build", "--release", "--manifest-path", str(ROOT / "engine" / "Cargo.toml")], check=True)
     out = lane / "results"
     out.mkdir(exist_ok=True)
+    kind = "spread" if "sets" in tomllib.loads((lane / "spec.toml").read_text()) else "events"
     with open(lane / "run.log", "a") as f:
-        subprocess.run([str(QX), "events", str(lane / "spec.toml")], cwd=ROOT, check=True, stderr=f,
+        subprocess.run([str(QX), kind, str(lane / "spec.toml")], cwd=ROOT, check=True, stderr=f,
                        env={**os.environ, "QX_DATA": str(ROOT / "data")})
     rep = json.loads((out / "report.json").read_text())
     rid = re.search(r"Registry id:\*?\*?\s*(R\d+)", text).group(1)
-    (out / "SUMMARY.md").write_text(summary(rep, rid, psha))
+    (out / "SUMMARY.md").write_text((spread_summary if kind == "spread" else summary)(rep, rid, psha))
     log(f"{rid} {rep['verdict']}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
         best = rep["strategies"][0]
+        if kind == "spread":
+            b = best["stats"]
+            note = (f"qx spread family; survivors {rep['survivors'] or 'none'}; best {best['label']} "
+                    f"{b[0]['ann_pct']:+.2f}%/yr t {b[0]['t']:.2f} NW {b[0]['t_nw']:.2f} RC p {best['p_rc']:.3f}; "
+                    f"1x/2x/3x {b[0]['ann_pct']:+.2f}/{b[1]['ann_pct']:+.2f}/{b[2]['ann_pct']:+.2f}%/yr")
+        else:
+            note = (f"qx family; survivors {rep['survivors'] or 'none'}; best {best['label']} "
+                    f"{best['stats'][0]['mean_pct']:+.2f}% t {best['stats'][0]['t']:.2f} RC p {best['p_rc']:.3f}")
         registry.append(str(ROOT / "registry" / "rounds.csv"), id=rid, date=time.strftime("%Y-%m-%d"),
                         lane=lane.name, title=re.search(r"^# PREREG: \S+ \(R\d+\)\. (.+)$", text, re.M).group(1),
                         status="DONE", verdict=verdict, trials=rep["trials"], prereg_sha=psha,
                         path=str(lane.relative_to(ROOT)),
-                        notes=f"qx family; survivors {rep['survivors'] or 'none'}; best {best['label']} "
-                              f"{best['stats'][0]['mean_pct']:+.2f}% t {best['stats'][0]['t']:.2f} RC p {best['p_rc']:.3f}")
+                        notes=note)
         log(f"registered {rid} {verdict}, {rep['trials']} trials; program {registry.program_trials(str(ROOT / 'registry' / 'rounds.csv')):,}")
 
 
