@@ -1,6 +1,7 @@
 """Control-room exporter semantics on synthetic journals only; no network or market-cache reads."""
 import csv
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -78,6 +79,70 @@ class DashboardData(unittest.TestCase):
 
     def test_checkout_without_local_market_cache_exports_empty_inventory(self):
         self.assertEqual(dashboard.data_sources(), [])
+
+    def test_inventory_labels_unknowns_and_does_not_invent_archive_or_freshness(self):
+        for name in ("mexc", "mexc_hist", "mystery"):
+            (self.root / "data" / name).mkdir(parents=True)
+        p = self.root / "data/mexc_hist/candles"
+        p.write_bytes(b"synthetic")
+        rows = {r["source"]: r for r in dashboard.data_sources()}
+        self.assertEqual(rows["mystery"]["category"], "Unclassified data")
+        self.assertIsNone(rows["mystery"]["stale"])
+        self.assertIsNone(rows["mexc"]["stale"])
+        self.assertIsNone(rows["mexc_hist"]["stale"])
+        self.assertEqual(rows["mexc_hist"]["files"], 1)
+        self.assertIn("unverified", rows["mexc_hist"]["freshness_basis"])
+
+    def test_inventory_excludes_file_directory_and_top_level_links(self):
+        outside = self.root / "outside"
+        outside.mkdir()
+        (outside / "not-dataset").write_bytes(b"do not include")
+        source = self.root / "data/mexc"
+        source.mkdir(parents=True)
+        (source / "normal").write_bytes(b"toy")
+        (source / "file-link").symlink_to(outside / "not-dataset")
+        (source / "dir-link").symlink_to(outside, target_is_directory=True)
+        (self.root / "data/external-link").symlink_to(outside, target_is_directory=True)
+        rows = {r["source"]: r for r in dashboard.data_sources()}
+        self.assertEqual(rows["mexc"]["files"], 1)
+        self.assertEqual(rows["mexc"]["skipped_links"], 2)
+        self.assertEqual(rows["mexc"]["inventory_state"], "PARTIAL")
+        self.assertIsNone(rows["mexc"]["stale"])
+        self.assertEqual(rows["external-link"]["files"], 0)
+        self.assertEqual(rows["external-link"]["skipped_links"], 1)
+
+    def test_inventory_survives_a_file_disappearing_during_scan(self):
+        source = self.root / "data/mexc"
+        source.mkdir(parents=True)
+        (source / "present").write_bytes(b"toy")
+        (source / "vanishing").write_bytes(b"toy")
+        original = Path.lstat
+
+        def disappearing(path, *args, **kwargs):
+            if path.name == "vanishing":
+                raise FileNotFoundError("synthetic concurrent replacement")
+            return original(path, *args, **kwargs)
+
+        with patch.object(Path, "lstat", disappearing):
+            row = dashboard.data_sources()[0]
+        self.assertEqual(row["files"], 1)
+        self.assertEqual(row["scan_errors"], 1)
+        self.assertEqual(row["inventory_state"], "PARTIAL")
+        self.assertIsNone(row["stale"])
+
+    def test_inventory_activity_threshold_and_future_clock_are_not_coverage(self):
+        source = self.root / "data/mexc"
+        source.mkdir(parents=True)
+        p = source / "toy"
+        p.write_bytes(b"fixture")
+        os.utime(p, (0, 0))
+        with patch.object(dashboard, "NOW", 10_000):
+            row = dashboard.data_sources()[0]
+        self.assertTrue(row["stale"])
+        os.utime(p, (20_000, 20_000))
+        row = dashboard.data_sources()[0]
+        self.assertLess(row["age_h"], 0)
+        self.assertIsNone(row["stale"])
 
     def test_volatility_target_uses_365_day_frozen_decision(self):
         lane = self.lane("vt_fwd")

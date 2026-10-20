@@ -293,17 +293,25 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
       </div>
       <div class="qx-card wide" id="card-data">
         <h2>Data sources</h2>
-        <p class="qx-note">Each folder under data/: size, newest file and whether a provenance note exists. Live recorders are stale after two hours.</p>
+        <p class="qx-note">Folder metadata grouped by purpose. File activity does not prove recent market observations or complete history. Partial scans exclude unreadable entries and symbolic links; provenance means a note exists, not that its contents were verified.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search datasets or folder names" aria-label="Search data sources" data-for="tbl-data">
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="category" aria-label="Data category"><option value="">All data categories</option></select>
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="inventory_state" aria-label="Inventory state"><option value="">All scan states</option></select>
+        </div>
         <div class="qx-tablebox">
           <table class="qx-t" id="tbl-data" data-source="data_sources" data-row-key="source">
             <thead><tr>
-              <th data-field="source"><button>Source</button></th>
-              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="display_name"><button>Dataset</button></th>
+              <th data-field="category" class="opt"><button>Category</button></th>
               <th data-field="files" class="n"><button>Files</button></th>
               <th data-field="size_gb" class="n"><button>Size</button></th>
-              <th data-field="age_h" class="n"><button>Newest file</button></th>
-              <th data-field="stale"><button>Stale</button></th>
-              <th data-field="provenance" class="opt"><button>Provenance</button></th>
+              <th data-field="age_h" class="n"><button>File activity age</button></th>
+              <th data-field="stale"><button>File activity overdue</button></th>
+              <th data-field="inventory_state"><button>Scan state</button></th>
+              <th data-field="skipped_links" class="n opt"><button>Links excluded</button></th>
+              <th data-field="scan_errors" class="n opt"><button>Scan errors</button></th>
+              <th data-field="provenance" class="opt"><button>Provenance note</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
@@ -375,10 +383,10 @@ const F = {
   p: (v) => (v == null ? '' : v < 0.001 ? '< 0.001' : d3.format('.3f')(v)),
   day: (v) => (v ? d3.utcFormat('%b %-d, %Y')(new Date(v)) : ''),
   dt: (v) => (v ? d3.utcFormat('%b %-d, %H:%M')(new Date(v)) : ''),
-  hours: (v) => (v == null ? '' : v < 1 ? Math.round(v * 60) + ' min ago' : v < 48 ? d3.format('.1f')(v) + ' h ago' : d3.format('.0f')(v / 24) + ' d ago'),
+  hours: (v) => (v == null ? '' : v < 0 ? 'clock ahead' : v < 1 ? Math.round(v * 60) + ' min ago' : v < 48 ? d3.format('.1f')(v) + ' h ago' : d3.format('.0f')(v / 24) + ' d ago'),
   gb: (v) => (v == null ? '' : d3.format(',.1f')(v) + ' GB'),
   size: (v) => (v == null ? '' : v < 1 ? d3.format(',.0f')(v * 1000) + ' MB' : d3.format(',.2f')(v) + ' GB'),
-  yes: (v) => (v ? 'yes' : 'no'),
+  yes: (v) => (v == null ? 'unknown' : v ? 'yes' : 'no'),
 };
 const ok = (id) => dash.data(id).status === 'ok';
 const rowsOf = (id) => (ok(id) ? dash.data(id).data || [] : []);
@@ -533,8 +541,12 @@ table('tbl-jobs', 'jobs', 'key', [
   { f: 'age_h', fmt: F.hours, num: true }, { f: 'status_source' }, { f: 'returncode', fmt: F.int, num: true },
   { f: 'log_path' }, { f: 'note' }]);
 table('tbl-data', 'data_sources', 'source', [
-  { f: 'source' }, { f: 'kind' }, { f: 'files', fmt: F.int, num: true }, { f: 'size_gb', fmt: F.size, num: true },
-  { f: 'age_h', fmt: F.hours, num: true }, { f: 'stale', fmt: F.yes, dot: (v) => (v ? 'bad' : null) }, { f: 'provenance', fmt: F.yes }]);
+  { f: 'display_name', secondary: 'source' }, { f: 'category' }, { f: 'files', fmt: F.int, num: true },
+  { f: 'size_gb', fmt: F.size, num: true }, { f: 'age_h', fmt: F.hours, num: true },
+  { f: 'stale', fmt: F.yes, dot: (v) => (v === true ? 'warn' : null) },
+  { f: 'inventory_state', dot: (v) => (v === 'PARTIAL' ? 'warn' : null) },
+  { f: 'skipped_links', fmt: F.int, num: true }, { f: 'scan_errors', fmt: F.int, num: true },
+  { f: 'provenance', fmt: F.yes }]);
 
 // charts
 function svgIn(el, W, H) {

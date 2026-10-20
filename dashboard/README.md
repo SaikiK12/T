@@ -16,6 +16,13 @@ starts the orchestrator. Current legacy logs appear as `UNKNOWN` even when recen
 requires recorded exit code zero; staleness is separate, and neither certifies complete or on-time observations.
 No process command lines, environment values or raw log contents are exported.
 
+The data inventory uses readable dataset labels and purpose/scan-state filters, retaining original folder names.
+Unknown folders remain unclassified. Symbolic links are excluded and scan errors produce partial counts rather
+than aborting on a concurrently replaced file. File modification time is activity metadata only: it does not
+certify observation timestamps, complete history or valid provenance. Empty/partial inventories and future clocks
+have unknown activity freshness; historical datasets have no live-activity deadline. A provenance flag means a
+note exists, not that its claims were checked.
+
 The live shell is unchanged. In particular, adopting the orchestrator for execution needs its own compatibility
 review of the notice lock shared with the five-minute notice loop. Do not infer that the optional report reader
 deploys or changes the scheduler.

@@ -25,7 +25,15 @@ class DashboardView(unittest.TestCase):
             "methods": [dict(id="M001", method="Positioning impulse", status="BLOCKED", data_held="P",
                              note="Missing publication timestamps", source="primary source"),
                         dict(id="M002", method="Reversal control", status="UNTESTED", data_held="Y")],
-            "forward_lanes": [], "rounds": [], "data_sources": [], "candidates": [], "event_tickets": []}
+            "data_sources": [dict(source="mexc", display_name="MEXC forward-data cache",
+                                  category="Prospective collection", inventory_state="PARTIAL",
+                                  files=1, size_gb=0, age_h=1, stale=None, skipped_links=1,
+                                  scan_errors=0, provenance=False),
+                             dict(source="mexc_hist", display_name="MEXC historical futures",
+                                  category="Historical market data", inventory_state="COMPLETE",
+                                  files=2, size_gb=0, age_h=1, stale=None, skipped_links=0,
+                                  scan_errors=0, provenance=True)],
+            "forward_lanes": [], "rounds": [], "candidates": [], "event_tickets": []}
         harness = """<script>
         const fixture = DATA;
         window.calcFns = {};
@@ -59,6 +67,13 @@ class DashboardView(unittest.TestCase):
             page.get_by_label("Search methods", exact=True).fill("publication")
             self.assertEqual(page.locator("#tbl-methods tbody tr").count(), 1)
             self.assertIn("Missing publication timestamps", page.locator("#tbl-methods tbody").inner_text())
+            page.get_by_role("tab", name="Data and loop").click()
+            self.assertEqual(page.locator("#tbl-data tbody tr").count(), 2)
+            page.get_by_label("Data category", exact=True).select_option("Prospective collection")
+            page.get_by_label("Inventory state", exact=True).select_option("PARTIAL")
+            self.assertEqual(page.locator("#tbl-data tbody tr").count(), 1)
+            self.assertIn("unknown", page.locator("#tbl-data tbody").inner_text())
+            self.assertIn("mexc", page.locator("#tbl-data tbody").inner_text())
             result = page.evaluate("""() => calcFns.cum_paper([
               {series:'A',day:'2026-01-01',net:0.01},
               {series:'A',day:'2026-01-02',net:null},

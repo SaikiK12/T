@@ -21,6 +21,7 @@ import math
 import os
 import re
 import shutil
+import stat
 import time
 from pathlib import Path
 
@@ -268,23 +269,62 @@ def methods():
 
 
 def data_sources():
+    """Metadata inventory only: never follow links or infer market coverage from file activity."""
     prov = {p.stem for p in (ROOT / "docs" / "provenance").glob("*.json")}
     fresh_h = {"live": 2, "recorders": 2, "mexc": 2, "logs": 2, "hyperliquid": 26}
+    labels = {
+        "mexc": ("MEXC forward-data cache", "Prospective collection"),
+        "mexc_hist": ("MEXC historical futures", "Historical market data"),
+        "recorders": ("Point-in-time exchange and event snapshots", "Prospective collection"),
+        "live": ("Live market observations", "Prospective collection"),
+        "logs": ("Collector and scheduler logs", "Operational logs"),
+        "hyperliquid": ("Hyperliquid observations", "Prospective collection"),
+        "klines_1h": ("Binance hourly perpetual candles", "Historical market data"),
+        "fundingRate": ("Binance settled funding", "Historical market data"),
+        "metrics_1h": ("Binance hourly positioning metrics", "Historical market data"),
+        "spot_1h": ("Hourly spot candles", "Historical market data"),
+        "coinm_1h": ("Coin-margined futures candles", "Historical market data"),
+        "unlocks": ("Token unlock calendars", "Event data"),
+    }
+    base = ROOT / "data"
+    if base.is_symlink() or not base.is_dir():
+        return []
     out = []
-    for d in sorted((ROOT / "data").iterdir()) if (ROOT / "data").is_dir() else []:
-        if not d.is_dir():
+    for d in sorted(base.iterdir()):
+        if not d.is_symlink() and not d.is_dir():
             continue
-        n = size = newest = 0
-        for dp, _, fn in os.walk(d):
-            for f in fn:
-                st = os.stat(os.path.join(dp, f))
-                n, size, newest = n + 1, size + st.st_size, max(newest, st.st_mtime)
-        age = round((NOW - newest) / 3600, 1) if newest else None
+        n = size = skipped = 0
+        newest = None
+        errors = []
+        if d.is_symlink():
+            skipped = 1
+        else:
+            for dp, directories, files in os.walk(d, onerror=errors.append, followlinks=False):
+                links = [name for name in directories if (Path(dp) / name).is_symlink()]
+                skipped += len(links)
+                directories[:] = [name for name in directories if name not in links]
+                for name in files:
+                    try:
+                        st = (Path(dp) / name).lstat()
+                        if stat.S_ISLNK(st.st_mode):
+                            skipped += 1
+                        elif stat.S_ISREG(st.st_mode):
+                            n, size = n + 1, size + st.st_size
+                            newest = st.st_mtime if newest is None else max(newest, st.st_mtime)
+                    except OSError as error:  # A downloader can replace/remove a file during inventory.
+                        errors.append(error)
+        age = round((NOW - newest) / 3600, 2) if newest is not None else None
         limit = fresh_h.get(d.name)
-        out.append({"source": d.name, "files": n, "size_gb": round(size / 1e9, 3),
-                    "newest_at": ISO(newest) if newest else None,
-                    "age_h": age, "kind": "recorded live" if limit else "archive download",
-                    "stale": bool(limit and age is not None and age > limit), "provenance": d.name in prov})
+        complete = not errors and not skipped
+        stale = age > limit if complete and limit and age is not None and age >= 0 else None
+        label, category = labels.get(d.name, (d.name, "Unclassified data"))
+        out.append({"source": d.name, "display_name": label, "category": category,
+                    "files": n, "size_gb": round(size / 1e9, 3),
+                    "newest_at": ISO(newest) if newest is not None else None,
+                    "age_h": age, "kind": category, "stale": stale, "provenance": d.name in prov,
+                    "inventory_state": "COMPLETE" if complete else "PARTIAL",
+                    "scan_errors": len(errors), "skipped_links": skipped,
+                    "freshness_basis": "filesystem modification time only; market coverage unverified"})
     return out
 
 
