@@ -12,6 +12,9 @@ Each run gets a new directory, process logs and an atomic status.json. Reusing
 an ID is refused, including after failure or interruption; inspect the old run
 and use a new ID for a new attempt. The legacy .forward.lock is shared. Existing
 runners and their journals retain their own semantics and idempotency rules.
+Unlike forward_all.sh, an upstream failure blocks mandatory descendants instead
+of running every remaining command. Independent branches still run. The default
+interpreter is the repository's .venv/bin/python; there is no system fallback.
 
 SUCCESS means that a process exited zero, not that new, complete, executable or
 on-time observations exist. This wrapper cannot strengthen a frozen verdict.
@@ -29,8 +32,10 @@ import os
 from pathlib import Path
 import re
 import signal
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 
 
@@ -55,7 +60,7 @@ class Task:
     files: tuple[Requirement, ...] = ()
 
 
-def forward_tasks(python=sys.executable):
+def forward_tasks(python=".venv/bin/python"):
     """Edges follow direct reads, not the old shell command order.
 
     R215's R214 reference comparison is conditional (forward_mexc.score), so
@@ -70,14 +75,36 @@ def forward_tasks(python=sys.executable):
     return (
         task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
-        task("R215", "forward_mexc.py", ("R200",), ("R214",)),
-        task("R224", "record_mexc_depth.py", ("R200",), timeout=300),
+        task("R215", "forward_mexc.py", ("R200",), ("R214",),
+             files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
+        task("R224", "record_mexc_depth.py", ("R200",), timeout=300,
+             files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
         task("R218", "forward_mexc_sq.py", ("R200", "R215")),
         task("R220", "forward_carry.py", ("R200",)),
         task("R221", "forward_seq.py", ("R215", "R218"), timeout=300),
         task("R225", "forward_vt.py", ("R215", "R218"), timeout=300,
              files=(Requirement("experiments/sizing_v1/results/daily.npz", SEED_SHA256),)),
+        task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
+        task("PANEL", "panel.py", ("LAG",), timeout=120),
     )
+
+
+def interpreter(root, override=None):
+    """Keep the venv invocation path: resolving its symlink can lose venv identity."""
+    if override is None:
+        path = Path(root).resolve() / ".venv/bin/python"
+    elif os.sep in override:
+        path = Path(override)
+        if not path.is_absolute():
+            path = Path(root).resolve() / path
+    else:
+        found = shutil.which(override)
+        if found is None:
+            raise ValueError(f"explicit interpreter is unavailable: {override}")
+        path = Path(found)
+    if not path.is_file() or not os.access(path, os.X_OK):
+        raise ValueError(f"interpreter is missing or not executable: {path}; pass --python explicitly")
+    return os.path.abspath(path)
 
 
 def ordered_tasks(tasks, selected=None):
@@ -129,12 +156,13 @@ def ordered_tasks(tasks, selected=None):
 
 
 def code_version(root):
-    """Hash tracked code bytes as well as the commit; never read environment values."""
+    """Hash tracked and non-ignored untracked code files, without environment values."""
     def git(*args):
         return subprocess.check_output(("git", "-C", str(root), *args), stderr=subprocess.PIPE)
     head = git("rev-parse", "HEAD").decode().strip()
-    dirty = git("status", "--porcelain", "--untracked-files=no", "--", "lab", "scripts").decode()
-    paths = sorted(p for p in git("ls-files", "-z", "--", "lab", "scripts").split(b"\0") if p)
+    dirty = git("status", "--porcelain", "--untracked-files=all", "--", "lab", "scripts").decode()
+    paths = sorted(set(p for p in git("ls-files", "--cached", "--others", "--exclude-standard",
+                                    "-z", "--", "lab", "scripts").split(b"\0") if p))
     h = hashlib.sha256()
     for raw in paths:
         path = root / os.fsdecode(raw)
@@ -143,7 +171,8 @@ def code_version(root):
         digest = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else "MISSING"
         h.update(raw + b"\0" + digest.encode() + b"\0")
     wrapper_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-    return {"commit": head, "tracked_code_sha256": h.hexdigest(), "dirty_code": dirty.splitlines(),
+    return {"commit": head, "code_sha256": h.hexdigest(), "code_files": len(paths),
+            "dirty_code": dirty.splitlines(),
             "orchestrator_sha256": wrapper_sha}
 
 
@@ -167,10 +196,17 @@ def write_status(path, data, first=False):
     payload = json.dumps(data, indent=2, sort_keys=True, allow_nan=False) + "\n"
     if first and path.exists():
         raise FileExistsError(path)
-    temporary = path.with_suffix(".json.tmp")
-    with temporary.open("x", encoding="utf-8") as f:
-        f.write(payload)
-    os.replace(temporary, path)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent,
+                                         prefix="."+path.name+".", suffix=".tmp", delete=False) as f:
+            temporary = Path(f.name)
+            f.write(payload)
+        os.replace(temporary, path)
+    finally:
+        # This is our unfinished status snapshot, never a research journal.
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
 def run_process(task, root, log_path):
@@ -215,83 +251,85 @@ def run_tasks(tasks, root, state_dir, run_id, selected=None):
     run_dir = state_dir / run_id
     run_dir.mkdir()  # Never retry a run ID: processes may already have appended journals.
     status_path = run_dir / "status.json"
-    write_status(status_path, report, first=True)
-    with (root / ".forward.lock").open("a") as lock:
-        try:
-            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except BlockingIOError:
-            report["status"] = "BLOCKED"
-            report["finished_at"] = utc_now()
-            for node in report["tasks"]:
-                node.update(status="BLOCKED", reason="another forward tick holds .forward.lock")
-            write_status(status_path, report)
-            return report
-        for task in tasks:
-            node = by_name[task.name]
-            blocked = [n for n in task.needs if by_name[n]["status"] != "SUCCESS"]
-            node["optional_unavailable"] = [n for n in task.optional
-                                              if n not in by_name or by_name[n]["status"] != "SUCCESS"]
+    try:
+        write_status(status_path, report, first=True)
+        with (root / ".forward.lock").open("a") as lock:
             try:
-                unchanged = code_version(root) == report["code"]
-                code_error = None
-            except (OSError, ValueError, subprocess.CalledProcessError) as exc:
-                unchanged, code_error = False, type(exc).__name__
-            if blocked:
-                node.update(status="BLOCKED", reason="mandatory upstream task failed", blocked_by=blocked)
-            elif not unchanged:
-                node.update(status="BLOCKED", reason="code snapshot unavailable" if code_error
-                            else "code changed since run snapshot")
-            else:
-                invalid = []
-                for f in task.files:
-                    path = root / f.path
-                    if not path.resolve().is_relative_to(root) or not path.is_file():
-                        invalid.append(f.path + ": missing or outside repository")
-                    elif f.sha256 and hashlib.sha256(path.read_bytes()).hexdigest() != f.sha256:
-                        invalid.append(f.path + ": SHA-256 mismatch")
-                if invalid:
-                    node.update(status="BLOCKED", reason="required input unavailable", invalid_files=invalid)
+                fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError:
+                report["status"] = "BLOCKED"
+                report["finished_at"] = utc_now()
+                for node in report["tasks"]:
+                    node.update(status="BLOCKED", reason="another forward tick holds .forward.lock")
+                write_status(status_path, report)
+                return report
+            for task in tasks:
+                node = by_name[task.name]
+                blocked = [n for n in task.needs if by_name[n]["status"] != "SUCCESS"]
+                node["optional_unavailable"] = [n for n in task.optional
+                                                  if n not in by_name or by_name[n]["status"] != "SUCCESS"]
+                try:
+                    unchanged = code_version(root) == report["code"]
+                    code_error = None
+                except (OSError, ValueError, subprocess.CalledProcessError) as exc:
+                    unchanged, code_error = False, type(exc).__name__
+                if blocked:
+                    node.update(status="BLOCKED", reason="mandatory upstream task failed", blocked_by=blocked)
+                elif not unchanged:
+                    node.update(status="BLOCKED", reason="code snapshot unavailable" if code_error
+                                else "code changed since run snapshot")
                 else:
-                    node.update(status="RUNNING", started_at=utc_now(), log=task.name + ".log")
-                    write_status(status_path, report)
-                    start = time.monotonic()
-                    try:
-                        node.update(run_process(task, root, run_dir / node["log"]))
-                        after = code_version(root)
-                        if after != report["code"]:
-                            node.update(status="FAILED", reason="code changed during task", code_at_finish=after)
-                    except OSError as exc:
-                        node.update(status="FAILED", returncode=None, reason="process start or log error: " + str(exc))
-                    except (ValueError, subprocess.CalledProcessError) as exc:
-                        node.update(status="FAILED", reason="code snapshot unavailable after task: " + type(exc).__name__)
-                    except KeyboardInterrupt:
-                        node.update(status="FAILED", returncode=None, reason="orchestrator interrupted")
-                        node["finished_at"] = utc_now()
-                        for other in report["tasks"]:
-                            if other["status"] == "PENDING":
-                                other.update(status="BLOCKED", reason="orchestrator interrupted")
-                        report.update(status="INTERRUPTED", finished_at=utc_now())
+                    invalid = []
+                    for f in task.files:
+                        path = root / f.path
+                        if not path.resolve().is_relative_to(root) or not path.is_file():
+                            invalid.append(f.path + ": missing or outside repository")
+                        elif f.sha256 and hashlib.sha256(path.read_bytes()).hexdigest() != f.sha256:
+                            invalid.append(f.path + ": SHA-256 mismatch")
+                    if invalid:
+                        node.update(status="BLOCKED", reason="required input unavailable", invalid_files=invalid)
+                    else:
+                        node.update(status="RUNNING", started_at=utc_now(), log=task.name + ".log")
                         write_status(status_path, report)
-                        raise
-                    node.update(finished_at=utc_now(), elapsed_seconds=time.monotonic() - start)
-            write_status(status_path, report)
-    report.update(status="SUCCESS" if all(n["status"] == "SUCCESS" for n in by_name.values()) else "FAILED",
-                  finished_at=utc_now())
-    write_status(status_path, report)
-    return report
+                        start = time.monotonic()
+                        try:
+                            node.update(run_process(task, root, run_dir / node["log"]))
+                            after = code_version(root)
+                            if after != report["code"]:
+                                node.update(status="FAILED", reason="code changed during task", code_at_finish=after)
+                        except OSError as exc:
+                            node.update(status="FAILED", returncode=None, reason="process start or log error: " + str(exc))
+                        except (ValueError, subprocess.CalledProcessError) as exc:
+                            node.update(status="FAILED", reason="code snapshot unavailable after task: " + type(exc).__name__)
+                        node.update(finished_at=utc_now(), elapsed_seconds=time.monotonic() - start)
+                write_status(status_path, report)
+        report.update(status="SUCCESS" if all(n["status"] == "SUCCESS" for n in by_name.values()) else "FAILED",
+                      finished_at=utc_now())
+        write_status(status_path, report)
+        return report
+    except KeyboardInterrupt:
+        for node in report["tasks"]:
+            if node["status"] == "RUNNING":
+                node.update(status="FAILED", returncode=None, reason="orchestrator interrupted", finished_at=utc_now())
+            elif node["status"] == "PENDING":
+                node.update(status="BLOCKED", reason="orchestrator interrupted")
+        report.update(status="INTERRUPTED", finished_at=utc_now())
+        write_status(status_path, report)
+        raise
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--python", default=sys.executable, help="interpreter used by existing runners")
+    parser.add_argument("--python", help="explicit interpreter override; default ROOT/.venv/bin/python must exist")
     parser.add_argument("--task", action="append", help="task ID; repeatable; includes mandatory ancestors")
     parser.add_argument("--execute", action="store_true", help="run collectors; default only prints an offline plan")
     parser.add_argument("--state-dir", type=Path, help="new run directories outside the repository")
     parser.add_argument("--run-id", help="unique scheduler tick ID; an existing ID is never rerun")
     args = parser.parse_args(argv)
     try:
-        tasks = ordered_tasks(forward_tasks(args.python), args.task)
+        python = interpreter(args.root, args.python)
+        tasks = ordered_tasks(forward_tasks(python), args.task)
         if args.execute:
             if args.state_dir is None or args.run_id is None:
                 parser.error("--execute requires --state-dir and --run-id")
@@ -300,14 +338,17 @@ def main(argv=None):
                 raise KeyboardInterrupt
             previous = signal.signal(signal.SIGTERM, terminate)
             try:
-                report = run_tasks(forward_tasks(args.python), args.root, args.state_dir, args.run_id, args.task)
+                report = run_tasks(forward_tasks(python), args.root, args.state_dir, args.run_id, args.task)
             finally:
                 signal.signal(signal.SIGTERM, previous)
         else:
             report = plan(tasks, args.root.resolve())
         print(json.dumps(report, indent=2, sort_keys=True, allow_nan=False))
         return 0 if report.get("status", "SUCCESS") == "SUCCESS" else 1
-    except (ValueError, FileExistsError, subprocess.CalledProcessError) as exc:
+    except KeyboardInterrupt:
+        print("Orchestration interrupted; inspect the run's status before starting a new ID.", file=sys.stderr)
+        return 130
+    except (ValueError, OSError, subprocess.CalledProcessError) as exc:
         parser.exit(2, str(exc) + "\n")
 
 

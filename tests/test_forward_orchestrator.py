@@ -1,12 +1,13 @@
 """Offline orchestration tests: invented subprocesses only, never collectors."""
 
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 import fcntl
 import hashlib
 import io
 import json
 from pathlib import Path
 import subprocess
+import shlex
 import sys
 import tempfile
 import unittest
@@ -30,6 +31,8 @@ class ForwardOrchestratorTests(unittest.TestCase):
             subprocess.run(("git", "-C", str(self.root), *argv), check=True,
                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         self.state = self.base / "status"
+        (self.root / ".venv/bin").mkdir(parents=True)
+        (self.root / ".venv/bin/python").symlink_to(sys.executable)
 
     def task(self, name, code=None, needs=(), optional=(), timeout=10, files=()):
         if code is None:
@@ -57,7 +60,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual((self.state / "tick_1" / "A.log").read_text(), "failure evidence\n")
         self.assertEqual(json.loads((self.state / "tick_1" / "status.json").read_text()), report)
         self.assertEqual(len(report["code"]["commit"]), 40)
-        self.assertEqual(len(report["code"]["tracked_code_sha256"]), 64)
+        self.assertEqual(len(report["code"]["code_sha256"]), 64)
 
     def test_optional_failure_does_not_block_and_is_reported(self):
         report = self.run_tasks((self.task("REF", "raise SystemExit(2)"),
@@ -145,6 +148,25 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertIn("code changed", later["reason"])
         self.assertFalse((self.root / "LATER.ran").exists())
 
+    def test_untracked_code_bytes_are_fingerprinted(self):
+        first = orchestration.code_version(self.root)
+        extra = self.root / "scripts/untracked.py"
+        extra.write_text("# first untracked version\n")
+        second = orchestration.code_version(self.root)
+        self.assertNotEqual(first["code_sha256"], second["code_sha256"])
+        extra.write_text("# changed without changing git status\n")
+        third = orchestration.code_version(self.root)
+        self.assertEqual(second["dirty_code"], third["dirty_code"])
+        self.assertNotEqual(second["code_sha256"], third["code_sha256"])
+
+    def test_new_untracked_code_during_task_blocks_the_next_task(self):
+        report = self.run_tasks((self.task("CREATE", "from pathlib import Path; Path('scripts/new.py').write_text('# new')"),
+                                 self.task("LATER")))
+        nodes = self.nodes(report)
+        self.assertEqual(nodes["CREATE"]["status"], "FAILED")
+        self.assertEqual(nodes["LATER"]["status"], "BLOCKED")
+        self.assertFalse((self.root / "LATER.ran").exists())
+
     def test_last_task_code_change_cannot_report_overall_success(self):
         report = self.run_tasks((self.task("EDIT", "from pathlib import Path; Path('scripts/invented.py').write_text('# changed')"),))
         self.assertEqual(report["status"], "FAILED")
@@ -159,6 +181,52 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual(self.nodes(report)["B"]["status"], "BLOCKED")
         with (self.root / ".forward.lock").open("a") as lock:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+
+    def test_interrupt_before_first_task_persists_interrupted_status(self):
+        version = orchestration.code_version(self.root)
+        with patch.object(orchestration, "code_version", side_effect=[version, KeyboardInterrupt]), \
+                self.assertRaises(KeyboardInterrupt):
+            self.run_tasks((self.task("A"), self.task("B")))
+        report = json.loads((self.state / "tick_1/status.json").read_text())
+        self.assertEqual(report["status"], "INTERRUPTED")
+        self.assertTrue(all(n["status"] == "BLOCKED" for n in report["tasks"]))
+        self.assertFalse((self.root / "A.ran").exists())
+
+    def test_interrupt_during_initial_status_write_is_recovered(self):
+        original = orchestration.write_status
+        calls = 0
+        def interrupt_once(*args, **kwargs):
+            nonlocal calls
+            calls += 1
+            original(*args, **kwargs)
+            if calls == 1:
+                raise KeyboardInterrupt
+        with patch.object(orchestration, "write_status", side_effect=interrupt_once), \
+                self.assertRaises(KeyboardInterrupt):
+            self.run_tasks((self.task("A"),))
+        report = json.loads((self.state / "tick_1/status.json").read_text())
+        self.assertEqual(report["status"], "INTERRUPTED")
+        self.assertEqual(self.nodes(report)["A"]["status"], "BLOCKED")
+
+    def test_interrupt_while_acquiring_lock_is_recovered(self):
+        with patch.object(orchestration.fcntl, "flock", side_effect=KeyboardInterrupt), \
+                self.assertRaises(KeyboardInterrupt):
+            self.run_tasks((self.task("A"),))
+        report = json.loads((self.state / "tick_1/status.json").read_text())
+        self.assertEqual(report["status"], "INTERRUPTED")
+        self.assertEqual(self.nodes(report)["A"]["status"], "BLOCKED")
+
+    def test_interrupted_atomic_replace_preserves_previous_status_and_allows_recovery(self):
+        self.state.mkdir()
+        path = self.state / "status.json"
+        orchestration.write_status(path, {"status": "RUNNING"})
+        with patch.object(orchestration.os, "replace", side_effect=KeyboardInterrupt), \
+                self.assertRaises(KeyboardInterrupt):
+            orchestration.write_status(path, {"status": "SUCCESS"})
+        self.assertEqual(json.loads(path.read_text())["status"], "RUNNING")
+        self.assertEqual(list(self.state.glob("*.tmp")), [])
+        orchestration.write_status(path, {"status": "INTERRUPTED"})
+        self.assertEqual(json.loads(path.read_text())["status"], "INTERRUPTED")
 
     def test_invalid_graphs_fail_before_any_output(self):
         cases = ((self.task("A", needs=("B",)), self.task("B", needs=("A",))),
@@ -185,6 +253,28 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual([t["name"] for t in plan["tasks"]], ["R200", "R215", "R218", "R225"])
         self.assertFalse((self.root / ".forward.lock").exists())
         self.assertFalse(self.state.exists())
+        self.assertEqual(plan["tasks"][0]["argv"][0], str(self.root / ".venv/bin/python"))
+
+    def test_default_cli_refuses_missing_venv_without_system_fallback(self):
+        (self.root / ".venv/bin/python").unlink()
+        with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as raised:
+            orchestration.main(["--root", str(self.root), "--task", "R225"])
+        self.assertEqual(raised.exception.code, 2)
+        self.assertFalse((self.root / ".forward.lock").exists())
+        self.assertFalse(self.state.exists())
+
+    def test_explicit_interpreter_override_is_recorded(self):
+        output = io.StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(orchestration.main(["--root", str(self.root), "--python", sys.executable]), 0)
+        self.assertEqual(json.loads(output.getvalue())["tasks"][0]["argv"][0], sys.executable)
+
+    def test_main_handles_interrupt_outside_task_execution(self):
+        with patch.object(orchestration, "run_tasks", side_effect=KeyboardInterrupt), \
+                redirect_stderr(io.StringIO()):
+            result = orchestration.main(["--root", str(self.root), "--execute",
+                                         "--state-dir", str(self.state), "--run-id", "outer_interrupt"])
+        self.assertEqual(result, 130)
 
     def test_forward_graph_matches_direct_mandatory_and_optional_reads(self):
         tasks = {t.name: t for t in orchestration.forward_tasks()}
@@ -196,6 +286,24 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual(tasks["R221"].needs, ("R215", "R218"))
         self.assertEqual(tasks["R225"].needs, ("R215", "R218"))
         self.assertEqual(tasks["R225"].files[0].sha256, orchestration.SEED_SHA256)
+        self.assertEqual(tasks["LAG"].needs, ("R200", "R214", "R215", "R218", "R220", "R225"))
+        self.assertEqual(tasks["PANEL"].needs, ("LAG",))
+        static = "experiments/venue_gap_v1/results/tradfi_symbols.json"
+        self.assertEqual(tasks["R215"].files[0].path, static)
+        self.assertEqual(tasks["R224"].files[0].path, static)
+
+    def test_graph_commands_order_and_timeouts_match_the_actual_shell_wrapper(self):
+        shell = orchestration.ROOT / "scripts/forward_all.sh"
+        actual = []
+        for line in shell.read_text().splitlines():
+            words = shlex.split(line, comments=True)
+            if words and words[0] == "timeout":
+                self.assertGreaterEqual(len(words), 4)
+                self.assertEqual(words[2], "$PY")
+                actual.append((words[3], float(words[1])))
+        self.assertTrue(actual)
+        proposed = [(t.argv[1], t.timeout) for t in orchestration.ordered_tasks(orchestration.forward_tasks())]
+        self.assertEqual(proposed, actual)
 
 
 if __name__ == "__main__":
