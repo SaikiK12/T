@@ -40,6 +40,8 @@ Horizons: `5,10,20,30,60,90,150,250,360` days, equally weighted. Sizing: `min(0.
 
 **Why distinct.** R213 studies entry delay; R217 changes sizing; R186-R187 select composite signals. None is this fixed partial-adjustment comparison. Changing execution must not rewrite their frozen journals or revive their claims as confirmed.
 
+**Completed bounded test, 2026-10-20.** [R231](../experiments/partial_execution_v1/FINDINGS.md) tests half/quarter daily adjustment on the exact frozen R229 spot target. Both new policies are retained; the discovery-selected half adjustment fails its validation comparison because forgone gross return exceeds cost savings at 1x/2x. This is not a test on the original flow targets, which remain unavailable here.
+
 ## 3. Rebalancing versus letting identical holdings drift
 
 **Sources.** [Quantpedia's public profile](https://quantpedia.com/strategies/rebalancing-premium-in-cryptocurrencies) and Hanicova and Vojtko's [primary working-paper record](https://ssrn.com/abstract=3982120). The profile discloses an in-sample short-weight comparison and unreported transaction costs. Its static universe includes a stablecoin; its selected 100%-long/70%-short illustration retains long market exposure. Neither a source rating nor its best parameter is independent confirmation.
@@ -49,3 +51,5 @@ Horizons: `5,10,20,30,60,90,150,250,360` days, equally weighted. Sizing: `min(0.
 **Inputs and test.** Complete closes, volume ranks, lifecycle records and funding suffice for a perpetual screen. Charge both scheduled and forced changes; preserve failed/delisted names and missing-data exclusions. Report net spread returns at 1x/2x/3x, market beta, concentration and turnover. Persistent winners can make contrarian rebalancing harmful; correlated prices and funding can remove its appeal. Lower geometric volatility does not guarantee positive arithmetic alpha.
 
 **Why distinct and priority.** This is a portfolio-rule question, rather than R222's momentum rankings, but it may amount to another costly reversal exposure. Prioritize the daily trend screen and execution comparison ahead of it. All three require new frozen specifications and honest trial accounting before measurement; none authorizes deployment or treats reused historical dates as fresh confirmation.
+
+**Completed bounded test, 2026-10-20.** [R232](../experiments/rebalancing_v1/FINDINGS.md) tests fixed daily/weekly/monthly long-only equal-weight spot resets against fixed-unit buy-and-hold, using the existing six-coin cache and full 1x/2x/3x accounts. Discovery selects monthly, but validation Sharpe gain and paired uncertainty requirements fail. The original full-universe long/short construction above remains untested.

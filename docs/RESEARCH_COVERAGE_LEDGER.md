@@ -1,6 +1,6 @@
 # Research coverage: tested cells, open mechanisms and data dependencies
 
-Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228–R230 findings.
+Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228–R232 findings.
 This ledger summarizes linked evidence; its own text computes no new market result.
 “Closed” means do not repeat the tested rule unchanged; it does not falsify every rule in its broad family.
 Calendar dates examined by prior research are spent for program-level confirmation, even for a new feature.
@@ -69,6 +69,13 @@ The atlas includes weekly return features but target horizons only through 72 ho
 - [R230 weekly_rotation_v1](../experiments/weekly_rotation_v1/FINDINGS.md) completes a frozen 96-rule rank/gate/
   execution grid on that existing six-coin spot cache. The train-selected winner fails validation against scaled
   passive and the family-aware diagnostic. Its null is preserved; no validation winner replaces it.
+- [R231 partial_execution_v1](../experiments/partial_execution_v1/FINDINGS.md) tests two fixed daily adjustment
+  fractions on R229's unchanged spot target. The selected half-step saves costs but forfeits more gross return at
+  ordinary/doubled costs; its primary comparison is NULL. This does not close partial adjustment on missing flow targets.
+- [R232 rebalancing_v1](../experiments/rebalancing_v1/FINDINGS.md) tests three fixed long-only equal-weight
+  schedules against fixed-unit buy-and-hold on that cache. The discovery-selected monthly cadence fails its
+  Sharpe/uncertainty requirements, despite positive paired validation mean. The source's long/short construction
+  and full-universe replication remain untested.
 
 ## Search accounting and stopping
 

@@ -1,0 +1,44 @@
+{
+  "archived_control_reproduction": {
+    "checked_daily_rows": 5202,
+    "maximum_absolute_discrepancy": 0.0
+  },
+  "checks": {
+    "drawdown_no_worse": true,
+    "paired_mean_lower95_positive": false,
+    "positive_2x_mean": true,
+    "sharpe_improvement_at_least_015": false
+  },
+  "discovery_risk_scale": 0.9979618573386843,
+  "evidence": "exploratory historical reuse; selected six-surviving-coin spot adaptation",
+  "selected_fraction": 0.5,
+  "selected_policy": "half",
+  "trials": 2,
+  "validation_bootstrap": [
+    {
+      "block_days": 30,
+      "lower95": -4.1174936585724255e-05,
+      "mean": -8.989770008884376e-06,
+      "replicates": 5000,
+      "seed": 20261020261,
+      "upper95": 2.2567776854620775e-05
+    },
+    {
+      "block_days": 10,
+      "lower95": -4.9516220320504426e-05,
+      "mean": -8.989770008884376e-06,
+      "replicates": 5000,
+      "seed": 20261020241,
+      "upper95": 2.90365388644068e-05
+    },
+    {
+      "block_days": 60,
+      "lower95": -3.554025200647304e-05,
+      "mean": -8.989770008884376e-06,
+      "replicates": 5000,
+      "seed": 20261020291,
+      "upper95": 1.775648619830891e-05
+    }
+  ],
+  "verdict": "NULL"
+}
