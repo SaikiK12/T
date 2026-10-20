@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 06:29 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 06:33 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 65 |
 | Ideas partly tested | 24 |
 | Ideas blocked (data, download, compute) | 72 |
-| Rounds in the registry | 55 (NULL 32, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,893 |
+| Rounds in the registry | 56 (NULL 33, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,897 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -53,7 +53,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | method | data_held | status | cheap | note |
 |---|---|---|---|---|---|
-| M001 | Positioning impulse: 24 h change in top_vs_crowd (log top_ls_sum - log ls_count), top vs bottom quintile, 72 h hold, dollar-neutral; test increment over the frozen level book | Y metrics_1h (99% coverage from 2023) | UNTESTED | 1 | NEXT's ranked #1. Control: R197 level book. 2023-25H1 is exploratory; holdout spent. |
 | M002 | Amihud illiquidity sort: abs(daily return) / quote volume, long illiquid vs liquid, 7-30 d hold, universe-hedged | Y klines_1h (quote_volume) | UNTESTED | 1 | Literature puts alpha in small, illiquid coins. Not in R185 or R222. |
 | M003 | Dispersion or breadth gate on flow books: gate A/B/X2 when 30 d dispersion is in top tercile and alt index 90 d return < 0 | Y klines_1h (dispersion views in R185) | UNTESTED | 1 | R233 tested trend x vol only. Few crash episodes: low power. |
 | M004 | TradFi commodity/equity perps (CL, XAU, NVDA...) 1 h return leads the crypto cross-section, next 1-24 h | Y klines_1h (TradFi perps present) | UNTESTED | 1 | Transfer test of R216's TradFi gross. A proxy for the news claim, not the claim. |
@@ -65,6 +64,7 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | M010 | 8 AM ET one-hour range fade (owner's Edgeful claim), on the hourly bar | P klines_1h (old used 1-min data) | UNTESTED | 1 | Base rate: both sides hit 58.9%. Hourly bars cannot match 1-min fills. Low prior. |
 | M011 | Round-number levels as stop-run magnets: distance to .00 levels, fade or follow | Y klines_1h | UNTESTED | 1 | FX evidence only (one bank, 1999-2000). Low prior. |
 | M012 | SMT divergence: a coin makes a new high or low that BTC or ETH does not; trade reversal or continuation | Y klines_1h | UNTESTED | 1 | ICT, no independent study. Low prior. |
+| M013 | Week-open bias: close vs Monday 00:00 UTC open | Y klines_1h | UNTESTED | 1 | Low prior. |
 
 ## 4. Waiting on the owner
 
@@ -79,7 +79,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R225 | vt_fwd | RUNNING | PENDING | 3 |
 | R226 | tradesize_v1 | DONE | NULL | 6 |
 | R228 | allocation_v1 | DONE | NULL | 30 |
 | R229 | slow_trend_v1 | DONE | NULL | 2 |
@@ -87,5 +86,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | R231 | partial_execution_v1 | DONE | NULL | 2 |
 | R232 | rebalancing_v1 | DONE | NULL | 3 |
 | R233 | regime_v1 | DONE | NULL | 4 |
+| R234 | posimpulse_v1 | DONE | NULL | 4 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

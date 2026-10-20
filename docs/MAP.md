@@ -218,6 +218,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   regimes in discovery. The regime-wise mix raised validation Sharpe by 0.12 against X2 (bar 0.15), and trailed it at
   2x-3x. NULL. Described, not tested: B (top-vs-crowd) earns almost only in falling low-volatility markets (t 3.68).
   [Findings](../experiments/regime_v1/FINDINGS.md).
+- **R234 (posimpulse_v1)** tested queue M001: the 24 h and 72 h *change* in top-vs-crowd as spread books. All four
+  books failed discovery. The best was imp72/H at +5.2 bp/day (t 0.90; +2.8 after the level book). The impulse is
+  nearly uncorrelated with the level (0.00-0.20). Discovery is effectively 2023, because positioning covers about 10%
+  of coin-hours in 2021-22. In 2023 the H books made about +24 bp/day, which was seen after the run and is queued as
+  M223. NULL. [Findings](../experiments/posimpulse_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -323,6 +328,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,893 after R233 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,897 after R234 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
