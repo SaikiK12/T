@@ -317,6 +317,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - **The books did not pass:** the best was +8.8 bp/day at t 0.88, and taker cost (10-13.5 bp/day) equals the gross.
   - A maker version is queued as M232.
   - NULL. [Findings](../experiments/rnfade_v1/FINDINGS.md).
+- **R250 (pairs_v1)** tested classic pairs trading on the top-20 and top-50 perps: distance and Engle-Granger
+  selection, weekly 30-day formation, z-score entry 2 and exit 0.
+  - Gross was near zero in all four books (-1.6 to +2.5 bp/day).
+  - 59-78% of trades ended at the week's end without reverting: one-week idiosyncratic moves in crypto drift rather
+    than mean-revert.
+  - NULL. [Findings](../experiments/pairs_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -422,6 +428,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,987 after R249 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,991 after R250 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
