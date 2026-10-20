@@ -4,6 +4,12 @@
 |---|---|---|---|
 | kucoin | USDT perps live today (`/api/v1/contracts/active`) | every settlement since listing (8 h, some 4 h / 1 h), 100 per call | daily, 200 per call |
 | dydx | every v4 market, settled (delisted) ones included (`/v4/perpetualMarkets`) | hourly since 2023-10, 1,000 per call | daily and hourly with open interest, 1,000 per call |
+| kraken | Kraken Futures linear perps live today (`PF_*`, `/derivatives/api/v3/instruments`) | hourly, the last year only (the API's limit), one call | daily since 2022-03, one call |
+| upbit | KRW spot markets live today (`/v1/market/all`) | (spot) | daily, the day ending 00:00 UTC (09:00 KST), 200 per call |
+| bithumb | KRW spot markets live today (`/v1/market/all`, Upbit-style API) | (spot) | daily, the day ending 15:00 UTC (00:00 KST), 200 per call |
+
+The two Korean spot venues give each coin's Korean price, for the Korean premium against Binance (KRW per USD from
+FRED or Upbit's KRW-USDT, or coin over BTC on the same venue, which needs no exchange rate).
 
 Rows are routed by the reserved-sample rules (docs/GATES.md), as `fetch_gate_history.py` does:
 - `open/`: contracts whose base has a Binance perp (R274's `binance_perp` name rule), rows from 2021-01-01;
@@ -14,7 +20,7 @@ Saved in data/<venue>_hist/{open,reserved}/<kind>/<SYMBOL>.parquet with `contrac
 multiplier = Binance price / venue price) and the raw contract list. A contract whose file exists is skipped, so it
 resumes. Data collection only.
 
-usage: python scripts/fetch_venue_history.py {kucoin,dydx} [--pause 0.15] [--workers 4] [--only SYM,SYM]
+usage: python scripts/fetch_venue_history.py {kucoin,dydx,kraken,upbit,bithumb} [--pause 0.15] [--workers 4] [--only SYM,SYM]
 """
 import argparse
 import concurrent.futures
@@ -36,6 +42,8 @@ from scripts.squeeze_events import binance_perp  # noqa: E402
 OPEN_FROM_MS = 1_609_459_200_000           # 2021-01-01: earlier rows are the reserved 2020 window
 DAY, HOUR = 86_400_000, 3_600_000
 KUCOIN = "https://api-futures.kucoin.com"
+KRAKEN = "https://futures.kraken.com"
+KOREA = {"upbit": "https://api.upbit.com/v1", "bithumb": "https://api.bithumb.com/v1"}
 DYDX = "https://indexer.dydx.trade/v4"
 ALIASES = {"XBT": "BTC"}                   # KuCoin's name for bitcoin
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
@@ -161,6 +169,70 @@ def dydx_candles(sym, res, now, pause):
     return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
 
 
+# ---- Kraken Futures ----
+
+def kraken_contracts():
+    raw = [i for i in get(f"{KRAKEN}/derivatives/api/v3/instruments")["instruments"]
+           if i.get("type") == "flexible_futures" and i["symbol"].startswith("PF_")]
+    rows = []
+    for i in raw:
+        base = i["symbol"][3:].rsplit("USD", 1)[0]
+        rows.append({"symbol": i["symbol"], "base": ALIASES.get(base, base), "multiplier_contract": i.get("contractSize"),
+                     "listed_ms": ms(i["openingDate"]) if i.get("openingDate") else 0, "funding_ms": HOUR,
+                     "status": "tradeable" if i.get("tradeable") else "halted"})
+    return raw, rows
+
+
+def kraken_funding(sym, now, pause):
+    """Hourly relative funding rate (a fraction of notional per hour, as the venue settles it)."""
+    d = get(f"{KRAKEN}/derivatives/api/v4/historicalfundingrates?symbol={sym}").get("rates") or []
+    time.sleep(pause)
+    df = pd.DataFrame({"t": [ms(x["timestamp"]) for x in d], "rate": [float(x["relativeFundingRate"]) for x in d],
+                       "rate_usd": [float(x["fundingRate"]) for x in d]})
+    return df[df.t <= now].astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
+
+
+def kraken_candles(sym, start, now, pause):
+    d = get(f"{KRAKEN}/api/charts/v1/trade/{sym}/1d?from={start // 1000}").get("candles") or []
+    time.sleep(pause)
+    df = pd.DataFrame({"t": [int(x["time"]) for x in d],
+                       **{c: [float(x[c]) for x in d] for c in ("open", "high", "low", "close", "volume")}})
+    df = df[df.t + DAY <= now]                     # finished bars only
+    return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
+
+
+# ---- Upbit / Bithumb (same API shape) ----
+
+def korea_contracts(venue):
+    raw = get(f"{KOREA[venue]}/market/all")
+    rows = [{"symbol": m["market"], "base": m["market"].split("-", 1)[1], "multiplier_contract": 1, "listed_ms": 0,
+             "funding_ms": "", "status": "live"} for m in raw if m["market"].startswith("KRW-")]
+    return raw, rows
+
+
+def korea_candles(venue, market, now, pause):
+    """Daily bars (t = open, UTC), paged backwards with `to` (the API returns the newest 200 before it)."""
+    out, to = [], iso(now)
+    while True:
+        q = urllib.parse.urlencode({"market": market, "count": 200, "to": to[:19]})
+        d = get(f"{KOREA[venue]}/candles/days?{q}")
+        time.sleep(pause)
+        if not isinstance(d, list) or not d:
+            break
+        out += d
+        first = ms(d[-1]["candle_date_time_utc"])
+        if len(d) < 200:
+            break
+        to = iso(first)
+    df = pd.DataFrame({"t": [ms(x["candle_date_time_utc"]) for x in out],
+                       **{c: [float(x[k]) for x in out] for c, k in (("open", "opening_price"), ("high", "high_price"),
+                                                                      ("low", "low_price"), ("close", "trade_price"),
+                                                                      ("volume", "candle_acc_trade_volume"),
+                                                                      ("turnover_krw", "candle_acc_trade_price"))}})
+    df = df[df.t + DAY <= now]                     # finished bars only
+    return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
+
+
 VENUES = {
     "kucoin": (kucoin_contracts, lambda c, now, p: {
         "funding": lambda: kucoin_funding(c["symbol"], now, p),
@@ -169,6 +241,11 @@ VENUES = {
         "funding": lambda: dydx_funding(c["symbol"], now, p),
         "candles_1d": lambda: dydx_candles(c["symbol"], "1DAY", now, p),
         "candles_1h": lambda: dydx_candles(c["symbol"], "1HOUR", now, p)}),
+    "kraken": (kraken_contracts, lambda c, now, p: {
+        "funding": lambda: kraken_funding(c["symbol"], now, p),
+        "candles_1d": lambda: kraken_candles(c["symbol"], max(c["listed_ms"] - DAY, 0) // DAY * DAY, now, p)}),
+    **{v: (lambda v=v: korea_contracts(v), lambda c, now, p, v=v: {
+        "candles_1d": lambda: korea_candles(v, c["symbol"], now, p)}) for v in KOREA},
 }
 
 

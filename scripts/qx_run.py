@@ -221,7 +221,7 @@ def main():
     rep = json.loads((out / "report.json").read_text())
     rid = re.search(r"Registry id:\*?\*?\s*(R\d+)", text).group(1)
     (out / "SUMMARY.md").write_text({"spread": spread_summary, "factors": factor_summary}.get(kind, summary)(rep, rid, psha))
-    log(f"{rid} {rep['verdict']}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
+    log(f"{rid} {rep.get('verdict', 'factor report')}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
         best = (rep.get("strategies") or rep.get("results"))[0]

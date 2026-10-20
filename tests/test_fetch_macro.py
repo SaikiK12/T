@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from scripts.fetch_macro import parse
+from scripts.fetch_macro import parse, parse_cot
 
 DAY = 86_400_000
 T0 = 1_609_459_200_000  # 2021-01-01
@@ -28,6 +28,19 @@ class FetchMacroTest(unittest.TestCase):
         self.assertEqual(parse("chart", ch).value.tolist(), [2.0])  # a repeated day keeps the last value
         tv = json.dumps([{"date": T0 // 1000, "tvl": 7}]).encode()
         self.assertEqual(parse("tvl", tv).value.tolist(), [7.0])
+
+    def test_blockchain_and_cot(self):
+        bc = json.dumps({"values": [{"x": T0 // 1000 + DAY // 1000, "y": 3}, {"x": T0 // 1000, "y": 2}]}).encode()
+        self.assertEqual(parse("bc", bc).value.tolist(), [2.0, 3.0])
+        cot = json.dumps([{"market_and_exchange_names": "BITCOIN - CME", "cftc_contract_market_code": "133741",
+                           "report_date_as_yyyy_mm_dd": "2021-01-05T00:00:00.000", "open_interest_all": "10",
+                           "lev_money_positions_long": "4", "lev_money_positions_short": "6",
+                           "yyyy_report_week_ww": "2021 Report Week 1"}]).encode()
+        df = parse_cot(cot)
+        self.assertEqual(df.t.tolist(), [T0 + 4 * DAY])
+        self.assertEqual(df.available_t.tolist(), [T0 + 8 * DAY])   # the Friday release, a Tuesday report
+        self.assertEqual(df.lev_money_positions_short.tolist(), [6.0])
+        self.assertNotIn("yyyy_report_week_ww", df.columns)
 
 
 if __name__ == "__main__":
