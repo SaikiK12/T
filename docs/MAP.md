@@ -269,6 +269,15 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - 132 are aliases of existing rows and 27 are context (`registry/methods_aliases.csv`).
   - 3 are new rows, M227-M229.
   - ALT1's negative-sign seesaw rule is the mirror of R219 F1, so it loses about 35 bp/day before costs.
+- **R243 (chartist_v1)** tested seven classic chart rules on 4 h and daily bars of the top-50 perps, 14 trials:
+  Supertrend+RSI, MACD, Stochastic, CCI and Bollinger fades, Ichimoku and pivot breaks.
+  - None reached t 2. Daily trend rules were right in sign but weak (Supertrend+RSI +11.3 bp/day, t 1.23).
+  - On 4 h bars, costs of 6-9 bp/day ate the trend rules.
+  - The overbought/oversold fades lost (Stochastic 4 h alpha t -2.07), and so did pivot breakouts.
+  - NULL. [Findings](../experiments/chartist_v1/FINDINGS.md).
+- **R244 (weekendlink_v1)** asked whether BTC's weekend move sets the direction of QQQ/SPY for the week's first
+  session. It goes with the opening gap (correlation +0.46), which is already priced, but not with the session after
+  the open (+0.07). Trading it lost slightly. NULL. [Findings](../experiments/weekendlink_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -374,6 +383,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,937 after R242 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,953 after R244 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

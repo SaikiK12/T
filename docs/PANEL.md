@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 06:57 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 07:03 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 47 |
-| Ideas partly tested | 27 |
+| Ideas in the queue, untested | 42 |
+| Ideas partly tested | 29 |
 | Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 64 (NULL 41, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,937 |
+| Rounds in the registry | 66 (NULL 43, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,953 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -55,7 +55,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 |---|---|---|---|---|---|
 | M003 | Dispersion or breadth gate on flow books: gate A/B/X2 when 30 d dispersion is in top tercile and alt index 90 d return < 0 | Y klines_1h (dispersion views in R185) | UNTESTED | 1 | R233 tested trend x vol only. Few crash episodes: low power. |
 | M004 | TradFi commodity/equity perps (CL, XAU, NVDA...) 1 h return leads the crypto cross-section, next 1-24 h | Y klines_1h (TradFi perps present) | UNTESTED | 1 | Transfer test of R216's TradFi gross. A proxy for the news claim, not the claim. |
-| M005 | Supertrend(10,3) plus RSI14 on 4 h bars (old combo) | Y klines_1h (resample to 4 h) | UNTESTED | 1 | Old discovery looked good, holdout did not. A re-run needs a frozen spec. |
 | M006 | Square-root impact cost at target size (Donier & Bonart) to size books against the tier cost | Y klines_1h (quote_volume) | UNTESTED | 1 | Cost realism, not an edge. MEXC book-walk version is R224 (running). |
 | M007 | Conviction-weighted sleeves: score weights clip(z,-2,2) vs equal weights at the same gross | Y flow bins (data/research); daily nets | UNTESTED | 1 | 1/N is hard to beat (DeMiguel et al.). Low prior. |
 | M008 | Daily reversal in illiquid coins (xsrev) and its maker-limit version (xsrevmaker) | Y klines_1h | UNTESTED | 1 | Old excerpt has no numbers. Re-run from a frozen spec. |
@@ -65,6 +64,7 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | M014 | Chan half-life and ADF filter to select mean-reverting coins before a reversal book | Y klines_1h | UNTESTED | 1 | Selection filter. Weak prior. Count its trials. |
 | M015 | Listing short with a 14-day stop (MEXC rule 3) | Y klines_1h (listing history) | PARTIAL | 1 | Stop variant untested. Early-drift literature (B) points the other way. Low prior. |
 | M016 | Abnormal volume x short constraint (Garfinkel): abnormal volume predicts lower returns where shorting is constrained | P klines_1h; no borrow data (funding/OI as proxy) | PARTIAL | 1 | Volume-alone part is dead. The constraint interaction is open; the constraint is a proxy. |
+| M017 | Residual momentum split by liquidity tier (ranks 1-10 vs 11-50), 365 d window, 30 d hold | Y klines_1h | PARTIAL | 1 | Tier split and 365 d window not run. |
 
 ## 4. Waiting on the owner
 
@@ -79,13 +79,13 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R235 | usindex_calendar_v1 | DONE | NULL | 4 |
-| R236 | amihud_v1 | DONE | NULL | 2 |
 | R237 | tsmom_v1 | DONE | NULL | 2 |
 | R238 | xsbattery_v1 | DONE | NULL | 16 |
 | R239 | fxindex_v1 | DONE | NULL | 7 |
 | R240 | posimpulse_v2 | DONE | NULL | 2 |
 | R241 | volrisk_v1 | DONE | NULL | 3 |
 | R242 | tsbattery_v1 | DONE | NULL | 4 |
+| R243 | chartist_v1 | DONE | NULL | 14 |
+| R244 | weekendlink_v1 | DONE | NULL | 2 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
