@@ -1,0 +1,81 @@
+06:44:50 prereg sha 6e42eb27ba6e
+06:44:50 fx from 2006-05-17 moves above 8%: {'EUR': 4, 'GBP': 0, 'AUD': 1, 'NZD': 0, 'JPY': 3, 'CAD': 0, 'CHF': 3}
+06:44:50 FXMOM first position 2006-09-01
+06:44:50 FXMOM discovery net +2.18 bp/day, test +2.18 t +1.20 (2x +2.11) stop
+06:44:50 DOLLAR first position 2007-06-01
+06:44:50 DOLLAR discovery net -0.37 bp/day, test -0.37 t -0.25 (2x -0.39) stop
+06:44:50 VIXREV-SPY discovery net +2.37 bp/day, test +1.26 t +1.10 (2x +1.23) stop
+06:44:50 VIXREV-QQQ discovery net +4.05 bp/day, test +2.94 t +1.94 (2x +2.91) stop
+06:44:50 HALLOWEEN-SPY discovery net +2.25 bp/day, test +1.39 t +1.32 (2x +1.39) stop
+/home/user/T/scripts/run_fxindex.py:123: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+  gap = np.r_[np.busday_count(idx[:-1] + 1, idx[1:]) > 0, False]
+06:44:51 PREHOL-SPY discovery net +0.21 bp/day, test +0.16 t +0.44 (2x +0.09) stop
+06:44:51 VRP discovery net +nan bp/day, test +116.03 t +2.55 (2x +116.03) PASS
+06:44:51 VRP validation net +nan bp/day, test +70.47 t +5.71 (2x +70.47) PASS
+06:44:51 VRP holdout net +nan bp/day, test +81.78 t +1.11 (2x +81.78) stop
+06:44:51 
+     strategy     window  cmult  days  mean_bp_day  ann_return  ann_vol  sharpe  max_dd   beta  gross_bp_day  cost_bp_day  turnover_per_year  test_mean_bp_day  test_t  trimmed_bp_day  invested  share_positive  median       min
+        FXMOM  discovery    1.0  1646        2.180       0.057    0.156   0.364   0.226 -0.186         2.252        0.072             18.639             2.180   1.202           1.794       NaN             NaN     NaN       NaN
+        FXMOM  discovery    2.0  1646        2.108       0.055    0.156   0.352   0.232 -0.186         2.252        0.143             18.639             2.108   1.162           1.722       NaN             NaN     NaN       NaN
+        FXMOM  discovery    3.0  1646        2.037       0.053    0.156   0.340   0.239 -0.186         2.252        0.215             18.639             2.037   1.122           1.649       NaN             NaN     NaN       NaN
+       DOLLAR  discovery    1.0  1451       -0.373      -0.010    0.095  -0.102   0.247 -0.090        -0.359        0.014              3.763            -0.373  -0.248          -0.146       NaN             NaN     NaN       NaN
+       DOLLAR  discovery    2.0  1451       -0.388      -0.010    0.095  -0.106   0.248 -0.090        -0.359        0.029              3.763            -0.388  -0.258          -0.161       NaN             NaN     NaN       NaN
+       DOLLAR  discovery    3.0  1451       -0.402      -0.010    0.095  -0.110   0.249 -0.090        -0.359        0.043              3.763            -0.402  -0.268          -0.175       NaN             NaN     NaN       NaN
+   VIXREV-SPY  discovery    1.0  3017        2.374       0.060    0.162   0.369   0.419  0.576           NaN          NaN                NaN             1.265   1.098           0.925     0.207             NaN     NaN       NaN
+   VIXREV-SPY  discovery    2.0  3017        2.342       0.059    0.162   0.364   0.420  0.576           NaN          NaN                NaN             1.233   1.072           0.894     0.207             NaN     NaN       NaN
+   VIXREV-SPY  discovery    3.0  3017        2.311       0.058    0.162   0.359   0.420  0.576           NaN          NaN                NaN             1.201   1.046           0.863     0.207             NaN     NaN       NaN
+   VIXREV-QQQ  discovery    1.0  3017        4.048       0.102    0.204   0.501   0.436  0.508           NaN          NaN                NaN             2.944   1.939           2.715     0.217             NaN     NaN       NaN
+   VIXREV-QQQ  discovery    2.0  3017        4.016       0.101    0.204   0.497   0.437  0.508           NaN          NaN                NaN             2.912   1.921           2.685     0.217             NaN     NaN       NaN
+   VIXREV-QQQ  discovery    3.0  3017        3.985       0.100    0.204   0.493   0.437  0.508           NaN          NaN                NaN             2.881   1.901           2.654     0.217             NaN     NaN       NaN
+HALLOWEEN-SPY  discovery    1.0  3017        2.245       0.057    0.142   0.398   0.403  0.442           NaN          NaN                NaN             1.393   1.317           1.543     0.492             NaN     NaN       NaN
+HALLOWEEN-SPY  discovery    2.0  3017        2.237       0.056    0.142   0.397   0.404  0.442           NaN          NaN                NaN             1.385   1.309           1.535     0.492             NaN     NaN       NaN
+HALLOWEEN-SPY  discovery    3.0  3017        2.229       0.056    0.142   0.396   0.404  0.442           NaN          NaN                NaN             1.377   1.302           1.527     0.492             NaN     NaN       NaN
+   PREHOL-SPY  discovery    1.0  3017        0.207       0.005    0.032   0.161   0.065  0.023           NaN          NaN                NaN             0.162   0.444           0.044     0.035             NaN     NaN       NaN
+   PREHOL-SPY  discovery    2.0  3017        0.136       0.003    0.032   0.106   0.067  0.023           NaN          NaN                NaN             0.091   0.250          -0.014     0.035             NaN     NaN       NaN
+   PREHOL-SPY  discovery    3.0  3017        0.065       0.002    0.032   0.050   0.070  0.023           NaN          NaN                NaN             0.021   0.056          -0.072     0.035             NaN     NaN       NaN
+          VRP  discovery    1.0  3017          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN           116.029   2.550             NaN       NaN           0.851 139.099 -6689.529
+          VRP  discovery    2.0  3017          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN           116.029   2.550             NaN       NaN           0.851 139.099 -6689.529
+          VRP  discovery    3.0  3017          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN           116.029   2.550             NaN       NaN           0.851 139.099 -6689.529
+          VRP validation    1.0  1762          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            70.471   5.705             NaN       NaN           0.820  91.841  -805.089
+          VRP validation    2.0  1762          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            70.471   5.705             NaN       NaN           0.820  91.841  -805.089
+          VRP validation    3.0  1762          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            70.471   5.705             NaN       NaN           0.820  91.841  -805.089
+          VRP    holdout    1.0  1687          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            81.783   1.108             NaN       NaN           0.852 148.031 -7503.382
+          VRP    holdout    2.0  1687          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            81.783   1.108             NaN       NaN           0.852 148.031 -7503.382
+          VRP    holdout    3.0  1687          NaN         NaN      NaN     NaN     NaN    NaN           NaN          NaN                NaN            81.783   1.108             NaN       NaN           0.852 148.031 -7503.382
+06:44:51 {
+ "stages": {
+  "FXMOM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "DOLLAR": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "VIXREV-SPY": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "VIXREV-QQQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "HALLOWEEN-SPY": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "PREHOL-SPY": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "VRP": {
+   "reached": "holdout",
+   "passed": false
+  }
+ },
+ "holdout_passers": [],
+ "vixrev_triggers": {
+  "SPY/2001": 222,
+  "QQQ/2001": 237
+ }
+}

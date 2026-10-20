@@ -235,6 +235,20 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
 - **R237 (tsmom_v1)** tested queue M194, cross-asset time-series momentum on 23 equity-ETF, FX, metal and bond
   series. Discovery 2001-2012 gave Sharpe 0.28 (t 1.00), with 2008 the only big year. FX (spot only) and bonds
   (unadjusted futures) added nothing. NULL. [Findings](../experiments/tsmom_v1/FINDINGS.md).
+- **R238 (xsbattery_v1)** was the owner's brute-force crypto pass: eight untested cross-sectional features (weekly
+  momentum, 28-day "reversal", daily MAX, IVOL, skew, 52-week-high nearness, funding slope, Abdi-Ranaldo spread) as
+  one-week spread books, 16 trials. None reached t 2 in discovery. The best was mom7/H, +9.0 bp/day with t 1.77.
+  Five of the features are one bet, long the recent winners and high-volatility coins, and it paid only in 2021. NULL.
+  [Findings](../experiments/xsbattery_v1/FINDINGS.md).
+- **R239 (fxindex_v1)** was a forex and US-index battery with 7 trials. Discovery 2001-2012 results:
+  - VIX reversal on QQQ: +2.9 bp/day of alpha, t 1.94 (a near miss).
+  - G10 spot momentum: t 1.20.
+  - Halloween: t 1.32.
+  - Dollar trend and pre-holiday: nothing.
+
+  The variance risk premium (a measurement, not a book) was positive on 82-85% of days in every window. Its t was
+  2.55 in discovery and 5.71 in validation, but 1.11 on the 2020-26 holdout, because of March 2020. NULL; follow-ups
+  M224-M226. [Findings](../experiments/fxindex_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -340,6 +354,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,905 after R237 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,928 after R239 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

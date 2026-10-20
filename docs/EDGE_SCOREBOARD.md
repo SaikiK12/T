@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R237. Program trials: 9,471,905. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R239. Program trials: 9,471,928. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -54,6 +54,9 @@ overstatements are corrected here.
 | **US index calendar** (turn-of-month, overnight drift; SPY/QQQ, first non-crypto lane) | Discovery 2000-12: TOM alpha +1.2 to +1.7 bp/day, t 1.2-1.5; QQQ overnight +1.8, t 1.36 (R235) | 2013-2026 not read | TOM alpha +1.0 at 3x; overnight negative at 2x | not on MEXC (ETFs or index futures) | none | NULL |
 | **Amihud illiquidity** (long illiquid / short liquid, one-week hold, queue M002) | Discovery +11.9 bp/day, t 2.28; validation -9.2, t -1.07 (R236) | Not read | Costs 0.8 bp/day; loss is gross | MEXC lists more illiquid coins (untested there) | none | NULL |
 | **Cross-asset trend** (12-month TSMOM, 23 ETF/FX/metal/bond series, queue M194) | Discovery 2001-12: Sharpe 0.28, t 1.00 (R237) | 2013-2026 not read | Costs 0.03-0.1 bp/day | not on MEXC | none | NULL |
+| **Crypto cross-sectional battery** (weekly momentum and 28 d, daily MAX, IVOL, skew, 52-week high, funding slope, Abdi-Ranaldo spread; queue M034/M171/M178/M180/M182) | All 16 books fail discovery; best mom7/H +9.0 bp/day, t 1.77; five features are one high-volatility/winner tilt that paid in 2021 (R238) | Not read | Costs 0.6-1.8 bp/day; no verdict changes at 3x | Same coins on MEXC | none | NULL |
+| **Forex and index battery** (G10 spot momentum, dollar trend, VIX reversal, Halloween, pre-holiday; queue M193/M216/M218/M219) | Discovery 2001-12: VIXREV-QQQ alpha +2.9 bp/day, t 1.94; FXMOM t 1.20; Halloween t 1.32; others below t 0.5 (R239) | 2013-2026 not read | Costs at most 0.2 bp/day | not on MEXC (ETFs, FX) | none | NULL; VIXREV-QQQ follow-up M226 |
+| **Variance risk premium, S&P 500** (measurement; queue M215) | VIX² minus next-month realised variance: +116 %², t 2.55; validation +70, t 5.71 (R239) | Holdout +82, t 1.11 (2020 loss) | Not tradeable with free data before 2011 | not on MEXC | none | Measured, not a book; short-vol lane M224 |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |
 
