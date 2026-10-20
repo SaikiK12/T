@@ -1,0 +1,36 @@
+{
+ "late_threshold_min": 60,
+ "hours": 456,
+ "ontime_days": 0,
+ "strict_ontime_days": 0,
+ "ontime_days_with_late_hours": [],
+ "ontime_hour_lag_min": {
+  "n": 0
+ },
+ "order": {
+  "flow72_fwd2": {
+   "rows": 36,
+   "problems": {}
+  },
+  "flow72_fwd3": {
+   "rows": 36,
+   "problems": {}
+  },
+  "mexc_fwd": {
+   "rows": 36,
+   "problems": {}
+  },
+  "mexc_fwd_sq": {
+   "rows": 18,
+   "problems": {}
+  },
+  "carry_fwd": {
+   "rows": 36,
+   "problems": {}
+  },
+  "vt_fwd": {
+   "rows": 54,
+   "problems": {}
+  }
+ }
+}

@@ -183,6 +183,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   Its multiplier reproduces R217's exactly. Today it says to run A at 0.69 of base size, X2 at 0.63 and B at 0.99.
   In the replay it cut A's drawdown from 2.7% to 1.6%, and its total from +4.7% to +2.8%. It decides at 365
   on-time days whether it keeps the lower drawdown at a similar Sharpe.
+- **Processing lag** (`experiments/forward_lag`, a report, not a lane). The frozen lanes call a day on time by
+  its date. This report adds how long after each bar closed R200 computed the hour (from R200's own `run_at`). A day is
+  *strict on time* when all 24 hours were computed within 60 minutes. FINDINGS report the strict subset beside each
+  frozen decision, which stays unchanged. It also checks that day tickets were appended in order without gaps
+  (Codex's R225 note on #7). On 2026-10-19 (replay), 19 hours were backfilled late after the session paused.
 - **R226 (tradesize_v1)** tested Codex's call that trade count and mean print size rank returns beyond quote volume
   (`NEXT_SEARCH_SPACE.md` block C). All 6 spread books fail discovery.
   - The count surge correlates 0.99 with the quote-volume surge, with a residual of +0.3 bp/day.
