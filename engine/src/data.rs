@@ -87,6 +87,28 @@ impl Series {
             delisted_in_hold: self.last[(n - 1) as usize] < xr,
         })
     }
+    /// `leg` with a protective cover: exit at the first traded close in (r0, r0 + h] that has moved `stop` or more
+    /// against the position (up for a short, down for a long); funding stops at that close. stop 0 is `leg` itself.
+    /// The flag says the cover fired.
+    pub fn leg_stop(&self, r0: i64, h: i64, short: bool, stop: f64) -> Option<(Leg, bool)> {
+        let l = self.leg(r0, h)?;
+        if stop <= 0.0 {
+            return Some((l, false));
+        }
+        let entry = self.close[r0 as usize];
+        for r in r0 + 1..=r0 + h {
+            if !self.traded[r as usize] {
+                continue;
+            }
+            let ret = self.close[r as usize] / entry - 1.0;
+            if (short && ret >= stop) || (!short && ret <= -stop) {
+                let n = self.close.len() as i64;
+                return Some((Leg { gross: -ret, funding: self.fund(r0, r), stale_exit: false,
+                                   delisted_in_hold: self.last[(n - 1) as usize] < r }, true));
+            }
+        }
+        Some((l, false))
+    }
     /// Settlements in (entry, exit]: rows r0 + 2 .. xr + 1.
     pub fn fund(&self, r0: i64, xr: i64) -> f64 {
         self.cumf[(xr + 2) as usize] - self.cumf[(r0 + 2) as usize]
@@ -250,5 +272,32 @@ mod tests {
         assert!(l.stale_exit);
         assert!(s.leg(0, 1).is_none());
         assert!(s.leg(3, 2).is_none());                     // xr + 1 >= n
+    }
+    #[test]
+    fn stop_rules() {
+        // entry close 10 at row 1; row 2 +30%, row 3 -40%, row 4 not traded, row 5 +50%
+        let close = vec![9.0, 10.0, 13.0, 6.0, f64::NAN, 15.0, 15.0];
+        let traded = vec![true, true, true, true, false, true, true];
+        let last = vec![0, 1, 2, 3, 3, 5, 6];
+        let mut cumf = vec![0.0; 8];
+        for k in 1..8 {
+            cumf[k] = cumf[k - 1] + 0.01;
+        }
+        let s = Series { close, traded, last, cumf };
+        // no stop is exactly `leg`
+        let (l, hit) = s.leg_stop(1, 4, true, 0.0).unwrap();
+        assert!(!hit && (l.gross - s.leg(1, 4).unwrap().gross).abs() < 1e-15);
+        // short, 20% cover: fires at row 2 (+30%), funding rows 3..3 only
+        let (l, hit) = s.leg_stop(1, 4, true, 0.2).unwrap();
+        assert!(hit && (l.gross + 0.3).abs() < 1e-12 && (l.funding - 0.01).abs() < 1e-12 && !l.stale_exit);
+        // short, 40% cover: never reached (row 5 is beyond h = 3), so the plain exit at row 4 -> last close row 3
+        let (l, hit) = s.leg_stop(1, 3, true, 0.4).unwrap();
+        assert!(!hit && (l.gross - 0.4).abs() < 1e-12 && l.stale_exit);
+        // long, 35% cover: fires at row 3 (-40%)
+        let (l, hit) = s.leg_stop(1, 4, false, 0.35).unwrap();
+        assert!(hit && (l.gross - 0.4).abs() < 1e-12 && (l.funding - 0.02).abs() < 1e-12);
+        // the cover is checked at the exit bar too
+        let (_, hit) = s.leg_stop(1, 1, true, 0.3).unwrap();
+        assert!(hit);
     }
 }

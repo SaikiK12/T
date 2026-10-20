@@ -69,6 +69,8 @@ def check(lane, text):
             subprocess.run(cmd, cwd=ROOT, check=True, capture_output=True)
             for path in files:
                 built = Path(d) / Path(path).name
+                if (ROOT / path).parent.resolve() != Path(lane).resolve():
+                    continue                        # the rebuild writes the lane's own files; others are hashed only
                 if built.exists() and built.read_bytes() != (ROOT / path).read_bytes():
                     raise SystemExit(f"rebuilt {Path(path).name} differs from the frozen file")
     log(f"{len(files)} inputs match the frozen hashes" + ("; rebuild is byte-identical" if rebuild else ""))

@@ -42,6 +42,7 @@ fn d_hcost() -> f64 { 0.001 }
 fn d_lines() -> Vec<String> { vec!["net".into()] }
 fn d_null() -> String { "rc_pass".into() }
 fn d_y25() -> String { "2025-01-01".into() }
+fn d_stops() -> Vec<f64> { vec![0.0] }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 pub struct Spec {
@@ -87,6 +88,10 @@ pub struct Spec {
     /// redenominations and token swaps (COCOS 1:1000 in 2021) are not returns.
     #[serde(default)]
     pub max_bar_jump: f64,
+    /// Protective covers to try, as fractions of the entry price (0 = hold to the horizon). Each is its own strategy:
+    /// exit at the first hourly close that has moved this much against the position (`Series::leg_stop`).
+    #[serde(default = "d_stops")]
+    pub stops: Vec<f64>,
 }
 
 #[derive(Clone, Debug)]
@@ -113,6 +118,8 @@ pub struct PLeg {
     pub stale: Vec<bool>,
     pub delisted: Vec<bool>,
     pub premove: f64,        // close(r0 - 1) -> close(r0), NaN if r0 - 1 did not trade
+    pub xs: Vec<f64>,        // per (direction, horizon, nonzero stop): gross + funding in the short's sign
+    pub xhit: Vec<bool>,     // the cover fired
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize)]
@@ -121,12 +128,19 @@ pub struct Strat {
     pub dir: String,
     pub h: i64,
     pub line: String,
+    pub stop_bp: i64, // protective cover in basis points of the entry price, 0 = none
 }
 
 impl Strat {
     pub fn label(&self) -> String {
-        format!("{} {} {}h{}", self.kind, self.dir, self.h, if self.line == "net" { String::new() } else { format!(" {}", self.line) })
+        format!("{} {} {}h{}{}", self.kind, self.dir, self.h,
+            if self.line == "net" { String::new() } else { format!(" {}", self.line) },
+            if self.stop_bp == 0 { String::new() } else { format!(" stop{}%", self.stop_bp as f64 / 100.0) })
     }
+}
+
+fn bp(x: f64) -> i64 {
+    (x * 10_000.0).round() as i64
 }
 
 fn read_events(spec: &Spec) -> Result<Vec<Ev>> {
@@ -174,6 +188,12 @@ pub struct Family {
 
 pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
     let axis = Axis::new(&spec.start, &spec.end)?;
+    if spec.stops.is_empty() || spec.stops.iter().any(|&x| !(0.0..10.0).contains(&x)) {
+        return Err(anyhow!("stops must be fractions in [0, 10), with 0 for no cover"));
+    }
+    if spec.stops.iter().any(|&x| x > 0.0) && spec.lines.iter().any(|l| l == "hedged") {
+        return Err(anyhow!("a cover with the hedged line is not implemented (the hedge would need the same exit)"));
+    }
     if data::ms(&spec.start)? < data::ms("2021-01-01")? {
         return Err(anyhow!("rows before 2021-01-01 are the reserved 2020 sample (docs/GATES.md); not read here"));
     }
@@ -232,7 +252,7 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
         let mut leg = PLeg {
             notice: e.notice.clone(), kind: e.kind.clone(), ticker: e.ticker.clone(), t0: e.t, r0,
             venue: spec.venues[k].name.clone(), sym: e.syms[k].clone(), sg: vec![], hedge: vec![], stale: vec![],
-            delisted: vec![],
+            delisted: vec![], xs: vec![], xhit: vec![],
             premove: if s.traded_at(r0 - 1) { s.close[r0 as usize] / s.close[(r0 - 1) as usize] - 1.0 } else { f64::NAN },
         };
         for &h in &spec.horizons {
@@ -252,6 +272,15 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
                 }
             }
         }
+        for short in [true, false] {
+            for &h in &spec.horizons {
+                for &st in spec.stops.iter().filter(|&&x| x > 0.0) {
+                    let (v, hit) = s.leg_stop(r0, h, short, st).map_or((f64::NAN, false), |(l, hit)| (l.gross + l.funding, hit));
+                    leg.xs.push(v);
+                    leg.xhit.push(hit);
+                }
+            }
+        }
         legs.push(leg);
     }
     Ok(Family { events_in: evs.len(), spec, suspect, sources, legs, no_market })
@@ -262,12 +291,25 @@ impl Family {
         self.spec.horizons.iter().position(|&x| x == h).unwrap()
     }
 
+    /// Index into `PLeg::xs` for a strategy with a cover.
+    fn xidx(&self, s: &Strat) -> usize {
+        let nz: Vec<i64> = self.spec.stops.iter().filter(|&&x| x > 0.0).map(|&x| bp(x)).collect();
+        let k = nz.iter().position(|&b| b == s.stop_bp).unwrap();
+        let d = if s.dir == "short" { 0 } else { 1 };
+        (d * self.spec.horizons.len() + self.hidx(s.h)) * nz.len() + k
+    }
+
+    /// Gross + funding of one leg in the short's sign, with the strategy's cover.
+    fn leg_sg(&self, l: &PLeg, s: &Strat) -> f64 {
+        if s.stop_bp == 0 { l.sg[self.hidx(s.h)] } else { l.xs[self.xidx(s)] }
+    }
+
     /// Net of one leg for a strategy at cost multiple m (1-based), NaN if not priceable.
     pub fn leg_net(&self, l: &PLeg, s: &Strat, m: usize) -> f64 {
         let i = self.hidx(s.h);
         let c = self.spec.costs[m - 1];
         let sign = if s.dir == "short" { 1.0 } else { -1.0 };
-        let mut v = sign * l.sg[i] - c;
+        let mut v = sign * self.leg_sg(l, s) - c;
         if s.line == "hedged" {
             v += sign * l.hedge[i] - self.spec.hedge_cost * m as f64;
         }
@@ -313,8 +355,10 @@ impl Family {
             }
             for d in &self.spec.directions {
                 for &h in &self.spec.horizons {
-                    for line in &self.spec.lines {
-                        out.push(Strat { kind: k.clone(), dir: d.clone(), h, line: line.clone() });
+                    for &st in &self.spec.stops {
+                        for line in &self.spec.lines {
+                            out.push(Strat { kind: k.clone(), dir: d.clone(), h, line: line.clone(), stop_bp: bp(st) });
+                        }
                     }
                 }
             }
@@ -376,14 +420,14 @@ impl Family {
 
     /// Same instruments, same hour of day, a random day 7-60 days before (180 if fewer than 10 admissible days).
     pub fn matched_null(&self, s: &Strat, seed: u64) -> NullResult {
-        let i = self.hidx(s.h);
         let obs = self.obs(s, 1);
+        let stop = s.stop_bp as f64 / 10_000.0;
         let mut cand: Vec<Vec<f64>> = Vec::new();
         let mut kept_obs = Vec::new();
         let sign = if s.dir == "short" { 1.0 } else { -1.0 };
         let hedge = self.spec.hedge.as_ref().and_then(|h| self.sources[0].get(h));
         for (r0, o) in &obs {
-            let legs: Vec<&PLeg> = self.legs.iter().filter(|l| l.kind == s.kind && l.r0 == *r0 && l.sg[i].is_finite()).collect();
+            let legs: Vec<&PLeg> = self.legs.iter().filter(|l| l.kind == s.kind && l.r0 == *r0 && self.leg_sg(l, s).is_finite()).collect();
             let ser: Vec<_> = legs.iter().map(|l| self.source(&l.venue).get(&l.sym).unwrap()).collect();
             let mut vals = Vec::new();
             for kmax in [60i64, 180] {
@@ -393,11 +437,11 @@ impl Family {
                     if r < 1 || !ser.iter().all(|x| x.traded_at(r)) {
                         continue;
                     }
-                    let xs: Vec<_> = ser.iter().map(|x| x.leg(r, s.h)).collect();
+                    let xs: Vec<_> = ser.iter().map(|x| x.leg_stop(r, s.h, s.dir == "short", stop)).collect();
                     if xs.iter().any(|x| x.is_none()) {
                         continue;
                     }
-                    let sg = stats::mean(&xs.iter().map(|x| { let x = x.unwrap(); x.gross + x.funding }).collect::<Vec<_>>());
+                    let sg = stats::mean(&xs.iter().map(|x| { let x = x.unwrap().0; x.gross + x.funding }).collect::<Vec<_>>());
                     let mut v = sign * sg - self.spec.costs[0];
                     if s.line == "hedged" {
                         let hv = hedge.map(|b| { let (ret, f) = b.long(r, s.h); ret - f }).unwrap_or(f64::NAN);
@@ -464,6 +508,7 @@ impl Family {
             }
         }
         let gross = Strat { line: "net".into(), ..s.clone() };
+        let hit = |l: &PLeg| s.stop_bp > 0 && l.xhit[self.xidx(s)];
         Robust {
             drop_top3_legs: st(drop),
             gross: st(self.obs_with(&gross, &|l| self.leg_net(l, &gross, 1) + self.spec.costs[0], &|_| true)),
@@ -472,6 +517,7 @@ impl Family {
             premove_in_direction: st(self.obs_with(s, &|l| sign * l.premove, &|_| true)),
             stale_exits: self.legs.iter().filter(|l| l.kind == s.kind && l.sg[i].is_finite() && l.stale[i]).count(),
             delisted_in_hold: self.legs.iter().filter(|l| l.kind == s.kind && l.sg[i].is_finite() && l.delisted[i]).count(),
+            covered: self.legs.iter().filter(|l| l.kind == s.kind && self.leg_sg(l, s).is_finite() && hit(l)).count(),
         }
     }
 }
@@ -517,6 +563,7 @@ pub struct Robust {
     pub premove_in_direction: Stats,
     pub stale_exits: usize,
     pub delisted_in_hold: usize,
+    pub covered: usize, // legs whose cover fired
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -614,12 +661,22 @@ fn write_legs(fam: &Family, path: &Path) -> Result<()> {
     for h in &fam.spec.horizons {
         hdr.extend([format!("sg_{h}"), format!("hedge_{h}"), format!("stale_{h}"), format!("delisted_{h}")]);
     }
+    for d in ["short", "long"] {
+        for h in &fam.spec.horizons {
+            for st in fam.spec.stops.iter().filter(|&&x| x > 0.0) {
+                hdr.extend([format!("{d}_{h}_stop{}", bp(*st)), format!("{d}_{h}_stop{}_hit", bp(*st))]);
+            }
+        }
+    }
     w.write_record(&hdr)?;
     for l in &fam.legs {
         let mut r = vec![l.notice.clone(), l.kind.clone(), l.ticker.clone(), l.t0.to_string(), l.r0.to_string(),
                          l.venue.clone(), l.sym.clone(), num(l.premove)];
         for i in 0..fam.spec.horizons.len() {
             r.extend([num(l.sg[i]), num(l.hedge[i]), l.stale[i].to_string(), l.delisted[i].to_string()]);
+        }
+        for (v, hit) in l.xs.iter().zip(&l.xhit) {
+            r.extend([num(*v), hit.to_string()]);
         }
         w.write_record(&r)?;
     }
@@ -634,15 +691,32 @@ fn num(x: f64) -> String {
 fn write_table(rep: &Report, path: &Path) -> Result<()> {
     let mut w = csv::Writer::from_path(path)?;
     w.write_record(["label", "kind", "dir", "h", "line", "n", "legs", "mean_1x_pct", "median_pct", "hit", "t", "p_rc",
-        "half1_pct", "half2_pct", "y2025_pct", "y2025_n", "mean_2x_pct", "mean_3x_pct", "null_p", "pass"])?;
+        "half1_pct", "half2_pct", "y2025_pct", "y2025_n", "mean_2x_pct", "mean_3x_pct", "null_p", "pass", "stop_pct"])?;
     for r in &rep.strategies {
         let s = &r.stats[0];
         let m = |k: usize| r.stats.get(k).map(|x| num(x.mean_pct)).unwrap_or_default();
         w.write_record([r.label.clone(), r.strat.kind.clone(), r.strat.dir.clone(), r.strat.h.to_string(),
             r.strat.line.clone(), s.n.to_string(), s.legs.to_string(), num(s.mean_pct), num(s.median_pct), num(s.hit),
             num(s.t), num(r.p_rc), num(s.half1_pct), num(s.half2_pct), num(s.y2025_pct), s.y2025_n.to_string(), m(1), m(2),
-            r.null.as_ref().map(|n| num(n.p)).unwrap_or_default(), r.pass.to_string()])?;
+            r.null.as_ref().map(|n| num(n.p)).unwrap_or_default(), r.pass.to_string(),
+            format!("{}", r.strat.stop_bp as f64 / 100.0)])?;
     }
     w.flush()?;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn labels_and_stops() {
+        let s = Strat { kind: "neg1".into(), dir: "short".into(), h: 72, line: "net".into(), stop_bp: 0 };
+        assert_eq!(s.label(), "neg1 short 72h");
+        let s = Strat { stop_bp: bp(0.2), ..s };
+        assert_eq!(s.label(), "neg1 short 72h stop20%");
+        let s = Strat { stop_bp: bp(0.075), ..s };
+        assert_eq!(s.label(), "neg1 short 72h stop7.5%");
+        let spec: Spec = toml::from_str("name='x'\nevents='e'\nvenues=[]\nhorizons=[1]\ndirections=['short']\ncosts=[0.004]\nreps=1\nseed=1\nout='o'").unwrap();
+        assert_eq!(spec.stops, vec![0.0]); // old specs keep their strategies
+    }
 }
