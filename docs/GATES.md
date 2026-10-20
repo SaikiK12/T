@@ -31,6 +31,34 @@ at 1x costs, which is also gate 0 now that the holdout is spent.
 - **Power:** the PREREG states the days needed for 80% power at the Sharpe it expects. If that is longer than the
   decision date below, the lane says so and is labelled a futility screen.
 
+## Reserved samples (gate 1 from archive data, decided 2026-10-20)
+These are two samples nobody in the lab has read for the question at hand. They give gate-1 answers in days instead of
+waiting for forward days. Each is spent in scheduled batches, never by a single lane.
+
+**Samples**
+- **2020 crypto.** Binance perps 2020-01-01..2020-12-31: 81 symbols with price, funding, premium and taker volume.
+  There are no top-trader ratios before 2021.
+  - The research panel starts on 2021-01-01, and no crypto lane PREREG reads 2020.
+  - Partial reads, disclosed:
+    - R244 used BTCUSDT 2020 weekend moves as a predictor of QQQ;
+    - the old session's prop-challenge sims (R143/R144) used 2020-22 starts of the chase rules.
+
+    So a BTC-only time-series rule or a chase rule is only partly fresh there. Altcoin and cross-sectional rules are
+    fresh.
+  - `lab.panel.load_panel` raises for rows before 2021 unless it gets a frozen PREREG that contains the token
+    `RESERVED-2020-READ`.
+- **MEXC-only coins**, 2025-04-01 onward: MEXC perps with no Binance perp in the archive. The set is fixed by a frozen
+  PREREG before the first read.
+
+**Rules**
+- **Batch reads only.** One frozen batch PREREG lists every candidate, with Bonferroni over the batch, 1x/2x/3x costs,
+  a trimmed mean and leave-two-coins-out. Each sample is read once per batch.
+- **Read budget:** 4 batches per sample, about every 2 weeks from 2026-11-03. After the 4th, the sample is spent like
+  the old holdout. The panel counts the reads.
+- **Pre-committed entries:** R263's best single strategy and its walk-forward stream enter the first batch whatever
+  they score, so the choice cannot follow the result.
+- **What a pass earns:** a frozen forward paper lane, labelled manual-web or API by the execution mode it needs.
+
 ## Rules for gate 2
 - `go_real()` at the PREREG's day count, never earlier. `forward_tick.py` now writes `verdict: PENDING` until day 90.
 - Costs at 1x, 2x and 3x of MEXC's measured cost (R224), plus the API fee of 6 / 8 bp in force since 2026-06-01.

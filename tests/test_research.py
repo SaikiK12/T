@@ -86,3 +86,27 @@ class UniverseTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReservedWindowTests(unittest.TestCase):
+    def test_reserved_window_needs_a_frozen_prereg_that_declares_it(self):
+        import tempfile
+        from pathlib import Path
+        from lab import prereg
+        panel.check_reserved(panel.START)  # the normal start needs nothing
+        with self.assertRaises(PermissionError):
+            panel.check_reserved("2020-01-01")
+        with tempfile.TemporaryDirectory() as d:
+            plain, declared = Path(d) / "a" / "PREREG.md", Path(d) / "b" / "PREREG.md"
+            for f, text in ((plain, "no token"), (declared, f"reads {panel.RESERVED_TOKEN}")):
+                f.parent.mkdir()
+                f.write_text(text)
+            with self.assertRaises(prereg.PreregError):
+                panel.check_reserved("2020-01-01", declared)   # not frozen yet
+            prereg.freeze(plain)
+            prereg.freeze(declared)
+            with self.assertRaises(PermissionError):
+                panel.check_reserved("2020-01-01", plain)
+            panel.check_reserved("2020-01-01", declared)
+            with self.assertRaises(PermissionError):
+                panel.load_panel(["BTCUSDT"], root=d, start="2020-06-01")

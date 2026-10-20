@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R262. Program trials: 9,472,061 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R264. Program trials: 9,472,061 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -102,6 +102,7 @@ overstatements are corrected here.
 | Refinement | Effect | Where |
 |---|---|---|
 | Dispersion x alt-bear half-size gate on A/B/X2 (momentum-crash rule) | Sharpe -0.05 / -0.00 / -0.05 in discovery, -0.05 / -0.02 / -0.04 in validation; the gated days were good days for the books | R260 |
+| Bridging zero-filled gaps (PR #25 audit item 4) | No change: no held position meets a gap in discovery or validation for A, B or X2 | R264 |
 | Square-root impact at size (Binance volumes) | Under 1.5% of net at $10k; A/X2 keep half their net up to about $12M, B up to $129M | R262 |
 | X2 agreement sizing on A | Sharpe +0.15 / +0.29 / +0.45 (disc / val / holdout); misses the frozen bar | R217 |
 | Volatility target on A | Holdout max DD 47% to 27%, Sharpe flat. Now runs forward on A, B and X2 (R225); today's multiplier A 0.69, X2 0.63, B 0.99 | R217, R225 |
