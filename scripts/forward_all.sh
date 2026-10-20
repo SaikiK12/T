@@ -6,7 +6,8 @@
 # R266 unlocks_fwd (the unlock short on MEXC paper, events from the recorded calendar snapshot). R268 delist_fwd (the
 # spot delisting-notice short on MEXC paper) and R270 montag_fwd (the Monitoring Tag short at +24 h) run right after the
 # notice recorder, so their tickets precede the next hour.
-# Last, the processing-lag report (experiments/forward_lag) and the panel (docs/PANEL.md).
+# Last, the processing-lag report (experiments/forward_lag), the panel (docs/PANEL.md) and the dashboard's datasets
+# (dashboard/data/, uploaded to the Control Room artifact by the session's loop tick).
 # Before the lanes, the point-in-time recorders (MEXC funding/ticker snapshot, Binance notices, unlock calendar);
 # after them, the recorder digest (experiments/recorders/journal/digests.csv).
 cd "$(dirname "$0")/.." || exit 1
@@ -33,4 +34,5 @@ timeout 300 $PY scripts/forward_vt.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 600 $PY scripts/forward_unlocks.py >> experiments/unlocks_fwd/tick.log 2>&1
 timeout 120 $PY scripts/forward_lag.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 120 $PY scripts/panel.py >> experiments/vt_fwd/tick.log 2>&1
+timeout 120 $PY scripts/dashboard_data.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 300 $PY scripts/record_digest.py >> experiments/recorders/tick.log 2>&1

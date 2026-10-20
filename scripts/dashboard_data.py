@@ -8,6 +8,11 @@ re-runs this script and uploads the files whose hash changed (dashboard/data/man
 usage: python scripts/dashboard_data.py            # export the datasets
        python scripts/dashboard_data.py --docs     # write the store documents (dashboard/data/docs/) for the
                                                   # urls in dashboard/data/uploaded.json and the page
+       python scripts/dashboard_data.py --changed  # the datasets whose export differs from the uploaded copy
+       python scripts/dashboard_data.py --record program=/_blob/<id> ...   # after uploading: remember the urls
+                                                  # and write docs/<id>.update.json ({source, updated}) for each
+Refresh in a loop tick: --changed, upload each listed file (Artifact publish, asset), --record the urls, then one
+ArtifactData batch of `update` writes from docs/<id>.update.json pinned to the versions a `list datasets` shows.
 """
 import csv
 import hashlib
@@ -28,7 +33,8 @@ ISO = lambda t: time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(t))
 FORWARD = [
     ("R215", "mexc_fwd", "flow books A and B, one bar late", "MEXC", "API", 90, "go_real at 90 on-time days"),
     ("R218", "mexc_fwd_sq", "flow book X2 (k squared)", "MEXC", "API", 90, "go_real at 90 on-time days"),
-    ("R220", "carry_fwd", "funding carry (R191 rule)", "MEXC + Binance", "manual-web", 90, "go_real at 90 on-time days"),
+    ("R220", "carry_fwd", "funding carry (R191 rule)", "MEXC + Binance", "manual-web", 90,
+     "go_real at 90 on-time days"),
     ("R200", "flow72_fwd2", "flow books A and B", "Binance", "API", 90, "go_real at 90 scored days, NW t >= 2"),
     ("R214", "flow72_fwd3", "A and B one bar late (delay check)", "Binance", "API", 90, "same days as R200"),
     ("R225", "vt_fwd", "volatility target on A, B, X2", "MEXC", "API", 90, "reported beside R215/R218"),
@@ -238,7 +244,8 @@ def data_sources():
                 n, size, newest = n + 1, size + st.st_size, max(newest, st.st_mtime)
         age = round((NOW - newest) / 3600, 1) if newest else None
         limit = fresh_h.get(d.name)
-        out.append({"source": d.name, "files": n, "size_gb": round(size / 1e9, 3), "newest_at": ISO(newest) if newest else None,
+        out.append({"source": d.name, "files": n, "size_gb": round(size / 1e9, 3),
+                    "newest_at": ISO(newest) if newest else None,
                     "age_h": age, "kind": "recorded live" if limit else "archive download",
                     "stale": bool(limit and age is not None and age > limit), "provenance": d.name in prov})
     return out
@@ -269,7 +276,8 @@ def jobs():
         bad = [l for l in tail if re.search(r"Traceback|Error|FAILED", l)]
         age = round((NOW - log.stat().st_mtime) / 3600, 2)
         out.append({"key": lane, "job": lane, "kind": "forward tick",
-                    "state": "error in last lines" if bad else "ticked", "at": ISO(log.stat().st_mtime), "age_h": age, "ok": not bad and age < 2,
+                    "state": "error in last lines" if bad else "ticked", "at": ISO(log.stat().st_mtime), "age_h": age,
+                    "ok": not bad and age < 2,
                     "note": (bad[-1] if bad else (tail[-1] if tail else ""))[:160]})
     return out
 
@@ -282,8 +290,8 @@ TITLES = {
                    "funnel stage and what decides it next."),
     "strategies": ("Tested event strategies", "Per-event stats at 1x/2x/3x cost for every strategy in a qx family "
                    "report or an event lane's verdict (experiments/*/results)."),
-    "forward_lanes": ("Forward paper lanes", "Each forward paper lane's progress toward its decision and its paper net, "
-                      "from its journal."),
+    "forward_lanes": ("Forward paper lanes", "Each forward paper lane's progress toward its decision and its paper "
+                      "net, from its journal."),
     "forward_days": ("Daily paper returns", "Net return per day at 1x/2x/3x cost for each daily book, replayed or "
                      "traded on time, from the forward journals."),
     "event_tickets": ("Event tickets", "Unlock, delisting and Monitoring Tag paper tickets, and the unlocks next on "
@@ -303,7 +311,8 @@ def docs():
     d.mkdir(exist_ok=True)
     for k, url in urls.items():
         title, desc = TITLES[k]
-        doc = {"title": title, "description": desc + " Exported by scripts/dashboard_data.py from the lab's repository.",
+        doc = {"title": title,
+               "description": desc + " Exported by scripts/dashboard_data.py from the lab's repository.",
                "source": {"kind": "file", "url": url, "name": f"{k}.json"},
                "updated": {"at": man["generated_at"], "by": "Claude (lab loop)"},
                "schedule": "Re-exported from the lab repository by the hourly loop tick", "staleAfterHours": 6}
@@ -312,10 +321,35 @@ def docs():
     print(f"{len(urls)} dataset docs and the page in {d.relative_to(ROOT)}")
 
 
+def changed():
+    man = json.loads((OUT / "manifest.json").read_text())["sets"]
+    up = read_json(OUT / "uploaded_sha.json")
+    print(json.dumps({k: str(ROOT / v["file"]) for k, v in man.items() if up.get(k) != v["sha256"]}))
+
+
+def record(pairs):
+    man = json.loads((OUT / "manifest.json").read_text())
+    urls, shas = read_json(OUT / "uploaded.json"), read_json(OUT / "uploaded_sha.json")
+    (OUT / "docs").mkdir(exist_ok=True)
+    for pair in pairs:
+        k, url = pair.split("=", 1)
+        urls[k], shas[k] = url, man["sets"][k]["sha256"]
+        upd = {"source": {"kind": "file", "url": url, "name": f"{k}.json"},
+               "updated": {"at": man["generated_at"], "by": "Claude (lab loop)"}}
+        (OUT / "docs" / f"{k}.update.json").write_text(json.dumps(upd))
+    (OUT / "uploaded.json").write_text(json.dumps(urls, indent=1))
+    (OUT / "uploaded_sha.json").write_text(json.dumps(shas, indent=1))
+    print(f"recorded {len(pairs)} uploads")
+
+
 def main():
     import sys
     if "--docs" in sys.argv:
         return docs()
+    if "--changed" in sys.argv:
+        return changed()
+    if "--record" in sys.argv:
+        return record(sys.argv[sys.argv.index("--record") + 1:])
     sys.path.insert(0, str(ROOT))
     OUT.mkdir(parents=True, exist_ok=True)
     rnd = rounds()
