@@ -375,6 +375,18 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The only held gaps are the archive's last row in the spent window (35 / 4 / 35 positions).
   - Wider universes and event lanes near delistings are not covered; they must use `missing="raise"` or bridge.
   - DATA_PASS. [Findings](../experiments/accounting_v1/FINDINGS.md).
+- **R265 (unlocks_v1)** replicated the old session's unlock short (E01): short at the close of D-7, cover at the close
+  of an insider or private-sale cliff unlock of at least 1% of max supply.
+  - 422 events on 69 Binance perps, 2021-26: +3.24% / +3.04% / +2.84% net per event at 1x/2x/3x, week-cluster t
+    3.19. Matched-date null p 0.0005; both halves positive; positive without the top 3.
+  - Dose-response is monotone. The tail is heavy: six squeezes lost over 40%.
+  - Gate 0 only: the old session read these years, and the calendar is not point-in-time. Codex's daily-bar check
+    (R258, PR #29) agrees.
+  - PARTIAL (frozen verdict REPLICATES). [Findings](../experiments/unlocks_v1/FINDINGS.md).
+- **R266 (unlocks_fwd)** runs the same rule forward on MEXC paper from 2026-10-21.
+  - Events come from the daily calendar snapshot recorded since 2026-10-20, and each ticket is frozen before its
+    entry bar.
+  - Decision at 120 scored tickets. RUNNING. [PREREG](../experiments/unlocks_fwd/PREREG.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -480,6 +492,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,061 after R264 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,072 after R266 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

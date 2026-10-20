@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 16:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 16:32 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -22,11 +22,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | stage | now |
 |---|---|
 | Ideas in the queue, untested | 30 |
-| Ideas partly tested | 31 |
-| Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 82 (NULL 56, PENDING 11, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
-| Program trials | 9,472,071 |
-| Forward paper lanes running | 8 |
+| Ideas partly tested | 33 |
+| Ideas blocked (data, download, compute) | 73 |
+| Rounds in the registry | 83 (NULL 56, PENDING 12, CONFIRMED 7, PARTIAL 4, DATA_PASS 4) |
+| Program trials | 9,472,072 |
+| Forward paper lanes running | 9 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
 | Next decision date | 2027-01-18: first 90-on-time-day looks (R215, R218, R220, R221 futility) |
@@ -78,7 +78,6 @@ Processing lag of on-time hours: 16 hours, median 109.10833333333335 min, max 25
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R253 | optimizer_v1 | DONE | NULL | 3 |
 | R255 | cascmkt_v1 | DONE | NULL | 1 |
 | R256 | dow_v1 | DONE | NULL | 29 |
 | R260 | dispgate_v1 | DONE | NULL | 3 |
@@ -86,5 +85,6 @@ Processing lag of on-time hours: 16 hours, median 109.10833333333335 min, max 25
 | R262 | impact_v1 | DONE | DATA_PASS | 0 |
 | R264 | accounting_v1 | DONE | DATA_PASS | 0 |
 | R265 | unlocks_v1 | DONE | PARTIAL | 10 |
+| R266 | unlocks_fwd | RUNNING | PENDING | 1 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
