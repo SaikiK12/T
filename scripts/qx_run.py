@@ -159,12 +159,33 @@ def spread_summary(rep, rid, psha):
     return "\n".join(lines) + "\n"
 
 
+def factor_passes(rep):
+    """Factors with a horizon past the reality check whose daily (h = step) book, in the direction of its rank IC, is
+    positive at 1x and 2x cost: s x LS - 2 x m x cost x (top + bottom turnover) > 0 for m = 1, 2."""
+    step, c = rep["spec"]["step_h"], rep["spec"]["cost"] * 1e4
+    out = {}
+    for f in sorted({r["factor"] for r in rep["results"] if r["rc_pass"]}):
+        d = next((r for r in rep["results"] if r["factor"] == f and r["horizon_h"] == step), None)
+        if d is None or d["rank_ic"] is None or d["ls_bp"] is None:
+            continue
+        s = 1.0 if d["rank_ic"] > 0 else -1.0
+        nets = [s * d["ls_bp"] - 2 * m * c * (d["turnover_top"] + d["turnover_bottom"]) for m in (1, 2)]
+        out[f] = {"direction": "long top" if s > 0 else "long bottom", "net_1x_bp_day": nets[0],
+                  "net_2x_bp_day": nets[1], "pass": all(x > 0 for x in nets)}
+    return out
+
+
 def factor_summary(rep, rid, psha):
-    lines = [f"# {rep['name']} ({rid}): {'PARTIAL' if rep['survivors'] else 'NULL'}", "",
+    fp = factor_passes(rep)
+    passed = [f for f, v in fp.items() if v["pass"]]
+    lines = [f"# {rep['name']} ({rid}): {'PARTIAL' if passed else 'NULL'}", "",
              f"- **Family:** {rep['trials']} factor x horizon series over {rep['dates']} dates and {rep['coins']} coins.",
              f"- **Reality check:** max |t| of rank IC, blocks of {rep['block']} dates; null 95th percentile "
              f"{rep['rc_null_p95']:.2f}.",
-             f"- **Survivors (p_RC < {rep['spec']['alpha']}):** {', '.join(rep['survivors']) or 'none'}.",
+             f"- **Reality check survivors (p_RC < {rep['spec']['alpha']}):** {', '.join(rep['survivors']) or 'none'}.",
+             f"- **Pass (RC and a positive daily book at 1x and 2x):** {', '.join(passed) or 'none'}.",
+             *[f"  - {f}: {v['direction']}, net {v['net_1x_bp_day']:+.1f} / {v['net_2x_bp_day']:+.1f} bp/day at 1x / 2x"
+               for f, v in fp.items()],
              f"- **Prereg sha:** {psha[:12]}. Cost {rep['spec']['cost'] * 1e4:.0f} bp per side.", "",
              "| Factor | h | Dates | Names | IC | Rank IC | t | IR | IC > 0 | Quantile means bp | LS bp | LS t | "
              "Turnover top / bottom | Net %/yr | RC p |", "|" + "---|" * 15]
@@ -203,9 +224,12 @@ def main():
     log(f"{rid} {rep['verdict']}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
-        best = rep["strategies"][0]
+        best = (rep.get("strategies") or rep.get("results"))[0]
         if kind == "factors":
-            note = (f"qx factor report; {rep['trials']} factor x horizon series; survivors {rep['survivors'] or 'none'}; "
+            passed = [f for f, v in factor_passes(rep).items() if v["pass"]]
+            verdict = "PARTIAL" if passed else "NULL"
+            note = (f"qx factor report; {rep['trials']} factor x horizon series; RC survivors {rep['survivors'] or 'none'}; "
+                    f"pass {passed or 'none'}; "
                     f"best {best['factor']} {best['horizon_h']}h rank IC {best['rank_ic']:+.4f} t {best['rank_ic_t']:.2f} "
                     f"RC p {best['p_rc']:.3f}")
             best = {"label": f"{best['factor']} {best['horizon_h']}h"}

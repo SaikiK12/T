@@ -112,17 +112,32 @@ def stat_row(rid, lane, family, label, by_cost, p_rc=None, null_p=None, passed=F
             "null_p": num(null_p), "passed": bool(passed), "family": family}
 
 
+def per_day(x):
+    """A qx spread book's day stats in the per-event fields: the mean and halves are per day, in %."""
+    pct = lambda v: v / 100 if isinstance(v, (int, float)) else None
+    return {"n": x.get("days"), "mean_pct": pct(x.get("mean_bp")), "t": x.get("t"), "half1_pct": pct(x.get("half1_bp")),
+            "half2_pct": pct(x.get("half2_bp")), "y2025_pct": pct(x.get("recent_bp")), "y2025_n": x.get("recent_days")}
+
+
 def strategies():
-    """Every strategy with per-event stats on file: qx family reports and the event lanes' variants."""
+    """Every tested strategy on file: qx family reports (event families per event, spread books per day, factor
+    reports per factor and horizon) and the event lanes' variants."""
     rids, out = rid_by_path(), []
     for rep_path in sorted(EXP.glob("*/results/report.json")):
         lane = rep_path.parent.parent.name
         rid = rids.get(f"experiments/{lane}")
         rep = read_json(rep_path)
-        if not rid or "strategies" not in rep:
+        if not rid:
             continue
-        for s in rep["strategies"]:
-            st = s["stats"]
+        factor_rows = (rep.get("results") or []) if "factors" in (rep.get("spec") or {}) else []
+        for r in factor_rows:
+            ls = r.get("ls_bp")
+            out.append(stat_row(rid, lane, rep["name"], f"{r['factor']} {r['horizon_h']}h",
+                                {"1x": {"n": r.get("dates"), "mean_pct": ls / 100 if ls is not None else None,
+                                        "hit": r.get("rank_ic_pos"), "t": r.get("rank_ic_t")}},
+                                r.get("p_rc"), None, r.get("rc_pass"), rep["trials"]))
+        for s in rep.get("strategies") or []:
+            st = [per_day(x) if "ann_pct" in x else x for x in s["stats"]]
             out.append(stat_row(rid, lane, rep["name"], s["label"], {"1x": st[0], "2x": st[1], "3x": st[2]},
                                 s.get("p_rc"), (s.get("null") or {}).get("p"), s.get("pass"), rep["trials"]))
     for v_path in sorted(EXP.glob("*/results/verdict.json")):
@@ -381,8 +396,9 @@ TITLES = {
     "rounds": ("Registered rounds", "Every round in registry/rounds.csv with its verdict and trial count."),
     "candidates": ("Candidate watchlist", "registry/candidates.csv: each edge still alive, its best evidence, its "
                    "funnel stage and what decides it next."),
-    "strategies": ("Tested event strategies", "Per-event stats at 1x/2x/3x cost for every strategy in a qx family "
-                   "report or an event lane's verdict (experiments/*/results)."),
+    "strategies": ("Tested strategies", "Stats at 1x/2x/3x cost for every strategy in a qx family report or an event "
+                   "lane's verdict (experiments/*/results): per event for event families, per day for spread books, "
+                   "and for factor reports the long-short per date with t of the rank IC."),
     "forward_lanes": ("Forward paper lanes", "Each forward paper lane's progress toward its decision and its paper "
                       "net, from its journal."),
     "forward_days": ("Daily paper returns", "Net return per day at 1x/2x/3x cost for each daily book, replayed or "
