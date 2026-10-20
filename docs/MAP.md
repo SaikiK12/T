@@ -304,6 +304,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     fade, is queued as M231, with the 2013-19 decade as its first unseen window.
   - A start-day bug in the first run was fixed to the PREREG text and disclosed; no verdict changed.
   - NULL. [Findings](../experiments/chartxm_v1/FINDINGS.md).
+- **R248 (pivotfade_v1)** took R247's post-hoc lead, fading closes beyond the prior day's R1/S1, to windows nobody
+  had seen.
+  - It failed everywhere: indices 2013-19 alpha -0.57 bp/day (t -0.62); forex +0.46 (t 0.98, negative at 2x); crypto
+    2024-25 lost before costs.
+  - The 2001-12 index reversal did not survive 2012. The pivot family is closed.
+  - NULL. [Findings](../experiments/pivotfade_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -409,6 +415,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,979 after R247 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,983 after R248 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
