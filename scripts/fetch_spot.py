@@ -52,6 +52,8 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     pairs = json.loads((data.ROOT / "spot_pairs.json").read_text())
     log(f"{len(pairs)} perp -> spot pairs")
+    old = OUT / "manifest.json"
+    prev = json.loads(old.read_text())["pairs"] if old.exists() else {}   # a rerun keeps the entries it skips
     manifest, errors = {}, []
     with ThreadPoolExecutor(a.workers) as ex:
         jobs = [(perp, v["spot"]) for perp, v in sorted(pairs.items())]
@@ -59,7 +61,7 @@ def main():
         for i, f in enumerate(futs, 1):
             try:
                 perp, spot, msg, n = f.result()
-                manifest[perp] = {"spot": spot, "files": n, "status": msg}
+                manifest[perp] = prev.get(perp) if msg == "skip" and perp in prev else {"spot": spot, "files": n, "status": msg}
             except Exception as e:  # noqa: BLE001 - logged and listed in the manifest
                 errors.append(f"{jobs[i - 1][0]}: {e}")
             if i % 50 == 0:
