@@ -75,17 +75,23 @@ docs, read on 2026-10-20 (sources at the end). Claims about the lab were checked
 - The lab builds its own aggregates from the venues above instead.
 
 ## Build order (from this benchmark)
-1. **Gate bulk archive.** Fetch, build, provenance. **Running.**
+1. **Gate bulk archive.** Fetch, build, provenance. **Done 2026-10-20:** 861 open contracts, 758 reserved
+   (`docs/provenance/gate_hist.json`).
 2. **Control-room performance views:**
    - tear sheets per forward lane and research stream;
    - the honest leaderboard;
    - the data coverage timeline.
+
+   **Done 2026-10-20**: the Performance, Leaderboard, Funding board and Coverage views of the control room.
 3. **Cross-venue funding recorder:** an hourly snapshot of every venue's current and predicted funding, as a journal
-   and a control-room board. It starts the point-in-time history that APIs do not keep.
+   and a control-room board. It starts the point-in-time history that APIs do not keep. **Done 2026-10-20**
+   (`scripts/record_funding_board.py`, hourly). Its first use is R275, a cross-venue funding carry family on
+   `qx spread`.
 4. **`qx` cross-sections:** a factor report in the alphalens / Qlib style (IC, rank IC by horizon, quantile spreads,
    turnover) and cross-sectional books, so a cross-sectional family is one spec.
 5. **Free data, small first:** DefiLlama, alternative.me, FRED, Binance BVOL, then OKX / Bitget / KuCoin / dYdX
-   history.
+   history. **DefiLlama, alternative.me and FRED done 2026-10-20** (`scripts/fetch_macro.py`, 20 daily series).
+   DefiLlama's derivatives and bridge charts are paid. Binance BVOL is next; Deribit DVOL is already held.
 
 ## Sources
 - [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) and [R&D-Agent-Quant, arXiv 2505.15155](https://arxiv.org/html/2505.15155v2)
