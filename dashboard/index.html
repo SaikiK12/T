@@ -68,6 +68,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     <button class="qx-tab" role="tab" data-tab="forward" aria-selected="false">Forward paper</button>
     <button class="qx-tab" role="tab" data-tab="perf" aria-selected="false">Performance</button>
     <button class="qx-tab" role="tab" data-tab="board" aria-selected="false">Leaderboard</button>
+    <button class="qx-tab" role="tab" data-tab="factors" aria-selected="false">Factors</button>
     <button class="qx-tab" role="tab" data-tab="funding" aria-selected="false">Funding board</button>
     <button class="qx-tab" role="tab" data-tab="rounds" aria-selected="false">Rounds</button>
     <button class="qx-tab" role="tab" data-tab="queue" aria-selected="false">Method queue</button>
@@ -290,6 +291,35 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     </div>
   </section>
 
+  <section id="factors" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-fic">
+        <h2>Cumulative rank IC by factor</h2>
+        <div class="qx-tools"><select class="qx-select" id="sel-fround" aria-label="Factor report"></select><select class="qx-select" id="sel-fh" aria-label="Horizon"></select></div>
+        <p class="qx-note">Each line adds up the daily Spearman correlation between a factor and the next return across coins (approximated as each month's mean times its days). A line that climbs steadily is a factor that ranks coins the same way month after month; a line that wanders around zero is noise. Backtest on the archive (gate 0). Whether a factor passes is decided by its frozen reality check, not by this chart.</p>
+        <div class="qx-chart" id="chart-fic" data-source="factor_ic"></div>
+      </div>
+      <div class="qx-card wide" id="card-fictbl">
+        <h2>Factor stability</h2>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fic" data-source="factor_summary" data-row-key="key">
+            <thead><tr>
+              <th data-field="round"><button>Round</button></th>
+              <th data-field="factor"><button>Factor</button></th>
+              <th data-field="horizon_h" class="n"><button>Horizon (h)</button></th>
+              <th data-field="rank_ic" class="n"><button>Mean rank IC</button></th>
+              <th data-field="ic" class="n opt"><button>Mean IC</button></th>
+              <th data-field="pos_months" class="n"><button>Months > 0</button></th>
+              <th data-field="months" class="n opt"><button>Months</button></th>
+              <th data-field="ls_bp" class="n"><button>Long-short / day</button></th>
+              <th data-field="names" class="n opt"><button>Coins / day</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="funding" class="qx-page" hidden>
     <div class="qx-grid">
       <div class="qx-card wide" id="card-fund">
@@ -492,6 +522,22 @@ dash.calc('method_counts', {
     const n = {};
     methods.forEach((m) => { n[m.status] = (n[m.status] || 0) + 1; });
     return Object.keys(n).map((status) => ({ status, n: n[status] })).sort((a, b) => b.n - a.n);
+  },
+});
+dash.calc('factor_summary', {
+  inputs: ['factor_ic'], title: 'Factor stability',
+  description: 'Per factor report, factor and horizon: day-weighted mean IC and rank IC, the share of months with a positive mean rank IC, and the mean long-short per day in basis points.',
+  fn: (factor_ic) => {
+    const g = {};
+    factor_ic.forEach((r) => {
+      const k = `${r.round}|${r.factor}|${r.horizon_h}`;
+      const a = g[k] || (g[k] = { key: k, round: r.round, factor: r.factor, horizon_h: r.horizon_h, d: 0, ic: 0, ric: 0, ls: 0, nm: 0, pos: 0, months: 0 });
+      a.d += r.days; a.ic += (r.ic ?? 0) * r.days; a.ric += (r.rank_ic ?? 0) * r.days; a.ls += (r.ls ?? 0) * r.days;
+      a.nm += r.names * r.days; a.months += 1; a.pos += r.rank_ic > 0 ? 1 : 0;
+    });
+    return Object.values(g).map((a) => ({ key: a.key, round: a.round, factor: a.factor, horizon_h: a.horizon_h,
+      ic: a.ic / a.d, rank_ic: a.ric / a.d, ls_bp: (a.ls / a.d) * 1e4, names: a.nm / a.d, months: a.months,
+      pos_months: a.pos / a.months })).sort((x, y) => Math.abs(y.rank_ic) - Math.abs(x.rank_ic));
   },
 });
 dash.calc('cum_paper', {
@@ -704,6 +750,12 @@ table('tbl-fund', 'funding_board', 'key', [
   { f: 'base' }, { f: 'venues', fmt: F.int, num: true }, { f: 'spread_ann', fmt: FR.pct1, num: true, bar: { max: maxAbs('spread_ann') } },
   { f: 'max_venue' }, { f: 'min_venue' },
   ...['mexc', 'gate', 'hyperliquid', 'okx', 'bitget', 'kucoin', 'dydx'].map((v) => ({ f: `r8h_${v}`, fmt: FR.bp8h, num: true }))]);
+table('tbl-fic', 'factor_summary', 'key', [
+  { f: 'round' }, { f: 'factor' }, { f: 'horizon_h', fmt: F.int, num: true },
+  { f: 'rank_ic', fmt: (v) => (v == null ? '' : d3.format('+.4f')(v)), num: true, bar: { max: maxAbs('rank_ic') } },
+  { f: 'ic', fmt: (v) => (v == null ? '' : d3.format('+.4f')(v)), num: true },
+  { f: 'pos_months', fmt: (v) => (v == null ? '' : d3.format('.0%')(v)), num: true }, { f: 'months', fmt: F.int, num: true },
+  { f: 'ls_bp', fmt: (v) => (v == null ? '' : d3.format('+.1f')(v) + ' bp'), num: true }, { f: 'names', fmt: FR.int0, num: true }]);
 table('tbl-coverage', 'coverage', 'key', [
   { f: 'key' }, { f: 'kind' }, { f: 'first', fmt: F.day }, { f: 'last', fmt: F.day }, { f: 'files', fmt: F.int, num: true },
   { f: 'gb', fmt: F.size, num: true }, { f: 'bars', fmt: F.int, num: true }, { f: 'holes', fmt: F.int, num: true }, { f: 'source' }]);
@@ -916,6 +968,77 @@ function drawCum(el) {
       const kind = at.length ? (at[0].p.kind === 'ontime' ? 'on time' : 'replay') : '';
       showTip(el, tip, mx, my, `${d3.utcFormat('%b %-d, %Y')(new Date(day))} · ${kind}`,
         at.sort((a, b) => b.p.cum_pct - a.p.cum_pct).map((a) => ({ color: color(a.n), text: `${a.n} ${F.pct(a.p.cum_pct)}` })));
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dots.selectAll('circle').remove(); });
+}
+
+// factors: cumulative rank IC per factor for one report and horizon
+let FROUND = null, FH = null;
+const selFR = document.getElementById('sel-fround'), selFH = document.getElementById('sel-fh');
+selFR.addEventListener('change', () => { FROUND = selFR.value; render(); });
+selFH.addEventListener('change', () => { FH = +selFH.value; render(); });
+function drawFactorIC(el) {
+  el.replaceChildren();
+  const all = rowsOf('factor_ic');
+  const rounds = Array.from(new Set(all.map((r) => r.round))).sort();
+  if (!rounds.length) { const d = document.createElement('div'); d.className = 'qx-fail'; d.textContent = 'No factor report registered yet'; el.append(d); return; }
+  if (!rounds.includes(FROUND)) FROUND = rounds[rounds.length - 1];
+  selFR.replaceChildren(...rounds.map((r) => new Option(r, r)));
+  selFR.value = FROUND;
+  const hs = Array.from(new Set(all.filter((r) => r.round === FROUND).map((r) => r.horizon_h))).sort((a, b) => a - b);
+  if (!hs.includes(FH)) FH = hs[0];
+  selFH.replaceChildren(...hs.map((h) => new Option(`${h} h`, h)));
+  selFH.value = FH;
+  const rows = all.filter((r) => r.round === FROUND && r.horizon_h === FH);
+  const names = Array.from(new Set(rows.map((r) => r.factor))).sort();
+  const color = (n) => dash.colors[names.indexOf(n) % dash.colors.length];
+  const series = names.map((n) => {
+    let c = 0;
+    return { n, pts: rows.filter((r) => r.factor === n).sort((a, b) => a.month.localeCompare(b.month))
+      .map((r) => { c += (r.rank_ic ?? 0) * r.days; return { d: new Date(r.month + '-01T00:00:00Z'), v: c, r }; }) };
+  });
+  const pts = series.flatMap((s) => s.pts);
+  const W = Math.max(el.clientWidth, 280), H = 320;
+  const svg = svgIn(el, W, H);
+  const y = d3.scaleLinear(d3.extent([0, ...pts.map((p) => p.v)]), [H - 28, 12]).nice();
+  const yt = y.ticks(5);
+  const fy = d3.format('+.1f');
+  const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
+  const ends = series.filter((s) => s.pts.length).map((s) => ({ n: s.n, v: s.pts[s.pts.length - 1].v, label: `${s.n} ${fy(s.pts[s.pts.length - 1].v)}` }));
+  const mr = (d3.max(ends, (e) => textW(svg, e.label)) || 0) + 14;
+  const x = d3.scaleUtc(d3.extent(pts, (p) => p.d), [ml, W - mr]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const xt = thin(x.ticks(6), x, d3.utcFormat('%Y'), svg, 10);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(d3.utcFormat('%Y')).tickSizeOuter(0)));
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fy).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-reference)');
+  const line = d3.line().x((p) => x(p.d)).y((p) => y(p.v));
+  series.forEach((s) => svg.append('path').datum(s.pts).attr('d', line).style('fill', 'none').style('stroke', color(s.n))
+    .style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round'));
+  ends.forEach((e) => { e.y = y(e.v); });
+  ends.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  const over = ends.length ? ends[ends.length - 1].y - (H - 28) : 0;
+  if (over > 0) ends.forEach((e) => { e.y -= over; });
+  ends.forEach((e) => svg.append('text').attr('class', 'lead').attr('x', W - mr + 8).attr('y', e.y).attr('dy', '0.35em').text(e.label));
+  const tip = tipIn(el);
+  const rule = svg.append('line').attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+  const dots = svg.append('g');
+  const months = Array.from(new Set(pts.map((p) => +p.d))).sort((a, b) => a - b);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - mr - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev);
+      const t = +x.invert(px);
+      const m = months[d3.minIndex(months, (d) => Math.abs(d - t))];
+      const at = series.map((s) => ({ n: s.n, p: s.pts.find((p) => +p.d === m) })).filter((a) => a.p);
+      rule.attr('x1', x(m)).attr('x2', x(m)).style('opacity', 1);
+      dots.selectAll('circle').data(at).join('circle').attr('cx', x(m)).attr('cy', (a) => y(a.p.v)).attr('r', 4)
+        .style('fill', (a) => color(a.n)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${d3.utcFormat('%b %Y')(new Date(m))} · ${FH} h`,
+        at.sort((a, b) => b.p.v - a.p.v).map((a) => ({ color: color(a.n), text: `${a.n}: month ${d3.format('+.3f')(a.p.r.rank_ic)}, cumulative ${fy(a.p.v)}` })));
     })
     .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dots.selectAll('circle').remove(); });
 }
@@ -1181,6 +1304,7 @@ function render() {
   }
   if ((el = vis('chart-board')) && stateBox(el, ['leaderboard'])) drawBoard(el);
   if ((el = vis('chart-trials')) && stateBox(el, ['leaderboard'])) drawTrials(el);
+  if ((el = vis('chart-fic')) && stateBox(el, ['factor_ic'])) drawFactorIC(el);
   if ((el = vis('chart-fund')) && stateBox(el, ['funding_board'])) {
     const rows = rowsOf('funding_board').slice(0, 25);
     drawBars(el, rows, (r) => `${r.base} · ${r.max_venue} over ${r.min_venue}`, (r) => r.spread_ann * 100, (v) => d3.format(',.0f')(v) + '%/yr', 'spread');

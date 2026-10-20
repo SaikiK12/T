@@ -1,0 +1,34 @@
+# R277 xfund_kd_v1: R275's pre-committed book replicated on KuCoin and dYdX (qx spread). Frozen with PREREG.md; never edited afterwards.
+name = "xfund_kd_v1"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/xfund_kd_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/open/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/open/funding_applies", bar_h = 1 },
+  { name = "kucoin", prices = "kucoin_hist/open/candles_1d", vol = "volume", funding = "kucoin_hist/open/funding", bar_h = 24 },
+  { name = "dydx", prices = "dydx_hist/open/candles_1h", vol = "volume", funding = "dydx_hist/open/funding", bar_h = 1 },
+]
+sets = [
+  ["binance", "kucoin"],
+  ["binance", "dydx"],
+  ["gate", "kucoin"],
+  ["kucoin", "dydx"],
+]
+lookbacks = [BOOK_L]
+thresholds = [BOOK_TH]
+slots = [BOOK_K]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 277
+alpha = 0.05
+recent_from = "2025-01-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 10
+hurdle_ann_pct = 4.13
+out = "experiments/xfund_kd_v1/results"
