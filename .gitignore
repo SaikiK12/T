@@ -19,3 +19,6 @@ experiments/atlas_mtf/results/*.csv
 dashboard/data/
 .notices.lock
 .notice_loop.pid
+# R275's daily rows and trades (61 MB, 19 MB) are rebuilt by its frozen run; their sha256 is in results/hashes.json
+experiments/xfund_v1/results/daily.csv
+experiments/xfund_v1/results/trades.csv

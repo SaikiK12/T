@@ -68,3 +68,9 @@ program 1 rounds 91 candidates 11 strategies 123 forward_lanes 10 forward_days 2
 22:08:51 on-time days 1, strict 0; hour lag {'n': 21, 'median': 79.88333333333334, 'p90': 199.88333333333333, 'max': 259.8833333333333} order problems: none
 22:08:52 panel: 92 rounds, 9,477,741 trials, queue 235
 program 1 rounds 92 candidates 12 strategies 195 forward_lanes 10 forward_days 228 event_tickets 8 methods 235 data_sources 22 jobs 24 tearsheets 16 equity 7072 monthly 237 leaderboard 92 coverage 21 funding_board 120
+== tick 2026-10-20T23:06:00Z code d968692+dirty
+23:10:08 prereg sha 3605a4028e85
+23:10:08 {'A': (0.7, 0), 'B': (1.0, 0), 'X2': (0.64, 0)}
+23:10:10 on-time days 1, strict 0; hour lag {'n': 22, 'median': 79.34166666666667, 'p90': 199.775, 'max': 259.8833333333333} order problems: none
+23:10:11 panel: 94 rounds, 9,478,319 trials, queue 236
+program 1 rounds 94 candidates 12 strategies 773 forward_lanes 10 forward_days 228 event_tickets 8 methods 236 data_sources 30 jobs 29 tearsheets 17 equity 8297 monthly 279 leaderboard 94 coverage 26 funding_board 120 factor_ic 1152
