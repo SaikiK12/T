@@ -310,6 +310,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     2024-25 lost before costs.
   - The 2001-12 index reversal did not survive 2012. The pivot family is closed.
   - NULL. [Findings](../experiments/pivotfade_v1/FINDINGS.md).
+- **R249 (rnfade_v1)** took R246's post-hoc round-number lead to crypto validation 2024-25, with one fade per coin
+  per day against a half-step-shifted grid.
+  - **The mechanism replicated:** the first close through a two-significant-figure level reverses +4.8 bp/day more
+    than through a shifted level (t 2.53, 4 h hold).
+  - **The books did not pass:** the best was +8.8 bp/day at t 0.88, and taker cost (10-13.5 bp/day) equals the gross.
+  - A maker version is queued as M232.
+  - NULL. [Findings](../experiments/rnfade_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -415,6 +422,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,983 after R248 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,987 after R249 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
