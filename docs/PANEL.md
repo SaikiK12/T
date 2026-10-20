@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 01:03 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 01:07 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.
 
@@ -56,6 +56,8 @@ Processing lag of on-time hours: 0 hours, median - min, max - min; days with lat
 
 - Download MEXC public history (about 9.4k requests, `scripts/fetch_mexc_history.py`): carry on MEXC-only coins.
 - Install PyTorch CPU and the Kronos-small weights (about 300 MB): R227 Kronos lane (PR #9).
+- Download the DefiLlama unlock calendar (old source: 372 protocol files): replicates the old session's unlock short (E01, R179/R181, +2.5% per event), the strongest edge in `docs/OLD_SESSION_EDGES.md`.
+- Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).
 
 ## 5. Latest rounds
 
