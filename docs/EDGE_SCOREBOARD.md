@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R252. Program trials: 9,472,001. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R256. Program trials: 9,472,031 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -69,6 +69,8 @@ overstatements are corrected here.
 | **Pairs trading** (distance and Engle-Granger, weekly 30-day formation; queue M045) | All 4 fail discovery; gross -1.6 to +2.5 bp/day; 59-78% of trades end unreverted at week end (R250) | Not read | Costs 1.1-2.0 bp/day; gross is the problem | Same coins on MEXC | none | NULL |
 | **Kernel chart patterns** (Lo-Mamaysky-Wang HS, broadening, triangles, rectangles; daily crypto, FX, indices; queue M201) | HS-only on indices alpha t 2.27 (2001-12); others below t 1.5 (R251) | Indices 2013-19: alpha -0.02, t -0.18 | Costs below 0.1 bp/day | FX/index CFDs; crypto on MEXC | none: failed validation | NULL |
 | **Liquidation-cascade fade** (hourly OI drop >= 3% plus a >= 3 ATR wick; queue M176) | All 4 fail discovery (effectively 2022-23); best ALL/24 +2.0 bp/day, t 1.93; squeeze-only t 1.03. Both sides revert raw, but the long-side bounce is mostly the market's: +23 bp market-adjusted over 24 h, post hoc (R252) | Not read | Costs 0.04-0.21 bp/day | Same coins on MEXC | none | NULL; cascade-count market timing queued as M233 |
+| **Cascade-count market timing** (long the EW market 24 h after hours with >= 3 cascade triggers; queue M233) | Post hoc from R252; 2021-23 book t 0.23 | Validation 2024-25: +5.6 bp/day, t 1.03; 15 events, all in 2024; market +186 bp over 24 h after them (R255) | Costs 0.4-0.5 bp/day | EW perps on MEXC | none | NULL: too rare to prove |
+| **Day of week** (SPY, world indices, USD, BTC, crypto; one weekday selected per market; queue M219) | All 5 picks fail discovery; best crypto Monday short alpha t 0.84 (R256) | Not read | Weekly round trips cost 0.4-2.1 bp/day, more than any weekday alpha | Any | none | NULL |
 | **Variance risk premium, S&P 500** (measurement; queue M215) | VIX² minus next-month realised variance: +116 %², t 2.55; validation +70, t 5.71 (R239) | Holdout +82, t 1.11 (2020 loss) | Not tradeable with free data before 2011 | not on MEXC | none | Measured, not a book; short-vol lane M224 |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |

@@ -337,6 +337,18 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Post hoc, the long-side bounce is mostly the whole market's (+23 bp market-adjusted). A cascade-count market-timing
     rule is queued as M233.
   - NULL. [Findings](../experiments/oiwick_v1/FINDINGS.md).
+- **R255 (cascmkt_v1)** bought the equal-weight market for 24 h after hours in which three or more coins showed R252's
+  cascade trigger. It was decided on 2024-25 only.
+  - The market rose +186 bp over the next 24 h after the 15 cascade hours (all in 2024), but the book reached only
+    t 1.03. Too rare to prove.
+  - Its frozen PREREG says R253; Codex claimed that id first (see `REGISTRY_REASSIGNMENT.json`).
+  - NULL. [Findings](../experiments/cascmkt_v1/FINDINGS.md).
+- **R256 (dow_v1)** tested day-of-week effects on SPY, world indices, the US dollar, BTC and crypto. Discovery picked
+  one weekday per market.
+  - No pick reached alpha t 1 after its sign was set. The Friday-short alpha on indices comes from 2001 and 2010.
+  - Weekly round trips cost 0.4 bp/day (Yahoo) to 2 bp/day (crypto), which is more than any weekday alpha.
+  - Its frozen PREREG says R254 (reassigned the same way).
+  - NULL. [Findings](../experiments/dow_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -442,6 +454,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,001 after R252 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,031 after R256 on this branch (`registry.program_trials()`; Codex's R253/R254 add theirs when merged), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
