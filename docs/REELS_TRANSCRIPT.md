@@ -44,6 +44,25 @@ mapped to one composite queue row; the value-area-low component is related to M2
 The method IDs, source versions, exact scope, existing tested scope, aliases and missing mechanics for these leads are
 preserved in the intake JSON and alias CSV. The queue additions are all unresolved; no backtest or result is claimed.
 
+## Second discovery batch (2026-10-20)
+
+Three read-only agents and a targeted web pass added 39 public sources. They are catalogued in the intake JSON with
+source version/date, accessible basis, exact lead, queue alias and missing mechanics; no media was saved. This batch
+contains leads, not a new search universe or performance evidence.
+
+| Lane | Sources and extracted rule families | Queue treatment and gaps |
+|---|---|---|
+| Options / 0DTE | [Saint Trader 0DTE flow](https://www.youtube.com/watch?v=ez7KBOsEpaQ), [Geeks of Finance GEX](https://www.youtube.com/watch?v=_0jd6CMyk9s), [Option Alpha's four GEX profiles](https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading), and OIC/CME videos on [skew](https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew), [parity](https://www.optionseducation.org/videolibrary/theoretical-option-pricing), [volatility](https://www.optionseducation.org/videolibrary/volatility-strategies), [gamma by DTE](https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time), and [post-earnings IV](https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk). | GEX profiles remain aliases of M235/M237; skew and IV-surface value map to M234; parity/reverse conversion is new M248; IV-percentile/event-vol structures are new M249. All still lack finite strikes, thresholds, timing, hedge, fills and costs. |
+| Crypto / execution | [Binance arbitrage transcript](https://www.dailymotion.com/video/x9r8n9k) and [second triangular-arb transcript](https://www.dailymotion.com/video/x9r8q52), [liquidation heatmap video](https://www.youtube.com/watch?v=qFwvTRATC-c), [Bybit funding history](https://bybit-exchange.github.io/docs/v5/market/history-fund-rate), [Bybit order book](https://bybit-exchange.github.io/docs/v5/market/orderbook), and Hyperliquid's [funding](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding) and [perpetual API](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals). | Same-venue triangular arbitrage is new M247. Cross-venue gaps, liquidation levels, funding clocks, oracle accounting, book-depth controls and market-making simulator ideas map to M239/M240/M059/M134/M241/M058/M227. No source supplies synchronized fills, queue, latency or costed P&L. |
+| Systematic / prop | QuantConnect examples for [trend/carry regimes](https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/), [adaptive allocation](https://www.quantconnect.com/research/16041/trend-and-carry-allocation/), [synthetic-spot trend](https://www.quantconnect.com/research/16014/futures-spot-trend/), [joint roll/momentum](https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/), and [Dual Thrust](https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/); [CME spread mechanics](https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview); and Pura Vida's [eight-portfolio video](https://puravidaedge.com/videos/systematic-prop-firm-trading-8-portfolios/) and [post-payout buffer transcript](https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/). | Explicit volatility multiplier and adaptive weights are aliases of M035/M184; synthetic-spot trend is new M250 and joint roll/momentum is new M251. Dual Thrust, spread execution and prop state machines map to existing M205/M170/M211. Reported returns are creator/backtest claims, not project results. |
+
+The batch also records the official Bybit/Hyperliquid/Binance funding mechanics, an [Avellaneda–Stoikov order-book
+simulator](https://github.com/harshitgrover/Order_Book_Simulator), [funding-rate paper-trading code](https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage),
+and primary funding/risk explanations from [Kraken](https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage)
+and [VoiceOfChain](https://voiceofchain.com/academy/funding-rate-chart-binance). These are implementation or accounting
+leads; they do not establish a MEXC edge. The full 34-record extraction and 39-source list, including weak generic arbitrage videos and
+their limitations, remains in the JSON so they are not silently discarded.
+
 ## Primary-source checks
 
 - [Cboe volatility surfaces](https://datashop.cboe.com/volatility-surfaces) index IV by expiry and strike/delta; the

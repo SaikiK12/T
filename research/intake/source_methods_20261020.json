@@ -2,16 +2,16 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-20",
-  "coverage_summary": "The original 164 CLAIMS, ALTCOIN_LEADS, CONCEPTS, SOURCES, Quantpedia and coverage-note records remain intact. A 37-record supplement maps the two earlier Instagram reels, three owner-provided TikToks, and 12 additional public videos (17 media sources total) to the existing queue or new rows M234-M246. No full books/papers, exhaustive internet survey or video profitability is claimed.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
     "Weak ICT/SMT,disputed flow,and under-specified ideas remain visible; source conflicts such as ALT01 minus-sign vsR219 plus-sign are retained.",
     "Study/idea counts are not measured-market trial counts; historical date reuse and survivor selection remain material.",
     "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
-    "Video intake is limited to publicly accessible creator captions, official transcripts/recaps, or indexed descriptions; several sources have no verified full transcript. All media claims are leads only, never strategy performance evidence."
+    "Video and public-source intake is limited to accessible captions, official transcripts/recaps, documentation, repository descriptions or indexed summaries; several videos have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of the explicitly received documents and 17 reviewed public video sources, not an exhaustive account of internet methods. Every media lead preserves its tested/open scope and source type; source counts are not measured-market trials.",
+  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -7156,6 +7156,1226 @@
           "label": "Pura Vida Edge prop-firm video and creator transcript page"
         }
       ]
+    },
+    {
+      "id": "SV26-01-GEX-PROFILES",
+      "parent_claim_id": "SV26-OPT",
+      "title": "GEX/OI regime profiles and 0DTE reactions at walls, pins, slides and pillars",
+      "method_type": "strategy",
+      "hypothesis": "Dealer gamma regime may change whether a 0DTE price move is faded or followed.",
+      "testable_rule": "Classify a point-in-time GEX/OI profile; trade the stated wall/pin/slide reaction or breakout only when the profile and flow condition agree.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "GEX sign/model, intraday OI, profile classification, contract/expiry, trigger, hedge, stop, target, size and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time option chain/quotes/greeks, signed flow and executable multi-leg fills"
+      ],
+      "blockers": [
+        "No historical option-chain/GEX history is held."
+      ],
+      "next_action": "Keep as M235/M237 aliases; freeze one profile and an appropriate no-GEX control before any study.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=ez7KBOsEpaQ",
+          "label": "Public source: https://www.youtube.com/watch?v=ez7KBOsEpaQ"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=_0jd6CMyk9s",
+          "label": "Public source: https://www.youtube.com/watch?v=_0jd6CMyk9s"
+        },
+        {
+          "path": "https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading",
+          "label": "Public source: https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=ez7KBOsEpaQ",
+          "label": "Public source: https://www.youtube.com/watch?v=ez7KBOsEpaQ"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=_0jd6CMyk9s",
+          "label": "Public source: https://www.youtube.com/watch?v=_0jd6CMyk9s"
+        },
+        {
+          "path": "https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading",
+          "label": "Public source: https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading"
+        }
+      ]
+    },
+    {
+      "id": "SV26-02-SKEW-RV",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Relative value across positive, negative and smile option skew",
+      "method_type": "strategy",
+      "hypothesis": "Relative wing richness may mean-revert when delta/tenor are matched.",
+      "testable_rule": "Rank matched option wings by skew percentile; sell the relatively rich wing and buy the cheap wing with a defined hedge and close rule.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Delta/tenor matching, interpolation, percentile lookback, legs, hedge, entry/exit, assignment and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical option chains by strike/expiry, rates/dividends, borrow and executable multi-leg quotes"
+      ],
+      "blockers": [
+        "No option-chain history is held."
+      ],
+      "next_action": "Map to M234 and retain the OIC source as a skew-specific alias.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew"
+        }
+      ]
+    },
+    {
+      "id": "SV26-03-PARITY-ARB",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Put-call parity, synthetic and reverse-conversion arbitrage",
+      "method_type": "strategy",
+      "hypothesis": "A temporary parity violation could be captured with a matched option/spot package.",
+      "testable_rule": "Buy the underpriced parity/synthetic package and sell the overpriced leg until parity convergence or a fixed unwind deadline.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Strike/expiry package, rates, dividends, borrow, exercise/assignment, early exercise, fees, margin, tick timing and close rule are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized option/spot quotes, rates, dividends, borrow and exercise/assignment terms"
+      ],
+      "blockers": [
+        "No option-chain history or executable package simulator is held."
+      ],
+      "next_action": "Register as M248 only after a finite package and cost/borrow control are frozen.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/theoretical-option-pricing",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/theoretical-option-pricing"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/theoretical-option-pricing",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/theoretical-option-pricing"
+        }
+      ]
+    },
+    {
+      "id": "SV26-04-VOL-STRUCTURES",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Long straddle/strangle versus defined-risk short-volatility selection",
+      "method_type": "strategy",
+      "hypothesis": "Choose long or defined-risk short volatility according to forecast movement versus quoted break-even.",
+      "testable_rule": "At a fixed DTE choose a long straddle/strangle when forecast movement exceeds break-even, otherwise use a defined-risk short structure with an explicit tail cap.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Forecast, DTE/delta, event filter, width, margin, hedge, exit, roll and multi-leg costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical option chains, realized-vol forecast, event calendar, margin and executable fills"
+      ],
+      "blockers": [
+        "No option-chain history is held."
+      ],
+      "next_action": "Map to M249; preserve long and short structures as separate variants inside one finite preregistration.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-strategies",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-strategies"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/straddles-and-strangles",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/straddles-and-strangles"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-strategies",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-strategies"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/straddles-and-strangles",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/straddles-and-strangles"
+        }
+      ]
+    },
+    {
+      "id": "SV26-05-EVENT-SHORT-VOL",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Event premium sale when implied move exceeds a realized-move forecast",
+      "method_type": "strategy",
+      "hypothesis": "Event implied movement may overstate the subsequent realized move after accounting for a defined-risk hedge.",
+      "testable_rule": "Before a named event, sell the event straddle/strangle only when implied move minus forecast move exceeds a fixed hurdle; exit after the event window.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Event universe, forecast horizon, implied-move extraction, wings, risk cap, exit, gap handling and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time event calendar, option chains, realized moves, defined-risk package and fills"
+      ],
+      "blockers": [
+        "The video supplies no reproducible event list or rule parameters."
+      ],
+      "next_action": "Map to M249 as a separate event variant; do not treat an educational example as performance evidence.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-strategies-ii-short-straddles-and-stran",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-strategies-ii-short-straddles-and-stran"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/volatility-strategies-ii-short-straddles-and-stran",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/volatility-strategies-ii-short-straddles-and-stran"
+        }
+      ]
+    },
+    {
+      "id": "SV26-06-IV-PERCENTILE",
+      "parent_claim_id": "SV26-OPT",
+      "title": "IV-percentile regime switch for long or defined-risk short volatility",
+      "method_type": "strategy",
+      "hypothesis": "Implied volatility percentile relative to its own history may select volatility exposure.",
+      "testable_rule": "Use a frozen IV-percentile lookback and cutoff to switch between long volatility, flat, and defined-risk short volatility, with a fixed rebalance schedule.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Lookback, percentile cutoffs, structure, realized-vol target, rebalance, event filter, hedge and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical IV surface or quoted IV, realized volatility and executable options"
+      ],
+      "blockers": [
+        "Only DVOL is held; it is not the full strike/expiry surface required by the source."
+      ],
+      "next_action": "Map to M249 and keep the IV-percentile rule separate from M234 surface relative value.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar",
+          "label": "Public source: https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar",
+          "label": "Public source: https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar"
+        }
+      ]
+    },
+    {
+      "id": "SV26-07-GAMMA-DTE",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Gamma concentration by DTE and moneyness as a 0DTE size/hedge filter",
+      "method_type": "risk_overlay",
+      "hypothesis": "Gamma concentration at short DTE and near ATM may change the appropriate position size or hedge frequency.",
+      "testable_rule": "Condition a 0DTE position size or hedge rule on DTE-by-moneyness gamma concentration before entry.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Gamma formula, threshold, position base, option selection, hedge instrument, timing and costs are missing.",
+      "status": "untested",
+      "required_inputs": [
+        "Historical option chains/greeks and a fully specified 0DTE strategy"
+      ],
+      "blockers": [
+        "No standalone alpha or option-chain history is held."
+      ],
+      "next_action": "Keep as a risk/model alias of M237, not as evidence that gamma itself predicts returns.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time"
+        }
+      ]
+    },
+    {
+      "id": "SV26-08-EARNINGS-CRUSH",
+      "parent_claim_id": "SV26-OPT",
+      "title": "Earnings IV-crush timing: hold long options through the event versus post-event defined-risk short volatility",
+      "method_type": "strategy",
+      "hypothesis": "The post-event volatility drop can dominate the directional payoff of long options.",
+      "testable_rule": "Compare a frozen pre-event long-option policy with an alternative exit-before-event or defined-risk post-event short-vol policy.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Event universe, entry clock, strike/DTE, directional hedge, exit, gap/tail policy and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time earnings calendar, option chains and executable event fills"
+      ],
+      "blockers": [
+        "No option-chain/event history is held."
+      ],
+      "next_action": "Map to M249 as an event-timing variant with an explicit no-position control.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk",
+          "label": "Public source: https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk"
+        }
+      ]
+    },
+    {
+      "id": "SV26-09-REGIME-MULT",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Volatility-regime multiplier on a trend/carry portfolio",
+      "method_type": "strategy",
+      "hypothesis": "A bounded volatility-regime multiplier may improve risk-adjusted trend/carry exposure.",
+      "testable_rule": "Combine a daily trend/carry forecast with a bounded EWMA regime multiplier (the source example uses 0.5–2.0 and a capped forecast).",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "MEXC contract mapping, funding/basis definition, signal delay, universe, rebalance, leverage and 1x/2x/3x costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time altcoin futures/spot/funding and a frozen trend/carry baseline"
+      ],
+      "blockers": [
+        "The public result is a traditional-futures implementation, not MEXC evidence."
+      ],
+      "next_action": "Alias M035/M184; register only as a fixed multiplier overlay with a no-multiplier control.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/",
+          "label": "Public source: https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/",
+          "label": "Public source: https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-10-ADAPT-TREND-CARRY",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Adaptive trend/carry weight from rolling after-fee relative performance",
+      "method_type": "strategy",
+      "hypothesis": "Recent after-fee trend versus carry performance may select the mixture weight.",
+      "testable_rule": "Compute a rolling 256-day after-fee relative score, smooth the resulting trend weight over 30 days, and rebalance on a fixed schedule.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "MEXC universe, carry definition, historical fee vintage, missing-data guard, weights, funding and holdout are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time futures/spot/funding, fees and a frozen trend/carry pair"
+      ],
+      "blockers": [
+        "No MEXC test of the adaptive allocation exists."
+      ],
+      "next_action": "Alias M035/M184; keep the rolling allocation rule separate from generic trend selection.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/16041/trend-and-carry-allocation/",
+          "label": "Public source: https://www.quantconnect.com/research/16041/trend-and-carry-allocation/"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/16001/combined-carry-and-trend/p1",
+          "label": "Public source: https://www.quantconnect.com/research/16001/combined-carry-and-trend/p1"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/16041/trend-and-carry-allocation/",
+          "label": "Public source: https://www.quantconnect.com/research/16041/trend-and-carry-allocation/"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/16001/combined-carry-and-trend/p1",
+          "label": "Public source: https://www.quantconnect.com/research/16001/combined-carry-and-trend/p1"
+        }
+      ]
+    },
+    {
+      "id": "SV26-11-SYNTHETIC-SPOT",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Trend on futures adjusted to synthetic spot by removing carry",
+      "method_type": "strategy",
+      "hypothesis": "Removing futures carry/premium before trend estimation may reduce factor overlap and signal contamination.",
+      "testable_rule": "Construct a point-in-time synthetic spot from futures price minus carry/basis, then compute the same frozen trend signal and compare direct-futures trend.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Contract mapping, basis/funding settlement, adjustment window, delay, delistings, rebalance, fills and cost tiers are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Matched spot/futures prices, funding/basis, contract specifications and executable costs"
+      ],
+      "blockers": [
+        "MEXC history is incomplete for a matched spot/futures panel."
+      ],
+      "next_action": "Use new M250 only after a finite adjustment formula and direct-futures control are frozen.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/16014/futures-spot-trend/",
+          "label": "Public source: https://www.quantconnect.com/research/16014/futures-spot-trend/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/16014/futures-spot-trend/",
+          "label": "Public source: https://www.quantconnect.com/research/16014/futures-spot-trend/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-12-JOINT-ROLL-MOM",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Joint ranking by annualized roll return and one-month momentum",
+      "method_type": "strategy",
+      "hypothesis": "Contracts with both favorable term structure and recent momentum may outperform single-factor ranks.",
+      "testable_rule": "Rank a point-in-time universe first by annualized roll/basis and then by one-month momentum; hold the joint extremes at a fixed rebalance.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Altcoin dated contracts, basis units, tie handling, universe vintage, rebalance, funding, delistings and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time dated futures term structure, prices, contract rolls and executable costs"
+      ],
+      "blockers": [
+        "Existing M170 and M194 are related but no exact joint ranking has been run."
+      ],
+      "next_action": "Use new M251; preregister the joint rank and one-factor controls before computing outcomes.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/",
+          "label": "Public source: https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/",
+          "label": "Public source: https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-13-RISK-PREMIA-CONTRACT",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Greedy futures contract selection using risk-adjusted costs",
+      "method_type": "portfolio_constructor",
+      "hypothesis": "Selecting contracts by risk-adjusted cost and capacity may improve a broad futures portfolio.",
+      "testable_rule": "Select contracts greedily under a fixed risk/cost budget and compare with equal-risk and passive controls.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "The source universe, cost objective, tie rules, crypto transfer and holdout are missing; its public result underperformed SPY.",
+      "status": "blocked",
+      "required_inputs": [
+        "Broad point-in-time futures universe, costs, capacity and a fixed selection objective"
+      ],
+      "blockers": [
+        "No MEXC multi-asset portfolio input is held."
+      ],
+      "next_action": "Retain as a low-prior implementation/null lead mapped to M194; do not import its reported result.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/15990/risk-premia-sizing-long-future-portfolio/",
+          "label": "Public source: https://www.quantconnect.com/research/15990/risk-premia-sizing-long-future-portfolio/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15990/risk-premia-sizing-long-future-portfolio/",
+          "label": "Public source: https://www.quantconnect.com/research/15990/risk-premia-sizing-long-future-portfolio/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-14-ASSET-CLASS-MOM",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Monthly top-three asset-class momentum rotation",
+      "method_type": "strategy",
+      "hypothesis": "Cross-asset relative momentum may select a small diversified portfolio each month.",
+      "testable_rule": "Rank five fixed asset classes by trailing 12-month return, hold the top three equal-weight for one month, and rotate monthly.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Crypto sector universe, point-in-time membership, missing data, costs and leverage are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time cross-asset prices and a fixed universe"
+      ],
+      "blockers": [
+        "Traditional asset classes are not the MEXC altcoin panel."
+      ],
+      "next_action": "Map to M194/M034 as a breadth lead; preserve the fixed top-three rule if a crypto universe is later frozen.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/15338/asset-class-momentum/",
+          "label": "Public source: https://www.quantconnect.com/research/15338/asset-class-momentum/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15338/asset-class-momentum/",
+          "label": "Public source: https://www.quantconnect.com/research/15338/asset-class-momentum/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-15-DUAL-THRUST",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Dual Thrust range breakout",
+      "method_type": "strategy",
+      "hypothesis": "A close beyond a range defined by prior highs/lows may predict continuation.",
+      "testable_rule": "Compute range=max(HH−LC, HC−LL) over N=4; buy above open+0.5 range and sell below open−0.5 range with a fixed exit.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Session/timezone, instrument set, exit, stop, leverage, costs and MEXC market regime are missing; the public SPY example is negative.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time bars, session rules, execution costs and a frozen breakout baseline"
+      ],
+      "blockers": [
+        "Only a generic source rule is available; no MEXC test is registered."
+      ],
+      "next_action": "Keep as an explicit low-prior M205 alias and preserve the negative public result as context, not project evidence.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/",
+          "label": "Public source: https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/",
+          "label": "Public source: https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-16-FUTURES-SPREADS",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Calendar, intermarket and product spreads with simultaneous legs",
+      "method_type": "strategy",
+      "hypothesis": "Relative futures relationships may reduce outright market exposure.",
+      "testable_rule": "Enter matched spread legs when a fixed relationship or basis trigger crosses a hurdle; close on convergence or a fixed deadline.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Trigger, contract matching, funding, roll, margin, legging, execution and cost rules are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Matched futures contracts, settlement/roll rules, synchronized executable quotes and collateral"
+      ],
+      "blockers": [
+        "CME materials are mechanics education, not a finite alpha rule."
+      ],
+      "next_action": "Alias M170/M241; require a frozen spread trigger and no-trade control before any run.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview",
+          "label": "Public source: https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview",
+          "label": "Public source: https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview"
+        }
+      ]
+    },
+    {
+      "id": "SV26-17-EXECUTION-OI-ROLL",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Execution using matching-engine behavior, open-interest roll tracking and hidden/implied liquidity",
+      "method_type": "execution_method",
+      "hypothesis": "Execution urgency and knowledge of roll/liquidity conditions may reduce market impact.",
+      "testable_rule": "Use a fixed urgency/market-impact policy that reads matching-engine, open-interest-roll and visible/hidden-liquidity states to schedule orders.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Algorithm, queue model, signal-to-order delay, fill model, venue API semantics and MEXC data are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Venue order events/depth, queue/latency observations, contract rolls and a frozen parent strategy"
+      ],
+      "blockers": [
+        "The page is educational/video material without a reproducible algorithm or fill dataset."
+      ],
+      "next_action": "Keep as M227/M239/M240 execution context; do not treat named concepts as tested edge.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.quantitativebrokers.com/videos-quantitative-strategies",
+          "label": "Public source: https://www.quantitativebrokers.com/videos-quantitative-strategies"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.quantitativebrokers.com/videos-quantitative-strategies",
+          "label": "Public source: https://www.quantitativebrokers.com/videos-quantitative-strategies"
+        }
+      ]
+    },
+    {
+      "id": "SV26-18-PROP-RULES",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Path-dependent prop evaluation under daily/weekly/trailing loss and lockout rules",
+      "method_type": "risk_objective",
+      "hypothesis": "Strategy quality for a prop account depends on the account state machine, not terminal P&L alone.",
+      "testable_rule": "Simulate each dated firm rule: targets, daily/overall/trailing loss, profit lockout, consistency and account reset, and estimate pass/payout probability.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Firm/version, state transitions, open-profit marking, reset/payout, minimum days, costs and candidate paths are missing.",
+      "status": "partial",
+      "required_inputs": [
+        "Archived official rules and candidate trade/equity paths"
+      ],
+      "blockers": [
+        "Existing M211 is related; creator examples are not official or audited."
+      ],
+      "next_action": "Map to M211 and verify the dated official rule version before a new simulation.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://prop.tradovate.com/platform/risk-settings",
+          "label": "Public source: https://prop.tradovate.com/platform/risk-settings"
+        },
+        {
+          "path": "https://legal.oanda.com/?code=rules_for_trading_challenges",
+          "label": "Public source: https://legal.oanda.com/?code=rules_for_trading_challenges"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://prop.tradovate.com/platform/risk-settings",
+          "label": "Public source: https://prop.tradovate.com/platform/risk-settings"
+        },
+        {
+          "path": "https://legal.oanda.com/?code=rules_for_trading_challenges",
+          "label": "Public source: https://legal.oanda.com/?code=rules_for_trading_challenges"
+        }
+      ]
+    },
+    {
+      "id": "SV26-19-PROP-PAYOUT",
+      "parent_claim_id": "SV26-SYS",
+      "title": "Post-payout trailing-floor buffer and survival simulation",
+      "method_type": "risk_overlay",
+      "hypothesis": "A payout can reduce trailing-floor buffer and materially change survival odds.",
+      "testable_rule": "Replay identical candidate paths with and without a payout, carrying the firm floor/high-water mark exactly and sizing from remaining buffer.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Reproducible paths, official firm rule version, payout/reset mechanics, open-profit mark and strategy input are missing.",
+      "status": "partial",
+      "required_inputs": [
+        "Candidate equity paths and archived official account rules"
+      ],
+      "blockers": [
+        "Public video supplies a counterfactual claim, not project data."
+      ],
+      "next_action": "Use as a frozen M211 risk overlay; preserve the source percentages as unverified claims.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/",
+          "label": "Public source: https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/",
+          "label": "Public source: https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/"
+        }
+      ]
+    },
+    {
+      "id": "SV26-20-TRIANGULAR-ARB",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Same-venue three-pair triangular arbitrage with pre-positioned balances",
+      "method_type": "strategy",
+      "hypothesis": "Transient price inconsistencies across three pairs may survive all leg fees/slippage for milliseconds.",
+      "testable_rule": "Pre-position balances, calculate the three-leg cycle after each fee/slippage/depth estimate, trade only if the final quantity exceeds the starting quantity by a fixed hurdle, and unwind partial legs by a defined rule.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Venue/pair universe, timestamps, depth walk, rate limits, stale quotes, leg failure, inventory, withdrawal and exit controls are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized three-leg spot quotes/depth, fee schedule, latency and partial-fill accounting"
+      ],
+      "blockers": [
+        "The public transcripts are secondary and no MEXC three-leg history is held."
+      ],
+      "next_action": "Register M247 only after a finite cycle and no-trade/latency controls are frozen.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.dailymotion.com/video/x9r8n9k",
+          "label": "Public source: https://www.dailymotion.com/video/x9r8n9k"
+        },
+        {
+          "path": "https://www.dailymotion.com/video/x9r8q52",
+          "label": "Public source: https://www.dailymotion.com/video/x9r8q52"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.dailymotion.com/video/x9r8n9k",
+          "label": "Public source: https://www.dailymotion.com/video/x9r8n9k"
+        },
+        {
+          "path": "https://www.dailymotion.com/video/x9r8q52",
+          "label": "Public source: https://www.dailymotion.com/video/x9r8q52"
+        }
+      ]
+    },
+    {
+      "id": "SV26-21-LIQ-HEATMAP",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Liquidation-cluster levels as conditional fade or continuation signals",
+      "method_type": "strategy",
+      "hypothesis": "Estimated liquidation concentration may identify forced-flow zones.",
+      "testable_rule": "At a point-in-time liquidation cluster, choose fade or continuation according to a frozen price/flow regime and hold for a fixed horizon.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Liquidation feed/model, cluster threshold, direction classifier, entry/exit, leverage, funding and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical liquidation events/heatmaps, perp prices/OI and executable costs"
+      ],
+      "blockers": [
+        "Existing proxies M140/M176/M233 do not equal the video heatmap rule; no direct feed is held."
+      ],
+      "next_action": "Alias existing liquidation rows and require direct event data before a new lane.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=qFwvTRATC-c",
+          "label": "Public source: https://www.youtube.com/watch?v=qFwvTRATC-c"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=qFwvTRATC-c",
+          "label": "Public source: https://www.youtube.com/watch?v=qFwvTRATC-c"
+        }
+      ]
+    },
+    {
+      "id": "SV26-22-XVENUE-ARBITRAGE",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Cross-venue buy-cheap/sell-rich arbitrage after a spread check",
+      "method_type": "strategy",
+      "hypothesis": "The same coin may briefly trade at a cross-venue price gap.",
+      "testable_rule": "Pre-position both venues, walk executable bid/ask depth, and trade both legs only when the net spread exceeds all fees, latency and a leg-failure reserve.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Venue set, symbol mapping, synchronized books, depth, latency, pre-positioning, collateral, fees, partial fills and close rule are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized L2 books and executable fee/collateral/latency data"
+      ],
+      "blockers": [
+        "Generic videos are descriptions only; M239 is the more specific executable variant."
+      ],
+      "next_action": "Alias M239 and preserve the generic video as weak source context.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=dN8eOAgnJgQ",
+          "label": "Public source: https://www.youtube.com/watch?v=dN8eOAgnJgQ"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=vO89OPb2ILw",
+          "label": "Public source: https://www.youtube.com/watch?v=vO89OPb2ILw"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=dN8eOAgnJgQ",
+          "label": "Public source: https://www.youtube.com/watch?v=dN8eOAgnJgQ"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=vO89OPb2ILw",
+          "label": "Public source: https://www.youtube.com/watch?v=vO89OPb2ILw"
+        }
+      ]
+    },
+    {
+      "id": "SV26-23-FUNDING-INTERVAL",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Interval-normalized funding carry with settlement-clock alignment",
+      "method_type": "strategy",
+      "hypothesis": "Funding rates cannot be compared across venues without their symbol-specific settlement intervals.",
+      "testable_rule": "Read each contract interval, normalize predicted/settled funding to a common horizon, and enter only when the net carry hurdle and settlement clocks align.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Matched contract/beta, interval changes, funding source vintage, entry/exit, margin, fees and legging are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time funding histories and instrument metadata for every venue"
+      ],
+      "blockers": [
+        "No synchronized multi-venue MEXC funding panel has been assembled."
+      ],
+      "next_action": "Alias M059/M134/M241 and make interval metadata an explicit preregistration field.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://bybit-exchange.github.io/docs/v5/market/history-fund-rate",
+          "label": "Public source: https://bybit-exchange.github.io/docs/v5/market/history-fund-rate"
+        },
+        {
+          "path": "https://www.binance.com/en/support/faq/detail/360033525031",
+          "label": "Public source: https://www.binance.com/en/support/faq/detail/360033525031"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://bybit-exchange.github.io/docs/v5/market/history-fund-rate",
+          "label": "Public source: https://bybit-exchange.github.io/docs/v5/market/history-fund-rate"
+        },
+        {
+          "path": "https://www.binance.com/en/support/faq/detail/360033525031",
+          "label": "Public source: https://www.binance.com/en/support/faq/detail/360033525031"
+        }
+      ]
+    },
+    {
+      "id": "SV26-24-BOOK-DEPTH",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Executable depth walk with stale/sequence-mismatch rejection",
+      "method_type": "execution_method",
+      "hypothesis": "A cross-venue opportunity is only executable after walking available depth and rejecting stale snapshots.",
+      "testable_rule": "Align book timestamps/sequences, walk each side to the intended size, reject stale or inconsistent books, and compare net executable prices.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "RPI/invisible liquidity, queue, websocket latency, partial fills, collateral and exit are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized L2/order events, venue sequence semantics and actual fills"
+      ],
+      "blockers": [
+        "No historical multi-venue MEXC book/fill set is held."
+      ],
+      "next_action": "Use as M239/M240 execution controls; no independent alpha claim.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://bybit-exchange.github.io/docs/v5/market/orderbook",
+          "label": "Public source: https://bybit-exchange.github.io/docs/v5/market/orderbook"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://bybit-exchange.github.io/docs/v5/market/orderbook",
+          "label": "Public source: https://bybit-exchange.github.io/docs/v5/market/orderbook"
+        }
+      ]
+    },
+    {
+      "id": "SV26-25-ORACLE-FUNDING",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Funding settled from impact bid/ask and oracle price rather than mark price",
+      "method_type": "accounting_method",
+      "hypothesis": "Funding accounting can differ materially when the venue uses impact prices and an oracle rather than mark price.",
+      "testable_rule": "Compute the carry and hedge using the venue-specific impact/oracle formula, then compare with mark-based accounting.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Historical impact inputs, oracle revisions, contract mapping, hedge, fees and MEXC equivalence are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Venue funding/oracle formulas, impact prices and synchronized positions"
+      ],
+      "blockers": [
+        "Hyperliquid mechanics are not proof of MEXC mechanics or profitability."
+      ],
+      "next_action": "Alias M059/M241 and use as a settlement-accounting control in future carry work.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding"
+        }
+      ]
+    },
+    {
+      "id": "SV26-26-HYPERP-PREMIUM",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Hyperps perp premium mean reversion to its minute-mark EWMA",
+      "method_type": "strategy",
+      "hypothesis": "A perp without a conventional spot/index oracle may revert toward its own mark EWMA.",
+      "testable_rule": "Measure premium to the specified minute-mark EWMA and trade only beyond a fixed band with a fixed exit and funding/fee hurdle.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Trigger, liquidity, funding cap, fee, collateral, leverage, historical data and outage controls are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical Hyperps marks/funding and executable depth"
+      ],
+      "blockers": [
+        "No Hyperps history or exact MEXC analogue is held."
+      ],
+      "next_action": "Retain as an untested M241 alias; do not infer a spot-arbitrage edge.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps"
+        }
+      ]
+    },
+    {
+      "id": "SV26-27-INDEX-ORACLE",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Index-perp premium measured against a validator-published index formula",
+      "method_type": "strategy",
+      "hypothesis": "A formula-aware premium may differ from a generic spot/perp spread.",
+      "testable_rule": "Reconstruct the venue-published index, compare the perp premium with a fixed hurdle, and close on convergence or timeout.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Historical index inputs, formula revisions, threshold, execution, funding and contract mapping are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time index constituents/formula, perp quotes and funding"
+      ],
+      "blockers": [
+        "The official page describes mechanics but supplies no historical edge test."
+      ],
+      "next_action": "Alias M241 and retain the formula version with any future study.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts",
+          "label": "Public source: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts"
+        }
+      ]
+    },
+    {
+      "id": "SV26-28-AS-MICROPRICE",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Avellaneda–Stoikov quotes skewed by imbalance microprice, queue priority and clustered flow",
+      "method_type": "strategy",
+      "hypothesis": "Inventory-aware quoting plus microprice and clustered order-flow state may improve market-making fills.",
+      "testable_rule": "Set a reservation price from inventory and microprice, quote around it, and compare classical versus imbalance/Hawkes variants under the same queue simulator.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Model parameters, queue/arrival calibration, latency, MEXC depth, inventory cap, funding and realistic fills are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Full-resolution books/trades, queue/arrival observations and a parent market-making policy"
+      ],
+      "blockers": [
+        "The repository is a simulator reference, not MEXC paper evidence."
+      ],
+      "next_action": "Alias M058/M227 and require synthetic plus prospective queue validation before any claim.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://github.com/harshitgrover/Order_Book_Simulator",
+          "label": "Public source: https://github.com/harshitgrover/Order_Book_Simulator"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://github.com/harshitgrover/Order_Book_Simulator",
+          "label": "Public source: https://github.com/harshitgrover/Order_Book_Simulator"
+        }
+      ]
+    },
+    {
+      "id": "SV26-29-CARRY-PERSISTENCE",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Funding carry entered only after persistent elevated funding and exited on reversal",
+      "method_type": "strategy",
+      "hypothesis": "Persistence may filter one-print funding spikes and reduce churn.",
+      "testable_rule": "Enter the spot/perp or perp/perp carry only after funding stays above a frozen percentile/horizon and exit after a reversal or fixed deadline.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Percentile, persistence horizon, hedge, leverage, funding forecast, exit and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time funding/spot/perp histories and executable costs"
+      ],
+      "blockers": [
+        "The source is educational and gives no finite thresholds or MEXC test."
+      ],
+      "next_action": "Alias M134 and compare persistence against the existing one-threshold rule.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage",
+          "label": "Public source: https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage",
+          "label": "Public source: https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage"
+        }
+      ]
+    },
+    {
+      "id": "SV26-30-FUNDING-LOCATION",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Funding tails interacted with price location/support and squeeze context",
+      "method_type": "strategy",
+      "hypothesis": "Funding extremes may be more informative near price support/resistance than alone.",
+      "testable_rule": "Condition a funding-tail entry on a predeclared price-location/flow state, then use a fixed horizon, hedge and exit.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Level construction, funding percentile, flow input, state duration, direction, exit and costs are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Funding, OHLC/levels and signed flow with a finite location rule"
+      ],
+      "blockers": [
+        "Source is qualitative and does not specify thresholds or an executable MEXC policy."
+      ],
+      "next_action": "Alias M134/M145/M116; keep the interaction separate from funding-only carry.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://voiceofchain.com/academy/funding-rate-chart-binance",
+          "label": "Public source: https://voiceofchain.com/academy/funding-rate-chart-binance"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://voiceofchain.com/academy/funding-rate-chart-binance",
+          "label": "Public source: https://voiceofchain.com/academy/funding-rate-chart-binance"
+        }
+      ]
+    },
+    {
+      "id": "SV26-31-COST-REALISM",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Reject cross-exchange arbitrage when latency, fees, slippage and competition erase the gap",
+      "method_type": "execution_method",
+      "hypothesis": "Many apparent cross-exchange opportunities disappear under realistic execution.",
+      "testable_rule": "Require the observed depth gap to exceed a measured latency/fee/slippage/competition hurdle before placing both legs.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Source dataset, quote age, venue set, depth, fee tiers, fill model and MEXC calibration are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized executable books, latency, fees, slippage and partial fills"
+      ],
+      "blockers": [
+        "The repository reports a warning/engineering study, not a frozen prospective MEXC result."
+      ],
+      "next_action": "Alias M239/M240 and use as the cost-control gate in any future arb study.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://github.com/YHQZ1/Cross-Exchange-Arbitrage-Engine",
+          "label": "Public source: https://github.com/YHQZ1/Cross-Exchange-Arbitrage-Engine"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://github.com/YHQZ1/Cross-Exchange-Arbitrage-Engine",
+          "label": "Public source: https://github.com/YHQZ1/Cross-Exchange-Arbitrage-Engine"
+        }
+      ]
+    },
+    {
+      "id": "SV26-32-MEXC-API-FEE",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "API-specific MEXC maker/taker fee regime in every execution hurdle",
+      "method_type": "execution_method",
+      "hypothesis": "API fees can differ from web/app fees enough to change a marginal spread decision.",
+      "testable_rule": "Use the dated API fee schedule, symbol exceptions and fee vintage when computing net executable entry/exit hurdles.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Applicable date, account tier, symbol exclusions, promotions and historical fee vintage are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Dated MEXC API fee announcements and account/contract fee metadata"
+      ],
+      "blockers": [
+        "An announcement is not a historical fill series or strategy result."
+      ],
+      "next_action": "Alias M239/M240 and pin the fee schedule before any future MEXC paper lane.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.mexc.com/announcements/api-updates",
+          "label": "Public source: https://www.mexc.com/announcements/api-updates"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.mexc.com/announcements/api-updates",
+          "label": "Public source: https://www.mexc.com/announcements/api-updates"
+        }
+      ]
+    },
+    {
+      "id": "SV26-33-PAPER-FUNDING-ARB",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Paper-traded long low-funding and short high-funding legs after a spread threshold",
+      "method_type": "strategy",
+      "hypothesis": "A cross-venue funding spread can be monitored and paper traded without credentials.",
+      "testable_rule": "Poll public rates, enter the long low-funding/short high-funding pair after a fixed threshold, accrue funding, mark both legs and close on reversal/timeout.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Threshold, instrument matching, fees, fills, margin, settlement, latency, data gaps and prospective protocol are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Public funding streams, synchronized prices and a frozen paper accounting model"
+      ],
+      "blockers": [
+        "The GitHub demo is simulated and explicitly makes no profitability claim."
+      ],
+      "next_action": "Alias M059/M241; borrow its accounting only after independent cost and coverage review.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage",
+          "label": "Public source: https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage",
+          "label": "Public source: https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage"
+        }
+      ]
+    },
+    {
+      "id": "SV26-34-CARRY-RISK-ACCOUNTING",
+      "parent_claim_id": "SV26-CRYPTO",
+      "title": "Cash-and-carry risk accounting for denomination, margin, liquidation, oracle and exchange risk",
+      "method_type": "risk_method",
+      "hypothesis": "Carry returns can be overstated if denomination, liquidation and oracle mechanics are omitted.",
+      "testable_rule": "Recompute carry under contract denomination, isolated collateral, oracle/mark, liquidation and exchange-risk envelopes before comparing strategies.",
+      "exact_tested_scope": "No independently audited frozen project test of this exact source rule was identified; public examples, documentation or transcripts are leads only.",
+      "unrun_scope": "Exact MEXC contract rules, event chronology, maintenance margin, fees, borrow and stress paths are missing.",
+      "status": "untested",
+      "required_inputs": [
+        "Contract specifications, settled funding/mark/oracle histories and a frozen collateral model"
+      ],
+      "blockers": [
+        "The source is a risk/accounting comment, not a strategy or result."
+      ],
+      "next_action": "Use as a control on M134/M170 and preserve conditional envelopes separately from realized P&L.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Second social/video discovery batch 2026-10-20"
+        },
+        {
+          "path": "https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf",
+          "label": "Public source: https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf",
+          "label": "Public source: https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf"
+        }
+      ]
     }
   ],
   "sources": [
@@ -7460,9 +8680,9 @@
     },
     {
       "path": "docs/REELS_TRANSCRIPT.md",
-      "sha256": "92809a1a67d5b5fd0aa1922844d3324e3c0446719069bdebc51dbb0b0cfa9dde",
+      "sha256": "d547c58a72b646c6be4d73fba22103ca333c70f3617ecedf251fa5c5d89960fd",
       "review_status": "reviewed_video_leads_not_performance_evidence",
-      "scope": "Compact digest of the two earlier Instagram reels, three owner-provided TikToks and 12 additional public video sources; public caption/transcript/description basis identified per source.",
+      "scope": "Compact digest of the two earlier Instagram reels, three owner TikToks, 12 prior public sources and 39 second-batch public sources; public caption/transcript/description basis identified per source.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -7500,15 +8720,50 @@
         "HB26-EP7-CROSSED-BOOK-ARB",
         "HB26-EP7-PASSIVE-MAKER-HEDGE",
         "HB26-EP7-SOL-FEE-TVL-LP",
-        "PF26-PASS-PROBABILITY"
+        "PF26-PASS-PROBABILITY",
+        "SV26-01-GEX-PROFILES",
+        "SV26-02-SKEW-RV",
+        "SV26-03-PARITY-ARB",
+        "SV26-04-VOL-STRUCTURES",
+        "SV26-05-EVENT-SHORT-VOL",
+        "SV26-06-IV-PERCENTILE",
+        "SV26-07-GAMMA-DTE",
+        "SV26-08-EARNINGS-CRUSH",
+        "SV26-09-REGIME-MULT",
+        "SV26-10-ADAPT-TREND-CARRY",
+        "SV26-11-SYNTHETIC-SPOT",
+        "SV26-12-JOINT-ROLL-MOM",
+        "SV26-13-RISK-PREMIA-CONTRACT",
+        "SV26-14-ASSET-CLASS-MOM",
+        "SV26-15-DUAL-THRUST",
+        "SV26-16-FUTURES-SPREADS",
+        "SV26-17-EXECUTION-OI-ROLL",
+        "SV26-18-PROP-RULES",
+        "SV26-19-PROP-PAYOUT",
+        "SV26-20-TRIANGULAR-ARB",
+        "SV26-21-LIQ-HEATMAP",
+        "SV26-22-XVENUE-ARBITRAGE",
+        "SV26-23-FUNDING-INTERVAL",
+        "SV26-24-BOOK-DEPTH",
+        "SV26-25-ORACLE-FUNDING",
+        "SV26-26-HYPERP-PREMIUM",
+        "SV26-27-INDEX-ORACLE",
+        "SV26-28-AS-MICROPRICE",
+        "SV26-29-CARRY-PERSISTENCE",
+        "SV26-30-FUNDING-LOCATION",
+        "SV26-31-COST-REALISM",
+        "SV26-32-MEXC-API-FEE",
+        "SV26-33-PAPER-FUNDING-ARB",
+        "SV26-34-CARRY-RISK-ACCOUNTING"
       ],
       "unextracted_limitations": [
-        "No full internet survey; several videos had no verified transcript.",
-        "Creator/demo outcomes are not audited and were not tested.",
-        "External option/DEX data and MEXC trade-level liquidation histories are not held."
+        "No full internet survey; several videos and indexed pages have no verified full transcript.",
+        "Creator/demo outcomes and code examples are not audited project results and were not tested.",
+        "External option/DEX data, synchronized multi-venue depth/fills and MEXC trade-level liquidation histories are not held."
       ],
       "current_source_review_required": false,
-      "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859"
+      "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
+      "current_sha256": "d547c58a72b646c6be4d73fba22103ca333c70f3617ecedf251fa5c5d89960fd"
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -7526,6 +8781,14 @@
       "reviewed_against_live_queue": "registry/methods.csv through M233 before adding rows M234-M246.",
       "prior_reel_digest_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
       "note": "Original received_source_base, reconciled_against and original_extraction_sha256 are unchanged."
+    },
+    "supplemental_media_intake_round2": {
+      "base_records_preserved": 201,
+      "new_records": 34,
+      "new_media_sources": 39,
+      "reviewed_against_live_queue": "registry/methods.csv through M246 before adding rows M247-M251.",
+      "prior_reel_digest_sha256": "92809a1a67d5b5fd0aa1922844d3324e3c0446719069bdebc51dbb0b0cfa9dde",
+      "source_basis": "Three read-only subagents and one targeted web pass; no outcomes or large data downloads."
     }
   },
   "unreviewed_source_paths": [
@@ -7720,6 +8983,263 @@
         "https://www.bis.org/publ/work1087.htm"
       ],
       "provenance_note": "Subagent discovery was read-only and independently reconciled here. No outcomes were computed, no raw video/audio was saved, and no large market dataset was downloaded."
+    },
+    {
+      "intake_id": "social_video_methods_20261020_b",
+      "captured_utc_date": "2026-10-20",
+      "previous_reels_digest_sha256": "92809a1a67d5b5fd0aa1922844d3324e3c0446719069bdebc51dbb0b0cfa9dde",
+      "records_added": [
+        "SV26-01-GEX-PROFILES",
+        "SV26-02-SKEW-RV",
+        "SV26-03-PARITY-ARB",
+        "SV26-04-VOL-STRUCTURES",
+        "SV26-05-EVENT-SHORT-VOL",
+        "SV26-06-IV-PERCENTILE",
+        "SV26-07-GAMMA-DTE",
+        "SV26-08-EARNINGS-CRUSH",
+        "SV26-09-REGIME-MULT",
+        "SV26-10-ADAPT-TREND-CARRY",
+        "SV26-11-SYNTHETIC-SPOT",
+        "SV26-12-JOINT-ROLL-MOM",
+        "SV26-13-RISK-PREMIA-CONTRACT",
+        "SV26-14-ASSET-CLASS-MOM",
+        "SV26-15-DUAL-THRUST",
+        "SV26-16-FUTURES-SPREADS",
+        "SV26-17-EXECUTION-OI-ROLL",
+        "SV26-18-PROP-RULES",
+        "SV26-19-PROP-PAYOUT",
+        "SV26-20-TRIANGULAR-ARB",
+        "SV26-21-LIQ-HEATMAP",
+        "SV26-22-XVENUE-ARBITRAGE",
+        "SV26-23-FUNDING-INTERVAL",
+        "SV26-24-BOOK-DEPTH",
+        "SV26-25-ORACLE-FUNDING",
+        "SV26-26-HYPERP-PREMIUM",
+        "SV26-27-INDEX-ORACLE",
+        "SV26-28-AS-MICROPRICE",
+        "SV26-29-CARRY-PERSISTENCE",
+        "SV26-30-FUNDING-LOCATION",
+        "SV26-31-COST-REALISM",
+        "SV26-32-MEXC-API-FEE",
+        "SV26-33-PAPER-FUNDING-ARB",
+        "SV26-34-CARRY-RISK-ACCOUNTING"
+      ],
+      "media_sources": [
+        {
+          "url": "https://www.youtube.com/watch?v=ez7KBOsEpaQ",
+          "title": "OPTIONS FLOW COURSE 0DTE – PART 1/4",
+          "basis": "public YouTube description; no full transcript verified"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=_0jd6CMyk9s",
+          "title": "How To Trade 0DTE Options Using Gamma Exposure",
+          "basis": "public YouTube title/description; no full transcript verified"
+        },
+        {
+          "url": "https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading",
+          "title": "Gamma Exposure Strategy: 4 GEX Profiles for SPX 0DTE Day Trading",
+          "published": "2026-03-16",
+          "basis": "official page synopsis and chapter metadata"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew",
+          "title": "OIC/OCC Volatility II: Understanding Options Skew",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/theoretical-option-pricing",
+          "title": "OIC/OCC Theoretical Option Pricing",
+          "basis": "official OIC video page/chapter topics"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/volatility-strategies",
+          "title": "OIC/OCC Volatility Strategies",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/straddles-and-strangles",
+          "title": "OIC/OCC Straddles and Strangles",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/volatility-strategies-ii-short-straddles-and-stran",
+          "title": "OIC/OCC Volatility Strategies II: Short Straddles and Strangles",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar",
+          "title": "CME Options: Aligning Volatility with Strategies",
+          "published": "2021-03-11",
+          "basis": "official CME webinar page"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time",
+          "title": "OIC/OCC Gamma as a Function of Time",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk",
+          "title": "OIC/OCC Implied Volatility and Post-Earnings Volatility Risk",
+          "basis": "official OIC video page"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/",
+          "title": "QuantConnect Futures Trend Following and Carry in Different Risk Regimes",
+          "basis": "public research page with equations/results"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/16041/trend-and-carry-allocation/",
+          "title": "QuantConnect Trend and Carry Allocation",
+          "basis": "public research page with allocation rule"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/16001/combined-carry-and-trend/p1",
+          "title": "QuantConnect Combined Carry and Trend",
+          "basis": "public research implementation page"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/16014/futures-spot-trend/",
+          "title": "QuantConnect Futures Spot Trend",
+          "basis": "public research page with synthetic-spot decomposition"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/",
+          "title": "QuantConnect Momentum Combined With Term Structure",
+          "basis": "public research page with joint ranking"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15990/risk-premia-sizing-long-future-portfolio/",
+          "title": "QuantConnect Risk Premia Sizing Long Futures Portfolio",
+          "basis": "public research page; reported result retained as source claim"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15338/asset-class-momentum/",
+          "title": "QuantConnect Asset Class Momentum",
+          "basis": "public research page"
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/",
+          "title": "QuantConnect Dual Thrust Trading Algorithm",
+          "basis": "public research page with parameter example"
+        },
+        {
+          "url": "https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview",
+          "title": "CME Futures Spread Overview",
+          "basis": "official CME education page"
+        },
+        {
+          "url": "https://www.quantitativebrokers.com/videos-quantitative-strategies",
+          "title": "Quantitative Brokers Quantitative Strategies Videos",
+          "basis": "public educational video index"
+        },
+        {
+          "url": "https://prop.tradovate.com/platform/risk-settings",
+          "title": "Tradovate Prop Risk Settings",
+          "basis": "official platform settings page"
+        },
+        {
+          "url": "https://legal.oanda.com/?code=rules_for_trading_challenges",
+          "title": "OANDA Rules for Trading Challenges",
+          "basis": "official dated rules PDF/page"
+        },
+        {
+          "url": "https://www.dailymotion.com/video/x9r8n9k",
+          "title": "Binance Arbitrage Trading",
+          "basis": "public Dailymotion transcript; secondary source"
+        },
+        {
+          "url": "https://www.dailymotion.com/video/x9r8q52",
+          "title": "Crypto Arbitrage Binance",
+          "basis": "public Dailymotion transcript; secondary source"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=qFwvTRATC-c",
+          "title": "Liquidation Heatmaps Explained in 5 minutes",
+          "published": "2023-09-18",
+          "basis": "public YouTube description and chapters"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=dN8eOAgnJgQ",
+          "title": "Cross-Exchange Crypto Arbitrage Explained",
+          "basis": "public YouTube description only"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=vO89OPb2ILw",
+          "title": "Best Crypto Arbitrage Strategy Explained",
+          "basis": "public YouTube description only"
+        },
+        {
+          "url": "https://bybit-exchange.github.io/docs/v5/market/history-fund-rate",
+          "title": "Bybit Funding Rate History API",
+          "basis": "official Bybit API documentation"
+        },
+        {
+          "url": "https://bybit-exchange.github.io/docs/v5/market/orderbook",
+          "title": "Bybit Orderbook API",
+          "basis": "official Bybit API documentation"
+        },
+        {
+          "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+          "title": "Hyperliquid Funding",
+          "basis": "official Hyperliquid documentation"
+        },
+        {
+          "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals",
+          "title": "Hyperliquid Perpetuals API",
+          "basis": "official Hyperliquid API documentation"
+        },
+        {
+          "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps",
+          "title": "Hyperliquid Hyperps",
+          "basis": "official Hyperliquid documentation"
+        },
+        {
+          "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts",
+          "title": "Hyperliquid Index Perpetual Contracts",
+          "basis": "official Hyperliquid documentation"
+        },
+        {
+          "url": "https://www.binance.com/en/support/faq/detail/360033525031",
+          "title": "Binance Funding Fee FAQ",
+          "basis": "official Binance support page"
+        },
+        {
+          "url": "https://github.com/harshitgrover/Order_Book_Simulator",
+          "title": "Order Book Simulator",
+          "basis": "public repository README/code description"
+        },
+        {
+          "url": "https://voiceofchain.com/academy/funding-rate-chart-binance",
+          "title": "Funding Rate Chart and Positioning Guide",
+          "basis": "public educational page; qualitative"
+        },
+        {
+          "url": "https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage",
+          "title": "Kraken Futures Funding-Rate Arbitrage",
+          "basis": "official educational page"
+        },
+        {
+          "url": "https://www.sec.gov/comments/S7-2026-21/s7202621-1011079-3235289.pdf",
+          "title": "SEC comment on crypto carry/liquidation accounting",
+          "basis": "public comment PDF; risk/accounting context"
+        }
+      ],
+      "primary_checks": [
+        "https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading",
+        "https://www.optionseducation.org/videolibrary/theoretical-option-pricing",
+        "https://www.cmegroup.com/education/videos/options-aligning-volatility-with-strategies-webinar",
+        "https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/",
+        "https://www.quantconnect.com/research/16014/futures-spot-trend/",
+        "https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/",
+        "https://bybit-exchange.github.io/docs/v5/market/history-fund-rate",
+        "https://bybit-exchange.github.io/docs/v5/market/orderbook",
+        "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+        "https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage",
+        "https://www.mexc.com/announcements/api-updates",
+        "https://github.com/YHQZ1/Cross-Exchange-Arbitrage-Engine"
+      ],
+      "provenance_note": "Three subagents plus a targeted web pass performed read-only discovery. Sources were reconciled against the live queue; no media/audio, market dataset, model weight, credential or outcome was downloaded or computed. Weak generic sources remain catalogued with low confidence rather than silently promoted.",
+      "media_source_count": 39
     }
   ]
 }
