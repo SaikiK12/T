@@ -395,6 +395,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - **Logged variant:** spot notices at +1 h, +4.15%, t 3.07 (n 25), with both halves positive. It is 1 of 8 variants,
     so it is a forward candidate, not a pass.
   - NULL. [Findings](../experiments/delist_v1/FINDINGS.md).
+- **R268 (delist_fwd)** runs R267's spot-notice variant forward on MEXC paper.
+  - Tickets come from the notice recorder's `first_seen_utc` (from 2026-10-20 18:00 UTC).
+  - Short at the first hourly open after detection, and cover 1 h later (+24 h logged).
+  - Futures notices are not traded.
+  - Decision at 12 scored notices (about 1.5 years). RUNNING. [PREREG](../experiments/delist_fwd/PREREG.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -500,6 +505,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,080 after R267 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,081 after R268 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

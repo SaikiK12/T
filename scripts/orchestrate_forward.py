@@ -70,7 +70,8 @@ def forward_tasks(python=".venv/bin/python"):
     does not need R215. R224 reads only R200's latest signal universe. The
     point-in-time recorders read nothing from the lanes and run first; the
     digest reads only their files and runs last. R266 reads only the recorders'
-    calendar snapshot and ticker files, so they are optional for it.
+    calendar snapshot and ticker files, so they are optional for it. R268 reads the
+    notice journal and ticker files the same way and runs right after them.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         return Task(name, (python, "scripts/" + script), needs, optional, timeout, files)
@@ -79,6 +80,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
         task("REC_NOTICES", "record_notices.py", timeout=300),
         task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
+        task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),
