@@ -3,7 +3,7 @@
 # R214 flow72_fwd3 (one bar late, Binance), R215 mexc_fwd (MEXC), R218 mexc_fwd_sq (agreement-squared on MEXC),
 # R220 carry_fwd (funding carry on Binance and MEXC), R221 mexc_seq (sequential decision on the MEXC books),
 # R224 mexc_costs (MEXC order-book cost snapshots), R225 vt_fwd (volatility target on the MEXC books).
-# Last, the processing-lag report (experiments/forward_lag): which on-time days were scored from hours computed late.
+# Last, the processing-lag report (experiments/forward_lag) and the panel (docs/PANEL.md).
 cd "$(dirname "$0")/.." || exit 1
 # one tick at a time: a second run while one is going exits at once
 exec 9> .forward.lock
@@ -20,3 +20,4 @@ timeout 900 $PY scripts/forward_carry.py >> experiments/carry_fwd/tick.log 2>&1
 timeout 300 $PY scripts/forward_seq.py >> experiments/mexc_seq/tick.log 2>&1
 timeout 300 $PY scripts/forward_vt.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 120 $PY scripts/forward_lag.py >> experiments/vt_fwd/tick.log 2>&1
+timeout 120 $PY scripts/panel.py >> experiments/vt_fwd/tick.log 2>&1
