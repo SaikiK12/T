@@ -37,7 +37,7 @@ class Rules:
     refund_fee: bool = False             # fee refunded with the first payout
     activation: float = 0.0              # USD paid on passing, before funded trading
     payout_share: float = 1.0            # share of the profit above the initial balance withdrawn at a payout
-    payout_cap: float = float("inf")     # USD cap on the trader's payment per payout
+    payout_cap: float = float("inf")     # USD cap on each withdrawal request, before the split
     floor_after_payout: float = float("nan")  # equity floor (units of the initial balance) once one payout is made
     payout_deny: float = 0.0             # chance a payout request is refused and the account closed unpaid
     source: str = "illustrative"
@@ -69,11 +69,13 @@ PRESETS = {
                           payout_days=14, source="third-party: proptradingvibes.com"),
     # Topstep 50K Combine (CME futures; a benchmark, our crypto books cannot trade there): USD 3,000 target, USD 2,000
     # end-of-day trailing locking at the start, best day < 55% of target; USD 49 a month, USD 149 activation (third-party)
-    # funded: the loss limit resets to the starting balance after the first payout (help.topstep.com); payouts capped
-    # at USD 2-6k each, the low end assumed
+    # funded (help.topstep.com payout policy, checked 2026-10-20): each request at most 50% of the balance and USD 2,000
+    # (50K Standard path; 3,000 on the Consistency path); after the first payout the loss limit resets to the starting
+    # balance. The payout condition is 5 winning days of USD 150+, restarting after each request; payout_days=14
+    # approximates it.
     "topstep_50k": Rules("topstep_50k", 50_000, 49, targets=(0.06,), daily_loss=0.0, max_dd=0.04,
                          dd_mode="trailing_lock", trail_eod=True, consistency=0.55, split=0.9, payout_days=14,
-                         activation=149, payout_cap=2_000,
+                         activation=149, payout_share=0.5, payout_cap=2_000,
                          floor_after_payout=1.0, source="help.topstep.com (rules), third-party (prices)"),
     "illustrative_2step": Rules("illustrative_2step", 100_000, 500, targets=(0.08, 0.05), daily_loss=0.05,
                                 max_dd=0.10, split=0.8, refund_fee=True),
@@ -187,7 +189,7 @@ def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, ste
 
 def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
     """USD paid to the trader over `days` funded days. At each payout date, if equity is above the initial balance,
-    payout_share of that profit (capped so the trader's payment is at most payout_cap) is withdrawn and split; the rest
+    payout_share of that profit (each request capped at payout_cap USD before the split) is withdrawn and split; the rest
     stays as cushion and the trailing peak restarts from the new balance. A loss carries over. With probability
     payout_deny a request is refused and the account closed unpaid. Once one payout is made, the floor rises to
     floor_after_payout when that is set. A broken rule ends the account."""
@@ -196,7 +198,7 @@ def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
     paid = np.zeros(n, bool)
     eq, peak = np.ones(n), np.ones(n)
     cycle = rules.payout_days
-    cap = rules.payout_cap / (rules.split * rules.account)
+    cap = rules.payout_cap / rules.account
     after = rules.floor_after_payout
     for start in range(0, days, cycle):
         L = min(cycle, days - start)

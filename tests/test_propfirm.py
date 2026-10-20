@@ -80,6 +80,12 @@ class PropFirmTests(unittest.TestCase):
         self.assertAlmostEqual(free.mean(), 6 * 10_000, delta=1e-6)   # 6 cycles x (10% of 100k), split 1
         self.assertTrue(np.all(capped <= 6 * 2_000 + 1e-6))
 
+    def test_payout_cap_applies_before_the_split(self):
+        r = np.full(1000, 0.01)
+        rules = self.rules(payout_days=10, split=0.9, payout_cap=2_000)
+        paid = pf.funded_payouts(r, rules, 1.0, 50, 60, 1, 1, np.random.default_rng(6))
+        self.assertAlmostEqual(paid.mean(), 6 * 0.9 * 2_000, delta=1e-6)   # each request 2,000, trader keeps 90%
+
     def test_partial_payout_leaves_a_cushion(self):
         r = np.full(1000, 0.01)
         half = self.funded(r, payout_share=0.5)

@@ -17,7 +17,7 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
 | HyroTrader 1-Step / Zero (O) | $749 / $949 | 10% | 4%/6% and 3%/5% | 5 days / 1 day; 40% day, 50% trade | 80-90% / 80% | Zero's fee is not refunded |
 | [Breakout (Kraken)](https://cryptoslate.com/prop-firms/breakout-review/) 1-Step (3P) | $330-800 | 9-12% | 3% (balance at 00:30 UTC) / static 3-6% | none | 80% (90% for +20% fee) | Costs 0.04% per side plus 0.033%/day swap. 5x BTC/ETH, 2x alts, 62 pairs. Firm may internalize orders. Kraken owns it since 2025-09 |
 | Bitfunded (3P, a rival's blog) | $799 | 8% + 5% | 5% / 8-10% end-of-day trailing | 5 days | 80-90% | 1:5, bots allowed. Payouts not verifiable on-chain |
-| [Topstep](https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit) Combine 50K (O) | $49/mo + $149, or $85/mo | $3k | $2k loss limit trailing the end-of-day balance but enforced intraday; locks at start; **resets to $0 after the first payout** | best day at most 55% of target | 90%, caps $2-6k per payout | Futures. Bots allowed with conditions; no HFT, no VPS. Flat by 3:10 pm CT |
+| [Topstep](https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit) Combine 50K (O) | $49/mo + $149, or $85-95/mo with no activation fee (the sales page and the help page differ) | $3k | $2k loss limit trailing the end-of-day balance but enforced intraday; locks at start; **resets to $0 after the first payout** | best day at most 55% of target | 90%; each request at most 50% of the balance and $2k (50K Standard; $3k on the Consistency path), after 5 winning days of $150+ | Futures. Bots allowed with conditions; no HFT, no VPS. Flat by 3:10 pm CT |
 | Apex (3P, rules changed 2026-03-01) | $249-490 one-time | $3k | $2k trailing; daily $1k | 50% at payout | first payout capped $1.5k; 6 payouts max | Automation and hedging banned |
 | [FTMO](https://ftmo.com/en/trading-objectives/) 2-Step (O) | about EUR 540 (3P), refunded | 10% + 5% | 5% (00:00 CET) / 10% static | 4 days | 80% | CFDs incl. crypto. EAs allowed. News and weekend limits only on funded Standard; Swing exempt |
 | FTMO 1-Step (O) | not refunded | 10% | 3% / 10% end-of-day trailing | best day at most 50% of profit (from 2026-10-12); delays the pass rather than failing it | | |
@@ -91,20 +91,30 @@ not a trial and has no registry row.
 | HyroTrader 2-step, EV USD (normal / t4) | -147 / -363 | +366 / -32 | +1,538 / +855 | +3,975 / +2,839 | +7,337 / +6,076 | +16,811 / +14,442 | +30,464 / +22,620 |
 | FTMO 2-step, paid (normal) | 7% | 13% | 21% | 31% | 58% | 69% | 84% |
 | FTMO 2-step, EV USD (normal / t4) | -66 / -83 | +649 / +404 | +1,928 / +1,361 | +4,114 / +3,306 | +7,366 / +6,557 | +18,166 / +14,383 | +31,709 / +23,019 |
-| Topstep 50K, paid (normal) | 8% | 7% | 7% | 9% | 11% | 16% | 22% |
-| Topstep 50K, EV USD (normal / t4) | +92 / +88 | +218 / +149 | +358 / +298 | +486 / +559 | +822 / +908 | +1,890 / +2,329 | +3,570 / +4,362 |
+| Topstep 50K, paid (normal) | 8% | 7% | 7% | 12% | 20% | 23% | 39% |
+| Topstep 50K, EV USD (normal / t4) | +60 / +71 | +199 / +146 | +321 / +292 | +494 / +563 | +801 / +912 | +1,983 / +2,266 | +3,771 / +4,508 |
 
 Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
 (Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
 
-Topstep rows include the payout rules added to `lab/propfirm` on 2026-10-20: a USD 2,000 cap per payout (the low end
-of USD 2-6k) and the loss limit moving to the starting balance after the first payout.
-- Under those rules the EV-best size is the largest one tried (3x, about 3% daily vol) at every Sharpe from 0 up.
-  The account passes in about 6 days or blows up.
-- Before those rules, the EV-best size at Sharpe 1-3 was 0.5x, with 42-85% paid.
-- EV at Sharpe 1 fell from USD 1,247 to 822. The optimum sits at the edge of the sizes tried, so it may be higher
-  still.
-- **So the contract rewards a lottery, not a steady book.** That is one more reason a pass says little about skill.
+Topstep rows use the payout rules read from help.topstep.com on 2026-10-20 (payout policy and loss-limit articles):
+- Each request is at most 50% of the balance and USD 2,000 (50K Standard path), applied before the 90% split.
+- The loss limit moves to the starting balance after the first payout.
+- The payout condition, 5 winning days of USD 150+ restarting after each request, is approximated by a 14-day cycle.
+
+What the rules do to the map:
+- **EV is nearly flat from 1.5x to 3x size (about 1.5-3% daily vol).**
+  - With normal tails the EV-best size moves between 1.5x and 3x from one Sharpe to the next. With t4 tails it is 3x
+    at most Sharpes.
+  - The gaps are within simulation noise, so the best size is not well determined. Large sizes pass in about 6 days
+    or blow up.
+- **Earlier runs, for comparison:**
+  - Without the 50% share, and with the cap applied after the split: EV at Sharpe 1 was USD 822 (normal) and 908
+    (t4). Now it is 801 and 912, a change within noise.
+  - Before any payout rules: the EV-best size at Sharpe 1-3 was 0.5x, with 42-85% paid, and EV at Sharpe 1 was
+    USD 1,247.
+- **So the payout rules push toward large size, not a steady book.** A large size pays about as much as a moderate
+  one, while most such accounts blow up within weeks. That is one more reason a pass says little about skill.
 
 **Reading:**
 - **The model is too kind to the trader.** At the 100K firms it breaks even between Sharpe -1 and -0.5; at Topstep it
@@ -131,12 +141,14 @@ of USD 2-6k) and the loss limit moving to the starting balance after the first p
 - Breakout's balance-based daily loss reset at 00:30 UTC;
 - a per-side cost plus daily swap;
 - hourly paths, so intraday breaches show;
-- Topstep's intraday-enforced end-of-day trailing floor with lock, its reset after payout, and payout caps;
+- Topstep's intraday enforcement of the end-of-day trailing floor (its reset after payout, the 50% share and the
+  per-request cap are in since 2026-10-20; the 5-winning-day payout condition is approximated by a 14-day cycle);
 - FTMO 1-Step's delaying consistency rule;
 - a funded-stage consistency rule;
 - 30-day inactivity expiry;
 - the low-cap exposure cap;
-- a haircut for payouts that never arrive, calibrated to 7% of accounts paid.
+- a haircut for payouts that never arrive, calibrated to 7% of accounts paid (`payout_deny` exists; it is not
+  calibrated yet).
 
 Then, ranked:
 1. HyroTrader 2-Step and 1-Step x flow book A (size 0.15-0.25), at 2x and 3x costs.
