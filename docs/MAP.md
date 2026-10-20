@@ -363,6 +363,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     (-0.007).
   - All 12 selected books fail discovery. The best is -0.1 bp/day at 24 h; the 1-4 h books lose to costs.
   - NULL. [Findings](../experiments/tradlead_v1/FINDINGS.md).
+- **R262 (impact_v1)** measured square-root market impact on books A, B and X2 at $1k-$10M (a measurement, 0
+  trials).
+  - At $10k, impact is under 1.5% of the validation net, so the tier cost model holds at the owner's scale.
+  - A and X2 lose half their net near $12M and all of it near $50M. That uses Binance volumes; MEXC capacity is lower
+    in proportion to its volume.
+  - DATA_PASS. [Findings](../experiments/impact_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -468,6 +474,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,061 after R261 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,061 after R262 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
