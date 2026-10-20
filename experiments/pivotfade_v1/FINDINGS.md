@@ -5,7 +5,7 @@ its first unseen windows. The holdout was not read, because nothing passed valid
 - **Indices 2013-19:** alpha -0.57 bp/day, t -0.62.
 - **Forex 2013-19:** alpha +0.46, t 0.98, and negative at 2x.
 - **Crypto 2024-01..2025-06:** 4 h net -9.9 bp/day (t -1.36); 1 d -8.3 (t -1.00).
-- The pivot family is closed at 4 + 3 trials (R243 and R247's pivot books, plus this lane).
+- The pivot family is closed at 8 trials: R243's 2 pivot books, R247's 2 and this lane's 4.
 
 - **Registry row:** R248 (trials 4). Program trials after it: 9,471,983.
 - **Gate:** 1 for forex and indices (failed at validation); 0 for crypto.
