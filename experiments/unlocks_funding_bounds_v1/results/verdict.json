@@ -1,0 +1,80 @@
+{
+ "complete_short_funding": 407,
+ "conditional_screen": {
+  "checks": {
+   "lower_1x_halves_positive": true,
+   "lower_1x_week_t_ge2": true,
+   "lower_1x_without_top3_positive": true,
+   "lower_means_positive_at_all_costs": true
+  },
+  "halves_lower_1x": [
+   0.015152249221872367,
+   0.03729335889041116
+  ],
+  "meaning": "Conditional retrospective accounting screen; clustered t on bounds is descriptive, not a test of executable PnL.",
+  "n": 407,
+  "registry_verdict": "PARTIAL",
+  "status": "PASS",
+  "top3_removed": [
+   "EIGENUSDT",
+   "ZORAUSDT",
+   "ZETAUSDT"
+  ],
+  "without_top3_lower_1x": 0.019405578152065436
+ },
+ "full_r258_cohort_funding_status": "INCONCLUSIVE_MISSING_WINDOWS",
+ "gate": 0,
+ "interpretation": "Spent, retrospectively selected Binance events; signed funding/mark bounds and notional fee stress, not executed fills, a self-financing portfolio, exact liquidation, MEXC evidence or fresh prospective evidence.",
+ "isolated_collateral_necessary_floor": {
+  "1": {
+   "max_event": {
+    "day": "2026-04-03",
+    "entry_price": 0.10835,
+    "mark_peak": 1.84143,
+    "perp": "STOUSDT",
+    "positive_credit_upper": 0.0008696131566331335
+   },
+   "max_floor": 15.995331125191314,
+   "measured": 407,
+   "required_collateral_over_100pct": 3,
+   "required_collateral_over_20pct": 73,
+   "required_collateral_over_50pct": 12,
+   "unknown": 14
+  },
+  "2": {
+   "max_event": {
+    "day": "2026-04-03",
+    "entry_price": 0.10835,
+    "mark_peak": 1.84143,
+    "perp": "STOUSDT",
+    "positive_credit_upper": 0.0008696131566331335
+   },
+   "max_floor": 15.996331125191315,
+   "measured": 407,
+   "required_collateral_over_100pct": 3,
+   "required_collateral_over_20pct": 74,
+   "required_collateral_over_50pct": 12,
+   "unknown": 14
+  },
+  "3": {
+   "max_event": {
+    "day": "2026-04-03",
+    "entry_price": 0.10835,
+    "mark_peak": 1.84143,
+    "perp": "STOUSDT",
+    "positive_credit_upper": 0.0008696131566331335
+   },
+   "max_floor": 15.997331125191314,
+   "measured": 407,
+   "required_collateral_over_100pct": 3,
+   "required_collateral_over_20pct": 75,
+   "required_collateral_over_50pct": 12,
+   "unknown": 14
+  }
+ },
+ "price_excluded": 109,
+ "r258_priceable": 421,
+ "source_events": 530,
+ "trials": 2,
+ "verdict": "PARTIAL"
+}
