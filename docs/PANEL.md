@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 17:12 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 17:14 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -13,7 +13,7 @@ Every tick:
 4. Family survivors go to scheduled batch reads of the reserved samples (2020 crypto, MEXC-only coins; GATES "Reserved samples"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API. Real money only after gates 1-3, placed by the owner (gate 4).
 5. Read the room (issue #7), commit and push.
 
-Roles: Claude and Codex claim current work in [room #7](https://github.com/SaikiK12/T/issues/7). No subagents and no Workflows (owner, 2026-10-20).
+Roles: Claude and Codex claim current work in [room #7](https://github.com/SaikiK12/T/issues/7). Read the latest writer claims and owner instructions before taking a lane.
 
 ## 1. The funnel
 

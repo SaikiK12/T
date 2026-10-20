@@ -124,6 +124,26 @@ def build_index(root, files):
         elif len(parts) >= 3 and parts[:2] == ("research", "intake"):
             safe_file(root, path)
             entries.append(dict(kind="source", path=path, title=parts[-1], group="Source inputs"))
+    # Search these canonical inputs in memory; never emit another methods queue.
+    tables = [
+        ("registry/methods.csv", "method", "id", "method", ("status", "data_held")),
+        ("registry/methods_aliases.csv", "alias", "rec_id", "title", ("queue_id", "also")),
+    ]
+    tables += [(p, "provider", "id", "provider", ("url", "received_scope", "access_boundary", "research_gap", "existing_queue"))
+               for p in files if p.startswith("research/intake/source_catalog") and p.endswith(".csv")]
+    for path, kind, id_key, title_key, metadata in tables:
+        if path not in available:
+            continue
+        with safe_file(root, path).open(newline="", encoding="utf-8") as source:
+            table = csv.DictReader(source)
+            required = {id_key, title_key, *metadata}
+            if not required <= set(table.fieldnames or []):
+                raise ValueError(f"Missing catalog columns in {path}: {sorted(required - set(table.fieldnames or []))}")
+            for row in table:
+                if None in row or not row[id_key] or not row[title_key]:
+                    raise ValueError(f"Malformed catalog row in {path}")
+                entries.append(dict(kind=kind, path=path, id=row[id_key], title=row[title_key],
+                                    group="Canonical lookup", **{k: row[k] for k in metadata}))
     local_lanes = {PurePosixPath(p).parts[1] for p in files
                    if len(PurePosixPath(p).parts) >= 3 and p.startswith("experiments/")}
     registered_lanes = {r.get("lane", "") for r in rows}
@@ -176,7 +196,7 @@ def render(entries):
         "[methods_aliases.csv](../registry/methods_aliases.csv) |",
         "| Writer claim and review dependencies | [room #7](https://github.com/SaikiK12/T/issues/7), "
         "[open PRs](https://github.com/SaikiK12/T/pulls); [ROOM protocol](ROOM.md) |", "",
-        "MAP, SCOREBOARD, reviews and old handoffs are interpretations with their own dates. "
+        "MAP, EDGE_SCOREBOARD, reviews and old handoffs are interpretations with their own dates. "
         "When prose and recorded evidence disagree, inspect the exact lane and report the discrepancy; "
         "do not rewrite a frozen specification or silently choose the favorable number.", "",
         "## Find and maintain", "", "```sh",
@@ -184,7 +204,8 @@ def render(entries):
         "python scripts/repository_index.py --find R225 --json",
         "python scripts/repository_index.py --check",
         "python scripts/check_research_integrity.py", "```", "",
-        "`--find` searches filenames, document headings and recorded experiment metadata. "
+        "`--find` searches filenames, document headings, recorded experiment metadata, the live methods queue, "
+        "source aliases and tracked provider catalogs. Those records are searched in place, not copied into this page. "
         "It does not search full papers, result payloads or market caches. After adding or renaming tracked files, "
         "stage them and run `--write`, then `--check`. Commands below are navigation links, not an execution queue.", "",
         f"## Documents ({len(docs)})", "",
@@ -269,7 +290,8 @@ def main(argv=None):
             print(json.dumps(entries, ensure_ascii=False, indent=2))
         elif args.find is not None:
             for entry in entries:
-                print(f"{entry['kind']}: {entry['path']} — {entry['title']}")
+                identifier = f" [{entry['id']}]" if entry.get('id') else ""
+                print(f"{entry['kind']}{identifier}: {entry['path']} — {entry['title']}")
             print(f"{len(entries)} matches")
         else:
             print(document, end="")

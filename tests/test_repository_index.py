@@ -119,6 +119,36 @@ class RepositoryIndexTests(unittest.TestCase):
             self.assertEqual(main(["--root", str(self.root), "--write"]), 2)
         self.assertEqual(target.read_text(), "unchanged")
 
+    def test_methods_aliases_and_providers_are_searchable_without_second_queue(self):
+        self.write("registry/methods.csv", "id,method,status,data_held\nM1,Funding carry,BLOCKED,not held\n")
+        self.write("registry/methods_aliases.csv", "rec_id,title,queue_id,also\nSRC-1,Carry variation,M1,\n")
+        self.write("research/intake/source_catalog_test.csv",
+                   "id,provider,url,received_scope,access_boundary,research_gap,existing_queue\n"
+                   "P1,Provider,https://example.org,docs only,unverified,funding mechanics,M1\n")
+        files = ["registry/methods.csv", "registry/methods_aliases.csv", "research/intake/source_catalog_test.csv"]
+        entries = build_index(self.root, files)
+        method = next(e for e in entries if e['kind'] == 'method')
+        alias = next(e for e in entries if e['kind'] == 'alias')
+        provider = next(e for e in entries if e['kind'] == 'provider')
+        self.assertEqual(method['status'], 'BLOCKED')
+        self.assertEqual(alias['queue_id'], method['id'])
+        self.assertEqual(provider['existing_queue'], method['id'])
+        document = render(entries)
+        self.assertNotIn('Funding carry', document)
+        self.assertNotIn('Carry variation', document)
+        self.assertNotIn('funding mechanics', document)
+        self.write("registry/methods.csv", "id,method,status,data_held\nM1,Funding carry,TESTED,held\n")
+        updated = build_index(self.root, files)
+        self.assertEqual(next(e for e in updated if e['kind'] == 'method')['status'], 'TESTED')
+
+    def test_malformed_canonical_table_fails_instead_of_dropping_records(self):
+        self.write("registry/methods.csv", "id,method\nM1,Missing fields\n")
+        with self.assertRaisesRegex(ValueError, "Missing catalog columns"):
+            build_index(self.root, ["registry/methods.csv"])
+        self.write("registry/methods.csv", "id,method,status,data_held\nM1,one,BLOCKED,no,extra\n")
+        with self.assertRaisesRegex(ValueError, "Malformed catalog row"):
+            build_index(self.root, ["registry/methods.csv"])
+
 
 if __name__ == "__main__":
     unittest.main()

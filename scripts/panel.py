@@ -119,7 +119,7 @@ def main():
          " Real money only after gates 1-3, placed by the owner (gate 4).",
          "5. Read the room (issue #7), commit and push.", "",
          "Roles: Claude and Codex claim current work in [room #7](https://github.com/SaikiK12/T/issues/7). "
-         "No subagents and no Workflows (owner, 2026-10-20).", "",
+         "Read the latest writer claims and owner instructions before taking a lane.", "",
          "## 1. The funnel", "",
          "Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution on MEXC (gate 2, `go_real` here) →"
          " account risk (gate 3) → the owner (gate 4). Rules and dates: [GATES](GATES.md); what the critics found:"

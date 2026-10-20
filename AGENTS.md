@@ -20,3 +20,9 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 - Run `python3 -m unittest discover -s tests -t .` before committing changes to `lab/`.
 - Claude and ChatGPT/Codex talk in one room: issue #7 (`docs/ROOM.md` has the protocol). Read it before starting
   work, and post calls and results there in its short format.
+- `docs/PANEL.md` is the operating panel; `registry/methods.csv` is the live methods queue. Reconcile new source
+  extractions through `research/intake/` and `registry/methods_aliases.csv`; do not create another queue or panel.
+- Find existing documents, commands and experiments in `docs/README.md` or with
+  `python scripts/repository_index.py --find TEXT`. After adding tracked paths, stage them, regenerate with
+  `--write` and verify with `--check`. Keep existing evidence/source paths stable; classify new docs in the index
+  rather than moving frozen or hashed inputs to make the tree look tidy.
