@@ -1,7 +1,7 @@
-"""Binance announcement catalogs (Delisting, New Cryptocurrency Listing) as an append-only journal: one row per
-article with its id, title, release time (ms, as published) and the UTC time this recorder first saw it. The first
-run pages back through the whole catalog; later runs stop at the first page whose articles are all known, so an
-hourly run is cheap and idempotent. Event lanes use first_seen_utc for live tickets and release_ms for history.
+"""Binance announcement catalogs (Delisting, New Cryptocurrency Listing, Latest Binance News) as an append-only journal:
+one row per article with its id, title, release time (ms, as published) and the UTC time this recorder first saw it.
+The first run pages back through the whole catalog; later runs stop at the first page whose articles are all known,
+so an hourly run is cheap and idempotent. Event lanes use first_seen_utc for live tickets and release_ms for history.
 
 Journal: data/recorders/notices/binance_<catalog>.csv (gitignored); scripts/record_digest.py commits its digest.
 Data collection only.
@@ -20,7 +20,7 @@ sys.path.insert(0, str(ROOT))
 from lab import data  # noqa: E402
 
 API = "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?type=1&catalogId={cat}&pageNo={page}&pageSize=20"
-CATALOGS = {161: "delisting", 48: "listing"}
+CATALOGS = {161: "delisting", 48: "listing", 49: "news"}   # "news": delistings before 2022-02 were posted here
 OUT = data.ROOT / "recorders" / "notices"
 COLS = ("id", "code", "title", "release_ms", "first_seen_utc")
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
@@ -47,7 +47,7 @@ def known_ids(path):
         return {int(r["id"]) for r in csv.DictReader(f)}
 
 
-def new_articles(cat, known, max_pages=200):
+def new_articles(cat, known, max_pages=400):
     """Articles not yet in the journal, newest first; stops at the first fully known page."""
     out = []
     for page in range(1, max_pages + 1):

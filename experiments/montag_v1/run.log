@@ -1,0 +1,22 @@
+17:15:25 prereg sha 08cb8e4cec36
+17:15:26 inputs match the frozen hashes; legs rebuild byte for byte
+17:15:34 tag sample: 24 notices, 97 legs
+17:15:34 priced legs 86, no_market 11, clusters 24; stale exits 1h 0, 24h 0, 72h 0; delisted in hold 1h 0, 24h 0, 72h 0
+17:15:34 V1 1h  net    n  24 mean +0.61% med +0.38% t 0.71 halves +0.11/+1.11 2025+ +0.72% (2x +0.21%, 3x -0.19%)
+17:15:34 V2 24h net    n  24 mean +4.36% med +2.77% t 3.81 halves +6.82/+1.90 2025+ +4.31% (2x +3.96%, 3x +3.56%)
+17:15:34 V3 72h net    n  24 mean +3.66% med +5.44% t 1.29 halves +10.27/-2.96 2025+ +2.69% (2x +3.26%, 3x +2.86%)
+17:15:34 V4 1h  hedged n  24 mean +0.44% med +0.43% t 0.51 halves -0.13/+1.00 2025+ +0.61% (2x -0.06%, 3x -0.56%)
+17:15:34 V5 24h hedged n  24 mean +3.86% med +2.29% t 3.26 halves +7.00/+0.73 2025+ +3.61% (2x +3.36%, 3x +2.86%)
+17:15:34 V6 72h hedged n  24 mean +4.33% med +5.42% t 1.54 halves +10.84/-2.19 2025+ +3.53% (2x +3.83%, 3x +3.33%)
+17:15:34 G4 null: 24/24 clusters; observed +0.61%, null mean -0.49%, 95th pct -0.16%, p 0.0005
+17:15:34 rob drop_top3_legs_1h    n  24 mean +0.39% t 0.50
+17:15:34 rob drop_top3_legs_24h   n  24 mean +3.32% t 3.81
+17:15:34 rob drop_top3_legs_72h   n  23 mean +1.29% t 0.49
+17:15:34 rob gross_1h             n  24 mean +1.01% t 1.18
+17:15:34 rob gross_24h            n  24 mean +4.90% t 4.14
+17:15:34 rob gross_72h            n  24 mean +4.54% t 1.66
+17:15:34 rob premove_short_sign   n  24 mean +5.55% t 3.92
+17:15:34 per year 1h {"2023": {"n": 1, "mean_pct": -1.5852170837510777}, "2024": {"n": 4, "mean_pct": 0.6285638668665048}, "2025": {"n": 8, "mean_pct": -0.19918290138781058}, "2026": {"n": 11, "mean_pct": 1.3900484444732881}}
+17:15:34 per year 24h {"2023": {"n": 1, "mean_pct": -0.7684056952573567}, "2024": {"n": 4, "mean_pct": 5.861638956306183}, "2025": {"n": 8, "mean_pct": 8.447635503086781}, "2026": {"n": 11, "mean_pct": 1.3088552715197355}}
+17:15:34 untag long {"1h": {"n_notices": 5, "legs": 5, "mean_gross_long_pct": 1.6953562773755637}, "24h": {"n_notices": 5, "legs": 5, "mean_gross_long_pct": -2.613107541773021}, "72h": {"n_notices": 5, "legs": 5, "mean_gross_long_pct": -4.072531011921328}}
+17:15:34 VERDICT NULL gates {'G1': False, 'G2': True, 'G3': True, 'G4': True}

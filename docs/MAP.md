@@ -369,12 +369,56 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - A and X2 lose half their net near $12M and all of it near $50M. That uses Binance volumes; MEXC capacity is lower
     in proportion to its volume.
   - DATA_PASS. [Findings](../experiments/impact_v1/FINDINGS.md).
+- **R263 (brute5k_v1)** brute-forced 5,472 chart strategies on the top-20 perps.
+  - The families are EMA, Donchian, RSI, Bollinger, Supertrend, Fibonacci, TS momentum, MACD and VWAP bands, on
+    1 h/4 h/12 h/1 d bars with direction, filter and stop variants.
+  - **Walk-forward "what worked in the last 6 months":** +1.18 / +0.29 / -0.61 bp a day at 1x/2x/3x, NW t 0.96
+    (2021-07..2025-06). It beats 99.9% of random monthly picks, but the pool averages -1.02 bp/day.
+  - **Best single strategy** (RSI 14/10, 1 h, long): discovery t 3.11. The reality check gives p 0.334, and its
+    validation t is 0.02.
+  - 1 h rules lose to costs. Trend families earn when BTC moves a lot, whatever the direction. Leverage above 3x
+    mostly buys drawdown.
+  - NULL. [Findings](../experiments/brute5k_v1/FINDINGS.md).
 - **R264 (accounting_v1)** checked whether the legacy zero-fill of a missing next return inflates books A, B and X2 (a
   measurement, 0 trials; PR #25 audit item 4).
   - No held position meets a gap in discovery or validation, so bridged and legacy nets are identical at 1x/2x/3x.
   - The only held gaps are the archive's last row in the spent window (35 / 4 / 35 positions).
   - Wider universes and event lanes near delistings are not covered; they must use `missing="raise"` or bridge.
   - DATA_PASS. [Findings](../experiments/accounting_v1/FINDINGS.md).
+- **R265 (unlocks_v1)** replicated the old session's unlock short (E01): short at the close of D-7, cover at the close
+  of an insider or private-sale cliff unlock of at least 1% of max supply.
+  - 422 events on 69 Binance perps, 2021-26: +3.24% / +3.04% / +2.84% net per event at 1x/2x/3x, week-cluster t
+    3.19. Matched-date null p 0.0005; both halves positive; positive without the top 3.
+  - Dose-response is monotone. The tail is heavy: six squeezes lost over 40%.
+  - Gate 0 only: the old session read these years, and the calendar is not point-in-time. Codex's daily-bar check
+    (R258, PR #29) agrees.
+  - PARTIAL (frozen verdict REPLICATES). [Findings](../experiments/unlocks_v1/FINDINGS.md).
+- **R266 (unlocks_fwd)** runs the same rule forward on MEXC paper from 2026-10-21.
+  - Events come from the daily calendar snapshot recorded since 2026-10-20, and each ticket is frozen before its
+    entry bar.
+  - Decision at 120 scored tickets. RUNNING. [PREREG](../experiments/unlocks_fwd/PREREG.md).
+- **R267 (delist_v1)** tested the old delisting-notice short (E03): short the USD-M perp at the first hourly open after
+  a Binance "Will Delist" notice, and cover at +1 h (primary) or +24 h.
+  - The events are 68 notice clusters and 160 legs, 2022-26, from the notice catalog plus article text.
+  - **Primary:** -0.12% / -0.52% / -0.92% at 1x/2x/3x, t -0.06. The matched same-hour null gives p 0.0575.
+  - Squeezes on perps that are themselves being delisted dominate the mean (ANC -95%, SLERF -87% in an hour).
+  - **Logged variant:** spot notices at +1 h, +4.15%, t 3.07 (n 25), with both halves positive. It is 1 of 8 variants,
+    so it is a forward candidate, not a pass.
+  - NULL. [Findings](../experiments/delist_v1/FINDINGS.md).
+- **R268 (delist_fwd)** runs R267's spot-notice variant forward on MEXC paper.
+  - Tickets come from the notice recorder's `first_seen_utc` (from 2026-10-20 18:00 UTC).
+  - Short at the first hourly open after detection, and cover 1 h later (+24 h logged).
+  - Futures notices are not traded.
+  - Decision at 12 scored notices (about 1.5 years). RUNNING. [PREREG](../experiments/delist_fwd/PREREG.md).
+- **R269 (montag_v1)** tested a Monitoring Tag short: short the perp of each coin Binance adds to its Monitoring Tag at
+  the first hourly open after the notice, and cover at +1 h (primary), +24 h or +72 h.
+  - The events are 24 notice clusters and 86 priced legs, 2023-10..2026-09 (the tag began in 2023-07).
+  - **Primary:** +0.61% / +0.21% / -0.19% at 1x/2x/3x, t 0.71. The matched same-hour null gives p 0.0005, but the
+    hour is too small to pay 40 bp.
+  - **Logged variant:** +24 h, +4.36% at 1x (t 3.81; 2x +3.96%, 3x +3.56%), with both halves positive. The BTC-hedged
+    +24 h line also clears G1-G3. They are 2 of 6 variants, so a forward candidate, not a pass.
+  - **It fades in 2026:** +1.31% over 11 clusters, and -0.92% over the last 5.
+  - NULL. [Findings](../experiments/montag_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -480,6 +524,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,061 after R264 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,477,562 after R269 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
