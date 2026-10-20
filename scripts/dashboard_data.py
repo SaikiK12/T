@@ -285,6 +285,16 @@ def data_sources():
         "spot_1h": ("Hourly spot candles", "Historical market data"),
         "coinm_1h": ("Coin-margined futures candles", "Historical market data"),
         "unlocks": ("Token unlock calendars", "Event data"),
+        "gate_hist": ("Gate bulk archive: all USDT perps, hourly candles and funding", "Historical market data"),
+        "gate_1h": ("Gate hourly contract stats (180-day window)", "Historical market data"),
+        "premiumIndexKlines_1h": ("Binance hourly premium index", "Historical market data"),
+        "bookDepth_1h": ("Binance hourly book depth", "Historical market data"),
+        "deribit": ("Deribit implied-volatility index (DVOL)", "Historical market data"),
+        "coinbase": ("Coinbase hourly spot candles", "Historical market data"),
+        "binance_spot": ("Binance hourly spot klines (BTC, ETH)", "Historical market data"),
+        "markets": ("TradFi daily markets", "Historical market data"),
+        "research": ("Built research panels", "Derived data"),
+        "raw": ("Raw archive downloads", "Raw downloads"),
     }
     base = ROOT / "data"
     if base.is_symlink() or not base.is_dir():
@@ -382,6 +392,18 @@ TITLES = {
     "methods": ("Method queue", "registry/methods.csv: every method from the literature, old sessions and both AIs, "
                 "with its status."),
     "data_sources": ("Data folders", "Size, newest file and provenance note of each folder under data/."),
+    "tearsheets": ("Performance tear sheets", "lab.tearsheet metrics for every forward paper book and saved research "
+                   "stream: CAGR, Sharpe (naive and autocorrelation-adjusted), drawdown, Newey-West t, PSR and the "
+                   "Sharpe deflated at the program's trial count."),
+    "equity": ("Equity and drawdown by day", "Compounded equity, drawdown and 90-day rolling Sharpe per series and "
+               "day, for the tear sheets."),
+    "monthly": ("Monthly returns", "Compounded net return per series and calendar month."),
+    "leaderboard": ("Rounds against their bars", "Each registered round's trial count, running program total, best t "
+                    "on file, the chance bar for that many tries and the family's own reality-check null."),
+    "coverage": ("Data coverage", "First and last bar, files, size and missing hours of each downloaded dataset "
+                 "(provenance records) and each live recorder."),
+    "funding_board": ("Cross-venue funding board", "Latest hourly snapshot of funding on seven venues, 8-hour "
+                      "equivalent, widest spreads first. Descriptive only."),
     "jobs": ("Operations by responsibility", "Categorized task reports (legacy activity is unverified) and the lab "
              "scripts running now, by script name only. No raw logs or process command lines are exported."),
 }
@@ -450,6 +472,13 @@ def main():
     sets = {"program": program(rnd), "rounds": rnd, "candidates": rows_csv(ROOT / "registry" / "candidates.csv"),
             "strategies": strategies(), "forward_lanes": forward_lanes(days), "forward_days": days,
             "event_tickets": event_tickets(), "methods": methods(), "data_sources": data_sources(), "jobs": jobs(args.jobs_state_dir)}
+    from lab import registry
+    from scripts import dashboard_perf as perf
+    sets["tearsheets"], sets["equity"], sets["monthly"] = perf.tearsheets(
+        days, registry.program_trials(str(ROOT / "registry" / "rounds.csv")))
+    sets["leaderboard"] = perf.leaderboard(rnd, sets["strategies"])
+    sets["coverage"] = perf.coverage()
+    sets["funding_board"] = perf.funding_board()
     for r in sets["candidates"]:
         r["t"] = num(r["t"])
     manifest = {}

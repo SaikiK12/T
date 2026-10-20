@@ -10,7 +10,8 @@
 # read its catalogs hold .notices.lock, shared with scripts/notice_loop.sh: one writer of the catalogs at a time.
 # Last, the processing-lag report (experiments/forward_lag), the panel (docs/PANEL.md) and the dashboard's datasets
 # (dashboard/data/, uploaded to the Control Room artifact by the session's loop tick).
-# Before the lanes, the point-in-time recorders (MEXC funding/ticker snapshot, Binance notices, unlock calendar);
+# Before the lanes, the point-in-time recorders (MEXC funding/ticker snapshot, the six-venue funding board, Binance
+# notices, unlock calendar);
 # after them, the recorder digest (experiments/recorders/journal/digests.csv).
 cd "$(dirname "$0")/.." || exit 1
 # one tick at a time: a second run while one is going exits at once
@@ -21,6 +22,7 @@ STAMP="$(date -u +%FT%TZ) code $(git rev-parse --short HEAD)$(git diff --quiet H
 for d in flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq mexc_costs vt_fwd unlocks_fwd delist_fwd montag_fwd announce_fwd recorders; do echo "== tick $STAMP" >> experiments/$d/tick.log; done
 # point-in-time recorders first (data/recorders/, gitignored; digests committed by record_digest.py at the end)
 timeout 120 $PY scripts/record_mexc_ticker.py >> experiments/recorders/tick.log 2>&1
+timeout 120 $PY scripts/record_funding_board.py >> experiments/recorders/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/record_notices.py >> experiments/recorders/tick.log 2>&1
 timeout 300 $PY scripts/record_unlocks.py >> experiments/recorders/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/forward_delist.py >> experiments/delist_fwd/tick.log 2>&1

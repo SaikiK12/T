@@ -66,6 +66,9 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     <button class="qx-tab" role="tab" data-tab="overview" aria-selected="true">Overview</button>
     <button class="qx-tab" role="tab" data-tab="edges" aria-selected="false">Edge map</button>
     <button class="qx-tab" role="tab" data-tab="forward" aria-selected="false">Forward paper</button>
+    <button class="qx-tab" role="tab" data-tab="perf" aria-selected="false">Performance</button>
+    <button class="qx-tab" role="tab" data-tab="board" aria-selected="false">Leaderboard</button>
+    <button class="qx-tab" role="tab" data-tab="funding" aria-selected="false">Funding board</button>
     <button class="qx-tab" role="tab" data-tab="rounds" aria-selected="false">Rounds</button>
     <button class="qx-tab" role="tab" data-tab="queue" aria-selected="false">Method queue</button>
     <button class="qx-tab" role="tab" data-tab="health" aria-selected="false">Data and loop</button>
@@ -209,6 +212,116 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     </div>
   </section>
 
+  <section id="perf" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-sheet">
+        <h2>Tear sheet</h2>
+        <p class="qx-note">Compounded daily net at 1x cost. Forward paper series are weeks old; backtests are gate 0 (in-sample or already-spent windows). Sharpe is shown naive and adjusted for autocorrelation (Lo 2002). PSR and the deflated Sharpe use the effective sample size, and the deflated Sharpe is taken at the program's full trial count, so it is a deliberately harsh bar.</p>
+        <div class="qx-tools"><select class="qx-select" id="sel-series" aria-label="Series"></select><span class="qx-asof" id="sheet-note"></span></div>
+        <div class="qx-kpis" id="sheet-kpis"></div>
+        <div class="qx-chart" id="chart-equity" data-source="equity" style="margin-top: var(--cds-gap-md)"></div>
+        <div class="qx-chart short" id="chart-dd" data-source="equity"></div>
+      </div>
+      <div class="qx-card wide" id="card-monthly">
+        <h2>Monthly returns</h2>
+        <p class="qx-note">Compounded net per calendar month for the selected series; the last column is the year.</p>
+        <div class="qx-chart short" id="chart-monthly" data-source="monthly"></div>
+      </div>
+      <div class="qx-card wide" id="card-sheets">
+        <h2>All series</h2>
+        <p class="qx-note">One row per paper book or saved research stream. NW t is the Newey-West t of the daily mean; n eff is the AR(1) effective number of independent days.</p>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-sheets" data-source="tearsheets" data-row-key="series">
+            <thead><tr>
+              <th data-field="series"><button>Series</button></th>
+              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="days" class="n"><button>Days</button></th>
+              <th data-field="total_return" class="n"><button>Total</button></th>
+              <th data-field="cagr" class="n"><button>CAGR</button></th>
+              <th data-field="sharpe" class="n opt"><button>Sharpe</button></th>
+              <th data-field="sharpe_ac" class="n"><button>Sharpe (AC adj.)</button></th>
+              <th data-field="max_drawdown" class="n"><button>Max DD</button></th>
+              <th data-field="t_nw" class="n"><button>NW t</button></th>
+              <th data-field="n_eff" class="n opt"><button>n eff</button></th>
+              <th data-field="psr" class="n opt"><button>PSR</button></th>
+              <th data-field="dsr" class="n"><button>Deflated</button></th>
+              <th data-field="hit_rate" class="n opt"><button>Hit</button></th>
+              <th data-field="cvar95" class="n opt"><button>CVaR 95</button></th>
+              <th data-field="label" class="w opt"><button>What</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="board" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-board">
+        <h2>Best result per round against what chance gives</h2>
+        <p class="qx-note">Filled dot: the round's best t from its family report. Hollow dot: the largest t written in its registry note (parsed text, approximate). Dash: the best t that pure chance reaches among that many independent tries. Diamond: the family's own reality-check null (95th percentile of its max t), where one was run; values off the top are clipped and labelled. A best t below either bar is what the search alone would produce.</p>
+        <div class="qx-chart" id="chart-board" data-source="leaderboard"></div>
+      </div>
+      <div class="qx-card wide" id="card-trials">
+        <h2>Program trials, cumulative</h2>
+        <p class="qx-note">Every strategy tried, all rounds, log scale. Each new result is read against this total, not only against its own family.</p>
+        <div class="qx-chart short" id="chart-trials" data-source="leaderboard"></div>
+      </div>
+      <div class="qx-card wide" id="card-boardtbl">
+        <h2>Rounds with their bars</h2>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search rounds" aria-label="Search leaderboard" data-for="tbl-board"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-board" data-source="leaderboard" data-row-key="id">
+            <thead><tr>
+              <th data-field="id"><button>Round</button></th>
+              <th data-field="lane"><button>Lane</button></th>
+              <th data-field="verdict"><button>Verdict</button></th>
+              <th data-field="trials" class="n"><button>Trials</button></th>
+              <th data-field="best_t" class="n"><button>Best t</button></th>
+              <th data-field="notes_t" class="n opt"><button>t in note</button></th>
+              <th data-field="chance_bar_t" class="n"><button>Chance bar</button></th>
+              <th data-field="family_null_p95" class="n opt"><button>Family null</button></th>
+              <th data-field="best_strategy" class="opt"><button>Best strategy</button></th>
+              <th data-field="program_trials" class="n opt"><button>Program total</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="funding" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-fund">
+        <h2>Widest cross-venue funding spreads</h2>
+        <p class="qx-note">Latest hourly snapshot of seven venues (MEXC, Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX), each rate scaled to 8 hours; spread = highest minus lowest venue, annualized at 3 settlements a day. Descriptive only: the same ticker on two venues is not proven to be the same coin, and a spread pays only if it persists after price moves and costs, which a frozen lane must test. Snapshot <span data-source="funding_board" data-field="snapshot_at" data-row="0" data-fmt="text">—</span> UTC.</p>
+        <div class="qx-chart" id="chart-fund" data-source="funding_board"></div>
+      </div>
+      <div class="qx-card wide" id="card-fundtbl">
+        <h2>Funding by venue, 8-hour equivalent</h2>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search coins or venues" aria-label="Search funding" data-for="tbl-fund"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fund" data-source="funding_board" data-row-key="key">
+            <thead><tr>
+              <th data-field="base"><button>Coin</button></th>
+              <th data-field="venues" class="n"><button>Venues</button></th>
+              <th data-field="spread_ann" class="n"><button>Spread / yr</button></th>
+              <th data-field="max_venue"><button>Highest</button></th>
+              <th data-field="min_venue"><button>Lowest</button></th>
+              <th data-field="r8h_mexc" class="n opt"><button>MEXC</button></th>
+              <th data-field="r8h_gate" class="n opt"><button>Gate</button></th>
+              <th data-field="r8h_hyperliquid" class="n opt"><button>Hyperliquid</button></th>
+              <th data-field="r8h_okx" class="n opt"><button>OKX</button></th>
+              <th data-field="r8h_bitget" class="n opt"><button>Bitget</button></th>
+              <th data-field="r8h_kucoin" class="n opt"><button>KuCoin</button></th>
+              <th data-field="r8h_dydx" class="n opt"><button>dYdX</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="rounds" class="qx-page" hidden>
     <div class="qx-grid">
       <div class="qx-card" id="card-verdicts">
@@ -287,6 +400,26 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
               <th data-field="returncode" class="n opt"><button>Exit code</button></th>
               <th data-field="log_path" class="w opt"><button>Log reference</button></th>
               <th data-field="note" class="w opt"><button>Interpretation</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="qx-card wide" id="card-coverage">
+        <h2>Data coverage</h2>
+        <p class="qx-note">First to last bar of each downloaded dataset (from its provenance record) and first to last day of each live recorder. Holes are missing hours between a file's first and last bar, summed over files.</p>
+        <div class="qx-chart" id="chart-coverage" data-source="coverage"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-coverage" data-source="coverage" data-row-key="key">
+            <thead><tr>
+              <th data-field="key"><button>Dataset</button></th>
+              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="first"><button>From</button></th>
+              <th data-field="last"><button>To</button></th>
+              <th data-field="files" class="n"><button>Files</button></th>
+              <th data-field="gb" class="n"><button>Size</button></th>
+              <th data-field="bars" class="n opt"><button>Bars</button></th>
+              <th data-field="holes" class="n opt"><button>Holes</button></th>
+              <th data-field="source" class="w opt"><button>Source</button></th>
             </tr></thead><tbody></tbody>
           </table>
         </div>
@@ -547,6 +680,33 @@ table('tbl-data', 'data_sources', 'source', [
   { f: 'inventory_state', dot: (v) => (v === 'PARTIAL' ? 'warn' : null) },
   { f: 'skipped_links', fmt: F.int, num: true }, { f: 'scan_errors', fmt: F.int, num: true },
   { f: 'provenance', fmt: F.yes }]);
+const FR = {
+  pct1: (v) => (v == null ? '' : d3.format('+.1%')(v)),
+  pct2: (v) => (v == null ? '' : d3.format('.2%')(v)),
+  bp8h: (v) => (v == null ? '' : d3.format('+.3%')(v)),
+  num2: (v) => (v == null ? '' : d3.format('.2f')(v)),
+  int0: (v) => (v == null ? '' : d3.format(',.0f')(v)),
+};
+table('tbl-sheets', 'tearsheets', 'series', [
+  { f: 'series', secondary: 'note' }, { f: 'kind' }, { f: 'days', fmt: F.int, num: true },
+  { f: 'total_return', fmt: FR.pct1, num: true }, { f: 'cagr', fmt: FR.pct1, num: true, bar: { max: maxAbs('cagr') } }, { f: 'sharpe', fmt: FR.num2, num: true },
+  { f: 'sharpe_ac', fmt: FR.num2, num: true }, { f: 'max_drawdown', fmt: FR.pct1, num: true },
+  { f: 't_nw', fmt: F.t, num: true }, { f: 'n_eff', fmt: FR.int0, num: true }, { f: 'psr', fmt: F.p, num: true },
+  { f: 'dsr', fmt: F.p, num: true, dot: (v) => (v != null && v >= 0.95 ? 'ok' : null) },
+  { f: 'hit_rate', fmt: FR.pct2, num: true }, { f: 'cvar95', fmt: FR.pct2, num: true }, { f: 'label' }]);
+table('tbl-board', 'leaderboard', 'id', [
+  { f: 'id' }, { f: 'lane' }, { f: 'verdict' }, { f: 'trials', fmt: F.int, num: true },
+  { f: 'best_t', fmt: F.t, num: true, dot: (v, r) => (v == null ? null : v > Math.max(r.chance_bar_t ?? 0, r.family_null_p95 ?? 0) ? 'ok' : null) },
+  { f: 'notes_t', fmt: F.t, num: true },
+  { f: 'chance_bar_t', fmt: F.t, num: true }, { f: 'family_null_p95', fmt: F.t, num: true }, { f: 'best_strategy' },
+  { f: 'program_trials', fmt: F.int, num: true }]);
+table('tbl-fund', 'funding_board', 'key', [
+  { f: 'base' }, { f: 'venues', fmt: F.int, num: true }, { f: 'spread_ann', fmt: FR.pct1, num: true, bar: { max: maxAbs('spread_ann') } },
+  { f: 'max_venue' }, { f: 'min_venue' },
+  ...['mexc', 'gate', 'hyperliquid', 'okx', 'bitget', 'kucoin', 'dydx'].map((v) => ({ f: `r8h_${v}`, fmt: FR.bp8h, num: true }))]);
+table('tbl-coverage', 'coverage', 'key', [
+  { f: 'key' }, { f: 'kind' }, { f: 'first', fmt: F.day }, { f: 'last', fmt: F.day }, { f: 'files', fmt: F.int, num: true },
+  { f: 'gb', fmt: F.size, num: true }, { f: 'bars', fmt: F.int, num: true }, { f: 'holes', fmt: F.int, num: true }, { f: 'source' }]);
 
 // charts
 function svgIn(el, W, H) {
@@ -760,6 +920,240 @@ function drawCum(el) {
     .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dots.selectAll('circle').remove(); });
 }
 
+// performance: one selected series
+let SERIES = null;
+const selSeries = document.getElementById('sel-series');
+selSeries.addEventListener('change', () => { SERIES = selSeries.value; render(); });
+function pickSeries() {
+  const sheets = rowsOf('tearsheets');
+  if (!SERIES || !sheets.some((s) => s.series === SERIES)) {
+    const best = sheets.filter((s) => s.kind === 'backtest').sort((a, b) => (b.days || 0) - (a.days || 0))[0] || sheets[0];
+    SERIES = best ? best.series : null;
+  }
+  selSeries.replaceChildren(...sheets.map((s) => new Option(`${s.series} · ${s.kind}`, s.series)));
+  if (SERIES) selSeries.value = SERIES;
+  return sheets.find((s) => s.series === SERIES);
+}
+function drawSheetKpis(s) {
+  const box = document.getElementById('sheet-kpis');
+  document.getElementById('sheet-note').textContent = s ? `${s.label} · ${s.start} to ${s.end} · ${s.note}` : '';
+  if (!s) { box.replaceChildren(); return; }
+  const tiles = [
+    s.cagr != null ? ['CAGR', FR.pct1(s.cagr), `total ${FR.pct1(s.total_return)}`] : ['Total return', FR.pct1(s.total_return), `${F.int(s.days)} days: too short to annualize`],
+    ['Sharpe, AC-adjusted', FR.num2(s.sharpe_ac), `naive ${FR.num2(s.sharpe)} · lag-1 autocorr ${FR.num2(s.ac1)}`],
+    ['Max drawdown', FR.pct1(s.max_drawdown), `${F.int(s.max_dd_days)} days under water`],
+    ['Newey-West t', F.t(s.t_nw), `naive t ${F.t(s.t)} · ${F.int(s.days)} days`],
+    ['PSR (Sharpe > 0)', F.p(s.psr), `effective days ${FR.int0(s.n_eff)}`],
+    ['Deflated Sharpe', F.p(s.dsr), `at ${F.compact(s.dsr_trials)} trials (bar Sharpe ${FR.num2(s.dsr_bar_sharpe)})`],
+  ];
+  box.replaceChildren(...tiles.map(([lab, val, sub]) => {
+    const d = document.createElement('div');
+    d.className = 'qx-kpi';
+    [['lab', lab], ['val', val || '—'], ['sub', sub]].forEach(([c, t]) => {
+      const e = document.createElement('div');
+      e.className = c;
+      e.textContent = t;
+      d.append(e);
+    });
+    return d;
+  }));
+}
+function drawLineChart(el, pts, yf, fmtY, area, H) {
+  el.replaceChildren();
+  if (!pts.length) return;
+  const W = Math.max(el.clientWidth, 280);
+  const svg = svgIn(el, W, H);
+  const vals = pts.map(yf).filter(Number.isFinite);
+  const y = d3.scaleLinear(d3.extent([0, ...vals]), [H - 28, 12]).nice();
+  const yt = y.ticks(area ? 3 : 5);
+  const ml = (d3.max(yt, (v) => textW(svg, fmtY(v))) || 0) + 10;
+  const x = d3.scaleUtc(d3.extent(pts, (p) => p.d), [ml, W - 16]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const fx = (pts[pts.length - 1].d - pts[0].d) > 400 * 864e5 ? d3.utcFormat('%Y') : d3.utcFormat('%b %-d');
+  const xt = thin(x.ticks(6), x, fx, svg, 10);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(fx).tickSizeOuter(0)));
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fmtY).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-reference)');
+  const def = (p) => Number.isFinite(yf(p));
+  if (area) {
+    svg.append('path').datum(pts).attr('d', d3.area().defined(def).x((p) => x(p.d)).y0(y(0)).y1((p) => y(yf(p))))
+      .style('fill', 'var(--cds-chart-muted)').style('opacity', 0.6);
+  }
+  svg.append('path').datum(pts).attr('d', d3.line().defined(def).x((p) => x(p.d)).y((p) => y(yf(p))))
+    .style('fill', 'none').style('stroke', area ? 'var(--cds-chart-muted)' : dash.colors[0]).style('stroke-width', 2).style('stroke-linejoin', 'round');
+  const tip = tipIn(el);
+  const rule = svg.append('line').attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+  const dot = svg.append('circle').attr('r', 4).style('fill', area ? 'var(--cds-chart-muted)' : dash.colors[0]).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5).style('opacity', 0);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - 16 - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev);
+      const t = +x.invert(px);
+      const p = pts[d3.minIndex(pts, (q) => Math.abs(+q.d - t))];
+      if (!p || !def(p)) return;
+      rule.attr('x1', x(p.d)).attr('x2', x(p.d)).style('opacity', 1);
+      dot.attr('cx', x(p.d)).attr('cy', y(yf(p))).style('opacity', 1);
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, d3.utcFormat('%b %-d, %Y')(p.d), [
+        { text: `equity ${FR.pct1(p.equity - 1)} · drawdown ${FR.pct1(p.drawdown)}` },
+        { text: p.rolling_sharpe != null ? `90-day Sharpe ${FR.num2(p.rolling_sharpe)}` : '90-day Sharpe needs 90 days' }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dot.style('opacity', 0); });
+}
+function drawMonthly(el) {
+  el.replaceChildren();
+  const rows = rowsOf('monthly').filter((m) => m.series === SERIES && m.ret != null);
+  if (!rows.length) return;
+  const years = Array.from(new Set(rows.map((m) => m.year))).sort();
+  const W = Math.max(el.clientWidth, 300), rowH = 26, H = years.length * rowH + 24;
+  el.style.minHeight = H + 'px';
+  const svg = svgIn(el, W, H);
+  const ml = textW(svg, '2026') + 12;
+  const cw = (W - ml) / 13;
+  const yearRet = (yr) => rows.filter((m) => m.year === yr).reduce((a, m) => a * (1 + m.ret), 1) - 1;
+  const lim = d3.max(rows, (m) => Math.abs(m.ret)) || 0.01;
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Year'];
+  months.forEach((m, i) => svg.append('text').attr('x', ml + i * cw + cw / 2).attr('y', 12).attr('text-anchor', 'middle').text(cw > 30 ? m : m[0]));
+  const tip = tipIn(el);
+  years.forEach((yr, j) => {
+    const y0 = 20 + j * rowH;
+    svg.append('text').attr('class', 'lead').attr('x', ml - 8).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(yr);
+    for (let k = 0; k < 13; k++) {
+      const v = k < 12 ? (rows.find((m) => m.year === yr && m.month === k + 1) || {}).ret : yearRet(yr);
+      if (v == null) continue;
+      const g = svg.append('g');
+      g.append('rect').attr('x', ml + k * cw + 1).attr('y', y0 + 1).attr('width', cw - 2).attr('height', rowH - 2).attr('rx', 3)
+        .style('fill', v >= 0 ? dash.colors[0] : 'var(--cds-chart-muted)')
+        .style('opacity', k === 12 ? 1 : 0.25 + 0.75 * Math.min(Math.abs(v) / lim, 1));
+      if (cw > 38) g.append('text').attr('x', ml + k * cw + cw / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle')
+        .style('fill', 'var(--color-fg)').text(d3.format('+.1f')(v * 100));
+      g.on('pointermove', (ev) => { const [mx, my] = d3.pointer(ev, el); showTip(el, tip, mx, my, `${months[k]} ${yr}`, [{ text: FR.pct2(v) }]); })
+        .on('pointerleave', () => { tip.style.opacity = 0; });
+    }
+  });
+}
+function drawBoard(el) {
+  el.replaceChildren();
+  const rows = rowsOf('leaderboard').filter((r) => r.best_t != null || r.notes_t != null || r.family_null_p95 != null);
+  if (!rows.length) return;
+  const verdicts = Array.from(new Set(rows.map((r) => r.verdict))).sort();
+  const color = (v) => dash.colors[verdicts.indexOf(v) % dash.colors.length];
+  const leg = document.createElement('div');
+  leg.className = 'qx-legend';
+  verdicts.forEach((v) => {
+    const s = document.createElement('span');
+    const sw = document.createElement('span');
+    sw.className = 'qx-sw';
+    sw.style.background = color(v);
+    sw.style.borderRadius = '50%';
+    s.append(sw, document.createTextNode(`best t, ${v}`));
+    leg.append(s);
+  });
+  [['t in note (parsed)', '○'], ['chance bar', '—'], ['family null', '◇']].forEach(([lab, sym]) => {
+    const s = document.createElement('span');
+    s.textContent = `${sym} ${lab}`;
+    leg.append(s);
+  });
+  el.append(leg);
+  const W = Math.max(el.clientWidth, 300), H = 320;
+  const svg = svgIn(el, W, H);
+  const vals = rows.flatMap((r) => [r.best_t ?? r.notes_t, r.chance_bar_t]).filter(Number.isFinite);
+  const top = Math.max(4, d3.max(vals) || 0) * 1.25;
+  const y = d3.scaleLinear([Math.min(0, d3.min(vals) || 0), top], [H - 34, 10]).nice();
+  const cy = (v) => y(Math.min(v, y.domain()[1]));
+  const yt = y.ticks(6);
+  const ml = (d3.max(yt, (v) => textW(svg, d3.format('.0f')(v))) || 0) + 26;
+  const x = d3.scaleBand(rows.map((r) => r.id), [ml, W - 10]).padding(0.3);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 10).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(d3.format('.0f')).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('text').attr('x', ml - 22).attr('y', 4).attr('dy', '0.7em').text('t');
+  const xt = thin(rows.map((r) => r.id), (id) => x(id) + x.bandwidth() / 2, (id) => id, svg, 6);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 34})`).call(d3.axisBottom(x).tickValues(xt).tickSizeOuter(0)));
+  const g = svg.selectAll('g.r').data(rows).join('g').attr('class', 'r').attr('transform', (r) => `translate(${x(r.id) + x.bandwidth() / 2},0)`);
+  const bw = Math.max(6, Math.min(18, x.bandwidth()));
+  g.filter((r) => r.chance_bar_t != null).append('line').attr('x1', -bw / 2).attr('x2', bw / 2)
+    .attr('y1', (r) => y(r.chance_bar_t)).attr('y2', (r) => y(r.chance_bar_t)).style('stroke', 'var(--color-fg-muted)').style('stroke-width', 2);
+  g.filter((r) => r.family_null_p95 != null).append('path').attr('d', d3.symbol(d3.symbolDiamond2, 70))
+    .attr('transform', (r) => `translate(0,${cy(r.family_null_p95)})`).style('fill', 'none').style('stroke', 'var(--color-fg-muted)').style('stroke-width', 1.5);
+  g.filter((r) => r.family_null_p95 != null && r.family_null_p95 > y.domain()[1]).append('text').attr('y', y(y.domain()[1]) + 16)
+    .attr('text-anchor', 'middle').text((r) => `↑ ${d3.format('.0f')(r.family_null_p95)}`);
+  g.filter((r) => r.best_t != null).append('circle').attr('cy', (r) => cy(r.best_t)).attr('r', 5)
+    .style('fill', (r) => color(r.verdict)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+  g.filter((r) => r.best_t == null && r.notes_t != null).append('circle').attr('cy', (r) => cy(r.notes_t)).attr('r', 4.5)
+    .style('fill', 'var(--color-panel)').style('stroke', (r) => color(r.verdict)).style('stroke-width', 2);
+  const tip = tipIn(el);
+  g.append('rect').attr('x', -x.step() / 2).attr('y', 0).attr('width', x.step()).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => {
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${r.id} · ${r.lane} · ${r.verdict}`, [
+        { color: color(r.verdict), text: r.best_t != null ? `best t ${F.t(r.best_t)}${r.best_strategy ? ' (' + r.best_strategy + ')' : ''}` : `t in note ${F.t(r.notes_t)} (parsed)` },
+        { text: `chance bar ${F.t(r.chance_bar_t)} for ${F.int(r.trials)} tries` },
+        { text: r.family_null_p95 != null ? `family null 95% ${F.t(r.family_null_p95)}` : 'no family reality check on file' }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+function drawTrials(el) {
+  el.replaceChildren();
+  const rows = rowsOf('leaderboard').filter((r) => r.program_trials > 0);
+  if (!rows.length) return;
+  const W = Math.max(el.clientWidth, 300), H = 180;
+  const svg = svgIn(el, W, H);
+  const y = d3.scaleLog([1, d3.max(rows, (r) => r.program_trials)], [H - 28, 10]).nice();
+  const yt = [10, 1e3, 1e5, 1e7].filter((v) => v <= y.domain()[1]);
+  const fy = (v) => new Intl.NumberFormat('en', { notation: 'compact' }).format(v);
+  const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
+  const x = d3.scaleLinear([1, rows.length], [ml, W - 16]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fy).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  const idx = rows.map((r, i) => ({ ...r, i: i + 1 }));
+  const xt = thin(d3.range(0, idx.length, Math.max(1, Math.round(idx.length / 8))).map((i) => i + 1), x, (i) => idx[i - 1].id, svg, 8);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat((i) => idx[i - 1].id).tickSizeOuter(0)));
+  svg.append('path').datum(idx).attr('d', d3.line().curve(d3.curveStepAfter).x((r) => x(r.i)).y((r) => y(r.program_trials)))
+    .style('fill', 'none').style('stroke', dash.colors[0]).style('stroke-width', 2);
+  const tip = tipIn(el);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - 16 - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const r = idx[Math.max(0, Math.min(idx.length - 1, Math.round(x.invert(d3.pointer(ev)[0])) - 1))];
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${r.id} · ${r.lane}`, [{ text: `${F.int(r.trials)} trials; program total ${F.int(r.program_trials)}` }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+function drawCoverage(el) {
+  el.replaceChildren();
+  const rows = rowsOf('coverage').filter((r) => r.first && r.last).map((r) => ({ ...r, a: new Date(r.first), b: new Date(r.last) }))
+    .sort((p, q) => p.a - q.a);
+  if (!rows.length) return;
+  const kinds = Array.from(new Set(rows.map((r) => r.kind))).sort();
+  const color = (k) => dash.colors[kinds.indexOf(k) % dash.colors.length];
+  const W = Math.max(el.clientWidth, 300), rowH = 22, H = rows.length * rowH + 30;
+  el.style.minHeight = H + 'px';
+  const svg = svgIn(el, W, H);
+  const ml = (d3.max(rows, (r) => textW(svg, r.key)) || 0) + 12;
+  const x = d3.scaleUtc([d3.min(rows, (r) => r.a), new Date()], [ml, W - 12]);
+  const xt = thin(x.ticks(8), x, d3.utcFormat('%Y'), svg, 10);
+  svg.append('g').selectAll('line').data(xt).join('line').attr('x1', x).attr('x2', x).attr('y1', 0).attr('y2', H - 24).style('stroke', 'var(--cds-chart-grid)');
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 24})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(d3.utcFormat('%Y')).tickSizeOuter(0)));
+  const tip = tipIn(el);
+  const g = svg.selectAll('g.c').data(rows).join('g').attr('class', 'c').attr('transform', (r, i) => `translate(0,${i * rowH})`);
+  g.append('text').attr('class', 'lead').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((r) => r.key);
+  g.append('rect').attr('x', (r) => x(r.a)).attr('y', rowH / 2 - 6).attr('height', 12).attr('rx', 4)
+    .attr('width', (r) => Math.max(3, x(r.b) - x(r.a))).style('fill', (r) => color(r.kind));
+  g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => {
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, r.key, [
+        { color: color(r.kind), text: `${r.kind}: ${F.day(r.first)} to ${F.day(r.last)}` },
+        { text: `${F.int(r.files)} files, ${F.size(r.gb)}${r.holes != null ? `, ${F.int(r.holes)} missing hours` : ''}` }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+
 function render() {
   fillMarks();
   Object.keys(TABLES).forEach(drawTable);
@@ -775,6 +1169,23 @@ function render() {
   if ((el = vis('chart-mstatus')) && stateBox(el, ['method_counts'])) drawBars(el, rowsOf('method_counts'), (r) => r.status, (r) => r.n, F.int, 'methods');
   if ((el = vis('chart-edgemap')) && stateBox(el, ['strategies'])) drawScatter(el);
   if ((el = vis('chart-cum'))) drawCum(el);
+  if (vis('chart-equity') && ok('tearsheets')) {
+    drawSheetKpis(pickSeries());
+    if ((el = vis('chart-equity')) && stateBox(el, ['equity'])) {
+      const pts = rowsOf('equity').filter((p) => p.series === SERIES).map((p) => ({ ...p, d: new Date(p.date) }));
+      drawLineChart(el, pts, (p) => (p.equity == null ? NaN : (p.equity - 1) * 100), (v) => d3.format('+.0f')(v) + '%', false, 300);
+      const dd = vis('chart-dd');
+      if (dd) drawLineChart(dd, pts, (p) => (p.drawdown == null ? NaN : p.drawdown * 100), (v) => d3.format('.0f')(v) + '%', true, 150);
+    }
+    if ((el = vis('chart-monthly')) && stateBox(el, ['monthly'])) drawMonthly(el);
+  }
+  if ((el = vis('chart-board')) && stateBox(el, ['leaderboard'])) drawBoard(el);
+  if ((el = vis('chart-trials')) && stateBox(el, ['leaderboard'])) drawTrials(el);
+  if ((el = vis('chart-fund')) && stateBox(el, ['funding_board'])) {
+    const rows = rowsOf('funding_board').slice(0, 25);
+    drawBars(el, rows, (r) => `${r.base} · ${r.max_venue} over ${r.min_venue}`, (r) => r.spread_ann * 100, (v) => d3.format(',.0f')(v) + '%/yr', 'spread');
+  }
+  if ((el = vis('chart-coverage')) && stateBox(el, ['coverage'])) drawCoverage(el);
 }
 
 const tabs = Array.from(document.querySelectorAll('#qx .qx-tab'));

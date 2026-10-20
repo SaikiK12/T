@@ -20,6 +20,7 @@ except ModuleNotFoundError:  # dashboard_data.py invoked directly from scripts/
 # Stable identifiers and paths remain intact; these are presentation labels.
 LABELS = {
     "REC_TICKER": ("Market data collection", "MEXC funding and ticker snapshots", "recorders"),
+    "REC_FUNDING": ("Market data collection", "Six-venue funding board snapshots", "recorders"),
     "REC_NOTICES": ("Market data collection", "Exchange announcement snapshots", "recorders"),
     "REC_UNLOCKS": ("Market data collection", "Token unlock calendar snapshots", "recorders"),
     "REC_DIGEST": ("Data integrity", "Recorder provenance digests", "recorders"),

@@ -49,6 +49,14 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
     `RESERVED-2020-READ`.
 - **MEXC-only coins**, 2025-04-01 onward: MEXC perps with no Binance perp in the archive. The set is fixed by a frozen
   PREREG before the first read.
+- **Gate long tail and Gate 2020** (added 2026-10-20 with `scripts/fetch_gate_history.py`):
+  - every Gate USDT perp whose base has no Binance perp (the same name rule as R274's `binance_perp`), all months,
+    delisted contracts included;
+  - every Gate contract's 2020 rows.
+
+  The build writes them to `data/gate_hist/reserved/` and nothing else. They are read only by a frozen batch PREREG
+  that declares `RESERVED-GATE-READ`, under the rules below. The MEXC-only coins overlap this set: a batch that reads
+  one names the other's overlap.
 
 **Rules**
 - **Batch reads only.** One frozen batch PREREG lists every candidate, with Bonferroni over the batch, 1x/2x/3x costs,

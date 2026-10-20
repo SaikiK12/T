@@ -1,6 +1,6 @@
 # Data sources: what was downloaded, from where, and how to check it
 
-`data/` is gitignored. Each download has a provenance record in `docs/provenance/<folder>.json`, written by
+`data/` is gitignored. The comparison with other projects' data is in `docs/BENCHMARK.md`. Each download has a provenance record in `docs/provenance/<folder>.json`, written by
 `scripts/data_provenance.py`. The record holds:
 - every file's size and sha256, plus a combined digest;
 - file counts per subfolder;
@@ -19,6 +19,8 @@ digests are in `experiments/recorders/journal/digests.csv`.
 | `data/unlocks/2026-10-20` | DefiLlama emissions datasets (public) | `scripts/fetch_unlocks.py` | 373 | 44 MB | calendar as of 2026-10-20 | a2296e89… | Not point-in-time. The daily recorder (`scripts/record_unlocks.py`) keeps snapshots from 2026-10-20. Its own `manifest.json` also hashes the decompressed JSON. |
 | `data/recorders/notices/articles` | Binance CMS article detail (public) | `scripts/fetch_notice_bodies.py` | 442 | 2 MB | delisting catalog to 2026-10-20 | in R267 PREREG (f155ba8d…) | Plain text of each delisting article. Used where a title does not name the coins. |
 | `data/hyperliquid` | Hyperliquid `/info` (public) | `scripts/fetch_hyperliquid_history.py` | in progress | | | | Record when done. |
+| `data/gate_hist` | Gate public bulk archive (S3 `gateio-public-data`, listed with ListObjectsV2) | `scripts/fetch_gate_history.py` | ~64,000 monthly files | | 2020-01 .. 2026-09 | at build | Hourly candles and every funding settlement for every USDT perp, delisted ones included. Each file's MD5 is checked against its S3 ETag. `open/` = bases with a Binance perp from 2021; `reserved/` = the rest (GATES). |
+| `data/recorders/funding_board` | Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX public APIs | `scripts/record_funding_board.py` (hourly, in `forward_all.sh`) | 1 per hour | | from 2026-10-20 21:00 | `experiments/recorders/journal/digests.csv` | Live funding of every USDT perp on six venues, normalized to 8 h. Point-in-time: none of these venues keeps the history of its displayed rate. |
 
 ## Not downloaded yet
 - **CoinGecko 365-day market caps:** the free API keeps 365 days only.
