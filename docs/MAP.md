@@ -249,6 +249,16 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   The variance risk premium (a measurement, not a book) was positive on 82-85% of days in every window. Its t was
   2.55 in discovery and 5.71 in validation, but 1.11 on the 2020-26 holdout, because of March 2020. NULL; follow-ups
   M224-M226. [Findings](../experiments/fxindex_v1/FINDINGS.md).
+- **R240 (posimpulse_v2)** tested R234's positioning-impulse books on 2024-25, the only window that 2023's after-the-fact
+  result had not seen. imp24/H: -0.7 bp/day. imp72/H: +6.6, t 1.33, negative at 3x. NULL; M001/M223 closed after 6
+  trials. [Findings](../experiments/posimpulse_v2/FINDINGS.md).
+- **R241 (volrisk_v1)** timed short volatility: long SVXY when VIX is below VIX3M.
+  - It passed discovery 2011-16 (+54%/yr, t 2.39) and validation 2017-19 (t 1.82). Validation was decided by
+    exiting at the open of 2018-02-05, after a 0.28-point term-structure cross the session before.
+  - The 2020-26 holdout gave +19%/yr at t 1.70, short of t 2, with drawdowns of 45-66% and a worst day of -21.5%.
+  - The calm-VIX filter failed discovery, and R239's VIX reversal had no alpha in 2013-19.
+  - NULL. It is the closest cross-market result, and it is a crash-risk premium, not a prop-compatible book.
+  [Findings](../experiments/volrisk_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -354,6 +364,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,928 after R239 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,933 after R241 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

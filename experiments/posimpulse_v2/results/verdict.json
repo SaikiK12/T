@@ -1,0 +1,29 @@
+{
+ "stages": {
+  "imp24/H": {
+   "reached": "validation",
+   "passed": false
+  },
+  "imp72/H": {
+   "reached": "validation",
+   "passed": false
+  }
+ },
+ "by_year_1x": {
+  "imp24/H/discovery": {
+   "2023": 10.155428988165276
+  },
+  "imp24/H/validation": {
+   "2024": 0.6440119657758883,
+   "2025": -3.410226235127069
+  },
+  "imp72/H/discovery": {
+   "2023": 10.648768042896082
+  },
+  "imp72/H/validation": {
+   "2024": 8.609188733824565,
+   "2025": 2.6135988239710155
+  }
+ },
+ "validation_passers": []
+}

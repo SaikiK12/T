@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 06:47 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 06:54 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 55 |
+| Ideas in the queue, untested | 50 |
 | Ideas partly tested | 27 |
 | Ideas blocked (data, download, compute) | 72 |
-| Rounds in the registry | 61 (NULL 38, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,928 |
+| Rounds in the registry | 63 (NULL 40, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,933 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -79,13 +79,13 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R232 | rebalancing_v1 | DONE | NULL | 3 |
-| R233 | regime_v1 | DONE | NULL | 4 |
 | R234 | posimpulse_v1 | DONE | NULL | 4 |
 | R235 | usindex_calendar_v1 | DONE | NULL | 4 |
 | R236 | amihud_v1 | DONE | NULL | 2 |
 | R237 | tsmom_v1 | DONE | NULL | 2 |
 | R238 | xsbattery_v1 | DONE | NULL | 16 |
 | R239 | fxindex_v1 | DONE | NULL | 7 |
+| R240 | posimpulse_v2 | DONE | NULL | 2 |
+| R241 | volrisk_v1 | DONE | NULL | 3 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
