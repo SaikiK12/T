@@ -349,6 +349,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Weekly round trips cost 0.4 bp/day (Yahoo) to 2 bp/day (crypto), which is more than any weekday alpha.
   - Its frozen PREREG says R254 (reassigned the same way).
   - NULL. [Findings](../experiments/dow_v1/FINDINGS.md).
+- **R260 (dispgate_v1)** halved flow books A, B and X2 on days when 30-day cross-sectional dispersion was in its top
+  tercile and the alt index had fallen over 90 days (the momentum-crash rule, SIZING_EVIDENCE #7).
+  - Every book lost 0.00-0.05 Sharpe in both windows.
+  - The gate fired after LUNA (May-June 2022), when books A and X2 earned 3.4-4.2 times their usual mean, and in
+    February-May 2025, when they still earned 67-82% of it.
+  - Crowd-fading short books profit from the stress that hurts momentum, so the rule removes profit.
+  - NULL. [Findings](../experiments/dispgate_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -454,6 +461,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,472,031 after R256 on this branch (`registry.program_trials()`; Codex's R253/R254 add theirs when merged), mostly correlated context-atlas cells. This raw
+Program trials: 9,472,037 after R260 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
