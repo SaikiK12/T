@@ -1,6 +1,6 @@
 # Map: what is known, and the routes still open
 
-Updated 2026-10-20. Historical entries below retain their reported evidence; new exploratory rounds R228/R229 are linked separately. Splits:
+Updated 2026-10-20. Historical entries below retain their reported evidence; new exploratory rounds R228–R230 are linked separately. Splits:
 original discovery 2021-2023, validation 2024-2025H1, historical holdout 2025-07..2026-09 (now spent at program level). New studies declare their own splits. "Replicates" = picked on
 discovery, same sign and |t| >= 2 on validation. Universe: the 50 most liquid Binance USD-M perps at each hour (499 coins
 over time, delisted ones included). Round trip at the tier costs: about 12-16 bp.
@@ -195,6 +195,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   surviving major coins. Validation net remains positive at 2x costs, but the primary fails its risk-matched passive
   Sharpe, drawdown and paired-mean requirements. NULL. This is a bounded adaptation, not all trend following.
   [Findings and source limits](../experiments/slow_trend_v1/FINDINGS.md).
+- **R230 (weekly_rotation_v1)** searched 96 frozen weekly spot rotation rules on the same six-coin cache. Discovery
+  selects 28-day momentum/top3/BTC56 gate/full adjustment. Validation Sharpe 0.833 versus 1.105 passive, drawdown
+  53.63% versus 36.13%, paired excess interval spans zero, family diagnostic p=1. NULL. This does not close C14's
+  broader point-in-time long/short universe. [Findings](../experiments/weekly_rotation_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -259,8 +263,8 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   constant-risk/exposure comparator before attributing lower drawdown to timing skill or confidence.
 - The old 93k-cell grammar is not a current run plan. Use the [coverage ledger](RESEARCH_COVERAGE_LEDGER.md) to
   distinguish tested cells from open mechanisms. R226 closes six unsigned activity variants; R228 closes its fixed
-  allocation grid; R229 closes its registered spot adaptation. Positioning changes, a flow context gate, partial
-  execution and weekly C14 remain separate questions with specific input requirements. R222's MOM signal is a
+  allocation grid; R229/R230 close their registered six-coin spot adaptations. Positioning changes, a flow context
+  gate, partial execution and the broader weekly C14 remain separate questions with specific input requirements. R222's MOM signal is a
   150-day formation window skipping the latest 30 days, not the weekly C14 portfolio.
 - Context as a gate for the flow book (does top-vs-crowd pay more in some contexts?), the one use of R192/R195 left.
 - Gate data from 2026-10 on are unseen (Gate keeps 180 days; refetch before 2027-03): a forward score of Gate's
@@ -299,6 +303,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,788 after R229 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
-bookkeeping total is not a count of independent hypotheses. R228/R229 use previously viewed dates and are
+Program trials: 9,471,884 after R230 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+bookkeeping total is not a count of independent hypotheses. R228–R230 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

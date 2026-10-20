@@ -1,6 +1,6 @@
 # Research coverage: tested cells, open mechanisms and data dependencies
 
-Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228/R229 findings.
+Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228–R230 findings.
 This ledger summarizes linked evidence; its own text computes no new market result.
 “Closed” means do not repeat the tested rule unchanged; it does not falsify every rule in its broad family.
 Calendar dates examined by prior research are spent for program-level confirmation, even for a new feature.
@@ -37,7 +37,7 @@ The atlas includes weekly return features but target horizons only through 72 ho
 | One 24 h positioning impulse beyond its level | R211/R212 test components, not changes. | Complete timestamped ratios, principally 2023 onward; fixed level-B and price/taker controls; one horizon, no change/acceleration grid. |
 | One context gate on a frozen 72 h flow book | R201/R204 trade context pairs as their own portfolios. | Original signals/positions plus one predeclared context; charge exits/reentries and compare matched risk, not just lower exposure. |
 | Lead-lag entry timing for already-planned flow slices | R219 tested standalone books and explicitly left the overlay open. | Historical flow slices and lead scores; fixed delay/expiry, timing placebo and exact turnover. |
-| C14 weekly momentum | Different formation/holding definition from R222 and longer holding than atlas targets. | Survivorship-free daily prices, point-in-time liquidity, funding and lifecycle exits; one literature-defined rule first. |
+| C14 weekly momentum | Different formation/holding definition from R222 and longer holding than atlas targets. R230's six-survivor long-only adaptation is NULL. | Full C14 still needs survivorship-free daily prices, point-in-time liquidity, funding and lifecycle exits. |
 | Multi-timeframe agreement or cluster-relative returns | R195 studies contexts; R217 stacks three flow signals rather than timeframe signs. No cluster portfolio was found in lane specs. | Raw feature panels; an economic rationale and small frozen family, not the legacy broad grammar. |
 | Aggressor-signed event flow | R226 is unsigned; coarse taker measures already exist. | Timestamp/side-validated event capture; incremental comparison with coarse taker flow and realistic executable delay. Large archive downloads need owner approval. |
 | Basis-triggered carry / next-rate revisions | C09 is unrun; settled funding is not the displayed next-rate forecast. | Exact spot/perp prices and units, settlement ledger; prospective next-rate snapshots and a no-change forecast baseline. |
@@ -46,7 +46,7 @@ The atlas includes weekly return features but target horizons only through 72 ho
 
 ## What can actually run in this checkout
 
-- Raw candles, research feature tensors, funding parquet, eligibility panels and historical spot tapes are absent
+- Original hourly candles, research feature tensors, funding parquet and eligibility panels are absent
   from the inspected worktrees. Literature phrases such as “have” in older docs describe Claude's original
   data environment, not proof that those inputs exist here. Do not launch a nominal backtest against absent data.
 - `experiments/sizing_v1/results/daily.npz` contains 2,099-entry daily arrays for A/B controls and overlays,
@@ -66,6 +66,9 @@ The atlas includes weekly return features but target horizons only through 72 ho
   tested a literature-fixed nine-horizon long/cash ensemble plus an unscaled diagnostic. Its frozen validation
   comparison failed. These daily candles are now available locally; raw flow tensors and funding remain absent.
   This does not close all trend variants, weekly C14 or a full point-in-time-universe replication.
+- [R230 weekly_rotation_v1](../experiments/weekly_rotation_v1/FINDINGS.md) completes a frozen 96-rule rank/gate/
+  execution grid on that existing six-coin spot cache. The train-selected winner fails validation against scaled
+  passive and the family-aware diagnostic. Its null is preserved; no validation winner replaces it.
 
 ## Search accounting and stopping
 

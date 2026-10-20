@@ -19,6 +19,8 @@ from paying its costs, and which routes (stacking, context gating, limit-order e
   the discovery-selected mixture did not improve validation enough to pass.
 - [`R229 slow_trend_v1`](experiments/slow_trend_v1/FINDINGS.md): a source-driven daily spot trend screen on six coins;
   full 1x/2x/3x accounting failed the frozen comparison with a training-risk-matched passive portfolio.
+- [`R230 weekly_rotation_v1`](experiments/weekly_rotation_v1/FINDINGS.md): a frozen 96-rule weekly rotation search;
+  the train-selected winner underperformed its scaled passive control in validation. NULL.
 
 ## Use
 
