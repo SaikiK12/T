@@ -410,6 +410,15 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Short at the first hourly open after detection, and cover 1 h later (+24 h logged).
   - Futures notices are not traded.
   - Decision at 12 scored notices (about 1.5 years). RUNNING. [PREREG](../experiments/delist_fwd/PREREG.md).
+- **R269 (montag_v1)** tested a Monitoring Tag short: short the perp of each coin Binance adds to its Monitoring Tag at
+  the first hourly open after the notice, and cover at +1 h (primary), +24 h or +72 h.
+  - The events are 24 notice clusters and 86 priced legs, 2023-10..2026-09 (the tag began in 2023-07).
+  - **Primary:** +0.61% / +0.21% / -0.19% at 1x/2x/3x, t 0.71. The matched same-hour null gives p 0.0005, but the
+    hour is too small to pay 40 bp.
+  - **Logged variant:** +24 h, +4.36% at 1x (t 3.81; 2x +3.96%, 3x +3.56%), with both halves positive. The BTC-hedged
+    +24 h line also clears G1-G3. They are 2 of 6 variants, so a forward candidate, not a pass.
+  - **It fades in 2026:** +1.31% over 11 clusters, and -0.92% over the last 5.
+  - NULL. [Findings](../experiments/montag_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -515,6 +524,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,477,556 after R268 and R263 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,477,562 after R269 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
