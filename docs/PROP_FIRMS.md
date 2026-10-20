@@ -79,6 +79,15 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
 - **Overnight index drift:** impossible at futures firms, which require being flat by the close.
 
 ## How much edge a challenge needs (synthetic map, M211 first pass, 2026-10-20)
+**Model-version note (Codex review, 2026-10-20).** The table and CSV below retain the model results from
+`0fe29ed`; they have not been rerun after the payout-eligibility fix. The current 50K XFA Standard preset also
+requires USD 0.01 of new profit since the last successful withdrawal (first payout exempt) and a minimum gross
+request of USD 125. See the [official payout policy](https://help.topstep.com/en/articles/8284233-topstep-payout-policy)
+and [minimum-request FAQ](https://www.topstep.com/instant-payouts). The gross interpretation follows the FAQ's
+request terminology and the policy's separate request-versus-received example. The archived Topstep EV figures
+therefore describe the earlier, looser eligibility model, not the current implementation. Its 14-day proxy for
+five qualifying winning days remains an approximation; legacy, Consistency, Live and optional-DLL accounts differ.
+
 `scripts/prop_edge_map.py` writes `experiments/propsim_v1/edge_map.csv`. It is a model with no market data, so it is
 not a trial and has no registry row.
 - **Setup:** a 20-year synthetic daily stream (1% daily vol at size 1, normal or Student t4) at each annual Sharpe from
@@ -97,7 +106,7 @@ not a trial and has no registry row.
 Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
 (Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
 
-Topstep rows use the payout rules read from help.topstep.com on 2026-10-20 (payout policy and loss-limit articles):
+The archived Topstep rows use this subset of the rules read on 2026-10-20, implemented in `0fe29ed`:
 - Each request is at most 50% of the balance and USD 2,000 (50K Standard path), applied before the 90% split.
 - The loss limit moves to the starting balance after the first payout.
 - The payout condition, 5 winning days of USD 150+ restarting after each request, is approximated by a 14-day cycle.
