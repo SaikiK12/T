@@ -40,6 +40,8 @@ Horizons: `5,10,20,30,60,90,150,250,360` days, equally weighted. Sizing: `min(0.
 
 **Why distinct.** R213 studies entry delay; R217 changes sizing; R186-R187 select composite signals. None is this fixed partial-adjustment comparison. Changing execution must not rewrite their frozen journals or revive their claims as confirmed.
 
+**Completed bounded test, 2026-10-20.** [R231](../experiments/partial_execution_v1/FINDINGS.md) tests half/quarter daily adjustment on the exact frozen R229 spot target. Both new policies are retained; the discovery-selected half adjustment fails its validation comparison because forgone gross return exceeds cost savings at 1x/2x. This is not a test on the original flow targets, which remain unavailable here.
+
 ## 3. Rebalancing versus letting identical holdings drift
 
 **Sources.** [Quantpedia's public profile](https://quantpedia.com/strategies/rebalancing-premium-in-cryptocurrencies) and Hanicova and Vojtko's [primary working-paper record](https://ssrn.com/abstract=3982120). The profile discloses an in-sample short-weight comparison and unreported transaction costs. Its static universe includes a stablecoin; its selected 100%-long/70%-short illustration retains long market exposure. Neither a source rating nor its best parameter is independent confirmation.
