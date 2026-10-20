@@ -1,39 +1,92 @@
 # T
 
-A research lab for crypto perpetual futures (Binance USD-M archive, the full survivorship-free set of USDT perps,
-hourly, 2021 to 2026). The goal is positive PnL; the rule is that nothing counts as an edge until it survives
-pre-registration, a placebo, data it never saw and a forward paper test.
+A pre-registered strategy-discovery lab for crypto perpetual futures. The goal is the best net PnL the owner can trade
+(MEXC perps first), proven on data the search never saw and handed over through the gates in
+[`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
+check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
-The working question is no longer "which rule wins?" but a map: which signals predict returns before fees, with what
-confidence, in which context (hour and market opens, BTC regime, market-wide flushes, order flow), how far each is
-from paying its costs, and which routes (stacking, context gating, limit-order entries, carry) close that gap.
+## Where things are
 
-- [`docs/MAP.md`](docs/MAP.md): what is known so far, lane by lane, and the routes still open.
-- [`docs/FOUNDATION.md`](docs/FOUNDATION.md): conventions; [`docs/AUDIT.md`](docs/AUDIT.md): weak points;
-  [`docs/CONCEPTS.md`](docs/CONCEPTS.md): ICT, prop-firm and order-flow concepts with their evidence.
-- Research supplements: [adaptive selection and concept drift](docs/ADAPTIVE_SELECTION_AND_DRIFT.md) and
-  [MEXC API and operational risk](docs/OPERATIONAL_API_RISK.md) cover future policy tests and execution controls.
-- `registry/rounds.csv`: one row per round with its trial count (append-only).
-- `experiments/<lane>/`: PREREG.md (frozen), FINDINGS.md, results.
-- [`docs/RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md): exact tested cells and remaining questions;
-  [`docs/QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md): source-checked mechanisms beyond the completed lanes.
-- [`R228 allocation_v1`](experiments/allocation_v1/FINDINGS.md): a frozen 30-alternative flow-book allocation study;
-  the discovery-selected mixture did not improve validation enough to pass.
-- [`R229 slow_trend_v1`](experiments/slow_trend_v1/FINDINGS.md): a source-driven daily spot trend screen on six coins;
-  full 1x/2x/3x accounting failed the frozen comparison with a training-risk-matched passive portfolio.
-- [`R230 weekly_rotation_v1`](experiments/weekly_rotation_v1/FINDINGS.md): a frozen 96-rule weekly rotation search;
-  the train-selected winner underperformed its scaled passive control in validation. NULL.
+| Path | What it holds |
+|---|---|
+| [`AGENTS.md`](AGENTS.md) | The hard rules for anyone working here, human or AI |
+| [`docs/PANEL.md`](docs/PANEL.md) | Live status: objective, forward lanes, next decisions (`scripts/panel.py`) |
+| `registry/` | `rounds.csv` (every round and its trial count, append-only), `methods.csv` (the method queue), `candidates.csv` (edges still alive) |
+| `experiments/<lane>/` | `PREREG.md` (frozen before any statistic), `FINDINGS.md`, `results/`; forward lanes keep a `journal/` |
+| `lab/` | Python research library: data, panel, features, backtester, inference (DSR, SPA/MCS, PBO), prereg, registry, gates, live paper |
+| `engine/` | `qx`, the Rust engine: event, factor and cross-venue spread families from one TOML spec ([`engine/README.md`](engine/README.md)) |
+| `scripts/` | Fetchers (`fetch_*`), recorders (`record_*`), lane runners (`run_*`, `qx_run.py`), the forward and notice loops, the dashboard export |
+| `dashboard/` | The Control Room page; `scripts/dashboard_data.py` exports its datasets |
+| `data/` | Downloaded and recorded data (not in git). Reserved samples sit under `reserved/` folders and are read only by a frozen batch PREREG |
+| `templates/lane/` | Starting point for a new lane |
+
+## Docs
+
+**Start here**
+- [`PANEL.md`](docs/PANEL.md): live status.
+- [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
+- [`MAP.md`](docs/MAP.md): what is known, lane by lane.
+- [`EDGE_SCOREBOARD.md`](docs/EDGE_SCOREBOARD.md): the evidence for each edge.
+
+**Rules and process**
+- [`FOUNDATION.md`](docs/FOUNDATION.md): conventions.
+- [`GATES.md`](docs/GATES.md): gates and reserved samples.
+- [`ROOM.md`](docs/ROOM.md): the Claude and Codex protocol, issue #7.
+
+**Data**
+- [`DATA_SOURCES.md`](docs/DATA_SOURCES.md): every folder, its source and digests; `docs/provenance/` holds the records.
+- [`DATA_PROVENANCE_AUDIT.md`](docs/DATA_PROVENANCE_AUDIT.md).
+- [`BENCHMARK.md`](docs/BENCHMARK.md): the lab against the best open-source quant projects and free data.
+
+**Methods and research notes**
+- Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
+  [`OLD_SESSION_EDGES.md`](docs/OLD_SESSION_EDGES.md).
+- Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
+  [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
+  [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
+- What to test next: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
+  [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
+  [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
+  [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md).
+- Topic briefs: [`ALTCOIN_LEADS.md`](docs/ALTCOIN_LEADS.md), [`FOREX_AND_INDICES.md`](docs/FOREX_AND_INDICES.md),
+  [`MARKET_DIRECTION_AND_REGIME.md`](docs/MARKET_DIRECTION_AND_REGIME.md),
+  [`VOLATILITY_AND_TAIL_RISK_FORECASTS.md`](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),
+  [`QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md`](docs/QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md),
+  [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md).
+
+**Trading, execution and capital**
+- The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md).
+- Execution and carry: [`PERP_EXECUTION_AND_RISK.md`](docs/PERP_EXECUTION_AND_RISK.md),
+  [`PERP_CARRY_ACCOUNTING.md`](docs/PERP_CARRY_ACCOUNTING.md), [`OPERATIONAL_API_RISK.md`](docs/OPERATIONAL_API_RISK.md).
+- Paper and sizing: [`PAPER_REFINEMENT.md`](docs/PAPER_REFINEMENT.md), [`SIZING_EVIDENCE.md`](docs/SIZING_EVIDENCE.md).
+- Capital: [`CAPITAL_GATE_REVIEW.md`](docs/CAPITAL_GATE_REVIEW.md), [`PROP_FIRMS.md`](docs/PROP_FIRMS.md).
+
+**Audits and reviews**
+- Program-level: [`AUDIT.md`](docs/AUDIT.md), [`CRITIQUE.md`](docs/CRITIQUE.md),
+  [`SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md`](docs/SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md),
+  [`CONFIDENCE_REVIEW.md`](docs/CONFIDENCE_REVIEW.md),
+  [`CONFIDENCE_AND_SIZING_AUDIT.md`](docs/CONFIDENCE_AND_SIZING_AUDIT.md).
+- Data and code integrity: [`IMPLEMENTATION_INTEGRITY_REVIEW.md`](docs/IMPLEMENTATION_INTEGRITY_REVIEW.md),
+  [`FEATURE_VINTAGE_INTEGRITY.md`](docs/FEATURE_VINTAGE_INTEGRITY.md),
+  [`TARGET_INTEGRITY_FIX.md`](docs/TARGET_INTEGRITY_FIX.md),
+  [`CONTRACT_LIFECYCLE_INTEGRITY.md`](docs/CONTRACT_LIFECYCLE_INTEGRITY.md),
+  [`POSITIONING_AND_ORDERFLOW_VALIDITY.md`](docs/POSITIONING_AND_ORDERFLOW_VALIDITY.md).
+- Forecast evaluation: [`FORECAST_EVALUATION_PLAYBOOK.md`](docs/FORECAST_EVALUATION_PLAYBOOK.md),
+  [`ADAPTIVE_SELECTION_AND_DRIFT.md`](docs/ADAPTIVE_SELECTION_AND_DRIFT.md).
+
+Docs stay at their paths because frozen PREREGs link to them.
 
 ## Use
 
 ```
 python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
-.venv/bin/python -m unittest discover -s tests -t .
-.venv/bin/python -m lab.data build klines 1h      # archive fetcher (also fundingRate, premiumIndexKlines)
-.venv/bin/python -m lab.flow metrics              # order flow: open interest, long/short, taker ratio; bookDepth
-.venv/bin/python scripts/build_views.py           # research universe + feature tensor
-.venv/bin/python scripts/build_extra_views.py clock|ctx|flow
-.venv/bin/python scripts/run_atlas.py discovery   # and the other scripts/run_*.py, one per lane
+.venv/bin/python -m unittest discover -s tests -t .              # before every commit to lab/ or scripts/
+cargo test --release --manifest-path engine/Cargo.toml           # before every commit to engine/
+.venv/bin/python -m lab.data build klines 1h                     # Binance archive (also fundingRate, premiumIndexKlines)
+.venv/bin/python scripts/qx_run.py experiments/<lane> --register # run a frozen qx lane and append its registry row
+sh scripts/forward_loop.sh                                       # hourly forward paper ticks and recorders
+.venv/bin/python scripts/dashboard_data.py                       # export the Control Room datasets
 ```
 
-Rules for contributors: [`AGENTS.md`](AGENTS.md). New lane: copy `templates/lane/`.
+New lane: copy `templates/lane/`, write the PREREG, claim its id on issue #7, freeze it with `lab.prereg.freeze()`,
+then run.

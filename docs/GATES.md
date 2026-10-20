@@ -57,6 +57,10 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
   The build writes them to `data/gate_hist/reserved/` and nothing else. They are read only by a frozen batch PREREG
   that declares `RESERVED-GATE-READ`, under the rules below. The MEXC-only coins overlap this set: a batch that reads
   one names the other's overlap.
+- **KuCoin and dYdX long tail and 2020** (added 2026-10-20 with `scripts/fetch_venue_history.py`): the same rule as
+  Gate's, per venue. The build writes them to `data/kucoin_hist/reserved/` and `data/dydx_hist/reserved/`. Only a
+  frozen batch PREREG that declares `RESERVED-VENUE-READ` reads them, and it names its overlap with the Gate and
+  MEXC-only sets.
 
 **Rules**
 - **Batch reads only.** One frozen batch PREREG lists every candidate, with Bonferroni over the batch, 1x/2x/3x costs,
