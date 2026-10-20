@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "paired_mean_lower95_positive": false,
+    "three_method_family_max_p_at_most_0_05": false,
+    "validation_drawdown_no_larger": false,
+    "validation_mean_2x_positive": true,
+    "validation_risk_matched_mean_gain_positive": true,
+    "validation_sharpe_gain_at_least_0_15": false
+  },
+  "interpretation": "Exploratory only; a passed screen requires a new prospective lane",
+  "selected": "equal_risk",
+  "validation_sharpe_gain": -0.1593281924135086,
+  "verdict": "NULL"
+}
