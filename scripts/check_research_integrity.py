@@ -41,6 +41,9 @@ _META_ID = re.compile(
     r"(?P<quote>`?)(?P<id>R[0-9]+)(?P=quote)"
     r"(?:[ \t]+\([^()\r\n]*\))?\Z"
 )
+# A frozen PREREG's id can collide with a round claimed elsewhere first. Its text stays frozen; this file beside it
+# records the move as {"declared": "R253", "registered": "R255", "reason": "..."}.
+REASSIGNMENT = "REGISTRY_REASSIGNMENT.json"
 
 
 def audit(root: Path) -> dict:
@@ -196,6 +199,25 @@ def audit(root: Path) -> dict:
         except OSError as exc:
             add("error", "FILE_READ_ERROR", str(exc), experiments)
 
+    def reassignment(directory):
+        """(declared, registered) from a valid reassignment file; None if absent or invalid."""
+        path = directory / REASSIGNMENT
+        if not is_file(path):
+            return None
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, ValueError) as exc:
+            add("error", "REASSIGNMENT_INVALID", f"Unreadable reassignment file: {exc}", path)
+            return None
+        if (not isinstance(data, dict) or set(data) != {"declared", "registered", "reason"}
+                or not all(isinstance(data[k], str) for k in data)
+                or not _ID.fullmatch(data["declared"]) or not _ID.fullmatch(data["registered"])
+                or data["declared"] == data["registered"] or not data["reason"].strip()):
+            add("error", "REASSIGNMENT_INVALID",
+                "Reassignment must be {declared, registered, reason}: two different round ids and a reason.", path)
+            return None
+        return data["declared"], data["registered"]
+
     for directory, lane_rows in sorted(directories.items()):
         if len(lane_rows) > 1:
             add("error", "DUPLICATE_LANE",
@@ -232,8 +254,18 @@ def audit(root: Path) -> dict:
                     add("error", "REGISTRY_ID_INVALID", "PREREG must declare one valid Registry id.",
                         spec)
                 else:
+                    moved = reassignment(directory)
                     for row in lane_rows:
-                        if declared["id"] != row["id"]:
+                        if declared["id"] == row["id"]:
+                            if moved is not None:
+                                add("warning", "REASSIGNMENT_UNUSED",
+                                    "Reassignment file present, but the PREREG id matches the registry row.",
+                                    directory / REASSIGNMENT, row["id"])
+                        elif moved == (declared["id"], row["id"]):
+                            add("info", "REGISTRY_ID_REASSIGNED",
+                                f"PREREG declares {declared['id']}; registered as {row['id']} (documented).",
+                                spec, row["id"])
+                        else:
                             add("error", "REGISTRY_ID_MISMATCH",
                                 f"PREREG declares {declared['id']}, registry row is {row['id']}.",
                                 spec, row["id"])

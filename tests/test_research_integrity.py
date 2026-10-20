@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -6,9 +7,10 @@ from lab import prereg, registry
 from scripts.check_research_integrity import audit
 
 
-class PreregMetadataTests(unittest.TestCase):
-    def check_metadata(self, metadata):
-        """Audit a frozen fixture and check that every byte stays intact."""
+class Fixture:
+    def check_metadata(self, metadata, extra=None):
+        """Audit a frozen fixture and check that every byte stays intact. `extra` maps file names to contents
+        written beside the spec."""
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             lane = root / "experiments" / "fixture"
@@ -16,6 +18,8 @@ class PreregMetadataTests(unittest.TestCase):
             spec = lane / "PREREG.md"
             spec.write_text("# Frozen test specification\n\n" + metadata + "\n", encoding="utf-8")
             digest = prereg.freeze(spec)
+            for name, content in (extra or {}).items():
+                (lane / name).write_text(content, encoding="utf-8")
             register = root / "registry" / "rounds.csv"
             register.parent.mkdir()
             registry.append(register, id="R233", lane="fixture", title="fixture",
@@ -31,9 +35,11 @@ class PreregMetadataTests(unittest.TestCase):
             self.assertEqual(report["summary"]["verified_frozen"], 1)
             return report
 
-    def codes(self, metadata):
-        return [issue["code"] for issue in self.check_metadata(metadata)["issues"]]
+    def codes(self, metadata, extra=None):
+        return [issue["code"] for issue in self.check_metadata(metadata, extra)["issues"]]
 
+
+class PreregMetadataTests(Fixture, unittest.TestCase):
     def test_supported_id_formats_and_annotations(self):
         for metadata in (
             "Registry id: R233",
@@ -75,6 +81,36 @@ class PreregMetadataTests(unittest.TestCase):
     def test_empty_declaration_cannot_consume_next_line(self):
         self.assertEqual(self.codes("Registry id:\nR233"), ["REGISTRY_ID_INVALID"])
         self.assertEqual(self.codes("Registry id:\nRegistry id: R233"), ["REGISTRY_ID_INVALID"])
+
+
+class ReassignmentTests(Fixture, unittest.TestCase):
+    """The fixture's registry row is R233; these specs declare another id."""
+
+    def moved(self, **fields):
+        data = {"declared": "R230", "registered": "R233", "reason": "R230 was claimed first on issue #7"}
+        data.update(fields)
+        return {"REGISTRY_REASSIGNMENT.json": json.dumps({k: v for k, v in data.items() if v is not None})}
+
+    def test_documented_reassignment_is_info_not_error(self):
+        report = self.check_metadata("Registry id: R230", self.moved())
+        self.assertEqual([issue["code"] for issue in report["issues"]], ["REGISTRY_ID_REASSIGNED"])
+        self.assertEqual(report["summary"]["errors"], 0)
+
+    def test_reassignment_must_match_both_ids(self):
+        for fields in ({"declared": "R231"}, {"registered": "R234"}):
+            with self.subTest(fields=fields):
+                self.assertEqual(self.codes("Registry id: R230", self.moved(**fields)), ["REGISTRY_ID_MISMATCH"])
+
+    def test_malformed_reassignment_fails(self):
+        for extra in (self.moved(reason=" "), self.moved(reason=None), self.moved(declared="r230"),
+                      self.moved(declared="R233"), self.moved(extra="x"),
+                      {"REGISTRY_REASSIGNMENT.json": "not json"}):
+            with self.subTest(extra=extra):
+                self.assertEqual(self.codes("Registry id: R230", extra),
+                                 ["REASSIGNMENT_INVALID", "REGISTRY_ID_MISMATCH"])
+
+    def test_unneeded_reassignment_is_a_warning(self):
+        self.assertEqual(self.codes("Registry id: R233", self.moved()), ["REASSIGNMENT_UNUSED"])
 
 
 if __name__ == "__main__":
