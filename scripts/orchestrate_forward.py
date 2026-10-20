@@ -12,6 +12,10 @@ Each run gets a new directory, process logs and an atomic status.json. Reusing
 an ID is refused, including after failure or interruption; inspect the old run
 and use a new ID for a new attempt. The legacy .forward.lock is shared. Existing
 runners and their journals retain their own semantics and idempotency rules.
+Notice collection and its three paper readers also share .notices.lock with
+the five-minute notice loop. Each may wait up to 300 seconds before starting;
+its process timeout starts only after acquisition. A busy lock reports BLOCKED,
+never a successful skipped task. The graph records these lock requirements.
 Unlike forward_all.sh, an upstream failure blocks mandatory descendants instead
 of running every remaining command. Independent branches still run. The default
 interpreter is the repository's .venv/bin/python; there is no system fallback.
@@ -22,6 +26,7 @@ It does not place orders or add a new statistical decision.
 """
 
 import argparse
+from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import fcntl
@@ -58,6 +63,8 @@ class Task:
     optional: tuple[str, ...] = ()
     timeout: float = 900
     files: tuple[Requirement, ...] = ()
+    shared_lock: str | None = None
+    lock_wait: float = 300
 
 
 def forward_tasks(python=".venv/bin/python"):
@@ -71,16 +78,21 @@ def forward_tasks(python=".venv/bin/python"):
     point-in-time recorders read nothing from the lanes and run first; the
     digest reads only their files and runs last. R266 reads only the recorders'
     calendar snapshot and ticker files, so they are optional for it. R268 reads the
-    notice journal and ticker files the same way and runs right after them.
+    notice journal and ticker files the same way and runs right after them; so
+    does R270.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
-        return Task(name, (python, "scripts/" + script), needs, optional, timeout, files)
+        lock = ".notices.lock" if name in {"REC_NOTICES", "R268", "R270", "R272"} else None
+        return Task(name, (python, "scripts/" + script), needs, optional, timeout, files, lock)
 
     return (
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
+        task("REC_FUNDING", "record_funding_board.py", timeout=120),
         task("REC_NOTICES", "record_notices.py", timeout=300),
         task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
         task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
+        task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
+        task("R272", "forward_announce.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),
@@ -95,7 +107,9 @@ def forward_tasks(python=".venv/bin/python"):
         task("R266", "forward_unlocks.py", (), ("REC_TICKER", "REC_UNLOCKS"), timeout=600),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", ("LAG",), timeout=120),
-        task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_NOTICES", "REC_UNLOCKS"), timeout=300),
+        task("DASH", "dashboard_data.py", (), ("LAG", "PANEL", "REC_FUNDING"), timeout=120),
+        task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_FUNDING", "REC_NOTICES", "REC_UNLOCKS"),
+             timeout=300),
     )
 
 
@@ -128,6 +142,10 @@ def ordered_tasks(tasks, selected=None):
             raise ValueError("invalid task name or argv")
         if not math.isfinite(t.timeout) or t.timeout <= 0:
             raise ValueError("timeouts must be finite and positive")
+        if not math.isfinite(t.lock_wait) or t.lock_wait < 0:
+            raise ValueError("shared-lock waits must be finite and nonnegative")
+        if t.shared_lock is not None and not re.fullmatch(r"\.[A-Za-z0-9_-]+\.lock", t.shared_lock):
+            raise ValueError("shared lock must be a root-local dot lock filename")
         if set(t.needs) & set(t.optional) or any(n not in by_name for n in t.needs + t.optional):
             raise ValueError("unknown or conflicting dependency")
         for f in t.files:
@@ -191,6 +209,8 @@ def plan(tasks, root):
     for t in tasks:
         nodes.append({"name": t.name, "argv": list(t.argv), "needs": list(t.needs),
                       "optional": list(t.optional), "timeout_seconds": t.timeout,
+                      "shared_lock": {"path": t.shared_lock, "wait_seconds": t.lock_wait}
+                                     if t.shared_lock else None,
                       "required_files": [{"path": f.path, "sha256": f.sha256} for f in t.files]})
     encoded = json.dumps(nodes, sort_keys=True, separators=(",", ":")).encode()
     return {"schema_version": 1, "root": str(root), "code": code_version(root),
@@ -219,7 +239,51 @@ def write_status(path, data, first=False):
             temporary.unlink(missing_ok=True)
 
 
+class SharedLockTimeout(TimeoutError):
+    pass
+
+
+@contextmanager
+def shared_task_lock(task, root):
+    """Match the shell/notice-loop flock; wait time is separate from process timeout."""
+    if task.shared_lock is None:
+        yield 0.0
+        return
+    # Refuse symlinks: shared locks must identify the same root-local inode as the shell.
+    fd = os.open(Path(root) / task.shared_lock, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    start = time.monotonic()
+    try:
+        while True:
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                remaining = task.lock_wait - (time.monotonic() - start)
+                if remaining <= 0:
+                    raise SharedLockTimeout("shared notice lock wait expired")
+                time.sleep(min(.05, remaining))
+        yield time.monotonic() - start
+    finally:
+        os.close(fd)
+
+
 def run_process(task, root, log_path):
+    """Never start a notice reader/writer without its shared lock."""
+    start = time.monotonic()
+    try:
+        with shared_task_lock(task, root) as waited:
+            result = _run_process(task, root, log_path)
+            if task.shared_lock:
+                result["lock_wait_seconds"] = waited
+            return result
+    except SharedLockTimeout:
+        with log_path.open("xb") as log:
+            log.write(b"Task not started: shared notice lock wait expired.\n")
+        return {"status": "BLOCKED", "returncode": None, "reason": "shared notice lock wait expired",
+                "lock_wait_seconds": time.monotonic() - start}
+
+
+def _run_process(task, root, log_path):
     """Only terminate the process group created for this task, including on interruption."""
     with log_path.open("xb") as log:
         proc = subprocess.Popen(task.argv, cwd=root, stdout=log, stderr=subprocess.STDOUT,

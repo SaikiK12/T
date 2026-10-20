@@ -419,6 +419,30 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     +24 h line also clears G1-G3. They are 2 of 6 variants, so a forward candidate, not a pass.
   - **It fades in 2026:** +1.31% over 11 clusters, and -0.92% over the last 5.
   - NULL. [Findings](../experiments/montag_v1/FINDINGS.md).
+- **R270 (montag_fwd)** runs R269's +24 h variant forward on MEXC paper.
+  - Tickets come from the notice recorder's `first_seen_utc` (from 2026-10-20 19:00 UTC), with R268's ticket rules.
+  - Short at the first hourly open after detection, and cover 24 hours later (+1 h logged).
+  - Decision at 12 scored notices (about a year). At 2026's level the expected t is under 1. RUNNING.
+    [PREREG](../experiments/montag_fwd/PREREG.md).
+- **R271 (announce_v1)** tested every Binance announcement type as one family on the qx engine: long and short at
+  +1 / 24 / 72 / 168 h, 64 strategies, one reality check.
+  - Best: funding-frequency change long +1 h, +3.59% per notice, t 3.31 (n 35); pre-listing short +168 h, +11.48%,
+    median +18.05%, t 2.03 (n 45). Neither clears the family reality check.
+  - NULL. [Findings](../experiments/announce_v1/FINDINGS.md).
+- **R272 (announce_fwd)** runs R271's two best forward on MEXC paper: FF (funding-frequency long 1 h) and PL
+  (pre-listing short 168 h), from notices first seen at 2026-10-20 19:00 UTC.
+  - A 5-minute notice loop (`scripts/notice_loop.sh`) writes tickets within minutes.
+  - Bonferroni t >= 2.2 at 12 scored notices per book. RUNNING. [PREREG](../experiments/announce_fwd/PREREG.md).
+- **R273 (fundext_v1)** tested the onset of extreme funding on every Binance perp (|rate| >= 0.3 / 1 / 2%, no
+  same-sign hit in the prior 72 h), long and short at +1 / 8 / 24 / 72 h: 40 strategies.
+  - Best neg2 long +72 h +7.32%, median -4.95%, t 2.39 (RC p 0.87).
+  - After a negative onset the median coin keeps falling, but a few squeezes outweigh the wins.
+  - NULL. [Findings](../experiments/fundext_v1/FINDINGS.md).
+- **R274 (squeeze_v1)** tested the short after a negative-funding onset with a close-based cover (10 / 20 / 35%), on
+  Binance 2021-26 and on MEXC's own funding 2025-26 (MEXC-only coins not read): 72 strategies.
+  - The cover cuts the tail and the median with it. Best mx_neg0.3 short 72 h with a 10% cover, +0.55%, t 1.35.
+  - NULL. No forward lane (the pre-committed rule needed t >= 2).
+    [Findings](../experiments/squeeze_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -524,6 +548,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,477,562 after R269 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,477,741 after R274 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

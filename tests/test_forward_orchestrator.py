@@ -8,8 +8,10 @@ import json
 from pathlib import Path
 import subprocess
 import shlex
+import shutil
 import sys
 import tempfile
+import threading
 import unittest
 from unittest.mock import patch
 
@@ -115,6 +117,87 @@ class ForwardOrchestratorTests(unittest.TestCase):
             report = self.run_tasks((self.task("A"),))
         self.assertEqual(report["status"], "BLOCKED")
         self.assertFalse((self.root / "A.ran").exists())
+
+    def test_busy_notice_lock_prevents_start_and_blocks_only_mandatory_dependents(self):
+        task = orchestration.Task("NOTICE", (sys.executable, "-c",
+            "from pathlib import Path; Path('NOTICE.ran').write_text('should not run')"),
+            shared_lock=".notices.lock", lock_wait=.05)
+        with (self.root / ".notices.lock").open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            report = self.run_tasks((task, self.task("DEP", needs=("NOTICE",)), self.task("OTHER")))
+        nodes = self.nodes(report)
+        self.assertEqual(nodes["NOTICE"]["status"], "BLOCKED")
+        self.assertIsNone(nodes["NOTICE"]["returncode"])
+        self.assertIn("shared notice lock", nodes["NOTICE"]["reason"])
+        self.assertGreaterEqual(nodes["NOTICE"]["lock_wait_seconds"], .05)
+        self.assertFalse((self.root / "NOTICE.ran").exists())
+        self.assertEqual(nodes["DEP"]["status"], "BLOCKED")
+        self.assertEqual(nodes["OTHER"]["status"], "SUCCESS")
+
+    @unittest.skipUnless(shutil.which("flock"), "requires shell-compatible flock")
+    def test_lock_is_held_for_child_lifetime_and_released_after_failure(self):
+        # The child must not inherit the parent descriptor, yet a separate flock command must observe the lock.
+        check = "import subprocess; raise SystemExit(0 if subprocess.run(['flock','-n','.notices.lock','true']).returncode == 1 else 9)"
+        held = orchestration.Task("HELD", (sys.executable, "-c", check), shared_lock=".notices.lock")
+        fail = orchestration.Task("FAIL", (sys.executable, "-c", "raise SystemExit(7)"), shared_lock=".notices.lock")
+        again = orchestration.Task("AGAIN", (sys.executable, "-c", check), shared_lock=".notices.lock")
+        nodes = self.nodes(self.run_tasks((held, fail, again)))
+        self.assertEqual([nodes[n]["status"] for n in ("HELD", "FAIL", "AGAIN")],
+                         ["SUCCESS", "FAILED", "SUCCESS"])
+        subprocess.run(("flock", "-n", str(self.root / ".notices.lock"), "true"), check=True)
+
+    def test_notice_lock_released_after_timeout_and_interruption(self):
+        slow = orchestration.Task("SLOW", (sys.executable, "-c", "import time; time.sleep(10)"),
+                                  timeout=.05, shared_lock=".notices.lock")
+        self.assertEqual(self.nodes(self.run_tasks((slow,)))["SLOW"]["status"], "TIMED_OUT")
+        with (self.root / ".notices.lock").open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        with patch.object(orchestration, "_run_process", side_effect=KeyboardInterrupt), self.assertRaises(KeyboardInterrupt):
+            self.run_tasks((slow,), "interrupt_lock")
+        with (self.root / ".notices.lock").open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+
+    def test_lock_wait_does_not_consume_process_timeout(self):
+        task = orchestration.Task("NOTICE", (sys.executable, "-c", "print('lock released')"),
+                                  timeout=.3, shared_lock=".notices.lock", lock_wait=2)
+        with (self.root / ".notices.lock").open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            release = threading.Timer(.4, lambda: fcntl.flock(lock, fcntl.LOCK_UN))
+            release.start()
+            try:
+                node = self.nodes(self.run_tasks((task,)))["NOTICE"]
+            finally:
+                release.cancel()
+                release.join()
+        self.assertEqual(node["status"], "SUCCESS")
+        self.assertGreater(node["lock_wait_seconds"], .3)
+
+    def test_notice_lock_symlink_is_refused_before_child_start(self):
+        target = self.base / "outside-lock"
+        target.write_bytes(b"preserve")
+        (self.root / ".notices.lock").symlink_to(target)
+        task = orchestration.Task("NOTICE", self.task("NOTICE").argv, shared_lock=".notices.lock")
+        node = self.nodes(self.run_tasks((task,)))["NOTICE"]
+        self.assertEqual(node["status"], "FAILED")
+        self.assertFalse((self.root / "NOTICE.ran").exists())
+        self.assertEqual(target.read_bytes(), b"preserve")
+
+    def test_notice_lock_metadata_is_explicit_but_plan_does_not_open_it(self):
+        tasks = orchestration.forward_tasks()
+        locked = {t.name for t in tasks if t.shared_lock}
+        self.assertEqual(locked, {"REC_NOTICES", "R268", "R270", "R272"})
+        plan = orchestration.plan(tasks, self.root)
+        for node in plan["tasks"]:
+            if node["name"] in locked:
+                self.assertEqual(node["shared_lock"], {"path": ".notices.lock", "wait_seconds": 300})
+        self.assertFalse((self.root / ".notices.lock").exists())
+
+    def test_invalid_lock_paths_and_waits_rejected_before_outputs(self):
+        for path, wait in (("../outside.lock", 1), ("/tmp/lock", 1), (".notices.lock", -1),
+                           (".notices.lock", float("inf"))):
+            with self.subTest(path=path, wait=wait), self.assertRaises(ValueError):
+                self.run_tasks((orchestration.Task("A", self.task("A").argv, shared_lock=path, lock_wait=wait),))
+        self.assertFalse(self.state.exists())
 
     def test_missing_and_changed_static_input_block_its_task_only(self):
         path = self.root / "seed"
@@ -295,15 +378,24 @@ class ForwardOrchestratorTests(unittest.TestCase):
     def test_graph_commands_order_and_timeouts_match_the_actual_shell_wrapper(self):
         shell = orchestration.ROOT / "scripts/forward_all.sh"
         actual = []
+        locks = {}
         for line in shell.read_text().splitlines():
             words = shlex.split(line, comments=True)
+            lock = None
+            if words[:2] == ["flock", "-w"]:                  # lanes that read the notice catalogs hold its lock
+                lock = {"path": words[3], "wait_seconds": float(words[2])}
+                words = words[4:]
             if words and words[0] == "timeout":
                 self.assertGreaterEqual(len(words), 4)
                 self.assertEqual(words[2], "$PY")
                 actual.append((words[3], float(words[1])))
+                locks[words[3]] = lock
         self.assertTrue(actual)
         proposed = [(t.argv[1], t.timeout) for t in orchestration.ordered_tasks(orchestration.forward_tasks())]
         self.assertEqual(proposed, actual)
+        for task in orchestration.forward_tasks():
+            expected = {"path": task.shared_lock, "wait_seconds": task.lock_wait} if task.shared_lock else None
+            self.assertEqual(expected, locks[task.argv[1]])
 
 
 if __name__ == "__main__":

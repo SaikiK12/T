@@ -112,22 +112,79 @@ def klines_cached(symbol, start, end, kind=""):
     return have[(have.t >= start) & (have.t < end)].reset_index(drop=True)
 
 
-def funding_history(symbol, start, end):
-    """Settled funding in [start, end): DataFrame t (settlement time floored to the hour, ms), rate, cycle_h."""
-    out, page = [], 1
+def funding_history(symbol, start, end, *, max_pages=1000):
+    """Settled funding in [start, end), preserving the legacy hourly timestamp convention.
+
+    Validate public pagination rather than silently treating missing metadata or stalled pages as complete history.
+    Documentation: https://mexcdevelop.github.io/apidocs/contract_v1_en/#get-contract-funding-rate-history
+    Valid page retrieval does not prove all expected settlements exist. No cache is read or rewritten here.
+    """
+    if isinstance(max_pages, bool) or not isinstance(max_pages, int) or max_pages < 1:
+        raise ValueError("max_pages must be a positive integer")
+    empty = lambda: pd.DataFrame(columns=["t", "rate", "cycle_h"])
+    if start >= end:
+        return empty()
+    out, page, seen, oldest = [], 1, {}, None
     while True:
+        if page > max_pages:
+            raise MexcError(f"{symbol}: funding pagination exceeded max_pages={max_pages}")
         d = get("funding_rate/history", {"symbol": symbol, "page_num": page, "page_size": 1000})
-        rows = d.get("resultList") or []
-        out += rows
-        if not rows or page >= int(d.get("totalPage", 1)) or int(rows[-1]["settleTime"]) < start:
+        try:
+            if not isinstance(d, dict) or not isinstance(d.get("resultList"), list):
+                raise ValueError("missing resultList")
+            # Require the documented page identity; do not default missing metadata to a one-page history.
+            current, total = d["currentPage"], d["totalPage"]
+            if any(isinstance(v, bool) or str(v) != str(int(v)) for v in (current, total)):
+                raise ValueError("non-integer pagination")
+            current, total = int(current), int(total)
+            rows = d["resultList"]
+            if current != page or total < 0 or (rows and total < page):
+                raise ValueError("inconsistent page identity")
+            if not rows:
+                if page != 1 or total > 1:
+                    raise ValueError("empty page contradicts pagination")
+                break
+            times, new = [], []
+            for row in rows:
+                if row.get("symbol", symbol) != symbol:
+                    raise ValueError("settlement symbol mismatch")
+                raw_t = row["settleTime"]
+                if isinstance(raw_t, bool) or str(raw_t) != str(int(raw_t)) or int(raw_t) < 0:
+                    raise ValueError("invalid settlement timestamp")
+                t, rate, cycle = int(raw_t), float(row["fundingRate"]), row.get("collectCycle")
+                if isinstance(row["fundingRate"], bool) or not np.isfinite(rate):
+                    raise ValueError("nonfinite funding rate")
+                if cycle is not None and (isinstance(cycle, bool) or not np.isfinite(float(cycle)) or float(cycle) <= 0):
+                    raise ValueError("invalid settlement cycle")
+                value = (rate, cycle)
+                if t in seen:
+                    if seen[t] != value:
+                        raise ValueError("conflicting duplicate settlement")
+                else:
+                    if oldest is not None and t > oldest:
+                        raise ValueError("page moves forward in time")
+                    seen[t] = value
+                    new.append(row)
+                times.append(t)
+            if any(a < b for a, b in zip(times, times[1:])):
+                raise ValueError("settlements not in descending time order")
+            if not new:
+                raise ValueError("pagination repeated without progress")
+        except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as e:
+            raise MexcError(f"{symbol}: invalid funding page {page}: {e}") from e
+        out += new
+        oldest = min(times)
+        if page == total or oldest < start:
             break
         page += 1
     if not out:
-        return pd.DataFrame(columns=["t", "rate", "cycle_h"])
+        return empty()
     df = pd.DataFrame({"t": np.asarray([r["settleTime"] for r in out], np.int64) // HOUR * HOUR,
                        "rate": [float(r["fundingRate"]) for r in out],
                        "cycle_h": [r.get("collectCycle") for r in out]})
-    return df[(df.t >= start) & (df.t < end)].drop_duplicates("t").sort_values("t").reset_index(drop=True)
+    if df.t.duplicated().any():
+        raise MexcError(f"{symbol}: distinct settlements collapse into the same legacy hourly timestamp")
+    return df[(df.t >= start) & (df.t < end)].sort_values("t").reset_index(drop=True)
 
 
 def spot_usdt():

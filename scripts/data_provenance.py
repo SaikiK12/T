@@ -44,9 +44,12 @@ def main():
     ap.add_argument("--source", default="")
     ap.add_argument("--script", default="")
     ap.add_argument("--hourly", nargs="*", default=None, help="subfolders holding hourly parquet (default: *_1h)")
+    ap.add_argument("--exclude", nargs="*", default=[], help="subfolders left out of the record (say where their own "
+                    "checksums are, in --source)")
     a = ap.parse_args()
     folder = Path(a.folder).resolve()
-    files = sorted(p for p in folder.rglob("*") if p.is_file())
+    skip = tuple(x.rstrip("/") + "/" for x in a.exclude)
+    files = sorted(p for p in folder.rglob("*") if p.is_file() and not p.relative_to(folder).as_posix().startswith(skip))
     rows, combined, cov = [], hashlib.sha256(), {}
     for p in files:
         rel = p.relative_to(folder).as_posix()
@@ -54,7 +57,9 @@ def main():
         rows.append({"path": rel, "bytes": p.stat().st_size, "sha256": d})
         combined.update(f"{rel}\t{d}\n".encode())
         sub = rel.split("/")[0] if "/" in rel else ""
-        hourly = sub in a.hourly if a.hourly is not None else sub.endswith("_1h")
+        if a.hourly is not None:                       # a named subfolder may be nested: open/candlesticks_1h
+            sub = next((h for h in a.hourly if (rel.startswith(h.rstrip("/") + "/") if h else "/" not in rel)), None)
+        hourly = sub is not None and (a.hourly is not None or sub.endswith("_1h"))
         if hourly and p.suffix == ".parquet":
             c = coverage(p)
             if c is not None:
@@ -74,7 +79,7 @@ def main():
                         "first": min((x["first"] for x in v if "first" in x), default=None),
                         "last": max((x["last"] for x in v if "last" in x), default=None)}
     out = {"folder": folder.relative_to(ROOT).as_posix(), "source": a.source, "script": a.script,
-           "recorded_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "files": len(rows),
+           "recorded_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "excluded": a.exclude, "files": len(rows),
            "bytes": sum(r["bytes"] for r in rows), "combined_sha256": combined.hexdigest(),
            "subfolders": per_sub, "hourly_coverage": summary, "coverage": cov, "file_hashes": rows}
     dest = ROOT / "docs" / "provenance" / f"{folder.name}.json"
