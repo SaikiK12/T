@@ -101,7 +101,7 @@ def main():
             S = pd.DataFrame({s: per[s][rule].reindex(cal, method="ffill") for s in syms})   # holidays carry state
             name = f"{rule}/{g}"
             books = {cm: book(S, R, cm) for cm in (1.0, 2.0, 3.0)}
-            first = books[1.0][4].abs().sum(axis=1).values.argmax()
+            first = int((books[1.0][4].abs().sum(axis=1).values > 0).argmax())   # first nonzero position
             passed = True
             for w, a, b in WINDOWS:
                 if not passed:

@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R246. Program trials: 9,471,965. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-20, after R247. Program trials: 9,471,979. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -63,6 +63,7 @@ overstatements are corrected here.
 | **BTC weekend move to US equities** (queue M198) | Correlation +0.46 with the QQQ opening gap (priced), +0.07 with the session; rule t -0.14 (R244) | Not read | 2 bp per trade | ETFs, not MEXC | none | NULL |
 | **Reversal by liquidity tercile** (1 d and 7 d; queue M008/M181) | 1 d books -13.6 to -17.5 bp/day (cost 9-12); 7 d illiquid 0.0, liquid -6.2 (R245) | Not read | A 24 h hold costs more than any gross | Same coins on MEXC | none | NULL |
 | **ICT levels** (round-number crosses and rejections, SMT divergence vs BTC, 8 AM New York range; queue M010-M012) | All 8 fail discovery; SMT fade 24 h +2.0 bp/day (gross +11.3), t 0.29; round-number books -40 to -85 (R246) | Not read | Round-number books cost 31-67 bp/day; none positive at 2x | Same coins on MEXC | none | NULL; post-hoc round-vs-shifted-grid reversal (t -3.30) queued as M230 |
+| **Chart rules on forex and world indices** (R243's seven rules, daily, 11 FX pairs and 10 indices; queue M210/M200/M202/M203) | All 14 fail discovery 2001-12; best CCI fade on indices alpha +1.5 bp/day, t 1.50; FX nothing above t 1; pivot breaks lose (FX t -2.49, indices t -4.16) (R247) | 2013-2026 not read | Costs 0.1-0.8 bp/day; CFD spreads would be 2-5x | FX and index CFDs at prop firms, not MEXC | none | NULL; pivot fade queued as M231 |
 | **Variance risk premium, S&P 500** (measurement; queue M215) | VIX² minus next-month realised variance: +116 %², t 2.55; validation +70, t 5.71 (R239) | Holdout +82, t 1.11 (2020 loss) | Not tradeable with free data before 2011 | not on MEXC | none | Measured, not a book; short-vol lane M224 |
 | **Gate signal, liquidation fade, carry-crash, VRP, Coinbase premium, intraday momentum, daily stop rules** | Liquidation fade h12 t -1.96 (R206). Carry crash reversed, t -2.06 (R207). VRP t 1.06 (R209). Coinbase premium t 0.34 (R210). Intraday momentum net negative (R203). Stops harmful (R208) | VRP +1.1 bp/day, t 0.12; Coinbase premium t 0.88; carry crash -3.0%. The Gate signal's window (t 1.43, vs 2.08 for Binance's own signal on the same coins) lies inside the spent flow holdout (R205) | — | — | none | NULL (stops: HARMFUL) |
 | **Unlock short** (original project, R180/R181) | Top tercile +5.84%, n 138, t 4.06 (R181) | Forward tickets armed 2026-10-12 (R180); first score 2026-10-20 | not reported | not stated | lives in the original project; **not in this repo** | Promising in-sample; cannot be checked here |

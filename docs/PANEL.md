@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 07:16 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-20 07:19 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -22,10 +22,10 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | stage | now |
 |---|---|
 | Ideas in the queue, untested | 37 |
-| Ideas partly tested | 30 |
+| Ideas partly tested | 31 |
 | Ideas blocked (data, download, compute) | 74 |
-| Rounds in the registry | 68 (NULL 45, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
-| Program trials | 9,471,965 |
+| Rounds in the registry | 69 (NULL 46, PENDING 11, CONFIRMED 7, PARTIAL 3, DATA_PASS 2) |
+| Program trials | 9,471,979 |
 | Forward paper lanes running | 8 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -79,7 +79,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R239 | fxindex_v1 | DONE | NULL | 7 |
 | R240 | posimpulse_v2 | DONE | NULL | 2 |
 | R241 | volrisk_v1 | DONE | NULL | 3 |
 | R242 | tsbattery_v1 | DONE | NULL | 4 |
@@ -87,5 +86,6 @@ Processing lag of on-time hours: 6 hours, median 109.88333333333333 min, max 259
 | R244 | weekendlink_v1 | DONE | NULL | 2 |
 | R245 | xsrev_v1 | DONE | NULL | 4 |
 | R246 | ictlevels_v1 | DONE | NULL | 8 |
+| R247 | chartxm_v1 | DONE | NULL | 14 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

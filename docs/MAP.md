@@ -295,6 +295,15 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Post hoc: closes through round numbers reverse 10.8 bp/day more than closes through a half-step-shifted grid
     (t -3.30, every year). This is queued as M230 with a pre-registered control.
   - NULL. [Findings](../experiments/ictlevels_v1/FINDINGS.md).
+- **R247 (chartxm_v1)** ran R243's seven chart rules on daily bars of 11 forex pairs and 10 world equity indices,
+  14 trials, discovery 2001-12.
+  - Nothing passed.
+  - On indices, the fades and trend rules were mildly positive (best CCI fade, alpha t 1.50). On forex, nothing
+    reached t 1.
+  - Pivot breakouts lost in both groups (forex t -2.49, indices t -4.16), as on crypto in R243. Their mirror, a pivot
+    fade, is queued as M231, with the 2013-19 decade as its first unseen window.
+  - A start-day bug in the first run was fixed to the PREREG text and disclosed; no verdict changed.
+  - NULL. [Findings](../experiments/chartxm_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -400,6 +409,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,471,965 after R246 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,471,979 after R247 (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
