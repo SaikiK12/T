@@ -38,6 +38,8 @@ class Rules:
     activation: float = 0.0              # USD paid on passing, before funded trading
     payout_share: float = 1.0            # share of the profit above the initial balance withdrawn at a payout
     payout_cap: float = float("inf")     # USD cap on each withdrawal request, before the split
+    payout_min: float = 0.0              # USD minimum gross withdrawal request, before split/fees; 0 disables
+    payout_profit_required: float = 0.0  # USD earned since the last successful payout; 0 disables, first is exempt
     floor_after_payout: float = float("nan")  # equity floor (units of the initial balance) once one payout is made
     payout_deny: float = 0.0             # chance a payout request is refused and the account closed unpaid
     source: str = "illustrative"
@@ -73,9 +75,12 @@ PRESETS = {
     # (50K Standard path; 3,000 on the Consistency path); after the first payout the loss limit resets to the starting
     # balance. The payout condition is 5 winning days of USD 150+, restarting after each request; payout_days=14
     # approximates it.
+    # Minimum gross request is USD 125: topstep.com/instant-payouts FAQ calls it a "payout request";
+    # help.topstep.com/en/articles/8284233-topstep-payout-policy distinguishes the request from net cash received.
     "topstep_50k": Rules("topstep_50k", 50_000, 49, targets=(0.06,), daily_loss=0.0, max_dd=0.04,
                          dd_mode="trailing_lock", trail_eod=True, consistency=0.55, split=0.9, payout_days=14,
-                         activation=149, payout_share=0.5, payout_cap=2_000,
+                         activation=149, payout_share=0.5, payout_cap=2_000, payout_min=125,
+                         payout_profit_required=0.01,
                          floor_after_payout=1.0, source="help.topstep.com (rules), third-party (prices)"),
     "illustrative_2step": Rules("illustrative_2step", 100_000, 500, targets=(0.08, 0.05), daily_loss=0.05,
                                 max_dd=0.10, split=0.8, refund_fee=True),
@@ -190,13 +195,18 @@ def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, ste
 def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
     """USD paid to the trader over `days` funded days. At each payout date, if equity is above the initial balance,
     payout_share of that profit (each request capped at payout_cap USD before the split) is withdrawn and split; the rest
-    stays as cushion and the trailing peak restarts from the new balance. A loss carries over. With probability
-    payout_deny a request is refused and the account closed unpaid. Once one payout is made, the floor rises to
+    stays as cushion and the trailing peak restarts from the new balance. A loss carries over. When
+    payout_profit_required > 0, later payouts require that much new USD profit relative to the balance immediately
+    after the last successful withdrawal. The first payout is exempt; rejected cycles do not reset that reference.
+    A request below payout_min USD is not made: neither money nor the payout reference/floor changes. The minimum
+    applies before the profit split and any bank fees. With probability payout_deny an eligible request is refused
+    and the account closed unpaid. Once one payout is made, the floor rises to
     floor_after_payout when that is set. A broken rule ends the account."""
     total = np.zeros(n)
     alive = np.ones(n, bool)
     paid = np.zeros(n, bool)
     eq, peak = np.ones(n), np.ones(n)
+    last_payout_balance = np.ones(n)
     cycle = rules.payout_days
     cap = rules.payout_cap / rules.account
     after = rules.floor_after_payout
@@ -209,13 +219,21 @@ def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
         alive = alive & o.extra["alive"]
         eq, peak = o.extra["equity"], o.extra["peak"]
         win = alive & (eq > 1)
+        if rules.payout_profit_required > 0:
+            # USD tolerance is far below one cent and absorbs normalized-equity rounding.
+            new_profit = (eq - last_payout_balance) * rules.account
+            win &= ~paid | (new_profit >= rules.payout_profit_required - 1e-8)
+        request = np.minimum(rules.payout_share * (eq - 1), cap)
+        if rules.payout_min > 0:
+            win &= request * rules.account >= rules.payout_min - 1e-8
         if rules.payout_deny > 0:
             denied = win & (rng.random(n) < rules.payout_deny)
             alive &= ~denied
             win &= ~denied
-        out = np.where(win, np.minimum(rules.payout_share * (eq - 1), cap), 0.0)
+        out = np.where(win, request, 0.0)
         total += out * rules.split * rules.account
         eq = eq - out
+        last_payout_balance = np.where(win, eq, last_payout_balance)
         peak = np.where(win, eq, peak)
         paid |= win
     return total

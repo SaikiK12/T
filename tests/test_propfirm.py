@@ -1,4 +1,6 @@
 import unittest
+from dataclasses import replace
+from unittest import mock
 
 import numpy as np
 
@@ -101,6 +103,69 @@ class PropFirmTests(unittest.TestCase):
         free = self.funded(r, n=2000)
         locked = self.funded(r, n=2000, floor_after_payout=1.0)
         self.assertLess(locked.mean(), free.mean())
+
+
+    def topstep_cycle_payout(self, cycles, **changes):
+        rules = replace(pf.PRESETS["topstep_50k"], **changes)
+        paths = [np.asarray(cycle, float)[None, :] / rules.account for cycle in cycles]
+        self.assertTrue(all(len(cycle) == rules.payout_days for cycle in cycles))
+        with mock.patch.object(pf, "bootstrap", side_effect=paths):
+            return pf.funded_payouts(np.zeros(sum(map(len, cycles))), rules, 1.0, 1,
+                                     sum(map(len, cycles)), 1, 1, np.random.default_rng(6))[0]
+
+    def test_topstep_retained_cushion_does_not_qualify_after_a_losing_cycle(self):
+        first = [4000 / 14] * 14
+        losing = [150] * 5 + [-1250] + [0] * 8  # five winning days, but net -500
+        # First gross request 2000, trader 1800, cushion 2000. The next balance
+        # is 1500: no new profit since that payout, so no additional 675 is due.
+        self.assertAlmostEqual(self.topstep_cycle_payout([first, losing]), 1800, places=6)
+
+    def test_topstep_profit_reference_survives_loss_and_partial_recovery(self):
+        first = [4000 / 14] * 14
+        losing = [150] * 5 + [-1250] + [0] * 8
+        partial_recovery = [150] * 5 + [-350] + [0] * 8
+        # Cushion path: 2000 -> 1500 -> 1900. The positive third cycle still
+        # has not recovered the balance left after the last successful payout.
+        self.assertAlmostEqual(self.topstep_cycle_payout([first, losing, partial_recovery]),
+                               1800, places=6)
+        recovered = [150] * 5 + [-649.99] + [0] * 8
+        # Final cushion 2000.01: first newly eligible request is 1000.005.
+        self.assertAlmostEqual(self.topstep_cycle_payout([first, losing, partial_recovery, recovered]),
+                               1800 + 0.9 * 1000.005, places=6)
+
+    def test_first_payout_is_exempt_from_the_new_profit_threshold(self):
+        # A deliberately high threshold isolates the first-request exemption.
+        first = [4000 / 14] * 14
+        later = [1000 / 14] * 14
+        self.assertAlmostEqual(self.topstep_cycle_payout([first, later], payout_profit_required=10000),
+                               1800, places=6)
+
+    def test_topstep_minimum_is_gross_and_includes_125(self):
+        for profit, expected in ((250, 112.50), (249.98, 0.0)):
+            with self.subTest(profit=profit):
+                # Five winning days; subsequent losses leave a gross request of 125 or 124.99.
+                cycle = [150] * 5 + [profit - 750] + [0] * 8
+                self.assertAlmostEqual(self.topstep_cycle_payout([cycle]), expected, places=6)
+
+    def test_under_minimum_request_neither_withdraws_balance_nor_arms_floor(self):
+        below = [150] * 5 + [-500.02] + [0] * 8  # +249.98, request 124.99 rejected
+        two_cents = [0.02] + [0] * 13
+        self.assertAlmostEqual(self.topstep_cycle_payout([below, two_cents]), 112.50, places=6)
+        # An invalid first request must not activate the post-payout zero-loss floor.
+        # +200 -> -100 -> +900 remains above the original trailing floor throughout.
+        small = [150] * 5 + [-550] + [0] * 8
+        loss = [-300] + [0] * 13
+        recovery = [200] * 5 + [0] * 9
+        self.assertAlmostEqual(self.topstep_cycle_payout([small, loss, recovery]), 405, places=6)
+
+    def test_under_minimum_request_preserves_last_successful_profit_reference(self):
+        first = [150] * 5 + [-500] + [0] * 8  # request 125, retain 125
+        below = [150] * 5 + [-625.02] + [0] * 8  # +124.98: balance 249.98, request 124.99
+        final = [150] * 5 + [-749.98] + [0] * 8  # +0.02: balance 250, valid request 125
+        # Artificial USD 100 new-profit threshold isolates reference retention: the
+        # final gain is 125 since the successful payout, but only .02 since the rejected request.
+        self.assertAlmostEqual(self.topstep_cycle_payout([first, below, final], payout_profit_required=100),
+                               225, places=6)
 
 if __name__ == "__main__":
     unittest.main()
