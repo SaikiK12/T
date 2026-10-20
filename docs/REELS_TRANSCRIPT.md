@@ -130,3 +130,18 @@ the supplement; original HTML was not archived. Full rules, eligibility, control
 before any new strategy outcome.
 
 These three distinct scopes are retained as BLOCKED canonical rows M280 (margin notices), M281 (tick-size execution) and M282 (funding-notice venue transport). Trigger/rejection controls and index-state variants retain existing parent relationships; no study was run.
+
+## Strategy-library and data-source follow-up
+
+The existing provider catalog now includes ten additional entrypoints: QuantConnect's strategy library, Research
+and Tutorials repositories; QuantInsti Blueshift demos; Financial Hacker; QuantStart; Robot Wealth; Open Source
+Asset Pricing; Kenneth French's factor library; and QuantPad. Catalog access is not full strategy extraction.
+Public examples, subscription workspaces and derived factor data have different reuse/data-access boundaries.
+QuantStart's direct pages returned 502; its scope remains indexed metadata. QuantPad's official site establishes
+platform capabilities and a subscription library, not possession of that library or verified MEXC coverage.
+
+One [pinned official Dynamic Breakout II Method](https://github.com/QuantConnect/Tutorials/blob/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy/02%20Method.html)
+was read separately: adaptive 20–60-day lookback, channel plus Bollinger confirmation, moving-average exit. It is
+retained as M283 with source commit/blob/hash. Prose says 30-day volatility while the snippet uses the adaptive
+window from 31 requested observations; full indicator updates, sizing and execution were not received. This is
+a BLOCKED composite lead, not a tested rule or a replication of an existing fixed-window indicator result.
