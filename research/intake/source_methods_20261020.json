@@ -2,15 +2,16 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-20",
-  "coverage_summary": "23 CLAIMS rows, all8ALTCOIN rows,3Quantpedia mechanisms and9coverage open rows mapped; full received CONCEPTS(88lines) and SOURCES(315lines) notes mapped with aliases and five book-takeaway groups. Full books/papers and all repository text are not claimed ingested.",
+  "coverage_summary": "The original 164 CLAIMS, ALTCOIN_LEADS, CONCEPTS, SOURCES, Quantpedia and coverage-note records remain intact. A 37-record supplement maps the two earlier Instagram reels, three owner-provided TikToks, and 12 additional public videos (17 media sources total) to the existing queue or new rows M234-M246. No full books/papers, exhaustive internet survey or video profitability is claimed.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
     "Weak ICT/SMT,disputed flow,and under-specified ideas remain visible; source conflicts such as ALT01 minus-sign vsR219 plus-sign are retained.",
     "Study/idea counts are not measured-market trial counts; historical date reuse and survivor selection remain material.",
-    "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle."
+    "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
+    "Video intake is limited to publicly accessible creator captions, official transcripts/recaps, or indexed descriptions; several sources have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of explicitly listed sources/sections,not a claim that all repository text or all internet methods have been exhausted. Idea counts are not market trial counts.",
+  "scope_notice": "Manual catalog of the explicitly received documents and 17 reviewed public video sources, not an exhaustive account of internet methods. Every media lead preserves its tested/open scope and source type; source counts are not measured-market trials.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -492,7 +493,32 @@
       "R230-WEEKLY96",
       "R231-PARTIAL-EXECUTION",
       "R232-REBALANCE-CADENCE"
-    ]
+    ],
+    "supplemental_video_intake_20261020": {
+      "media_sources": 17,
+      "records_added": 37,
+      "queue_rows_added": [
+        "M234",
+        "M235",
+        "M236",
+        "M237",
+        "M238",
+        "M239",
+        "M240",
+        "M241",
+        "M242",
+        "M243",
+        "M244",
+        "M245",
+        "M246"
+      ],
+      "method_scope": "Two earlier Instagram reels; three owner-provided TikToks; three options/GEX videos; five crypto trading videos; Hummingbot Botcamp Cohort 7 recap; Hummingbot Bot Pod episodes 7 and 8; one prop-firm video.",
+      "limits": [
+        "Captions/official transcripts/recaps/descriptions are labeled per source in docs/REELS_TRANSCRIPT.md.",
+        "No raw media or market data was downloaded or committed.",
+        "No video claim establishes an edge."
+      ]
+    }
   },
   "methods": [
     {
@@ -5840,6 +5866,1296 @@
         "R232"
       ],
       "limitations": "Exact study files now exist on the reconciliation base. Previously viewed historical dates, six surviving spot coins and source/adaptation boundaries still apply; no live edge is implied."
+    },
+    {
+      "id": "IG26-01-ENGINE-PARITY",
+      "parent_claim_id": "IG26-01",
+      "title": "Backtest-to-live strategy logic parity with deterministic event replay",
+      "method_type": "methodology",
+      "hypothesis": "The historical, paper and live stages should execute identical signal/state logic, with differences attributable to feeds/fills rather than duplicated implementations.",
+      "testable_rule": "Replay one frozen strategy through the same event-driven code path for historical bars/trades and paper/live feeds; compare signals, orders, state transitions and accounting.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No exact parity fixture, target lane, event-level feed or discrepancy tolerance is specified.",
+      "status": "untested",
+      "required_inputs": [
+        "Versioned strategy code, event data, order/fill logs and expected deterministic state."
+      ],
+      "blockers": [
+        "No finite equivalence criteria or selected strategy is named."
+      ],
+      "next_action": "Use M029/M088 as related checks; freeze one strategy, input slice, expected outputs and tolerances before comparison.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Instagram @git.radar: NautilusTrader engine claim"
+        },
+        {
+          "path": "https://www.instagram.com/reel/DcOhWbqm3vK/",
+          "label": "Instagram @git.radar: NautilusTrader engine claim"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DcOhWbqm3vK/",
+          "label": "Instagram @git.radar: NautilusTrader engine claim"
+        }
+      ]
+    },
+    {
+      "id": "IG26-02-TOOL-STACK",
+      "parent_claim_id": "IG26-02",
+      "title": "Six-role trading-tool stack inferred from a title card",
+      "method_type": "methodology",
+      "hypothesis": "The reel title claims several repository tools can cover hedge-fund-like functions on a laptop.",
+      "testable_rule": "The media names no repositories; six roles and likely products were inferred from frames/other notes, not spoken or captioned.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No independently named tool, system boundary, strategy, data source or execution rule exists in this clip.",
+      "status": "untested",
+      "required_inputs": [
+        "Exact tool names/source list from the creator if available."
+      ],
+      "blockers": [
+        "Source media contains no speech and does not identify the repositories."
+      ],
+      "next_action": "Keep as contextual lead only; do not turn inferred repo identities into a strategy or evidence claim.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Instagram @iclosegreen: six-repository title card"
+        },
+        {
+          "path": "https://www.instagram.com/reel/DcgZhLyiZ3o/",
+          "label": "Instagram @iclosegreen: six-repository title card"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DcgZhLyiZ3o/",
+          "label": "Instagram @iclosegreen: six-repository title card"
+        }
+      ]
+    },
+    {
+      "id": "TT26-01-GEX715-CLAIM",
+      "parent_claim_id": "TT26-01",
+      "title": "QQQ “GEX 715” level trade claim, title only",
+      "method_type": "strategy",
+      "hypothesis": "A named GEX level may be used to frame a QQQ intraday trade.",
+      "testable_rule": "The title claims a 100-point result from “GEX 715”; no entry direction or trigger is exposed in the public caption.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Level construction, GEX vendor/sign, timestamp, underlying/contract, entry, exit, risk and units are unknown.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time GEX/option surface and the creator’s exact trade specification."
+      ],
+      "blockers": [
+        "Public speech-caption track was not available; only title/caption was inspected."
+      ],
+      "next_action": "Retain as a weak source lead related to the later GEX-retest composite; do not count “100 points” as evidence.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, 2026-08-06 title/caption"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7670945661621128470",
+          "label": "TikTok @aleks_rosme, 2026-08-06 title/caption"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7670945661621128470",
+          "label": "TikTok @aleks_rosme, 2026-08-06 title/caption"
+        }
+      ]
+    },
+    {
+      "id": "TT26-02-IVSURFACE-RV",
+      "parent_claim_id": "TT26-02",
+      "title": "Relative implied-volatility value across strike/expiry surface",
+      "method_type": "strategy",
+      "hypothesis": "Options that are rich in implied volatility relative to matched alternatives may be sold while cheaper options are bought, with Greeks hedged.",
+      "testable_rule": "Construct a strike-by-expiry IV surface; identify relatively high-IV options to sell and relatively low-IV options to buy; use Greeks in pricing/hedging.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No matched delta/tenor, surface interpolation, richness threshold, vol model, hedge bands, rebalance, entry/exit or cost rule.",
+      "status": "blocked",
+      "required_inputs": [
+        "Historical option quotes/greeks by strike and expiry; executable multi-leg fills."
+      ],
+      "blockers": [
+        "Project has Deribit DVOL indices, not historical option chains or full volatility surfaces."
+      ],
+      "next_action": "Formalize the paired legs and executable hedge; distinguish this relative-value rule from DVOL-minus-realized-vol timing in M099/R209.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "TT26-02-GEX-IV-MODEL",
+      "parent_claim_id": "TT26-02",
+      "title": "Use implied-volatility surface and Greeks as option model inputs",
+      "method_type": "methodology",
+      "hypothesis": "An option model that uses a correctly built IV surface and Greeks may improve pricing and hedge calculations.",
+      "testable_rule": "Use expiry/strike IV surface and option Greeks to price and hedge derivatives; the video gives a 3D surface illustration.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No priced instrument, model, forecast target, option strategy or measurable decision rule is given.",
+      "status": "untested",
+      "required_inputs": [
+        "Point-in-time option quotes, IV surfaces and Greeks; specified pricing/hedging task."
+      ],
+      "blockers": [
+        "No option-surface history is held; no standalone testable alpha rule."
+      ],
+      "next_action": "Keep as modeling context related to M099; do not treat surface display or model complexity as alpha.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "TT26-03-QQQ-GEX-COMPOSITE",
+      "parent_claim_id": "TT26-03",
+      "title": "QQQ GEX-level reclaim/retest with options-flow and value-area confirmation",
+      "method_type": "strategy",
+      "hypothesis": "A QQQ GEX level reclaim/retest may be a long confirmation when option premium and order flow are bullish near daily value-area low; SPX gamma/put-spread context is also cited.",
+      "testable_rule": "In one narrated example, wait for QQQ to reclaim/retest 713 GEX; use call-heavy premium, bullish imbalance on the retest and daily value-area-low context; speaker also cites SPX negative gamma and a put-spread seller.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "GEX calculation/sign, “call-heavy” definition, imbalance clock/classification, VAL construction, exact contract/expiry, stop, target, size, fees and slippage are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time option trades/quotes/greeks and price levels; defined GEX model; intraday QQQ/SPX execution data."
+      ],
+      "blockers": [
+        "No option-chain/trade history or vendor-defined GEX data is held."
+      ],
+      "next_action": "Keep the composite plus each component as separate intake records; only freeze a finite strategy if all inputs and controls can be obtained.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "TT26-03-SPX-GAMMA-PUTSELLER-GATE",
+      "parent_claim_id": "TT26-03",
+      "title": "SPX negative-gamma and put-spread-seller context gate",
+      "method_type": "filter",
+      "hypothesis": "SPX gamma regime and a major put-spread-seller level may condition a separate QQQ trade.",
+      "testable_rule": "Use narrated SPX negative-gamma state plus respect of a major put-spread-seller level as context for the QQQ setup.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No gamma source/sign, spread-seller identification, threshold, persistence or conditional decision rule.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time SPX options positions/trades and a defined dealer-gamma estimator."
+      ],
+      "blockers": [
+        "Open interest alone does not identify who initiated or whether dealers are net long/short gamma."
+      ],
+      "next_action": "Treat as a component of M235 unless it can be operationalized independently with a valid point-in-time source.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/referencelibrary/faq/general-information",
+          "label": "OIC/OCC FAQ on the limitations of open interest"
+        },
+        {
+          "path": "https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0dte-options/",
+          "label": "Cboe sample-specific 0DTE impact analysis"
+        }
+      ]
+    },
+    {
+      "id": "TT26-03-CALL-PREMIUM",
+      "parent_claim_id": "TT26-03",
+      "title": "Call-heavy option premium as bullish confirmation",
+      "method_type": "feature",
+      "hypothesis": "Relatively call-heavy option premium may confirm a bullish underlying setup.",
+      "testable_rule": "Classify the observed premium as “call heavy” and require it as a bullish QQQ confirmation.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Premium metric, signed side, sweep/complex trade handling, size normalization and decision threshold are missing.",
+      "status": "blocked",
+      "required_inputs": [
+        "Timestamped options trades/quotes with trade-side classification and contract normalization."
+      ],
+      "blockers": [
+        "No historical option-trade tape is held; the caption does not define the metric."
+      ],
+      "next_action": "Keep as one component of M235; do not infer dealer direction from open interest alone.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/referencelibrary/faq/general-information",
+          "label": "OIC/OCC FAQ: OI does not identify the initiating side"
+        }
+      ]
+    },
+    {
+      "id": "TT26-03-ORDERFLOW-IMBALANCE",
+      "parent_claim_id": "TT26-03",
+      "title": "Bullish order-flow imbalance at GEX retest despite seller attempts",
+      "method_type": "feature",
+      "hypothesis": "Bullish imbalances at a level retest may confirm long entries despite visible sellers.",
+      "testable_rule": "At a QQQ 713 GEX retest, treat bullish order-flow imbalance as confirmation despite sellers attempting to enter.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Imbalance source, aggressor sign, aggregation window, threshold and fill timing are not defined.",
+      "status": "blocked",
+      "required_inputs": [
+        "Timestamped signed options or underlying trades and an executable retest price."
+      ],
+      "blockers": [
+        "The project has hourly taker-buy volume and coarse depth, not the video’s intraday order-flow labels."
+      ],
+      "next_action": "Keep as a component of M235; existing hourly M084/M116 data are not exact substitutes.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "TT26-03-DAILY-VAL",
+      "parent_claim_id": "TT26-03",
+      "title": "Daily value-area-low as a QQQ long setup confluence",
+      "method_type": "filter",
+      "hypothesis": "A retest near daily value-area low may increase the quality of a bullish level-reclaim setup.",
+      "testable_rule": "Use daily value-area-low alignment as one confirmation for the narrated QQQ GEX reclaim.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Value-area construction, source volume, fixed/session window and confluence threshold are absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Intraday trades/volume profile and timestamped price, plus fixed session specification."
+      ],
+      "blockers": [
+        "Hourly quote volume cannot reconstruct the source’s intraday profile exactly."
+      ],
+      "next_action": "Map as a component of M235 and a related use of M207; do not call it a tested standalone value-area strategy.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        },
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "label": "TikTok @aleks_rosme, creator-caption track, 2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "YT26-01-GEX-LEVEL-REACTION",
+      "parent_claim_id": "YT26-01",
+      "title": "Session highs/lows and GEX walls as reaction zones",
+      "method_type": "strategy",
+      "hypothesis": "Price reaction at prior-session and overnight extremes or GEX levels may structure an intraday trade.",
+      "testable_rule": "Use prior-session/Asia/London highs-lows plus Gamma Zero/Call Wall/Put Wall to define zones, then wait for a price reaction.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Level source, GEX methodology, session/clock, trigger, confirmation threshold and exit are unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time option surface/GEX and intraday underlying prices."
+      ],
+      "blockers": [
+        "No indexed full transcript was verified and no GEX history is held."
+      ],
+      "next_action": "Keep as a related component of the GEX strategies; do not infer outcome from chapter summaries.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Platícame Tu Trade, SPX 0DTE video, 2026-08-30"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE video, 2026-08-30"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE video, 2026-08-30"
+        }
+      ]
+    },
+    {
+      "id": "YT26-01-ORDERFLOW-CONFIRM",
+      "parent_claim_id": "YT26-01",
+      "title": "Large-trade, absorption, delta and profile confirmation at GEX levels",
+      "method_type": "feature",
+      "hypothesis": "Large trades, absorption, signed delta and volume-profile behavior may confirm a level reaction.",
+      "testable_rule": "Wait for order-flow confirmation using large trades, absorption, delta and volume-profile behavior after price reacts at a selected zone.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No flow classification, threshold, order/quote alignment or fixed exit rule.",
+      "status": "blocked",
+      "required_inputs": [
+        "Intraday trade/quote data with aggressor side, depth and exact level timestamps."
+      ],
+      "blockers": [
+        "No historical trade-level options or full-depth data are held."
+      ],
+      "next_action": "Map to M238/M084 as related confirmation inputs; no rule or results from the chapter summary.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Platícame Tu Trade, SPX 0DTE chapter summary"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE chapter summary"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE chapter summary"
+        }
+      ]
+    },
+    {
+      "id": "YT26-01-0DTE-SPREAD-SCALP",
+      "parent_claim_id": "YT26-01",
+      "title": "SPX 0DTE spread scalping at gamma levels",
+      "method_type": "strategy",
+      "hypothesis": "Breaking/pulling back through a gamma level or retesting Gamma Zero may support short-duration defined-risk option trades.",
+      "testable_rule": "Scalp SPX 0DTE spreads on break/pullback/continuation or Gamma Zero retests, using a selected level and flow confirmation.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Spread structure, expiry/strike selection, entry, stop, target, duration, size and costs are absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "SPX option chain/trades/greeks, intraday underlying prices and executable multi-leg quotes."
+      ],
+      "blockers": [
+        "No SPX 0DTE chain/tick history is held; MEXC altcoin perps do not have the same payoff."
+      ],
+      "next_action": "Freeze only after defining contract selection, fills, costs and risk; do not use the “100 points” anecdote as evidence.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Platícame Tu Trade, SPX 0DTE video"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE video"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "label": "Platícame Tu Trade, SPX 0DTE video"
+        }
+      ]
+    },
+    {
+      "id": "CBOE26-DISPERSION",
+      "parent_claim_id": "CBOE26",
+      "title": "Index-versus-components option dispersion construction",
+      "method_type": "portfolio_strategy",
+      "hypothesis": "Relative pricing of index and component options can express an implied-correlation/dispersion view.",
+      "testable_rule": "Cboe describes a long-dispersion construction as selling an ATM SPX straddle and buying ATM straddles on index components, with component weights; preserve those legs without relying on the label’s directional interpretation.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Basket selection/weights, maturity match, hedge, entry/correlation threshold, exit, rebalances, borrow and complete leg costs need a finite rule.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized SPX/component option chains, underlying weights and multi-leg execution/hedge data."
+      ],
+      "blockers": [
+        "No equity-index option chains or constituent option data are held; external surface data is not included."
+      ],
+      "next_action": "Keep the exact short-index/long-components legs and resolve direction/conditions before any registration.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Cboe video on volatility/dispersion/0DTE pricing plus official construction paper"
+        },
+        {
+          "path": "https://www.cboe.com/video/ldjz4jorjd/",
+          "label": "Cboe video on volatility/dispersion/0DTE pricing plus official construction paper"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://cdn.cboe.com/resources/indices/documents/Implied_Correlation-WhitePaper.pdf",
+          "label": "Cboe Implied Correlation White Paper"
+        },
+        {
+          "path": "https://www.cboe.com/video/ldjz4jorjd/",
+          "label": "Cboe video/editorial summary"
+        }
+      ]
+    },
+    {
+      "id": "YT26-02-GEX-OPTIONS-FLOW",
+      "parent_claim_id": "YT26-02",
+      "title": "Combine GEX walls/flip with option-flow direction",
+      "method_type": "strategy",
+      "hypothesis": "Intraday options flow may add directional information to a gamma-level framework.",
+      "testable_rule": "Read Call/Put Walls and Gamma Flip alongside options flow to infer intraday pressure.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "GEX vendor/position assumptions, flow-side classification, threshold, entry and risk are not supplied.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time option positions/quotes/trades and underlying execution data."
+      ],
+      "blockers": [
+        "No option chain or signed option-flow history is held; OI alone cannot label dealer positioning."
+      ],
+      "next_action": "Keep as a low-confidence related source for M235; the promotional description gives no test or track record.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TradeKnowlogy/Julián Arcila SPX/SPY 0DTE description"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=SkvitOO2Zog",
+          "label": "TradeKnowlogy/Julián Arcila SPX/SPY 0DTE description"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.optionseducation.org/referencelibrary/faq/general-information",
+          "label": "OIC/OCC FAQ on open interest"
+        },
+        {
+          "path": "https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0dte-options/",
+          "label": "Cboe sample-specific 0DTE analysis"
+        }
+      ]
+    },
+    {
+      "id": "YT26-03-XVENUE-FUNDING-SPREAD",
+      "parent_claim_id": "YT26-03",
+      "title": "Cross-exchange perpetual funding-rate differential carry",
+      "method_type": "strategy",
+      "hypothesis": "When funding differs enough across venues, short the higher-funding perp and long the lower-funding perp to hedge much of spot direction and collect the differential.",
+      "testable_rule": "Pair same-notional perps across venues; short the venue with higher funding and long the lower-funding venue after the spread exceeds a profitability hurdle.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Funding schedule alignment, threshold, instrument basis, hedge ratio, entry/exit/rebalance, legging, margin, transfer and all venue costs are unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time funding histories and synchronized price/depth, contract and margin data for both venues."
+      ],
+      "blockers": [
+        "The exact venue history/cost stack is not present in the current intake; no synchronized cross-venue book capture is cited."
+      ],
+      "next_action": "Use Hummingbot’s reference implementation as mechanics only; reconcile with M059’s tested/open scope before any new lane.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot funding-rate-arbitrage video"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=Ly8R5g3juxw",
+          "label": "Hummingbot funding-rate-arbitrage video"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://github.com/hummingbot/hummingbot/blob/master/scripts/v2_funding_rate_arb.py",
+          "label": "Hummingbot funding-rate-arbitrage script"
+        },
+        {
+          "path": "https://hummingbot.org/release-notes/1.27.0/",
+          "label": "Hummingbot release notes"
+        },
+        {
+          "path": "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+          "label": "MEXC public contract API docs"
+        }
+      ]
+    },
+    {
+      "id": "YT26-04-DATED-CASH-CARRY",
+      "parent_claim_id": "YT26-04",
+      "title": "Long-spot/short-dated-future cash-and-carry to expiry or basis convergence",
+      "method_type": "strategy",
+      "hypothesis": "A positive dated-futures basis may be harvested by holding matched spot and short future legs to convergence or rolling.",
+      "testable_rule": "Buy spot BTC and short an equal-sized dated future when basis is positive; close near expiry/convergence or roll the short into a later contract.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Minimum basis after all costs, hedge/contract sizing, entry time, exit convergence, roll timing, collateral and venue counterparty controls are unspecified.",
+      "status": "partial",
+      "required_inputs": [
+        "Matched spot and dated-futures OHLC/trades, settlement/index rules, fees, collateral and executable prices."
+      ],
+      "blockers": [
+        "Existing M170 is a dated-future basis sort trading matching USD-M perps; it is not this cash-and-carry. Matched alt spot history is incomplete."
+      ],
+      "next_action": "Treat as a separate dated-future cash-carry variant; define exact contract/settlement before adapting to available instruments.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Deribit dated-futures cash-and-carry video and official walkthrough"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=rp4dOTW2TNU",
+          "label": "Deribit dated-futures cash-and-carry video and official walkthrough"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://insights.deribit.com/education/cash-carry-live-trade-example/",
+          "label": "Deribit official cash-and-carry transcript"
+        }
+      ]
+    },
+    {
+      "id": "YT26-05-VARIABLE-CARRY",
+      "parent_claim_id": "YT26-05",
+      "title": "Variable-rate cash-and-carry using spot/perpetual hedge and funding",
+      "method_type": "strategy",
+      "hypothesis": "A spot/perpetual hedge may earn changing funding while retaining price hedge; exit if funding remains adverse.",
+      "testable_rule": "Long spot and short an equal-notional perpetual; monitor funding, close if it stays adverse, and optionally scale the short using collected funding while maintaining the spot hedge.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Adverse-funding persistence, position compounding, thresholds, exit/re-entry, costs, spot financing and collateral are not fully parameterized.",
+      "status": "partial",
+      "required_inputs": [
+        "Synchronized spot/perp/funding observations, hedge sizing and cost/collateral records."
+      ],
+      "blockers": [
+        "M134 tests trailing-72-hour funding above 20% APR and fixed-cost carry; it does not test this compounding/exit rule."
+      ],
+      "next_action": "Map to M134 as a variant; do not present the educational worked example as an edge.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Deribit variable-rate carry video and official walkthrough"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=BSWVZJ703Mg",
+          "label": "Deribit variable-rate carry video and official walkthrough"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://insights.deribit.com/education/variable-rate-cash-carry-live-trade-example/",
+          "label": "Deribit official variable-rate cash-and-carry transcript"
+        }
+      ]
+    },
+    {
+      "id": "YT26-06-FOOTPRINT-REVERSAL",
+      "parent_claim_id": "YT26-06",
+      "title": "Zone-retest reversal with footprint imbalance, absorption, initiation and CVD divergence",
+      "method_type": "strategy",
+      "hypothesis": "Order-flow confirmation after a price-zone retest may distinguish reversal entries from failed retests.",
+      "testable_rule": "At a key demand-zone retest, require at least 3:1 diagonal footprint imbalance, an absorption candle, initiation confirmation and CVD divergence before entering a reversal.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Source example is Tesla on 4-hour context; exact zone source, candle/imbalance math, timing, stop/target, hold and portability to crypto perps are unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Timestamped aggressor-signed trades and order-book/footprint data plus exact zone and fill model."
+      ],
+      "blockers": [
+        "The summarized transcript is secondary rather than a verified native caption; the project has no historical footprint/CVD tape."
+      ],
+      "next_action": "Keep this finite-looking but incomplete lead separate from M084 book OFI; test portability only after source text and data mechanics are checked.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "TradingLab video with secondary transcript summary"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=ljk9BovCSqI",
+          "label": "TradingLab video with secondary transcript summary"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://glasp.co/youtube/ljk9BovCSqI",
+          "label": "Secondary transcript summary; not primary evidence"
+        }
+      ]
+    },
+    {
+      "id": "YT26-07-LIQ-HEATMAP",
+      "parent_claim_id": "YT26-07",
+      "title": "Trade estimated liquidation heatmap zones as entries/exits",
+      "method_type": "strategy",
+      "hypothesis": "Estimated liquidation concentrations may identify prices where forced activity could provide entry/exit opportunities.",
+      "testable_rule": "Use a vendor liquidation heatmap to choose long/short entry or exit levels around estimated liquidation zones.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Heatmap construction, position inference, lead time, trigger, direction, stop, target and costs are unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time vendor methodology/output and executable price/flow history."
+      ],
+      "blockers": [
+        "No public historical liquidation-map feed is held or verified for MEXC; related actual/cascade proxies already have nulls."
+      ],
+      "next_action": "Retain as a weak vendor-method lead related to M069/M070/M140/M176; do not treat estimated clusters as known future liquidations.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Krypto Káy liquidation-heatmap video description"
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=F8YFm-xg5bs",
+          "label": "Krypto Káy liquidation-heatmap video description"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://www.youtube.com/watch?v=F8YFm-xg5bs",
+          "label": "Krypto Káy liquidation-heatmap video description"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-SPOT-PERP-CARRY",
+      "parent_claim_id": "HB24-C7",
+      "title": "Spot/perpetual carry when spot-futures price divergence appears",
+      "method_type": "strategy",
+      "hypothesis": "Matched spot/perpetual legs may capture basis convergence and positive funding.",
+      "testable_rule": "Buy spot and sell a matched futures/perpetual leg when price divergence appears; hold while basis/funding conditions are favorable.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "No basis threshold, funding condition, contract choice, hold/exit, costs or collateral rule in the recap.",
+      "status": "partial",
+      "required_inputs": [
+        "Matched spot/perp prices, funding, fees, margin and fills."
+      ],
+      "blockers": [
+        "M134 tests a funding-threshold rule and M047 a perp/spot premium rule; this demo does not specify either trigger."
+      ],
+      "next_action": "Map as related existing carry mechanics; exact demo mechanics need a frozen rule before any new test.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: spot/perp carry"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: spot/perp carry"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot official strategy recap"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-CS-MOMENTUM",
+      "parent_claim_id": "HB24-C7",
+      "title": "Rebalance into recent cross-sectional winners using short/long EMA controller",
+      "method_type": "strategy",
+      "hypothesis": "Recent performance rank and EMA regime may guide a periodically rebalanced winners portfolio.",
+      "testable_rule": "Rank assets by recent performance, rebalance to top performers, and use short- and long-term EMA controller state.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Universe, return horizon, number of assets, rebalance, EMA parameters, costs and benchmark are absent.",
+      "status": "partial",
+      "required_inputs": [
+        "Point-in-time cross-sectional universe, tradable prices, EMA inputs, turnover and costs."
+      ],
+      "blockers": [
+        "M034/M146/M147 test related momentum horizons/rotation; this exact EMA-controlled portfolio is not their frozen rule."
+      ],
+      "next_action": "Retain as a variant alias; do not retest without accounting for the already-read momentum family.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: cross-sectional momentum"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: cross-sectional momentum"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: cross-sectional momentum"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-LIQ-SNIPER",
+      "parent_claim_id": "HB24-C7",
+      "title": "Buy after significant liquidation events for a rebound",
+      "method_type": "strategy",
+      "hypothesis": "Large liquidation events may create temporary forced-flow dislocations followed by rebound.",
+      "testable_rule": "Listen for a “significant” crypto liquidation and place a buy to capture a rebound.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Significance/event source, direction for sell cascades, timing, entry, hold, stop, costs and event coverage are unspecified.",
+      "status": "partial",
+      "required_inputs": [
+        "Timestamped liquidation events and executable prices."
+      ],
+      "blockers": [
+        "M176/R255 use OI/wick proxies; direct event stream and source threshold are not the same rule."
+      ],
+      "next_action": "Keep as an event-trigger variant; check exact event-data availability before registration.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: liquidation sniper"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: liquidation sniper"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot official strategy recap"
+        },
+        {
+          "path": "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+          "label": "MEXC contract API market endpoints"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-MULTI-HORIZON",
+      "parent_claim_id": "HB24-C7",
+      "title": "Short-horizon reversion plus medium-horizon trend with inventory-aware sizing",
+      "method_type": "strategy",
+      "hypothesis": "A multi-horizon direction model may combine short reversion and medium trend while adjusting exposure for inventory.",
+      "testable_rule": "Estimate short-term reversion and medium-term trend using linear regression and moving averages; adjust positions while managing inventory.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Regression target/window, MA windows, signal weights, holding/entry rules, inventory bands, leverage and exit are not specified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Hourly/intraday returns, precise fitted features, portfolio state and cost model."
+      ],
+      "blockers": [
+        "Related trend/reversal combinations have been studied but do not freeze this feature, weighting or inventory rule."
+      ],
+      "next_action": "Keep as an unresolved composite; formalize its finite signal and compare with each component before measuring.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: multi-indicator directional"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: multi-indicator directional"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot official strategy recap"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-UNISWAP-RANGE-LP",
+      "parent_claim_id": "HB24-C7",
+      "title": "Uniswap V3 concentrated-liquidity range management",
+      "method_type": "strategy",
+      "hypothesis": "Fee income from in-range liquidity may offset impermanent loss if ranges are selected and rebalanced appropriately.",
+      "testable_rule": "Provide liquidity within a chosen Uniswap V3 price range, and rebalance when price leaves the range.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Token/pool selection, range width, fee-tier, rebalancing trigger, gas, hedge, fee share and IL accounting are absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time pool swaps/liquidity/fees, LP share, gas, token prices and rebalancing execution."
+      ],
+      "blockers": [
+        "No DEX pool or chain data are held; this is not the MEXC perp objective without a separate hedge."
+      ],
+      "next_action": "Retain as a DeFi LP method; require fee/IL/gas accounting before comparison with spot/perp alternatives.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Uniswap V3 range LP"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Uniswap V3 range LP"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Uniswap V3 range LP"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-AVELLANEDA-MM",
+      "parent_claim_id": "HB24-C7",
+      "title": "Avellaneda–Stoikov inventory-skewed market making",
+      "method_type": "strategy",
+      "hypothesis": "Inventory-aware reservation prices and dynamic spreads may control market-maker inventory risk.",
+      "testable_rule": "Shift reservation price based on current versus target inventory and adjust bid/ask spreads dynamically.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Arrival/intensity model, volatility, risk aversion, inventory caps, quote distance, queue/fill and costs are absent.",
+      "status": "partial",
+      "required_inputs": [
+        "Timestamped full book/trades and queue-position/fill/adverse-selection data."
+      ],
+      "blockers": [
+        "M058 already contains this market-making family, but no full-queue execution evidence is held."
+      ],
+      "next_action": "Map to existing M058; a method implementation is not evidence of profitable fills.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Avellaneda–Stoikov MM"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Avellaneda–Stoikov MM"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot official strategy recap"
+        },
+        {
+          "path": "https://doi.org/10.1080/14697680701381228",
+          "label": "Avellaneda and Stoikov 2008 paper"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-VWAP-SCALP",
+      "parent_claim_id": "HB24-C7",
+      "title": "VWAP deviation-band mean reversion with limit/DCA entries",
+      "method_type": "strategy",
+      "hypothesis": "Short-horizon deviations from VWAP may revert enough to cover limit execution and fees.",
+      "testable_rule": "Trade mean reversion at VWAP standard-deviation bands using limit orders and DCA-style entries/exits.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "VWAP window, band multiplier, trigger, DCA schedule, exit/stop, fees and adverse-selection model absent.",
+      "status": "partial",
+      "required_inputs": [
+        "Intraday price/volume profile and realistic limit-fill/queue data."
+      ],
+      "blockers": [
+        "M207 contains anchored VWAP/value-area variants but not this exact execution/DCA rule."
+      ],
+      "next_action": "Map as M207 variant; do not infer limit-fill feasibility from OHLC trade-through alone.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: VWAP scalping"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: VWAP scalping"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: VWAP scalping"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-CEX-DEX-XEMM",
+      "parent_claim_id": "HB24-C7",
+      "title": "Provide DEX liquidity while hedging inventory/impermanent loss on a CEX",
+      "method_type": "strategy",
+      "hypothesis": "A CEX hedge may reduce directional exposure from DEX liquidity provision while LP fees offset hedge and chain costs.",
+      "testable_rule": "Provide liquidity on a DEX and hedge resulting exposure or impermanent loss on a CEX.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Pool/range, hedge ratio, hedge timing, IL estimator, fees, funding, gas, bridge/settlement, rebalances and risk limits absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "DEX position/fee data, CEX depth/fills, chain costs and synchronized hedge accounting."
+      ],
+      "blockers": [
+        "No DEX liquidity or CEX/DEX tick-level data are in the project cache."
+      ],
+      "next_action": "Keep separate from plain Uniswap LP; freeze combined LP-and-hedge accounting before any evaluation.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: CEX/DEX XEMM"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: CEX/DEX XEMM"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: CEX/DEX XEMM"
+        }
+      ]
+    },
+    {
+      "id": "HB24-C7-BOLLINGER-PERP",
+      "parent_claim_id": "HB24-C7",
+      "title": "Volatility-filtered Bollinger-band perpetual mean reversion with DCA/triple barrier",
+      "method_type": "strategy",
+      "hypothesis": "Band extremes may revert in quieter regimes; leverage and exits must control liquidation and path risk.",
+      "testable_rule": "Use Bollinger-band edges for leveraged perpetual limit entries, avoid high-volatility periods, use DCA and triple-barrier exits.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Band lookback/deviation, high-volatility threshold, DCA tiers, leverage, barrier values, fill rule, funding and costs absent.",
+      "status": "partial",
+      "required_inputs": [
+        "Hourly/intraday prices, volatility, funding, leverage/margin tiers and realistic limit fills."
+      ],
+      "blockers": [
+        "M115/M200 test indicator families or signals, not this full band-filter/DCA/triple-barrier portfolio."
+      ],
+      "next_action": "Keep as a distinct strategy implementation variant; define fixed parameters and liquidation/cost paths before any test.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Bollinger perp reversion"
+        },
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Bollinger perp reversion"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "label": "Hummingbot Botcamp Cohort 7 official demo recap: Bollinger perp reversion"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP8-PERP-PERP-SPREAD",
+      "parent_claim_id": "HB26-EP8",
+      "title": "Cross-exchange perpetual market making from price and funding spreads",
+      "method_type": "strategy",
+      "hypothesis": "A matched long/short perp pair may earn funding differential and convergence when entry spread pays for entry costs.",
+      "testable_rule": "Scan venues for a long on one perp and short on another based on price spread plus funding; enter progressively if immediate leg costs are high.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Spread and funding thresholds, beta/contract matching, progressive-fill schedule, rebalance/close, partial fills and margin costs absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized perpetual order books, funding schedules, fills, contract specifications, collateral and fees."
+      ],
+      "blockers": [
+        "M059 covers cross-venue funding differential but not combined basis trigger or progressive entry; no historical venue book/queue data is held."
+      ],
+      "next_action": "Register only after the price/funding hurdle and legging mechanics are fully fixed; video reports an implementation, not an audited edge.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript, 2026-05-22"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript, 2026-05-22"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot transcript/highlights"
+        },
+        {
+          "path": "https://github.com/hummingbot/hummingbot/blob/master/scripts/v2_funding_rate_arb.py",
+          "label": "Hummingbot funding-rate-arbitrage script"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP8-TOUCH-MM",
+      "parent_claim_id": "HB26-EP8",
+      "title": "Stochastic-policy market making at the touch in fixed 300-second cycles",
+      "method_type": "strategy",
+      "hypothesis": "A precomputed inventory-aware quoting policy may reduce per-tick decision cost while controlling market-making risk.",
+      "testable_rule": "Precompute a stochastic policy and place/liquidate orders near the touch in 300-second cycles rather than recalculating every tick.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "The attributed paper/model, state/action space, intensity inputs, policy parameters, inventory constraints and realistic queue fills are not identified.",
+      "status": "partial",
+      "required_inputs": [
+        "Full-resolution book/trades, order arrival and queue/latency/fill data; exact model/policy source."
+      ],
+      "blockers": [
+        "M058 is the related market-making row; the transcript reports roughly flat demo P&L on small capital, not audited results."
+      ],
+      "next_action": "Keep as a market-making implementation variant; require queue-aware cost and P&L decomposition.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: market making at touch"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: market making at touch"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: market making at touch"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP8-PORTFOLIO-TP-SL",
+      "parent_claim_id": "HB26-EP8",
+      "title": "Portfolio-level market-maker TP/SL with held effective inventory",
+      "method_type": "risk_overlay",
+      "hypothesis": "A market maker may manage filled positions as an aggregate inventory and trigger global TP/SL at portfolio thresholds.",
+      "testable_rule": "Keep filled positions as effective inventory while a limit chaser continues; trigger global TP above a minimum inventory threshold and SL at a configured threshold.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Thresholds, loss accounting, open-profit mark, liquidation, position netting, cost allocation and adverse path rule are absent.",
+      "status": "untested",
+      "required_inputs": [
+        "Portfolio position/fill/mark data and fully specified loss/profit-trigger policy."
+      ],
+      "blockers": [
+        "This is risk/execution engineering rather than standalone alpha; no dedicated queue row is justified by the demo."
+      ],
+      "next_action": "Retain as context for M058/M131/M227; test only as a frozen overlay on an already defined book.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: portfolio TP/SL/position hold"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: portfolio TP/SL/position hold"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 official transcript: portfolio TP/SL/position hold"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP8-FATTINGER-LIMIT",
+      "parent_claim_id": "HB26-EP8",
+      "title": "Passive stale-price limit orders to catch dislocations in thin perpetual markets",
+      "method_type": "strategy",
+      "hypothesis": "A resting limit may capture erroneous prints or price dislocations in thinly traded perps, with a hedge in the underlying/related venue.",
+      "testable_rule": "Place a limit in advance near a hypothesized stale/fat-finger price in a thin market; fill and hedge against the more liquid underlying/venue.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Dislocation threshold, fair value, limit placement, cancellations, adverse selection, hedge ratio, outage risk and fill probability absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time multi-venue price/depth, order lifecycle, hedge instrument and fill/queue observations."
+      ],
+      "blockers": [
+        "The transcript example is a speaker-observed price deviation in a thin stock perp, not a historical dataset or audited trade."
+      ],
+      "next_action": "Map to passive maker/hedge M240; keep the price-error trigger distinct from regular market making.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 8 transcript: thin stock-perp price dislocation"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 transcript: thin stock-perp price dislocation"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "label": "Hummingbot Bot Pod Episode 8 transcript: thin stock-perp price dislocation"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP7-CROSSED-BOOK-ARB",
+      "parent_claim_id": "HB26-EP7",
+      "title": "Executable multi-venue depth arbitrage after fees and size limits",
+      "method_type": "strategy",
+      "hypothesis": "A cross-venue price gap is an arbitrage only when synchronized executable prices and available depth exceed all costs.",
+      "testable_rule": "Poll and align order books across four venues; compare executable bid/ask depth in basis points; trade only if the crossed opportunity exceeds fees and costs.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Symbol/contract mapping, timestamps, depth walk, queue/latency, transfer/collateral, leg failure and exit criteria are unspecified.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized L2 order books, contract mapping, executable fee schedule, latency and settlement/collateral data."
+      ],
+      "blockers": [
+        "M056 tests a price-gap signal; this source requires executable depth after costs and no such multi-venue book history is held."
+      ],
+      "next_action": "Keep as new execution-arbitrage row distinct from price-dislocation forecasting; require full depth-walk and cost model.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: four-venue execution screen"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: four-venue execution screen"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: four-venue execution screen"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP7-PASSIVE-MAKER-HEDGE",
+      "parent_claim_id": "HB26-EP7",
+      "title": "Passive maker at one venue with hedge on another when taker spread is insufficient",
+      "method_type": "strategy",
+      "hypothesis": "When the visible gap does not cover taker costs, passive liquidity provision plus a hedge may improve entry economics.",
+      "testable_rule": "If a cross-venue gap is not executable after taker costs, quote passively on one venue and hedge the resulting inventory elsewhere.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Maker queue priority, fill probability, cancel/replace, hedge timing, adverse selection, inventory and financing rules absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Multi-venue L2/order events and queue position plus hedge fills/costs."
+      ],
+      "blockers": [
+        "M058/M227 address market-making execution generally but not this fixed cross-venue hedge overlay."
+      ],
+      "next_action": "Keep as a separate cross-venue execution row; compare taker arb, maker-only fills, and no-trade control.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: passive maker alternative"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: passive maker alternative"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 official transcript: passive maker alternative"
+        }
+      ]
+    },
+    {
+      "id": "HB26-EP7-SOL-FEE-TVL-LP",
+      "parent_claim_id": "HB26-EP7",
+      "title": "Concentrated-liquidity pool selection by fee/TVL and single-sided price range",
+      "method_type": "strategy",
+      "hypothesis": "Pool fee yield relative to TVL and a directional price range may guide concentrated-liquidity deployment.",
+      "testable_rule": "Rank Solana concentrated-liquidity pools by fee/TVL, choose single-sided SOL ranges, monitor, and redeploy when the position closes or leaves range.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Fee window, pool/chain selection, range width, fee share, impermanent loss, gas/priority fees, hedge and capital allocation absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Point-in-time pool fees, liquidity, range, price, token flow and chain execution costs."
+      ],
+      "blockers": [
+        "No DeFi pool snapshots or chain-cost data are held."
+      ],
+      "next_action": "Map with the Uniswap-range lead to one generalized concentrated-liquidity family, retaining the Solana source as a distinct protocol variant.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Hummingbot Bot Pod Episode 7 transcript: Solana concentrated LP"
+        },
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 transcript: Solana concentrated LP"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "label": "Hummingbot Bot Pod Episode 7 transcript: Solana concentrated LP"
+        }
+      ]
+    },
+    {
+      "id": "PF26-PASS-PROBABILITY",
+      "parent_claim_id": "PF26",
+      "title": "Path-dependent prop-firm evaluation pass probability under exact account rules",
+      "method_type": "risk_objective",
+      "hypothesis": "A strategy should be assessed by probability of passing and receiving payout under path-dependent constraints, not by Sharpe or terminal P&L alone.",
+      "testable_rule": "Simulate the candidate equity path under dated firm rules for target, daily/overall/trailing drawdown, consistency, minimum days and payout reset; estimate pass/payout probability against no-edge controls.",
+      "exact_tested_scope": "No independently audited frozen test of this exact source rule was identified; the source may be a demo, anecdote, caption, description or secondary summary.",
+      "unrun_scope": "Named firm, rule version/date, state transition, open-profit marking, reset/consistency mechanics, costs and sampling protocol must be verified.",
+      "status": "partial",
+      "required_inputs": [
+        "Candidate trade/equity paths and archived official rules for the exact evaluation account."
+      ],
+      "blockers": [
+        "Existing M028/M199/M211 cover related prop-evaluation mechanics; creator percentage/continuity claims are not independently verified."
+      ],
+      "next_action": "Use current M211 scope and the chosen firm’s dated official rules; do not import creator percentages as facts.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Pura Vida Edge prop-firm video and creator transcript page"
+        },
+        {
+          "path": "https://puravidaedge.com/videos/profitable-strategy-still-cant-pass/",
+          "label": "Pura Vida Edge prop-firm video and creator transcript page"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "https://puravidaedge.com/videos/profitable-strategy-still-cant-pass/",
+          "label": "Pura Vida Edge prop-firm video and creator transcript page"
+        }
+      ]
     }
   ],
   "sources": [
@@ -6141,16 +7457,76 @@
       "current_sha256": "fc4a46ca0a92430c11e56aba0b2cc6e041cedf722eaafbbce0f200e8ae05a998",
       "current_source_review_required": true,
       "changed_source_note": "Received-note extraction is bound to sha256 above. Later additions at current_sha256 are not claimed fully extracted; review before queue import."
+    },
+    {
+      "path": "docs/REELS_TRANSCRIPT.md",
+      "sha256": "92809a1a67d5b5fd0aa1922844d3324e3c0446719069bdebc51dbb0b0cfa9dde",
+      "review_status": "reviewed_video_leads_not_performance_evidence",
+      "scope": "Compact digest of the two earlier Instagram reels, three owner-provided TikToks and 12 additional public video sources; public caption/transcript/description basis identified per source.",
+      "method_ids": [
+        "IG26-01-ENGINE-PARITY",
+        "IG26-02-TOOL-STACK",
+        "TT26-01-GEX715-CLAIM",
+        "TT26-02-IVSURFACE-RV",
+        "TT26-02-GEX-IV-MODEL",
+        "TT26-03-QQQ-GEX-COMPOSITE",
+        "TT26-03-SPX-GAMMA-PUTSELLER-GATE",
+        "TT26-03-CALL-PREMIUM",
+        "TT26-03-ORDERFLOW-IMBALANCE",
+        "TT26-03-DAILY-VAL",
+        "YT26-01-GEX-LEVEL-REACTION",
+        "YT26-01-ORDERFLOW-CONFIRM",
+        "YT26-01-0DTE-SPREAD-SCALP",
+        "CBOE26-DISPERSION",
+        "YT26-02-GEX-OPTIONS-FLOW",
+        "YT26-03-XVENUE-FUNDING-SPREAD",
+        "YT26-04-DATED-CASH-CARRY",
+        "YT26-05-VARIABLE-CARRY",
+        "YT26-06-FOOTPRINT-REVERSAL",
+        "YT26-07-LIQ-HEATMAP",
+        "HB24-C7-SPOT-PERP-CARRY",
+        "HB24-C7-CS-MOMENTUM",
+        "HB24-C7-LIQ-SNIPER",
+        "HB24-C7-MULTI-HORIZON",
+        "HB24-C7-UNISWAP-RANGE-LP",
+        "HB24-C7-AVELLANEDA-MM",
+        "HB24-C7-VWAP-SCALP",
+        "HB24-C7-CEX-DEX-XEMM",
+        "HB24-C7-BOLLINGER-PERP",
+        "HB26-EP8-PERP-PERP-SPREAD",
+        "HB26-EP8-TOUCH-MM",
+        "HB26-EP8-PORTFOLIO-TP-SL",
+        "HB26-EP8-FATTINGER-LIMIT",
+        "HB26-EP7-CROSSED-BOOK-ARB",
+        "HB26-EP7-PASSIVE-MAKER-HEDGE",
+        "HB26-EP7-SOL-FEE-TVL-LP",
+        "PF26-PASS-PROBABILITY"
+      ],
+      "unextracted_limitations": [
+        "No full internet survey; several videos had no verified transcript.",
+        "Creator/demo outcomes are not audited and were not tested.",
+        "External option/DEX data and MEXC trade-level liquidation histories are not held."
+      ],
+      "current_source_review_required": false,
+      "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859"
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
   "canonical_panel": "docs/PANEL.md",
-  "canonical_queue": "registry/methods.csv (owned by Claude; pending in this snapshot)",
+  "canonical_queue": "registry/methods.csv (live canonical queue through M246; source intake JSON and alias CSV are review inputs, not a second priority list).",
   "provenance": {
     "received_source_base": "ee25bfecc98e51cd90e7c31ffcd7dd01de512024",
     "reconciled_against": "174e1a96d929ec9399e1830fcd70ce18054d3469",
     "original_extraction_sha256": "91bc6bbc1e72042e417ceeea657412b285c9d9e73a65ab4320491d6bfacfa3f0",
-    "review_note": "164 received-source records; exact scope annotations are review input, not current queue decisions. External books/papers were not fully read. R233 scope was reconciled from its frozen spec and findings."
+    "review_note": "164 received-source records; exact scope annotations are review input, not current queue decisions. External books/papers were not fully read. R233 scope was reconciled from its frozen spec and findings.",
+    "supplemental_media_intake": {
+      "base_records_preserved": 164,
+      "new_records": 37,
+      "new_media_sources": 17,
+      "reviewed_against_live_queue": "registry/methods.csv through M233 before adding rows M234-M246.",
+      "prior_reel_digest_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
+      "note": "Original received_source_base, reconciled_against and original_extraction_sha256 are unchanged."
+    }
   },
   "unreviewed_source_paths": [
     "docs/AUDIT.md",
@@ -6170,11 +7546,180 @@
     "docs/PERP_CARRY_ACCOUNTING.md",
     "docs/PERP_EXECUTION_AND_RISK.md",
     "docs/POSITIONING_AND_ORDERFLOW_VALIDITY.md",
-    "docs/REELS_TRANSCRIPT.md",
     "docs/RESEARCH_FRONTIER.md",
     "docs/RESEARCH_HANDOFF.md",
     "docs/ROOM.md",
     "docs/SIZING_EVIDENCE.md",
     "docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md"
+  ],
+  "supplemental_intakes": [
+    {
+      "intake_id": "social_video_methods_20261020",
+      "captured_utc_date": "2026-10-20",
+      "previous_reels_digest_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
+      "records_added": [
+        "IG26-01-ENGINE-PARITY",
+        "IG26-02-TOOL-STACK",
+        "TT26-01-GEX715-CLAIM",
+        "TT26-02-IVSURFACE-RV",
+        "TT26-02-GEX-IV-MODEL",
+        "TT26-03-QQQ-GEX-COMPOSITE",
+        "TT26-03-SPX-GAMMA-PUTSELLER-GATE",
+        "TT26-03-CALL-PREMIUM",
+        "TT26-03-ORDERFLOW-IMBALANCE",
+        "TT26-03-DAILY-VAL",
+        "YT26-01-GEX-LEVEL-REACTION",
+        "YT26-01-ORDERFLOW-CONFIRM",
+        "YT26-01-0DTE-SPREAD-SCALP",
+        "CBOE26-DISPERSION",
+        "YT26-02-GEX-OPTIONS-FLOW",
+        "YT26-03-XVENUE-FUNDING-SPREAD",
+        "YT26-04-DATED-CASH-CARRY",
+        "YT26-05-VARIABLE-CARRY",
+        "YT26-06-FOOTPRINT-REVERSAL",
+        "YT26-07-LIQ-HEATMAP",
+        "HB24-C7-SPOT-PERP-CARRY",
+        "HB24-C7-CS-MOMENTUM",
+        "HB24-C7-LIQ-SNIPER",
+        "HB24-C7-MULTI-HORIZON",
+        "HB24-C7-UNISWAP-RANGE-LP",
+        "HB24-C7-AVELLANEDA-MM",
+        "HB24-C7-VWAP-SCALP",
+        "HB24-C7-CEX-DEX-XEMM",
+        "HB24-C7-BOLLINGER-PERP",
+        "HB26-EP8-PERP-PERP-SPREAD",
+        "HB26-EP8-TOUCH-MM",
+        "HB26-EP8-PORTFOLIO-TP-SL",
+        "HB26-EP8-FATTINGER-LIMIT",
+        "HB26-EP7-CROSSED-BOOK-ARB",
+        "HB26-EP7-PASSIVE-MAKER-HEDGE",
+        "HB26-EP7-SOL-FEE-TVL-LP",
+        "PF26-PASS-PROBABILITY"
+      ],
+      "media_sources": [
+        {
+          "url": "https://www.instagram.com/reel/DcOhWbqm3vK/",
+          "title": "Git Radar / NautilusTrader engine reel",
+          "basis": "prior-session speech summary; no raw media retained"
+        },
+        {
+          "url": "https://www.instagram.com/reel/DcgZhLyiZ3o/",
+          "title": "Six repositories title-card reel",
+          "basis": "music/title-card only; repository identities were inference"
+        },
+        {
+          "url": "https://www.tiktok.com/@aleks_rosme/video/7670945661621128470",
+          "title": "08/06 trade recap: 100 points from GEX 715 QQQ",
+          "creator": "@aleks_rosme",
+          "posted_utc": "2026-08-06",
+          "duration_s": 53,
+          "basis": "public title/caption; no public speech-caption track found"
+        },
+        {
+          "url": "https://www.tiktok.com/@aleks_rosme/video/7698695375250623766",
+          "title": "3D Volatility Surface & How Hedge Funds Use It",
+          "creator": "@aleks_rosme",
+          "posted_utc": "2026-10-20",
+          "duration_s": 48,
+          "basis": "public creator-provided English caption track; paraphrased"
+        },
+        {
+          "url": "https://www.tiktok.com/@aleks_rosme/video/7698764847109999894",
+          "title": "10/20 Break of 713 GEX + Call Heavy Premium",
+          "creator": "@aleks_rosme",
+          "posted_utc": "2026-10-20",
+          "duration_s": 46,
+          "basis": "public creator-provided English caption track; paraphrased"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=E_PSlPIq0R4",
+          "title": "SPX 0DTE: Gamma Zero, Order Flow, and Key Levels",
+          "published": "2026-08-30",
+          "basis": "public description/chapter summary; full transcript not verified"
+        },
+        {
+          "url": "https://www.cboe.com/video/ldjz4jorjd/",
+          "title": "Cboe interview on volatility, dispersion and 0DTE pricing",
+          "published": "2026-07-17",
+          "basis": "official editorial summary, not a transcript"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=SkvitOO2Zog",
+          "title": "Day Trading SPX/SPY 0DTE: options flow and algo flow",
+          "published": "2023-05-12",
+          "basis": "description only; promotional context"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Ly8R5g3juxw",
+          "title": "Hummingbot funding-rate-arbitrage deep dive",
+          "basis": "public listing; transcript not verified"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=rp4dOTW2TNU",
+          "title": "Deribit Cash & Carry – Live Trade Example",
+          "published": "2023-10-11",
+          "basis": "official Deribit written walkthrough linked"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=BSWVZJ703Mg",
+          "title": "Deribit Variable Rate Cash & Carry – Live Trade Example",
+          "published": "2023-11-15",
+          "basis": "official Deribit written walkthrough linked"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ljk9BovCSqI",
+          "title": "TradingLab order-flow reversal tutorial",
+          "published": "2025-07-21",
+          "basis": "secondary transcript summary only; Tesla example"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=F8YFm-xg5bs",
+          "title": "Krypto Káy Liquidation Heatmap Tutorial",
+          "published": "2025-10-13",
+          "basis": "public description only; promotional links"
+        },
+        {
+          "url": "https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/",
+          "title": "Hummingbot Botcamp Cohort 7 Demo Day Recap",
+          "published": "2024-05-21",
+          "video_url": "https://www.youtube.com/watch?v=TAulqoSenmk",
+          "basis": "official written recap of nine demos; no full video transcript verified"
+        },
+        {
+          "url": "https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights",
+          "title": "Hummingbot Bot Pod Episode 8: Demo Day Highlights",
+          "published": "2026-05-22",
+          "video_url": "https://youtu.be/fdlt23C5yJ4",
+          "basis": "official transcript and highlights"
+        },
+        {
+          "url": "https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into",
+          "title": "Hummingbot Bot Pod Episode 7: Deep Dive into Routines",
+          "published": "2026-05-16",
+          "basis": "official transcript and highlights"
+        },
+        {
+          "url": "https://puravidaedge.com/videos/profitable-strategy-still-cant-pass/",
+          "title": "Profitable strategy still can’t pass prop firm evaluation?",
+          "published": "2026-08-01",
+          "video_url": "https://www.youtube.com/watch?v=R0tNSiUQ-Q8",
+          "basis": "creator video and transcript page; firm claims not checked against official dated rules"
+        }
+      ],
+      "primary_checks": [
+        "https://datashop.cboe.com/volatility-surfaces",
+        "https://www.optionseducation.org/referencelibrary/faq/general-information",
+        "https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0dte-options/",
+        "https://cdn.cboe.com/resources/indices/documents/Implied_Correlation-WhitePaper.pdf",
+        "https://github.com/hummingbot/hummingbot/blob/master/scripts/v2_funding_rate_arb.py",
+        "https://hummingbot.org/release-notes/1.27.0/",
+        "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+        "https://insights.deribit.com/education/cash-carry-live-trade-example/",
+        "https://insights.deribit.com/education/variable-rate-cash-carry-live-trade-example/",
+        "https://doi.org/10.1080/14697680701381228",
+        "https://www.bis.org/publ/work1087.htm"
+      ],
+      "provenance_note": "Subagent discovery was read-only and independently reconciled here. No outcomes were computed, no raw video/audio was saved, and no large market dataset was downloaded."
+    }
   ]
 }
