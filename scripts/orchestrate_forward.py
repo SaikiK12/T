@@ -107,6 +107,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R266", "forward_unlocks.py", (), ("REC_TICKER", "REC_UNLOCKS"), timeout=600),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", ("LAG",), timeout=120),
+        task("CATALOG", "catalog.py", (), ("PANEL",), timeout=60),
         task("DASH", "dashboard_data.py", (), ("LAG", "PANEL", "REC_FUNDING"), timeout=120),
         task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_FUNDING", "REC_NOTICES", "REC_UNLOCKS"),
              timeout=300),
