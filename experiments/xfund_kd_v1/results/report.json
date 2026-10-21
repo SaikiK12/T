@@ -1,0 +1,450 @@
+{
+  "name": "xfund_kd_v1",
+  "trials": 4,
+  "coins": 873,
+  "coins_by_venue": {
+    "binance": 873,
+    "dydx": 231,
+    "gate": 860,
+    "kucoin": 642
+  },
+  "rc_null_p95": 2.1064307481890894,
+  "verdict": "PASS (gate 0)",
+  "survivors": [
+    "gate+kucoin L14d th5% K20",
+    "binance+kucoin L14d th5% K20"
+  ],
+  "sets": [
+    {
+      "set": "binance+kucoin",
+      "lookback": 14,
+      "window_from": "2021-01-22",
+      "coins_ever": 617,
+      "mean_candidates": {
+        "0.05": 130.39846005774783
+      }
+    },
+    {
+      "set": "binance+dydx",
+      "lookback": 14,
+      "window_from": "2023-12-06",
+      "coins_ever": 71,
+      "mean_candidates": {
+        "0.05": 17.375728155339807
+      }
+    },
+    {
+      "set": "gate+kucoin",
+      "lookback": 14,
+      "window_from": "2021-01-22",
+      "coins_ever": 597,
+      "mean_candidates": {
+        "0.05": 127.56256015399423
+      }
+    },
+    {
+      "set": "kucoin+dydx",
+      "lookback": 14,
+      "window_from": "2023-12-06",
+      "coins_ever": 66,
+      "mean_candidates": {
+        "0.05": 17.289320388349516
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "label": "gate+kucoin L14d th5% K20",
+      "strat": {
+        "set": "gate+kucoin",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2021-01-22",
+      "stats": [
+        {
+          "days": 2078,
+          "mean_bp": 3.221710725209075,
+          "ann_pct": 11.759244147013122,
+          "vol_pct": 1.9342236788521014,
+          "sharpe": 6.0795678781017966,
+          "t": 14.506046025707649,
+          "t_nw": 11.410133267485191,
+          "half1_bp": 1.6429899999541115,
+          "half2_bp": 4.800431450464028,
+          "recent_bp": 5.92623589228007,
+          "recent_days": 638,
+          "trimmed_bp": 2.9853127644453474,
+          "max_dd_pct": -0.7174034402881335,
+          "top10_share": 0.11551041760055962,
+          "total_pct": 95.09271985855547
+        },
+        {
+          "days": 2078,
+          "mean_bp": 2.8333084152956984,
+          "ann_pct": 10.3415757158293,
+          "vol_pct": 1.9485327459910025,
+          "sharpe": 5.307365625292422,
+          "t": 12.663546419649242,
+          "t_nw": 9.792607612338452,
+          "half1_bp": 1.1936156014940513,
+          "half2_bp": 4.473001229097329,
+          "recent_bp": 5.564166926762827,
+          "recent_days": 638,
+          "trimmed_bp": 2.5972113389770235,
+          "max_dd_pct": -1.178943728439319,
+          "top10_share": 0.13077626032399373,
+          "total_pct": 79.96699257576128
+        },
+        {
+          "days": 2078,
+          "mean_bp": 2.4449061053823122,
+          "ann_pct": 8.92390728464544,
+          "vol_pct": 1.9695161067056464,
+          "sharpe": 4.531015133241131,
+          "t": 10.811148980294876,
+          "t_nw": 8.223648147979453,
+          "half1_bp": 0.7442412030339941,
+          "half2_bp": 4.14557100773063,
+          "recent_bp": 5.202097961245586,
+          "recent_days": 638,
+          "trimmed_bp": 2.2121898979313706,
+          "max_dd_pct": -2.6430484988262504,
+          "top10_share": 0.1510004938895182,
+          "total_pct": 66.01219753514016
+        }
+      ],
+      "funding_share": 1.0163648883456917,
+      "avg_held": 19.56737247353224,
+      "trades": 1153,
+      "forced_exits": 0,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "binance+kucoin L14d th5% K20",
+      "strat": {
+        "set": "binance+kucoin",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2021-01-22",
+      "stats": [
+        {
+          "days": 2078,
+          "mean_bp": 2.9577498127380712,
+          "ann_pct": 10.79578681649396,
+          "vol_pct": 2.0516529699564283,
+          "sharpe": 5.261994584163633,
+          "t": 12.555289644818396,
+          "t_nw": 11.168583823366843,
+          "half1_bp": 1.4004779773479645,
+          "half2_bp": 4.515021648128173,
+          "recent_bp": 5.680955307982474,
+          "recent_days": 638,
+          "trimmed_bp": 2.7460149655568094,
+          "max_dd_pct": -2.2697993632421865,
+          "top10_share": 0.1326583562310269,
+          "total_pct": 84.65794318022004
+        },
+        {
+          "days": 2078,
+          "mean_bp": 2.5642945673097746,
+          "ann_pct": 9.359675170680678,
+          "vol_pct": 2.0659715573820794,
+          "sharpe": 4.530398851444451,
+          "t": 10.809678511951287,
+          "t_nw": 9.420030168938096,
+          "half1_bp": 0.9281969378869441,
+          "half2_bp": 4.200392196732599,
+          "recent_bp": 5.335344022716018,
+          "recent_days": 638,
+          "trimmed_bp": 2.3570961950630926,
+          "max_dd_pct": -2.673253955243815,
+          "top10_share": 0.15222473231849165,
+          "total_pct": 70.1619969574985
+        },
+        {
+          "days": 2078,
+          "mean_bp": 2.1708393218814757,
+          "ann_pct": 7.9235635248673875,
+          "vol_pct": 2.087157039256741,
+          "sharpe": 3.796342764744263,
+          "t": 9.058196894733381,
+          "t_nw": 7.738295365229922,
+          "half1_bp": 0.4559158984259246,
+          "half2_bp": 3.885762745337025,
+          "recent_bp": 4.989732737449559,
+          "recent_days": 638,
+          "trimmed_bp": 1.9713426889490353,
+          "max_dd_pct": -3.3905560368609033,
+          "top10_share": 0.17888375061861328,
+          "total_pct": 56.80220561266154
+        }
+      ],
+      "funding_share": 1.0396521613379788,
+      "avg_held": 19.621270452358036,
+      "trades": 1168,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "kucoin+dydx L14d th5% K20",
+      "strat": {
+        "set": "kucoin+dydx",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2023-12-06",
+      "stats": [
+        {
+          "days": 1030,
+          "mean_bp": 1.8569713691964589,
+          "ann_pct": 6.777945497567075,
+          "vol_pct": 9.846809074232624,
+          "sharpe": 0.6883392829565236,
+          "t": 1.1563112079496405,
+          "t_nw": 2.1279121137581942,
+          "half1_bp": 1.6688572628674179,
+          "half2_bp": 2.0450854755255006,
+          "recent_bp": 1.86882017401221,
+          "recent_days": 638,
+          "trimmed_bp": 1.1200301636449999,
+          "max_dd_pct": -6.9286666304737015,
+          "top10_share": 0.9690558550433978,
+          "total_pct": 19.532620293847348
+        },
+        {
+          "days": 1030,
+          "mean_bp": 1.5368742818178174,
+          "ann_pct": 5.609591128635033,
+          "vol_pct": 9.849409731466316,
+          "sharpe": 0.5695357672768795,
+          "t": 0.9567383517643137,
+          "t_nw": 1.7605785313225784,
+          "half1_bp": 1.2855562919936316,
+          "half2_bp": 1.788192271642006,
+          "recent_bp": 1.6011085752661294,
+          "recent_days": 638,
+          "trimmed_bp": 0.7988219494533425,
+          "max_dd_pct": -6.92866663047369,
+          "top10_share": 1.1697645875133371,
+          "total_pct": 15.655697402218438
+        },
+        {
+          "days": 1030,
+          "mean_bp": 1.216777194439175,
+          "ann_pct": 4.4412367597029885,
+          "vol_pct": 9.852885802791958,
+          "sharpe": 0.45075492080142643,
+          "t": 0.7572035765886435,
+          "t_nw": 1.3922943012354736,
+          "half1_bp": 0.9022553211198456,
+          "half2_bp": 1.5312990677585097,
+          "recent_bp": 1.3333969765200469,
+          "recent_days": 638,
+          "trimmed_bp": 0.47758432569096476,
+          "max_dd_pct": -6.944535601825885,
+          "top10_share": 1.476097751841983,
+          "total_pct": 11.90412816221107
+        }
+      ],
+      "funding_share": 0.6418067733853091,
+      "avg_held": 15.406796116504854,
+      "trades": 471,
+      "forced_exits": 1,
+      "p_rc": 0.24437781109445278,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": false,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": false
+    },
+    {
+      "label": "binance+dydx L14d th5% K20",
+      "strat": {
+        "set": "binance+dydx",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2023-12-06",
+      "stats": [
+        {
+          "days": 1030,
+          "mean_bp": 2.2846751281416595,
+          "ann_pct": 8.339064217717057,
+          "vol_pct": 16.965231246147432,
+          "sharpe": 0.4915384940367813,
+          "t": 0.8257141265455235,
+          "t_nw": 1.4392820487983098,
+          "half1_bp": 1.324357996008385,
+          "half2_bp": 3.2449922602749344,
+          "recent_bp": 2.7526385109002574,
+          "recent_days": 638,
+          "trimmed_bp": 0.8523112821237103,
+          "max_dd_pct": -11.193941115775575,
+          "top10_share": 1.2702096054877627,
+          "total_pct": 22.043726027053822
+        },
+        {
+          "days": 1030,
+          "mean_bp": 2.037296487364961,
+          "ann_pct": 7.436132178882107,
+          "vol_pct": 16.9629842249849,
+          "sharpe": 0.43837405495722703,
+          "t": 0.7364054988176368,
+          "t_nw": 1.2852517289298806,
+          "half1_bp": 1.0307657629986764,
+          "half2_bp": 3.0438272117312453,
+          "recent_bp": 2.5101620218720444,
+          "recent_days": 638,
+          "trimmed_bp": 0.6059251435098432,
+          "max_dd_pct": -11.193941115775575,
+          "top10_share": 1.423277206037995,
+          "total_pct": 18.974814494490655
+        },
+        {
+          "days": 1030,
+          "mean_bp": 1.7899178465882621,
+          "ann_pct": 6.533200140047156,
+          "vol_pct": 16.96108416127817,
+          "sharpe": 0.3851876494406134,
+          "t": 0.6470599706280168,
+          "t_nw": 1.1306534280474962,
+          "half1_bp": 0.7371735299889672,
+          "half2_bp": 2.8426621631875566,
+          "recent_bp": 2.2676855328438323,
+          "recent_days": 638,
+          "trimmed_bp": 0.3592793945847712,
+          "max_dd_pct": -11.193941115775575,
+          "top10_share": 1.6187969668486906,
+          "total_pct": 15.982808246793411
+        }
+      ],
+      "funding_share": 0.4149620310812426,
+      "avg_held": 15.533009708737865,
+      "trades": 364,
+      "forced_exits": 2,
+      "p_rc": 0.3568215892053973,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": false,
+        "RC": false,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": false
+    }
+  ],
+  "spec": {
+    "name": "xfund_kd_v1",
+    "start": "2021-01-01",
+    "end": "2026-09-30",
+    "symbols": "experiments/xfund_kd_v1/symbols.csv",
+    "venues": [
+      {
+        "name": "binance",
+        "prices": "klines_1h",
+        "vol": "volume",
+        "funding": "fundingRate",
+        "bar_h": 1
+      },
+      {
+        "name": "gate",
+        "prices": "gate_hist/open/candlesticks_1h",
+        "vol": "vol_contracts",
+        "funding": "gate_hist/open/funding_applies",
+        "bar_h": 1
+      },
+      {
+        "name": "kucoin",
+        "prices": "kucoin_hist/open/candles_1d",
+        "vol": "volume",
+        "funding": "kucoin_hist/open/funding",
+        "bar_h": 24
+      },
+      {
+        "name": "dydx",
+        "prices": "dydx_hist/open/candles_1h",
+        "vol": "volume",
+        "funding": "dydx_hist/open/funding",
+        "bar_h": 1
+      }
+    ],
+    "sets": [
+      [
+        "binance",
+        "kucoin"
+      ],
+      [
+        "binance",
+        "dydx"
+      ],
+      [
+        "gate",
+        "kucoin"
+      ],
+      [
+        "kucoin",
+        "dydx"
+      ]
+    ],
+    "lookbacks": [
+      14
+    ],
+    "thresholds": [
+      0.05
+    ],
+    "slots": [
+      20
+    ],
+    "costs": [
+      0.0007,
+      0.0014,
+      0.0021
+    ],
+    "corr_days": 30,
+    "corr_min": 0.9,
+    "corr_obs": 20,
+    "block_days": 10,
+    "reps": 2000,
+    "seed": 277,
+    "out": "experiments/xfund_kd_v1/results",
+    "alpha": 0.05,
+    "recent_from": "2025-01-01",
+    "trim": 0.01,
+    "nw_lags": 10,
+    "keep_daily": 4,
+    "hurdle_ann_pct": 4.13
+  }
+}

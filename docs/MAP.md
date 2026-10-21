@@ -37,6 +37,8 @@ over time, delisted ones included). Round trip at the tier costs: about 12-16 bp
 11. **Every edge's evidence in one table**: `docs/EDGE_SCOREBOARD.md`.
     - Only funding carry passed its holdout test (R191: t 2.07 at 1x, about 1%/yr; t 1.14 at 2x). It now runs forward on MEXC, where spot pairs exist for
       small alts that Binance lacks (R220).
+    - Cross-venue funding carry (R275) is the strongest gate-0 result: 212 of 560 books pass, best NW t 8.63, about
+      5-10%/yr on capital in 2025-26. It runs forward from 2026-10-22 (R278).
     - Paper days alone confirm slowly. At 90 days the gate only detects an annual Sharpe of about 5; a Sharpe of 1.5
       has a 19% chance to pass R221's frozen test by day 365 (`docs/PAPER_REFINEMENT.md`).
 
@@ -443,6 +445,24 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The cover cuts the tail and the median with it. Best mx_neg0.3 short 72 h with a 10% cover, +0.55%, t 1.35.
   - NULL. No forward lane (the pre-committed rule needed t >= 2).
     [Findings](../experiments/squeeze_v1/FINDINGS.md).
+- **R275 (xfund_v1)** tested cross-venue funding carry on Binance, Gate, Hyperliquid and MEXC (qx spread): the same
+  coin on two venues, long where trailing funding is lower and short where it is higher. 560 books.
+  - **PARTIAL: 212 books pass every gate**, the first family in the program far above its reality-check null.
+  - Best gate+hyperliquid L14d th5% K20: +9.73 / +8.51 / +7.28 %/yr at 1x / 2x / 3x, NW t 8.63, every year
+    positive.
+  - The Hyperliquid books decay from 17-19%/yr (2023) to 5-8%/yr (2025-26).
+  - [Findings](../experiments/xfund_v1/FINDINGS.md).
+- **R276 (xvfac_v1)** tested what Gate and Hyperliquid say about a Binance perp's next days (qx factors, 18 series).
+  - NULL: the best cross-venue factor has RC p 0.124.
+  - Only the reference (Binance funding alone) passes, and it gets no follow-up (queued as M263).
+  - [Findings](../experiments/xvfac_v1/FINDINGS.md).
+- **R277 (xfund_kd_v1)** replicates R275's best book unchanged on KuCoin and dYdX, which R275 never read. It is
+  frozen once the dYdX download finishes.
+- **R278 (xfund_fwd)** runs R275's books forward on paper with live fills:
+  - A gate+hyperliquid and B binance+mexc, as pre-committed;
+  - C gate+mexc, post hoc.
+  - On-time from 2026-10-22; NW t >= 2.5 at 90 / 180 scored days.
+  - `lab/xfund.py` reproduces R275's trades exactly (`scripts/xfund_parity.py`).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -548,6 +568,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,477,741 after R274 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,322 after R278 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
