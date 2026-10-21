@@ -10880,6 +10880,167 @@
         "registry/method_id_reassignment_source_tick_M281.json"
       ],
       "historical_scope": "Older supplemental allocation maps remain literal historical snapshots; complete original source objects and alias rows are retained in the receipts."
+    },
+    {
+      "intake_id": "cftc_positioning_inputs_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [],
+      "media_sources": [
+        {
+          "id": "cftc_tff_notes",
+          "url": "https://www.cftc.gov/sites/default/files/idc/groups/public/%40commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf",
+          "basis": "Four-page PDF; rendered lines4-138 only, reviewed2026-10-21.",
+          "received_summary": "Four reportable groups: Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds and Other Reportables; nonreportables are separate. TFF futures-only and combined exist. Leveraged Funds includes hedge funds/CTAs/CPOs whose activity may be outright, arbitrage or hedging; categories classify entities, not individual trade intent. TFF does not algebraically disaggregate Legacy commercial/noncommercial. Physical-commodity Disaggregated COT has different categories. Prelaunch history was backcast with recent classifications because historical classifications were not maintained. Classifications change and corrections occur. Long, short and spreading are distinct; suppressed small trader counts do not imply missing aggregate position sizes.",
+          "version_limit": "Mutable official source; direct urllib returned403 for the first four sources, while public web rendering was accessible. No raw-source fingerprint captured; fifth source also has no captured raw fingerprint. URL/date and rendered read scope only; no access restriction bypass."
+        },
+        {
+          "id": "cftc_release_schedule",
+          "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+          "basis": "2026 tentative schedule; rendered lines62-80 only, reviewed2026-10-21.",
+          "received_summary": "Usual schedule is Friday15:30 Eastern for the preceding Tuesday observation; holidays delay reports. June22 and July6,2026 are explicitly delayed dates. This is a schedule, not a payload-availability receipt. Eastern time needs America/New_York DST rules, not a fixed UTC offset. Keep report-asof, announced release and collector first-seen clocks separate.",
+          "version_limit": "Mutable official source; direct urllib returned403 for the first four sources, while public web rendering was accessible. No raw-source fingerprint captured; fifth source also has no captured raw fingerprint. URL/date and rendered read scope only; no access restriction bypass."
+        },
+        {
+          "id": "cftc_historical_announcements",
+          "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm",
+          "basis": "Selected rendered lines64-139,195-260,263-291 only, reviewed2026-10-21; not complete announcements archive.",
+          "received_summary": "February24,2023 states issuance that day of the report originally scheduledFebruary3; March21 states issuance that day of the report scheduledMarch17. These establish issuance days, not exact intraday receipt or original payload bytes. November18 and December9,2025 announcements give revised INTENDED backlog schedules: the September30 report originally scheduledOctober3 has intended new dateNovember19. That table is not actual-release evidence. Revisions added positions to March26,2019 reports including Mexican peso, E-mini S&P and Nasdaq. May5,2023 notes consolidated index reports include associated e-micro contracts. December22,2017 notes Bitcoin classification defaults and possible reclassification.",
+          "version_limit": "Mutable official source; direct urllib returned403 for the first four sources, while public web rendering was accessible. No raw-source fingerprint captured; fifth source also has no captured raw fingerprint. URL/date and rendered read scope only; no access restriction bypass."
+        },
+        {
+          "id": "cftc_ion_notice",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/8662-23",
+          "basis": "Release8662-23, dated2023-02-16; rendered lines60-67 only.",
+          "received_summary": "Contemporaneous notice postpones February17 publication and proposes restartingFebruary24 with the report originally scheduledFebruary3. A proposed recovery date is not proof the report was actually issued then; the later issuance announcement provides separate day-level evidence. A generic report-date plus three-day lag would be wrong.",
+          "version_limit": "Mutable official source; direct urllib returned403 for the first four sources, while public web rendering was accessible. No raw-source fingerprint captured; fifth source also has no captured raw fingerprint. URL/date and rendered read scope only; no access restriction bypass."
+        },
+        {
+          "id": "cftc_cot_notes",
+          "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm",
+          "basis": "Rendered lines63-99 only, reviewed2026-10-21.",
+          "received_summary": "PRE permits API column filtering. Combined reports delta-adjust options to futures-equivalent positions before adding futures; they cannot be silently spliced into futures-only counts. Nonreportable positions are residual open interest, not an independently identified retail class. Published changes compare with the previous published report. Percentages use the matching open-interest denominator and are rounded.",
+          "version_limit": "Mutable official source; direct urllib returned403 for the first four sources, while public web rendering was accessible. No raw-source fingerprint captured; fifth source also has no captured raw fingerprint. URL/date and rendered read scope only; no access restriction bypass."
+        },
+        {
+          "id": "cftc_tff_zero_row_schema",
+          "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json?%24limit=0",
+          "basis": "Successful HTTP200 zero-row SODA query. Exact response body was empty JSON array plus newline; only schema/type/HTTP metadata received. No positioning records requested.",
+          "retrieved_utc": "2026-10-21T10:42:18.348423+00:00",
+          "response_bytes": 3,
+          "response_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "field_header_sha256": "06a920fbf48d023c741d19164fd6c486a548fd67d0f5b9bac036cc6907dfaa7e",
+          "type_header_sha256": "d11cd7bed3dd109ef20c132d38c00db9e61f274537aba2ba9b74fd55581dbd87",
+          "hash_scope": "Body fingerprint covers only3 empty-array bytes; header fingerprints cover exact returned X-SODA2-Fields/Types strings, not market data or the entire source history."
+        },
+        {
+          "id": "socrata_cftc_dataset_identity",
+          "url": "https://api.us.socrata.com/api/catalog/v1?search_context=publicreporting.cftc.gov&ids=gpe5-46if&limit=1",
+          "basis": "One catalog metadata result,17535bytes; selected only dataset ID/name/type/update metadata. No position rows or market outcomes; no bulk dataset acquired.",
+          "retrieved_utc": "2026-10-21T10:44:05.927141+00:00",
+          "response_bytes": 17535,
+          "response_sha256": "c570deae5a100afe56ea63c2232124b85c5e742c9686d8b81a03e75840c9db09",
+          "selected": [
+            {
+              "id": "gpe5-46if",
+              "name": "TFF - Futures Only",
+              "type": "filter",
+              "updatedAt": "2026-10-16T19:30:08.000Z"
+            }
+          ],
+          "hash_scope": "Exact received catalog response bytes; mutable metadata, not a pinned historical dataset vintage."
+        }
+      ],
+      "media_source_count": 7,
+      "received_scope": "Five bounded official explanatory/schedule/announcement sources, one zero-row schema response and one dataset-identity catalog response. No full report archive, position history, source paper/full book, market returns or backtest. All methods named by this pass already exist as M100/M220; source taxonomy is input knowledge, not a new strategy.",
+      "data_contracts": [
+        {
+          "id": "TFF-FAMILY-AND-IDENTITY",
+          "canonical_methods": [
+            "M100",
+            "M220"
+          ],
+          "mechanics": "M100 declares leveraged-money changes: select TFF Leveraged Funds explicitly, futures-only versus combined, exact exchange/contract identity and consistent units. Preserve contract-market codes as text, including possible leading zeros. M220 speculator is unresolved between Legacy noncommercial and TFF Leveraged Funds; categories cannot be silently substituted. A CME Bitcoin report does not measure Binance/MEXC account positioning.",
+          "missing": "No actual contract-code/category-value, BTC/FX/index coverage, earliest dates or unit values were queried; identity mapping and consolidated micro-contract changes require a separately verified map."
+        },
+        {
+          "id": "TFF-FUTURES-ONLY-SCHEMA",
+          "canonical_methods": [
+            "M100",
+            "M220"
+          ],
+          "dataset_id": "gpe5-46if",
+          "dataset_name": "TFF - Futures Only",
+          "query_status": "HTTP200; $limit=0; response[]",
+          "schema_field_count": 90,
+          "selected_fields": {
+            "market_and_exchange_names": "text",
+            "report_date_as_yyyy_mm_dd": "floating_timestamp",
+            "cftc_contract_market_code": "text",
+            "cftc_commodity_code": "text",
+            "open_interest_all": "number",
+            "lev_money_positions_long": "number",
+            "lev_money_positions_short": "number",
+            "lev_money_positions_spread": "number",
+            "change_in_lev_money_long": "number",
+            "change_in_lev_money_short": "number",
+            "contract_units": "text",
+            "futonly_or_combined": "text"
+          },
+          "mechanics": "report_date_as_yyyy_mm_dd is floating_timestamp: an observation-date label, not a timestamp establishing publication. Long/short/spreading counts and changes are separate numeric fields. Source columns have no publication/first-seen/vintage field. Nonreportables are residual, not proven retail traders.",
+          "recipe": "Future bounded fetch: project only the selected fields, filter cftc_contract_market_code to separately verified identity and a finite report-date interval, order deterministically by report date plus contract identity, set an explicit finite row/page budget. This recipe was not executed beyond the zero-row schema request.",
+          "table_update": "Observed Last-Modified Fri,16Oct2026 19:30:08GMT and catalog updatedAt2026-10-16T19:30:08Z describe current table/view metadata. They do not date availability of every historical row or prove original values.",
+          "missing": "API row values, null/suppression formatting, range completeness, pagination and corrections were not sampled; no downloadable coverage claimed."
+        },
+        {
+          "id": "COT-AVAILABILITY-AND-VINTAGE",
+          "canonical_methods": [
+            "M100",
+            "M220"
+          ],
+          "mechanics": "Store report family, contract identity, report-asof, exact payload hash/vintage, publication evidence with precision, collector request/response and first-seen times, correction ancestry and executable decision time. Scheduled time never replaces actual availability. Do not backdate a current revised payload to an earlier release date.",
+          "counterexamples": [
+            {
+              "source": "cftc_historical_announcements",
+              "kind": "actual_issuance_day_only",
+              "original_scheduled_date": "2023-02-03",
+              "issuance_day": "2023-02-24",
+              "limit": "No exact release clock or original payload bytes established."
+            },
+            {
+              "source": "cftc_historical_announcements",
+              "kind": "actual_issuance_day_only",
+              "original_scheduled_date": "2023-03-17",
+              "issuance_day": "2023-03-21",
+              "limit": "No exact release clock or original payload bytes established."
+            },
+            {
+              "source": "cftc_historical_announcements",
+              "kind": "revised_intended_schedule_only",
+              "report_asof": "2025-09-30",
+              "original_scheduled_date": "2025-10-03",
+              "intended_new_date": "2025-11-19",
+              "limit": "INTENDED date only; not verified actual publication."
+            }
+          ],
+          "missing": "Exact historical intraday release clocks, original payload vintages and classification vintages are absent. A fixed lag, present-day first-seen or table update metadata cannot reconstruct them. Missing evidence remains unknown."
+        },
+        {
+          "id": "CANONICAL-OPEN-STUDIES",
+          "canonical_methods": [
+            "M100",
+            "M220"
+          ],
+          "mechanics": "No new direction, threshold, lookback or horizon proposed. M100 retains weekly leveraged-money changes/BTC timing; direction, normalization, hedge/holding rule, category and units need a finite specification. M220 retains net-position z>2 and next4-week FX/index return after release; z-score window, category, sign/one-sided interpretation and missing-report handling remain missing.",
+          "controls_and_costs": "If data becomes usable: freeze exact mapping, availability/vintage policy, code and finite trial count before outcomes; compare a time-matched baseline and predeclared null; preserve all results and full1x/2x/3x execution costs. Any MEXC transport additionally needs native prices/funding/executable entries and prospective paper evidence.",
+          "limits": "Weekly positioning is a different cadence from M264 scalping and does not calibrate live confidence, establish causal information or validate an altcoin edge."
+        }
+      ],
+      "exact_tested_scope": "Public-source inspection and zero-row API schema/identity validation only; no outcome statistic, market trial, frozen study, new M/R ID or collector deployment.",
+      "source_limits": [
+        "Report classifications are entity categories and may reflect arbitrage/hedging; do not relabel them directional smart money.",
+        "Historical classification backcasts, later corrections, contract aggregation and unknown actual availability are separate limitations.",
+        "Public metadata access does not prove complete BTC/FX/index history, original-vintage availability or commercial service entitlements. No account, subscription or login restriction bypassed."
+      ]
     }
   ],
   "reassignment_refs": [
