@@ -161,7 +161,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (20)
+## Tools and everything else (21)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -176,6 +176,7 @@ line is the first line of the script's own docstring.
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
+- [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
