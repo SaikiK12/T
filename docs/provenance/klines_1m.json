@@ -1,0 +1,40 @@
+{
+"folder": "data/klines_1m",
+"source": "https://data.binance.vision USD-M 1m klines (public monthly zips, zip CRC checked)",
+"script": "python -m lab.data build klines 1m --symbols BTCUSDT,ETHUSDT,SOLUSDT",
+"recorded_utc": "2026-10-21T20:26:00Z",
+"excluded": [],
+"files": 4,
+"bytes": 498650107,
+"combined_sha256": "fb04610917689c2f191e731f4fbf706e5d99f8eeb659c58dbea81ca8407857b8",
+"subfolders": {
+".": {
+"files": 4,
+"bytes": 498650107
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "BTCUSDT.parquet",
+"bytes": 188363568,
+"sha256": "9e2c7fd717811a58bca2fa5816b92b4bf59aaa5d9706c10af2522af04a1c82a0"
+},
+{
+"path": "ETHUSDT.parquet",
+"bytes": 181238500,
+"sha256": "7c7c05b387d59fd3e40555718c28388fb66c737602102297a34de9af9c67da70"
+},
+{
+"path": "SOLUSDT.parquet",
+"bytes": 129047362,
+"sha256": "966602440c3573e677b7578feed150b5065d2062d84869acd54e79ad58af1706"
+},
+{
+"path": "manifest.json",
+"bytes": 677,
+"sha256": "f575a7c9632c84df2860c20c2de5d37b52e21a4961b518284c1962a670accae6"
+}
+]
+}

@@ -239,6 +239,29 @@ Lighter also joins the cross-venue carry family as a venue: R288 `xfund_lt_v1` (
 funding history is fetched) runs R275's best book on six sets that pair Lighter with each venue held, with the
 Lighter leg charged 4 bp instead of 7.
 
+## What proven traders let slip (owner, 2026-10-21)
+The owner asked for the talks of people who made money trading, starting with Tarek Elmarhri, and for what they say
+by accident about how the money is made. The write-up is `docs/TRADER_TALKS.md`. It has cards per person with a
+credibility tier, seven sources of trading money with who pays each, and a checklist for finding opportunities
+ourselves.
+
+**The common thread:** each of them names who is on the other side and why that side keeps paying. The other side
+is forced, impatient, constrained or wants leverage. The flows that pay best run on a clock or a rule. Small
+accounts can reach three of the seven sources: risk-transfer premia (carry), barrier gaps (venues) and forced or
+rule-bound flow.
+
+**New queue rows:**
+
+| Method | Clock or rule | Data |
+|---|---|---|
+| M301 | US cash-open flush and reverse (Elmarhri: "on le prend tout le temps") | 1-minute klines for BTC/ETH/SOL, held from 2026-10-21 |
+| M303 | Deribit settlement TWAP, 07:30-08:00 UTC (SEBI's Jane Street order is the template) | 1-minute klines; Deribit chains recorded |
+| M304 | ETF fixing hour (BRRNY, 15:00-16:00 New York) | hourly klines; daily ETF flows to fetch |
+| M302 | 25-day MA deviation buy (BNF) | held; overlaps NULL lanes, so last |
+
+The 1-minute data also unblocks M290 (scheduled releases) and M206 (opening-range breakout). The four clock lanes
+(M290, M301, M303, M206) can share one sub-hour family PREREG with one reality check.
+
 ## Critical files
 - **New:**
   - `scripts/record_mexc_funding.py`, `scripts/record_notices.py`, `scripts/record_unlocks.py`
