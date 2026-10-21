@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-20 23:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-21 06:35 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -22,11 +22,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | stage | now |
 |---|---|
 | Ideas in the queue, untested | 28 |
-| Ideas partly tested | 36 |
-| Ideas blocked (data, download, compute) | 71 |
-| Rounds in the registry | 94 (NULL 62, PENDING 15, CONFIRMED 7, PARTIAL 6, DATA_PASS 4) |
-| Program trials | 9,478,319 |
-| Forward paper lanes running | 12 |
+| Ideas partly tested | 38 |
+| Ideas blocked (data, download, compute) | 70 |
+| Rounds in the registry | 100 (NULL 63, PENDING 17, PARTIAL 8, CONFIRMED 7, DATA_PASS 5) |
+| Program trials | 9,478,385 |
+| Forward paper lanes running | 14 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
 | Next decision date | 2027-01-18: first 90-on-time-day looks (R215, R218, R220, R221 futility) |
@@ -37,17 +37,22 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 
 | lane | book | replay | on_time | 2x / 3x | decided by |
 |---|---|---|---|---|---|
-| R215 mexc_fwd | flow book A on MEXC | 19 d +4.6% | 0 d | - | R221 looks at 90 / 182 / 365 on-time days |
-| R215 mexc_fwd | top-vs-crowd on MEXC | 19 d -0.1% | 0 d | - | R221 looks at 90 / 182 / 365 on-time days |
-| R218 mexc_fwd_sq | flow book X2 (k squared) on MEXC | 19 d +5.9% | 0 d | - | R221 looks at 90 / 182 / 365 on-time days |
-| R220 carry_fwd | funding carry, MEXC | 19 d -0.0% | 0 d | - | 90 on-time days through go_real |
-| R220 carry_fwd | funding carry, Binance | 19 d +0.0% | 0 d | - | 90 on-time days through go_real |
-| R200 flow72_fwd2 | flow book A, Binance | 18 d +22.2% | 1 d +0.1% | -0.0% / -0.1% | 90 scored days through go_real plus NW t >= 2 |
-| R200 flow72_fwd2 | top-vs-crowd, Binance | 18 d +9.7% | 1 d -0.3% | -0.3% / -0.3% | 90 scored days through go_real plus NW t >= 2 |
-| R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 0 d | - | same days as R200, a delay check |
-| R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 0 d | - | same days as R200, a delay check |
+| R215 mexc_fwd | flow book A on MEXC | 19 d +4.6% | 1 d -0.4% | -0.5% / -0.5% | R221 looks at 90 / 182 / 365 on-time days |
+| R215 mexc_fwd | top-vs-crowd on MEXC | 19 d -0.1% | 1 d -0.0% | -0.0% / -0.0% | R221 looks at 90 / 182 / 365 on-time days |
+| R218 mexc_fwd_sq | flow book X2 (k squared) on MEXC | 19 d +5.9% | 1 d -0.5% | -0.5% / -0.6% | R221 looks at 90 / 182 / 365 on-time days |
+| R220 carry_fwd | funding carry, MEXC | 19 d -0.0% | 1 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
+| R220 carry_fwd | funding carry, Binance | 19 d +0.0% | 1 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
+| R200 flow72_fwd2 | flow book A, Binance | 18 d +22.2% | 2 d -1.2% | -1.3% / -1.4% | 90 scored days through go_real plus NW t >= 2 |
+| R200 flow72_fwd2 | top-vs-crowd, Binance | 18 d +9.7% | 2 d -0.5% | -0.5% / -0.5% | 90 scored days through go_real plus NW t >= 2 |
+| R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 1 d -1.3% | -1.3% / -1.4% | same days as R200, a delay check |
+| R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 1 d -0.2% | -0.2% / -0.2% | same days as R200, a delay check |
+| R278 xfund_fwd | cross-venue carry, Gate + Hyperliquid | 60 d +0.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R278 xfund_fwd | cross-venue carry, Binance + MEXC | 60 d +0.9% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R278 xfund_fwd | cross-venue carry, Gate + MEXC (post hoc) | 60 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 60 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 60 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 
-Processing lag of on-time hours: 22 hours, median 79.34166666666667 min, max 259.8833333333333 min; days with late hours: 2026-10-20.
+Processing lag of on-time hours: 29 hours, median 79.88333333333334 min, max 259.8833333333333 min; days with late hours: 2026-10-20, 2026-10-21.
 
 ## 3. Next in the queue
 
@@ -78,13 +83,13 @@ Processing lag of on-time hours: 22 hours, median 79.34166666666667 min, max 259
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R269 | montag_v1 | DONE | NULL | 6 |
-| R270 | montag_fwd | RUNNING | PENDING | 1 |
-| R271 | announce_v1 | DONE | NULL | 64 |
-| R273 | fundext_v1 | DONE | NULL | 40 |
-| R272 | announce_fwd | RUNNING | PENDING | 2 |
-| R274 | squeeze_v1 | DONE | NULL | 72 |
 | R275 | xfund_v1 | DONE | PARTIAL | 560 |
 | R276 | xvfac_v1 | DONE | PARTIAL | 18 |
+| R278 | xfund_fwd | RUNNING | PENDING | 3 |
+| R277 | xfund_kd_v1 | DONE | PARTIAL | 4 |
+| R279 | xfund_kc_fwd | RUNNING | PENDING | 2 |
+| R280 | levcarry_v1 | DONE | DATA_PASS | 0 |
+| R281 | sizecarry_v1 | DONE | NULL | 30 |
+| R282 | pitfac_v1 | DONE | PARTIAL | 27 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

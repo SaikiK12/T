@@ -73,6 +73,9 @@ pub struct Spec {
     pub end: String,
     #[serde(default)]
     pub hedge: Option<String>,
+    /// A frozen batch PREREG that declares the reserved samples this spec reads (engine/src/reserved.rs).
+    #[serde(default)]
+    pub reserved_prereg: Option<String>,
     #[serde(default = "d_hcost")]
     pub hedge_cost: f64,
     #[serde(default = "d_alpha")]
@@ -194,9 +197,12 @@ pub fn build(spec: Spec, log: &dyn Fn(String)) -> Result<Family> {
     if spec.stops.iter().any(|&x| x > 0.0) && spec.lines.iter().any(|l| l == "hedged") {
         return Err(anyhow!("a cover with the hedged line is not implemented (the hedge would need the same exit)"));
     }
-    if data::ms(&spec.start)? < data::ms("2021-01-01")? {
-        return Err(anyhow!("rows before 2021-01-01 are the reserved 2020 sample (docs/GATES.md); not read here"));
+    let mut paths: Vec<&str> = vec![spec.events.as_str()];
+    for v in &spec.venues {
+        paths.push(&v.klines);
+        paths.extend(v.funding.as_deref());
     }
+    crate::reserved::check(&spec.start, &paths, spec.reserved_prereg.as_deref())?;
     let evs = read_events(&spec)?;
     let root = data::data_root();
     let mut sources = Vec::new();

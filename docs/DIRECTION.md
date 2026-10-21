@@ -191,7 +191,7 @@ It is an option beside the main direction, not a replacement. It enters the queu
 
 | Method | What | First step |
 |---|---|---|
-| M264 | Order-flow imbalance scalp (1-10 s imbalance, microprice) on MEXC and Binance | A top-of-book and trades recorder for about 10 liquid coins plus the coins R278 holds. L2 history cannot be backfilled, so the clock starts when the recorder does. API execution only. |
+| M264 | Order-flow imbalance scalp (1-10 s imbalance, microprice) on MEXC and Binance | **Recorder running since 2026-10-21 06:35 UTC** (`scripts/record_tape.py`, `data/tape`): per-second best bid/ask, order-flow imbalance and trades for 12 liquid coins on both venues, capped at 3 GB (about five weeks). Next: a PREREG frozen before the tape is read against any price change, with its first weeks as discovery and the weeks recorded after the freeze as a sample nobody has seen. Only QA counts (rows, spreads, lags) have been looked at. API execution only. |
 | M265 | Leverage and liquidation check for R275's carry legs at 1x / 2x / 3x / 5x | Gate 0 and descriptive, on R275's own trades. It gives the safe leverage per book and the return on capital at that leverage. |
 | M266 | Confidence-sized carry: weight by spread width and persistence, capped at 3x | A qx spread variant, so a new lane with its own engine version. |
 | M267 | Settlement-window carry: hold the pair only around the short venue's settlements | Screen the size of settlement gaps against 4 legs of cost first. |

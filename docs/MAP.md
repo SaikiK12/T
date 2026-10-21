@@ -456,13 +456,47 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - NULL: the best cross-venue factor has RC p 0.124.
   - Only the reference (Binance funding alone) passes, and it gets no follow-up (queued as M263).
   - [Findings](../experiments/xvfac_v1/FINDINGS.md).
-- **R277 (xfund_kd_v1)** replicates R275's best book unchanged on KuCoin and dYdX, which R275 never read. It is
-  frozen once the dYdX download finishes.
+- **R277 (xfund_kd_v1)** replicated R275's best book unchanged on KuCoin and dYdX, which R275 never read.
+  - PARTIAL, 2 of 4 sets: gate+kucoin +11.76%/yr (NW t 11.41) and binance+kucoin +10.80%/yr (NW t 11.17), both
+    positive every year at 1x and 2x.
+  - The dYdX sets fail: dYdX's crash prints of 2025-10-11/12 dominate them.
+  - [Findings](../experiments/xfund_kd_v1/FINDINGS.md).
 - **R278 (xfund_fwd)** runs R275's books forward on paper with live fills:
   - A gate+hyperliquid and B binance+mexc, as pre-committed;
   - C gate+mexc, post hoc.
   - On-time from 2026-10-22; NW t >= 2.5 at 90 / 180 scored days.
   - `lab/xfund.py` reproduces R275's trades exactly (`scripts/xfund_parity.py`).
+- **R279 (xfund_kc_fwd)** runs R277's two KuCoin books forward on paper:
+  - the same rule, accounting and decision as R278;
+  - entries on contracts missing from a venue's live list are blocked, which R278 does not do
+    ([R278 notes](../experiments/xfund_fwd/NOTES.md));
+  - it runs on `lab/carrylane.py`, R278's lane for any venues, whose journals match R278's script in a test.
+- **R280 (levcarry_v1), done: the books stay at 1x, on cross margin per venue.** It measured how much leverage these
+  five books can carry before an intraday move liquidates a leg, under 3 margin policies and 2 maintenance margins
+  (0 trials).
+  - Isolated margin per leg is liquidated even at 1x on every book: 155 short-leg days with a pump of about 95% or
+    more, 149 of them real on other venues.
+  - One cross account per venue is safe at 1x on every book, at 2x only on binance+mexc and binance+kucoin, and at
+    3x on none. The 2025-10-11 crash wipes a one-sided venue account at 2x.
+  - [FINDINGS](../experiments/levcarry_v1/FINDINGS.md).
+- **R281 (sizecarry_v1), NULL: the books stay equal-weighted.** It sized each open pair of the six carry books by
+  confidence (spread, persistence, inverse leg volatility and their products, weights capped at 3 slots) against equal
+  slots (30 trials).
+  - No book passes its SPA bar (p ≤ 0.0083 at 2x). The closest is R279 A spread_persist, p 0.026.
+  - Tilting to the widest spreads adds +1.3 to +8.7 %/yr at 1x, but it doubles the trading and cuts the NW t by up to
+    half. The gain comes only from 2025-26, the years of R280's short-leg pumps.
+  - [FINDINGS](../experiments/sizecarry_v1/FINDINGS.md).
+- **R282 (pitfac_v1), PARTIAL by its frozen rule, but no book is evidence.** It tested nine factors from the daily
+  point-in-time panel (`lab/daily.py`) on qx `factors`, top 150 Binance perps, 2021-26 (27 trials).
+  - The factors: Korean premium, print-wick days, size, volume/cap, fee yield, OI/cap, venue breadth, multi-venue
+    funding gap and age.
+  - 18 series beat the reality check. Age and vol_mcap also have a positive daily book at 1x and 2x: +3.9 and
+    +1.6 bp/day at 1x.
+  - Those books have NW t 0.68 and 0.39, and their 10 best days are their whole sum.
+  - The real finding is a median effect. Young, small, high-turnover coins drift down on a typical day, and rare
+    squeezes cancel it in the mean.
+  - The Korean premium, fee yield and funding gap are NULL. M276 (cap the squeezes) is queued.
+  - [FINDINGS](../experiments/pitfac_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -560,6 +594,15 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - Both were found by the Codex review and measured on 2026-10-19. They are too rare to move any result, and kept for
     reproducibility.
 - Returns are Binance traded-close to traded-close minus funding. They are not mark-price, index or fill PnL.
+- **Dead tails (measured 2026-10-21).** After a delisting, Binance's kline archive keeps writing no-trade bars at a
+  frozen close.
+  - Since 2021 that is 1.29M hourly bars on 148 perps, 8.3% of all bars. BTCST runs from 2021 to 2026, and RAY, FTT
+    and SC run for years.
+  - `lab/panel.py` keeps them as prices, so a delisted coin shows a return of 0. It stays eligible while its trailing
+    30-day volume still ranks it in the top 100.
+  - This is the mechanism behind the integrity audit's "coins that leave the universe exit for free". Its effect on
+    the hourly books is not measured here.
+  - `lab/daily.py` drops every bar without a trade.
 - Binance public-data issue #491 reports a 2026-06-25 change in the metrics `create_time` convention (cited by the
   Codex review). We checked SOLUSDT archive files for 06-10, 06-23..27 and 09-15:
   - Each day has 288 rows, with no duplicate midnight stamps.
@@ -568,6 +611,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,322 after R278 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,385 after R282 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

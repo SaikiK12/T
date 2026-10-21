@@ -49,6 +49,8 @@ FORWARD = [
      "12 scored notices per book"),
     ("R278", "xfund_fwd", "cross-venue funding carry, books A, B, C", "Gate, Hyperliquid, Binance, MEXC",
      "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
+    ("R279", "xfund_kc_fwd", "cross-venue funding carry on KuCoin, books A, B", "Gate, Binance, KuCoin",
+     "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
 ]
 
 
@@ -179,15 +181,17 @@ def forward_days():
                         "book": r["book"], "series": f"{rid} {r['book']}", "group": group, "kind": kind,
                         "net": num(r[col]),
                         "net_2x": num(r.get("net_2x")), "net_3x": num(r.get("net_3x"))})
-    sets = {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}
-    done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / "xfund_fwd" / "journal" / "decisions.csv")}
-    for r in rows_csv(EXP / "xfund_fwd" / "journal" / "days.csv"):
-        if (r["book"], r["day"], r["run"]) not in done:   # a run cut short; the lane ignores its rows too
-            continue
-        out.append({"key": f"xfund_fwd|{r['book']}|{r['day']}|{r['run']}", "day": r["day"], "round": "R278",
-                    "lane": "xfund_fwd", "book": r["book"], "series": f"R278 {r['book']} {sets.get(r['book'], '')}",
-                    "group": "Cross-venue funding carry", "kind": "ontime" if r["kind"] == "late" else r["kind"],
-                    "net": num(r["net"]), "net_2x": num(r["net_2x"]), "net_3x": num(r["net_3x"])})
+    carry = {"xfund_fwd": ("R278", {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}),
+             "xfund_kc_fwd": ("R279", {"A": "Gate + KuCoin", "B": "Binance + KuCoin"})}
+    for lane, (rid, sets) in carry.items():
+        done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / lane / "journal" / "decisions.csv")}
+        for r in rows_csv(EXP / lane / "journal" / "days.csv"):
+            if (r["book"], r["day"], r["run"]) not in done:   # a run cut short; the lane ignores its rows too
+                continue
+            out.append({"key": f"{lane}|{r['book']}|{r['day']}|{r['run']}", "day": r["day"], "round": rid,
+                        "lane": lane, "book": r["book"], "series": f"{rid} {r['book']} {sets.get(r['book'], '')}",
+                        "group": "Cross-venue funding carry", "kind": "ontime" if r["kind"] == "late" else r["kind"],
+                        "net": num(r["net"]), "net_2x": num(r["net_2x"]), "net_3x": num(r["net_3x"])})
     for r in rows_csv(EXP / "vt_fwd" / "journal" / "days.csv"):
         out.append({"key": f"vt_fwd|{r['book']}|{r['day']}", "day": r["day"], "round": "R225", "lane": "vt_fwd",
                     "book": r["book"], "series": f"R225 {r['book']}", "group": "Volatility-targeted (MEXC)",
@@ -203,7 +207,8 @@ def forward_lanes(days):
         age, at = lane_age(lane)
         mine = [d for d in days if d["lane"] == lane]
         ontime = [d for d in mine if d["kind"] == "ontime"]
-        daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd", "xfund_fwd"}
+        daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd", "xfund_fwd",
+                         "xfund_kc_fwd"}
         by_book, progress_note = {}, None
         if daily:
             books = sorted({d["book"] for d in mine})
@@ -297,11 +302,13 @@ def methods():
 def data_sources():
     """Metadata inventory only: never follow links or infer market coverage from file activity."""
     prov = {p.stem for p in (ROOT / "docs" / "provenance").glob("*.json")}
-    fresh_h = {"live": 2, "recorders": 2, "mexc": 2, "logs": 2, "hyperliquid": 26}
+    fresh_h = {"live": 2, "recorders": 2, "mexc": 2, "logs": 2, "hyperliquid": 26, "tape": 1}
     labels = {
         "mexc": ("MEXC forward-data cache", "Prospective collection"),
         "mexc_hist": ("MEXC historical futures", "Historical market data"),
         "recorders": ("Point-in-time exchange and event snapshots", "Prospective collection"),
+        "tape": ("Order-flow tape: best bid/ask and trades per second, Binance and MEXC", "Prospective collection"),
+        "daily": ("Daily point-in-time panel", "Derived data"),
         "live": ("Live market observations", "Prospective collection"),
         "logs": ("Collector and scheduler logs", "Operational logs"),
         "hyperliquid": ("Hyperliquid observations", "Prospective collection"),

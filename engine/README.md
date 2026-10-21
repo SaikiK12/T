@@ -25,9 +25,17 @@ cargo test --release --manifest-path engine/Cargo.toml     # before every commit
 Shared code:
 - `src/data.rs`: the hourly axis, parquet reading, legs and covers.
 - `src/stats.rs`: cluster statistics.
+- `src/reserved.rs`: the reserved-sample check every subcommand runs before reading data.
 
 The rules each subcommand implements are in the header comment of its source file. Each lane's PREREG states them in
 full and freezes the source hashes.
 
-Data come from `QX_DATA` (default `data/`). Rows before a spec's `start` are dropped as they are read, so the
-reserved 2020 sample is never used (`docs/GATES.md`).
+Data come from `QX_DATA` (default `data/`). Rows before a spec's `start` are dropped as they are read.
+
+**Reserved samples (`docs/GATES.md`).** A spec whose `start` is before 2021-01-01, or that names a path with a
+`reserved` folder (Gate, KuCoin, dYdX long tails), is refused unless it sets `reserved_prereg` to a frozen batch PREREG.
+- That PREREG must hold the token for each sample it reads: `RESERVED-2020-READ`, `RESERVED-GATE-READ`,
+  `RESERVED-VENUE-READ`.
+- Its PREREG.sha256 sidecar must match its bytes; the engine computes the SHA-256 itself.
+- Before 2026-10-21 only `events` refused 2020 starts. `spread` and `factors` relied on their specs; no frozen spec
+  started before 2021.

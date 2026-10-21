@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-21, after R278. Program trials: 9,478,322 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-21, after R282. Program trials: 9,478,385 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -81,18 +81,30 @@ overstatements are corrected here.
 | **Binance announcement types** (spot listing, perp launch, pre-listing, margin, earn, new pairs, funding-frequency change, network upgrade), long or short +1 / 24 / 72 / 168 h, as one family | Gate 0, NULL, 64 strategies (R271). Best: funding-frequency change long +1 h +3.59% per notice, t 3.31 (n 35, RC p 0.535); pre-listing short +168 h +11.48%, median +18.05%, t 2.03 (n 45) | None clean: 2020 notices go to the reserved batch | fund_freq 2x +3.19%, 3x +2.79%; prelist 2x +11.08%, 3x +10.68% | Not checked | **R272** announce_fwd (both, MEXC paper, from 2026-10-20 19:00 UTC), Bonferroni t >= 2.2 at 12 scored notices per book. Since 2026, Binance's funding-frequency titles do not match the frozen rule | NULL; two candidates forward on paper |
 | **Extreme-funding onset** (first settlement at or beyond ±0.3 / 1 / 2% in 72 h), long or short +1 / 8 / 24 / 72 h | Gate 0, NULL, 40 strategies (R273). Best neg2 long +72 h +7.32%, median -4.95%, t 2.39 (RC p 0.87). After a negative onset the median coin falls (neg0.3 short +72 h median +2.83%) but squeezes make the mean negative (-0.99%) | Not read: top 3 go to the 2020 batch | neg2 long +72 h 2x +6.92%, 3x +6.52% | R274 (gate 0, MEXC 2025-26): the same pattern on MEXC's own funding | None | NULL |
 | **Negative-funding onset short with a cover** (close-based 10 / 20 / 35% cover; queue M261) | Gate 0, NULL, 72 strategies (R274, Binance 2021-26 and MEXC 2025-26). The cover cuts the tail (bn_neg2 168h -14.10% to -1.34%) and the median with it. Best mx_neg0.3 short 72h, 10% cover, +0.55%, t 1.35 (RC p 0.94) | Not read: the best covered Binance strategy goes to the 2020 batch | best 2x +0.15%, 3x -0.25% | Tested on MEXC prices and funding: no covered strategy reaches t 2 | None (pre-committed rule: forward only at t >= 2) | NULL |
-| **Cross-venue funding carry**: the same coin on two venues; long the perp where trailing funding is lower, short where it is higher, entries above a spread threshold, exit below half of it (queue M059) | Gate 0, **PARTIAL: 212 of 560 books pass every gate** (R275, 2021-26; RC null 95th pct t 4.27). Best gate+hyperliquid L14d th5% K20 +9.73%/yr, t 12.70, NW t 8.63, every year positive (2023 +18.6%, 2025 +5.0%). Funding is 96-105% of the gross | None clean: binance+gate L14d th10% K20 goes to the reserved batch (2020 rows); R277 replicates the best book on KuCoin and dYdX, which R275 never read | Best 2x +8.51%, 3x +7.28%/yr. Missing settlements move the gross by -1.0% to +0.8% | binance+mexc L14d th10% K20 passes: +6.33%/yr, t 8.24 (2025-26 only); gate+mexc L7d th10% K20 +16.29%/yr (post hoc pick) | **R278** xfund_fwd (books A gate+HL, B binance+MEXC, C gate+MEXC post hoc), on-time from 2026-10-22, NW t >= 2.5 at 90 / 180 scored days | **The strongest gate-0 evidence in the program.** Needs two venue accounts; liquidation above 1x, collateral moves and fills not modelled |
+| **Cross-venue funding carry**: the same coin on two venues; long the perp where trailing funding is lower, short where it is higher, entries above a spread threshold, exit below half of it (queue M059) | Gate 0, **PARTIAL: 212 of 560 books pass every gate** (R275, 2021-26; RC null 95th pct t 4.27). Best gate+hyperliquid L14d th5% K20 +9.73%/yr, t 12.70, NW t 8.63, every year positive (2023 +18.6%, 2025 +5.0%). Funding is 96-105% of the gross | **Venue replication (R277, PARTIAL): the best book, unchanged, on KuCoin, which R275 never read: gate+kucoin +11.76%/yr NW t 11.41, binance+kucoin +10.80%/yr NW t 11.17, every year positive at 1x and 2x.** dYdX sets fail (crash prints). binance+gate L14d th10% K20 goes to the reserved batch (2020 rows) | Best 2x +8.51%, 3x +7.28%/yr. Missing settlements move the gross by -1.0% to +0.8% | binance+mexc L14d th10% K20 passes: +6.33%/yr, t 8.24 (2025-26 only); gate+mexc L7d th10% K20 +16.29%/yr (post hoc pick) | **R278** xfund_fwd (books A gate+HL, B binance+MEXC, C gate+MEXC post hoc) and **R279** xfund_kc_fwd (A gate+KuCoin, B binance+KuCoin), on-time from 2026-10-22, NW t >= 2.5 at 90 / 180 scored days | **The strongest gate-0 evidence in the program.** Equal slots: confidence sizing failed (R281). Needs two venue accounts and cross margin per venue at 1x: isolated legs are liquidated by short-leg pumps even at 1x, and only the two Binance-paired books survived 2x (R280). Collateral moves and fills not modelled |
 | **Cross-venue factors**: Binance-minus-Gate and Binance-minus-Hyperliquid funding gaps, price-gap deviation, volume shift as predictors of a Binance perp's next 1-7 days (M262) | Gate 0, NULL, 18 series (R276): best fund_gap_3d RC p 0.124. Only the reference bn_fund_3d (Binance funding alone) passes: 24 h quintile book +10.43 bp/day at 1x | None | bn_fund_3d +4.68 / -1.07 bp/day | Not checked | None (bn_fund_3d queued as M263, to reconcile with R190) | NULL |
+| **Daily-panel factors**: Korean premium, print-wick days, size, volume/cap, fee yield, OI/cap, venue breadth, six-venue funding gap, listing age, as predictors of a Binance perp's next 1-7 days (M093, M268-M275) | Gate 0, **PARTIAL by the frozen rule, 27 series (R282)**: 18 beat the reality check; age (long old) +3.9 bp/day and vol_mcap (long low) +1.6 bp/day pass the cost leg, but their books have NW t 0.68 and 0.39 and their 10 best days are their whole sum. Median effect: young, small, high-turnover coins drift down on a typical day; squeezes (ALPACA +520%, UNFI +450%, HIFI +440%) cancel it in the mean | Not read; age and vol_mcap eligible for the 2020 batch | age +3.5 / +3.1, vol_mcap +0.6 / -0.5 bp/day at 2x / 3x | Same coins on MEXC; short legs need a squeeze cap (M276, queued) | none (a forward lane would need about 55 years to reach t 2) | No money yet; the median effect is the lead |
 
 ## The best achievable edges, ranked
 1. **Cross-venue funding carry (new, 2026-10-21).** The first family in the program to pass gate 0 with t far above
    its reality-check null: 212 of 560 books (R275), broad regions of neighbours, every year positive.
    - **Size:** about 5-10%/yr on total capital at 1x legs in 2025-26 (17-19%/yr in 2023, when Hyperliquid's funding
-     was new). Leverage per leg scales it, and liquidation risk with it (M265 measures that next).
-   - **Falsified by:** R278 failing at 90 or 180 scored days, R277 failing to replicate on KuCoin and dYdX, or the
-     reserved batch.
-   - **To trade it:** accounts on two venues (Gate plus Hyperliquid, or Binance or Gate plus MEXC), about 2 orders a
-     day per book, placed by the owner only after `go_real`.
+     was new).
+   - **Leverage (R280):** it does not scale safely.
+     - Isolated margin per leg is liquidated even at 1x: short legs on low-cap coins pumped about 95% or more in a
+       day on 155 days, 137 of them in 2025-26.
+     - On one cross account per venue, 1x is safe on every book, 2x only on binance+mexc and binance+kucoin, and 3x
+       on none.
+     - The lanes stay at 1x.
+   - **Sizing by confidence (R281, NULL):** equal slots stay.
+     - Weighting pairs by spread adds +1.3 to +8.7 %/yr at 1x but doubles turnover, and it earns only in 2025-26.
+     - No book passes its SPA bar at 2x.
+   - **Replicated (R277):** unchanged on KuCoin, a venue no lane had read: +10.8 to +11.8%/yr, NW t above 11, every
+     year positive. The dYdX sets failed on dYdX's crash prints.
+   - **Falsified by:** R278 and R279 failing at 90 or 180 scored days, or the reserved batch.
+   - **To trade it:** accounts on two venues (Gate plus Hyperliquid or KuCoin, or Binance or Gate plus MEXC or
+     KuCoin), about 2 orders a day per book, placed by the owner only after `go_real`. Whether the owner can open a
+     KuCoin futures account is for the owner to check.
 2. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
    not significant at 2x), and the MEXC version has more coins to carry.
    - **Size:** about 1%/yr in the 2025-26 regime, +8% in 2024, +35% in 2021. It is the safest edge, not the largest.

@@ -1,3 +1,6 @@
+"""Timing check for lab.search on the research universe: how long the condition catalog, the single-condition
+rules and a 512-rule evaluation take on the discovery rows. A developer tool; it computes no statistic.
+"""
 import sys, time
 from pathlib import Path
 import numpy as np

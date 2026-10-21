@@ -1,42 +1,56 @@
 {
- "last_scored_hour": "2026-10-20T20:00:00+00:00",
- "days_ticketed": 19,
+ "last_scored_hour": "2026-10-21T02:00:00+00:00",
+ "days_ticketed": 20,
  "BIN": {
   "coverage": {
    "symbols": 60,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.10691563015997758,
+  "market_mean_apr_now": -0.08119344800908455,
   "top_apr_now": [
    {
     "symbol": "SOXLUSDT",
-    "apr": 0.35271896272509673,
+    "apr": 0.45992432986774173,
+    "spot": false
+   },
+   {
+    "symbol": "SNXXUSDT",
+    "apr": 0.4365132112131202,
     "spot": false
    },
    {
     "symbol": "SKHYNIXUSDT",
-    "apr": 0.2900070979861388,
+    "apr": 0.3123414473763357,
     "spot": false
    },
    {
-    "symbol": "CRCLUSDT",
-    "apr": 0.23142460072752633,
-    "spot": false
-   },
-   {
-    "symbol": "SAMSUNGUSDT",
-    "apr": 0.22933558214087196,
+    "symbol": "SNDKUSDT",
+    "apr": 0.28439461369998753,
     "spot": false
    },
    {
     "symbol": "INTCUSDT",
-    "apr": 0.2186094613231641,
+    "apr": 0.2511236613887983,
     "spot": false
    }
   ],
   "replay": {
    "days": 19,
+   "days_invested": 0,
+   "total": 0.0,
+   "total_2x": 0.0,
+   "total_3x": 0.0,
+   "total_spot5": 0.0,
+   "total_r191_timing": 0.0,
+   "funding": 0.0,
+   "basis": 0.0,
+   "cost": 0.0,
+   "avg_open": 0.0,
+   "go_real_invested": null
+  },
+  "ontime": {
+   "days": 1,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -58,31 +72,31 @@
    "spot_taker_mean": 0.0005578947368421052
   },
   "held_now": [],
-  "market_mean_apr_now": -0.2404092784106019,
+  "market_mean_apr_now": -0.2333647782610216,
   "top_apr_now": [
    {
-    "symbol": "HYPEUSDT",
-    "apr": 0.08419333206954131,
-    "spot": true
-   },
-   {
     "symbol": "BTCUSDT",
-    "apr": 0.07908333310600332,
+    "apr": 0.07944833322956887,
     "spot": true
    },
    {
     "symbol": "ENAUSDT",
-    "apr": 0.07640666619712042,
+    "apr": 0.07397333270394787,
+    "spot": true
+   },
+   {
+    "symbol": "TAOUSDT",
+    "apr": 0.07360833220692106,
+    "spot": true
+   },
+   {
+    "symbol": "HYPEUSDT",
+    "apr": 0.07166166514404419,
     "spot": true
    },
    {
     "symbol": "STRKUSDT",
-    "apr": 0.07628499849336853,
-    "spot": true
-   },
-   {
-    "symbol": "ZECUSDT",
-    "apr": 0.07178333244667101,
+    "apr": 0.07105333199206143,
     "spot": true
    }
   ],
@@ -112,6 +126,20 @@
     },
     "pass": false
    }
+  },
+  "ontime": {
+   "days": 1,
+   "days_invested": 0,
+   "total": 0.0,
+   "total_2x": 0.0,
+   "total_3x": 0.0,
+   "total_spot5": 0.0,
+   "total_r191_timing": 0.0,
+   "funding": 0.0,
+   "basis": 0.0,
+   "cost": 0.0,
+   "avg_open": 0.0,
+   "go_real_invested": null
   }
  }
 }

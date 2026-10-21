@@ -17,10 +17,10 @@ Development targets [`claude/yo-9a1k5w`](https://github.com/SaikiK12/T/tree/clau
 | [`docs/PANEL.md`](docs/PANEL.md) | Live status: objective, forward lanes, next decisions (`scripts/panel.py`) |
 | `registry/` | [`rounds.csv`](registry/rounds.csv) (every round and its trial count, append-only), [`methods.csv`](registry/methods.csv) (the live queue), `candidates.csv` (edges still alive) |
 | [`research/intake/`](research/intake/README.md) | Received-source versions, exact tested/open scope and aliases to the live queue; catalog access does not imply full extraction or data possession |
-| `experiments/<lane>/` | `PREREG.md` (frozen before any statistic), `FINDINGS.md`, `results/`; forward lanes keep a `journal/` |
-| `lab/` | Python research library: data, panel, features, backtester, inference (DSR, SPA/MCS, PBO), prereg, registry, gates, live paper |
+| [`experiments/`](experiments/README.md) | One folder per lane: `PREREG.md` (frozen before any statistic), `FINDINGS.md`, `results/`; forward lanes keep a `journal/`. The catalog lists every lane with its round, status and verdict |
+| [`lab/`](lab/README.md) | Python research library: data, panel, features, backtester, inference (DSR, SPA/MCS, PBO), prereg, registry, gates, live paper |
 | `engine/` | `qx`, the Rust engine: event, factor and cross-venue spread families from one TOML spec ([`engine/README.md`](engine/README.md)) |
-| `scripts/` | Fetchers (`fetch_*`), recorders (`record_*`), lane runners (`run_*`, `qx_run.py`), the forward and notice loops, the dashboard export |
+| [`scripts/`](scripts/README.md) | Fetchers (`fetch_*`), recorders (`record_*`), lane runners (`run_*`, `qx_run.py`), the forward and notice loops, the dashboard export |
 | `dashboard/` | The Control Room page; `scripts/dashboard_data.py` exports its datasets |
 | `data/` | Downloaded and recorded data (not in git). Reserved samples sit under `reserved/` folders and are read only by a frozen batch PREREG |
 | `templates/lane/` | Starting point for a new lane |
@@ -89,7 +89,7 @@ Docs stay at their paths because frozen PREREGs link to them.
 ## Use
 
 ```
-python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
+python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow websockets
 .venv/bin/python -m unittest discover -s tests -t .              # before every commit to lab/ or scripts/
 .venv/bin/python scripts/check_research_integrity.py             # registry/specification metadata
 .venv/bin/python scripts/check_method_intake.py                  # source versions, aliases and live queue

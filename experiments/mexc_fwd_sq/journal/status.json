@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-10-20T21:00:00+00:00",
+ "last_hour": "2026-10-21T03:00:00+00:00",
  "mapped": 39,
  "dropped": [
   "BZUSDT",
@@ -26,12 +26,12 @@
  ],
  "mexc_fee": {
   "taker": {
-   "mean": 0.00010512820512820514,
+   "mean": 0.00027435897435897425,
    "min": 0.0,
    "max": 0.0004
   },
   "maker": {
-   "mean": 5.128205128205129e-06,
+   "mean": 6.410256410256408e-05,
    "min": 0.0,
    "max": 0.0001
   }
@@ -43,6 +43,28 @@
   "total_3x": 0.03979761854396439,
   "funding": -0.005996784626494992,
   "coverage": 0.5603070175438597
+ },
+ "X2_ontime": {
+  "days": 1,
+  "total": -0.0046522378422116,
+  "total_2x": -0.0051166207742804,
+  "total_3x": -0.0055810037063492,
+  "funding": -0.0008674750608406,
+  "coverage": 0.3657407407407407,
+  "go_real": {
+   "n": 1,
+   "mean": -0.0046522378422116,
+   "hit": 0.0,
+   "worst": -0.0046522378422116,
+   "n_clusters": null,
+   "checks": {
+    "enough_scored": false,
+    "mean_positive": false,
+    "hit_rate": false,
+    "no_tail_event": true
+   },
+   "pass": false
+  }
  },
  "vs_R215_A_replay": {
   "days": 19,
