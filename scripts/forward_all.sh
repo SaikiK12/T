@@ -43,5 +43,6 @@ flock -n .xfund.lock timeout 1500 $PY scripts/forward_xfund.py >> experiments/xf
 flock -n .xfund_kc.lock timeout 1500 $PY scripts/forward_xfund_kc.py >> experiments/xfund_kc_fwd/tick.log 2>&1
 timeout 120 $PY scripts/forward_lag.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 120 $PY scripts/panel.py >> experiments/vt_fwd/tick.log 2>&1
+timeout 60 $PY scripts/catalog.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 120 $PY scripts/dashboard_data.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 300 $PY scripts/record_digest.py >> experiments/recorders/tick.log 2>&1
