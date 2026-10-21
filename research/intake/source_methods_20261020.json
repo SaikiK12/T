@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-21",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -8964,6 +8964,285 @@
           }
         ]
       }
+    },
+    {
+      "id": "HUB26-BS-BB-EMA",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Bollinger-distance and EMA-state composite expert",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "TA-Lib BB300; d=100*(upper-current_close)/(upper-lower). d>95 short; d<5 long; strictly40<d<60 follow sign EMA15-EMA60; otherwise flat. Evaluate every15 callbacks; active targets round(1/N,2)*leverage1.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M115 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Related indicator/composite family only; neither a MACD signal cross nor an exact tested Bollinger squeeze."
+    },
+    {
+      "id": "HUB26-BS-EMA-STATE",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "EMA15/60 state expert",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "EMA15/EMA60>1 long, <1 short, equal flat; state rule does not require a new crossover event. Same15-callback target schedule.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M115 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "M115 EMA family, not the MACD signal-line/histogram rule of M019."
+    },
+    {
+      "id": "HUB26-BS-DOJI-BB",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Stateful doji and Bollinger-edge expert",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Positive TA-Lib CDLDOJI and normalized BB300 upper-band distance<30 long or>70 short. Otherwise return999, retaining the prior position. Variable name rsi_ea does not make this an RSI strategy.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M030 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Related candlestick family; exact stateful doji/band composite not identified as tested."
+    },
+    {
+      "id": "HUB26-BS-FIB-ADX",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Prior-range Fibonacci breakout and ADX fade expert",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Build levels0,.236,.382,.5,.618,1 from min/max of prior374 closes (exclude current). Below minimum short; above maximum long. Within range, lower-distance=round(100*(current/lower_level-1),2), upper-distance=round(100*(upper_level/current-1),2) in percentage points; with ADX120<20, lower-distance>0.02, upper-distance>0 and lower/upper>3 goes long; upper-distance>0.02, lower-distance>0 and upper/lower>3 goes short. Otherwise999 retains prior position. Strict threshold0.02 percentage points (2bp) applies to the rounded value, not a2% raw-price move.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M204 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Related Fibonacci family only: no ATR zigzag, source retracement-entry stop/target or harmonics. R263 NULL does not test this exact composite."
+    },
+    {
+      "id": "HUB26-BS-EQUAL-CONTROL",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Equal-expert allocation and warmup control",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Four experts initially1/4 each; retain equal weights until60 stored session wealth observations. Ensemble asset target is sum(expert_weight*advisor_target). Kelly sibling uses same equal warmup.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M026 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Allocation control for M026; does not add a new canonical method."
+    },
+    {
+      "id": "HUB26-BS-SOFTMAX-RATIO",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Cumulative-wealth softmax expert allocator (configured method1)",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "After60 observations, score_j=round(final_wealth/first_wealth,4); d=sum(previous_weight_j*score_j); normalize exp(0.35*score_j/d). If d<1e-20 or total update<1e-20 retain old weights. Weekly update30min before week-start session close; source uses all history, not a60-row slice.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M026 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Specific unrun online-allocation scope within M026. This custom softmax is not the standard recursive multiplicative Hedge update; no regret guarantee established."
+    },
+    {
+      "id": "HUB26-BS-SOFTMAX-GROWTHVOL",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Growth-to-volatility softmax expert allocator (alternate method0)",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Alternate constructor method0: score=round(max(((last/first)**(1/nrows)-1)/sample_std(wealth.pct_change()),0),4); same prior-weighted mean denominator and normalized exponential update. All stored observations used after60-row warmup. Initialized demo chooses method1 instead.",
+      "exact_tested_scope": "Source inspection only; no project test of this exact executable MEXC rule identified. The separate no-regret audit executes only two original accounting/weight methods on invented values, not this complete strategy.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "Demo sets commission and slippage to zero. No MEXC execution, funding or 1x/2x/3x cost run exists.",
+        "TA-Lib/platform callbacks, bar completion, calendar, roll and fill chronology not executed. Signals every15 callbacks do not imply a15-minute holding period.",
+        "The advisor tracker disagrees with its own target-percent positions on synthetic simultaneous returns; do not use its score history as portfolio PnL."
+      ],
+      "next_action": "Retain under M026 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "label": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Alternate source branch, not a tuned or selected project strategy. Synthetic flat histories produce NaN weights; no automatic finite fallback exists."
+    },
+    {
+      "id": "HUB26-BS-KELLY-EXPERTS",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Nonnegative growth-to-variance allocation across four experts",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Kelly sibling: after60 stored observations, score=round(max(((last/first)**(1/nrows)-1)/sample_var(wealth.pct_change()),0),4); normalize scores across experts, retaining prior weights if total<1e-20. Same four technical experts, signal schedule and zero-cost demo context.",
+      "exact_tested_scope": "Pinned source received and distinct rule enumerated; allocator statically checked. This sibling was not independently executed or accounting-audited.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Pinned source and explicit indicator/runtime semantics; the demo uses NIFTY-I/BANKNIFTY-I and 375 one-minute OHLC observations.",
+        "For a MEXC adaptation: past-only contract universe, executable delayed quotes, actual funding, fees, spread, turnover and account-risk mechanics."
+      ],
+      "blockers": [
+        "No independently validated accounting tracker, finite/zero-variance policy, covariance model or explicit risk cap.",
+        "Exact platform chronology, MEXC universe, full fills/funding/turnover and1x/2x/3x costs missing."
+      ],
+      "next_action": "Retain under M132 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "label": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Related Kelly/own-performance allocation family, not R217 whole-book sizing; covariance-aware Kelly and exact MEXC execution not supplied."
+    },
+    {
+      "id": "HUB26-BS-INVERSEVOL-ETF",
+      "parent_claim_id": "HUB26-STRATEGY-LIBRARIES",
+      "title": "Monthly inverse-volatility allocation to five pipeline-tail ETFs",
+      "method_type": "strategy_component",
+      "hypothesis": "Concrete public-code lead for a finite future study; no profitable-edge claim.",
+      "testable_rule": "Universe15 named ETFs: SPY,QQQ,VUG,QUAL,MTUM,IWM,USMV,HDV,VEU,VWO,DBC,USO,GLD,AGG,TIP. Pipeline technical_factor(252,volatility,1); drop NaNs, take tail(5) without an explicit sort, normalize1/vol. Rebalance first monthly session2h30m before close; absent assets target0. Header claims momentum, but no momentum-ranking body was received.",
+      "exact_tested_scope": "Pinned whole file received and rule enumerated; imported helpers and runtime not audited.",
+      "unrun_scope": "Exact source rule and any explicitly declared MEXC adaptation remain unrun. Related canonical-family results do not exhaust this timing, universe, state and allocation scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Imported technical_factor/volatility definitions, pipeline ordering/timing, daily ETF prices and tradability.",
+        "An explicitly registered crypto adaptation needs MEXC mapping, availability and complete costs/funding."
+      ],
+      "blockers": [
+        "Imported helpers/order semantics not received; zero/nonfinite volatility and fewer-than5 candidates need resolution. The fewer-than5 branch clears candidates but then continues and overwrites them.",
+        "No synthetic/runtime audit of this file and no MEXC or1x/2x/3x cost result."
+      ],
+      "next_action": "Retain under M027 without changing its existing verdict. Resolve accounting and missing mechanics, then freeze one finite comparison with equal-weight control, complete turnover/funding and1x/2x/3x costs before outcomes.",
+      "source_refs": [
+        {
+          "path": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/factors/risk_parity_naive.py",
+          "label": "Whole file received; distinct rule enumerated. Imported volatility/pipeline implementation not received; no runtime audit."
+        }
+      ],
+      "evidence_refs": [],
+      "canonical_relation": "Dynamic inverse-volatility selection/weighting related to M027; distinct from static A/B/X2 R253. The code does not establish that tail(5) are five lowest/highest-volatility ETFs."
     }
   ],
   "sources": [
@@ -10495,6 +10774,83 @@
       },
       "exact_tested_scope": "Primary source inspection; 27 invented-value decoder/grid/anchor/numeric tests; full suite 579 tests OK with 2 skipped at 9f713bf. No mark-vs-trade market statistic, strategy outcome, new M/R ID or measured trial.",
       "unrun_scope": "Any future price-basis comparison/account study must freeze a finite new specification and code/input hashes, retain the trade-based control and source gaps, and report applicable 1x/2x/3x costs. This intake supplies no profitable rule or safe-leverage conclusion."
+    },
+    {
+      "intake_id": "blueshift_expert_allocation_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [
+        "HUB26-BS-BB-EMA",
+        "HUB26-BS-EMA-STATE",
+        "HUB26-BS-DOJI-BB",
+        "HUB26-BS-FIB-ADX",
+        "HUB26-BS-EQUAL-CONTROL",
+        "HUB26-BS-SOFTMAX-RATIO",
+        "HUB26-BS-SOFTMAX-GROWTHVOL",
+        "HUB26-BS-KELLY-EXPERTS",
+        "HUB26-BS-INVERSEVOL-ETF"
+      ],
+      "received_scope": "Three explicitly enumerated public code files, not the whole repository or platform. All distinct methods in those files enumerated; full original no-regret file statically read, only two methods executed on invented values. Kelly and inverse-volatility files remain independently unaudited.",
+      "media_sources": [
+        {
+          "url": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+          "repository_commit": "8dfeb49f615dbd57acf092924fdfc1fb8c336f37",
+          "sha256": "f78baa1cda81234fdb84d5ba43c1c2abc4369ede4d6a6279f0694ce5316784a9",
+          "bytes": 14350,
+          "basis": "Whole file received and statically reviewed. Only Advisor.update_performance and Agent.weighing_function executed on invented values."
+        },
+        {
+          "url": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/kelly_portfolio.py",
+          "repository_commit": "8dfeb49f615dbd57acf092924fdfc1fb8c336f37",
+          "sha256": "f5c7d744f2598393f8116396be54e3a546b3b546f84bff1ae56ac6439d9a6bd7",
+          "bytes": 13759,
+          "basis": "Whole file received by reader; distinct rules enumerated. Root checked allocator definition. No independent runtime/accounting audit of this file."
+        },
+        {
+          "url": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/factors/risk_parity_naive.py",
+          "repository_commit": "8dfeb49f615dbd57acf092924fdfc1fb8c336f37",
+          "sha256": "964ac2b679f491efd48e2b4e4d0a258f6f5643a7a3742eb5758770f1ae43cfd3",
+          "bytes": 3949,
+          "basis": "Whole file received; distinct rule enumerated. Imported volatility/pipeline implementation not received; no runtime audit."
+        }
+      ],
+      "media_source_count": 3,
+      "shared_mechanics": {
+        "no_regret_universe": [
+          "NIFTY-I",
+          "BANKNIFTY-I"
+        ],
+        "history": "375 one-minute OHLC rows",
+        "schedule": "Signals each15 handle_data callbacks; daily pre-open wealth snapshots; weekly expert-weight update30min before week-start session close.",
+        "costs": "Commission/slippage explicitly0; no funding or MEXC account model.",
+        "sentinel999": "Retain previous asset position; not flat. No time-based exit for experts3/4.",
+        "unused_helpers": [
+          "SMA",
+          "RSI",
+          "MACD"
+        ],
+        "scope_note": "Unused helper definitions are not extra executable strategies; context.offset21 in risk_parity_naive is also unused.",
+        "learning_rate": "Configured method1 eta0.35; Agent constructor default eta0.2 for a separately selected alternate branch. No hyperparameter search."
+      },
+      "synthetic_audit": {
+        "source_sha256": "f78baa1cda81234fdb84d5ba43c1c2abc4369ede4d6a6279f0694ce5316784a9",
+        "execution_scope": [
+          "Advisor.update_performance",
+          "Agent.weighing_function"
+        ],
+        "cases": 7,
+        "market_trials": 0,
+        "findings": [
+          "Two assets at50% each, both+10%: source wealth105.0625 from100; simultaneous targets imply110. Extra division by N and sequential asset compounding disagree with submitted target-percent weights.",
+          "Offsetting+10%/-10% at equal weights: source99.9375 versus target100; four equal+10% assets produce102.5235353 versus110.",
+          "Method0 flat60-row history gives NaN weights. Method1 flat equal wealth resets previous90/10 weights to50/50; algorithm identity, not independently a defect.",
+          "Changing only the first of61 stored rows changes weights with the last60 identical: lookback is minimum history, not a rolling window."
+        ],
+        "reproducibility": "research/audit_blueshift_no_regret.py and research/fixtures/blueshift_no_regret_audit.json in draftPR42. Three loader guard tests; full suite555 tests OK (2skipped) atfffd7f2 on base2c57ca2. Runtime versions in receipt. No source code vendored or platform callbacks executed.",
+        "implementation_commit": "fffd7f2dac08b8d251048ebcd417d28fee0144e4",
+        "draft_pr": "https://github.com/SaikiK12/T/pull/42"
+      },
+      "canonical_reconciliation": "Nine source aliases point to existing M026/M115/M030/M204/M132/M027; generic tested families do not close exact source scope. All272 live queue rows and their statuses are unchanged; original250 source records remain unchanged.",
+      "remaining_scope": "Every actual MEXC implementation remains unrun. Resolve accounting, finite values, full state/chronology and data first; freeze one finite control comparison before returns, then charge full1x/2x/3x costs. No exclusion based on prior or historical family nulls."
     }
   ],
   "reassignment_refs": [
