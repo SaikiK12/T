@@ -58,7 +58,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (69)
+## Run: one lane's frozen measurement (71)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -117,11 +117,13 @@ line is the first line of the script's own docstring.
 - [`run_slow_trend.py`](run_slow_trend.py): R229: frozen, bounded daily spot trend screen.
 - [`run_tradesize.py`](run_tradesize.py): tradesize_v1 (R226): trade count and mean print size as 72 h spread books, tested for information beyond quote volume, as set out in experiments/tradesize_v1/PREREG.md.
 - [`run_tradlead.py`](run_tradlead.py): tradlead_v1 (R261): does the last hour of TradFi perps (commodities CMD, US equities EQ) lead crypto? A market-timing book (TS) and a beta cross-section (XS), holds 1/4/24 h, sign chosen in ...
+- [`run_trendpull.py`](run_trendpull.py): trendpull_v1 (R284): Visser's trend pullback on 10 world indices and every Binance perp, long after the 63-day rate of change resets near zero inside a rising 200-day trend, as set out in ...
 - [`run_tsbattery.py`](run_tsbattery.py): tsbattery_v1 (R242): week-open bias, pre-FOMC drift, ETH/BTC regime and vol-managed trend on the top-50 perps, as set out in experiments/tsbattery_v1/PREREG.md.
 - [`run_tsmom.py`](run_tsmom.py): tsmom_v1 (R237): cross-asset time-series momentum on equity ETFs, FX, metals and bond futures, as set out in experiments/tsmom_v1/PREREG.md.
 - [`run_unlocks.py`](run_unlocks.py): unlocks_v1 (R265): the old session's unlock short (E01, S1) on 2021-26 Binance perps, as set out in experiments/unlocks_v1/PREREG.md.
 - [`run_usindex_calendar.py`](run_usindex_calendar.py): usindex_calendar_v1 (R235): turn-of-month and overnight drift on SPY and QQQ, as alpha against buy-and-hold of the same ETF, as set out in experiments/usindex_calendar_v1/PREREG.md.
 - [`run_venue_gap.py`](run_venue_gap.py): venue_gap_v1 (R216): the flow books' PnL split into crypto and TradFi contracts, in the archive and on the forward replay, as set out in experiments/venue_gap_v1/PREREG.md.
+- [`run_vixpanic.py`](run_vixpanic.py): vixpanic_v1 (R283): long SPY, QQQ and the BTCUSDT perp after VIX-panic onsets (VIX above VIX3M, VVIX in its top 5%, or both), tested against random dates, as set out in ...
 - [`run_volrisk.py`](run_volrisk.py): volrisk_v1 (R241): SVXY in VIX contango, SVXY in contango with calm VIX, and R239's VIXREV-QQQ on 2013-2026, as set out in experiments/volrisk_v1/PREREG.md.
 - [`run_vrp.py`](run_vrp.py): vrp_v1 (R209): implied minus realized volatility as a BTC/ETH timing signal, as set out in experiments/vrp_v1/PREREG.md.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.

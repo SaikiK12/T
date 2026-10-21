@@ -69,8 +69,8 @@ Multi-Strategy Advisers, a $4B fund).
 | 2 | **A crypto multi-PM fund runs arbitrage across venues, cash-and-carry and funding; 90% of its volume is maker, with rebates.** CME basis was still 11-12% annualized at times in 2024-25 (Top Traders Unplugged OI14, Nickel Digital). | R275 cross-venue carry is the lab's strongest gate-0 result and runs forward (R278, R279). Dated-futures basis is held (`data/coinm_1h`, M170). MEXC has 0 maker fee. | Building (2020 batch) |
 | 3 | **Regional premiums**: Korea traded up to 50% over the world and Japan 15% in 2017-18. The barrier was banking, not finding it (Odd Lots with Sam Bankman-Fried, 2021). | Korean premium per coin as a factor: R282 NULL (M268). An arbitrage needs KRW banking, which the owner does not have. | Tested (factor NULL) |
 | 4 | **Narratives and news pegs drive small coins; stop runs** wick below a recent range low, then pump; cut a trade at once if it does not react (Odd Lots, "What a 'Degen' Crypto Trader Really Does All Day", 2024). | ICT sweep detectors: confirmed gross, NULL net (R185-R187, M110). The Wyckoff spring (sweep plus reclaim) is still untested (M208). | Queue M208 |
-| 5 | **Trend pullback (Visser):** above a rising 200-day average, after the rate of change resets near zero, held about 3 months. Trend has worked over 137 years of data (Top Traders Unplugged SI416). | Daily trend lanes were NULL net: R229 (six coins), R242 (vol-managed, full universe). Visser's entry, a pullback inside a long trend with a 3-month hold and low turnover, was not one of them. | **New lane M277** |
-| 6 | **VIX panic bottom (Stay Solvent):** VVIX spike plus VIX above VIX3M marks a short-term low. | VIX-spike reversal lanes were NULL out of sample: R239 and R241 (M197, M218, M226). Short vol in contango: R241, t 1.7-2.4 in every window but 45-66% drawdowns (M224). VVIX and the curve shape as triggers are untested; Cboe history now held (`data/cboe`). | **New lane M278**, low prior |
+| 5 | **Trend pullback (Visser):** above a rising 200-day average, after the rate of change resets near zero, held about 3 months. Trend has worked over 137 years of data (Top Traders Unplugged SI416). | Daily trend lanes were NULL net: R229 (six coins), R242 (vol-managed, full universe). **R284** tested Visser's entry: NULL. On 10 world indices it beats a random entry by +0.2% to +0.7% per trade (t ≤ 1.31). On 556 Binance perps it loses (excess −2.4% to −8.2%, median −8% to −23%): a rising 200-day trend is itself a below-average state on perps. | **Tested, R284 NULL** |
+| 6 | **VIX panic bottom (Stay Solvent):** VVIX spike plus VIX above VIX3M marks a short-term low. | VIX-spike reversal lanes were NULL out of sample: R239 and R241 (M197, M218, M226). Short vol in contango: R241, t 1.7-2.4 in every window but 45-66% drawdowns (M224). Cboe history now held (`data/cboe`). **R283** tested VVIX and the curve: NULL. BOTH leans the claimed way on SPY/QQQ at 5-10 days (+84 to +158 bp over an average hold, p 0.005-0.02), but no cell clears p 0.00185 of 27. BTC has too few onsets. The video's own day (2026-10-16) did not trigger on closing values. | **Tested, R283 NULL** |
 | 7 | **Headlines whipsaw; markets often look through them** (Odd Lots, "This Is How Big Money Is Trading the War in Iran", 2026-03-26: futures up despite a rejected ceasefire). | M096 (news leads price) was BLOCKED for lack of an archive. Headline history cannot be backfilled honestly, so the recorder started today (`data/news`, 22 feeds, first-seen times). | **Recording, M279** |
 | 8 | **Exchange listing notices** move coins (TheTie 2026: front-loaded). | Binance notices: R271 family. OKX's API keeps only about 100 recent listing notices, so the recorder keeps them from today. | **Recording, M280** |
 
@@ -85,8 +85,11 @@ Multi-Strategy Advisers, a $4B fund).
      - ten sleeves give 1.72;
      - the days needed for an expected t of 2 fall from about 2,600 to about 490.
    - It only works with sleeves whose own expected net is positive: ten nulls add up to a null.
-4. **Slow trend pullback** (M277) and **VIX panic** (M278): testable now on 2001-2026 index and 2021-26 crypto history.
-   Both have low priors from R229/R242 and R239/R241, and both are cheap in trades.
+4. **Not these two.** Both TikTok rules were tested on the full history the lab holds:
+   - **Slow trend pullback** (M277, R284): NULL. A small, insignificant gain on indices; a loss on crypto perps, where
+     buying strength at a 1-3 month horizon picks the wrong coins.
+   - **VIX panic** (M278, R283): NULL. A short bounce in US indices after a panic close is real-looking but not
+     significant, and there is no unread sample to confirm it on.
 5. **Headline reaction** (M279, M280): needs about 90 days of recording before a frozen family can read it.
 
 ## What not to take from these videos
