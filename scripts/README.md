@@ -5,7 +5,7 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (16)
+## Fetch: download archives and public history (17)
 
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
 - [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
@@ -15,6 +15,7 @@ line is the first line of the script's own docstring.
 - [`fetch_fundamentals.py`](fetch_fundamentals.py): Protocol fundamentals from DefiLlama's free API for every token that has a Binance perp: daily TVL, fees and revenue.
 - [`fetch_gate.py`](fetch_gate.py): Gate.io USDT-perp hourly contract stats (top-trader and all-account long/short ratios, taker sizes, liquidations, open interest) for the coins of the Binance research universe.
 - [`fetch_gate_history.py`](fetch_gate_history.py): Gate.io's public bulk archive (gateio-public-data on S3, no keys): hourly candles and settled funding for every USDT perp, delisted ones included, from 2020-01 to the last complete month.
+- [`fetch_hlp.py`](fetch_hlp.py): Hyperliquid's HLP vault (the exchange's community liquidity vault: market making, liquidations, a share of fees), measured from its public history (POST api.hyperliquid.xyz/info, vaultDetails, no ...
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
 - [`fetch_macro.py`](fetch_macro.py): Small free daily series for regime and context work: crypto sentiment, US rates and liquidity, stablecoin supply and DeFi activity.
 - [`fetch_mexc_history.py`](fetch_mexc_history.py): Download MEXC public history for every crypto USDT perpetual listed today: hourly contract klines, hourly index klines and settled funding, from 2025-04-01 (funding history starts 2025-04-27 on ...
@@ -37,7 +38,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (18)
+## Forward: paper lanes and the loops that run them (19)
 
 - [`forward_all.sh`](forward_all.sh): One forward tick: R200's journal first (scripts/forward_tick.py), then the lanes that read it: R214 flow72_fwd3 (one bar late, Binance), R215 mexc_fwd (MEXC), R218 mexc_fwd_sq (agreement-squared ...
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
@@ -53,12 +54,13 @@ line is the first line of the script's own docstring.
 - [`forward_tick.py`](forward_tick.py): flow72_fwd2 (R200): one forward tick, as set out in experiments/flow72_fwd2/PREREG.md.
 - [`forward_unlocks.py`](forward_unlocks.py): unlocks_fwd (R266): the unlock short forward on MEXC paper, as set out in experiments/unlocks_fwd/PREREG.md.
 - [`forward_vt.py`](forward_vt.py): vt_fwd (R225): R217's volatility target (rule R1) applied forward to the MEXC flow books A and B (R215) and X2 (R218), warmed up on R217's archived daily nets, as set out in ...
+- [`forward_xbook.py`](forward_xbook.py): xbook_fwd (R285): the cross-family forward book (M281), as set out in experiments/xbook_fwd/PREREG.md.
 - [`forward_xfund.py`](forward_xfund.py): xfund_fwd (R278): R275's cross-venue funding carry books forward on paper, as set out in experiments/xfund_fwd/PREREG.md.
 - [`forward_xfund_kc.py`](forward_xfund_kc.py): xfund_kc_fwd (R279): R277's two replicating KuCoin carry books forward on paper, as set out in experiments/xfund_kc_fwd/PREREG.md.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (71)
+## Run: one lane's frozen measurement (72)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -109,6 +111,7 @@ line is the first line of the script's own docstring.
 - [`run_propfirm.py`](run_propfirm.py): propfirm_v1 (R202): the lab's return streams under prop-firm rule sets, as set out in experiments/propfirm_v1/PREREG.md.
 - [`run_rebalancing.py`](run_rebalancing.py): R232: fixed equal-weight rebalance cadences versus unchanged buy-and-hold units.
 - [`run_regime.py`](run_regime.py): regime_v1 (R233): flow books A, B and X2 traded only in some trend x volatility regimes, and a regime-wise choice among them (MacroHFT's sub-agents and hyper-agent), against constant size, as set ...
+- [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.
 - [`run_rnfade.py`](run_rnfade.py): rnfade_v1 (R249): fade the day's first close through a round-number level (two- or one-significant-figure grid), held 4 h or 24 h, against the same book on a half-step-shifted grid, on the crypto ...
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
@@ -154,7 +157,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (19)
+## Tools and everything else (20)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -174,4 +177,5 @@ line is the first line of the script's own docstring.
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).
+- [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.

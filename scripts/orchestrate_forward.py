@@ -79,7 +79,8 @@ def forward_tasks(python=".venv/bin/python"):
     digest reads only their files and runs last. R266 reads only the recorders'
     calendar snapshot and ticker files, so they are optional for it. R268 reads the
     notice journal and ticker files the same way and runs right after them; so
-    does R270.
+    does R270. R285 is derived from the other lanes' journals (and from R278/R279,
+    which the shell runs under their own locks), so all of them are optional for it.
     """
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         lock = ".notices.lock" if name in {"REC_NOTICES", "R268", "R270", "R272"} else None
@@ -107,6 +108,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R225", "forward_vt.py", ("R215", "R218"), timeout=300,
              files=(Requirement("experiments/sizing_v1/results/daily.npz", SEED_SHA256),)),
         task("R266", "forward_unlocks.py", (), ("REC_TICKER", "REC_UNLOCKS"), timeout=600),
+        task("R285", "forward_xbook.py", (), ("R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", ("LAG",), timeout=120),
         task("CATALOG", "catalog.py", (), ("PANEL",), timeout=60),

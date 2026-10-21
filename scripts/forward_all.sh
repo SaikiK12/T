@@ -20,7 +20,7 @@ exec 9> .forward.lock
 flock -n 9 || { echo "$(date -u +%FT%TZ) another tick is running" >> experiments/flow72_fwd2/tick.log; exit 0; }
 PY=.venv/bin/python
 STAMP="$(date -u +%FT%TZ) code $(git rev-parse --short HEAD)$(git diff --quiet HEAD -- lab scripts || echo +dirty)"
-for d in flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq mexc_costs vt_fwd unlocks_fwd delist_fwd montag_fwd announce_fwd xfund_fwd xfund_kc_fwd recorders; do echo "== tick $STAMP" >> experiments/$d/tick.log; done
+for d in flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq mexc_costs vt_fwd unlocks_fwd delist_fwd montag_fwd announce_fwd xfund_fwd xfund_kc_fwd xbook_fwd recorders; do echo "== tick $STAMP" >> experiments/$d/tick.log; done
 # point-in-time recorders first (data/recorders/, gitignored; digests committed by record_digest.py at the end)
 timeout 120 $PY scripts/record_mexc_ticker.py >> experiments/recorders/tick.log 2>&1
 timeout 120 $PY scripts/record_funding_board.py >> experiments/recorders/tick.log 2>&1
@@ -44,6 +44,8 @@ timeout 600 $PY scripts/forward_unlocks.py >> experiments/unlocks_fwd/tick.log 2
 # its own lock, as a manual run may hold it
 flock -n .xfund.lock timeout 1500 $PY scripts/forward_xfund.py >> experiments/xfund_fwd/tick.log 2>&1
 flock -n .xfund_kc.lock timeout 1500 $PY scripts/forward_xfund_kc.py >> experiments/xfund_kc_fwd/tick.log 2>&1
+# R285 xbook_fwd: the cross-family book, derived from the lanes above (reads their journals, writes only its own)
+timeout 300 $PY scripts/forward_xbook.py >> experiments/xbook_fwd/tick.log 2>&1
 timeout 120 $PY scripts/forward_lag.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 120 $PY scripts/panel.py >> experiments/vt_fwd/tick.log 2>&1
 timeout 60 $PY scripts/catalog.py >> experiments/vt_fwd/tick.log 2>&1
