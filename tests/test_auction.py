@@ -20,6 +20,12 @@ class AuctionTest(unittest.TestCase):
         self.assertEqual(list(out.vwap[3:]), [20.0, 20.0])
         self.assertEqual(list(out.sd[3:]), [0.0, 0.0])
 
+    def test_a_missing_bar_carries_no_weight(self):
+        out = au.vwap_bands([np.nan, 11, np.nan, 13], [np.nan, 9, np.nan, 11], [np.nan, 10, np.nan, 12],
+                            [5, 1, 3, 1.0])
+        self.assertTrue(np.isnan(out.vwap[0]))
+        self.assertEqual(list(out.vwap[1:]), [10.0, 10.0, 11.0])
+
     def test_session_ids_count_anchors_at_or_before_each_bar(self):
         self.assertEqual(list(au.session_ids([5, 10, 15, 20, 25], [10, 20])), [-1, 0, 0, 1, 1])
 

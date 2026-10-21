@@ -20,9 +20,12 @@ def session_ids(t, anchor_ms):
 
 def vwap_bands(high, low, close, volume, session=None, ks=(1, 2, 3)):
     """Anchored VWAP of the typical price (h + l + c) / 3, reset at each new session id, with volume-weighted
-    standard-deviation bands vwap ± k sd, where sd² = Σ v (p − vwap)² / Σ v over the session so far."""
+    standard-deviation bands vwap ± k sd, where sd² = Σ v (p − vwap)² / Σ v over the session so far. Bars with a
+    missing price or no volume carry no weight; before the session's first traded bar everything is NaN."""
     p = (np.asarray(high, float) + np.asarray(low, float) + np.asarray(close, float)) / 3
-    v = np.nan_to_num(np.asarray(volume, float))
+    v = np.asarray(volume, float)
+    ok = np.isfinite(p) & np.isfinite(v) & (v > 0)                # a missing bar adds nothing
+    p, v = np.where(ok, p, 0.0), np.where(ok, v, 0.0)
     g = np.zeros(len(p), np.int64) if session is None else np.asarray(session)
     df = pd.DataFrame({"g": g, "pv": p * v, "p2v": p * p * v, "v": v})
     c = df.groupby("g")[["pv", "p2v", "v"]].cumsum()
