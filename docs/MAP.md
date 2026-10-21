@@ -456,13 +456,29 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - NULL: the best cross-venue factor has RC p 0.124.
   - Only the reference (Binance funding alone) passes, and it gets no follow-up (queued as M263).
   - [Findings](../experiments/xvfac_v1/FINDINGS.md).
-- **R277 (xfund_kd_v1)** replicates R275's best book unchanged on KuCoin and dYdX, which R275 never read. It is
-  frozen once the dYdX download finishes.
+- **R277 (xfund_kd_v1)** replicated R275's best book unchanged on KuCoin and dYdX, which R275 never read.
+  - PARTIAL, 2 of 4 sets: gate+kucoin +11.76%/yr (NW t 11.41) and binance+kucoin +10.80%/yr (NW t 11.17), both
+    positive every year at 1x and 2x.
+  - The dYdX sets fail: dYdX's crash prints of 2025-10-11/12 dominate them.
+  - [Findings](../experiments/xfund_kd_v1/FINDINGS.md).
 - **R278 (xfund_fwd)** runs R275's books forward on paper with live fills:
   - A gate+hyperliquid and B binance+mexc, as pre-committed;
   - C gate+mexc, post hoc.
   - On-time from 2026-10-22; NW t >= 2.5 at 90 / 180 scored days.
   - `lab/xfund.py` reproduces R275's trades exactly (`scripts/xfund_parity.py`).
+- **R279 (xfund_kc_fwd)** runs R277's two KuCoin books forward on paper:
+  - the same rule, accounting and decision as R278;
+  - entries on contracts missing from a venue's live list are blocked, which R278 does not do
+    ([R278 notes](../experiments/xfund_fwd/NOTES.md));
+  - it runs on `lab/carrylane.py`, R278's lane for any venues, whose journals match R278's script in a test.
+- **R280 (levcarry_v1), done: the books stay at 1x, on cross margin per venue.** It measured how much leverage these
+  five books can carry before an intraday move liquidates a leg, under 3 margin policies and 2 maintenance margins
+  (0 trials).
+  - Isolated margin per leg is liquidated even at 1x on every book: 155 short-leg days with a pump of about 95% or
+    more, 149 of them real on other venues.
+  - One cross account per venue is safe at 1x on every book, at 2x only on binance+mexc and binance+kucoin, and at
+    3x on none. The 2025-10-11 crash wipes a one-sided venue account at 2x.
+  - [FINDINGS](../experiments/levcarry_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -568,6 +584,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,322 after R278 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,328 after R280 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-21 03:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-21 05:18 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,7 +24,7 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 28 |
 | Ideas partly tested | 36 |
 | Ideas blocked (data, download, compute) | 71 |
-| Rounds in the registry | 97 (NULL 62, PENDING 17, PARTIAL 7, CONFIRMED 7, DATA_PASS 4) |
+| Rounds in the registry | 98 (NULL 62, PENDING 17, PARTIAL 7, CONFIRMED 7, DATA_PASS 5) |
 | Program trials | 9,478,328 |
 | Forward paper lanes running | 14 |
 | Strict on-time paper days so far | 0 |
@@ -49,10 +49,10 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 | R278 xfund_fwd | cross-venue carry, Gate + Hyperliquid | 60 d +0.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 | R278 xfund_fwd | cross-venue carry, Binance + MEXC | 60 d +0.9% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 | R278 xfund_fwd | cross-venue carry, Gate + MEXC (post hoc) | 60 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 0 d - | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 0 d - | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 60 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 60 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 
-Processing lag of on-time hours: 26 hours, median 104.07500000000002 min, max 259.8833333333333 min; days with late hours: 2026-10-20, 2026-10-21.
+Processing lag of on-time hours: 28 hours, median 104.07500000000002 min, max 259.8833333333333 min; days with late hours: 2026-10-20, 2026-10-21.
 
 ## 3. Next in the queue
 
@@ -83,7 +83,6 @@ Processing lag of on-time hours: 26 hours, median 104.07500000000002 min, max 25
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R273 | fundext_v1 | DONE | NULL | 40 |
 | R272 | announce_fwd | RUNNING | PENDING | 2 |
 | R274 | squeeze_v1 | DONE | NULL | 72 |
 | R275 | xfund_v1 | DONE | PARTIAL | 560 |
@@ -91,5 +90,6 @@ Processing lag of on-time hours: 26 hours, median 104.07500000000002 min, max 25
 | R278 | xfund_fwd | RUNNING | PENDING | 3 |
 | R277 | xfund_kd_v1 | DONE | PARTIAL | 4 |
 | R279 | xfund_kc_fwd | RUNNING | PENDING | 2 |
+| R280 | levcarry_v1 | DONE | DATA_PASS | 0 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

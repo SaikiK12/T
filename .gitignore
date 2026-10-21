@@ -22,3 +22,5 @@ dashboard/data/
 # R275's daily rows and trades (61 MB, 19 MB) are rebuilt by its frozen run; their sha256 is in results/hashes.json
 experiments/xfund_v1/results/daily.csv
 experiments/xfund_v1/results/trades.csv
+# R280's list of liquidated legs (40 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
+experiments/levcarry_v1/results/events.csv
