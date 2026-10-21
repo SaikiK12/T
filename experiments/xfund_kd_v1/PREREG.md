@@ -30,13 +30,25 @@ afterwards; a change is a new lane.
 ## Inputs (frozen)
 
 ```inputs
-INPUTS
+experiments/xfund_kd_v1/symbols.csv  15c8054f7e10f921bd9a797fbf2b9ac927c99fdfbc2388a54199be0cace6fb3b
+experiments/xfund_kd_v1/spec.toml  03abb3bf671c018c38b641ebe3c7ccefa573e087a69212fb07fa491e0e584056
+scripts/venue_table.py  079f08654be614e9c3f79e6f3be2b648e8ab98ff21438d2ca8f358e568c88430
+lab/venues.py  ff6d80e23b337ee3c26ae44c718ba5893fb8e988fd23753631ddedd28b03e820
+engine/src/spread.rs  4055ceacd7949b742f864a35dfc1698262c1163200ccf0e5386a3dc726711074
+engine/src/data.rs  4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146
+engine/src/events.rs  31bc1b59ac055a164256b606e88dad4cd2f1e3ad8280fab3e914b4f725911474
+engine/src/factors.rs  c88beac9b02464cfda09203a42716cf9861dffb060182796e17266a5d72c61e1
+engine/src/stats.rs  bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47
+engine/src/main.rs  42184bc6302dd9c71f4a804d7882d7a549a8e6d958571c2e49e54baf49d5f8c2
+engine/Cargo.lock  9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f
 rebuild: python scripts/venue_table.py --venues gate,kucoin,dydx --out {tmp}/symbols.csv
 ```
 
 - **Engine:** the `qx spread` sources are byte-identical to R275's frozen ones (same hashes as in R275's inputs).
 - **Symbol table:**
-  - one row per Binance USD-M perp found on Gate, KuCoin or dYdX, under R274's name rule (`lab/venues.py`);
+  - 873 Binance USD-M perps found on Gate (860), KuCoin (642) or dYdX (231: 72 active, 159 settled), under R274's
+    name rule (`lab/venues.py`);
+  - coins listed on both venues of a set: binance+kucoin 642, binance+dydx 231, gate+kucoin 629, kucoin+dydx 198;
   - Gate rows are the same contracts R275 used;
   - KuCoin's and dYdX's long tail (no Binance perp) and 2020 rows are reserved (`docs/GATES.md`) and never listed.
 
@@ -82,7 +94,7 @@ rebuild: python scripts/venue_table.py --venues gate,kucoin,dydx --out {tmp}/sym
 - **Survivorship:**
   - KuCoin's contract list holds only contracts open on 2026-10-20 (692 USDT perps), so coins KuCoin delisted are
     missing.
-  - dYdX's includes 223 settled (delisted) markets.
+  - dYdX's includes settled (delisted) markets: 159 of the 231 in the table.
 - **KuCoin prices are daily bars:**
   - A KuCoin close is fresh only when that day's bar traded.
   - Its intraday path is not seen, as with Hyperliquid in R275.
