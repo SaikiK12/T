@@ -5,7 +5,8 @@ Look for the moments where they say more than they meant to about how the money 
 things the lab can test, or into a way to find opportunities ourselves, not just copy someone else's strategy.
 
 Nothing here is a result. A quote is a claim until a frozen lane tests it. The ideas that can be tested are
-registered as M301-M304 in `registry/methods.csv`, and none has an R-id yet.
+registered as M301-M304 in `registry/methods.csv`. M301 and M303 were tested as R289 (NULL, below); M302 and M304
+are queued.
 
 ## How it was collected
 - **Tool:** `scripts/dig_talks.py` holds a roster of about 70 traders and firms, each with a credibility tier, and
@@ -266,14 +267,29 @@ The four new rows come from questions 1 and 2:
 
 | Id | Clock or rule | Who pays | Data |
 |---|---|---|---|
-| M301 | US cash open, 13:30/14:30 UTC | Panic sellers in the first minutes | 1-minute klines (downloading) |
+| M301 | US cash open, 13:30/14:30 UTC | Panic sellers in the first minutes | 1-minute klines held; **R289 NULL** |
 | M302 | 25-day MA deviation | Forced sellers in a coin-specific panic | held |
-| M303 | Deribit settlement TWAP, 07:30-08:00 UTC | Whoever is short the move at expiry | 1-minute klines; Deribit chains recorded from today |
+| M303 | Deribit settlement TWAP, 07:30-08:00 UTC | Whoever is short the move at expiry | 1-minute klines held; **R289 NULL** |
 | M304 | ETF fixing hour (BRRNY), 15:00-16:00 New York | Creations and redemptions sized and timed by rule | hourly klines held; daily ETF flows need a fetch |
 
 M290 (scheduled releases) and M206 (opening-range breakout) also wait on the same 1-minute data. Sessions and
 holidays come from the lab's DST-aware session clocks (`lab/sessions.py`, with NYSE holidays), and any one of these rows becomes a lane only
 through a frozen PREREG.
+
+## What the first test found (R289, 2026-10-21)
+`experiments/clockflow_v1/FINDINGS.md`: 40 frozen variants on Binance BTC, ETH and SOL 1-minute bars, 2021-04 to
+2026-09, manual web costs of 3/6/9 bp per side. **NULL.**
+- **The US-open flush (M301) does not transfer to crypto.** The best fade on discovery made +4.1 bp a day, almost
+  all in 2022 and mostly on SOL. In 2024-26 it lost (t −0.48), at every cost.
+- **The Deribit settlement window (M303) leaves a small reversal.** On Fridays, a move of at least one σ between 07:30
+  and 08:00 UTC reverses by about +20 bp gross per trade over the next two hours, in both windows and all three
+  coins. On the book that is +0.65 / +0.38 / +0.11 bp a day at 1x / 2x / 3x, t 1.37: too small and too rare to pass
+  a 40-trial reality check (p 0.87).
+- **Two placebo patterns, seen after the run and not decided on:**
+  - the 09:30 New York fade works better on days the US market is shut;
+  - moves in the hour after 10:30 New York continue.
+
+  They are seeds for a new lane on reserved or forward data, not results.
 
 ## Not checked
 - No quote above was tested here. The numbers are the sources' own: SEBI's are allegations, Kotegawa's are press

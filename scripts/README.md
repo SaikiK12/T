@@ -63,7 +63,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (73)
+## Run: one lane's frozen measurement (74)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -79,6 +79,7 @@ line is the first line of the script's own docstring.
 - [`run_cbprem.py`](run_cbprem.py): cbprem_v1 (R210): the Coinbase premium as a BTC/ETH signal, as set out in experiments/cbprem_v1/PREREG.md.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
 - [`run_chartxm.py`](run_chartxm.py): chartxm_v1 (R247): R243's seven chart rules (run_chartist.states, unchanged) on daily bars of 11 forex pairs and 10 world equity indices, equal-weight books per group, as set out in ...
+- [`run_clockflow.py`](run_clockflow.py): clockflow_v1 (R289): fixed-clock flows on 1-minute bars of the BTC, ETH and SOL perps, as set out in experiments/clockflow_v1/PREREG.md.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_ctxslice.py`](run_ctxslice.py): ctxslice_v1 (R201): the replicated excess context edges of atlas_ctx (R192) and atlas_mtf (R195) as one slice book, as set out in experiments/ctxslice_v1/PREREG.md; ctxslice_v2 (R204): its 12-24 h ...
 - [`run_daylimit.py`](run_daylimit.py): daylimit_v1 (R208): daily loss and profit limits on the flow slice books, as set out in experiments/daylimit_v1/PREREG.md.

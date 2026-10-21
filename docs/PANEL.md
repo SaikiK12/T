@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-21 20:21 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-21 20:41 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 39 |
 | Ideas partly tested | 38 |
 | Ideas blocked (data, download, compute) | 71 |
-| Rounds in the registry | 105 (NULL 66, PENDING 19, PARTIAL 8, CONFIRMED 7, DATA_PASS 5) |
-| Program trials | 9,478,455 |
+| Rounds in the registry | 106 (NULL 67, PENDING 19, PARTIAL 8, CONFIRMED 7, DATA_PASS 5) |
+| Program trials | 9,478,495 |
 | Forward paper lanes running | 16 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -83,7 +83,6 @@ Processing lag of on-time hours: 44 hours, median 98.25 min, max 261.48333333333
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R280 | levcarry_v1 | DONE | DATA_PASS | 0 |
 | R281 | sizecarry_v1 | DONE | NULL | 30 |
 | R282 | pitfac_v1 | DONE | PARTIAL | 27 |
 | R283 | vixpanic_v1 | DONE | NULL | 27 |
@@ -91,5 +90,6 @@ Processing lag of on-time hours: 44 hours, median 98.25 min, max 261.48333333333
 | R285 | xbook_fwd | RUNNING | PENDING | 1 |
 | R286 | reserved_batch1 | RUNNING | PENDING | 10 |
 | R287 | pcares_v1 | DONE | NULL | 24 |
+| R289 | clockflow_v1 | DONE | NULL | 40 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

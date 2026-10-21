@@ -254,13 +254,20 @@ rule-bound flow.
 
 | Method | Clock or rule | Data |
 |---|---|---|
-| M301 | US cash-open flush and reverse (Elmarhri: "on le prend tout le temps") | 1-minute klines for BTC/ETH/SOL, held from 2026-10-21 |
-| M303 | Deribit settlement TWAP, 07:30-08:00 UTC (SEBI's Jane Street order is the template) | 1-minute klines; Deribit chains recorded |
+| M301 | US cash-open flush and reverse (Elmarhri: "on le prend tout le temps") | 1-minute klines for BTC/ETH/SOL; **R289 NULL** |
+| M303 | Deribit settlement TWAP, 07:30-08:00 UTC (SEBI's Jane Street order is the template) | 1-minute klines; **R289 NULL** |
 | M304 | ETF fixing hour (BRRNY, 15:00-16:00 New York) | hourly klines; daily ETF flows to fetch |
 | M302 | 25-day MA deviation buy (BNF) | held; overlaps NULL lanes, so last |
 
-The 1-minute data also unblocks M290 (scheduled releases) and M206 (opening-range breakout). The four clock lanes
-(M290, M301, M303, M206) can share one sub-hour family PREREG with one reality check.
+The 1-minute data also unblocks M290 (scheduled releases) and M206 (opening-range breakout).
+
+**R289 (clockflow_v1) tested M301 and M303 together: NULL** (40 trials; OPEN rc_p 0.31, SETTLE rc_p 0.87).
+- The US-open fade won in 2022 and lost in 2024-26.
+- The Friday settlement-window fade has about +20 bp gross per trade in both windows, but it is +0.38 bp a day at
+  2x and t 1.37.
+- Seeds seen only after the run, for a later lane on reserved 2020 bars or forward data: the 09:30 New York fade
+  on days the US market is shut (validation t 2.67), and continuation after 10:30 New York (t about −2 in both
+  windows).
 
 ## Critical files
 - **New:**
