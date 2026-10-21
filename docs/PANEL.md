@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-21 21:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-21 22:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -23,7 +23,7 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 |---|---|
 | Ideas in the queue, untested | 39 |
 | Ideas partly tested | 38 |
-| Ideas blocked (data, download, compute) | 71 |
+| Ideas blocked (data, download, compute) | 69 |
 | Rounds in the registry | 106 (NULL 67, PENDING 19, PARTIAL 8, CONFIRMED 7, DATA_PASS 5) |
 | Program trials | 9,478,495 |
 | Forward paper lanes running | 16 |
