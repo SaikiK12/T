@@ -117,6 +117,8 @@ event, carry and venue-structure lanes over chart rules.
     +9.5 bp a day gross in the steadiest variants, but hourly rebalancing turns the book over 2.6-11 times a day, so the
     break-even cost is at most 3.5 bp per side against 7.
   - Next are M295 (funding gate) and M290 (once release calendars and 1-5 min klines are fetched).
-- Start recorders where history cannot be bought: Deribit open interest by strike (M289) and Upbit/Bithumb wallet
-  status (M294).
+- Recorders where history cannot be bought: the Deribit option chain (M289, M300) records hourly since 2026-10-21;
+  Upbit/Bithumb wallet status (M294) is still to do.
+- The prop trader's comment is followed up in `docs/VENUE_STRUCTURE.md`: a fee map, a Lighter book recorder (0 fees
+  through the API) and a plan for the three edges.
 - Reddit keeps paging in the background; rerun `mine` and add any new idea as a row.

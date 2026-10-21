@@ -11,7 +11,7 @@
 # Last, the processing-lag report (experiments/forward_lag), the panel (docs/PANEL.md) and the dashboard's datasets
 # (dashboard/data/, uploaded to the Control Room artifact by the session's loop tick).
 # Before the lanes, the point-in-time recorders (MEXC funding/ticker snapshot, the six-venue funding board, Binance
-# notices, unlock calendar, and checks that the order-flow tape recorder, which also merges its finished days, and the
+# notices, unlock calendar, the Deribit option chains, the Lighter books, and checks that the order-flow tape recorder, which also merges its finished days, and the
 # headline recorder run);
 # after them, the recorder digest (experiments/recorders/journal/digests.csv).
 cd "$(dirname "$0")/.." || exit 1
@@ -24,6 +24,9 @@ for d in flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq mexc_co
 # point-in-time recorders first (data/recorders/, gitignored; digests committed by record_digest.py at the end)
 timeout 120 $PY scripts/record_mexc_ticker.py >> experiments/recorders/tick.log 2>&1
 timeout 120 $PY scripts/record_funding_board.py >> experiments/recorders/tick.log 2>&1
+timeout 120 $PY scripts/record_deribit_chain.py >> experiments/recorders/tick.log 2>&1
+# Lighter books take about 4 minutes at the Standard rate limit: in the background, done before the digest
+timeout 600 $PY scripts/record_lighter_book.py >> experiments/recorders/tick.log 2>&1 &
 flock -w 300 .notices.lock timeout 300 $PY scripts/record_notices.py >> experiments/recorders/tick.log 2>&1
 timeout 300 $PY scripts/record_unlocks.py >> experiments/recorders/tick.log 2>&1
 timeout 60 $PY scripts/record_tape.py >> experiments/recorders/tick.log 2>&1

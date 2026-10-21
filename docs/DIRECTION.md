@@ -221,9 +221,19 @@ come before chart rules.
 | M295 funding response to up days, as a gate | next |
 | M290 scheduled US releases (CPI, NFP, FOMC, EIA) | needs release calendars and 1-5 min klines |
 
-**Recorders to start where history cannot be bought:**
-- Deribit open interest by strike (M289);
-- Upbit and Bithumb wallet status (M294).
+**Recorders where history cannot be bought:**
+- the Deribit option chain, hourly from 2026-10-21 (M175, M289, M300: expiry pinning and dealer gamma);
+- Lighter order books, hourly from 2026-10-21 (M292: the cost of a zero-fee API venue);
+- Upbit and Bithumb wallet status (M294), still to do.
+
+**Venue structure (the prop trader's lead, `docs/VENUE_STRUCTURE.md`).** Lighter charges no fee through the API. On
+one snapshot, a $1k order costs a median 2.0 bp per side there against about 8.7 bp on MEXC's API, for the same 27
+coins. API-mode rules that died on costs between 2 and 8 bp per side get a second look:
+- once the Lighter recorder has two weeks of books;
+- on Lighter's own price history;
+- as one frozen family at gate 0.
+
+Lighter also joins the cross-venue carry family as a venue.
 
 ## Critical files
 - **New:**

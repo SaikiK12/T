@@ -70,10 +70,15 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
 ## Fit with the lab's books
 - **Flow book A** (unconfirmed) fits HyroTrader and Breakout, with three things to check:
   - Its holdout gross is about 68% BEAT and LAB: small caps that hit HyroTrader's 5% cap.
-  - Breakout's fee plus swap is not modelled.
+  - Breakout's 4 bp per side and 3.3 bp a day of swap are in the `breakout_pro` preset since 2026-10-21; book A
+    has not been re-run with them.
   - Bitfunded's end-of-day trailing floor fails a book with a 20-47% drawdown.
 - **top_vs_crowd:** a hypothesis only. Its MEXC replay is about zero.
 - **Carry:** cannot reach a 10% target, and it needs a spot leg.
+- **Costs decide the fit, as on exchanges** (`docs/VENUE_STRUCTURE.md`). Breakout's 4 bp per side, before its
+  spread, is half of MEXC's 8 bp API taker fee, and about twice the median cost of a $1k order on Lighter's
+  liquid books, which charge no fee. A rule that turns over daily or faster has to clear the firm's cost, not
+  the exchange's.
 - **Cross-asset trend (forex, indices) on FTMO or The5ers CFDs:** fits the rules (EAs allowed, no time limit) but takes
   months to reach 10% at low drift.
 - **Overnight index drift:** impossible at futures firms, which require being flat by the close.
@@ -147,7 +152,8 @@ What the rules do to the map:
 ## Simulations to run (queue M211)
 `lab/propfirm.py` needs these rule features first:
 - Breakout's balance-based daily loss reset at 00:30 UTC;
-- a per-side cost plus daily swap;
+- a per-side cost plus daily swap (in since 2026-10-21: `Rules.cost_side` and `swap_day`, charged by `evaluate()`
+  when it is given the book's turnover or exposure, so r is gross);
 - hourly paths, so intraday breaches show;
 - Topstep's intraday enforcement of the end-of-day trailing floor (its reset after payout, the 50% share and the
   per-request cap are in since 2026-10-20; the 5-winning-day payout condition is approximated by a 14-day cycle);
