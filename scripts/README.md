@@ -60,7 +60,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (72)
+## Run: one lane's frozen measurement (73)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -104,6 +104,7 @@ line is the first line of the script's own docstring.
 - [`run_pack.py`](run_pack.py): pack_v1 (R194): many maker cells in one hedged book, as set out in experiments/pack_v1/PREREG.md.
 - [`run_pairs.py`](run_pairs.py): pairs_v1 (R250): weekly-formed pairs on the top-50 perps, distance (Gatev) and Engle-Granger selection, z-score entry 2 and exit 0, as set out in experiments/pairs_v1/PREREG.md.
 - [`run_partial_execution.py`](run_partial_execution.py): R231: pre-registered partial adjustment of the unchanged R229 spot target.
+- [`run_pcares.py`](run_pcares.py): pcares_v1 (R287): Avellaneda-Lee PCA residual reversion on the top-50 Binance perps at hourly scale, as set out in experiments/pcares_v1/PREREG.md (M298).
 - [`run_pivotfade.py`](run_pivotfade.py): pivotfade_v1 (R248): fade a close beyond the prior day's floor pivot R1/S1 (the mirror of R243/R247's PIVOT_BREAK) on daily world indices and forex (validation 2013-19, then the 2020-26 holdout ...
 - [`run_posfam.py`](run_posfam.py): posfam_v1 (R211): the two halves of top_vs_crowd and the top-account ratio as 72 h slice books; posfam_v2 (R212): the top-account ratio as a contrarian book.
 - [`run_posimpulse.py`](run_posimpulse.py): posimpulse_v1 (R234): the 24 h and 72 h change in top-vs-crowd positioning as 72 h spread books, tested for information beyond the level book, as set out in experiments/posimpulse_v1/PREREG.md.

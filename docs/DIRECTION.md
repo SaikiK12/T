@@ -205,6 +205,26 @@ It is an option beside the main direction, not a replacement. It enters the queu
 
 So each item goes through the same gates: a frozen family, then forward paper.
 
+## Ideas from comment sections and transcripts (owner, 2026-10-21)
+The owner asked for quant and trading comment sections and transcripts to be mined for ideas. The sources, what was
+reachable and the ideas are in `docs/COMMENT_DIG.md`. Eleven rows were added to the queue (M288-M298).
+
+**What they say:** practitioners keep saying that only fee and rebate structure, speed and venue-structure arbitrage
+paid them, and that "nothing based on OHLC worked". That matches the lab's record, so event, carry and venue lanes
+come before chart rules.
+
+**Order of testing** (cheap held-data rows first, each a frozen family):
+
+| Method | Status |
+|---|---|
+| M298 PCA residual reversion, hourly | **R287 NULL**: gross about +9.5 bp/day in the steadiest variants; costs 18-76 |
+| M295 funding response to up days, as a gate | next |
+| M290 scheduled US releases (CPI, NFP, FOMC, EIA) | needs release calendars and 1-5 min klines |
+
+**Recorders to start where history cannot be bought:**
+- Deribit open interest by strike (M289);
+- Upbit and Bithumb wallet status (M294).
+
 ## Critical files
 - **New:**
   - `scripts/record_mexc_funding.py`, `scripts/record_notices.py`, `scripts/record_unlocks.py`

@@ -1,0 +1,40 @@
+{
+ "rid": "R287",
+ "verdict": "NULL",
+ "trials": 24,
+ "prereg_sha256": "94956f99459353f5064136cdb2fb9bd57f466e60373a4f617373ad574b939d8e",
+ "rc_p": 1.0,
+ "rc_null_p95": 2.7477863302239958,
+ "best": "K1_L168_e2.0_dollar",
+ "best_disc_stat": -1.4243051490736331,
+ "best_disc_net1_bp": -9.004190173156736,
+ "valid_t1": -2.9799187234198463,
+ "valid_net1_bp": -30.87218263575058,
+ "valid_net2_bp": -48.627512675343574,
+ "valid_net3_bp": -66.38284271493656,
+ "valid_halves_net1_bp": [
+  -13.209004914641923,
+  -52.013885509812816
+ ],
+ "best_net1_bp_by_year": {
+  "2021": -14.459,
+  "2022": 7.581,
+  "2023": -21.046,
+  "2024": -11.09,
+  "2025": -1.131,
+  "2026": -97.157
+ },
+ "best_top5_days_share": NaN,
+ "best_top5_coins_gross_bp": {
+  "AXSUSDT": 2658.9927670081997,
+  "INJUSDT": 2309.191964689337,
+  "HOMEUSDT": 2078.3151499989413,
+  "LTCUSDT": 1861.1252496020902,
+  "COTIUSDT": 1802.9005284007908
+ },
+ "days_small_universe": 60,
+ "symbols": 680,
+ "excluded_names": 229,
+ "inputs": 1361,
+ "inputs_combined_sha256": "addd847d8fac671a9d86f03192d13193d3b0314968e3e380c1e560f8c74c0d3b"
+}

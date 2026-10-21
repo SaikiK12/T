@@ -65,7 +65,7 @@ reading file per source to `data/comments/read/`.
 | M295 | Funding response to up days as a regime gate | Bankless guest | held |
 | M296 | Pre-market perp price as a forecast of the listing | Bankless | partly held |
 | M297 | Post-airdrop supply short (a subset of the listing short) | Bankless, Delphi | airdrop share not held |
-| M298 | PCA residual reversion (Avellaneda-Lee) at hourly scale | Quant SE | held |
+| M298 | PCA residual reversion (Avellaneda-Lee) at hourly scale | Quant SE | **tested: R287 NULL** (gross up to 19 bp/day in discovery and 9 in validation; cost 18-76) |
 
 **Reddit (r/algotrading so far) added no new rule.** Its most discussed threads are AMAs (people at HFT and
 options market-making firms, a fund quant researcher, a fixed-income PM) and career talk. What it says about trading
@@ -112,8 +112,11 @@ event, carry and venue-structure lanes over chart rules.
   This argues against trading thin prediction markets on public news.
 
 ## Next
-- Test the cheap held-data rows first: M295 (funding gate), M298 (PCA residuals) and M290 (once release calendars and
-  1-5 min klines are fetched). Each one is a frozen family PREREG, one registry row per run.
+- Test the cheap held-data rows first. Each one is a frozen family PREREG, with one registry row per run.
+  - **M298 is done: R287 `pcares_v1`, NULL** (24 variants, reality check p 1.00). Hourly residuals revert by about
+    +9.5 bp a day gross in the steadiest variants, but hourly rebalancing turns the book over 2.6-11 times a day, so the
+    break-even cost is at most 3.5 bp per side against 7.
+  - Next are M295 (funding gate) and M290 (once release calendars and 1-5 min klines are fetched).
 - Start recorders where history cannot be bought: Deribit open interest by strike (M289) and Upbit/Bithumb wallet
   status (M294).
 - Reddit keeps paging in the background; rerun `mine` and add any new idea as a row.
