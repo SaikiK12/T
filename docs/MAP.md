@@ -514,6 +514,11 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).
   - On Fridays, a move inside Deribit's 07:30-08:00 UTC settlement window reverses by about +20 bp gross per trade
     in both windows and all three coins. On the book it is +0.38 bp/day at 2x, t 1.37: not enough.
+- **R290 (auction_v1), NULL** (60 variants, M305 from the owner's term list, 1-minute bars, `docs/AUCTION_AND_FLOW.md`).
+  - Five auction rules (value-area re-entry, IB and opening-range break, VWAP ±2 SD, naked POC) from 00:00 UTC, the
+    New York open and the London open, against 8 random clocks.
+  - Real session starts are no more structured than random clocks: rank-permutation p 0.36.
+  - The discovery pick (follow VWAP-band breaks after the New York open) lost in 2024-26 (t −0.96).
   - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
     York continue. They are seeds for a lane on unread data.
   - [FINDINGS](../experiments/clockflow_v1/FINDINGS.md).
@@ -631,6 +636,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,495 after R289 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,555 after R290 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

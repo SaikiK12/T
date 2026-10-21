@@ -50,6 +50,18 @@ class ExposureTest(unittest.TestCase):
         self.assertGreater(prof.loc[115.0], 0)
         self.assertTrue(np.isnan(ex.zero_gamma(pd.Series([1.0, 2.0], index=[1.0, 2.0]), 1.5)))
 
+    def test_taker_positions_accumulate_per_option_and_can_drop_blocks(self):
+        flow = pd.DataFrame({"t": [0, 3600, 0, 7200], "instrument": ["A", "A", "B", "B"],
+                             "expiry_ms": [10_000, 10_000, 5_000, 5_000], "buy": [2.0, 0.0, 1.0, 0.0],
+                             "sell": [0.0, 5.0, 0.0, 1.0], "block_buy": [2.0, 0, 0, 0], "block_sell": [0.0, 0, 0, 0]})
+        pos = ex.taker_positions(flow)
+        self.assertEqual(list(pos[pos.instrument == "A"].taker_pos), [2.0, -3.0])
+        self.assertEqual(list(ex.taker_positions(flow, blocks=False).query("instrument == 'A'").taker_pos), [0.0, -5.0])
+        at = ex.positions_at(pos, 4000)
+        self.assertEqual(dict(zip(at.instrument, at.taker_pos)), {"A": -3.0, "B": 1.0})
+        at = ex.positions_at(pos, 6000)                                    # B expired at 5000
+        self.assertEqual(dict(zip(at.instrument, at.taker_pos)), {"A": -3.0})
+
 
 if __name__ == "__main__":
     unittest.main()

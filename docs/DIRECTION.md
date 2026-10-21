@@ -321,6 +321,10 @@ a critical eye, our own Bloomberg and an AI council. The write-up is `docs/AUCTI
   2023-26;
 - the Deribit option trade history.
 
-**Next:** R290, then the mechanism check for M308 (does estimated dealer gamma predict realized volatility?) before
+**R290 `auction_v1` is NULL:**
+- real session anchors are no more structured than random clocks (p 0.36);
+- no auction rule trades: the discovery pick's validation t is −0.96.
+
+**Next:** the mechanism check for M308 (does estimated dealer gamma predict realized volatility?) before
 any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
 

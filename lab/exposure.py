@@ -103,3 +103,21 @@ def walls(strikes):
     """Call wall and put wall: the strikes with the largest call and put gamma notional (absolute, sign-free), from
     by_strike() output. Traders read them as resistance and support."""
     return float(strikes.call_gex.abs().idxmax()), float(strikes.put_gex.abs().idxmax())
+
+
+def taker_positions(flow, blocks=True):
+    """Takers' net position in each option at the end of each hour it traded: the running sum of taker buys minus
+    taker sells since its first trade in `flow` (scripts/fetch_deribit_trades.py's hourly rows). The makers hold the
+    opposite; reading the makers as dealers is an assumption (M308). `blocks=False` leaves block trades out."""
+    f = flow.sort_values(["instrument", "t"]).copy()
+    net = f.buy - f.sell
+    if not blocks:
+        net = net - (f.block_buy - f.block_sell)
+    f["taker_pos"] = net.groupby(f.instrument).cumsum().values
+    return f
+
+
+def positions_at(pos, t):
+    """Each option's last taker position at or before time t, for options not yet expired at t (expiry_ms > t)."""
+    x = pos[(pos.t <= t) & (pos.expiry_ms > t)]
+    return x.groupby("instrument", sort=False).tail(1)

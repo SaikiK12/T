@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-21, after R289. Program trials: 9,478,495 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-21, after R290. Program trials: 9,478,555 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -88,6 +88,7 @@ overstatements are corrected here.
 | **Trend pullback** (long when the 63-day rate of change resets near zero inside a rising 200-day trend; Visser, M277) | Gate 0, NULL, 8 cells (R284): world indices +0.20 to +0.73% per trade over the average hold, best t 1.31 (p 0.096), both halves positive; crypto perps lose −1.7 to −10.3% per trade at 1x, median −9 to −29% | Not separate | Indices unchanged at 2x / 3x; crypto worse | Crypto loses on MEXC's coins | none | NULL |
 | **PCA residual reversion** (Avellaneda-Lee, hourly, top-50 perps; M298) | Gate 0, NULL, 24 variants (R287): reality check p 1.00. Gross up to +18.8 bp/day, but turnover of 2.6-10.9x the book a day costs 18-76 bp/day at 7 bp per side | Validation j* −30.9 bp/day, t −2.98 | Losses scale with cost | Break-even is at most 3.5 bp per side, below any taker cost | none | NULL as a taker strategy; the gross reversion is a fact for the fast-profit axis |
 | **Fixed-clock flows on 1-minute bars** (US cash-open flush fade/follow, M301; Deribit Friday 07:30-08:00 UTC settlement window, M303; BTC/ETH/SOL; from `docs/TRADER_TALKS.md`) | Gate 0, NULL, 40 variants (R289): OPEN reality check p 0.31, SETTLE p 0.87. OPEN j* w15 k2 fade +4.06 bp/day in 2021-23, mostly 2022 and SOL | Validation 2024-26: OPEN j* −0.56 bp/day, t −0.48; SETTLE weekly k1 fade +0.65 bp/day, t 1.37, about +20 bp gross per trade in both windows | SETTLE j* +0.38 / +0.11 bp/day; OPEN −0.79 / −1.01 | Manual web, at most 6 orders a day; prices are Binance's | none | NULL; the Friday settlement reversal is small and real-looking, not proven |
+| **Auction-market levels on 1-minute bars** (value-area re-entry, IB60/OR15 break, VWAP ±2 SD, naked POC; 00:00 UTC, New York and London session anchors against 8 placebo clocks; M305 from the owner's term list) | Gate 0, NULL, 60 variants (R290): anchor test p 0.36 (real sessions no more structured than random clocks); reality check p 0.43; j* follow VWAP-band breaks after the New York open, 60 min, +6.39 bp/day in 2021-23 | Validation 2024-26: j* −2.13 bp/day, t −0.96; a placebo clock had the best discovery variant (t 3.22 → 0.30) | j* −5.98 / −9.83 bp/day | API on Lighter (2 bp/side); MEXC API −14.65 bp/day; prices are Binance's | none | NULL; session levels leave the queue |
 
 ## The best achievable edges, ranked
 1. **Cross-venue funding carry (new, 2026-10-21).** The first family in the program to pass gate 0 with t far above

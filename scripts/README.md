@@ -66,13 +66,14 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (74)
+## Run: one lane's frozen measurement (75)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
 - [`run_atlas.py`](run_atlas.py): atlas_v1 (R185): the gross-edge atlas, as set out in experiments/atlas_v1/PREREG.md.
+- [`run_auction.py`](run_auction.py): auction_v1 (R290): auction-market levels on 1-minute bars of the BTC, ETH and SOL perps, from real session anchors and from placebo clocks, as set out in experiments/auction_v1/PREREG.md (M305, ...
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.

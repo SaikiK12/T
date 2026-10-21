@@ -192,7 +192,7 @@ The reasons are below.
 
 | Name | Question | Data | When |
 |---|---|---|---|
-| `auction_v1` (R290) | Do session anchors matter? Value-area re-entry, IB and opening-range break, VWAP-band fade and follow, naked-POC return, absorption and exhaustion filters; real anchors against placebo anchors, on 1-minute BTC/ETH/SOL | held | now |
+| `auction_v1` (R290, **NULL**: anchor test p 0.36, trading rc_p 0.43; `experiments/auction_v1/FINDINGS.md`) | Do session anchors matter? Value-area re-entry, IB and opening-range break, VWAP-band fade and follow, naked-POC return, absorption and exhaustion filters; real anchors against placebo anchors, on 1-minute BTC/ETH/SOL | held | now |
 | `levels_depth_v1` | Does resting depth cluster, and do stop runs reverse, at auction levels more than at placebo prices? | MEXC depth, tape | after about 2 weeks of tape |
 | `dealerflow_v1` | Does taker-flow positioning (dealer gamma by strike) predict next-day realized volatility and the sign of intraday autocorrelation? This is a mechanism check before any PnL | Deribit trades, 1m klines | when the download ends |
 | `charm_expiry_v1` | Does R289's Friday reversal scale with expiring gamma? (dose-response) | Deribit trades, 1m klines | after `dealerflow_v1` |
@@ -279,9 +279,13 @@ Published versions such as TradingAgents (arXiv 2412.20138) report good backtest
 
 ## 7. My own method from all this
 
-1. **Settle family A once, cheaply, with the anchor placebo** (R290 `auction_v1`). If real anchors equal random ones,
-   stop spending time on session levels in crypto. If they differ, the surviving rule goes to the reserved 2020 bars
-   and to forward paper.
+1. **Settle family A once, cheaply, with the anchor placebo** (R290 `auction_v1`, run 2026-10-21: **NULL**).
+   - Real session starts (00:00 UTC, the New York open, the London open) were no more structured than eight random
+     clocks: rank-permutation p 0.36.
+   - No auction rule traded. The discovery pick, following VWAP-band breaks after the New York open, lost in
+     2024-26.
+   - A random clock (11:04 UTC) produced the best discovery result of all, and it vanished too.
+   - So session levels leave the queue as signals. They remain open only as a liquidity map (M307).
 2. **Measure the dealers before trading them.** Build taker-flow positioning from the Deribit history. First check
    the mechanism, which needs no PnL: is realized volatility higher, and intraday autocorrelation positive, when
    estimated dealer gamma is negative? Only if it is does a regime rule follow: fade order-flow extremes in long
