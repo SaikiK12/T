@@ -10261,6 +10261,240 @@
       "engineering_followup": "Completion-receipt patch 02461b8 (codex/coinmetrics-completion) reproduces and rejects interrupted split-cache writes without adopting or overwriting legacy shards. Fifteen synthetic fixtures and 477 full-suite tests passed with 2 skipped at that head. Local byte-publication completeness is separate from source coverage and historical availability.",
       "limitations": "Source feasibility only. Prior studies, statuses and nulls are unchanged; no profitable rule, calibrated forecast, historical point-in-time dataset or complete-library ingestion is claimed.",
       "collection_limitations": "The retained source list does not enumerate every HTTP attempt. One initial GitHub commit-metadata response was discarded after truncation at 200000 bytes and JSON decode failure; such endpoints can embed CSV diffs. It was not parsed, reviewed or used as evidence. Tiny git-ref metadata and pinned documentation files supplied the cited versions instead."
+    },
+    {
+      "intake_id": "mark_price_contracts_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [],
+      "records_updated": [],
+      "previous_intake_sha256": "0ef7668c5ca700e1be3c77e0531901a6a5026af7e131c066e37a6a0d6c97dcbc",
+      "canonical_relationships": {
+        "M265": "Direct input/coverage infrastructure for a future mark-based R280 extension. Existing R280 frozen measurement is unchanged.",
+        "M079": "Related mark/margin data requirements only; no x35 mandate or account simulator is implemented.",
+        "M269": "Related print-wick family already measured in R282. This source pass does not rerun it or present it as new.",
+        "M059": "Underlying carry context only; no funding/PnL/account evidence from these decoders."
+      },
+      "received_scope": "Nineteen named official page/section/source receipts for two venue contracts, archive declarations and mark/liquidation distinctions. Only each listed read_scope is claimed reviewed. No market/value API, object listing, archive or dataset request; no venue historical coverage probe.",
+      "media_sources": [
+        {
+          "id": "binance_mark_schema",
+          "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/1.0.0/schema.yaml",
+          "version": "OpenAPI3.0.2; API1.0.0",
+          "read_scope": "Header metadata plus /fapi/v1/markPriceKlines GET declaration only, lines5247-5457; streamed response stopped at next path",
+          "selected_bytes": 8617,
+          "selected_sha256": "689f5a30654e9152140e5a29c7779486b1a103aa12f173473508edd34121aacc",
+          "hash_scope": "Exact selected UTF-8 bytes including path header and following blank lines; no source body retained",
+          "last_modified": "2026-10-20T07:53:44Z",
+          "etag": "\"6ad71e08-a0a1c\"",
+          "basis": "Header metadata plus /fapi/v1/markPriceKlines GET declaration only, lines5247-5457; streamed response stopped at next path"
+        },
+        {
+          "id": "binance_mark_doc",
+          "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data#mark-price-kline-candlestick-data",
+          "read_scope": "Rendered mark section lines2320-2543; index/trade endpoint identities; selected HTML section from mark anchor to following asset-index anchor",
+          "selected_bytes": 50369,
+          "selected_sha256": "345c4116f939ca42a64896f06c64e2db035559437d1e2cdef7afa937e5c2ed27",
+          "hash_scope": "Exact HTML bytes from id=mark-price-kline-candlestick-data inclusive to id=asset-index exclusive",
+          "last_modified": "2026-10-20T07:55:29Z",
+          "basis": "Rendered mark section lines2320-2543; index/trade endpoint identities; selected HTML section from mark anchor to following asset-index anchor"
+        },
+        {
+          "id": "binance_general",
+          "url": "https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/general-info",
+          "read_scope": "Rendered General API Information lines154-161 and IP/security limits174-179,242-273",
+          "version": "Current page retrieved2026-10-21; no pinned commit",
+          "basis": "Rendered General API Information lines154-161 and IP/security limits174-179,242-273",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        },
+        {
+          "id": "binance_common",
+          "url": "https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/common-definition",
+          "read_scope": "Quote/base terminology154-157 and general candle interval enum234-252",
+          "basis": "Quote/base terminology154-157 and general candle interval enum234-252",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        },
+        {
+          "id": "binance_archive_readme",
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+          "commit": "d571690eb66760763b0bd6e27e8cd35603c7e244",
+          "commit_date": "2026-10-16T14:18:28Z",
+          "read_scope": "Small5282-byte file; futures sections39-74 and checksum/correction sections88-105",
+          "whole_file_sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+          "basis": "Small5282-byte file; futures sections39-74 and checksum/correction sections88-105"
+        },
+        {
+          "id": "binance_archive_python_readme",
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/python/README.md",
+          "read_scope": "Futures-only section115-153 in9378-byte file",
+          "whole_file_sha256": "5d5e3a0bd69469bad8addb0e2db3015b6bf8ada10ce71a8ae81d5d1e5b792b8c",
+          "basis": "Futures-only section115-153 in9378-byte file"
+        },
+        {
+          "id": "binance_archive_script",
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/python/download-futures-markPriceKlines.py",
+          "read_scope": "4992-byte helper; monthly path/filename47-55, daily88-95, candidate dates118-123",
+          "whole_file_sha256": "e701b6dc4104c688285b1a17ef42833f65061a34d1555e7c94dedc1c5ed156a3",
+          "basis": "4992-byte helper; monthly path/filename47-55, daily88-95, candidate dates118-123"
+        },
+        {
+          "id": "binance_archive_enums",
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/python/enums.py",
+          "read_scope": "552-byte file, interval/date/base declarations4-11",
+          "whole_file_sha256": "e8337aa5ddfb0d2837cb797135bf909749c8ca4c733f538aa3cd934627bfc5a6",
+          "basis": "552-byte file, interval/date/base declarations4-11"
+        },
+        {
+          "id": "binance_archive_utility",
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/python/utility.py",
+          "read_scope": "get_path108-116 in6217-byte file; no helper execution",
+          "whole_file_sha256": "373bc8262b1383a93d61b43cbe62d01dcb7b6741c3845309f1f3b56f8545efc9",
+          "basis": "get_path108-116 in6217-byte file; no helper execution"
+        },
+        {
+          "id": "gate_doc_version",
+          "url": "https://www.gate.com/docs/developers/apiv4/en/",
+          "version": "v4.106.160",
+          "read_scope": "Version33, access37-43, changelog114-117",
+          "basis": "Version33, access37-43, changelog114-117",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        },
+        {
+          "id": "gate_futures_doc",
+          "url": "https://www.gate.com/docs/developers/apiv4/en/futures/#futures-market-k-line-chart",
+          "read_scope": "Rendered914-1007 and candle model12843-12867; no full HTML saved",
+          "version": "Sitev4.106.160",
+          "basis": "Rendered914-1007 and candle model12843-12867; no full HTML saved",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        },
+        {
+          "id": "gate_candle_model",
+          "url": "https://github.com/gate/gateapi-python/blob/759c91c06face05c0610b4a62661f7e23172d9cb/docs/FuturesCandlestick.md",
+          "commit": "759c91c06face05c0610b4a62661f7e23172d9cb",
+          "commit_date": "2026-10-20T03:46:20Z",
+          "read_scope": "819-byte model declaration, lines1-17",
+          "whole_file_sha256": "35907cc57731a086413a68fdad2fd125cc73a0b52a341c08e8c247ca6303315f",
+          "basis": "819-byte model declaration, lines1-17"
+        },
+        {
+          "id": "gate_candle_python_model",
+          "url": "https://github.com/gate/gateapi-python/blob/759c91c06face05c0610b4a62661f7e23172d9cb/gate_api/models/futures_candlestick.py",
+          "read_scope": "7535-byte generated model; field map35-52, timestamp90-104, volume113-127, quote-volume228-242",
+          "whole_file_sha256": "77aa833322792881cc7195275408c9c337107dd1c634b1b8cc501594e52536c6",
+          "basis": "7535-byte generated model; field map35-52, timestamp90-104, volume113-127, quote-volume228-242"
+        },
+        {
+          "id": "gate_candle_method",
+          "url": "https://github.com/gate/gateapi-python/blob/759c91c06face05c0610b4a62661f7e23172d9cb/gate_api/api/futures_api.py#L966",
+          "read_scope": "Only list_futures_candlesticks and with_http_info methods, lines966-1115; stream stopped at next method",
+          "selected_lines": 150,
+          "selected_sha256": "bb732795d3b67d426247c4bb0987d0a2de0c78613a66f3df99384bf4f8c5b8d1",
+          "hash_scope": "Exact UTF-8 bytes of the two selected method definitions including their blank lines",
+          "basis": "Only list_futures_candlesticks and with_http_info methods, lines966-1115; stream stopped at next method"
+        },
+        {
+          "id": "binance_liquidation",
+          "url": "https://www.binance.com/en/support/faq/detail/360033525271",
+          "read_scope": "Rendered24-30,49-66,78-85; bounded HTML hashed, not saved",
+          "basis": "Rendered24-30,49-66,78-85; bounded HTML hashed, not saved",
+          "retrieved_utc": "2026-10-21T05:42:08.932761+00:00",
+          "html_sha256": "83627276eb6e530bf10ac9c66f01ffdd0e7df128f002931e214ad7a5b4b68b4f"
+        },
+        {
+          "id": "binance_mark_index",
+          "url": "https://www.binance.com/en/support/faq/detail/360033525071",
+          "read_scope": "Rendered24-39,74-86,90-105; bounded HTML hashed, not saved",
+          "basis": "Rendered24-39,74-86,90-105; bounded HTML hashed, not saved",
+          "retrieved_utc": "2026-10-21T05:42:10.980460+00:00",
+          "html_sha256": "0f1e7992ea9ddd9c64f5d431e01ff91f40285e3d96df660e3306c940abdd0282"
+        },
+        {
+          "id": "gate_mark_calculation",
+          "url": "https://www.gate.com/help/futures/futures-logic/22067",
+          "read_scope": "Rendered73-100,111-119; no distinct update date; bounded HTML hashed, not saved",
+          "basis": "Rendered73-100,111-119; no distinct update date; bounded HTML hashed, not saved",
+          "retrieved_utc": "2026-10-21T05:42:13.918946+00:00",
+          "html_sha256": "5f2c50fda8abed752e8548374b2f395a5263402900f4112b84ebc8e78179714c"
+        },
+        {
+          "id": "gate_position_doc",
+          "url": "https://www.gate.com/docs/developers/apiv4/en/futures/#position",
+          "read_scope": "Position.liq_price13032, maintenance_rate13028; liquidation order_price/fill_price12961-12962",
+          "basis": "Position.liq_price13032, maintenance_rate13028; liquidation order_price/fill_price12961-12962",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        },
+        {
+          "id": "gate_ws_timestamp_check",
+          "url": "https://www.gate.com/docs/developers/futures/ws/en/#candlesticks-api",
+          "version": "v4.0.0",
+          "read_scope": "Selected notification schema2759-2767; t merely Time; optional w indicates closed window; no REST open/close semantics established",
+          "basis": "Selected notification schema2759-2767; t merely Time; optional w indicates closed window; no REST open/close semantics established",
+          "version_limit": "Mutable documentation excerpt; no content fingerprint captured. Review-date and read scope only."
+        }
+      ],
+      "media_source_count": 19,
+      "data_contracts": [
+        {
+          "id": "BINANCE-USD-M-MARK-REST",
+          "source_ids": [
+            "binance_mark_schema",
+            "binance_mark_doc"
+          ],
+          "mechanics": "GET /fapi/v1/markPriceKlines: symbol+interval, optional startTime/endTime/limit in milliseconds; default500/max1500. Twelve-slot rows: open timestamp0, OHLC1..4, close timestamp6; slots5,7,8,9,10,11 are Ignore, not trade activity. Code restricts to USDT/USDC symbols and documented fixed intraday durations through1d.",
+          "timestamp_policy": "Decoder requires close+1ms minus open equal the declared interval; this is an explicit fixed-duration policy supported by the documented minute example, not a universal month/week rule or publication clock.",
+          "missing": "Live access, earliest per-symbol history, start/end inclusivity beyond declared fields and observed continuity remain untested."
+        },
+        {
+          "id": "BINANCE-MARK-ARCHIVE",
+          "source_ids": [
+            "binance_archive_readme",
+            "binance_archive_script",
+            "binance_archive_utility",
+            "binance_archive_enums"
+          ],
+          "mechanics": "Pinned official helper declares data/futures/um/{monthly|daily}/markPriceKlines/{SYMBOL}/{interval}/ ZIP paths and CHECKSUM naming. Candidate generation from2020 is not evidence of any object or symbol/date coverage. Existing lab.data support is reused conceptually; no downloader is added.",
+          "missing": "No ZIP/header/checksum/object was received. REST tuple documentation is not a verified archive CSV contract. README warns that corrected archives can replace old files."
+        },
+        {
+          "id": "GATE-USDT-MARK-REST",
+          "source_ids": [
+            "gate_futures_doc",
+            "gate_candle_model",
+            "gate_candle_python_model",
+            "gate_candle_method",
+            "gate_ws_timestamp_check"
+          ],
+          "mechanics": "GET /futures/usdt/candlesticks with mark_<base>_USDT; index_ selects a distinct series. Object fields t,o,h,l,c; t is number/double Unix seconds, OHLC quote-currency strings. Trade volume v is documented only for unprefixed contracts; mark decoding does not require v or sum. Limit<=2000 cannot be combined with from/to; default timezone utc0.",
+          "timestamp_policy": "Reviewed REST/model/WS docs do not prove whether REST t labels open or close. The decoder preserves exact millisecond-representable seconds and returns an unresolved GateMarkCandle. Daily normalization rejects it; no arbitrary timestamp shift is applied.",
+          "missing": "Open-versus-close anchoring, retention/earliest history, exact from/to boundaries, response ordering and live mark-interval support remain untested."
+        },
+        {
+          "id": "MARK-RELATIVE-RANGE",
+          "source_ids": [
+            "binance_mark_schema",
+            "gate_candle_model"
+          ],
+          "mechanics": "Our validation policy requires the exact distinct UTC grid of completed normalized mark bars for a whole day. Identical duplicates add no coverage; conflicting duplicates, mixed identities, shifted grids or invalid OHLC fail. Incomplete days have no daily extremes. Relative adverse movement also requires the immediately preceding mark close, without forward fill or trade-close substitution.",
+          "rule_origin": "Offline engineering policy and synthetic invariants; not an exchange promise or frozen trading specification.",
+          "missing": "Bar completion cutoff does not prove original publication or immutable vintage; a complete price range is not an account liquidation/fill/PnL model."
+        }
+      ],
+      "source_limits": [
+        "API schemas are interface declarations; docs access proves neither live trading-API access nor historical completeness. No regional/access restriction was bypassed.",
+        "Binance archive/common interval lists differ from the mark REST enum; Gate description mentions natural periods absent from its rendered enum. Only named fixed intraday intervals are accepted by code.",
+        "Mark, index and traded price are distinct. Liquidation also depends on collateral and maintenance-margin/account state; mark threshold crossing does not establish liquidation execution or PnL.",
+        "Hourly OHLC does not synchronize intrabar extrema across legs. A future account study still needs quantities, margin tiers, fees/funding cash flows and chronology.",
+        "Gate mark documentation describes protective pauses during spikes; a repeated displayed mark is not evidence of a tradable fill. Estimated liquidation price is not actual execution."
+      ],
+      "repository_reconciliation": {
+        "base_commit": "2c57ca2",
+        "existing_scope": "Claude already acquired Binance marks and used trade-versus-mark wick inputs in R282/M269. This pass adds strict REST contracts and complete-day mark coverage, not another wick factor or historical search.",
+        "synthetic_reproductions": "Current levcarry.daily_range accepts a single bar as a known day and accepts inverted extrema; xfund.daily_prices rejects valid zero-volume marks. These findings motivate a separate helper; frozen-facing functions and old results are preserved.",
+        "implementation": "lab/markbars.py + tests/test_markbars.py on codex/mark-price-contract; standard-library only, no requests/IO or runner integration. Gate timestamps use exact integer-ratio conversion, independent of Decimal context.",
+        "implementation_commit": "9f713bfe6431b018a9f5b51c0742abb406d75bec",
+        "draft_pr": "https://github.com/SaikiK12/T/pull/41"
+      },
+      "exact_tested_scope": "Primary source inspection; 27 invented-value decoder/grid/anchor/numeric tests; full suite 579 tests OK with 2 skipped at 9f713bf. No mark-vs-trade market statistic, strategy outcome, new M/R ID or measured trial.",
+      "unrun_scope": "Any future price-basis comparison/account study must freeze a finite new specification and code/input hashes, retain the trade-based control and source gaps, and report applicable 1x/2x/3x costs. This intake supplies no profitable rule or safe-leverage conclusion."
     }
   ],
   "reassignment_refs": [

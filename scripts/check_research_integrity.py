@@ -35,11 +35,11 @@ _META = re.compile(
     r"[ \t]*(?:\*\*)?[ \t]*(.*?)[ \t]*$",
     re.IGNORECASE | re.MULTILINE,
 )
-# One bare or backtick-quoted id, optionally followed by a single annotation.
+# One bare or backtick-quoted id, optionally followed by a single annotation and period.
 # Keep the full-value match: arbitrary trailing text must not hide another id.
 _META_ID = re.compile(
     r"(?P<quote>`?)(?P<id>R[0-9]+)(?P=quote)"
-    r"(?:[ \t]+\([^()\r\n]*\))?\Z"
+    r"(?:[ \t]+\([^()\r\n]*\))?\.?\Z"
 )
 # A frozen PREREG's id can collide with a round claimed elsewhere first. Its text stays frozen; this file beside it
 # records the move as {"declared": "R253", "registered": "R255", "reason": "..."}.
