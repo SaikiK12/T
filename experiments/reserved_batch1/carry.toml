@@ -1,0 +1,30 @@
+# Reserved batch 1, candidate C1: R275's binance+gate L14d th10% K20 carry book on the 2020 rows (qx spread).
+# Frozen with experiments/reserved_batch1/PREREG.md; never edited afterwards. Every rule is R275's (experiments/xfund_v1/
+# spec.toml); only the dates, the Gate folders (2020 rows live in gate_hist/reserved) and the one book differ.
+name = "reserved_batch1_carry"
+start = "2020-01-01"
+end = "2020-12-31"
+symbols = "experiments/xfund_v1/symbols.csv"
+reserved_prereg = "experiments/reserved_batch1/PREREG.md"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/reserved/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/reserved/funding_applies", bar_h = 1 },
+]
+sets = [["binance", "gate"]]
+lookbacks = [14]
+thresholds = [0.10]
+slots = [20]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 275
+alpha = 0.05
+recent_from = "2020-07-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 1
+hurdle_ann_pct = 0.0
+out = "experiments/reserved_batch1/results/carry"

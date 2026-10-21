@@ -5,8 +5,10 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (14)
+## Fetch: download archives and public history (16)
 
+- [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
+- [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
 - [`fetch_coinmetrics.py`](fetch_coinmetrics.py): Coin Metrics community API (free, no key): daily market caps and on-chain metrics for every asset it serves free.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
@@ -22,12 +24,13 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (9)
+## Record: point-in-time collectors (cannot be backfilled) (10)
 
 - [`record_digest.py`](record_digest.py): Append a SHA-256 digest of every recorder file under data/recorders/ to experiments/recorders/journal/digests.csv (committed).
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
 - [`record_mexc_depth.py`](record_mexc_depth.py): mexc_costs (R224): what a taker order costs on MEXC for the coins the forward books trade, measured from the public order book, as set out in experiments/mexc_costs/PREREG.md.
 - [`record_mexc_ticker.py`](record_mexc_ticker.py): Hourly snapshot of every MEXC perpetual: the displayed funding rate with its next settlement time, cycle and caps (funding_rate), and the ticker (last, bid/ask, index and fair price, 24 h volume, ...
+- [`record_news.py`](record_news.py): Point-in-time headline recorder: every FEEDS source polled every POLL_S seconds, each new item kept once with the time we first saw it.
 - [`record_notices.py`](record_notices.py): Binance announcement catalogs (Delisting, New Cryptocurrency Listing, Latest Binance News) as an append-only journal: one row per article with its id, title, release time (ms, as published) and ...
 - [`record_tape.py`](record_tape.py): Order-flow tape recorder (M264): Binance USD-M and MEXC perps' best bid/ask and trades for `COINS`, bucketed to the second by lab/tape.py, into data/tape/. Paper only: it reads public websockets ...
 - [`record_unlocks.py`](record_unlocks.py): Daily point-in-time snapshot of the DefiLlama unlock calendar: the emissions index (every token's documented past and upcoming unlock events, circulating and max supply, price, market cap) as ...
@@ -143,7 +146,13 @@ line is the first line of the script's own docstring.
 - [`venue_symbols_kd.py`](venue_symbols_kd.py): Symbol table for the KuCoin / dYdX venue replication of R275 and R276: one row per Binance USD-M perp with the file stem of the same coin on Gate, KuCoin and dYdX (empty where it is not listed or ...
 - [`venue_table.py`](venue_table.py): Write a qx spread symbol table from lab.venues: one row per Binance perp found on at least one of the venues asked for, columns `key`, `binance` and one per venue (the venue's symbol, '' where it ...
 
-## Tools and everything else (18)
+## Research: videos, podcasts and transcripts (docs/VIDEO_DIG.md) (3)
+
+- [`dig_podcasts.py`](dig_podcasts.py): Practitioner podcasts as searchable text: the people of docs/VIDEO_DIG.md through their shows' RSS feeds.
+- [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
+- [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
+
+## Tools and everything else (19)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -159,6 +168,7 @@ line is the first line of the script's own docstring.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
+- [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).

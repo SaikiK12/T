@@ -24,6 +24,8 @@ NOT_ROUNDS = {
     "forward_lag": "How late each forward tick ran after the hour, per day (written by the forward loop)",
     "recorders": "Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded",
     "propsim_v1": "Edge map used by the prop-firm simulation (R202 propfirm_v1)",
+    "reserved_batch1": "Specs and inputs for the first read of the reserved samples (2020, MEXC-only coins), due "
+                       "2026-11-03; registered when its PREREG is frozen (docs/GATES.md)",
 }
 KINDS = [  # (heading, test on the script's file name)
     ("Fetch: download archives and public history", lambda n: n.startswith("fetch_")),
@@ -34,6 +36,8 @@ KINDS = [  # (heading, test on the script's file name)
     ("Check: parity, audits and integrity", lambda n: n.startswith(("audit_", "check_", "verify_", "validate_"))
      or "parity" in n),
     ("Build: tables, views and symbol maps", lambda n: n.startswith(("build_", "make_", "venue_"))),
+    ("Research: videos, podcasts and transcripts (docs/VIDEO_DIG.md)",
+     lambda n: n.startswith(("dig_", "transcribe_"))),
 ]
 
 

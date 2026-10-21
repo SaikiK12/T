@@ -11,7 +11,8 @@
 # Last, the processing-lag report (experiments/forward_lag), the panel (docs/PANEL.md) and the dashboard's datasets
 # (dashboard/data/, uploaded to the Control Room artifact by the session's loop tick).
 # Before the lanes, the point-in-time recorders (MEXC funding/ticker snapshot, the six-venue funding board, Binance
-# notices, unlock calendar, and a check that the order-flow tape recorder runs, which also merges its finished days);
+# notices, unlock calendar, and checks that the order-flow tape recorder, which also merges its finished days, and the
+# headline recorder run);
 # after them, the recorder digest (experiments/recorders/journal/digests.csv).
 cd "$(dirname "$0")/.." || exit 1
 # one tick at a time: a second run while one is going exits at once
@@ -26,6 +27,7 @@ timeout 120 $PY scripts/record_funding_board.py >> experiments/recorders/tick.lo
 flock -w 300 .notices.lock timeout 300 $PY scripts/record_notices.py >> experiments/recorders/tick.log 2>&1
 timeout 300 $PY scripts/record_unlocks.py >> experiments/recorders/tick.log 2>&1
 timeout 60 $PY scripts/record_tape.py >> experiments/recorders/tick.log 2>&1
+timeout 60 $PY scripts/record_news.py >> experiments/recorders/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/forward_delist.py >> experiments/delist_fwd/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/forward_montag.py >> experiments/montag_fwd/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/forward_announce.py --verbose >> experiments/announce_fwd/tick.log 2>&1

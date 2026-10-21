@@ -52,7 +52,8 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`MARKET_DIRECTION_AND_REGIME.md`](docs/MARKET_DIRECTION_AND_REGIME.md),
   [`VOLATILITY_AND_TAIL_RISK_FORECASTS.md`](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),
   [`QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md`](docs/QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md),
-  [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md).
+  [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md), [`VIDEO_DIG.md`](docs/VIDEO_DIG.md) (the owner's TikToks and
+  practitioner podcasts: what to trade, news recording, the cross-family book).
 
 **Trading, execution and capital**
 - The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md).
