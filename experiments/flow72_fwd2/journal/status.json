@@ -1,50 +1,50 @@
 {
- "last_hour": "2026-10-20T21:00:00+00:00",
- "days_scored": 19,
+ "last_hour": "2026-10-21T01:00:00+00:00",
+ "days_scored": 20,
  "short_now": {
   "tvc": [
    "BNBUSDT",
-   "ETHUSDT",
    "KORUUSDT",
    "SKHYNIXUSDT",
    "SKHYUSDT",
-   "SOXSUSDT"
+   "SOXSUSDT",
+   "XAGUSDT"
   ],
   "t24": [
    "KORUUSDT",
    "QUSDT",
-   "SKHYNIXUSDT",
    "SOXLUSDT",
    "SOXSUSDT",
+   "WLDUSDT",
    "\u9f99\u867eUSDT"
   ],
   "t4": [
-   "CLUSDT",
-   "DOGEUSDT",
-   "QUSDT",
+   "CRCLUSDT",
+   "KORUUSDT",
+   "SAMSUNGUSDT",
    "SANDUSDT",
-   "SKHYNIXUSDT",
-   "SOLUSDT"
+   "SOXSUSDT",
+   "WLDUSDT"
   ]
  },
  "A": {
-  "days": 19,
-  "total": 0.2223286237885119,
-  "total_2x": 0.20970977207035738,
-  "total_3x": 0.19709092035220271,
+  "days": 20,
+  "total": 0.2101124259506297,
+  "total_2x": 0.19689066882936487,
+  "total_3x": 0.18366891170809982,
   "go_real": {
-   "n": 19,
-   "mean": 0.011701506515184836,
-   "hit": 0.7368421052631579,
+   "n": 20,
+   "mean": 0.010505621297531485,
+   "hit": 0.7,
    "worst": -0.0310079557600521,
    "n_clusters": null,
    "checks": {
-    "enough_scored": false,
+    "enough_scored": true,
     "mean_positive": true,
     "hit_rate": true,
     "no_tail_event": true
    },
-   "pass": false
+   "pass": true
   },
   "prereg": {
    "pass_now": false,
@@ -54,23 +54,23 @@
   }
  },
  "B": {
-  "days": 19,
-  "total": 0.0946161274848765,
-  "total_2x": 0.09219222115757451,
-  "total_3x": 0.08976831483027296,
+  "days": 20,
+  "total": 0.0922592593069244,
+  "total_2x": 0.08976915861899351,
+  "total_3x": 0.08727905793106307,
   "go_real": {
-   "n": 19,
-   "mean": 0.0049797961834145525,
-   "hit": 0.6842105263157895,
+   "n": 20,
+   "mean": 0.00461296296534622,
+   "hit": 0.65,
    "worst": -0.0164287423129772,
    "n_clusters": null,
    "checks": {
-    "enough_scored": false,
+    "enough_scored": true,
     "mean_positive": true,
     "hit_rate": true,
     "no_tail_event": true
    },
-   "pass": false
+   "pass": true
   },
   "prereg": {
    "pass_now": false,
