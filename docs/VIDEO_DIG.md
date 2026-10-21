@@ -54,16 +54,15 @@ Multi-Strategy Advisers, a $4B fund).
   - Rekt Radio;
   - Empire, Unchained and others.
 - 165 transcripts were read by keyword (`python scripts/dig_videos.py grep --words ...`).
-- Six crypto episodes have no published transcript. `scripts/transcribe_audio.py` transcribed five of them locally
+- Six episodes have no published transcript. `scripts/transcribe_audio.py` transcribed all six locally
   (faster-whisper base.en, about 8 minutes per hour of audio):
   - a Wintermute trader (Rekt Radio #96);
   - the 2025-10-10 liquidation cascade (Rekt Radio #119);
   - Doug Colkitt on liquidations (Chat With Traders #313);
   - Jane Street's Thomas Uhm on crypto versus equities (Empire);
-  - ex-Citadel quant Neel Somani (Odds on Open).
-
-  The sixth, an ex-Jane Street trader on finding edge (Odds on Open), failed on a cut-off download and is being
-  retried.
+  - ex-Citadel quant Neel Somani (Odds on Open);
+  - ex-Jane Street trader Agustin Lebron, author of *The Laws of Trading*, on finding edge (Odds on Open, 941 views
+    on YouTube). The first download was cut off; the retry worked.
 
 ## What the practitioners say, and where the lab stands on it
 | # | Claim (source) | Where the lab is | Status |
@@ -81,6 +80,9 @@ Multi-Strategy Advisers, a $4B fund).
 | 11 | **Skewed assets are overpriced:** being always long a lottery-like asset loses on average, because people pay for the asymmetry (Neel Somani, ex-Citadel power trading). | Lottery and MAX long-short books were NULL (R222, R238). The squeeze-capped short of R282's young, small, high-turnover cluster is queued. | Queue M276 |
 | 12 | **A distribution premium:** tokens that gain venues and listings outperform as more buyers can reach them (Wintermute, Rekt Radio #96). | R282's venue count (n_venues_7d) survived the reality check but did not pass. Listing lanes R188/R189. | Partly tested |
 | 13 | **No prime broker in crypto.** Capital sits locked on each venue, so arbitrage across venues costs more (Thomas Uhm, Jane Street, Empire 2022). | This is the friction that lets cross-venue carry (R275) persist. R280 found carry legs liquidated even at 1x under isolated margin: the cost is real. | Supports #2 |
+| 14 | **Volatile days are the best days to trade, if you are not the one forced to.** Liquidations and margin calls drive the big moves; a market maker earns more when the market is wild (Lebron, ex-Jane Street, Odds on Open). | Same mechanism as rows 9 and 10: HLP (M285) and the post-cascade basket (M286). The per-coin fades R206 and R252 were NULL. | **Supports M286** |
+| 15 | **A systematic trader still decides whether today is inside the training data.** Out of distribution is a judgment call (Lebron). | M158 gated the flow books on trend × vol (TESTED, NULL). A switch on distance from the archive's own range is new. | **New row M287** (UNTESTED) |
+| 16 | **You can only bound the odds you got lucky; more trades bound them faster.** Edge is what you know or can do that the marginal trader cannot, and it is worth less the more people share it. "Trade the bottom of the Russell" was the small shop's answer; automation has cut that gap (Lebron). | This is the lab's power arithmetic: daily books need years, event lanes and the cross-family book (R285) need fewer days. The small-size thesis (thin coins, MEXC-only) stays, with Lebron's caveat that big firms reach smaller markets every year. | **Supports R285 and the event lanes** |
 
 ## What could be the best things to trade (ranked by evidence, not by how good the story sounds)
 1. **Cross-venue funding carry** (R275, forward R278/R279, 2020 batch C1): many coins, market-neutral, paid by a known
@@ -130,4 +132,4 @@ ours, after its own risk.
   `scripts/transcribe_audio.py`, `scripts/record_news.py`, `scripts/fetch_cboe.py`, `scripts/fetch_hlp.py`.
 - **Data (gitignored):** `data/videos/` holds hits, picks, episodes and transcripts. `data/news/` holds the headline
   record. `data/cboe/` holds the vol curve.
-- **Rows:** `registry/methods.csv` M277-M281, M285 and M286.
+- **Rows:** `registry/methods.csv` M277-M281 and M285-M287.
