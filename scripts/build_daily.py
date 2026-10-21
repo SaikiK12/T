@@ -6,7 +6,7 @@ and manifest.json (rows, perps, coverage per column, the lab/daily.py sha256, an
 folder that has a provenance record in docs/provenance/). It reads no reserved row (2020, long tails, MEXC-only coins)
 and computes no statistic on returns.
 
-usage: nice python scripts/build_daily.py [--end 2026-09-30] [--workers 8]
+usage: nice python scripts/build_daily.py [--end 2026-09-30] [--workers 8] [--out data/daily]
 """
 import argparse
 import csv
@@ -41,9 +41,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--end", default=data.END)
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--out", default=str(daily.OUT), help="folder to write (a lane's rebuild check uses a temp one)")
     a = ap.parse_args()
     df, mk, notes = daily.build(end=a.end, workers=a.workers, log=log)
-    out = daily.OUT
+    out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     df.to_parquet(out / "panel.parquet", index=False)
     mk.to_parquet(out / "market.parquet", index=False)
