@@ -46,7 +46,8 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
     So a BTC-only time-series rule or a chase rule is only partly fresh there. Altcoin and cross-sectional rules are
     fresh.
   - `lab.panel.load_panel` raises for rows before 2021 unless it gets a frozen PREREG that contains the token
-    `RESERVED-2020-READ`.
+    `RESERVED-2020-READ`. So do `lab.daily` and every qx subcommand (`engine/src/reserved.rs`, through the spec's
+    `reserved_prereg`), which also guard the venues' `reserved/` folders with their own tokens.
 - **MEXC-only coins**, 2025-04-01 onward: MEXC perps with no Binance perp in the archive. The set is fixed by a frozen
   PREREG before the first read.
 - **Gate long tail and Gate 2020** (added 2026-10-20 with `scripts/fetch_gate_history.py`):

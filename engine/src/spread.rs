@@ -5,7 +5,7 @@
 //! Accounting, on a daily axis where day d is the instant start + d days (00:00 UTC):
 //! - A venue's close on day d is its last traded close at or before that instant (hourly bars, or daily bars for a venue
 //!   that only serves daily history). It is fresh on day d when the bar ending at that instant traded. Rows before
-//!   `start` are dropped as they are read (the reserved 2020 sample is never used).
+//!   `start` are dropped as they are read (a start before 2021 needs `reserved_prereg`, engine/src/reserved.rs).
 //! - Funding settled in (day d - 1, day d] belongs to day d, settlement times floored to the hour. The long pays +rate and
 //!   the short receives it. A pair opened at day d's close earns day d + 1's funding onward.
 //! - Signal on day d: each venue's settled funding over the last L days, (day d - L, day d]. The spread is the higher
@@ -67,6 +67,9 @@ pub struct Spec {
     /// CSV: `key` then one column per venue name holding that venue's file stem (empty = not listed there)
     pub symbols: String,
     pub venues: Vec<VenueCfg>,
+    /// A frozen batch PREREG that declares the reserved samples this spec reads (engine/src/reserved.rs).
+    #[serde(default)]
+    pub reserved_prereg: Option<String>,
     pub sets: Vec<Vec<String>>,
     /// days
     pub lookbacks: Vec<usize>,
@@ -576,6 +579,12 @@ fn day_str(t0: i64, d: usize) -> String {
 }
 
 pub fn run(spec: Spec, log: &dyn Fn(String)) -> Result<Report> {
+    let mut paths: Vec<&str> = vec![spec.symbols.as_str()];
+    for v in &spec.venues {
+        paths.push(&v.prices);
+        paths.push(&v.funding);
+    }
+    crate::reserved::check(&spec.start, &paths, spec.reserved_prereg.as_deref())?;
     let u = load_universe(&spec, log)?;
     let names: Vec<String> = spec.venues.iter().map(|v| v.name.clone()).collect();
     let vix: HashMap<&str, usize> = names.iter().enumerate().map(|(i, n)| (n.as_str(), i)).collect();

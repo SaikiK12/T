@@ -64,6 +64,9 @@ pub struct Spec {
     #[serde(default = "d_alpha")]
     pub alpha: f64,
     pub out: String,
+    /// A frozen batch PREREG that declares the reserved samples this spec reads (engine/src/reserved.rs).
+    #[serde(default)]
+    pub reserved_prereg: Option<String>,
 }
 
 pub struct Table {
@@ -267,6 +270,9 @@ pub fn max_abs_t_null(x: &[Vec<f64>], block: usize, reps: usize, seed: u64) -> V
 }
 
 pub fn run(spec: Spec, log: &dyn Fn(String)) -> Result<Report> {
+    let mut paths: Vec<&str> = vec![spec.factors.as_str(), spec.prices.as_str()];
+    paths.extend(spec.funding.as_deref());
+    crate::reserved::check(&spec.start, &paths, spec.reserved_prereg.as_deref())?;
     let tb = read_table(Path::new(&spec.factors))?;
     let ax = Axis::new(&spec.start, &spec.end)?;
     let mut syms: Vec<String> = tb.sym.clone();
