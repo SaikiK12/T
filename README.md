@@ -55,7 +55,9 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md), [`VIDEO_DIG.md`](docs/VIDEO_DIG.md) (the owner's TikToks and
   practitioner podcasts: what to trade, news recording, the cross-family book),
   [`COMMENT_DIG.md`](docs/COMMENT_DIG.md) (Hacker News, Reddit, Stack Exchange, YouTube and TikTok comments and podcast
-  transcripts: ideas M288+ and what the lab already tested).
+  transcripts: ideas M288+ and what the lab already tested),
+  [`AUCTION_AND_FLOW.md`](docs/AUCTION_AND_FLOW.md) (the owner's 21 terms: auction market theory, order flow, dealer
+  gamma/delta/vanna/charm exposure; critique, our own terminal, the AI council, questions for the owner).
 
 **Trading, execution and capital**
 - The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md). Other venues and their fees (Lighter's zero-fee API,

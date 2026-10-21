@@ -6,6 +6,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 `python -m unittest discover -s tests -t .` before committing a change here.
 
 - [`atlas`](atlas.py): Edge atlas: what each feature bin says about future returns BEFORE fees, at several horizons, split by a grouping (market session, liquidity tier, BTC regime), with a placebo to say how much of it ...
+- [`auction`](auction.py): Auction-market levels from bars: anchored VWAP with standard-deviation bands, volume and TPO profiles, the point of control and value area, high- and low-volume nodes, and the initial balance ...
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`config`](config.py): Constants every lane shares.
@@ -13,6 +14,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`data`](data.py): Binance public-archive fetcher (data.binance.vision).
 - [`engine`](engine.py): Vectorized backtester.
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.
+- [`exposure`](exposure.py): Options positioning: the Black-76 greeks of each listed option and the dealer exposures traders quote from them, gamma (GEX), delta (DEX), vanna (VEX) and charm (CEX), the gamma profile over a ...
 - [`features`](features.py): Feature library.
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...
@@ -27,6 +29,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`mexc`](mexc.py): Public MEXC USDT-M futures data (no keys, no orders): contract metadata, hourly klines, funding settlements, and the map from Binance USD-M symbols to MEXC crypto contracts.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
+- [`orderflow`](orderflow.py): Order flow from bars that carry the taker-buy volume (Binance klines): delta, cumulative volume delta (CVD), the delta profile, and two patterns traders name, absorption and exhaustion ...
 - [`pack`](pack.py): A pack: many signal cells traded in one book, each entry a limit order (lab/maker.py rules) or a market order, marked to market every hour, with an optional hedge that holds the opposite of the ...
 - [`panel`](panel.py): One hourly clock for every symbol, and higher timeframes that only become visible once their bar has closed.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.

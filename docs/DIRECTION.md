@@ -301,3 +301,26 @@ The 1-minute data also unblocks M290 (scheduled releases) and M206 (opening-rang
 - Every FINDINGS reports 1x/2x/3x of its execution mode's cost, its full trial count, and a reading against
   `registry.program_trials()`.
 - Nothing places orders or uses keys. Downloads stay within the disk allowance, checked before each one.
+
+## Auction, order flow and options positioning (owner, 2026-10-21)
+The owner listed 21 terms (TPO, VWAP bands, POC and value area, initial balance, HVN/LVN, volume profile, delta,
+CVD, absorption, exhaustion, dark pool, gamma, delta, charm and vanna exposure) and asked for data, our own method,
+a critical eye, our own Bloomberg and an AI council. The write-up is `docs/AUCTION_AND_FLOW.md`.
+
+**The common thread:** the terms are three families by information:
+- **Auction levels** are transforms of bars the lab has already searched hard (R263, R246 NULL). They get one
+  family, R290 `auction_v1`, with real session anchors against random placebo anchors, to settle whether sessions
+  mean anything in crypto.
+- **Order flow** carries trade sides that bars do not. It has partial life here (R185, flow books).
+- **Dealer options exposure** is the only family that forces someone to trade. The size is real: BTC gamma notional
+  per 1% move is about one hour of Binance perp volume. Its sign was a guess until now, because every Deribit
+  option trade since late 2016 carries the taker's side (`data/deribit_trades`, M308).
+
+**Built:** `lab/auction.py`, `lab/orderflow.py` and `lab/exposure.py` (tested), plus two downloads:
+- the Binance option history: hourly greeks 2023, which our Black-76 reproduces to 0.06%, and BVOL per minute
+  2023-26;
+- the Deribit option trade history.
+
+**Next:** R290, then the mechanism check for M308 (does estimated dealer gamma predict realized volatility?) before
+any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
+
