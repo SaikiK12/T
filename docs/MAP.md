@@ -479,6 +479,13 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - One cross account per venue is safe at 1x on every book, at 2x only on binance+mexc and binance+kucoin, and at
     3x on none. The 2025-10-11 crash wipes a one-sided venue account at 2x.
   - [FINDINGS](../experiments/levcarry_v1/FINDINGS.md).
+- **R281 (sizecarry_v1), NULL: the books stay equal-weighted.** It sized each open pair of the six carry books by
+  confidence (spread, persistence, inverse leg volatility and their products, weights capped at 3 slots) against equal
+  slots (30 trials).
+  - No book passes its SPA bar (p ≤ 0.0083 at 2x). The closest is R279 A spread_persist, p 0.026.
+  - Tilting to the widest spreads adds +1.3 to +8.7 %/yr at 1x, but it doubles the trading and cuts the NW t by up to
+    half. The gain comes only from 2025-26, the years of R280's short-leg pumps.
+  - [FINDINGS](../experiments/sizecarry_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -584,6 +591,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,328 after R280 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,358 after R281 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

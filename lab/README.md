@@ -36,6 +36,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`screen`](screen.py): The standard screen for a cross-sectional feature, so a queued method needs a frozen PREREG and a feature, not a new runner.
 - [`search`](search.py): Staged beam search over conditions on feature bins, with a placebo to calibrate what counts as a find.
 - [`sessions`](sessions.py): Market clocks: where each decision time sits against the hours of other markets and scheduled events.
+- [`sizecarry`](sizecarry.py): Confidence-sized cross-venue carry (method M266): R275's books with the same pairs, entered and exited by the same rule (lab.xfund), but each open pair sized by a score instead of one equal slot.
 - [`slices`](slices.py): Overlapping-slice books (the Jegadeesh-Titman construction): every hour a symbol is in the signal state, open a slice of fixed size and close it `hold` hours later.
 - [`stats`](stats.py): Reference statistics.
 - [`tearsheet`](tearsheet.py): Performance tear sheet for a daily return stream: quantstats' core metrics, plus the lab's honesty terms.
