@@ -8656,17 +8656,17 @@
       "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
       "received_scope": "Official notices document changes; direction and 24-hour horizon are our proposals, not exchange recommendations. An MMR increase can change existing-position liquidation exposure; a lower leverage ceiling alone does not prove forced selling.",
       "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
-      "unrun_scope": "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "unrun_scope": "Canonical M400 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
       "status": "blocked",
       "required_inputs": [
         "First-seen notice and effective times; before/after tiers and affected crypto contracts",
         "Matched hourly executable prices, funding and unaffected-coin controls"
       ],
       "blockers": [
-        "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+        "Canonical M400 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
         "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
       ],
-      "next_action": "Retained in canonical M280: obtain point-in-time inputs and freeze a finite study before outcomes.",
+      "next_action": "Retained in canonical M400: obtain point-in-time inputs and freeze a finite study before outcomes.",
       "alias_kind": "distinct_unregistered_scope",
       "source_refs": [
         {
@@ -8688,7 +8688,7 @@
           "label": "Exchange mechanics only; no strategy performance evidence"
         }
       ],
-      "queue_allocation": "M280"
+      "queue_allocation": "M400"
     },
     {
       "id": "XM26-TICK-CHANGE",
@@ -8701,17 +8701,17 @@
       "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
       "received_scope": "The reviewed notice preserves old orders on their original tick grid. Spread/depth and adverse-selection effects are unknown; an OHLC touch is not evidence of a maker fill.",
       "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
-      "unrun_scope": "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "unrun_scope": "Canonical M401 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
       "status": "blocked",
       "required_inputs": [
         "Before/after tick metadata and effective times",
         "Timestamped depth, trades, order grid and queue/fill assumptions"
       ],
       "blockers": [
-        "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+        "Canonical M401 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
         "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
       ],
-      "next_action": "Retained in canonical M281: obtain point-in-time inputs and freeze a finite study before outcomes.",
+      "next_action": "Retained in canonical M401: obtain point-in-time inputs and freeze a finite study before outcomes.",
       "alias_kind": "distinct_unregistered_scope",
       "source_refs": [
         {
@@ -8725,7 +8725,7 @@
           "label": "Exchange mechanics only; no strategy performance evidence"
         }
       ],
-      "queue_allocation": "M281"
+      "queue_allocation": "M401"
     },
     {
       "id": "XM26-TRIGGER-RACE",
@@ -9645,7 +9645,7 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
+      "current_sha256": "e0162a8203c3470f1deb5375c720bfc4c03f6818dc7aa6334c2610486535f0d3",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
@@ -9669,6 +9669,12 @@
           "sha256": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
           "reviewed_utc_date": "2026-10-20",
           "intake_id": "intake_hygiene_20261020"
+        },
+        {
+          "sha256": "e0162a8203c3470f1deb5375c720bfc4c03f6818dc7aa6334c2610486535f0d3",
+          "reviewed_utc_date": "2026-10-21",
+          "intake_id": "intake_collision_reconciliation_20261021",
+          "preservation": "Previous source digest and complete original source records retained in Git and collision receipts; current ID pointers reconciled only."
         }
       ]
     }
@@ -10851,9 +10857,34 @@
       },
       "canonical_reconciliation": "Nine source aliases point to existing M026/M115/M030/M204/M132/M027; generic tested families do not close exact source scope. All272 live queue rows and their statuses are unchanged; original250 source records remain unchanged.",
       "remaining_scope": "Every actual MEXC implementation remains unrun. Resolve accounting, finite values, full state/chronology and data first; freeze one finite control comparison before returns, then charge full1x/2x/3x costs. No exclusion based on prior or historical family nulls."
+    },
+    {
+      "intake_id": "intake_collision_reconciliation_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [],
+      "records_updated": [
+        "XM26-MMR-EVENT",
+        "XM26-TICK-CHANGE"
+      ],
+      "media_sources": [],
+      "media_source_count": 0,
+      "current_allocations": {
+        "XM26-MMR-EVENT": "M400",
+        "XM26-TICK-CHANGE": "M401"
+      },
+      "reason": "Only two unregistered source IDs collide with the newly authoritative live queue. Main M280/M281 retained; no R-id, rule or status changed. M282/M283/M284 source reservations remain unchanged.",
+      "source_version_before": "33a56ce723a8c501e55269e7ba9ff9785298c46fe476e3eda9fb22a2056a657d",
+      "source_version_after": "e0162a8203c3470f1deb5375c720bfc4c03f6818dc7aa6334c2610486535f0d3",
+      "reassignment_refs": [
+        "registry/method_id_reassignment_source_mmr_M280.json",
+        "registry/method_id_reassignment_source_tick_M281.json"
+      ],
+      "historical_scope": "Older supplemental allocation maps remain literal historical snapshots; complete original source objects and alias rows are retained in the receipts."
     }
   ],
   "reassignment_refs": [
-    "registry/method_id_reassignment_source_iv_M234.json"
+    "registry/method_id_reassignment_source_iv_M234.json",
+    "registry/method_id_reassignment_source_mmr_M280.json",
+    "registry/method_id_reassignment_source_tick_M281.json"
   ]
 }

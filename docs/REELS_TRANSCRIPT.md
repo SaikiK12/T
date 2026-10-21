@@ -111,11 +111,11 @@ prices, and 1x/2x/3x costs before outcomes are read.
 
 Seven official pages support six `XM26-*` records in the existing bundle. These rules are **our unregistered
 proposals**, not exchange recommendations. No outcome, market download or synthetic implementation is claimed. Three distinct scopes have canonical BLOCKED
-rows M280–M282; other controls retain existing parents/context. Related does not mean exactly tested.
+rows M400 (MMR), M401 (tick size) and M282 (funding transport); other controls retain existing parents/context. Related does not mean exactly tested.
 
 | Source mechanics | Proposed bounded work / relationship |
 |---|---|
-| [MMR adjustment](https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452) and [leverage-only cut](https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535) | Separate the events: the former can change existing-position liquidation exposure; the latter does not prove forced selling. Proposed first-seen-notice short, 24-hour exit, opposite-sign and unaffected-coin controls; new M280, related M079/M209. |
+| [MMR adjustment](https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452) and [leverage-only cut](https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535) | Separate the events: the former can change existing-position liquidation exposure; the latter does not prove forced selling. Proposed first-seen-notice short, 24-hour exit, opposite-sign and unaffected-coin controls; current M400 (original source allocation M280), related M079/M209. |
 | [Tick-size change](https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119) | Hold an existing reversal signal fixed and compare executable net around the change. Old orders retain their original grid. Related M058/M232/M240; books and fill modeling required. |
 | [Trigger-order FAQ](https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952) | Compare the same 15% cover under last/fair/index triggers, executing on the book. Relevant to Claude's remote M261; no dangling M261 alias is added to this branch. |
 | Trigger FAQ, leverage notice, [price-protection definition](https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2) | Build synthetic triggered/submitted/partial/filled/rejected states; retain exposure until a fill. Cover gaps, margin, disabled trading and changed-leverage rejection. Protective-order activation does not ensure execution. |
@@ -129,7 +129,7 @@ displayed last price proves an executable fill. Mutable page versions and actual
 the supplement; original HTML was not archived. Full rules, eligibility, controls and 1x/2x/3x costs must be frozen
 before any new strategy outcome.
 
-These three distinct scopes are retained as BLOCKED canonical rows M280 (margin notices), M281 (tick-size execution) and M282 (funding-notice venue transport). Trigger/rejection controls and index-state variants retain existing parent relationships; no study was run.
+These three distinct scopes are retained as BLOCKED canonical rows M400 (margin notices), M401 (tick-size execution) and M282 (funding-notice venue transport). Trigger/rejection controls and index-state variants retain existing parent relationships; no study was run.
 
 ## Strategy-library and data-source follow-up
 
@@ -150,3 +150,5 @@ a BLOCKED composite lead, not a tested rule or a replication of an existing fixe
 A pinned third-party [Backtrader reproduction](https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py) was then read in full (commit `79bbf6a8`, blob `c581f127`, SHA-256 `04c09f26…7d2a`), strictly as a code-fidelity check. It is not official QuantConnect code. Its volatility update `(today_std / yesterday_std) / today_std` simplifies to `1 / yesterday_std`, so it is not a relative volatility change; the Donchian comparisons are commented out, leaving close-versus-Bollinger entries. The driver names a Yahoo SPX CSV for 2010–2019 and 0.1% commission, but no run output or data was received. M283 remains BLOCKED: this derivative does not resolve the official Method's 30-day versus adaptive-N/history-window conflict. No outcomes or tests were run.
 
 The original source-IV allocation M234 is historical. Its current ID is M284 after the earlier R257 mixture claim was verified; the original row, aliases and claim links are retained in [the reassignment record](../registry/method_id_reassignment_source_iv_M234.json). R257 evidence is not imported by this correction.
+
+The original unregistered source IDs M280/M281 were reassigned to M400/M401 when the live lab added different methods under those IDs. Original rows, aliases and source objects are preserved in `registry/method_id_reassignment_source_mmr_M280.json` and `registry/method_id_reassignment_source_tick_M281.json`. The live lab retains its M280 listing-notice and M281 cross-family-book meanings. This changes no trading rule or outcome.

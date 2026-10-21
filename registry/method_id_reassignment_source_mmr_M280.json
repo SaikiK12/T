@@ -1,0 +1,108 @@
+{
+  "record_kind": "historical_source_id_collision_not_a_methods_queue",
+  "source_commit": "a6763f5946a3674d63a8fd527e8411740fb12fbf",
+  "preserved_from_commit": "11152c9435c3ad71e037cdf9b55e8f9bcb0e4f87",
+  "declared_id": "M280",
+  "canonical_id": "M400",
+  "round": "UNREGISTERED_SOURCE_MMR",
+  "original_header": [
+    "id",
+    "method",
+    "data_held",
+    "status",
+    "cheap",
+    "note",
+    "source",
+    "rid"
+  ],
+  "original_row": [
+    "M280",
+    "MEXC maintenance-margin increase notice short: first executable hour after first-seen notice, 24 h hold; separate leverage-only notices",
+    "N point-in-time MEXC notices and before/after margin tiers",
+    "BLOCKED",
+    "3",
+    "Unregistered proposal only; restrict to crypto perps, notice-cluster inference, unchanged-coin/date and opposite-sign controls, BTC hedge, actual funding and 1x/2x/3x costs. Lower leverage ceiling is not proof of forced selling.",
+    "XM26-MMR-EVENT; MEXC parameter notices",
+    "-"
+  ],
+  "original_alias_header": [
+    "rec_id",
+    "title",
+    "intake_status",
+    "queue_id",
+    "also",
+    "confidence",
+    "why",
+    "source"
+  ],
+  "original_alias_rows": [
+    [
+      "XM26-MMR-EVENT",
+      "MEXC maintenance-margin increases separated from leverage-ceiling reductions",
+      "blocked",
+      "M280",
+      "M079;M209",
+      "high",
+      "Distinct proposed scope retained in canonical queue; related parents are not exact tests. No registered outcome.",
+      "MEXC mechanics discovery 2026-10-20; https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452"
+    ]
+  ],
+  "original_source_record": {
+    "id": "XM26-MMR-EVENT",
+    "parent_claim_id": "XM26-MEXC-MECHANICS",
+    "title": "MEXC maintenance-margin increases separated from leverage-ceiling reductions",
+    "method_type": "event_proposal",
+    "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+    "testable_rule": "Study an MMR increase separately from a leverage-only cut. Proposed short at the first executable hourly open after a prospectively received notice, exit after 24 hours; opposite-sign and unaffected-coin controls; cluster each notice and report BTC-hedged returns at 1x/2x/3x costs.",
+    "proposed_rule": "Study an MMR increase separately from a leverage-only cut. Proposed short at the first executable hourly open after a prospectively received notice, exit after 24 hours; opposite-sign and unaffected-coin controls; cluster each notice and report BTC-hedged returns at 1x/2x/3x costs.",
+    "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+    "received_scope": "Official notices document changes; direction and 24-hour horizon are our proposals, not exchange recommendations. An MMR increase can change existing-position liquidation exposure; a lower leverage ceiling alone does not prove forced selling.",
+    "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+    "unrun_scope": "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+    "status": "blocked",
+    "required_inputs": [
+      "First-seen notice and effective times; before/after tiers and affected crypto contracts",
+      "Matched hourly executable prices, funding and unaffected-coin controls"
+    ],
+    "blockers": [
+      "Canonical M280 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+    ],
+    "next_action": "Retained in canonical M280: obtain point-in-time inputs and freeze a finite study before outcomes.",
+    "alias_kind": "distinct_unregistered_scope",
+    "source_refs": [
+      {
+        "path": "https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452",
+        "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+      },
+      {
+        "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+        "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+      }
+    ],
+    "evidence_refs": [
+      {
+        "path": "https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452",
+        "label": "Exchange mechanics only; no strategy performance evidence"
+      },
+      {
+        "path": "https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535",
+        "label": "Exchange mechanics only; no strategy performance evidence"
+      }
+    ],
+    "queue_allocation": "M280"
+  },
+  "target_reassignments": [
+    {
+      "path": "registry/methods_aliases.csv",
+      "id_field": "rec_id",
+      "record_id": "XM26-MMR-EVENT",
+      "field": "queue_id",
+      "original_value": "M280",
+      "canonical_value": "M400"
+    }
+  ],
+  "reason": "Integration collision with the now-authoritative live queue at a2478ff; only this unregistered pending source allocation moves. Original source allocation predates the new live row; this is not an earlier-claim precedence assertion. Rule and BLOCKED status remain unchanged.",
+  "authoritative_main_commit": "a2478ff",
+  "coordination": "https://github.com/SaikiK12/T/issues/7#issuecomment-6313993538"
+}
