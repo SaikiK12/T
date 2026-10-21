@@ -22,6 +22,8 @@ are queued.
   - 170 transcripts for 35 people (116 from the feeds themselves, the rest from Whisper; the Whisper job is still
     running);
   - 200 scored windows for 33 people, all read.
+  - A rebuild at 20:44 UTC, after three more Whisper transcripts (Unger, Jane Street, Jump), has 270 windows for 34
+    people. The windows of those three people were read; they add the one-liners under "Others read".
 - **Web sources** cover the people the podcast feeds miss: a regulator's order, court testimony, an IPO filing,
   and press profiles. Each is linked under Sources.
 - **Not reached:**
@@ -226,6 +228,18 @@ description.
 - **Rob Carver:** perps "are, in a sense, daily futures", so their funding is the daily settlement of the bet.
 - **Kyle Samani:** AMM designs that slow arbitrage protect LPs. The arbitrageur's profit is the LP's loss.
 
+Added from later Whisper transcripts (2026-10-21, evening):
+- **Andrea Unger (tier A: four World Cup Trading Championship wins):** he does not trust crypto exchanges with much
+  money, but holds BTC on a ledger and shorts the future against it, keeping only margin on the exchange: "Sometimes
+  I was 20% a year". That is his own number. It is the carry trade the lab's carry lanes test (R191, R275).
+- **An ex-Jane Street trader (Odds on Open):** edge is "something that you know that nobody else knows … or
+  something that you can do that many other people can't do". Small shops used to live on "the bottom end of the
+  Russell because big quant shop is kind of just not worth their time", and he says that room is shrinking as
+  automation gets cheaper. This is the small-size edge in `docs/DIRECTION.md`.
+- **Michael McGee, Jump Crypto (a former US equity market maker):** he describes payment for order flow: the broker
+  sends a retail order to Citadel, which pays for it and then decides whether to fill it itself. Retail flow is worth
+  paying for (source 6, venue privilege).
+
 ## Where the money comes from
 Seven sources cover everything above. For each: who pays, whether a $10k API account can reach it, and what the
 lab has already run.
@@ -324,4 +338,5 @@ through a frozen PREREG.
 - Podcast episodes (feed transcripts or Whisper): Invest Like the Best (John Arnold), Chat With Traders 329 (Peter
   Brandt), Odd Lots and Masters in Business (Cliff Asness), Bankless and Delphi (Arthur Hayes, Hasu, Cobie, Su Zhu,
   Kyle Samani, Sam Bankman-Fried), Virtu's Doug Cifu on payment for order flow, Top Traders Unplugged (Rob Carver),
-  Ed Thorp's interview. The list with links is `data/videos/talks.csv`.
+  Ed Thorp's interview, Algorithmic Advantage 038 (Andrea Unger), Odds on Open (ex-Jane Street trader), Lightspeed
+  (Jump's Michael McGee). The list with links is `data/videos/talks.csv`.
