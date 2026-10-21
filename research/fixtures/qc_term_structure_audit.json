@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "source_url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/02%20Method.html",
+  "source_commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+  "source_sha256": "c59a9992c1e9abb2ffb4e66712d72cda89d7b25538b28bd217041fb05bc556b9",
+  "selected_block_sha256": "b25a189c2d7c3037203582fe04f3248a6e95858942f813991cbc7c7af6be0cf9",
+  "execution_scope": "Only the first joint Method Python block; all contracts invented.",
+  "checks": [
+    {
+      "case": "quote_units_change_joint_rank",
+      "prices": {
+        "A": [
+          100,
+          99
+        ],
+        "B": [
+          1000,
+          995
+        ]
+      },
+      "original": {
+        "scores": {
+          "A1": 12.166666666666666,
+          "B1": 60.833333333333336
+        },
+        "rank": [
+          "B1",
+          "A1"
+        ],
+        "high": [],
+        "low": [
+          "B1",
+          "A1"
+        ]
+      },
+      "B_quote_scale": 0.01,
+      "scaled": {
+        "scores": {
+          "A1": 12.166666666666666,
+          "B1": 0.6083333333333203
+        },
+        "rank": [
+          "A1",
+          "B1"
+        ],
+        "high": [],
+        "low": [
+          "A1",
+          "B1"
+        ]
+      },
+      "referenced_log_formula_scores": {
+        "A1": 0.12227908621760782,
+        "B1": 0.06098592551978591
+      }
+    },
+    {
+      "case": "deferred_contracts_are_separate_candidates",
+      "result": {
+        "scores": {
+          "A1": 12.166666666666666,
+          "A2": 12.166666666666666,
+          "B1": 12.166666666666666
+        },
+        "rank": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "high": [
+          "A1"
+        ],
+        "low": [
+          "B1"
+        ]
+      }
+    },
+    {
+      "case": "near_midpoint_fallback_but_deferred_zero_used",
+      "near_last": 0,
+      "near_bid": 99,
+      "near_ask": 101,
+      "deferred_last": 0,
+      "result": {
+        "scores": {
+          "A1": 1216.6666666666667
+        },
+        "rank": [
+          "A1"
+        ],
+        "high": [],
+        "low": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "case": "empty_chain",
+      "exception": "IndexError"
+    },
+    {
+      "case": "equal_expiry",
+      "exception": "ZeroDivisionError"
+    },
+    {
+      "case": "zero_tertile_negative_zero_slice",
+      "candidates": 1,
+      "result": {
+        "scores": {
+          "A1": 12.166666666666666
+        },
+        "rank": [
+          "A1"
+        ],
+        "high": [],
+        "low": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "case": "ties_inherit_input_order",
+      "forward": [
+        "A1",
+        "B1"
+      ],
+      "reverse": [
+        "B1",
+        "A1"
+      ]
+    }
+  ],
+  "checks_passed": 7,
+  "market_trials": 0,
+  "cost_sensitivity": "Not applicable to price-unit/ranking checks; no PnL or fills. Future strategy tests require complete 1x/2x/3x costs.",
+  "limits": [
+    "Not the embedded algorithm, other snippets, LEAN or MEXC runtime.",
+    "The log formula is a labelled comparison, not a repaired strategy.",
+    "No historical prices, market trials, execution evidence or alpha result."
+  ]
+}
