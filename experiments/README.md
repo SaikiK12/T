@@ -9,8 +9,9 @@ forward paper lane also keeps a `journal/`. The ids, statuses and trial counts c
 Status: RUNNING (forward, collecting days), DONE, ARMED (waits for an event), REGISTERED or PLANNED.
 Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
-## Forward paper lanes (running) (13)
+## Forward paper lanes (running) (14)
 
+- **[xbook_fwd](xbook_fwd/)** R285, RUNNING PENDING, 1 trial. Cross-family forward book (M281): carry (R278 A/B, R279 A/B), flow (R215 A/B, R218 X2) and events (R266, R268, R270, R272) at equal archive risk, decided on book days from 2026-10-23 ([PREREG](xbook_fwd/PREREG.md), [journal](xbook_fwd/journal/))
 - **[xfund_kc_fwd](xfund_kc_fwd/)** R279, RUNNING PENDING, 2 trials. R277's two replicating KuCoin carry books forward on paper: A gate+kucoin L14 th5% K20, B binance+kucoin L14 th5% K20 ([PREREG](xfund_kc_fwd/PREREG.md), [journal](xfund_kc_fwd/journal/))
 - **[xfund_fwd](xfund_fwd/)** R278, RUNNING PENDING, 3 trials. R275's cross-venue funding carry books forward on paper: A gate+hyperliquid L14 th5% K20, B binance+mexc L14 th10% K20, C gate+mexc L7 th10% K20 (post hoc) ([PREREG](xfund_fwd/PREREG.md), [journal](xfund_fwd/journal/))
 - **[announce_fwd](announce_fwd/)** R272, RUNNING PENDING, 2 trials. R271's funding-frequency long 1 h and pre-listing short 168 h forward on MEXC paper (notices first seen from 2026-10-20 19:00 UTC) ([PREREG](announce_fwd/PREREG.md), [journal](announce_fwd/journal/))
