@@ -9481,6 +9481,294 @@
         "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
       },
       "alias_relation": "Contextual adapter; private tape/plugin access not obtained, and this price-only format cannot reconstruct depth or queue position."
+    },
+    {
+      "id": "HFT26-RISK-ADVERSE",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "Conservative MBP queue estimate (RiskAdverseQueueModel; RiskAverse documentation wording)",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "At exchange acceptance set front to displayed quantity at the order price. Same-price trades subtract size; depth update clamps front=min(front,new_qty). is_filled converts negative front to round(-front/lot_size) lots, resets front to 0 after positive availability. Cancellation is not randomly assigned, but the clamp can advance front when remaining depth falls below it. Component conservatism is not a guarantee that every combined exchange fill is conservative.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-PROB-CORE",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "Deterministic probability-based MBP queue-position update",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "Keep front and cumulative same-price trade size. Trades subtract from front and accumulate. Depth change subtracts accumulated trades before estimating cancellation to avoid double counting; reset accumulator. If residual change<0, clamp to new depth. Otherwise front=f, back=prev_qty-f, p=probability of decrease BEHIND; newfront=min(f-(1-p)*change+min(back-p*change,0),new_qty). Infinite p is replaced by 1. Fill availability uses rounded negative front/lot size; positive availability resets front to 0. This is a deterministic estimate, not sampled queue truth.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-POWER1",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "PowerProbQueueFunc cancellation allocation",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "p=b^n/(b^n+f^n); f=front quantity,b=back quantity,p=decrease behind the order, NOT fill probability. Power exponent n is an uncalibrated parameter; its constructor does not validate a positive domain in the reviewed code. No model/exponent is selected by outcomes here.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-LOG1",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "LogProbQueueFunc cancellation allocation",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "p=log(1+b)/(log(1+b)+log(1+f)); f=front quantity,b=back quantity,p=decrease behind the order, NOT fill probability. Log transforms depend on quantity scale. No model/exponent is selected by outcomes here.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-LOG2",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "LogProbQueueFunc2 cancellation allocation",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "p=log(1+b)/log(1+b+f); f=front quantity,b=back quantity,p=decrease behind the order, NOT fill probability. Log transforms depend on quantity scale. No model/exponent is selected by outcomes here.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-POWER2",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "PowerProbQueueFunc2 cancellation allocation",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "p=b^n/(b+f)^n; f=front quantity,b=back quantity,p=decrease behind the order, NOT fill probability. Power exponent n is an uncalibrated parameter; its constructor does not validate a positive domain in the reviewed code. No model/exponent is selected by outcomes here.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-POWER3",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "PowerProbQueueFunc3 cancellation allocation",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "p=1-(f/(f+b))^n; f=front quantity,b=back quantity,p=decrease behind the order, NOT fill probability. Power exponent n is an uncalibrated parameter; its constructor does not validate a positive domain in the reviewed code. No model/exponent is selected by outcomes here.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M087; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Existing execution family; M264 is related recorder/scalp scope, not a completed exact fill test."
+    },
+    {
+      "id": "HFT26-NO-PARTIAL",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "NoPartialFillExchange maker/taker fill policies",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "Resting strict trade-through fills all leaves at the order limit; equal-price print advances queue, then any positive queue availability triggers full remaining fill. Marketable GTX expires. Marketable GTC/FOK/IOC fill all leaves at best without a depth sufficiency check. Nonmarketable GTC/GTX initialize/rest; IOC/FOK expire. Market orders fill all leaves at best. Selected fill/ack methods update order/account/response state but do not decrement replay depth.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M227; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/nopartialfillexchange.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Alternative execution policy for M227/queue-sensitive studies; not a native venue rule or proof of sufficient displayed liquidity."
+    },
+    {
+      "id": "HFT26-PARTIAL",
+      "parent_claim_id": "HFT26-MBP-EXECUTION",
+      "title": "PartialFillExchange maker/taker and time-in-force policies",
+      "method_type": "execution_model_assumption",
+      "hypothesis": "An explicit simulator assumption to compare/calibrate, not a directional signal or validated fill model.",
+      "testable_rule": "Strict trade-through still fills ALL leaves at limit. Equal-price queue fill is min(queue availability,leaves). Marketable GTX expires. FOK sums displayed depth through limit using rounded lot counts, then walks only if sufficient; IOC walks depth through limit and expires residue. GTC walks depth but FORCES all remaining quantity filled at the limit; source acknowledges unreality. Buy GTC walk excludes limit tick; sell includes it. Market buy walks 100 ticks, sell 101 ticks, expiring residue; these are tick bands, not occupied levels. Nonmarketable GTC/GTX rest; IOC/FOK expire. Selected fill/ack methods do not consume replay depth.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned source inspection only. Separate generic FIFO identifiability fixture is executed on invented orders; it does not execute or calibrate this HftBacktest model.",
+      "unrun_scope": "Native MEXC matching, queue/fill error, package runtime, parameter calibration and any strategy PnL remain untested.",
+      "required_inputs": [
+        "Sequenced per-price depth/trades with exchange/receive clocks, quantities and tick/lot units; acceptance/cancel timing and a frozen event-order policy.",
+        "Order-identified data or execution receipts where available, or explicitly labelled queue assumptions and uncertainty bounds."
+      ],
+      "blockers": [
+        "Per-second BBO/trade recording alone does not recover all level events or exact order priority. No original calibration data/package runtime used.",
+        "No MEXC adapter, real fill evidence, parameter choice or full latency/impact/rejection model established."
+      ],
+      "next_action": "Retain the alternative under M227; freeze finite model/parameter and fill-policy comparisons before outcomes. Preserve adverse/NULL outcomes and full 1x/2x/3x costs; uncertainty does not exclude the method.",
+      "source_refs": [
+        {
+          "path": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/partialfillexchange.rs",
+          "label": "Pinned Rust source; only ranges declared in supplemental source manifest reviewed."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+        "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
+      },
+      "canonical_relation": "Separate partial/equal-price and taker/TIF assumptions; the word Partial does not certify global depth-conservative fills."
     }
   ],
   "sources": [
@@ -11382,6 +11670,125 @@
       "draft_pr": "https://github.com/SaikiK12/T/pull/43",
       "validation": "Five compiled-source cases and four source guards; independent review passed; audit branch full597 tests OK (3skipped), intake branch full620 tests OK (3skipped),37focused tests. No market trials. Final exact source-byte reproduction retained in the audit PR.",
       "input_validation_limit": "Finite positive uncrossed books, freshness, sequence and timestamp checks belong to a future surrounding framework; invalid-input cases were not part of the five compiled examples."
+    },
+    {
+      "intake_id": "hftbacktest_mbp_queue_fill_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [
+        "HFT26-RISK-ADVERSE",
+        "HFT26-PROB-CORE",
+        "HFT26-POWER1",
+        "HFT26-LOG1",
+        "HFT26-LOG2",
+        "HFT26-POWER2",
+        "HFT26-POWER3",
+        "HFT26-NO-PARTIAL",
+        "HFT26-PARTIAL"
+      ],
+      "media_source_count": 3,
+      "media_sources": [
+        {
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        },
+        {
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/nopartialfillexchange.rs",
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        },
+        {
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/partialfillexchange.rs",
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        }
+      ],
+      "repository_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+      "source_manifest": [
+        {
+          "path": "hftbacktest/src/backtest/models/queue.rs",
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs",
+          "whole_file_bytes": 47423,
+          "whole_file_sha256": "2e1c26e4ec3cb3afeed6ca31eef7387f8b086a6520ca54834a4a9f9c53cffe1a",
+          "selected_ranges": [
+            {
+              "start": 1,
+              "end": 330,
+              "sha256": "dab4949d107a0914e06763dab8e1304f28bd743117ad20f628d4e72f99d4b1fb"
+            }
+          ],
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        },
+        {
+          "path": "hftbacktest/src/backtest/proc/nopartialfillexchange.rs",
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/nopartialfillexchange.rs",
+          "whole_file_bytes": 25381,
+          "whole_file_sha256": "577435c3f13e840d652670482910db6ab596a13c02b301ebd9d780196893fbcd",
+          "selected_ranges": [
+            {
+              "start": 114,
+              "end": 197,
+              "sha256": "785b149adaef4cc5374566e09f98a45817e7c3b1441bcc8da05beda8071e00b4"
+            },
+            {
+              "start": 314,
+              "end": 435,
+              "sha256": "e60f261e2f93e3dc2ba63b6f2ffa7e9c253bdb421c613a7faba8af43633a74a0"
+            }
+          ],
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        },
+        {
+          "path": "hftbacktest/src/backtest/proc/partialfillexchange.rs",
+          "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/proc/partialfillexchange.rs",
+          "whole_file_bytes": 36863,
+          "whole_file_sha256": "c05f8b81da248dca3675258307bbf45ee6a4b2cfe421365dd083adc920cfabc2",
+          "selected_ranges": [
+            {
+              "start": 128,
+              "end": 246,
+              "sha256": "364293b28885ba0100407ffbb0da5bfc0f8801f20ebd45cd2339562671f9f85e"
+            },
+            {
+              "start": 387,
+              "end": 653,
+              "sha256": "889e02a7d75eb5586b88ab94307349f9560f2dc48192f1de7ec6cee2ae2a165a"
+            }
+          ],
+          "basis": "Whole file received; ONLY named inclusive ranges reviewed. Hashes cover exact bytes including blank lines. No library installed/compiled or original model executed."
+        }
+      ],
+      "source_manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f",
+      "manifest_hash_scope": "SHA256 of source_manifest JSON with sorted keys and separators comma/colon; individual whole-file and selected-range hashes are separately retained.",
+      "received_scope": "Previously unread CODE-level MBP queue/fill definitions at the already retained repository pin. The order_fill documentation capability/limitation excerpts were received earlier, not rediscovered as unread. Three full source files received; ONLY manifest ranges reviewed. queue.rs L3 implementation from line 332 onward and exchange process/other methods remain unread. No whole-library or L3 audit.",
+      "exact_tested_scope": "Static source inspection of seven queue/probability definitions and two exchange-policy alternatives. Independent invented FIFO proof has five unit tests; no original HftBacktest function, framework or MEXC venue executed.",
+      "synthetic_information_result": "Both invented worlds have our accepted 10-unit order behind ten 10-unit A orders, then five 10-unit B orders join behind. Cancel five A orders versus five B orders. Every resulting depth and each sell-match size [10,10,10,10,10,10,10,5] is identical, but own fills are 10 versus 0. Initial 110 + adds 50 - cancels 50 - prints 75 = 35 remaining in both. No aggregation assumption or counterfactual insertion into an unchanged tape.",
+      "interpretation": "Exact fills are not identifiable from these public depth/print observations without resting-order identities. The proof does not invalidate probabilistic calibration or establish native MEXC priority. Private receipts or suitable order-identified events distinguish the worlds. Queue conservatism and full exchange-policy conservatism are separate questions.",
+      "pinned_source_findings": [
+        "RiskAdverse depth clamp and ProbQueue trade/depth compensation must be preserved; p denotes cancellation behind, not p(fill). Five explicit probability functions are retained; no exponent/model optimized. RiskAdverseQueueModel is the Rust name; RiskAverse is documentation wording, not a type alias established by the reviewed code.",
+        "Both exchange models have full-quantity strict trade-through branches; equal-price queue availability handling differs.",
+        "Partial marketable GTC can fill residual without displayed size; NoPartial taker fills at best regardless of displayed depth. FOK/IOC/GTX are distinct policies. Selected source paths do not decrement replay depth; complete runtime behavior untested.",
+        "Partial market walk bounds are 100 buy ticks/101 sell ticks with TODO comments, not 100 occupied book levels. GTC buy/sell limit inclusion differs."
+      ],
+      "data_requirements": [
+        "Preserve feed sequence, update/trade ordering, same-price trade quantities and depth changes. Snapshot timing alone cannot supply cancellation identity; cumulative trade compensation needs a consistent event convention.",
+        "Keep exchange acceptance, local request/response and cancel clocks; priority belongs to acceptance, not signal time. Freeze tick/lot/quantity units and probability-function scale.",
+        "Record policy uncertainty and evaluate predeclared alternatives/bounds. Per-second BBO recorder scope is related, not proof of complete L2/L3 or actual own fills. No real orders are authorized by this input requirement."
+      ],
+      "repository_reconciliation": "Nine source aliases map only to existing M087/M227, with M264 or cross-venue execution related. Existing CPT-QUEUE/COV-MAKER-FLOWOVERLAY source objects and all 281 queue rows/statuses retained. No new M/R ID or competing queue.",
+      "implementation": "Original standard-library FIFO fixture in draft PR44; no publisher source vendored, library installed or original model executed. It can be reviewed independently of this intake branch.",
+      "limits": [
+        "No strategy, prices, PnL, fees or market fill-rate calibration computed; zero market trials.",
+        "No alpha search, exponent choice, native transport, maker profitability or live readiness demonstrated. A future finite frozen strategy comparison still requires controls, complete 1x/2x/3x costs and genuinely new paper evidence."
+      ],
+      "market_trials": 0,
+      "synthetic_artifact": {
+        "pr_url": "https://github.com/SaikiK12/T/pull/44",
+        "repository_commit": "cdfd3487f0692e3bb8658d2f58ee277ef6cd6027",
+        "module": "research/queue_identifiability.py",
+        "receipt": "research/fixtures/queue_identifiability.json",
+        "receipt_sha256": "7bdac1513ae81c5514c0a60a4099de8f4f417cbbfbab13531ad7d73e07ab6e66",
+        "reproduce": "python -m research.queue_identifiability",
+        "tests": "python -m unittest tests.test_queue_identifiability -v",
+        "validation": "5 focused tests OK; full suite 598 tests OK, 3 skipped; independent FIFO and static-source reviews passed. No native HftBacktest model/runtime test or market outcome."
+      }
     }
   ],
   "reassignment_refs": [
