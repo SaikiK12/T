@@ -31,6 +31,27 @@ digests are in `experiments/recorders/journal/digests.csv`.
 | `data/markPriceKlines_1h` | data.binance.vision USD-M mark price klines (public zips) | `lab/data.py` (`python -m lab.data build markPriceKlines 1h`) | 895 perps + manifest | 627 MB | 2020-01 .. 2026-09-30 | 491ac305… | Hourly OHLC of Binance's mark price, the price liquidations are triggered on: the median of two index-based prices and the last price, so a one-print wick of the traded price does not move it. Volume columns are 0. 779 files have holes (36,024 h in all). 2020 rows reserved (`docs/GATES.md`). For R280's open question: a liquidation path that does not follow traded prints. |
 | `data/recorders/funding_board` | Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX public APIs | `scripts/record_funding_board.py` (hourly, in `forward_all.sh`) | 1 per hour | | from 2026-10-20 21:00 | `experiments/recorders/journal/digests.csv` | Live funding of every USDT perp on six venues, normalized to 8 h. Point-in-time: none of these venues keeps the history of its displayed rate. |
 
+## Derived tables (rebuilt from the folders above, never edited by hand)
+- **`data/daily/`: the daily point-in-time panel** (`lab/daily.py`, built by `scripts/build_daily.py`).
+  - **Shape:** one row per (day, Binance perp) on which the perp traded, 2021-01-02..2026-09-30: 591,598 rows, 899
+    perps, 64 columns.
+  - **Columns:** Binance price, volume, funding, premium, mark gap and wicks, order flow, depth, spot basis and
+    COIN-M quarterly basis; each venue's price gap, funding and funding gap against Binance (Gate, MEXC, dYdX,
+    Hyperliquid, KuCoin, Kraken); the Korean premium over BTC (Upbit, Bithumb); Coin Metrics and DefiLlama
+    fundamentals; age and liquidity rank.
+  - **Market table:** one row per day of every series in `data/macro`, each on the day it was public.
+  - **Point in time:** every value sits on the first 00:00 UTC at which it was known, and a test changes the future
+    and checks that no earlier row moves. Coin Metrics, DefiLlama and macro values are the latest vintage (`kind`
+    column).
+  - **Reserved rows:** none are read (no 2020 row, `open/` folders only, Binance perps only).
+  - **Bookkeeping:** `columns.csv` defines every column; `manifest.json` holds the coverage per column, the code's
+    sha256 and the combined sha256 of each input folder.
+  - **Load it with** `lab.daily.load(columns=[...])` and `lab.daily.load_market()`.
+- **Zero-trade bars.** Since 2021, 8.75% of Binance's hourly klines (1.36M bars) have no trade. 95% of them sit in
+  the dead tails of 148 delisted perps, where the archive keeps writing bars at a frozen close (BTCST from 2021,
+  RAY, FTT and SC for years). The daily panel drops them. The hourly research panel (`lab/panel.py`) keeps them as
+  prices (MAP, known data defects).
+
 ## Not downloaded yet
 - **CoinGecko 365-day market caps:** the free API keeps 365 days only.
 - **One month of aggTrades for about 5 coins:** for markout research. Full tick history is excluded for disk.

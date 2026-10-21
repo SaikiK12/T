@@ -9,6 +9,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`config`](config.py): Constants every lane shares.
+- [`daily`](daily.py): Daily point-in-time panel: one row per (day, Binance USD-M perp) with what every source the lab holds had said about that coin by 00:00 UTC of that day, plus one row per day of market-wide series.
 - [`data`](data.py): Binance public-archive fetcher (data.binance.vision).
 - [`engine`](engine.py): Vectorized backtester.
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.

@@ -133,8 +133,9 @@ line is the first line of the script's own docstring.
 - [`check_research_integrity.py`](check_research_integrity.py): Audit the research register and local preregistrations without changing files.
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
-## Build: tables, views and symbol maps (5)
+## Build: tables, views and symbol maps (6)
 
+- [`build_daily.py`](build_daily.py): Build the daily point-in-time panel (lab/daily.py): one row per (day, Binance perp) from every source the lab holds, plus the market-wide series, into data/daily/.
 - [`build_extra_views.py`](build_extra_views.py): Extra feature tensors next to data/research/bins.npy, same [V, T, S] int8 layout and binning conventions.
 - [`build_views.py`](build_views.py): Build the point-in-time research universe and the int8 feature-bin tensor, and save them under data/research/.
 - [`venue_symbols.py`](venue_symbols.py): Cross-venue symbol table: one row per Binance USD-M perp, with the file stem of the same coin on Gate, Hyperliquid and MEXC (empty where it is not listed or has no history file).

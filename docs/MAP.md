@@ -583,6 +583,15 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - Both were found by the Codex review and measured on 2026-10-19. They are too rare to move any result, and kept for
     reproducibility.
 - Returns are Binance traded-close to traded-close minus funding. They are not mark-price, index or fill PnL.
+- **Dead tails (measured 2026-10-21).** After a delisting, Binance's kline archive keeps writing no-trade bars at a
+  frozen close.
+  - Since 2021 that is 1.29M hourly bars on 148 perps, 8.3% of all bars. BTCST runs from 2021 to 2026, and RAY, FTT
+    and SC run for years.
+  - `lab/panel.py` keeps them as prices, so a delisted coin shows a return of 0. It stays eligible while its trailing
+    30-day volume still ranks it in the top 100.
+  - This is the mechanism behind the integrity audit's "coins that leave the universe exit for free". Its effect on
+    the hourly books is not measured here.
+  - `lab/daily.py` drops every bar without a trade.
 - Binance public-data issue #491 reports a 2026-06-25 change in the metrics `create_time` convention (cited by the
   Codex review). We checked SOLUSDT archive files for 06-10, 06-23..27 and 09-15:
   - Each day has 288 rows, with no duplicate midnight stamps.
