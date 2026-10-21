@@ -36,21 +36,15 @@ def books(run):
     raise SystemExit(f"no forward lane is built on {run}")
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--lane", default="xfund_v1", help="the engine run (experiments/<lane>)")
-    a = ap.parse_args()
-    run = ROOT / "experiments" / a.lane
-    bks = books(a.lane)
-    spec = tomllib.loads((run / "spec.toml").read_text())
+def load(run_dir, need):
+    """(spec, universe) of an engine run's archive, venues in its spec order; only the venues in `need` are read."""
+    spec = tomllib.loads((run_dir / "spec.toml").read_text())
     t0 = int(pd.Timestamp(spec["start"], tz="UTC").value // 10**6)
     nd = int((pd.Timestamp(spec["end"], tz="UTC").value // 10**6 + xfund.DAY - t0) // xfund.DAY + 1)
     sym = pd.read_csv(ROOT / spec["symbols"], dtype=str).fillna("")
     venues = spec["venues"]
-    names = [v["name"] for v in venues]
-    need = {v for b in bks.values() for v in b[0].split("+")}
 
-    def load(row):
+    def one(row):
         out = []
         for v in venues:
             s = row[v["name"]].strip()
@@ -63,8 +57,19 @@ def main():
         return out
 
     with ThreadPoolExecutor(8) as ex:
-        series = list(ex.map(load, [r for _, r in sym.iterrows()]))
-    u = xfund.Universe(sym.key.tolist(), names, series, t0, nd, spec["corr_days"], spec["corr_min"], spec["corr_obs"])
+        series = list(ex.map(one, [r for _, r in sym.iterrows()]))
+    return spec, xfund.Universe(sym.key.tolist(), [v["name"] for v in venues], series, t0, nd, spec["corr_days"],
+                                spec["corr_min"], spec["corr_obs"])
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--lane", default="xfund_v1", help="the engine run (experiments/<lane>)")
+    a = ap.parse_args()
+    run = ROOT / "experiments" / a.lane
+    bks = books(a.lane)
+    spec, u = load(run, {v for b in bks.values() for v in b[0].split("+")})
+    names = u.names
     trades_eng = pd.read_csv(run / "results" / "trades.csv")
     daily_eng = pd.read_csv(run / "results" / "daily.csv")
     day = lambda d: str((pd.Timestamp(spec["start"]) + pd.Timedelta(days=int(d))).date())
