@@ -25,7 +25,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (13)
+## Record: point-in-time collectors (cannot be backfilled) (14)
 
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
@@ -38,6 +38,7 @@ line is the first line of the script's own docstring.
 - [`record_notices.py`](record_notices.py): Binance announcement catalogs (Delisting, New Cryptocurrency Listing, Latest Binance News) as an append-only journal: one row per article with its id, title, release time (ms, as published) and ...
 - [`record_tape.py`](record_tape.py): Order-flow tape recorder (M264): Binance USD-M, MEXC and Lighter perps' best bid/ask and trades for `COINS`, bucketed to the second by lab/tape.py, into data/tape/. Paper only: it reads public ...
 - [`record_unlocks.py`](record_unlocks.py): Daily point-in-time snapshot of the DefiLlama unlock calendar: the emissions index (every token's documented past and upcoming unlock events, circulating and max supply, price, market cap) as ...
+- [`record_wallets.py`](record_wallets.py): Hourly record of which coins can be deposited and withdrawn on Bithumb, Gate, KuCoin, HTX and Bitget (M294).
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 

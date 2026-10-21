@@ -497,6 +497,26 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     squeezes cancel it in the mean.
   - The Korean premium, fee yield and funding gap are NULL. M276 (cap the squeezes) is queued.
   - [FINDINGS](../experiments/pitfac_v1/FINDINGS.md).
+- **R283 (vixpanic_v1), NULL** (27 cells, the owner's TikTok claim, M278). VIX above VIX3M with VVIX in its top 5%
+  leads SPY and QQQ up over 5-10 days (best QQQ 10 d +158 bp over random dates, p 0.005), but no cell clears
+  p ≤ 0.00185. BTC has too few onsets. [FINDINGS](../experiments/vixpanic_v1/FINDINGS.md).
+- **R284 (trendpull_v1), NULL** (8 cells, M277). The trend-pullback entry adds +0.2 to +0.7% per trade on world
+  indices (t ≤ 1.31) and loses on crypto perps. [FINDINGS](../experiments/trendpull_v1/FINDINGS.md).
+- **R285 (xbook_fwd), running.** The cross-family forward book (M281): carry, flow and event lanes at equal weight,
+  decided at 180 and 365 forward days.
+- **R286 (reserved_batch1), frozen; runs on or after 2026-11-03.** Ten pre-committed candidates, read once on 2020,
+  Gate 2020 and the MEXC-only coins, with a weighted Bonferroni.
+- **R287 (pcares_v1), NULL** (24 variants, M298). Hourly PCA residuals revert a little (gross up to +19 bp/day), but
+  hourly trading costs several times that; break-even is at most 3.5 bp per side.
+  [FINDINGS](../experiments/pcares_v1/FINDINGS.md).
+- **R288 (xfund_lt_v1), reserved.** Lighter carry replication; frozen once Lighter's funding history is fetched.
+- **R289 (clockflow_v1), NULL** (40 variants, M301 and M303 from `docs/TRADER_TALKS.md`, 1-minute bars).
+  - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).
+  - On Fridays, a move inside Deribit's 07:30-08:00 UTC settlement window reverses by about +20 bp gross per trade
+    in both windows and all three coins. On the book it is +0.38 bp/day at 2x, t 1.37: not enough.
+  - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
+    York continue. They are seeds for a lane on unread data.
+  - [FINDINGS](../experiments/clockflow_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -611,6 +631,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,385 after R282 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,495 after R289 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

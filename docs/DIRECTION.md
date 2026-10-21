@@ -219,14 +219,15 @@ come before chart rules.
 |---|---|
 | M298 PCA residual reversion, hourly | **R287 NULL**: gross about +9.5 bp/day in the steadiest variants; costs 18-76 |
 | M295 funding response to up days, as a gate | next |
-| M290 scheduled US releases (CPI, NFP, FOMC, EIA) | needs release calendars and 1-5 min klines |
+| M290 scheduled US releases (CPI, NFP, FOMC, EIA) | 1-minute klines held; FOMC dates held; CPI and payroll dates not reachable from this container (BLS 403, FRED bot check) |
 
 **Recorders where history cannot be bought:**
 - the Deribit option chain, hourly from 2026-10-21 (M175, M289, M300: expiry pinning and dealer gamma);
 - Lighter order books, hourly from 2026-10-21 (M292: the cost of a zero-fee API venue);
 - DEX pool prices next to the MEXC perp, every 5 minutes from 2026-10-21 (M288: on-chain AMMs against exchange
   futures, the prop trader's third edge);
-- Upbit and Bithumb wallet status (M294), still to do.
+- wallet status on Bithumb, Gate, KuCoin, HTX and Bitget, hourly from 2026-10-21 21:21 UTC (M294,
+  `scripts/record_wallets.py`). Upbit's status needs an API key, so it is not recorded.
 
 **Venue structure (the prop trader's lead, `docs/VENUE_STRUCTURE.md`).** Lighter charges no fee through the API. On
 one snapshot, a $1k order costs a median 2.0 bp per side there against about 8.7 bp on MEXC's API, for the same 27
