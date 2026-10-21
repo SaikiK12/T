@@ -1,0 +1,4492 @@
+{
+"folder": "data/dydx_hist",
+"source": "https://indexer.dydx.trade (public)",
+"script": "scripts/fetch_venue_history.py",
+"recorded_utc": "2026-10-21T03:06:41Z",
+"excluded": [],
+"files": 892,
+"bytes": 184484988,
+"combined_sha256": "90a18b3d9b23bb337f81e2568f0f3fab4c5f94555075c992389e517c83bfab5e",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 44065
+},
+"open": {
+"files": 693,
+"bytes": 160933380
+},
+"raw": {
+"files": 1,
+"bytes": 194400
+},
+"reserved": {
+"files": 196,
+"bytes": 23313143
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "contracts.csv",
+"bytes": 17145,
+"sha256": "1bfe30b536324749ede88b488a290b2d3869ddbd2130008058d6be659ed93b1a"
+},
+{
+"path": "manifest.json",
+"bytes": 26920,
+"sha256": "f02bc77a637d6e2ac29fcc3249ecb0c615f5e9589aae719cb0acf6d94e969274"
+},
+{
+"path": "open/candles_1d/1INCH-USD.parquet",
+"bytes": 51261,
+"sha256": "18261524449160a7aa60462497161c74f8d8b8383667529b35ade4982f0fb6a7"
+},
+{
+"path": "open/candles_1d/2Z-USD.parquet",
+"bytes": 21796,
+"sha256": "aeae3465e817acc3600526386cf0aa8c3718a09f8c9d557ddf9ace447d1934fe"
+},
+{
+"path": "open/candles_1d/AAVE-USD.parquet",
+"bytes": 59855,
+"sha256": "f4ca215b01084976b0f7ebe8d22a42a58a65eb193104bd59c6d1aeb013811298"
+},
+{
+"path": "open/candles_1d/ACX-USD.parquet",
+"bytes": 12269,
+"sha256": "6aad3aac1e581ce8dd49f4d20cd97df57454ce43ccd533d4101ba0862d37fac7"
+},
+{
+"path": "open/candles_1d/ADA-USD.parquet",
+"bytes": 74656,
+"sha256": "b480e8177403af736fa048d7a36086bc51521b217abfa5e25d54ef09dbc96578"
+},
+{
+"path": "open/candles_1d/AERGO-USD.parquet",
+"bytes": 16940,
+"sha256": "98371a40a537f5e387f71894c2001c9a6b674adaf274fac87d8dac7924b180eb"
+},
+{
+"path": "open/candles_1d/AERO-USD.parquet",
+"bytes": 25558,
+"sha256": "9cbb009673797f09de1dbec9de77f552b1c255d7632ff2682ac0413049b1f606"
+},
+{
+"path": "open/candles_1d/AEVO-USD.parquet",
+"bytes": 41186,
+"sha256": "52533f0241c587139ebd5b804a6e0deb0c146b93f3212f7134379c5b28e441db"
+},
+{
+"path": "open/candles_1d/AGIX-USD.parquet",
+"bytes": 17911,
+"sha256": "4eff7cae29aa9ec27df80dd7b54ba4916c6079ab0c7db093f35efdec5f9c5167"
+},
+{
+"path": "open/candles_1d/AI16Z-USD.parquet",
+"bytes": 19990,
+"sha256": "19c0f20c07e1cabada1e2b1e414bade97b7fc22399197cb525af010341224947"
+},
+{
+"path": "open/candles_1d/AIXBT-USD.parquet",
+"bytes": 21458,
+"sha256": "1361454ecfa87eb7f2b7f65764f6f17a0a53329d5e3230342e359d0c54fd40db"
+},
+{
+"path": "open/candles_1d/AKT-USD.parquet",
+"bytes": 33437,
+"sha256": "010a1221ac1fb9c7034264b24602e4ceab1ff6732de70a90648172acac2b5b0c"
+},
+{
+"path": "open/candles_1d/ALGO-USD.parquet",
+"bytes": 62443,
+"sha256": "372dc1d1da9335d33dd4da32c06d99c2014a8af68aa0cb9c17fbaf26a581d3c6"
+},
+{
+"path": "open/candles_1d/ALPACA-USD.parquet",
+"bytes": 10018,
+"sha256": "f07e47c7f570f1ab96e0337381f1f3a40066096af7d1003b39eabefb63302ca2"
+},
+{
+"path": "open/candles_1d/ALT-USD.parquet",
+"bytes": 17061,
+"sha256": "ff2bc20f6090de77c191033ed5e48ab6ed279c0f4de83329eba99d2a4ad73a4a"
+},
+{
+"path": "open/candles_1d/ANIME-USD.parquet",
+"bytes": 8057,
+"sha256": "0623861f9c4db9ee0cfcbed8775929e459028fc2f7c3ee1451648e555c8e17de"
+},
+{
+"path": "open/candles_1d/APE-USD.parquet",
+"bytes": 58477,
+"sha256": "84cf75a9d0706532c03f3141cc4832542ed60c8b2bf095b69b6bbf54cc7b4739"
+},
+{
+"path": "open/candles_1d/API3-USD.parquet",
+"bytes": 17099,
+"sha256": "8afda8e94ad9b88634ebbeaa01a66c7220ff591e7a8a5339b846415d924f1cd8"
+},
+{
+"path": "open/candles_1d/APT-USD.parquet",
+"bytes": 69938,
+"sha256": "f32d1c7d420122192fc2041f80e2c8dc45794520212cdb3a799fa0dc580e90fc"
+},
+{
+"path": "open/candles_1d/AR-USD.parquet",
+"bytes": 27542,
+"sha256": "cd65726b84f2c5a841d24857815deeb66f893523f51304cbb3daac1fa92cfb5c"
+},
+{
+"path": "open/candles_1d/ARB-USD.parquet",
+"bytes": 65904,
+"sha256": "7dc40de9424ae9f07ad62ced81f48bb52c43f2787655868a0018f112fecf3d67"
+},
+{
+"path": "open/candles_1d/ARKM-USD.parquet",
+"bytes": 47765,
+"sha256": "863bebb33e26ff73160536aa5efccaa37909284640373deb1124d4821fb96b98"
+},
+{
+"path": "open/candles_1d/ASTER-USD.parquet",
+"bytes": 29372,
+"sha256": "78587a26d8b54da93e7f41ff97e0f50b8657400df45ae9f290a1f82996d90999"
+},
+{
+"path": "open/candles_1d/ASTR-USD.parquet",
+"bytes": 42338,
+"sha256": "f9ccda0f31fe3203ab8bafa3814ebdd1461cebfbef7eadc618ceabed57dc67af"
+},
+{
+"path": "open/candles_1d/ATH-USD.parquet",
+"bytes": 39194,
+"sha256": "b3d9a102e1ad1dfda5cc3a627682cb8251cffee387b2b6fec74cbd7bae693f2b"
+},
+{
+"path": "open/candles_1d/ATOM-USD.parquet",
+"bytes": 65652,
+"sha256": "7b0f2d591082f31284142a7cf959d23ff499c0c70409dac9685a6fc0a810f0c2"
+},
+{
+"path": "open/candles_1d/AVAX-USD.parquet",
+"bytes": 66135,
+"sha256": "e6d0f3499f05990f6b773327d3aefef7fda9c21fcadbff4bab9f064f1c465f28"
+},
+{
+"path": "open/candles_1d/AVNT-USD.parquet",
+"bytes": 20478,
+"sha256": "1823bbae3c5687136c693474b8d20f7ab29159833fa79d5e0749a82771e08e1f"
+},
+{
+"path": "open/candles_1d/AXL-USD.parquet",
+"bytes": 46821,
+"sha256": "030eedf7084b1de9068c61e7b765cac4860edafe5abd6ab5ddecb6eef2d59459"
+},
+{
+"path": "open/candles_1d/AXS-USD.parquet",
+"bytes": 25851,
+"sha256": "3238e8c95d0a9957768fc96b638f0ab5933ca538a70e2bb2facd837c523676f2"
+},
+{
+"path": "open/candles_1d/B3-USD.parquet",
+"bytes": 19211,
+"sha256": "b0c18b3723643d7f09edcb4dd1a90b1565d1ff5b27363b96d0377e9151260046"
+},
+{
+"path": "open/candles_1d/BABY-USD.parquet",
+"bytes": 17474,
+"sha256": "046e74b18c809ca0666a55365b24fa167c0c19bbf22785382837fff8bd87cba9"
+},
+{
+"path": "open/candles_1d/BADGER-USD.parquet",
+"bytes": 10090,
+"sha256": "1eba566b08d50e478daeb689a9102f10e71e13ca13ac9fc27bd4580daa23631c"
+},
+{
+"path": "open/candles_1d/BANANA-USD.parquet",
+"bytes": 16542,
+"sha256": "764d61c99c7887a13d47fa20b0902a6dc548d22c05677000b6b21b6cf21c8a4b"
+},
+{
+"path": "open/candles_1d/BCH-USD.parquet",
+"bytes": 61741,
+"sha256": "184427329cce7ad1bb0d79a7342ba135758ede2d179d19357f7b11c0ebf4490b"
+},
+{
+"path": "open/candles_1d/BERA-USD.parquet",
+"bytes": 26044,
+"sha256": "f6741378910c137892964672ed61c133d9031ba0222db684f3ed3162cec5de0b"
+},
+{
+"path": "open/candles_1d/BICO-USD.parquet",
+"bytes": 16469,
+"sha256": "c97a7752e58f0769020b1b59eae33bd16239c2186b42af96eb8f5e6c0be3033b"
+},
+{
+"path": "open/candles_1d/BLUR-USD.parquet",
+"bytes": 64938,
+"sha256": "9a0cc6d9276707d8d79d10732cc12c4d84bdaa18243461e4a72397eb9eef93df"
+},
+{
+"path": "open/candles_1d/BNB-USD.parquet",
+"bytes": 57663,
+"sha256": "a2ed58b276bd92dfd78d4313c782d78f02f85b136896f1d43fa959315375ad12"
+},
+{
+"path": "open/candles_1d/BOME-USD.parquet",
+"bytes": 20524,
+"sha256": "71c4e4a4e0c754e3b75da8e93538d4fe6bc13348add79c55d64d219ec5b10946"
+},
+{
+"path": "open/candles_1d/BONK-USD.parquet",
+"bytes": 71356,
+"sha256": "8ee492ffe4142b4797de26528d0adb35834f2480ec76c1849ba31f172e80f21e"
+},
+{
+"path": "open/candles_1d/BRETT-USD.parquet",
+"bytes": 34290,
+"sha256": "5a0805f49bfd19fab8b84350fc8e4a72bc53e3a512a181dcab2634dabbb902ef"
+},
+{
+"path": "open/candles_1d/BTC-USD.parquet",
+"bytes": 75312,
+"sha256": "08b055087ad4c5542b388d454f130d991044e211b4519002d9af86152cde0c9c"
+},
+{
+"path": "open/candles_1d/CAKE-USD.parquet",
+"bytes": 32327,
+"sha256": "feb7320e4f6f784fe39d0c8d46c746782e1ea26fd0fd4b9b8e97bbe40c2ed2a6"
+},
+{
+"path": "open/candles_1d/CETUS-USD.parquet",
+"bytes": 20853,
+"sha256": "975fb9b2ba1cfc8d3189c04b91273e2a9f2e5652a47210faed817c700e90fb2a"
+},
+{
+"path": "open/candles_1d/CHZ-USD.parquet",
+"bytes": 52092,
+"sha256": "34550f13a16d257ad2f0caab3ebbdb7ae85217c5ba9cc34f1072b468cd18bc72"
+},
+{
+"path": "open/candles_1d/COMP-USD.parquet",
+"bytes": 58068,
+"sha256": "98c128da4ebeb9e4394c95cafb91e4b80c2b142cc7aa2abcd928db7f2fb11d84"
+},
+{
+"path": "open/candles_1d/COOKIE-USD.parquet",
+"bytes": 20164,
+"sha256": "4c1ffcbbef49f44b0be87c863a923a0dc97753467d7a9cabb348395b23cc8c07"
+},
+{
+"path": "open/candles_1d/CRV-USD.parquet",
+"bytes": 67840,
+"sha256": "51bbcff77bbf4593e0fc48446c900423faa557290f783aeee9aa97122505e67f"
+},
+{
+"path": "open/candles_1d/CVX-USD.parquet",
+"bytes": 22600,
+"sha256": "952e71a95dc0c4e443fd4c98cb409331d691142c34ad268409c0083dd3c60eb6"
+},
+{
+"path": "open/candles_1d/DASH-USD.parquet",
+"bytes": 8494,
+"sha256": "2b2e67af17c11c1ea4d44252420219ac310b35041e52c15d868f7d1cc3079051"
+},
+{
+"path": "open/candles_1d/DEGEN-USD.parquet",
+"bytes": 21765,
+"sha256": "dcad9145b43568cf1033f9f75e6632d91842f38dc4dd324edbbd8230331362ee"
+},
+{
+"path": "open/candles_1d/DOGE-USD.parquet",
+"bytes": 81361,
+"sha256": "1144cd113ebf2b7669e6104e384d8ea8f7996ed5a0da5769b1d10d29c0087872"
+},
+{
+"path": "open/candles_1d/DOT-USD.parquet",
+"bytes": 65209,
+"sha256": "491f576db49f0223f707e79438f93dd9fc5efe59f32fc730a9e063bce76fec9b"
+},
+{
+"path": "open/candles_1d/DRIFT-USD.parquet",
+"bytes": 36215,
+"sha256": "e243751300cc48fa8b324a1d03813dcf72a1d7f38c97d796bc3edde435df60a5"
+},
+{
+"path": "open/candles_1d/DYDX-USD.parquet",
+"bytes": 55730,
+"sha256": "47fdf82ace299450d4e9cdab902d74806a49d2df3154debd68db1738bb9a662f"
+},
+{
+"path": "open/candles_1d/DYM-USD.parquet",
+"bytes": 51529,
+"sha256": "3e47602d8fff753a28ae49d809afd4647843432ee571847460ee9add3d6aa606"
+},
+{
+"path": "open/candles_1d/EGLD-USD.parquet",
+"bytes": 24744,
+"sha256": "f6fd06e3dff38dc497bdd9db0aa8c2ad0e85130958abceaf100896d2f9fc702b"
+},
+{
+"path": "open/candles_1d/EIGEN-USD.parquet",
+"bytes": 37014,
+"sha256": "22187aa492a47efa51de25b92b65baf6b4f8762c5d305d336c89f58f62779342"
+},
+{
+"path": "open/candles_1d/ENA-USD.parquet",
+"bytes": 55052,
+"sha256": "034b6ec619be196118c082db03a50de45bf6540789aa0635657079d792a3b770"
+},
+{
+"path": "open/candles_1d/ENJ-USD.parquet",
+"bytes": 22286,
+"sha256": "ee1b9001287df0524a914fee9eebb757cd6c1187e02e64505afc15d013bd5418"
+},
+{
+"path": "open/candles_1d/ENS-USD.parquet",
+"bytes": 41256,
+"sha256": "5e4d74b3b04e6bb76cab461e2bfb6a6cfa79519e14359d67efbd3d0948d145dd"
+},
+{
+"path": "open/candles_1d/EOS-USD.parquet",
+"bytes": 38942,
+"sha256": "16d24db57c857f46185d20a157aed58038ad7f555b30e827e6376e6bee8c9727"
+},
+{
+"path": "open/candles_1d/ERA-USD.parquet",
+"bytes": 13439,
+"sha256": "6e52a898d017844ea1a87c1af6f13fc57ee718114f8361c6a6a0fdb2c6cd451d"
+},
+{
+"path": "open/candles_1d/ETC-USD.parquet",
+"bytes": 63037,
+"sha256": "362cdbbbef9e927f576aeb956b16593ff6e5f6c0ff3180d581180ecd61decd89"
+},
+{
+"path": "open/candles_1d/ETH-USD.parquet",
+"bytes": 70099,
+"sha256": "f8b6b964184770e4d3ad33562eb430d3f88f19f96374af77adaa543d8e9900b2"
+},
+{
+"path": "open/candles_1d/ETHFI-USD.parquet",
+"bytes": 44853,
+"sha256": "ed94746777300f2b4f785372556232458f89d822541843b12d49be72f6256cd3"
+},
+{
+"path": "open/candles_1d/FET-USD.parquet",
+"bytes": 19268,
+"sha256": "e0b88eb07e0a1949e5d96b08e16b287a97954381dc20833250f48ebcd563f8ef"
+},
+{
+"path": "open/candles_1d/FIL-USD.parquet",
+"bytes": 67969,
+"sha256": "8d6c96cc0caebc6f1286ce0aa5757db22399098fcdd64d1f177132fb82b7429a"
+},
+{
+"path": "open/candles_1d/FLOKI-USD.parquet",
+"bytes": 47747,
+"sha256": "056fd9fb7f1682113c0990e76ce1184e167a2bcee05d706be4ae748913ab0e0c"
+},
+{
+"path": "open/candles_1d/FORTH-USD.parquet",
+"bytes": 9858,
+"sha256": "f92dc6e9fbda5436a058d8a1a5faf44db6797c77f776c1f1ef705f8b2ed04132"
+},
+{
+"path": "open/candles_1d/FTM-USD.parquet",
+"bytes": 23332,
+"sha256": "50a52dba02a3297467b8f37442df104f1cc77fb244e3d83fc28c23acc8aef6c1"
+},
+{
+"path": "open/candles_1d/G-USD.parquet",
+"bytes": 13633,
+"sha256": "b38abf76a964d3978361cf3f3f10b17a08030a85f5f34021df6f37323a9c250a"
+},
+{
+"path": "open/candles_1d/GALA-USD.parquet",
+"bytes": 31629,
+"sha256": "4e397d4edb8a731fe143e0fb401e01f3d48ff042b363d5f636d2bc72ba3c6b04"
+},
+{
+"path": "open/candles_1d/GAS-USD.parquet",
+"bytes": 13359,
+"sha256": "2cffbb66b2776ac3cbf5831344083ae5b4e4e02876bb8537014fe7394408e11f"
+},
+{
+"path": "open/candles_1d/GHST-USD.parquet",
+"bytes": 11675,
+"sha256": "34c3daa3157b0f465a85c5a5277461c30521d66baae27230764874daa1e5e1b7"
+},
+{
+"path": "open/candles_1d/GLMR-USD.parquet",
+"bytes": 11169,
+"sha256": "9d389680cfb4a649834d676c4732450f76118625b9a3837d92d9dbdc55e3aad4"
+},
+{
+"path": "open/candles_1d/GME-USD.parquet",
+"bytes": 16577,
+"sha256": "f99b6d347d4c3f7b903196feea858082d0bab00e2af1d3d28dcdb9ce80cd302b"
+},
+{
+"path": "open/candles_1d/GMX-USD.parquet",
+"bytes": 22736,
+"sha256": "669c18578e6f54fc28d87d9ec7590b0004bd661642d73e183dfcccb470e5ebc1"
+},
+{
+"path": "open/candles_1d/GOAT-USD.parquet",
+"bytes": 21042,
+"sha256": "0b0163aa382c7dac0644470700586b502d17b7b03796f84c400aaa01053b6186"
+},
+{
+"path": "open/candles_1d/GRASS-USD.parquet",
+"bytes": 23633,
+"sha256": "54d827d0a16170c6a4143a368b85f1b7b326aa589be6901da4e5a6aaf6a5b21f"
+},
+{
+"path": "open/candles_1d/GRT-USD.parquet",
+"bytes": 54631,
+"sha256": "dc0ebca122f2ae25da719a3e0c2542f8f521ee409bb85f3b4cac7385705e1fa3"
+},
+{
+"path": "open/candles_1d/HBAR-USD.parquet",
+"bytes": 63792,
+"sha256": "44a35935e015f3b75b39d8ef7ddc3b6afffa42e12de63b3efc9f6b5c6f4b2589"
+},
+{
+"path": "open/candles_1d/HNT-USD.parquet",
+"bytes": 26271,
+"sha256": "ac90c2de4175e758809816a222d3fcd16175a08a5fa211ec14dcd3d9007ac7d8"
+},
+{
+"path": "open/candles_1d/HOLO-USD.parquet",
+"bytes": 11170,
+"sha256": "114da318bf5dd3687a8ed9d806fd2fb03f17ec945d3f6584ce46e4bbf0bd7d24"
+},
+{
+"path": "open/candles_1d/HUMA-USD.parquet",
+"bytes": 12486,
+"sha256": "e04086fc8802714aca2684ac6bf0e410a32263a78f87a2067ff7be17bd568563"
+},
+{
+"path": "open/candles_1d/HYPE-USD.parquet",
+"bytes": 39408,
+"sha256": "86b9d022bc07e2c97e5e5a765af031b0ee4588da76324bdf509f0a629012effd"
+},
+{
+"path": "open/candles_1d/ICP-USD.parquet",
+"bytes": 56898,
+"sha256": "4bf8a0aef3a2f4eae4211a96b8cf622008a310814f7dd892270e97ce6173d434"
+},
+{
+"path": "open/candles_1d/ID-USD.parquet",
+"bytes": 15396,
+"sha256": "eeb72e9fc446e6bcb13fdf0eb9f5b241345fd32dae6a2b5ed324586d6e1396a7"
+},
+{
+"path": "open/candles_1d/IMX-USD.parquet",
+"bytes": 54375,
+"sha256": "e0046d5e24ee12d40f22268faa082752c5def25fd474f179717ced06c7a78d75"
+},
+{
+"path": "open/candles_1d/INJ-USD.parquet",
+"bytes": 57402,
+"sha256": "65fa10f7dc9ebd0362b135226084414a4935c45a73a2db3ae868518bae8578f7"
+},
+{
+"path": "open/candles_1d/IO-USD.parquet",
+"bytes": 28360,
+"sha256": "8baa7fdda1ac016a1ec62b72d8da0cb831fa70d96e53e52724b0854ab61492e2"
+},
+{
+"path": "open/candles_1d/IOTA-USD.parquet",
+"bytes": 10808,
+"sha256": "0e497d04e1e38d93feff181d341d4ce4e0934315237c12c3380927365f1b97b7"
+},
+{
+"path": "open/candles_1d/IOTX-USD.parquet",
+"bytes": 14658,
+"sha256": "0b07efc7ea44c9acef691a36da542ab168f1315234c6f988ce3a5e40c5127119"
+},
+{
+"path": "open/candles_1d/IP-USD.parquet",
+"bytes": 22644,
+"sha256": "a99238626b876e622405172aa036a9743b7b4e899b24d10deaed9f33c27c2cc4"
+},
+{
+"path": "open/candles_1d/JASMY-USD.parquet",
+"bytes": 31388,
+"sha256": "99c43f46311f317a8e7429e225113ca4f12e2a431bef6aeffbed6a59117d2412"
+},
+{
+"path": "open/candles_1d/JTO-USD.parquet",
+"bytes": 57347,
+"sha256": "e17889d8267e3770015f10a59146bf0403a80090a62d9e3c5258fa6c189d1fe7"
+},
+{
+"path": "open/candles_1d/JUP-USD.parquet",
+"bytes": 66465,
+"sha256": "e03f2ee8c78c84aaab1e1ab780f800afde200e6f0fc361795b1262038e61eeb9"
+},
+{
+"path": "open/candles_1d/KAITO-USD.parquet",
+"bytes": 30355,
+"sha256": "3467615dfecc239877a1736b0570a652da5cb2e1701fe75295105b419b7df6f3"
+},
+{
+"path": "open/candles_1d/KAS-USD.parquet",
+"bytes": 35423,
+"sha256": "7dcc7cbbadd5c98276c2c0967a6a239a65293dba4e22359e42d6d4072fcee847"
+},
+{
+"path": "open/candles_1d/KDA-USD.parquet",
+"bytes": 15543,
+"sha256": "b5ebbcebb1111f9e97f3251a96c7ec03a2ce0479d333dd316e1ba0748f4f8bba"
+},
+{
+"path": "open/candles_1d/KERNEL-USD.parquet",
+"bytes": 15678,
+"sha256": "b9afa0ef1300e0e6385956399ee1c1714dc4d32f2c83331ab0a2bdb9cc8a6cf7"
+},
+{
+"path": "open/candles_1d/KOMA-USD.parquet",
+"bytes": 12176,
+"sha256": "0d9d3b4fd5f6ba38ba048fe30b98c0b498179efae557c54e5751d0029e9200a1"
+},
+{
+"path": "open/candles_1d/KSM-USD.parquet",
+"bytes": 16771,
+"sha256": "7359b484b7049f0dfe7b2b96a588c1c7409ad031160e2cabd967463d064b25fe"
+},
+{
+"path": "open/candles_1d/LA-USD.parquet",
+"bytes": 14216,
+"sha256": "3628c847b461fde4b34d2c7879a01b6a7a366685e9393e8aa36329118636c53f"
+},
+{
+"path": "open/candles_1d/LAYER-USD.parquet",
+"bytes": 18966,
+"sha256": "f94af6ad5a1ddbdc895f414bf054a28ed18a6d0a58a21cece37ab7ac4854efef"
+},
+{
+"path": "open/candles_1d/LDO-USD.parquet",
+"bytes": 62470,
+"sha256": "a354f2a6fee998eed2c01b50125048bae1c292a852e79d374e3d0c3b18a85ff7"
+},
+{
+"path": "open/candles_1d/LINEA-USD.parquet",
+"bytes": 13087,
+"sha256": "7bde43054e9df3a67206ebe076ba0e6120a85693b294ea7ba9967c74d6ed8f32"
+},
+{
+"path": "open/candles_1d/LINK-USD.parquet",
+"bytes": 68341,
+"sha256": "462cd29088056123063e2023881a451a356e1dfe9ebb8e63cd1979ff638839c3"
+},
+{
+"path": "open/candles_1d/LIT-USD.parquet",
+"bytes": 19005,
+"sha256": "50f0cdc809b074a011ded8bcd0e007df1063775b64703431cd8e18758a1ec01d"
+},
+{
+"path": "open/candles_1d/LPT-USD.parquet",
+"bytes": 13728,
+"sha256": "04fbb59687923c6f40d0f0cd67c0e070e0142e8bfead0ba063137a3ee5f85506"
+},
+{
+"path": "open/candles_1d/LTC-USD.parquet",
+"bytes": 64179,
+"sha256": "b2bd61da58cdac58b9d233f27a65e36933373aa3b364086522b8ed447ff0e1e9"
+},
+{
+"path": "open/candles_1d/LUNC-USD.parquet",
+"bytes": 8163,
+"sha256": "e722b2c55c685dd112ceb8e2e667dadfd591ac8100232a4a456e51b2de47ded8"
+},
+{
+"path": "open/candles_1d/MAGIC-USD.parquet",
+"bytes": 16888,
+"sha256": "465700f3d71fbc72dfe0dc0fc6c27f48fc0ebaa5fb102bc37c3befacc410e56d"
+},
+{
+"path": "open/candles_1d/MANA-USD.parquet",
+"bytes": 52881,
+"sha256": "92187fd795b666ce50ff30f446ba5a9dca10968e40611fac86de9dd2c1df7125"
+},
+{
+"path": "open/candles_1d/MASK-USD.parquet",
+"bytes": 12995,
+"sha256": "7f3d5ab4cb14b94f36b49fd06c6afe8b4dab6a150bfe642e7ffae9419e5e1f3d"
+},
+{
+"path": "open/candles_1d/MATIC-USD.parquet",
+"bytes": 30737,
+"sha256": "7e57ac15155a7c7baeef2a9f31468456e2946f9709636c5caa9d7640bd4a1a57"
+},
+{
+"path": "open/candles_1d/MAVIA-USD.parquet",
+"bytes": 15391,
+"sha256": "423489de3cf9d3861b92c9c092e49803d1ebc2e6e42cfd87b6caf23a8d82dae3"
+},
+{
+"path": "open/candles_1d/ME-USD.parquet",
+"bytes": 15485,
+"sha256": "20ebcd941ece8120ab50233baad43d37af3258758c847dab605d206d71422633"
+},
+{
+"path": "open/candles_1d/MELANIA-USD.parquet",
+"bytes": 11485,
+"sha256": "eea7b95b96b5a3b50f5d0af8f5ba55782f7250d8678292bf0f03aad24ca7d573"
+},
+{
+"path": "open/candles_1d/MET-USD.parquet",
+"bytes": 18771,
+"sha256": "617661f40c8f59ef6fd93680f0a6649a102c7cb5508c020d828174303f218ac5"
+},
+{
+"path": "open/candles_1d/MEW-USD.parquet",
+"bytes": 27303,
+"sha256": "70e3bee45473858cb9aa00bf0216264a90b22fc68c93b7242d354235c6601f34"
+},
+{
+"path": "open/candles_1d/MKR-USD.parquet",
+"bytes": 43487,
+"sha256": "25cb384c737b1b618429240d2d258d320a1276383dcaa5af137cd24cc4397be8"
+},
+{
+"path": "open/candles_1d/MOCA-USD.parquet",
+"bytes": 13303,
+"sha256": "77b26cb8784cb302be04d15f76c3fd8c62cc894b4353fb7a47e70ae03d1f25a6"
+},
+{
+"path": "open/candles_1d/MOG-USD.parquet",
+"bytes": 35940,
+"sha256": "493588c3fdf13e08e6431a1b74dd3a6ccbeba82757674e2475774c20246c7d50"
+},
+{
+"path": "open/candles_1d/MON-USD.parquet",
+"bytes": 21884,
+"sha256": "628b5fba2352383334c83775c8068452231041ce31472ac7b2feef749a8a0953"
+},
+{
+"path": "open/candles_1d/MOODENG-USD.parquet",
+"bytes": 24002,
+"sha256": "8c729d2fe616d6388c45a2a1dd4ad0443a2543d93e88fb4c5b54955b38fac20b"
+},
+{
+"path": "open/candles_1d/MORPHO-USD.parquet",
+"bytes": 31186,
+"sha256": "6fdfcc48a1a0a668b25fb7cd3ef98476bdee7e589f9c119dfb22991c1ddabd3a"
+},
+{
+"path": "open/candles_1d/MOVE-USD.parquet",
+"bytes": 31784,
+"sha256": "176fcd48c7d50697a8dc90e958a7665c60d82b6c058e07ecd9b7325741fa5977"
+},
+{
+"path": "open/candles_1d/NEAR-USD.parquet",
+"bytes": 65284,
+"sha256": "008c70d3075fae41f5fe4a9ed399a54b83247351ba94fafc6f5011f91bd57ab7"
+},
+{
+"path": "open/candles_1d/NEIRO-USD.parquet",
+"bytes": 20438,
+"sha256": "4f016845111e05a8a3c3b113b36d06a268ce0dcfcca78e552fa694eb177bf5b7"
+},
+{
+"path": "open/candles_1d/NEO-USD.parquet",
+"bytes": 20599,
+"sha256": "147fa0fd16396bb8e61fd236197da82951cbcf99d65f8f89527ce30ebfab3a4b"
+},
+{
+"path": "open/candles_1d/NEWT-USD.parquet",
+"bytes": 13089,
+"sha256": "d1324899a2bbcdf680ef56ba193d9f943ad86a17bdc6f8d57a990f208540ed9f"
+},
+{
+"path": "open/candles_1d/NIL-USD.parquet",
+"bytes": 18538,
+"sha256": "6895a26c234beaf1dce782ac45ac87b046773d666f5c1a261a07ead2cd734d7c"
+},
+{
+"path": "open/candles_1d/NMR-USD.parquet",
+"bytes": 12087,
+"sha256": "5394ee437bddac96ec6a17f5d5fb829253cda0f85759ca401aaba1634b276e1d"
+},
+{
+"path": "open/candles_1d/NOT-USD.parquet",
+"bytes": 28018,
+"sha256": "439741d7a8a68377c7f725a246c8f1bae52f451d6bac5b97d0ff08cc5d20b8e3"
+},
+{
+"path": "open/candles_1d/OM-USD.parquet",
+"bytes": 33128,
+"sha256": "89d6a7ec53eea0836170d1c7a3c497344560f194e205097ac7dff572327e3f1c"
+},
+{
+"path": "open/candles_1d/OMNI-USD.parquet",
+"bytes": 11176,
+"sha256": "30ec5163eddfad75324fe2933ec56a1132d81969e8807f04e5b58983c55c9df8"
+},
+{
+"path": "open/candles_1d/ONDO-USD.parquet",
+"bytes": 48015,
+"sha256": "86f9336ce7a42ad961cb551693d17fd60cf1fa733b828a3add0c0dca0854918c"
+},
+{
+"path": "open/candles_1d/ONT-USD.parquet",
+"bytes": 12788,
+"sha256": "5b1fc6541dc20fab9812aa5aec4112577d5704306ea740557cab6a36545564b2"
+},
+{
+"path": "open/candles_1d/OP-USD.parquet",
+"bytes": 66503,
+"sha256": "87c9df3b4e58609c8815a37966bc37ccffd94ea9b85805d6b686c2fe78dbf3c7"
+},
+{
+"path": "open/candles_1d/ORCA-USD.parquet",
+"bytes": 19068,
+"sha256": "e5be01b8c82a8fc5e11a54702682b784580925101aa244724733e8489588f68b"
+},
+{
+"path": "open/candles_1d/ORDER-USD.parquet",
+"bytes": 14158,
+"sha256": "ed3894be884249620a02ff215b81adc4b2dd7e340faccd7e63b8f2e83b0232ed"
+},
+{
+"path": "open/candles_1d/ORDI-USD.parquet",
+"bytes": 54722,
+"sha256": "3d707bc5c253423d3cb20b6648f07ecafceee20e04fe12688779511e658ac182"
+},
+{
+"path": "open/candles_1d/PAXG-USD.parquet",
+"bytes": 41257,
+"sha256": "258daf80a70841c51e6a23a03d58d793fc1be57868bedd3fa76cf1046430702d"
+},
+{
+"path": "open/candles_1d/PENDLE-USD.parquet",
+"bytes": 44210,
+"sha256": "b972586fcf1d84add85d0b53390fae31666b94161ba223ef4d70f937554e0a30"
+},
+{
+"path": "open/candles_1d/PENGU-USD.parquet",
+"bytes": 46019,
+"sha256": "f9384b064f8fa5a08301bde5795036d6941647bea378b566291d5fad275cb3e0"
+},
+{
+"path": "open/candles_1d/PEOPLE-USD.parquet",
+"bytes": 44536,
+"sha256": "3a8d984f1e66b538059c9be550664aa78789c2672e3254ec465d80d7de04e863"
+},
+{
+"path": "open/candles_1d/PEPE-USD.parquet",
+"bytes": 81341,
+"sha256": "3cb5c7610f5befd3abe615edf19e688b28ccd1ca71393d6a35090dd8e911140e"
+},
+{
+"path": "open/candles_1d/PERP-USD.parquet",
+"bytes": 13766,
+"sha256": "720a435e944679b7f104eb7691497e56981516809922f5970c168d91672e6825"
+},
+{
+"path": "open/candles_1d/PIPPIN-USD.parquet",
+"bytes": 8386,
+"sha256": "39ab810cf9b1c627b8fd047e2104504e9e5036b329e239040b7fac53d0901383"
+},
+{
+"path": "open/candles_1d/PIXEL-USD.parquet",
+"bytes": 16573,
+"sha256": "105d0c1d3472afc71f8558a10e1255480550a0f8b6ea6951b9bcc41f4f2dfc75"
+},
+{
+"path": "open/candles_1d/PNUT-USD.parquet",
+"bytes": 19921,
+"sha256": "4ec7f4db586df9a4f430a64659fe905b1db8a44ae53ec5f2a3605f23ec52ceb5"
+},
+{
+"path": "open/candles_1d/POL-USD.parquet",
+"bytes": 48383,
+"sha256": "6ed977ddd1a349c4e0365abafe629b114c1a8fceec01c9b4459ef410c0899e44"
+},
+{
+"path": "open/candles_1d/POPCAT-USD.parquet",
+"bytes": 41442,
+"sha256": "db5919e0ed6d62876c58d61b07a2775d2d30982cd8d80bc9e7e625f0a0d8c445"
+},
+{
+"path": "open/candles_1d/PROMPT-USD.parquet",
+"bytes": 12579,
+"sha256": "bf4b67d0fac3dd9d49c23f563baf7fb91615fb1247f3c2bbee2403b8c00f42f3"
+},
+{
+"path": "open/candles_1d/PROVE-USD.parquet",
+"bytes": 13299,
+"sha256": "901d94cd756163885aad481693263dca52540b6e81316c5e079b386c95d46d18"
+},
+{
+"path": "open/candles_1d/PUMP-USD.parquet",
+"bytes": 36955,
+"sha256": "4c182c28386a905a839948395d9ce57c1e8dba88f0f57b14ce78487bc6ab52c6"
+},
+{
+"path": "open/candles_1d/PYTH-USD.parquet",
+"bytes": 63902,
+"sha256": "c46c204a693251285c4701120bdcdd1522f072062a4b2ff46caf44880d670881"
+},
+{
+"path": "open/candles_1d/QNT-USD.parquet",
+"bytes": 18001,
+"sha256": "bc6907278a3893e730ca051ad6427b5000a69c3d61d2c5070bc4e5ea324ca7a6"
+},
+{
+"path": "open/candles_1d/QTUM-USD.parquet",
+"bytes": 13730,
+"sha256": "d31ed6c2b0481901476458549f1d7b75a5c77e574d63602f2a3ce9e28e02ec2c"
+},
+{
+"path": "open/candles_1d/RAY-USD.parquet",
+"bytes": 24446,
+"sha256": "956d03942574b6e5e8bffba450307d5f01add328993595bd7d5f1a58b615da40"
+},
+{
+"path": "open/candles_1d/REN-USD.parquet",
+"bytes": 12236,
+"sha256": "bf0604ce46118b5b89abac14041e67610749dd59e7a15defebee4feadb0d26e6"
+},
+{
+"path": "open/candles_1d/RENDER-USD.parquet",
+"bytes": 47493,
+"sha256": "3c7d6d1a7ed14a91885bceac37ec5e7a7472b3f6bfd336036b29f37da667de05"
+},
+{
+"path": "open/candles_1d/REZ-USD.parquet",
+"bytes": 18766,
+"sha256": "2f9ea77411597fbb2f3c9a186cb8996d0c6b4521e1dcad709b410a49965be0ea"
+},
+{
+"path": "open/candles_1d/RUNE-USD.parquet",
+"bytes": 55212,
+"sha256": "ff1a703710ff248c2622a5604297a3b1c466c837f2234af2e57d7127c25393d7"
+},
+{
+"path": "open/candles_1d/S-USD.parquet",
+"bytes": 32556,
+"sha256": "3f55d846ff80c8f251e454da39a0e3a58a0145b72f816a78cb5b8c99842abdd2"
+},
+{
+"path": "open/candles_1d/SAFE-USD.parquet",
+"bytes": 21698,
+"sha256": "995afeb1b1bb8907f20d518e0cf2070a93378b09a65d2d620d9c2548811e7f46"
+},
+{
+"path": "open/candles_1d/SAGA-USD.parquet",
+"bytes": 11420,
+"sha256": "13e967f25e67684b5b299cc06b9e152748db25f0df204c2fdd36f8f794d429b8"
+},
+{
+"path": "open/candles_1d/SATS-USD.parquet",
+"bytes": 23999,
+"sha256": "14cc04e5c8b5d32be0ebdbbc68b942ff049bd8a5339460c266d09ee56501f1d3"
+},
+{
+"path": "open/candles_1d/SCRT-USD.parquet",
+"bytes": 11915,
+"sha256": "1fe638342ca56b876004bdfa2b9f0b1bc5b5bbeb01f1d83a2e29762b2c985720"
+},
+{
+"path": "open/candles_1d/SEI-USD.parquet",
+"bytes": 72747,
+"sha256": "29707677013f735897d382dda48ab4579140b3fbd84005c53ec9907b14f9000f"
+},
+{
+"path": "open/candles_1d/SHIB-USD.parquet",
+"bytes": 79912,
+"sha256": "9df6fcf687bb3db2dc160f2b61506d8550b3c3e7381cf0b101d68fba98538060"
+},
+{
+"path": "open/candles_1d/SIGN-USD.parquet",
+"bytes": 14662,
+"sha256": "13966bf62dc732de79bfd6bfcde0786e1dce2336d2eb02ce4cc215ea1c3d8010"
+},
+{
+"path": "open/candles_1d/SKL-USD.parquet",
+"bytes": 20212,
+"sha256": "86f851d66c1d639d098954e190a01c99aa584b785d7c574e0d03eec0a248b5ba"
+},
+{
+"path": "open/candles_1d/SKY-USD.parquet",
+"bytes": 16817,
+"sha256": "1498e309a2a84ffc3dafa95f372d78ba9e63c3937a43384e3a46781275b3b1ba"
+},
+{
+"path": "open/candles_1d/SNX-USD.parquet",
+"bytes": 49295,
+"sha256": "01036ca0024f78aea4219ef0c751d75d63411ce6df0d3ab367709375bc53b257"
+},
+{
+"path": "open/candles_1d/SOL-USD.parquet",
+"bytes": 69698,
+"sha256": "888650492ae79a8ac2eb4c1751ecd95ad951e6788065ed69007efa5389588342"
+},
+{
+"path": "open/candles_1d/SOPH-USD.parquet",
+"bytes": 14884,
+"sha256": "c773b60ffabe64febc6e0637c745b189dbd980c84770d39a266a6ac2644f035e"
+},
+{
+"path": "open/candles_1d/SPX-USD.parquet",
+"bytes": 33384,
+"sha256": "9c18ddc5d216dd717242bf3b1a894eb1c5d96aeb299ffde64dddf171e54835df"
+},
+{
+"path": "open/candles_1d/SSV-USD.parquet",
+"bytes": 11809,
+"sha256": "161928602e544c95810e811fcc5d84ea4ef4abb68b08cbd94221ed0681b68531"
+},
+{
+"path": "open/candles_1d/STEEM-USD.parquet",
+"bytes": 13892,
+"sha256": "4b6a1bd231c7d2bad8c99bc93822e10f01a0843764f1350cad7a8f845e317c4d"
+},
+{
+"path": "open/candles_1d/STRK-USD.parquet",
+"bytes": 53658,
+"sha256": "7ed3978090242b949a9a70efbddf3d47a6e68509d831bac714fe3edd8a04d47d"
+},
+{
+"path": "open/candles_1d/STX-USD.parquet",
+"bytes": 52235,
+"sha256": "8896b3beeebf91366bf150d4897ca6d6bbabcc00f1f257811b7519f15176336e"
+},
+{
+"path": "open/candles_1d/SUI-USD.parquet",
+"bytes": 73916,
+"sha256": "19a8bfc9cafa724315464f07bebb0b106a23f85afcf24016789100f699f27c4a"
+},
+{
+"path": "open/candles_1d/SUSHI-USD.parquet",
+"bytes": 24810,
+"sha256": "90cee3776751f541398d6f4da3a86d4774a00f2a1faab34f39b4930e6454770e"
+},
+{
+"path": "open/candles_1d/SYRUP-USD.parquet",
+"bytes": 25986,
+"sha256": "8a3ba38cd50f3b4fcabd141d73f0f550ddc8140ea68bf4eadbc0705d9ad8b8da"
+},
+{
+"path": "open/candles_1d/TAIKO-USD.parquet",
+"bytes": 18739,
+"sha256": "6f1bbced2e262738d00221097d2fbc187b88cd2ef6973c5a8a469ad1e64a232b"
+},
+{
+"path": "open/candles_1d/TAO-USD.parquet",
+"bytes": 48035,
+"sha256": "87a2d4da1707a862be9693a74a0818d5635c366cd85baaf8c10b0844471b5829"
+},
+{
+"path": "open/candles_1d/THE-USD.parquet",
+"bytes": 12817,
+"sha256": "d147acbeeb93b78c03af04e035e02cda9b83d0f6d6ce4746cb2db692e1a73646"
+},
+{
+"path": "open/candles_1d/THETA-USD.parquet",
+"bytes": 24526,
+"sha256": "8bff1539384ffbe4cefe4314abb49c3e163a10872cb70f4d0374440389999005"
+},
+{
+"path": "open/candles_1d/TIA-USD.parquet",
+"bytes": 61116,
+"sha256": "3f3cd1ef5a09152348fc2aed4bae24671e0ead27e6f556f2d22ac68ad46e51e5"
+},
+{
+"path": "open/candles_1d/TON-USD.parquet",
+"bytes": 50725,
+"sha256": "b60ef0c6d8607f3fdaab33d4853d3678bd6606af563ba8e8f45d564b247283b1"
+},
+{
+"path": "open/candles_1d/TRB-USD.parquet",
+"bytes": 17670,
+"sha256": "74338bf2e7d409a1f4e9356c1d831c1b4298a410d85423b35018b2b465fa9eb8"
+},
+{
+"path": "open/candles_1d/TREE-USD.parquet",
+"bytes": 9846,
+"sha256": "8bef68a7a8198f1cb8e00db32c301903a1a663af5a855bc647c19bf4ed275ca6"
+},
+{
+"path": "open/candles_1d/TROY-USD.parquet",
+"bytes": 10026,
+"sha256": "e3bc712c6d33efc8c976b5a09642dd14f5582bc1c78e2bd3b71a1c524bd4d443"
+},
+{
+"path": "open/candles_1d/TRUMP-USD.parquet",
+"bytes": 40927,
+"sha256": "38156952ce987c25bb138ff18acb4ad672675fb0ab808bfd7376c798ed93edbf"
+},
+{
+"path": "open/candles_1d/TRX-USD.parquet",
+"bytes": 77082,
+"sha256": "e7f2c4cd3e1eeacb3a13dc07f0c1f7372f4a17ea57660187c5050725a5336805"
+},
+{
+"path": "open/candles_1d/TURBO-USD.parquet",
+"bytes": 24397,
+"sha256": "f55dd8149b5c01583d07d23380a528228787eb492065a12e6afc15e1da300c60"
+},
+{
+"path": "open/candles_1d/UMA-USD.parquet",
+"bytes": 22456,
+"sha256": "b7c991ebf796a6529c325b45b28bdfebfac4d514b3d8522704fda50516c41ae1"
+},
+{
+"path": "open/candles_1d/UNI-USD.parquet",
+"bytes": 68416,
+"sha256": "8fa41241115c4316fa7f7068886cd70459d45d42d9b274cd5644aee2121d7448"
+},
+{
+"path": "open/candles_1d/USELESS-USD.parquet",
+"bytes": 17681,
+"sha256": "3f81c3da5d715d88ea6aa2189797d228b3e3289df313cee4d9a877f53523c293"
+},
+{
+"path": "open/candles_1d/USUAL-USD.parquet",
+"bytes": 28151,
+"sha256": "e7360e3b0dabd2f11a70527d607990b1b47d4cf9c7712ff63487d5f1184b9ff2"
+},
+{
+"path": "open/candles_1d/VET-USD.parquet",
+"bytes": 24355,
+"sha256": "5a458e848831a246f8d169dce49de8072da603528ea7a7fa28c1716a42ca0cd1"
+},
+{
+"path": "open/candles_1d/VINE-USD.parquet",
+"bytes": 22319,
+"sha256": "dd4f95aacab38541e2bfd656fea5b2a90f225d24c64ee0ec50ea8c92cc3a8c09"
+},
+{
+"path": "open/candles_1d/VIRTUAL-USD.parquet",
+"bytes": 23345,
+"sha256": "9e78d1f7539ac64d583674931f1129cfd2866b7c9a0b15d0fe86707a63eeb31b"
+},
+{
+"path": "open/candles_1d/VOXEL-USD.parquet",
+"bytes": 10383,
+"sha256": "5899bd3683b025a5225b0784bcf1d45fdadc0d480fc899f35f4e2b875b6b9685"
+},
+{
+"path": "open/candles_1d/VVV-USD.parquet",
+"bytes": 15373,
+"sha256": "8721fd7481cfc516bb8afc4e8e795ceab2b58a261219ff53d9be5b6e7ce30052"
+},
+{
+"path": "open/candles_1d/W-USD.parquet",
+"bytes": 49482,
+"sha256": "d49e7f65e669e53e7439affdce2dd905c71fdd43a072871dca8507b76fcd24af"
+},
+{
+"path": "open/candles_1d/WCT-USD.parquet",
+"bytes": 15151,
+"sha256": "528c8a3ad3f4f31c34034dbeb8ddf91fc96b8f9286e808e456f1a585fc03497e"
+},
+{
+"path": "open/candles_1d/WIF-USD.parquet",
+"bytes": 55717,
+"sha256": "aa6cac99ea71c82f61e89a1a44b6171c6ce1283d31bf05232da49101fd93884e"
+},
+{
+"path": "open/candles_1d/WLD-USD.parquet",
+"bytes": 66975,
+"sha256": "de0646664b633233f24c05939a79d6dc72b681bf617b7df0b522aee1f7d80d57"
+},
+{
+"path": "open/candles_1d/WLFI-USD.parquet",
+"bytes": 32049,
+"sha256": "b2c1b1ae39b4b76bef5992de5b8579dcb28188a55771eea54489af8c53137a9c"
+},
+{
+"path": "open/candles_1d/WOO-USD.parquet",
+"bytes": 56504,
+"sha256": "ae6648c4b469ea5ee0cf67694e3c66360f2955be620da250f3ddc356b2d69b54"
+},
+{
+"path": "open/candles_1d/XAG-USD.parquet",
+"bytes": 13663,
+"sha256": "75522aa8469facabd2e8f63322a2405865d0d6c2325aaa6e9552375c9215b246"
+},
+{
+"path": "open/candles_1d/XAI-USD.parquet",
+"bytes": 22056,
+"sha256": "6f4fddb9e6c150db92ff3bc95369a5074338644622be47e9c70ffaf7b50d177c"
+},
+{
+"path": "open/candles_1d/XAUT-USD.parquet",
+"bytes": 9344,
+"sha256": "13aa0dacf9e3489148886f368b2f6681594dadcc82c94fa5f54f9bafaf71ceb8"
+},
+{
+"path": "open/candles_1d/XLM-USD.parquet",
+"bytes": 70799,
+"sha256": "aab623d6ca6fcb6f1cd306ee59237bc6fabce0d3a164a857ee204b53eb29e32b"
+},
+{
+"path": "open/candles_1d/XMR-USD.parquet",
+"bytes": 46498,
+"sha256": "b079485c97d9c5e8ba0304b012f939c450d10b4337211ba47774458d7d982f4d"
+},
+{
+"path": "open/candles_1d/XPL-USD.parquet",
+"bytes": 26720,
+"sha256": "229373ba00fc1ac9975bad5ca23c1f1658fead1223c292a0db6ec5636cf4d058"
+},
+{
+"path": "open/candles_1d/XRP-USD.parquet",
+"bytes": 73888,
+"sha256": "b963860291b600c5f6bc4808b5b86d4d5645ee4016f46ecb0c7d411307a203fc"
+},
+{
+"path": "open/candles_1d/XTZ-USD.parquet",
+"bytes": 28247,
+"sha256": "9effefe5bafd2a7df8092a4e3918cb765255bbcdcf67dc04e9bca563bf8c25bc"
+},
+{
+"path": "open/candles_1d/YFI-USD.parquet",
+"bytes": 17451,
+"sha256": "8331883dc37f495d265f4b2f9a78d6f6d8d01382fc63c081960d76f5b936d849"
+},
+{
+"path": "open/candles_1d/ZEC-USD.parquet",
+"bytes": 36807,
+"sha256": "b7935d6f639190ab6acb2149fc203d3d88bdfc599c85f2714d76c37958d56c52"
+},
+{
+"path": "open/candles_1d/ZEN-USD.parquet",
+"bytes": 29940,
+"sha256": "f80b719e87f720d87e54ca25e21901cf83b3ce8bf2e3845550d73b91cefe8e49"
+},
+{
+"path": "open/candles_1d/ZEREBRO-USD.parquet",
+"bytes": 17345,
+"sha256": "894a959b08e1c4af83632d3e1526cc1037bcfc5f79480556e57d8370495d4a0c"
+},
+{
+"path": "open/candles_1d/ZETA-USD.parquet",
+"bytes": 13929,
+"sha256": "58fec2dc356ff315a81d55154fb6cb8a32a97d9690fb48e995a8e6a0b65c7823"
+},
+{
+"path": "open/candles_1d/ZK-USD.parquet",
+"bytes": 48408,
+"sha256": "5e42314d1535236ffa196826758d57a78a91759220a5b1c30f87d807fae6acd1"
+},
+{
+"path": "open/candles_1d/ZORA-USD.parquet",
+"bytes": 29290,
+"sha256": "38e2b3f3f17d23a6ceb8aa93d9cadecf1ed51cedc20767bbfa7e39c76e9c65d6"
+},
+{
+"path": "open/candles_1d/ZRO-USD.parquet",
+"bytes": 45523,
+"sha256": "8d0e3462b52e920acd12c324df2769b7ae40577d9ee707bd1e5c39112b193a24"
+},
+{
+"path": "open/candles_1d/ZRX-USD.parquet",
+"bytes": 21889,
+"sha256": "f4906d219f63973be86100ca11086f35ed16342186bf8eda813c197105365062"
+},
+{
+"path": "open/candles_1h/1INCH-USD.parquet",
+"bytes": 446729,
+"sha256": "72762153a61e0c6f20057094c93b43cd1030b518b5b7c7a4226a9648c7fce45b"
+},
+{
+"path": "open/candles_1h/2Z-USD.parquet",
+"bytes": 129827,
+"sha256": "f1c4d9918f4be4136d41fd8b55efc1a46f7e38f178d69881bf2790eb3170888f"
+},
+{
+"path": "open/candles_1h/AAVE-USD.parquet",
+"bytes": 902621,
+"sha256": "63ecb0e95f46907196b1c64f931776bc49c48ff05e962a3a4e979d7ca34f1792"
+},
+{
+"path": "open/candles_1h/ACX-USD.parquet",
+"bytes": 98226,
+"sha256": "bd286efdaa639884b73f3b5827791e6bd71175171db611d6faad0c3378bc4596"
+},
+{
+"path": "open/candles_1h/ADA-USD.parquet",
+"bytes": 1002668,
+"sha256": "2aa59412f7ba2042727d6b2f749bfe447b1f226f847235df91f70a1919ce2b8c"
+},
+{
+"path": "open/candles_1h/AERGO-USD.parquet",
+"bytes": 137355,
+"sha256": "376a730d13d15e96937c87bd6e7d36d21b7e3dac9e752fabd1623606be9c25aa"
+},
+{
+"path": "open/candles_1h/AERO-USD.parquet",
+"bytes": 200423,
+"sha256": "9475c7370f84e0a3f9b6a3cd20c611fe40c0f7b144d5a571ce4329d10777b570"
+},
+{
+"path": "open/candles_1h/AEVO-USD.parquet",
+"bytes": 427040,
+"sha256": "c6f5256d83d543163c4d5f15a16ff11df1accfa1d91fae88875fd1aa5f7ae88a"
+},
+{
+"path": "open/candles_1h/AGIX-USD.parquet",
+"bytes": 230891,
+"sha256": "2bc852bd09da966ced7dc4eabccbf26059aae757a80a56621a452d7c750b4013"
+},
+{
+"path": "open/candles_1h/AI16Z-USD.parquet",
+"bytes": 166301,
+"sha256": "095d51616e180c4b9703630e1ee460a64eee3e0c2bb2b5e875113c3125d9143c"
+},
+{
+"path": "open/candles_1h/AIXBT-USD.parquet",
+"bytes": 163660,
+"sha256": "c93cbd8e6f3af44d0c701c9c9c9063a550ca6291a1effc8df832848c2fc70ce8"
+},
+{
+"path": "open/candles_1h/AKT-USD.parquet",
+"bytes": 275163,
+"sha256": "bbe6589a1ea532a299d6b94b60d4db5261a64eb3f1e7aa8b2286996aa46dcfc1"
+},
+{
+"path": "open/candles_1h/ALGO-USD.parquet",
+"bytes": 677316,
+"sha256": "51333dc5ca2e346feb78e437ededebdd6b79862e3287594a151ab941ab6f1dc6"
+},
+{
+"path": "open/candles_1h/ALPACA-USD.parquet",
+"bytes": 109652,
+"sha256": "4a41223eaee3df6eb4b867f89aafad8a260b8fc202626a7cc194927498f18748"
+},
+{
+"path": "open/candles_1h/ALT-USD.parquet",
+"bytes": 174691,
+"sha256": "2984ac944072acfe3b307d444faef6e333d9b60d87462a972f2981fac49a4030"
+},
+{
+"path": "open/candles_1h/ANIME-USD.parquet",
+"bytes": 52352,
+"sha256": "3220dfa9992793e177cacd58c50d43856f42b24bbcd83ee493a8ea355e0487dd"
+},
+{
+"path": "open/candles_1h/APE-USD.parquet",
+"bytes": 697527,
+"sha256": "6dccd8d8d55c8288306335bcd4020707865cee8d9dd751e0cc3b49c64fed4def"
+},
+{
+"path": "open/candles_1h/API3-USD.parquet",
+"bytes": 139108,
+"sha256": "5fc41e1507ed8d6991705f6f20d978a01303eb14d1d5fda2a38dd48b75be0cbc"
+},
+{
+"path": "open/candles_1h/APT-USD.parquet",
+"bytes": 986158,
+"sha256": "4a7db2dbcc42444dda7c0f27dd73e10e7bd8bf4f15c03737d02163e1aa7b9ea7"
+},
+{
+"path": "open/candles_1h/AR-USD.parquet",
+"bytes": 217411,
+"sha256": "70dbe3233a5dd87df01df774e6497ba41ef8d04c6b6f6cb669bdeadbe7d15b5d"
+},
+{
+"path": "open/candles_1h/ARB-USD.parquet",
+"bytes": 870812,
+"sha256": "5a08784d54ab36e3f6d8c0799c4403fe6bff28d1536b42b6963655e132753bc5"
+},
+{
+"path": "open/candles_1h/ARKM-USD.parquet",
+"bytes": 431376,
+"sha256": "10b1ba27fe4d2f7d44ce767802dd47d07322cd5814fab886dad8fdd3ea0cf886"
+},
+{
+"path": "open/candles_1h/ASTER-USD.parquet",
+"bytes": 229701,
+"sha256": "abccf0633f3a8e4689475ef5e24ebc218961761caf8feaa48937582e5398c2c0"
+},
+{
+"path": "open/candles_1h/ASTR-USD.parquet",
+"bytes": 330981,
+"sha256": "f7810b44840202bc206893dc47bbe74b0e6e1dd0e33b22e8aebfda54ced7a15d"
+},
+{
+"path": "open/candles_1h/ATH-USD.parquet",
+"bytes": 269359,
+"sha256": "2b515e985c2e31cf06692b21b3b5366d7188d7dd176cb3f1820722032e43a966"
+},
+{
+"path": "open/candles_1h/ATOM-USD.parquet",
+"bytes": 941762,
+"sha256": "651cf6384b719e170fb62667e72d87337194c565e5888d1355c8edb407860cac"
+},
+{
+"path": "open/candles_1h/AVAX-USD.parquet",
+"bytes": 975679,
+"sha256": "01d47fedbba1f5208e9b61a5c09dbca4df1fe2eea6dac9fd6283038c465cb1d8"
+},
+{
+"path": "open/candles_1h/AVNT-USD.parquet",
+"bytes": 166342,
+"sha256": "318a414c68819a85d08af23717d583a94d892e302475bb3685e69ede64dbd2db"
+},
+{
+"path": "open/candles_1h/AXL-USD.parquet",
+"bytes": 445512,
+"sha256": "0a0bb78943617f643dd73ca0735eb5a418a60db9c9ad2ca835699a0c6ed14f8e"
+},
+{
+"path": "open/candles_1h/AXS-USD.parquet",
+"bytes": 194468,
+"sha256": "8c747a79861b9e74b686ef8414d508cedf22108e30c370e09dd7641ec21a84bd"
+},
+{
+"path": "open/candles_1h/B3-USD.parquet",
+"bytes": 159934,
+"sha256": "e78679254dbd987d4089fdf77899b8ecb5ff6df97bdab1043bf51539ea09a490"
+},
+{
+"path": "open/candles_1h/BABY-USD.parquet",
+"bytes": 137233,
+"sha256": "9d8c44c9dde58fc3c74165b86754ba103d9f3f610d135d55d6923a153d3f401c"
+},
+{
+"path": "open/candles_1h/BADGER-USD.parquet",
+"bytes": 112511,
+"sha256": "f2fb14358cc0821a6ec1e0bbaa9c4f73bb30659d69aab9ca34c1a0c54745a263"
+},
+{
+"path": "open/candles_1h/BANANA-USD.parquet",
+"bytes": 134740,
+"sha256": "28815a917b670fe08551738757f04e4bfc8ca9ed1fb578e58b24ea3889f5a6b4"
+},
+{
+"path": "open/candles_1h/BCH-USD.parquet",
+"bytes": 856310,
+"sha256": "3b26b1fcc75a4aa8c3b837687306fb008bfd8d7adc93985fb019568102a3f630"
+},
+{
+"path": "open/candles_1h/BERA-USD.parquet",
+"bytes": 196028,
+"sha256": "bbdd5b21658c85bbf5f9b3fe97804f321fffff61011a06a4d1d1fef7a39a66a6"
+},
+{
+"path": "open/candles_1h/BICO-USD.parquet",
+"bytes": 175650,
+"sha256": "17e42ebdd0364fb1b3cfe321cb206b20c1cb05702835556e15154256375f6785"
+},
+{
+"path": "open/candles_1h/BLUR-USD.parquet",
+"bytes": 771801,
+"sha256": "83fbd068a424e12dd36ebec92cf8834d9da164a25e565d5a0b30e46367e79b5c"
+},
+{
+"path": "open/candles_1h/BNB-USD.parquet",
+"bytes": 846674,
+"sha256": "5b2b72c7f2b927dce995fedf6511a8f50055ae2e22b1a583ad59dc1eb17aadbc"
+},
+{
+"path": "open/candles_1h/BOME-USD.parquet",
+"bytes": 189340,
+"sha256": "b62dd15534ea4623a0e17953772376c5b904a1c07fd1657eaf06676d7b2a5757"
+},
+{
+"path": "open/candles_1h/BONK-USD.parquet",
+"bytes": 847136,
+"sha256": "ade1f0125ccb4be38a8d493428b0142f7d4cc165eba86e2f9108efffb42674b3"
+},
+{
+"path": "open/candles_1h/BRETT-USD.parquet",
+"bytes": 252794,
+"sha256": "105172a1629fb650cc4924ebc39097758e8a99d45866acc7fb2698094e3e56ae"
+},
+{
+"path": "open/candles_1h/BTC-USD.parquet",
+"bytes": 1525494,
+"sha256": "6dc08e9f4cc46b0f734ac4107761348c108fc11f8efd63e019678006f6e720d1"
+},
+{
+"path": "open/candles_1h/CAKE-USD.parquet",
+"bytes": 248560,
+"sha256": "f35d1c034dd9f19f6937f08dce48e9252ba0a59ec28388d150cef6bf3e873aed"
+},
+{
+"path": "open/candles_1h/CETUS-USD.parquet",
+"bytes": 171134,
+"sha256": "888b59582ec5486a560036252747ba96563fa30000c88efbe0dde7ddcdef0697"
+},
+{
+"path": "open/candles_1h/CHZ-USD.parquet",
+"bytes": 456722,
+"sha256": "2df295ed3c54fcb4be6914c86c6519ef803eaebb474b78c4fa83d33a8f255d64"
+},
+{
+"path": "open/candles_1h/COMP-USD.parquet",
+"bytes": 708067,
+"sha256": "aa61975e0f0e0f43629cfcb9a25e21b18e30281be8b5a6bc96a7013a39eb46e1"
+},
+{
+"path": "open/candles_1h/COOKIE-USD.parquet",
+"bytes": 162258,
+"sha256": "766eb6e35abf9aa61ae6afb62ae190213a390f93edb8afb6ce529040ca4b2707"
+},
+{
+"path": "open/candles_1h/CRV-USD.parquet",
+"bytes": 861508,
+"sha256": "dd1baf9bac7f6b2ca29042c793e32465f0fd433afe9f4a271cbd41dbe75297f3"
+},
+{
+"path": "open/candles_1h/CVX-USD.parquet",
+"bytes": 195159,
+"sha256": "c1b22c496c970291bcb1957526f62fab893bbf49363707f585ca41e05ea5084b"
+},
+{
+"path": "open/candles_1h/DASH-USD.parquet",
+"bytes": 59085,
+"sha256": "411e21a0d0c74bada2cea0da85fd376a0d1bafaae25872c75c52067ee3da18c1"
+},
+{
+"path": "open/candles_1h/DEGEN-USD.parquet",
+"bytes": 206489,
+"sha256": "e6ddf826c32d7db2fc5c1bea27291e7746e66d84de2f788eacfe578ee333a98b"
+},
+{
+"path": "open/candles_1h/DOGE-USD.parquet",
+"bytes": 1331299,
+"sha256": "fdb0c930112a5fdad9a8b3c20fa1f5168edddbcd30e51c13e008822c3e6208d2"
+},
+{
+"path": "open/candles_1h/DOT-USD.parquet",
+"bytes": 919852,
+"sha256": "a1f901c4ee5dd9d5430903a5648124ed98e922960303b20f44db2408f8312b32"
+},
+{
+"path": "open/candles_1h/DRIFT-USD.parquet",
+"bytes": 312554,
+"sha256": "f19caeca74aca4ea17353aebfee36c0038f2af45c545e9ca231e2085be8c3242"
+},
+{
+"path": "open/candles_1h/DYDX-USD.parquet",
+"bytes": 667893,
+"sha256": "4278a6e7b482801e849b6188e50c48d2b8db9e9f8e0044e41a0ce487ef1b4bd0"
+},
+{
+"path": "open/candles_1h/DYM-USD.parquet",
+"bytes": 536665,
+"sha256": "096f9092c03e5ead5e3de2e725581c65bf2f601ddf904c8bb02d83e13e8d6b7f"
+},
+{
+"path": "open/candles_1h/EGLD-USD.parquet",
+"bytes": 200117,
+"sha256": "c545122de457c5e3ecdf537f9ae2628171b9364803a25c83814d934943cadeab"
+},
+{
+"path": "open/candles_1h/EIGEN-USD.parquet",
+"bytes": 277910,
+"sha256": "50754a24fa0ad35009576674519a86f61a4323a75fc5c7388f144dbc467567bf"
+},
+{
+"path": "open/candles_1h/ENA-USD.parquet",
+"bytes": 539721,
+"sha256": "a1d916e791f616f88c91316ca2627419347dc4dd914e36dab305a9357c9dfee3"
+},
+{
+"path": "open/candles_1h/ENJ-USD.parquet",
+"bytes": 190618,
+"sha256": "414255ad1d8ffac15949506c11a00b7462289eb97f12393da400b9d746bfd084"
+},
+{
+"path": "open/candles_1h/ENS-USD.parquet",
+"bytes": 367336,
+"sha256": "2a4a4403d9168032aa13af3c16a2f164b2cd7184a3a5715e7eedbed9a2277a34"
+},
+{
+"path": "open/candles_1h/EOS-USD.parquet",
+"bytes": 541643,
+"sha256": "25c6fefcd724ce65bd2214a7c3c4742fbcb52a57be49afe7b55740b7a802154d"
+},
+{
+"path": "open/candles_1h/ERA-USD.parquet",
+"bytes": 103718,
+"sha256": "f38948fa778086f9ada96933bb664d74364bbf7bead821bc3c36b3f347f1ac9c"
+},
+{
+"path": "open/candles_1h/ETC-USD.parquet",
+"bytes": 826275,
+"sha256": "b74a82859136ed546725f0071c7bfee01b3626a769899c2cb793cd9f6d631147"
+},
+{
+"path": "open/candles_1h/ETH-USD.parquet",
+"bytes": 1349898,
+"sha256": "2150fd1cf3b7028ce186e03e7c7b3e7dc2daee054efb7c261d7fae8b431dd0af"
+},
+{
+"path": "open/candles_1h/ETHFI-USD.parquet",
+"bytes": 396728,
+"sha256": "51d31a4b53f8910b05f5a1d735cc1e4bf79170783adeb2ad00090f35c9df05c9"
+},
+{
+"path": "open/candles_1h/FET-USD.parquet",
+"bytes": 299053,
+"sha256": "7d3f32bf3dc79f1048aea3d0ad5c5a4b343396d8859e83fdafbc0caaec0114b5"
+},
+{
+"path": "open/candles_1h/FIL-USD.parquet",
+"bytes": 936459,
+"sha256": "76230819ea4557957bf765a6064f2c81a0c70e235fce252ffcdd80a72cbc4f58"
+},
+{
+"path": "open/candles_1h/FLOKI-USD.parquet",
+"bytes": 436854,
+"sha256": "06ed3593a2702acd0c87edb1dea5da15b395d5f07bd52bbd84060a136721b90d"
+},
+{
+"path": "open/candles_1h/FORTH-USD.parquet",
+"bytes": 112026,
+"sha256": "ca1a643eac65d84ca02d279db8d8c81953a6cea6c2f3040a5933d80a3a365155"
+},
+{
+"path": "open/candles_1h/FTM-USD.parquet",
+"bytes": 327965,
+"sha256": "0074b95e209d98032e3f4bfc84b4559d9f5b82fdb9e179377e2e78e2e83baed6"
+},
+{
+"path": "open/candles_1h/G-USD.parquet",
+"bytes": 139838,
+"sha256": "b130384d3b143a907a3d8909fdcfcb0a48bf733e9749f3eeee174e42ff281cf5"
+},
+{
+"path": "open/candles_1h/GALA-USD.parquet",
+"bytes": 227007,
+"sha256": "3f1d8f9d1d5a996249c159f030942e5b9bea6da06397c3a214e6566b5678dcc3"
+},
+{
+"path": "open/candles_1h/GAS-USD.parquet",
+"bytes": 119015,
+"sha256": "820a89a16de2dfafad8f8b4fb1edd46a594a1258caf7234bb4806f75706ee759"
+},
+{
+"path": "open/candles_1h/GHST-USD.parquet",
+"bytes": 140178,
+"sha256": "41247f73342adbd23894eb3cd6a83b62304f601469b79a67b6bbc1ca2fdc6c0c"
+},
+{
+"path": "open/candles_1h/GLMR-USD.parquet",
+"bytes": 131099,
+"sha256": "233e21736784e0fc4470b31aff2d164e403c0d080a42244abc3dc863752861aa"
+},
+{
+"path": "open/candles_1h/GME-USD.parquet",
+"bytes": 173206,
+"sha256": "d4705379fc355c6141f4670f240f7903695e3d78a726466e93df7abc9c4a2bf5"
+},
+{
+"path": "open/candles_1h/GMX-USD.parquet",
+"bytes": 191225,
+"sha256": "f4bf9dc29c39b44f1cca496cf1ba132eeaade6e060aa70cdadd216bff72cd2bb"
+},
+{
+"path": "open/candles_1h/GOAT-USD.parquet",
+"bytes": 173967,
+"sha256": "2fa65c0a38e09ed4dec413ab4978c01bffdfd5685dcaae89a3624c919c95cec9"
+},
+{
+"path": "open/candles_1h/GRASS-USD.parquet",
+"bytes": 176640,
+"sha256": "966213be809ebad7b1b9b4f603c76cf379d7c4caa1d0fdd96496488079f7ddee"
+},
+{
+"path": "open/candles_1h/GRT-USD.parquet",
+"bytes": 486958,
+"sha256": "a6c7e3adc797c114e0a1afeb9242347280739cdd154a497eece1f70e7955777c"
+},
+{
+"path": "open/candles_1h/HBAR-USD.parquet",
+"bytes": 653380,
+"sha256": "3898c7a056e559159a797713c8137eef917d3de27909c740a8031326b2606eea"
+},
+{
+"path": "open/candles_1h/HNT-USD.parquet",
+"bytes": 195733,
+"sha256": "9f08e478e9d1efb4d444ebc6afab93a81fe7e0c323a9ed766510b153c7927719"
+},
+{
+"path": "open/candles_1h/HOLO-USD.parquet",
+"bytes": 89579,
+"sha256": "2b1c948c40ad9fe277d2a4a63cee83c566eac008db5597cf83f4ca7e32da2dba"
+},
+{
+"path": "open/candles_1h/HUMA-USD.parquet",
+"bytes": 99963,
+"sha256": "b0e5741c4f719954e4a2948975e2a50a5093d30a0f119a4731a3d0c7df8e0bdd"
+},
+{
+"path": "open/candles_1h/HYPE-USD.parquet",
+"bytes": 486222,
+"sha256": "c0a4ac64b99c27db9a80ea0a8bdc2c83e3465522b352c537cdf216f86cc43bc5"
+},
+{
+"path": "open/candles_1h/ICP-USD.parquet",
+"bytes": 695848,
+"sha256": "6735bf5075863d14884d781f588d3cadfa452639aa1dc13426a2ba9553a69ad9"
+},
+{
+"path": "open/candles_1h/ID-USD.parquet",
+"bytes": 150819,
+"sha256": "d8ddf66abc9c891071a2047cc380a5b0cd5fb95eb787209eb1f090a70a0e42b2"
+},
+{
+"path": "open/candles_1h/IMX-USD.parquet",
+"bytes": 536989,
+"sha256": "e37bb0860e7574d78319b88b32ced3e55e19e1f4bb39526c8fe391399a8d498e"
+},
+{
+"path": "open/candles_1h/INJ-USD.parquet",
+"bytes": 713426,
+"sha256": "28d766be541dd280fe56a933cb564eca5ff0aaaa99fce2fc91e6ece0464c2eb7"
+},
+{
+"path": "open/candles_1h/IO-USD.parquet",
+"bytes": 222251,
+"sha256": "0a9167ca2c301738cfb0f32b4906b1470a4d129428a685ba08a6bb677d120122"
+},
+{
+"path": "open/candles_1h/IOTA-USD.parquet",
+"bytes": 84575,
+"sha256": "c8d8597b1e3f170f10c44ff3caacb9421e386ea7e280068f7a17a14b414b706e"
+},
+{
+"path": "open/candles_1h/IOTX-USD.parquet",
+"bytes": 117774,
+"sha256": "5a30eb4abe4765186806e68733f63c1a58466d2d80381f8440788823031d7afc"
+},
+{
+"path": "open/candles_1h/IP-USD.parquet",
+"bytes": 182257,
+"sha256": "fe32db267cd45620bfee5ac402562f8fb98cb8c8d9eeecbe3d3da393272ffada"
+},
+{
+"path": "open/candles_1h/JASMY-USD.parquet",
+"bytes": 224958,
+"sha256": "1ea0a0d9dbba175ca09e81463b26ec3923012d521e31517528003a76fe65e84c"
+},
+{
+"path": "open/candles_1h/JTO-USD.parquet",
+"bytes": 613499,
+"sha256": "0623abbe4e6de8781984f021d7d96b74841e36b4b23b2906d4e09d3cecfe405e"
+},
+{
+"path": "open/candles_1h/JUP-USD.parquet",
+"bytes": 804590,
+"sha256": "7d3a15b2524afe50d417d1c2bb2576a92e8ca50df86ebf2e785f264c1a07f5d9"
+},
+{
+"path": "open/candles_1h/KAITO-USD.parquet",
+"bytes": 248700,
+"sha256": "c0f48d61566badcfbafd4af63dbc20be74e8849c59c90eee7b276333d51c7292"
+},
+{
+"path": "open/candles_1h/KAS-USD.parquet",
+"bytes": 252191,
+"sha256": "730393f15a9162775d99076e82aaf6bc38f0800997af6680544209a4dd15bd95"
+},
+{
+"path": "open/candles_1h/KDA-USD.parquet",
+"bytes": 131035,
+"sha256": "b48de7bd122fa002e34317cc765c8a0d8df59ea26aab968fd0e939b44aa09f76"
+},
+{
+"path": "open/candles_1h/KERNEL-USD.parquet",
+"bytes": 121543,
+"sha256": "f7fa6b59e4633dad8a55c733c675d40f9b289029a9798540af69932764e78976"
+},
+{
+"path": "open/candles_1h/KOMA-USD.parquet",
+"bytes": 130819,
+"sha256": "fba6e8115c64d9bf83d81ebd42b469ae0c132cdae726f9cf5e6b7f9d35675979"
+},
+{
+"path": "open/candles_1h/KSM-USD.parquet",
+"bytes": 151647,
+"sha256": "cacd8824c4b1de22f7ad54aa64b757796c0d4802185b213186d03a4c0a4c2df0"
+},
+{
+"path": "open/candles_1h/LA-USD.parquet",
+"bytes": 118148,
+"sha256": "d85870e3a542b0bbec8584bdc67234c7f8499244ade72a5c2d8699997d6ee1f9"
+},
+{
+"path": "open/candles_1h/LAYER-USD.parquet",
+"bytes": 150794,
+"sha256": "6c585906907d662a94c03846f1265e36c7e0b41d1713961c737992bc4b151b0e"
+},
+{
+"path": "open/candles_1h/LDO-USD.parquet",
+"bytes": 736033,
+"sha256": "c7df5ddffcba41c5b40ccc705f8c5b6a6c28afa0925683c26cfc7f08e1ead7d3"
+},
+{
+"path": "open/candles_1h/LINEA-USD.parquet",
+"bytes": 96995,
+"sha256": "b6d9d94fa67c1bd1f5a14e39b07abc1e84487f4e4a4ff568c1ab6bcc9c8e282f"
+},
+{
+"path": "open/candles_1h/LINK-USD.parquet",
+"bytes": 1086443,
+"sha256": "c20b85b788e46fe865bcd4f45ca2ce6d04f121252d53281ceb081e44c21fb43f"
+},
+{
+"path": "open/candles_1h/LIT-USD.parquet",
+"bytes": 121681,
+"sha256": "34d78069829c4b5b422a15f095e8bd799d5a9bd03cd6dac819d8d0c6b3d860ce"
+},
+{
+"path": "open/candles_1h/LPT-USD.parquet",
+"bytes": 113272,
+"sha256": "e9a26704fa4821b9272b35881d5be3b2fba962a750734aebc764c54337c91ed5"
+},
+{
+"path": "open/candles_1h/LTC-USD.parquet",
+"bytes": 947301,
+"sha256": "2010e937b829be231aadaae42354d50e580888ba0533015552c5a4aa527e21b3"
+},
+{
+"path": "open/candles_1h/LUNC-USD.parquet",
+"bytes": 58496,
+"sha256": "dea4eef337e4059c8a5575e0fe69d82ae9b4960634fd322e70c53feb9544a428"
+},
+{
+"path": "open/candles_1h/MAGIC-USD.parquet",
+"bytes": 134177,
+"sha256": "3a6dae25b2795ee8530d854ccf54ea3a26c588e438ad3cf39759da5c1671a8a1"
+},
+{
+"path": "open/candles_1h/MANA-USD.parquet",
+"bytes": 505863,
+"sha256": "991d1b6464f41aae02abc3ea2cd95a01016b6a009f8d445ebdc51b87d284cff0"
+},
+{
+"path": "open/candles_1h/MASK-USD.parquet",
+"bytes": 108719,
+"sha256": "d1c2b2b40177c4a6baf0eea96cd0b75597bca2068c840456a168921dc29d07dc"
+},
+{
+"path": "open/candles_1h/MATIC-USD.parquet",
+"bytes": 490269,
+"sha256": "88cd9018738a638aaa5839b5c7cfe18cd7aec1e79e7883227b84148843ce99dd"
+},
+{
+"path": "open/candles_1h/MAVIA-USD.parquet",
+"bytes": 167509,
+"sha256": "be193f42f445958a80900643e09bdce9136bca429066c23e5452c99b544de70c"
+},
+{
+"path": "open/candles_1h/ME-USD.parquet",
+"bytes": 136471,
+"sha256": "a5759133237a83e3b4954d28b319c7b188abd6e888efaae8ac499f0b00480bc5"
+},
+{
+"path": "open/candles_1h/MELANIA-USD.parquet",
+"bytes": 117438,
+"sha256": "ad6516830e82dfbec77b2b32683ef6e3e53c4e0779cc1e1e0449569e1c797c9b"
+},
+{
+"path": "open/candles_1h/MET-USD.parquet",
+"bytes": 142710,
+"sha256": "9ae2e746863b170ccf10b6a9e52cd5471f2119d7ad2e4e1a85ee23659bceb040"
+},
+{
+"path": "open/candles_1h/MEW-USD.parquet",
+"bytes": 206895,
+"sha256": "89ea14329b0fcbe42599374d6eba3f711cde8be343d934f64f120134fb6f8eb2"
+},
+{
+"path": "open/candles_1h/MKR-USD.parquet",
+"bytes": 635443,
+"sha256": "b90cfc80f37a0c00649b8a22df11cd00ae716023e761d5b11f3e49ad34f8ef06"
+},
+{
+"path": "open/candles_1h/MOCA-USD.parquet",
+"bytes": 141709,
+"sha256": "a05ba40532b88c48b6fa78be4e67b95f4c2d6a7bcc31695bf14195ca95e3e5d2"
+},
+{
+"path": "open/candles_1h/MOG-USD.parquet",
+"bytes": 282192,
+"sha256": "e2f9ec31aaf857b08eeab5506f9e2cb79e17e44c00b58d02125e3df45e6a7f04"
+},
+{
+"path": "open/candles_1h/MON-USD.parquet",
+"bytes": 165447,
+"sha256": "1671164b9516b5bc43fb0ffd03eaef49da5bad116efccb731f7f5151e425c6b9"
+},
+{
+"path": "open/candles_1h/MOODENG-USD.parquet",
+"bytes": 180760,
+"sha256": "618dcdaff5de8f7f0d99d6373e951163223f5e4fe0a0d7dd07adbb3ffb861423"
+},
+{
+"path": "open/candles_1h/MORPHO-USD.parquet",
+"bytes": 266661,
+"sha256": "cdb452c5c18047955033e1c4f294999d18f409cb142ea7bb4548c9e63fda0c8e"
+},
+{
+"path": "open/candles_1h/MOVE-USD.parquet",
+"bytes": 245391,
+"sha256": "62153b3255d9f9ab2814b3950fea5578ec3bc0b8b977fc467a5f918d62afce4e"
+},
+{
+"path": "open/candles_1h/NEAR-USD.parquet",
+"bytes": 964135,
+"sha256": "025e23a4d89f4b520b1cb0c34d09523b9b5335e3a66826f73ad1fb9947725042"
+},
+{
+"path": "open/candles_1h/NEIRO-USD.parquet",
+"bytes": 188653,
+"sha256": "fd34394f07183dd948e91e6e14a976346c8924cf8ebca7dc93bdf73ef16e195c"
+},
+{
+"path": "open/candles_1h/NEO-USD.parquet",
+"bytes": 187368,
+"sha256": "978374a6f97fd61e20b1c91dee9db3616ca2cdb014c8390513ed6e81101adcd5"
+},
+{
+"path": "open/candles_1h/NEWT-USD.parquet",
+"bytes": 110903,
+"sha256": "dda6325fc3bcd72d788a69db21c35ff4c63331aade5049ecabd431606e5edbcf"
+},
+{
+"path": "open/candles_1h/NIL-USD.parquet",
+"bytes": 141801,
+"sha256": "0c60ec6029540560dacb3d6f2eba4454478fe09fc6e4d9496be8d2153df2c481"
+},
+{
+"path": "open/candles_1h/NMR-USD.parquet",
+"bytes": 127084,
+"sha256": "744913e40162b7c18db21b78958e475e51ae9dc25cd542b06db522ab13d4cf20"
+},
+{
+"path": "open/candles_1h/NOT-USD.parquet",
+"bytes": 212799,
+"sha256": "2894fa0d17d2eefe1db51a2d229946e628eb34e9bc5351559f4265a74d25e92e"
+},
+{
+"path": "open/candles_1h/OM-USD.parquet",
+"bytes": 248171,
+"sha256": "62aa762504ed4128568075cb0eaa7dab6697e4b7f8e9c42779e6ed70565085c2"
+},
+{
+"path": "open/candles_1h/OMNI-USD.parquet",
+"bytes": 99429,
+"sha256": "1428dda65d02ebcb7999795d3820a61245a89c3259a90e3ca9b5f4e88c6fd951"
+},
+{
+"path": "open/candles_1h/ONDO-USD.parquet",
+"bytes": 425887,
+"sha256": "375cddecf8df84942b418023b1b50cfb6a8de2e66c8f138bcdf903de56cb4e7d"
+},
+{
+"path": "open/candles_1h/ONT-USD.parquet",
+"bytes": 145324,
+"sha256": "450a066085c1bdae7ce91a2614028dc1e8524111c48cb940c35802d8c643d2bc"
+},
+{
+"path": "open/candles_1h/OP-USD.parquet",
+"bytes": 872559,
+"sha256": "3caca4b1da514cd0943788b802253d292bdc351b031a388fb4f3c036776dfe63"
+},
+{
+"path": "open/candles_1h/ORCA-USD.parquet",
+"bytes": 149850,
+"sha256": "fe1f1c619a16ff2454336f1b271a6cd68e288d5f7aeece81dab9c7229bcb7cce"
+},
+{
+"path": "open/candles_1h/ORDER-USD.parquet",
+"bytes": 148160,
+"sha256": "111f1d81de51dda0967a2ff6b008ab5baa08052b22980565a64c9741fc39ff0c"
+},
+{
+"path": "open/candles_1h/ORDI-USD.parquet",
+"bytes": 652527,
+"sha256": "2e762d20647b274e32fb71a09a23471942eac80ff74e8fec682c69d65ef5781a"
+},
+{
+"path": "open/candles_1h/PAXG-USD.parquet",
+"bytes": 388851,
+"sha256": "ed97e7a3de2a5cb940f0bf898cc0b414ebe9fe3e3e4d54ec662d5016bdd56939"
+},
+{
+"path": "open/candles_1h/PENDLE-USD.parquet",
+"bytes": 391616,
+"sha256": "3cb4f744c3e91f2b56eb8aff788473ad9ebfcdd5d65bc79dd6fff63ccaad1135"
+},
+{
+"path": "open/candles_1h/PENGU-USD.parquet",
+"bytes": 399430,
+"sha256": "2b4ec7f7d393e5b0e7cb86ca778688aef0f426e796ecc6abeb98f6d6511fdcd1"
+},
+{
+"path": "open/candles_1h/PEOPLE-USD.parquet",
+"bytes": 338058,
+"sha256": "7066e33a84cd7ef78256f54cbf4a964f5b72934e4e48d331d2b3621d008ac3a1"
+},
+{
+"path": "open/candles_1h/PEPE-USD.parquet",
+"bytes": 1325361,
+"sha256": "9f74badcada9e75b802bfb92340d34674317b59f3b21bbed24ca74608b363126"
+},
+{
+"path": "open/candles_1h/PERP-USD.parquet",
+"bytes": 145897,
+"sha256": "91ebd57ac14089679e46905eda5a42f3a0ae99e41cb07ea1280df49c21332cb5"
+},
+{
+"path": "open/candles_1h/PIPPIN-USD.parquet",
+"bytes": 64138,
+"sha256": "8df4084738dd3877518a4c35a572913de679d6f0e6d2b8b6d8477e7d08234080"
+},
+{
+"path": "open/candles_1h/PIXEL-USD.parquet",
+"bytes": 173049,
+"sha256": "3f574fdf6fb4efca2148de0a6f462935d56e783ee7ed86c82005e924b4123c56"
+},
+{
+"path": "open/candles_1h/PNUT-USD.parquet",
+"bytes": 170492,
+"sha256": "62af323243cd8a4ca29cb030bf15ebad058fc44f723cbe2245d29cd7316b8aee"
+},
+{
+"path": "open/candles_1h/POL-USD.parquet",
+"bytes": 384607,
+"sha256": "aa50fbc41d65858a020fa3c18f8d8f27b3289a196619e485b5971ee2390c04d8"
+},
+{
+"path": "open/candles_1h/POPCAT-USD.parquet",
+"bytes": 323777,
+"sha256": "848811347f7d6bc011d944d410a5eeeec46e487a19870219fb7bf3e459901189"
+},
+{
+"path": "open/candles_1h/PROMPT-USD.parquet",
+"bytes": 96517,
+"sha256": "1243f6f5de4a2f8f87420fffe9f3a564021dc3511b72e45c33811cc33736e7e8"
+},
+{
+"path": "open/candles_1h/PROVE-USD.parquet",
+"bytes": 103258,
+"sha256": "c46d99d81ea1bfe37c882c79cb3dd3defdf52369e88a90095bfd3ae22a25b73e"
+},
+{
+"path": "open/candles_1h/PUMP-USD.parquet",
+"bytes": 390841,
+"sha256": "d6d48e53ed900ddff2777e433790a06bdde4cd7f5206d921e144039270e17384"
+},
+{
+"path": "open/candles_1h/PYTH-USD.parquet",
+"bytes": 699382,
+"sha256": "0da881f2b7a172d9048adfc53bd24e84e87563351b78334c87f4b37fc160c0b9"
+},
+{
+"path": "open/candles_1h/QNT-USD.parquet",
+"bytes": 148751,
+"sha256": "9527c187336c547aa31d7d0e5a9faa8c1a39d9cab5d197c9d44426d598253d84"
+},
+{
+"path": "open/candles_1h/QTUM-USD.parquet",
+"bytes": 147146,
+"sha256": "e1b6a211b5c4e6b5b12d7f55586f7df30e5f7da2e861f99a6f5c810e7663ce14"
+},
+{
+"path": "open/candles_1h/RAY-USD.parquet",
+"bytes": 188250,
+"sha256": "ad49e676665a7facfd839154b280391053a30a895423844400c91a49213f06e7"
+},
+{
+"path": "open/candles_1h/REN-USD.parquet",
+"bytes": 145436,
+"sha256": "90cddd76cd8007c85e1c8e74d9b568aeda795b8849fd9af916f50829edb455f4"
+},
+{
+"path": "open/candles_1h/RENDER-USD.parquet",
+"bytes": 506814,
+"sha256": "b02cd993742b5e67ab89efc3e9864241db2c04683b8824b222ee9888fbdb6a88"
+},
+{
+"path": "open/candles_1h/REZ-USD.parquet",
+"bytes": 146006,
+"sha256": "4118e9711413b2d383c0f82014f92fda9a865d681bcec59897fff60c2d070179"
+},
+{
+"path": "open/candles_1h/RUNE-USD.parquet",
+"bytes": 619927,
+"sha256": "4d840f5d629fc930aa1dfa2b965f79ca69deb6f9b655d5f4b371b022e1774a65"
+},
+{
+"path": "open/candles_1h/S-USD.parquet",
+"bytes": 251921,
+"sha256": "40158585fcb8ed8e5840178903bfafb6014ee335e44c64b3f32ed72e80c49a3f"
+},
+{
+"path": "open/candles_1h/SAFE-USD.parquet",
+"bytes": 194050,
+"sha256": "32a93f76e6a33e2b771aa82b1178b349ba53b5fe79e0fdb7e4263e84d0e683ea"
+},
+{
+"path": "open/candles_1h/SAGA-USD.parquet",
+"bytes": 128914,
+"sha256": "f58754c27ac6bd7ab83a89b08845c8d4a9a8c71646455c0faaf28b852c31931c"
+},
+{
+"path": "open/candles_1h/SATS-USD.parquet",
+"bytes": 209652,
+"sha256": "2b2a4976e560ea4fb209e130effbaf45f1725acc99575c5bdb3203694c27ee7f"
+},
+{
+"path": "open/candles_1h/SCRT-USD.parquet",
+"bytes": 133702,
+"sha256": "b7a44bd8c99c2f111663ebaebb0fe091c22635d172e694e49be346eda5e177e8"
+},
+{
+"path": "open/candles_1h/SEI-USD.parquet",
+"bytes": 936438,
+"sha256": "143faf8470ab035cc7989a1c6c066e555784161656fbd3f27e61bfd47dcd35f6"
+},
+{
+"path": "open/candles_1h/SHIB-USD.parquet",
+"bytes": 1114754,
+"sha256": "facfe9bee0b74598e8bcf96df890d085f5fe85f1c12ff90eb9fff08241c46fd1"
+},
+{
+"path": "open/candles_1h/SIGN-USD.parquet",
+"bytes": 119773,
+"sha256": "de7e44c6f669997721ba0eb33dd46b52ce2e3ce2c294da6d61b0c5a0f6007d6c"
+},
+{
+"path": "open/candles_1h/SKL-USD.parquet",
+"bytes": 170167,
+"sha256": "b0b9f80bf542923c1924ca0060cadf491cfa1d97614ae397b237514aba78b8c9"
+},
+{
+"path": "open/candles_1h/SKY-USD.parquet",
+"bytes": 110145,
+"sha256": "41edd4f0fbec18b6431cd2b21dce438feee1c2f3e5956bb6c5daa21d2e82de6e"
+},
+{
+"path": "open/candles_1h/SNX-USD.parquet",
+"bytes": 518324,
+"sha256": "98b4ea9e91379ca208a7b768c457744097dab9a2ae96a32c39bae8fed0229ca2"
+},
+{
+"path": "open/candles_1h/SOL-USD.parquet",
+"bytes": 1236436,
+"sha256": "ea263294d3cc75d70d5c77f3318e265a46e54d09010a3af2be347ba83ae5ac32"
+},
+{
+"path": "open/candles_1h/SOPH-USD.parquet",
+"bytes": 116769,
+"sha256": "2eb9f1e2e617e4a707fa4350bc64720470ee4c077dc5f3261320a2a63ee126b6"
+},
+{
+"path": "open/candles_1h/SPX-USD.parquet",
+"bytes": 271987,
+"sha256": "8494c42284f382e4ff8e461d44cb469db72506222f48ab3d0416b5dbb00eff0c"
+},
+{
+"path": "open/candles_1h/SSV-USD.parquet",
+"bytes": 122113,
+"sha256": "07137270bc3a79648de0cb381a9953dc5f250b50231c14a83c4090c3918007f5"
+},
+{
+"path": "open/candles_1h/STEEM-USD.parquet",
+"bytes": 121091,
+"sha256": "45451edad8bc62a553afba1a1c7b066d0ada2b6780586e3a416149099e1c00ac"
+},
+{
+"path": "open/candles_1h/STRK-USD.parquet",
+"bytes": 616576,
+"sha256": "4338f4edd1b2c0a235651f152eee9483119a18669b81eaf4a888f0888e29c81f"
+},
+{
+"path": "open/candles_1h/STX-USD.parquet",
+"bytes": 592373,
+"sha256": "dd0bde013feb93e7e3b807d737b330e12d69b630b4ac1d5ea48b0d1f45bd6e0f"
+},
+{
+"path": "open/candles_1h/SUI-USD.parquet",
+"bytes": 1155019,
+"sha256": "3e3150ca5e92d2fd526e3c0a49324f4a12c1267421bb1980fcef24b5c799ee99"
+},
+{
+"path": "open/candles_1h/SUSHI-USD.parquet",
+"bytes": 199177,
+"sha256": "45e31f200e9b88ab65ae0751fb59da959c81eee469bec87cbcd8e44acb38ef5e"
+},
+{
+"path": "open/candles_1h/SYRUP-USD.parquet",
+"bytes": 171351,
+"sha256": "409ad72d0f92ee02b384b732f1d81ba16fcc587601277b9ef3725d066fff033d"
+},
+{
+"path": "open/candles_1h/TAIKO-USD.parquet",
+"bytes": 178537,
+"sha256": "13a66a20e5a76bddf1e6d27b94785154d3ed434b214613dea0468a2fb7f75b5e"
+},
+{
+"path": "open/candles_1h/TAO-USD.parquet",
+"bytes": 489205,
+"sha256": "7acfae6669cf3a744349970d94bd4538e38d6b4dcadbb16a7a0171bb53aae371"
+},
+{
+"path": "open/candles_1h/THE-USD.parquet",
+"bytes": 136532,
+"sha256": "bb66f373cb3afa10ea1d20bc4173d9cac068a80b2d375b44e029b530c6efd37f"
+},
+{
+"path": "open/candles_1h/THETA-USD.parquet",
+"bytes": 195534,
+"sha256": "e9a732c7e2cf0398486ad952474ae417993b451a9b5406d7082891dff7aaca50"
+},
+{
+"path": "open/candles_1h/TIA-USD.parquet",
+"bytes": 809574,
+"sha256": "46f2e0d9eb8f067fc73911674c4bf76d66ca5725b4941a158221c5252fb38cfe"
+},
+{
+"path": "open/candles_1h/TON-USD.parquet",
+"bytes": 661155,
+"sha256": "e6f74157b39c2e742ce3aa64e5f8cfef19376cbd9b57eeb6dd2d93c45f636e44"
+},
+{
+"path": "open/candles_1h/TRB-USD.parquet",
+"bytes": 174379,
+"sha256": "63cf7a30dd57e804c714537726d79c2eecbc65ee5dd6fc8864cc6aeabf9066ae"
+},
+{
+"path": "open/candles_1h/TREE-USD.parquet",
+"bytes": 75274,
+"sha256": "db90549e604f70cd69f9db5d6ee122666351f82f4d3965dfacc5e28ac231a69c"
+},
+{
+"path": "open/candles_1h/TROY-USD.parquet",
+"bytes": 112378,
+"sha256": "c6218bac346b3f51807e268951bd55bf27ba50d3fe74bf769e0a6592548970cd"
+},
+{
+"path": "open/candles_1h/TRUMP-USD.parquet",
+"bytes": 358728,
+"sha256": "849908536e404c792cb1c99b94b13d4ca518de0c9325c8c46bce87f073b78a8c"
+},
+{
+"path": "open/candles_1h/TRX-USD.parquet",
+"bytes": 1098092,
+"sha256": "ecf2b25489b2b7063981b01c28b6a57e3aab6f4eb1c21bb56f5368505fc3c4a6"
+},
+{
+"path": "open/candles_1h/TURBO-USD.parquet",
+"bytes": 205047,
+"sha256": "43ccd39c0d9abef8d3525438f48292e5a42cd028a0b0d0fa9dcce8e11b9301a0"
+},
+{
+"path": "open/candles_1h/UMA-USD.parquet",
+"bytes": 189574,
+"sha256": "351044226adb6947755965060342a3c24e7c9af4187c8321f0b6491744d25e51"
+},
+{
+"path": "open/candles_1h/UNI-USD.parquet",
+"bytes": 986183,
+"sha256": "8e1217a75a72e57adc25b1ebc9dd2d3e05d17f913080b08955dcdbdc4571c681"
+},
+{
+"path": "open/candles_1h/USELESS-USD.parquet",
+"bytes": 140394,
+"sha256": "5208357433cc09dc60ab63d64f00c4d072ae7bfcf0f12d5522d62b9e172272ae"
+},
+{
+"path": "open/candles_1h/USUAL-USD.parquet",
+"bytes": 206891,
+"sha256": "601cab90efdc94c384e1beb2a4fa14b40904b3a857d8770215f0ee4de69fd302"
+},
+{
+"path": "open/candles_1h/VET-USD.parquet",
+"bytes": 179238,
+"sha256": "196a092eca2abbdf65efeae07313e41ddddac16696fddee90ba4dc90a9b192a9"
+},
+{
+"path": "open/candles_1h/VINE-USD.parquet",
+"bytes": 177444,
+"sha256": "ecda90421216b91fa2cc03423e054b304a373454a9a50ae8ea04c878ce2e73ec"
+},
+{
+"path": "open/candles_1h/VIRTUAL-USD.parquet",
+"bytes": 188911,
+"sha256": "fb113c743b14245bc8926e8913d22a65a954d29d6bf56fa23b3b4f519ab9dab4"
+},
+{
+"path": "open/candles_1h/VOXEL-USD.parquet",
+"bytes": 113008,
+"sha256": "f415eef8a73a1907357f556a0fc9139926e776564e2e02cfad2d20e567d5ce9d"
+},
+{
+"path": "open/candles_1h/VVV-USD.parquet",
+"bytes": 137058,
+"sha256": "82b8f22e4d8f881d73da504814a1440f8e789b90e2474a2f5b04d166bb3c7366"
+},
+{
+"path": "open/candles_1h/W-USD.parquet",
+"bytes": 473005,
+"sha256": "e8a4eba06e7a11282430bc281f0b767fd82c2e441d4c807d10ad51363ae72c6d"
+},
+{
+"path": "open/candles_1h/WCT-USD.parquet",
+"bytes": 124715,
+"sha256": "56d005c658343eac256f57bb30739baef95a61f21345c5eab0053106cf2398d4"
+},
+{
+"path": "open/candles_1h/WIF-USD.parquet",
+"bytes": 721401,
+"sha256": "42fb7f7bfafafe05ebaf555695bae2d34bb8ffd789bf29ec73f661fdc932abde"
+},
+{
+"path": "open/candles_1h/WLD-USD.parquet",
+"bytes": 951615,
+"sha256": "dceb3223d2ff909a8ac89f63eaa36f859befa81b1539a78a7dae4d581718c1d6"
+},
+{
+"path": "open/candles_1h/WLFI-USD.parquet",
+"bytes": 242333,
+"sha256": "1bf0e2739f203c13285dca9d2106a23c2b80edc9c68e6247fb48dc68cfb2a26b"
+},
+{
+"path": "open/candles_1h/WOO-USD.parquet",
+"bytes": 596851,
+"sha256": "eaa9e56cf42d642d5815445eab38e48b2849b8bdad955f01405885ba21351ab0"
+},
+{
+"path": "open/candles_1h/XAG-USD.parquet",
+"bytes": 66899,
+"sha256": "58287484eb64cec175679c5ce6fbd155bd334730a41d22331da2b8fb05709ea2"
+},
+{
+"path": "open/candles_1h/XAI-USD.parquet",
+"bytes": 185903,
+"sha256": "8f1218d9391d8caa228828f8770ee9ace58261e5b22301c91f7b76a6fa3b70b4"
+},
+{
+"path": "open/candles_1h/XAUT-USD.parquet",
+"bytes": 57547,
+"sha256": "e1bda292d28b31105581e47c17fd7ec10e0e157b89cd3fe65353fe7539f28f65"
+},
+{
+"path": "open/candles_1h/XLM-USD.parquet",
+"bytes": 821004,
+"sha256": "2548cc1b8cbd8ba686c989f7306063f2f6b6ae237a64c6004cc44955bcea6a1b"
+},
+{
+"path": "open/candles_1h/XMR-USD.parquet",
+"bytes": 465253,
+"sha256": "ff087752daa02a813f1a53401c75043cf5a6fec70ac2ab25cf3c72d49cddb6c1"
+},
+{
+"path": "open/candles_1h/XPL-USD.parquet",
+"bytes": 216447,
+"sha256": "667748310df01571c621afb0553b6cf981a740f1b6f441d1c9153ad9bd7a041b"
+},
+{
+"path": "open/candles_1h/XRP-USD.parquet",
+"bytes": 1168593,
+"sha256": "e55f1a84963709cdd9a0ad2c1d50b869fa68023c78a4123079a00f2d57c42264"
+},
+{
+"path": "open/candles_1h/XTZ-USD.parquet",
+"bytes": 206320,
+"sha256": "f77042cb3e1a577b815d5e5d0ff4dc41b869e5f0113119b6b55d9c94e07c4ebf"
+},
+{
+"path": "open/candles_1h/YFI-USD.parquet",
+"bytes": 150493,
+"sha256": "f96f353503abc33ef5c1cf4c287742193ef688abf43a830305ffd7be30e06b8f"
+},
+{
+"path": "open/candles_1h/ZEC-USD.parquet",
+"bytes": 440245,
+"sha256": "5efd3fd6770347726d4204765aaee5fb1312366deb8d11235f9d0d9de0f37ca7"
+},
+{
+"path": "open/candles_1h/ZEN-USD.parquet",
+"bytes": 241960,
+"sha256": "7e7a7939c3b57cb4c9b9ede460baebed0663b0452fec96a07e268cb5dbdf4e81"
+},
+{
+"path": "open/candles_1h/ZEREBRO-USD.parquet",
+"bytes": 160199,
+"sha256": "dc4506a8370fb70a56f0282445028906c9961ab964ab7fa11e4163c740d2a2b6"
+},
+{
+"path": "open/candles_1h/ZETA-USD.parquet",
+"bytes": 123394,
+"sha256": "082f649ea84759bf0144497760c6d2a11086f134bbdcbedc4a6b9deb98a0d06c"
+},
+{
+"path": "open/candles_1h/ZK-USD.parquet",
+"bytes": 398270,
+"sha256": "d6810dc6881e2b4999d89e67ef1364ece4260538f54025a0d8e1b3f8c192f4cb"
+},
+{
+"path": "open/candles_1h/ZORA-USD.parquet",
+"bytes": 250538,
+"sha256": "ba4fb0607ab8d3611099db829b2f027f6e0f2fe788c8d0b54fb499fe494e308c"
+},
+{
+"path": "open/candles_1h/ZRO-USD.parquet",
+"bytes": 389418,
+"sha256": "1144f7354ac3989e14558758f942dfaca96d29abae25e09cb6a4fb3892ad2eb0"
+},
+{
+"path": "open/candles_1h/ZRX-USD.parquet",
+"bytes": 188040,
+"sha256": "7d96f374ca3080c96c12ff776346214ed5d7dff19aec58ccbd8cf7a7186e8fab"
+},
+{
+"path": "open/funding/1INCH-USD.parquet",
+"bytes": 383356,
+"sha256": "a0ef7d404bf30ac15d04965cb7a9dc94fea24ef243c6997534ae9ed8d897ee29"
+},
+{
+"path": "open/funding/2Z-USD.parquet",
+"bytes": 156162,
+"sha256": "812d2f454da8e9da9d165292e3a6fa0819907d11b767cda37e6b471e3c4b3164"
+},
+{
+"path": "open/funding/AAVE-USD.parquet",
+"bytes": 436104,
+"sha256": "d009535f473db187cc6c1a48382911733dc5d495e112cb3ee46596d3cf99cd14"
+},
+{
+"path": "open/funding/ACX-USD.parquet",
+"bytes": 139866,
+"sha256": "332895ec24328df7f8cb151f74a92d99628cf202eb2c9d786df59190e7ca06ad"
+},
+{
+"path": "open/funding/ADA-USD.parquet",
+"bytes": 484438,
+"sha256": "e7fef7b497e5b192350edeb244595943af93b836c52687b3f58378bc81795087"
+},
+{
+"path": "open/funding/AERGO-USD.parquet",
+"bytes": 175933,
+"sha256": "4b54d8dab817550227553fadd8db717ae24bf5f6c1981d3a14afccff41c9bbaa"
+},
+{
+"path": "open/funding/AERO-USD.parquet",
+"bytes": 256643,
+"sha256": "ced133adad0937169700a5569123c8b8b1565012cc16378195f22889ccf549f5"
+},
+{
+"path": "open/funding/AEVO-USD.parquet",
+"bytes": 392540,
+"sha256": "8dadffbe6d162dbcc9ace3f8b61eb90b1de12516e18afc39b4f058f36b914521"
+},
+{
+"path": "open/funding/AGIX-USD.parquet",
+"bytes": 218330,
+"sha256": "5bb51701abd1198db3ec616be2e5d7218490b6b4feed63f2f0d0393ffa926bc4"
+},
+{
+"path": "open/funding/AI16Z-USD.parquet",
+"bytes": 190745,
+"sha256": "26e7f9b9dd5782e73d284a57b3ce0d982360982b600e59fd2c14e3906cd74eeb"
+},
+{
+"path": "open/funding/AIXBT-USD.parquet",
+"bytes": 221612,
+"sha256": "f684c4e029982cae466f7cda5050f612a2fc3281ef158f8c6666585b276786ea"
+},
+{
+"path": "open/funding/AKT-USD.parquet",
+"bytes": 332019,
+"sha256": "1ae4ea9569bda2bea12b41032dac7314a717341bd40e20ef0b7915af998c6fb1"
+},
+{
+"path": "open/funding/ALGO-USD.parquet",
+"bytes": 429252,
+"sha256": "a5c99e1bcc348d72132b2659081d92390c525db75a7d38dd10a65cd7e449488d"
+},
+{
+"path": "open/funding/ALPACA-USD.parquet",
+"bytes": 175271,
+"sha256": "38a76632e8d1f02227675ae9df4bc4950d7d7aa29130697659c265eba17c05d5"
+},
+{
+"path": "open/funding/ALT-USD.parquet",
+"bytes": 302451,
+"sha256": "82607aca123786ea99a4d04193af512f420ef9ea61498c3c9bac18af65b9d0cf"
+},
+{
+"path": "open/funding/ANIME-USD.parquet",
+"bytes": 82772,
+"sha256": "5f949441908c5964217add5f3f84443ed59a3441ae3eb3b1b32d9918d92b8568"
+},
+{
+"path": "open/funding/APE-USD.parquet",
+"bytes": 490103,
+"sha256": "70974ad98f5f32961197b1c111ee877f3a62a436abda616dceea25693efdd94b"
+},
+{
+"path": "open/funding/API3-USD.parquet",
+"bytes": 195001,
+"sha256": "dd5499a675938cfc306d5e4b4cd7c281d20c86e9048905b67a1c616c5307afaa"
+},
+{
+"path": "open/funding/APT-USD.parquet",
+"bytes": 495357,
+"sha256": "4cace336d7ffebf305b7c39e13808f53851078f3a5199d968049f08f36224a40"
+},
+{
+"path": "open/funding/AR-USD.parquet",
+"bytes": 307795,
+"sha256": "f84a0a8b75cc0a4968741bb9d0429ad4f017b060d654d529e42d9445c4230e69"
+},
+{
+"path": "open/funding/ARB-USD.parquet",
+"bytes": 477977,
+"sha256": "6a1bd75b19f004198f8999762614fc7c17ffdc147378bfa87488672fafc67608"
+},
+{
+"path": "open/funding/ARKM-USD.parquet",
+"bytes": 411246,
+"sha256": "51269363a73cb33baf8b53c8f953281390e3537651438681a4bb492dfe69d33a"
+},
+{
+"path": "open/funding/ASTER-USD.parquet",
+"bytes": 184595,
+"sha256": "687332b29fae158c97771ec62fb6ecaefb1b122d18c429e1203a83ea3725b7b6"
+},
+{
+"path": "open/funding/ASTR-USD.parquet",
+"bytes": 403817,
+"sha256": "603a7429d5e906de2ab1e9b622f0b754d13f68845baf55d94959b188996a9c93"
+},
+{
+"path": "open/funding/ATH-USD.parquet",
+"bytes": 308255,
+"sha256": "f2ee4096e399f398e2eb66c96065e02608be50e6c1691b5ef1c44f0fc05770c9"
+},
+{
+"path": "open/funding/ATOM-USD.parquet",
+"bytes": 492270,
+"sha256": "432f2cc4b634564853e76b7204e7607c184c2bc91ca109a75d61a09091cd8a21"
+},
+{
+"path": "open/funding/AVAX-USD.parquet",
+"bytes": 494021,
+"sha256": "f78617f70719c8f81ce012fc2e93ff0876365b3990cd74f428459fc0410488dd"
+},
+{
+"path": "open/funding/AVNT-USD.parquet",
+"bytes": 162089,
+"sha256": "4574a4d14ee4e5666f565fe9f6492dbb17b2eca041eae5723fd10f617430c262"
+},
+{
+"path": "open/funding/AXL-USD.parquet",
+"bytes": 429854,
+"sha256": "2cb2c8df9fce29aefe1ea7fb70b5d53b4e7f18e333c77d321165f20340125790"
+},
+{
+"path": "open/funding/AXS-USD.parquet",
+"bytes": 342421,
+"sha256": "4c3247ac9688f70e0ece13292e0b21e32f28124083ee77ceefa74fffdaa45b9c"
+},
+{
+"path": "open/funding/B3-USD.parquet",
+"bytes": 206861,
+"sha256": "142234ca2f207987e5f6c228b7d102f881030b62129b39752cb8f63834df4773"
+},
+{
+"path": "open/funding/BABY-USD.parquet",
+"bytes": 184738,
+"sha256": "655673394adfd152ab7de71e344a78b76ff173dee549b29950639e6b46c3fd7d"
+},
+{
+"path": "open/funding/BADGER-USD.parquet",
+"bytes": 131684,
+"sha256": "39b153f5ce769178ae7da0a8bc00b2c62900e75b8663c480b867ea86773cfe35"
+},
+{
+"path": "open/funding/BANANA-USD.parquet",
+"bytes": 207261,
+"sha256": "395f0dff280308848c2a3135d747b2a780f235a1e9ffb14aac2b5f830317d4c8"
+},
+{
+"path": "open/funding/BCH-USD.parquet",
+"bytes": 487049,
+"sha256": "62286cb48d730ba4f56bb4e6d04225b047b867e9c5e39e0471d8be0045558ea0"
+},
+{
+"path": "open/funding/BERA-USD.parquet",
+"bytes": 259280,
+"sha256": "0c516201299a70c2332338e95f78efa7106782926e13ac6829757887f5859070"
+},
+{
+"path": "open/funding/BICO-USD.parquet",
+"bytes": 295460,
+"sha256": "e75228386bd2a70326754f44663e953489563bfbaf0f9b5df95a9d970eeb9744"
+},
+{
+"path": "open/funding/BLUR-USD.parquet",
+"bytes": 501892,
+"sha256": "0f670b064adb8e47a80e152808858ba7c784c3732e63e68de80d7e84ebb3a103"
+},
+{
+"path": "open/funding/BNB-USD.parquet",
+"bytes": 439114,
+"sha256": "e04cfee2edbd4356c8b59bc930664fcf24ee57499f45397dcec8f95daa7016d3"
+},
+{
+"path": "open/funding/BOME-USD.parquet",
+"bytes": 306056,
+"sha256": "401062adbd6fb526b7280c0b1f75ca7050c31a02b3730621f124c65dc143189e"
+},
+{
+"path": "open/funding/BONK-USD.parquet",
+"bytes": 433238,
+"sha256": "b4c1be9e6ee1b67dccb704727a064b7ba9a21e2af84f3a5ed6958b9e7142a7ae"
+},
+{
+"path": "open/funding/BRETT-USD.parquet",
+"bytes": 314512,
+"sha256": "5803d7e134d4435345d92e9f70a5d8837914034533db7cf6c858fef5514d2cfb"
+},
+{
+"path": "open/funding/BTC-USD.parquet",
+"bytes": 508500,
+"sha256": "45cfbc6a1e3035bf26758e9bd761574d7108417e11b4b3a300996aff0a231464"
+},
+{
+"path": "open/funding/CAKE-USD.parquet",
+"bytes": 365820,
+"sha256": "89fcefaceb486260a97e411b574858cdd498a66ff38b5dd5c7c8e1a0bd6678a1"
+},
+{
+"path": "open/funding/CETUS-USD.parquet",
+"bytes": 260741,
+"sha256": "7f66f57d6a75b22bf594d9bd907ad6e2acf2974e3d5727f7ccf04dac458e2352"
+},
+{
+"path": "open/funding/CHZ-USD.parquet",
+"bytes": 415942,
+"sha256": "f101062223f3fd194afa82f00da01e686413e56b1b60907d271ede71222a181f"
+},
+{
+"path": "open/funding/COMP-USD.parquet",
+"bytes": 487561,
+"sha256": "3f9f0a01292fdc64dc593c167eac89065e2a0fd6eedeac77d36326c92bed36b6"
+},
+{
+"path": "open/funding/COOKIE-USD.parquet",
+"bytes": 226095,
+"sha256": "f3ba851b7409f16679b9b075bff5e5a893b9e7e6569b9aa0b1f9c6899cb150bf"
+},
+{
+"path": "open/funding/CRV-USD.parquet",
+"bytes": 477789,
+"sha256": "cc78093ee83fdabcb4b75beaf62a96f1cfd703fd9273da81d4012b764b3635d9"
+},
+{
+"path": "open/funding/CVX-USD.parquet",
+"bytes": 304360,
+"sha256": "b4a735bacae6af286bf0c413f6b8c2fedaeb548dc3ae81ab76a7c4d566c84848"
+},
+{
+"path": "open/funding/DASH-USD.parquet",
+"bytes": 72071,
+"sha256": "b3168c64281255af6fa8627fc63dbdd57dff1fcc71342d2d7646aba9989f6488"
+},
+{
+"path": "open/funding/DEGEN-USD.parquet",
+"bytes": 310439,
+"sha256": "3792da7508274c19805e07e4b5f4f270006f267eceb268419c3b6a4e04680cfe"
+},
+{
+"path": "open/funding/DOGE-USD.parquet",
+"bytes": 500553,
+"sha256": "e3bb9385bfad6a029de5d3baac13912f6525b39ac30badbc45c245b456aa469d"
+},
+{
+"path": "open/funding/DOT-USD.parquet",
+"bytes": 486599,
+"sha256": "4c8eb22c4a799fd51703dbdda3771fac361a5fe4831dcfb726694f17d34c09b0"
+},
+{
+"path": "open/funding/DRIFT-USD.parquet",
+"bytes": 335935,
+"sha256": "b2259718eb8f55efb97263ccb1f90b7b6e1168c6e29a54280cca35e0e5d35265"
+},
+{
+"path": "open/funding/DYDX-USD.parquet",
+"bytes": 421442,
+"sha256": "d9a935ac1f40a18200ff7a48971b54f3f7b724425095766bcb10e0fefd42ba4e"
+},
+{
+"path": "open/funding/DYM-USD.parquet",
+"bytes": 440155,
+"sha256": "3eec522c10241e29e3135af83429db0c157e6609f2f5048d06f9ab2034ec98ba"
+},
+{
+"path": "open/funding/EGLD-USD.parquet",
+"bytes": 303399,
+"sha256": "a19aa7d4a0b575a21ddc9d8c66f4b6bfab4bb5e6d0ff58656ddb5f50da9a46b2"
+},
+{
+"path": "open/funding/EIGEN-USD.parquet",
+"bytes": 304549,
+"sha256": "e118bf59a8c6e6930c1408168c623cc51aba844767917b550e4843a12803238f"
+},
+{
+"path": "open/funding/ENA-USD.parquet",
+"bytes": 391066,
+"sha256": "794cc05c23274efa2187c69e460c650e6d19f7cf0c606cae94096f5844247a40"
+},
+{
+"path": "open/funding/ENJ-USD.parquet",
+"bytes": 307217,
+"sha256": "06b6a7d326ce8b6e3ad35ba8d4fcbeba708f7fa9a1b337f930c9daa2928d52c2"
+},
+{
+"path": "open/funding/ENS-USD.parquet",
+"bytes": 348257,
+"sha256": "b81424de1c10a231726a1eda09a815603f937505d418825a9d0be507a2191d11"
+},
+{
+"path": "open/funding/EOS-USD.parquet",
+"bytes": 299711,
+"sha256": "0bfabc4c08f9478d6e9b001be37ebac2c651c0551ffecbbe7fb97b66963b72a3"
+},
+{
+"path": "open/funding/ERA-USD.parquet",
+"bytes": 141036,
+"sha256": "62257de0a57f6ce25fe592712deba7f794f4a88e080cbbbd2e7faa8f0bbba32f"
+},
+{
+"path": "open/funding/ETC-USD.parquet",
+"bytes": 486102,
+"sha256": "135dbbafe5f2895571160420cb6351a48adf8be81bb3db87135e97334698790f"
+},
+{
+"path": "open/funding/ETH-USD.parquet",
+"bytes": 513832,
+"sha256": "b0a2dce2a79f0fda9cec8beab4ba01b5976847a22336820d1be7b6fb0500282a"
+},
+{
+"path": "open/funding/ETHFI-USD.parquet",
+"bytes": 385074,
+"sha256": "021a028e1777654af4a275513410f9f760c674c41828643966dcc5510d249c76"
+},
+{
+"path": "open/funding/FET-USD.parquet",
+"bytes": 250736,
+"sha256": "99b6f38b3ebe05286ed5454dac27b42a5ce9cac0fdf1be31bcf3abcfda152bbc"
+},
+{
+"path": "open/funding/FIL-USD.parquet",
+"bytes": 491896,
+"sha256": "ef171fe9050dc0deb00367dbf1d819a01bb0a4b45924729a066bd1d7e3acc896"
+},
+{
+"path": "open/funding/FLOKI-USD.parquet",
+"bytes": 351730,
+"sha256": "642501f096f35a8184a8f91405216ca0d7490ef041921fafa6a690aca889ed44"
+},
+{
+"path": "open/funding/FORTH-USD.parquet",
+"bytes": 182415,
+"sha256": "be669b490493cda636322e9d82214876c748aa81ecfd44cbe9ee62fae559ff7b"
+},
+{
+"path": "open/funding/FTM-USD.parquet",
+"bytes": 215263,
+"sha256": "d9d16cc9cf545339d15f0f85551104f90c2f792967b81fadd6794cd6fed0e644"
+},
+{
+"path": "open/funding/G-USD.parquet",
+"bytes": 230944,
+"sha256": "c349157fdcbb1de75a50927706d76872a8af73f94af8eff15d6269300306b5ad"
+},
+{
+"path": "open/funding/GALA-USD.parquet",
+"bytes": 308882,
+"sha256": "cef4afff494c3947aa795bf611c1c8a17b4bd3cb37bf917729d552aeb98877e9"
+},
+{
+"path": "open/funding/GAS-USD.parquet",
+"bytes": 187248,
+"sha256": "bfde1768989f152fb1391a5a411476a16c2698fd4a9cac16e06b7ecf0a08e29c"
+},
+{
+"path": "open/funding/GHST-USD.parquet",
+"bytes": 147170,
+"sha256": "dee889b45e3944ad0a54d5b60a6a5aa8343725b4c24d26d3bfeae875ae6d8b3f"
+},
+{
+"path": "open/funding/GLMR-USD.parquet",
+"bytes": 222912,
+"sha256": "8edb05fe63749607266cc695c3c2db9f5b20ee8fc4afd929bdc972ce00408dd9"
+},
+{
+"path": "open/funding/GME-USD.parquet",
+"bytes": 190662,
+"sha256": "2c20404d8c6010f4bb98b281fea7a9ec29817e2a6c57e95c16cd01fa86ee0b80"
+},
+{
+"path": "open/funding/GMX-USD.parquet",
+"bytes": 304163,
+"sha256": "8d3e39637f073ad960f17f3b1de257c9f183ae2dc8cf28fb12f4033f8c67b449"
+},
+{
+"path": "open/funding/GOAT-USD.parquet",
+"bytes": 254214,
+"sha256": "bf477f0d65c969f59453215efa0ca4c43192fe6ed24793f49c839245dc7b817e"
+},
+{
+"path": "open/funding/GRASS-USD.parquet",
+"bytes": 244436,
+"sha256": "9e7c2f5cd1b3ee28f351d1a8e9a243eca01f773ad6ce47ed839b8a19022453cf"
+},
+{
+"path": "open/funding/GRT-USD.parquet",
+"bytes": 406285,
+"sha256": "d234b2ef0791f54c4fb164caae64897d061f26cd1bea591d3aa9dcdf5a3ffead"
+},
+{
+"path": "open/funding/HBAR-USD.parquet",
+"bytes": 431924,
+"sha256": "714ef545445177ebf7d2ddec3a8296b5fced98f8b7a89bf92aed248301a63a0b"
+},
+{
+"path": "open/funding/HNT-USD.parquet",
+"bytes": 285926,
+"sha256": "3026696af41b65808f90a122f5fdc51fd06088380de347a3a7d0a54a2d22ae75"
+},
+{
+"path": "open/funding/HOLO-USD.parquet",
+"bytes": 116945,
+"sha256": "d62e4d518703feb62153b4315d275b63f55ab83efba8a131502be938dbf5a0e5"
+},
+{
+"path": "open/funding/HUMA-USD.parquet",
+"bytes": 139594,
+"sha256": "05606e00ac05d6f48fd1739eb4cbaec9e093f9af69393e9514977d85d8ac32f6"
+},
+{
+"path": "open/funding/HYPE-USD.parquet",
+"bytes": 280072,
+"sha256": "179151b0474db135ba0e126e51df7b911b0a0a38615cdb1b698639f541dc45d6"
+},
+{
+"path": "open/funding/ICP-USD.parquet",
+"bytes": 429064,
+"sha256": "ddd0060e071820fecde69be7739a8240072d961b36f21ca790bec01b4aabecd6"
+},
+{
+"path": "open/funding/ID-USD.parquet",
+"bytes": 246983,
+"sha256": "e41121656eecbf9fcc02c954e54da3136bef306539da717665992b1d478c0a7c"
+},
+{
+"path": "open/funding/IMX-USD.parquet",
+"bytes": 428522,
+"sha256": "b6417a3bffcc24fa19d9200f2c22e1ac26ebf041770a9bd307cb3ac29ee061b8"
+},
+{
+"path": "open/funding/INJ-USD.parquet",
+"bytes": 429882,
+"sha256": "602dc02c4d9fca6bb14e292b7cdc0dad42ed3487c77e40a1fb11ed442fa08308"
+},
+{
+"path": "open/funding/IO-USD.parquet",
+"bytes": 356768,
+"sha256": "cbffb07566a51dc4f57b7be1e969808409e78d0bf6c7f1e23dd58314c51ae8de"
+},
+{
+"path": "open/funding/IOTA-USD.parquet",
+"bytes": 122840,
+"sha256": "d041f5f20cf10567a0bc1b04461b829529bfe0b45585e25520e927330102e52f"
+},
+{
+"path": "open/funding/IOTX-USD.parquet",
+"bytes": 176767,
+"sha256": "d6dcd1e03d64465cd30accf11a277c6846bfed35733af509253b888649effb33"
+},
+{
+"path": "open/funding/IP-USD.parquet",
+"bytes": 223331,
+"sha256": "c72e07e9c204756d8a43c1a6cc81c24a3fdf4beb92c8ca953bb32187107242b8"
+},
+{
+"path": "open/funding/JASMY-USD.parquet",
+"bytes": 313939,
+"sha256": "91645fd3bd2e55a61ed892c456d7712997edc65b1f10b3f1da27b817b6c40b17"
+},
+{
+"path": "open/funding/JTO-USD.parquet",
+"bytes": 436206,
+"sha256": "a2f77ceb347365f804b43915b3659dde7a2306de44a56a7b9220940810b0e15a"
+},
+{
+"path": "open/funding/JUP-USD.parquet",
+"bytes": 445501,
+"sha256": "fd1c5379793e8b9e76c669683a449af17745a7e352bcbea9798888d19e743165"
+},
+{
+"path": "open/funding/KAITO-USD.parquet",
+"bytes": 250408,
+"sha256": "e9ba0f586dd1414c0223395f9092a959829074d7148fbf016c10e2dde3da6b09"
+},
+{
+"path": "open/funding/KAS-USD.parquet",
+"bytes": 341219,
+"sha256": "eb5c07395e1216ec82ce239f699d2d614feda9ec19582f7e707db694d0975675"
+},
+{
+"path": "open/funding/KDA-USD.parquet",
+"bytes": 177173,
+"sha256": "b8a0820133541eb6af3ff2b796a5ae6be2d1c2db382ce71144b2cfe9265fdede"
+},
+{
+"path": "open/funding/KERNEL-USD.parquet",
+"bytes": 165052,
+"sha256": "c85af69db190fe85b437ff89c6d5553e503a6bf64635dc4d71901261677cea6b"
+},
+{
+"path": "open/funding/KOMA-USD.parquet",
+"bytes": 223505,
+"sha256": "a45f4032555ed0f51a3be96bd8c67524ae0a71a9f2be597fcea4d2a49b400d86"
+},
+{
+"path": "open/funding/KSM-USD.parquet",
+"bytes": 239435,
+"sha256": "8823088c4b213eae2d5ad728a92828856a305d11dc22ed6a53d8d1545af22a60"
+},
+{
+"path": "open/funding/LA-USD.parquet",
+"bytes": 161171,
+"sha256": "23ac9f20fe02b2579a1a57f3d9da2e9cb25cbdee47637dd1f5d5527257f47982"
+},
+{
+"path": "open/funding/LAYER-USD.parquet",
+"bytes": 214628,
+"sha256": "4b8c3c432331afb36375732f7b7cd4c8c1f4d97cc3fd85f52cc08b0397b7fc50"
+},
+{
+"path": "open/funding/LDO-USD.parquet",
+"bytes": 480671,
+"sha256": "e2fefacf8986f59414da321b5d0bae9ebbb8a13f26f2e8faee866b0ece40fb5c"
+},
+{
+"path": "open/funding/LINEA-USD.parquet",
+"bytes": 125838,
+"sha256": "97fab4c2fe242bb79b455ce1d52db6223c4fbb2c2502c59e342727c07847e896"
+},
+{
+"path": "open/funding/LINK-USD.parquet",
+"bytes": 498084,
+"sha256": "c1468efdce91393449510908390069528b33d2ea2d3f5efaa3d9950d8d56aa3c"
+},
+{
+"path": "open/funding/LIT-USD.parquet",
+"bytes": 124138,
+"sha256": "bbf339dfa4eb42547841ee894415d71175f68722222872dde79659b757ce36a7"
+},
+{
+"path": "open/funding/LPT-USD.parquet",
+"bytes": 162500,
+"sha256": "2fec0b38cfbc4da1c53f2fc52d3732e34f14ebe37fed6ea18efe35129f7ef367"
+},
+{
+"path": "open/funding/LTC-USD.parquet",
+"bytes": 484050,
+"sha256": "732633ec51f2fb8912da3b55e6abf7d2ca1da5e32298588523d065845aea0385"
+},
+{
+"path": "open/funding/LUNC-USD.parquet",
+"bytes": 65205,
+"sha256": "901b2c0643abbed55959fbd357bcc2fa4bf3628f218ef847e401d864412b1fea"
+},
+{
+"path": "open/funding/MAGIC-USD.parquet",
+"bytes": 179076,
+"sha256": "126441ca471c7249853c7742232bd54c21e5313b62c94119fe83c67c7f8b4fe0"
+},
+{
+"path": "open/funding/MANA-USD.parquet",
+"bytes": 409875,
+"sha256": "b92e178cf51362afad60cafd3f9d9be63b16f4b99695a279058e28e05d01a4bd"
+},
+{
+"path": "open/funding/MASK-USD.parquet",
+"bytes": 157004,
+"sha256": "72d2d799308ea03c34cb5e62c7837e8d018f712f875e00ea5e0bc0e1afc37e68"
+},
+{
+"path": "open/funding/MATIC-USD.parquet",
+"bytes": 302563,
+"sha256": "6ca4e8d7c6b65601046e1ed3ba8930d2fd3252f702050908d8821ed629220af2"
+},
+{
+"path": "open/funding/MAVIA-USD.parquet",
+"bytes": 203298,
+"sha256": "47b517541646346b084b7c261c98b8a9bad46e6e49fdc9144490421f35202caf"
+},
+{
+"path": "open/funding/ME-USD.parquet",
+"bytes": 217792,
+"sha256": "294cb7157acdd875e96f571f7e10e85ae645abdc2321d3b82404d7f62ea44d73"
+},
+{
+"path": "open/funding/MELANIA-USD.parquet",
+"bytes": 180571,
+"sha256": "06c9377d7e529497a755f4cdbeb2634d01b0260c6b2f7e08a7de27f66c2e71ef"
+},
+{
+"path": "open/funding/MET-USD.parquet",
+"bytes": 134236,
+"sha256": "b3ba5bcbedf6cd75dcef2a675cc563442bdc7e2c6cb85e01adede5925ff304ff"
+},
+{
+"path": "open/funding/MEW-USD.parquet",
+"bytes": 307270,
+"sha256": "75510b632af074a66ac11dad3cccf276dc637e63d04a33abc19d0a7b86294493"
+},
+{
+"path": "open/funding/MKR-USD.parquet",
+"bytes": 379659,
+"sha256": "438963219e0ab7b26ed715cdd8d48b8290b9ab0e49e69e3044a535fec805a414"
+},
+{
+"path": "open/funding/MOCA-USD.parquet",
+"bytes": 233366,
+"sha256": "cd7d358dae945b0edd83d2f32fd99bb1731ca20b0fc4b5ccbdf09172562256d7"
+},
+{
+"path": "open/funding/MOG-USD.parquet",
+"bytes": 333613,
+"sha256": "03b7b2eec62cdc6f72db3b86be4b5e58b1377e404a72625cce0bad06afd42211"
+},
+{
+"path": "open/funding/MON-USD.parquet",
+"bytes": 139357,
+"sha256": "9643a25ec7dc6fc04aeefeef091ff52f6cb41abb1c5fcb1bce6cd4a93ce17a44"
+},
+{
+"path": "open/funding/MOODENG-USD.parquet",
+"bytes": 245736,
+"sha256": "5184c99b96aab34f9845b3803f3e6ea8eb57fcec57c3694af749ccdf09fd04aa"
+},
+{
+"path": "open/funding/MORPHO-USD.parquet",
+"bytes": 278691,
+"sha256": "fe6b2e5c789c43697b5130e81b27beb7d4a8b2cacbf1bc07691c47efca581e73"
+},
+{
+"path": "open/funding/MOVE-USD.parquet",
+"bytes": 290845,
+"sha256": "db9272f574c3debff07612d058deff03a78fa188f2aeacc297c600eb8a7ed530"
+},
+{
+"path": "open/funding/NEAR-USD.parquet",
+"bytes": 492027,
+"sha256": "5f1f9f40fb949ef8fa446e8c2e9c78da99dd866e3fcdb87022986dfdeb5c2b1c"
+},
+{
+"path": "open/funding/NEIRO-USD.parquet",
+"bytes": 283542,
+"sha256": "bc4f4559be86ca16d039d8a4ca158cb1d5eb9fc006e1cc55135a72ae69a61260"
+},
+{
+"path": "open/funding/NEO-USD.parquet",
+"bytes": 308319,
+"sha256": "fb071041616259dbf8e422a5e3dbd17c6f1db2dad834b883ba193c27433a353f"
+},
+{
+"path": "open/funding/NEWT-USD.parquet",
+"bytes": 151258,
+"sha256": "593a304be4c41538b9b8d1bfe1a3aa7de7c04cb90f0b04aa662d58a85465c0bd"
+},
+{
+"path": "open/funding/NIL-USD.parquet",
+"bytes": 187324,
+"sha256": "b7c890eebf579ed1436e92def1f53308968315b33caf2709ac092c506ed47067"
+},
+{
+"path": "open/funding/NMR-USD.parquet",
+"bytes": 205955,
+"sha256": "fffdd162abdcebbfafae6b3e8152a75dcd1b6856ece178952f6829d034ec616d"
+},
+{
+"path": "open/funding/NOT-USD.parquet",
+"bytes": 311871,
+"sha256": "42128fb759e1d057ac4f69a9850ec0ab6b544ddcb717f8de6e64e8b26caeab97"
+},
+{
+"path": "open/funding/OM-USD.parquet",
+"bytes": 304435,
+"sha256": "0dfb5efade824af72cf4645e10ab3e7e21d87eefd9e23be457e8d393453eb548"
+},
+{
+"path": "open/funding/OMNI-USD.parquet",
+"bytes": 102469,
+"sha256": "efea73b982d8c45bf5f55c2ff308aec999d4650e70cdec8653ce8f7392210c3b"
+},
+{
+"path": "open/funding/ONDO-USD.parquet",
+"bytes": 388321,
+"sha256": "2dbd090c7d4c656bb4e5082ae0458494ba89f1b4f08ca3b3ec0e0efc6cf1cb1e"
+},
+{
+"path": "open/funding/ONT-USD.parquet",
+"bytes": 242030,
+"sha256": "2c96247271df8cca6fa1ac5dd3c56044d5f05eb3ed5f646037ae13d331ad81e3"
+},
+{
+"path": "open/funding/OP-USD.parquet",
+"bytes": 483655,
+"sha256": "6c6b33c4c7156dce524b01c163109b80b197b5e7793775560153a0b3be8621b6"
+},
+{
+"path": "open/funding/ORCA-USD.parquet",
+"bytes": 220162,
+"sha256": "9ee258d5e6f5601fbc031c119aa81e26a8af1e9c4b18816341ae57f0b88e4b73"
+},
+{
+"path": "open/funding/ORDER-USD.parquet",
+"bytes": 245413,
+"sha256": "f4c344df68f91e2dae0654a601efc2c12191223e0045c777870a3b9dfd0cfbe5"
+},
+{
+"path": "open/funding/ORDI-USD.parquet",
+"bytes": 432496,
+"sha256": "b5cc0ca3aa672488cf0e758800cacaaa9e970c3582f534d248b8901e3c8bc9ff"
+},
+{
+"path": "open/funding/PAXG-USD.parquet",
+"bytes": 341026,
+"sha256": "3ec64c1c2318afbbe2bacc8b4329e1a124b921f907c496410a605d557979000d"
+},
+{
+"path": "open/funding/PENDLE-USD.parquet",
+"bytes": 373825,
+"sha256": "7af77dccf89f026ad5412d9b95cad1e1d05c9c2078848353993e5ad67b28cde8"
+},
+{
+"path": "open/funding/PENGU-USD.parquet",
+"bytes": 283433,
+"sha256": "3a268bb11fa515dacfdfa613cc9920ef1fba2f33d3cc6106b285a530195f2559"
+},
+{
+"path": "open/funding/PEOPLE-USD.parquet",
+"bytes": 346523,
+"sha256": "ea85a3f31f48b66e1ba62b20a7cc5993f664674aee91ed4d03112ad18909ccf6"
+},
+{
+"path": "open/funding/PEPE-USD.parquet",
+"bytes": 490293,
+"sha256": "01ba7ff3adb4486a53d3aa1627354b239e48559df814eb60c78d5aee5dc4dd00"
+},
+{
+"path": "open/funding/PERP-USD.parquet",
+"bytes": 249136,
+"sha256": "1dcc0b1ee05671166f51da2dee49b27daa0326ca468e1b85f60854a742f36071"
+},
+{
+"path": "open/funding/PIPPIN-USD.parquet",
+"bytes": 83806,
+"sha256": "cc9ab2b13d77b24dd7a5b1415ed75ba131fd10c12ef8b70669d0625994770a63"
+},
+{
+"path": "open/funding/PIXEL-USD.parquet",
+"bytes": 301279,
+"sha256": "492c946279485dd2e7cdce0d3128ea78236601f837c4158791b4e292c834721e"
+},
+{
+"path": "open/funding/PNUT-USD.parquet",
+"bytes": 243151,
+"sha256": "704e6ed7429d4b650358c4454dbf41c9be878f9262d37fed6e938f0c6052a103"
+},
+{
+"path": "open/funding/POL-USD.parquet",
+"bytes": 311410,
+"sha256": "79ba9072c184b2e5b663ffbf2686af2d7f74b56f67430eaa99593b52bbbef473"
+},
+{
+"path": "open/funding/POPCAT-USD.parquet",
+"bytes": 352725,
+"sha256": "24ff99fa7a999aa50f6b8c24bbfec714a6e86acc731e85c27e15f1dc96e68c5b"
+},
+{
+"path": "open/funding/PROMPT-USD.parquet",
+"bytes": 120289,
+"sha256": "9b506b61efa3f2cdbfbae99d12898036662a93baa63fa9f4d2338a193627fe6a"
+},
+{
+"path": "open/funding/PROVE-USD.parquet",
+"bytes": 137993,
+"sha256": "1f0ae65d9a07becb93a3d6824603b79399e0e73f94dedd1f234d3a1959111640"
+},
+{
+"path": "open/funding/PUMP-USD.parquet",
+"bytes": 216431,
+"sha256": "c810bbaba455b98e8bcac0ffdaedd5972a359f3f0391e61c1e89821484d8b765"
+},
+{
+"path": "open/funding/PYTH-USD.parquet",
+"bytes": 436035,
+"sha256": "f3297dfebc500ac4c208785642077322dfebfdd8ed60a4c108c434bdc0efd070"
+},
+{
+"path": "open/funding/QNT-USD.parquet",
+"bytes": 231252,
+"sha256": "be539268f3d800dbebdf8be197e5395a5327342025625de405d35776c69860fb"
+},
+{
+"path": "open/funding/QTUM-USD.parquet",
+"bytes": 252194,
+"sha256": "e075628cc02f1d824ad524c6208f13b89f96f0ee7ad1c346cb12f98cfaae42c4"
+},
+{
+"path": "open/funding/RAY-USD.parquet",
+"bytes": 256520,
+"sha256": "e2588a73717bc2992faab97c36c6f5cbfce905909cbf5f41538a4628966e83ee"
+},
+{
+"path": "open/funding/REN-USD.parquet",
+"bytes": 155885,
+"sha256": "b47436d61b181216ed96527841187bb23c3f8f4fa461e5d18f2ed458015c2a8d"
+},
+{
+"path": "open/funding/RENDER-USD.parquet",
+"bytes": 433436,
+"sha256": "8a3fb702cc26edc5828d36fc3d8b597399b1be05a1a2a047e835eaaf3b9c0a4c"
+},
+{
+"path": "open/funding/REZ-USD.parquet",
+"bytes": 193265,
+"sha256": "accb8cd21e0be1f0ee1c9fec0aa3277a1effeb4ded4f826a4d052899fcd3ee5b"
+},
+{
+"path": "open/funding/RUNE-USD.parquet",
+"bytes": 433652,
+"sha256": "f7151c4df56566e8c1b2a3650221bf127d0de2cd0f8b8fb6dbec08a5ff9dd9d4"
+},
+{
+"path": "open/funding/S-USD.parquet",
+"bytes": 235815,
+"sha256": "62ae0b875b0b6a22713824534bcad82d7b789ed4cdc03a8406eece903b9402c9"
+},
+{
+"path": "open/funding/SAFE-USD.parquet",
+"bytes": 313315,
+"sha256": "eb8e24152adba27d8054f68e878d73a77a0e6efae6c90f2f6243a9af1be2efb8"
+},
+{
+"path": "open/funding/SAGA-USD.parquet",
+"bytes": 215911,
+"sha256": "df0df251d4454bc389352137db377874159546fa9cf3c4cc96aadfedd73be7e2"
+},
+{
+"path": "open/funding/SATS-USD.parquet",
+"bytes": 305871,
+"sha256": "ad0585a738c4eb9b1c56b4959aa9383355dc658d9648e57a06e0107d445ff481"
+},
+{
+"path": "open/funding/SCRT-USD.parquet",
+"bytes": 138681,
+"sha256": "3ad2ec96200bae738dc6c158dcce401bbb6458d71bf7f713b3149a0222f8d5fd"
+},
+{
+"path": "open/funding/SEI-USD.parquet",
+"bytes": 502701,
+"sha256": "a3763476766f0053e7a9b420ad81f559a2cc569fd82ed0d510de96ac38ff84eb"
+},
+{
+"path": "open/funding/SHIB-USD.parquet",
+"bytes": 474206,
+"sha256": "097bb5e8521bceff04576342875072d6f0fd1e987e1742ec4760a03ad158a96c"
+},
+{
+"path": "open/funding/SIGN-USD.parquet",
+"bytes": 176572,
+"sha256": "af347786ba435448c6433bc839cf7a2f846dae65bac4337c0291bc3c0badcf06"
+},
+{
+"path": "open/funding/SKL-USD.parquet",
+"bytes": 242473,
+"sha256": "6fd4ba1a36739d0357bac9dd54ad2ee7a1051601b0d5a5135ff216a04e13c9e9"
+},
+{
+"path": "open/funding/SKY-USD.parquet",
+"bytes": 154334,
+"sha256": "ec88c7d19bc1d6d46d880a91c40e055cd21015293f9184b804ca2f0660ef0ef0"
+},
+{
+"path": "open/funding/SNX-USD.parquet",
+"bytes": 412012,
+"sha256": "773a79b6b68ce043db5bd5e57cbfc9b916c1d212f0a752b7a5ea36f9226d1c9c"
+},
+{
+"path": "open/funding/SOL-USD.parquet",
+"bytes": 513528,
+"sha256": "02c13a201686eb1706a0de01bc687f4e4ab834c0895b0464eb62553d8380b4d3"
+},
+{
+"path": "open/funding/SOPH-USD.parquet",
+"bytes": 163024,
+"sha256": "4b5fb74fed40bd4ce037cfc0de1d4c77b12e967057fcbf896a9510bb11f93c29"
+},
+{
+"path": "open/funding/SPX-USD.parquet",
+"bytes": 271935,
+"sha256": "f5fd16c14231257354837a38b4317e8023da9531e6e267596f201d50bcf73c22"
+},
+{
+"path": "open/funding/SSV-USD.parquet",
+"bytes": 201994,
+"sha256": "abdfff1bf81acfc11984029fc77caaf4112eab754159b611e4701d8a4325ff52"
+},
+{
+"path": "open/funding/STEEM-USD.parquet",
+"bytes": 184159,
+"sha256": "6e2d4b2551ea0ec92af01fed446b6a91d0ef7404b06e1fc3bef5a8c0a81387e5"
+},
+{
+"path": "open/funding/STRK-USD.parquet",
+"bytes": 436481,
+"sha256": "03f51c8b1107a6af62e2eee950d3cb8f48d286d9d04607e646970b39c488451e"
+},
+{
+"path": "open/funding/STX-USD.parquet",
+"bytes": 414372,
+"sha256": "b2f66b1c4d6d494bc043eb884be1236f8ba3be01a30ed915375108aff35545ce"
+},
+{
+"path": "open/funding/SUI-USD.parquet",
+"bytes": 495520,
+"sha256": "048487f8ba43a20d6f0d0f27eecc40c682d5eacb0df08b0f682033e588f9ac37"
+},
+{
+"path": "open/funding/SUSHI-USD.parquet",
+"bytes": 306434,
+"sha256": "648deefb7049b36e5b39c561a2f7cf0c6e1276b12169c234399095fbdb6f4d64"
+},
+{
+"path": "open/funding/SYRUP-USD.parquet",
+"bytes": 196640,
+"sha256": "bfc7302093a774d41246584e4f51ba20b4c5744dec5388b6ff02b3342a4a0879"
+},
+{
+"path": "open/funding/TAIKO-USD.parquet",
+"bytes": 314653,
+"sha256": "df63908be6ea254091818ae52232c83a72cdbd521c03486f2b73b2550766b7cb"
+},
+{
+"path": "open/funding/TAO-USD.parquet",
+"bytes": 395119,
+"sha256": "90e48db9acebb8bcbb4b8746547182fffc6a83b880e66775b497f904a39fbf8c"
+},
+{
+"path": "open/funding/THE-USD.parquet",
+"bytes": 229281,
+"sha256": "0cb0f9bdadd5df1a7ba67af5fd121b709f1c21dd78f0e51ee1bddb8147594dfd"
+},
+{
+"path": "open/funding/THETA-USD.parquet",
+"bytes": 309157,
+"sha256": "e556755d1edf77726d61ca3884934b32ce0492dfcc02af4d7c2904f2bac4b655"
+},
+{
+"path": "open/funding/TIA-USD.parquet",
+"bytes": 464842,
+"sha256": "e23194ed9933b8f23a38dec2008598e49349ac4ccb527816bb2971a17eebb89e"
+},
+{
+"path": "open/funding/TON-USD.parquet",
+"bytes": 375905,
+"sha256": "f83cf18d8a9bfd2cb00cbae62d7087b6e0b7f2c0566a4b86130fee71af4a95f9"
+},
+{
+"path": "open/funding/TRB-USD.parquet",
+"bytes": 305960,
+"sha256": "af44ca5467e64e4756cea8184e934e8ac92cc017f4329f6b478a98372af9e1e5"
+},
+{
+"path": "open/funding/TREE-USD.parquet",
+"bytes": 90178,
+"sha256": "6cdfb9a691573ebdc923f73bb44375c0347569731d685ec03c7eede3db91cedc"
+},
+{
+"path": "open/funding/TROY-USD.parquet",
+"bytes": 181117,
+"sha256": "bb145a23924f26c5b929fe99477a3a977650941d915bf39966b23ee88c614d07"
+},
+{
+"path": "open/funding/TRUMP-USD.parquet",
+"bytes": 289319,
+"sha256": "ad6a9eb963a5127d4f52d5ab62ab5fcfcc463f176b29cdaa2273ddaa106ce78e"
+},
+{
+"path": "open/funding/TRX-USD.parquet",
+"bytes": 467951,
+"sha256": "02c07820b425efa92bd48caef5c2f9b8915debba8f43327df309d617ffec8c7c"
+},
+{
+"path": "open/funding/TURBO-USD.parquet",
+"bytes": 306742,
+"sha256": "d62e9c9e91f02476993d4a11deddd4fe264d8ee45c269885d2d08d8daf9b7243"
+},
+{
+"path": "open/funding/UMA-USD.parquet",
+"bytes": 301545,
+"sha256": "8edf76b349d76152d67e53a6f5476be63943a002668de78c8c2306ee2fb6bcd2"
+},
+{
+"path": "open/funding/UNI-USD.parquet",
+"bytes": 484394,
+"sha256": "c01cc6388aea52d9614c7da93b9aa2fd97ca654c45af90dc6860b3b927e5bcb7"
+},
+{
+"path": "open/funding/USELESS-USD.parquet",
+"bytes": 154747,
+"sha256": "ebeb51e382aa77a72720b61d1bf390b35b91a787bb85cf90739ecd2d7ecc5cf6"
+},
+{
+"path": "open/funding/USUAL-USD.parquet",
+"bytes": 289348,
+"sha256": "038ef4141e49109366e5feb513c227cf1ced69c180a128e99d099f5286af533f"
+},
+{
+"path": "open/funding/VET-USD.parquet",
+"bytes": 237218,
+"sha256": "d4acb0135d7b551c8a5d5a5b54e39a137a568dbffbc96535dc9af9593b519761"
+},
+{
+"path": "open/funding/VINE-USD.parquet",
+"bytes": 211841,
+"sha256": "1948cd20d466b9963a619e73108bb58c68bafdf8689451ebd0b70b8b527ef8ea"
+},
+{
+"path": "open/funding/VIRTUAL-USD.parquet",
+"bytes": 230214,
+"sha256": "652eed4b9c3eabaeb0179ac35b0f2398df4ef629d5108d08196002074fcad1cc"
+},
+{
+"path": "open/funding/VOXEL-USD.parquet",
+"bytes": 162064,
+"sha256": "c77111cca6a550c4f33020d3a8b6f7e07a0fb2acc7cb0b3ba6fa6bfd02929936"
+},
+{
+"path": "open/funding/VVV-USD.parquet",
+"bytes": 254238,
+"sha256": "6878a6a48d7372b3540fb0c888d0f9fde392375ca12278939ae5828f4c38dad9"
+},
+{
+"path": "open/funding/W-USD.parquet",
+"bytes": 377207,
+"sha256": "3d1d6ab4fb6e2399baa7f3bd60ba79c93120ec9ecf2d346b4132159534f5ea24"
+},
+{
+"path": "open/funding/WCT-USD.parquet",
+"bytes": 182710,
+"sha256": "729ef134b190119e4b18fce3496d26f5170ffb09ac25e26e93c90ce7968852e5"
+},
+{
+"path": "open/funding/WIF-USD.parquet",
+"bytes": 407564,
+"sha256": "8e4df558d8846d47580f2c790cb404bbdf7aec0012b764ae1a8f22a27308259e"
+},
+{
+"path": "open/funding/WLD-USD.parquet",
+"bytes": 491297,
+"sha256": "4d2b37765af6e9527543989641cf34af842b95bf871b366cad61398f2ed2278c"
+},
+{
+"path": "open/funding/WLFI-USD.parquet",
+"bytes": 191062,
+"sha256": "5b664b3d857f845fad061004f2536d37eddbb9fbf1e6f5f37c8982c2da7ef01f"
+},
+{
+"path": "open/funding/WOO-USD.parquet",
+"bytes": 430930,
+"sha256": "eb83adc215608bf386a6a125c97d71f29c87d39a189c019173ae1d0263fbb9a9"
+},
+{
+"path": "open/funding/XAG-USD.parquet",
+"bytes": 74446,
+"sha256": "afd974fd495a499167eb371049db20840554327ff73616f38841208a083e92ba"
+},
+{
+"path": "open/funding/XAI-USD.parquet",
+"bytes": 304093,
+"sha256": "91f744b83b134140dc1b7845d1978008bc253e4f344964d866985a09f1986efd"
+},
+{
+"path": "open/funding/XAUT-USD.parquet",
+"bytes": 79899,
+"sha256": "4e3d142d8568b15c09b58fe561eee6afda6207ccb121382c4992684d9079b472"
+},
+{
+"path": "open/funding/XLM-USD.parquet",
+"bytes": 476813,
+"sha256": "5ff28719fbafef31e68707456bcc9dd512853b4270089ae4e254971a91c0e3de"
+},
+{
+"path": "open/funding/XMR-USD.parquet",
+"bytes": 397335,
+"sha256": "0bba7310fc513e8bc37f7c8eccdd74663d82cb436932586a2fe3ad91975bacce"
+},
+{
+"path": "open/funding/XPL-USD.parquet",
+"bytes": 174162,
+"sha256": "bda9b7ee03f346ead306b52d14f57bb0e8949abcc9386bc0920cbf6a0c0d57b2"
+},
+{
+"path": "open/funding/XRP-USD.parquet",
+"bytes": 501601,
+"sha256": "a420120971fbb9474195756d426991b2c14cb56dac8b8d92ac9984760d4c0988"
+},
+{
+"path": "open/funding/XTZ-USD.parquet",
+"bytes": 313163,
+"sha256": "3816fc4edad917c02ae31b3041c6d47c3205be58b2c2759027c531500bccbe55"
+},
+{
+"path": "open/funding/YFI-USD.parquet",
+"bytes": 244345,
+"sha256": "9f45c586e9eca1b872b8d025f543838ae257ee8bb33ec8121652d77b48486ef3"
+},
+{
+"path": "open/funding/ZEC-USD.parquet",
+"bytes": 323769,
+"sha256": "8801a54e3bce2b1a53229112c5c63891302caaad23a72bb94f4f04ed96796b51"
+},
+{
+"path": "open/funding/ZEN-USD.parquet",
+"bytes": 366088,
+"sha256": "a38dd5a7944f025ecc52b5e5a84634a36bced5a66118ffa6fc711e8ae0e777bc"
+},
+{
+"path": "open/funding/ZEREBRO-USD.parquet",
+"bytes": 234972,
+"sha256": "ec800ad006a9d1bd4d5e09d0e322dca5618bf342a86212f426af22778142b4dd"
+},
+{
+"path": "open/funding/ZETA-USD.parquet",
+"bytes": 189353,
+"sha256": "3f0c5f362d4ae5c690d8bd86fc5e85a84f424f1dca058f13dc686f96c995d663"
+},
+{
+"path": "open/funding/ZK-USD.parquet",
+"bytes": 372199,
+"sha256": "8b8d19175c3b97b06132ef3c9a2ea8772726b9cb0fa6ead128a2b88f887f6d80"
+},
+{
+"path": "open/funding/ZORA-USD.parquet",
+"bytes": 203507,
+"sha256": "447324694b2101003bdf736d200a7f69a788afc547e48a57b529435a02d4f917"
+},
+{
+"path": "open/funding/ZRO-USD.parquet",
+"bytes": 375910,
+"sha256": "ebba936e3bd56530b1c353188627ede68978b46d5b7077975262ceb63d5c158a"
+},
+{
+"path": "open/funding/ZRX-USD.parquet",
+"bytes": 305276,
+"sha256": "aeb812edeec3a738518496445b1e0331a17b0342ee2361c957be9291cf7ec3fb"
+},
+{
+"path": "raw/contracts.json",
+"bytes": 194400,
+"sha256": "59eef50a04fbf43322aa3db7a13ef2fd5e358b80ce54ddab5ba7800a9174ac99"
+},
+{
+"path": "reserved/README.md",
+"bytes": 108,
+"sha256": "e24ee1bf25a59765b9af0e5897380cce9264c75dcdaa7eff5766ae81f3ff0e6e"
+},
+{
+"path": "reserved/candles_1d/AITECH-USD.parquet",
+"bytes": 12121,
+"sha256": "95d0d3a1b22e2989261f3c1194477069b4c30b0360c0cd05d13bcadcd7813ae7"
+},
+{
+"path": "reserved/candles_1d/AMPL-USD.parquet",
+"bytes": 11611,
+"sha256": "52e4a43b35e0f0f454270e44c01a3d1265da1b167190ce50a66e4b05d8b411b0"
+},
+{
+"path": "reserved/candles_1d/AURORA-USD.parquet",
+"bytes": 16798,
+"sha256": "52dc80bd14b561208c40feb486a71d41c34465425e6de70f37ebf59bf2e9a2dd"
+},
+{
+"path": "reserved/candles_1d/BABYDOGE-USD.parquet",
+"bytes": 16630,
+"sha256": "5ea01dd84ec212f4aebf97728997878f0194ec1c3ceadd6ac0d866e239b58243"
+},
+{
+"path": "reserved/candles_1d/BCUT-USD.parquet",
+"bytes": 12119,
+"sha256": "c84ce79739cd600f268e65bacecbbd23e49ca5094d4a17cb06c036c0d7cc8cce"
+},
+{
+"path": "reserved/candles_1d/BEAM-USD.parquet",
+"bytes": 30525,
+"sha256": "efb0ea3365fad4155829dd2a954cec01c919ae29a30362f605c33e1e5d82c31a"
+},
+{
+"path": "reserved/candles_1d/BLAST-USD.parquet",
+"bytes": 39915,
+"sha256": "4322b56a20528426da325f8a0952dcf8997669fb49bb5d22c62412c89188f78f"
+},
+{
+"path": "reserved/candles_1d/BODEN-USD.parquet",
+"bytes": 16629,
+"sha256": "6f4323d06b82286af3ba3bacd531812ec252176b76718c2f6ec77bf733bf5880"
+},
+{
+"path": "reserved/candles_1d/BTRUMP-USD.parquet",
+"bytes": 9978,
+"sha256": "a7e1ec583891530650faced81756a09d551751be5164d10dfc6c21ad9dd1e1d2"
+},
+{
+"path": "reserved/candles_1d/CIG,RAYDIUM,EXRQAUXS967FDKYMNXO4EQZEQIHEUBSTBCXPXXWPUMP-USD.parquet",
+"bytes": 10465,
+"sha256": "e9564b4a4fee26f9156aa61a82f0e9f6410041bcf13ce861d3ba48574ce547ea"
+},
+{
+"path": "reserved/candles_1d/CLV-USD.parquet",
+"bytes": 14801,
+"sha256": "1a0b8e1e3054f2f0085cc5259b2b58a6eed8a9a2410423c5ba911f9c8f4deeb4"
+},
+{
+"path": "reserved/candles_1d/CORE-USD.parquet",
+"bytes": 21103,
+"sha256": "2032d03e69bf41bf8592193285ce27f63e8a9af67ee2d2591f6ba9e0b12c9af5"
+},
+{
+"path": "reserved/candles_1d/CRO-USD.parquet",
+"bytes": 29014,
+"sha256": "0dec07ff57b72c7abd32ba9e495be21ec18a48f59daf30aff2653c612912b711"
+},
+{
+"path": "reserved/candles_1d/DAI-USD.parquet",
+"bytes": 12618,
+"sha256": "9a1a1a13843a226cf55f99d8ac1080592c26016f378c9db13fe587d357a7df82"
+},
+{
+"path": "reserved/candles_1d/DAKU-USD.parquet",
+"bytes": 9278,
+"sha256": "5e47ca0bd48cde56985aa823c28608c22cc732978eb577d425cb52556deddba1"
+},
+{
+"path": "reserved/candles_1d/DINNER-USD.parquet",
+"bytes": 9529,
+"sha256": "fe6b5ac2074abadde9fd0a51d9d38f0f66768a34d1d704785ab2e7bf1afaa2b5"
+},
+{
+"path": "reserved/candles_1d/DMAIL-USD.parquet",
+"bytes": 14394,
+"sha256": "266b9ea6c63577821cbc11a6cbf93e9080b25b349a6a878dcc47646906cc2f22"
+},
+{
+"path": "reserved/candles_1d/DODGERSWIN-USD.parquet",
+"bytes": 9064,
+"sha256": "b1b3c93803a08a7c20ab8bb852cf1ec62dd59f04344c859dde237084a3360d66"
+},
+{
+"path": "reserved/candles_1d/ELX-USD.parquet",
+"bytes": 12842,
+"sha256": "bbcf06499564902100acd5c2ee36bf9f93772ae05ef18b7f27480643878a8b06"
+},
+{
+"path": "reserved/candles_1d/ES-USD.parquet",
+"bytes": 12951,
+"sha256": "d097b9cd305f81c7fcd732a880ffbfe4db6809635333f1aca29597e1b4fe3d94"
+},
+{
+"path": "reserved/candles_1d/EUR-USD.parquet",
+"bytes": 18097,
+"sha256": "1a586a878165234d5513c9e76037bd944ab6951d524e623f61772bdc745f2c15"
+},
+{
+"path": "reserved/candles_1d/EURC-USD.parquet",
+"bytes": 12981,
+"sha256": "e075c3e6913fa26d767e997365ec10bb7134576f254df2729c6df8dea9de2369"
+},
+{
+"path": "reserved/candles_1d/FARTCOIN,RAYDIUM,9BB6NFECJBCTNNLFKO2FQVQBQ8HHM13KCYYCDQBGPUMP-USD.parquet",
+"bytes": 32766,
+"sha256": "f0c5beb7319bddd88c5bd54e4c9def8ae4c7af7ad36b43b7db49ca05feb16068"
+},
+{
+"path": "reserved/candles_1d/FLR-USD.parquet",
+"bytes": 16761,
+"sha256": "529a8bb459e4d16c3a973d64812a91380b649d26d08e517bac08eea8b9d1444c"
+},
+{
+"path": "reserved/candles_1d/FOXY-USD.parquet",
+"bytes": 15714,
+"sha256": "e2f9a3dcd5fc9495126329723fb41eadeec6a8ce9311e385fea283ab528df6f6"
+},
+{
+"path": "reserved/candles_1d/GNO-USD.parquet",
+"bytes": 13145,
+"sha256": "83ffc496ab7f1b4e65dc3aca629bca1efeda78b995bb3d50b81ff2bbe3ff70af"
+},
+{
+"path": "reserved/candles_1d/GOONER-USD.parquet",
+"bytes": 8456,
+"sha256": "21964761bc0d27a4b8ef36d73710df0dd37d4b39498eeda0f54752a834651b03"
+},
+{
+"path": "reserved/candles_1d/HAWKTUAH,RAYDIUM,4GFE6MBDORSY5BLBIUMRGETR6PZCJYFXMDM5EHSGPUMP-USD.parquet",
+"bytes": 10676,
+"sha256": "c1812e57cfb8c4036d29d63be8bbf009fa364a9f0d24828a58103a9fde8fc3a0"
+},
+{
+"path": "reserved/candles_1d/KRL-USD.parquet",
+"bytes": 12441,
+"sha256": "4d366cd2c256321c07f7dc5c5df2ca76e5c981c8cab58be09e757f4152b5e040"
+},
+{
+"path": "reserved/candles_1d/LUCE-USD.parquet",
+"bytes": 12058,
+"sha256": "7986d357f2e405ca06eff21a88e0e15c829431be25a3a1635490c371df1301ae"
+},
+{
+"path": "reserved/candles_1d/MAD,RAYDIUM,MADHPJRN6BD8T78RSY7NUSUNWWA2HU8BYPOBZPRHBHV-USD.parquet",
+"bytes": 12685,
+"sha256": "6e5f80b45b220a00176e86ce0b8eba868ce81b4d06422ca660277eebdc2a76f7"
+},
+{
+"path": "reserved/candles_1d/MAJOR-USD.parquet",
+"bytes": 9620,
+"sha256": "2fe840951d5f066727d57eeed0ed65efd851124c676c42d73426ed407a959c1c"
+},
+{
+"path": "reserved/candles_1d/MICHI-USD.parquet",
+"bytes": 20217,
+"sha256": "bd1ed76b77b6ca50dd995ae503eb15ffa20b6c74573e1266115db21ef11e8d10"
+},
+{
+"path": "reserved/candles_1d/MNRY-USD.parquet",
+"bytes": 11832,
+"sha256": "226cca7a6adb513a23cd57c53b511d83aea33bf00e72d096209cd2fa98008e75"
+},
+{
+"path": "reserved/candles_1d/MNT-USD.parquet",
+"bytes": 39647,
+"sha256": "09ec5d1e156b8104e077f46e837da0eb6b88a82ae44245df5ba0b2f5a10f9922"
+},
+{
+"path": "reserved/candles_1d/MOTHER-USD.parquet",
+"bytes": 21102,
+"sha256": "56a54079b1c1a194ad6a309cc856954147dfd874b222be3103cfd7388275b5ed"
+},
+{
+"path": "reserved/candles_1d/NC-USD.parquet",
+"bytes": 9818,
+"sha256": "ad69bc6cfb77794752c48380fbfc5c762152ab4b65dcf88266783504920257a2"
+},
+{
+"path": "reserved/candles_1d/NFT-USD.parquet",
+"bytes": 11124,
+"sha256": "5e9998fc7373c513af7f6481a70f2556f264f8f8a8ef61257347160e1e781877"
+},
+{
+"path": "reserved/candles_1d/OCEAN,UNISWAP_V3_BASE,0X1D8148823C46B9C55B678CA84BEB82BC3523ADB1-USD.parquet",
+"bytes": 10399,
+"sha256": "2f8cb847c27f5cdb0d2b5c543f0169116fa4436b311b404d8a373e77c41ceb03"
+},
+{
+"path": "reserved/candles_1d/OSMO-USD.parquet",
+"bytes": 28030,
+"sha256": "188fc0d16a886db116b83baa986410ae24e13d7525866ecd71ad603396199495"
+},
+{
+"path": "reserved/candles_1d/PAIN-USD.parquet",
+"bytes": 10175,
+"sha256": "9265747d36ab7cbed355160e1b84b81c692b5767b29650533af71d04bc739fee"
+},
+{
+"path": "reserved/candles_1d/PEAQ-USD.parquet",
+"bytes": 18396,
+"sha256": "af9b8f50f554f3827e062b575100fff0276970029ca96a1c886a265adc58365a"
+},
+{
+"path": "reserved/candles_1d/PI-USD.parquet",
+"bytes": 22918,
+"sha256": "d305f52aa5cc08b53d49f40d611e54a8b66619854851588cc165906b1792b780"
+},
+{
+"path": "reserved/candles_1d/PIRATE-USD.parquet",
+"bytes": 11831,
+"sha256": "d5978c572a855b526e93aa2d6574f70a52dafa9ac5b94cfc6fa13c4686be39ad"
+},
+{
+"path": "reserved/candles_1d/POWSCHE,RAYDIUM,8CKISHHJDHJV4LUOIRMLUHQG58CUKBYJRTCP4Z3MCXNF-USD.parquet",
+"bytes": 11429,
+"sha256": "f2bba56aba9bc614921a2502d6fb49d990c6a5bf8350f430e2ec2bddf68467bc"
+},
+{
+"path": "reserved/candles_1d/PRIME-USD.parquet",
+"bytes": 23953,
+"sha256": "e0b79ead708830401759fd855b3fb9c768673345d8d8f37100d5c656eb71d7eb"
+},
+{
+"path": "reserved/candles_1d/RETARDIO-USD.parquet",
+"bytes": 17485,
+"sha256": "c9bb83e923eb76d16043a367cdad0fd3feb8abe0dd4c6480b0d19978225911dd"
+},
+{
+"path": "reserved/candles_1d/SDM-USD.parquet",
+"bytes": 10172,
+"sha256": "47ada2437d87c2d4a17948f74facbd9eeb671c0d9ec48191a990a6a3b9c4b286"
+},
+{
+"path": "reserved/candles_1d/SKITTEN-USD.parquet",
+"bytes": 10194,
+"sha256": "b6795638af5b84795d3494eac6269d21edc903fafce8f6ea10c6aee4b0fa2390"
+},
+{
+"path": "reserved/candles_1d/SUNDOG-USD.parquet",
+"bytes": 17479,
+"sha256": "5c7447688595eacd6a0164ffdde00ece0f01f45de52cc95055609b56ed310f63"
+},
+{
+"path": "reserved/candles_1d/TIBBIR-USD.parquet",
+"bytes": 9556,
+"sha256": "fb16bc3bef5cdb23ba3172e44a4aa70bb96281c26edc4034241e12bd132ac950"
+},
+{
+"path": "reserved/candles_1d/TLOS-USD.parquet",
+"bytes": 25464,
+"sha256": "d94370b1c194619e6b492df082d50943dd0f2123bd93cb8747e2a61ea0456dad"
+},
+{
+"path": "reserved/candles_1d/TREMP-USD.parquet",
+"bytes": 20455,
+"sha256": "559bc0d94bba1f2ec550f9f16cd009fe9273db9c4a9546e8ce83e84893fdb6c6"
+},
+{
+"path": "reserved/candles_1d/TRUMPWIN-USD.parquet",
+"bytes": 13119,
+"sha256": "4cd543c7f01d9636fd32230e487e86ccc09af28b79a34eeba1c2d86209906d82"
+},
+{
+"path": "reserved/candles_1d/TRY-USD.parquet",
+"bytes": 19733,
+"sha256": "abd4a5692e38acdb43697fa6bb00b82172ef3cd2d571550e937aa183b029242d"
+},
+{
+"path": "reserved/candles_1d/TSLAX-USD.parquet",
+"bytes": 12137,
+"sha256": "221f481fb1f15b465653213480c9080279538e58f95c38bd80e8d84573905065"
+},
+{
+"path": "reserved/candles_1d/USDE-USD.parquet",
+"bytes": 15234,
+"sha256": "5d63244ddeb86d1cf97084043ff61dc71be5f97bd313a36b5adbe196b34b4ff1"
+},
+{
+"path": "reserved/candles_1d/VRTX-USD.parquet",
+"bytes": 16298,
+"sha256": "cc06be606a040c33a7930a073e17485311dc832405c193bd3deb8cfa87f42485"
+},
+{
+"path": "reserved/candles_1d/WBTC-USD.parquet",
+"bytes": 11390,
+"sha256": "126fa802f240c66e2c68d24fb36a2405e3671968e160c63d1d1808e298a24b71"
+},
+{
+"path": "reserved/candles_1d/WSTETH-USD.parquet",
+"bytes": 10050,
+"sha256": "ba356b1b2f9d484ddd5f5907abf1f223a97ec9b5d6b5dba3bc606c2f664a2761"
+},
+{
+"path": "reserved/candles_1d/WTI-USD.parquet",
+"bytes": 17272,
+"sha256": "06cf94fddc4ee99d7ecfb7cbe83aeaa16433f1efd5239b9cf1ed34a74f6da9fd"
+},
+{
+"path": "reserved/candles_1d/XDC-USD.parquet",
+"bytes": 6718,
+"sha256": "052a9583076aa40464e1b255b829f123ad02ed8c93336d96b6476b5c7e6225c1"
+},
+{
+"path": "reserved/candles_1d/XYO-USD.parquet",
+"bytes": 16179,
+"sha256": "e6284276323c1a711aed1c6936920fdedc3a5e2d68576f625e0ca0864e9aa4e2"
+},
+{
+"path": "reserved/candles_1d/ZBCN-USD.parquet",
+"bytes": 12244,
+"sha256": "212e81e8545c96748e1de21140faa14bcb434882c1ad45a9198bd26c21f6f092"
+},
+{
+"path": "reserved/candles_1d/ZERO-USD.parquet",
+"bytes": 14911,
+"sha256": "b72df367f84a00dd8ef9da0f62433430d26f25c0c1add42f6f60e1638c4d0823"
+},
+{
+"path": "reserved/candles_1h/AITECH-USD.parquet",
+"bytes": 131405,
+"sha256": "5c491dda9344cc6abe190301b13e1eba1930fc0a4f4a7d83688d46029716a640"
+},
+{
+"path": "reserved/candles_1h/AMPL-USD.parquet",
+"bytes": 140795,
+"sha256": "a44502cb1562b4fd5279f5b8fa22059b0c1144c391c07e89d5ab460e84c844b7"
+},
+{
+"path": "reserved/candles_1h/AURORA-USD.parquet",
+"bytes": 184575,
+"sha256": "a510f22401bdf61598688a36f699ce5d5ffdbabd3850cdd2d0f536c0d9e9193e"
+},
+{
+"path": "reserved/candles_1h/BABYDOGE-USD.parquet",
+"bytes": 143748,
+"sha256": "f21b7e23de040fb0833fdce81365a9b565d4f0ad77a8b74617ba60efe430ce85"
+},
+{
+"path": "reserved/candles_1h/BCUT-USD.parquet",
+"bytes": 141889,
+"sha256": "6b83e424574e6e1d4146179662d406413c5ef9c295f605ab804bca7dda18b27f"
+},
+{
+"path": "reserved/candles_1h/BEAM-USD.parquet",
+"bytes": 220209,
+"sha256": "7341de8244a09e87e66d011b2d899a1325567c4b1c1f9dc83bcef437bc4a4966"
+},
+{
+"path": "reserved/candles_1h/BLAST-USD.parquet",
+"bytes": 271719,
+"sha256": "bf92754badaa7705df2b219a3095e30209ee58ef88a3512dfe3520a40652ef30"
+},
+{
+"path": "reserved/candles_1h/BODEN-USD.parquet",
+"bytes": 186912,
+"sha256": "aa39ef983676a03f8b7890cadc572c9c680b8fffeb6c01b847923c59f09509c0"
+},
+{
+"path": "reserved/candles_1h/BTRUMP-USD.parquet",
+"bytes": 117838,
+"sha256": "16c0b2a6ea1318b372237d87f14b6dfa17c5c86675b1d02f395ee7e76873cf1a"
+},
+{
+"path": "reserved/candles_1h/CIG,RAYDIUM,EXRQAUXS967FDKYMNXO4EQZEQIHEUBSTBCXPXXWPUMP-USD.parquet",
+"bytes": 128667,
+"sha256": "22c88eda35f6f1a857a50dca0c9825ffdc1e5a10cc9917d1eeb064c5426afc53"
+},
+{
+"path": "reserved/candles_1h/CLV-USD.parquet",
+"bytes": 150284,
+"sha256": "2c576c136429a10efc68d470aeb5b36f57a07834c7dba79462f14e08dfd6341f"
+},
+{
+"path": "reserved/candles_1h/CORE-USD.parquet",
+"bytes": 194077,
+"sha256": "35c6bb2537552417e89669b577a533966c67e80dd448bcf3d19ab8a4976ae092"
+},
+{
+"path": "reserved/candles_1h/CRO-USD.parquet",
+"bytes": 209835,
+"sha256": "eea2d439ab5ea7b859a0e7c45e00725abb80d69ab0907415b3543e4db0b04d8e"
+},
+{
+"path": "reserved/candles_1h/DAI-USD.parquet",
+"bytes": 156942,
+"sha256": "34de45f396e90d722808cc0f7586ce8d9d0eeea5de62688938b0703db3cfb642"
+},
+{
+"path": "reserved/candles_1h/DAKU-USD.parquet",
+"bytes": 100788,
+"sha256": "a9a87e8f5149bfdef9771ca1141248f164a8a61456362272a554b0f5869652fd"
+},
+{
+"path": "reserved/candles_1h/DINNER-USD.parquet",
+"bytes": 103853,
+"sha256": "469e8b69da072f2c53b3669c6d0fde6c7f7acc96365ef3adf269135139b1d0ad"
+},
+{
+"path": "reserved/candles_1h/DMAIL-USD.parquet",
+"bytes": 163961,
+"sha256": "2cd3381dee583931cb19c179e9c98dafd3ec2260c807a88982a7b0fb92080f9a"
+},
+{
+"path": "reserved/candles_1h/DODGERSWIN-USD.parquet",
+"bytes": 78437,
+"sha256": "aabc61c4aa9ac1217fc1cb0aa012e4198c06b9462e943997ae3ce5ab9bb7ae62"
+},
+{
+"path": "reserved/candles_1h/ELX-USD.parquet",
+"bytes": 122322,
+"sha256": "bb6bc75e1153785877d0d00b08185a1db4b7dbfbfb6f31a4f75478cf9df6ddf4"
+},
+{
+"path": "reserved/candles_1h/ES-USD.parquet",
+"bytes": 100222,
+"sha256": "8120843ff8096f0f6c4a7a515e65c17ca3ea315ffa4845623729e4695099bffd"
+},
+{
+"path": "reserved/candles_1h/EUR-USD.parquet",
+"bytes": 153675,
+"sha256": "f02a5cbed6b2193675499ab15ef51793c732c77e116ea8afc533fa9f2277ba4d"
+},
+{
+"path": "reserved/candles_1h/EURC-USD.parquet",
+"bytes": 159274,
+"sha256": "049d12b9395e60bf16fff8d90aad83454a42f6b1353e490ea53dbd122678dd63"
+},
+{
+"path": "reserved/candles_1h/FARTCOIN,RAYDIUM,9BB6NFECJBCTNNLFKO2FQVQBQ8HHM13KCYYCDQBGPUMP-USD.parquet",
+"bytes": 263823,
+"sha256": "a20558c5f00414b7967c8eef896c26706353c6f79b042ba807e0298d976b0e73"
+},
+{
+"path": "reserved/candles_1h/FLR-USD.parquet",
+"bytes": 117238,
+"sha256": "3a1793f586a774dc93e182312f8576b6ca476ef210063f0c656757113f49531d"
+},
+{
+"path": "reserved/candles_1h/FOXY-USD.parquet",
+"bytes": 169912,
+"sha256": "162a726d4cd95ca6ed3a0165d57f6edf378e2762a9864033dd8eeac3d4d0d1c7"
+},
+{
+"path": "reserved/candles_1h/GNO-USD.parquet",
+"bytes": 122825,
+"sha256": "d5ae8a211b6c68ac265ebf78f32edb49716f1cf2841884fa404a20b934dc9662"
+},
+{
+"path": "reserved/candles_1h/GOONER-USD.parquet",
+"bytes": 79002,
+"sha256": "ea8e49857ab2a2fc64be2e8a71d124ed2e4acc71723f5146d48baec5d8c5ae0f"
+},
+{
+"path": "reserved/candles_1h/HAWKTUAH,RAYDIUM,4GFE6MBDORSY5BLBIUMRGETR6PZCJYFXMDM5EHSGPUMP-USD.parquet",
+"bytes": 137698,
+"sha256": "33b94d93b2073b3a57b0ef41f9156afc07368824d81c657c35081453f45eaf96"
+},
+{
+"path": "reserved/candles_1h/KRL-USD.parquet",
+"bytes": 127353,
+"sha256": "4d05d76f7e928bb64d1c45cf717a0af01dc2adce1e0e8a0c5d1e75f19bdaa266"
+},
+{
+"path": "reserved/candles_1h/LUCE-USD.parquet",
+"bytes": 143997,
+"sha256": "2993433063f92a4fd30aacd6584e72a50a32b7595fdc2f02e32a753279a95df1"
+},
+{
+"path": "reserved/candles_1h/MAD,RAYDIUM,MADHPJRN6BD8T78RSY7NUSUNWWA2HU8BYPOBZPRHBHV-USD.parquet",
+"bytes": 145642,
+"sha256": "205997ea62b85a120eba6888641ac2288da1206204958990eeffecd85326e1a3"
+},
+{
+"path": "reserved/candles_1h/MAJOR-USD.parquet",
+"bytes": 105856,
+"sha256": "eacaa3bfb0de8bad373bd17a79061ce2d39f4b506b124c31c9fbdb721061b83d"
+},
+{
+"path": "reserved/candles_1h/MICHI-USD.parquet",
+"bytes": 202858,
+"sha256": "56af9ee59f5f75a6c57936c9303dff848759ba5ab7cf05cbb1da334c15303b8e"
+},
+{
+"path": "reserved/candles_1h/MNRY-USD.parquet",
+"bytes": 127042,
+"sha256": "feda3bfdc424eea1b7b25e749d4f850be39a926191d83de66535783854c2537d"
+},
+{
+"path": "reserved/candles_1h/MNT-USD.parquet",
+"bytes": 273915,
+"sha256": "1854cf1d5bae776fcf47bc1015be97148c8dd3edfaff159e85e93a9abdf94a77"
+},
+{
+"path": "reserved/candles_1h/MOTHER-USD.parquet",
+"bytes": 222097,
+"sha256": "6a0feb926b5b361debabfd6f446afbf89cf8e4c37825299a208453a109d3a329"
+},
+{
+"path": "reserved/candles_1h/NC-USD.parquet",
+"bytes": 112034,
+"sha256": "83200f2e0c15821bd277f52506a715e79f6105d73099c2910dfdb77799c949ef"
+},
+{
+"path": "reserved/candles_1h/NFT-USD.parquet",
+"bytes": 127773,
+"sha256": "22f460ebdc63afa43ceeffb0e9e34c024836cb25024a64591e3ddffacc92647c"
+},
+{
+"path": "reserved/candles_1h/OCEAN,UNISWAP_V3_BASE,0X1D8148823C46B9C55B678CA84BEB82BC3523ADB1-USD.parquet",
+"bytes": 126652,
+"sha256": "309d20da26d8eeec284099b8152e86670934bd7560c4fc50a92f33bfab58d761"
+},
+{
+"path": "reserved/candles_1h/OSMO-USD.parquet",
+"bytes": 196395,
+"sha256": "9427a7e12cb73ad3e8ad34d810baa3fe6b80ab1f968a61a8c724fd597ded32b1"
+},
+{
+"path": "reserved/candles_1h/PAIN-USD.parquet",
+"bytes": 122137,
+"sha256": "59b2761ffa163ce89a60fc6f5920866054b779af0e86d057caa53b52cf0b55b4"
+},
+{
+"path": "reserved/candles_1h/PEAQ-USD.parquet",
+"bytes": 151558,
+"sha256": "00995e15d80d82e06d0507e04773f51d9265481c5af519c254567db3848e02db"
+},
+{
+"path": "reserved/candles_1h/PI-USD.parquet",
+"bytes": 165911,
+"sha256": "49136b767f305ca02e0a37f00ddfdfd9a5d61b0d41d9155801f73072a038e74d"
+},
+{
+"path": "reserved/candles_1h/PIRATE-USD.parquet",
+"bytes": 139645,
+"sha256": "698d8f0d5888bfdda2bfa98a97409125ccf34b59327121c043245891c0c760a3"
+},
+{
+"path": "reserved/candles_1h/POWSCHE,RAYDIUM,8CKISHHJDHJV4LUOIRMLUHQG58CUKBYJRTCP4Z3MCXNF-USD.parquet",
+"bytes": 139668,
+"sha256": "e32657e8ab00e421dc05d5ba1a1994d15b0b379b6c00887ea69e4ab4ee1b53f3"
+},
+{
+"path": "reserved/candles_1h/PRIME-USD.parquet",
+"bytes": 199798,
+"sha256": "60cd3c43d19493d626b8f22028d5ec9aa6015f1744b9ed113fb40d2034f6e338"
+},
+{
+"path": "reserved/candles_1h/RETARDIO-USD.parquet",
+"bytes": 180197,
+"sha256": "d4200491d2d97d06e090b156d86ca097ee851d7c9f6834c4a3f74b7dd660eaf9"
+},
+{
+"path": "reserved/candles_1h/SDM-USD.parquet",
+"bytes": 121357,
+"sha256": "0eca3c9965fd1f1683510e22b93cc1c06753bd1f42d7a49a1760cf77db930f0c"
+},
+{
+"path": "reserved/candles_1h/SKITTEN-USD.parquet",
+"bytes": 109690,
+"sha256": "2c76fd465041df77c2a8dae6f4e3393c3549de6c99717de7830cef77c5902dec"
+},
+{
+"path": "reserved/candles_1h/SUNDOG-USD.parquet",
+"bytes": 171519,
+"sha256": "fe761351fb71f4ba57e01cc22cf31903915c2706ad514cdcec51be723ba5d985"
+},
+{
+"path": "reserved/candles_1h/TIBBIR-USD.parquet",
+"bytes": 102792,
+"sha256": "4cc285835005153807ab7440a5c5cdf43ad2c23fb405e0e2292aac9c9b9ce33e"
+},
+{
+"path": "reserved/candles_1h/TLOS-USD.parquet",
+"bytes": 226052,
+"sha256": "4d681a02544ea7e244947acf51379d0709b3fc091d38dd76a58ad05a8e505b87"
+},
+{
+"path": "reserved/candles_1h/TREMP-USD.parquet",
+"bytes": 203989,
+"sha256": "5ac6d1f42ab11fe5a105cfd87ad20cd388231c08cbd26c2ee8f2d06f97c08916"
+},
+{
+"path": "reserved/candles_1h/TRUMPWIN-USD.parquet",
+"bytes": 167474,
+"sha256": "468a83d847b6aff679f77332d15f1eea1ff07482a038e30f832cac426b39fb2b"
+},
+{
+"path": "reserved/candles_1h/TRY-USD.parquet",
+"bytes": 168377,
+"sha256": "ab626ef2e3eb2cac323d919091ce2be8314bb535f920d22d3e2d81e4d6046357"
+},
+{
+"path": "reserved/candles_1h/TSLAX-USD.parquet",
+"bytes": 90722,
+"sha256": "bf41665dd1418b85f8bca125a6d7bedcd55255c5a73dbc93fe448c8b69f6b270"
+},
+{
+"path": "reserved/candles_1h/USDE-USD.parquet",
+"bytes": 146865,
+"sha256": "e4390176f3dd87dac281a0f31337fc1e725a5e6c9f87def679a26620f03d2e7c"
+},
+{
+"path": "reserved/candles_1h/VRTX-USD.parquet",
+"bytes": 172201,
+"sha256": "ff4d186e6b6d3d8536c7877c0c2df4e90c1ac27a365b90ddb079e59b379511c2"
+},
+{
+"path": "reserved/candles_1h/WBTC-USD.parquet",
+"bytes": 141084,
+"sha256": "36c1cf3d077e9c4e67ecfbfbed85b588b94167c06aaf44312a1bcc7f64120431"
+},
+{
+"path": "reserved/candles_1h/WSTETH-USD.parquet",
+"bytes": 102543,
+"sha256": "fb6625738771443726376e275594322b8a672fb39f7ad83625382bf1d6e9b120"
+},
+{
+"path": "reserved/candles_1h/WTI-USD.parquet",
+"bytes": 118224,
+"sha256": "f5cae52aea2c2b6d63bc8e15dd7f7f4f076e4ec18dcbf54073d1f124d8422650"
+},
+{
+"path": "reserved/candles_1h/XDC-USD.parquet",
+"bytes": 30989,
+"sha256": "b62803f9470d976cd233ac4dd3026d2e5d5885368636f81a3a612f40272a2c14"
+},
+{
+"path": "reserved/candles_1h/XYO-USD.parquet",
+"bytes": 153840,
+"sha256": "155a76f831842ead72427820491930c57301de34a2d3e00a996529d5839b178a"
+},
+{
+"path": "reserved/candles_1h/ZBCN-USD.parquet",
+"bytes": 148384,
+"sha256": "96f15b3f5566dfca4376972b45713ed94a1bd7df7e42296641fba0c7b02ba33a"
+},
+{
+"path": "reserved/candles_1h/ZERO-USD.parquet",
+"bytes": 168226,
+"sha256": "e866a592b737e75cbe0e1b383eb2b4d5fd7f8c0755ee1d2d9bb06236726c963e"
+},
+{
+"path": "reserved/funding/AITECH-USD.parquet",
+"bytes": 218341,
+"sha256": "567f4fefd895e4516d2f1759d87d6d0ff772a11154f7b96494fa3f7879954460"
+},
+{
+"path": "reserved/funding/AMPL-USD.parquet",
+"bytes": 148629,
+"sha256": "18dc22c01c9b266328baa4939bbea505e77a76ceae325cd8f76367afa7eb0315"
+},
+{
+"path": "reserved/funding/AURORA-USD.parquet",
+"bytes": 193869,
+"sha256": "a9b721613cff1d951134e26b8eef6bc17bc8973252d7ee9e1024e81af2f726bb"
+},
+{
+"path": "reserved/funding/BABYDOGE-USD.parquet",
+"bytes": 194086,
+"sha256": "8affd9ea52dcbdee864c3faef33e02b4d9c399b1d9509c87db4824497b01c09c"
+},
+{
+"path": "reserved/funding/BCUT-USD.parquet",
+"bytes": 147424,
+"sha256": "28b020468f2a9d6e276c8b0f462803db412b25d4f7cf36f050140f0c628b9777"
+},
+{
+"path": "reserved/funding/BEAM-USD.parquet",
+"bytes": 350107,
+"sha256": "dc383d5b3960a4d7333fbe82db260345f4793471b64525dab9456c207726f9df"
+},
+{
+"path": "reserved/funding/BLAST-USD.parquet",
+"bytes": 362191,
+"sha256": "7a1e5b9a0b365e1d3de78d090a80fe87bc3bb388abbcf4402058428178dff49f"
+},
+{
+"path": "reserved/funding/BODEN-USD.parquet",
+"bytes": 217566,
+"sha256": "c6dcd54e47364501b13f0b03e0e4eba7e7b0c83a93c7525afc2b4aa50d61dcce"
+},
+{
+"path": "reserved/funding/BTRUMP-USD.parquet",
+"bytes": 130064,
+"sha256": "e849895a61b4b1987c35c0b4b8ff335146aca861ca1bde43197527f95457a142"
+},
+{
+"path": "reserved/funding/CIG,RAYDIUM,EXRQAUXS967FDKYMNXO4EQZEQIHEUBSTBCXPXXWPUMP-USD.parquet",
+"bytes": 126757,
+"sha256": "912bb03a7fe07e2448a3eb8c5760efe085cf4eae501b69df1e7e9b3f6180e9c6"
+},
+{
+"path": "reserved/funding/CLV-USD.parquet",
+"bytes": 183449,
+"sha256": "6ce1d44190f06f53b369c8138f49e15cc2cc37fdc74b8d84fe3697629dfa52c6"
+},
+{
+"path": "reserved/funding/CORE-USD.parquet",
+"bytes": 313604,
+"sha256": "f17910b7918d9c48371a02b482fd28f6ed66ee819e9ee27442e3a8ddd9ba36dc"
+},
+{
+"path": "reserved/funding/CRO-USD.parquet",
+"bytes": 204002,
+"sha256": "5f79b59c496b15e2752a3ea026a7a85d3e641a13e8041e52252f23821248f764"
+},
+{
+"path": "reserved/funding/DAI-USD.parquet",
+"bytes": 178228,
+"sha256": "a85a2d2df3da0243c0c2a72e64fe4b0e963f07d1112029334c99e555d4ccb8e5"
+},
+{
+"path": "reserved/funding/DAKU-USD.parquet",
+"bytes": 107547,
+"sha256": "7350bde170258071b2050bf32eb085217e76551ece5633dd509fff52216f4294"
+},
+{
+"path": "reserved/funding/DINNER-USD.parquet",
+"bytes": 100562,
+"sha256": "1146bb236140a58b5c1de1b96942eded7428e8d2db0b5707e4c4d8aaffc25693"
+},
+{
+"path": "reserved/funding/DMAIL-USD.parquet",
+"bytes": 204652,
+"sha256": "2329c7bbce272d2662302ffc9be9eb742af22826beaae8dc727e5333676acb81"
+},
+{
+"path": "reserved/funding/DODGERSWIN-USD.parquet",
+"bytes": 71895,
+"sha256": "681245b71a516f52c3f725c04dc4e4c50e2d5974b9996e813bb7bbd64706628b"
+},
+{
+"path": "reserved/funding/ELX-USD.parquet",
+"bytes": 181629,
+"sha256": "1bd34eb7b993bdaa40a254ab072b3d6b095d4dea303611b0afe9a282a6e5ecf1"
+},
+{
+"path": "reserved/funding/ES-USD.parquet",
+"bytes": 142298,
+"sha256": "a86e85da4426cc28bd4cfc33468026b3e9f1b775c529eaeee7cc388c2792c4df"
+},
+{
+"path": "reserved/funding/EUR-USD.parquet",
+"bytes": 216698,
+"sha256": "cd0ad5971f2513279486a90c020b6e6ec9cf1a7cae8026e620abc5ac7bc011e4"
+},
+{
+"path": "reserved/funding/EURC-USD.parquet",
+"bytes": 180700,
+"sha256": "a55fce89b1082a1059cc193960ac141c49c6c605ad6f636514ec7b2d82de1b7b"
+},
+{
+"path": "reserved/funding/FARTCOIN,RAYDIUM,9BB6NFECJBCTNNLFKO2FQVQBQ8HHM13KCYYCDQBGPUMP-USD.parquet",
+"bytes": 281224,
+"sha256": "85a2a7fe4c85c7c8533337755ab7e80c0cb62a8f33362689e341fe57e8cdc490"
+},
+{
+"path": "reserved/funding/FLR-USD.parquet",
+"bytes": 159307,
+"sha256": "5e8286e79435580b5863935dcb960de53a30992f3cb0f1b3d1365f24a79d0d17"
+},
+{
+"path": "reserved/funding/FOXY-USD.parquet",
+"bytes": 198998,
+"sha256": "34370297b677d57a275db595e3d641c56f303dd374f0239edc05dac303cb9efa"
+},
+{
+"path": "reserved/funding/GNO-USD.parquet",
+"bytes": 210429,
+"sha256": "f315227ba20849b13681d00d0121a28a35e09391f9b4c4a491c6958ffcb80b73"
+},
+{
+"path": "reserved/funding/GOONER-USD.parquet",
+"bytes": 76600,
+"sha256": "d6e3aa7a97e520a5e395ee888d7a5d319df98f65accafd7920452644b30db63f"
+},
+{
+"path": "reserved/funding/HAWKTUAH,RAYDIUM,4GFE6MBDORSY5BLBIUMRGETR6PZCJYFXMDM5EHSGPUMP-USD.parquet",
+"bytes": 147622,
+"sha256": "6f17dad77a6181e0ef8ac0020c61815bafae26dcbc24efeacb3dea3038e47b09"
+},
+{
+"path": "reserved/funding/KRL-USD.parquet",
+"bytes": 188973,
+"sha256": "974c832f0f047f49b1c6c8b144d2926058f097014623fc768d81e632b9effdfc"
+},
+{
+"path": "reserved/funding/LUCE-USD.parquet",
+"bytes": 153927,
+"sha256": "3a8be7fe5452b7aa973e2992a796499eaa8ff0ca5de614a9b3da987982bbb667"
+},
+{
+"path": "reserved/funding/MAD,RAYDIUM,MADHPJRN6BD8T78RSY7NUSUNWWA2HU8BYPOBZPRHBHV-USD.parquet",
+"bytes": 150564,
+"sha256": "6481c5848d7bf822841cccdbf3200d3773415b58ade009b127d17945c971fcb1"
+},
+{
+"path": "reserved/funding/MAJOR-USD.parquet",
+"bytes": 192633,
+"sha256": "0a7899e098448fc52554ba37ab180d949bafdc1a486a7bc0c3918fb9d52a3ccd"
+},
+{
+"path": "reserved/funding/MICHI-USD.parquet",
+"bytes": 298318,
+"sha256": "013c82f40836234950d78546954ef1ab70c8fb57c0689cdd7eef5dc55c3bd2a5"
+},
+{
+"path": "reserved/funding/MNRY-USD.parquet",
+"bytes": 211404,
+"sha256": "36223c5b790b11934a1252ae7cd7c41c8cd20ad900abe6e5373fb3b3e8487816"
+},
+{
+"path": "reserved/funding/MNT-USD.parquet",
+"bytes": 370308,
+"sha256": "8161dd146ad1386ebd84b43acbbcadfbcf5da1023c03a50446cbb0c4fb74c463"
+},
+{
+"path": "reserved/funding/MOTHER-USD.parquet",
+"bytes": 225325,
+"sha256": "7f95fae814ff3bf53d1acbc5932d34946f56f26487679cf961b30fa47434dd46"
+},
+{
+"path": "reserved/funding/NC-USD.parquet",
+"bytes": 179208,
+"sha256": "47f7876995a2d13a537d62b77252033c2d55e1cc9275d8161a5262a1ea82917c"
+},
+{
+"path": "reserved/funding/NFT-USD.parquet",
+"bytes": 201684,
+"sha256": "87d294daf11b7e0c8c5444a8d77a8bd600a4b3954f1dddf68c6c5aaca74384a0"
+},
+{
+"path": "reserved/funding/OCEAN,UNISWAP_V3_BASE,0X1D8148823C46B9C55B678CA84BEB82BC3523ADB1-USD.parquet",
+"bytes": 125351,
+"sha256": "041d52a04e6f637a8fb8dc5781def93958a1b52b5bc2303be39e221ee75cd384"
+},
+{
+"path": "reserved/funding/OSMO-USD.parquet",
+"bytes": 279201,
+"sha256": "7fd5c9945054ef4513b3bc81263340a9fff2d7cbe35ce1b2c48a1d704213a9b1"
+},
+{
+"path": "reserved/funding/PAIN-USD.parquet",
+"bytes": 120092,
+"sha256": "9ade803214a6d86ad1e14a7a9eb5dd13c30ff637b165fecc46f341f268c5e170"
+},
+{
+"path": "reserved/funding/PEAQ-USD.parquet",
+"bytes": 227299,
+"sha256": "11e9c62c018d0757e05515ad6fce0c6b4e59978bf1c2ad50847125d6b07380b7"
+},
+{
+"path": "reserved/funding/PI-USD.parquet",
+"bytes": 251617,
+"sha256": "ce6a80f40832917fdacc3da67c51ad67f7d09c76b712afe874517c6fe356afab"
+},
+{
+"path": "reserved/funding/PIRATE-USD.parquet",
+"bytes": 235986,
+"sha256": "c7e06552dd049b5a43d64588819f0ded469910602fd843d6e80a4e66f72bde10"
+},
+{
+"path": "reserved/funding/POWSCHE,RAYDIUM,8CKISHHJDHJV4LUOIRMLUHQG58CUKBYJRTCP4Z3MCXNF-USD.parquet",
+"bytes": 147522,
+"sha256": "8b4f6de5addc87e1ba5e728927981a94e56b638c872d955c204032958fe2365c"
+},
+{
+"path": "reserved/funding/PRIME-USD.parquet",
+"bytes": 304938,
+"sha256": "0b765a6fce1134d5ae8ed3e30b684f7f5bb360814d75b5da1ae4a016619a638a"
+},
+{
+"path": "reserved/funding/RETARDIO-USD.parquet",
+"bytes": 190621,
+"sha256": "78ac29c2aacc0fb89dc1684a73e5168542f5d2a1177241f1b08b1dcea9525296"
+},
+{
+"path": "reserved/funding/SDM-USD.parquet",
+"bytes": 195821,
+"sha256": "4caf2145c931e3303b9ea36d6bf7070965bc65952748c084e2d52d30f4f47003"
+},
+{
+"path": "reserved/funding/SKITTEN-USD.parquet",
+"bytes": 110529,
+"sha256": "d83ac0f4d225ea06a0caedb186bdef85b3f71c1da039b6127ba4257b1487ec63"
+},
+{
+"path": "reserved/funding/SUNDOG-USD.parquet",
+"bytes": 273756,
+"sha256": "04568bc5c64147ee4d7ddc370dd9ed0a33db6ded1b0f1aa9465785f228f58faf"
+},
+{
+"path": "reserved/funding/TIBBIR-USD.parquet",
+"bytes": 110575,
+"sha256": "9a7ea8e72d167b647de998e7cfc6f5ede76db7765a9a84fa196ad8e6f78d62a9"
+},
+{
+"path": "reserved/funding/TLOS-USD.parquet",
+"bytes": 307367,
+"sha256": "1890ba186db479ee521489d6479ce285efd8ae852bfb1feb9c07c923430003c6"
+},
+{
+"path": "reserved/funding/TREMP-USD.parquet",
+"bytes": 222528,
+"sha256": "51752be37f47c96c74fa08d92f3019c191eceefb0d616611299fc38a496d596a"
+},
+{
+"path": "reserved/funding/TRUMPWIN-USD.parquet",
+"bytes": 151244,
+"sha256": "4ea4d62e52b56eca225591398c7fc3e3f1dead76777bb30c5ab0bbdc2e5573b3"
+},
+{
+"path": "reserved/funding/TRY-USD.parquet",
+"bytes": 205950,
+"sha256": "c4cdb47f49cd03bd52035db115c529b5cbd7786851406579572fa40d0d21f150"
+},
+{
+"path": "reserved/funding/TSLAX-USD.parquet",
+"bytes": 160151,
+"sha256": "6119a5ee1344a988fd8b2b9d006a52b4eb8f07039ea3b1cdd326c128e4ae9fe8"
+},
+{
+"path": "reserved/funding/USDE-USD.parquet",
+"bytes": 173693,
+"sha256": "6385eb93ebdbdf57e70bed798a34441d3a5e0abe783d9dc35f67b32cb7726ddc"
+},
+{
+"path": "reserved/funding/VRTX-USD.parquet",
+"bytes": 198730,
+"sha256": "39fa3c556b61eb5d5e3c358a3fa38596ee88becb4e278bc7d272ddd2482b4454"
+},
+{
+"path": "reserved/funding/WBTC-USD.parquet",
+"bytes": 153404,
+"sha256": "f5b595f3a29d9f06d48147f4c80cde6a72712bef15dd73a9824818dcc3635e4a"
+},
+{
+"path": "reserved/funding/WSTETH-USD.parquet",
+"bytes": 163983,
+"sha256": "f91f96a48d85c97b5f1e95bdf4d91b2407e78b7c29a59f127cf884a1ab555a27"
+},
+{
+"path": "reserved/funding/WTI-USD.parquet",
+"bytes": 94634,
+"sha256": "b87fe66e9382120b0bb86fed4bb98d95bc962a32d47ced799872dd241853728e"
+},
+{
+"path": "reserved/funding/XDC-USD.parquet",
+"bytes": 47066,
+"sha256": "32aed7c5b197bc04a38e17413d50649df9a334f812845ae0780ddd330e8ac74e"
+},
+{
+"path": "reserved/funding/XYO-USD.parquet",
+"bytes": 244374,
+"sha256": "5a921d3aed1990b808646cff544f46c21ce72339781e5b2771ecbdd2ce0a9815"
+},
+{
+"path": "reserved/funding/ZBCN-USD.parquet",
+"bytes": 168415,
+"sha256": "bcf122fd497d6c3871c29d7d3f6865f9417c4900e352c567361694a383df9ed6"
+},
+{
+"path": "reserved/funding/ZERO-USD.parquet",
+"bytes": 195839,
+"sha256": "0bfe4f20366f643ba6e0d76c081b6bf0ebd7de1eaa92c39bc245f2b8314e0f17"
+}
+]
+}
