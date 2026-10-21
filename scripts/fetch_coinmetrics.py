@@ -6,9 +6,10 @@
 - **On-chain, where served free:** active addresses, transactions, supply, MVRV, adjusted NVT, fees, transfer value,
   hash rate, and exchange in/outflows and exchange supply (BTC, ETH).
 
-Each asset's requested metrics come from the community catalog (`/v4/catalog-v2/asset-metrics`). A row's `t` is the
-start of Coin Metrics' UTC day: `t + 1 day` is only an interval-end floor, not its publication time. Publication can
-be later and historical values can be revised. This latest-vintage collection is not point-in-time data.
+Each asset's requested metrics come from the community catalog (`/v4/catalog-v2/asset-metrics`). UpperCamelCase
+metrics use beginning-of-interval labels: `t + 1 day` is only their interval-end floor, not publication time.
+Other metrics retain their provider-defined clock; this collector imposes no shared availability rule. Publication
+can be later and historical values can be revised. This latest-vintage collection is not point-in-time data.
 
 Rows before 2021-01-01 go to `reserved/` (the reserved 2020 window, docs/GATES.md). Saved in
 data/coinmetrics/{open,reserved}/<asset>.parquet (t in ms, one column per metric) with `catalog.json` and
