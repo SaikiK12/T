@@ -486,6 +486,17 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Tilting to the widest spreads adds +1.3 to +8.7 %/yr at 1x, but it doubles the trading and cuts the NW t by up to
     half. The gain comes only from 2025-26, the years of R280's short-leg pumps.
   - [FINDINGS](../experiments/sizecarry_v1/FINDINGS.md).
+- **R282 (pitfac_v1), PARTIAL by its frozen rule, but no book is evidence.** It tested nine factors from the daily
+  point-in-time panel (`lab/daily.py`) on qx `factors`, top 150 Binance perps, 2021-26 (27 trials).
+  - The factors: Korean premium, print-wick days, size, volume/cap, fee yield, OI/cap, venue breadth, multi-venue
+    funding gap and age.
+  - 18 series beat the reality check. Age and vol_mcap also have a positive daily book at 1x and 2x: +3.9 and
+    +1.6 bp/day at 1x.
+  - Those books have NW t 0.68 and 0.39, and their 10 best days are their whole sum.
+  - The real finding is a median effect. Young, small, high-turnover coins drift down on a typical day, and rare
+    squeezes cancel it in the mean.
+  - The Korean premium, fee yield and funding gap are NULL. M276 (cap the squeezes) is queued.
+  - [FINDINGS](../experiments/pitfac_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -600,6 +611,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,358 after R281 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,385 after R282 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

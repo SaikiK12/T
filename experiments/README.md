@@ -25,8 +25,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (80)
+## Finished and registered rounds (81)
 
+- **[pitfac_v1](pitfac_v1/)** R282, DONE PARTIAL, 27 trials. What the daily point-in-time panel's new sources say about a Binance perp's next days ([PREREG](pitfac_v1/PREREG.md), [FINDINGS](pitfac_v1/FINDINGS.md))
 - **[sizecarry_v1](sizecarry_v1/)** R281, DONE NULL, 30 trials. Confidence-sized carry (M266): the six carry books (R278 A/B/C, R279 A/B, batch binance+gate) with each open pair sized by spread, persistence, inverse leg volatility or their products, against equal slots ([PREREG](sizecarry_v1/PREREG.md), [FINDINGS](sizecarry_v1/FINDINGS.md))
 - **[levcarry_v1](levcarry_v1/)** R280, DONE DATA_PASS, 0 trials. Leverage and liquidation on the five forward carry books (R278 A/B/C, R279 A/B): L 1-10, isolated or cross margin per venue, mm 1%/5%: measurement ([PREREG](levcarry_v1/PREREG.md), [FINDINGS](levcarry_v1/FINDINGS.md))
 - **[xfund_kd_v1](xfund_kd_v1/)** R277, DONE PARTIAL, 4 trials. R275's best carry book replicated, unchanged, on venues R275 never read: KuCoin and dYdX ([PREREG](xfund_kd_v1/PREREG.md), [FINDINGS](xfund_kd_v1/FINDINGS.md))
