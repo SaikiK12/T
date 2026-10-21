@@ -73,6 +73,17 @@ with t far above its reality-check null. Gate 0 cannot confirm it. Confirmation 
   0.01%-per-8h baseline. So hourly and 8-hourly venues add up in the same units.
   - BTC funding averaged 11.9%/yr on Binance, 8.8% on Gate and 24.1% on Hyperliquid in 2024.
   - The gap is real (Hyperliquid's funding ran above the CEXs' through 2024), not a units error.
+- **Missing settlements** (Codex's review on #7). A missing settlement counts as zero funding, so a venue with
+  holes would look cheap and be picked as the long leg without being charged. I measured it:
+  - every gap between settlements inside each trade, against the venue's own interval at that time (the median of
+    the 11 gaps around it);
+  - the six books in the tables above miss 10 to 1,123 settlements in all;
+  - valued at the trade's mean rate, the missing ones move the gross by -1.0% to +0.8%;
+  - Gate+Hyperliquid -0.02%, Binance+MEXC -0.03%, Binance+Gate +0.82%.
+  - **Interval changes are not holes:** Hyperliquid paid every 8 hours until June 2023, then hourly, and Binance
+    moves coins between 8 h and 4 h. Funding is summed as paid, so neither changes the units.
+  - The scratch scripts are not in the repo. Window membership needs a coverage proof in the next spread engine
+    version.
 - **Concentration:** Gate+Hyperliquid L14 th5% K20 traded 181 coins in 587 trades. The top 5 coins make 18% of
   the gross and the top 10 make 29%. The same holds in the other sets: top 10 coins 29-47%.
 - **Price legs:** the price legs net to about zero, and funding is 96-105% of the gross. The book earns the funding
