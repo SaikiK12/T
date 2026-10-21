@@ -54,13 +54,16 @@ Multi-Strategy Advisers, a $4B fund).
   - Rekt Radio;
   - Empire, Unchained and others.
 - 165 transcripts were read by keyword (`python scripts/dig_videos.py grep --words ...`).
-- Six crypto episodes without a transcript are being transcribed locally (`scripts/transcribe_audio.py`):
-  - a Wintermute trader;
-  - the 2025-10-10 liquidation cascade;
-  - Doug Colkitt on liquidations;
-  - an ex-Jane Street trader on finding edge;
-  - Jane Street's Thomas Uhm on crypto versus equities;
-  - an ex-Citadel quant.
+- Six crypto episodes have no published transcript. `scripts/transcribe_audio.py` transcribed five of them locally
+  (faster-whisper base.en, about 8 minutes per hour of audio):
+  - a Wintermute trader (Rekt Radio #96);
+  - the 2025-10-10 liquidation cascade (Rekt Radio #119);
+  - Doug Colkitt on liquidations (Chat With Traders #313);
+  - Jane Street's Thomas Uhm on crypto versus equities (Empire);
+  - ex-Citadel quant Neel Somani (Odds on Open).
+
+  The sixth, an ex-Jane Street trader on finding edge (Odds on Open), failed on a cut-off download and is being
+  retried.
 
 ## What the practitioners say, and where the lab stands on it
 | # | Claim (source) | Where the lab is | Status |
@@ -73,13 +76,20 @@ Multi-Strategy Advisers, a $4B fund).
 | 6 | **VIX panic bottom (Stay Solvent):** VVIX spike plus VIX above VIX3M marks a short-term low. | VIX-spike reversal lanes were NULL out of sample: R239 and R241 (M197, M218, M226). Short vol in contango: R241, t 1.7-2.4 in every window but 45-66% drawdowns (M224). Cboe history now held (`data/cboe`). **R283** tested VVIX and the curve: NULL. BOTH leans the claimed way on SPY/QQQ at 5-10 days (+84 to +158 bp over an average hold, p 0.005-0.02), but no cell clears p 0.00185 of 27. BTC has too few onsets. The video's own day (2026-10-16) did not trigger on closing values. | **Tested, R283 NULL** |
 | 7 | **Headlines whipsaw; markets often look through them** (Odd Lots, "This Is How Big Money Is Trading the War in Iran", 2026-03-26: futures up despite a rejected ceasefire). | M096 (news leads price) was BLOCKED for lack of an archive. Headline history cannot be backfilled honestly, so the recorder started today (`data/news`, 22 feeds, first-seen times). | **Recording, M279** |
 | 8 | **Exchange listing notices** move coins (TheTie 2026: front-loaded). | Binance notices: R271 family. OKX's API keeps only about 100 recent listing notices, so the recorder keeps them from today. | **Recording, M280** |
+| 9 | **Being the liquidation backstop pays.** Hyperliquid's HLP vault takes liquidated positions when the book is too thin, at prices that favor it; it "made $40 million in 10 minutes" on 2025-10-10. ADL closed market makers' hedged shorts (Colkitt, Chat With Traders #313; Rekt Radio #119). | The backstop's fill price is privileged: no public order can get it. Fading cascades at public prices was NULL: R206 (long cascades continue at 12 h) and R252 (OI drop plus wick). But HLP takes deposits, so it is a yardstick (`scripts/fetch_hlp.py`, below). | **Yardstick, M285** |
+| 10 | **The 48 hours after peak fear are the opportunity,** not the crash itself (Rekt Radio #119). | R206 and R252 tested 1-24 h fades per coin. A market-wide 48 h basket after a cascade day is untested, and there have been only about 10-20 such days since 2021. | **Queued, M286 (low power)** |
+| 11 | **Skewed assets are overpriced:** being always long a lottery-like asset loses on average, because people pay for the asymmetry (Neel Somani, ex-Citadel power trading). | Lottery and MAX long-short books were NULL (R222, R238). The squeeze-capped short of R282's young, small, high-turnover cluster is queued. | Queue M276 |
+| 12 | **A distribution premium:** tokens that gain venues and listings outperform as more buyers can reach them (Wintermute, Rekt Radio #96). | R282's venue count (n_venues_7d) survived the reality check but did not pass. Listing lanes R188/R189. | Partly tested |
+| 13 | **No prime broker in crypto.** Capital sits locked on each venue, so arbitrage across venues costs more (Thomas Uhm, Jane Street, Empire 2022). | This is the friction that lets cross-venue carry (R275) persist. R280 found carry legs liquidated even at 1x under isolated margin: the cost is real. | Supports #2 |
 
 ## What could be the best things to trade (ranked by evidence, not by how good the story sounds)
 1. **Cross-venue funding carry** (R275, forward R278/R279, 2020 batch C1): many coins, market-neutral, paid by a known
    mechanism, maker-friendly.
 2. **Event shorts with point-in-time notices**: unlocks (R265/R266), delistings (R267/R268), Monitoring Tag
    (R269/R270), announcements (R271/R272). Each is small; together they are many uncorrelated bets.
-3. **A cross-family book of 1 and 2** (M281). This is the owner's "one strategy limits us".
+3. **A cross-family book of 1 and 2** (M281, now running forward as **R285 `xbook_fwd`**). This is the owner's "one
+   strategy limits us". In the archive the three families (carry, flow, events) have pairwise correlations of
+   0.000-0.014.
    - With N sleeves of Sharpe S at pairwise correlation ρ, the book's Sharpe is S·√(N / (1 + (N−1)ρ)).
    - At S = 0.75 and ρ = 0.1:
      - ten sleeves give 1.72;
@@ -92,6 +102,23 @@ Multi-Strategy Advisers, a $4B fund).
      significant, and there is no unread sample to confirm it on.
 5. **Headline reaction** (M279, M280): needs about 90 days of recording before a frozen family can read it.
 
+**The passive bar to beat.** A lab book is only worth trading if it beats what a deposit earns without any rule of
+ours, after its own risk.
+- T-bills: about 4%.
+- **HLP** (`scripts/fetch_hlp.py`, public vault history, 2-week steps):
+
+  | Period | Return |
+  |---|---|
+  | 2024 | +79% |
+  | 2025 | +19% |
+  | 2026 to 10-21 | +8.2% |
+  | Last 30 days | 4.3%/yr |
+
+  - 5 of 78 two-week steps lost money.
+  - Its drawdowns inside a step are not visible at this resolution, and its edge has shrunk as the vault grew.
+  - It carries exchange and contract risk.
+  - Depositing is the owner's decision (AGENTS.md rules 5-6). This lab only measures it.
+
 ## What not to take from these videos
 - 97% of persistent day traders lost money (Visser's caption), and the Odd Lots "degen" trader describes fast discretion.
   The lab's scalping axis (#73) stays an option, judged on MEXC order-book costs (R224).
@@ -100,7 +127,7 @@ Multi-Strategy Advisers, a $4B fund).
 
 ## Files
 - **Code:** `scripts/dig_videos.py` (search, pick, subs, grep), `scripts/dig_podcasts.py` (episodes, text),
-  `scripts/transcribe_audio.py`, `scripts/record_news.py`, `scripts/fetch_cboe.py`.
+  `scripts/transcribe_audio.py`, `scripts/record_news.py`, `scripts/fetch_cboe.py`, `scripts/fetch_hlp.py`.
 - **Data (gitignored):** `data/videos/` holds hits, picks, episodes and transcripts. `data/news/` holds the headline
   record. `data/cboe/` holds the vol curve.
-- **Rows:** `registry/methods.csv` M277-M281.
+- **Rows:** `registry/methods.csv` M277-M281, M285 and M286.
