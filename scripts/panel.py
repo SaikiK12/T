@@ -32,6 +32,10 @@ FORWARD = [
      "90 scored days through go_real plus NW t >= 2"),
     ("R214", "flow72_fwd3", "journal/status.json", {"A": "A one bar late", "B": "B one bar late"},
      "same days as R200, a delay check"),
+    ("R278", "xfund_fwd", "journal/status.json", {"A": "cross-venue carry, Gate + Hyperliquid",
+                                                  "B": "cross-venue carry, Binance + MEXC",
+                                                  "C": "cross-venue carry, Gate + MEXC (post hoc)"},
+     "NW t >= 2.5 at 90 / 180 scored days"),
 ]
 WAITING = [
     "Answered 2026-10-20: every public download approved (\"we need all data possible\"); execution mode both"
@@ -77,6 +81,11 @@ def forward_rows():
             on = s.get(f"{key}_ontime") or (s.get(key) or {}).get("ontime") or {}
             if lane == "flow72_fwd2":                   # R200 keeps one series per book; its `late` flag splits it
                 rep, on = r200_split(key)
+            if lane == "xfund_fwd":                     # R278 keeps flat totals per book; live = on-time + late days
+                b = s.get(key) or {}
+                rep = {"days": b.get("replay_days", 0), "total": b.get("replay_total")}
+                on = {"days": b.get("scored_days", 0), "total": b.get("total"), "total_2x": b.get("total_2x"),
+                      "total_3x": b.get("total_3x")} if b.get("scored_days") else {}
             rows.append({"lane": f"{rid} {lane}", "book": label, "replay": f"{rep.get('days', 0)} d {pct(rep.get('total'))}",
                          "on_time": f"{on.get('days', 0)} d {pct(on.get('total'))}" if on else "0 d",
                          "2x / 3x": f"{pct(on.get('total_2x'))} / {pct(on.get('total_3x'))}" if on else "-",

@@ -1,4 +1,5 @@
-# R277 xfund_kd_v1: R275's pre-committed book replicated on KuCoin and dYdX (qx spread). Frozen with PREREG.md; never edited afterwards.
+# R277 xfund_kd_v1: R275's best book (gate+hyperliquid L14d th5% K20) replicated, unchanged, on venue sets built only
+# on venues R275 never read (KuCoin, dYdX). Frozen with PREREG.md; never edited afterwards.
 name = "xfund_kd_v1"
 start = "2021-01-01"
 end = "2026-09-30"
@@ -15,9 +16,9 @@ sets = [
   ["gate", "kucoin"],
   ["kucoin", "dydx"],
 ]
-lookbacks = [BOOK_L]
-thresholds = [BOOK_TH]
-slots = [BOOK_K]
+lookbacks = [14]
+thresholds = [0.05]
+slots = [20]
 costs = [0.0007, 0.0014, 0.0021]
 corr_days = 30
 corr_min = 0.9
@@ -29,6 +30,6 @@ alpha = 0.05
 recent_from = "2025-01-01"
 trim = 0.01
 nw_lags = 10
-keep_daily = 10
+keep_daily = 4
 hurdle_ann_pct = 4.13
 out = "experiments/xfund_kd_v1/results"

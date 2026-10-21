@@ -1,0 +1,2122 @@
+{
+"folder": "data/kraken_hist",
+"source": "https://futures.kraken.com (public)",
+"script": "scripts/fetch_venue_history.py",
+"recorded_utc": "2026-10-21T02:44:17Z",
+"excluded": [],
+"files": 418,
+"bytes": 52679779,
+"combined_sha256": "4565c5ea8043903d7dd18853683cc17aaa0b7e25a62f749ef98b602030b0237f",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 27015
+},
+"open": {
+"files": 352,
+"bytes": 47425396
+},
+"raw": {
+"files": 1,
+"bytes": 943172
+},
+"reserved": {
+"files": 63,
+"bytes": 4284196
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "contracts.csv",
+"bytes": 13613,
+"sha256": "6b1f70832a77108de278e71c3ec3f58abf82583155120d74f968580030c1313c"
+},
+{
+"path": "manifest.json",
+"bytes": 13402,
+"sha256": "8b41f5c56dd566cf2c8dc3a0c002b14e2f1ce4a59076f2b530c64347219862ce"
+},
+{
+"path": "open/candles_1d/PF_1INCHUSD.parquet",
+"bytes": 68950,
+"sha256": "3602c0cdcb6423cf549299d459b6e924757cd8e6895ae07277cd00a95675875e"
+},
+{
+"path": "open/candles_1d/PF_AAVEUSD.parquet",
+"bytes": 63350,
+"sha256": "6ab3599c3eec9a6a1115d872e955d8b14ddfce73737bd839d8fe33aa5f1e7c18"
+},
+{
+"path": "open/candles_1d/PF_ACEUSD.parquet",
+"bytes": 33019,
+"sha256": "933cda7091d703f799513dbdfce02f8c19c46d3d44a44c1082fb05de5096874d"
+},
+{
+"path": "open/candles_1d/PF_ADAUSD.parquet",
+"bytes": 89537,
+"sha256": "d163542124135b674a75aee8b755b959a694d073c3172ab80c0eef0125bcedc9"
+},
+{
+"path": "open/candles_1d/PF_AGLDUSD.parquet",
+"bytes": 54482,
+"sha256": "6f4c193bb631eec89ba49902d5a5d0bf475dedafc26fd7ce87ccfc35ef05b054"
+},
+{
+"path": "open/candles_1d/PF_ALGOUSD.parquet",
+"bytes": 82545,
+"sha256": "3523af8f802e32c8734ca452dfeef286bf263633556aa4be970747fa7fdceee5"
+},
+{
+"path": "open/candles_1d/PF_ALICEUSD.parquet",
+"bytes": 63330,
+"sha256": "d49614d59c4adc863981901447beac87b17a368756422f943dc608bbd3c9787a"
+},
+{
+"path": "open/candles_1d/PF_AMDUSD.parquet",
+"bytes": 4058,
+"sha256": "cb0ef13b635c1b15f459b5fc817e9c947d92217b6a7ec4a9c584e944929d0d91"
+},
+{
+"path": "open/candles_1d/PF_APEUSD.parquet",
+"bytes": 73908,
+"sha256": "55fb7cc2e5a50f151d356c60d5768d020e3f62770ce29b65221e2e78d60cc243"
+},
+{
+"path": "open/candles_1d/PF_APTUSD.parquet",
+"bytes": 72302,
+"sha256": "0d3f80bdaddae12f5d318d639e85c843adbfa5fc2ed3f6ff7a71ede8ee5f4e92"
+},
+{
+"path": "open/candles_1d/PF_ARBUSD.parquet",
+"bytes": 61737,
+"sha256": "7812de7f4a43f1d79436e69adbd8c1528676dd920831c32a6b7ce6ef199e4728"
+},
+{
+"path": "open/candles_1d/PF_ARCUSD.parquet",
+"bytes": 34910,
+"sha256": "15534f1c16c680dbe9b1297f0fc281a413de0f293c9dd10acae86fb12944bace"
+},
+{
+"path": "open/candles_1d/PF_ASTERUSD.parquet",
+"bytes": 21672,
+"sha256": "ab240b2d7999ed18e9339dd4a260fbe39ff4b95b641f4cb555430f8146d1edb5"
+},
+{
+"path": "open/candles_1d/PF_ATOMUSD.parquet",
+"bytes": 68466,
+"sha256": "fb78a1a1e06de86e5740de6c1f5dae3730bb976676c873335574d07a8cb2c8a4"
+},
+{
+"path": "open/candles_1d/PF_AVAXUSD.parquet",
+"bytes": 66961,
+"sha256": "d7f0430b691ba7fdf6dd7e2a5fcde170edb838ab420e7a80ce17bfe78c2041cc"
+},
+{
+"path": "open/candles_1d/PF_AXSUSD.parquet",
+"bytes": 66770,
+"sha256": "9578d41f6f639289977b4f70579f1333ab9e11ace123596abaec579b9c81803e"
+},
+{
+"path": "open/candles_1d/PF_BATUSD.parquet",
+"bytes": 80424,
+"sha256": "6a5dd4570a3b12e1b87f3a1fd8e5939ee8d9117ecc385b3637bd1282bf4c21ce"
+},
+{
+"path": "open/candles_1d/PF_BBUSD.parquet",
+"bytes": 45108,
+"sha256": "d5757f6c04ea153f01e66686834c02c0ea0882099eb169c4eae14a92249dc461"
+},
+{
+"path": "open/candles_1d/PF_BCHUSD.parquet",
+"bytes": 68016,
+"sha256": "dd38a0faa78423bf6195e8dc8530f3180f3b3918e0662b56b7f8598a6874a7d1"
+},
+{
+"path": "open/candles_1d/PF_BICOUSD.parquet",
+"bytes": 46746,
+"sha256": "58bbe994c68c0b622e52148626513352b516591ef9b43016bee99fd80f416a89"
+},
+{
+"path": "open/candles_1d/PF_BIOUSD.parquet",
+"bytes": 34334,
+"sha256": "47c138411b48c68da3429a9b5d91e8892e0a73d0a942b44237c56641b895e43b"
+},
+{
+"path": "open/candles_1d/PF_BNBUSD.parquet",
+"bytes": 44417,
+"sha256": "e801f7c2aaf55c9c02ff3fdc0c7dc63556f8b2603196ed2aaaef6d0fd1b8cbde"
+},
+{
+"path": "open/candles_1d/PF_BOMEUSD.parquet",
+"bytes": 49978,
+"sha256": "413d06c3d634048ed0bb92f27dd1fa9deb69b4586bd478303e74b19480d7ff64"
+},
+{
+"path": "open/candles_1d/PF_BONKUSD.parquet",
+"bytes": 57632,
+"sha256": "38a89c0486272a3fe5c528fa7ccc3202cf4c2d2c75d5be8f6159c98184a74c31"
+},
+{
+"path": "open/candles_1d/PF_BRETTUSD.parquet",
+"bytes": 46031,
+"sha256": "8e8b94453df35e288db7dfad75d3e575b69a27eb2ecf4b19cbdbe4a05d42280c"
+},
+{
+"path": "open/candles_1d/PF_C98USD.parquet",
+"bytes": 44687,
+"sha256": "c3f1a0e0337b15d5c9c218f5c1964f8bb05167864aaff4d66ed353f52653fdfe"
+},
+{
+"path": "open/candles_1d/PF_CAKEUSD.parquet",
+"bytes": 34998,
+"sha256": "30b967f3391d0f708fa5f0548cf72113e4caa629158ef631a986d57772c8f023"
+},
+{
+"path": "open/candles_1d/PF_CATIUSD.parquet",
+"bytes": 36053,
+"sha256": "5e42f2ab4abf57bbb99c238492e5fa63403abcc667bd1db7022eff03e6d364f4"
+},
+{
+"path": "open/candles_1d/PF_CFGUSD.parquet",
+"bytes": 13896,
+"sha256": "94af810a638d0c66edeb3a72554f6c10da5a529db6a12de611931bbf82796c1b"
+},
+{
+"path": "open/candles_1d/PF_CFXUSD.parquet",
+"bytes": 61669,
+"sha256": "c6cc0b26c113048afc91d3cb5ac9388b86cad45d01018252ee0a8e871fc1d687"
+},
+{
+"path": "open/candles_1d/PF_CHILLGUYUSD.parquet",
+"bytes": 34969,
+"sha256": "6be61b7374e5d22317222959ce0b32fa0759f85f83c617629e1caa2b4b6f6f54"
+},
+{
+"path": "open/candles_1d/PF_CHZUSD.parquet",
+"bytes": 80909,
+"sha256": "f4f8915ba0cea821ba639a26293b5f64ab742d2be2fa55037901e2b336ea572f"
+},
+{
+"path": "open/candles_1d/PF_COMPUSD.parquet",
+"bytes": 65294,
+"sha256": "45de8d4417306dd46805e2bae1a62aa8e68c8bdf92cade74cea710725c8fcfdb"
+},
+{
+"path": "open/candles_1d/PF_COOKIEUSD.parquet",
+"bytes": 33004,
+"sha256": "36c6981e49ca82d03144eac40ffe7d375fde9e0e7e8a2aa3acdb9934e9938b5d"
+},
+{
+"path": "open/candles_1d/PF_CRVUSD.parquet",
+"bytes": 69099,
+"sha256": "ad38551bc8c08a468b236cbb51c1bbf8a101bda06e96508764df487513a143d8"
+},
+{
+"path": "open/candles_1d/PF_CTSIUSD.parquet",
+"bytes": 43900,
+"sha256": "f058a611395736cc83efe437b8ba0438b2216a2102c7e701f0ab0427a36e3a94"
+},
+{
+"path": "open/candles_1d/PF_CVXUSD.parquet",
+"bytes": 59809,
+"sha256": "03f3fb320291deba952b1117f31046bf78a3a18445556db7e54c6ccde873a16d"
+},
+{
+"path": "open/candles_1d/PF_DASHUSD.parquet",
+"bytes": 63214,
+"sha256": "0b6391326b928c2a7fdc4376d3043dc12b50f229ece86cb7cbedfdbd9e668c3f"
+},
+{
+"path": "open/candles_1d/PF_DEXEUSD.parquet",
+"bytes": 26753,
+"sha256": "d51fd88e1bc1b8a3a03d9bbd78700515a32f8ed908b1a6ccd6fab142e82abf6b"
+},
+{
+"path": "open/candles_1d/PF_DOGEUSD.parquet",
+"bytes": 86341,
+"sha256": "fd2c5c055ddc7c7be80cc573697302f41ef8149a3f59e1eb10ad474c59703277"
+},
+{
+"path": "open/candles_1d/PF_DOTUSD.parquet",
+"bytes": 68861,
+"sha256": "9b1edd1e52b3e458f4ae2879b32ac7df9ab2634dd16afcd2e32204511149ccbe"
+},
+{
+"path": "open/candles_1d/PF_DYDXUSD.parquet",
+"bytes": 68779,
+"sha256": "ffd6fb5b040b5bb385a28a1a6f67276a60b550f778b7fd9ac9809868aa2c8b9e"
+},
+{
+"path": "open/candles_1d/PF_EGLDUSD.parquet",
+"bytes": 57395,
+"sha256": "e48b30f3711924bcddf7e7c35dcb25aaf701442be96facdd11e6c993e63835ac"
+},
+{
+"path": "open/candles_1d/PF_EIGENUSD.parquet",
+"bytes": 38837,
+"sha256": "07bdfa4d099ffabd0126a554a7b4ad663ff9a8d2b96b198ff000afb0d28d8d12"
+},
+{
+"path": "open/candles_1d/PF_ENAUSD.parquet",
+"bytes": 47794,
+"sha256": "ef67fb2655c1e977e8a9437286503d213d9a9e660c1823b6ced0f4a9a136da58"
+},
+{
+"path": "open/candles_1d/PF_ENSUSD.parquet",
+"bytes": 62262,
+"sha256": "5ce966af04e59f3971c11e2245b1dc4a2250a85c359d0a8662dee1a7a6034fba"
+},
+{
+"path": "open/candles_1d/PF_ETCUSD.parquet",
+"bytes": 63889,
+"sha256": "5da354e67c329daa014d455714bd062efef49e53ba346149c31623597ecc9ffb"
+},
+{
+"path": "open/candles_1d/PF_ETHFIUSD.parquet",
+"bytes": 47567,
+"sha256": "85fd2190de04a30894a90a052bcd8db420f83ec91518400491a427166ccb29aa"
+},
+{
+"path": "open/candles_1d/PF_ETHUSD.parquet",
+"bytes": 67549,
+"sha256": "b238407d43fe117c5884093ca17ed7744e90e45fe611896c48455b98fa5d9c5a"
+},
+{
+"path": "open/candles_1d/PF_EWYUSD.parquet",
+"bytes": 4047,
+"sha256": "1a3ebccbad531e8c34f193b9d31f6a594e6777ee39f2e4d1e4ab8a9a9a222e9f"
+},
+{
+"path": "open/candles_1d/PF_FARTCOINUSD.parquet",
+"bytes": 33799,
+"sha256": "568be5e564bb6789308e424754c77d5995977a7dca72c8f93483ca81da257c2a"
+},
+{
+"path": "open/candles_1d/PF_FETUSD.parquet",
+"bytes": 63241,
+"sha256": "76bcd618afd57b968b7cbec5a769d9d7e27dabfb70a6f277c56c76784291a64d"
+},
+{
+"path": "open/candles_1d/PF_FILUSD.parquet",
+"bytes": 71070,
+"sha256": "cf1289b8e7855ff0fecb49692e60d9423db276bd498b38070de89c58ef0a40f7"
+},
+{
+"path": "open/candles_1d/PF_FLOKIUSD.parquet",
+"bytes": 48902,
+"sha256": "c54b6c1b7fb059f1058e097f60ae2fccd5fb734388f6ec2f732448f583d85f6f"
+},
+{
+"path": "open/candles_1d/PF_FLOWUSD.parquet",
+"bytes": 65175,
+"sha256": "61832eb314d60e42b73588db24f3831e974d68b81fe795960e1cdc2a2b1b304d"
+},
+{
+"path": "open/candles_1d/PF_GALAUSD.parquet",
+"bytes": 79649,
+"sha256": "67557a15c084f9990520e796313936d092829ded63a7b548e0883ae7d7b050f4"
+},
+{
+"path": "open/candles_1d/PF_GOATUSD.parquet",
+"bytes": 38932,
+"sha256": "eacfbe0acea13552a9bce220b35a26d134a143eb763a448ae88b620274796106"
+},
+{
+"path": "open/candles_1d/PF_GPSUSD.parquet",
+"bytes": 29554,
+"sha256": "08a79eff6ab618d01fdaca4484f4747fd89b0693273ffa0d7fe93b75d7d39954"
+},
+{
+"path": "open/candles_1d/PF_GRASSUSD.parquet",
+"bytes": 35131,
+"sha256": "a0dbf7dec5d0b5e8e82053d22139cfe5ed797217745caf873ebdda9055170aa4"
+},
+{
+"path": "open/candles_1d/PF_GRTUSD.parquet",
+"bytes": 79964,
+"sha256": "68ee5f0c3e5b797311f4ce7e54608fef1f7a9046736668b83da43a8f8a7dc73d"
+},
+{
+"path": "open/candles_1d/PF_HBARUSD.parquet",
+"bytes": 46805,
+"sha256": "df40282639412c092ec084e2875f634be0793f5fb03e1deb4aee33ec37c4cc7d"
+},
+{
+"path": "open/candles_1d/PF_HYPEUSD.parquet",
+"bytes": 30776,
+"sha256": "3511cf99733411ed9e6c445e0df7457fb536a2d7f00032b9791eeb9d98548440"
+},
+{
+"path": "open/candles_1d/PF_ICPUSD.parquet",
+"bytes": 59136,
+"sha256": "06538e3d4142f6d6ae1aeb2e5b3e37abeb44306673b95c3a02445a2e918e6e8f"
+},
+{
+"path": "open/candles_1d/PF_IMXUSD.parquet",
+"bytes": 65973,
+"sha256": "ff4b7189ec71f272afe0b6d5a62a09b9c8535b79b5e93c742bc83dc858ae6e46"
+},
+{
+"path": "open/candles_1d/PF_INJUSD.parquet",
+"bytes": 55522,
+"sha256": "52c407313d1b51d29747c86e56b476b9f78f62eb179981a1c86ab0cbb35b3ad5"
+},
+{
+"path": "open/candles_1d/PF_INTCUSD.parquet",
+"bytes": 5013,
+"sha256": "4c7611cd4a6266001209f9e044db50a096c184ebb3c8256087088136609ffac3"
+},
+{
+"path": "open/candles_1d/PF_IOTXUSD.parquet",
+"bytes": 35092,
+"sha256": "1869fd7f51a4190182d074bd2973c8af4fd0c17ce96fca35d1f27b17b5cad89e"
+},
+{
+"path": "open/candles_1d/PF_JASMYUSD.parquet",
+"bytes": 68612,
+"sha256": "9b19c90e25ef061d5952edee78ff9fad671bc2c17f1b49d8b6b9775706fa1789"
+},
+{
+"path": "open/candles_1d/PF_JTOUSD.parquet",
+"bytes": 49575,
+"sha256": "4d8eac92980f91fe626743eb6d663e331afa9b9b31a65a6a99437d43e3d90279"
+},
+{
+"path": "open/candles_1d/PF_JUPUSD.parquet",
+"bytes": 46189,
+"sha256": "fb6b8fa835fb3be2d73ca7ce7f141d38a3fce5bf86934db50dc5112a92ec56f4"
+},
+{
+"path": "open/candles_1d/PF_KAIAUSD.parquet",
+"bytes": 34859,
+"sha256": "5c7f5b467cf4d5180dabd4b1a6d3257f790cb4000ab20aca54c739c88b7c89f5"
+},
+{
+"path": "open/candles_1d/PF_KAITOUSD.parquet",
+"bytes": 30074,
+"sha256": "24ef0c501391669bddc1f577d7444082f852b7182bc7a44580ddb463fe8e8fea"
+},
+{
+"path": "open/candles_1d/PF_KASUSD.parquet",
+"bytes": 54285,
+"sha256": "ae78a7e1d1114260287039095f9327fc3467143a786e4beb53d8bfd90ee2129b"
+},
+{
+"path": "open/candles_1d/PF_KAVAUSD.parquet",
+"bytes": 66855,
+"sha256": "fd3c1164fc0493163332a8859d9be631aed63c4b089d5d786364f37684a5812c"
+},
+{
+"path": "open/candles_1d/PF_LDOUSD.parquet",
+"bytes": 63733,
+"sha256": "fade1f49c72a17e0037b4827a786a4a0c1d12648998ff52297bc471d68a1d0f5"
+},
+{
+"path": "open/candles_1d/PF_LINKUSD.parquet",
+"bytes": 69125,
+"sha256": "360c1bd9aa8e68ed36848bfd5765056ef6de07fc9014e01e628d4b73e5baa16d"
+},
+{
+"path": "open/candles_1d/PF_LPTUSD.parquet",
+"bytes": 63159,
+"sha256": "981e2e436d54aeaa4dd278fe667e6ad755679180cae9209dda43452f305ae74e"
+},
+{
+"path": "open/candles_1d/PF_LQTYUSD.parquet",
+"bytes": 30900,
+"sha256": "41f861d7e0bab4e54170a04918ebf61ca9b3c1a675de03fba6385501103564ab"
+},
+{
+"path": "open/candles_1d/PF_LTCUSD.parquet",
+"bytes": 65764,
+"sha256": "a2882bf3fd2484bb16cb44c373e0b8295cbcfed7d50d212820126fbef85def2c"
+},
+{
+"path": "open/candles_1d/PF_LUNA2USD.parquet",
+"bytes": 59927,
+"sha256": "9ca56bda2aaaa9301bd8e8774eaf2cc7385e73bc8f49f8edf2129c48f4659af4"
+},
+{
+"path": "open/candles_1d/PF_MANAUSD.parquet",
+"bytes": 67944,
+"sha256": "de142b5bf8bce8bb7d921c7f3e4f6d3de206e8c2afdd1b3174c6c3140419fa09"
+},
+{
+"path": "open/candles_1d/PF_MELANIAUSD.parquet",
+"bytes": 31515,
+"sha256": "71d2e093bc66c1b34449aa515074e874dfeade3d53a6883a07f0a98e9025170f"
+},
+{
+"path": "open/candles_1d/PF_MEWUSD.parquet",
+"bytes": 47560,
+"sha256": "5eb5e29ad64602f3940494e461153285e049b382ffc8aee28ed38db5021058df"
+},
+{
+"path": "open/candles_1d/PF_MOGUSD.parquet",
+"bytes": 42801,
+"sha256": "122129d7204f04b4c5fb7156d91657d368f450e1df416b94276be6f61a2425a4"
+},
+{
+"path": "open/candles_1d/PF_MONUSD.parquet",
+"bytes": 16566,
+"sha256": "61ec1d7eef6d31c8281a603faa6d0c04348256de7719529f5d612d011aedad85"
+},
+{
+"path": "open/candles_1d/PF_MOODENGUSD.parquet",
+"bytes": 39954,
+"sha256": "aad77fe406aae941ad646a9dc7024878c194e3c41ec985448cf63edec8952804"
+},
+{
+"path": "open/candles_1d/PF_MORPHOUSD.parquet",
+"bytes": 36300,
+"sha256": "cf9972f6cebac2d5dd52a5cdce6e81624c3e920a476c907ed1b8b50fd674d8c1"
+},
+{
+"path": "open/candles_1d/PF_MOVRUSD.parquet",
+"bytes": 37843,
+"sha256": "35ecbcc321eb349015731e58da467fc069f31e984cc5ee10839f9d4bf4859cbc"
+},
+{
+"path": "open/candles_1d/PF_MRVLUSD.parquet",
+"bytes": 4055,
+"sha256": "b47ac93a08f3f8c01fcea0455ba864828a6ec3a6ab0011840ca504be096735ba"
+},
+{
+"path": "open/candles_1d/PF_MUBARAKUSD.parquet",
+"bytes": 27603,
+"sha256": "0a923243b11a82f28eff9a2d3a817e9ee6f4105ff7d38b1d9d0adbd263223ae0"
+},
+{
+"path": "open/candles_1d/PF_MUUSD.parquet",
+"bytes": 5022,
+"sha256": "93ce358c562b3a81e56369de2a346228d2d50876aff22de9f14f2d196bc3c9c6"
+},
+{
+"path": "open/candles_1d/PF_NATGASUSD.parquet",
+"bytes": 7172,
+"sha256": "b86037306ad511e3ffdaefca1303c8be71a0b939c00c2bc71add1399d3f34e05"
+},
+{
+"path": "open/candles_1d/PF_NBISUSD.parquet",
+"bytes": 5755,
+"sha256": "ea21c28830bb137753ae13b26898f5396fa57a62b19de228c14b6fd2ec51de93"
+},
+{
+"path": "open/candles_1d/PF_NEARUSD.parquet",
+"bytes": 78113,
+"sha256": "9282a60edc231660788b721f3b91b87c57b989fc12c7e6c7d222432eae0c8bb3"
+},
+{
+"path": "open/candles_1d/PF_NEIROUSD.parquet",
+"bytes": 41621,
+"sha256": "27ccc30e98e7d479706833542539633937d300e79d0c16e91b96a3dc100420ae"
+},
+{
+"path": "open/candles_1d/PF_NIGHTUSD.parquet",
+"bytes": 19241,
+"sha256": "f8e28be1a2f39973b293ef47bf792d9b3d98064db998f48e1ae08fa6e45d68fb"
+},
+{
+"path": "open/candles_1d/PF_NOTUSD.parquet",
+"bytes": 45525,
+"sha256": "c021106b709ba2de4b0861cfcd839931db23635600587eb537034c96d955c494"
+},
+{
+"path": "open/candles_1d/PF_ONDOUSD.parquet",
+"bytes": 43677,
+"sha256": "e5b082b1ca83f9f3eeb7706cd4f33a093f1e793a3a96fbe17b874e3db6f22840"
+},
+{
+"path": "open/candles_1d/PF_ONTUSD.parquet",
+"bytes": 34709,
+"sha256": "4dfb693bf693dabdc20d8e24ea6a602e8dcd0cd6e3dd869be946e6f3b15e2f52"
+},
+{
+"path": "open/candles_1d/PF_OPENUSD.parquet",
+"bytes": 16778,
+"sha256": "a79982073b3604df6b6013b5e54523a01d8852c0cb930244639b6aebe65a7611"
+},
+{
+"path": "open/candles_1d/PF_OPNUSD.parquet",
+"bytes": 13215,
+"sha256": "00ec2a4a64c50c2955f8cac9a28c4e8d2dff571af9a3a06738e8d445aefd87a3"
+},
+{
+"path": "open/candles_1d/PF_OPUSD.parquet",
+"bytes": 73562,
+"sha256": "22d434fbccc58520f5c49e0895133a78d5a73017167407f9f0ff62e3ff5dc6af"
+},
+{
+"path": "open/candles_1d/PF_ORDIUSD.parquet",
+"bytes": 43738,
+"sha256": "41a2536692d7290fb715f5c184a0ad5d6936ec38fbd9c0b7698a8e3d39c40e2c"
+},
+{
+"path": "open/candles_1d/PF_PAXGUSD.parquet",
+"bytes": 44887,
+"sha256": "c551b2680b431152c59178ebe8ebb9b8c9a74bea21f24e355ee69a516cfb3b03"
+},
+{
+"path": "open/candles_1d/PF_PENDLEUSD.parquet",
+"bytes": 36905,
+"sha256": "562d2b3508004101dbc2e3258ee00475776ba57c9ac2b651c660bca017ed49d8"
+},
+{
+"path": "open/candles_1d/PF_PENGUUSD.parquet",
+"bytes": 37728,
+"sha256": "f57e5ef761994153fee0ec5a75beba7c45b543b19db3c5b083f2cd3d44f29f3f"
+},
+{
+"path": "open/candles_1d/PF_PEOPLEUSD.parquet",
+"bytes": 45863,
+"sha256": "99ec1b7428978123c6556cafc40e4b34f0cb3b69559711664c9eb41ecb4dd45e"
+},
+{
+"path": "open/candles_1d/PF_PEPEUSD.parquet",
+"bytes": 70034,
+"sha256": "ad1979066ce9c8ab3d5f273dea59514832d8398262937173b040614200dd81f0"
+},
+{
+"path": "open/candles_1d/PF_PIXELUSD.parquet",
+"bytes": 41497,
+"sha256": "9e8e7cbbe211e1d5e199104342d1f95e62e4fd4215621f7c96d65bca1e71f184"
+},
+{
+"path": "open/candles_1d/PF_PNUTUSD.parquet",
+"bytes": 37985,
+"sha256": "6f2aa782bbd5d6eb6945ad98717425bd3bcb041a736378cd93e70e00966ac28f"
+},
+{
+"path": "open/candles_1d/PF_POLUSD.parquet",
+"bytes": 42306,
+"sha256": "7f32c3bcb7be9189aeea03496dc01dc458c570a7ba5b56b8ebb14823b2d77bc6"
+},
+{
+"path": "open/candles_1d/PF_PONSUSD.parquet",
+"bytes": 5066,
+"sha256": "37ea9c50e4d9475c10816aa95e078a02d2b334c8aa60ce2cc706eb49ec452e22"
+},
+{
+"path": "open/candles_1d/PF_POPCATUSD.parquet",
+"bytes": 47022,
+"sha256": "4138d7e4d66d2935542b664f5424947c639a60318831f933f16fc47b34096ca7"
+},
+{
+"path": "open/candles_1d/PF_PORTALUSD.parquet",
+"bytes": 43063,
+"sha256": "585824b5936ac231c86b9620ef34109a8cedd055362f33e08cbb29015133f260"
+},
+{
+"path": "open/candles_1d/PF_PUMPUSD.parquet",
+"bytes": 26486,
+"sha256": "53d352443d2560529f3b0053643ed32a87af26b0d748fd8e26f943ab4f1556ca"
+},
+{
+"path": "open/candles_1d/PF_PYTHUSD.parquet",
+"bytes": 57400,
+"sha256": "3d97917d1b898f377a005afb91b466ef165569f134faff818123b50a1dc96304"
+},
+{
+"path": "open/candles_1d/PF_QNTUSD.parquet",
+"bytes": 56322,
+"sha256": "d225d1a757a7d3d2e4a1ef0d4f38df8b83cb5a61e6bacc5e12ee7af00bc12790"
+},
+{
+"path": "open/candles_1d/PF_QTUMUSD.parquet",
+"bytes": 64998,
+"sha256": "4b4b3b05c28060274f8ddd7f127fabefccf06e84c23f4f1276d5190f9560a8d9"
+},
+{
+"path": "open/candles_1d/PF_RAYUSD.parquet",
+"bytes": 36507,
+"sha256": "9f0b8a0cf45329bee3a382b93d35ded8658c1cd11835fe795d9d1214fbf50eae"
+},
+{
+"path": "open/candles_1d/PF_RENDERUSD.parquet",
+"bytes": 42513,
+"sha256": "154bcdb1cb57e8e189cc32baa66e00cea2b67d6e826074a04f5a20d6127f5c3d"
+},
+{
+"path": "open/candles_1d/PF_RIVERUSD.parquet",
+"bytes": 15846,
+"sha256": "c8da84d39058e45ceb8c556a8e22ecaf887b1c4122de98ee6883c8bceb7439d9"
+},
+{
+"path": "open/candles_1d/PF_ROSEUSD.parquet",
+"bytes": 36641,
+"sha256": "aeeecff05c2d8e5e07abc595afc02cdba2498155dacad1e1c3e4a46a633ca950"
+},
+{
+"path": "open/candles_1d/PF_RSRUSD.parquet",
+"bytes": 40222,
+"sha256": "77d7b4f46218f3cecd826d4655763c2a5a97ed5c59203e9e53b67d0d2b27de33"
+},
+{
+"path": "open/candles_1d/PF_RUNEUSD.parquet",
+"bytes": 68102,
+"sha256": "33c70e7f66b6f6e42272e7c488b88dd3c7df4e415723fbddb13d8b5f4e315fbf"
+},
+{
+"path": "open/candles_1d/PF_SAGAUSD.parquet",
+"bytes": 41336,
+"sha256": "8f7e7f47600939639576f693fccfc2ffa13346fda621ce5175a68f89603a81ea"
+},
+{
+"path": "open/candles_1d/PF_SAMSUNGUSD.parquet",
+"bytes": 5765,
+"sha256": "d7882572e20639166af5813a532b48f1296153aa603808e67611d09c116d4ffc"
+},
+{
+"path": "open/candles_1d/PF_SANDUSD.parquet",
+"bytes": 71095,
+"sha256": "a9ec3bdcf22d78050b897a0d90d0fada8739db51e88c3eec44e94885f73c7acb"
+},
+{
+"path": "open/candles_1d/PF_SEIUSD.parquet",
+"bytes": 51743,
+"sha256": "83295682dcbd300ee3c77da98cde2e5c6baf59946ad51e85cc33738d8707497e"
+},
+{
+"path": "open/candles_1d/PF_SHIBUSD.parquet",
+"bytes": 68065,
+"sha256": "de45f8d50adc1e1fb69b0278b16db7180886f92fb8a8f7698d68c25ae9e0f307"
+},
+{
+"path": "open/candles_1d/PF_SKHYUSD.parquet",
+"bytes": 5793,
+"sha256": "e12012e45c919dad15dc5cc6c75451afe953bc2b7a56e60b5012b456cfe0e45f"
+},
+{
+"path": "open/candles_1d/PF_SNDKUSD.parquet",
+"bytes": 5586,
+"sha256": "3d7b4d3b7479cbee3338e5cf6a3cff872fd7c4da96979cb5c8f5e783a2eda1ef"
+},
+{
+"path": "open/candles_1d/PF_SNXUSD.parquet",
+"bytes": 71971,
+"sha256": "12e733e0b5e0a9724df8cf190980ee6bdafcd45b56dfc12bc2bba493475bf86a"
+},
+{
+"path": "open/candles_1d/PF_SOLUSD.parquet",
+"bytes": 68210,
+"sha256": "8932205ad57916407ea284f27022098f78f9f01de69628c4f050fc9c4e9038b6"
+},
+{
+"path": "open/candles_1d/PF_SOONUSD.parquet",
+"bytes": 19532,
+"sha256": "07c75e9fde2925a2e389956b57ea665156d85dec6bd7532ba4df70b403f2ed44"
+},
+{
+"path": "open/candles_1d/PF_SOXLUSD.parquet",
+"bytes": 5751,
+"sha256": "704d41186a440c12af7d43dc257ab8870c4f0ef55a4b8d930ff020b4d3dd08db"
+},
+{
+"path": "open/candles_1d/PF_SOXSUSD.parquet",
+"bytes": 5728,
+"sha256": "d40de986456e349e2519217b090c05714fbbd01bc173b7e789c5d0511b9a0303"
+},
+{
+"path": "open/candles_1d/PF_SPKUSD.parquet",
+"bytes": 26330,
+"sha256": "0b88924dcb6759a4ffb415ddf86a5cbba449a880f4abd100a2dd17d2135baa0f"
+},
+{
+"path": "open/candles_1d/PF_SPXUSD.parquet",
+"bytes": 33984,
+"sha256": "3cc39b69cfce9e345e745840b2b59ff15bafc525b415172a988cacf471804e5a"
+},
+{
+"path": "open/candles_1d/PF_SSVUSD.parquet",
+"bytes": 29039,
+"sha256": "d253143a1ee138b2245aa7246f1b04a7ceb7a664e69bef3ce2510b9c8bc94251"
+},
+{
+"path": "open/candles_1d/PF_STRKUSD.parquet",
+"bytes": 49545,
+"sha256": "9721a16481da3f62da7c54f993910b86da4b49fa8aee8057b9a3c937aacdce67"
+},
+{
+"path": "open/candles_1d/PF_STXUSD.parquet",
+"bytes": 59524,
+"sha256": "66a6c0d0b6cc7968f382040db82c0343ef895520a872c50f238b83b7e49564bd"
+},
+{
+"path": "open/candles_1d/PF_SUIUSD.parquet",
+"bytes": 60605,
+"sha256": "6bec9f9914138eaa455494821d2b235195e555c630a21b8d4ae67c634d773d3c"
+},
+{
+"path": "open/candles_1d/PF_SUPERUSD.parquet",
+"bytes": 43897,
+"sha256": "47e453d87a3a2f603159908ef65cfb16c993bb529a641798997f01acec655394"
+},
+{
+"path": "open/candles_1d/PF_SUSHIUSD.parquet",
+"bytes": 65948,
+"sha256": "cdf63ca63651d797a615ff8903da7c146f92bb96036f2fe410d75e4954445c3c"
+},
+{
+"path": "open/candles_1d/PF_SYNUSD.parquet",
+"bytes": 37244,
+"sha256": "ddd028a19ddcab9118ae03c0ef9f0de74eda1448f9b8db51e6bf86e6f7339084"
+},
+{
+"path": "open/candles_1d/PF_SYRUPUSD.parquet",
+"bytes": 27942,
+"sha256": "907100f1fa28e6bcdfade1e1b5adeb5374d6e7247fbe1685b2bdfdf912cb86ad"
+},
+{
+"path": "open/candles_1d/PF_TAOUSD.parquet",
+"bytes": 36416,
+"sha256": "1de5b64f7136264138174cdf93f250b5df32fc45c53a15d045f52a681b8c84f1"
+},
+{
+"path": "open/candles_1d/PF_TIAUSD.parquet",
+"bytes": 53476,
+"sha256": "6f1bdae4870bbe2c5ea53af0c529e1c37f6fcad6f542770e8c9b6b9f0e52aca3"
+},
+{
+"path": "open/candles_1d/PF_TLMUSD.parquet",
+"bytes": 39871,
+"sha256": "fc36e05a97eac7130f87a4393d97b71c67a6490c1d61b0bb9e93490c64df5520"
+},
+{
+"path": "open/candles_1d/PF_TRBUSD.parquet",
+"bytes": 33928,
+"sha256": "48e02b3a88ebdacec1d8ae1f79ffbeb625d7855a4d0f649e5ea6714e5d9faea1"
+},
+{
+"path": "open/candles_1d/PF_TRUMPUSD.parquet",
+"bytes": 29810,
+"sha256": "009ce9fd16fbbdf9c0a43579bf6bded03e6b78f2e1efc52b69964a858c44bad3"
+},
+{
+"path": "open/candles_1d/PF_TRXUSD.parquet",
+"bytes": 84992,
+"sha256": "210a9236d9744c7817b0f7ddc8893cd98f5c8420b50bb17137c291c564d0eee0"
+},
+{
+"path": "open/candles_1d/PF_TURBOUSD.parquet",
+"bytes": 48208,
+"sha256": "b259e74d9fcf9c9247fbdf7c30084bb85cdc14e5c1da49d6fc6b5e01b396bb4e"
+},
+{
+"path": "open/candles_1d/PF_UNIUSD.parquet",
+"bytes": 66598,
+"sha256": "65552b8dbf0e76b2b59996b0717248e4bab94a97b2973e2e450e9a3b4b79d3e5"
+},
+{
+"path": "open/candles_1d/PF_USDCUSD.parquet",
+"bytes": 23263,
+"sha256": "2c5480d59dba104c25dcc8d6cac660dd0a1be00e4bba0d3f0b3d85c9f11fc736"
+},
+{
+"path": "open/candles_1d/PF_USUALUSD.parquet",
+"bytes": 34386,
+"sha256": "7a155a6c41b78f5b0d9f1ddff314714e9d1b4e9215c193649c1d21253c077a3b"
+},
+{
+"path": "open/candles_1d/PF_VIRTUALUSD.parquet",
+"bytes": 33205,
+"sha256": "3e75ff662ddb4ffec79cdf5864a770c14968193b493fdf77df91563b340bfc63"
+},
+{
+"path": "open/candles_1d/PF_WIFUSD.parquet",
+"bytes": 47855,
+"sha256": "77a23aeb1477a8b13f7a2f5a9ef29ddd2beb81e9ad87a525ea790374b07c332f"
+},
+{
+"path": "open/candles_1d/PF_WLDUSD.parquet",
+"bytes": 55820,
+"sha256": "f1eb0e2769451a9739544a70e24afdca418a9bd92b7da7b54564cadda5b863d8"
+},
+{
+"path": "open/candles_1d/PF_WLFIUSD.parquet",
+"bytes": 24103,
+"sha256": "ccc070b3a22e0c4c6f545f8697c506d83224548b5705b4becf3d7a4919ebe333"
+},
+{
+"path": "open/candles_1d/PF_WUSD.parquet",
+"bytes": 47185,
+"sha256": "497cf754bc46278f8f17da059dabb9b788205efc8cd6f148e87758b41751ed8c"
+},
+{
+"path": "open/candles_1d/PF_XAGUSD.parquet",
+"bytes": 8269,
+"sha256": "7fa57ae9b53c08d95187281ba0bad48a9c87baf7e21b9f7a0aada198c2c6587b"
+},
+{
+"path": "open/candles_1d/PF_XAUTUSD.parquet",
+"bytes": 18655,
+"sha256": "d593dd37cb1abb059913224dde9410bc8fca24499e4b63bcfa57ddbe7f248c48"
+},
+{
+"path": "open/candles_1d/PF_XAUUSD.parquet",
+"bytes": 7200,
+"sha256": "213625d337aac723a3fea6fb54054e6f9c212436174d8a40aad44f39b4abe363"
+},
+{
+"path": "open/candles_1d/PF_XBTUSD.parquet",
+"bytes": 73128,
+"sha256": "b35a0bf326df80f1c0630005edbcfffa5e91f3e5ea8d16d3ce97cc42b317ab65"
+},
+{
+"path": "open/candles_1d/PF_XLMUSD.parquet",
+"bytes": 82505,
+"sha256": "7dab03d9c8e7e24064e0ae7461f0674e5a3bccb5f1ed64b5ee3fe3ba727fc0ae"
+},
+{
+"path": "open/candles_1d/PF_XMRUSD.parquet",
+"bytes": 65931,
+"sha256": "e20d0e4ddddaae593bfb6f2d44966a5cb1e16112ea75ce68f200dd201853dc20"
+},
+{
+"path": "open/candles_1d/PF_XPLUSD.parquet",
+"bytes": 20513,
+"sha256": "a0453afb92c7b62791da853a5368b002c2cb661be714ead693199bc5369b1e0b"
+},
+{
+"path": "open/candles_1d/PF_XRPUSD.parquet",
+"bytes": 89901,
+"sha256": "c24bc71cdaaab34aaa113a57acce0880d422ed150ff8c446ad4b139d44f11717"
+},
+{
+"path": "open/candles_1d/PF_XTZUSD.parquet",
+"bytes": 68486,
+"sha256": "26996a961047dde1ef7b136790580e453a1be353faf31683e577396a975d766f"
+},
+{
+"path": "open/candles_1d/PF_YFIUSD.parquet",
+"bytes": 60958,
+"sha256": "718e25294eb6630b2f90f031bd15bebe07517408181e536103ab4642aac23779"
+},
+{
+"path": "open/candles_1d/PF_ZBTUSD.parquet",
+"bytes": 17515,
+"sha256": "5d25a56269050bdea4fb35315e1a3f01dae679863245f0c0623b5193cb794209"
+},
+{
+"path": "open/candles_1d/PF_ZECUSD.parquet",
+"bytes": 59160,
+"sha256": "0cd5d250aea317eb49051c81521f63fe0e813b8375aec7d5b882c795eaf7ddbf"
+},
+{
+"path": "open/candles_1d/PF_ZENUSD.parquet",
+"bytes": 30489,
+"sha256": "43797730748cca09b84d4d5350ad6bed84d18d3beda0aeb98df0fbc372d517c0"
+},
+{
+"path": "open/candles_1d/PF_ZKUSD.parquet",
+"bytes": 45167,
+"sha256": "dc51a515725163625b9d55356b5d66861a52de80b4c1068a9dc9415f675c089a"
+},
+{
+"path": "open/candles_1d/PF_ZROUSD.parquet",
+"bytes": 42626,
+"sha256": "ebb55b85438a7ebd2d906dbc7191aaf53705695fb598ab7290bc848077705986"
+},
+{
+"path": "open/funding/PF_1INCHUSD.parquet",
+"bytes": 245698,
+"sha256": "dc3acf4d2e20f8ef3bd7dae75e03ab27ed8bea2299154043e606b8ebe8bed1ab"
+},
+{
+"path": "open/funding/PF_AAVEUSD.parquet",
+"bytes": 245850,
+"sha256": "d06f13923ae6fe527d90a01a0c9ae175763e7c0c0a6faf7a88aff0b1941fb7d1"
+},
+{
+"path": "open/funding/PF_ACEUSD.parquet",
+"bytes": 244730,
+"sha256": "0cba208a1e361cffe8c08a7ef5f9e9cb522d59b6558a1c82aa552901bc683d03"
+},
+{
+"path": "open/funding/PF_ADAUSD.parquet",
+"bytes": 245850,
+"sha256": "38203e584ef4d7d7693ab3c003aa0bf787e52cbab09a90688918993a3efcf0ee"
+},
+{
+"path": "open/funding/PF_AGLDUSD.parquet",
+"bytes": 242357,
+"sha256": "516075c10b64e922eb14bacc24b717aead6ef4d9b20b4f46154777fc9d520fc0"
+},
+{
+"path": "open/funding/PF_ALGOUSD.parquet",
+"bytes": 245826,
+"sha256": "1ef9385d4d8fc7b312d16f39071b0a40f16dc2e0544fbfb910a74f9da6b17ddd"
+},
+{
+"path": "open/funding/PF_ALICEUSD.parquet",
+"bytes": 243582,
+"sha256": "92cac54c80da879e2a93657edbf79efbf3afefb4d8de1706dbe84f7022ef8390"
+},
+{
+"path": "open/funding/PF_AMDUSD.parquet",
+"bytes": 5594,
+"sha256": "fee2b70fefc3648b8a09df8c215ac909e78f8b3726d39853614ccbc1f5150c2d"
+},
+{
+"path": "open/funding/PF_APEUSD.parquet",
+"bytes": 245810,
+"sha256": "d895afc61c4de84a242c1878a68471a7059074d8cf75bd67184ffff407a053c6"
+},
+{
+"path": "open/funding/PF_APTUSD.parquet",
+"bytes": 245850,
+"sha256": "805d9281dd03846b4e2e74dc649af382856abaaa5d0e719a33290e6a67fab63c"
+},
+{
+"path": "open/funding/PF_ARBUSD.parquet",
+"bytes": 245818,
+"sha256": "ae67b7d04f258f6533a2e38857e3d28aeda8cfcffa699eb7c71dfb8c6e3a30dd"
+},
+{
+"path": "open/funding/PF_ARCUSD.parquet",
+"bytes": 245650,
+"sha256": "8fbf142873edf1fa6f253dd004f9fa4abe1f80886a18ea3be25fce8ebbd0e0db"
+},
+{
+"path": "open/funding/PF_ASTERUSD.parquet",
+"bytes": 245770,
+"sha256": "6a0554a42031f7901c81c1463f5bedfa1b1d576e76dd5dcda46c42c1fc62c841"
+},
+{
+"path": "open/funding/PF_ATOMUSD.parquet",
+"bytes": 245850,
+"sha256": "d1035944e1814d944b68989583bf3ea9d908821580492c7f908ca49225c5148c"
+},
+{
+"path": "open/funding/PF_AVAXUSD.parquet",
+"bytes": 245850,
+"sha256": "533b323aad507c1d7a10a03382203aa6d333bc6353378cdb9c9a818a12e8676d"
+},
+{
+"path": "open/funding/PF_AXSUSD.parquet",
+"bytes": 245746,
+"sha256": "c7afb3d89bcc4804a24160a7fdc80652d8a79532e1794f6c64a205bf22ca5047"
+},
+{
+"path": "open/funding/PF_BATUSD.parquet",
+"bytes": 245450,
+"sha256": "3e338e3dfeeb722f17a8289e97c0158f3643753cda6db630fb43827e0a1dbfea"
+},
+{
+"path": "open/funding/PF_BBUSD.parquet",
+"bytes": 244682,
+"sha256": "182ec058b970921145b8490cd1267cafa0304f1a55597c919a9333dbfde8d54b"
+},
+{
+"path": "open/funding/PF_BCHUSD.parquet",
+"bytes": 245818,
+"sha256": "dfb90f89256884ba154788260724eeaacdc5aed3e4b6de306b7809550fb138ec"
+},
+{
+"path": "open/funding/PF_BICOUSD.parquet",
+"bytes": 244264,
+"sha256": "7ed76cbfc46b394a05a5e13b9365ec644c964bbccfbcb0ad910ed9786bd242a4"
+},
+{
+"path": "open/funding/PF_BIOUSD.parquet",
+"bytes": 241735,
+"sha256": "6ee0c823e0f60188e81b2c3d353a268be26b9cd9b621bc21684dec7e88467228"
+},
+{
+"path": "open/funding/PF_BNBUSD.parquet",
+"bytes": 245858,
+"sha256": "73ad976344957be703abc6a8e6bf8f07a0068c6d87efe84323e2a2b80a283c5c"
+},
+{
+"path": "open/funding/PF_BOMEUSD.parquet",
+"bytes": 245162,
+"sha256": "17ac7375c0a9399025e96f72096118d3b4d8402be977d3e86184e33c64c2303f"
+},
+{
+"path": "open/funding/PF_BONKUSD.parquet",
+"bytes": 245850,
+"sha256": "10c51310fee2d5ea2cf46b79443dc661340d831cc193280fb07780a10700c995"
+},
+{
+"path": "open/funding/PF_BRETTUSD.parquet",
+"bytes": 240552,
+"sha256": "0595f0678ca1920e6312e848fb60047d28abc57289e67ff163f7d965827cd9c5"
+},
+{
+"path": "open/funding/PF_C98USD.parquet",
+"bytes": 244112,
+"sha256": "b0d93dc310a89b7034d8eaa9abdced16218030881ea302b6fa13249a39efbfa5"
+},
+{
+"path": "open/funding/PF_CAKEUSD.parquet",
+"bytes": 243303,
+"sha256": "390a81c2c381909c37a9d1ec89ad18bd2f7cd75eb61ce2b34a57b94e38e482cf"
+},
+{
+"path": "open/funding/PF_CATIUSD.parquet",
+"bytes": 244277,
+"sha256": "6bbc5cabaaa785a35e5843aa5c5de14fec9aa85dc3aa5902085eb34111d97cd8"
+},
+{
+"path": "open/funding/PF_CFGUSD.parquet",
+"bytes": 141499,
+"sha256": "3fe8da0bc3957d6c2b1430695be0900151cef9456395cbc7d23356c4eb00e155"
+},
+{
+"path": "open/funding/PF_CFXUSD.parquet",
+"bytes": 245586,
+"sha256": "f063b2c033fbcdee0a76e3f39204f4e7db0052ea7a124d41557fda2003476bad"
+},
+{
+"path": "open/funding/PF_CHILLGUYUSD.parquet",
+"bytes": 243663,
+"sha256": "5e2ed4e6a7a801b9a88769f251d0bd487380610f5851a9378b5f8abad5bc3d30"
+},
+{
+"path": "open/funding/PF_CHZUSD.parquet",
+"bytes": 245834,
+"sha256": "49c92f769ae54cae290f006c70ccc0f6a330307502a826242ca4a7c64d453227"
+},
+{
+"path": "open/funding/PF_COMPUSD.parquet",
+"bytes": 245818,
+"sha256": "78b6ab55bcea7e61fa485151208dfe1015796d748ed04c92806e9256124ef4a2"
+},
+{
+"path": "open/funding/PF_COOKIEUSD.parquet",
+"bytes": 243605,
+"sha256": "4049ab954f498d974554dabfcb61dcbe7cc923a194bc8ff39e253ffc6116fd1f"
+},
+{
+"path": "open/funding/PF_CRVUSD.parquet",
+"bytes": 245842,
+"sha256": "7d52a5d87bcce046c9ef0d3ce64c9d94fcf176e6b990e905c904a23edaa252cd"
+},
+{
+"path": "open/funding/PF_CTSIUSD.parquet",
+"bytes": 245066,
+"sha256": "853a8596665b42914a3b9bb5350ca0e1f37583fdd2929e070dd663f158f8e100"
+},
+{
+"path": "open/funding/PF_CVXUSD.parquet",
+"bytes": 243624,
+"sha256": "cc1acefff82b7cec804befa98ba7f7bf55f78e699fbe93965f18ff4daf969698"
+},
+{
+"path": "open/funding/PF_DASHUSD.parquet",
+"bytes": 245858,
+"sha256": "6c8dcdec23896f18c647830e1f06d5b6d9890a91823296af01f3828212e08841"
+},
+{
+"path": "open/funding/PF_DEXEUSD.parquet",
+"bytes": 244586,
+"sha256": "ded26be98bbafc43a886f29305ac60434c480daa50facd0280876466ce6b1e59"
+},
+{
+"path": "open/funding/PF_DOGEUSD.parquet",
+"bytes": 245842,
+"sha256": "22a33dc14a9be46f248eb6a2abc41ad6f29739ea28923991fee943ecfd63f1bb"
+},
+{
+"path": "open/funding/PF_DOTUSD.parquet",
+"bytes": 245858,
+"sha256": "306230b575f8159fc05a7ba277c3972a25d5d645d3b9bd0dc3840b77948d67bd"
+},
+{
+"path": "open/funding/PF_DYDXUSD.parquet",
+"bytes": 245738,
+"sha256": "cb0018f4ade9d8219c79dbadab985c4524312643fbb7a99ed7606049c9360e3c"
+},
+{
+"path": "open/funding/PF_EGLDUSD.parquet",
+"bytes": 245794,
+"sha256": "8261fae62a8fea32a6834a96e7057c7aaa5c80e2f3cc9a51741a3ca2a7128b20"
+},
+{
+"path": "open/funding/PF_EIGENUSD.parquet",
+"bytes": 245650,
+"sha256": "06cfae9c174f6842620d69d0a62fa6574d12e96b54ab8c18ebb1328fc0eb8c69"
+},
+{
+"path": "open/funding/PF_ENAUSD.parquet",
+"bytes": 245850,
+"sha256": "3db8f9c07b9eb1bb5c83019110559956f66d6243770ec8e080d6051df61cc6d6"
+},
+{
+"path": "open/funding/PF_ENSUSD.parquet",
+"bytes": 245754,
+"sha256": "93d8ec8a6a7d1ea8f5df49b6748687917fa129f000d5e2dbc9fb3aa05d76380d"
+},
+{
+"path": "open/funding/PF_ETCUSD.parquet",
+"bytes": 245850,
+"sha256": "841c8ef961fd5682cd35c17a08b72e78e072133feac9c93a2dde0fcde4ce6571"
+},
+{
+"path": "open/funding/PF_ETHFIUSD.parquet",
+"bytes": 245786,
+"sha256": "9a5825a6d9a981fa4bd6f96e6a7f7a1b2f5ff567b5c9ed197816ae5a2ed7a531"
+},
+{
+"path": "open/funding/PF_ETHUSD.parquet",
+"bytes": 245835,
+"sha256": "1046eee951d2e1f9a074f7c9e72239cabc077816fc0ab18fd027ff4d6af091d6"
+},
+{
+"path": "open/funding/PF_EWYUSD.parquet",
+"bytes": 5594,
+"sha256": "04a0093b10b44c8ca7551723d4c12df78663fc63d7aede73b44e057fad316440"
+},
+{
+"path": "open/funding/PF_FARTCOINUSD.parquet",
+"bytes": 245850,
+"sha256": "d630fac1b89f3efb1261691e1e0d00054d23882511ba8358dba9cc16cd913bdd"
+},
+{
+"path": "open/funding/PF_FETUSD.parquet",
+"bytes": 245818,
+"sha256": "1fc48c04cb4484605102e8d5594633be963bc3bd6c100e8a687f849912e9fe7f"
+},
+{
+"path": "open/funding/PF_FILUSD.parquet",
+"bytes": 245810,
+"sha256": "fa9767440c4c06e216cba211db9ab2e74b9bcab299f771d606a8a4fec190f2e7"
+},
+{
+"path": "open/funding/PF_FLOKIUSD.parquet",
+"bytes": 245762,
+"sha256": "7887489f1477dbd1d4d916360aff757373e71ebee0360e7b343fcea8af3a7f21"
+},
+{
+"path": "open/funding/PF_FLOWUSD.parquet",
+"bytes": 241681,
+"sha256": "929d267e6e71d0e5937d4bdd2bbcf5e0026c791228db7bb977ed009bc9e38a8a"
+},
+{
+"path": "open/funding/PF_GALAUSD.parquet",
+"bytes": 245818,
+"sha256": "3b490e728ec0df95af51c050ea9c0071bd8a66b24cf1b4684e342fe523163e8a"
+},
+{
+"path": "open/funding/PF_GOATUSD.parquet",
+"bytes": 245250,
+"sha256": "50facf065ed4a71e7747ea05bf4bd0c8fa414eb8d07fbf72b830ad2055305715"
+},
+{
+"path": "open/funding/PF_GPSUSD.parquet",
+"bytes": 242993,
+"sha256": "71603c18c53d7cec60fd638884c555ac29c39150b99e491ec5d6bf9ddd564161"
+},
+{
+"path": "open/funding/PF_GRASSUSD.parquet",
+"bytes": 244545,
+"sha256": "1f6e323b26d02318dfa68b605a526800a8abdc2a56e77a8d8eb4b62ac41a72d8"
+},
+{
+"path": "open/funding/PF_GRTUSD.parquet",
+"bytes": 245642,
+"sha256": "295d857b96c45f2f27370384146680501de852ace321026c98d8a0a9e31edc81"
+},
+{
+"path": "open/funding/PF_HBARUSD.parquet",
+"bytes": 245802,
+"sha256": "190b39db8f0422b5af58704e74be7eee1051eb7dc95c24c2ed690fdf072e8244"
+},
+{
+"path": "open/funding/PF_HYPEUSD.parquet",
+"bytes": 245858,
+"sha256": "682137ef0f75fbc9009fcd2c592f3daafadbe663a7418c1a65f488290ab8b608"
+},
+{
+"path": "open/funding/PF_ICPUSD.parquet",
+"bytes": 245826,
+"sha256": "c46901e6d1cfe648769f51102f184c3376a2acb3ef86d3947fbf7043e04a1c01"
+},
+{
+"path": "open/funding/PF_IMXUSD.parquet",
+"bytes": 245730,
+"sha256": "7543bea99b42f2ae5d73f4a8c16284c4254578c043c6aec7f08f0a17213cf6ef"
+},
+{
+"path": "open/funding/PF_INJUSD.parquet",
+"bytes": 245826,
+"sha256": "9943d7ece0cc0b1f93e8bdcf9d7c18e4af58a3b16c4409a34de8a8eee76a45a7"
+},
+{
+"path": "open/funding/PF_INTCUSD.parquet",
+"bytes": 19370,
+"sha256": "27d42c0a2d077d27f254eafb795b00be2da6a125823a6b0efd3f819d4ee7b9da"
+},
+{
+"path": "open/funding/PF_IOTXUSD.parquet",
+"bytes": 243750,
+"sha256": "491899d29531ee225fca3cacbe27d523753472eebc0184426347495732fdf9c1"
+},
+{
+"path": "open/funding/PF_JASMYUSD.parquet",
+"bytes": 245802,
+"sha256": "b2c264d187c5ca300ada5b0febe4566560daff5899ac8d1bcf04118c8c7ddd43"
+},
+{
+"path": "open/funding/PF_JTOUSD.parquet",
+"bytes": 245786,
+"sha256": "ae35c651ed06bccc1d3b1079c178b8094e48348c6b07492874532375e111ee49"
+},
+{
+"path": "open/funding/PF_JUPUSD.parquet",
+"bytes": 245842,
+"sha256": "24c0215da65f71e740fb019363b1fe915242680aaf68d97e8524be521b6d8ef9"
+},
+{
+"path": "open/funding/PF_KAIAUSD.parquet",
+"bytes": 244800,
+"sha256": "ea8479da5a4e65e4fb9b0bbe015988ebfce5b341870235fca020ea49b25bfef6"
+},
+{
+"path": "open/funding/PF_KAITOUSD.parquet",
+"bytes": 235824,
+"sha256": "4a1cc5cdab31abfaf8695671d22c4408233817e787c6f4b7025a7280e70f6ec6"
+},
+{
+"path": "open/funding/PF_KASUSD.parquet",
+"bytes": 245850,
+"sha256": "ba899bc47f02f8c93efd1a6e27be4006e0fa10f7b4400d1ac0f610bb92fc8ac7"
+},
+{
+"path": "open/funding/PF_KAVAUSD.parquet",
+"bytes": 244744,
+"sha256": "82670feb773899b36f73afe3d144e18e6818904b4acbcca1c1033b9fd82b23ef"
+},
+{
+"path": "open/funding/PF_LDOUSD.parquet",
+"bytes": 245810,
+"sha256": "7434f78d003bfc5b2bbcf07cfb40d82d9bb77781ea4d1bf1dcc1b93d16318f6a"
+},
+{
+"path": "open/funding/PF_LINKUSD.parquet",
+"bytes": 245850,
+"sha256": "168f11c2b28c61ae76a9ac71fa1c878389edd00f893fad2fdd1a1c18db7cd7ea"
+},
+{
+"path": "open/funding/PF_LPTUSD.parquet",
+"bytes": 245842,
+"sha256": "67b4fd0963d7d4b19dfb6b34e27803de6235f1cde2944c40e8cf390469023bf0"
+},
+{
+"path": "open/funding/PF_LQTYUSD.parquet",
+"bytes": 245010,
+"sha256": "a200348e56045f1760d8c2cb68f519f8b37cbd57f09108511b1d2098b6e746f6"
+},
+{
+"path": "open/funding/PF_LTCUSD.parquet",
+"bytes": 245858,
+"sha256": "16c8ece8d907f86b9eedf7408669f8d50590b102f8d2d1d6034d4c561669294a"
+},
+{
+"path": "open/funding/PF_LUNA2USD.parquet",
+"bytes": 244898,
+"sha256": "1e44ec92ecff091449c60fa6a8a0c49cdcc0c1b5b3966fc7c9b4bf61d3126336"
+},
+{
+"path": "open/funding/PF_MANAUSD.parquet",
+"bytes": 245746,
+"sha256": "5f823993fc5bd723963994759c5f9bbd955a9ff58db128c128a6dd8a5fad5c67"
+},
+{
+"path": "open/funding/PF_MELANIAUSD.parquet",
+"bytes": 245178,
+"sha256": "1638c5a0e117214ba805a2dd824048f0e59b8dfd43b5f9b5c502d02951255382"
+},
+{
+"path": "open/funding/PF_MEWUSD.parquet",
+"bytes": 245538,
+"sha256": "7914f6b54414afe32c4ce46b6b1b5287474d56f6851af3e81ca6f5a46f493e7f"
+},
+{
+"path": "open/funding/PF_MOGUSD.parquet",
+"bytes": 218591,
+"sha256": "a2ac0f0cd2044cb5debc5a8f94571bc9c3f0fe88439a50ead1ba7b5413aa3f9b"
+},
+{
+"path": "open/funding/PF_MONUSD.parquet",
+"bytes": 182073,
+"sha256": "239de4208de5a5df7b221644f72dd370e124f4fb20372e53af001ad98ffc6ba6"
+},
+{
+"path": "open/funding/PF_MOODENGUSD.parquet",
+"bytes": 245810,
+"sha256": "35da2a7de48b801c1de5d734d5c971cba364752b66b95a9e24721ee3ff3ad1ad"
+},
+{
+"path": "open/funding/PF_MORPHOUSD.parquet",
+"bytes": 245634,
+"sha256": "b9d5264b24ba8f0df1ef52aaa454483867a83c140618beec886b075d82afcc92"
+},
+{
+"path": "open/funding/PF_MOVRUSD.parquet",
+"bytes": 243927,
+"sha256": "866fff61e7b77db68bf39dfe7c3f92e382d8c62b88f354aed8cbb6a7a809eee3"
+},
+{
+"path": "open/funding/PF_MRVLUSD.parquet",
+"bytes": 5594,
+"sha256": "ed3345ef86478093456fb15ac83a61cb22895300de22161f03eade22fca371bd"
+},
+{
+"path": "open/funding/PF_MUBARAKUSD.parquet",
+"bytes": 241915,
+"sha256": "74a9e547f841747126d74ca8f084dc64efd2e8bf1c5f5641bb73125a0d18c561"
+},
+{
+"path": "open/funding/PF_MUUSD.parquet",
+"bytes": 19370,
+"sha256": "f37d3a19756e871367e41efcc1fb367ebe29f5047991dbaadf3fc56043aa00be"
+},
+{
+"path": "open/funding/PF_NATGASUSD.parquet",
+"bytes": 45470,
+"sha256": "7a77829309c943e81c7bd15f958901ee9cfb028976bdfdd312513be60b9706ec"
+},
+{
+"path": "open/funding/PF_NBISUSD.parquet",
+"bytes": 31798,
+"sha256": "71258387a36bbf2a13a016015ff74cec7ca13bde789a18a69bd8660e34340eee"
+},
+{
+"path": "open/funding/PF_NEARUSD.parquet",
+"bytes": 245778,
+"sha256": "043c42e0a22d6775c874e10fd023b563de578f4d67867f20252f6c1a914e60d8"
+},
+{
+"path": "open/funding/PF_NEIROUSD.parquet",
+"bytes": 220227,
+"sha256": "5f14e8054508c07f5f0cdf98abdad04de26ea0c8d0769446f7bbc4bd73c009b6"
+},
+{
+"path": "open/funding/PF_NIGHTUSD.parquet",
+"bytes": 204635,
+"sha256": "1de95399e7d1d44da8262cbd5a1f26ee69b721457c56562b7a69bb2eb6cb937d"
+},
+{
+"path": "open/funding/PF_NOTUSD.parquet",
+"bytes": 243835,
+"sha256": "e9b1d4549bf206dad13907b1d2b93142e925287410fad2ebff822bcd50397fb2"
+},
+{
+"path": "open/funding/PF_ONDOUSD.parquet",
+"bytes": 245826,
+"sha256": "9d24abee734fd6e75e569fb0d01b31ac1ba9518aace1712d90654720aff6d2d7"
+},
+{
+"path": "open/funding/PF_ONTUSD.parquet",
+"bytes": 243311,
+"sha256": "29e580b50fdd466eeecc4a77d471ad7e2564cd00899e00875eeac49d2f48b5ca"
+},
+{
+"path": "open/funding/PF_OPENUSD.parquet",
+"bytes": 220943,
+"sha256": "50694297711b7228a3e59e79877c904d2af040928dacb62212cd532f615eb545"
+},
+{
+"path": "open/funding/PF_OPNUSD.parquet",
+"bytes": 136524,
+"sha256": "5435dee57d470cad13b2ba63f9734311220d5c5e9800de49b44cfeac18f2c6c8"
+},
+{
+"path": "open/funding/PF_OPUSD.parquet",
+"bytes": 245858,
+"sha256": "be147b76963015564a1066c9b085dbf4438ee0c9fb0bf6d28fb5e30e6e8c5e5f"
+},
+{
+"path": "open/funding/PF_ORDIUSD.parquet",
+"bytes": 245778,
+"sha256": "4f12a5626e97251c2d9e783a1957b2106a666227255988c887d79395d55899a2"
+},
+{
+"path": "open/funding/PF_PAXGUSD.parquet",
+"bytes": 245858,
+"sha256": "2b4d4063c684c3a56d2a4d6b6f4b104de94ee6b09094c0eb61777ede6d50162c"
+},
+{
+"path": "open/funding/PF_PENDLEUSD.parquet",
+"bytes": 245818,
+"sha256": "5241248d3a4e2a1cd8eca68651fabd3ef90c2656b687c3afdc76f96674da4277"
+},
+{
+"path": "open/funding/PF_PENGUUSD.parquet",
+"bytes": 245850,
+"sha256": "37ddf8a04ae36224c3da59019c8ae5cbdacade30d87c4e9e3b0f96e44409c0b3"
+},
+{
+"path": "open/funding/PF_PEOPLEUSD.parquet",
+"bytes": 244030,
+"sha256": "a0200366fa5cab9311eeedee154fada6e53af99625f853859e6e400686c98ad7"
+},
+{
+"path": "open/funding/PF_PEPEUSD.parquet",
+"bytes": 245858,
+"sha256": "5ff4f93b5377319958e343267922d962c4fb7422038e1df3abe4fb33ed5d8a66"
+},
+{
+"path": "open/funding/PF_PIXELUSD.parquet",
+"bytes": 244914,
+"sha256": "4f86d7e0fcfdcb1a4533618ebb3444e91d54ccedd65ff1f26280dcc043de34b3"
+},
+{
+"path": "open/funding/PF_PNUTUSD.parquet",
+"bytes": 245498,
+"sha256": "7ce8cc754b7584c99aaf315457aaaf6da34cdd3c88996bf16b278cfefd005911"
+},
+{
+"path": "open/funding/PF_POLUSD.parquet",
+"bytes": 245858,
+"sha256": "91fe0458c7e9b307e9e5cfdb78cde9fe15d60b11c2e6995706bf74b370c3f180"
+},
+{
+"path": "open/funding/PF_PONSUSD.parquet",
+"bytes": 18128,
+"sha256": "d3e03fe52130a95cd000272802178fed2d68a4e7aadbab14d510a7dc9f78960f"
+},
+{
+"path": "open/funding/PF_POPCATUSD.parquet",
+"bytes": 245810,
+"sha256": "a14c29f7d5ffa6dc18441035fb41709da7fa54d1b96d0238af25972a9e9ff45b"
+},
+{
+"path": "open/funding/PF_PORTALUSD.parquet",
+"bytes": 243666,
+"sha256": "7a960e338f0fe7fbdb6f3cccbbb811b6f8a5f3431f38162bf60df01476300f18"
+},
+{
+"path": "open/funding/PF_PUMPUSD.parquet",
+"bytes": 245818,
+"sha256": "e8dd0ff269229ab63c2827f25ba66642c4184360e626d121a631a78894cdac90"
+},
+{
+"path": "open/funding/PF_PYTHUSD.parquet",
+"bytes": 245818,
+"sha256": "ae0a551939c91a5abd2d1ea26212719b496bd2b6b3ae51210587f448a3686e3a"
+},
+{
+"path": "open/funding/PF_QNTUSD.parquet",
+"bytes": 244778,
+"sha256": "3ddf3e4c1c773ea0408e26dc38995ddfa958dd9787266c16f2a112009e929492"
+},
+{
+"path": "open/funding/PF_QTUMUSD.parquet",
+"bytes": 244866,
+"sha256": "61a9d1e5ed6e22255d468887eab4bc14fd256b03adb6fd72f3e6c37a2d287f83"
+},
+{
+"path": "open/funding/PF_RAYUSD.parquet",
+"bytes": 241474,
+"sha256": "686893652864bd11d610d101bd9ab086686497c5ea6c626b9407f63d01bff1f1"
+},
+{
+"path": "open/funding/PF_RENDERUSD.parquet",
+"bytes": 245818,
+"sha256": "ef5a1b82f583d0be2c029b2d0a4ae6f51a9fdbb4e2c04116f14aade48b3aa805"
+},
+{
+"path": "open/funding/PF_RIVERUSD.parquet",
+"bytes": 180091,
+"sha256": "9fa21016aebb64bd99ef97457b4bffeffc342b36970ad6aea67d4d8073dda62c"
+},
+{
+"path": "open/funding/PF_ROSEUSD.parquet",
+"bytes": 244705,
+"sha256": "a2bee9e4cf7566dac462369f8805ed54e5cda0dc3a4a65efbec77e21c271776f"
+},
+{
+"path": "open/funding/PF_RSRUSD.parquet",
+"bytes": 243202,
+"sha256": "8763a25023b67f1982c822a9d318a9bd75d8012678a41017ec56468ff853d824"
+},
+{
+"path": "open/funding/PF_RUNEUSD.parquet",
+"bytes": 245714,
+"sha256": "8f681aee8994bb7ef046d51ecc5c0971d63fefa3345b6660098c3effba51df5e"
+},
+{
+"path": "open/funding/PF_SAGAUSD.parquet",
+"bytes": 243799,
+"sha256": "9c2f5a427e4ba9ea6e720467ae9eefe45b42eb4e0a9f065f0aaf48cd6ffc394b"
+},
+{
+"path": "open/funding/PF_SAMSUNGUSD.parquet",
+"bytes": 31718,
+"sha256": "6c038d19fc1408f059f8c593776557529a6f524d7fd319a8e44f31c4ab0f9215"
+},
+{
+"path": "open/funding/PF_SANDUSD.parquet",
+"bytes": 245674,
+"sha256": "0455f44dfede9e6fff2babd43348b43d274f8a57f0bdd55462239911d64eed53"
+},
+{
+"path": "open/funding/PF_SEIUSD.parquet",
+"bytes": 245802,
+"sha256": "889e841a3b3167bc6f035c7d88a8e5f9bd06aebb21a419a3ba60a70999c6a583"
+},
+{
+"path": "open/funding/PF_SHIBUSD.parquet",
+"bytes": 245794,
+"sha256": "3b9a52ff4768725025c99e9270882559816469afd0d16535f722b1c2875cef49"
+},
+{
+"path": "open/funding/PF_SKHYUSD.parquet",
+"bytes": 31798,
+"sha256": "58f1e05715aea44d07351efadffc7b49358202b85cf1f19ba46c8c37c8a19087"
+},
+{
+"path": "open/funding/PF_SNDKUSD.parquet",
+"bytes": 31798,
+"sha256": "15a6158a51811551191d1903d43bbf007292d8c1434868832ea3b5301f6fc5b8"
+},
+{
+"path": "open/funding/PF_SNXUSD.parquet",
+"bytes": 245746,
+"sha256": "614156e3c678aee65b0075239b6340b1a99a289c43ff779a9b1a109f7699b440"
+},
+{
+"path": "open/funding/PF_SOLUSD.parquet",
+"bytes": 245858,
+"sha256": "43b4bc0c4d1408b8e403f4dc912a53da94811eee9e8e8731be9fb7a85455d331"
+},
+{
+"path": "open/funding/PF_SOONUSD.parquet",
+"bytes": 218970,
+"sha256": "4f220eedc1551a13bd50d74291cc38268d917a66893850a960956131aab4e969"
+},
+{
+"path": "open/funding/PF_SOXLUSD.parquet",
+"bytes": 31798,
+"sha256": "68058e24b71252c5d4d691778ee92875890d4ebbf116b3fdbb8656b094ac23e3"
+},
+{
+"path": "open/funding/PF_SOXSUSD.parquet",
+"bytes": 31798,
+"sha256": "d2c0124ff32e66ec48aebfbd6fdce3ac220e6b6cc139f5b3cf9245dea2cc61a2"
+},
+{
+"path": "open/funding/PF_SPKUSD.parquet",
+"bytes": 241037,
+"sha256": "b63c7b516247570be04bb3d91d47ded6220eceb597af003eee16519d7086beb6"
+},
+{
+"path": "open/funding/PF_SPXUSD.parquet",
+"bytes": 245618,
+"sha256": "e66de1e431a8aedd6d3e358e7107927fbd57a80caa0f71cd849b3cd269732a7b"
+},
+{
+"path": "open/funding/PF_SSVUSD.parquet",
+"bytes": 245506,
+"sha256": "ca8ee73e9d4efc4ff0074276e0a6798f35892bbfc765d2f640c26a16e8b19bac"
+},
+{
+"path": "open/funding/PF_STRKUSD.parquet",
+"bytes": 245858,
+"sha256": "d005b9d3c4a2d9e47e4fed44570853d267dfaf3de5494e61eefe0fe29c9e790f"
+},
+{
+"path": "open/funding/PF_STXUSD.parquet",
+"bytes": 245778,
+"sha256": "e549dc7f1abd65bb9641de701ef6d00f3e8e7918bdb813f874edd05315f94cf7"
+},
+{
+"path": "open/funding/PF_SUIUSD.parquet",
+"bytes": 245842,
+"sha256": "fdab0bf52671ec72724c15281b475b8d06da497201f4218c81ef59a0b209a5fc"
+},
+{
+"path": "open/funding/PF_SUPERUSD.parquet",
+"bytes": 245032,
+"sha256": "053f50cff8f4adfbffdd22cb61b0a0c6e9d8cd1175c5b0520bd69375fa74e94b"
+},
+{
+"path": "open/funding/PF_SUSHIUSD.parquet",
+"bytes": 245794,
+"sha256": "2fec1894ae1f553f89873c16c40776ee8f6c87b45c8439bdf10418aedd7f3326"
+},
+{
+"path": "open/funding/PF_SYNUSD.parquet",
+"bytes": 241885,
+"sha256": "776e89c5baabe80fd04318870ae33f6ef9254b3f0e3ce6fa4e27ccee85a2acbb"
+},
+{
+"path": "open/funding/PF_SYRUPUSD.parquet",
+"bytes": 243253,
+"sha256": "7636cb024c01483938d3f07e10e9cd8038e372ec375a980b80751d385e2ed913"
+},
+{
+"path": "open/funding/PF_TAOUSD.parquet",
+"bytes": 245858,
+"sha256": "c7963da062e67287624338185240da8ab82cb308c4b30c60999ae6c2ac5eaca4"
+},
+{
+"path": "open/funding/PF_TIAUSD.parquet",
+"bytes": 245850,
+"sha256": "98429f220e75d20bb9a3770fd9777e5ad9cec9b279866460256d724c44226540"
+},
+{
+"path": "open/funding/PF_TLMUSD.parquet",
+"bytes": 244552,
+"sha256": "4e999de681d5c7115d2b955f236c011039a4e0025110c08cb0638f25623af53f"
+},
+{
+"path": "open/funding/PF_TRBUSD.parquet",
+"bytes": 243574,
+"sha256": "e6bdc9b2aecda931e8a2b2b318dd4ff119a740545f4858c20849d348a92091eb"
+},
+{
+"path": "open/funding/PF_TRUMPUSD.parquet",
+"bytes": 245858,
+"sha256": "0c83dd8dd7f7b4f8b8d83a660a2f9fc5b6b50559d306ddb0e315225da8d45dd5"
+},
+{
+"path": "open/funding/PF_TRXUSD.parquet",
+"bytes": 245842,
+"sha256": "67645800396592b9106e44d39475e60c7eaf61d6b57d748c18f49ba00ab8f55f"
+},
+{
+"path": "open/funding/PF_TURBOUSD.parquet",
+"bytes": 245802,
+"sha256": "d03220fe622e5fa81b8d7294ac708631162133f40b4b6f7bd9929e09c13fd201"
+},
+{
+"path": "open/funding/PF_UNIUSD.parquet",
+"bytes": 245802,
+"sha256": "de5087de6ffc30db663db3a0c2e7e12f821e5b143a494e2d5dbabf51e1e45f58"
+},
+{
+"path": "open/funding/PF_USDCUSD.parquet",
+"bytes": 219132,
+"sha256": "bf4624a41e43d72bbfc6ec8ea0d1bf9f45741875e8963fac2836b8a6e3ec1651"
+},
+{
+"path": "open/funding/PF_USUALUSD.parquet",
+"bytes": 243131,
+"sha256": "091af66bef8b19e2ff4b1787f07886bd0b7fd8c4469422fa2d69f5d2f6dd413f"
+},
+{
+"path": "open/funding/PF_VIRTUALUSD.parquet",
+"bytes": 245842,
+"sha256": "afeeb21c9ecc6185a7020d8dbb6990af617244a38758b83030d9f98d2e3b95bf"
+},
+{
+"path": "open/funding/PF_WIFUSD.parquet",
+"bytes": 245850,
+"sha256": "21eee7219b21e04e5b84044d3d021a4e10d33c2d3b5972fdada41575048b7b49"
+},
+{
+"path": "open/funding/PF_WLDUSD.parquet",
+"bytes": 245826,
+"sha256": "2f9ff75ed4b4d4e604e0b07348f6cd642dd89516ea9f718b761e2cef7c44e26d"
+},
+{
+"path": "open/funding/PF_WLFIUSD.parquet",
+"bytes": 245810,
+"sha256": "9eca33af25ea2330637737841dc10379a663feed48bb30edc5c39759b59819ad"
+},
+{
+"path": "open/funding/PF_WUSD.parquet",
+"bytes": 245658,
+"sha256": "e48ec09b4aa405d5ded20ed07fbaf773c70cdcc68985433be44d704ad2e692d9"
+},
+{
+"path": "open/funding/PF_XAGUSD.parquet",
+"bytes": 59539,
+"sha256": "ea2ceacd37f449100b1c7d13bf453af40ee556f25e4b4ea59f842a613d823f3f"
+},
+{
+"path": "open/funding/PF_XAUTUSD.parquet",
+"bytes": 245858,
+"sha256": "8bdcc62848b5e5e1f1d4ebfe636d50f9168714469e9d6b70dcb5350245edb1c7"
+},
+{
+"path": "open/funding/PF_XAUUSD.parquet",
+"bytes": 50508,
+"sha256": "9f2168ba75377e5f5aed52cb0c8383d0f8d8429bf9021bf4585d0a808d35d24e"
+},
+{
+"path": "open/funding/PF_XBTUSD.parquet",
+"bytes": 245779,
+"sha256": "24317a5e8098112b9b5aa2cc7d0bc1f648a0d5a146f4c868514f5e305b1c2355"
+},
+{
+"path": "open/funding/PF_XLMUSD.parquet",
+"bytes": 245842,
+"sha256": "813c9859545785695dcc58eafb050922639b1566f66df81cd91d893bf1939ecd"
+},
+{
+"path": "open/funding/PF_XMRUSD.parquet",
+"bytes": 245858,
+"sha256": "4e43f740f53417f1d5dee3a9f40c21a325b3eb1b3915194a840800f0be751c08"
+},
+{
+"path": "open/funding/PF_XPLUSD.parquet",
+"bytes": 226537,
+"sha256": "6869d85138df09c0d9087e14cd3e2c296db8cc916036d4e44c946a480a744351"
+},
+{
+"path": "open/funding/PF_XRPUSD.parquet",
+"bytes": 245858,
+"sha256": "564bb0de433892a397f56580ea3690875f6a8a03682a7e625e3f680d46fbd231"
+},
+{
+"path": "open/funding/PF_XTZUSD.parquet",
+"bytes": 245858,
+"sha256": "c48fc812026ba7c4cf48c5461df49f9051c5f03a136e4997509fd506b29a83c6"
+},
+{
+"path": "open/funding/PF_YFIUSD.parquet",
+"bytes": 245322,
+"sha256": "009216ca37a0ed47faf8ab6ab712c4aaffdb790f7894c826a729e129132d22f1"
+},
+{
+"path": "open/funding/PF_ZBTUSD.parquet",
+"bytes": 209127,
+"sha256": "f582b8ead4eb44391e1b9adadaea27877c28d558b4af6102853af9f993182976"
+},
+{
+"path": "open/funding/PF_ZECUSD.parquet",
+"bytes": 245858,
+"sha256": "4f36c50a76f07695d7114470e7de1f39ecd0bbefbe85de2d85d94e2f381109dd"
+},
+{
+"path": "open/funding/PF_ZENUSD.parquet",
+"bytes": 245794,
+"sha256": "b145320c7bdee3f2daf87650e932a02e4ba348d7d18c0dc5119b726b18a51213"
+},
+{
+"path": "open/funding/PF_ZKUSD.parquet",
+"bytes": 244754,
+"sha256": "cc0fbb7ca2d78d50cdf4178f2bd8f3ad8a5eb07cf92c34c1db7d3a89ad52c9be"
+},
+{
+"path": "open/funding/PF_ZROUSD.parquet",
+"bytes": 245794,
+"sha256": "18443d80339a025493053c205ed5ca7a43c911127589e9d0f60054826cb66bfc"
+},
+{
+"path": "raw/contracts.json",
+"bytes": 943172,
+"sha256": "acfeea7e3772a24da80d4ea86d44b2868fdb71a4fd411c9d5142add27740304a"
+},
+{
+"path": "reserved/README.md",
+"bytes": 108,
+"sha256": "e24ee1bf25a59765b9af0e5897380cce9264c75dcdaa7eff5766ae81f3ff0e6e"
+},
+{
+"path": "reserved/candles_1d/PF_AAPLXUSD.parquet",
+"bytes": 11672,
+"sha256": "7798ea3b9217cbfdc25bdd82a64fe55f3ef043eb28323dbcf2e8cb74730efc4e"
+},
+{
+"path": "reserved/candles_1d/PF_AMZNXUSD.parquet",
+"bytes": 6883,
+"sha256": "a2e9bd1576c9a089a1f74fcedcc38fed90e7a0cf36ce1fdc293fff4c8eaa3423"
+},
+{
+"path": "reserved/candles_1d/PF_ANTHROPICXUSD.parquet",
+"bytes": 8441,
+"sha256": "bbd00e5dcaf2b4f392fcec7d5595eba4cd7af262d6c8078cea447453b1132155"
+},
+{
+"path": "reserved/candles_1d/PF_BRENTOILUSD.parquet",
+"bytes": 6614,
+"sha256": "69a9c4a1e47194a6a7a18d3c4dd3bf5ee52bf86afc1f964a78a1877d68c436fd"
+},
+{
+"path": "reserved/candles_1d/PF_CHFUSD.parquet",
+"bytes": 14741,
+"sha256": "e7e21514ad70032cb16985fa76796cbb739f210647eb0ca330d7e65ba3e6b4a2"
+},
+{
+"path": "reserved/candles_1d/PF_COINXUSD.parquet",
+"bytes": 6913,
+"sha256": "cb5e11d94b779aaa78cf9bc72d36df238d25038e4d11414d9b4aa2c099ce48a2"
+},
+{
+"path": "reserved/candles_1d/PF_CRCLXUSD.parquet",
+"bytes": 12757,
+"sha256": "b5ae2ede32e1c4467f42c67c0ad4f3bc8d86fd5904d601f95b5422687dae0d27"
+},
+{
+"path": "reserved/candles_1d/PF_CROUSD.parquet",
+"bytes": 36670,
+"sha256": "d602d96a159b2746f137457e73554ba2746e49ae66dc029178f0f7176da9f818"
+},
+{
+"path": "reserved/candles_1d/PF_CSPRUSD.parquet",
+"bytes": 22864,
+"sha256": "f1faba49e792c90199a22c3f12f6cb48ba65afeba1f64446c03dcfaf3df17a50"
+},
+{
+"path": "reserved/candles_1d/PF_EURUSD.parquet",
+"bytes": 21516,
+"sha256": "5cfd3272242a1bcc89f703b704f72265d176b4fcac46be0da5a64dc93f6ad3ed"
+},
+{
+"path": "reserved/candles_1d/PF_GBPUSD.parquet",
+"bytes": 14610,
+"sha256": "828d02c6fd1a71becdfc0e55ce64410b74ba9dae47ca4aa5018f3f406e1d54d1"
+},
+{
+"path": "reserved/candles_1d/PF_GLDXUSD.parquet",
+"bytes": 12153,
+"sha256": "d9e25aed3fb5ee5f00e2ae1122faebe065236e0733267a28836aed72466e61a1"
+},
+{
+"path": "reserved/candles_1d/PF_GOOGLXUSD.parquet",
+"bytes": 11803,
+"sha256": "5505d09d3d1c70133609dc88c85047043fbe8400733695ec89703168a4b29b08"
+},
+{
+"path": "reserved/candles_1d/PF_HOODXUSD.parquet",
+"bytes": 12340,
+"sha256": "5fe583b95c37edb9f19112a24a16b6ac79107394298168e235fb355fa02f11bd"
+},
+{
+"path": "reserved/candles_1d/PF_METAXUSD.parquet",
+"bytes": 6948,
+"sha256": "b1c8e20b4587f905c0f9ae569d106eb27fbfca6919c19b67359d758f00c6c7d6"
+},
+{
+"path": "reserved/candles_1d/PF_MNTUSD.parquet",
+"bytes": 33550,
+"sha256": "4991ba6b88a7017b86029a9b45a6b8371511abd51822d585bdc7febeef721852"
+},
+{
+"path": "reserved/candles_1d/PF_MOONSHOTXUSD.parquet",
+"bytes": 4443,
+"sha256": "9ee9556ff5e2fa4ecd7cb33f459362b721efa806ace7d2c1de4e3a71243d1ffa"
+},
+{
+"path": "reserved/candles_1d/PF_MSTRXUSD.parquet",
+"bytes": 12703,
+"sha256": "824ccb186effc190f29218e6ed9fb1f0f972e4d135abcb9d8ed7ad9806187574"
+},
+{
+"path": "reserved/candles_1d/PF_NVDAXUSD.parquet",
+"bytes": 12249,
+"sha256": "a0d0581a21a8fa06c93b9160f5b1173199376d1d261b25c81ba0f6465111a1b7"
+},
+{
+"path": "reserved/candles_1d/PF_OPENAIXUSD.parquet",
+"bytes": 8389,
+"sha256": "8ef897e748a3e2f24705f410dd6c1cf8af7b003be0f317b5b0231927c57dfc83"
+},
+{
+"path": "reserved/candles_1d/PF_OURAXUSD.parquet",
+"bytes": 4576,
+"sha256": "22db6ca6c0731ce4c0e1b4de877ea42c31dd0a42ed1340cd76b777303db2c7ad"
+},
+{
+"path": "reserved/candles_1d/PF_QQQXUSD.parquet",
+"bytes": 13386,
+"sha256": "c682f1f2e6dd875052e162974b04540e2689f77f5f9fa687eca829bac9e0a306"
+},
+{
+"path": "reserved/candles_1d/PF_SPCXXUSD.parquet",
+"bytes": 9174,
+"sha256": "7b2ae7199c0e5abb5fadf90ca2caa8efc8658797ba7a17ff2c4694490d3c1067"
+},
+{
+"path": "reserved/candles_1d/PF_SPYXUSD.parquet",
+"bytes": 13149,
+"sha256": "1058756592add242d5be3cfc047d58d1a2660638e35a4a961d7b575771d4403b"
+},
+{
+"path": "reserved/candles_1d/PF_TREADUSD.parquet",
+"bytes": 5079,
+"sha256": "e9809df456c10a6036407d2c6b30f74fd5465bfc8aa293637237ac7b53165c9b"
+},
+{
+"path": "reserved/candles_1d/PF_TSLAXUSD.parquet",
+"bytes": 12511,
+"sha256": "39e0f3a179998209ebe2c3c0da11ad5507706b60e6754cfd8ba2af087d4d1310"
+},
+{
+"path": "reserved/candles_1d/PF_US100USD.parquet",
+"bytes": 5845,
+"sha256": "a67c12c2769e5132ada069ba74dfd6596dc1a115b65549a8a566d2ec708f1ad9"
+},
+{
+"path": "reserved/candles_1d/PF_USDTUSD.parquet",
+"bytes": 25668,
+"sha256": "882669a006b55d10eaddd803b03a019d6c2824f03ea037a8677a6a14d45f9bfc"
+},
+{
+"path": "reserved/candles_1d/PF_WTIOILUSD.parquet",
+"bytes": 10359,
+"sha256": "b283427b67d16e908df7405b9a6f34dc2cc5f88529b0c7bcf27ba98c6b67d8e0"
+},
+{
+"path": "reserved/candles_1d/PF_XCUUSD.parquet",
+"bytes": 7146,
+"sha256": "ed2b79767297eb0aecd5f123ef630d2eb65147861d6f9251c3237908343cb23c"
+},
+{
+"path": "reserved/candles_1d/PF_ZIGUSD.parquet",
+"bytes": 15329,
+"sha256": "6c8cadb6d144228efff7248977822ac1bb047f30ea18b283cf2e8f79062c75f3"
+},
+{
+"path": "reserved/funding/PF_AAPLXUSD.parquet",
+"bytes": 166228,
+"sha256": "c92001415ed252332cac4e2988af930edc8fee48dc8c7a1e40c05e704df45ad4"
+},
+{
+"path": "reserved/funding/PF_AMZNXUSD.parquet",
+"bytes": 50508,
+"sha256": "a303c6d6e04fc600c952696f5c5f6b241275d82d9820cf54bb1739a7839d195a"
+},
+{
+"path": "reserved/funding/PF_ANTHROPICXUSD.parquet",
+"bytes": 42881,
+"sha256": "1518f775931dbc206d73ec6289574d4b8a8e5ec1c607c85468baad7aa213b4f8"
+},
+{
+"path": "reserved/funding/PF_BRENTOILUSD.parquet",
+"bytes": 40910,
+"sha256": "9a69afc18811d779a6b6eab24d02c4ab455c47bd47ca831cf606423017d1744d"
+},
+{
+"path": "reserved/funding/PF_CHFUSD.parquet",
+"bytes": 177953,
+"sha256": "9905917044a64980a5883eeefcfe7c75e2cce740f7130fccbd6e4018420f23b3"
+},
+{
+"path": "reserved/funding/PF_COINXUSD.parquet",
+"bytes": 50508,
+"sha256": "081a9f6d07b7d1cbfd0a587484135c4cf45066dcd1153807ddc5ff382eee348a"
+},
+{
+"path": "reserved/funding/PF_CRCLXUSD.parquet",
+"bytes": 166287,
+"sha256": "a9c06b7006e3cd27cc18b680de6162e71ff373ca924f82d3723ca97ce6a2a7aa"
+},
+{
+"path": "reserved/funding/PF_CROUSD.parquet",
+"bytes": 244752,
+"sha256": "5e244fb02e46698c9886ada56e8f65254749cb32f3d3be6e08e58fe98940e4ac"
+},
+{
+"path": "reserved/funding/PF_CSPRUSD.parquet",
+"bytes": 51604,
+"sha256": "859d0e7b4c8d9c2c96c3c2ec5096d8135a71f948f7e222efcc3256b9266b3345"
+},
+{
+"path": "reserved/funding/PF_EURUSD.parquet",
+"bytes": 209760,
+"sha256": "7afb2b7971bd061dfd453bbc7792a7ceb011d90fee57fec32891a0807529fcac"
+},
+{
+"path": "reserved/funding/PF_GBPUSD.parquet",
+"bytes": 189769,
+"sha256": "a3c11158664fbd1df0d0f18ed1014bd4b49e3398a7f589e7b2d9fdb6530f7ed7"
+},
+{
+"path": "reserved/funding/PF_GLDXUSD.parquet",
+"bytes": 199698,
+"sha256": "e9384c6b2243eb05bd002f5a216cf5aad234c4dccea12246681feb8bb195a344"
+},
+{
+"path": "reserved/funding/PF_GOOGLXUSD.parquet",
+"bytes": 166228,
+"sha256": "623fd3d18c3afa070678413572fc7fadc1a8c7b4bb671523dc59c21d11bfae29"
+},
+{
+"path": "reserved/funding/PF_HOODXUSD.parquet",
+"bytes": 165945,
+"sha256": "6caa24adc26fd0d502e9dc5d06372b586baf04d0a52a3ac60a7c5040434956d9"
+},
+{
+"path": "reserved/funding/PF_METAXUSD.parquet",
+"bytes": 50500,
+"sha256": "0cabb404015653ac9758aed6fc7dbf36b85a344429c0b477cb9b95639bf85029"
+},
+{
+"path": "reserved/funding/PF_MNTUSD.parquet",
+"bytes": 243517,
+"sha256": "18998002c82697ab2418f9b9ad48409c030d994f0c2dc2342513208bb501fa76"
+},
+{
+"path": "reserved/funding/PF_MOONSHOTXUSD.parquet",
+"bytes": 9000,
+"sha256": "fa8f4047322e11656651b63b50a4faba5de034f309864f0dc73ff30b370bc0a8"
+},
+{
+"path": "reserved/funding/PF_MSTRXUSD.parquet",
+"bytes": 166014,
+"sha256": "70ef4d6d26037fd00c91a49f8607be6d1fa089ea7320cc52c262ee786e506bf4"
+},
+{
+"path": "reserved/funding/PF_NVDAXUSD.parquet",
+"bytes": 166164,
+"sha256": "a9175a3b6e4e291c8e73efdaf09e54ba30a2208eb7b64bbfbb2527906bbc2c88"
+},
+{
+"path": "reserved/funding/PF_OPENAIXUSD.parquet",
+"bytes": 62631,
+"sha256": "6c66f70e836a50ef9a5c85f9c9b41a62203bf6e5fbb786e8254c99a013e9973b"
+},
+{
+"path": "reserved/funding/PF_OURAXUSD.parquet",
+"bytes": 9574,
+"sha256": "b58cbae618b9f9fda7b8ed053151054410e48054b4ceec2fbca7eebccfeb3292"
+},
+{
+"path": "reserved/funding/PF_QQQXUSD.parquet",
+"bytes": 200585,
+"sha256": "6abde10f3a868a25f5a12a5c5419b23ea8dbb7f388422a2b4464b4adb6d9d499"
+},
+{
+"path": "reserved/funding/PF_SPCXXUSD.parquet",
+"bytes": 88712,
+"sha256": "68b7739ccdc6b85fe365c47222f71ea024fd0d1f868d00e0237ead272c9706f9"
+},
+{
+"path": "reserved/funding/PF_SPYXUSD.parquet",
+"bytes": 200385,
+"sha256": "fbecbf81737a2aa1abb851d0dce13fdcc5b5ea4d642a4a9158d2200f48a95a83"
+},
+{
+"path": "reserved/funding/PF_TREADUSD.parquet",
+"bytes": 15288,
+"sha256": "9074390ac50751999f1802bf6d40ef721bc35cc585284f2b3e484ec10eecb490"
+},
+{
+"path": "reserved/funding/PF_TSLAXUSD.parquet",
+"bytes": 167185,
+"sha256": "12c448b174f08c3351a10d818a07a11fe15ab03da4c1b6fc8b6326f7ea089ec5"
+},
+{
+"path": "reserved/funding/PF_US100USD.parquet",
+"bytes": 36965,
+"sha256": "26bb9b327bfef42645f254058fc61a3a8e4110fae87b510514bebcc425593b87"
+},
+{
+"path": "reserved/funding/PF_USDTUSD.parquet",
+"bytes": 245162,
+"sha256": "09301a3de6182d60fcb3187b9a5cd60cf5eea19481235cefa6a3455bdc56f04c"
+},
+{
+"path": "reserved/funding/PF_WTIOILUSD.parquet",
+"bytes": 95185,
+"sha256": "344ae47167fb9d86244fefef10ec522216e9349f3151823d0873983f14bee487"
+},
+{
+"path": "reserved/funding/PF_XCUUSD.parquet",
+"bytes": 45105,
+"sha256": "c8d426a6d4f87b03d82988c31b4270c72bfb5e14a47012e0f21a614131424f26"
+},
+{
+"path": "reserved/funding/PF_ZIGUSD.parquet",
+"bytes": 158604,
+"sha256": "2095704ccf6c5ac410eac88e405e8bb2694a9d0fd516f08cb5ad007a4eca51ce"
+}
+]
+}

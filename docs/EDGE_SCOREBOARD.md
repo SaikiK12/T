@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-20, after R274. Program trials: 9,477,741 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-21, after R278. Program trials: 9,478,322 on this branch. Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -81,15 +81,25 @@ overstatements are corrected here.
 | **Binance announcement types** (spot listing, perp launch, pre-listing, margin, earn, new pairs, funding-frequency change, network upgrade), long or short +1 / 24 / 72 / 168 h, as one family | Gate 0, NULL, 64 strategies (R271). Best: funding-frequency change long +1 h +3.59% per notice, t 3.31 (n 35, RC p 0.535); pre-listing short +168 h +11.48%, median +18.05%, t 2.03 (n 45) | None clean: 2020 notices go to the reserved batch | fund_freq 2x +3.19%, 3x +2.79%; prelist 2x +11.08%, 3x +10.68% | Not checked | **R272** announce_fwd (both, MEXC paper, from 2026-10-20 19:00 UTC), Bonferroni t >= 2.2 at 12 scored notices per book. Since 2026, Binance's funding-frequency titles do not match the frozen rule | NULL; two candidates forward on paper |
 | **Extreme-funding onset** (first settlement at or beyond ±0.3 / 1 / 2% in 72 h), long or short +1 / 8 / 24 / 72 h | Gate 0, NULL, 40 strategies (R273). Best neg2 long +72 h +7.32%, median -4.95%, t 2.39 (RC p 0.87). After a negative onset the median coin falls (neg0.3 short +72 h median +2.83%) but squeezes make the mean negative (-0.99%) | Not read: top 3 go to the 2020 batch | neg2 long +72 h 2x +6.92%, 3x +6.52% | R274 (gate 0, MEXC 2025-26): the same pattern on MEXC's own funding | None | NULL |
 | **Negative-funding onset short with a cover** (close-based 10 / 20 / 35% cover; queue M261) | Gate 0, NULL, 72 strategies (R274, Binance 2021-26 and MEXC 2025-26). The cover cuts the tail (bn_neg2 168h -14.10% to -1.34%) and the median with it. Best mx_neg0.3 short 72h, 10% cover, +0.55%, t 1.35 (RC p 0.94) | Not read: the best covered Binance strategy goes to the 2020 batch | best 2x +0.15%, 3x -0.25% | Tested on MEXC prices and funding: no covered strategy reaches t 2 | None (pre-committed rule: forward only at t >= 2) | NULL |
+| **Cross-venue funding carry**: the same coin on two venues; long the perp where trailing funding is lower, short where it is higher, entries above a spread threshold, exit below half of it (queue M059) | Gate 0, **PARTIAL: 212 of 560 books pass every gate** (R275, 2021-26; RC null 95th pct t 4.27). Best gate+hyperliquid L14d th5% K20 +9.73%/yr, t 12.70, NW t 8.63, every year positive (2023 +18.6%, 2025 +5.0%). Funding is 96-105% of the gross | None clean: binance+gate L14d th10% K20 goes to the reserved batch (2020 rows); R277 replicates the best book on KuCoin and dYdX, which R275 never read | Best 2x +8.51%, 3x +7.28%/yr. Missing settlements move the gross by -1.0% to +0.8% | binance+mexc L14d th10% K20 passes: +6.33%/yr, t 8.24 (2025-26 only); gate+mexc L7d th10% K20 +16.29%/yr (post hoc pick) | **R278** xfund_fwd (books A gate+HL, B binance+MEXC, C gate+MEXC post hoc), on-time from 2026-10-22, NW t >= 2.5 at 90 / 180 scored days | **The strongest gate-0 evidence in the program.** Needs two venue accounts; liquidation above 1x, collateral moves and fills not modelled |
+| **Cross-venue factors**: Binance-minus-Gate and Binance-minus-Hyperliquid funding gaps, price-gap deviation, volume shift as predictors of a Binance perp's next 1-7 days (M262) | Gate 0, NULL, 18 series (R276): best fund_gap_3d RC p 0.124. Only the reference bn_fund_3d (Binance funding alone) passes: 24 h quintile book +10.43 bp/day at 1x | None | bn_fund_3d +4.68 / -1.07 bp/day | Not checked | None (bn_fund_3d queued as M263, to reconcile with R190) | NULL |
 
 ## The best achievable edges, ranked
-1. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
+1. **Cross-venue funding carry (new, 2026-10-21).** The first family in the program to pass gate 0 with t far above
+   its reality-check null: 212 of 560 books (R275), broad regions of neighbours, every year positive.
+   - **Size:** about 5-10%/yr on total capital at 1x legs in 2025-26 (17-19%/yr in 2023, when Hyperliquid's funding
+     was new). Leverage per leg scales it, and liquidation risk with it (M265 measures that next).
+   - **Falsified by:** R278 failing at 90 or 180 scored days, R277 failing to replicate on KuCoin and dYdX, or the
+     reserved batch.
+   - **To trade it:** accounts on two venues (Gate plus Hyperliquid, or Binance or Gate plus MEXC), about 2 orders a
+     day per book, placed by the owner only after `go_real`.
+2. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
    not significant at 2x), and the MEXC version has more coins to carry.
    - **Size:** about 1%/yr in the 2025-26 regime, +8% in 2024, +35% in 2021. It is the safest edge, not the largest.
    - **Falsified by:** R220 failing at 90 on-time days. At 2x costs it was not significant even on the holdout.
    - **To trade it:** a MEXC spot buy plus a perp short of the same size, placed by hand by the owner, only after
      `go_real`.
-2. **Unlock short on MEXC (new, 2026-10-20).** It replicates at gate 0 with the largest per-event edge in the lab:
+3. **Unlock short on MEXC (new, 2026-10-20).** It replicates at gate 0 with the largest per-event edge in the lab:
    +3.24% net per event, t 3.19 (R265), and Codex's independent daily-bar run agrees (R258).
    - **Size:** about 150 events a year in 2025-26. At 10% of capital per event that is roughly +45%/yr before tail
      losses. This is in-sample arithmetic, not a forecast.
@@ -97,17 +107,17 @@ overstatements are corrected here.
      MEXC-only coins, post-archive events).
    - **Risk:** short squeezes. Six of 422 closes lost over 40%, and intraday highs were far worse. A liquidation at
      2x would have hit several events. Sizing and protection must be frozen before any stake.
-3. **Flow book A, or X2, on MEXC crypto.**
+4. **Flow book A, or X2, on MEXC crypto.**
    - **Size:** the largest returns in the archive, not confirmed. Crypto-only holdout +22.3 bp/day (about +80%/yr
      simple), t 1.25, drawdowns of 47-62% across versions.
    - **Falsified by:** R215 or R218 failing their 90-day screen, or R221's futility stop at day 90.
    - **Evidence needed:** confirmation needs R221's look at 182 or 365 days.
    - **Risk:** two coins carried two thirds of the holdout gross.
-4. **top_vs_crowd, crypto only, on MEXC.**
+5. **top_vs_crowd, crypto only, on MEXC.**
    - **Size:** holdout t 2.74 on crypto only, but it is the best of 7 series reported after the holdout was read.
      Without its 10 best days of 457 it falls to t 1.6, and its MEXC replay is -0.6 bp/day. The all-symbol drawdown was 16%.
    - **Status:** the forward replay is about zero. It is now decided by R221.
-5. **Everything else is NULL net of costs.**
+6. **Everything else is NULL net of costs.**
    - The gross edges (atlas cells, lead-lag spread) are real but smaller than a taker's cost.
    - The route left open for them is execution: maker orders placed by hand on MEXC at 0 fee, or an overlay on books
      that trade anyway.

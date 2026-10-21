@@ -26,6 +26,11 @@ says the reference "on its own earns nothing either way", so nothing from this f
   rank IC.
   - Only hl_fund_gap_3d is positive at 2x, and it fails the reality check (p 0.41 at its best horizon).
   - Turnover kills price_gap_dev: 1.43 of the book a day.
+- **Cost parity** (Codex's review on #7):
+  - The pass rule charges 2 × 7 bp × the mean turnover. The engine's net also charges the first day's entry.
+  - Recomputed from the engine's complete paid cost (its gross minus its net), every factor's 24 h net moves by at
+    most 0.02 bp a day: bn_fund_3d +10.43 / +4.68 / -1.07.
+  - No decision changes.
 - **Rank ICs point one way.** Every funding-gap IC is negative: when Binance pays more than Gate or Hyperliquid, the
   Binance perp does slightly worse, net of funding. That is the direction a crowding story predicts. The size is
   0.01-0.02 rank IC, below the family's noise.

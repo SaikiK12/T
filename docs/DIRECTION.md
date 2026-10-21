@@ -181,6 +181,30 @@ and handed over through the gates.
 
 **Kept as is:** the 8 forward lanes and their dates, the hard rules, and the append-only, one-writer journals.
 
+## Optional axis: faster profits (owner, 2026-10-21)
+The owner asked for profits made faster:
+- close to scalping, on MEXC and other venues;
+- futures order books;
+- leverage and confidence sizing per position.
+
+It is an option beside the main direction, not a replacement. It enters the queue as four methods:
+
+| Method | What | First step |
+|---|---|---|
+| M264 | Order-flow imbalance scalp (1-10 s imbalance, microprice) on MEXC and Binance | A top-of-book and trades recorder for about 10 liquid coins plus the coins R278 holds. L2 history cannot be backfilled, so the clock starts when the recorder does. API execution only. |
+| M265 | Leverage and liquidation check for R275's carry legs at 1x / 2x / 3x / 5x | Gate 0 and descriptive, on R275's own trades. It gives the safe leverage per book and the return on capital at that leverage. |
+| M266 | Confidence-sized carry: weight by spread width and persistence, capped at 3x | A qx spread variant, so a new lane with its own engine version. |
+| M267 | Settlement-window carry: hold the pair only around the short venue's settlements | Screen the size of settlement gaps against 4 legs of cost first. |
+
+**What the lab already knows here:**
+- R193 (maker entries) and R223 (settlement capture) were NULL.
+- arXiv 2502.18625 found maker fills on Binance adversely selected.
+- Short-horizon order-flow edges are real but decay within seconds to minutes. Fees and the spread take most of them
+  at retail latency.
+- Leverage multiplies the edge and the error alike.
+
+So each item goes through the same gates: a frozen family, then forward paper.
+
 ## Critical files
 - **New:**
   - `scripts/record_mexc_funding.py`, `scripts/record_notices.py`, `scripts/record_unlocks.py`
