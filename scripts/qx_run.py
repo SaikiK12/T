@@ -10,6 +10,8 @@ A lane is a folder experiments/<lane>/ with:
       rebuild: python scripts/x_events.py --out {tmp}   # optional; must reproduce legs.csv byte for byte
       ```
 - spec.toml, the qx spec (its hash is one of the inputs).
+  New factor lanes must declare factor_cost_policy = "complete_paid_v1" in that hashed spec. Legacy factor lanes
+  replay their original frozen commit; this runner does not change their decision rule implicitly.
 
 Steps: prereg.verify -> input hashes -> optional byte-for-byte rebuild -> `qx events spec.toml` (or `qx spread` when the
 spec has venue `sets`) -> results/report.json and the tables -> results/SUMMARY.md (1x/2x/3x, reality check, null,
@@ -37,6 +39,7 @@ sys.path.insert(0, str(ROOT))
 from lab import prereg, registry  # noqa: E402
 
 QX = ROOT / "engine" / "target" / "release" / "qx"
+FACTOR_COST_POLICY = "complete_paid_v1"
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
@@ -198,10 +201,25 @@ def factor_decision(rep):
     return ("PARTIAL" if any(v["pass"] for v in fp.values()) else "NULL"), fp
 
 
-def factor_summary(rep, rid, psha, *, decision=None):
+def require_factor_cost_policy(spec, lane, text):
+    """Opt in through a frozen spec before any rebuild/engine work; do not reinterpret legacy frozen rules."""
+    replay = ("Legacy factor lanes, including R276, must be replayed from their original frozen commit; "
+              "register a new lane for the complete paid-cost decision.")
+    policy = spec.get("factor_cost_policy")
+    if policy != FACTOR_COST_POLICY:
+        raise SystemExit(f"factor_cost_policy must be {FACTOR_COST_POLICY!r}; got {policy!r}. {replay}")
+    files, _ = inputs(text)
+    spec_path = (lane / "spec.toml").resolve()
+    if not any((ROOT / path).resolve() == spec_path for path in files):
+        raise SystemExit(f"factor_cost_policy {policy!r} requires the lane's spec.toml in frozen inputs. {replay}")
+    return policy
+
+
+def factor_summary(rep, rid, psha, *, cost_policy, decision=None):
     verdict, fp = factor_decision(rep) if decision is None else decision
     passed = [f for f, v in fp.items() if v["pass"]]
     lines = [f"# {rep['name']} ({rid}): {verdict}", "",
+             f"- **Decision cost policy:** {cost_policy}.",
              f"- **Family:** {rep['trials']} factor x horizon series over {rep['dates']} dates and {rep['coins']} coins.",
              f"- **Reality check:** max |t| of rank IC, blocks of {rep['block']} dates; null 95th percentile "
              f"{rep['rc_null_p95']:.2f}.",
@@ -233,32 +251,35 @@ def main():
     pre = lane / "PREREG.md"
     psha = prereg.verify(pre)
     text = pre.read_text()
+    sp = tomllib.loads((lane / "spec.toml").read_text())
+    kind = "spread" if "sets" in sp else "factors" if "factors" in sp else "events"
+    cost_policy = require_factor_cost_policy(sp, lane, text) if kind == "factors" else None
     log("prereg sha", psha[:12])
     check(lane, text)
     if not QX.exists():
         subprocess.run(["cargo", "build", "--release", "--manifest-path", str(ROOT / "engine" / "Cargo.toml")], check=True)
     out = lane / "results"
     out.mkdir(exist_ok=True)
-    sp = tomllib.loads((lane / "spec.toml").read_text())
-    kind = "spread" if "sets" in sp else "factors" if "factors" in sp else "events"
     with open(lane / "run.log", "a") as f:
         subprocess.run([str(QX), kind, str(lane / "spec.toml")], cwd=ROOT, check=True, stderr=f,
                        env={**os.environ, "QX_DATA": str(ROOT / "data")})
     rep = json.loads((out / "report.json").read_text())
     rid = re.search(r"Registry id:\*?\*?\s*(R\d+)", text).group(1)
     decision = factor_decision(rep) if kind == "factors" else None
-    result = (factor_summary(rep, rid, psha, decision=decision) if kind == "factors"
+    result = (factor_summary(rep, rid, psha, cost_policy=cost_policy, decision=decision) if kind == "factors"
               else {"spread": spread_summary}.get(kind, summary)(rep, rid, psha))
     (out / "SUMMARY.md").write_text(result)
     run_verdict = decision[0] if decision is not None else rep["verdict"]
-    log(f"{rid} {run_verdict}; survivors {rep['survivors']}; summary in {out / 'SUMMARY.md'}")
+    policy_note = f"; cost policy {cost_policy}" if kind == "factors" else ""
+    log(f"{rid} {run_verdict}; survivors {rep['survivors']}{policy_note}; summary in {out / 'SUMMARY.md'}")
     if a.register:
         verdict = "PARTIAL" if rep["survivors"] else "NULL"
         best = (rep.get("strategies") or rep.get("results"))[0]
         if kind == "factors":
             verdict, fp = decision
             passed = [f for f, v in fp.items() if v["pass"]]
-            note = (f"qx factor report; {rep['trials']} factor x horizon series; RC survivors {rep['survivors'] or 'none'}; "
+            note = (f"qx factor report; cost policy {cost_policy}; {rep['trials']} factor x horizon series; "
+                    f"RC survivors {rep['survivors'] or 'none'}; "
                     f"pass {passed or 'none'}; "
                     f"best {best['factor']} {best['horizon_h']}h rank IC {fmt(best['rank_ic'], 4)} "
                     f"t {fmt(best['rank_ic_t'], 2, False)} "

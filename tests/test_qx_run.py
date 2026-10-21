@@ -94,7 +94,7 @@ class FactorDecisionTest(unittest.TestCase):
 
 
 class RunnerFixtureTest(unittest.TestCase):
-    def run_fixture(self, report, kind="factors"):
+    def run_fixture(self, report, kind="factors", *, policy="complete_paid_v1", hash_spec=True):
         """Use a frozen synthetic prereg and executable report stub; all writes stay in the temporary root."""
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
@@ -102,8 +102,11 @@ class RunnerFixtureTest(unittest.TestCase):
             lane.mkdir(parents=True)
             (root / "registry").mkdir()
             sp = lane / "spec.toml"
-            sp.write_text({"factors": 'factors = "unused-fixture.parquet"\n',
-                           "spread": 'sets = []\n', "events": 'events = []\n'}[kind])
+            spec_text = {"factors": 'factors = "unused-fixture.parquet"\n',
+                         "spread": 'sets = []\n', "events": 'events = []\n'}[kind]
+            if kind == "factors" and policy is not None:
+                spec_text += f"factor_cost_policy = {json.dumps(policy)}\n"
+            sp.write_text(spec_text)
             fixture = root / "report_fixture.json"
             fixture.write_text(json.dumps(report))
             stub = root / "engine_stub.py"
@@ -118,7 +121,8 @@ class RunnerFixtureTest(unittest.TestCase):
             pre.write_text(
                 "# PREREG: factor_fixture (R999999). Synthetic runner regression\n"
                 "- **Registry id:** R999999\n\n```inputs\n"
-                + "".join(f"{p.relative_to(root)}  {qx_run.sha(p)}\n" for p in (sp, fixture, stub))
+                + "".join(f"{p.relative_to(root)}  {qx_run.sha(p)}\n"
+                          for p in ((sp, fixture, stub) if hash_spec else (fixture, stub)))
                 + "```\n")
             digest = qx_run.prereg.freeze(pre)
             with mock.patch.object(qx_run, "ROOT", root), mock.patch.object(qx_run, "QX", stub), \
@@ -139,12 +143,36 @@ class RunnerFixtureTest(unittest.TestCase):
                 actual = self.run_fixture(report)
                 self.assertEqual(actual["kind"], "factors")
                 self.assertTrue(actual["summary"].startswith(f"# factor_fixture (R999999): {verdict}\n"))
+                self.assertIn("Decision cost policy:** complete_paid_v1", actual["summary"])
                 self.assertIn("1x / 2x / 3x", actual["summary"])
                 self.assertEqual(len(actual["rows"]), 1)
                 self.assertEqual(actual["rows"][0]["verdict"], verdict)
                 self.assertEqual(actual["rows"][0]["prereg_sha"], actual["digest"])
                 self.assertEqual(actual["rows"][0]["trials"], "1")
+                self.assertIn("cost policy complete_paid_v1", actual["rows"][0]["notes"])
                 self.assertTrue(any(str(x).startswith(f"R999999 {verdict}; survivors") for x in actual["logs"]))
+                self.assertTrue(any("cost policy complete_paid_v1" in str(x) for x in actual["logs"]))
+
+    def test_legacy_or_unknown_policy_aborts_before_rebuild_engine_or_registration(self):
+        for policy in (None, "mean_turnover_v0"):
+            with self.subTest(policy=policy), mock.patch.object(qx_run, "check") as check, \
+                    mock.patch.object(qx_run.subprocess, "run") as run, \
+                    mock.patch.object(qx_run.registry, "append") as append:
+                with self.assertRaisesRegex(SystemExit, "original frozen commit"):
+                    self.run_fixture(factor_report(), policy=policy)
+                check.assert_not_called()
+                run.assert_not_called()
+                append.assert_not_called()
+
+    def test_policy_spec_must_be_listed_in_frozen_inputs_before_any_compute(self):
+        with mock.patch.object(qx_run, "check") as check, \
+                mock.patch.object(qx_run.subprocess, "run") as run, \
+                mock.patch.object(qx_run.registry, "append") as append:
+            with self.assertRaisesRegex(SystemExit, "spec.toml in frozen inputs"):
+                self.run_fixture(factor_report(), hash_spec=False)
+            check.assert_not_called()
+            run.assert_not_called()
+            append.assert_not_called()
 
     def test_factor_engine_verdict_cannot_override_complete_cost_decision(self):
         report = factor_report()

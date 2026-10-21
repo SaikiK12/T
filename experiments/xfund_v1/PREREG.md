@@ -36,20 +36,20 @@ change is a new lane.
 ## Inputs (frozen)
 
 ```inputs
-experiments/xfund_v1/symbols.csv  SYMBOLS_SHA
-experiments/xfund_v1/spec.toml  SPEC_SHA
-scripts/venue_symbols.py  VS_SHA
-engine/src/spread.rs  SPREAD_SHA
-engine/src/data.rs  DATA_SHA
-engine/src/events.rs  EVENTS_SHA
-engine/src/factors.rs  FACTORS_SHA
-engine/src/stats.rs  STATS_SHA
-engine/src/main.rs  MAIN_SHA
-engine/Cargo.lock  LOCK_SHA
+experiments/xfund_v1/symbols.csv  78201a341b9fc498b67f4893f1dd30d67d790d94ca8257a4b1a2ce8f569ab8e0
+experiments/xfund_v1/spec.toml  ffab653a52f37385103bd89ad11fd5d925caf905d0ff5c0aa5af1674de135874
+scripts/venue_symbols.py  e7479df3f3a004e253c7e6632e942d55f116223388b0776365f533042464b06c
+engine/src/spread.rs  4055ceacd7949b742f864a35dfc1698262c1163200ccf0e5386a3dc726711074
+engine/src/data.rs  4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146
+engine/src/events.rs  31bc1b59ac055a164256b606e88dad4cd2f1e3ad8280fab3e914b4f725911474
+engine/src/factors.rs  c88beac9b02464cfda09203a42716cf9861dffb060182796e17266a5d72c61e1
+engine/src/stats.rs  bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47
+engine/src/main.rs  42184bc6302dd9c71f4a804d7882d7a549a8e6d958571c2e49e54baf49d5f8c2
+engine/Cargo.lock  9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f
 rebuild: python scripts/venue_symbols.py {tmp}/symbols.csv
 ```
 
-Data digests at freezing (`docs/provenance/<folder>.json`, combined sha256): PROVENANCE_LINES
+Data digests at freezing (`docs/provenance/<folder>.json`, combined sha256): `klines_1h` 77fffa8a9d94cae2 (901 files, recorded 2026-10-20T21:45:26Z); `fundingRate` d80aa377b9283329 (901 files, recorded 2026-10-20T21:46:49Z); `gate_hist` d7c9146708710203 (3330 files, recorded 2026-10-20T22:16:48Z); `hyperliquid` 9c8ca0af334b0e3b (703 files, recorded 2026-10-20T23:06:46Z); `mexc_hist` f40c28647bf74481 (1823 files, recorded 2026-10-20T16:55:30Z).
 
 ## Universe (`scripts/venue_symbols.py`, from file names and contract lists only)
 - One row per Binance USD-M perp that has klines and funding in the archive, with the same coin's file on:
@@ -57,7 +57,7 @@ Data digests at freezing (`docs/provenance/<folder>.json`, combined sha256): PRO
   - **Hyperliquid:** coins in both `candles_1d` and `funding`; "k" coins are the 1000x contracts (kPEPE = 1000PEPE);
   - **MEXC:** USDT perps in `contracts.json` with klines and funding files.
   - The name rule is R274's `binance_perp` (plain, 1000 or 1000000 prefix).
-- Rows listed on fewer than 2 venues are dropped. COUNTS_LINE
+- Rows listed on fewer than 2 venues are dropped. The frozen table has 867 coins: binance 867, gate 860, hyperliquid 216, mexc 520.
 - **Reserved samples are never read:** the table only contains coins with a Binance perp, so no MEXC-only coin and no
   Gate long-tail contract is opened. Gate's 2020 rows are not in `open/`, and qx drops every row before 2021-01-01 as
   it reads (Binance 2020 included).
