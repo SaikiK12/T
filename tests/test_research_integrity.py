@@ -40,6 +40,18 @@ class Fixture:
 
 
 class PreregMetadataTests(Fixture, unittest.TestCase):
+    def test_typed_inline_method_field_preserves_round_validation(self):
+        for text in ("R233. **Method:** M281.", "`R233`. **Method:** M281"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("- **Registry id:** " + text), [])
+        for text in ("R233. **Method:** R234.", "R233. **Method:** M281. R234",
+                     "R233. **Method:** M281; R234",
+                     "R233. **Method:** M281. **Method:** M282"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("Registry id: " + text), ["REGISTRY_ID_INVALID"])
+        self.assertEqual(self.codes("Registry id: R234. **Method:** M281."),
+                         ["REGISTRY_ID_MISMATCH"])
+
     def test_sentence_period_preserves_full_value_and_id_checks(self):
         for text in ("R233.", "`R233`.", "R233 (Claude block R220-R239, claimed on issue #7)."):
             with self.subTest(text=text):
