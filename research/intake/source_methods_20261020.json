@@ -9243,6 +9243,244 @@
       ],
       "evidence_refs": [],
       "canonical_relation": "Dynamic inverse-volatility selection/weighting related to M027; distinct from static A/B/X2 R253. The code does not establish that tail(5) are five lowest/highest-volatility ETFs."
+    },
+    {
+      "id": "FH26-BASIS-HYSTERESIS",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Event-clock two-leg basis mean reversion with hysteresis",
+      "method_type": "strategy",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Normalize SPY quotes by10 relative to ES. basis=(AskSPY+BidSPY-AskES-BidES)/2; mean starts at first basis then mean=.999*mean+.001*basis. deviation starts0 then deviation=.75*deviation+.25*(basis-mean), each call. Flat: deviation>SPYspread+.4 targets longES/shortSPY; -deviation>ESspread+.4 targets shortES/longSPY. Close first target when -deviation>ESspread+.2; mirror close when deviation>SPYspread+.2. Otherwise hold; no time-stop. Internal target state changes on command without fill input.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M402 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "New exact composite allocation M402. Related M045 pairs/M239 arbitrage/M088 latency only; R219 hourly lead-lag and R250 formation/weekly pairs are different tests."
+    },
+    {
+      "id": "FH26-SYMMETRIC-REPLAY",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Exchange-time two-feed replay with common order delay",
+      "method_type": "methodology",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Merge next ES/SPY quote by lower timestamp (ties selectSPY), invoke the signal after both books initialized. Driver2016-10-05 09:30..15:30NY, EntryDelay4ms, Fill8 (author describes latest available quote after the delay; exact framework fill semantics unverified), Slippage0,Lots100; normalized SPY quote price factor10. Author varies latency, but that is not a project study.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Latency/replay methodology; source does not validate causal execution or queue fills. R213 hourly delay does not test it."
+    },
+    {
+      "id": "FH26-ASYMMETRIC-REPLAY",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Venue-specific feed-arrival and order-delay replay",
+      "method_type": "methodology",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Addendum shifts ES quote timestamps+4.8ms and SPY+.25ms for arrival; sets respective order delays4.8/.25ms. Keep exchange, receive, decision and order/fill clocks distinct. Source framework behavior not executed.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Separate latency treatment, not a completed strategy or proof that shifted receive times remain valid execution clocks."
+    },
+    {
+      "id": "FH26-DELAY-FAST-FEED",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Artificially delay the faster input feed",
+      "method_type": "methodology",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Alternative addendum treatment delays incomingSPY quotes another4.55ms to align them with delayedES quotes. Author claims a similar result; causal equivalence and execution quote timing have not been independently established.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Input-delay comparison distinct from changing outbound order latency; no new directional alpha rule."
+    },
+    {
+      "id": "FH26-MERGE-CHART",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Millisecond normalized quote comparison and lead-lag inspection",
+      "method_type": "methodology",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Merge quote histories by ascending timestamps, scaleSPY by10, plot ask curves at nominal1ms resolution with ES visualization offset3.575 and outlier ratio1.002. Display skips empty intervals. This is a diagnostic, not a strategy or evidence that a visible gap is fillable.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Source diagnostic; neither a lag-regression result nor the hourly R219 test. Plot code was inspected, not executed."
+    },
+    {
+      "id": "FH26-NANOTICK-IMPORT",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "Nanotick ES quote conversion to signed-price T1 events",
+      "method_type": "data_adapter",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Displayed converter uses literal strstr(Code, parsed_symbol) with Code=ESZ (reverse of the usual parsed-symbol-contains-Code test; actual input symbols unverified) in20161004..20161014 daily CSVs, cents-to-price conversion, skips prices<1000, encodes bids as negative, adds1hour Chicago-to-NY local-time shift. Output T1 contains OLE-date double timestamp and float signed price only.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Contextual adapter, not another trading rule. Sample-specific local-time offset is not a general timezone or clock-synchronization policy."
+    },
+    {
+      "id": "FH26-NXCORE-IMPORT",
+      "parent_claim_id": "FH26-HFT-ARTICLE",
+      "title": "NxCore SPY quote conversion to signed-price T1 events",
+      "method_type": "data_adapter",
+      "hypothesis": "Public source code/mechanics lead only; no market edge demonstrated.",
+      "testable_rule": "Displayed callback filters symbol substringeSPY, copies timestamp and signed price through10000-row buffers to T1. Quote Size is available in callback struct but omitted from the output. T1 has no size, receive clock, sequence or order lifecycle.",
+      "exact_tested_scope": "Static article/code inspection. Five invented-quote cases execute only the original fingerprinted tradeHFT function as C++; no original converter/replay framework or market outcome executed.",
+      "unrun_scope": "The complete source strategy and any explicitly chosen MEXC adaptation remain unrun. Parent-family outcomes do not test this exact source scope.",
+      "status": "blocked",
+      "required_inputs": [
+        "Synchronized normalized bid/ask events with exchange/receive/decision clocks and a frozen duplicate/stale/tie policy.",
+        "Contract multipliers/hedge quantities, executable depth, fills/fees/borrow or funding and collateral/account state."
+      ],
+      "blockers": [
+        "No original private ES/SPY BBO, HFT.csv asset list, Zorro runtime or original backtest received. Displayed commission was omitted and Slippage=0.",
+        "Source examples do not establish MEXC equivalence, millisecond history or executable fills. Per-second BBO recording does not reconstruct the original event sequence."
+      ],
+      "next_action": "Retain under M088 with exact scope; resolve input/execution mechanics, freeze one finite comparison before market outcomes and report complete1x/2x/3x costs.",
+      "source_refs": [
+        {
+          "path": "https://financial-hacker.com/hacking-hft-systems/",
+          "label": "Article body including addendum and all7 displayed code blocks; reader comments and external references not extracted."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "article_published": "2017-07-08T14:26:30+01:00",
+        "article_updated": "2022-03-06T09:58:03+01:00",
+        "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+        "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521"
+      },
+      "alias_relation": "Contextual adapter; private tape/plugin access not obtained, and this price-only format cannot reconstruct depth or queue position."
     }
   ],
   "sources": [
@@ -11041,6 +11279,109 @@
         "Historical classification backcasts, later corrections, contract aggregation and unknown actual availability are separate limitations.",
         "Public metadata access does not prove complete BTC/FX/index history, original-vintage availability or commercial service entitlements. No account, subscription or login restriction bypassed."
       ]
+    },
+    {
+      "intake_id": "financial_hacker_hft_code_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [
+        "FH26-BASIS-HYSTERESIS",
+        "FH26-SYMMETRIC-REPLAY",
+        "FH26-ASYMMETRIC-REPLAY",
+        "FH26-DELAY-FAST-FEED",
+        "FH26-MERGE-CHART",
+        "FH26-NANOTICK-IMPORT",
+        "FH26-NXCORE-IMPORT"
+      ],
+      "media_source_count": 1,
+      "media_sources": [
+        {
+          "url": "https://financial-hacker.com/hacking-hft-systems/",
+          "basis": "Only main article body including addendum and7 code blocks read. No linked2017 source archive, HFT.csv, private BBO, referenced article, reader-comment method or chart-image pixel data received.",
+          "retrieved_utc": "2026-10-21T12:10:29.027586+00:00",
+          "whole_html_bytes": 233311,
+          "whole_html_sha256": "5a01146109ec3a476688c515e52c3d71dc76d6dd8dbd2bc321f7dd5853fba521",
+          "selected_article_text_sha256": "656540a1f90c2d99aaed9ee2bf87162812de96e62212b6b485a01e8483b8fe6a",
+          "selected_signal_sha256": "e01e7b2905eb64662cec737ad9fc7a6202035b28341511ad8044ab80c6170ff0",
+          "selected_signal_bytes": 943,
+          "displayed_code_blocks": [
+            {
+              "index": 0,
+              "bytes": 943,
+              "sha256": "e01e7b2905eb64662cec737ad9fc7a6202035b28341511ad8044ab80c6170ff0"
+            },
+            {
+              "index": 1,
+              "bytes": 149,
+              "sha256": "93a0ee6b031eafa2eef6a48a7e77c3bb01fb0e8c9c89a9d889359efc35712275"
+            },
+            {
+              "index": 2,
+              "bytes": 1470,
+              "sha256": "c012a65b72fbde5254adac2a57df339a37c9fcac21465fcdb33fd6e350bacf39"
+            },
+            {
+              "index": 3,
+              "bytes": 1331,
+              "sha256": "4637992d6da2f01ceccaa8f7de799f5b942271470f3baf05d98e547aadc2c470"
+            },
+            {
+              "index": 4,
+              "bytes": 1089,
+              "sha256": "c24cd6bc3c39239b635a78f7a86264391475ce7a2442d60f9053ba8836079cca"
+            },
+            {
+              "index": 5,
+              "bytes": 1525,
+              "sha256": "895c366bd63a0ae59bd426be9589f5fe5ea4cc99aab846f1c6533fb658c9c3ee"
+            },
+            {
+              "index": 6,
+              "bytes": 541,
+              "sha256": "352bae971d6713017aff1d2a44061a203df9a7394d03e1b19373d050d4b4d0fe"
+            }
+          ],
+          "version_limit": "Mutable article. Whole HTML includes unreviewed reader comments/navigation; article-text/code fingerprints identify actual read/compiled scope. Publication/update labels do not version the private data or guarantee future source retrieval."
+        }
+      ],
+      "received_scope": "One previously unextracted library article. Seven distinct strategy/replay/diagnostic/adapter records enumerate actual received scope; only the943-byte signal function executed. Hardware/language/location discussion is contextual, not a verified benchmark or strategy.",
+      "exact_tested_scope": "Five synthetic source-function checks; four extraction/version guard tests. No market data, timing benchmark, original replay/data conversion or profitability run.",
+      "synthetic_findings": [
+        "Compiled original valid-input cases can emit either entry direction with normalized instantaneous sell-bid minus buy-ask=-0.01. It checks only one venue spread, so it does not certify a positive two-leg executable gap. This alone does not prove eventual loss.",
+        "A second identical snapshot can change the event-clock deviation enough to enter. This is algorithm identity, not independently a defect; filter cadence/dedup require explicit policy.",
+        "The function initializes at the first valid basis and has no timestamp or fill-acknowledgment input. Its internal state is a command target, not proof of an actual position."
+      ],
+      "static_replay_findings": [
+        "Merge loops advance the smaller next timestamp but break if max(nextES,nextSPY)>EndTime. Toy clocksES[1,9],SPY[2,11],end10 would stop after1/2 and omit eligibleES9. Static condition reasoning only, not executed original Zorro replay.",
+        "Equal timestamps preferSPY; end-of-stream, terminal positions, queues and one-leg failures are not established.",
+        "Driver/converter names use201610 dates while one chart caption says2017; no historical sample/version inferred from the inconsistent caption."
+      ],
+      "repository_reconciliation": {
+        "canonical_new_id": "M402",
+        "related_only": [
+          "M045",
+          "M239",
+          "M088",
+          "M087",
+          "M056"
+        ],
+        "source_claim": "https://github.com/SaikiK12/T/issues/7#issuecomment-6315593134",
+        "distinct_prior_scope": "R219 tested hourly top5-to-alt lag/catch-up slices, not this tick rule. R250 tested distance/EG formation and weekly pair books, not event-EMA/hysteresis. M264 per-second recorder does not provide original millisecond history."
+      },
+      "repro_artifacts": "research/audit_fh_hft.py + research/fixtures/fh_hft_synthetic_audit.json on codex/fh-hft-source-audit; selected original code is fingerprinted before C++ compilation. No publisher code vendored.",
+      "remaining_scope": "Source private BBO and asset list unreceived, fees omitted, no size/depth/order acknowledgments, spread/valuation/quantity equivalence and separate clocks unresolved. Do not promote source daily-profit, latency, annual-return, leverage or risk-free claims into project evidence. Any MEXC-native transport requires a new finite frozen spec/code, controls,1x/2x/3x costs and fresh prospective paper evidence. Weak prior or source defect is not an exclusion of the rule.",
+      "market_trials": 0,
+      "mentioned_only_scope": [
+        "Fore-running is mentioned but explicitly excluded from the experiment; no concrete implemented rule extracted.",
+        "Adding other ETF/futures pairs is suggested without a pair list, selection or sizing mechanics.",
+        "Swapping venue delays for an Aurora location is a prose-only variant; unexecuted and no quoted profit adopted.",
+        "Threshold tuning over months of ES/SPY data is proposed but not performed in this pass. No sweep or winner selection.",
+        "Author latency configurations0.5/4/6/10ms are retained as source configurations only; corresponding profit table is unvalidated."
+      ],
+      "synthetic_execution_limit": "The five cases execute only the signal; original Outlier=1.002 wrapper, converters and replay are unexecuted. Toy common price level2500 keeps these invented changes below0.2%, without claiming actual wrapper admission, real prices or historical coverage.",
+      "repro_commit": "accfbf1",
+      "draft_pr": "https://github.com/SaikiK12/T/pull/43",
+      "validation": "Five compiled-source cases and four source guards; independent review passed; audit branch full597 tests OK (3skipped), intake branch full620 tests OK (3skipped),37focused tests. No market trials. Final exact source-byte reproduction retained in the audit PR.",
+      "input_validation_limit": "Finite positive uncrossed books, freshness, sequence and timestamp checks belong to a future surrounding framework; invalid-input cases were not part of the five compiled examples."
     }
   ],
   "reassignment_refs": [

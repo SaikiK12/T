@@ -2,6 +2,8 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
+Current received scope: 266 source records/aliases and 54 catalog/tool entries, reconciled to 281 queue rows on base `d901ac7`. Counts in older pass descriptions below refer to their historical snapshots. This is bounded extraction, not complete library coverage or strategy validation.
+
 `source_catalog_20261020.csv` contains 30 provider or publisher entry points across market microstructure, options, on-chain lending/MEV, macro vintages, news, institutional data and practitioner media. Each row states the actual received scope, access boundary, existing queue relationship and unresolved verification. This is a source directory, not another methods queue: catalog discovery does not mean full-text extraction, possession of a dataset or a tested trading rule. No paid/private corpus was accessed, purchased or bypassed. Subscription prices, trial eligibility and MEXC-specific coverage are not assumed.
 
 `source_catalog_tooling_20261020.csv` reviews 24 engineering tools from official capability/documentation excerpts.
@@ -61,3 +63,5 @@ The library pass adds ten provider entrypoints (30 total, plus24 tools) and one 
 `intake_collision_reconciliation_20261021` preserves the original pending source M280/M281 rows, aliases and source objects in two collision receipts and moves only their current allocations to M400/M401. Existing live-lab M280/M281 meanings remain intact; no historical claim precedence, method change or measured trial is inferred.
 
 `cftc_positioning_inputs_20261021` records the actual TFF schema and report-family/clock/vintage requirements for existing M100/M220. Five bounded primary sources distinguish entity classifications, backcast history, corrections and delayed issuance from scheduled release. A zero-row query confirms schema access without position records; contract coverage remains unqueried. Two2023 announcements establish late issuance days, while the2025 backlog table remains an intended schedule. This supplies no new rule, alias, outcome or historical point-in-time dataset.
+
+`financial_hacker_hft_code_20261021` extracts one article body/addendum and its seven code blocks into seven strategy/replay/diagnostic/adapter records (266 source records/aliases total). M402 retains the exact event-clock basis rule as BLOCKED; R219/R250 do not test that rule. [DraftPR43](https://github.com/SaikiK12/T/pull/43) has five synthetic cases that compile only its fingerprinted signal function and expose incomplete spread certification and event-count sensitivity. The private BBO/asset list, Zorro replay and claimed profits remain unreceived/unvalidated. Static replay-tail/tie issues and separate quote/fill clocks are explicit. Current queue:258 exact main rows atd901ac7,22 earlier source rows,plusM402; no frozen/journal/result change.
