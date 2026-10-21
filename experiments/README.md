@@ -25,8 +25,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (81)
+## Finished and registered rounds (83)
 
+- **[trendpull_v1](trendpull_v1/)** R284, DONE NULL, 8 trials. Trend pullback (Visser, M277): long after the 63-day rate of change resets near zero inside a rising 200-day trend, 10 world indices (H 63/21) and every Binance perp (H 90/30), vs the asset's own mean hold ([PREREG](trendpull_v1/PREREG.md), [FINDINGS](trendpull_v1/FINDINGS.md))
+- **[vixpanic_v1](vixpanic_v1/)** R283, DONE NULL, 27 trials. VIX panic onsets (VIX>VIX3M, VVIX top 5%, both) -> long SPY/QQQ/BTC perp 5/10/20 d vs random dates (M278, owner's TikTok) ([PREREG](vixpanic_v1/PREREG.md), [FINDINGS](vixpanic_v1/FINDINGS.md))
 - **[pitfac_v1](pitfac_v1/)** R282, DONE PARTIAL, 27 trials. What the daily point-in-time panel's new sources say about a Binance perp's next days ([PREREG](pitfac_v1/PREREG.md), [FINDINGS](pitfac_v1/FINDINGS.md))
 - **[sizecarry_v1](sizecarry_v1/)** R281, DONE NULL, 30 trials. Confidence-sized carry (M266): the six carry books (R278 A/B/C, R279 A/B, batch binance+gate) with each open pair sized by spread, persistence, inverse leg volatility or their products, against equal slots ([PREREG](sizecarry_v1/PREREG.md), [FINDINGS](sizecarry_v1/FINDINGS.md))
 - **[levcarry_v1](levcarry_v1/)** R280, DONE DATA_PASS, 0 trials. Leverage and liquidation on the five forward carry books (R278 A/B/C, R279 A/B): L 1-10, isolated or cross margin per venue, mm 1%/5%: measurement ([PREREG](levcarry_v1/PREREG.md), [FINDINGS](levcarry_v1/FINDINGS.md))
@@ -109,9 +111,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Data and loop folders (4)
+## Data and loop folders (5)
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
+- **[reserved_batch1](reserved_batch1/)** Specs and inputs for the first read of the reserved samples (2020, MEXC-only coins), due 2026-11-03; registered when its PREREG is frozen (docs/GATES.md)
