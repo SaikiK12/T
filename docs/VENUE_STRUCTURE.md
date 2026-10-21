@@ -101,9 +101,15 @@ venue,** if they trade coins with deep Lighter books.
 4. **Lighter in cross-venue carry.** Lighter pays funding every hour. Add it as a venue to the xfund family
    (R275/R277/R278) in a new lane once its funding history is held. When one venue is Lighter, two of a carry
    trade's four legs pay no fee.
-5. **Tape lead-lag (M264, M293).** Freeze the PREREG before the tape is read against price changes (`docs/ROOM.md`
-   claim first). The question: does a move on Binance lead MEXC or Lighter by more than the round-trip cost, over
-   seconds?
+5. **Tape lead-lag (M264, M293): the reachable form of latency arbitrage.** MEXC's API fee (16 bp a round trip) is
+   far above any move over a few seconds, so the venue that matters is Lighter: no fee and a BTC half-spread of about
+   0.01 bp, but a 300 ms delay on taker orders that protects its makers. The question is whether Lighter's book is
+   still stale after the delay when Binance has moved. `scripts/record_tape.py` now also records Lighter's best bid
+   and offer (stamped in microseconds by its matching engine, about 20-30 ms to receipt here) and trades for the same
+   12 coins, through the read-only websocket. **It starts at the recorder's next restart:** the running recorder
+   (since 2026-10-21 15:19 UTC) was not stopped. The PREREG is frozen before the tape is read against price changes,
+   after an R-id claim in `docs/ROOM.md`. Fills are assumed at the Lighter book one full second after the signal
+   second, which is more pessimistic than the 300 ms delay.
 6. **Pool prices for M288.** Add a recorder of DEX pool prices (GeckoTerminal's public API, about 6 months of OHLCV
    kept) for tokens whose main venue is on-chain and that also have a MEXC or Lighter perp. MEXC-only coins are
    reserved (`docs/GATES.md`): discovery uses coins that Binance also lists, plus forward recording.
