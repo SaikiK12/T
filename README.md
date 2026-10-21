@@ -53,7 +53,9 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`VOLATILITY_AND_TAIL_RISK_FORECASTS.md`](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),
   [`QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md`](docs/QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md),
   [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md), [`VIDEO_DIG.md`](docs/VIDEO_DIG.md) (the owner's TikToks and
-  practitioner podcasts: what to trade, news recording, the cross-family book).
+  practitioner podcasts: what to trade, news recording, the cross-family book),
+  [`COMMENT_DIG.md`](docs/COMMENT_DIG.md) (Hacker News, Reddit, Stack Exchange, YouTube and TikTok comments and podcast
+  transcripts: ideas M288+ and what the lab already tested).
 
 **Trading, execution and capital**
 - The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md).

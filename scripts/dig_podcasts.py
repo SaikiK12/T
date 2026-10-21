@@ -18,6 +18,7 @@ Steps:
 data/ is gitignored; docs/VIDEO_DIG.md holds the reading.
 
 usage: python scripts/dig_podcasts.py episodes
+       python scripts/dig_podcasts.py pages --urls URL [URL ...]
        python scripts/dig_podcasts.py text [--per-feed 12] [--feeds a b] [--match REGEX]
                                            [--whisper-python PATH --tmp DIR]
 """
@@ -71,6 +72,27 @@ FEEDS = {
     "unchained": "https://feeds.megaphone.fm/LSHML4761942757",
     "forward_guidance": "https://feeds.megaphone.fm/forwardguidance",
     "milk_road": "https://anchor.fm/s/83d264f4/podcast/rss",
+    # added 2026-10-21 for docs/COMMENT_DIG.md: trading-firm, vol, CTA and crypto-desk shows
+    "signals_and_threads": "https://feeds.simplecast.com/L9810DOa",                                    # Jane Street
+    "alpha_exchange": "https://feeds.simplecast.com/8g9ryFGf",                                         # vol traders
+    "the_derivative": "https://anchor.fm/s/11908b3c/podcast/rss",
+    "resolve_riffs": "https://feeds.captivate.fm/resolve-gestalt-university/",
+    "mutiny": "https://rss.libsyn.com/shows/200924/destinations/1432148.xml",
+    "excess_returns": "https://anchor.fm/s/9a1dfac/podcast/rss",
+    "trend_following": "https://rss.libsyn.com/shows/35470/destinations/88838.xml",
+    "masters_in_business": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/"
+                           "4e4cd910-40a1-4619-a5f3-ae2b0012ffff/5873a3cb-298f-40bc-b71f-ae2b0013000d/podcast.rss",
+    "invest_like_the_best": "https://feeds.megaphone.fm/CLS2859450455",
+    "curious_quant": "https://feeds.transistor.fm/conversations-with-curious-quant",
+    "macro_trading_floor": "https://feeds.megaphone.fm/ALFINVESTMENTSTRATEGYBV2974145286",
+    "bell_curve": "https://feeds.megaphone.fm/bellcurve",
+    "lightspeed": "https://feeds.megaphone.fm/lightspeed",
+    "zeroxresearch": "https://feeds.megaphone.fm/0xresearch",
+    "delphi": "https://rss.buzzsprout.com/2609274.rss",
+    "uncommon_core": "https://anchor.fm/s/2578d5a0/podcast/rss",
+    "bankless": "https://feeds.flightcast.com/p83fuj0y0u58o82l41xei7zo.xml",
+    "bits_bips": "https://feeds.megaphone.fm/LSHML4692900914",
+    "wintermute": "https://anchor.fm/s/328b03e4/podcast/rss",
 }
 NS = {"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd", "podcast": "https://podcastindex.org/namespace/1.0"}
 
@@ -186,9 +208,28 @@ def text(per_feed, feeds, whisper_python, tmp, match=None):
         log(f"{r.feed} {r.key} {how}: {len(out.read_text().split())} words | {r.title[:70]}")
 
 
+def pages(urls):
+    """Transcript pages a show publishes on its own site (Jane Street's Signals and Threads): visible text to
+    data/videos/subs/page_<slug>.txt, which scripts/dig_videos.py grep reads."""
+    SUBS.mkdir(parents=True, exist_ok=True)
+    for u in urls:
+        slug = re.sub(r"[^a-z0-9]+", "_", u.lower().split("//", 1)[-1]).strip("_")[:80]
+        out = SUBS / f"page_{slug}.txt"
+        if out.exists():
+            continue
+        body = get(u).decode("utf-8", "replace")
+        body = re.sub(r"(?is)<(script|style|nav|header|footer)[^>]*>.*?</\1>", " ", body)
+        text = html.unescape(re.sub(r"<[^>]+>", " ", body))
+        text = re.sub(r"\s+", " ", text).strip()
+        out.write_text(text)
+        log(f"page {u}: {len(text.split())} words")
+        time.sleep(1)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["episodes", "text"])
+    ap.add_argument("cmd", choices=["episodes", "text", "pages"])
+    ap.add_argument("--urls", nargs="*", default=[], help="pages: transcript pages to keep as text")
     ap.add_argument("--per-feed", type=int, default=12)
     ap.add_argument("--feeds", nargs="*", default=None)
     ap.add_argument("--match", default=None, help="text: only titles matching this regex (case-insensitive)")
@@ -197,6 +238,8 @@ def main(argv=None):
     a = ap.parse_args(argv)
     if a.cmd == "episodes":
         episodes()
+    elif a.cmd == "pages":
+        pages(a.urls)
     else:
         if a.whisper_python and not a.tmp:
             ap.error("--whisper-python needs --tmp")

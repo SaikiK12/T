@@ -151,8 +151,9 @@ line is the first line of the script's own docstring.
 - [`venue_symbols_kd.py`](venue_symbols_kd.py): Symbol table for the KuCoin / dYdX venue replication of R275 and R276: one row per Binance USD-M perp with the file stem of the same coin on Gate, KuCoin and dYdX (empty where it is not listed or ...
 - [`venue_table.py`](venue_table.py): Write a qx spread symbol table from lab.venues: one row per Binance perp found on at least one of the venues asked for, columns `key`, `binance` and one per venue (the venue's symbol, '' where it ...
 
-## Research: videos, podcasts and transcripts (docs/VIDEO_DIG.md) (3)
+## Research: videos, podcasts and transcripts (docs/VIDEO_DIG.md) (4)
 
+- [`dig_comments.py`](dig_comments.py): Comment sections as searchable text: where practitioners answer each other, not where they present.
 - [`dig_podcasts.py`](dig_podcasts.py): Practitioner podcasts as searchable text: the people of docs/VIDEO_DIG.md through their shows' RSS feeds.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
