@@ -302,11 +302,13 @@ def methods():
 def data_sources():
     """Metadata inventory only: never follow links or infer market coverage from file activity."""
     prov = {p.stem for p in (ROOT / "docs" / "provenance").glob("*.json")}
-    fresh_h = {"live": 2, "recorders": 2, "mexc": 2, "logs": 2, "hyperliquid": 26}
+    fresh_h = {"live": 2, "recorders": 2, "mexc": 2, "logs": 2, "hyperliquid": 26, "tape": 1}
     labels = {
         "mexc": ("MEXC forward-data cache", "Prospective collection"),
         "mexc_hist": ("MEXC historical futures", "Historical market data"),
         "recorders": ("Point-in-time exchange and event snapshots", "Prospective collection"),
+        "tape": ("Order-flow tape: best bid/ask and trades per second, Binance and MEXC", "Prospective collection"),
+        "daily": ("Daily point-in-time panel", "Derived data"),
         "live": ("Live market observations", "Prospective collection"),
         "logs": ("Collector and scheduler logs", "Operational logs"),
         "hyperliquid": ("Hyperliquid observations", "Prospective collection"),

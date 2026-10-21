@@ -90,6 +90,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_FUNDING", "record_funding_board.py", timeout=120),
         task("REC_NOTICES", "record_notices.py", timeout=300),
         task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
+        task("REC_TAPE", "record_tape.py", timeout=60),
         task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R272", "forward_announce.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),

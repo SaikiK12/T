@@ -79,7 +79,7 @@ Docs stay at their paths because frozen PREREGs link to them.
 ## Use
 
 ```
-python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow
+python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow websockets
 .venv/bin/python -m unittest discover -s tests -t .              # before every commit to lab/ or scripts/
 cargo test --release --manifest-path engine/Cargo.toml           # before every commit to engine/
 .venv/bin/python -m lab.data build klines 1h                     # Binance archive (also fundingRate, premiumIndexKlines)
