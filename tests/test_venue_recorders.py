@@ -58,7 +58,7 @@ class LighterTest(unittest.TestCase):
     def test_one_hour_is_written_once(self):
         with tempfile.TemporaryDirectory() as d, mock.patch.object(rl, "OUT", Path(d)), \
                 mock.patch.object(rl, "ROOT", Path(d)), mock.patch.object(rl, "http", fake_lighter), \
-                mock.patch.object(rl, "PACE_S", 0):
+                mock.patch.object(rl, "PACE_S", 0), mock.patch.object(rl, "LOCK", Path(d) / "lock"):
             p1 = rl.main([])
             m1 = p1.stat().st_mtime_ns
             p2 = rl.main([])

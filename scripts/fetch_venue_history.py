@@ -4,6 +4,7 @@
 |---|---|---|---|
 | kucoin | USDT perps live today (`/api/v1/contracts/active`) | every settlement since listing (8 h, some 4 h / 1 h), 100 per call | daily, 200 per call |
 | dydx | every v4 market, settled (delisted) ones included (`/v4/perpetualMarkets`) | hourly since 2023-10, 1,000 per call | daily and hourly with open interest, 1,000 per call |
+| lighter | every Lighter perp in `/orderBookDetails` (inactive ones included; equity, index and commodity perps too) | hourly since listing (launch 2025-01-17), 700 h per call | daily and hourly, 480 per call |
 | kraken | Kraken Futures linear perps live today (`PF_*`, `/derivatives/api/v3/instruments`) | hourly, the last year only (the API's limit), one call | daily since 2022-03, one call |
 | upbit | KRW spot markets live today (`/v1/market/all`) | (spot) | daily, the day ending 00:00 UTC (09:00 KST), 200 per call |
 | bithumb | KRW spot markets live today (`/v1/market/all`, Upbit-style API) | (spot) | daily, the day ending 15:00 UTC (00:00 KST), 200 per call |
@@ -20,7 +21,11 @@ Saved in data/<venue>_hist/{open,reserved}/<kind>/<SYMBOL>.parquet with `contrac
 multiplier = Binance price / venue price) and the raw contract list. A contract whose file exists is skipped, so it
 resumes. Data collection only.
 
-usage: python scripts/fetch_venue_history.py {kucoin,dydx,kraken,upbit,bithumb} [--pause 0.15] [--workers 4] [--only SYM,SYM]
+Lighter allows 60 requests a minute per IP and the hourly book recorder uses most of that, so Lighter requests take the
+recorder's lock (scripts/record_lighter_book.py) one at a time: run it with --workers 1 --pause 2.
+
+usage: python scripts/fetch_venue_history.py {kucoin,dydx,kraken,lighter,upbit,bithumb} [--pause 0.15] [--workers 4]
+       [--only SYM,SYM]
 """
 import argparse
 import concurrent.futures
@@ -37,6 +42,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from lab import data  # noqa: E402
+from scripts.record_lighter_book import BASE as LIGHTER, api_lock  # noqa: E402
 from scripts.squeeze_events import binance_perp  # noqa: E402
 
 OPEN_FROM_MS = 1_609_459_200_000           # 2021-01-01: earlier rows are the reserved 2020 window
@@ -233,6 +239,76 @@ def korea_candles(venue, market, now, pause):
     return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
 
 
+# ---- Lighter (zero-fee perp DEX, docs/VENUE_STRUCTURE.md) ----
+
+LIGHTER_START_MS = 1_735_689_600_000       # 2025-01-01, before Lighter's first market
+_lighter_listed = {}
+
+
+def lighter_get(path, **params):
+    with api_lock():
+        return get(f"{LIGHTER}/{path}?{urllib.parse.urlencode(params)}")
+
+
+def lighter_contracts():
+    raw = lighter_get("orderBookDetails", filter="perp")["order_book_details"]
+    rows = [{"symbol": d["symbol"], "base": d["symbol"], "market_id": int(d["market_id"]), "multiplier_contract": 1,
+             "listed_ms": 0, "funding_ms": HOUR, "status": d.get("status")} for d in raw]
+    return raw, rows
+
+
+def lighter_windows(mid, step, now, pause):
+    """[start, stop) windows of `step` ms from the market's first daily candle (looked up once) to now."""
+    if mid not in _lighter_listed:
+        first = [c["t"] for c in lighter_candle_rows(mid, "1d", LIGHTER_START_MS, now, 480 * DAY, pause)[:1]]
+        _lighter_listed[mid] = first[0] if first else now
+    t = _lighter_listed[mid]
+    while t < now:
+        yield t, min(t + step, now)
+        t += step
+
+
+def lighter_candle_rows(mid, res, start, now, step, pause):
+    out, t = [], start
+    while t < now:
+        stop = min(t + step, now)
+        out += lighter_get("candles", market_id=mid, resolution=res, start_timestamp=t, end_timestamp=stop,
+                           count_back=0).get("c") or []
+        time.sleep(pause)
+        t = stop
+    return out
+
+
+def lighter_candles(mid, res, now, pause):
+    """Finished bars; `V` is quote volume, `i` the last trade id Lighter reports for the bar."""
+    size = DAY if res == "1d" else HOUR
+    rows = [r for a, b in lighter_windows(mid, 480 * size, now, pause)
+            for r in lighter_candle_rows(mid, res, a, b, 480 * size, pause)]
+    df = pd.DataFrame({"t": [int(r["t"]) for r in rows],
+                       **{k: [float(r.get(c, 0.0)) for r in rows] for k, c in (("open", "o"), ("high", "h"),
+                                                                                ("low", "l"), ("close", "c"),
+                                                                                ("volume", "v"),
+                                                                                ("quote_volume", "V"))}})
+    df = df[df.t + size <= now]
+    return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
+
+
+def lighter_funding(mid, now, pause):
+    """Hourly settlements. The API gives an unsigned percent `rate` and the `direction`; Lighter's docs say longs pay
+    when the rate is positive, so `rate` here is +rate/100 when direction is 'long' and -rate/100 otherwise (an
+    interpretation, kept with the raw fields). `value` is the payment per unit of base, about rate x mark price."""
+    rows = []
+    for a, b in lighter_windows(mid, 700 * HOUR, now, pause):
+        rows += lighter_get("fundings", market_id=mid, resolution="1h", start_timestamp=a // 1000,
+                            end_timestamp=b // 1000, count_back=0).get("fundings") or []
+        time.sleep(pause)
+    df = pd.DataFrame({"t": [int(r["timestamp"]) * 1000 for r in rows],
+                       "rate_pct": [float(r["rate"]) for r in rows], "value": [float(r["value"]) for r in rows],
+                       "direction": [r["direction"] for r in rows]})
+    df["rate"] = df.rate_pct.where(df.direction == "long", -df.rate_pct) / 100
+    return df.astype({"t": "int64"}).drop_duplicates("t").sort_values("t", ignore_index=True)
+
+
 VENUES = {
     "kucoin": (kucoin_contracts, lambda c, now, p: {
         "funding": lambda: kucoin_funding(c["symbol"], now, p),
@@ -241,6 +317,10 @@ VENUES = {
         "funding": lambda: dydx_funding(c["symbol"], now, p),
         "candles_1d": lambda: dydx_candles(c["symbol"], "1DAY", now, p),
         "candles_1h": lambda: dydx_candles(c["symbol"], "1HOUR", now, p)}),
+    "lighter": (lighter_contracts, lambda c, now, p: {
+        "candles_1d": lambda: lighter_candles(c["market_id"], "1d", now, p),
+        "candles_1h": lambda: lighter_candles(c["market_id"], "1h", now, p),
+        "funding": lambda: lighter_funding(c["market_id"], now, p)}),
     "kraken": (kraken_contracts, lambda c, now, p: {
         "funding": lambda: kraken_funding(c["symbol"], now, p),
         "candles_1d": lambda: kraken_candles(c["symbol"], max(c["listed_ms"] - DAY, 0) // DAY * DAY, now, p)}),

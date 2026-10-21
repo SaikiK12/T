@@ -89,8 +89,10 @@ venue,** if they trade coins with deep Lighter books.
 1. **Cost model (running).** `scripts/record_lighter_book.py` runs from `scripts/forward_all.sh` every hour. After
    two weeks there is a cost per coin, hour of day and size. Until then, the one-snapshot numbers above are not to
    be used as a cost.
-2. **Lighter history (next).** Fetch Lighter's public funding (`/fundings`) and candles (`/candles`). History starts
-   at launch (2025-01-17). This is data collection only; nothing is computed on it before a frozen PREREG.
+2. **Lighter history (running since 2026-10-21 16:52 UTC).** `scripts/fetch_venue_history.py lighter` fetches the
+   hourly funding, daily and hourly candles of all 240 Lighter perps since launch (2025-01-17) into
+   `data/lighter_hist`. It shares a lock with the book recorder, so the two stay under Lighter's 60 requests a minute
+   together. This is data collection only; nothing is computed on it before a frozen PREREG.
 3. **Low-fee re-pricing lane (after 1 and 2).** One frozen family PREREG that re-runs the API-mode rules that died on
    cost at Lighter's measured cost: R287's variants and the hourly books whose break-even sat near the cost they were
    charged (merge_v1 at 0.4-1.0x, posimpulse_v1 near 2x). It runs on Lighter's own hourly prices, at gate 0 (the

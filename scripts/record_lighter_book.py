@@ -15,6 +15,8 @@ background. Data collection only.
 usage: python scripts/record_lighter_book.py [--limit N]
 """
 import argparse
+import contextlib
+import fcntl
 import json
 import sys
 import time
@@ -29,6 +31,7 @@ sys.path.insert(0, str(ROOT))
 from lab import data  # noqa: E402
 
 OUT = data.ROOT / "recorders" / "lighter_book"
+LOCK = data.ROOT / ".lighter_api.lock"       # Lighter limits requests per IP: one client at a time on this machine
 BASE = "https://mainnet.zklighter.elliot.ai/api/v1"
 SIZES = (1_000, 10_000)
 DEPTH = 100                                  # orders per side read (the endpoint allows 250)
@@ -37,6 +40,19 @@ COLS = ["ts", "symbol", "market_id", "bid", "ask", "half_spread_bp", "buy_1k_bp"
         "sell_10k_bp", "bid_usd_shown", "ask_usd_shown", "mark", "index", "vol24_usd", "oi_base", "taker_fee",
         "maker_fee"]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
+
+
+@contextlib.contextmanager
+def api_lock(path=None):
+    """Hold the machine-wide Lighter lock: the snapshot holds it throughout, fetch_venue_history.py per request."""
+    path = Path(path or LOCK)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
 
 
 def http(path):
@@ -111,7 +127,8 @@ def main(argv=None):
     if path.exists():
         log(f"lighter book: {path.relative_to(ROOT)} already written")
         return path
-    df, failed = snapshot(limit=a.limit)
+    with api_lock():
+        df, failed = snapshot(limit=a.limit)
     if failed:
         log(f"lighter book: {len(failed)} markets failed, first: {failed[0]}")
     if df.empty:
