@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
-  "updated_utc_date": "2026-10-20",
+  "updated_utc_date": "2026-10-21",
   "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
@@ -5660,7 +5660,20 @@
           "label": "docs/SOURCES.md"
         }
       ],
-      "limitations": "Retained from the received note even when weak,borrowed from another market or under-specified; no live edge claim."
+      "limitations": "Retained from the received note even when weak,borrowed from another market or under-specified; no live edge claim.",
+      "source_followups": [
+        {
+          "intake_id": "coinmetrics_community_inputs_20261021",
+          "canonical_queue": "M093",
+          "received_scope": "Current versus estimated capitalization definitions and BTC-only Community metadata verified; source availability/revision/identity requirements remain open.",
+          "input_metrics": [
+            "CapMrktCurUSD",
+            "CapMrktEstUSD",
+            "SplyCur"
+          ],
+          "exact_tested_scope": "Source/schema inspection and synthetic cache tests only; no registered size-portfolio outcome."
+        }
+      ]
     },
     {
       "id": "SRC-TRADER-YEAR",
@@ -10062,6 +10075,192 @@
         "Source-only M284 remains BLOCKED. Original R257 M234 stays reserved and is not imported.",
         "No strategy outcome or trial added."
       ]
+    },
+    {
+      "intake_id": "coinmetrics_community_inputs_20261021",
+      "captured_utc_date": "2026-10-21",
+      "records_added": [],
+      "records_updated": [
+        "SRC-SIZEFACTOR"
+      ],
+      "canonical_allocation": "Existing M092/M093 input feasibility only. No new method, alias, queue row, R-id, trading rule or trial.",
+      "received_scope": "Retained/reviewed evidence: nine pinned official documentation/archive-source files for named targeted reads and two complete tiny metadata responses. Only named sections are claimed reviewed; incidental adjacent text was not relied on. Asset coverage beyond BTC was not queried. No metric-value time-series endpoint or archive CSV/zip dataset was requested or used.",
+      "previous_intake_sha256": "4a5d1a117bc91b790f7c4a2f0447da73be4d0c76524ba683be06108ad6ab1719",
+      "media_sources": [
+        {
+          "source_id": "market_cap",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/network-data/network-data-overview/market/market-capitalization.md",
+          "basis": "Whole file received; CapMrktCurUSD/CapMrktEstUSD sections lines 80-139 relied on.",
+          "sha256": "61d2ea32d8a3e3c337da8ebc04d25cafaaa5a6ddbaa85b4f2ca7d0a12a2c53d8",
+          "captured_utc": "2026-10-21T04:33:27.295538+00:00",
+          "bytes": 23072,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "active_addresses",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/network-data/network-data-overview/addresses/active-addresses.md",
+          "basis": "Whole file received; AdrActCnt lines 17-49 relied on.",
+          "sha256": "efc744850ce17ded5081022db18168712b4bca0469650e780073b6ea26502588",
+          "captured_utc": "2026-10-21T04:33:27.505394+00:00",
+          "bytes": 17216,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "current_supply",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/network-data/network-data-overview/supply/current-supply.md",
+          "basis": "Whole file received; SplyCur lines 12-49 relied on; neighboring concentration metrics not adopted.",
+          "sha256": "cf62843e70c9fd5f6fa2932b735d7304c63886dc5e81121615356f575da2f598",
+          "captured_utc": "2026-10-21T04:33:27.562518+00:00",
+          "bytes": 8172,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "api_conventions",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/access-our-data/api/README.md",
+          "basis": "Whole file received; endpoint/catalog, nulls, access/timestamp, pagination, rate/compatibility sections read.",
+          "sha256": "fe6cab92d164258ee9d9493b18fec80d8b6e9a9b9df8e3ad19e5615c82692467",
+          "captured_utc": "2026-10-21T04:33:27.246293+00:00",
+          "bytes": 19648,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "faqs",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/resources/faqs.md",
+          "basis": "Whole file received; only timestamp, mapping, market-cap/supply, look-ahead/revisions, and completion/finality sections reviewed (49-103,133-143,169-191,231-235,315-363,443-549,816-862,897-899).",
+          "sha256": "12a10d01693e9cb47e69a6870163883c5df5107f5d16c11742bdb6153aa7d134",
+          "captured_utc": "2026-10-21T04:31:59.389103+00:00",
+          "bytes": 85640,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "completion_time",
+          "url": "https://raw.githubusercontent.com/coinmetrics/product-docs/8489126ae94aff995d01be44f965327f2640f51e/docs/network-data/network-data-overview/availability/asseteodcompletiontime.md",
+          "basis": "Full document read; values/entitlement not probed.",
+          "sha256": "9b161cf79e23e9c5af68b5f72c90a962433ed91dce685dfd22c856a1d2f87ade",
+          "captured_utc": "2026-10-21T04:31:58.177861+00:00",
+          "bytes": 905,
+          "git_commit": "8489126ae94aff995d01be44f965327f2640f51e"
+        },
+        {
+          "source_id": "review_status",
+          "url": "https://raw.githubusercontent.com/coinmetrics/docs-website/094bd5886c055d3c5a3bde82acadd9d693ff5d78/asset-metrics/asset-metrics-overview.md",
+          "basis": "Full older official overview read; conditional general capability only.",
+          "sha256": "65ad2d5112e06497ef9cb9a0aa3eace37ad9bd0d7d874b13e996d0c8a494669f",
+          "captured_utc": "2026-10-21T04:33:48.505950+00:00",
+          "bytes": 2268,
+          "git_commit": "094bd5886c055d3c5a3bde82acadd9d693ff5d78"
+        },
+        {
+          "source_id": "archive_readme",
+          "url": "https://raw.githubusercontent.com/coinmetrics/data/f1a36afb962731c387bb03982758ab0103063da5/README.md",
+          "basis": "Full README read; no CSV or archive downloaded.",
+          "sha256": "9c9d798a88a688f4d25791a953d1f01acda99b9ef5cb5d2481ec577b28af84ae",
+          "captured_utc": "2026-10-21T04:30:55.867047Z",
+          "bytes": 1496,
+          "git_commit": "f1a36afb962731c387bb03982758ab0103063da5"
+        },
+        {
+          "source_id": "archive_generator",
+          "url": "https://raw.githubusercontent.com/coinmetrics/data/f1a36afb962731c387bb03982758ab0103063da5/scripts/generate.js",
+          "basis": "Full 4061-byte script read, not executed; no dependencies/data fetched.",
+          "sha256": "cccb508611a8dce916783faa877814b8ece6e19f82a2b2dcd452e061cce5fcc8",
+          "captured_utc": "2026-10-21T04:33:02.828714+00:00",
+          "bytes": 4061,
+          "git_commit": "f1a36afb962731c387bb03982758ab0103063da5"
+        },
+        {
+          "source_id": "btc_catalog",
+          "url": "https://community-api.coinmetrics.io/v4/catalog-v2/asset-metrics?assets=btc&metrics=CapMrktCurUSD,CapMrktEstUSD,AdrActCnt,SplyCur&page_size=4",
+          "basis": "Complete BTC/four-metric metadata response; no other assets or values.",
+          "sha256": "d319936993c3630e7ae31fbb0099089b2d4070f52096b763175dbcf4d9f78bf2",
+          "captured_utc": "2026-10-21T04:32:38.919702+00:00",
+          "bytes": 696,
+          "http_status": 200
+        },
+        {
+          "source_id": "metric_reference",
+          "url": "https://community-api.coinmetrics.io/v4/reference-data/asset-metrics?metrics=CapMrktCurUSD,CapMrktEstUSD,AdrActCnt,SplyCur&page_size=4",
+          "basis": "Complete four-metric definition metadata response; no values.",
+          "sha256": "d1d4d88c1001504cc3cda5a00476aba7a95c1f0fbedef97672089c7f6183d2ef",
+          "captured_utc": "2026-10-21T04:32:40.376586+00:00",
+          "bytes": 2141,
+          "http_status": 200
+        }
+      ],
+      "media_source_count": 11,
+      "input_definitions": [
+        {
+          "metric": "CapMrktCurUSD",
+          "canonical_queue": [
+            "M093"
+          ],
+          "definition": "SplyCur * daily-close PriceUSD: value of current ledger supply, including illiquid escrow/foundation holdings. This differs from estimated circulating capitalization.",
+          "sources": [
+            "market_cap",
+            "current_supply"
+          ]
+        },
+        {
+          "metric": "CapMrktEstUSD",
+          "canonical_queue": [
+            "M093"
+          ],
+          "definition": "Reported/derived circulating supply * daily-close PriceUSD. Supply uses third-party/project APIs, including CoinGecko/Etherscan paths; it is not a direct ledger-total supply measure.",
+          "sources": [
+            "market_cap"
+          ]
+        },
+        {
+          "metric": "AdrActCnt",
+          "canonical_queue": [
+            "M092"
+          ],
+          "definition": "De-duplicated recipient/originator addresses involved in ledger changes during the interval. Protocol-specific zero-value, self and failed-transaction handling matters. Addresses are not people, holder concentration or search/social attention.",
+          "sources": [
+            "active_addresses",
+            "faqs"
+          ]
+        },
+        {
+          "metric": "SplyCur",
+          "canonical_queue": [
+            "M092",
+            "M093"
+          ],
+          "definition": "Current issued supply in native units at interval end: UTXOs or account balances, with chain-specific exceptions. Includes XRP escrow and ZEC shielded pools. Stock measurement does not establish publication time.",
+          "sources": [
+            "current_supply"
+          ]
+        }
+      ],
+      "availability": {
+        "interval_time": "The four UpperCamelCase asset metrics label the beginning of their UTC interval. time+1d is an interval-end floor; publication follows calculation and may be later. No historical as-of or release time follows from this lag.",
+        "completion_time": "AssetEODCompletionTime is asset-level last-metric calculation completion, not per-value original publication or revision history. Its entitlement and values were not probed.",
+        "revisions": "Current history can contain backfills/revisions and changed metadata. The exact daily finality/reorg cutoff and original vintages for these four inputs remain unproved.",
+        "review_status": "An older official overview describes conditional flash/reviewed/revised statuses and status-time as last human review. The four definition objects do not expose reviewable/asof/status fields; omission does not prove immutability.",
+        "archive": "The pinned archive generator emits current daily values and null blanks without per-value publication/asof/status history. A pinned retrieval commit supplies snapshot provenance, not original-day availability."
+      },
+      "public_access": {
+        "endpoint": "https://community-api.coinmetrics.io/v4",
+        "limit": "Official conventions: 10 requests per 6 seconds per IP; no key. Generic page-size maximum is 10000, not authorization for bulk acquisition.",
+        "license": "Community archive README specifies CC BY-NC 4.0; no commercial-use or expanded-dataset entitlement was established.",
+        "limitations": "Community is a subset; advertised product/metric coverage is not entitlement. The four-input BTC probe does not establish broader availability."
+      },
+      "metadata_observations": {
+        "btc_catalog": "One BTC-only response confirms all four metrics at 1d/community=true; max_time=2026-10-20. This is current coverage, not historical publication or broad altcoin/delisted coverage.",
+        "reference": "Exactly four metric-definition objects returned; AdrActCnt bigint, the other three decimal. No value series was requested.",
+        "requests": "Two retained successful metadata responses total 2837 bytes. One unsupported-parameter metadata request returned HTTP400/85 bytes. No metric-value time-series endpoint or archive CSV/zip dataset was requested or used.",
+        "rate_header": "The unauthenticated community responses reported X-RateLimit-Plan=download; this anomaly establishes no entitlement."
+      },
+      "missing_mechanics": [
+        "Original per-value publication/first-seen timestamps, revision vintages and a prospective observation archive.",
+        "Versioned project/network/contract identity, delisted/migration eligibility and aggregate-versus-constituent controls; ticker matching alone is insufficient.",
+        "A chosen cap/supply definition, finite ranking/universe/horizon, controls and executable 1x/2x/3x costs before any strategy outcome.",
+        "Holder concentration and search/social attention in M092 remain outside these four inputs. SRC-ATTENTION is unchanged: address activity is not its search/social signal."
+      ],
+      "engineering_followup": "Completion-receipt patch 02461b8 (codex/coinmetrics-completion) reproduces and rejects interrupted split-cache writes without adopting or overwriting legacy shards. Fifteen synthetic fixtures and 477 full-suite tests passed with 2 skipped at that head. Local byte-publication completeness is separate from source coverage and historical availability.",
+      "limitations": "Source feasibility only. Prior studies, statuses and nulls are unchanged; no profitable rule, calibrated forecast, historical point-in-time dataset or complete-library ingestion is claimed.",
+      "collection_limitations": "The retained source list does not enumerate every HTTP attempt. One initial GitHub commit-metadata response was discarded after truncation at 200000 bytes and JSON decode failure; such endpoints can embed CSV diffs. It was not parsed, reviewed or used as evidence. Tiny git-ref metadata and pinned documentation files supplied the cited versions instead."
     }
   ],
   "reassignment_refs": [
