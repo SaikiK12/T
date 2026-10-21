@@ -19,7 +19,7 @@ builds one.
 |---|---|---|---|
 | Rebate and VIP programs | $6B/month of volume, which earns maker rebates and the top fee tiers | No rebate tier: Hyperliquid pays rebates only above 0.5% of all maker volume, and Binance's VIP tiers start in the millions. **But zero-fee venues exist in 2026.** Lighter charges 0/0 to its default accounts, API included, and Paradex charges 0/0 to retail (UI) orders. That is better than a rebate tier for a small account | M292 (fee map below), `scripts/record_lighter_book.py` |
 | Pure latency arbitrage | colocation, microseconds | Not reachable from a cloud container. What can be reached is lead-lag over seconds to minutes between venues, which is slow information flow, not latency arbitrage | M264 and M293, on `data/tape` (recording since 2026-10-21 06:35 UTC) |
-| Obscure arbitrage (AMM against futures) | on-chain execution, inventory on both sides | The one-sided version: trade the perp toward the pool price, no on-chain leg | M288, needs a pool-price recorder |
+| Obscure arbitrage (AMM against futures) | on-chain execution, inventory on both sides | The one-sided version: trade the perp toward the pool price, no on-chain leg | M288, `scripts/record_dex_prices.py` (every 5 minutes) |
 
 ## Fee map (published schedules, read 2026-10-21)
 
@@ -110,9 +110,16 @@ venue,** if they trade coins with deep Lighter books.
    (since 2026-10-21 15:19 UTC) was not stopped. The PREREG is frozen before the tape is read against price changes,
    after an R-id claim in `docs/ROOM.md`. Fills are assumed at the Lighter book one full second after the signal
    second, which is more pessimistic than the 300 ms delay.
-6. **Pool prices for M288.** Add a recorder of DEX pool prices (GeckoTerminal's public API, about 6 months of OHLCV
-   kept) for tokens whose main venue is on-chain and that also have a MEXC or Lighter perp. MEXC-only coins are
-   reserved (`docs/GATES.md`): discovery uses coins that Binance also lists, plus forward recording.
+6. **Pool prices for M288 (recording since 2026-10-21).** GeckoTerminal's free history answers 429 from this machine,
+   so there is no backfill and the clock starts now. `scripts/record_dex_prices.py` maps each MEXC USDT perp to its
+   most traded DexScreener pool (same symbol, at least USD 50k of liquidity and USD 10k a day of volume, price within
+   1% of the perp, or 3% when none is that close; a symbol alone is not enough, because impostor tokens share
+   tickers). A daemon then reads every mapped pool and MEXC's ticker every 5 minutes, and seals one file per UTC
+   hour. The map is rebuilt weekly. Rows carry the route: coins with a Binance perp are open, MEXC-only coins are
+   reserved (`docs/GATES.md`) and are read only by a frozen batch. The first question, frozen before the data is
+   read: does the pool-perp gap at a 5-minute snapshot predict the perp's move over the next 5-60 minutes, net of
+   MEXC's cost? A DexScreener price is the pool's last trade, so a quiet pool's price is stale: the PREREG has to
+   require recent pool volume.
 7. **Prop firms.** A firm's commission and swap decide the same question. `lab/propfirm.py` now charges a per-side
    cost and a daily swap when it is given a gross return stream and its turnover (Breakout: 4 bp per side plus 3.3 bp
    a day). See `docs/PROP_FIRMS.md`.

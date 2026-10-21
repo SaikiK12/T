@@ -114,9 +114,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Data and loop folders (4)
+## Data and loop folders (5)
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
+- **[xfund_lt_v1](xfund_lt_v1/)** No registry row and no description yet.

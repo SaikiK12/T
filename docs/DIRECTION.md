@@ -224,6 +224,8 @@ come before chart rules.
 **Recorders where history cannot be bought:**
 - the Deribit option chain, hourly from 2026-10-21 (M175, M289, M300: expiry pinning and dealer gamma);
 - Lighter order books, hourly from 2026-10-21 (M292: the cost of a zero-fee API venue);
+- DEX pool prices next to the MEXC perp, every 5 minutes from 2026-10-21 (M288: on-chain AMMs against exchange
+  futures, the prop trader's third edge);
 - Upbit and Bithumb wallet status (M294), still to do.
 
 **Venue structure (the prop trader's lead, `docs/VENUE_STRUCTURE.md`).** Lighter charges no fee through the API. On
@@ -233,7 +235,9 @@ coins. API-mode rules that died on costs between 2 and 8 bp per side get a secon
 - on Lighter's own price history;
 - as one frozen family at gate 0.
 
-Lighter also joins the cross-venue carry family as a venue.
+Lighter also joins the cross-venue carry family as a venue: R288 `xfund_lt_v1` (drafted; frozen once Lighter's
+funding history is fetched) runs R275's best book on six sets that pair Lighter with each venue held, with the
+Lighter leg charged 4 bp instead of 7.
 
 ## Critical files
 - **New:**

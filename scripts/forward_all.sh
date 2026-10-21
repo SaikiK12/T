@@ -27,6 +27,7 @@ timeout 120 $PY scripts/record_funding_board.py >> experiments/recorders/tick.lo
 timeout 120 $PY scripts/record_deribit_chain.py >> experiments/recorders/tick.log 2>&1
 # Lighter books take about 4 minutes at the Standard rate limit: in the background, done before the digest
 timeout 600 $PY scripts/record_lighter_book.py >> experiments/recorders/tick.log 2>&1 &
+timeout 60 $PY scripts/record_dex_prices.py >> experiments/recorders/tick.log 2>&1
 flock -w 300 .notices.lock timeout 300 $PY scripts/record_notices.py >> experiments/recorders/tick.log 2>&1
 timeout 300 $PY scripts/record_unlocks.py >> experiments/recorders/tick.log 2>&1
 timeout 60 $PY scripts/record_tape.py >> experiments/recorders/tick.log 2>&1

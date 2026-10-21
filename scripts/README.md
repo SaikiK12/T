@@ -25,9 +25,10 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (12)
+## Record: point-in-time collectors (cannot be backfilled) (13)
 
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
+- [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
 - [`record_digest.py`](record_digest.py): Append a SHA-256 digest of every recorder file under data/recorders/ to experiments/recorders/journal/digests.csv (committed).
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
 - [`record_lighter_book.py`](record_lighter_book.py): Hourly snapshot of what a taker order costs on Lighter, the zero-fee perp DEX (docs/VENUE_STRUCTURE.md): for every active perp, the best bid and ask, the cost per side of a market order of USD 1k ...
@@ -161,7 +162,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (21)
+## Tools and everything else (22)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -172,6 +173,7 @@ line is the first line of the script's own docstring.
 - [`data_provenance.py`](data_provenance.py): Provenance record for a downloaded data folder (docs/DATA_PROVENANCE_AUDIT.md): every file's size and sha256, a combined digest, file counts per subfolder, and for hourly parquet folders the bar ...
 - [`delist_events.py`](delist_events.py): Legs for the delisting-notice short (E03, docs/OLD_SESSION_EDGES.md S2) from the Binance delisting catalog (data/recorders/notices/binance_delisting.csv, scripts/record_notices.py) and the ...
 - [`funding_events.py`](funding_events.py): Extreme-funding events on every Binance USD-M perp, as event legs for the qx engine (R273 fundext_v1).
+- [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
