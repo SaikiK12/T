@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from lab import venues
+from scripts import venue_table
 
 
 def touch(root, rel):
@@ -74,6 +75,11 @@ class VenuesTest(unittest.TestCase):
             rows = venues.rows(root)
             self.assertEqual([r["key"] for r in rows], ["1000PEPEUSDT", "BTCUSDT", "ETHUSDT"])
             self.assertEqual(rows[1]["dydx"], "")
+            only, _ = venue_table.build(["kucoin"], root)         # a lane's table keeps perps on a venue it asks for
+            self.assertEqual(only, [{"key": "BTCUSDT", "binance": "BTCUSDT", "kucoin": "XBTUSDTM"}])
+            two, _ = venue_table.build(["gate", "kucoin"], root)
+            self.assertEqual([(r["key"], r["gate"], r["kucoin"]) for r in two],
+                             [("1000PEPEUSDT", "PEPE_USDT", ""), ("BTCUSDT", "BTC_USDT", "XBTUSDTM")])
 
 
 if __name__ == "__main__":

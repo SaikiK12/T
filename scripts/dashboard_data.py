@@ -47,6 +47,8 @@ FORWARD = [
     ("R270", "montag_fwd", "Monitoring Tag short +24 h", "MEXC", "manual-web", 12, "12 scored notices"),
     ("R272", "announce_fwd", "funding-frequency long 1 h; pre-listing short 168 h", "MEXC", "API + manual-web", 12,
      "12 scored notices per book"),
+    ("R278", "xfund_fwd", "cross-venue funding carry, books A, B, C", "Gate, Hyperliquid, Binance, MEXC",
+     "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
 ]
 
 
@@ -177,6 +179,15 @@ def forward_days():
                         "book": r["book"], "series": f"{rid} {r['book']}", "group": group, "kind": kind,
                         "net": num(r[col]),
                         "net_2x": num(r.get("net_2x")), "net_3x": num(r.get("net_3x"))})
+    sets = {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}
+    done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / "xfund_fwd" / "journal" / "decisions.csv")}
+    for r in rows_csv(EXP / "xfund_fwd" / "journal" / "days.csv"):
+        if (r["book"], r["day"], r["run"]) not in done:   # a run cut short; the lane ignores its rows too
+            continue
+        out.append({"key": f"xfund_fwd|{r['book']}|{r['day']}|{r['run']}", "day": r["day"], "round": "R278",
+                    "lane": "xfund_fwd", "book": r["book"], "series": f"R278 {r['book']} {sets.get(r['book'], '')}",
+                    "group": "Cross-venue funding carry", "kind": "ontime" if r["kind"] == "late" else r["kind"],
+                    "net": num(r["net"]), "net_2x": num(r["net_2x"]), "net_3x": num(r["net_3x"])})
     for r in rows_csv(EXP / "vt_fwd" / "journal" / "days.csv"):
         out.append({"key": f"vt_fwd|{r['book']}|{r['day']}", "day": r["day"], "round": "R225", "lane": "vt_fwd",
                     "book": r["book"], "series": f"R225 {r['book']}", "group": "Volatility-targeted (MEXC)",
@@ -192,7 +203,7 @@ def forward_lanes(days):
         age, at = lane_age(lane)
         mine = [d for d in days if d["lane"] == lane]
         ontime = [d for d in mine if d["kind"] == "ontime"]
-        daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd"}
+        daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd", "xfund_fwd"}
         by_book, progress_note = {}, None
         if daily:
             books = sorted({d["book"] for d in mine})
