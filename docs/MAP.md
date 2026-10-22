@@ -591,6 +591,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Post hoc: the placebo clocks deciding at 15:00-16:00 UTC earned +78 to +85 bp/day net in 2024-26. That is M319,
     to be read only on unseen data.
   - [FINDINGS](../experiments/intrars_v1/FINDINGS.md).
+- **R301 (qbasis_v1), NULL** (16 trials, M170 from Chi, Hao, Hu and Ran 2023, gate 0 on seen prices).
+  - The 5-10 coins with Binance COIN-M quarterlies are sorted on the annualized basis (level) or its 7-day change. The
+    books go long the k highest and short the k lowest, or the reverse, in the USD-M perps, held 1 or 7 days.
+  - The pick (level low h7 k2: long the 2 lowest basis, short the 2 highest, weekly) earned +14.6 bp/day net in
+    2021-23 (t 1.83) and +1.2 in 2024-26 (t 0.16). It fails all three checks.
+  - The sides flip between windows for both signals. SPA p 0.295 / 0.952.
+  - The basis is about half funding: its median daily rank correlation with 3-day funding is +0.41 to +0.50.
+  - [FINDINGS](../experiments/qbasis_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
