@@ -459,6 +459,14 @@ paying the least funding, short the fifth paying the most, net of the funding ea
   reason.
 - Program trials: 9,478,721.
 
+**R307 `rrskew_v1` (M174) and R308 `nagel_v1` (M325): both NULL, 24 and 8 trials.**
+- **R307:** the Deribit 25-delta risk reversal does not time BTC or ETH by the week.
+  - It follows the week before (correlation +0.2 to +0.5) more than it leads the week after (+0.03 to +0.15).
+  - With R209, R292, R295 and R296, the Deribit tape has now been read four ways for direction, with no edge.
+- **R308:** the reversal after stress days earned in 2021-23 and lost in 2024-26. After stress days the losers kept
+  falling, including in the 2025-10-10 cascade.
+- Program trials: 9,478,753.
+
 **Next, in order:**
 1. **R304's pick goes forward:** three frozen paper lanes on MEXC prices:
    - the pick;
@@ -467,9 +475,8 @@ paying the least funding, short the fifth paying the most, net of the funding ea
    They need a live feature pipeline from the daily Binance metrics archive. The pick also goes into reserved
    batch 2, whose PREREG must fix how rows without metrics (all of 2020) are scored.
 2. **The open audit:** a missing-flag refit, and a refit on rows with metrics only, as one frozen lane.
-3. **R307:** the Deribit 25-delta risk reversal as a BTC/ETH timing signal (M174, from the owner's reel). Then R308,
-   the Nagel lane on liquidity provision after crashes (M325). The stress-day report (M324) is built as
-   `lab/stress.py`.
+3. **The reels' three lanes are done** (R306-R308, all NULL). `lab/stress.py` (M324) stays as a report for every
+   FINDINGS.
 4. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
    coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
    lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.

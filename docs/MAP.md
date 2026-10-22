@@ -653,6 +653,19 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     and −13 to −50 bp at 72 h: levels break more than they bounce.
   - The same 12 books on 17 FX, metal and index perps lose too.
   - [FINDINGS](../experiments/msnr_v1/FINDINGS.md).
+- **R307 (rrskew_v1), NULL** (24 trials, M174 from the owner's reel on the 25-delta skew, gate 0 on seen data).
+  - The 30- and 90-day 25-delta risk reversal, built from every Deribit option trade with the COIN-M basis as the
+    forward. A weekly long or short of BTC and ETH on its sign, z-score or 7-day change.
+  - The pick (ETH 30d chg7 follow) has validation t 1.49 and is negative without its 10 best weeks. No BTC book
+    reaches |t| 1.
+  - The risk reversal follows the past week (correlation +0.2 to +0.5) more than it leads the next (+0.03 to +0.15).
+  - [FINDINGS](../experiments/rrskew_v1/FINDINGS.md).
+- **R308 (nagel_v1), NULL** (8 trials, M325 from the Costello reel and Nagel 2012, gate 0 on seen data).
+  - The 1-day reversal of the top 50 or 150, only after stress days (market volatility, dispersion or an
+    open-interest crash).
+  - It earned in 2021-23 (+77 bp gross after volatility days, against −14 otherwise). In 2024-26 it lost (−35
+    against +24): after stress days the losers kept falling.
+  - [FINDINGS](../experiments/nagel_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
