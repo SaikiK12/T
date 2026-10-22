@@ -373,3 +373,21 @@ M309, M317).
   recorder's true open interest, which needs forward Fridays.
 
 The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
+
+## Factor leads from R282 (2026-10-22)
+**R298 `lotcap_v1` is done: NULL** (16 trials, M276). It tested R282's lottery-cluster quintile books with a close-based
+cover on each short.
+- The best discovery book (age, 24 h, 35% cover; t +1.70) has a validation t of +1.03, against a 2.0 bar.
+- Wide covers clip the squeezes without cutting the median, but they added money only in 2024-26.
+- The cluster books flip sign between 2021-23 and 2024-26, as R282's vol_mcap did.
+- **The age factor ties about 80 pre-2021 coins at its maximum** (`scripts/pitfac_factors.py` counts them from the
+  panel start). So the age books' long leg in 2021-24, here and in R282, was an alphabetical slice.
+  - Any further age lane needs an uncensored listing date first.
+  - Factor plumbing runs should print the tie at each leg's edge.
+
+**Next family: R299, ML cross-sectional rankers on the daily panel (M042).** The panel's 66 columns (funding on six
+venues, OI, positioning, basis, Korean premium, caps, on-chain) have never been combined. The old session's ridge and
+GBM composite used 13 price features (rank IC 0.01-0.04, NULL).
+- Purged walk-forward fits.
+- The books are costed at API rates with funding.
+- The family is decided by SPA.

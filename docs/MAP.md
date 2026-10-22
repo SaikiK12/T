@@ -570,6 +570,16 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Up-day funding was lower in 2026 than in 2022, as the guest said. But it is 0.99 correlated with the plain
     funding level, which follows the last month's market (0.44).
   - [FINDINGS](../experiments/fundgate_v1/FINDINGS.md).
+- **R298 (lotcap_v1), NULL** (16 trials, M276 from R282's tables, gate 0 on seen data).
+  - Quintile books over R282's top-150 factor rows (age, or the age/size/vol_mcap cluster), with a close-based cover
+    of 10/20/35% or none on each short, held 24 h or 168 h.
+  - The best discovery book (age h24, 35% cover, t +1.70) has validation t +1.03, against a 2.0 bar.
+  - Wide covers clip the squeezes without cutting the median. Tight ones cut both, as R274 found. The covers added
+    3-16 bp/day in 2024-26 and nothing in 2021-23.
+  - The cluster books lost in 2021-23 and earned in 2024-26 (t up to +2.08), as R282's vol_mcap did.
+  - **Flaw found:** the age factor ties about 80 pre-2021 coins at its maximum. So in 2021-24, the age books' long
+    leg (here and in R282) was an alphabetical slice of them.
+  - [FINDINGS](../experiments/lotcap_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
@@ -692,6 +702,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,597 after R297 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,613 after R298 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

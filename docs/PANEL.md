@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-22 07:26 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-22 07:46 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 37 |
 | Ideas partly tested | 38 |
 | Ideas blocked (data, download, compute) | 68 |
-| Rounds in the registry | 115 (NULL 74, PENDING 20, PARTIAL 8, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,597 |
+| Rounds in the registry | 116 (NULL 75, PENDING 20, PARTIAL 8, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,613 |
 | Forward paper lanes running | 17 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -84,7 +84,6 @@ Processing lag of on-time hours: 55 hours, median 78.8 min, max 261.483333333333
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R291 | vpin_v1 | DONE | NULL | 4 |
 | R293 | er_v1 | DONE | NULL | 3 |
 | R288 | xfund_lt_v1 | DONE | CONFIRMED | 6 |
 | R292 | dealerflow_v1 | DONE | NULL | 4 |
@@ -92,5 +91,6 @@ Processing lag of on-time hours: 55 hours, median 78.8 min, max 261.483333333333
 | R295 | optflow_v1 | DONE | NULL | 15 |
 | R296 | charm_expiry_v1 | DONE | NULL | 5 |
 | R297 | fundgate_v1 | DONE | NULL | 4 |
+| R298 | lotcap_v1 | DONE | NULL | 16 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

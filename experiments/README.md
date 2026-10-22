@@ -30,6 +30,7 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
 ## Finished and registered rounds (93)
 
+- **[lotcap_v1](lotcap_v1/)** R298, DONE NULL, 16 trials. Lottery-cluster quintile short with a close-based squeeze cover (M276): age or the age/size/vol_mcap cluster, 24 h or 168 h, cover none/10/20/35%, on R282's top-150 factor rows; the age factor's tie at its maximum is documented ([PREREG](lotcap_v1/PREREG.md), [FINDINGS](lotcap_v1/FINDINGS.md))
 - **[fundgate_v1](fundgate_v1/)** R297, DONE NULL, 4 trials. Market funding response to up days as a market-timing gate (M295): trailing 30-day slope of top-50 funding on return, and up-day funding, z vs the past year, against the EW top-50 basket's next 7/30 days ([PREREG](fundgate_v1/PREREG.md), [FINDINGS](fundgate_v1/FINDINGS.md))
 - **[charm_expiry_v1](charm_expiry_v1/)** R296, DONE NULL, 5 trials. Friday 08:00 UTC Deribit expiry on BTC/ETH perps: settlement-fade slope on expiring near-money position (M303 dose, M309) and dealers' expiry hedge unwind after 08:00 and in 07:31-07:59 (M317) ([PREREG](charm_expiry_v1/PREREG.md), [FINDINGS](charm_expiry_v1/FINDINGS.md))
 - **[optflow_v1](optflow_v1/)** R295, DONE NULL, 15 trials. Deribit option flow leading BTC/ETH perps (M311 block delta flow, M313 net drift): 5 signals x 1/4/24 h ([PREREG](optflow_v1/PREREG.md), [FINDINGS](optflow_v1/FINDINGS.md))

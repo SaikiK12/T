@@ -122,3 +122,16 @@ none of the three survives the reality check.
   revision could leak; vol_mcap needs vintage-checked caps before any money.
 - Whether the short legs could be opened on MEXC: these books use Binance prices.
 - Position limits around delisting notices, which matter most for the squeeze days above.
+
+## Note added 2026-10-22 (R298): the age factor ties at its maximum
+- `scripts/pitfac_factors.py` counts every coin trading at the panel start from 2021-01-02, so all coins listed before
+  2021 share the maximum age.
+  - That is about 80 coins in 2021, 65 in 2023 and 26 in 2026.
+  - On every day of 2021-24 the tie was larger than a quintile.
+- qx `factors` breaks ties by symbol order, so the age book's "long old" quintile was the alphabetically last of the
+  tied coins in those years, not the oldest fifth.
+- **What is affected:**
+  - **Not the rank IC:** tied coins share their mean rank, so it compares coins listed in 2021 or later with the rest.
+  - **The age quintile book's 2021-24 years, and its "passes"** under the frozen rule.
+- Details and the day-by-day parity are in `experiments/lotcap_v1/FINDINGS.md`. This note does not change any frozen
+  file.
