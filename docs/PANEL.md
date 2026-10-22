@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-22 09:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-22 12:10 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 36 |
-| Ideas partly tested | 38 |
+| Ideas in the queue, untested | 34 |
+| Ideas partly tested | 39 |
 | Ideas blocked (data, download, compute) | 68 |
-| Rounds in the registry | 116 (NULL 75, PENDING 20, PARTIAL 8, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,613 |
+| Rounds in the registry | 121 (NULL 79, PENDING 20, PARTIAL 9, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,683 |
 | Forward paper lanes running | 17 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -53,7 +53,7 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 | R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 61 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 | R294 xfund_lt_fwd | cross-venue carry, MEXC + Lighter | 61 d +0.7% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 
-Processing lag of on-time hours: 56 hours, median 78.56666666666666 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22.
+Processing lag of on-time hours: 59 hours, median 78.8 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22.
 
 ## 3. Next in the queue
 
@@ -84,13 +84,13 @@ Processing lag of on-time hours: 56 hours, median 78.56666666666666 min, max 261
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R293 | er_v1 | DONE | NULL | 3 |
-| R288 | xfund_lt_v1 | DONE | CONFIRMED | 6 |
-| R292 | dealerflow_v1 | DONE | NULL | 4 |
-| R294 | xfund_lt_fwd | RUNNING | PENDING | 1 |
-| R295 | optflow_v1 | DONE | NULL | 15 |
 | R296 | charm_expiry_v1 | DONE | NULL | 5 |
 | R297 | fundgate_v1 | DONE | NULL | 4 |
 | R298 | lotcap_v1 | DONE | NULL | 16 |
+| R299 | mlrank_v1 | DONE | PARTIAL | 12 |
+| R300 | intrars_v1 | DONE | NULL | 24 |
+| R301 | qbasis_v1 | DONE | NULL | 16 |
+| R302 | fundxs_v1 | DONE | NULL | 8 |
+| R303 | capit_v1 | DONE | NULL | 10 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

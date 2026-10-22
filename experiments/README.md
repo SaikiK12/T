@@ -28,8 +28,13 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (94)
+## Finished and registered rounds (99)
 
+- **[capit_v1](capit_v1/)** R303, DONE NULL, 10 trials. Capitulation buys on Binance perps: hedged deep-dip longs (25-day gap <= -20/30/40%, hold 1/5 d) and the top-50 basket after breadth or cascade days (hold 2/5 d, over the drift); M302, M286 ([PREREG](capit_v1/PREREG.md), [FINDINGS](capit_v1/FINDINGS.md))
+- **[fundxs_v1](fundxs_v1/)** R302, DONE NULL, 8 trials. Funding-level cross-section net of funding (M263): long the lowest fifth by 3- or 30-day funding, short the highest, hold 1/7 d, top 150/50, API costs ([PREREG](fundxs_v1/PREREG.md), [FINDINGS](fundxs_v1/FINDINGS.md))
+- **[qbasis_v1](qbasis_v1/)** R301, DONE NULL, 16 trials. Quarterly dated-futures basis cross-section on the perps (M170): level and change of the annualized COIN-M basis, low/high, hold 1/7 d, k 2/3, API costs ([PREREG](qbasis_v1/PREREG.md), [FINDINGS](qbasis_v1/FINDINGS.md))
+- **[intrars_v1](intrars_v1/)** R300, DONE NULL, 24 trials. Intraday cross-sectional relative strength (M318): top-50 perps' move since 00:00 UTC at fixed hours, follow or fade, n 3 or decile, held to 24:00 UTC, API costs ([PREREG](intrars_v1/PREREG.md), [FINDINGS](intrars_v1/FINDINGS.md))
+- **[mlrank_v1](mlrank_v1/)** R299, DONE PARTIAL, 12 trials. ML cross-sectional rankers (M042): ridge, IC-weighted and GBM on 27 point-in-time (+3 vintage) daily panel features x hold {1, 7 d} x set {pit, all}, top-150 quintile book, purged monthly walk-forward, API costs, funding ([PREREG](mlrank_v1/PREREG.md), [FINDINGS](mlrank_v1/FINDINGS.md))
 - **[lotcap_v1](lotcap_v1/)** R298, DONE NULL, 16 trials. Lottery-cluster quintile short with a close-based squeeze cover (M276): score {age, cluster of age/size/vol_mcap} x hold {24 h, 168 h} x short cover {none, 10, 20, 35%} on R282's top-150 factor rows, API costs, funding ([PREREG](lotcap_v1/PREREG.md), [FINDINGS](lotcap_v1/FINDINGS.md))
 - **[fundgate_v1](fundgate_v1/)** R297, DONE NULL, 4 trials. Market funding response to up days as a market-timing gate (M295): trailing 30-day slope of top-50 funding on return, and up-day funding, z vs the past year, against the EW top-50 basket's next 7/30 days ([PREREG](fundgate_v1/PREREG.md), [FINDINGS](fundgate_v1/FINDINGS.md))
 - **[charm_expiry_v1](charm_expiry_v1/)** R296, DONE NULL, 5 trials. Friday 08:00 UTC Deribit expiry on BTC/ETH perps: settlement-fade slope on expiring near-money position (M303 dose, M309) and dealers' expiry hedge unwind after 08:00 and in 07:31-07:59 (M317) ([PREREG](charm_expiry_v1/PREREG.md), [FINDINGS](charm_expiry_v1/FINDINGS.md))
@@ -125,13 +130,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Data and loop folders (8)
+## Data and loop folders (5)
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
-- **[fundxs_v1](fundxs_v1/)** No registry row and no description yet.
-- **[intrars_v1](intrars_v1/)** No registry row and no description yet.
-- **[mlrank_v1](mlrank_v1/)** No registry row and no description yet.
+- **[mlrank_v2](mlrank_v2/)** No registry row and no description yet.
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
-- **[qbasis_v1](qbasis_v1/)** No registry row and no description yet.
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
