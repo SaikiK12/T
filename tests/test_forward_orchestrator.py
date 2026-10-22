@@ -1,6 +1,8 @@
 """Offline orchestration tests: invented subprocesses only, never collectors."""
 
+import ast
 from contextlib import redirect_stderr, redirect_stdout
+from dataclasses import replace
 import fcntl
 import hashlib
 import io
@@ -128,7 +130,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
         nodes = self.nodes(report)
         self.assertEqual(nodes["NOTICE"]["status"], "BLOCKED")
         self.assertIsNone(nodes["NOTICE"]["returncode"])
-        self.assertIn("shared notice lock", nodes["NOTICE"]["reason"])
+        self.assertIn("shared lock .notices.lock", nodes["NOTICE"]["reason"])
         self.assertGreaterEqual(nodes["NOTICE"]["lock_wait_seconds"], .05)
         self.assertFalse((self.root / "NOTICE.ran").exists())
         self.assertEqual(nodes["DEP"]["status"], "BLOCKED")
@@ -182,15 +184,61 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertFalse((self.root / "NOTICE.ran").exists())
         self.assertEqual(target.read_bytes(), b"preserve")
 
-    def test_notice_lock_metadata_is_explicit_but_plan_does_not_open_it(self):
+    def test_shared_lock_metadata_is_explicit_but_plan_does_not_open_it(self):
         tasks = orchestration.forward_tasks()
         locked = {t.name for t in tasks if t.shared_lock}
-        self.assertEqual(locked, {"REC_NOTICES", "R268", "R270", "R272"})
+        expected = {name: {"path": ".notices.lock", "wait_seconds": 300}
+                    for name in ("REC_NOTICES", "R268", "R270", "R272")}
+        expected.update({name: {"path": path, "wait_seconds": 0}
+                         for name, path in (("R278", ".xfund.lock"), ("R279", ".xfund_kc.lock"),
+                                            ("R294", ".xfund_lt.lock"))})
+        self.assertEqual(locked, set(expected))
         plan = orchestration.plan(tasks, self.root)
         for node in plan["tasks"]:
             if node["name"] in locked:
-                self.assertEqual(node["shared_lock"], {"path": ".notices.lock", "wait_seconds": 300})
+                self.assertEqual(node["shared_lock"], expected[node["name"]])
         self.assertFalse((self.root / ".notices.lock").exists())
+        self.assertEqual(list(self.root.glob(".xfund*.lock")), [])
+
+    def test_busy_carry_lock_blocks_only_that_lane_and_is_reported_to_cross_family_book(self):
+        actual = {t.name: t for t in orchestration.forward_tasks()}
+        carry = [replace(actual[name], argv=self.task(name).argv) for name in ("R278", "R279", "R294")]
+        # Use invented children, preserving the real carry lock settings and the book's carry edges.
+        book_code = ("from pathlib import Path; "
+                     "assert not Path('R278.ran').exists(); assert Path('R279.ran').exists(); "
+                     "Path('BOOK.ran').write_text('invented')")
+        book = replace(actual["R285"], argv=self.task("BOOK", book_code).argv,
+                       optional=tuple(name for name in actual["R285"].optional if name in {t.name for t in carry}))
+        with (self.root / actual["R278"].shared_lock).open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            report = self.run_tasks((book, *carry))
+        nodes = self.nodes(report)
+        self.assertEqual(nodes["R278"]["status"], "BLOCKED")
+        self.assertIsNone(nodes["R278"]["returncode"])
+        self.assertIn(".xfund.lock", nodes["R278"]["reason"])
+        self.assertEqual(nodes["R279"]["status"], "SUCCESS")
+        self.assertEqual(nodes["R294"]["status"], "SUCCESS")
+        self.assertEqual(nodes["R285"]["status"], "SUCCESS")
+        self.assertEqual(nodes["R285"]["optional_unavailable"], ["R278"])
+        self.assertTrue((self.root / "BOOK.ran").exists())
+        self.assertFalse((self.root / "R278.ran").exists())
+        self.assertEqual(report["status"], "FAILED")
+        self.assertIn(".xfund.lock", (self.state / "tick_1/R278.log").read_text())
+
+    @unittest.skipUnless(shutil.which("flock"), "requires shell-compatible flock")
+    def test_each_carry_lock_is_held_for_child_and_released_after_failure(self):
+        actual = {t.name: t for t in orchestration.forward_tasks()}
+        for name in ("R278", "R279", "R294"):
+            with self.subTest(name=name):
+                task = actual[name]
+                check = ("import subprocess; "
+                         f"assert subprocess.run(['flock','-n',{task.shared_lock!r},'true']).returncode == 1; "
+                         "raise SystemExit(7)")
+                child = replace(task, argv=self.task(name, check).argv)
+                node = self.nodes(self.run_tasks((child,), run_id=name))[name]
+                self.assertEqual((node["status"], node["returncode"]), ("FAILED", 7))
+                with (self.root / task.shared_lock).open("a") as lock:
+                    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
 
     def test_invalid_lock_paths_and_waits_rejected_before_outputs(self):
         for path, wait in (("../outside.lock", 1), ("/tmp/lock", 1), (".notices.lock", -1),
@@ -374,6 +422,17 @@ class ForwardOrchestratorTests(unittest.TestCase):
         static = "experiments/venue_gap_v1/results/tradfi_symbols.json"
         self.assertEqual(tasks["R215"].files[0].path, static)
         self.assertEqual(tasks["R224"].files[0].path, static)
+        # Compare with the actual frozen runner's carry mapping without importing/running it.
+        parsed = ast.parse((orchestration.ROOT / "scripts/forward_xbook.py").read_text())
+        assignment, = [node for node in parsed.body if isinstance(node, ast.Assign)
+                       and any(isinstance(target, ast.Name) and target.id == "CARRY" for target in node.targets)]
+        carry_names = {name.split()[0] for name in ast.literal_eval(assignment.value)}
+        self.assertEqual(carry_names, {"R278", "R279"})
+        self.assertEqual(set(tasks["R285"].optional),
+                         carry_names | {"R215", "R218", "R266", "R268", "R270", "R272"})
+        order = [t.name for t in orchestration.ordered_tasks(tasks.values())]
+        self.assertTrue(all(order.index(name) < order.index("R285") for name in carry_names))
+        self.assertNotIn("R294", tasks["R285"].needs + tasks["R285"].optional)
 
     def test_graph_commands_order_and_timeouts_match_the_actual_shell_wrapper(self):
         shell = orchestration.ROOT / "scripts/forward_all.sh"
@@ -385,6 +444,11 @@ class ForwardOrchestratorTests(unittest.TestCase):
             if words[:2] == ["flock", "-w"]:                  # lanes that read the notice catalogs hold its lock
                 lock = {"path": words[3], "wait_seconds": float(words[2])}
                 words = words[4:]
+            elif words[:2] == ["flock", "-n"]:                # independent carry lanes use nonblocking locks
+                lock = {"path": words[2], "wait_seconds": 0}
+                words = words[3:]
+            elif words and words[0] == "flock":
+                self.fail(f"unparsed shell lock command: {line}")
             if words and words[0] == "timeout":
                 self.assertGreaterEqual(len(words), 4)
                 self.assertEqual(words[2], "$PY")
