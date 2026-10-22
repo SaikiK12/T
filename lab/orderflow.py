@@ -66,3 +66,38 @@ def exhaustion(high, low, d, window=60):
     top = (hi > prev(hi, "max")) & (c < prev(c, "max"))
     bottom = (lo < prev(lo, "min")) & (c > prev(c, "min"))
     return (bottom.astype(np.int8) - top.astype(np.int8)).values
+
+
+def volume_buckets(volume, buy, size):
+    """Equal-volume buckets, the volume clock of Easley, López de Prado and O'Hara. Bar i counts v_i / size_i
+    buckets, so the size may change over time (a point-in-time size per bar), and a bar is spread evenly over the
+    buckets it straddles. Bars with no volume, or no valid size, count nothing.
+
+    Returns (end, share): for each completed bucket, the index of the bar in which it filled (it is known at that
+    bar's close) and the share of its volume bought by takers."""
+    v = np.nan_to_num(np.asarray(volume, float))
+    b = np.nan_to_num(np.asarray(buy, float))
+    s = np.broadcast_to(np.asarray(size, float), v.shape)
+    ok = (v > 0) & np.isfinite(s) & (s > 0)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        u = np.concatenate([[0.0], np.cumsum(np.where(ok, v / s, 0.0))])
+        q = np.concatenate([[0.0], np.cumsum(np.where(ok, b / s, 0.0))])
+    k = np.arange(1, int(np.floor(u[-1] + 1e-9)) + 1, dtype=float)
+    share = np.diff(np.concatenate([[0.0], np.interp(k, u, q)]))
+    end = np.searchsorted(u, k - 1e-9, side="left") - 1
+    return end, share
+
+
+def vpin(share, n=50):
+    """Volume-synchronized probability of informed trading: the mean of |buy - sell| / volume over the last `n`
+    buckets, from `volume_buckets`' shares. NaN until `n` buckets exist."""
+    imb = np.abs(2 * np.asarray(share, float) - 1)
+    return pd.Series(imb).rolling(n, min_periods=n).mean().values
+
+
+def bvc_buy(volume, ret, sigma):
+    """Bulk volume classification: the buy part of each bar's volume guessed from its price change alone,
+    v * Phi(ret / sigma). It is what VPIN was built on where trade sides are unknown."""
+    from scipy.special import ndtr
+    with np.errstate(invalid="ignore", divide="ignore"):
+        return np.asarray(volume, float) * ndtr(np.asarray(ret, float) / np.asarray(sigma, float))

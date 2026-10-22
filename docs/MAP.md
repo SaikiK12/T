@@ -518,6 +518,10 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Five auction rules (value-area re-entry, IB and opening-range break, VWAP ±2 SD, naked POC) from 00:00 UTC, the
     New York open and the London open, against 8 random clocks.
   - Real session starts are no more structured than random clocks: rank-permutation p 0.36.
+- **R291 (vpin_v1), NULL** (4 variants, M085 from the owner's reel on toxic order flow, `docs/QUANTDATA.md`).
+  - VPIN from Binance's exact taker split worsens 1-hour volatility forecasts out of sample (DM t −12.5 against
+    a HAR with relative volume); the bulk-classified VPIN of the papers is mostly volume (corr 0.53-0.59).
+  - Plain relative volume flags hours with moves over 4 sd about 40x top against bottom decile; VPIN 3x.
   - The discovery pick (follow VWAP-band breaks after the New York open) lost in 2024-26 (t −0.96).
   - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
     York continue. They are seeds for a lane on unread data.
@@ -636,6 +640,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,555 after R290 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,559 after R291 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

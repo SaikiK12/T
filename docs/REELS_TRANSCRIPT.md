@@ -98,3 +98,35 @@ stayed in the scratchpad. Whisper's mishearings are corrected in brackets.
   and only 12 month-end expiries a year.
 - **Two rows:** M299 (signature trading) and M300 (dealer gamma regime and levels).
 - **No result.** None of the three reels shows a track record that can be checked.
+
+# The owner's reel of 2026-10-21 (late), sent with "research QuantData"
+
+Obtained the same way: `yt-dlp` without a login, `faster-whisper` "small" on CPU, and frames at 1 per second. The
+media stayed in the scratchpad.
+
+## Reel 6: instagram.com/reel/DevaMerNUk_ (julias.algos, 2026-10-21, 53 s, 1,325 likes, 19 comments)
+- **Caption:** "What happens when a market maker encounters a trader or algorithm with more information than the
+  average trader? Toxic order flow is when a market maker gets picked off, buying right before a crash or selling
+  right before a spike."
+- **Speech** (English):
+  - "Why do high-frequency trading firms spend $300 million just to shave 1 millisecond off their execution time?
+    Most people think that HFT firms buy microwave towers just to beat retail traders to the punch. But the reality
+    is exactly the opposite. Speed is defense against a concept called order flow toxicity."
+  - "Market makers are constantly quoting prices to buy and sell, but sometimes they face informed traders,
+    algorithms, or news-driven funds that know something that the market maker doesn't… The market maker gets
+    picked off, buying before a crash, or selling before a spike."
+  - "To survive, they track a metric called VPIN to track order flow toxicity. When the math shows that informed
+    traders are entering the market, then market makers must pull back and cancel their quotes right away."
+- **Frames:**
+  - the Chicago to New Jersey fiber and microwave routes (6.6 ms against 5 ms);
+  - a "retail flow / passive LPs / active LPs / arbitrageurs" meme;
+  - an adverse-selection chart ("you buy at 500, price moves lower after execution");
+  - the VPIN formula, Σ|V_B − V_S| / Σ V over n volume buckets, with "ranges from 0 to 1";
+  - the flash-crash chart of E-mini price against VPIN (Easley, López de Prado and O'Hara).
+- **Lab:**
+  - Adverse selection is real: maker fills in R193 and arXiv 2502.18625.
+  - The metric is not. **R291 `vpin_v1` is NULL.** Built from Binance's exact taker sides, VPIN worsens 1-hour
+    volatility forecasts out of sample on BTC, ETH and SOL perps. The papers' bulk-classified VPIN is mostly volume.
+    Plain volume flags crash hours far better (about 40x top against bottom decile, against 3x).
+  - The reel shows the 2010 chart without the Andersen and Bondarenko rebuttal.
+  - Write-up: `experiments/vpin_v1/FINDINGS.md`, `docs/QUANTDATA.md` section 3.

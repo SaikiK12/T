@@ -325,6 +325,9 @@ a critical eye, our own Bloomberg and an AI council. The write-up is `docs/AUCTI
 - real session anchors are no more structured than random clocks (p 0.36);
 - no auction rule trades: the discovery pick's validation t is −0.96.
 
-**Next:** the mechanism check for M308 (does estimated dealer gamma predict realized volatility?) before
-any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
+**R291 `vpin_v1` is NULL** (the owner's reel on toxic order flow, `docs/QUANTDATA.md`): VPIN from true trade
+sides adds no volatility forecast beyond volume, and plain volume flags crash hours better.
+
+**Next:** the mechanism check for M308 (R292: does estimated dealer gamma predict realized volatility beyond
+R291's HAR base?) before any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
 
