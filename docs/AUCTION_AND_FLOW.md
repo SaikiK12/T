@@ -195,7 +195,7 @@ The reasons are below.
 | `auction_v1` (R290, **NULL**: anchor test p 0.36, trading rc_p 0.43; `experiments/auction_v1/FINDINGS.md`) | Do session anchors matter? Value-area re-entry, IB and opening-range break, VWAP-band fade and follow, naked-POC return, absorption and exhaustion filters; real anchors against placebo anchors, on 1-minute BTC/ETH/SOL | held | now |
 | `levels_depth_v1` | Does resting depth cluster, and do stop runs reverse, at auction levels more than at placebo prices? | MEXC depth, tape | after about 2 weeks of tape |
 | `vpin_v1` (R291, **NULL**: exact-side VPIN worsens volatility forecasts, DM t −12.5; `experiments/vpin_v1/FINDINGS.md`) | Does order-flow toxicity (VPIN) forecast realized volatility beyond volume? From the owner's reel; QuantData's metrics are mapped in `docs/QUANTDATA.md` | held | done |
-| `dealerflow_v1` (R292) | Does taker-flow positioning (dealer gamma by strike) predict next-day realized volatility and the sign of intraday autocorrelation? This is a mechanism check before any PnL | Deribit trades, 1m klines | when the download ends |
+| `dealerflow_v1` (R292, **NULL**: HAR + dealer gamma DM t −1.23, autocorrelation t −0.06 out of sample; `experiments/dealerflow_v1/FINDINGS.md`) | Does taker-flow positioning (dealer gamma by strike) predict next-day realized volatility and the sign of intraday autocorrelation? This is a mechanism check before any PnL | Deribit trades, 1m klines | done |
 | `charm_expiry_v1` | Does R289's Friday reversal scale with expiring gamma? (dose-response) | Deribit trades, 1m klines | after `dealerflow_v1` |
 | `blocks_v1` | Do Deribit block prints lead BTC/ETH perp returns over 1-24 h? | Deribit blocks | when the download ends |
 

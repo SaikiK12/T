@@ -535,8 +535,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     a HAR with relative volume); the bulk-classified VPIN of the papers is mostly volume (corr 0.53-0.59).
   - Plain relative volume flags hours with moves over 4 sd about 40x top against bottom decile; VPIN 3x.
   - [FINDINGS](../experiments/vpin_v1/FINDINGS.md).
-- **R292 (dealerflow_v1), reserved.** Dealer gamma from Deribit taker flow (M308); frozen once the trade-history
-  download ends.
+- **R292 (dealerflow_v1), NULL** (4 trials, M308 from the owner's term list, 41M Deribit option trades).
+  - Dealer gamma from net taker flow does not improve a HAR forecast of next-day BTC or ETH volatility (DM t −1.23
+    and −0.52), and does not sign next-day hourly autocorrelation out of sample.
+  - Dealers (makers) are short gamma on 76-92% of days. Their hedge need is about 0.05-0.13% of a day's perp volume
+    per 1% move, far too small to steer the perp.
+  - Post hoc, against the story: without block trades, short-gamma days are followed by more mean-reverting
+    hours. That is M316, for unseen data only.
+  - [FINDINGS](../experiments/dealerflow_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
@@ -659,6 +665,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,568 after R288 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,572 after R292 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

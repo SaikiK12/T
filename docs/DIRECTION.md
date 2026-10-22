@@ -339,6 +339,14 @@ sides adds no volatility forecast beyond volume, and plain volume flags crash ho
 Post hoc, the first UTC hour reverses in both windows. That is M315, for unseen data only (2020 in batch 2, or a
 forward lane).
 
-**Next:** the mechanism check for M308 (R292: does estimated dealer gamma predict realized volatility beyond
-R291's HAR base?) before any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
+**R292 `dealerflow_v1` is done: NULL.** It tested dealer gamma from 41M Deribit option trades, with the taker's side
+on each trade.
+- It does not improve a HAR forecast of next-day BTC or ETH volatility (DM t −1.23), and it does not sign next-day
+  hourly autocorrelation out of sample.
+- **Why:** dealers are short gamma on 76-92% of days, and the hedge they need is a fraction of a percent of a day's
+  perp volume per 1% move. Open-interest GEX dashboards overstate it, because most open interest nets out.
+- **Next on this data:** block prints (M311) and net drift (M313), each in its own lane. M316 (post hoc) is for
+  unseen data only.
+
+The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
 

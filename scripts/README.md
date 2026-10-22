@@ -66,7 +66,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (77)
+## Run: one lane's frozen measurement (78)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -87,6 +87,7 @@ line is the first line of the script's own docstring.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_ctxslice.py`](run_ctxslice.py): ctxslice_v1 (R201): the replicated excess context edges of atlas_ctx (R192) and atlas_mtf (R195) as one slice book, as set out in experiments/ctxslice_v1/PREREG.md; ctxslice_v2 (R204): its 12-24 h ...
 - [`run_daylimit.py`](run_daylimit.py): daylimit_v1 (R208): daily loss and profit limits on the flow slice books, as set out in experiments/daylimit_v1/PREREG.md.
+- [`run_dealerflow.py`](run_dealerflow.py): dealerflow_v1 (R292): does dealer gamma estimated from Deribit taker flow (M308) explain the next UTC day's realized volatility beyond a HAR base, and the sign of the next day's hourly return ...
 - [`run_delay.py`](run_delay.py): delay_v1 (R213): the flow books with entry delayed d hours after the signal bar, as set out in experiments/delay_v1/PREREG.md.
 - [`run_delist.py`](run_delist.py): R267 delist_v1: the Binance delisting-notice short on the hourly archive (experiments/delist_v1/PREREG.md).
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...

@@ -139,9 +139,9 @@ markouts on the recorded tape (M227), not with VPIN.
 - **Code:** `lab/orderflow.py` gains `volume_buckets`, `vpin` and `bvc_buy`, all tested. `lab/exposure.py` already
   covers DEX, GEX, VEX and CEX.
 - **Lanes, in order:**
-  1. **R292 `dealerflow_v1` (M308):** dealer gamma from Deribit taker flow, when the download ends. First the
-     mechanism (higher realized volatility and positive intraday autocorrelation when dealers are short gamma); then
-     the regime switch. The bar to clear is R291's HAR base (R² about 0.65 at 1 hour).
+  1. **R292 `dealerflow_v1` (M308), NULL.** Dealer gamma from Deribit taker flow adds nothing to a daily HAR
+     volatility forecast (DM t −1.23) and does not sign next-day hourly autocorrelation. Dealers are short gamma on
+     76-92% of days, and the hedge they need is 0.05-0.13% of a day's perp volume per 1% move.
   2. **M313:** net drift (signed option premium) leading the perp, with OTM, ex-block and unusual-hour variants.
   3. **M311:** Deribit block prints leading the perp.
   4. **M309 and M310:** charm into expiry, and vanna after events.
