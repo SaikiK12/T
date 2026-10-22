@@ -225,3 +225,30 @@
 03:06:20 news recorder running
 03:09:13 recorder digests: +6
 03:10:10 lighter book: 199 markets -> data/recorders/lighter_book/2026-10-22/03.parquet; median half-spread 3.24 bp, median 1k side 5.01 bp
+== tick 2026-10-22T04:14:36Z code 90cf744
+04:14:47 mexc ticker: 1208 rows -> /home/user/T/data/recorders/mexc_ticker/2026-10-22/04.parquet
+04:14:52 funding board: 3370 rows -> /home/user/T/data/recorders/funding_board/2026-10-22/04.parquet
+04:14:55 deribit chain: 4888 options (BTC 1464, ETH 1274, SOL 702, XRP 400, HYPE 384, AVAX 368, TRX 296) -> data/recorders/deribit_chain/2026-10-22/04.parquet
+04:14:56 dex prices: recorder running
+04:15:06 wallets: 15644 rows on 5 venues, 8018 with deposit or withdrawal off; 57 changes -> recorders/wallets/2026-10-22/04.parquet
+04:15:14 binance delisting: +0 (total 443)
+04:15:17 binance listing: +0 (total 2286)
+04:15:18 binance news: +0 (total 4463)
+04:15:19 unlocks: day already recorded (/home/user/T/data/recorders/unlocks/2026-10-22.json.gz)
+04:15:19 recorder running; 259,081 rows this run
+04:15:20 news recorder running
+04:19:06 lighter book: 199 markets -> data/recorders/lighter_book/2026-10-22/04.parquet; median half-spread 3.03 bp, median 1k side 4.62 bp
+== tick 2026-10-22T06:16:25Z code 90cf744
+06:16:29 mexc ticker: 1208 rows -> /home/user/T/data/recorders/mexc_ticker/2026-10-22/06.parquet
+06:16:35 funding board: 3370 rows -> /home/user/T/data/recorders/funding_board/2026-10-22/06.parquet
+06:16:37 deribit chain: 4890 options (BTC 1464, ETH 1274, SOL 702, XRP 400, HYPE 384, AVAX 370, TRX 296) -> data/recorders/deribit_chain/2026-10-22/06.parquet
+06:16:38 dex prices: recorder running
+06:16:44 wallets: 15645 rows on 5 venues, 8019 with deposit or withdrawal off; 4 changes -> recorders/wallets/2026-10-22/06.parquet
+06:16:45 binance delisting: +0 (total 443)
+06:16:45 binance listing: +0 (total 2286)
+06:16:45 binance news: +0 (total 4463)
+06:16:46 unlocks: day already recorded (/home/user/T/data/recorders/unlocks/2026-10-22.json.gz)
+06:16:46 recorder running; 259,081 rows this run
+06:16:47 news recorder running
+06:20:34 lighter book: 199 markets -> data/recorders/lighter_book/2026-10-22/06.parquet; median half-spread 2.88 bp, median 1k side 4.72 bp
+06:21:42 recorder digests: +13

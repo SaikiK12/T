@@ -1,16 +1,17 @@
 {
  "late_threshold_min": 60,
- "hours": 506,
+ "hours": 510,
  "ontime_days": 3,
  "strict_ontime_days": 0,
  "ontime_days_with_late_hours": [
   "2026-10-20",
-  "2026-10-21"
+  "2026-10-21",
+  "2026-10-22"
  ],
  "ontime_hour_lag_min": {
-  "n": 50,
-  "median": 80.68333333333334,
-  "p90": 204.8366666666667,
+  "n": 54,
+  "median": 78.9,
+  "p90": 201.00333333333333,
   "max": 261.48333333333335
  },
  "order": {

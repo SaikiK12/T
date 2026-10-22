@@ -180,3 +180,16 @@ program 1 rounds 109 candidates 16 strategies 804 forward_lanes 12 forward_days 
 03:09:06 panel: 112 rounds, 9,478,573 trials, queue 287
 experiments/README.md: 106 lanes, 4 data folders; scripts/README.md: 169 scripts; lab/README.md: 42 modules
 program 1 rounds 112 candidates 16 strategies 810 forward_lanes 13 forward_days 559 event_tickets 7 methods 287 data_sources 45 jobs 37 tearsheets 25 equity 11213 monthly 383 leaderboard 112 coverage 67 funding_board 120 factor_ic 2910
+== tick 2026-10-22T04:14:36Z code 90cf744
+04:19:37 prereg sha 3605a4028e85
+04:19:37 {'A': (0.71, 2), 'B': (1.02, 2), 'X2': (0.65, 2)}
+04:19:44 on-time days 3, strict 0; hour lag {'n': 52, 'median': 79.34166666666667, 'p90': 201.32333333333332, 'max': 261.48333333333335} order problems: none
+04:19:45 panel: 114 rounds, 9,478,593 trials, queue 288
+experiments/README.md: 108 lanes, 4 data folders; scripts/README.md: 171 scripts; lab/README.md: 42 modules
+== tick 2026-10-22T06:16:25Z code 90cf744
+06:20:44 prereg sha 3605a4028e85
+06:20:44 {'A': (0.71, 2), 'B': (1.02, 2), 'X2': (0.65, 2)}
+06:20:49 on-time days 3, strict 0; hour lag {'n': 54, 'median': 78.9, 'p90': 201.00333333333333, 'max': 261.48333333333335} order problems: none
+06:20:50 panel: 114 rounds, 9,478,593 trials, queue 288
+experiments/README.md: 108 lanes, 4 data folders; scripts/README.md: 171 scripts; lab/README.md: 42 modules
+program 1 rounds 114 candidates 16 strategies 810 forward_lanes 13 forward_days 620 event_tickets 7 methods 288 data_sources 46 jobs 32 tearsheets 26 equity 11274 monthly 386 leaderboard 114 coverage 67 funding_board 120 factor_ic 2910
