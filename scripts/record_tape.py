@@ -1,5 +1,6 @@
-"""Order-flow tape recorder (M264): Binance USD-M and MEXC perps' best bid/ask and trades for `COINS`, bucketed to the
-second by lab/tape.py, into data/tape/. Paper only: it reads public websockets and places nothing.
+"""Order-flow tape recorder (M264): Binance USD-M, MEXC and Lighter perps' best bid/ask and trades for `COINS`, bucketed
+to the second by lab/tape.py, into data/tape/. Paper only: it reads public websockets and places nothing. Lighter (from
+2026-10-21, docs/VENUE_STRUCTURE.md) is the zero-fee venue: its books against Binance's are the lead-lag question.
 
 Point-in-time data that no archive sells for free: the clock starts when the recorder does. Every 10 minutes it writes
 part files (data/tape/_parts/<venue>/<book|trades>/<date>/); `ensure` merges a finished day's parts into
@@ -7,8 +8,9 @@ data/tape/<venue>/<book|trades>/<date>.parquet. data/tape/sessions.csv logs each
 why it ended), so gaps are known; data/tape/status.json holds the last flush. One writer: the recorder holds
 data/tape/recorder.lock.
 
-Disk: about 34 rows a second over both venues, about 90 MB a day once merged. The recorder stops, and `ensure` will
-not start it, when data/tape holds `MAX_TAPE_GB` (about five weeks) or the disk has less than `MIN_FREE_GB` free.
+Disk: about 34 rows a second over Binance and MEXC, about 90 MB a day once merged, before Lighter was added. The
+recorder stops, and `ensure` will not start it, when data/tape holds `MAX_TAPE_GB` (about five weeks before Lighter) or
+the disk has less than `MIN_FREE_GB` free.
 More needs the owner's room on disk, not a code change.
 
 usage: python scripts/record_tape.py          ensure: start the recorder if it is not running, merge finished days
@@ -44,6 +46,7 @@ CA = "/root/.ccr/ca-bundle.crt"
 BINANCE_BOOK = "wss://fstream.binance.com/public/stream?streams="      # bookTicker moved to /public in 2026
 BINANCE_TRADE = "wss://fstream.binance.com/market/stream?streams="     # aggTrade to /market
 MEXC = "wss://contract.mexc.com/edge"
+LIGHTER_WS = "wss://mainnet.zklighter.elliot.ai/stream?readonly=true"   # read-only: the plain URL answers 400 here
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
@@ -135,6 +138,15 @@ class Recorder:
         except Exception as e:             # without contract sizes the MEXC stream cannot be converted to coins
             log(f"MEXC contract sizes unavailable ({type(e).__name__}: {e}); MEXC is not recorded")
         self.sizes = sizes
+        names = {}
+        try:
+            from scripts.record_lighter_book import http as lighter_http
+            names = {int(d["market_id"]): d["symbol"]
+                     for d in lighter_http("/orderBookDetails?filter=perp")["order_book_details"]
+                     if d["symbol"] in coins and d.get("status") == "active"}
+        except Exception as e:             # without market ids the Lighter channels cannot be named
+            log(f"Lighter markets unavailable ({type(e).__name__}: {e}); Lighter is not recorded")
+        self.lighter = names
 
     def session(self, name, t0, n, reason):
         p = OUT / "sessions.csv"
@@ -211,7 +223,8 @@ class Recorder:
         else:
             self.rows += write_parts(frames, now)
         status = {"updated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "pid": os.getpid(),
-                  "coins": list(self.coins), "mexc_contracts": len(self.sizes), "rows_written": self.rows,
+                  "coins": list(self.coins), "mexc_contracts": len(self.sizes),
+                  "lighter_markets": len(self.lighter), "rows_written": self.rows,
                   "late_events": self.tape.late, "messages": self.msgs, "connected": self.connected,
                   "free_gb": round(free_gb(), 2), "tape_gb": round(tape_gb(), 3),
                   "stopped": self.why_stopped or (final and "shutdown") or ""}
@@ -243,7 +256,13 @@ class Recorder:
                     for s in sorted(self.sizes) for m in ("sub.depth.full", "sub.deal")]
             jobs.append(self.stream("mexc", "mexc", MEXC, subs, lambda m: tape.mexc(m, self.sizes),
                                     ping={"method": "ping"}))
-        log(f"recording {len(self.coins)} coins: Binance book and trades, MEXC {len(self.sizes)} contracts")
+        if self.lighter:
+            subs = [{"type": "subscribe", "channel": f"{c}/{m}"}
+                    for m in sorted(self.lighter) for c in ("ticker", "trade")]
+            jobs.append(self.stream("lighter", "lighter", LIGHTER_WS, subs, lambda m: tape.lighter(m, self.lighter),
+                                    ping={"type": "ping"}))
+        log(f"recording {len(self.coins)} coins: Binance book and trades, MEXC {len(self.sizes)} contracts, "
+            f"Lighter {len(self.lighter)} markets")
         await asyncio.gather(*jobs)
         self.flush(final=True)
         log(f"stopped: {self.rows} rows written; {self.why_stopped or 'shutdown'}")

@@ -1,0 +1,2613 @@
+{
+"folder": "data/deribit_trades",
+"source": "https://history.deribit.com/api/v2/public/get_last_trades_by_currency_and_time (public, no key)",
+"script": "scripts/fetch_deribit_trades.py",
+"recorded_utc": "2026-10-22T02:37:55Z",
+"excluded": [],
+"files": 517,
+"bytes": 232280798,
+"combined_sha256": "90a0d01c02b33a40cbf875d1ed389fe763f6df08aa905e60139ecfb918f50ac7",
+"subfolders": {
+"BTC": {
+"files": 258,
+"bytes": 141890475
+},
+"ETH": {
+"files": 258,
+"bytes": 90332831
+},
+".": {
+"files": 1,
+"bytes": 57492
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "BTC/blocks/2016-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2016-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2017-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2018-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "BTC/blocks/2019-08.parquet",
+"bytes": 8565,
+"sha256": "994ea5095c57adb752ce6610ada3bd64829aecb4c72974f9ff4d23be634aa64c"
+},
+{
+"path": "BTC/blocks/2019-09.parquet",
+"bytes": 9586,
+"sha256": "3554350a603e52c5dd9ae9b784e84bc1162d71136b05745e4817cd287fa7a563"
+},
+{
+"path": "BTC/blocks/2019-10.parquet",
+"bytes": 12768,
+"sha256": "23a88fe6c880cb04787a53401b9340282a0609eb5328f245856a1b3edbbb09e5"
+},
+{
+"path": "BTC/blocks/2019-11.parquet",
+"bytes": 15420,
+"sha256": "a2003b5fd53949ffc47fc6bc50fcf4eb94d3d765351cf91701b4c1992cc01a57"
+},
+{
+"path": "BTC/blocks/2019-12.parquet",
+"bytes": 12182,
+"sha256": "584e19eae62326889a4d8180f94483283baca56c31e0196f58169d174fe0d44f"
+},
+{
+"path": "BTC/blocks/2020-01.parquet",
+"bytes": 19238,
+"sha256": "93bad071ed287117b38ffde01edf089e408006b9c98570f24a16c6348e74c7e1"
+},
+{
+"path": "BTC/blocks/2020-02.parquet",
+"bytes": 25016,
+"sha256": "86d2bd55d7fbc0bf79bec18af759b600ef136d4054a0bef1ba1cbf60d043d5c2"
+},
+{
+"path": "BTC/blocks/2020-03.parquet",
+"bytes": 20314,
+"sha256": "d262624055623d60491d1ac6e400599de477a9dd399f3c04378287dc56e25728"
+},
+{
+"path": "BTC/blocks/2020-04.parquet",
+"bytes": 14654,
+"sha256": "60143d891dcf188d7beeae2c7611d5b4ae7680d461902512b55b76d27aea4432"
+},
+{
+"path": "BTC/blocks/2020-05.parquet",
+"bytes": 17079,
+"sha256": "858186b1ca90fb3f595e605638533195c9f6ef92f8604204d4ed18559537834b"
+},
+{
+"path": "BTC/blocks/2020-06.parquet",
+"bytes": 20306,
+"sha256": "7effb240f4da853dc681895d66232a758b9122f41b96de8821c386037d099402"
+},
+{
+"path": "BTC/blocks/2020-07.parquet",
+"bytes": 19258,
+"sha256": "6bf78b6aa6b82220de09821b69887d5ee664e1f140d80060ffb788c197279dfe"
+},
+{
+"path": "BTC/blocks/2020-08.parquet",
+"bytes": 14066,
+"sha256": "1890f8ccb7c77e5280eb304e4f56ddbedea3f4daab19e245635ec18706c13dfc"
+},
+{
+"path": "BTC/blocks/2020-09.parquet",
+"bytes": 19321,
+"sha256": "54fb2bc0343e7f14bb798208e854401663c22ea1e772b20e88a51df27606517d"
+},
+{
+"path": "BTC/blocks/2020-10.parquet",
+"bytes": 26384,
+"sha256": "638056265962b9aff4cb8e22ab402722029ae6f4a8268e547df4ac015d512103"
+},
+{
+"path": "BTC/blocks/2020-11.parquet",
+"bytes": 50397,
+"sha256": "0086d003a8738731b9a3954556ba364e2545707ec7cdb4d21a3fd1fbfa1006ae"
+},
+{
+"path": "BTC/blocks/2020-12.parquet",
+"bytes": 67675,
+"sha256": "3b10bbb987d3a304e71bc0264030095a104fd0aa33c57abedf7b1992bb411829"
+},
+{
+"path": "BTC/blocks/2021-01.parquet",
+"bytes": 80273,
+"sha256": "5dd7ea8998463a5121fc8da7ba7e7cc58c436acc2b6f49fa7e0fb3b444e1ba0a"
+},
+{
+"path": "BTC/blocks/2021-02.parquet",
+"bytes": 71809,
+"sha256": "404362c64f36c42eda0249c29c098182dc5393face69616fb0b9411dd381fd21"
+},
+{
+"path": "BTC/blocks/2021-03.parquet",
+"bytes": 96335,
+"sha256": "2abc3a6f1d4c84ab2194616166c4bff8ba300dd4597922c5210454503172e38c"
+},
+{
+"path": "BTC/blocks/2021-04.parquet",
+"bytes": 96224,
+"sha256": "8e9d2ba1ed3d19c135cecff87594310cc1f37464e48849a2978230ea47ab9e4b"
+},
+{
+"path": "BTC/blocks/2021-05.parquet",
+"bytes": 102928,
+"sha256": "d8c8cce3121ba7d5e3c866c0803313242f5fa9ff3e6f72156ede0671b5dcb32e"
+},
+{
+"path": "BTC/blocks/2021-06.parquet",
+"bytes": 103260,
+"sha256": "54ef07a8d4f153c34842fbc7f945470472d8df0fd8814f0ebf53e4d167b3cb13"
+},
+{
+"path": "BTC/blocks/2021-07.parquet",
+"bytes": 90358,
+"sha256": "00a295d716f83a32d4fb18a1c7a9d2346b12b192a8f2ff19486ed95f64090692"
+},
+{
+"path": "BTC/blocks/2021-08.parquet",
+"bytes": 98913,
+"sha256": "e072c68319234c227e895dba88fb514af25359e6be7418a1b4cde17f2435f0d9"
+},
+{
+"path": "BTC/blocks/2021-09.parquet",
+"bytes": 111226,
+"sha256": "72bd963aa8e564f25ee4121131802205b975bb53ecfb22cb98e0ba2a65a9ce72"
+},
+{
+"path": "BTC/blocks/2021-10.parquet",
+"bytes": 170115,
+"sha256": "9066c9ce8fe68ef42fda9a5eba76085713e84fe79fa721aa4292864dbf59e57e"
+},
+{
+"path": "BTC/blocks/2021-11.parquet",
+"bytes": 115273,
+"sha256": "c47beffef3ea62a4ac21715d1fc7f56dba2f916ccd3a4c2c28b93548e36b1faa"
+},
+{
+"path": "BTC/blocks/2021-12.parquet",
+"bytes": 120055,
+"sha256": "db1fd9cd93fee880008372464893a99b2e7bf44b2301fca8653add0ac2fd9007"
+},
+{
+"path": "BTC/blocks/2022-01.parquet",
+"bytes": 113810,
+"sha256": "8380677ae74436e5823dc1b2ad9e238b9985d7fa84d4ec8b4016a319c0c782ed"
+},
+{
+"path": "BTC/blocks/2022-02.parquet",
+"bytes": 130478,
+"sha256": "1ca6a10fd27d2b226ea5cab8b8f7b568585f57439a24bca4baf54d62a17a770c"
+},
+{
+"path": "BTC/blocks/2022-03.parquet",
+"bytes": 193275,
+"sha256": "daad6967d3c693cb8d685006b57da7cbdd232ada2981f4eaaf8e6d4f8ed5f342"
+},
+{
+"path": "BTC/blocks/2022-04.parquet",
+"bytes": 149183,
+"sha256": "1dcfc60db95c9687d451adbd98ccc9d8ef2f8544f9c21949e4eb8db06f1dd5c8"
+},
+{
+"path": "BTC/blocks/2022-05.parquet",
+"bytes": 166330,
+"sha256": "19c04998e56dfae21a5807f0ec5f6fdb41fc9a7a13a46d9c13ca62f83a2e494c"
+},
+{
+"path": "BTC/blocks/2022-06.parquet",
+"bytes": 175519,
+"sha256": "b5e2eaf4dad8fee44a30cdb412e3185829f4274b7f3763f8cbd1323e504467df"
+},
+{
+"path": "BTC/blocks/2022-07.parquet",
+"bytes": 130850,
+"sha256": "5a44449fd3d60651d41e5a1c2d27d2263fa870a331a4fb43a13d7a627ba33c1b"
+},
+{
+"path": "BTC/blocks/2022-08.parquet",
+"bytes": 104392,
+"sha256": "d9a8d948c6aaa862e186cb477fc86817862d8e4f45041cd454c86601fc86acfc"
+},
+{
+"path": "BTC/blocks/2022-09.parquet",
+"bytes": 164661,
+"sha256": "992d0ba0bc9cfa9e5a05cdeb556b5f55d7cff5bc20c3ddee8a60b142b31b6edf"
+},
+{
+"path": "BTC/blocks/2022-10.parquet",
+"bytes": 167816,
+"sha256": "7c6bdc94237634e22bf466a84b4e7bdd25c63af32a5c68c57f75e6c6f3ca2d6b"
+},
+{
+"path": "BTC/blocks/2022-11.parquet",
+"bytes": 177691,
+"sha256": "cfbfe83ff4643934d328fb9a0fdf81ba64b594bda3c39723f6a656763fe373b8"
+},
+{
+"path": "BTC/blocks/2022-12.parquet",
+"bytes": 118318,
+"sha256": "786053125d6d94b694d6dc843b68335b7d6a221d44398c6b1b135f88b89f20c1"
+},
+{
+"path": "BTC/blocks/2023-01.parquet",
+"bytes": 222088,
+"sha256": "9502fe481f469a1c1e53c0cb0e8c6dafcb8ad600dabbc44dce871ee4af2bd07d"
+},
+{
+"path": "BTC/blocks/2023-02.parquet",
+"bytes": 207126,
+"sha256": "89fb9a922c82f6ff9f952c856dc36bf86ef5c9e5ea018adf8aab49452097b9d6"
+},
+{
+"path": "BTC/blocks/2023-03.parquet",
+"bytes": 277775,
+"sha256": "9f891472ed0fc502b56182e218a1ef0b2f881a0e3c33f19b73d291cb1ee24ce5"
+},
+{
+"path": "BTC/blocks/2023-04.parquet",
+"bytes": 197669,
+"sha256": "b2e63ef4d2c5d5d5b377942a7bc6638f0f0d239a702729d8773002fb4263382d"
+},
+{
+"path": "BTC/blocks/2023-05.parquet",
+"bytes": 188218,
+"sha256": "73d8cd842889c586092c85f9a8e9e5dcf303b8d634e1b8a07f1ef203c73ed553"
+},
+{
+"path": "BTC/blocks/2023-06.parquet",
+"bytes": 253021,
+"sha256": "d17d626f09e8677b176fba99a1382946d06755c7bae74664e83be42383acfde7"
+},
+{
+"path": "BTC/blocks/2023-07.parquet",
+"bytes": 172053,
+"sha256": "ee458f5497b96971ea64f48ae7e7d773f0cfa2887e2878fce57b35de8920d994"
+},
+{
+"path": "BTC/blocks/2023-08.parquet",
+"bytes": 229601,
+"sha256": "6eb42edcafdd24b621565ee29973f3cc275b773a6751b6cb3d7d298ef4d8c3b9"
+},
+{
+"path": "BTC/blocks/2023-09.parquet",
+"bytes": 186267,
+"sha256": "d1c044d0a197a8155a723feef4e0c2550c5ec7ab87cb78b70bc75f1f04b473be"
+},
+{
+"path": "BTC/blocks/2023-10.parquet",
+"bytes": 344305,
+"sha256": "31cb167db5c1a6fbed43a59341e464d24fa912e885f42d4fc388bfb71a029cb0"
+},
+{
+"path": "BTC/blocks/2023-11.parquet",
+"bytes": 294974,
+"sha256": "7c9135bd72b5a269f7489ab9e8b1d372b2efd52e3c04fb7a2283b00ebd6ab711"
+},
+{
+"path": "BTC/blocks/2023-12.parquet",
+"bytes": 255685,
+"sha256": "3680dafa511c6d4101565c305eebe230a113c2338b44e476571b73a4fd6e1525"
+},
+{
+"path": "BTC/blocks/2024-01.parquet",
+"bytes": 253583,
+"sha256": "ba10b01b09c9c70e189423539e3344c8339763275072265189bcdb300b27f7ee"
+},
+{
+"path": "BTC/blocks/2024-02.parquet",
+"bytes": 220148,
+"sha256": "3872ccb0664c37a39156a85d92d30a7606945bc36523881baca1327887c3cd43"
+},
+{
+"path": "BTC/blocks/2024-03.parquet",
+"bytes": 307865,
+"sha256": "64066f7d0ec6fa049ed22ea89ff2b99ddfdf6ce9bd8c3344751321e2fd710cca"
+},
+{
+"path": "BTC/blocks/2024-04.parquet",
+"bytes": 215197,
+"sha256": "08d8cdd690db138c0ceaeb56accb59a838fc00878b21ad0ace57d38e3e56ca78"
+},
+{
+"path": "BTC/blocks/2024-05.parquet",
+"bytes": 180800,
+"sha256": "768156449d0c33aac13c49a13d085aaa1d4a2e2a3968126d176970c3cc758732"
+},
+{
+"path": "BTC/blocks/2024-06.parquet",
+"bytes": 188403,
+"sha256": "b5d99f66d777dc93a6d3108c50005941f8fedff17f392b27869816bb5218cf86"
+},
+{
+"path": "BTC/blocks/2024-07.parquet",
+"bytes": 256673,
+"sha256": "7680c15676d562f057ab93dcba187ce64c47cc27cf1683e82d7d1f229d4c4645"
+},
+{
+"path": "BTC/blocks/2024-08.parquet",
+"bytes": 300595,
+"sha256": "bb65905923f2b2989814db3dd20b8c3c5c60efb3813db310eec2292d091b15b1"
+},
+{
+"path": "BTC/blocks/2024-09.parquet",
+"bytes": 239885,
+"sha256": "bbb8576693602dde4bb0b8cb775ee4f108bffdb11af73c3c09c61e1cf82ef637"
+},
+{
+"path": "BTC/blocks/2024-10.parquet",
+"bytes": 313069,
+"sha256": "1bc97481811a13d702924994e6a2ce3dd7c20434ab36a7a4e6d591335efe64dc"
+},
+{
+"path": "BTC/blocks/2024-11.parquet",
+"bytes": 381103,
+"sha256": "378e015d381f800ffff70e726918592ae9e6c8f47e085baac9a9f00239151c78"
+},
+{
+"path": "BTC/blocks/2024-12.parquet",
+"bytes": 227209,
+"sha256": "79c6bcfd04a0f135275e576120f4620a7f286e31bec4c1791bdf78e8022b5edd"
+},
+{
+"path": "BTC/blocks/2025-01.parquet",
+"bytes": 257692,
+"sha256": "7514a33124227fc1b2657e2789a4221925ea31b371a66bec72492a55742bc382"
+},
+{
+"path": "BTC/blocks/2025-02.parquet",
+"bytes": 227930,
+"sha256": "432063361bd48bc943fc73b6051a4746fad8c273bac7ee59af3f1f5070f0c1d2"
+},
+{
+"path": "BTC/blocks/2025-03.parquet",
+"bytes": 341997,
+"sha256": "1734d35fefa65bd1752495c232eca58a57a0445cf8b16cda368b69530dbba423"
+},
+{
+"path": "BTC/blocks/2025-04.parquet",
+"bytes": 400871,
+"sha256": "49976e1d301dcdf5c12a343da8c172ff896d18322412f27e8aa029e74d931eba"
+},
+{
+"path": "BTC/blocks/2025-05.parquet",
+"bytes": 389816,
+"sha256": "288521dc08e2709f1bb8da19b3d836572d2dc6aad5af27ef4ee91f3bb682c27b"
+},
+{
+"path": "BTC/blocks/2025-06.parquet",
+"bytes": 263087,
+"sha256": "f495b80093924c3009cfe5dcb6b85583d7028a3b0e82007459f65952691454a4"
+},
+{
+"path": "BTC/blocks/2025-07.parquet",
+"bytes": 325620,
+"sha256": "fb785fd7ce1d94b924decb37e8981ae21792f3d9357fd96fe56c83e31ba645f7"
+},
+{
+"path": "BTC/blocks/2025-08.parquet",
+"bytes": 337573,
+"sha256": "5b7c49c0e45216054b899ec06d9281b4b7d04dff075be244b473068435087df3"
+},
+{
+"path": "BTC/blocks/2025-09.parquet",
+"bytes": 383036,
+"sha256": "9da03d117d0c79ff4f56d1c7c8003a34d596e3d170cdf6f3ff3993bef1b664d5"
+},
+{
+"path": "BTC/blocks/2025-10.parquet",
+"bytes": 659654,
+"sha256": "46023fda2ba1c496785388064bb6e13eb73985a245b5d03727009825a63ba9ae"
+},
+{
+"path": "BTC/blocks/2025-11.parquet",
+"bytes": 535060,
+"sha256": "3c1645a20252ac7b7286afd037a5d3f6966fdbc193a043d1c9169c2f681d3ab8"
+},
+{
+"path": "BTC/blocks/2025-12.parquet",
+"bytes": 347653,
+"sha256": "04ad4fdc2746d8ce095c11e8374cc69b6c9d0da464ce27f33d261bd3a6589b57"
+},
+{
+"path": "BTC/blocks/2026-01.parquet",
+"bytes": 347095,
+"sha256": "b9f3a5f0ad1a45cc5b679de8d7d0ff81c7758408a71cb0c6d0828de696c63271"
+},
+{
+"path": "BTC/blocks/2026-02.parquet",
+"bytes": 352588,
+"sha256": "d47a22b04b581808dd0757e16516cedac31cfa197a3b19a678a49ac45b26d441"
+},
+{
+"path": "BTC/blocks/2026-03.parquet",
+"bytes": 312648,
+"sha256": "66f3540c03bf95378fd3aa3c8183625a28384f3a303a42e564bd04f2d75d8dc9"
+},
+{
+"path": "BTC/blocks/2026-04.parquet",
+"bytes": 227383,
+"sha256": "e7bf7cab49c66dd2928ec17b221588090a0fbff904ae57d1e284e68e3f2465fe"
+},
+{
+"path": "BTC/blocks/2026-05.parquet",
+"bytes": 194640,
+"sha256": "4cc219ea0954e1a4bf6c2da4914e2d0a2470334b6bf98c2b38eb211ec5dd4f18"
+},
+{
+"path": "BTC/blocks/2026-06.parquet",
+"bytes": 265141,
+"sha256": "ecc382ae961500b3886b072776d44764eab3a80a7a85f1cddb88089e6752596f"
+},
+{
+"path": "BTC/blocks/2026-07.parquet",
+"bytes": 197110,
+"sha256": "f74f45e749223941b16532573c958f7f07dadafe2f7d2d70c7d10701ffc30d56"
+},
+{
+"path": "BTC/blocks/2026-08.parquet",
+"bytes": 243732,
+"sha256": "12718f821ec56715b02afffe9d0197e90ac513b48a57df4fd64155af875f5eb8"
+},
+{
+"path": "BTC/blocks/2026-09.parquet",
+"bytes": 283229,
+"sha256": "197450313e12517d009517b572c82af8ed9a3f83d9eb3276fabb063612c88331"
+},
+{
+"path": "BTC/flow/2016-01.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-02.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-03.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-04.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-05.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-06.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-07.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-08.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-09.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-10.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "BTC/flow/2016-11.parquet",
+"bytes": 8301,
+"sha256": "50ead331af3879f72bbceda1b5b5e4ab571b79625c74f2d3f39843c640bfe4c6"
+},
+{
+"path": "BTC/flow/2016-12.parquet",
+"bytes": 10875,
+"sha256": "b9d82c6565a9fddda13aee00238945452e00cc186a84132107366ee499e4249d"
+},
+{
+"path": "BTC/flow/2017-01.parquet",
+"bytes": 12358,
+"sha256": "0e40307a4cd077635c01ef66ed3ca6293b8a30684b49ced057e1484d96352fd2"
+},
+{
+"path": "BTC/flow/2017-02.parquet",
+"bytes": 19235,
+"sha256": "56349718abe34f8189bf76924e7ebf473e3e47c1b063cb36ba8ed056473c58d4"
+},
+{
+"path": "BTC/flow/2017-03.parquet",
+"bytes": 27810,
+"sha256": "b3f9744d3be413b1e4bf79ec77ddc5f1993199e45c78397abede0f46b3846218"
+},
+{
+"path": "BTC/flow/2017-04.parquet",
+"bytes": 18938,
+"sha256": "2eba782d19f115d60025d25bddd5eb3a0c76fa5f392b2f20477d16bcf8994514"
+},
+{
+"path": "BTC/flow/2017-05.parquet",
+"bytes": 36320,
+"sha256": "cb2f521ebe4725989f2c6f41fb701d1e9ddbac512b5cf4281ca7808ba606dfc4"
+},
+{
+"path": "BTC/flow/2017-06.parquet",
+"bytes": 46981,
+"sha256": "033ff3ea8ad9bfa1597c9dbb77e48f5be8f6b21b30e5fafdda18db39c0fe48a3"
+},
+{
+"path": "BTC/flow/2017-07.parquet",
+"bytes": 57658,
+"sha256": "094565aace5d9c20c1f2c632f8dd427e43834e72843f554855d590c1dfab75b5"
+},
+{
+"path": "BTC/flow/2017-08.parquet",
+"bytes": 83364,
+"sha256": "39fadeb0a2619f631443efcc62fa187fb828ddc80e01bddf516f0522507e9391"
+},
+{
+"path": "BTC/flow/2017-09.parquet",
+"bytes": 96734,
+"sha256": "286ae7ac3218f19acd2a2ac0cafe8c3508c93f76d6dee9c3a1e82f3d59984754"
+},
+{
+"path": "BTC/flow/2017-10.parquet",
+"bytes": 84777,
+"sha256": "3728e733069bc9ca7657f178bae2c3bdc9b676f8e2ba68054e79fae7e625efcc"
+},
+{
+"path": "BTC/flow/2017-11.parquet",
+"bytes": 165341,
+"sha256": "671de2f79a6f641f54140994ac7f061df91e36dbde69e665028007c08a886951"
+},
+{
+"path": "BTC/flow/2017-12.parquet",
+"bytes": 224460,
+"sha256": "a367c38cdce844fe958a134850e1cfe0c6cc5a1f3ea9f5dd7b2aa752a7137413"
+},
+{
+"path": "BTC/flow/2018-01.parquet",
+"bytes": 130427,
+"sha256": "9f2826a1b4f7b1e9e91ffb78171302ed6c7d1b6811f9104380395cf8071a019f"
+},
+{
+"path": "BTC/flow/2018-02.parquet",
+"bytes": 194707,
+"sha256": "5401225bb8f6709b555bd9c6a01390c97a12f20852b4e82c98d50e13d451d788"
+},
+{
+"path": "BTC/flow/2018-03.parquet",
+"bytes": 203901,
+"sha256": "5fc8f011ee1a9f3fc4323110d9ac3aaa302f3aa960ad293d6e03a97863d7f469"
+},
+{
+"path": "BTC/flow/2018-04.parquet",
+"bytes": 139096,
+"sha256": "80ed2d539e141750d0f71ee64e4c635f031682749f0604d07e51b6eeed82a08a"
+},
+{
+"path": "BTC/flow/2018-05.parquet",
+"bytes": 165787,
+"sha256": "ba8817e3cccf49fe0656e386f3833e0e5ff479fc945a734ade7ac2978ebf1642"
+},
+{
+"path": "BTC/flow/2018-06.parquet",
+"bytes": 134567,
+"sha256": "d26c774d700eb3b5a950e6cd94bbb09c140bdae500a7f8ebfedc5013d1b91d2c"
+},
+{
+"path": "BTC/flow/2018-07.parquet",
+"bytes": 133935,
+"sha256": "57d3c0c434b93bb92218fbe8b41477b7b68a8272d1770b06bc7a46b4fae9600e"
+},
+{
+"path": "BTC/flow/2018-08.parquet",
+"bytes": 163382,
+"sha256": "7434a56a1f21bb2a1c41bb5c7d8026206dffe236ec823b136be3bdc1541172f8"
+},
+{
+"path": "BTC/flow/2018-09.parquet",
+"bytes": 175750,
+"sha256": "f26cb22a0c46fff7436499e01c085863945ef9b5f0a4d05174edbc400d995ea6"
+},
+{
+"path": "BTC/flow/2018-10.parquet",
+"bytes": 154002,
+"sha256": "14fe4096e9fed5e7e5bca2c90efbf3fe16c1b3527b4a109b17988ff8ae02262e"
+},
+{
+"path": "BTC/flow/2018-11.parquet",
+"bytes": 242337,
+"sha256": "021a90dde498d0adc14b434c8074c34329ea860d93eae7e4d60979af0404e9af"
+},
+{
+"path": "BTC/flow/2018-12.parquet",
+"bytes": 236750,
+"sha256": "11db77c27edb73b8b8ec4c0a3fca5f9b31483da19617de5ed58b1997712346d6"
+},
+{
+"path": "BTC/flow/2019-01.parquet",
+"bytes": 199992,
+"sha256": "49ae08faa2e8a908c7f80673f7e24fc012b9eca300cb9c6ff4b6dbd2feaa8bad"
+},
+{
+"path": "BTC/flow/2019-02.parquet",
+"bytes": 195280,
+"sha256": "8a957965d9651dd65607594a268a8c569ffff26eb5f9b10a015314d364c2c6aa"
+},
+{
+"path": "BTC/flow/2019-03.parquet",
+"bytes": 200691,
+"sha256": "d4523c5d7564d89c554049d88b6b4a7ec1398e27a1e95ec96eda12a5fe360e18"
+},
+{
+"path": "BTC/flow/2019-04.parquet",
+"bytes": 279272,
+"sha256": "0de39f9bed6d66a73c6af6a92b8a5afcf6f04ea1a84a74025abad8a5c5c0c516"
+},
+{
+"path": "BTC/flow/2019-05.parquet",
+"bytes": 410474,
+"sha256": "78f37ece468a8ecdd20fa5646550c0963a9e84827eb37eb34c1f900d23a67f2f"
+},
+{
+"path": "BTC/flow/2019-06.parquet",
+"bytes": 399963,
+"sha256": "6252b09c4a1890acf36356fca13b549197918fafa265092983228febab7b698b"
+},
+{
+"path": "BTC/flow/2019-07.parquet",
+"bytes": 426990,
+"sha256": "ea28a0b54a6d2a218ccae5d69613551b117f5478e4d2dc14d43a2552221df9ff"
+},
+{
+"path": "BTC/flow/2019-08.parquet",
+"bytes": 355258,
+"sha256": "84bc81e076aae53c061581a968e97c84a7af34bd9d600cb57ff4fca0e412ec0e"
+},
+{
+"path": "BTC/flow/2019-09.parquet",
+"bytes": 376219,
+"sha256": "05dc4e42a5d03d770fbf9679a0eaf2cfc195956bf572c6ba0ca4e3825c03fd4f"
+},
+{
+"path": "BTC/flow/2019-10.parquet",
+"bytes": 414945,
+"sha256": "6e2d1f2de33ff1758596eff439f5f38c42c1f3927f581597c4a2425be263d1a4"
+},
+{
+"path": "BTC/flow/2019-11.parquet",
+"bytes": 394454,
+"sha256": "4e5f5b7f62c1bc494e6200a5f4be84049fff24c5ed2475a021d205ce7280cb1e"
+},
+{
+"path": "BTC/flow/2019-12.parquet",
+"bytes": 362473,
+"sha256": "bd90c2373cc582ba4a92ef31fe6752ea427adcbb08e5a1d9bb625e0054c0ac9f"
+},
+{
+"path": "BTC/flow/2020-01.parquet",
+"bytes": 492086,
+"sha256": "6511c7cf15e60255ab0a460096aeb14f5e252d3fe23e4cc51fe53c8687052a6e"
+},
+{
+"path": "BTC/flow/2020-02.parquet",
+"bytes": 647360,
+"sha256": "5df15a6375eed3fe2cd34de0959b239e7d95853dbe935de1366c47396704bf69"
+},
+{
+"path": "BTC/flow/2020-03.parquet",
+"bytes": 791701,
+"sha256": "1fe4e23b8c325c2739f64ca98da17dd52b1d305167708974928d09bc20939ab2"
+},
+{
+"path": "BTC/flow/2020-04.parquet",
+"bytes": 630413,
+"sha256": "bed8f9aec3f550558c601d676ae08df019c7e0a81e7e1dfe3382bf143bb78ba3"
+},
+{
+"path": "BTC/flow/2020-05.parquet",
+"bytes": 807376,
+"sha256": "c2fb80fbc7af1ab3643aaf243b96f1147205b80e84e0ccc8082e51fec3213421"
+},
+{
+"path": "BTC/flow/2020-06.parquet",
+"bytes": 647304,
+"sha256": "c578c3e8aa9c07c99d02a148b88089d4a959b448928eeac6bdac92367c8ac22e"
+},
+{
+"path": "BTC/flow/2020-07.parquet",
+"bytes": 708044,
+"sha256": "d156c7af5446934038d06f34215fb01d13692bee1fa283e22de52c3e385810ce"
+},
+{
+"path": "BTC/flow/2020-08.parquet",
+"bytes": 732579,
+"sha256": "d3779cac3f9db45347ac2d8f326aeaa67ef6cf40b11a04f8798621247a3e161b"
+},
+{
+"path": "BTC/flow/2020-09.parquet",
+"bytes": 669389,
+"sha256": "049569094e735b62bb0468299b21f58da7bbb8f60a5992c332eabbb214373f14"
+},
+{
+"path": "BTC/flow/2020-10.parquet",
+"bytes": 783317,
+"sha256": "444de85dcdddcc46f225e429741d8f2f43a1e0a4ef8e2e2ada97cedaa7afa5e1"
+},
+{
+"path": "BTC/flow/2020-11.parquet",
+"bytes": 1302729,
+"sha256": "96dc40a94392f553cb3f18b8a84841b1fdc252e6d735a061444a6008e542e8ca"
+},
+{
+"path": "BTC/flow/2020-12.parquet",
+"bytes": 1267496,
+"sha256": "10e63ce29c5e11a917804f17fb2a961ed58e3600ef25f262150c5b7261f09510"
+},
+{
+"path": "BTC/flow/2021-01.parquet",
+"bytes": 1717745,
+"sha256": "41c65a2f986c1b7d90bc1b451887d291e914ca84de2dee918ef7d11e1b2949cd"
+},
+{
+"path": "BTC/flow/2021-02.parquet",
+"bytes": 1207789,
+"sha256": "bc32780947cdae750f1db830974cf9cf4a06a514c5aec0b70ccbfc0bee0bb065"
+},
+{
+"path": "BTC/flow/2021-03.parquet",
+"bytes": 1236794,
+"sha256": "9597e9365b8c99dd2de80d251fbb207b142477e4f4bbfcb4c182354b55cf64db"
+},
+{
+"path": "BTC/flow/2021-04.parquet",
+"bytes": 1236306,
+"sha256": "ba74ed0d85c39ada6f091e6e690045efe01e130b8e04c333bad925ec439f3e10"
+},
+{
+"path": "BTC/flow/2021-05.parquet",
+"bytes": 1494004,
+"sha256": "265da2aae434a98ebe8980676f3c7a812c371991c18d77807abc183c05394b2d"
+},
+{
+"path": "BTC/flow/2021-06.parquet",
+"bytes": 1110137,
+"sha256": "d516eae2cee035b098e618d12b78aeacf296a59a1d74fb073939823997dda8d2"
+},
+{
+"path": "BTC/flow/2021-07.parquet",
+"bytes": 911423,
+"sha256": "7fc40c6bb5f43cd09e934d687b08976a5d1b7a36ed8cdc9cdbe3fe2ad3645373"
+},
+{
+"path": "BTC/flow/2021-08.parquet",
+"bytes": 1037958,
+"sha256": "beb7c3aa73a20db8922e6e088b0617de4bb3dbacec9fb5a89dcd745701a5fd58"
+},
+{
+"path": "BTC/flow/2021-09.parquet",
+"bytes": 983689,
+"sha256": "111a24644d06a398c1f6460d90cc87d676a4d11a1a3115dff59980c29dd7fe0b"
+},
+{
+"path": "BTC/flow/2021-10.parquet",
+"bytes": 1139496,
+"sha256": "6e5240ae03006fe3a2f9131b792e2884ee735ca9b8587b6eb55d9539683c0a6c"
+},
+{
+"path": "BTC/flow/2021-11.parquet",
+"bytes": 1064278,
+"sha256": "ea9f01e81fb59edde603bc566998b3426c659dd11cf8f6c8dabe91e72f932c67"
+},
+{
+"path": "BTC/flow/2021-12.parquet",
+"bytes": 1109418,
+"sha256": "9aa2184c9f4b898126fd9ee5746e69ca488dd65897592cbc728995afea4fabb0"
+},
+{
+"path": "BTC/flow/2022-01.parquet",
+"bytes": 1046108,
+"sha256": "55152d244de5b1f0d015d3b24e0e04861538e4c26a803b8b650e810c3d73b4f1"
+},
+{
+"path": "BTC/flow/2022-02.parquet",
+"bytes": 926719,
+"sha256": "9643255a8a5a02924365bf7743906a987ab97d9491532d792d88b02b169256d1"
+},
+{
+"path": "BTC/flow/2022-03.parquet",
+"bytes": 944796,
+"sha256": "20f4749385eaaa95960c1e4a0d3055e3e0d6a990bd5a317e2b53ff9630c5d3c4"
+},
+{
+"path": "BTC/flow/2022-04.parquet",
+"bytes": 811719,
+"sha256": "792e7bbf5d9dd9d2159f33ef841068d4aa482c2d50a28ed57e5dc3d8586868b6"
+},
+{
+"path": "BTC/flow/2022-05.parquet",
+"bytes": 1203564,
+"sha256": "9fd00681d9da9f0a4f62b98ab7334cc65238c3dc4275d27fe709acea3ab29a7d"
+},
+{
+"path": "BTC/flow/2022-06.parquet",
+"bytes": 1332037,
+"sha256": "ee2e48f4ac7259499ff8f245d6897a5784bd2c3e560534b3af38a69d84d594d8"
+},
+{
+"path": "BTC/flow/2022-07.parquet",
+"bytes": 1016159,
+"sha256": "944152dba839a4688f3ecf157c488d585844a9673c37e5dd2c282cc274b32a36"
+},
+{
+"path": "BTC/flow/2022-08.parquet",
+"bytes": 877845,
+"sha256": "a154eaba0ea8f15cdc631de4983327c379c0da8d41fba6f5bf79a7324a1cdf43"
+},
+{
+"path": "BTC/flow/2022-09.parquet",
+"bytes": 1033144,
+"sha256": "2f46f4e5e88ce5f051fb98ecf2fd78387f737f176642dec5f5702af7fbf8811e"
+},
+{
+"path": "BTC/flow/2022-10.parquet",
+"bytes": 958931,
+"sha256": "9f0cce6faead718d9a42e16fe2b6403f1215b2f2b2f11d140df8744e99a721bb"
+},
+{
+"path": "BTC/flow/2022-11.parquet",
+"bytes": 1195227,
+"sha256": "a57a9e40b3a2be7451a67f2cccccf670d9873618d563aabaa09a5e6725953a9a"
+},
+{
+"path": "BTC/flow/2022-12.parquet",
+"bytes": 746054,
+"sha256": "ace731c8622b0a595b8f4c187b5a40a0b6414a78b16636ff8a5cd91047ba5820"
+},
+{
+"path": "BTC/flow/2023-01.parquet",
+"bytes": 1158598,
+"sha256": "8e2231115b649f8bb2777f3a3120c54508795d7f93110387d98e0c5d9f27b29e"
+},
+{
+"path": "BTC/flow/2023-02.parquet",
+"bytes": 1102065,
+"sha256": "5649fc3fe8543e2a39563ec4f007a65e6760f9cf5478ea4160e11e1c98c79213"
+},
+{
+"path": "BTC/flow/2023-03.parquet",
+"bytes": 1614293,
+"sha256": "8777e90a71126822165c9004a900da267c7530dc4a04b4b231fcbd54ec1a1e27"
+},
+{
+"path": "BTC/flow/2023-04.parquet",
+"bytes": 1134480,
+"sha256": "34fe0c11fbea7c54441091fcbe5cb0c100bd917fa99cdce99a88e69b8ad5fc2e"
+},
+{
+"path": "BTC/flow/2023-05.parquet",
+"bytes": 1140268,
+"sha256": "f136207fcab16b48f5d2b3bd7f05fbc9d66937096f1b9631bf265d5bd9565e8b"
+},
+{
+"path": "BTC/flow/2023-06.parquet",
+"bytes": 1391589,
+"sha256": "4c231166c29263f7358cc47ebaa5bc289106efd435530b82edaf7e846ad0debd"
+},
+{
+"path": "BTC/flow/2023-07.parquet",
+"bytes": 1141349,
+"sha256": "fe7efcac0db416f8341889527df6a48e2974ebeeb1796beb2fec268d49b88290"
+},
+{
+"path": "BTC/flow/2023-08.parquet",
+"bytes": 1338009,
+"sha256": "b68205a9291a069f9b65a745f0c5cbb6a43dd9863487164998ceb2a46341bea9"
+},
+{
+"path": "BTC/flow/2023-09.parquet",
+"bytes": 1254669,
+"sha256": "a0fc9b9c03e900f2a22976d45387fee08d2c7a1b0f686bcb1a739753db0d2cc8"
+},
+{
+"path": "BTC/flow/2023-10.parquet",
+"bytes": 1753009,
+"sha256": "6b53ea4fc832a6a669243b7094eca7d9f9572da8d249c5390d1bb8e633616676"
+},
+{
+"path": "BTC/flow/2023-11.parquet",
+"bytes": 1863337,
+"sha256": "338e1f1bf48dab8e3b32efa60651f26b883cb2bc40f59a5734561a43e2fe8d63"
+},
+{
+"path": "BTC/flow/2023-12.parquet",
+"bytes": 1941665,
+"sha256": "507b39668622b06690f270a910afef4d35dbadefc963e5dfe164f2381f507850"
+},
+{
+"path": "BTC/flow/2024-01.parquet",
+"bytes": 1974164,
+"sha256": "5071919bf5bcc03e9a7f52dfef63e86b992b7851ad6bb3f411a5c9bc86658945"
+},
+{
+"path": "BTC/flow/2024-02.parquet",
+"bytes": 1826411,
+"sha256": "ef2943911f3427b1ecd0e921d8c0aa6ad6330a351ea1e0aa43fbee73aeb2c121"
+},
+{
+"path": "BTC/flow/2024-03.parquet",
+"bytes": 2591150,
+"sha256": "c81850d167343caa23a97da4d34fc6ba182c0cc4f74747e30cab0e19279bb563"
+},
+{
+"path": "BTC/flow/2024-04.parquet",
+"bytes": 2187379,
+"sha256": "2074f488ae8024b1b68711218e8066f104c7f103b3422bbc38753ff4d183b8f7"
+},
+{
+"path": "BTC/flow/2024-05.parquet",
+"bytes": 1999832,
+"sha256": "070e6cbed002b3a8b94ac6b6ccf3e267e62520e4bbdff92a2a220350f1e6e2a5"
+},
+{
+"path": "BTC/flow/2024-06.parquet",
+"bytes": 1795318,
+"sha256": "a791bf51357997a23c9579168f93e566845f30588df9a7b872f0fba33cf180a4"
+},
+{
+"path": "BTC/flow/2024-07.parquet",
+"bytes": 2223192,
+"sha256": "9353bb55c0aa46ac349cbb5d18ce9c7ee58427d936dc64cf4ef0cee8c4395a5d"
+},
+{
+"path": "BTC/flow/2024-08.parquet",
+"bytes": 2198490,
+"sha256": "07702d52ca12b2416b99abd85376dd7d445ad03dd8191702f19c31f54e0c82ef"
+},
+{
+"path": "BTC/flow/2024-09.parquet",
+"bytes": 1798276,
+"sha256": "8929e63d9f84442c686a4846297a790940a85f88caa6fc89956a5d700c0d2950"
+},
+{
+"path": "BTC/flow/2024-10.parquet",
+"bytes": 1899884,
+"sha256": "fd3ba9619bf8cd68d481d70d281c0fb75a6ddce277821aaa0abec40f81cc1772"
+},
+{
+"path": "BTC/flow/2024-11.parquet",
+"bytes": 2561087,
+"sha256": "0f29f8b32536a10cd3b753f90fb6ab5334b8940861560947b2fee72232771305"
+},
+{
+"path": "BTC/flow/2024-12.parquet",
+"bytes": 2159778,
+"sha256": "1a10de20b271c442ec3172940842f6ab892eafeeeac7a289331a66db7c592e01"
+},
+{
+"path": "BTC/flow/2025-01.parquet",
+"bytes": 2297649,
+"sha256": "a9b224b24d957b7abeb7250074822c8e70704fef8e774ed95369a99547975107"
+},
+{
+"path": "BTC/flow/2025-02.parquet",
+"bytes": 1960752,
+"sha256": "c8b3e52276653adb00bad0ae0c475367b777945b4e774740ce384d3e5744c8eb"
+},
+{
+"path": "BTC/flow/2025-03.parquet",
+"bytes": 2212742,
+"sha256": "c237ab41f5385de533d9761da3d74b3379202eb936bc021a91c959c8fdea051f"
+},
+{
+"path": "BTC/flow/2025-04.parquet",
+"bytes": 2177718,
+"sha256": "e696a28e00e1e314dff5b8bc8007fd8d93f491fa7cbf5e13e094f60b4a769388"
+},
+{
+"path": "BTC/flow/2025-05.parquet",
+"bytes": 2253931,
+"sha256": "a3093e2937b99be920496c714d1512cf936ec051d34ecfeb9e0fa16a0432e47f"
+},
+{
+"path": "BTC/flow/2025-06.parquet",
+"bytes": 1875533,
+"sha256": "44bfeaaeb79512024fac6804049a7121e4e306a2709d8d3a9de0eb16b1ed67bc"
+},
+{
+"path": "BTC/flow/2025-07.parquet",
+"bytes": 2078967,
+"sha256": "60433d055582161baf3146d7c18a7abebbb8da82f83f3d8e4c669456c9a32b92"
+},
+{
+"path": "BTC/flow/2025-08.parquet",
+"bytes": 2025411,
+"sha256": "f910e9d00ec94d478642e29495763cec45e0ec379f37ac08a50a83409368ec57"
+},
+{
+"path": "BTC/flow/2025-09.parquet",
+"bytes": 1777018,
+"sha256": "3f5c4fffd6bec106892558dce4baa2bd753f53fe422874fbe5d65234cbddd014"
+},
+{
+"path": "BTC/flow/2025-10.parquet",
+"bytes": 2632214,
+"sha256": "3621606481f8d46a6f299ce563b60f0b4b390dfbf3c43f70fed8f90943c950cd"
+},
+{
+"path": "BTC/flow/2025-11.parquet",
+"bytes": 2234204,
+"sha256": "2367535967b545585a1d63fdfd045bb5f6ad123c8072bb8233509c9a8c7bbaa7"
+},
+{
+"path": "BTC/flow/2025-12.parquet",
+"bytes": 1779098,
+"sha256": "f5bba476ea48ed08376a443f618eda41c97ab16c92c32ee4c161cb54a0a73f16"
+},
+{
+"path": "BTC/flow/2026-01.parquet",
+"bytes": 1690949,
+"sha256": "a1cfc36999152ed81a0f270bba4ca02b0208768af5f698da001870fcef8c00a5"
+},
+{
+"path": "BTC/flow/2026-02.parquet",
+"bytes": 2104252,
+"sha256": "f4ebfa13f817d5a2701c5f8ede14090daab2c147d795c8e78b3c517ecde48f10"
+},
+{
+"path": "BTC/flow/2026-03.parquet",
+"bytes": 2158505,
+"sha256": "85d435eb4eb64c9b503e0260261bead16dc408196dbc0436063c61613201dbb8"
+},
+{
+"path": "BTC/flow/2026-04.parquet",
+"bytes": 1769364,
+"sha256": "86970b33da68a1eb5f1bd88e62e03f4003e63f0e37699270a3610bfc33962afa"
+},
+{
+"path": "BTC/flow/2026-05.parquet",
+"bytes": 1572515,
+"sha256": "027b52514cad728864994833b6e1beba05d68e6a37958381db99a725dd7770c2"
+},
+{
+"path": "BTC/flow/2026-06.parquet",
+"bytes": 1907221,
+"sha256": "308b463ff80e8e9a4b59ed51afc25086dac1da738ba6f8c7f0e14000aa8a5521"
+},
+{
+"path": "BTC/flow/2026-07.parquet",
+"bytes": 1400028,
+"sha256": "09f920939ff05d41ac532aa2d4b996b69a7c4e7fe946e02b7223165194a4d246"
+},
+{
+"path": "BTC/flow/2026-08.parquet",
+"bytes": 1455602,
+"sha256": "ee51980f321da31ab67cf1ed850d7698948b27b8604bd9fa55764ace63e1a7e9"
+},
+{
+"path": "BTC/flow/2026-09.parquet",
+"bytes": 1356486,
+"sha256": "284d7c49b2d2152b1d8c619798cb188e5704184358ff8977cec8044cad8e8387"
+},
+{
+"path": "ETH/blocks/2016-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2016-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2017-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-08.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-09.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-10.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2018-12.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-01.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-02.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-03.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-04.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-05.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-06.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-07.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-08.parquet",
+"bytes": 7737,
+"sha256": "280b2383545a01082e2a1a690a4aa1412658fdb21162fdc66597110ec1a1680d"
+},
+{
+"path": "ETH/blocks/2019-09.parquet",
+"bytes": 7415,
+"sha256": "2c6640001fbb79d8d771675103568e8267bc3f99c177a605ab5aef7f04941851"
+},
+{
+"path": "ETH/blocks/2019-10.parquet",
+"bytes": 8379,
+"sha256": "796997b00c29ec56ba03ddd72316178f63fd9693fd6f01eefc1a447b379820bf"
+},
+{
+"path": "ETH/blocks/2019-11.parquet",
+"bytes": 636,
+"sha256": "d3d50a3c6e94ff54c4034e52e5ceb1c2b09fe5799dfcd88355a5f019fb1e3653"
+},
+{
+"path": "ETH/blocks/2019-12.parquet",
+"bytes": 7606,
+"sha256": "1dda9f4a9bfa6555d608d8610e15df7b65433ef496faca17a323f8ec9d6a8aea"
+},
+{
+"path": "ETH/blocks/2020-01.parquet",
+"bytes": 7529,
+"sha256": "54a5f0b73c43429efb2b2fd04eaa2314237f77d70e0fb3a760cddae3cd5f9533"
+},
+{
+"path": "ETH/blocks/2020-02.parquet",
+"bytes": 7985,
+"sha256": "5b8a224d4bc557b45974a4a9bf4855f01fb95cc53cec0bad4d3fd0ee4546b114"
+},
+{
+"path": "ETH/blocks/2020-03.parquet",
+"bytes": 7965,
+"sha256": "48fb5fff3f99fc043056d58e4460f06476763ca47d791f583ccff22123732312"
+},
+{
+"path": "ETH/blocks/2020-04.parquet",
+"bytes": 7707,
+"sha256": "ba934cf7a1173b33d6bc534f2de42d130d7ec109218d23ea7deb3a71ab089464"
+},
+{
+"path": "ETH/blocks/2020-05.parquet",
+"bytes": 8278,
+"sha256": "dfa6f7c8a275ad0fa738ef7d4147750ac1a85e6ad273c1af681e4dc73d934076"
+},
+{
+"path": "ETH/blocks/2020-06.parquet",
+"bytes": 9387,
+"sha256": "4b55712908633f1084934f70b0360bfd6b68f33957010868bc0155d1199980f8"
+},
+{
+"path": "ETH/blocks/2020-07.parquet",
+"bytes": 9469,
+"sha256": "9a01694a62a21eba5e381a49c7ce46ec7473b5e2c155f09b72e85ae6ecdc9b7c"
+},
+{
+"path": "ETH/blocks/2020-08.parquet",
+"bytes": 9690,
+"sha256": "88ecf389dfd8cf0d1bfb16b6f98943f0a2d82ff8c5f01fc15fcccfc7a443e6bd"
+},
+{
+"path": "ETH/blocks/2020-09.parquet",
+"bytes": 10298,
+"sha256": "5b7e80b82a61516939ddc3807451a0a0c888c09b32c58527f592d122f6edcbe7"
+},
+{
+"path": "ETH/blocks/2020-10.parquet",
+"bytes": 11257,
+"sha256": "94436ce946f26891648dc6e8b2ba0e65ada5b11a6e7c714d7c2e015886e7ae61"
+},
+{
+"path": "ETH/blocks/2020-11.parquet",
+"bytes": 18585,
+"sha256": "d14785a3a4b3fbf293da65f4fc5cdee1a54981150f7fde4f958a299921bf9b14"
+},
+{
+"path": "ETH/blocks/2020-12.parquet",
+"bytes": 23817,
+"sha256": "111295087487f96a381018240c582c1335e2d9db3ff4a11c0b5ea473efabe9cc"
+},
+{
+"path": "ETH/blocks/2021-01.parquet",
+"bytes": 30904,
+"sha256": "d5974796a90a3d0a3f5b6720ee8a5454cd5c027c0ad6a360cb5e2bba34bdd0a9"
+},
+{
+"path": "ETH/blocks/2021-02.parquet",
+"bytes": 22920,
+"sha256": "fdb52ae6eda688bb970fffcbe54f53a2dea114ac8e6bd18020e6417a12095962"
+},
+{
+"path": "ETH/blocks/2021-03.parquet",
+"bytes": 30235,
+"sha256": "86da21aa05b5db7e8d846602b670778f5d5e2c4c4e6c3224af34e8a402a02e5e"
+},
+{
+"path": "ETH/blocks/2021-04.parquet",
+"bytes": 33110,
+"sha256": "e229375d89ba4823b102851221863c8d27e83b50ef6f6a94447810ea1e81fe44"
+},
+{
+"path": "ETH/blocks/2021-05.parquet",
+"bytes": 81047,
+"sha256": "bb202939419c3b76bec7e10d1cdb69b494e52e73162ae6c82f14e5f7698a631a"
+},
+{
+"path": "ETH/blocks/2021-06.parquet",
+"bytes": 42391,
+"sha256": "fa4e0973ee0cafa6b514e0e386b23fec6e47a87a73ad8bd9916e72d64b70aefc"
+},
+{
+"path": "ETH/blocks/2021-07.parquet",
+"bytes": 52638,
+"sha256": "067af1768a7c8fd42dae525edecc6fbd37c8b6e1346db8598c97e1b731c7a3e4"
+},
+{
+"path": "ETH/blocks/2021-08.parquet",
+"bytes": 69386,
+"sha256": "b6426346028e19dbad9cbf6f3a974988026e96d6427a3dab4efc7028a6f50ab2"
+},
+{
+"path": "ETH/blocks/2021-09.parquet",
+"bytes": 59682,
+"sha256": "71649e017b77ce6b637e97530767213884d6207dff14c16e3c9735bb12061f0b"
+},
+{
+"path": "ETH/blocks/2021-10.parquet",
+"bytes": 79719,
+"sha256": "4f8f79076ec9b6172a61a1014b8794df0daddf4f8b8455b69cf07d3427a1a319"
+},
+{
+"path": "ETH/blocks/2021-11.parquet",
+"bytes": 74057,
+"sha256": "739e3db06debe574319f2d94666106c5505f2ae326eb0f1065948f531ec37cd3"
+},
+{
+"path": "ETH/blocks/2021-12.parquet",
+"bytes": 80014,
+"sha256": "8697653237032574e1d76fa3fda0224135130584eb7d4eb48569e43d48bcbe40"
+},
+{
+"path": "ETH/blocks/2022-01.parquet",
+"bytes": 124745,
+"sha256": "e9073bd487a504d926b3e0c60b2421069d757c23529acf1b8e9324dfbc9de09b"
+},
+{
+"path": "ETH/blocks/2022-02.parquet",
+"bytes": 104569,
+"sha256": "bb2d7ee24df904e94da47b2f9ff237b80361ff0a40b17af21eed129449080a5a"
+},
+{
+"path": "ETH/blocks/2022-03.parquet",
+"bytes": 112988,
+"sha256": "d80ecdf8b20ba0e1cf34a39465f9d4055e6b79686180f7e9aa6aac1ca1793207"
+},
+{
+"path": "ETH/blocks/2022-04.parquet",
+"bytes": 139814,
+"sha256": "c86faf2103a9f2aeda4aa56b60c8f838bdc7045ed64e2522f2bec640e027db5a"
+},
+{
+"path": "ETH/blocks/2022-05.parquet",
+"bytes": 191855,
+"sha256": "973126fbda3e88c304919d62e11fbf0280a93aa1b5eb7d519c2e3ff3064128d1"
+},
+{
+"path": "ETH/blocks/2022-06.parquet",
+"bytes": 148960,
+"sha256": "054a7c8ac3465013c8563c662d34ac64812e4d4da61f5a674d8ddb682e3de641"
+},
+{
+"path": "ETH/blocks/2022-07.parquet",
+"bytes": 169148,
+"sha256": "f759e7ca40169e1d34b687d369f13fb26db04895838eea50495580e79a6bf39d"
+},
+{
+"path": "ETH/blocks/2022-08.parquet",
+"bytes": 178490,
+"sha256": "739f0b94c6f9fc0e404e06b8eb82fc398be363c1e3680258fd043b8b502a80b7"
+},
+{
+"path": "ETH/blocks/2022-09.parquet",
+"bytes": 178915,
+"sha256": "379566e184fb09a4998808cef5486e958b5513652c31c38fef3d93b039debc92"
+},
+{
+"path": "ETH/blocks/2022-10.parquet",
+"bytes": 186744,
+"sha256": "3f8b4868d9e48db2f29372edbd10db3aa2e241e719b7d96783d095249d69b7f8"
+},
+{
+"path": "ETH/blocks/2022-11.parquet",
+"bytes": 188786,
+"sha256": "e25fbb03791eb583517360a4a680c9fc395cb33d29db7c5d1e8d601971fea53c"
+},
+{
+"path": "ETH/blocks/2022-12.parquet",
+"bytes": 105498,
+"sha256": "d83526f470bfbfce0766617958dec7ce20d6c68a554c2d3966ca172899b757b0"
+},
+{
+"path": "ETH/blocks/2023-01.parquet",
+"bytes": 142356,
+"sha256": "6de872027560c73356e2d89f2089a6ad4bd2bdb644307fcc1a65c2e319fcdc45"
+},
+{
+"path": "ETH/blocks/2023-02.parquet",
+"bytes": 151069,
+"sha256": "7fcde2b5e1500d34151a6111b7465d561041873caa58baacb7bb2932c53c4093"
+},
+{
+"path": "ETH/blocks/2023-03.parquet",
+"bytes": 140580,
+"sha256": "5031f98a0d071cef61390e174833f12cb52053fdf62a529b02d391588ff185a8"
+},
+{
+"path": "ETH/blocks/2023-04.parquet",
+"bytes": 142218,
+"sha256": "12a0153f81f88f49f4f974b87283c78d5fb15a5643ce06fb0d73f6c9fa638f9d"
+},
+{
+"path": "ETH/blocks/2023-05.parquet",
+"bytes": 124088,
+"sha256": "205148f76db36e6f608dd9d66395d40f49e76ca196d07e312f9e1beff7a8be3f"
+},
+{
+"path": "ETH/blocks/2023-06.parquet",
+"bytes": 141762,
+"sha256": "65dd695913a7968d3ca0fbca46c63e2a10ebe4ea77bc674f28cc79891ca07602"
+},
+{
+"path": "ETH/blocks/2023-07.parquet",
+"bytes": 122740,
+"sha256": "df986e3d69e1722680e98f6b92b465e8cbb71a90b233b5ff2f5fd052c5065760"
+},
+{
+"path": "ETH/blocks/2023-08.parquet",
+"bytes": 128518,
+"sha256": "842b1889defb50269d91f342a8ce0bd70832639302ca767b4b30a92744085b68"
+},
+{
+"path": "ETH/blocks/2023-09.parquet",
+"bytes": 140545,
+"sha256": "8ed992278dc03d55a05074a03c21d170b0a207fadf135f011c19a9f77cd0fad1"
+},
+{
+"path": "ETH/blocks/2023-10.parquet",
+"bytes": 179409,
+"sha256": "909f0ff1ac27d97dcd7e95b53f11df1adeb9553892b8dc2f2725971230ddc165"
+},
+{
+"path": "ETH/blocks/2023-11.parquet",
+"bytes": 205493,
+"sha256": "1582a6cb54de22ddb63dcf746f3fef83cb530155afaa1c65b6b72066dd12cc85"
+},
+{
+"path": "ETH/blocks/2023-12.parquet",
+"bytes": 157968,
+"sha256": "0a14e4de3e284fbf5291f3982e746ea9e8b39097b849abdc8384e7434a8ec570"
+},
+{
+"path": "ETH/blocks/2024-01.parquet",
+"bytes": 149542,
+"sha256": "b867bf45c5f1ed5855fea2eeaa82069e5be7882e8f4223fa8a81c480a0038ed8"
+},
+{
+"path": "ETH/blocks/2024-02.parquet",
+"bytes": 154292,
+"sha256": "e7c990a6795236f2f623433ef95280ee8b2e89d603d68a63f2e58e7c78d9ab49"
+},
+{
+"path": "ETH/blocks/2024-03.parquet",
+"bytes": 193335,
+"sha256": "52ac6a0dca980ebafaf740cbe8737a7db4da9e0c7d8358d4098a478a6bdc4078"
+},
+{
+"path": "ETH/blocks/2024-04.parquet",
+"bytes": 139457,
+"sha256": "248036a571192678dd7d69903b795ab8d6e3e58cf1cc4fccce7288387d72553d"
+},
+{
+"path": "ETH/blocks/2024-05.parquet",
+"bytes": 191322,
+"sha256": "672c8afb5d53b90bcaf15f1323510ff42c72f0f7b52b50bf3cf3ded35f55e9aa"
+},
+{
+"path": "ETH/blocks/2024-06.parquet",
+"bytes": 117148,
+"sha256": "3857c9d25968f34e1c152de712d2fb53325d26099cb0267628071888f1337a2b"
+},
+{
+"path": "ETH/blocks/2024-07.parquet",
+"bytes": 114027,
+"sha256": "be581fda86c8232c982eb08f05f416a423f8620ade28f24250dcb3ea3b65572a"
+},
+{
+"path": "ETH/blocks/2024-08.parquet",
+"bytes": 186910,
+"sha256": "7039c12acf3e6c805d0a34ee58b3eeb825ce9cabbd97ba945978be9dc2e79987"
+},
+{
+"path": "ETH/blocks/2024-09.parquet",
+"bytes": 127580,
+"sha256": "cba63dc7d92a8a683fb29df7dced221f23434c0fd7bc9d4446ac343c4e9ba013"
+},
+{
+"path": "ETH/blocks/2024-10.parquet",
+"bytes": 140989,
+"sha256": "b3c312ef57882ebb6f501c6eecf1782a5b2bfc943d4232074e63a00dc0dab406"
+},
+{
+"path": "ETH/blocks/2024-11.parquet",
+"bytes": 131714,
+"sha256": "cf736228d388074a48280d8732023cb69d8f6733eadfea0ab712848dd159fd36"
+},
+{
+"path": "ETH/blocks/2024-12.parquet",
+"bytes": 126617,
+"sha256": "23bfd94d0b137ae9d9f002596fb48de870e666a279e7b79cf49b3965f868034e"
+},
+{
+"path": "ETH/blocks/2025-01.parquet",
+"bytes": 126710,
+"sha256": "bd51552440bd8fc6b6fa444d19f05d995a71a5f04b3be3bb6fb70fedbda9e79a"
+},
+{
+"path": "ETH/blocks/2025-02.parquet",
+"bytes": 120308,
+"sha256": "29aeab06b67fc87be50f797e895f15f4d4ea1f6bf5c38b41105907cf31766518"
+},
+{
+"path": "ETH/blocks/2025-03.parquet",
+"bytes": 124716,
+"sha256": "33683a97b7c978da49c359c73badfe3ce1b7812bccac433da1d1fc23ee24812b"
+},
+{
+"path": "ETH/blocks/2025-04.parquet",
+"bytes": 94533,
+"sha256": "5dfb1aba8f123927b3354db3c8a23b124b6736829406dc5c16cc990f2c03ee78"
+},
+{
+"path": "ETH/blocks/2025-05.parquet",
+"bytes": 162799,
+"sha256": "ab7c4372a096807dae88869dc3a7f4319eb7d81ccbb7919d38d804c46a2e5dca"
+},
+{
+"path": "ETH/blocks/2025-06.parquet",
+"bytes": 188803,
+"sha256": "858ac0bc5be9078c036e7ae69c5cbdb5c8a59fa9defdb17c3d39b8b04e9205ff"
+},
+{
+"path": "ETH/blocks/2025-07.parquet",
+"bytes": 256033,
+"sha256": "302e6dddcc1543e20be31909d4b87158b522d5003559044b0bf1ee1a46992cb0"
+},
+{
+"path": "ETH/blocks/2025-08.parquet",
+"bytes": 284883,
+"sha256": "553fca157e4234852aa77d56029c168d78ed10d43ed9bdf4782cb6c6e8728e9d"
+},
+{
+"path": "ETH/blocks/2025-09.parquet",
+"bytes": 192232,
+"sha256": "7cdf44ad64ad58dfb36d6905a289c11dcac818d150400a2ff9c414544bf6c54e"
+},
+{
+"path": "ETH/blocks/2025-10.parquet",
+"bytes": 249766,
+"sha256": "1e778886567d773769ad184b01ed9b1eb540d644e6ff7f0da78ec598c4d08a5c"
+},
+{
+"path": "ETH/blocks/2025-11.parquet",
+"bytes": 217568,
+"sha256": "446da4b7243f20acb0a0854f4daed48bfb626d7e65aefdfa082a31ce94d45437"
+},
+{
+"path": "ETH/blocks/2025-12.parquet",
+"bytes": 121252,
+"sha256": "cc2be72befbabcaa35df3ed1a5ccd5baeff52cb083c851c13f6027687ac0a7ab"
+},
+{
+"path": "ETH/blocks/2026-01.parquet",
+"bytes": 128254,
+"sha256": "66deea27a832ba35367d273d4e0801e42f86c7f4107cc06e1905c71eebf2c01c"
+},
+{
+"path": "ETH/blocks/2026-02.parquet",
+"bytes": 129866,
+"sha256": "51380cc23d86f7c59b7c2ae157ec71a6ccbe122a15d35ae217c1a6f4c1596673"
+},
+{
+"path": "ETH/blocks/2026-03.parquet",
+"bytes": 134772,
+"sha256": "2e9db32acf89eb4c00219de56ed5d3c4d7ee6a268f043e909c7ec4abe18113ef"
+},
+{
+"path": "ETH/blocks/2026-04.parquet",
+"bytes": 96061,
+"sha256": "5581c9a8cd8e7a58dafda024bdb6374d42f74460ce906f79e7fc9d6482aa65fc"
+},
+{
+"path": "ETH/blocks/2026-05.parquet",
+"bytes": 86508,
+"sha256": "cd2ec66a6e64b9871e53a17e7e72b865f03ed53536366937057578b0feebaa1b"
+},
+{
+"path": "ETH/blocks/2026-06.parquet",
+"bytes": 72253,
+"sha256": "49814b3d290affafc496ff275b8748778dc68ec0cbe693bc101c4258b1f244ca"
+},
+{
+"path": "ETH/blocks/2026-07.parquet",
+"bytes": 75955,
+"sha256": "60c12784945a217d7e18c1686fe5a296ab98d0d89046dbdbad3c47dc0bbf683f"
+},
+{
+"path": "ETH/blocks/2026-08.parquet",
+"bytes": 60210,
+"sha256": "20e577c160a88eeb8b39bc4f5d945acbc0a553d786115b3f40cffc49e5751ade"
+},
+{
+"path": "ETH/blocks/2026-09.parquet",
+"bytes": 76891,
+"sha256": "3e0217a2e6263bc7aaab700f1846b2b17f361e43431cfe339d03df3b4459eb3c"
+},
+{
+"path": "ETH/flow/2016-01.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-02.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-03.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-04.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-05.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-06.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-07.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-08.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-09.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-10.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-11.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2016-12.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-01.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-02.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-03.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-04.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-05.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-06.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-07.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-08.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-09.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-10.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-11.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2017-12.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-01.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-02.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-03.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-04.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-05.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-06.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-07.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-08.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-09.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-10.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-11.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2018-12.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2019-01.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2019-02.parquet",
+"bytes": 6155,
+"sha256": "88775fb691c54a0995600edc8f86117dabafa95a1918afa1769fae3d998d3c3d"
+},
+{
+"path": "ETH/flow/2019-03.parquet",
+"bytes": 28494,
+"sha256": "3b6a75f8eb545e921190612812d20a039005b0926c31c953aff00ce34eaec53e"
+},
+{
+"path": "ETH/flow/2019-04.parquet",
+"bytes": 94447,
+"sha256": "311613b8e515975ddf2021ad8145687e324b44432e81d1a799b4caafe6fc679f"
+},
+{
+"path": "ETH/flow/2019-05.parquet",
+"bytes": 156593,
+"sha256": "e63126218435df4cf259a9c0d27f8365aed6c7962e48816713e1caff5e03e88c"
+},
+{
+"path": "ETH/flow/2019-06.parquet",
+"bytes": 119491,
+"sha256": "94f83df239025c4ce39e982ac1642ebd4170d2652b101e2bc20f78d5e4f8dbf7"
+},
+{
+"path": "ETH/flow/2019-07.parquet",
+"bytes": 119702,
+"sha256": "ae7c7557bf7c727720d1ddc5aa98e7305b7e4e2e887d82a474d1f227e4779926"
+},
+{
+"path": "ETH/flow/2019-08.parquet",
+"bytes": 91284,
+"sha256": "130e41132e88b49a48e5fa59bcbc8d5875161e599fc356cb13e8fe8f37c138fd"
+},
+{
+"path": "ETH/flow/2019-09.parquet",
+"bytes": 100339,
+"sha256": "209ff373b2360ec1cc92d854cdc768b03446b863193aaeece9370c8f1136b78d"
+},
+{
+"path": "ETH/flow/2019-10.parquet",
+"bytes": 90629,
+"sha256": "90e0ce9856ebb26319e5bcf19e927189c76e83965e0ef5243f5ed27545dcaf4e"
+},
+{
+"path": "ETH/flow/2019-11.parquet",
+"bytes": 89543,
+"sha256": "b6aab29f73dc8444c704b588ad54d92e497cfd900ff931695174bb812c1fc4ac"
+},
+{
+"path": "ETH/flow/2019-12.parquet",
+"bytes": 86170,
+"sha256": "f87157e712e71dbd1ae19d4290cd748dc9de57587a6af514f532a5c4e069dfa0"
+},
+{
+"path": "ETH/flow/2020-01.parquet",
+"bytes": 125151,
+"sha256": "f0009823d2cf4c01ac8adf432eee08e83922f7a68076e647bbce94f6e2c3e3ec"
+},
+{
+"path": "ETH/flow/2020-02.parquet",
+"bytes": 236572,
+"sha256": "ef00fd60ef7de328c732dbd14ca44e14fcde70eb4b36ba7b9d45d0291229e614"
+},
+{
+"path": "ETH/flow/2020-03.parquet",
+"bytes": 249101,
+"sha256": "93b345b72ab3118b10d82b617df92089aa88464d6e370004b3e734428d78bc0f"
+},
+{
+"path": "ETH/flow/2020-04.parquet",
+"bytes": 193389,
+"sha256": "c6ac7804f3353d5a917b20571da8e93a9d0860e41636d049ce1cb8f8e2ed7f5f"
+},
+{
+"path": "ETH/flow/2020-05.parquet",
+"bytes": 216023,
+"sha256": "a996ebd1c9fc30981e2cb231be47d0a1c69686fb9e0041226a291b6cfcb3c450"
+},
+{
+"path": "ETH/flow/2020-06.parquet",
+"bytes": 218436,
+"sha256": "d733dddb6ef0fe1e52c743d2cfdd99e1d0825345d5fdf6eb54a13e52944fb790"
+},
+{
+"path": "ETH/flow/2020-07.parquet",
+"bytes": 301637,
+"sha256": "de632415986a018e58e9a6ad94956f87bdac9b29a7268a01bb24788d60bd16ce"
+},
+{
+"path": "ETH/flow/2020-08.parquet",
+"bytes": 396578,
+"sha256": "014392b3a8e1ed913c85475d70241192203e4103dd0ac6c4bfdb1fde3c7f5b09"
+},
+{
+"path": "ETH/flow/2020-09.parquet",
+"bytes": 393711,
+"sha256": "f8f71db49ff00b4144da5a9ed516f8b145bee774e4dbf54025ad83ed91481d5b"
+},
+{
+"path": "ETH/flow/2020-10.parquet",
+"bytes": 326669,
+"sha256": "18e4abe9e792cf568f462cdf2e4686f4a4380311316be786ef3c1b43c0f96458"
+},
+{
+"path": "ETH/flow/2020-11.parquet",
+"bytes": 591092,
+"sha256": "b9f3c8e43d3ee11a43033a836095a1aadb50aa60898c5761ea21b79f22fac9dd"
+},
+{
+"path": "ETH/flow/2020-12.parquet",
+"bytes": 677936,
+"sha256": "06a7396d6abddf9c751686e9cdc3a9553251bb2947e02919c0a44037d1ab3504"
+},
+{
+"path": "ETH/flow/2021-01.parquet",
+"bytes": 1083484,
+"sha256": "16dc82a1a95e89aec29e1424c06aaff77bd671865b304091de48b8510d26f245"
+},
+{
+"path": "ETH/flow/2021-02.parquet",
+"bytes": 866109,
+"sha256": "4aa3238ecd707a4cf664e2943636dee482893153cdd7e76d6a2ce47e0e92051a"
+},
+{
+"path": "ETH/flow/2021-03.parquet",
+"bytes": 671894,
+"sha256": "1fee65e01fa91e69a6afb854f8380f14d6bc69821ad3e8c4dc0508969300731d"
+},
+{
+"path": "ETH/flow/2021-04.parquet",
+"bytes": 853410,
+"sha256": "e2f4dea599f998fe68c05815ca10bd566ad9f22b333299c3c60e6ea27a05ad1d"
+},
+{
+"path": "ETH/flow/2021-05.parquet",
+"bytes": 1496946,
+"sha256": "f26e3442bcf035797527b09001d5652d78e8a44cdd3a180b027a11846ce91d0c"
+},
+{
+"path": "ETH/flow/2021-06.parquet",
+"bytes": 854518,
+"sha256": "b6e2e51d70230e1fd1e76e5fb776d229addf2672d6637c3996083271e7832f92"
+},
+{
+"path": "ETH/flow/2021-07.parquet",
+"bytes": 730075,
+"sha256": "017203ed7ffd7aa2281e85ed013ae6ced76de389a5d7e1a392812c85cd813d44"
+},
+{
+"path": "ETH/flow/2021-08.parquet",
+"bytes": 875380,
+"sha256": "a16d9819fd42502aabff2e49819e6a6dae7461c86f74bd2bd6bf4e2340a03994"
+},
+{
+"path": "ETH/flow/2021-09.parquet",
+"bytes": 923656,
+"sha256": "30bdeb5d858f07e847c50894d3e2b49a43984d1ab3b90f755e462d2131ab76e2"
+},
+{
+"path": "ETH/flow/2021-10.parquet",
+"bytes": 956902,
+"sha256": "d28a967d737bba8d88ec155624669f36f652f7628646dd860ab0ec63cc6d935f"
+},
+{
+"path": "ETH/flow/2021-11.parquet",
+"bytes": 1068121,
+"sha256": "eb9b8e2cf8b34032d691583df96c3bcc55379de645b394b18fa20aae2df2f884"
+},
+{
+"path": "ETH/flow/2021-12.parquet",
+"bytes": 1158605,
+"sha256": "bef1ee32fc821337ef7e19cd5ab7975cdb502c6f9c1abc8a0bc04a4d616597b6"
+},
+{
+"path": "ETH/flow/2022-01.parquet",
+"bytes": 1228626,
+"sha256": "6180e3f3b3a6a27002ba01d409ad607f7599ce8e52d86f35310e736d2ce1e30e"
+},
+{
+"path": "ETH/flow/2022-02.parquet",
+"bytes": 982499,
+"sha256": "d4989dd4369d79945cc0feb8b5d682e682c9870ecbadee012ffe15595557e8c7"
+},
+{
+"path": "ETH/flow/2022-03.parquet",
+"bytes": 870030,
+"sha256": "598e66813e44538f0fa0599c02ff144ccd4f489d3122cf6d6259269120835677"
+},
+{
+"path": "ETH/flow/2022-04.parquet",
+"bytes": 775694,
+"sha256": "dce7280d92f7be92ffff9abe2fc9edff811a8b1b29369171c85db4682d57a850"
+},
+{
+"path": "ETH/flow/2022-05.parquet",
+"bytes": 1124793,
+"sha256": "fffccab05d7fd13f00e55e94fec5c949f8f6278ad91d193d834284a40ebb5054"
+},
+{
+"path": "ETH/flow/2022-06.parquet",
+"bytes": 1252444,
+"sha256": "cee487137d8a61b2b85460823d1e918596020881877b5be31667b8f196b7bbf9"
+},
+{
+"path": "ETH/flow/2022-07.parquet",
+"bytes": 1072828,
+"sha256": "23e7b7f2c1883d1a43851bf4a5d7beb65b1aa8d847bae0ced042a4ab134a4a1b"
+},
+{
+"path": "ETH/flow/2022-08.parquet",
+"bytes": 1026077,
+"sha256": "61a83330bd7c349155e58e80e66478eb7ee196ade6ca494ef880315f91cb2714"
+},
+{
+"path": "ETH/flow/2022-09.parquet",
+"bytes": 1077825,
+"sha256": "175454126af6c8234784f03f0784956202645d9f949ab772d38c94804f2e5070"
+},
+{
+"path": "ETH/flow/2022-10.parquet",
+"bytes": 932560,
+"sha256": "42f1a66b92aa554ac72c152df3053defe98183a2fe958144bc8205f386d38606"
+},
+{
+"path": "ETH/flow/2022-11.parquet",
+"bytes": 1171433,
+"sha256": "0a1691d02e7557355800a240b9f789b2c77a90639d3e2868e1c91323b6d6bf70"
+},
+{
+"path": "ETH/flow/2022-12.parquet",
+"bytes": 686734,
+"sha256": "617763c60c5eadfe16ddf96625896dd61de3dfd5157a76d8a81d51fdbb7419a5"
+},
+{
+"path": "ETH/flow/2023-01.parquet",
+"bytes": 893401,
+"sha256": "53a345602124bf6e38a762be82238cd4941a3a9e232ca60562d88014b94c04af"
+},
+{
+"path": "ETH/flow/2023-02.parquet",
+"bytes": 840081,
+"sha256": "e14156f369f3022b2c64e4ea137622d047d71464074ff0bf429954a78d39f8c9"
+},
+{
+"path": "ETH/flow/2023-03.parquet",
+"bytes": 1085056,
+"sha256": "d91108b0ad01ed24878d2d40aaa016582bd57b9ebcc016554367852d3756c48e"
+},
+{
+"path": "ETH/flow/2023-04.parquet",
+"bytes": 879642,
+"sha256": "73c6b6e193fb14c869f8f64b82457cfeac50e637b19e0cb39723c0d91a24c48d"
+},
+{
+"path": "ETH/flow/2023-05.parquet",
+"bytes": 796204,
+"sha256": "74a410e75f0b8a37556999976dd12ace26f6df86dd5616c05f12ba4d74c5b57e"
+},
+{
+"path": "ETH/flow/2023-06.parquet",
+"bytes": 860807,
+"sha256": "3dd79f5d405bdd8aa17b8c6998e8e88ddc4178352fc2d07367ff306e4f0c5af5"
+},
+{
+"path": "ETH/flow/2023-07.parquet",
+"bytes": 765634,
+"sha256": "05f6a9f9df1c7b56b3503a09dceeab5b661f0b1b0084671ad78f0b41f2419751"
+},
+{
+"path": "ETH/flow/2023-08.parquet",
+"bytes": 831071,
+"sha256": "1b3f7255d573a5792474b4565d0136e8ed2ec42fe5de2b8a419f2824ebd5a2fa"
+},
+{
+"path": "ETH/flow/2023-09.parquet",
+"bytes": 794577,
+"sha256": "00249bafaaa7b78f9696209d4187222e035d726fbea435bdd2dc41f5cac45df0"
+},
+{
+"path": "ETH/flow/2023-10.parquet",
+"bytes": 1028632,
+"sha256": "303ee7f79a058ff9db53d637232b8d1ed5f9136e23b31b23bdbf33e5547c982d"
+},
+{
+"path": "ETH/flow/2023-11.parquet",
+"bytes": 1232413,
+"sha256": "d516f93cededa821a2d5b8091ea10be863ed87f9f9134c6a0403396bc0cbd702"
+},
+{
+"path": "ETH/flow/2023-12.parquet",
+"bytes": 1256748,
+"sha256": "4d56a7f0deda796186451c2f037ce094b73e90da62674d1d5ca2de7b97953704"
+},
+{
+"path": "ETH/flow/2024-01.parquet",
+"bytes": 1261043,
+"sha256": "80d90a91c8ebe71a68cdf57326f976ce3cefa1f4bc4fd6cc3916ec9f433f9cf2"
+},
+{
+"path": "ETH/flow/2024-02.parquet",
+"bytes": 1289009,
+"sha256": "99b7e9c36de8aff7ac665202d241470354a490c8e425f44bcadb9f5dcdc83f9b"
+},
+{
+"path": "ETH/flow/2024-03.parquet",
+"bytes": 1843252,
+"sha256": "873300c526d9288d4291c038a84f7e7bc71cf3694539f5fc60e15e7181248dc1"
+},
+{
+"path": "ETH/flow/2024-04.parquet",
+"bytes": 1511310,
+"sha256": "6928e26a9ca723286f81a51978f7e08d9a59c39f6541da959e1f5686cd9f3ef9"
+},
+{
+"path": "ETH/flow/2024-05.parquet",
+"bytes": 1446735,
+"sha256": "8a19cc97437f1520c9398537c9917acee2c43543ac91e11eb8e4d6addfeae9de"
+},
+{
+"path": "ETH/flow/2024-06.parquet",
+"bytes": 1145727,
+"sha256": "489d687171e9e62f641fe465388d1eb8d0d411a7ba58ff6b3f328fa4aacc0bb7"
+},
+{
+"path": "ETH/flow/2024-07.parquet",
+"bytes": 1212028,
+"sha256": "8d491db4d2654739382916e165518ec7a1f29f44310a3a0b6bc446d5390b4c83"
+},
+{
+"path": "ETH/flow/2024-08.parquet",
+"bytes": 1305097,
+"sha256": "c8fdfaf4b89fd8ee5ebe3ff4f64cecaee8b4faa84dfa3264558d103c666737b9"
+},
+{
+"path": "ETH/flow/2024-09.parquet",
+"bytes": 945649,
+"sha256": "a60f8e1de8e9369847819a412d19b90d2c250eaf69269814b458e7a042896bfa"
+},
+{
+"path": "ETH/flow/2024-10.parquet",
+"bytes": 942745,
+"sha256": "b83d85eaa67d1e36329f8e216092eca308723f974d0a6e690da40f57c8a1839c"
+},
+{
+"path": "ETH/flow/2024-11.parquet",
+"bytes": 1488160,
+"sha256": "b9ce8d39b1e9d4033730a3a2cf77dd1b8bd1116b0ba8905c4907c3069a348077"
+},
+{
+"path": "ETH/flow/2024-12.parquet",
+"bytes": 1523592,
+"sha256": "da3618196c621efb567a8d0bf8c6d4f38744aa9f36d0df4b87efcd4e3b051b94"
+},
+{
+"path": "ETH/flow/2025-01.parquet",
+"bytes": 1461110,
+"sha256": "f28bbcc85929327d993e98b27509a4ec970881f14b393bae704180f308eec9ab"
+},
+{
+"path": "ETH/flow/2025-02.parquet",
+"bytes": 1398485,
+"sha256": "9f46161c998759f8bb39aa17616015bd883cfe7a563f8846e454cff2e94dced5"
+},
+{
+"path": "ETH/flow/2025-03.parquet",
+"bytes": 1282365,
+"sha256": "f9983bd3fd9f79a472eae243496df1fa97c61f5cc5b72379c8600d29b656137c"
+},
+{
+"path": "ETH/flow/2025-04.parquet",
+"bytes": 1142461,
+"sha256": "4151858b72d0f9fd211cd2e260d99e3e343c063fc1dc5871cf427461fcdd7a73"
+},
+{
+"path": "ETH/flow/2025-05.parquet",
+"bytes": 1524368,
+"sha256": "2fd23dcd43ac2a50628225b9d5a64595f9cc9a8099e1187427b57a7aff082a90"
+},
+{
+"path": "ETH/flow/2025-06.parquet",
+"bytes": 1301160,
+"sha256": "233d19488a0002c387febe2ea5bdb235672757e033b8666a4d72e9879d996c1a"
+},
+{
+"path": "ETH/flow/2025-07.parquet",
+"bytes": 1570524,
+"sha256": "3a8248547c863cb4565cc19c85ae6e072be20015a5477b7ede3bb6d86131570d"
+},
+{
+"path": "ETH/flow/2025-08.parquet",
+"bytes": 1936932,
+"sha256": "94e8a42c724c9133b8e6cb7c4f6a74e2a0cf2fef114e000275c9a12d4bb31485"
+},
+{
+"path": "ETH/flow/2025-09.parquet",
+"bytes": 1362341,
+"sha256": "10c6d59a34a9caf9a330aa624648d1431700268457fc25e4bdf5070e782c1ee6"
+},
+{
+"path": "ETH/flow/2025-10.parquet",
+"bytes": 1632511,
+"sha256": "60ceb8718703245d0a8bb6c0faa4bd7d4ae2c6b5bb7ebd9dffeac58815ae8a1e"
+},
+{
+"path": "ETH/flow/2025-11.parquet",
+"bytes": 1372931,
+"sha256": "6c87cdf7bdadbe577415bdd81f350d87101bf422311bb5290b7b324437ec411b"
+},
+{
+"path": "ETH/flow/2025-12.parquet",
+"bytes": 1073257,
+"sha256": "e957a73d3eb00a024083622d764260529a0ddce59290052ea3882df18d67d829"
+},
+{
+"path": "ETH/flow/2026-01.parquet",
+"bytes": 1006759,
+"sha256": "7478de93f6483e1a98dbcab3e87b06d194cc03174d763a0e47c24c556d81850d"
+},
+{
+"path": "ETH/flow/2026-02.parquet",
+"bytes": 1130688,
+"sha256": "9bb22c07dcb324cfd5db773dbb0d65ddf602b7573ed1726e3600c79236bf12a3"
+},
+{
+"path": "ETH/flow/2026-03.parquet",
+"bytes": 1090432,
+"sha256": "73202e3df534042f768d748366202bcffdaff0242766a3e3d5589784a7cfd0da"
+},
+{
+"path": "ETH/flow/2026-04.parquet",
+"bytes": 960713,
+"sha256": "949c8a489d645a281fd6805e341455eabc697a5a77cef11031e92c45877926bf"
+},
+{
+"path": "ETH/flow/2026-05.parquet",
+"bytes": 807816,
+"sha256": "6d26778ef1892a399b629e4e93028223ee3c9541023eb497369b3896a7630106"
+},
+{
+"path": "ETH/flow/2026-06.parquet",
+"bytes": 832126,
+"sha256": "4a798d1bd6ec31d4ae0b95fff062a122b57e90c255ffd684a7bde9067a3337cf"
+},
+{
+"path": "ETH/flow/2026-07.parquet",
+"bytes": 656150,
+"sha256": "844a62113cc23b3c13f9e0f1a017f6dd3a92c597bb948a667ed0c88a934a67c3"
+},
+{
+"path": "ETH/flow/2026-08.parquet",
+"bytes": 708196,
+"sha256": "8768b8178855a20815cf106d01843d4232268f1d6dbb8d1b178fb004d9324ad6"
+},
+{
+"path": "ETH/flow/2026-09.parquet",
+"bytes": 797618,
+"sha256": "66452816fd5e23eef1128ddc4e73c6a65bc93538541aec68b3448f8e6a08b980"
+},
+{
+"path": "provenance.json",
+"bytes": 57492,
+"sha256": "0deec317a286a33f137727f432a8a5c40f45a6c5df47e875d33c4a0347bd9c03"
+}
+]
+}

@@ -23,7 +23,9 @@ Accounting (both reported; `net` is the decided one):
 - fill: the same plus the gap between each ticket's live mid and day D's close, on both legs, booked on the interval
   that starts at D. A replayed or late ticket has no live fill and books the close.
 """
+import contextlib
 import csv
+import fcntl
 import json
 import time
 import urllib.error
@@ -46,6 +48,8 @@ CORR = (30, 0.9, 20)
 GATE = "https://api.gateio.ws/api/v4/futures/usdt"
 HL = "https://api.hyperliquid.xyz/info"
 KUCOIN = "https://api-futures.kucoin.com"
+LIGHTER = "https://mainnet.zklighter.elliot.ai/api/v1"
+LIGHTER_PACE_S = 1.1                  # Lighter allows 60 requests a minute per IP (Standard account)
 TICKET_COLS = ["run", "day", "book", "action", "coin", "long", "short", "spread_ann", "forced", "kind",
                "close_long", "close_short", "fill_long", "fill_short"]
 DAY_COLS = ["day", "book", "kind", "run", "held", "legs", "gross", "funding", "fill_adj", "net", "net_2x", "net_3x",
@@ -237,6 +241,112 @@ def kucoin_listed():
     return {c["symbol"] for c in _kucoin("/api/v1/contracts/active") if c.get("status") == "Open"}
 
 
+@contextlib.contextmanager
+def _lighter_lock():
+    """The machine-wide Lighter lock (data/.lighter_api.lock), shared with scripts/record_lighter_book.py and
+    scripts/fetch_venue_history.py: one Lighter client at a time on this machine."""
+    p = data.ROOT / ".lighter_api.lock"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with open(p, "a") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+
+
+def _lighter(path, **q):
+    """One Lighter request under the lock, which is held for the pace after it, so no client on this machine goes over
+    60 requests a minute."""
+    with _lighter_lock():
+        try:
+            return _json(f"{LIGHTER}/{path}?" + urllib.parse.urlencode(q))
+        finally:
+            time.sleep(LIGHTER_PACE_S)
+
+
+_lighter_ids = {}                       # Lighter symbol -> market id, read once per process
+
+
+def _lighter_details():
+    d = _lighter("orderBookDetails", filter="perp")["order_book_details"]
+    _lighter_ids.update({x["symbol"]: int(x["market_id"]) for x in d})
+    return d
+
+
+def _lighter_id(sym):
+    if sym not in _lighter_ids:
+        _lighter_details()
+    return _lighter_ids[sym]
+
+
+def lighter_prices(sym, start, end):
+    """Hourly bars (t = bar open), 480 a call, as scripts/fetch_venue_history.py reads them into the archive."""
+    mid, out, s = _lighter_id(sym), [], start - start % H
+    while s < end:
+        e = min(end, s + 480 * H)
+        out += _lighter("candles", market_id=mid, resolution="1h", start_timestamp=s, end_timestamp=e,
+                        count_back=0).get("c") or []
+        s = e
+    if not out:
+        return pd.DataFrame(columns=["t", "close", "volume"])
+    df = pd.DataFrame({"t": [int(r["t"]) for r in out], "close": [float(r["c"]) for r in out],
+                       "volume": [float(r.get("v", 0.0)) for r in out]})
+    return df.drop_duplicates("t", keep="last").sort_values("t", ignore_index=True)
+
+
+def lighter_funding(sym, start, end):
+    """Hourly settlements, 700 a call, signed as the archive: the API's unsigned percent `rate` is +rate / 100 when
+    `direction` is 'long' (longs pay) and -rate / 100 otherwise."""
+    mid, out, s = _lighter_id(sym), [], start - start % H
+    while s < end:
+        e = min(end, s + 700 * H)
+        out += _lighter("fundings", market_id=mid, resolution="1h", start_timestamp=s // 1000,
+                        end_timestamp=e // 1000, count_back=0).get("fundings") or []
+        s = e
+    if not out:
+        return pd.DataFrame(columns=["t", "rate"])
+    r = np.array([float(x["rate"]) for x in out])
+    sign = np.where(np.array([x["direction"] for x in out]) == "long", 1.0, -1.0)
+    return pd.DataFrame({"t": [int(x["timestamp"]) * 1000 for x in out], "rate": sign * r / 100})
+
+
+def lighter_book_mid(sym):
+    book = _lighter("orderBookOrders", market_id=_lighter_id(sym), limit=1)
+    a, b = book.get("asks") or [], book.get("bids") or []
+    if not a or not b:
+        return None
+    return (float(a[0]["price"]) + float(b[0]["price"])) / 2
+
+
+class LazyMids(dict):
+    """{symbol: live mid}, each read on its first lookup. Lighter has no bulk ticker with bid and ask (its mark price
+    sat a median 6 bp and a p90 29 bp from the book mid in the recorder's first snapshots), so the book is read for
+    the coins that get a ticket only. A failed read gives no fill, and the close is booked."""
+
+    def __init__(self, fn):
+        super().__init__()
+        self.fn = fn
+
+    def get(self, k, default=None):
+        if k not in self:
+            try:
+                self[k] = self.fn(k)
+            except Exception as e:             # noqa: BLE001
+                log(f"mid {k} failed", e)
+                self[k] = None
+        v = dict.get(self, k)
+        return default if v is None else v
+
+
+def lighter_mids():
+    return LazyMids(lighter_book_mid)
+
+
+def lighter_listed():
+    return {d["symbol"] for d in _lighter_details() if d.get("status") == "active"}
+
+
 @dataclass(frozen=True)
 class Venue:
     prices: Callable            # (symbol, start ms, end ms) -> frame (t = bar open, close, <vol>)
@@ -262,6 +372,8 @@ VENUES = {
                   1, 4),
     "kucoin": Venue(kucoin_prices, kucoin_funding, kucoin_mids, kucoin_listed, "kucoin_hist/open/candles_1d",
                     "volume", "kucoin_hist/open/funding", 24, 3),
+    "lighter": Venue(lighter_prices, lighter_funding, lighter_mids, lighter_listed, "lighter_hist/open/candles_1h",
+                     "volume", "lighter_hist/open/funding", 1, 1),
 }
 
 

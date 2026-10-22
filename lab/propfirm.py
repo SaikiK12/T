@@ -42,6 +42,8 @@ class Rules:
     payout_profit_required: float = 0.0  # USD earned since the last successful payout; 0 disables, first is exempt
     floor_after_payout: float = float("nan")  # equity floor (units of the initial balance) once one payout is made
     payout_deny: float = 0.0             # chance a payout request is refused and the account closed unpaid
+    cost_side: float = 0.0               # firm's commission per side, fraction of notional (spread is the caller's)
+    swap_day: float = 0.0                # firm's swap per day on the notional held, fraction
     source: str = "illustrative"
 
 
@@ -66,9 +68,11 @@ PRESETS = {
                         split=0.8, payout_days=14, source="cryptofundtrader.com"),
     "cft_2phase": Rules("cft_2phase", 100_000, NAN, targets=(0.08, 0.05), daily_loss=0.05, max_dd=0.10, split=0.8,
                         payout_days=14, source="cryptofundtrader.com"),
-    # Breakout Pro: third-party review (site blocked from here)
+    # Breakout Pro: third-party review (site blocked from here); 0.04% per side and 0.033% a day swap from
+    # cryptoslate.com's Breakout review (third-party), charged only when evaluate() is given turnover or exposure
     "breakout_pro": Rules("breakout_pro", 100_000, NAN, targets=(0.12,), daily_loss=0.03, max_dd=0.05, split=0.8,
-                          payout_days=14, source="third-party: proptradingvibes.com"),
+                          payout_days=14, cost_side=0.0004, swap_day=0.00033,
+                          source="third-party: proptradingvibes.com, cryptoslate.com"),
     # Topstep 50K Combine (CME futures; a benchmark, our crypto books cannot trade there): USD 3,000 target, USD 2,000
     # end-of-day trailing locking at the start, best day < 55% of target; USD 49 a month, USD 149 activation (third-party)
     # funded (help.topstep.com payout policy, checked 2026-10-20): each request at most 50% of the balance and USD 2,000
@@ -164,8 +168,23 @@ def run_phase(paths, rules, target, steps_per_day=1, check_target=True, eq0=None
     return Outcome(passed, days, reason, {"equity": eq, "peak": peak, "alive": alive})
 
 
-def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, steps_per_day=1, seed=0):
-    """Pass probability across all phases, expected payouts in USD, and the expected value of one attempt."""
+def net_of_costs(r, rules, turnover=0.0, exposure=0.0, steps_per_day=1):
+    """Step returns of a gross stream r after the firm's charges: r - turnover x cost_side - exposure x swap_day /
+    steps_per_day. turnover is the notional traded in the step (a 1x book opened and closed is 2) and exposure the
+    notional held through it, both per unit of the book, so the charges scale with size as r does. Scalars or arrays
+    aligned with r; the bootstrap then resamples each step's return and its charges together."""
+    return (np.asarray(r, float) - np.asarray(turnover, float) * rules.cost_side
+            - np.asarray(exposure, float) * rules.swap_day / steps_per_day)
+
+
+def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, steps_per_day=1, seed=0,
+             turnover=None, exposure=None):
+    """Pass probability across all phases, expected payouts in USD, and the expected value of one attempt. With
+    turnover or exposure given, r is gross and the firm's cost_side and swap_day are charged (net_of_costs); without
+    them r is taken as already net of the firm's charges."""
+    if turnover is not None or exposure is not None:
+        r = net_of_costs(r, rules, 0.0 if turnover is None else turnover, 0.0 if exposure is None else exposure,
+                         steps_per_day)
     rng = np.random.default_rng(seed)
     passed = np.ones(n, bool)
     used = np.zeros(n, np.int32)

@@ -1,3 +1,4 @@
+import fcntl
 import json
 import shutil
 import tempfile
@@ -7,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from lab import carrylane, xfund
+from lab import carrylane, data, xfund
 from scripts import forward_xfund as fx
 from tests.test_forward_xfund import synthetic
 
@@ -44,6 +45,29 @@ def synthetic_kc(root, t0, days, seed=0):
                 d = root / v / kind
                 d.mkdir(parents=True, exist_ok=True)
                 df.to_parquet(d / f"{sym}.parquet", index=False)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def synthetic_lt(root, t0, days, seed=0):
+    """Three coins on MEXC (8-hour funding) and Lighter (hourly funding), both with hourly bars. Lighter pays more on X
+    and less on Z."""
+    rng = np.random.default_rng(seed)
+    hours = np.arange(t0, t0 + days * DAY, H)
+    rates = {"XUSDT": (1e-4, 6e-5), "YUSDT": (1e-4, 1.25e-5), "ZUSDT": (3e-4, 1e-6)}     # (mexc per 8 h, lighter per h)
+    rows = []
+    for key, (rm, rl) in rates.items():
+        base = key[:-4]
+        px = 10 * np.exp(np.cumsum(rng.normal(0, 0.01, len(hours))))
+        row = {"key": key, "mexc": f"{base}_USDT", "lighter": base}
+        for v, vol, ft, r in (("mexc", "vol", hours[hours % (8 * H) == 0], rm), ("lighter", "volume", hours, rl)):
+            p = px * np.exp(rng.normal(0, 0.0005, len(hours)))
+            for kind, df in (("prices", pd.DataFrame({"t": hours.astype(np.int64), "close": p,
+                                                      vol: np.ones(len(hours))})),
+                             ("funding", pd.DataFrame({"t": ft.astype(np.int64), "rate": np.full(len(ft), r)}))):
+                d = root / v / kind
+                d.mkdir(parents=True, exist_ok=True)
+                df.to_parquet(d / f"{row[v]}.parquet", index=False)
         rows.append(row)
     return pd.DataFrame(rows)
 
@@ -182,6 +206,111 @@ class KucoinLaneTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             carrylane.Lane("x", "R0", self.tmp, self.tmp / "s.csv", {"A": ("gate+mexc", 14, 0.05, 20, "")},
                            ["gate", "kucoin"], "2026-08-01", "2026-10-22")
+
+
+class LighterClientTest(unittest.TestCase):
+    """Lighter's public clients: paging, the funding sign, the lazy book mids, the contract list and the shared lock."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.saved = carrylane._json, carrylane.time.sleep, data.ROOT
+        carrylane.time.sleep = lambda s: None
+        data.ROOT = self.tmp
+        carrylane._lighter_ids.clear()
+        self.calls = []
+        hours = list(range(0, 1000 * H, H))
+
+        def fake(url, body=None, tries=5):
+            with open(self.tmp / ".lighter_api.lock", "a") as f:     # the lock is held during every request
+                with self.assertRaises(BlockingIOError):
+                    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            path, q = url[len(carrylane.LIGHTER) + 1:].split("?")
+            q = dict(x.split("=") for x in q.split("&"))
+            self.calls.append(path)
+            if path == "orderBookDetails":
+                return {"order_book_details": [{"symbol": "X", "market_id": 7, "status": "active"},
+                                               {"symbol": "Y", "market_id": 8, "status": "inactive"}]}
+            if path == "candles":
+                lo, hi = int(q["start_timestamp"]), int(q["end_timestamp"])
+                return {"c": [{"t": t, "o": 1, "h": 2, "l": 0.5, "c": 1.5, "v": 3, "V": 4.5}
+                              for t in hours if lo <= t <= hi]}          # the end bar too: pages overlap by one
+            if path == "fundings":
+                lo, hi = int(q["start_timestamp"]) * 1000, int(q["end_timestamp"]) * 1000
+                return {"fundings": [{"timestamp": t // 1000, "rate": "0.0012", "value": "0.1",
+                                      "direction": "long" if t // H % 2 else "short"}
+                                     for t in hours if lo <= t < hi]}
+            if path == "orderBookOrders":
+                self.assertEqual(q["limit"], "1")
+                if q["market_id"] == "7":
+                    return {"asks": [{"price": "1.2", "remaining_base_amount": "5"}],
+                            "bids": [{"price": "1.0", "remaining_base_amount": "5"}]}
+                return {"asks": [], "bids": []}
+            raise AssertionError(path)
+
+        carrylane._json = fake
+
+    def tearDown(self):
+        carrylane._json, carrylane.time.sleep, data.ROOT = self.saved
+        carrylane._lighter_ids.clear()
+        shutil.rmtree(self.tmp)
+
+    def test_candles_and_funding_page_forwards(self):
+        p = carrylane.lighter_prices("X", 0, 1000 * H)
+        self.assertEqual(p.t.tolist(), list(range(0, 1000 * H, H)))
+        self.assertEqual(list(p.columns), ["t", "close", "volume"])
+        self.assertEqual((p.close.iloc[0], p.volume.iloc[0]), (1.5, 3.0))
+        self.assertEqual(self.calls.count("candles"), 3)                  # 480 bars a call
+        f = carrylane.lighter_funding("X", 0, 1000 * H)
+        self.assertEqual(f.t.tolist(), list(range(0, 1000 * H, H)))
+        self.assertEqual(self.calls.count("fundings"), 2)                 # 700 hours a call
+        np.testing.assert_allclose(f.rate.to_numpy()[:2], [-1.2e-5, 1.2e-5])     # longs pay when 'long'
+        self.assertEqual(self.calls.count("orderBookDetails"), 1)         # market ids read once
+
+    def test_lazy_mids_and_listed(self):
+        m = carrylane.lighter_mids()
+        self.assertEqual(self.calls, [])                                  # nothing read until a ticket asks
+        self.assertAlmostEqual(m.get("X"), 1.1)
+        self.assertAlmostEqual(m.get("X"), 1.1)
+        self.assertEqual(self.calls.count("orderBookOrders"), 1)
+        self.assertIsNone(m.get("Y"))                                     # empty book: no fill
+        self.assertIsNone(m.get("Q"))                                     # unknown symbol: no fill, no raise
+        self.assertEqual(m.get("Q", {}), {})
+        self.assertEqual(carrylane.lighter_listed(), {"X"})
+        self.assertTrue((self.tmp / ".lighter_api.lock").exists())
+
+
+class LighterLaneTest(unittest.TestCase):
+    """A mexc+lighter lane (hourly funding on one leg) replays as the twin does and fills from lazy mids."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.lane = carrylane.Lane("lt", "R0", self.tmp, self.tmp / "symbols.csv",
+                                   {"A": ("mexc+lighter", 14, 0.05, 20, "test")}, ["mexc", "lighter"], "2026-08-01",
+                                   "2026-10-22", data_dir=self.tmp / "fwd", costs=(0.00055, 0.0011, 0.00165))
+        synthetic_lt(self.lane.data, carrylane.ms("2026-08-01"), 84).to_csv(self.lane.symbols, index=False)
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp)
+
+    def test_replay_matches_the_twin_and_lazy_mids_fill(self):
+        lane = self.lane
+        lane.tick(carrylane.ms("2026-10-21") + H // 10, fetch=False, mids_fn=dict, listed_fn=dict)
+        _, tk, dy = lane.journal()
+        u, _ = lane.universe((carrylane.ms("2026-10-21") - carrylane.ms(lane.warm)) // DAY + 1)
+        book = xfund.Book([0, 1], 14, 0.05, 20)
+        rows, trades = xfund.replay(u, book, xfund.window_start(u, [0, 1], 14))
+        self.assertEqual({x["coin"] for x in trades}, {"XUSDT", "ZUSDT"})
+        rows.loc[rows.index[-1], "legs"] -= 2.0 * len(book.open)
+        got = np.array([float(r["net_close"]) for r in dy])
+        np.testing.assert_allclose(got, xfund.net(rows, 20, 0.00055).to_numpy(), atol=1e-9)
+        asked = []
+        lazy = lambda: {"mexc": {"X_USDT": 1.0, "Z_USDT": 1.0},
+                        "lighter": carrylane.LazyMids(lambda s: asked.append(s) or 1.0)}
+        lane.tick(carrylane.ms("2026-10-22") + H // 10, fetch=False, mids_fn=lazy, listed_fn=dict)
+        _, tk, _ = lane.journal()
+        inh = [r for r in tk if r["day"] == "2026-10-22" and r["action"] == "inherit"]
+        self.assertTrue(inh and all(r["fill_long"] and r["fill_short"] for r in inh))
+        self.assertEqual(sorted(asked), sorted({r["coin"][:-4] for r in inh}))    # one book read per traded coin
 
 
 if __name__ == "__main__":

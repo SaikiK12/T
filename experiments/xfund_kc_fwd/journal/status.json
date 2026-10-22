@@ -1,36 +1,35 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-10-21T03:13:29.166408+00:00",
+ "updated": "2026-10-22T01:33:29.286845+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 1.006,
+  "binance": 1.003,
+  "gate": 1.011,
   "kucoin": 1.0
  },
  "data": {
   "gate": {
    "files": 860,
    "failed": 0,
-   "changed_on_overlap": 17,
+   "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "binance": {
+   "files": 873,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AERGOUSDT",
+    "BDXNUSDT",
+    "SXPUSDT"
+   ]
   },
   "kucoin": {
    "files": 642,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
-  },
-  "binance": {
-   "files": 873,
-   "failed": 4,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "AERGOUSDT",
-    "BDXNUSDT",
-    "MDTUSDT",
-    "SXPUSDT"
-   ]
   }
  },
  "A": {
@@ -169,8 +168,8 @@
   "total_close": 0.0,
   "nw_t": null,
   "max_drawdown": 0.0,
-  "replay_days": 60,
-  "replay_total": 0.014104111999999999
+  "replay_days": 61,
+  "replay_total": 0.014157526699999999
  },
  "B": {
   "set": "binance+kucoin",
@@ -270,12 +269,6 @@
     "spread_in": 0.412
    },
    {
-    "coin": "ARKUSDT",
-    "long": "binance",
-    "short": "kucoin",
-    "spread_in": 0.3789
-   },
-   {
     "coin": "MINAUSDT",
     "long": "binance",
     "short": "kucoin",
@@ -298,6 +291,12 @@
     "long": "binance",
     "short": "kucoin",
     "spread_in": 0.506
+   },
+   {
+    "coin": "BRUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.4558
    }
   ],
   "scored_days": 0,
@@ -308,8 +307,8 @@
   "total_close": 0.0,
   "nw_t": null,
   "max_drawdown": 0.0,
-  "replay_days": 60,
-  "replay_total": 0.0146879078
+  "replay_days": 61,
+  "replay_total": 0.0146265184
  },
- "last_day": "2026-10-21"
+ "last_day": "2026-10-22"
 }

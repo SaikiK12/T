@@ -113,6 +113,21 @@ class ParseTest(unittest.TestCase):
         self.assertAlmostEqual(evs[1][4], 0.001)
         self.assertEqual(tape.mexc(dict(deal, symbol="ETH_USDT"), sizes), [])
 
+    def test_lighter(self):
+        names = {1: "BTC"}
+        tick = {"channel": "ticker:1", "type": "update/ticker", "timestamp": T0 + 30,
+                "ticker": {"s": "BTC", "a": {"price": "84533.5", "size": "0.35489"},
+                           "b": {"price": "84532.4", "size": "0.00020"}, "last_updated_at": T0 * 1000 + 181094}}
+        self.assertEqual(tape.lighter(tick, names), [("book", "BTC", T0 + 181, 84532.4, 0.0002, 84533.5, 0.35489)])
+        self.assertEqual(tape.lighter(dict(tick, channel="ticker:2"), names), [])
+        trade = {"channel": "trade:1", "type": "update/trade",
+                 "trades": [{"price": "84532.1", "size": "0.00013", "timestamp": T0 + 5, "is_maker_ask": False}],
+                 "liquidation_trades": [{"price": "84863.0", "size": "0.5", "timestamp": T0 + 6, "is_maker_ask": True}]}
+        self.assertEqual(tape.lighter(trade, names), [("trade", "BTC", T0 + 5, 84532.1, 0.00013, -1),
+                                                      ("trade", "BTC", T0 + 6, 84863.0, 0.5, 1)])
+        self.assertEqual(tape.lighter(dict(trade, type="subscribed/trade"), names), [])
+        self.assertEqual(tape.lighter({"type": "connected"}, names), [])
+
 
 class CompactTest(unittest.TestCase):
     def test_finished_days_merge_and_today_waits(self):

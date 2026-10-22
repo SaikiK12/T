@@ -1,154 +1,466 @@
-# Public trading-video intake (2026-10-20)
+# The owner's two reels: what the media actually says (2026-10-19)
 
-This is a compact source digest, not a transcript archive or evidence of profitability. The detailed source-by-source
-methods and tested/open scopes are in [`source_methods_20261020.json`](../research/intake/source_methods_20261020.json)
-and map to the single live queue, [`registry/methods.csv`](../registry/methods.csv). The previous two Instagram reels
-remain represented below; their source version is preserved in Git history (SHA-256 before this digest:
-`24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859`).
+How it was obtained:
+- **Download:** `yt-dlp` 2026.08.19, with no login. The public page itself is a login shell.
+- **Speech:** `faster-whisper` "small" on CPU, with audio decoded by ffmpeg.
+- **Frames:** extracted at 3 frames per second.
+- The files stayed in the session scratchpad and were not committed.
 
-No raw video, audio, market data or model weights were committed or downloaded. Speech is paraphrased, never presented
-as a verbatim transcript. Captions, summaries and descriptions are identified separately because several pages did
-not expose a transcript.
+## Reel 1: instagram.com/reel/DcOhWbqm3vK (Git Radar, @git.radar, 2026-08-19, 71.8 s)
+- **Caption:** "Production-grade Rust-native trading engine with deterministic event-driven architecture
+  https://github.com/nautechsystems/nautilus_trader".
+- **Speech** (English, language probability 1.00):
+  - "This project, Nautilus Trader, is a high performance engine that handles all the complex math and speed required
+    to trade stocks or crypto at a professional level."
+  - "It's built in a language called Rust…"
+  - "it lets you test your strategy using historical data before you risk a single cent in the real market. It ensures
+    that the exact same logic you used for your experiments works perfectly when you start trading with real money."
+  - "…it has already earned 26,314 stars…"
 
-## Owner-provided clips
+## Reel 2: instagram.com/reel/DcgZhLyiZ3o (Filip Gajko, @iclosegreen, 2026-08-26, 6.3 s)
+- **Speech:** none. Whisper finds no segments; the track is music.
+- **Frames:** one title card, "6 github repos that run a hedge fund from your laptop", over a desk of trading screens.
+- **Caption:** it describes six roles, does not name the repositories, and says "comment 'GIT' and i'll send you the
+  list". The names go out by direct message, so they cannot be recovered from the media.
+- **Roles and the most likely repositories** (inference, matching Codex's `docs/TOOLS_FROM_REELS.md` on
+  `codex/forward-lane-completion`):
 
-| Source | What was accessible | Distinct leads retained | Main gaps |
-|---|---|---|---|
-| [Git Radar Instagram reel](https://www.instagram.com/reel/DcOhWbqm3vK/) | Speech and caption summary from the prior intake | Deterministic backtest/paper/live engine parity; NautilusTrader as an execution tool | No edge rule; M029/M088 are related engineering checks |
-| [Filip Gajko Instagram reel](https://www.instagram.com/reel/DcgZhLyiZ3o/) | Music and title card only; repository names were inferred, not spoken | Six-role tool-stack claim only | No named tools in the media and no trading rule; inference is not source fact |
-| [TikTok: “08/06 — Trade Recap 100 points from GEX 715 QQQ”](https://www.tiktok.com/@aleks_rosme/video/7670945661621128470) | Public caption/title; no public speech-caption track found | One title-only GEX-level claim | No level construction, entry/exit, contract, costs or verified P&L |
-| [TikTok: 3D volatility surface](https://www.tiktok.com/@aleks_rosme/video/7698695375250623766) | Creator-provided English caption track | Sell relatively rich IV and buy relatively cheap IV; use strike/expiry surface and Greeks for pricing/hedging | Pairing, delta/tenor, richness threshold, vol model, hedge, timing and costs absent |
-| [TikTok: QQQ 713 GEX reclaim](https://www.tiktok.com/@aleks_rosme/video/7698764847109999894) | Creator-provided English caption track | QQQ GEX reclaim/retest with call-heavy premium, bullish order-flow, daily value-area-low context; SPX gamma/put-spread context | GEX source/sign, premium/flow definitions, contract, trigger, risk and execution absent |
-
-The two TikTok caption tracks are summarized in new words; the first clip's “100 points” and the third clip's “6R” are
-creator claims, not independently checked outcomes. Components of the QQQ setup are kept as separate intake records but
-mapped to one composite queue row; the value-area-low component is related to M207, not the same standalone VWAP rule.
-
-## Additional public video leads
-
-### Follow-up: Aleks Rosme account request
-
-The owner later supplied the [whole TikTok profile](https://www.tiktok.com/@aleks_rosme). The profile was inaccessible;
-a bounded YouTube channel-metadata request also failed with proxy 403. No new speech transcript or exhaustive list of
-posts was obtained. The three clips above remain the directly received TikTok scope. Third-party repost captions and
-video-title listings are discovery leads only; viewer comments are not creator rules or performance evidence.
-
-His [official site](https://www.aleksrosme.com/) links a [Net Drift guide](https://www.youtube.com/watch?v=xzoQc4lWAkA)
-and affiliate tools Quant Data and Deepcharts. Eight follow-up records `AR26-*` retain these distinctions:
-
-| Received material | Retained scope / existing queue |
+| Role | Most likely repository |
 |---|---|
-| [Quant Data Net Drift documentation](https://help.quantdata.us/en/articles/9900974-mastering-the-net-drift-tool-leveraging-order-flow-sentiment-for-smarter-options-trading) | Crossover, convergence/divergence and volume-confirmation components relate to M235; these are vendor applications, not newly verified Aleks rules. Filters, midpoint uncertainty and multi-leg treatment matter. |
-| [Quant Data GEX guide](https://help.quantdata.us/en/articles/15807345-gamma-exposure-gex-api-python-quickstart-dealer-positioning-guide) | Model signing and snapshot/intraday distinction: context for M235/M175. GEX is estimated positioning, not observed dealer inventory. No authenticated feed accessed. |
-| [Deep Print settings](https://www.deepcharts.com/helpcenter/article/deep-print-%28footprint%C2%AE%29) | Tick grouping, bid/ask volume and profile settings: context for M238/M207. These capabilities supply neither his thresholds nor an automatic absorption strategy. |
-| [2024 Starter Strategy](https://aleksrosme.gumroad.com/l/strategy) | Indexed brochure specifies M15 entry, H1 area and 2R. Actual rule file unavailable; no definition of area, entry or stop. CONTEXT, related timeframe idea M022 only. |
-| [Trades Journal](https://aleksrosme.gumroad.com/l/journal) and official tool directory | Workflow/tool context. Journal features, dark-pool labels, replay and copier listings do not establish additional executable rules or a track record. |
+| Candle foundation model | Kronos |
+| scikit-learn portfolio optimizer | skfolio |
+| Rust engine | NautilusTrader |
+| Market-making bots on 140+ exchanges | Hummingbot |
+| Crypto bot with ML retraining | Freqtrade / FreqAI |
+| Natural-language research workspace | Vibe-Trading is the closest fit |
 
-Assessment: retain the options/flow composite as an unresolved lead. MEXC hourly candles cannot reproduce US-options
-premium or price-level footprint data. A crypto adaptation would be a separate rule, with its own data and frozen
-test; weak or incomplete source ideas remain retained. No strategy outcomes, costs or profits were computed here.
+- **The caption's one engineering claim worth keeping:** "the ai in these repos never sends orders. it forecasts, the
+  optimizer sizes, the engine executes."
 
-| Source | Transcript basis | Extracted methods / queue mapping |
+# The owner's three reels of 2026-10-21
+
+Obtained the same way: `yt-dlp` without a login, `faster-whisper` "small" on CPU, frames at 3 per second. The media
+stayed in the scratchpad. Whisper's mishearings are corrected in brackets.
+
+## Reel 3: instagram.com/reel/DdSBAFqOlg7 (vince.quant, 2026-09-14, 82 s, 1,275 likes, 17 comments)
+- **Caption:** every systematic strategy is a function of the past path. Rough path theory describes the path by its
+  signature (the sequence of iterated integrals). Hambly and Lyons (2010) proved the signature determines the path,
+  and any continuous function of the path is a linear combination of signature terms. So moving-average crossovers,
+  RSI, Bollinger bands and the Kalman filter are all close to such a combination. Futter, Horvath and Wiese
+  (Quantitative Finance, 2025) make this a portfolio method.
+- **Speech:**
+  - "Every trading rule is a function of the path… a moving average, an RSI, a Kalman filter, each one designed by
+    hand."
+  - "Level 1 is where it ended up, level 2 the areas it swept, the shape of a trend, or which of two assets moves
+    first."
+  - "[Futter], [Horvath] and [Wiese] regressed a momentum strategy on the signature. The R-square climbs from 66% at
+    order 1 to 98% at order 11."
+  - "The best weights have a closed form, the inverse covariance of the terms times what each contributes to profit…
+    with only the constant term it is the plain [Markowitz] portfolio."
+  - "The hard part is estimating it: the expected signature is noisy and the paper only tests it on a few ETFs."
+- **Lab:** M299 (UNTESTED). The reel is honest about the weak point. The R-squared shows that a signature can
+  imitate an indicator, not that the indicator makes money. It is a price-path learner, so it inherits the record of
+  R263 (5,472 chart rules, one survivor) and the prop trader's "nothing based on OHLC worked". It goes in as one
+  learner in the ML-ranker family, not as its own lane.
+
+## Reel 4: instagram.com/reel/DeuGt7VgpWJ (aleksrosme, 2026-10-20, 47 s, 390 likes, 15 comments)
+- **Caption:** "10/20 Break of 713GEX + Call Heavy Premium = 120POINTS Trade".
+- **Speech:**
+  - "As market opened today we saw SPX staying under negative gamma after respecting this major put spread seller."
+  - "QQQ reclaimed [the] 713 [GEX] level for my pre-market plan… QQQ went into [call heavy] premium which confirms
+    bullish sentiment."
+  - "Looking at the order flow… bunch of sellers trying to step in combined with bullish imbalances… we retest 713 on
+    QQQ aligned with [the daily value] area high, which was my confirmation to take this trade for 6R."
+- **Frames:** a QQQ chart with a "Net Drift (Premium)" panel and marked GEX levels.
+- **Lab:** one winning trade with a discretionary entry (GEX level, option premium, order-flow imbalance, volume
+  profile). Nothing here can be counted; the parts that can be measured are M300 (gamma regime and levels) and M264
+  (order-flow imbalance).
+
+## Reel 5: instagram.com/reel/DeqPhIDt7j8 (nickelninjatrades, 2026-10-19, 79 s, 679 likes, 119 comments)
+- **Caption:** "Comment MISS to get first priority for Gamma Exposure University." The video sells a course and a
+  heatmap site.
+- **Speech:**
+  - "Every morning before I even look at a chart, I pull up the [Gamma] Exposure Heatmap… This map shows me exactly
+    where dealers are positioned."
+  - "I simply want to wait for price to reach one of my [Gamma] Exposure levels… make sure that the EMA sequence is
+    aligned… starts to flag at that major… level… I need volume to come in on the break of the flag."
+  - "My [Gamma] Exposure level is my stop-loss and I target the next [Gamma] Exposure level below."
+- **Lab:** the rule is concrete enough to test once gamma history exists: wait for a GEX level, require EMA
+  alignment, a flag and a volume break, stop at that level and target the next one. "Dealers are positioned" rests
+  on an assumption: the heatmap guesses which side dealers hold. M300 keeps the call and put sides apart so either
+  convention can be tested.
+
+## What the three reels changed
+- **A recorder.** No free archive keeps Deribit open interest by strike over time. `scripts/record_deribit_chain.py`
+  now saves the full BTC, ETH and USDC option chains every hour (4,852 options in the first snapshot), and
+  `gex()` turns a snapshot into gamma per strike. M175, M289 and M300 can be tested once enough hours accumulate.
+  The regime question (a) needs a few months of hours. Expiry pinning needs more: there is one Friday expiry a week,
+  and only 12 month-end expiries a year.
+- **Two rows:** M299 (signature trading) and M300 (dealer gamma regime and levels).
+- **No result.** None of the three reels shows a track record that can be checked.
+
+# The owner's reel of 2026-10-21 (late), sent with "research QuantData"
+
+Obtained the same way: `yt-dlp` without a login, `faster-whisper` "small" on CPU, and frames at 1 per second. The
+media stayed in the scratchpad.
+
+## Reel 6: instagram.com/reel/DevaMerNUk_ (julias.algos, 2026-10-21, 53 s, 1,325 likes, 19 comments)
+- **Caption:** "What happens when a market maker encounters a trader or algorithm with more information than the
+  average trader? Toxic order flow is when a market maker gets picked off, buying right before a crash or selling
+  right before a spike."
+- **Speech** (English):
+  - "Why do high-frequency trading firms spend $300 million just to shave 1 millisecond off their execution time?
+    Most people think that HFT firms buy microwave towers just to beat retail traders to the punch. But the reality
+    is exactly the opposite. Speed is defense against a concept called order flow toxicity."
+  - "Market makers are constantly quoting prices to buy and sell, but sometimes they face informed traders,
+    algorithms, or news-driven funds that know something that the market maker doesn't… The market maker gets
+    picked off, buying before a crash, or selling before a spike."
+  - "To survive, they track a metric called VPIN to track order flow toxicity. When the math shows that informed
+    traders are entering the market, then market makers must pull back and cancel their quotes right away."
+- **Frames:**
+  - the Chicago to New Jersey fiber and microwave routes (6.6 ms against 5 ms);
+  - a "retail flow / passive LPs / active LPs / arbitrageurs" meme;
+  - an adverse-selection chart ("you buy at 500, price moves lower after execution");
+  - the VPIN formula, Σ|V_B − V_S| / Σ V over n volume buckets, with "ranges from 0 to 1";
+  - the flash-crash chart of E-mini price against VPIN (Easley, López de Prado and O'Hara).
+- **Lab:**
+  - Adverse selection is real: maker fills in R193 and arXiv 2502.18625.
+  - The metric is not. **R291 `vpin_v1` is NULL.** Built from Binance's exact taker sides, VPIN worsens 1-hour
+    volatility forecasts out of sample on BTC, ETH and SOL perps. The papers' bulk-classified VPIN is mostly volume.
+    Plain volume flags crash hours far better (about 40x top against bottom decile, against 3x).
+  - The reel shows the 2010 chart without the Andersen and Bondarenko rebuttal.
+  - Write-up: `experiments/vpin_v1/FINDINGS.md`, `docs/QUANTDATA.md` section 3.
+
+# The owner's four reels of 2026-10-22, sent with the `lse-data` repository
+
+Obtained the same way: `yt-dlp` without a login, `faster-whisper` "small" on CPU, and frames at 1 per second. The
+media stayed in the scratchpad.
+
+## Reel 7: instagram.com/reel/Derh59yMyv8 (quant_labde, 2026-10-19, 96 s, 3,761 likes, 47 comments)
+- **Caption:** "Are these 90%+ winrate bots actually safe?"
+- **Speech** (English):
+  - "Bots that almost never lose get sold every day. So I built one and ran it on seven years of gold… Price drops, it
+    buys more. Drops again, it doubles up. Then it waits until the whole pile is back in profit. No stop loss."
+  - "98.9% of its cycles closed in profit… Then came September 2023. Gold kept falling. The bot kept buying. One
+    single cycle. About $820,000 gone… Over seven years, the account was wiped out 14 times."
+  - "So I took the doubling out. Same size on every buy. Now 99.9% of cycles won. But the last one never came back.
+    When the data ended, it was still open. $140,000 underwater."
+  - "Our own NASDAQ bot… wins only 56.4% of its trades, but every trade has a stop. Its worst drawdown since 2019,
+    26.6%… A win rate tells you how often you win, not what one loss costs you."
+- **Frames:**
+  - an XAUUSD M5 grid bot, 2019-2026;
+  - "COMBINED BASKET UNDERWATER", with position size stepping 1x → 2x → 3x;
+  - the equity curve of 14 wipeouts, each a slow climb then a vertical drop;
+  - "GOLD 1,330 → 4,000 in this test";
+  - "WIN RATE ≠ SAFETY".
+- **Lab:**
+  - Nothing new to test. The reel is its own test, and its lesson is already a lab rule:
+    - martingale and size escalation are on the prop "never do" list (`docs/PROP_FIRMS.md`);
+    - no lane is ranked by win rate;
+    - gates read net PnL, the worst drawdown and cost sensitivity (`docs/GATES.md`).
+  - Its fair point: even without doubling, a grid with no stop carries an open loss the win rate hides. Here the
+    loss was −$140k at the end of the data, after gold tripled.
+  - The NASDAQ bot's numbers (56.4%, −26.6%) are shown without costs, a period split or out-of-sample dates. They
+    cannot be checked.
+
+## Reel 8: instagram.com/reel/DeF5_5yPtDb (telonicstrading, 2026-10-05, 46 s, 1,069 likes, 1,864 comments)
+- **Caption:** "I built a machine learning model that predicts the next day's efficiency ratio. Comment 'MODEL' to
+  see what it predicts every day."
+  - The 1,864 comments are mostly the word "model". The reel is a sign-up funnel.
+- **Speech** (English):
+  - "Instead of trying to predict direction, the model predicts the next day's efficiency ratio… A high ratio means
+    price moved clean in one direction while a low ratio means price chopped back and forth."
+  - "The model makes its predictions with a logistic regression that weights 15 different measurements of how
+    price has been moving."
+  - "High efficiency days performed the best while the low efficiency days made about a third of the money per
+    trade. So I added a gate that skips those low efficiency days entirely and that one change improved almost every
+    performance metric… that improvement held on two years of data the models never seen."
+- **Frames:** "15 measurements, 15 learned weights", scored from "toward chop" to "toward trend":
+
+  | What the market just did | Weight | What it's been doing lately | Weight |
+  |---|---|---|---|
+  | realised volatility | −0.204 | days of chop in a row | +0.065 |
+  | today's efficiency | −0.198 | 5-day efficiency | +0.044 |
+  | 20-day efficiency | −0.036 | 10-day efficiency | +0.013 |
+  | variance ratio | −0.101 | 20-day mean efficiency | −0.024 |
+  | false-breakout rate | +0.182 | yesterday's efficiency | −0.200 |
+  | distance from the 50-day | −0.198 | efficiency 2 days ago | −0.135 |
+  | | | change in volatility | −0.119 |
+  | | | chop share, 5 days | +0.009 |
+  | | | chop share, 10 days | +0.098 |
+
+  No strategy, threshold, AUC, trade count or equity curve is shown.
+- **Lab: R293 `er_v1` is NULL** (`experiments/er_v1/FINDINGS.md`).
+  - **The setup:**
+    - the same 15 measurements on BTC, ETH and SOL perps;
+    - a logistic regression fitted on 2021-23 and read on 2024-26;
+    - the gate applied to a first-hour trend rule fixed in advance.
+  - **The forecast:**
+    - tomorrow's efficiency is weakly predictable (AUC 0.537);
+    - today's efficiency alone does as well (0.536);
+    - our fitted weights agree with the reel's in sign 12 times out of 15.
+  - **The gate:** it made each trade worse (−3.3 bp). The rule lost either way.
+  - **Post hoc,** the first UTC hour reversed in both windows. That is M315, for unseen data only.
+
+## Reel 9: instagram.com/reel/Dcdew99nERj (datasciencefoundry, 2026-08-25, 175 s, 11,818 likes, 40 comments)
+- **Caption:** "These are 8 of the most important supervised machine learning algorithms you should know."
+- **Speech** (English): a lesson on film ratings:
+  - linear regression ("minimizes the sum of the squared errors");
+  - logistic regression ("squashes that weighted sum through an S-curve… log loss");
+  - k nearest neighbours;
+  - the support vector machine ("the widest margin");
+  - the decision tree;
+  - the random forest ("averaging them reduces overfitting");
+  - gradient boosting ("each new tree corrects the error that is still left");
+  - XGBoost ("regularization… handles missing values… trains in parallel");
+  - the neural network.
+- **Lab:** nothing to test. It is a general lesson with no trading claim. All eight model types are standard:
+  - the lab fitted a ridge logistic regression in R293;
+  - the old session fitted a ridge and GBM composite (R162, `docs/OLD_SESSION_EDGES.md`).
+
+## Reel 10: instagram.com/reel/DeAhvMBI5ET (machinelearningtogo, 2026-10-02, 112 s, 5,964 likes, 33 comments)
+- **Caption:** "Machine Learning from Scratch, part 22: the idea behind XGBoost." Its example is 500 made-up bank
+  customers: train on 400, test on 100, 200 rounds at learning rate 0.01.
+- **Speech** (English):
+  - "XGBoost builds many small decision trees, one after another, and each new tree fixes the mistakes the earlier
+    ones still make… After 200 trees the model gets 84 of the 100 new customers right."
+  - "XGBoost adds three things on top: a penalty for trees that grow too complicated, smarter steps that also use how
+    the slope bends, and an engineering that makes it very fast. That is why it wins so often on table data."
+- **Lab:** nothing to test directly.
+  - Boosted trees win on tabular data whose signal is stable, like credit and churn.
+  - Market returns are mostly noise, with a signal that drifts between years.
+  - The old session's rankers found nothing (`docs/OLD_SESSION_EDGES.md`, M042):
+    - the 390-cell megascan, 0 of 390 (R161);
+    - the ridge and GBM composite, rank IC 0.01-0.04 (R162).
+  - A boosted model on the R293 features would be one more trial on the same weak target (AUC about 0.54). It
+    would not answer a different question.
+  - **If the ML family (M042-M044) is run, it runs as one frozen family with purged walk-forward,** as the plan
+    says, with the trial count of every model and setting.
+
+## What the four reels changed
+- **One test:** R293, NULL. The reel's method does not carry over to crypto perps with this rule.
+- **One new seed:** M315, the first-hour fade, for unseen data only.
+- **No new rule:** reel 7's lesson (win rate is not safety) is already in the gates and the prop "never do" list.
+- **The two ML lessons** say nothing about markets. The old session's GBM tests stand.
+- **The repository** sent with them (`lse-data`) is assessed in `docs/DATA_SOURCES.md`. It is a candidate source
+  that needs the owner's key.
+
+# The owner's TikTok and four reels of 2026-10-22 (afternoon)
+
+Obtained the same way. The reels came through `yt-dlp` without a login. Its TikTok extractor failed on this post, so
+the video address came from the public page's own data, with the page's cookies. Speech is transcribed with
+`faster-whisper` "small" on CPU, and frames are taken every 2 seconds. The media stayed in the scratchpad.
+
+## Reel 11: instagram.com/reel/DXrQvB0EYz7 (hooper.algo.fxx, 2026-04-28, 1,642 likes, 77 comments)
+- **Speech:**
+  - "This is the Oxford Strat, and this is where I get ideas on how to build algorithms. There are about a hundred on
+    this page."
+  - "Out of 100 strategies that I build, 93% will be unprofitable, leaving only seven with an actual viable edge. The
+    only way to really know is to build hundreds if not thousands."
+- **Frames:**
+  - the site's "Reviews of trading strategies (public domain)", rated A/B/C/D. Examples: 2-bar narrow range, 3-bar
+    momentum, Hikkake, Hook, Oops, narrow range 4/7, TD Sequential, Wyckoff, Keltner 3-phase, Hull and zero-lag
+    moving-average filters, Aroon, ADX filters;
+  - his MT4 tester listing FX expert advisors: "TokyoRangeBreakout", "FirstXMinBreakout", "EngulfingRoundNumber",
+    "DoublePinBar", "GOLDEN WEEKEND".
+- **Lab:**
+  - **The 7% is the lab's own experience.** About 70% of its rounds are NULL, and nothing has passed gate 1.
+  - **Building thousands only works with the multiplicity counted.** R263 tested 5,472 chart strategies as one
+    family with a reality check, and the program reads every result against `registry.program_trials()`.
+  - **The site is a harvest source** for the plan's "remaining chart and TA rules not in R263". Most of its rules
+    are covered by R185, R243 and R263. The pattern rules not yet coded (Hikkake, Oops, NR4/NR7, TD Sequential) go
+    into the next chart family as one frozen PREREG, not one by one.
+
+## Reel 12: instagram.com/reel/DYWqgGkOyE1 (deltatrendtrading, 2026-05-15, 5,433 likes, 134 comments)
+- **Caption:** "This is what it looks like to begin exploring a trading idea properly, programmatically,
+  mathematically."
+- **Speech:**
+  - The rule: "in regular trading hours only, we mark out the first 15-minute bullish order block, and then on the
+    1-minute timeframe, on a tap of that order block, we enter a long trade, targeting a fixed multiple of risk with
+    the stop below the bottom of the order block."
+  - "Over five years of Nasdaq front-month data… the bootstrapped 95% confidence interval for trade return by day
+    spans zero."
+  - "If you compare the actual order block timing versus a randomized entry model… a p-value around 0.01 for mean R."
+  - "If we instead wait for price to move down to the bottom 25% of the box… with a 1.5R target." The parameters came
+    from his training set. "On the test set [from about 2025]: 199 trades, 0.339 mean R per trade… the confidence
+    intervals are fully positive."
+  - "It drastically underperforms buy and hold."
+- **Lab:**
+  - **His method is the lab's:** a fixed rule, a null of randomized entries, a bootstrap and a held-out set. His
+    test set is small (199 trades), and the 25% entry and 1.5R target were tuned on the training set.
+  - **The rule is new to the lab at 1 minute on an index.** R185/R186 tested ICT order blocks on crypto 1h bars:
+    gross only, below cost.
+  - **It can be traded where the owner trades.** MEXC lists NAS100_USDT, SPX500_USDT and US30_USDT perps, open since
+    2026-01-29, with a 0 maker and 2 bp taker fee. The LSE vault holds NAS100, SPX500 and US30 ticks from 2023-02.
+    Queued as **M320**, with the M206 opening-range break in the same family.
+  - **Unseen days exist:** everything after the reel's date (2026-05-15) is unseen by its author. LSE's index bars
+    must first match an independent close (`docs/DATA_SOURCES.md`).
+  - **A second lead came from checking the instrument (M321).** These index perps trade through the weekend on a
+    Hyperliquid-sourced price while the index and CME futures are closed. Does the perp's move in closed hours
+    revert at the reopen? M051 (do TradFi perps track their underlying) can now be tested with LSE's reference ticks.
+
+## Reel 13: instagram.com/reel/DaNNDObtRxN (andreacimi.trading, 2026-06-30, 9,726 likes, 174 comments)
+- **Caption:** "Trading strategies tier list w/ market maker."
+
+| Strategy | His tier | Lab |
 |---|---|---|
-| [SPX 0DTE: Gamma Zero, order flow and key levels](https://www.youtube.com/watch?v=E_PSlPIq0R4) | Public description/chapter summary; no full transcript verified | Prior-session/Asia/London levels with Gamma Zero/Call/Put walls; order-flow confirmation; SPX 0DTE spread scalping. New M235/M237; flow component M238. |
-| [Cboe: volatility, dispersion and 0DTE pricing](https://www.cboe.com/video/ldjz4jorjd/) | Official editorial summary, not a transcript | Option dispersion / correlation-risk lead. The separate Cboe paper specifies short SPX ATM straddles and long component ATM straddles; preserve legs rather than relying on the “long dispersion” label. M236. |
-| [SPX/SPY GEX and options-flow video](https://www.youtube.com/watch?v=SkvitOO2Zog) | Description only; promotional, no verified transcript | GEX walls/flip plus options-flow direction; related component of M235, with no independent outcome evidence. |
-| [Hummingbot Botcamp Cohort 7 demo](https://hummingbot.org/blog/hummingbot-botcamp-cohort-7-demo-day-recap/) | Official written recap of nine student demos | Spot/perp carry; cross-sectional momentum; liquidation rebound; multi-horizon trend/reversion; Uniswap V3 range LP; Avellaneda–Stoikov market making; VWAP-band reversion; CEX/DEX market making; Bollinger perp reversion. Existing matches include M034/M058/M134/M140/M176/M207; open variants are M242/M243/M245/M246. No strategy P&L is reported. |
-| [Hummingbot Bot Pod Ep. 8](https://hummingbot.substack.com/p/the-bot-pod-episode-8-demo-day-highlights) | Official transcript/highlights, 2026-05-22 | Cross-venue perp price/funding spread with progressive entry (M241); stochastic market making at touch (M058); portfolio TP/SL and inventory hold (context); passive limits to catch thin-market price errors (M240). The MM demo's roughly flat P&L is a speaker anecdote, not an audited track record. |
-| [Hummingbot Bot Pod Ep. 7](https://hummingbot.substack.com/p/the-bot-pod-episode-7-deep-dive-into) | Official transcript/highlights, 2026-05-16 | Executable depth/fee arbitrage vs passive maker-plus-hedge (M239/M240); Solana concentrated-liquidity selection by fee/TVL (M242). The examples are not independently verified. |
-| [Hummingbot funding-rate arbitrage video](https://www.youtube.com/watch?v=Ly8R5g3juxw) | Public listing, no transcript verified | Short higher-funding venue and long lower-funding venue; maps to existing M059. Hummingbot's official implementation is a useful mechanics reference, not performance evidence. |
-| [Deribit dated-futures cash-and-carry](https://www.youtube.com/watch?v=rp4dOTW2TNU) and [official written walkthrough](https://insights.deribit.com/education/cash-carry-live-trade-example/) | Official written walkthrough | Long spot/short dated future, close near convergence or roll; M244, related to M047/M134/M170. |
-| [Deribit variable-rate cash-and-carry](https://www.youtube.com/watch?v=BSWVZJ703Mg) and [official written walkthrough](https://insights.deribit.com/education/variable-rate-cash-carry-live-trade-example/) | Official written walkthrough | Long spot/short perp; funding varies, exit after adverse funding persists, maintain the hedge as size changes; related to M134. |
-| [TradingLab: order-flow reversal](https://www.youtube.com/watch?v=ljk9BovCSqI) | Secondary transcript summary only; Tesla example | Zone retest plus footprint imbalance, absorption, initiation and CVD divergence; portability and precise execution unverified. M238. |
-| [Krypto Káy: liquidation heatmap tutorial](https://www.youtube.com/watch?v=F8YFm-xg5bs) | Description only | Use estimated liquidation zones for entries/exits; related to tested/blocked M069/M070/M140/M176, not evidence of a new edge. |
-| [Prop-firm pass-probability video](https://www.youtube.com/watch?v=R0tNSiUQ-Q8) | Video plus creator transcript page | Score path-dependent pass probability under the actual firm's target, drawdown and consistency rules; maps to M028/M199/M211. Rule claims need dated official firm terms. |
+| Opening-range breakout | A, "backed by proper research" | M206 UNTESTED; now in M320's family on index perps |
+| VWAP mean reversion | A | M207 TESTED (NULL), M305 R290 NULL |
+| Bollinger band mean reversion | D, "lagging" | R243 / R263 NULL |
+| VIX mean reversion | S, "if you time it incorrectly, it's going to be extremely painful" | R239/R241 (t 1.94 then −0.05), R283 vixpanic |
+| Post-earnings drift | A, "small caps not followed by analysts" | M222: stocks, data not free; not a perp |
+| Option premium selling | A, "large funds overpay for protection" | M138 R209 NULL (DVOL timing), M214/M224 (short-vol timing) |
+| ICT unicorn | F, "I tested it… there was no edge" | M110: R185-R187 below cost |
+| Martingale | D | On the prop "never do" list |
+| Reverse martingale (size up winners, cut losers) | common practice | `docs/SIZING_EVIDENCE.md`; R281 confidence-sized carry |
+| Trendline bounce | F, "completely discretionary" | No rule to test |
 
-The method IDs, source versions, exact scope, existing tested scope, aliases and missing mechanics for these leads are
-preserved in the intake JSON and alias CSV. The queue additions are all unresolved; no backtest or result is claimed.
+- **Lab:** His A tier is the academic list, and the lab has tested most of it. Only the opening range on a liquid
+  index at 1 minute is untested. It is now M320.
 
-## Second discovery batch (2026-10-20)
+## Reel 14: instagram.com/reel/DdRchNXxHKW (max_kelleyy, 2026-09-14, 1,493 likes, 2,621 comments)
+- **Caption:** "Trading with AI isn't easy, but these repos will help. Comment 'stack' and I'll send them over." Most
+  of the 2,621 comments are the word "stack".
+- **Speech and frames:** "five repos to create an AI hedge fund". Four are shown:
+  - OpenBB (73k stars, the data layer);
+  - Investor Skills by Questflow (about 1.9k stars, "macro theses of top investors as agent skills");
+  - TradingAgents by Tauric Research (the agent framework);
+  - Vibe-Trading (the execution layer, "13 brokerages").
+- **Lab:**
+  - **These are tools, not rules (M165).** TradingAgents' own paper tested 3-5 US stocks over one quarter of 2024
+    (M102, BLOCKED: it needs a dated news archive).
+  - **An LLM's knowledge leaks the future:** a model trained after the test window "knows" the outcome. Any such lane
+    runs forward only, with frozen prompts and a pinned model (M312).
 
-Three read-only agents and a targeted web pass added 39 public sources. They are catalogued in the intake JSON with
-source version/date, accessible basis, exact lead, queue alias and missing mechanics; no media was saved. This batch
-contains leads, not a new search universe or performance evidence.
+## TikTok: tiktok.com/@ojrenick/video/7699222826628238606 (2026-10-21, 119 s, 12.9k plays, 867 likes)
+- **Caption:** "upward and onward #stocks #optionstrading". He is the creator of one of the owner's TikToks of
+  2026-10-21 (`docs/VIDEO_DIG.md`).
+- **Speech:**
+  - "New rule number one of trading: ask not why the market is going up. Ask why should the market be down…
+    Technicals… we're in an uptrend. Fundamentals, that's earnings… in an uptrend."
+  - "We saw a bunch of call buying happen in Tesla, like above the ask, which means they were scrambling to buy calls
+    ahead of the report… SpaceX hit above the implied move… those options looked pretty cheap."
+  - "That VIX rule of 16 suggests VIX should have been coming down… we were getting less than 1% moves despite the
+    VIX being higher."
+- **Lab:**
+  - **"Ask why it should be down":** a long bias while trend and earnings rise. That is time-series trend, tested
+    many times (R284 trendpull, R263). For crypto perps the lab has no earnings analogue.
+  - **The rule of 16 is a known identity.** VIX/16 is roughly the S&P's expected daily move in %, because √252 ≈
+    15.9. The crypto analogue is DVOL/19.1 (√365).
+    - When daily moves stay below it, implied volatility tends to fall. That is the volatility risk premium.
+    - The lab measured it (M215) and timed it on Deribit (M138, R209 NULL).
+    - It is not new.
+  - **Call buying above the ask before a report** is option flow. The lab tested it on Deribit (R295, M311/M313),
+    and QuantData-style tests on SPY are possible with LSE's option prints (`docs/QUANTDATA.md`). It is not a perp
+    rule.
 
-| Lane | Sources and extracted rule families | Queue treatment and gaps |
-|---|---|---|
-| Options / 0DTE | [Saint Trader 0DTE flow](https://www.youtube.com/watch?v=ez7KBOsEpaQ), [Geeks of Finance GEX](https://www.youtube.com/watch?v=_0jd6CMyk9s), [Option Alpha's four GEX profiles](https://optionalpha.com/videos/gamma-exposure-strategy-4-gex-profiles-for-spx-0dte-day-trading), and OIC/CME videos on [skew](https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew), [parity](https://www.optionseducation.org/videolibrary/theoretical-option-pricing), [volatility](https://www.optionseducation.org/videolibrary/volatility-strategies), [gamma by DTE](https://www.optionseducation.org/videolibrary/gamma-as-a-function-of-time), and [post-earnings IV](https://www.optionseducation.org/videolibrary/implied-volatility-and-post-earning-volatility-risk). | GEX profiles remain aliases of M235/M237; skew and IV-surface value map to M284; parity/reverse conversion is new M248; IV-percentile/event-vol structures are new M249. All still lack finite strikes, thresholds, timing, hedge, fills and costs. |
-| Crypto / execution | [Binance arbitrage transcript](https://www.dailymotion.com/video/x9r8n9k) and [second triangular-arb transcript](https://www.dailymotion.com/video/x9r8q52), [liquidation heatmap video](https://www.youtube.com/watch?v=qFwvTRATC-c), [Bybit funding history](https://bybit-exchange.github.io/docs/v5/market/history-fund-rate), [Bybit order book](https://bybit-exchange.github.io/docs/v5/market/orderbook), and Hyperliquid's [funding](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding) and [perpetual API](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals). | Same-venue triangular arbitrage is new M247. Cross-venue gaps, liquidation levels, funding clocks, oracle accounting, book-depth controls and market-making simulator ideas map to M239/M240/M059/M134/M241/M058/M227. No source supplies synchronized fills, queue, latency or costed P&L. |
-| Systematic / prop | QuantConnect examples for [trend/carry regimes](https://www.quantconnect.com/research/15989/futures-trend-following-and-carry-in-different-risk-regimes/), [adaptive allocation](https://www.quantconnect.com/research/16041/trend-and-carry-allocation/), [synthetic-spot trend](https://www.quantconnect.com/research/16014/futures-spot-trend/), [joint roll/momentum](https://www.quantconnect.com/research/15359/momentum-effect-combined-with-term-structure-in-commodities/), and [Dual Thrust](https://www.quantconnect.com/research/15258/dual-thrust-trading-algorithm/); [CME spread mechanics](https://www.cmegroup.com/education/courses/understanding-futures-spreads/futures-spread-overview); and Pura Vida's [eight-portfolio video](https://puravidaedge.com/videos/systematic-prop-firm-trading-8-portfolios/) and [post-payout buffer transcript](https://puravidaedge.com/videos/drawdown-buffer-after-first-payout/). | Explicit volatility multiplier and adaptive weights are aliases of M035/M184; synthetic-spot trend is new M250 and joint roll/momentum is new M251. Dual Thrust, spread execution and prop state machines map to existing M205/M170/M211. Reported returns are creator/backtest claims, not project results. |
+## What the five clips changed
+- **Two new queue rows:**
+  - **M320:** the opening order block and opening range on US index perps, at 1 minute.
+  - **M321:** the closed-hours gap on MEXC's 24/7 index perps.
+  - Both trade on MEXC at 0 / 2 bp. Both need LSE's index ticks and MEXC's index-perp klines.
+- **One harvest source:** the Oxford Strat's public-domain pattern list, for the next chart family.
+- **No new rule from the tier list, the repos or the TikTok.** Each item maps to a tested or queued row above.
 
-The batch also records the official Bybit/Hyperliquid/Binance funding mechanics, an [Avellaneda–Stoikov order-book
-simulator](https://github.com/harshitgrover/Order_Book_Simulator), [funding-rate paper-trading code](https://github.com/TiwariSudhanshu/Funding-Rate-Arbitrage),
-and primary funding/risk explanations from [Kraken](https://www.kraken.com/in/learn/futures-trading-funding-rate-arbitrage)
-and [VoiceOfChain](https://voiceofchain.com/academy/funding-rate-chart-binance). These are implementation or accounting
-leads; they do not establish a MEXC edge. The full 34-record extraction and 39-source list, including weak generic arbitrage videos and
-their limitations, remains in the JSON so they are not silently discarded.
+## Reel 15: instagram.com/reel/DejYIVkhcLQ (goatfundedtraderhq, 2026-10-16, 9,008 likes, 142 comments)
+- **Who:** Goat Funded Trader, a prop firm. The clip is a skit: a man in a gold mask pitches his method to a panel.
+- **Speech:**
+  - "I use Malaysian support and resistance… People in Malaysia tweet that."
+  - "I go in the four hour, there's a buy and a sell, where the buy has closed, on top of that, and where the sell
+    opens, that's my resistance. That strategy makes millions."
+  - The panel: "Bunch of BS."
+- **Comments:** mostly jokes; "MSNR is the best", "msnr, am trying on that". No numbers and no test.
+- **The method (MSNR):** from LuxAlgo's "Malaysian SnR" page and the TradingView script "Malaysian SnR [by DanielM]".
+  - **Levels come from candle bodies, not wicks.**
+    - **A-level:** the close of a bullish candle followed by a bearish one, a line-chart peak.
+    - **V-level:** the reverse, a line-chart valley.
+  - **Freshness:** a level is "fresh" until a wick touches it. The method trades the first touch.
+  - **Gap levels:** the method also uses gaps between one candle's close and the next one's open. 24/7 perps have
+    none.
+  - LuxAlgo publishes the rules but no test.
+- **Lab:**
+  - **It is a testable rule:** fade the first touch of a fresh level, or follow a 4-hour close through it. That is
+    **M323**, frozen as **R306 `msnr_v1`**: 12 crypto books (fade or break × a level life of 5 or 30 days × a 24 h,
+    72 h or 1:2 ATR bracket exit) on the top 50 Binance perps.
+  - **The secondary read** covers Binance gold and silver and MEXC's FX, metal and index perps. It is report only,
+    since most of MEXC's index history starts in 2026.
+  - **Priors are against it.**
+    - R243's pivot breaks and fades lost.
+    - R246's round-number levels carried only the generic one-hour reversal.
+    - R248 closed the pivot family.
+    - R263's 5,472 chart rules found nothing.
+  - MSNR's two differences are the body-based level and the freshness rule. R306 tests exactly those.
 
-## Primary-source checks
+## Reel 16: instagram.com/reel/DeKFE8OEq-i (iamzarch, 2026-10-06, 388 likes, 28 comments; French)
+- **Who:** "The Candidate" by The Finance Games, episode 1, a mock trading interview with buzzers. A candidate is asked
+  about the volatility smile.
+- **Speech (translated):**
+  - "25-delta put, 25-delta call, do you know what that means?"
+  - "Which is more expensive in terms of vol? The put costs more than the call."
+  - The candidate starts on put-call parity (C − P = S − K·e^(−rT)) and its assumptions: no arbitrage, European
+    options.
+  - "The smile is fundamental… it has to come at once."
+- **Lab:**
+  - **The 25-delta risk reversal** is the call's implied vol minus the put's at the same delta. A rich put (negative
+    RR) is the equity-index norm.
+  - **In BTC the sign changes with the regime.** Calls traded rich in the 2020-21 and 2024 rallies (Amberdata; Coin
+    Metrics computes the series).
+  - So the skew is information, not a constant. An unreviewed SMU dissertation (2026, Deribit 2021-04..2025-12)
+    reports the 25-delta 90-day RR predicting BTC returns: t 3.73 with 13 controls, 1.91 alone.
+  - **The lab holds the data to test it:** every Deribit option trade with its implied vol (`data/deribit_trades`,
+    BTC from 2016-11, ETH from 2019-03).
+    - The hourly 25-delta RR can be built from those trades, with delta from Black-Scholes.
+    - That is **M174**, queued as **R307 `rrskew_v1`**: discovery 2021-23, validation 2024-26, no 2020.
+  - **Prior:** single-asset timing signals have been NULL here (R209 DVOL, R292 dealer gamma, R295 option flow). The
+    expected result is a null.
 
-- [Cboe volatility surfaces](https://datashop.cboe.com/volatility-surfaces) index IV by expiry and strike/delta; the
-  surface product is not among the project's held inputs. A surface is calculated from option prices, so it does not
-  replace the underlying option quotes.
-- [OIC/OCC options FAQ](https://www.optionseducation.org/referencelibrary/faq/general-information): open interest
-  pairs long and short contracts and does not, by itself, reveal which side opened or dealer direction. Treat GEX
-  positioning as a vendor/model estimate, not observed intent.
-- [Cboe's SPX 0DTE analysis](https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0dte-options/)
-  reports no discernible market impact in its studied sample; this cautions against treating GEX levels as forced price
-  magnets, but does not test the videos' exact rules.
-- [MEXC contract API docs](https://mexcdevelop.github.io/apidocs/contract_v1_en/) document public funding-history and
-  current contract data endpoints. Documentation does not establish usable historical coverage or order-book fills;
-  no data was downloaded in this intake.
-- Hummingbot's [funding-arbitrage reference script](https://github.com/hummingbot/hummingbot/blob/master/scripts/v2_funding_rate_arb.py)
-  and [release note](https://hummingbot.org/release-notes/1.27.0/) demonstrate an implementable cross-venue signal
-  pattern, not a profitable result.
+## Reel 17: instagram.com/reel/DbIlAc1g0LM (oddsonopenpod, 2026-07-23, 8,580 likes, 109 comments)
+- **Who:** Tom Costello on the Odds on Open podcast. The on-screen title reads "Ex-Quant PM, Tudor Investment Corp".
+- **Caption:** "Everybody in quantitative finance is a genius."
+- **Speech:**
+  - "A kid from Caltech… builds a high-frequency system, but he doesn't know that a high-frequency market-making
+    system has a short volatility bias. Basically a mean reversion system that's betting that everything goes back to
+    normal. So when volatility spikes he takes a loss."
+  - "That happened to roughly 50% of the market makers in crypto on 10/10 this last year."
+  - "Every inefficiency in the market is directly related to somebody else thinking they're going to do better than
+    you… understanding their incentives, estimating them, modeling them… The rest is just math."
+- **Checked:**
+  - **The crash is real.** On 2025-10-10/11 about USD 19 billion of positions were liquidated, the largest
+    liquidation in crypto's history. Top-of-book depth fell by more than 90%, and market makers withdrew (FTI
+    Consulting; insights4vc).
+  - **The "50% of market makers" figure has no source we could find.**
+- **Lab:**
+  - **The claim is a property of books, so it becomes a report, not a bet.**
+    - Every mean-reverting or liquidity-providing book in the lab is short volatility, the fade books and the carry
+      books included.
+    - **M324** is a stress-day report: each book's PnL on named stress days (2021-05-19, LUNA, FTX, 2024-08-05,
+      2025-10-10/11) and on the worst 1% of volatility days, beside its mean.
+    - The R304 pick's short leg already shows this kind of tail (COAI, +1,850% in a week).
+  - **The other side of his point is a strategy (M325).** When market makers pull quotes, the few who stay are
+    paid. Nagel (2012, "Evaporating Liquidity") finds that equity reversal returns rise after stress.
+    - In crypto: the 1-day cross-sectional reversal only on the days after market stress, against the same book on
+      other days.
+    - R245 found the unconditional reversal loses to cost (−17.5 bp/day), so only a stress-day lift would make it
+      tradable.
+    - Queued for its own id.
 
-All media-derived ideas remain leads. Historical examples, demo rankings, captioned R-multiples, and promotional
-statements are not validated returns. Any study still needs a finite frozen rule, appropriate controls, executable
-prices, and 1x/2x/3x costs before outcomes are read.
-
-## MEXC mechanics follow-up: finite proposals, not results
-
-Seven official pages support six `XM26-*` records in the existing bundle. These rules are **our unregistered
-proposals**, not exchange recommendations. No outcome, market download or synthetic implementation is claimed. Three distinct scopes have canonical BLOCKED
-rows M400 (MMR), M401 (tick size) and M282 (funding transport); other controls retain existing parents/context. Related does not mean exactly tested.
-
-| Source mechanics | Proposed bounded work / relationship |
-|---|---|
-| [MMR adjustment](https://www.mexc.com/announcements/article/mexc-will-adjust-maintenance-margin-rate-for-mu-sndk-and-19-usdt-m-futures-jul-3-17827791536452) and [leverage-only cut](https://www.mexc.com/en-GB/announcements/article/maximum-leverage-adjusted-for-cvcusdt-futures-sep-13-2026-14-17827791538535) | Separate the events: the former can change existing-position liquidation exposure; the latter does not prove forced selling. Proposed first-seen-notice short, 24-hour exit, opposite-sign and unaffected-coin controls; current M400 (original source allocation M280), related M079/M209. |
-| [Tick-size change](https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119) | Hold an existing reversal signal fixed and compare executable net around the change. Old orders retain their original grid. Related M058/M232/M240; books and fill modeling required. |
-| [Trigger-order FAQ](https://www.mexc.com/support/article/mexc-futures-trigger-order-faqs-318924677761021952) | Compare the same 15% cover under last/fair/index triggers, executing on the book. Relevant to Claude's remote M261; no dangling M261 alias is added to this branch. |
-| Trigger FAQ, leverage notice, [price-protection definition](https://www.mexc.com/en-GB/learn/article/quick-guide-to-futures-information-terminology-and-trade-futures-with-confidence/2) | Build synthetic triggered/submitted/partial/filled/rejected states; retain exposure until a fill. Cover gaps, margin, disabled trading and changed-leverage rejection. Protective-order activation does not ensure execution. |
-| [Index/fair/last FAQ](https://www.mexc.com/support/article/faq-on-index-price-fair-price-and-last-price-7950960183961) | Related M173 variant: gate dislocation entries on recorded constituent/source health, versus identical ungated rules. Unknown source state stays unknown; current weights cannot reconstruct history. |
-| [IN funding-frequency notice](https://www.mexc.com/announcements/article/adjustment-to-inusdt-funding-rate-settlement-frequency-jul-1-2026-18-17827791536624) | Transport the already chosen Binance candidate to prospective MEXC notices, without a new horizon search; normalize actual intervals/caps. This is not another generic funding study. |
-
-The IN page displays **July 2 publication but July 1 effectiveness**. An entry at effective time would precede its
-displayed publication date; prospective local first-seen time must govern availability. The general trigger FAQ also
-describes fair price loosely; the dedicated price FAQ supplies the formula. Neither marketing language nor a
-displayed last price proves an executable fill. Mutable page versions and actual excerpt scope are identified in
-the supplement; original HTML was not archived. Full rules, eligibility, controls and 1x/2x/3x costs must be frozen
-before any new strategy outcome.
-
-These three distinct scopes are retained as BLOCKED canonical rows M400 (margin notices), M401 (tick-size execution) and M282 (funding-notice venue transport). Trigger/rejection controls and index-state variants retain existing parent relationships; no study was run.
-
-## Strategy-library and data-source follow-up
-
-The existing provider catalog now includes ten additional entrypoints: QuantConnect's strategy library, Research
-and Tutorials repositories; QuantInsti Blueshift demos; Financial Hacker; QuantStart; Robot Wealth; Open Source
-Asset Pricing; Kenneth French's factor library; and QuantPad. Catalog access is not full strategy extraction.
-Public examples, subscription workspaces and derived factor data have different reuse/data-access boundaries.
-QuantStart's direct pages returned 502; its scope remains indexed metadata. QuantPad's official site establishes
-platform capabilities and a subscription library, not possession of that library or verified MEXC coverage.
-
-One [pinned official Dynamic Breakout II Method](https://github.com/QuantConnect/Tutorials/blob/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy/02%20Method.html)
-was read separately: adaptive 20–60-day lookback, channel plus Bollinger confirmation, moving-average exit. It is
-retained as M283 with source commit/blob/hash. Prose says 30-day volatility while the snippet uses the adaptive
-window from 31 requested observations; full indicator updates, sizing and execution were not received. This is
-a BLOCKED composite lead, not a tested rule or a replication of an existing fixed-window indicator result.
-
-
-A pinned third-party [Backtrader reproduction](https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/backtest/bt/dynamic_breakout_ii.py) was then read in full (commit `79bbf6a8`, blob `c581f127`, SHA-256 `04c09f26…7d2a`), strictly as a code-fidelity check. It is not official QuantConnect code. Its volatility update `(today_std / yesterday_std) / today_std` simplifies to `1 / yesterday_std`, so it is not a relative volatility change; the Donchian comparisons are commented out, leaving close-versus-Bollinger entries. The driver names a Yahoo SPX CSV for 2010–2019 and 0.1% commission, but no run output or data was received. M283 remains BLOCKED: this derivative does not resolve the official Method's 30-day versus adaptive-N/history-window conflict. No outcomes or tests were run.
-
-The original source-IV allocation M234 is historical. Its current ID is M284 after the earlier R257 mixture claim was verified; the original row, aliases and claim links are retained in [the reassignment record](../registry/method_id_reassignment_source_iv_M234.json). R257 evidence is not imported by this correction.
-
-The original unregistered source IDs M280/M281 were reassigned to M400/M401 when the live lab added different methods under those IDs. Original rows, aliases and source objects are preserved in `registry/method_id_reassignment_source_mmr_M280.json` and `registry/method_id_reassignment_source_tick_M281.json`. The live lab retains its M280 listing-notice and M281 cross-family-book meanings. This changes no trading rule or outcome.
+## What the three reels changed
+- **One frozen lane now:** R306 `msnr_v1` (M323). It runs after the freeze is pushed.
+- **Two queued lanes:**
+  - **R307 `rrskew_v1`** (M174): the Deribit 25-delta risk reversal as a BTC/ETH signal, from held option trades.
+  - **M325:** liquidity provision after stress (Nagel for crypto).
+- **One tool:** M324, the stress-day report beside every book's mean (`lab/stress.py`, next).
+- **One correction kept on file:** the "50% of crypto market makers lost on 10/10" figure is unsourced. The crash
+  itself is documented.
+- **Sources:**
+  - LuxAlgo, "Malaysian SnR": https://www.luxalgo.com/library/concept/malaysian-snr/
+  - TradingView, "Malaysian SnR [by DanielM]": https://it.tradingview.com/script/yqRdpnSH-Malaysian-SnR-by-DanielM
+  - Amberdata, "The Smile: why crypto's skew tells a story equity markets never will":
+    https://blog.amberdata.io/the-smile-why-cryptos-skew-tells-a-story-equity-markets-never-will
+  - Coin Metrics, skew (constant maturity, constant delta):
+    https://docs.coinmetrics.io/market-data/market-data-overview/volatility/skew-constant-maturity-constant-delta
+  - SMU dissertation (unreviewed): https://ink.library.smu.edu.sg/etd_coll/887
+  - FTI Consulting, "The Crypto Crash of October 2025":
+    https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity
+  - insights4vc, "Inside the $19B flash crash": https://insights4vc.substack.com/p/inside-the-19b-flash-crash
+  - Nagel, S. (2012), "Evaporating Liquidity", Review of Financial Studies 25(7).

@@ -471,6 +471,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - entries on contracts missing from a venue's live list are blocked, which R278 does not do
     ([R278 notes](../experiments/xfund_fwd/NOTES.md));
   - it runs on `lab/carrylane.py`, R278's lane for any venues, whose journals match R278's script in a test.
+- **R294 (xfund_lt_fwd)** runs R288's mexc+lighter book forward on paper:
+  - the same rule, accounting and decision as R279, at R288's costs (5.5 / 11 / 16.5 bp per leg);
+  - on-time from 2026-10-23; NW t >= 2.5 at 90 / 180 scored days (2027-01-21 / 2027-04-21);
+  - Lighter's fill is its book mid, read when a ticket needs it: its mark price sat a median 6 bp from the mid;
+  - `lab/xfund.py` reproduces R288's mexc+lighter trades exactly (`scripts/xfund_parity.py --lane xfund_lt_v1`).
+  - [PREREG](../experiments/xfund_lt_fwd/PREREG.md).
 - **R280 (levcarry_v1), done: the books stay at 1x, on cross margin per venue.** It measured how much leverage these
   five books can carry before an intraday move liquidates a leg, under 3 margin policies and 2 maintenance margins
   (0 trials).
@@ -497,6 +503,177 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     squeezes cancel it in the mean.
   - The Korean premium, fee yield and funding gap are NULL. M276 (cap the squeezes) is queued.
   - [FINDINGS](../experiments/pitfac_v1/FINDINGS.md).
+- **R283 (vixpanic_v1), NULL** (27 cells, the owner's TikTok claim, M278). VIX above VIX3M with VVIX in its top 5%
+  leads SPY and QQQ up over 5-10 days (best QQQ 10 d +158 bp over random dates, p 0.005), but no cell clears
+  p ≤ 0.00185. BTC has too few onsets. [FINDINGS](../experiments/vixpanic_v1/FINDINGS.md).
+- **R284 (trendpull_v1), NULL** (8 cells, M277). The trend-pullback entry adds +0.2 to +0.7% per trade on world
+  indices (t ≤ 1.31) and loses on crypto perps. [FINDINGS](../experiments/trendpull_v1/FINDINGS.md).
+- **R285 (xbook_fwd), running.** The cross-family forward book (M281): carry, flow and event lanes at equal weight,
+  decided at 180 and 365 forward days.
+- **R286 (reserved_batch1), frozen; runs on or after 2026-11-03.** Ten pre-committed candidates, read once on 2020,
+  Gate 2020 and the MEXC-only coins, with a weighted Bonferroni.
+- **R287 (pcares_v1), NULL** (24 variants, M298). Hourly PCA residuals revert a little (gross up to +19 bp/day), but
+  hourly trading costs several times that; break-even is at most 3.5 bp per side.
+  [FINDINGS](../experiments/pcares_v1/FINDINGS.md).
+- **R288 (xfund_lt_v1), CONFIRMED as a venue replication** (6 trials, gate 0, M059). R275's best carry book,
+  unchanged, paired Lighter (0/0 fees) with each other venue.
+  - 5 of 6 sets replicate (NW t 6.5-7.6, both halves positive, positive at 2x). The best is mexc+lighter: +6.20 /
+    +5.00 / +3.79 %/yr at 1x/2x/3x from 2025-05.
+  - dydx+lighter fails on dYdX's 2025-10-10 crash prints.
+  - Smaller than R277's KuCoin sets (+20-24%/yr in 2025-26), and shrinking from 2025 to 2026. The zero fee is worth
+    about 0.3-0.4%/yr.
+  - Forward on paper as R294 `xfund_lt_fwd` (mexc+lighter).
+  - [FINDINGS](../experiments/xfund_lt_v1/FINDINGS.md).
+- **R289 (clockflow_v1), NULL** (40 variants, M301 and M303 from `docs/TRADER_TALKS.md`, 1-minute bars).
+  - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).
+  - On Fridays, a move inside Deribit's 07:30-08:00 UTC settlement window reverses by about +20 bp gross per trade
+    in both windows and all three coins. On the book it is +0.38 bp/day at 2x, t 1.37: not enough.
+  - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
+    York continue. They are seeds for a lane on unread data.
+  - [FINDINGS](../experiments/clockflow_v1/FINDINGS.md).
+- **R290 (auction_v1), NULL** (60 variants, M305 from the owner's term list, 1-minute bars, `docs/AUCTION_AND_FLOW.md`).
+  - Five auction rules (value-area re-entry, IB and opening-range break, VWAP ±2 SD, naked POC) from 00:00 UTC, the
+    New York open and the London open, against 8 random clocks.
+  - Real session starts are no more structured than random clocks: rank-permutation p 0.36.
+  - The discovery pick (follow VWAP-band breaks after the New York open) lost in 2024-26 (t −0.96).
+  - [FINDINGS](../experiments/auction_v1/FINDINGS.md).
+- **R291 (vpin_v1), NULL** (4 variants, M085 from the owner's reel on toxic order flow, `docs/QUANTDATA.md`).
+  - VPIN from Binance's exact taker split worsens 1-hour volatility forecasts out of sample (DM t −12.5 against
+    a HAR with relative volume); the bulk-classified VPIN of the papers is mostly volume (corr 0.53-0.59).
+  - Plain relative volume flags hours with moves over 4 sd about 40x top against bottom decile; VPIN 3x.
+  - [FINDINGS](../experiments/vpin_v1/FINDINGS.md).
+- **R292 (dealerflow_v1), NULL** (4 trials, M308 from the owner's term list, 41M Deribit option trades).
+  - Dealer gamma from net taker flow does not improve a HAR forecast of next-day BTC or ETH volatility (DM t −1.23
+    and −0.52), and does not sign next-day hourly autocorrelation out of sample.
+  - Dealers (makers) are short gamma on 76-92% of days. Their hedge need is about 0.05-0.13% of a day's perp volume
+    per 1% move, far too small to steer the perp.
+  - Post hoc, against the story: without block trades, short-gamma days are followed by more mean-reverting
+    hours. That is M316, for unseen data only.
+  - [FINDINGS](../experiments/dealerflow_v1/FINDINGS.md).
+- **R295 (optflow_v1), NULL** (15 trials, M311 block prints and M313 net drift, the same Deribit trades).
+  - Signed option flow does not lead the BTC or ETH perp over 1, 4 or 24 hours out of sample. That covers block and
+    screen delta flow, and net drift (all options, OTM only, or without blocks).
+  - The one validation t over the bar (screen delta at 4 h, +3.02) has a discovery t of −0.82.
+  - Gross edges are 0.3-16 bp per trade, against 17 bp of API round trip. No rule is positive at 1x.
+  - [FINDINGS](../experiments/optflow_v1/FINDINGS.md).
+- **R296 (charm_expiry_v1), NULL** (5 trials, M303's dose, M309 and M317, the same Deribit trades at the Friday 08:00
+  UTC expiry).
+  - R289's post-08:00 fade of the settlement-window move does not scale with the expiring position near the money
+    (slope t +0.13 and +0.44 in 2024-26). High- and low-dose Fridays swap between the windows.
+  - The dealers' delta in expiring options does not move the perp after 08:00 (discovery t +1.55, validation −1.55)
+    or inside 07:31-07:59 (−0.61, +1.32).
+  - That delta is 0.13-0.47% of a day's perp volume at the median, and long or short about equally often.
+  - [FINDINGS](../experiments/charm_expiry_v1/FINDINGS.md).
+- **R297 (fundgate_v1), NULL** (4 trials, M295 from a Bankless guest, the daily panel's top-50 Binance perps).
+  - Neither the 30-day slope of funding on return nor up-day funding (each z-scored against the past year) leads the
+    equal-weight basket or BTC over the next 7 or 30 days. Validation t is −0.60 to +0.88, either sign.
+  - Up-day funding was lower in 2026 than in 2022, as the guest said. But it is 0.99 correlated with the plain
+    funding level, which follows the last month's market (0.44).
+  - [FINDINGS](../experiments/fundgate_v1/FINDINGS.md).
+- **R298 (lotcap_v1), NULL** (16 trials, M276 from R282's tables, gate 0 on seen data).
+  - Quintile books over R282's top-150 factor rows (age, or the age/size/vol_mcap cluster), with a close-based cover
+    of 10/20/35% or none on each short, held 24 h or 168 h.
+  - The best discovery book (age h24, 35% cover, t +1.70) has validation t +1.03, against a 2.0 bar.
+  - Wide covers clip the squeezes without cutting the median. Tight ones cut both, as R274 found. The covers added
+    3-16 bp/day in 2024-26 and nothing in 2021-23.
+  - The cluster books lost in 2021-23 and earned in 2024-26 (t up to +2.08), as R282's vol_mcap did.
+  - **Flaw found:** the age factor ties about 80 pre-2021 coins at its maximum. So in 2021-24, the age books' long
+    leg (here and in R282) was an alphabetical slice of them.
+  - [FINDINGS](../experiments/lotcap_v1/FINDINGS.md).
+- **R300 (intrars_v1), NULL** (24 trials, M318 from Linda Raschke on Better System Trader 124, gate 0 on seen data).
+  - At a fixed hour, the top 50 perps are ranked by their move since 00:00 UTC. The books go long the 3 or 5 leaders
+    and short the laggards (follow), or the reverse (fade), flat at 24:00 UTC. API costs are 34 bp a day.
+  - The first hour's leaders reverse; from 8 h on, they keep leading (+24 to +73 bp/day gross in both windows).
+    Neither pays the daily round trip reliably.
+  - The pick (10:00 New York, 3 names, follow) grosses about +70 bp/day in both windows and every year. Its
+    validation net is +38.7 bp/day, t 1.28 against a 2.0 bar, and negative without its 10 best days.
+  - 00:00 UTC ranks 6th of 9 clocks.
+  - Post hoc: the placebo clocks deciding at 15:00-16:00 UTC earned +78 to +85 bp/day net in 2024-26. That is M319,
+    to be read only on unseen data.
+  - [FINDINGS](../experiments/intrars_v1/FINDINGS.md).
+- **R301 (qbasis_v1), NULL** (16 trials, M170 from Chi, Hao, Hu and Ran 2023, gate 0 on seen prices).
+  - The 5-10 coins with Binance COIN-M quarterlies are sorted on the annualized basis (level) or its 7-day change. The
+    books go long the k highest and short the k lowest, or the reverse, in the USD-M perps, held 1 or 7 days.
+  - The pick (level low h7 k2: long the 2 lowest basis, short the 2 highest, weekly) earned +14.6 bp/day net in
+    2021-23 (t 1.83) and +1.2 in 2024-26 (t 0.16). It fails all three checks.
+  - The sides flip between windows for both signals. SPA p 0.295 / 0.952.
+  - The basis is about half funding: its median daily rank correlation with 3-day funding is +0.41 to +0.50.
+  - [FINDINGS](../experiments/qbasis_v1/FINDINGS.md).
+- **R302 (fundxs_v1), NULL** (8 trials, M263 from R276's reference factor, gate 0 on seen data).
+  - Long the fifth of the top 150 (or 50) perps paying the least funding over 3 (or 30) days, short the fifth paying
+    the most, net of funding, held 1 or 7 days.
+  - The pick (fund3, daily, top 150) earned +25.3 bp/day net in 2021-23 (t 3.32) and −7.2 in 2024-26 (t −0.71).
+  - It reproduces R276 (+11.2 bp/day at 7 bp over all periods), and that number is 2021's price effect (+65 bp/day).
+  - The funding part is steady (+10 to +13 bp/day to 2024). In 2025-26 the long leg's squeezed perps paid their longs
+    about 30 bp/day and fell by as much. So R276 and R190 do not conflict.
+  - [FINDINGS](../experiments/fundxs_v1/FINDINGS.md).
+- **R303 (capit_v1), NULL** (10 trials, M302 from Kotegawa and M286 from Rekt Radio, gate 0 on seen data).
+  - Hedged dip buys: long the top-150 perps at least 20/30/40% below their 25-day average, short the top-50 basket,
+    held 1 or 5 days. Trigger books: the top-50 basket after a breadth or cascade day, held 2 or 5 days, read over the
+    basket's drift.
+  - The pick (dip40 h5) earned +670 bp per event in 2021-23 (t 2.08) and −450 in 2024-26 (t −4.58). Every dip book
+    lost in validation, the long leg alone too: deep dips kept falling, and a 40% dip was a near-daily state in
+    2025-26.
+  - breadth h5 beat the drift in all six years (+132 / +254 bp, t 1.18 / 1.55) on too few days. It is queued as M322
+    for unseen data only.
+  - [FINDINGS](../experiments/capit_v1/FINDINGS.md).
+- **R299 (mlrank_v1), PARTIAL by its frozen rule, invalidated by its audit** (12 trials, M042, gate 0 on seen data).
+  - Ridge, IC-weighted and GBM rankers on 27 point-in-time panel features, top-150 quintile books, monthly purged
+    walk-forward.
+  - The GBM weekly book passed: validation net +55.4 bp/day (t 4.02), rank IC 0.19.
+  - The audit found the cause:
+    - three features (`n_venues`, `fund_gap7`, `kimchi7`) come from venue histories fetched only for markets live at
+      download time;
+    - KuCoin covers 53-95% of survivors' rows and 0-5% of later-delisted perps'.
+  - The linear books lost money despite rank ICs of 0.10-0.15.
+  - R304 reruns the family without the three features (`docs/FEATURE_VINTAGE_INTEGRITY.md`).
+  - [FINDINGS](../experiments/mlrank_v1/FINDINGS.md).
+- **R304 (mlrank_v2), PARTIAL** (7 trials, M042, gate 0 on seen data).
+  - R299's family on 24 clean features, without `n_venues`, `fund_gap7` and `kimchi7`, plus a GBM on those three
+    alone as a diagnostic.
+  - The pick (gbm h7 clean, weekly) earned +36.0 bp/day net in 2022-23 (t 5.99) and +58.9 in 2024-26 (t 4.21), +54.6
+    at 3x. It passes all three checks.
+  - The leak-only GBM lost (−20.5 bp/day). The leak was real but carried nothing.
+  - [FINDINGS](../experiments/mlrank_v2/FINDINGS.md).
+- **R305 (mlaudit_v1), label `unexplained`** (7 trials, recorded as NULL: no explanation found; gate 0).
+  - Six refits and fixed scores tested whether age, low risk or market beta carried R304's pick. None did.
+    - Without age: +56.1 bp/day.
+    - On the six risk features alone: −15.7.
+    - Without them: +62.4 (t 5.42).
+    - A fixed low-risk score loses.
+    - Alpha over the equal-weight universe: +58.4 bp/day (t 4.22).
+  - The long leg holds the alpha (+45.9 bp/day over the universe, t 8.81).
+  - The short leg had a name up more than 100% in a week in 15.5% of validation weeks; COAI was up 1,850%.
+  - [FINDINGS](../experiments/mlaudit_v1/FINDINGS.md).
+- **R306 (msnr_v1), NULL** (24 trials, M323 from the owner's reel on Malaysian support and resistance, gate 0 on
+  seen data).
+  - Fade or follow the first wick touch of a fresh line-chart peak or trough of 4-hour closes, on the top 50 perps,
+    with 24 h, 72 h and 1:2 ATR bracket exits.
+  - Every book loses in both windows (validation −6.7 to −62.1 bp/day at 1x). Fading a level is about 0 gross at 24 h
+    and −13 to −50 bp at 72 h: levels break more than they bounce.
+  - The same 12 books on 17 FX, metal and index perps lose too.
+  - [FINDINGS](../experiments/msnr_v1/FINDINGS.md).
+- **R307 (rrskew_v1), NULL** (24 trials, M174 from the owner's reel on the 25-delta skew, gate 0 on seen data).
+  - The 30- and 90-day 25-delta risk reversal, built from every Deribit option trade with the COIN-M basis as the
+    forward. A weekly long or short of BTC and ETH on its sign, z-score or 7-day change.
+  - The pick (ETH 30d chg7 follow) has validation t 1.49 and is negative without its 10 best weeks. No BTC book
+    reaches |t| 1.
+  - The risk reversal follows the past week (correlation +0.2 to +0.5) more than it leads the next (+0.03 to +0.15).
+  - [FINDINGS](../experiments/rrskew_v1/FINDINGS.md).
+- **R308 (nagel_v1), NULL** (8 trials, M325 from the Costello reel and Nagel 2012, gate 0 on seen data).
+  - The 1-day reversal of the top 50 or 150, only after stress days (market volatility, dispersion or an
+    open-interest crash).
+  - It earned in 2021-23 (+77 bp gross after volatility days, against −14 otherwise). In 2024-26 it lost (−35
+    against +24): after stress days the losers kept falling.
+  - [FINDINGS](../experiments/nagel_v1/FINDINGS.md).
+- **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
+  `docs/REELS_TRANSCRIPT.md`).
+  - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
+    20-day mean alone give 0.536: the reel's other 13 features add nothing.
+  - Following the first UTC hour until 24:00 loses (−12 bp gross per trade in 2024-26). Skipping predicted chop
+    days makes each trade worse (−3.3 bp).
+  - Post hoc: the first hour reverses in both windows. That is M315, to be read only on unseen data.
+  - [FINDINGS](../experiments/er_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -611,6 +788,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,385 after R282 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,613 after R298 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

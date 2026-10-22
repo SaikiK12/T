@@ -10169,7 +10169,7 @@
         "Creator/demo outcomes and code examples are not audited project results and were not tested.",
         "External option/DEX data, synchronized multi-venue depth/fills and MEXC trade-level liquidation histories are not held."
       ],
-      "current_source_review_required": false,
+      "current_source_review_required": true,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
       "current_sha256": "e0162a8203c3470f1deb5375c720bfc4c03f6818dc7aa6334c2610486535f0d3",
       "reviewed_version_history": [
@@ -10202,7 +10202,13 @@
           "intake_id": "intake_collision_reconciliation_20261021",
           "preservation": "Previous source digest and complete original source records retained in Git and collision receipts; current ID pointers reconciled only."
         }
-      ]
+      ],
+      "observed_unreviewed_version": {
+        "sha256": "28689fa20a1dcaa2367452a032ac487c19035a6c92adb44c55ca6de65bc2a492",
+        "source_commit": "5bb9309",
+        "observed_utc_date": "2026-10-22",
+        "scope": "Current Claude reel additions preserved; not fully re-extracted by this pass. Existing reviewed digest/source objects remain historical snapshots in Git."
+      }
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",

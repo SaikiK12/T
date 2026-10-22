@@ -1,37 +1,37 @@
 {
- "last_scored_hour": "2026-10-21T08:00:00+00:00",
- "days_ticketed": 20,
+ "last_scored_hour": "2026-10-22T14:00:00+00:00",
+ "days_ticketed": 21,
  "BIN": {
   "coverage": {
-   "symbols": 60,
+   "symbols": 61,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.04578922619138837,
+  "market_mean_apr_now": -0.07164718792348217,
   "top_apr_now": [
    {
-    "symbol": "SOXLUSDT",
-    "apr": 0.5225619794994903,
-    "spot": false
-   },
-   {
     "symbol": "SKHYNIXUSDT",
-    "apr": 0.4267044666145618,
+    "apr": 0.39164256627069943,
     "spot": false
    },
    {
-    "symbol": "SNXXUSDT",
-    "apr": 0.41721322716208914,
-    "spot": false
-   },
-   {
-    "symbol": "SNDKUSDT",
-    "apr": 0.28439461369998753,
+    "symbol": "\u9f99\u867eUSDT",
+    "apr": 0.33608835274208104,
     "spot": false
    },
    {
     "symbol": "SAMSUNGUSDT",
-    "apr": 0.282412664188693,
+    "apr": 0.2693724299994453,
+    "spot": false
+   },
+   {
+    "symbol": "SOXLUSDT",
+    "apr": 0.1920435318121842,
+    "spot": false
+   },
+   {
+    "symbol": "XAUUSDT",
+    "apr": 0.16349688039857332,
     "spot": false
    }
   ],
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 1,
+   "days": 2,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -66,37 +66,37 @@
  },
  "MEXC": {
   "coverage": {
-   "symbols": 60,
+   "symbols": 61,
    "with_spot_pair": 38,
    "mapped": 39,
    "spot_taker_mean": 0.0005578947368421052
   },
   "held_now": [],
-  "market_mean_apr_now": -0.17986389054552396,
+  "market_mean_apr_now": -0.17966516596592583,
   "top_apr_now": [
    {
-    "symbol": "BTCUSDT",
-    "apr": 0.08236833333285176,
+    "symbol": "1000PEPEUSDT",
+    "apr": 0.10901333217285962,
     "spot": true
    },
    {
-    "symbol": "TAOUSDT",
-    "apr": 0.08212499854778343,
+    "symbol": "WLDUSDT",
+    "apr": 0.08942499774093449,
     "spot": true
    },
    {
     "symbol": "ENAUSDT",
-    "apr": 0.07020166622661843,
+    "apr": 0.07239166564014947,
+    "spot": true
+   },
+   {
+    "symbol": "LTCUSDT",
+    "apr": 0.0717833325711581,
     "spot": true
    },
    {
     "symbol": "ONDOUSDT",
-    "apr": 0.06825499898392688,
-    "spot": true
-   },
-   {
-    "symbol": "STRKUSDT",
-    "apr": 0.06460499879949566,
+    "apr": 0.07141833183898902,
     "spot": true
    }
   ],
@@ -128,7 +128,7 @@
    }
   },
   "ontime": {
-   "days": 1,
+   "days": 2,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,

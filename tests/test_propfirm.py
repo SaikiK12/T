@@ -30,6 +30,22 @@ class PropFirmTests(unittest.TestCase):
             self.assertAlmostEqual(out["p_pass"], gambler(mu, 0.01, a, a), delta=0.03)
             self.assertEqual(out["fail_time"], 0)
 
+    def test_firm_costs_are_charged_only_on_a_gross_stream(self):
+        rules = self.rules(cost_side=0.0004, swap_day=0.00033)
+        net = pf.net_of_costs([0.01, -0.01], rules, turnover=[2.0, 0.0], exposure=1.0)
+        np.testing.assert_allclose(net, [0.01 - 0.0008 - 0.00033, -0.01 - 0.00033])
+        hourly = pf.net_of_costs(np.zeros(24), rules, exposure=1.0, steps_per_day=24)
+        self.assertAlmostEqual(hourly.sum(), -0.00033)
+        rng = np.random.default_rng(3)
+        r = rng.normal(0.002, 0.01, 2000)
+        turn = rng.uniform(0, 2, 2000)
+        kw = dict(n=2000, horizon=300, funded_days=0, block=1, seed=4)
+        plain = pf.evaluate(r, rules, 1.0, **kw)
+        self.assertEqual(plain, pf.evaluate(r, self.rules(), 1.0, **kw))          # no turnover: r is already net
+        charged = pf.evaluate(r, rules, 1.0, turnover=turn, exposure=1.0, **kw)
+        self.assertEqual(charged, pf.evaluate(pf.net_of_costs(r, rules, turn, 1.0), self.rules(), 1.0, **kw))
+        self.assertLess(charged["p_pass"], plain["p_pass"])
+
     def test_daily_loss_breaks_on_one_bad_day(self):
         paths = np.array([[0.01, -0.06, 0.2]])
         o = pf.run_phase(paths, self.rules(daily_loss=0.05), 0.10)

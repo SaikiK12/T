@@ -153,3 +153,29 @@ def mexc(msg, sizes):
                  asks[0][1] * cs, sum(x[1] for x in bids[:5]) * cs, sum(x[1] for x in asks[:5]) * cs)]
     deals = d if isinstance(d, list) else [d]
     return [("trade", sym, x["t"], float(x["p"]), x["v"] * cs, 1 if x["T"] == 1 else -1) for x in deals]
+
+
+def lighter(msg, names):
+    """Events from one Lighter websocket message: update/ticker (best bid and offer, stamped in microseconds by the
+    matching engine) and update/trade (trades and liquidations; is_maker_ask true means the buyer took liquidity).
+    names: {market_id: base coin}; other markets give no event. The trade snapshot sent on subscribing is skipped: its
+    prints are older than the connection."""
+    kind, ch = msg.get("type", ""), str(msg.get("channel", ""))
+    try:
+        sym = names.get(int(ch.split(":")[1]))
+    except (IndexError, ValueError):
+        return []
+    if sym is None:
+        return []
+    if kind in ("update/ticker", "subscribed/ticker"):
+        t = msg.get("ticker") or {}
+        a, b = t.get("a") or {}, t.get("b") or {}
+        if not a.get("price") or not b.get("price"):
+            return []
+        return [("book", sym, int(t.get("last_updated_at", msg.get("last_updated_at", 0))) // 1000,
+                 float(b["price"]), float(b["size"]), float(a["price"]), float(a["size"]))]
+    if kind == "update/trade":
+        prints = (msg.get("trades") or []) + (msg.get("liquidation_trades") or [])
+        return [("trade", sym, int(x["timestamp"]), float(x["price"]), float(x["size"]),
+                 1 if x.get("is_maker_ask") else -1) for x in prints]
+    return []

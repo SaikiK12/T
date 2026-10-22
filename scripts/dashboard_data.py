@@ -51,6 +51,8 @@ FORWARD = [
      "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
     ("R279", "xfund_kc_fwd", "cross-venue funding carry on KuCoin, books A, B", "Gate, Binance, KuCoin",
      "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
+    ("R294", "xfund_lt_fwd", "cross-venue funding carry on Lighter, book A", "MEXC, Lighter",
+     "API", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
 ]
 
 
@@ -182,7 +184,8 @@ def forward_days():
                         "net": num(r[col]),
                         "net_2x": num(r.get("net_2x")), "net_3x": num(r.get("net_3x"))})
     carry = {"xfund_fwd": ("R278", {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}),
-             "xfund_kc_fwd": ("R279", {"A": "Gate + KuCoin", "B": "Binance + KuCoin"})}
+             "xfund_kc_fwd": ("R279", {"A": "Gate + KuCoin", "B": "Binance + KuCoin"}),
+             "xfund_lt_fwd": ("R294", {"A": "MEXC + Lighter"})}
     for lane, (rid, sets) in carry.items():
         done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / lane / "journal" / "decisions.csv")}
         for r in rows_csv(EXP / lane / "journal" / "days.csv"):
@@ -208,7 +211,7 @@ def forward_lanes(days):
         mine = [d for d in days if d["lane"] == lane]
         ontime = [d for d in mine if d["kind"] == "ontime"]
         daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd", "xfund_fwd",
-                         "xfund_kc_fwd"}
+                         "xfund_kc_fwd", "xfund_lt_fwd"}
         by_book, progress_note = {}, None
         if daily:
             books = sorted({d["book"] for d in mine})

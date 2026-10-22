@@ -5,7 +5,8 @@ compares, against experiments/<run>/results/{trades,daily}.csv (the engine's own
 - the trade list (coin, long venue, entry day, exit day), which must be identical;
 - the daily 1x net, which must agree within 1e-9.
 
-Runs and their forward lanes: xfund_v1 (R275) -> R278 xfund_fwd; xfund_kd_v1 (R277) -> R279 xfund_kc_fwd.
+Runs and their forward lanes: xfund_v1 (R275) -> R278 xfund_fwd; xfund_kd_v1 (R277) -> R279 xfund_kc_fwd;
+xfund_lt_v1 (R288) -> R294 xfund_lt_fwd.
 
 usage: python scripts/xfund_parity.py [--lane xfund_kd_v1]
        (about 1 minute; prints one line per book, exits 1 on a mismatch)
@@ -32,6 +33,9 @@ def books(run):
         return BOOKS
     if run == "xfund_kd_v1":
         from scripts.forward_xfund_kc import LANE
+        return LANE.books
+    if run == "xfund_lt_v1":
+        from scripts.forward_xfund_lt import LANE
         return LANE.books
     raise SystemExit(f"no forward lane is built on {run}")
 

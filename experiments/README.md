@@ -9,8 +9,9 @@ forward paper lane also keeps a `journal/`. The ids, statuses and trial counts c
 Status: RUNNING (forward, collecting days), DONE, ARMED (waits for an event), REGISTERED or PLANNED.
 Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
-## Forward paper lanes (running) (15)
+## Forward paper lanes (running) (16)
 
+- **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
 - **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))
 - **[xbook_fwd](xbook_fwd/)** R285, RUNNING PENDING, 1 trial. Cross-family forward book (M281): carry (R278 A/B, R279 A/B), flow (R215 A/B, R218 X2) and events (R266, R268, R270, R272) at equal archive risk, decided on book days from 2026-10-23 ([PREREG](xbook_fwd/PREREG.md), [journal](xbook_fwd/journal/))
 - **[xfund_kc_fwd](xfund_kc_fwd/)** R279, RUNNING PENDING, 2 trials. R277's two replicating KuCoin carry books forward on paper: A gate+kucoin L14 th5% K20, B binance+kucoin L14 th5% K20 ([PREREG](xfund_kc_fwd/PREREG.md), [journal](xfund_kc_fwd/journal/))
@@ -27,8 +28,26 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (83)
+## Finished and registered rounds (101)
 
+- **[mlaudit_v1](mlaudit_v1/)** R305, DONE NULL, 7 trials. Frozen audit of R304's pick: GBM h7 refits without age / risk-only / without risk, fixed low-risk, low-vol and age scores, beta vs equal-weight universe and BTC, short-leg squeeze tail ([PREREG](mlaudit_v1/PREREG.md), [FINDINGS](mlaudit_v1/FINDINGS.md))
+- **[mlrank_v2](mlrank_v2/)** R304, DONE PARTIAL, 7 trials. ML cross-sectional rankers (M042) again without the 3 survivor-leaking columns: ridge/IC/GBM x hold 1/7 d on 24 clean point-in-time features, top 150 Binance perps, API costs; plus a GBM on the 3 leaking columns alone ([PREREG](mlrank_v2/PREREG.md), [FINDINGS](mlrank_v2/FINDINGS.md))
+- **[capit_v1](capit_v1/)** R303, DONE NULL, 10 trials. Capitulation buys on Binance perps: hedged deep-dip longs (25-day gap <= -20/30/40%, hold 1/5 d) and the top-50 basket after breadth or cascade days (hold 2/5 d, over the drift); M302, M286 ([PREREG](capit_v1/PREREG.md), [FINDINGS](capit_v1/FINDINGS.md))
+- **[fundxs_v1](fundxs_v1/)** R302, DONE NULL, 8 trials. Funding-level cross-section net of funding (M263): long the lowest fifth by 3- or 30-day funding, short the highest, hold 1/7 d, top 150/50, API costs ([PREREG](fundxs_v1/PREREG.md), [FINDINGS](fundxs_v1/FINDINGS.md))
+- **[qbasis_v1](qbasis_v1/)** R301, DONE NULL, 16 trials. Quarterly dated-futures basis cross-section on the perps (M170): level and change of the annualized COIN-M basis, low/high, hold 1/7 d, k 2/3, API costs ([PREREG](qbasis_v1/PREREG.md), [FINDINGS](qbasis_v1/FINDINGS.md))
+- **[intrars_v1](intrars_v1/)** R300, DONE NULL, 24 trials. Intraday cross-sectional relative strength (M318): top-50 perps' move since 00:00 UTC at fixed hours, follow or fade, n 3 or decile, held to 24:00 UTC, API costs ([PREREG](intrars_v1/PREREG.md), [FINDINGS](intrars_v1/FINDINGS.md))
+- **[mlrank_v1](mlrank_v1/)** R299, DONE PARTIAL, 12 trials. ML cross-sectional rankers (M042): ridge, IC-weighted and GBM on 27 point-in-time (+3 vintage) daily panel features x hold {1, 7 d} x set {pit, all}, top-150 quintile book, purged monthly walk-forward, API costs, funding ([PREREG](mlrank_v1/PREREG.md), [FINDINGS](mlrank_v1/FINDINGS.md))
+- **[lotcap_v1](lotcap_v1/)** R298, DONE NULL, 16 trials. Lottery-cluster quintile short with a close-based squeeze cover (M276): score {age, cluster of age/size/vol_mcap} x hold {24 h, 168 h} x short cover {none, 10, 20, 35%} on R282's top-150 factor rows, API costs, funding ([PREREG](lotcap_v1/PREREG.md), [FINDINGS](lotcap_v1/FINDINGS.md))
+- **[fundgate_v1](fundgate_v1/)** R297, DONE NULL, 4 trials. Market funding response to up days as a market-timing gate (M295): trailing 30-day slope of top-50 funding on return, and up-day funding, z vs the past year, against the EW top-50 basket's next 7/30 days ([PREREG](fundgate_v1/PREREG.md), [FINDINGS](fundgate_v1/FINDINGS.md))
+- **[charm_expiry_v1](charm_expiry_v1/)** R296, DONE NULL, 5 trials. Friday 08:00 UTC Deribit expiry on BTC/ETH perps: settlement-fade slope on expiring near-money position (M303 dose, M309) and dealers' expiry hedge unwind after 08:00 and in 07:31-07:59 (M317) ([PREREG](charm_expiry_v1/PREREG.md), [FINDINGS](charm_expiry_v1/FINDINGS.md))
+- **[optflow_v1](optflow_v1/)** R295, DONE NULL, 15 trials. Deribit option flow leading BTC/ETH perps (M311 block delta flow, M313 net drift): 5 signals x 1/4/24 h ([PREREG](optflow_v1/PREREG.md), [FINDINGS](optflow_v1/FINDINGS.md))
+- **[er_v1](er_v1/)** R293, DONE NULL, 3 trials. Efficiency-ratio forecast and chop-day gate (owner's reel DeF5_5yPtDb, M314): pooled ridge-logit on the reel's 15 features forecasting next UTC day's 5-min ER above the discovery median, gate (p>0.5) on a first-hour trend rule (00-01 UTC sign, 01:01 to 24:00), BTC/ETH/SOL, manual web 3 bp/side; fit 2021-04..2023, read 2024-01..2026-09 ([PREREG](er_v1/PREREG.md), [FINDINGS](er_v1/FINDINGS.md))
+- **[dealerflow_v1](dealerflow_v1/)** R292, DONE NULL, 4 trials. Dealer gamma from Deribit taker flow (M308): GEX at the UTC close from net taker positions (makers = dealers), scaled by perp ADV (g) or its sign (short), vs next-day log RV beyond HAR and next-day hourly autocorrelation; BTC/ETH perps, fit 2021-04..2023, read 2024..2026-09 ([PREREG](dealerflow_v1/PREREG.md), [FINDINGS](dealerflow_v1/FINDINGS.md))
+- **[vpin_v1](vpin_v1/)** R291, DONE NULL, 4 trials. VPIN flow toxicity (owner's reel, M085): exact taker-side and BVC VPIN (50 buckets/day, n 50) added to a HAR model with relative volume and hour of day, forecasting next 1 h and 24 h realized variance, BTC/ETH/SOL 1-minute bars; fit 2021-04..2023, read 2024-01..2026-09 ([PREREG](vpin_v1/PREREG.md), [FINDINGS](vpin_v1/FINDINGS.md))
+- **[auction_v1](auction_v1/)** R290, DONE NULL, 60 trials. Auction-market levels on 1-minute bars (owner's term list, M305): value-area re-entry, IB60 and OR15 break, VWAP +-2 SD, naked prior POC x book/anti x 60/240 min, 3 real session anchors against 8 placebo clocks, BTC/ETH/SOL, Lighter API 2 bp/side ([PREREG](auction_v1/PREREG.md), [FINDINGS](auction_v1/FINDINGS.md))
+- **[clockflow_v1](clockflow_v1/)** R289, DONE NULL, 40 trials. Fixed-clock flows on 1-minute bars (trader talks): US cash-open flush fade/follow (M301, 24) and Deribit Friday 07:30-08:00 UTC settlement window (M303, 16), BTC/ETH/SOL, manual web 3 bp/side ([PREREG](clockflow_v1/PREREG.md), [FINDINGS](clockflow_v1/FINDINGS.md))
+- **[xfund_lt_v1](xfund_lt_v1/)** R288, DONE CONFIRMED, 6 trials. R275's best carry book (L14d th5% K20) replicated, unchanged, on six venue sets with Lighter (0/0 fees): binance, gate, hyperliquid, mexc, kucoin and dydx against lighter; 5.5/11/16.5 bp per leg ([PREREG](xfund_lt_v1/PREREG.md), [FINDINGS](xfund_lt_v1/FINDINGS.md))
+- **[pcares_v1](pcares_v1/)** R287, DONE NULL, 24 trials. PCA residual reversion (Avellaneda-Lee, M298) on the top-50 Binance perps, hourly: K 1/3/5 factors x OU window 72/168 h x entry |s| 1.25/2 x factor or dollar hedge, 7 bp/side ([PREREG](pcares_v1/PREREG.md), [FINDINGS](pcares_v1/FINDINGS.md))
 - **[trendpull_v1](trendpull_v1/)** R284, DONE NULL, 8 trials. Trend pullback (Visser, M277): long after the 63-day rate of change resets near zero inside a rising 200-day trend, 10 world indices (H 63/21) and every Binance perp (H 90/30), vs the asset's own mean hold ([PREREG](trendpull_v1/PREREG.md), [FINDINGS](trendpull_v1/FINDINGS.md))
 - **[vixpanic_v1](vixpanic_v1/)** R283, DONE NULL, 27 trials. VIX panic onsets (VIX>VIX3M, VVIX top 5%, both) -> long SPY/QQQ/BTC perp 5/10/20 d vs random dates (M278, owner's TikTok) ([PREREG](vixpanic_v1/PREREG.md), [FINDINGS](vixpanic_v1/FINDINGS.md))
 - **[pitfac_v1](pitfac_v1/)** R282, DONE PARTIAL, 27 trials. What the daily point-in-time panel's new sources say about a Binance perp's next days ([PREREG](pitfac_v1/PREREG.md), [FINDINGS](pitfac_v1/FINDINGS.md))
@@ -113,9 +132,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Data and loop folders (4)
+## Data and loop folders (5)
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
+- **[msnr_v1](msnr_v1/)** No registry row and no description yet.
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded

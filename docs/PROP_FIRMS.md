@@ -70,10 +70,15 @@ scratchpad: daily steps, normal, skewed and fat-tailed returns, no intraday path
 ## Fit with the lab's books
 - **Flow book A** (unconfirmed) fits HyroTrader and Breakout, with three things to check:
   - Its holdout gross is about 68% BEAT and LAB: small caps that hit HyroTrader's 5% cap.
-  - Breakout's fee plus swap is not modelled.
+  - Breakout's 4 bp per side and 3.3 bp a day of swap are in the `breakout_pro` preset since 2026-10-21; book A
+    has not been re-run with them.
   - Bitfunded's end-of-day trailing floor fails a book with a 20-47% drawdown.
 - **top_vs_crowd:** a hypothesis only. Its MEXC replay is about zero.
 - **Carry:** cannot reach a 10% target, and it needs a spot leg.
+- **Costs decide the fit, as on exchanges** (`docs/VENUE_STRUCTURE.md`). Breakout's 4 bp per side, before its
+  spread, is half of MEXC's 8 bp API taker fee, and about twice the median cost of a $1k order on Lighter's
+  liquid books, which charge no fee. A rule that turns over daily or faster has to clear the firm's cost, not
+  the exchange's.
 - **Cross-asset trend (forex, indices) on FTMO or The5ers CFDs:** fits the rules (EAs allowed, no time limit) but takes
   months to reach 10% at low drift.
 - **Overnight index drift:** impossible at futures firms, which require being flat by the close.
@@ -143,11 +148,25 @@ What the rules do to the map:
   - Fat tails (t4) cut EV by 11-44% at the 100K firms for Sharpe 0-3; Topstep's small account barely moves.
 - **The constraint is having the edge, not the firm.** A book with Sharpe ≥ 1 *after* costs, confirmed on unseen data,
   is the entry ticket. The lab has none confirmed: flow book A is unconfirmed (holdout t 1.22).
+- **Trading costs inside the firm** (`scripts/prop_cost_map.py`, `experiments/propsim_v1/cost_map.csv`, 2026-10-21).
+  Same synthetic streams (daily volatility 1% at scale 1). Each firm is charged a cost per side of 0-8 bp at 0.1-2 sides
+  a day, with and without a 3.3 bp/day swap. Only Breakout's cost and swap are its own (third-party figures); for
+  HyroTrader and FTMO they are scenarios.
+  - What matters is cost per side times sides per day: 2 bp at 2 sides a day costs as much as 8 bp at half a side.
+  - **Breakout at gross Sharpe 1:** the break-even fee is about $4.0k with no costs. The swap alone takes it to $2.1k.
+    Adding its 4 bp per side leaves $0.9k at one side a day and $0.3k at two.
+  - **HyroTrader and FTMO at gross Sharpe 1:** EV per attempt falls from about $7.4k to about $3k at 2 bp per side
+    and 2 sides a day. It turns negative at 8 bp and 2 sides a day.
+  - **At gross Sharpe 2** every firm keeps a positive value up to about 4 bp per side at 2 sides a day.
+  - **Reading:** inside a firm, a daily-turnover book needs a gross Sharpe of about 2, or a firm without swap and with
+    costs near 2 bp per side. Slow books (carry-like, 0.1 side a day) barely notice costs, but they cannot reach a 10%
+    target in time (see Carry above).
 
 ## Simulations to run (queue M211)
 `lab/propfirm.py` needs these rule features first:
 - Breakout's balance-based daily loss reset at 00:30 UTC;
-- a per-side cost plus daily swap;
+- a per-side cost plus daily swap (in since 2026-10-21: `Rules.cost_side` and `swap_day`, charged by `evaluate()`
+  when it is given the book's turnover or exposure, so r is gross);
 - hourly paths, so intraday breaches show;
 - Topstep's intraday enforcement of the end-of-day trailing floor (its reset after payout, the 50% share and the
   per-request cap are in since 2026-10-20; the 5-winning-day payout condition is approximated by a 14-day cycle);

@@ -205,6 +205,80 @@ It is an option beside the main direction, not a replacement. It enters the queu
 
 So each item goes through the same gates: a frozen family, then forward paper.
 
+## Ideas from comment sections and transcripts (owner, 2026-10-21)
+The owner asked for quant and trading comment sections and transcripts to be mined for ideas. The sources, what was
+reachable and the ideas are in `docs/COMMENT_DIG.md`. Eleven rows were added to the queue (M288-M298).
+
+**What they say:** practitioners keep saying that only fee and rebate structure, speed and venue-structure arbitrage
+paid them, and that "nothing based on OHLC worked". That matches the lab's record, so event, carry and venue lanes
+come before chart rules.
+
+**Order of testing** (cheap held-data rows first, each a frozen family):
+
+| Method | Status |
+|---|---|
+| M298 PCA residual reversion, hourly | **R287 NULL**: gross about +9.5 bp/day in the steadiest variants; costs 18-76 |
+| M295 funding response to up days, as a gate | **R297 NULL**: neither measure leads the top-50 basket or BTC at 7/30 days (validation \|t\| ≤ 0.88); up-day funding is the funding level |
+| M290 scheduled US releases (CPI, NFP, FOMC, EIA) | 1-minute klines held; FOMC dates held; CPI and payroll dates not reachable from this container (BLS 403, FRED bot check) |
+
+**Recorders where history cannot be bought:**
+- the Deribit option chain, hourly from 2026-10-21 (M175, M289, M300: expiry pinning and dealer gamma);
+- Lighter order books, hourly from 2026-10-21 (M292: the cost of a zero-fee API venue);
+- DEX pool prices next to the MEXC perp, every 5 minutes from 2026-10-21 (M288: on-chain AMMs against exchange
+  futures, the prop trader's third edge);
+- wallet status on Bithumb, Gate, KuCoin, HTX and Bitget, hourly from 2026-10-21 21:21 UTC (M294,
+  `scripts/record_wallets.py`). Upbit's status needs an API key, so it is not recorded.
+
+**Venue structure (the prop trader's lead, `docs/VENUE_STRUCTURE.md`).** Lighter charges no fee through the API. On
+one snapshot, a $1k order costs a median 2.0 bp per side there against about 8.7 bp on MEXC's API, for the same 27
+coins. API-mode rules that died on costs between 2 and 8 bp per side get a second look:
+- once the Lighter recorder has two weeks of books;
+- on Lighter's own price history;
+- as one frozen family at gate 0.
+
+Lighter also joined the cross-venue carry family as a venue. **R288 `xfund_lt_v1` is done: CONFIRMED as a venue
+replication (gate 0).** R275's best book replicates on 5 of the 6 Lighter sets.
+- **The result is small:** +3.5 to +6.2%/yr at 1x, against +20-24%/yr for the KuCoin sets over the same years.
+- **The zero fee** is worth only about 0.3-0.4%/yr there.
+- **R294 `xfund_lt_fwd` runs the mexc+lighter book forward on paper** from 2026-10-23 (PREREG frozen 2026-10-22, 1
+  trial).
+  - `lab/carrylane.py` now reads Lighter: hourly candles and funding, the contract list, and book mids. Every request
+    goes under the machine-wide Lighter lock.
+  - The Python twin reproduces R288's book exactly: 305 of 305 trades.
+  - The first look is at 90 scored days (2027-01-21). The in-sample power is 96%, but the book earns only about
+    5%/yr, so it ranks below the KuCoin lane (R279).
+- Trading on Lighter needs an on-chain wallet: that is the owner's call.
+
+## What proven traders let slip (owner, 2026-10-21)
+The owner asked for the talks of people who made money trading, starting with Tarek Elmarhri, and for what they say
+by accident about how the money is made. The write-up is `docs/TRADER_TALKS.md`. It has cards per person with a
+credibility tier, seven sources of trading money with who pays each, and a checklist for finding opportunities
+ourselves.
+
+**The common thread:** each of them names who is on the other side and why that side keeps paying. The other side
+is forced, impatient, constrained or wants leverage. The flows that pay best run on a clock or a rule. Small
+accounts can reach three of the seven sources: risk-transfer premia (carry), barrier gaps (venues) and forced or
+rule-bound flow.
+
+**New queue rows:**
+
+| Method | Clock or rule | Data |
+|---|---|---|
+| M301 | US cash-open flush and reverse (Elmarhri: "on le prend tout le temps") | 1-minute klines for BTC/ETH/SOL; **R289 NULL** |
+| M303 | Deribit settlement TWAP, 07:30-08:00 UTC (SEBI's Jane Street order is the template) | 1-minute klines; **R289 NULL** |
+| M304 | ETF fixing hour (BRRNY, 15:00-16:00 New York) | hourly klines; daily ETF flows to fetch |
+| M302 | 25-day MA deviation buy (BNF) | held; overlaps NULL lanes, so last |
+
+The 1-minute data also unblocks M290 (scheduled releases) and M206 (opening-range breakout).
+
+**R289 (clockflow_v1) tested M301 and M303 together: NULL** (40 trials; OPEN rc_p 0.31, SETTLE rc_p 0.87).
+- The US-open fade won in 2022 and lost in 2024-26.
+- The Friday settlement-window fade has about +20 bp gross per trade in both windows, but it is +0.38 bp a day at
+  2x and t 1.37.
+- Seeds seen only after the run, for a later lane on reserved 2020 bars or forward data: the 09:30 New York fade
+  on days the US market is shut (validation t 2.67), and continuation after 10:30 New York (t about −2 in both
+  windows).
+
 ## Critical files
 - **New:**
   - `scripts/record_mexc_funding.py`, `scripts/record_notices.py`, `scripts/record_unlocks.py`
@@ -236,3 +310,178 @@ So each item goes through the same gates: a frozen family, then forward paper.
 - Every FINDINGS reports 1x/2x/3x of its execution mode's cost, its full trial count, and a reading against
   `registry.program_trials()`.
 - Nothing places orders or uses keys. Downloads stay within the disk allowance, checked before each one.
+
+## Auction, order flow and options positioning (owner, 2026-10-21)
+The owner listed 21 terms (TPO, VWAP bands, POC and value area, initial balance, HVN/LVN, volume profile, delta,
+CVD, absorption, exhaustion, dark pool, gamma, delta, charm and vanna exposure) and asked for data, our own method,
+a critical eye, our own Bloomberg and an AI council. The write-up is `docs/AUCTION_AND_FLOW.md`.
+
+**The common thread:** the terms are three families by information:
+- **Auction levels** are transforms of bars the lab has already searched hard (R263, R246 NULL). They get one
+  family, R290 `auction_v1`, with real session anchors against random placebo anchors, to settle whether sessions
+  mean anything in crypto.
+- **Order flow** carries trade sides that bars do not. It has partial life here (R185, flow books).
+- **Dealer options exposure** is the only family that forces someone to trade. The size is real: BTC gamma notional
+  per 1% move is about one hour of Binance perp volume. Its sign was a guess until now, because every Deribit
+  option trade since late 2016 carries the taker's side (`data/deribit_trades`, M308).
+
+**Built:** `lab/auction.py`, `lab/orderflow.py` and `lab/exposure.py` (tested), plus two downloads:
+- the Binance option history: hourly greeks 2023, which our Black-76 reproduces to 0.06%, and BVOL per minute
+  2023-26;
+- the Deribit option trade history.
+
+**R290 `auction_v1` is NULL:**
+- real session anchors are no more structured than random clocks (p 0.36);
+- no auction rule trades: the discovery pick's validation t is −0.96.
+
+**R291 `vpin_v1` is NULL** (the owner's reel on toxic order flow, `docs/QUANTDATA.md`): VPIN from true trade
+sides adds no volatility forecast beyond volume, and plain volume flags crash hours better.
+
+**R293 `er_v1` is NULL** (the owner's reel on forecasting tomorrow's efficiency ratio):
+- the next UTC day's efficiency is only weakly predictable (AUC 0.537), and today's efficiency alone does as well;
+- gating a first-hour trend rule on that forecast makes each trade worse.
+
+Post hoc, the first UTC hour reverses in both windows. That is M315, for unseen data only (2020 in batch 2, or a
+forward lane).
+
+**R292 `dealerflow_v1` is done: NULL.** It tested dealer gamma from 41M Deribit option trades, with the taker's side
+on each trade.
+- It does not improve a HAR forecast of next-day BTC or ETH volatility (DM t −1.23), and it does not sign next-day
+  hourly autocorrelation out of sample.
+- **Why:** dealers are short gamma on 76-92% of days, and the hedge they need is a fraction of a percent of a day's
+  perp volume per 1% move. Open-interest GEX dashboards overstate it, because most open interest nets out.
+- **Next on this data was** `charm_expiry_v1`, now run as R296 (below). M316 (post
+  hoc) is for unseen data only.
+
+**R295 `optflow_v1` is done: NULL** (15 trials). It covered block prints (M311) and net drift (M313).
+- Signed Deribit option flow does not lead the BTC or ETH perp over 1, 4 or 24 hours out of sample, in any of 5
+  forms.
+- Its gross edges are a few bp per trade, against 17 bp of API round trip.
+- R292 and R295 agree. Deribit's taker flow, by gamma or by direction, does not move the perp at hourly or daily
+  scale.
+
+**R296 `charm_expiry_v1` is done: NULL** (5 trials). It tested Deribit's Friday 08:00 UTC expiry (M303's dose,
+M309, M317).
+- R289's settlement reversal does not grow with the position expiring near the money. High- and low-dose Fridays
+  swap between the windows.
+- The dealers' delta in expiring options moves the perp neither inside the 07:30-08:00 window nor in the two hours
+  after it. The sign of the after-08:00 test flips between windows (+1.55, then −1.55).
+- That delta is 0.13-0.47% of a day's perp volume at the median.
+- With R292 and R295, three Deribit nulls agree: Deribit positions are too small next to Binance perp volume to move
+  it at these scales.
+- **Still open on options:** M310 (vanna after FOMC, low power), and M289/M175 (pinning, max pain) on the chain
+  recorder's true open interest, which needs forward Fridays.
+
+The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
+
+## Factor leads from R282 (2026-10-22)
+**R298 `lotcap_v1` is done: NULL** (16 trials, M276). It tested R282's lottery-cluster quintile books with a close-based
+cover on each short.
+- The best discovery book (age, 24 h, 35% cover; t +1.70) has a validation t of +1.03, against a 2.0 bar.
+- Wide covers clip the squeezes without cutting the median, but they added money only in 2024-26.
+- The cluster books flip sign between 2021-23 and 2024-26, as R282's vol_mcap did.
+- **The age factor ties about 80 pre-2021 coins at its maximum** (`scripts/pitfac_factors.py` counts them from the
+  panel start). So the age books' long leg in 2021-24, here and in R282, was an alphabetical slice.
+  - Any further age lane needs an uncensored listing date first.
+  - Factor plumbing runs should print the tie at each leg's edge.
+
+**Next family: R299, ML cross-sectional rankers on the daily panel (M042).** The panel's 66 columns (funding on six
+venues, OI, positioning, basis, Korean premium, caps, on-chain) have never been combined. The old session's ridge and
+GBM composite used 13 price features (rank IC 0.01-0.04, NULL).
+- Purged walk-forward fits.
+- The books are costed at API rates with funding.
+- The family is decided by SPA.
+
+## Cross-sections on the daily panel (2026-10-22)
+**R300 `intrars_v1` is done: NULL** (24 trials, M318). Ranked from 00:00 UTC, the top 50 perps' first-hour movers
+reverse and the late-day leaders keep leading, but no book pays the 34 bp/day round trip reliably.
+- The pick (10:00 New York, 3 names, follow) grossed about +70 bp/day in both windows and every year. Its validation
+  t is 1.28, and it is negative without its 10 best days.
+- Post hoc lead for unseen data only: relative strength into the US morning (M319).
+
+**R301 `qbasis_v1` is done: NULL** (16 trials, M170). Sorting the 5-10 coins with Binance quarterlies on their
+annualized basis, or its weekly change, does not rank the perps that follow.
+- The pick (long the 2 lowest basis, short the 2 highest, weekly) earned +14.6 bp/day net in 2021-23 and +1.2 in
+  2024-26 (t 0.16).
+- The sides flip between windows. The basis is about half funding (rank correlation +0.41 to +0.50).
+
+**R302 `fundxs_v1` is done: NULL** (8 trials, M263). The pick (fund3, daily, top 150) earned +25.3 bp/day net in
+2021-23 (t 3.32) and −7.2 in 2024-26. It reproduces R276's +10.43 (here +11.2 at 7 bp), and that number is 2021's
+price effect. The funding part is steady; in 2025-26 squeezed perps paid their longs about 30 bp/day and fell by as
+much. R276 and R190 do not conflict: funding is worth collecting only hedged.
+
+It was frozen as follows (8 trials, M263). R276's reference factor as a book: long the fifth of the universe
+paying the least funding, short the fifth paying the most, net of the funding each leg pays.
+- The family: fund3 or fund30 × a 1 d or 7 d hold × the top 150 or top 50.
+- It splits each book into its price and funding parts. That is the reconciliation with R190's carry that M263
+  asked for.
+- **Gate 0 on seen data:** R276 read this book over 2021-26 in one piece. A pass earns reserved batch 2 and a
+  forward paper lane, not a confirmation.
+
+**R299 `mlrank_v1` passed its frozen rule, and its audit invalidated it** (12 trials, M042).
+- The GBM weekly book earned +55.4 bp/day net in 2024-26 (t 4.02), with a rank IC of 0.19. That is too strong for a
+  market-neutral book.
+- **The cause is coverage survivorship.**
+  - KuCoin, Kraken, MEXC, Hyperliquid, Upbit and Bithumb were fetched only for markets live at download time.
+  - `n_venues`, `fund_gap7` and `kimchi7` therefore tell the model which coins will later be delisted.
+  - KuCoin covers 53-95% of survivors' rows and 0-5% of later-delisted perps'.
+- The rule for every lane is in `docs/FEATURE_VINTAGE_INTEGRITY.md`.
+- Registry rows R299-R302 are appended. Program trials: 9,478,673.
+
+**R303 `capit_v1` is NULL** (10 trials, M302 and M286). Frozen in 811283d before the run.
+- The pick, dip40 h5, earned +670 bp per event in 2021-23 (t 2.08) and −450 in 2024-26 (t −4.58).
+- Every hedged dip book lost in 2024-26, and so did the long leg alone. Deep dips kept falling.
+- breadth h5 (buy the top 50 after a breadth day) beat the drift in all six years, on too few days (t 1.55). It is
+  queued as M322, to be read on unseen data only.
+- Program trials: 9,478,683.
+
+**R304 `mlrank_v2` is PARTIAL, and R305 `mlaudit_v1` could not explain it** (7 + 7 trials, M042, gate 0).
+- Without the three leaking columns the weekly GBM still earns +58.9 bp/day net in 2024-26 (t 4.21). A GBM on the
+  leaking columns alone loses. R299's leak was real but carried nothing.
+- **R305 rejected the three obvious stories.** Age, the six risk features and beta did not carry the pick.
+  - Without age it still earns +56.1 bp/day.
+  - The risk features alone lose, and without them the book earns +62.4.
+  - A fixed low-risk score loses.
+  - The alpha over the equal-weight universe is +58.4 bp/day (t 4.22).
+  - What is left: the GBM's interactions among flow, funding, OI and positioning.
+- **It is not tradable as run.** Both windows were read before (R299). The short leg had a name up >100% in a week
+  in 15.5% of 2024-26 weeks (COAI +1,850%, 2025-10). Missing OI and positioning (about half the rows) are untested as
+  a driver.
+- Program trials: 9,478,697.
+
+**R306 `msnr_v1` (M323, the owner's reel on Malaysian support and resistance): NULL, 24 trials.**
+- Every book loses in both windows: fade and break, levels 5 or 30 days old, three exits, top 50 perps.
+  - Validation: −6.7 to −62.1 bp/day at 1x.
+  - The 17 FX, metal and index perps lose too (t −1.3 to −9.6).
+- Fading a fresh level is about 0 gross at 24 hours and −13 to −50 bp at 72 hours. Levels break more than they
+  bounce.
+- With R243, R246 and R263, chart levels on liquid perps are closed. No more level-drawing variants without a new
+  reason.
+- Program trials: 9,478,721.
+
+**R307 `rrskew_v1` (M174) and R308 `nagel_v1` (M325): both NULL, 24 and 8 trials.**
+- **R307:** the Deribit 25-delta risk reversal does not time BTC or ETH by the week.
+  - It follows the week before (correlation +0.2 to +0.5) more than it leads the week after (+0.03 to +0.15).
+  - With R209, R292, R295 and R296, the Deribit tape has now been read four ways for direction, with no edge.
+- **R308:** the reversal after stress days earned in 2021-23 and lost in 2024-26. After stress days the losers kept
+  falling, including in the 2025-10-10 cascade.
+- Program trials: 9,478,753.
+
+**Next, in order:**
+1. **R304's pick goes forward:** three frozen paper lanes on MEXC prices:
+   - the pick;
+   - the long leg against an equal-weight hedge;
+   - the pick with a cover on each short.
+   They need a live feature pipeline from the daily Binance metrics archive. The pick also goes into reserved
+   batch 2, whose PREREG must fix how rows without metrics (all of 2020) are scored.
+2. **The open audit:** a missing-flag refit, and a refit on rows with metrics only, as one frozen lane.
+3. **The reels' three lanes are done** (R306-R308, all NULL). `lab/stress.py` (M324) stays as a report for every
+   FINDINGS.
+4. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
+   coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
+   lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.
+5. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
+6. **M320 / M321 (owner's reels, 2026-10-22):**
+   - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
+   - First, validate LSE's index bars against an independent close.
+   - Then fetch the MEXC index-perp klines.

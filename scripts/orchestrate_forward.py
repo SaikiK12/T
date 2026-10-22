@@ -89,6 +89,10 @@ def forward_tasks(python=".venv/bin/python"):
     return (
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
         task("REC_FUNDING", "record_funding_board.py", timeout=120),
+        task("REC_DERIBIT", "record_deribit_chain.py", timeout=120),
+        task("REC_LIGHTER", "record_lighter_book.py", timeout=600),   # backgrounded in forward_all.sh
+        task("REC_DEX", "record_dex_prices.py", timeout=60),     # starts the 5-minute daemon if it is down
+        task("REC_WALLETS", "record_wallets.py", timeout=120),
         task("REC_NOTICES", "record_notices.py", timeout=300),
         task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
         task("REC_TAPE", "record_tape.py", timeout=60),

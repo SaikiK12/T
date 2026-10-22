@@ -39,6 +39,8 @@ FORWARD = [
     ("R279", "xfund_kc_fwd", "journal/status.json", {"A": "cross-venue carry, Gate + KuCoin",
                                                      "B": "cross-venue carry, Binance + KuCoin"},
      "NW t >= 2.5 at 90 / 180 scored days"),
+    ("R294", "xfund_lt_fwd", "journal/status.json", {"A": "cross-venue carry, MEXC + Lighter"},
+     "NW t >= 2.5 at 90 / 180 scored days"),
 ]
 WAITING = [
     "Answered 2026-10-20: every public download approved (\"we need all data possible\"); execution mode both"
@@ -84,7 +86,7 @@ def forward_rows():
             on = s.get(f"{key}_ontime") or (s.get(key) or {}).get("ontime") or {}
             if lane == "flow72_fwd2":                   # R200 keeps one series per book; its `late` flag splits it
                 rep, on = r200_split(key)
-            if lane in ("xfund_fwd", "xfund_kc_fwd"):   # carry lanes keep flat totals per book; live = on-time + late
+            if lane in ("xfund_fwd", "xfund_kc_fwd", "xfund_lt_fwd"):   # carry lanes keep flat totals per book; live = on-time + late
                 b = s.get(key) or {}
                 rep = {"days": b.get("replay_days", 0), "total": b.get("replay_total")}
                 on = {"days": b.get("scored_days", 0), "total": b.get("total"), "total_2x": b.get("total_2x"),
