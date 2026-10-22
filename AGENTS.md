@@ -22,6 +22,8 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 - **Reuse the existing record.** Put a lane's result in its FINDINGS and source extraction/aliases in the existing
   `research/intake/` bundle and live queue. Keep audits and dated proposals as evidence, not competing task lists.
   Before merging or moving a document, check unique facts and inbound references; frozen links and provenance stay valid.
+- In new PREREGs, keep the Registry id alone on its metadata line, as in `templates/lane/PREREG.md`; put claim
+  history and method notes on separate lines. Historical annotations stay frozen; fix their reader when necessary.
 - Every round gets a registry row with its trial count, even when it finds nothing.
 - Read a result against `registry.program_trials()`, not only against its own null.
 - Report cost sensitivity (1x, 2x, 3x) in every FINDINGS.
