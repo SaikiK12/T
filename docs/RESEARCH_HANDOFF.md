@@ -1,5 +1,27 @@
 # Research handoff: adjacent work
 
+## Repository use audit (2026-10-22, base `5bb9309`)
+
+The tracked tree has 302 Markdown files (53 under `docs/`), 44 library modules, 184 Python/shell scripts and 124
+experiment folders. No byte-identical Markdown duplicate was found. Topic overlap includes distinct source receipts,
+dated proposals, tests and critiques; those are not interchangeable facts to discard.
+
+A static Python-import pass finds production references to 39 of the 44 `lab/` modules and test references to 42.
+This is dependency evidence, not runtime profiling or test coverage. For example, `lab.flow` is a documented
+`python -m` command despite having no direct production import. Do not delete modules based on import counts.
+
+Two concrete integration gaps remain visible in code: [microstructure helpers](../lab/microstructure.py) have tests
+but no direct production importer; [R304's fitter](../scripts/run_mlrank.py) returns GBM predictions and discards the
+estimator. Neither a tested feature helper nor a historical ranking is a prospective trading lane. M264 and M042 in
+[the live queue](../registry/methods.csv) retain their own exact scope; raw point-in-time inputs, model/feature lineage
+and a frozen forward specification remain necessary. No market outcomes or performance profile were computed here.
+
+## Historical R212 handoff
+
+**Historical handoff.** The R212 snapshot below is retained for provenance. It is not the active writer list or a
+current task queue. Use fresh [room claims](https://github.com/SaikiK12/T/issues/7), [methods.csv](../registry/methods.csv)
+and each linked lane's latest recorded evidence before resuming a candidate.
+
 Current snapshot: Claude's branch `claude/yo-9a1k5w`, commit `95efda7` (R212). Its open pull request says an adversarial audit of the forward pipeline and the R205-R212 scripts is in progress. The code contribution here is limited to research-artifact bookkeeping so that audit can continue in its own area.
 
 ## Read-only integrity check
