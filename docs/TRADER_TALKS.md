@@ -305,14 +305,30 @@ through a frozen PREREG.
 
   They are seeds for a new lane on reserved or forward data, not results.
 
+Added from Whisper transcripts on 2026-10-22 (08:01 UTC rebuild: 358 windows for 44 people):
+- **Linda Raschke (tier A: a CTA in Schwager's *The New Market Wizards*; Better System Trader 049 and 124):**
+  - **Intraday relative strength:** at the open, long only the top three relative-strength leaders and short only
+    the bottom three. "I'll get a win loss ratio of 80%… The duration of that edge might only last one day."
+    Queued as **M318**.
+  - **Against crowded trends:** "these markets tend to get very crowded very quickly. So the liquidation flushes can
+    be quite severe", and a volatility breakout held about 24 hours trades against the trend. R243 and R263 tested
+    breakouts without the crowding condition.
+  - **On the first hour:** "in a strong trend, the first hour always offers the opportunity for the day". R293 found
+    the first UTC hour reverses in crypto (M315, for unseen data only).
+- **Kevin Davey (tier A: World Cup Trading Championship results):** end-of-day systems because he worked full time.
+  Scale trading, adding to a loser on a scale down, is how he "got killed". That is the lab's prop never-do list
+  (martingale).
+- **Peter Brandt (2026 episode):** takes partial profits within a week or two "to give staying power" to the rest,
+  and sizes every trade the same because he cannot tell which will be the best. A sizing rule, not a signal.
+
 ## Not checked
 - No quote above was tested here. The numbers are the sources' own: SEBI's are allegations, Kotegawa's are press
   reports, Elmarhri's are his own.
 - Whisper transcripts were not checked against the audio. The French quotes come from the podcast's published
   transcript.
-- People the roster names but the feeds do not carry (Simons, Yass, Gerko, Druckenmiller, Raschke, Larry Williams)
-  have no transcript here. Raschke's and Williams's setups were looked up only in secondary code ports, so they are
-  not carded.
+- People the roster names but the feeds do not carry (Simons, Yass, Gerko, Druckenmiller, Larry Williams) have no
+  transcript here. Williams's setups were looked up only in secondary code ports, so they are not carded. Raschke
+  has two Better System Trader transcripts from 2026-10-22.
 
 ## Sources
 - So What podcast, episode with Tarek Elmarhri (Ausha):
