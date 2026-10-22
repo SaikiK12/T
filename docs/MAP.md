@@ -471,6 +471,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - entries on contracts missing from a venue's live list are blocked, which R278 does not do
     ([R278 notes](../experiments/xfund_fwd/NOTES.md));
   - it runs on `lab/carrylane.py`, R278's lane for any venues, whose journals match R278's script in a test.
+- **R294 (xfund_lt_fwd)** runs R288's mexc+lighter book forward on paper:
+  - the same rule, accounting and decision as R279, at R288's costs (5.5 / 11 / 16.5 bp per leg);
+  - on-time from 2026-10-23; NW t >= 2.5 at 90 / 180 scored days (2027-01-21 / 2027-04-21);
+  - Lighter's fill is its book mid, read when a ticket needs it: its mark price sat a median 6 bp from the mid;
+  - `lab/xfund.py` reproduces R288's mexc+lighter trades exactly (`scripts/xfund_parity.py --lane xfund_lt_v1`).
+  - [PREREG](../experiments/xfund_lt_fwd/PREREG.md).
 - **R280 (levcarry_v1), done: the books stay at 1x, on cross margin per venue.** It measured how much leverage these
   five books can carry before an intraday move liquidates a leg, under 3 margin policies and 2 maintenance margins
   (0 trials).
@@ -516,6 +522,7 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - dydx+lighter fails on dYdX's 2025-10-10 crash prints.
   - Smaller than R277's KuCoin sets (+20-24%/yr in 2025-26), and shrinking from 2025 to 2026. The zero fee is worth
     about 0.3-0.4%/yr.
+  - Forward on paper as R294 `xfund_lt_fwd` (mexc+lighter).
   - [FINDINGS](../experiments/xfund_lt_v1/FINDINGS.md).
 - **R289 (clockflow_v1), NULL** (40 variants, M301 and M303 from `docs/TRADER_TALKS.md`, 1-minute bars).
   - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).

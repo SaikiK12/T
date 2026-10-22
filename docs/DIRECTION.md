@@ -240,8 +240,13 @@ Lighter also joined the cross-venue carry family as a venue. **R288 `xfund_lt_v1
 replication (gate 0).** R275's best book replicates on 5 of the 6 Lighter sets.
 - **The result is small:** +3.5 to +6.2%/yr at 1x, against +20-24%/yr for the KuCoin sets over the same years.
 - **The zero fee** is worth only about 0.3-0.4%/yr there.
-- **Next:** a forward paper lane for mexc+lighter (new id), once `lab/carrylane.py` can read Lighter's daily funding
-  and candles. It ranks below the KuCoin lane (R279), which is already running.
+- **R294 `xfund_lt_fwd` runs the mexc+lighter book forward on paper** from 2026-10-23 (PREREG frozen 2026-10-22, 1
+  trial).
+  - `lab/carrylane.py` now reads Lighter: hourly candles and funding, the contract list, and book mids. Every request
+    goes under the machine-wide Lighter lock.
+  - The Python twin reproduces R288's book exactly: 305 of 305 trades.
+  - The first look is at 90 scored days (2027-01-21). The in-sample power is 96%, but the book earns only about
+    5%/yr, so it ranks below the KuCoin lane (R279).
 - Trading on Lighter needs an on-chain wallet: that is the owner's call.
 
 ## What proven traders let slip (owner, 2026-10-21)
@@ -345,8 +350,7 @@ on each trade.
   hourly autocorrelation out of sample.
 - **Why:** dealers are short gamma on 76-92% of days, and the hedge they need is a fraction of a percent of a day's
   perp volume per 1% move. Open-interest GEX dashboards overstate it, because most open interest nets out.
-- **Next on this data:** block prints (M311) and net drift (M313), each in its own lane. M316 (post hoc) is for
-  unseen data only.
+- **Next on this data:** block prints (M311, `blocks_v1`), net drift (M313) and `charm_expiry_v1` (R289's Friday
+  settlement reversal against expiring gamma), each in its own lane. M316 (post hoc) is for unseen data only.
 
 The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
-
