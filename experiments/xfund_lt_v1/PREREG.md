@@ -24,17 +24,41 @@ afterwards; a change is a new lane.
     funding hours (13,023 and 2,372); hourly candle and funding counts for BTC;
   - one hour of Lighter books (costs per side, `docs/VENUE_STRUCTURE.md`).
 - **Not computed on Lighter:** no funding rate level or spread, no return.
-- **The symbol table** is built from file names and contract lists only (`scripts/lighter_table.py`).
+- **The symbol table** is built from file names and contract lists only (`scripts/lighter_table.py`):
+  - 195 Binance perps on Lighter;
+  - of those, 194 are on Gate, 100 on Hyperliquid, 117 on MEXC, 186 on KuCoin and 91 on dYdX.
+- **The file layouts,** checked at the freeze:
+  - the column names of Lighter's BTC funding and candle files and their row counts (15,395 and 15,416);
+  - the first two funding rows, already seen while testing the fetcher (zero rate, 2025-01-17).
+- **R277's spec rerun** for engine parity (above). Its numbers are R277's, already published.
 
 ## Inputs (frozen)
 
-Filled at the freeze, after the Lighter fetch has finished:
+Filled at the freeze (2026-10-22), after the Lighter fetch finished (2026-10-21 22:33 UTC):
 
 ```inputs
+experiments/xfund_lt_v1/symbols.csv  e5a689a3bce5f16759104ab7dac945be2ad617317099b124b2137ef308fff1b1
+experiments/xfund_lt_v1/spec.toml  bd43179f845d1dc109e558f678476c0425346b26bb3e9edb152b801fe5a94eb2
+scripts/lighter_table.py  2892c525929de66c687d92e26df683c58c50b56ad7b16be2639fdd6f325f2b02
+lab/venues.py  ff6d80e23b337ee3c26ae44c718ba5893fb8e988fd23753631ddedd28b03e820
+lab/data.py  a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe
+engine/src/spread.rs  3f49b5c545fdaf0c03185d15da8b6c0adc0fec417463e5f4e93b80d8f22414d5
+engine/src/data.rs  4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146
+engine/src/reserved.rs  02397aa28548fea14eaac24d311b0f658f74055eadab5cf6b3712375732d4ee6
+engine/src/events.rs  47e4160e525fadc15dc5ec9d53c713a0d07e92397c9ddd07f779ad1896ddb58d
+engine/src/factors.rs  636eaef71ea28cedac413e728ba71470933b9f719a3ac40880b80a19ed65c31f
+engine/src/stats.rs  bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47
+engine/src/main.rs  2e523e2bd1d251096b10ee92bd9bca002a8afc1300aa8c0d3aa8281a5e107f45
+engine/Cargo.lock  9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f
+rebuild: python scripts/lighter_table.py --venues gate,hyperliquid,mexc,kucoin,dydx --out {tmp}/symbols.csv
 ```
 
-- **Engine:** the `qx spread` sources must be byte-identical to R275's frozen ones (the same hashes as in R275's and
-  R277's inputs).
+- **Engine:** since R275 and R277 froze, `spread.rs` gained only the reserved-sample guard (commit 2c57ca2: a
+  `reserved_prereg` field and a check before any read). The accounting is unchanged.
+  - **Parity, checked before this freeze:** R277's frozen spec, rerun with the current engine into the scratchpad,
+    gives a `strategies.csv` byte-identical to R277's frozen one. No Lighter data was read in that check.
+  - The draft's wording (sources byte-identical to R275's) could not hold after that commit. The parity check
+    replaces it.
 - **Symbol table:** Binance perps that Lighter lists, with each other venue's symbol from `lab.venues` (unchanged;
   it is pinned by R277 and R282). Lighter's long tail (no Binance perp) is reserved (`docs/GATES.md`) and never
   listed.
@@ -106,5 +130,5 @@ Filled at the freeze, after the Lighter fetch has finished:
 
 ## Multiplicity
 - Trials: 6.
-- Program trials before this lane: those of `registry.program_trials()` at the freeze, stated in FINDINGS.
+- Program trials before this lane: 9,478,562 (`registry.program_trials()` at the freeze, 2026-10-22).
 - The bar (NW t > 2.64) is Bonferroni over the 6 sets. The lane is a replication of R275, not a new search.

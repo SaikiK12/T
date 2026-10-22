@@ -236,9 +236,13 @@ coins. API-mode rules that died on costs between 2 and 8 bp per side get a secon
 - on Lighter's own price history;
 - as one frozen family at gate 0.
 
-Lighter also joins the cross-venue carry family as a venue: R288 `xfund_lt_v1` (drafted; frozen once Lighter's
-funding history is fetched) runs R275's best book on six sets that pair Lighter with each venue held, with the
-Lighter leg charged 4 bp instead of 7.
+Lighter also joined the cross-venue carry family as a venue. **R288 `xfund_lt_v1` is done: CONFIRMED as a venue
+replication (gate 0).** R275's best book replicates on 5 of the 6 Lighter sets.
+- **The result is small:** +3.5 to +6.2%/yr at 1x, against +20-24%/yr for the KuCoin sets over the same years.
+- **The zero fee** is worth only about 0.3-0.4%/yr there.
+- **Next:** a forward paper lane for mexc+lighter (new id), once `lab/carrylane.py` can read Lighter's daily funding
+  and candles. It ranks below the KuCoin lane (R279), which is already running.
+- Trading on Lighter needs an on-chain wallet: that is the owner's call.
 
 ## What proven traders let slip (owner, 2026-10-21)
 The owner asked for the talks of people who made money trading, starting with Tarek Elmarhri, and for what they say

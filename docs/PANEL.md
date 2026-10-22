@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-22 01:33 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-22 02:18 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -52,7 +52,7 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 | R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 61 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 | R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 61 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 
-Processing lag of on-time hours: 49 hours, median 81.48333333333333 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21.
+Processing lag of on-time hours: 50 hours, median 80.68333333333334 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21.
 
 ## 3. Next in the queue
 

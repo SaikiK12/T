@@ -509,7 +509,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
 - **R287 (pcares_v1), NULL** (24 variants, M298). Hourly PCA residuals revert a little (gross up to +19 bp/day), but
   hourly trading costs several times that; break-even is at most 3.5 bp per side.
   [FINDINGS](../experiments/pcares_v1/FINDINGS.md).
-- **R288 (xfund_lt_v1), reserved.** Lighter carry replication; frozen once Lighter's funding history is fetched.
+- **R288 (xfund_lt_v1), CONFIRMED as a venue replication** (6 trials, gate 0, M059). R275's best carry book,
+  unchanged, paired Lighter (0/0 fees) with each other venue.
+  - 5 of 6 sets replicate (NW t 6.5-7.6, both halves positive, positive at 2x). The best is mexc+lighter: +6.20 /
+    +5.00 / +3.79 %/yr at 1x/2x/3x from 2025-05.
+  - dydx+lighter fails on dYdX's 2025-10-10 crash prints.
+  - Smaller than R277's KuCoin sets (+20-24%/yr in 2025-26), and shrinking from 2025 to 2026. The zero fee is worth
+    about 0.3-0.4%/yr.
+  - [FINDINGS](../experiments/xfund_lt_v1/FINDINGS.md).
 - **R289 (clockflow_v1), NULL** (40 variants, M301 and M303 from `docs/TRADER_TALKS.md`, 1-minute bars).
   - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).
   - On Fridays, a move inside Deribit's 07:30-08:00 UTC settlement window reverses by about +20 bp gross per trade
@@ -652,6 +659,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,562 after R293 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,568 after R288 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
