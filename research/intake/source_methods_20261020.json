@@ -12190,6 +12190,20 @@
           "limits": "qtr_basis_ann construction, imported accounting helpers, caches and other consumers were not audited; no result outcomes were read."
         }
       },
+      "engineering_followup_20261022": {
+        "base_commit": "5bb93092f5d7b323338fafb75621c8a85a1f8bdc",
+        "pr_url": "https://github.com/SaikiK12/T/pull/46",
+        "repository_commit": "f901944",
+        "scope": "Future COIN-M exports use an explicit coinm_1h_v2 namespace, corrected base-volume labels and schema/hash completion receipts. Existing legacy caches and frozen consumers are preserved; adoption by future panels is explicit.",
+        "consumer_audit": [
+          "lab/daily.py quarterly construction selects close; scripts/run_qbasis.py selects price/funding/basis/days. No direct volume use identified there.",
+          "scripts/run_rrskew.py selects t/close; its check_trees and scripts/run_msnr.py fingerprint complete legacy files. In-place relabeling would change those frozen inputs.",
+          "scripts/build_daily.py records input-folder provenance; dashboard references classify files. These source reads do not establish unchanged outcomes for every possible downstream use."
+        ],
+        "validation": "26 focused synthetic parser/cache tests and 807 full-suite tests pass, 3 skipped; independent review passed. Missing listed archives, interrupted publication, invalid schema/hash, symlink destinations and concurrent targets are covered.",
+        "limits": "No market cache or outcomes read/changed, no fetcher run or market-data download. No R301/R307 invalidation inferred. Generic Volume denomination remains unresolved; old limits above describe the earlier source-only pass.",
+        "market_trials": 0
+      },
       "prior_queue_row": {
         "commit": "a6b7e2c",
         "row": {
