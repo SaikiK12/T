@@ -391,3 +391,27 @@ GBM composite used 13 price features (rank IC 0.01-0.04, NULL).
 - Purged walk-forward fits.
 - The books are costed at API rates with funding.
 - The family is decided by SPA.
+
+## Cross-sections on the daily panel (2026-10-22)
+**R300 `intrars_v1` is done: NULL** (24 trials, M318). Ranked from 00:00 UTC, the top 50 perps' first-hour movers
+reverse and the late-day leaders keep leading, but no book pays the 34 bp/day round trip reliably.
+- The pick (10:00 New York, 3 names, follow) grossed about +70 bp/day in both windows and every year. Its validation
+  t is 1.28, and it is negative without its 10 best days.
+- Post hoc lead for unseen data only: relative strength into the US morning (M319).
+
+**R301 `qbasis_v1` is done: NULL** (16 trials, M170). Sorting the 5-10 coins with Binance quarterlies on their
+annualized basis, or its weekly change, does not rank the perps that follow.
+- The pick (long the 2 lowest basis, short the 2 highest, weekly) earned +14.6 bp/day net in 2021-23 and +1.2 in
+  2024-26 (t 0.16).
+- The sides flip between windows. The basis is about half funding (rank correlation +0.41 to +0.50).
+
+**R302 `fundxs_v1` is frozen** (8 trials, M263). R276's reference factor as a book: long the fifth of the universe
+paying the least funding, short the fifth paying the most, net of the funding each leg pays.
+- The family: fund3 or fund30 × a 1 d or 7 d hold × the top 150 or top 50.
+- It splits each book into its price and funding parts. That is the reconciliation with R190's carry that M263
+  asked for.
+- **Gate 0 on seen data:** R276 read this book over 2021-26 in one piece. A pass earns reserved batch 2 and a
+  forward paper lane, not a confirmation.
+
+**R299 `mlrank_v1`** (12 trials, M042) is still fitting its weekly books. Its registry row goes in first, then
+R300's, R301's and R302's, in order.
