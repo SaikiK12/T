@@ -13,6 +13,15 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 8. **A null is a result.** Record it with the same care as a hit.
 
 ## Working rules
+- **Read by task, not by corpus.** Start with fresh writer claims in issue #7, open PRs, and the timestamp on
+  `docs/PANEL.md`. Then read only the relevant method rows and linked lane evidence. Do not reread every research
+  note or start a new search just because a dated memo calls an idea open.
+- **One authority for each fact.** `registry/methods.csv` is the live queue; `registry/rounds.csv` records round
+  status/trials/verdicts; each lane's frozen PREREG and FINDINGS define exact tested scope. `docs/METHODS_QUEUE.md`
+  is a historical snapshot. PANEL and folder README catalogs are generated views, not proof of process health.
+- **Reuse the existing record.** Put a lane's result in its FINDINGS and source extraction/aliases in the existing
+  `research/intake/` bundle and live queue. Keep audits and dated proposals as evidence, not competing task lists.
+  Before merging or moving a document, check unique facts and inbound references; frozen links and provenance stay valid.
 - Every round gets a registry row with its trial count, even when it finds nothing.
 - Read a result against `registry.program_trials()`, not only against its own null.
 - Report cost sensitivity (1x, 2x, 3x) in every FINDINGS.

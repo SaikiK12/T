@@ -22,6 +22,12 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
 ## Docs
 
+Read by task instead of loading this entire list. The authority for current method status is
+[`registry/methods.csv`](registry/methods.csv), and for recorded round status/trials/verdicts it is
+[`registry/rounds.csv`](registry/rounds.csv). Read the linked lane's PREREG and FINDINGS for exact scope. The panel
+is a timestamped generated snapshot; consult fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7)
+for active writers. Dated proposals, audits and source notes below retain history, not a second current queue.
+
 **Start here**
 - [`PANEL.md`](docs/PANEL.md): live status.
 - [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
@@ -44,7 +50,7 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
   [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
   [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
-- What to test next: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
+- Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
   [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
   [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
   [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md).
@@ -59,7 +65,7 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`AUCTION_AND_FLOW.md`](docs/AUCTION_AND_FLOW.md) (the owner's 21 terms: auction market theory, order flow, dealer
   gamma/delta/vanna/charm exposure; critique, our own terminal, the AI council, questions for the owner),
   [`QUANTDATA.md`](docs/QUANTDATA.md) (QuantData's options-flow metrics mapped to crypto data we hold; VPIN tested,
-  R291 NULL).
+  R291 NULL), [`TRADER_TALKS.md`](docs/TRADER_TALKS.md) (received practitioner talks and their extraction scope).
 
 **Trading, execution and capital**
 - The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md). Other venues and their fees (Lighter's zero-fee API,
@@ -82,7 +88,10 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 - Forecast evaluation: [`FORECAST_EVALUATION_PLAYBOOK.md`](docs/FORECAST_EVALUATION_PLAYBOOK.md),
   [`ADAPTIVE_SELECTION_AND_DRIFT.md`](docs/ADAPTIVE_SELECTION_AND_DRIFT.md).
 
-Docs stay at their paths because frozen PREREGs link to them.
+Docs stay at their paths because frozen PREREGs link to them. Topic overlap alone does not establish duplication:
+source receipts, proposed mechanics, a frozen test and its verdict answer different questions. Add new facts to the
+existing intake, lane or process document before creating another review. Generated folder catalogs come from
+`scripts/catalog.py`; edit their registry/docstring sources, not the generated text.
 
 ## Use
 

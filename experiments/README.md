@@ -6,10 +6,13 @@ One folder per lane. A lane is frozen (`PREREG.md`) before any statistic and rep
 forward paper lane also keeps a `journal/`. The ids, statuses and trial counts come from
 [`registry/rounds.csv`](../registry/rounds.csv). Newest first.
 
-Status: RUNNING (forward, collecting days), DONE, ARMED (waits for an event), REGISTERED or PLANNED.
+Status: RUNNING, DONE, ARMED (waits for an event), REGISTERED or PLANNED.
 Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
-## Forward paper lanes (running) (16)
+These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
+batch or a measurement; this heading does not turn them into forward paper evidence.
+
+## Running or armed registered rounds (16)
 
 - **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
 - **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))
@@ -28,8 +31,11 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (101)
+## Other registered rounds (done, registered or planned) (104)
 
+- **[nagel_v1](nagel_v1/)** R308, DONE NULL, 8 trials. Liquidity provision after stress (M325, Nagel 2012): 1-day top-50/150 reversal only after market abs-return, dispersion or OI-crash days in their trailing-year tail, plus every-day baselines; API tier costs ([PREREG](nagel_v1/PREREG.md), [FINDINGS](nagel_v1/FINDINGS.md))
+- **[rrskew_v1](rrskew_v1/)** R307, DONE NULL, 24 trials. Deribit 25-delta risk reversal (M174) as a weekly BTC/ETH perp timing signal: 30 d / 90 d RR built from every option trade with the COIN-M basis as the forward; sign / 90-day z / 7-day change z, follow or fade; manual-web costs ([PREREG](rrskew_v1/PREREG.md), [FINDINGS](rrskew_v1/FINDINGS.md))
+- **[msnr_v1](msnr_v1/)** R306, DONE NULL, 24 trials. Malaysian support and resistance (M323) on 4-hour candles: fade or follow the first touch of a fresh A/V level, age 30/180 candles, t24/t72/1:2 ATR bracket exits, top-50 Binance perps; secondary set of FX, metal, index and commodity perps reported ([PREREG](msnr_v1/PREREG.md), [FINDINGS](msnr_v1/FINDINGS.md))
 - **[mlaudit_v1](mlaudit_v1/)** R305, DONE NULL, 7 trials. Frozen audit of R304's pick: GBM h7 refits without age / risk-only / without risk, fixed low-risk, low-vol and age scores, beta vs equal-weight universe and BTC, short-leg squeeze tail ([PREREG](mlaudit_v1/PREREG.md), [FINDINGS](mlaudit_v1/FINDINGS.md))
 - **[mlrank_v2](mlrank_v2/)** R304, DONE PARTIAL, 7 trials. ML cross-sectional rankers (M042) again without the 3 survivor-leaking columns: ridge/IC/GBM x hold 1/7 d on 24 clean point-in-time features, top 150 Binance perps, API costs; plus a GBM on the 3 leaking columns alone ([PREREG](mlrank_v2/PREREG.md), [FINDINGS](mlrank_v2/FINDINGS.md))
 - **[capit_v1](capit_v1/)** R303, DONE NULL, 10 trials. Capitulation buys on Binance perps: hedged deep-dip longs (25-day gap <= -20/30/40%, hold 1/5 d) and the top-50 basket after breadth or cascade days (hold 2/5 d, over the drift); M302, M286 ([PREREG](capit_v1/PREREG.md), [FINDINGS](capit_v1/FINDINGS.md))
@@ -132,10 +138,26 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Data and loop folders (5)
+## Registered rounds with no local folder (6)
+
+The registry retains these rounds. Missing local evidence may be a legacy import or an incomplete checkout;
+it is neither a null result nor permission to recreate the round. Paths below are declarations, not links.
+
+- **R183** `experiments/hypermine_expand`: DONE DATA_PASS. Bybit perps cross-listed on MEXC: data coverage for 22 new labels
+- **R182** `experiments/hypermine`: DONE NULL. 38-feature search over 900 Binance USD-M perps 2021-2026
+- **R181** `experiments/unlocks_deep`: DONE CONFIRMED. what drives the unlock short
+- **R180** `experiments/unlocks_sf`: ARMED PENDING. unlock-short paper forward
+- **R144** `experiments/challengeoption`: DONE PARTIAL. challenge-option translation to crypto perps
+- **R143** `experiments/funded`: DONE PARTIAL. funded-account translation to crypto perps
+
+## Collection and loop folders (4)
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
-- **[msnr_v1](msnr_v1/)** No registry row and no description yet.
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
+
+## Unregistered folders (0)
+
+These have no registry row and are not classified as collection folders. Inspect their scope and freeze
+state before use; their presence does not establish a registered or completed study.

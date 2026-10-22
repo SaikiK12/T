@@ -1,5 +1,9 @@
 # Research coverage: tested cells, open mechanisms and data dependencies
 
+**Historical coverage review.** The tables below retain their review's exact distinctions and local-data limits.
+Current status belongs to [methods.csv](../registry/methods.csv), [rounds.csv](../registry/rounds.csv) and linked lane
+evidence. This review is not a second queue or proof that another checkout has the same inputs.
+
 Coverage audit started 2026-10-19 and updated 2026-10-20 with completed R228–R232 findings.
 This ledger summarizes linked evidence; its own text computes no new market result.
 “Closed” means do not repeat the tested rule unchanged; it does not falsify every rule in its broad family.
