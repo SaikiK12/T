@@ -628,6 +628,23 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The linear books lost money despite rank ICs of 0.10-0.15.
   - R304 reruns the family without the three features (`docs/FEATURE_VINTAGE_INTEGRITY.md`).
   - [FINDINGS](../experiments/mlrank_v1/FINDINGS.md).
+- **R304 (mlrank_v2), PARTIAL** (7 trials, M042, gate 0 on seen data).
+  - R299's family on 24 clean features, without `n_venues`, `fund_gap7` and `kimchi7`, plus a GBM on those three
+    alone as a diagnostic.
+  - The pick (gbm h7 clean, weekly) earned +36.0 bp/day net in 2022-23 (t 5.99) and +58.9 in 2024-26 (t 4.21), +54.6
+    at 3x. It passes all three checks.
+  - The leak-only GBM lost (−20.5 bp/day). The leak was real but carried nothing.
+  - [FINDINGS](../experiments/mlrank_v2/FINDINGS.md).
+- **R305 (mlaudit_v1), label `unexplained`** (7 trials, recorded as NULL: no explanation found; gate 0).
+  - Six refits and fixed scores tested whether age, low risk or market beta carried R304's pick. None did.
+    - Without age: +56.1 bp/day.
+    - On the six risk features alone: −15.7.
+    - Without them: +62.4 (t 5.42).
+    - A fixed low-risk score loses.
+    - Alpha over the equal-weight universe: +58.4 bp/day (t 4.22).
+  - The long leg holds the alpha (+45.9 bp/day over the universe, t 8.81).
+  - The short leg had a name up more than 100% in a week in 15.5% of validation weeks; COAI was up 1,850%.
+  - [FINDINGS](../experiments/mlaudit_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its

@@ -50,6 +50,10 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
     `reserved_prereg`), which also guard the venues' `reserved/` folders with their own tokens.
 - **MEXC-only coins**, 2025-04-01 onward: MEXC perps with no Binance perp in the archive. The set is fixed by a frozen
   PREREG before the first read.
+  - Batch 1 (R286) fixed it as the contracts of R265's 41 unlock events.
+  - The set covers crypto coins only. MEXC's FX, metal, index, commodity, stock and ETF perps (`data/mexc_tradfi`,
+    and the FX and metal contracts in `data/mexc_hist`) are not coins and are not reserved (noted 2026-10-22, before
+    R306 read any of them).
 - **Gate long tail and Gate 2020** (added 2026-10-20 with `scripts/fetch_gate_history.py`):
   - every Gate USDT perp whose base has no Binance perp (the same name rule as R274's `binance_perp`), all months,
     delisted contracts included;

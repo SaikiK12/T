@@ -361,3 +361,106 @@ the video address came from the public page's own data, with the page's cookies.
   - Both trade on MEXC at 0 / 2 bp. Both need LSE's index ticks and MEXC's index-perp klines.
 - **One harvest source:** the Oxford Strat's public-domain pattern list, for the next chart family.
 - **No new rule from the tier list, the repos or the TikTok.** Each item maps to a tested or queued row above.
+
+## Reel 15: instagram.com/reel/DejYIVkhcLQ (goatfundedtraderhq, 2026-10-16, 9,008 likes, 142 comments)
+- **Who:** Goat Funded Trader, a prop firm. The clip is a skit: a man in a gold mask pitches his method to a panel.
+- **Speech:**
+  - "I use Malaysian support and resistance… People in Malaysia tweet that."
+  - "I go in the four hour, there's a buy and a sell, where the buy has closed, on top of that, and where the sell
+    opens, that's my resistance. That strategy makes millions."
+  - The panel: "Bunch of BS."
+- **Comments:** mostly jokes; "MSNR is the best", "msnr, am trying on that". No numbers and no test.
+- **The method (MSNR):** from LuxAlgo's "Malaysian SnR" page and the TradingView script "Malaysian SnR [by DanielM]".
+  - **Levels come from candle bodies, not wicks.**
+    - **A-level:** the close of a bullish candle followed by a bearish one, a line-chart peak.
+    - **V-level:** the reverse, a line-chart valley.
+  - **Freshness:** a level is "fresh" until a wick touches it. The method trades the first touch.
+  - **Gap levels:** the method also uses gaps between one candle's close and the next one's open. 24/7 perps have
+    none.
+  - LuxAlgo publishes the rules but no test.
+- **Lab:**
+  - **It is a testable rule:** fade the first touch of a fresh level, or follow a 4-hour close through it. That is
+    **M323**, frozen as **R306 `msnr_v1`**: 12 crypto books (fade or break × a level life of 5 or 30 days × a 24 h,
+    72 h or 1:2 ATR bracket exit) on the top 50 Binance perps.
+  - **The secondary read** covers Binance gold and silver and MEXC's FX, metal and index perps. It is report only,
+    since most of MEXC's index history starts in 2026.
+  - **Priors are against it.**
+    - R243's pivot breaks and fades lost.
+    - R246's round-number levels carried only the generic one-hour reversal.
+    - R248 closed the pivot family.
+    - R263's 5,472 chart rules found nothing.
+  - MSNR's two differences are the body-based level and the freshness rule. R306 tests exactly those.
+
+## Reel 16: instagram.com/reel/DeKFE8OEq-i (iamzarch, 2026-10-06, 388 likes, 28 comments; French)
+- **Who:** "The Candidate" by The Finance Games, episode 1, a mock trading interview with buzzers. A candidate is asked
+  about the volatility smile.
+- **Speech (translated):**
+  - "25-delta put, 25-delta call, do you know what that means?"
+  - "Which is more expensive in terms of vol? The put costs more than the call."
+  - The candidate starts on put-call parity (C − P = S − K·e^(−rT)) and its assumptions: no arbitrage, European
+    options.
+  - "The smile is fundamental… it has to come at once."
+- **Lab:**
+  - **The 25-delta risk reversal** is the call's implied vol minus the put's at the same delta. A rich put (negative
+    RR) is the equity-index norm.
+  - **In BTC the sign changes with the regime.** Calls traded rich in the 2020-21 and 2024 rallies (Amberdata; Coin
+    Metrics computes the series).
+  - So the skew is information, not a constant. An unreviewed SMU dissertation (2026, Deribit 2021-04..2025-12)
+    reports the 25-delta 90-day RR predicting BTC returns: t 3.73 with 13 controls, 1.91 alone.
+  - **The lab holds the data to test it:** every Deribit option trade with its implied vol (`data/deribit_trades`,
+    BTC from 2016-11, ETH from 2019-03).
+    - The hourly 25-delta RR can be built from those trades, with delta from Black-Scholes.
+    - That is **M174**, queued as **R307 `rrskew_v1`**: discovery 2021-23, validation 2024-26, no 2020.
+  - **Prior:** single-asset timing signals have been NULL here (R209 DVOL, R292 dealer gamma, R295 option flow). The
+    expected result is a null.
+
+## Reel 17: instagram.com/reel/DbIlAc1g0LM (oddsonopenpod, 2026-07-23, 8,580 likes, 109 comments)
+- **Who:** Tom Costello on the Odds on Open podcast. The on-screen title reads "Ex-Quant PM, Tudor Investment Corp".
+- **Caption:** "Everybody in quantitative finance is a genius."
+- **Speech:**
+  - "A kid from Caltech… builds a high-frequency system, but he doesn't know that a high-frequency market-making
+    system has a short volatility bias. Basically a mean reversion system that's betting that everything goes back to
+    normal. So when volatility spikes he takes a loss."
+  - "That happened to roughly 50% of the market makers in crypto on 10/10 this last year."
+  - "Every inefficiency in the market is directly related to somebody else thinking they're going to do better than
+    you… understanding their incentives, estimating them, modeling them… The rest is just math."
+- **Checked:**
+  - **The crash is real.** On 2025-10-10/11 about USD 19 billion of positions were liquidated, the largest
+    liquidation in crypto's history. Top-of-book depth fell by more than 90%, and market makers withdrew (FTI
+    Consulting; insights4vc).
+  - **The "50% of market makers" figure has no source we could find.**
+- **Lab:**
+  - **The claim is a property of books, so it becomes a report, not a bet.**
+    - Every mean-reverting or liquidity-providing book in the lab is short volatility, the fade books and the carry
+      books included.
+    - **M324** is a stress-day report: each book's PnL on named stress days (2021-05-19, LUNA, FTX, 2024-08-05,
+      2025-10-10/11) and on the worst 1% of volatility days, beside its mean.
+    - The R304 pick's short leg already shows this kind of tail (COAI, +1,850% in a week).
+  - **The other side of his point is a strategy (M325).** When market makers pull quotes, the few who stay are
+    paid. Nagel (2012, "Evaporating Liquidity") finds that equity reversal returns rise after stress.
+    - In crypto: the 1-day cross-sectional reversal only on the days after market stress, against the same book on
+      other days.
+    - R245 found the unconditional reversal loses to cost (−17.5 bp/day), so only a stress-day lift would make it
+      tradable.
+    - Queued for its own id.
+
+## What the three reels changed
+- **One frozen lane now:** R306 `msnr_v1` (M323). It runs after the freeze is pushed.
+- **Two queued lanes:**
+  - **R307 `rrskew_v1`** (M174): the Deribit 25-delta risk reversal as a BTC/ETH signal, from held option trades.
+  - **M325:** liquidity provision after stress (Nagel for crypto).
+- **One tool:** M324, the stress-day report beside every book's mean (`lab/stress.py`, next).
+- **One correction kept on file:** the "50% of crypto market makers lost on 10/10" figure is unsourced. The crash
+  itself is documented.
+- **Sources:**
+  - LuxAlgo, "Malaysian SnR": https://www.luxalgo.com/library/concept/malaysian-snr/
+  - TradingView, "Malaysian SnR [by DanielM]": https://it.tradingview.com/script/yqRdpnSH-Malaysian-SnR-by-DanielM
+  - Amberdata, "The Smile: why crypto's skew tells a story equity markets never will":
+    https://blog.amberdata.io/the-smile-why-cryptos-skew-tells-a-story-equity-markets-never-will
+  - Coin Metrics, skew (constant maturity, constant delta):
+    https://docs.coinmetrics.io/market-data/market-data-overview/volatility/skew-constant-maturity-constant-delta
+  - SMU dissertation (unreviewed): https://ink.library.smu.edu.sg/etd_coll/887
+  - FTI Consulting, "The Crypto Crash of October 2025":
+    https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity
+  - insights4vc, "Inside the $19B flash crash": https://insights4vc.substack.com/p/inside-the-19b-flash-crash
+  - Nagel, S. (2012), "Evaporating Liquidity", Review of Financial Studies 25(7).

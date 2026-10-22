@@ -2,6 +2,13 @@
 
 **Verdict by the frozen rule: PARTIAL (gate 0). Not trusted: its inputs leak survival.** Nothing from R299 is a
 candidate. R304 (`mlrank_v2`) reruns the family without the leaking features.
+
+> **Update 2026-10-22, after R304 and R305:** the leak did not carry this result.
+> - Without the three columns, the pick earns +58.9 bp/day in validation (t 4.21).
+> - A GBM on the three columns alone loses (−20.5).
+> - So "invalidated" below was right about the inputs and wrong about the result.
+> - R305 found no simple explanation for the edge (label `unexplained`). See `experiments/mlrank_v2/FINDINGS.md`
+>   and `experiments/mlaudit_v1/FINDINGS.md`.
 - **Trials:** 12, gate 0 on seen data.
 - **Read:** frozen PREREG 140faf4d, run 2026-10-22 08:00-09:25 UTC with `scripts/run_mlrank.py`. All 6 inputs
   matched their frozen hashes.

@@ -435,10 +435,36 @@ paying the least funding, short the fifth paying the most, net of the funding ea
   queued as M322, to be read on unseen data only.
 - Program trials: 9,478,683.
 
+**R304 `mlrank_v2` is PARTIAL, and R305 `mlaudit_v1` could not explain it** (7 + 7 trials, M042, gate 0).
+- Without the three leaking columns the weekly GBM still earns +58.9 bp/day net in 2024-26 (t 4.21). A GBM on the
+  leaking columns alone loses. R299's leak was real but carried nothing.
+- **R305 rejected the three obvious stories.** Age, the six risk features and beta did not carry the pick.
+  - Without age it still earns +56.1 bp/day.
+  - The risk features alone lose, and without them the book earns +62.4.
+  - A fixed low-risk score loses.
+  - The alpha over the equal-weight universe is +58.4 bp/day (t 4.22).
+  - What is left: the GBM's interactions among flow, funding, OI and positioning.
+- **It is not tradable as run.** Both windows were read before (R299). The short leg had a name up >100% in a week
+  in 15.5% of 2024-26 weeks (COAI +1,850%, 2025-10). Missing OI and positioning (about half the rows) are untested as
+  a driver.
+- Program trials: 9,478,697.
+
+**R306 `msnr_v1` (M323, the owner's reel on Malaysian support and resistance), being frozen.**
+- The levels: line-chart peaks and troughs of 4-hour closes, fresh until a wick touches them.
+- The trades: a fade or a break on the first touch, on the top 50 perps.
+- The secondary read: on Binance gold and silver and the MEXC TradFi perps, report only.
+
 **Next, in order:**
-1. **R304 `mlrank_v2`:** R299's family without the three columns, plus a leak-only diagnostic and each leg's share
-   of later-delisted coins. Frozen in 811283d; running since 12:00 UTC (about an hour).
-2. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
+1. **R304's pick goes forward:** three frozen paper lanes on MEXC prices:
+   - the pick;
+   - the long leg against an equal-weight hedge;
+   - the pick with a cover on each short.
+   They need a live feature pipeline from the daily Binance metrics archive. The pick also goes into reserved
+   batch 2, whose PREREG must fix how rows without metrics (all of 2020) are scored.
+2. **The open audit:** a missing-flag refit, and a refit on rows with metrics only, as one frozen lane.
+3. **R306 MSNR** runs. Then R307: the Deribit 25-delta risk reversal as a BTC/ETH timing signal (M174, from the
+   owner's reel), and a stress-day report with the Nagel lane on liquidity provision after crashes (M324, M325).
+4. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
    coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
    lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.
 3. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
