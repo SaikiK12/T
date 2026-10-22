@@ -607,6 +607,17 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The funding part is steady (+10 to +13 bp/day to 2024). In 2025-26 the long leg's squeezed perps paid their longs
     about 30 bp/day and fell by as much. So R276 and R190 do not conflict.
   - [FINDINGS](../experiments/fundxs_v1/FINDINGS.md).
+- **R299 (mlrank_v1), PARTIAL by its frozen rule, invalidated by its audit** (12 trials, M042, gate 0 on seen data).
+  - Ridge, IC-weighted and GBM rankers on 27 point-in-time panel features, top-150 quintile books, monthly purged
+    walk-forward.
+  - The GBM weekly book passed: validation net +55.4 bp/day (t 4.02), rank IC 0.19.
+  - The audit found the cause:
+    - three features (`n_venues`, `fund_gap7`, `kimchi7`) come from venue histories fetched only for markets live at
+      download time;
+    - KuCoin covers 53-95% of survivors' rows and 0-5% of later-delisted perps'.
+  - The linear books lost money despite rank ICs of 0.10-0.15.
+  - R304 reruns the family without the three features (`docs/FEATURE_VINTAGE_INTEGRITY.md`).
+  - [FINDINGS](../experiments/mlrank_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its

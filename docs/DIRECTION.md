@@ -418,5 +418,23 @@ paying the least funding, short the fifth paying the most, net of the funding ea
 - **Gate 0 on seen data:** R276 read this book over 2021-26 in one piece. A pass earns reserved batch 2 and a
   forward paper lane, not a confirmation.
 
-**R299 `mlrank_v1`** (12 trials, M042) is still fitting its weekly books. Its registry row goes in first, then
-R300's, R301's and R302's, in order.
+**R299 `mlrank_v1` passed its frozen rule, and its audit invalidated it** (12 trials, M042).
+- The GBM weekly book earned +55.4 bp/day net in 2024-26 (t 4.02), with a rank IC of 0.19. That is too strong for a
+  market-neutral book.
+- **The cause is coverage survivorship.**
+  - KuCoin, Kraken, MEXC, Hyperliquid, Upbit and Bithumb were fetched only for markets live at download time.
+  - `n_venues`, `fund_gap7` and `kimchi7` therefore tell the model which coins will later be delisted.
+  - KuCoin covers 53-95% of survivors' rows and 0-5% of later-delisted perps'.
+- The rule for every lane is in `docs/FEATURE_VINTAGE_INTEGRITY.md`.
+- Registry rows R299-R302 are appended. Program trials: 9,478,673.
+
+**Next, in order:**
+1. **R304 `mlrank_v2`:** R299's family without the three columns, plus a leak-only diagnostic and each leg's share
+   of later-delisted coins. PREREG written; frozen and run once the full suite passes.
+2. **R303 `capit_v1`** (M302 capitulation buys): runner and tests written; PREREG next.
+3. **The source fix:** refetch the survivor-only venues with delisted markets where their APIs allow it, or label
+   those columns `survivor` in `lab/daily.py`.
+4. **M320 / M321 (owner's reels, 2026-10-22):**
+   - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
+   - First, validate LSE's index bars against an independent close.
+   - Then fetch the MEXC index-perp klines.
