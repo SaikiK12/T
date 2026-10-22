@@ -218,7 +218,7 @@ come before chart rules.
 | Method | Status |
 |---|---|
 | M298 PCA residual reversion, hourly | **R287 NULL**: gross about +9.5 bp/day in the steadiest variants; costs 18-76 |
-| M295 funding response to up days, as a gate | next |
+| M295 funding response to up days, as a gate | **R297 NULL**: neither measure leads the top-50 basket or BTC at 7/30 days (validation \|t\| ≤ 0.88); up-day funding is the funding level |
 | M290 scheduled US releases (CPI, NFP, FOMC, EIA) | 1-minute klines held; FOMC dates held; CPI and payroll dates not reachable from this container (BLS 403, FRED bot check) |
 
 **Recorders where history cannot be bought:**

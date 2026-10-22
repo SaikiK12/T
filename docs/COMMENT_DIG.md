@@ -62,7 +62,7 @@ reading file per source to `data/comments/read/`.
 | M292 | Fee-tier and rebate map: re-price each lab rule at the tier its own volume reaches | ex-crypto prop trader (HN); Quant SE | partly held |
 | M293 | A volume burst on another spot venue leads the Binance or MEXC perp | HN (unverified claim) | Bitfinex and Coinbase candles not held |
 | M294 | Wallet-suspension premium: the gap when deposits or withdrawals are closed, and its close on reopening | arbitrage-bot builders (HN) | notices held; wallet-status history not held |
-| M295 | Funding response to up days as a regime gate | Bankless guest | held |
+| M295 | Funding response to up days as a regime gate | Bankless guest | **tested: R297 NULL** (the guest's 2026 < 2022 premise holds, but it is the funding level and does not time the market) |
 | M296 | Pre-market perp price as a forecast of the listing | Bankless | partly held |
 | M297 | Post-airdrop supply short (a subset of the listing short) | Bankless, Delphi | airdrop share not held |
 | M298 | PCA residual reversion (Avellaneda-Lee) at hourly scale | Quant SE | **tested: R287 NULL** (gross up to 19 bp/day in discovery and 9 in validation; cost 18-76) |
@@ -116,7 +116,9 @@ event, carry and venue-structure lanes over chart rules.
   - **M298 is done: R287 `pcares_v1`, NULL** (24 variants, reality check p 1.00). Hourly residuals revert by about
     +9.5 bp a day gross in the steadiest variants, but hourly rebalancing turns the book over 2.6-11 times a day, so the
     break-even cost is at most 3.5 bp per side against 7.
-  - Next are M295 (funding gate) and M290 (once release calendars and 1-5 min klines are fetched).
+  - **M295 is done: R297 `fundgate_v1`, NULL** (4 trials). Up-day funding was lower in 2026 than in 2022, but it
+    tracks the plain funding level, and neither it nor the funding slope leads the market at 7 or 30 days.
+  - Next is M290 (once release calendars and 1-5 min klines are fetched).
 - Recorders where history cannot be bought: the Deribit option chain (M289, M300) records hourly since 2026-10-21;
   Upbit/Bithumb wallet status (M294) is still to do.
 - The prop trader's comment is followed up in `docs/VENUE_STRUCTURE.md`: a fee map, a Lighter book recorder (0 fees

@@ -564,6 +564,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
     or inside 07:31-07:59 (−0.61, +1.32).
   - That delta is 0.13-0.47% of a day's perp volume at the median, and long or short about equally often.
   - [FINDINGS](../experiments/charm_expiry_v1/FINDINGS.md).
+- **R297 (fundgate_v1), NULL** (4 trials, M295 from a Bankless guest, the daily panel's top-50 Binance perps).
+  - Neither the 30-day slope of funding on return nor up-day funding (each z-scored against the past year) leads the
+    equal-weight basket or BTC over the next 7 or 30 days. Validation t is −0.60 to +0.88, either sign.
+  - Up-day funding was lower in 2026 than in 2022, as the guest said. But it is 0.99 correlated with the plain
+    funding level, which follows the last month's market (0.44).
+  - [FINDINGS](../experiments/fundgate_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
@@ -686,6 +692,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,593 after R296 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,597 after R297 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.
