@@ -196,7 +196,7 @@ The reasons are below.
 | `levels_depth_v1` | Does resting depth cluster, and do stop runs reverse, at auction levels more than at placebo prices? | MEXC depth, tape | after about 2 weeks of tape |
 | `vpin_v1` (R291, **NULL**: exact-side VPIN worsens volatility forecasts, DM t −12.5; `experiments/vpin_v1/FINDINGS.md`) | Does order-flow toxicity (VPIN) forecast realized volatility beyond volume? From the owner's reel; QuantData's metrics are mapped in `docs/QUANTDATA.md` | held | done |
 | `dealerflow_v1` (R292, **NULL**: HAR + dealer gamma DM t −1.23, autocorrelation t −0.06 out of sample; `experiments/dealerflow_v1/FINDINGS.md`) | Does taker-flow positioning (dealer gamma by strike) predict next-day realized volatility and the sign of intraday autocorrelation? This is a mechanism check before any PnL | Deribit trades, 1m klines | done |
-| `charm_expiry_v1` | Does R289's Friday reversal scale with expiring gamma? (dose-response) | Deribit trades, 1m klines | after `dealerflow_v1` |
+| `charm_expiry_v1` (R296, **NULL**: dose slope t +0.13/+0.44 in validation; the dealers' expiring delta leads neither the window nor the two hours after it; `experiments/charm_expiry_v1/FINDINGS.md`) | Does R289's Friday reversal scale with expiring position (dose-response), and does the dealers' expiry hedge move the perp? | Deribit trades, 1m klines | done |
 | `blocks_v1`, run as `optflow_v1` (R295, **NULL**: no trial passes; block delta at 1 h validation t +0.62, net drift at best +2.45 with the discovery sign against; `experiments/optflow_v1/FINDINGS.md`) | Do Deribit block prints (M311) and net drift (M313) lead BTC/ETH perp returns over 1-24 h? | Deribit trades, 1m klines | done |
 
 ## 5. Our own Bloomberg

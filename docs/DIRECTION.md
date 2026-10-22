@@ -350,7 +350,7 @@ on each trade.
   hourly autocorrelation out of sample.
 - **Why:** dealers are short gamma on 76-92% of days, and the hedge they need is a fraction of a percent of a day's
   perp volume per 1% move. Open-interest GEX dashboards overstate it, because most open interest nets out.
-- **Next on this data:** `charm_expiry_v1` (R289's Friday settlement reversal against expiring gamma). M316 (post
+- **Next on this data was** `charm_expiry_v1`, now run as R296 (below). M316 (post
   hoc) is for unseen data only.
 
 **R295 `optflow_v1` is done: NULL** (15 trials). It covered block prints (M311) and net drift (M313).
@@ -359,5 +359,17 @@ on each trade.
 - Its gross edges are a few bp per trade, against 17 bp of API round trip.
 - R292 and R295 agree. Deribit's taker flow, by gamma or by direction, does not move the perp at hourly or daily
   scale.
+
+**R296 `charm_expiry_v1` is done: NULL** (5 trials). It tested Deribit's Friday 08:00 UTC expiry (M303's dose,
+M309, M317).
+- R289's settlement reversal does not grow with the position expiring near the money. High- and low-dose Fridays
+  swap between the windows.
+- The dealers' delta in expiring options moves the perp neither inside the 07:30-08:00 window nor in the two hours
+  after it. The sign of the after-08:00 test flips between windows (+1.55, then −1.55).
+- That delta is 0.13-0.47% of a day's perp volume at the median.
+- With R292 and R295, three Deribit nulls agree: Deribit positions are too small next to Binance perp volume to move
+  it at these scales.
+- **Still open on options:** M310 (vanna after FOMC, low power), and M289/M175 (pinning, max pain) on the chain
+  recorder's true open interest, which needs forward Fridays.
 
 The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).

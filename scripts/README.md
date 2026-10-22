@@ -67,7 +67,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (78)
+## Run: one lane's frozen measurement (80)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -82,6 +82,7 @@ line is the first line of the script's own docstring.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.
 - [`run_cbprem.py`](run_cbprem.py): cbprem_v1 (R210): the Coinbase premium as a BTC/ETH signal, as set out in experiments/cbprem_v1/PREREG.md.
+- [`run_charmexpiry.py`](run_charmexpiry.py): charm_expiry_v1 (R296): does Deribit's Friday 08:00 UTC expiry move the BTC and ETH perps? As set out in experiments/charm_expiry_v1/PREREG.md.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
 - [`run_chartxm.py`](run_chartxm.py): chartxm_v1 (R247): R243's seven chart rules (run_chartist.states, unchanged) on daily bars of 11 forex pairs and 10 world equity indices, equal-weight books per group, as set out in ...
 - [`run_clockflow.py`](run_clockflow.py): clockflow_v1 (R289): fixed-clock flows on 1-minute bars of the BTC, ETH and SOL perps, as set out in experiments/clockflow_v1/PREREG.md.
@@ -111,6 +112,7 @@ line is the first line of the script's own docstring.
 - [`run_merge_v2.py`](run_merge_v2.py): merge_v2 (R187): trade-consistent, faster, session-aware merge, as set out in experiments/merge_v2/PREREG.md.
 - [`run_montag.py`](run_montag.py): R269 montag_v1: short the perps of coins Binance adds to its Monitoring Tag (experiments/montag_v1/PREREG.md).
 - [`run_oiwick.py`](run_oiwick.py): oiwick_v1 (R252): fade liquidation cascades proxied by a >= 3% hourly open-interest drop plus a >= 3 ATR wick, on the top-50 perps, as set out in experiments/oiwick_v1/PREREG.md.
+- [`run_optflow.py`](run_optflow.py): optflow_v1 (R295): does signed Deribit option flow lead BTC and ETH perp returns over the next 1, 4 or 24 hours? As set out in experiments/optflow_v1/PREREG.md.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
 - [`run_pack.py`](run_pack.py): pack_v1 (R194): many maker cells in one hedged book, as set out in experiments/pack_v1/PREREG.md.
 - [`run_pairs.py`](run_pairs.py): pairs_v1 (R250): weekly-formed pairs on the top-50 perps, distance (Gatev) and Engle-Granger selection, z-score entry 2 and exit 0, as set out in experiments/pairs_v1/PREREG.md.

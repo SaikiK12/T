@@ -146,7 +146,10 @@ markouts on the recorded tape (M227), not with VPIN.
      blocks) nor block or screen delta flow leads the BTC or ETH perp over 1, 4 or 24 hours out of sample. Gross edges
      are a few bp per trade, against 17 bp of API round trip. The unusual-hour variant and the call/put line cross
      were not in the family.
-  4. **M309 and M310:** charm into expiry, and vanna after events.
+  3. **R296 `charm_expiry_v1` (M309, M303's dose, M317), NULL.** R289's Friday settlement reversal does not grow
+     with the position expiring near the money. The dealers' delta in expiring options moves the perp neither inside
+     the 07:30-08:00 window nor in the two hours after it.
+  4. **M310:** vanna after FOMC. Few events, so low power.
 - **A crypto "QuantData"** costs nothing extra once M308 and M313 exist:
   - net drift, exposure by strike, the interval map, volatility drift and blocks;
   - point-in-time, with history back to 2016;

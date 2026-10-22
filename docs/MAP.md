@@ -556,6 +556,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The one validation t over the bar (screen delta at 4 h, +3.02) has a discovery t of −0.82.
   - Gross edges are 0.3-16 bp per trade, against 17 bp of API round trip. No rule is positive at 1x.
   - [FINDINGS](../experiments/optflow_v1/FINDINGS.md).
+- **R296 (charm_expiry_v1), NULL** (5 trials, M303's dose, M309 and M317, the same Deribit trades at the Friday 08:00
+  UTC expiry).
+  - R289's post-08:00 fade of the settlement-window move does not scale with the expiring position near the money
+    (slope t +0.13 and +0.44 in 2024-26). High- and low-dose Fridays swap between the windows.
+  - The dealers' delta in expiring options does not move the perp after 08:00 (discovery t +1.55, validation −1.55)
+    or inside 07:31-07:59 (−0.61, +1.32).
+  - That delta is 0.13-0.47% of a day's perp volume at the median, and long or short about equally often.
+  - [FINDINGS](../experiments/charm_expiry_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
@@ -678,6 +686,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,588 after R295 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,593 after R296 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

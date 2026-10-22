@@ -11,7 +11,7 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
 ## Forward paper lanes (running) (16)
 
-- **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md))
+- **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
 - **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))
 - **[xbook_fwd](xbook_fwd/)** R285, RUNNING PENDING, 1 trial. Cross-family forward book (M281): carry (R278 A/B, R279 A/B), flow (R215 A/B, R218 X2) and events (R266, R268, R270, R272) at equal archive risk, decided on book days from 2026-10-23 ([PREREG](xbook_fwd/PREREG.md), [journal](xbook_fwd/journal/))
 - **[xfund_kc_fwd](xfund_kc_fwd/)** R279, RUNNING PENDING, 2 trials. R277's two replicating KuCoin carry books forward on paper: A gate+kucoin L14 th5% K20, B binance+kucoin L14 th5% K20 ([PREREG](xfund_kc_fwd/PREREG.md), [journal](xfund_kc_fwd/journal/))
@@ -28,8 +28,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (90)
+## Finished and registered rounds (92)
 
+- **[charm_expiry_v1](charm_expiry_v1/)** R296, DONE NULL, 5 trials. Friday 08:00 UTC Deribit expiry on BTC/ETH perps: settlement-fade slope on expiring near-money position (M303 dose, M309) and dealers' expiry hedge unwind after 08:00 and in 07:31-07:59 (M317) ([PREREG](charm_expiry_v1/PREREG.md), [FINDINGS](charm_expiry_v1/FINDINGS.md))
+- **[optflow_v1](optflow_v1/)** R295, DONE NULL, 15 trials. Deribit option flow leading BTC/ETH perps (M311 block delta flow, M313 net drift): 5 signals x 1/4/24 h ([PREREG](optflow_v1/PREREG.md), [FINDINGS](optflow_v1/FINDINGS.md))
 - **[er_v1](er_v1/)** R293, DONE NULL, 3 trials. Efficiency-ratio forecast and chop-day gate (owner's reel DeF5_5yPtDb, M314): pooled ridge-logit on the reel's 15 features forecasting next UTC day's 5-min ER above the discovery median, gate (p>0.5) on a first-hour trend rule (00-01 UTC sign, 01:01 to 24:00), BTC/ETH/SOL, manual web 3 bp/side; fit 2021-04..2023, read 2024-01..2026-09 ([PREREG](er_v1/PREREG.md), [FINDINGS](er_v1/FINDINGS.md))
 - **[dealerflow_v1](dealerflow_v1/)** R292, DONE NULL, 4 trials. Dealer gamma from Deribit taker flow (M308): GEX at the UTC close from net taker positions (makers = dealers), scaled by perp ADV (g) or its sign (short), vs next-day log RV beyond HAR and next-day hourly autocorrelation; BTC/ETH perps, fit 2021-04..2023, read 2024..2026-09 ([PREREG](dealerflow_v1/PREREG.md), [FINDINGS](dealerflow_v1/FINDINGS.md))
 - **[vpin_v1](vpin_v1/)** R291, DONE NULL, 4 trials. VPIN flow toxicity (owner's reel, M085): exact taker-side and BVC VPIN (50 buckets/day, n 50) added to a HAR model with relative volume and hour of day, forecasting next 1 h and 24 h realized variance, BTC/ETH/SOL 1-minute bars; fit 2021-04..2023, read 2024-01..2026-09 ([PREREG](vpin_v1/PREREG.md), [FINDINGS](vpin_v1/FINDINGS.md))
