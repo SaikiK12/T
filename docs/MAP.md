@@ -550,6 +550,12 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - Post hoc, against the story: without block trades, short-gamma days are followed by more mean-reverting
     hours. That is M316, for unseen data only.
   - [FINDINGS](../experiments/dealerflow_v1/FINDINGS.md).
+- **R295 (optflow_v1), NULL** (15 trials, M311 block prints and M313 net drift, the same Deribit trades).
+  - Signed option flow does not lead the BTC or ETH perp over 1, 4 or 24 hours out of sample. That covers block and
+    screen delta flow, and net drift (all options, OTM only, or without blocks).
+  - The one validation t over the bar (screen delta at 4 h, +3.02) has a discovery t of −0.82.
+  - Gross edges are 0.3-16 bp per trade, against 17 bp of API round trip. No rule is positive at 1x.
+  - [FINDINGS](../experiments/optflow_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
@@ -672,6 +678,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,572 after R292 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,588 after R295 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

@@ -174,3 +174,9 @@ program 1 rounds 109 candidates 16 strategies 804 forward_lanes 12 forward_days 
 experiments/README.md: 103 lanes, 5 data folders; scripts/README.md: 166 scripts; lab/README.md: 42 modules
 program 1 rounds 109 candidates 16 strategies 804 forward_lanes 12 forward_days 559 event_tickets 7 methods 286 data_sources 44 jobs 35 tearsheets 24 equity 10706 monthly 365 leaderboard 109 coverage 64 funding_board 120 factor_ic 2910
 == tick 2026-10-22T03:06:00Z code f6bade5+dirty
+03:09:01 prereg sha 3605a4028e85
+03:09:01 {'A': (0.71, 2), 'B': (1.02, 2), 'X2': (0.65, 2)}
+03:09:05 on-time days 3, strict 0; hour lag {'n': 50, 'median': 80.68333333333334, 'p90': 204.8366666666667, 'max': 261.48333333333335} order problems: none
+03:09:06 panel: 112 rounds, 9,478,573 trials, queue 287
+experiments/README.md: 106 lanes, 4 data folders; scripts/README.md: 169 scripts; lab/README.md: 42 modules
+program 1 rounds 112 candidates 16 strategies 810 forward_lanes 13 forward_days 559 event_tickets 7 methods 287 data_sources 45 jobs 37 tearsheets 25 equity 11213 monthly 383 leaderboard 112 coverage 67 funding_board 120 factor_ic 2910

@@ -44,7 +44,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (19)
+## Forward: paper lanes and the loops that run them (20)
 
 - [`forward_all.sh`](forward_all.sh): One forward tick: R200's journal first (scripts/forward_tick.py), then the lanes that read it: R214 flow72_fwd3 (one bar late, Binance), R215 mexc_fwd (MEXC), R218 mexc_fwd_sq (agreement-squared ...
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
@@ -63,6 +63,7 @@ line is the first line of the script's own docstring.
 - [`forward_xbook.py`](forward_xbook.py): xbook_fwd (R285): the cross-family forward book (M281), as set out in experiments/xbook_fwd/PREREG.md.
 - [`forward_xfund.py`](forward_xfund.py): xfund_fwd (R278): R275's cross-venue funding carry books forward on paper, as set out in experiments/xfund_fwd/PREREG.md.
 - [`forward_xfund_kc.py`](forward_xfund_kc.py): xfund_kc_fwd (R279): R277's two replicating KuCoin carry books forward on paper, as set out in experiments/xfund_kc_fwd/PREREG.md.
+- [`forward_xfund_lt.py`](forward_xfund_lt.py): xfund_lt_fwd (R294): R288's mexc+lighter carry book forward on paper, as set out in experiments/xfund_lt_fwd/PREREG.md.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 

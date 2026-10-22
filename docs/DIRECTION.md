@@ -350,7 +350,14 @@ on each trade.
   hourly autocorrelation out of sample.
 - **Why:** dealers are short gamma on 76-92% of days, and the hedge they need is a fraction of a percent of a day's
   perp volume per 1% move. Open-interest GEX dashboards overstate it, because most open interest nets out.
-- **Next on this data:** block prints (M311, `blocks_v1`), net drift (M313) and `charm_expiry_v1` (R289's Friday
-  settlement reversal against expiring gamma), each in its own lane. M316 (post hoc) is for unseen data only.
+- **Next on this data:** `charm_expiry_v1` (R289's Friday settlement reversal against expiring gamma). M316 (post
+  hoc) is for unseen data only.
+
+**R295 `optflow_v1` is done: NULL** (15 trials). It covered block prints (M311) and net drift (M313).
+- Signed Deribit option flow does not lead the BTC or ETH perp over 1, 4 or 24 hours out of sample, in any of 5
+  forms.
+- Its gross edges are a few bp per trade, against 17 bp of API round trip.
+- R292 and R295 agree. Deribit's taker flow, by gamma or by direction, does not move the perp at hourly or daily
+  scale.
 
 The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).

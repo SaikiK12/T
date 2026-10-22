@@ -9,8 +9,9 @@ forward paper lane also keeps a `journal/`. The ids, statuses and trial counts c
 Status: RUNNING (forward, collecting days), DONE, ARMED (waits for an event), REGISTERED or PLANNED.
 Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
-## Forward paper lanes (running) (15)
+## Forward paper lanes (running) (16)
 
+- **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md))
 - **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))
 - **[xbook_fwd](xbook_fwd/)** R285, RUNNING PENDING, 1 trial. Cross-family forward book (M281): carry (R278 A/B, R279 A/B), flow (R215 A/B, R218 X2) and events (R266, R268, R270, R272) at equal archive risk, decided on book days from 2026-10-23 ([PREREG](xbook_fwd/PREREG.md), [journal](xbook_fwd/journal/))
 - **[xfund_kc_fwd](xfund_kc_fwd/)** R279, RUNNING PENDING, 2 trials. R277's two replicating KuCoin carry books forward on paper: A gate+kucoin L14 th5% K20, B binance+kucoin L14 th5% K20 ([PREREG](xfund_kc_fwd/PREREG.md), [journal](xfund_kc_fwd/journal/))

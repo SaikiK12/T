@@ -142,8 +142,10 @@ markouts on the recorded tape (M227), not with VPIN.
   1. **R292 `dealerflow_v1` (M308), NULL.** Dealer gamma from Deribit taker flow adds nothing to a daily HAR
      volatility forecast (DM t −1.23) and does not sign next-day hourly autocorrelation. Dealers are short gamma on
      76-92% of days, and the hedge they need is 0.05-0.13% of a day's perp volume per 1% move.
-  2. **M313:** net drift (signed option premium) leading the perp, with OTM, ex-block and unusual-hour variants.
-  3. **M311:** Deribit block prints leading the perp.
+  2. **R295 `optflow_v1` (M313 and M311), NULL.** Neither net drift (signed option premium: all, OTM, or without
+     blocks) nor block or screen delta flow leads the BTC or ETH perp over 1, 4 or 24 hours out of sample. Gross edges
+     are a few bp per trade, against 17 bp of API round trip. The unusual-hour variant and the call/put line cross
+     were not in the family.
   4. **M309 and M310:** charm into expiry, and vanna after events.
 - **A crypto "QuantData"** costs nothing extra once M308 and M313 exist:
   - net drift, exposure by strike, the interval map, volatility drift and blocks;
