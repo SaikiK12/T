@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
-  "updated_utc_date": "2026-10-21",
+  "updated_utc_date": "2026-10-22",
   "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
@@ -9769,6 +9769,131 @@
         "manifest_sha256": "12480fba43662fb2d243de1317509d3f5ca755419d3918ceb3fbfa48bafbb80f"
       },
       "canonical_relation": "Separate partial/equal-price and taker/TIF assumptions; the word Partial does not certify global depth-conservative fills."
+    },
+    {
+      "id": "QC26-JOINT-ROLL-MOM",
+      "parent_claim_id": "QC26-ROLL-MOM-SOURCE",
+      "title": "Joint roll tercile and intramonth-return half selection",
+      "method_type": "strategy",
+      "hypothesis": "Retained source rule/control for a finite future comparison, not evidence of net MEXC profitability.",
+      "testable_rule": "Monthly prose: 22 commodity roots, discard middle roll tercile, buy high-roll winners and short low-roll losers, target 0.5/N each side. Literal code ranks EVERY deferred CONTRACT by (nearest_price-deferred_LastPrice)*365/expiry_gap.days, with no normalization. Near price has last-or-midpoint fallback; far does not. Second-stage signal is mean minute pct_change over 21 calendar days, not monthly cumulative return. Counts use pre-skip group lengths.",
+      "status": "blocked",
+      "exact_tested_scope": "Four pinned folder30 HTML files read. Only first Method Python block executed on seven invented-contract cases in PR45. Algorithm.html contains an iframe, not full algorithm code.",
+      "unrun_scope": "Native chain construction, full scheduler/liquidation code, completed-history clock, finite history, risk neutrality, quote age, roll and MEXC mapping untested.",
+      "required_inputs": [
+        "Point-in-time instrument identities, source-specific price/volume/supply units and causal observation clocks.",
+        "Dated-futures adaptation needs expiry quotes, consistent contract sizes/payoffs, matched perps, funding, rolls and complete 1x/2x/3x execution costs; equity turnover needs share-volume and contemporaneous outstanding shares."
+      ],
+      "blockers": [
+        "Nominal score conflicts with linked log formula; contract-level versus root-level ranks differ. Small groups, negative-zero slices, missing histories and expiry/price guards need a frozen interpretation."
+      ],
+      "next_action": "Freeze one explicitly named interpretation and finite controls before market outcomes. Preserve weak methods and nulls, and disclose related prior reads; no new clean sample is implied.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/02%20Method.html",
+          "label": "Primary source with actual read scope retained in supplement; no profitability evidence."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+        "manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a"
+      },
+      "canonical_relation": "Exact M251 source follow-up. M170/R301 tests a related quarterly-basis perp signal, now NULL; M194/R237 tests12-month time-series momentum. Neither is this exact joint rule."
+    },
+    {
+      "id": "QC26-TERM-STRUCTURE",
+      "parent_claim_id": "QC26-ROLL-MOM-SOURCE",
+      "title": "Standalone log term-structure commodity comparator",
+      "method_type": "control",
+      "hypothesis": "Retained source rule/control for a finite future comparison, not evidence of net MEXC profitability.",
+      "testable_rule": "Reference formula:(ln(Pnear)-ln(Pfar))*365/expiry_gap.days. One score per root; positive backwardation longs, negative contango shorts,20% tails, monthly holding. Prose selects first TWO maturities, calculation takes first and LAST, and trading targets SECOND. Both prices use last-or-mid fallback. count/quintile initialization is absent.",
+      "status": "blocked",
+      "exact_tested_scope": "Whole directly referenced folder29 Method read statically; log formula used as a labelled analytic comparison, not execution of the reference snippet.",
+      "unrun_scope": "Remaining folder29 files, underlying paper, full algorithm and actual contracts/execution unreceived or unrun.",
+      "required_inputs": [
+        "Point-in-time instrument identities, source-specific price/volume/supply units and causal observation clocks.",
+        "Dated-futures adaptation needs expiry quotes, consistent contract sizes/payoffs, matched perps, funding, rolls and complete 1x/2x/3x execution costs; equity turnover needs share-volume and contemporaneous outstanding shares."
+      ],
+      "blockers": [
+        "Three maturity choices disagree. This source is not an implementation of weekly crypto basis traded via perps."
+      ],
+      "next_action": "Freeze one explicitly named interpretation and finite controls before market outcomes. Preserve weak methods and nulls, and disclose related prior reads; no new clean sample is implied.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities/02%20Method.html",
+          "label": "Primary source with actual read scope retained in supplement; no profitability evidence."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+        "manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a"
+      },
+      "canonical_relation": "Source-mentioned M251 comparator, related to M170. Preserve current R301 NULL; no verdict promotion or independently clean sample claimed."
+    },
+    {
+      "id": "QC26-MOMENTUM-CONTROL",
+      "parent_claim_id": "QC26-ROLL-MOM-SOURCE",
+      "title": "Standalone one-month cross-sectional commodity momentum comparator",
+      "method_type": "control",
+      "hypothesis": "Retained source rule/control for a finite future comparison, not evidence of net MEXC profitability.",
+      "testable_rule": "Introduction describes buying highest one-month historical-return commodity futures and shorting lowest. The linked standalone momentum article was NOT read. This conceptual comparator differs from the joint Method mean-minute-return filter.",
+      "status": "blocked",
+      "exact_tested_scope": "Pinned joint Introduction/Method only. No standalone algorithm or control portfolio executed.",
+      "unrun_scope": "Standalone tail size, return/chain construction, rebalance, leverage and roll/cost mechanics remain unreceived.",
+      "required_inputs": [
+        "Point-in-time instrument identities, source-specific price/volume/supply units and causal observation clocks.",
+        "Dated-futures adaptation needs expiry quotes, consistent contract sizes/payoffs, matched perps, funding, rolls and complete 1x/2x/3x execution costs; equity turnover needs share-volume and contemporaneous outstanding shares."
+      ],
+      "blockers": [
+        "Do not attribute joint-snippet mechanics to the unread standalone source; exact return/horizon definition requires registration."
+      ],
+      "next_action": "Freeze one explicitly named interpretation and finite controls before market outcomes. Preserve weak methods and nulls, and disclose related prior reads; no new clean sample is implied.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/01%20Introduction.html",
+          "label": "Primary source with actual read scope retained in supplement; no profitability evidence."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "repository_commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+        "manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a"
+      },
+      "canonical_relation": "Related control, not an exact alias to the tested 12-month time-series M194/R237."
+    },
+    {
+      "id": "QC26-ANNUAL-TURNOVER",
+      "parent_claim_id": "QC26-ROLL-MOM-SOURCE",
+      "title": "Annual small-cap low-turnover equity composite",
+      "method_type": "strategy",
+      "hypothesis": "Retained source rule/control for a finite future comparison, not evidence of net MEXC profitability.",
+      "testable_rule": "Prose:largest 1500 stocks, price aboveUSD 5, market cap aboveUSD 10m; within bottom size quartile buy bottom 5% turnover and short top 5%, equal weights, annual rebalance. Turnover is past-year mean daily share volume / SharesOutstanding, also called annual turnover. Claimed fundamental-filter exclusions are not verified platform behavior.",
+      "status": "blocked",
+      "exact_tested_scope": "Public Introduction/Method/reference paragraphs only; dated HTML fingerprint retained. No code or embedded backtest received.",
+      "unrun_scope": "Point-in-time fundamentals, volume/share adjustments, missing-history policy, exact gross, borrow and native implementation unvalidated; crypto translation is agent-defined.",
+      "required_inputs": [
+        "Point-in-time instrument identities, source-specific price/volume/supply units and causal observation clocks.",
+        "Dated-futures adaptation needs expiry quotes, consistent contract sizes/payoffs, matched perps, funding, rolls and complete 1x/2x/3x execution costs; equity turnover needs share-volume and contemporaneous outstanding shares."
+      ],
+      "blockers": [
+        "M270/R282 uses30-day volume/free-float cap. It does not test this annual size-conditioned equity rule; no token/supply-vintage or MEXC execution mapping established."
+      ],
+      "next_action": "Freeze one explicitly named interpretation and finite controls before market outcomes. Preserve weak methods and nulls, and disclose related prior reads; no new clean sample is implied.",
+      "source_refs": [
+        {
+          "path": "https://www.quantconnect.com/research/15352/liquidity-effect-in-stocks/",
+          "label": "Primary source with actual read scope retained in supplement; no profitability evidence."
+        }
+      ],
+      "evidence_refs": [],
+      "source_version": {
+        "captured_utc_date": "2026-10-21",
+        "html_sha256": "8cbefe9d37335db23e81a1460d7501a6d0961a2c3855c4652948e0bc2a859dd7",
+        "manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a"
+      },
+      "canonical_relation": "Related turnover family only; neither a completed M270 test nor an M178 liquidity-proxy test."
     }
   ],
   "sources": [
@@ -11795,6 +11920,295 @@
         "tests": "python -m unittest tests.test_queue_identifiability -v",
         "validation": "5 focused tests OK; full suite 598 tests OK, 3 skipped; independent FIFO and static-source reviews passed. No native HftBacktest model/runtime test or market outcome."
       }
+    },
+    {
+      "intake_id": "quantconnect_joint_roll_momentum_20261021",
+      "captured_utc_date": "2026-10-21",
+      "completed_utc_date": "2026-10-22",
+      "records_added": [
+        "QC26-JOINT-ROLL-MOM",
+        "QC26-TERM-STRUCTURE",
+        "QC26-MOMENTUM-CONTROL",
+        "QC26-ANNUAL-TURNOVER"
+      ],
+      "media_source_count": 9,
+      "media_sources": [
+        {
+          "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/01%20Introduction.html",
+          "basis": "Whole HTML read on 2026-10-21; fingerprint recaptured 2026-10-22. Algorithm is iframe wrapper; embedded target unread."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/02%20Method.html",
+          "basis": "Whole HTML read on 2026-10-21; fingerprint recaptured 2026-10-22. Algorithm is iframe wrapper; embedded target unread."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/03%20Algorithm.html",
+          "basis": "Whole HTML read on 2026-10-21; fingerprint recaptured 2026-10-22. Algorithm is iframe wrapper; embedded target unread."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/04%20Source.html",
+          "basis": "Whole HTML read on 2026-10-21; fingerprint recaptured 2026-10-22. Algorithm is iframe wrapper; embedded target unread."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities/02%20Method.html",
+          "basis": "Whole HTML read on 2026-10-21; fingerprint recaptured 2026-10-22. Algorithm is iframe wrapper; embedded target unread."
+        },
+        {
+          "url": "https://www.quantconnect.com/research/15352/liquidity-effect-in-stocks/",
+          "basis": "Public Introduction/Method/reference paragraphs only, received 2026-10-21. Code, embedded backtest and underlying paper unread; hash retains that earlier receipt, not a current-vintage recapture."
+        },
+        {
+          "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/market-data#exchange-information",
+          "basis": "Historical receipt of selected endpoint section only, from opening h2 to before next h2. Consolidated container received through legacy Exchange-Information URL; other sections/API responses unread. Legacy Kline URL led to generic landing page, not kline evidence."
+        },
+        {
+          "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/market-data#kline-candlestick-data",
+          "basis": "Historical receipt of selected endpoint section only, from opening h2 to before next h2. Consolidated container received through legacy Exchange-Information URL; other sections/API responses unread. Legacy Kline URL led to generic landing page, not kline evidence."
+        },
+        {
+          "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+          "basis": "Whole small README received; only COIN-M Kline endpoint/header/example lines57-61 reviewed. Other sections were searched only to locate this section and are not claimed reviewed."
+        }
+      ],
+      "source_manifest": {
+        "repository": "QuantConnect/Tutorials",
+        "repository_commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+        "sources": [
+          {
+            "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/01 Introduction.html",
+            "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/01%20Introduction.html",
+            "bytes": 784,
+            "sha256": "ad03f0cb6a900e904cd24f0006f905afb36e77056c3e741aab552ad3f0e07995",
+            "reviewed_scope": "Whole HTML file read2026-10-21; exact pinned fingerprint recaptured2026-10-22. Specifically Algorithm.html is an iframe wrapper; its embedded target remains unread."
+          },
+          {
+            "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/02 Method.html",
+            "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/02%20Method.html",
+            "bytes": 3591,
+            "sha256": "c59a9992c1e9abb2ffb4e66712d72cda89d7b25538b28bd217041fb05bc556b9",
+            "reviewed_scope": "Whole HTML file read2026-10-21; exact pinned fingerprint recaptured2026-10-22. Specifically Algorithm.html is an iframe wrapper; its embedded target remains unread."
+          },
+          {
+            "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/03 Algorithm.html",
+            "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/03%20Algorithm.html",
+            "bytes": 564,
+            "sha256": "347d9bc140b8151bd50f18787a4cf694314124b50079e1ddb338e3c9a85dfd60",
+            "reviewed_scope": "Whole HTML file read2026-10-21; exact pinned fingerprint recaptured2026-10-22. Specifically Algorithm.html is an iframe wrapper; its embedded target remains unread."
+          },
+          {
+            "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/04 Source.html",
+            "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities/04%20Source.html",
+            "bytes": 173,
+            "sha256": "8f590141fa5ce754336b7224579e7e95b2e103e0d945191cf499818747ab4505",
+            "reviewed_scope": "Whole HTML file read2026-10-21; exact pinned fingerprint recaptured2026-10-22. Specifically Algorithm.html is an iframe wrapper; its embedded target remains unread."
+          },
+          {
+            "path": "04 Strategy Library/29 Term Structure Effect in Commodities/02 Method.html",
+            "url": "https://raw.githubusercontent.com/QuantConnect/Tutorials/4a341890296f7e79e095508f06170c72ccaa629c/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities/02%20Method.html",
+            "bytes": 4002,
+            "sha256": "460cc5ab5aacb18be73749c7adf2e1cea12c17a642fa4e7ec301f6cf372ad680",
+            "reviewed_scope": "Whole HTML file read2026-10-21; exact pinned fingerprint recaptured2026-10-22. Specifically Algorithm.html is an iframe wrapper; its embedded target remains unread."
+          },
+          {
+            "url": "https://www.quantconnect.com/research/15352/liquidity-effect-in-stocks/",
+            "captured_utc_date": "2026-10-21",
+            "bytes": 174046,
+            "sha256": "8cbefe9d37335db23e81a1460d7501a6d0961a2c3855c4652948e0bc2a859dd7",
+            "reviewed_scope": "Public Introduction/Method/reference paragraphs only, received 2026-10-21. Code, embedded backtest and underlying paper unread; hash retains that earlier receipt, not a current-vintage recapture."
+          },
+          {
+            "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/market-data#exchange-information",
+            "captured_utc_date": "2026-10-21",
+            "whole_file_bytes": 1454656,
+            "whole_file_sha256": "c70f7c0c1531e7856565036673f80b28932d17cab89caf0b0e14783d04d45cd0",
+            "selected_section": "exchange-information",
+            "section_utf8_bytes": 101701,
+            "section_sha256": "d2be9626c435717bc6b65151971785146b24b96af00059643e9786ac8fb071e4",
+            "reviewed_scope": "Historical receipt of selected endpoint section only, from opening h2 to before next h2. Consolidated container received through legacy Exchange-Information URL; other sections/API responses unread. Legacy Kline URL led to generic landing page, not kline evidence."
+          },
+          {
+            "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/market-data#kline-candlestick-data",
+            "captured_utc_date": "2026-10-21",
+            "whole_file_bytes": 1454656,
+            "whole_file_sha256": "c70f7c0c1531e7856565036673f80b28932d17cab89caf0b0e14783d04d45cd0",
+            "selected_section": "kline-candlestick-data",
+            "section_utf8_bytes": 60160,
+            "section_sha256": "021719552fd044e8dd9cf30be3e6135048502f9dcb2788642432d49f3384e2f6",
+            "reviewed_scope": "Historical receipt of selected endpoint section only, from opening h2 to before next h2. Consolidated container received through legacy Exchange-Information URL; other sections/API responses unread. Legacy Kline URL led to generic landing page, not kline evidence."
+          },
+          {
+            "repository": "binance/binance-public-data",
+            "repository_commit": "d571690eb66760763b0bd6e27e8cd35603c7e244",
+            "path": "README.md",
+            "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+            "raw_url": "https://raw.githubusercontent.com/binance/binance-public-data/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+            "whole_file_bytes": 5282,
+            "whole_file_sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+            "selected_range": {
+              "start_line": 57,
+              "end_line": 61,
+              "bytes": 369,
+              "sha256": "3462a345e43cc6e6e9219ac236127e0fb8fd51bcb07571101646844171bdffc3"
+            },
+            "received_scope": "Whole small README received; only COIN-M Kline endpoint/header/example lines57-61 reviewed. Other sections were searched only to locate this section and are not claimed reviewed."
+          }
+        ]
+      },
+      "source_manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a",
+      "manifest_hash_scope": "SHA256 of source_manifest JSON sorted keys with comma/colon separators. Dates distinguish original receipts from recaptured pinned files.",
+      "received_scope": "Four previously unread folder30 HTML files plus directly linked folder29 Method; iframe target/other linked articles/underlying paper unread. Preliminary public liquidity prose retained separately. Two selected Binance endpoint-doc sections and one pinned archive-header section supply input definitions; no API or market rows.",
+      "synthetic_artifact": {
+        "pr_url": "https://github.com/SaikiK12/T/pull/45",
+        "repository_commit": "7e8609d5df1e3ce6175a0eb3f26366fcc995bdc0",
+        "module": "research/audit_qc_term_structure.py",
+        "receipt": "research/fixtures/qc_term_structure_audit.json",
+        "reproduce": "python -m research.audit_qc_term_structure /path/to/pinned_Method.html",
+        "checks_passed": 7,
+        "execution_scope": "Only fingerprinted first joint Method Python block on invented contracts. Unit rescaling proves rank reversal, not changed positions; high tertile is empty in that two-candidate case.",
+        "validation": "Original audit full suite 597 tests OK,3 skipped on668e3af;4 offline guards. Independent source/receipt review passed; exact receipt reproduced again2026-10-22 after workspace replacement."
+      },
+      "source_conflicts": [
+        "Nominal quote-price gap vs linked log yield; all-deferred-contract vs commodity-root ranks.",
+        "Mean minute returns over 21 calendar days vs monthly cumulative-return interpretation; stable input-order ties, pre-skip counts and [-0:] behavior.",
+        "Referenced Method first-two prose vs first/last calculation vs second-maturity trading; counts/scheduling not shown."
+      ],
+      "controls": {
+        "source_mentioned": [
+          "Standalone term structure and one-month cross-sectional commodity momentum."
+        ],
+        "agent_proposed": [
+          "Matched risk/gross one-factor controls, random/null and nominal/log sensitivity, fixed before outcomes.",
+          "Actual matched-perp funding plus complete 1x/2x/3x fees/spread/impact/rolls."
+        ]
+      },
+      "primary_data_contract": {
+        "endpoint_fields": [
+          "exchangeInfo: symbol,pair,contractType,deliveryDate,onboardDate,contractStatus,contractSize,base/quote/margin assets; filter tickSize/stepSize, not precision fields.",
+          "Klines: instrument identity,OHLC,open/close clocks,Volume,Base asset volume,trades,taker volumes.1500-row maximum,200-day span; most recent limit rows relative to endTime. startTime alone does not prove forward coverage.",
+          "Migrated REST documentation accepts CM and UM symbols; route alone does not establish inverse payoff or volume denomination. Current exchange information is not a historical universe."
+        ],
+        "archive_schema": {
+          "captured_utc_date": "2026-10-22",
+          "source": {
+            "repository": "binance/binance-public-data",
+            "repository_commit": "d571690eb66760763b0bd6e27e8cd35603c7e244",
+            "path": "README.md",
+            "url": "https://github.com/binance/binance-public-data/blob/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+            "raw_url": "https://raw.githubusercontent.com/binance/binance-public-data/d571690eb66760763b0bd6e27e8cd35603c7e244/README.md",
+            "whole_file_bytes": 5282,
+            "whole_file_sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+            "selected_range": {
+              "start_line": 57,
+              "end_line": 61,
+              "bytes": 369,
+              "sha256": "3462a345e43cc6e6e9219ac236127e0fb8fd51bcb07571101646844171bdffc3"
+            },
+            "received_scope": "Whole small README received; only COIN-M Kline endpoint/header/example lines57-61 reviewed. Other sections were searched only to locate this section and are not claimed reviewed."
+          },
+          "local_sources": [
+            {
+              "path": "scripts/fetch_coinm.py",
+              "repository_commit": "5bb93092f5d7b323338fafb75621c8a85a1f8bdc",
+              "whole_file_sha256": "84e04603dec03a3d702417d601abeed505a723cb1204866f27931a5bcebfdb0a",
+              "reviewed_ranges": [
+                {
+                  "start": 25,
+                  "end": 35,
+                  "sha256": "fd9959896380445ac561577d011dfa0249a64bd1fb278bf7c534568446652f23"
+                }
+              ]
+            },
+            {
+              "path": "lab/data.py",
+              "repository_commit": "5bb93092f5d7b323338fafb75621c8a85a1f8bdc",
+              "whole_file_sha256": "a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe",
+              "reviewed_ranges": [
+                {
+                  "start": 27,
+                  "end": 35,
+                  "sha256": "bb2dc11b81951859c8a3e0fa0681eb63b8d4b945f8bdf83d92091d99b4ce501b"
+                },
+                {
+                  "start": 169,
+                  "end": 183,
+                  "sha256": "da362b7d078ccf6503d85c1b06304258662a2334c91716312981ce0638b76714"
+                }
+              ]
+            }
+          ],
+          "field_mapping": [
+            {
+              "index": 7,
+              "source_meaning": "Base asset volume",
+              "assigned_local_name": "quote_volume"
+            },
+            {
+              "index": 10,
+              "source_meaning": "Taker buy base asset volume",
+              "assigned_local_name": "taker_buy_quote_volume"
+            }
+          ],
+          "finding": "Confirmed semantic field-name mismatch when fetch_coinm passes COIN-M archives through generic lab.data.parse(..., klines). Numeric values are not converted; caller/consumer treatment needs explicit audit before USD-notional/turnover uses.",
+          "limits": [
+            "No archive ZIP, API response, historical market row or cache was downloaded/read; only the README documentation example was present.",
+            "Generic Volume and contract-size denomination are not established by this bounded README section. Do not infer [5] USD notional from its name.",
+            "Existing parquet caches, all consumers and impacts on historical strategy results were not inspected or changed.",
+            "No repo edits, frozen-input edit, repair, trade, PnL or model run performed."
+          ],
+          "market_trials": 0
+        },
+        "limits": [
+          "REST sections do not explicitly establish every timestamp unit, contractSize denomination, generic Volume unit or inverse PnL. Resolve specific contract specs before normalization.",
+          "Confirmed local COIN-M base-volume naming mismatch requires consumer/cache audit before notional/turnover use. No existing cache or result impact assessed; no repair or historical rewrite here.",
+          "R301 runner directly selects price/funding/basis/days, with no direct volume read; this mismatch alone does not invalidate R301. Upstream construction and other consumers remain unreviewed."
+        ],
+        "r301_direct_runner_check": {
+          "path": "scripts/run_qbasis.py",
+          "repository_commit": "5bb93092f5d7b323338fafb75621c8a85a1f8bdc",
+          "whole_file_sha256": "4037fa725c3b53259f8479ddfde00695edb187791a010f2fd9c9f80d40d326a8",
+          "reviewed_ranges": [
+            {
+              "start": 1,
+              "end": 90,
+              "sha256": "bfb2c978cdf9fe8f06a4c3cf1bbe42fbeca8f61f96bc71c0442a204556b26655"
+            },
+            {
+              "start": 190,
+              "end": 213,
+              "sha256": "960d804dd3d49c4487dacecb9451af6cefac788add8c75f67b6b25ea6585be5e"
+            }
+          ],
+          "explicit_panel_columns": [
+            "day",
+            "perp",
+            "close",
+            "fund",
+            "qtr_basis_ann",
+            "qtr_days"
+          ],
+          "finding": "No direct volume-field reads in this runner: load_panel explicitly selects prices/funding/basis/days; signal uses qtr_basis_ann. This naming mismatch alone therefore does not establish invalidation of R301.",
+          "limits": "qtr_basis_ann construction, imported accounting helpers, caches and other consumers were not audited; no result outcomes were read."
+        }
+      },
+      "prior_queue_row": {
+        "commit": "a6b7e2c",
+        "row": {
+          "id": "M251",
+          "method": "Joint term-structure and momentum ranking: rank contracts by annualized roll/basis and then one-month momentum, trading the joint extremes",
+          "data_held": "P point-in-time dated-futures term structure and cross-sectional prices",
+          "status": "BLOCKED",
+          "cheap": "2",
+          "note": "The public study is commodity-focused and supplies no altcoin contract set, basis units, tie handling, rebalance, funding, delistings or execution costs. Related to M170/M194 but not the same ranking.",
+          "source": "Codex social discovery 2026-10-20",
+          "rid": "-"
+        }
+      },
+      "registry_reconciliation": "Current M170/R301 NULL and all 296 authoritative live-lab rows retained as exact byte prefix; only source-owned M251 explanatory note changes. All22 other prior source rows, old275 source objects, old aliases/supplements retained. No new M/R ID.",
+      "limits": [
+        "No market PnL, native LEAN/MEXC run, large acquisition or new prospective evidence.",
+        "Current Claude reel additions remain in the authoritative document with explicit source-review/drift warnings; no complete re-extraction claimed."
+      ],
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [
