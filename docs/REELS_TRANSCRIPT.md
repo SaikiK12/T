@@ -244,3 +244,120 @@ media stayed in the scratchpad.
 - **The two ML lessons** say nothing about markets. The old session's GBM tests stand.
 - **The repository** sent with them (`lse-data`) is assessed in `docs/DATA_SOURCES.md`. It is a candidate source
   that needs the owner's key.
+
+# The owner's TikTok and four reels of 2026-10-22 (afternoon)
+
+Obtained the same way. The reels came through `yt-dlp` without a login. Its TikTok extractor failed on this post, so
+the video address came from the public page's own data, with the page's cookies. Speech is transcribed with
+`faster-whisper` "small" on CPU, and frames are taken every 2 seconds. The media stayed in the scratchpad.
+
+## Reel 11: instagram.com/reel/DXrQvB0EYz7 (hooper.algo.fxx, 2026-04-28, 1,642 likes, 77 comments)
+- **Speech:**
+  - "This is the Oxford Strat, and this is where I get ideas on how to build algorithms. There are about a hundred on
+    this page."
+  - "Out of 100 strategies that I build, 93% will be unprofitable, leaving only seven with an actual viable edge. The
+    only way to really know is to build hundreds if not thousands."
+- **Frames:**
+  - the site's "Reviews of trading strategies (public domain)", rated A/B/C/D. Examples: 2-bar narrow range, 3-bar
+    momentum, Hikkake, Hook, Oops, narrow range 4/7, TD Sequential, Wyckoff, Keltner 3-phase, Hull and zero-lag
+    moving-average filters, Aroon, ADX filters;
+  - his MT4 tester listing FX expert advisors: "TokyoRangeBreakout", "FirstXMinBreakout", "EngulfingRoundNumber",
+    "DoublePinBar", "GOLDEN WEEKEND".
+- **Lab:**
+  - **The 7% is the lab's own experience.** About 70% of its rounds are NULL, and nothing has passed gate 1.
+  - **Building thousands only works with the multiplicity counted.** R263 tested 5,472 chart strategies as one
+    family with a reality check, and the program reads every result against `registry.program_trials()`.
+  - **The site is a harvest source** for the plan's "remaining chart and TA rules not in R263". Most of its rules
+    are covered by R185, R243 and R263. The pattern rules not yet coded (Hikkake, Oops, NR4/NR7, TD Sequential) go
+    into the next chart family as one frozen PREREG, not one by one.
+
+## Reel 12: instagram.com/reel/DYWqgGkOyE1 (deltatrendtrading, 2026-05-15, 5,433 likes, 134 comments)
+- **Caption:** "This is what it looks like to begin exploring a trading idea properly, programmatically,
+  mathematically."
+- **Speech:**
+  - The rule: "in regular trading hours only, we mark out the first 15-minute bullish order block, and then on the
+    1-minute timeframe, on a tap of that order block, we enter a long trade, targeting a fixed multiple of risk with
+    the stop below the bottom of the order block."
+  - "Over five years of Nasdaq front-month data… the bootstrapped 95% confidence interval for trade return by day
+    spans zero."
+  - "If you compare the actual order block timing versus a randomized entry model… a p-value around 0.01 for mean R."
+  - "If we instead wait for price to move down to the bottom 25% of the box… with a 1.5R target." The parameters came
+    from his training set. "On the test set [from about 2025]: 199 trades, 0.339 mean R per trade… the confidence
+    intervals are fully positive."
+  - "It drastically underperforms buy and hold."
+- **Lab:**
+  - **His method is the lab's:** a fixed rule, a null of randomized entries, a bootstrap and a held-out set. His
+    test set is small (199 trades), and the 25% entry and 1.5R target were tuned on the training set.
+  - **The rule is new to the lab at 1 minute on an index.** R185/R186 tested ICT order blocks on crypto 1h bars:
+    gross only, below cost.
+  - **It can be traded where the owner trades.** MEXC lists NAS100_USDT, SPX500_USDT and US30_USDT perps, open since
+    2026-01-29, with a 0 maker and 2 bp taker fee. The LSE vault holds NAS100, SPX500 and US30 ticks from 2023-02.
+    Queued as **M320**, with the M206 opening-range break in the same family.
+  - **Unseen days exist:** everything after the reel's date (2026-05-15) is unseen by its author. LSE's index bars
+    must first match an independent close (`docs/DATA_SOURCES.md`).
+  - **A second lead came from checking the instrument (M321).** These index perps trade through the weekend on a
+    Hyperliquid-sourced price while the index and CME futures are closed. Does the perp's move in closed hours
+    revert at the reopen? M051 (do TradFi perps track their underlying) can now be tested with LSE's reference ticks.
+
+## Reel 13: instagram.com/reel/DaNNDObtRxN (andreacimi.trading, 2026-06-30, 9,726 likes, 174 comments)
+- **Caption:** "Trading strategies tier list w/ market maker."
+
+| Strategy | His tier | Lab |
+|---|---|---|
+| Opening-range breakout | A, "backed by proper research" | M206 UNTESTED; now in M320's family on index perps |
+| VWAP mean reversion | A | M207 TESTED (NULL), M305 R290 NULL |
+| Bollinger band mean reversion | D, "lagging" | R243 / R263 NULL |
+| VIX mean reversion | S, "if you time it incorrectly, it's going to be extremely painful" | R239/R241 (t 1.94 then −0.05), R283 vixpanic |
+| Post-earnings drift | A, "small caps not followed by analysts" | M222: stocks, data not free; not a perp |
+| Option premium selling | A, "large funds overpay for protection" | M138 R209 NULL (DVOL timing), M214/M224 (short-vol timing) |
+| ICT unicorn | F, "I tested it… there was no edge" | M110: R185-R187 below cost |
+| Martingale | D | On the prop "never do" list |
+| Reverse martingale (size up winners, cut losers) | common practice | `docs/SIZING_EVIDENCE.md`; R281 confidence-sized carry |
+| Trendline bounce | F, "completely discretionary" | No rule to test |
+
+- **Lab:** His A tier is the academic list, and the lab has tested most of it. Only the opening range on a liquid
+  index at 1 minute is untested. It is now M320.
+
+## Reel 14: instagram.com/reel/DdRchNXxHKW (max_kelleyy, 2026-09-14, 1,493 likes, 2,621 comments)
+- **Caption:** "Trading with AI isn't easy, but these repos will help. Comment 'stack' and I'll send them over." Most
+  of the 2,621 comments are the word "stack".
+- **Speech and frames:** "five repos to create an AI hedge fund". Four are shown:
+  - OpenBB (73k stars, the data layer);
+  - Investor Skills by Questflow (about 1.9k stars, "macro theses of top investors as agent skills");
+  - TradingAgents by Tauric Research (the agent framework);
+  - Vibe-Trading (the execution layer, "13 brokerages").
+- **Lab:**
+  - **These are tools, not rules (M165).** TradingAgents' own paper tested 3-5 US stocks over one quarter of 2024
+    (M102, BLOCKED: it needs a dated news archive).
+  - **An LLM's knowledge leaks the future:** a model trained after the test window "knows" the outcome. Any such lane
+    runs forward only, with frozen prompts and a pinned model (M312).
+
+## TikTok: tiktok.com/@ojrenick/video/7699222826628238606 (2026-10-21, 119 s, 12.9k plays, 867 likes)
+- **Caption:** "upward and onward #stocks #optionstrading". He is the creator of one of the owner's TikToks of
+  2026-10-21 (`docs/VIDEO_DIG.md`).
+- **Speech:**
+  - "New rule number one of trading: ask not why the market is going up. Ask why should the market be down…
+    Technicals… we're in an uptrend. Fundamentals, that's earnings… in an uptrend."
+  - "We saw a bunch of call buying happen in Tesla, like above the ask, which means they were scrambling to buy calls
+    ahead of the report… SpaceX hit above the implied move… those options looked pretty cheap."
+  - "That VIX rule of 16 suggests VIX should have been coming down… we were getting less than 1% moves despite the
+    VIX being higher."
+- **Lab:**
+  - **"Ask why it should be down":** a long bias while trend and earnings rise. That is time-series trend, tested
+    many times (R284 trendpull, R263). For crypto perps the lab has no earnings analogue.
+  - **The rule of 16 is a known identity.** VIX/16 is roughly the S&P's expected daily move in %, because √252 ≈
+    15.9. The crypto analogue is DVOL/19.1 (√365).
+    - When daily moves stay below it, implied volatility tends to fall. That is the volatility risk premium.
+    - The lab measured it (M215) and timed it on Deribit (M138, R209 NULL).
+    - It is not new.
+  - **Call buying above the ask before a report** is option flow. The lab tested it on Deribit (R295, M311/M313),
+    and QuantData-style tests on SPY are possible with LSE's option prints (`docs/QUANTDATA.md`). It is not a perp
+    rule.
+
+## What the five clips changed
+- **Two new queue rows:**
+  - **M320:** the opening order block and opening range on US index perps, at 1 minute.
+  - **M321:** the closed-hours gap on MEXC's 24/7 index perps.
+  - Both trade on MEXC at 0 / 2 bp. Both need LSE's index ticks and MEXC's index-perp klines.
+- **One harvest source:** the Oxford Strat's public-domain pattern list, for the next chart family.
+- **No new rule from the tier list, the repos or the TikTok.** Each item maps to a tested or queued row above.

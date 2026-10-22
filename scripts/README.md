@@ -67,7 +67,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (84)
+## Run: one lane's frozen measurement (87)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -77,6 +77,7 @@ line is the first line of the script's own docstring.
 - [`run_auction.py`](run_auction.py): auction_v1 (R290): auction-market levels on 1-minute bars of the BTC, ETH and SOL perps, from real session anchors and from placebo clocks, as set out in experiments/auction_v1/PREREG.md (M305, ...
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
+- [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
@@ -99,6 +100,7 @@ line is the first line of the script's own docstring.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
+- [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_fxindex.py`](run_fxindex.py): fxindex_v1 (R239): G10 forex momentum, dollar trend, VIX reversal, Halloween, pre-holiday and the variance risk premium, as set out in experiments/fxindex_v1/PREREG.md.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
 - [`run_ictlevels.py`](run_ictlevels.py): ictlevels_v1 (R246): round-number levels, SMT divergence against BTC and the 8 AM New York range on hourly bars of the top-50 perps, directional books, as set out in ...
@@ -127,6 +129,7 @@ line is the first line of the script's own docstring.
 - [`run_posimpulse.py`](run_posimpulse.py): posimpulse_v1 (R234): the 24 h and 72 h change in top-vs-crowd positioning as 72 h spread books, tested for information beyond the level book, as set out in experiments/posimpulse_v1/PREREG.md.
 - [`run_posimpulse_v2.py`](run_posimpulse_v2.py): posimpulse_v2 (R240): imp24/H and imp72/H from R234 tested on validation only, with K fixed on 2023, as set out in experiments/posimpulse_v2/PREREG.md.
 - [`run_propfirm.py`](run_propfirm.py): propfirm_v1 (R202): the lab's return streams under prop-firm rule sets, as set out in experiments/propfirm_v1/PREREG.md.
+- [`run_qbasis.py`](run_qbasis.py): qbasis_v1 (R301): the dated-futures basis as a cross-sectional signal on Binance perps (M170, from Chi, Hao, Hu and Ran, J. Futures Markets 2023).
 - [`run_rebalancing.py`](run_rebalancing.py): R232: fixed equal-weight rebalance cadences versus unchanged buy-and-hold units.
 - [`run_regime.py`](run_regime.py): regime_v1 (R233): flow books A, B and X2 traded only in some trend x volatility regimes, and a regime-wise choice among them (MacroHFT's sub-agents and hyper-agent), against constant size, as set ...
 - [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.

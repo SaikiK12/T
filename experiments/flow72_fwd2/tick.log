@@ -262,3 +262,11 @@ exit 0
 08:06:23 prereg sha 06dc7b412b06
 08:07:08 748 perpetuals, grid 1256 h, 0 hours to compute
 08:07:14 {"last_hour": "2026-10-22T06:00:00+00:00", "days_scored": 21} {'A': (21, 0.2378), 'B': (21, 0.1022)}
+== tick 2026-10-22T09:06:00Z code f358a20
+09:06:22 prereg sha 06dc7b412b06
+09:07:09 748 perpetuals, grid 1257 h, 1 hours to compute
+09:07:10 ratios 1/50 1000PEPEUSDT
+09:07:38 ratios 21/50 LTCUSDT
+09:08:06 ratios 41/50 SUIUSDT
+09:08:19 journaled 1 hours, 50 rows; last 2026-10-22 07:00
+09:08:24 {"last_hour": "2026-10-22T07:00:00+00:00", "days_scored": 21} {'A': (21, 0.2378), 'B': (21, 0.1022)}

@@ -70,8 +70,35 @@ digests are in `experiments/recorders/journal/digests.csv`.
 - **One month of aggTrades for about 5 coins:** for markout research. Full tick history is excluded for disk.
 - **London Strategic Edge vault (`lse-data`, github.com/londonstrategicedge/lse-data):** the owner's link of
   2026-10-22. It is a candidate source and needs the owner's key.
-  - **Access:** every read needs an API key (`LSE_API_KEY`). The owner adds it in the environment settings; it is
-    never pasted into chat. The host answers from this container (checked 2026-10-22 without a key).
+  - **Access:** every read needs an API key (`LSE_API_KEY`). The host answers from this container.
+    - **The key should live in the environment settings.** On 2026-10-22 the owner pasted one into the chat, so it
+      should be rotated and added there.
+    - For that session it was kept in a file outside the repository (mode 600) and was never written to the repo or
+      a log.
+  - **Checked with the key on 2026-10-22** (REST `GET https://api.londonstrategicedge.com/vault/candles` and
+    `/vault/catalog`, header `x-api-key`; the client code was read, not run):
+    - **Crypto is Binance spot, relabelled.**
+      - `BTC/USD` daily candles for 2024-01..02 equal Binance BTCUSDT spot: volume identical on all 60 days, prices
+        within 5e-7 (float rounding).
+      - The 58 crypto symbols add nothing to the Binance archive.
+    - **Catalog: 22,966 instruments.**
+
+      | Dataset | Instruments | From |
+      |---|---|---|
+      | Economic series | 14,911 | 1900 |
+      | US stocks | 3,982 | 2003-09 (AAPL, NVDA); TSLA 2010; many only from 2026-04 |
+      | US options | 3,186 | 2014-06 (SPY, QQQ, AAPL, NVDA, TSLA) |
+      | FX pairs | 62 | 2009-09, ticks |
+      | Index CFDs | 19 | NAS100, SPX500 and US30 from 2023-02; European indices from 2024-04 |
+      | Futures | 68 | ES, NQ, GC and SI from 2025-09; Eurex from 2025-03 |
+      | ETFs | 25 | 2026-04 only |
+      | VIX | 1 | 2026-07 only |
+
+    - **Why it matters for MEXC.** MEXC lists index perps on the same three indices (NAS100_USDT, SPX500_USDT,
+      US30_USDT, open since 2026-01-29, maker 0, taker 2 bp). LSE's index ticks are the reference series for M320
+      (opening order block) and M321 (closed-hours gap), and they unblock M051.
+    - **Still unverified:** the index and FX ticks against an independent source. The plan's row and quota limits
+      were not reached in this check, and the rate-limit headers were not returned.
   - **What it claims to hold:** US stocks from 2003, FX ticks from 2009, crypto from 2017, US option prints from 2014,
     14,000+ macro series, COT, insider trades, and fundamentals. Candles come at 14 resolutions, down to 1 second.
   - **Unverified:**
