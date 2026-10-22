@@ -130,3 +130,117 @@ media stayed in the scratchpad.
     Plain volume flags crash hours far better (about 40x top against bottom decile, against 3x).
   - The reel shows the 2010 chart without the Andersen and Bondarenko rebuttal.
   - Write-up: `experiments/vpin_v1/FINDINGS.md`, `docs/QUANTDATA.md` section 3.
+
+# The owner's four reels of 2026-10-22, sent with the `lse-data` repository
+
+Obtained the same way: `yt-dlp` without a login, `faster-whisper` "small" on CPU, and frames at 1 per second. The
+media stayed in the scratchpad.
+
+## Reel 7: instagram.com/reel/Derh59yMyv8 (quant_labde, 2026-10-19, 96 s, 3,761 likes, 47 comments)
+- **Caption:** "Are these 90%+ winrate bots actually safe?"
+- **Speech** (English):
+  - "Bots that almost never lose get sold every day. So I built one and ran it on seven years of gold… Price drops, it
+    buys more. Drops again, it doubles up. Then it waits until the whole pile is back in profit. No stop loss."
+  - "98.9% of its cycles closed in profit… Then came September 2023. Gold kept falling. The bot kept buying. One
+    single cycle. About $820,000 gone… Over seven years, the account was wiped out 14 times."
+  - "So I took the doubling out. Same size on every buy. Now 99.9% of cycles won. But the last one never came back.
+    When the data ended, it was still open. $140,000 underwater."
+  - "Our own NASDAQ bot… wins only 56.4% of its trades, but every trade has a stop. Its worst drawdown since 2019,
+    26.6%… A win rate tells you how often you win, not what one loss costs you."
+- **Frames:**
+  - an XAUUSD M5 grid bot, 2019-2026;
+  - "COMBINED BASKET UNDERWATER", with position size stepping 1x → 2x → 3x;
+  - the equity curve of 14 wipeouts, each a slow climb then a vertical drop;
+  - "GOLD 1,330 → 4,000 in this test";
+  - "WIN RATE ≠ SAFETY".
+- **Lab:**
+  - Nothing new to test. The reel is its own test, and its lesson is already a lab rule:
+    - martingale and size escalation are on the prop "never do" list (`docs/PROP_FIRMS.md`);
+    - no lane is ranked by win rate;
+    - gates read net PnL, the worst drawdown and cost sensitivity (`docs/GATES.md`).
+  - Its fair point: even without doubling, a grid with no stop carries an open loss the win rate hides. Here the
+    loss was −$140k at the end of the data, after gold tripled.
+  - The NASDAQ bot's numbers (56.4%, −26.6%) are shown without costs, a period split or out-of-sample dates. They
+    cannot be checked.
+
+## Reel 8: instagram.com/reel/DeF5_5yPtDb (telonicstrading, 2026-10-05, 46 s, 1,069 likes, 1,864 comments)
+- **Caption:** "I built a machine learning model that predicts the next day's efficiency ratio. Comment 'MODEL' to
+  see what it predicts every day."
+  - The 1,864 comments are mostly the word "model". The reel is a sign-up funnel.
+- **Speech** (English):
+  - "Instead of trying to predict direction, the model predicts the next day's efficiency ratio… A high ratio means
+    price moved clean in one direction while a low ratio means price chopped back and forth."
+  - "The model makes its predictions with a logistic regression that weights 15 different measurements of how
+    price has been moving."
+  - "High efficiency days performed the best while the low efficiency days made about a third of the money per
+    trade. So I added a gate that skips those low efficiency days entirely and that one change improved almost every
+    performance metric… that improvement held on two years of data the models never seen."
+- **Frames:** "15 measurements, 15 learned weights", scored from "toward chop" to "toward trend":
+
+  | What the market just did | Weight | What it's been doing lately | Weight |
+  |---|---|---|---|
+  | realised volatility | −0.204 | days of chop in a row | +0.065 |
+  | today's efficiency | −0.198 | 5-day efficiency | +0.044 |
+  | 20-day efficiency | −0.036 | 10-day efficiency | +0.013 |
+  | variance ratio | −0.101 | 20-day mean efficiency | −0.024 |
+  | false-breakout rate | +0.182 | yesterday's efficiency | −0.200 |
+  | distance from the 50-day | −0.198 | efficiency 2 days ago | −0.135 |
+  | | | change in volatility | −0.119 |
+  | | | chop share, 5 days | +0.009 |
+  | | | chop share, 10 days | +0.098 |
+
+  No strategy, threshold, AUC, trade count or equity curve is shown.
+- **Lab: R293 `er_v1` is NULL** (`experiments/er_v1/FINDINGS.md`).
+  - **The setup:**
+    - the same 15 measurements on BTC, ETH and SOL perps;
+    - a logistic regression fitted on 2021-23 and read on 2024-26;
+    - the gate applied to a first-hour trend rule fixed in advance.
+  - **The forecast:**
+    - tomorrow's efficiency is weakly predictable (AUC 0.537);
+    - today's efficiency alone does as well (0.536);
+    - our fitted weights agree with the reel's in sign 12 times out of 15.
+  - **The gate:** it made each trade worse (−3.3 bp). The rule lost either way.
+  - **Post hoc,** the first UTC hour reversed in both windows. That is M315, for unseen data only.
+
+## Reel 9: instagram.com/reel/Dcdew99nERj (datasciencefoundry, 2026-08-25, 175 s, 11,818 likes, 40 comments)
+- **Caption:** "These are 8 of the most important supervised machine learning algorithms you should know."
+- **Speech** (English): a lesson on film ratings:
+  - linear regression ("minimizes the sum of the squared errors");
+  - logistic regression ("squashes that weighted sum through an S-curve… log loss");
+  - k nearest neighbours;
+  - the support vector machine ("the widest margin");
+  - the decision tree;
+  - the random forest ("averaging them reduces overfitting");
+  - gradient boosting ("each new tree corrects the error that is still left");
+  - XGBoost ("regularization… handles missing values… trains in parallel");
+  - the neural network.
+- **Lab:** nothing to test. It is a general lesson with no trading claim. All eight model types are standard:
+  - the lab fitted a ridge logistic regression in R293;
+  - the old session fitted a ridge and GBM composite (R162, `docs/OLD_SESSION_EDGES.md`).
+
+## Reel 10: instagram.com/reel/DeAhvMBI5ET (machinelearningtogo, 2026-10-02, 112 s, 5,964 likes, 33 comments)
+- **Caption:** "Machine Learning from Scratch, part 22: the idea behind XGBoost." Its example is 500 made-up bank
+  customers: train on 400, test on 100, 200 rounds at learning rate 0.01.
+- **Speech** (English):
+  - "XGBoost builds many small decision trees, one after another, and each new tree fixes the mistakes the earlier
+    ones still make… After 200 trees the model gets 84 of the 100 new customers right."
+  - "XGBoost adds three things on top: a penalty for trees that grow too complicated, smarter steps that also use how
+    the slope bends, and an engineering that makes it very fast. That is why it wins so often on table data."
+- **Lab:** nothing to test directly.
+  - Boosted trees win on tabular data whose signal is stable, like credit and churn.
+  - Market returns are mostly noise, with a signal that drifts between years.
+  - The old session's rankers found nothing (`docs/OLD_SESSION_EDGES.md`, M042):
+    - the 390-cell megascan, 0 of 390 (R161);
+    - the ridge and GBM composite, rank IC 0.01-0.04 (R162).
+  - A boosted model on the R293 features would be one more trial on the same weak target (AUC about 0.54). It
+    would not answer a different question.
+  - **If the ML family (M042-M044) is run, it runs as one frozen family with purged walk-forward,** as the plan
+    says, with the trial count of every model and setting.
+
+## What the four reels changed
+- **One test:** R293, NULL. The reel's method does not carry over to crypto perps with this rule.
+- **One new seed:** M315, the first-hour fade, for unseen data only.
+- **No new rule:** reel 7's lesson (win rate is not safety) is already in the gates and the prop "never do" list.
+- **The two ML lessons** say nothing about markets. The old session's GBM tests stand.
+- **The repository** sent with them (`lse-data`) is assessed in `docs/DATA_SOURCES.md`. It is a candidate source
+  that needs the owner's key.

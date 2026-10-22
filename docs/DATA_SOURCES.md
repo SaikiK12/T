@@ -68,3 +68,24 @@ digests are in `experiments/recorders/journal/digests.csv`.
 ## Not downloaded yet
 - **CoinGecko 365-day market caps:** the free API keeps 365 days only.
 - **One month of aggTrades for about 5 coins:** for markout research. Full tick history is excluded for disk.
+- **London Strategic Edge vault (`lse-data`, github.com/londonstrategicedge/lse-data):** the owner's link of
+  2026-10-22. It is a candidate source and needs the owner's key.
+  - **Access:** every read needs an API key (`LSE_API_KEY`). The owner adds it in the environment settings; it is
+    never pasted into chat. The host answers from this container (checked 2026-10-22 without a key).
+  - **What it claims to hold:** US stocks from 2003, FX ticks from 2009, crypto from 2017, US option prints from 2014,
+    14,000+ macro series, COT, insider trades, and fundamentals. Candles come at 14 resolutions, down to 1 second.
+  - **Unverified:**
+    - Its README calls the store "the full recorded tape" but names no exchange licence or upstream vendor.
+    - "Free" sits beside plans with hourly export budgets.
+    - Before any lane reads it, its crypto candles must match the Binance archive and its FX candles must match an
+      independent source (row counts, gaps, a sample of bars).
+  - **Limits:**
+    - Its economic calendar keeps only current events (its CHANGELOG, 0.14.0), so it cannot give point-in-time
+      release dates for M290.
+    - Its terms forbid redistributing the data. Nothing from it is ever committed; `data/` is gitignored.
+  - **What it would add:**
+    - 1-minute US index and FX history for the blocked index lanes (M212);
+    - US option prints for a QuantData-style flow test on SPY/QQQ (`docs/QUANTDATA.md`);
+    - COT and macro series, partly held already in `data/macro`, as a cross-check.
+  - **Code:** the client is read-only reference. Its code is not run here; a fetcher would call the REST API
+    directly.

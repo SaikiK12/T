@@ -514,18 +514,30 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The US cash-open flush fade won in 2022 (mostly SOL) and lost in 2024-26 (t −0.48).
   - On Fridays, a move inside Deribit's 07:30-08:00 UTC settlement window reverses by about +20 bp gross per trade
     in both windows and all three coins. On the book it is +0.38 bp/day at 2x, t 1.37: not enough.
+  - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
+    York continue. They are seeds for a lane on unread data.
+  - [FINDINGS](../experiments/clockflow_v1/FINDINGS.md).
 - **R290 (auction_v1), NULL** (60 variants, M305 from the owner's term list, 1-minute bars, `docs/AUCTION_AND_FLOW.md`).
   - Five auction rules (value-area re-entry, IB and opening-range break, VWAP ±2 SD, naked POC) from 00:00 UTC, the
     New York open and the London open, against 8 random clocks.
   - Real session starts are no more structured than random clocks: rank-permutation p 0.36.
+  - The discovery pick (follow VWAP-band breaks after the New York open) lost in 2024-26 (t −0.96).
+  - [FINDINGS](../experiments/auction_v1/FINDINGS.md).
 - **R291 (vpin_v1), NULL** (4 variants, M085 from the owner's reel on toxic order flow, `docs/QUANTDATA.md`).
   - VPIN from Binance's exact taker split worsens 1-hour volatility forecasts out of sample (DM t −12.5 against
     a HAR with relative volume); the bulk-classified VPIN of the papers is mostly volume (corr 0.53-0.59).
   - Plain relative volume flags hours with moves over 4 sd about 40x top against bottom decile; VPIN 3x.
-  - The discovery pick (follow VWAP-band breaks after the New York open) lost in 2024-26 (t −0.96).
-  - Placebos, post hoc: the 09:30 New York fade is cleaner on days the US market is shut, and moves after 10:30 New
-    York continue. They are seeds for a lane on unread data.
-  - [FINDINGS](../experiments/clockflow_v1/FINDINGS.md).
+  - [FINDINGS](../experiments/vpin_v1/FINDINGS.md).
+- **R292 (dealerflow_v1), reserved.** Dealer gamma from Deribit taker flow (M308); frozen once the trade-history
+  download ends.
+- **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
+  `docs/REELS_TRANSCRIPT.md`).
+  - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
+    20-day mean alone give 0.536: the reel's other 13 features add nothing.
+  - Following the first UTC hour until 24:00 loses (−12 bp gross per trade in 2024-26). Skipping predicted chop
+    days makes each trade worse (−3.3 bp).
+  - Post hoc: the first hour reverses in both windows. That is M315, to be read only on unseen data.
+  - [FINDINGS](../experiments/er_v1/FINDINGS.md).
 
 ## 8. Where money could come from (propfirm_v1 R202)
 | route | what it needs | today |
@@ -640,6 +652,6 @@ Every number in this table assumes a stream that is not confirmed; R200 is the g
   - The ratio and OI snapshots have no independent archive to check against; they are unverified.
 
 ## Program
-Program trials: 9,478,559 after R291 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
+Program trials: 9,478,562 after R293 on this branch (`registry.program_trials()`), mostly correlated context-atlas cells. This raw
 bookkeeping total is not a count of independent hypotheses. R228–R232 use previously viewed dates and are
 exploratory; future confirmation requires outcomes collected after a frozen decision.

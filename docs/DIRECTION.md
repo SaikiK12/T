@@ -328,6 +328,13 @@ a critical eye, our own Bloomberg and an AI council. The write-up is `docs/AUCTI
 **R291 `vpin_v1` is NULL** (the owner's reel on toxic order flow, `docs/QUANTDATA.md`): VPIN from true trade
 sides adds no volatility forecast beyond volume, and plain volume flags crash hours better.
 
+**R293 `er_v1` is NULL** (the owner's reel on forecasting tomorrow's efficiency ratio):
+- the next UTC day's efficiency is only weakly predictable (AUC 0.537), and today's efficiency alone does as well;
+- gating a first-hour trend rule on that forecast makes each trade worse.
+
+Post hoc, the first UTC hour reverses in both windows. That is M315, for unseen data only (2020 in batch 2, or a
+forward lane).
+
 **Next:** the mechanism check for M308 (R292: does estimated dealer gamma predict realized volatility beyond
 R291's HAR base?) before any PnL rule. The AI council can only be a forward lane with frozen prompts and a key the owner sets up (M312).
 

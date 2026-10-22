@@ -66,7 +66,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (75)
+## Run: one lane's frozen measurement (77)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -91,6 +91,7 @@ line is the first line of the script's own docstring.
 - [`run_delist.py`](run_delist.py): R267 delist_v1: the Binance delisting-notice short on the hourly archive (experiments/delist_v1/PREREG.md).
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
+- [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_flow72.py`](run_flow72.py): flow72_v1 (R196): short the coins with heavy taker selling / top traders short vs the crowd, 72 h, universe-hedged, as set out in experiments/flow72_v1/PREREG.md.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
@@ -137,6 +138,7 @@ line is the first line of the script's own docstring.
 - [`run_venue_gap.py`](run_venue_gap.py): venue_gap_v1 (R216): the flow books' PnL split into crypto and TradFi contracts, in the archive and on the forward replay, as set out in experiments/venue_gap_v1/PREREG.md.
 - [`run_vixpanic.py`](run_vixpanic.py): vixpanic_v1 (R283): long SPY, QQQ and the BTCUSDT perp after VIX-panic onsets (VIX above VIX3M, VVIX in its top 5%, or both), tested against random dates, as set out in ...
 - [`run_volrisk.py`](run_volrisk.py): volrisk_v1 (R241): SVXY in VIX contango, SVXY in contango with calm VIX, and R239's VIXREV-QQQ on 2013-2026, as set out in experiments/volrisk_v1/PREREG.md.
+- [`run_vpin.py`](run_vpin.py): vpin_v1 (R291): does VPIN, the order-flow toxicity measure of Easley, López de Prado and O'Hara, forecast the realized volatility of the BTC, ETH and SOL perps beyond volume and past volatility? ...
 - [`run_vrp.py`](run_vrp.py): vrp_v1 (R209): implied minus realized volatility as a BTC/ETH timing signal, as set out in experiments/vrp_v1/PREREG.md.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
