@@ -599,6 +599,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The sides flip between windows for both signals. SPA p 0.295 / 0.952.
   - The basis is about half funding: its median daily rank correlation with 3-day funding is +0.41 to +0.50.
   - [FINDINGS](../experiments/qbasis_v1/FINDINGS.md).
+- **R302 (fundxs_v1), NULL** (8 trials, M263 from R276's reference factor, gate 0 on seen data).
+  - Long the fifth of the top 150 (or 50) perps paying the least funding over 3 (or 30) days, short the fifth paying
+    the most, net of funding, held 1 or 7 days.
+  - The pick (fund3, daily, top 150) earned +25.3 bp/day net in 2021-23 (t 3.32) and −7.2 in 2024-26 (t −0.71).
+  - It reproduces R276 (+11.2 bp/day at 7 bp over all periods), and that number is 2021's price effect (+65 bp/day).
+  - The funding part is steady (+10 to +13 bp/day to 2024). In 2025-26 the long leg's squeezed perps paid their longs
+    about 30 bp/day and fell by as much. So R276 and R190 do not conflict.
+  - [FINDINGS](../experiments/fundxs_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its

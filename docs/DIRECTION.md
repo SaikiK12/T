@@ -405,7 +405,12 @@ annualized basis, or its weekly change, does not rank the perps that follow.
   2024-26 (t 0.16).
 - The sides flip between windows. The basis is about half funding (rank correlation +0.41 to +0.50).
 
-**R302 `fundxs_v1` is frozen** (8 trials, M263). R276's reference factor as a book: long the fifth of the universe
+**R302 `fundxs_v1` is done: NULL** (8 trials, M263). The pick (fund3, daily, top 150) earned +25.3 bp/day net in
+2021-23 (t 3.32) and −7.2 in 2024-26. It reproduces R276's +10.43 (here +11.2 at 7 bp), and that number is 2021's
+price effect. The funding part is steady; in 2025-26 squeezed perps paid their longs about 30 bp/day and fell by as
+much. R276 and R190 do not conflict: funding is worth collecting only hedged.
+
+It was frozen as follows (8 trials, M263). R276's reference factor as a book: long the fifth of the universe
 paying the least funding, short the fifth paying the most, net of the funding each leg pays.
 - The family: fund3 or fund30 × a 1 d or 7 d hold × the top 150 or top 50.
 - It splits each book into its price and funding parts. That is the reconciliation with R190's carry that M263
