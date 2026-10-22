@@ -266,3 +266,17 @@
 07:21:36 news recorder running
 07:25:21 lighter book: 199 markets -> data/recorders/lighter_book/2026-10-22/07.parquet; median half-spread 2.86 bp, median 1k side 4.49 bp
 07:27:21 recorder digests: +6
+== tick 2026-10-22T08:06:00Z code a747dbb
+08:06:01 mexc ticker: 1208 rows -> /home/user/T/data/recorders/mexc_ticker/2026-10-22/08.parquet
+08:06:07 funding board: 3373 rows -> /home/user/T/data/recorders/funding_board/2026-10-22/08.parquet
+08:06:09 deribit chain: 5212 options (BTC 1530, ETH 1306, SOL 788, HYPE 440, XRP 438, AVAX 394, TRX 316) -> data/recorders/deribit_chain/2026-10-22/08.parquet
+08:06:10 dex prices: recorder running
+08:06:17 wallets: 15645 rows on 5 venues, 8020 with deposit or withdrawal off; 7 changes -> recorders/wallets/2026-10-22/08.parquet
+08:06:18 binance delisting: +0 (total 443)
+08:06:18 binance listing: +0 (total 2286)
+08:06:19 binance news: +0 (total 4463)
+08:06:19 unlocks: day already recorded (/home/user/T/data/recorders/unlocks/2026-10-22.json.gz)
+08:06:20 recorder running; 107,466 rows this run
+08:06:20 news recorder running
+08:09:10 recorder digests: +5
+08:10:08 lighter book: 199 markets -> data/recorders/lighter_book/2026-10-22/08.parquet; median half-spread 3.38 bp, median 1k side 5.76 bp

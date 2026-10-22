@@ -580,6 +580,17 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - **Flaw found:** the age factor ties about 80 pre-2021 coins at its maximum. So in 2021-24, the age books' long
     leg (here and in R282) was an alphabetical slice of them.
   - [FINDINGS](../experiments/lotcap_v1/FINDINGS.md).
+- **R300 (intrars_v1), NULL** (24 trials, M318 from Linda Raschke on Better System Trader 124, gate 0 on seen data).
+  - At a fixed hour, the top 50 perps are ranked by their move since 00:00 UTC. The books go long the 3 or 5 leaders
+    and short the laggards (follow), or the reverse (fade), flat at 24:00 UTC. API costs are 34 bp a day.
+  - The first hour's leaders reverse; from 8 h on, they keep leading (+24 to +73 bp/day gross in both windows).
+    Neither pays the daily round trip reliably.
+  - The pick (10:00 New York, 3 names, follow) grosses about +70 bp/day in both windows and every year. Its
+    validation net is +38.7 bp/day, t 1.28 against a 2.0 bar, and negative without its 10 best days.
+  - 00:00 UTC ranks 6th of 9 clocks.
+  - Post hoc: the placebo clocks deciding at 15:00-16:00 UTC earned +78 to +85 bp/day net in 2024-26. That is M319,
+    to be read only on unseen data.
+  - [FINDINGS](../experiments/intrars_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
