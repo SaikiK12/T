@@ -428,12 +428,20 @@ paying the least funding, short the fifth paying the most, net of the funding ea
 - The rule for every lane is in `docs/FEATURE_VINTAGE_INTEGRITY.md`.
 - Registry rows R299-R302 are appended. Program trials: 9,478,673.
 
+**R303 `capit_v1` is NULL** (10 trials, M302 and M286). Frozen in 811283d before the run.
+- The pick, dip40 h5, earned +670 bp per event in 2021-23 (t 2.08) and −450 in 2024-26 (t −4.58).
+- Every hedged dip book lost in 2024-26, and so did the long leg alone. Deep dips kept falling.
+- breadth h5 (buy the top 50 after a breadth day) beat the drift in all six years, on too few days (t 1.55). It is
+  queued as M322, to be read on unseen data only.
+- Program trials: 9,478,683.
+
 **Next, in order:**
 1. **R304 `mlrank_v2`:** R299's family without the three columns, plus a leak-only diagnostic and each leg's share
-   of later-delisted coins. PREREG written; frozen and run once the full suite passes.
-2. **R303 `capit_v1`** (M302 capitulation buys): runner and tests written; PREREG next.
-3. **The source fix:** refetch the survivor-only venues with delisted markets where their APIs allow it, or label
-   those columns `survivor` in `lab/daily.py`.
+   of later-delisted coins. Frozen in 811283d; running since 12:00 UTC (about an hour).
+2. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
+   coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
+   lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.
+3. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
 4. **M320 / M321 (owner's reels, 2026-10-22):**
    - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
    - First, validate LSE's index bars against an independent close.

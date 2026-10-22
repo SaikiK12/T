@@ -135,3 +135,14 @@ none of the three survives the reality check.
   - **The age quintile book's 2021-24 years, and its "passes"** under the frozen rule.
 - Details and the day-by-day parity are in `experiments/lotcap_v1/FINDINGS.md`. This note does not change any frozen
   file.
+
+## Note added 2026-10-22 (R299 audit): three factors partly measure survival, not a market effect
+- **`n_venues_7d`, `kr_rel_7d` and `fund_gap_all_7d`** come from venue histories fetched only for markets live at
+  download time (KuCoin, Kraken, MEXC, Hyperliquid, Upbit, Bithumb). A coin Binance later delisted has almost none of
+  them.
+- So `n_venues_7d`'s rank IC (+0.034, t +9.6, "long many venues") is at least partly the panel knowing which coins
+  survive. Its 24 h quintile book lost money at 1x, 2x and 3x, and none of the three passed, so no verdict
+  changes.
+- **Do not reuse these three factors' ICs** as evidence for venue breadth or the Korean premium. `lab/coverage.py` lists
+  the leaking columns, and `docs/FEATURE_VINTAGE_INTEGRITY.md` has the coverage table. This note does not change any
+  frozen file.

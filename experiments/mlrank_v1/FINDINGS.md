@@ -113,6 +113,8 @@ later-delisted coins.
   - `docs/FEATURE_VINTAGE_INTEGRITY.md` records them.
   - Any lane that ranks coins by venue presence or by a survivor-only venue's values must exclude them or use only
     Gate and dYdX.
-- **Fix at the source (queued):** refetch KuCoin, Kraken, MEXC, Hyperliquid, Upbit and Bithumb with delisted markets
-  where their APIs allow it. Otherwise label those columns `survivor` in `lab/daily.py`'s column table, so lanes
-  can filter on the label.
+- **Fix at the source:**
+  - Done: `lab/coverage.py` labels those columns (`survivor_columns`) and measures any column's coverage by survival.
+    `lab/daily.py` is a frozen input of four lanes, so the label lives outside it.
+  - Queued: refetch KuCoin, Kraken, MEXC, Hyperliquid, Upbit and Bithumb with delisted markets where their APIs allow
+    it.

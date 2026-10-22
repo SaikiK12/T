@@ -76,8 +76,17 @@ The panel's column table labels them `pit`. That label is about timing only.
 3. **A cross-sectional result must report its legs' share of later-delisted coins** against their share of the
    universe (R304's check).
 
-**The fix at the source (queued):** refetch the survivor-only venues with delisted markets where their APIs allow it.
-Where they do not, label the columns `survivor` in `lab/daily.py`'s table.
+**The fix at the source:**
+- **Done (2026-10-22):** `lab/coverage.py` labels the survivor-only columns (`survivor_columns`, `clean_columns`).
+  `coverage_by_survival` measures any column's coverage for survivors against later-delisted perps, per year.
+  - The label lives there, not in `lab/daily.py`, which is a frozen input of four lanes.
+  - It reproduces the KuCoin and Upbit rows of the table above.
+- **Gate and dYdX have smaller gaps, from listing rather than download:**
+  - Gate: 75% / 47% in 2021, 94% / 83% in 2022, then even.
+  - dYdX v4: 52% / 18% in 2024, 63% / 45% in 2025.
+  - A coin's listing on those venues was public at the time, so these gaps are point-in-time. Report them anyway when
+    a lane ranks on them.
+- **Queued:** refetch the survivor-only venues with delisted markets where their APIs allow it.
 
 **Lanes touched:**
 - **R299** (`mlrank_v1`): its PARTIAL is invalidated; R304 reruns it without the three columns.

@@ -607,6 +607,16 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The funding part is steady (+10 to +13 bp/day to 2024). In 2025-26 the long leg's squeezed perps paid their longs
     about 30 bp/day and fell by as much. So R276 and R190 do not conflict.
   - [FINDINGS](../experiments/fundxs_v1/FINDINGS.md).
+- **R303 (capit_v1), NULL** (10 trials, M302 from Kotegawa and M286 from Rekt Radio, gate 0 on seen data).
+  - Hedged dip buys: long the top-150 perps at least 20/30/40% below their 25-day average, short the top-50 basket,
+    held 1 or 5 days. Trigger books: the top-50 basket after a breadth or cascade day, held 2 or 5 days, read over the
+    basket's drift.
+  - The pick (dip40 h5) earned +670 bp per event in 2021-23 (t 2.08) and −450 in 2024-26 (t −4.58). Every dip book
+    lost in validation, the long leg alone too: deep dips kept falling, and a 40% dip was a near-daily state in
+    2025-26.
+  - breadth h5 beat the drift in all six years (+132 / +254 bp, t 1.18 / 1.55) on too few days. It is queued as M322
+    for unseen data only.
+  - [FINDINGS](../experiments/capit_v1/FINDINGS.md).
 - **R299 (mlrank_v1), PARTIAL by its frozen rule, invalidated by its audit** (12 trials, M042, gate 0 on seen data).
   - Ridge, IC-weighted and GBM rankers on 27 point-in-time panel features, top-150 quintile books, monthly purged
     walk-forward.
