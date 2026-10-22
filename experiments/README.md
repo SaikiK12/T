@@ -28,8 +28,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (99)
+## Finished and registered rounds (101)
 
+- **[mlaudit_v1](mlaudit_v1/)** R305, DONE NULL, 7 trials. Frozen audit of R304's pick: GBM h7 refits without age / risk-only / without risk, fixed low-risk, low-vol and age scores, beta vs equal-weight universe and BTC, short-leg squeeze tail ([PREREG](mlaudit_v1/PREREG.md), [FINDINGS](mlaudit_v1/FINDINGS.md))
+- **[mlrank_v2](mlrank_v2/)** R304, DONE PARTIAL, 7 trials. ML cross-sectional rankers (M042) again without the 3 survivor-leaking columns: ridge/IC/GBM x hold 1/7 d on 24 clean point-in-time features, top 150 Binance perps, API costs; plus a GBM on the 3 leaking columns alone ([PREREG](mlrank_v2/PREREG.md), [FINDINGS](mlrank_v2/FINDINGS.md))
 - **[capit_v1](capit_v1/)** R303, DONE NULL, 10 trials. Capitulation buys on Binance perps: hedged deep-dip longs (25-day gap <= -20/30/40%, hold 1/5 d) and the top-50 basket after breadth or cascade days (hold 2/5 d, over the drift); M302, M286 ([PREREG](capit_v1/PREREG.md), [FINDINGS](capit_v1/FINDINGS.md))
 - **[fundxs_v1](fundxs_v1/)** R302, DONE NULL, 8 trials. Funding-level cross-section net of funding (M263): long the lowest fifth by 3- or 30-day funding, short the highest, hold 1/7 d, top 150/50, API costs ([PREREG](fundxs_v1/PREREG.md), [FINDINGS](fundxs_v1/FINDINGS.md))
 - **[qbasis_v1](qbasis_v1/)** R301, DONE NULL, 16 trials. Quarterly dated-futures basis cross-section on the perps (M170): level and change of the annualized COIN-M basis, low/high, hold 1/7 d, k 2/3, API costs ([PREREG](qbasis_v1/PREREG.md), [FINDINGS](qbasis_v1/FINDINGS.md))
@@ -134,6 +136,6 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
-- **[mlrank_v2](mlrank_v2/)** No registry row and no description yet.
+- **[msnr_v1](msnr_v1/)** No registry row and no description yet.
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
