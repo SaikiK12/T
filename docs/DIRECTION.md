@@ -449,10 +449,15 @@ paying the least funding, short the fifth paying the most, net of the funding ea
   a driver.
 - Program trials: 9,478,697.
 
-**R306 `msnr_v1` (M323, the owner's reel on Malaysian support and resistance), being frozen.**
-- The levels: line-chart peaks and troughs of 4-hour closes, fresh until a wick touches them.
-- The trades: a fade or a break on the first touch, on the top 50 perps.
-- The secondary read: on Binance gold and silver and the MEXC TradFi perps, report only.
+**R306 `msnr_v1` (M323, the owner's reel on Malaysian support and resistance): NULL, 24 trials.**
+- Every book loses in both windows: fade and break, levels 5 or 30 days old, three exits, top 50 perps.
+  - Validation: −6.7 to −62.1 bp/day at 1x.
+  - The 17 FX, metal and index perps lose too (t −1.3 to −9.6).
+- Fading a fresh level is about 0 gross at 24 hours and −13 to −50 bp at 72 hours. Levels break more than they
+  bounce.
+- With R243, R246 and R263, chart levels on liquid perps are closed. No more level-drawing variants without a new
+  reason.
+- Program trials: 9,478,721.
 
 **Next, in order:**
 1. **R304's pick goes forward:** three frozen paper lanes on MEXC prices:
@@ -462,13 +467,14 @@ paying the least funding, short the fifth paying the most, net of the funding ea
    They need a live feature pipeline from the daily Binance metrics archive. The pick also goes into reserved
    batch 2, whose PREREG must fix how rows without metrics (all of 2020) are scored.
 2. **The open audit:** a missing-flag refit, and a refit on rows with metrics only, as one frozen lane.
-3. **R306 MSNR** runs. Then R307: the Deribit 25-delta risk reversal as a BTC/ETH timing signal (M174, from the
-   owner's reel), and a stress-day report with the Nagel lane on liquidity provision after crashes (M324, M325).
+3. **R307:** the Deribit 25-delta risk reversal as a BTC/ETH timing signal (M174, from the owner's reel). Then R308,
+   the Nagel lane on liquidity provision after crashes (M325). The stress-day report (M324) is built as
+   `lab/stress.py`.
 4. **The source fix, first half done:** `lab/coverage.py` labels the survivor-only columns and measures any column's
    coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
    lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.
-3. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
-4. **M320 / M321 (owner's reels, 2026-10-22):**
+5. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
+6. **M320 / M321 (owner's reels, 2026-10-22):**
    - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
    - First, validate LSE's index bars against an independent close.
    - Then fetch the MEXC index-perp klines.

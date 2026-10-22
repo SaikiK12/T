@@ -645,6 +645,14 @@ Lift of every signal inside vs outside a context, discovery 2021-2023, replicati
   - The long leg holds the alpha (+45.9 bp/day over the universe, t 8.81).
   - The short leg had a name up more than 100% in a week in 15.5% of validation weeks; COAI was up 1,850%.
   - [FINDINGS](../experiments/mlaudit_v1/FINDINGS.md).
+- **R306 (msnr_v1), NULL** (24 trials, M323 from the owner's reel on Malaysian support and resistance, gate 0 on
+  seen data).
+  - Fade or follow the first wick touch of a fresh line-chart peak or trough of 4-hour closes, on the top 50 perps,
+    with 24 h, 72 h and 1:2 ATR bracket exits.
+  - Every book loses in both windows (validation −6.7 to −62.1 bp/day at 1x). Fading a level is about 0 gross at 24 h
+    and −13 to −50 bp at 72 h: levels break more than they bounce.
+  - The same 12 books on 17 FX, metal and index perps lose too.
+  - [FINDINGS](../experiments/msnr_v1/FINDINGS.md).
 - **R293 (er_v1), NULL** (3 trials, M314 from the owner's reel on forecasting the efficiency ratio,
   `docs/REELS_TRANSCRIPT.md`).
   - The next UTC day's efficiency is weakly predictable (AUC 0.537 out of sample), but today's efficiency and its
