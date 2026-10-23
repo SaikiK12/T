@@ -24,6 +24,15 @@ whole-file SHA256 35907cc57731a086413a68fdad2fd125cc73a0b52a341c08e8c247ca630331
 https://github.com/gate/gateapi-python/blob/759c91c06face05c0610b4a62661f7e23172d9cb/docs/FuturesCandlestick.md
 Only fixed intraday intervals through 1d are supported here. REST tuple
 decoding does not validate an archive CSV schema or historical availability.
+
+MEXC fair-price candles were checked 2026-10-23 (public documentation only):
+https://www.mexc.co/api-docs/futures/market-endpoints/get-fair-price-candles
+retrieved page SHA256 50ec4df33371641b11365036abfdc74cf36d13c34d3c7e9bd29d0d0b64414745.
+The page declares second timestamps, parallel OHLC arrays and up to 2000 rows,
+but does not say whether `time` labels the bar open or close. Its `real*` and
+activity arrays are deliberately not treated as fair-price OHLC. The decoder
+below preserves that unresolved clock role; its values cannot enter day_range
+until a separate source check establishes a valid normalization.
 """
 
 from dataclasses import dataclass
@@ -36,6 +45,12 @@ DAY = 86_400_000
 MINUTE = 60_000
 BINANCE_INTERVALS = {n * MINUTE for n in (1, 3, 5, 15, 30, 60, 120, 240, 360, 480, 720, 1440)}
 GATE_INTERVALS = {10_000} | {n * MINUTE for n in (1, 5, 15, 30, 60, 240, 480, 1440)}
+MEXC_INTERVALS = {
+    "Min1": 60_000, "Min5": 5 * MINUTE, "Min15": 15 * MINUTE,
+    "Min30": 30 * MINUTE, "Min60": 60 * MINUTE,
+    "Hour4": 4 * 60 * MINUTE, "Hour8": 8 * 60 * MINUTE,
+    "Day1": DAY, "Week1": 7 * DAY,
+}
 
 
 def _integer(value, name, *, positive=False):
@@ -192,6 +207,63 @@ def decode_gate(rows, *, contract, interval_ms):
         stamp = _gate_timestamp(row["t"])
         bars.append(GateMarkCandle(contract, stamp, interval_ms, row["o"], row["h"], row["l"], row["c"]))
     return tuple(bars)
+
+
+@dataclass(frozen=True, slots=True)
+class MexcFairCandle:
+    """Decoded MEXC fair-price candle whose timestamp role is still unresolved."""
+    contract: str
+    timestamp_s: int
+    interval: str
+    open: float
+    high: float
+    low: float
+    close: float
+
+    def __post_init__(self):
+        _contract(self.contract)
+        if not self.contract.endswith("_USDT") or not self.contract[:-5]:
+            raise ValueError("MEXC USDT contract identity requires <base>_USDT")
+        object.__setattr__(self, "timestamp_s", _integer(self.timestamp_s, "timestamp_s"))
+        if self.interval not in MEXC_INTERVALS:
+            raise ValueError("unsupported fixed-duration MEXC fair-price interval")
+        _ohlc(self)
+
+    @property
+    def venue(self):
+        return "mexc_usdt"
+
+    @property
+    def timestamp_role(self):
+        return "unresolved"
+
+
+def decode_mexc_fair(payload, *, contract, interval):
+    """Decode the public MEXC fair-price REST shape without guessing its clock.
+
+    Only `time/open/high/low/close` are consumed. Volume, amount and `real*`
+    arrays are ignored. In particular, this does not turn timestamp seconds
+    into normalized bar starts and cannot feed day_range until that role is
+    established independently.
+    """
+    _contract(contract)
+    if not contract.endswith("_USDT") or not contract[:-5]:
+        raise ValueError("MEXC USDT contract identity requires <base>_USDT")
+    if interval not in MEXC_INTERVALS:
+        raise ValueError("unsupported fixed-duration MEXC fair-price interval")
+    if not isinstance(payload, dict) or payload.get("success") is not True or type(payload.get("code")) is not int or payload["code"] != 0:
+        raise ValueError("MEXC fair-price response must declare success and code 0")
+    data = payload.get("data")
+    names = ("time", "open", "high", "low", "close")
+    if not isinstance(data, dict) or any(not isinstance(data.get(name), (list, tuple)) for name in names):
+        raise ValueError("MEXC fair-price data requires parallel time/open/high/low/close arrays")
+    columns = [data[name] for name in names]
+    if any(len(column) != len(columns[0]) for column in columns[1:]):
+        raise ValueError("MEXC fair-price arrays must have equal lengths")
+    candles = []
+    for row in zip(*columns):
+        candles.append(MexcFairCandle(contract, row[0], interval, row[1], row[2], row[3], row[4]))
+    return tuple(candles)
 
 
 @dataclass(frozen=True, slots=True)

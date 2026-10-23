@@ -147,6 +147,54 @@ class DecodeMarkBarsTest(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 markbars.decode_gate([row | {"t": value}], contract="mark_BTC_USDT", interval_ms=HOUR)
 
+    def test_mexc_fair_arrays_decode_without_volume_or_real_price_fallback(self):
+        payload = {"success": True, "code": 0, "data": {
+            "time": [START // 1000, END // 1000],
+            "open": ["110", "112"], "high": ["120", "125"],
+            "low": ["90", "111"], "close": ["112", "120"],
+            "vol": [0, 0], "amount": [0, 0],
+            "realOpen": [1, 1], "realHigh": [1, 1],
+            "realLow": [1, 1], "realClose": [1, 1],
+        }}
+        candles = markbars.decode_mexc_fair(payload, contract="BTC_USDT", interval="Min60")
+        self.assertEqual(len(candles), 2)
+        first = candles[0]
+        self.assertEqual((first.venue, first.contract, first.timestamp_s, first.interval,
+                          first.timestamp_role),
+                         ("mexc_usdt", "BTC_USDT", START // 1000, "Min60", "unresolved"))
+        self.assertEqual((first.open, first.high, first.low, first.close), (110, 120, 90, 112))
+        with self.assertRaises(ValueError):
+            summarize(candles)
+
+    def test_mexc_decoder_rejects_untrusted_response_shape_and_unfixed_month(self):
+        payload = {"success": True, "code": 0, "data": {
+            "time": [START // 1000], "open": [110], "high": [120],
+            "low": [90], "close": [112],
+        }}
+        failures = [
+            {"success": False, "code": 0, "data": payload["data"]},
+            {"success": True, "code": 1, "data": payload["data"]},
+            {"success": True, "code": False, "data": payload["data"]},
+            {"success": True, "code": 0, "data": payload["data"] | {"high": [120, 121]}},
+            {"success": True, "code": 0, "data": payload["data"] | {"time": [True]}},
+            {"success": True, "code": 0, "data": payload["data"] | {"low": [121]}},
+            {"success": True, "code": 0, "data": {k: v for k, v in payload["data"].items() if k != "close"}},
+        ]
+        for bad in failures:
+            with self.subTest(payload=bad), self.assertRaises(ValueError):
+                markbars.decode_mexc_fair(bad, contract="BTC_USDT", interval="Min60")
+        for contract in ("BTCUSDT", "_USDT", "BTC_USDC", ""):
+            with self.subTest(contract=contract), self.assertRaises(ValueError):
+                markbars.decode_mexc_fair(payload, contract=contract, interval="Min60")
+        for interval in ("Month1", "min1", "2Min"):
+            with self.subTest(interval=interval), self.assertRaises(ValueError):
+                markbars.decode_mexc_fair(payload, contract="BTC_USDT", interval=interval)
+
+    def test_mexc_empty_public_response_decodes_to_no_candles(self):
+        payload = {"success": True, "code": 0,
+                   "data": {key: [] for key in ("time", "open", "high", "low", "close")}}
+        self.assertEqual(markbars.decode_mexc_fair(payload, contract="ETH_USDT", interval="Min1"), ())
+
 
 class MarkDayRangeTest(unittest.TestCase):
     def assert_incomplete(self, result, observed):

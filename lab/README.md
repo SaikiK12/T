@@ -28,9 +28,11 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`levcarry`](levcarry.py): Leverage and liquidation on cross-venue carry books (method M265): R275's rule, run with lab.xfund, where each leg sits on its venue at leverage L and can be liquidated by an intraday move.
 - [`live`](live.py): Public live data from Binance USD-M futures, for paper trading only: no keys, no orders, nothing private.
 - [`maker`](maker.py): Maker entries: trade a signal with a resting limit order instead of a market order, so the entry pays the maker fee and earns the distance to the reference price instead of paying spread and ...
+- [`markbars`](markbars.py): Offline mark-price contracts for a future registered M265 follow-up.
 - [`markets`](markets.py): Daily bars for markets beyond crypto perps (indices, index futures, forex, commodities, rates, volatility), from Yahoo Finance's public chart endpoint, cached under data/markets/yahoo/. Small: one ...
 - [`merge`](merge.py): Merge lab: combine many signals into one forecast per (hour, symbol), re-learned walk-forward, and trade it only where the forecast clears the cost of trading.
 - [`mexc`](mexc.py): Public MEXC USDT-M futures data (no keys, no orders): contract metadata, hourly klines, funding settlements, and the map from Binance USD-M symbols to MEXC crypto contracts.
+- [`mexc_margin`](mexc_margin.py): Pure MEXC USDT-M margin arithmetic for explicit, caller-supplied risk tiers.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
 - [`operations`](operations.py): Shared operational catalog for execution and read-only views.
