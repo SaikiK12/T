@@ -82,7 +82,9 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
 | 1 | R286 `experiments/reserved_batch1` | 2026-10-21 | 2020 1/4, Gate 1/4, MEXC-only 1/4 (KuCoin and dYdX 0/4) | 10 | on or after 2026-11-03 |
 
 ## Rules for gate 2
-- `go_real()` at the PREREG's day count, never earlier. `forward_tick.py` now writes `verdict: PENDING` until day 90.
+- `go_real()` at the PREREG's day count, never earlier. It leaves NaNs unscored, blocks on infinite returns, and
+  requires supplied entry-day keys to align with the original return vector; reported clusters count scored returns
+  only. `forward_tick.py` now writes `verdict: PENDING` until day 90.
 - Costs at 1x, 2x and 3x of MEXC's measured cost (R224), plus the API fee of 6 / 8 bp in force since 2026-06-01.
 - A book the owner cannot place by hand (50 coins, hourly slices) needs a daily-netted version of 15 orders or fewer,
   frozen as its own lane before it is scored.
