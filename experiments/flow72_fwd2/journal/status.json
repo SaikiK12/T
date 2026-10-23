@@ -1,0 +1,82 @@
+{
+ "last_hour": "2026-10-22T15:00:00+00:00",
+ "days_scored": 21,
+ "short_now": {
+  "tvc": [
+   "BNBUSDT",
+   "KORUUSDT",
+   "SKHYNIXUSDT",
+   "SKHYUSDT",
+   "SOXLUSDT",
+   "XAGUSDT"
+  ],
+  "t24": [
+   "ADAUSDT",
+   "INTCUSDT",
+   "MSTRUSDT",
+   "MUUSDT",
+   "SNDKUSDT",
+   "SOXLUSDT"
+  ],
+  "t4": [
+   "INTCUSDT",
+   "MUUSDT",
+   "SKHYNIXUSDT",
+   "SNDKUSDT",
+   "SNXXUSDT",
+   "SOXLUSDT"
+  ]
+ },
+ "A": {
+  "days": 21,
+  "total": 0.2378443579178075,
+  "total_2x": 0.22396960236599997,
+  "total_3x": 0.21009484681419222,
+  "go_real": {
+   "n": 21,
+   "mean": 0.011325921805609882,
+   "hit": 0.7142857142857143,
+   "worst": -0.0310079557600521,
+   "n_clusters": null,
+   "checks": {
+    "enough_scored": true,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": true
+  },
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "verdict": "PENDING",
+   "stop_rule_hit_day": null
+  }
+ },
+ "B": {
+  "days": 21,
+  "total": 0.1021726642104079,
+  "total_2x": 0.09955584008255042,
+  "total_3x": 0.09693901595469337,
+  "go_real": {
+   "n": 21,
+   "mean": 0.004865364962400376,
+   "hit": 0.6666666666666666,
+   "worst": -0.0164287423129772,
+   "n_clusters": null,
+   "checks": {
+    "enough_scored": true,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": true
+  },
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "verdict": "PENDING",
+   "stop_rule_hit_day": null
+  }
+ }
+}

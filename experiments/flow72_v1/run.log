@@ -1,0 +1,52 @@
+22:47:29 prereg sha 717a08b98e84
+22:47:52 market universe slots 10 cmult 1.0: ann -0.047 t -0.41
+22:47:52 market universe slots 10 cmult 2.0: ann -0.181 t -1.60
+22:47:52 market universe slots 10 cmult 3.0: ann -0.315 t -2.77
+22:47:52 market universe slots 20 cmult 1.0: ann -0.200 t -2.73
+22:47:52 market universe slots 20 cmult 2.0: ann -0.344 t -4.61
+22:47:52 market universe slots 20 cmult 3.0: ann -0.487 t -6.37
+22:47:52 market btc slots 10 cmult 1.0: ann +0.391 t +1.74
+22:47:52 market btc slots 10 cmult 2.0: ann +0.258 t +1.15
+22:47:53 market btc slots 10 cmult 3.0: ann +0.125 t +0.56
+22:47:53 market btc slots 20 cmult 1.0: ann +0.234 t +1.10
+22:47:53 market btc slots 20 cmult 2.0: ann +0.094 t +0.44
+22:47:53 market btc slots 20 cmult 3.0: ann -0.047 t -0.22
+22:47:53 market none slots 10 cmult 1.0: ann +0.075 t +0.23
+22:47:53 market none slots 10 cmult 2.0: ann -0.052 t -0.16
+22:47:53 market none slots 10 cmult 3.0: ann -0.178 t -0.54
+22:47:53 market none slots 20 cmult 1.0: ann -0.081 t -0.26
+22:47:54 market none slots 20 cmult 2.0: ann -0.208 t -0.66
+22:47:54 market none slots 20 cmult 3.0: ann -0.334 t -1.06
+22:47:54 limit universe slots 10 cmult 1.0: ann -0.099 t -0.78
+22:47:54 limit universe slots 10 cmult 2.0: ann -0.272 t -2.13
+22:47:54 limit universe slots 10 cmult 3.0: ann -0.446 t -3.46
+22:47:54 limit universe slots 20 cmult 1.0: ann -0.193 t -2.65
+22:47:54 limit universe slots 20 cmult 2.0: ann -0.355 t -4.77
+22:47:55 limit universe slots 20 cmult 3.0: ann -0.516 t -6.72
+22:47:55 limit btc slots 10 cmult 1.0: ann +0.323 t +1.44
+22:47:55 limit btc slots 10 cmult 2.0: ann +0.168 t +0.75
+22:47:55 limit btc slots 10 cmult 3.0: ann +0.012 t +0.06
+22:47:55 limit btc slots 20 cmult 1.0: ann +0.221 t +1.07
+22:47:55 limit btc slots 20 cmult 2.0: ann +0.076 t +0.37
+22:47:55 limit btc slots 20 cmult 3.0: ann -0.070 t -0.34
+22:47:55 limit none slots 10 cmult 1.0: ann +0.091 t +0.29
+22:47:56 limit none slots 10 cmult 2.0: ann +0.028 t +0.09
+22:47:56 limit none slots 10 cmult 3.0: ann -0.035 t -0.11
+22:47:56 limit none slots 20 cmult 1.0: ann -0.021 t -0.07
+22:47:56 limit none slots 20 cmult 2.0: ann -0.083 t -0.27
+22:47:56 limit none slots 20 cmult 3.0: ann -0.146 t -0.47
+22:47:56 
+ entry    hedge  slots  cmult    ann  sharpe   t_nw  max_dd  beta_btc  exposure  n_open  fills_day  gross_ann  entry_cost_ann  exit_cost_ann  hedge_ann  hedge_cost_ann  y2021  y2022  y2023  y2024  y2025
+market universe     10    1.0 -0.047  -0.189 -0.415   0.877    -0.002    -0.719   7.191      2.397      0.202           0.063          0.064     -0.115           0.007  0.023  0.079  0.264 -0.208 -0.369
+market universe     20    1.0 -0.200  -1.353 -2.726   0.935    -0.003    -0.717  14.344      4.781      0.045           0.063          0.064     -0.101           0.017 -0.019 -0.255 -0.260 -0.042 -0.323
+market      btc     10    1.0  0.391   0.748  1.736   0.575    -0.142    -0.719   7.191      2.397      0.202           0.063          0.064      0.322           0.006  0.018  0.320  0.453  0.403  0.563
+market      btc     20    1.0  0.234   0.491  1.104   0.664    -0.142    -0.717  14.344      4.781      0.045           0.063          0.064      0.330           0.014 -0.030 -0.014 -0.076  0.562  0.613
+market     none     10    1.0  0.075   0.098  0.227   1.579    -0.629    -0.719   7.191      2.397      0.202           0.063          0.064      0.000           0.000  0.198  0.868 -0.571 -0.525  0.368
+market     none     20    1.0 -0.081  -0.112 -0.260   1.796    -0.627    -0.717  14.344      4.781      0.045           0.063          0.064      0.000           0.000  0.117  0.534 -1.090 -0.349  0.422
+ limit universe     10    1.0 -0.099  -0.410 -0.776   0.636     0.003    -0.699   7.189      2.362      0.172           0.017          0.063     -0.079           0.111  0.053 -0.221 -0.000  0.190 -0.466
+ limit universe     20    1.0 -0.193  -1.323 -2.653   0.967    -0.005    -0.692  14.254      4.681      0.059           0.017          0.063     -0.073           0.099  0.021 -0.172 -0.254 -0.212 -0.252
+ limit      btc     10    1.0  0.323   0.628  1.437   0.686    -0.130    -0.699   7.189      2.362      0.172           0.017          0.063      0.324           0.092  0.050  0.003  0.163  0.774  0.464
+ limit      btc     20    1.0  0.221   0.478  1.075   0.584    -0.138    -0.692  14.254      4.681      0.059           0.017          0.063      0.324           0.083 -0.011  0.053 -0.098  0.390  0.659
+ limit     none     10    1.0  0.091   0.123  0.288   1.104    -0.603    -0.699   7.189      2.362      0.172           0.017          0.063      0.000           0.000  0.216  0.572 -0.723  0.017  0.329
+ limit     none     20    1.0 -0.021  -0.029 -0.067   1.722    -0.606    -0.692  14.254      4.681      0.059           0.017          0.063      0.000           0.000  0.174  0.610 -0.990 -0.401  0.513
+22:47:56 NULL

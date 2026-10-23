@@ -1,0 +1,388 @@
+{
+ "lane": "xfund_fwd",
+ "rid": "R278",
+ "updated": "2026-10-22T01:26:45.673608+00:00",
+ "waiting": false,
+ "ready": {
+  "binance": 1.003,
+  "gate": 1.011,
+  "hyperliquid": 1.0,
+  "mexc": 1.0
+ },
+ "data": {
+  "hyperliquid": {
+   "files": 216,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "binance": {
+   "files": 867,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AERGOUSDT",
+    "BDXNUSDT",
+    "SXPUSDT"
+   ]
+  },
+  "mexc": {
+   "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  }
+ },
+ "A": {
+  "set": "gate+hyperliquid",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R275's best passing book by 1x t",
+  "held_now": [
+   {
+    "coin": "GRASSUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1648
+   },
+   {
+    "coin": "PUMPUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1407
+   },
+   {
+    "coin": "VVVUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1323
+   },
+   {
+    "coin": "ZROUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.109
+   },
+   {
+    "coin": "AZTECUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.2198
+   },
+   {
+    "coin": "SYRUPUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1741
+   },
+   {
+    "coin": "BLURUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.208
+   },
+   {
+    "coin": "GOATUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.4823
+   },
+   {
+    "coin": "NILUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.349
+   },
+   {
+    "coin": "SKYUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.3161
+   },
+   {
+    "coin": "GRIFFAINUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.3279
+   },
+   {
+    "coin": "WUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.2558
+   },
+   {
+    "coin": "RSRUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1982
+   },
+   {
+    "coin": "GMTUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1673
+   },
+   {
+    "coin": "STRKUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1654
+   },
+   {
+    "coin": "BERAUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.1778
+   },
+   {
+    "coin": "ANIMEUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.1772
+   },
+   {
+    "coin": "ALTUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.1473
+   },
+   {
+    "coin": "METUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.139
+   },
+   {
+    "coin": "1000LUNCUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1325
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 61,
+  "replay_total": 0.0053871618999999996
+ },
+ "B": {
+  "set": "binance+mexc",
+  "lookback": 14,
+  "threshold": 0.1,
+  "slots": 20,
+  "why": "R275's best passing book with a MEXC leg",
+  "held_now": [
+   {
+    "coin": "REDUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.3131
+   },
+   {
+    "coin": "INJUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.1576
+   },
+   {
+    "coin": "GIGGLEUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.1511
+   },
+   {
+    "coin": "TRIAUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.1509
+   },
+   {
+    "coin": "NIGHTUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.1435
+   },
+   {
+    "coin": "HOMEUSDT",
+    "long": "binance",
+    "short": "mexc",
+    "spread_in": 0.1393
+   },
+   {
+    "coin": "1000LUNCUSDT",
+    "long": "mexc",
+    "short": "binance",
+    "spread_in": 0.1758
+   },
+   {
+    "coin": "GRVTUSDT",
+    "long": "mexc",
+    "short": "binance",
+    "spread_in": 0.1032
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 61,
+  "replay_total": 0.0087474903
+ },
+ "C": {
+  "set": "gate+mexc",
+  "lookback": 7,
+  "threshold": 0.1,
+  "slots": 20,
+  "why": "post hoc: R275's best MEXC book by annual net",
+  "held_now": [
+   {
+    "coin": "AIOTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3854
+   },
+   {
+    "coin": "SWARMSUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3717
+   },
+   {
+    "coin": "1000LUNCUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.4781
+   },
+   {
+    "coin": "KOMAUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.7018
+   },
+   {
+    "coin": "2ZUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5182
+   },
+   {
+    "coin": "RAYUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.6521
+   },
+   {
+    "coin": "LRCUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.2906
+   },
+   {
+    "coin": "SIRENUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.269
+   },
+   {
+    "coin": "WALUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.2748
+   },
+   {
+    "coin": "BLURUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5318
+   },
+   {
+    "coin": "ESPORTSUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.4049
+   },
+   {
+    "coin": "INXUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5366
+   },
+   {
+    "coin": "NIGHTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.2895
+   },
+   {
+    "coin": "CTSIUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.2654
+   },
+   {
+    "coin": "XCNUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.3242
+   },
+   {
+    "coin": "AGTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3442
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.6411
+   },
+   {
+    "coin": "SOPHUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.3957
+   },
+   {
+    "coin": "POWERUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3159
+   },
+   {
+    "coin": "IOSTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 1.0468
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 61,
+  "replay_total": 0.014154120300000003
+ },
+ "last_day": "2026-10-22"
+}

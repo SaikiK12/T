@@ -1,0 +1,47 @@
+{
+ "stages": {
+  "r1d/LIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r7d/LIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r1d/ILLIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r7d/ILLIQ": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "illiq_minus_liq_discovery_bp_day": {
+  "r1d": 3.828794834645528,
+  "r7d": 6.167886700193383
+ },
+ "by_year_1x": {
+  "r1d/LIQ/discovery": {
+   "2021": -19.84014867790178,
+   "2022": -12.272296536693586,
+   "2023": -20.314447617121303
+  },
+  "r7d/LIQ/discovery": {
+   "2021": -4.075342532522867,
+   "2022": -9.92519745454756,
+   "2023": -4.6528553382213795
+  },
+  "r1d/ILLIQ/discovery": {
+   "2021": -17.17275753181811,
+   "2022": -9.405795602988949,
+   "2023": -14.361955192973038
+  },
+  "r7d/ILLIQ/discovery": {
+   "2021": -3.7309368603612083,
+   "2022": 1.9045845514902286,
+   "2023": 1.6766170841593147
+  }
+ },
+ "validation_passers": []
+}

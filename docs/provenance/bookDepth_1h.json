@@ -1,0 +1,366 @@
+{
+"folder": "data/bookDepth_1h",
+"source": "data.binance.vision USD-M book depth",
+"script": "lab/data.py (python -m lab.data <kind>)",
+"recorded_utc": "2026-10-20T21:46:48Z",
+"files": 31,
+"bytes": 68856506,
+"combined_sha256": "917c9d377420502bd8779c63c8681d2b763a994a29c4dc90d57e570c27d6dd2a",
+"subfolders": {
+".": {
+"files": 31,
+"bytes": 68856506
+}
+},
+"hourly_coverage": {
+"": {
+"files": 30,
+"bars": 661154,
+"files_with_holes": 30,
+"holes": 40499,
+"first": 1672531200000,
+"last": 1767222000000
+}
+},
+"coverage": {
+"": {
+"1000PEPEUSDT": {
+"first": 1683302400000,
+"last": 1767222000000,
+"bars": 23258,
+"holes": 54
+},
+"1000SHIBUSDT": {
+"first": 1672531200000,
+"last": 1767135600000,
+"bars": 24108,
+"holes": 2172
+},
+"ADAUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+},
+"APTUSDT": {
+"first": 1672531200000,
+"last": 1766962800000,
+"bars": 22261,
+"holes": 3971
+},
+"ARBUSDT": {
+"first": 1679583600000,
+"last": 1762470000000,
+"bars": 19921,
+"holes": 3104
+},
+"AVAXUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26030,
+"holes": 274
+},
+"BCHUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 25478,
+"holes": 826
+},
+"BNBUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+},
+"BTCUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+},
+"CRVUSDT": {
+"first": 1672531200000,
+"last": 1758409200000,
+"bars": 18926,
+"holes": 4930
+},
+"DOGEUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26052,
+"holes": 252
+},
+"DOTUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 25334,
+"holes": 970
+},
+"ETCUSDT": {
+"first": 1672531200000,
+"last": 1757804400000,
+"bars": 17582,
+"holes": 6106
+},
+"ETHUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26078,
+"holes": 226
+},
+"FILUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+},
+"FTMUSDT": {
+"first": 1672531200000,
+"last": 1736154000000,
+"bars": 16608,
+"holes": 1066
+},
+"GALAUSDT": {
+"first": 1672531200000,
+"last": 1739142000000,
+"bars": 15590,
+"holes": 2914
+},
+"INJUSDT": {
+"first": 1672531200000,
+"last": 1750978800000,
+"bars": 16982,
+"holes": 4810
+},
+"LINKUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+},
+"LTCUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26030,
+"holes": 274
+},
+"MATICUSDT": {
+"first": 1672531200000,
+"last": 1725440400000,
+"bars": 14448,
+"holes": 250
+},
+"NEARUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 24638,
+"holes": 1666
+},
+"OPUSDT": {
+"first": 1672531200000,
+"last": 1758236400000,
+"bars": 20150,
+"holes": 3658
+},
+"ORDIUSDT": {
+"first": 1699358400000,
+"last": 1743634800000,
+"bars": 11845,
+"holes": 455
+},
+"SOLUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26030,
+"holes": 274
+},
+"SUIUSDT": {
+"first": 1683129600000,
+"last": 1767222000000,
+"bars": 22922,
+"holes": 438
+},
+"TIAUSDT": {
+"first": 1698775200000,
+"last": 1757631600000,
+"bars": 16087,
+"holes": 263
+},
+"WIFUSDT": {
+"first": 1705586400000,
+"last": 1767222000000,
+"bars": 17099,
+"holes": 23
+},
+"WLDUSDT": {
+"first": 1690200000000,
+"last": 1767222000000,
+"bars": 21373,
+"holes": 23
+},
+"XRPUSDT": {
+"first": 1672531200000,
+"last": 1767222000000,
+"bars": 26054,
+"holes": 250
+}
+}
+},
+"file_hashes": [
+{
+"path": "1000PEPEUSDT.parquet",
+"bytes": 2410066,
+"sha256": "3451e468b2beec9342f6a0505d5e8104ad18e18325358ec64b83a79f502698fb"
+},
+{
+"path": "1000SHIBUSDT.parquet",
+"bytes": 2504685,
+"sha256": "adf459bca7b0a21140c88fbc7c678d2ab223d8c4b8f25da1b260a80742eccd9d"
+},
+{
+"path": "ADAUSDT.parquet",
+"bytes": 2706938,
+"sha256": "03f040a6dfd4836f526b1145cfb8154b3fffdfd849f966232cc0d9395b1d40f4"
+},
+{
+"path": "APTUSDT.parquet",
+"bytes": 2379609,
+"sha256": "bb26fa422a996c9e3c04ed8279524ec25851e95128a000be5739108ff8fd562f"
+},
+{
+"path": "ARBUSDT.parquet",
+"bytes": 2096450,
+"sha256": "2a3471792a40b2fb05179efee21dda904ce11aa6362a07a5ec71d8430b0975e7"
+},
+{
+"path": "AVAXUSDT.parquet",
+"bytes": 2704593,
+"sha256": "e0993448dffd23251575c4802008b80c34faaf2e4c28e1c58c62cf9e0bb7ec93"
+},
+{
+"path": "BCHUSDT.parquet",
+"bytes": 2648302,
+"sha256": "b5505b5cf66fdb26ea06bb02516abaaac0765c85cf6136ae52a8d0b706883531"
+},
+{
+"path": "BNBUSDT.parquet",
+"bytes": 2710606,
+"sha256": "c7631081340194771c933766354bcfb96ec07237cee73015976ec80af7658454"
+},
+{
+"path": "BTCUSDT.parquet",
+"bytes": 2709333,
+"sha256": "6ca01a430942383d9ca92910df48e375c4b73700a6152dd6aaed957e6ef5bd6d"
+},
+{
+"path": "CRVUSDT.parquet",
+"bytes": 1950265,
+"sha256": "d655857ed6d96a3b4ab92a4203591f8a0ec50890781bdae0c6a9e4988d521f31"
+},
+{
+"path": "DOGEUSDT.parquet",
+"bytes": 2707011,
+"sha256": "7401e46bedefc0bd580216a24f4b8cb48d783cad2d09ba10e990d853502d9103"
+},
+{
+"path": "DOTUSDT.parquet",
+"bytes": 2630858,
+"sha256": "a494adebc8fceeabf3875566ab2ec819e36805dc34f6c881bb6ed50ea4dd0323"
+},
+{
+"path": "ETCUSDT.parquet",
+"bytes": 1884158,
+"sha256": "a08bab4fa99f3cd56894c7b6868a82ef8133ae767181db6d8ae12339658eec5a"
+},
+{
+"path": "ETHUSDT.parquet",
+"bytes": 2680964,
+"sha256": "aa146607f0811c36b35cb160f66c118c76aae6b91084aa84caff0513a099538c"
+},
+{
+"path": "FILUSDT.parquet",
+"bytes": 2707952,
+"sha256": "343ac7922c6d4612de0ca3d816e45a9e577a1f777c88ce13c2aecbd306043da7"
+},
+{
+"path": "FTMUSDT.parquet",
+"bytes": 1780220,
+"sha256": "746858dc91ee80041e7a7582d22acde4c279fbe46dbefbdf5aa9977a4c738872"
+},
+{
+"path": "GALAUSDT.parquet",
+"bytes": 1650069,
+"sha256": "632a0c5f9ad17cd49812f5b4c543b5b86336d032663496bca3a0dc1fcaae4e81"
+},
+{
+"path": "INJUSDT.parquet",
+"bytes": 1805798,
+"sha256": "d09412137347f6b295e9231130cdd40d36e521d5ed3a6fdb9f570ef3f91e3fd6"
+},
+{
+"path": "LINKUSDT.parquet",
+"bytes": 2708021,
+"sha256": "dedc530103abffe1c8adc55e587935c727660297139342a239e320b684030c14"
+},
+{
+"path": "LTCUSDT.parquet",
+"bytes": 2704337,
+"sha256": "c6d3a73c43368ca4ce44ca8b8bb86c05aff1eb3de1a452f6a31e00a92af5879d"
+},
+{
+"path": "MATICUSDT.parquet",
+"bytes": 1529649,
+"sha256": "3a2de606a98565c521c4ca85de97408248731533d6adb9f3e9a1f8269bd54f7a"
+},
+{
+"path": "NEARUSDT.parquet",
+"bytes": 2557432,
+"sha256": "c232cb9244a5326a703d7b2d18ce4283adb714056c0584f2bd9dfdf4fdc06512"
+},
+{
+"path": "OPUSDT.parquet",
+"bytes": 2082919,
+"sha256": "30f634dcf234e0464bbf13049e6bdb9766c07a454e9ceb9e2f0db244d256ca8b"
+},
+{
+"path": "ORDIUSDT.parquet",
+"bytes": 1255317,
+"sha256": "b08a096bdc05c9a30b58e434ae3d2e73fb50e3452b58a4e4520d3fd8fc592071"
+},
+{
+"path": "SOLUSDT.parquet",
+"bytes": 2705271,
+"sha256": "5e71da3160c2aa7482963d52c9bff62965245f34372d05f1272703d56eb85c85"
+},
+{
+"path": "SUIUSDT.parquet",
+"bytes": 2372944,
+"sha256": "a2f8d992467a8ba99b20934074f6d896b55338b310490830ca86eca990ac68ee"
+},
+{
+"path": "TIAUSDT.parquet",
+"bytes": 1626201,
+"sha256": "942d2c746c99ff1f3ca115f2a011ef6f85a1a28bbf40f3de6fd4220eeb826f34"
+},
+{
+"path": "WIFUSDT.parquet",
+"bytes": 1730146,
+"sha256": "c145d9af0ed4241284927e1723898a2720b51a0f44053dddf1998a8a726f7420"
+},
+{
+"path": "WLDUSDT.parquet",
+"bytes": 2206841,
+"sha256": "58634a3003b06c6977bef8469c19432f64309b98b85d96f774f98432a93b5adb"
+},
+{
+"path": "XRPUSDT.parquet",
+"bytes": 2705727,
+"sha256": "26526f711a52df5660c857ecd0ed481294043023a0595316e4931fb5bfe0b64e"
+},
+{
+"path": "manifest.json",
+"bytes": 3824,
+"sha256": "ee9fe6f92f88113fc593f0874ec979a408e88b101f1730bc27691c61ecda7b10"
+}
+]
+}

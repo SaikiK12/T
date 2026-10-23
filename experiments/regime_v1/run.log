@@ -1,0 +1,32 @@
+01:01:28 prereg sha 0087630dcc4f
+/home/user/T/scripts/run_regime.py:57: RuntimeWarning: Mean of empty slice
+  idx = np.nanmean(np.where(e0, r, np.nan), axis=1)
+01:01:51 parity A vs R217 A_C0: max |diff| 0.00e+00
+01:01:51 parity B vs R217 B_C0: max |diff| 0.00e+00
+01:01:51 parity X2 vs R217 X2: max |diff| 0.00e+00
+01:01:51 regime shares {"discovery": {"UL": 0.351, "UH": 0.032, "DL": 0.286, "DH": 0.132, "None": 0.199}, "validation": {"UL": 0.243, "UH": 0.21, "DL": 0.124, "DH": 0.422, "None": 0.0}, "holdout": {"UL": 0.519, "UH": 0.004, "DL": 0.322, "DH": 0.155, "None": 0.0}}
+01:01:51 discovery by regime:
+        days  mean_1x_bp  t_1x  mean_2x_bp  t_2x  mean_3x_bp  t_3x
+A  UL  384.0       13.15  1.49        9.83  1.12        6.52  0.75
+   UH   35.0       17.90  2.08       14.03  1.74       10.16  1.32
+   DL  313.0       13.16  1.96        8.94  1.35        4.73  0.72
+   DH  145.0       16.96  2.20       13.21  1.76        9.46  1.29
+B  UL  384.0        0.72  0.16        0.08  0.02       -0.56 -0.12
+   UH   35.0        7.01  1.58        6.03  1.43        5.05  1.27
+   DL  313.0       11.07  3.68       10.25  3.48        9.42  3.27
+   DH  145.0        1.96  0.86        1.54  0.69        1.11  0.50
+X2 UL  384.0       21.66  1.76       17.64  1.44       13.63  1.12
+   UH   35.0       23.73  2.09       18.90  1.78       14.07  1.40
+   DL  313.0       14.40  1.75        9.27  1.14        4.14  0.52
+   DH  145.0       22.64  2.57       18.22  2.14       13.80  1.67
+01:01:51 gates {'A': ['UL', 'UH', 'DL', 'DH'], 'B': ['UL', 'UH', 'DL', 'DH'], 'X2': ['UL', 'UH', 'DL', 'DH']} mix {'UL': 'X2', 'UH': 'X2', 'DL': 'B', 'DH': 'X2'} mix control X2
+01:01:55 MIX validation Sharpe 1.80 vs 1.68, 2x +12.1 bp/day, DD 0.274 vs 0.275 NULL
+01:01:55 
+variant control     window  cmult  days  mean_bp_day  t_nw10  sharpe  max_dd  share_traded  gross_exposure  control_sharpe  control_max_dd  control_mean_bp_day  diff_bp_day  diff_t_nw10
+    MIX      X2  discovery    1.0  1095       13.774   2.937   2.009   0.217           1.0           0.695           1.959           0.246               15.467       -1.694       -0.821
+    MIX      X2  discovery    2.0  1095       10.650   2.308   1.557   0.316           1.0           0.695           1.504           0.366               11.853       -1.203       -0.584
+    MIX      X2  discovery    3.0  1095        7.527   1.649   1.101   0.418           1.0           0.695           1.047           0.486                8.239       -0.712       -0.342
+    MIX      X2 validation    1.0   547       19.781   2.275   1.797   0.274           1.0           1.763           1.681           0.275               19.682        0.099        0.033
+    MIX      X2 validation    2.0   547       12.052   1.382   1.094   0.288           1.0           1.763           1.089           0.383               12.753       -0.701       -0.231
+    MIX      X2 validation    3.0   547        4.323   0.494   0.392   0.322           1.0           1.763           0.497           0.504                5.824       -1.501       -0.487
+01:01:55 passed: none

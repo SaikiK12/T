@@ -1,0 +1,229 @@
+{
+"folder": "data/macro",
+"source": "alternative.me Fear & Greed; FRED graph CSV (DGS3MO DGS2 DGS10 T10Y2Y DFF VIXCLS BAMLH0A0HYM2 DTWEXBGS T10YIE WALCL RRPONTSYD WTREGEN); DefiLlama stablecoins, historicalChainTvl, overview dexs/fees/options. Raw responses in raw/, per-series sha256 in manifest.json",
+"script": "scripts/fetch_macro.py",
+"recorded_utc": "2026-10-20T22:27:18Z",
+"excluded": [],
+"files": 41,
+"bytes": 13574942,
+"combined_sha256": "851a4ce0613d73d5fd853f1b15bcd98007d577727b6aea67ae2a455ea0d9bac1",
+"subfolders": {
+".": {
+"files": 21,
+"bytes": 1461728
+},
+"raw": {
+"files": 20,
+"bytes": 12113214
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "breakeven_10y.parquet",
+"bytes": 54438,
+"sha256": "4f313b97c43eece69089ca32046309fea5cb5f550c93c34e40c03ca31ca97c8f"
+},
+{
+"path": "curve_10y2y.parquet",
+"bytes": 116002,
+"sha256": "5b8bed60efcb0f9ea5130c4004eafa5ea7ce2a927feb7daa355df5e9075e34f7"
+},
+{
+"path": "defi_fees.parquet",
+"bytes": 48938,
+"sha256": "e8b78351cbf3643f8920f4d19b8c60c4ce864ef8fd26093927b0659f17df60bd"
+},
+{
+"path": "defi_tvl.parquet",
+"bytes": 52558,
+"sha256": "0000232e8c74d55787e041cab6f8f6a8b64333b1eef9863d71076287c76ca4bd"
+},
+{
+"path": "dex_volume.parquet",
+"bytes": 71714,
+"sha256": "da82e84cd96bd6a14fb982345bfb6cce9f566f3557f8ffa713e77d00d40b99bf"
+},
+{
+"path": "fed_assets.parquet",
+"bytes": 19504,
+"sha256": "98731a06aa3af35f87253e0dcd5a0f19ccba90916d34a146718e3e6178e34a32"
+},
+{
+"path": "fed_funds.parquet",
+"bytes": 243615,
+"sha256": "d35a529c43cd92d43f119a9dfb3e99d56d30de6b00bd136054e3aa7ab851bc05"
+},
+{
+"path": "fng.parquet",
+"bytes": 28815,
+"sha256": "8b2169bc7df1e48bde09fa103b18cc5d25d540ae9d2481b2191df37f74108ad3"
+},
+{
+"path": "hy_spread.parquet",
+"bytes": 8876,
+"sha256": "631ed989d99b300ab6b2b5c3ed47d5764efec82954ae37dece2f5bb634a21826"
+},
+{
+"path": "manifest.json",
+"bytes": 5127,
+"sha256": "a9edf98c825af3022c6c1e143490bbaf8aaa27b25d7c6aa61c180111950f3dcc"
+},
+{
+"path": "options_volume.parquet",
+"bytes": 28226,
+"sha256": "5271349c5e637f2fefe9ec9f971e40aee9783717405d779d66935ad38205b2f9"
+},
+{
+"path": "raw/breakeven_10y.csv",
+"bytes": 98348,
+"sha256": "e30482269bc17e5ede3cb96e13d5327a046587f2ef7c0379cc5aa0b352e57f8c"
+},
+{
+"path": "raw/curve_10y2y.csv",
+"bytes": 210197,
+"sha256": "7272e52be1c626c6ddc97d872700a4beaee1335b228a5ae3add8a4b2f8c19fa2"
+},
+{
+"path": "raw/defi_fees.json",
+"bytes": 5229060,
+"sha256": "d92d9c18651f743f94f57454c929ab46a1e9d0c8aa4f4108a860dd5ea24c7bef"
+},
+{
+"path": "raw/defi_tvl.json",
+"bytes": 122936,
+"sha256": "4e31686be47d0db9e491867215598e36b408a4b5af8772be82750d3822f2c076"
+},
+{
+"path": "raw/dex_volume.json",
+"bytes": 2365077,
+"sha256": "b2327f8089cb81ec3a6a0f819fea16d6018cb9d4dc153dbd78d1b920a36098c8"
+},
+{
+"path": "raw/fed_assets.csv",
+"bytes": 23358,
+"sha256": "7cc844358956c70974888f0877924fb481b64c514255fa8b4540563cec9f5ab5"
+},
+{
+"path": "raw/fed_funds.csv",
+"bytes": 424379,
+"sha256": "d47de4e7a36cdf6da74039f48bf44b3dd17a97472dc40cda41f33f459e8ac818"
+},
+{
+"path": "raw/fng.json",
+"bytes": 299960,
+"sha256": "83f06312660f0ee6fba4b92d98b9324261fe7dfa6bb4be83a2b247b525820c55"
+},
+{
+"path": "raw/hy_spread.csv",
+"bytes": 12670,
+"sha256": "74434a3ad61fee753ea6ecd8cf3de54785ce24a62c9fac4abf0e9562ab963dfd"
+},
+{
+"path": "raw/options_volume.json",
+"bytes": 86640,
+"sha256": "3a4530aa2db97d889926384f98706916788228c1af40fb315ef967f532f84825"
+},
+{
+"path": "raw/rrp.csv",
+"bytes": 95556,
+"sha256": "25b04b53d4cb8308a30163670b8706545eeb696427c46f9349260bd463b827af"
+},
+{
+"path": "raw/stable_total.json",
+"bytes": 1324873,
+"sha256": "2ef29c6342efbbfc9693c7633bcc646e57d1ea673e8a596159f94fbda56ac2b8"
+},
+{
+"path": "raw/stable_usdc.json",
+"bytes": 395846,
+"sha256": "5997a64d4dac1fb962f1f001130009df18fcd8bd4a3f5df4a17e43bc92864e14"
+},
+{
+"path": "raw/stable_usdt.json",
+"bytes": 471173,
+"sha256": "54a1fbafad7799efe2ef7ec5f46737f680d13533872520064741f72624b318b5"
+},
+{
+"path": "raw/tga.csv",
+"bytes": 21548,
+"sha256": "51d551a3c23121a02efbf41952473f207ec5fcbbc44003baf49cc837a3fc7871"
+},
+{
+"path": "raw/usd_broad.csv",
+"bytes": 104729,
+"sha256": "d248a3103dc2a001a68187b827926e1353746314907888e57fd130b8ca585f82"
+},
+{
+"path": "raw/ust_10y.csv",
+"bytes": 269107,
+"sha256": "ffc712cda8ff329de0f07ea6d5d9b97a094fe40da0486319ae12bbbe19d7381d"
+},
+{
+"path": "raw/ust_2y.csv",
+"bytes": 209280,
+"sha256": "6b1fc06ecf1ab6a5499cf5e96c701338fa9b68283c2678399c3548f43c1dadcf"
+},
+{
+"path": "raw/ust_3m.csv",
+"bytes": 186831,
+"sha256": "6fec26417860c4f07398911c3c3aa7c3b539c74e9b81d7101a36234bcd04fb90"
+},
+{
+"path": "raw/vix.csv",
+"bytes": 161646,
+"sha256": "1f9f2a2887adaf66819e74b02ae9a4f2d76f49400cbda290f0fdc5e2880c4e43"
+},
+{
+"path": "rrp.parquet",
+"bytes": 48049,
+"sha256": "798777d46c5817ff3d9bc39f36745ce9b54b8a5335fafc5d3bd20127d29b5f4b"
+},
+{
+"path": "stable_total.parquet",
+"bytes": 51011,
+"sha256": "79bdfd434a7253b2b2e3e33fafb205a04ff47e7a23bc4f3be1fad3ad6d0118a0"
+},
+{
+"path": "stable_usdc.parquet",
+"bytes": 48193,
+"sha256": "d77a74f373924dbdd9e97202ce4a123998fdfe8c453b644ee85057131b024cce"
+},
+{
+"path": "stable_usdt.parquet",
+"bytes": 48065,
+"sha256": "353ab2046be5b94f71587e1c6ab1d5a466f53dce61037c728b66ba28ee86a8e8"
+},
+{
+"path": "tga.parquet",
+"bytes": 18765,
+"sha256": "6998e7ac8c9b4e6e991ad237fb5342385ac7ae16afa2dfad02a514e5d072e788"
+},
+{
+"path": "usd_broad.parquet",
+"bytes": 82250,
+"sha256": "d0e01bfd72ea836a89e5b39a7a002a138bd0d616efbff67716eb3b8879238bd3"
+},
+{
+"path": "ust_10y.parquet",
+"bytes": 155498,
+"sha256": "78e0ef82f04d56ba7fd8efd7c32861c9469ded11e2218ff3237c662012feaee2"
+},
+{
+"path": "ust_2y.parquet",
+"bytes": 123160,
+"sha256": "98b071c2aa188a184364c2a376c6a7bb840b7466c43942d7a032fc274152e493"
+},
+{
+"path": "ust_3m.parquet",
+"bytes": 109917,
+"sha256": "bd9fc2ab8a3bb35d1b669f135083e679dc9cebfbbe46544531446af66f108bdd"
+},
+{
+"path": "vix.parquet",
+"bytes": 99007,
+"sha256": "6cdb8a3a58284a060521515b7efb0fd3b5640206de84c97c3826ebc3bccb2ee8"
+}
+]
+}

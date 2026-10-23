@@ -1,0 +1,189 @@
+09:27:51 prereg sha c2fc9afeb729
+09:30:48 clock {'excess|1': (22, 2, 1, 0), 'excess|4': (13, 1, 7, 0), 'excess|12': (34, 2, 17, 1), 'excess|24': (0, 0, 0, 0), 'excess|72': (0, 0, 0, 0), 'raw|1': (0, 0, 0, 0), 'raw|4': (2727, 189, 215, 74), 'raw|12': (4751, 236, 107, 27), 'raw|24': (7511, 500, 58, 5), 'raw|72': (2129, 129, 0, 0)}
+09:30:48 crowd {'excess|1': (3898, 237, 89, 0), 'excess|4': (6384, 496, 531, 9), 'excess|12': (6055, 553, 764, 35), 'excess|24': (7090, 537, 688, 25), 'excess|72': (2839, 255, 42, 4), 'raw|1': (58668, 3638, 9649, 116), 'raw|4': (75143, 4087, 21141, 821), 'raw|12': (83766, 2694, 23747, 1182), 'raw|24': (83698, 4506, 19580, 1039), 'raw|72': (80591, 2655, 3736, 15)}
+09:30:48 flow {'excess|1': (398, 18, 38, 0), 'excess|4': (926, 78, 192, 5), 'excess|12': (1210, 87, 125, 6), 'excess|24': (1069, 87, 96, 6), 'excess|72': (5, 0, 0, 0), 'raw|1': (16096, 578, 854, 5), 'raw|4': (25770, 1466, 7381, 121), 'raw|12': (29219, 1791, 5594, 34), 'raw|24': (28161, 1962, 1925, 9), 'raw|72': (12599, 514, 0, 0)}
+09:30:48 market {'excess|1': (834, 76, 13, 0), 'excess|4': (903, 69, 58, 1), 'excess|12': (560, 39, 90, 1), 'excess|24': (927, 90, 114, 4), 'excess|72': (215, 14, 2, 0), 'raw|1': (55139, 4212, 5310, 107), 'raw|4': (61237, 3811, 8692, 404), 'raw|12': (66459, 4457, 5178, 364), 'raw|24': (64969, 3776, 5121, 56), 'raw|72': (70189, 5683, 18, 0)}
+09:30:48 trials 8320806 lists {'placebo': 49525, 'real': 862204}
+09:30:49 prereg sha c2fc9afeb729
+09:30:49 frozen discovery lists 386d60424902
+09:31:49 validation clock:us_clock
+09:31:56 validation clock:eu_clock
+09:32:01 validation clock:cme_clock
+09:32:05 validation clock:us_day
+09:32:10 validation ctx:low:ret[1]@1h/z720
+09:32:15 validation ctx:high:ret[1]@1h/z720
+09:32:19 validation ctx:low:ret[3]@1h/z720
+09:32:24 validation ctx:high:ret[3]@1h/z720
+09:32:28 validation ctx:low:ret[6]@1h/z720
+09:32:33 validation ctx:high:ret[6]@1h/z720
+09:32:37 validation ctx:low:ret[24]@1h/z720
+09:32:41 validation ctx:high:ret[24]@1h/z720
+09:32:47 validation ctx:low:ema_ratio[8]@1h/z720
+09:32:51 validation ctx:high:ema_ratio[8]@1h/z720
+09:32:57 validation funding_clock[]@1h/fix
+09:33:02 validation btc_ret[24]@1h/z720
+09:33:07 validation disp[24]@1h/z720
+09:33:12 validation btc_ret[72]@1h/z720
+09:33:16 validation disp[72]@1h/z720
+09:33:22 validation btc_ret[168]@1h/z720
+09:33:26 validation disp[168]@1h/z720
+09:33:31 validation btc_ret[6]@4h/z720
+09:33:38 validation disp[6]@4h/z720
+09:33:42 validation btc_ret[18]@4h/z720
+09:33:47 validation disp[18]@4h/z720
+09:33:52 validation btc_ret[42]@4h/z720
+09:33:55 validation disp[42]@4h/z720
+09:34:00 validation btc_ret[3]@24h/z720
+09:34:04 validation disp[3]@24h/z720
+09:34:09 validation btc_ret[7]@24h/z720
+09:34:13 validation disp[7]@24h/z720
+09:34:17 validation btc_ret[14]@24h/z720
+09:34:22 validation disp[14]@24h/z720
+09:34:26 validation breadth[21]@1h/fix
+09:34:32 validation breadth[55]@1h/fix
+09:34:36 validation breadth[21]@4h/fix
+09:34:41 validation breadth[55]@4h/fix
+09:34:45 validation breadth[21]@24h/fix
+09:34:48 validation breadth[55]@24h/fix
+09:34:56 validation flow:oi_chg[4]/xs8
+09:35:02 validation flow:oi_chg[4]/z720
+09:35:09 validation flow:oi_chg[24]/xs8
+09:35:15 validation flow:oi_chg[24]/z720
+09:35:22 validation flow:oi_chg[72]/xs8
+09:35:27 validation flow:oi_chg[72]/z720
+09:35:31 validation flow:oi_price[4]/fix
+09:35:34 validation flow:oi_price[24]/fix
+09:35:40 validation flow:crowd_ls/xs8
+09:35:46 validation flow:crowd_ls/z720
+09:35:53 validation flow:top_ls/xs8
+09:35:58 validation flow:top_ls/z720
+09:36:04 validation flow:top_vs_crowd/xs8
+09:36:10 validation flow:top_vs_crowd/z720
+09:36:16 validation flow:taker[1]/xs8
+09:36:22 validation flow:taker[1]/z720
+09:36:27 validation flow:taker[4]/xs8
+09:36:33 validation flow:taker[4]/z720
+09:36:40 validation flow:taker[24]/xs8
+09:36:45 validation flow:taker[24]/z720
+09:36:53 validation flow:oi_turnover/xs8
+09:36:58 validation flow:oi_turnover/z720
+09:36:58 done
+09:36:59 prereg sha c2fc9afeb729
+09:37:19 decompose discovery: 61 contexts
+09:38:14 decompose validation: 61 contexts
+09:38:16 prereg sha c2fc9afeb729
+09:38:48 
+                    cl     rep      rate    cce  cce_rep_1x  cce_rep_2x  cce_rep_3x
+family kind                                                                        
+clock  placebo    1059      61  0.057602    107           0           0           0
+       real      17187    8561  0.498109    405          77          56          30
+crowd  placebo   19658    9636  0.490182   3246        1696        1526        1455
+       real     408132  347869  0.852344  79967       68915       56739       44167
+flow   placebo    6581     605  0.091931    186           6           3           3
+       real     115453   78127  0.676700  16205       11290        8321        5825
+market placebo   22227    2346  0.105547    937          94          73          53
+       real     321432  227309  0.707176  24596       20764       15204       12952
+09:38:49 
+                    size    sum      mean
+family h  measure                        
+clock  1  excess      22      4  0.181818
+       4  excess      13      1  0.076923
+          raw       2727    890  0.326366
+       12 excess      34      1  0.029412
+          raw       4751   2772  0.583456
+       24 raw       7511   3801  0.506058
+       72 raw       2129   1092  0.512917
+crowd  1  excess    3898   1445  0.370703
+          raw      58668  45145  0.769500
+       4  excess    6384   2197  0.344142
+          raw      75143  66859  0.889757
+       12 excess    6055   2172  0.358712
+          raw      83766  75548  0.901893
+       24 excess    7090   2719  0.383498
+          raw      83698  78382  0.936486
+       72 excess    2839   1010  0.355759
+          raw      80591  72392  0.898264
+flow   1  excess     398    214  0.537688
+          raw      16096  11974  0.743912
+       4  excess     926    408  0.440605
+          raw      25770  17072  0.662476
+       12 excess    1210    468  0.386777
+          raw      29219  19835  0.678839
+       24 excess    1069    327  0.305893
+          raw      28161  18185  0.645751
+       72 excess       5      4  0.800000
+          raw      12599   9640  0.765140
+market 1  excess     834    292  0.350120
+          raw      55139  33800  0.612996
+       4  excess     903    367  0.406423
+          raw      61237  42480  0.693698
+       12 excess     560    311  0.555357
+          raw      66459  51207  0.770505
+       24 excess     927    463  0.499461
+          raw      64969  49242  0.757931
+       72 excess     215    145  0.674419
+          raw      70189  49002  0.698144
+09:38:49 
+                    size     sum      mean
+family amplifies                          
+clock  False       14774    8208  0.555571
+       True         2413     353  0.146291
+crowd  False      203394  175714  0.863909
+       True       204738  172155  0.840855
+flow   False       55632   38443  0.691023
+       True        59821   39684  0.663379
+market False      181318  121973  0.672702
+       True       140114  105336  0.751788
+09:38:50 {
+ "clock": {
+  "cl": 17187,
+  "rep": 8561,
+  "rate": 0.49810903589922617,
+  "baseline": 0.05760151085930123,
+  "placebo_cl": 1059,
+  "signal": true
+ },
+ "crowd": {
+  "cl": 408132,
+  "rep": 347869,
+  "rate": 0.8523443395764115,
+  "baseline": 0.4901821141519992,
+  "placebo_cl": 19658,
+  "signal": false
+ },
+ "flow": {
+  "cl": 115453,
+  "rep": 78127,
+  "rate": 0.6766996093648497,
+  "baseline": 0.09193131742896217,
+  "placebo_cl": 6581,
+  "signal": true
+ },
+ "market": {
+  "cl": 321432,
+  "rep": 227309,
+  "rate": 0.7071760123447572,
+  "baseline": 0.10554730732892428,
+  "placebo_cl": 22227,
+  "signal": true
+ }
+}
+09:39:25 decomposition (exploratory): inter_rep = replicated and the interaction keeps its sign and at least half the validation lift
+                            cl    rep  inter_rep  inter_share_d
+family measure kind                                            
+clock  excess  placebo       5  0.000      0.000          1.000
+               real         69  0.087      0.087          1.000
+       raw     placebo    1054  0.058      0.057          1.072
+               real      17118  0.500      0.468          0.945
+crowd  excess  placebo    2078  0.039      0.039          1.000
+               real      26266  0.363      0.363          1.000
+       raw     placebo   17580  0.544      0.032          2.366
+               real     381866  0.886      0.049          0.107
+flow   excess  placebo     270  0.078      0.067          0.940
+               real       3608  0.394      0.375          0.832
+       raw     placebo    6311  0.093      0.042          0.999
+               real     111845  0.686      0.127          0.295
+market excess  placebo     288  0.028      0.028          1.000
+               real       3439  0.459      0.459          1.000
+       raw     placebo   21939  0.107      0.015          1.239
+               real     317993  0.710      0.048          0.102

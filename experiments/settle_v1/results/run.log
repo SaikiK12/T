@@ -1,0 +1,25 @@
+15:18:54 prereg sha e1f380f45a1a
+/home/user/T/scripts/run_settle.py:48: RuntimeWarning: Mean of empty slice
+  uni = np.nanmean(np.where(elig, ret, np.nan), axis=1)  # equal-weight eligible crypto, per row
+15:19:02 events by window: {'discovery': 6490, 'validation': 3200}
+15:19:02 LONG_NEG discovery n 1339 net -38.5 bp t -0.69 funding +47.6 price -72.3 cost 13.9 stop
+15:19:02 SHORT_POS discovery n 1980 net -43.4 bp t -1.93 funding +22.9 price -51.7 cost 14.6 stop
+15:19:02 
+  variant    window    universe  events  months  symbols  mean_net_bp  t_month  net_2x_bp  net_3x_bp   hit  funding_bp  price_bp  cost_bp  pass_through  excess_net_bp  offcycle_net_bp  top5_share  n_4h  n_8h  net_4h_bp  net_8h_bp
+ LONG_NEG discovery    rank<=50    1339      36      142      -38.524   -0.693    -52.427    -66.330 0.497      47.635   -72.257   13.903         1.517          3.824          -26.602      -0.480   280  1059     -8.629    -46.428
+ LONG_NEG discovery rank 51-100     823      36      127      -83.838   -0.955   -107.765   -131.692 0.473      35.096   -95.008   23.927         2.707         -8.231          -34.806      -0.197    83   740   -109.527    -80.957
+SHORT_POS discovery    rank<=50    1980       9       78      -43.405   -1.929    -58.044    -72.683 0.477      22.907   -51.672   14.639         2.256         -3.488           -8.410      -0.099     0  1980        NaN    -43.405
+SHORT_POS discovery rank 51-100    1786       9       72      -38.406   -2.388    -62.399    -86.392 0.490      24.494   -38.907   23.993         1.588          0.132          -23.737      -0.098     1  1785   -517.318    -38.137
+15:19:02 {
+ "stages": {
+  "LONG_NEG": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SHORT_POS": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "confirmed": []
+}

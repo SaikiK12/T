@@ -1,0 +1,68 @@
+{
+"folder": "data/binance_options",
+"source": "https://data.binance.vision/data/option/daily/{EOHSummary,BVOLIndex}/ (public, published SHA-256 checked)",
+"script": "scripts/fetch_binance_options.py",
+"recorded_utc": "2026-10-21T22:07:38Z",
+"excluded": [],
+"files": 8,
+"bytes": 191605822,
+"combined_sha256": "d458296a1a1b050b92b0f35d1dac0ed57bf6066f470d356301b1ad16bf790833",
+"subfolders": {
+"bvol": {
+"files": 2,
+"bytes": 39557815
+},
+"eoh": {
+"files": 5,
+"bytes": 152046076
+},
+".": {
+"files": 1,
+"bytes": 1931
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "bvol/BTCBVOLUSDT.parquet",
+"bytes": 19783928,
+"sha256": "f5607ae813df91eba7bd1071f25f99acc78a01c8728be04d6abbac874a081890"
+},
+{
+"path": "bvol/ETHBVOLUSDT.parquet",
+"bytes": 19773887,
+"sha256": "80a2c10e88bc2d66d4d0159c595d767acbe8e6a7fdf4db7f0a225c870867db48"
+},
+{
+"path": "eoh/BNBUSDT.parquet",
+"bytes": 12336717,
+"sha256": "04fc520dfd84b327ad9c02dfc17dc2e364aa5d16d636bddab99b6e974a548848"
+},
+{
+"path": "eoh/BTCUSDT.parquet",
+"bytes": 56881837,
+"sha256": "7b6525a8ab29863842a146c25278e8507f1ed8525da9827b1b647d1f4f7ba973"
+},
+{
+"path": "eoh/DOGEUSDT.parquet",
+"bytes": 1412549,
+"sha256": "7d50b49d713f804617bbcfd2c5e01b71696c96279f2eadd6eef453ad618dc091"
+},
+{
+"path": "eoh/ETHUSDT.parquet",
+"bytes": 76128574,
+"sha256": "a1695bc54176c81706def0205e3785d2bba5a487edaca455e7bb41545d0abbbf"
+},
+{
+"path": "eoh/XRPUSDT.parquet",
+"bytes": 5286399,
+"sha256": "1aca2d2e631043b5b6b63506e8b27b4eb8c56cafc7a229532362e32434d0aa70"
+},
+{
+"path": "provenance.json",
+"bytes": 1931,
+"sha256": "f6f3519446d9ea080e260e00071965beba0b68b2fbab4e08f55157914a9efcd9"
+}
+]
+}

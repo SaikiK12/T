@@ -1,0 +1,82 @@
+15:16:27 prereg sha 6b78b6408b47
+15:18:50 daily scores: beta, resmom, mom
+15:19:01 daily scores: max, prem
+15:19:07 BETA discovery net +2.5 bp/day alpha t +0.48 beta -0.22 gross +3.4 cost 1.0 stop
+15:19:13 RESMOM discovery net -3.3 bp/day alpha t -0.58 beta +0.03 gross -2.4 cost 0.9 stop
+15:19:20 MOM discovery net +7.7 bp/day alpha t +1.23 beta -0.01 gross +8.3 cost 0.6 stop
+15:19:27 MAX_POS discovery net +3.0 bp/day alpha t +0.27 beta +0.13 gross +5.7 cost 2.7 stop
+15:19:33 MAX_NEG discovery net -8.4 bp/day alpha t -0.95 beta -0.13 gross -5.7 cost 2.7 stop
+15:19:40 PREM discovery net -5.5 bp/day alpha t -0.91 beta +0.06 gross -2.6 cost 2.9 stop
+15:19:41 
+variant     K    window  cmult  days  mean_bp_day   t_nw  beta_btc  alpha_t  total  max_dd  sharpe  gross_bp_day  cost_bp_day  long_gross_bp_day  short_gross_bp_day
+   BETA 8.914 discovery    1.0  1095        2.458  0.311    -0.216    0.482  0.269   0.788   0.169         3.430        0.972             10.642              -7.284
+   BETA 8.914 discovery    2.0  1095        1.485  0.188    -0.216    0.355  0.163   0.821   0.102         3.430        1.945             10.642              -7.284
+   BETA 8.914 discovery    3.0  1095        0.513  0.065    -0.216    0.227  0.056   0.855   0.035         3.430        2.917             10.642              -7.284
+ RESMOM 8.112 discovery    1.0  1095       -3.300 -0.550     0.028   -0.578 -0.361   0.775  -0.300        -2.425        0.875              0.080              -2.330
+ RESMOM 8.112 discovery    2.0  1095       -4.175 -0.695     0.028   -0.724 -0.457   0.858  -0.379        -2.425        1.750              0.080              -2.330
+ RESMOM 8.112 discovery    3.0  1095       -5.050 -0.841     0.028   -0.870 -0.553   0.942  -0.459        -2.425        2.625              0.080              -2.330
+    MOM 7.727 discovery    1.0  1095        7.728  1.223    -0.010    1.231  0.846   0.644   0.612         8.294        0.566              4.460               4.263
+    MOM 7.727 discovery    2.0  1095        7.162  1.134    -0.010    1.142  0.784   0.668   0.567         8.294        1.133              4.460               4.263
+    MOM 7.727 discovery    3.0  1095        6.595  1.044    -0.010    1.052  0.722   0.692   0.522         8.294        1.699              4.460               4.263
+MAX_POS 9.795 discovery    1.0  1095        2.954  0.360     0.131    0.272  0.323   0.522   0.188         5.693        2.739             18.204             -11.920
+MAX_POS 9.795 discovery    2.0  1095        0.215  0.026     0.131   -0.065  0.023   0.682   0.014         5.693        5.479             18.204             -11.920
+MAX_POS 9.795 discovery    3.0  1095       -2.525 -0.307     0.131   -0.402 -0.276   0.841  -0.160         5.693        8.218             18.204             -11.920
+MAX_NEG 9.795 discovery    1.0  1095       -8.433 -1.029    -0.131   -0.947 -0.923   1.267  -0.535        -5.693        2.739             11.920             -18.204
+MAX_NEG 9.795 discovery    2.0  1095      -11.172 -1.365    -0.131   -1.285 -1.223   1.512  -0.709        -5.693        5.479             11.920             -18.204
+MAX_NEG 9.795 discovery    3.0  1095      -13.912 -1.700    -0.131   -1.624 -1.523   1.791  -0.883        -5.693        8.218             11.920             -18.204
+   PREM 9.669 discovery    1.0  1095       -5.474 -0.851     0.065   -0.914 -0.599   1.133  -0.503        -2.621        2.853             14.445             -16.034
+   PREM 9.669 discovery    2.0  1095       -8.326 -1.293     0.065   -1.361 -0.912   1.361  -0.764        -2.621        5.706             14.445             -16.034
+   PREM 9.669 discovery    3.0  1095      -11.179 -1.736     0.065   -1.807 -1.224   1.589  -1.026        -2.621        8.559             14.445             -16.034
+15:19:41 
+variant     window  days  next_24h_spread_top_minus_bottom_bp
+   BETA  discovery  1034                                1.740
+   BETA validation   546                               10.649
+ RESMOM  discovery   968                              -16.085
+ RESMOM validation   546                              -19.891
+    MOM  discovery   944                                6.073
+    MOM validation   546                              -35.849
+MAX_POS  discovery  1080                               -0.572
+MAX_POS validation   546                              -16.027
+MAX_NEG  discovery  1080                               -0.572
+MAX_NEG validation   546                              -16.027
+   PREM  discovery  1081                               -6.457
+   PREM validation   546                              -47.390
+15:19:41 {
+ "stages": {
+  "BETA": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "RESMOM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MOM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MAX_POS": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MAX_NEG": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "PREM": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "confirmed": [],
+ "beta_persistence_spearman_90d": {
+  "discovery": 0.38307070942711496,
+  "validation": 0.522416120078643
+ },
+ "resmom_minus_mom": {
+  "discovery": {
+   "mean_bp_day": -11.027921342399468,
+   "t_nw30": -1.6091468677647978
+  }
+ }
+}

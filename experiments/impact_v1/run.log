@@ -1,0 +1,56 @@
+12:01:14 prereg sha 1a3eaf0d5d27
+/home/user/T/scripts/run_regime.py:57: RuntimeWarning: Mean of empty slice
+  idx = np.nanmean(np.where(e0, r, np.nan), axis=1)
+12:01:49 parity A vs R217 A_C0: max |diff| 0.00e+00
+12:01:49 parity B vs R217 B_C0: max |diff| 0.00e+00
+12:01:49 parity X2 vs R217 X2: max |diff| 0.00e+00
+12:03:15 A {"discovery": {"turnover_per_day": 0.4126411977538646, "missing_stat_share_of_main_notional": 0.02807235196684626, "impact_bp_day_at_10k_Y1": 0.08730819820517081, "median_trade_q_over_v_at_10k": 8.653727849820267e-08}, "validation": {"turnover_per_day": 0.7629189823845428, "missing_stat_share_of_main_notional": 0.03823647094128223, "impact_bp_day_at_10k_Y1": 0.19278570853760532, "median_trade_q_over_v_at_10k": 6.490335965987617e-08}, "validation_impact_share_of_net_at_10k_Y1": 0.014176902833907086}
+12:03:16 B {"discovery": {"turnover_per_day": 0.07372084142348333, "missing_stat_share_of_main_notional": 0.040520075351826314, "impact_bp_day_at_10k_Y1": 0.012488853691378714, "median_trade_q_over_v_at_10k": 8.78176486172036e-08}, "validation": {"turnover_per_day": 0.16318283096831707, "missing_stat_share_of_main_notional": 0.031166488508818622, "impact_bp_day_at_10k_Y1": 0.03083253836181295, "median_trade_q_over_v_at_10k": 6.249090865184422e-08}, "validation_impact_share_of_net_at_10k_Y1": 0.0044087533209142}
+12:03:17 X2 {"discovery": {"turnover_per_day": 0.5018054194554731, "missing_stat_share_of_main_notional": 0.03347582981557102, "impact_bp_day_at_10k_Y1": 0.12649021251680628, "median_trade_q_over_v_at_10k": 7.346270845995031e-08}, "validation": {"turnover_per_day": 0.9498216741288348, "missing_stat_share_of_main_notional": 0.037162586061045146, "impact_bp_day_at_10k_Y1": 0.27871101195043924, "median_trade_q_over_v_at_10k": 5.5392051420782956e-08}, "validation_impact_share_of_net_at_10k_Y1": 0.014160584948981774}
+12:03:17 
+book     window  cmult   Y    capital  net_bp_day  t_nw10  net_no_impact_bp_day  impact_bp_day  tier_cost_bp_day  impact_over_tier
+   A  discovery    1.0 1.0     1000.0     11.1611  2.8707               11.1887         0.0276            2.9876            0.0092
+   A  discovery    1.0 1.0    10000.0     11.1014  2.8563               11.1887         0.0873            2.9876            0.0292
+   A  discovery    1.0 1.0   100000.0     10.9126  2.8108               11.1887         0.2761            2.9876            0.0924
+   A  discovery    1.0 1.0  1000000.0     10.3156  2.6659               11.1887         0.8731            2.9876            0.2922
+   A  discovery    1.0 1.0 10000000.0      8.4278  2.1985               11.1887         2.7609            2.9876            0.9241
+   A validation    1.0 1.0     1000.0     13.5376  1.8913               13.5986         0.0610            5.5973            0.0109
+   A validation    1.0 1.0    10000.0     13.4058  1.8729               13.5986         0.1928            5.5973            0.0344
+   A validation    1.0 1.0   100000.0     12.9889  1.8145               13.5986         0.6096            5.5973            0.1089
+   A validation    1.0 1.0  1000000.0     11.6707  1.6300               13.5986         1.9279            5.5973            0.3444
+   A validation    1.0 1.0 10000000.0      7.5022  1.0467               13.5986         6.0964            5.5973            1.0892
+   B  discovery    1.0 1.0     1000.0      3.8971  2.0941                3.9010         0.0039            0.5469            0.0072
+   B  discovery    1.0 1.0    10000.0      3.8886  2.0897                3.9010         0.0125            0.5469            0.0228
+   B  discovery    1.0 1.0   100000.0      3.8615  2.0757                3.9010         0.0395            0.5469            0.0722
+   B  discovery    1.0 1.0  1000000.0      3.7762  2.0313                3.9010         0.1249            0.5469            0.2283
+   B  discovery    1.0 1.0 10000000.0      3.5061  1.8900                3.9010         0.3949            0.5469            0.7221
+   B validation    1.0 1.0     1000.0      6.9837  1.7084                6.9935         0.0098            1.2268            0.0079
+   B validation    1.0 1.0    10000.0      6.9626  1.7032                6.9935         0.0308            1.2268            0.0251
+   B validation    1.0 1.0   100000.0      6.8960  1.6870                6.9935         0.0975            1.2268            0.0795
+   B validation    1.0 1.0  1000000.0      6.6852  1.6356                6.9935         0.3083            1.2268            0.2513
+   B validation    1.0 1.0 10000000.0      6.0185  1.4731                6.9935         0.9750            1.2268            0.7947
+  X2  discovery    1.0 1.0     1000.0     15.4273  2.9813               15.4673         0.0400            3.6140            0.0111
+  X2  discovery    1.0 1.0    10000.0     15.3408  2.9662               15.4673         0.1265            3.6140            0.0350
+  X2  discovery    1.0 1.0   100000.0     15.0673  2.9182               15.4673         0.4000            3.6140            0.1107
+  X2  discovery    1.0 1.0  1000000.0     14.2024  2.7649               15.4673         1.2649            3.6140            0.3500
+  X2  discovery    1.0 1.0 10000000.0     11.4674  2.2662               15.4673         4.0000            3.6140            1.1068
+  X2 validation    1.0 1.0     1000.0     19.5940  2.2065               19.6822         0.0881            6.9290            0.0127
+  X2 validation    1.0 1.0    10000.0     19.4035  2.1852               19.6822         0.2787            6.9290            0.0402
+  X2 validation    1.0 1.0   100000.0     18.8008  2.1178               19.6822         0.8814            6.9290            0.1272
+  X2 validation    1.0 1.0  1000000.0     16.8951  1.9043               19.6822         2.7871            6.9290            0.4022
+  X2 validation    1.0 1.0 10000000.0     10.8686  1.2269               19.6822         8.8136            6.9290            1.2720
+12:03:17 
+book     window   Y     C50_usd       C0_usd
+   A  discovery 1.0  41057267.0  164229069.0
+   A  discovery 0.0 164229069.0  656916275.0
+   A validation 1.0  12438766.0   49755062.0
+   A validation 0.0  49755062.0  199020249.0
+   B  discovery 1.0 243924765.0  975699062.0
+   B  discovery 0.0 975699062.0 3902796247.0
+   B validation 1.0 128619972.0  514479886.0
+   B validation 0.0 514479886.0 2057919544.0
+  X2  discovery 1.0  37381559.0  149526235.0
+  X2  discovery 0.0 149526235.0  598104939.0
+  X2 validation 1.0  12467450.0   49869798.0
+  X2 validation 0.0  49869798.0  199479194.0
+12:03:17 verdict DATA_PASS

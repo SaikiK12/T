@@ -1,0 +1,44 @@
+16:27:03 PREREG verified cf41e8d3ec57; 14 inputs and 2 file trees match
+16:27:19 crypto: 499 perps ever in the top 50, 50376 hours
+/home/user/T/scripts/run_msnr.py:79: RuntimeWarning: All-NaN slice encountered
+  tr = np.nanmax(np.column_stack([H - L, np.abs(H - pc), np.abs(L - pc)]), axis=1)
+16:27:33 fade age30 t24: 77998 trades
+16:27:45 fade age30 t72: 31890 trades
+16:28:02 fade age30 bracket: 78002 trades
+16:28:17 fade age180 t24: 79167 trades
+16:28:31 fade age180 t72: 32104 trades
+16:28:50 fade age180 bracket: 80656 trades
+16:29:05 break age30 t24: 57529 trades
+16:29:19 break age30 t72: 27795 trades
+16:29:36 break age30 bracket: 62355 trades
+16:29:52 break age180 t24: 58490 trades
+16:30:09 break age180 t72: 28031 trades
+16:30:29 break age180 bracket: 63742 trades
+16:30:32 fade age30 t24: disc -19.01 bp t -2.785017238893557 (40700 trades); valid -21.80 t -3.0294067758287184 (37260)
+16:30:32 fade age30 t72: disc -31.88 bp t -2.2945641811638615 (16563 trades); valid -62.07 t -4.424511664430542 (15277)
+16:30:32 fade age30 bracket: disc -11.81 bp t -2.0395176730025506 (40221 trades); valid -29.73 t -5.364815954564762 (37755)
+16:30:32 fade age180 t24: disc -14.35 bp t -2.1294516317249386 (41294 trades); valid -18.94 t -2.6073720762338657 (37835)
+16:30:32 fade age180 t72: disc -19.73 bp t -1.4174305057632746 (16672 trades); valid -56.25 t -3.8216192534411073 (15383)
+16:30:32 fade age180 bracket: disc -7.31 bp t -1.2447316985162478 (41542 trades); valid -23.65 t -4.258608690880774 (39088)
+16:30:32 break age30 t24: disc -26.97 bp t -2.7986601235583293 (29996 trades); valid -16.13 t -1.9097083668401755 (27496)
+16:30:32 break age30 t72: disc -25.53 bp t -1.3420269309963668 (14462 trades); valid -6.69 t -0.3523123622662804 (13288)
+16:30:32 break age30 bracket: disc -18.79 bp t -2.178464226441374 (32528 trades); valid -11.05 t -1.5259208767564638 (29791)
+16:30:32 break age180 t24: disc -29.93 bp t -3.1502598251029865 (30460 trades); valid -16.70 t -1.986008857002385 (27993)
+16:30:32 break age180 t72: disc -20.69 bp t -1.0821689885564856 (14573 trades); valid -13.14 t -0.6645495041688844 (13413)
+16:30:32 break age180 bracket: disc -21.42 bp t -2.5077114395996265 (33238 trades); valid -10.78 t -1.4889534604730694 (30468)
+16:30:32 pick None, passes False {}
+16:30:32 secondary: 17 instruments
+/home/user/T/scripts/run_msnr.py:79: RuntimeWarning: All-NaN slice encountered
+  tr = np.nanmax(np.column_stack([H - L, np.abs(H - pc), np.abs(L - pc)]), axis=1)
+16:30:34 secondary fade age30 t24: -25.75470658751497 bp t -9.611909973307942 (3554 trades)
+16:30:34 secondary fade age30 t72: -13.929676068217761 bp t -1.789454360478557 (1505 trades)
+16:30:34 secondary fade age30 bracket: -19.454308031795968 bp t -6.7428928493958455 (3914 trades)
+16:30:34 secondary fade age180 t24: -24.536936068176267 bp t -9.146116978203032 (3611 trades)
+16:30:34 secondary fade age180 t72: -19.99061811576974 bp t -2.2708573269330956 (1512 trades)
+16:30:34 secondary fade age180 bracket: -20.60315117863806 bp t -7.17753704775073 (4086 trades)
+16:30:34 secondary break age30 t24: -19.889184472529994 bp t -5.80994662586654 (2741 trades)
+16:30:34 secondary break age30 t72: -15.325879091201847 bp t -1.8705473731718176 (1341 trades)
+16:30:34 secondary break age30 bracket: -11.672328853130962 bp t -3.614886887154963 (3157 trades)
+16:30:34 secondary break age180 t24: -19.570654588183835 bp t -5.915348429884141 (2782 trades)
+16:30:34 secondary break age180 t72: -11.304700551185334 bp t -1.3289579342500457 (1350 trades)
+16:30:34 secondary break age180 bracket: -11.17502364168977 bp t -3.2753511360899443 (3213 trades)

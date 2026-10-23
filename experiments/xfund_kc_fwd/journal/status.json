@@ -1,0 +1,314 @@
+{
+ "lane": "xfund_kc_fwd",
+ "rid": "R279",
+ "updated": "2026-10-22T01:33:29.286845+00:00",
+ "waiting": false,
+ "ready": {
+  "binance": 1.003,
+  "gate": 1.011,
+  "kucoin": 1.0
+ },
+ "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "binance": {
+   "files": 873,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AERGOUSDT",
+    "BDXNUSDT",
+    "SXPUSDT"
+   ]
+  },
+  "kucoin": {
+   "files": 642,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  }
+ },
+ "A": {
+  "set": "gate+kucoin",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R277's replicating set with the higher NW t (11.41)",
+  "held_now": [
+   {
+    "coin": "1000RATSUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.4975
+   },
+   {
+    "coin": "LIGHTUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3651
+   },
+   {
+    "coin": "MYXUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.358
+   },
+   {
+    "coin": "TRADOORUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.4068
+   },
+   {
+    "coin": "SUNUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3768
+   },
+   {
+    "coin": "TUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.5007
+   },
+   {
+    "coin": "BOTUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.5431
+   },
+   {
+    "coin": "INXUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.4647
+   },
+   {
+    "coin": "MUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.488
+   },
+   {
+    "coin": "ZHONGJIUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.4086
+   },
+   {
+    "coin": "TAKEUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.5256
+   },
+   {
+    "coin": "STARUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.7526
+   },
+   {
+    "coin": "HANMIUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.5414
+   },
+   {
+    "coin": "SIRENUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.4786
+   },
+   {
+    "coin": "TRUTHUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.4172
+   },
+   {
+    "coin": "MINAUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.367
+   },
+   {
+    "coin": "RSRUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.4053
+   },
+   {
+    "coin": "NMRUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3475
+   },
+   {
+    "coin": "ONEUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.5694
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3692
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 61,
+  "replay_total": 0.014157526699999999
+ },
+ "B": {
+  "set": "binance+kucoin",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R277's other replicating set (NW t 11.17)",
+  "held_now": [
+   {
+    "coin": "BLUAIUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.6827
+   },
+   {
+    "coin": "HOMEUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.6325
+   },
+   {
+    "coin": "LYNUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.571
+   },
+   {
+    "coin": "SPORTFUNUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.4831
+   },
+   {
+    "coin": "AGTUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.4
+   },
+   {
+    "coin": "SUNUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.3957
+   },
+   {
+    "coin": "ESPORTSUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.3911
+   },
+   {
+    "coin": "STARUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.6919
+   },
+   {
+    "coin": "ZILUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.6088
+   },
+   {
+    "coin": "AVAUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.4739
+   },
+   {
+    "coin": "HANAUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.3785
+   },
+   {
+    "coin": "ONEUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.639
+   },
+   {
+    "coin": "COTIUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.3507
+   },
+   {
+    "coin": "AINUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.445
+   },
+   {
+    "coin": "TACUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.412
+   },
+   {
+    "coin": "MINAUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.3826
+   },
+   {
+    "coin": "BLURUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.3144
+   },
+   {
+    "coin": "POWERUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.3176
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.506
+   },
+   {
+    "coin": "BRUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.4558
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 61,
+  "replay_total": 0.0146265184
+ },
+ "last_day": "2026-10-22"
+}

@@ -1,0 +1,97 @@
+{
+ "trials": 643736,
+ "families": {
+  "mtf": {
+   "excess|1": {
+    "tau": 3.0,
+    "tau_cond": 2.75,
+    "cells": 64373,
+    "cl": 1877,
+    "cl_placebo": 164,
+    "cce": 354,
+    "cce_placebo": 0
+   },
+   "excess|4": {
+    "tau": 3.0,
+    "tau_cond": 3.0,
+    "cells": 64373,
+    "cl": 2085,
+    "cl_placebo": 191,
+    "cce": 677,
+    "cce_placebo": 6
+   },
+   "excess|12": {
+    "tau": 3.25,
+    "tau_cond": 3.5,
+    "cells": 64373,
+    "cl": 1217,
+    "cl_placebo": 91,
+    "cce": 247,
+    "cce_placebo": 23
+   },
+   "excess|24": {
+    "tau": 3.25,
+    "tau_cond": 3.5,
+    "cells": 64376,
+    "cl": 914,
+    "cl_placebo": 71,
+    "cce": 227,
+    "cce_placebo": 21
+   },
+   "excess|72": {
+    "tau": 4.25,
+    "tau_cond": 4.5,
+    "cells": 64373,
+    "cl": 50,
+    "cl_placebo": 5,
+    "cce": 6,
+    "cce_placebo": 0
+   },
+   "raw|1": {
+    "tau": 2.75,
+    "tau_cond": 2.5,
+    "cells": 64373,
+    "cl": 8079,
+    "cl_placebo": 482,
+    "cce": 2172,
+    "cce_placebo": 2
+   },
+   "raw|4": {
+    "tau": 2.5,
+    "tau_cond": 2.75,
+    "cells": 64373,
+    "cl": 12438,
+    "cl_placebo": 1168,
+    "cce": 5015,
+    "cce_placebo": 240
+   },
+   "raw|12": {
+    "tau": 2.75,
+    "tau_cond": 3.0,
+    "cells": 64373,
+    "cl": 11140,
+    "cl_placebo": 765,
+    "cce": 3034,
+    "cce_placebo": 124
+   },
+   "raw|24": {
+    "tau": 2.25,
+    "tau_cond": 2.75,
+    "cells": 64376,
+    "cl": 14412,
+    "cl_placebo": 1345,
+    "cce": 3239,
+    "cce_placebo": 247
+   },
+   "raw|72": {
+    "tau": 3.0,
+    "tau_cond": 3.75,
+    "cells": 64373,
+    "cl": 3380,
+    "cl_placebo": 233,
+    "cce": 6,
+    "cce_placebo": 0
+   }
+  }
+ }
+}

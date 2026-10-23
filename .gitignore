@@ -5,3 +5,27 @@ __pycache__/
 experiments/*/cache/
 experiments/*/data/
 experiments/*/results/*.npy
+
+/data/
+/.venv/
+experiments/*/results/*.parquet
+experiments/*/results/*.npz
+
+# context-lift lists are hundreds of MB; their sha256 is kept in results/validation_hashes.json
+experiments/atlas_ctx/results/*.csv
+experiments/atlas_mtf/results/*.csv
+.forward.lock
+.forward_loop.pid
+dashboard/data/
+.notices.lock
+.notice_loop.pid
+# R275's daily rows and trades (61 MB, 19 MB) are rebuilt by its frozen run; their sha256 is in results/hashes.json
+experiments/xfund_v1/results/daily.csv
+experiments/xfund_v1/results/trades.csv
+# R280's list of liquidated legs (40 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
+experiments/levcarry_v1/results/events.csv
+# R290's trade list (6.4 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
+experiments/auction_v1/results/trades.csv.gz
+experiments/vpin_v1/results/hourly.csv.gz
+# R306's trade list (12 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
+experiments/msnr_v1/results/trades.csv.gz

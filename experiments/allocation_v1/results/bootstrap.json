@@ -1,0 +1,29 @@
+{
+  "10": {
+    "block_length": 10,
+    "interpretation": "conditional descriptive interval on spent validation dates",
+    "lower_95": -0.17481877984347716,
+    "observed_sharpe_difference": 0.007251482015404376,
+    "replicates": 5000,
+    "seed": 20261019238,
+    "upper_95": 0.18617701041202508
+  },
+  "30": {
+    "block_length": 30,
+    "interpretation": "conditional descriptive interval on spent validation dates",
+    "lower_95": -0.1683468804754071,
+    "observed_sharpe_difference": 0.007251482015404376,
+    "replicates": 5000,
+    "seed": 20261019258,
+    "upper_95": 0.16827860697716276
+  },
+  "60": {
+    "block_length": 60,
+    "interpretation": "conditional descriptive interval on spent validation dates",
+    "lower_95": -0.15240646300371644,
+    "observed_sharpe_difference": 0.007251482015404376,
+    "replicates": 5000,
+    "seed": 20261019288,
+    "upper_95": 0.15134140491157247
+  }
+}
