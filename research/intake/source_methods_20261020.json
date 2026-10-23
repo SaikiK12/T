@@ -12554,6 +12554,72 @@
       ],
       "future_controls": "Freeze exact displayed rule versus separately declared hysteresis and gross-normalized controls before market outcomes; count all variants, preserve nulls, require1x/2x/3x complete costs and genuinely new paper evidence. Synthetic target arithmetic does not establish strategy loss or profit.",
       "market_trials": 0
+    },
+    {
+      "intake_id": "arch_har_forecast_contract_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [],
+      "canonical_methods": [
+        "M018",
+        "M185"
+      ],
+      "upstream_commit": "5db69b011f6291dc46eadfcde57a1f7c9041d85a",
+      "source_manifest": [
+        {
+          "url": "https://raw.githubusercontent.com/bashtage/arch/5db69b011f6291dc46eadfcde57a1f7c9041d85a/doc/source/univariate/forecasting.rst",
+          "path": "doc/source/univariate/forecasting.rst",
+          "bytes": 11379,
+          "sha256": "7194d1937301459400ea2443a2598cc8180a928ae06ae22f1d3eb22850b0b444"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/bashtage/arch/5db69b011f6291dc46eadfcde57a1f7c9041d85a/arch/univariate/mean.py",
+          "path": "arch/univariate/mean.py",
+          "bytes": 124912,
+          "sha256": "8262b528a5b9aa658c861cbabb0a4b621cc3d3cab5fdf75ae16f9451bdc1b2cf"
+        }
+      ],
+      "received_scope": "Complete forecasting.rst guide and HARX class docstring only (mean.py lines477-591). Full mean.py bytes hashed but remaining implementation unread; no package installed, imported, fit or forecast run. The requested ReadTheDocs forecasting URL returnedHTTP403; its guide and the HARX docstring were read from official GitHub source normally, not an authentication bypass. The planned HARX HTML request did not run. Source examples/SP500 values were inspected as documentation, not loaded as data or replicated outcomes.",
+      "distinct_received_methods": [
+        {
+          "scope": "HAR/HAR-X conditional mean forecast",
+          "mechanics": "HARX models the conditional mean of supplied y using averaged lags and optional finite exogenous x. If y is daily RV, its conditional mean is the RV prediction; the model residual variance is not the same target. Example lags[1,5,22] are counts of y observations, not hours or an automatically crypto-adjusted week/month. Standard overlapping, rotated non-overlapping and explicit2D lag forms are shown; the doc reports equal fitted R2 examples, not trading equivalence under regularization, restrictions or different samples. hold_back can impose a common estimation sample. No ADF, logarithmic-RV correction or positivity rule is supplied here."
+        },
+        {
+          "scope": "Analytical ARCH/GARCH forecasts",
+          "mechanics": "The guide gives constant-mean GARCH(1,1): r_t=mu+epsilon_t; sigma2_t=omega+alpha*epsilon2_(t-1)+beta*sigma2_(t-1). Multistep recursion uses omega+(alpha+beta)*E_t[sigma2_(t+h-1)]. One-step analytical forecasts are described as available; multistep analytical availability depends on the model, e.g. squared-residual-linear GARCH/HARCH versus EGARCH. This is model conditional variance of returns, not an RV regression output."
+        },
+        {
+          "scope": "Simulation alternative",
+          "mechanics": "Simulate fixed-count future paths with an assumed standardized residual distribution and average horizon-specific variances. First one-step forecast is fixed in the described ARCH setup; nonlinear models may benefit when analytical multistep recursion is unavailable. Paths/count/seed/distribution would need freezing; no source simulation executed."
+        },
+        {
+          "scope": "Residual bootstrap alternative",
+          "mechanics": "Use standardized in-sample residuals with iid replacement instead of parametric shocks. Only data available at the forecast origin may enter the residual pool; the guide notes a minimum in-sample amount. This is a forecast algorithm, not a block-bootstrap significance test and not automatic dependence-robust inference."
+        },
+        {
+          "scope": "Forecast clocks and outputs",
+          "mechanics": "align=origin defaults to indexing by last observed input; target aligns the row to the forecast observation. h.1/h.24 are1/24 observation-ahead point forecasts. h.24 is not automatically integrated next24h variance. A sum-of-step innovation-variance target and variance of a cumulative return are distinct; mean dynamics/cross-step covariance assumptions must be fixed before mapping. variance differs from residual_variance at horizons>1 when the mean has dynamics. For daily RV input, h.1 forecasts next daily RV; align target/origin and strict bar completion must be explicit."
+        },
+        {
+          "scope": "Estimation versus forecast start",
+          "mechanics": "The guide fits with last_obs split then forecasts from start; a forecast start alone does not restrict an earlier full-sample fit. Supplied fit parameters are reused unless explicitly re-estimated. append extends model data without changing existing result objects; fitting again re-estimates. Freeze rolling/expanding/fixed fit windows, refit schedule, common holdback and all training cutoffs. These API semantics were documented, not runtime-tested."
+        }
+      ],
+      "future_study_contract": [
+        "One explicit next24h RV target with return units,24/7 calendar, complete-bar policy and missingness handling",
+        "Map daily-RV HAR conditional mean and hourly-return GARCH horizon aggregation to that same target; define overlapping/rotated lags and refit cutoffs",
+        "Freeze squared-return scaling versus decimal/percent units; source example uses100*pct_change, so variance scales quadratically",
+        "QLIKE formula/domain/positive forecast treatment and zero-RV policy remain choices not supplied/validated by this guide",
+        "Compare trailing-mean/no-change/EWMA controls on identical available targets; all lookbacks/model/transforms/caps count as trials",
+        "Forecast skill is not directional alpha or automatically better sizing: subsequent overlay needs unchanged base strategy, matched gross/risk, full1x/2x/3x costs and fresh paper evidence"
+      ],
+      "reconciliation": "M018 remains PARTIAL (R217 volatility-target overlay NULL, not forecast race); M185 remains UNTESTED. They alias the broad forecast-race axis but exact representation/calendar/refit scopes remain open. Existing wording that M185 improves sizing for every book is an unvalidated aspiration, not evidence; the appended note makes this explicit without erasing provenance. No new method or alias row.",
+      "limits": [
+        "No package/runtime/API compatibility benchmark, market values, QLIKE statistics or forecast race performed.",
+        "Pinning upstream code does not prove current project dependencies are compatible; selected source is not claimed full implementation audit.",
+        "Existing spent samples remain spent. A future finite specification/code must be frozen before outcomes; preserve all nulls and genuine prospective evidence."
+      ],
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [
