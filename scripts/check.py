@@ -39,6 +39,59 @@ def select(tests, mode):
             (test.id().startswith(SIMULATIONS)) == (mode == "simulation")]
 
 
+def _class_fixture_id(test):
+    """Return the class id carried by unittest's setUpClass skip holder."""
+    ident = test.id() if hasattr(test, "id") else ""
+    prefix = "setUpClass ("
+    if ident.startswith(prefix) and ident.endswith(")"):
+        return ident[len(prefix):-1]
+    return None
+
+
+def _test_class_id(test):
+    cls = type(test)
+    return f"{cls.__module__}.{cls.__qualname__}"
+
+
+def summarize_counts(selected, result, suite, collected_count):
+    """Distinguish started methods from methods blocked by a class fixture.
+
+    unittest records a ``setUpClass`` SkipTest as one skip holder, even when
+    several selected methods in that class were never started. Direct method
+    skips are TestCase records and are included in ``result.testsRun``.
+    """
+    direct_skips = []
+    direct_skip_methods = set()
+    class_skips = []
+    selected_by_class = {}
+    for test in selected:
+        if isinstance(test, unittest.case.TestCase):
+            selected_by_class.setdefault(_test_class_id(test), []).append(test)
+
+    for test, reason in result.skipped:
+        if isinstance(test, unittest.case.TestCase):
+            direct_skips.append({"test": test.id(), "reason": reason})
+            direct_skip_methods.add(test.id())
+            continue
+        fixture_class = _class_fixture_id(test)
+        if fixture_class is not None:
+            class_skips.append({
+                "class": fixture_class,
+                "selected_methods": len(selected_by_class.get(fixture_class, ())),
+                "reason": reason,
+            })
+
+    return {
+        "selected": len(selected),
+        "started": result.testsRun,
+        "direct_skipped_methods": len(direct_skip_methods),
+        "direct_skips": direct_skips,
+        "class_fixture_skipped_methods": sum(item["selected_methods"] for item in class_skips),
+        "class_fixture_skips": class_skips,
+        "fast_deferred_methods": collected_count - len(selected) if suite == "fast" else 0,
+    }
+
+
 class Result(unittest.TextTestResult):
     def startTest(self, test):
         self.started = time.perf_counter()
@@ -71,8 +124,15 @@ def main(argv=None):
     print(f"{args.suite}: selected {len(chosen)}/{len(tests)} tests; full suite remains the commit gate", flush=True)
     started = time.perf_counter()
     result = unittest.TextTestRunner(verbosity=1, resultclass=Result).run(unittest.TestSuite(chosen))
+    counts = summarize_counts(chosen, result, args.suite, len(tests))
     report = {"suite": args.suite, "selected": len(chosen), "collected": len(tests),
-              "tests_run": result.testsRun, "wall_seconds": time.perf_counter() - started,
+              "started": counts["started"], "tests_run": result.testsRun,
+              "direct_skipped_methods": counts["direct_skipped_methods"],
+              "direct_skips": counts["direct_skips"],
+              "class_fixture_skipped_methods": counts["class_fixture_skipped_methods"],
+              "class_fixture_skips": counts["class_fixture_skips"],
+              "fast_deferred_methods": counts["fast_deferred_methods"],
+              "wall_seconds": time.perf_counter() - started,
               "successful": result.wasSuccessful(), "skipped": [(t.id(), why) for t, why in result.skipped],
               "failures": [t.id() for t, _ in result.failures], "errors": [t.id() for t, _ in result.errors],
               "timings": sorted(result.timings, key=lambda x: x["seconds"], reverse=True)}
@@ -82,6 +142,15 @@ def main(argv=None):
     if args.report:
         with args.report.open("x") as stream:
             json.dump(report, stream, indent=2)
+    print(f"test accounting: selected {counts['selected']}; started {counts['started']}; "
+          f"direct method skips {counts['direct_skipped_methods']}; "
+          f"class-fixture-skipped methods {counts['class_fixture_skipped_methods']}")
+    for item in counts["class_fixture_skips"]:
+        print(f"  setUpClass skipped {item['selected_methods']} selected method(s) in "
+              f"{item['class']}: {item['reason']}")
+    if args.suite == "fast":
+        print(f"fast profile deferred {counts['fast_deferred_methods']} simulation-profile methods; "
+              "full suite remains the commit gate")
     for item in report["timings"][:5]:
         print(f"{item['seconds']:.3f}s {item['test']}")
     return 0 if result.wasSuccessful() else 1

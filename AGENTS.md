@@ -3,7 +3,7 @@
 Carried over from the owner's rules in the original project (**S**, see `docs/FOUNDATION.md`). They win over convenience.
 
 ## Hard rules
-1. **Register before measuring.** `PREREG.md` is frozen with `lab.prereg.freeze()` before any statistic. Run scripts call `verify()` first.
+1. **Register before measuring.** `PREREG.md` is frozen with `lab.prereg.freeze()` before any statistic. Run scripts call `verify()` first. New qx lanes use `scripts/qx_run_verified.py` and freeze that wrapper, `scripts/qx_run.py`, the locked build script and all engine inputs; historical lanes keep the runner named in their frozen inputs.
 2. **Frozen files are never edited.** A changed idea is a new lane with a new id.
 3. **Journals are append-only**: `registry/rounds.csv`, `ledger.csv`, forward tickets. Use the code that appends; never hand-edit a row.
 4. **One writer per file.** Check the mtime before editing. Never kill a process you did not start.

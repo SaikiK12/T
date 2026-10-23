@@ -22,7 +22,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`features`](features.py): Feature library.
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...
-- [`gate`](gate.py): The go-real gate: the only door from paper to a small real stake.
+- [`gate`](gate.py): The go-real screen: one input to the owner's decision, never an order.
 - [`ict`](ict.py): ICT / smart-money concepts as mechanical, causal detectors on [T, S] bar arrays (one timeframe at a time).
 - [`inference`](inference.py): Honest statistics for a program that tries thousands of strategies.
 - [`levcarry`](levcarry.py): Leverage and liquidation on cross-venue carry books (method M265): R275's rule, run with lab.xfund, where each leg sits on its venue at leverage L and can be liquidated by an intraday move.
@@ -32,6 +32,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`markets`](markets.py): Daily bars for markets beyond crypto perps (indices, index futures, forex, commodities, rates, volatility), from Yahoo Finance's public chart endpoint, cached under data/markets/yahoo/. Small: one ...
 - [`merge`](merge.py): Merge lab: combine many signals into one forecast per (hour, symbol), re-learned walk-forward, and trade it only where the forecast clears the cost of trading.
 - [`mexc`](mexc.py): Public MEXC USDT-M futures data (no keys, no orders): contract metadata, hourly klines, funding settlements, and the map from Binance USD-M symbols to MEXC crypto contracts.
+- [`mexc_depth`](mexc_depth.py): Strict decoding of MEXC Futures depth level rows.
 - [`mexc_margin`](mexc_margin.py): Pure MEXC USDT-M margin arithmetic for explicit, caller-supplied risk tiers.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.

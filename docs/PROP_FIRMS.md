@@ -102,15 +102,19 @@ not a trial and has no registry row.
 Breakout Pro and CFT have no captured fee, so only their break-even fee is in the CSV: at Sharpe 0 it is about USD 1,100
 (Breakout) and 2,500 (CFT); at Sharpe 1 it is 4,400 and 8,500.
 
-The Topstep rows use the 50K XFA Standard payout rules read on 2026-10-20 (help.topstep.com payout policy, loss-limit
-article and the instant-payouts FAQ):
+The table is the historical 2026-10-20 synthetic map. Its Topstep rows use a fixed 14-day approximation of the 50K XFA
+Standard payout condition, so they are **not** results from the event-based preset added below. The source policy was
+rechecked on 2026-10-23 against Topstep's [payout policy](https://help.topstep.com/en/articles/8284233-topstep-payout-policy)
+and [maximum-loss-limit rule](https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit):
 - Each request is at most 50% of the balance and USD 2,000, applied before the 90% split. The minimum gross request is
   USD 125.
 - After the first payout, a request needs new profit since the last successful payout. The loss limit moves to the
   starting balance.
-- The payout condition, 5 winning days of USD 150+ restarting after each request, is approximated by a 14-day cycle.
+- The policy requires 5 winning days of USD 150+ before each request; the table approximates this as a 14-day cycle.
 - The eligibility rules (new profit since the last payout, the USD 125 minimum) came from Codex's review (PR #24). The
   map was rerun with them.
+
+On 2026-10-23, `lab/propfirm.py` added a separate `topstep_50k_xfa_standard` funded-stage preset with an event-based five-winning-day eligibility check and a $150 minimum qualifying day. Synthetic unit tests cover nonconsecutive days, request-day exclusion, the post-payout floor, and the payout minimum. This improves rule mechanics; **M211's edge map has not been rerun**, the historical values above remain untouched, and no new prop-firm simulation result is claimed. The preset models the baseline no-DLL $2,000 cap and default 90/10 split; it does not model Combine evaluation, scaling-plan contract limits, DLL-at-checkout, or the legacy dashboard cohort's first-lifetime-payout exception.
 
 What the rules do to the map:
 - **The eligibility rules cut Topstep's EV by 8-56%.**
@@ -168,8 +172,9 @@ What the rules do to the map:
 - a per-side cost plus daily swap (in since 2026-10-21: `Rules.cost_side` and `swap_day`, charged by `evaluate()`
   when it is given the book's turnover or exposure, so r is gross);
 - hourly paths, so intraday breaches show;
-- Topstep's intraday enforcement of the end-of-day trailing floor (its reset after payout, the 50% share and the
-  per-request cap are in since 2026-10-20; the 5-winning-day payout condition is approximated by a 14-day cycle);
+- Topstep's intraday enforcement of the end-of-day trailing floor (its post-payout reset, 50% share, per-request cap,
+  and event-based five-winning-day XFA payout rule are implemented and unit tested; the historical M211 map above has
+  not been rerun under the newer event-based rule);
 - FTMO 1-Step's delaying consistency rule;
 - a funded-stage consistency rule;
 - 30-day inactivity expiry;

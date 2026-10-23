@@ -102,16 +102,20 @@ class ParseTest(unittest.TestCase):
                           "bids": [[82670.3, 22522, 7], [82669.9, 185, 1]]}}
         (ev,) = tape.mexc(depth, sizes)
         self.assertEqual(ev[:4], ("book", "BTC", T0, 82670.3))
-        self.assertAlmostEqual(ev[4], 2.2522)
+        self.assertAlmostEqual(ev[4], 2.2522)                     # index 1 is volume in contracts
         self.assertAlmostEqual(ev[6], 1.2557)
-        self.assertAlmostEqual(ev[7], (22522 + 185) * 0.0001)
+        self.assertAlmostEqual(ev[7], (22522 + 185) * 0.0001)     # top-five coin quantity
         self.assertAlmostEqual(ev[8], (12557 + 4872) * 0.0001)
+        malformed = {"channel": "push.depth.full", "symbol": "BTC_USDT", "ts": T0,
+                     "data": {"asks": [[82670.4, 12557, 1.5]], "bids": [[82670.3, 22522, 7]]}}
+        self.assertEqual(tape.mexc(malformed, sizes), [])
         deal = {"channel": "push.deal", "symbol": "BTC_USDT", "ts": T0,
                 "data": [{"p": 82692.9, "v": 5, "T": 2, "t": T0 + 1}, {"p": 82693.0, "v": 10, "T": 1, "t": T0 + 2}]}
         evs = tape.mexc(deal, sizes)
         self.assertEqual([e[5] for e in evs], [-1, 1])
         self.assertAlmostEqual(evs[1][4], 0.001)
         self.assertEqual(tape.mexc(dict(deal, symbol="ETH_USDT"), sizes), [])
+
 
     def test_lighter(self):
         names = {1: "BTC"}

@@ -16,6 +16,8 @@ import math
 
 import pandas as pd
 
+from lab.mexc_depth import parse_depth_levels
+
 SETTLE_MS = 2_000
 BOOK = ("s", "sym", "bid", "bid_sz", "ask", "ask_sz", "bid_sz5", "ask_sz5", "ofi", "n", "lag_ms")
 TRADES = ("s", "sym", "buy_qty", "sell_qty", "buy_n", "sell_n", "notional", "px_first", "px_last", "px_min", "px_max")
@@ -146,11 +148,16 @@ def mexc(msg, sizes):
     sym = symbol[:-5]
     d = msg.get("data")
     if ch == "push.depth.full":
-        bids, asks = d.get("bids") or [], d.get("asks") or []
-        if not bids or not asks:
+        try:
+            bids = parse_depth_levels(d.get("bids") or [])
+            asks = parse_depth_levels(d.get("asks") or [])
+            return [("book", sym, msg.get("ts", d.get("cts")), bids[0].price,
+                     bids[0].base_quantity(cs), asks[0].price, asks[0].base_quantity(cs),
+                     sum(level.base_quantity(cs) for level in bids[:5]),
+                     sum(level.base_quantity(cs) for level in asks[:5]))]
+        except (AttributeError, TypeError, ValueError):
+            # Bad or incomplete snapshots must not become plausible zero-depth observations.
             return []
-        return [("book", sym, msg.get("ts", d.get("cts")), float(bids[0][0]), bids[0][1] * cs, float(asks[0][0]),
-                 asks[0][1] * cs, sum(x[1] for x in bids[:5]) * cs, sum(x[1] for x in asks[:5]) * cs)]
     deals = d if isinstance(d, list) else [d]
     return [("trade", sym, x["t"], float(x["p"]), x["v"] * cs, 1 if x["T"] == 1 else -1) for x in deals]
 

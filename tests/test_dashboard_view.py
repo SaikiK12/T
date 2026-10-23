@@ -16,6 +16,7 @@ class DashboardView(unittest.TestCase):
     def test_filters_stable_ids_and_missing_cumulative_returns(self):
         html = (Path(__file__).resolve().parents[1] / "dashboard/index.html").read_text()
         data = {
+            "program": [dict(strict_ontime_days=3)],
             "jobs": [dict(key="R215", task_id="R215", display_name="MEXC positioning books",
                           category="Prospective paper", state="UNKNOWN", ok=None, stale=False,
                           status_source="legacy_log", log_path="experiments/mexc_fwd/tick.log"),
@@ -53,7 +54,12 @@ class DashboardView(unittest.TestCase):
             errors = []
             page.on("pageerror", lambda error: errors.append(str(error)))
             page.set_content(harness + html)
+            self.assertEqual(page.locator("#kpi-ontime .val").inner_text(), "—")
             page.get_by_role("tab", name="Data and loop").click()
+            self.assertEqual(page.locator("#kpi-ontime .val").inner_text(), "3")
+            ontime_note = page.locator("#kpi-ontime .sub").inner_text()
+            self.assertEqual(ontime_note, "R200 feed days used by R215 paper: all 24 hourly bars computed within 60 minutes of close; live trades and fills are not measured.")
+            self.assertNotIn("days traded live", ontime_note.lower())
             self.assertEqual(page.locator("#tbl-jobs tbody tr").count(), 2)
             page.get_by_label("Operation category").select_option("Prospective paper")
             self.assertEqual(page.locator("#tbl-jobs tbody tr").count(), 1)
