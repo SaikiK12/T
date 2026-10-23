@@ -100,11 +100,15 @@ paper projections to the orchestrator, panel and dashboard. Methods remain in th
 are not another research queue. Per-run receipts live outside the checkout. A successful process, complete declared
 checks and admission through the research gates are separate states.
 
+`lab status` reads the same receipt adapter as the Control Room. Pass the existing external run directory; it lists process state, declared data checks, stale receipts and required/optional task dependencies (`--json`). `--strict` exits nonzero for missing, failed, stale or unverified observations; it never authorizes trading or starts a collector. It also shows the canonical queue counts and engine build binding.
+
 ```sh
 python -m pip install uv==0.12.23
 uv venv --python 3.12.14 .venv
 uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab                               # commands; does not start work
+.venv/bin/python -m lab status                        # read-only; missing receipts stay unknown
+.venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --json
 .venv/bin/python -m lab find funding                  # existing metadata index
 .venv/bin/python -m lab integrity                     # register/spec + canonical intake
 .venv/bin/python -m lab check --suite fast            # feedback; explicit simulations deferred

@@ -5,7 +5,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-TOOLS = {"check": "check.py", "find": "repository_index.py", "forward": "orchestrate_forward.py",
+TOOLS = {"status": "project_status.py", "check": "check.py", "find": "repository_index.py", "forward": "orchestrate_forward.py",
          "export": "dashboard_data.py", "panel": "panel.py", "engine": "build_engine.py",
          "benchmark": "benchmark_evaluation.py"}
 

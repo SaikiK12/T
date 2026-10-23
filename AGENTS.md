@@ -13,6 +13,7 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 8. **A null is a result.** Record it with the same care as a hit.
 
 ## Working rules
+- **Owner working mode (2026-10-23):** continue implementation and unfinished lab work autonomously while Claude is absent; respect any fresh writer claim. Group related source intake and engineering in the ongoing consolidation review instead of opening one PR per small pass. The owner stopped the recurring ChatGPT research automation; do not recreate it without a new request. Source notes support integrated, validated project work rather than replacing it.
 - **Read by task, not by corpus.** Start with fresh writer claims in issue #7, open PRs, and the timestamp on
   `docs/PANEL.md`. Then read only the relevant method rows and linked lane evidence. Do not reread every research
   note or start a new search just because a dated memo calls an idea open.
