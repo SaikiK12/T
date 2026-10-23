@@ -1,0 +1,100 @@
+{
+  "record_kind": "historical_source_id_collision_not_a_methods_queue",
+  "source_commit": "a6763f5946a3674d63a8fd527e8411740fb12fbf",
+  "preserved_from_commit": "11152c9435c3ad71e037cdf9b55e8f9bcb0e4f87",
+  "declared_id": "M281",
+  "canonical_id": "M401",
+  "round": "UNREGISTERED_SOURCE_TICK",
+  "original_header": [
+    "id",
+    "method",
+    "data_held",
+    "status",
+    "cheap",
+    "note",
+    "source",
+    "rid"
+  ],
+  "original_row": [
+    "M281",
+    "MEXC tick-size reduction: effect on a fixed existing reversal signal execution over next 24 h",
+    "N historical grid vintages and synchronized order books/trades",
+    "BLOCKED",
+    "3",
+    "Execution treatment, not a new direction search. Freeze one signal and compare unchanged-size passive/taker controls and matched non-event hours; old-grid orders may persist. OHLC touches do not prove fills.",
+    "XM26-TICK-CHANGE; MEXC tick-size notice",
+    "-"
+  ],
+  "original_alias_header": [
+    "rec_id",
+    "title",
+    "intake_status",
+    "queue_id",
+    "also",
+    "confidence",
+    "why",
+    "source"
+  ],
+  "original_alias_rows": [
+    [
+      "XM26-TICK-CHANGE",
+      "Tick-size change as a treatment on fixed reversal execution",
+      "blocked",
+      "M281",
+      "M058;M232;M240",
+      "high",
+      "Distinct proposed scope retained in canonical queue; related parents are not exact tests. No registered outcome.",
+      "MEXC mechanics discovery 2026-10-20; https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119"
+    ]
+  ],
+  "original_source_record": {
+    "id": "XM26-TICK-CHANGE",
+    "parent_claim_id": "XM26-MEXC-MECHANICS",
+    "title": "Tick-size change as a treatment on fixed reversal execution",
+    "method_type": "execution_proposal",
+    "hypothesis": "Exchange-specific mechanics may change net strategy behavior; no profitable effect has been measured.",
+    "testable_rule": "Around announced tick-size reductions, hold one already chosen reversal signal fixed and compare its next-24-hour executable net with matched non-event hours; compare passive and taker execution at identical size and 1x/2x/3x costs.",
+    "proposed_rule": "Around announced tick-size reductions, hold one already chosen reversal signal fixed and compare its next-24-hour executable net with matched non-event hours; compare passive and taker execution at identical size and 1x/2x/3x costs.",
+    "rule_origin": "Codex proposal grounded in primary exchange documentation; not an exchange recommendation or frozen specification.",
+    "received_scope": "The reviewed notice preserves old orders on their original tick grid. Spread/depth and adverse-selection effects are unknown; an OHLC touch is not evidence of a maker fill.",
+    "exact_tested_scope": "Primary pages read only; no market dataset, statistic, outcome, backtest or live order was computed or submitted.",
+    "unrun_scope": "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+    "status": "blocked",
+    "required_inputs": [
+      "Before/after tick metadata and effective times",
+      "Timestamped depth, trades, order grid and queue/fill assumptions"
+    ],
+    "blockers": [
+      "Canonical M281 is BLOCKED: point-in-time inputs and a finite registered specification remain missing. Related parents do not test this exact scope.",
+      "Finite registration, costs, controls and data eligibility must be frozen before any strategy outcome."
+    ],
+    "next_action": "Retained in canonical M281: obtain point-in-time inputs and freeze a finite study before outcomes.",
+    "alias_kind": "distinct_unregistered_scope",
+    "source_refs": [
+      {
+        "path": "https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119",
+        "label": "MEXC official page; reviewed 2026-10-20; actual received scope retained in this record"
+      }
+    ],
+    "evidence_refs": [
+      {
+        "path": "https://www.mexc.com/announcements/article/tick-size-adjustment-for-gold-xaut-usdt-ctusdt-and-ckbusdt-futures-pairs-17827791539119",
+        "label": "Exchange mechanics only; no strategy performance evidence"
+      }
+    ],
+    "queue_allocation": "M281"
+  },
+  "target_reassignments": [
+    {
+      "path": "registry/methods_aliases.csv",
+      "id_field": "rec_id",
+      "record_id": "XM26-TICK-CHANGE",
+      "field": "queue_id",
+      "original_value": "M281",
+      "canonical_value": "M401"
+    }
+  ],
+  "reason": "Integration collision with the now-authoritative live queue at a2478ff; only this unregistered pending source allocation moves. Original source allocation predates the new live row; this is not an earlier-claim precedence assertion. Rule and BLOCKED status remain unchanged.",
+  "authoritative_main_commit": "a2478ff",
+  "coordination": "https://github.com/SaikiK12/T/issues/7#issuecomment-6313993538"
+}

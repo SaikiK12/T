@@ -16,32 +16,12 @@ from lab import registry  # noqa: E402
 
 OUT = ROOT / "docs" / "PANEL.md"
 EXP = ROOT / "experiments"
-OBJECTIVE = ("The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, "
-             "prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is "
-             "evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only "
-             "through the four gates in `docs/GATES.md`, at stakes the owner sets.")
+from lab.operations import OBJECTIVE
 # forward lanes: (registry id, lane, status file, {book key: label}, what decides it)
-FORWARD = [
-    ("R215", "mexc_fwd", "journal/status.json", {"A": "flow book A on MEXC", "B": "top-vs-crowd on MEXC"},
-     "R221 looks at 90 / 182 / 365 on-time days"),
-    ("R218", "mexc_fwd_sq", "journal/status.json", {"X2": "flow book X2 (k squared) on MEXC"},
-     "R221 looks at 90 / 182 / 365 on-time days"),
-    ("R220", "carry_fwd", "journal/status.json", {"MEXC": "funding carry, MEXC", "BIN": "funding carry, Binance"},
-     "90 on-time days through go_real"),
-    ("R200", "flow72_fwd2", "journal/status.json", {"A": "flow book A, Binance", "B": "top-vs-crowd, Binance"},
-     "90 scored days through go_real plus NW t >= 2"),
-    ("R214", "flow72_fwd3", "journal/status.json", {"A": "A one bar late", "B": "B one bar late"},
-     "same days as R200, a delay check"),
-    ("R278", "xfund_fwd", "journal/status.json", {"A": "cross-venue carry, Gate + Hyperliquid",
-                                                  "B": "cross-venue carry, Binance + MEXC",
-                                                  "C": "cross-venue carry, Gate + MEXC (post hoc)"},
-     "NW t >= 2.5 at 90 / 180 scored days"),
-    ("R279", "xfund_kc_fwd", "journal/status.json", {"A": "cross-venue carry, Gate + KuCoin",
-                                                     "B": "cross-venue carry, Binance + KuCoin"},
-     "NW t >= 2.5 at 90 / 180 scored days"),
-    ("R294", "xfund_lt_fwd", "journal/status.json", {"A": "cross-venue carry, MEXC + Lighter"},
-     "NW t >= 2.5 at 90 / 180 scored days"),
-]
+from lab.operations import LANES
+
+FORWARD = [(l.rid, l.path, "journal/status.json", dict(l.books) or {"summary": l.what}, l.rule)
+           for l in LANES]
 WAITING = [
     "Answered 2026-10-20: every public download approved (\"we need all data possible\"); execution mode both"
     " (manual-web and API, labelled per lane); tiny live calibration orders: not yet; R263 runs once offline.",
@@ -49,7 +29,7 @@ WAITING = [
     "Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).",
     "Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a"
     " stop at 25% of the stake).",
-    "Merges: Codex's draft PRs #26/#27 (R257) and the second Claude session's PR #25 (retarget to `claude/yo-9a1k5w`).",
+    "Review and integration: [current open PRs](https://github.com/SaikiK12/T/pulls); check each dependency and blocker.",
 ]
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
@@ -65,37 +45,15 @@ def pct(x):
     return "-" if x is None else f"{x * 100:+.1f}%"
 
 
-def r200_split(book):
-    """R200's tickets for one book, split by its `late` flag (days before its freeze) into replay and on-time."""
-    p = EXP / "flow72_fwd2" / "journal" / "tickets.csv"
-    if not p.exists():
-        return {}, {}
-    tk = pd.read_csv(p)
-    tk = tk[tk.book == book]
-    part = lambda x: {"days": len(x), "total": float(x.net.sum()), "total_2x": float(x.net_2x.sum()),
-                      "total_3x": float(x.net_3x.sum())} if len(x) else {}
-    return part(tk[tk.late == 1]), part(tk[tk.late == 0])
-
-
 def forward_rows():
-    rows = []
-    for rid, lane, f, books, decides in FORWARD:
-        s = read_json(EXP / lane / f)
-        for key, label in books.items():
-            rep = s.get(f"{key}_replay") or (s.get(key) or {}).get("replay") or {}
-            on = s.get(f"{key}_ontime") or (s.get(key) or {}).get("ontime") or {}
-            if lane == "flow72_fwd2":                   # R200 keeps one series per book; its `late` flag splits it
-                rep, on = r200_split(key)
-            if lane in ("xfund_fwd", "xfund_kc_fwd", "xfund_lt_fwd"):   # carry lanes keep flat totals per book; live = on-time + late
-                b = s.get(key) or {}
-                rep = {"days": b.get("replay_days", 0), "total": b.get("replay_total")}
-                on = {"days": b.get("scored_days", 0), "total": b.get("total"), "total_2x": b.get("total_2x"),
-                      "total_3x": b.get("total_3x")} if b.get("scored_days") else {}
-            rows.append({"lane": f"{rid} {lane}", "book": label, "replay": f"{rep.get('days', 0)} d {pct(rep.get('total'))}",
-                         "on_time": f"{on.get('days', 0)} d {pct(on.get('total'))}" if on else "0 d",
-                         "2x / 3x": f"{pct(on.get('total_2x'))} / {pct(on.get('total_3x'))}" if on else "-",
-                         "decided by": decides})
-    return pd.DataFrame(rows)
+    from lab.operations import forward_days, forward_lanes
+    rows = forward_lanes(ROOT, forward_days(ROOT), time.time())
+    return pd.DataFrame([{"lane": f"{r['round']} {r['lane']}", "scope": r["what"],
+                          "observations": f"{r['scored'] if r['scored'] is not None else 'unknown'} / {r['needed']} {r['unit']}",
+                          "on-time 1x": pct(None if r["net_pct"] is None else r["net_pct"] / 100),
+                          "2x / 3x": f"{pct(None if r['net_2x_pct'] is None else r['net_2x_pct']/100)} / "
+                                     f"{pct(None if r['net_3x_pct'] is None else r['net_3x_pct']/100)}",
+                          "decided by": r["decision"], "gate": r["gate_eligibility"]} for r in rows])
 
 
 def methods():
@@ -112,7 +70,11 @@ def table(df):
     return "\n".join(out)
 
 
-def main():
+def main(argv=None):
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--jobs-state-dir", type=Path)
+    args = parser.parse_args(argv)
     reg = pd.read_csv(ROOT / "registry" / "rounds.csv", keep_default_na=False)
     trials = registry.program_trials(ROOT / "registry" / "rounds.csv")
     verdicts = reg.verdict.value_counts().to_dict()
@@ -121,8 +83,9 @@ def main():
     L = [f"# Panel", "", f"Rebuilt {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())} by `scripts/panel.py` at the end "
          "of each tick. Do not edit by hand.", "", f"**Objective.** {OBJECTIVE}", "",
          "## How we proceed (owner-approved direction, 2026-10-20: [DIRECTION](DIRECTION.md))", "",
-         "Every tick:",
-         "1. `scripts/forward_all.sh` runs the point-in-time recorders (MEXC funding and ticker, notices, unlock"
+         "Configured workflow (actual completion is reported separately):",
+         "1. `scripts/forward_all.sh` delegates to `scripts/orchestrate_forward.py` with the shared catalog in "
+         "`lab/operations.py`: point-in-time recorders (MEXC funding and ticker, notices, unlock"
          " calendar), every forward paper lane, the lag report, this panel and the recorder digests.",
          "2. Background jobs (family runs, downloads) are checked; a finished one gets FINDINGS at 1x/2x/3x of its"
          " execution mode's cost and a registry row with its full trial count.",
@@ -132,7 +95,8 @@ def main():
          " \"Reserved samples\"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API."
          " Real money only after gates 1-3, placed by the owner (gate 4).",
          "5. Read the room (issue #7), commit and push.", "",
-         "Roles: Claude does all of it, with no subagents and no Workflows (owner, 2026-10-20). Codex has stopped.", "",
+         "Writers: fresh claims in [room #7](https://github.com/SaikiK12/T/issues/7) determine ownership. "
+         "A registry status or running process does not establish complete prospective evidence.", "",
          "## 1. The funnel", "",
          "Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution on MEXC (gate 2, `go_real` here) →"
          " account risk (gate 3) → the owner (gate 4). Rules and dates: [GATES](GATES.md); what the critics found:"
@@ -142,24 +106,30 @@ def main():
               ("Ideas blocked (data, download, compute)", "-" if m is None else str((m.status == "BLOCKED").sum())),
               ("Rounds in the registry", f"{len(reg)} ({', '.join(f'{k} {v}' for k, v in verdicts.items())})"),
               ("Program trials", f"{trials:,}"),
-              ("Forward paper lanes running", str((reg.status == "RUNNING").sum() + 1)),
-              ("Strict on-time paper days so far", str(lag.get("strict_ontime_days", 0))),
-              ("Passed gate 1 (unseen days)", "none yet"),
-              ("Next decision date", "2027-01-18: first 90-on-time-day looks (R215, R218, R220, R221 futility)")]
+              ("Paper lanes registered RUNNING/ARMED (process activity unverified)",
+               str(reg[reg.id.isin([l.rid for l in LANES])].status.isin(["RUNNING", "ARMED"]).sum())),
+              ("Strict on-time paper days so far", str(lag.get("strict_ontime_days", "unknown"))),
+              ("Gate eligibility", "not assessed by this panel; see frozen lane evidence and GATES"),
+              ("Next decision", "observation-count dependent; each frozen lane specifies its looks")]
     L += [table(pd.DataFrame(funnel, columns=["stage", "now"])), ""]
     L += ["## 2. Forward paper lanes (the only road to money)", "",
-          "Replay days were scored after the freeze on days the archive did not hold; on-time days are the evidence.", "",
+          "Replay, late and on-time observations remain distinct. Lane-native decisions do not establish current gate eligibility.", "",
           table(forward_rows()), ""]
     if lag:
         h = lag.get("ontime_hour_lag_min", {})
         L += [f"Processing lag of on-time hours: {h.get('n', 0)} hours, median {h.get('median', '-')} min, max "
               f"{h.get('max', '-')} min; days with late hours: {', '.join(lag.get('ontime_days_with_late_hours', [])) or 'none'}.",
               ""]
+    from scripts.dashboard_jobs import build_jobs
+    jobs = build_jobs(ROOT, state_dir=args.jobs_state_dir)
+    L += ["### Execution receipts", "", "Process state, declared data checks and statistical eligibility are separate.", "",
+          table(pd.DataFrame([{k: r.get(k) for k in ("task_id", "category", "state", "data_state", "run_id")}
+                              for r in jobs])), ""]
     L += ["## 3. Next in the queue", ""]
     if m is None:
         L += ["`registry/methods.csv` is not built yet.", ""]
     else:
-        todo = m[m.status.isin(["UNTESTED", "PARTIAL"])].head(12)
+        todo = m[m.status.isin(["UNTESTED", "PARTIAL", "QUEUED"])].head(12)
         L += [table(todo[[c for c in ("id", "method", "data_held", "status", "cheap", "note") if c in todo.columns]]), ""]
     L += ["## 4. Waiting on the owner", ""] + [f"- {w}" for w in WAITING] + [""]
     last = reg.tail(8)[["id", "lane", "status", "verdict", "trials"]]

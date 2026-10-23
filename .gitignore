@@ -29,3 +29,6 @@ experiments/auction_v1/results/trades.csv.gz
 experiments/vpin_v1/results/hourly.csv.gz
 # R306's trade list (12 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
 experiments/msnr_v1/results/trades.csv.gz
+
+# Reproducible test dependency lock is source, unlike runtime lock files.
+!requirements-test.lock

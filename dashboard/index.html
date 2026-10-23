@@ -104,7 +104,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
       </div>
       <div class="qx-card" id="card-verdicts-mini">
         <h2>Paper net to date, by lane</h2>
-        <p class="qx-note">Daily books: summed daily net, mean of the lane's books (replay and on-time). Event lanes: mean per scored ticket.</p>
+        <p class="qx-note">Daily books: summed native on-time net on dates present for every listed book, averaged across books. Replay and late rows remain separate. Event lanes: mean per scored ticket.</p>
         <div class="qx-chart short" id="chart-lanes" data-source="forward_lanes"></div>
       </div>
       <div class="qx-card wide" id="card-watchlist">
@@ -324,7 +324,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
     <div class="qx-grid">
       <div class="qx-card wide" id="card-fund">
         <h2>Widest cross-venue funding spreads</h2>
-        <p class="qx-note">Latest hourly snapshot of seven venues (MEXC, Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX), each rate scaled to 8 hours; spread = highest minus lowest venue, annualized at 3 settlements a day. Descriptive only: the same ticker on two venues is not proven to be the same coin, and a spread pays only if it persists after price moves and costs, which a frozen lane must test. Snapshot <span data-source="funding_board" data-field="snapshot_at" data-row="0" data-fmt="text">—</span> UTC.</p>
+        <p class="qx-note">Latest hourly snapshot of seven venues (MEXC, Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX), each rate scaled to 8 hours; spread = highest minus lowest venue, annualized at 3 settlements a day. Descriptive only: the same ticker on two venues is not proven to be the same coin, and a spread pays only if it persists after price moves and costs, which a frozen lane must test. Funding clock <span data-source="funding_board" data-field="snapshot_at" data-row="0" data-fmt="text">—</span> UTC.</p>
         <div class="qx-chart" id="chart-fund" data-source="funding_board"></div>
       </div>
       <div class="qx-card wide" id="card-fundtbl">
@@ -426,6 +426,8 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
               <th data-field="category"><button>Category</button></th>
               <th data-field="state"><button>State</button></th>
               <th data-field="age_h" class="n"><button>Age</button></th>
+              <th data-field="data_state"><button>Declared data checks</button></th>
+              <th data-field="run_id" class="opt"><button>Run</button></th>
               <th data-field="status_source" class="opt"><button>Evidence source</button></th>
               <th data-field="returncode" class="n opt"><button>Exit code</button></th>
               <th data-field="log_path" class="w opt"><button>Log reference</button></th>
@@ -717,7 +719,7 @@ table('tbl-methods', 'methods', 'id', [{ f: 'id' }, { f: 'method' }, { f: 'statu
 table('tbl-jobs', 'jobs', 'key', [
   { f: 'display_name', secondary: 'task_id' }, { f: 'category' },
   { f: 'state', dot: (v, r) => (r.stale || r.ok == null ? 'warn' : r.ok === true ? 'ok' : 'bad') },
-  { f: 'age_h', fmt: F.hours, num: true }, { f: 'status_source' }, { f: 'returncode', fmt: F.int, num: true },
+  { f: 'age_h', fmt: F.hours, num: true }, { f: 'data_state', fmt: (v) => v || 'UNVERIFIED' }, { f: 'run_id' }, { f: 'status_source' }, { f: 'returncode', fmt: F.int, num: true },
   { f: 'log_path' }, { f: 'note' }]);
 table('tbl-data', 'data_sources', 'source', [
   { f: 'display_name', secondary: 'source' }, { f: 'category' }, { f: 'files', fmt: F.int, num: true },

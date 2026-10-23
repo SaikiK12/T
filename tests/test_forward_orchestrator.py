@@ -74,6 +74,58 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual(n["BOOK"]["optional_unavailable"], ["REF"])
         self.assertEqual(report["status"], "FAILED")
 
+    def test_incomplete_hour_blocks_retry_before_writer_and_preserves_journal(self):
+        journal = self.root / "experiments/flow72_fwd2/journal"
+        journal.mkdir(parents=True)
+        (journal / "signals.csv").write_text("t,symbol\n0,TOY\n")
+        before = (journal / "signals.csv").read_bytes()
+        guarded = replace(self.task("R200"), checks=("flow_signals",))
+        nodes = self.nodes(self.run_tasks((guarded, self.task("DOWNSTREAM", needs=("R200",)), self.task("OTHER"))))
+        self.assertEqual(nodes["R200"]["status"], "BLOCKED")
+        self.assertFalse((self.root / "R200.ran").exists())
+        self.assertEqual(nodes["DOWNSTREAM"]["status"], "BLOCKED")
+        self.assertEqual(nodes["OTHER"]["status"], "SUCCESS")
+        self.assertEqual((journal / "signals.csv").read_bytes(), before)
+
+    def test_zero_exit_with_partial_batch_is_failed_and_visible_in_shared_views(self):
+        from scripts.dashboard_jobs import build_jobs
+        writer = "\n".join(("from pathlib import Path", "p=Path('experiments/flow72_fwd2/journal')",
+                             "p.mkdir(parents=True)", "(p/'signals.csv').write_text('t,symbol\\n0,TOY\\n')",
+                             "(p/'ticks.csv').write_text('t,n_elig\\n0,2\\n')"))
+        guarded = replace(self.task("R200", writer), checks=("flow_signals",))
+        nodes = self.nodes(self.run_tasks((guarded, self.task("R215", needs=("R200",)))))
+        self.assertEqual((nodes["R200"]["status"], nodes["R200"]["returncode"]), ("FAILED", 0))
+        self.assertEqual(nodes["R215"]["status"], "BLOCKED")
+        row = next(r for r in build_jobs(self.root, state_dir=self.state) if r["task_id"] == "R200")
+        self.assertEqual((row["state"], row["data_state"], row["run_id"]), ("FAILED", "INCOMPLETE", "tick_1"))
+
+    def test_synthetic_chain_binds_signal_checks_paper_projection_run_and_export(self):
+        from lab import operations
+        from scripts import dashboard_data, dashboard_jobs
+        writer = "\n".join(("from pathlib import Path", "p=Path('experiments/flow72_fwd2/journal')",
+                             "p.mkdir(parents=True)", "(p/'signals.csv').write_text('t,symbol\\n0,TOY\\n')",
+                             "(p/'ticks.csv').write_text('t,n_elig\\n0,1\\n')"))
+        paper = "\n".join(("from pathlib import Path", "p=Path('experiments/mexc_fwd/journal')",
+                            "p.mkdir(parents=True)", "(p/'tickets.csv').write_text("
+                            "'day,book,kind,net,net_2x,net_3x\\n2026-10-23,A,ontime,0,0,0\\n2026-10-23,B,ontime,0,0,0\\n')"))
+        guarded = replace(self.task("R200", writer), checks=("flow_signals",))
+        report = self.run_tasks((guarded, self.task("R215", paper, needs=("R200",))))
+        self.assertEqual(report["status"], "SUCCESS")
+        days = operations.forward_days(self.root)
+        rows = operations.forward_lanes(self.root, days, 0)
+        mexc = next(r for r in rows if r["round"] == "R215")
+        self.assertEqual((mexc["scored"], mexc["net_pct"], mexc["gate_eligibility"]), (1, 0., "UNASSESSED"))
+        out = self.root / "dashboard/data"
+        out.mkdir(parents=True)
+        jobs = dashboard_jobs.build_jobs(self.root, state_dir=self.state)
+        with patch.object(dashboard_data, "ROOT", self.root), patch.object(dashboard_data, "OUT", out):
+            manifest = dashboard_data.publish_sets({"forward_lanes": rows, "jobs": jobs}, "2026-10-23T00:00:00Z")
+            with redirect_stdout(io.StringIO()):
+                dashboard_data.record(["jobs=/_blob/invented"], manifest["generation"])
+        receipt = json.loads((out / "uploads.json").read_text())["jobs"]
+        self.assertEqual(receipt["sha256"], manifest["sets"]["jobs"]["sha256"])
+        self.assertTrue(all(r["run_id"] == "tick_1" for r in jobs if r["task_id"] in {"R200", "R215"}))
+
     def test_selection_includes_mandatory_ancestors_without_optional_ones(self):
         tasks = (self.task("A"), self.task("REF", needs=("A",)),
                  self.task("BOOK", needs=("A",), optional=("REF",)))
@@ -418,7 +470,8 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual(tasks["R225"].needs, ("R215", "R218"))
         self.assertEqual(tasks["R225"].files[0].sha256, orchestration.SEED_SHA256)
         self.assertEqual(tasks["LAG"].needs, ("R200", "R214", "R215", "R218", "R220", "R225"))
-        self.assertEqual(tasks["PANEL"].needs, ("LAG",))
+        self.assertEqual(tasks["PANEL"].needs, ())
+        self.assertEqual(tasks["PANEL"].optional, ("LAG",))
         static = "experiments/venue_gap_v1/results/tradfi_symbols.json"
         self.assertEqual(tasks["R215"].files[0].path, static)
         self.assertEqual(tasks["R224"].files[0].path, static)
@@ -434,32 +487,19 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertTrue(all(order.index(name) < order.index("R285") for name in carry_names))
         self.assertNotIn("R294", tasks["R285"].needs + tasks["R285"].optional)
 
-    def test_graph_commands_order_and_timeouts_match_the_actual_shell_wrapper(self):
-        shell = orchestration.ROOT / "scripts/forward_all.sh"
-        actual = []
-        locks = {}
-        for line in shell.read_text().splitlines():
-            words = shlex.split(line, comments=True)
-            lock = None
-            if words[:2] == ["flock", "-w"]:                  # lanes that read the notice catalogs hold its lock
-                lock = {"path": words[3], "wait_seconds": float(words[2])}
-                words = words[4:]
-            elif words[:2] == ["flock", "-n"]:                # independent carry lanes use nonblocking locks
-                lock = {"path": words[2], "wait_seconds": 0}
-                words = words[3:]
-            elif words and words[0] == "flock":
-                self.fail(f"unparsed shell lock command: {line}")
-            if words and words[0] == "timeout":
-                self.assertGreaterEqual(len(words), 4)
-                self.assertEqual(words[2], "$PY")
-                actual.append((words[3], float(words[1])))
-                locks[words[3]] = lock
-        self.assertTrue(actual)
-        proposed = [(t.argv[1], t.timeout) for t in orchestration.ordered_tasks(orchestration.forward_tasks())]
-        self.assertEqual(proposed, actual)
-        for task in orchestration.forward_tasks():
-            expected = {"path": task.shared_lock, "wait_seconds": task.lock_wait} if task.shared_lock else None
-            self.assertEqual(expected, locks[task.argv[1]])
+    def test_legacy_entrypoint_delegates_and_preserves_failure(self):
+        import os
+        script_dir = self.root / "scripts"
+        shutil.copy(orchestration.ROOT / "scripts/forward_all.sh", script_dir)
+        fake = self.base / "fake-python"
+        fake.write_text("#!/bin/sh\nprintf '%s\\n' \"$@\" > args.txt\nexit 7\n")
+        fake.chmod(0o700)
+        env = dict(os.environ, FORWARD_STATE_DIR=str(self.state), FORWARD_PYTHON=str(fake))
+        result = subprocess.run(("sh", str(script_dir / "forward_all.sh")), env=env, capture_output=True)
+        self.assertEqual(result.returncode, 7)
+        arguments = (self.root / "args.txt").read_text().splitlines()
+        self.assertEqual(arguments[:4], ["scripts/orchestrate_forward.py", "--execute", "--state-dir", str(self.state)])
+        self.assertNotIn("tick done", result.stdout.decode())
 
 
 if __name__ == "__main__":

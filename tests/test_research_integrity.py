@@ -40,6 +40,61 @@ class Fixture:
 
 
 class PreregMetadataTests(Fixture, unittest.TestCase):
+    def test_plural_typed_method_ids_cannot_hide_another_round(self):
+        self.assertEqual(self.codes("Registry id: R233 (claim). **Methods:** M301, M303."), [])
+        for tail in ("**Methods:** M301, R234.", "**Methods:** M301, M303. R234",
+                     "**Methods:** M301, M303. **Methods:** M304", "**Method:** M301, M303."):
+            with self.subTest(tail=tail):
+                self.assertEqual(self.codes("Registry id: R233. " + tail), ["REGISTRY_ID_INVALID"])
+        self.assertEqual(self.codes("Registry id: R234. **Methods:** M301, M303."),
+                         ["REGISTRY_ID_MISMATCH"])
+
+    def test_exact_block_opening_annotation_preserves_primary_id_validation(self):
+        note = ". It opens the Claude block R220-R239, claimed on issue #7 before this freeze."
+        self.assertEqual(self.codes("Registry id: R233" + note), [])
+        self.assertEqual(self.codes("Registry id: R234" + note), ["REGISTRY_ID_MISMATCH"])
+        self.assertEqual(self.codes("Registry id: R233" + note + " R234"), ["REGISTRY_ID_INVALID"])
+
+    def test_exact_reserved_round_note_is_context_not_a_second_declaration(self):
+        note = " (Claude block R220-R239, claimed on issue #7 before the freeze). R232 stays reserved for"
+        self.assertEqual(self.codes("Registry id: R233" + note + "\n  `other_lane`, frozen separately."), [])
+        self.assertEqual(self.codes("Registry id: R234" + note), ["REGISTRY_ID_MISMATCH"])
+        for tail in (note + " R231", note + "\nRegistry id: R232", ". R232"):
+            with self.subTest(tail=tail):
+                self.assertEqual(self.codes("Registry id: R233" + tail), ["REGISTRY_ID_INVALID"])
+
+    def test_typed_comma_claim_annotation_is_not_an_arbitrary_trailing_id(self):
+        claim = ", in the Claude block R220-R239 claimed on issue #7 on 2026-10-22"
+        for text in ("R233" + claim, "R233" + claim + ".", "`R233`" + claim + "."):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("- **Registry id:** " + text), [])
+        for text in ("R233, R234", "R233" + claim + ". R234", "R233" + claim + ", R234",
+                     "R233" + claim + "\nRegistry id: R233", "R233, in a free text note R234"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("Registry id: " + text), ["REGISTRY_ID_INVALID"])
+        self.assertEqual(self.codes("Registry id: R234" + claim + "."), ["REGISTRY_ID_MISMATCH"])
+
+    def test_typed_inline_method_field_preserves_round_validation(self):
+        for text in ("R233. **Method:** M281.", "`R233`. **Method:** M281"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("- **Registry id:** " + text), [])
+        for text in ("R233. **Method:** R234.", "R233. **Method:** M281. R234",
+                     "R233. **Method:** M281; R234",
+                     "R233. **Method:** M281. **Method:** M282"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("Registry id: " + text), ["REGISTRY_ID_INVALID"])
+        self.assertEqual(self.codes("Registry id: R234. **Method:** M281."),
+                         ["REGISTRY_ID_MISMATCH"])
+
+    def test_sentence_period_preserves_full_value_and_id_checks(self):
+        for text in ("R233.", "`R233`.", "R233 (Claude block R220-R239, claimed on issue #7)."):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("- **Registry id:** " + text), [])
+        for text in ("R233..", "R233. R234", "R233 (note). R234", "R233 (note). (second)"):
+            with self.subTest(text=text):
+                self.assertEqual(self.codes("Registry id: " + text), ["REGISTRY_ID_INVALID"])
+        self.assertEqual(self.codes("Registry id: R234 (claim)."), ["REGISTRY_ID_MISMATCH"])
+
     def test_supported_id_formats_and_annotations(self):
         for metadata in (
             "Registry id: R233",

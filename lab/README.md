@@ -5,6 +5,7 @@
 Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; run them all with
 `python -m unittest discover -s tests -t .` before committing a change here.
 
+- [`__main__`](__main__.py): Common entry point over existing tools; default is help, never a live tick.
 - [`atlas`](atlas.py): Edge atlas: what each feature bin says about future returns BEFORE fees, at several horizons, split by a grouping (market session, liquidity tier, BTC regime), with a placebo to say how much of it ...
 - [`auction`](auction.py): Auction-market levels from bars: anchored VWAP with standard-deviation bands, volume and TPO profiles, the point of control and value area, high- and low-volume nodes, and the initial balance ...
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
@@ -14,6 +15,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`daily`](daily.py): Daily point-in-time panel: one row per (day, Binance USD-M perp) with what every source the lab holds had said about that coin by 00:00 UTC of that day, plus one row per day of market-wide series.
 - [`data`](data.py): Binance public-archive fetcher (data.binance.vision).
 - [`engine`](engine.py): Vectorized backtester.
+- [`evaluation`](evaluation.py): Bounded evaluation API for future registered lanes; legacy APIs stay intact.
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.
 - [`exposure`](exposure.py): Options positioning: the Black-76 greeks of each listed option and the dealer exposures traders quote from them, gamma (GEX), delta (DEX), vanna (VEX) and charm (CEX), the gamma profile over a ...
 - [`features`](features.py): Feature library.
@@ -30,6 +32,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`mexc`](mexc.py): Public MEXC USDT-M futures data (no keys, no orders): contract metadata, hourly klines, funding settlements, and the map from Binance USD-M symbols to MEXC crypto contracts.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
+- [`operations`](operations.py): Shared operational catalog for execution and read-only views.
 - [`orderflow`](orderflow.py): Order flow from bars that carry the taker-buy volume (Binance klines): delta, cumulative volume delta (CVD), the delta profile, and two patterns traders name, absorption and exhaustion ...
 - [`pack`](pack.py): A pack: many signal cells traded in one book, each entry a limit order (lab/maker.py rules) or a market order, marked to market every hour, with an optional hedge that holds the opposite of the ...
 - [`panel`](panel.py): One hourly clock for every symbol, and higher timeframes that only become visible once their bar has closed.
@@ -38,6 +41,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`propfirm`](propfirm.py): Prop-firm economics: what a strategy's return stream is worth inside an evaluation and a funded account.
 - [`registry`](registry.py): Append-only register of research rounds (the machine-readable ROADMAP).
 - [`research`](research.py): Glue between data and search: the point-in-time research universe, costs, and guarded rule evaluation.
+- [`runtime`](runtime.py): Offline execution receipts and fail-closed checks around legacy paper writers.
 - [`screen`](screen.py): The standard screen for a cross-sectional feature, so a queued method needs a frozen PREREG and a feature, not a new runner.
 - [`search`](search.py): Staged beam search over conditions on feature bins, with a placebo to calibrate what counts as a find.
 - [`sessions`](sessions.py): Market clocks: where each decision time sits against the hours of other markets and scheduled events.

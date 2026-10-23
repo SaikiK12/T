@@ -1,5 +1,40 @@
 # Benchmark: the lab against the best open-source quant projects and free data (2026-10-20)
 
+## Consolidated runtime and measured checks (2026-10-23)
+
+Current entry point: `python -m lab` ([commands](../README.md#use)). The existing dashboard, canonical queue and
+frozen lane paths remain in place. [`lab/operations.py`](../lab/operations.py) owns task/lane descriptors and paper
+projections; [`lab/runtime.py`](../lab/runtime.py) supplies process lifetime handling, observation checks and receipts.
+The shell wrappers delegate to the same graph. No scheduler was installed or restarted by this consolidation.
+
+- Python 3.12.14 plus a hashed dependency lock were installed in a separate environment. Full check: **870 tests,
+  zero failures/errors, two explicit archive-dependent skips, 163.51s**. Browser fixtures and the compiled synthetic
+  Python/qx twin ran. Rust 1.90.0: **18 tests pass**; source/binary/toolchain build receipt matches. These observations
+  do not reproduce every old study/environment or establish future CI success.
+- Final fast profile: **833 tests/24.74s with warm caches**, two archive-dependent skips;37 simulation tests are
+  deferred to the full gate. The earlier pre-final fast run was824 tests/47.18s. Fast/simulation selections are
+  disjoint and cover the full suite. The original one-run baseline was795 tests/204.49s on owner5bb9309; differing
+  tests and cache state prevent treating these observations as an isolated framework or production speedup.
+- A fixed invented benchmark (seed81, T16384/S16/R128, interval4096:5120, three warmed alternating repetitions)
+  checked exact output equality. Window output shrank from **25,165,824 to1,572,864 bytes (16x)**; these are array
+  bytes, not resident process memory. Median time was0.03543s versus0.03512s: no material CPU speedup established.
+  Reusing fixed-book positions for1x/2x/3x cost kernels took0.00200s versus0.00157s; this sub-millisecond difference
+  does not establish a market-workload improvement. [`lab/evaluation.py`](../lab/evaluation.py) is opt-in for future
+  registered lanes; the legacy engine/screen/research functions and historical results remain unchanged.
+- Signal/tick cardinality checks validate all520 hours in this checkout. Interrupted/orphan batches block before
+  retry, and a process exit0 with failed declared checks blocks mandatory descendants. These are structural checks,
+  not proof of feature correctness or strict on-time/gate eligibility. Funding receipts retain partial/missing sources.
+- Dashboard generations bind bytes and upload acknowledgements to a named immutable manifest. Local publication,
+  receipt and document updates share a lock; old generations cannot overwrite newer publication clocks. This does
+  not verify remote delivery or turn independent upstream collectors into one transactional snapshot.
+
+Canonical intake remains319 rows/279 aliases/54 catalog entries. Five source warnings remain explicit, plus12
+legacy/import integrity warnings; no missing mechanics, unread source section or absent imported lane is declared
+resolved. All296 owner method rows are retained byte-for-byte. Round registry, frozen specifications/runners,
+research results, old data and append-only journals are unchanged. New gate/lineage fields belong to future
+preregistrations; native verdicts remain separate from UNASSESSED current gate eligibility.
+
+
 The owner asked for the best in each area, measured against what others build. Each row names the leader, what it does
 better than the lab, and what the lab builds to pass it. Facts about other projects come from their READMEs and
 docs, read on 2026-10-20 (sources at the end). Claims about the lab were checked in this repo the same day.
