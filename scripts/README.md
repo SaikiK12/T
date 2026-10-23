@@ -68,7 +68,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (92)
+## Run: one lane's frozen measurement (93)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
@@ -79,6 +79,7 @@ line is the first line of the script's own docstring.
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
 - [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
+- [`run_capital_mix.py`](run_capital_mix.py): R309: fixed initial-capital carry/spot comparison; archived inputs only, no trading.
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.

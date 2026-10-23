@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-23 10:36 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-23 16:28 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 34 |
 | Ideas partly tested | 39 |
 | Ideas blocked (data, download, compute) | 91 |
-| Rounds in the registry | 128 (NULL 83, PENDING 20, PARTIAL 12, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,757 |
+| Rounds in the registry | 129 (NULL 84, PENDING 20, PARTIAL 12, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,758 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -121,7 +121,6 @@ Process state, declared data checks and statistical eligibility are separate.
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R303 | capit_v1 | DONE | NULL | 10 |
 | R304 | mlrank_v2 | DONE | PARTIAL | 7 |
 | R305 | mlaudit_v1 | DONE | NULL | 7 |
 | R306 | msnr_v1 | DONE | NULL | 24 |
@@ -129,5 +128,6 @@ Process state, declared data checks and statistical eligibility are separate.
 | R308 | nagel_v1 | DONE | NULL | 8 |
 | R258 | unlocks_daily_v1 | DONE | PARTIAL | 2 |
 | R259 | unlocks_funding_bounds_v1 | DONE | PARTIAL | 2 |
+| R309 | capital_mix_v1 | DONE | NULL | 1 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

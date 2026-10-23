@@ -31,8 +31,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (106)
+## Other registered rounds (done, registered or planned) (107)
 
+- **[capital_mix_v1](capital_mix_v1/)** R309, DONE NULL, 1 trial. Fixed initial-capital MEXC+Lighter carry and spot-trend allocation ([PREREG](capital_mix_v1/PREREG.md), [FINDINGS](capital_mix_v1/FINDINGS.md))
 - **[nagel_v1](nagel_v1/)** R308, DONE NULL, 8 trials. Liquidity provision after stress (M325, Nagel 2012): 1-day top-50/150 reversal only after market abs-return, dispersion or OI-crash days in their trailing-year tail, plus every-day baselines; API tier costs ([PREREG](nagel_v1/PREREG.md), [FINDINGS](nagel_v1/FINDINGS.md))
 - **[rrskew_v1](rrskew_v1/)** R307, DONE NULL, 24 trials. Deribit 25-delta risk reversal (M174) as a weekly BTC/ETH perp timing signal: 30 d / 90 d RR built from every option trade with the COIN-M basis as the forward; sign / 90-day z / 7-day change z, follow or fade; manual-web costs ([PREREG](rrskew_v1/PREREG.md), [FINDINGS](rrskew_v1/FINDINGS.md))
 - **[msnr_v1](msnr_v1/)** R306, DONE NULL, 24 trials. Malaysian support and resistance (M323) on 4-hour candles: fade or follow the first touch of a fresh A/V level, age 30/180 candles, t24/t72/1:2 ATR bracket exits, top-50 Binance perps; secondary set of FX, metal, index and commodity perps reported ([PREREG](msnr_v1/PREREG.md), [FINDINGS](msnr_v1/FINDINGS.md))

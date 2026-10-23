@@ -1,0 +1,35 @@
+{
+  "prereg_sha256": "0beb128cd5ed3b47dc4a7b4ac4ba4949194ed9acdcb6cf6228287658fb9630d2",
+  "inputs": {
+    "engine/src/spread.rs": "3f49b5c545fdaf0c03185d15da8b6c0adc0fec417463e5f4e93b80d8f22414d5",
+    "experiments/slow_trend_v1/PREREG.md": "ad247ec8676b8ae817fea41a6a6a82303cedf298e49cdaaea35bfd55625f169b",
+    "experiments/slow_trend_v1/PREREG.sha256": "6970b69cbb6a50863aafb08bd85277679dcdaa525b1c694e0ed2d70946dd6b38",
+    "experiments/slow_trend_v1/results/daily.csv": "4d879c17c61f3100e7af6ace0d5b5cef22eef7afca24941219f19139d16700fe",
+    "experiments/slow_trend_v1/results/run_manifest.json": "4c8b4098037bdc514a5c3503828cd64074dd4831bedf0c87147fa17d967149c5",
+    "experiments/xfund_lt_v1/PREREG.md": "80e6023d9a6c30c48ec811c1741d0135dba174b1a948c230d5c979d444295d6e",
+    "experiments/xfund_lt_v1/PREREG.sha256": "30144e19f19a260c7aaa1ffff7da38733cd675a719e331e5b324bcc16bdb4345",
+    "experiments/xfund_lt_v1/results/daily.csv": "24e8baabf7f6d50c9c5e701103c9538a888465bf90a6f3a60aef6af0186d290e",
+    "experiments/xfund_lt_v1/spec.toml": "bd43179f845d1dc109e558f678476c0425346b26bb3e9edb152b801fe5a94eb2",
+    "lab/capital.py": "14a0e3ff0b5e33ef5911edced3b382037a527e7cbc0a40f98498bf58756eb5be",
+    "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34",
+    "scripts/run_capital_mix.py": "8d3b14d1a0c92b797a7ddd3b422c6d12c511b8602c36d14388ad732de55bcac1",
+    "scripts/run_slow_trend.py": "3f5b658dbb9bc6991e2c59507f457e6ff5c5720ef1228d1f2cc23cb83cbf724b"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "start": "2025-07-01",
+  "end": "2026-09-30",
+  "days": 457,
+  "carry_entry_cost_by_tier": {
+    "1": 0.00055,
+    "2": 0.0011,
+    "3": 0.00165
+  },
+  "output_sha256": {
+    "daily.csv.gz": "e59b173ddbc69409dcc3ef2d92cb6a6ca404e00bd75dec82339725905eddbf1f",
+    "metrics.csv": "c45261c0b2627958bdcd78418e55f7cb3a689d48be0ee78f477c56e42fb84c78",
+    "paired.csv": "f165278cc09b16d824cd493131fe88cf56a4376a5b4d66471426054b40e9c085",
+    "verdict.json": "601c7ae3371ec9dfcb7d01f82bc464623a5f04402147c1089a3f51fbdcb1d20b"
+  }
+}
