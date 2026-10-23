@@ -34,17 +34,19 @@ def binance_row(start=START):
 
 
 class MarkBarTest(unittest.TestCase):
-    def test_mark_bar_is_immutable_and_accepts_both_normalized_venues(self):
+    def test_mark_bar_is_immutable_and_accepts_all_normalized_venues(self):
         bar = mark(START)
         with self.assertRaises(dataclasses.FrozenInstanceError):
             bar.close = 111.0
         self.assertEqual(mark(START, venue="gate_usdt", contract="mark_BTC_USDT").venue, "gate_usdt")
+        self.assertEqual(mark(START, venue="mexc_usdt", contract="BTC_USDT").venue, "mexc_usdt")
 
     def test_invalid_clock_identity_and_price_types_fail(self):
         valid = dict(venue="binance_usdm", contract="BTCUSDT", start_ms=START, end_ms=START + HOUR,
                      open=110.0, high=120.0, low=90.0, close=112.0)
         changes = [
-            {"venue": "unknown"}, {"contract": ""}, {"contract": None},
+            {"venue": "unknown"}, {"venue": "mexc_usdt", "contract": "BTCUSDT"},
+            {"contract": ""}, {"contract": None},
             {"start_ms": -1}, {"start_ms": START + 0.5}, {"start_ms": True},
             {"end_ms": START}, {"end_ms": START - 1}, {"end_ms": "later"},
             {"open": 0}, {"high": math.inf}, {"low": math.nan}, {"close": -1},
@@ -161,10 +163,22 @@ class DecodeMarkBarsTest(unittest.TestCase):
         first = candles[0]
         self.assertEqual((first.venue, first.contract, first.timestamp_s, first.interval,
                           first.timestamp_role),
-                         ("mexc_usdt", "BTC_USDT", START // 1000, "Min60", "unresolved"))
+                         ("mexc_usdt", "BTC_USDT", START // 1000, "Min60", "bar_start"))
         self.assertEqual((first.open, first.high, first.low, first.close), (110, 120, 90, 112))
+        normalized = first.to_mark_bar()
+        self.assertEqual((normalized.venue, normalized.contract, normalized.start_ms, normalized.end_ms),
+                         ("mexc_usdt", "BTC_USDT", START, START + HOUR))
         with self.assertRaises(ValueError):
             summarize(candles)
+
+    def test_mexc_unprobed_interval_keeps_clock_unresolved_and_cannot_normalize(self):
+        candle = markbars.MexcFairCandle("BTC_USDT", START // 1000, "Min5", 110, 120, 90, 112)
+        self.assertEqual(candle.timestamp_role, "unresolved")
+        with self.assertRaises(ValueError):
+            candle.to_mark_bar()
+        misaligned = markbars.MexcFairCandle("BTC_USDT", START // 1000 + 1, "Min60", 110, 120, 90, 112)
+        with self.assertRaises(ValueError):
+            misaligned.to_mark_bar()
 
     def test_mexc_decoder_rejects_untrusted_response_shape_and_unfixed_month(self):
         payload = {"success": True, "code": 0, "data": {
@@ -216,6 +230,15 @@ class MarkDayRangeTest(unittest.TestCase):
                          (100.0, 120.0, 90.0, 113.0))
         self.assertAlmostEqual(markbars.adverse(result, +1), 0.1)
         self.assertAlmostEqual(markbars.adverse(result, -1), 0.2)
+
+    def test_normalized_mexc_hourly_marks_can_enter_complete_day_ranges(self):
+        anchor = markbars.MarkBar("mexc_usdt", "BTC_USDT", START - HOUR, START,
+                                  100, 101, 99, 100)
+        bars = [anchor] + [mark(START + i * HOUR, venue="mexc_usdt", contract="BTC_USDT",
+                               close=113 if i == 23 else 112) for i in range(24)]
+        result = summarize(bars)
+        self.assertTrue(result.ready)
+        self.assertEqual((result.low, result.high), (90.0, 120.0))
 
     def test_missing_middle_slot_has_no_daily_extremes_or_forward_fill(self):
         bars = full_day()

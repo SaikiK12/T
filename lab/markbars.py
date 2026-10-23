@@ -29,10 +29,15 @@ MEXC fair-price candles were checked 2026-10-23 (public documentation only):
 https://www.mexc.co/api-docs/futures/market-endpoints/get-fair-price-candles
 retrieved page SHA256 50ec4df33371641b11365036abfdc74cf36d13c34d3c7e9bd29d0d0b64414745.
 The page declares second timestamps, parallel OHLC arrays and up to 2000 rows,
-but does not say whether `time` labels the bar open or close. Its `real*` and
-activity arrays are deliberately not treated as fair-price OHLC. The decoder
-below preserves that unresolved clock role; its values cannot enter day_range
-until a separate source check establishes a valid normalization.
+but does not say whether `time` labels the bar open or close. Two bounded public
+REST probes that day observed the active Min1 candle at `time=1792778640` mutate
+its close from 81517.2 to 81513.8 between 18:04:03 and 18:04:15 UTC; the active
+Min60 candle at `time=1792778400` mutated its close from 81513.4 to 81514.5
+between 18:04:25 and 18:04:37 UTC. The requests ended at those observation times.
+This supports start-time labels for Min1 and Min60 only; other intervals remain
+unresolved. Only those two can be normalized by `to_mark_bar`. Its `real*` and
+activity arrays are deliberately not treated as fair-price OHLC. Samples were a
+few recent rows for BTC_USDT, not historical performance data.
 """
 
 from dataclasses import dataclass
@@ -51,6 +56,7 @@ MEXC_INTERVALS = {
     "Hour4": 4 * 60 * MINUTE, "Hour8": 8 * 60 * MINUTE,
     "Day1": DAY, "Week1": 7 * DAY,
 }
+MEXC_CLOCK_VERIFIED_INTERVALS = {"Min1", "Min60"}
 
 
 def _integer(value, name, *, positive=False):
@@ -83,6 +89,12 @@ def _gate_contract(value):
     _contract(value)
     if not value.startswith("mark_") or not value.endswith("_USDT") or not value[5:-5]:
         raise ValueError("Gate USDT mark identity requires mark_<base>_USDT")
+
+
+def _mexc_contract(value):
+    _contract(value)
+    if not value.endswith("_USDT") or not value[:-5]:
+        raise ValueError("MEXC USDT mark identity requires <base>_USDT")
 
 
 def _gate_timestamp(value):
@@ -130,11 +142,13 @@ class MarkBar:
     close: float
 
     def __post_init__(self):
-        if self.venue not in {"binance_usdm", "gate_usdt"}:
+        if self.venue not in {"binance_usdm", "gate_usdt", "mexc_usdt"}:
             raise ValueError("unsupported mark venue")
         _contract(self.contract)
         if self.venue == "gate_usdt":
             _gate_contract(self.contract)
+        if self.venue == "mexc_usdt":
+            _mexc_contract(self.contract)
         for field in ("start_ms", "end_ms"):
             object.__setattr__(self, field, _integer(getattr(self, field), field))
         if self.end_ms <= self.start_ms:
@@ -211,7 +225,7 @@ def decode_gate(rows, *, contract, interval_ms):
 
 @dataclass(frozen=True, slots=True)
 class MexcFairCandle:
-    """Decoded MEXC fair-price candle whose timestamp role is still unresolved."""
+    """Decoded MEXC fair candle; start time is validated only for Min1 and Min60."""
     contract: str
     timestamp_s: int
     interval: str
@@ -221,9 +235,7 @@ class MexcFairCandle:
     close: float
 
     def __post_init__(self):
-        _contract(self.contract)
-        if not self.contract.endswith("_USDT") or not self.contract[:-5]:
-            raise ValueError("MEXC USDT contract identity requires <base>_USDT")
+        _mexc_contract(self.contract)
         object.__setattr__(self, "timestamp_s", _integer(self.timestamp_s, "timestamp_s"))
         if self.interval not in MEXC_INTERVALS:
             raise ValueError("unsupported fixed-duration MEXC fair-price interval")
@@ -235,20 +247,30 @@ class MexcFairCandle:
 
     @property
     def timestamp_role(self):
-        return "unresolved"
+        return "bar_start" if self.interval in MEXC_CLOCK_VERIFIED_INTERVALS else "unresolved"
+
+    def to_mark_bar(self):
+        """Normalize only interval clocks supported by the bounded 2026-10-23 probe."""
+        if self.timestamp_role != "bar_start":
+            raise ValueError("MEXC candle clock is not validated for this interval")
+        start_ms = self.timestamp_s * 1_000
+        interval_ms = MEXC_INTERVALS[self.interval]
+        if start_ms % interval_ms:
+            raise ValueError("MEXC bar start is not aligned to the UTC interval grid")
+        return MarkBar("mexc_usdt", self.contract, start_ms,
+                       start_ms + interval_ms,
+                       self.open, self.high, self.low, self.close)
 
 
 def decode_mexc_fair(payload, *, contract, interval):
     """Decode the public MEXC fair-price REST shape without guessing its clock.
 
     Only `time/open/high/low/close` are consumed. Volume, amount and `real*`
-    arrays are ignored. In particular, this does not turn timestamp seconds
-    into normalized bar starts and cannot feed day_range until that role is
-    established independently.
+    arrays are ignored. Raw timestamps remain in seconds; `to_mark_bar` converts
+    them to exclusive millisecond ranges only for Min1 and Min60, whose active
+    row clocks were checked by a bounded public probe. Other intervals fail closed.
     """
-    _contract(contract)
-    if not contract.endswith("_USDT") or not contract[:-5]:
-        raise ValueError("MEXC USDT contract identity requires <base>_USDT")
+    _mexc_contract(contract)
     if interval not in MEXC_INTERVALS:
         raise ValueError("unsupported fixed-duration MEXC fair-price interval")
     if not isinstance(payload, dict) or payload.get("success") is not True or type(payload.get("code")) is not int or payload["code"] != 0:
