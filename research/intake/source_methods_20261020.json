@@ -12327,6 +12327,106 @@
       ],
       "controls": "Before any outcome: freeze finite mapping/code, availability and missingness policies, family/trial count, no-macro/time-matched controls, 1x/2x/3x complete costs and fresh prospective validation. This documentation pass computes no market statistic and does not create a study.",
       "market_trials": 0
+    },
+    {
+      "intake_id": "aave_v3_liquidation_event_contract_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [],
+      "upstream_repository": "https://github.com/aave/aave-v3-core",
+      "upstream_commit": "782f51917056a53a2c228701058a6c3fb233684a",
+      "source_manifest": [
+        {
+          "path": "contracts/protocol/libraries/logic/LiquidationLogic.sol",
+          "url": "https://raw.githubusercontent.com/aave/aave-v3-core/782f51917056a53a2c228701058a6c3fb233684a/contracts/protocol/libraries/logic/LiquidationLogic.sol",
+          "bytes": 21250,
+          "sha256": "4fecfabd4ebbeccba176f41b3417dd5b3f16d65100d9e9cd373b7ed0dec51d5a"
+        },
+        {
+          "path": "contracts/protocol/libraries/logic/ValidationLogic.sol",
+          "url": "https://raw.githubusercontent.com/aave/aave-v3-core/782f51917056a53a2c228701058a6c3fb233684a/contracts/protocol/libraries/logic/ValidationLogic.sol",
+          "bytes": 29389,
+          "sha256": "5d5f7a76a4e03b258679792885c068e2974293679d7baea09c0b7d6de0c2d329"
+        },
+        {
+          "path": "contracts/interfaces/IPool.sol",
+          "url": "https://raw.githubusercontent.com/aave/aave-v3-core/782f51917056a53a2c228701058a6c3fb233684a/contracts/interfaces/IPool.sol",
+          "bytes": 32693,
+          "sha256": "d708ba2c3cf29fe81083b7b8127ef61b7d750dc017399ebaa2951d6f61a93dda"
+        }
+      ],
+      "received_scope": "Three pinned Solidity files downloaded, with static inspection restricted to LiquidationLogic event/executeLiquidationCall/_calculateDebt/_getConfigurationData/_calculateAvailableCollateralToLiquidate, ValidationLogic liquidation constants/validateLiquidationCall, and IPool LiquidationCall documentation/declaration. Imported libraries, full protocol, deployed implementations and live chain state not audited. No Solidity compiled or executed; no chain/RPC/log history requested.",
+      "canonical_relationships": {
+        "M176": "Related forced-liquidation input only. R252 tests an hourly CEX OI/wick proxy and remains NULL; this is neither that rule nor evidence against it. No new executable DeFi-to-MEXC rule is supplied."
+      },
+      "distinct_received_mechanics": [
+        {
+          "scope": "Eligibility and exact close-factor boundary",
+          "source": "LiquidationLogic.sol:49-68,364-393; ValidationLogic.sol:496-534",
+          "finding": "In this snapshot eligible health factor must be strictly below1e18; active/unpaused reserves, enabled collateral and nonzero debt are checked. Sentinel validation also applies unless absent or HF strictly below0.95e18. Debt close factor is50% when HF >0.95e18, otherwise100%; equality0.95 therefore uses100%, despite the prose saying below. These percentages cap debt, not necessarily the entire collateral position; requested debt and available collateral further constrain liquidation."
+        },
+        {
+          "scope": "Requested versus emitted debt",
+          "source": "IPool.sol:168-186; LiquidationLogic.sol:124-163,220-241,364-393",
+          "finding": "IPool prose describes debtToCover as desired debt. The event actually emits actualDebtToLiquidate after close-factor and collateral constraints, not the raw requested amount. Downstream event schemas must retain asset-native units and not label it USD or requested size."
+        },
+        {
+          "scope": "Collateral route is not sell execution",
+          "source": "LiquidationLogic.sol:196-200,234-241; IPool.sol:173-176",
+          "finding": "receiveAToken selects aToken receipt versus underlying collateral. Neither route in the inspected function proves an external spot sale, CEX order, DEX swap, or direction of a later hedge. Event counts/amounts cannot automatically be called sell volume, taker flow or upcoming liquidation risk."
+        },
+        {
+          "scope": "Valuation, bonus and protocol fee",
+          "source": "LiquidationLogic.sol:397-434,464-549",
+          "finding": "The calculation obtains configured oracle prices, token decimals, liquidation bonus and protocol fee; eMode can change price sources/bonus. Debt coverage translates to collateral with these prices/decimals, is capped by the user balance, and protocol fee is computed on the bonus collateral. Emitted actualCollateralToLiquidate excludes that calculated protocol fee. Separate treasury transfer exists; do not double count it as liquidator receipt. Imported rounding/accounting helpers and actual deployment behavior remain unexecuted."
+        },
+        {
+          "scope": "Event identity versus information clock",
+          "source": "IPool.sol:178-186; research input requirement derived from schema",
+          "finding": "The event has indexed collateralAsset/debtAsset/user plus debtToCover, liquidatedCollateralAmount, liquidator and receiveAToken. It contains no exchange-symbol map, oracle price, token decimals, publication timestamp, mempool arrival or future-sale receipt. Chain/block hash, transaction/log indexes, block time, observation first-seen and reorg status must come from a separately validated ingestion contract; the event alone cannot provide them."
+        }
+      ],
+      "future_data_contract": {
+        "identity": [
+          "chain_id",
+          "pool_proxy_address",
+          "implementation_and_upgrade_block_range",
+          "ABI_and_code_hash",
+          "block_number",
+          "block_hash",
+          "transaction_hash",
+          "transaction_index",
+          "log_index",
+          "removed_or_reorg_state"
+        ],
+        "values": [
+          "collateral_asset_address",
+          "debt_asset_address",
+          "user",
+          "actual_debt_covered_raw",
+          "liquidator_collateral_received_raw",
+          "liquidator",
+          "receive_a_token",
+          "token_decimals_at_block",
+          "oracle_sources_and_prices_at_block_if_valued",
+          "eMode_and_reserve_configuration_at_block_if_reconstructed"
+        ],
+        "clocks": [
+          "block_timestamp_with_role",
+          "collector_request_and_response_utc",
+          "first_seen_utc",
+          "confirmation_or_finality_policy",
+          "decision_cutoff_utc"
+        ],
+        "coverage": "Prove address/ABI upgrade intervals, provider log pagination/completeness, chain reorganizations, token identity/wrapped asset mapping and point-in-time MEXC tradability. Repo HEAD is not a deployment attestation. Current collateral/debt snapshots cannot reconstruct all historical or future eligible borrowers."
+      },
+      "prior_catalog_scope": "SRC26-011 previously reviewed only https://aave.com/help/borrowing/liquidations; this code-level pass does not claim that page was recaptured or that all Aave versions share these mechanics.",
+      "missing_mechanics": [
+        "No specified DeFi-to-MEXC signal direction, normalization, event window, hedge, entry/exit or finite threshold set.",
+        "Prospective at-risk borrower reconstruction requires balances/debts/interest/oracles/configuration and chronology beyond liquidation logs.",
+        "External sales/hedges, cross-chain symbol coverage, historical availability and deployed code versions unvalidated."
+      ],
+      "controls": "Any future rule needs a new finite preregistration before outcomes, separate ex-post event and prospective-risk scopes, appropriate market/time-matched controls, full1x/2x/3x execution costs and genuinely new paper observations. No original source profit or MEXC profitability inferred.",
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [
