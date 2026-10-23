@@ -12515,6 +12515,45 @@
       ],
       "reconciliation": "M098 remains BLOCKED with no archive held; appended note points to this exact data contract. No new strategy/alias/catalog row, no M291 change and no market outcomes.",
       "market_trials": 0
+    },
+    {
+      "intake_id": "blueshift_pairs_control_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [],
+      "canonical_methods": [
+        "M045"
+      ],
+      "source_url": "https://github.com/QuantInsti/blueshift-demo-strategies/blob/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/equities/pair_example.py",
+      "source_bytes": 3178,
+      "source_sha256": "ae3f1ffa8695abb1d6756630a93f9cd0d3d147904d7b038fd94ebdd2a4c6baa1",
+      "received_scope": "One complete3178-byte official example read. QuantStart Basics-of-Statistical-Mean-Reversion-Testing returnedHTTP503; no content extracted from it. GitHub tree metadata used only for file discovery. Imported blueshift statistical helpers and platform code remain unread/unexecuted; no market history loaded. Two named function definitions alone executed from hash-checked source with mocked order APIs.",
+      "distinct_received_methods": [
+        {
+          "scope": "Exact displayed weekly pairs composite",
+          "rule": "AMBUJACEM/ACC equities. On week_start,30min after market open, request200daily closes; history errors return without rebalance, drop missing rows, return if fewer than5. Log prices, obtain hedge_ratio/residuals from imported helper, then z_score with lookback100. Enter long-y/short-x for z<-2 and opposite for z>2; both threshold equalities flatten. No explicit cointegration/ADF filter in received file. Statistical helper implementation, residual normalization and platform current-bar history semantics missing."
+        },
+        {
+          "scope": "Exit/state alternative actually implemented",
+          "rule": "Remaining branches are z<0.5 then z>-0.5, both return0. For every finite z within[-2,2], these cover the whole interval, so sentinel999 is unreachable for finite z. Thus z=+1 returns flatten although it is outside the apparent absolute0.5 exit band. A true hold-between-entry-and-exit implementation would be a separately specified variant, not a silent repair. NaN/invalid diagnostic policy remains unspecified; no claim that helpers return such values."
+        },
+        {
+          "scope": "Sizing/cancellation mechanics",
+          "rule": "Source signal*leverage/2 with configured leverage5 yields x=-weight*hedge_ratio and y=weight. Gross is2.5*(1+abs(hedge_ratio)) for nonzero signal, not capped at5. Ratio2 gives gross7.5; negative ratio can make both targets same direction. Outstanding orders are cancelled then both targets submitted without fill confirmation in inspected code. API/runtime cancellation iteration semantics, actual leverage limits, asynchronous fills and partial-leg exposure remain unvalidated."
+        }
+      ],
+      "finite_check_protocol": "research/fixtures/blueshift_pairs_protocol.json",
+      "protocol_committed_before_execution": "a13c69c",
+      "synthetic_runner": "research/audit_blueshift_pairs.py",
+      "synthetic_receipt": "research/fixtures/blueshift_pairs_audit.json",
+      "synthetic_scope": "Eight fixed z boundary/control cases, four positive/negative hedge-ratio target cases and direct999 no-order branch. Only trading_signal/place_order run; no publisher imports, history, zscore/hedge helper, schedules, accounting, fill simulation or PnL. Source hash checked before AST compilation; original source not vendored.",
+      "reconciliation": "Related to M045 pairs only, not the exact R250 formation/weekly rule. R250 NULL remains intact; this exact source composite is untested on MEXC. No new queue ID or alias needed for a received variant under M045; exact open scope retained here and referenced in its note. M014 ADF/half-life is not supplied by the file.",
+      "missing_mechanics": [
+        "Statistical helpers and residual units; complete input history/decision-clock contract. The file permits as few as5 rows before a100-row z-score request and logs prices without explicit positivity validation; helper behavior on insufficient/nonfinite data is untested.",
+        "Finite MEXC pair/universe mapping and formation/reselection, validity checks and risk caps.",
+        "Execution costs/funding/borrow, partial fills, stale orders, error recovery and liquidation exposure."
+      ],
+      "future_controls": "Freeze exact displayed rule versus separately declared hysteresis and gross-normalized controls before market outcomes; count all variants, preserve nulls, require1x/2x/3x complete costs and genuinely new paper evidence. Synthetic target arithmetic does not establish strategy loss or profit.",
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [
