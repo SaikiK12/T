@@ -16,6 +16,20 @@ estimator. Neither a tested feature helper nor a historical ranking is a prospec
 [the live queue](../registry/methods.csv) retain their own exact scope; raw point-in-time inputs, model/feature lineage
 and a frozen forward specification remain necessary. No market outcomes or performance profile were computed here.
 
+## Integrated unlock evidence (2026-10-23)
+
+R258/R259 from original topic `cc85b9a` are now imported into the consolidation: exact frozen specs/runners,
+results and [portable inputs](../research/datasets/unlock_market_data_v1/README.md), with both missing registry
+rows appended through the helper and all previous register bytes retained. Both runners reproduced all ten
+original result artifacts byte-for-byte from the restored bundle; this is reproducibility, not new market evidence.
+[Price-only R258](../experiments/unlocks_daily_v1/FINDINGS.md) and
+[funding/collateral R259](../experiments/unlocks_funding_bounds_v1/FINDINGS.md) remain PARTIAL: full-cohort
+funding is INCONCLUSIVE (14 unknown events including the worst price loss); the maximum necessary cash floor
+is15.995 times initial short notional. These are Binance historical bounds, not executable MEXC account returns.
+M057 retains R265/R266 and records these limitations. Current `scripts/run_unlocks.py` and all forward journals
+are unchanged. The different legacy R265 runner/tests/implementation notes in PR32 remain unintegrated; PR32
+is not completely superseded and must stay open pending a separate frozen-scope comparison.
+
 ## Historical R212 handoff
 
 **Historical handoff.** The R212 snapshot below is retained for provenance. It is not the active writer list or a

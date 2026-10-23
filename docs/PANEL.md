@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-23 00:57 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-23 10:36 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 34 |
 | Ideas partly tested | 39 |
 | Ideas blocked (data, download, compute) | 91 |
-| Rounds in the registry | 126 (NULL 83, PENDING 20, PARTIAL 10, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,753 |
+| Rounds in the registry | 128 (NULL 83, PENDING 20, PARTIAL 12, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,757 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -101,7 +101,7 @@ Process state, declared data checks and statistical eligibility are separate.
 | M015 | Listing short with a 14-day stop (MEXC rule 3) | Y klines_1h (listing history) | PARTIAL | 1 | Stop variant untested. Early-drift literature (B) points the other way. Low prior. |
 | M016 | Abnormal volume x short constraint (Garfinkel): abnormal volume predicts lower returns where shorting is constrained | P klines_1h; no borrow data (funding/OI as proxy) | PARTIAL | 1 | Volume-alone part is dead. The constraint interaction is open; the constraint is a proxy. |
 | M017 | Residual momentum split by liquidity tier (ranks 1-10 vs 11-50), 365 d window, 30 d hold | Y klines_1h | PARTIAL | 1 | Tier split and 365 d window not run. |
-| M018 | Realized-variance forecast race: trailing mean vs EWMA vs HAR-RV vs GARCH, QLIKE on next-24 h RV | Y klines_1h (RV from hourly returns) | PARTIAL | 1 | Risk skill, not direction. A win supports sizing, not alpha. |
+| M018 | Realized-variance forecast race: trailing mean vs EWMA vs HAR-RV vs GARCH, QLIKE on next-24 h RV | Y klines_1h (RV from hourly returns) | PARTIAL | 1 | Risk skill, not direction. A win supports sizing, not alpha. arch_har_forecast_contract_20261023 records HAR mean-vs-residual-variance and origin/target/horizon distinctions; no forecast race run. |
 | M020 | Crowd extreme rule: short coins whose global account L/S is above its 95th pct of 90 d, 72 h hold, hedged | Y metrics_1h (global ratio) | PARTIAL | 1 | CLAIMS: crowd ratio is weaker than top vs crowd. |
 | M021 | OI change as a crash/risk-state variable (P of -20% in 30 d), not a direction call | Y metrics_1h OI; klines_1h | PARTIAL | 1 | Claimed OOS AUC 0.677 in one 10-asset study. Risk use only. |
 | M022 | Multi-timeframe sign agreement (1 h, 4 h, 24 h same sign) as entry or size filter | Y klines_1h | PARTIAL | 1 | Agreement count never run. Low prior. |
@@ -121,13 +121,13 @@ Process state, declared data checks and statistical eligibility are separate.
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R301 | qbasis_v1 | DONE | NULL | 16 |
-| R302 | fundxs_v1 | DONE | NULL | 8 |
 | R303 | capit_v1 | DONE | NULL | 10 |
 | R304 | mlrank_v2 | DONE | PARTIAL | 7 |
 | R305 | mlaudit_v1 | DONE | NULL | 7 |
 | R306 | msnr_v1 | DONE | NULL | 24 |
 | R307 | rrskew_v1 | DONE | NULL | 24 |
 | R308 | nagel_v1 | DONE | NULL | 8 |
+| R258 | unlocks_daily_v1 | DONE | PARTIAL | 2 |
+| R259 | unlocks_funding_bounds_v1 | DONE | PARTIAL | 2 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

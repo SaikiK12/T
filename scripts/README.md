@@ -190,7 +190,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (25)
+## Tools and everything else (29)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -208,6 +208,7 @@ line is the first line of the script's own docstring.
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
+- [`project_status.py`](project_status.py): Read-only project status using the Control Room's existing execution receipts.
 - [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
@@ -215,5 +216,8 @@ line is the first line of the script's own docstring.
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).
+- [`unlock_market_data.py`](unlock_market_data.py): Immutable public funding/mark archive acquisition and portable data bundle; no PnL.
+- [`unlocks_daily_check.py`](unlocks_daily_check.py): R258: bounded Binance daily-bar cross-check of the fixed R265 unlock events.
+- [`unlocks_funding_bounds.py`](unlocks_funding_bounds.py): R259: fixed-cohort funding bounds and necessary isolated collateral; no fills.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.
