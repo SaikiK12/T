@@ -1,0 +1,44 @@
+name: Free AI Coding Agent
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  opencode:
+    if: >-
+      github.event.comment.user.login == github.repository_owner &&
+      (contains(github.event.comment.body, '/gemini') ||
+       contains(github.event.comment.body, '/cohere') ||
+       contains(github.event.comment.body, '/oc') ||
+       contains(github.event.comment.body, '/opencode'))
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run OpenCode
+        uses: anomalyco/opencode/github@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+        with:
+          model: ${{ contains(github.event.comment.body, '/cohere') && 'cohere-free/north-mini-code' || 'gemini-free/gemini-3.8-flash' }}
+          mentions: /gemini,/cohere,/oc,/opencode
+          use_github_token: true
