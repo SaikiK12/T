@@ -325,4 +325,3 @@ def forward_lanes(root, days, now):
                     "gate_eligibility": "UNASSESSED", "gate_policy": "docs/GATES.md", "gate_policy_sha256": policy_sha,
                     "decision_group": "flow72" if rid in {"R200", "R214", "R215", "R218", "R225"} else "UNRECONCILED"})
     return out
-

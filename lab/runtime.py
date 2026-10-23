@@ -235,4 +235,3 @@ def run_process(task, root, log_path):
                 pass
             proc.wait()
             raise
-
