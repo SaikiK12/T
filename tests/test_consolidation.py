@@ -229,6 +229,20 @@ class SharedCatalog(unittest.TestCase):
         self.assertTrue({lane.rid for lane in operations.LANES}.issubset({t.name for t in tasks}))
         self.assertEqual(len({t.name for t in tasks}), len(tasks))
 
+    def test_panel_calls_registry_rows_unranked_and_links_canonical_source(self):
+        rows = pd.DataFrame([
+            {"id": "M001", "method": "first", "status": "UNTESTED"},
+            {"id": "M002", "method": "closed", "status": "TESTED"},
+            {"id": "M003", "method": "partial", "status": "PARTIAL"},
+        ])
+        rendered = "\n".join(panel.queue_section(rows))
+        self.assertIn("first 12 open rows in registry order", rendered)
+        self.assertIn("does not encode a priority ranking", rendered)
+        self.assertIn("../registry/methods.csv", rendered)
+        self.assertIn("M001", rendered)
+        self.assertIn("M003", rendered)
+        self.assertNotIn("M002", rendered)
+
     def test_late_carry_is_not_relabelled_ontime_or_included_in_strict_totals(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

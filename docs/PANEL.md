@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-23 17:07 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-23 19:47 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -92,7 +92,9 @@ Process state, declared data checks and statistical eligibility are separate.
 | DASH | Reporting | UNKNOWN | UNVERIFIED | None |
 | REC_DIGEST | Data integrity | UNKNOWN | UNVERIFIED | None |
 
-## 3. Next in the queue
+## 3. Open methods
+
+The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This view shows its first 12 open rows in registry order; the queue does not encode a priority ranking.
 
 | id | method | data_held | status | cheap | note |
 |---|---|---|---|---|---|
@@ -130,4 +132,4 @@ Process state, declared data checks and statistical eligibility are separate.
 | R259 | unlocks_funding_bounds_v1 | DONE | PARTIAL | 2 |
 | R309 | capital_mix_v1 | DONE | NULL | 1 |
 
-Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
+Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

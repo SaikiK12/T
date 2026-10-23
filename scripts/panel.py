@@ -70,6 +70,18 @@ def table(df):
     return "\n".join(out)
 
 
+def queue_section(m):
+    """Render an explicitly unranked view of open rows from the canonical method registry."""
+    lines = ["## 3. Open methods", "",
+             "The canonical queue is [`registry/methods.csv`](../registry/methods.csv). "
+             "This view shows its first 12 open rows in registry order; the queue does not encode a priority ranking.", ""]
+    if m is None:
+        return lines + ["`registry/methods.csv` is not available.", ""]
+    todo = m[m.status.isin(["UNTESTED", "PARTIAL", "QUEUED"])].head(12)
+    return lines + [table(todo[[c for c in ("id", "method", "data_held", "status", "cheap", "note")
+                                if c in todo.columns]]), ""]
+
+
 def main(argv=None):
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
@@ -125,16 +137,12 @@ def main(argv=None):
     L += ["### Execution receipts", "", "Process state, declared data checks and statistical eligibility are separate.", "",
           table(pd.DataFrame([{k: r.get(k) for k in ("task_id", "category", "state", "data_state", "run_id")}
                               for r in jobs])), ""]
-    L += ["## 3. Next in the queue", ""]
-    if m is None:
-        L += ["`registry/methods.csv` is not built yet.", ""]
-    else:
-        todo = m[m.status.isin(["UNTESTED", "PARTIAL", "QUEUED"])].head(12)
-        L += [table(todo[[c for c in ("id", "method", "data_held", "status", "cheap", "note") if c in todo.columns]]), ""]
+    L += queue_section(m)
     L += ["## 4. Waiting on the owner", ""] + [f"- {w}" for w in WAITING] + [""]
     last = reg.tail(8)[["id", "lane", "status", "verdict", "trials"]]
     L += ["## 5. Latest rounds", "", table(last), "",
-          "Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), "
+          "Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), "
+          "[canonical methods registry](../registry/methods.csv), "
           "[GATES](GATES.md), [CRITIQUE](CRITIQUE.md), "
           "[room #7](https://github.com/SaikiK12/T/issues/7).", ""]
     OUT.write_text("\n".join(L))
