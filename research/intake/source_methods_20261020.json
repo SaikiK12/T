@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
-  "updated_utc_date": "2026-10-22",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added.",
+  "updated_utc_date": "2026-10-23",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -9894,6 +9894,546 @@
         "manifest_sha256": "3d2830f4d66320672b7a8b5b1373e38151812894ac2f5d031a53916dffa9a18a"
       },
       "canonical_relation": "Related turnover family only; neither a completed M270 test nor an M178 liquidity-proxy test."
+    },
+    {
+      "id": "TT23-FP-EXEC",
+      "title": "Resting book versus executed footprint sides",
+      "method_type": "source_feature",
+      "testable_rule": "Resting bid holds buyers and ask holds sellers; a market sell executes at bid and market buy at ask. The example spread is one tick.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 00:08-00:28. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "A feature definition only; no entry, exit, stop, instrument, duration or predictive hypothesis supplied.",
+      "required_inputs": [
+        "Executed trade price, size and aggressor side, with venue tick and size units; L2 liquidity is a different observation."
+      ],
+      "blockers": [
+        "A feature definition only; no entry, exit, stop, instrument, duration or predictive hypothesis supplied."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@obsid__/video/7691383892095290646",
+          "label": "Full received ASR, 00:08-00:28; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "9467bdaa63e75b615c1c4c26e47db63335c3054d072470d42568edf96e9641c5",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-FP-DELTA",
+      "title": "Per-price footprint volume and delta",
+      "method_type": "source_feature",
+      "testable_rule": "At a price row, total volume=executed bid+ask size and delta=ask-bid. Caption quantities38/112 imply150 total and+74 delta. The ASR spoken-total phrase at39.080-42.040 is ambiguous, not a verified speaker error.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 00:28-00:49. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "No complete trading rule or validated profitability; audio/frames not inspected. Positive delta alone is not an entry.",
+      "required_inputs": [
+        "Same venue/contract units and aggressor-labelled executions at each price; caption arithmetic is not a transcript correction."
+      ],
+      "blockers": [
+        "No complete trading rule or validated profitability; audio/frames not inspected. Positive delta alone is not an entry."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@obsid__/video/7691383892095290646",
+          "label": "Full received ASR, 00:28-00:49; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "9467bdaa63e75b615c1c4c26e47db63335c3054d072470d42568edf96e9641c5",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-FP-DIAGONAL",
+      "title": "Diagonal footprint imbalance near3:1",
+      "method_type": "source_feature",
+      "testable_rule": "Compare ask volume at price p with bid volume at p-one tick for buying imbalance; reverse the sides/direction for selling. The112:30 example is described as more than three times.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 00:50-01:04. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Equality at3, minimum volume, aggregation, stacked levels and trade entry/exit are unspecified. Not book OFI and not a stacked-imbalance strategy.",
+      "required_inputs": [
+        "Signed executions by price/tick and bar; explicit handling of missing rows and zero denominator."
+      ],
+      "blockers": [
+        "Equality at3, minimum volume, aggregation, stacked levels and trade entry/exit are unspecified. Not book OFI and not a stacked-imbalance strategy."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@obsid__/video/7691383892095290646",
+          "label": "Full received ASR, 00:50-01:04; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "9467bdaa63e75b615c1c4c26e47db63335c3054d072470d42568edf96e9641c5",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-FP-BAR",
+      "title": "Aggregate footprint delta within one candle",
+      "method_type": "source_feature",
+      "testable_rule": "Sum price-row deltas within the candle; a positive example is interpreted as more aggressive buying.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 01:04-01:16. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Candle delta is not CVD across candles. Absorption/divergence/stacked-imbalance strategies are not supplied in this first video.",
+      "required_inputs": [
+        "Complete same-bar executed price-level volumes and causal bar boundaries."
+      ],
+      "blockers": [
+        "Candle delta is not CVD across candles. Absorption/divergence/stacked-imbalance strategies are not supplied in this first video."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@obsid__/video/7691383892095290646",
+          "label": "Full received ASR, 01:04-01:16; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "9467bdaa63e75b615c1c4c26e47db63335c3054d072470d42568edf96e9641c5",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-BUILD",
+      "title": "Completed prior-session profile with70percent value and400requested rows",
+      "method_type": "source_scope",
+      "testable_rule": "Fixed-range profile from first to last candle of previous completed session; freeze POC/VAH/VAL for today. Exchange-time intraday chart, examples5/15/60min; value share70%, requested row count400. Avoid visible/current developing range. Colors are display choices.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 02:58-05:30. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "400rows is a source setting, not evidence of improved accuracy/profit. Source does not specify bin allocation/ties; R290 fixed5bp bins are not the same profile.",
+      "required_inputs": [
+        "Specified venue/session/timezone, price-level volume feed, lower timeframe selection, tick rounding and profile algorithm."
+      ],
+      "blockers": [
+        "400rows is a source setting, not evidence of improved accuracy/profit. Source does not specify bin allocation/ties; R290 fixed5bp bins are not the same profile."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 02:58-05:30; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-POC",
+      "title": "POC reaction after prior close outside value",
+      "method_type": "source_scope",
+      "testable_rule": "Require previous session close outside its value area, wait for return to POC and directional rejection; short on bearish rejection, long on the inverse. Confirmation closes before action.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 06:28-07:03. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "No exact confirmation count or numerical exits. First-touch, cluster entry and volume/illustration variants are preserved separately rather than silently stacked.",
+      "required_inputs": [
+        "Causal prior profile and intraday prices; numerical reaction/entry, stop buffer, horizon and risk-reward choices."
+      ],
+      "blockers": [
+        "No exact confirmation count or numerical exits. First-touch, cluster entry and volume/illustration variants are preserved separately rather than silently stacked."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 06:28-07:03; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-CLUSTER",
+      "title": "POC heavy-volume cluster edge as entry zone",
+      "method_type": "source_scope",
+      "testable_rule": "Treat POC as a zone; enter long at upper edge or short at lower edge of its heavy-volume cluster to catch reactions before the POC line itself.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 07:03-07:42. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Cluster extraction, tolerance and order precedence are absent. Cannot assume an early cluster limit fills at a later confirmation close.",
+      "required_inputs": [
+        "Deterministic cluster boundaries/width and limit-versus-confirmed-entry ordering, plus queue/fill assumptions."
+      ],
+      "blockers": [
+        "Cluster extraction, tolerance and order precedence are absent. Cannot assume an early cluster limit fills at a later confirmation close."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 07:03-07:42; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-FIRST",
+      "title": "First return only at prior POC",
+      "method_type": "source_scope",
+      "testable_rule": "Take only the first return to the POC zone; later returns are skipped.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 07:42-08:00. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "First-touch definition and reset are unspecified; historical touches cannot be inferred from a sparse candle with unknown path.",
+      "required_inputs": [
+        "Completed prior profile; defined touch tolerance, zone and reset/session rule."
+      ],
+      "blockers": [
+        "First-touch definition and reset are unspecified; historical touches cannot be inferred from a sparse candle with unknown path."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 07:42-08:00; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-CONFIRM",
+      "title": "Directional closed-candle and rising-volume confirmation",
+      "method_type": "source_scope",
+      "testable_rule": "Wick rejection OR engulfing may confirm; signal candle must close in trade direction and have volume greater than preceding candle. Act only after completion.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 08:00-08:23. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Whether upgrades combine with every POC example is unclear; numerical candle thresholds and same-bar execution remain open.",
+      "required_inputs": [
+        "Bar OHLC/volume and causal closes; exact wick/engulfing geometry and entry delay."
+      ],
+      "blockers": [
+        "Whether upgrades combine with every POC example is unclear; numerical candle thresholds and same-bar execution remain open."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 08:00-08:23; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-TWO-RED",
+      "title": "Illustrative POC rejection followed by two red candles",
+      "method_type": "source_scope",
+      "testable_rule": "One bearish chart example has a wick above POC closing below, then two red candles, short entered at close, stop behind cluster and fixed-R target.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 13:47-14:04. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "This illustrated confirmation differs from the generic wick-or-engulfing plus rising-volume statement; no unseen performance is established.",
+      "required_inputs": [
+        "Defined example-to-general mapping, close for entry and cluster/stop/risk-reward parameters."
+      ],
+      "blockers": [
+        "This illustrated confirmation differs from the generic wick-or-engulfing plus rising-volume statement; no unseen performance is established."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 13:47-14:04; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-EDGE-POC",
+      "title": "Value-area edge reaction toward POC",
+      "method_type": "source_scope",
+      "testable_rule": "General reaction-versus-acceptance explanation links rejection at a value-area edge to a move back toward POC.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 05:58-06:09. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Retain this POC target separately from the later fixed-R and opposite-edge exits; the explanatory passage is not a complete strategy.",
+      "required_inputs": [
+        "Numerical rejection, direction, entry/stop and POC-target execution; prior profile."
+      ],
+      "blockers": [
+        "Retain this POC target separately from the later fixed-R and opposite-edge exits; the explanatory passage is not a complete strategy."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 05:58-06:09; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-REENTRY",
+      "title": "Value-area excursion and close back inside",
+      "method_type": "source_scope",
+      "testable_rule": "Previous session closes INSIDE its value area. Today leaves above VAH or below VAL, then closes back inside; enter toward value, stop near the outside swing, fixed risk-reward target. Can repeat during the session.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 08:29-09:11. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "R290 VA80 instead starts outside and requires two30min inside marks. It does not test this previous-close-inside, repeated close-reentry rule.",
+      "required_inputs": [
+        "Previous-close condition, causal profile, swing/stop/RR/acceptance definitions and repeat/concurrent-position policy."
+      ],
+      "blockers": [
+        "R290 VA80 instead starts outside and requires two30min inside marks. It does not test this previous-close-inside, repeated close-reentry rule."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 08:29-09:11; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-FAR-EDGE",
+      "title": "Opposite value-area edge target for reentry",
+      "method_type": "source_scope",
+      "testable_rule": "Alternative to fixed-R exit: a reentry from below targets VAH; from above targets VAL. Require actual closes/acceptance inside, not a wick.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 09:11-09:41. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Singular entry-close and plural acceptance language are unresolved; a far-edge target does not itself establish the claimed frequency of traversals.",
+      "required_inputs": [
+        "Inside-acceptance count, first eligible close, outside swing stop and order/path conventions."
+      ],
+      "blockers": [
+        "Singular entry-close and plural acceptance language are unresolved; a far-edge target does not itself establish the claimed frequency of traversals."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 09:11-09:41; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-BREAKOUT",
+      "title": "Value-area breakout, holding pullback and structure trigger",
+      "method_type": "source_scope",
+      "testable_rule": "No previous-close state restriction. Strong break outside value, pullback holding near boundary without deep reentry, then higher-high/lower-low structure break entry; stop beyond structure, fixed-R target.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 09:54-10:28. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "All key discretionary thresholds remain missing; distinct from R290 IB/OR breaks and fixed holding periods.",
+      "required_inputs": [
+        "Numerical strength, pullback depth/expiry, swing/BOS definition, entry/stop delay and fixed RR."
+      ],
+      "blockers": [
+        "All key discretionary thresholds remain missing; distinct from R290 IB/OR breaks and fixed holding periods."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 09:54-10:28; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-BREAK-VOLUME",
+      "title": "Candle-size by volume filter for continuation",
+      "method_type": "source_scope",
+      "testable_rule": "Prefer large candle with large volume; reject small candle with huge volume (called absorption) and low-volume drift (called no supply).",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 10:28-11:01. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Body versus total range is NOT specified. No absorption detector or proof of participant intention follows from these labels.",
+      "required_inputs": [
+        "Candle size metric, volume normalization window/cutoffs and a frozen acceptance rule."
+      ],
+      "blockers": [
+        "Body versus total range is NOT specified. No absorption detector or proof of participant intention follows from these labels."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 10:28-11:01; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-NAKED-TARGET",
+      "title": "Older historically untouched POC as breakout target",
+      "method_type": "source_scope",
+      "testable_rule": "Use an older session POC never revisited by price as a target in breakout direction; touched level loses the claimed attraction.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 11:01-11:21. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "R290 NPOC instead trades attraction to the single prior POC untouched in the first60minutes with60/240minute exits. Its NULL does not test this exit.",
+      "required_inputs": [
+        "Maximum age, touch/bin convention, complete intervening prices and choice among competing targets."
+      ],
+      "blockers": [
+        "R290 NPOC instead trades attraction to the single prior POC untouched in the first60minutes with60/240minute exits. Its NULL does not test this exit."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 11:01-11:21; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-BARRIER",
+      "title": "Stop behind cluster and take-profit before next cluster",
+      "method_type": "source_scope",
+      "testable_rule": "Place stop beyond far edge of heavy-volume barrier into low-volume area; take profit before near edge of next heavy-volume zone.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 11:30-12:05. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "A shared exit/risk variant, not permission to assume favorable barrier fills or combine all exits after seeing outcomes.",
+      "required_inputs": [
+        "HVN/LVN/cluster extraction, buffers, target direction, order-path ambiguity and precedence over other exits."
+      ],
+      "blockers": [
+        "A shared exit/risk variant, not permission to assume favorable barrier fills or combine all exits after seeing outcomes."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 11:30-12:05; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-SEQUENCE",
+      "title": "Bias from successive prior-session POCs",
+      "method_type": "source_scope",
+      "testable_rule": "Two successively higher POCs favor bullish bounces/breakouts; two lower favor bearish. First contrary POC warns, second changes bias.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 16:37-17:06. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "No position sizing or leverage rule is supplied; the ambiguous state count must be frozen before outcomes.",
+      "required_inputs": [
+        "Exact sequence state, two-increases versus two-profiles reading, neutral/reset handling and filter versus weighting."
+      ],
+      "blockers": [
+        "No position sizing or leverage rule is supplied; the ambiguous state count must be frozen before outcomes."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 16:37-17:06; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-VP-SWITCH",
+      "title": "Failed reentry followed by qualifying opposite breakout",
+      "method_type": "source_scope",
+      "testable_rule": "Same-session example loses a value-area reversal, then takes a newly confirmed opposite breakout. Do not replace this with an automatic loss-recovery entry.",
+      "status": "blocked",
+      "exact_tested_scope": "Complete public automatic captions read, passage 15:39-16:28. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "The introduction says one setup is right each day, but the worked example uses two. No martingale, increased size or guaranteed loss recovery is specified.",
+      "required_inputs": [
+        "Finite state machine, arbitration, stop/entry ordering, rearm/concurrency and common capital/risk budget with all costs."
+      ],
+      "blockers": [
+        "The introduction says one setup is right each day, but the worked example uses two. No martingale, increased size or guaranteed loss recovery is specified."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 15:39-16:28; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
+    },
+    {
+      "id": "TT23-TOOLS",
+      "title": "Named tools, explanations and validation marketing",
+      "method_type": "source_scope",
+      "testable_rule": "TradingView profiles and Volfix visualization/promotion are named; Volfix is claimed to reconstruct sliced orders and overlay absorption/events. A discount/trial and backtest guide are promoted; three chart examples are explicitly said insufficient proof. No GitHub repository is named in either caption file.",
+      "status": "partial",
+      "exact_tested_scope": "Complete public automatic captions read, passage 00:00-00:55;12:14-13:20;17:46-18:25. Source extraction and bounded arithmetic only; no audio/frames or strategy outcome inspected.",
+      "unrun_scope": "Institutional identities, volume being hard to manipulate, hidden-order reconstruction, free plan/discount and profitable performance are unverified claims. Quantower is corroborating documentation, NOT a tool named in the videos.",
+      "required_inputs": [
+        "Official documentation and feed/access validation before assuming capabilities; no payment, account, guide or installation obtained."
+      ],
+      "blockers": [
+        "Institutional identities, volume being hard to manipulate, hidden-order reconstruction, free plan/discount and profitable performance are unverified claims. Quantower is corroborating documentation, NOT a tool named in the videos."
+      ],
+      "next_action": "Preserve this exact source variant; freeze missing mechanics and finite controls/costs before any market outcome. Do not treat a related NULL as complete exclusion.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "label": "Full received ASR, 00:00-00:55;12:14-13:20;17:46-18:25; not audiovisual verification"
+        }
+      ],
+      "source_version": {
+        "intake_id": "owner_tiktok_footprint_profile_20261023",
+        "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+        "captured_utc_date": "2026-10-23"
+      }
     }
   ],
   "sources": [
@@ -12620,6 +13160,193 @@
         "Existing spent samples remain spent. A future finite specification/code must be frozen before outcomes; preserve all nulls and genuine prospective evidence."
       ],
       "market_trials": 0
+    },
+    {
+      "intake_id": "owner_tiktok_footprint_profile_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [
+        "TT23-FP-EXEC",
+        "TT23-FP-DELTA",
+        "TT23-FP-DIAGONAL",
+        "TT23-FP-BAR",
+        "TT23-VP-BUILD",
+        "TT23-VP-POC",
+        "TT23-VP-CLUSTER",
+        "TT23-VP-FIRST",
+        "TT23-VP-CONFIRM",
+        "TT23-VP-TWO-RED",
+        "TT23-VP-EDGE-POC",
+        "TT23-VP-REENTRY",
+        "TT23-VP-FAR-EDGE",
+        "TT23-VP-BREAKOUT",
+        "TT23-VP-BREAK-VOLUME",
+        "TT23-VP-NAKED-TARGET",
+        "TT23-VP-BARRIER",
+        "TT23-VP-SEQUENCE",
+        "TT23-VP-SWITCH",
+        "TT23-TOOLS"
+      ],
+      "canonical_methods": [
+        "M404",
+        "M405",
+        "M406",
+        "M407",
+        "M408"
+      ],
+      "media_source_count": 2,
+      "media_sources": [
+        {
+          "url": "https://www.tiktok.com/@obsid__/video/7691383892095290646",
+          "short_url": "https://vm.tiktok.com/ZGdCt5sdM/",
+          "basis": "Complete public French WebVTT ASR; no audio/frames.",
+          "author": "obsid__ / Dualis Flow",
+          "duration_s": 82,
+          "caption_source": "ASR 1:whisper_lid fra-FR",
+          "caption_bytes": 2484,
+          "caption_sha256": "9467bdaa63e75b615c1c4c26e47db63335c3054d072470d42568edf96e9641c5",
+          "item_sha256": "55118a2e7692fcf2309b51c1e2498bc0aca99721a5e912a47246bf820b8faba6",
+          "html_sha256_reported_by_reader": "9de66ab82230f7164d72b9d6f98a64e3f9e2984133cc6c8e5642e8d9c4a004fe",
+          "limitation": "Ordinary published MP4/CDN variants returned403 or HTML; arithmetic wording at39seconds unverified. No access-control bypass."
+        },
+        {
+          "url": "https://www.tiktok.com/@user1239509627/video/7699633629739207967",
+          "short_url": "https://vm.tiktok.com/ZGdCtmn4D/",
+          "basis": "Complete public English WebVTT ASR;3259 words, no audio/frames.",
+          "author": "user1239509627 / Trade DNA",
+          "duration_s": 1107,
+          "caption_source": "ASR 1:big_caption eng-US",
+          "caption_bytes": 27592,
+          "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
+          "html_sha256": "8418af8b66b34974cd16903422e7901620e60f3dc63c126d8fdffb3bb9808ff0",
+          "limitation": "Captions only; discretionary chart gestures/example fills and external guide not inspected."
+        }
+      ],
+      "primary_checks": [
+        {
+          "key": "tv_fixed",
+          "url": "https://www.tradingview.com/support/solutions/43000480324-fixed-range-volume-profile-indicator/",
+          "status": 200,
+          "bytes": 561080,
+          "sha256": "144e473028741fedb62daaebd0309f62948f20108e5fbf4be77afcbd4e5b8ea0",
+          "received_scope": "Calculation/row/tick/volume inputs only; plan availability and runtime not tested."
+        },
+        {
+          "key": "tv_concepts",
+          "url": "https://www.tradingview.com/support/solutions/43000502040-volume-profile-indicators-basic-concepts/",
+          "status": 200,
+          "bytes": 584327,
+          "sha256": "acaa42f3fbc6fe76a60812569abd2dc14a3ab43fc2be1bd6221f1a944440c35c",
+          "received_scope": "Volume type, candle-direction split, level definitions and value-area procedure; marketing/example returns not adopted."
+        },
+        {
+          "key": "volfix",
+          "url": "https://volfix.net/cluster-profile/",
+          "status": 200,
+          "bytes": 155700,
+          "sha256": "aa8cecd37e4d11a43de381999c2dea422f6279ba4a46d22e2df29c64d4023b1a",
+          "received_scope": "Cluster-profile capability text only, not hidden trader identity, installed runtime, data access or performance."
+        },
+        {
+          "key": "quantower",
+          "url": "https://help.quantower.com/quantower/analytics-panels/chart/volume-analysis-tools/cluster-chart.md",
+          "status": 200,
+          "bytes": 11165,
+          "sha256": "e66a59502fe566a557ed1113e3196a6345e3e8eae32cf251b4109e93ef90d19a",
+          "received_scope": "Cluster definition, diagonal aggressor-side conventions and data-type definitions only; not the original video tool."
+        }
+      ],
+      "exact_prior_scope": {
+        "R290": "Frozen source read only:5bp proxy bins, VA80 outside-start/two30min marks, prior first-hour NPOC attraction, one trade/session and fixed60/240minute holds. Original NULL untouched."
+      },
+      "synthetic_identification_check": {
+        "scope": "Invented data, no market outcomes. Same OHLCV, quote volume, trade count and total aggressor-buy size permit different price-level POCs.",
+        "histories": [
+          {
+            "prices": [
+              101,
+              100,
+              102,
+              101
+            ],
+            "sizes": [
+              1,
+              50,
+              40,
+              9
+            ],
+            "aggressor": [
+              "buy",
+              "buy",
+              "buy",
+              "buy"
+            ]
+          },
+          {
+            "prices": [
+              101,
+              100,
+              102,
+              101
+            ],
+            "sizes": [
+              1,
+              20,
+              10,
+              69
+            ],
+            "aggressor": [
+              "buy",
+              "buy",
+              "buy",
+              "buy"
+            ]
+          }
+        ],
+        "results": [
+          {
+            "ohlcv": [
+              101,
+              102,
+              100,
+              101,
+              100
+            ],
+            "quote_volume": 10090,
+            "trades": 4,
+            "aggressive_buy_volume": 100,
+            "profile": {
+              "101": 10,
+              "100": 50,
+              "102": 40
+            },
+            "poc": 100
+          },
+          {
+            "ohlcv": [
+              101,
+              102,
+              100,
+              101,
+              100
+            ],
+            "quote_volume": 10090,
+            "trades": 4,
+            "aggressive_buy_volume": 100,
+            "profile": {
+              "101": 70,
+              "100": 20,
+              "102": 10
+            },
+            "poc": 101
+          }
+        ],
+        "conclusion": "Aggregates do not uniquely recover signed footprint or exact traded-price profile. Finer row count cannot restore missing trade locations; proxy profile remains a separate model."
+      },
+      "access": "Only ordinary public HTML, page-provided captions and selected official docs. No login, subscription bypass, purchased feed, repository code or model download.",
+      "preserved": "All279 preexisting source records,279aliases,320queue rows, source histories, frozen files, R290NULL and journals retained. Five canonical groups append only; no competing queue/panel.",
+      "trials": 0,
+      "market_outcomes_computed": false,
+      "unread_scope": "Media audio/frames; account histories; promoted guide/Discord; other videos; software implementation, datasets, fills and performance."
     }
   ],
   "reassignment_refs": [

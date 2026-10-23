@@ -2,7 +2,16 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 279 source records/aliases and 54 catalog/tool entries, reconciled to 319 queue rows on base `5bb9309`. Counts in older pass descriptions below refer to their historical snapshots. This is bounded extraction, not complete library coverage or strategy validation.
+Current received scope:299 source records/aliases and54 catalog/tool entries, reconciled to325 queue rows.
+The2026-10-23 owner TikToks add20 caption scopes and five method groups; M403 separately records the capital study.
+All279 earlier source records and their versions remain intact. Counts in older pass descriptions below refer
+to historical snapshots. This is bounded extraction, not complete library coverage or strategy validation.
+
+Latest owner-video intake: `owner_tiktok_footprint_profile_20261023` in the existing JSON. Both complete public
+ASR files were read, with hashes and exact timestamps; audio/frames were not inspected. Footprint definitions
+are retained as features, and M404–M408 preserve profile reaction/reentry/breakout, POC bias and stateful variants
+without treating R290's related NULL as complete exclusion. A two-history synthetic check shows that identical
+OHLCV/quote-volume/count/aggressor totals can conceal different price-level POCs. Zero new market trials.
 
 `source_catalog_20261020.csv` contains 30 provider or publisher entry points across market microstructure, options, on-chain lending/MEV, macro vintages, news, institutional data and practitioner media. Each row states the actual received scope, access boundary, existing queue relationship and unresolved verification. This is a source directory, not another methods queue: catalog discovery does not mean full-text extraction, possession of a dataset or a tested trading rule. No paid/private corpus was accessed, purchased or bypassed. Subscription prices, trial eligibility and MEXC-specific coverage are not assumed.
 
