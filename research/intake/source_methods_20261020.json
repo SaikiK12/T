@@ -12427,6 +12427,94 @@
       ],
       "controls": "Any future rule needs a new finite preregistration before outcomes, separate ex-post event and prospective-risk scopes, appropriate market/time-matched controls, full1x/2x/3x execution costs and genuinely new paper observations. No original source profit or MEXC profitability inferred.",
       "market_trials": 0
+    },
+    {
+      "intake_id": "kalshi_history_availability_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [],
+      "canonical_methods": [
+        "M098"
+      ],
+      "source_manifest": [
+        {
+          "url": "https://docs.kalshi.com/getting_started/historical_data.md",
+          "filename": "historical_data.md",
+          "bytes": 6281,
+          "sha256": "2aa0e4ab7af1c1aafa1de0a1f7f0197cca4e3689ddf35c45130899031580bb99"
+        },
+        {
+          "url": "https://docs.kalshi.com/api-reference/historical/get-historical-cutoff-timestamps.md",
+          "filename": "get-historical-cutoff-timestamps.md",
+          "bytes": 6420,
+          "sha256": "a50b953d229f1117ed7fffa48a9e5bfddbce087c2c6cefbaa5b8f03188c2e45a"
+        },
+        {
+          "url": "https://docs.kalshi.com/api-reference/historical/get-historical-market-candlesticks.md",
+          "filename": "get-historical-market-candlesticks.md",
+          "bytes": 9866,
+          "sha256": "12b4d68411e91251adc4b7fd8b4fb99af20ae5c5786c0ee485381d2b9fe97842"
+        },
+        {
+          "url": "https://docs.kalshi.com/api-reference/historical/get-historical-trades.md",
+          "filename": "get-historical-trades.md",
+          "bytes": 10973,
+          "sha256": "eca34229c0f15738872c26615a63a31b7a30e4a4786f6891192a6a73169251c0"
+        }
+      ],
+      "discovery_index": {
+        "url": "https://docs.kalshi.com/llms.txt",
+        "bytes": 66549,
+        "sha256": "a81905749924130931c2f73fe28bc4b8157a1abd69f5f62d290599acf17a7307",
+        "scope": "Link discovery only; index entries are not full page reviews."
+      },
+      "received_scope": "Four official Markdown pages: Historical Data guide and OpenAPI endpoint/response schemas for historical cutoff, market candlesticks and public trades. Endpoint excerpts identify OpenAPI3.0.0 manual spec3.34.0. Current mutable docs, exact response hashes retained; no historical API request, trade record, book, credential or authenticated portfolio accessed. Linked live endpoints, market resolution/fees, order direction guide and pagination guide remain unread.",
+      "distinct_received_mechanics": [
+        {
+          "scope": "Live/archive split",
+          "rule": "Read /historical/cutoff and retain its raw payload/time; do not assume one date for all data. market_settled_ts partitions market/candle location by settlement time, not by the age of a candle; trades_created_ts partitions transactions by execution time. An old observation on an unsettled market is not thereby historical. Events/series remain on original endpoints; nested markets can disappear after archival."
+        },
+        {
+          "scope": "Completeness across a moving partition",
+          "rule": "Guide requires corresponding live and historical reads for partitioned records. It explicitly states two position reads are not one snapshot; that account example is not a public-trade completeness proof. Future public ingestion must validate both stores near a changing cutoff, cursor exhaustion/loops, overlap, identity and repeated handoff reconciliation. Missing endpoint data alone is not proof of no trade or a resolved zero-probability outcome."
+        },
+        {
+          "scope": "Candle semantics and units",
+          "rule": "Historical candle path is /historical/markets/{ticker}/candlesticks; start_ts/end_ts filter inclusive candle END timestamps. period_interval minutes is1/60/1440. end_period_ts is inclusive end, not open/receipt time. yes_bid/yes_ask offer OHLC are separate from trade-price OHLC; trade fields may be null if no trade, and previous may be null without prior trade. Preserve unknowns. Prices are fixed-point dollar strings, counts fixed-point contract strings with fractional contracts; do not divide dollars by100 again or cast counts to integer. OHLC has no event ordering/queue/fill truth."
+        },
+        {
+          "scope": "Public trades versus private fills",
+          "rule": "/historical/trades includes all public market trades including blocks by default; is_block_trade filter/field separates block and on-book. It has trade_id/ticker, fractional count_fp, separate yes/no dollar prices, created_time execution clock and taker outcome/book side. This is not /historical/fills, which the guide describes as user-scoped. Cursor limit defaults100/max1000; exhaust returned cursor. Documented min_ts/max_ts say after/before but exact equality treatment is not established here; use explicit boundary fixtures before coverage claims."
+        },
+        {
+          "scope": "Direction and availability",
+          "rule": "Trade schema describes taker_outcome_side=yes for buy-yes or sell-no and no for buy-no or sell-yes; taker_book_side is the corresponding directional bit. Legacy taker_side is deprecated. Preserve named prices and side without inferring every no-direction trade is a no-price purchase; exact conversion needs the unread order-direction contract and fixtures. created_time does not prove original feed arrival. Capture request/response/first-seen, market identity/rule versions and revisions before any MEXC decision join."
+        },
+        {
+          "scope": "Access and strategy boundary",
+          "rule": "Selected public historical OpenAPI excerpts declare security:[]. This is documented schema only, not observed live API permission/coverage, region entitlement or trading authorization. Private account paths mentioned in the guide were not called. M098 prediction-market-to-MEXC signal lacks exact event mapping/direction/window/threshold and an executable lag. M291 Polymarket No-bias is a different venue/rule and is not validated or transported by these Kalshi pages."
+        }
+      ],
+      "future_input_contract": [
+        "market_ticker_and_event_identity",
+        "point_in_time_resolution_rules_and_status",
+        "endpoint_live_or_historical",
+        "cutoff_payload_hash_and_observation_clock",
+        "request_parameters_without_secrets_and_page_cursor_chain",
+        "raw_page_hashes_and_coverage_receipt",
+        "trade_id_or_ticker_interval_end_key",
+        "explicit_dollars_and_fractional_contract_units",
+        "source_execution_or_period_end_clock",
+        "request_response_first_seen_utc",
+        "dedup_revision_and_boundary_policy",
+        "MEXC_symbol_mapping_and_executable_decision_cutoff"
+      ],
+      "limits": [
+        "No claimed historical dataset possession or full API/library review.",
+        "Latest market settlement rules/results cannot silently label the historical information set. No surviving-market-only selection.",
+        "Future finite preregistration must fix event-to-coin mapping, availability, no-event/time-matched controls, nulls, family/trial count and full1x/2x/3x MEXC costs; require fresh prospective paper evidence."
+      ],
+      "reconciliation": "M098 remains BLOCKED with no archive held; appended note points to this exact data contract. No new strategy/alias/catalog row, no M291 change and no market outcomes.",
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [
