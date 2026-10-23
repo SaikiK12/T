@@ -12225,6 +12225,108 @@
         "Current Claude reel additions remain in the authoritative document with explicit source-review/drift warnings; no complete re-extraction claimed."
       ],
       "market_trials": 0
+    },
+    {
+      "intake_id": "alfred_vintage_availability_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [],
+      "source_manifest": [
+        {
+          "name": "realtime_period.html",
+          "url": "https://fred.stlouisfed.org/docs/api/fred/realtime_period.html",
+          "bytes": 34614,
+          "sha256": "2932927e5365c65d8d446562358642af7f598cf80fed1e031d1421ffcfb07430"
+        },
+        {
+          "name": "series_observations.html",
+          "url": "https://fred.stlouisfed.org/docs/api/fred/series_observations.html",
+          "bytes": 66477,
+          "sha256": "8cfd783ceb68a03eaf819e19424f92f7accbaa6ec3b7316c902c5f64dc0964ed"
+        },
+        {
+          "name": "series_vintagedates.html",
+          "url": "https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html",
+          "bytes": 46844,
+          "sha256": "40e4981d9430312342ff170cd8f4ee51ff4979094aae2c9306898d36654ebfab"
+        },
+        {
+          "name": "release_dates.html",
+          "url": "https://fred.stlouisfed.org/docs/api/fred/release_dates.html",
+          "bytes": 37569,
+          "sha256": "1b995ad5d1121ab00b5025d1b0b39e1d0b8741c6cb6f4dad6684388f0e06bed2"
+        },
+        {
+          "name": "api_key.html",
+          "url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+          "bytes": 31080,
+          "sha256": "ba6860bcbe6bf175f9dfdb6a666ea0ad9edafa39a23055fefdf6008fbd3d01a9"
+        }
+      ],
+      "manifest_hash_scope": "Exact received HTML bytes; mutable official documentation, not market data or an immutable upstream commit. Raw HTML retained in session scratch only, not mirrored into Git.",
+      "received_scope": "Five official API v1 pages: real-time-period introduction, observations parameter definitions, vintage-date description/parameters, release-date description/parameters and API-key policy. Examples inspected for response structure, not treated as acquired observations. The erroneous /docs/api/fred/api_key.html URL served a generic API overview; excluded from evidentiary manifest and replaced with the linked /docs/api/api_key.html. No API request, series history, release archive, source paper or trading outcome received.",
+      "canonical_methods": [
+        "M094"
+      ],
+      "distinct_received_mechanics": [
+        {
+          "scope": "As-of revised macro levels",
+          "mechanics": "Real-time start/end are inclusive YYYY-MM-DD boundaries. Observations default both to today, so an observation_start in the past alone still returns currently known history. For a historical day D, explicitly request realtime_start=D and realtime_end=D with output_type=1; preserve the observation date separately. This is a day-vintage request, not proof of intraday availability."
+        },
+        {
+          "scope": "Cross-vintage snapshots and revision events",
+          "mechanics": "output_type=2 gives all observations by vintage date; output_type=3 gives only new/revised observations. The latter is a delta stream, not a full snapshot; retaining prior state and missing-value semantics needs a separately tested reconstruction contract. vintage_dates may include a date with no revision and can replace realtime_start/end. JSON/XML requests allow up to 2000 vintage dates; page/chunk and prove completeness rather than assume one call suffices."
+        },
+        {
+          "scope": "Initial-release-only values",
+          "mechanics": "output_type=4 is Initial Release Only. This is a distinct input representation, not interchangeable with the latest value known at each decision. Initial release values do not supply consensus expectations; no CPI-surprise strategy can be inferred without a timestamped expectations archive."
+        },
+        {
+          "scope": "Revision calendar versus release calendar",
+          "mechanics": "series/vintagedates enumerates dates with new/revised values and excludes release dates with unchanged data. Missing vintage is therefore not proof of no release. release/dates explicitly warns source release dates need not equal availability on FRED/ALFRED. include_release_dates_with_no_data defaults false; true may include future calendar dates, which are not data receipts."
+        },
+        {
+          "scope": "Units, aggregation and pagination",
+          "mechanics": "Observations default units=lin and no frequency aggregation. Record series units/seasonal adjustment and requested transforms; a monthly series cannot be upsampled to daily via the frequency parameter. Lower-frequency aggregation defaults avg when requested, and avg/sum/eop are different inputs. Observations limit up to100000 with offset; vintage dates limit up to10000. Response count/offset/limit and all page hashes must be reconciled before coverage is asserted."
+        },
+        {
+          "scope": "Credential/access boundary",
+          "mechanics": "API v1 documentation says all web-service requests require an API key; viewing/requesting a key requires login, and each user/application has the stated key obligations. Public documentation does not establish credential readiness or authorize accessing secret values. No key inspected/requested and no API called."
+        }
+      ],
+      "future_input_contract": {
+        "fields": [
+          "series_id",
+          "native_frequency",
+          "units",
+          "seasonal_adjustment",
+          "observation_date",
+          "value_or_explicit_missing",
+          "realtime_start",
+          "realtime_end",
+          "requested_vintage",
+          "output_type",
+          "transformation_and_aggregation",
+          "request_parameters_without_secrets",
+          "payload_sha256",
+          "page_count_and_coverage",
+          "source_release_evidence_and_precision",
+          "request_started_utc",
+          "response_received_utc",
+          "first_seen_utc",
+          "decision_cutoff_utc"
+        ],
+        "fail_closed": "Do not assign a day-vintage value to midnight or to a scheduled source release clock. Intraday MEXC use needs actual availability evidence and series-specific lag/clock validation. A prospective local receipt proves no earlier historical availability. If only day-level availability is established, any conservative delayed-day convention must be explicitly preregistered as a modeling assumption, not relabeled original publication truth."
+      },
+      "reconciliation": "M094 remains BLOCKED, with no macro values held and no executable lambda_m formula. SRC26-007 previously listed M096/M194 as broad context; news alpha and cross-asset trend are not tested or mechanistically supplied by these API pages. Retain that earlier catalog association here as provenance; use M094 for the current exact dependency. No method/alias added and no prior verdict changed.",
+      "missing_mechanics": [
+        "Exact series selection and historical vintage coverage; not every series or pre-ALFRED period is verified.",
+        "Original publication/availability timestamps and timezone/DST policy; no blanket daily-to-intraday inference.",
+        "MacroHFT lambda_m formula, entry/exit/size/hedge and finite parameter grammar.",
+        "Expectations archive if measuring announcement surprise; observed levels/revisions are not surprise.",
+        "Executable MEXC universe/prices/funding/fills and complete cost controls."
+      ],
+      "controls": "Before any outcome: freeze finite mapping/code, availability and missingness policies, family/trial count, no-macro/time-matched controls, 1x/2x/3x complete costs and fresh prospective validation. This documentation pass computes no market statistic and does not create a study.",
+      "market_trials": 0
     }
   ],
   "reassignment_refs": [

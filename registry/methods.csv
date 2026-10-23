@@ -92,7 +92,7 @@ M090,MEXC next-funding-rate revision vs no-change forecast of the settled rate,N
 M091,Exchange-wallet netflow: net deposits to labelled exchange wallets,N on-chain wallet labels,BLOCKED,3,Source and coverage audit first (point-in-time labels).,NEXT #5,-
 M092,"Token-supply pressure, active addresses, holder concentration, Google-Trends attention (cross-section papers)",N on-chain and search series,BLOCKED,3,Needs vintage-aware timestamps.,XS; MKT,-
 M093,"Market-cap size factor (Liu, Tsyvinski & Wu)","Y data/daily (mcap_est, Coin Metrics free-float cap)",TESTED,3,Also needed for the factor-zoo rules (Mercik et al.).,XS; ALT,"R282: rank IC +0.046 at 24 h (t 10.4, RC p 0.0005) but the long-large book loses -5.6 bp/day at 1x (median day +8.9 bp); fails the cost leg"
-M094,"Macro-stress sensitivity lambda_m: react to CPI, rates, equity stress (MacroHFT)",N macro series (FRED/BLS) not held,BLOCKED,3,Needs vintage and release timestamps.,"PASTE 2, 4; MKT",-
+M094,"Macro-stress sensitivity lambda_m: react to CPI, rates, equity stress (MacroHFT)",N macro series (FRED/BLS) not held,BLOCKED,3,Needs vintage and release timestamps. ALFRED API v1 contract audited in alfred_vintage_availability_20261023; day vintages do not establish intraday availability; lambda_m formula and series mapping remain absent.,"PASTE 2, 4; MKT",-
 M095,Equity-market stochastic correlation predicts crypto returns (Yae & Tian),N equity index series,BLOCKED,3,"Three assets, daily. Candidate only.",MKT,-
 M096,"News and event feed leads price ('before it becomes news', 500+ feeds)",N news archive,BLOCKED,3,Needs an owner-approved archive.,rDbW,-
 M097,Geopolitical escalation and country-instability indices (World Monitor),N index archive,BLOCKED,3,No archive of the index.,rDbW,-
