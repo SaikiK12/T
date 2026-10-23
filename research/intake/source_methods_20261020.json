@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-23",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -11,7 +11,7 @@
     "Three received-source files differ on the current branch; their added sections are flagged for review rather than silently treated as ingested. Current canonical queue priority/status remains outside this bundle.",
     "Video and public-source intake is limited to accessible captions, official transcripts/recaps, documentation, repository descriptions or indexed summaries; several videos have no verified full transcript. All media claims are leads only, never strategy performance evidence."
   ],
-  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage. XM26 entries are our finite proposals, not exchange-recommended trading rules or measured results. The M283 follow-up audits one pinned secondary implementation; it does not add a method or validate performance.",
+  "scope_notice": "Manual catalog of the explicitly received documents plus two targeted public-media discovery batches (56 public sources total). Every retained lead preserves source basis, exact tested/open scope, aliases and missing mechanics; counts are not measured-market trials. The later account review is bounded separately in supplemental_intakes; it does not claim complete channel coverage. XM26 entries are our finite proposals, not exchange-recommended trading rules or measured results. The M283 follow-up audits one pinned secondary implementation; it does not add a method or validate performance. The 2026-10-23 reel delta reads two supplied public captions plus bounded official Citadel/Jane Street page metadata; the full Jane Street speech was not accessible and no reel audio was transcribed.",
   "status_definitions": {
     "untested": "No completed test of the specified remaining rule; may need mechanical definition.",
     "blocked": "Remaining rule needs named inputs or a precise definition before a valid run.",
@@ -10434,6 +10434,364 @@
         "caption_sha256": "00e79bb8c662703fe210f0574d87dfa688f1aaa19f37914b144ef212d01cfa09",
         "captured_utc_date": "2026-10-23"
       }
+    },
+    {
+      "id": "REEL26-15-MSNR",
+      "parent_claim_id": "REEL26-15",
+      "title": "Malaysian support/resistance: fresh body-pivot fade or breakout",
+      "method_type": "strategy",
+      "hypothesis": "Fresh body-derived swing levels may behave differently from generic pivots when faded at first touch or traded on a body close through.",
+      "testable_rule": "A-level is the close of a bullish candle followed by a bearish candle; V-level is the reverse. A level is fresh until a wick touches it. Fade the first touch or follow a four-hour body close through it, with time or 1:2 ATR exits.",
+      "exact_tested_scope": "Already represented by M323/R306 msnr_v1: 24 registered cells across fade/break, 30/180 four-hour-candle level ages, and 24 h/72 h/1:2 ATR exits on top-50 Binance perps; a secondary 17 MEXC FX/metal/index contracts report was also run. Every crypto book lost in discovery and validation; validation was -6.7 to -62.1 bp/day at 1x. Fade gross was about zero at 24 h and negative at 72 h. This reconciliation did not rerun outcomes.",
+      "unrun_scope": "The reel is a skit and does not specify order placement, risk limits or venue fills. Broader discretionary interpretations and live MEXC execution remain unvalidated; the bounded R306 cells do not exclude every support/resistance rule.",
+      "status": "null",
+      "required_inputs": [
+        "Four-hour OHLC candles and contract metadata; tick-level queue/fill evidence for executable resting-limit versions."
+      ],
+      "blockers": [
+        "The exact source does not specify a complete live order and risk policy; all frozen R306 books failed their costed comparison."
+      ],
+      "next_action": "Preserve R306 NULL and do not repeat these cells unchanged; any new execution variant needs a distinct frozen spec and prospective fills.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Reel 15, bounded speech and rule reconstruction"
+        },
+        {
+          "path": "https://www.luxalgo.com/library/concept/malaysian-snr/",
+          "label": "LuxAlgo public concept rules"
+        },
+        {
+          "path": "https://it.tradingview.com/script/yqRdpnSH-Malaysian-SnR-by-DanielM",
+          "label": "TradingView public script description"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/msnr_v1/FINDINGS.md",
+          "label": "Frozen R306 findings; negative result preserved"
+        }
+      ]
+    },
+    {
+      "id": "REEL26-16-RISK-REVERSAL",
+      "parent_claim_id": "REEL26-16",
+      "title": "25-delta call-put implied-volatility risk reversal as a weekly BTC/ETH signal",
+      "method_type": "signal_component",
+      "hypothesis": "A changing 25-delta option skew may carry information about subsequent crypto returns; the reel itself presents the equity-index skew convention, not a crypto trade specification.",
+      "testable_rule": "Risk reversal is call IV minus put IV at the same 25-delta. The separate lab adaptation tests 30-day/90-day levels and a 7-day change as follow/fade signals for weekly BTC/ETH perpetual returns.",
+      "exact_tested_scope": "Already represented by M174/R307 rrskew_v1: 24 finite cells built from held Deribit option trades, with 30/90-day risk reversal and follow/fade variants, weekly BTC/ETH outcomes, discovery/validation and costs. The selected discovery ETH cell did not survive validation/robustness; no BTC book exceeded |t|=1. This reconciliation did not rerun outcomes.",
+      "unrun_scope": "The SMU dissertation cited in the transcript remains independently unreviewed. Equity-index skew statements do not transfer automatically to crypto; other option venues, assets and holding horizons remain open.",
+      "status": "null",
+      "required_inputs": [
+        "Timestamped option trades/quotes and implied volatility, underlying and futures basis, and exact delta/tenor construction."
+      ],
+      "blockers": [
+        "The reel provides conceptual interview context, not an executable crypto rule; the adaptation and test were separately registered."
+      ],
+      "next_action": "Preserve M174/R307 scope and NULL; verify the cited dissertation before treating it as primary evidence.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Reel 16, translated interview excerpt and scope notes"
+        },
+        {
+          "path": "https://ink.library.smu.edu.sg/etd_coll/887",
+          "label": "Unreviewed dissertation cited by the transcript; not verified by this intake"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/rrskew_v1/FINDINGS.md",
+          "label": "Frozen R307 findings; selected cell fails validation"
+        }
+      ]
+    },
+    {
+      "id": "REEL26-17-STRESS-DIAGNOSTIC",
+      "parent_claim_id": "REEL26-17",
+      "title": "Stress-day and extreme-volatility PnL report for every book",
+      "method_type": "diagnostic",
+      "hypothesis": "Mean-reverting and liquidity-providing books may concentrate losses in market stress, so their episode returns should be compared directly with the mean.",
+      "testable_rule": "Report each book on a fixed named stress-date set and on its worst one percent of market-volatility days; this is a risk diagnostic, not a directional strategy.",
+      "exact_tested_scope": "M324 is implemented in lab/stress.py and has no market-trial count. The bounded R306 application found the MSNR fade gave back 109 mean days across the three FTX days. No project-wide every-lane report is asserted here.",
+      "unrun_scope": "The reel’s claim that roughly half of crypto market makers lost on 2025-10-10 is unsourced. Other lane coverage and future stress outcomes are not evaluated by this intake.",
+      "status": "partial",
+      "required_inputs": [
+        "Per-book daily returns with aligned market-wide volatility and explicit UTC stress-date definitions."
+      ],
+      "blockers": [
+        "Historical lane periods and daily outputs are not uniformly available in this checkout."
+      ],
+      "next_action": "Use M324 only as an attributed risk report; do not present it as alpha evidence or as validation of the creator’s percentage claim.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Reel 17, bounded interview excerpt and claim qualification"
+        },
+        {
+          "path": "https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity",
+          "label": "Public crash context cited by transcript"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/msnr_v1/FINDINGS.md",
+          "label": "R306 stress-report use; not a strategy test"
+        }
+      ]
+    },
+    {
+      "id": "REEL26-17-POSTSTRESS-REVERSAL",
+      "parent_claim_id": "REEL26-17",
+      "title": "Cross-sectional one-day reversal only after market stress",
+      "method_type": "portfolio_strategy",
+      "hypothesis": "Liquidity providers may earn greater reversal returns after market makers withdraw, as proposed by analogy to Nagel’s equity result.",
+      "testable_rule": "Trade the top-50/top-150 one-day cross-sectional reversal after a trailing-year top-decile market absolute-return, dispersion, or open-interest-crash day; compare identical all-day and non-stress-day books.",
+      "exact_tested_scope": "Already represented by M325/R308 nagel_v1: eight frozen trials across three stress triggers and top-50/top-150 reversal portfolios, with discovery 2021–23 and validation 2024–26. The discovery stress contrast reversed out of sample; selected top-50 market-volatility trigger was negative in validation and fails its gates. This reconciliation did not rerun outcomes.",
+      "unrun_scope": "Nagel’s published result is for equities, not proof of crypto profitability. No prospective paper return or MEXC executable fill result exists.",
+      "status": "null",
+      "required_inputs": [
+        "Survivorship-aware daily cross-section, aligned open interest, market dispersion/absolute return, and explicit stress-window costs."
+      ],
+      "blockers": [
+        "The frozen historical validation is negative; out-of-sample live fills are absent."
+      ],
+      "next_action": "Preserve R308 NULL; do not retune the stress threshold against the same dates.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Reel 17, interview excerpt and method reconstruction"
+        },
+        {
+          "path": "https://doi.org/10.1111/j.1540-6261.2012.01797.x",
+          "label": "Nagel (2012), equity liquidity result; source does not establish crypto edge"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/nagel_v1/FINDINGS.md",
+          "label": "Frozen R308 findings; validation reverses discovery"
+        }
+      ]
+    },
+    {
+      "id": "REEL26-17-INCENTIVE-FRAME",
+      "parent_claim_id": "REEL26-17",
+      "title": "Counterparty-incentive modeling as a general hypothesis lens",
+      "method_type": "context_only",
+      "hypothesis": "Participant constraints may explain why an apparent market inefficiency persists, but the interview gives no measurable participant state or trading rule.",
+      "testable_rule": "No executable rule is stated; the clip offers a general research principle about incentives and constraints.",
+      "exact_tested_scope": "No finite market test was identified or run for this general statement.",
+      "unrun_scope": "A tradeable version would require an observable participant/mandate proxy, a directional prediction, timing and costed portfolio policy, none of which the clip specifies.",
+      "status": "untested",
+      "required_inputs": [
+        "A point-in-time participant-state dataset and an independently specified outcome rule."
+      ],
+      "blockers": [
+        "The source statement is conceptual and under-specified."
+      ],
+      "next_action": "Retain in CONTEXT; do not invent a strategy from the quote.",
+      "source_refs": [
+        {
+          "path": "docs/REELS_TRANSCRIPT.md",
+          "label": "Reel 17, general incentives statement"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IG26-CITADEL-FIRST-PRINCIPLES",
+      "parent_claim_id": "IG26-CITADEL-EQR",
+      "title": "First-principles, falsifiable alpha hypothesis selection",
+      "method_type": "methodology",
+      "hypothesis": "A proposed pattern should follow from a plausible market mechanism that yields predictions capable of disproving the explanation.",
+      "testable_rule": "State the proposed data-generating mechanism, derive observations that would distinguish it from alternatives, then define a test that can reject the hypothesis before estimating performance.",
+      "exact_tested_scope": "Bounded read of the supplied reel’s public caption and Citadel’s official EQR alpha-research article. Source process only; no project hypothesis or market outcomes were tested.",
+      "unrun_scope": "The article provides no specific asset-level feature, numeric rule, MEXC trade, independent audit of Citadel practice, or evidence that applying this process alone creates an edge.",
+      "status": "untested",
+      "required_inputs": [
+        "One finite candidate hypothesis and point-in-time variables implied by its mechanism."
+      ],
+      "blockers": [
+        "No standalone entry, exit, sizing or executable forecast is stated."
+      ],
+      "next_action": "Use as research discipline under M167; preserve exact source scope and do not create a trading test from process advice alone.",
+      "source_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DcL5E-jCLPA/",
+          "label": "Public page caption; short-form summary, not verified speech transcript."
+        },
+        {
+          "path": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "label": "Official Citadel EQR process article; full public page read."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "instagram_html_bytes": 624248,
+        "instagram_html_sha256": "dee7f95f6724293402204314ca7033c8f0275701754927132f0c43c46025ab07",
+        "citadel_html_bytes": 128277,
+        "citadel_html_sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e"
+      }
+    },
+    {
+      "id": "IG26-CITADEL-OOS-COST-PATH",
+      "parent_claim_id": "IG26-CITADEL-EQR",
+      "title": "Return forecasts must generalize and remain useful after costs and frictions",
+      "method_type": "methodology",
+      "hypothesis": "A statistically useful forecast is only actionable when it predicts on unseen future data and its opportunity survives portfolio risk, transaction costs and other execution frictions.",
+      "testable_rule": "Evaluate forecasts on a held-out future/live sample, pass expected-return forecasts through a portfolio/risk decision, and compare forecast-implied opportunity against complete costs and market frictions before trading.",
+      "exact_tested_scope": "Bounded public Citadel article read describes this research-to-portfolio path and use of held-out/live outcomes. No code, firm dataset, MEXC data, forecast or execution result was accessed or reproduced.",
+      "unrun_scope": "No target horizon, forecast loss, portfolio optimizer, cost model, threshold, position cap or refresh cadence is specified. Citadel’s firm claims are not independent validation and do not establish crypto transfer.",
+      "status": "untested",
+      "required_inputs": [
+        "A frozen return forecast, timestamped features/labels, future holdout, portfolio/risk policy and venue-specific cost/impact model."
+      ],
+      "blockers": [
+        "The source supplies a professional workflow, not an executable signal or parameterization."
+      ],
+      "next_action": "Treat as a process constraint under M167, related to portfolio allocation M026; do not add a method row or claim an edge.",
+      "source_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DcL5E-jCLPA/",
+          "label": "Public page caption; not a verified transcript."
+        },
+        {
+          "path": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "label": "Official article; full public page read."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "citadel_html_sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e"
+      }
+    },
+    {
+      "id": "IG26-CITADEL-UNCORRELATED-BREADTH",
+      "parent_claim_id": "IG26-CITADEL-EQR",
+      "title": "Portfolio breadth from many weak, low-correlation forecasts",
+      "method_type": "portfolio_strategy",
+      "hypothesis": "Many forecasts with small predictive skill can aggregate into a valuable portfolio only if their errors or payoffs provide enough genuine breadth and remain net of costs.",
+      "testable_rule": "Freeze a finite forecast family and portfolio rule; compare its joint costed out-of-sample portfolio against matched simple controls, preserving correlation, turnover, risk and cost accounting.",
+      "exact_tested_scope": "The official Citadel article states this as a firm research principle; no forecast family, weights, covariance estimate, universe or result is supplied or tested here.",
+      "unrun_scope": "Candidate signals, effective independent breadth, correlation stability, allocation/risk constraints, implementation and MEXC costs are unknown. The article does not authorize an indiscriminate parameter search.",
+      "status": "untested",
+      "required_inputs": [
+        "A pre-existing frozen family of timestamped forecasts, point-in-time outcomes, covariance/overlap treatment, turnover and full venue costs."
+      ],
+      "blockers": [
+        "No executable forecasts or weighting mechanics in the received source."
+      ],
+      "next_action": "Retain as a hypothesis about diversification and forecast aggregation under M026; first inventory existing signals and define controls before any future registered study.",
+      "source_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DcL5E-jCLPA/",
+          "label": "Public page caption summarizes the EQR research process."
+        },
+        {
+          "path": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "label": "Official article; breadth claim read in context."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "citadel_html_sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e"
+      }
+    },
+    {
+      "id": "IG26-CITADEL-HORIZON-METHODS",
+      "parent_claim_id": "IG26-CITADEL-EQR",
+      "title": "Match model complexity and validation design to the forecast horizon",
+      "method_type": "methodology",
+      "hypothesis": "Short- and long-horizon forecasts have different effective sample sizes, so model expressiveness and causal scrutiny should be chosen with the observation clock in mind.",
+      "testable_rule": "Predeclare the economic horizon, independent observation unit and validation scheme; justify model complexity against that effective sample size rather than treating bar count as independent evidence.",
+      "exact_tested_scope": "Official Citadel EQR article describes more observations and empirical/model flexibility at short horizons versus fewer independent observations and greater causal emphasis at long horizons; no local model was run.",
+      "unrun_scope": "The source gives no numeric horizon boundary, dependence estimator, model, or MEXC adaptation. Overlapping bars/trades cannot be counted as independent observations by analogy.",
+      "status": "untested",
+      "required_inputs": [
+        "A frozen forecast horizon, dependence-aware effective sample size and time-respecting holdout."
+      ],
+      "blockers": [
+        "No operational thresholds or trading rule are specified."
+      ],
+      "next_action": "Keep as a validation/design note within M167; do not translate firm-specific horizon language into a numeric cutoff.",
+      "source_refs": [
+        {
+          "path": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "label": "Official article; horizon discussion read."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "citadel_html_sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e"
+      }
+    },
+    {
+      "id": "IG26-CITADEL-LIVE-SURPRISES",
+      "parent_claim_id": "IG26-CITADEL-EQR",
+      "title": "Use positive and negative live forecast surprises to form new hypotheses",
+      "method_type": "methodology",
+      "hypothesis": "Systematic forecast errors and unexpected gains can expose changed assumptions or new relationships, so post-deployment analysis should inspect both tails.",
+      "testable_rule": "For an already-frozen live forecast, compare realized outcomes to its timestamped expectation in both positive and negative surprise tails; record the mechanism proposed afterward and test any revised rule only on future untouched data.",
+      "exact_tested_scope": "This is described as a research-learning process in Citadel’s official article. This repository has no matching deployed EQR model or attributed live outcomes; no project lane or market data was analyzed for this intake.",
+      "unrun_scope": "No surprise definition, threshold, attribution design, reporting cadence, or update protocol is supplied. Reusing the same live observations to propose and validate a change would not be prospective evidence.",
+      "status": "untested",
+      "required_inputs": [
+        "Frozen forecasts and expected outcomes, timestamped realized outcomes, exposure/market controls and an untouched future evaluation window."
+      ],
+      "blockers": [
+        "No live forecast stream or finite event contract is provided."
+      ],
+      "next_action": "Retain as a two-sided post-deployment research concept under M167; M324 is a related risk-reporting tool, not a complete test of this loop.",
+      "source_refs": [
+        {
+          "path": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "label": "Official article; live-performance feedback section read."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "citadel_html_sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e"
+      }
+    },
+    {
+      "id": "IG26-JS-HORIZON-HARDWARE-TIERS",
+      "parent_claim_id": "IG26-JS-TRADING-SYSTEMS",
+      "title": "Separate latency-bound execution from slower model-rich research",
+      "method_type": "engineering_context",
+      "hypothesis": "Different decision horizons can require different feed, compute and execution architectures; a compute-intensive signal cannot be assumed feasible at an ultra-low-latency cutoff.",
+      "testable_rule": "For each proposed MEXC horizon, measure timestamped feed-to-decision and order-ack/fill latency under the actual venue/API path before selecting model complexity; use simpler/faster logic only when latency is decision-critical.",
+      "exact_tested_scope": "The reel’s public description is an editorial paraphrase of an interview and claims sub-100ns hardware response and slower millisecond-to-day model horizons. The official Jane Street YouTube page/title/description was identified; the public video and transcript fetch returned HTTP403, so speech details remain unverified.",
+      "unrun_scope": "No MEXC receive timestamps, order-ack latency study, hardware benchmark, participant-specific implementation, or trading result was obtained. The nanosecond claim is not a realistic assumption for the project’s public exchange API.",
+      "status": "untested",
+      "required_inputs": [
+        "MEXC event receive timestamps and order submit/ack/fill logs from the same clock, plus the frozen signal horizon."
+      ],
+      "blockers": [
+        "No local receive-time history; public-source reel paraphrase is not a primary technical specification."
+      ],
+      "next_action": "Use only as context for M088 replay requirements and M165 tool/architecture context; do not port Jane Street latency claims to MEXC.",
+      "source_refs": [
+        {
+          "path": "https://www.instagram.com/reel/DY7gFe2Bkm6/",
+          "label": "Public page caption by metav3rse; editorial summary, not verified speech transcript."
+        },
+        {
+          "path": "https://www.youtube.com/watch?v=xKZ_8ULR91Y",
+          "label": "Official Jane Street interview title/description; video/transcript not fetched."
+        },
+        {
+          "path": "https://www.janestreet.com/culture/street-view/a-look-inside-our-newest-data-center/",
+          "label": "Official Jane Street page confirming the interview and topics, not the reel’s exact latency claims."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-23",
+        "instagram_html_bytes": 626739,
+        "instagram_html_sha256": "7b5b9702f5abcaeec93f976995a6641630f409691d0d3a36de124a4fe661e059",
+        "official_video_access": "Search-index title/description only; direct public fetch returned HTTP403."
+      }
     }
   ],
   "sources": [
@@ -10610,8 +10968,21 @@
         "R231 spot execution adaptation inspected separately; the original slow-flow execution mechanism remains unrun."
       ],
       "current_sha256": "069fcff34f3c8e9ea2e2aabcfb14c04f657647a3e713b6c5d437ae11fc525e1c",
-      "current_source_review_required": true,
-      "changed_source_note": "Received-note extraction is bound to sha256 above. Later additions at current_sha256 are not claimed fully extracted; review before queue import."
+      "current_source_review_required": false,
+      "reviewed_version_history": [
+        {
+          "sha256": "1ae6e3b50b12d197a46718d394244c0e0e37dfa540459212f1e276db42052005",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Original extraction snapshot preserved; current delta reviewed without changing existing method IDs."
+        },
+        {
+          "sha256": "069fcff34f3c8e9ea2e2aabcfb14c04f657647a3e713b6c5d437ae11fc525e1c",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Current source version reconciled by reels_delta_reconciliation_20261023; no market trial or new queue row."
+        }
+      ]
     },
     {
       "path": "docs/RESEARCH_COVERAGE_LEDGER.md",
@@ -10634,16 +11005,37 @@
         "FORWARD-FLOW-X2",
         "FORWARD-FLOW-B",
         "FORWARD-VOLSIZE",
-        "FORWARD-COSTS"
+        "FORWARD-COSTS",
+        "R231-PARTIAL-EXECUTION",
+        "R232-REBALANCE-CADENCE"
       ],
       "unextracted_limitations": [
         "Manual extraction covers all9open-question rows through distinct records or existing C14/ALT6/C02/C04/C09 aliases; examples of closed historical families are not a complete atomic inventory of all experiments."
       ],
       "current_sha256": "c781c36de260d5a18da4043b026656a1ca141296229f8b8f53b7d3c3e6e5e2e2",
-      "current_source_review_required": true,
-      "changed_source_note": "Received-note extraction is bound to sha256 above. Later additions at current_sha256 are not claimed fully extracted; review before queue import.",
+      "current_source_review_required": false,
       "previous_observed_current_sha256": "e825cb34f86465bb3d4d6e68470d950f3f0ac2bf25d0da543a18504271d02db2",
-      "current_version_note": "2026-10-23 consolidation: only the historical-scope banner was inserted over owner5bb9309; every original line remains in order. Pending extraction of the underlying later additions remains open. Historical received sha256 is unchanged."
+      "current_version_note": "2026-10-23 bounded reconciliation: the source delta adds the R231 and R232 findings and a historical-scope banner; both findings already map to existing intake/queue IDs. Original received digest retained; the ledger is historical coverage, not a second queue.",
+      "reviewed_version_history": [
+        {
+          "sha256": "2558904735c70d05370520ebd4d69c2e1d22fa45e104ed43051314620d44a10c",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Original extraction snapshot preserved; current delta reviewed without changing existing method IDs."
+        },
+        {
+          "sha256": "c781c36de260d5a18da4043b026656a1ca141296229f8b8f53b7d3c3e6e5e2e2",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Current source version reconciled by reels_delta_reconciliation_20261023; no market trial or new queue row."
+        },
+        {
+          "sha256": "e825cb34f86465bb3d4d6e68470d950f3f0ac2bf25d0da543a18504271d02db2",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Previously observed R231/R232 source revision retained in Git; covered by the same bounded reconciliation."
+        }
+      ]
     },
     {
       "path": "docs/SOURCES.md",
@@ -10735,14 +11127,28 @@
         "Unknown parameters and missing execution rules remain explicit blockers; source code locations are not test evidence."
       ],
       "current_sha256": "fc4a46ca0a92430c11e56aba0b2cc6e041cedf722eaafbbce0f200e8ae05a998",
-      "current_source_review_required": true,
-      "changed_source_note": "Received-note extraction is bound to sha256 above. Later additions at current_sha256 are not claimed fully extracted; review before queue import."
+      "current_source_review_required": false,
+      "reviewed_version_history": [
+        {
+          "sha256": "a1383c278d2aba8e36bb903187d4a966c364b28e86c364242619e0e53ea877d3",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Original extraction snapshot preserved; current delta reviewed without changing existing method IDs."
+        },
+        {
+          "sha256": "fc4a46ca0a92430c11e56aba0b2cc6e041cedf722eaafbbce0f200e8ae05a998",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Current source version reconciled by reels_delta_reconciliation_20261023; no market trial or new queue row."
+        }
+      ],
+      "current_version_note": "2026-10-23 bounded reconciliation: the later additions on cost capture, drift/selection safeguards, and MEXC venue/API operations map to existing source records and queue rows M006/M026/M041/M044/M101/M167. External works and current endpoint behavior remain only as scoped in the note; no additional rule was imported or tested."
     },
     {
       "path": "docs/REELS_TRANSCRIPT.md",
       "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
       "review_status": "reviewed_bounded_code_fidelity_audit_not_performance_evidence",
-      "scope": "Compact digest of owner videos and bounded public sources; latest update includes one pinned secondary Dynamic Breakout II code-fidelity audit, not a performance test.",
+      "scope": "Bounded digest of owner videos and selected public sources; current reconciliation enumerates reels 15–17, including MSNR (R306), risk reversal (R307), stress report (M324) and post-stress reversal (R308), plus the under-specified incentives context. Full-corpus coverage and unsourced creator claims remain open.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -10829,16 +11235,21 @@
         "XM26-REJECTED-COVER",
         "XM26-INDEX-STATE",
         "XM26-FUND-TRANSPORT",
-        "HUB26-QC-DB2"
+        "HUB26-QC-DB2",
+        "REEL26-15-MSNR",
+        "REEL26-16-RISK-REVERSAL",
+        "REEL26-17-STRESS-DIAGNOSTIC",
+        "REEL26-17-POSTSTRESS-REVERSAL",
+        "REEL26-17-INCENTIVE-FRAME"
       ],
       "unextracted_limitations": [
         "No full internet survey; several videos and indexed pages have no verified full transcript.",
         "Creator/demo outcomes and code examples are not audited project results and were not tested.",
         "External option/DEX data, synchronized multi-venue depth/fills and MEXC trade-level liquidation histories are not held."
       ],
-      "current_source_review_required": true,
+      "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "e0162a8203c3470f1deb5375c720bfc4c03f6818dc7aa6334c2610486535f0d3",
+      "current_sha256": "28689fa20a1dcaa2367452a032ac487c19035a6c92adb44c55ca6de65bc2a492",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
@@ -10868,13 +11279,27 @@
           "reviewed_utc_date": "2026-10-21",
           "intake_id": "intake_collision_reconciliation_20261021",
           "preservation": "Previous source digest and complete original source records retained in Git and collision receipts; current ID pointers reconciled only."
+        },
+        {
+          "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Original extraction snapshot preserved; current delta reviewed without changing existing method IDs."
+        },
+        {
+          "sha256": "28689fa20a1dcaa2367452a032ac487c19035a6c92adb44c55ca6de65bc2a492",
+          "reviewed_utc_date": "2026-10-23",
+          "intake_id": "reels_delta_reconciliation_20261023",
+          "preservation": "Current source version reconciled by reels_delta_reconciliation_20261023; no market trial or new queue row."
         }
       ],
       "observed_unreviewed_version": {
         "sha256": "28689fa20a1dcaa2367452a032ac487c19035a6c92adb44c55ca6de65bc2a492",
         "source_commit": "5bb9309",
         "observed_utc_date": "2026-10-22",
-        "scope": "Current Claude reel additions preserved; not fully re-extracted by this pass. Existing reviewed digest/source objects remain historical snapshots in Git."
+        "scope": "This exact version is now bounded-reviewed; reels 15–17 map to existing M323/M174/M324/M325 and one CONTEXT alias. The broader channel and full transcript scope remain unreviewed.",
+        "resolved_utc_date": "2026-10-23",
+        "resolved_by_intake": "reels_delta_reconciliation_20261023"
       }
     }
   ],
@@ -13347,6 +13772,179 @@
       "trials": 0,
       "market_outcomes_computed": false,
       "unread_scope": "Media audio/frames; account histories; promoted guide/Discord; other videos; software implementation, datasets, fills and performance."
+    },
+    {
+      "intake_id": "reels_delta_reconciliation_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [
+        "REEL26-15-MSNR",
+        "REEL26-16-RISK-REVERSAL",
+        "REEL26-17-STRESS-DIAGNOSTIC",
+        "REEL26-17-POSTSTRESS-REVERSAL",
+        "REEL26-17-INCENTIVE-FRAME"
+      ],
+      "records_updated": [],
+      "canonical_methods": [
+        "M323",
+        "M174",
+        "M324",
+        "M325",
+        "CONTEXT"
+      ],
+      "media_source_count": 3,
+      "media_sources": [
+        {
+          "url": "https://www.instagram.com/reel/DejYIVkhcLQ/",
+          "basis": "Reel 15 speech and caption as bounded-transcribed in the current repository note; no new media downloaded."
+        },
+        {
+          "url": "https://www.instagram.com/reel/DeKFE8OEq-i/",
+          "basis": "Reel 16 French interview excerpt with English paraphrase in the current repository note; no new media downloaded."
+        },
+        {
+          "url": "https://www.instagram.com/reel/DbIlAc1g0LM/",
+          "basis": "Reel 17 speech and caption as bounded-transcribed in the current repository note; no new media downloaded."
+        }
+      ],
+      "received_scope": "Read and reconcile only the three existing current transcript sections (reels 15–17) and the existing registry/lane pointers. The four operational/reporting concepts map to M323/M174/M324/M325; the broad incentives statement is context only.",
+      "distinct_received_methods": [
+        {
+          "record_id": "REEL26-15-MSNR",
+          "canonical_id": "M323",
+          "round": "R306",
+          "scope": "fresh body-based A/V levels; first-touch fade or body-close break"
+        },
+        {
+          "record_id": "REEL26-16-RISK-REVERSAL",
+          "canonical_id": "M174",
+          "round": "R307",
+          "scope": "25-delta risk-reversal concept; crypto signal is a separate lab adaptation"
+        },
+        {
+          "record_id": "REEL26-17-STRESS-DIAGNOSTIC",
+          "canonical_id": "M324",
+          "round": "report tool",
+          "scope": "stress-day diagnostics; not an alpha trial"
+        },
+        {
+          "record_id": "REEL26-17-POSTSTRESS-REVERSAL",
+          "canonical_id": "M325",
+          "round": "R308",
+          "scope": "cross-sectional one-day reversal conditional on frozen stress triggers"
+        },
+        {
+          "record_id": "REEL26-17-INCENTIVE-FRAME",
+          "canonical_id": "CONTEXT",
+          "round": null,
+          "scope": "qualitative participant incentives statement with no executable rule"
+        }
+      ],
+      "source_digests": {
+        "docs/QUANTPEDIA_RESEARCH_REVIEW.md": "069fcff34f3c8e9ea2e2aabcfb14c04f657647a3e713b6c5d437ae11fc525e1c",
+        "docs/RESEARCH_COVERAGE_LEDGER.md": "c781c36de260d5a18da4043b026656a1ca141296229f8b8f53b7d3c3e6e5e2e2",
+        "docs/SOURCES.md": "fc4a46ca0a92430c11e56aba0b2cc6e041cedf722eaafbbce0f200e8ae05a998",
+        "docs/REELS_TRANSCRIPT.md": "28689fa20a1dcaa2367452a032ac487c19035a6c92adb44c55ca6de65bc2a492"
+      },
+      "reconciliation": "Five source records/aliases added to the existing canonical intake only. All canonical methods already exist; their results and frozen files were not altered. No queue row, PREREG, journal or market trial added.",
+      "limits": "No new media was fetched. The cited SMU dissertation, complete Instagram accounts, all external books, full video corpus, claim of 50% market-maker losses and live fill behavior remain unverified or untested as stated in the source records.",
+      "market_trials": 0
+    },
+    {
+      "intake_id": "instagram_quant_process_delta_20261023",
+      "captured_utc_date": "2026-10-23",
+      "records_added": [
+        "IG26-CITADEL-FIRST-PRINCIPLES",
+        "IG26-CITADEL-OOS-COST-PATH",
+        "IG26-CITADEL-UNCORRELATED-BREADTH",
+        "IG26-CITADEL-HORIZON-METHODS",
+        "IG26-CITADEL-LIVE-SURPRISES",
+        "IG26-JS-HORIZON-HARDWARE-TIERS"
+      ],
+      "records_updated": [],
+      "canonical_methods": [
+        "M167",
+        "M026",
+        "M088",
+        "M165",
+        "CONTEXT"
+      ],
+      "media_source_count": 2,
+      "media_sources": [
+        {
+          "url": "https://www.instagram.com/reel/DcL5E-jCLPA/",
+          "author": "buysiders",
+          "posted_date": "2026-08-18",
+          "basis": "Normal unauthenticated public HTML GET (HTTP 200), 624248 bytes; description/caption only. Caption summarizes a Citadel EQR Alpha Research article; it is not verified reel speech.",
+          "html_sha256": "dee7f95f6724293402204314ca7033c8f0275701754927132f0c43c46025ab07"
+        },
+        {
+          "url": "https://www.instagram.com/reel/DY7gFe2Bkm6/",
+          "author": "metav3rse",
+          "posted_date": "2026-05-29",
+          "basis": "Normal unauthenticated public HTML GET (HTTP 200), 626739 bytes; description/caption only. It editorially paraphrases a Jane Street/Dwarkesh interview; no audio or video was accessed.",
+          "html_sha256": "7b5b9702f5abcaeec93f976995a6641630f409691d0d3a36de124a4fe661e059"
+        }
+      ],
+      "primary_source_manifest": [
+        {
+          "url": "https://www.citadel.com/careers/career-perspectives/inside-eqr-alpha-research/",
+          "title": "Inside EQR: What It Means to Work in Alpha Research",
+          "http_status": 200,
+          "bytes": 128277,
+          "sha256": "77236fde9e3f97c337c560434788c808a87048e2dd5bff785fcb8bd2ea5e0c6e",
+          "scope": "Current public article body read. Employer-authored description, not independently audited performance evidence."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=xKZ_8ULR91Y",
+          "title": "Jane Street on GPUs, Trading, and Hiring: A Conversation with Dwarkesh",
+          "scope": "Official Jane Street channel title/description confirmed by public search index; ordinary unauthenticated page and timed-text requests returned HTTP403, so no transcript or exact speech claims extracted."
+        },
+        {
+          "url": "https://www.janestreet.com/culture/street-view/a-look-inside-our-newest-data-center/",
+          "scope": "Official Jane Street page confirms the Dwarkesh/Ron Minsky/Dan Pontecorvo conversation and broad topics; it does not independently confirm every latency detail in the reel caption."
+        }
+      ],
+      "received_scope": "Only the two owner-supplied Instagram page descriptions/captions were extracted. The Citadel lead was expanded to the linked official public EQR article. The Jane Street interview was identified from its official YouTube title/description and Jane Street page, but the interview transcript itself was unavailable. This is not an audio transcript.",
+      "distinct_received_methods": [
+        {
+          "record_id": "IG26-CITADEL-FIRST-PRINCIPLES",
+          "canonical_id": "M167",
+          "scope": "Mechanism-led hypothesis with distinguishable predictions and an attempt to disprove it."
+        },
+        {
+          "record_id": "IG26-CITADEL-OOS-COST-PATH",
+          "canonical_id": "M167",
+          "related_id": "M026",
+          "scope": "Forecast-to-portfolio workflow; future/live generalization and costs/frictions."
+        },
+        {
+          "record_id": "IG26-CITADEL-UNCORRELATED-BREADTH",
+          "canonical_id": "M026",
+          "related_id": "M167",
+          "scope": "Aggregation of many weak low-correlation forecasts; no finite set or weights supplied."
+        },
+        {
+          "record_id": "IG26-CITADEL-HORIZON-METHODS",
+          "canonical_id": "M167",
+          "scope": "Horizon-specific effective sample size, model complexity and causal scrutiny."
+        },
+        {
+          "record_id": "IG26-CITADEL-LIVE-SURPRISES",
+          "canonical_id": "M167",
+          "related_id": "M324",
+          "scope": "Two-sided post-deployment surprise feedback; no project-live data or fixed alert rule."
+        },
+        {
+          "record_id": "IG26-JS-HORIZON-HARDWARE-TIERS",
+          "canonical_id": "M088",
+          "related_id": "M165",
+          "scope": "Editorial caption about speed/complexity tiers; engineering context only, no MEXC strategy."
+        }
+      ],
+      "reconciliation": "Six source records and aliases added to the existing canonical intake only. These are research-process/architecture leads, not newly specified market strategies. All IDs map to existing queue/context entries; no registry/methods.csv row, PREREG, result, journal or test was added or changed.",
+      "limits": "Reel descriptions are not verified speech transcripts. The Citadel page is an employer-authored public process description, not an audit of Citadel returns or a transferable proof. The Jane Street interview transcript/audio was inaccessible via normal public fetch; exact latency details remain caption-only. No MEXC receive-latency history, strategy outcome, market-data download or profitability claim.",
+      "market_trials": 0,
+      "market_outcomes_computed": false
     }
   ],
   "reassignment_refs": [
