@@ -90,6 +90,35 @@ def _write_receipt(lane, run_id, value):
     return path
 
 
+def _write_registration_receipt(root, lane, run_id, phase, value):
+    """Retain the registry append attempt and its outcome separately from the calculation receipt."""
+    directory = Path(lane) / "results" / "registration_receipts"
+    _assert_no_symlink(root, directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    _assert_no_symlink(root, directory)
+    path = directory / f"{run_id}.{phase}.json"
+    if path.exists() or path.is_symlink():
+        raise FileExistsError(path)
+    runtime.atomic_json(path, value)
+    return path
+
+
+def _registration_state(root, path, rid, calculation_sha):
+    """Check whether this calculation's receipt is linked from exactly the requested registry row."""
+    try:
+        relpath = Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
+        rows = qx_run.registry.rows(path)
+    except Exception as exc:
+        return "UNRESOLVED", None, None, f"registry could not be read: {type(exc).__name__}: {exc}"
+    row = next((r for r in rows if r["id"] == rid), None)
+    if row is None:
+        return "FAILED", relpath, None, "registry row is absent"
+    row_sha = hashlib.sha256(json.dumps(row, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    if f"sha256={calculation_sha}" not in row["notes"]:
+        return "FAILED", relpath, row_sha, "registry row does not link this calculation receipt"
+    return "REGISTERED", relpath, row_sha, None
+
+
 def _assert_no_symlink(root, path):
     root, path = Path(root).resolve(), Path(path)
     resolved = path.resolve()
@@ -364,9 +393,10 @@ def _run_lane(root, lane, args):
                 if verify_spec_inputs(root, spec, frozen_inputs) != data_sources:
                     raise ValueError("data source snapshot changed during qx run")
             return {
-                "receipt_version": 1,
+                "receipt_version": 2,
                 "run_id": run_id,
                 "status": status,
+                "status_meaning": "calculation and output verification only; see registration_receipts when register_requested is true",
                 "error": error,
                 "started_at": started_at,
                 "finished_at": datetime.now(timezone.utc).isoformat(),
@@ -396,9 +426,72 @@ def _run_lane(root, lane, args):
             _assert_no_symlink(root, out / "run_receipts")
             receipt_path = _write_receipt(lane, run_id, value)
             receipt_sha = runtime.digest(receipt_path)
+            registry_path = Path(path)
+            _assert_no_symlink(root, registry_path)
+            registry_rel = registry_path.resolve().relative_to(root).as_posix()
+            requested_id = id
+            attempt = {
+                "registration_version": 1,
+                "run_id": run_id,
+                "status": "ATTEMPTED",
+                "created_at": datetime.now(timezone.utc).isoformat(),
+                "calculation_receipt": receipt_path.relative_to(root).as_posix(),
+                "calculation_receipt_sha256": receipt_sha,
+                "registry_file": registry_rel,
+                "requested_registry_id": requested_id,
+            }
+            _assert_no_symlink(root, out / "registration_receipts")
+            attempt_path = _write_registration_receipt(root, lane, run_id, "attempt", attempt)
+            attempt_sha = runtime.digest(attempt_path)
             note = fields.get("notes", "")
-            fields["notes"] = f"{note}; verified run receipt {receipt_path.relative_to(root)} sha256={receipt_sha}"
-            result = original_append(path, id=id, **fields)
+            fields["notes"] = (f"{note}; verified calculation receipt {receipt_path.relative_to(root)} "
+                               f"sha256={receipt_sha}; registration attempt "
+                               f"{attempt_path.relative_to(root)} sha256={attempt_sha}")
+            try:
+                result = original_append(path, id=id, **fields)
+            except BaseException as exc:
+                state, rel, row_sha, state_error = _registration_state(root, path, requested_id, receipt_sha) \
+                    if requested_id else ("UNRESOLVED", registry_rel, None, "append failed before an id was returned")
+                outcome = {
+                    "registration_version": 1,
+                    "run_id": run_id,
+                    "status": state,
+                    "finished_at": datetime.now(timezone.utc).isoformat(),
+                    "attempt_receipt": attempt_path.relative_to(root).as_posix(),
+                    "attempt_receipt_sha256": attempt_sha,
+                    "calculation_receipt": receipt_path.relative_to(root).as_posix(),
+                    "calculation_receipt_sha256": receipt_sha,
+                    "registry_file": rel or registry_rel,
+                    "requested_registry_id": requested_id,
+                    "registry_id": requested_id,
+                    "registry_row_sha256": row_sha,
+                    "error": f"{type(exc).__name__}: {exc}",
+                    "reconciliation": state_error,
+                }
+                _assert_no_symlink(root, out / "registration_receipts")
+                _write_registration_receipt(root, lane, run_id, "outcome", outcome)
+                raise
+            state, rel, row_sha, state_error = _registration_state(root, path, result, receipt_sha)
+            outcome = {
+                "registration_version": 1,
+                "run_id": run_id,
+                "status": state,
+                "finished_at": datetime.now(timezone.utc).isoformat(),
+                "attempt_receipt": attempt_path.relative_to(root).as_posix(),
+                "attempt_receipt_sha256": attempt_sha,
+                "calculation_receipt": receipt_path.relative_to(root).as_posix(),
+                "calculation_receipt_sha256": receipt_sha,
+                "registry_file": rel or registry_rel,
+                "requested_registry_id": requested_id,
+                "registry_id": result,
+                "registry_row_sha256": row_sha,
+                "error": None if state == "REGISTERED" else state_error,
+                "reconciliation": state_error,
+            }
+            _assert_no_symlink(root, out / "registration_receipts")
+            _write_registration_receipt(root, lane, run_id, "outcome", outcome)
+            if state != "REGISTERED":
+                raise RuntimeError(f"registry append returned {result!r}, but receipt linkage is {state}: {state_error}")
             append_called = True
             return result
 

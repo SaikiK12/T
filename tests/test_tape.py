@@ -106,14 +106,30 @@ class ParseTest(unittest.TestCase):
         self.assertAlmostEqual(ev[6], 1.2557)
         self.assertAlmostEqual(ev[7], (22522 + 185) * 0.0001)     # top-five coin quantity
         self.assertAlmostEqual(ev[8], (12557 + 4872) * 0.0001)
+        crossing = {**depth, "ts": T0 + 900,
+                    "data": {**depth["data"], "cts": T0 + 1_100}}
+        (clocked,) = tape.mexc(crossing, sizes)
+        self.assertEqual(clocked[2], T0 + 1_100)                   # matching-engine clock beats envelope clock
+        bucket = tape.Tape(settle_ms=0)
+        bucket.on_book("mexc", "BTC", clocked[2], clocked[3], clocked[4], clocked[5], clocked[6], clocked[2],
+                       bid_sz5=clocked[7], ask_sz5=clocked[8])
+        self.assertEqual(bucket.drain()["mexc"][0].s.tolist(), [T0 + 1_000])
+        for invalid_cts in (T0 + 1.5, float("inf"), True):
+            bad_clock = {**crossing, "data": {**crossing["data"], "cts": invalid_cts}}
+            self.assertEqual(tape.mexc(bad_clock, sizes), [])    # malformed present cts does not fall back to ts
         malformed = {"channel": "push.depth.full", "symbol": "BTC_USDT", "ts": T0,
                      "data": {"asks": [[82670.4, 12557, 1.5]], "bids": [[82670.3, 22522, 7]]}}
         self.assertEqual(tape.mexc(malformed, sizes), [])
         deal = {"channel": "push.deal", "symbol": "BTC_USDT", "ts": T0,
-                "data": [{"p": 82692.9, "v": 5, "T": 2, "t": T0 + 1}, {"p": 82693.0, "v": 10, "T": 1, "t": T0 + 2}]}
+                "data": [{"p": 82692.9, "v": 5, "T": 2, "t": T0 + 1, "cts": str(T0 + 1_001)},
+                         {"p": 82693.0, "v": 10, "T": 1, "t": T0 + 2},
+                         {"p": 82693.1, "v": 1, "T": 1, "cts": str(T0 + 1_002)}]}
         evs = tape.mexc(deal, sizes)
-        self.assertEqual([e[5] for e in evs], [-1, 1])
+        self.assertEqual([e[5] for e in evs], [-1, 1, 1])
+        self.assertEqual([e[2] for e in evs], [T0 + 1, T0 + 2, T0 + 1_002])  # trade t wins; cts fills a missing t
         self.assertAlmostEqual(evs[1][4], 0.001)
+        bad_trade = {**deal, "data": [{"p": 1, "v": 1, "T": 1, "t": T0 + 1.5, "cts": str(T0 + 1)}]}
+        self.assertEqual(tape.mexc(bad_trade, sizes), [])        # malformed present t does not fall back to cts
         self.assertEqual(tape.mexc(dict(deal, symbol="ETH_USDT"), sizes), [])
 
 

@@ -199,6 +199,7 @@ class VerifiedQxRunnerTests(unittest.TestCase):
             path = receipts[0]
             receipt = json.loads(path.read_text())
             self.assertEqual(receipt["status"], "SUCCESS")
+            self.assertIn("calculation and output verification only", receipt["status_meaning"])
             self.assertEqual(receipt["prereg_sha256"], qx_run_verified.prereg.verify(lane / "PREREG.md"))
             self.assertEqual(receipt["binary_sha256"], runtime.digest(binary))
             self.assertEqual(receipt["execution_binary_sha256"], runtime.digest(binary))
@@ -211,7 +212,79 @@ class VerifiedQxRunnerTests(unittest.TestCase):
             self.assertEqual(receipt["summary_sha256"], runtime.digest(lane / "results/SUMMARY.md"))
             self.assertEqual(receipt["report_sha256"], runtime.digest(report_fixture))
             row = registry.rows(root / "registry/rounds.csv")[0]
-            self.assertIn(f"{path.relative_to(root)} sha256={runtime.digest(path)}", row["notes"])
+            self.assertIn(f"verified calculation receipt {path.relative_to(root)} sha256={runtime.digest(path)}",
+                          row["notes"])
+            registration_files = sorted((lane / "results/registration_receipts").glob("*.json"))
+            attempts = [json.loads(p.read_text()) for p in registration_files if p.name.endswith(".attempt.json")]
+            outcomes = [json.loads(p.read_text()) for p in registration_files if p.name.endswith(".outcome.json")]
+            self.assertEqual([r["status"] for r in attempts], ["ATTEMPTED"])
+            self.assertEqual([r["status"] for r in outcomes], ["REGISTERED"])
+            self.assertEqual(outcomes[0]["calculation_receipt_sha256"], runtime.digest(path))
+            self.assertEqual(outcomes[0]["registry_id"], "R999999")
+            self.assertEqual(outcomes[0]["registry_row_sha256"], hashlib.sha256(
+                json.dumps(row, sort_keys=True, separators=(",", ":")).encode()).hexdigest())
+
+    def test_duplicate_registry_id_keeps_calculation_and_failed_registration_distinct(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            with mock.patch.object(qx_run_verified, "ROOT", root), \
+                    mock.patch.object(orchestrate_forward, "code_version", return_value={}), \
+                    mock.patch("sys.stdout", new=io.StringIO()):
+                self.assertEqual(qx_run_verified.main([str(lane.relative_to(root)), "--register"]), 0)
+                with self.assertRaisesRegex(registry.RegistryError, "already used"):
+                    qx_run_verified.main([str(lane.relative_to(root)), "--register"])
+
+            calculations = [json.loads(p.read_text()) for p in (lane / "results/run_receipts").glob("*.json")]
+            registrations = [json.loads(p.read_text()) for p in (lane / "results/registration_receipts").glob("*.outcome.json")]
+            self.assertEqual(len(calculations), 2)
+            self.assertEqual([r["status"] for r in calculations], ["SUCCESS", "SUCCESS"])
+            self.assertEqual(sorted(r["status"] for r in registrations), ["FAILED", "REGISTERED"])
+            failed = next(r for r in registrations if r["status"] == "FAILED")
+            self.assertIn("already used", failed["error"])
+            self.assertEqual(len(registry.rows(root / "registry/rounds.csv")), 1)
+
+    def test_registry_append_failure_gets_explicit_failed_outcome(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            with mock.patch.object(qx_run_verified, "ROOT", root), \
+                    mock.patch.object(orchestrate_forward, "code_version", return_value={}), \
+                    mock.patch.object(registry, "append", side_effect=registry.RegistryError("injected append failure")), \
+                    mock.patch("sys.stdout", new=io.StringIO()):
+                with self.assertRaisesRegex(registry.RegistryError, "injected append failure"):
+                    qx_run_verified.main([str(lane.relative_to(root)), "--register"])
+            outcomes = [json.loads(p.read_text()) for p in (lane / "results/registration_receipts").glob("*.outcome.json")]
+            self.assertEqual(len(outcomes), 1)
+            self.assertEqual(outcomes[0]["status"], "FAILED")
+            self.assertIn("injected append failure", outcomes[0]["error"])
+            self.assertFalse((root / "registry/rounds.csv").exists())
+
+    def test_append_that_writes_then_raises_is_reconciled_as_registered(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            real_append = registry.append
+
+            def append_then_raise(path, /, id=None, **fields):
+                real_append(path, id=id, **fields)
+                raise OSError("post-append cleanup failed")
+
+            with mock.patch.object(qx_run_verified, "ROOT", root), \
+                    mock.patch.object(orchestrate_forward, "code_version", return_value={}), \
+                    mock.patch.object(registry, "append", side_effect=append_then_raise), \
+                    mock.patch("sys.stdout", new=io.StringIO()):
+                with self.assertRaisesRegex(OSError, "post-append cleanup failed"):
+                    qx_run_verified.main([str(lane.relative_to(root)), "--register"])
+            outcomes = [json.loads(p.read_text()) for p in (lane / "results/registration_receipts").glob("*.outcome.json")]
+            self.assertEqual(len(outcomes), 1)
+            self.assertEqual(outcomes[0]["status"], "REGISTERED")
+            self.assertIn("post-append cleanup failed", outcomes[0]["error"])
+            row = registry.rows(root / "registry/rounds.csv")[0]
+            self.assertIn(outcomes[0]["calculation_receipt_sha256"], row["notes"])
 
 
 if __name__ == "__main__":

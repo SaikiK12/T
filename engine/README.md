@@ -13,8 +13,11 @@ python scripts/qx_run_verified.py experiments/<lane> [--register]
 
 The build receipt binds the executable to the Rust sources and toolchain. The verified runner checks that receipt,
 the frozen input hashes, and provenance manifests for each data folder before and after execution; it also takes a
-per-lane writer lock and retains a run receipt. The build state directory must be outside the repository, and each
-`--run-id` must be new. The binary is not archived, and the build is not hermetic.
+per-lane writer lock and retains an immutable calculation receipt. With `--register`, it writes an immutable
+registration attempt before appending the registry row, then a separate outcome linked to that calculation receipt.
+If the process ends between those writes, a missing outcome means registration needs reconciliation; the calculation
+receipt's `SUCCESS` status alone confirms only the calculation. The build state directory must be outside the
+repository, and each `--run-id` must be new. The binary is not archived, and the build is not hermetic.
 
 **Historical lanes only:** a frozen PREREG that names `scripts/qx_run.py` keeps using that runner; do not migrate or
 rewrite its recorded command. `scripts/qx_run.py experiments/<lane>` verifies the historical lane's own frozen
