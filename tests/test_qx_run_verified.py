@@ -3,6 +3,7 @@ import json
 import sys
 import tempfile
 import unittest
+import hashlib
 from pathlib import Path
 from unittest import mock
 
@@ -11,11 +12,13 @@ from scripts import orchestrate_forward, qx_run_verified
 
 
 class VerifiedQxRunnerTests(unittest.TestCase):
-    def fixture(self, root):
+    def fixture(self, root, mutate_data_during_run=False):
         root = Path(root)
         lane = root / "experiments" / "fixture"
         lane.mkdir(parents=True)
-        for directory in (root / "engine/src", root / "engine/target/release", root / "scripts", root / "registry"):
+        for directory in (root / "engine/src", root / "engine/target/release", root / "scripts", root / "registry",
+                          root / ".git", root / "data/synthetic/quotes", root / "data/synthetic/funds",
+                          root / "docs/provenance"):
             directory.mkdir(parents=True, exist_ok=True)
         for name, contents in (("Cargo.toml", "[package]\nname='qx'\n"), ("Cargo.lock", "# fixture\n"),
                                ("src/main.rs", "fn main() {}\n")):
@@ -36,6 +39,8 @@ class VerifiedQxRunnerTests(unittest.TestCase):
         report_path = root / "report-fixture.json"
         report_path.write_text(json.dumps(report))
         binary = root / "engine/target/release/qx"
+        mutate = (f"pathlib.Path({str(root / 'data/synthetic/quotes/BTCUSDT.parquet')!r})"
+                  ".write_bytes(b'changed during execution')\n" if mutate_data_during_run else "")
         binary.write_text(
             f"#!{sys.executable}\n"
             "import pathlib,sys\n"
@@ -44,13 +49,36 @@ class VerifiedQxRunnerTests(unittest.TestCase):
             "out=spec.parent/'results'/'report.json'\n"
             "out.parent.mkdir(exist_ok=True)\n"
             "out.write_bytes(source.read_bytes())\n"
+            f"{mutate}"
             f"pathlib.Path({str(root / 'called.txt')!r}).write_text(' '.join(sys.argv[1:]))\n"
         )
         binary.chmod(0o755)
 
+        events = lane / "legs.csv"
+        events.write_text("release_ms,kind,perp\n0,test,BTCUSDT\n")
+        (root / "data/synthetic/quotes/BTCUSDT.parquet").write_bytes(b"synthetic quote input")
+        (root / "data/synthetic/funds/BTCUSDT.parquet").write_bytes(b"synthetic funding input")
+        source_rows, total, combined = [], 0, hashlib.sha256()
+        for path in sorted((root / "data/synthetic").rglob("*")):
+            if not path.is_file():
+                continue
+            rel = path.relative_to(root / "data/synthetic").as_posix()
+            digest = runtime.digest(path)
+            size = path.stat().st_size
+            source_rows.append({"path": rel, "bytes": size, "sha256": digest})
+            total += size
+            combined.update(f"{rel}\t{digest}\n".encode())
+        manifest_path = root / "docs/provenance/synthetic.json"
+        runtime.atomic_json(manifest_path, {"folder": "data/synthetic", "excluded": [], "files": len(source_rows),
+                                            "bytes": total, "combined_sha256": combined.hexdigest(),
+                                            "file_hashes": source_rows})
+
         spec = lane / "spec.toml"
-        spec.write_text('events = []\ncosts = [0.001, 0.002, 0.003]\n')
-        paths = [spec, root / "scripts/qx_run.py", root / "scripts/qx_run_verified.py",
+        spec.write_text('events = "experiments/fixture/legs.csv"\n'
+                        'venues = [{name="perp", col="perp", klines="synthetic/quotes", '
+                        'funding="synthetic/funds"}]\n'
+                        'costs = [0.001, 0.002, 0.003]\n')
+        paths = [events, manifest_path, spec, root / "scripts/qx_run.py", root / "scripts/qx_run_verified.py",
                  root / "scripts/build_engine.py"]
         paths.extend(root / name for name in runtime.engine_sources(root))
         prereg_path = lane / "PREREG.md"
@@ -89,6 +117,72 @@ class VerifiedQxRunnerTests(unittest.TestCase):
             self.assertFalse((root / "called.txt").exists())
             self.assertFalse((root / "registry/rounds.csv").exists())
 
+    def test_changed_data_file_fails_manifest_check_before_engine(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            (root / "data/synthetic/quotes/BTCUSDT.parquet").write_bytes(b"changed quote input")
+            with mock.patch.object(qx_run_verified, "ROOT", root):
+                with self.assertRaisesRegex(ValueError, "differs from its frozen provenance"):
+                    qx_run_verified.main([str(lane.relative_to(root)), "--register"])
+            self.assertFalse((root / "called.txt").exists())
+            self.assertFalse((root / "registry/rounds.csv").exists())
+
+    def test_data_change_during_run_cannot_get_success_receipt(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root, mutate_data_during_run=True)
+            with mock.patch.object(qx_run_verified, "ROOT", root), \
+                    mock.patch.object(orchestrate_forward, "code_version", return_value={}), \
+                    mock.patch("sys.stdout", new=io.StringIO()):
+                with self.assertRaisesRegex(ValueError, "differs from its frozen provenance"):
+                    qx_run_verified.main([str(lane.relative_to(root))])
+            receipts = list((lane / "results/run_receipts").glob("*.json"))
+            self.assertEqual(len(receipts), 1)
+            self.assertEqual(json.loads(receipts[0].read_text())["status"], "FAILED")
+            self.assertFalse((root / "registry/rounds.csv").exists())
+
+    def test_spec_file_must_be_explicitly_pinned(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            prereg_path = lane / "PREREG.md"
+            text = prereg_path.read_text()
+            text = text.replace(f"{lane.relative_to(root)}/legs.csv  {runtime.digest(lane / 'legs.csv')}\n", "")
+            prereg_path.write_text(text)
+            (lane / "PREREG.sha256").unlink()
+            prereg.freeze(prereg_path)
+            with mock.patch.object(qx_run_verified, "ROOT", root):
+                with self.assertRaisesRegex(ValueError, "must exist and be frozen in PREREG"):
+                    qx_run_verified.main([str(lane.relative_to(root)), "--register"])
+            self.assertFalse((root / "called.txt").exists())
+            self.assertFalse((root / "registry/rounds.csv").exists())
+
+    def test_same_lane_lock_rejects_concurrent_writer(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            lane, _, _, _ = self.fixture(root)
+            with qx_run_verified.lane_lock(root, lane):
+                with self.assertRaisesRegex(RuntimeError, "already running"):
+                    with qx_run_verified.lane_lock(root, lane):
+                        self.fail("second lane writer acquired the lock")
+
+    def test_build_rejects_symlinked_parent_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            _, _, _, _ = self.fixture(root)
+            target = root / "engine/target"
+            real_target = root / "engine/target-real"
+            target.rename(real_target)
+            target.symlink_to(real_target, target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "symlink in qx lane path"):
+                qx_run_verified.verify_build(root)
+
     def test_matching_build_runs_and_links_receipt_to_registered_result(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "repo"
@@ -108,6 +202,10 @@ class VerifiedQxRunnerTests(unittest.TestCase):
             self.assertEqual(receipt["prereg_sha256"], qx_run_verified.prereg.verify(lane / "PREREG.md"))
             self.assertEqual(receipt["binary_sha256"], runtime.digest(binary))
             self.assertEqual(receipt["execution_binary_sha256"], runtime.digest(binary))
+            self.assertEqual(receipt["engine_invocation"], ["qx", "events", "experiments/fixture/spec.toml"])
+            self.assertFalse(receipt["binary_archived"])
+            self.assertEqual(receipt["data_sources"]["data/synthetic"]["combined_sha256"],
+                             json.loads((root / "docs/provenance/synthetic.json").read_text())["combined_sha256"])
             self.assertEqual(receipt["build_receipt_sha256"], runtime.digest(build_receipt))
             self.assertEqual(receipt["report_sha256"], runtime.digest(lane / "results/report.json"))
             self.assertEqual(receipt["summary_sha256"], runtime.digest(lane / "results/SUMMARY.md"))
