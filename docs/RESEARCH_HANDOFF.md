@@ -28,7 +28,11 @@ funding is INCONCLUSIVE (14 unknown events including the worst price loss); the 
 is15.995 times initial short notional. These are Binance historical bounds, not executable MEXC account returns.
 M057 retains R265/R266 and records these limitations. Current `scripts/run_unlocks.py` and all forward journals
 are unchanged. The different legacy R265 runner/tests/implementation notes in PR32 remain unintegrated; PR32
-is not completely superseded and must stay open pending a separate frozen-scope comparison.
+is not completely superseded and stays open: the legacy runner changes funding/stale-price boundaries,
+ADV days, RNG ordering and BTC-hedge cost. It cannot replace current R265 as a guard-only fix.
+The current R266 writer is also unchanged; the orchestrator now checks its journal before/after execution,
+including entry cutoffs, identities, score arithmetic and retained snapshot bytes. Source completeness and
+original publication remain unverified. Missing source snapshots block a new operational success claim.
 
 ## Historical R212 handoff
 

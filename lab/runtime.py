@@ -8,6 +8,8 @@ from datetime import datetime, timezone
 import hashlib
 from importlib import metadata
 import json
+import math
+import re
 import os
 from pathlib import Path
 import platform
@@ -19,7 +21,7 @@ import tempfile
 HOUR = 3_600_000
 FUNDING_VENUES = ("gate", "hyperliquid", "okx", "bitget", "kucoin", "dydx")
 PACKAGES = ("numpy", "pandas", "numba", "scipy", "scikit-learn", "pyarrow", "websockets")
-CHECKS = {"flow_signals", "funding_snapshot"}
+CHECKS = {"flow_signals", "funding_snapshot", "unlock_journal"}
 
 
 def atomic_json(path, value):
@@ -163,6 +165,183 @@ def flow_signals(root, *, phase="after", now_ms=None):
             "scope": "signal/tick keys and cardinalities only; freshness/features/tickets unverified"}
 
 
+def unlock_journal(root, *, phase="after", now_ms=None):
+    """R266 structural admission around its unchanged frozen paper writer.
+
+    Checks tickets before their delayed entry, unique append keys, score links/
+    arithmetic and retained snapshot bytes. Does not certify calendar eligibility,
+    original publication, funding/price completeness, fills or scientific gates.
+    """
+    from scripts.forward_unlocks import TICKET_COLS, SCORE_COLS, SKIP_COLS, START_MS
+    base = "experiments/unlocks_fwd/journal/"
+    now_ms = int(now_ms if now_ms is not None else datetime.now(timezone.utc).timestamp() * 1000)
+    tickets, tr = _csv(_path(root, base + "tickets.csv"), set(TICKET_COLS))
+    scores, sr = _csv(_path(root, base + "scores.csv"), set(SCORE_COLS))
+    skips, kr = _csv(_path(root, base + "skipped.csv"), set(SKIP_COLS) - {"detail"})
+    if not tickets:
+        # The native writer omits tickets.csv when a tick only records skips.
+        # A documented zero-ticket status and empty book are legitimate.
+        status_path = _path(root, base + "status.json")
+        if status_path.exists():
+            status = json.loads(status_path.read_text())
+            if not isinstance(status, dict) or any(type(status.get(k)) is not int or status[k] != 0 for k in ("tickets", "scored", "open")):
+                raise ValueError("ticket journal absent beside nonempty/unknown prior status")
+        book, _ = _csv(_path(root, base + "book_days.csv"), {"day", "ret", "equity", "drawdown"})
+        if scores or book:
+            raise ValueError("ticket journal absent beside prior scores/book")
+
+    def stamp(value):
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            raise ValueError("journal timestamp requires timezone")
+        return int(parsed.timestamp() * 1000)
+
+    def day(value):
+        parsed = datetime.strptime(value, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        if parsed.strftime("%Y-%m-%d") != value:
+            raise ValueError("noncanonical day")
+        return int(parsed.timestamp() * 1000)
+
+    def number(value, *, positive=False):
+        result = float(value)
+        if not math.isfinite(result) or (positive and result <= 0):
+            raise ValueError("nonfinite or invalid positive journal value")
+        return result
+
+    def boolean(value):
+        if value not in {"True", "False"}:
+            raise ValueError("invalid journal boolean")
+        return value == "True"
+
+    indexed, events, contracts, snapshots, missing = {}, set(), set(), {}, []
+    for row in tickets:
+        d, entry, exit_ = day(row["day"]), _integer(row["entry_ms"]), _integer(row["exit_ms"])
+        frozen = stamp(row["frozen_at"])
+        if entry != d - 6 * 24 * HOUR or exit_ != d + 24 * HOUR or entry < START_MS:
+            raise ValueError("ticket schedule outside frozen R266 rule")
+        if not entry - 24 * HOUR <= frozen < entry + HOUR or frozen > now_ms:
+            raise ValueError("ticket not frozen in its pre-entry window")
+        key, event, contract = row["ticket"], (row["gecko_id"], row["day"]), (row["contract"], row["day"])
+        if key != f"U{d // (24 * HOUR)}-{row['contract']}" or key in indexed or event in events or contract in contracts:
+            raise ValueError("duplicate or inconsistent ticket identity")
+        indexed[key] = (row, exit_)
+        events.add(event)
+        contracts.add(contract)
+        for field in ("mult", "frac_max_supply", "tokens", "last_at_freeze", "index_price", "price_ratio"):
+            number(row[field], positive=True)
+        if number(row["taker"]) < 0 or not 1 / 3 <= number(row["price_ratio"]) <= 3:
+            raise ValueError("invalid fee or ticket identity ratio")
+        computed_ratio = number(row["last_at_freeze"]) / (number(row["index_price"]) * number(row["mult"]))
+        if not math.isclose(number(row["price_ratio"]), computed_ratio, rel_tol=1e-10, abs_tol=1e-12):
+            raise ValueError("ticket price ratio disagrees with retained values")
+        boolean(row["listed_binance"])
+        name, expected = row["snapshot"], row["snapshot_sha256"]
+        if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}\.json\.gz", name) or day(name[:10]) > frozen // (24 * HOUR) * (24 * HOUR):
+            raise ValueError("unsafe or future snapshot name")
+        if not re.fullmatch(r"[0-9a-f]{64}", expected):
+            raise ValueError("invalid snapshot digest")
+        if name in snapshots and snapshots[name]["sha256"] != expected:
+            raise ValueError("same daily snapshot has conflicting ticket hashes")
+        path = _path(root, "data/recorders/unlocks/" + name)
+        if not path.is_file():
+            missing.append(name)
+        else:
+            before = path.stat()
+            actual = digest(path)
+            after = path.stat()
+            if (before.st_ino, before.st_size, before.st_mtime_ns) != (after.st_ino, after.st_size, after.st_mtime_ns) or actual != expected:
+                raise ValueError("ticket snapshot changed or digest mismatch")
+        snapshots[name] = {"sha256": expected, "present": path.is_file()}
+    skipped = set()
+    for row in skips:
+        key = (row["gecko_id"], row["day"])
+        day(row["day"])
+        if key in skipped or key in events or stamp(row["noted_at"]) > now_ms:
+            raise ValueError("duplicate/conflicting/future skip")
+        skipped.add(key)
+    scored = set()
+    for row in scores:
+        key = row["ticket"]
+        if key not in indexed or key in scored:
+            raise ValueError("orphan or duplicate score")
+        scored.add(key)
+        ticket, exit_ = indexed[key]
+        at = stamp(row["scored_at"])
+        if at < exit_ + HOUR + 600_000 or at > now_ms:
+            raise ValueError("score before frozen exit cutoff or in future")
+        values = {f: number(row[f]) for f in ("entry_price", "exit_price", "gross", "funding", "taker", "spread_entry", "spread_exit", "cost_measured", "net", "net_1x", "net_2x", "net_3x", "mae", "mfe")}
+        if min(values[f] for f in ("entry_price", "exit_price")) <= 0 or any(values[f] < 0 for f in ("taker", "spread_entry", "spread_exit", "cost_measured")):
+            raise ValueError("invalid price or negative execution cost")
+        _integer(row["settlements"])
+        for field in ("stopped_trading", "spread_flag", "liq_1x", "liq_2x", "liq_3x"):
+            boolean(row[field])
+        for leverage in (1, 2, 3):
+            if boolean(row[f"liq_{leverage}x"]) != (values["mae"] >= 1 / leverage - .01):
+                raise ValueError("liquidation diagnostic flag disagrees with retained MAE")
+        expected = {"gross": 1 - values["exit_price"] / values["entry_price"],
+                    "taker": number(ticket["taker"]),
+                    "cost_measured": 2 * values["taker"] + values["spread_entry"] + values["spread_exit"],
+                    "net": values["gross"] - values["cost_measured"] + values["funding"]}
+        expected.update({f"net_{k}x": values["gross"] - .002 * k + values["funding"] for k in (1, 2, 3)})
+        if any(not math.isclose(values[k], v, rel_tol=1e-10, abs_tol=1e-12) for k, v in expected.items()):
+            raise ValueError("score arithmetic disagrees with frozen R266 accounting")
+    status_path = _path(root, base + "status.json")
+    if tickets and status_path.exists():
+        status = json.loads(status_path.read_text())
+        if not isinstance(status, dict):
+            raise ValueError("invalid prior derived status")
+        # Appends may legitimately precede the derived status write. A prior
+        # count ABOVE the remaining journal rows instead indicates row loss.
+        for field, count in (("tickets", len(tickets)), ("scored", len(scores))):
+            previous = status.get(field)
+            if type(previous) is not int or not 0 <= previous <= count:
+                raise ValueError("prior derived count exceeds retained journal rows")
+    derived = {}
+    if phase == "after":
+        # Both files are written on every successful native tick, even with
+        # zero tickets. An interrupted append may recover in preflight but is
+        # not a completed execution receipt until derived outputs exist.
+        book, br = _csv(_path(root, base + "book_days.csv"), {"day", "ret", "equity", "drawdown"})
+        if not status_path.is_file() or br is None:
+            raise ValueError("native status/book output missing after paper tick")
+        before = status_path.stat()
+        status = json.loads(status_path.read_text())
+        if not isinstance(status, dict):
+            raise ValueError("invalid native status output")
+        for field, count in (("tickets", len(tickets)), ("scored", len(scores)), ("open", len(tickets) - len(scores))):
+            if type(status.get(field)) is not int or status[field] != count:
+                raise ValueError("native status disagrees with completed journal")
+        age = now_ms - stamp(status["updated"])
+        if not 0 <= age <= 900_000:
+            raise ValueError("native status is stale/future after paper tick")
+        if bool(book) != bool(scores):
+            raise ValueError("book/score presence disagrees")
+        days = [day(row["day"]) for row in book]
+        if days != sorted(set(days)):
+            raise ValueError("duplicate or unordered book day")
+        for row in book:
+            day(row["day"])
+            for field in ("ret", "equity", "drawdown"):
+                number(row[field])
+        sha = digest(status_path)
+        after = status_path.stat()
+        if (before.st_ino, before.st_size, before.st_mtime_ns) != (after.st_ino, after.st_size, after.st_mtime_ns):
+            raise ValueError("native status changed during validation")
+        derived = {base + "status.json": {"sha256": sha}, base + "book_days.csv": br}
+    inputs = {base + "tickets.csv": tr, base + "scores.csv": sr, base + "skipped.csv": kr, **derived}
+    for relative, receipt in inputs.items():
+        if receipt is not None and digest(_path(root, relative)) != receipt["sha256"]:
+            raise ValueError("journal changed during validation")
+    if missing:
+        return {"state": "MISSING_SNAPSHOT", "usable": False, "missing_snapshots": sorted(set(missing)), "inputs": inputs}
+    has_history = tr is not None or kr is not None
+    return {"state": "COMPLETE" if has_history else "EMPTY", "usable": has_history or phase == "before",
+            "tickets": len(tickets), "scores": len(scores), "skips": len(skips),
+            "open": len(tickets) - len(scores), "snapshots": snapshots, "inputs": inputs,
+            "source_validation": "UNVERIFIED", "gate_eligibility": "UNASSESSED",
+            "scope": "journal keys/cutoffs/arithmetic/snapshot-byte identity only; raw prices/funding, calendar eligibility and original availability are unverified"}
+
+
 def funding_snapshot(root, *, phase="after", now_ms=None):
     """Check the current UTC-hour file, source coverage and reception clock.
 
@@ -207,7 +386,7 @@ def check(name, root, *, phase="after", now_ms=None):
         raise ValueError("unknown observation check")
     try:
         result = globals()[name](root, phase=phase, now_ms=now_ms)
-    except (OSError, ValueError, KeyError, TypeError, csv.Error) as error:
+    except (OSError, ValueError, KeyError, TypeError, ArithmeticError, csv.Error) as error:
         result = {"state": "INVALID", "usable": False, "reason": str(error)[:200]}
     return {"check": name, "phase": phase, **result}
 

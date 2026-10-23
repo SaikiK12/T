@@ -55,7 +55,7 @@ def forward_tasks(python=".venv/bin/python"):
         if name in {"REC_NOTICES", "R268", "R270", "R272"}:
             lock = ".notices.lock"
         return Task(name, (python, "scripts/" + script), needs, optional, timeout, files, lock, wait,
-                    ("flow_signals",) if name == "R200" else ("funding_snapshot",) if name == "REC_FUNDING" else ())
+                    ("flow_signals",) if name == "R200" else ("funding_snapshot",) if name == "REC_FUNDING" else ("unlock_journal",) if name == "R266" else ())
 
     return (
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
