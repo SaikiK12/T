@@ -120,6 +120,20 @@ class EquationRunnerTests(unittest.TestCase):
         a = {k: account(np.zeros(120)) for k in ("reference",)+LABELS}
         self.assertEqual(runner.evaluate(a, LABELS[0], {})["verdict"], "INCONCLUSIVE")
 
+    def test_known_synthetic_increment_can_pass_only_as_gate_zero_paper_candidate(self):
+        rng = np.random.default_rng(819)
+        ref = rng.normal(0, .0001, 273)
+        a = {"reference": account(ref)}
+        for label in LABELS:
+            a[label] = account(ref+rng.normal(0, .00001, 273)-.00002)
+        a[LABELS[0]] = account(.7*ref+rng.normal(0, .00001, 273)+.00005)
+        report = runner.evaluate(a, LABELS[0], {"spa_reps": 2000, "paired_reps": 5000, "seed": 819})
+        self.assertEqual(report["verdict"], "PARTIAL")
+        self.assertTrue(all(report["gates"].values()))
+        self.assertEqual(report["gate"], 0)
+        self.assertEqual(report["paper_candidate"], LABELS[0])
+        self.assertTrue(report["conditional_inference_only"])
+
     def test_npz_is_byte_reproducible(self):
         with tempfile.TemporaryDirectory() as d:
             a, b = Path(d)/"a.npz", Path(d)/"b.npz"
