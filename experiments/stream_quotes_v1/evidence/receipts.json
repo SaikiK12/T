@@ -1,0 +1,99 @@
+{
+  "duration_seconds": 69.929709,
+  "errors": [],
+  "records": [
+    {
+      "body": "lighter_metadata.json.gz",
+      "bytes": 391932,
+      "error": null,
+      "http_status": 200,
+      "name": "lighter_metadata",
+      "received_mono_ns": 19654901886338,
+      "received_utc_ns": 1792865715869633426,
+      "sha256": "d7bd227d357079f9f5f1b28c8b96e90a169c555526ea8a07f91287187bdceba8",
+      "started_mono_ns": 19654051743012,
+      "started_utc_ns": 1792865715019491132,
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?filter=perp"
+    },
+    {
+      "body": "BTC_mexc_metadata.json.gz",
+      "bytes": 2387,
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_mexc_metadata",
+      "received_mono_ns": 19655761484384,
+      "received_utc_ns": 1792865716729231943,
+      "sha256": "efd99eefbeab68ddc31c7c99a65d28f5d8577fca9725d8dfefe1291878ac82b7",
+      "started_mono_ns": 19654910334785,
+      "started_utc_ns": 1792865715878083005,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=BTC_USDT"
+    },
+    {
+      "body": "WIF_mexc_metadata.json.gz",
+      "bytes": 1889,
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_mexc_metadata",
+      "received_mono_ns": 19656521745218,
+      "received_utc_ns": 1792865717489492738,
+      "sha256": "4acbff3069778782716fa287e81147f3caab3ff5d2206d7c8e5edc0935afc3ac",
+      "started_mono_ns": 19655761798696,
+      "started_utc_ns": 1792865716729547267,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=WIF_USDT"
+    },
+    {
+      "body": "SKR_mexc_metadata.json.gz",
+      "bytes": 1877,
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_mexc_metadata",
+      "received_mono_ns": 19657023177152,
+      "received_utc_ns": 1792865717990924621,
+      "sha256": "0a57c9c20725dd6233cac22c81ded1115462e7dc9668ae2eab694dd3d4ad5ac5",
+      "started_mono_ns": 19656522093741,
+      "started_utc_ns": 1792865717489842361,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=SKR_USDT"
+    },
+    {
+      "body": "ROBO_mexc_metadata.json.gz",
+      "bytes": 1915,
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_mexc_metadata",
+      "received_mono_ns": 19657418048280,
+      "received_utc_ns": 1792865718385795799,
+      "sha256": "75e5126a39df09d1db5c52f85abe5344b036c74653218b1c2c5603a11c7961df",
+      "started_mono_ns": 19657023460218,
+      "started_utc_ns": 1792865717991208849,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=ROBO_USDT"
+    },
+    {
+      "body": "MEGA_mexc_metadata.json.gz",
+      "bytes": 1889,
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_mexc_metadata",
+      "received_mono_ns": 19657762611973,
+      "received_utc_ns": 1792865718730359272,
+      "sha256": "63664524b32698b9ecc9ab9f4904725fade75c4b63f370231598be74d661da24",
+      "started_mono_ns": 19657418333740,
+      "started_utc_ns": 1792865718386082361,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=MEGA_USDT"
+    },
+    {
+      "body": "XPD_mexc_metadata.json.gz",
+      "bytes": 2315,
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_mexc_metadata",
+      "received_mono_ns": 19657967301130,
+      "received_utc_ns": 1792865718935048619,
+      "sha256": "5eb7e9890d4f41ef3801ca6f2f741677cd957b8535770f380dc2eb134629b29c",
+      "started_mono_ns": 19657762891314,
+      "started_utc_ns": 1792865718730639894,
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=XPD_USDT"
+    }
+  ],
+  "requests": 7,
+  "response_bytes": 404204
+}
