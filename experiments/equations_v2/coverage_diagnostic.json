@@ -1,0 +1,115 @@
+{
+  "F0+B_h14": {
+    "days_with_observation_type": {
+      "lighter/nontradable_01_close": 34,
+      "mexc/unknown_funding": 5
+    },
+    "held_coin_venue_hour_observations": {
+      "lighter/missing_price": 0,
+      "lighter/nontradable_01_close": 41,
+      "lighter/unknown_funding": 0,
+      "mexc/missing_price": 0,
+      "mexc/nontradable_01_close": 0,
+      "mexc/unknown_funding": 5
+    },
+    "interpretation": "Diagnostics of held source flags, not disjoint causal counts or new inference. A nontradable01 candle can defer a requested exit; no BBO fill is proven.",
+    "top_observation_cells": [
+      [
+        "SKRUSDT/lighter/nontradable_01_close",
+        4
+      ],
+      [
+        "ROBOUSDT/lighter/nontradable_01_close",
+        4
+      ],
+      [
+        "MEGAUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "XPDUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "WIFUSDT/lighter/nontradable_01_close",
+        2
+      ],
+      [
+        "AEROUSDT/lighter/nontradable_01_close",
+        2
+      ],
+      [
+        "GRASSUSDT/lighter/nontradable_01_close",
+        2
+      ],
+      [
+        "PIPPINUSDT/mexc/unknown_funding",
+        2
+      ]
+    ],
+    "unscored_days": 36,
+    "validation_ticket_reasons": {
+      "data_exit": 45,
+      "decision_entry": 298,
+      "decision_exit": 237,
+      "terminal": 16
+    }
+  },
+  "reference": {
+    "days_with_observation_type": {
+      "lighter/nontradable_01_close": 32,
+      "lighter/unknown_funding": 1,
+      "mexc/unknown_funding": 4
+    },
+    "held_coin_venue_hour_observations": {
+      "lighter/missing_price": 0,
+      "lighter/nontradable_01_close": 38,
+      "lighter/unknown_funding": 1,
+      "mexc/missing_price": 0,
+      "mexc/nontradable_01_close": 0,
+      "mexc/unknown_funding": 4
+    },
+    "interpretation": "Diagnostics of held source flags, not disjoint causal counts or new inference. A nontradable01 candle can defer a requested exit; no BBO fill is proven.",
+    "top_observation_cells": [
+      [
+        "SKRUSDT/lighter/nontradable_01_close",
+        4
+      ],
+      [
+        "VIRTUALUSDT/lighter/nontradable_01_close",
+        4
+      ],
+      [
+        "MEGAUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "WIFUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "ROBOUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "XPDUSDT/lighter/nontradable_01_close",
+        3
+      ],
+      [
+        "BIRBUSDT/lighter/nontradable_01_close",
+        2
+      ],
+      [
+        "AEROUSDT/lighter/nontradable_01_close",
+        2
+      ]
+    ],
+    "unscored_days": 34,
+    "validation_ticket_reasons": {
+      "data_exit": 43,
+      "decision_entry": 336,
+      "decision_exit": 276,
+      "terminal": 17
+    }
+  }
+}

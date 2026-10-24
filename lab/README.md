@@ -6,6 +6,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 `python -m unittest discover -s tests -t .` before committing a change here.
 
 - [`__main__`](__main__.py): Common entry point over existing tools; default is help, never a live tick.
+- [`apsi`](apsi.py): A project-specific volatility/cost diagnostic for the MEXC alt-perp universe.
 - [`atlas`](atlas.py): Edge atlas: what each feature bin says about future returns BEFORE fees, at several horizons, split by a grouping (market session, liquidity tier, BTC regime), with a placebo to say how much of it ...
 - [`auction`](auction.py): Auction-market levels from bars: anchored VWAP with standard-deviation bands, volume and TPO profiles, the point of control and value area, high- and low-volume nodes, and the initial balance ...
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
@@ -16,6 +17,8 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`daily`](daily.py): Daily point-in-time panel: one row per (day, Binance USD-M perp) with what every source the lab holds had said about that coin by 00:00 UTC of that day, plus one row per day of market-wide series.
 - [`data`](data.py): Binance public-archive fetcher (data.binance.vision).
 - [`engine`](engine.py): Vectorized backtester.
+- [`equation_data`](equation_data.py): Input adapters for the frozen equation family; no network and no hidden gap fill.
+- [`equations`](equations.py): Causal funding/basis forecasts and a fixed-quantity, segregated pair-PnL model.
 - [`evaluation`](evaluation.py): Bounded evaluation API for future registered lanes; legacy APIs stay intact.
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.
 - [`exposure`](exposure.py): Options positioning: the Black-76 greeks of each listed option and the dealer exposures traders quote from them, gamma (GEX), delta (DEX), vanna (VEX) and charm (CEX), the gamma profile over a ...

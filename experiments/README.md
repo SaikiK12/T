@@ -31,8 +31,10 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (107)
+## Other registered rounds (done, registered or planned) (109)
 
+- **[equations_v2](equations_v2/)** R311, DONE PENDING, 12 trials. Source-seam corrected repeat of twelve funding/basis policies ([PREREG](equations_v2/PREREG.md), [FINDINGS](equations_v2/FINDINGS.md))
+- **[equations_v1](equations_v1/)** R310, DONE PENDING, 12 trials. Twelve cost-aware funding/basis equations on the fixed R288 MEXC/Lighter universe ([PREREG](equations_v1/PREREG.md), [FINDINGS](equations_v1/FINDINGS.md))
 - **[capital_mix_v1](capital_mix_v1/)** R309, DONE NULL, 1 trial. Fixed initial-capital MEXC+Lighter carry and spot-trend allocation ([PREREG](capital_mix_v1/PREREG.md), [FINDINGS](capital_mix_v1/FINDINGS.md))
 - **[nagel_v1](nagel_v1/)** R308, DONE NULL, 8 trials. Liquidity provision after stress (M325, Nagel 2012): 1-day top-50/150 reversal only after market abs-return, dispersion or OI-crash days in their trailing-year tail, plus every-day baselines; API tier costs ([PREREG](nagel_v1/PREREG.md), [FINDINGS](nagel_v1/FINDINGS.md))
 - **[rrskew_v1](rrskew_v1/)** R307, DONE NULL, 24 trials. Deribit 25-delta risk reversal (M174) as a weekly BTC/ETH perp timing signal: 30 d / 90 d RR built from every option trade with the COIN-M basis as the forward; sign / 90-day z / 7-day change z, follow or fade; manual-web costs ([PREREG](rrskew_v1/PREREG.md), [FINDINGS](rrskew_v1/FINDINGS.md))
