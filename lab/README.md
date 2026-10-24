@@ -30,6 +30,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`ict`](ict.py): ICT / smart-money concepts as mechanical, causal detectors on [T, S] bar arrays (one timeframe at a time).
 - [`inference`](inference.py): Honest statistics for a program that tries thousands of strategies.
 - [`levcarry`](levcarry.py): Leverage and liquidation on cross-venue carry books (method M265): R275's rule, run with lab.xfund, where each leg sits on its venue at leverage L and can be liquidated by an intraday move.
+- [`lighter_depth_state`](lighter_depth_state.py): Fail-closed Lighter full-depth assembly, separate from executable freshness.
 - [`live`](live.py): Public live data from Binance USD-M futures, for paper trading only: no keys, no orders, nothing private.
 - [`maker`](maker.py): Maker entries: trade a signal with a resting limit order instead of a market order, so the entry pays the maker fee and earns the distance to the reference price instead of paying spread and ...
 - [`markbars`](markbars.py): Offline mark-price contracts for a future registered M265 follow-up.

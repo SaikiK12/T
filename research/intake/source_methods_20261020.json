@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-24",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts. The2026-10-24 bounded primary-equation pass adds20 records/aliases from named paper/SDK sections; two distinct untested continuation/stopping controllers become M410/M411; no market outcome or full-book coverage.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -11098,6 +11098,887 @@
         "captured_utc_date": "2026-10-24",
         "scope": "Owner-approved finite experiment and exact code, not a claim of academic formula novelty."
       }
+    },
+    {
+      "id": "PR26-CLAMP-BAND",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Clamp-dependent perpetual funding-anchor interval",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Clamp-dependent perpetual funding-anchor interval",
+      "testable_rule": "If Phi^-1(r)=[x-,x+], lambdaL/U=(1-x-/+)^-1 and F in[lambdaL*S-C,lambdaU*S+C]; use one financing/funding clock and actual hedge/borrow/exit constraints.",
+      "exact_tested_scope": "Open pricing diagnostic; existing C09 premium>roundtrip/72h rule is different. Paper high-fee example is VIP1 maker, not our taker path.",
+      "unrun_scope": "No new market study or prospective scoring. No actual financing/borrow contract or executable stopping/settlement evidence.",
+      "status": "untested",
+      "required_inputs": [
+        "Venue-specific funding function/clamp,TWAP/impact state,financing/borrow,executable common quantities and margin"
+      ],
+      "blockers": [
+        "No actual financing/borrow contract or executable stopping/settlement evidence."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/html/2212.06888v7",
+          "label": "2026-09-17 v7; §3/Eqs1–15, Table1, Props1–3; §4.3–4.4/Eqs20–23; selected appendices; most empirical/proof work unread"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "he": {
+          "url": "https://arxiv.org/html/2212.06888v7",
+          "received_scope": "2026-09-17 v7; §3/Eqs1–15, Table1, Props1–3; §4.3–4.4/Eqs20–23; selected appendices; most empirical/proof work unread",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Funding-anchor roots and no-cost flat-region interval",
+        "Cost-expanded band and random bounded unwind",
+        "One future vs lambda spot hedge, not an assumed1:1ratio"
+      ]
+    },
+    {
+      "id": "PR26-CASH-NOTIONAL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Settlement-time notional risk despite a predictable rate",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Settlement-time notional risk despite a predictable rate",
+      "testable_rule": "Cash to signed base q is -q*I_settle*f_settle; retain E[I*f], including covariance, and distinguish variation-margin timing from terminal cash.",
+      "exact_tested_scope": "R311 repaired rate events but retained traded-close notional proxies; R312/R313 quote products are not settled cash.",
+      "unrun_scope": "No new market study or prospective scoring. No exact settlement ledger/mark vintage or complete publication/cash-flow identity.",
+      "status": "untested",
+      "required_inputs": [
+        "Position at settlement,realized rate,fair/index value,settlement asset and credit/debit time"
+      ],
+      "blockers": [
+        "No exact settlement ledger/mark vintage or complete publication/cash-flow identity."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/html/2310.11771v2",
+          "label": "2024-09-04 v2; §§2–3/Eqs8–13,27–29; §6Prop3 and cash-flow appendix. Selected published comparison DOI10.1111/mafi.70018, corrected2025-12-22; no full diff/inverse/quanto extraction"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "ahj": {
+          "url": "https://arxiv.org/html/2310.11771v2",
+          "received_scope": "2024-09-04 v2; §§2–3/Eqs8–13,27–29; §6Prop3 and cash-flow appendix. Selected published comparison DOI10.1111/mafi.70018, corrected2025-12-22; no full diff/inverse/quanto extraction",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Predictable-dollar vs predictable-percentage contract",
+        "Risk-neutral financing-parameter adjustment",
+        "Continuous variation versus terminal lump-sum cash"
+      ]
+    },
+    {
+      "id": "PR26-SEG-CAPITAL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Carry convergence versus segregated-account survival",
+      "method_type": "accounting_constraint",
+      "hypothesis": "Carry convergence versus segregated-account survival",
+      "testable_rule": "Each venue equity must cover maintenance plus close reserve at every time; pooled equity cannot substitute. Exact bid/ask cash already pays crossing.",
+      "exact_tested_scope": "R280 uses traded bars rather than a certified mark/tier path; R310/R311 keep separate accounts but are historical proxies.",
+      "unrun_scope": "No new market study or prospective scoring. BIS constant-maturity series are not an executable single contract; reported Sharpe excludes costs/financing.",
+      "status": "untested",
+      "required_inputs": [
+        "Per-venue equity,mark path,margin tiers,borrow/financing,cost and close feasibility"
+      ],
+      "blockers": [
+        "BIS constant-maturity series are not an executable single contract; reported Sharpe excludes costs/financing."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://www.bis.org/publ/work1087.pdf",
+          "label": "Agent received54-page manuscript dated2023-03-24, not the advertised2025revision; basis/margin/financing sections only. Root identity refetch returned301 and did not follow it; strategy not replicated"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "bis": {
+          "url": "https://www.bis.org/publ/work1087.pdf",
+          "received_scope": "Agent received54-page manuscript dated2023-03-24, not the advertised2025revision; basis/margin/financing sections only. Root identity refetch returned301 and did not follow it; strategy not replicated",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Cash-and-carry financing parity",
+        "Local collateral survival",
+        "Own terminal cash and total-capital hurdle algebra"
+      ]
+    },
+    {
+      "id": "PR26-GP-PARTIAL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Quadratic-cost optimal partial adjustment",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Quadratic-cost optimal partial adjustment",
+      "testable_rule": "x_t=x_old+Lambda^-1*A_xx*(aim_t-x_old) under the stationary linear-predictor/quadratic-cost model.",
+      "exact_tested_scope": "R231 NULL tests fixed half/quarter adjustment of a spot target, not this full optimized model; no new market result.",
+      "unrun_scope": "No new market study or prospective scoring. Proportional fees and coupled exchange/account constraints are not the paper quadratic model.",
+      "status": "untested",
+      "required_inputs": [
+        "Predictor dynamics,covariance,quadratic cost matrix,value curvature"
+      ],
+      "blockers": [
+        "Proportional fees and coupled exchange/account constraints are not the paper quadratic model."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "label": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "gp": {
+          "url": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "received_scope": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread",
+          "sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-GP-AIM",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Anticipated aim and signal-decay-aware target",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Anticipated aim and signal-decay-aware target",
+      "testable_rule": "Aim anticipates future targets according to signal dynamics; equivalent filtering of past aims differs from arbitrary partial execution.",
+      "exact_tested_scope": "Exact GP anticipated composite untested; R231/R281 do not exhaust it.",
+      "unrun_scope": "No new market study or prospective scoring. No calibrated transition model or executable input history.",
+      "status": "untested",
+      "required_inputs": [
+        "Causal predictor transition/decay,covariance,cost matrices,admissible inventory"
+      ],
+      "blockers": [
+        "No calibrated transition model or executable input history."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "label": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "gp": {
+          "url": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "received_scope": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread",
+          "sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Anticipated aim",
+        "Different decay weights",
+        "Equivalent exponential average of prior aims"
+      ]
+    },
+    {
+      "id": "PR26-CONTINUATION",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Fixed-deadline continuation-value inventory control",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Fixed-deadline continuation-value inventory control",
+      "testable_rule": "Own application:V_t(qold,z)=max_q[g_t(q,z)-C(q-qold)+E V_next(q,znext)], V_T(q,z)=-C_T(-q). Both segregated accounts enter admissible actions.",
+      "exact_tested_scope": "R310/R311 tested12 myopic state-score policies. No Bellman controller or invented-state proposal was run.",
+      "unrun_scope": "No new market study or prospective scoring. Source DL terminal trading date is not forced liquidation; market transitions,exact cash and executable actions remain unspecified.",
+      "status": "untested",
+      "required_inputs": [
+        "Frozen deadline/action grid,causal transitions,per-account state,terminal and failure costs"
+      ],
+      "blockers": [
+        "Source DL terminal trading date is not forced liquidation; market transitions,exact cash and executable actions remain unspecified."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/pdf/1203.5957v1",
+          "label": "2012-03-27 v1; §2 and §§3.1–3.4/printedpp2–7. Later OU/cube-root excerpts not adopted"
+        },
+        {
+          "path": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "label": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "dl": {
+          "url": "https://arxiv.org/pdf/1203.5957v1",
+          "received_scope": "2012-03-27 v1; §2 and §§3.1–3.4/printedpp2–7. Later OU/cube-root excerpts not adopted",
+          "sha256": null
+        },
+        "gp": {
+          "url": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "received_scope": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread",
+          "sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "DL scalar linear-cost recursive threshold",
+        "Own coupled-account finite-horizon extension with mandatory close"
+      ]
+    },
+    {
+      "id": "PR26-OU-FIT",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "OU likelihood and hedge-ratio formation",
+      "method_type": "primary_mechanism",
+      "hypothesis": "OU likelihood and hedge-ratio formation",
+      "testable_rule": "Fit the source OU/hedge-ratio likelihood causally on a formation sample before any stopping rule.",
+      "exact_tested_scope": "R250 distance/Engle-Granger and R287 PCA residual tests differ; this exact formation optimization remains untested.",
+      "unrun_scope": "No new market study or prospective scoring. No new finite formation window or stable executable OU spread specified.",
+      "status": "untested",
+      "required_inputs": [
+        "Formation-only paired prices,stable hedge units,likelihood/window protocol"
+      ],
+      "blockers": [
+        "No new finite formation window or stable executable OU spread specified."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/pdf/1411.5062v3",
+          "label": "2015-05-15 v3; §2, §3Eqs3.1–3.4, Theorems4.2/4.5 and selected proofs. §5 solved stop-loss boundaries not extracted"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "ll": {
+          "url": "https://arxiv.org/pdf/1411.5062v3",
+          "received_scope": "2015-05-15 v3; §2, §3Eqs3.1–3.4, Theorems4.2/4.5 and selected proofs. §5 solved stop-loss boundaries not extracted",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-OU-STOP",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "OU double optimal stopping with transaction costs",
+      "method_type": "primary_mechanism",
+      "hypothesis": "OU double optimal stopping with transaction costs",
+      "testable_rule": "V(x)=sup_tau E[e^-r*tau*(Xtau-c)], J(x)=sup_nu E[e^-rhat*nu*(V(Xnu)-Xnu-chat)]; distinct entry/liquidation boundaries.",
+      "exact_tested_scope": "Exact policy untested; R250 weekly exits and R298 protective covers are different rules.",
+      "unrun_scope": "No new market study or prospective scoring. Perpetual waiting and constant costs conflict with forced margin exits/time-varying book costs; solved stop-loss sections unread.",
+      "status": "untested",
+      "required_inputs": [
+        "Frozen OU estimate,discount rates,entry/exit costs,position/margin/timeout contract"
+      ],
+      "blockers": [
+        "Perpetual waiting and constant costs conflict with forced margin exits/time-varying book costs; solved stop-loss sections unread."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/pdf/1411.5062v3",
+          "label": "2015-05-15 v3; §2, §3Eqs3.1–3.4, Theorems4.2/4.5 and selected proofs. §5 solved stop-loss boundaries not extracted"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "ll": {
+          "url": "https://arxiv.org/pdf/1411.5062v3",
+          "received_scope": "2015-05-15 v3; §2, §3Eqs3.1–3.4, Theorems4.2/4.5 and selected proofs. §5 solved stop-loss boundaries not extracted",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Optimal liquidation value",
+        "Optimal delayed entry",
+        "Stop-loss value formulation, boundaries not extracted"
+      ]
+    },
+    {
+      "id": "PR26-GLFT-INVENTORY",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Inventory-bounded CARA market-making control",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Inventory-bounded CARA market-making control",
+      "testable_rule": "Exponential own-fill intensity and bounded inventory give a finite-horizon matrix-exponential value and quote ratios; suppress risk-increasing quotes at caps.",
+      "exact_tested_scope": "No exact GLFT controller tested; R193/R194 directional limit entries are not two-sided control.",
+      "unrun_scope": "No new market study or prospective scoring. Public depth does not identify own fills or calibrate instant cancel/repost.",
+      "status": "untested",
+      "required_inputs": [
+        "Own fill intensity,volatility,risk aversion,inventory bound,horizon and queue/failure data"
+      ],
+      "blockers": [
+        "Public depth does not identify own fills or calibrate instant cancel/repost."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/html/1105.3115v5",
+          "label": "2012-08-03 v5, July2012 manuscript; §§2–5. No market calibration or reproduction"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "glft": {
+          "url": "https://arxiv.org/html/1105.3115v5",
+          "received_scope": "2012-08-03 v5, July2012 manuscript; §§2–5. No market calibration or reproduction",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Exact finite-horizon matrix exponential",
+        "Stationary eigenvector ratios",
+        "Gaussian approximation",
+        "Constant-drift inventory target",
+        "Linear arrival/terminal penalty footnote leads with missing specification"
+      ]
+    },
+    {
+      "id": "PR26-GLFT-TOXICITY",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Execution toxicity couples spread and inventory skew",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Execution toxicity couples spread and inventory skew",
+      "testable_rule": "The execution-linked jump extension adds about xi/2 per side and scales the Gaussian inventory slope by exp(k*xi/4); do not charge only a constant spread surcharge.",
+      "exact_tested_scope": "Absent from simple inspected feature kernels; no calibrated controller or market outcome.",
+      "unrun_scope": "No new market study or prospective scoring. No own-fill/queue data or calibrated adverse-selection intensity.",
+      "status": "untested",
+      "required_inputs": [
+        "Fill-conditioned markouts,own fill/cancel state,xi,k,inventory dynamics"
+      ],
+      "blockers": [
+        "No own-fill/queue data or calibrated adverse-selection intensity."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://arxiv.org/html/1105.3115v5",
+          "label": "2012-08-03 v5, July2012 manuscript; §§2–5. No market calibration or reproduction"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "glft": {
+          "url": "https://arxiv.org/html/1105.3115v5",
+          "received_scope": "2012-08-03 v5, July2012 manuscript; §§2–5. No market calibration or reproduction",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-CJR-ARRIVAL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Marked mutually exciting arrivals and stochastic fill depth",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Marked mutually exciting arrivals and stochastic fill depth",
+      "testable_rule": "Separate market-arrival lambda from own execution lambda*h(delta;kappa); influential events excite arrival/depth processes under stability constraints.",
+      "exact_tested_scope": "R185 coarse imbalance and R193 trade-through do not calibrate these latent marked processes.",
+      "unrun_scope": "No new market study or prospective scoring. Influential-event labels and queue/fill probabilities are not supplied by public tape.",
+      "status": "untested",
+      "required_inputs": [
+        "Causal event/receive times,marked arrivals,own-fill depth and event labels"
+      ],
+      "blockers": [
+        "Influential-event labels and queue/fill probabilities are not supplied by public tape."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "label": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "cjr": {
+          "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "received_scope": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed",
+          "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Marked Hawkes arrivals",
+        "Stochastic kappa/depth",
+        "News excitation suggested but not specified/calibrated"
+      ]
+    },
+    {
+      "id": "PR26-CJR-ALPHA-CONTROL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Short-lived alpha and event-triggered quote feedback",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Short-lived alpha and event-triggered quote feedback",
+      "testable_rule": "Mean-reverting alpha plus signed event jumps drives fair value; HJB feedback depends on inventory and event-shifted continuation, not OFI alone.",
+      "exact_tested_scope": "Exact CJR alpha/control untested; weighted midpoint and directional entry NULLs are distinct.",
+      "unrun_scope": "No new market study or prospective scoring. Instant cancellation and private influential types are unsupported; no frozen parameter/fee/account rule.",
+      "status": "untested",
+      "required_inputs": [
+        "Causal alpha/arrival estimate,inventory,horizon,fill state and latency"
+      ],
+      "blockers": [
+        "Instant cancellation and private influential types are unsupported; no frozen parameter/fee/account rule."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "label": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "cjr": {
+          "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "received_scope": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed",
+          "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Short-lived alpha drift",
+        "Immediate jump-toxicity alternative",
+        "Exponential feedback",
+        "Event-shifted inventory target",
+        "Expected-utility extension lead",
+        "Variable-order-size extension lead"
+      ]
+    },
+    {
+      "id": "PR26-CJR-POWER-A",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "CJR main-text power fill family",
+      "method_type": "equation_distinction",
+      "hypothesis": "CJR main-text power fill family",
+      "testable_rule": "Section3 h=1/[1+(kappa*delta)^a]; for a>1 the zero-inventory delta*h optimum is1/[kappa*(a-1)^(1/a)].",
+      "exact_tested_scope": "Symbolic source/derivative distinction only; no market calibration.",
+      "unrun_scope": "No new market study or prospective scoring. No calibrated family; AppendixC.1 feedback is not this main-text family.",
+      "status": "untested",
+      "required_inputs": [
+        "Chosen family,kappa,a,price/tick units,own-fill data"
+      ],
+      "blockers": [
+        "No calibrated family; AppendixC.1 feedback is not this main-text family."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "label": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "cjr": {
+          "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "received_scope": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed",
+          "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-CJR-POWER-B",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "CJR appendix power fill family",
+      "method_type": "equation_distinction",
+      "hypothesis": "CJR appendix power fill family",
+      "testable_rule": "AppendixC.1 h=(1+kappa*delta)^-a; for a>1 the delta*h optimum is1/[kappa*(a-1)].",
+      "exact_tested_scope": "Separate received family; do not silently alias main-text formula.",
+      "unrun_scope": "No new market study or prospective scoring. No calibrated family or executable feedback strategy.",
+      "status": "untested",
+      "required_inputs": [
+        "Chosen family,kappa,a,price/tick units,own-fill data"
+      ],
+      "blockers": [
+        "No calibrated family or executable feedback strategy."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "label": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "cjr": {
+          "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "received_scope": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed",
+          "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-FITTED-MICROPRICE",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Fitted multi-price-change microprice",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Fitted multi-price-change microprice",
+      "testable_rule": "g1=(I-Q)^-1*R1*K,B=(I-Q)^-1*R2,p6=mid+sum_(j=0..5)B^j*g1; estimate state transitions causally.",
+      "exact_tested_scope": "Existing module already distinguishes weighted midpoint; R185 coarse imbalance is not this estimator. Notebook was not run.",
+      "unrun_scope": "No new market study or prospective scoring. Cent-based K,whole-sample bucket fitting and row-shift assumptions require adaptation; full-paper convergence conditions unread.",
+      "status": "untested",
+      "required_inputs": [
+        "Causal tick-scaled transitions,training-only quantile buckets,receive clocks,move filters"
+      ],
+      "blockers": [
+        "Cent-based K,whole-sample bucket fitting and row-shift assumptions require adaptation; full-paper convergence conditions unread."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://github.com/sstoikov/microprice/blob/94205fe5bedb98b627b43e4abeb59f91fa6d7075/Microprice%20-%20Big%20Data%20Conference.ipynb",
+          "label": "94205fe5bedb98b627b43e4abeb59f91fa6d7075,2020-06-02; notebook code read, no sampleCSV/execution. SSRN2970694 abstract only; full paper403, convergence hypotheses unread"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "micro": {
+          "url": "https://github.com/sstoikov/microprice/blob/94205fe5bedb98b627b43e4abeb59f91fa6d7075/Microprice%20-%20Big%20Data%20Conference.ipynb",
+          "received_scope": "94205fe5bedb98b627b43e4abeb59f91fa6d7075,2020-06-02; notebook code read, no sampleCSV/execution. SSRN2970694 abstract only; full paper403, convergence hypotheses unread",
+          "sha256": null
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "First-price-change forecast",
+        "Recursive multi-change forecast",
+        "Limiting microprice claim not proved from abstract",
+        "Six-term implementation approximation"
+      ]
+    },
+    {
+      "id": "PR26-KELLY-FLOOR",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Risk-constrained Kelly initial-wealth floor",
+      "method_type": "risk_constraint",
+      "hypothesis": "Risk-constrained Kelly initial-wealth floor",
+      "testable_rule": "lambda=log(beta)/log(alpha); E[(r^T*b)^-lambda]<=1 is a sufficient initial-wealth drawdown restriction under the source IID fixed-bet model.",
+      "exact_tested_scope": "R217 relative/own-profit scaling and R281 tilts do not implement this exact constraint; no new optimizer/run.",
+      "unrun_scope": "No new market study or prospective scoring. Not a rolling-peak drawdown guarantee; leveraged dependent carry and missing fills violate unverified premises. Local printed two-outcome typos not adopted.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete net payoff support,positive wealth factors,cash and IID/adaptation justification"
+      ],
+      "blockers": [
+        "Not a rolling-peak drawdown guarantee; leveraged dependent carry and missing fills violate unverified premises. Local printed two-outcome typos not adopted."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+          "label": "2016-03-19 author manuscript,28pages; §§2.1–2.2,3–5.3 throughEq11, AppendixA Lemma1. §6/numerical studies not reproduced"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "rck": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+          "received_scope": "2016-03-19 author manuscript,28pages; §§2.1–2.2,3–5.3 throughEq11, AppendixA Lemma1. §6/numerical studies not reproduced",
+          "sha256": "1a51f811ea225d3abbdb9eaf2225d38122f7f7b0a4368d15341c63536403b74d"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-ROBUST-KELLY",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Probability-ambiguous fixed-support Kelly allocation",
+      "method_type": "risk_constraint",
+      "hypothesis": "Probability-ambiguous fixed-support Kelly allocation",
+      "testable_rule": "max_b min_pi sum_k pi_k log(r_k^T*b),with simplex probabilities in a declared box about nominal probabilities.",
+      "exact_tested_scope": "Exact ambiguity optimizer untested; R217/R281 do not cover it.",
+      "unrun_scope": "No new market study or prospective scoring. Probability ambiguity does not repair missing payoff support; appendix dual discrepancy remains unimplemented.",
+      "status": "untested",
+      "required_inputs": [
+        "Complete executable net payoffs,nominal probabilities,calibrated ambiguity radii,feasible account budgets"
+      ],
+      "blockers": [
+        "Probability ambiguity does not repair missing payoff support; appendix dual discrepancy remains unimplemented."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://web.stanford.edu/~boyd/papers/pdf/robust_kelly.pdf",
+          "label": "2018-12-08 author manuscript,12pages, distinct from laterarXivv3; §§1–2.4 and appendix. Synthetic horse-race setup inspected, not reproduced"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "robust": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/robust_kelly.pdf",
+          "received_scope": "2018-12-08 author manuscript,12pages, distinct from laterarXivv3; §§1–2.4 and appendix. Synthetic horse-race setup inspected, not reproduced",
+          "sha256": "7b2c5df6d05296e4a523806b874c2d34b067daeed5fb474df4788cba023024a5"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-ROBUST-MEAN-PENALTY",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Exposure-aware mean-error penalty and net entry hurdle",
+      "method_type": "uncalibrated_hypothesis",
+      "hypothesis": "Exposure-aware mean-error penalty and net entry hurdle",
+      "testable_rule": "min_|delta|<=rho (muhat+delta)^T*v=muhat^T*v-rho^T|v|. Own entry prerequisite q*(muhat_H-epsilon_H)>upper total entry+exit cost.",
+      "exact_tested_scope": "Additional uncertainty calibration is incomplete and untested; not a repackaged R311 turnover hurdle or validation rescue.",
+      "unrun_scope": "No new market study or prospective scoring. Return residual quantiles are not mean-confidence bounds; source prose reverses endpoint signs despite correct display.",
+      "status": "untested",
+      "required_inputs": [
+        "Past-only mature mean-error calibration,dependence,proper units,measured fee/depth/failure bounds"
+      ],
+      "blockers": [
+        "Return residual quantiles are not mean-confidence bounds; source prose reverses endpoint signs despite correct display."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://web.stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf",
+          "label": "Author-hosted final copy, copyright2017/coverVol3(1)2016; §§2.3,2.5,2.7,4.1,4.3. Chapters5–7/software not audited"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "boyd": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf",
+          "received_scope": "Author-hosted final copy, copyright2017/coverVol3(1)2016; §§2.3,2.5,2.7,4.1,4.3. Chapters5–7/software not audited",
+          "sha256": "e7bda0c607fcac4c431cba010f6bfd9ef92f6357f3aa3c71f9023b160bf7ac67"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-CASH-DOMINANCE",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Net arithmetic expectancy versus log-growth and robust cash",
+      "method_type": "mathematical_constraint",
+      "hypothesis": "Net arithmetic expectancy versus log-growth and robust cash",
+      "testable_rule": "Own Jensen consequence:E log(1+fX)<=log(1+f E X). In robust portfolios, one common admissible distribution dominating all risky means suffices for cash; different worst-case distributions do not.",
+      "exact_tested_scope": "Analytical condition only, not inferred from R311 sample losses; no invented-market test executed.",
+      "unrun_scope": "No new market study or prospective scoring. No new expectation estimate or proof that any historical sample sign is population mean.",
+      "status": "untested",
+      "required_inputs": [
+        "True/justified net payoff distribution,feasible positive wealth factors,cash risk assumptions"
+      ],
+      "blockers": [
+        "No new expectation estimate or proof that any historical sample sign is population mean."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+          "label": "2016-03-19 author manuscript,28pages; §§2.1–2.2,3–5.3 throughEq11, AppendixA Lemma1. §6/numerical studies not reproduced"
+        },
+        {
+          "path": "https://web.stanford.edu/~boyd/papers/pdf/robust_kelly.pdf",
+          "label": "2018-12-08 author manuscript,12pages, distinct from laterarXivv3; §§1–2.4 and appendix. Synthetic horse-race setup inspected, not reproduced"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "rck": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+          "received_scope": "2016-03-19 author manuscript,28pages; §§2.1–2.2,3–5.3 throughEq11, AppendixA Lemma1. §6/numerical studies not reproduced",
+          "sha256": "1a51f811ea225d3abbdb9eaf2225d38122f7f7b0a4368d15341c63536403b74d"
+        },
+        "robust": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/robust_kelly.pdf",
+          "received_scope": "2018-12-08 author manuscript,12pages, distinct from laterarXivv3; §§1–2.4 and appendix. Synthetic horse-race setup inspected, not reproduced",
+          "sha256": "7b2c5df6d05296e4a523806b874c2d34b067daeed5fb474df4788cba023024a5"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee."
+    },
+    {
+      "id": "PR26-LIGHTER-SEQ",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "primary_equations_delta_20261024",
+      "title": "Atomic deeper-book continuity separate from executable freshness",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Atomic deeper-book continuity separate from executable freshness",
+      "testable_rule": "Subscription snapshot then absolute-size/zero-delete deltas; begin_nonce==previous nonce; offsets increase but may skip. Epochs,sticky faults and all metadata commit atomically.",
+      "exact_tested_scope": "New deterministic assembler/oracle/age/cost tests only. No live full-depth run, fill test or R313 rescore.",
+      "unrun_scope": "No new market study or prospective scoring. Pong/other-market activity cannot attest fresh idle state; external timestamp provenance and per-market heartbeat SLA unproven.",
+      "status": "partial",
+      "required_inputs": [
+        "Saved subscription epoch,complete raw depth/clock frames,connection failure hooks,known field units and finite collection budget"
+      ],
+      "blockers": [
+        "Pong/other-market activity cannot attest fresh idle state; external timestamp provenance and per-market heartbeat SLA unproven."
+      ],
+      "next_action": "Use the exact canonical open scope; parameterize and freeze a finite code/input specification before market outcomes. Preserve prior nulls and all1x/2x/3x results.",
+      "source_refs": [
+        {
+          "path": "https://apidocs.lighter.xyz/docs/websocket-reference",
+          "label": "Unversioned reference retained fromR313, dateModified2026-10-18. Connection/order_book/BBO/keepalive read. Dedicated timestamp/market-data guides403. SDK a7a9ba88514d38a863a33642acd41f8adf442e5c ws_client.py fully read,6873bytes; widerSDKnotaudited"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "docs/PRIMARY_EQUATIONS.md",
+          "label": "Bounded primary-reading synthesis and limitations"
+        }
+      ],
+      "source_version": {
+        "depth": {
+          "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+          "received_scope": "Unversioned reference retained fromR313, dateModified2026-10-18. Connection/order_book/BBO/keepalive read. Dedicated timestamp/market-data guides403. SDK a7a9ba88514d38a863a33642acd41f8adf442e5c ws_client.py fully read,6873bytes; widerSDKnotaudited",
+          "sha256": "e417b473b92e99f1272d8ca511ec21baf1f674e20221b08fd1310944e68e9f7a"
+        }
+      },
+      "scope_relation": "Related canonical family; this source mechanism is not automatically covered by a differently specified older test.",
+      "limitations": "Source/equation extraction only. No private strategy, whole-book/full-corpus mastery, calibrated MEXC edge or actual fee/fill guarantee.",
+      "distinct_received_submechanisms": [
+        "Snapshot vs incremental state",
+        "Nonce/offset/metadata consistency",
+        "Atomic absolute-level replacement/deletion",
+        "Reconnect and late-frame epoch rejection",
+        "Conservative duplicate/no-op age handling",
+        "Uncertified idle/session/fill freshness"
+      ]
     }
   ],
   "sources": [
@@ -11607,6 +12488,39 @@
         "resolved_utc_date": "2026-10-23",
         "resolved_by_intake": "reels_delta_reconciliation_20261023"
       }
+    },
+    {
+      "path": "docs/PRIMARY_EQUATIONS.md",
+      "sha256": "1a99149369efed8bced8c19c54acaffb460fb6287947ca80584b1c62d5485ae8",
+      "current_sha256": "1a99149369efed8bced8c19c54acaffb460fb6287947ca80584b1c62d5485ae8",
+      "review_status": "ingested_enumerated",
+      "scope": "Bounded primary-equation/SDK synthesis;20 source records including exact submechanisms; no market outcomes",
+      "method_ids": [
+        "PR26-CLAMP-BAND",
+        "PR26-CASH-NOTIONAL",
+        "PR26-SEG-CAPITAL",
+        "PR26-GP-PARTIAL",
+        "PR26-GP-AIM",
+        "PR26-CONTINUATION",
+        "PR26-OU-FIT",
+        "PR26-OU-STOP",
+        "PR26-GLFT-INVENTORY",
+        "PR26-GLFT-TOXICITY",
+        "PR26-CJR-ARRIVAL",
+        "PR26-CJR-ALPHA-CONTROL",
+        "PR26-CJR-POWER-A",
+        "PR26-CJR-POWER-B",
+        "PR26-FITTED-MICROPRICE",
+        "PR26-KELLY-FLOOR",
+        "PR26-ROBUST-KELLY",
+        "PR26-ROBUST-MEAN-PENALTY",
+        "PR26-CASH-DOMINANCE",
+        "PR26-LIGHTER-SEQ"
+      ],
+      "unextracted_limitations": [
+        "Only named sections/versions read; original empirical results/proofs/full books and restricted text are not fully reviewed."
+      ],
+      "current_source_review_required": false
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -14308,6 +15222,163 @@
       "market_outcomes_computed": false,
       "market_trials": 0,
       "intake_id": "tiktok_vix_equations_delta_20261024"
+    },
+    {
+      "intake_id": "primary_equations_delta_20261024",
+      "id": "primary_equations_delta_20261024",
+      "records_added": [
+        "PR26-CLAMP-BAND",
+        "PR26-CASH-NOTIONAL",
+        "PR26-SEG-CAPITAL",
+        "PR26-GP-PARTIAL",
+        "PR26-GP-AIM",
+        "PR26-CONTINUATION",
+        "PR26-OU-FIT",
+        "PR26-OU-STOP",
+        "PR26-GLFT-INVENTORY",
+        "PR26-GLFT-TOXICITY",
+        "PR26-CJR-ARRIVAL",
+        "PR26-CJR-ALPHA-CONTROL",
+        "PR26-CJR-POWER-A",
+        "PR26-CJR-POWER-B",
+        "PR26-FITTED-MICROPRICE",
+        "PR26-KELLY-FLOOR",
+        "PR26-ROBUST-KELLY",
+        "PR26-ROBUST-MEAN-PENALTY",
+        "PR26-CASH-DOMINANCE",
+        "PR26-LIGHTER-SEQ"
+      ],
+      "received_scope": "Five specialist primary-reading memos and independent verification;12 mathematical sources plus official depth docs/code, named sections only. Raw author PDFs not mirrored.",
+      "primary_source_versions": {
+        "he": {
+          "url": "https://arxiv.org/html/2212.06888v7",
+          "received_scope": "2026-09-17 v7; §3/Eqs1–15, Table1, Props1–3; §4.3–4.4/Eqs20–23; selected appendices; most empirical/proof work unread",
+          "sha256": null
+        },
+        "ahj": {
+          "url": "https://arxiv.org/html/2310.11771v2",
+          "received_scope": "2024-09-04 v2; §§2–3/Eqs8–13,27–29; §6Prop3 and cash-flow appendix. Selected published comparison DOI10.1111/mafi.70018, corrected2025-12-22; no full diff/inverse/quanto extraction",
+          "sha256": null
+        },
+        "bis": {
+          "url": "https://www.bis.org/publ/work1087.pdf",
+          "received_scope": "Agent received54-page manuscript dated2023-03-24, not the advertised2025revision; basis/margin/financing sections only. Root identity refetch returned301 and did not follow it; strategy not replicated",
+          "sha256": null
+        },
+        "gp": {
+          "url": "https://nbgarleanu.github.io/DynTrad.pdf",
+          "received_scope": "March2012 author manuscript; §§2–3/Eqs1–17, printedpp7–14. Empirical sections and appendix proofs unread",
+          "sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d"
+        },
+        "dl": {
+          "url": "https://arxiv.org/pdf/1203.5957v1",
+          "received_scope": "2012-03-27 v1; §2 and §§3.1–3.4/printedpp2–7. Later OU/cube-root excerpts not adopted",
+          "sha256": null
+        },
+        "ll": {
+          "url": "https://arxiv.org/pdf/1411.5062v3",
+          "received_scope": "2015-05-15 v3; §2, §3Eqs3.1–3.4, Theorems4.2/4.5 and selected proofs. §5 solved stop-loss boundaries not extracted",
+          "sha256": null
+        },
+        "glft": {
+          "url": "https://arxiv.org/html/1105.3115v5",
+          "received_scope": "2012-08-03 v5, July2012 manuscript; §§2–5. No market calibration or reproduction",
+          "sha256": null
+        },
+        "cjr": {
+          "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf",
+          "received_scope": "2018-12-24 SIGEST revision, §§2–5 and AppendixC.1; closed2014 publisher copy not accessed",
+          "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9"
+        },
+        "micro": {
+          "url": "https://github.com/sstoikov/microprice/blob/94205fe5bedb98b627b43e4abeb59f91fa6d7075/Microprice%20-%20Big%20Data%20Conference.ipynb",
+          "received_scope": "94205fe5bedb98b627b43e4abeb59f91fa6d7075,2020-06-02; notebook code read, no sampleCSV/execution. SSRN2970694 abstract only; full paper403, convergence hypotheses unread",
+          "sha256": null
+        },
+        "rck": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/kelly.pdf",
+          "received_scope": "2016-03-19 author manuscript,28pages; §§2.1–2.2,3–5.3 throughEq11, AppendixA Lemma1. §6/numerical studies not reproduced",
+          "sha256": "1a51f811ea225d3abbdb9eaf2225d38122f7f7b0a4368d15341c63536403b74d"
+        },
+        "robust": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/robust_kelly.pdf",
+          "received_scope": "2018-12-08 author manuscript,12pages, distinct from laterarXivv3; §§1–2.4 and appendix. Synthetic horse-race setup inspected, not reproduced",
+          "sha256": "7b2c5df6d05296e4a523806b874c2d34b067daeed5fb474df4788cba023024a5"
+        },
+        "boyd": {
+          "url": "https://web.stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf",
+          "received_scope": "Author-hosted final copy, copyright2017/coverVol3(1)2016; §§2.3,2.5,2.7,4.1,4.3. Chapters5–7/software not audited",
+          "sha256": "e7bda0c607fcac4c431cba010f6bfd9ef92f6357f3aa3c71f9023b160bf7ac67"
+        },
+        "depth": {
+          "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+          "received_scope": "Unversioned reference retained fromR313, dateModified2026-10-18. Connection/order_book/BBO/keepalive read. Dedicated timestamp/market-data guides403. SDK a7a9ba88514d38a863a33642acd41f8adf442e5c ws_client.py fully read,6873bytes; widerSDKnotaudited",
+          "sha256": "e417b473b92e99f1272d8ca511ec21baf1f674e20221b08fd1310944e68e9f7a"
+        }
+      },
+      "source_identity_fetches": {
+        "body_bytes": 1162332,
+        "received_utc": "2026-10-24T18:52:01Z",
+        "requests": 4,
+        "scope": "four static source URL attempts; no market/history data",
+        "sources": [
+          {
+            "bytes": 6873,
+            "complete": true,
+            "name": "lighter_sdk",
+            "sha256": "e417b473b92e99f1272d8ca511ec21baf1f674e20221b08fd1310944e68e9f7a",
+            "status": 200,
+            "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/ws_client.py"
+          },
+          {
+            "bytes": 525150,
+            "complete": true,
+            "name": "gp",
+            "sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d",
+            "status": 200,
+            "url": "https://nbgarleanu.github.io/DynTrad.pdf"
+          },
+          {
+            "bytes": 630309,
+            "complete": true,
+            "name": "cjr",
+            "sha256": "7b76619d70c6179ee50430f551d240923ccb1efb6fb0ecc38d66c4ec92598cd9",
+            "status": 200,
+            "url": "https://www.oxford-man.ox.ac.uk/wp-content/uploads/2020/05/Algorithmic-Trading-Stochastic-Control-and-Mutually-Exciting-Processes.pdf"
+          },
+          {
+            "error": "normal public request failed; no redirect/login bypass",
+            "name": "bis",
+            "status": 301,
+            "url": "https://www.bis.org/publ/work1087.pdf"
+          }
+        ]
+      },
+      "reconciliation": "20 records/aliases imported into the existing intake;18 map to existing families/CONTEXT and2 distinct untested controllers add canonicalM410/M411. No competing queue/panel.",
+      "market_trials": 0,
+      "market_outcomes_computed": false,
+      "implementation_evidence": [
+        "lab/lighter_depth_state.py",
+        "tests/test_lighter_depth_state.py"
+      ],
+      "independent_verification": "Five source claim groups checked; printed-source ambiguities and R311 exact negative scope preserved; no generalized profitability result."
+    },
+    {
+      "intake_id": "owner_instagram_received_unread_20261024",
+      "records_added": [],
+      "media_source_count": 1,
+      "media_sources": [
+        {
+          "url": "https://www.instagram.com/reel/Dec0l3vtE3f/?mdxt=MWo2dGN6NDJ3bnoxNA==",
+          "canonical_url": "https://www.instagram.com/reel/Dec0l3vtE3f/",
+          "basis": "Owner supplied URL only; no caption, audio, frames or transcript received. Normal public web open returned Online fetch throttled; exact shortcode search returned no results.",
+          "accessed_utc_date": "2026-10-24",
+          "access_status": "unread_public_fetch_throttled",
+          "methods_received": null,
+          "missing_mechanics": "All content and trading mechanics unknown. No login/subscription bypass or inferred method."
+        }
+      ],
+      "scope": "One received URL, not source-content extraction. No method/alias/trial/queue row or market acquisition added."
     }
   ],
   "reassignment_refs": [

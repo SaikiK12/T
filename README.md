@@ -48,6 +48,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
   [`OLD_SESSION_EDGES.md`](docs/OLD_SESSION_EDGES.md).
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
+  [`PRIMARY_EQUATIONS.md`](docs/PRIMARY_EQUATIONS.md) (bounded primary reading, exact equations and execution prerequisites),
   [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
   [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
 - Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
