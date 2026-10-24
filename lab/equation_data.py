@@ -17,7 +17,7 @@ def _rules(row, venue):
     try:
         if venue == "mexc":
             if int(row["type"]) != 1 or row.get("settleCoin") != "USDT":
-                raise ValueError("nonlinear/non-USDT contract")
+                raise ValueError("unsupported contract type or settlement currency")
             size = float(row["contractSize"])
             step = size * float(row["volUnit"])
             minimum = size * float(row["minVol"])

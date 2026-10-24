@@ -220,7 +220,7 @@ def run(out, lane=LANE, root=ROOT):
                              funding_ok=panel.funding_ok[:stop],
                              settlement=panel.settlement[:stop] if panel.settlement is not None else None)
     forecasts = build_forecasts(training_panel)
-    reference_train, legacy_train = parent_states(panel, train_start, val_start)
+    reference_train, legacy_train = parent_states(training_panel, train_start, val_start)
     reference_val = None
     labels = ("reference",) + LABELS
 

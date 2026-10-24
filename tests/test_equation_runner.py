@@ -69,9 +69,17 @@ class EquationRunnerTests(unittest.TestCase):
                               "sha256": {str(f.relative_to(root)): runner.sha(f) for f in sources}})
             (lane/"PREREG.md").write_text("Input manifest SHA-256: "+runner.sha(lane/"inputs.json"))
             prereg.freeze(lane/"PREREG.md")
-            with contextlib.redirect_stdout(io.StringIO()):
+            original_parent = runner.parent_states
+            seen_training_parent = []
+            def inspect_parent(source, start, end):
+                if start == p.times[0]:
+                    self.assertEqual(source.times[-1], end)  # future rows are not even supplied
+                    seen_training_parent.append(True)
+                return original_parent(source, start, end)
+            with contextlib.redirect_stdout(io.StringIO()), mock.patch.object(runner, "parent_states", side_effect=inspect_parent):
                 runner.run(lane/"out1", lane=lane, root=root)
                 runner.run(lane/"out2", lane=lane, root=root)
+            self.assertEqual(len(seen_training_parent), 2)
             for f in (lane/"out1").iterdir():
                 self.assertEqual(f.read_bytes(), (lane/"out2"/f.name).read_bytes(), f.name)
             daily = pd.read_csv(lane/"out1/daily.csv.gz")
