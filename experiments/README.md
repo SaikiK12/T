@@ -31,8 +31,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (110)
+## Other registered rounds (done, registered or planned) (111)
 
+- **[stream_quotes_v1](stream_quotes_v1/)** R313, DONE PARTIAL, 0 trials. Source-stamped paired quotes and fixed causal access-delay costs ([PREREG](stream_quotes_v1/PREREG.md), [FINDINGS](stream_quotes_v1/FINDINGS.md))
 - **[pair_quotes_v1](pair_quotes_v1/)** R312, DONE PARTIAL, 0 trials. First-seen MEXC/Lighter common-lot inputs and conditional crossing costs ([PREREG](pair_quotes_v1/PREREG.md), [FINDINGS](pair_quotes_v1/FINDINGS.md))
 - **[equations_v2](equations_v2/)** R311, DONE PENDING, 12 trials. Source-seam corrected repeat of twelve funding/basis policies ([PREREG](equations_v2/PREREG.md), [FINDINGS](equations_v2/FINDINGS.md))
 - **[equations_v1](equations_v1/)** R310, DONE PENDING, 12 trials. Twelve cost-aware funding/basis equations on the fixed R288 MEXC/Lighter universe ([PREREG](equations_v1/PREREG.md), [FINDINGS](equations_v1/FINDINGS.md))

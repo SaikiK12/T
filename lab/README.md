@@ -56,6 +56,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`sizecarry`](sizecarry.py): Confidence-sized cross-venue carry (method M266): R275's books with the same pairs, entered and exited by the same rule (lab.xfund), but each open pair sized by a score instead of one equal slot.
 - [`slices`](slices.py): Overlapping-slice books (the Jegadeesh-Titman construction): every hour a symbol is in the signal state, open a slice of fixed size and close it `hold` hours later.
 - [`stats`](stats.py): Reference statistics.
+- [`stream_quotes`](stream_quotes.py): Causal full-snapshot/BBO replay with separate source and first-seen clocks.
 - [`stress`](stress.py): Stress-day report (M324): what a book earned on the market's worst days, beside its mean.
 - [`tape`](tape.py): Top-of-book and trade tape, one row per (venue, coin, second), for order-flow research on 1-60 s horizons (M264).
 - [`tearsheet`](tearsheet.py): Performance tear sheet for a daily return stream: quantstats' core metrics, plus the lab's honesty terms.
