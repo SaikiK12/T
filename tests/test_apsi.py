@@ -6,12 +6,25 @@ from lab.apsi import (
     apsi_index,
     basket_sigma24,
     ewma_covariance,
+    ewma_second_moment,
     fee_burden_ratio,
     snapshot_at,
 )
 
 
 class ApsiTests(unittest.TestCase):
+    def test_constant_nonzero_returns_have_nonzero_raw_realized_variance(self):
+        x = np.full((168, 2), 0.001)
+        self.assertAlmostEqual(basket_sigma24(x, [0.5, 0.5]) ** 2, 24e-6)
+        np.testing.assert_allclose(ewma_covariance(x), 0, atol=1e-30)
+        np.testing.assert_allclose(ewma_second_moment(x), np.full((2, 2), 1e-6))
+
+    def test_flat_current_panel_has_zero_index_with_positive_baseline(self):
+        self.assertEqual(snapshot_at(np.zeros((168, 1)), 168, [1], np.ones(30)),
+                         {"sigma24": 0.0, "apsi": 0.0})
+        with self.assertRaises(ValueError):
+            apsi_index(0, np.zeros(30))
+
     def test_covariance_is_symmetric_psd_and_positive_scale_equivariant(self):
         rng = np.random.default_rng(41023)
         returns = rng.normal(0.0, 0.01, (168, 5))

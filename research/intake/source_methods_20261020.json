@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
-  "updated_utc_date": "2026-10-23",
+  "updated_utc_date": "2026-10-24",
   "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
@@ -10792,6 +10792,312 @@
         "instagram_html_sha256": "7b5b9702f5abcaeec93f976995a6641630f409691d0d3a36de124a4fe661e059",
         "official_video_access": "Search-index title/description only; direct public fetch returned HTTP403."
       }
+    },
+    {
+      "id": "TT26-VIX-OCT110",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "October VIX 110-strike long put example",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "A long deep-ITM put benefits from a lower VRO at its own expiry.",
+      "testable_rule": "Cash payoff 100*N*(max(K-VRO_T,0)-premium_points)-fees; source K110, premium91 points, N563, expiry2026-10-21.",
+      "exact_tested_scope": "The platform captions describe about USD5.1m premium. 563*91*100=USD5,123,300; expiry breakeven VRO19 before fees/financing. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "Entry-time BBO, confirmed print/sign, full inventory and a general entry/exit selection rule are absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Entry-time BBO, confirmed print/sign, full inventory and a general entry/exit selection rule are absent."
+      ],
+      "blockers": [
+        "Entry-time BBO, confirmed print/sign, full inventory and a general entry/exit selection rule are absent."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "TT26-VIX-NOV130",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "November VIX 130-strike long put example",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "A separate long put has an expiry-specific breakeven.",
+      "testable_rule": "Source K130, premium110 points, expiry2026-11-18; per-contract cash breakeven VRO20 before fees/financing.",
+      "exact_tested_scope": "Captions cite roughly USD1.2m premium; contract quantity is not given. Do not infer an exact quantity from a rounded premium. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "Exact quantity, price/tape validation, execution costs and a general strategy rule are absent.",
+      "status": "blocked",
+      "required_inputs": [
+        "Exact quantity, price/tape validation, execution costs and a general strategy rule are absent."
+      ],
+      "blockers": [
+        "Exact quantity, price/tape validation, execution costs and a general strategy rule are absent."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "TT26-VIX-IV-EVENT-GAP",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "Compare SPX event-day implied move with VIX-implied volatility",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "A horizon-aligned implied-versus-realized/event-variance gap may identify relative value.",
+      "testable_rule": "Captions compare about0.8% SPX next-day event move with VIX17.5 and the rule-of16. Freeze a common target/horizon/measure before trading the gap.",
+      "exact_tested_scope": "The video supplies a market observation and interpretation; no reproducible forecast rule or PnL test. A straddle expected absolute move is not automatically a one-sigma move. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "Need simultaneous option chains/BBO, quote measure, event clock, RV forecast and finite execution/exit rules.",
+      "status": "blocked",
+      "required_inputs": [
+        "Need simultaneous option chains/BBO, quote measure, event clock, RV forecast and finite execution/exit rules."
+      ],
+      "blockers": [
+        "Need simultaneous option chains/BBO, quote measure, event clock, RV forecast and finite execution/exit rules."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "TT26-VIX-FOMC-EXPIRY-CLOCK",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "FOMC minutes date versus VIX option settlement and index window",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "Expiry and the underlying index horizon can expose different event risks.",
+      "testable_rule": "Retain2026-11-18 expiry and14:00ET minutes release separately. VRO is a morning SPX-options opening quotation with a forward30-day window.",
+      "exact_tested_scope": "Cboe specifications and Fed November2026 calendar independently corroborate the clocks; settlement before release does not imply the VRO excludes anticipated event variance. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "No same-day post-release payoff attribution or event-volatility-crush strategy can be inferred without exact contract/window mechanics.",
+      "status": "blocked",
+      "required_inputs": [
+        "No same-day post-release payoff attribution or event-volatility-crush strategy can be inferred without exact contract/window mechanics."
+      ],
+      "blockers": [
+        "No same-day post-release payoff attribution or event-volatility-crush strategy can be inferred without exact contract/window mechanics."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "TT26-VIX-LINKED-PRINTS",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "Interpret coincident prints across two VIX maturities",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "Same-time prints can be legs of a wider package, but timing alone does not identify common ownership or the complete trade.",
+      "testable_rule": "Source says two prints at11:04ET in October/November expiries. Preserve a two-expiry payoff with separate settlement variables; do not merge their terminal underlying values.",
+      "exact_tested_scope": "The creator explicitly acknowledges unknown other holdings. No participant/position linkage was observed. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "Need exchange complex-order/print linkage and complete legs; no executable directional rule supplied.",
+      "status": "blocked",
+      "required_inputs": [
+        "Need exchange complex-order/print linkage and complete legs; no executable directional rule supplied."
+      ],
+      "blockers": [
+        "Need exchange complex-order/print linkage and complete legs; no executable directional rule supplied."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "TT26-VIX-PREMIUM-FLOW",
+      "parent_claim_id": "TT26-VIX-7685943936916999438",
+      "title": "Infer directional intent from gross deep-ITM option premium",
+      "method_type": "source_case_or_mechanism",
+      "hypothesis": "A speculative-put interpretation is conditional on absent hedges/other legs.",
+      "testable_rule": "Keep premium, option points, multiplier, forward moneyness and known position delta distinct. Evaluate a fully specified portfolio before assigning direction/confidence.",
+      "exact_tested_scope": "The video treats standalone speculation as an initial interpretation, then notes missing holdings. Gross premium includes intrinsic/financing value and does not identify conviction. Synthetic cash-payoff tests only; no observed VIX trade/PnL reconstruction.",
+      "unrun_scope": "Full portfolio, aggressor/print validation, forward quotes and execution costs are missing; R295 crypto net-drift NULL does not test this VIX case.",
+      "status": "blocked",
+      "required_inputs": [
+        "Full portfolio, aggressor/print validation, forward quotes and execution costs are missing; R295 crypto net-drift NULL does not test this VIX case."
+      ],
+      "blockers": [
+        "Full portfolio, aggressor/print validation, forward quotes and execution costs are missing; R295 crypto net-drift NULL does not test this VIX case."
+      ],
+      "next_action": "Retain in canonical queue scope; only test a new finite specification once required quotes/mechanics exist.",
+      "source_refs": [
+        {
+          "path": "https://www.tiktok.com/@ojrenick/video/7685943936916999438",
+          "label": "Complete247s public platform timed text, SourceMT, not independently verified audio/frames."
+        },
+        {
+          "path": "https://www.cboe.com/tradable_products/vix/vix_options/specifications",
+          "label": "Official multiplier, European exercise and VRO settlement mechanics."
+        },
+        {
+          "path": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "label": "Official scheduled18November2026 minutes release at14:00ET."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      }
+    },
+    {
+      "id": "OWN26-SETTLED-CARRY-EQUATIONS",
+      "parent_claim_id": "OWNER-PNL-RISK-COMPARABLE-20261024",
+      "title": "Twelve funding/basis forecasts with inventory-aware net-cash decisions",
+      "method_type": "owner_approved_registered_family",
+      "hypothesis": "Forecasting cashflow components and charging incremental turnover may improve net PnL at comparable training risk.",
+      "testable_rule": "Four models F0/F1/F0+B/F1+B x horizons1/7/14 days, fixed R288 MEXC/Lighter overlap, discrete max20 paired slots, two segregated accounts, one frozen12-trial family R310.",
+      "exact_tested_scope": "Synthetic APSI/forecast/lot/cash/turnover tests only at intake. No market outcomes computed before the frozen code and data manifest are pushed.",
+      "unrun_scope": "Historical replay and any new prospective confirmation. This is not R281 spread/persistence sizing or R231 fixed fractional spot adjustment.",
+      "status": "untested",
+      "required_inputs": [
+        "Immutable price/funding/metadata inputs, exact exposure clocks and frozen finite experiment."
+      ],
+      "blockers": [
+        "Historical fair prices and rule vintages absent: gate0 close-proxy scenario cannot establish execution/margin feasibility."
+      ],
+      "next_action": "Implement and freeze R310; preserve all twelve outcomes at1x/2x/3x.",
+      "source_refs": [
+        {
+          "path": "https://github.com/SaikiK12/T/pull/49",
+          "label": "Owner-approved implementation in existing consolidation review."
+        },
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-calculation-guide-312060306409668608",
+          "label": "Official contract quantities, funding notional and PnL identity."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.irfa.2026.105464",
+          "label": "Funding forecast prior from BTC Binance/Bybit; no MEXC-altcoin transfer assumed."
+        }
+      ],
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "scope": "Owner-approved finite experiment and exact code, not a claim of academic formula novelty."
+      }
     }
   ],
   "sources": [
@@ -13945,6 +14251,63 @@
       "limits": "Reel descriptions are not verified speech transcripts. The Citadel page is an employer-authored public process description, not an audit of Citadel returns or a transferable proof. The Jane Street interview transcript/audio was inaccessible via normal public fetch; exact latency details remain caption-only. No MEXC receive-latency history, strategy outcome, market-data download or profitability claim.",
       "market_trials": 0,
       "market_outcomes_computed": false
+    },
+    {
+      "id": "tiktok_vix_equations_delta_20261024",
+      "source_urls": [
+        "https://vm.tiktok.com/ZGdCn4DRX/",
+        "https://www.tiktok.com/@ojrenick/video/7685943936916999438"
+      ],
+      "received_scope": "The complete public247-second platform caption file was read, SourceMT/version8. Audio/frames not independently verified; ordinary media CDN access returned403. Six distinct received case/mechanism records, plus one separately owner-approved research-family record.",
+      "source_version": {
+        "captured_utc_date": "2026-10-24",
+        "published_utc": "2026-09-16T01:48:04+00:00",
+        "duration_s": 247,
+        "caption_format": "webvtt",
+        "caption_version": "8",
+        "caption_source": "MT",
+        "caption_language": "eng-US",
+        "caption_sha256": "4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61",
+        "caption_bytes": 5631,
+        "audio_frames_verified": false,
+        "media_access": "Ordinary public video CDN request returned HTTP403; platform timed text was available."
+      },
+      "distinct_received_methods": [
+        {
+          "record_id": "TT26-VIX-OCT110",
+          "canonical_id": "M249",
+          "scope": "October VIX 110-strike long put example"
+        },
+        {
+          "record_id": "TT26-VIX-NOV130",
+          "canonical_id": "M249",
+          "scope": "November VIX 130-strike long put example"
+        },
+        {
+          "record_id": "TT26-VIX-IV-EVENT-GAP",
+          "canonical_id": "M099",
+          "scope": "Compare SPX event-day implied move with VIX-implied volatility"
+        },
+        {
+          "record_id": "TT26-VIX-FOMC-EXPIRY-CLOCK",
+          "canonical_id": "M249",
+          "scope": "FOMC minutes date versus VIX option settlement and index window"
+        },
+        {
+          "record_id": "TT26-VIX-LINKED-PRINTS",
+          "canonical_id": "M313",
+          "scope": "Interpret coincident prints across two VIX maturities"
+        },
+        {
+          "record_id": "TT26-VIX-PREMIUM-FLOW",
+          "canonical_id": "M313",
+          "scope": "Infer directional intent from gross deep-ITM option premium"
+        }
+      ],
+      "separate_owner_family": "OWN26-SETTLED-CARRY-EQUATIONS",
+      "market_outcomes_computed": false,
+      "market_trials": 0,
+      "intake_id": "tiktok_vix_equations_delta_20261024"
     }
   ],
   "reassignment_refs": [

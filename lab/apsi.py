@@ -4,17 +4,18 @@ APSI is the *Altcoin Perpetual Stress Index*. It is not an implied-volatility in
 and it is not a trade signal. At an hourly decision origin t, let r_s be the vector
 of the most recent 168 completed hourly log returns for a point-in-time basket, with
 exponentially decaying weights a_j proportional to 2**(-j / 72), where j=0 is the
-newest return. The weighted covariance is Sigma_t. For normalized basket weights w_t,
+newest return. The raw weighted second moment is M_t. For normalized basket weights w_t,
 
-    RVhat24_t = 24 * w_t' Sigma_t w_t
+    M_t       = sum_j a_j r_j r_j'
+    RVhat24_t = 24 * w_t' M_t w_t
     sigma24_t = sqrt(RVhat24_t)
     APSI_t    = 100 * sigma24_t / median(sigma24_{t-24}, ..., sigma24_{t-720})
     FBR_i,t  = cost_rt_i,t / sigma24_i,t
 
-The 24-hour forecast assumes the recent hourly covariance persists for one day; its
+The 24-hour forecast assumes the recent hourly second moment persists for one day; its
 target is the sum of the next 24 squared hourly basket returns (integrated variance),
 not the variance of a single compounded 24-hour return.
-APSI=100 means the basket's forecast one-day standard deviation equals its own
+APSI=100 means the basket's forecast root-realized-variance equals its own
 trailing 30-day median forecast. FBR is the fraction of a coin's forecast one-sigma
 move consumed by an all-in round trip; report it separately at 1x/2x/3x cost.
 
@@ -38,8 +39,12 @@ import math
 import numpy as np
 
 
-def ewma_covariance(returns, *, half_life_hours: float = 72.0) -> np.ndarray:
-    """Weighted sample covariance of a complete chronological hourly return matrix."""
+FORMULA_VERSION = "apsi_v2_raw_second_moment"
+
+
+def _weighted_returns(returns, half_life_hours):
+    if np.iscomplexobj(returns):
+        raise ValueError("returns must be real")
     x = np.asarray(returns, dtype=np.float64)
     if x.ndim != 2 or x.shape[0] < 2 or x.shape[1] < 1:
         raise ValueError("returns must be a 2D (hours, assets) matrix with at least 2 rows")
@@ -52,6 +57,12 @@ def ewma_covariance(returns, *, half_life_hours: float = 72.0) -> np.ndarray:
     age = np.arange(x.shape[0] - 1, -1, -1, dtype=np.float64)
     weight = np.exp2(-age / half_life_hours)
     weight /= weight.sum()
+    return x, weight
+
+
+def ewma_covariance(returns, *, half_life_hours: float = 72.0) -> np.ndarray:
+    """Centered covariance; distinct from the raw second moment used to forecast RV."""
+    x, weight = _weighted_returns(returns, half_life_hours)
     mean = weight @ x
     centered = x - mean
     cov = (centered * weight[:, None]).T @ centered
@@ -59,16 +70,23 @@ def ewma_covariance(returns, *, half_life_hours: float = 72.0) -> np.ndarray:
     return (cov + cov.T) * 0.5
 
 
+def ewma_second_moment(returns, *, half_life_hours: float = 72.0) -> np.ndarray:
+    """Raw E[r r']; retains drift because the RV target is a sum of squared raw returns."""
+    x, weight = _weighted_returns(returns, half_life_hours)
+    moment = (x * weight[:, None]).T @ x
+    return (moment + moment.T) * 0.5
+
+
 def basket_sigma24(returns, weights, *, half_life_hours: float = 72.0) -> float:
-    """Square root of forecast next-24h integrated basket variance from completed returns."""
+    """Root forecast next-24h raw squared basket returns, not centered return SD."""
     w = np.asarray(weights, dtype=np.float64)
     x = np.asarray(returns, dtype=np.float64)
     if w.ndim != 1 or x.ndim != 2 or w.size != x.shape[1]:
         raise ValueError("weights must have one entry per return column")
-    if not np.isfinite(w).all() or np.any(w < 0) or not math.isclose(float(w.sum()), 1.0, abs_tol=1e-10):
+    if not np.isfinite(w).all() or np.any(w < 0) or not math.isclose(float(w.sum()), 1.0, rel_tol=0, abs_tol=1e-10):
         raise ValueError("weights must be finite, nonnegative and sum to one")
-    cov = ewma_covariance(x, half_life_hours=half_life_hours)
-    variance = 24.0 * float(w @ cov @ w)
+    moment = ewma_second_moment(x, half_life_hours=half_life_hours)
+    variance = 24.0 * float(w @ moment @ w)
     if not math.isfinite(variance) or variance < -1e-14:
         raise ValueError("forecast basket variance is invalid")
     return math.sqrt(max(variance, 0.0))
@@ -79,10 +97,10 @@ def apsi_index(current_sigma24: float, prior_daily_sigma24) -> float:
     hist = np.asarray(prior_daily_sigma24, dtype=np.float64)
     if hist.ndim != 1 or hist.size != 30:
         raise ValueError("exactly 30 prior daily forecast snapshots are required")
-    if not math.isfinite(current_sigma24) or current_sigma24 <= 0:
-        raise ValueError("current_sigma24 must be finite and positive")
-    if not np.isfinite(hist).all() or np.any(hist <= 0):
-        raise ValueError("prior daily forecasts must be finite and positive")
+    if not math.isfinite(current_sigma24) or current_sigma24 < 0:
+        raise ValueError("current_sigma24 must be finite and nonnegative")
+    if not np.isfinite(hist).all() or np.any(hist < 0) or np.median(hist) <= 0:
+        raise ValueError("prior daily forecasts must be finite, nonnegative, with a positive median")
     return 100.0 * current_sigma24 / float(np.median(hist))
 
 
