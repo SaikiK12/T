@@ -21,6 +21,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`equations`](equations.py): Causal funding/basis forecasts and a fixed-quantity, segregated pair-PnL model.
 - [`evaluation`](evaluation.py): Bounded evaluation API for future registered lanes; legacy APIs stay intact.
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.
+- [`executable_quotes`](executable_quotes.py): First-seen REST book contract and conditional two-venue crossing costs.
 - [`exposure`](exposure.py): Options positioning: the Black-76 greeks of each listed option and the dealer exposures traders quote from them, gamma (GEX), delta (DEX), vanna (VEX) and charm (CEX), the gamma profile over a ...
 - [`features`](features.py): Feature library.
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
