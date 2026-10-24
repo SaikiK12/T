@@ -1,9 +1,11 @@
 import csv
+import gc
 import json
 import shutil
 import subprocess
 import tempfile
 import unittest
+import warnings
 from pathlib import Path
 
 import numpy as np
@@ -73,6 +75,16 @@ class ForwardXfundTest(unittest.TestCase):
     def run_at(self, day, hour=0.1, mids=None):
         now = fx.ms(day) + int(hour * H)
         return fx.tick(now, fetch=False, mids_fn=mids or self.mids, listed_fn=self.listed)
+
+    def test_journal_reader_closes_its_csv_file(self):
+        path = fx.J / "decisions.csv"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("run,day\nr1,2026-10-21\n")
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always", ResourceWarning)
+            self.assertEqual(fx.rows("decisions.csv"), [{"run": "r1", "day": "2026-10-21"}])
+            gc.collect()
+        self.assertFalse([w for w in caught if issubclass(w.category, ResourceWarning)])
 
     def test_replay_matches_the_twin_and_reruns_write_nothing(self):
         self.run_at("2026-10-21")

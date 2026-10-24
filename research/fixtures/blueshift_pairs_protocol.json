@@ -1,0 +1,11 @@
+{
+  "scope": "Deterministic source-control checks only; zero market outcomes or trials",
+  "source_sha256": "ae3f1ffa8695abb1d6756630a93f9cd0d3d147904d7b038fd94ebdd2a4c6baa1",
+  "functions": ["trading_signal", "place_order"],
+  "signal_z_cases": [-3, -2, -1, 0, 0.5, 1, 2, 3],
+  "weight_hedge_ratios": [0.5, 1, 2, -1],
+  "signal_for_weights": 1,
+  "leverage": 5,
+  "controls": "Mocked order/cancel recorders; original source hash guard; no publisher imports, numerical helpers, scheduling or historical prices",
+  "outputs": "signals, target weights/gross, sentinel order suppression; not returns"
+}

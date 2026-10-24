@@ -1,19 +1,19 @@
 # Panel
 
-Rebuilt 2026-10-22 16:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-24 18:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
-**Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
+**Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
 ## How we proceed (owner-approved direction, 2026-10-20: [DIRECTION](DIRECTION.md))
 
-Every tick:
-1. `scripts/forward_all.sh` runs the point-in-time recorders (MEXC funding and ticker, notices, unlock calendar), every forward paper lane, the lag report, this panel and the recorder digests.
+Configured workflow (actual completion is reported separately):
+1. `scripts/forward_all.sh` delegates to `scripts/orchestrate_forward.py` with the shared catalog in `lab/operations.py`: point-in-time recorders (MEXC funding and ticker, notices, unlock calendar), every forward paper lane, the lag report, this panel and the recorder digests.
 2. Background jobs (family runs, downloads) are checked; a finished one gets FINDINGS at 1x/2x/3x of its execution mode's cost and a registry row with its full trial count.
 3. Breadth through families: strategies from the queue and the quant literature run as one frozen PREREG per family (all variants, reality check or SPA, random null), in the background. A null is evidence.
 4. Family survivors go to scheduled batch reads of the reserved samples (2020 crypto, MEXC-only coins; GATES "Reserved samples"). A batch pass becomes one frozen forward paper lane (gate 1), labelled manual-web or API. Real money only after gates 1-3, placed by the owner (gate 4).
 5. Read the room (issue #7), commit and push.
 
-Roles: Claude does all of it, with no subagents and no Workflows (owner, 2026-10-20). Codex has stopped.
+Writers: fresh claims in [room #7](https://github.com/SaikiK12/T/issues/7) determine ownership. A registry status or running process does not establish complete prospective evidence.
 
 ## 1. The funnel
 
@@ -22,40 +22,79 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | stage | now |
 |---|---|
 | Ideas in the queue, untested | 34 |
-| Ideas partly tested | 39 |
-| Ideas blocked (data, download, compute) | 68 |
-| Rounds in the registry | 123 (NULL 80, PENDING 20, PARTIAL 10, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,697 |
-| Forward paper lanes running | 17 |
+| Ideas partly tested | 40 |
+| Ideas blocked (data, download, compute) | 96 |
+| Rounds in the registry | 133 (NULL 84, PENDING 22, PARTIAL 14, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,782 |
+| Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
-| Passed gate 1 (unseen days) | none yet |
-| Next decision date | 2027-01-18: first 90-on-time-day looks (R215, R218, R220, R221 futility) |
+| Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
+| Next decision | observation-count dependent; each frozen lane specifies its looks |
 
 ## 2. Forward paper lanes (the only road to money)
 
-Replay days were scored after the freeze on days the archive did not hold; on-time days are the evidence.
+Replay, late and on-time observations remain distinct. Lane-native decisions do not establish current gate eligibility.
 
-| lane | book | replay | on_time | 2x / 3x | decided by |
-|---|---|---|---|---|---|
-| R215 mexc_fwd | flow book A on MEXC | 19 d +4.6% | 2 d +2.0% | +1.9% / +1.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R215 mexc_fwd | top-vs-crowd on MEXC | 19 d -0.1% | 2 d +0.8% | +0.8% / +0.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R218 mexc_fwd_sq | flow book X2 (k squared) on MEXC | 19 d +5.9% | 2 d +2.0% | +1.9% / +1.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R220 carry_fwd | funding carry, MEXC | 19 d -0.0% | 2 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
-| R220 carry_fwd | funding carry, Binance | 19 d +0.0% | 2 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
-| R200 flow72_fwd2 | flow book A, Binance | 18 d +22.2% | 3 d +1.6% | +1.4% / +1.2% | 90 scored days through go_real plus NW t >= 2 |
-| R200 flow72_fwd2 | top-vs-crowd, Binance | 18 d +9.7% | 3 d +0.5% | +0.5% / +0.4% | 90 scored days through go_real plus NW t >= 2 |
-| R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 2 d +1.4% | +1.3% / +1.2% | same days as R200, a delay check |
-| R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 2 d +0.8% | +0.7% / +0.7% | same days as R200, a delay check |
-| R278 xfund_fwd | cross-venue carry, Gate + Hyperliquid | 61 d +0.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R278 xfund_fwd | cross-venue carry, Binance + MEXC | 61 d +0.9% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R278 xfund_fwd | cross-venue carry, Gate + MEXC (post hoc) | 61 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 61 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 61 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R294 xfund_lt_fwd | cross-venue carry, MEXC + Lighter | 61 d +0.7% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| lane | scope | observations | on-time 1x | 2x / 3x | decided by | gate |
+|---|---|---|---|---|---|---|
+| R215 mexc_fwd | flow books A and B, one bar late | 2 / 90 on-time days | +1.4% | +1.4% / +1.3% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R218 mexc_fwd_sq | flow book X2 (k squared) | 2 / 90 on-time days | +2.0% | +1.9% / +1.8% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R220 carry_fwd | funding carry (R191 rule) | 2 / 90 on-time days | +0.0% | +0.0% / +0.0% | go_real at 90 on-time days | UNASSESSED |
+| R200 flow72_fwd2 | flow books A and B | 3 / 90 on-time days | +1.1% | +0.9% / +0.8% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
+| R214 flow72_fwd3 | A and B one bar late (delay check) | 2 / 90 on-time days | +1.1% | +1.0% / +0.9% | same days as R200 | UNASSESSED |
+| R225 vt_fwd | volatility target on A, B, X2 | 2 / 365 on-time days | +1.2% | +1.1% / +1.1% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
+| R266 unlocks_fwd | unlock short, D-7 to unlock | 0 / 120 scored tickets | - | - / - | pending (0 of 120 scored) | UNASSESSED |
+| R268 delist_fwd | spot delisting-notice short +1 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
+| R270 montag_fwd | Monitoring Tag short +24 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
+| R272 announce_fwd | funding-frequency long 1 h; pre-listing short 168 h | 0 / 12 scored notices per book (least observed book) | - | - / - | FF pending (0 of 12 scored notices); PL pending (0 of 12 scored notices) | UNASSESSED |
+| R278 xfund_fwd | cross-venue funding carry, books A, B, C | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
 Processing lag of on-time hours: 64 hours, median 79.44166666666666 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22.
 
-## 3. Next in the queue
+### Execution receipts
+
+Process state, declared data checks and statistical eligibility are separate.
+
+| task_id | category | state | data_state | run_id |
+|---|---|---|---|---|
+| REC_TICKER | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_FUNDING | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_DERIBIT | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_LIGHTER | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_DEX | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_WALLETS | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_NOTICES | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_UNLOCKS | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_TAPE | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_NEWS | Market data collection | UNKNOWN | UNVERIFIED | None |
+| R268 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R270 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R272 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R200 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R214 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R215 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R224 | Execution measurement | UNKNOWN | UNVERIFIED | None |
+| R218 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R220 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R221 | Evidence decisions | UNKNOWN | UNVERIFIED | None |
+| R225 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R266 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R278 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R279 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R294 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R285 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| LAG | Data integrity | UNKNOWN | UNVERIFIED | None |
+| PANEL | Reporting | UNKNOWN | UNVERIFIED | None |
+| CATALOG | Reporting | UNKNOWN | UNVERIFIED | None |
+| DASH | Reporting | UNKNOWN | UNVERIFIED | None |
+| REC_DIGEST | Data integrity | UNKNOWN | UNVERIFIED | None |
+
+## 3. Open methods
+
+The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This view shows its first 12 open rows in registry order; the queue does not encode a priority ranking.
 
 | id | method | data_held | status | cheap | note |
 |---|---|---|---|---|---|
@@ -64,7 +103,7 @@ Processing lag of on-time hours: 64 hours, median 79.44166666666666 min, max 261
 | M015 | Listing short with a 14-day stop (MEXC rule 3) | Y klines_1h (listing history) | PARTIAL | 1 | Stop variant untested. Early-drift literature (B) points the other way. Low prior. |
 | M016 | Abnormal volume x short constraint (Garfinkel): abnormal volume predicts lower returns where shorting is constrained | P klines_1h; no borrow data (funding/OI as proxy) | PARTIAL | 1 | Volume-alone part is dead. The constraint interaction is open; the constraint is a proxy. |
 | M017 | Residual momentum split by liquidity tier (ranks 1-10 vs 11-50), 365 d window, 30 d hold | Y klines_1h | PARTIAL | 1 | Tier split and 365 d window not run. |
-| M018 | Realized-variance forecast race: trailing mean vs EWMA vs HAR-RV vs GARCH, QLIKE on next-24 h RV | Y klines_1h (RV from hourly returns) | PARTIAL | 1 | Risk skill, not direction. A win supports sizing, not alpha. |
+| M018 | Realized-variance forecast race: trailing mean vs EWMA vs HAR-RV vs GARCH, QLIKE on next-24 h RV | Y klines_1h (RV from hourly returns) | PARTIAL | 1 | Risk skill, not direction. A win supports sizing, not alpha. arch_har_forecast_contract_20261023 records HAR mean-vs-residual-variance and origin/target/horizon distinctions; no forecast race run. |
 | M020 | Crowd extreme rule: short coins whose global account L/S is above its 95th pct of 90 d, 72 h hold, hedged | Y metrics_1h (global ratio) | PARTIAL | 1 | CLAIMS: crowd ratio is weaker than top vs crowd. |
 | M021 | OI change as a crash/risk-state variable (P of -20% in 30 d), not a direction call | Y metrics_1h OI; klines_1h | PARTIAL | 1 | Claimed OOS AUC 0.677 in one 10-asset study. Risk use only. |
 | M022 | Multi-timeframe sign agreement (1 h, 4 h, 24 h same sign) as entry or size filter | Y klines_1h | PARTIAL | 1 | Agreement count never run. Low prior. |
@@ -78,19 +117,19 @@ Processing lag of on-time hours: 64 hours, median 79.44166666666666 min, max 261
 - Install PyTorch CPU and the Kronos-small weights (about 300 MB): R227 Kronos lane (PR #9).
 - Rotate the two Coinalyze API keys pasted into the old session's chat (`docs/OLD_SESSION_EDGES.md`, security note).
 - Set the stake and max loss for gate 4 (`docs/GATES.md`; the lab only proposes 2% of trading capital per book and a stop at 25% of the stake).
-- Merges: Codex's draft PRs #26/#27 (R257) and the second Claude session's PR #25 (retarget to `claude/yo-9a1k5w`).
+- Review and integration: [current open PRs](https://github.com/SaikiK12/T/pulls); check each dependency and blocker.
 
 ## 5. Latest rounds
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R298 | lotcap_v1 | DONE | NULL | 16 |
-| R299 | mlrank_v1 | DONE | PARTIAL | 12 |
-| R300 | intrars_v1 | DONE | NULL | 24 |
-| R301 | qbasis_v1 | DONE | NULL | 16 |
-| R302 | fundxs_v1 | DONE | NULL | 8 |
-| R303 | capit_v1 | DONE | NULL | 10 |
-| R304 | mlrank_v2 | DONE | PARTIAL | 7 |
-| R305 | mlaudit_v1 | DONE | NULL | 7 |
+| R308 | nagel_v1 | DONE | NULL | 8 |
+| R258 | unlocks_daily_v1 | DONE | PARTIAL | 2 |
+| R259 | unlocks_funding_bounds_v1 | DONE | PARTIAL | 2 |
+| R309 | capital_mix_v1 | DONE | NULL | 1 |
+| R310 | equations_v1 | DONE | PENDING | 12 |
+| R311 | equations_v2 | DONE | PENDING | 12 |
+| R312 | pair_quotes_v1 | DONE | PARTIAL | 0 |
+| R313 | stream_quotes_v1 | DONE | PARTIAL | 0 |
 
-Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
+Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

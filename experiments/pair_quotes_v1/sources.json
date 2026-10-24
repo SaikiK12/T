@@ -1,0 +1,63 @@
+{
+  "bytes": 20605,
+  "primary_contracts": [
+    {
+      "received_scope": "public REST endpoint, required market id, order limit1..250",
+      "url": "https://apidocs.lighter.xyz/reference/orderbookorders",
+      "version": "unversioned; inspected 2026-10-24"
+    },
+    {
+      "received_scope": "perp metadata and market-id filter",
+      "url": "https://apidocs.lighter.xyz/reference/orderbookdetails",
+      "version": "unversioned; inspected 2026-10-24"
+    },
+    {
+      "received_scope": "dedicated fair-price field and system timestamp",
+      "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-fair-price",
+      "version": "unversioned; inspected 2026-10-24"
+    },
+    {
+      "received_scope": "contract units, size rules, API/status fields",
+      "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-contract-info",
+      "version": "unversioned; inspected 2026-10-24"
+    },
+    {
+      "received_scope": "REST depth/version; row interpretation independently checked in existing R224 review",
+      "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-contract-order-book-depth",
+      "version": "unversioned; inspected 2026-10-24"
+    },
+    {
+      "received_scope": "alternative book/nonce and market-stats clocks inspected only; no stream collection in R312",
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+      "version": "unversioned; inspected 2026-10-24"
+    }
+  ],
+  "receipts": [
+    {
+      "bytes": 7928,
+      "sha256": "bdc36eb82b305d1b2d78dba1b719861521b113add4d420d4e7b645b1df7e6884",
+      "url": "https://api.github.com/repos/elliottech/lighter-python/commits/main"
+    },
+    {
+      "bytes": 4301,
+      "sha256": "6710bf1f3751f4f1442171d7a671d6e15dbf535ab22d5afdb00c65ce76d9f51e",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/order_book_orders.py"
+    },
+    {
+      "bytes": 3828,
+      "sha256": "7b4f886803ed3ed545d713699317f6934f398bb5c547e13ab33e7171615b49cc",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/simple_order.py"
+    },
+    {
+      "bytes": 4548,
+      "sha256": "d2cd82c87b691c1ee44f784542cb79aaa71dc15f728ff7cdf005c3506fe29c69",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/order_book_details.py"
+    }
+  ],
+  "received_utc": "2026-10-24T15:38:10Z",
+  "requests": 4,
+  "revision": "a7a9ba88514d38a863a33642acd41f8adf442e5c",
+  "scope": "three REST schema models, not full SDK or market outcomes",
+  "source": "official elliottech Lighter SDK",
+  "unread_scope": "Private/account endpoints, fee tiers, full SDK, session calendars and WebSocket reconstruction were not validated."
+}

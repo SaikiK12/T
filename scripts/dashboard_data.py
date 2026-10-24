@@ -5,16 +5,16 @@ lanes' journals, the methods queue, the data folders and the loop's logs. It dec
 the files that hold them. The page (dashboard/index.html) is published to the Control Room artifact; each loop tick
 re-runs this script and uploads the files whose hash changed (dashboard/data/manifest.json lists them).
 
-usage: python scripts/dashboard_data.py            # export the datasets
-       python scripts/dashboard_data.py --docs     # write the store documents (dashboard/data/docs/) for the
-                                                  # urls in dashboard/data/uploaded.json and the page
-       python scripts/dashboard_data.py --changed  # the datasets whose export differs from the uploaded copy
-       python scripts/dashboard_data.py --record program=/_blob/<id> ...   # after uploading: remember the urls
-                                                  # and write docs/<id>.update.json ({source, updated}) for each
-Refresh in a loop tick: --changed, upload each listed file (Artifact publish, asset), --record the urls, then one
-ArtifactData batch of `update` writes from docs/<id>.update.json pinned to the versions a `list datasets` shows.
+usage: python -m lab export             # immutable datasets + atomic latest manifest
+       python -m lab export --changed   # {generation, files}; upload exactly these paths
+       python -m lab export --record jobs=/_blob/<id> --generation <export-id>
+       python -m lab export --docs      # acknowledged generations only
+
+Publication acknowledges returned upload URLs; remote delivery itself is not verified by this script.
 """
 import csv
+from contextlib import contextmanager
+import fcntl
 import hashlib
 import json
 import math
@@ -23,38 +23,19 @@ import re
 import shutil
 import stat
 import time
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 EXP = ROOT / "experiments"
 OUT = ROOT / "dashboard" / "data"
+sys.path.insert(0, str(ROOT))
 NOW = time.time()
 ISO = lambda t: time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(t))
 # forward lanes: (registry id, lane, what it trades, venue, mode, rows needed for its decision, decision rule)
-FORWARD = [
-    ("R215", "mexc_fwd", "flow books A and B, one bar late", "MEXC", "API", 90,
-     "R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate"),
-    ("R218", "mexc_fwd_sq", "flow book X2 (k squared)", "MEXC", "API", 90,
-     "R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate"),
-    ("R220", "carry_fwd", "funding carry (R191 rule)", "MEXC + Binance", "manual-web", 90,
-     "go_real at 90 on-time days"),
-    ("R200", "flow72_fwd2", "flow books A and B", "Binance", "API", 90, "go_real at 90 scored days, NW t >= 2"),
-    ("R214", "flow72_fwd3", "A and B one bar late (delay check)", "Binance", "API", 90, "same days as R200"),
-    ("R225", "vt_fwd", "volatility target on A, B, X2", "MEXC", "API", 365,
-     "risk-only decision at 365 on-time days; reported beside R215/R218"),
-    ("R266", "unlocks_fwd", "unlock short, D-7 to unlock", "MEXC", "manual-web", 120, "120 scored tickets"),
-    ("R268", "delist_fwd", "spot delisting-notice short +1 h", "MEXC", "API", 12, "12 scored notices"),
-    ("R270", "montag_fwd", "Monitoring Tag short +24 h", "MEXC", "manual-web", 12, "12 scored notices"),
-    ("R272", "announce_fwd", "funding-frequency long 1 h; pre-listing short 168 h", "MEXC", "API + manual-web", 12,
-     "12 scored notices per book"),
-    ("R278", "xfund_fwd", "cross-venue funding carry, books A, B, C", "Gate, Hyperliquid, Binance, MEXC",
-     "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
-    ("R279", "xfund_kc_fwd", "cross-venue funding carry on KuCoin, books A, B", "Gate, Binance, KuCoin",
-     "manual-web", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
-    ("R294", "xfund_lt_fwd", "cross-venue funding carry on Lighter, book A", "MEXC, Lighter",
-     "API", 90, "NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%"),
-]
+from lab.operations import LANES, OBJECTIVE
 
+FORWARD = [(l.rid, l.path, l.what, l.venue, l.mode, l.needed, l.rule) for l in LANES]
 
 def num(x):
     try:
@@ -100,10 +81,10 @@ def program(rnd):
     due = sorted(c["due"] for c in cand if c["due"])
     du = shutil.disk_usage(ROOT)
     count = lambda v: sum(r["verdict"] == v for r in rnd)
-    return [{"generated_at": ISO(NOW), "program_trials": trials, "rounds": len(rnd), "null": count("NULL"),
+    return [{"generated_at": ISO(NOW), "objective": OBJECTIVE, "program_trials": trials, "rounds": len(rnd), "null": count("NULL"),
              "partial": count("PARTIAL"), "confirmed": count("CONFIRMED"),
              "running": sum(r["status"] in ("RUNNING", "ARMED") for r in rnd),
-             "strict_ontime_days": lag.get("strict_ontime_days", 0), "candidates": len(cand),
+             "strict_ontime_days": lag.get("strict_ontime_days"), "candidates": len(cand),
              "next_due": due[0] if due else None, "disk_free_gb": round(du.free / 1e9, 1)}]
 
 
@@ -165,92 +146,14 @@ def strategies():
     return out
 
 
-def lane_age(lane):
-    p = EXP / lane / "journal" / "status.json"
-    return (round((NOW - p.stat().st_mtime) / 3600, 2), ISO(p.stat().st_mtime)) if p.exists() else (None, None)
-
-
 def forward_days():
-    """One row per lane, book and day: the daily books' paper net at 1x/2x/3x, replay or on-time."""
-    out = []
-    spec = {"flow72_fwd2": ("R200", "net", "Binance flow books"), "flow72_fwd3": ("R214", "net", "Binance flow books"),
-            "mexc_fwd": ("R215", "net", "MEXC flow books"), "mexc_fwd_sq": ("R218", "net", "MEXC flow books"),
-            "carry_fwd": ("R220", "net", "Funding carry")}
-    for lane, (rid, col, group) in spec.items():
-        for r in rows_csv(EXP / lane / "journal" / "tickets.csv"):
-            kind = r.get("kind") or ("replay" if r.get("late") == "1" else "ontime")
-            out.append({"key": f"{lane}|{r['book']}|{r['day']}", "day": r["day"], "round": rid, "lane": lane,
-                        "book": r["book"], "series": f"{rid} {r['book']}", "group": group, "kind": kind,
-                        "net": num(r[col]),
-                        "net_2x": num(r.get("net_2x")), "net_3x": num(r.get("net_3x"))})
-    carry = {"xfund_fwd": ("R278", {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}),
-             "xfund_kc_fwd": ("R279", {"A": "Gate + KuCoin", "B": "Binance + KuCoin"}),
-             "xfund_lt_fwd": ("R294", {"A": "MEXC + Lighter"})}
-    for lane, (rid, sets) in carry.items():
-        done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / lane / "journal" / "decisions.csv")}
-        for r in rows_csv(EXP / lane / "journal" / "days.csv"):
-            if (r["book"], r["day"], r["run"]) not in done:   # a run cut short; the lane ignores its rows too
-                continue
-            out.append({"key": f"{lane}|{r['book']}|{r['day']}|{r['run']}", "day": r["day"], "round": rid,
-                        "lane": lane, "book": r["book"], "series": f"{rid} {r['book']} {sets.get(r['book'], '')}",
-                        "group": "Cross-venue funding carry", "kind": "ontime" if r["kind"] == "late" else r["kind"],
-                        "net": num(r["net"]), "net_2x": num(r["net_2x"]), "net_3x": num(r["net_3x"])})
-    for r in rows_csv(EXP / "vt_fwd" / "journal" / "days.csv"):
-        out.append({"key": f"vt_fwd|{r['book']}|{r['day']}", "day": r["day"], "round": "R225", "lane": "vt_fwd",
-                    "book": r["book"], "series": f"R225 {r['book']}", "group": "Volatility-targeted (MEXC)",
-                    "kind": r["kind"],
-                    "net": num(r["net_vt"]), "net_2x": num(r["net_vt_2x"]), "net_3x": num(r["net_vt_3x"])})
-    return sorted(out, key=lambda r: (r["series"], r["day"]))
+    from lab.operations import forward_days as project
+    return project(ROOT)
 
 
 def forward_lanes(days):
-    out = []
-    for rid, lane, what, venue, mode, need, rule in FORWARD:
-        s = read_json(EXP / lane / "journal" / "status.json")
-        age, at = lane_age(lane)
-        mine = [d for d in days if d["lane"] == lane]
-        ontime = [d for d in mine if d["kind"] == "ontime"]
-        daily = lane in {"mexc_fwd", "mexc_fwd_sq", "carry_fwd", "flow72_fwd2", "flow72_fwd3", "vt_fwd", "xfund_fwd",
-                         "xfund_kc_fwd", "xfund_lt_fwd"}
-        by_book, progress_note = {}, None
-        if daily:
-            books = sorted({d["book"] for d in mine})
-            scored = len({d["day"] for d in ontime})
-            unit = "on-time days"
-            tickets, open_ = len({d["day"] for d in mine}), None
-            # Preserve unknown returns: no observations or any missing cost row means unknown aggregate.
-            def total(column):
-                values = [num(d.get(column)) for d in mine]
-                return sum(values) / len(books) if values and all(v is not None for v in values) else None
-            net, net2, net3 = (total(col) for col in ("net", "net_2x", "net_3x"))
-        else:
-            books = []
-            scored = s.get("scored", s.get("scored_notices", 0)) or 0
-            unit = "scored tickets" if lane == "unlocks_fwd" else "scored notices"
-            tickets, open_ = s.get("tickets", 0), s.get("open", 0)
-            net = num(s.get("mean_net"))
-            net2 = num(s.get("mean_net_2x"))
-            net3 = None
-        if lane == "announce_fwd":
-            books = ["FF", "PL"]
-            for book in books:
-                count = num((s.get("books", {}).get(book) or {}).get("scored_notices"))
-                by_book[book] = int(count) if count is not None and count >= 0 and count.is_integer() else None
-            # Two separate frozen decisions: 12 FF notices must not stand in for 12 PL notices.
-            scored = min(by_book.values()) if all(v is not None for v in by_book.values()) else None
-            unit = "scored notices per book (least observed book)"
-            progress_note = "FF and PL each require 12 scored notices; progress is unknown if either count is absent."
-        out.append({"round": rid, "lane": lane, "display_name": f"{what[:1].upper()}{what[1:]} · {venue}",
-                    "what": what, "venue": venue, "mode": mode,
-                    "books": " ".join(books) or None, "kind": "daily book" if daily else "event",
-                    "tickets": tickets, "open": open_, "scored": scored, "needed": need, "unit": unit,
-                    "progress": round(min(scored / need, 1), 4) if scored is not None else None,
-                    "scored_by_book": by_book or None, "progress_note": progress_note,
-                    "net_pct": None if net is None else net * 100,
-                    "net_2x_pct": None if net2 is None else net2 * 100,
-                    "net_3x_pct": None if net3 is None else net3 * 100,
-                    "decision": s.get("decision") or rule, "updated_at": at, "age_h": age})
-    return out
+    from lab.operations import forward_lanes as project
+    return project(ROOT, days, NOW)
 
 
 def event_tickets():
@@ -319,7 +222,8 @@ def data_sources():
         "fundingRate": ("Binance settled funding", "Historical market data"),
         "metrics_1h": ("Binance hourly positioning metrics", "Historical market data"),
         "spot_1h": ("Hourly spot candles", "Historical market data"),
-        "coinm_1h": ("Coin-margined futures candles", "Historical market data"),
+        "coinm_1h": ("Legacy coin-margined futures candles (original labels)", "Historical market data"),
+        "coinm_1h_v2": ("Coin-margined futures candles (corrected base-volume units)", "Historical market data"),
         "unlocks": ("Token unlock calendars", "Event data"),
         "gate_hist": ("Gate bulk archive: all USDT perps, hourly candles and funding", "Historical market data"),
         "gate_1h": ("Gate hourly contract stats (180-day window)", "Historical market data"),
@@ -448,43 +352,167 @@ TITLES = {
 }
 
 
+def _generation(generation=None):
+    """A pinned immutable manifest, never an acknowledgement of whatever is latest."""
+    man = read_json(OUT / "manifest.json") if generation is None else None
+    if generation is None:
+        generation = man.get("generation")
+    if not isinstance(generation, str) or not re.fullmatch(r"[a-f0-9]{64}", generation):
+        raise ValueError("a verified export generation is required; export again")
+    directory = OUT / "generations" / generation
+    if directory.is_symlink() or any(p.is_symlink() for p in directory.parents):
+        raise ValueError("symlink generation")
+    pinned = json.loads((directory / "manifest.json").read_text())
+    if pinned.get("generation") != generation:
+        raise ValueError("generation identity mismatch")
+    signatures = {k: value["sha256"] for k, value in pinned["sets"].items()}
+    identity = hashlib.sha256(json.dumps({"at": pinned["generated_at"], "sets": signatures},
+                                         sort_keys=True).encode()).hexdigest()
+    if identity != generation:
+        raise ValueError("manifest content disagrees with generation identity")
+    if man is not None and pinned != man:
+        raise ValueError("current manifest disagrees with immutable generation")
+    return pinned
+
+
+@contextmanager
+def publication_lock():
+    """Serialize local publication pointers, receipts and their derived docs."""
+    fd = os.open(OUT / ".publish.lock", os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        yield
+    finally:
+        os.close(fd)
+
+
+def publish_sets(sets, generated_at):
+    """Write immutable bytes, then switch the derived latest manifest atomically."""
+    from lab.runtime import atomic_json
+    bodies = {k: json.dumps(rows, separators=(",", ":"), default=str, allow_nan=False).encode()
+              for k, rows in sets.items()}
+    if any(k not in TITLES for k in bodies):
+        raise ValueError("unknown dataset")
+    signatures = {k: hashlib.sha256(body).hexdigest() for k, body in bodies.items()}
+    generation = hashlib.sha256(json.dumps({"at": generated_at, "sets": signatures},
+                                          sort_keys=True).encode()).hexdigest()
+    directory = OUT / "generations" / generation
+    try:
+        directory.mkdir(parents=True, exist_ok=False)
+    except FileExistsError:
+        # A completed export is idempotent; an interrupted one without a valid
+        # manifest stays blocked. No previous bytes are changed or deleted.
+        manifest = _generation(generation)
+        for key in bodies:
+            _dataset(manifest, key)
+    else:
+        manifest = {"schema_version": 2, "generation": generation, "generated_at": generated_at, "sets": {}}
+        for k, body in bodies.items():
+            path = directory / (k + ".json")
+            with path.open("xb") as stream:
+                stream.write(body)
+                stream.flush()
+                os.fsync(stream.fileno())
+            manifest["sets"][k] = {"file": str(path.relative_to(ROOT)), "rows": len(sets[k]),
+                                   "sha256": signatures[k]}
+        with (directory / "manifest.json").open("x") as stream:
+            json.dump(manifest, stream, sort_keys=True, indent=2, allow_nan=False)
+            stream.flush()
+            os.fsync(stream.fileno())
+    with publication_lock():
+        latest = read_json(OUT / "manifest.json")
+        if latest.get("generated_at", "") > generated_at:
+            raise ValueError("refusing to replace latest export with an older generation")
+        atomic_json(OUT / "manifest.json", manifest)
+    return manifest
+
+
+def _dataset(man, key):
+    if key not in man["sets"] or key not in TITLES:
+        raise ValueError("unknown dataset")
+    expected = OUT / "generations" / man["generation"] / (key + ".json")
+    item = man["sets"][key]
+    if item["file"] != str(expected.relative_to(ROOT)) or expected.is_symlink():
+        raise ValueError("unexpected dataset path")
+    if hashlib.sha256(expected.read_bytes()).hexdigest() != item["sha256"]:
+        raise ValueError("immutable export hash mismatch")
+    return expected
+
+
+def _update(key, receipt):
+    return {"source": {"kind": "file", "url": receipt["url"], "name": f"{key}.json"},
+            "updated": {"at": receipt["generated_at"], "by": "Lab exporter"}}
+
+
 def docs():
-    """The dashboard store's documents: one dataset per exported file, at the url its upload returned, and the page."""
-    urls = json.loads((OUT / "uploaded.json").read_text())
-    man = json.loads((OUT / "manifest.json").read_text())
-    d = OUT / "docs"
-    d.mkdir(exist_ok=True)
-    for k, url in urls.items():
+    """Documents use acknowledged generations, not the most recent export clock."""
+    with publication_lock():
+        return _docs_locked()
+
+
+def _docs_locked():
+    receipts = read_json(OUT / "uploads.json")
+    if not receipts and (OUT / "uploaded.json").exists():
+        raise ValueError("legacy uploads lack generation receipts; acknowledge immutable exports first")
+    directory = OUT / "docs"
+    directory.mkdir(exist_ok=True)
+    from lab.runtime import atomic_json
+    for k, receipt in receipts.items():
+        man = _generation(receipt["generation"])
+        _dataset(man, k)
+        if receipt["sha256"] != man["sets"][k]["sha256"] or receipt["generated_at"] != man["generated_at"]:
+            raise ValueError("upload receipt disagrees with generation")
         title, desc = TITLES[k]
-        doc = {"title": title,
-               "description": desc + " Exported by scripts/dashboard_data.py from the lab's repository.",
-               "source": {"kind": "file", "url": url, "name": f"{k}.json"},
-               "updated": {"at": man["generated_at"], "by": "Claude (lab loop)"},
-               "schedule": "Re-exported from the lab repository by the hourly loop tick", "staleAfterHours": 6}
-        (d / f"{k}.json").write_text(json.dumps(doc))
-    (d / "index.html.json").write_text(json.dumps({"text": (ROOT / "dashboard" / "index.html").read_text()}))
-    print(f"{len(urls)} dataset docs and the page in {d.relative_to(ROOT)}")
+        document = {"title": title, "description": desc, **_update(k, receipt),
+                    "schedule": "Explicit export and acknowledged upload", "staleAfterHours": 6}
+        atomic_json(directory / f"{k}.json", document)
+        atomic_json(directory / f"{k}.update.json", _update(k, receipt))
+    atomic_json(directory / "index.html.json", {"text": (ROOT / "dashboard/index.html").read_text()})
+    print(f"{len(receipts)} acknowledged dataset documents")
 
 
-def changed():
-    man = json.loads((OUT / "manifest.json").read_text())["sets"]
-    up = read_json(OUT / "uploaded_sha.json")
-    print(json.dumps({k: str(ROOT / v["file"]) for k, v in man.items() if up.get(k) != v["sha256"]}))
+def changed(generation=None):
+    man = _generation(generation)
+    uploaded = read_json(OUT / "uploads.json")
+    files = {k: str(_dataset(man, k)) for k, v in man["sets"].items()
+             if uploaded.get(k, {}).get("sha256") != v["sha256"]}
+    payload = {"generation": man["generation"], "files": files}
+    print(json.dumps(payload))
+    return payload
 
 
-def record(pairs):
-    man = json.loads((OUT / "manifest.json").read_text())
-    urls, shas = read_json(OUT / "uploaded.json"), read_json(OUT / "uploaded_sha.json")
-    (OUT / "docs").mkdir(exist_ok=True)
+def record(pairs, generation=None):
+    if generation is None:
+        raise ValueError("--record requires --generation from --changed; latest is not an upload receipt")
+    from lab.runtime import atomic_json
+    man = _generation(generation)
+    receipts = []
     for pair in pairs:
         k, url = pair.split("=", 1)
-        urls[k], shas[k] = url, man["sets"][k]["sha256"]
-        upd = {"source": {"kind": "file", "url": url, "name": f"{k}.json"},
-               "updated": {"at": man["generated_at"], "by": "Claude (lab loop)"}}
-        (OUT / "docs" / f"{k}.update.json").write_text(json.dumps(upd))
-    (OUT / "uploaded.json").write_text(json.dumps(urls, indent=1))
-    (OUT / "uploaded_sha.json").write_text(json.dumps(shas, indent=1))
-    print(f"recorded {len(pairs)} uploads")
+        _dataset(man, k)
+        if not url or any(c.isspace() for c in url) or not (url.startswith("/_blob/") or url.startswith("https://")):
+            raise ValueError("upload URL must be a returned blob path or HTTPS URL")
+        receipts.append((k, {"url": url, "sha256": man["sets"][k]["sha256"],
+                             "generation": generation, "generated_at": man["generated_at"]}))
+    if len({k for k, _ in receipts}) != len(receipts):
+        raise ValueError("duplicate upload acknowledgement")
+    # One writer for the derived upload receipt, including concurrent generations.
+    with publication_lock():
+        uploaded = read_json(OUT / "uploads.json")
+        for k, receipt in receipts:
+            old = uploaded.get(k, {})
+            if old.get("generated_at", "") > receipt["generated_at"]:
+                raise ValueError("refusing acknowledgement older than the published generation")
+        uploaded.update(receipts)
+        atomic_json(OUT / "uploads.json", uploaded)
+        directory = OUT / "docs"
+        directory.mkdir(exist_ok=True)
+        for k, receipt in receipts:
+            atomic_json(directory / f"{k}.update.json", _update(k, receipt))
+        # Compatibility views are derived from uploads.json; never read as authority.
+        atomic_json(OUT / "uploaded.json", {k: v["url"] for k, v in uploaded.items()})
+        atomic_json(OUT / "uploaded_sha.json", {k: v["sha256"] for k, v in uploaded.items()})
+    print(f"recorded {len(receipts)} uploads for {generation}")
 
 
 def main():
@@ -495,15 +523,16 @@ def main():
     action.add_argument("--docs", action="store_true")
     action.add_argument("--changed", action="store_true")
     action.add_argument("--record", nargs="+")
+    parser.add_argument("--generation", help="immutable export ID from --changed; required for --record")
     parser.add_argument("--jobs-state-dir", type=Path,
                         help="explicit external orchestrator status directory (read-only; optional)")
     args = parser.parse_args()
     if args.docs:
         return docs()
     if args.changed:
-        return changed()
+        return changed(args.generation)
     if args.record:
-        return record(args.record)
+        return record(args.record, args.generation)
     sys.path.insert(0, str(ROOT))
     OUT.mkdir(parents=True, exist_ok=True)
     rnd = rounds()
@@ -521,15 +550,9 @@ def main():
     sets["factor_ic"] = perf.factor_ic()
     for r in sets["candidates"]:
         r["t"] = num(r["t"])
-    manifest = {}
-    for k, rows in sets.items():
-        p = OUT / f"{k}.json"
-        body = json.dumps(rows, separators=(",", ":"), default=str)
-        p.write_text(body)
-        manifest[k] = {"file": str(p.relative_to(ROOT)), "rows": len(rows),
-                       "sha256": hashlib.sha256(body.encode()).hexdigest()}
-    (OUT / "manifest.json").write_text(json.dumps({"generated_at": ISO(NOW), "sets": manifest}, indent=1))
-    print(" ".join(f"{k} {v['rows']}" for k, v in manifest.items()))
+    manifest = publish_sets(sets, ISO(NOW))
+    print("generation " + manifest["generation"] + " " +
+          " ".join(f"{k} {v['rows']}" for k, v in manifest["sets"].items()))
 
 
 if __name__ == "__main__":

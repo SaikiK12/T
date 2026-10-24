@@ -11,36 +11,8 @@ from pathlib import Path
 import re
 import time
 
-try:
-    from scripts.orchestrate_forward import forward_tasks
-except ModuleNotFoundError:  # dashboard_data.py invoked directly from scripts/
-    from orchestrate_forward import forward_tasks
+from lab.operations import LABELS, forward_tasks
 
-
-# Stable identifiers and paths remain intact; these are presentation labels.
-LABELS = {
-    "REC_TICKER": ("Market data collection", "MEXC funding and ticker snapshots", "recorders"),
-    "REC_FUNDING": ("Market data collection", "Six-venue funding board snapshots", "recorders"),
-    "REC_NOTICES": ("Market data collection", "Exchange announcement snapshots", "recorders"),
-    "REC_UNLOCKS": ("Market data collection", "Token unlock calendar snapshots", "recorders"),
-    "REC_DIGEST": ("Data integrity", "Recorder provenance digests", "recorders"),
-    "R200": ("Prospective paper", "Binance positioning books", "flow72_fwd2"),
-    "R214": ("Prospective paper", "Binance delayed-entry control", "flow72_fwd3"),
-    "R215": ("Prospective paper", "MEXC positioning books", "mexc_fwd"),
-    "R218": ("Prospective paper", "MEXC agreement-weighted book", "mexc_fwd_sq"),
-    "R220": ("Prospective paper", "Funding carry books", "carry_fwd"),
-    "R221": ("Evidence decisions", "MEXC sequential evidence review", "mexc_seq"),
-    "R224": ("Execution measurement", "MEXC order-book execution costs", "mexc_costs"),
-    "R225": ("Prospective paper", "MEXC volatility-targeted books", "vt_fwd"),
-    "R266": ("Prospective paper", "MEXC token unlock events", "unlocks_fwd"),
-    "R268": ("Prospective paper", "MEXC delisting announcement events", "delist_fwd"),
-    "R270": ("Prospective paper", "MEXC monitoring-tag events", "montag_fwd"),
-    "R272": ("Prospective paper", "MEXC funding-change and prelisting events", "announce_fwd"),
-    # These share vt_fwd/tick.log in the shell; it cannot identify their outcomes.
-    "LAG": ("Data integrity", "Forward processing-lag report", "vt_fwd"),
-    "PANEL": ("Reporting", "Canonical research panel refresh", "vt_fwd"),
-    "DASH": ("Reporting", "Control room dataset export", "vt_fwd"),
-}
 NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}\Z")
 STATES = {"SUCCESS", "FAILED", "TIMED_OUT", "BLOCKED", "RUNNING", "PENDING"}
 MAX_REPORT_BYTES = 2_000_000
@@ -155,6 +127,7 @@ def build_jobs(root, *, now=None, state_dir=None):
                "category": category, "kind": category, "lane": lane, "run_id": None,
                "state": "UNKNOWN", "status_source": "not_recorded", "returncode": None,
                "at": None, "age_h": None, "stale": None, "ok": None, "log_path": None,
+               "data_state": "UNVERIFIED", "gate_eligibility": "UNASSESSED",
                "note": "No structured execution report. Process/data success is unverified."}
         if name in latest:
             report, node, path = latest[name]
@@ -165,6 +138,9 @@ def build_jobs(root, *, now=None, state_dir=None):
                        returncode=node.get("returncode"), at=_iso(stamp), age_h=age, stale=age > 2,
                        ok=True if status == "SUCCESS" else False if status in {"FAILED", "TIMED_OUT", "BLOCKED"} else None,
                        note="Recorded process state; data freshness, completeness and evidence validity are separate.")
+            # Only a small allowlisted state crosses the operational view boundary.
+            data_state = node.get("data_state", "UNVERIFIED")
+            row["data_state"] = data_state if data_state in {"COMPLETE", "INCOMPLETE", "UNVERIFIED"} else "UNVERIFIED"
             log = node.get("log")
             if isinstance(log, str) and log == name + ".log":
                 row["log_path"] = str(path.parent / log)  # Metadata only; file content is never read.
@@ -182,5 +158,6 @@ def build_jobs(root, *, now=None, state_dir=None):
                      "display_name": "Execution-report input", "category": "Data integrity", "kind": "Data integrity",
                      "lane": None, "run_id": None, "state": "UNAVAILABLE", "status_source": "report_validation",
                      "returncode": None, "at": None, "age_h": None, "stale": None, "ok": None, "log_path": None,
+               "data_state": "UNVERIFIED", "gate_eligibility": "UNASSESSED",
                      "note": "Some configured reports are unavailable, invalid or for another checkout; no success inferred."})
     return rows

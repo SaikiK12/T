@@ -340,7 +340,10 @@ def ready(u, need, d):
 
 def rows(name):
     p = J / name
-    return list(csv.DictReader(open(p, newline=""))) if p.exists() and p.stat().st_size else []
+    if not p.exists() or not p.stat().st_size:
+        return []
+    with p.open(newline="") as f:
+        return list(csv.DictReader(f))
 
 
 def append(name, cols, recs):

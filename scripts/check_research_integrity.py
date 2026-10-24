@@ -35,11 +35,17 @@ _META = re.compile(
     r"[ \t]*(?:\*\*)?[ \t]*(.*?)[ \t]*$",
     re.IGNORECASE | re.MULTILINE,
 )
-# One bare or backtick-quoted id, optionally followed by a single annotation.
-# Keep the full-value match: arbitrary trailing text must not hide another id.
+# One primary id, optional typed claim/context annotations, and typed inline method metadata.
+# Keep the full-value match: arbitrary trailing text must not hide another round id.
 _META_ID = re.compile(
     r"(?P<quote>`?)(?P<id>R[0-9]+)(?P=quote)"
-    r"(?:[ \t]+\([^()\r\n]*\))?\Z"
+    r"(?:[ \t]+\([^()\r\n]*\)|, in the Claude block R[0-9]+-R[0-9]+"
+    r" claimed on issue #[0-9]+ on [0-9]{4}-[0-9]{2}-[0-9]{2})?"
+    r"(?:\.[ \t]+\*\*Method:\*\*[ \t]+M[0-9]+\.?"
+    r"|\.[ \t]+\*\*Methods:\*\*[ \t]+M[0-9]+(?:,[ \t]+M[0-9]+)*\.?"
+    r"|\. It opens the Claude block R[0-9]+-R[0-9]+, claimed on issue #[0-9]+ before this freeze\."
+    r"|\. R[0-9]+ stays reserved for"
+    r"|\.?)\Z"
 )
 # A frozen PREREG's id can collide with a round claimed elsewhere first. Its text stays frozen; this file beside it
 # records the move as {"declared": "R253", "registered": "R255", "reason": "..."}.

@@ -1,0 +1,46 @@
+name: Offline lab checks
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+      CARGO_BUILD_JOBS: "2"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-10-23
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version-file: .python-version
+      - name: Install locked test environment
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Build and bind qx
+        run: |
+          rustup toolchain install 1.90.0 --profile minimal
+          .venv/bin/python -m lab engine --execute --state-dir "$RUNNER_TEMP/quant-builds" --run-id "build_${GITHUB_RUN_ID}_${GITHUB_RUN_ATTEMPT}"
+          cargo test --locked --release --manifest-path engine/Cargo.toml
+      - name: Full Python gate
+        run: .venv/bin/python -m lab check --suite full --report "$RUNNER_TEMP/quant-full.json"
+      - name: Canonical metadata integrity
+        run: .venv/bin/python -m lab integrity
+      - name: Preserve diagnostic receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: offline-receipts
+          path: |
+            ${{ runner.temp }}/quant-full.json
+            ${{ runner.temp }}/quant-builds/*/status.json
+          retention-days: 14

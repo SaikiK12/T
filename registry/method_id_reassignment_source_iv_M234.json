@@ -1,0 +1,123 @@
+{
+  "record_kind": "historical_method_id_collision_not_a_methods_queue",
+  "source_commit": "551c55c4992d8b5eb33d90298b4ff9f4c9687244",
+  "preserved_from_commit": "b2011a61c2edb1cae09be0a7d86a19bd2062df6b",
+  "declared_id": "M234",
+  "canonical_id": "M284",
+  "round": "UNREGISTERED_SOURCE_IV",
+  "original_header": [
+    "id",
+    "method",
+    "data_held",
+    "status",
+    "cheap",
+    "note",
+    "source",
+    "rid"
+  ],
+  "original_row": [
+    "M234",
+    "Relative value across an options implied-volatility surface: sell relatively rich and buy relatively cheap matched volatility",
+    "N option chains/surfaces (DVOL is not a surface)",
+    "BLOCKED",
+    "3",
+    "TikTok proposes rich/cheap IV across strike and expiry; pair definition, delta/tenor match, richness threshold, model, hedge, timing and costs are missing. Distinct from M099/R209 DVOL-RV timing.",
+    "TT26-02; Cboe surface docs",
+    "-"
+  ],
+  "original_alias_header": [
+    "rec_id",
+    "title",
+    "intake_status",
+    "queue_id",
+    "also",
+    "confidence",
+    "why",
+    "source"
+  ],
+  "original_alias_rows": [
+    [
+      "TT26-02-IVSURFACE-RV",
+      "Relative implied-volatility value across strike/expiry surface",
+      "blocked",
+      "M234",
+      "M099",
+      "high",
+      "M099/R209 tests an index VRP timing rule; it is not a cross-strike/tenor relative-value surface trade.",
+      "Codex video intake 2026-10-20; https://www.tiktok.com/@aleks_rosme/video/7698695375250623766"
+    ],
+    [
+      "SV26-02-SKEW-RV",
+      "Trade relative richness across positive/negative/smile option skew",
+      "blocked",
+      "M234",
+      "",
+      "high",
+      "OIC video explains skew measurement but gives no matched delta/tenor, percentile, entry/exit or executable hedge.",
+      "Codex discovery 2026-10-20; https://www.optionseducation.org/videolibrary/volatility-ii-understanding-options-skew"
+    ]
+  ],
+  "original_provider_path": "research/intake/source_catalog_20261020.csv",
+  "original_provider_header": [
+    "id",
+    "provider",
+    "url",
+    "received_scope",
+    "access_boundary",
+    "research_gap",
+    "existing_queue",
+    "required_check",
+    "checked_date"
+  ],
+  "original_provider_rows": [
+    [
+      "SRC26-006",
+      "OptionMetrics via WRDS",
+      "https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/optionmetrics/",
+      "Public vendor page only",
+      "Institutional access or subscription needed; account access untested",
+      "Historical option-chain source discovery",
+      "M099;M234;M236;M248;M249",
+      "Verify intraday versus end-of-day coverage; EOD cannot test a 0DTE intraday trigger",
+      "2026-10-20"
+    ]
+  ],
+  "target_reassignments": [
+    {
+      "path": "registry/methods_aliases.csv",
+      "id_field": "rec_id",
+      "record_id": "TT26-02-IVSURFACE-RV",
+      "field": "queue_id",
+      "original_value": "M234",
+      "canonical_value": "M284"
+    },
+    {
+      "path": "registry/methods_aliases.csv",
+      "id_field": "rec_id",
+      "record_id": "SV26-02-SKEW-RV",
+      "field": "queue_id",
+      "original_value": "M234",
+      "canonical_value": "M284"
+    },
+    {
+      "path": "research/intake/source_catalog_20261020.csv",
+      "id_field": "id",
+      "record_id": "SRC26-006",
+      "field": "existing_queue",
+      "original_value": "M099;M234;M236;M248;M249",
+      "canonical_value": "M099;M284;M236;M248;M249"
+    }
+  ],
+  "reason": "The source-IV allocation reused M234 after the earlier R257 strategy-mixture claim. Only the unregistered source-IV row and its current aliases/provider targets move to M284. M234 remains reserved for original R257; no R257 code, registry row or outcomes are imported by this correction.",
+  "reserved_claim": {
+    "id": "M234",
+    "round": "R257",
+    "coordination": [
+      "https://github.com/SaikiK12/T/issues/7#issuecomment-6286560754",
+      "https://github.com/SaikiK12/T/issues/7#issuecomment-6290030227",
+      "https://github.com/SaikiK12/T/issues/7#issuecomment-6290800102"
+    ]
+  },
+  "later_source_claim": "https://github.com/SaikiK12/T/issues/7#issuecomment-6296072682",
+  "coordination": "https://github.com/SaikiK12/T/issues/7#issuecomment-6303875390"
+}

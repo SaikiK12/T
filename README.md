@@ -22,6 +22,12 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
 ## Docs
 
+Read by task instead of loading this entire list. The authority for current method status is
+[`registry/methods.csv`](registry/methods.csv), and for recorded round status/trials/verdicts it is
+[`registry/rounds.csv`](registry/rounds.csv). Read the linked lane's PREREG and FINDINGS for exact scope. The panel
+is a timestamped generated snapshot; consult fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7)
+for active writers. Dated proposals, audits and source notes below retain history, not a second current queue.
+
 **Start here**
 - [`PANEL.md`](docs/PANEL.md): live status.
 - [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
@@ -44,7 +50,7 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
   [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
   [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
-- What to test next: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
+- Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
   [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
   [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
   [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md).
@@ -59,7 +65,7 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`AUCTION_AND_FLOW.md`](docs/AUCTION_AND_FLOW.md) (the owner's 21 terms: auction market theory, order flow, dealer
   gamma/delta/vanna/charm exposure; critique, our own terminal, the AI council, questions for the owner),
   [`QUANTDATA.md`](docs/QUANTDATA.md) (QuantData's options-flow metrics mapped to crypto data we hold; VPIN tested,
-  R291 NULL).
+  R291 NULL), [`TRADER_TALKS.md`](docs/TRADER_TALKS.md) (received practitioner talks and their extraction scope).
 
 **Trading, execution and capital**
 - The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md). Other venues and their fees (Lighter's zero-fee API,
@@ -68,6 +74,9 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
   [`PERP_CARRY_ACCOUNTING.md`](docs/PERP_CARRY_ACCOUNTING.md), [`OPERATIONAL_API_RISK.md`](docs/OPERATIONAL_API_RISK.md).
 - Paper and sizing: [`PAPER_REFINEMENT.md`](docs/PAPER_REFINEMENT.md), [`SIZING_EVIDENCE.md`](docs/SIZING_EVIDENCE.md).
 - Capital: [`CAPITAL_GATE_REVIEW.md`](docs/CAPITAL_GATE_REVIEW.md), [`PROP_FIRMS.md`](docs/PROP_FIRMS.md).
+- Capital-level carry/spot comparison: [R309 findings](experiments/capital_mix_v1/FINDINGS.md), with fixed
+  initial allocations, parent/passive/cash controls and all three cost tiers. Historical model evidence;
+  `lab.capital` combines accounts with explicit capital denominators.
 
 **Audits and reviews**
 - Program-level: [`AUDIT.md`](docs/AUDIT.md), [`CRITIQUE.md`](docs/CRITIQUE.md),
@@ -82,19 +91,68 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 - Forecast evaluation: [`FORECAST_EVALUATION_PLAYBOOK.md`](docs/FORECAST_EVALUATION_PLAYBOOK.md),
   [`ADAPTIVE_SELECTION_AND_DRIFT.md`](docs/ADAPTIVE_SELECTION_AND_DRIFT.md).
 
-Docs stay at their paths because frozen PREREGs link to them.
+Docs stay at their paths because frozen PREREGs link to them. Topic overlap alone does not establish duplication:
+source receipts, proposed mechanics, a frozen test and its verdict answer different questions. Add new facts to the
+existing intake, lane or process document before creating another review. Generated folder catalogs come from
+`scripts/catalog.py`; edit their registry/docstring sources, not the generated text.
 
 ## Use
 
+`python -m lab` is the common entry point. `lab/operations.py` supplies the task graph, lane descriptions and
+paper projections to the orchestrator, panel and dashboard. Methods remain in the canonical CSV; runtime descriptors
+are not another research queue. Per-run receipts live outside the checkout. A successful process, complete declared
+checks and admission through the research gates are separate states.
+
+R266 now has an external journal guard around its unchanged writer: unique ticket/skip/score identities, frozen entry/exit cutoffs, retained snapshot hashes and score arithmetic. Postflight also requires matching native status/book outputs and a status no older than15 minutes. Missing snapshots or damaged appends block execution; no historical repair occurs. Passing these structural checks does not certify the raw price/funding feed, original calendar availability or statistical gates.
+
+`lab status` reads the same receipt adapter as the Control Room. Pass the existing external run directory; it lists process state, declared data checks, stale receipts and required/optional task dependencies (`--json`). `--strict` exits nonzero for missing, failed, stale or unverified observations; it never authorizes trading or starts a collector. It also shows the canonical queue counts and engine build binding.
+
+```sh
+python -m pip install uv==0.12.23
+uv venv --python 3.12.14 .venv
+uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+.venv/bin/python -m lab                               # commands; does not start work
+.venv/bin/python -m lab status                        # read-only; missing receipts stay unknown
+.venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --json
+.venv/bin/python -m lab find funding                  # existing metadata index
+.venv/bin/python -m lab integrity                     # register/spec + canonical intake
+.venv/bin/python -m lab check --suite fast            # feedback; explicit simulations deferred
+.venv/bin/python -m lab check --suite full            # required commit gate, simulations retained
+.venv/bin/python -m lab forward                      # offline plan; no collector/writer starts
+.venv/bin/python -m lab engine                       # offline locked-build plan
 ```
-python3 -m venv .venv && .venv/bin/pip install numpy pandas numba scipy pyarrow websockets
-.venv/bin/python -m unittest discover -s tests -t .              # before every commit to lab/ or scripts/
-cargo test --release --manifest-path engine/Cargo.toml           # before every commit to engine/
-.venv/bin/python -m lab.data build klines 1h                     # Binance archive (also fundingRate, premiumIndexKlines)
-.venv/bin/python scripts/qx_run.py experiments/<lane> --register # run a frozen qx lane and append its registry row
-sh scripts/forward_loop.sh                                       # hourly forward paper ticks and recorders
-.venv/bin/python scripts/dashboard_data.py                       # export the Control Room datasets
+
+The lock captures the tested Python 3.12 stack, including scikit-learn and the optional browser-test dependency.
+System Chromium is required for the browser fixture; unavailable archive/parity/browser checks report explicit skips.
+Historical lanes retain their recorded environments; this lock does not reproduce every old study automatically.
+Keep native thread pools bounded during checks (`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1`).
+
+Explicit operator actions, when ready to run (none installs a scheduler):
+
+```sh
+.venv/bin/python -m lab engine --execute --state-dir /absolute/external/build-runs --run-id unique_build
+cargo test --locked --release --manifest-path engine/Cargo.toml
+.venv/bin/python -m lab forward --execute --state-dir /absolute/external/paper-runs --run-id unique_tick
+.venv/bin/python -m lab panel --jobs-state-dir /absolute/external/paper-runs
+.venv/bin/python -m lab export --jobs-state-dir /absolute/external/paper-runs
 ```
+
+`forward_all.sh` is a compatibility delegate to that same orchestrator. The optional `forward_loop.sh` requires
+`FORWARD_STATE_DIR` outside the checkout, owns a singleton lock and reports success/failure from the run. Starting it
+is an explicit deployment action; merging a patch does not establish that a host changed scheduler. All wrappers share
+`.forward.lock` with old ticks; do not kill an existing owner process. A blocked partial signal hour requires inspection,
+not automatic history repair. Funding checks expose partial venue snapshots; unimplemented checks remain UNVERIFIED.
+
+Dashboard exports are immutable `dashboard/data/generations/<generation>/<dataset>.json`; `manifest.json` is the
+atomic latest pointer. `lab export --changed` returns `{generation, files}`. Upload those exact files, then acknowledge
+with `lab export --record dataset=/_blob/returned-id --generation <that-generation>`. `lab export --docs` rebuilds the
+store documents from acknowledged receipts. A new export cannot silently change the hash/clock of an earlier upload.
+Old upload files lack this proof and require a new explicit acknowledgement; they are never guessed into validity.
+Exports bind uploaded bytes, not an atomic snapshot of every upstream collector or successful remote delivery.
+
+The bounded engineering benchmark uses invented arrays only:
+`python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
+The original `python -m unittest discover -s tests -t .` remains the same full gate. No framework migration is required.
 
 New lane: copy `templates/lane/`, write the PREREG, claim its id on issue #7, freeze it with `lab.prereg.freeze()`,
 then run.

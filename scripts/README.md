@@ -5,7 +5,7 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (20)
+## Fetch: download archives and public history (21)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -13,6 +13,7 @@ line is the first line of the script's own docstring.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
 - [`fetch_coinmetrics.py`](fetch_coinmetrics.py): Coin Metrics community API (free, no key): daily market caps and on-chain metrics for every asset it serves free.
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
+- [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
 - [`fetch_fundamentals.py`](fetch_fundamentals.py): Protocol fundamentals from DefiLlama's free API for every token that has a Binance perp: daily TVL, fees and revenue.
 - [`fetch_gate.py`](fetch_gate.py): Gate.io USDT-perp hourly contract stats (top-trader and all-account long/short ratios, taker sizes, liquidations, open interest) for the coins of the Binance research universe.
@@ -47,13 +48,13 @@ line is the first line of the script's own docstring.
 
 ## Forward: paper lanes and the loops that run them (20)
 
-- [`forward_all.sh`](forward_all.sh): One forward tick: R200's journal first (scripts/forward_tick.py), then the lanes that read it: R214 flow72_fwd3 (one bar late, Binance), R215 mexc_fwd (MEXC), R218 mexc_fwd_sq (agreement-squared ...
+- [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
 - [`forward_carry.py`](forward_carry.py): carry_fwd (R220): the R191 funding carry rule forward on paper, entered one bar late, on Binance and on MEXC, as set out in experiments/carry_fwd/PREREG.md.
 - [`forward_delayed.py`](forward_delayed.py): flow72_fwd3 (R214): R200's forward books with each slice entered one bar after its signal bar, as set out in experiments/flow72_fwd3/PREREG.md.
 - [`forward_delist.py`](forward_delist.py): R268 delist_fwd: the spot delisting-notice short, forward on MEXC paper (experiments/delist_fwd/PREREG.md).
 - [`forward_lag.py`](forward_lag.py): Processing lag of the forward lanes: how long after each hour's bar closed R200 computed its signal, and which on-time days were scored from hours computed late (a backfill after the container or ...
-- [`forward_loop.sh`](forward_loop.sh): Hourly forward ticks that do not depend on the Claude session being idle: at minute 6 of every hour run scripts/forward_all.sh (which holds a lock, so an overlapping cron tick exits at once, and ...
+- [`forward_loop.sh`](forward_loop.sh): Optional hourly scheduler at minute 6.
 - [`forward_mexc.py`](forward_mexc.py): mexc_fwd (R215): R200's forward signals traded one bar late on MEXC hourly closes and MEXC funding, as set out in experiments/mexc_fwd/PREREG.md.
 - [`forward_mexc_sq.py`](forward_mexc_sq.py): mexc_fwd_sq (R218): the agreement-squared flow book on MEXC prices and funding, one bar late, as set out in experiments/mexc_fwd_sq/PREREG.md.
 - [`forward_montag.py`](forward_montag.py): R270 montag_fwd: the Monitoring Tag short at +24 h, forward on MEXC paper (experiments/montag_fwd/PREREG.md).
@@ -68,9 +69,10 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (90)
+## Run: one lane's frozen measurement (96)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
+- [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
@@ -79,6 +81,7 @@ line is the first line of the script's own docstring.
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
 - [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
+- [`run_capital_mix.py`](run_capital_mix.py): R309: fixed initial-capital carry/spot comparison; archived inputs only, no trading.
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
@@ -97,6 +100,8 @@ line is the first line of the script's own docstring.
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
+- [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
+- [`run_equations_v2.py`](run_equations_v2.py): R311: exact R310 policy repeat after source-only Lighter page-seam recovery.
 - [`run_flow72.py`](run_flow72.py): flow72_v1 (R196): short the coins with heavy taker selling / top traders short vs the crowd, 72 h, universe-hedged, as set out in experiments/flow72_v1/PREREG.md.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
@@ -121,6 +126,7 @@ line is the first line of the script's own docstring.
 - [`run_mlrank2.py`](run_mlrank2.py): R304 mlrank_v2: R299's rankers again, without the three features whose coverage leaks survival.
 - [`run_montag.py`](run_montag.py): R269 montag_v1: short the perps of coins Binance adds to its Monitoring Tag (experiments/montag_v1/PREREG.md).
 - [`run_msnr.py`](run_msnr.py): R306 msnr_v1: Malaysian support and resistance (M323) on 4-hour candles, as set out in experiments/msnr_v1/PREREG.md.
+- [`run_nagel.py`](run_nagel.py): nagel_v1 (R308): the 1-day cross-sectional reversal only after market stress (M325), as set out in experiments/nagel_v1/PREREG.md.
 - [`run_oiwick.py`](run_oiwick.py): oiwick_v1 (R252): fade liquidation cascades proxied by a >= 3% hourly open-interest drop plus a >= 3 ATR wick, on the top-50 perps, as set out in experiments/oiwick_v1/PREREG.md.
 - [`run_optflow.py`](run_optflow.py): optflow_v1 (R295): does signed Deribit option flow lead BTC and ETH perp returns over the next 1, 4 or 24 hours? As set out in experiments/optflow_v1/PREREG.md.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
@@ -138,6 +144,7 @@ line is the first line of the script's own docstring.
 - [`run_regime.py`](run_regime.py): regime_v1 (R233): flow books A, B and X2 traded only in some trend x volatility regimes, and a regime-wise choice among them (MacroHFT's sub-agents and hyper-agent), against constant size, as set ...
 - [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.
 - [`run_rnfade.py`](run_rnfade.py): rnfade_v1 (R249): fade the day's first close through a round-number level (two- or one-significant-figure grid), held 4 h or 24 h, against the same book on a half-step-shifted grid, on the crypto ...
+- [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
 - [`run_sizecarry.py`](run_sizecarry.py): sizecarry_v1 (R281): confidence-sized carry books, as set out in experiments/sizecarry_v1/PREREG.md.
@@ -161,17 +168,19 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (5)
+## Check: parity, audits and integrity (6)
 
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
+- [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
 - [`check_research_integrity.py`](check_research_integrity.py): Audit the research register and local preregistrations without changing files.
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
-## Build: tables, views and symbol maps (6)
+## Build: tables, views and symbol maps (7)
 
 - [`build_daily.py`](build_daily.py): Build the daily point-in-time panel (lab/daily.py): one row per (day, Binance perp) from every source the lab holds, plus the market-wide series, into data/daily/.
+- [`build_engine.py`](build_engine.py): Build qx from the locked dependency graph and bind binary/source/toolchain.
 - [`build_extra_views.py`](build_extra_views.py): Extra feature tensors next to data/research/bins.npy, same [V, T, S] int8 layout and binning conventions.
 - [`build_views.py`](build_views.py): Build the point-in-time research universe and the int8 feature-bin tensor, and save them under data/research/.
 - [`venue_symbols.py`](venue_symbols.py): Cross-venue symbol table: one row per Binance USD-M perp, with the file stem of the same coin on Gate, Hyperliquid and MEXC (empty where it is not listed or has no history file).
@@ -186,11 +195,13 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (22)
+## Tools and everything else (32)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
+- [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
+- [`check.py`](check.py): One offline unittest entry point: full release gate or bounded feedback.
 - [`dashboard_data.py`](dashboard_data.py): Export the lab's state as the dashboard's datasets: dashboard/data/<id>.json, one array of row objects each.
 - [`dashboard_jobs.py`](dashboard_jobs.py): Read-only operational job metadata for the control room.
 - [`dashboard_perf.py`](dashboard_perf.py): The control room's performance and coverage datasets (docs/BENCHMARK.md build items 2-3), used by dashboard_data.py.
@@ -202,11 +213,19 @@ line is the first line of the script's own docstring.
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
+- [`probe_pair_quotes.py`](probe_pair_quotes.py): R312 bounded first-seen public REST evidence: capture -> seal -> report.
+- [`probe_stream_quotes.py`](probe_stream_quotes.py): R313 bounded public WS quote-access measurement: capture -> seal -> report.
+- [`project_status.py`](project_status.py): Read-only project status using the Control Room's existing execution receipts.
 - [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
+- [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
+- [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).
+- [`unlock_market_data.py`](unlock_market_data.py): Immutable public funding/mark archive acquisition and portable data bundle; no PnL.
+- [`unlocks_daily_check.py`](unlocks_daily_check.py): R258: bounded Binance daily-bar cross-check of the fixed R265 unlock events.
+- [`unlocks_funding_bounds.py`](unlocks_funding_bounds.py): R259: fixed-cohort funding bounds and necessary isolated collateral; no fills.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.

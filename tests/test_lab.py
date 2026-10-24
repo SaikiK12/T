@@ -82,6 +82,32 @@ class GateTests(unittest.TestCase):
         self.assertTrue(out["pass"])
         self.assertEqual(out["n_clusters"], 2)
 
+    def test_infinite_return_blocks_pass_without_poisoning_summary(self):
+        out = gate.go_real([0.05] * 20 + [float("inf")])
+        self.assertEqual(out["n"], 20)
+        self.assertEqual(out["invalid_n"], 1)
+        self.assertFalse(out["checks"]["finite_returns"])
+        self.assertFalse(out["pass"])
+        self.assertAlmostEqual(out["mean"], 0.05)
+
+    def test_missing_return_does_not_create_a_false_entry_day_cluster(self):
+        out = gate.go_real([0.05] * 20 + [float("nan")], entry_days=["2026-10-13"] * 20 + [None])
+        self.assertTrue(out["pass"])
+        self.assertEqual(out["n"], 20)
+        self.assertEqual(out["n_clusters"], 1)
+
+    def test_entry_days_must_align_to_original_returns(self):
+        with self.assertRaisesRegex(ValueError, "align"):
+            gate.go_real([0.05] * 20 + [float("nan")], entry_days=["2026-10-13"] * 20)
+
+    def test_entry_day_is_required_only_for_a_scored_return(self):
+        with self.assertRaisesRegex(ValueError, "missing"):
+            gate.go_real([0.05] * 20, entry_days=["2026-10-13"] * 19 + [None])
+
+    def test_non_vector_returns_fail_closed(self):
+        with self.assertRaisesRegex(ValueError, "one-dimensional"):
+            gate.go_real([[0.05] * 20])
+
 
 class PreregTests(unittest.TestCase):
     def test_freeze_verify_and_tamper(self):

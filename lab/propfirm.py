@@ -45,6 +45,8 @@ class Rules:
     cost_side: float = 0.0               # firm's commission per side, fraction of notional (spread is the caller's)
     swap_day: float = 0.0                # firm's swap per day on the notional held, fraction
     source: str = "illustrative"
+    payout_winning_days: int = 0         # qualifying funded trading days before a request; 0 uses payout_days cycles
+    payout_winning_day_min: float = 0.0  # USD net PnL required for each qualifying day
 
 
 NAN = float("nan")
@@ -86,6 +88,16 @@ PRESETS = {
                          activation=149, payout_share=0.5, payout_cap=2_000, payout_min=125,
                          payout_profit_required=0.01,
                          floor_after_payout=1.0, source="help.topstep.com (rules), third-party (prices)"),
+    # Funded-stage-only XFA Standard baseline from Topstep help, checked 2026-10-23: initial equity 1 represents a
+    # $0 XFA balance; the $0 post-payout MLL therefore remains at 1.0. This is the no-DLL $2,000 cap and default
+    # 90/10 split. It omits Combine evaluation, scaling-plan contract limits, DLL-at-checkout, and the legacy
+    # dashboard cohort's first-lifetime-payout exception. `targets=()` must never be passed to evaluate().
+    "topstep_50k_xfa_standard": Rules("topstep_50k_xfa_standard", 50_000, NAN, targets=(), daily_loss=0.0,
+                                       max_dd=0.04, dd_mode="trailing_lock", trail_eod=True,
+                                       split=0.9, payout_days=14, payout_share=0.5, payout_cap=2_000,
+                                       payout_min=125, payout_profit_required=0.01, payout_winning_days=5,
+                                       payout_winning_day_min=150, floor_after_payout=1.0,
+                                       source="help.topstep.com/en/articles/8284233-topstep-payout-policy"),
     "illustrative_2step": Rules("illustrative_2step", 100_000, 500, targets=(0.08, 0.05), daily_loss=0.05,
                                 max_dd=0.10, split=0.8, refund_fee=True),
 }
@@ -182,6 +194,8 @@ def evaluate(r, rules, scale, n=4000, horizon=365, funded_days=180, block=5, ste
     """Pass probability across all phases, expected payouts in USD, and the expected value of one attempt. With
     turnover or exposure given, r is gross and the firm's cost_side and swap_day are charged (net_of_costs); without
     them r is taken as already net of the firm's charges."""
+    if not rules.targets:
+        raise ValueError("evaluate() requires an evaluation target; use funded_payouts() for funded-only rules")
     if turnover is not None or exposure is not None:
         r = net_of_costs(r, rules, 0.0 if turnover is None else turnover, 0.0 if exposure is None else exposure,
                          steps_per_day)
@@ -219,8 +233,17 @@ def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
     after the last successful withdrawal. The first payout is exempt; rejected cycles do not reset that reference.
     A request below payout_min USD is not made: neither money nor the payout reference/floor changes. The minimum
     applies before the profit split and any bank fees. With probability payout_deny an eligible request is refused
-    and the account closed unpaid. Once one payout is made, the floor rises to
-    floor_after_payout when that is set. A broken rule ends the account."""
+    and the account closed unpaid. Once one payout is made, the floor rises to floor_after_payout when that is set. A
+    positive payout_winning_days switches from fixed payout_days cycles to a daily eligibility check; a successful
+    request then resets the qualifying-day count. A broken rule ends the account."""
+    if rules.payout_winning_days > 0:
+        return _funded_payouts_after_winning_days(r, rules, scale, n, days, block, steps_per_day, rng)
+
+    return _funded_payouts_on_fixed_cycles(r, rules, scale, n, days, block, steps_per_day, rng)
+
+
+def _funded_payouts_on_fixed_cycles(r, rules, scale, n, days, block, steps_per_day, rng):
+    """Legacy payout schedule used when a firm has no event-based qualifying-day rule."""
     total = np.zeros(n)
     alive = np.ones(n, bool)
     paid = np.zeros(n, bool)
@@ -255,6 +278,65 @@ def funded_payouts(r, rules, scale, n, days, block, steps_per_day, rng):
         last_payout_balance = np.where(win, eq, last_payout_balance)
         peak = np.where(win, eq, peak)
         paid |= win
+    return total
+
+
+def _funded_payouts_after_winning_days(r, rules, scale, n, days, block, steps_per_day, rng):
+    """Request a payout as soon as each path meets its qualifying-day and balance conditions.
+
+    The request-day PnL counts toward the current eligibility check, then a successful payout resets that path's
+    qualifying-day counter. The next trading day starts the new count, so the request day is excluded from the next
+    cycle. A post-payout floor applies from the next step/day onward. `r` is bootstrapped once across the funded horizon
+    so eligibility events, losses, and the armed floor remain in their sampled order.
+    """
+    total = np.zeros(n)
+    alive = np.ones(n, bool)
+    paid = np.zeros(n, bool)
+    eq, peak = np.ones(n), np.ones(n)
+    last_payout_balance = np.ones(n)
+    winning_days = np.zeros(n, np.int32)
+    cap = rules.payout_cap / rules.account
+    after = rules.floor_after_payout
+    paths = scale * bootstrap(r, n, days, block, steps_per_day, rng)
+    phase_rules = replace(rules, min_days=0, consistency=0.0, max_days=1)
+
+    for d in range(days):
+        start = d * steps_per_day
+        stop = start + steps_per_day
+        day_paths = paths[:, start:stop]
+        floor_min = np.where(paid, after, -np.inf) if np.isfinite(after) else None
+        day_start_eq = eq.copy()
+        outcome = run_phase(day_paths, phase_rules, np.inf, steps_per_day, check_target=False,
+                            eq0=eq, peak0=peak, floor_min=floor_min)
+        alive &= outcome.extra["alive"]
+        eq = outcome.extra["equity"]
+        peak = outcome.extra["peak"]
+
+        day_pnl = (eq - day_start_eq) * rules.account
+        winning = alive & (day_pnl >= rules.payout_winning_day_min - 1e-8)
+        winning_days += winning
+        eligible = alive & (winning_days >= rules.payout_winning_days) & (eq > 1)
+        if rules.payout_profit_required > 0:
+            new_profit = (eq - last_payout_balance) * rules.account
+            eligible &= ~paid | (new_profit >= rules.payout_profit_required - 1e-8)
+
+        request = np.minimum(rules.payout_share * (eq - 1), cap)
+        if rules.payout_min > 0:
+            eligible &= request * rules.account >= rules.payout_min - 1e-8
+        if rules.payout_deny > 0:
+            denied = eligible & (rng.random(n) < rules.payout_deny)
+            alive &= ~denied
+            eligible &= ~denied
+
+        out = np.where(eligible, request, 0.0)
+        total += out * rules.split * rules.account
+        eq -= out
+        last_payout_balance = np.where(eligible, eq, last_payout_balance)
+        peak = np.where(eligible, eq, peak)
+        paid |= eligible
+        # Reset only after a successful request. The request day itself cannot enter the next count.
+        winning_days = np.where(eligible, 0, winning_days)
+
     return total
 
 

@@ -16,6 +16,8 @@ import math
 
 import pandas as pd
 
+from lab.mexc_depth import parse_depth_levels
+
 SETTLE_MS = 2_000
 BOOK = ("s", "sym", "bid", "bid_sz", "ask", "ask_sz", "bid_sz5", "ask_sz5", "ofi", "n", "lag_ms")
 TRADES = ("s", "sym", "buy_qty", "sell_qty", "buy_n", "sell_n", "notional", "px_first", "px_last", "px_min", "px_max")
@@ -145,14 +147,50 @@ def mexc(msg, sizes):
         return []
     sym = symbol[:-5]
     d = msg.get("data")
+
+    def event_ms(primary, fallback):
+        # A present primary timestamp must be valid; only an absent/null field may use its fallback.
+        value = primary if primary is not None else fallback
+        if isinstance(value, bool):
+            return None
+        if isinstance(value, int):
+            return value
+        if isinstance(value, float):
+            return int(value) if math.isfinite(value) and value.is_integer() else None
+        if isinstance(value, str):
+            try:
+                return int(value.strip())
+            except ValueError:
+                return None
+        return None
+
     if ch == "push.depth.full":
-        bids, asks = d.get("bids") or [], d.get("asks") or []
-        if not bids or not asks:
+        try:
+            bids = parse_depth_levels(d.get("bids") or [])
+            asks = parse_depth_levels(d.get("asks") or [])
+            # MEXC's depth contract defines data.cts as matching-engine time; envelope ts is fallback.
+            # https://www.mexc.co/api-docs/futures/websocket-api/order-book-depth
+            t_ms = event_ms(d.get("cts"), msg.get("ts"))
+            if t_ms is None:
+                return []
+            return [("book", sym, t_ms, bids[0].price,
+                     bids[0].base_quantity(cs), asks[0].price, asks[0].base_quantity(cs),
+                     sum(level.base_quantity(cs) for level in bids[:5]),
+                     sum(level.base_quantity(cs) for level in asks[:5]))]
+        except (AttributeError, TypeError, ValueError):
+            # Bad or incomplete snapshots must not become plausible zero-depth observations.
             return []
-        return [("book", sym, msg.get("ts", d.get("cts")), float(bids[0][0]), bids[0][1] * cs, float(asks[0][0]),
-                 asks[0][1] * cs, sum(x[1] for x in bids[:5]) * cs, sum(x[1] for x in asks[:5]) * cs)]
     deals = d if isinstance(d, list) else [d]
-    return [("trade", sym, x["t"], float(x["p"]), x["v"] * cs, 1 if x["T"] == 1 else -1) for x in deals]
+    events = []
+    for x in deals:
+        if not isinstance(x, dict):
+            continue
+        # Deal docs label t "Trade time"; cts is used only if t is absent.
+        # https://www.mexc.co/api-docs/futures/websocket-api/deal
+        t_ms = event_ms(x.get("t"), x.get("cts"))
+        if t_ms is not None:
+            events.append(("trade", sym, t_ms, float(x["p"]), x["v"] * cs, 1 if x["T"] == 1 else -1))
+    return events
 
 
 def lighter(msg, names):

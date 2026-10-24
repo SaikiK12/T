@@ -8,6 +8,7 @@ experiments/*/results/*.npy
 
 /data/
 /.venv/
+/.cache/
 experiments/*/results/*.parquet
 experiments/*/results/*.npz
 
@@ -29,3 +30,12 @@ experiments/auction_v1/results/trades.csv.gz
 experiments/vpin_v1/results/hourly.csv.gz
 # R306's trade list (12 MB) is rebuilt by its frozen run; its sha256 is in results/hashes.json
 experiments/msnr_v1/results/trades.csv.gz
+
+# Reproducible test dependency lock is source, unlike runtime lock files.
+!requirements-test.lock
+
+# Compact frozen equation forecasts/attribution are audit evidence, not bulk input caches.
+!experiments/equations_v1/results/forecasts.npz
+!experiments/equations_v1/results/coin_pnl.npz
+!experiments/equations_v2/results/forecasts.npz
+!experiments/equations_v2/results/coin_pnl.npz
