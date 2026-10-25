@@ -24,6 +24,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`events`](events.py): Event studies on the hourly panel: per-event returns over a holding window, clustered statistics, and the daily PnL of a book that takes every event with a fixed stake.
 - [`executable_quotes`](executable_quotes.py): First-seen REST book contract and conditional two-venue crossing costs.
 - [`exposure`](exposure.py): Options positioning: the Black-76 greeks of each listed option and the dealer exposures traders quote from them, gamma (GEX), delta (DEX), vanna (VEX) and charm (CEX), the gamma profile over a ...
+- [`fair_workers`](fair_workers.py): Prestarted finite public-fair workers; readiness is never market freshness.
 - [`features`](features.py): Feature library.
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...

@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-25 06:30 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-25 07:26 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,7 +24,7 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 34 |
 | Ideas partly tested | 40 |
 | Ideas blocked (data, download, compute) | 98 |
-| Rounds in the registry | 135 (NULL 84, PENDING 22, PARTIAL 16, CONFIRMED 8, DATA_PASS 5) |
+| Rounds in the registry | 136 (NULL 84, PENDING 22, PARTIAL 17, CONFIRMED 8, DATA_PASS 5) |
 | Program trials | 9,478,782 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
@@ -123,7 +123,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R259 | unlocks_funding_bounds_v1 | DONE | PARTIAL | 2 |
 | R309 | capital_mix_v1 | DONE | NULL | 1 |
 | R310 | equations_v1 | DONE | PENDING | 12 |
 | R311 | equations_v2 | DONE | PENDING | 12 |
@@ -131,5 +130,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R313 | stream_quotes_v1 | DONE | PARTIAL | 0 |
 | R314 | depth_quotes_v1 | DONE | PARTIAL | 0 |
 | R315 | funding_values_v1 | DONE | PARTIAL | 0 |
+| R316 | warm_values_v1 | DONE | PARTIAL | 0 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

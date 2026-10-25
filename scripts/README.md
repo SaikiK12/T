@@ -195,7 +195,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (34)
+## Tools and everything else (35)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -217,6 +217,7 @@ line is the first line of the script's own docstring.
 - [`probe_funding_values.py`](probe_funding_values.py): R315 fixed fair-value snapshot diagnostic; no orders or strategy scoring.
 - [`probe_pair_quotes.py`](probe_pair_quotes.py): R312 bounded first-seen public REST evidence: capture -> seal -> report.
 - [`probe_stream_quotes.py`](probe_stream_quotes.py): R313 bounded public WS quote-access measurement: capture -> seal -> report.
+- [`probe_warm_values.py`](probe_warm_values.py): R316 finite matched prestarted/cold fair requests on identical paired books.
 - [`project_status.py`](project_status.py): Read-only project status using the Control Room's existing execution receipts.
 - [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
