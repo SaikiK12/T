@@ -1,0 +1,915 @@
+{
+  "bounded_raw_body_bytes": 100699,
+  "bounded_raw_duration_seconds": 2.1833264760061866,
+  "bounded_raw_source_requests": 7,
+  "commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+  "commit_date": "2026-09-22T08:53:54Z",
+  "historical_allowance_unchanged": {
+    "reported_mib": "229.85",
+    "requests": 7757
+  },
+  "license": "Apache2.0 license header/body inspected; no upstream code mirrored or package installed",
+  "market_requests": 0,
+  "mechanisms": [
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-SPOT-EDGE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M239",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "55cebd93578c36c27593b3d9a97bd6f5f7ca67892cdb998267078171515b902c",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "status": "untested",
+      "testable_rule": "Walk equal base amounts; normalize quote assets; subtract two fill charges before the configured entry hurdle. Selling needs pre-positioned base inventory. This spot cash formula is not perpetual realized PnL.",
+      "title": "Pre-positioned spot depth arbitrage",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M241",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-FAILURE-RETRY",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M239",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "55cebd93578c36c27593b3d9a97bd6f5f7ca67892cdb998267078171515b902c",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "status": "untested",
+      "testable_rule": "Place both market orders separately; a failed leg calls the full order amount again. No atomic two-leg fill guarantee or partial-fill reconciliation follows from this class alone.",
+      "title": "Independent legs and whole-order retry",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-PERCENT-UNITS",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M239",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "55cebd93578c36c27593b3d9a97bd6f5f7ca67892cdb998267078171515b902c",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "status": "untested",
+      "testable_rule": "The closed-result percentage accessor divides quote PnL by executed base quantity. That expression has quote-per-base units, rather than a dimensionless return on entry notional; do not copy its label as a verified percentage.",
+      "title": "Arbitrage percentage denominator",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M240",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-TOKEN-EQUIVALENCE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M239",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/validation.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/validation.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "31ca6612070fdd46816625a93458e1a5e11709ce5a47c7f289f1bcc19999e09b",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/validation.py",
+      "status": "untested",
+      "testable_rule": "Ten explicit wrapped/underlying token sets plus any two symbols containing USD are accepted by this helper. This is a software policy, not proof of conversion, parity, contract units or deliverability.",
+      "title": "Wrapped and USD-containing token equivalence policy",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M059;M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-FUNDING-CADENCE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "Normalize known Binance8h and Hyperliquid1h rates to seconds, choose the largest absolute24h differential, and long the lower rate; enter at daily fraction0.001. Unknown connectors default8h in this source; our source contract does not certify that fallback.",
+      "title": "Normalized daily funding differential selection",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-ENTRY-FILTER",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "The price/fee entry-profitability filter defaults false. If enabled, skip a negative estimated entry spread. This is distinct from forecasting a positive eventual net return.",
+      "title": "Optional entry-after-fees filter",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-MATCHED-BASE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "Use quote size100 divided by connector1 midpoint for BOTH position executors; default leverage20. Equal quote budgets queried for screening do not prove equal actual executed base or margin risk. R319 keeps segregated capital and no leverage-up.",
+      "title": "Shared base quantity from first-leg midpoint",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-FUNDING-EXITS",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "Stop both executors when their model PnL plus received funding exceeds0.01 times quote size, or normalized daily differential falls below-0.001; no fixed maximum holding period appears in this script.",
+      "title": "Funding-aware take-profit and rate-differential stop",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M241",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-MAKER-HEDGE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M240",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "The received script comment suggests limit entry on one venue then market hedging the other after a fill. This alternative has no implemented queue/cancel/adverse-selection protocol in the inspected script and remains untested.",
+      "title": "Maker then market hedge alternative",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-STOPLOSS",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Configured stop-loss compares net position return to a negative threshold and initiates market closure plus cancellation; successful cancellation or liquidation is not established by the request.",
+      "title": "Position net-loss barrier",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M240",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-TAKEPROFIT",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Configured take-profit may close by market or rest a limit/maker order with activation and renewal. Partial fills and unfinished orders remain distinct from a completed position.",
+      "title": "Market or resting-limit take-profit",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M241",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-TIME-LIMIT",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "A configured deadline initiates close/cancel at expiry; a deadline alone does not establish filled closure or remove residual exposure.",
+      "title": "Position time barrier",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-TRAILING",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Activate a trailing level after a configured profit threshold; raise its trigger with net returns, and initiate closure if it is crossed. No alpha from this control is established.",
+      "title": "Trailing net-profit barrier",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-VOL-BARRIERS",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/data_types.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/data_types.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "54f4b904726db51de8ce7e0221f4c09e46b780aeb0b1dac15f7465fa246a563f",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/data_types.py",
+      "status": "untested",
+      "testable_rule": "Multiply stop-loss, take-profit and trailing activation/delta by a supplied volatility factor; keep the time limit unchanged. No volatility estimator, calibration or new trading rule is supplied.",
+      "title": "Volatility-scaled distance barriers",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M240",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-ACTIVATION",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M245",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Limit orders use a side-specific distance to midpoint; market types use lower and upper bounds about entry price. Configured boundaries do not prove a subsequent fill.",
+      "title": "Entry activation bounds",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M241",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-POSITION-MODE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M409",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "The source uses normal opposite-side OPEN actions to net ONEWAY positions and CLOSE in HEDGE mode. This is connector-specific behavior; reduce-only/account/mode semantics are not certified for our MEXC/Lighter account.",
+      "title": "One-way versus hedge close actions",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M239;M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-RESIDUAL-CLOSE",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Derive amount to close from opening minus closing filled base, adjust for base-denominated fees and lot rules, then request market closure. Cancellation/failure can reset tracked order handles; our ledger retains every stable fill and pending total.",
+      "title": "Partial-fill and residual close tracking",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M409",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-HOLD-SHUTDOWN",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M241",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "POSITION_HOLD and deadline shutdown retain tracked fill orders; fee/PnL accessors distinguish holding/failed states. ExecutorBase shutdown and connector reconstruction were not read, so complete failure accounting is not established.",
+      "title": "Retained position and forced-shutdown accounting",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M239",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-BALANCE-RULES",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M409",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "status": "untested",
+      "testable_rule": "Choose spot or perpetual budget candidates, supplied leverage and trading rules; refuse adjusted zero size. Imported connector, budget checker and actual available account balances remain unreviewed/unavailable.",
+      "title": "Spot/perpetual balance candidates and exchange constraints",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    },
+    {
+      "also": "M241",
+      "blockers": [
+        "No authenticated owner fill/account/session data or Lighter event-bound index proof",
+        "Source implementation/configuration is not empirical profitable evidence"
+      ],
+      "evidence_refs": [
+        {
+          "label": "Our separate engineering/economic validation; not an upstream strategy result",
+          "path": "experiments/paired_execution_v1/FINDINGS.md"
+        }
+      ],
+      "exact_tested_scope": "No upstream Hummingbot module, connector or full strategy executed. R319 separately tests our paper lifecycle and conditional arithmetic on already-seen input; that is not this source strategy performance.",
+      "id": "HBX26-PAYMENT-JOIN",
+      "method_type": "source strategy/control mechanics",
+      "next_action": "Use the exact source mechanics and limitations with existing canonical method scope; do not port spot cash, unit labels, whole-amount retry, stablecoin fallback or leverage as proved perpetual profit.",
+      "queue_id": "M409",
+      "required_inputs": [
+        "Exact contract/base/quote units; first-seen complete fills and terminal cumulative quantities",
+        "Executable books, source-bound fees, funding event/value and segregated capital/session evidence"
+      ],
+      "source_path": "scripts/v2_funding_rate_arb.py",
+      "source_refs": [
+        {
+          "label": "Pinned official source 9af100d6822da7d2d0291a906c730ef172284ee2",
+          "path": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+        },
+        {
+          "label": "Bounded received/read/unread scope and all distinct mechanisms",
+          "path": "experiments/paired_execution_v1/sources.json"
+        }
+      ],
+      "source_sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py",
+      "status": "untested",
+      "testable_rule": "Append received funding payments to an active arbitrage by token, then sum them for exits. No explicit event-id deduplication or event-bound index proof appears in that method; connector/event guarantees are unread.",
+      "title": "Funding receipt attribution and duplication boundary",
+      "unrun_scope": "Original connectors, actual fills, fee/asset conversions, funding clocks/event notionals, account rights, margin/financing and strategy net-return/prospective tests remain open."
+    }
+  ],
+  "metadata_read": {
+    "normalized_response_characters": 1145600,
+    "per_body_cap_enforced": false,
+    "received_changed_files": 137,
+    "url": "https://api.github.com/repos/hummingbot/hummingbot/commits/master",
+    "wire_bytes": null
+  },
+  "provider": "official Hummingbot open-source repository",
+  "received_but_unreviewed": "Metadata helper returned137 changed-file patch entries while resolving commit; patches were not individually reviewed or mirrored. Other repository code, connectors, ExecutorBase, actual deployed configuration and historical examples remain unread.",
+  "reviewed_scope": {
+    "LICENSE": "Apache2.0 access/license terms",
+    "arbitrage_config": "29lines",
+    "arbitrage_executor.py": "337lines: quote/cost units, independent legs, retries and accessors",
+    "position_config": "99lines: all distinct configured barriers and volatility scaling",
+    "position_executor.py": "Selected quantity/fee/PnL properties, close/cancel/failure/hold, four barrier/activation routines and balance validator; no full connector/framework audit",
+    "v2_funding_rate_arb.py": "344lines: configuration, normalization, pair sizing, entry/exit/payment rules and reporting assumptions",
+    "validation.py": "169lines: pair/asset validation policy"
+  },
+  "schema_version": 1,
+  "source_budget_limitation": "Initial provider metadata helper has no caller-enforced body cap; its normalized return was1145600characters, exceeding the intended1MiB per-response bound. Wire bytes/time for that helper and discovery search are unavailable. Seven subsequent rawGETs were explicitly bounded and all complete at100699bytes; do not claim a fully measured combined4MiB wire cap.",
+  "sources": [
+    {
+      "attempted": true,
+      "bytes": 16032,
+      "content_length": "16032",
+      "local_cache_file": "0_arbitrage_executor.py",
+      "path": "hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py",
+      "received_utc_ns": 1792950204866810404,
+      "reserved_body_limit": 1048576,
+      "sha256": "55cebd93578c36c27593b3d9a97bd6f5f7ca67892cdb998267078171515b902c",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950204522893953,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/arbitrage_executor.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 1415,
+      "content_length": "1415",
+      "local_cache_file": "1_data_types.py",
+      "path": "hummingbot/strategy_v2/executors/arbitrage_executor/data_types.py",
+      "received_utc_ns": 1792950205196912129,
+      "reserved_body_limit": 1048576,
+      "sha256": "2e82667e0bae29ce243d27362482c65ae4efd2350e0894e52686aeb9ce59f535",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950204866957160,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/arbitrage_executor/data_types.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 39333,
+      "content_length": "39333",
+      "local_cache_file": "2_position_executor.py",
+      "path": "hummingbot/strategy_v2/executors/position_executor/position_executor.py",
+      "received_utc_ns": 1792950205546175081,
+      "reserved_body_limit": 1048576,
+      "sha256": "09aef3092e616822568272e2b75181267913240398779f4cf57791cddae60c09",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950205197548544,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/position_executor.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 4313,
+      "content_length": "4313",
+      "local_cache_file": "3_data_types.py",
+      "path": "hummingbot/strategy_v2/executors/position_executor/data_types.py",
+      "received_utc_ns": 1792950205905122859,
+      "reserved_body_limit": 1048576,
+      "sha256": "54f4b904726db51de8ce7e0221f4c09e46b780aeb0b1dac15f7465fa246a563f",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950205546372070,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/position_executor/data_types.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 8117,
+      "content_length": "8117",
+      "local_cache_file": "4_validation.py",
+      "path": "hummingbot/strategy_v2/executors/validation.py",
+      "received_utc_ns": 1792950206220406911,
+      "reserved_body_limit": 1048576,
+      "sha256": "31ca6612070fdd46816625a93458e1a5e11709ce5a47c7f289f1bcc19999e09b",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950205905328300,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/hummingbot/strategy_v2/executors/validation.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 20137,
+      "content_length": "20137",
+      "local_cache_file": "5_v2_funding_rate_arb.py",
+      "path": "scripts/v2_funding_rate_arb.py",
+      "received_utc_ns": 1792950206419724084,
+      "reserved_body_limit": 1048576,
+      "sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950206220616539,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/scripts/v2_funding_rate_arb.py"
+    },
+    {
+      "attempted": true,
+      "bytes": 11352,
+      "content_length": "11352",
+      "local_cache_file": "6_LICENSE",
+      "path": "LICENSE",
+      "received_utc_ns": 1792950206706209903,
+      "reserved_body_limit": 1048576,
+      "sha256": "f0dd03c14db3dfbce03c166645f88fda96599ad1a5d217fddb49134de8c72a29",
+      "source_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "started_utc_ns": 1792950206419985629,
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hummingbot/hummingbot/9af100d6822da7d2d0291a906c730ef172284ee2/LICENSE"
+    }
+  ]
+}
