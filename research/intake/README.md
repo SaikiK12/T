@@ -5,6 +5,7 @@ The operating panel is `docs/PANEL.md`; the live methods queue is `registry/meth
 Current received scope: 337 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
 The bounded 2026-10-24 primary-equation reading adds 20 records/aliases, two distinct blocked control/stopping methods and a tested book-consistency component; [the compact synthesis](../../docs/PRIMARY_EQUATIONS.md) links exact source versions/read scopes. No new market outcome or prospective paper day was produced.
 The owner's additional Instagram reel `Dec0l3vtE3f` is retained as received but unread: the normal public fetch was throttled and its exact-shortcode search returned no result. No speech, caption or method is attributed to it.
+The bounded [R314 live depth measurement](../../experiments/depth_quotes_v1/FINDINGS.md) verifies the existing PR26-LIGHTER-SEQ scope: 43/144 full versus 9/144 same-state top-only cost rows, five delayed altcoin rows but none with both fresh fair/index references. `depth_contract_verification_20261025` retains the four official source identities and open session/clock mechanics; it adds no source-method row, alias, predictive trial or paper day.
 The 2026-10-23 owner TikToks add 20 caption scopes and five method groups; M403 separately records the capital study.
 All 279 earlier source records and their versions remain intact. Counts in older pass descriptions below refer
 to historical snapshots. This is bounded extraction, not complete library coverage or strategy validation.

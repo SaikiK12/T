@@ -16,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`coverage`](coverage.py): Which daily-panel columns leak survival through their coverage (found in R299's audit).
 - [`daily`](daily.py): Daily point-in-time panel: one row per (day, Binance USD-M perp) with what every source the lab holds had said about that coin by 00:00 UTC of that day, plus one row per day of market-wide series.
 - [`data`](data.py): Binance public-archive fetcher (data.binance.vision).
+- [`depth_replay`](depth_replay.py): R314 paired-depth replay with a same-state top-level capacity control.
 - [`engine`](engine.py): Vectorized backtester.
 - [`equation_data`](equation_data.py): Input adapters for the frozen equation family; no network and no hidden gap fill.
 - [`equations`](equations.py): Causal funding/basis forecasts and a fixed-quantity, segregated pair-PnL model.
