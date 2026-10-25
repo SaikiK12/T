@@ -122,6 +122,7 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab forward                      # offline plan; no collector/writer starts
 .venv/bin/python -m lab engine                       # offline locked-build plan
 .venv/bin/python -m lab account --out /absolute/new-output  # frozen offline account/cost integration
+.venv/bin/python -m lab account --lifecycle --out /absolute/new-paired-output  # partial fills and residual exposure
 ```
 
 The lock captures the tested Python 3.12 stack, including scikit-learn and the optional browser-test dependency.
@@ -157,6 +158,10 @@ fees, funding, liquidation marks and missing-input controls in one offline repor
 `account.txt`). Its account figures are invented engine validation; its size costs use already-seen
 quotes. No live collection, prospective scoring or actual account fee/permission is implied.
 `scripts/check_paper_account.py /absolute/new-output/results.json` checks the reported arithmetic.
+The same command's [paired lifecycle protocol](experiments/paired_execution_v1/FINDINGS.md) retains
+partial fills, cancel/reject totals, residual quantities and interrupted receipt/cash joins. Its
+one-leg unwind and funding break-even figures are conditional costs, not observed profit.
+`scripts/check_paired_account.py /absolute/new-paired-output/results.json` checks that integration.
 
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.

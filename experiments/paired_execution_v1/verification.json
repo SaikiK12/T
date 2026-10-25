@@ -1,0 +1,57 @@
+{
+  "all61_frozen_code_input_files_verified": true,
+  "focused_tests": {
+    "failures": 0,
+    "run": 15,
+    "seconds": 0.291
+  },
+  "freeze_commit": "8345586f89767d6c64f62aee99b0f6182d7b1457",
+  "full_tests": {
+    "failures": 0,
+    "raw_log_sha256": "663a6d16bcda02ad855662b691db7437fb5a79616924ec5100946e464907821b",
+    "run": 1263,
+    "seconds": 171.478,
+    "skipped": 2
+  },
+  "intake": {
+    "aliases": 387,
+    "errors": 0,
+    "id_reassignments": 4,
+    "provider_entries": 54,
+    "queue_rows": 328,
+    "source_files": 11,
+    "source_methods": 387,
+    "warnings": 0
+  },
+  "integrity": {
+    "errors": 0,
+    "local_specs": 133,
+    "planned_drafts": 1,
+    "registry_rows": 139,
+    "verified_frozen": 132,
+    "warnings": 13
+  },
+  "new_market_requests": 0,
+  "new_predictive_trials": 0,
+  "new_prospective_days": 0,
+  "new_source_records": 20,
+  "old_alias_prefix_sha256": "642031bfadf31e2a203dac3d220f67a11d3e2d286aad2233cd641d09ba98b6c7",
+  "old_frozen_paths_unchanged": true,
+  "old_registry_prefix_sha256": "7af97b90b84f39aec46d95d0d3cd97a5858eb9b206fc4f52613cf562f9635d4d",
+  "old_source_objects_equal_to_predecessor": true,
+  "old_source_objects_preserved": 367,
+  "predecessor": "7fc9a4c974fe084f714afb41df0714473cc1918c",
+  "program_trials": 9478782,
+  "registry_id": "R319",
+  "reproduction": {
+    "all_identical": true,
+    "sha256": {
+      "account.html": "977c8f4445710d577332839f1dcd450ab27e713cfbd9981f0f6acbdaa50e48bb",
+      "account.txt": "9e19dd95edf36ee8a0f804e389acec21c9d6ba6a7ce2f9675ccf8e185ab70173",
+      "audit.json": "a89b7d0d9e40b47bcb5eba0fa419d8cbe97da0c1fbe2389ae0bb3738e2f78586",
+      "observations.jsonl.gz": "e27a045f044993ddc0c640b49c2712c758a2011ffeca6f41eca9772a2a857a22",
+      "results.json": "4091864a7fcbff3a9b2fd314239b2a832e131834e254de6b174f7a3a1396fd4f"
+    }
+  },
+  "source_budget_limitation": "Initial provider metadata helper has no caller-enforced body cap; its normalized return was1145600characters, exceeding the intended1MiB per-response bound. Wire bytes/time for that helper and discovery search are unavailable. Seven subsequent rawGETs were explicitly bounded and all complete at100699bytes; do not claim a fully measured combined4MiB wire cap."
+}
