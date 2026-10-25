@@ -124,7 +124,7 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab engine                       # offline locked-build plan
 .venv/bin/python -m lab account --out /absolute/new-output  # frozen offline account/cost integration
 .venv/bin/python -m lab account --lifecycle --out /absolute/new-paired-output  # partial fills and residual exposure
-.venv/bin/python -m lab account --controls --out /absolute/new-controls-output # R320 registered controls/risk component
+.venv/bin/python -m lab account --controls --restore-input --out /absolute/new-controls-output # R320; one small pinned portable input
 ```
 
 The Control Room's **Compte simulé** tab separates model amounts from observed money, currencies,

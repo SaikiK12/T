@@ -94,7 +94,7 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
       <div id="paper-admission" style="overflow:auto"></div>
     </div>
     <div class="qx-card">
-      <h2>Les100 demandes : preuve, limite ou blocage</h2>
+      <h2>Les 100 demandes : preuve, limite ou blocage</h2>
       <p id="paper-coverage" class="qx-note">État inconnu.</p>
       <details><summary>Détail des demandes reçues</summary><div id="paper-requirements" style="overflow:auto;max-height:32rem"></div></details>
     </div>
@@ -1307,13 +1307,14 @@ function drawCoverage(el) {
 function renderPaper() {
   if (document.getElementById('paper').hidden) return;
   const words = {verified:'vérifié dans le périmètre indiqué',partial:'partiel',blocked:'bloqué',not_selected:'écarté avec raison'};
+  const needed = {first_seen_quote_depth:'Carnets et délais de réception',complete_session_availability:'Ouverture des deux marchés',event_bound_fair_index_notional:'Prix exact de financement',source_bound_fees:'Frais prouvés',complete_fill_and_capital_accounting:'Exécutions et capital complets',on_time_frozen_protocol:'Protocole figé et observations à temps'};
   const money = (v) => v == null ? 'inconnu' : Number.isFinite(Number(v)) ? new Intl.NumberFormat('fr', {maximumFractionDigits:2}).format(Number(v)) : 'inconnu';
   const cells = (id, headers, rows) => {
     const el = document.getElementById(id); el.replaceChildren();
     if (!rows.length) { el.textContent = 'Rapport absent ou inconnu ; aucun zéro supposé.'; return; }
     const t = document.createElement('table'); t.className = 'qx-t';
     const head = document.createElement('thead'); const tr = document.createElement('tr');
-    headers.forEach(h => {const th=document.createElement('th');th.textContent=h;tr.append(th);}); head.append(tr);t.append(head);
+    headers.forEach(h => {const th=document.createElement('th');th.textContent=h;th.style.padding='var(--cds-pad-xs, 6px) var(--cds-pad-sm, 10px)';tr.append(th);}); head.append(tr);t.append(head);
     const body=document.createElement('tbody');
     rows.forEach(r => {const tr=document.createElement('tr');r.forEach(v => {const td=document.createElement('td');td.textContent=v==null?'inconnu':String(v);tr.append(td);});body.append(tr);});
     t.append(body);el.append(t);
@@ -1329,7 +1330,7 @@ function renderPaper() {
   const line=document.createElement('p');line.textContent=a?`Origine : ${a.evidence_mode}. Réception réelle du marché : inconnue. Rapport : ${a.source_report}. SHA256 du rapport : ${a.report_sha256}. Entrées figées : ${a.source_input_sha256}. Code figé : ${a.source_code_sha256||'inconnu'}. Période : ${a.period_label||'inconnue'}.`:'Identité de la preuve inconnue.';proof.append(line);
   if(c){const code=document.createElement('code');code.textContent=c.reproduce;proof.append(code);const note=document.createElement('p');note.textContent='Commande à copier dans le checkout correspondant. Elle vérifie les identités figées avant calcul. Cette page n’exécute aucune commande.';proof.append(note);}
   cells('paper-admission',['Étude','Lignes conservées','Anciennes étiquettes à temps','Jours exécutables prouvés','Rendement net strict','Entrées manquantes'],
-    rowsOf('paper_admission').map(r=>[r.series,r.reported_rows,r.native_ontime_labels,r.strict_executable_scored_days,money(r.strict_net_return),(r.missing_inputs||[]).join(', ')]));
+    rowsOf('paper_admission').map(r=>[r.series,r.reported_rows,r.native_ontime_labels,r.strict_executable_scored_days,money(r.strict_net_return),(r.missing_inputs||[]).map(k=>needed[k]||k).join(' ; ')]));
   const req=rowsOf('paper_requirements'),count={};req.forEach(r=>{count[r.state]=(count[r.state]||0)+1;});
   document.getElementById('paper-coverage').textContent=req.length?`${req.length} demandes reçues : `+Object.entries(count).map(([k,v])=>v+' '+(words[k]||k)).join(' ; ')+'. Aucun compteur ne signifie100 stratégies rentables.':'État inconnu.';
   cells('paper-requirements',['N°','Demande du propriétaire','État','Preuve et limite'],req.map(r=>[r.id,r.text,words[r.state]||r.state,r.reason]));

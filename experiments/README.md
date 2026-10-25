@@ -31,8 +31,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (117)
+## Other registered rounds (done, registered or planned) (118)
 
+- **[owner_acceptance_v1](owner_acceptance_v1/)** R320, DONE PARTIAL, 4 trials. Common paper controls; four risk forecasts and exact owner100 acceptance ([PREREG](owner_acceptance_v1/PREREG.md), [FINDINGS](owner_acceptance_v1/FINDINGS.md))
 - **[paired_execution_v1](paired_execution_v1/)** R319, DONE PARTIAL, 0 trials. Observed paper paired-fill lifecycle and fixed orphan/unwind economics ([PREREG](paired_execution_v1/PREREG.md), [FINDINGS](paired_execution_v1/FINDINGS.md))
 - **[paper_account_v1](paper_account_v1/)** R318, DONE PARTIAL, 0 trials. Integrated simulated account, source-aware cash and finite size/exit controls ([PREREG](paper_account_v1/PREREG.md), [FINDINGS](paper_account_v1/FINDINGS.md))
 - **[fee_routes_v1](fee_routes_v1/)** R317, DONE PARTIAL, 0 trials. Source-labelled conditional taker fee routes and crossing-floor decomposition ([PREREG](fee_routes_v1/PREREG.md), [FINDINGS](fee_routes_v1/FINDINGS.md))

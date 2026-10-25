@@ -8,6 +8,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`__main__`](__main__.py): Common entry point over existing tools; default is help, never a live tick.
 - [`acquisition_budget`](acquisition_budget.py): Durable conservative acquisition reservations; no network or permission grant.
 - [`apsi`](apsi.py): A project-specific volatility/cost diagnostic for the MEXC alt-perp universe.
+- [`artifact_io`](artifact_io.py): Content-bound local table cache and verified immutable Parquet export.
 - [`atlas`](atlas.py): Edge atlas: what each feature bin says about future returns BEFORE fees, at several horizons, split by a grouping (market session, liquidity tier, BTC regime), with a placebo to say how much of it ...
 - [`auction`](auction.py): Auction-market levels from bars: anchored VWAP with standard-deviation bands, volume and TPO profiles, the point of control and value area, high- and low-volume nodes, and the initial balance ...
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
@@ -55,6 +56,8 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paired_execution`](paired_execution.py): Observed paper pair lifecycle; never places, cancels or retries an order.
 - [`panel`](panel.py): One hourly clock for every symbol, and higher timeframes that only become visible once their bar has closed.
 - [`paper_account`](paper_account.py): One append-only simulated linear-futures account, separated by venue/asset.
+- [`paper_admission`](paper_admission.py): Conservative projection of legacy reports, without rewriting their journals.
+- [`paper_controls`](paper_controls.py): Persistent paper-only entry/data/loss/concentration controls.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.
 - [`propfirm`](propfirm.py): Prop-firm economics: what a strategy's return stream is worth inside an evaluation and a funded account.
@@ -73,4 +76,5 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`tape`](tape.py): Top-of-book and trade tape, one row per (venue, coin, second), for order-flow research on 1-60 s horizons (M264).
 - [`tearsheet`](tearsheet.py): Performance tear sheet for a daily return stream: quantstats' core metrics, plus the lab's honesty terms.
 - [`venues`](venues.py): One symbol map from each Binance USD-M perp to the same coin on every other venue and data source the lab holds.
+- [`volatility_validation`](volatility_validation.py): Finite causal RV forecast controls; risk skill, not direction or net alpha.
 - [`xfund`](xfund.py): Cross-venue funding carry books (R275's rule) one day at a time, for forward paper.
