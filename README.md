@@ -116,6 +116,7 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab status                        # read-only; missing receipts stay unknown
 .venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --json
 .venv/bin/python -m lab find funding                  # existing metadata index
+.venv/bin/python -m lab find --trace M018             # method → registered specs/code/data identities
 .venv/bin/python -m lab integrity                     # register/spec + canonical intake
 .venv/bin/python -m lab check --suite fast            # feedback; explicit simulations deferred
 .venv/bin/python -m lab check --suite full            # required commit gate, simulations retained
@@ -123,7 +124,14 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab engine                       # offline locked-build plan
 .venv/bin/python -m lab account --out /absolute/new-output  # frozen offline account/cost integration
 .venv/bin/python -m lab account --lifecycle --out /absolute/new-paired-output  # partial fills and residual exposure
+.venv/bin/python -m lab account --controls --out /absolute/new-controls-output # R320 registered controls/risk component
 ```
+
+The Control Room's **Compte simulé** tab separates model amounts from observed money, currencies,
+missing inputs and legacy reports. [R320](experiments/owner_acceptance_v1/PREREG.md) binds the exact
+owner100 requirements and their bounded acceptance evidence. That coverage is not another methods
+queue or a claim that100 improvements or profitable strategies are complete. Shared views never start
+a collector or an order; the reproduction command verifies frozen calculation/input identities first.
 
 The lock captures the tested Python 3.12 stack, including scikit-learn and the optional browser-test dependency.
 System Chromium is required for the browser fixture; unavailable archive/parity/browser checks report explicit skips.

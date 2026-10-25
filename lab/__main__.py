@@ -25,7 +25,7 @@ def main(argv=None):
         commands = ("check_research_integrity.py", "check_method_intake.py")
     else:
         commands = (TOOLS[args.command],)
-        if args.command == "find" and not any(flag in rest for flag in ("-h", "--help")):
+        if args.command == "find" and not any(flag in rest for flag in ("-h", "--help", "--trace")):
             rest = ["--find", *rest]
         if args.command == "forward" and "--python" not in rest:
             rest = ["--python", sys.executable, *rest]

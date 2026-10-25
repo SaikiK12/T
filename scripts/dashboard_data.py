@@ -316,6 +316,10 @@ def running(proc=Path("/proc")):
 
 
 TITLES = {
+    "paper_accounts": ("Compte simulé commun", "Montants de validation inventés séparés par plateforme/devise ; PnL réellement observé inconnu, origine et limites conservées."),
+    "paper_controls": ("Contrôles et preuves manquantes", "Prévision, erreur, coûts1x/2x/3x et blocages. Un test de code ne valide pas un gain sur le marché."),
+    "paper_admission": ("Projection stricte des anciens journaux", "Leurs résultats natifs restent intacts ; aucune ancienne étiquette net/ontime ne certifie des données exécutables complètes."),
+    "paper_requirements": ("Preuves des100 demandes du propriétaire", "Acceptation précise, partielle ou bloquée de la demande reçue ; la queue canonique reste registry/methods.csv."),
     "program": ("Lab program summary", "One row: program trials (lab.registry.program_trials), rounds by verdict, "
                 "watchlist size, strict on-time paper days, the next due date and free disk."),
     "rounds": ("Registered rounds", "Every round in registry/rounds.csv with its verdict and trial count."),
@@ -548,6 +552,8 @@ def main():
     sets["coverage"] = perf.coverage()
     sets["funding_board"] = perf.funding_board()
     sets["factor_ic"] = perf.factor_ic()
+    from scripts.paper_status import datasets
+    sets.update(datasets(ROOT,days))
     for r in sets["candidates"]:
         r["t"] = num(r["t"])
     manifest = publish_sets(sets, ISO(NOW))

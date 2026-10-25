@@ -46,11 +46,15 @@ def build_status(root, *, state_dir=None, now=None):
         except (OSError, ValueError, csv.Error):
             pass
     env = environment(root)
+    from scripts.paper_status import datasets
+    paper = datasets(root)
     return {'schema_version': 1, 'objective': OBJECTIVE,
             'observed_at': datetime.fromtimestamp(now, timezone.utc).isoformat() if now is not None else datetime.now(timezone.utc).isoformat(),
             'scope': 'Recorded operational state only; no process liveness or trading eligibility certified.',
             'gate_eligibility': 'UNASSESSED',
             'queue': queue, 'environment': env,
+            'paper_account': {'accounts':paper['paper_accounts'],'controls':paper['paper_controls'],
+                'scope':'Read-only registered model evidence; no observed PnL or live execution certified.'},
             'disk_free_bytes': shutil.disk_usage(root).free,
             'tasks': jobs, 'attention': blockers,
             'dependencies': {t.name: {'required': list(t.needs), 'optional': list(t.optional)} for t in forward_tasks()},

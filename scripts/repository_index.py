@@ -183,14 +183,61 @@ def render(entries):
     return "\n".join(lines) + ("\n" if lines else "")
 
 
+def trace(root,identifier,files=None):
+    """Follow canonical method→round→spec/code/data identities, metadata only.
+
+    Reported hashes are provenance pointers, not reverified market data or
+    results. No result payload, journal, cached table or runner is opened.
+    """
+    if not re.fullmatch(r'[MR][0-9]+',identifier):raise ValueError('one canonical M/R identifier required')
+    files=set(tracked_files(root) if files is None else files)
+    def rows(relative):
+        with safe_file(root,relative).open(newline='') as stream:return list(csv.DictReader(stream))
+    methods=rows('registry/methods.csv');registered=rows('registry/rounds.csv')
+    selected=[m for m in methods if m['id']==identifier]
+    if identifier.startswith('M') and not selected:raise ValueError('unknown canonical method')
+    rids={identifier} if identifier.startswith('R') else set(re.findall(r'\bR[0-9]+\b',selected[0].get('rid','')))
+    records=[r for r in registered if r['id'] in rids];lanes=[]
+    for r in records:
+        prefix='experiments/'+r['lane'];identities=[]
+        metadata=sorted(p for p in files if p.startswith(prefix+'/') and p.endswith('.json') and
+            '/' not in p[len(prefix)+1:] and 'inputs' in Path(p).name)
+        for name in metadata:
+            p=safe_file(root,name)
+            if p.stat().st_size>2*1024**2:raise ValueError('oversized provenance metadata')
+            obj=json.loads(p.read_text())
+            def visit(x,at=''):
+                if isinstance(x,dict):
+                    for k,v in x.items():
+                        if isinstance(v,str) and re.fullmatch('[a-f0-9]{64}',v):
+                            identities.append({'manifest':name,'field':at+'/'+k,'reported_sha256':v,
+                                'local_tracked':k in files,'identity_reverified':False})
+                        elif isinstance(v,(dict,list)):visit(v,at+'/'+k)
+                elif isinstance(x,list):
+                    for i,v in enumerate(x):visit(v,at+'/'+str(i))
+            visit(obj)
+        lanes.append({'id':r['id'],'lane':r['lane'],'status':r['status'],'verdict':r['verdict'],
+            'trials':r['trials'],'spec':prefix+'/PREREG.md' if prefix+'/PREREG.md' in files else None,
+            'findings':prefix+'/FINDINGS.md' if prefix+'/FINDINGS.md' in files else None,
+            'registered_prereg_sha256':r['prereg_sha'],'identities':identities})
+    if identifier.startswith('R') and not records:raise ValueError('unknown registered round')
+    return {'query':identifier,'canonical_methods':selected,'rounds':lanes,
+        'scope':'Metadata links only; reported identities, verdicts and input completeness are not independently verified here.'}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--find", metavar="TEXT")
+    parser.add_argument("--trace", metavar="M_ID_OR_R_ID",help='trace existing code/data manifest identities without opening market inputs')
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
     try:
         root = args.root.resolve()
+        if args.trace:
+            if args.find:raise ValueError('choose either trace or text search')
+            print(json.dumps(trace(root,args.trace),ensure_ascii=False,indent=2))
+            return 0
         entries = build_index(root, tracked_files(root))
         if args.find is not None:
             query = args.find.casefold()
