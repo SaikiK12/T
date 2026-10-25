@@ -1,0 +1,48 @@
+{
+  "scope": "Bounded official public depth/session contract excerpts checked 2026-10-25; no source strategy or empirical outcome.",
+  "records": [
+    {
+      "name": "ws-reference",
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference",
+      "http_status": 200,
+      "bytes": 400785,
+      "sha256": "861d70b16479e9303a42826aece613a06d7ab15d9456566f80e39c8f8ff16c5c"
+    },
+    {
+      "name": "order-book-details-model",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/order_book_details.py",
+      "http_status": 200,
+      "bytes": 4548,
+      "sha256": "d2cd82c87b691c1ee44f784542cb79aaa71dc15f728ff7cdf005c3506fe29c69"
+    },
+    {
+      "name": "market-config-model",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/market_config.py",
+      "http_status": 200,
+      "bytes": 3983,
+      "sha256": "803f696f831bb67e149c48ca69089b2f0411d7e79e1a80af0ea5792312cda5a5"
+    },
+    {
+      "name": "perps-detail-model",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/perps_order_book_detail.py",
+      "http_status": 200,
+      "bytes": 10684,
+      "sha256": "3aea6a5e536fc52992923e77fc114b995f67a6c43919f0c05e58f9c2f97063b4"
+    }
+  ],
+  "static_attempts": 4,
+  "static_body_bytes": 420000,
+  "sdk_commit": "a7a9ba88514d38a863a33642acd41f8adf442e5c",
+  "received_scope": [
+    "WS order_book snapshot/update/sequence sections; pinned SDK handler retained in earlier intake.",
+    "Generated orderBookDetails, PerpsOrderBookDetail and MarketConfig fields only."
+  ],
+  "unverified": [
+    "No documented maximum snapshot/frame/tail coverage or depth limiting subscription parameter in inspected sections.",
+    "Timestamp units us/ms inferred from examples, not an explicit UTC accuracy contract.",
+    "No per-market idle refresh SLA; trading_hours StrictStr has no reviewed grammar/timezone/current permission guarantee.",
+    "Unversioned MEXC full5/depth and fair WS references carried forward from frozen R313 sources, not a fresh full SDK audit."
+  ],
+  "prior_source_identity": "experiments/stream_quotes_v1/sources.json",
+  "raw_source_bodies": "Ignored local scratch files, not mirrored in repository."
+}
