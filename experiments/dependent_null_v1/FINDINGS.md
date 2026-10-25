@@ -27,8 +27,7 @@ one-day marginal SD of1 before stress,not0.5percent returns or a forecast of
 money. The frozen protocol's "long-run daily SD" means this marginal SD;
 it is not the long-run standard error of the sample mean. The generator uses
 zero initial state and a finite128-day burn-in,not an exact stationary draw.
-Lower apparent power in the
-naive controls is not the problem: their detection is high partly because
+The naive controls' high detection rates are misleading because their false
 exclusions are badly uncontrolled. A rigorous method pays for fewer false
 signals through wider intervals and lower detection.
 
