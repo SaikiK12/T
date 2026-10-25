@@ -69,7 +69,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (99)
+## Run: one lane's frozen measurement (100)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -97,6 +97,7 @@ line is the first line of the script's own docstring.
 - [`run_dealerflow.py`](run_dealerflow.py): dealerflow_v1 (R292): does dealer gamma estimated from Deribit taker flow (M308) explain the next UTC day's realized volatility beyond a HAR base, and the sign of the next day's hourly return ...
 - [`run_delay.py`](run_delay.py): delay_v1 (R213): the flow books with entry delayed d hours after the signal bar, as set out in experiments/delay_v1/PREREG.md.
 - [`run_delist.py`](run_delist.py): R267 delist_v1: the Binance delisting-notice short on the hourly archive (experiments/delist_v1/PREREG.md).
+- [`run_dependent_null.py`](run_dependent_null.py): R321 registered null-only size/power study; no market outcome is read.
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
@@ -171,12 +172,13 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (10)
+## Check: parity, audits and integrity (11)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
+- [`check_dependent_null.py`](check_dependent_null.py): Independent literal R321 binomial/OBM/selected-bootstrap arithmetic audit.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
 - [`check_owner_acceptance.py`](check_owner_acceptance.py): R320 independent literal risk-target/forecast and paper-report audit.
 - [`check_paired_account.py`](check_paired_account.py): Independent arithmetic for R319 reports, standard library only.
