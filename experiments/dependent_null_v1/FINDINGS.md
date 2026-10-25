@@ -22,8 +22,12 @@ rate exceeds5%or that OBM can never be useful.
 
 These are maximums across the ten registered simulated null profiles,not
 estimates of real trading false-positive rates. The same preselected power
-case uses Gaussian-component rho.6,effect0.5in nominal daily long-run SD units,
-not0.5percent returns or a forecast of money. Lower apparent power in the
+case uses Gaussian-component rho.6,effect0.5 relative to the nominal stationary
+one-day marginal SD of1 before stress,not0.5percent returns or a forecast of
+money. The frozen protocol's "long-run daily SD" means this marginal SD;
+it is not the long-run standard error of the sample mean. The generator uses
+zero initial state and a finite128-day burn-in,not an exact stationary draw.
+Lower apparent power in the
 naive controls is not the problem: their detection is high partly because
 exclusions are badly uncontrolled. A rigorous method pays for fewer false
 signals through wider intervals and lower detection.
