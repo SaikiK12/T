@@ -105,7 +105,8 @@ The existing Control Room/status/export now has the common account,three cost
 controls,100acceptance items and conservative projection of19old series/621native
 rows. Native journals/returns remain intact; strict executable scored days0.
 Native on-time labels are not authentication of quote/fees/session/settlement
-completeness. Export time is not a market receive time. Browser checks passed;
+completeness. Export time is not a market receive time. Browser checks passed,including15focused view/status/index tests after the
+last shared-view/restore changes;
 source/code/input identities and an inert copyable reproduction command are
 shown. Local export generation is in dashboard_integration.json; no remote
 host upload/delivery or permanently running process is claimed.
@@ -141,7 +142,10 @@ The exact original402923-byte held input is portable in research/datasets/owner_
 The mutable common CLI can restore it to the old frozen path,verify its original
 SHA,and refuse any conflicting existing cache. Clean-root exact restore,identical
 no-write reuse and conflict refusal were exercised; no new download or observations.
-The frozen risk runner/input identity are unchanged.
+The frozen risk runner/input identity are unchanged. A clean detached result checkout started
+without the market cache,restored this input without network access,and
+reproduced all six deterministic artifacts exactly; the independent oracle
+agreed again(see clean_checkout_reproduction.json).
 
 Core reproduction requires the frozen Python/numeric versions. DuckDB is optional
 and isolated;missing it marks its comparison partial rather than fabricating
