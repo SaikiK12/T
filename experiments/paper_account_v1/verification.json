@@ -1,0 +1,59 @@
+{
+  "canonical_methods_rows": 328,
+  "focused_new_tests": {
+    "passed": true,
+    "run": 75,
+    "seconds": 0.079
+  },
+  "freeze_commit": "9da3582879e1ff18b3a62070ed5aa9714661f1d0",
+  "full_tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 .venv/bin/python -m unittest discover -s tests -t .",
+    "passed": true,
+    "raw_log_sha256": "5d99270cc943a1af3e0acb11ae7cc2baab16df9786dc3c27fcdc031ebb55b234",
+    "run": 1248,
+    "seconds": 182.896,
+    "skipped": 2
+  },
+  "held_original_control_identical": 72,
+  "historical_accumulated_requests": 7757,
+  "historical_exact_bytes_known": false,
+  "historical_reported_mib": "229.85",
+  "intake": {
+    "aliases": 367,
+    "errors": 0,
+    "provider_entries": 54,
+    "queue_rows": 328,
+    "source_files": 11,
+    "source_methods": 367,
+    "warnings": 0
+  },
+  "integrity": {
+    "errors": 0,
+    "local_specs": 132,
+    "planned_drafts": 1,
+    "registry_rows": 138,
+    "verified_frozen": 131,
+    "warnings": 13
+  },
+  "new_code_and_inputs_still_match_frozen_manifest": true,
+  "new_market_or_account_requests": 0,
+  "new_predictive_trials": 0,
+  "new_prospective_days": 0,
+  "old_journal_prefix_preserved": true,
+  "old_rounds_prefix_sha256": "34c458eab2c76faf6bedfcad4eaf50561e546ff0d14177c2fb7b39893a633c6b",
+  "parent_raw_and_frozen_code_verified": true,
+  "predecessor": "b7c7f16cb17a2b0fcf10862c7836548fb3958f36",
+  "program_trials": 9478782,
+  "registry_id": "R318",
+  "reproduction": {
+    "all_identical": true,
+    "sha256": {
+      "account.html": "13d921b523d86de43fab5d162a49f2b540530a88cbc80c4c1da6a2c1ac9f220b",
+      "account.txt": "e4e2796a1b53bffd1cc63cfafe1d17e48a1640319cd52bb147a899150dca8c08",
+      "audit.json": "ef83575b8f36f7c57b0c7cbb63903f76b38b0e4ad5add367a84e5143d8a50907",
+      "observations.jsonl.gz": "fd1a70ba70dc01d882a160dbe4b13724aa99f8f746e66c96f6a9a5da9923486c",
+      "results.json": "a6d58073efc2b7100d6e85959c9b5e3ba48fb55eb448100aec819d8b6801939e"
+    }
+  },
+  "unchanged_method_rows": 327
+}

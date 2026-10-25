@@ -121,6 +121,7 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
 .venv/bin/python -m lab check --suite full            # required commit gate, simulations retained
 .venv/bin/python -m lab forward                      # offline plan; no collector/writer starts
 .venv/bin/python -m lab engine                       # offline locked-build plan
+.venv/bin/python -m lab account --out /absolute/new-output  # frozen offline account/cost integration
 ```
 
 The lock captures the tested Python 3.12 stack, including scikit-learn and the optional browser-test dependency.
@@ -150,6 +151,12 @@ with `lab export --record dataset=/_blob/returned-id --generation <that-generati
 store documents from acknowledged receipts. A new export cannot silently change the hash/clock of an earlier upload.
 Old upload files lack this proof and require a new explicit acknowledgement; they are never guessed into validity.
 Exports bind uploaded bytes, not an atomic snapshot of every upstream collector or successful remote delivery.
+
+The [integrated account evidence](experiments/paper_account_v1/FINDINGS.md) joins positions, price PnL,
+fees, funding, liquidation marks and missing-input controls in one offline report (`account.html` and
+`account.txt`). Its account figures are invented engine validation; its size costs use already-seen
+quotes. No live collection, prospective scoring or actual account fee/permission is implied.
+`scripts/check_paper_account.py /absolute/new-output/results.json` checks the reported arithmetic.
 
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
