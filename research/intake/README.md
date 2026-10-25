@@ -2,7 +2,8 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 337 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
+Current received scope: 346 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
+The bounded [R315 funding/value diagnostic](../../experiments/funding_values_v1/FINDINGS.md) adds nine mechanical records in `funding_values_contract_20261025`: linear/inverse cash, batch inclusion, hourly index notional, estimated/settled rate roles, REST system time, both weak ticker alternatives and session uncertainty. All 337 earlier method objects remain intact. Source-typed ledger fixtures pass; two delayed altcoin displayed-cost rows still have no jointly fresh fair/index publications. This is no return or new paper result.
 The bounded 2026-10-24 primary-equation reading adds 20 records/aliases, two distinct blocked control/stopping methods and a tested book-consistency component; [the compact synthesis](../../docs/PRIMARY_EQUATIONS.md) links exact source versions/read scopes. No new market outcome or prospective paper day was produced.
 The owner's additional Instagram reel `Dec0l3vtE3f` is retained as received but unread: the normal public fetch was throttled and its exact-shortcode search returned no result. No speech, caption or method is attributed to it.
 The bounded [R314 live depth measurement](../../experiments/depth_quotes_v1/FINDINGS.md) verifies the existing PR26-LIGHTER-SEQ scope: 43/144 full versus 9/144 same-state top-only cost rows, five delayed altcoin rows but none with both fresh fair/index references. `depth_contract_verification_20261025` retains the four official source identities and open session/clock mechanics; it adds no source-method row, alias, predictive trial or paper day.
