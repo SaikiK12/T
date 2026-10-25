@@ -2,7 +2,7 @@
   "schema_version": 1,
   "objective": "Find a rule that makes money after MEXC costs on altcoin perpetuals, prove it on paper on days nobody had seen when it was frozen, then hand it to the owner through `lab.gate.go_real()` at small stakes.",
   "updated_utc_date": "2026-10-25",
-  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts. The2026-10-24 bounded primary-equation pass adds20 records/aliases from named paper/SDK sections; two distinct untested continuation/stopping controllers become M410/M411; no market outcome or full-book coverage. R314 (2026-10-25) validates the previously extracted depth contract on a bounded current-data capture; source method and alias counts unchanged. R315 adds nine enumerated funding/value/session mechanical records/aliases from eight bounded primary responses and a cached reference; same 328 queue rows, zero predictive variants or prospective days. Exact linear/inverse arithmetic and new public-value availability are distinct from an untested trading strategy. R316 adds six engineering/value-source records/aliases, including three weak alternative inputs; all346 prior objects and328 queue rows retained. Warm/cold request implementation is measured on one finite current sample, with no funding cash/return/prospective claim.",
+  "coverage_summary": "The original 164 received-source records and the first 37-record media supplement remain intact. A second 34-record supplement covers 39 additional public video, documentation, code and risk sources; five materially distinct leads add queue rows M247-M251 and the rest map to existing aliases. No full internet survey, strategy outcome or profitability claim is made. An account-scoped Aleks Rosme follow-up adds eight source/methodology records from seven enumerated page/link references; full-account access and speech transcription remain unavailable. A further bounded primary-source MEXC pass adds six unregistered mechanics-based proposals from seven enumerated official pages, with related aliases and explicit pending allocations. A bounded library pass adds10 catalog entrypoints and one pinned Dynamic Breakout II method; directories are not fully ingested. One follow-up code audit pinned a third-party Dynamic Breakout II reproduction; its deviations and formula defect remain source-only, without outcomes. A bounded official QuantInsti pass enumerates nine distinct rules/controls/allocation variants from three pinned received files; only two no-regret methods are synthetically executed. No strategy outcome or new canonical method is added. Owner links received2026-10-23 add20 bounded caption scopes and five canonical groups after reading two complete public ASR files. Audio/frames, guide and track records remain unverified; existing R290NULL remains exact-scope evidence only. A bounded 2026-10-23 intake of two new Instagram reels adds six process/architecture records tied to Citadel EQR and a Jane Street interview; it maps only to existing M167/M026/M088/M165, adds no queue row or market trial, and retains that the reel captions are not verified speech transcripts. The2026-10-24 bounded primary-equation pass adds20 records/aliases from named paper/SDK sections; two distinct untested continuation/stopping controllers become M410/M411; no market outcome or full-book coverage. R314 (2026-10-25) validates the previously extracted depth contract on a bounded current-data capture; source method and alias counts unchanged. R315 adds nine enumerated funding/value/session mechanical records/aliases from eight bounded primary responses and a cached reference; same 328 queue rows, zero predictive variants or prospective days. Exact linear/inverse arithmetic and new public-value availability are distinct from an untested trading strategy. R316 adds six engineering/value-source records/aliases, including three weak alternative inputs; all346 prior objects and328 queue rows retained. Warm/cold request implementation is measured on one finite current sample, with no funding cash/return/prospective claim. R317 adds15 exact fee/order/eligibility and protocol-state source refinements (including the complete received staking ladder), preserving all352 prior objects and328 queue rows. Eight conditional fee paths on previously seen R316 books isolate crossing/reserve assumptions; no account-effective fee, net-return, proof/deployed-version or prospective claim.",
   "coverage_limitations": [
     "This is complete manual mechanism extraction of the received CONCEPTS/SOURCES notes,not of the underlying books/papers or every repo document.",
     "Feature/code presence is distinguished from a costed,registered portfolio test; unknown parameters remain explicit formalization blockers.",
@@ -12598,6 +12598,1109 @@
       ],
       "scope_relation": "Received engineering/value submechanism in the existing canonical family, not another strategy or proof that its family is fully tested.",
       "limitations": "Only named official sections read; no whole SDK/book/corpus/private strategy, source-effective-value or credited cash guarantee."
+    },
+    {
+      "id": "FV26-FEE-FILL-NOTIONAL",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "Per-fill notional fees with explicit units and asset assumptions",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Per-fill notional fees with explicit units and asset assumptions",
+      "testable_rule": "Fee per fill is absolute executed base quantity times that fill price times explicit fee fraction; entry/exit use their own fill notionals. Keep bp/percent/fraction conversions and fee-debit asset distinct.",
+      "exact_tested_scope": "Official USDT worked examples read:30000*10000*.0001*.02%=6USDT and separate entry/exit charges1.4/1.6USDT. R317 executed576 post-hoc conditional fee rows on72 held controls; independent510stress scenarios verified. No owner-effective/as-of fee, fill or strategy result; exact scope/costs in experiments/fee_routes_v1/FINDINGS.md.",
+      "unrun_scope": "Actual fill prices, account-effective fees, actual Lighter fee-debit asset and cross-asset FX/USDT parity remain unverified; no future exit or net-return proof.",
+      "status": "partial",
+      "required_inputs": [
+        "Exact contracts/base quantity and per-fill price/unit",
+        "Source-labelled rate conversion and order role",
+        "Fee-debit asset and any explicit conditional quote-parity assumption"
+      ],
+      "blockers": [
+        "Actual fill prices, account-effective fees, actual Lighter fee-debit asset and cross-asset FX/USDT parity remain unverified; no future exit or net-return proof."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-calculation-guide-312060306409668608",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/api-docs/futures/market-endpoints/get-contract-info",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "USDT-linear per-fill fee",
+          "formula": "fill_price * contracts * contract_size * rate_fraction",
+          "official_example": {
+            "price_USDT": "30000",
+            "contracts": "10000",
+            "contract_size_BTC": "0.0001",
+            "rate_percent": "0.02",
+            "rate_fraction": "0.0002",
+            "fee_USDT": "6"
+          }
+        },
+        {
+          "mechanism": "Separate opening/closing notionals",
+          "official_example": {
+            "opening_price_USDT": "7000",
+            "closing_price_USDT": "8000",
+            "contracts": "10000",
+            "contract_size_BTC": "0.0001",
+            "rate_percent": "0.02",
+            "opening_fee_USDT": "1.4",
+            "closing_fee_USDT": "1.6"
+          }
+        },
+        {
+          "mechanism": "Typed units",
+          "conversions": [
+            "1bp=0.01%=0.0001fraction",
+            "0.02%=2bp=0.0002fraction"
+          ],
+          "limitation": "MEXC JSON decimal interpretation is nominal consistency with example, not a separate owner/API unit attestation."
+        },
+        {
+          "mechanism": "Crossing-only floor",
+          "scope": "R317 mathematical decomposition assuming nonnegative charges; not received zero-fee access or a floor on all future costs."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-MAKER-EXECUTION-ROLE",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "Maker versus taker depends on actual matching and queue role",
+      "method_type": "primary_mechanism",
+      "hypothesis": "Maker versus taker depends on actual matching and queue role",
+      "testable_rule": "A resting order supplies liquidity; immediately matching market or marketable-limit orders take liquidity. Post-Only placement can enforce maker role but cannot certify fill or future hedge recovery.",
+      "exact_tested_scope": "Only official execution-role/fee definitions read. R317 tests ordinary conditional taker arithmetic; no maker-fill or queue strategy is run.",
+      "unrun_scope": "Maker fill probability, queue position, adverse selection, cancel race, own impact and two-leg execution/recovery remain untested; a0maker rate is not free executable alpha.",
+      "status": "untested",
+      "required_inputs": [
+        "Actual order class and time-in-force",
+        "Causal depth/queue/own-fill evidence",
+        "Venue cancel/modify delay and hedging/partial-fill accounting"
+      ],
+      "blockers": [
+        "Maker fill probability, queue position, adverse selection, cancel race, own impact and two-leg execution/recovery remain untested; a0maker rate is not free executable alpha."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/fee",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/zero-fee",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "Resting maker",
+          "received_scope": "Specified-price order enters book rather than matching immediately; fee role applies when actually filled."
+        },
+        {
+          "mechanism": "Marketable limit taker",
+          "received_scope": "A limit price at/beyond opposite best can remove liquidity and pay taker."
+        },
+        {
+          "mechanism": "Post-Only alternative",
+          "received_scope": "Maker-placement constraint; no queue/fill certainty."
+        },
+        {
+          "mechanism": "Lighter Standard/Plus maker/cancel timing",
+          "maker_additional_delay_ms": 0,
+          "cancel_modify_additional_delay_ms": 300,
+          "scope": "Source delay, not observed wire-to-fill/queue outcome."
+        },
+        {
+          "mechanism": "Premium/Advanced Post-Only/cancel timing",
+          "received_scope": "All cancellations and Post-Only placements have no additional latency; not a fill guarantee."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-MX-FEE-MODES",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "MEXC nominal instrument rate modes and source-vintage separation",
+      "method_type": "engineering_dependency",
+      "hypothesis": "MEXC nominal instrument rate modes and source-vintage separation",
+      "testable_rule": "Bind maker/taker decimal field, settlement asset, feeRateMode and feeRateType to exact instrument/source receipt. Treat unsupported/missing modes, zero or promo/TEMP rates as unknown nominal entitlement instead of free trading.",
+      "exact_tested_scope": "Official field table/example and cached R316 fee fields inspected. R317 executed576 post-hoc conditional fee rows on72 held controls; independent510stress scenarios verified. No owner-effective/as-of fee, fill or strategy result; exact scope/costs in experiments/fee_routes_v1/FINDINGS.md.",
+      "unrun_scope": "NORMAL/BASE metadata is not owner account/region-effective fee; LEVERAGE/TIERED/TEMP schedules, account/API scaling and historical applicability remain unverified.",
+      "status": "partial",
+      "required_inputs": [
+        "Exact symbol and held metadata receipt/hash",
+        "Declared nominal fraction interpretation",
+        "Supported fee mode/type and temporal/as-of/eligibility evidence"
+      ],
+      "blockers": [
+        "NORMAL/BASE metadata is not owner account/region-effective fee; LEVERAGE/TIERED/TEMP schedules, account/API scaling and historical applicability remain unverified."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/api-docs/futures/market-endpoints/get-contract-info",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/support/article/mexc-futures-calculation-guide-312060306409668608",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "Fee mode enum",
+          "values": [
+            "NORMAL",
+            "LEVERAGE",
+            "TIERED"
+          ],
+          "scope": "LEVERAGE/tier arrays require their own schedule semantics; no automatic base-rate fallback."
+        },
+        {
+          "mechanism": "Rate type enum",
+          "values": [
+            "BASE",
+            "TEMP"
+          ],
+          "scope": "Temporary start alone does not establish expiry/entitlement through a trade."
+        },
+        {
+          "mechanism": "Program flags",
+          "fields": [
+            "isZeroFeeRate",
+            "isZeroFeeSymbol"
+          ],
+          "scope": "Program participation/tag is not owner quota or remaining allowance."
+        },
+        {
+          "mechanism": "Nominal decimal-rate interpretation",
+          "scope": "0.0002 as fraction is consistent with the0.02% worked example; source table says decimal fee rate, no separate API unit guarantee."
+        },
+        {
+          "mechanism": "Source/region/version seam",
+          "scope": "New docs show /detail/country and BTC example0.0001; held /detail snapshot has BTC0.0002. Neither can silently replace the other or certify owner fees."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-MX-FEE-ENTITLEMENT",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "MEXC regional and quota-bound zero-fee entitlement versus generic advertising",
+      "method_type": "engineering_dependency",
+      "hypothesis": "MEXC regional and quota-bound zero-fee entitlement versus generic advertising",
+      "testable_rule": "Preserve account/region/event/risk/pair-volume/expiry eligibility as unknown unless attested. Generic advertised4bp is a separate conditional path, never a proven worst-case cap, owner fallback or substitution for missing nominal entitlement.",
+      "exact_tested_scope": "Official0-fee FAQ and /fee caveats read; generic prose conflicts and held instrument differences retained. R317 executed576 post-hoc conditional fee rows on72 held controls; independent510stress scenarios verified. No owner-effective/as-of fee, fill or strategy result; exact scope/costs in experiments/fee_routes_v1/FINDINGS.md.",
+      "unrun_scope": "No owner qualification, per-pair quota/use/expiry, fee history, actual account/region or historical schedule is inspected; zero entitlement and saved/earned money remain unscored.",
+      "status": "partial",
+      "required_inputs": [
+        "Account-specific entitlement and applicable region/events",
+        "Pair quota, expiry and total effective fill turnover",
+        "Actual fee basis or explicit hypothetical public scenario label"
+      ],
+      "blockers": [
+        "No owner qualification, per-pair quota/use/expiry, fee history, actual account/region or historical schedule is inspected; zero entitlement and saved/earned money remain unscored."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/zero-fee",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/fee",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/api-docs/futures/account-and-trading-endpoints",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "Conditional grant",
+          "factors": [
+            "account_status",
+            "trading_activity",
+            "effective_trading_volume",
+            "risk_review",
+            "market_conditions"
+          ]
+        },
+        {
+          "mechanism": "Expiry and quota",
+          "received_scope": "Some pairs have validity periods/maximum fee-free volume; unused quota expires, effective trading volume consumes it, exhaustion reverts to standard."
+        },
+        {
+          "mechanism": "Dynamic reassessment",
+          "received_scope": "Quota may increase, reduce or be removed; account can lose qualification after review."
+        },
+        {
+          "mechanism": "Generic advertised rate",
+          "maker_percent": "0",
+          "taker_percent": "0.04",
+          "taker_bp": "4",
+          "scope": "Same-page public hypothesis; not owner-effective rate or certified upper bound."
+        },
+        {
+          "mechanism": "Conflicting broad automatic-access prose",
+          "scope": "Retain alongside the restrictive FAQ rather than choosing the cheaper statement."
+        },
+        {
+          "mechanism": "Vintage/region caveat",
+          "scope": "Comparison table says April2026; /fee states actual history and region/events govern. Neither is as-of R316 capture fee proof."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-MX-TOKEN-DEDUCTION",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "MX fee deduction requires enabled settings, assets and eligibility",
+      "method_type": "engineering_dependency",
+      "hypothesis": "MX fee deduction requires enabled settings, assets and eligibility",
+      "testable_rule": "MX deduction requires enabled/available feature, relevant wallet balance and eligible pair; depletion removes benefit. Deducted assets need price/FX and comparable capital/risk accounting.",
+      "exact_tested_scope": "Only the public /fee deduction conditions read. R317 assumes no MX discount, transfer, token stake or balance.",
+      "unrun_scope": "Owner feature availability, setting/balance, pair exclusions, actual discount, deduction asset FX and token capital/opportunity risk are untested; rendered0% text is not owner benefit.",
+      "status": "untested",
+      "required_inputs": [
+        "Explicit discount entitlement/settings and eligible instrument",
+        "Valued deduction-asset balance and consumption",
+        "Comparable capital including token exposure/opportunity cost"
+      ],
+      "blockers": [
+        "Owner feature availability, setting/balance, pair exclusions, actual discount, deduction asset FX and token capital/opportunity risk are untested; rendered0% text is not owner benefit."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://www.mexc.com/fee",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "Enablement/account availability",
+          "scope": "Public text says displayed feature depends on account eligibility."
+        },
+        {
+          "mechanism": "Balance and wallet",
+          "scope": "Futures deduction requires MX in futures wallet; no funds transferred or values inspected."
+        },
+        {
+          "mechanism": "Exclusion/depletion",
+          "scope": "Some pairs excluded and depleted balance invalidates discount."
+        },
+        {
+          "mechanism": "Anonymous rendered discount",
+          "received_value_percent": "0",
+          "scope": "Not a verified usual or owner discount; no optimistic inference."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-LT-ACCOUNT-FEE-LATENCY",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "Lighter regular Standard, unstaked Premium and Plus fee-delay contracts",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Lighter regular Standard, unstaked Premium and Plus fee-delay contracts",
+      "testable_rule": "Bind account type and ordinary regular taker order class to the exact public fee/delay schedule. Source fees/delays are conditional hypotheses, not owner tier, total network/fill latency or fee-debit asset proof.",
+      "exact_tested_scope": "Complete account-type table read. R317 executed576 post-hoc conditional fee rows on72 held controls; independent510stress scenarios verified. No owner-effective/as-of fee, fill or strategy result; exact scope/costs in experiments/fee_routes_v1/FINDINGS.md.",
+      "unrun_scope": "Actual account type, rate enabled/discount eligibility, fee-debit asset and total submission/matching/fill latency remain unverified. Existing+300ms book does not certify exact140ms Premium fill.",
+      "status": "partial",
+      "required_inputs": [
+        "Explicit hypothetical account/order class",
+        "Exact source fee units and additional delay",
+        "Causal paired books/q and separate minimum-delay support flag",
+        "Actual owner account/fee/asset verification remains false"
+      ],
+      "blockers": [
+        "Actual account type, rate enabled/discount eligibility, fee-debit asset and total submission/matching/fill latency remain unverified. Existing+300ms book does not certify exact140ms Premium fill."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://docs.lighter.xyz/trading/api.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "account": "Standard",
+          "order_class": "regular_perpetual_or_spot",
+          "maker_bp": "0",
+          "taker_bp": "0",
+          "taker_additional_delay_ms": 300,
+          "maker_additional_delay_ms": 0,
+          "cancel_modify_additional_delay_ms": 300,
+          "max_subaccounts": 4,
+          "default_or_opt_in": "default"
+        },
+        {
+          "account": "Premium/Advanced",
+          "stake_LIT": "0",
+          "maker_percent": "0.0040",
+          "maker_bp": "0.4",
+          "taker_percent": "0.0280",
+          "taker_bp": "2.8",
+          "taker_additional_delay_ms": 140,
+          "default_or_opt_in": "opt_in",
+          "cancel_postonly_scope": "All cancellations and Post-Only placements have no additional latency."
+        },
+        {
+          "account": "Plus",
+          "maker_bp": "0.5",
+          "taker_bp": "0.5",
+          "taker_additional_delay_ms": 300,
+          "maker_additional_delay_ms": 0,
+          "cancel_modify_additional_delay_ms": 300,
+          "sendTx_sendTxBatch_per_minute": 4000,
+          "weighted_read_only_requests_per_minute": 24000,
+          "max_subaccounts": 16,
+          "default_or_opt_in": "opt_in",
+          "scope": "Higher rate limits, not lower300ms taker delay; no instantaneous/burst guarantee."
+        },
+        {
+          "mechanism": "Public metadata fee fields",
+          "scope": "Held fee-enabled zeros do not override account-type Premium/Plus schedules or prove owner Standard status."
+        },
+        {
+          "mechanism": "Observed access deadline versus source delay",
+          "scope": "R3170/+300ms observations and minimum-delay support are descriptive. They do not certify exact140ms execution or total order latency."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-LT-ADVANCED-ORDER-FEES",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "Standard TWAP, advanced and RFQ orders retain separate1bp fees",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Standard TWAP, advanced and RFQ orders retain separate1bp fees",
+      "testable_rule": "Standard zero-fee schedule is limited to regular orders; TWAP, advanced orders and RFQ each retain the explicit1bp/0.01% charge in the received source.",
+      "exact_tested_scope": "Only official order-class exceptions read; R317 ordinary-taker paths do not test advanced/TWAP/RFQ execution or lower-cost replacement.",
+      "unrun_scope": "Each advanced order semantic, per-child/per-fill fee basis, actual latency, RFQ price/counterparty quality and owner eligibility remain untested.",
+      "status": "untested",
+      "required_inputs": [
+        "Exact order class and execution/fee basis",
+        "Class-specific price/depth/fill and latency evidence",
+        "Account eligibility and fee-debit asset contract"
+      ],
+      "blockers": [
+        "Each advanced order semantic, per-child/per-fill fee basis, actual latency, RFQ price/counterparty quality and owner eligibility remain untested."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "account": "Standard",
+          "order_class": "TWAP",
+          "fee_bp": "1",
+          "fee_percent": "0.01",
+          "scope": "Received fee only; TWAP execution not read/tested."
+        },
+        {
+          "account": "Standard",
+          "order_class": "advanced_orders",
+          "fee_bp": "1",
+          "fee_percent": "0.01",
+          "scope": "Received category; exact included order variants and pricing not read/tested."
+        },
+        {
+          "account": "Standard",
+          "order_class": "RFQ",
+          "fee_bp": "1",
+          "fee_percent": "0.01",
+          "scope": "Received fee only; no RFQ request, quote or fill acquired."
+        },
+        {
+          "mechanism": "Binary options boundary",
+          "scope": "Separate linked fee model explicitly unread; no regular-perp fee transfer or binary strategy extracted."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-LT-STAKING-FEE-TIERS",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "LIT staking tiers change Premium fees and capital exposure",
+      "method_type": "engineering_dependency",
+      "hypothesis": "LIT staking tiers change Premium fees and capital exposure",
+      "testable_rule": "Premium/Advanced staking fee discount is a capital-consuming account alternative, not a free fee reduction at unchanged risk/capital. Retain every received tier and L1 aggregation rule without selecting a tier from outcomes.",
+      "exact_tested_scope": "Complete eight-row staking table and main/subaccount aggregation prose read. R317 uses the explicit unstaked Premium hypothesis only; no stake or fee-discount strategy run.",
+      "unrun_scope": "Staking eligibility, token price/liquidity/FX, lock/redeem rules, opportunity/risk capital and actual account discount remain untested; linked volume-quota details unread.",
+      "status": "untested",
+      "required_inputs": [
+        "Source tier and actual stake/entitlement",
+        "Comparable total capital including LIT price/opportunity/liquidity risk",
+        "Fee-debit asset and account aggregation/limit semantics"
+      ],
+      "blockers": [
+        "Staking eligibility, token price/liquidity/FX, lock/redeem rules, opportunity/risk capital and actual account discount remain untested; linked volume-quota details unread."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "0",
+          "maker_taker_discount_percent": "0",
+          "maker_fee_percent": "0.0040",
+          "taker_fee_percent": "0.0280",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "1000",
+          "maker_taker_discount_percent": "2.5",
+          "maker_fee_percent": "0.0039",
+          "taker_fee_percent": "0.0273",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "3000",
+          "maker_taker_discount_percent": "5",
+          "maker_fee_percent": "0.0038",
+          "taker_fee_percent": "0.0266",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "10000",
+          "maker_taker_discount_percent": "10",
+          "maker_fee_percent": "0.0036",
+          "taker_fee_percent": "0.0252",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "30000",
+          "maker_taker_discount_percent": "15",
+          "maker_fee_percent": "0.0034",
+          "taker_fee_percent": "0.0238",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "100000",
+          "maker_taker_discount_percent": "20",
+          "maker_fee_percent": "0.0032",
+          "taker_fee_percent": "0.0224",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "300000",
+          "maker_taker_discount_percent": "25",
+          "maker_fee_percent": "0.0030",
+          "taker_fee_percent": "0.0210",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "account": "Premium/Advanced",
+          "staked_LIT": "500000",
+          "maker_taker_discount_percent": "30",
+          "maker_fee_percent": "0.0028",
+          "taker_fee_percent": "0.0196",
+          "taker_additional_delay_ms": 140,
+          "tested_scope": "source-only tier; no staking or account-fee test"
+        },
+        {
+          "mechanism": "L1 aggregation",
+          "scope": "Combined main/subaccount LIT stake sets their shared tier; does not create independent capital or fee quotas."
+        },
+        {
+          "mechanism": "Linked address/volume quota boundary",
+          "scope": "Contacting team/in-app linking and linked volume-quota rules not followed/read; no operational guarantee inferred."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-ACCOUNT-API-FEE-ACCESS",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_route_contract_20261025",
+      "title": "Public account concepts do not establish authorized effective fees",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Public account concepts do not establish authorized effective fees",
+      "testable_rule": "Distinguish a documented API/account access mechanism from observed owner readiness. No public instrument field or anonymous page substitutes for authenticated fee/permission evidence.",
+      "exact_tested_scope": "Lighter API concepts and MEXC authenticated-account index read. Get Fee Details destination only discovered, not fetched or called. No credentials, wallet, accounts or private history accessed.",
+      "unrun_scope": "Owner account type/API permissions/region/fee tier/charged history remain unverified; no actual signature, fee query, account creation, tier switch, transfer or asset inspection.",
+      "status": "untested",
+      "required_inputs": [
+        "Separate owner-authorized account/fee/permission evidence if ever supplied",
+        "Source-specific effective fee and asset/region/temporal contract",
+        "No secret-value access implied by this public intake"
+      ],
+      "blockers": [
+        "Owner account type/API permissions/region/fee tier/charged history remain unverified; no actual signature, fee query, account creation, tier switch, transfer or asset inspection."
+      ],
+      "next_action": "Keep this exact source/accounting or execution submechanism in its existing canonical family. Preserve R311 and the fixed10/4bp control; any new strategy/acquisition requires a finite frozen protocol and input identity. No activation.",
+      "source_refs": [
+        {
+          "path": "https://docs.lighter.xyz/trading/api.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://www.mexc.com/api-docs/futures/account-and-trading-endpoints",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://docs.lighter.xyz/trading/trading-fees.md",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "fee_source_receipts",
+        "version_limit": "Later-read unversioned fee sources, not as-of owner fees"
+      },
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/PREREG.md",
+          "label": "Finite conditional taker routes; source read after held books, not fee vintage at capture"
+        },
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Authoritative exact executed scope/result after execution; not supplied by intake"
+        }
+      ],
+      "distinct_received_submechanisms": [
+        {
+          "mechanism": "Lighter API keys",
+          "scope": "Owned keys sign and authorize account/subaccount actions; indices0–254 with0–3 reserved for apps. No key read or created."
+        },
+        {
+          "mechanism": "Wallet/account/funding boundary",
+          "scope": "Creation uses Ethereum-wallet association signature; deposits use transactions. No such action performed or authorized here."
+        },
+        {
+          "mechanism": "Tier switch boundary",
+          "scope": "Plus can be enabled through app/changeAccountTier; source mention is not a performed or approved switch."
+        },
+        {
+          "mechanism": "MEXC private account module",
+          "scope": "Authentication required; Get Fee Details page/response contract and all account endpoints remain unaccessed."
+        }
+      ],
+      "scope_relation": "Refines an existing fee/execution family. Source/account alternatives are enumerated submechanisms, not additional predictive strategies or evidence that the family passed.",
+      "limitations": "Selected named official sources only; no owner account/region/permission/fees, historical schedule, actual settlement/FX, queue/fill or positive-return proof. Documentation read after the held capture is not an as-of fee schedule."
+    },
+    {
+      "id": "FV26-LT-PROOF-PRICEINPUTS",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter block price-input arrays do not supply per-value source time",
+      "method_type": "engineering_dependency",
+      "hypothesis": "PriceUpdates contains index/mark arrays and asset prices, defaulting to zero; explicit pre-execution flags determine whether updates are applied. A block created_at is not an independently received oracle-effective timestamp.",
+      "testable_rule": "Treat absent/default-zero updates separately from genuine economic prices; require verified block/state/market linkage and an own source/effective clock before assigning a timestamp to a public value.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "No per-value external source timestamp, authenticated block/state/market bridge, deployed version mapping or REST/WS serializer linkage was established. Defaults must not become zero-price or fresh-price evidence.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "No per-value external source timestamp, authenticated block/state/market bridge, deployed version mapping or REST/WS serializer linkage was established. Defaults must not become zero-price or fresh-price evidence.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/price_updates.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
+    },
+    {
+      "id": "FV26-LT-FUNDING-ORDER",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter applies funding before same-block oracle price replacement",
+      "method_type": "engineering_dependency",
+      "hypothesis": "In the inspected pre-execution source, funding uses the prior stored market_details.index_price, then the oracle-update section replaces index/mark values; premium calculation follows.",
+      "testable_rule": "Bind a funding event to the actual prior index state used by its prefix increment, rather than substituting a later post-update/current index from the same nominal block/hour.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "No actual pre/post block index, settled event, authenticated proof, deployed-code match, owner exposure or API value mapping was observed; no empirical discrepancy or parser defect is established.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "No actual pre/post block index, settled event, authenticated proof, deployed-code match, owner exposure or API value mapping was observed; no empirical discrepancy or parser defect is established.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409 and related M267; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution_constraints.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/market_details.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409/M267, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
+    },
+    {
+      "id": "FV26-LT-FUNDING-BLOCKTIME",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter nominal funding boundary differs from application block identity",
+      "method_type": "engineering_dependency",
+      "hypothesis": "The circuit compares block created_at with the next hour after the last funding-round timestamp; calculate_funding is constrained to that condition, active-market application is separately gated, and last funding time becomes application block created_at.",
+      "testable_rule": "Keep nominal expected hour, actual application block/time, active-market gating and first-seen publication/receipt separate; do not infer exact inclusion or wall-clock accuracy from a nominal boundary.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "No actual application block/proof/first-seen timestamp or account inclusion acquired. Imported time-helper/constant definitions, sequencer accuracy and API event-time equivalence remain unread/unverified.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "No actual application block/proof/first-seen timestamp or account inclusion acquired. Imported time-helper/constant definitions, sequencer accuracy and API event-time equivalence remain unread/unverified.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409 and related M267; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution_constraints.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409/M267, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
+    },
+    {
+      "id": "FV26-LT-FUNDING-PREFIX",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter internal funding prefix is integer-scaled and price weighted",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Pre-execution averages/scales premium, applies market small/big clamps, divides the nonnegative clamped magnitude by eight with discarded remainder, restores sign and multiplies the prior stored index before adding a funding prefix increment.",
+      "testable_rule": "Preserve internal integer rounding/sign/order and distinguish a price-weighted prefix increment from an API rate fraction or percentage; do not infer an API scale from a numeric field or replace truncation with negative floor division.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "Constants, market price/quote scaling, full account funding application, deployed version and REST/WS serializer mapping are unread/unverified. No arithmetic fixture, model execution or funding-cash outcome was run for this mechanism.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "Constants, market price/quote scaling, full account funding application, deployed version and REST/WS serializer mapping are unread/unverified. No arithmetic fixture, model execution or funding-cash outcome was run for this mechanism.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409 and related M267; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution_constraints.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/market_details.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409/M267, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
+    },
+    {
+      "id": "FV26-LT-PROOF-PUBLICNESS",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter public pre-execution fields omit the full index witness",
+      "method_type": "engineering_dependency",
+      "hypothesis": "Public pre-execution registration exposes metadata, partial market fields (funding prefix, mark, quote multiplier), margined assets, roots, block number and created_at. The index is in fuller committed MarketDetails, rather than the partial public market record.",
+      "testable_rule": "Require authenticated value extraction plus proof/deployment/state/market/clock binding; a root and block time alone cannot authenticate a caller-provided index or timestamp a separate REST response.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "No cryptographic verification, Merkle proof, actual witness/public block, deployed acceptance, transport/retention or on-time API bridge acquired. Prefix increments do not generally identify a unique index, including zero-rate events.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "No cryptographic verification, Merkle proof, actual witness/public block, deployed acceptance, transport/retention or on-time API bridge acquired. Prefix increments do not generally identify a unique index, including zero-rate events.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution_constraints.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/market_details.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
+    },
+    {
+      "id": "FV26-LT-POSITION-CHECKPOINT",
+      "parent_claim_id": "OWNER-DEEP-PRIMARY-RESEARCH-20261024",
+      "intake_id": "fee_routes_contract_20261025",
+      "title": "Lighter position funding checkpoint and USDC-named aggregation context",
+      "method_type": "engineering_dependency",
+      "hypothesis": "AccountPosition retains signed position, entry quote, previous funding prefix, margin mode and allocated margin. Its selected aggregation helper names USDC and divides allocated margin by an imported collateral multiplier before combining entry quote.",
+      "testable_rule": "Keep the account funding checkpoint and signed exposure explicit; require actual conversion constants, funding debit semantics and API asset/unit evidence before treating protocol identifiers as a credited settlement amount.",
+      "exact_tested_scope": "Untested source mechanism. Only the named selected official Rust source sections were read; no numerical/model/circuit test, compilation, cryptographic proof verification or market/block/funding/index/account data acquisition was performed.",
+      "unrun_scope": "No owner/account data, actual funding debit, conversion-constant value, full funding application, API asset/unit bridge or credited cash observed. USDC-named code is protocol context, not verified API settlement-asset proof.",
+      "status": "untested",
+      "required_inputs": [
+        "Authenticated exact deployed version and symbol/market/state mapping; actual block/proof/value/event and independent first-seen/source/effective clocks.",
+        "Source-specific price/rate/quote/collateral scaling, settlement asset and actual exposure/inclusion semantics before cash arithmetic."
+      ],
+      "blockers": [
+        "No owner/account data, actual funding debit, conversion-constant value, full funding application, API asset/unit bridge or credited cash observed. USDC-named code is protocol context, not verified API settlement-asset proof.",
+        "R311 remains INCONCLUSIVE and its selected policy negative at registered2x/3x. This source inspection does not resolve R316 index freshness or authorize an outcome/strategy activation."
+      ],
+      "next_action": "Retain exact untested scope under existing M409 and related M267; any future model/proof/input test requires its own finite frozen specification/code/input identity. No timestamp borrowing, assumed units or old-policy rescore.",
+      "source_refs": [
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/account_position/account_position.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/market_details.rs",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        },
+        {
+          "path": "experiments/fee_routes_v1/sources.json",
+          "label": "Exact source hash and named read/unread sections in experiments/fee_routes_v1/sources.json"
+        }
+      ],
+      "source_version": {
+        "manifest_path": "experiments/fee_routes_v1/sources.json",
+        "manifest_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+        "receipt_group": "index_source_receipts",
+        "version_limit": "Repository TREE16c0f36d75f2306ee242e26e507e4c237f7f4074, not a commit/deployed/proof attestation"
+      },
+      "scope_relation": "Received protocol accounting/value dependency related to M409/M267, not a new strategy, tested proof model, actual settlement input or evidence that the canonical family is fully covered.",
+      "limitations": "Selected public-source sections only; imported constants/time helpers, wider circuits/contracts, actual values, deployed proof acceptance and API mapping remain unreviewed/unverified. No numerical or cryptographic execution, no actual funding credit and no net-return/prospective claim.",
+      "evidence_refs": [
+        {
+          "path": "experiments/fee_routes_v1/FINDINGS.md",
+          "label": "Exact economic diagnostic and source-only protocol limits; not a protocol proof or trading test"
+        }
+      ]
     }
   ],
   "sources": [
@@ -13179,6 +14282,34 @@
       ],
       "unextracted_limitations": [
         "No full endpoint/SDK/account audit, effective-value or API rate-scaling contract. /reference/info302 destination unread/not followed."
+      ],
+      "current_source_review_required": false
+    },
+    {
+      "path": "experiments/fee_routes_v1/sources.json",
+      "sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+      "current_sha256": "e7c71449f8fdb921100d91783b90b6c396a7c5e78622feaeafae290df7cddf6a",
+      "review_status": "ingested_enumerated",
+      "scope": "R317 exact fee/account-delay and official source-tree funding/index contracts;15 enumerated source refinements, not15 tested strategies.",
+      "method_ids": [
+        "FV26-FEE-FILL-NOTIONAL",
+        "FV26-MAKER-EXECUTION-ROLE",
+        "FV26-MX-FEE-MODES",
+        "FV26-MX-FEE-ENTITLEMENT",
+        "FV26-MX-TOKEN-DEDUCTION",
+        "FV26-LT-ACCOUNT-FEE-LATENCY",
+        "FV26-LT-ADVANCED-ORDER-FEES",
+        "FV26-LT-STAKING-FEE-TIERS",
+        "FV26-ACCOUNT-API-FEE-ACCESS",
+        "FV26-LT-PROOF-PRICEINPUTS",
+        "FV26-LT-FUNDING-ORDER",
+        "FV26-LT-FUNDING-BLOCKTIME",
+        "FV26-LT-FUNDING-PREFIX",
+        "FV26-LT-PROOF-PUBLICNESS",
+        "FV26-LT-POSITION-CHECKPOINT"
+      ],
+      "unextracted_limitations": [
+        "Two semantic not-found pages retained; linked fee/quota/private account details unread; no full SDK/prover/deployed/circuit/API scaling audit or observed settlement."
       ],
       "current_source_review_required": false
     }
@@ -16104,6 +17235,51 @@
       "predictive_trials_added": 0,
       "prospective_days_added": 0,
       "not_reviewed": "No whole SDK/API corpus, account, rate unit/settlement asset proof, oracle-provider implementation, value atomicity/cache guarantee or chart history."
+    },
+    {
+      "intake_id": "fee_route_contract_20261025",
+      "records_added": [
+        "FV26-FEE-FILL-NOTIONAL",
+        "FV26-MAKER-EXECUTION-ROLE",
+        "FV26-MX-FEE-MODES",
+        "FV26-MX-FEE-ENTITLEMENT",
+        "FV26-MX-TOKEN-DEDUCTION",
+        "FV26-LT-ACCOUNT-FEE-LATENCY",
+        "FV26-LT-ADVANCED-ORDER-FEES",
+        "FV26-LT-STAKING-FEE-TIERS",
+        "FV26-ACCOUNT-API-FEE-ACCESS"
+      ],
+      "base_method_objects_preserved": 352,
+      "received_scope": "Nine fee/order/account mechanisms, full staking ladder and weak alternatives",
+      "source_versions_path": "experiments/fee_routes_v1/sources.json",
+      "frozen_measurement": "R317",
+      "spec_code_and_old_input_commit": "fcb2124",
+      "evidence_path": "experiments/fee_routes_v1/FINDINGS.md",
+      "result_scope": "576conditional rows/72already-seen book controls;510cost stress scenarios, originalreserve unchanged. Source schedules read later, ownerfees/latency/fills/returns unverified.",
+      "predictive_trials_added": 0,
+      "prospective_days_added": 0,
+      "not_reviewed": "No owner account/token stake or actual fee quota; no actual block/witness/proof, compiled circuit, deployed/API scaling or settlement cash."
+    },
+    {
+      "intake_id": "fee_routes_contract_20261025",
+      "records_added": [
+        "FV26-LT-PROOF-PRICEINPUTS",
+        "FV26-LT-FUNDING-ORDER",
+        "FV26-LT-FUNDING-BLOCKTIME",
+        "FV26-LT-FUNDING-PREFIX",
+        "FV26-LT-PROOF-PUBLICNESS",
+        "FV26-LT-POSITION-CHECKPOINT"
+      ],
+      "base_method_objects_preserved": 352,
+      "received_scope": "Six selected official protocol tree/input/funding ordering/time/prefix/publicness/checkpoint mechanisms; source inspection only",
+      "source_versions_path": "experiments/fee_routes_v1/sources.json",
+      "frozen_measurement": "R317",
+      "spec_code_and_old_input_commit": "fcb2124",
+      "evidence_path": "experiments/fee_routes_v1/FINDINGS.md",
+      "result_scope": "No numerical/circuit/proof/deployed/index-state/API test. Code uses prior stored index before same-block oracle update; exact event value/clock/unit bridge remains missing.",
+      "predictive_trials_added": 0,
+      "prospective_days_added": 0,
+      "not_reviewed": "No owner account/token stake or actual fee quota; no actual block/witness/proof, compiled circuit, deployed/API scaling or settlement cash."
     }
   ],
   "reassignment_refs": [

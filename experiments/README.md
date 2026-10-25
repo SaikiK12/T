@@ -31,8 +31,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (114)
+## Other registered rounds (done, registered or planned) (115)
 
+- **[fee_routes_v1](fee_routes_v1/)** R317, DONE PARTIAL, 0 trials. Source-labelled conditional taker fee routes and crossing-floor decomposition ([PREREG](fee_routes_v1/PREREG.md), [FINDINGS](fee_routes_v1/FINDINGS.md))
 - **[warm_values_v1](warm_values_v1/)** R316, DONE PARTIAL, 0 trials. Matched prestarted and cold fair requests with source-clock economic controls ([PREREG](warm_values_v1/PREREG.md), [FINDINGS](warm_values_v1/FINDINGS.md))
 - **[funding_values_v1](funding_values_v1/)** R315, DONE PARTIAL, 0 trials. Source-typed funding ledger and matched REST/WS reference publication inputs ([PREREG](funding_values_v1/PREREG.md), [FINDINGS](funding_values_v1/FINDINGS.md))
 - **[depth_quotes_v1](depth_quotes_v1/)** R314, DONE PARTIAL, 0 trials. Matched full-depth/top-level public quote costs with fixed0/300ms controls ([PREREG](depth_quotes_v1/PREREG.md), [FINDINGS](depth_quotes_v1/FINDINGS.md))
