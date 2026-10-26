@@ -2,7 +2,14 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 367 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
+Current received scope: 407 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
+The [R327/R328 dated-carry component](../../experiments/dated_carry_v2/FINDINGS.md)
+supplements the existing M244 alias with 46 bounded Deribit contract/fee/settlement/API
+scopes; these are mechanics, not new strategies. All 407 old method objects and alias
+bytes stay intact. Seven sealed current responses support 162 conditional terminal
+values; 54 depth failures and the original ratio-format driver failure remain.
+Coin ownership, daily versus final settlement and terminal conversion are explicit;
+unknown routing costs and actual payouts prevent a net-edge or prospective claim.
 The bounded [R317 fee/crossing diagnostic](../../experiments/fee_routes_v1/FINDINGS.md) adds15 source refinements: nine fee/order/account scopes (including all received staking tiers and weak advanced/maker alternatives) and six protocol-state/index scopes. All352 earlier objects remain exact. Eight post-hoc conditional fee paths preserve the original reserve on already-seen R316 books; source schedules are not owner fees or net-return evidence. Prover tree ordering is not deployed/proof/API verification.
 The bounded [R316 warm/cold comparison](../../experiments/warm_values_v1/FINDINGS.md) adds six exact engineering/value-source scopes in `warm_value_source_contract_20261025`, retaining all346 prior objects. Clockless Lighter REST prices, computed oracle policy, hourly perps marks, unspecified rate scaling and unproven snapshot age remain distinct. Worker readiness never freshens a market value; exact current receipt/cost results and limits are in the linked findings.
 The bounded [R315 funding/value diagnostic](../../experiments/funding_values_v1/FINDINGS.md) adds nine mechanical records in `funding_values_contract_20261025`: linear/inverse cash, batch inclusion, hourly index notional, estimated/settled rate roles, REST system time, both weak ticker alternatives and session uncertainty. All 337 earlier method objects remain intact. Source-typed ledger fixtures pass; two delayed altcoin displayed-cost rows still have no jointly fresh fair/index publications. This is no return or new paper result.

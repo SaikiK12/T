@@ -15874,6 +15874,27 @@
         "current source book age/execution/fill/session proof"
       ],
       "current_source_review_required": false
+    },
+    {
+      "path": "experiments/dated_carry_v1/sources.json",
+      "sha256": "9e67cc5c0427de05b7835ce8574949129e6a63ec617cb794b6c716cb1f29a3a8",
+      "current_sha256": "9e67cc5c0427de05b7835ce8574949129e6a63ec617cb794b6c716cb1f29a3a8",
+      "review_status": "ingested_enumerated",
+      "scope": "46bounded Deribit inverse/fee/settlement/API mechanical scopes;8staticattempts1339810bytes andone search;301/cappedbook/404retained. Conditionalmodel notdeployedpayoff proof.",
+      "method_ids": [
+        "YT26-04-DATED-CASH-CARRY"
+      ],
+      "unextracted_limitations": [
+        "deployed reciprocal payoff and fee serialization/rounding",
+        "actual owner fees/assets/permissions",
+        "actual spot units and lot/tick increment",
+        "cross-venue collateral availability/transfer/network costs",
+        "source matching age/fill probability",
+        "actual delivery TWAP and subsequent executable spot USDT exit",
+        "margin/liquidation/insurance/socialized-loss and counterparty risk",
+        "prospective strategy protocol/on-time evidence"
+      ],
+      "current_source_review_required": false
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -19129,6 +19150,39 @@
         "signed owner fees/account permissions",
         "effective funding event/fair notional and settlement cash",
         "current source book age/execution/fill/session proof"
+      ]
+    },
+    {
+      "intake_id": "inverse_dated_carry_contract_20261026",
+      "records_added": [],
+      "existing_aliases_supplemented": [
+        "YT26-04-DATED-CASH-CARRY"
+      ],
+      "base_method_objects_preserved": 407,
+      "source_versions_path": "experiments/dated_carry_v1/sources.json",
+      "frozen_measurement": "R327/R328",
+      "spec_code_commits": [
+        "eec39c3",
+        "a746d10"
+      ],
+      "raw_input_commit": "cc7c4bf",
+      "parent_failure_commit": "f835f0b",
+      "evidence_path": "experiments/dated_carry_v2/FINDINGS.md",
+      "received_scope": "46enumeratedformal/payoff/fee/settlement/API scopes incl weakalternatives andmissingformula;NOT46newmethods. Formalinverse/fees/settlement andinstrument mainread,bookpartial,original301/formula404 retained.",
+      "result_scope": "R3270terminal outcomes due ratio-stringdriverfailure preserved;R328same2currentpairs162/216conditionalworlds,54depthfailures,54coinpaths/108journals/324rows exactaudit;noactualcash/expectedreturn/prospectivescoring.",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "new_current_requests_original_scope": 7,
+      "new_current_requests_repair": 0,
+      "not_reviewed": [
+        "deployed reciprocal payoff and fee serialization/rounding",
+        "actual owner fees/assets/permissions",
+        "actual spot units and lot/tick increment",
+        "cross-venue collateral availability/transfer/network costs",
+        "source matching age/fill probability",
+        "actual delivery TWAP and subsequent executable spot USDT exit",
+        "margin/liquidation/insurance/socialized-loss and counterparty risk",
+        "prospective strategy protocol/on-time evidence"
       ]
     }
   ],

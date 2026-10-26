@@ -182,6 +182,14 @@ use `python -m lab account --spot-costs-v2 --out /fresh/output` and
 R325 input failures are retained; corrected costs use the same sealed inputs.
 Public-rate/depth assumptions remain conditional and funding keeps total PnL unknown.
 
+The [dated inverse-futures component](experiments/dated_carry_v2/FINDINGS.md) uses
+the same account entry point: `python -m lab account --dated-v2 --out /fresh/output`,
+then `python scripts/check_dated_carry_v2.py /fresh/output/results.json`. It separates
+USD face, coin collateral, daily realization and delivery, counting purchased
+coins once. Its small BTC/ETH quote-based margins assume zero routing cost and
+hypothetical terminal conversion; actual expected net return remains unknown.
+The original R327 driver failure and all sealed inputs are preserved.
+
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
 The original `python -m unittest discover -s tests -t .` remains the same full gate. No framework migration is required.
