@@ -1,5 +1,5 @@
 {
- "last_scored_hour": "2026-10-26T15:00:00+00:00",
+ "last_scored_hour": "2026-10-26T19:00:00+00:00",
  "days_ticketed": 25,
  "BIN": {
   "coverage": {
@@ -7,32 +7,32 @@
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.3551716687882442,
+  "market_mean_apr_now": -0.38339560970401254,
   "top_apr_now": [
    {
     "symbol": "\u9f99\u867eUSDT",
-    "apr": 0.4605630878298447,
-    "spot": false
-   },
-   {
-    "symbol": "IRYSUSDT",
-    "apr": 0.3847184592541453,
-    "spot": false
-   },
-   {
-    "symbol": "SOXLUSDT",
-    "apr": 0.10005501651903614,
+    "apr": 0.438354054113006,
     "spot": false
    },
    {
     "symbol": "ENAUSDT",
-    "apr": 0.09223914785707166,
+    "apr": 0.09382324770285777,
     "spot": true
    },
    {
     "symbol": "XRPUSDT",
     "apr": 0.08012966455832309,
     "spot": true
+   },
+   {
+    "symbol": "BTCUSDT",
+    "apr": 0.06257194988393167,
+    "spot": true
+   },
+   {
+    "symbol": "SOXLUSDT",
+    "apr": 0.060936750135927774,
+    "spot": false
    }
   ],
   "replay": {
@@ -71,22 +71,12 @@
    "mapped": 40,
    "spot_taker_mean": 0.0005641025641025641
   },
-  "held_now": [
-   {
-    "symbol": "IRYSUSDT",
-    "apr": 0.3888465927078263
-   }
-  ],
-  "market_mean_apr_now": -0.624645055229779,
+  "held_now": [],
+  "market_mean_apr_now": -0.6712224111335358,
   "top_apr_now": [
    {
-    "symbol": "IRYSUSDT",
-    "apr": 0.3888465927078263,
-    "spot": true
-   },
-   {
     "symbol": "ENAUSDT",
-    "apr": 0.09149333210643817,
+    "apr": 0.09307499842331406,
     "spot": true
    },
    {
@@ -102,6 +92,11 @@
    {
     "symbol": "SOLUSDT",
     "apr": 0.057791666313278256,
+    "spot": true
+   },
+   {
+    "symbol": "ZECUSDT",
+    "apr": 0.05401999914435389,
     "spot": true
    }
   ],
