@@ -35,6 +35,7 @@ def main(argv=None):
     group.add_argument('--continuation',action='store_true',help='R323 fixed-deadline conditional carry policies and common-account replay; no market activation')
     group.add_argument('--spot-perp',action='store_true',help='R324 segregated physical-spot/futures accounting and sealed public wire compatibility; no live collection')
     group.add_argument('--spot-costs',action='store_true',help='R325 sealed spot/perp quote-cost, minimum/permission and account controls; no live collection')
+    group.add_argument('--spot-costs-v2',action='store_true',help='R326 exact same-data Decimal/zero-minimum compatibility repair; no live collection')
     p.add_argument('--restore-input',action='store_true',help='with --controls: restore its one small pinned held input if absent; never overwrite/download')
     p.add_argument('--out',type=Path)
     args=p.parse_args(argv)
@@ -51,6 +52,8 @@ def main(argv=None):
         from scripts.run_spot_perp_account import report
     elif args.spot_costs:
         from scripts.run_spot_costs import report
+    elif args.spot_costs_v2:
+        from scripts.run_spot_costs_v2 import report
     elif args.lifecycle:
         from scripts.run_paired_account import report
     else:
