@@ -39,6 +39,7 @@ def main(argv=None):
     group.add_argument('--dated',action='store_true',help='R327 inverse dated-carry entry and conditional terminal accounting; no live collection')
     group.add_argument('--dated-v2',action='store_true',help='R328 same-data exact-ratio compatibility repair; no live collection')
     group.add_argument('--levels',action='store_true',help='R330 frozen close-level probability/cost diagnostic; held sources only, no activation')
+    group.add_argument('--confidence',action='store_true',help='R331 committed multi-stage candle-feature probability/calibration/cost diagnostic; no collection or activation')
     p.add_argument('--restore-input',action='store_true',help='with --controls: restore its one small pinned held input if absent; never overwrite/download')
     p.add_argument('--out',type=Path)
     args=p.parse_args(argv)
@@ -63,6 +64,8 @@ def main(argv=None):
         from scripts.run_dated_carry_v2 import report
     elif args.levels:
         from scripts.run_level_probability import report
+    elif args.confidence:
+        from scripts.run_confidence import report
     elif args.lifecycle:
         from scripts.run_paired_account import report
     else:
