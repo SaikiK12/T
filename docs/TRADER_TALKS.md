@@ -356,3 +356,76 @@ Added from Whisper transcripts on 2026-10-22 (08:01 UTC rebuild: 358 windows for
   Kyle Samani, Sam Bankman-Fried), Virtu's Doug Cifu on payment for order flow, Top Traders Unplugged (Rob Carver),
   Ed Thorp's interview, Algorithmic Advantage 038 (Andrea Unger), Odds on Open (ex-Jane Street trader), Lightspeed
   (Jump's Michael McGee). The list with links is `data/videos/talks.csv`.
+
+## 2026-10-26: deeper practitioner rules, including their losing executions
+
+This pass reads **four complete publisher video transcripts and three method
+articles**, instead of another roster introduction. The received versions,
+57 strategy/variant/risk/process scopes, exact missing mechanics and aliases are
+in the [source bundle](../research/intake/practitioner_methods_20261026.json),
+imported into the existing intake. These are not 57 tested strategies.
+
+| Primary material read | Concrete information acquired | Evidence boundary |
+|---|---|---|
+| [Qullamaggie's own setups](https://qullamaggie.com/my-3-timeless-setups-that-have-made-me-tens-of-millions/) | Momentum-base breakout, catalyst pivot, parabolic short and separately disclosed collapse-long; opening-range/daily entries and partial/MA exits | Own claims and selected examples; no complete audited costed account. Linked streams and charts unread. |
+| [Unger Academy daily crypto/ATR transcript](https://ungeracademy.com/blog/volatility-position-sizing-adapting-your-strategies-to-market-volatility) | Next-day close-plus-true-range entry and day-end exit; fixed versus ATR-sized risk | Coach's optimized demonstration, not verified champion portfolio PnL. Entry true range differs from ATR sizing. |
+| [Unger Academy robustness transcript](https://ungeracademy.com/blog/how-to-figure-out-if-a-strategy-will-work-before-investing-your-money-in-it) | AMZN prior-session DF filter, timed breakout, stop/target; neighborhood, walk-forward and resampling alternatives | Exact entry code missing; original/WFA windows differ. Stressing optimized trades does not supply an independent sample. |
+| [Andrea Unger's public Daily Factor code](https://blog.ilgiornale.it/analisi-tecnica/2023/05/30/il-daily-factor-un-filtro-per-fare-trading-con-la-volatilita/) | Previous-session body/range filter, next-bar channel stops and monetary-stop alternatives | Source code read; original platform/order conventions and market outcomes not reproduced. |
+| [January student-strategy article](https://ungeracademy.com/blog/strategy-of-the-month-january-2025-a-trend-following-strategy-for-gold-wins) | NQ rolling Donchian/asymmetric filters; GC Bollinger/prior-DF and delayed MA exit | Code behind membership; missing patterns/stop values remain missing. Student backtest contest differs from real-money championship. |
+| [SMB GME review](https://www.smbtraining.com/blog/you-are-trading-better-than-you-think-2) | Multi-day extension context, failed VWAP reclaim, core/momentum lots, partial exits | Actual illustrated management is intraday; overnight holding is a proposed extension. No independently audited account. |
+| [SMB NVAX losing-trade review](https://www.smbtraining.com/blog/one-bad-trade-a-new-trader-education-video-series) | Lower-high/tape confirmation, price-only versus price-and-time stops, wick exit/re-entry and failed momentum attempts | Correct direction still lost through execution. The losing path is retained. Speakers are Bellafiore with junior traders, not Lance. |
+
+The official [organizer archive](https://www.worldcupchampionships.com/world-cup-trading-championship-historical-standings)
+lists Unger wins in 2008/2009/2010 and **Q4 2012**. It does not establish four
+annual results, which methods earned them, or their transfer to our capital,
+risk and fees. Qullamaggie's biography is self-report. No speaker's aggregate
+income is entered as our strategy's expected return.
+
+### Useful source-code distinctions
+
+The Daily Factor is `abs(O-C)/(H-L)` for the previous **session**, not a
+true-range forecast. Four separate rational examples verify that a wide doji
+can have DF zero and large true range, and a large overnight gap can leave DF
+zero. The snippet keeps the previous DF on a zero-range session. Its strict
+`DF < 1` condition excludes full-body candles, despite the prose describing
+that setting as filter-off. These details must survive any faithful port.
+
+The channel is 40 completed 30-minute bars, including the decision bar, for
+next-bar stop entries. Twenty trading hours are not automatically twenty UTC
+hours. The snippet does not settle OCO/dual hits, reversals, pyramiding, final
+exit or the monetary stop's contract convention. Its staged DF/stop searches
+do not establish a jointly executed 336-cell grid. No source strategy was run.
+
+In the student NQ description, comparisons to a common current Donchian maximum
+would be impossible for its own constituent highs. Comparing each bar against
+its own earlier channel could be meaningful. The gated code is needed to resolve
+this; the intake does not quietly choose the convenient interpretation.
+
+### Reconciliation with our cost/account work
+
+Ten new exact open scopes enter the **same queue**: M413–M417 and M419–M423.
+The AMZN refinement maps to existing M200, so M418 is deliberately unallocated.
+Prior generic chart/VWAP NULLs remain valid for their tested scopes. They do not
+automatically test these source-specific conditions. Two weak equity reader
+comments are attributed separately, not promoted to Qullamaggie's own methods.
+M412/R333 and Claude's active files were left alone.
+
+The [R334 interface](../experiments/opportunity_value_v1/FINDINGS.md) needs an
+actual horizon/quantity-specific payoff forecast, calibrated error and
+source-bound quotes/fees/session/lot contracts. These sources supply rules and
+data questions, not those measured inputs. Re-entries and partial exits each
+need their own costs; a stop at entry price is not net breakeven. Slower holds
+may amortize entry costs, while funding and adverse exits still accumulate.
+
+For a purely illustrative two-outcome trade with gain W, loss L, cost/reserve C
+and error allowance E, positive expected net requires
+`p > (L + C + E)/(W + L)`. This is an accounting identity, not a measured
+probability or edge. Timeout, funding and variable costs need the full model.
+
+Access closed with 12 combined search queries, eight direct static attempts
+(six HTTP200/two HTTP403), and 1,695,922 accepted successful body bytes. Browser
+wire costs are unmeasured; ordinary video opens were throttled. Publisher text
+was read, not audiovisual frames, complete channels or paid code. One bounded
+reader plus the main agent worked; no media/models/market history was downloaded.
+Four toy arithmetic checks are not market observations. New strategy outcomes,
+new prospective days and historical-budget consumption are all zero.
