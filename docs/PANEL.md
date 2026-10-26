@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-26 09:15 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-26 13:12 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -22,10 +22,10 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | stage | now |
 |---|---|
 | Ideas in the queue, untested | 33 |
-| Ideas partly tested | 42 |
+| Ideas partly tested | 43 |
 | Ideas blocked (data, download, compute) | 97 |
-| Rounds in the registry | 148 (NULL 85, PARTIAL 28, PENDING 22, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,970 |
+| Rounds in the registry | 149 (NULL 85, PARTIAL 29, PENDING 22, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,976 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -123,7 +123,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R321 | dependent_null_v1 | DONE | NULL | 152 |
 | R322 | funding_prefix_v1 | DONE | PARTIAL | 0 |
 | R323 | continuation_control_v1 | DONE | PARTIAL | 32 |
 | R324 | spot_perp_inputs_v1 | DONE | PARTIAL | 0 |
@@ -131,5 +130,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R326 | spot_perp_costs_v2 | DONE | PARTIAL | 0 |
 | R327 | dated_carry_v1 | DONE | PARTIAL | 0 |
 | R328 | dated_carry_v2 | DONE | PARTIAL | 0 |
+| R330 | level_probability_v1 | DONE | PARTIAL | 6 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

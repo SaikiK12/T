@@ -190,6 +190,15 @@ coins once. Its small BTC/ETH quote-based margins assume zero routing cost and
 hypothetical terminal conversion; actual expected net return remains unknown.
 The original R327 driver failure and all sealed inputs are preserved.
 
+The [conditional close-level probability study](experiments/level_probability_v1/FINDINGS.md)
+shares that entry point: `python -m lab account --levels --out /fresh/output`, then
+`python scripts/audit_level_probability.py /fresh/output`. Its training-only model
+was committed before later periods. It distinguishes probability from payoff,
+uses one capital account across coins, and retains inactivity, costs and gaps.
+This exact model found no probability improvement or net edge. The first audit's
+signed-notional guard failure is preserved; the named audit-only correction does
+not change financial results. Reproduction requires the eight pinned held inputs.
+
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
 The original `python -m unittest discover -s tests -t .` remains the same full gate. No framework migration is required.
