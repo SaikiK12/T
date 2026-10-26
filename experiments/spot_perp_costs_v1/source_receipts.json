@@ -1,0 +1,155 @@
+{
+  "body_bytes_total": 184953,
+  "independent_ws_source": {
+    "acquisition_seconds": 0.4667721669829916,
+    "body_cap_combined_bytes": 524288,
+    "combined_body_bytes": 68527,
+    "environment_snapshot": {
+      "capabilities": [],
+      "connectivity": "connected",
+      "network_policy": {
+        "mode": "unrestricted",
+        "state": "enforced"
+      },
+      "observations_current": true,
+      "outbound_identities": [],
+      "phase": "running",
+      "proxy_and_tls": "normal inherited proxy and CA trust; TLS verification enabled",
+      "runtime_variables": [],
+      "secrets": [],
+      "skill": "cloud-environment-runtime",
+      "vpn_configured": false
+    },
+    "receipts": [
+      {
+        "body_bytes": 45831,
+        "body_file": ".cache/R325-ws-source/protocol.html",
+        "body_sha256": "d8c3d12c905b6fe90d16c6132d456f54a92575fd11b613fb466038f12dd5ae6b",
+        "cap_bytes": 262144,
+        "cap_hit": false,
+        "complete": true,
+        "curl_exit": 0,
+        "end_utc": "2026-10-26T05:43:54.614627+00:00",
+        "headers": "HTTP/1.1 200 OK\ndate: Mon, 26 Oct 2026 05:43:53 GMT\nserver: envoy\n\nHTTP/2 200 \ncontent-type: text/html; charset=utf-8\ncontent-disposition: inline; filename=\"index.html\"\naccept-ranges: bytes\nlast-modified: Fri, 09 Oct 2026 10:39:32 GMT\ncontent-security-policy: frame-ancestors 'self' *.mexc.me *.mexc.com *.mexceu.com *.mexc.kr *.mexc.co sensors.xiaoxiame.com *.365huo.xyz *.mexc.fm *.mexc.in *.mexc.us *.greentreeone.com *.gdiii.xyz *.mcaketech.com *.mexc.ae *.mexc.cl *.mexc.ee *.mexc.ge *.mexccex.com *.mexcsite.com *.mx-exchange.co *.winappnet.com *.weappnet.com *.getappnet.com *.cryptolinkapp.com *.mexc.io *.mexc.cc *.coldbookfly.ru *.hottreeswim.ru *.linkappmarketing.com *.payapptoday.com\nx-content-type-options: nosniff\nstrict-transport-security: max-age=63072000; includeSubdomains; preload\nx-akamai-transformed: 9 41423 0 pmb=mRUM,1\nexpires: Mon, 26 Oct 2026 05:43:54 GMT\npragma: no-cache\ndate: Mon, 26 Oct 2026 05:43:54 GMT\nserver-timing: cdn-cache; desc=MISS\nserver-timing: edge; dur=155\nserver-timing: origin; dur=10\nserver-timing: ak_p; desc=\"1792993434381_399136839_624293680_16455_16190_1_27_15\";dur=1\nreport-to: {\"group\": \"nel\",\"max_age\": 2592000, \"endpoints\": [{\"url\":\"https://nel-cf.gotoda.co/nel/report\"},{\"url\":\"https://nel-akm.gotoda.co/nel/report\"}]}\nnel: {\"report_to\": \"nel\", \"max_age\": 2592000, \"response_headers\":[\"Akami-Grn\"] }\naccess-control-expose-headers: x-cache\nx-cache: NotCacheable from child\ncache-control: max-age=0,must-revalidate\nakamai-grn: 0.4758ca17.1792993434.2535f730\nset-cookie: _abck=5458CA4EDA60D74624692B77A43824DC~-1~YAAQR1jKF+FpzmShAQAA35u8dhCbYRDjDOnFm+ikDCeLaKzepI91k3MHuyXf8Ie8IY+SCx+T5w+3FZ8Czvk0ttn7SOlLg2eC3P7IJLl1JCHaulCU/YcXrRGxi36lA/tshzrzNjW8pqXh9IHya2o+Oynny9ZNYO+DlyhsMBT0CARoPAnLtfGO3p1smg0+ZD0zSwTvOUrdJx+ZGco2xUTn47Au3Vi5H/N0MVI7cjJWhu/LPfr0YI3lo/IQuL8OXVXfy3fS+WjwxQRNUFdu5Ij8xF3R6+YiUgwppA0suFPZG8A6WJCTJ3kwYCZGsgdf+cpd58EzP4OTJuAXMpPOBMQSuTYh3pBSmD0OGwt4jG/s4344G7inLwsu/wNONwfyMLtZTh0z5wshOlXNzmqkR7khFlRaMAFhRcJNA3Vi6SRgjOjrsi5qxLWJ+O2g0Ad3c1+IR3/K~-1~-1~-1~-1~-1; Domain=.mexc.com; Path=/; Expires=Tue, 26 Oct 2027 05:43:54 GMT; Max-Age=31536000; Secure\nset-cookie: bm_sz=1DFB3EB9C717280C560980506504B64D~YAAQR1jKF+JpzmShAQAA35u8dgEbHvQMy3y14+bTdG0QZ84+riUSppG8M1GMjtt1UGI1WUyfNSsZAdheuaVsyqtpgnPsk2Rj1Z3+t09/8cTTzDozSoV++TjvFADBirpjU9AGRg08ZofiaHbvMuZVUfK3UZDONkg7JyfP2qjArNSBb3RaB7Pv48DIDYRSMawa7ArYYA/4Q0JUjtHY1IFaP+8fbDD0YJT8z7L8bSkPOtkBbN8n3m70Dqvt4sj1fTgkjIHXGbmifEI8o8ax4A3g5NFXjeCh6N7JfnDRUQBUpJR1WBKwwvNyatH6k/Qw4QCulScJ4CDlN3YRDLzDzzzS4Mvw9Haog3CdFE/PmKgNwU3kl+RM~4473137~3551280; Domain=.mexc.com; Path=/; Expires=Mon, 26 Oct 2026 09:43:54 GMT; Max-Age=14400\nx-envoy-upstream-service-time: 326\nserver: envoy\n\n",
+        "headers_file": ".cache/R325-ws-source/protocol.headers",
+        "http_status": "200",
+        "max_time_seconds": 35,
+        "redirects_followed": false,
+        "retries": 0,
+        "start_utc": "2026-10-26T05:43:54.151271+00:00",
+        "stderr": "",
+        "url": "https://www.mexc.com/api-docs/spot-v3/websocket-market-streams/protocol-buffers-integration"
+      },
+      {
+        "body_bytes": 22696,
+        "body_file": ".cache/R325-ws-source/orderbook.html",
+        "body_sha256": "81a3c41eb4191ca3af354aed4954ef64d0c6daa3622b917d2ce346d823152a40",
+        "cap_bytes": 262144,
+        "cap_hit": false,
+        "complete": true,
+        "curl_exit": 0,
+        "end_utc": "2026-10-26T05:43:54.545214+00:00",
+        "headers": "HTTP/1.1 200 OK\ndate: Mon, 26 Oct 2026 05:43:53 GMT\nserver: envoy\n\nHTTP/2 200 \ncontent-type: text/html; charset=utf-8\ncontent-disposition: inline; filename=\"index.html\"\naccept-ranges: bytes\nlast-modified: Fri, 09 Oct 2026 10:39:32 GMT\ncontent-security-policy: frame-ancestors 'self' *.mexc.me *.mexc.com *.mexceu.com *.mexc.kr *.mexc.co sensors.xiaoxiame.com *.365huo.xyz *.mexc.fm *.mexc.in *.mexc.us *.greentreeone.com *.gdiii.xyz *.mcaketech.com *.mexc.ae *.mexc.cl *.mexc.ee *.mexc.ge *.mexccex.com *.mexcsite.com *.mx-exchange.co *.winappnet.com *.weappnet.com *.getappnet.com *.cryptolinkapp.com *.mexc.io *.mexc.cc *.coldbookfly.ru *.hottreeswim.ru *.linkappmarketing.com *.payapptoday.com\nx-content-type-options: nosniff\nstrict-transport-security: max-age=63072000; includeSubdomains; preload\nx-akamai-transformed: 9 18289 0 pmb=mRUM,1\nexpires: Mon, 26 Oct 2026 05:43:54 GMT\npragma: no-cache\ndate: Mon, 26 Oct 2026 05:43:54 GMT\ncontent-length: 22696\nserver-timing: cdn-cache; desc=MISS\nserver-timing: edge; dur=135\nserver-timing: origin; dur=7\nserver-timing: ak_p; desc=\"1792993434345_399136848_53325781_14114_15369_5_23_15\";dur=1\nreport-to: {\"group\": \"nel\",\"max_age\": 2592000, \"endpoints\": [{\"url\":\"https://nel-cf.gotoda.co/nel/report\"},{\"url\":\"https://nel-akm.gotoda.co/nel/report\"}]}\nnel: {\"report_to\": \"nel\", \"max_age\": 2592000, \"response_headers\":[\"Akami-Grn\"] }\naccess-control-expose-headers: x-cache\nx-cache: NotCacheable from child\ncache-control: max-age=0,must-revalidate\nakamai-grn: 0.5058ca17.1792993434.32dafd5\nset-cookie: _abck=B226C03D13E8D781F2D03A7BF59C243E~-1~YAAQUFjKFw57Q3WhAQAAn5u8dhABwwaFikXKUQp/FJ9VeHKjmgJ9MWOwqFtvo8w6kSOwpE5c4Qe1U1YwgiLyNzIbz1kyguU1o95VJ1TOkr5iRjgAGKARywNJO/Cn0gqhJBvbG0JUCLJ+LGlKHqdkqiI7vj1jrbHwC7nlIil5Dqo8GAKWEcl+5X9t7MFbUXEa1UPhtfRM78boHfhm1SDXTzMio3YGg8Acg69iYdyte989mZ6Zpjj17o+4d2+f4pPOoCcWWslqGB97tpGQiLHyZDy52XAmb4pNP3fF8xW6vWil/A9VarmqL8HUmx7hZugi3enAjvTp1E9ii+Z8JC9E1U12/DKxm69E69A+7wjy1PpIis5ZPnPkgrqstE5Xe4gB+iBH5CVdb/bMyXRn0NHqG909q+RWrD4QwejTurlRLKwUXBKqWgTewtJLfr58WKxcfeSx~-1~-1~-1~-1~-1; Domain=.mexc.com; Path=/; Expires=Tue, 26 Oct 2027 05:43:54 GMT; Max-Age=31536000; Secure\nset-cookie: bm_sz=D8C398820F783FE5C7D553B27C20C0E0~YAAQUFjKFw97Q3WhAQAAn5u8dgGD5y1lA+/Z87h0JKiHTCkpTbX+i75ZAQjpKp9Zy1Ms3YVglrQKkZN2R+uBcalQ0YrFChQHGQi7yRCnljnKeOfaZAr0fzQtfruZRmV9P1QVSaf352/GaDS9Q/q4Rmc+5ACx/5lLRBT/60iZvGaFsDEBEFh4PT3yW0byDdV3LfK1ycXycirsvbHVhWeKmbBAECn5yhR/lICqo4Ncu8Ymee64o9PgFC+WaB/+8Om6LMYerLs2bIBXHMh7899wM9Nk/Yg0lZzqR+36hkJaSG43slIRiASdJ1D3P2jc7DP0rZFaaEWzUuRGp1qGz4RMlWROqC2bIMiG1or3ehct6/3FKGBe~4473137~3551280; Domain=.mexc.com; Path=/; Expires=Mon, 26 Oct 2026 09:43:54 GMT; Max-Age=14400\nx-envoy-upstream-service-time: 291\nserver: envoy\n\n",
+        "headers_file": ".cache/R325-ws-source/orderbook.headers",
+        "http_status": "200",
+        "max_time_seconds": 35,
+        "redirects_followed": false,
+        "retries": 0,
+        "start_utc": "2026-10-26T05:43:54.151627+00:00",
+        "stderr": "",
+        "url": "https://www.mexc.com/api-docs/spot-v3/websocket-market-streams/how-to-properly-maintain-a-local-copy-of-the-order-book"
+      }
+    ],
+    "scope": "R325 WS source reader, exactly two ordinary static GET requests; no API/market/RPC/account calls; inherited proxy and TLS verification; no redirects or retries"
+  },
+  "market_requests_before_freeze": 0,
+  "root_market_source": {
+    "body_limit": 393216,
+    "deadline_utc": "2026-10-26T05:44:40Z",
+    "limit_bytes": 1572864,
+    "limit_requests": 4,
+    "records": [
+      {
+        "bytes": 20995,
+        "cap_bytes": 393216,
+        "cap_reached": false,
+        "complete": true,
+        "elapsed_seconds": 0.5100533969816752,
+        "headers": {
+          "content-length": "20995",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 05:43:53 GMT",
+          "last-modified": "Fri, 09 Oct 2026 10:39:32 GMT"
+        },
+        "name": "market",
+        "redirects": 0,
+        "retries": 0,
+        "sha256": "d08d75a08e14df73cab45092b598817471d91119de8492850dede9fb4b59f037",
+        "started_utc": "2026-10-26T05:43:52.818982+00:00",
+        "status": 200,
+        "url": "https://www.mexc.com/api-docs/spot-v3/market-data-endpoints/"
+      },
+      {
+        "bytes": 22957,
+        "cap_bytes": 393216,
+        "cap_reached": false,
+        "complete": true,
+        "elapsed_seconds": 0.3662071810103953,
+        "headers": {
+          "content-length": "22957",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 05:44:01 GMT",
+          "last-modified": "Fri, 09 Oct 2026 10:39:32 GMT"
+        },
+        "name": "enums",
+        "redirects": 0,
+        "retries": 0,
+        "sha256": "32d15c9dd6b1d18e7869b57e98d333652803ea529e4d88d69fc958617569c5de",
+        "started_utc": "2026-10-26T05:44:00.811415+00:00",
+        "status": 200,
+        "url": "https://www.mexc.com/api-docs/spot-v3/public-api-definitions"
+      },
+      {
+        "bytes": 47275,
+        "cap_bytes": 393216,
+        "cap_reached": false,
+        "complete": true,
+        "elapsed_seconds": 0.33493952100980096,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 05:44:04 GMT",
+          "last-modified": "Fri, 09 Oct 2026 10:39:32 GMT"
+        },
+        "name": "exchange",
+        "redirects": 0,
+        "retries": 0,
+        "sha256": "7d6b71d60c96afbf299ae68325c002f7531462736d5a6ed64b54681d013ebb39",
+        "started_utc": "2026-10-26T05:44:03.891728+00:00",
+        "status": 200,
+        "url": "https://www.mexc.com/api-docs/spot-v3/market-data-endpoints/exchange-information"
+      },
+      {
+        "bytes": 25199,
+        "cap_bytes": 393216,
+        "cap_reached": false,
+        "complete": true,
+        "elapsed_seconds": 0.3181640169932507,
+        "headers": {
+          "content-length": "25199",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 05:44:04 GMT",
+          "last-modified": "Fri, 09 Oct 2026 10:39:32 GMT"
+        },
+        "name": "book",
+        "redirects": 0,
+        "retries": 0,
+        "sha256": "638f978058ffa9d168050269722b1f0a3c60fc2c0b754276be8bc321e7de6f3c",
+        "started_utc": "2026-10-26T05:44:04.268961+00:00",
+        "status": 200,
+        "url": "https://www.mexc.com/api-docs/spot-v3/market-data-endpoints/order-book"
+      }
+    ]
+  },
+  "source_get_scope_complete": true,
+  "static_gets_total": 6
+}

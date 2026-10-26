@@ -1,0 +1,187 @@
+{
+  "arithmetic": {
+    "checkpoints": [
+      -1000,
+      0,
+      1000
+    ],
+    "modes": [
+      "cross",
+      "isolated"
+    ],
+    "multipliers": [
+      1,
+      100,
+      10000
+    ],
+    "prefixes": [
+      -2000,
+      0,
+      2000
+    ],
+    "sizes": [
+      -1000000,
+      0,
+      1000000,
+      2000000
+    ]
+  },
+  "capital_aggregation": "Declared1:1 USDT/USDC quote-equivalence in invented fixture only; no transfer or actual exchange capital claim",
+  "capital_per_bucket": "5000",
+  "cash_reference_net": "0",
+  "cashflow_controls": [
+    "registered_prefix_model",
+    "same_fixture_no_funding"
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "expected_counts": {
+    "arithmetic": 216,
+    "path_cost_control_accounts": 48,
+    "rounding": 25
+  },
+  "fee_and_base_mapping": "DECLARED INVENTED, not inferred protocol/API mapping or owner fee",
+  "fee_fraction": "0.0002",
+  "fixture_quote_multiplier": 100,
+  "fixture_size_units_per_physical_base": 1000000,
+  "flat_fixture_price": "100",
+  "new_market_requests": 0,
+  "new_prospective_paper_days": 0,
+  "paths": [
+    {
+      "id": "long_hold",
+      "initial_size": 1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          0
+        ],
+        [
+          2000,
+          -1000000
+        ]
+      ]
+    },
+    {
+      "id": "short_hold",
+      "initial_size": -1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          0
+        ],
+        [
+          2000,
+          1000000
+        ]
+      ]
+    },
+    {
+      "id": "increase",
+      "initial_size": 1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          1000000
+        ],
+        [
+          2000,
+          -2000000
+        ]
+      ]
+    },
+    {
+      "id": "flip",
+      "initial_size": 1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          -2000000
+        ],
+        [
+          2000,
+          1000000
+        ]
+      ]
+    },
+    {
+      "id": "close",
+      "initial_size": 1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          -1000000
+        ],
+        [
+          2000,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "isolated_short",
+      "initial_size": -1000000,
+      "mode": "isolated",
+      "updates": [
+        [
+          1000,
+          0
+        ],
+        [
+          2000,
+          1000000
+        ]
+      ]
+    },
+    {
+      "id": "missing_prefix",
+      "initial_size": 1000000,
+      "mode": "cross",
+      "updates": [
+        [
+          null,
+          -1000000
+        ]
+      ]
+    },
+    {
+      "id": "unverified_encoding",
+      "initial_size": 1000000,
+      "input_scope": "unverified_encoded_observation",
+      "mode": "cross",
+      "updates": [
+        [
+          1000,
+          -1000000
+        ]
+      ]
+    }
+  ],
+  "rounding": {
+    "funding_delta": [
+      -1000001,
+      -1,
+      0,
+      1,
+      1000001
+    ],
+    "old_collateral": [
+      0,
+      1,
+      999999,
+      1000000,
+      1000001
+    ]
+  },
+  "scope": "Invented encoded-state/component fixtures only; no actual API units or executable market return",
+  "strategy_trials": 0,
+  "total_capital": "10000"
+}

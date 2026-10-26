@@ -1,0 +1,23 @@
+{
+  "byte_identical": {
+    "requirements_coverage.json": true,
+    "results.json": true,
+    "risk_controls.jsonl": true,
+    "risk_journal_example.jsonl": true,
+    "risk_predictions.jsonl.gz": true,
+    "verified_input.parquet": true
+  },
+  "data_cache_absent_at_start": true,
+  "dependency": "Reuse of already downloaded verified DuckDB1.4.1 extraction; no new package or market requests",
+  "independent_audit": {
+    "historical_entries_blocked": true,
+    "independent_daily_forecast_losses_checked": 1092,
+    "owner_requirements": 100,
+    "scope": "Literal raw-target/finite forecast/loss and report guards; not independent source authentication,bootstrap validity or profitable strategy evidence.",
+    "unknown_net_forecast_preserved": true,
+    "validation_rows": 273
+  },
+  "portable_input_restored_without_download": true,
+  "result_checkout_commit": "40fff4b1006e5311297d6d5027c7b735e07fa018",
+  "scope": "Clean detached checkout using frozen numeric environment; no inherited market cache. Timings are not expected identical."
+}

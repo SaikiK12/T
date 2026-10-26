@@ -1,0 +1,525 @@
+{
+  "API_cash_bridge_verified": false,
+  "actual_cash_decoder": false,
+  "actual_order_allowed": false,
+  "code_identity_sha256": "2e172606f76ab17327f2a2c1e9b65b9980fecb283cf75afc71a1cdebe9b1c269",
+  "contract_sha256": "e4d7b60c78a529e42840329168617e1356d8e0ba17dcf0f5f77643761b8d8c47",
+  "cost_sensitivity": [
+    {
+      "fixture_only": true,
+      "multiple": 1,
+      "net_market_return": null
+    },
+    {
+      "fixture_only": true,
+      "multiple": 2,
+      "net_market_return": null
+    },
+    {
+      "fixture_only": true,
+      "multiple": 3,
+      "net_market_return": null
+    }
+  ],
+  "counts": {
+    "arithmetic": 216,
+    "path_cost_control_accounts": 48,
+    "rounding": 25
+  },
+  "fixtures_sha256": "9a4d2208fe69ffbd88bf22fe60d646863f9cff250ef1280f4314bb6ca399aa0e",
+  "historical_requests_spent": 7757,
+  "inference": "Deterministic component fixtures, no sample inference or profitability claim",
+  "net_market_return": null,
+  "new_market_requests": 0,
+  "new_prospective_paper_days": 0,
+  "observations_sha256": "fca89e806c24ec8b3385fb727d6de5cff71300b67479a3264b16d0e5429dbf61",
+  "old_market_results_reclassified": false,
+  "paths": [
+    {
+      "component_fixture_net": "-0.2400",
+      "component_fixture_return_on_total_capital": "-0.000024",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "-0.2",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.2800",
+      "component_fixture_return_on_total_capital": "-0.000028",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "-0.2",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.3200",
+      "component_fixture_return_on_total_capital": "-0.000032",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "-0.2",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "long_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.1600",
+      "component_fixture_return_on_total_capital": "0.000016",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0.2",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.1200",
+      "component_fixture_return_on_total_capital": "0.000012",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0.2",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.0800",
+      "component_fixture_return_on_total_capital": "0.000008",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0.2",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "short_hold",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.3800",
+      "component_fixture_return_on_total_capital": "-0.000038",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0800",
+      "funding_known_component": "-0.3",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.4600",
+      "component_fixture_return_on_total_capital": "-0.000046",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.1600",
+      "funding_known_component": "-0.3",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1600",
+      "component_fixture_return_on_total_capital": "-0.000016",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.1600",
+      "funding_known_component": "0",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.5400",
+      "component_fixture_return_on_total_capital": "-0.000054",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.2400",
+      "funding_known_component": "-0.3",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.2400",
+      "component_fixture_return_on_total_capital": "-0.000024",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.2400",
+      "funding_known_component": "0",
+      "id": "increase",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0.0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1600",
+      "component_fixture_return_on_total_capital": "-0.000016",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.1600",
+      "funding_known_component": "0.0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1600",
+      "component_fixture_return_on_total_capital": "-0.000016",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.1600",
+      "funding_known_component": "0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.2400",
+      "component_fixture_return_on_total_capital": "-0.000024",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.2400",
+      "funding_known_component": "0.0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.2400",
+      "component_fixture_return_on_total_capital": "-0.000024",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.2400",
+      "funding_known_component": "0",
+      "id": "flip",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1400",
+      "component_fixture_return_on_total_capital": "-0.000014",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "-0.1",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1800",
+      "component_fixture_return_on_total_capital": "-0.000018",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "-0.1",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.2200",
+      "component_fixture_return_on_total_capital": "-0.000022",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "-0.1",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "close",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.1600",
+      "component_fixture_return_on_total_capital": "0.000016",
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0.2",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.1200",
+      "component_fixture_return_on_total_capital": "0.000012",
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0.2",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "0.0800",
+      "component_fixture_return_on_total_capital": "0.000008",
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0.2",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "isolated_short",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0200",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0200",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.0600",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.0600",
+      "funding_known_component": "0",
+      "id": "missing_prefix",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0400",
+      "component_fixture_return_on_total_capital": "-0.000004",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 1,
+      "fees_paid": "0.0400",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.0800",
+      "component_fixture_return_on_total_capital": "-0.000008",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 2,
+      "fees_paid": "0.0800",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": null,
+      "component_fixture_return_on_total_capital": null,
+      "control": "registered_prefix_model",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    },
+    {
+      "component_fixture_net": "-0.1200",
+      "component_fixture_return_on_total_capital": "-0.000012",
+      "control": "same_fixture_no_funding",
+      "cost_multiple": 3,
+      "fees_paid": "0.1200",
+      "funding_known_component": "0",
+      "id": "unverified_encoding",
+      "reopened_identical": true
+    }
+  ],
+  "registry_id": "R322",
+  "reported_mib_spent": "229.85",
+  "scope": "Source-level funding-component adapter only",
+  "source_application_located": true,
+  "strategy_trials": 0,
+  "verdict": "PARTIAL"
+}

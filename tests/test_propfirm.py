@@ -91,6 +91,17 @@ class PropFirmTests(unittest.TestCase):
         rules = self.rules(payout_days=10, split=1.0, **kw)
         return pf.funded_payouts(r, rules, 1.0, n, 60, 1, 1, np.random.default_rng(6))
 
+    def test_r202_topstep_preset_keeps_the_legacy_fixed_cycle(self):
+        rules = pf.PRESETS["topstep_50k"]
+        self.assertEqual(rules.payout_days, 14)
+        self.assertEqual(rules.payout_winning_days, 0)
+
+    def test_funded_only_topstep_preset_cannot_fake_an_evaluation_pass(self):
+        rules = pf.PRESETS["topstep_50k_xfa_standard"]
+        self.assertEqual(rules.targets, ())
+        with self.assertRaisesRegex(ValueError, "funded-only rules"):
+            pf.evaluate([0.001], rules, 1.0, n=1, horizon=1, funded_days=1)
+
     def test_payout_cap_limits_each_payment(self):
         r = np.full(1000, 0.01)                                # +1% a day: 10% profit per 10-day cycle
         free = self.funded(r)
@@ -122,12 +133,48 @@ class PropFirmTests(unittest.TestCase):
 
 
     def topstep_cycle_payout(self, cycles, **changes):
+        # R202's Topstep preset retains its fixed-cycle payout approximation.
         rules = replace(pf.PRESETS["topstep_50k"], **changes)
         paths = [np.asarray(cycle, float)[None, :] / rules.account for cycle in cycles]
         self.assertTrue(all(len(cycle) == rules.payout_days for cycle in cycles))
         with mock.patch.object(pf, "bootstrap", side_effect=paths):
             return pf.funded_payouts(np.zeros(sum(map(len, cycles))), rules, 1.0, 1,
                                      sum(map(len, cycles)), 1, 1, np.random.default_rng(6))[0]
+
+    def topstep_winning_day_payout(self, daily_pnl):
+        rules = pf.PRESETS["topstep_50k_xfa_standard"]
+        path = np.asarray(daily_pnl, float)[None, :] / rules.account
+        with mock.patch.object(pf, "bootstrap", return_value=path):
+            return pf.funded_payouts(np.zeros(path.shape[1]), rules, 1.0, 1, path.shape[1], 1, 1,
+                                     np.random.default_rng(6))[0]
+
+    def test_topstep_pays_after_five_distinct_nonconsecutive_150_days(self):
+        # Five qualifying days need not be consecutive; payout is triggered on the fifth.
+        daily = [150, 0, 150, 0, 150, 0, 150, 0, 150]
+        self.assertAlmostEqual(self.topstep_winning_day_payout(daily), 337.50, places=6)
+
+    def test_topstep_request_day_is_excluded_from_next_five_day_count(self):
+        # The day-5 request resets the counter. The next five days (6-10) earn the next request.
+        # Including the request day in the new window would cause the second payment one day early.
+        self.assertAlmostEqual(self.topstep_winning_day_payout([150] * 10), 843.75, places=6)
+
+    def test_topstep_zero_floor_closes_after_first_payout(self):
+        daily = [150] * 5 + [-500] + [150] * 5
+        run_phase = pf.run_phase
+        outcomes = []
+
+        def capture(*args, **kwargs):
+            outcome = run_phase(*args, **kwargs)
+            outcomes.append(outcome)
+            return outcome
+
+        with mock.patch.object(pf, "run_phase", side_effect=capture):
+            paid = self.topstep_winning_day_payout(daily)
+
+        # Day 5 pays before the loss. The first post-payout floor is the XFA's $0 floor,
+        # so day 6 closes the account and the later recovery days cannot make a second payout.
+        self.assertAlmostEqual(paid, 337.50, places=6)
+        self.assertFalse(outcomes[5].extra["alive"][0])
 
     def test_topstep_retained_cushion_does_not_qualify_after_a_losing_cycle(self):
         first = [4000 / 14] * 14

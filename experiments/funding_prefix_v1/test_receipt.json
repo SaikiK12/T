@@ -1,0 +1,11 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests -t .",
+  "log_sha256": "7dd85b8cecebaa788d9ea9eb60406f5caf9346675c017bb6de5b5b97adcea7d8",
+  "new_hand_fixture_tests": 10,
+  "production_fixture_outcomes_computed": false,
+  "scope": "Full discovery before lab code commit; skip entries are not executed test evidence. CLI dispatch help separately checked; full production reproduction remains after freeze.",
+  "seconds": 179.724,
+  "skip_entries": 2,
+  "success": true,
+  "test_count": 1304
+}

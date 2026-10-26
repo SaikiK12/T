@@ -1,20 +1,38 @@
 # qx: the lab's fast engine (Rust)
 
 qx runs a family of strategies from one TOML spec and decides the family together, so one registry row carries every
-variant's trial count. A lane runs it through `scripts/qx_run.py experiments/<lane>`, which:
-1. verifies the frozen PREREG;
-2. checks every input hash;
-3. runs qx;
-4. writes `results/SUMMARY.md`;
-5. with `--register`, appends the registry row.
+variant's trial count.
+
+For a **new qx lane**, use the verified route after freezing its PREREG and direct inputs:
+
+```sh
+python scripts/build_engine.py   # print the source-matched build plan
+python scripts/build_engine.py --execute --state-dir /tmp/qx-build-state --run-id unique-build-id
+python scripts/qx_run_verified.py experiments/<lane> [--register]
+```
+
+The build receipt binds the executable to the Rust sources and toolchain. The verified runner checks that receipt,
+the frozen input hashes, and provenance manifests for each data folder before and after execution; it also takes a
+per-lane writer lock and retains an immutable calculation receipt. With `--register`, it writes an immutable
+registration attempt before appending the registry row, then a separate outcome linked to that calculation receipt.
+If the process ends between those writes, a missing outcome means registration needs reconciliation; the calculation
+receipt's `SUCCESS` status alone confirms only the calculation. The build state directory must be outside the
+repository, and each `--run-id` must be new. The binary is not archived, and the build is not hermetic.
+
+**Historical lanes only:** a frozen PREREG that names `scripts/qx_run.py` keeps using that runner; do not migrate or
+rewrite its recorded command. `scripts/qx_run.py experiments/<lane>` verifies the historical lane's own frozen
+inputs and produces its summary/registry record as specified by that lane.
 
 ```
-cargo build --release --manifest-path engine/Cargo.toml
+cargo build --locked --release --manifest-path engine/Cargo.toml
 QX_DATA=data engine/target/release/qx events <spec.toml>   # event family
 QX_DATA=data engine/target/release/qx spread <spec.toml>   # cross-venue funding carry family
 QX_DATA=data engine/target/release/qx factors <spec.toml>  # factor report over a factor family
-cargo test --release --manifest-path engine/Cargo.toml     # before every commit that touches engine/
+cargo test --locked --release --manifest-path engine/Cargo.toml     # before every commit that touches engine/
 ```
+
+The three direct `qx` invocations above are low-level diagnostics only. They bypass lane-level PREREG checks and run
+receipts, so do not use them to produce a registered lane result.
 
 | Subcommand | Source | What a strategy is | Decision | Lanes |
 |---|---|---|---|---|

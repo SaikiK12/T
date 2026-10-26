@@ -1,0 +1,33 @@
+{
+  "already_seen": true,
+  "btc_bytes": 402923,
+  "market_acquisition_allowance": {
+    "approved_mib": 250,
+    "approved_requests": 8000,
+    "exact_remaining_bytes": null,
+    "reported_mib_already_spent": "229.85",
+    "requests_already_spent": 7757,
+    "reset_allowed": false
+  },
+  "scope": "One already-held BTC historical hourly-trade-close file and frozen R318/R319 supplied lifecycle/account reports. Not an unseen strategy sample or executable funding-index/quote history.",
+  "sha256": {
+    "data/equations_v2/mexc/prices/BTC_USDT.parquet": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9",
+    "experiments/owner_acceptance_v1/final_full.log": "d543011295b53abcb795b3f7398b48c63ef9c916b98c0e1546f72adadc2f2c3c",
+    "experiments/owner_acceptance_v1/financial_review.md": "f35a25db94af0407fa52551f43494e47a502296e9d0803737be94c6f3bd19fab",
+    "experiments/owner_acceptance_v1/review_identity.json": "cb7d634f1daeeadc072438ded218f8ef038ecdabfcf2d2e5367e2ac05cb015c0",
+    "experiments/owner_acceptance_v1/test_profile.json": "e7a6e912441c16c51a470a5209d6cbd0f1582f1455cf768b0033f5ceb916c981",
+    "experiments/paired_execution_v1/PREREG.md": "659ba380765b239758d7de8f4cea47b53197b88648e12ede240f91b196074fb5",
+    "experiments/paired_execution_v1/PREREG.sha256": "5b9463f6d1a28cb7a5b22a3606354a2d613b1e019bb7833c305121ae6c2165cb",
+    "experiments/paired_execution_v1/code_inputs.json": "c64f8b21c94827d9dd685ceb3644188974281ebc8c1f6e052bd79082ea8600c2",
+    "experiments/paired_execution_v1/data_inputs.json": "149d07faeccdb894ff46ebbbf3e6ae33118f878e553c5c0e733c8c3421747d36",
+    "experiments/paired_execution_v1/fixtures.json": "d579ddc6fe38af295b90cc5637a672b90c236d231f6c6eded2e6f9e10eefac9e",
+    "experiments/paired_execution_v1/results.json": "4091864a7fcbff3a9b2fd314239b2a832e131834e254de6b174f7a3a1396fd4f",
+    "experiments/paired_execution_v1/sources.json": "e8e79ec56932072b78231bb182d31960c18a20dea07c8c007965fed9c658ee17",
+    "experiments/paper_account_v1/PREREG.md": "7d76628ff1b5c7887fca833064b6c2b05d4e72149b51fa639ebe6e7f180e30ef",
+    "experiments/paper_account_v1/PREREG.sha256": "372f13146e113e394b5900e43624af80766ae04db698d01ddb656b60d99461f7",
+    "experiments/paper_account_v1/code_inputs.json": "420b39bc9e0f902eeac2e0e3fd1e042bfc12b65329e8e764d6b96e2bd2453797",
+    "experiments/paper_account_v1/data_inputs.json": "26f6d8a6eccae44e641b6aae871452aa89742f31f94b09c2d411713156b1da75",
+    "experiments/paper_account_v1/observations.jsonl.gz": "fd1a70ba70dc01d882a160dbe4b13724aa99f8f746e66c96f6a9a5da9923486c",
+    "experiments/paper_account_v1/results.json": "a6d58073efc2b7100d6e85959c9b5e3ba48fb55eb448100aec819d8b6801939e"
+  }
+}

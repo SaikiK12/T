@@ -14,8 +14,16 @@ and use a new ID for a new attempt. The legacy .forward.lock is shared. Existing
 runners and their journals retain their own semantics and idempotency rules.
 Notice collection and its three paper readers also share .notices.lock with
 the five-minute notice loop. Each may wait up to 300 seconds before starting;
-its process timeout starts only after acquisition. A busy lock reports BLOCKED,
-never a successful skipped task. The graph records these lock requirements.
+its process timeout starts only after acquisition. R278, R279 and R294 use
+their respective nonblocking .xfund*.lock, matching the shell wrapper. A busy
+lock reports BLOCKED, never a successful skipped task. The graph records these
+lock requirements.
+
+Each task records the code it starts with: the run's snapshot, or its own
+`code` when a commit or an edit came between tasks. A commit changes no code
+bytes and blocks nothing. A change to code bytes while a task runs fails that
+task, since its outputs then have no single code version.
+
 Unlike forward_all.sh, an upstream failure blocks mandatory descendants instead
 of running every remaining command. Independent branches still run. The default
 interpreter is the repository's .venv/bin/python; there is no system fallback.
@@ -27,7 +35,7 @@ It does not place orders or add a new statistical decision.
 
 import argparse
 from contextlib import contextmanager
-from dataclasses import dataclass
+from dataclasses import replace
 from datetime import datetime, timezone
 import fcntl
 import hashlib
@@ -45,81 +53,15 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SEED_SHA256 = "3ea686670c35c9946a560cc29cd1087b79cbeef40a78208840ab3b3e86aa0ec5"
 _RUN_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}\Z")
+# The orchestrator that runs is the one loaded now, whatever the file holds later.
+_LOADED_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 
 
-@dataclass(frozen=True)
-class Requirement:
-    path: str
-    sha256: str | None = None
-
-
-@dataclass(frozen=True)
-class Task:
-    name: str
-    argv: tuple[str, ...]
-    needs: tuple[str, ...] = ()
-    optional: tuple[str, ...] = ()
-    timeout: float = 900
-    files: tuple[Requirement, ...] = ()
-    shared_lock: str | None = None
-    lock_wait: float = 300
-
-
-def forward_tasks(python=".venv/bin/python"):
-    """Edges follow direct reads, not the old shell command order.
-
-    R215's R214 reference comparison is conditional (forward_mexc.score), so
-    its failure must not stop the MEXC book. R218 unconditionally reads R215's
-    tickets after scoring (forward_mexc_sq.main), so R215 is mandatory there.
-    R220 builds eligibility/ranks from R200 (forward_carry.journal_grid); it
-    does not need R215. R224 reads only R200's latest signal universe. The
-    point-in-time recorders read nothing from the lanes and run first; the
-    digest reads only their files and runs last. R266 reads only the recorders'
-    calendar snapshot and ticker files, so they are optional for it. R268 reads the
-    notice journal and ticker files the same way and runs right after them; so
-    does R270. R285 is derived from the other lanes' journals (and from R278/R279,
-    which the shell runs under their own locks), so all of them are optional for it.
-    """
-    def task(name, script, needs=(), optional=(), timeout=900, files=()):
-        lock = ".notices.lock" if name in {"REC_NOTICES", "R268", "R270", "R272"} else None
-        return Task(name, (python, "scripts/" + script), needs, optional, timeout, files, lock)
-
-    return (
-        task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
-        task("REC_FUNDING", "record_funding_board.py", timeout=120),
-        task("REC_DERIBIT", "record_deribit_chain.py", timeout=120),
-        task("REC_LIGHTER", "record_lighter_book.py", timeout=600),   # backgrounded in forward_all.sh
-        task("REC_DEX", "record_dex_prices.py", timeout=60),     # starts the 5-minute daemon if it is down
-        task("REC_WALLETS", "record_wallets.py", timeout=120),
-        task("REC_NOTICES", "record_notices.py", timeout=300),
-        task("REC_UNLOCKS", "record_unlocks.py", timeout=300),
-        task("REC_TAPE", "record_tape.py", timeout=60),
-        task("REC_NEWS", "record_news.py", timeout=60),
-        task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
-        task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
-        task("R272", "forward_announce.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
-        task("R200", "forward_tick.py", timeout=1500),
-        task("R214", "forward_delayed.py", ("R200",)),
-        task("R215", "forward_mexc.py", ("R200",), ("R214",),
-             files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
-        task("R224", "record_mexc_depth.py", ("R200",), timeout=300,
-             files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
-        task("R218", "forward_mexc_sq.py", ("R200", "R215")),
-        task("R220", "forward_carry.py", ("R200",)),
-        task("R221", "forward_seq.py", ("R215", "R218"), timeout=300),
-        task("R225", "forward_vt.py", ("R215", "R218"), timeout=300,
-             files=(Requirement("experiments/sizing_v1/results/daily.npz", SEED_SHA256),)),
-        task("R266", "forward_unlocks.py", (), ("REC_TICKER", "REC_UNLOCKS"), timeout=600),
-        task("R285", "forward_xbook.py", (), ("R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
-        task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
-        task("PANEL", "panel.py", ("LAG",), timeout=120),
-        task("CATALOG", "catalog.py", (), ("PANEL",), timeout=60),
-        task("DASH", "dashboard_data.py", (), ("LAG", "PANEL", "REC_FUNDING"), timeout=120),
-        task("REC_DIGEST", "record_digest.py", (), ("REC_TICKER", "REC_FUNDING", "REC_NOTICES", "REC_UNLOCKS"),
-             timeout=300),
-    )
+# Compatibility imports keep existing callers on the same task types and graph.
+sys.path.insert(0, str(ROOT))
+from lab.operations import Requirement, Task, forward_tasks, SEED_SHA256  # noqa: E402
+from lab import runtime  # noqa: E402
 
 
 def interpreter(root, override=None):
@@ -153,6 +95,8 @@ def ordered_tasks(tasks, selected=None):
             raise ValueError("timeouts must be finite and positive")
         if not math.isfinite(t.lock_wait) or t.lock_wait < 0:
             raise ValueError("shared-lock waits must be finite and nonnegative")
+        if any(c not in runtime.CHECKS for c in t.checks):
+            raise ValueError("unknown observation check")
         if t.shared_lock is not None and not re.fullmatch(r"\.[A-Za-z0-9_-]+\.lock", t.shared_lock):
             raise ValueError("shared lock must be a root-local dot lock filename")
         if set(t.needs) & set(t.optional) or any(n not in by_name for n in t.needs + t.optional):
@@ -197,9 +141,11 @@ def code_version(root):
     def git(*args):
         return subprocess.check_output(("git", "-C", str(root), *args), stderr=subprocess.PIPE)
     head = git("rev-parse", "HEAD").decode().strip()
-    dirty = git("status", "--porcelain", "--untracked-files=all", "--", "lab", "scripts").decode()
+    scope = ("lab", "scripts", "engine/src", "engine/Cargo.toml", "engine/Cargo.lock",
+             "dashboard/index.html", "requirements-test.in", "requirements-test.lock", ".python-version", "rust-toolchain.toml")
+    dirty = git("status", "--porcelain", "--untracked-files=all", "--", *scope).decode()
     paths = sorted(set(p for p in git("ls-files", "--cached", "--others", "--exclude-standard",
-                                    "-z", "--", "lab", "scripts").split(b"\0") if p))
+                                    "-z", "--", *scope).split(b"\0") if p))
     h = hashlib.sha256()
     for raw in paths:
         path = root / os.fsdecode(raw)
@@ -207,10 +153,14 @@ def code_version(root):
             raise ValueError("tracked code resolves outside repository")
         digest = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else "MISSING"
         h.update(raw + b"\0" + digest.encode() + b"\0")
-    wrapper_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     return {"commit": head, "code_sha256": h.hexdigest(), "code_files": len(paths),
             "dirty_code": dirty.splitlines(),
-            "orchestrator_sha256": wrapper_sha}
+            "orchestrator_sha256": _LOADED_SHA256}
+
+
+def same_code(a, b):
+    """Same code bytes; the commit and git status may differ."""
+    return (a["code_sha256"], a["code_files"]) == (b["code_sha256"], b["code_files"])
 
 
 def plan(tasks, root):
@@ -220,11 +170,12 @@ def plan(tasks, root):
                       "optional": list(t.optional), "timeout_seconds": t.timeout,
                       "shared_lock": {"path": t.shared_lock, "wait_seconds": t.lock_wait}
                                      if t.shared_lock else None,
-                      "required_files": [{"path": f.path, "sha256": f.sha256} for f in t.files]})
+                      "required_files": [{"path": f.path, "sha256": f.sha256} for f in t.files],
+                      "checks": list(t.checks)})
     encoded = json.dumps(nodes, sort_keys=True, separators=(",", ":")).encode()
     return {"schema_version": 1, "root": str(root), "code": code_version(root),
             "graph_sha256": hashlib.sha256(encoded).hexdigest(), "tasks": nodes,
-            "success_meaning": "process exit zero; data freshness/completeness and statistical validity unverified"}
+            "success_meaning": "process exit zero plus declared checks only; statistical eligibility unverified"}
 
 
 def utc_now():
@@ -254,7 +205,7 @@ class SharedLockTimeout(TimeoutError):
 
 @contextmanager
 def shared_task_lock(task, root):
-    """Match the shell/notice-loop flock; wait time is separate from process timeout."""
+    """Match shared shell locks; wait time is separate from process timeout."""
     if task.shared_lock is None:
         yield 0.0
         return
@@ -269,7 +220,7 @@ def shared_task_lock(task, root):
             except BlockingIOError:
                 remaining = task.lock_wait - (time.monotonic() - start)
                 if remaining <= 0:
-                    raise SharedLockTimeout("shared notice lock wait expired")
+                    raise SharedLockTimeout(f"shared lock {task.shared_lock} wait expired")
                 time.sleep(min(.05, remaining))
         yield time.monotonic() - start
     finally:
@@ -277,7 +228,7 @@ def shared_task_lock(task, root):
 
 
 def run_process(task, root, log_path):
-    """Never start a notice reader/writer without its shared lock."""
+    """Never start a shared-lock task without acquiring its lock."""
     start = time.monotonic()
     try:
         with shared_task_lock(task, root) as waited:
@@ -285,48 +236,35 @@ def run_process(task, root, log_path):
             if task.shared_lock:
                 result["lock_wait_seconds"] = waited
             return result
-    except SharedLockTimeout:
+    except SharedLockTimeout as exc:
+        reason = str(exc)
         with log_path.open("xb") as log:
-            log.write(b"Task not started: shared notice lock wait expired.\n")
-        return {"status": "BLOCKED", "returncode": None, "reason": "shared notice lock wait expired",
+            log.write(f"Task not started: {reason}.\n".encode())
+        return {"status": "BLOCKED", "returncode": None, "reason": reason,
                 "lock_wait_seconds": time.monotonic() - start}
 
 
 def _run_process(task, root, log_path):
-    """Only terminate the process group created for this task, including on interruption."""
-    with log_path.open("xb") as log:
-        proc = subprocess.Popen(task.argv, cwd=root, stdout=log, stderr=subprocess.STDOUT,
-                                start_new_session=True, stdin=subprocess.DEVNULL)
-        try:
-            return {"status": "SUCCESS" if proc.wait(timeout=task.timeout) == 0 else "FAILED",
-                    "returncode": proc.returncode}
-        except subprocess.TimeoutExpired:
-            try:
-                os.killpg(proc.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            proc.wait()
-            return {"status": "TIMED_OUT", "returncode": proc.returncode,
-                    "reason": "task timeout"}
-        except BaseException:
-            try:
-                os.killpg(proc.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            proc.wait()
-            raise
+    return runtime.run_process(task, root, log_path)
 
 
 def run_tasks(tasks, root, state_dir, run_id, selected=None):
     """Execute a validated DAG sequentially; failures block only mandatory descendants."""
-    tasks = ordered_tasks(tasks, selected)
     root, state_dir = Path(root).resolve(), Path(state_dir).resolve()
+    # The existing views consume this same run store, including our RUNNING
+    # report. No second daemon or hand-maintained status inventory is needed.
+    tasks = tuple(replace(t, argv=(*t.argv, "--jobs-state-dir", str(state_dir)))
+                  if len(t.argv) > 1 and t.argv[1] in ("scripts/dashboard_data.py", "scripts/panel.py")
+                  else t for t in tasks)
+    tasks = ordered_tasks(tasks, selected)
     if not _RUN_ID.fullmatch(run_id):
         raise ValueError("run ID must be 1-80 letters, numbers, underscores or hyphens")
     if state_dir.is_relative_to(root):
         raise ValueError("status directory must be outside the repository")
     report = plan(tasks, root)
     report.update(run_id=run_id, started_at=utc_now(), finished_at=None, status="RUNNING")
+    report["environment"] = runtime.environment(root)
+    report["environment_scope"] = "orchestrator process; child package environments not independently verified"
     for node in report["tasks"]:
         node["status"] = "PENDING"
     by_name = {n["name"]: n for n in report["tasks"]}
@@ -352,16 +290,16 @@ def run_tasks(tasks, root, state_dir, run_id, selected=None):
                 node["optional_unavailable"] = [n for n in task.optional
                                                   if n not in by_name or by_name[n]["status"] != "SUCCESS"]
                 try:
-                    unchanged = code_version(root) == report["code"]
-                    code_error = None
-                except (OSError, ValueError, subprocess.CalledProcessError) as exc:
-                    unchanged, code_error = False, type(exc).__name__
+                    code = code_version(root)
+                except (OSError, ValueError, subprocess.CalledProcessError):
+                    code = None
                 if blocked:
                     node.update(status="BLOCKED", reason="mandatory upstream task failed", blocked_by=blocked)
-                elif not unchanged:
-                    node.update(status="BLOCKED", reason="code snapshot unavailable" if code_error
-                                else "code changed since run snapshot")
+                elif code is None:
+                    node.update(status="BLOCKED", reason="code snapshot unavailable")
                 else:
+                    if code != report["code"]:
+                        node["code"] = code
                     invalid = []
                     for f in task.files:
                         path = root / f.path
@@ -372,13 +310,24 @@ def run_tasks(tasks, root, state_dir, run_id, selected=None):
                     if invalid:
                         node.update(status="BLOCKED", reason="required input unavailable", invalid_files=invalid)
                     else:
+                        node["preflight"] = [runtime.check(c, root, phase="before") for c in task.checks]
+                        if any(not r["usable"] for r in node["preflight"]):
+                            node.update(status="BLOCKED", data_state="INCOMPLETE", reason="journal preflight failed; no writer started")
+                            write_status(status_path, report)
+                            continue
                         node.update(status="RUNNING", started_at=utc_now(), log=task.name + ".log")
                         write_status(status_path, report)
                         start = time.monotonic()
                         try:
                             node.update(run_process(task, root, run_dir / node["log"]))
+                            node["observations"] = [runtime.check(c, root) for c in task.checks]
+                            node["data_state"] = ("COMPLETE" if task.checks and
+                                                  all(r["usable"] for r in node["observations"])
+                                                  else "UNVERIFIED" if not task.checks else "INCOMPLETE")
+                            if node["status"] == "SUCCESS" and node["data_state"] == "INCOMPLETE":
+                                node.update(status="FAILED", reason="process exited zero but observation check failed")
                             after = code_version(root)
-                            if after != report["code"]:
+                            if not same_code(after, code):
                                 node.update(status="FAILED", reason="code changed during task", code_at_finish=after)
                         except OSError as exc:
                             node.update(status="FAILED", returncode=None, reason="process start or log error: " + str(exc))

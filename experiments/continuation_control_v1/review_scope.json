@@ -1,0 +1,24 @@
+{
+  "counterexample": "110/110 wallets, refs100->120,1percent buffer,terminal funding0/10: old code hid short-wallet100 below121.2 incoming requirement by closing first. Incoming risk guard added before every trade/terminal close.",
+  "current_files_sha256": {
+    "lab/carry_control.py": "bb192b470ccae257d6f7799d65ca7ef376905caa4806926edbcf273cc758fd01",
+    "lab/continuation_paper.py": "3a0696c7414904edc3e902f22d4863c1a3a60513b167152d7d7355cb48b8bdeb",
+    "tests/test_carry_control.py": "65369d347c937fe73c5fc861c6b6f6e20a3a817a1275973a8745d3e649d40540",
+    "tests/test_continuation_oracle.py": "cea5522a4fa38dd6e847624bbe3a09761191f0570c403ebed136d36fcf448ad2",
+    "tests/test_continuation_paper.py": "0a42729d5b46df8e7be74c122f5e518ea6cc807038c49048b739275713ab2cb0"
+  },
+  "later_changes_not_peer_signed_off": [
+    "explicit depth capacities/minima",
+    "fixed2x reference-plan bridge and journals",
+    "maximum-exposure passive control",
+    "full production family and rational enumeration auditor"
+  ],
+  "peer_full_current_implementation_signoff": false,
+  "peer_primary_read_complete": true,
+  "peer_recheck_report": "Counterexample and rare1e-6 breach/shared-action/unknown-branch checks corrected; source-independent round-trip identity matched1x/2x/3x at reviewed kernel revision.",
+  "peer_rechecked_kernel_sha256": "9d16cf774b992d4bd149653065d267810109b631db2384c0e97e61f95fe10369",
+  "production_family_executed_before_freeze": false,
+  "review_interruption": "Separate reviewer hit a usage limit during follow-up; no substitute full signoff is claimed.",
+  "root_hand_tests": 22,
+  "scope": "Limited separate review plus hand fixtures; full conditional-family audit still required after frozen code/input identity. No actual input,alpha,market or prospective approval."
+}

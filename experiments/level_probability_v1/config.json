@@ -1,0 +1,51 @@
+{
+  "calibration_end": "2026-01-01",
+  "calibration_start": "2025-09-01",
+  "limitations": [
+    "All dates/assets/data already seen by other studies; no fresh out-of-sample market discovery or prospective day.",
+    "Hourly CLOSE extrema/proximity and delayed entry-relative hourly CLOSE barriers; NOT intrabar support first-touch/MSNR/fill probabilities. Actual intrabar both-barrier ordering is unidentified.",
+    "Trade closes plus nonzero volume are historical activity proxies, not executable bid/ask/depth, on-time reception or latency certification.",
+    "Funding intervals require both adjacent cycle fields to explain the exact gap. Traded-close funding notional is a proxy, not fair/index verified cash.",
+    "Fixed4snapshot asset universe includes BTCcontrol and3alts, no point-in-time universe or lot/rule/ownerfee vintage.",
+    "Fixed8bp/side includes fee/spread/impact as ONE lumped proxy, no extra spread counted; actual capital-dependent cost/capacity unknown.",
+    "Six fixed policies including cash; no calibration/validation winner, tuning, temperature change, leverage-up or cost-tier entry rescue.",
+    "10000USDT shared once acrosscoins per alternative account, at most2000 initialgross; markedgross, intrahorizon margin/liquidation and realized risk equivalence not validated.",
+    "Funding posts in aggregate at exit; actual intrahorizon margin/equity not validated. Capital stops use known chronological3xshadowcash/100percent initial-notional reserves at alltiers.",
+    "Feature gaps, entry failures, path gaps, funding unknowns and inactive days retained. Admitted unknown exposure/cash blocks newrisk; unentered candidate unknown cannot poison account.",
+    "Training financial-known subset differs from price-label scoring coverage. Counts and censoring reported; missingness can bias both.",
+    "Brier/logloss combine reliability and discrimination; fixedbins report actual frequencies/counts, not calibrated confidence intervals.",
+    "Fixed.25sigma decision reserve is heuristic, NOT a calibrated error bound. Joint14day circular shifts retain shared calendars but do not establish exchangeability or a valid pvalue.",
+    "Prior R321 interval controls failed their predeclared acceptance. No inference, program-wide significance, positive expected net or activation is granted here.",
+    "Any promising result needs new frozen candidate and genuinely on-time prospective quotes/values/risk evidence before admission."
+  ],
+  "parameters": {
+    "capital_admission_shadow": 3,
+    "cell_min": 20,
+    "cell_shrinkage": 20,
+    "class_payoff_min": 5,
+    "cost_per_side_bp": 8,
+    "decision": "00:00UTC",
+    "entry_delay_hours": 1,
+    "fixed_decision_cost_multiple": 2,
+    "fixed_decision_error_reserve_sigma": 0.25,
+    "global_min": 50,
+    "horizon_hours": 12,
+    "initial_capital": 10000,
+    "level_lookback_hours": 72,
+    "near_level_sigma": 0.25,
+    "notional_per_coin": 500,
+    "volatility_target_hours": 12
+  },
+  "source_end": "2026-10-01",
+  "source_start": "2025-04-27",
+  "symbols": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "WIF"
+  ],
+  "train_end": "2025-09-01",
+  "train_start": "2025-05-01",
+  "validation_end": "2026-10-01",
+  "validation_start": "2026-01-01"
+}

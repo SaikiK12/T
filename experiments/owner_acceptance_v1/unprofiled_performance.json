@@ -1,0 +1,111 @@
+{
+  "cold_disk_benchmark": false,
+  "duckdb_state": "AVAILABLE_PINNED_VERSION",
+  "export": {
+    "bytes": 311308,
+    "clock_role": "source bar open milliseconds; not first-seen receive/execution time",
+    "columns": [
+      "t",
+      "close",
+      "vol",
+      "amount"
+    ],
+    "native_memory_measured": false,
+    "path": "verified_input.parquet",
+    "price_role": "historical traded hourly close; not executable bid/ask/funding index",
+    "roundtrip_exact": true,
+    "rows": 12528,
+    "sha256": "f9b591e43f19f5e94033618dd889ee92bdafc7b467415ace086915e58c1966f4",
+    "source_sha256": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9"
+  },
+  "frame_bytes": 401028,
+  "input_file_bytes": 402923,
+  "input_sha256": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9",
+  "methods": [
+    {
+      "equal_values_types_missing_order": true,
+      "median_ns": 3568514,
+      "method": "pandas",
+      "nanosecond_runs": [
+        3568514,
+        4352465,
+        3923050,
+        3256325,
+        2608083
+      ],
+      "python_traced_peak_bytes": [
+        33559600,
+        33559600,
+        33559600,
+        33559600,
+        33559600
+      ]
+    },
+    {
+      "equal_values_types_missing_order": true,
+      "median_ns": 2604568,
+      "method": "pyarrow",
+      "nanosecond_runs": [
+        2604568,
+        2854084,
+        2862857,
+        2465343,
+        2398324
+      ],
+      "python_traced_peak_bytes": [
+        33559600,
+        33559600,
+        33559600,
+        33559600,
+        33559600
+      ]
+    },
+    {
+      "equal_values_types_missing_order": true,
+      "median_ns": 1088921,
+      "method": "content_cache",
+      "nanosecond_runs": [
+        1228675,
+        1362182,
+        1088921,
+        1020961,
+        994342
+      ],
+      "python_traced_peak_bytes": [
+        33559600,
+        33559600,
+        33559600,
+        33559600,
+        33559600
+      ]
+    },
+    {
+      "equal_values_types_missing_order": true,
+      "median_ns": 2638627,
+      "method": "duckdb",
+      "nanosecond_runs": [
+        2487355,
+        2652368,
+        2305909,
+        3359406,
+        2638627
+      ],
+      "python_traced_peak_bytes": [
+        33559600,
+        33559600,
+        33559600,
+        33559600,
+        33559600
+      ]
+    }
+  ],
+  "rows": 12528,
+  "rust_port": "NOT_SELECTED: this study measures I/O and existing vectorized/native arithmetic; no demonstrated CPU kernel justifying a new Rust implementation.",
+  "scope": "One402923-byte held numeric table; every path hashes current input, cache returns an independent copy. Python traced allocation excludes much native memory; no RSS claim.",
+  "versions": {
+    "duckdb": "1.4.1",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0"
+  },
+  "warm_runs": 5
+}

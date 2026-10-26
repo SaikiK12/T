@@ -1,0 +1,1033 @@
+{
+  "definition_done": "The received requirement has concrete inspectable evidence in its stated scope and no material omitted prerequisite; wider market use remains separate. Missing required data,time or owner attestations never become verified.",
+  "execution_phase": "Frozen acceptance assertions/input mapping; generated requirements_coverage.json is emitted only after the run and actual full-test/performance checks.",
+  "items": [
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_account.py",
+        "lab/paired_execution.py",
+        "lab/paper_controls.py"
+      ],
+      "id": 1,
+      "reason": "Le compte R318 reçoit positions,prix,frais et financement ; R319 y ajoute les exécutions partielles, R320 y raccorde les limites. Cas inventés uniquement.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/audit.json",
+        "tests/test_paper_account.py"
+      ],
+      "id": 2,
+      "reason": "Prix réalisé,financement,frais et coût implicite du carnet sont séparés ; le spread embarqué dans les prix ne devient pas une seconde charge.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_account.py"
+      ],
+      "id": 3,
+      "reason": "Gain réalisé et valeur de liquidation ouverte sont séparés ; prix de sortie/frais manquants restent inconnus.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 4,
+      "reason": "Le capital initial immobilisé est explicite par plateforme/devise. Aucun netting USDT/USDC ou gain de dépôt ; le retour global avec FX inconnu reste inconnu.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/fee_evidence.py",
+        "tests/test_fee_evidence.py"
+      ],
+      "id": 5,
+      "reason": "Import local typé de justificatifs de frais prévu et testé ; aucune clé ni valeur secrète. Authenticité des justificatifs fournis reste au propriétaire.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/fee_evidence.py",
+        "tests/test_fee_evidence.py",
+        "experiments/paper_account_v1/FINDINGS.md"
+      ],
+      "id": 6,
+      "reason": "Les contrats de preuve de frais conservent portée,dates,conditions et quota consommé ; une promotion non étayée ne devient pas zéro frais.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/FINDINGS.md"
+      ],
+      "id": 7,
+      "reason": "Stress de sortie fixes R318/R319 avec taille,capital et coûts1x/2x/3x identiques ; prix futurs non observés conservés comme hypothèses.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paper_account_v1/audit.json"
+      ],
+      "id": 8,
+      "reason": "Petites tailles et arrondis/minimums vérifiés sur les contrats et carnets déjà détenus. Portée contemporaine limitée, aucune conformité historique supposée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/execution_envelope.py"
+      ],
+      "id": 9,
+      "reason": "Balayage de plusieurs niveaux et limites maxVol comparés à tailles fixes ; capacité affichée seulement conditionnelle aux vieux carnets.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "experiments/equations_v2/FINDINGS.md"
+      ],
+      "id": 10,
+      "reason": "Comparaisons R318/R319 à quantité/capital/coûts fixes disponibles. Comparaison universelle entre stratégies à risque comparable bloquée sans comptes et données exécutables complètes.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/market_readiness.py"
+      ],
+      "id": 11,
+      "reason": "Le pont R318 réutilise les clocks de réception et carnets R313-R316 ; aucune capture ancienne ne devient une simulation à temps. Des entrées exploitables complètes manquent.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 12,
+      "reason": "Prix index Lighter effectivement utilisé au bon événement non acquis ; inspecter le code du protocole ne fournit pas une preuve de valeur de règlement.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/market_readiness.py"
+      ],
+      "id": 13,
+      "reason": "Disponibilité simultanée testée sur72échéances déjà observées ; accès/sessions historiques complets des deux marchés encore inconnus.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/stream_quotes_v1/FINDINGS.md",
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 14,
+      "reason": "Âges,skew et délais de collecte sont conservés. Le délai réel soumission→exécution reste inconnu ; pas de remplacement par le délai HTTP.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/market_readiness.py",
+        "experiments/funding_values_v1/sources.json"
+      ],
+      "id": 15,
+      "reason": "Les contrats de sessions exigent une preuve explicite ; l’existence d’un ticker métal/indice ne certifie pas une session ouverte. Calendriers applicables encore absents.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/market_readiness.py",
+        "experiments/equations_v2/input_quality.json"
+      ],
+      "id": 16,
+      "reason": "Identités/base/quote/multiplicateur et restrictions des instruments détenus sont conservés ; certification point-in-time de tout l’univers et des indices traditionnels encore ouverte.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/funding_values.py",
+        "registry/methods.csv"
+      ],
+      "id": 17,
+      "reason": "Pas de série complète annoncée→appliquée avec prix notionnels liés aux événements ; aucune erreur de prévision de financement inventée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "lab/stream_recovery.py",
+        "tests/test_stream_recovery.py"
+      ],
+      "id": 18,
+      "reason": "Reconnexion,reset de séquence,trous et journal après reprise testés sur événements inventés ; les trous conservés ne sont pas interpolés.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/acquisition_budget.py",
+        "tests/test_acquisition_budget.py",
+        "./results.json"
+      ],
+      "id": 19,
+      "reason": "Budget cumulatif persistant ;7757requêtes et229.85MiB précédemment rapportés non remis à zéro. Octets restants exacts inconnus à partir du seul arrondi.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "tests/test_paper_admission.py"
+      ],
+      "id": 20,
+      "reason": "Adaptateur séparé des anciens journaux : figures natives intactes, argent manquant jamais zéro,étiquettes ontime/net insuffisantes pour la preuve stricte.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "registry/methods.csv"
+      ],
+      "id": 21,
+      "reason": "R311 reste224/273jours,choix initial perdant à2x/3x ; ne pas relancer ce jeu incomplet. Quotes/sessions/notionnels exacts requis.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "docs/PRIMARY_EQUATIONS.md"
+      ],
+      "id": 22,
+      "reason": "Créneau de financement testable conservé ; inclusion/entrée/sortie ne peuvent être scorées avec quotes et règlement incomplets.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "experiments/paired_execution_v1/sources.json"
+      ],
+      "id": 23,
+      "reason": "Spot+perp conservé dans la queue ; pas de prix spot exécutables synchronisés ni preuve de coût/capital complet. Ne pas réutiliser la comptabilité futures comme cash spot.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "experiments/pairs_v1/FINDINGS.md"
+      ],
+      "id": 24,
+      "reason": "Les variantes exactes de retour à la moyenne restent ouvertes avec leurs résultats négatifs précédents ; R320 ne choisit pas un gagnant de validation.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "docs/PRIMARY_EQUATIONS.md"
+      ],
+      "id": 25,
+      "reason": "M410 et le parent carry ont un horizon et une sortie terminale ; état conserver/réduire/fermer non validé faute des entrées exécutables fiables.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "lab/microstructure.py"
+      ],
+      "id": 26,
+      "reason": "Pression des transactions distincte du carnet conservée ; flux exhaustif horodaté et délais d’exécution insuffisants pour un test net.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "lab/microstructure.py"
+      ],
+      "id": 27,
+      "reason": "Déséquilibre des quantités conservé séparément ;72échéances anciennes ne constituent pas un historique prédictif complet.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/sources.json"
+      ],
+      "id": 28,
+      "reason": "Lifecycle maker→hedge et remplissages partiels sont testés ; aucune probabilité de remplissage/position dans la file ni gain maker net n’est validé.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "registry/methods.csv"
+      ],
+      "id": 29,
+      "reason": "Calendrier primaire FOMC2026/2027 et dates des minutes localisés ; annonces/minutes doivent avoir leurs propres clocks de première publication avant réaction de prix.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "registry/methods.csv"
+      ],
+      "id": 30,
+      "reason": "Les horizons préfixés R310/R311 restent conservés. Pas de nouveau choix de durée sur la validation ni comparaison prétendument exécutable sans données fiables.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py",
+        "./results.json"
+      ],
+      "id": 31,
+      "reason": "Seuil gross−coûts1x/2x/3x−réserve−erreur calibrée testé. Variance ou erreur inconnue ne peut être déguisée en gain prévu en devise.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "./risk_predictions.jsonl.gz",
+        "scripts/check_owner_acceptance.py"
+      ],
+      "id": 32,
+      "reason": "R320 compare causalement le composant EWMA72h existant aux moyennes RV1/7/30sur BTC détenu. HAR/GARCH et panier point-in-time restent non validés.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/apsi.py",
+        "registry/methods.csv"
+      ],
+      "id": 33,
+      "reason": "APSI complet top20 à quote-volume point-in-time non implémenté/mesuré. Un test BTC univarié ne valide pas son utilité de panier ou un VIX maison.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "lab/paper_controls.py"
+      ],
+      "id": 34,
+      "reason": "Erreurs RV et incertitude locale mesurées ; elles ne sont pas des erreurs de PnL en devise. Le filtre d’entrée reste bloqué sans calibration de gain net.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "registry/rounds.csv"
+      ],
+      "id": 35,
+      "reason": "Quatre modèles comptés,référence fixée,multiplicité locale des trois comparaisons et total du programme conservés. Pas de garantie globale après la recherche adaptative passée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "./results.json"
+      ],
+      "id": 36,
+      "reason": "Les dates BTC et R311 sont déjà vues. Zéro observation prospective nouvellement scorée ; réserve future exige protocole admissible figé avant réception.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "lab/volatility_validation.py",
+        "./results.json"
+      ],
+      "id": 37,
+      "reason": "Blocs contigus7/14jours et diagnostic nul AR1 dépendant fixés avant résultats. Limites de calibration et incertitude Monte-Carlo affichées,aucune iid supposée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "docs/CONTRACT_LIFECYCLE_INTEGRITY.md"
+      ],
+      "id": 38,
+      "reason": "Univers du carry conditionné aux survivants et historique des disparitions incomplet. La source des27crypto exige explicitement actifs disparus et actions de cotation.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "lab/stress.py"
+      ],
+      "id": 39,
+      "reason": "Tous les jours et nulls sont conservés ; contributions extrêmes RV examinées sans les retirer. Rapports de stress historiques disponibles,mais pas tout PnL exécutable validé.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "experiments/paper_account_v1/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 40,
+      "reason": "Références simples conservées,RV7jours préchoisi et cash/comptes fictifs séparés. Un portefeuille passif à capital/risque réellement comparables demeure à valider.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json"
+      ],
+      "id": 41,
+      "reason": "Deux pages publiques Quantpedia lues avec règles/coûts/taille,ambiguïtés et liens exacts ; papiers SSRN et abonnements non reçus,aucune preuve alpha importée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 42,
+      "reason": "Intake officiel LEAN/QC conservé avec scopes exacts et écarts ; exécution complète des stratégies/source environnements non réalisée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 43,
+      "reason": "QuantStart ciblé répond503,article non reçu ; aucun contournement. Anciennes extractions restent séparées de corpus Financial Hacker non lus.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "registry/methods_aliases.csv"
+      ],
+      "id": 44,
+      "reason": "Extraction Blueshift déjà réconciliée en neuf experts/allocations/contrôles ; différences explication/code et limites des deux portages synthétiques conservées.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "docs/PRIMARY_EQUATIONS.md",
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 45,
+      "reason": "Lectures légales bornées/abstraits/citations reçus conservés ; pas de revendication d’avoir lu les livres ou papiers liés en entier.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "lab/funding_values.py"
+      ],
+      "id": 46,
+      "reason": "Unités/règle notionnelle/ordre financement puis oracle et limites du SDK/protocole documentés ; prix index effectif lié à l’événement encore absent.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "experiments/owner_acceptance_v1/sources.json"
+      ],
+      "id": 47,
+      "reason": "Docs officielles frais/types/latences/sessions extraites jusqu’à la portée reçue ; conditions du compte,API et sessions non certifiées globalement.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "registry/methods.csv"
+      ],
+      "id": 48,
+      "reason": "Calendrier Fed primaire avec versions et dates de minutes ; pas de prétendue heure de première publication ni ensemble CPI/NFP/EIA complet.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "lab/paper_controls.py"
+      ],
+      "id": 49,
+      "reason": "Pages publiques Jane Street/Citadel lues : recherche/risque/exécution intégrés appliqués à notre compte commun. Ni équation privée ni capital/latence institutionnels supposés.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "docs/REELS_TRANSCRIPT.md"
+      ],
+      "id": 50,
+      "reason": "Périmètre reçu des vidéos déjà énuméré dans l’intake ; transcriptions privées/indisponibles non inventées. Accès manquant reste explicite.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "./performance.json"
+      ],
+      "id": 51,
+      "reason": "Coût temps/mémoire Python des lectures mesuré sur un fichier402923octets ; limites mémoire native et portée unique explicites. Pas de profil prétendument complet de toutes les études.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "experiments/owner_acceptance_v1/benchmark_environment.json"
+      ],
+      "id": 52,
+      "reason": "Pandas/Arrow/DuckDB1.4.1/cache comparés sur valeurs,types,NaN et ordre identiques avec cinq passages chauds fixés. Aucun changement de moteur global présumé.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "scripts/benchmark_evaluation.py"
+      ],
+      "id": 53,
+      "reason": "Pas de port Rust sans calcul CPU coûteux démontré et bénéfice mesuré ; la comparaison porte sur lecture/hash et utilise déjà des noyaux natifs. Complexité évitée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "not_selected"
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "lab/microstructure.py"
+      ],
+      "id": 54,
+      "reason": "hftbacktest non installé/exécuté dans cette étude ; une lecture de documentation ou nos fixtures ne prouve pas une équivalence de simulation de file.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "tests/test_qx_parity.py",
+        "experiments/lotcap_v1/parity_check.py"
+      ],
+      "id": 55,
+      "reason": "Parité Python/Rust du moteur déjà testée ; nouveaux comptes Decimal restent Python et ne sont pas prétendus équivalents à une comptabilité Rust inexistante.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/artifact_io.py",
+        "tests/test_artifact_io.py",
+        "./results.json"
+      ],
+      "id": 56,
+      "reason": "Même parse de table réutilisé par risque/export,clé incluant le contenu exact rehashé à chaque accès,versions et colonnes. Copie indépendante,aucun cache de verdict de test.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 57,
+      "reason": "Pré-démarrage R316 déjà réutilisable ; pas de nouvel autre collecteur à lancer sans retard mesuré à corriger ni budget distinct. Pas de collecte en doublon.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "not_selected"
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "./verified_input.parquet",
+        "tests/test_artifact_io.py"
+      ],
+      "id": 58,
+      "reason": "Export Parquet neuf vérifié bit-à-valeur/types/NaN avec identité source et rôles prix/horloge ; ancien fichier intact.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/check.py",
+        "tests/test_check.py",
+        "experiments/owner_acceptance_v1/test_profile.json"
+      ],
+      "id": 59,
+      "reason": "Profil complet requis exécuté avec temps par test et découverte séparée ; fixtures de classe/skips distingués. Le profil rapide ne remplace pas le complet.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/check.py",
+        "experiments/owner_acceptance_v1/test_profile.json"
+      ],
+      "id": 60,
+      "reason": "Retour ciblé rapide maintenu et suite complète conservée ; aucun retrait de test financier pour accélérer artificiellement. Nouvelle optimisation d’un test lourd non revendiquée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "scripts/project_status.py",
+        "scripts/paper_account.py",
+        "lab/operations.py"
+      ],
+      "id": 61,
+      "reason": "Statut partagé/commande account raccordent le nouveau résultat ; des études restantes ne sont pas des jobs actifs et aucun nouveau cycle autonome n’est promis.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/paired_execution.py",
+        "lab/runtime.py",
+        "docs/ROOM.md"
+      ],
+      "id": 62,
+      "reason": "Verrous fichiers/coordinator/runtime existants évitent plusieurs writers locaux ; réservations GitHub fraîches vérifiées manuellement,non certifiées automatiquement.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "scripts/run_owner_acceptance.py",
+        "lab/artifact_io.py"
+      ],
+      "id": 63,
+      "reason": "Le runner refuse de recalculer par défaut sur un résultat existant ; reproduction exige nouveau chemin explicite. Cache lie chaque entrée au SHA,ne réutilise pas une réussite de test.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/financial_review.md",
+        "docs/ROOM.md"
+      ],
+      "id": 64,
+      "reason": "Une seule relecture financière avec question,15appels puis5de recheck,budget et livrable ; pas de masse d’agents ni délégation ouverte.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/financial_review.md",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 65,
+      "reason": "Relecture indépendante bornée des seuils/pertes et deux contre-exemples corrigés puis revérifiés avant gel. Ne couvre pas sourceauthenticité,bootstrap ni tout risque.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "docs/ROOM.md"
+      ],
+      "id": 66,
+      "reason": "Appels/résultats et limites dans issue7,PR49unique ; chaque source et résultat garde son périmètre. Transmission de cette étude dans son FINDINGS.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "docs/ROOM.md"
+      ],
+      "id": 67,
+      "reason": "Travail Claude absent repris sur consolidation en respectant claims ; aucun processus tiers tué. Détection automatisée de tout travail abandonné encore limitée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "tests/test_paper_admission.py",
+        "./results.json"
+      ],
+      "id": 68,
+      "reason": "Projection stricte refuse de convertir les anciennes observations étiquetées à temps en nouvelles preuves exécutables ; aucun replay ne remplace une observation manquée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/acquisition_budget.py",
+        "experiments/owner_acceptance_v1/sources.json",
+        "scripts/paper_status.py"
+      ],
+      "id": 69,
+      "reason": "Bornes requêtes/octets/durée,refus de drift et états inconnu/erreur conservés. Les anciens collecteurs n’ont pas tous une gestion identique des quotas.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "experiments/equations_v2/FINDINGS.md"
+      ],
+      "id": 70,
+      "reason": "Choix ancré sur quotes/session/index/frais manquants et risque de fausse comptabilité ; aucun indicateur choisi pour sauver les pertes2x/3x de R311.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "AGENTS.md",
+        "scripts/repository_index.py",
+        "experiments/owner_acceptance_v1/requirements.json"
+      ],
+      "id": 71,
+      "reason": "Queue méthodes,registre essais et preuves PREREG/FINDINGS gardent leur autorité ; les100 exigences reçues sont une acceptation,pas une autre queue.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "scripts/repository_index.py",
+        "docs/RESEARCH_HANDOFF.md"
+      ],
+      "id": 72,
+      "reason": "Index README et catégories du finder conservent notes/handoffs historiques avec l’autorité actuelle ; METHODS_QUEUE explicitement historique.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "scripts/repository_index.py"
+      ],
+      "id": 73,
+      "reason": "Pas de fusion documentaire justifiée sans preuve de faits uniques et liens conservés. Les notes datées et spécifications gelées ne sont pas des doublons jetables.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "not_selected"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/repository_index.py"
+      ],
+      "id": 74,
+      "reason": "Vue compte en mots simples,identifiants R/M et chemins conservés. Aucune opération de renommage qui casserait les références gelées.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/requirements_evidence.json",
+        "experiments/owner_acceptance_v1/PREREG.md"
+      ],
+      "id": 75,
+      "reason": "Chaque exigence reçue a un état,une preuve et une limite ; protocole fini avec critères d’acceptation/échec et refus de100validations fictives.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 76,
+      "reason": "Vue affiche code testé,marché inconnu,montants inventés et zéro nouvelles preuves ; autorisation réelle toujoursfalse.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 77,
+      "reason": "Versions SHA,accès,licence,copies limitées et reçu/lu/non reçu sont explicités par source. Aucun login/abonnement contourné.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/run_owner_acceptance.py",
+        "docs/RESEARCH_HANDOFF.md"
+      ],
+      "id": 78,
+      "reason": "Composant APSI et modules comptabilité/risque/cache raccordés ; aides microstructure et autres besoins non branchés restent explicitement ouverts.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "scripts/repository_index.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 79,
+      "reason": "lab find --trace M/R suit queue→registre→PREREG/manifests code et données ; hashes sont des pointeurs rapportés,pas une certification de leur vérité.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "docs/IMPLEMENTATION_INTEGRITY_REVIEW.md"
+      ],
+      "id": 80,
+      "reason": "Pas de nouvelle PR ni fermeture/merge ; PR49regroupe. PR32reste non complètement repris,écarts legacy conservés. Autres PR non déclarées supersédées.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 81,
+      "reason": "Onglet central compte montre capital/PnL fictifs,période modèle,origines et PnL observé inconnu. Vue réutilisée,pas nouvelle application.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/dashboard_data.py",
+        "./results.json"
+      ],
+      "id": 82,
+      "reason": "Comparateurs des études sont conservés dans leurs scopes ; pas de leaderboard universel à capital/risque strictement identiques lorsque données/exécution manquent.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html",
+        "experiments/paper_account_v1/audit.json"
+      ],
+      "id": 83,
+      "reason": "Prix,financement,frais et frais de sortie sont des colonnes séparées en devise. Valeur de sortie contient déjà le spread,non double-soustrait.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "lab/paper_account.py"
+      ],
+      "id": 84,
+      "reason": "Capital disponible/immobilisé séparé par venue et devise,mark inconnu visible. Pas de double comptage ou conversion USDT/USDC inventée.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py",
+        "lab/paper_controls.py"
+      ],
+      "id": 85,
+      "reason": "Gain attendu,coût prévu1x/2x/3x,erreur calibrée et marge prudente affichés. Valeurs absentes restent inconnu,volatilité non déguisée en gain.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html"
+      ],
+      "id": 86,
+      "reason": "Origine historique/inventée et réception réelle inconnue affichées sans horloge d’export substituée. Latence d’exécution réelle et affichage live complet encore absents.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "scripts/paper_status.py",
+        "dashboard/index.html"
+      ],
+      "id": 87,
+      "reason": "Vue précise les entrées manquantes et état bloqué ; anciennes séries gardent la liste des six preuves exécutables non certifiées.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "scripts/dashboard_jobs.py",
+        "lab/paper_controls.py",
+        "lab/operations.py"
+      ],
+      "id": 88,
+      "reason": "Opérations existantes catégorisées,arrêts nouveaux préfixés data/risk. Pas de migration destructive de tous les journaux historiques.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/run_owner_acceptance.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 89,
+      "reason": "Interface donne commande de reproduction et identités d’entrées/rapport ; commande vérifie le code figé avant calcul. Elle est à copier,la page ne lance ni shell ni ordre.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py"
+      ],
+      "id": 90,
+      "reason": "Demandes classées vérifié/partiel/bloqué/écarté avec raison ; PnL observé inconnu et compte de test clairement séparés.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 91,
+      "reason": "Aucun candidat admissible sur quotes/frais/règlements complets ; pas de protocole activé pour faire paraître R311positif. Protocole futur doit précéder les nouvelles observations.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "./results.json"
+      ],
+      "id": 92,
+      "reason": "Zéro nouveau jour prospectif revendiqué ; adaptateur conserve anciennes lignes et ne compte aucun replay ou clock insuffisant comme preuve exécutable nouvelle.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 93,
+      "reason": "Compte commun et lifecycle prêts pour validation modèle ; pas de candidat admissible à y faire tourner sur le marché avec les preuves requises.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "blocked"
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "./risk_controls.jsonl"
+      ],
+      "id": 94,
+      "reason": "48chemins dépendants R319(16cas×3coûts) préservent jambe orpheline,partiel,retry/résiduel et source inconnue ; R320 applique les contrôles dessus.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "tests/test_paper_controls.py",
+        "lab/paper_controls.py",
+        "experiments/paired_execution_v1/FINDINGS.md"
+      ],
+      "id": 95,
+      "reason": "Panne,gap,session fermée et règles modifiées bloquent les nouvelles entrées sans effacer positions ou inventer une sortie. Cas inventés uniquement.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py",
+        "./risk_journal_example.jsonl"
+      ],
+      "id": 96,
+      "reason": "Arrêts persistants si données/règles/risque dépassés ; aucune clôture supposée. Redémarrer ne remet pas le risque à zéro.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 97,
+      "reason": "Perte,drawdown,exposition brute par venue et concentration par coin bornés ; hedge opposé ne gomme pas le brut,dépôts ne gomment pas les pertes.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "verified"
+    },
+    {
+      "evidence": [
+        "lab/mexc_margin.py",
+        "registry/methods.csv",
+        "experiments/levcarry_v1/FINDINGS.md"
+      ],
+      "id": 98,
+      "reason": "Noyau marge MEXC existant testé sur exemples fournis ; vraies séries fair/mark,tier/compte et liquidations dynamiques encore manquantes. Aucun levier ajouté.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "docs/PROP_FIRMS.md"
+      ],
+      "id": 99,
+      "reason": "Docs FTMO officielles distinguent1-Step,2-Step,Instant et règle2026-10-12;EA ne signifie pas API MEXC compatible. Tarifs,payout,produits précis/API/conditions locales encore non reçus.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "./results.json",
+        "registry/methods.csv"
+      ],
+      "id": 100,
+      "reason": "R320gèle quatre modèles,trois comparaisons,blocs/erreurs/cas et budgets finis sans sélection de gagnant ; budget global par chaque méthode de la queue encore non attribué.",
+      "scope": "Preuve bornée du besoin reçu ; ni profit garanti ni validation réelle des données absentes.",
+      "state": "partial"
+    }
+  ],
+  "scope": "Exact owner acceptance mapping,not a competing method queue. verified means the stated engineering/read scope only; blocked/partial is not completed and none proves net alpha."
+}

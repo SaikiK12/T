@@ -1,0 +1,63 @@
+{
+  "access_restrictions": "No login, subscription bypass, authentication, account request or downloaded foreign code execution. Public source availability does not certify market permission/owner fee tier.",
+  "canonical_queue": "registry/methods.csv",
+  "economic_rules_not_new_source_strategies": {
+    "M047": "Premium-triggered long spot/short perp; canonical exit premium<=0 or72h remains untested on these inputs. No contractual perp maturity/convergence guarantee.",
+    "M134": "Trailing72h funding>20pct APR original historical/forward evidence retained; no replacement/winner or MEXC execution claim."
+  },
+  "existing_aliases": [
+    "C09-BASISCARRY72",
+    "CARRY-ORIGINAL72",
+    "FORWARD-CARRY",
+    "SRC-PERP-NOARB",
+    "YT26-05-VARIABLE-CARRY",
+    "HB24-C7-SPOT-PERP-CARRY"
+  ],
+  "existing_queue_ids": [
+    "M047",
+    "M134"
+  ],
+  "full_text_retention": "Small exact bodies retained in ignored local cache; tracked receipts and scope notes only, no bulk source mirror.",
+  "mechanics": [
+    {
+      "id": "wrapper_depth_fields",
+      "scope": "Full two pinned proto declarations, tags and string/int64 presence; imported schemas unread. No unit, snapshot or deployment proof."
+    },
+    {
+      "id": "public_ws_base",
+      "scope": "Full main prose of base WS docs; public endpoint, uppercase symbols, subscription count and disconnect conditions. Other linked pages unread unless separately named."
+    },
+    {
+      "id": "partial_depth_subscription",
+      "scope": "Full received main prose/table/example from specific partial-depth page; subscription JSON and depths5/10/20. Quantity asset, timestamp unit, complete snapshot rule unresolved."
+    },
+    {
+      "id": "intro_signed_clock",
+      "scope": "Introduction visible content inspected for clock convention. Millisecond requirement belongs to SIGNED request timestamp, not WS sendTime. Fake signing examples were not executed."
+    },
+    {
+      "id": "failed_contract_pages",
+      "scope": "Initial market503 and account404 plus wrong-path integration404 retained. These do not establish intended market/fee/protobuf integration contracts."
+    }
+  ],
+  "new_methods_or_aliases": 0,
+  "predictive_trials": 0,
+  "public_access_only": true,
+  "received_body_bytes": 118731,
+  "reconciled_read_scope_path": "experiments/spot_perp_inputs_v1/source_review.md",
+  "registry_id": "R324",
+  "source_reader_path": "experiments/spot_perp_inputs_v1/source_reader.md",
+  "source_receipts_path": "experiments/spot_perp_inputs_v1/source_receipts.json",
+  "source_version_kind": "Git tree 0c9c4f35dd0fadc3a46a350e909a93379d81e811 and exact two blobs; not commit/deployment",
+  "static_gets": 9,
+  "unread": [
+    "properly linked protocol-buffers-integration page",
+    "live subscription/unsubscription detail",
+    "local order-book reconstruction page",
+    "successful exchangeInfo/quantity/lot/minimum/status contract",
+    "successful account/fee docs",
+    "server deployment/schema correspondence",
+    "other imported protos",
+    "actual funding and owner fills"
+  ]
+}

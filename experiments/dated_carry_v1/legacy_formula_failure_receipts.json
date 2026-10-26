@@ -1,0 +1,37 @@
+{
+  "scope": "R327/dated-formula/separate-final",
+  "max_gets": 2,
+  "max_body_bytes": 786432,
+  "max_body_per_request": 524288,
+  "max_duration_seconds": 30,
+  "started_mono": 157895.753092742,
+  "started_utc": "2026-10-26T08:39:16.720846+00:00",
+  "records": [
+    {
+      "name": "old_inverse",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944756746397-Futures-inverse",
+      "start_utc": "2026-10-26T08:39:16.720864+00:00",
+      "status": 404,
+      "body_bytes": 53442,
+      "error": null,
+      "complete": true,
+      "last_modified": null,
+      "date": "Mon, 26 Oct 2026 08:39:17 GMT",
+      "content_type": "text/html; charset=utf-8",
+      "location": null,
+      "sha256": "fe24c08db540e750fb094df38d1a6c5e92e59b03492e4617164a465bfe38d7e3",
+      "elapsed_seconds": 0.7700355090200901,
+      "read_scope": "HTTP404body only; no substantive inverse contract/PnL formula article. NoLocation; remaining GETslot unused, no guessed path or retries.",
+      "received_scope": "Complete public404body; not oldarticleprose.",
+      "source_visible_updated": null,
+      "access": "Ordinarypublicstaticrequest,notlogin/bypass,rawignoredonly."
+    }
+  ],
+  "web_search_queries": [],
+  "actual_static_gets": 1,
+  "actual_body_bytes": 53442,
+  "active_response_seconds": 0.7700355090200901,
+  "acquisition_wall_seconds_upper_bound": 1,
+  "acquisition_complete": true,
+  "no_further_gets_in_this_scope": true
+}

@@ -1,0 +1,29 @@
+{
+  "record_kind": "historical_method_id_collision_not_a_methods_queue",
+  "source_commit": "5f6e38a",
+  "declared_id": "M247",
+  "canonical_id": "M260",
+  "round": "R269",
+  "original_header": [
+    "id",
+    "method",
+    "data_held",
+    "status",
+    "cheap",
+    "note",
+    "source",
+    "rid"
+  ],
+  "original_row": [
+    "M247",
+    "Binance Monitoring Tag short: short the perp of each coin Binance adds to its Monitoring Tag at the first hourly open after the notice, cover +1 h / +24 h / +72 h (BTC-hedged line logged)",
+    "Y notice catalog (data/recorders/notices news + delisting, from 2023-10); Y klines_1h",
+    "PARTIAL",
+    "2",
+    "R269 primary +1 h NULL (+0.61%, t 0.71, 24 clusters). Logged +24 h +4.36%, t 3.81 (2 of 6 variants clear G1-G3), fading in 2026 (+1.31%, n 11). Forward candidate on first_seen_utc.",
+    "Binance announcements (tag since 2023-07); follows R267 spot notices",
+    "R269 NULL (primary)"
+  ],
+  "reason": "M247 was already published for triangular arbitrage in PR #33. Claude explicitly claimed M260 and reserved M260-M279 in issue #7 at 2026-10-20T17:22:59Z, but commit 5f6e38a still emitted M247. Imported under the claimed M260; original row retained here and in Git. Frozen R269 artifacts are unchanged.",
+  "coordination": "https://github.com/SaikiK12/T/issues/7"
+}

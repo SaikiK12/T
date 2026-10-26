@@ -1,0 +1,2032 @@
+{
+  "accounts": [
+    {
+      "asset": "USDC",
+      "available_capital": "5000",
+      "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+      "cash": "5000",
+      "estimated_future_exit_fees": "0",
+      "execution_drag_diagnostic_not_additive": "0",
+      "external_capital_flows": "0",
+      "fees_paid": "0",
+      "funding_pnl": "0",
+      "initial_cash": "5000",
+      "known_cash_component": "5000",
+      "known_realized_net_component": "0",
+      "locked_capital": "0",
+      "model_net_return": "0",
+      "nav": "5000",
+      "nav_state": "known_simulated_liquidation",
+      "positions": [],
+      "realized_net_pnl": "0",
+      "realized_price_pnl": "0",
+      "reasons": [],
+      "reconciliation_required": [],
+      "unrealized_liquidation_pnl": "0",
+      "unresolved_events": [],
+      "venue": "lighter"
+    },
+    {
+      "asset": "USDT",
+      "available_capital": "4988.85",
+      "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+      "cash": "4988.85",
+      "estimated_future_exit_fees": "0",
+      "execution_drag_diagnostic_not_additive": "0",
+      "external_capital_flows": "0",
+      "fees_paid": "1.15",
+      "funding_pnl": "0",
+      "initial_cash": "5000",
+      "known_cash_component": "4988.85",
+      "known_realized_net_component": "-11.15",
+      "locked_capital": "0",
+      "model_net_return": "-0.00223",
+      "nav": "4988.85",
+      "nav_state": "known_simulated_liquidation",
+      "positions": [],
+      "realized_net_pnl": "-11.15",
+      "realized_price_pnl": "-10",
+      "reasons": [],
+      "reconciliation_required": [],
+      "unrealized_liquidation_pnl": "0",
+      "unresolved_events": [],
+      "venue": "mexc"
+    }
+  ],
+  "activation_allowed": false,
+  "asof_mono_ns": 16000000000,
+  "certified_net_return": null,
+  "cost_comparisons": [
+    {
+      "asset": "USDT",
+      "fee_assumption": "original10bp MEXC reserve multiplied; no actual fees or strategy inference",
+      "multiple": 1,
+      "net_pnl": "-11.15",
+      "scope": "invented engine sequence; same capital and prices"
+    },
+    {
+      "asset": "USDT",
+      "fee_assumption": "original10bp MEXC reserve multiplied; no actual fees or strategy inference",
+      "multiple": 2,
+      "net_pnl": "-12.30",
+      "scope": "invented engine sequence; same capital and prices"
+    },
+    {
+      "asset": "USDT",
+      "fee_assumption": "original10bp MEXC reserve multiplied; no actual fees or strategy inference",
+      "multiple": 3,
+      "net_pnl": "-13.45",
+      "scope": "invented engine sequence; same capital and prices"
+    }
+  ],
+  "coverage": {
+    "held_book_deadlines": 72,
+    "invented_cases": 8,
+    "new_paper_days": 0
+  },
+  "data_identity_sha256": "26f6d8a6eccae44e641b6aae871452aa89742f31f94b09c2d411713156b1da75",
+  "engine_cases": [
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "1",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event_id": "2",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event_id": "3",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event_id": "4",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event_id": "5",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "1",
+          "fee": "0.2",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "2",
+          "reference_mid": "100",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "event_id": "2",
+          "fee": "0.22",
+          "kind": "fill",
+          "occurred_ns": 1790000002000000000,
+          "price": "110",
+          "quantity": "2",
+          "reference_mid": "110",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 13000000000,
+            "utc_ns": 1790000003000000000
+          },
+          "event_id": "3",
+          "fee": "0.12",
+          "kind": "fill",
+          "occurred_ns": 1790000003000000000,
+          "price": "120",
+          "quantity": "-1",
+          "reference_mid": "120",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 14000000000,
+            "utc_ns": 1790000004000000000
+          },
+          "event_id": "4",
+          "fee": "0.45",
+          "kind": "fill",
+          "occurred_ns": 1790000004000000000,
+          "price": "90",
+          "quantity": "-5",
+          "reference_mid": "90",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 15000000000,
+            "utc_ns": 1790000005000000000
+          },
+          "event_id": "5",
+          "fee": "0.16",
+          "kind": "fill",
+          "occurred_ns": 1790000005000000000,
+          "price": "80",
+          "quantity": "2",
+          "reference_mid": "80",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "404b0b15f5110f767b0095f85d28d13179c2d8f22e558d8fe4d2f8a016e024dc",
+      "marks": [],
+      "name": "closed_and_reversed",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "4988.85",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "4988.85",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "1.15",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "4988.85",
+            "known_realized_net_component": "-11.15",
+            "locked_capital": "0",
+            "model_net_return": "-0.00223",
+            "nav": "4988.85",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "-11.15",
+            "realized_price_pnl": "-10",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 16000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "1",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event_id": "2",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event_id": "3",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event_id": "4",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event_id": "5",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "1",
+          "fee": "0.4",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "2",
+          "reference_mid": "100",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "event_id": "2",
+          "fee": "0.44",
+          "kind": "fill",
+          "occurred_ns": 1790000002000000000,
+          "price": "110",
+          "quantity": "2",
+          "reference_mid": "110",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 13000000000,
+            "utc_ns": 1790000003000000000
+          },
+          "event_id": "3",
+          "fee": "0.24",
+          "kind": "fill",
+          "occurred_ns": 1790000003000000000,
+          "price": "120",
+          "quantity": "-1",
+          "reference_mid": "120",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 14000000000,
+            "utc_ns": 1790000004000000000
+          },
+          "event_id": "4",
+          "fee": "0.9",
+          "kind": "fill",
+          "occurred_ns": 1790000004000000000,
+          "price": "90",
+          "quantity": "-5",
+          "reference_mid": "90",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 15000000000,
+            "utc_ns": 1790000005000000000
+          },
+          "event_id": "5",
+          "fee": "0.32",
+          "kind": "fill",
+          "occurred_ns": 1790000005000000000,
+          "price": "80",
+          "quantity": "2",
+          "reference_mid": "80",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "179770052c3a269f7d63f0573fbc26621ed0649d146b0372960f079b82608273",
+      "marks": [],
+      "name": "closed_and_reversed_cost2",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "4987.70",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "4987.70",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "2.30",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "4987.70",
+            "known_realized_net_component": "-12.30",
+            "locked_capital": "0",
+            "model_net_return": "-0.00246",
+            "nav": "4987.70",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "-12.30",
+            "realized_price_pnl": "-10",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 16000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "1",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event_id": "2",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event_id": "3",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event_id": "4",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event_id": "5",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "1",
+          "fee": "0.6",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "2",
+          "reference_mid": "100",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "event_id": "2",
+          "fee": "0.66",
+          "kind": "fill",
+          "occurred_ns": 1790000002000000000,
+          "price": "110",
+          "quantity": "2",
+          "reference_mid": "110",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 13000000000,
+            "utc_ns": 1790000003000000000
+          },
+          "event_id": "3",
+          "fee": "0.36",
+          "kind": "fill",
+          "occurred_ns": 1790000003000000000,
+          "price": "120",
+          "quantity": "-1",
+          "reference_mid": "120",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 14000000000,
+            "utc_ns": 1790000004000000000
+          },
+          "event_id": "4",
+          "fee": "1.35",
+          "kind": "fill",
+          "occurred_ns": 1790000004000000000,
+          "price": "90",
+          "quantity": "-5",
+          "reference_mid": "90",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 15000000000,
+            "utc_ns": 1790000005000000000
+          },
+          "event_id": "5",
+          "fee": "0.48",
+          "kind": "fill",
+          "occurred_ns": 1790000005000000000,
+          "price": "80",
+          "quantity": "2",
+          "reference_mid": "80",
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "4012e7fd361d11f97a105ce3802536e43a36228c3f1bd1ce429bb785225a2e59",
+      "marks": [],
+      "name": "closed_and_reversed_cost3",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "4986.55",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "4986.55",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "3.45",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "4986.55",
+            "known_realized_net_component": "-13.45",
+            "locked_capital": "0",
+            "model_net_return": "-0.00269",
+            "nav": "4986.55",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "-13.45",
+            "realized_price_pnl": "-10",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 16000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [],
+      "events": [],
+      "journal_replay_identical": true,
+      "journal_sha256": "211b5ced56ef1fac92166c19030ef6f4fec7d2bf6f1f42d5f2bce477710e65f6",
+      "marks": [],
+      "name": "inactive_control",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 16000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "unknown",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "unknown",
+          "fee": null,
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "1",
+          "reference_mid": null,
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "7eea2b7c73cc16c7eeebe4a5ad37b5c53c1b55b5d4fac7709be683e6cd945867",
+      "marks": [],
+      "name": "missing_fee_and_mark",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": null,
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": null,
+            "estimated_future_exit_fees": null,
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "100",
+            "model_net_return": null,
+            "nav": null,
+            "nav_state": "unknown",
+            "positions": [
+              {
+                "average_entry": "100",
+                "quantity_base": "1",
+                "reasons": [
+                  "liquidation_quote_missing"
+                ],
+                "symbol": "BTC",
+                "unrealized_liquidation_pnl": null
+              }
+            ],
+            "realized_net_pnl": null,
+            "realized_price_pnl": "0",
+            "reasons": [
+              "fee_or_funding_amount_unknown",
+              "liquidation_quote_missing"
+            ],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": null,
+            "unresolved_events": [
+              "unknown"
+            ],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 12000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "open",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "open",
+          "fee": "0.2",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "2",
+          "reference_mid": null,
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "b06b26ee149c1bd7e0d7c53aeae33e413a7c54e76e2244c7acca28345506602a",
+      "marks": [
+        {
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "estimated_exit_fee": ".2",
+          "exit_notional": "198",
+          "position_quantity": "2",
+          "source_identity": "invented conservative exit",
+          "source_time_ns": 1790000002000000000,
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "name": "long_bid_mark",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "4799.8",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "4999.8",
+            "estimated_future_exit_fees": "0.2",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0.2",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "4999.8",
+            "known_realized_net_component": "-0.2",
+            "locked_capital": "200",
+            "model_net_return": "-0.00048",
+            "nav": "4997.6",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [
+              {
+                "average_entry": "100",
+                "quantity_base": "2",
+                "reasons": [],
+                "symbol": "BTC",
+                "unrealized_liquidation_pnl": "-2"
+              }
+            ],
+            "realized_net_pnl": "-0.2",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "-2",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 12000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event_id": "open",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "open",
+          "fee": "0.2",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "100",
+          "quantity": "-2",
+          "reference_mid": null,
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "3e07b78af045af71e0304409ba56f61035d84da25853141252b37f26e8e179b2",
+      "marks": [
+        {
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "estimated_exit_fee": ".2",
+          "exit_notional": "202",
+          "position_quantity": "-2",
+          "source_identity": "invented conservative exit",
+          "source_time_ns": 1790000002000000000,
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "name": "short_ask_mark",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": "4799.8",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "4999.8",
+            "estimated_future_exit_fees": "0.2",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0.2",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "4999.8",
+            "known_realized_net_component": "-0.2",
+            "locked_capital": "200",
+            "model_net_return": "-0.00048",
+            "nav": "4997.6",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [
+              {
+                "average_entry": "100",
+                "quantity_base": "-2",
+                "reasons": [],
+                "symbol": "BTC",
+                "unrealized_liquidation_pnl": "-2"
+              }
+            ],
+            "realized_net_pnl": "-0.2",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "-2",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 12000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    },
+    {
+      "attempts": [
+        {
+          "asof_mono_ns": 12000000000,
+          "event_id": "first",
+          "reasons": [],
+          "simulation_only": true,
+          "status": "applied"
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event_id": "late",
+          "reasons": [
+            "late_fill_order_requires_reconciliation"
+          ],
+          "simulation_only": true,
+          "status": "rejected"
+        }
+      ],
+      "events": [
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "event_id": "first",
+          "fee": "0",
+          "kind": "fill",
+          "occurred_ns": 1790000002000000000,
+          "price": "100",
+          "quantity": "1",
+          "reference_mid": null,
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        },
+        {
+          "amount": null,
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 11000000000,
+            "utc_ns": 1790000001000000000
+          },
+          "event_id": "late",
+          "fee": "0",
+          "kind": "fill",
+          "occurred_ns": 1790000001000000000,
+          "price": "80",
+          "quantity": "1",
+          "reference_mid": null,
+          "resolves": null,
+          "simulation_only": true,
+          "source_identity": "invented R318 validation",
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "journal_replay_identical": true,
+      "journal_sha256": "8a6751d30a8dc90f851cb488540c98cbe68743d87ba2281123cfac0806043e28",
+      "marks": [],
+      "name": "late_fill_reconciliation",
+      "scope": "invented engine validation, not observed strategy PnL",
+      "snapshot": {
+        "accounts": [
+          {
+            "asset": "USDC",
+            "available_capital": "5000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "5000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "5000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "lighter"
+          },
+          {
+            "asset": "USDT",
+            "available_capital": null,
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": null,
+            "estimated_future_exit_fees": null,
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "5000",
+            "known_cash_component": "5000",
+            "known_realized_net_component": "0",
+            "locked_capital": "100",
+            "model_net_return": null,
+            "nav": null,
+            "nav_state": "unknown",
+            "positions": [
+              {
+                "average_entry": "100",
+                "quantity_base": "1",
+                "reasons": [
+                  "liquidation_quote_missing"
+                ],
+                "symbol": "BTC",
+                "unrealized_liquidation_pnl": null
+              }
+            ],
+            "realized_net_pnl": null,
+            "realized_price_pnl": "0",
+            "reasons": [
+              "financial_event_reconciliation_required",
+              "liquidation_quote_missing"
+            ],
+            "reconciliation_required": [
+              "late:late_fill_order_requires_reconciliation"
+            ],
+            "unrealized_liquidation_pnl": null,
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 13000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      }
+    }
+  ],
+  "fee_integration": {
+    "after_restart_quota": {
+      "account_effective_fee_verified": false,
+      "document_sha256": "0c07afd2302ef6c8ca2c4f10c9bb94c106c8b2a11196cf91f10029bfc6ee7066",
+      "evidence_level": "synthetic",
+      "provider_authenticated": false,
+      "rate_fraction": null,
+      "reasons": [
+        "round_trip_quota_insufficient"
+      ],
+      "revision": 1,
+      "source_identity": "invented fee statement",
+      "state": "unknown",
+      "statement_id": "invented-promo",
+      "usable_for_paper_assumption": false
+    },
+    "duplicate": {
+      "account_effective_fee_verified": false,
+      "assessment_replayed": true,
+      "document_sha256": "0c07afd2302ef6c8ca2c4f10c9bb94c106c8b2a11196cf91f10029bfc6ee7066",
+      "entry_fee": "0",
+      "evidence_level": "synthetic",
+      "exit_fee": "0",
+      "fee_asset": "USDT",
+      "provider_authenticated": false,
+      "quota_remaining_after_round_trip": "290",
+      "quota_reserved_notional_delta": "0",
+      "rate_fraction": "0",
+      "reasons": [
+        "unsigned_statement_not_provider_authenticated"
+      ],
+      "reservation_state": "duplicate",
+      "reserved_notional_delta": "0",
+      "revision": 1,
+      "source_identity": "invented fee statement",
+      "state": "conditional",
+      "statement_id": "invented-promo",
+      "total_fee": "0",
+      "usable_for_paper_assumption": true
+    },
+    "expired_exit": {
+      "account_effective_fee_verified": false,
+      "document_sha256": "14527a5f9a1165ecfd078ab69e0294f207c56937310c1319d6bfaaa2c047bd6c",
+      "evidence_level": "synthetic",
+      "provider_authenticated": false,
+      "rate_fraction": null,
+      "reasons": [
+        "entry_or_exit_outside_fee_validity"
+      ],
+      "revision": 1,
+      "source_identity": "invented fee statement",
+      "state": "unknown",
+      "statement_id": "invented-regular",
+      "usable_for_paper_assumption": false
+    },
+    "linked_events": [
+      {
+        "amount": null,
+        "asset": "USDT",
+        "clock": {
+          "mono_ns": 11000000000,
+          "utc_ns": 1790000001000000000
+        },
+        "event_id": "fee-linked-open",
+        "fee": "0.100",
+        "kind": "fill",
+        "occurred_ns": 1790000001000000000,
+        "price": "100",
+        "quantity": "1",
+        "reference_mid": null,
+        "resolves": null,
+        "simulation_only": true,
+        "source_identity": "invented conditional statement",
+        "symbol": "BTC",
+        "venue": "mexc"
+      },
+      {
+        "amount": null,
+        "asset": "USDT",
+        "clock": {
+          "mono_ns": 12000000000,
+          "utc_ns": 1790000002000000000
+        },
+        "event_id": "fee-linked-close",
+        "fee": "0.090",
+        "kind": "fill",
+        "occurred_ns": 1790000002000000000,
+        "price": "90",
+        "quantity": "-1",
+        "reference_mid": null,
+        "resolves": null,
+        "simulation_only": true,
+        "source_identity": "invented conditional statement",
+        "symbol": "BTC",
+        "venue": "mexc"
+      }
+    ],
+    "linked_snapshot": {
+      "accounts": [
+        {
+          "asset": "USDT",
+          "available_capital": "4989.810",
+          "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+          "cash": "4989.810",
+          "estimated_future_exit_fees": "0",
+          "execution_drag_diagnostic_not_additive": "0",
+          "external_capital_flows": "0",
+          "fees_paid": "0.190",
+          "funding_pnl": "0",
+          "initial_cash": "5000",
+          "known_cash_component": "4989.810",
+          "known_realized_net_component": "-10.190",
+          "locked_capital": "0",
+          "model_net_return": "-0.002038",
+          "nav": "4989.810",
+          "nav_state": "known_simulated_liquidation",
+          "positions": [],
+          "realized_net_pnl": "-10.190",
+          "realized_price_pnl": "-10",
+          "reasons": [],
+          "reconciliation_required": [],
+          "unrealized_liquidation_pnl": "0",
+          "unresolved_events": [],
+          "venue": "mexc"
+        }
+      ],
+      "activation_allowed": false,
+      "asof_mono_ns": 12000000000,
+      "certified_net_return": null,
+      "prospective_days": 0,
+      "schema_version": 1,
+      "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+      "simulation_only": true
+    },
+    "missing": {
+      "account_effective_fee_verified": false,
+      "document_sha256": null,
+      "evidence_level": null,
+      "provider_authenticated": false,
+      "rate_fraction": null,
+      "reasons": [
+        "fee_statement_missing"
+      ],
+      "revision": null,
+      "source_identity": null,
+      "state": "unknown",
+      "statement_id": null,
+      "usable_for_paper_assumption": false
+    },
+    "promo_reservation": {
+      "account_effective_fee_verified": false,
+      "document_sha256": "0c07afd2302ef6c8ca2c4f10c9bb94c106c8b2a11196cf91f10029bfc6ee7066",
+      "entry_fee": "0",
+      "evidence_level": "synthetic",
+      "exit_fee": "0",
+      "fee_asset": "USDT",
+      "provider_authenticated": false,
+      "quota_remaining_after_round_trip": "290",
+      "quota_reserved_notional_delta": "210",
+      "rate_fraction": "0",
+      "reasons": [
+        "unsigned_statement_not_provider_authenticated"
+      ],
+      "reservation_state": "reserved",
+      "reserved_notional_delta": "210",
+      "revision": 1,
+      "source_identity": "invented fee statement",
+      "state": "conditional",
+      "statement_id": "invented-promo",
+      "total_fee": "0",
+      "usable_for_paper_assumption": true
+    },
+    "regular": {
+      "account_effective_fee_verified": false,
+      "document_sha256": "14527a5f9a1165ecfd078ab69e0294f207c56937310c1319d6bfaaa2c047bd6c",
+      "entry_fee": "0.100",
+      "evidence_level": "synthetic",
+      "exit_fee": "0.090",
+      "fee_asset": "USDT",
+      "provider_authenticated": false,
+      "quota_remaining_after_round_trip": null,
+      "rate_fraction": "0.001",
+      "reasons": [
+        "unsigned_statement_not_provider_authenticated"
+      ],
+      "revision": 1,
+      "source_identity": "invented fee statement",
+      "state": "conditional",
+      "statement_id": "invented-regular",
+      "total_fee": "0.190",
+      "usable_for_paper_assumption": true
+    },
+    "replayed_operation_count": 5,
+    "source_scope": "all statements invented; optional redacted importer exists, no owner statement accessed"
+  },
+  "funding_integration": {
+    "actual_event_index_proof_acquired": false,
+    "bound_model": {
+      "actual_lighter_index_proof_bridge": "not acquired or verified by this module",
+      "asset": "USDT",
+      "cash_delta": "0.030000",
+      "event_id": "invented-funding-event",
+      "evidence_scope": "supplied model contracts only",
+      "execution_ready": false,
+      "funding_ns": 1790000010000000000,
+      "model_status": "model_cash",
+      "rate_stage": "settled",
+      "rate_unit": "percent",
+      "reasons": [],
+      "settlement_cash_verified": false,
+      "source_bridge_verified": false,
+      "state": "pass"
+    },
+    "estimate_error": {
+      "announcement_source": "invented early announcement",
+      "cash_delta": null,
+      "error_fraction": "-0.0001",
+      "estimated_fraction": "0.0002",
+      "event_id": "invented-funding-event",
+      "execution_ready": false,
+      "funding_ns": 1790000010000000000,
+      "reasons": [],
+      "settled_fraction": "0.0001",
+      "settlement_cash_verified": false,
+      "settlement_source": "invented settled event",
+      "state": "pass"
+    },
+    "events": [
+      {
+        "amount": null,
+        "asset": "USDT",
+        "clock": {
+          "mono_ns": 11000000000,
+          "utc_ns": 1790000001000000000
+        },
+        "event_id": "short-before-funding",
+        "fee": "0.3",
+        "kind": "fill",
+        "occurred_ns": 1790000001000000000,
+        "price": "30000",
+        "quantity": "-0.01",
+        "reference_mid": null,
+        "resolves": null,
+        "simulation_only": true,
+        "source_identity": "invented R318 validation",
+        "symbol": "BTC",
+        "venue": "mexc"
+      },
+      {
+        "amount": null,
+        "asset": "USDT",
+        "clock": {
+          "mono_ns": 40000000000,
+          "utc_ns": 1790000030000000000
+        },
+        "event_id": "model-funding",
+        "fee": null,
+        "kind": "funding",
+        "occurred_ns": 1790000010000000000,
+        "price": null,
+        "quantity": null,
+        "reference_mid": null,
+        "resolves": null,
+        "simulation_only": true,
+        "source_identity": "invented funding inputs",
+        "symbol": "BTC",
+        "venue": "mexc"
+      },
+      {
+        "amount": "0.030000",
+        "asset": "USDT",
+        "clock": {
+          "mono_ns": 41000000000,
+          "utc_ns": 1790000031000000000
+        },
+        "event_id": "model-funding-resolution",
+        "fee": null,
+        "kind": "funding_resolution",
+        "occurred_ns": 1790000010000000000,
+        "price": null,
+        "quantity": null,
+        "reference_mid": null,
+        "resolves": "model-funding",
+        "simulation_only": true,
+        "source_identity": "invented event-bound funding",
+        "symbol": "BTC",
+        "venue": "mexc"
+      }
+    ],
+    "exposure_spans": [
+      {
+        "clock": {
+          "mono_ns": 40000000000,
+          "utc_ns": 1790000030000000000
+        },
+        "end_ns": 1790000001000000000,
+        "quantity": "0",
+        "quantity_unit": "base",
+        "start_ns": 1790000000000000000,
+        "symbol": "BTC",
+        "venue": "mexc"
+      },
+      {
+        "clock": {
+          "mono_ns": 40000000000,
+          "utc_ns": 1790000030000000000
+        },
+        "end_ns": 1790000030000000000,
+        "quantity": "-0.01",
+        "quantity_unit": "base",
+        "start_ns": 1790000001000000000,
+        "symbol": "BTC",
+        "venue": "mexc"
+      }
+    ],
+    "lighter_declared_basis_only": {
+      "actual_lighter_index_proof_bridge": "not acquired or verified by this module",
+      "asset": "USDC",
+      "cash_delta": null,
+      "event_id": "invented-funding-event",
+      "evidence_scope": "supplied model contracts only",
+      "execution_ready": false,
+      "funding_ns": 1790000010000000000,
+      "model_status": "unscored",
+      "rate_stage": "settled",
+      "rate_unit": "percent",
+      "reasons": [
+        "value_not_bound_to_actual_funding_event"
+      ],
+      "settlement_cash_verified": false,
+      "source_bridge_verified": false,
+      "state": "unknown"
+    },
+    "lighter_missing_basis": {
+      "actual_lighter_index_proof_bridge": "not acquired or verified by this module",
+      "asset": "USDC",
+      "cash_delta": null,
+      "event_id": "invented-funding-event",
+      "evidence_scope": "supplied model contracts only",
+      "execution_ready": false,
+      "funding_ns": 1790000010000000000,
+      "model_status": "unscored",
+      "rate_stage": "settled",
+      "rate_unit": "percent",
+      "reasons": [
+        "value_not_bound_to_actual_funding_event",
+        "lighter_preupdate_event_index_basis_unverified"
+      ],
+      "settlement_cash_verified": false,
+      "source_bridge_verified": false,
+      "state": "unknown"
+    },
+    "missing_value": {
+      "actual_lighter_index_proof_bridge": "not acquired or verified by this module",
+      "asset": "USDT",
+      "cash_delta": null,
+      "event_id": "invented-funding-event",
+      "evidence_scope": "supplied model contracts only",
+      "execution_ready": false,
+      "funding_ns": 1790000010000000000,
+      "model_status": "unscored",
+      "rate_stage": "settled",
+      "rate_unit": "percent",
+      "reasons": [
+        "value_not_bound_to_actual_funding_event"
+      ],
+      "settlement_cash_verified": false,
+      "source_bridge_verified": false,
+      "state": "unknown"
+    },
+    "resolved_snapshot": {
+      "accounts": [
+        {
+          "asset": "USDC",
+          "available_capital": "5000",
+          "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+          "cash": "5000",
+          "estimated_future_exit_fees": "0",
+          "execution_drag_diagnostic_not_additive": "0",
+          "external_capital_flows": "0",
+          "fees_paid": "0",
+          "funding_pnl": "0",
+          "initial_cash": "5000",
+          "known_cash_component": "5000",
+          "known_realized_net_component": "0",
+          "locked_capital": "0",
+          "model_net_return": "0",
+          "nav": "5000",
+          "nav_state": "known_simulated_liquidation",
+          "positions": [],
+          "realized_net_pnl": "0",
+          "realized_price_pnl": "0",
+          "reasons": [],
+          "reconciliation_required": [],
+          "unrealized_liquidation_pnl": "0",
+          "unresolved_events": [],
+          "venue": "lighter"
+        },
+        {
+          "asset": "USDT",
+          "available_capital": "4699.730000",
+          "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+          "cash": "4999.730000",
+          "estimated_future_exit_fees": null,
+          "execution_drag_diagnostic_not_additive": "0",
+          "external_capital_flows": "0",
+          "fees_paid": "0.3",
+          "funding_pnl": "0.030000",
+          "initial_cash": "5000",
+          "known_cash_component": "4999.730000",
+          "known_realized_net_component": "-0.270000",
+          "locked_capital": "300.00",
+          "model_net_return": null,
+          "nav": null,
+          "nav_state": "unknown",
+          "positions": [
+            {
+              "average_entry": "30000",
+              "quantity_base": "-0.01",
+              "reasons": [
+                "liquidation_quote_missing"
+              ],
+              "symbol": "BTC",
+              "unrealized_liquidation_pnl": null
+            }
+          ],
+          "realized_net_pnl": "-0.270000",
+          "realized_price_pnl": "0",
+          "reasons": [
+            "liquidation_quote_missing"
+          ],
+          "reconciliation_required": [],
+          "unrealized_liquidation_pnl": null,
+          "unresolved_events": [],
+          "venue": "mexc"
+        }
+      ],
+      "activation_allowed": false,
+      "asof_mono_ns": 41000000000,
+      "certified_net_return": null,
+      "prospective_days": 0,
+      "schema_version": 1,
+      "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+      "simulation_only": true
+    },
+    "unknown_snapshot": {
+      "accounts": [
+        {
+          "asset": "USDC",
+          "available_capital": "5000",
+          "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+          "cash": "5000",
+          "estimated_future_exit_fees": "0",
+          "execution_drag_diagnostic_not_additive": "0",
+          "external_capital_flows": "0",
+          "fees_paid": "0",
+          "funding_pnl": "0",
+          "initial_cash": "5000",
+          "known_cash_component": "5000",
+          "known_realized_net_component": "0",
+          "locked_capital": "0",
+          "model_net_return": "0",
+          "nav": "5000",
+          "nav_state": "known_simulated_liquidation",
+          "positions": [],
+          "realized_net_pnl": "0",
+          "realized_price_pnl": "0",
+          "reasons": [],
+          "reconciliation_required": [],
+          "unrealized_liquidation_pnl": "0",
+          "unresolved_events": [],
+          "venue": "lighter"
+        },
+        {
+          "asset": "USDT",
+          "available_capital": null,
+          "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+          "cash": null,
+          "estimated_future_exit_fees": null,
+          "execution_drag_diagnostic_not_additive": "0",
+          "external_capital_flows": "0",
+          "fees_paid": "0.3",
+          "funding_pnl": "0",
+          "initial_cash": "5000",
+          "known_cash_component": "4999.7",
+          "known_realized_net_component": "-0.3",
+          "locked_capital": "300.00",
+          "model_net_return": null,
+          "nav": null,
+          "nav_state": "unknown",
+          "positions": [
+            {
+              "average_entry": "30000",
+              "quantity_base": "-0.01",
+              "reasons": [
+                "liquidation_quote_missing"
+              ],
+              "symbol": "BTC",
+              "unrealized_liquidation_pnl": null
+            }
+          ],
+          "realized_net_pnl": null,
+          "realized_price_pnl": "0",
+          "reasons": [
+            "fee_or_funding_amount_unknown",
+            "liquidation_quote_missing"
+          ],
+          "reconciliation_required": [],
+          "unrealized_liquidation_pnl": null,
+          "unresolved_events": [
+            "model-funding"
+          ],
+          "venue": "mexc"
+        }
+      ],
+      "activation_allowed": false,
+      "asof_mono_ns": 40000000000,
+      "certified_net_return": null,
+      "prospective_days": 0,
+      "schema_version": 1,
+      "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+      "simulation_only": true
+    }
+  },
+  "held_summary": {
+    "asset_parity_is_assumed": true,
+    "capital_quote_equivalent": 10000,
+    "conditional_displayed_size_cases": 130,
+    "input_states": {
+      "blocked": 64,
+      "unknown": 8
+    },
+    "minimum_delay_is_not_total_execution_latency": true,
+    "per_venue_quote_equivalent": 5000,
+    "rows": 72,
+    "size_cases": 432,
+    "sizes_per_row": 6
+  },
+  "legacy_projection": {
+    "historical_outputs_rewritten_by_this_runner": false,
+    "proxy_positions_imported": false,
+    "reason": "legacy proxy totals cannot certify event/fee/session/executable inputs; missing remains unknown",
+    "strict_account_cash_or_nav_from_legacy_proxy": null
+  },
+  "net_return_tested": false,
+  "new_market_requests": 0,
+  "next_evidence": [
+    "Prix et profondeur synchronis\u00e9s, connus \u00e0 temps",
+    "Frais r\u00e9ellement applicables au compte",
+    "Sessions ouvertes et droits API",
+    "Index Lighter li\u00e9 \u00e0 son \u00e9v\u00e9nement de financement"
+  ],
+  "observations_sha256": "fd1a70ba70dc01d882a160dbe4b13724aa99f8f746e66c96f6a9a5da9923486c",
+  "operations_integration": {
+    "after_gap": {
+      "automatic_reconnect": false,
+      "closed": false,
+      "consistent_book_available": false,
+      "epoch": 0,
+      "execution_ready": false,
+      "frames_used": 2,
+      "market_id": 1,
+      "max_frames": 5,
+      "max_restarts": 2,
+      "reason": "nonce chain gap",
+      "restarts_used": 0,
+      "state": "invalid",
+      "symbol": "BTC"
+    },
+    "budget_duplicate_after_restart": {
+      "dispatch_allowed": false,
+      "replayed": true,
+      "reservation": {
+        "body_limit_bytes": 50,
+        "deadline_ns": 11,
+        "duration_ns": 10,
+        "issued_at_ns": 1,
+        "kind": "reserve",
+        "operation_id": "one"
+      }
+    },
+    "budget_final": {
+      "authorization_verified": false,
+      "baseline": {
+        "body_bytes_upper_bound": 0,
+        "requests_used": 0,
+        "reserved_duration_ns": 0
+      },
+      "body_bytes_charged_upper_bound": 100,
+      "dispatch_block_reasons": [
+        "request_allowance_exhausted",
+        "body_allowance_exhausted",
+        "duration_allowance_exhausted"
+      ],
+      "duration_ns_charged_upper_bound": 20,
+      "limits": {
+        "max_attempt_duration_ns": 10,
+        "max_body_bytes": 100,
+        "max_requests": 2,
+        "max_reserved_duration_ns": 20
+      },
+      "new_dispatch_blocked": true,
+      "pending": [
+        "two"
+      ],
+      "remaining_body_bytes": 0,
+      "remaining_requests": 0,
+      "requests_charged": 2,
+      "scope": "invented-integration-only",
+      "violations": []
+    },
+    "budget_first": {
+      "dispatch_allowed": true,
+      "replayed": false,
+      "reservation": {
+        "body_limit_bytes": 50,
+        "deadline_ns": 11,
+        "duration_ns": 10,
+        "issued_at_ns": 1,
+        "kind": "reserve",
+        "operation_id": "one"
+      }
+    },
+    "gap": {
+      "changed": false,
+      "epoch": 0,
+      "reason": "nonce chain gap",
+      "status": "invalid"
+    },
+    "historical_accumulated": {
+      "authorization_verified": false,
+      "baseline": {
+        "body_bytes_upper_bound": null,
+        "exact_body_bytes_known": false,
+        "reported_response_mib": "229.85",
+        "requests_used": 7757,
+        "reserved_duration_ns": 0,
+        "source": "owner-reported single R310/R311 accumulated allowance; not a renewed grant"
+      },
+      "body_bytes_charged_upper_bound": null,
+      "dispatch_block_reasons": [
+        "baseline_body_bytes_unknown"
+      ],
+      "duration_ns_charged_upper_bound": 0,
+      "limits": {
+        "max_attempt_duration_ns": 3000000000,
+        "max_body_bytes": 262144000,
+        "max_requests": 8000,
+        "max_reserved_duration_ns": 120000000000
+      },
+      "new_dispatch_blocked": true,
+      "pending": [],
+      "remaining_body_bytes": null,
+      "remaining_requests": 243,
+      "requests_charged": 7757,
+      "scope": "R310-R311-existing-accumulated",
+      "violations": []
+    },
+    "network_requests": 0,
+    "reopen_requires_new_transport": {
+      "automatic_reconnect": false,
+      "closed": false,
+      "consistent_book_available": false,
+      "epoch": 1,
+      "execution_ready": false,
+      "frames_used": 4,
+      "market_id": 1,
+      "max_frames": 5,
+      "max_restarts": 2,
+      "reason": "reopened transport requires explicit restart and replacement snapshot",
+      "restarts_used": 1,
+      "state": "invalid",
+      "symbol": "BTC"
+    },
+    "replacement": {
+      "changed": true,
+      "epoch": 1,
+      "reason": null,
+      "status": "snapshot"
+    },
+    "scope": "invented recovery/budget tests only; no allowance or collection grant",
+    "snapshot": {
+      "changed": true,
+      "epoch": 0,
+      "reason": null,
+      "status": "snapshot"
+    },
+    "stale_epoch": {
+      "changed": false,
+      "epoch": 0,
+      "reason": null,
+      "status": "stale_epoch"
+    }
+  },
+  "predictive_trials": 0,
+  "prospective_days": 0,
+  "readiness": {
+    "components": {
+      "collecte historique": {
+        "reasons": [
+          "existing accumulated byte baseline not exact; no renewed allowance"
+        ],
+        "state": "blocked"
+      },
+      "compte simul\u00e9": {
+        "reasons": [
+          "invented engine validation only"
+        ],
+        "state": "conditional"
+      },
+      "index exact du financement Lighter": {
+        "next_evidence": [
+          "pre-update event/proof/API-unit bridge"
+        ],
+        "state": "unknown"
+      },
+      "sessions et droits API": {
+        "next_evidence": [
+          "current venue/session/account permission evidence"
+        ],
+        "state": "unknown"
+      },
+      "vrais frais du compte": {
+        "next_evidence": [
+          "redacted source-bound owner fee statement and charged fills"
+        ],
+        "state": "unknown"
+      }
+    }
+  },
+  "registry_id": "R318",
+  "schema_version": 1,
+  "scope": "invented engine validation plus post-hoc already-seen R316 quote diagnostics; NO actual paper PnL",
+  "simulation_only": true
+}
