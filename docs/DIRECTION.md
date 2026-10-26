@@ -567,3 +567,42 @@ The owner: the methods so far do not make money. Try other ways, but measure the
 1. **A frozen manual-web forward lane for R300's pick.** It is paper only, and needs about 2 years to an expected t of 2.
 2. **Lighter-API paper versions of the cost-limited hourly families:** R186 M2, R249, R246 and R287.
 3. **R332, then reserved batch 1 on 2026-11-03,** as planned. Neither launches anything.
+
+## Guarantees before forecasts (owner, 2026-10-26 night)
+The owner: stop putting effort into what does not work, think outside the box, and look for an equation or a model
+that guarantees something.
+
+**The principle**
+- A forecast can never guarantee a result. Only a complete hedge can: a position whose payoff is the same in every
+  outcome, bought for less than that payoff.
+- The cleanest one a small account can hold is the coin-margined cash-and-carry. B coins plus a short of B·F0 dollars
+  of the inverse quarterly are worth B·F0 dollars at expiry, whatever the price. At 1x the short cannot be liquidated.
+
+**Measured today**
+- **R335 (`locked_carry_v1`): DATA_PASS.**
+  - Locking BTC only when the locked yield beat the 3-month T-bill by 3%/yr earned 9.47%/yr against 3.39%/yr for the
+    T-bill, 2021-01..2026-09.
+  - Excess: +6.08 / +5.58 / +5.08 %/yr at 1x / 2x / 3x, positive in 5 of 6 years. No lock earned less than the T-bill
+    paid.
+  - The offer was rich in 2021 and 2024 and has been absent in 2026 to date.
+  - Still at risk: the venue, ADL and the mark-to-market path.
+- **R333 (the owner's level model): NULL at the lab's API cost.**
+  - Its gross edge is real: +18 bp/day, t 4.8.
+  - It breaks even at about 9-15 bp a side and needs about 46 trades a day. It is a cost question, not a guarantee.
+- **The near-guarantee already running:** the cross-venue funding carry.
+  - R277: +11.8%/yr, max drawdown −0.7%, every year positive. R288: mexc+lighter +6.2%/yr.
+  - These are forward on paper in R278, R279 and R294. They need two venue accounts.
+
+**Stopped or parked**
+- **R332 (mlrank_v3) is parked,** and its draft stays a draft. It would be a third ML ranker:
+  - R299 was invalidated by its audit;
+  - R304 is PARTIAL, and its R305 audit could not explain the pick.
+- **No new forecast families** until a guarantee or cost lead needs one.
+
+**Proposed, not started (the owner decides)**
+1. **A live offer board** for the locked carry: hourly public quotes from Binance, OKX, Deribit and Bybit, BTC and ETH
+   quarterlies, against the T-bill. It alerts when a lock beats the T-bill by 3%/yr at 1x costs. It is measurement
+   only.
+2. **A paper lock ticket** when the alert fires, frozen at entry and checked against the settlement. A real lock comes
+   only after that check, placed by the owner, through `lab.gate.go_real()`.
+3. **The carry books keep running on paper**, and the reserved batch runs on 2026-11-03 as planned.
