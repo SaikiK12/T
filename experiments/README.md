@@ -31,8 +31,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (120)
+## Other registered rounds (done, registered or planned) (121)
 
+- **[continuation_control_v1](continuation_control_v1/)** R323, DONE PARTIAL, 32 trials. Finite-deadline carry continuation and fixed-policy paper replay ([PREREG](continuation_control_v1/PREREG.md), [FINDINGS](continuation_control_v1/FINDINGS.md))
 - **[funding_prefix_v1](funding_prefix_v1/)** R322, DONE PARTIAL, 0 trials. Source-bound encoded funding application and common paper component ([PREREG](funding_prefix_v1/PREREG.md), [FINDINGS](funding_prefix_v1/FINDINGS.md))
 - **[dependent_null_v1](dependent_null_v1/)** R321, DONE NULL, 152 trials. Null-only dependent inference: finite calibration,exact size and power controls ([PREREG](dependent_null_v1/PREREG.md), [FINDINGS](dependent_null_v1/FINDINGS.md))
 - **[owner_acceptance_v1](owner_acceptance_v1/)** R320, DONE PARTIAL, 4 trials. Common paper controls; four risk forecasts and exact owner100 acceptance ([PREREG](owner_acceptance_v1/PREREG.md), [FINDINGS](owner_acceptance_v1/FINDINGS.md))

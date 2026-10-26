@@ -39,3 +39,5 @@ experiments/msnr_v1/results/trades.csv.gz
 !experiments/equations_v1/results/coin_pnl.npz
 !experiments/equations_v2/results/forecasts.npz
 !experiments/equations_v2/results/coin_pnl.npz
+# R323 raw append-only model journals are preserved locally; immutable packed copies are tracked.
+/experiments/continuation_control_v1/.cache/
