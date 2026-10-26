@@ -1,5 +1,45 @@
 # Research handoff: adjacent work
 
+## Repository use audit (2026-10-22, base `5bb9309`)
+
+The tracked tree has 302 Markdown files (53 under `docs/`), 44 library modules, 184 Python/shell scripts and 124
+experiment folders. No byte-identical Markdown duplicate was found. Topic overlap includes distinct source receipts,
+dated proposals, tests and critiques; those are not interchangeable facts to discard.
+
+A static Python-import pass finds production references to 39 of the 44 `lab/` modules and test references to 42.
+This is dependency evidence, not runtime profiling or test coverage. For example, `lab.flow` is a documented
+`python -m` command despite having no direct production import. Do not delete modules based on import counts.
+
+Two concrete integration gaps remain visible in code: [microstructure helpers](../lab/microstructure.py) have tests
+but no direct production importer; [R304's fitter](../scripts/run_mlrank.py) returns GBM predictions and discards the
+estimator. Neither a tested feature helper nor a historical ranking is a prospective trading lane. M264 and M042 in
+[the live queue](../registry/methods.csv) retain their own exact scope; raw point-in-time inputs, model/feature lineage
+and a frozen forward specification remain necessary. No market outcomes or performance profile were computed here.
+
+## Integrated unlock evidence (2026-10-23)
+
+R258/R259 from original topic `cc85b9a` are now imported into the consolidation: exact frozen specs/runners,
+results and [portable inputs](../research/datasets/unlock_market_data_v1/README.md), with both missing registry
+rows appended through the helper and all previous register bytes retained. Both runners reproduced all ten
+original result artifacts byte-for-byte from the restored bundle; this is reproducibility, not new market evidence.
+[Price-only R258](../experiments/unlocks_daily_v1/FINDINGS.md) and
+[funding/collateral R259](../experiments/unlocks_funding_bounds_v1/FINDINGS.md) remain PARTIAL: full-cohort
+funding is INCONCLUSIVE (14 unknown events including the worst price loss); the maximum necessary cash floor
+is15.995 times initial short notional. These are Binance historical bounds, not executable MEXC account returns.
+M057 retains R265/R266 and records these limitations. Current `scripts/run_unlocks.py` and all forward journals
+are unchanged. The different legacy R265 runner/tests/implementation notes in PR32 remain unintegrated; PR32
+is not completely superseded and stays open: the legacy runner changes funding/stale-price boundaries,
+ADV days, RNG ordering and BTC-hedge cost. It cannot replace current R265 as a guard-only fix.
+The current R266 writer is also unchanged; the orchestrator now checks its journal before/after execution,
+including entry cutoffs, identities, score arithmetic and retained snapshot bytes. Source completeness and
+original publication remain unverified. Missing source snapshots block a new operational success claim.
+
+## Historical R212 handoff
+
+**Historical handoff.** The R212 snapshot below is retained for provenance. It is not the active writer list or a
+current task queue. Use fresh [room claims](https://github.com/SaikiK12/T/issues/7), [methods.csv](../registry/methods.csv)
+and each linked lane's latest recorded evidence before resuming a candidate.
+
 Current snapshot: Claude's branch `claude/yo-9a1k5w`, commit `95efda7` (R212). Its open pull request says an adversarial audit of the forward pipeline and the R205-R212 scripts is in progress. The code contribution here is limited to research-artifact bookkeeping so that audit can continue in its own area.
 
 ## Read-only integrity check

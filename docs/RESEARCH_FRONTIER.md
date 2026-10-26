@@ -1,5 +1,9 @@
 # Research frontier: questions the current evidence has not settled
 
+**Historical source review.** The open questions and environment limits below describe its review date. They are
+inputs to [the live methods queue](../registry/methods.csv), not another task list. Check current lane evidence and
+actual local inputs before treating a question as untested or a dependency as missing.
+
 Reviewed 2026-10-19. This supplement prioritizes independent literature and execution questions that are easy to miss when reading only the lab's own strategy results. It is a source review and a proposed test design, not a new preregistration or a market result. The repo's frozen lanes and live forward journals remain authoritative.
 
 ## The main distinction to preserve

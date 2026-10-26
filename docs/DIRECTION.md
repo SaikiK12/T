@@ -1,5 +1,11 @@
 # Direction (owner-approved 2026-10-20): all the data, all the strategies, tested as families, confirmed on samples nobody has read
 
+**Reading scope (2026-10-22).** This preserves dated owner decisions and later progress notes. Counts, missing-data
+lists, worker assignments and Day 1 tasks describe those snapshots, not the current checkout or a fresh instruction
+to run them. Latest owner instructions and fresh [room claims](https://github.com/SaikiK12/T/issues/7) govern work;
+use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
+for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
+
 ## Context
 
 **What we want:** the best net PnL the owner can actually trade (MEXC perps first), proven on days nobody had seen,

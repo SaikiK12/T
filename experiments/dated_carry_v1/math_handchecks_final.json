@@ -1,0 +1,28 @@
+{
+  "reviewed_code_sha256": "18d57d37737288a4655efdeaef8e15693a3565ba8f6d7c1a4a1c5bf0f589348f",
+  "scope": "conditional inverse component literal handchecks only; no market data/outcome/feeattestation",
+  "passed": 19,
+  "checks": [
+    "two_price_short_daily_and_delivery_literal_coin",
+    "long_sign_daily_positive_final_negative",
+    "multiple_daily_settlements_telescope_once",
+    "direct_vs_daily_endpoint_identity",
+    "opening_after_daily_uses_reset_reciprocal",
+    "opening_guard_includes_old_unrealized_loss",
+    "opening_guard_includes_old_unrealized_gain",
+    "unknown_fee_withholds_cash_and_new_open",
+    "duplicate_no_doublepost_conflict_withholds",
+    "entry_delivery_coin_fees_once",
+    "unknown_delivery_fee_preserved",
+    "premature_delivery_expired_open_and_opposite_rejected",
+    "finite_depth_units_harmonic_vs_spot_cash",
+    "no_depth_extrapolation",
+    "terminal_actual_exit_ratio_and_fees",
+    "unknown_delivery_or_exit_not_zero",
+    "excess_coin_reserve_retains_price_delta",
+    "journal_reopen_literal_coin_balances",
+    "exact_bounded_rational_input_guard"
+  ],
+  "source_formula_corrobation": "oldformalURL404;fullreciprocalprimaryformulaunreceived",
+  "independent_market_observations": 0
+}

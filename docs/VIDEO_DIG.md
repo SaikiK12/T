@@ -133,3 +133,71 @@ ours, after its own risk.
 - **Data (gitignored):** `data/videos/` holds hits, picks, episodes and transcripts. `data/news/` holds the headline
   record. `data/cboe/` holds the vol curve.
 - **Rows:** `registry/methods.csv` M277-M281 and M285-M287.
+
+## Owner links received2026-10-23: footprint and prior-session volume profile
+
+Both complete automatic-caption files were recovered from TikTok's public page/subtitle endpoints without
+login. Audio and chart frames were NOT inspected; automatic captions can mishear terms and numbers. Raw media
+and captions stay outside Git; dated versions, hashes, timestamps,20 distinct source scopes and missing mechanics
+are retained in the existing [source intake](../research/intake/source_methods_20261020.json), supplement
+`owner_tiktok_footprint_profile_20261023`. No performance claim or new market trial follows from these videos.
+
+- [First link: Dualis Flow,82seconds](https://www.tiktok.com/@obsid__/video/7691383892095290646),
+  from `vm.tiktok.com/ZGdCt5sdM/`: French footprint tutorial. Resting buyers occupy bid and sellers ask;
+  executed market sells print at bid and buys at ask. Per-price volume is bid+ask, delta is ask-bid; the example
+  compares ask with bid one tick below at more than3:1, with the inverse on the sell side. Candle delta sums
+  levels; this is not cumulative delta across candles. No strategy, trading software or track record is supplied.
+  The ASR's spoken total at00:39 is ambiguous;38+112=150 and112-38=74 are arithmetic references, not a verified
+  transcription correction. Equality, minimum size and zero-denominator handling remain undefined.
+- [Second link: Trade DNA,1107seconds](https://www.tiktok.com/@user1239509627/video/7699633629739207967),
+  from `vm.tiktok.com/ZGdCtmn4D/`: prior-session profile,70% value area, requested400rows, exchange session clock,
+  intraday examples. The previous day's completed levels are frozen for the next day. Strategies/variants:
+
+| Canonical scope | Received rule and retained variants | Relation to prior evidence |
+|---|---|---|
+| M404 POC reaction | Prior close outside value; reaction on return to POC. Cluster-edge entry, first return only, wick/engulfing and closed directional candle with volume above the preceding candle. The example also uses two later red candles. | These confirmation/cluster variants are not R290's NPOC fixed-hold attraction trade. |
+| M405 value-area re-entry | Prior close inside value; leave the area, then close back inside. Outside swing stop; fixed-R target or opposite value edge. General explanation also mentions edge reaction toward POC. Repeated trades allowed. | R290 VA80 instead starts outside and requires two half-hour inside marks; its NULL does not settle this rule. |
+| M406 breakout/pullback | Strong break outside value, holding pullback and new high/low structure trigger. Fixed-R or older untouched-POC target; large-candle/large-volume filter, rejecting small-candle/high-volume and low-volume drifts. | Strength, structure, pullback tolerance and numerical exits remain unspecified. |
+| M407 POC-sequence bias | Two successively higher/lower session POCs favor that direction; one sequence break warns, a second changes bias. | Optional filter for the above rules; not tested by R290. |
+| M408 stateful combination | A failed re-entry can be followed by an independently confirmed opposite breakout in the same session. | Needs shared position/risk state, arbitration and all trades' costs; no loss-recovery sizing is specified. |
+
+All five new groups are BLOCKED by missing exact mechanics and absent local minute/trade caches, not rejected
+because earlier related ideas failed. The intake separately preserves generic stops behind high-volume clusters
+and targets before the next cluster. No invented threshold is presented as the speaker's rule.
+
+Tools: TradingView and a promotional Volfix segment; no GitHub repository is named. [Volfix's official cluster
+page](https://volfix.net/cluster-profile/) confirms footprint/delta/imbalance visualization, not identification
+of particular institutions or profitable execution. Prices, free-plan availability and discounts were not verified.
+[TradingView's definitions](https://www.tradingview.com/support/solutions/43000502040-volume-profile-indicators-basic-concepts/)
+use lower-timeframe bars and candle-direction up/down volume, not necessarily aggressor buy/sell volume; its
+[fixed-range tool](https://www.tradingview.com/support/solutions/43000480324-fixed-range-volume-profile-indicator/)
+also rounds row sizes to ticks. Those conventions differ from the lab's fixed5bp bins and bar-uniform volume proxy.
+
+One invented-data check demonstrates the limit: identical OHLCV, quote volume, trade count and total aggressive
+buy volume can produce different traded-price POCs. Changing400rows cannot recover missing trade locations.
+The two explicit trade histories and arithmetic are retained in the intake; this is a data-identification check,
+not a market backtest. Existing R290 NULL and frozen files remain intact. New outcomes require a finite frozen
+interpretation, appropriate controls, funding and execution costs at1x/2x/3x.
+
+
+## New received VIX example, 2026-10-24
+
+Owner link `https://vm.tiktok.com/ZGdCn4DRX/` resolves to @ojrenick video `7685943936916999438`, published
+2026-09-16, duration247s. The complete public platform VTT (SourceMT/version8, English) was read; SHA-256
+`4e655349daf26f6ef8a0177e91620a6386987da356cc90e19ba2cbe7d6b6bc61`. Public media CDN returned403; audio/frames were not independently checked.
+
+Six exact source records are reconciled in the existing intake: October110-put, November130-put, implied/event
+move comparison, FOMC/expiry clocks, coincident cross-maturity prints and premium-flow interpretation. October's
+563 contracts at91 option points imply USD5,123,300 gross premium with the USD100 multiplier and a VRO19
+breakeven before costs. November's quantity is missing; K130/p110 gives VRO20 per-contract breakeven. Rounded
+premium is not an exact quantity, and the two expiries require separate settlement variables.
+
+Cboe settles VIX options on morning VRO; the Fed calendar schedules18November2026 minutes at14:00ET. VRO's
+forward30-day index window can still price anticipated event variance; the expiring option does not receive the
+after-release reaction. The video's0.8% event move and VIX17.5 require matching horizons and distinguishing an
+expected absolute move from a standard deviation. Unknown other legs prevent portfolio-direction attribution.
+
+[Official Cboe contract mechanics](https://www.cboe.com/tradable_products/vix/vix_options/specifications),
+[official Fed calendar](https://www.federalreserve.gov/newsevents/2026-november.htm). These are mechanism/payoff
+checks, not a market backtest or a new profitability claim. The new owner-approved funding/basis family R310 is
+a separate research question; it does not copy these VIX puts or infer a complete strategy from them.

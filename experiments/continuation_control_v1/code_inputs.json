@@ -1,0 +1,28 @@
+{
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "scope": "Exact conditional finite-policy/control/account replay and literal audit; shared CLI dispatch excluded,engine frozen. No market-data reader.",
+  "sha256": {
+    "docs/GATES.md": "e7dd02fa43747598959838677cb413578ce8f7cfee59704bd20e4fdfca15a926",
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/acquisition_budget.py": "0a5da0a741d8fa1280f0a8a5b2e08f1e4ced787565de8260bb0d53c101ea98bb",
+    "lab/carry_control.py": "bb192b470ccae257d6f7799d65ca7ef376905caa4806926edbcf273cc758fd01",
+    "lab/continuation_paper.py": "3a0696c7414904edc3e902f22d4863c1a3a60513b167152d7d7355cb48b8bdeb",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/funding_values.py": "47cdafb63f4104c96760f8cf5778a25670e285bec8125201e573a33c5a7ec864",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/paper_account.py": "b862ac3cc3b7012f1768b55e179165ed36ef46684ee6edf931efc357c7c9f0f2",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stream_quotes.py": "8402a10afdc15bafca31dc5eddab017a8cfd2e7ba673b5917e77330801a4fcf9",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/check_continuation_control.py": "ce88290efaf3ce83bf1754e43762ca18c2cf57f63d859d868c19f7295a264549",
+    "scripts/run_continuation_control.py": "1950642dfc7d4a14f31f429db6e1b2993b65b25ed81f2a75b3294135027ae2af",
+    "tests/test_carry_control.py": "65369d347c937fe73c5fc861c6b6f6e20a3a817a1275973a8745d3e649d40540",
+    "tests/test_continuation_oracle.py": "cea5522a4fa38dd6e847624bbe3a09761191f0570c403ebed136d36fcf448ad2",
+    "tests/test_continuation_paper.py": "0a42729d5b46df8e7be74c122f5e518ea6cc807038c49048b739275713ab2cb0"
+  }
+}

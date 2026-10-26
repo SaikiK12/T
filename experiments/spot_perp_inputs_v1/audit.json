@@ -1,0 +1,161 @@
+{
+  "account_paths": 24,
+  "independent_arithmetic_matches": true,
+  "journal_files": 48,
+  "journal_rows": 168,
+  "literal_cash_and_cost_decomposition": [
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 1,
+      "crossing_cost": "1/5",
+      "funding": "0",
+      "gross_mid_price_pnl": "0",
+      "id": "unchanged_basis",
+      "net": "-151/250",
+      "quote_commissions": "101/250"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 2,
+      "crossing_cost": "2/5",
+      "funding": "0",
+      "gross_mid_price_pnl": "0",
+      "id": "unchanged_basis",
+      "net": "-151/125",
+      "quote_commissions": "101/125"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 3,
+      "crossing_cost": "3/5",
+      "funding": "0",
+      "gross_mid_price_pnl": "0",
+      "id": "unchanged_basis",
+      "net": "-453/250",
+      "quote_commissions": "303/250"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 1,
+      "crossing_cost": "1/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "basis_converges",
+      "net": "823/500",
+      "quote_commissions": "101/250"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 2,
+      "crossing_cost": "2/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "basis_converges",
+      "net": "521/500",
+      "quote_commissions": "101/125"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 3,
+      "crossing_cost": "3/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "basis_converges",
+      "net": "219/500",
+      "quote_commissions": "303/250"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 1,
+      "crossing_cost": "1/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "-3",
+      "id": "basis_widens",
+      "net": "-3357/1000",
+      "quote_commissions": "407/1000"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 2,
+      "crossing_cost": "2/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "-3",
+      "id": "basis_widens",
+      "net": "-991/250",
+      "quote_commissions": "407/500"
+    },
+    {
+      "base_commission_exit_mid_value": "0",
+      "cost_multiple": 3,
+      "crossing_cost": "3/5",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "-3",
+      "id": "basis_widens",
+      "net": "-4571/1000",
+      "quote_commissions": "1221/1000"
+    },
+    {
+      "base_commission_exit_mid_value": "101/1000",
+      "cost_multiple": 1,
+      "crossing_cost": "3997/20000",
+      "funding": "999/4000",
+      "gross_mid_price_pnl": "1999/1000",
+      "id": "base_fee_net_hedged",
+      "net": "32885079/20000000",
+      "quote_commissions": "6072921/20000000"
+    },
+    {
+      "base_commission_exit_mid_value": "101/500",
+      "cost_multiple": 2,
+      "crossing_cost": "1997/5000",
+      "funding": "499/2000",
+      "gross_mid_price_pnl": "999/500",
+      "id": "base_fee_net_hedged",
+      "net": "2598789/2500000",
+      "quote_commissions": "1516461/2500000"
+    },
+    {
+      "base_commission_exit_mid_value": "303/1000",
+      "cost_multiple": 3,
+      "crossing_cost": "11973/20000",
+      "funding": "997/4000",
+      "gross_mid_price_pnl": "1997/1000",
+      "id": "base_fee_net_hedged",
+      "net": "8715693/20000000",
+      "quote_commissions": "18176307/20000000"
+    },
+    {
+      "base_commission_exit_mid_value": "101/1000",
+      "cost_multiple": 1,
+      "crossing_cost": "3999/20000",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "base_fee_gross_hedged",
+      "net": "32904019/20000000",
+      "quote_commissions": "6076981/20000000"
+    },
+    {
+      "base_commission_exit_mid_value": "101/500",
+      "cost_multiple": 2,
+      "crossing_cost": "1999/5000",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "base_fee_gross_hedged",
+      "net": "2602009/2500000",
+      "quote_commissions": "1518491/2500000"
+    },
+    {
+      "base_commission_exit_mid_value": "303/1000",
+      "cost_multiple": 3,
+      "crossing_cost": "11991/20000",
+      "funding": "1/4",
+      "gross_mid_price_pnl": "2",
+      "id": "base_fee_gross_hedged",
+      "net": "8736153/20000000",
+      "quote_commissions": "18212847/20000000"
+    }
+  ],
+  "market_profitability_validated": false,
+  "registry_id": "R324",
+  "scope": "literal supplied cash-flow arithmetic and packed chains only"
+}

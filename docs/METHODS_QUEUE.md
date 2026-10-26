@@ -1,15 +1,24 @@
 # Methods queue
 
-**What it is.** One row per distinct trading method or idea from the owner's MacroHFT paste, the four new reels (plus the TradingAgents README they cite), the earlier reels, and the idea docs in `docs/`, including the untracked `docs/OLD_SESSION_EDGES.md`. Duplicates are merged and every source is kept. Built 2026-10-20 against `registry/rounds.csv` (R143-R233, program trials 9,471,893) and each lane's FINDINGS.
+**What it is.** The live queue is `registry/methods.csv`. The table and counts below retain the 2026-10-20
+M001-M169 snapshot. Current IDs, statuses and gaps belong to the CSV; the largest ID is not the row count.
+Source versions and exact tested/open scopes are reconciled through `research/intake/source_methods_20261020.json`
+and `registry/methods_aliases.csv`. Related variants are not necessarily exact duplicates. Do not append another queue here.
+
+> Current source reconciliation is in `research/intake/`, checked with `python -m lab integrity`.
+> This document remains the dated snapshot; the live CSV and alias mapping are authoritative.
 
 **How to update.**
 1. When a lane is registered (PREREG frozen, registry row appended), write its R-id in the row. Set status PARTIAL if it extends a tested mechanism; otherwise keep UNTESTED or BLOCKED. Put REGISTERED or RUNNING in the R-id column.
 2. Set TESTED only when the registry row is DONE, and copy its verdict word (CONFIRMED, NULL, PARTIAL, DATA_PASS) from `rounds.csv`. Never write a verdict the registry does not have.
 3. Old-session results (`docs/OLD_SESSION_EDGES.md`) have no registry rows, so they stay UNTESTED here. They become TESTED only after a registry row exists.
 4. Do not delete or renumber rows. Add a new idea at the end with the next free M-number. Table order is the rank at build time: runnable-now UNTESTED/PARTIAL first, then blocked, then TESTED, then N/A.
-5. **`registry/methods.csv` is the live queue** (columns id, method, data_held, status, cheap, note, source, rid); `scripts/panel.py` shows its first 12 UNTESTED/PARTIAL rows. This file is the 2026-10-20 snapshot of rows M001-M169 with their sources. Rows M170-M229 (scout axes, forex/NASDAQ/prop rows and chartist families, `docs/CRITIQUE.md`) exist only in the CSV. Update the CSV first. `registry/methods_aliases.csv` maps the 164 records of Codex PR #20 (`research/intake/`) onto these ids: aliases, context, and the new rows M227-M229.
+5. **`registry/methods.csv` is the live queue** (id, method, data_held, status, cheap, note, source, rid).
+   `scripts/panel.py` displays its first 12 UNTESTED/PARTIAL/QUEUED rows; this is presentation order, not a new
+   scientific ranking. M170 and later live only in the CSV. Source aliases and received/open scope remain in the
+   existing intake bundle and alias CSV.
 
-**Status.** TESTED: a registry row tests this mechanism (verdict shown). PARTIAL: part tested, gap named. UNTESTED: no test, data held. BLOCKED: blocker named (data not held, owner's yes for a download, compute, or no frozen spec). N/A: a claim, tool or record with no testable mechanism.
+**Status.** TESTED: a registry row tests this mechanism (verdict shown). PARTIAL: part tested, gap named. UNTESTED: no test, data held. BLOCKED: blocker named (data not held, owner's yes for a download, compute, or no frozen spec). QUEUED: a named draft is pending; this alone proves neither a frozen specification nor a registered result. N/A: a claim, tool or record with no testable mechanism.
 
 **Cheap.** 1 = runs on data held in under an hour. 2 = a day of coding or a fetch. 3 = download, live capture or heavy compute. **Data held.** Y = in `data/` of this checkout; P = partly; N = not held.
 

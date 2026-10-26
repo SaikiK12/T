@@ -1,0 +1,13 @@
+{
+  "verdict": "NULL",
+  "gates": {
+    "sharpe_above_both_parents_by_015": false,
+    "paired_sharpe_lower_ci_above_zero_both_parents": false,
+    "sharpe_above_carry_passive_matched": false,
+    "drawdown_no_worse_than_trend": true,
+    "positive_profit_at_2x_and_3x": true
+  },
+  "trials": 1,
+  "fresh_out_of_sample": false,
+  "execution_and_margin_verified": false
+}

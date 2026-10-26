@@ -1,0 +1,15 @@
+{
+  "audit_code_sha256": "52b98fce72042c716d1c621b5184b80c575a4171bf9078a1810675b44b5efaf4",
+  "causal_book_receipts_checked": 288,
+  "cost_rows_checked": 7,
+  "cost_scenarios_checked": 21,
+  "max_cost_error_usd": "5.2E-14",
+  "observed_notionals_checked": 14,
+  "raw_frames": {
+    "lighter": 2629,
+    "mexc": 568
+  },
+  "retained_rows": 144,
+  "scope": "independent accounting and causal-clock audit; no signal or fill claim",
+  "summary_sha256": "0784e3227d3445bc18e4fb0d99d532bd4991502063be52203954f7bf1e21f768"
+}

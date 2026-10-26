@@ -1,0 +1,15 @@
+{
+  "actual_market_or_account_evidence": false,
+  "journal_code_version_binding": "External frozen code_inputs.json verifies replay code; native spot journal pins account config and chain, not code version by itself.",
+  "not_independently_peer_reviewed": [
+    "lab/spot_pair.py",
+    "lab/mexc_spot_wire.py",
+    "capture/fixture runner",
+    "literal final cash-flow audit"
+  ],
+  "parent_focused_functional_tests": 24,
+  "review_note": "experiments/spot_perp_inputs_v1/financial_review.md",
+  "reviewed_component": "lab/spot_cash.py",
+  "scope": "Separate bounded source reader reviewed this exact cash/inventory kernel and ran literal financial probes. No concrete financial blocker found. Not a whole-system/source/market certification.",
+  "sha256": "7ab221fd898cf25ce48c77fb05a16e8a7e445f6b90a65fb34e1be078b53c6a71"
+}

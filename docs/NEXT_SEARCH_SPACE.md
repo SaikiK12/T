@@ -1,5 +1,9 @@
 # Next research priorities (refreshed after R226)
 
+**Historical proposal, not the live queue.** The ranking and open/tested labels below belong to the stated review
+date. Reconcile a candidate with [methods.csv](../registry/methods.csv), [rounds.csv](../registry/rounds.csv) and the
+linked frozen lane evidence before doing work. Preserve the distinctions here; do not repeat the old priority list.
+
 Reviewed 2026-10-19. This is a planning memo, not a preregistration or new market result. Every measurement still needs a frozen lane, an exact trial count, and a clean statement of which dates and outcomes researchers have already seen.
 
 ## What R226 actually tested

@@ -1,0 +1,18 @@
+{
+  "scope": "finite R312 measurement code and acquisition identity, before collection",
+  "sha256": {
+    "experiments/pair_quotes_v1/sources.json": "fe8c069db142935e809836918ddd5184f0d69c4f44979c65019f344ce39d7138",
+    "experiments/xfund_lt_v1/symbols.csv": "e5a689a3bce5f16759104ab7dac945be2ad617317099b124b2137ef308fff1b1",
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/data.py": "a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/probe_pair_quotes.py": "8f7ea152a6ff7b1a9c1f37e4a1639c1afb4965615b525ff2b7e19e5c24ffe1b1",
+    "scripts/record_lighter_book.py": "fb152eaf22ae864080fc3e93b4aecf4eb5e228ea50f1d7730209ff9185f9ca92",
+    "tests/test_executable_quotes.py": "afaa01c6d1acec97f6872cb043f1fbc28d649085bc72579310b950a3e32ac629",
+    "tests/test_pair_quote_probe.py": "e9936c09b34108f1658149addf0295168e96c59dd3841b7d809dcd589792889c"
+  }
+}

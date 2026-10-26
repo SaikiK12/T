@@ -1,0 +1,34 @@
+{
+  "cash": "Spot buy spends principal+quote fee; base fee reduces owned units. Futures entry only reserves1x notional; two funded wallets both in denominator. No transfers/FX/second reserve/spread subtraction.",
+  "clock_and_quantity": "Wire decoder retains raw fields and first-seen UTC/monotonic clocks. No source timestamp-unit, quantity-asset or complete-snapshot certification from these sources. Never fallback to createTime,lastOrderCreateTime or receipt time.",
+  "current_capture": {
+    "cash_or_history_requests": 0,
+    "combined_accepted_application_payload_bytes_max": 8388608,
+    "full_wire_bytes_including_transport_known": false,
+    "message_or_handshake_body_bytes_max": 131072,
+    "messages_max": 6000,
+    "metadata_gets": 0,
+    "observation_seconds_per_connection": 12,
+    "one_attempt": true,
+    "overall_seconds": 30,
+    "per_attempt_seconds": 25,
+    "per_connection_messages_max": 3000,
+    "per_connection_payload_bytes_reserved": 4194304,
+    "requests_duration_reservation_seconds_sum": 50,
+    "retry_redirect_reconnect_count": 0,
+    "subscription_messages_max": 4,
+    "symbols": [
+      "BTC",
+      "WIF",
+      "SKR"
+    ],
+    "websocket_handshakes_max": 2
+  },
+  "economic_validation": "8constructed cases x3cost tiers. Literal two-wallet cash-flow/cost oracle and append-only replay. Constructed outcomes known by design; no empirical significance, calibrated expectancy, dependent-null acceptance, new prospective strategy evidence or activation.",
+  "fee_unknown": "Missing/third-asset spot fee blocks subsequent spot fills and complete NAV; unknown normalized funding withholds aggregate NAV. No guessed MX conversion or owner commission.",
+  "historical_scope": "Separate CURRENT compatibility scope. Original historical allowance remains7757/8000requests and reported229.85/250MiB; exact historical remaining bytes unknown. No renewed historical permission.",
+  "input_sequence": "Commit frozen spec/code/contracts before capture; seal+commit exact raw evidence and input identity before offline report. Neither replay command nor reproduction can initiate collection.",
+  "market_scoring": "ALL current frames remain structurally received only; executable synchronized pairs and actual net PnL unknown. No fee tier, min lot, symbol status/session or actual funding invented.",
+  "registry_id": "R324",
+  "scope": "physical spot plus separate linear perpetual simulated cash/inventory and raw public source compatibility"
+}

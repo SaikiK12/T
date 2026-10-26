@@ -1,0 +1,17 @@
+{
+  "audited_computed_cost_tiers": 0,
+  "cost_account_models": 0,
+  "fixed_control_cells": 36,
+  "fixed_pair_slots": 9,
+  "fixed_tier_slots": 108,
+  "journal_files": 0,
+  "journal_rows": 0,
+  "market_profitability_validated": false,
+  "missing_cost_reasons": [
+    "ValueError:price must be a finite number",
+    "ValueError:unsupported metadata amount"
+  ],
+  "new_prospective_strategy_days": 0,
+  "raw_rational_arithmetic_matches_within_quote_tolerance": "1e-8",
+  "registry_id": "R325"
+}

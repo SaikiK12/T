@@ -1,0 +1,166 @@
+{
+  "largest_cumulative_functions": [
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.7818724610000001,
+      "function": "null_calibration",
+      "line": 71,
+      "path": "lab/volatility_validation.py",
+      "self_seconds": 0.114891301
+    },
+    {
+      "calls": 202,
+      "cumulative_seconds": 0.7028055470000001,
+      "function": "block_intervals",
+      "line": 55,
+      "path": "lab/volatility_validation.py",
+      "self_seconds": 0.323278508
+    },
+    {
+      "calls": 259,
+      "cumulative_seconds": 0.065038829,
+      "function": "sha256_file",
+      "line": 10,
+      "path": "lab/prereg.py",
+      "self_seconds": 0.001931844
+    },
+    {
+      "calls": 8,
+      "cumulative_seconds": 0.029112301,
+      "function": "load",
+      "line": 34,
+      "path": "lab/artifact_io.py",
+      "self_seconds": 0.00022744300000000002
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.027560911,
+      "function": "forecasts",
+      "line": 32,
+      "path": "lab/volatility_validation.py",
+      "self_seconds": 0.00346641
+    },
+    {
+      "calls": 26,
+      "cumulative_seconds": 0.019391737000000003,
+      "function": "read_bytes",
+      "line": 19,
+      "path": "lab/artifact_io.py",
+      "self_seconds": 0.000658281
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.015330283,
+      "function": "<module>",
+      "line": 1,
+      "path": "lab/paper_controls.py",
+      "self_seconds": 1.3991e-05
+    },
+    {
+      "calls": 514,
+      "cumulative_seconds": 0.013329511,
+      "function": "basket_sigma24",
+      "line": 80,
+      "path": "lab/apsi.py",
+      "self_seconds": 0.0032880210000000003
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.013207673000000001,
+      "function": "<module>",
+      "line": 1,
+      "path": "lab/paper_account.py",
+      "self_seconds": 1.7924e-05
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.010098104,
+      "function": "export_verified",
+      "line": 55,
+      "path": "lab/artifact_io.py",
+      "self_seconds": 0.000251082
+    },
+    {
+      "calls": 52,
+      "cumulative_seconds": 0.00943677,
+      "function": "bounded",
+      "line": 36,
+      "path": "lab/paper_account.py",
+      "self_seconds": 0.00030032
+    },
+    {
+      "calls": 49,
+      "cumulative_seconds": 0.009050736,
+      "function": "observe",
+      "line": 91,
+      "path": "lab/paper_controls.py",
+      "self_seconds": 0.0014691440000000001
+    },
+    {
+      "calls": 49,
+      "cumulative_seconds": 0.007893558,
+      "function": "__init__",
+      "line": 63,
+      "path": "lab/paper_controls.py",
+      "self_seconds": 0.000419724
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.007514916000000001,
+      "function": "<module>",
+      "line": 1,
+      "path": "lab/stream_quotes.py",
+      "self_seconds": 5.5983e-05
+    },
+    {
+      "calls": 514,
+      "cumulative_seconds": 0.006624420000000001,
+      "function": "ewma_second_moment",
+      "line": 73,
+      "path": "lab/apsi.py",
+      "self_seconds": 0.001732451
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.005280942,
+      "function": "<module>",
+      "line": 1,
+      "path": "lab/executable_quotes.py",
+      "self_seconds": 1.4753000000000001e-05
+    },
+    {
+      "calls": 514,
+      "cumulative_seconds": 0.004891969,
+      "function": "_weighted_returns",
+      "line": 45,
+      "path": "lab/apsi.py",
+      "self_seconds": 0.002601748
+    },
+    {
+      "calls": 196,
+      "cumulative_seconds": 0.004852541,
+      "function": "_locked",
+      "line": 62,
+      "path": "lab/acquisition_budget.py",
+      "self_seconds": 0.00043640100000000005
+    },
+    {
+      "calls": 1,
+      "cumulative_seconds": 0.004116911,
+      "function": "daily_returns",
+      "line": 16,
+      "path": "lab/volatility_validation.py",
+      "self_seconds": 0.00024164700000000003
+    },
+    {
+      "calls": 98,
+      "cumulative_seconds": 0.003242127,
+      "function": "_append_record",
+      "line": 54,
+      "path": "lab/acquisition_budget.py",
+      "self_seconds": 0.00036336100000000003
+    }
+  ],
+  "scope": "Actual R320 complete profiled run; cProfile overhead present. Warm I/O timings with tracemalloc are separate from unprofiled reproduction. Not whole-repository/native-RSS proof.",
+  "total_profile_seconds": 2.6022710820000095
+}

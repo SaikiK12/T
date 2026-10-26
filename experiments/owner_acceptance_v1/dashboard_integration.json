@@ -1,0 +1,27 @@
+{
+  "account_amounts_invented_not_observed": true,
+  "control_room_html_path": "dashboard/index.html",
+  "export_timestamp_is_not_market_first_seen": true,
+  "generation": "b89dea3f2ad4d1acfcb9362cd396a3af712bb1d6b68685386be1623c5527f0ef",
+  "native_legacy_rows_retained": 621,
+  "remote_upload_or_host_delivery_performed": false,
+  "sets": {
+    "paper_accounts": {
+      "rows": 2,
+      "sha256": "8e9ccff24495bde43cec75792d13d927e999e6deac8dfca9423068569e0a9cf1"
+    },
+    "paper_admission": {
+      "rows": 19,
+      "sha256": "5a904f2307f6d358427fdaf79c2dcaf31465e9eaa95a3d544561e659067091bb"
+    },
+    "paper_controls": {
+      "rows": 3,
+      "sha256": "da6e22b54db534652f7675320ae79d7a6ef80cefb5998f1417d551112953eb12"
+    },
+    "paper_requirements": {
+      "rows": 100,
+      "sha256": "08b2b419b5c21d45103c4050796ff4f76bdc11c2aea0a54be2e0f22d295fb66b"
+    }
+  },
+  "strict_executable_days": 0
+}

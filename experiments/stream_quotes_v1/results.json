@@ -1,0 +1,428 @@
+{
+  "access_delay_ms": [
+    0,
+    300
+  ],
+  "capital_per_venue_usd": 5000,
+  "capital_usd": 10000,
+  "charge_reserve_bp": [
+    10,
+    4
+  ],
+  "evidence_manifest_sha256": "3df24af0bacc538ea83ee9724f28790e161179562e3a52cd76b50395b58adddd",
+  "observations_sha256": "6613f8f2bd47cda04d2996519203abd8943a0e297306ee2314eb3627eaa909e3",
+  "pairs": [
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 9
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            0.7014850500000133,
+            0.7067541820000093
+          ]
+        },
+        {
+          "multiple": 2,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            1.4029701000000265,
+            1.4135083640000186
+          ]
+        },
+        {
+          "multiple": 3,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            2.1044551500000397,
+            2.1202625460000277
+          ]
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 8,
+      "grids": 12,
+      "symbol": "BTC",
+      "valid_cost_grids": 3
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 9
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            0.7023304819999827,
+            0.7112271099999942
+          ]
+        },
+        {
+          "multiple": 2,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            1.4046609639999654,
+            1.4224542199999883
+          ]
+        },
+        {
+          "multiple": 3,
+          "n": 3,
+          "round_trip_cost_usd_range": [
+            2.106991445999948,
+            2.1336813299999826
+          ]
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 6,
+      "grids": 12,
+      "symbol": "BTC",
+      "valid_cost_grids": 3
+    },
+    {
+      "book_flags": {
+        "lighter:receive_age_outside_0_1s": 11,
+        "lighter:reported_source_age_outside_minus100ms_2s": 10,
+        "mexc:receive_age_outside_0_1s": 1,
+        "mexc:reported_source_age_outside_minus100ms_2s": 1,
+        "receive_skew_over_1s": 10,
+        "source_skew_over_1s": 10
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 1,
+          "round_trip_cost_usd_range": [
+            1.30975252000001,
+            1.30975252000001
+          ]
+        },
+        {
+          "multiple": 2,
+          "n": 1,
+          "round_trip_cost_usd_range": [
+            2.61950504000002,
+            2.61950504000002
+          ]
+        },
+        {
+          "multiple": 3,
+          "n": 1,
+          "round_trip_cost_usd_range": [
+            3.92925756000003,
+            3.92925756000003
+          ]
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 0,
+      "grids": 12,
+      "symbol": "WIF",
+      "valid_cost_grids": 1
+    },
+    {
+      "book_flags": {
+        "lighter:receive_age_outside_0_1s": 11,
+        "lighter:reported_source_age_outside_minus100ms_2s": 10,
+        "no_causal_decision_quantity": 11,
+        "receive_skew_over_1s": 10,
+        "source_skew_over_1s": 10
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 0,
+      "grids": 12,
+      "symbol": "WIF",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 4,
+        "mexc:receive_age_outside_0_1s": 8,
+        "mexc:reported_source_age_outside_minus100ms_2s": 6,
+        "receive_skew_over_1s": 8,
+        "source_skew_over_1s": 8
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 3,
+      "grids": 12,
+      "symbol": "SKR",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 2,
+        "lighter:receive_age_outside_0_1s": 2,
+        "mexc:receive_age_outside_0_1s": 6,
+        "mexc:reported_source_age_outside_minus100ms_2s": 5,
+        "no_causal_decision_quantity": 8,
+        "receive_skew_over_1s": 6,
+        "source_skew_over_1s": 6
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 4,
+      "grids": 12,
+      "symbol": "SKR",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 3,
+        "lighter:receive_age_outside_0_1s": 9,
+        "lighter:reported_source_age_outside_minus100ms_2s": 5,
+        "mexc:receive_age_outside_0_1s": 8,
+        "mexc:reported_source_age_outside_minus100ms_2s": 3,
+        "receive_skew_over_1s": 3,
+        "source_skew_over_1s": 3
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 1,
+      "grids": 12,
+      "symbol": "ROBO",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 2,
+        "lighter:receive_age_outside_0_1s": 8,
+        "lighter:reported_source_age_outside_minus100ms_2s": 6,
+        "mexc:receive_age_outside_0_1s": 7,
+        "mexc:reported_source_age_outside_minus100ms_2s": 2,
+        "no_causal_decision_quantity": 9,
+        "receive_skew_over_1s": 3,
+        "source_skew_over_1s": 3
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 1,
+      "grids": 12,
+      "symbol": "ROBO",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 1,
+        "lighter:receive_age_outside_0_1s": 11,
+        "lighter:reported_source_age_outside_minus100ms_2s": 11,
+        "mexc:receive_age_outside_0_1s": 7,
+        "mexc:reported_source_age_outside_minus100ms_2s": 4,
+        "receive_skew_over_1s": 11,
+        "source_skew_over_1s": 11
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 1,
+      "grids": 12,
+      "symbol": "MEGA",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "insufficient_displayed_depth": 1,
+        "lighter:receive_age_outside_0_1s": 11,
+        "lighter:reported_source_age_outside_minus100ms_2s": 11,
+        "mexc:receive_age_outside_0_1s": 8,
+        "mexc:reported_source_age_outside_minus100ms_2s": 4,
+        "no_causal_decision_quantity": 11,
+        "receive_skew_over_1s": 11,
+        "source_skew_over_1s": 11
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 1,
+      "grids": 12,
+      "symbol": "MEGA",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "lighter:receive_age_outside_0_1s": 12,
+        "lighter:reported_source_age_outside_minus100ms_2s": 12,
+        "mexc:receive_age_outside_0_1s": 8,
+        "mexc:reported_source_age_outside_minus100ms_2s": 4,
+        "receive_skew_over_1s": 12,
+        "source_skew_over_1s": 12
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 0,
+      "fresh_fair_index_grids": 0,
+      "grids": 12,
+      "symbol": "XPD",
+      "valid_cost_grids": 0
+    },
+    {
+      "book_flags": {
+        "lighter:receive_age_outside_0_1s": 12,
+        "lighter:reported_source_age_outside_minus100ms_2s": 12,
+        "mexc:receive_age_outside_0_1s": 7,
+        "mexc:reported_source_age_outside_minus100ms_2s": 4,
+        "no_causal_decision_quantity": 12,
+        "receive_skew_over_1s": 12,
+        "source_skew_over_1s": 12
+      },
+      "cost_tiers": [
+        {
+          "multiple": 1,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 2,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        },
+        {
+          "multiple": 3,
+          "n": 0,
+          "round_trip_cost_usd_range": null
+        }
+      ],
+      "delay_ms": 300,
+      "fresh_fair_index_grids": 0,
+      "grids": 12,
+      "symbol": "XPD",
+      "valid_cost_grids": 0
+    }
+  ],
+  "parser_errors": {},
+  "predictive_trials": 0,
+  "registry_id": "R313",
+  "rows": 144,
+  "scope": "source-stamped public quote-access cost diagnostic, not fills, expectancy or paper scoring"
+}
