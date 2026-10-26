@@ -176,6 +176,11 @@ The same entry point's [spot/perpetual component](experiments/spot_perp_inputs_v
 tracks base/quote fees and joins both funded wallets once. It replays sealed public wire
 receipts and constructed accounting controls; actual executable return remains unknown.
 `scripts/check_spot_perp_account.py /fresh/output/results.json` checks literal cash/cost arithmetic.
+For [source-aware spot/perpetual quote costs](experiments/spot_perp_costs_v2/FINDINGS.md),
+use `python -m lab account --spot-costs-v2 --out /fresh/output` and
+`python scripts/check_spot_costs_v2.py /fresh/output/results.json`. The original
+R325 input failures are retained; corrected costs use the same sealed inputs.
+Public-rate/depth assumptions remain conditional and funding keeps total PnL unknown.
 
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.

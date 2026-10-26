@@ -15850,6 +15850,30 @@
         "actual funding and owner fills"
       ],
       "current_source_review_required": false
+    },
+    {
+      "path": "experiments/spot_perp_costs_v1/sources.json",
+      "sha256": "a8e42986b4e528a6ad0f230bf2ea24077a1a8e92ef9ba45f8a6897367ac5b684",
+      "current_sha256": "a8e42986b4e528a6ad0f230bf2ea24077a1a8e92ef9ba45f8a6897367ac5b684",
+      "review_status": "ingested_enumerated",
+      "scope": "Eleven bounded spot metadata/depth/proto/access mechanics,6staticGETs184953bytes. Original failure and same-data numeric repair retain exact scopes.",
+      "method_ids": [
+        "C09-BASISCARRY72",
+        "CARRY-ORIGINAL72",
+        "FORWARD-CARRY",
+        "SRC-PERP-NOARB",
+        "YT26-05-VARIABLE-CARRY",
+        "HB24-C7-SPOT-PERP-CARRY"
+      ],
+      "unextracted_limitations": [
+        "trade quantity and commission-asset contract",
+        "actual spot lot/tick increment and rounding",
+        "aggregate schema code and deployed correspondence",
+        "signed owner fees/account permissions",
+        "effective funding event/fair notional and settlement cash",
+        "current source book age/execution/fill/session proof"
+      ],
+      "current_source_review_required": false
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -19042,6 +19066,69 @@
         "server deployment/schema correspondence",
         "other imported protos",
         "actual funding and owner fills"
+      ]
+    },
+    {
+      "intake_id": "spot_quote_cost_contracts_20261026",
+      "records_added": [],
+      "existing_aliases_supplemented": [
+        "C09-BASISCARRY72",
+        "CARRY-ORIGINAL72",
+        "FORWARD-CARRY",
+        "SRC-PERP-NOARB",
+        "YT26-05-VARIABLE-CARRY",
+        "HB24-C7-SPOT-PERP-CARRY"
+      ],
+      "base_method_objects_preserved": 407,
+      "source_versions_path": "experiments/spot_perp_costs_v1/sources.json",
+      "frozen_measurement": "R325",
+      "spec_code_commit": "aa24350",
+      "raw_input_commit": "d854aaa",
+      "evidence_path": "experiments/spot_perp_costs_v1/FINDINGS.md",
+      "received_scope": "Eleven source mechanics including minimum-not-step,public status/fees,RESTclock absent,crossed toy example,Java ms example,official proto link and aggregate bootstrap ambiguity. No new source strategy.",
+      "result_scope": "22HTTP200inputs13970bodybytes,but0/108numeric cost tiers from mechanical input incompatibilities;original errors/nulls preserved,not economic null or zero cost.",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "not_reviewed": [
+        "trade quantity and commission-asset contract",
+        "actual spot lot/tick increment and rounding",
+        "aggregate schema code and deployed correspondence",
+        "signed owner fees/account permissions",
+        "effective funding event/fair notional and settlement cash",
+        "current source book age/execution/fill/session proof"
+      ]
+    },
+    {
+      "intake_id": "spot_quote_input_bridge_20261026",
+      "records_added": [],
+      "existing_aliases_supplemented": [
+        "C09-BASISCARRY72",
+        "CARRY-ORIGINAL72",
+        "FORWARD-CARRY",
+        "SRC-PERP-NOARB",
+        "YT26-05-VARIABLE-CARRY",
+        "HB24-C7-SPOT-PERP-CARRY"
+      ],
+      "base_method_objects_preserved": 407,
+      "source_versions_path": "experiments/spot_perp_costs_v1/sources.json",
+      "frozen_measurement": "R326",
+      "spec_code_commit": "5d1256b",
+      "raw_input_commit": "d854aaa",
+      "evidence_path": "experiments/spot_perp_costs_v2/FINDINGS.md",
+      "received_scope": "Same source objects/22raw responses, only Decimal wire text and explicit0minimum lower-bound bridge; no new source/data acquisition.",
+      "result_scope": "72/108quoted tiers,24cost account models/48journals/168rows audited,36depth-failure tiers kept. Actual executable/PnL/funding remains unknown; no newstrategy/PITpaper claim.",
+      "strategy_trials_added": 0,
+      "diagnostic_control_cells_attempted": 36,
+      "cost_tier_slots_attempted": 108,
+      "prospective_days_added": 0,
+      "new_market_requests": 0,
+      "not_reviewed": [
+        "trade quantity and commission-asset contract",
+        "actual spot lot/tick increment and rounding",
+        "aggregate schema code and deployed correspondence",
+        "signed owner fees/account permissions",
+        "effective funding event/fair notional and settlement cash",
+        "current source book age/execution/fill/session proof"
       ]
     }
   ],
