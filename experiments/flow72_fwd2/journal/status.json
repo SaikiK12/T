@@ -1,30 +1,30 @@
 {
- "last_hour": "2026-10-26T14:00:00+00:00",
+ "last_hour": "2026-10-26T15:00:00+00:00",
  "days_scored": 25,
  "short_now": {
   "tvc": [
    "BNBUSDT",
+   "ETHUSDT",
    "IRYSUSDT",
    "KORUUSDT",
    "SKHYUSDT",
-   "SOXLUSDT",
    "XAGUSDT"
   ],
   "t24": [
-   "ENAUSDT",
    "HYPEUSDT",
    "IRYSUSDT",
    "MSTRUSDT",
-   "QNTUSDT",
-   "QUSDT"
+   "ONDOUSDT",
+   "QUSDT",
+   "SOXSUSDT"
   ],
   "t4": [
    "CRCLUSDT",
-   "LINKUSDT",
    "MSTRUSDT",
    "ONDOUSDT",
-   "SOXSUSDT",
-   "SUIUSDT"
+   "SUIUSDT",
+   "TAOUSDT",
+   "\u9f99\u867eUSDT"
   ]
  },
  "A": {
@@ -37,8 +37,10 @@
    "mean": 0.006528943011812353,
    "hit": 0.6,
    "worst": -0.0357744123539843,
+   "invalid_n": 0,
    "n_clusters": null,
    "checks": {
+    "finite_returns": true,
     "enough_scored": true,
     "mean_positive": true,
     "hit_rate": true,
@@ -63,8 +65,10 @@
    "mean": 0.002445588355432764,
    "hit": 0.6,
    "worst": -0.0184272522629367,
+   "invalid_n": 0,
    "n_clusters": null,
    "checks": {
+    "finite_returns": true,
     "enough_scored": true,
     "mean_positive": true,
     "hit_rate": true,

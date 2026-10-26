@@ -436,6 +436,28 @@ table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-s
 
   <section id="health" class="qx-page" hidden>
     <div class="qx-grid">
+      <div class="qx-card wide" id="card-fresh">
+        <h2>Freshness</h2>
+        <p class="qx-note">Every recorder, loop and forward lane, stalest first: its last write against how often it should write. FRESH within 1.5 slots, LATE within 4.5, then STALE. For R200, the newest hour it computed and how long after that hour closed; more than 60 minutes is late. A write says the writer ran, not that its data is complete.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search streams" aria-label="Search streams" data-for="tbl-fresh">
+          <select class="qx-select qx-filter" data-for="tbl-fresh" data-field="state" aria-label="Freshness state"><option value="">All states</option></select>
+        </div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fresh" data-source="freshness" data-row-key="stream">
+            <thead><tr>
+              <th data-field="what"><button>Stream</button></th>
+              <th data-field="state"><button>State</button></th>
+              <th data-field="age_min" class="n"><button>Last write</button></th>
+              <th data-field="cadence_min" class="n"><button>Writes every</button></th>
+              <th data-field="how" class="opt"><button>Written by</button></th>
+              <th data-field="data_at" class="opt"><button>Newest hour closed</button></th>
+              <th data-field="lag_at_compute_min" class="n opt"><button>Computed after close</button></th>
+              <th data-field="path" class="w opt"><button>File</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
       <div class="qx-card wide" id="card-jobs">
         <h2>Operations by responsibility</h2>
         <p class="qx-note">Collection, paper scoring, decisions and reporting have distinct categories. A recent legacy log is unverified activity, not a successful run. Structured success means exit zero only; observation quality is assessed separately. Process command lines and raw log contents are not exported.</p>
@@ -741,6 +763,13 @@ table('tbl-rounds', 'rounds', 'id', [
   { f: 'id' }, { f: 'date', fmt: F.day }, { f: 'lane' }, { f: 'verdict' }, { f: 'trials', fmt: F.int, num: true },
   { f: 'title' }, { f: 'notes' }]);
 table('tbl-methods', 'methods', 'id', [{ f: 'id' }, { f: 'method' }, { f: 'status' }, { f: 'data_held' }, { f: 'round' }, { f: 'note' }]);
+const mins = (v) => (v == null ? '' : v < 120 ? d3.format('.0f')(v) + ' min' : v < 2880 ? d3.format('.1f')(v / 60) + ' h' : d3.format('.1f')(v / 1440) + ' d');
+table('tbl-fresh', 'freshness', 'stream', [
+  { f: 'what', secondary: 'stream' },
+  { f: 'state', dot: (v) => (v === 'FRESH' ? 'ok' : v === 'LATE' ? 'warn' : 'bad') },
+  { f: 'age_min', fmt: mins, num: true }, { f: 'cadence_min', fmt: mins, num: true }, { f: 'how' },
+  { f: 'data_at', fmt: F.dt }, { f: 'lag_at_compute_min', fmt: mins, num: true, dot: (v) => (v == null ? null : v > 60 ? 'warn' : 'ok') },
+  { f: 'path' }]);
 table('tbl-jobs', 'jobs', 'key', [
   { f: 'display_name', secondary: 'task_id' }, { f: 'category' },
   { f: 'state', dot: (v, r) => (r.stale || r.ok == null ? 'warn' : r.ok === true ? 'ok' : 'bad') },

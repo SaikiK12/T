@@ -337,6 +337,9 @@ TITLES = {
     "methods": ("Method queue", "registry/methods.csv: every method from the literature, old sessions and both AIs, "
                 "with its status."),
     "data_sources": ("Data folders", "Size, newest file and provenance note of each folder under data/."),
+    "freshness": ("Freshness", "Each recorder, loop and forward lane: its last write against its cadence (FRESH, LATE, "
+                  "STALE, MISSING; lab/freshness.py), and for R200 the newest hour it computed. A write says the "
+                  "writer ran, not that its data is complete."),
     "tearsheets": ("Performance tear sheets", "lab.tearsheet metrics for every forward paper book and saved research "
                    "stream: CAGR, Sharpe (naive and autocorrelation-adjusted), drawdown, Newey-West t, PSR and the "
                    "Sharpe deflated at the program's trial count."),
@@ -544,6 +547,8 @@ def main():
     sets = {"program": program(rnd), "rounds": rnd, "candidates": rows_csv(ROOT / "registry" / "candidates.csv"),
             "strategies": strategies(), "forward_lanes": forward_lanes(days), "forward_days": days,
             "event_tickets": event_tickets(), "methods": methods(), "data_sources": data_sources(), "jobs": jobs(args.jobs_state_dir)}
+    from lab import freshness
+    sets["freshness"] = freshness.rows(ROOT, NOW)
     from lab import registry
     from scripts import dashboard_perf as perf
     sets["tearsheets"], sets["equity"], sets["monthly"] = perf.tearsheets(

@@ -491,3 +491,51 @@ paying the least funding, short the fifth paying the most, net of the funding ea
    - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
    - First, validate LSE's index bars against an independent close.
    - Then fetch the MEXC index-perp klines.
+
+## Claude leads again; the forward clock (owner, 2026-10-26)
+
+**The owner:** Claude takes the lead. Codex was asked for 100 enhancements because the project felt too narrow; start
+from them, and look at how fresh the files are.
+
+**Codex's 100 items** (`experiments/owner_acceptance_v1`, R320), merged into this branch with the rest of PR #49:
+- 46 verified, 36 partial, 15 blocked and 3 not selected. None is validated on the market: they are infrastructure,
+  checks and accounting.
+- Kept: the `python -m lab` commands, the orchestrator with run IDs, the Decimal paper account, strict admission of
+  journal rows, and the Control Room's paper datasets.
+- Before merging: `registry/rounds.csv` was only appended, 143 frozen PREREGs and 160 input pins verify, and `python -m
+  lab integrity` reports 0 errors.
+
+**The forward clock was broken.**
+- `forward_loop.sh` ticked at minute 6, but R200 computes an hour 12 minutes after its bar closes. Every hour waited
+  for the next tick (66 minutes), so `forward_lag` counted it late by construction. That is one reason strict
+  on-time days stayed at 0. The other is the four-day outage from 10-22 to 10-26, when the container was down; the
+  hourly routine has been switched off since 10-23 20:07.
+- Now: the full tick runs at minute 15, R200 alone at minute 45, and R200 starts first. Each orchestrator task records
+  its own code snapshot, so a commit during a tick blocks nothing.
+- The 15:00 hour of 10-26 was journaled at 16:19, 20 minutes after its close. 10-27 can be the first strict day, if
+  the loop runs all day.
+
+**Freshness (owner item 86).** `lab/freshness.py` gives one row per recorder, loop and forward lane: its last write
+against its cadence (FRESH, LATE, STALE, MISSING). For R200 it also gives the newest hour and how long after the close
+that hour was computed. It is the Control Room's Freshness card and `python -m lab.freshness`.
+
+**Forward record so far (R200, on-time days by date, 10-19..10-25):** book A -5.9%, book B -3.6% net over 7 days. The 18
+backfilled days before the freeze (+22% for A) are not evidence.
+
+**Next, in order:**
+1. **Keep the clock running.** The loop must run day and night for strict days to count. The owner decides how:
+   switch the hourly routine back on, or run the loop on the owner's own computer.
+2. **R332 `mlrank_v3`:**
+   - R304's PARTIAL may come from the metrics look-ahead. `data/metrics_1h` was fetched only for days a coin was in
+     the old top 100 within the next 35 days.
+   - The complete refetch is running. Then the v2 panel, the plumbing run, the claim on #7, the freeze and the run.
+   - R304's forward lanes wait for R332's answer.
+3. **Reserved batch 1 on 2026-11-03,** as frozen (R286).
+4. **Unblock Codex's blocked items with data already recorded:**
+   - 17: the funding forecast error, from the funding board snapshots;
+   - 21 and 23: executable carry and spot-perp costs, from R224's depth;
+   - 36: the reserved samples and batch 1;
+   - 38: the survivorship-free panel;
+   - 91 and 93: forward candidates in the common paper account, once admission evidence exists.
+5. **Roles.** Codex audits, tests and builds tools on its own branch through PRs. Claude is the single writer of the
+   journals, the registry rows and the forward loop. R-ids are claimed on #7 before a freeze.
