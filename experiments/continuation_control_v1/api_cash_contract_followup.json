@@ -1,0 +1,236 @@
+{
+  "R323_calculation_inputs_unchanged": true,
+  "SDK_class": "CandlestickApi",
+  "SDK_commit": "a7a9ba88514d38a863a33642acd41f8adf442e5c",
+  "SDK_git_blob_independently_verified_in_this_pass": false,
+  "access": "Ordinary publicstaticGETs,no redirects/retries/login. Login prompt concerns request-historyUI; no login or market-history request made. Bodycachesignored,notSDKinstalled or fullsite mirrored.",
+  "actual_body_bytes": 298440,
+  "actual_order_allowed": false,
+  "actual_requests": 2,
+  "canonical_aliases": [
+    "FV26-LT-HOURLY",
+    "FV26-LT-RATE-SCHEMA"
+  ],
+  "declared_limits": {
+    "combined_bytes": 1048576,
+    "perbody_bytes": 786432,
+    "requests": 2,
+    "wall_seconds": 30
+  },
+  "documentation_version": "Live body hash/ETag only; OpenAPI info version/title blank. UI updated5months ago is not an exact revision or deployment proof.",
+  "local_pre_dispatch_error": "requests module unavailable; zero earlier network requests,stdlib used without dependency installation",
+  "market_history_account_rpc_requests": 0,
+  "mechanisms": [
+    {
+      "canonical_alias": "FV26-LT-HOURLY",
+      "id": "historical_client_located",
+      "rule": "Actualhistorical method is CandlestickApi.fundings,GET/api/v1/fundings,Fundingsreturn; empty generatedauthsettings,not funding_rates client. Doesnot prove account permissions,server cash serialization or deployedlink."
+    },
+    {
+      "canonical_alias": "FV26-LT-HOURLY",
+      "id": "pagination_limit",
+      "rule": "Description maximum750events;count_back desiredcount startingfromstart_timestamp,0describedasall. Doesnot guarantee complete intervals,endpoint inclusivity,no missingevents or an unboundedresponse."
+    },
+    {
+      "canonical_alias": "FV26-LT-RATE-SCHEMA",
+      "id": "resolution_schema_difference",
+      "rule": "Publicschema allows1h/1d;SDK accepts StrictStr without thatenum. Docsmarket_id int16 format vsSDKStrictInt; no proofsameasperpetualslot or public48bitID."
+    },
+    {
+      "canonical_alias": "FV26-LT-RATE-SCHEMA",
+      "id": "timestamp_bound_not_clock_contract",
+      "rule": "Requestsstrictint0..5e12;Funding.timestamp int64 example1640995200. Example resembles epochseconds,but unit/effective/publication/receipt/revision semantics not documented."
+    },
+    {
+      "canonical_alias": "FV26-LT-RATE-SCHEMA",
+      "id": "cash_units_still_absent",
+      "rule": "Funding requires timestamp/value/rate/direction; stringsvalue/rate examples0.0001,directionexamplelong. No descriptions/units/directionenum or account/base/asset mapping. Identical examples do not prove value==rate or settledcash."
+    }
+  ],
+  "missing": [
+    "server/APIunitandassetdefinition",
+    "direction/signandrounding/checkpointmapping",
+    "effective-event/publication/revisionclocks",
+    "authenticdeployedprefix/decimalepoch/accountbinding"
+  ],
+  "openapi_operation": {
+    "description": "Get fundings. Maximum 750 fundings will be returned per call. `count_back` indicates the number of fundings you would like to be returned, starting from `start_timestamp`, if set to 0, all fundings will be returned.",
+    "operationId": "fundings",
+    "parameters": [
+      {
+        "in": "query",
+        "name": "market_id",
+        "required": true,
+        "schema": {
+          "format": "int16",
+          "type": "integer"
+        }
+      },
+      {
+        "in": "query",
+        "name": "resolution",
+        "required": true,
+        "schema": {
+          "enum": [
+            "1h",
+            "1d"
+          ],
+          "type": "string"
+        }
+      },
+      {
+        "in": "query",
+        "name": "start_timestamp",
+        "required": true,
+        "schema": {
+          "format": "int64",
+          "maximum": 5000000000000,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      {
+        "in": "query",
+        "name": "end_timestamp",
+        "required": true,
+        "schema": {
+          "format": "int64",
+          "maximum": 5000000000000,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      {
+        "in": "query",
+        "name": "count_back",
+        "required": true,
+        "schema": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Fundings"
+            }
+          }
+        },
+        "description": "A successful response."
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResultCode"
+            }
+          }
+        },
+        "description": "Bad request"
+      }
+    },
+    "summary": "fundings",
+    "tags": [
+      "candlestick"
+    ]
+  },
+  "raw_API_value_promoted_to_cash": false,
+  "received_utc_date": "2026-10-26",
+  "records": [
+    {
+      "body_bytes": 50689,
+      "body_cap_reached": false,
+      "elapsed_total": 0.4361556319927331,
+      "etag": "\"98a120ba2d9d2b1b26d59c9748ae1e0617136cdfc4ea5db4d07922d2475b8f9d\"",
+      "market_history_account_rpc_requests": 0,
+      "name": "client",
+      "read_scope": "Readlines401\u2013470 and650\u2013733 plus fundings/path/type/auth-name searches; other candlestick/mark-price methods and repeated wrappers not audited.",
+      "sha256": "660119216cbf90bc3112145d8e40906a8bf05475409967e8e61f25d5ac1fb49c",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/api/candlestick_api.py"
+    },
+    {
+      "body_bytes": 247751,
+      "body_cap_reached": false,
+      "elapsed_total": 1.357378284999868,
+      "etag": null,
+      "market_history_account_rpc_requests": 0,
+      "name": "documentation",
+      "read_scope": "Visibletext230\u2013279 and complete embedded /api/v1/fundings GET contract plus Funding/Fundings schemas; other navigation/schema/UI not audited.",
+      "sha256": "139377d4557e0380bcd6c1f5c373011f369a435f860d523bc43219f4c748be85",
+      "status": 200,
+      "url": "https://apidocs.lighter.xyz/reference/fundings"
+    }
+  ],
+  "response_schemas": {
+    "Funding": {
+      "properties": {
+        "direction": {
+          "example": "long",
+          "type": "string"
+        },
+        "rate": {
+          "example": "0.0001",
+          "type": "string"
+        },
+        "timestamp": {
+          "example": "1640995200",
+          "format": "int64",
+          "type": "integer"
+        },
+        "value": {
+          "example": "0.0001",
+          "type": "string"
+        }
+      },
+      "required": [
+        "timestamp",
+        "value",
+        "rate",
+        "direction"
+      ],
+      "title": "Funding",
+      "type": "object"
+    },
+    "Fundings": {
+      "properties": {
+        "code": {
+          "example": "200",
+          "format": "int32",
+          "type": "integer"
+        },
+        "fundings": {
+          "items": {
+            "$ref": "#/components/schemas/Funding"
+          },
+          "type": "array"
+        },
+        "message": {
+          "type": "string"
+        },
+        "resolution": {
+          "example": "1h",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "resolution",
+        "fundings"
+      ],
+      "title": "Fundings",
+      "type": "object"
+    }
+  },
+  "scope": "POST-FREEZE source-only input clarification. No new implementation or R323 calculation change; no empirical outcomes.",
+  "source_api_cash_bridge_verified": false,
+  "weak_alternatives_retained": [
+    "normalizedper-basepayment",
+    "dimensionlessrate",
+    "priceweightedprefixrelatedvalue",
+    "directpaidaccountstatements"
+  ]
+}

@@ -130,3 +130,22 @@ only the canonical method/intake receive exact supplementary tested/open scope.
 Zero market/history/account/RPC requests. Cumulative historical approval remains
 7757/8000requests and reported229.85/250MiB spent. No orders,funds,secrets,weights,
 paywall/login bypass,merge/closure,remote upload or permanent execution claim.
+
+## Post-freeze input-contract clarification
+
+A separately declared source-only follow-up read the previously unreceived
+pinned SDK CandlestickApi.fundings and public `/reference/fundings` contract:
+2GETs/298440bytes within2GET/1MiB/768KiBbody/30s. This is not part of the frozen
+R323 measurement/input closure; no controller/account outcome was changed.
+The historical client is now located:GET `/api/v1/fundings`, maximum750events,
+count_back semantics and1h/1d document resolutions. SDK/request validation differs
+from the document's schema; examples do not define clock or cash semantics.
+
+Most importantly,the public Funding schema gives `value`/`rate`/`direction` as
+strings and examples, with NO unit/asset/sign/effective-event definition. The
+client transports those fields rather than supplying a cash conversion. Thus
+the narrower request-client gap is closed, while the server cash-unit/deployment
+bridge remains unverified. No API value is promoted to paid cash by inference.
+Exact hashes/read-unread scopes and all five distinct mechanics are retained in
+api_cash_contract_followup.json. Raw bodies stay ignored. No market/history/
+account/RPC request, extra trial, allowance reset or prospective observation.
