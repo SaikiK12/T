@@ -43,3 +43,5 @@ experiments/msnr_v1/results/trades.csv.gz
 /experiments/continuation_control_v1/.cache/
 # R324 native append-only model journals stay local; immutable packed copies are tracked.
 /experiments/spot_perp_inputs_v1/model_journals/
+# R325 native simulated journals remain append-only locally; packed evidence is tracked.
+/experiments/spot_perp_costs_v1/model_journals/
