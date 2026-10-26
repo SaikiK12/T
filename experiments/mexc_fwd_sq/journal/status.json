@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-10-26T14:00:00+00:00",
+ "last_hour": "2026-10-26T16:00:00+00:00",
  "mapped": 40,
  "dropped": [
   "BZUSDT",
@@ -57,8 +57,10 @@
    "mean": -0.0024139871890629665,
    "hit": 0.5,
    "worst": -0.0455106824185354,
+   "invalid_n": 0,
    "n_clusters": null,
    "checks": {
+    "finite_returns": true,
     "enough_scored": false,
     "mean_positive": false,
     "hit_rate": false,

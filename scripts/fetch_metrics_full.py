@@ -19,6 +19,7 @@ parquet is skipped.
 usage: python scripts/fetch_metrics_full.py [--workers 48] [--symbols A,B]
 """
 import argparse
+import http.client
 import json
 import sys
 import time
@@ -80,6 +81,19 @@ def one_symbol(symbol, days, ex):
     return info
 
 
+def fetch_symbol(symbol, days, ex, tries=4):
+    """one_symbol, retried whole when the archive's listing or a download breaks off mid-read: http.client raises
+    IncompleteRead, which lab.data's retry does not catch (it stopped the first full run at perp 383 of 737)."""
+    for k in range(tries):
+        try:
+            return one_symbol(symbol, days, ex)
+        except (http.client.HTTPException, data.FetchError, OSError) as e:
+            if k == tries - 1:
+                raise
+            log(f"{symbol}: {type(e).__name__}, retry {k + 1}")
+            time.sleep(5 * 2 ** k)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=48)
@@ -97,7 +111,7 @@ def main():
         for i, (s, days) in enumerate(need.items(), 1):
             if s in man and ((OUT / f"{s}.parquet").exists() or not man[s].get("used")):
                 continue
-            man[s] = one_symbol(s, days, ex)
+            man[s] = fetch_symbol(s, days, ex)
             m = man[s]
             log(f"{i}/{len(need)} {s}: {m['used']}/{m['needed']} days (missing {len(m['missing'])}, failed "
                 f"{len(m['failed'])}), {(time.time() - t0) / 60:.1f} min")

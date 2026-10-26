@@ -1,5 +1,5 @@
 {
- "last_scored_hour": "2026-10-26T13:00:00+00:00",
+ "last_scored_hour": "2026-10-26T15:00:00+00:00",
  "days_ticketed": 25,
  "BIN": {
   "coverage": {
@@ -7,16 +7,16 @@
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.35191195117952767,
+  "market_mean_apr_now": -0.3551716687882442,
   "top_apr_now": [
-   {
-    "symbol": "IRYSUSDT",
-    "apr": 0.578100323967495,
-    "spot": false
-   },
    {
     "symbol": "\u9f99\u867eUSDT",
     "apr": 0.4605630878298447,
+    "spot": false
+   },
+   {
+    "symbol": "IRYSUSDT",
+    "apr": 0.3847184592541453,
     "spot": false
    },
    {
@@ -74,14 +74,14 @@
   "held_now": [
    {
     "symbol": "IRYSUSDT",
-    "apr": 0.5836349291318281
+    "apr": 0.3888465927078263
    }
   ],
-  "market_mean_apr_now": -0.5967466088667694,
+  "market_mean_apr_now": -0.624645055229779,
   "top_apr_now": [
    {
     "symbol": "IRYSUSDT",
-    "apr": 0.5836349291318281,
+    "apr": 0.3888465927078263,
     "spot": true
    },
    {
@@ -122,8 +122,10 @@
     "mean": -7.888960885344428e-06,
     "hit": 0.5789473684210527,
     "worst": -0.0004200810205977,
+    "invalid_n": 0,
     "n_clusters": null,
     "checks": {
+     "finite_returns": true,
      "enough_scored": false,
      "mean_positive": false,
      "hit_rate": true,
@@ -149,8 +151,10 @@
     "mean": -0.00043755890277567984,
     "hit": 0.5,
     "worst": -0.0009501652845301,
+    "invalid_n": 0,
     "n_clusters": null,
     "checks": {
+     "finite_returns": true,
      "enough_scored": false,
      "mean_positive": false,
      "hit_rate": false,
