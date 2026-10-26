@@ -1,0 +1,11 @@
+{
+  "corrective_scope": "ONE absolute-notional guard plus named checker identity; no model/result replay or financial formula repair.",
+  "failure_log_sha256": "fa34491c524114303f1c10b71b1de6d5c93e78e1f85308a76724f7212cc30dae",
+  "frozen_results_sha256": "ce0cac495e245c2888a6a9a5b2abc2e462830689134532ce94e34acfb398567a",
+  "new_market_requests": 0,
+  "new_strategy_variants": 0,
+  "original_checker_sha256": "3e98c3d032f9522caf1050d8f11b1209d3e8ea7f3db06c6d36a946865e024254",
+  "reason": "Compared signed q*price against positive500 in magnitude guard; all short opens fail despite unchanged500 absolute notional.",
+  "scope": "Original independent checker did not complete; no original PASS claimed.",
+  "state": "FAILED"
+}
