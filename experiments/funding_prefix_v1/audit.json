@@ -1,0 +1,12 @@
+{
+  "actual_market_return": null,
+  "checks": {
+    "accounts": 48,
+    "arithmetic": 216,
+    "funding_updates": 84,
+    "rounding": 25
+  },
+  "exact_rational_matches": true,
+  "scope": "Independent arithmetic from saved inputs; shared source interpretation/generator, not a Rust circuit execution or authentic market audit",
+  "strategy_activation_allowed": false
+}

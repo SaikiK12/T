@@ -69,7 +69,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (100)
+## Run: one lane's frozen measurement (101)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -107,6 +107,7 @@ line is the first line of the script's own docstring.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
+- [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_fxindex.py`](run_fxindex.py): fxindex_v1 (R239): G10 forex momentum, dollar trend, VIX reversal, Halloween, pre-holiday and the variance risk premium, as set out in experiments/fxindex_v1/PREREG.md.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
@@ -172,13 +173,14 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (11)
+## Check: parity, audits and integrity (12)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
 - [`check_dependent_null.py`](check_dependent_null.py): Independent literal R321 binomial/OBM/selected-bootstrap arithmetic audit.
+- [`check_funding_prefix.py`](check_funding_prefix.py): Literal rational audit of R322 saved component fixtures; no market validation.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
 - [`check_owner_acceptance.py`](check_owner_acceptance.py): R320 independent literal risk-target/forecast and paper-report audit.
 - [`check_paired_account.py`](check_paired_account.py): Independent arithmetic for R319 reports, standard library only.
@@ -221,7 +223,7 @@ line is the first line of the script's own docstring.
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
-- [`paper_account.py`](paper_account.py): One offline account command: original account, lifecycle or registered controls.
+- [`paper_account.py`](paper_account.py): One offline account command: account, lifecycle, controls or funding component.
 - [`paper_account_view.py`](paper_account_view.py): Offline French view of an explicit simulated-account report; no calculations or orders.
 - [`paper_status.py`](paper_status.py): Read-only paper/account view over registered evidence; no runner is started.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
