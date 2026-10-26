@@ -27,6 +27,7 @@ import hashlib
 import html
 import json
 import re
+import math
 import subprocess
 import sys
 import time
@@ -37,6 +38,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 import dig_videos as dv  # noqa: E402
 import record_news as rn  # noqa: E402
@@ -105,9 +107,12 @@ def get(url, timeout=60):
 
 def seconds(text):
     """itunes:duration ("3725", "62:05" or "1:02:05") to seconds; None when absent."""
-    if not text or not text.strip():
+    if not isinstance(text, str) or not text.strip():
         return None
-    parts = [float(p) for p in text.strip().split(":") if p.replace(".", "", 1).isdigit()]
+    fields=text.strip().split(":")
+    if len(fields)>3 or any(not re.fullmatch(r'\d+(?:\.\d+)?',p) for p in fields):return None
+    parts=[float(p) for p in fields]
+    if any(not math.isfinite(p) for p in parts) or any(p>=60 for p in parts[1:]):return None
     return sum(p * 60 ** i for i, p in enumerate(reversed(parts))) if parts else None
 
 
@@ -118,14 +123,19 @@ def key(feed, guid):
 def parse_episodes(feed, body):
     rows = []
     for it in ET.fromstring(body).iter("item"):
-        guid = (it.findtext("guid") or it.findtext("link") or it.findtext("title") or "").strip()
+        # Same-title recurring episodes without GUIDs must not collapse into one.
+        guid = (it.findtext("guid") or it.findtext("link") or
+                (it.findtext("title", "")+'|'+it.findtext("pubDate", ""))).strip()
         enc = it.find("enclosure")
         trs = it.findall("podcast:transcript", NS)
         # prefer the text formats this reader parses, in this order
         tr = sorted(trs, key=lambda t: ["application/json", "application/srt", "application/x-subrip", "text/vtt",
                                         "text/html"].index(t.get("type")) if t.get("type") in (
             "application/json", "application/srt", "application/x-subrip", "text/vtt", "text/html") else 9)
-        rows.append({"feed": feed, "key": key(feed, guid), "title": rn._strip(it.findtext("title")),
+        rows.append({"feed": feed, "key": key(feed, guid), "guid":guid,
+                     "episode_url":(it.findtext('link') or '').strip(),
+                     "transcript_alternatives":json.dumps([dict(url=t.get('url',''),type=t.get('type','')) for t in tr]),
+                     "title": rn._strip(it.findtext("title")),
                      "pub_utc": rn.pub_time(it.findtext("pubDate")),
                      "duration_s": seconds(it.findtext("itunes:duration", namespaces=NS)),
                      "audio": enc.get("url", "") if enc is not None else "",
@@ -159,15 +169,30 @@ def episodes():
 def transcript_text(body, kind):
     """A feed transcript (JSON word segments, SubRip, WebVTT or HTML) to one line of plain text."""
     s = body.decode("utf-8", "ignore")
-    if kind == "application/json" or s.lstrip().startswith("{"):
-        segs = json.loads(s).get("segments") or []
-        return re.sub(r"\s+", " ", " ".join(str(x.get("body", "")) for x in segs)).strip()
+    if kind == "application/json" or s.lstrip().startswith(("{", "[")):
+        data=json.loads(s)
+        if not isinstance(data,dict) or not isinstance(data.get('segments'),list):
+            raise ValueError('unsupported transcript JSON schema; not an empty success')
+        segs=data['segments']
+        if any(not isinstance(x,dict) or not isinstance(x.get('body',x.get('text')),str) for x in segs):
+            raise ValueError('unsupported transcript segment schema')
+        result=re.sub(r"\s+", " ", " ".join(x.get('body',x.get('text')) for x in segs)).strip()
+        if not result:raise ValueError('empty transcript')
+        return result
     if kind == "text/html" or s.lstrip().startswith("<"):
+        if re.search(r'(?is)<input[^>]+(?:type|name)\s*=\s*[\"\x27]password',s):
+            raise ValueError('authentication page is not a transcript')
+        s=re.sub(r'(?is)<(script|style|nav|header|footer)[^>]*>.*?</\1>', ' ', s)
         s = re.sub(r"<(time|cite)>[^<]*</\1>", " ", s)
-        return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s))).strip()
+        result=re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s))).strip()
+        if not result:raise ValueError('empty transcript')
+        return result
+    s=re.sub(r'(?ms)^NOTE(?:\s[^\n]*)?\n.*?(?:\n\s*\n|\Z)', '', s)
     lines = [ln for ln in s.splitlines() if ln.strip() and "-->" not in ln and not ln.strip().isdigit()
              and not ln.startswith(("WEBVTT", "Kind:", "Language:"))]
-    return re.sub(r"\s+", " ", " ".join(re.sub(r"^Speaker \d+:\s*", "", ln) for ln in lines)).strip()
+    result=re.sub(r"\s+", " ", " ".join(re.sub(r"^Speaker \d+:\s*", "", ln) for ln in lines)).strip()
+    if not result:raise ValueError('empty transcript')
+    return result
 
 
 def chosen(df, per_feed, feeds=None, match=None):
@@ -235,7 +260,14 @@ def main(argv=None):
     ap.add_argument("--match", default=None, help="text: only titles matching this regex (case-insensitive)")
     ap.add_argument("--whisper-python", default=None)
     ap.add_argument("--tmp", default=None, help="audio download directory (required with --whisper-python)")
+    ap.add_argument('--bounded',action='store_true',help='durable public RSS/native-text scope, no audio, retries or budget reset')
+    ap.add_argument('--out',type=Path,help='bounded mode: immutable derived corpus directory')
     a = ap.parse_args(argv)
+    if a.bounded:
+        if a.cmd=='pages' or a.whisper_python:ap.error('bounded corpus accepts RSS and selective native text only')
+        from scripts.podcast_corpus import Corpus
+        c=Corpus(a.out or ROOT/'data/videos/corpus_20261026')
+        print(json.dumps(c.collect(texts=a.cmd=='text'),indent=2));return
     if a.cmd == "episodes":
         episodes()
     elif a.cmd == "pages":

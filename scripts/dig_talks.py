@@ -171,7 +171,7 @@ def match(episodes=None):
                                                                 "transcript_type": "", "audio": ""})
     rows = []
     for name, rx, tier, domain, why in ROSTER:
-        r = re.compile(rx)
+        r = re.compile(rx,re.I)
         in_title = df.title.map(lambda s: bool(r.search(s)))
         in_summary = df.summary.map(lambda s: bool(r.search(s))) & ~in_title
         for where, m in (("title", in_title), ("summary", in_summary)):
@@ -188,8 +188,9 @@ def match(episodes=None):
 def guest(title, rx):
     """True when a title reads as the person speaking ("ft. X", "with X", "X on ...", "X: ...") rather than as a story
     about them."""
+    if re.search(r"\b(untold story|what happened to|who was|biography of|remembering)\b",title,re.I):return False
     return bool(re.search(rf"(^|ft\.?|feat\.?|\bwith|w/|interview(ing)?|chats? with)\s*(?:{rx})|(?:{rx})\s*(on|–|-|:|,|"
-                          rf"discusses|talks|explains|\|)", title))
+                          rf"discusses|talks|explains|\|)", title,re.I))
 
 
 def priority(t):
@@ -205,9 +206,10 @@ def priority(t):
 
 
 def fetch(talks, whisper_python=None, tmp=None, max_hours=0.0, people=None, get=dp.get, run=subprocess.run):
-    t = priority(talks.drop_duplicates("key"))
+    t=talks
     if people:
         t = t[t.person.str.contains(people, case=False, regex=True)]
+    t = priority(t.drop_duplicates("key"))
     SUBS.mkdir(parents=True, exist_ok=True)
     spent, done = 0.0, []
     for r in t.itertuples():
