@@ -18,6 +18,12 @@ its process timeout starts only after acquisition. R278, R279 and R294 use
 their respective nonblocking .xfund*.lock, matching the shell wrapper. A busy
 lock reports BLOCKED, never a successful skipped task. The graph records these
 lock requirements.
+
+Each task records the code it starts with: the run's snapshot, or its own
+`code` when a commit or an edit came between tasks. A commit changes no code
+bytes and blocks nothing. A change to code bytes while a task runs fails that
+task, since its outputs then have no single code version.
+
 Unlike forward_all.sh, an upstream failure blocks mandatory descendants instead
 of running every remaining command. Independent branches still run. The default
 interpreter is the repository's .venv/bin/python; there is no system fallback.
@@ -48,6 +54,8 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 _RUN_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}\Z")
+# The orchestrator that runs is the one loaded now, whatever the file holds later.
+_LOADED_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 
 
 # Compatibility imports keep existing callers on the same task types and graph.
@@ -145,10 +153,14 @@ def code_version(root):
             raise ValueError("tracked code resolves outside repository")
         digest = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else "MISSING"
         h.update(raw + b"\0" + digest.encode() + b"\0")
-    wrapper_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     return {"commit": head, "code_sha256": h.hexdigest(), "code_files": len(paths),
             "dirty_code": dirty.splitlines(),
-            "orchestrator_sha256": wrapper_sha}
+            "orchestrator_sha256": _LOADED_SHA256}
+
+
+def same_code(a, b):
+    """Same code bytes; the commit and git status may differ."""
+    return (a["code_sha256"], a["code_files"]) == (b["code_sha256"], b["code_files"])
 
 
 def plan(tasks, root):
@@ -278,16 +290,16 @@ def run_tasks(tasks, root, state_dir, run_id, selected=None):
                 node["optional_unavailable"] = [n for n in task.optional
                                                   if n not in by_name or by_name[n]["status"] != "SUCCESS"]
                 try:
-                    unchanged = code_version(root) == report["code"]
-                    code_error = None
-                except (OSError, ValueError, subprocess.CalledProcessError) as exc:
-                    unchanged, code_error = False, type(exc).__name__
+                    code = code_version(root)
+                except (OSError, ValueError, subprocess.CalledProcessError):
+                    code = None
                 if blocked:
                     node.update(status="BLOCKED", reason="mandatory upstream task failed", blocked_by=blocked)
-                elif not unchanged:
-                    node.update(status="BLOCKED", reason="code snapshot unavailable" if code_error
-                                else "code changed since run snapshot")
+                elif code is None:
+                    node.update(status="BLOCKED", reason="code snapshot unavailable")
                 else:
+                    if code != report["code"]:
+                        node["code"] = code
                     invalid = []
                     for f in task.files:
                         path = root / f.path
@@ -315,7 +327,7 @@ def run_tasks(tasks, root, state_dir, run_id, selected=None):
                             if node["status"] == "SUCCESS" and node["data_state"] == "INCOMPLETE":
                                 node.update(status="FAILED", reason="process exited zero but observation check failed")
                             after = code_version(root)
-                            if after != report["code"]:
+                            if not same_code(after, code):
                                 node.update(status="FAILED", reason="code changed during task", code_at_finish=after)
                         except OSError as exc:
                             node.update(status="FAILED", returncode=None, reason="process start or log error: " + str(exc))

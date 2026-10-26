@@ -39,13 +39,17 @@ def forward_tasks(python=".venv/bin/python"):
     tickets after scoring (forward_mexc_sq.main), so R215 is mandatory there.
     R220 builds eligibility/ranks from R200 (forward_carry.journal_grid); it
     does not need R215. R224 reads only R200's latest signal universe. The
-    point-in-time recorders read nothing from the lanes and run first; the
+    point-in-time recorders read nothing from the lanes and run next; the
     digest reads only their files and runs last. R266 reads only the recorders'
     calendar snapshot and ticker files, so they are optional for it. R268 reads the
     notice journal and ticker files the same way and runs right after them; so
     does R270. R278/R279/R294 fetch their own carry inputs under separate locks.
     R285 reads R278/R279, flow and event journals, so those lanes are optional
     for it; R294 is not a sleeve in its frozen book.
+
+    R200 is listed first, so it starts first: it reads nothing from the
+    recorders, and scripts/forward_lag.py counts an hour it computes more than
+    60 minutes after the bar's close as late.
     """
     carry_locks = {"R278": ".xfund.lock", "R279": ".xfund_kc.lock", "R294": ".xfund_lt.lock"}
 
@@ -58,6 +62,7 @@ def forward_tasks(python=".venv/bin/python"):
                     ("flow_signals",) if name == "R200" else ("funding_snapshot",) if name == "REC_FUNDING" else ("unlock_journal",) if name == "R266" else ())
 
     return (
+        task("R200", "forward_tick.py", timeout=1500),
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
         task("REC_FUNDING", "record_funding_board.py", timeout=120),
         task("REC_DERIBIT", "record_deribit_chain.py", timeout=120),
@@ -71,7 +76,6 @@ def forward_tasks(python=".venv/bin/python"):
         task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R272", "forward_announce.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
-        task("R200", "forward_tick.py", timeout=1500),
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),
              files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),

@@ -319,17 +319,34 @@ class ForwardOrchestratorTests(unittest.TestCase):
         report = self.run_tasks((self.task("A", files=(orchestration.Requirement("seed"),)),))
         self.assertEqual(self.nodes(report)["A"]["status"], "BLOCKED")
 
-    def test_code_change_blocks_later_tasks(self):
+    def test_code_change_fails_its_task_and_later_tasks_record_their_own_code(self):
         code = "from pathlib import Path; Path('scripts/invented.py').write_text('# changed during run')"
-        report = self.run_tasks((self.task("EDIT", code), self.task("LATER")))
+        report = self.run_tasks((self.task("EDIT", code), self.task("DEP", needs=("EDIT",)), self.task("LATER")))
         n = self.nodes(report)
         self.assertEqual(n["EDIT"]["status"], "FAILED")
         self.assertEqual(n["EDIT"]["returncode"], 0)
         self.assertIn("code changed during", n["EDIT"]["reason"])
+        self.assertEqual(n["DEP"]["status"], "BLOCKED")
+        self.assertFalse((self.root / "DEP.ran").exists())
         later = n["LATER"]
-        self.assertEqual(later["status"], "BLOCKED")
-        self.assertIn("code changed", later["reason"])
-        self.assertFalse((self.root / "LATER.ran").exists())
+        self.assertEqual(later["status"], "SUCCESS")
+        self.assertEqual(later["code"], n["EDIT"]["code_at_finish"])
+        self.assertNotEqual(later["code"]["code_sha256"], report["code"]["code_sha256"])
+        self.assertTrue((self.root / "LATER.ran").exists())
+        self.assertEqual(report["status"], "FAILED")
+
+    def test_commit_during_task_changes_no_code_and_blocks_nothing(self):
+        commit = ("from pathlib import Path; import subprocess; Path('journal.csv').write_text('day\\n'); "
+                  "subprocess.run(['git', 'add', 'journal.csv'], check=True); "
+                  "subprocess.run(['git', '-c', 'user.name=Offline fixture', '-c', 'user.email=offline@example.invalid', "
+                  "'commit', '-qm', 'journal'], check=True)")
+        report = self.run_tasks((self.task("COMMIT", commit), self.task("LATER", needs=("COMMIT",))))
+        n = self.nodes(report)
+        self.assertEqual((n["COMMIT"]["status"], n["LATER"]["status"]), ("SUCCESS", "SUCCESS"))
+        self.assertNotIn("code", n["COMMIT"])
+        self.assertNotEqual(n["LATER"]["code"]["commit"], report["code"]["commit"])
+        self.assertEqual(n["LATER"]["code"]["code_sha256"], report["code"]["code_sha256"])
+        self.assertEqual(report["status"], "SUCCESS")
 
     def test_untracked_code_bytes_are_fingerprinted(self):
         first = orchestration.code_version(self.root)
@@ -342,13 +359,13 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertEqual(second["dirty_code"], third["dirty_code"])
         self.assertNotEqual(second["code_sha256"], third["code_sha256"])
 
-    def test_new_untracked_code_during_task_blocks_the_next_task(self):
+    def test_new_untracked_code_during_task_fails_that_task_only(self):
         report = self.run_tasks((self.task("CREATE", "from pathlib import Path; Path('scripts/new.py').write_text('# new')"),
                                  self.task("LATER")))
         nodes = self.nodes(report)
         self.assertEqual(nodes["CREATE"]["status"], "FAILED")
-        self.assertEqual(nodes["LATER"]["status"], "BLOCKED")
-        self.assertFalse((self.root / "LATER.ran").exists())
+        self.assertEqual(nodes["LATER"]["status"], "SUCCESS")
+        self.assertEqual(nodes["LATER"]["code"]["code_files"], report["code"]["code_files"] + 1)
 
     def test_last_task_code_change_cannot_report_overall_success(self):
         report = self.run_tasks((self.task("EDIT", "from pathlib import Path; Path('scripts/invented.py').write_text('# changed')"),))
@@ -486,6 +503,10 @@ class ForwardOrchestratorTests(unittest.TestCase):
         order = [t.name for t in orchestration.ordered_tasks(tasks.values())]
         self.assertTrue(all(order.index(name) < order.index("R285") for name in carry_names))
         self.assertNotIn("R294", tasks["R285"].needs + tasks["R285"].optional)
+
+    def test_r200_starts_first(self):
+        order = [t.name for t in orchestration.ordered_tasks(orchestration.forward_tasks())]
+        self.assertEqual(order[0], "R200")
 
     def test_legacy_entrypoint_delegates_and_preserves_failure(self):
         import os
