@@ -1,0 +1,3540 @@
+{
+  "activation_allowed": false,
+  "actual_net_return": null,
+  "cases": [
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "high_confidence_small_move",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "-3.3000",
+              "model_entry_allowed": false,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "negative"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "-5.0000",
+              "model_entry_allowed": false,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "negative"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "-6.7000",
+              "model_entry_allowed": false,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "negative"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "0.4",
+            "expected_price_quote": "0.4",
+            "highest_outcome_probability": "0.7",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "small",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "894.4000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "positive_conditional_forecast",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": true,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "break",
+          "planned_capital_quote": "105.6000",
+          "quantity_base": "1",
+          "reasons": [],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "788.8000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "funding_and_breakout_same_budget",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": true,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "break",
+          "planned_capital_quote": "105.6000",
+          "quantity_base": "1",
+          "reasons": [],
+          "symbol": "ETH",
+          "venue": "mexc"
+        },
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": true,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "80",
+            "expected_gross_quote": "80",
+            "expected_price_quote": "0",
+            "highest_outcome_probability": "1",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-funding",
+          "opportunity_id": "carry",
+          "planned_capital_quote": "105.6000",
+          "quantity_base": "1",
+          "reasons": [],
+          "symbol": "ETH",
+          "venue": "mexc"
+        },
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "third",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "planned_symbol_concentration_limit"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "373.900",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "same_capital_twice",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": true,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "6.0",
+            "entry_notional_quote": "603.0",
+            "fee_entitlement_verified": false,
+            "fee_quote": "1.200",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "603.0",
+            "round_trip_quote": "7.200",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "70.300",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "9.700",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "62.600",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "17.400",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "54.900",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "25.100",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "6",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "first",
+          "planned_capital_quote": "626.100",
+          "quantity_base": "6",
+          "reasons": [],
+          "symbol": "ETH",
+          "venue": "mexc"
+        },
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "6.0",
+            "entry_notional_quote": "603.0",
+            "fee_entitlement_verified": false,
+            "fee_quote": "1.200",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "603.0",
+            "round_trip_quote": "7.200",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "70.300",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "9.700",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "62.600",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "17.400",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "54.900",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "25.100",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "6",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "second",
+          "planned_capital_quote": null,
+          "quantity_base": "6",
+          "reasons": [
+            "batch_segregated_capital_exceeded",
+            "planned_venue_gross_limit",
+            "planned_symbol_concentration_limit"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "calibration_missing",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": null,
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_error_not_calibrated"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_error_not_calibrated"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_error_not_calibrated"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "uncalibrated",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "funding_unknown",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": null,
+            "expected_gross_quote": null,
+            "expected_price_quote": "20",
+            "highest_outcome_probability": "1",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "unknown",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "fee_unknown",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "crossing_quote": null,
+            "entry_notional_quote": null,
+            "fee_entitlement_verified": false,
+            "fee_quote": null,
+            "future_exit_observed": false,
+            "reasons": [
+              "fee_unknown"
+            ],
+            "risk_gross_notional_quote": null,
+            "round_trip_quote": null,
+            "state": "unknown"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "unknown",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "cost:fee_unknown",
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "session_unknown",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "unknown",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "unknown",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "market_session_units_lots_or_fee_evidence_missing"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "future_book",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "crossing_quote": null,
+            "entry_notional_quote": null,
+            "fee_entitlement_verified": false,
+            "fee_quote": null,
+            "future_exit_observed": false,
+            "reasons": [
+              "receive_age_outside_0_1s"
+            ],
+            "risk_gross_notional_quote": null,
+            "round_trip_quote": null,
+            "state": "unknown"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "future",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "cost:receive_age_outside_0_1s",
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "insufficient_depth",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "crossing_quote": null,
+            "entry_notional_quote": null,
+            "fee_entitlement_verified": false,
+            "fee_quote": null,
+            "future_exit_observed": false,
+            "reasons": [
+              "insufficient_displayed_depth"
+            ],
+            "risk_gross_notional_quote": null,
+            "round_trip_quote": null,
+            "state": "unknown"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "thin",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "cost:insufficient_displayed_depth",
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "wrong_asset",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDC",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDC",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDC",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDC",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDC",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDC",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDC",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "wrong",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "segregated_account_budget_unknown"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "risk_halted",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": false,
+        "new_stops": [
+          "data:complete_session_fee_inputs_required"
+        ],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "HALTED",
+        "stops": [
+          "data:complete_session_fee_inputs_required"
+        ]
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "halted",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "account_risk_stop_or_scope_unknown"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "895.4000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "short_forecast",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": true,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "99.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": "76.3000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "3.7000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": "74.6000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "5.4000",
+              "state": "conditional_pass"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": "72.9000",
+              "model_entry_allowed": true,
+              "reasons": [
+                "conditional_supplied_forecast_not_market_validation"
+              ],
+              "required_gross_quote": "7.1000",
+              "state": "conditional_pass"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "short",
+          "planned_capital_quote": "104.6000",
+          "quantity_base": "-1",
+          "reasons": [],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "future_exit_unknown",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "unknown",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    },
+    {
+      "account_after": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "account_before": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "available_capital": "1000",
+            "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+            "cash": "1000",
+            "estimated_future_exit_fees": "0",
+            "execution_drag_diagnostic_not_additive": "0",
+            "external_capital_flows": "0",
+            "fees_paid": "0",
+            "funding_pnl": "0",
+            "initial_cash": "1000",
+            "known_cash_component": "1000",
+            "known_realized_net_component": "0",
+            "locked_capital": "0",
+            "model_net_return": "0",
+            "nav": "1000",
+            "nav_state": "known_simulated_liquidation",
+            "positions": [],
+            "realized_net_pnl": "0",
+            "realized_price_pnl": "0",
+            "reasons": [],
+            "reconciliation_required": [],
+            "unrealized_liquidation_pnl": "0",
+            "unresolved_events": [],
+            "venue": "mexc"
+          }
+        ],
+        "activation_allowed": false,
+        "asof_mono_ns": 11000000000,
+        "certified_net_return": null,
+        "prospective_days": 0,
+        "schema_version": 1,
+        "scope": "simulated linear-futures accounting only; no source/fill/account settlement or profitable strategy certification",
+        "simulation_only": true
+      },
+      "activation_allowed": false,
+      "actual_net_return": null,
+      "budgets": [
+        {
+          "asset": "USDT",
+          "initial_available": "1000",
+          "remaining_after_batch_plan": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "durable_reservation_created": false,
+      "financial_journal_unchanged": true,
+      "journal_sha256": "6a415a91305dbd4b797c20b0af0db9e30f537d1494cdba029ce7040ccb525fb8",
+      "name": "error_unknown",
+      "prospective_days": 0,
+      "risk_assessment": {
+        "accounts": [
+          {
+            "asset": "USDT",
+            "gross_notional": "0",
+            "gross_notional_complete": true,
+            "initial_cash": "1000",
+            "known_gross_component": "0",
+            "net_pnl": "0",
+            "symbol_gross": {},
+            "venue": "mexc"
+          }
+        ],
+        "actual_order_allowed": false,
+        "automatic_flatten_performed": false,
+        "model_new_entries_allowed": true,
+        "new_stops": [],
+        "positions_retained": true,
+        "scope": "paper risk controls only; supplied marks/fees/clock completeness are not authenticated execution evidence",
+        "state": "MODEL_WITHIN_LIMITS",
+        "stops": []
+      },
+      "rows": [
+        {
+          "actual_order_allowed": false,
+          "asset": "USDT",
+          "calibration_authenticity_verified": false,
+          "calibration_evidence_pointer": "invented-calibration-not-market-evidence",
+          "conditional_batch_inclusion": false,
+          "cost": {
+            "actual_fill_verified": false,
+            "book_first_seen_mono_ns": 11000000000,
+            "book_source_identity": "invented-R334-book",
+            "book_source_time_ns": 1790000001000000000,
+            "crossing_quote": "1.0",
+            "entry_notional_quote": "100.5",
+            "fee_entitlement_verified": false,
+            "fee_quote": "0.2000",
+            "future_exit_observed": false,
+            "reasons": [],
+            "risk_gross_notional_quote": "100.5",
+            "round_trip_quote": "1.2000",
+            "state": "conditional"
+          },
+          "cost_tiers": [
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 1,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 2,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            },
+            {
+              "actual_order_allowed": false,
+              "asset": "USDT",
+              "cost_multiple": 3,
+              "expected_net_lower_quote": null,
+              "model_entry_allowed": false,
+              "reasons": [
+                "forecast_cost_error_or_reserve_unknown"
+              ],
+              "required_gross_quote": null,
+              "state": "unknown"
+            }
+          ],
+          "forecast": {
+            "asset": "USDT",
+            "expected_funding_quote": "0.0",
+            "expected_gross_quote": "80.0",
+            "expected_price_quote": "80.0",
+            "highest_outcome_probability": "0.9",
+            "realized_pnl": null
+          },
+          "market_evidence": {
+            "asof_mono_ns": 11000000000,
+            "asset": "USDT",
+            "contract_model": "linear_base",
+            "fee_source_identity": "invented-not-authenticated",
+            "lot_source_identity": "invented-not-authenticated",
+            "max_base": "20",
+            "min_base": ".1",
+            "quantity_base": "1",
+            "quote_asset": "USDT",
+            "scope": "invented market/lot/fee/settlement contract; no actual entitlement",
+            "session_source_identity": "invented-not-authenticated",
+            "settlement_source_identity": "invented-not-authenticated",
+            "source_identity": "invented-not-authenticated",
+            "state": "pass",
+            "step_base": ".1",
+            "symbol": "ETH",
+            "valid_from_utc_ns": 1790000001000000000,
+            "valid_until_utc_ns": 1790000002000000000,
+            "venue": "mexc"
+          },
+          "model_id": "invented-breakout",
+          "opportunity_id": "unknown",
+          "planned_capital_quote": null,
+          "quantity_base": "1",
+          "reasons": [
+            "not_positive_with_error_and_3x_costs"
+          ],
+          "symbol": "ETH",
+          "venue": "mexc"
+        }
+      ],
+      "scope": "one offline allocation batch; supplied evidence is not authenticated; no fills, durable reservations or cross-batch execution support",
+      "simulation_only": true
+    }
+  ],
+  "held": {
+    "admissible_opportunities": 0,
+    "deadlines": 72,
+    "known_conditional_hurdles": 390,
+    "reasons": {
+      "blocked": 1152,
+      "unknown": 144
+    },
+    "size_cost_cells": 1296
+  },
+  "new_market_requests": 0,
+  "predictive_trials": 0,
+  "prospective_days": 0,
+  "registry_id": "R334",
+  "remaining_runtime_bridge": "Durable opportunity reservation, terminal release and fill joins must precede any repeated/concurrent paper allocator.",
+  "scope": "offline single-batch integration and already-seen cost hurdles; no new economic return observations",
+  "simulation_only": true,
+  "source_sha256": "fd1a70ba70dc01d882a160dbe4b13724aa99f8f746e66c96f6a9a5da9923486c",
+  "verdict": "PARTIAL"
+}
