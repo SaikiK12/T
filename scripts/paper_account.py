@@ -1,4 +1,4 @@
-"""One offline account command: original account, lifecycle or registered controls."""
+"""One offline account command: account, lifecycle, controls or funding component."""
 import argparse
 import json
 from pathlib import Path
@@ -31,6 +31,7 @@ def main(argv=None):
     group=p.add_mutually_exclusive_group()
     group.add_argument('--lifecycle',action='store_true',help='integrate paired partial-fill lifecycle and cost evidence')
     group.add_argument('--controls',action='store_true',help='R320 paper controls, finite risk-component/tool validation and exact owner requirements')
+    group.add_argument('--funding-prefix',action='store_true',help='R322 conditional encoded-funding component fixtures; no API cash decoder')
     p.add_argument('--restore-input',action='store_true',help='with --controls: restore its one small pinned held input if absent; never overwrite/download')
     p.add_argument('--out',type=Path)
     args=p.parse_args(argv)
@@ -39,6 +40,8 @@ def main(argv=None):
         print(restore_input())
     if args.controls:
         from scripts.run_owner_acceptance import report
+    elif args.funding_prefix:
+        from scripts.run_funding_prefix import report
     elif args.lifecycle:
         from scripts.run_paired_account import report
     else:

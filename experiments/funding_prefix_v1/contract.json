@@ -1,0 +1,34 @@
+{
+  "actual_cash_decoder": false,
+  "aggregate_component": "floor((old_collateral+funding)/1e6)-floor(old_collateral/1e6), fixed entry quote; imported helper semantics/full route unverified, no additional payment",
+  "collateral_magnitude_bits": 96,
+  "collateral_per_micro_usdc": 1000000,
+  "collateral_per_usdc": 1000000000000,
+  "formula": "signed_size_integer * quote_multiplier * (position_checkpoint - market_prefix)",
+  "maximum_quote_multiplier": 10000,
+  "missing": [
+    "authentic_encoded_states",
+    "complete_persistent_account_route",
+    "imported_arithmetic_constraints",
+    "API_Funding.value_units",
+    "deployment_binding",
+    "actual_public_prefix_history",
+    "decimal_epoch_mapping",
+    "actual_fills_fees_sessions"
+  ],
+  "perps_slot_indices": [
+    0,
+    254
+  ],
+  "position_magnitude_bits": 56,
+  "prefix_magnitude_bits": 62,
+  "scope": "conservative integer subset; same encoded revision/parameter epoch only",
+  "semantics": "old initialized position accrues before checkpoint and size update; no second rate or index factor",
+  "source_tree": "16c0f36d75f2306ee242e26e507e4c237f7f4074",
+  "strategy_activation_allowed": false,
+  "strategy_indices": [
+    0,
+    7
+  ],
+  "tree_is_not_deployment": true
+}
