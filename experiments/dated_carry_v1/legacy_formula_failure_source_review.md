@@ -1,0 +1,5 @@
+# R327 final reciprocal-formula source attempt
+
+Separatefinalscope explicitlyauthorized: atmost2GET/768KiBcombined/512KiBperbody/30s, oldexactofficial25944756746397-Futures-inverse URLandonlyitscanonicalLocation. Actual1GET/53442acceptedbytes/1supperbound,HTTP404,noLocation. Noformulaarticleprose; remainingGETunused. No newsearch/retry/guessedURL, market/account/history/RPC. Oldersearchsnippetformula remainsincompleteprimaryevidence; no fullsourcecorroborationclaim. Originalandfollowupreceiptsunchanged.
+
+Mechanism received: legacydirectsourceisnowunavailableatitsoldURL; searchsnippetandcurrentofficialcashsettlement/quantitydocsarenotdeployment/accountsettlementproof. Keepownreciprocalalgebra/modelasconditional, notclaimexactAPIpaidgets.

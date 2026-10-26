@@ -47,3 +47,5 @@ experiments/msnr_v1/results/trades.csv.gz
 /experiments/spot_perp_costs_v1/model_journals/
 # R326 preserves native journals locally and tracks their immutable packed copy.
 /experiments/spot_perp_costs_v2/model_journals/
+# R327 native hypothetical coin/spot journals stay append-only locally; compact pack is tracked.
+/experiments/dated_carry_v1/model_journals/
