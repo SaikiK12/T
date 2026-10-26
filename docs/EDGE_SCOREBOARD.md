@@ -158,6 +158,55 @@ overstatements are corrected here.
    - The route left open for them is execution: maker orders placed by hand on MEXC at 0 fee, or an overlay on books
      that trade anyway.
 
+## Where cost alone decides (measured 2026-10-26)
+Most families above lost on gross: a daily book pays 0.03-2.9 bp/day of cost and still loses. Seven failed only on
+cost. Below, each one's break-even cost per side sits next to the three routes the owner can reach.
+
+**This re-reads seen results at costs chosen afterwards.** It ranks leads for new evidence. It is not evidence, and
+it changes no verdict.
+
+**Routes, measured**
+
+| Route | Cost per side | Limit | Source |
+|---|---|---|---|
+| MEXC web (manual) | Taker fee 2 bp (on 0/2 days) or 4 bp (on 1/4 days), plus 0.4-0.9 bp to fill $1k (median, ranks 1-20 / 21-50) | About 15 orders a day | R224 `journal/depth.csv`: 1,238 snapshots of 33 coins, 10-19..10-26. Daily fee snapshots in `data/mexc/contracts/` |
+| Lighter Standard (API) | No fee. About 2.0 bp to fill $1k (median of 27 coins) | 300 ms delay on takers | `docs/VENUE_STRUCTURE.md`, one snapshot on 10-21 |
+| MEXC API | 8 bp taker fee plus the fill: about 8.7 bp | none | GATES, R224 |
+
+The web fee changes from day to day:
+- **Default group (maker/taker):** 0/2 bp on 10-19, 10-20 and 10-22; 1/4 bp on 10-21 and 10-26.
+- **Zero fee:** 57 crypto contracts were 0/0 on all five snapshot days. BTC, ETH, SOL and DOGE are not among them.
+
+**The families**
+
+| Family (round) | Gross | Break-even per side | Orders a day | Cheapest route that clears it | Reading |
+|---|---|---|---|---|---|
+| **US-open leaders** (R300's pick): at 10:00 New York, long the 3 strongest top-50 perps since 00:00 UTC and short the 3 weakest, flat at 24:00 UTC | +68.6 / +72.7 bp/day (discovery / validation), positive every year | 17.2 / 18.2 bp | 12 | MEXC web | See the note below the table. |
+| Merged atlas cells with order flow, M2 (R186) | +50.1%/yr, t 2.64 | 0.72x the tier cost | dozens | Lighter API | R186's fee-aware thresholds, at a quarter of the tier costs: +36.8%/yr, t 2.34 |
+| Round-number fade (R249) | +13.7 bp/day | about 1.0x the tier cost | up to 100 | Lighter API | The shifted-grid control earns too, so this is the reversal of the day's first breakout, not the levels |
+| SMT divergence fade, 24 h (R246) | +11.3 bp/day | 1.2x the tier cost | many | Lighter API | +2.0 bp/day net at 1x, t 0.29 |
+| PCA residual reversion, K3 dollar (R287) | about +9.5 bp/day in both windows | 2.7-3.5 bp | hourly | Lighter API, at the margin | |
+| Limit entries 1 sigma below (R193) | +18.7 bp a trade (validation median) | — | a few | MEXC web, maker 0 | The book failed on long-alt beta, not on cost |
+| Altcoin lead-lag, 1 h (R219) | 35 bp/day against 370 of cost | about 0.1x the tier cost | hourly | none | |
+
+**Note on R300's pick.**
+- It is already positive at API 1x (validation +38.7 bp/day), but it failed the t bar (1.28) and the tail check.
+- Re-priced at about 2.9 bp a side (0/2 days), validation would be about +61 bp/day, t about 2.0, and still positive
+  without its 10 best days.
+- At about 4.9 bp a side (1/4 days) it would be +53, t about 1.8.
+- It is the best of 24 books and was picked in discovery.
+
+Families whose gross is about zero gain nothing from cheaper execution. An example is fresh A/V levels (R306), at −8
+to +7 bp a trade.
+
+**What follows**
+- **R300's pick at web cost is the strongest lead,** and it still needs new days.
+- **Forward paper is slow:** at about 58 bp of net per NYSE day against a daily SD of about 650 bp, an expected t of 2
+  takes about 500 NYSE days (2 years).
+- **2020 alone is not enough:** one year gives an expected t of about 1.4.
+- So it is a candidate for a frozen manual-web forward lane and for reserved batch 2, not a result.
+- **The Lighter rows need a Lighter forward feed** for their own coins. R294 already reads Lighter's public clients.
+
 ## Refinements already measured
 | Refinement | Effect | Where |
 |---|---|---|

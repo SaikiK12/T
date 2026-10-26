@@ -539,3 +539,31 @@ backfilled days before the freeze (+22% for A) are not evidence.
    - 91 and 93: forward candidates in the common paper account, once admission evidence exists.
 5. **Roles.** Codex audits, tests and builds tools on its own branch through PRs. Claude is the single writer of the
    journals, the registry rows and the forward loop. R-ids are claimed on #7 before a freeze.
+
+## Measure first (owner, 2026-10-26 evening)
+The owner: the methods so far do not make money. Try other ways, but measure them before launching anything.
+
+**What that means here**
+- **A new idea starts as a gate-0 measurement on seen data,** frozen like any lane. It reports three things:
+  - the gross per trade;
+  - the one-way cost at which it breaks even;
+  - the book at each reachable route's cost: MEXC web, Lighter API and MEXC API.
+- **Nothing goes forward or real from that step.**
+- **Only a lead that can move on gets new days** (forward paper or a reserved batch), and only with the owner's go.
+  That means a lead whose break-even clears a route the owner can actually use.
+
+**Measured today**
+- **R333** (the owner's break-or-rebound model, M412) is frozen at `ac077d2` and running. It reports those three lines.
+- **Cost map:** `docs/EDGE_SCOREBOARD.md`, "Where cost alone decides".
+  - Seven families failed only on cost; most others failed on gross.
+  - The strongest lead is R300's US-open leaders book: 12 orders a day, and a break-even of 17-18 bp a side against
+    about 3-5 bp on MEXC web.
+- **The web fee itself moves.** The default group was 0/2 bp (maker/taker) on three of five snapshot days and 1/4 bp
+  on two. 57 crypto contracts were 0/0 on all five.
+- **The forward clock broke again today.** A container restart stopped the loops for hours; 10-26 has 14 of 17 hours
+  late. 10-27 can still be the first strict day.
+
+**Proposed, not started (the owner decides)**
+1. **A frozen manual-web forward lane for R300's pick.** It is paper only, and needs about 2 years to an expected t of 2.
+2. **Lighter-API paper versions of the cost-limited hourly families:** R186 M2, R249, R246 and R287.
+3. **R332, then reserved batch 1 on 2026-11-03,** as planned. Neither launches anything.
