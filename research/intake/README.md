@@ -2,7 +2,8 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 407 source records/aliases and 54 catalog/tool entries, reconciled to 328 queue rows.
+Current received scope: 408 source records/aliases and 54 catalog/tool entries, reconciled to 329 queue rows.
+The R329 source-only routing review and R330 owner conditional-level hypothesis are retained in [R330 sources](../../experiments/level_probability_v1/sources.json). One new M412 method differs from earlier exact MSNR/pivot/flow scopes; proper probability scores do not by themselves prove calibration or net profit. Current registered outcomes are pending; no prospective day or private institutional strategy is claimed.
 The [R327/R328 dated-carry component](../../experiments/dated_carry_v2/FINDINGS.md)
 supplements the existing M244 alias with 46 bounded Deribit contract/fee/settlement/API
 scopes; these are mechanics, not new strategies. All 407 old method objects and alias

@@ -15090,6 +15090,35 @@
           "path": "experiments/owner_acceptance_v1/FINDINGS.md"
         }
       ]
+    },
+    {
+      "id": "OWN26-LEVEL-PROBABILITY",
+      "title": "Conditional support/resistance close-level continuation versus rebound probabilities, timeout and cost-aware abstention",
+      "status": "untested",
+      "exact_tested_scope": "Finite R330 code/spec/inputidentity prepared; historical outcomes not yet computed. R306 oldMSNRNULL is retained and is not thisconditional close-grid test.",
+      "unrun_scope": "Actual intrabar support/freshness,book/flowmeta-labels,calibrated market confidence,executable price/fairfunding/lot/fees/margin and genuinely new prospective scoring remain open.",
+      "next_action": "Freeze/commit finite R330 code; fit only training,commitmodel beforecalibration/validation; testpreselectedpolicy withoutposthocwinner.",
+      "required_inputs": [
+        "Causalcloselevel/feature/entry/horizon clocks",
+        "Threeoutcome probabilities AND conditional payoff magnitudes",
+        "Synchronized executable quotes/depth and funding notionals",
+        "Knowncapital/risk/fees/marketaccess"
+      ],
+      "blockers": [
+        "Heldhistoryalreadyseen",
+        "Tradedclose/fundingnotional and8bp/side costproxies",
+        "Calibrated uncertainty unproved"
+      ],
+      "source_refs": [
+        {
+          "path": "experiments/level_probability_v1/sources.json",
+          "label": "Exactsourceversion/scope and all receivedalternatives"
+        },
+        {
+          "path": "https://scikit-learn.org/stable/modules/calibration.html",
+          "label": "Proper scores and probability calibration primaryguide"
+        }
+      ]
     }
   ],
   "sources": [
@@ -15893,6 +15922,23 @@
         "actual delivery TWAP and subsequent executable spot USDT exit",
         "margin/liquidation/insurance/socialized-loss and counterparty risk",
         "prospective strategy protocol/on-time evidence"
+      ],
+      "current_source_review_required": false
+    },
+    {
+      "path": "experiments/level_probability_v1/sources.json",
+      "sha256": "29c37611601c8631ecad73f1de16691474f7e86f3ad556c4fdde32836d51fa47",
+      "current_sha256": "29c37611601c8631ecad73f1de16691474f7e86f3ad556c4fdde32836d51fa47",
+      "review_status": "ingested_enumerated",
+      "scope": "42newvenue-routing/spot/collateral/fee mechanics for existingM244 plus11probability/calibration/example scopes and oneownerconditionallevelmethod M412. FourstaticGETs728693bytes,no marketrequest; privateinstitutionalstrategies/linkedcodepapers unread.",
+      "method_ids": [
+        "YT26-04-DATED-CASH-CARRY",
+        "OWN26-LEVEL-PROBABILITY"
+      ],
+      "unextracted_limitations": [
+        "Currentroute/ownerfees/assets/permissions/fills/deliveryunverified",
+        "Linkedprobabilityguideexamples/papers notread",
+        "Actualbook/first-seen/fairfunding/risk/prospectiveevidence missing"
       ],
       "current_source_review_required": false
     }
@@ -19184,6 +19230,23 @@
         "margin/liquidation/insurance/socialized-loss and counterparty risk",
         "prospective strategy protocol/on-time evidence"
       ]
+    },
+    {
+      "intake_id": "level_probability_contract_20261026",
+      "records_added": [
+        "OWN26-LEVEL-PROBABILITY"
+      ],
+      "existing_aliases_supplemented": [
+        "YT26-04-DATED-CASH-CARRY"
+      ],
+      "base_method_objects_preserved": 407,
+      "source_versions_path": "experiments/level_probability_v1/sources.json",
+      "received_scope": "42newvenue-routing/spot/collateral/fee mechanics for existingM244 plus11probability/calibration/example scopes and oneownerconditionallevelmethod M412. FourstaticGETs728693bytes,no marketrequest; privateinstitutionalstrategies/linkedcodepapers unread.",
+      "source_only_abandoned_implementation": "R329venuecarry readingfinished; no frozenimplementation ormarketdispatch, do notcountasstrategyresult.",
+      "frozen_measurement": "R330",
+      "evidence_path": "experiments/level_probability_v1/PREREG.md",
+      "strategy_trials_planned": 6,
+      "prospective_days_added": 0
     }
   ],
   "reassignment_refs": [
