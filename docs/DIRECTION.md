@@ -606,3 +606,38 @@ that guarantees something.
 2. **A paper lock ticket** when the alert fires, frozen at entry and checked against the settlement. A real lock comes
    only after that check, placed by the owner, through `lab.gate.go_real()`.
 3. **The carry books keep running on paper**, and the reserved batch runs on 2026-11-03 as planned.
+
+## Short-hold futures only (owner, 2026-10-26, 21:27 UTC)
+The owner: "if we found an edge or PnL we need to be able to trade scalping futures to do quick money, not spot long
+ranges." This replaces the guarantee section's proposals above. The locked carry needs spot coins and holds of
+months, so no more work goes into it. R335 stays on record.
+
+**What counts now:** a perp trade that opens and closes within hours, on a venue the owner can use (MEXC first), net
+of that venue's measured cost.
+
+**Measured today**
+- **R336 (`levels_mexc0_v1`): PARTIAL, gate 0.** R333's level model, re-priced on the 55 coins whose MEXC perp has
+  zero maker and taker fees, at each coin's measured MEXC spread.
+  - +16.7 bp a trade net, about 9 trades a day, holds of 12 h at most.
+  - The constant-size book's day sums: t 2.85 at 1x, 2.11 at 2x, 1.38 at 3x.
+  - Always trading the breakout earns as much per trade on these coins, but only in 2025-26. One trade's 1% tail is
+    −18.7%.
+- **R300's US-open leaders (already measured):** long the 3 strongest and short the 3 weakest top-50 perps at 10:00 New
+  York, flat at 24:00 UTC.
+  - It is about +70 bp/day gross, and breaks even at 17-18 bp a side.
+  - Its t at the MEXC web fee is about 2.0, but that is a re-read of a pick made in discovery.
+
+**Next, in order**
+1. **A frozen forward paper lane for R336's book** on MEXC's zero-fee perps, with a new id, frozen before its first
+   forward day:
+   - R333's model refit once and frozen;
+   - live Binance features each hour;
+   - the MEXC fee and quote checked at each signal;
+   - tickets frozen before entry;
+   - THROUGH and AWAY recorded as controls.
+2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
+3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
+   will be sized against the disk (3.1 GB free) before it starts.
+
+No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
+placing it.

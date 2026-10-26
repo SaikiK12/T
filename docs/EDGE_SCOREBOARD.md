@@ -107,7 +107,24 @@ overstatements are corrected here.
 | **Efficiency-ratio forecast and chop-day gate** (logistic regression on the reel's 15 measurements forecasts whether the next UTC day trends; skip a first-hour trend rule's trades on predicted chop days; BTC/ETH/SOL perps; M314 from the owner's reel) | Gate 0, NULL, 3 trials (R293). Discovery 2021-23: AUC 0.568; the rule loses −17.8 bp gross per trade, gated −26.1 | Validation 2024-26: AUC 0.537, the same as today's efficiency alone (0.536). Ungated −12.3 bp per trade (t −2.25); gated −15.6 (t −2.13): the gate lowers each trade by 3.3 bp | Gated −14.4 / −17.6 bp/day; ungated −24.3 / −30.2 | MEXC API: gated −17.1 bp/day | none | NULL. Post hoc, the first hour reverses: M315, for unseen data only |
 
 ## The best achievable edges, ranked
-1. **Locked dated carry (new, 2026-10-26, R335).** The only result in the program whose payoff is fixed at entry
+**The owner's format (2026-10-26):** an edge must trade as short-hold futures (perps), "scalping futures to do quick
+money", not as spot or long holds. Item 1 is a short-hold futures candidate, and so is R300's US-open leaders book
+in the cost table below. The carries stay on record.
+
+1. **The owner's level model on MEXC's zero-fee perps (new, 2026-10-26, R336).** It is PARTIAL at gate 0.
+   - **The trade:** R333's break-or-rebound model, which decides each hour and exits at ± sigma12 or after 12 h. It
+     runs only on the 55 coins whose MEXC perp had zero maker and taker fees on all five contract snapshots.
+   - **Size:** each coin pays its median quoted MEXC half-spread (0.4-3.5 bp on most). On that basis:
+     - +16.7 bp a trade net at 1x, about 9 trades a day;
+     - the constant-size book's day sums: t 2.85 at 1x, 2.11 at 2x, 1.38 at 3x;
+     - random sides 0 of 1,000.
+   - **The catch:**
+     - Always trading the breakout earns as much per trade on these coins, though only in 2025-26; the model is the
+       steadier book.
+     - One trade's 1% tail is −18.7%, so leverage must stay low.
+     - The full book needs API orders at the hourly close. The 7-a-day manual book keeps about half (t 2.02).
+   - **Next:** a frozen forward paper lane on MEXC's zero-fee perps, with the fee checked at each signal.
+2. **Locked dated carry (new, 2026-10-26, R335).** The only result in the program whose payoff is fixed at entry
    rather than forecast.
    - **The structure:** hold B coins and short B·F0 dollars of the coin-margined quarterly. The account is worth B·F0
      dollars at expiry for every settlement price, and at 1x the short cannot be liquidated.
@@ -120,7 +137,8 @@ overstatements are corrected here.
    - **Not guaranteed:** the venue itself, ADL in a crash, and the mark-to-market path before expiry.
    - **To trade it:** a Binance, OKX, Deribit or Bybit account with inverse quarterlies, a few orders a quarter
      (manual web is enough). The owner places it, only after a paper lock has been checked against a settlement.
-2. **Cross-venue funding carry (new, 2026-10-21).** The first family in the program to pass gate 0 with t far above
+   - **Not the owner's format:** it needs spot coins and holds of months (owner, 2026-10-26). It is kept on record.
+3. **Cross-venue funding carry (new, 2026-10-21).** The first family in the program to pass gate 0 with t far above
    its reality-check null: 212 of 560 books (R275), broad regions of neighbours, every year positive.
    - **Size:** about 5-10%/yr on total capital at 1x legs in 2025-26 (17-19%/yr in 2023, when Hyperliquid's funding
      was new).
@@ -142,13 +160,13 @@ overstatements are corrected here.
    - **To trade it:** accounts on two venues (Gate plus Hyperliquid or KuCoin, or Binance or Gate plus MEXC or
      KuCoin), about 2 orders a day per book, placed by the owner only after `go_real`. Whether the owner can open a
      KuCoin futures account is for the owner to check.
-3. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
+4. **Funding carry on MEXC.** It is the only edge that passed its holdout test (t 2.07 at 1x costs, about 1%/yr;
    not significant at 2x), and the MEXC version has more coins to carry.
    - **Size:** about 1%/yr in the 2025-26 regime, +8% in 2024, +35% in 2021. It is the safest edge, not the largest.
    - **Falsified by:** R220 failing at 90 on-time days. At 2x costs it was not significant even on the holdout.
    - **To trade it:** a MEXC spot buy plus a perp short of the same size, placed by hand by the owner, only after
      `go_real`.
-4. **Unlock short on MEXC (new, 2026-10-20).** It replicates at gate 0 with the largest per-event edge in the lab:
+5. **Unlock short on MEXC (new, 2026-10-20).** It replicates at gate 0 with the largest per-event edge in the lab:
    +3.24% net per event, t 3.19 (R265), and Codex's independent daily-bar run agrees (R258).
    - **Size:** about 150 events a year in 2025-26. At 10% of capital per event that is roughly +45%/yr before tail
      losses. This is in-sample arithmetic, not a forecast.
@@ -156,17 +174,17 @@ overstatements are corrected here.
      MEXC-only coins, post-archive events).
    - **Risk:** short squeezes. Six of 422 closes lost over 40%, and intraday highs were far worse. A liquidation at
      2x would have hit several events. Sizing and protection must be frozen before any stake.
-5. **Flow book A, or X2, on MEXC crypto.**
+6. **Flow book A, or X2, on MEXC crypto.**
    - **Size:** the largest returns in the archive, not confirmed. Crypto-only holdout +22.3 bp/day (about +80%/yr
      simple), t 1.25, drawdowns of 47-62% across versions.
    - **Falsified by:** R215 or R218 failing their 90-day screen, or R221's futility stop at day 90.
    - **Evidence needed:** confirmation needs R221's look at 182 or 365 days.
    - **Risk:** two coins carried two thirds of the holdout gross.
-6. **top_vs_crowd, crypto only, on MEXC.**
+7. **top_vs_crowd, crypto only, on MEXC.**
    - **Size:** holdout t 2.74 on crypto only, but it is the best of 7 series reported after the holdout was read.
      Without its 10 best days of 457 it falls to t 1.6, and its MEXC replay is -0.6 bp/day. The all-symbol drawdown was 16%.
    - **Status:** the forward replay is about zero. It is now decided by R221.
-7. **Everything else is NULL net of costs.**
+8. **Everything else is NULL net of costs.**
    - The gross edges (atlas cells, lead-lag spread) are real but smaller than a taker's cost.
    - The route left open for them is execution: maker orders placed by hand on MEXC at 0 fee, or an overlay on books
      that trade anyway.
