@@ -228,3 +228,25 @@ program 1 rounds 121 candidates 16 strategies 810 forward_lanes 13 forward_days 
 16:22:04 panel: 123 rounds, 9,478,697 trials, queue 296
 experiments/README.md: 117 lanes, 5 data folders; scripts/README.md: 182 scripts; lab/README.md: 44 modules
 program 1 rounds 123 candidates 16 strategies 810 forward_lanes 13 forward_days 620 event_tickets 7 methods 296 data_sources 47 jobs 31 tearsheets 26 equity 11274 monthly 386 leaderboard 123 coverage 77 funding_board 120 factor_ic 2910
+== tick 2026-10-22T17:06:00Z code 5bb9309
+17:08:54 prereg sha 3605a4028e85
+17:08:54 {'A': (0.71, 2), 'B': (1.02, 2), 'X2': (0.65, 2)}
+17:08:59 on-time days 3, strict 0; hour lag {'n': 64, 'median': 79.44166666666666, 'p90': 201.0233333333333, 'max': 261.48333333333335} order problems: none
+17:09:00 panel: 126 rounds, 9,478,753 trials, queue 296
+experiments/README.md: 120 lanes, 4 data folders; scripts/README.md: 185 scripts; lab/README.md: 44 modules
+program 1 rounds 126 candidates 16 strategies 810 forward_lanes 13 forward_days 620 event_tickets 7 methods 296 data_sources 48 jobs 33 tearsheets 26 equity 11274 monthly 386 leaderboard 126 coverage 77 funding_board 120 factor_ic 2910
+== tick 2026-10-26T15:32:00Z code 1d603e2+dirty
+15:44:31 prereg sha 3605a4028e85
+15:44:32 journaled 12 rows
+15:44:32 {'A': (0.72, 6), 'B': (1.04, 6), 'X2': (0.67, 6)}
+16:02:19 on-time days 7, strict 0; hour lag {'n': 159, 'median': 941.9333333333333, 'p90': 4733.933333333334, 'max': 5681.933333333333} order problems: none
+16:02:20 panel: 126 rounds, 9,478,753 trials, queue 296
+experiments/README.md: 120 lanes, 5 data folders; scripts/README.md: 187 scripts; lab/README.md: 44 modules
+program 1 rounds 126 candidates 16 strategies 810 forward_lanes 13 forward_days 692 event_tickets 2 methods 296 data_sources 48 jobs 32 tearsheets 26 equity 11346 monthly 386 leaderboard 126 coverage 77 funding_board 120 factor_ic 2910
+== tick 2026-10-26T16:06:00Z code 1d603e2+dirty
+16:09:18 prereg sha 3605a4028e85
+16:09:18 {'A': (0.72, 6), 'B': (1.04, 6), 'X2': (0.67, 6)}
+16:09:22 on-time days 7, strict 0; hour lag {'n': 159, 'median': 941.9333333333333, 'p90': 4733.933333333334, 'max': 5681.933333333333} order problems: none
+16:09:23 panel: 126 rounds, 9,478,753 trials, queue 296
+experiments/README.md: 120 lanes, 5 data folders; scripts/README.md: 187 scripts; lab/README.md: 44 modules
+program 1 rounds 126 candidates 16 strategies 810 forward_lanes 13 forward_days 692 event_tickets 2 methods 296 data_sources 48 jobs 34 tearsheets 26 equity 11346 monthly 386 leaderboard 126 coverage 77 funding_board 120 factor_ic 2910

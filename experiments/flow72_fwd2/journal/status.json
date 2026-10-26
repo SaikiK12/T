@@ -1,42 +1,42 @@
 {
- "last_hour": "2026-10-22T15:00:00+00:00",
- "days_scored": 21,
+ "last_hour": "2026-10-26T14:00:00+00:00",
+ "days_scored": 25,
  "short_now": {
   "tvc": [
    "BNBUSDT",
+   "IRYSUSDT",
    "KORUUSDT",
-   "SKHYNIXUSDT",
    "SKHYUSDT",
    "SOXLUSDT",
    "XAGUSDT"
   ],
   "t24": [
-   "ADAUSDT",
-   "INTCUSDT",
+   "ENAUSDT",
+   "HYPEUSDT",
+   "IRYSUSDT",
    "MSTRUSDT",
-   "MUUSDT",
-   "SNDKUSDT",
-   "SOXLUSDT"
+   "QNTUSDT",
+   "QUSDT"
   ],
   "t4": [
-   "INTCUSDT",
-   "MUUSDT",
-   "SKHYNIXUSDT",
-   "SNDKUSDT",
-   "SNXXUSDT",
-   "SOXLUSDT"
+   "CRCLUSDT",
+   "LINKUSDT",
+   "MSTRUSDT",
+   "ONDOUSDT",
+   "SOXSUSDT",
+   "SUIUSDT"
   ]
  },
  "A": {
-  "days": 21,
-  "total": 0.2378443579178075,
-  "total_2x": 0.22396960236599997,
-  "total_3x": 0.21009484681419222,
+  "days": 25,
+  "total": 0.16322357529530881,
+  "total_2x": 0.14674845477433368,
+  "total_3x": 0.13027333425335844,
   "go_real": {
-   "n": 21,
-   "mean": 0.011325921805609882,
-   "hit": 0.7142857142857143,
-   "worst": -0.0310079557600521,
+   "n": 25,
+   "mean": 0.006528943011812353,
+   "hit": 0.6,
+   "worst": -0.0357744123539843,
    "n_clusters": null,
    "checks": {
     "enough_scored": true,
@@ -54,15 +54,15 @@
   }
  },
  "B": {
-  "days": 21,
-  "total": 0.1021726642104079,
-  "total_2x": 0.09955584008255042,
-  "total_3x": 0.09693901595469337,
+  "days": 25,
+  "total": 0.0611397088858191,
+  "total_2x": 0.0581409254015746,
+  "total_3x": 0.05514214191733058,
   "go_real": {
-   "n": 21,
-   "mean": 0.004865364962400376,
-   "hit": 0.6666666666666666,
-   "worst": -0.0164287423129772,
+   "n": 25,
+   "mean": 0.002445588355432764,
+   "hit": 0.6,
+   "worst": -0.0184272522629367,
    "n_clusters": null,
    "checks": {
     "enough_scored": true,

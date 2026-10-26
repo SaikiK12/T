@@ -1,6 +1,6 @@
 {
- "last_hour": "2026-10-22T15:00:00+00:00",
- "mapped": 39,
+ "last_hour": "2026-10-26T14:00:00+00:00",
+ "mapped": 40,
  "dropped": [
   "BZUSDT",
   "CLUSDT",
@@ -27,12 +27,12 @@
  ],
  "mexc_fee": {
   "taker": {
-   "mean": 0.0001128205128205128,
+   "mean": 0.00011,
    "min": 0.0,
    "max": 0.0004
   },
   "maker": {
-   "mean": 5.128205128205129e-06,
+   "mean": 2.5e-06,
    "min": 0.0,
    "max": 0.0001
   }
@@ -46,21 +46,21 @@
   "coverage": 0.5603070175438597
  },
  "X2_ontime": {
-  "days": 2,
-  "total": 0.0199298927208484,
-  "total_2x": 0.018986947157245502,
-  "total_3x": 0.0180440015936425,
-  "funding": -0.0021317156359597,
-  "coverage": 0.38541666666666663,
+  "days": 6,
+  "total": -0.0144839231343778,
+  "total_2x": -0.017311096583780494,
+  "total_3x": -0.020138270033183296,
+  "funding": -0.016026041519366,
+  "coverage": 0.4324845679012346,
   "go_real": {
-   "n": 2,
-   "mean": 0.0099649463604242,
+   "n": 6,
+   "mean": -0.0024139871890629665,
    "hit": 0.5,
-   "worst": -0.0046522378422116,
+   "worst": -0.0455106824185354,
    "n_clusters": null,
    "checks": {
     "enough_scored": false,
-    "mean_positive": true,
+    "mean_positive": false,
     "hit_rate": false,
     "no_tail_event": true
    },
@@ -72,6 +72,13 @@
   "x2_total": 0.059415245815031555,
   "a_total": 0.04552500423846329,
   "diff_mean_bp_day": 7.310653461351709,
+  "diff_t_nw10": null
+ },
+ "vs_R215_A_ontime": {
+  "days": 6,
+  "x2_total": -0.0144839231343778,
+  "a_total": -0.015104029542898498,
+  "diff_mean_bp_day": 1.0335106808678296,
   "diff_t_nw10": null
  }
 }

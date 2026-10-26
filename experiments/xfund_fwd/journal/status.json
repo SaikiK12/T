@@ -1,27 +1,15 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-10-22T01:26:45.673608+00:00",
+ "updated": "2026-10-26T15:53:56.413720+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.003,
-  "gate": 1.011,
+  "binance": 1.0,
+  "gate": 1.028,
   "hyperliquid": 1.0,
   "mexc": 1.0
  },
  "data": {
-  "hyperliquid": {
-   "files": 216,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -31,6 +19,18 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   },
   "mexc": {
    "files": 520,
@@ -51,12 +51,6 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.1648
-   },
-   {
-    "coin": "PUMPUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.1407
    },
    {
     "coin": "VVVUSDT",
@@ -99,18 +93,6 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.349
-   },
-   {
-    "coin": "SKYUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.3161
-   },
-   {
-    "coin": "GRIFFAINUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.3279
    },
    {
     "coin": "WUSDT",
@@ -165,16 +147,34 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.1325
+   },
+   {
+    "coin": "PONSUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1505
+   },
+   {
+    "coin": "GASUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.1362
+   },
+   {
+    "coin": "XAIUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.1437
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
-  "nw_t": null,
-  "max_drawdown": 0.0,
+  "scored_days": 4,
+  "late_days": 3,
+  "total": -0.00013587149999999993,
+  "total_2x": -0.0009758715000000001,
+  "total_3x": -0.0018158715,
+  "total_close": 0.0007815934,
+  "nw_t": -0.2811955656818644,
+  "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
  },
@@ -232,16 +232,22 @@
     "long": "mexc",
     "short": "binance",
     "spread_in": 0.1032
+   },
+   {
+    "coin": "CTSIUSDT",
+    "long": "mexc",
+    "short": "binance",
+    "spread_in": 0.217
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
-  "nw_t": null,
-  "max_drawdown": 0.0,
+  "scored_days": 4,
+  "late_days": 3,
+  "total": 0.005901053499999999,
+  "total_2x": 0.005446053499999999,
+  "total_3x": 0.0049910535,
+  "total_close": 0.006221433099999999,
+  "nw_t": 3.760220822836189,
+  "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
  },
@@ -253,22 +259,10 @@
   "why": "post hoc: R275's best MEXC book by annual net",
   "held_now": [
    {
-    "coin": "AIOTUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.3854
-   },
-   {
     "coin": "SWARMSUSDT",
     "long": "gate",
     "short": "mexc",
     "spread_in": 0.3717
-   },
-   {
-    "coin": "1000LUNCUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.4781
    },
    {
     "coin": "KOMAUSDT",
@@ -289,34 +283,10 @@
     "spread_in": 0.6521
    },
    {
-    "coin": "LRCUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.2906
-   },
-   {
-    "coin": "SIRENUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.269
-   },
-   {
-    "coin": "WALUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.2748
-   },
-   {
     "coin": "BLURUSDT",
     "long": "mexc",
     "short": "gate",
     "spread_in": 0.5318
-   },
-   {
-    "coin": "ESPORTSUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.4049
    },
    {
     "coin": "INXUSDT",
@@ -329,18 +299,6 @@
     "long": "gate",
     "short": "mexc",
     "spread_in": 0.2895
-   },
-   {
-    "coin": "CTSIUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.2654
-   },
-   {
-    "coin": "XCNUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.3242
    },
    {
     "coin": "AGTUSDT",
@@ -361,28 +319,76 @@
     "spread_in": 0.3957
    },
    {
-    "coin": "POWERUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.3159
-   },
-   {
     "coin": "IOSTUSDT",
     "long": "gate",
     "short": "mexc",
     "spread_in": 1.0468
+   },
+   {
+    "coin": "ZILUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3318
+   },
+   {
+    "coin": "PTBUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3196
+   },
+   {
+    "coin": "REDUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.3161
+   },
+   {
+    "coin": "IRYSUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.644
+   },
+   {
+    "coin": "SAFEUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.2581
+   },
+   {
+    "coin": "BMTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.338
+   },
+   {
+    "coin": "ANIMEUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.334
+   },
+   {
+    "coin": "DOODUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.2991
+   },
+   {
+    "coin": "EPICUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5194
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
-  "nw_t": null,
-  "max_drawdown": 0.0,
+  "scored_days": 4,
+  "late_days": 3,
+  "total": 0.0020991951,
+  "total_2x": 0.0007691951000000001,
+  "total_3x": -0.0005608048999999999,
+  "total_close": 0.0025620991,
+  "nw_t": 5.305748830508775,
+  "max_drawdown": -7.589810000000006e-05,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-10-22"
+ "last_day": "2026-10-26"
 }

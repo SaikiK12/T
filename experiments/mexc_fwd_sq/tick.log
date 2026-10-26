@@ -120,3 +120,12 @@ ValueError: could not broadcast input array from shape (447,) into shape (448,)
 == tick 2026-10-22T16:16:09Z code 0b4636f
 16:21:20 prereg sha ed1f4c2698a8
 16:21:30 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T17:06:00Z code 5bb9309
+17:08:18 prereg sha ed1f4c2698a8
+17:08:27 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-26T15:32:00Z code 1d603e2+dirty
+15:43:43 prereg sha ed1f4c2698a8
+15:43:54 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 6, "total": -0.0144839231343778, "total_2x": -0.017311096583780494, "total_3x": -0.020138270033183296}, "vs_R215_A_replay": {"days": 19}, "vs_R215_A_ontime": {"days": 6}}
+== tick 2026-10-26T16:06:00Z code 1d603e2+dirty
+16:08:39 prereg sha ed1f4c2698a8
+16:08:49 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 6, "total": -0.0144839231343778, "total_2x": -0.017311096583780494, "total_3x": -0.020138270033183296}, "vs_R215_A_replay": {"days": 19}, "vs_R215_A_ontime": {"days": 6}}

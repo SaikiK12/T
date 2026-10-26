@@ -286,3 +286,19 @@ exit 0
 16:19:43 ratios 41/50 SUIUSDT
 16:19:58 journaled 5 hours, 250 rows; last 2026-10-22 15:00
 16:20:04 {"last_hour": "2026-10-22T15:00:00+00:00", "days_scored": 21} {'A': (21, 0.2378), 'B': (21, 0.1022)}
+== tick 2026-10-22T17:06:00Z code 5bb9309
+17:06:20 prereg sha 06dc7b412b06
+17:07:06 748 perpetuals, grid 1265 h, 0 hours to compute
+17:07:12 {"last_hour": "2026-10-22T15:00:00+00:00", "days_scored": 21} {'A': (21, 0.2378), 'B': (21, 0.1022)}
+== tick 2026-10-26T15:32:00Z code 1d603e2+dirty
+15:33:42 prereg sha 06dc7b412b06
+15:35:11 751 perpetuals, grid 1359 h, 95 hours to compute
+15:35:16 ratios 1/54 1000PEPEUSDT
+15:37:45 ratios 21/54 LINKUSDT
+15:40:44 ratios 41/54 SOXLUSDT
+15:41:59 journaled 95 hours, 4750 rows; last 2026-10-26 14:00
+15:42:06 {"last_hour": "2026-10-26T14:00:00+00:00", "days_scored": 25} {'A': (25, 0.1632), 'B': (25, 0.0611)}
+== tick 2026-10-26T16:06:00Z code 1d603e2+dirty
+16:06:24 prereg sha 06dc7b412b06
+16:07:17 751 perpetuals, grid 1360 h, 0 hours to compute
+16:07:22 {"last_hour": "2026-10-26T14:00:00+00:00", "days_scored": 25} {'A': (25, 0.1632), 'B': (25, 0.0611)}

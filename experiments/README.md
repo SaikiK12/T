@@ -28,8 +28,11 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Finished and registered rounds (101)
+## Finished and registered rounds (104)
 
+- **[nagel_v1](nagel_v1/)** R308, DONE NULL, 8 trials. Liquidity provision after stress (M325, Nagel 2012): 1-day top-50/150 reversal only after market abs-return, dispersion or OI-crash days in their trailing-year tail, plus every-day baselines; API tier costs ([PREREG](nagel_v1/PREREG.md), [FINDINGS](nagel_v1/FINDINGS.md))
+- **[rrskew_v1](rrskew_v1/)** R307, DONE NULL, 24 trials. Deribit 25-delta risk reversal (M174) as a weekly BTC/ETH perp timing signal: 30 d / 90 d RR built from every option trade with the COIN-M basis as the forward; sign / 90-day z / 7-day change z, follow or fade; manual-web costs ([PREREG](rrskew_v1/PREREG.md), [FINDINGS](rrskew_v1/FINDINGS.md))
+- **[msnr_v1](msnr_v1/)** R306, DONE NULL, 24 trials. Malaysian support and resistance (M323) on 4-hour candles: fade or follow the first touch of a fresh A/V level, age 30/180 candles, t24/t72/1:2 ATR bracket exits, top-50 Binance perps; secondary set of FX, metal, index and commodity perps reported ([PREREG](msnr_v1/PREREG.md), [FINDINGS](msnr_v1/FINDINGS.md))
 - **[mlaudit_v1](mlaudit_v1/)** R305, DONE NULL, 7 trials. Frozen audit of R304's pick: GBM h7 refits without age / risk-only / without risk, fixed low-risk, low-vol and age scores, beta vs equal-weight universe and BTC, short-leg squeeze tail ([PREREG](mlaudit_v1/PREREG.md), [FINDINGS](mlaudit_v1/FINDINGS.md))
 - **[mlrank_v2](mlrank_v2/)** R304, DONE PARTIAL, 7 trials. ML cross-sectional rankers (M042) again without the 3 survivor-leaking columns: ridge/IC/GBM x hold 1/7 d on 24 clean point-in-time features, top 150 Binance perps, API costs; plus a GBM on the 3 leaking columns alone ([PREREG](mlrank_v2/PREREG.md), [FINDINGS](mlrank_v2/FINDINGS.md))
 - **[capit_v1](capit_v1/)** R303, DONE NULL, 10 trials. Capitulation buys on Binance perps: hedged deep-dip longs (25-day gap <= -20/30/40%, hold 1/5 d) and the top-50 basket after breadth or cascade days (hold 2/5 d, over the drift); M302, M286 ([PREREG](capit_v1/PREREG.md), [FINDINGS](capit_v1/FINDINGS.md))
@@ -136,6 +139,6 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 
 - **[copylead_data](copylead_data/)** Daily snapshots of public copy-trading leaderboards (Binance, OKX, Hyperliquid); collection only
 - **[forward_lag](forward_lag/)** How late each forward tick ran after the hour, per day (written by the forward loop)
-- **[msnr_v1](msnr_v1/)** No registry row and no description yet.
+- **[mlrank_v3](mlrank_v3/)** No registry row and no description yet.
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded

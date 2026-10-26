@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-22 16:22 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-26 16:09 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** The best net PnL from any method in any market the owner can trade: MEXC perpetuals first, then spot, prop challenges, forex and index futures as data allows. Search wide (every method is tested, a null is evidence); trust narrow (only days nobody had seen when the rule was frozen count). Money moves only through the four gates in `docs/GATES.md`, at stakes the owner sets.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 34 |
 | Ideas partly tested | 39 |
 | Ideas blocked (data, download, compute) | 68 |
-| Rounds in the registry | 123 (NULL 80, PENDING 20, PARTIAL 10, CONFIRMED 8, DATA_PASS 5) |
-| Program trials | 9,478,697 |
+| Rounds in the registry | 126 (NULL 83, PENDING 20, PARTIAL 10, CONFIRMED 8, DATA_PASS 5) |
+| Program trials | 9,478,753 |
 | Forward paper lanes running | 17 |
 | Strict on-time paper days so far | 0 |
 | Passed gate 1 (unseen days) | none yet |
@@ -37,23 +37,23 @@ Replay days were scored after the freeze on days the archive did not hold; on-ti
 
 | lane | book | replay | on_time | 2x / 3x | decided by |
 |---|---|---|---|---|---|
-| R215 mexc_fwd | flow book A on MEXC | 19 d +4.6% | 2 d +2.0% | +1.9% / +1.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R215 mexc_fwd | top-vs-crowd on MEXC | 19 d -0.1% | 2 d +0.8% | +0.8% / +0.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R218 mexc_fwd_sq | flow book X2 (k squared) on MEXC | 19 d +5.9% | 2 d +2.0% | +1.9% / +1.8% | R221 looks at 90 / 182 / 365 on-time days |
-| R220 carry_fwd | funding carry, MEXC | 19 d -0.0% | 2 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
-| R220 carry_fwd | funding carry, Binance | 19 d +0.0% | 2 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
-| R200 flow72_fwd2 | flow book A, Binance | 18 d +22.2% | 3 d +1.6% | +1.4% / +1.2% | 90 scored days through go_real plus NW t >= 2 |
-| R200 flow72_fwd2 | top-vs-crowd, Binance | 18 d +9.7% | 3 d +0.5% | +0.5% / +0.4% | 90 scored days through go_real plus NW t >= 2 |
-| R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 2 d +1.4% | +1.3% / +1.2% | same days as R200, a delay check |
-| R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 2 d +0.8% | +0.7% / +0.7% | same days as R200, a delay check |
-| R278 xfund_fwd | cross-venue carry, Gate + Hyperliquid | 61 d +0.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R278 xfund_fwd | cross-venue carry, Binance + MEXC | 61 d +0.9% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R278 xfund_fwd | cross-venue carry, Gate + MEXC (post hoc) | 61 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 61 d +1.4% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
-| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 61 d +1.5% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
+| R215 mexc_fwd | flow book A on MEXC | 19 d +4.6% | 6 d -1.5% | -1.8% / -2.0% | R221 looks at 90 / 182 / 365 on-time days |
+| R215 mexc_fwd | top-vs-crowd on MEXC | 19 d -0.1% | 6 d -1.1% | -1.1% / -1.1% | R221 looks at 90 / 182 / 365 on-time days |
+| R218 mexc_fwd_sq | flow book X2 (k squared) on MEXC | 19 d +5.9% | 6 d -1.4% | -1.7% / -2.0% | R221 looks at 90 / 182 / 365 on-time days |
+| R220 carry_fwd | funding carry, MEXC | 19 d -0.0% | 6 d -0.1% | -0.1% / -0.1% | 90 on-time days through go_real |
+| R220 carry_fwd | funding carry, Binance | 19 d +0.0% | 6 d +0.0% | +0.0% / +0.0% | 90 on-time days through go_real |
+| R200 flow72_fwd2 | flow book A, Binance | 18 d +22.2% | 7 d -5.9% | -6.3% / -6.8% | 90 scored days through go_real plus NW t >= 2 |
+| R200 flow72_fwd2 | top-vs-crowd, Binance | 18 d +9.7% | 7 d -3.6% | -3.7% / -3.7% | 90 scored days through go_real plus NW t >= 2 |
+| R214 flow72_fwd3 | A one bar late | 19 d +22.6% | 6 d -6.1% | -6.5% / -6.9% | same days as R200, a delay check |
+| R214 flow72_fwd3 | B one bar late | 19 d +9.4% | 6 d -3.4% | -3.5% / -3.5% | same days as R200, a delay check |
+| R278 xfund_fwd | cross-venue carry, Gate + Hyperliquid | 61 d +0.5% | 4 d -0.0% | -0.1% / -0.2% | NW t >= 2.5 at 90 / 180 scored days |
+| R278 xfund_fwd | cross-venue carry, Binance + MEXC | 61 d +0.9% | 4 d +0.6% | +0.5% / +0.5% | NW t >= 2.5 at 90 / 180 scored days |
+| R278 xfund_fwd | cross-venue carry, Gate + MEXC (post hoc) | 61 d +1.4% | 4 d +0.2% | +0.1% / -0.1% | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Gate + KuCoin | 61 d +1.4% | 4 d -0.2% | -0.3% / -0.4% | NW t >= 2.5 at 90 / 180 scored days |
+| R279 xfund_kc_fwd | cross-venue carry, Binance + KuCoin | 61 d +1.5% | 4 d -0.1% | -0.2% / -0.2% | NW t >= 2.5 at 90 / 180 scored days |
 | R294 xfund_lt_fwd | cross-venue carry, MEXC + Lighter | 61 d +0.7% | 0 d | - | NW t >= 2.5 at 90 / 180 scored days |
 
-Processing lag of on-time hours: 64 hours, median 79.44166666666666 min, max 261.48333333333335 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22.
+Processing lag of on-time hours: 159 hours, median 941.9333333333333 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26.
 
 ## 3. Next in the queue
 
@@ -84,13 +84,13 @@ Processing lag of on-time hours: 64 hours, median 79.44166666666666 min, max 261
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R298 | lotcap_v1 | DONE | NULL | 16 |
-| R299 | mlrank_v1 | DONE | PARTIAL | 12 |
-| R300 | intrars_v1 | DONE | NULL | 24 |
 | R301 | qbasis_v1 | DONE | NULL | 16 |
 | R302 | fundxs_v1 | DONE | NULL | 8 |
 | R303 | capit_v1 | DONE | NULL | 10 |
 | R304 | mlrank_v2 | DONE | PARTIAL | 7 |
 | R305 | mlaudit_v1 | DONE | NULL | 7 |
+| R306 | msnr_v1 | DONE | NULL | 24 |
+| R307 | rrskew_v1 | DONE | NULL | 24 |
+| R308 | nagel_v1 | DONE | NULL | 8 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [METHODS_QUEUE](METHODS_QUEUE.md), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
