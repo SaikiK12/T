@@ -15824,6 +15824,32 @@
         "authenticdeployedprefix/decimalepoch/accountbinding"
       ],
       "current_source_review_required": false
+    },
+    {
+      "path": "experiments/spot_perp_inputs_v1/sources.json",
+      "sha256": "b809051aae6438fa36609422a916996d773f3e802dce5bc3fa29bb55e1725b7f",
+      "current_sha256": "b809051aae6438fa36609422a916996d773f3e802dce5bc3fa29bb55e1725b7f",
+      "review_status": "ingested_enumerated",
+      "scope": "Five exact MEXC physical-spot input/protobuf/clock/access mechanics;9staticGETs118731bodybytes. Raw market capture separately frozen and sealed, not source alpha.",
+      "method_ids": [
+        "C09-BASISCARRY72",
+        "CARRY-ORIGINAL72",
+        "FORWARD-CARRY",
+        "SRC-PERP-NOARB",
+        "YT26-05-VARIABLE-CARRY",
+        "HB24-C7-SPOT-PERP-CARRY"
+      ],
+      "unextracted_limitations": [
+        "properly linked protocol-buffers-integration page",
+        "live subscription/unsubscription detail",
+        "local order-book reconstruction page",
+        "successful exchangeInfo/quantity/lot/minimum/status contract",
+        "successful account/fee docs",
+        "server deployment/schema correspondence",
+        "other imported protos",
+        "actual funding and owner fills"
+      ],
+      "current_source_review_required": false
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -18983,6 +19009,39 @@
         "direction/signandrounding/checkpointmapping",
         "effective-event/publication/revisionclocks",
         "authenticdeployedprefix/decimalepoch/accountbinding"
+      ]
+    },
+    {
+      "intake_id": "spot_perp_input_contracts_20261026",
+      "records_added": [],
+      "existing_aliases_supplemented": [
+        "C09-BASISCARRY72",
+        "CARRY-ORIGINAL72",
+        "FORWARD-CARRY",
+        "SRC-PERP-NOARB",
+        "YT26-05-VARIABLE-CARRY",
+        "HB24-C7-SPOT-PERP-CARRY"
+      ],
+      "base_method_objects_preserved": 407,
+      "source_versions_path": "experiments/spot_perp_inputs_v1/sources.json",
+      "frozen_measurement": "R324",
+      "spec_code_and_input_contract_commit": "e19414231ea7f2696927dfa8a9174e124425b0e5",
+      "raw_input_commit": "94d8b43",
+      "received_scope": "Five source mechanics; full two proto fields and bounded WS/depth/Introduction prose, error pages and exact unread scope retained. No new strategy definition.",
+      "result_scope": "24constructed accounting paths and literal oracle;2publicWS/139newrawmessages/43865acceptedbytes establish BTC/WIF/SKR structural compatibility only, executable/PnL gates remain unknown.",
+      "evidence_path": "experiments/spot_perp_inputs_v1/FINDINGS.md",
+      "strategy_trials_added": 0,
+      "diagnostic_trials_added": 0,
+      "prospective_days_added": 0,
+      "not_reviewed": [
+        "properly linked protocol-buffers-integration page",
+        "live subscription/unsubscription detail",
+        "local order-book reconstruction page",
+        "successful exchangeInfo/quantity/lot/minimum/status contract",
+        "successful account/fee docs",
+        "server deployment/schema correspondence",
+        "other imported protos",
+        "actual funding and owner fills"
       ]
     }
   ],

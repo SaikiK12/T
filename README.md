@@ -171,6 +171,12 @@ partial fills, cancel/reject totals, residual quantities and interrupted receipt
 one-leg unwind and funding break-even figures are conditional costs, not observed profit.
 `scripts/check_paired_account.py /absolute/new-paired-output/results.json` checks that integration.
 
+The same entry point's [spot/perpetual component](experiments/spot_perp_inputs_v1/FINDINGS.md),
+`python -m lab account --spot-perp --out /fresh/output`, spends physical spot principal,
+tracks base/quote fees and joins both funded wallets once. It replays sealed public wire
+receipts and constructed accounting controls; actual executable return remains unknown.
+`scripts/check_spot_perp_account.py /fresh/output/results.json` checks literal cash/cost arithmetic.
+
 The bounded engineering benchmark uses invented arrays only:
 `python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
 The original `python -m unittest discover -s tests -t .` remains the same full gate. No framework migration is required.
