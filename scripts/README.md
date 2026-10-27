@@ -71,7 +71,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (118)
+## Run: one lane's frozen measurement (119)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -166,6 +166,7 @@ line is the first line of the script's own docstring.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
+- [`run_settlehop.py`](run_settlehop.py): R353 settlehop_v1: M267's settlement-window hop on hourly bars, frozen in experiments/settlehop_v1/PREREG.md.
 - [`run_sizecarry.py`](run_sizecarry.py): sizecarry_v1 (R281): confidence-sized carry books, as set out in experiments/sizecarry_v1/PREREG.md.
 - [`run_sizing.py`](run_sizing.py): sizing_v1 (R217): confidence-scaled multipliers on the flow books against a constant size, as set out in experiments/sizing_v1/PREREG.md.
 - [`run_slow_trend.py`](run_slow_trend.py): R229: frozen, bounded daily spot trend screen.

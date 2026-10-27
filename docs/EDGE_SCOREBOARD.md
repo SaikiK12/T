@@ -1,6 +1,6 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-22, after R293; rows and the ranked list updated through R351 on 2026-10-27 (program trials 9,479,069 on
+As of 2026-10-22, after R293; rows and the ranked list updated through R353 on 2026-10-27 (program trials 9,479,081 on
 this branch). Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
@@ -107,6 +107,7 @@ overstatements are corrected here.
 | **Reversal after stress days** (long the day's worst fifth, short its best, top 50 or 150, only after a market-volatility, dispersion or open-interest-crash day in its trailing-year tail; 1 day; API tiers; M325, Nagel 2012) | Gate 0 on seen data, NULL, 8 trials (R308). Discovery 2021-23: pick top50 mvol, +48.6 bp/day, t 0.91, 67 days | Validation 2024-26: −63.4 bp/day, t −0.97; gross −34.6 after stress days against +23.8 on other days | −92.2 / −121.0 bp/day at 2x / 3x | Binance prices; MEXC not checked | none | NULL; held in 2021-23 and flipped in 2024-26 |
 | **Efficiency-ratio forecast and chop-day gate** (logistic regression on the reel's 15 measurements forecasts whether the next UTC day trends; skip a first-hour trend rule's trades on predicted chop days; BTC/ETH/SOL perps; M314 from the owner's reel) | Gate 0, NULL, 3 trials (R293). Discovery 2021-23: AUC 0.568; the rule loses −17.8 bp gross per trade, gated −26.1 | Validation 2024-26: AUC 0.537, the same as today's efficiency alone (0.536). Ungated −12.3 bp per trade (t −2.25); gated −15.6 (t −2.13): the gate lowers each trade by 3.3 bp | Gated −14.4 / −17.6 bp/day; ungated −24.3 / −30.2 | MEXC API: gated −17.1 bp/day | none | NULL. Post hoc, the first hour reverses: M315, for unseen data only |
 | **Extreme 5-minute flow fade** (when the last 5 minutes' signed taker volume on BTC, ETH or SOL reaches its trailing-week 99.5th percentile, take the other side at the next minute's open and exit 5 minutes later; about 8 trades a day; M426) | Gate 0 on seen years, **PASS by its frozen rule** (recorded PARTIAL), best of 57 minute rules (R349; reality check p < 0.0005). Discovery 2021-23: +5.70 bp a trade net at Lighter's book cost, t 4.67 | Validation 2024-01..2026-09: +2.69 bp a trade, +7.11 bp/day, t 3.48. **Since 2025-07: +0.59 bp a trade, t 0.54**; 2026 about 0 | +5.69 / +4.28 bp/day in validation; +0.13 / −1.22 since 2025-07 | MEXC web (3 bp a side) −7.33 bp/day: break-even is 1.6 bp a side, so only Lighter's zero fee carries it | none: the earned forward lane is not started after R351 | **The first frozen pass on the scalping axis, but decaying.** On nine new coins (R351) it grosses +1.68 bp a trade, under each coin's cost (NULL), and −0.57 since 2025-07. Every fade rule earns and every follow rule loses; mostly longs after heavy selling. Fills are Binance prints, capacity about $1k a trade ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)) |
+| **Settlement-window hop** (hold the receiving side of a 4/8 h funding lump on MEXC, Binance or Gate through one settlement, hedged by the other side on hourly Lighter or dYdX, T − 1 h to T + 1 h, when S's last settled rate less two hours of H's is at least 0.3 or 0.5%; M267) | Gate 0 on seen data, NULL, 12 trials (R353). Primary MEXC + Lighter θ 0.5%: 120 hops, signal 75.8 bp, funding +13.5, price −5.8, cost 20.1; net 1x −12.4 bp a hop, −0.57 bp/day, t −1.98 | None of 12 books reaches t 2; every Lighter book loses at 1x (t −1.0 to −4.7) | −1.50 / −2.43 bp/day at 2x / 3x | MEXC web (3 bp a side): −1.43 bp a hop | none | NULL: the hedge holds (price gives back 0-26% of the paid lump), but the last settled rate forecasts only about a third of the next lump. Next: the same hop on a point-in-time predicted rate from Binance's premium index ([FINDINGS](../experiments/settlehop_v1/FINDINGS.md)) |
 
 ## The best achievable edges, ranked
 **The owner's format (2026-10-26):** an edge must trade as short-hold futures (perps), "scalping futures to do quick
@@ -119,8 +120,11 @@ book cost in 2024-26 (t 3.48, reality check p < 0.0005 over 57 rules), but only 
 Lighter-only and decaying ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)). R351 replayed it unchanged on nine
 coins whose minute bars nobody had read. It grosses +1.68 bp a trade, under each coin's Lighter cost (1x t −2.88),
 and −0.57 since 2025-07: NULL ([FINDINGS](../experiments/minflow_alts_v1/FINDINGS.md)). Even R349's long side is
-about 0 in 2026, so its forward lane is not started. The other open short-hold candidate is R300's US-open leaders
-book (cost table below). The carries stay on record.
+about 0 in 2026, so its forward lane is not started. R353 tested the settlement-window hop (M267) on six venue
+pairs: NULL. Hedged, the price gives back only 0-26% of the funding lump, but the last settled rate forecasts only a
+third of the next lump, so the primary loses 12.4 bp a hop at 1x ([FINDINGS](../experiments/settlehop_v1/FINDINGS.md)).
+Its predicted-rate form is next. The other open short-hold candidate is R300's US-open leaders book (cost table
+below), now a reserved batch-2 candidate. The carries stay on record.
 
 1. **The owner's level model on zero-fee perps (R336 PARTIAL, then R337 NULL, 2026-10-26).** Closed for automated
    trading.

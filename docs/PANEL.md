@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-27 15:11 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-27 23:41 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 33 |
 | Ideas partly tested | 45 |
 | Ideas blocked (data, download, compute) | 96 |
-| Rounds in the registry | 157 (NULL 89, PARTIAL 31, PENDING 23, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,069 |
+| Rounds in the registry | 158 (NULL 90, PARTIAL 31, PENDING 23, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,081 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 13 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -52,7 +52,7 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
-Processing lag of on-time hours: 182 hours, median 615.3666666666666 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27.
+Processing lag of on-time hours: 183 hours, median 588.8 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27.
 
 ### Execution receipts
 
@@ -123,7 +123,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R335 | locked_carry_v1 | DONE | DATA_PASS | 6 |
 | R333 | level_probability_v2 | DONE | NULL | 11 |
 | R336 | levels_mexc0_v1 | DONE | PARTIAL | 6 |
 | R337 | levels_lighter_v1 | DONE | NULL | 6 |
@@ -131,5 +130,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R348 | tapelag_lighter_v2 | DONE | NULL | 6 |
 | R349 | minflow_v1 | DONE | PARTIAL | 57 |
 | R351 | minflow_alts_v1 | DONE | NULL | 1 |
+| R353 | settlehop_v1 | DONE | NULL | 12 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

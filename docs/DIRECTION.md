@@ -666,14 +666,30 @@ of that venue's measured cost.
     liquid perps have no edge left at a zero-fee venue's cost
     ([FINDINGS](../experiments/minflow_alts_v1/FINDINGS.md)).
 
-**Next, in order (revised 2026-10-27, after R351)**
+- **R353 (`settlehop_v1`): NULL, gate 0 (2026-10-27), 12 trials.** The settlement-window hop (M267): hold the
+  receiving side of a 4 or 8 h funding lump on MEXC, Binance or Gate (S) through one settlement, hedged by the other
+  side on hourly Lighter or dYdX (H), from T − 1 h to T + 1 h, when S's last settled rate less two hours of H's
+  forecast at least 0.3 or 0.5%.
+  - Primary MEXC + Lighter at θ 0.5%: 120 hops. The signal promised 75.8 bp a hop; funding paid +13.5 and price
+    −5.8, against 20.1 bp of cost. Net 1x −12.4 bp a hop, −0.57 bp a day, t −1.98. None of the 12 books reaches t 2.
+  - **The hedge works.** The price part gives back only 0-26% of the lump S paid (slope −0.26, SE 0.09, on MEXC).
+  - **The signal fails.** The next lump was 0.29-0.36 of the previous one. When H's hourly rate moved first, S's
+    next lump went the same way and the hop paid it.
+  - dYdX's extreme rates sit on idle markets: the identity check keeps 1-15 hops a book
+    ([FINDINGS](../experiments/settlehop_v1/FINDINGS.md)).
+
+**Next, in order (revised 2026-10-27, after R353)**
 1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
-2. **R300's pick on paper:** a frozen forward lane at Lighter's and MEXC's own prices, 12 orders a day, held from
-   10:00 New York to 24:00 UTC. Its gross clears Lighter's cost in every year. But its frozen test was NULL at API
-   cost (t 1.28), so this is a hypothesis lane. It is also a candidate for reserved batch 2.
-3. **The event lanes keep running** (announce_fwd, delist_fwd, montag_fwd, unlocks_fwd: short holds of 1-168 h).
+2. **The settlement hop on a point-in-time predicted rate (M267, new lane).** Binance sets its funding from its
+   premium index, which the lab holds hourly for 896 perps and no lane has read for funding. Rebuild the rate an hour
+   before T from what was published by then, and keep R353's hedge, hold, costs and decision. It is gate 0 on these
+   prices. A pass earns a forward paper lane on the live predicted rates, where MEXC's own rate can be used.
+3. **R300's pick stays a reserved batch-2 candidate; its paper lane is not started.** Its book's daily standard
+   deviation is about 650 bp. Even at +40 bp a day net, a forward lane would need about four years of trading days
+   to reach t 2, and 2020 is reserved. A hedged settlement hop has far less noise per trade.
+4. **The event lanes keep running** (announce_fwd, delist_fwd, montag_fwd, unlocks_fwd: short holds of 1-168 h).
    None has seen a qualifying notice since its freeze.
-4. **Parked:** M264 (the 1-60 s tape family). R348 found Lighter level with Binance within a second, and R349/R351
+5. **Parked:** M264 (the 1-60 s tape family). R348 found Lighter level with Binance within a second, and R349/R351
    found the minute-scale reversal gone since 2025-07, so the prior is low.
 
 No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
