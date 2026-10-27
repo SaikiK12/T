@@ -1,0 +1,14 @@
+{
+  "command": "/workspace/T-consolidation/.venv/bin/python -m unittest discover -s tests -t .",
+  "conclusion": "OK",
+  "exit_code": 0,
+  "log_sha256": "f8cac3e3e074ff04380cec57b2a4a624cb36a2fe345cee978774c4ba89da1712",
+  "scope": "Final lab module unchanged during final full suite; narrower script/control/gap refinements checked by subsequent targeted31. No R345 market calculation or new network.",
+  "seconds": 204.691,
+  "skipped": 3,
+  "targeted_after_restore_and_final_matched_control_refinement": {
+    "conclusion": "PASS",
+    "tests": 31
+  },
+  "tests": 1569
+}

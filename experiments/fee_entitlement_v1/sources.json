@@ -1,0 +1,25 @@
+{
+  "GetFeeDetails_document_sha256": "c5cb5380faaedb2596069d97d6604a7fc400e16be3f4d5bfb9794635dc205265",
+  "applies_to_readonly_review_of": "M412/R336; original row/R337 reserved and untouched",
+  "available_inputs": "parent_availability.json records6exact of46; original40missing contract/ticker inputs remain absent, no dataset acquired",
+  "canonical_dependency": "M409",
+  "existing_alias": "FV26-ACCOUNT-API-FEE-ACCESS",
+  "new_market_history_private_account_requests": 0,
+  "new_source_mechanism": "same existing account-effective fee dependency, newly received destination schema, not a new strategy",
+  "new_static_attempts": 2,
+  "new_static_body_bytes": 70442,
+  "original_sources": [
+    "experiments/fee_routes_v1/sources.json",
+    "experiments/fee_routes_v1/FINDINGS.md",
+    "docs/GATES.md"
+  ],
+  "read_scope": "source_review.md and exact source_receipts.json/link; raw HTML in ignored cache only",
+  "registry_id": "R345",
+  "scope_closed": true,
+  "unchanged_original_R336_limits": [
+    "Binance closes/funding proxy not MEXC fills",
+    "Oct2026 survivors/fee cohort is not historical entitlement",
+    "constant trade notional not marked account equity"
+  ],
+  "units_and_authority": "endpoint fields decimal, scaling/asset/current owner/API entitlement unverified; all costs remain scenarios"
+}

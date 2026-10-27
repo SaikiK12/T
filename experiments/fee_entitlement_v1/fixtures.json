@@ -1,0 +1,44 @@
+{
+  "additional_fee_bp": [
+    "0",
+    "4",
+    "8"
+  ],
+  "capital": "10000",
+  "cash_annual_scenarios": [
+    "0",
+    ".03"
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "cost_table": "experiments/levels_mexc0_v1/results/summary.json",
+  "entry_notional": "500",
+  "fee_and_capital_terms_are_conditional_proxy_conventions": true,
+  "fee_document_sha256": "c5cb5380faaedb2596069d97d6604a7fc400e16be3f4d5bfb9794635dc205265",
+  "invented_public_metadata": {
+    "code": 0,
+    "data": {
+      "feeRateMode": "NORMAL",
+      "symbol": "ETH",
+      "takerFeeRate": "0"
+    },
+    "success": true
+  },
+  "policies": [
+    "PZ",
+    "THROUGH",
+    "AWAY"
+  ],
+  "primary": {
+    "additional_fee_bp": "8",
+    "cost_requirement": "all1x/2x/3x reported; no variant promoted",
+    "policy": "PZ"
+  },
+  "registry_id": "R345",
+  "rounding_half_width_bp": "0.0005",
+  "saved_events": "experiments/level_probability_v2/results/v0_oos_events.csv.gz",
+  "source_received_utc_ns": 1793089355384537000
+}
