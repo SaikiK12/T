@@ -1,7 +1,7 @@
 {
  "late_threshold_min": 60,
- "hours": 621,
- "ontime_days": 7,
+ "hours": 638,
+ "ontime_days": 8,
  "strict_ontime_days": 0,
  "ontime_days_with_late_hours": [
   "2026-10-20",
@@ -10,37 +10,38 @@
   "2026-10-23",
   "2026-10-24",
   "2026-10-25",
-  "2026-10-26"
+  "2026-10-26",
+  "2026-10-27"
  ],
  "ontime_hour_lag_min": {
-  "n": 165,
-  "median": 761.9333333333333,
-  "p90": 4697.933333333333,
+  "n": 182,
+  "median": 615.3666666666666,
+  "p90": 4595.933333333333,
   "max": 5681.933333333333
  },
  "order": {
   "flow72_fwd2": {
-   "rows": 50,
+   "rows": 52,
    "problems": {}
   },
   "flow72_fwd3": {
-   "rows": 56,
+   "rows": 59,
    "problems": {}
   },
   "mexc_fwd": {
-   "rows": 50,
+   "rows": 52,
    "problems": {}
   },
   "mexc_fwd_sq": {
-   "rows": 25,
+   "rows": 26,
    "problems": {}
   },
   "carry_fwd": {
-   "rows": 50,
+   "rows": 52,
    "problems": {}
   },
   "vt_fwd": {
-   "rows": 75,
+   "rows": 78,
    "problems": {}
   }
  }
