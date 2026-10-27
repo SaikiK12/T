@@ -1,0 +1,32 @@
+{
+  "R343_capture_scope_closed": true,
+  "actual_execution_expected_return_and_activation_unknown": true,
+  "alias": "YT26-04-DATED-CASH-CARRY",
+  "all_other_gates_and_economic_parameters_unchanged": true,
+  "canonical_method": "M244",
+  "correction": {
+    "amount_unit": "shown spot amounts remain base coin, with min_trade_amount as minimum/step; NEVER multiply/divide by contract_size",
+    "future_unit": "unchanged USD-face amounts, inverse harmonic conversion",
+    "new_constraint": "spot contract_size exactly0.00000001, independently explicit in both committed metadata records",
+    "old_constraint": "spot contract_size exactly1 (incorrect inference by Codex, not R329-S39)",
+    "proof_files": [
+      "experiments/same_venue_carry_v1/evidence/BTC_spot_rules.json.gz",
+      "experiments/same_venue_carry_v1/evidence/ETH_spot_rules.json.gz"
+    ]
+  },
+  "historical_source_records_reused": 42,
+  "new_network_requests": 0,
+  "new_semantic_source_records": 0,
+  "old_rule_failure_preserved": true,
+  "parent_raw_manifest": {
+    "path": "experiments/same_venue_carry_v1/data_inputs.json",
+    "sha256": "63f0e233ee41dbf6bcc71af5bc9d0f24a7e250ef9ac8cb20400f77c2c2a2633f"
+  },
+  "parent_source_manifest": {
+    "path": "experiments/same_venue_carry_v1/sources.json",
+    "sha256": "0d6c555f02cfc399b6584106ed9ce15dae75e913e70adbf13c36c676bd7b66ec"
+  },
+  "raw_batch_count": 1,
+  "registry_id": "R344",
+  "scope": "Exact current source-schema correction on already sealed R343 inputs. Raw quote values already visible for diagnosis; not a new untouched sample or strategy selection."
+}
