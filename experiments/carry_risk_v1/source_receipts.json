@@ -1,0 +1,87 @@
+{
+  "records": [
+    {
+      "name": "standard_margin",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811528477-Standard-Margin",
+      "started_utc": "2026-10-27T12:54:58.232242+00:00",
+      "status": 200,
+      "error": null,
+      "read_scope": "pending",
+      "body_limit": 1048576,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": null,
+        "Date": "Tue, 27 Oct 2026 12:54:59 GMT",
+        "Last-Modified": null,
+        "Location": null,
+        "Retry-After": null
+      },
+      "complete": true,
+      "finished_utc": "2026-10-27T12:54:59.261964+00:00",
+      "elapsed_seconds": 1.0297270930022933,
+      "bytes": 74219,
+      "sha256": "cbff9d143cf3eaf938bf2c06ddc8de150be2aacb99aa3187f9389824cd251a41",
+      "body": "standard_margin.raw"
+    },
+    {
+      "name": "requirements",
+      "url": "https://support.deribit.com/hc/en-us/articles/39858424876829-Standard-Margin-Requirements-by-Instrument",
+      "started_utc": "2026-10-27T12:54:59.264245+00:00",
+      "status": 200,
+      "error": null,
+      "read_scope": "pending",
+      "body_limit": 1048576,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": null,
+        "Date": "Tue, 27 Oct 2026 12:55:00 GMT",
+        "Last-Modified": null,
+        "Location": null,
+        "Retry-After": null
+      },
+      "complete": true,
+      "finished_utc": "2026-10-27T12:55:00.320389+00:00",
+      "elapsed_seconds": 1.0563509990170132,
+      "bytes": 115626,
+      "sha256": "640700ea3ee7c1885b2b80d87956a52cf03a468c24fdafbd50da5f3e81a1fae1",
+      "body": "requirements.raw"
+    },
+    {
+      "name": "margin_types",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811317149-Margin-types-and-usage",
+      "started_utc": "2026-10-27T12:55:00.323242+00:00",
+      "status": 200,
+      "error": null,
+      "read_scope": "pending",
+      "body_limit": 1048576,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": null,
+        "Date": "Tue, 27 Oct 2026 12:55:01 GMT",
+        "Last-Modified": null,
+        "Location": null,
+        "Retry-After": null
+      },
+      "complete": true,
+      "finished_utc": "2026-10-27T12:55:01.611008+00:00",
+      "elapsed_seconds": 1.2877091450209264,
+      "bytes": 76453,
+      "sha256": "c822cacc02669f0ff77e00eb3a5d51752e674e981c6b6a1dc5240fafcf6919fd",
+      "body": "margin_types.raw"
+    }
+  ],
+  "requests": 3,
+  "actual_bytes": 266298,
+  "reserved_bytes": 3145728,
+  "elapsed_seconds": 3.379244109004503,
+  "budget": {
+    "queries": 1,
+    "gets": 3,
+    "per_body": 1048576,
+    "bytes": 3145728,
+    "per_get_seconds": 15,
+    "wall_seconds": 60
+  },
+  "scope_closed": true,
+  "unused_gets_closed": 0
+}

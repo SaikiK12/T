@@ -1,0 +1,287 @@
+{
+  "checked_roots": [
+    "/workspace/T-coinm-volume-schema",
+    "/workspace/T-repository-hygiene",
+    "/workspace/T-consolidation",
+    "/workspace/T-opportunity-admission",
+    "/workspace/T-forward-carry-dependencies",
+    "/workspace/T-recovery"
+  ],
+  "data_inputs": 54,
+  "exact_local_data": 0,
+  "new_data_requests": 0,
+  "parent": "R335",
+  "path_replay_run": false,
+  "rows": [
+    {
+      "expected_sha256": "4ff05cf70d2075c4c578265a66319048fcd185b2354896722e3b6408d69768a0",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_210326.parquet"
+    },
+    {
+      "expected_sha256": "d699036ea7de35291a8f27cf7ea6fb98dbab7996c9dd2c6db813a72ba8a90ec1",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_210625.parquet"
+    },
+    {
+      "expected_sha256": "061cd93ac3b0c2ecd0aadb2e1c9d43e090fe0436164e9573f73dcb9d048c0db3",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_210924.parquet"
+    },
+    {
+      "expected_sha256": "801aff5f8c0bec7fc68655e2da77a236e865e11447397ce748ca89d6be6903b7",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_211231.parquet"
+    },
+    {
+      "expected_sha256": "771f6026de4b0b61e7e1e8fefb03c25826f2bb9a5aa13af57e5f7874b43d4269",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_220325.parquet"
+    },
+    {
+      "expected_sha256": "e9f74605fbe5b92d57ab37efd74b097b7c3f005d00a573664e2a689caf673e70",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_220624.parquet"
+    },
+    {
+      "expected_sha256": "6a088abf43e61e2f9ec196df769fd89217c3ebaf3f72de169703799b96c643ca",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_220930.parquet"
+    },
+    {
+      "expected_sha256": "e22ed28226b144936fb77ca65a7d33e9769f9186671025946efde2c17c75f7bf",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_221230.parquet"
+    },
+    {
+      "expected_sha256": "8df8d89ba8582d198b163103488681552cc5fa810dc021651de2615b76476d97",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_230331.parquet"
+    },
+    {
+      "expected_sha256": "3bf62df29ba0bc565bf9903086639889a2951ff0c86cb3915cb08a8c1108a875",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_230630.parquet"
+    },
+    {
+      "expected_sha256": "27c630153c8ea0e12140bcecee56ed282b45fce031419dd44967a7afb50c9495",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_230929.parquet"
+    },
+    {
+      "expected_sha256": "ea2a71b020cdfdc2214be1c9fd595b107b81456cc23af0d0ed4698cfe89dfca5",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_231229.parquet"
+    },
+    {
+      "expected_sha256": "b16c89a47bd91429410d5754a728501078f60d2ff78a700dec1649881c57ee94",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_240329.parquet"
+    },
+    {
+      "expected_sha256": "6ab6d1d96888b6f755c74ed5e26f449feecceb335687961162e9cb510628bce0",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_240628.parquet"
+    },
+    {
+      "expected_sha256": "71cb75305804de69b6e89105c5c8f67275bd6e1845517b224fb6d10372f6d9d2",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_240927.parquet"
+    },
+    {
+      "expected_sha256": "30ac79646b848a395f413fa034d15f08800cdf808c61b364d4fcc5a3783501ca",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_241227.parquet"
+    },
+    {
+      "expected_sha256": "237802fbdf23472fdcfae722f07f210984b30176540d7b479c06d8e54afd1c72",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_250328.parquet"
+    },
+    {
+      "expected_sha256": "9eb794f81f4dbd65df7dbd3100c7c6bba94cfdbc2961c273d766fdbce8ed9f2a",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_250627.parquet"
+    },
+    {
+      "expected_sha256": "78ab847f225a5b9f5193e2cfe1e0df1eda399b154ecd2659deb739b675a1491c",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_250926.parquet"
+    },
+    {
+      "expected_sha256": "a107df4fb96bb4e3f996299556bbb0ec73ad9446e6c639f1e95f366c1e91a27e",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_251226.parquet"
+    },
+    {
+      "expected_sha256": "10fe3d697a71e034ae35f04f5e70a37cf27f824b1a9ea87c346d9b4ce3b44f95",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_260327.parquet"
+    },
+    {
+      "expected_sha256": "59ddc949288f2b8f4b87abf50f5855cc487ceeb285f20dd863ee12ca1d251e4c",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_260626.parquet"
+    },
+    {
+      "expected_sha256": "8d995a142774c69256d7959b8545bbbe2b5868d2b5a35b618127c4f9631e2ae6",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_260925.parquet"
+    },
+    {
+      "expected_sha256": "bb9313a2afa779c9553c9fd2145b4fbbea3c9595782ab5beb427ae63d2c5a2f8",
+      "local_hits": [],
+      "path": "data/coinm_1h/BTCUSD_261225.parquet"
+    },
+    {
+      "expected_sha256": "3f25fe43fd6b48e617e9875af438bc85ee9d8206fa94d3201edf56e41f83a8d8",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_210326.parquet"
+    },
+    {
+      "expected_sha256": "d44efa592676a0d808b0e4219aa09d62ffd742859d5c6a281ef1994a6be510a8",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_210625.parquet"
+    },
+    {
+      "expected_sha256": "da0d185342fc93f0d5f26aab636de6f4d69514bc75373393035a80b8b9d21e06",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_210924.parquet"
+    },
+    {
+      "expected_sha256": "399f31baca5e5a42377dabd6d237331f0246fc59a52a34418e5869dc4f98d4d0",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_211231.parquet"
+    },
+    {
+      "expected_sha256": "4ebb45acd95f1d6a83cbbe38df3dbc47f4bd9dbb0c2102c0bbd8a3d1c05894fb",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_220325.parquet"
+    },
+    {
+      "expected_sha256": "25a9451877a2f79dbcddbe77c33910d58785398ccb45309c516f0d8cfaab3710",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_220624.parquet"
+    },
+    {
+      "expected_sha256": "5142187acd463db8f16bf5d2a62e892fb61e39be1310bd453321c43b1c6e7e59",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_220930.parquet"
+    },
+    {
+      "expected_sha256": "7def64c2172cc3b54355a2012e079e9317f6b4608a583a951564b9cb06b5333d",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_221230.parquet"
+    },
+    {
+      "expected_sha256": "47de96717e759abcd838c6cc06e1680fcef59f93a6e63db3ae16e9ffd92d97f6",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_230331.parquet"
+    },
+    {
+      "expected_sha256": "e941cd57afc807ccc1ec94812024620df878903c227ef485de57debd5d76ffd4",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_230630.parquet"
+    },
+    {
+      "expected_sha256": "91f26d3ee0b3660b3b5aacd4d0738188e18433bb5c2eebfa6d5d03ff1eb1f970",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_230929.parquet"
+    },
+    {
+      "expected_sha256": "fb1e1408c2c656471e678afbb31e46d5d102b9431f424983aa25ceb249a29a24",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_231229.parquet"
+    },
+    {
+      "expected_sha256": "47645d3c867bb1e48bd9acc92ce90c076ead73daac9772682e0ecf3125957768",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_240329.parquet"
+    },
+    {
+      "expected_sha256": "a421b244c6c70a6bfcf589e2b70350216ff678e25402ada5c05db1c7cf47883d",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_240628.parquet"
+    },
+    {
+      "expected_sha256": "3f4ea307fab8e2ce53fa5b7e30a6521ab6d86fa9572a1fa7f074295c182d4b48",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_240927.parquet"
+    },
+    {
+      "expected_sha256": "b0dc1b0e96de8ad779d58f37e31ade4b909fe6031af23205c9fcdc2d6e8d7fd9",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_241227.parquet"
+    },
+    {
+      "expected_sha256": "f0532d608f8ceb524b8f7579d7d93772e7f8e4a200e22b4f7e9c0ed4032b3733",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_250328.parquet"
+    },
+    {
+      "expected_sha256": "c015fc0fc2b1329aaaf8c1f6fb6b31fb25a374993b59b68da62635ff890fd077",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_250627.parquet"
+    },
+    {
+      "expected_sha256": "a505ce249d684041640d09589b15f719aee119fa8b581aa40030263db2e15c78",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_250926.parquet"
+    },
+    {
+      "expected_sha256": "fef1b5114390852dc4a935666abcb3d3f65690ac3ea3c0b34cd3a25fe5273f2e",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_251226.parquet"
+    },
+    {
+      "expected_sha256": "aca3bf25efb39dea899112ce20f41fd4d8702a5543cd489c5014dbd47b842124",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_260327.parquet"
+    },
+    {
+      "expected_sha256": "575957ca067a40cab5c40938458d5a3e3096ae46b37ddf94497a893b9661ca9c",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_260626.parquet"
+    },
+    {
+      "expected_sha256": "f71941070e1b1b394e29f07699894621e6c2be378e2ea38a78ca6bbe539a987d",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_260925.parquet"
+    },
+    {
+      "expected_sha256": "10c1492995a50ae290ecd9823babc91df917c39f9ca0933f0e5e51758e5b0205",
+      "local_hits": [],
+      "path": "data/coinm_1h/ETHUSD_261225.parquet"
+    },
+    {
+      "expected_sha256": "b885c835e6ccedf309d8f3a146fd9ac542e16b2ae84aa71438da2711c8f6aba6",
+      "local_hits": [],
+      "path": "data/binance_spot/BTCUSDT.parquet"
+    },
+    {
+      "expected_sha256": "89e4bd0d1402c521589badab3ca823157e99fa2485f78527038b9700fd320d9d",
+      "local_hits": [],
+      "path": "data/binance_spot/ETHUSDT.parquet"
+    },
+    {
+      "expected_sha256": "237247afd7c98bb7cd7f6d86c999ef4e4b2c662ff57554cad2097c6b5d4dd4ad",
+      "local_hits": [],
+      "path": "data/coinbase/BTC-USD.parquet"
+    },
+    {
+      "expected_sha256": "88700555cd2d43cf877ae7aeb97b0d6765fce1080a090650df1cb92971c956f3",
+      "local_hits": [],
+      "path": "data/coinbase/ETH-USD.parquet"
+    },
+    {
+      "expected_sha256": "3dc007f31ab4502e47d0581696fb4455907f068264f9eac2cfa0f248e430e4e0",
+      "local_hits": [],
+      "path": "data/coinbase/USDT-USD.parquet"
+    },
+    {
+      "expected_sha256": "bd9fc2ab8a3bb35d1b669f135083e679dc9cebfbbe46544531446af66f108bdd",
+      "local_hits": [],
+      "path": "data/macro/ust_3m.parquet"
+    }
+  ]
+}

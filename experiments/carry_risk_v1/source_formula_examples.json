@@ -1,0 +1,60 @@
+{
+  "kind": "Source-formula example/table check only, no R344 prices or economic outcomes",
+  "checks": 8,
+  "passed": true,
+  "rows": [
+    {
+      "N_over_Nmax": "0",
+      "leverage_decimal": "25",
+      "published_2dp": "25.00",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": ".03",
+      "leverage_decimal": "25",
+      "published_2dp": "25.00",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": ".10",
+      "leverage_decimal": "12.0445930823308624688482363157877651471367110808347278207078",
+      "published_2dp": "12.04",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": ".25",
+      "leverage_decimal": "8.40299428295483761273208199098163274177033377313482890037190",
+      "published_2dp": "8.40",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": ".50",
+      "leverage_decimal": "6.03022713865274173658668202854096586456382992815706665016325",
+      "published_2dp": "6.03",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": ".75",
+      "leverage_decimal": "4.79622125566402718886207905808873153545824759580342120380582",
+      "published_2dp": "4.80",
+      "rounded_matches": true
+    },
+    {
+      "N_over_Nmax": "1",
+      "leverage_decimal": "3.99999999999999999999999999999999999999999999999999999999998",
+      "published_2dp": "4.00",
+      "rounded_matches": true
+    },
+    {
+      "source_example": "BTClinearperpetual150of1769Tier1",
+      "leverage_decimal": "25.5134410968584192968080807231074389990177059500903011250378",
+      "published_2dp": "25.51",
+      "rounded_matches": true
+    }
+  ],
+  "inverse_flat_IM": "1/25",
+  "inverse_flat_MM": "2/75",
+  "inverse_flat_threshold_usd": "2250000",
+  "formula_source_sha256": "cbff9d143cf3eaf938bf2c06ddc8de150be2aacb99aa3187f9389824cd251a41",
+  "table_source_sha256": "640700ea3ee7c1885b2b80d87956a52cf03a468c24fdafbd50da5f3e81a1fae1"
+}
