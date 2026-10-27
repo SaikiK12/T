@@ -539,19 +539,39 @@ are unmeasured. The accumulated market allowance remains 7,757 requests and
 reported 229.85 MiB; this source budget does not reset or extend it.
 
 The [actual source-budget journal](../data/videos/public_corpus_budget_20261026.jsonl)
-is tracked so a fresh checkout cannot silently start this scope at zero. Raw
-RSS and transcript caches remain private/ignored. After an actual environment
+is tracked to retain accumulated spend across checkouts. A sparse checkout can
+omit its working file: recover that missing file from the committed snapshot
+before invoking the collector. Raw RSS and transcript caches remain
+private/ignored. After an actual environment
 restart, replaying both phases with a network-forbidden opener preserved the
 6,240 episodes, 22 parsed texts and 66 charged requests. With only a copied
 journal and no raw cache, all 66 completed identities refuse new dispatch;
 the journal stays byte-identical. Missing source bodies remain missing.
 
 ```sh
+python - <<'PY'
+import hashlib, json, subprocess
+from pathlib import Path
+from scripts.podcast_corpus import write_new
+
+evidence = json.loads(Path('research/intake/podcast_methods_20261026.json').read_text())
+target = Path(evidence['acquisition']['budget_journal_path'])
+if not target.exists():
+    snapshot = subprocess.check_output(['git', 'show',
+        '149bda38c3a58bbeba65473d69948591dae94db3:' + target.as_posix()])
+    if hashlib.sha256(snapshot).hexdigest() != evidence['acquisition']['budget_journal_sha256']:
+        raise ValueError('source-budget snapshot mismatch; no collection')
+    write_new(target, snapshot)
+# Existing journals are preserved; never overwrite or restore an advanced ledger.
+PY
 python scripts/dig_podcasts.py episodes --bounded --out data/videos/corpus_20261026
 python scripts/dig_podcasts.py text --bounded --out data/videos/corpus_20261026
 python scripts/check_method_intake.py --json
 ```
 
+The bootstrap was checked using a missing target and the committed Git blob;
+it restores the same 66 charged attempts, with no HTTP call. A missing Git blob
+or digest mismatch must block recovery rather than initialize a new allowance.
 These commands replay held receipts when available; they do not recover lost
 raw text from hashes. Publisher URLs may change. The committed metadata index
 and receipt/method counts can be independently recounted; independent speech
