@@ -1,0 +1,56 @@
+{
+  "evaluation_commit": "e0de8f5",
+  "independent_audit_sha256": "52b617dfaa8bf6c80eed6c35c275414885676368cc32908fb32ec4e99c050af4",
+  "new_acquisition_requests": 0,
+  "original_R331_protocol_unchanged": true,
+  "outputs": [
+    {
+      "bytes": 207,
+      "path": "experiments/confidence_v1/selection/manifest.json",
+      "sha256": "a4d8aa608083eddf67d98ed2ce9dd6c4b020aaca2fe1e59052a48275e9a405dc"
+    },
+    {
+      "bytes": 10734,
+      "path": "experiments/confidence_v1/selection/observations.json.gz",
+      "sha256": "d27fd7294699789a047e685dda6206591eff0b8565136f1141fd99d6f0b2c6d7"
+    },
+    {
+      "bytes": 1430,
+      "path": "experiments/confidence_v1/selection/selection.json",
+      "sha256": "b64faa6767d08cffe1fc4bbf258eaf849860ba7078749db1ff644cd08960c7c2"
+    },
+    {
+      "bytes": 1020788,
+      "path": "experiments/confidence_v1/evaluation/accounts.json.gz",
+      "sha256": "e0ea7a340ec2fad7be329d174be9d96f0adc60c57446140d8291c266b0a73b8d"
+    },
+    {
+      "bytes": 491,
+      "path": "experiments/confidence_v1/evaluation/manifest.json",
+      "sha256": "8c71f320357f5063f756cd1f999996934062228cf4bab7aa8512a937b72f5c3f"
+    },
+    {
+      "bytes": 1481,
+      "path": "experiments/confidence_v1/evaluation/null_diagnostic.json.gz",
+      "sha256": "f4c849de1af66eb998e0ada96d26730431454b558a03adef6f3e13ffb3857c8c"
+    },
+    {
+      "bytes": 50840,
+      "path": "experiments/confidence_v1/evaluation/observations.json.gz",
+      "sha256": "8497a5a9d492569b609f3b175e58f9b80be09948578d95d1d911e0a8043c7189"
+    },
+    {
+      "bytes": 43699,
+      "path": "experiments/confidence_v1/evaluation/predictions.json.gz",
+      "sha256": "c33ab58be036a322177437dbc916642e693458c3a3979d940bbe21bb9e029d81"
+    },
+    {
+      "bytes": 339952,
+      "path": "experiments/confidence_v1/evaluation/results.json",
+      "sha256": "0d5282a7a863320b5d99f85155a17688d688522895b12dde41fd5e498123cb60"
+    }
+  ],
+  "registry_id": "R342",
+  "reproduction_new_independent_market_observations": 0,
+  "selection_commit": "94e7ce2"
+}
