@@ -1,0 +1,768 @@
+{
+  "schema_version": 1,
+  "scope": "Invented paper accounting/execution cases, not market data, forecasts or strategy returns.",
+  "anchor": {
+    "utc_ns": 1790000000000000000,
+    "mono_ns": 10000000000
+  },
+  "base_fee_bp": "10",
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "cost_rule": "Keep all event quantities/decisions scripted. Fill price=mid+signed_order_side*k*half_spread; fee=abs(q)*price*10*k/10000. Funding amounts do not scale with execution cost.",
+  "cases": [
+    {
+      "case_id": "cross_batch_capital_restart",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "quantity": "5",
+          "expected_reserve": true
+        },
+        {
+          "action": "reopen"
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "quantity": "5",
+          "expected_reserve": false
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "5"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "2",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "cancelled",
+          "allocation": "a",
+          "order": "o",
+          "total": "2"
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "exit",
+          "quantity": "2",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "exit",
+          "quantity": "2",
+          "trade": "x",
+          "mid": "100",
+          "half_spread": ".5",
+          "purpose": "close"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "exit",
+          "total": "2",
+          "purpose": "close"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        },
+        {
+          "action": "admit",
+          "id": "c",
+          "quantity": "5",
+          "expected_reserve": true
+        }
+      ]
+    },
+    {
+      "case_id": "pending_symbol_floor",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "quantity": "3",
+          "expected_reserve": true
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "quantity": "3",
+          "expected_reserve": false
+        }
+      ],
+      "policy": {
+        "max_symbol_gross_fraction": ".5"
+      }
+    },
+    {
+      "case_id": "pending_venue_floor",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "quantity": "4",
+          "expected_reserve": true
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "quantity": "4",
+          "symbol": "SOL",
+          "expected_reserve": false
+        }
+      ],
+      "policy": {
+        "max_venue_gross_fraction": ".7"
+      }
+    },
+    {
+      "case_id": "same_sign_shared_basis",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "bid": 99,
+          "ask": 101,
+          "reserve": ".8",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": "1"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "o",
+          "total": "1"
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "bid": 198,
+          "ask": 202,
+          "reserve": "1.6",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "b",
+          "order": "ob",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "b",
+          "order": "ob",
+          "quantity": "1",
+          "trade": "tb",
+          "mid": "200",
+          "half_spread": "2"
+        },
+        {
+          "action": "complete",
+          "allocation": "b",
+          "order": "ob",
+          "total": "1"
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "xa",
+          "quantity": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "xa",
+          "quantity": "1",
+          "trade": "xa",
+          "mid": "100",
+          "half_spread": ".5",
+          "purpose": "close"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "xa",
+          "total": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "submit",
+          "allocation": "b",
+          "order": "xb",
+          "quantity": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "b",
+          "order": "xb",
+          "quantity": "1",
+          "trade": "xb",
+          "purpose": "close",
+          "mid": "150",
+          "half_spread": ".5"
+        },
+        {
+          "action": "complete",
+          "allocation": "b",
+          "order": "xb",
+          "total": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        },
+        {
+          "action": "release",
+          "allocation": "b",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "cancel_requires_final_cumulative",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "cancel_request",
+          "allocation": "a",
+          "order": "o"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        },
+        {
+          "action": "cancelled",
+          "allocation": "a",
+          "order": "o"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        },
+        {
+          "action": "cancelled",
+          "allocation": "a",
+          "order": "o",
+          "total": "0"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "crash_fill_join",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "crash_fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "deferred_ack",
+          "allocation": "a",
+          "order": "o"
+        },
+        {
+          "action": "reopen"
+        },
+        {
+          "action": "recover"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "o",
+          "total": "1"
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "1",
+          "trade": "x",
+          "mid": "100",
+          "half_spread": ".5",
+          "purpose": "close"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "x",
+          "total": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "crash_between_risk_and_allocation",
+      "events": [
+        {
+          "action": "crash_assessment",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "reopen"
+        },
+        {
+          "action": "resume_assessment"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "global_trade_ownership",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "shared",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "submit",
+          "allocation": "b",
+          "order": "ob",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "b",
+          "order": "ob",
+          "quantity": "1",
+          "trade": "shared",
+          "mid": "100",
+          "half_spread": ".5"
+        }
+      ]
+    },
+    {
+      "case_id": "unknown_fee_and_funding",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5",
+          "fee_unknown": true
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "o",
+          "total": "1"
+        },
+        {
+          "action": "funding_unknown",
+          "allocation": "a",
+          "event_id": "funding"
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "1",
+          "trade": "x",
+          "mid": "100",
+          "half_spread": ".5",
+          "purpose": "close"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "x",
+          "total": "1",
+          "purpose": "close"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        },
+        {
+          "action": "resolve_fee",
+          "allocation": "a",
+          "trade": "t"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        },
+        {
+          "action": "resolve_funding",
+          "allocation": "a",
+          "event_id": "funding",
+          "amount": "-.2"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "gap_horizon_and_late_fill",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "gap",
+          "allocation": "a",
+          "order": "o"
+        },
+        {
+          "action": "snapshot",
+          "jump_ns": 43203000000000
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "late",
+          "mid": "110",
+          "half_spread": ".5"
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "expected_reserve": false
+        }
+      ]
+    },
+    {
+      "case_id": "negative_unknown_uncalibrated",
+      "events": [
+        {
+          "action": "admit",
+          "id": "weak",
+          "profile": "weak",
+          "expected_reserve": false
+        },
+        {
+          "action": "admit",
+          "id": "unknown",
+          "profile": "unknown_funding",
+          "expected_reserve": false
+        },
+        {
+          "action": "admit",
+          "id": "uncalibrated",
+          "profile": "uncalibrated",
+          "expected_reserve": false
+        }
+      ]
+    },
+    {
+      "case_id": "segregated_venue_and_currency",
+      "events": [
+        {
+          "action": "admit",
+          "id": "wrong",
+          "asset": "USDC",
+          "expected_reserve": false
+        },
+        {
+          "action": "admit",
+          "id": "a",
+          "quantity": "5",
+          "expected_reserve": true
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "quantity": "5",
+          "expected_reserve": false
+        },
+        {
+          "action": "admit",
+          "id": "c",
+          "venue": "lighter",
+          "asset": "USDC",
+          "quantity": "5",
+          "expected_reserve": true
+        }
+      ],
+      "balances": [
+        {
+          "venue": "mexc",
+          "asset": "USDT",
+          "cash": "1000"
+        },
+        {
+          "venue": "lighter",
+          "asset": "USDC",
+          "cash": "1000"
+        }
+      ]
+    },
+    {
+      "case_id": "short_roundtrip",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "quantity": "-2",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "2"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "2",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "o",
+          "total": "2"
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "2",
+          "purpose": "close"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "x",
+          "quantity": "2",
+          "trade": "x",
+          "mid": "100",
+          "half_spread": ".5",
+          "purpose": "close"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "x",
+          "total": "2",
+          "purpose": "close"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": true
+        }
+      ]
+    },
+    {
+      "case_id": "observed_loss_then_price_recovery",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "complete",
+          "allocation": "a",
+          "order": "o",
+          "total": "1"
+        },
+        {
+          "action": "snapshot",
+          "mark_mid": "50",
+          "symbol": "ETH"
+        },
+        {
+          "action": "admit",
+          "id": "b",
+          "expected_reserve": false
+        }
+      ]
+    },
+    {
+      "case_id": "observed_overfill",
+      "events": [
+        {
+          "action": "admit",
+          "id": "a",
+          "expected_reserve": true
+        },
+        {
+          "action": "submit",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "1"
+        },
+        {
+          "action": "fill",
+          "allocation": "a",
+          "order": "o",
+          "quantity": "2",
+          "trade": "t",
+          "mid": "100",
+          "half_spread": ".5"
+        },
+        {
+          "action": "release",
+          "allocation": "a",
+          "expected_release": false
+        }
+      ]
+    }
+  ]
+}
