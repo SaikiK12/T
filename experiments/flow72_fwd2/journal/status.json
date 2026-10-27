@@ -1,42 +1,42 @@
 {
- "last_hour": "2026-10-26T20:00:00+00:00",
- "days_scored": 25,
+ "last_hour": "2026-10-27T12:00:00+00:00",
+ "days_scored": 26,
  "short_now": {
   "tvc": [
    "BNBUSDT",
-   "ETHUSDT",
    "IRYSUSDT",
    "KORUUSDT",
-   "TSLAUSDT",
+   "SKHYUSDT",
+   "SOXLUSDT",
    "XAGUSDT"
   ],
   "t24": [
-   "HYPEUSDT",
+   "AVAXUSDT",
    "IRYSUSDT",
-   "MSTRUSDT",
-   "QNTUSDT",
+   "SOXLUSDT",
    "SOXSUSDT",
-   "SUIUSDT"
+   "TAOUSDT",
+   "\u9f99\u867eUSDT"
   ],
   "t4": [
-   "AVAXUSDT",
-   "CRCLUSDT",
-   "HYPEUSDT",
-   "KORUUSDT",
-   "SKHYUSDT",
-   "SOXLUSDT"
+   "MSTRUSDT",
+   "NEARUSDT",
+   "QNTUSDT",
+   "QUSDT",
+   "WLDUSDT",
+   "XAUUSDT"
   ]
  },
  "A": {
-  "days": 25,
-  "total": 0.16322357529530881,
-  "total_2x": 0.14674845477433368,
-  "total_3x": 0.13027333425335844,
+  "days": 26,
+  "total": 0.05596980047812762,
+  "total_2x": 0.03885390661560298,
+  "total_3x": 0.021738012753078337,
   "go_real": {
-   "n": 25,
-   "mean": 0.006528943011812353,
-   "hit": 0.6,
-   "worst": -0.0357744123539843,
+   "n": 26,
+   "mean": 0.0021526846337741393,
+   "hit": 0.5769230769230769,
+   "worst": -0.1072537748171812,
    "invalid_n": 0,
    "n_clusters": null,
    "checks": {
@@ -52,18 +52,18 @@
    "pass_now": false,
    "decision_at_days": 90,
    "verdict": "PENDING",
-   "stop_rule_hit_day": null
+   "stop_rule_hit_day": "2026-10-26"
   }
  },
  "B": {
-  "days": 25,
-  "total": 0.0611397088858191,
-  "total_2x": 0.0581409254015746,
-  "total_3x": 0.05514214191733058,
+  "days": 26,
+  "total": 0.0585392570371357,
+  "total_2x": 0.055462352279811805,
+  "total_3x": 0.05238544752248838,
   "go_real": {
-   "n": 25,
-   "mean": 0.002445588355432764,
-   "hit": 0.6,
+   "n": 26,
+   "mean": 0.0022515098860436808,
+   "hit": 0.5769230769230769,
    "worst": -0.0184272522629367,
    "invalid_n": 0,
    "n_clusters": null,
