@@ -110,6 +110,11 @@ venue,** if they trade coins with deep Lighter books.
    (since 2026-10-21 15:19 UTC) was not stopped. The PREREG is frozen before the tape is read against price changes,
    after an R-id claim in `docs/ROOM.md`. Fills are assumed at the Lighter book one full second after the signal
    second, which is more pessimistic than the 300 ms delay.
+   **Result (R348, 2026-10-27): NULL.** One second after the basis leaves its 5-minute median, Lighter's mid has
+   nothing left to move toward Binance's (gross −0.03 to +0.32 bp a trade over 6 trials), so each trade loses its
+   0.7-1.0 bp book cost; primary 1x −0.77 bp a trade, t −3.43
+   ([FINDINGS](../experiments/tapelag_lighter_v2/FINDINGS.md)). The taker form is closed; the maker form, a
+   Premium account and order-flow signals were not tested.
 6. **Pool prices for M288 (recording since 2026-10-21).** GeckoTerminal's free history answers 429 from this machine,
    so there is no backfill and the clock starts now. `scripts/record_dex_prices.py` maps each MEXC USDT perp to its
    most traded DexScreener pool (same symbol, at least USD 50k of liquidity and USD 10k a day of volume, price within

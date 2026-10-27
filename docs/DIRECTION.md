@@ -635,13 +635,17 @@ of that venue's measured cost.
   - R336's planned forward lane is dropped. The manual 7-a-day book alone (t 2.02, 2026 −5.3 bp a trade) is not
     worth one.
 
-**Next, in order (revised 2026-10-27)**
-1. **R338, a zero-fee tape scalping family on Lighter.** It asks whether Lighter's quotes still trail Binance's
-   after the 300 ms taker delay (M264, M293).
-   - It reads the recorded 1-second tape: 12 coins on both venues since 2026-10-21.
-   - Fills are at Lighter's quote one full second after the signal, and holds last seconds to minutes.
-   - Thousands of trades a day, so new recorded days can confirm a pass within weeks, not years.
-   - The PREREG is frozen before the tape is read against price changes.
+- **R348 (`tapelag_lighter_v2`): NULL, gate 1 on the unread tape (2026-10-27).** Taker scalps on Lighter (fee 0,
+  300 ms delay) toward Binance's quote when the basis leaves its 5-minute median, filled one full second later.
+  - Gross is about 0 at the fill (−0.03 to +0.32 bp a trade over 6 trials), so each trade loses its 0.7-1.0 bp book
+    cost. Primary: 577 trades, 1x −0.77 bp a trade, t −3.43; BTC, ETH and SOL all negative, every day and side.
+  - Lighter's makers close the gap within a second. R347, its first run, crashed before any statistic (0 trials).
+
+**Next, in order (revised 2026-10-27, after R348)**
+1. **A tape order-flow family on Lighter (M264).** Binance's signed taker flow and book imbalance over the last 5-60 s,
+   and BTC's lead for ETH and SOL, traded on Lighter one full second later and held 10-120 s, at the measured book
+   cost (BTC, ETH and SOL about 0.25 bp a side). Discovery on the sealed days; the pick is confirmed on days recorded
+   after the freeze, so a pass can be checked within weeks. Frozen before the tape is read against these signals.
 2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
 3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
    will be sized against the disk (3.1 GB free) before it starts.

@@ -108,9 +108,11 @@ overstatements are corrected here.
 
 ## The best achievable edges, ranked
 **The owner's format (2026-10-26):** an edge must trade as short-hold futures (perps), "scalping futures to do quick
-money", not as spot or long holds. R337 closed item 1's automated route on 2026-10-27. The open short-hold candidate
-is R300's US-open leaders book (cost table below), and the zero-fee tape test R338 is next. The carries stay on
-record.
+money", not as spot or long holds. R337 closed item 1's automated route on 2026-10-27. R348 closed zero-fee
+quote-lag scalps on Lighter the same day: one second after a dislocation Lighter's mid has nothing left to move, so
+each trade loses its 0.7-1.0 bp book cost (primary 1x −0.77 bp a trade, t −3.43;
+[FINDINGS](../experiments/tapelag_lighter_v2/FINDINGS.md)). The open short-hold candidate is R300's US-open leaders
+book (cost table below). The carries stay on record.
 
 1. **The owner's level model on zero-fee perps (R336 PARTIAL, then R337 NULL, 2026-10-26).** Closed for automated
    trading.
