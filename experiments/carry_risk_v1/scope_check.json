@@ -1,0 +1,44 @@
+{
+  "R337_forward_old_financial_and_raw_files_unchanged": true,
+  "all_69_frozen_code_hashes_match": true,
+  "integration_audit_retry": {
+    "legacy_unknown_trial_rows": [
+      "R143",
+      "R144",
+      "R180",
+      "R181",
+      "R183",
+      "R184"
+    ],
+    "original_failure": "int(empty legacy trial string) raised ValueError before scope artifact/write/commit",
+    "resolution": "Use authoritative registry.program_trials helper; six old missing trial fields remain missing, never rewritten as zero"
+  },
+  "integrity": {
+    "errors": 0,
+    "intake_errors": 0,
+    "intake_warnings": 0,
+    "planned": 1,
+    "rows": 163,
+    "specs": 158,
+    "unchanged_warnings": 14,
+    "verified_frozen": 157
+  },
+  "integrity_log_sha256": "7a84ff4a106de3528b5cf022a06662e90c819c8004f9b4d3c8a92e0befd548fc",
+  "new_predictive_trials": 0,
+  "new_prospective_strategy_days": 0,
+  "old_method_objects_preserved": 530,
+  "old_source_records_preserved": 23,
+  "old_supplements_preserved": 45,
+  "only_existing_method_note_extended": "M244",
+  "out_of_scope_tracked_changes": [],
+  "preserved_extra_files": [
+    "docs/PANEL.md",
+    "registry/methods_aliases.csv",
+    "data/videos/public_corpus_budget_20261026.jsonl"
+  ],
+  "queue_rows": 340,
+  "registry_id": "R346",
+  "registry_old_byte_prefix_preserved": true,
+  "reported_program_trials": 9479022,
+  "source_records_now": 24
+}

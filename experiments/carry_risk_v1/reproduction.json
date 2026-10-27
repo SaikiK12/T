@@ -1,0 +1,23 @@
+{
+  "all_byte_identical": true,
+  "artifacts": {
+    "audit.json": {
+      "byte_identical": true,
+      "bytes": 243,
+      "sha256": "5a9de07386032239f617b438e645ad75df0c5a5ef11f091c0ff8616258aaab94"
+    },
+    "journals.json.gz": {
+      "byte_identical": true,
+      "bytes": 12913,
+      "sha256": "ec755ecfbc998ee46e3cb61ed61655e643195cacc48cd003313c14f84ab229cc"
+    },
+    "results.json.gz": {
+      "byte_identical": true,
+      "bytes": 334450,
+      "sha256": "849331b81d7c30c8600b23a5016c51e14c16853f045ddfd50f2cecba1af3cafa"
+    }
+  },
+  "freeze_commit": "6554939",
+  "fresh_output_directory": ".cache/r346-reproduce",
+  "registry_id": "R346"
+}
