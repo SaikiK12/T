@@ -1,0 +1,53 @@
+{
+ "note": "Plain UTF-8 copies of R348's compressed trade exports, made 2026-10-27 after the run for Codex's R350 (#7 comment 6444851371). Each file is the exact gzip-decompressed content of the .csv.gz beside it; the originals are unchanged. Nothing was recomputed.",
+ "files": [
+  {
+   "file": "trades_theta0.5_h30.csv",
+   "bytes": 273106,
+   "lines": 1458,
+   "sha256": "200ab281ac43405642c7bf1d01999ce4485e6329875122f9997da4e8676123f0",
+   "from": "trades_theta0.5_h30.csv.gz",
+   "from_sha256": "176289eceae60ea6fbb7c1277efc82e617c7a687d134accccd666e4c344c9b7c"
+  },
+  {
+   "file": "trades_theta0.5_h5.csv",
+   "bytes": 488245,
+   "lines": 2587,
+   "sha256": "def00971ec041ae58ca92e12bbdab92dafb05a21b1b1ca65db789d52843a7d45",
+   "from": "trades_theta0.5_h5.csv.gz",
+   "from_sha256": "d8c8749bff889e2a50015673e3c07a1592250ba1c374e332eac2c2068c637813"
+  },
+  {
+   "file": "trades_theta1_h30.csv",
+   "bytes": 76396,
+   "lines": 408,
+   "sha256": "93039a25c71d53eaba23ab12cf359cc1d1509301ce3ff9345c127ebf9ff29c16",
+   "from": "trades_theta1_h30.csv.gz",
+   "from_sha256": "e877fc4da848cc8a52018618d6b093b6d69a04195daa2a821d075277086512e7"
+  },
+  {
+   "file": "trades_theta1_h5.csv",
+   "bytes": 108810,
+   "lines": 578,
+   "sha256": "929b7ccd54e81e7248e7cecac0722aa3f57c054ebf79fbcd4298bf666e207bce",
+   "from": "trades_theta1_h5.csv.gz",
+   "from_sha256": "ed6dfed108bb4c33cf1ade6d3ded492e6bbeeaa1b2b4becedbaee0d6af7cc451"
+  },
+  {
+   "file": "trades_theta2_h30.csv",
+   "bytes": 19302,
+   "lines": 104,
+   "sha256": "73fb4cd013beaf5c36cb44e3ccf105f0816a1676ba479eefc47062d02959ca25",
+   "from": "trades_theta2_h30.csv.gz",
+   "from_sha256": "9bb75042586d25f944b1135cede2fec7214aadafcdcbdbd69c0f928461fbf8a0"
+  },
+  {
+   "file": "trades_theta2_h5.csv",
+   "bytes": 22919,
+   "lines": 123,
+   "sha256": "9a7092c32b1a524b0266cf1e8b41904fdbef274d0c0aa7aa8bb12ccb49a3dcd0",
+   "from": "trades_theta2_h5.csv.gz",
+   "from_sha256": "586e82d8ca7096b317f6ae4c202d03d46912c36fcdbe8b7d8e35d8aa09dbcf79"
+  }
+ ]
+}
