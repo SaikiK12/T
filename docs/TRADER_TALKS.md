@@ -549,6 +549,7 @@ journal and no raw cache, all 66 completed identities refuse new dispatch;
 the journal stays byte-identical. Missing source bodies remain missing.
 
 ```sh
+set -e
 python - <<'PY'
 import hashlib, json, subprocess
 from pathlib import Path
@@ -556,11 +557,14 @@ from scripts.podcast_corpus import write_new
 
 evidence = json.loads(Path('research/intake/podcast_methods_20261026.json').read_text())
 target = Path(evidence['acquisition']['budget_journal_path'])
-if not target.exists():
-    snapshot = subprocess.check_output(['git', 'show',
-        '149bda38c3a58bbeba65473d69948591dae94db3:' + target.as_posix()])
-    if hashlib.sha256(snapshot).hexdigest() != evidence['acquisition']['budget_journal_sha256']:
-        raise ValueError('source-budget snapshot mismatch; no collection')
+snapshot = subprocess.check_output(['git', 'show',
+    '149bda38c3a58bbeba65473d69948591dae94db3:' + target.as_posix()])
+if hashlib.sha256(snapshot).hexdigest() != evidence['acquisition']['budget_journal_sha256']:
+    raise ValueError('source-budget snapshot mismatch; no collection')
+if target.exists():
+    if not target.read_bytes().startswith(snapshot):
+        raise ValueError('existing ledger lost or changed prior charges; no collection')
+else:
     write_new(target, snapshot)
 # Existing journals are preserved; never overwrite or restore an advanced ledger.
 PY
