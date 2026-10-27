@@ -1,0 +1,34 @@
+{
+  "all_78_frozen_code_hashes_match": true,
+  "conservative_cross_branch_reported_count": 9479092,
+  "count_limitation": "Upstream claims cite9479086 combined; local immutable R33114reservation retained, no6trial subtraction/dedup without verifiedsupersession. No new inference or calibrated pvalue inR350.",
+  "integrity": {
+    "errors": 0,
+    "intake_errors": 0,
+    "intake_warnings": 0,
+    "planned": 1,
+    "rows": 164,
+    "specs": 159,
+    "unchanged_warnings": 14,
+    "verified_frozen": 158
+  },
+  "integrity_log_sha256": "68e217306aaca09bb1d6a8936c7d5f16993a17caf0e24272e61adcfc6e768074",
+  "known_disjoint_upstream_trials_not_in_local_rows": {
+    "R337": 6,
+    "R348": 6,
+    "R349": 57,
+    "R351": 1
+  },
+  "local_reported_program_trials": 9479022,
+  "new_predictive_trials": 0,
+  "old_method_objects_preserved": 530,
+  "old_registry_byte_prefix_preserved": true,
+  "old_source_records_preserved": 24,
+  "only_changed_existing_queue_note": "M409",
+  "original_tape_collector_frozen_tests_forward_and_budgets_unchanged": true,
+  "out_of_scope_changes": [],
+  "prospective_strategy_days_added": 0,
+  "queue_rows": 340,
+  "registry_id": "R350",
+  "source_records_now": 25
+}
