@@ -1,0 +1,60 @@
+{
+  "actual_order_allowed": false,
+  "calibrated_market_confidence": false,
+  "criterion": "held-selection mean multiclass NLL, simpler within1e-6; no validation labels",
+  "n": 46,
+  "parent_manifest_sha256": "4e07d9d05f9f43a0c956935d79ab06512f5e0b18f6b7568a8f6023d9593671a6",
+  "ranking": [
+    {
+      "brier": 0.5498506307894003,
+      "log_loss": 0.9318111862972289,
+      "model": "frequency",
+      "n": 46
+    },
+    {
+      "brier": 0.5650443639395699,
+      "log_loss": 0.9361998173459389,
+      "model": "ridge_raw",
+      "n": 46
+    },
+    {
+      "brier": 0.5719790177964655,
+      "log_loss": 0.9487137987916092,
+      "model": "ridge_temperature",
+      "n": 46
+    },
+    {
+      "brier": 0.575866288867372,
+      "log_loss": 0.9555002169662058,
+      "model": "ridge_dirichlet_identity",
+      "n": 46
+    },
+    {
+      "brier": 0.5857730683620628,
+      "log_loss": 0.9859332980564001,
+      "model": "tree_temperature",
+      "n": 46
+    },
+    {
+      "brier": 0.5871073071199902,
+      "log_loss": 1.0054467477602946,
+      "model": "tree_raw",
+      "n": 46
+    },
+    {
+      "brier": 0.6014129206299824,
+      "log_loss": 1.0114348821574266,
+      "model": "tree_dirichlet_identity",
+      "n": 46
+    }
+  ],
+  "registry_id": "R331",
+  "source_window": [
+    "2025-11-01",
+    "2026-01-01"
+  ],
+  "state": "SELECTED",
+  "unavailable_candidates": [],
+  "validation_used": false,
+  "winner": "frequency"
+}
