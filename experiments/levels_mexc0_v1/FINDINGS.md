@@ -104,3 +104,16 @@ A **frozen forward paper lane on MEXC's zero-fee perps**, with a new id, frozen 
   answered forward.
 - **No orders.** A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the
   owner placing it.
+
+## Addendum, 2026-10-27: the API fee, and R337
+- **MEXC's zero fees are web only.** Since 2026-06-01, MEXC charges API orders 6 bp maker and 8 bp taker, and the API
+  fee overrides fee promotions (`docs/MEXC_EDGES.md`). The full book needs API orders at the hourly close, so its real
+  cost is about R336's 10.5 bp a side break-even. Only the 7-a-day manual book (PZ_CAP7) gets the zero fee.
+- **R337 (`experiments/levels_lighter_v1`) repriced the model on Lighter,** where fees are 0 for API orders too.
+  - It used Lighter's own hourly prices and funding, at each coin's measured $1k book cost.
+  - Result: NULL. Gross +12.2 bp a trade, net +6.0 at 1x (t 1.00), and about zero gross since 2025-12.
+  - On Lighter's broader coin set, THROUGH earns +4.9 bp a trade gross. That supports reading this lane's strong
+    2025-26 as coin selection.
+- **The "Next" section above is withdrawn.**
+  - R336's forward lane is dropped.
+  - PZ_CAP7 alone is t 2.02 at 1x and −5.3 bp a trade in 2026, which is not worth a lane.

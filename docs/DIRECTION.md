@@ -627,14 +627,21 @@ of that venue's measured cost.
   - It is about +70 bp/day gross, and breaks even at 17-18 bp a side.
   - Its t at the MEXC web fee is about 2.0, but that is a re-read of a pick made in discovery.
 
-**Next, in order**
-1. **A frozen forward paper lane for R336's book** on MEXC's zero-fee perps, with a new id, frozen before its first
-   forward day:
-   - R333's model refit once and frozen;
-   - live Binance features each hour;
-   - the MEXC fee and quote checked at each signal;
-   - tickets frozen before entry;
-   - THROUGH and AWAY recorded as controls.
+- **R337 (`levels_lighter_v1`): NULL, gate 0 (2026-10-27).** The same trades on Lighter's own prices, at each coin's
+  measured $1k book cost (fee 0, API allowed).
+  - Gross +12.2 bp a trade; net +6.0 at 1x (t 1.00) and −0.1 at 2x. Gross has been about zero since 2025-12.
+  - MEXC's zero fees are web only, and its API pays 6/8 bp, about R336's break-even. So the level model has no
+    automated route.
+  - R336's planned forward lane is dropped. The manual 7-a-day book alone (t 2.02, 2026 −5.3 bp a trade) is not
+    worth one.
+
+**Next, in order (revised 2026-10-27)**
+1. **R338, a zero-fee tape scalping family on Lighter.** It asks whether Lighter's quotes still trail Binance's
+   after the 300 ms taker delay (M264, M293).
+   - It reads the recorded 1-second tape: 12 coins on both venues since 2026-10-21.
+   - Fills are at Lighter's quote one full second after the signal, and holds last seconds to minutes.
+   - Thousands of trades a day, so new recorded days can confirm a pass within weeks, not years.
+   - The PREREG is frozen before the tape is read against price changes.
 2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
 3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
    will be sized against the disk (3.1 GB free) before it starts.

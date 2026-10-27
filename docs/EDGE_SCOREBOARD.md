@@ -108,22 +108,23 @@ overstatements are corrected here.
 
 ## The best achievable edges, ranked
 **The owner's format (2026-10-26):** an edge must trade as short-hold futures (perps), "scalping futures to do quick
-money", not as spot or long holds. Item 1 is a short-hold futures candidate, and so is R300's US-open leaders book
-in the cost table below. The carries stay on record.
+money", not as spot or long holds. R337 closed item 1's automated route on 2026-10-27. The open short-hold candidate
+is R300's US-open leaders book (cost table below), and the zero-fee tape test R338 is next. The carries stay on
+record.
 
-1. **The owner's level model on MEXC's zero-fee perps (new, 2026-10-26, R336).** It is PARTIAL at gate 0.
-   - **The trade:** R333's break-or-rebound model, which decides each hour and exits at ± sigma12 or after 12 h. It
-     runs only on the 55 coins whose MEXC perp had zero maker and taker fees on all five contract snapshots.
-   - **Size:** each coin pays its median quoted MEXC half-spread (0.4-3.5 bp on most). On that basis:
-     - +16.7 bp a trade net at 1x, about 9 trades a day;
-     - the constant-size book's day sums: t 2.85 at 1x, 2.11 at 2x, 1.38 at 3x;
-     - random sides 0 of 1,000.
-   - **The catch:**
-     - Always trading the breakout earns as much per trade on these coins, though only in 2025-26; the model is the
-       steadier book.
-     - One trade's 1% tail is −18.7%, so leverage must stay low.
-     - The full book needs API orders at the hourly close. The 7-a-day manual book keeps about half (t 2.02).
-   - **Next:** a frozen forward paper lane on MEXC's zero-fee perps, with the fee checked at each signal.
+1. **The owner's level model on zero-fee perps (R336 PARTIAL, then R337 NULL, 2026-10-26).** Closed for automated
+   trading.
+   - **The trade:** R333's break-or-rebound model, which decides each hour and exits at ± sigma12 or after 12 h.
+   - **R336, MEXC's 55 zero-fee perps:**
+     - +16.7 bp a trade net at the quoted spread, and t 2.85 at 1x.
+     - MEXC's zero fees are web only; since 2026-06 its API pays 6/8 bp. That is about R336's 10.5 bp a side
+       break-even, and the full book needs API orders at the hourly close.
+   - **R337, Lighter's own prices** at its measured $1k book cost (fee 0, API allowed):
+     - gross +12.2 bp a trade, net +6.0 at 1x (t 1.00);
+     - about zero gross since 2025-12. NULL.
+   - **What is left:** the 7-a-day manual web book. It is t 2.02 at 1x and −5.3 bp a trade in 2026, which is not worth
+     a forward lane, so R336's planned lane is dropped. R336's strong 2025-26 reads as coin selection: its THROUGH
+     control earned as much, and on Lighter's broader set THROUGH earns +4.9 bp a trade gross.
 2. **Locked dated carry (new, 2026-10-26, R335).** The only result in the program whose payoff is fixed at entry
    rather than forecast.
    - **The structure:** hold B coins and short B·F0 dollars of the coin-margined quarterly. The account is worth B·F0
