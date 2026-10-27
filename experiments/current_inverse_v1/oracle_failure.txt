@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "/workspace/T-opportunity-admission/scripts/check_current_inverse.py", line 110, in audit
+    check_hurdle(check, row['prefunded_hurdle'], q, F(0), F(1), F(0), spot_fee, spent, F(10))
+  File "/workspace/T-opportunity-admission/scripts/check_current_inverse.py", line 34, in check_hurdle
+    check.number(observed['minimum_exit_ratio'], spent/unit if unit > 0 else None, 'same-capital cash break-even')
+  File "/workspace/T-opportunity-admission/scripts/check_opportunity_execution.py", line 122, in number
+    self.equal(None if actual is None else F(actual), expected, label)
+  File "/workspace/T-opportunity-admission/scripts/check_opportunity_execution.py", line 119, in equal
+    raise AssertionError(f'{label}: {actual!r} != {expected!r}')
+AssertionError: same-capital cash break-even: Fraction(25000, 25941) != 0.9637253768166224
