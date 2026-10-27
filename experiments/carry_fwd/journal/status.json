@@ -1,38 +1,38 @@
 {
- "last_scored_hour": "2026-10-26T19:00:00+00:00",
- "days_ticketed": 25,
+ "last_scored_hour": "2026-10-27T12:00:00+00:00",
+ "days_ticketed": 26,
  "BIN": {
   "coverage": {
    "symbols": 62,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": -0.38339560970401254,
+  "market_mean_apr_now": -0.3503848142890997,
   "top_apr_now": [
    {
     "symbol": "\u9f99\u867eUSDT",
-    "apr": 0.438354054113006,
+    "apr": 0.4092891055249008,
     "spot": false
    },
    {
-    "symbol": "ENAUSDT",
-    "apr": 0.09382324770285777,
-    "spot": true
-   },
-   {
-    "symbol": "XRPUSDT",
-    "apr": 0.08012966455832309,
-    "spot": true
-   },
-   {
-    "symbol": "BTCUSDT",
-    "apr": 0.06257194988393167,
-    "spot": true
+    "symbol": "SKHYNIXUSDT",
+    "apr": 0.18531658202239973,
+    "spot": false
    },
    {
     "symbol": "SOXLUSDT",
-    "apr": 0.060936750135927774,
+    "apr": 0.09791733178038461,
     "spot": false
+   },
+   {
+    "symbol": "XRPUSDT",
+    "apr": 0.09369914757674755,
+    "spot": true
+   },
+   {
+    "symbol": "ENAUSDT",
+    "apr": 0.09188874777275184,
+    "spot": true
    }
   ],
   "replay": {
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 6,
+   "days": 7,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -72,31 +72,31 @@
    "spot_taker_mean": 0.0005641025641025641
   },
   "held_now": [],
-  "market_mean_apr_now": -0.6712224111335358,
+  "market_mean_apr_now": -0.6195098831680711,
   "top_apr_now": [
    {
-    "symbol": "ENAUSDT",
-    "apr": 0.09307499842331406,
+    "symbol": "XRPUSDT",
+    "apr": 0.09380499745323809,
     "spot": true
    },
    {
-    "symbol": "XRPUSDT",
-    "apr": 0.080299997750141,
+    "symbol": "ENAUSDT",
+    "apr": 0.09161499819185792,
     "spot": true
    },
    {
     "symbol": "BTCUSDT",
-    "apr": 0.06253666603849221,
+    "apr": 0.07628499915729967,
     "spot": true
    },
    {
     "symbol": "SOLUSDT",
-    "apr": 0.057791666313278256,
+    "apr": 0.06423999895256809,
     "spot": true
    },
    {
-    "symbol": "ZECUSDT",
-    "apr": 0.05401999914435389,
+    "symbol": "ETHUSDT",
+    "apr": 0.06071166708049229,
     "spot": true
    }
   ],
@@ -130,22 +130,22 @@
    }
   },
   "ontime": {
-   "days": 6,
-   "days_invested": 2,
-   "total": -0.0008751178055513597,
-   "total_2x": -0.0010551178035303,
-   "total_3x": -0.0012351178015094,
-   "total_spot5": -0.0008251178055514,
-   "total_r191_timing": -0.0004734114406143,
-   "funding": -0.001310500002091428,
-   "basis": 0.0006153821945188999,
-   "cost": 0.000179999997979,
-   "avg_open": 0.2569444444444444,
+   "days": 7,
+   "days_invested": 3,
+   "total": -0.0019200444433000597,
+   "total_2x": -0.002280044439258,
+   "total_3x": -0.0026400444352161004,
+   "total_spot5": -0.0018200444433001,
+   "total_r191_timing": -0.0015717362148781,
+   "funding": -0.002369100014129728,
+   "basis": 0.0008090555667874999,
+   "cost": 0.000359999995958,
+   "avg_open": 0.3333333333333333,
    "go_real_invested": {
-    "n": 2,
-    "mean": -0.00043755890277567984,
-    "hit": 0.5,
-    "worst": -0.0009501652845301,
+    "n": 3,
+    "mean": -0.0006400148144333533,
+    "hit": 0.3333333333333333,
+    "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
     "checks": {
