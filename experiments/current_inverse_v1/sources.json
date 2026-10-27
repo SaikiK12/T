@@ -1,0 +1,76 @@
+{
+  "canonical_method": "M244",
+  "no_login_region_or_API_limit_bypass": true,
+  "received_semantic_method_count": 0,
+  "registry_id": "R340",
+  "scope": "access/input-contract discovery only; no new semantic strategy read",
+  "sources": [
+    {
+      "accepted_body_bytes": 138,
+      "access": "redirect-not-followed",
+      "body_sha256": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "id": "coinm_info_doc",
+      "received_http_status": 302,
+      "requested": true,
+      "semantic_read_scope": "none; access response only",
+      "source_version": "first-seen receipt in evidence/sources.json",
+      "url": "https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Exchange-Information"
+    },
+    {
+      "accepted_body_bytes": 0,
+      "access": "not-requested-after-access-stop",
+      "body_sha256": null,
+      "id": "coinm_depth_doc",
+      "received_http_status": null,
+      "requested": false,
+      "semantic_read_scope": "unrequested/unread",
+      "source_version": null,
+      "url": "https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Order-Book"
+    },
+    {
+      "accepted_body_bytes": 0,
+      "access": "not-requested-after-access-stop",
+      "body_sha256": null,
+      "id": "coinm_mark_doc",
+      "received_http_status": null,
+      "requested": false,
+      "semantic_read_scope": "unrequested/unread",
+      "source_version": null,
+      "url": "https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-and-Mark-Price"
+    },
+    {
+      "accepted_body_bytes": 0,
+      "access": "not-requested-after-access-stop",
+      "body_sha256": null,
+      "id": "spot_filters_doc",
+      "received_http_status": null,
+      "requested": false,
+      "semantic_read_scope": "unrequested/unread",
+      "source_version": null,
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/filters"
+    },
+    {
+      "accepted_body_bytes": 224,
+      "access": "HTTP451-access-blocked",
+      "body_sha256": "79c1db471a4cdc1c8565b5dfc52e0ed2d29962738ee4d28597696fcd0920e348",
+      "id": "coinm_info",
+      "received_http_status": 451,
+      "requested": true,
+      "semantic_read_scope": "none; access response only",
+      "source_version": "first-seen receipt in evidence/sources.json",
+      "url": "https://dapi.binance.com/dapi/v1/exchangeInfo"
+    },
+    {
+      "accepted_body_bytes": 0,
+      "access": "not-requested-after-access-stop",
+      "body_sha256": null,
+      "id": "spot_info",
+      "received_http_status": null,
+      "requested": false,
+      "semantic_read_scope": "unrequested/unread",
+      "source_version": null,
+      "url": "https://api.binance.com/api/v3/exchangeInfo?symbols=%5B%22BTCUSDT%22%2C%22ETHUSDT%22%5D"
+    }
+  ],
+  "static_copyrighted_bodies_private": true
+}
