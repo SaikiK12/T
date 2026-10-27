@@ -38,6 +38,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`fee_routes`](fee_routes.py): Source-labelled conditional taker costs, never owner-effective fee evidence.
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...
+- [`freshness`](freshness.py): Freshness of the lab's live streams: when each recorder, loop and forward lane last wrote, against its cadence.
 - [`funding_prefix`](funding_prefix.py): Bounded model of pinned Lighter encoded funding, never an API cash decoder.
 - [`funding_values`](funding_values.py): Source-typed value observations and conservative funding-cash evidence.
 - [`gate`](gate.py): The go-real screen: one input to the owner's decision, never an order.

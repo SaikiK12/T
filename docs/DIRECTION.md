@@ -539,3 +539,105 @@ backfilled days before the freeze (+22% for A) are not evidence.
    - 91 and 93: forward candidates in the common paper account, once admission evidence exists.
 5. **Roles.** Codex audits, tests and builds tools on its own branch through PRs. Claude is the single writer of the
    journals, the registry rows and the forward loop. R-ids are claimed on #7 before a freeze.
+
+## Measure first (owner, 2026-10-26 evening)
+The owner: the methods so far do not make money. Try other ways, but measure them before launching anything.
+
+**What that means here**
+- **A new idea starts as a gate-0 measurement on seen data,** frozen like any lane. It reports three things:
+  - the gross per trade;
+  - the one-way cost at which it breaks even;
+  - the book at each reachable route's cost: MEXC web, Lighter API and MEXC API.
+- **Nothing goes forward or real from that step.**
+- **Only a lead that can move on gets new days** (forward paper or a reserved batch), and only with the owner's go.
+  That means a lead whose break-even clears a route the owner can actually use.
+
+**Measured today**
+- **R333** (the owner's break-or-rebound model, M412) is frozen at `ac077d2` and running. It reports those three lines.
+- **Cost map:** `docs/EDGE_SCOREBOARD.md`, "Where cost alone decides".
+  - Seven families failed only on cost; most others failed on gross.
+  - The strongest lead is R300's US-open leaders book: 12 orders a day, and a break-even of 17-18 bp a side against
+    about 3-5 bp on MEXC web.
+- **The web fee itself moves.** The default group was 0/2 bp (maker/taker) on three of five snapshot days and 1/4 bp
+  on two. 57 crypto contracts were 0/0 on all five.
+- **The forward clock broke again today.** A container restart stopped the loops for hours; 10-26 has 14 of 17 hours
+  late. 10-27 can still be the first strict day.
+
+**Proposed, not started (the owner decides)**
+1. **A frozen manual-web forward lane for R300's pick.** It is paper only, and needs about 2 years to an expected t of 2.
+2. **Lighter-API paper versions of the cost-limited hourly families:** R186 M2, R249, R246 and R287.
+3. **R332, then reserved batch 1 on 2026-11-03,** as planned. Neither launches anything.
+
+## Guarantees before forecasts (owner, 2026-10-26 night)
+The owner: stop putting effort into what does not work, think outside the box, and look for an equation or a model
+that guarantees something.
+
+**The principle**
+- A forecast can never guarantee a result. Only a complete hedge can: a position whose payoff is the same in every
+  outcome, bought for less than that payoff.
+- The cleanest one a small account can hold is the coin-margined cash-and-carry. B coins plus a short of B·F0 dollars
+  of the inverse quarterly are worth B·F0 dollars at expiry, whatever the price. At 1x the short cannot be liquidated.
+
+**Measured today**
+- **R335 (`locked_carry_v1`): DATA_PASS.**
+  - Locking BTC only when the locked yield beat the 3-month T-bill by 3%/yr earned 9.47%/yr against 3.39%/yr for the
+    T-bill, 2021-01..2026-09.
+  - Excess: +6.08 / +5.58 / +5.08 %/yr at 1x / 2x / 3x, positive in 5 of 6 years. No lock earned less than the T-bill
+    paid.
+  - The offer was rich in 2021 and 2024 and has been absent in 2026 to date.
+  - Still at risk: the venue, ADL and the mark-to-market path.
+- **R333 (the owner's level model): NULL at the lab's API cost.**
+  - Its gross edge is real: +18 bp/day, t 4.8.
+  - It breaks even at about 9-15 bp a side and needs about 46 trades a day. It is a cost question, not a guarantee.
+- **The near-guarantee already running:** the cross-venue funding carry.
+  - R277: +11.8%/yr, max drawdown −0.7%, every year positive. R288: mexc+lighter +6.2%/yr.
+  - These are forward on paper in R278, R279 and R294. They need two venue accounts.
+
+**Stopped or parked**
+- **R332 (mlrank_v3) is parked,** and its draft stays a draft. It would be a third ML ranker:
+  - R299 was invalidated by its audit;
+  - R304 is PARTIAL, and its R305 audit could not explain the pick.
+- **No new forecast families** until a guarantee or cost lead needs one.
+
+**Proposed, not started (the owner decides)**
+1. **A live offer board** for the locked carry: hourly public quotes from Binance, OKX, Deribit and Bybit, BTC and ETH
+   quarterlies, against the T-bill. It alerts when a lock beats the T-bill by 3%/yr at 1x costs. It is measurement
+   only.
+2. **A paper lock ticket** when the alert fires, frozen at entry and checked against the settlement. A real lock comes
+   only after that check, placed by the owner, through `lab.gate.go_real()`.
+3. **The carry books keep running on paper**, and the reserved batch runs on 2026-11-03 as planned.
+
+## Short-hold futures only (owner, 2026-10-26, 21:27 UTC)
+The owner: "if we found an edge or PnL we need to be able to trade scalping futures to do quick money, not spot long
+ranges." This replaces the guarantee section's proposals above. The locked carry needs spot coins and holds of
+months, so no more work goes into it. R335 stays on record.
+
+**What counts now:** a perp trade that opens and closes within hours, on a venue the owner can use (MEXC first), net
+of that venue's measured cost.
+
+**Measured today**
+- **R336 (`levels_mexc0_v1`): PARTIAL, gate 0.** R333's level model, re-priced on the 55 coins whose MEXC perp has
+  zero maker and taker fees, at each coin's measured MEXC spread.
+  - +16.7 bp a trade net, about 9 trades a day, holds of 12 h at most.
+  - The constant-size book's day sums: t 2.85 at 1x, 2.11 at 2x, 1.38 at 3x.
+  - Always trading the breakout earns as much per trade on these coins, but only in 2025-26. One trade's 1% tail is
+    −18.7%.
+- **R300's US-open leaders (already measured):** long the 3 strongest and short the 3 weakest top-50 perps at 10:00 New
+  York, flat at 24:00 UTC.
+  - It is about +70 bp/day gross, and breaks even at 17-18 bp a side.
+  - Its t at the MEXC web fee is about 2.0, but that is a re-read of a pick made in discovery.
+
+**Next, in order**
+1. **A frozen forward paper lane for R336's book** on MEXC's zero-fee perps, with a new id, frozen before its first
+   forward day:
+   - R333's model refit once and frozen;
+   - live Binance features each hour;
+   - the MEXC fee and quote checked at each signal;
+   - tickets frozen before entry;
+   - THROUGH and AWAY recorded as controls.
+2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
+3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
+   will be sized against the disk (3.1 GB free) before it starts.
+
+No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
+placing it.

@@ -2,6 +2,9 @@
 
 Freeze with `lab.prereg.freeze()` before the first statistic. Never edited afterwards; a change is a new lane.
 
+Draft: this file becomes `PREREG.md` at the freeze. Until then `python -m lab integrity` would read an unfrozen
+`PREREG.md` without a registry row as an error (SIDECAR_MISSING).
+
 - **Registry id:** R332
 - **Id history:** drafted as R309 in the Claude block R300-R319 claimed on issue #7 on 2026-10-22; Codex's
   rounds took R309-R331 on its branch first, so this lane takes the next free id after the merge.

@@ -70,7 +70,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (110)
+## Run: one lane's frozen measurement (112)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -122,9 +122,11 @@ line is the first line of the script's own docstring.
 - [`run_itsm.py`](run_itsm.py): itsm_v1 (R203): intraday time-series momentum, as set out in experiments/itsm_v1/PREREG.md.
 - [`run_levcarry.py`](run_levcarry.py): levcarry_v1 (R280): leverage and liquidation on the forward carry books, as set out in experiments/levcarry_v1/PREREG.md.
 - [`run_level_probability.py`](run_level_probability.py): R330 two-stage, offline close-level probability and net-cost diagnostic.
+- [`run_levels_v2.py`](run_levels_v2.py): R333 level_probability_v2: the owner's break-or-rebound probability model (M412) on the top 100 Binance perps.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
 - [`run_lmw.py`](run_lmw.py): lmw_v1 (R251): Lo-Mamaysky-Wang kernel chart patterns (head-and-shoulders, broadening, triangle and rectangle tops and bottoms) on daily bars of the top-50 perps, 11 forex pairs and 10 world ...
+- [`run_locked_carry.py`](run_locked_carry.py): R335 locked_carry_v1: the guarantee engine, a coin-margined cash-and-carry locked to expiry (measurement).
 - [`run_lotcap.py`](run_lotcap.py): lotcap_v1 (R298): harvest R282's lottery-cluster median while capping the squeezes.
 - [`run_maker.py`](run_maker.py): maker_v1 (R193): limit-order entries on the replicated gross edges, as set out in experiments/maker_v1/PREREG.md.
 - [`run_merge.py`](run_merge.py): merge_v1 (R186): walk-forward merge of many signals into one forecast, traded only where it clears costs, as set out in experiments/merge_v1/PREREG.md.

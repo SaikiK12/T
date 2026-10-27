@@ -1,9 +1,9 @@
 {
- "last_hour": "2026-10-26T14:00:00+00:00",
+ "last_hour": "2026-10-26T20:00:00+00:00",
  "run_at_lag_min": {
-  "n": 159,
-  "median": 941.9333333333333,
-  "p90": 4733.933333333334,
+  "n": 165,
+  "median": 761.9333333333333,
+  "p90": 4697.933333333333,
   "max": 5681.933333333333
  },
  "A_replay": {
@@ -23,8 +23,10 @@
    "mean": -0.010233874324092519,
    "hit": 0.16666666666666666,
    "worst": -0.0348465792263668,
+   "invalid_n": 0,
    "n_clusters": null,
    "checks": {
+    "finite_returns": true,
     "enough_scored": false,
     "mean_positive": false,
     "hit_rate": false,

@@ -31,8 +31,10 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (127)
+## Other registered rounds (done, registered or planned) (129)
 
+- **[locked_carry_v1](locked_carry_v1/)** R335, DONE DATA_PASS, 6 trials. The guarantee engine: coin-margined cash-and-carry locked to expiry on Binance BTC/ETH quarterlies vs the 3-month T-bill (M244), hurdles 0/3/6%/yr, measurement ([PREREG](locked_carry_v1/PREREG.md), [FINDINGS](locked_carry_v1/FINDINGS.md))
+- **[level_probability_v2](level_probability_v2/)** R333, DONE NULL, 11 trials. The owner's break-or-rebound model (M412) at scale: R330's levels/barriers on the point-in-time Binance top 100, every hour 2021-01..2026-09, quarterly-refit gradient boosting, V0-V4 + controls ([PREREG](level_probability_v2/PREREG.md), [FINDINGS](level_probability_v2/FINDINGS.md))
 - **[level_probability_v1](level_probability_v1/)** R330, DONE PARTIAL, 6 trials. Causal close-level probability, payoff and shared-capital cost diagnostic ([PREREG](level_probability_v1/PREREG.md), [FINDINGS](level_probability_v1/FINDINGS.md))
 - **[dated_carry_v2](dated_carry_v2/)** R328, DONE PARTIAL, 0 trials. Same-data exact-ratio dated carry: small conditional margin, actual net unknown ([PREREG](dated_carry_v2/PREREG.md), [FINDINGS](dated_carry_v2/FINDINGS.md))
 - **[dated_carry_v1](dated_carry_v1/)** R327, DONE PARTIAL, 0 trials. Inverse dated-carry source/account component; terminal driver ratio-format failure ([PREREG](dated_carry_v1/PREREG.md), [FINDINGS](dated_carry_v1/FINDINGS.md))
