@@ -1,0 +1,38 @@
+{
+  "R348_trade_logs_received": true,
+  "cached_sources_match_local_tape_and_recorder_bytes": true,
+  "canonical_dependency": "M409",
+  "closed_transfer_attempts": 12,
+  "existing_alias": "FV26-LT-ACCOUNT-FEE-LATENCY",
+  "existing_repo_ref": "ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+  "failed_binary_exports": 6,
+  "fallback_local_inputs": "R316 warm_values_v1 MEXC depth frames and exact metadata; no new collection or historical rescore",
+  "first_failed_binary_transfer_preserved": true,
+  "mechanics": [
+    "book lag_ms is not exact last receive clock; trade rows have no receive clock",
+    "Tape drain grace2s plus actual flush clock matter, recorder interval600s and terminal drainNone differ",
+    "R348 primary reports one unknown exit; native full policy cash cannot assume flat afterwards",
+    "API fill delay and public nominal fee are assumptions, not owner entitlement or actual fills"
+  ],
+  "new_created_UTF8_scope": {
+    "actual_gets": 8,
+    "declared_gets": 8,
+    "files": "six trade CSVs and producer hash manifest, plus directory listing",
+    "new_history_or_market_requests": 0,
+    "ref": "ec1bb00",
+    "scope_closed": true
+  },
+  "new_market_history_requests": 0,
+  "original_compressed_R348_trade_logs_received": false,
+  "raw_R348_tape_received": false,
+  "read_scope": "exact saved R347/R348 specifications and runner logic, R348 summary, Tape/recorder code and prior venue note; no new external primary-source/profit claims",
+  "registry_id": "R350",
+  "review_limit": "bounded reviewer found5material issues; fixes covered by root regressions, final reviewer turn hitusage limit and no final signoff claimed",
+  "scope_closed": true,
+  "unread_or_unverified": [
+    "Original compressed R348 bytes and all35 raw input identities remain unverified; new UTF8 file SHA256 and GitSHA identities checked, producer compressed correspondence claim retained",
+    "M264 future research and newpaper protocol",
+    "Actual Lighter fees/order eligibility/latency/fills/funding and authentic first-seen signals",
+    "Actual pandas3 runtime; only pandas2.2.3 CoW tested"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "actual_pandas3_runtime_tested": false,
+  "after": {
+    "errors": [],
+    "failures": [],
+    "skipped": [],
+    "successful": true,
+    "tests": 10
+  },
+  "before": {
+    "errors": [
+      "tests.test_level_probability.LevelProbabilityTests.test_full_constructed_model_score_account_protocol",
+      "tests.test_level_probability.LevelProbabilityTests.test_hour_delay_overshoot_and_funding_entry_exclusion"
+    ],
+    "failures": [],
+    "skipped": [],
+    "successful": false,
+    "tests": 10
+  },
+  "close_fixture_writeable_after": true,
+  "close_fixture_writeable_before": false,
+  "copy_on_write_regime_tested": true,
+  "expected_readonly_failure_reproduced": true,
+  "frozen_files_byte_unchanged": true,
+  "market_outcomes_or_prospective_days": 0,
+  "numpy_version": "2.3.5",
+  "original_source_and_pandas_option_restored": true,
+  "pandas_version": "2.2.3",
+  "production_function_or_assertions_modified": false,
+  "scope": "invented frozen test fixtures only; explicit context, not a change to plain discovery",
+  "sha256_after": {
+    "lab/level_probability.py": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+    "tests/test_level_probability.py": "fd66092e943aea71eb84f76c4e80173305f270fd1191e92923efe90b3ad5d340"
+  },
+  "sha256_before": {
+    "lab/level_probability.py": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+    "tests/test_level_probability.py": "fd66092e943aea71eb84f76c4e80173305f270fd1191e92923efe90b3ad5d340"
+  },
+  "status": "PASS"
+}

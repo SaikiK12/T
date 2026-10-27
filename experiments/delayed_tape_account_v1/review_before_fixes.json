@@ -1,0 +1,144 @@
+{
+  "checks": [
+    {
+      "actual": 0,
+      "check": "before grace",
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "actual": 10900000000,
+      "check": "first received retained",
+      "expected": 10900000000,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "finalized cannot backdate",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "known at actual finalize",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": "late_after_finalization",
+      "check": "late identity retained",
+      "expected": "late_after_finalization",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "later quality not earlier leak",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "late stops future readiness",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": 10900000000,
+      "check": "duplicate does not refresh aggregate",
+      "expected": 10900000000,
+      "passed": true
+    },
+    {
+      "actual": 11000000000,
+      "check": "duplicate receipt first_seen label remains original",
+      "expected": 10900000000,
+      "passed": false
+    },
+    {
+      "actual": true,
+      "check": "forged row not source-bound",
+      "expected": false,
+      "passed": false
+    },
+    {
+      "actual": true,
+      "check": "sibling same-named connection not owned",
+      "expected": false,
+      "passed": false
+    },
+    {
+      "actual": true,
+      "check": "invalid market update must not disappear from completeness",
+      "expected": false,
+      "passed": false
+    },
+    {
+      "actual": false,
+      "check": "terminal partial row incomplete",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "terminal partial reason retained",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": 11200000000,
+      "check": "trade first_seen retained",
+      "expected": 11200000000,
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "UTC step blocked",
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "failed": 4,
+  "fixture_checker_result": {
+    "actual_pandas3_runtime_tested": false,
+    "after": {
+      "errors": [],
+      "failures": [],
+      "skipped": [],
+      "successful": true,
+      "tests": 10
+    },
+    "before": {
+      "errors": [
+        "tests.test_level_probability.LevelProbabilityTests.test_full_constructed_model_score_account_protocol",
+        "tests.test_level_probability.LevelProbabilityTests.test_hour_delay_overshoot_and_funding_entry_exclusion"
+      ],
+      "failures": [],
+      "skipped": [],
+      "successful": false,
+      "tests": 10
+    },
+    "close_fixture_writeable_after": true,
+    "close_fixture_writeable_before": false,
+    "copy_on_write_regime_tested": true,
+    "expected_readonly_failure_reproduced": true,
+    "frozen_files_byte_unchanged": true,
+    "market_outcomes_or_prospective_days": 0,
+    "numpy_version": "2.3.5",
+    "original_source_and_pandas_option_restored": true,
+    "pandas_version": "2.2.3",
+    "production_function_or_assertions_modified": false,
+    "scope": "invented frozen test fixtures only; explicit context, not a change to plain discovery",
+    "sha256_after": {
+      "lab/level_probability.py": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+      "tests/test_level_probability.py": "fd66092e943aea71eb84f76c4e80173305f270fd1191e92923efe90b3ad5d340"
+    },
+    "sha256_before": {
+      "lab/level_probability.py": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+      "tests/test_level_probability.py": "fd66092e943aea71eb84f76c4e80173305f270fd1191e92923efe90b3ad5d340"
+    },
+    "status": "PASS"
+  },
+  "module_sha256": "1015c0995a2a5549102ad4a15d418327a2ed977c8e9dd50bcb2d72465dc1449f",
+  "passed": 12,
+  "scope": "independent inventedcases; no R316/R348 outcomes, no network"
+}

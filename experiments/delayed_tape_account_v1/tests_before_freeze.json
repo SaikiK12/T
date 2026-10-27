@@ -1,0 +1,19 @@
+{
+  "actual_pandas3_tested": false,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/T-consolidation/.venv/bin/python -m unittest discover -s tests -t .",
+  "earlier_full_before_UTF8_expansion": {
+    "log_sha256": "ef19887c9c49659d6364b10fdaeaa0b46e07f11065cdaf2801863155f405ccfc",
+    "seconds": "217.266",
+    "status": "PASS",
+    "tests": 1594
+  },
+  "exit_code": 0,
+  "focused_tests": 17,
+  "log_sha256": "0b078efc3c98b01c2dcdc99679541ffcac5abdfc340f35e7e766da73a3db8de7",
+  "new_lab_sha256": "6f5bd795a4ea1b86d2ddcc17a35ad58a6be25812985bbc82e9e022cf162adc20",
+  "reviewer_final_turn": "usage limit before final signoff; original review failures preserved; root regressions cover fixes",
+  "seconds": "225.782",
+  "skipped": 3,
+  "status": "PASS",
+  "tests": 1597
+}

@@ -1,0 +1,70 @@
+{
+  "scope_id": "R350/newly-created-UTF8-reuse/ec1bb00",
+  "scope_closed": true,
+  "max_gets": 8,
+  "actual_gets": 8,
+  "per_normalized_UTF8_body_limit": 2097152,
+  "total_normalized_UTF8_body_limit": 12582912,
+  "accumulated_tool_time_limit_ms": 120000,
+  "records": [
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/hashes.json",
+      "git_sha": "56125f0e0ea01eb971e0f3855bfc79459b256aa4",
+      "expected_size": 2008,
+      "normalized_characters": 2008,
+      "error": false,
+      "elapsed_ms": 375
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta0.5_h30.csv",
+      "git_sha": "50bd6dfbdc8a2a73f92cebfa82ba5bc640873513",
+      "expected_size": 273106,
+      "normalized_characters": 273106,
+      "error": false,
+      "elapsed_ms": 498
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta0.5_h5.csv",
+      "git_sha": "f7c72c70d0099f3d06e3cfc861adec56b91898a5",
+      "expected_size": 488245,
+      "normalized_characters": 488245,
+      "error": false,
+      "elapsed_ms": 1294
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta1_h30.csv",
+      "git_sha": "b2c7c5c8cd4cdcd9e3f48845f94a5ce2c48f80d2",
+      "expected_size": 76396,
+      "normalized_characters": 76396,
+      "error": false,
+      "elapsed_ms": 429
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta1_h5.csv",
+      "git_sha": "3dadbba20c85e8fb736292d8ef8a782e9be88207",
+      "expected_size": 108810,
+      "normalized_characters": 108810,
+      "error": false,
+      "elapsed_ms": 466
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta2_h30.csv",
+      "git_sha": "3d12018daa43c84bdc355b4356cb93f5d2c8eb5c",
+      "expected_size": 19302,
+      "normalized_characters": 19302,
+      "error": false,
+      "elapsed_ms": 445
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/utf8/trades_theta2_h5.csv",
+      "git_sha": "4f530512ae54d49d3af2973e07a20ef8cca58095",
+      "expected_size": 22919,
+      "normalized_characters": 22919,
+      "error": false,
+      "elapsed_ms": 419
+    }
+  ],
+  "directory_listing_received": true,
+  "raw_market_or_history_requests": 0,
+  "old12_attempt_scope_remains_closed": true
+}
