@@ -641,14 +641,31 @@ of that venue's measured cost.
     cost. Primary: 577 trades, 1x −0.77 bp a trade, t −3.43; BTC, ETH and SOL all negative, every day and side.
   - Lighter's makers close the gap within a second. R347, its first run, crashed before any statistic (0 trials).
 
-**Next, in order (revised 2026-10-27, after R348)**
-1. **A tape order-flow family on Lighter (M264).** Binance's signed taker flow and book imbalance over the last 5-60 s,
-   and BTC's lead for ETH and SOL, traded on Lighter one full second later and held 10-120 s, at the measured book
-   cost (BTC, ETH and SOL about 0.25 bp a side). Discovery on the sealed days; the pick is confirmed on days recorded
-   after the freeze, so a pass can be checked within weeks. Frozen before the tape is read against these signals.
-2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
-3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
-   will be sized against the disk (3.1 GB free) before it starts.
+- **R349 (`minflow_v1`): PASS by its frozen rule, gate 0 on seen years (2026-10-27), recorded PARTIAL.** 57 minute
+  rules on Binance's 1-minute bars of BTC, ETH and SOL, priced at Lighter's measured book cost (fee 0).
+  - The pick fades the top 0.5% of 5-minute signed taker flow at the next minute's open and exits 5 minutes later:
+    about 8 trades a day, 56.5% of them winners.
+  - Reality check over the 57 rules p < 0.0005. Validation 2024-01..2026-09: +2.69 bp a trade net, +7.11 bp a day,
+    t 3.48; +5.69 / +4.28 at 2x / 3x.
+  - It is decaying: +0.59 bp a trade since 2025-07 (t 0.54), about 0 in 2026. It breaks even at 1.6 bp a side, so only
+    Lighter's zero fee carries it; MEXC web loses 7.3 bp a day.
+  - Every fade rule earns and every follow rule loses. Absorption and exhaustion (M306) and BTC's lead into ETH and
+    SOL are NULL.
+  - It earns a forward paper lane on Lighter's own quotes and a place in a reserved 2020 batch
+    ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)).
+
+**Next, in order (revised 2026-10-27, after R349)**
+1. **R349's pick, unchanged, on nine more coins (new coins, new minutes).** The tape's other coins (BNB, XRP, TRX,
+   AVAX, LINK, DOGE, SUI, ADA, LTC) at each coin's measured Lighter book cost (0.8-4.1 bp a side). No lane has read
+   their 1-minute bars. This is the fastest test of whether the reversal is general: years of trades, not forward
+   days. The download is sized against the disk first (3.1 GB free; 2021-26 only, 2020 stays reserved).
+2. **R349's forward lane on Lighter's own quotes** (earned): signals from Binance's 1-minute bars, entry at Lighter's
+   recorded quote one full second after the signal minute closes, exit 5 minutes later, beside the Binance-print fill
+   so the execution gap is measured. Frozen before its first day. The gap shows within days; the edge itself needs
+   about 4,000 trades.
+3. **The reserved 2020 minutes:** R349's pick joins batch 2 (BTC and ETH from 2020-01, SOL from 2020-09).
+4. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized (the owner's go).
+5. **A tape order-flow family on Lighter (M264)** after the forward lane has measured the 1-second gap.
 
 No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
 placing it.

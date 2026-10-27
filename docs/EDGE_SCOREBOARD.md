@@ -1,6 +1,7 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
-As of 2026-10-22, after R293. Program trials: 9,478,562 on this branch. Every number comes from the cited lane's FINDINGS or journal.
+As of 2026-10-22, after R293; rows and the ranked list updated through R349 on 2026-10-27 (program trials 9,479,068 on
+this branch). Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
 overstatements are corrected here.
 
@@ -105,14 +106,19 @@ overstatements are corrected here.
 | **Deribit 25-delta risk reversal** (30 / 90-day RR from every option trade, forward from the COIN-M basis; weekly long or short BTC / ETH perp on its sign, 90-day z or 7-day change, follow or fade; manual web; M174 from the owner's reel) | Gate 0 on seen data, NULL, 24 trials (R307). Discovery 2021-23: pick ETH 30d chg7 follow, +103.5 bp/week, t 1.67 | Validation 2024-26: +111.7 bp/week, t 1.49; −44.5 without the 10 best weeks; no BTC book reaches \|t\| 1 | +108.1 / +104.4 bp/week at 2x / 3x | Binance prices; MEXC not checked | none | NULL; the risk reversal follows the past week more than it leads the next |
 | **Reversal after stress days** (long the day's worst fifth, short its best, top 50 or 150, only after a market-volatility, dispersion or open-interest-crash day in its trailing-year tail; 1 day; API tiers; M325, Nagel 2012) | Gate 0 on seen data, NULL, 8 trials (R308). Discovery 2021-23: pick top50 mvol, +48.6 bp/day, t 0.91, 67 days | Validation 2024-26: −63.4 bp/day, t −0.97; gross −34.6 after stress days against +23.8 on other days | −92.2 / −121.0 bp/day at 2x / 3x | Binance prices; MEXC not checked | none | NULL; held in 2021-23 and flipped in 2024-26 |
 | **Efficiency-ratio forecast and chop-day gate** (logistic regression on the reel's 15 measurements forecasts whether the next UTC day trends; skip a first-hour trend rule's trades on predicted chop days; BTC/ETH/SOL perps; M314 from the owner's reel) | Gate 0, NULL, 3 trials (R293). Discovery 2021-23: AUC 0.568; the rule loses −17.8 bp gross per trade, gated −26.1 | Validation 2024-26: AUC 0.537, the same as today's efficiency alone (0.536). Ungated −12.3 bp per trade (t −2.25); gated −15.6 (t −2.13): the gate lowers each trade by 3.3 bp | Gated −14.4 / −17.6 bp/day; ungated −24.3 / −30.2 | MEXC API: gated −17.1 bp/day | none | NULL. Post hoc, the first hour reverses: M315, for unseen data only |
+| **Extreme 5-minute flow fade** (when the last 5 minutes' signed taker volume on BTC, ETH or SOL reaches its trailing-week 99.5th percentile, take the other side at the next minute's open and exit 5 minutes later; about 8 trades a day; M426) | Gate 0 on seen years, **PASS by its frozen rule** (recorded PARTIAL), best of 57 minute rules (R349; reality check p < 0.0005). Discovery 2021-23: +5.70 bp a trade net at Lighter's book cost, t 4.67 | Validation 2024-01..2026-09: +2.69 bp a trade, +7.11 bp/day, t 3.48. **Since 2025-07: +0.59 bp a trade, t 0.54**; 2026 about 0 | +5.69 / +4.28 bp/day in validation; +0.13 / −1.22 since 2025-07 | MEXC web (3 bp a side) −7.33 bp/day: break-even is 1.6 bp a side, so only Lighter's zero fee carries it | none yet; a forward Lighter-quote lane is earned | **The first frozen pass on the scalping axis, but decaying.** Every fade rule earns and every follow rule loses; mostly longs after heavy selling. Fills are Binance prints, capacity about $1k a trade ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)) |
 
 ## The best achievable edges, ranked
 **The owner's format (2026-10-26):** an edge must trade as short-hold futures (perps), "scalping futures to do quick
 money", not as spot or long holds. R337 closed item 1's automated route on 2026-10-27. R348 closed zero-fee
 quote-lag scalps on Lighter the same day: one second after a dislocation Lighter's mid has nothing left to move, so
 each trade loses its 0.7-1.0 bp book cost (primary 1x −0.77 bp a trade, t −3.43;
-[FINDINGS](../experiments/tapelag_lighter_v2/FINDINGS.md)). The open short-hold candidate is R300's US-open leaders
-book (cost table below). The carries stay on record.
+[FINDINGS](../experiments/tapelag_lighter_v2/FINDINGS.md)). R349 then gave the axis its first frozen pass: fading
+the most extreme 5 minutes of signed taker flow on BTC, ETH and SOL for 5 minutes nets +2.69 bp a trade at Lighter's
+book cost in 2024-26 (t 3.48, reality check p < 0.0005 over 57 rules), but only +0.59 since 2025-07; it is gate 0,
+Lighter-only and decaying ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)). Its forward lane on Lighter's own
+quotes and the reserved 2020 minutes decide it. The other open short-hold candidate is R300's US-open leaders book
+(cost table below). The carries stay on record.
 
 1. **The owner's level model on zero-fee perps (R336 PARTIAL, then R337 NULL, 2026-10-26).** Closed for automated
    trading.
@@ -216,6 +222,7 @@ The web fee changes from day to day:
 | Family (round) | Gross | Break-even per side | Orders a day | Cheapest route that clears it | Reading |
 |---|---|---|---|---|---|
 | **US-open leaders** (R300's pick): at 10:00 New York, long the 3 strongest top-50 perps since 00:00 UTC and short the 3 weakest, flat at 24:00 UTC | +68.6 / +72.7 bp/day (discovery / validation), positive every year | 17.2 / 18.2 bp | 12 | MEXC web | See the note below the table. |
+| **Extreme 5-minute flow fade** (R349's pick, BTC/ETH/SOL) | +6.22 / +3.22 bp a trade (discovery / validation); +1.12 since 2025-07 | 1.6 bp (0.56 since 2025-07) | about 8 | Lighter API only | Frozen pass at gate 0, decaying; MEXC web loses −7.33 bp/day |
 | Merged atlas cells with order flow, M2 (R186) | +50.1%/yr, t 2.64 | 0.72x the tier cost | dozens | Lighter API | R186's fee-aware thresholds, at a quarter of the tier costs: +36.8%/yr, t 2.34 |
 | Round-number fade (R249) | +13.7 bp/day | about 1.0x the tier cost | up to 100 | Lighter API | The shifted-grid control earns too, so this is the reversal of the day's first breakout, not the levels |
 | SMT divergence fade, 24 h (R246) | +11.3 bp/day | 1.2x the tier cost | many | Lighter API | +2.0 bp/day net at 1x, t 0.29 |
