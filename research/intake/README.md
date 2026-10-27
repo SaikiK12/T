@@ -115,3 +115,15 @@ The dated engineering follow-up in that supplement links [draft PR46](https://gi
 `spot_perp_input_contracts_20261026` supplements six existing M047/M134 aliases with five MEXC spot input/protobuf/clock/access mechanics, retaining all407original method objects and alias rows. Nine bounded static GETs118731bodybytes include three failed pages; exact received/read/unread and Git tree/blob identities remain explicit. Separately frozen R324 verifies24constructed spot/perp accounting paths and captures139new public messages for BTC/WIF/SKR; raw inputs were committed before calculations. Source clock/quantity/snapshot, lot/status, ownerfee and eventfunding remain unverified, so no executable market PnL or prospective strategy day is claimed. Original methods and old results remain unchanged.
 
 `spot_quote_cost_contracts_20261026` adds eleven exact public metadata/depth/clock/access mechanics to those same aliases,6staticGETs184953bytes. R325 preserves0computed tiers from two mechanical input incompatibilities; `spot_quote_input_bridge_20261026`/R326 repairs Decimal wire types and explicit0minimum lower bounds on the SAME22committed public responses, with0newrequests.72/108conditional cost tiers and24account models are rationally audited;36depth failures remain, no resize. Full-depth public-rate1x hurdles are25.18bpWIF and88.68bpSKR on tiny snapshots; actual spot quantity/increments, ownerfees/sourceage/funding/exits remain unverified. No original strategy outcome,407oldobjects or alias bytes changed; no new method/queue/prospective strategy day.
+
+`podcast_methods_20261026.json` reconciles the bounded public-corpus continuation:
+6,240 metadata identities, 22 acquired native texts, three complete received-text
+reviews and one partial review. Its 65 strategy/variant/risk/process records
+are imported into `source_methods_20261020.json`, with append-only aliases;
+only the explicitly untested short-perp option-premium hypothesis adds M424.
+`podcast_episode_index_20261026.csv.gz` is compact source-identity evidence,
+not another method/task queue. The tracked source-budget journal preserves
+all 66 attempts on clean checkouts; raw RSS and speech stay private. The
+bundle distinguishes 18 unread parsed texts, missing mechanics and all
+outside-active-perps scope. No source profits, new market test, owner100
+completion or prospective day is inferred from these counts.
