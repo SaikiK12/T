@@ -654,18 +654,27 @@ of that venue's measured cost.
   - It earns a forward paper lane on Lighter's own quotes and a place in a reserved 2020 batch
     ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)).
 
-**Next, in order (revised 2026-10-27, after R349)**
-1. **R349's pick, unchanged, on nine more coins (new coins, new minutes).** The tape's other coins (BNB, XRP, TRX,
-   AVAX, LINK, DOGE, SUI, ADA, LTC) at each coin's measured Lighter book cost (0.8-4.1 bp a side). No lane has read
-   their 1-minute bars. This is the fastest test of whether the reversal is general: years of trades, not forward
-   days. The download is sized against the disk first (3.1 GB free; 2021-26 only, 2020 stays reserved).
-2. **R349's forward lane on Lighter's own quotes** (earned): signals from Binance's 1-minute bars, entry at Lighter's
-   recorded quote one full second after the signal minute closes, exit 5 minutes later, beside the Binance-print fill
-   so the execution gap is measured. Frozen before its first day. The gap shows within days; the edge itself needs
-   about 4,000 trades.
-3. **The reserved 2020 minutes:** R349's pick joins batch 2 (BTC and ETH from 2020-01, SOL from 2020-09).
-4. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized (the owner's go).
-5. **A tape order-flow family on Lighter (M264)** after the forward lane has measured the 1-second gap.
+- **R351 (`minflow_alts_v1`): NULL, gate 1 in coins (2026-10-27).** R349's pick, unchanged, on the tape's nine other
+  coins (BNB, XRP, TRX, AVAX, LINK, DOGE, SUI, ADA and LTC), whose 1-minute bars nobody had read.
+  - Gross +1.68 bp a trade, positive on 8 of 9 coins: the reversal is general.
+  - But every coin's Lighter cost (0.77-4.10 bp a side) is larger. 1x is −2.14 bp a trade (t −2.88), and both halves
+    lose.
+  - Since 2025-07 even the gross is negative (−0.57 bp a trade).
+  - On R349's own coins the long side, its best part, earns +0.02 bp a trade in 2026 (from R349's trade file, after
+    the fact).
+  - **So R349's earned forward lane is not started, and the R352 claim is released.** Minute-scale flow fades on
+    liquid perps have no edge left at a zero-fee venue's cost
+    ([FINDINGS](../experiments/minflow_alts_v1/FINDINGS.md)).
+
+**Next, in order (revised 2026-10-27, after R351)**
+1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
+2. **R300's pick on paper:** a frozen forward lane at Lighter's and MEXC's own prices, 12 orders a day, held from
+   10:00 New York to 24:00 UTC. Its gross clears Lighter's cost in every year. But its frozen test was NULL at API
+   cost (t 1.28), so this is a hypothesis lane. It is also a candidate for reserved batch 2.
+3. **The event lanes keep running** (announce_fwd, delist_fwd, montag_fwd, unlocks_fwd: short holds of 1-168 h).
+   None has seen a qualifying notice since its freeze.
+4. **Parked:** M264 (the 1-60 s tape family). R348 found Lighter level with Binance within a second, and R349/R351
+   found the minute-scale reversal gone since 2025-07, so the prior is low.
 
 No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
 placing it.

@@ -1,0 +1,82 @@
+{
+ "lane": "minflow_alts_v1",
+ "registry": "R351",
+ "trials": 1,
+ "pick": "flow_fade_k5_h5",
+ "decision": {
+  "verdict": "NULL",
+  "all_net1_day_bp": -5.542212814459478,
+  "all_t1": -2.8772121763073084,
+  "all_net2_day_bp": -15.413791820045454,
+  "halves_net1_day_bp": [
+   -5.118152080383734,
+   -5.9666959197843
+  ],
+  "gross_trade_bp_by_coin": {
+   "BNBUSDT": 1.912195282634079,
+   "XRPUSDT": 1.5965918295393262,
+   "TRXUSDT": -0.8355585030175791,
+   "AVAXUSDT": 3.5636426643557084,
+   "LINKUSDT": 2.9538458622455184,
+   "DOGEUSDT": 1.9936427532473364,
+   "SUIUSDT": 1.361037168588024,
+   "ADAUSDT": 1.9955385509459656,
+   "LTCUSDT": 0.3314401540773529
+  },
+  "coins_positive_gross": 8,
+  "recent_net1_day_bp": -11.179133019247796,
+  "recent_t1": -2.494057581536837,
+  "replicates": false,
+  "live": false
+ },
+ "verdict": "NULL",
+ "extra": {
+  "all_best10_share": -0.3769849051184691,
+  "all_without_best10_bp": -7.669720191799839
+ },
+ "walk_bp": {
+  "BNBUSDT": 0.81,
+  "XRPUSDT": 0.77,
+  "TRXUSDT": 1.59,
+  "AVAXUSDT": 1.63,
+  "LINKUSDT": 1.65,
+  "DOGEUSDT": 1.95,
+  "SUIUSDT": 2.0,
+  "ADAUSDT": 2.72,
+  "LTCUSDT": 4.1
+ },
+ "inputs": {
+  "data/klines_1m_tape/BNBUSDT.parquet": "40898910305c12f524c541e1413da04838939e1a5f585b35f461f1fb6da90d5f",
+  "data/klines_1m_tape/XRPUSDT.parquet": "c7c45ead41d71f36ba6df5b023d2c197e5c723bdc171fdc97ce1b843896f6337",
+  "data/klines_1m_tape/TRXUSDT.parquet": "9ce27636c171ca4d32870f537bbf66ed9988c4cd21380d1c20554fa4a43fe3ee",
+  "data/klines_1m_tape/AVAXUSDT.parquet": "d74f57c781c3c73078c1bbbdca6fa11d96d011508bb29b454efb21eecfdc667d",
+  "data/klines_1m_tape/LINKUSDT.parquet": "5c3db56d32b8693fcc765371056039a64437032cfc52a768e13e39826d39666f",
+  "data/klines_1m_tape/DOGEUSDT.parquet": "a11b79f5334757108c299336637248dba41dcb7ad16fb487e0899e6370b6aa15",
+  "data/klines_1m_tape/SUIUSDT.parquet": "c7dcdf637f207945b7fdb717519007bd8afea0c09ab60d77c52dfed712c5562f",
+  "data/klines_1m_tape/ADAUSDT.parquet": "ba174cae3cbd17a9f80a7a255e214541aed6611c5acae7bcd7cbb28c96e6e1bb",
+  "data/klines_1m_tape/LTCUSDT.parquet": "2590251cb7f8de210e36643af3713465027b15b57e6730766c4ad52092d4cc4a",
+  "data/klines_1m_tape/manifest.json": "8438a5e31d85a31de85ea9b9c94f2ab3da2b8a564a84dfcedb5423fda8a9f02c",
+  "data/fundingRate/BNBUSDT.parquet": "64ed0b13086a8c8aed00607c268d3699afc75e709f3c3ea1feafd0832f83d4a7",
+  "data/fundingRate/XRPUSDT.parquet": "8e7a20419d92be9ea66ca6327c94d5845f5768d59bc9f91f755d88c703637e3d",
+  "data/fundingRate/TRXUSDT.parquet": "b6da5ba1a2dfd1ba8dc1d8857d56ac90e658d2d1040f4f3363ee404f92c2541f",
+  "data/fundingRate/AVAXUSDT.parquet": "1a202e0fced90bd6346beb94decc05a1638b50de80b813d3f88f47bac605e544",
+  "data/fundingRate/LINKUSDT.parquet": "ceec65d7cdbcfbe07f6900a62707ae687da80e65e1bbacd87f564e334eb07ef8",
+  "data/fundingRate/DOGEUSDT.parquet": "c360e679952aee2bf9ed1204452976876f00746e34e8e85de88814dafcfdf84f",
+  "data/fundingRate/SUIUSDT.parquet": "d2243590982286ef3cc96b51b75bd5bfc1c90fa117c2883371dd5b2c6be8d273",
+  "data/fundingRate/ADAUSDT.parquet": "4d26df117d4f3e0cc3e23068622c08419be4ee3c8cd9467906704cf894252262",
+  "data/fundingRate/LTCUSDT.parquet": "b84571f04fb3978f04e39bcf00689f7799fcb64a17ccc8302c70bd0d9f547cd7",
+  "docs/provenance/klines_1m_tape.json": "68af544678c79567bbf6aab79ef18e5b65855debb00afc91e382bddf63a01d06",
+  "docs/provenance/fundingRate.json": "84a3aadbf5ac0439b99209714c85ab0484b775f1258701835a64029c1ec3e4de",
+  "experiments/tapelag_lighter_v2/results/summary.json": "4f4690ff82f4f3c9dc458db8e29fc0a3eb0733a5ced0e8dd613b083de85ca778",
+  "experiments/minflow_v1/PREREG.md": "0c75a8c43c78440675dcbacfa6bf171ca6f82ac89a4d9d556cc51f2f21950a14",
+  "experiments/minflow_v1/results/summary.json": "899a1771a67e737841c682ecfc4012a5276907b8ff8a4fe0b0519e2375aac814",
+  "scripts/run_minflow.py": "692b7223b4d50353f4f88cd3f6f5652a6f87e8fffa4cbfb4351e3c09003e26f1",
+  "scripts/run_minflow_alts.py": "170d8603382af9bbe09d25d0b6575e50bc871db0ee1588be90a493719eee59a3",
+  "tests/test_minflow_alts.py": "2a029fe2e279930783ff793ade10bf09099b41eb0484dae8143724161a5e96c9",
+  "scripts/fetch_klines_stream.py": "835dbb86fcb3a6752db9cacc51eedf3113e54a49da83dff77ff3888c1f8b553b",
+  "tests/test_fetch_klines_stream.py": "f61e0d053e4f37d4286f8a3a59516f799aa191cb88bb7f3c96715ddba966220c",
+  "lab/orderflow.py": "097ec5cd95aecea45497c68319d11a4ff2508c980a83c373b5afb4c61e90da13",
+  "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34",
+  "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508"
+ }
+}
