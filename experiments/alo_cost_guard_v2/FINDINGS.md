@@ -43,7 +43,8 @@ checker passed **104 checks**; deliberately corrupted cash and duplicate-case
 artifacts were rejected. Thirty focused guard/account tests passed, and the
 complete project-environment suite passed **1,685 tests, 3 skipped**. An initial
 system-Python run was stopped after missing `numba` and `pyarrow` became clear;
-it was not counted as a completed validation.
+it was not counted as a completed validation. After reconciling the draft with
+the other research branch, the complete suite passed **1,819 tests, 3 skipped**.
 The independent pre-freeze review also checked uncertainty-window boundaries;
 the accepted zero/10 ns bounds were constructed assumptions. No strategy
 variant, market acquisition, order or prospective paper day was added.
@@ -55,3 +56,12 @@ therefore remains true even when a hypothetical endpoint balance is positive.
 Real first-seen market and receipt evidence, realistic exit and fee details,
 funding, capital risk and separate prospective validation remain prerequisites
 to any claim of executable expected net return.
+
+After the original source scope closed, a separately bounded
+[dataset metadata review](dataset_metadata_20261028.json) identified the
+Zenodo release and the author’s reconstruction caveats. The public book diffs
+omit the consensus block number, timestamp and oracle stream; reconstructed
+availability and synthetic counters do not prove our local first-seen or order
+latency. The listed whole BTC order/rejection/book/trade archives total about
+121.6 GB before extraction, versus approximately 28.8 GB free here at the
+measurement time. No dataset was downloaded.

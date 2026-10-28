@@ -22,7 +22,10 @@ The owner's anticipatory Hyperliquid ALO idea is retained as a distinct
 unrun source hypothesis linked to M227/M292/M186. The related
 [accounting diagnostic](../../experiments/alo_cost_guard_v2/FINDINGS.md)
 is constructed-data engineering, and its documented source, timing, fee,
-fill and solvency limits do not establish executable expected returns.
+fill and solvency limits do not establish executable expected returns. A
+separate [Zenodo metadata review](../../experiments/alo_cost_guard_v2/dataset_metadata_20261028.json)
+identifies the archive sizes and missing book-diff block timestamps without
+downloading the dataset.
 
 Earlier received scope: 465 source records/aliases and 54 catalog/tool entries,
 reconciled to 339 queue rows at that snapshot. The current intake audit is the

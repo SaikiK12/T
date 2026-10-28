@@ -1,0 +1,22 @@
+14:12:28 PREREG verified; 31 inputs match
+14:12:28 walk cost bp a side: BTC 0.27, ETH 0.23, SOL 0.30, XRP 0.77, DOGE 1.95, BNB 0.81, SUI 2.00, ADA 2.72, LINK 1.65, AVAX 1.63, LTC 4.10, TRX 1.59
+14:12:32 151 observable buckets of 300 s
+Traceback (most recent call last):
+  File "/home/user/T/scripts/run_tapelag_lighter.py", line 413, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/T/scripts/run_tapelag_lighter.py", line 388, in main
+    trials = {k: summarize(trades[(*k, DELAY)], buckets) for k in keys}
+                 ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/T/scripts/run_tapelag_lighter.py", line 321, in summarize
+    top2 = by["sum"].nlargest(2).index.tolist()
+           ~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/series.py", line 4123, in nlargest
+    return selectn.SelectNSeries(self, n=n, keep=keep).nlargest()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/methods/selectn.py", line 73, in nlargest
+    return self.compute("nlargest")
+           ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/methods/selectn.py", line 112, in compute
+    raise TypeError(f"Cannot use method '{method}' with dtype {dtype}")
+TypeError: Cannot use method 'nlargest' with dtype object

@@ -1,0 +1,66 @@
+{
+ "registry": "R355",
+ "updated": "2026-10-28T14:00:20Z",
+ "state": "PENDING",
+ "decision": "0 scored on-time primary hops; interim look at 40, final at 80 or 2028-03-01",
+ "scored": 0,
+ "mean_net": null,
+ "mean_net_2x": null,
+ "t_cr1": null,
+ "trimmed10": null,
+ "leave_two_coins_out": null,
+ "go_real": {
+  "pass": false,
+  "n": 0,
+  "mean": null,
+  "hit": null,
+  "worst": null,
+  "n_clusters": 0,
+  "checks": {
+   "finite_returns": true,
+   "enough_scored": false,
+   "mean_positive": false,
+   "hit_rate": false,
+   "no_tail_event": false
+  }
+ },
+ "tickets": 0,
+ "open": 0,
+ "decisions": 4,
+ "decision_errors": 0,
+ "late_decisions": 0,
+ "books": {
+  "mexc th0.3%": {
+   "scored": 0,
+   "net1_web": null,
+   "net2_web": null,
+   "net3_web": null,
+   "net1_api": null,
+   "hit_web": null
+  },
+  "mexc th0.5%": {
+   "scored": 0,
+   "net1_web": null,
+   "net2_web": null,
+   "net3_web": null,
+   "net1_api": null,
+   "hit_web": null
+  },
+  "gate th0.3%": {
+   "scored": 0,
+   "net1_web": null,
+   "net2_web": null,
+   "net3_web": null,
+   "net1_api": null,
+   "hit_web": null
+  },
+  "gate th0.5%": {
+   "scored": 0,
+   "net1_web": null,
+   "net2_web": null,
+   "net3_web": null,
+   "net1_api": null,
+   "hit_web": null
+  }
+ }
+}

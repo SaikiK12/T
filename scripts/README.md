@@ -5,7 +5,7 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (22)
+## Fetch: download archives and public history (26)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -20,11 +20,15 @@ line is the first line of the script's own docstring.
 - [`fetch_gate_history.py`](fetch_gate_history.py): Gate.io's public bulk archive (gateio-public-data on S3, no keys): hourly candles and settled funding for every USDT perp, delisted ones included, from 2020-01 to the last complete month.
 - [`fetch_hlp.py`](fetch_hlp.py): Hyperliquid's HLP vault (the exchange's community liquidity vault: market making, liquidations, a share of fees), measured from its public history (POST api.hyperliquid.xyz/info, vaultDetails, no ...
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
+- [`fetch_klines_stream.py`](fetch_klines_stream.py): Stream Binance USD-M kline archives into one parquet per symbol without keeping the zips (a disk-bounded build).
 - [`fetch_macro.py`](fetch_macro.py): Small free daily series for regime and context work: crypto sentiment, US rates and liquidity, stablecoin supply and DeFi activity.
 - [`fetch_metrics_full.py`](fetch_metrics_full.py): Complete Binance metrics for every day the daily panel's top-150 universe reads, reduced to hours by lab.flow.reduce_metrics into data/metrics_full/metrics_1h/. data/metrics_1h stays as it is: it ...
 - [`fetch_mexc_history.py`](fetch_mexc_history.py): Download MEXC public history for every crypto USDT perpetual listed today: hourly contract klines, hourly index klines and settled funding, from 2025-04-01 (funding history starts 2025-04-27 on ...
 - [`fetch_mexc_tradfi.py`](fetch_mexc_tradfi.py): Download MEXC public history for its TradFi USDT perpetuals (contract type 2: stocks, indices, commodities, ETFs).
 - [`fetch_notice_bodies.py`](fetch_notice_bodies.py): Plain text of each Binance delisting article in the notice journal (data/recorders/notices/binance_delisting.csv), from the public CMS detail endpoint.
+- [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
+- [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
+- [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
 - [`fetch_spot.py`](fetch_spot.py): Binance spot hourly klines from data.binance.vision for every perp with a USDT spot pair (data/spot_pairs.json, 481 pairs): the spot leg for carry and basis lanes (M047, C09).
 - [`fetch_trend_daily.py`](fetch_trend_daily.py): Fetch the frozen slow_trend_v1 spot sample; never calculate market outcomes.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
@@ -47,7 +51,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (20)
+## Forward: paper lanes and the loops that run them (21)
 
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
@@ -60,6 +64,7 @@ line is the first line of the script's own docstring.
 - [`forward_mexc_sq.py`](forward_mexc_sq.py): mexc_fwd_sq (R218): the agreement-squared flow book on MEXC prices and funding, one bar late, as set out in experiments/mexc_fwd_sq/PREREG.md.
 - [`forward_montag.py`](forward_montag.py): R270 montag_fwd: the Monitoring Tag short at +24 h, forward on MEXC paper (experiments/montag_fwd/PREREG.md).
 - [`forward_seq.py`](forward_seq.py): mexc_seq (R221): the sequential decision for the MEXC flow books A, X2 and B, as set out in experiments/mexc_seq/PREREG.md.
+- [`forward_settlehop.py`](forward_settlehop.py): R355 settlehop_fwd: R354's settlement hop, forward on paper, on the funding rate a trader sees, hedged on Lighter.
 - [`forward_tick.py`](forward_tick.py): flow72_fwd2 (R200): one forward tick, as set out in experiments/flow72_fwd2/PREREG.md.
 - [`forward_unlocks.py`](forward_unlocks.py): unlocks_fwd (R266): the unlock short forward on MEXC paper, as set out in experiments/unlocks_fwd/PREREG.md.
 - [`forward_vt.py`](forward_vt.py): vt_fwd (R225): R217's volatility target (rule R1) applied forward to the MEXC flow books A and B (R215) and X2 (R218), warmed up on R217's archived daily nets, as set out in ...
@@ -70,7 +75,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (112)
+## Run: one lane's frozen measurement (123)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -122,6 +127,8 @@ line is the first line of the script's own docstring.
 - [`run_itsm.py`](run_itsm.py): itsm_v1 (R203): intraday time-series momentum, as set out in experiments/itsm_v1/PREREG.md.
 - [`run_levcarry.py`](run_levcarry.py): levcarry_v1 (R280): leverage and liquidation on the forward carry books, as set out in experiments/levcarry_v1/PREREG.md.
 - [`run_level_probability.py`](run_level_probability.py): R330 two-stage, offline close-level probability and net-cost diagnostic.
+- [`run_levels_lighter.py`](run_levels_lighter.py): R337 levels_lighter_v1: R333's level trades on Lighter's own hourly prices, at Lighter's measured book cost (gate 0).
+- [`run_levels_mexc0.py`](run_levels_mexc0.py): R336 levels_mexc0_v1: R333's level model on MEXC's zero-fee perps, at the measured MEXC spread (gate 0).
 - [`run_levels_v2.py`](run_levels_v2.py): R333 level_probability_v2: the owner's break-or-rebound probability model (M412) on the top 100 Binance perps.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
@@ -131,6 +138,8 @@ line is the first line of the script's own docstring.
 - [`run_maker.py`](run_maker.py): maker_v1 (R193): limit-order entries on the replicated gross edges, as set out in experiments/maker_v1/PREREG.md.
 - [`run_merge.py`](run_merge.py): merge_v1 (R186): walk-forward merge of many signals into one forecast, traded only where it clears costs, as set out in experiments/merge_v1/PREREG.md.
 - [`run_merge_v2.py`](run_merge_v2.py): merge_v2 (R187): trade-consistent, faster, session-aware merge, as set out in experiments/merge_v2/PREREG.md.
+- [`run_minflow.py`](run_minflow.py): R349 minflow_v1: minute-scale order flow and overreaction on the BTC, ETH and SOL perps (M426, M306), priced at Lighter's zero-fee book cost.
+- [`run_minflow_alts.py`](run_minflow_alts.py): R351 minflow_alts_v1: R349's frozen pick, unchanged, on nine more coins whose 1-minute bars no lane has read (M426).
 - [`run_mlaudit.py`](run_mlaudit.py): R305 mlaudit_v1: what carries R304's pick (GBM h7 on the 24 clean features)?.
 - [`run_mlrank.py`](run_mlrank.py): mlrank_v1 (R299): machine-learned cross-sectional rankers on the daily point-in-time panel.
 - [`run_mlrank2.py`](run_mlrank2.py): R304 mlrank_v2: R299's rankers again, without the three features whose coverage leaks survival.
@@ -161,12 +170,19 @@ line is the first line of the script's own docstring.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
+- [`run_settlehop.py`](run_settlehop.py): R353 settlehop_v1: M267's settlement-window hop on hourly bars, frozen in experiments/settlehop_v1/PREREG.md.
+- [`run_settlehop_exit.py`](run_settlehop_exit.py): R356 settlehop_exit_v1: R354's settlement hops closed minutes after the settlement, frozen in experiments/settlehop_exit_v1/PREREG.md.
+- [`run_settlehop_pred.py`](run_settlehop_pred.py): R354 settlehop_pred_v1: R353's settlement-window hop on a point-in-time predicted rate, frozen in experiments/settlehop_pred_v1/PREREG.md.
+- [`run_settlelit.py`](run_settlelit.py): R363 settlelit_v1: short Lighter across a deep Binance settlement and cover a minute later, frozen in experiments/settlelit_v1/PREREG.md.
+- [`run_settleticks.py`](run_settleticks.py): R362 settleticks_v1: the seconds after a deep Binance funding settlement, from Binance's tick archive, frozen in experiments/settleticks_v1/PREREG.md.
 - [`run_sizecarry.py`](run_sizecarry.py): sizecarry_v1 (R281): confidence-sized carry books, as set out in experiments/sizecarry_v1/PREREG.md.
 - [`run_sizing.py`](run_sizing.py): sizing_v1 (R217): confidence-scaled multipliers on the flow books against a constant size, as set out in experiments/sizing_v1/PREREG.md.
 - [`run_slow_trend.py`](run_slow_trend.py): R229: frozen, bounded daily spot trend screen.
 - [`run_spot_costs.py`](run_spot_costs.py): R325 fixed source-aware spot/perp cost controls; no market PnL inference.
 - [`run_spot_costs_v2.py`](run_spot_costs_v2.py): R326 same-data mechanical input repair; frozen R325 failures remain untouched.
 - [`run_spot_perp_account.py`](run_spot_perp_account.py): R324 finite spot/principal, futures/collateral and raw-wire compatibility audit.
+- [`run_tapelag_lighter.py`](run_tapelag_lighter.py): R347 tapelag_lighter_v1: zero-fee scalps on Lighter, traded toward Binance's quote after a dislocation (M264, M293).
+- [`run_tapelag_lighter_v2.py`](run_tapelag_lighter_v2.py): R348 tapelag_lighter_v2: R347's frozen rule, rerun after R347's runner crashed before any statistic.
 - [`run_tradesize.py`](run_tradesize.py): tradesize_v1 (R226): trade count and mean print size as 72 h spread books, tested for information beyond quote volume, as set out in experiments/tradesize_v1/PREREG.md.
 - [`run_tradlead.py`](run_tradlead.py): tradlead_v1 (R261): does the last hour of TradFi perps (commodities CMD, US equities EQ) lead crypto? A market-timing book (TS) and a beta cross-section (XS), holds 1/4/24 h, sign chosen in ...
 - [`run_trendpull.py`](run_trendpull.py): trendpull_v1 (R284): Visser's trend pullback on 10 world indices and every Binance perp, long after the 63-day rate of change resets near zero inside a rising 200-day trend, as set out in ...
@@ -229,7 +245,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (41)
+## Tools and everything else (42)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -264,6 +280,7 @@ line is the first line of the script's own docstring.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
+- [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).

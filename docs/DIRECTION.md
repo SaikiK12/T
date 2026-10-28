@@ -6,6 +6,21 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
+## Now (2026-10-28, 14:45 UTC)
+- **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
+  lab, and a clean PR. The plan is the last section, "Intraday through the day".
+- **Best lead: the settlement scalp on Lighter (R363, gate 0, recorded PARTIAL).** Short Lighter at the last trade
+  before a deep negative Binance settlement and cover a minute after. On 134 hops held out from R356 it netted +23.4 bp
+  a hop at 1x (t 4.34) and +15.8 at 3x, after paying Lighter's own settlement at T. The hops were not blind: R362 had
+  read their Binance seconds. About one event every two days on coins Lighter lists.
+- **Closed today:** the Binance seconds scalp (R362, NULL). The move, about 85 bp, is done within 15 s of T, before
+  Binance's stated funding deviation lets a position open safely.
+- **Paper:** 14 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day that counts toward
+  a decision, and no money has moved. R355 runs the hedged hop forward on MEXC + Lighter.
+- **Next:** a forward paper lane for the Lighter scalp under a new id. It triggers on Binance's displayed rate as
+  Lighter's public feed reports it, walks Lighter's live book at both orders, and records Lighter's book, trades and
+  settlement around T. Then the reserved batch 1 read on 2026-11-03.
+
 ## Context
 
 **What we want:** the best net PnL the owner can actually trade (MEXC perps first), proven on days nobody had seen,
@@ -627,17 +642,179 @@ of that venue's measured cost.
   - It is about +70 bp/day gross, and breaks even at 17-18 bp a side.
   - Its t at the MEXC web fee is about 2.0, but that is a re-read of a pick made in discovery.
 
-**Next, in order**
-1. **A frozen forward paper lane for R336's book** on MEXC's zero-fee perps, with a new id, frozen before its first
-   forward day:
-   - R333's model refit once and frozen;
-   - live Binance features each hour;
-   - the MEXC fee and quote checked at each signal;
-   - tickets frozen before entry;
-   - THROUGH and AWAY recorded as controls.
-2. **A frozen forward paper lane for R300's pick** on MEXC web: 12 orders a day, manual-sized.
-3. **Minute-scale scalping** needs 1-minute bars for the zero-fee coins (only BTC, ETH and SOL are held). The download
-   will be sized against the disk (3.1 GB free) before it starts.
+- **R337 (`levels_lighter_v1`): NULL, gate 0 (2026-10-27).** The same trades on Lighter's own prices, at each coin's
+  measured $1k book cost (fee 0, API allowed).
+  - Gross +12.2 bp a trade; net +6.0 at 1x (t 1.00) and −0.1 at 2x. Gross has been about zero since 2025-12.
+  - MEXC's zero fees are web only, and its API pays 6/8 bp, about R336's break-even. So the level model has no
+    automated route.
+  - R336's planned forward lane is dropped. The manual 7-a-day book alone (t 2.02, 2026 −5.3 bp a trade) is not
+    worth one.
+
+- **R348 (`tapelag_lighter_v2`): NULL, gate 1 on the unread tape (2026-10-27).** Taker scalps on Lighter (fee 0,
+  300 ms delay) toward Binance's quote when the basis leaves its 5-minute median, filled one full second later.
+  - Gross is about 0 at the fill (−0.03 to +0.32 bp a trade over 6 trials), so each trade loses its 0.7-1.0 bp book
+    cost. Primary: 577 trades, 1x −0.77 bp a trade, t −3.43; BTC, ETH and SOL all negative, every day and side.
+  - Lighter's makers close the gap within a second. R347, its first run, crashed before any statistic (0 trials).
+
+- **R349 (`minflow_v1`): PASS by its frozen rule, gate 0 on seen years (2026-10-27), recorded PARTIAL.** 57 minute
+  rules on Binance's 1-minute bars of BTC, ETH and SOL, priced at Lighter's measured book cost (fee 0).
+  - The pick fades the top 0.5% of 5-minute signed taker flow at the next minute's open and exits 5 minutes later:
+    about 8 trades a day, 56.5% of them winners.
+  - Reality check over the 57 rules p < 0.0005. Validation 2024-01..2026-09: +2.69 bp a trade net, +7.11 bp a day,
+    t 3.48; +5.69 / +4.28 at 2x / 3x.
+  - It is decaying: +0.59 bp a trade since 2025-07 (t 0.54), about 0 in 2026. It breaks even at 1.6 bp a side, so only
+    Lighter's zero fee carries it; MEXC web loses 7.3 bp a day.
+  - Every fade rule earns and every follow rule loses. Absorption and exhaustion (M306) and BTC's lead into ETH and
+    SOL are NULL.
+  - It earns a forward paper lane on Lighter's own quotes and a place in a reserved 2020 batch
+    ([FINDINGS](../experiments/minflow_v1/FINDINGS.md)).
+
+- **R351 (`minflow_alts_v1`): NULL, gate 1 in coins (2026-10-27).** R349's pick, unchanged, on the tape's nine other
+  coins (BNB, XRP, TRX, AVAX, LINK, DOGE, SUI, ADA and LTC), whose 1-minute bars nobody had read.
+  - Gross +1.68 bp a trade, positive on 8 of 9 coins: the reversal is general.
+  - But every coin's Lighter cost (0.77-4.10 bp a side) is larger. 1x is −2.14 bp a trade (t −2.88), and both halves
+    lose.
+  - Since 2025-07 even the gross is negative (−0.57 bp a trade).
+  - On R349's own coins the long side, its best part, earns +0.02 bp a trade in 2026 (from R349's trade file, after
+    the fact).
+  - **So R349's earned forward lane is not started, and the R352 claim is released.** Minute-scale flow fades on
+    liquid perps have no edge left at a zero-fee venue's cost
+    ([FINDINGS](../experiments/minflow_alts_v1/FINDINGS.md)).
+
+- **R353 (`settlehop_v1`): NULL, gate 0 (2026-10-27), 12 trials.** The settlement-window hop (M267): hold the
+  receiving side of a 4 or 8 h funding lump on MEXC, Binance or Gate (S) through one settlement, hedged by the other
+  side on hourly Lighter or dYdX (H), from T − 1 h to T + 1 h, when S's last settled rate less two hours of H's
+  forecast at least 0.3 or 0.5%.
+  - Primary MEXC + Lighter at θ 0.5%: 120 hops. The signal promised 75.8 bp a hop; funding paid +13.5 and price
+    −5.8, against 20.1 bp of cost. Net 1x −12.4 bp a hop, −0.57 bp a day, t −1.98. None of the 12 books reaches t 2.
+  - **The hedge works.** The price part gives back only 0-26% of the lump S paid (slope −0.26, SE 0.09, on MEXC).
+  - **The signal fails.** The next lump was 0.29-0.36 of the previous one. When H's hourly rate moved first, S's
+    next lump went the same way and the hop paid it.
+  - dYdX's extreme rates sit on idle markets: the identity check keeps 1-15 hops a book
+    ([FINDINGS](../experiments/settlehop_v1/FINDINGS.md)).
+
+- **R354 (`settlehop_pred_v1`): PASS by its frozen rule, gate 0 on R353's seen prices (2026-10-27), recorded
+  PARTIAL, 6 trials.** R353's hop on a point-in-time predicted rate: Binance's own formula rebuilt an hour before T from
+  its hourly premium index.
+  - **Primary, Binance + Lighter at θ 0.5%:** 87 hops on 26 coins over 622 days, about one a week. 86 of them are long
+    Binance and short Lighter before a deeply negative settlement.
+    - Binance paid 0.73 of the forecast lump (sign right 99%). Its −2% floor binds the rest.
+    - Lighter's two hours took about 40% of the lump, and the capture crowd's price round trip another 15-25%.
+    - Net +30.9 / +10.4 / −10.0 bp a hop at 1x / 2x / 3x, +0.86 bp a day (t 3.24).
+  - **Family:** 5 of 6 books reach t 2. MEXC + Lighter at θ 0.5%, on Binance's premium as a proxy, makes +18.8 bp a
+    hop (t 2.36) and loses at 2x; at MEXC's web fee it makes +29.8 (t 3.27).
+  - **Concentrated:**
+    - Without its 10 best days the primary makes +0.25 bp a day (t 1.87).
+    - Seven hops at Binance's floor, which paid a second hourly lump, hold a third of the sum.
+  - **Unchecked:** fills after the published premium, margin (the coins moved up to 42.6% within a hold), and depth
+    in the squeeze hours ([FINDINGS](../experiments/settlehop_pred_v1/FINDINGS.md)).
+
+- **R355 (`settlehop_fwd`): RUNNING, gate 1 forward paper, frozen 2026-10-28 00:55 UTC, 1 trial.** R354's earned
+  lane: at T − 1 h + 20 s it reads MEXC's displayed rate for every crypto contract settling at T on a 4 or 8 h cycle,
+  takes e = F − 2h against Lighter's last hourly rate, and walks two $1k legs through the live books (at most 5 a
+  venue, within 10 minutes). It exits after T + 1 h and scores each venue's own settlements over the hold.
+  - **Decided:** the MEXC θ 0.5% book, on-time hops only, net of the measured books and MEXC's listed taker fee
+    (Lighter's is 0). Futility at 20 or 40 hops if the mean is ≤ 0; PASS at 40 hops if the CR1 t is ≥ 2.97, or at 80
+    (or 2028-03-01) if it is ≥ 2.10; the 2x mean must be > 0 either way.
+  - **Calibrated** on R354's MEXC hops resampled by settlement: false pass 2.5%; power 55 / 78 / 89% at +18.8 / +25 /
+    +29.8 bp a hop over 80 hops. Below about +26 bp a hop it is a futility screen.
+  - **Speed:** about 0.16 hops a day if R354's rate holds, so 40 hops around 2027-06 and 80 by about 2028-03.
+  - **Recorded for gate 3:** each leg's minute marks while a hop is open, so liquidation distance at any leverage can
+    be computed later; no margin model is run here. Gate + Lighter and the API fee (8 bp) are reported only
+    ([PREREG](../experiments/settlehop_fwd/PREREG.md)).
+
+- **R356 (`settlehop_exit_v1`): PASS by its frozen rule, gate 0 on R354's hops (2026-10-28), recorded PARTIAL, 5
+  trials.** R354's 87 primary hops, entered as R354 entered them, closed at the 1-minute close of T + 1, 2, 5, 15 or
+  30 minutes instead of T + 1 h (Binance 1-minute archive, sha256-checked; Lighter 1-minute candles).
+  - **Primary T + 5:** +50.5 / +30.1 / +9.6 bp a hop at 1x / 2x / 3x (R354: +30.9 / +10.4 / −10.0), +1.41 bp a day,
+    t 4.08. The paired gain over T + 60 is +19.6 bp a hop (CR1 t 3.99), and all five exits pass.
+  - **Mostly funding:** +15.2 bp of the gain is Lighter's T + 1 h settlement no longer paid, known before the run. The
+    price part is +4.4 (t 1.22).
+  - **The giveback is in the first minute:** the hedged price falls 37.6 bp between the last trade before T and the
+    close of T + 1 (85% of hops) and stays flat after. The capture crowd sells the moment the lump is paid.
+  - **Steadier:** the 10 best days hold 48% of the sum (R354: 72%); without them t 3.77. Positive at 3x.
+  - It earns a quick-exit forward lane on MEXC + Lighter under a new id; R355 runs unchanged
+    ([FINDINGS](../experiments/settlehop_exit_v1/FINDINGS.md)).
+
+**Next, in order (revised 2026-10-28, after R355's freeze)**
+
+Superseded at 14:00 UTC the same day by the list in "Intraday through the day" below.
+
+1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
+2. **R355 runs by itself** (hourly `ensure` in the forward loop). Each check: the daemon holds its lock, decisions
+   come at T − 1 h for the 4 h settlement hours, and skipped candidates carry a reason. Its first MEXC decision is
+   at 03:00 UTC for 04:00. A plumbing fix is logged in its `journal/CHANGES.md`; a rule change is a new lane.
+   - The reserved MEXC-only and Gate long-tail coins stay a batch-2 candidate for the same hop. They have no Binance
+     premium by definition, so a batch read needs the venue's own premium history and a hedge venue that lists them
+     (not yet checked).
+3. **R300's pick stays a reserved batch-2 candidate; its paper lane is not started.** Its book's daily standard
+   deviation is about 650 bp. Even at +40 bp a day net, a forward lane would need about four years of trading days
+   to reach t 2, and 2020 is reserved. A hedged settlement hop has far less noise per trade.
+4. **The event lanes keep running** (announce_fwd, delist_fwd, montag_fwd, unlocks_fwd: short holds of 1-168 h).
+   None has seen a qualifying notice since its freeze.
+5. **Parked:** M264 (the 1-60 s tape family). R348 found Lighter level with Binance within a second, and R349/R351
+   found the minute-scale reversal gone since 2025-07, so the prior is low.
 
 No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
 placing it.
+
+## Intraday through the day (owner, 2026-10-28, 13:42 UTC)
+The owner: "We need a hft trading with good pnl troughout the day etc and please organize better your quant lab etc
+and clean your pr etc".
+
+**What the lab can and cannot do at high frequency**
+- **Out of reach: market making and latency arbitrage.** They need colocated servers, sub-millisecond reaction,
+  rebates and queue priority. Our routes are Lighter (fee 0, about 300 ms of delay) and MEXC's API (6 / 8 bp).
+  - R348 measured the limit: Lighter's makers close a gap to Binance's quote within a second, so taker scalps lose
+    their 0.7-1 bp cost.
+  - R349 and R351: minute-scale flow fades on liquid perps have decayed to about 0 since 2025-07.
+- **Within reach: flows that arrive at a known time and take longer than our delay to clear.** A funding settlement
+  is one. The capture crowd buys the receiving side before T and sells it right after T. R356 saw the whole
+  giveback inside the first minute after T.
+- **Through the day:** settlements come every 1, 4 or 8 h on many coins and venues, so a settlement book can trade
+  at any hour. At R354's thresholds, on coins Lighter lists, there were about 0.36 events a day at θ 0.3% and one a
+  week at θ 0.5%. More events need lower thresholds, more coins and the other venues' own settlements, and each of
+  those has to be measured first.
+
+**Next, in order**
+1. **R362 `settleticks_v1` (gate 0):** Binance's tick archive (aggTrades) around R354's 221 θ 0.3% settlements, from
+   10 minutes before to 15 minutes after T.
+   - It measures how fast the price falls after T, second by second.
+   - It tests whether a taker who trades against the receiving side 1-5 s after T, and closes 30 s to 5 min later,
+     beats Binance's 8.5 bp a side at 1x, 2x and 3x.
+   - The 134 hops below θ 0.5% never had their post-settlement path read, so they are a check.
+   - Only the windows are kept (tens of MB). The daily files stream through, each checked against Binance's sha256.
+2. **A quick-exit forward lane** under a new id, on MEXC + Lighter, as R356 earned it: close right after T.
+   - It takes Codex's R357 accounting points: close the quantity opened, never fill beyond the shown book, and charge
+     fees on the exit notional.
+   - R355 keeps running unchanged.
+3. **If R362 finds a move that a 1-2 s taker keeps:**
+   - First a settlement tape recorder on MEXC, Lighter and Binance (books and trades from T − 2 min to T + 5 min
+     around each deep settlement).
+   - Then a forward scalp lane on the cheapest route.
+4. **Reserved batch 1 reads on 2026-11-03** as frozen (R286).
+5. **R300's pick stays a reserved batch-2 candidate.** Its daily SD is about 650 bp, so paper would need about four
+   years even at +40 bp a day.
+
+**Update (2026-10-28, 14:45 UTC)**
+- **R362 (NULL):** on Binance's ticks the price moves against the receiving side by +44 bp within 1 s of T, +65 by 2 s
+  and +85 by 15 s. A taker entering at T + 15 s nets −11.6 bp a hop at 1x. Item 3 above is closed: no seconds scalp on
+  Binance. The settlement tape recorder is still needed, for the venue that holds the position.
+- **R363 (PASS at gate 0, recorded PARTIAL):** the same move taken on Lighter by a position opened before T. +23.4 bp a
+  hop at 1x on 134 hops R356 never read, after Lighter's settlement at T (−12.9 bp) and its book (3.8 bp a round trip
+  at $1k). The hops were not blind: R362 read their Binance seconds first.
+- **Next, replacing items 2 and 3:**
+  1. **A forward paper lane for the Lighter scalp,** under a new id, frozen before its first ticket.
+     - The trigger is Binance's displayed rate, as Lighter's public `funding-rates` feed reports it. Binance's own
+       API answers HTTP 451 here, and the lab does not route around it.
+     - Each ticket walks Lighter's live book for a $1k order before T and again at T + 1 min.
+     - It records Lighter's book and trades from T − 2 min to T + 5 min and its settlement at T, so fills and timing
+       are measured.
+     - It takes Codex's R357 accounting points.
+  2. **The quick-exit hedged lane (R356's earn)** waits behind it. The Lighter scalp holds the same short leg without
+     the Binance leg that gives back 37 bp.
+
+**Organization (2026-10-28):**
+- The README opens with "At a glance": money status, live leads, closed directions, how to work here.
+- This file opens with "Now".
+- PR #1's description is a current overview of the lab instead of its first week's notes.

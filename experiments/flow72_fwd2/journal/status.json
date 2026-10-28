@@ -1,42 +1,42 @@
 {
- "last_hour": "2026-10-26T20:00:00+00:00",
- "days_scored": 25,
+ "last_hour": "2026-10-28T13:00:00+00:00",
+ "days_scored": 27,
  "short_now": {
   "tvc": [
-   "BNBUSDT",
-   "ETHUSDT",
    "IRYSUSDT",
    "KORUUSDT",
+   "SKHYUSDT",
+   "SOXLUSDT",
    "TSLAUSDT",
    "XAGUSDT"
   ],
   "t24": [
-   "HYPEUSDT",
-   "IRYSUSDT",
-   "MSTRUSDT",
-   "QNTUSDT",
-   "SOXSUSDT",
-   "SUIUSDT"
+   "1000PEPEUSDT",
+   "AVAXUSDT",
+   "BTCUSDT",
+   "QUSDT",
+   "SNDKUSDT",
+   "SOXLUSDT"
   ],
   "t4": [
-   "AVAXUSDT",
-   "CRCLUSDT",
-   "HYPEUSDT",
-   "KORUUSDT",
-   "SKHYUSDT",
-   "SOXLUSDT"
+   "ETHUSDT",
+   "LINKUSDT",
+   "MSTRUSDT",
+   "SAMSUNGUSDT",
+   "SOXLUSDT",
+   "SPCXUSDT"
   ]
  },
  "A": {
-  "days": 25,
-  "total": 0.16322357529530881,
-  "total_2x": 0.14674845477433368,
-  "total_3x": 0.13027333425335844,
+  "days": 27,
+  "total": 0.14728010587809062,
+  "total_2x": 0.12954281991021976,
+  "total_3x": 0.11180553394234884,
   "go_real": {
-   "n": 25,
-   "mean": 0.006528943011812353,
-   "hit": 0.6,
-   "worst": -0.0357744123539843,
+   "n": 27,
+   "mean": 0.005454818736225579,
+   "hit": 0.5925925925925926,
+   "worst": -0.1072537748171812,
    "invalid_n": 0,
    "n_clusters": null,
    "checks": {
@@ -52,18 +52,18 @@
    "pass_now": false,
    "decision_at_days": 90,
    "verdict": "PENDING",
-   "stop_rule_hit_day": null
+   "stop_rule_hit_day": "2026-10-26"
   }
  },
  "B": {
-  "days": 25,
-  "total": 0.0611397088858191,
-  "total_2x": 0.0581409254015746,
-  "total_3x": 0.05514214191733058,
+  "days": 27,
+  "total": 0.0552376408372093,
+  "total_2x": 0.05206055001946681,
+  "total_3x": 0.04888345920172488,
   "go_real": {
-   "n": 25,
-   "mean": 0.002445588355432764,
-   "hit": 0.6,
+   "n": 27,
+   "mean": 0.0020458385495262703,
+   "hit": 0.5555555555555556,
    "worst": -0.0184272522629367,
    "invalid_n": 0,
    "n_clusters": null,
