@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-10-27T14:00:00+00:00",
+ "last_hour": "2026-10-28T18:00:00+00:00",
  "mapped": 40,
  "dropped": [
   "BZUSDT",
@@ -27,12 +27,12 @@
  ],
  "mexc_fee": {
   "taker": {
-   "mean": 0.00015000000000000001,
+   "mean": 0.00011,
    "min": 0.0,
    "max": 0.0004
   },
   "maker": {
-   "mean": 1.7500000000000002e-05,
+   "mean": 2.5e-06,
    "min": 0.0,
    "max": 0.0001
   }
@@ -46,23 +46,23 @@
   "coverage": 0.5603070175438597
  },
  "X2_ontime": {
-  "days": 7,
-  "total": -0.11434310329988989,
-  "total_2x": -0.11764332333637349,
-  "total_3x": -0.1209435433728572,
-  "funding": -0.0225299632477038,
-  "coverage": 0.45105820105820105,
+  "days": 8,
+  "total": 0.005558486880320398,
+  "total_2x": 0.0017805699583554983,
+  "total_3x": -0.0019973469636093907,
+  "funding": -0.028540209486999698,
+  "coverage": 0.4600694444444444,
   "go_real": {
-   "n": 7,
-   "mean": -0.016334729042841414,
-   "hit": 0.42857142857142855,
+   "n": 8,
+   "mean": 0.0006948108600400497,
+   "hit": 0.5,
    "worst": -0.0998591801655121,
    "invalid_n": 0,
    "n_clusters": null,
    "checks": {
     "finite_returns": true,
     "enough_scored": false,
-    "mean_positive": false,
+    "mean_positive": true,
     "hit_rate": false,
     "no_tail_event": true
    },
@@ -77,10 +77,10 @@
   "diff_t_nw10": null
  },
  "vs_R215_A_ontime": {
-  "days": 7,
-  "x2_total": -0.11434310329988989,
-  "a_total": -0.1004230840630047,
-  "diff_mean_bp_day": -19.885741766978853,
+  "days": 8,
+  "x2_total": 0.005558486880320398,
+  "a_total": -0.0042868161200452955,
+  "diff_mean_bp_day": 12.306628750457115,
   "diff_t_nw10": null
  }
 }

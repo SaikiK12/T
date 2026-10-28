@@ -1,39 +1,39 @@
 {
  "A": {
-  "ontime_days": 7,
-  "total": -0.1004230840630047,
-  "total_2x": -0.10352348923221749,
-  "total_3x": -0.1066238944014302,
+  "ontime_days": 8,
+  "total": -0.0042868161200452955,
+  "total_2x": -0.007808940437310289,
+  "total_3x": -0.011331064754575211,
   "monitor_t": null,
   "next_look": "look 1 at 90 days",
   "closed": false
  },
  "X2": {
-  "ontime_days": 7,
-  "total": -0.11434310329988989,
-  "total_2x": -0.11764332333637349,
-  "total_3x": -0.1209435433728572,
+  "ontime_days": 8,
+  "total": 0.005558486880320398,
+  "total_2x": 0.0017805699583554983,
+  "total_3x": -0.0019973469636093907,
   "monitor_t": null,
   "next_look": "look 1 at 90 days",
   "closed": false
  },
  "B": {
-  "ontime_days": 7,
-  "total": -0.0010504012723218988,
-  "total_2x": -0.0013806704913329002,
-  "total_3x": -0.0017109397103438999,
+  "ontime_days": 8,
+  "total": 0.013321520559693004,
+  "total_2x": 0.012938742083222599,
+  "total_3x": 0.012555963606752199,
   "monitor_t": null,
   "next_look": "look 1 at 90 days",
   "closed": false
  },
  "X2_minus_A": {
-  "days": 7,
-  "mean_bp_day": -19.885741766978853,
+  "days": 8,
+  "mean_bp_day": 12.306628750457115,
   "t": null
  },
  "B_minus_A": {
-  "days": 7,
-  "mean_bp_day": 141.96097541526117,
+  "days": 8,
+  "mean_bp_day": 22.01042084967288,
   "t": null
  }
 }
