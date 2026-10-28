@@ -1,17 +1,29 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-10-27T14:30:18.755862+00:00",
+ "updated": "2026-10-28T00:27:46.049091+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.992,
+  "gate": 0.989,
   "hyperliquid": 1.0,
   "mexc": 1.0
  },
  "data": {
+  "hyperliquid": {
+   "files": 216,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "mexc": {
    "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "gate": {
+   "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -25,18 +37,6 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -167,13 +167,13 @@
     "spread_in": 0.1457
    }
   ],
-  "scored_days": 5,
-  "late_days": 4,
-  "total": -0.00042275409999999994,
-  "total_2x": -0.0013327541,
-  "total_3x": -0.0022427541,
-  "total_close": 0.0004947108,
-  "nw_t": -0.9841625946530482,
+  "scored_days": 6,
+  "late_days": 5,
+  "total": -4.1375799999999964e-05,
+  "total_2x": -0.0010213758,
+  "total_3x": -0.0020013758,
+  "total_close": 0.0008760891000000001,
+  "nw_t": -0.07572440511178438,
   "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -240,13 +240,13 @@
     "spread_in": 0.217
    }
   ],
-  "scored_days": 5,
-  "late_days": 4,
-  "total": 0.005869702699999999,
-  "total_2x": 0.005414702699999999,
-  "total_3x": 0.0049597027000000005,
-  "total_close": 0.006190082299999999,
-  "nw_t": 2.9819520134999262,
+  "scored_days": 6,
+  "late_days": 5,
+  "total": 0.005998698399999999,
+  "total_2x": 0.005543698399999999,
+  "total_3x": 0.0050886984,
+  "total_close": 0.006319077999999999,
+  "nw_t": 2.61055315771056,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -379,16 +379,16 @@
     "spread_in": 0.5043
    }
   ],
-  "scored_days": 5,
-  "late_days": 4,
-  "total": 0.0018581745,
-  "total_2x": 0.0004581745000000001,
-  "total_3x": -0.0009418254999999999,
-  "total_close": 0.0023210785,
-  "nw_t": 2.8247653706442297,
+  "scored_days": 6,
+  "late_days": 5,
+  "total": 0.0021046192,
+  "total_2x": 0.0006346192000000001,
+  "total_3x": -0.0008353808,
+  "total_close": 0.0025675232,
+  "nw_t": 3.00008481312582,
   "max_drawdown": -0.00027310370000000004,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-10-27"
+ "last_day": "2026-10-28"
 }

@@ -45,7 +45,8 @@ def forward_tasks(python=".venv/bin/python"):
     notice journal and ticker files the same way and runs right after them; so
     does R270. R278/R279/R294 fetch their own carry inputs under separate locks.
     R285 reads R278/R279, flow and event journals, so those lanes are optional
-    for it; R294 is not a sleeve in its frozen book.
+    for it; R294 is not a sleeve in its frozen book. R355 only makes sure its own daemon
+    (scripts/forward_settlehop.py run) is up; the daemon decides at hh:00:20.
 
     R200 is listed first, so it starts first: it reads nothing from the
     recorders, and scripts/forward_lag.py counts an hour it computes more than
@@ -90,6 +91,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R278", "forward_xfund.py", timeout=1500),
         task("R279", "forward_xfund_kc.py", timeout=1500),
         task("R294", "forward_xfund_lt.py", timeout=1500),
+        task("R355", "forward_settlehop.py", timeout=60),   # starts the lane's hourly daemon if it is down
         task("R285", "forward_xbook.py", (),
              ("R278", "R279", "R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
@@ -112,6 +114,7 @@ class Lane:
     rule: str
     books: tuple[tuple[str, str], ...] = ()
     kind: str = "daily"
+    unit: str = ""                       # an event lane's observation unit; default "scored notices"
 
     @property
     def status_path(self):
@@ -145,6 +148,10 @@ LANES = (
          'NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%', (('A', 'cross-venue carry, Gate + KuCoin'), ('B', 'cross-venue carry, Binance + KuCoin'))),
     Lane('R294', 'xfund_lt_fwd', 'cross-venue funding carry on Lighter, book A', 'MEXC, Lighter', 'API', 90,
          'NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%', (('A', 'cross-venue carry, MEXC + Lighter'),)),
+    Lane("R355", "settlehop_fwd", "settlement hop on the displayed funding rate (MEXC decided, Gate reported)",
+         "MEXC + Lighter", "manual-web", 80,
+         "futility at 20/40 hops; PASS at 40 if CR1 t >= 2.97, else at 80 or 2028-03-01 if t >= 2.10; 2x > 0",
+         kind="event", unit="scored hops"),
     Lane("R285", "xbook_fwd", "cross-family derived book", "Multiple venues", "mixed", 180,
          "180/365 final-day sequential looks; native and gate decisions remain separate", kind="derived"),
 )
@@ -182,6 +189,7 @@ LABELS.update({
     "R278": ("Prospective paper", "Cross-venue funding carry", "xfund_fwd"),
     "R279": ("Prospective paper", "KuCoin cross-venue carry", "xfund_kc_fwd"),
     "R294": ("Prospective paper", "Lighter cross-venue carry", "xfund_lt_fwd"),
+    "R355": ("Prospective paper", "Settlement hop on the displayed funding rate", "settlehop_fwd"),
     "R285": ("Prospective paper", "Cross-family derived book", "xbook_fwd"),
     "CATALOG": ("Reporting", "Repository catalogs", "vt_fwd"),
 })
@@ -297,7 +305,7 @@ def forward_lanes(root, days, now):
             books = []
             scored = num(s.get("scored", s.get("scored_notices")))
             scored = int(scored) if scored is not None and scored >= 0 and scored.is_integer() else None
-            unit = "scored tickets" if lane == "unlocks_fwd" else "scored notices"
+            unit = descriptor.unit or ("scored tickets" if lane == "unlocks_fwd" else "scored notices")
             tickets, open_ = s.get("tickets"), s.get("open")
             net = num(s.get("mean_net"))
             net2 = num(s.get("mean_net_2x"))

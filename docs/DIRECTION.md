@@ -694,17 +694,28 @@ of that venue's measured cost.
   - **Unchecked:** fills after the published premium, margin (the coins moved up to 42.6% within a hold), and depth
     in the squeeze hours ([FINDINGS](../experiments/settlehop_pred_v1/FINDINGS.md)).
 
-**Next, in order (revised 2026-10-28, after R354)**
+- **R355 (`settlehop_fwd`): RUNNING, gate 1 forward paper, frozen 2026-10-28 00:55 UTC, 1 trial.** R354's earned
+  lane: at T − 1 h + 20 s it reads MEXC's displayed rate for every crypto contract settling at T on a 4 or 8 h cycle,
+  takes e = F − 2h against Lighter's last hourly rate, and walks two $1k legs through the live books (at most 5 a
+  venue, within 10 minutes). It exits after T + 1 h and scores each venue's own settlements over the hold.
+  - **Decided:** the MEXC θ 0.5% book, on-time hops only, net of the measured books and MEXC's listed taker fee
+    (Lighter's is 0). Futility at 20 or 40 hops if the mean is ≤ 0; PASS at 40 hops if the CR1 t is ≥ 2.97, or at 80
+    (or 2028-03-01) if it is ≥ 2.10; the 2x mean must be > 0 either way.
+  - **Calibrated** on R354's MEXC hops resampled by settlement: false pass 2.5%; power 55 / 78 / 89% at +18.8 / +25 /
+    +29.8 bp a hop over 80 hops. Below about +26 bp a hop it is a futility screen.
+  - **Speed:** about 0.16 hops a day if R354's rate holds, so 40 hops around 2027-06 and 80 by about 2028-03.
+  - **Recorded for gate 3:** each leg's minute marks while a hop is open, so liquidation distance at any leverage can
+    be computed later; no margin model is run here. Gate + Lighter and the API fee (8 bp) are reported only
+    ([PREREG](../experiments/settlehop_fwd/PREREG.md)).
+
+**Next, in order (revised 2026-10-28, after R355's freeze)**
 1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
-2. **R354's earned forward paper lane (M267, new id), on MEXC + Lighter with MEXC's displayed rate.**
-   - Before the freeze, check what the recorders hold: MEXC's displayed rate and its stamp, Lighter's hourly rate,
-     and both books at T − 1 h and T + 1 h.
-   - Each ticket records the displayed rate, both books, paper fills taken from those books after the rate is read
-     (not bar closes), each leg's margin and distance to liquidation, and any floor or interval switch.
-   - Claim the id on #7 and freeze before the first ticket.
-   - It is the fastest confirmation in the lab: about 25 hops at the web fee, or 64 at API, if the backtest mean held.
-     That is 5 to 13 months at about one hop a week.
-   - The reserved MEXC-only and Gate long-tail coins become a batch-2 candidate for the same hop.
+2. **R355 runs by itself** (hourly `ensure` in the forward loop). Each check: the daemon holds its lock, decisions
+   come at T − 1 h for the 4 h settlement hours, and skipped candidates carry a reason. Its first MEXC decision is
+   at 03:00 UTC for 04:00. A plumbing fix is logged in its `journal/CHANGES.md`; a rule change is a new lane.
+   - The reserved MEXC-only and Gate long-tail coins stay a batch-2 candidate for the same hop. They have no Binance
+     premium by definition, so a batch read needs the venue's own premium history and a hedge venue that lists them
+     (not yet checked).
 3. **R300's pick stays a reserved batch-2 candidate; its paper lane is not started.** Its book's daily standard
    deviation is about 650 bp. Even at +40 bp a day net, a forward lane would need about four years of trading days
    to reach t 2, and 2020 is reserved. A hedged settlement hop has far less noise per trade.

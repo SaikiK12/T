@@ -176,3 +176,12 @@ The mean path of S against H in the hop's favour, in bp from the entry close (pr
     window, the price and premium paths, coin age and the moves. These numbers are reported and not decided on.
 - **Read against the program:** trials go from 9,479,081 to 9,479,087 on this branch, or 9,479,104 counting #56's
   R338-R346.
+
+## Note added after the run (2026-10-28)
+- **Gate's fee is above what R353 and R354 charged.**
+  - Both runs charged each Gate side 7 bp, for the fee and the book together.
+  - On 2026-10-28, Gate's contract list showed a 7.5 bp taker fee (`taker_fee_rate` 0.00075) on all 419 contracts
+    settling at 04:00 UTC. So the fee alone is 0.5 bp a side above the charge, and the book cost comes on top.
+  - The Gate books' nets are therefore overstated by at least 1 bp a hop, plus two Gate book walks. They were reported
+    only. The decided book (Binance + Lighter) is not affected.
+  - R355 charges Gate its published fee plus its measured book.
