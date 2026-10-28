@@ -678,12 +678,33 @@ of that venue's measured cost.
   - dYdX's extreme rates sit on idle markets: the identity check keeps 1-15 hops a book
     ([FINDINGS](../experiments/settlehop_v1/FINDINGS.md)).
 
-**Next, in order (revised 2026-10-27, after R353)**
+- **R354 (`settlehop_pred_v1`): PASS by its frozen rule, gate 0 on R353's seen prices (2026-10-27), recorded
+  PARTIAL, 6 trials.** R353's hop on a point-in-time predicted rate: Binance's own formula rebuilt an hour before T from
+  its hourly premium index.
+  - **Primary, Binance + Lighter at θ 0.5%:** 87 hops on 26 coins over 622 days, about one a week. 86 of them are long
+    Binance and short Lighter before a deeply negative settlement.
+    - Binance paid 0.73 of the forecast lump (sign right 99%). Its −2% floor binds the rest.
+    - Lighter's two hours took about 40% of the lump, and the capture crowd's price round trip another 15-25%.
+    - Net +30.9 / +10.4 / −10.0 bp a hop at 1x / 2x / 3x, +0.86 bp a day (t 3.24).
+  - **Family:** 5 of 6 books reach t 2. MEXC + Lighter at θ 0.5%, on Binance's premium as a proxy, makes +18.8 bp a
+    hop (t 2.36) and loses at 2x; at MEXC's web fee it makes +29.8 (t 3.27).
+  - **Concentrated:**
+    - Without its 10 best days the primary makes +0.25 bp a day (t 1.87).
+    - Seven hops at Binance's floor, which paid a second hourly lump, hold a third of the sum.
+  - **Unchecked:** fills after the published premium, margin (the coins moved up to 42.6% within a hold), and depth
+    in the squeeze hours ([FINDINGS](../experiments/settlehop_pred_v1/FINDINGS.md)).
+
+**Next, in order (revised 2026-10-28, after R354)**
 1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
-2. **The settlement hop on a point-in-time predicted rate (M267, new lane).** Binance sets its funding from its
-   premium index, which the lab holds hourly for 896 perps and no lane has read for funding. Rebuild the rate an hour
-   before T from what was published by then, and keep R353's hedge, hold, costs and decision. It is gate 0 on these
-   prices. A pass earns a forward paper lane on the live predicted rates, where MEXC's own rate can be used.
+2. **R354's earned forward paper lane (M267, new id), on MEXC + Lighter with MEXC's displayed rate.**
+   - Before the freeze, check what the recorders hold: MEXC's displayed rate and its stamp, Lighter's hourly rate,
+     and both books at T − 1 h and T + 1 h.
+   - Each ticket records the displayed rate, both books, paper fills taken from those books after the rate is read
+     (not bar closes), each leg's margin and distance to liquidation, and any floor or interval switch.
+   - Claim the id on #7 and freeze before the first ticket.
+   - It is the fastest confirmation in the lab: about 25 hops at the web fee, or 64 at API, if the backtest mean held.
+     That is 5 to 13 months at about one hop a week.
+   - The reserved MEXC-only and Gate long-tail coins become a batch-2 candidate for the same hop.
 3. **R300's pick stays a reserved batch-2 candidate; its paper lane is not started.** Its book's daily standard
    deviation is about 650 bp. Even at +40 bp a day net, a forward lane would need about four years of trading days
    to reach t 2, and 2020 is reserved. A hedged settlement hop has far less noise per trade.
