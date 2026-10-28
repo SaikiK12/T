@@ -23249,6 +23249,46 @@
         "R357/R358 native fixed-inventory cash/risk contracts",
         "fixed R288 six-symbol identities"
       ]
+    },
+    {
+      "intake_id": "deferred_first_seen_state_equivalence_20261028",
+      "records_added": [],
+      "records_updated": [
+        "FV26-LT-ACCOUNT-FEE-LATENCY"
+      ],
+      "base_method_objects_preserved": 530,
+      "all_prior_method_objects_unmodified": true,
+      "source_versions_path": "experiments/live_pair_controls_v1/sources.json",
+      "frozen_measurement": "R360/R361",
+      "spec_code_and_old_input_commit": "cd02a26d3096590b5f0c5298b00ea67497ce2f35",
+      "parent_freeze_commit": "ee3657d85511fabd70af7d23c5dd21451b22b0d0",
+      "parent_failure_path": "experiments/incremental_pair_control_v1/FINDINGS.md",
+      "evidence_path": "experiments/deferred_pair_control_v1/FINDINGS.md",
+      "evidence_manifest_path": "experiments/deferred_pair_control_v1/recorded_outputs.json",
+      "received_scope": "0new sources/market/history/media/weights; same2352sealedR359frames+nativeoutputs. Historical7757/8000reported229.85/250MiB and all old closed acquisition scopes unchanged.",
+      "result_scope": "R360180s budget failure and391files preserved,old timing remains missing. R361same180s/64prefix scope completes30.286s;10exact reports/38nativefiles each,896state comparisons,9995independent checks. Exit medians295.667/311.446->24.505/33.301ms with source preprocessing included;all20candidate stages<=40.213ms. Only computation/recording changed;fullfunding/net/actualexpectednet UNKNOWN and old late/stale/inactive/negative controls remain.",
+      "diagnostic_trials_added": 0,
+      "predictive_models_refit": 0,
+      "prospective_days_added": 0,
+      "engineering_candidates_tested": 2,
+      "engineering_profile_scopes": {
+        "R360": [
+          "R359baseline",
+          "eager incremental export (budget-stop)"
+        ],
+        "R361": [
+          "same R359baseline",
+          "preselected deferred+sameasof export cache"
+        ]
+      },
+      "not_reviewed": "No new live/physical-order latency, owner fee/session/margin, event-effective index cash or efficacy. Same parser on both sides of state equivalence. No new strategy admission, R355/R356 edits or deadline/freshness/cost/q relaxation.",
+      "media_source_count": 0,
+      "reused_input_versions": [
+        "R359 original input/control seal8516653/result3a8a0e7",
+        "R360 freezeee3657d and closed finite failure",
+        "R314 decoder/nonce/epoch guards",
+        "R357 native fixed-inventory account"
+      ]
     }
   ],
   "reassignment_refs": [
