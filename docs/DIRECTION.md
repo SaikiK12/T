@@ -6,7 +6,7 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
-## Now (2026-10-28, 18:51 UTC)
+## Now (2026-10-28, 19:25 UTC)
 - **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
   lab, and a clean PR. The plan is the last section, "Intraday through the day".
 - **Best lead: the settlement scalp on Lighter (R363, gate 0, recorded PARTIAL).** Short Lighter at the last trade
@@ -20,6 +20,16 @@ for current recorded scope. Recheck actual inputs and authorization before any a
   - Trade: $1k walked on Lighter's live book at T − 10 s and T + 60 s, paying Lighter's settlement at T.
   - It records Lighter's book and trades from T − 7 min to T + 6 min.
   - Decision: futility at 20/40 hops; PASS at 40 (t ≥ 2.80) or at 80 (t ≥ 1.98).
+- **The owner's 19:00 shift, to the pasted high-frequency plan** (selective maker on Binance USDC perps, anticipatory
+  post-only queue capture on Hyperliquid, wallet toxicity). Queue rows M427-M429 hold what public data can and cannot
+  say. Measured from this container: Binance's feed arrives 44-55 ms after the venue's event time, Bybit's 83-100 ms,
+  Hyperliquid's 310-480 ms; OKX resets and Binance REST answers 451. Anything that moves faster than about 200 ms is
+  not actionable from here, and fills, queue position and order latency are not observable without orders.
+  - Done: `scripts/record_hft.py` records BTC and ETH at 100 ms on Binance USDT and USDC, Bybit and Hyperliquid
+    (plus Hyperliquid fills with both wallets) into `data/hft`, capped at 0.6 GB and stopped under 2.5 GB free.
+  - Next: R367 `hftlead_v1`, one frozen screen of the cross-venue lead on passive-fill markout, run on whole UTC days
+    from 2026-10-29. Its strict fills (trade-through) are the floor and its touch fills the ceiling; a pass would
+    justify asking the owner for calibration orders, not trading.
 - **Closed today:** the Binance seconds scalp (R362, NULL). The move, about 85 bp, is done within 15 s of T, before
   Binance's stated funding deviation lets a position open safely.
 - **Paper:** 15 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day or hop that

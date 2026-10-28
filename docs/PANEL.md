@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 18:50 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 19:20 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,9 +21,9 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 33 |
+| Ideas in the queue, untested | 34 |
 | Ideas partly tested | 46 |
-| Ideas blocked (data, download, compute) | 96 |
+| Ideas blocked (data, download, compute) | 98 |
 | Rounds in the registry | 164 (NULL 91, PARTIAL 34, PENDING 25, CONFIRMED 8, DATA_PASS 6) |
 | Program trials | 9,479,107 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
@@ -72,6 +72,7 @@ Process state, declared data checks and statistical eligibility are separate.
 | REC_NOTICES | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_UNLOCKS | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_TAPE | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_HFT | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_NEWS | Market data collection | UNKNOWN | UNVERIFIED | None |
 | R268 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R270 | Prospective paper | UNKNOWN | UNVERIFIED | None |
