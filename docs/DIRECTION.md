@@ -6,7 +6,7 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
-## Now (2026-10-28, 19:25 UTC)
+## Now (2026-10-28, 20:15 UTC)
 - **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
   lab, and a clean PR. The plan is the last section, "Intraday through the day".
 - **Best lead: the settlement scalp on Lighter (R363, gate 0, recorded PARTIAL).** Short Lighter at the last trade
@@ -22,14 +22,34 @@ for current recorded scope. Recheck actual inputs and authorization before any a
   - Decision: futility at 20/40 hops; PASS at 40 (t ≥ 2.80) or at 80 (t ≥ 1.98).
 - **The owner's 19:00 shift, to the pasted high-frequency plan** (selective maker on Binance USDC perps, anticipatory
   post-only queue capture on Hyperliquid, wallet toxicity). Queue rows M427-M429 hold what public data can and cannot
-  say. Measured from this container: Binance's feed arrives 44-55 ms after the venue's event time, Bybit's 83-100 ms,
-  Hyperliquid's 310-480 ms; OKX resets and Binance REST answers 451. Anything that moves faster than about 200 ms is
-  not actionable from here, and fills, queue position and order latency are not observable without orders.
+  say. Measured from this container (public websockets, 2026-10-28):
+  - A websocket round trip to Binance's and Bybit's stream gateways takes 233-255 ms through the agent proxy
+    (protocol and application-level pings agree, `rtt` rows in `data/rawtape`). Any signal-to-resting-order path
+    from here is therefore at least about 250 ms, before the order gateway's own time.
+  - Local receive minus venue event time is a poor latency figure. It read 44-55 ms for Binance at first and about
+    5 ms at the median later, with negative values at the 1st percentile, so it contains the local clock's offset and
+    drift (an undisciplined VM clock). Compare venues on the local receive clock only; use E - T (Binance) and
+    ts - cts (Bybit) for the exchange side: BBO updates are published within 0-3 ms of the matching engine, but
+    about 9% of BTCUSDT aggTrade messages in the 4-minute pilot carried E - T of 150 ms, so the BBO is the faster
+    clock and trades only confirm. Hyperliquid's feed measured 310-480 ms on the same flawed scale.
+  - OKX's websocket resets and Binance REST answers 451. Fills, queue position and order latency are not observable
+    without orders. The owner's answers (2026-10-28): no more disk, so the 195 GB Zenodo L4 archive is not pursued;
+    calibration orders only if the no-order measurements below justify them.
   - Done: `scripts/record_hft.py` records BTC and ETH at 100 ms on Binance USDT and USDC, Bybit and Hyperliquid
     (plus Hyperliquid fills with both wallets) into `data/hft`, capped at 0.6 GB and stopped under 2.5 GB free.
-  - Next: R367 `hftlead_v1`, one frozen screen of the cross-venue lead on passive-fill markout, run on whole UTC days
-    from 2026-10-29. Its strict fills (trade-through) are the floor and its touch fills the ceiling; a pass would
-    justify asking the owner for calibration orders, not trading.
+    R367 `hftlead_v1` is frozen on it (run once from 2026-11-02): a fixed-price stale quote on the 100 ms tape. Its
+    L = 200 ms rules sit below the measured round trip, so only its 500 ms rules are executable from here. NULL closes
+    M427 as registered; it does not say cross-venue price discovery is absent.
+  - Done: `scripts/record_raw.py`, a second recorder beside it (R367's tape is untouched): every Binance
+    bookTicker/aggTrade/rpiDepth and Bybit depth-1 message in arrival order into `data/rawtape`, with Binance T, E, u,
+    Bybit ts, cts, seq, aggTrade `nq` (q - nq is the Retail Price Improvement part), local wall and monotonic clocks
+    and ping round trips. Market rows are kept 13:00-17:00 UTC only (about 5 B a row at 1-3k rows a second; no more
+    disk), capped at 1.2 GB.
+  - Next, in this order, each able to stop the next (new ids M430-M433; none reopens M427): the RPI check (does any
+    trade ever carry q != nq on these four symbols), the touch-transition test on the raw tape (does the USDC book
+    catch up to a Binance USDT BBO move before a reversal), the latency-decay curve of any signal that survives
+    (`tau_50`, `tau_BE` against the 250 ms floor), and only then an arrival-state maker simulation. Power is read from
+    hourly-block variance, not fill counts.
 - **Closed today:** the Binance seconds scalp (R362, NULL). The move, about 85 bp, is done within 15 s of T, before
   Binance's stated funding deviation lets a position open safely.
 - **Paper:** 15 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day or hop that
