@@ -1,0 +1,10 @@
+{
+  "scope": "Reuse the four original invented cases; add eight deterministic adversarial counterexamples. No new market or strategy data.",
+  "original_fixtures": "experiments/alo_cost_guard_v1/fixtures.json",
+  "terminal_source": "constructed, complete terminal event and fill-history attestation",
+  "account_scope": ["hl", "USDC", "BTC"],
+  "terminal_event_offset_ns": 1500000000,
+  "history_complete": true,
+  "costs_prepaid": true,
+  "regressions": ["quote_received_late", "quote_after_economic_fill", "inconsistent_source_receipt_clock", "asof_before_anchor", "cancel_partial_history_unknown", "prepaid_capital_shortfall", "end_capital_insolvent", "no_fill_capital_exhausted"]
+}

@@ -1,0 +1,14 @@
+{
+  "audited_freeze": "e230f5b4d4ab2752791dad2d9ab451f6f9b4b7bf",
+  "audited_results": "experiments/alo_cost_guard_v1/results.json",
+  "scope": "Independent read-only adversarial review of constructed R365 data and guard, not a market outcome.",
+  "arithmetic": "Independent Fraction calculation reproduced all twelve R365 cells; the original signed markout and fee arithmetic in the fixed cases is unchanged.",
+  "defects": [
+    "A quote whose UTC receipt precedes the fill can have a monotonic receipt 10 ms after the fill receipt and still be scored under the tolerated clock drift.",
+    "No-fill counts lack a first-seen terminal-receipt clock and evidence that the complete partial-fill history was reconciled. An as-of before anchor or a canceled accepted order can be misreported as no fill.",
+    "The entry collateral check omits separately deducted action and extra charges; it does not establish solvency after closing or along the path.",
+    "Known no-fill action costs omit requested capital-basis output; the three independently calculated values at $2000 are -0.25, -0.50 and -0.75 bp.",
+    "A caller-supplied validated_bbo_mid role does not prove BBO provenance. The 100 paid entry actions omit any incremental action charge on the assumed midpoint exit."
+  ],
+  "preservation": "R365 original spec, code and result remain unchanged. R366 is a separate correction; its source attestation and idealized midpoint exit do not establish executable PnL or path solvency."
+}

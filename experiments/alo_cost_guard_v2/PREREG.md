@@ -1,0 +1,19 @@
+# R366: ALO receipt-time and prefunded-capital correction
+
+- **Registry id:** R366
+- **Owner:** Codex; no overlap with Claude's R364/M267 writer scope.
+- **Scope:** correction of R365 constructed-input guard, not a trading experiment.
+Code/input manifest sha256: 0607e1c6cc2fb8212db12e85d2bb1d75286b5d9e13fd392abfec302ad0bae061
+
+## Prior results and failure
+R365 was frozen in e230f5b before four invented cases at 1x/2x/3x; its twelve results and accounting arithmetic were retained in f9a0230. Independent read-only review found quote-receipt versus economic-fill clock gaps; untimed counts and incomplete fill history; action/extra costs excluded from capital reservation; missing no-fill capital output; end insolvency and BBO provenance limitations. See `audit_r365.json`. No prior file or result is changed. The examples and defects are known before this freeze.
+
+## Correction and finite inputs
+Reuse exactly the original four invented cases and 1x/2x/3x costs, no data acquisition, portfolio change or selection. Wrap the frozen R365 arithmetic using timestamped, account-scoped terminal evidence bound to the exact action counts, order identity, final signed quantity and an explicitly attested complete fill history. The caller must attest prepayment and supply a sourced bound on clock uncertainty; the constructed fixture uses zero as an explicitly artificial bound. Fail closed if action/fill evidence, time bound or source identity is missing. Check quote first-seen monotonic time against the anchor-projected **economic** fill time with the uncertainty bound, source time against its own receipt clock, same-venue/asset/symbol, and the full fixed quote-age and horizon windows. Caller-supplied BBO role, clock bound and receipt completeness are attestations, not independent proof of real-source truth.
+
+Deduct all assumed paid actions and extra costs from the same segregated account before simulating an entry. Normalize the component to the original capital, not residual buying power. Preserve no-fill cost in capital bps, even if it exhausts all capital. A negative/unresolved total remains UNKNOWN, but retain separately the paid action and extra subtotals when their source-count evidence was first seen and prepayment attested. Retain negative or zero hypothetical endpoint equity as `INSOLVENT_COUNTERFACTUAL`; this is an unliquidated stress calculation and cannot prove solvency or executable exit at any time along the path. The hypothetical midpoint exit has no modeled extra paid-action cost and no fill evidence.
+
+Run twelve corrected cells and exactly eight constructed adversarial counterexamples: late quote after fill receipt, late quote after economic fill with delayed fill receipt, inconsistent source versus receive clock, as-of before anchor, incomplete accepted/canceled partial-fill history, prepaid entry capital shortfall, hypothetical end-capital insolvency, and no-fill cost exhausting capital. Preserve the old R365 outcome for each adversarial example. No null, inactivity, unknown, adverse outcome, fee, unit or risk condition is relaxed. Zero predictive variants and zero prospective days.
+
+## Verification
+Freeze spec, identity, code, old result and input manifests in a commit before the constructed diagnostic. Run a separate exact-rational checker for all 12 cells, all cost multipliers and the exact set of eight counterexamples, including known cost subtotals for unresolved cases; reproduce output bytes in a separate path. Targeted existing and new tests cover clock and uncertainty edge cases, missing evidence, signed partial fill, costs and capital. Independently re-read code before the freeze. No real orders, private data, source-history download, strategy result or activation is authorized. True queue/fill, fee, funding, all costs, stochastic latency, solvency, capacity and live net remain unknown.
