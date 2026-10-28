@@ -44,7 +44,7 @@ for current recorded scope. Recheck actual inputs and authorization before any a
     bookTicker/aggTrade/rpiDepth and Bybit depth-1 message in arrival order into `data/rawtape`, with Binance T, E, u,
     Bybit ts, cts, seq, aggTrade `nq` (q - nq is the Retail Price Improvement part), local wall and monotonic clocks
     and ping round trips. Since 21:03 UTC it also records Bybit `allLiquidation` for BTC and ETH all day (M435). Market rows are kept 13:00-17:00 UTC only (about 5 B a row at 1-3k rows a second; no more
-    disk), capped at 1.2 GB.
+    disk), capped at 3.0 GB (raised from 1.2 GB on 2026-10-28 once `data/research` was compressed).
   - Next, in this order, each able to stop the next (new ids M430-M433; none reopens M427): the RPI check (does any
     trade ever carry q != nq on these four symbols), the touch-transition test on the raw tape (does the USDC book
     catch up to a Binance USDT BBO move before a reversal), the latency-decay curve of any signal that survives

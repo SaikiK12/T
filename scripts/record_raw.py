@@ -58,7 +58,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rawtape"
 FLUSH_S = 300
 MIN_FREE_GB = 2.5
-MAX_GB = 1.2
+MAX_GB = 3.0
 HOURS = (13, 17)                  # None records all day; (start, end) UTC hours record start <= hour < end
 RPI_BAND_BP = 3.0                 # rpiDepth levels kept within this many bp of the same symbol's bookTicker mid
 RPI_LEVELS = ("BTCUSDC", "ETHUSDC")     # symbols whose near-touch RPI levels are stored (every symbol gets rpimsg rows)

@@ -3,6 +3,8 @@
 An index of 46 sources the owner uploaded as `hft_crypto_microstructure_research_corpus.md`. It is an index, not a
 copy of any work. The machine record is [`source_catalog_hft_20261028.csv`](source_catalog_hft_20261028.csv)
 (ids `SRC28-001` to `SRC28-046`, same columns as the other catalogs plus `claim_type`, `ingest_order`, `pages`).
+Ids `SRC28-047` to `SRC28-054` are not corpus entries: they are what the targeted check of the owner's second pasted
+review turned up (see the addendum at the end).
 This page holds what a CSV cell cannot: exact read scope, what the fetched pages changed, and why the work order is
 what it is. It is evidence, not a second queue; the live queue is `registry/methods.csv`.
 
@@ -73,3 +75,28 @@ Reading a paper does not earn a strategy. A source earns one finite experiment o
 ([`templates/research_card.md`](../../templates/research_card.md)) names a mechanism, inputs observable with our data,
 a causal decision timestamp and a falsification condition. Until a source is actually read, its catalog row says
 index only and no card exists.
+
+## Addendum: targeted check of the second pasted review (2026-10-28)
+
+The owner's second paste argued for targeted research only (living venue facts, frontier-paper watch, own empirical
+work) and gave several specific claims. Each was checked once, with bounded searches or one page fetch. A search
+summary is the search tool's own digest of results; no paper body was opened. "Not found" means these searches did not
+surface it; it does not show the claim is false.
+
+| Pasted claim | What was run | Outcome | Use in the repo |
+|---|---|---|---|
+| Binance counts quick cancels against API traders (invalid-cancellation rule) | Fetched the quantitative-rules FAQ (page dated 2026-08-31) | Confirmed. Orders cancelled under 5 s count as invalid; ban at a ratio of 0.99 with at least 5,000 such orders in a 10-minute cycle per symbol (SRC28-047) | M427 and M433 notes: count our own sub-5 s cancels; it does not bind at probe scale |
+| Binance liquidity-provider thresholds of $100M futures and $20M spot | Searched, and read the FAQ's exemption criteria | Not confirmed. The FAQ's exemption is a different test (above 25,000,000,000 USD of 30-day futures volume, or the liquidity-provider or options-market-maker programs) | Not used |
+| 125 million fills show touch-joining passive fills lose 0.39, 0.84 and 0.46 bp at 10 s on Binance, Bybit and Hyperliquid (September 2026) | Several searches, standard and extended | No source found. Related, from summaries only: arXiv 2502.18625 (live Binance, 232,897 minimum maker orders) and arXiv 2608.18195 (about half a tick at the best price in a simulation) | Not used as a number. Kept as a design hurdle in M433: beat a touch-join baseline estimated from our own tape |
+| Stanford/Columbia Hyperliquid paper: about $1.11 billion of front-end losses and reversing taker-flow impact | Searches | Not found. Nearest: arXiv 2608.04373 (Zhai) and arXiv 2606.15715 (TWAP orders on Hyperliquid) | Not used |
+| Ten wallets cause 90.5% of maker adverse-selection loss in an on-chain options book | Searches | Not found. A summary of a 2026 wallet-markout paper (probably Zhai) reports 86.9% of 2,314 active aggressive wallets trading again in the next ten days: persistence, not concentration of maker loss | Not used. The wallet-by-side-by-size-by-state idea is a hypothesis in M429's note |
+| Binance leads Hyperliquid for BTC at 2, 5 and 10 s | Searches | Direction supported by two sources (Research Square rs-10147582 on a 5 s grid; Arrakis about 800 ms). The 2, 5 and 10 s figures were not found | Leads only (SRC28-053, 054). A 5 s grid cannot say anything about a sub-second lead |
+| August 2026 multi-quote price-discovery paper | Not searched again in this pass; SSRN 7370002 in the corpus answered 403 | Unchanged | M434 keeps it as an unseen prior |
+
+What this changed in the queue: M427, M429 and M433 notes only. No new method id and no trial was added: the pasted
+research tree (M434, M435, raw best-bid-and-offer price discovery, probability of the target transition before a
+reversal, markout given a hypothetical fill, toxicity stand-down, delay value, realistic maker execution, machine
+learning last) is the dependency order already set out above, with M430 as the transition-probability label. The one
+addition is a reporting rule for M430 and M433: a hypothetical fill (R367's strict trade-through rule) is reported
+next to the touch-join baseline at the same moments, so a filter that only selects less toxic touches is not read as
+alpha. The suggested effort split (about 70% own data, 20% targeted web, 10% infrastructure) is a rough guide, not a rule.
