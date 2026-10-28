@@ -1,0 +1,19 @@
+{
+  "scope": "Constructed examples only. No historical order, market observation, return or strategy evidence.",
+  "clock_anchor_utc_ns": 1793200000000000000,
+  "clock_anchor_mono_ns": 10000000000,
+  "horizon_ns": 1000000000,
+  "max_initial_age_ns": 1000000,
+  "max_horizon_lag_ns": 1000000,
+  "capital_usd": "2000",
+  "entry_fee_bps": "1.5",
+  "hypothetical_passive_exit_fee_bps": "1.5",
+  "hypothetical_paid_action_usd": "0.0005",
+  "extra_cost_usd": "0",
+  "cases": [
+    {"id": "paid_fill", "counts": [1, 99, 0, 0, 100, 1, true], "fill": {"quantity": "10", "price": "100", "initial_mid": "100.02", "horizon_mid": "100.031"}},
+    {"id": "buffer_fill", "counts": [1, 99, 0, 0, 0, 1, true], "fill": {"quantity": "10", "price": "100", "initial_mid": "100.02", "horizon_mid": "100.031"}},
+    {"id": "paid_no_fill", "counts": [0, 100, 0, 0, 100, 0, true], "fill": null},
+    {"id": "terminal_unknown", "counts": [0, 99, 1, 0, 100, 0, false], "fill": null}
+  ]
+}

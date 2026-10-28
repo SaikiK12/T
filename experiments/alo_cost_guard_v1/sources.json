@@ -1,0 +1,15 @@
+{
+  "retrieved_utc_date": "2026-10-28",
+  "bounded_scope": "Four public web search queries and eight page-open attempts; provider-internal requests and bytes unavailable. No market, historical-dataset, weights, account or order requests. Scope closed after these attempts.",
+  "sources": [
+    {"url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees", "received": "direct page", "scope": "Perp base tier maker 0.015% and taker 0.045%; rolling 14-day volume tiers. Actual account eligibility and fee not observed."},
+    {"url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits", "received": "direct page", "scope": "Initial address buffer 10000, one request per USDC cumulative traded, separate cancellation formula and congestion limit based on twice prior-day maker share. No paid-action price appears on this fetched page."},
+    {"url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types", "received": "direct page", "scope": "ALO rests without immediate execution; acceptance does not prove subsequent fill or priority."},
+    {"url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/error-responses", "received": "direct page", "scope": "BadAloPx is only one possible rejection; tick, minimum notional, margin and oracle errors are separate."},
+    {"url": "https://arxiv.org/html/2608.04373", "received": "arXiv v3 HTML abstract and source metadata; full paper not deeply reviewed in this scope", "scope": "Authors report predictive improvement from wallet identity; this is not maker fill-conditioned net profitability."},
+    {"url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7162966", "received": "search-provider excerpt; direct page returned HTTP 403", "scope": "Authors report anticipatory post-only queue acquisition and profitability for studied participants; full text, fee tier, replication and transfer to our account unverified."},
+    {"url": "https://www.binance.com/en/support/announcement/detail/03180947641b414ebcb9a6c407fe80e2", "received": "search-provider cached excerpt; direct page redirected to generic announcements", "scope": "A historical official announcement says regular USDC maker fee 0% until further notice, but current status, account eligibility and geographic access remain unverified."},
+    {"url": "https://chatgpt.com/share/6ae23489-10b4-83eb-a5ca-d719d78f4911?ogimg=plain", "received": "page had no rendered conversation lines", "scope": "User provided the substantive text separately; no independently readable shared-chat content was obtained."}
+  ],
+  "source_limits": "These are source-mechanics observations and reported academic claims, not verification of the 195.3 GB dataset, its license, queue behavior for a new account, model performance or executable returns. The paid-action price in fixtures is a user-supplied hypothetical, not verified by this scope."
+}
