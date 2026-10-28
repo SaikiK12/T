@@ -1,0 +1,39 @@
+{
+  "capital_per_venue": "5000",
+  "cost_cells": 36,
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "deadline_lateness_ns": 250000000,
+  "decision_to_execution_ns": 300000000,
+  "diagnostic_variants": 12,
+  "directions": [
+    1,
+    -1
+  ],
+  "entry_second": 20,
+  "exit_second": 50,
+  "fees_bp": {
+    "lighter": "4",
+    "mexc": "10"
+  },
+  "funding_cash_coverage": "unknown; no rate/publication is promoted to cash",
+  "fx_scenario": {
+    "USDC": "1",
+    "USDT": "1"
+  },
+  "leg_budget": "250",
+  "no_signal_or_strategy_selection": true,
+  "phase_scope": "two original decisions plus delayed modeled entry/exit; on-time source receipts are not qualified strategy days",
+  "registry_id": "R359",
+  "symbols": [
+    "BTC",
+    "WIF",
+    "SKR",
+    "ROBO",
+    "MEGA",
+    "XPD"
+  ]
+}

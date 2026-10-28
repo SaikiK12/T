@@ -1,0 +1,70 @@
+{
+  "collection_scope": {
+    "denial_statuses_stop": [
+      401,
+      403,
+      429,
+      451,
+      503
+    ],
+    "directory_reuse_allowed": false,
+    "historical_allowance_reused": false,
+    "lock_wait_seconds": 10,
+    "metadata_body_upper_bytes": 2097152,
+    "metadata_per_body_bytes": 1048576,
+    "metadata_requests": 7,
+    "metadata_start_window_seconds": 20,
+    "per_frame_payload_bytes": 262144,
+    "per_stream_messages": 20000,
+    "per_stream_payload_bytes": 8388608,
+    "reconnects": 0,
+    "stream_read_start_seconds": 65,
+    "whole_capture_seconds": 120,
+    "ws_handshakes": 2
+  },
+  "read_scope": "R310/R311 findings, existing R314/R316 transport/depth/source contracts, R357/R358 fixed-inventory/event cash limitations. No new external article/video/historical acquisition.",
+  "registry_id": "R359",
+  "reused_sources": [
+    {
+      "path": "experiments/depth_quotes_v1/sources.json",
+      "sha256": "dc7711ffe9107fd99a3eb616786e355f2c3d7863d0d740f4663e0aca04bb626e"
+    },
+    {
+      "path": "experiments/warm_values_v1/sources.json",
+      "sha256": "65d7bc39cf44e83f7bafaba038f4e358bd0a85b81ed7eaeb3af46ed85d955641"
+    },
+    {
+      "path": "experiments/funding_values_v1/sources.json",
+      "sha256": "4502317df9e118b011a59b87b83e04da79b8493b05680325787928a37ba11ddc"
+    },
+    {
+      "path": "experiments/settlement_account_v1/PREREG.md",
+      "sha256": "10dbb5d40132549d57a51810fe89f980a5d1bbb6a1c1999bff08e932bd4294b3"
+    },
+    {
+      "path": "experiments/settlement_check_v1/PREREG.md",
+      "sha256": "0ed208eea2be1d6649b10503b111077cc78a39490f616d5e3a6b9e2e6f37a18b"
+    },
+    {
+      "path": "experiments/xfund_lt_v1/symbols.csv",
+      "sha256": "e5a689a3bce5f16759104ab7dac945be2ad617317099b124b2137ef308fff1b1"
+    },
+    {
+      "path": "experiments/equations_v1/FINDINGS.md",
+      "sha256": "7febb262d3f9ec9fe1fe7b86856a499010778cca0efb13442c153a0dbe0c3630"
+    },
+    {
+      "path": "experiments/equations_v2/FINDINGS.md",
+      "sha256": "383bada4c2daccd8db3a8bb19b7e1c4230bbbfe38a7bd1f74ce4c6a293e7c5c7"
+    }
+  ],
+  "source_kind": "existing official-source and frozen collector contracts; genuinely new future public data only after code/spec commit",
+  "unverified": [
+    "actual matched fills/total order latency",
+    "owner fee entitlement and settlement assets",
+    "market-session permission",
+    "event-effective fair/index funding cash and FX",
+    "intrahold margin/liquidation and counterparty risk",
+    "predictive edge/calibrated uncertainty and qualified strategy paper days"
+  ]
+}
