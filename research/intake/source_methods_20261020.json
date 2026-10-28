@@ -19175,6 +19175,20 @@
         "Actual first-seen synchronized execution depth/session/fees/fills/effective funding notionals/account margin remain unverified",
         "Invented controls and declared FX are not calibrated market return or a strategy pass;actualexpectednet unknown"
       ]
+    },
+    {
+      "path": "experiments/live_pair_controls_v1/sources.json",
+      "sha256": "e5de0ee265fc940b22e105ff0a4bf67d6c1a0ae78008b59779a4b11360b181c7",
+      "review_status": "ingested_refinement_of_existing_alias",
+      "scope": "R359 genuinely NEW first-seen source/deadline controls and native fixed-q component accounting;existing R314/R316 sources and R357/R358 contracts reused, no new article/video/history acquisition. One closed future live scope,7GET2WS1774022body/payloadbytes72.877s.",
+      "method_ids": [
+        "FV26-LT-ACCOUNT-FEE-LATENCY"
+      ],
+      "unextracted_limitations": [
+        "Only2of4actual issued stages on-time; no late receipt reclassification or qualified strategy day",
+        "Actual fills/total latency,owner fee entitlement,session/permission,funding effective fair/index and margin/FX remain unverified",
+        "Single dependent window/12no-signal diagnostic variants is not edge/calibrated return evidence;allfullnetunknown"
+      ]
     }
   ],
   "record_kind": "source_extraction_review_input_not_execution_queue",
@@ -23205,6 +23219,35 @@
         "R315 funding_values_v1 source contracts",
         "R355 pure rule/forward at f7935da",
         "R353/R354 frozen source/spec/findings at f7935da"
+      ]
+    },
+    {
+      "intake_id": "new_first_seen_online_pair_controls_20261028",
+      "records_added": [],
+      "records_updated": [
+        "FV26-LT-ACCOUNT-FEE-LATENCY"
+      ],
+      "base_method_objects_preserved": 530,
+      "all_prior_method_objects_unmodified": true,
+      "source_versions_path": "experiments/live_pair_controls_v1/sources.json",
+      "frozen_measurement": "R359",
+      "spec_code_and_old_input_commit": "4ae810163debb0abea43512499a40a172758000a",
+      "sealed_evidence_commit": "8516653ba8e4c0ec0f5a37f599ebf3752d4f751e",
+      "evidence_path": "experiments/live_pair_controls_v1/FINDINGS.md",
+      "evidence_manifest_path": "experiments/live_pair_controls_v1/evidence_inputs.json",
+      "evidence_manifest_sha256": "4267c36ef6236def2a90b58f8c5b0c3e9c248ea86d4a5b78f68ca94468b04767",
+      "received_scope": "One NEW closed live7GET/2WS scope;2352firstseen frames/1774022body+payloadbytes/72.877s;no market retry/reconnect/private/history request. Existing official source/collector contracts reused without new web corpus.",
+      "result_scope": "36control-cost cells retained;four actual issued stages with2on-time2late. OnlyBTCenters,6closed known price-fee components allnegative1x2x3x,30blocked. Full funding/net/actualexpectednet UNKNOWN.13117independent financial/timing/raw checks and byte-identical online result/38nativejournal-receiptfiles/offline reproduction;offline0newtickets.",
+      "diagnostic_trials_added": 12,
+      "predictive_models_refit": 0,
+      "prospective_days_added": 0,
+      "not_reviewed": "Actualfee/session/permission/matching/fundingcash/indexproof/margin/FX and efficacy. No R355/R356 outcome or active file changed. No thresholds/deadlines relaxed.",
+      "media_source_count": 0,
+      "reused_input_versions": [
+        "R314 bounded transport/full-depth assembler and guards",
+        "R316 source/reference limitations",
+        "R357/R358 native fixed-inventory cash/risk contracts",
+        "fixed R288 six-symbol identities"
       ]
     }
   ],
