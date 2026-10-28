@@ -44,6 +44,11 @@ def bybit(s="BTCUSDT", kind="snapshot", b=(("80000.0", "3.0"),), a=(("80000.1", 
     return m
 
 
+def liquidation(s="BTCUSDT", side="Buy", v="0.250", p="79500.50", T=T_MS + 4, shape="list"):
+    d = {"T": T, "s": s, "S": side, "v": v, "p": p}
+    return {"topic": f"allLiquidation.{s}", "type": "snapshot", "ts": T + 1, "data": [d] if shape == "list" else d}
+
+
 class ParseTests(unittest.TestCase):
     def test_book_row_keeps_both_stamps_and_the_update_id(self):
         t = rr.Tape()
@@ -122,6 +127,29 @@ class ParseTests(unittest.TestCase):
         t.bybit(bybit(cts=None), T_US, OFF)
         self.assertEqual(t.rows[("bybit", "BTCUSDT")][0][5], -1)
 
+    def test_liquidation_prints_become_rows_with_the_long_liquidated_side(self):
+        t = rr.Tape()
+        t.bybit(liquidation(), T_US, OFF)
+        t.bybit(liquidation(side="Sell", v="1.5", p="79600", shape="dict"), T_US + 500_000, OFF)
+        rows = t.rows[("liq", "BTCUSDT")]
+        self.assertEqual(rows[0], (T_US, OFF, T_MS + 4, 1, 250, 7_950_050))
+        self.assertEqual(rows[1][3:], (0, 1500, 7_960_000))
+        d = rr.decode(rr.frame("liq", rows), "liq")
+        self.assertAlmostEqual(d.v[0], 0.25)
+        self.assertAlmostEqual(d.p[0], 79500.50)
+        self.assertEqual(t.stat["liq_raw"], 0)
+
+    def test_a_liquidation_message_that_does_not_parse_is_kept_whole(self):
+        t = rr.Tape()
+        odd = {"topic": "allLiquidation.BTCUSDT",
+               "data": [{"T": T_MS, "s": "BTCUSDT", "S": "Short", "v": "1", "p": "2"}]}
+        t.bybit(odd, T_US, OFF)
+        t.bybit({"topic": "allLiquidation.ETHUSDT", "data": "oops"}, T_US, OFF)
+        self.assertNotIn(("liq", "BTCUSDT"), t.rows)
+        self.assertEqual(t.stat["liq_raw"], 2)
+        self.assertEqual(t.drain_raw()[0], {"t": T_US, "msg": odd})
+        self.assertEqual(t.drain_raw(), [])
+
     def test_largest_gap_between_messages_is_kept_per_stream(self):
         t = rr.Tape()
         for dt in (0, 5_000, 1_205_000):
@@ -138,6 +166,15 @@ class WindowTests(unittest.TestCase):
         self.assertFalse(rr.in_window(at(5), (22, 2)))
         self.assertTrue(rr.in_window(at(5), None))
         self.assertEqual(rr.parse_hours("13-17"), (13, 17))
+
+    def test_liquidations_are_kept_at_any_hour_and_book_messages_only_in_the_window(self):
+        rec = rr.Recorder(out=Path(tempfile.gettempdir()), hours=(13, 17))
+        at = lambda h: (T_MS // 1000 - 20 * 3600 + h * 3600) * 10**9
+        liq = '{"topic":"allLiquidation.BTCUSDT","data":[]}'
+        book_msg = '{"topic":"orderbook.1.BTCUSDT","data":{}}'
+        self.assertTrue(rec.keep(liq, at(3)) and rec.keep(book_msg, at(14)))
+        self.assertFalse(rec.keep(book_msg, at(3)))
+        self.assertFalse(rec.keep(b"{}", at(3)))
 
 
 class FileTests(unittest.TestCase):
@@ -192,6 +229,21 @@ class FileTests(unittest.TestCase):
                 rr.write_parts(self.tape(2, T_US + 5_000_000, u0=50).drain(), T_US / 1e6 + 5, out / "_parts")
             rr.compact(now=T_US / 1e6 + 86_400, parts=out / "_parts", out=out)
             self.assertEqual(list(rr.load("bbo", "BTCUSDC", rr.utc_day(T_US), out).u), [1, 2, 3, 50, 51])
+
+    def test_liquidation_rows_round_trip_and_raw_messages_reach_the_side_file(self):
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d)
+            rec = rr.Recorder(out=out, hours=None)
+            rec.tape.bybit(liquidation(), T_US, OFF)
+            rec.tape.bybit({"topic": "allLiquidation.ETHUSDT", "data": "oops"}, T_US + 1, OFF)
+            with mock.patch.object(rr, "free_gb", return_value=9.0):
+                rec.flush()
+            day = rr.utc_day(T_US)
+            self.assertEqual(rr.compact(now=T_US / 1e6 + 86_400, parts=out / "_parts", out=out),
+                             [("liq", "BTCUSDT", day, 1)])
+            self.assertEqual(list(rr.load("liq", "BTCUSDT", day, out).sd), [1])
+            self.assertEqual(len((out / "liq_raw.jsonl").read_text().splitlines()), 1)
+            self.assertIn('"liq_raw": 1', (out / "status.json").read_text())
 
     def test_clock_and_rtt_frames(self):
         df = rr.frame("rtt", [(T_US, 0, 204_000), (T_US + 30_000_000, 2, 254_000)])

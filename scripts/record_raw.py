@@ -13,13 +13,18 @@ What it keeps that the 100 ms tape throws away (docs/DIRECTION.md, 2026-10-28 re
 - Binance aggTrade `nq` (quantity without Retail Price Improvement orders) next to `q`: q - nq is the RPI part;
 - Binance `rpiDepth@500ms` diffs for levels within `RPI_BAND_BP` of the same symbol's bookTicker mid (rows `rpilv`,
   one summary row per message in `rpimsg`); that stream includes RPI liquidity and bookTicker does not;
+- Bybit `allLiquidation.<symbol>` (M435): one row per liquidation print in `liq` (update time `T`, `sd` 1 when a long
+  was liquidated, executed size `v`, bankruptcy price `p`), kept all day because the events are rare; the payload shape
+  is the documented one and was not seen live (no print in a 100 s probe), so a message that does not parse is kept
+  whole in data/rawtape/liq_raw.jsonl;
 - a websocket ping round trip per connection every 30 s (`rtt`) and a wall/monotonic anchor every second (`clock`).
 
 Layout: data/rawtape/_parts/<kind>/<symbol>/<date>/<stamp>.parquet every FLUSH_S; `ensure` merges a finished day into
 data/rawtape/<kind>/<symbol>/<date>.parquet. One file per (kind, symbol) so delta encoding sees one price series.
 Integers throughout: prices in hundredths, sizes in thousandths, times in ms or microseconds; `decode` gives floats.
 `load(kind, symbol, day)` returns a finished day. Symbols: Binance BTCUSDT ETHUSDT BTCUSDC ETHUSDC, Bybit BTCUSDT
-ETHUSDT (kinds "bbo", "trade", "rpimsg", "rpilv" are Binance, "bybit" is Bybit, "clock" and "rtt" use the symbol "all").
+ETHUSDT (kinds "bbo", "trade", "rpimsg", "rpilv" are Binance, "bybit" and "liq" are Bybit, "clock" and "rtt" use the
+symbol "all").
 
 Disk is the binding constraint. The recorder stops, and `ensure` will not start it, when data/rawtape holds `MAX_GB`
 or the disk has less than `MIN_FREE_GB` free (the same floor as record_hft.py, so the older recorders keep writing
@@ -64,10 +69,12 @@ BINANCE_MARKET = "wss://fstream.binance.com/market/stream?streams="    # aggTrad
 BYBIT = "wss://stream.bybit.com/v5/public/linear"
 BSYMS = ("BTCUSDT", "ETHUSDT", "BTCUSDC", "ETHUSDC")
 YSYMS = ("BTCUSDT", "ETHUSDT")
+LIQ = "allLiquidation."           # Bybit topic prefix; rows are kept outside HOURS too
 PX, SZ = 100, 1000                # prices in hundredths, sizes in thousandths of a coin
 COLS = {
     "bbo": ["t", "off", "u", "T", "dE", "bid", "bq", "sp", "aq"],
     "bybit": ["t", "off", "u", "seq", "ts", "dc", "fl", "bid", "bq", "sp", "aq"],
+    "liq": ["t", "off", "T", "sd", "v", "p"],
     "trade": ["t", "off", "a", "T", "dE", "p", "q", "nq", "f", "n", "m"],
     "rpimsg": ["t", "off", "U", "u", "pu", "T", "dE", "nb", "na", "nk"],
     "rpilv": ["t", "sd", "px", "qty"],
@@ -135,7 +142,8 @@ class Tape:
         self.mid = {}
         self.last = {}
         self.stat = {"lossy": 0, "bad_book": 0, "u_back": {}, "seq_back": 0, "rpi_nomid": 0, "max_gap_ms": {},
-                     "n": {}, "q_ne_nq": 0, "trades": 0, "no_nq": 0, "parse_err": 0}
+                     "n": {}, "q_ne_nq": 0, "trades": 0, "no_nq": 0, "parse_err": 0, "liq_raw": 0}
+        self.liq_raw = []
 
     def put(self, kind, sym, row):
         self.rows.setdefault((kind, sym), []).append(row)
@@ -204,8 +212,30 @@ class Tape:
             self.put("rpimsg", s, (t, off, d["U"], d["u"], d["pu"], d["T"], d["E"] - d["T"], len(d["b"]),
                                    len(d["a"]), nk))
 
+    def liquidations(self, m, t, off):
+        """One row per print of an allLiquidation message; a message that does not parse is kept whole."""
+        try:
+            data = m["data"]
+            prints = [data] if isinstance(data, dict) else list(data)
+            rows = []
+            for d in prints:
+                if d["s"] not in YSYMS or d["S"] not in ("Buy", "Sell"):
+                    raise ValueError("unexpected symbol or side")
+                self.lossy(d["v"], SZ)
+                self.lossy(d["p"], PX)
+                rows.append((d["s"], (t, off, int(d["T"]), int(d["S"] == "Buy"), sz(d["v"]), px(d["p"]))))
+        except (KeyError, ValueError, TypeError):
+            self.liq_raw.append({"t": t, "msg": m})
+            self.stat["liq_raw"] += 1
+            return
+        for s, row in rows:
+            self.put("liq", s, row)
+
     def bybit(self, m, t, off):
         topic = str(m.get("topic", ""))
+        if topic.startswith(LIQ):
+            self.liquidations(m, t, off)
+            return
         if not topic.startswith("orderbook.1.") or "data" not in m:
             return
         d = m["data"]
@@ -236,6 +266,10 @@ class Tape:
     def drain(self):
         rows, self.rows = self.rows, {}
         return rows
+
+    def drain_raw(self):
+        raw, self.liq_raw = self.liq_raw, []
+        return raw
 
 
 def frame(kind, rows):
@@ -331,7 +365,7 @@ def decode(df, kind):
             df[c] = df[c] / PX
     if "sp" in df:
         df["ask"] = df.bid + df.sp / PX
-    for c in ("bq", "aq", "q", "nq", "qty"):
+    for c in ("bq", "aq", "q", "nq", "qty", "v"):
         if c in df:
             df[c] = df[c] / SZ
     if "nq" in df:
@@ -375,7 +409,7 @@ class Recorder:
                         async for raw in ws:
                             n += 1
                             w, mo = time.time_ns(), time.monotonic_ns()
-                            if in_window(w, self.hours):
+                            if self.keep(raw, w):
                                 t = w // 1000
                                 try:
                                     handle(json.loads(raw), t, t - mo // 1000)
@@ -401,6 +435,10 @@ class Recorder:
                 await asyncio.wait_for(self.stop.wait(), delay)
             except asyncio.TimeoutError:
                 pass
+
+    def keep(self, raw, wall_ns):
+        """Market messages only inside HOURS; liquidation prints are rare, so they are kept at any hour."""
+        return in_window(wall_ns, self.hours) or (isinstance(raw, str) and LIQ in raw)
 
     async def close_on_stop(self, ws):
         await self.stop.wait()
@@ -431,6 +469,10 @@ class Recorder:
     def flush(self, final=False):
         now = time.time()
         rows = self.tape.drain()
+        raw = self.tape.drain_raw()
+        if raw:                                 # a handful of lines at most; never blocks on the disk cap
+            with open(self.out / "liq_raw.jsonl", "a") as f:
+                f.writelines(json.dumps(x) + "\n" for x in raw)
         why = full(self.out)
         if why:
             self.why_stopped = f"{why}; {sum(len(r) for r in rows.values())} rows not written"
@@ -446,7 +488,7 @@ class Recorder:
                   "u_back": {f"{k[0]}:{k[1]}": v for k, v in st["u_back"].items()}, "seq_back": st["seq_back"],
                   "bad_book": st["bad_book"], "lossy": st["lossy"], "rpi_nomid": st["rpi_nomid"],
                   "trades": st["trades"], "trades_with_rpi": st["q_ne_nq"], "trades_no_nq": st["no_nq"],
-                  "parse_err": st["parse_err"], "free_gb": round(free_gb(), 2),
+                  "parse_err": st["parse_err"], "liq_raw": st["liq_raw"], "free_gb": round(free_gb(), 2),
                   "rawtape_gb": round(used_gb(self.out), 3),
                   "stopped": self.why_stopped or (final and "shutdown") or ""}
         tmp = self.out / ".status.tmp"
@@ -470,13 +512,15 @@ class Recorder:
                 [f"{s}@bookTicker" for s in syms] + [f"{s}@rpiDepth@500ms" for s in syms]), (), self.tape.binance),
             self.stream("binance_market", BINANCE_MARKET + "/".join(f"{s}@aggTrade" for s in syms), (),
                         self.tape.binance),
-            self.stream("bybit", BYBIT, [{"op": "subscribe", "args": [f"orderbook.1.{s}" for s in YSYMS]}],
+            self.stream("bybit", BYBIT, [{"op": "subscribe", "args": [f"orderbook.1.{s}" for s in YSYMS]
+                                                              + [f"{LIQ}{s}" for s in YSYMS]}],
                         self.tape.bybit, beat={"op": "ping"}),
             self.clock(),
             self.flusher(),
         ]
         log(f"recording raw events: Binance {'/'.join(BSYMS)} book, trades (nq), rpiDepth within {RPI_BAND_BP} bp on "
-            f"{'/'.join(RPI_LEVELS)}; Bybit {'/'.join(YSYMS)}; hours {self.hours or 'all'}")
+            f"{'/'.join(RPI_LEVELS)}; Bybit {'/'.join(YSYMS)} book and liquidations (all day); "
+            f"hours {self.hours or 'all'}")
         await asyncio.gather(*jobs)
         self.flush(final=True)
         log(f"stopped: {self.rows} rows written; {self.why_stopped or 'shutdown'}")

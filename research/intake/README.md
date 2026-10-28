@@ -2,7 +2,14 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 408 source records/aliases and 54 catalog/tool entries, reconciled to 329 queue rows.
+Current received scope: 408 source records/aliases and 100 catalog/tool entries; the queue holds 340 rows.
+
+The owner's HFT/crypto-microstructure corpus (2026-10-28) adds 46 catalog entries in
+[`source_catalog_hft_20261028.csv`](source_catalog_hft_20261028.csv) (3,347 known pages, 37 index-only, 7 bounded
+page fetches, 2 abstract pages) and two queue rows, M434 and M435. [The intake note](hft_corpus_20261028.md) holds
+the exact read scope, the venue-doc facts the fetches confirmed and the order of work. No book or paper body was
+read, and no trial or market data was added. Cards for sources that do get read follow
+[`templates/research_card.md`](../../templates/research_card.md).
 The R329 source-only routing review and R330 owner conditional-level hypothesis are retained in [R330 sources](../../experiments/level_probability_v1/sources.json). One new M412 method differs from earlier exact MSNR/pivot/flow scopes; proper probability scores do not by themselves prove calibration or net profit. [R330 results](../../experiments/level_probability_v1/FINDINGS.md) retain zeroactivity for the preselected model, worse paired probability scores and negative2x/3x active controls. The original signguard audit failure and separate audit-only correction are explicit; no executable profit, prospective day or private institutional strategy is claimed.
 The [R327/R328 dated-carry component](../../experiments/dated_carry_v2/FINDINGS.md)
 supplements the existing M244 alias with 46 bounded Deribit contract/fee/settlement/API

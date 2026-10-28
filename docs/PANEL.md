@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 20:26 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 21:18 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,7 +21,7 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 37 |
+| Ideas in the queue, untested | 39 |
 | Ideas partly tested | 46 |
 | Ideas blocked (data, download, compute) | 99 |
 | Rounds in the registry | 165 (NULL 91, PARTIAL 34, PENDING 26, CONFIRMED 8, DATA_PASS 6) |

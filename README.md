@@ -19,6 +19,7 @@ that counts toward a decision yet ([PANEL](docs/PANEL.md)). The owner now wants 
 | **Funding carry** (short perp, long spot) | The only holdout pass, at 1x only, about 1%/yr ([R191](experiments/carry_holdout/)) | R220 paper |
 | **Flow books A, B, X2** (72 h order-flow shorts) | Strong in-sample; holdout not confirmed ([R198](experiments/flow72_holdout/), [R216](experiments/venue_gap_v1/)) | R200, R215, R218, R221 paper, all negative so far |
 | **Event lanes** (unlocks, delisting notices, Monitoring Tag, announcements) | The unlock short replicated at gate 0 ([R265](experiments/unlocks_v1/FINDINGS.md)). The three notice studies were NULL at gate 0 (R267, R269, R271); their forward lanes test the best variants as hypotheses | R266, R268, R270, R272 paper |
+| **Sub-second cross-venue family** (Binance USDC against USDT and Bybit books, Retail Price Improvement flow, Bybit liquidations) | No result yet, recording only. About 250 ms of round trip from this container sets the floor, so only slower rules are executable | R367 screen runs once on or after 2026-11-02 ([PREREG](experiments/hftlead_v1/PREREG.md)); M430-M435 wait for the raw tape from 2026-10-29 13:00 UTC ([intake note](research/intake/hft_corpus_20261028.md)) |
 
 **Closed** (NULL, kept on record):
 - Lighter taker scalps toward Binance's quote (R348).
@@ -51,7 +52,7 @@ that counts toward a decision yet ([PANEL](docs/PANEL.md)). The owner now wants 
 | [`scripts/`](scripts/README.md) | Fetchers (`fetch_*`), recorders (`record_*`), lane runners (`run_*`, `qx_run.py`), the forward and notice loops, the dashboard export |
 | `dashboard/` | The Control Room page; `scripts/dashboard_data.py` exports its datasets |
 | `data/` | Downloaded and recorded data (not in git). Reserved samples sit under `reserved/` folders and are read only by a frozen batch PREREG |
-| `templates/lane/` | Starting point for a new lane |
+| `templates/` | `lane/` is the starting point for a new lane; `research_card.md` is the card for a source that was read |
 
 ## Docs
 
@@ -76,6 +77,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - [`DATA_SOURCES.md`](docs/DATA_SOURCES.md): every folder, its source and digests; `docs/provenance/` holds the records.
 - [`DATA_PROVENANCE_AUDIT.md`](docs/DATA_PROVENANCE_AUDIT.md).
 - [`BENCHMARK.md`](docs/BENCHMARK.md): the lab against the best open-source quant projects and free data.
+- [`FREE_AI_AGENT.md`](docs/FREE_AI_AGENT.md): running an AI coding agent from a phone through GitHub Actions.
 
 **Methods and research notes**
 - Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
@@ -83,6 +85,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
   [`PRIMARY_EQUATIONS.md`](docs/PRIMARY_EQUATIONS.md) (bounded primary reading, exact equations and execution prerequisites),
   [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
+  [HFT corpus intake note](research/intake/hft_corpus_20261028.md) (46 indexed sources, exact read scope),
   [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
 - Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
   [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),

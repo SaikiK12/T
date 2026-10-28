@@ -43,13 +43,19 @@ for current recorded scope. Recheck actual inputs and authorization before any a
   - Done: `scripts/record_raw.py`, a second recorder beside it (R367's tape is untouched): every Binance
     bookTicker/aggTrade/rpiDepth and Bybit depth-1 message in arrival order into `data/rawtape`, with Binance T, E, u,
     Bybit ts, cts, seq, aggTrade `nq` (q - nq is the Retail Price Improvement part), local wall and monotonic clocks
-    and ping round trips. Market rows are kept 13:00-17:00 UTC only (about 5 B a row at 1-3k rows a second; no more
+    and ping round trips. Since 21:03 UTC it also records Bybit `allLiquidation` for BTC and ETH all day (M435). Market rows are kept 13:00-17:00 UTC only (about 5 B a row at 1-3k rows a second; no more
     disk), capped at 1.2 GB.
   - Next, in this order, each able to stop the next (new ids M430-M433; none reopens M427): the RPI check (does any
     trade ever carry q != nq on these four symbols), the touch-transition test on the raw tape (does the USDC book
     catch up to a Binance USDT BBO move before a reversal), the latency-decay curve of any signal that survives
     (`tau_50`, `tau_BE` against the 250 ms floor), and only then an arrival-state maker simulation. Power is read from
     hourly-block variance, not fill counts.
+- **The owner's HFT corpus (46 sources, 3,347 known pages), 2026-10-28:** indexed, not read. Only the venue pages
+  were fetched, with fixed questions, and they changed the queue notes: Binance RPI orders never match API
+  orders while Bybit's `rpiTakerAccess` lets them, and Bybit publishes `allLiquidation` every 500 ms. New rows M434
+  (quote-currency fair value, features for M430) and M435 (liquidation flow, blocked only on recording). Exact scope
+  and the order of work are in `research/intake/hft_corpus_20261028.md`; the machine record is
+  `research/intake/source_catalog_hft_20261028.csv`.
 - **Closed today:** the Binance seconds scalp (R362, NULL). The move, about 85 bp, is done within 15 s of T, before
   Binance's stated funding deviation lets a position open safely.
 - **Paper:** 15 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day or hop that
