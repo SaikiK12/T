@@ -14,17 +14,32 @@ What it keeps that the 100 ms tape throws away (docs/DIRECTION.md, 2026-10-28 re
 - Binance `rpiDepth@500ms` diffs for levels within `RPI_BAND_BP` of the same symbol's bookTicker mid (rows `rpilv`,
   one summary row per message in `rpimsg`); that stream includes RPI liquidity and bookTicker does not;
 - Bybit `allLiquidation.<symbol>` (M435): one row per liquidation print in `liq` (update time `T`, `sd` 1 when a long
-  was liquidated, executed size `v`, bankruptcy price `p`), kept all day because the events are rare; the payload shape
-  is the documented one and was not seen live (no print in a 100 s probe), so a message that does not parse is kept
-  whole in data/rawtape/liq_raw.jsonl;
+  was liquidated, executed size `v`, bankruptcy price `p`), kept all day because the events are rare; the payload is the
+  documented one (13 BTC and ETH prints parsed in the first 34 minutes), and a message that does not parse is kept whole
+  in data/rawtape/liq_raw.jsonl;
+- Bybit `tickers.<symbol>` for BTCUSDT and ETHUSDT (M435): a `bticker` row whenever mark price, index price, open
+  interest or the funding rate changes, all day (deltas are merged into the last full state);
+- Bybit `publicTrade` (M436, M435): `btrade` rows with the aggressor side, size, price, the RPI flag and block-trade
+  flag (`fl` bit 1 = RPI, bit 2 = block), on linear BTCUSDT ETHUSDT BTCPERP ETHPERP and spot BTCUSDT ETHUSDT (spot
+  symbols carry the suffix `_SPOT`); and `orderbook.rpi` as `rpibook` rows holding the best five levels per side as
+  price / ordinary size / RPI size (a row only when the top five changed), on BTCPERP, ETHPERP and the two spot books.
+  A 40 s scan on 2026-10-28 saw RPI size on those and on spot majors, none on the linear USDT perps, and no
+  RPI-flagged trade yet;
+- Binance USDCUSDT `bookTicker` (M434): `fx` rows with prices in 1e-7 (the pair trades at 1.0001);
+- Kraken Futures `book` and `trade` for PF_XBTUSD and PF_ETHUSD (M437, M439): `kbook` rows are level updates (`q` is the
+  new absolute size, 0 removes the level; `sn` 1 marks rows from the connection snapshot) and `ktrade` rows are fills
+  with Kraken's type code; the book's per-product `seq` is checked for gaps;
 - a websocket ping round trip per connection every 30 s (`rtt`) and a wall/monotonic anchor every second (`clock`).
 
 Layout: data/rawtape/_parts/<kind>/<symbol>/<date>/<stamp>.parquet every FLUSH_S; `ensure` merges a finished day into
 data/rawtape/<kind>/<symbol>/<date>.parquet. One file per (kind, symbol) so delta encoding sees one price series.
-Integers throughout: prices in hundredths, sizes in thousandths, times in ms or microseconds; `decode` gives floats.
-`load(kind, symbol, day)` returns a finished day. Symbols: Binance BTCUSDT ETHUSDT BTCUSDC ETHUSDC, Bybit BTCUSDT
-ETHUSDT (kinds "bbo", "trade", "rpimsg", "rpilv" are Binance, "bybit" and "liq" are Bybit, "clock" and "rtt" use the
-symbol "all").
+Integers throughout: prices in hundredths (`fx`: 1e-7), sizes in thousandths (the Bybit trade, RPI-book and Kraken
+kinds: millionths), `bticker` open interest in thousandths and funding in 1e-8, times in ms or microseconds; `decode`
+gives floats. `load(kind, symbol, day)` returns a finished day.
+Symbols: Binance BTCUSDT ETHUSDT BTCUSDC ETHUSDC (kinds "bbo", "trade", "rpimsg", "rpilv"; "fx" has USDCUSDT), Bybit
+BTCUSDT ETHUSDT ("bybit", "liq", "bticker", "btrade"; "btrade" and "rpibook" also BTCPERP ETHPERP and the `_SPOT`
+pairs),
+Kraken PF_XBTUSD PF_ETHUSD ("kbook", "ktrade"), "clock" and "rtt" use the symbol "all".
 
 Disk is the binding constraint. The recorder stops, and `ensure` will not start it, when data/rawtape holds `MAX_GB`
 or the disk has less than `MIN_FREE_GB` free (the same floor as record_hft.py, so the older recorders keep writing
@@ -40,6 +55,7 @@ usage: python scripts/record_raw.py          ensure: start the recorder if it is
 import asyncio
 import csv
 import fcntl
+import heapq
 import json
 import os
 import shutil
@@ -58,7 +74,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rawtape"
 FLUSH_S = 300
 MIN_FREE_GB = 2.5
-MAX_GB = 3.0
+MAX_GB = 4.0
 HOURS = (13, 17)                  # None records all day; (start, end) UTC hours record start <= hour < end
 RPI_BAND_BP = 3.0                 # rpiDepth levels kept within this many bp of the same symbol's bookTicker mid
 RPI_LEVELS = ("BTCUSDC", "ETHUSDC")     # symbols whose near-touch RPI levels are stored (every symbol gets rpimsg rows)
@@ -67,14 +83,38 @@ CA = "/root/.ccr/ca-bundle.crt"
 BINANCE_PUBLIC = "wss://fstream.binance.com/public/stream?streams="    # bookTicker and rpiDepth
 BINANCE_MARKET = "wss://fstream.binance.com/market/stream?streams="    # aggTrade
 BYBIT = "wss://stream.bybit.com/v5/public/linear"
+BYBIT_SPOT = "wss://stream.bybit.com/v5/public/spot"
+KRAKEN = "wss://futures.kraken.com/ws/v1"
 BSYMS = ("BTCUSDT", "ETHUSDT", "BTCUSDC", "ETHUSDC")
+FXSYMS = ("USDCUSDT",)            # Binance perp whose book is the USDC/USDT rate (M434)
 YSYMS = ("BTCUSDT", "ETHUSDT")
+RPI_LINEAR = ("BTCPERP", "ETHPERP")     # Bybit linear (USDC-settled) perps that showed RPI size on 2026-10-28
+SPOT_SUFFIX = "_SPOT"             # Bybit spot symbols are stored as BTCUSDT_SPOT so they never share a file with linear
+SPOT_SYMS = ("BTCUSDT", "ETHUSDT")
+KSYMS = ("PF_XBTUSD", "PF_ETHUSD")      # Kraken Futures linear perps
 LIQ = "allLiquidation."           # Bybit topic prefix; rows are kept outside HOURS too
+TICK = "tickers."                 # Bybit ticker topic prefix; change-only rows, kept outside HOURS too
+TRADE = "publicTrade."            # Bybit public trades
+RPI_BOOK = "orderbook.rpi."       # Bybit RPI order book; parsed all day because its deltas need the state
+ALWAYS = (LIQ, TICK, RPI_BOOK)    # topics parsed at any hour
+KDEPTH = 100                      # Kraken snapshot rows per side written when a window opens
 PX, SZ = 100, 1000                # prices in hundredths, sizes in thousandths of a coin
+FXPX = 10_000_000                 # the `fx` kind: prices in 1e-7
+SZ6 = 1_000_000                   # Bybit trade / RPI-book and Kraken kinds: sizes in millionths (spot lots are tiny)
+FRS = 100_000_000                 # funding rates in 1e-8
+LEVELS = 5                        # RPI-book levels per side
+RPI_COLS = [f"{s}{i}{c}" for s in "ba" for i in range(LEVELS) for c in "pnr"]    # b0p b0n b0r b1p ... a4r
+KTYPE = {"fill": 0, "liquidation": 1, "partial liquidation": 2, "assignment": 3, "unwind": 4}   # 9 = not in the docs
 COLS = {
     "bbo": ["t", "off", "u", "T", "dE", "bid", "bq", "sp", "aq"],
+    "fx": ["t", "off", "u", "T", "dE", "bid", "bq", "sp", "aq"],
     "bybit": ["t", "off", "u", "seq", "ts", "dc", "fl", "bid", "bq", "sp", "aq"],
     "liq": ["t", "off", "T", "sd", "v", "p"],
+    "bticker": ["t", "off", "ts", "mark", "idx", "oi", "fr"],
+    "btrade": ["t", "off", "T", "seq", "sd", "p", "v", "fl"],
+    "rpibook": ["t", "off", "ts", "cts", "u", "seq", "fl"] + RPI_COLS,
+    "kbook": ["t", "off", "ts", "seq", "sd", "p", "q", "sn"],
+    "ktrade": ["t", "off", "T", "seq", "sd", "type", "p", "q"],
     "trade": ["t", "off", "a", "T", "dE", "p", "q", "nq", "f", "n", "m"],
     "rpimsg": ["t", "off", "U", "u", "pu", "T", "dE", "nb", "na", "nk"],
     "rpilv": ["t", "sd", "px", "qty"],
@@ -82,8 +122,9 @@ COLS = {
     "rtt": ["t", "c", "us"],
 }
 # columns whose steps are small: delta-encoded
-DELTA = {"t", "T", "ts", "u", "U", "pu", "seq", "a", "f", "bid", "bq", "aq", "px", "mono"}
-RTT_CONN = {"binance_public": 0, "binance_market": 1, "bybit": 2}
+DELTA = ({"t", "T", "ts", "cts", "u", "U", "pu", "seq", "a", "f", "bid", "bq", "aq", "px", "mono", "mark", "idx", "p"}
+         | {c for c in RPI_COLS if c.endswith("p")})
+RTT_CONN = {"binance_public": 0, "binance_market": 1, "bybit": 2, "bybit_spot": 3, "kraken": 4}
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
@@ -137,13 +178,22 @@ def sz(x):
 class Tape:
     """Rows per (kind, symbol) in arrival order, plus the checks that say whether the feed was clean."""
 
-    def __init__(self):
+    def __init__(self, hours=None):
+        self.hours = hours                # kinds that keep state all day (rpibook, kbook) write rows only inside
         self.rows = {}
         self.mid = {}
         self.last = {}
+        self.tick = {}                    # Bybit ticker state per symbol: the last full mark / index / oi / fr
+        self.rpi = {}                     # Bybit RPI books per stored symbol: {"b": {px: (ordinary, rpi)}, "a": {...}}
+        self.rpi_top = {}
+        self.kb = {}                      # Kraken books per product: {"b": {px: q}, "a": {px: q}, "seq", "pending"}
         self.stat = {"lossy": 0, "bad_book": 0, "u_back": {}, "seq_back": 0, "rpi_nomid": 0, "max_gap_ms": {},
-                     "n": {}, "q_ne_nq": 0, "trades": 0, "no_nq": 0, "parse_err": 0, "liq_raw": 0}
+                     "n": {}, "q_ne_nq": 0, "trades": 0, "no_nq": 0, "parse_err": 0, "liq_raw": 0,
+                     "kseq_gap": {}, "sub_fail": [], "rpi_same": 0}
         self.liq_raw = []
+
+    def live(self, t_us):
+        return in_window(t_us * 1000, self.hours)
 
     def put(self, kind, sym, row):
         self.rows.setdefault((kind, sym), []).append(row)
@@ -172,6 +222,9 @@ class Tape:
     def binance(self, m, t, off):
         d = m.get("data") or {}
         e, s = d.get("e"), d.get("s")
+        if s in FXSYMS and e == "bookTicker":
+            self.fx(d, s, t, off)
+            return
         if s not in BSYMS:
             return
         if e == "bookTicker":
@@ -212,6 +265,19 @@ class Tape:
             self.put("rpimsg", s, (t, off, d["U"], d["u"], d["pu"], d["T"], d["E"] - d["T"], len(d["b"]),
                                    len(d["a"]), nk))
 
+    def fx(self, d, s, t, off):
+        """USDCUSDT best bid and ask, prices in 1e-7 (the rate trades about 1 bp from par)."""
+        bid, ask = int(round(float(d["b"]) * FXPX)), int(round(float(d["a"]) * FXPX))
+        bq, aq = sz(d["B"]), sz(d["A"])
+        if not (bid > 0 and ask >= bid and bq >= 0 and aq >= 0):
+            self.stat["bad_book"] += 1
+            return
+        for v, sc in ((d["b"], FXPX), (d["a"], FXPX), (d["B"], SZ), (d["A"], SZ)):
+            self.lossy(v, sc)
+        self.u_check(("fx", s), d["u"])
+        self.seen(("fx", s), t)
+        self.put("fx", s, (t, off, d["u"], d["T"], d["E"] - d["T"], bid, bq, ask - bid, aq))
+
     def liquidations(self, m, t, off):
         """One row per print of an allLiquidation message; a message that does not parse is kept whole."""
         try:
@@ -231,12 +297,149 @@ class Tape:
         for s, row in rows:
             self.put("liq", s, row)
 
-    def bybit(self, m, t, off):
+    def bybit(self, m, t, off, suffix=""):
+        """One Bybit message: `suffix` is SPOT_SUFFIX on the spot connection so its symbols never share a file."""
+        if m.get("op") == "subscribe":
+            if not m.get("success", True):
+                self.stat["sub_fail"].append(str(m.get("ret_msg", ""))[:120])
+            return
         topic = str(m.get("topic", ""))
         if topic.startswith(LIQ):
             self.liquidations(m, t, off)
+        elif topic.startswith(TICK):
+            self.bticker(m, t, off)
+        elif topic.startswith(TRADE):
+            self.btrades(m, t, off, suffix)
+        elif topic.startswith(RPI_BOOK):
+            self.rpibook(m, t, off, suffix)
+        elif topic.startswith("orderbook.1."):
+            self.depth1(m, t, off)
+
+    def bticker(self, m, t, off):
+        """Mark, index, open interest and funding rate: a row whenever one changes (deltas merge into the state)."""
+        d = m["data"]
+        s = d["symbol"]
+        if s not in YSYMS:
             return
-        if not topic.startswith("orderbook.1.") or "data" not in m:
+        cur = self.tick.setdefault(s, {"mark": None, "idx": None, "oi": None, "fr": None})
+        new = dict(cur)
+        for field, key, scale in (("markPrice", "mark", PX), ("indexPrice", "idx", PX), ("openInterest", "oi", SZ),
+                                  ("fundingRate", "fr", FRS)):
+            if d.get(field) not in (None, ""):
+                self.lossy(d[field], scale)
+                new[key] = int(round(float(d[field]) * scale))
+        if new == cur:
+            return
+        self.tick[s] = new
+        if None not in new.values():
+            self.put("bticker", s, (t, off, m["ts"], new["mark"], new["idx"], new["oi"], new["fr"]))
+
+    def btrades(self, m, t, off, suffix=""):
+        """Bybit public trades: aggressor side, price, size, seq and `fl` (bit 1 = RPI trade, bit 2 = block trade)."""
+        for d in m["data"]:
+            s = d["s"] + suffix
+            self.lossy(d["v"], SZ6)
+            self.lossy(d["p"], PX)
+            self.seen(("btrade", s), t)
+            fl = int(bool(d.get("RPI"))) | 2 * int(bool(d.get("BT")))
+            self.put("btrade", s, (t, off, int(d["T"]), int(d.get("seq", -1)), int(d["S"] == "Buy"), px(d["p"]),
+                                   int(round(float(d["v"]) * SZ6)), fl))
+
+    def rpibook(self, m, t, off, suffix=""):
+        """Best five levels per side of Bybit's RPI book as price / ordinary size / RPI size, kept in memory all day
+        (deltas need the state) and written inside the window when the top five changed."""
+        d = m["data"]
+        s = d["s"] + suffix
+        if m["type"] == "snapshot" or s not in self.rpi:
+            self.rpi[s] = {"b": {}, "a": {}}
+            self.rpi_top.pop(s, None)
+        book = self.rpi[s]
+        for side in ("b", "a"):
+            for p, n, r in d.get(side, []):
+                key = px(p)
+                n6, r6 = int(round(float(n) * SZ6)), int(round(float(r) * SZ6))
+                if n6 or r6:
+                    book[side][key] = (n6, r6)
+                else:
+                    book[side].pop(key, None)
+        if not self.live(t):
+            self.rpi_top.pop(s, None)
+            return
+        row = []
+        for side, pick in (("b", heapq.nlargest), ("a", heapq.nsmallest)):
+            top = pick(LEVELS, book[side])
+            for i in range(LEVELS):
+                row += (top[i], *book[side][top[i]]) if i < len(top) else (0, 0, 0)
+        if self.rpi_top.get(s) == row and m["type"] != "snapshot":
+            self.stat["rpi_same"] += 1
+            return
+        self.rpi_top[s] = row
+        if m["type"] != "snapshot":
+            self.u_check(("rpibook", s), d["u"])
+        self.seen(("rpibook", s), t)
+        self.put("rpibook", s, (t, off, m["ts"], m.get("cts", -1), d["u"], d.get("seq", -1),
+                                4 if m["type"] == "snapshot" else 0, *row))
+
+    def kraken(self, m, t, off):
+        """Kraken Futures book and trade feeds. Book state is kept all day; rows are written inside the window, starting
+        with the nearest KDEPTH levels per side (`sn` 1) so a window opens with a book to apply the updates to."""
+        if "event" in m:
+            if m["event"] == "error" or m["event"] == "alert":
+                self.stat["sub_fail"].append(str(m.get("message", m))[:120])
+            return
+        s, feed = m.get("product_id"), m.get("feed")
+        if s not in KSYMS:
+            return
+        if feed == "book_snapshot":
+            self.kb[s] = {"b": {px(x["price"]): int(round(x["qty"] * SZ6)) for x in m["bids"]},
+                          "a": {px(x["price"]): int(round(x["qty"] * SZ6)) for x in m["asks"]},
+                          "seq": m["seq"], "pending": True, "ts": m.get("timestamp", 0)}
+            self.snap(s, t, off)
+        elif feed == "book":
+            k = self.kb.get(s)
+            if k is None:
+                return
+            if m["seq"] != k["seq"] + 1:
+                self.stat["kseq_gap"][s] = self.stat["kseq_gap"].get(s, 0) + 1
+            k["seq"] = m["seq"]
+            self.snap(s, t, off)
+            side = "b" if m["side"] == "buy" else "a"
+            self.lossy(m["qty"], SZ6)
+            self.lossy(m["price"], PX)
+            q = int(round(m["qty"] * SZ6))
+            if q:
+                k[side][px(m["price"])] = q
+            else:
+                k[side].pop(px(m["price"]), None)
+            if self.live(t):
+                self.seen(("kbook", s), t)
+                self.put("kbook", s, (t, off, m["timestamp"], m["seq"], int(side == "a"), px(m["price"]), q, 0))
+        elif feed == "trade":
+            self.lossy(m["qty"], SZ6)
+            self.lossy(m["price"], PX)
+            self.u_check(("ktrade", s), m["seq"])
+            if self.live(t):
+                self.seen(("ktrade", s), t)
+                self.put("ktrade", s, (t, off, m["time"], m["seq"], int(m["side"] == "buy"),
+                                       KTYPE.get(m.get("type"), 9), px(m["price"]), int(round(m["qty"] * SZ6))))
+
+    def snap(self, s, t, off):
+        """Write the book snapshot rows when the window is open and the book was last seen outside it (or just
+        connected); outside the window just mark the book as needing one."""
+        k = self.kb[s]
+        if not self.live(t):
+            k["pending"] = True
+            return
+        if not k["pending"]:
+            return
+        k["pending"] = False
+        for sd, pick in ((0, heapq.nlargest), (1, heapq.nsmallest)):
+            side = "ba"[sd]
+            for p in pick(KDEPTH, k[side]):
+                self.put("kbook", s, (t, off, k["ts"], k["seq"], sd, p, k[side][p], 1))
+
+    def depth1(self, m, t, off):
+        if "data" not in m:
             return
         d = m["data"]
         s = d["s"]
@@ -274,7 +477,7 @@ class Tape:
 
 def frame(kind, rows):
     df = pd.DataFrame(rows, columns=COLS[kind], dtype="int64")
-    for c in ("off", "dE", "dc", "fl", "n", "m", "sd", "nb", "na", "nk", "sp", "c"):
+    for c in ("off", "dE", "dc", "fl", "n", "m", "sd", "nb", "na", "nk", "sp", "c", "sn", "type"):
         if c in df:
             df[c] = df[c].astype("int32")
     return df
@@ -355,19 +558,38 @@ def load(kind, sym, day, out=OUT):
     return pd.read_parquet(p) if p.exists() else None
 
 
+def subscribe(args, chunk=8):
+    """Bybit takes a limited number of topics per subscribe message."""
+    return [{"op": "subscribe", "args": args[i:i + chunk]} for i in range(0, len(args), chunk)]
+
+
+SIZE_SCALE = {"btrade": SZ6, "rpibook": SZ6, "kbook": SZ6, "ktrade": SZ6}      # every other kind: thousandths
+
+
 def decode(df, kind):
-    """Floats and clocks: prices, sizes in coins, `mono_us` = t - off, `ask` for the book kinds."""
+    """Floats and clocks: prices, sizes in coins, `mono_us` = t - off, `ask` for the book kinds, funding as a rate."""
     df = df.copy()
+    pxs, szs = (FXPX if kind == "fx" else PX), SIZE_SCALE.get(kind, SZ)
     if "off" in df:
         df["mono_us"] = df.t - df.off
     for c in ("bid", "p", "px"):
         if c in df:
-            df[c] = df[c] / PX
+            df[c] = df[c] / pxs
     if "sp" in df:
-        df["ask"] = df.bid + df.sp / PX
+        df["ask"] = df.bid + df.sp / pxs
     for c in ("bq", "aq", "q", "nq", "qty", "v"):
         if c in df:
-            df[c] = df[c] / SZ
+            df[c] = df[c] / szs
+    for c in ("mark", "idx"):
+        if c in df:
+            df[c] = df[c] / PX
+    if "oi" in df:
+        df["oi"] = df.oi / SZ
+    if "fr" in df:
+        df["fr"] = df.fr / FRS
+    if kind == "rpibook":
+        for c in RPI_COLS:
+            df[c] = df[c] / (PX if c.endswith("p") else SZ6)
     if "nq" in df:
         df.loc[df.nq < 0, "nq"] = float("nan")
     if kind == "trade":
@@ -378,7 +600,7 @@ def decode(df, kind):
 class Recorder:
     def __init__(self, out=OUT, hours=HOURS):
         self.out, self.hours = out, hours
-        self.tape = Tape()
+        self.tape = Tape(hours)
         self.stop = asyncio.Event()
         self.msgs, self.connected, self.rows, self.why_stopped = {}, {}, 0, ""
 
@@ -392,7 +614,7 @@ class Recorder:
             w.writerow([name, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(t0)),
                         time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), round(time.time() - t0), n, reason])
 
-    async def stream(self, name, url, subs, handle, beat=None):
+    async def stream(self, name, url, subs, handle, beat=None, always=False):
         import websockets
         delay = 1.0
         while not self.stop.is_set():
@@ -409,7 +631,7 @@ class Recorder:
                         async for raw in ws:
                             n += 1
                             w, mo = time.time_ns(), time.monotonic_ns()
-                            if self.keep(raw, w):
+                            if always or self.keep(raw, w):
                                 t = w // 1000
                                 try:
                                     handle(json.loads(raw), t, t - mo // 1000)
@@ -437,8 +659,9 @@ class Recorder:
                 pass
 
     def keep(self, raw, wall_ns):
-        """Market messages only inside HOURS; liquidation prints are rare, so they are kept at any hour."""
-        return in_window(wall_ns, self.hours) or (isinstance(raw, str) and LIQ in raw)
+        """Market messages only inside HOURS; liquidation prints and ticker changes are rare, so they are kept at any
+        hour, and the RPI book is parsed at any hour because its deltas need the state (rows are written in HOURS)."""
+        return in_window(wall_ns, self.hours) or (isinstance(raw, str) and any(k in raw for k in ALWAYS))
 
     async def close_on_stop(self, ws):
         await self.stop.wait()
@@ -454,7 +677,10 @@ class Recorder:
                 await ws.send(json.dumps(beat))
             if elapsed % RTT_EVERY_S == 0:
                 p0 = time.perf_counter()
-                await (await ws.ping())
+                try:
+                    await asyncio.wait_for(await ws.ping(), 10)       # a server that never answers pings gives no row
+                except asyncio.TimeoutError:
+                    continue
                 us = int((time.perf_counter() - p0) * 1e6)
                 self.tape.put("rtt", "all", (time.time_ns() // 1000, RTT_CONN[name], us))
 
@@ -486,6 +712,7 @@ class Recorder:
                   "connected": self.connected, "rows_by_stream": st["n"], "max_gap_ms": {
                       f"{k[0]}:{k[1]}": v for k, v in st["max_gap_ms"].items()},
                   "u_back": {f"{k[0]}:{k[1]}": v for k, v in st["u_back"].items()}, "seq_back": st["seq_back"],
+                  "kseq_gap": st["kseq_gap"], "sub_fail": st["sub_fail"], "rpi_same": st["rpi_same"],
                   "bad_book": st["bad_book"], "lossy": st["lossy"], "rpi_nomid": st["rpi_nomid"],
                   "trades": st["trades"], "trades_with_rpi": st["q_ne_nq"], "trades_no_nq": st["no_nq"],
                   "parse_err": st["parse_err"], "liq_raw": st["liq_raw"], "free_gb": round(free_gb(), 2),
@@ -507,20 +734,27 @@ class Recorder:
         for sig in (signal.SIGTERM, signal.SIGINT):
             loop.add_signal_handler(sig, self.stop.set)
         syms = [s.lower() for s in BSYMS]
+        linear = ([f"orderbook.1.{s}" for s in YSYMS] + [f"{LIQ}{s}" for s in YSYMS] + [f"{TICK}{s}" for s in YSYMS]
+                  + [f"{TRADE}{s}" for s in YSYMS + RPI_LINEAR] + [f"{RPI_BOOK}{s}" for s in RPI_LINEAR])
+        spot = [f"{TRADE}{s}" for s in SPOT_SYMS] + [f"{RPI_BOOK}{s}" for s in SPOT_SYMS]
         jobs = [
             self.stream("binance_public", BINANCE_PUBLIC + "/".join(
-                [f"{s}@bookTicker" for s in syms] + [f"{s}@rpiDepth@500ms" for s in syms]), (), self.tape.binance),
+                [f"{s}@bookTicker" for s in syms + [f.lower() for f in FXSYMS]]
+                + [f"{s}@rpiDepth@500ms" for s in syms]), (), self.tape.binance),
             self.stream("binance_market", BINANCE_MARKET + "/".join(f"{s}@aggTrade" for s in syms), (),
                         self.tape.binance),
-            self.stream("bybit", BYBIT, [{"op": "subscribe", "args": [f"orderbook.1.{s}" for s in YSYMS]
-                                                              + [f"{LIQ}{s}" for s in YSYMS]}],
-                        self.tape.bybit, beat={"op": "ping"}),
+            self.stream("bybit", BYBIT, subscribe(linear), self.tape.bybit, beat={"op": "ping"}),
+            self.stream("bybit_spot", BYBIT_SPOT, subscribe(spot),
+                        lambda m, t, off: self.tape.bybit(m, t, off, SPOT_SUFFIX), beat={"op": "ping"}),
+            self.stream("kraken", KRAKEN, [{"event": "subscribe", "feed": f, "product_ids": list(KSYMS)}
+                                           for f in ("book", "trade")], self.tape.kraken, always=True),
             self.clock(),
             self.flusher(),
         ]
         log(f"recording raw events: Binance {'/'.join(BSYMS)} book, trades (nq), rpiDepth within {RPI_BAND_BP} bp on "
-            f"{'/'.join(RPI_LEVELS)}; Bybit {'/'.join(YSYMS)} book and liquidations (all day); "
-            f"hours {self.hours or 'all'}")
+            f"{'/'.join(RPI_LEVELS)}, {'/'.join(FXSYMS)} book; Bybit {'/'.join(YSYMS)} book, trades, tickers and "
+            f"liquidations, RPI book and trades on {'/'.join(RPI_LINEAR)} and spot; Kraken {'/'.join(KSYMS)} book and "
+            f"trades; hours {self.hours or 'all'}")
         await asyncio.gather(*jobs)
         self.flush(final=True)
         log(f"stopped: {self.rows} rows written; {self.why_stopped or 'shutdown'}")

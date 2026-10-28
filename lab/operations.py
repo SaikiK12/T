@@ -68,6 +68,8 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_TICKER", "record_mexc_ticker.py", timeout=120),
         task("REC_FUNDING", "record_funding_board.py", timeout=120),
         task("REC_DERIBIT", "record_deribit_chain.py", timeout=120),
+        task("REC_LTRADES", "record_lighter_trades.py", timeout=60),   # public stream with account ids, WTI/NG/Brent
+        task("REC_OPTEXP", "record_option_expiry.py", timeout=60),    # starts the 08:00 UTC expiry-window daemon if down
         task("REC_LIGHTER", "record_lighter_book.py", timeout=600),   # backgrounded in forward_all.sh
         task("REC_DEX", "record_dex_prices.py", timeout=60),     # starts the 5-minute daemon if it is down
         task("REC_WALLETS", "record_wallets.py", timeout=120),
@@ -189,6 +191,8 @@ LABELS = {
 }
 LABELS.update({
     "REC_DERIBIT": ("Market data collection", "Deribit option chain snapshots", "recorders"),
+    "REC_OPTEXP": ("Market data collection", "Deribit BTC option chain, minute snapshots around the 08:00 UTC expiry", "recorders"),
+    "REC_LTRADES": ("Market data collection", "Lighter WTI/NATGAS/BRENTOIL trades with account ids", "recorders"),
     "REC_LIGHTER": ("Market data collection", "Lighter order-book snapshots", "recorders"),
     "REC_DEX": ("Market data collection", "DEX price recorder supervision", "recorders"),
     "REC_WALLETS": ("Market data collection", "Public wallet snapshots", "recorders"),

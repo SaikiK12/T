@@ -44,7 +44,8 @@ for current recorded scope. Recheck actual inputs and authorization before any a
     bookTicker/aggTrade/rpiDepth and Bybit depth-1 message in arrival order into `data/rawtape`, with Binance T, E, u,
     Bybit ts, cts, seq, aggTrade `nq` (q - nq is the Retail Price Improvement part), local wall and monotonic clocks
     and ping round trips. Since 21:03 UTC it also records Bybit `allLiquidation` for BTC and ETH all day (M435). Market rows are kept 13:00-17:00 UTC only (about 5 B a row at 1-3k rows a second; no more
-    disk), capped at 3.0 GB (raised from 1.2 GB on 2026-10-28 once `data/research` was compressed).
+    disk), capped at 4.0 GB (raised from 1.2 GB on 2026-10-28 once `data/research` was compressed). From 22:03 UTC it also records the USDCUSDT book (M434), Bybit tickers, public trades and RPI book (M435, M436) and Kraken Futures book and trades (M437, M439); all of the Kraken order-event history that is public is probed, not downloaded (M437).
+  - Done 2026-10-28 (fourth owner review): two more forward recorders, both public and paper only. `scripts/record_option_expiry.py` snapshots the BTC option chain every minute 06:45-10:15 UTC into `data/option_expiry` (M440; first window 2026-10-29, the monthly expiry is 2026-10-30 08:00 UTC). `scripts/record_lighter_trades.py` records WTI, NATGAS and BRENTOIL trades with both account ids into `data/lighter_trades` (M441, M443). M442 (weekend WTI as a direction signal) is downgraded to N/A; M444-M446 (EIA, wheat, 0DTE) wait on data not held.
   - Next, in this order, each able to stop the next (new ids M430-M433; none reopens M427): the RPI check (does any
     trade ever carry q != nq on these four symbols), the touch-transition test on the raw tape (does the USDC book
     catch up to a Binance USDT BBO move before a reversal), the latency-decay curve of any signal that survives

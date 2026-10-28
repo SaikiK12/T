@@ -87,7 +87,7 @@ surface it; it does not show the claim is false.
 |---|---|---|---|
 | Binance counts quick cancels against API traders (invalid-cancellation rule) | Fetched the quantitative-rules FAQ (page dated 2026-08-31) | Confirmed. Orders cancelled under 5 s count as invalid; ban at a ratio of 0.99 with at least 5,000 such orders in a 10-minute cycle per symbol (SRC28-047) | M427 and M433 notes: count our own sub-5 s cancels; it does not bind at probe scale |
 | Binance liquidity-provider thresholds of $100M futures and $20M spot | Searched, and read the FAQ's exemption criteria | Not confirmed. The FAQ's exemption is a different test (above 25,000,000,000 USD of 30-day futures volume, or the liquidity-provider or options-market-maker programs) | Not used |
-| 125 million fills show touch-joining passive fills lose 0.39, 0.84 and 0.46 bp at 10 s on Binance, Bybit and Hyperliquid (September 2026) | Several searches, standard and extended | No source found. Related, from summaries only: arXiv 2502.18625 (live Binance, 232,897 minimum maker orders) and arXiv 2608.18195 (about half a tick at the best price in a simulation) | Not used as a number. Kept as a design hurdle in M433: beat a touch-join baseline estimated from our own tape |
+| 125 million fills show touch-joining passive fills lose 0.39, 0.84 and 0.46 bp at 10 s on Binance, Bybit and Hyperliquid (September 2026) | Several searches, standard and extended; later a targeted search | First pass: no source found (wrong, see next). Later pass found Gatto, SSRN 7461901 (SRC28-057): about 125.8 million simulated last-in-queue fills with 10 s pre-fee markouts of -0.839 bp (Bybit), -0.391 (Binance), -0.458 (Hyperliquid), entry leg only; seen in search results only, the SSRN page answers 403 so the body was not read. Simulated and last-in-queue, so a pessimistic bound for joining the back of the queue, not real fills. Also from summaries only: arXiv 2502.18625 (live Binance, 232,897 minimum maker orders) and arXiv 2608.18195 (about half a tick at the best price in a simulation) | Not used as a hurdle or a number. M433 keeps the design hurdle (beat a touch-join baseline estimated from our own tape) and reports every simulated fill under back-, random- and front-cancel allocations |
 | Stanford/Columbia Hyperliquid paper: about $1.11 billion of front-end losses and reversing taker-flow impact | Searches | Not found. Nearest: arXiv 2608.04373 (Zhai) and arXiv 2606.15715 (TWAP orders on Hyperliquid) | Not used |
 | Ten wallets cause 90.5% of maker adverse-selection loss in an on-chain options book | Searches | Not found. A summary of a 2026 wallet-markout paper (probably Zhai) reports 86.9% of 2,314 active aggressive wallets trading again in the next ten days: persistence, not concentration of maker loss | Not used. The wallet-by-side-by-size-by-state idea is a hypothesis in M429's note |
 | Binance leads Hyperliquid for BTC at 2, 5 and 10 s | Searches | Direction supported by two sources (Research Square rs-10147582 on a 5 s grid; Arrakis about 800 ms). The 2, 5 and 10 s figures were not found | Leads only (SRC28-053, 054). A 5 s grid cannot say anything about a sub-second lead |
@@ -100,3 +100,55 @@ learning last) is the dependency order already set out above, with M430 as the t
 addition is a reporting rule for M430 and M433: a hypothetical fill (R367's strict trade-through rule) is reported
 next to the touch-join baseline at the same moments, so a filter that only selects less toxic touches is not read as
 alpha. The suggested effort split (about 70% own data, 20% targeted web, 10% infrastructure) is a rough guide, not a rule.
+
+## Addendum 2026-10-28 (third owner paste): Kraken, RPI, phase
+
+New rows M436 (Bybit RPI toxicity), M437 (Kraken order-event queue laboratory), M438 (intra-second phase, declared
+before any outcome) and M439 (Kraken execution economics). Sources `SRC28-055` to `SRC28-059` hold the exact scope.
+What was run, and what it supports:
+
+- Kraken's public History v3 order and execution events: no key, retention probed to 2022-03-22 on PF_XBTUSD and
+  PF_ETHUSD with 3-event requests; one 120 s PF_XBTUSD window (48,174 events, 204 executions) joined cleanly: every
+  execution matched a maker-order fill update within 3 ms and no uid was duplicated. Open points are in M437
+  (same-millisecond ties, a starting state for an order-level book, gaps at depth). Nothing larger was downloaded.
+- Kraken's public fee schedule: 2 bp maker and 5 bp taker at the base tier, -1 bp maker only at 1 billion dollars of
+  volume on the schedule used by the stablecoin perps. Those perps (PF_USDTUSD, PF_USDCUSD) traded 2,283 and 5,206
+  dollars in 24 h in one snapshot, so the apparent -1 bp is not an earnable rebate.
+- Bybit RPI: RPI size exists on spot majors and on BTCPERP and ETHPERP, not on the linear USDT perps; no RPI-flagged
+  trade in a 45 s run. OKX's RPI channels were probed once and the connection was reset; not retried.
+- Priority order the owner's review asks for: Kraken queue laboratory first, then USDC/USDT, forced flow
+  (continuation versus exhaustion), RPI toxicity, touch transition, latency frontier, intra-second phase; M433 stays
+  blocked until something survives. The recorder now holds the data for all but the Kraken order events.
+
+## Addendum 2026-10-28 (fourth owner paste): option expiry, Lighter WTI identity, EIA, WASDE, 0DTE
+
+New rows M440-M446. The paste numbered its branches M439-M445; the repo ids are the next free ones, and each row's note
+carries the paste's number. Mapping: option expiry = M440 (paste M444); Lighter participant identity = M441
+(paste M445); weekend WTI direction = M442 (paste M442, downgraded: status N/A, superseded by M443); WTI cross-venue
+residual = M443 (paste M441); EIA natural gas and crude = M444 (paste M439 and M440, one row); USDA wheat = M445
+(paste M443, blocked on consensus data); 0DTE SPX to ES = M446 (blocked on OPRA). Sources `SRC28-060` and
+`SRC28-061` hold the live checks. What was run:
+
+- Two forward recorders started on 2026-10-28, both public and paper only: `scripts/record_option_expiry.py` (BTC
+  option chain once a minute, 06:45-10:15 UTC, from 2026-10-29) and `scripts/record_lighter_trades.py` (WTI, NATGAS,
+  BRENTOIL trades with both account ids, from 22:29 UTC). Neither computes a statistic. The first option-expiry
+  window is 2026-10-29; 2026-10-30 08:00 UTC is a monthly expiry (34% of 397,715 BTC option open interest in one
+  chain snapshot), the largest size test the recorder will see this week.
+- Lighter's public trade stream carries the account ids, the maker side, each side's position, entry value and margin
+  before the fill, and a per-side fee integer; observed fees are 0.28-2.66 bp by account and 1% on liquidations, and the
+  market listing shows 0.0000, so the pasted "about 2 bp maker, 5 bp taker" is not what the stream shows. The
+  markout `side * 1e4 * ln(mid(t+h) / price)` and a past-only per-account EWMA are offline analysis, not recorder code.
+- Kraken lists PF_WTIOILUSD, PF_NATGASUSD and PF_BRENTOILUSD, but `record_raw.py` stores prices in hundredths and
+  cannot hold their 0.001 and 0.0001 ticks without a per-product scale; not recorded yet.
+- Deribit serves the current chain only (no open-interest history), so the M440 state variable (expiring ATM open
+  interest over total BTC open interest) exists only from the first recorded snapshot. The summary carries no Greeks;
+  they are computed offline. Dealer gamma is not inferred from open interest times gamma. Earlier Friday-only
+  open-interest and charm tests (R289, R296; M303, M309, M317) were NULL; M440 differs in covering every expiry and
+  in conditioning on the expiring share.
+
+Reported in the paste and not read or checked: the 1,224-settlement study (volatility jump is time-of-day seasonality),
+the September 2026 partial match, the Energy Journal natural-gas study and the Estimize consensus claim, the HIP-3
+oracle and TradeXYZ pricing-band mechanics, the 0DTE gamma-conditioned paper, the leveraged-ETF closing-momentum and
+Treasury-auction papers, and the negative after-cost evidence behind the weekend-WTI downgrade. M442 carries that
+evidence label. First-stage context for EIA, WASDE and 0DTE is not in the repo, and no CME futures, OPRA or consensus
+data is held. Power for M440 (sigma 80 bp, effect 15 bp, about 220 expiry days) is an assumption, not a measurement.

@@ -34,7 +34,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (16)
+## Record: point-in-time collectors (cannot be backfilled) (18)
 
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
@@ -42,10 +42,12 @@ line is the first line of the script's own docstring.
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
 - [`record_hft.py`](record_hft.py): High-rate feed recorder (M427-M429 data): BTC and ETH top of book and trades at 100 ms on Binance USDT and USDC perps, Bybit USDT perps and Hyperliquid, into data/hft/. Public websockets only; ...
 - [`record_lighter_book.py`](record_lighter_book.py): Hourly snapshot of what a taker order costs on Lighter, the zero-fee perp DEX (docs/VENUE_STRUCTURE.md): for every active perp, the best bid and ask, the cost per side of a market order of USD 1k ...
+- [`record_lighter_trades.py`](record_lighter_trades.py): Lighter public trade and best-quote stream for the commodity perps (M441, M443): every trade with both account ids, who was the maker, each side's position and entry value before the fill, the ...
 - [`record_mexc_depth.py`](record_mexc_depth.py): mexc_costs (R224): what a taker order costs on MEXC for the coins the forward books trade, measured from the public order book, as set out in experiments/mexc_costs/PREREG.md.
 - [`record_mexc_ticker.py`](record_mexc_ticker.py): Hourly snapshot of every MEXC perpetual: the displayed funding rate with its next settlement time, cycle and caps (funding_rate), and the ticker (last, bid/ask, index and fair price, 24 h volume, ...
 - [`record_news.py`](record_news.py): Point-in-time headline recorder: every FEEDS source polled every POLL_S seconds, each new item kept once with the time we first saw it.
 - [`record_notices.py`](record_notices.py): Binance announcement catalogs (Delisting, New Cryptocurrency Listing, Latest Binance News) as an append-only journal: one row per article with its id, title, release time (ms, as published) and ...
+- [`record_option_expiry.py`](record_option_expiry.py): Minute snapshots of the Deribit BTC option chain around the 08:00 UTC expiry (M440).
 - [`record_raw.py`](record_raw.py): Raw-event recorder (M430-M432 data): every Binance USDT/USDC perp top-of-book update and trade, Binance's RPI depth near the touch, and Bybit's depth-1 stream, one row per message as it reached ...
 - [`record_tape.py`](record_tape.py): Order-flow tape recorder (M264): Binance USD-M, MEXC and Lighter perps' best bid/ask and trades for `COINS`, bucketed to the second by lab/tape.py, into data/tape/. Paper only: it reads public ...
 - [`record_unlocks.py`](record_unlocks.py): Daily point-in-time snapshot of the DefiLlama unlock calendar: the emissions index (every token's documented past and upcoming unlock events, circulating and max supply, price, market cap) as ...
@@ -249,7 +251,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (45)
+## Tools and everything else (47)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -271,10 +273,12 @@ line is the first line of the script's own docstring.
 - [`paper_account.py`](paper_account.py): One offline account command: account, lifecycle, controls or funding component.
 - [`paper_account_view.py`](paper_account_view.py): Offline French view of an explicit simulated-account report; no calculations or orders.
 - [`paper_status.py`](paper_status.py): Read-only paper/account view over registered evidence; no runner is started.
+- [`pilot_kraken_orders.py`](pilot_kraken_orders.py): Completeness pilot for Kraken Futures' public order-event history (M437): one short window, hard request cap.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
 - [`probe_dated_carry.py`](probe_dated_carry.py): R327 ONE finite public CURRENT snapshot; no order/account/history requests.
 - [`probe_depth_quotes.py`](probe_depth_quotes.py): R314 finite public depth probe: capture, seal, then report fixed cost controls.
 - [`probe_funding_values.py`](probe_funding_values.py): R315 fixed fair-value snapshot diagnostic; no orders or strategy scoring.
+- [`probe_kraken_orders.py`](probe_kraken_orders.py): Retention probe for Kraken Futures' public order-event history (M437).
 - [`probe_pair_quotes.py`](probe_pair_quotes.py): R312 bounded first-seen public REST evidence: capture -> seal -> report.
 - [`probe_spot_costs.py`](probe_spot_costs.py): One finite R325 public REST input capture; no account/history/order access.
 - [`probe_spot_perp.py`](probe_spot_perp.py): R324 one-shot, public spot/perp wire compatibility capture; never trades.

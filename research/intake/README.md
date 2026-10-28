@@ -2,7 +2,7 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 408 source records/aliases and 108 catalog/tool entries; the queue holds 340 rows.
+Current received scope: 408 source records/aliases and 115 catalog/tool entries; the queue holds 351 rows.
 
 The owner's HFT/crypto-microstructure corpus (2026-10-28) adds 46 catalog entries in
 [`source_catalog_hft_20261028.csv`](source_catalog_hft_20261028.csv) (3,347 known pages, 37 index-only, 7 bounded
@@ -11,7 +11,7 @@ the exact read scope, the venue-doc facts the fetches confirmed and the order of
 read, and no trial or market data was added. A targeted check of the owner's second paste adds 8 rows
 (`SRC28-047` to `SRC28-054`: Binance's quantitative-rules FAQ fetched, six sources known from search summaries only,
 one known by title) and notes on M427, M429 and M433; its pasted claims that could not be found are listed in the
-note's addendum as unused. Cards for sources that do get read follow
+note's addendum as unused. A third paste (Kraken, Bybit RPI, intra-second phase) adds `SRC28-055` to `SRC28-059` and queue rows M436-M439; it also corrects the earlier statement that the '125 million fills' figures were not found (Gatto, SSRN 7461901, simulated last-in-queue fills; seen in search results only). A fourth paste (BTC option expiry, Lighter WTI participant identity, a downgrade of the weekend-WTI direction idea, natural-gas EIA, wheat, 0DTE) adds `SRC28-060` and `SRC28-061` (live checks of the Deribit and Lighter public feeds) and queue rows M440-M446; its papers and numbers were reported in review and not read. Cards for sources that do get read follow
 [`templates/research_card.md`](../../templates/research_card.md).
 The R329 source-only routing review and R330 owner conditional-level hypothesis are retained in [R330 sources](../../experiments/level_probability_v1/sources.json). One new M412 method differs from earlier exact MSNR/pivot/flow scopes; proper probability scores do not by themselves prove calibration or net profit. [R330 results](../../experiments/level_probability_v1/FINDINGS.md) retain zeroactivity for the preselected model, worse paired probability scores and negative2x/3x active controls. The original signguard audit failure and separate audit-only correction are explicit; no executable profit, prospective day or private institutional strategy is claimed.
 The [R327/R328 dated-carry component](../../experiments/dated_carry_v2/FINDINGS.md)

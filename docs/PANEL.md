@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 21:38 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 22:34 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,9 +21,9 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 39 |
+| Ideas in the queue, untested | 47 |
 | Ideas partly tested | 46 |
-| Ideas blocked (data, download, compute) | 99 |
+| Ideas blocked (data, download, compute) | 101 |
 | Rounds in the registry | 165 (NULL 91, PARTIAL 34, PENDING 26, CONFIRMED 8, DATA_PASS 6) |
 | Program trials | 9,479,123 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
@@ -54,7 +54,7 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R364 settlelit_fwd | settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28 | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
-Processing lag of on-time hours: 213 hours, median 401.93333333333334 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
+Processing lag of on-time hours: 214 hours, median 375.3666666666667 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
 
 ### Execution receipts
 
@@ -66,6 +66,8 @@ Process state, declared data checks and statistical eligibility are separate.
 | REC_TICKER | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_FUNDING | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_DERIBIT | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_LTRADES | Market data collection | UNKNOWN | UNVERIFIED | None |
+| REC_OPTEXP | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_LIGHTER | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_DEX | Market data collection | UNKNOWN | UNVERIFIED | None |
 | REC_WALLETS | Market data collection | UNKNOWN | UNVERIFIED | None |
