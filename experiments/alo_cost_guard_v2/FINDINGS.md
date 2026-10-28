@@ -39,7 +39,11 @@ assumptions are conditional rather than the owner's actual account terms.
 Spec, correction code, original fixture and prior results were frozen before
 the run in `5be315c911cdb1561d4a82193fcd136d0f2e3c6d`. All 12 cells and eight
 adversarial cases reproduced byte for byte, and an independent rational
-checker passed **104 checks**. Thirty focused guard/account tests passed.
+checker passed **104 checks**; deliberately corrupted cash and duplicate-case
+artifacts were rejected. Thirty focused guard/account tests passed, and the
+complete project-environment suite passed **1,685 tests, 3 skipped**. An initial
+system-Python run was stopped after missing `numba` and `pyarrow` became clear;
+it was not counted as a completed validation.
 The independent pre-freeze review also checked uncertainty-window boundaries;
 the accepted zero/10 ns bounds were constructed assumptions. No strategy
 variant, market acquisition, order or prospective paper day was added.
