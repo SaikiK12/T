@@ -1,0 +1,8 @@
+{
+  "control": "one invented native known_cash_component increased by0.01 in a fresh copy",
+  "corrupted_results_sha256": "afd755b930611f6c5b9304007159962afd527537ea9175a0d8c72f5f6b9bc2c9",
+  "exit_code": 1,
+  "expected_failure": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/workspace/T-opportunity-admission/scripts/check_settlement_account.py\", line 135, in main\n    c.near(row['known_cash_component'], initial + realized + funding - fee, 'native cash conservation')\n  File \"/workspace/T-opportunity-admission/scripts/check_settlement_account.py\", line 35, in near\n    raise AssertionError((label, actual, str(expected)))\nAssertionError: ('native cash conservation', '4998.011998001998001998001998', '2499000999000999000999000999000999000999000999000999000999000999000999000999000999/500000000000000000000000000000000000000000000000000000000000000000000000000000')\n",
+  "original_results_sha256": "46c42cd020b7229ad312688646c441120c347d276e161572ab8a15eb0e6f5f02",
+  "original_unchanged": true
+}
