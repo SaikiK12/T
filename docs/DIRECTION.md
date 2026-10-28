@@ -6,15 +6,20 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
-## Now (2026-10-28, 14:00 UTC)
+## Now (2026-10-28, 14:45 UTC)
 - **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
   lab, and a clean PR. The plan is the last section, "Intraday through the day".
-- **Best lead:** the settlement hop (M267). It passes at gate 0 on seen data: closed at T + 5 min, +50.5 bp a hop at
-  1x, about one hop a week (R354, R356). R355 runs it forward on MEXC + Lighter, with 0 scored hops so far.
+- **Best lead: the settlement scalp on Lighter (R363, gate 0, recorded PARTIAL).** Short Lighter at the last trade
+  before a deep negative Binance settlement and cover a minute after. On 134 hops held out from R356 it netted +23.4 bp
+  a hop at 1x (t 4.34) and +15.8 at 3x, after paying Lighter's own settlement at T. The hops were not blind: R362 had
+  read their Binance seconds. About one event every two days on coins Lighter lists.
+- **Closed today:** the Binance seconds scalp (R362, NULL). The move, about 85 bp, is done within 15 s of T, before
+  Binance's stated funding deviation lets a position open safely.
 - **Paper:** 14 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day that counts toward
-  a decision, and no money has moved.
-- **Next:** R362, the seconds after a deep settlement on Binance's tick archive. Then a quick-exit forward lane, and
-  the reserved batch 1 read on 2026-11-03.
+  a decision, and no money has moved. R355 runs the hedged hop forward on MEXC + Lighter.
+- **Next:** a forward paper lane for the Lighter scalp under a new id. It triggers on Binance's displayed rate as
+  Lighter's public feed reports it, walks Lighter's live book at both orders, and records Lighter's book, trades and
+  settlement around T. Then the reserved batch 1 read on 2026-11-03.
 
 ## Context
 
@@ -790,6 +795,24 @@ and clean your pr etc".
 4. **Reserved batch 1 reads on 2026-11-03** as frozen (R286).
 5. **R300's pick stays a reserved batch-2 candidate.** Its daily SD is about 650 bp, so paper would need about four
    years even at +40 bp a day.
+
+**Update (2026-10-28, 14:45 UTC)**
+- **R362 (NULL):** on Binance's ticks the price moves against the receiving side by +44 bp within 1 s of T, +65 by 2 s
+  and +85 by 15 s. A taker entering at T + 15 s nets −11.6 bp a hop at 1x. Item 3 above is closed: no seconds scalp on
+  Binance. The settlement tape recorder is still needed, for the venue that holds the position.
+- **R363 (PASS at gate 0, recorded PARTIAL):** the same move taken on Lighter by a position opened before T. +23.4 bp a
+  hop at 1x on 134 hops R356 never read, after Lighter's settlement at T (−12.9 bp) and its book (3.8 bp a round trip
+  at $1k). The hops were not blind: R362 read their Binance seconds first.
+- **Next, replacing items 2 and 3:**
+  1. **A forward paper lane for the Lighter scalp,** under a new id, frozen before its first ticket.
+     - The trigger is Binance's displayed rate, as Lighter's public `funding-rates` feed reports it. Binance's own
+       API answers HTTP 451 here, and the lab does not route around it.
+     - Each ticket walks Lighter's live book for a $1k order before T and again at T + 1 min.
+     - It records Lighter's book and trades from T − 2 min to T + 5 min and its settlement at T, so fills and timing
+       are measured.
+     - It takes Codex's R357 accounting points.
+  2. **The quick-exit hedged lane (R356's earn)** waits behind it. The Lighter scalp holds the same short leg without
+     the Binance leg that gives back 37 bp.
 
 **Organization (2026-10-28):**
 - The README opens with "At a glance": money status, live leads, closed directions, how to work here.

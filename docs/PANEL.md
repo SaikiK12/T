@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 13:55 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 14:35 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 33 |
 | Ideas partly tested | 46 |
 | Ideas blocked (data, download, compute) | 96 |
-| Rounds in the registry | 161 (NULL 90, PARTIAL 33, PENDING 24, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,093 |
+| Rounds in the registry | 163 (NULL 91, PARTIAL 34, PENDING 24, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,106 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 14 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -125,13 +125,13 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R347 | tapelag_lighter_v1 | ABANDONED | PENDING | 0 |
-| R348 | tapelag_lighter_v2 | DONE | NULL | 6 |
 | R349 | minflow_v1 | DONE | PARTIAL | 57 |
 | R351 | minflow_alts_v1 | DONE | NULL | 1 |
 | R353 | settlehop_v1 | DONE | NULL | 12 |
 | R354 | settlehop_pred_v1 | DONE | PARTIAL | 6 |
 | R355 | settlehop_fwd | RUNNING | PENDING | 1 |
 | R356 | settlehop_exit_v1 | DONE | PARTIAL | 5 |
+| R362 | settleticks_v1 | DONE | NULL | 7 |
+| R363 | settlelit_v1 | DONE | PARTIAL | 6 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
