@@ -6,6 +6,16 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
+## Now (2026-10-28, 14:00 UTC)
+- **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
+  lab, and a clean PR. The plan is the last section, "Intraday through the day".
+- **Best lead:** the settlement hop (M267). It passes at gate 0 on seen data: closed at T + 5 min, +50.5 bp a hop at
+  1x, about one hop a week (R354, R356). R355 runs it forward on MEXC + Lighter, with 0 scored hops so far.
+- **Paper:** 14 lanes are registered as running ([PANEL](PANEL.md)). None has a strict on-time day that counts toward
+  a decision, and no money has moved.
+- **Next:** R362, the seconds after a deep settlement on Binance's tick archive. Then a quick-exit forward lane, and
+  the reserved batch 1 read on 2026-11-03.
+
 ## Context
 
 **What we want:** the best net PnL the owner can actually trade (MEXC perps first), proven on days nobody had seen,
@@ -722,6 +732,9 @@ of that venue's measured cost.
     ([FINDINGS](../experiments/settlehop_exit_v1/FINDINGS.md)).
 
 **Next, in order (revised 2026-10-28, after R355's freeze)**
+
+Superseded at 14:00 UTC the same day by the list in "Intraday through the day" below.
+
 1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
 2. **R355 runs by itself** (hourly `ensure` in the forward loop). Each check: the daemon holds its lock, decisions
    come at T − 1 h for the 4 h settlement hours, and skipped candidates carry a reason. Its first MEXC decision is
@@ -739,3 +752,46 @@ of that venue's measured cost.
 
 No orders. A real trade needs paper to show a net gain first, then `lab.gate.go_real()`, small stakes, and the owner
 placing it.
+
+## Intraday through the day (owner, 2026-10-28, 13:42 UTC)
+The owner: "We need a hft trading with good pnl troughout the day etc and please organize better your quant lab etc
+and clean your pr etc".
+
+**What the lab can and cannot do at high frequency**
+- **Out of reach: market making and latency arbitrage.** They need colocated servers, sub-millisecond reaction,
+  rebates and queue priority. Our routes are Lighter (fee 0, about 300 ms of delay) and MEXC's API (6 / 8 bp).
+  - R348 measured the limit: Lighter's makers close a gap to Binance's quote within a second, so taker scalps lose
+    their 0.7-1 bp cost.
+  - R349 and R351: minute-scale flow fades on liquid perps have decayed to about 0 since 2025-07.
+- **Within reach: flows that arrive at a known time and take longer than our delay to clear.** A funding settlement
+  is one. The capture crowd buys the receiving side before T and sells it right after T. R356 saw the whole
+  giveback inside the first minute after T.
+- **Through the day:** settlements come every 1, 4 or 8 h on many coins and venues, so a settlement book can trade
+  at any hour. At R354's thresholds, on coins Lighter lists, there were about 0.36 events a day at θ 0.3% and one a
+  week at θ 0.5%. More events need lower thresholds, more coins and the other venues' own settlements, and each of
+  those has to be measured first.
+
+**Next, in order**
+1. **R362 `settleticks_v1` (gate 0):** Binance's tick archive (aggTrades) around R354's 221 θ 0.3% settlements, from
+   10 minutes before to 15 minutes after T.
+   - It measures how fast the price falls after T, second by second.
+   - It tests whether a taker who trades against the receiving side 1-5 s after T, and closes 30 s to 5 min later,
+     beats Binance's 8.5 bp a side at 1x, 2x and 3x.
+   - The 134 hops below θ 0.5% never had their post-settlement path read, so they are a check.
+   - Only the windows are kept (tens of MB). The daily files stream through, each checked against Binance's sha256.
+2. **A quick-exit forward lane** under a new id, on MEXC + Lighter, as R356 earned it: close right after T.
+   - It takes Codex's R357 accounting points: close the quantity opened, never fill beyond the shown book, and charge
+     fees on the exit notional.
+   - R355 keeps running unchanged.
+3. **If R362 finds a move that a 1-2 s taker keeps:**
+   - First a settlement tape recorder on MEXC, Lighter and Binance (books and trades from T − 2 min to T + 5 min
+     around each deep settlement).
+   - Then a forward scalp lane on the cheapest route.
+4. **Reserved batch 1 reads on 2026-11-03** as frozen (R286).
+5. **R300's pick stays a reserved batch-2 candidate.** Its daily SD is about 650 bp, so paper would need about four
+   years even at +40 bp a day.
+
+**Organization (2026-10-28):**
+- The README opens with "At a glance": money status, live leads, closed directions, how to work here.
+- This file opens with "Now".
+- PR #1's description is a current overview of the lab instead of its first week's notes.
