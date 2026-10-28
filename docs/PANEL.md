@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 00:57 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 13:55 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 33 |
 | Ideas partly tested | 46 |
 | Ideas blocked (data, download, compute) | 96 |
-| Rounds in the registry | 160 (NULL 90, PARTIAL 32, PENDING 24, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,088 |
+| Rounds in the registry | 161 (NULL 90, PARTIAL 33, PENDING 24, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,093 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 14 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -40,10 +40,10 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R215 mexc_fwd | flow books A and B, one bar late | 7 / 90 on-time days | -5.1% | -5.2% / -5.4% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
 | R218 mexc_fwd_sq | flow book X2 (k squared) | 7 / 90 on-time days | -11.4% | -11.8% / -12.1% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
 | R220 carry_fwd | funding carry (R191 rule) | 7 / 90 on-time days | -0.1% | -0.1% / -0.1% | go_real at 90 on-time days | UNASSESSED |
-| R200 flow72_fwd2 | flow books A and B | 8 / 90 on-time days | -10.2% | -10.5% / -10.8% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
+| R200 flow72_fwd2 | flow books A and B | 9 / 90 on-time days | -5.8% | -6.2% / -6.5% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
 | R214 flow72_fwd3 | A and B one bar late (delay check) | 7 / 90 on-time days | -10.3% | -10.5% / -10.8% | same days as R200 | UNASSESSED |
 | R225 vt_fwd | volatility target on A, B, X2 | 7 / 365 on-time days | -5.0% | -5.1% / -5.3% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
-| R266 unlocks_fwd | unlock short, D-7 to unlock | 0 / 120 scored tickets | - | - / - | pending (0 of 120 scored) | UNASSESSED |
+| R266 unlocks_fwd | unlock short, D-7 to unlock | 1 / 120 scored tickets | -1.5% | -1.7% / - | pending (1 of 120 scored) | UNASSESSED |
 | R268 delist_fwd | spot delisting-notice short +1 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R270 montag_fwd | Monitoring Tag short +24 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R272 announce_fwd | funding-frequency long 1 h; pre-listing short 168 h | 0 / 12 scored notices per book (least observed book) | - | - / - | FF pending (0 of 12 scored notices); PL pending (0 of 12 scored notices) | UNASSESSED |
@@ -125,7 +125,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R337 | levels_lighter_v1 | DONE | NULL | 6 |
 | R347 | tapelag_lighter_v1 | ABANDONED | PENDING | 0 |
 | R348 | tapelag_lighter_v2 | DONE | NULL | 6 |
 | R349 | minflow_v1 | DONE | PARTIAL | 57 |
@@ -133,5 +132,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R353 | settlehop_v1 | DONE | NULL | 12 |
 | R354 | settlehop_pred_v1 | DONE | PARTIAL | 6 |
 | R355 | settlehop_fwd | RUNNING | PENDING | 1 |
+| R356 | settlehop_exit_v1 | DONE | PARTIAL | 5 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

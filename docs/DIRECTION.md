@@ -708,6 +708,19 @@ of that venue's measured cost.
     be computed later; no margin model is run here. Gate + Lighter and the API fee (8 bp) are reported only
     ([PREREG](../experiments/settlehop_fwd/PREREG.md)).
 
+- **R356 (`settlehop_exit_v1`): PASS by its frozen rule, gate 0 on R354's hops (2026-10-28), recorded PARTIAL, 5
+  trials.** R354's 87 primary hops, entered as R354 entered them, closed at the 1-minute close of T + 1, 2, 5, 15 or
+  30 minutes instead of T + 1 h (Binance 1-minute archive, sha256-checked; Lighter 1-minute candles).
+  - **Primary T + 5:** +50.5 / +30.1 / +9.6 bp a hop at 1x / 2x / 3x (R354: +30.9 / +10.4 / −10.0), +1.41 bp a day,
+    t 4.08. The paired gain over T + 60 is +19.6 bp a hop (CR1 t 3.99), and all five exits pass.
+  - **Mostly funding:** +15.2 bp of the gain is Lighter's T + 1 h settlement no longer paid, known before the run. The
+    price part is +4.4 (t 1.22).
+  - **The giveback is in the first minute:** the hedged price falls 37.6 bp between the last trade before T and the
+    close of T + 1 (85% of hops) and stays flat after. The capture crowd sells the moment the lump is paid.
+  - **Steadier:** the 10 best days hold 48% of the sum (R354: 72%); without them t 3.77. Positive at 3x.
+  - It earns a quick-exit forward lane on MEXC + Lighter under a new id; R355 runs unchanged
+    ([FINDINGS](../experiments/settlehop_exit_v1/FINDINGS.md)).
+
 **Next, in order (revised 2026-10-28, after R355's freeze)**
 1. **Reserved batch 1 reads on 2026-11-03** as frozen (R286, 10 candidates).
 2. **R355 runs by itself** (hourly `ensure` in the forward loop). Each check: the daemon holds its lock, decisions

@@ -1,29 +1,44 @@
 {
- "scored": 0,
- "mean_net": null,
+ "scored": 1,
+ "mean_net": -0.0152372783150883,
  "t_net": NaN,
- "mean_net_2x": null,
- "mean_gross": null,
- "mean_funding": null,
- "hit": null,
+ "mean_net_2x": -0.0171370681679853,
+ "mean_gross": -0.0152160681679853,
+ "mean_funding": 0.002079,
+ "hit": 0.0,
  "liq_flags": {
   "1x": 0,
   "2x": 0,
   "3x": 0
  },
  "binance_listed": {
-  "n": 0,
-  "mean_net": null
+  "n": 1,
+  "mean_net": -0.0152372783150883
  },
  "mexc_only": {
   "n": 0,
-  "mean_net": null
+  "mean_net": NaN
  },
- "go_real": null,
+ "go_real": {
+  "n": 1,
+  "mean": -0.0152372783150883,
+  "hit": 0.0,
+  "worst": -0.0152372783150883,
+  "invalid_n": 0,
+  "n_clusters": 1,
+  "checks": {
+   "finite_returns": true,
+   "enough_scored": false,
+   "mean_positive": false,
+   "hit_rate": false,
+   "no_tail_event": true
+  },
+  "pass": false
+ },
  "dose": {
   "1-2%": {
-   "n": 0,
-   "mean_net": null
+   "n": 1,
+   "mean_net": -0.0152372783150883
   },
   "2-5%": {
    "n": 0,
@@ -34,18 +49,18 @@
    "mean_net": null
   }
  },
- "decision": "pending (0 of 120 scored)",
- "updated": "2026-10-28T00:21:17Z",
+ "decision": "pending (1 of 120 scored)",
+ "updated": "2026-10-28T01:21:11Z",
  "snapshot": "2026-10-28.json.gz",
  "tickets": 2,
- "open": 2,
+ "open": 1,
  "skipped": {
   "missed": 5,
   "no_contract": 2
  },
  "new_tickets": [],
- "book_equity": 1.0,
- "book_max_drawdown": 0.0,
+ "book_equity": 0.9981302932068083,
+ "book_max_drawdown": -0.0021882455425563663,
  "next_entries": [
   "2026-11-03T00:00:00Z MOVE"
  ]

@@ -32,8 +32,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (137)
+## Other registered rounds (done, registered or planned) (138)
 
+- **[settlehop_exit_v1](settlehop_exit_v1/)** R356, DONE PARTIAL, 5 trials. R354's 87 settlement hops (Binance + Lighter, theta 0.5%) closed at the 1-minute close of T + 1/2/5/15/30 min instead of T + 1 h; entry, funding at T and costs R354's; primary T + 5 ([PREREG](settlehop_exit_v1/PREREG.md), [FINDINGS](settlehop_exit_v1/FINDINGS.md))
 - **[settlehop_pred_v1](settlehop_pred_v1/)** R354, DONE PARTIAL, 6 trials. Settlement-window hop (M267) on a point-in-time predicted rate: Binance's premium formula rebuilt at T-1h (F = [P + clamp(0.01% - P, +-0.05%)] x m/8), the 4/8 h venue's lump hedged on hourly Lighter, T-1h to T+1h; {Binance, MEXC, Gate} x theta 0.3/0.5% ([PREREG](settlehop_pred_v1/PREREG.md), [FINDINGS](settlehop_pred_v1/FINDINGS.md))
 - **[settlehop_v1](settlehop_v1/)** R353, DONE NULL, 12 trials. Settlement-window hop (M267): collect a 4/8 h venue's funding lump (MEXC, Binance, Gate) hedged on an hourly venue (Lighter, dYdX), T-1h to T+1h, on the last settled rate; 6 pairs x theta 0.3/0.5% ([PREREG](settlehop_v1/PREREG.md), [FINDINGS](settlehop_v1/FINDINGS.md))
 - **[minflow_alts_v1](minflow_alts_v1/)** R351, DONE NULL, 1 trial. R349's frozen pick (flow fade k5 h5, M426), unchanged, on nine more coins' unread 1-minute bars (BNB XRP TRX AVAX LINK DOGE SUI ADA LTC) at each coin's Lighter $1k walk, 2021-04..2026-09 ([PREREG](minflow_alts_v1/PREREG.md), [FINDINGS](minflow_alts_v1/FINDINGS.md))
