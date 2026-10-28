@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-28 14:35 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-28 18:50 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,9 +24,9 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 33 |
 | Ideas partly tested | 46 |
 | Ideas blocked (data, download, compute) | 96 |
-| Rounds in the registry | 163 (NULL 91, PARTIAL 34, PENDING 24, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,106 |
-| Paper lanes registered RUNNING/ARMED (process activity unverified) | 14 |
+| Rounds in the registry | 164 (NULL 91, PARTIAL 34, PENDING 25, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,107 |
+| Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
 | Next decision | observation-count dependent; each frozen lane specifies its looks |
@@ -51,6 +51,7 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 1 / 90 on-time days | -0.1% | -0.1% / -0.2% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R355 settlehop_fwd | settlement hop on the displayed funding rate (MEXC decided, Gate reported) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2028-03-01 | UNASSESSED |
+| R364 settlelit_fwd | settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28 | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
 Processing lag of on-time hours: 183 hours, median 588.8 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27.
@@ -87,6 +88,7 @@ Process state, declared data checks and statistical eligibility are separate.
 | R279 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R294 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R355 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R364 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R285 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | LAG | Data integrity | UNKNOWN | UNVERIFIED | None |
 | PANEL | Reporting | UNKNOWN | UNVERIFIED | None |
@@ -125,7 +127,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R349 | minflow_v1 | DONE | PARTIAL | 57 |
 | R351 | minflow_alts_v1 | DONE | NULL | 1 |
 | R353 | settlehop_v1 | DONE | NULL | 12 |
 | R354 | settlehop_pred_v1 | DONE | PARTIAL | 6 |
@@ -133,5 +134,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R356 | settlehop_exit_v1 | DONE | PARTIAL | 5 |
 | R362 | settleticks_v1 | DONE | NULL | 7 |
 | R363 | settlelit_v1 | DONE | PARTIAL | 6 |
+| R364 | settlelit_fwd | RUNNING | PENDING | 1 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

@@ -46,7 +46,8 @@ def forward_tasks(python=".venv/bin/python"):
     does R270. R278/R279/R294 fetch their own carry inputs under separate locks.
     R285 reads R278/R279, flow and event journals, so those lanes are optional
     for it; R294 is not a sleeve in its frozen book. R355 only makes sure its own daemon
-    (scripts/forward_settlehop.py run) is up; the daemon decides at hh:00:20.
+    (scripts/forward_settlehop.py run) is up; the daemon decides at hh:00:20. R364 does the same for
+    scripts/forward_settlelit.py, whose daemon decides at T - 1 h + 20 s for each 4 h settlement T.
 
     R200 is listed first, so it starts first: it reads nothing from the
     recorders, and scripts/forward_lag.py counts an hour it computes more than
@@ -92,6 +93,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R279", "forward_xfund_kc.py", timeout=1500),
         task("R294", "forward_xfund_lt.py", timeout=1500),
         task("R355", "forward_settlehop.py", timeout=60),   # starts the lane's hourly daemon if it is down
+        task("R364", "forward_settlelit.py", timeout=60),   # starts the lane's settlement daemon if it is down
         task("R285", "forward_xbook.py", (),
              ("R278", "R279", "R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
@@ -152,6 +154,10 @@ LANES = (
          "MEXC + Lighter", "manual-web", 80,
          "futility at 20/40 hops; PASS at 40 if CR1 t >= 2.97, else at 80 or 2028-03-01 if t >= 2.10; 2x > 0",
          kind="event", unit="scored hops"),
+    Lane("R364", "settlelit_fwd", "settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s)",
+         "Lighter (Binance's rate)", "API", 80,
+         "futility at 20/40 hops; PASS at 40 if CR1 t >= 2.80, else at 80 or 2027-10-28 if t >= 1.98; 2x > 0",
+         kind="event", unit="scored hops"),
     Lane("R285", "xbook_fwd", "cross-family derived book", "Multiple venues", "mixed", 180,
          "180/365 final-day sequential looks; native and gate decisions remain separate", kind="derived"),
 )
@@ -190,6 +196,7 @@ LABELS.update({
     "R279": ("Prospective paper", "KuCoin cross-venue carry", "xfund_kc_fwd"),
     "R294": ("Prospective paper", "Lighter cross-venue carry", "xfund_lt_fwd"),
     "R355": ("Prospective paper", "Settlement hop on the displayed funding rate", "settlehop_fwd"),
+    "R364": ("Prospective paper", "Lighter settlement scalp on Binance's predicted rate", "settlelit_fwd"),
     "R285": ("Prospective paper", "Cross-family derived book", "xbook_fwd"),
     "CATALOG": ("Reporting", "Repository catalogs", "vt_fwd"),
 })

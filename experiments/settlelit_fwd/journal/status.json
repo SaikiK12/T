@@ -1,0 +1,84 @@
+{
+ "registry": "R364",
+ "updated": "2026-10-28T18:49:57Z",
+ "state": "PENDING",
+ "decision": "0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28",
+ "scored": 0,
+ "mean_net": null,
+ "mean_net_2x": null,
+ "mean_net_3x": null,
+ "t_cr1": null,
+ "trimmed10": null,
+ "leave_two_coins_out": null,
+ "go_real": {
+  "pass": false,
+  "n": 0,
+  "mean": null,
+  "hit": null,
+  "worst": null,
+  "n_clusters": 0,
+  "checks": {
+   "finite_returns": true,
+   "enough_scored": false,
+   "mean_positive": false,
+   "hit_rate": false,
+   "no_tail_event": false
+  }
+ },
+ "decisions": 0,
+ "decision_errors": 0,
+ "selected": 0,
+ "tickets": 0,
+ "open": 0,
+ "not_entered": 0,
+ "rest_exits": 0,
+ "books": {
+  "primary th0.3%": {
+   "scored": 0,
+   "net1": null,
+   "net2": null,
+   "net3": null,
+   "hit": null
+  },
+  "th0.5%": {
+   "scored": 0,
+   "net1": null,
+   "net2": null,
+   "net3": null,
+   "hit": null
+  },
+  "all scored": {
+   "scored": 0,
+   "net1": null,
+   "net2": null,
+   "net3": null,
+   "hit": null
+  }
+ },
+ "variants (1x, primary hops)": {
+  "in300_out60": {
+   "n": 0,
+   "net1": null
+  },
+  "in300_out120": {
+   "n": 0,
+   "net1": null
+  },
+  "in300_out300": {
+   "n": 0,
+   "net1": null
+  },
+  "in10_out60": {
+   "n": 0,
+   "net1": null
+  },
+  "in10_out120": {
+   "n": 0,
+   "net1": null
+  },
+  "in10_out300": {
+   "n": 0,
+   "net1": null
+  }
+ }
+}

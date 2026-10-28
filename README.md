@@ -14,7 +14,7 @@ that counts toward a decision yet ([PANEL](docs/PANEL.md)). The owner now wants 
 
 | Lead | Best evidence so far | Now |
 |---|---|---|
-| **Settlement scalp on Lighter:** short Lighter at the last trade before a deep negative Binance settlement, cover a minute after | +23.4 bp a hop at 1x (t 4.34), +15.8 at 3x, on 134 hops held out from R356 but not blind: R362 had read their Binance seconds. About one event every two days ([R363](experiments/settlelit_v1/FINDINGS.md)) | A forward paper lane on Lighter's live book, frozen before its first ticket |
+| **Settlement scalp on Lighter:** short Lighter at the last trade before a deep negative Binance settlement, cover a minute after | +23.4 bp a hop at 1x (t 4.34), +15.8 at 3x, on 134 hops held out from R356 but not blind: R362 had read their Binance seconds. About one event every two days ([R363](experiments/settlelit_v1/FINDINGS.md)) | R364 paper on Lighter's live book, from 2026-10-28 20:00 UTC ([PREREG](experiments/settlelit_fwd/PREREG.md)) |
 | **Settlement hop:** hold the side that receives a deep funding lump on Binance, hedged on Lighter, from T − 1 h to T + 5 min | +50.5 bp a hop at 1x, t 4.08, about one hop a week; most of the gain over R354's T + 1 h exit is a funding hour not paid ([R354](experiments/settlehop_pred_v1/FINDINGS.md), [R356](experiments/settlehop_exit_v1/FINDINGS.md)) | R355 paper on MEXC + Lighter |
 | **Funding carry** (short perp, long spot) | The only holdout pass, at 1x only, about 1%/yr ([R191](experiments/carry_holdout/)) | R220 paper |
 | **Flow books A, B, X2** (72 h order-flow shorts) | Strong in-sample; holdout not confirmed ([R198](experiments/flow72_holdout/), [R216](experiments/venue_gap_v1/)) | R200, R215, R218, R221 paper, all negative so far |

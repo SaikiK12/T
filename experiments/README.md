@@ -12,8 +12,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (17)
+## Running or armed registered rounds (18)
 
+- **[settlelit_fwd](settlelit_fwd/)** R364, RUNNING PENDING, 1 trial. R363's Lighter settlement scalp forward on paper: Binance's live predicted rate at T-1h+20s vs Lighter's last hourly rate (e = r - 2h), position on Lighter against the side receiving Binance's lump, $1k walked through Lighter's live book at T-10 s and T+60 s, Lighter's own settlement at T ([PREREG](settlelit_fwd/PREREG.md), [journal](settlelit_fwd/journal/))
 - **[settlehop_fwd](settlehop_fwd/)** R355, RUNNING PENDING, 1 trial. R354's settlement hop forward on paper: MEXC's displayed rate at T-1h vs Lighter's hourly rate (e = F - 2h), two $1k legs walked through the live books, held T-1h to T+1h (MEXC decided, Gate reported) ([PREREG](settlehop_fwd/PREREG.md), [journal](settlehop_fwd/journal/))
 - **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
 - **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))

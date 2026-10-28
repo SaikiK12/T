@@ -51,7 +51,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (21)
+## Forward: paper lanes and the loops that run them (22)
 
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
@@ -65,6 +65,7 @@ line is the first line of the script's own docstring.
 - [`forward_montag.py`](forward_montag.py): R270 montag_fwd: the Monitoring Tag short at +24 h, forward on MEXC paper (experiments/montag_fwd/PREREG.md).
 - [`forward_seq.py`](forward_seq.py): mexc_seq (R221): the sequential decision for the MEXC flow books A, X2 and B, as set out in experiments/mexc_seq/PREREG.md.
 - [`forward_settlehop.py`](forward_settlehop.py): R355 settlehop_fwd: R354's settlement hop, forward on paper, on the funding rate a trader sees, hedged on Lighter.
+- [`forward_settlelit.py`](forward_settlelit.py): R364 settlelit_fwd: R363's Lighter settlement scalp, forward on paper, on Binance's live predicted funding rate.
 - [`forward_tick.py`](forward_tick.py): flow72_fwd2 (R200): one forward tick, as set out in experiments/flow72_fwd2/PREREG.md.
 - [`forward_unlocks.py`](forward_unlocks.py): unlocks_fwd (R266): the unlock short forward on MEXC paper, as set out in experiments/unlocks_fwd/PREREG.md.
 - [`forward_vt.py`](forward_vt.py): vt_fwd (R225): R217's volatility target (rule R1) applied forward to the MEXC flow books A and B (R215) and X2 (R218), warmed up on R217's archived daily nets, as set out in ...
@@ -245,11 +246,12 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (42)
+## Tools and everything else (44)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
+- [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
 - [`check.py`](check.py): One offline unittest entry point: full release gate or bounded feedback.
 - [`dashboard_data.py`](dashboard_data.py): Export the lab's state as the dashboard's datasets: dashboard/data/<id>.json, one array of row objects each.
@@ -281,6 +283,7 @@ line is the first line of the script's own docstring.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
 - [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
+- [`settlelit_fwd_rule.py`](settlelit_fwd_rule.py): R364 settlelit_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).
