@@ -7,7 +7,8 @@ that cannot be acted on from here. 100 ms buckets keep exactly the part of a cro
 tenth of the rows. Each bucket with at least one update is one row holding the last quote, the number of updates, the
 local-minus-event delay of that update and its offset inside the bucket; trade rows hold the buy and sell aggressor
 counts, quantities and the extreme price each side printed (the trade-through price a passive order would need).
-Quiet buckets have no row: forward-fill the book, treat a missing trade row as no trades. Hyperliquid's public trade
+Quiet buckets have no row: forward-fill the book, treat a missing trade row as no trades. Files hold sizes as integer
+thousandths of a coin; `load(kind, day)` returns a finished day in coin units. Hyperliquid's public trade
 stream names both wallets of every fill; those fills are kept one row each (kind "fills", users as the feed sends
 them, documented as buyer then seller and still to be checked against the side before use). Order placements and
 cancels, the flow the anticipatory queue idea needs, are not on the public channels read here and are not recorded.
@@ -39,7 +40,10 @@ import sys
 import time
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+import pyarrow as pa
+import pyarrow.parquet as pq
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "hft"
@@ -60,6 +64,8 @@ TRADE_COLS = ["t", "v", "s", "nb", "qb", "hb", "ns", "qs", "ls", "lag"]
 FILL_COLS = ["t", "s", "side", "px", "sz", "buyer", "seller", "tid", "lag"]
 KINDS = {"book": (BOOK_COLS, ["t", "v", "s"]), "trades": (TRADE_COLS, ["t", "v", "s"]),
          "fills": (FILL_COLS, ["tid"])}            # frame columns, and the columns that identify a row
+SIZE_UNIT = 1000                                   # files hold sizes (bq, aq, qb, qs) in thousandths of a coin
+SIZE_COLS = {"book": ("bq", "aq"), "trades": ("qb", "qs")}
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
@@ -115,8 +121,9 @@ class Buckets:
         if cur is False:
             return
         n = cur[7] + 1 if cur is not None else 1
-        lag = int(round(rx_ms - ev_ms))
-        self.open["book"][(venue, sym)] = [t, venue, sym, bid, bq, ask, aq, n, lag, int(rx_ms - t)]
+        lag = int(round(rx_ms - ev_ms))       # sizes stay floats even when whole: `pack` tells coins from thousandths
+        self.open["book"][(venue, sym)] = [t, venue, sym, float(bid), float(bq), float(ask), float(aq), n, lag,
+                                           int(rx_ms - t)]
 
     def on_trade(self, venue, sym, price, qty, sell, ev_ms, rx_ms):
         if not (price > 0 and qty > 0):
@@ -205,6 +212,44 @@ def hyperliquid(m):
              d["time"])]
 
 
+def pack(df, kind):
+    """The file form of a frame: sizes in integer thousandths of a coin (a size is queue depth, not a price, and the
+    integers compress about three times better than floats), small counters as int32. Idempotent."""
+    df = df.copy()
+    for c in SIZE_COLS.get(kind, ()):
+        if df[c].dtype.kind == "f":
+            df[c] = np.minimum(np.round(df[c] * SIZE_UNIT), 2**62).astype("int64")
+        if kind == "book":
+            df[c] = np.minimum(df[c], 2**31 - 1).astype("int32")
+    for c in ("n", "lag", "ro", "nb", "ns"):
+        if c in df:
+            df[c] = df[c].astype("int32")
+    if kind == "fills":
+        df["lag"] = df["lag"].astype("int32")
+    return df
+
+
+def unpack(df, kind):
+    """The analysis form of a file frame: sizes in coins as floats. Idempotent."""
+    df = df.copy()
+    for c in SIZE_COLS.get(kind, ()):
+        if df[c].dtype.kind in "iu":
+            df[c] = df[c].astype("float64") / SIZE_UNIT
+    return df
+
+
+def save(df, path):
+    """Zstd parquet with the time column delta-encoded: its 100 ms steps cost about a byte a row instead of four."""
+    pq.write_table(pa.Table.from_pandas(df, preserve_index=False), path, compression="zstd", compression_level=9,
+                   use_dictionary=[c for c in df.columns if c != "t"], column_encoding={"t": "DELTA_BINARY_PACKED"})
+
+
+def load(kind, day, out=OUT):
+    """One finished day as a frame in coin units, or None when its daily file does not exist."""
+    p = out / kind / f"{day}.parquet"
+    return unpack(pd.read_parquet(p), kind) if p.exists() else None
+
+
 def write_parts(frames, now_ms, parts=PARTS):
     """One parquet per (kind, UTC day) of the drained rows; returns the rows written."""
     n = 0
@@ -217,7 +262,7 @@ def write_parts(frames, now_ms, parts=PARTS):
             d = parts / kind / day
             d.mkdir(parents=True, exist_ok=True)
             tmp = d / f".{stamp}.tmp"
-            g.to_parquet(tmp, index=False, compression="zstd")
+            save(pack(g, kind), tmp)
             tmp.rename(d / f"{stamp}.parquet")
             n += len(g)
     return n
@@ -234,7 +279,7 @@ def compact(now_ms=None, parts=PARTS, out=OUT):
             continue
         files = sorted(d.glob("*.parquet"))
         dst = out / kind / f"{day}.parquet"
-        frames = ([pd.read_parquet(dst)] if dst.exists() else []) + [pd.read_parquet(f) for f in files]
+        frames = [unpack(pd.read_parquet(f), kind) for f in ([dst] if dst.exists() else []) + files]
         if not frames:
             d.rmdir()
             continue
@@ -243,7 +288,7 @@ def compact(now_ms=None, parts=PARTS, out=OUT):
         df = df.drop_duplicates(subset=KINDS[kind][1], keep="last", ignore_index=True)
         dst.parent.mkdir(parents=True, exist_ok=True)
         tmp = dst.with_suffix(".tmp")
-        df.to_parquet(tmp, index=False, compression="zstd")
+        save(pack(df, kind), tmp)
         if len(pd.read_parquet(tmp, columns=["t"])) != len(df):
             raise RuntimeError(f"{dst}: read-back row count differs; parts kept")
         tmp.replace(dst)

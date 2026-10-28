@@ -185,6 +185,43 @@ class FilesTests(unittest.TestCase):
             self.assertEqual(pd.read_parquet(out / "fills" / "2026-10-27.parquet").tid.tolist(),
                              [day + 1000, day + 1001, day + 1002])
 
+    def test_files_hold_sizes_as_thousandths_and_load_returns_coins(self):
+        day = pd.Timestamp("2026-10-27", tz="UTC").value // 10**6
+        b = rh.Buckets()
+        b.on_book("binance", "ETHUSDC", 2356.26, 4.105, 2356.27, 28.46, day + 10, day + 1050)
+        b.on_book("binance", "ETHUSDC", 2356.26, 4.1054, 2356.27, 0.0004, day + 20, day + 1150)
+        b.on_trade("binance", "ETHUSDC", 2356.2, 0.25, True, day + 10, day + 1050)
+        frames = b.drain()
+        packed = rh.pack(frames[0], "book")
+        self.assertEqual((packed.bq.dtype, packed.bq.tolist(), packed.aq.tolist()), ("int32", [4105, 4105], [28460, 0]))
+        self.assertTrue(rh.pack(packed, "book").equals(packed))                   # idempotent
+        self.assertEqual(rh.unpack(packed, "book").bq.tolist(), [4.105, 4.105])
+        with tempfile.TemporaryDirectory() as d:
+            parts, out = Path(d) / "_parts", Path(d)
+            rh.write_parts(frames, day + 5000, parts)
+            self.assertIsNone(rh.load("book", "2026-10-27", out))                 # not merged yet
+            rh.compact(day + 2 * 86_400_000, parts, out)
+            book = rh.load("book", "2026-10-27", out)
+            self.assertEqual((book.bq.dtype, book.bq.tolist(), book.aq.tolist()),
+                             ("float64", [4.105, 4.105], [28.46, 0.0]))
+            self.assertEqual(pd.read_parquet(out / "book" / "2026-10-27.parquet").bq.dtype, "int32")
+            tr = rh.load("trades", "2026-10-27", out)
+            self.assertEqual((tr.qs.tolist(), tr.ls.tolist()), ([0.25], [2356.2]))
+
+    def test_a_part_written_with_float_sizes_merges_with_packed_ones(self):
+        day = pd.Timestamp("2026-10-27", tz="UTC").value // 10**6
+        with tempfile.TemporaryDirectory() as d:
+            parts, out = Path(d) / "_parts", Path(d)
+            old = self.frames(day + 1000)[0]
+            legacy = parts / "book" / "2026-10-27"
+            legacy.mkdir(parents=True)
+            old.to_parquet(legacy / "old.parquet", index=False)                  # float sizes, as the first run wrote
+            rh.write_parts(self.frames(day + 9000), day + 15000, parts)
+            rh.compact(day + 2 * 86_400_000, parts, out)
+            book = rh.load("book", "2026-10-27", out)
+            self.assertEqual((len(book), book.bq.dtype), (6, "float64"))
+            self.assertEqual(book.bq.tolist(), [1.0] * 6)
+
     def test_the_cap_and_the_free_floor_stop_writing(self):
         with tempfile.TemporaryDirectory() as d:
             out = Path(d)
