@@ -1,5 +1,10 @@
 # What proven traders let slip about how they make money (2026-10-21)
 
+The original collection figures below are a dated historical report. Current
+held-source coverage and actual reading are recorded in the appended
+2026-10-26/27 corpus section; an old running-job statement does not describe a
+process currently verified here.
+
 The owner's ask: find the interviews, talks and podcasts of people who made money trading, Tarek Elmarhri first.
 Look for the moments where they say more than they meant to about how the money is made. Then turn that into
 things the lab can test, or into a way to find opportunities ourselves, not just copy someone else's strategy.
@@ -356,3 +361,229 @@ Added from Whisper transcripts on 2026-10-22 (08:01 UTC rebuild: 358 windows for
   Kyle Samani, Sam Bankman-Fried), Virtu's Doug Cifu on payment for order flow, Top Traders Unplugged (Rob Carver),
   Ed Thorp's interview, Algorithmic Advantage 038 (Andrea Unger), Odds on Open (ex-Jane Street trader), Lightspeed
   (Jump's Michael McGee). The list with links is `data/videos/talks.csv`.
+
+## 2026-10-26: deeper practitioner rules, including their losing executions
+
+This pass reads **four complete publisher video transcripts and three method
+articles**, instead of another roster introduction. The received versions,
+57 strategy/variant/risk/process scopes, exact missing mechanics and aliases are
+in the [source bundle](../research/intake/practitioner_methods_20261026.json),
+imported into the existing intake. These are not 57 tested strategies.
+
+| Primary material read | Concrete information acquired | Evidence boundary |
+|---|---|---|
+| [Qullamaggie's own setups](https://qullamaggie.com/my-3-timeless-setups-that-have-made-me-tens-of-millions/) | Momentum-base breakout, catalyst pivot, parabolic short and separately disclosed collapse-long; opening-range/daily entries and partial/MA exits | Own claims and selected examples; no complete audited costed account. Linked streams and charts unread. |
+| [Unger Academy daily crypto/ATR transcript](https://ungeracademy.com/blog/volatility-position-sizing-adapting-your-strategies-to-market-volatility) | Next-day close-plus-true-range entry and day-end exit; fixed versus ATR-sized risk | Coach's optimized demonstration, not verified champion portfolio PnL. Entry true range differs from ATR sizing. |
+| [Unger Academy robustness transcript](https://ungeracademy.com/blog/how-to-figure-out-if-a-strategy-will-work-before-investing-your-money-in-it) | AMZN prior-session DF filter, timed breakout, stop/target; neighborhood, walk-forward and resampling alternatives | Exact entry code missing; original/WFA windows differ. Stressing optimized trades does not supply an independent sample. |
+| [Andrea Unger's public Daily Factor code](https://blog.ilgiornale.it/analisi-tecnica/2023/05/30/il-daily-factor-un-filtro-per-fare-trading-con-la-volatilita/) | Previous-session body/range filter, next-bar channel stops and monetary-stop alternatives | Source code read; original platform/order conventions and market outcomes not reproduced. |
+| [January student-strategy article](https://ungeracademy.com/blog/strategy-of-the-month-january-2025-a-trend-following-strategy-for-gold-wins) | NQ rolling Donchian/asymmetric filters; GC Bollinger/prior-DF and delayed MA exit | Code behind membership; missing patterns/stop values remain missing. Student backtest contest differs from real-money championship. |
+| [SMB GME review](https://www.smbtraining.com/blog/you-are-trading-better-than-you-think-2) | Multi-day extension context, failed VWAP reclaim, core/momentum lots, partial exits | Actual illustrated management is intraday; overnight holding is a proposed extension. No independently audited account. |
+| [SMB NVAX losing-trade review](https://www.smbtraining.com/blog/one-bad-trade-a-new-trader-education-video-series) | Lower-high/tape confirmation, price-only versus price-and-time stops, wick exit/re-entry and failed momentum attempts | Correct direction still lost through execution. The losing path is retained. Speakers are Bellafiore with junior traders, not Lance. |
+
+The official [organizer archive](https://www.worldcupchampionships.com/world-cup-trading-championship-historical-standings)
+lists Unger wins in 2008/2009/2010 and **Q4 2012**. It does not establish four
+annual results, which methods earned them, or their transfer to our capital,
+risk and fees. Qullamaggie's biography is self-report. No speaker's aggregate
+income is entered as our strategy's expected return.
+
+### Useful source-code distinctions
+
+The Daily Factor is `abs(O-C)/(H-L)` for the previous **session**, not a
+true-range forecast. Four separate rational examples verify that a wide doji
+can have DF zero and large true range, and a large overnight gap can leave DF
+zero. The snippet keeps the previous DF on a zero-range session. Its strict
+`DF < 1` condition excludes full-body candles, despite the prose describing
+that setting as filter-off. These details must survive any faithful port.
+
+The channel is 40 completed 30-minute bars, including the decision bar, for
+next-bar stop entries. Twenty trading hours are not automatically twenty UTC
+hours. The snippet does not settle OCO/dual hits, reversals, pyramiding, final
+exit or the monetary stop's contract convention. Its staged DF/stop searches
+do not establish a jointly executed 336-cell grid. No source strategy was run.
+
+In the student NQ description, comparisons to a common current Donchian maximum
+would be impossible for its own constituent highs. Comparing each bar against
+its own earlier channel could be meaningful. The gated code is needed to resolve
+this; the intake does not quietly choose the convenient interpretation.
+
+### Reconciliation with our cost/account work
+
+Ten new exact open scopes enter the **same queue**: M413–M417 and M419–M423.
+The AMZN refinement maps to existing M200, so M418 is deliberately unallocated.
+Prior generic chart/VWAP NULLs remain valid for their tested scopes. They do not
+automatically test these source-specific conditions. Two weak equity reader
+comments are attributed separately, not promoted to Qullamaggie's own methods.
+M412/R333 and Claude's active files were left alone.
+
+The [R334 interface](../experiments/opportunity_value_v1/FINDINGS.md) needs an
+actual horizon/quantity-specific payoff forecast, calibrated error and
+source-bound quotes/fees/session/lot contracts. These sources supply rules and
+data questions, not those measured inputs. Re-entries and partial exits each
+need their own costs; a stop at entry price is not net breakeven. Slower holds
+may amortize entry costs, while funding and adverse exits still accumulate.
+
+For a purely illustrative two-outcome trade with gain W, loss L, cost/reserve C
+and error allowance E, positive expected net requires
+`p > (L + C + E)/(W + L)`. This is an accounting identity, not a measured
+probability or edge. Timeout, funding and variable costs need the full model.
+
+Access closed with 12 combined search queries, eight direct static attempts
+(six HTTP200/two HTTP403), and 1,695,922 accepted successful body bytes. Browser
+wire costs are unmeasured; ordinary video opens were throttled. Publisher text
+was read, not audiovisual frames, complete channels or paid code. One bounded
+reader plus the main agent worked; no media/models/market history was downloaded.
+Four toy arithmetic checks are not market observations. New strategy outcomes,
+new prospective days and historical-budget consumption are all zero.
+
+## 2026-10-26/27: a large source index feeding exact, cost-aware hypotheses
+
+The owner requested thousands of leads rather than four isolated readings.
+The existing podcast tools now have a bounded mode, committed at **adddfb6
+before any dispatch**, using the existing acquisition-budget journal. This is
+source acquisition and source interpretation, not an alpha test.
+
+| State | Actual held scope |
+|---|---:|
+| Registered public feeds attempted | 42 |
+| Complete feeds parsed | 25 |
+| Episode metadata records | 6,240 |
+| Episodes advertising a native transcript | 877 |
+| Selected native-text attempts | 24 |
+| Native texts parsed / HTTP404 failures | 22 / 2 |
+| Complete received-text reviews / partial reviews | 3 / 1 |
+| Parsed texts still semantically unread | 18 |
+| New market trials / prospective days | 0 / 0 |
+
+The [compressed episode identities](../research/intake/podcast_episode_index_20261026.csv.gz)
+are 564 kB and contain titles, dates, links, feed/key identity and original
+RSS body hashes. They contain no summaries or transcript bodies. Reposts under
+new URLs/GUIDs can remain; these are not 6,240 distinct methods, verified guests
+or profitable traders. The existing name matcher associates 342 episodes with
+46 roster entries, including stories *about* people. These are retrieval hints.
+
+The [source extraction bundle](../research/intake/podcast_methods_20261026.json)
+records every received rule, weak alternative, incomplete claim, risk and
+process in the reviewed scope: **65 records imported into the existing intake**.
+This count is not 65 executable strategies or independent tests. All 465 earlier
+source objects and their source versions remain intact; alias bytes append.
+The canonical queue adds only **M424**. Other original instruments and long
+holds remain received context outside the active short-hold-perps implementation.
+
+| Text actually read | Read boundary | Useful mechanics and remaining limitations |
+|---|---|---|
+| [Grug / Flirting with Models](https://transcripts.captivate.fm/transcript/e532809b-fa1b-4853-b0ff-5bd4df7e4e49/index.html) | All 7,886 normalized words of the captured text, published 2023-07-24 | Atomic arbitrage/backrunning, liquidation financing, bid/gas costs, rare-event inactivity and development cost; NFT/airdrop/security examples retained as outside-scope context. Old protocol descriptions are not current implementation certification. |
+| [David Sun / Resolve Riffs](https://transcripts.captivate.fm/transcript/e804454f-1293-44c2-9869-08e8917b547d/transcript.srt) | All 10,302 words, published 2024-02-09 | Intraday option-premium direction, fixed shared premium budget, staged exits, small trade capacity versus stressed exit capacity; conditional hedge and high-hit-rate claims are not our measured returns. |
+| [Asif Noor / Flirting with Models](https://transcripts.captivate.fm/transcript/1a925ade-f348-4702-a669-d1352e848703/index.html) | All 8,359 words, published 2023-06-26 | One constrained portfolio needs comparable forecast units, model horizons/decay and size-specific execution capacity. Covariance groups, bounds and sticky allocations remain unspecified source methods, not an implemented institutional optimizer. |
+| [Dean Curnutt / Flirting with Models](https://transcripts.captivate.fm/transcript/cc92f8b3-4d17-445e-9408-c6ac654f459e/index.html) | Words [0,4500) of 13,118, published 2023-09-11; all later words unread | Crowded dynamic insurance, conditional carry/roll-down, convergence gap risk and correlation-risk recycling. Historical narratives do not supply private rules or causal dealer positions. |
+
+Only text was read: no audio, video frames, complete channel, private trading
+ledger or linked book/code was checked. Source returns and institutional model
+counts remain attributed claims. The delegated collector review completed;
+a separate later transcript-reading task failed before producing a result, so
+all semantic reviews above were completed by the main agent.
+
+### What can reach our existing account
+
+**M424 keeps two separate bearish definitions.** Sun describes contracting
+call premiums and expanding put premiums, at an unspecified surface point and
+rate, as differently timed downtrend indications. His original trade sells
+index options. A short crypto-perp transfer is **our untested proposal**. The
+source does not give a symmetric bullish rule, exact strike/expiry, rate window,
+threshold or calibrated probability. Existing GEX and support-level results do
+not test it.
+
+Before such an experiment, option bid/ask and first-seen clocks must be matched
+to the actual perp execution quote, costs, funding and session. The protocol
+must distinguish premium movement from underlying momentum, implied volatility,
+delta and time decay. Lagged underlying momentum and fixed surface/IV controls
+are necessary comparators. Every actual variant and fixed 1x/2x/3x cost must be
+registered before outcomes; no validation-winner transfer into R333/R336/R337.
+
+**One portfolio does not mean one undifferentiated order.** Noor's example
+keeps 500 fast and 500 slow lots on their respective researched schedules,
+rather than using the fast signal to send all 1,000 immediately. Those are his
+illustrative lots, not our capital or capacity. Each model needs target units,
+first-seen origin, holding horizon, validity/decay, calibrated payoff uncertainty
+and quantity-specific execution constraints. Reuse R334's common account/risk
+and R319's model/receipt attribution. Durable allocation reservations and their
+complete fill/lifecycle bridge remain unfinished; this source does not make
+the single-batch R334 interface safe for repeated concurrent allocation.
+
+**Confidence must clear a payoff hurdle.** For known fixed gross win `W`, gross
+loss `L`, equal all-in cost `c` and success probability `p`, our cash identity is
+`expected_net = p*W - (1-p)*L - c`. Break-even is `(L+c)/(W+L)`.
+Sun's risk-two-to-win-one example needs 2/3 success only at zero cost; a cost of
+0.2 in the same payoff units raises that to 11/15, about 73.3%. This is arithmetic
+under explicit assumptions, not an observed win rate. Delta is not a calibrated
+physical success probability, stops may lose more than planned, and many
+same-day trades are dependent. Several signals agreeing can concentrate risk
+rather than multiply confidence.
+
+**A revert is not free execution.** An atomic asset-balance assertion does not
+establish net profit after bids, gas and failed attempts. It also does not make
+two venue API orders atomic. R319's partial fills, residual/orphan exposure and
+costs still apply. These are constraints on executable economics, not a claim
+that we acquired Grug's current private strategies.
+
+### Acquisition and reproducibility
+
+The closed batch used **66 HTTP attempts**, 73,180,449 accepted body bytes
+including capped prefixes, and 34.835 seconds of summed request elapsed time.
+Sixteen RSS bodies reached their cap and were not parsed as complete feeds;
+one HTTP302 was not followed. Two selected transcripts returned HTTP404.
+There were no retries or increases to the declared scope.
+
+Conservative reservations remain **120 MiB / 1,650 seconds** against the declared
+128 MiB / 1,800 seconds. The final six requests/eight MiB are unused. Wire bytes
+are unmeasured. The accumulated market allowance remains 7,757 requests and
+reported 229.85 MiB; this source budget does not reset or extend it.
+
+The [actual source-budget journal](../data/videos/public_corpus_budget_20261026.jsonl)
+is tracked to retain accumulated spend across checkouts. A sparse checkout can
+omit its working file: recover that missing file from the committed snapshot
+before invoking the collector. Raw RSS and transcript caches remain
+private/ignored. After an actual environment
+restart, replaying both phases with a network-forbidden opener preserved the
+6,240 episodes, 22 parsed texts and 66 charged requests. With only a copied
+journal and no raw cache, all 66 completed identities refuse new dispatch;
+the journal stays byte-identical. Missing source bodies remain missing.
+
+```sh
+set -e
+python - <<'PY'
+import hashlib, json, subprocess
+from pathlib import Path
+from scripts.podcast_corpus import write_new
+
+evidence = json.loads(Path('research/intake/podcast_methods_20261026.json').read_text())
+target = Path(evidence['acquisition']['budget_journal_path'])
+snapshot = subprocess.check_output(['git', 'show',
+    '149bda38c3a58bbeba65473d69948591dae94db3:' + target.as_posix()])
+if hashlib.sha256(snapshot).hexdigest() != evidence['acquisition']['budget_journal_sha256']:
+    raise ValueError('source-budget snapshot mismatch; no collection')
+if target.exists():
+    if not target.read_bytes().startswith(snapshot):
+        raise ValueError('existing ledger lost or changed prior charges; no collection')
+else:
+    write_new(target, snapshot)
+# Existing journals are preserved; never overwrite or restore an advanced ledger.
+PY
+python scripts/dig_podcasts.py episodes --bounded --out data/videos/corpus_20261026
+python scripts/dig_podcasts.py text --bounded --out data/videos/corpus_20261026
+python scripts/check_method_intake.py --json
+```
+
+The bootstrap was checked using a missing target and the committed Git blob;
+it restores the same 66 charged attempts, with no HTTP call. A missing Git blob
+or digest mismatch must block recovery rather than initialize a new allowance.
+These commands replay held receipts when available; they do not recover lost
+raw text from hashes. Publisher URLs may change. The committed metadata index
+and receipt/method counts can be independently recounted; independent speech
+verification still needs the corresponding publisher text version.
+
+Validation before collector commit: **1,449 tests pass, three explicit skips,
+212.166 seconds**; 20 focused tests pass. An independent mocked review checked
+eight failure/restart/provenance groups, followed by a root regression for
+isolating custom-budget cache paths. No external reader completed the later
+speech extraction. Neither corpus size, passed software checks nor source
+confidence validates positive executable PnL or a new prospective observation.

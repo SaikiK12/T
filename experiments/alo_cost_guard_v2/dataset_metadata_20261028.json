@@ -1,0 +1,33 @@
+{
+  "scope": "Source metadata and author-repository README only; no dataset-file, historical-market, model-weight, private-account or order download.",
+  "retrieved_utc": "2026-10-28 18:30 UTC",
+  "budget": {"web_search_queries": 2, "source_page_open_attempts": 3, "max_duration_seconds": 180, "provider_internal_requests_and_bytes": "unknown", "scope_closed": true},
+  "dataset": {
+    "title": "An Open Book: Level 4 Order Book Data from the Hyperliquid Exchange",
+    "url": "https://zenodo.org/records/18184441",
+    "doi": "10.5281/zenodo.18184441",
+    "published": "2026-03-25",
+    "version": "1.0",
+    "advertised_total": "195.3 GB (publisher display, not downloaded)",
+    "licence": "Zenodo HTML exposed a rights heading without a readable license value in this access; author-repository README says source data retain their own license. Confirm primary license before use.",
+    "files_for_full_btc_queue_reconstruction_if_whole_archives_are_needed": [
+      {"name": "btc_orders_202512.tar.xz", "display_size": "19.3 GB", "publisher_md5": "5b2b2007dbd59196ba010e2b3923f5e0"},
+      {"name": "btc_rejected_202512.tar.xz", "display_size": "46.0 GB", "publisher_md5": "df9b9220373a6f11403a75796a084c6d"},
+      {"name": "book_diffs_202512.tar", "display_size": "49.6 GB", "publisher_md5": "350656ae19550b14d2e1ebe025b25dc7"},
+      {"name": "trades_2025_12.tar", "display_size": "6.7 GB", "publisher_md5": "7949be6a52ec7fb3b591ee633bae3329"},
+      {"name": "mapdir.tar.xz", "display_size": "10.2 MB", "publisher_md5": "83f0ecdcc34a5d55e93048ac844bed3f"}
+    ],
+    "whole_archive_size": "About 121.6 GB plus the 10.2 MB map archive, before extraction and outputs; publisher rounded decimal sizes. A subset may suffice for other questions, but no random-access/streaming plan was verified.",
+    "checksum_scope": "Publisher-displayed MD5 only; none verified locally because no file was obtained.",
+    "schema_page": "https://zenodo.org/records/18184441/files/SCHEMA.md",
+    "schema_page_access": "Web provider reported inaccessible; no alternate route attempted."
+  },
+  "author_reconstruction": {
+    "url": "https://github.com/daojingzhai/public-trader-identity",
+    "read_scope": "README only, moving default branch; exact commit and code not audited.",
+    "observed_limits": "Public book diffs omit consensus block number, block timestamp and oracle stream. The author describes conservative availableTime reconstruction from other streams and synthetic replay counters; these are not original chain block identifiers. The July 2026 raw node archive and derived panels are not supplied by this repository.",
+    "licence_scope": "Repository README says MIT applies to code only, not to the underlying data."
+  },
+  "local_storage": {"filesystem": "/workspace", "free_bytes": 28844138496, "observed_utc": "2026-10-28 18:30 UTC", "scope": "One instantaneous local measurement; not a permanent capacity guarantee."},
+  "decision": "Do not fetch the large archives without explicit owner authorization and a feasible bounded resource plan. Even with the archives, public reconstructed times are not observed local first-seen CEX/Hyperliquid feed and order-arrival/cancel/fill clocks."
+}

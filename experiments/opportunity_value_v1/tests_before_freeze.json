@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "tests": 1436,
+  "skips": 3,
+  "seconds": 210.88,
+  "passed": true,
+  "log_sha256": "0827e03b75220dd48ffc1d17a8b1a61c076d064dca8a26d3275bb43810e1ed03",
+  "focused_tests": 9,
+  "skip_reasons": [
+    "qx not built",
+    "needs built engine, R269 results and archive",
+    "funding archive not present"
+  ],
+  "scope": "offline suite; no calibration validity, actual execution or market alpha certified"
+}

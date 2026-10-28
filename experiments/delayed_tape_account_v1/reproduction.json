@@ -1,0 +1,28 @@
+{
+  "all_byte_identical": true,
+  "files": {
+    "audit.json": {
+      "bytes": 213,
+      "sha256": "3acf93afc4aee34a314e811618e56346a0e893c2cd903ec1d230ceef119a37a8"
+    },
+    "journals.json.gz": {
+      "bytes": 1501,
+      "sha256": "e0077a031f7f691b4dca2cd7e661dab0afae79ef833ca86c894ed67202b1f3ae"
+    },
+    "results.json.gz": {
+      "bytes": 1550921,
+      "sha256": "9e72ba4fd0b8dbb650632568fe2fd3c66566242f90437adaf3c4844e989bd753"
+    }
+  },
+  "freeze_commit": "431087386a9bb1730453b812e699c61db955d2b8",
+  "metadata_retry": {
+    "correction": "Read package metadata with the same frozen execution interpreter; no financial rerun",
+    "first_attempt": "Default system python lacked pyarrow metadata after both financial runs/checks passed; no reproduction artifact written"
+  },
+  "package_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0",
+    "websockets": "16.0"
+  }
+}

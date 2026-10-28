@@ -1,0 +1,40 @@
+{
+  "code": 0,
+  "data": {
+    "deductRate": ".8",
+    "discountRate": ".5",
+    "enjoyDeduct": true,
+    "enjoyDiscount": true,
+    "feeRateMode": "TIERED",
+    "fixedEndTime": 1763049600000,
+    "fixedStartTime": 1760544000000,
+    "joinDeduct": true,
+    "joinDiscount": true,
+    "originalMakerFee": "0",
+    "originalTakerFee": "0",
+    "realMakerFee": "0",
+    "realTakerFee": "0",
+    "statisticType": "FIXED",
+    "symbol": "BTC_USDT",
+    "tieredAppointContract": true,
+    "tieredContractIds": [
+      10,
+      77,
+      1104
+    ],
+    "tieredExcludeContractId": true,
+    "tieredExcludeZeroFee": false,
+    "tieredFeeRates": [
+      {
+        "maxTieredDealAmount": 10000000,
+        "minTieredDealAmount": 0,
+        "realTakerFee": "0"
+      },
+      {
+        "minTieredDealAmount": 10000001,
+        "realTakerFee": ".0002"
+      }
+    ]
+  },
+  "success": true
+}

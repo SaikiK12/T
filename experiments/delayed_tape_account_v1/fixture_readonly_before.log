@@ -1,0 +1,33 @@
+test_bankruptcy_cannot_open_another_position (tests.test_level_probability.LevelProbabilityTests.test_bankruptcy_cannot_open_another_position) ... ok
+test_capital_shadow_and_unentered_unknown_not_poisoning (tests.test_level_probability.LevelProbabilityTests.test_capital_shadow_and_unentered_unknown_not_poisoning) ... ok
+test_causal_level_and_volume_invalidity (tests.test_level_probability.LevelProbabilityTests.test_causal_level_and_volume_invalidity) ... ok
+test_full_constructed_model_score_account_protocol (tests.test_level_probability.LevelProbabilityTests.test_full_constructed_model_score_account_protocol) ... ERROR
+test_gap_and_missing_funding_are_not_zero (tests.test_level_probability.LevelProbabilityTests.test_gap_and_missing_funding_are_not_zero) ... ok
+test_hour_delay_overshoot_and_funding_entry_exclusion (tests.test_level_probability.LevelProbabilityTests.test_hour_delay_overshoot_and_funding_entry_exclusion) ... ERROR
+test_persistent_unknown_and_no_fictitious_close (tests.test_level_probability.LevelProbabilityTests.test_persistent_unknown_and_no_fictitious_close) ... ok
+test_sparse_model_and_payoff_not_just_win_rate (tests.test_level_probability.LevelProbabilityTests.test_sparse_model_and_payoff_not_just_win_rate) ... ok
+test_strict_schedule_and_duplicate_guard (tests.test_level_probability.LevelProbabilityTests.test_strict_schedule_and_duplicate_guard) ... ok
+test_two_stage_runner_complete_serialization_on_constructed_sources (tests.test_level_probability.LevelProbabilityTests.test_two_stage_runner_complete_serialization_on_constructed_sources) ... ok
+
+======================================================================
+ERROR: test_full_constructed_model_score_account_protocol (tests.test_level_probability.LevelProbabilityTests.test_full_constructed_model_score_account_protocol)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/T-opportunity-admission/tests/test_level_probability.py", line 63, in test_full_constructed_model_score_account_protocol
+    m['close'][73:76]=[100.,100.5,102.]
+    ~~~~~~~~~~^^^^^^^
+ValueError: assignment destination is read-only
+
+======================================================================
+ERROR: test_hour_delay_overshoot_and_funding_entry_exclusion (tests.test_level_probability.LevelProbabilityTests.test_hour_delay_overshoot_and_funding_entry_exclusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/T-opportunity-admission/tests/test_level_probability.py", line 35, in test_hour_delay_overshoot_and_funding_entry_exclusion
+    m=self.source();m['close'][73:76]=[100.,100.5,102.]
+                    ~~~~~~~~~~^^^^^^^
+ValueError: assignment destination is read-only
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.218s
+
+FAILED (errors=2)

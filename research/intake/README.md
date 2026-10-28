@@ -2,7 +2,35 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 408 source records/aliases and 54 catalog/tool entries, reconciled to 329 queue rows.
+The [2026-10-28 transcript review](podcast_transcript_reviews_20261028.json)
+retains 542 attributed, paraphrased claims with exact text hashes, word spans,
+related queue concepts and missing mechanics across 31 newly reviewed source
+texts or text sections. Together with three earlier full reviews, 34 publisher
+texts have been reviewed as received; their audio and full episode coverage have
+not been verified. Two Bitwise publications are versions of one interview, not
+independent evidence. A separately frozen batch attempted 12 previously
+unattempted publisher links: ten returned parseable texts and two returned 404.
+Its [receipts](podcast_followup_20261028_receipts.json) and closed
+[budget journal](podcast_followup_20261028_budget.jsonl) preserve the actual
+scope; transport/error-body bytes are not always observable. Hundreds of other
+advertised transcripts and earlier owner-video audio remain unread or
+inaccessible. Source descriptions and self-reported profits are not strategy
+results. The source records map only to related existing queue entries and do
+not add a second queue or a market trial.
+
+The owner's anticipatory Hyperliquid ALO idea is retained as a distinct
+unrun source hypothesis linked to M227/M292/M186. The related
+[accounting diagnostic](../../experiments/alo_cost_guard_v2/FINDINGS.md)
+is constructed-data engineering, and its documented source, timing, fee,
+fill and solvency limits do not establish executable expected returns. A
+separate [Zenodo metadata review](../../experiments/alo_cost_guard_v2/dataset_metadata_20261028.json)
+identifies the archive sizes and missing book-diff block timestamps without
+downloading the dataset.
+
+Earlier received scope: 465 source records/aliases and 54 catalog/tool entries,
+reconciled to 339 queue rows at that snapshot. The current intake audit is the
+authority for present counts.
+The [2026-10-26 practitioner bundle](practitioner_methods_20261026.json) adds 57 exact strategy/variant/risk/process scopes after four publisher video transcripts and three method articles were read. Qullamaggie, Unger and SMB rules include their weak alternatives and missing mechanics; ten exact queue scopes are added, while the AMZN refinement maps to existing M200. Source profits are not our forecasts or validated returns. The Daily Factor literal-code review preserves body/range versus true-range, zero-range state retention and strict-threshold semantics. Ordinary access failures, source hashes, unread media/gated code and the direct-cost/account input bridge remain explicit. All 408 old method objects and alias bytes are preserved; no new source strategy, market outcome or prospective day is claimed. [Practitioner notes](../../docs/TRADER_TALKS.md#2026-10-26-deeper-practitioner-rules-including-their-losing-executions) explain the source evidence and connection to R334.
 The R329 source-only routing review and R330 owner conditional-level hypothesis are retained in [R330 sources](../../experiments/level_probability_v1/sources.json). One new M412 method differs from earlier exact MSNR/pivot/flow scopes; proper probability scores do not by themselves prove calibration or net profit. [R330 results](../../experiments/level_probability_v1/FINDINGS.md) retain zeroactivity for the preselected model, worse paired probability scores and negative2x/3x active controls. The original signguard audit failure and separate audit-only correction are explicit; no executable profit, prospective day or private institutional strategy is claimed.
 The [R327/R328 dated-carry component](../../experiments/dated_carry_v2/FINDINGS.md)
 supplements the existing M244 alias with 46 bounded Deribit contract/fee/settlement/API
@@ -114,3 +142,15 @@ The dated engineering follow-up in that supplement links [draft PR46](https://gi
 `spot_perp_input_contracts_20261026` supplements six existing M047/M134 aliases with five MEXC spot input/protobuf/clock/access mechanics, retaining all407original method objects and alias rows. Nine bounded static GETs118731bodybytes include three failed pages; exact received/read/unread and Git tree/blob identities remain explicit. Separately frozen R324 verifies24constructed spot/perp accounting paths and captures139new public messages for BTC/WIF/SKR; raw inputs were committed before calculations. Source clock/quantity/snapshot, lot/status, ownerfee and eventfunding remain unverified, so no executable market PnL or prospective strategy day is claimed. Original methods and old results remain unchanged.
 
 `spot_quote_cost_contracts_20261026` adds eleven exact public metadata/depth/clock/access mechanics to those same aliases,6staticGETs184953bytes. R325 preserves0computed tiers from two mechanical input incompatibilities; `spot_quote_input_bridge_20261026`/R326 repairs Decimal wire types and explicit0minimum lower bounds on the SAME22committed public responses, with0newrequests.72/108conditional cost tiers and24account models are rationally audited;36depth failures remain, no resize. Full-depth public-rate1x hurdles are25.18bpWIF and88.68bpSKR on tiny snapshots; actual spot quantity/increments, ownerfees/sourceage/funding/exits remain unverified. No original strategy outcome,407oldobjects or alias bytes changed; no new method/queue/prospective strategy day.
+
+`podcast_methods_20261026.json` reconciles the bounded public-corpus continuation:
+6,240 metadata identities, 22 acquired native texts, three complete received-text
+reviews and one partial review. Its 65 strategy/variant/risk/process records
+are imported into `source_methods_20261020.json`, with append-only aliases;
+only the explicitly untested short-perp option-premium hypothesis adds M424.
+`podcast_episode_index_20261026.csv.gz` is compact source-identity evidence,
+not another method/task queue. The tracked source-budget journal preserves
+all 66 attempts on clean checkouts; raw RSS and speech stay private. The
+bundle distinguishes 18 unread parsed texts, missing mechanics and all
+outside-active-perps scope. No source profits, new market test, owner100
+completion or prospective day is inferred from these counts.

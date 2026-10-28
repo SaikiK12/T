@@ -1,4 +1,7 @@
 import unittest
+from pathlib import Path
+import tempfile
+from unittest.mock import patch
 
 import pandas as pd
 
@@ -12,6 +15,21 @@ class DigTalksTest(unittest.TestCase):
         self.assertTrue(dt.guest("Energy markets ft. John Arnold", rx))
         self.assertTrue(dt.guest("A chat with John Arnold", rx))
         self.assertFalse(dt.guest("What happened to John Arnold's old desk", rx))
+        self.assertTrue(dt.guest("john arnold on gas", rx))
+        self.assertFalse(dt.guest("The untold story of John Arnold", rx))
+
+    def test_person_filter_precedes_shared_episode_deduplication(self):
+        talks=pd.DataFrame([
+            {"person":person,"tier":"A","where":"title","key":"shared",
+             "title":"Ed Thorp and Rob Carver on trading","pub_utc":"2024-01-01",
+             "transcript":"https://publisher.example/transcript","transcript_type":"text/plain",
+             "audio":"","feed":"publisher","duration_s":None}
+            for person in ("Ed Thorp","Rob Carver")])
+        calls=[]
+        def get(url):calls.append(url);return b"A received discussion of trading risk."
+        with tempfile.TemporaryDirectory() as temp,patch.object(dt,'SUBS',Path(temp)),patch.object(dt,'log'):
+            self.assertEqual(dt.fetch(talks,people='rob',get=get),['shared'])
+        self.assertEqual(calls,['https://publisher.example/transcript'])
 
     def test_windows_merge_overlapping_hits_and_score_numbers_and_first_person(self):
         filler = " ".join(["word"] * 400)

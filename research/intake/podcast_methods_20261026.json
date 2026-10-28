@@ -1,0 +1,2867 @@
+{
+  "schema_version": 1,
+  "record_kind": "source_extraction_bundle_not_execution_queue",
+  "objective": "Large public metadata discovery feeding exact, cost-aware short-hold futures hypotheses and existing common-account constraints.",
+  "captured_utc_date": "2026-10-26",
+  "semantic_review_utc_date": "2026-10-27",
+  "collector_commit": "adddfb680cf8d31a51a9c2640ad1a7a657202ff2",
+  "collector_scope": {
+    "code_sha256": {
+      "lab/acquisition_budget.py": "0a5da0a741d8fa1280f0a8a5b2e08f1e4ced787565de8260bb0d53c101ea98bb",
+      "scripts/dig_podcasts.py": "7cf520fbc146bc4413243c170522a08470d87b7c84ce7a618fed9db1fc99667f",
+      "scripts/dig_talks.py": "5c0052896bb5eb003b88d798d3b8c3ce2530921e0c651f8e9fb6ab49a49c373e",
+      "scripts/podcast_corpus.py": "3c53f92bb7bc7a03f922ea0412a7406fef23eb06ae6cfa64146cf573719f8a81"
+    },
+    "feed_order": [
+      "odd_lots",
+      "top_traders_unplugged",
+      "flirting_with_models",
+      "chat_with_traders",
+      "better_system_trader",
+      "odds_on_open",
+      "volatility_views",
+      "market_huddle",
+      "macro_voices",
+      "macro_hive",
+      "hidden_forces",
+      "meb_faber",
+      "quantopian",
+      "algorithmic_advantage",
+      "outlier_trading",
+      "capital_thesis",
+      "wall_street_oasis",
+      "rekt_radio",
+      "the_archive",
+      "empire",
+      "unchained",
+      "forward_guidance",
+      "milk_road",
+      "signals_and_threads",
+      "alpha_exchange",
+      "the_derivative",
+      "resolve_riffs",
+      "mutiny",
+      "excess_returns",
+      "trend_following",
+      "masters_in_business",
+      "invest_like_the_best",
+      "curious_quant",
+      "macro_trading_floor",
+      "bell_curve",
+      "lightspeed",
+      "zeroxresearch",
+      "delphi",
+      "uncommon_core",
+      "bankless",
+      "bits_bips",
+      "wintermute"
+    ],
+    "feeds": {
+      "algorithmic_advantage": "https://anchor.fm/s/e672f04c/podcast/rss",
+      "alpha_exchange": "https://feeds.simplecast.com/8g9ryFGf",
+      "bankless": "https://feeds.flightcast.com/p83fuj0y0u58o82l41xei7zo.xml",
+      "bell_curve": "https://feeds.megaphone.fm/bellcurve",
+      "better_system_trader": "https://rss.libsyn.com/shows/66295/destinations/266788.xml",
+      "bits_bips": "https://feeds.megaphone.fm/LSHML4692900914",
+      "capital_thesis": "https://anchor.fm/s/1155c2e50/podcast/rss",
+      "chat_with_traders": "https://feeds.megaphone.fm/CWT9205947236",
+      "curious_quant": "https://feeds.transistor.fm/conversations-with-curious-quant",
+      "delphi": "https://rss.buzzsprout.com/2609274.rss",
+      "empire": "https://feeds.megaphone.fm/empire",
+      "excess_returns": "https://anchor.fm/s/9a1dfac/podcast/rss",
+      "flirting_with_models": "https://feeds.captivate.fm/flirting-with-models/",
+      "forward_guidance": "https://feeds.megaphone.fm/forwardguidance",
+      "hidden_forces": "https://rss.libsyn.com/shows/91567/destinations/457899.xml",
+      "invest_like_the_best": "https://feeds.megaphone.fm/CLS2859450455",
+      "lightspeed": "https://feeds.megaphone.fm/lightspeed",
+      "macro_hive": "https://rss.libsyn.com/shows/254951/destinations/1929056.xml",
+      "macro_trading_floor": "https://feeds.megaphone.fm/ALFINVESTMENTSTRATEGYBV2974145286",
+      "macro_voices": "https://feed.podbean.com/macrovoices/feed.xml",
+      "market_huddle": "https://markethuddle.com/feed/podcast/",
+      "masters_in_business": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/4e4cd910-40a1-4619-a5f3-ae2b0012ffff/5873a3cb-298f-40bc-b71f-ae2b0013000d/podcast.rss",
+      "meb_faber": "https://feeds.megaphone.fm/TIFM6133783130",
+      "milk_road": "https://anchor.fm/s/83d264f4/podcast/rss",
+      "mutiny": "https://rss.libsyn.com/shows/200924/destinations/1432148.xml",
+      "odd_lots": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/8a94442e-5a74-4fa2-8b8d-ae27003a8d6b/982f5071-765c-403d-969d-ae27003a8d83/podcast.rss",
+      "odds_on_open": "https://anchor.fm/s/101506278/podcast/rss",
+      "outlier_trading": "https://anchor.fm/s/80153c24/podcast/rss",
+      "quantopian": "https://anchor.fm/s/ea4e4680/podcast/rss",
+      "rekt_radio": "https://anchor.fm/s/eac8d7d8/podcast/rss",
+      "resolve_riffs": "https://feeds.captivate.fm/resolve-gestalt-university/",
+      "signals_and_threads": "https://feeds.simplecast.com/L9810DOa",
+      "the_archive": "https://anchor.fm/s/10e534198/podcast/rss",
+      "the_derivative": "https://anchor.fm/s/11908b3c/podcast/rss",
+      "top_traders_unplugged": "https://feeds.captivate.fm/top-traders-unplugged/",
+      "trend_following": "https://rss.libsyn.com/shows/35470/destinations/88838.xml",
+      "unchained": "https://feeds.megaphone.fm/LSHML4761942757",
+      "uncommon_core": "https://anchor.fm/s/2578d5a0/podcast/rss",
+      "volatility_views": "https://rss.libsyn.com/shows/31880/destinations/68688.xml",
+      "wall_street_oasis": "https://feeds.megaphone.fm/IBOC6784645588",
+      "wintermute": "https://anchor.fm/s/328b03e4/podcast/rss",
+      "zeroxresearch": "https://feeds.megaphone.fm/0xresearch"
+    },
+    "large_rss_body_limit": 8388608,
+    "limits": {
+      "max_attempt_duration_ns": 25000000000,
+      "max_body_bytes": 134217728,
+      "max_requests": 72,
+      "max_reserved_duration_ns": 1800000000000
+    },
+    "max_selected_native_transcripts": 24,
+    "network_wall_seconds": 20,
+    "no_media_models_market_or_full_channel_mirror": true,
+    "other_rss_body_limit": 2097152,
+    "per_attempt_reserved_seconds": 25,
+    "scope": "public_practitioner_corpus_20261026_v1",
+    "text_body_limit": 524288
+  },
+  "corpus": {
+    "episode_index": "research/intake/podcast_episode_index_20261026.csv.gz",
+    "index_gzip_sha256": "b77c371c8ac133ce60efea868c9f82d3b8848fbc2ad92708de8cfad123ad8dc1",
+    "index_csv_sha256": "8f484ac953c1a4c8d2fa43895a007c278a04fda89df4b19e2b94d319e6ae611f",
+    "index_columns": [
+      "canonical_id",
+      "feed",
+      "key",
+      "title",
+      "pub_utc",
+      "episode_url",
+      "has_native_transcript",
+      "rss_body_sha256"
+    ],
+    "origin_rows": 6240,
+    "exact_identity_deduplicated_episodes": 6240,
+    "dedup_limit": "Only exact episode URL/GUID identity. Reposts with new URL/GUID can remain; not6240unique methods, videos, speakers or profitable traders.",
+    "feeds_requested": 42,
+    "feeds_parsed": 25,
+    "feeds_failed_or_capped": 17,
+    "native_links_advertised": 877,
+    "selected_native_attempts": 24,
+    "native_parsed": 22,
+    "native_http404": 2,
+    "full_received_text_reviews": 3,
+    "partial_text_reviews": 1,
+    "parsed_texts_semantically_unread": 18,
+    "semantic_words_read": 31047,
+    "name_match_episode_count": 342,
+    "name_match_people": 46,
+    "name_match_rows": 399,
+    "name_match_notice": "Existing roster regex only, including discussion about people. Neither guest speech nor roster credibility/profit verified.",
+    "reviewed_episode_keys": [
+      "a4abac6cadb9",
+      "72243d61fa1d",
+      "61f496fbe9d3",
+      "ff3b6b19c771"
+    ],
+    "parsed_unread_episode_keys": [
+      "26895dca1920",
+      "dd49da86fc77",
+      "5ce4ff4fd587",
+      "617422219ec7",
+      "1dc7f47814af",
+      "baac6ce06006",
+      "86d5e781df1d",
+      "9c6c4298957d",
+      "5a0fa6583b5e",
+      "c5ed7cc8a008",
+      "239df49118f9",
+      "02aac0909f66",
+      "f87c57848e9e",
+      "727ff76e22c8",
+      "a8fe94ef8840",
+      "bea5335ad385",
+      "7afc8810a563",
+      "834d3e58ade5"
+    ],
+    "private_metadata_sha256": "8d8225151e32a206b1cb27a90b834630c6a7678c51c3adaa18a4aac4de808f69",
+    "acquisition_report_sha256": "53f94431fd1f2ea2faf7c4d16daa9f2e7736463b163c94fbd7f4d2f1c301c93f"
+  },
+  "acquisition": {
+    "closed": true,
+    "new_scope_notice": "This declared public-source scope is separate from the old accumulated R310/R311 market allowance; neither is reset on restart.",
+    "http_attempts": 66,
+    "body_bytes_accepted_including_failed_prefixes": 73180449,
+    "sum_request_elapsed_ns": 34834674829,
+    "wire_bytes_known": false,
+    "durable_budget": {
+      "authorization_verified": false,
+      "baseline": {
+        "body_bytes_upper_bound": 0,
+        "requests_used": 0,
+        "reserved_duration_ns": 0
+      },
+      "body_bytes_charged_upper_bound": 125829120,
+      "dispatch_block_reasons": [],
+      "duration_ns_charged_upper_bound": 1650000000000,
+      "limits": {
+        "max_attempt_duration_ns": 25000000000,
+        "max_body_bytes": 134217728,
+        "max_requests": 72,
+        "max_reserved_duration_ns": 1800000000000
+      },
+      "new_dispatch_blocked": false,
+      "pending": [],
+      "remaining_body_bytes": 8388608,
+      "remaining_requests": 6,
+      "requests_charged": 66,
+      "scope": "public_practitioner_corpus_20261026_v1",
+      "violations": []
+    },
+    "budget_journal_sha256": "6a8b98a1bb4b011d704e2ad19094c25f52ace48443bf9f762d3d6457eb64ccd5",
+    "unused_allowance_not_spent": {
+      "requests": 6,
+      "reserved_body_bytes": 8388608
+    },
+    "historical_market_baseline_unchanged": {
+      "requests_used": 7757,
+      "reported_mib_used": "229.85",
+      "max_requests": 8000,
+      "max_mib": 250,
+      "exact_bytes_known": false
+    },
+    "source_receipts": [
+      {
+        "feed": "odd_lots",
+        "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/8a94442e-5a74-4fa2-8b8d-ae27003a8d6b/982f5071-765c-403d-969d-ae27003a8d83/podcast.rss",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "7e70de21f21d97bbb008157ac12486356ae0b80c425739f8b8daf714371dddb1",
+        "requested_utc_ns": 1793047151601474369,
+        "received_utc_ns": 1793047152311219539,
+        "elapsed_ns": 709165448,
+        "complete_body": false
+      },
+      {
+        "feed": "top_traders_unplugged",
+        "url": "https://feeds.captivate.fm/top-traders-unplugged/",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 8388608,
+        "body_sha256": "4e57c574dfeea358b5e1a6e47bed8122c62f2da681999ede3b773cce8fb63024",
+        "requested_utc_ns": 1793047152314983793,
+        "received_utc_ns": 1793047153929509961,
+        "elapsed_ns": 1614075725,
+        "complete_body": false
+      },
+      {
+        "feed": "flirting_with_models",
+        "url": "https://feeds.captivate.fm/flirting-with-models/",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 404686,
+        "body_sha256": "74a29cc76f475e12a84e55602a460c2666f978d09ea9904add68555cf51132d9",
+        "requested_utc_ns": 1793047153936525966,
+        "received_utc_ns": 1793047154494936557,
+        "elapsed_ns": 557907091,
+        "complete_body": true
+      },
+      {
+        "feed": "chat_with_traders",
+        "url": "https://feeds.megaphone.fm/CWT9205947236",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1674006,
+        "body_sha256": "4453ad72ec9ae0176e551e3fa7763cad6cfaa46d26acfaa28f6bc386d699224e",
+        "requested_utc_ns": 1793047154510442524,
+        "received_utc_ns": 1793047155054180021,
+        "elapsed_ns": 543117976,
+        "complete_body": true
+      },
+      {
+        "feed": "better_system_trader",
+        "url": "https://rss.libsyn.com/shows/66295/destinations/266788.xml",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1035143,
+        "body_sha256": "cd5a2232f8fb700604b8c2ef742eb5e145fd3c24be640060db9f1c1f9e73681b",
+        "requested_utc_ns": 1793047155090832621,
+        "received_utc_ns": 1793047156321084083,
+        "elapsed_ns": 1229650008,
+        "complete_body": true
+      },
+      {
+        "feed": "odds_on_open",
+        "url": "https://anchor.fm/s/101506278/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 402750,
+        "body_sha256": "e7421fd9af6f14ab55e084dfe8604ebbee729a376acc06d58f744f104cdbb0b5",
+        "requested_utc_ns": 1793047156347068207,
+        "received_utc_ns": 1793047156702397925,
+        "elapsed_ns": 354113470,
+        "complete_body": true
+      },
+      {
+        "feed": "volatility_views",
+        "url": "https://rss.libsyn.com/shows/31880/destinations/68688.xml",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "45fa3d0d02dbecfb1a6db0ba1f575003481d94e254b065b313528b574d05733a",
+        "requested_utc_ns": 1793047156715993664,
+        "received_utc_ns": 1793047158013245687,
+        "elapsed_ns": 1296706110,
+        "complete_body": false
+      },
+      {
+        "feed": "market_huddle",
+        "url": "https://markethuddle.com/feed/podcast/",
+        "http_status": 302,
+        "state": "FAILED",
+        "error": "HTTP Error 302: Found",
+        "accepted_body_bytes": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requested_utc_ns": 1793047158017498349,
+        "received_utc_ns": 1793047160397439590,
+        "elapsed_ns": 2379408789,
+        "complete_body": false
+      },
+      {
+        "feed": "macro_voices",
+        "url": "https://feed.podbean.com/macrovoices/feed.xml",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1322176,
+        "body_sha256": "8b61bc3d3995301b56c6900b5b851345a172ceb258404f8079c40dae1ae9b1ec",
+        "requested_utc_ns": 1793047160400167836,
+        "received_utc_ns": 1793047160846979876,
+        "elapsed_ns": 446189534,
+        "complete_body": true
+      },
+      {
+        "feed": "macro_hive",
+        "url": "https://rss.libsyn.com/shows/254951/destinations/1929056.xml",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1788528,
+        "body_sha256": "913aaf50ee500e4bd76164e3a06064959762c88ebffa55702fe891088507a8af",
+        "requested_utc_ns": 1793047160876132561,
+        "received_utc_ns": 1793047162009166797,
+        "elapsed_ns": 1132188252,
+        "complete_body": true
+      },
+      {
+        "feed": "hidden_forces",
+        "url": "https://rss.libsyn.com/shows/91567/destinations/457899.xml",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "32873686f84f591bb6fee9ae108187c0e71e0bd875bc8c2c7026ce5aa2796b39",
+        "requested_utc_ns": 1793047162062794323,
+        "received_utc_ns": 1793047163412293472,
+        "elapsed_ns": 1348578035,
+        "complete_body": false
+      },
+      {
+        "feed": "meb_faber",
+        "url": "https://feeds.megaphone.fm/TIFM6133783130",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 5447746,
+        "body_sha256": "bf1f3ba41aa8721813632489ba3a1a9f9a311ad7d07f5a13181230a1845ba943",
+        "requested_utc_ns": 1793047163416072839,
+        "received_utc_ns": 1793047163946173609,
+        "elapsed_ns": 529431747,
+        "complete_body": true
+      },
+      {
+        "feed": "quantopian",
+        "url": "https://anchor.fm/s/ea4e4680/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 747218,
+        "body_sha256": "4a89f028bfe9e3e01a3b77a1ab61806e33948f4537c48fdd8aeaea4f391879d0",
+        "requested_utc_ns": 1793047164042852396,
+        "received_utc_ns": 1793047164554538838,
+        "elapsed_ns": 510819787,
+        "complete_body": true
+      },
+      {
+        "feed": "algorithmic_advantage",
+        "url": "https://anchor.fm/s/e672f04c/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 208905,
+        "body_sha256": "4131126ab4d3b84ef9af2fc903f160e17837693b69d9520d5ff7c424fee8a7a9",
+        "requested_utc_ns": 1793047164580283087,
+        "received_utc_ns": 1793047164963048508,
+        "elapsed_ns": 381456752,
+        "complete_body": true
+      },
+      {
+        "feed": "outlier_trading",
+        "url": "https://anchor.fm/s/80153c24/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 480157,
+        "body_sha256": "39df8f21694eef519fe9c8b39c05567880c899c0472d88ec4b995128e7b38b25",
+        "requested_utc_ns": 1793047164974219731,
+        "received_utc_ns": 1793047165336284306,
+        "elapsed_ns": 361332618,
+        "complete_body": true
+      },
+      {
+        "feed": "capital_thesis",
+        "url": "https://anchor.fm/s/1155c2e50/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 69213,
+        "body_sha256": "ce8b8bad4004b2731fb6b9532670415f66d91c446a99f0620a8a4bef5ff28ab8",
+        "requested_utc_ns": 1793047165352538883,
+        "received_utc_ns": 1793047165599370928,
+        "elapsed_ns": 245878803,
+        "complete_body": true
+      },
+      {
+        "feed": "wall_street_oasis",
+        "url": "https://feeds.megaphone.fm/IBOC6784645588",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1568833,
+        "body_sha256": "a59fee40e25deb85bffac55d83e9c947e2b882285e5482f1f363acea3e9785fa",
+        "requested_utc_ns": 1793047165605467240,
+        "received_utc_ns": 1793047166028516867,
+        "elapsed_ns": 422316969,
+        "complete_body": true
+      },
+      {
+        "feed": "rekt_radio",
+        "url": "https://anchor.fm/s/eac8d7d8/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 335573,
+        "body_sha256": "040f7143713bc29b29e57a46e5e29198de8f43ff79cd6f22de04454a1bce4d6c",
+        "requested_utc_ns": 1793047166074363839,
+        "received_utc_ns": 1793047166431590761,
+        "elapsed_ns": 356169638,
+        "complete_body": true
+      },
+      {
+        "feed": "the_archive",
+        "url": "https://anchor.fm/s/10e534198/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 49461,
+        "body_sha256": "976b9294e81ccb577b8937007d36008767b52147ddbc0b79fa79c40799bc3550",
+        "requested_utc_ns": 1793047166444507751,
+        "received_utc_ns": 1793047166663479199,
+        "elapsed_ns": 218255186,
+        "complete_body": true
+      },
+      {
+        "feed": "empire",
+        "url": "https://feeds.megaphone.fm/empire",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "34035444def771532bf4de6a6aad342b0b957ae44b5fa6463455312e218e385a",
+        "requested_utc_ns": 1793047166669044201,
+        "received_utc_ns": 1793047166942121682,
+        "elapsed_ns": 272211868,
+        "complete_body": false
+      },
+      {
+        "feed": "unchained",
+        "url": "https://feeds.megaphone.fm/LSHML4761942757",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "2ab8f546ed66f48697de0a8f4e03f27583262dfa7f595dcb1585dce9d5dd2226",
+        "requested_utc_ns": 1793047166947207174,
+        "received_utc_ns": 1793047167522370069,
+        "elapsed_ns": 574175394,
+        "complete_body": false
+      },
+      {
+        "feed": "forward_guidance",
+        "url": "https://feeds.megaphone.fm/forwardguidance",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "c9fa2871e8651f4be39490f643050736114d08aff00ffb1b20d2ca5dfc13236f",
+        "requested_utc_ns": 1793047167527251376,
+        "received_utc_ns": 1793047167927918348,
+        "elapsed_ns": 399847297,
+        "complete_body": false
+      },
+      {
+        "feed": "milk_road",
+        "url": "https://anchor.fm/s/83d264f4/podcast/rss",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "9b252b35fb44e64c1a08d030bba1ceb0a40b9fb2e9561d21252f3e2150b8af07",
+        "requested_utc_ns": 1793047167932847134,
+        "received_utc_ns": 1793047168270792590,
+        "elapsed_ns": 336980227,
+        "complete_body": false
+      },
+      {
+        "feed": "signals_and_threads",
+        "url": "https://feeds.simplecast.com/L9810DOa",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 186518,
+        "body_sha256": "0224c814fcfdec4397eee3413d83da2c4f47133a5061582e688263130bc851cf",
+        "requested_utc_ns": 1793047168276818209,
+        "received_utc_ns": 1793047168640514616,
+        "elapsed_ns": 362547288,
+        "complete_body": true
+      },
+      {
+        "feed": "alpha_exchange",
+        "url": "https://feeds.simplecast.com/8g9ryFGf",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1963843,
+        "body_sha256": "0fafd1672da19e509272f963794faeea0cc1cc9d7643575b1926fca74f9184b0",
+        "requested_utc_ns": 1793047168647839284,
+        "received_utc_ns": 1793047169098377136,
+        "elapsed_ns": 449665630,
+        "complete_body": true
+      },
+      {
+        "feed": "the_derivative",
+        "url": "https://anchor.fm/s/11908b3c/podcast/rss",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "4504d8f7a85c29e1394f72e178023340a90fc9cd6d25251c4c74be9e292a7c6e",
+        "requested_utc_ns": 1793047169141345937,
+        "received_utc_ns": 1793047169460658806,
+        "elapsed_ns": 318279250,
+        "complete_body": false
+      },
+      {
+        "feed": "resolve_riffs",
+        "url": "https://feeds.captivate.fm/resolve-gestalt-university/",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 1254263,
+        "body_sha256": "e939569530bb1e8f48c8d42f3cf65d97a077b3b64902b1ac286e3c0fb5a7c9e6",
+        "requested_utc_ns": 1793047169465144811,
+        "received_utc_ns": 1793047170153281212,
+        "elapsed_ns": 687373399,
+        "complete_body": true
+      },
+      {
+        "feed": "mutiny",
+        "url": "https://rss.libsyn.com/shows/200924/destinations/1432148.xml",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 225533,
+        "body_sha256": "3698bb4a61497f0578dcfd310946b0660714a65776dbb96a46c80dbd604941db",
+        "requested_utc_ns": 1793047170194763858,
+        "received_utc_ns": 1793047170644866533,
+        "elapsed_ns": 448929870,
+        "complete_body": true
+      },
+      {
+        "feed": "excess_returns",
+        "url": "https://anchor.fm/s/9a1dfac/podcast/rss",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "4b2fa3468ce77c5260559aed08166c98e165d36905591b0eed15c80541325ccd",
+        "requested_utc_ns": 1793047170657385037,
+        "received_utc_ns": 1793047170996060894,
+        "elapsed_ns": 337561559,
+        "complete_body": false
+      },
+      {
+        "feed": "trend_following",
+        "url": "https://rss.libsyn.com/shows/35470/destinations/88838.xml",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 7698652,
+        "body_sha256": "07f9ca42cbfd9631ed0173c1730f722bd749f767cc9405c6e1d15fcb5d550e3a",
+        "requested_utc_ns": 1793047171001080233,
+        "received_utc_ns": 1793047173151172904,
+        "elapsed_ns": 2148609781,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/4e4cd910-40a1-4619-a5f3-ae2b0012ffff/5873a3cb-298f-40bc-b71f-ae2b0013000d/podcast.rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 3179345,
+        "body_sha256": "bd97420de348cfe736808c31171f3e813021ca7c5989e12816a1ac709da7b542",
+        "requested_utc_ns": 1793047173320020029,
+        "received_utc_ns": 1793047173910244931,
+        "elapsed_ns": 588980878,
+        "complete_body": true
+      },
+      {
+        "feed": "invest_like_the_best",
+        "url": "https://feeds.megaphone.fm/CLS2859450455",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "8c586c4090f3778b9639f99cd153d02360960ce8dea485f1fe1233877dc55064",
+        "requested_utc_ns": 1793047174010527467,
+        "received_utc_ns": 1793047174581332905,
+        "elapsed_ns": 569496093,
+        "complete_body": false
+      },
+      {
+        "feed": "curious_quant",
+        "url": "https://feeds.transistor.fm/conversations-with-curious-quant",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 69175,
+        "body_sha256": "d6a1db9e6fc054d1f2a3f53ed8f785d18957e6d3760cd706dd16c71d7b117a83",
+        "requested_utc_ns": 1793047174587211648,
+        "received_utc_ns": 1793047174958724110,
+        "elapsed_ns": 369969515,
+        "complete_body": true
+      },
+      {
+        "feed": "macro_trading_floor",
+        "url": "https://feeds.megaphone.fm/ALFINVESTMENTSTRATEGYBV2974145286",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 646169,
+        "body_sha256": "fc52f1cc09f5cdd0c8bcc8c7579c998183d99348cf95100c5a68f688d05479a6",
+        "requested_utc_ns": 1793047174966128116,
+        "received_utc_ns": 1793047175309295687,
+        "elapsed_ns": 341951023,
+        "complete_body": true
+      },
+      {
+        "feed": "bell_curve",
+        "url": "https://feeds.megaphone.fm/bellcurve",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "e3abc41fb68e69d1b2eac1f8dd573741eb44a1f4bb2b73005282e931b970a169",
+        "requested_utc_ns": 1793047175330334598,
+        "received_utc_ns": 1793047175449982772,
+        "elapsed_ns": 118407160,
+        "complete_body": false
+      },
+      {
+        "feed": "lightspeed",
+        "url": "https://feeds.megaphone.fm/lightspeed",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "33d286023a360f1496a79f196bafccefce969829b301bd7f8387d5d0a628ffb1",
+        "requested_utc_ns": 1793047175455535226,
+        "received_utc_ns": 1793047175616417062,
+        "elapsed_ns": 159351395,
+        "complete_body": false
+      },
+      {
+        "feed": "zeroxresearch",
+        "url": "https://feeds.megaphone.fm/0xresearch",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "99e7abed2d44ac9e5ec2a2cfb27d32eeb8903591c4c41038c4e2025632b0c05e",
+        "requested_utc_ns": 1793047175621788799,
+        "received_utc_ns": 1793047175779075585,
+        "elapsed_ns": 156263121,
+        "complete_body": false
+      },
+      {
+        "feed": "delphi",
+        "url": "https://rss.buzzsprout.com/2609274.rss",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "8a9f726c3e51e7be506e6afbba0a361a0b2b058aacd2803e9f70539696c42e32",
+        "requested_utc_ns": 1793047175783930723,
+        "received_utc_ns": 1793047176211051459,
+        "elapsed_ns": 425568815,
+        "complete_body": false
+      },
+      {
+        "feed": "uncommon_core",
+        "url": "https://anchor.fm/s/2578d5a0/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 188580,
+        "body_sha256": "0ffb6a33baf14be2d188800329bbd2d75beea676829aef9675aba1ff966a2963",
+        "requested_utc_ns": 1793047176217714154,
+        "received_utc_ns": 1793047176475266516,
+        "elapsed_ns": 256463461,
+        "complete_body": true
+      },
+      {
+        "feed": "bankless",
+        "url": "https://feeds.flightcast.com/p83fuj0y0u58o82l41xei7zo.xml",
+        "http_status": 200,
+        "state": "FAILED",
+        "error": "ValueError: body cap reached; complete body not certified",
+        "accepted_body_bytes": 2097152,
+        "body_sha256": "02562d365b25d96126771cc0e47719772bab28874d2c5b9c3849e1729df34427",
+        "requested_utc_ns": 1793047176488526490,
+        "received_utc_ns": 1793047177680755861,
+        "elapsed_ns": 1190510965,
+        "complete_body": false
+      },
+      {
+        "feed": "bits_bips",
+        "url": "https://feeds.megaphone.fm/LSHML4692900914",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 545362,
+        "body_sha256": "88870b7ca163043e0a275a5efa7c6a2c246f01f375d66f0c200ed633a8cdbb03",
+        "requested_utc_ns": 1793047177686110733,
+        "received_utc_ns": 1793047178155737434,
+        "elapsed_ns": 468560874,
+        "complete_body": true
+      },
+      {
+        "feed": "wintermute",
+        "url": "https://anchor.fm/s/328b03e4/podcast/rss",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "RSS_PARSED",
+        "accepted_body_bytes": 11365,
+        "body_sha256": "078b32a2cce8f1b784edad59010e8d128e999b986dfe3a61f69cbd1db185f3dc",
+        "requested_utc_ns": 1793047178172488816,
+        "received_utc_ns": 1793047178403631671,
+        "elapsed_ns": 229109967,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "26895dca1920",
+        "title": "Convexity Maven Harley Bassman: How To Survive The Next Rate Cycle",
+        "pub_utc": "2025-09-26T19:45:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/e5543473-8e73-4657-8acb-3543d680e302/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/e5543473-8e73-4657-8acb-3543d680e302/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 104690,
+        "body_sha256": "aec1ea98db06d81997d539fd33982a522f4bbbea64f5864e3b0f57ec0856b7ad",
+        "text_sha256": "a2f4add0eb2b0a714345e4438f80faa478f337513e5dbcbbed8a7648e2ccaed4",
+        "requested_utc_ns": 1793047196068535024,
+        "received_utc_ns": 1793047196704447781,
+        "elapsed_ns": 634635900,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "dd49da86fc77",
+        "title": "Navigating Market Volatility: Mastering Managed Futures and Carry Strategies",
+        "pub_utc": "2024-05-31T19:45:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/1c8ea5a1-af6d-4719-9026-47427c404627/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/1c8ea5a1-af6d-4719-9026-47427c404627/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 120266,
+        "body_sha256": "0d6be337d90f6a74d4819b1f6a5776ef13be2a72de3b6aabd8b43747103311cc",
+        "text_sha256": "72efe7d4ba1a7a383ee5cf4746f33ebc92c3f3f342a7e4aef608b12a3bd55c90",
+        "requested_utc_ns": 1793047196715797948,
+        "received_utc_ns": 1793047197362871308,
+        "elapsed_ns": 645821640,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "5ce4ff4fd587",
+        "title": "Aahan Menon: Systematic Macro in a Shifting Economy: Signals Over Stories",
+        "pub_utc": "2025-12-18T19:45:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/3d908b81-ff2c-45f2-a0e1-4178b4d23cc2/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/3d908b81-ff2c-45f2-a0e1-4178b4d23cc2/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 111959,
+        "body_sha256": "de860ad755f03337183eca48c5c5173acbe9b7f46bf8ccc7cdb4861b8a0f4630",
+        "text_sha256": "b852c4c9e553cb4702e8f54d5609d5ef42a5a1c23d9a954335d27efa6d9b3bee",
+        "requested_utc_ns": 1793047197373350795,
+        "received_utc_ns": 1793047197804516069,
+        "elapsed_ns": 430184092,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "0446bd4b734c",
+        "title": "Live Q&A - Managed Futures Trend & Carry Flash Update",
+        "pub_utc": "2025-03-21T14:30:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/113f8835-6103-4cff-a9d8-5075d271104b/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/113f8835-6103-4cff-a9d8-5075d271104b/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 404,
+        "state": "FAILED",
+        "error": "HTTP Error 404: Not Found",
+        "accepted_body_bytes": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requested_utc_ns": 1793047197815106088,
+        "received_utc_ns": 1793047198236956328,
+        "elapsed_ns": 419912260,
+        "complete_body": false
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "72243d61fa1d",
+        "title": "Explained! Systematic Options Strategies with David Sun - David Sun",
+        "pub_utc": "2024-02-09T19:45:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/e804454f-1293-44c2-9869-08e8917b547d/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/e804454f-1293-44c2-9869-08e8917b547d/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 95527,
+        "body_sha256": "03f5ae390526423c90e4e721534268ad52b9883a7a453635eb0ce1f8b42a7869",
+        "text_sha256": "4d276cb6f6679747aa4e2ad543042a55332fe7b080c2e3c0b974131224a6fcbb",
+        "requested_utc_ns": 1793047198242451607,
+        "received_utc_ns": 1793047198527071335,
+        "elapsed_ns": 283352865,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "ff3b6b19c771",
+        "title": "Dean Curnutt - The Reflexivity of Equity Volatility (S6E16)",
+        "pub_utc": "2023-09-11T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/cc92f8b3-4d17-445e-9408-c6ac654f459e/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/cc92f8b3-4d17-445e-9408-c6ac654f459e/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 74387,
+        "body_sha256": "04aa670a06f245b715d738b6abdd8e0551b42bb2b7dfd52c3146edbb1510bab0",
+        "text_sha256": "c6d4fb401046bcfcd8ed1559771be666986f1a6eda4e96c4fc01ddc2d34e809b",
+        "requested_utc_ns": 1793047198537732128,
+        "received_utc_ns": 1793047199122119124,
+        "elapsed_ns": 583135915,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "a4abac6cadb9",
+        "title": "Grug Capital – Grug (Finally) Teaches Us MEV (S6E12)",
+        "pub_utc": "2023-07-24T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/e532809b-fa1b-4853-b0ff-5bd4df7e4e49/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/e532809b-fa1b-4853-b0ff-5bd4df7e4e49/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 47231,
+        "body_sha256": "8e6532ee0a463706fa7f784039cd9d80c658ed0d25aedfe8471a7739d5139dfc",
+        "text_sha256": "7f8f8712a7138e37ac2a6175242652b07981cdf95bf4cc546832fec20ab4cd0d",
+        "requested_utc_ns": 1793047199131343775,
+        "received_utc_ns": 1793047199578442794,
+        "elapsed_ns": 445791337,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "61f496fbe9d3",
+        "title": "Asif Noor – Modern Systematic Macro (S6E9)",
+        "pub_utc": "2023-06-26T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/1a925ade-f348-4702-a669-d1352e848703/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/1a925ade-f348-4702-a669-d1352e848703/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 50254,
+        "body_sha256": "0d0fbe5a182b4cfaac7fc83b04cc344d393fbfa00a5343dad61f7bfac62e98c3",
+        "text_sha256": "12503348026e50019db7acc0ebb25ed0969efd40c98e997de2329b13d7329b48",
+        "requested_utc_ns": 1793047199586908300,
+        "received_utc_ns": 1793047199992415222,
+        "elapsed_ns": 404086163,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "617422219ec7",
+        "title": "Ed Thorp, The Man Who Beat The Dealer and The Market",
+        "pub_utc": "2017-07-14T14:49:24Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/b4661c07-76ca-4e7a-982a-ae2b00395884/transcript?format=SubRip&t=1700528630",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/b4661c07-76ca-4e7a-982a-ae2b00395884/transcript?format=SubRip&t=1700528630",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 175976,
+        "body_sha256": "b1a6ee321bc189264c84aeab4907de3d2aea6fafdcb1704622e00aa7b4063247",
+        "text_sha256": "9528cfdf1d8742797bcbac42391da1883801b63c3656ab4cd5912df80fce4bad",
+        "requested_utc_ns": 1793047200004208330,
+        "received_utc_ns": 1793047200372614794,
+        "elapsed_ns": 364733806,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "1dc7f47814af",
+        "title": "From AQR Quant to Founder & CIO with Brian Hurst",
+        "pub_utc": "2025-01-10T01:10:44Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/0316acd0-8247-487d-a482-b2600165341d/transcript?format=SubRip&t=1736471402",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/0316acd0-8247-487d-a482-b2600165341d/transcript?format=SubRip&t=1736471402",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 111885,
+        "body_sha256": "546d83f213eb073ad526a79b700c50bb0ffeaf38d6429c547d3127716ec81e49",
+        "text_sha256": "937c1290fa2e342fc21a49d725c34264bff71684bdfa9afd226e17034fb59566",
+        "requested_utc_ns": 1793047200387156120,
+        "received_utc_ns": 1793047200802745942,
+        "elapsed_ns": 413549047,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "baac6ce06006",
+        "title": "Ben Reeves: From Bridgewater to Wealthsimple: Institutional investing Through a Robo Advisor",
+        "pub_utc": "2024-07-19T19:45:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/b77aafdd-66cb-41ad-bc5a-a879eba0389e/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/b77aafdd-66cb-41ad-bc5a-a879eba0389e/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 93781,
+        "body_sha256": "a43005f8bd4af0da2e45c6367bdad339d34c94f153dcb5d3b3577f0ff772b3ae",
+        "text_sha256": "b16c1285a751b285902f3ee5ff6cdedc40398f093fbd3b1b86232de05456609f",
+        "requested_utc_ns": 1793047200817194452,
+        "received_utc_ns": 1793047201310175789,
+        "elapsed_ns": 491425190,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "86d5e781df1d",
+        "title": "David Snyderman on Specialty Finance and Data in Investing",
+        "pub_utc": "2024-03-01T19:48:55Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/487f753a-bd51-4fe7-8f52-b12601425422/transcript?format=SubRip&t=1713565848",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/487f753a-bd51-4fe7-8f52-b12601425422/transcript?format=SubRip&t=1713565848",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 93487,
+        "body_sha256": "b451f8fab2bb3223237bd54b79ee1b3f5443a3e882d04362ab453bc4838d8150",
+        "text_sha256": "e98e79e5483cf33073754e4c82330eb5566933ebaf0c33698b7b104784921a8f",
+        "requested_utc_ns": 1793047201320981013,
+        "received_utc_ns": 1793047201568167512,
+        "elapsed_ns": 246012162,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "9c6c4298957d",
+        "title": "Sandy Rattray on Strategic Risk Management",
+        "pub_utc": "2021-08-06T19:19:33Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/5e44e3ab-85d5-4700-8e24-ae2b0017acc0/transcript?format=SubRip&t=1700521642",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/5e44e3ab-85d5-4700-8e24-ae2b0017acc0/transcript?format=SubRip&t=1700521642",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 138849,
+        "body_sha256": "9ed5034f631b1061a63c1f6b1e9816d35bc5f77d4b34879d00f6caaf081542bf",
+        "text_sha256": "d037a74b49273d04a499d06d5652578d525c0a25c322384af11861d3fb155f7d",
+        "requested_utc_ns": 1793047201579119537,
+        "received_utc_ns": 1793047201971963591,
+        "elapsed_ns": 388490915,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "5a0fa6583b5e",
+        "title": "The Four Piston Portfolio: Building an All-Terrain Investment Engine",
+        "pub_utc": "2026-05-12T15:55:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/0df83ac3-7769-45e8-8525-9aa9a9cd72e9/transcript.srt",
+        "transcript": "https://transcripts.captivate.fm/transcript/0df83ac3-7769-45e8-8525-9aa9a9cd72e9/transcript.srt",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 125343,
+        "body_sha256": "61e346091ffbc2878c6a694010ee0de1170f98b3b62400e4029b66759968d830",
+        "text_sha256": "efe458216b10f5ea9fd252a67c9866697b6bf1c20301ba7d8eff84c576ba679b",
+        "requested_utc_ns": 1793047201983824287,
+        "received_utc_ns": 1793047202383867426,
+        "elapsed_ns": 398847831,
+        "complete_body": true
+      },
+      {
+        "feed": "resolve_riffs",
+        "key": "d06b19e2aa44",
+        "title": "Managed Futures-Why Now! Positioning, Energy, De-Dollarization, and Portfolio Blind Spots",
+        "pub_utc": "2025-09-18T10:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/2221119d-3bc9-40c2-8f1a-515b393df249/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/2221119d-3bc9-40c2-8f1a-515b393df249/index.html",
+        "transcript_type": "text/html",
+        "http_status": 404,
+        "state": "FAILED",
+        "error": "HTTP Error 404: Not Found",
+        "accepted_body_bytes": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requested_utc_ns": 1793047202394467348,
+        "received_utc_ns": 1793047202590437883,
+        "elapsed_ns": 194547012,
+        "complete_body": false
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "c5ed7cc8a008",
+        "title": "At The Money: Filtering Noisy News",
+        "pub_utc": "2025-09-17T14:47:43Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/d62872bc-3de4-4b27-a670-b35b00f18686/transcript?format=SubRip&t=1758120451",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/d62872bc-3de4-4b27-a670-b35b00f18686/transcript?format=SubRip&t=1758120451",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 19216,
+        "body_sha256": "56bd39f32dba2a7060c1b71bb0101aa24ba923bf1800e61f4d7cbe2d7a1ac9d6",
+        "text_sha256": "f99457bcd40b797821fcb4bc68bbe450c44653e96ba1f045a2be4bc8672eead0",
+        "requested_utc_ns": 1793047202599098836,
+        "received_utc_ns": 1793047202927040903,
+        "elapsed_ns": 317517115,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "239df49118f9",
+        "title": "Richmond Federal Reserve President and CEO Tom Barkin",
+        "pub_utc": "2025-05-30T15:06:04Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/d34175c5-8b07-4ee9-8727-b2ed00f4cda4/transcript?format=SubRip&t=1748617549",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/d34175c5-8b07-4ee9-8727-b2ed00f4cda4/transcript?format=SubRip&t=1748617549",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 111513,
+        "body_sha256": "7d6307774b1baf9e92a8fab1cc164e144a8b43bac9daa568c8d33ac4f302568f",
+        "text_sha256": "13ad74e2036797bec8cfaebf3fbf6e1e774faebb7966a2a274b0e163e0cd6602",
+        "requested_utc_ns": 1793047202935238394,
+        "received_utc_ns": 1793047203254038437,
+        "elapsed_ns": 317471040,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "02aac0909f66",
+        "title": "Team Favorite At the Money: The Tech Behind a Crypto Future",
+        "pub_utc": "2025-03-19T16:22:21Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/b3dd8ee9-eefd-4054-bed7-b2a5010c752f/transcript?format=SubRip&t=1742401343",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/b3dd8ee9-eefd-4054-bed7-b2a5010c752f/transcript?format=SubRip&t=1742401343",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 25737,
+        "body_sha256": "04064a19ddb935ebb572e9c540cda3e931246052d97ab621b6b3b12e15b4601c",
+        "text_sha256": "2112d4b5dcdd975e036efaaedf75eb1997947103a1999aaf338ba4d242465b58",
+        "requested_utc_ns": 1793047203266476753,
+        "received_utc_ns": 1793047203464411302,
+        "elapsed_ns": 196426702,
+        "complete_body": true
+      },
+      {
+        "feed": "masters_in_business",
+        "key": "f87c57848e9e",
+        "title": "At the Money: The Tech Behind a Crypto Future",
+        "pub_utc": "2025-01-08T16:18:47Z",
+        "url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/9e9fa385-f09d-438f-9477-b25f010a8b7c/transcript?format=SubRip&t=1736352900",
+        "transcript": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/9e9fa385-f09d-438f-9477-b25f010a8b7c/transcript?format=SubRip&t=1736352900",
+        "transcript_type": "application/srt",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 26290,
+        "body_sha256": "21dc971b8350c9221830cd04ac9ff70c77d8393cb040e14b74f80ed9d7cf303d",
+        "text_sha256": "9c2adf4226c96ee2dc51c1a3612686947d94249d3d3f66d150520fb260d2a3c5",
+        "requested_utc_ns": 1793047203471392185,
+        "received_utc_ns": 1793047203610949884,
+        "elapsed_ns": 138155808,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "727ff76e22c8",
+        "title": "Gerald Rushton - Commodity Strategies (Trend; Carry; Congestion; and Volatility Carry) (S6E15)",
+        "pub_utc": "2023-09-04T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/90e4b395-3bca-4fa5-9a06-04854f980f8f/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/90e4b395-3bca-4fa5-9a06-04854f980f8f/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 50140,
+        "body_sha256": "e33693182af689751dd93dc117994bc1a315d64659f424a2fe23544e0840c0e0",
+        "text_sha256": "388a2867edea3355d7b975ffb0060e62073bf61a87d686016bed4d6e90bfa6c2",
+        "requested_utc_ns": 1793047203617938609,
+        "received_utc_ns": 1793047203878554573,
+        "elapsed_ns": 259204759,
+        "complete_body": true
+      },
+      {
+        "feed": "macro_hive",
+        "key": "a8fe94ef8840",
+        "title": "Ep. 352: Richard Schimel on Platform Evolution, Collaborative Culture, and Navigating Market Risks",
+        "pub_utc": "2026-04-06T08:12:00Z",
+        "url": "https://static.libsyn.com/p/assets/5/5/8/4/55840fd396b49652d959afa2a1bf1c87/FINALSchimelEdited.srt",
+        "transcript": "https://static.libsyn.com/p/assets/5/5/8/4/55840fd396b49652d959afa2a1bf1c87/FINALSchimelEdited.srt",
+        "transcript_type": "application/x-subrip",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 67009,
+        "body_sha256": "1a4a124c8d8f0ab69738b94d97c8d5a653b4c97ad0614a86ca3348cc9b1e3af0",
+        "text_sha256": "ac67ef97a7e59890d3eb4e54664ce1c2671953bd7c68d6dc29e50392e05fc126",
+        "requested_utc_ns": 1793047203886871060,
+        "received_utc_ns": 1793047204447806089,
+        "elapsed_ns": 559296550,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "bea5335ad385",
+        "title": "Devin Anderson – Strategy versus Structure in Tail Hedging (S6E14)",
+        "pub_utc": "2023-08-14T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/500b3da2-72b3-456f-88c7-75311687401b/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/500b3da2-72b3-456f-88c7-75311687401b/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 70072,
+        "body_sha256": "9783f89a157309142a15af290fd9485d1e8b62cc181bb7c12d9da7b4158f3843",
+        "text_sha256": "f8d37f0c0639de6b187e51a6760f533d1e5ea71a8108238ddff3a1c4fe7accd3",
+        "requested_utc_ns": 1793047204458033024,
+        "received_utc_ns": 1793047204741089318,
+        "elapsed_ns": 281701022,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "7afc8810a563",
+        "title": "Martin Tarlie - Bridging the Gap Between Financial Planning and Portfolio Management (S6E13)",
+        "pub_utc": "2023-08-07T04:00:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/2d88a24b-ceca-440d-9473-6b9acc6b9560/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/2d88a24b-ceca-440d-9473-6b9acc6b9560/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 50665,
+        "body_sha256": "a6bc8305b51e279f399618d073903630a80dcf17de50b21296609d0329428166",
+        "text_sha256": "6716bafe825189bae90b8aa4955a1ddfd6b8637ddb195639b5b7f97354567def",
+        "requested_utc_ns": 1793047204751266655,
+        "received_utc_ns": 1793047205081660150,
+        "elapsed_ns": 329102055,
+        "complete_body": true
+      },
+      {
+        "feed": "flirting_with_models",
+        "key": "834d3e58ade5",
+        "title": "Bin Ren – text2quant (S7E2)",
+        "pub_utc": "2023-12-11T12:36:00Z",
+        "url": "https://transcripts.captivate.fm/transcript/74e354e7-618c-4426-a368-8122a63fcd86/index.html",
+        "transcript": "https://transcripts.captivate.fm/transcript/74e354e7-618c-4426-a368-8122a63fcd86/index.html",
+        "transcript_type": "text/html",
+        "http_status": 200,
+        "state": "BODY_ACQUIRED",
+        "parse_state": "TEXT_PARSED_UNREVIEWED",
+        "accepted_body_bytes": 67084,
+        "body_sha256": "0452ed877343050a201d201b8683f440bb9d151dc1a004e16d830ebb12756d4b",
+        "text_sha256": "8566d7fa6e875c80c9c2300fac5d9ec9af9848a0640c77659c163c8ada00ff2d",
+        "requested_utc_ns": 1793047205090000171,
+        "received_utc_ns": 1793047205335034702,
+        "elapsed_ns": 243696875,
+        "complete_body": true
+      }
+    ],
+    "raw_full_text_and_rss_published": false,
+    "zero_media_models_market_orders": true,
+    "budget_journal_path": "data/videos/public_corpus_budget_20261026.jsonl"
+  },
+  "sources": [
+    {
+      "source_id": "GRUG",
+      "episode_key": "a4abac6cadb9",
+      "title": "Grug Capital – Grug (Finally) Teaches Us MEV (S6E12)",
+      "episode_url": "https://www.flirtingwithmodels.com/2023/07/20/s6e12-grug-finally-teaches-us-mev/",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/e532809b-fa1b-4853-b0ff-5bd4df7e4e49/index.html",
+      "transcript_kind": "text/html",
+      "published_utc": "2023-07-24T04:00:00Z",
+      "received_utc_ns": 1793047199578442794,
+      "rss_body_sha256": "74a29cc76f475e12a84e55602a460c2666f978d09ea9904add68555cf51132d9",
+      "body_sha256": "8e6532ee0a463706fa7f784039cd9d80c658ed0d25aedfe8471a7739d5139dfc",
+      "normalized_text_sha256": "7f8f8712a7138e37ac2a6175242652b07981cdf95bf4cc546832fec20ab4cd0d",
+      "normalized_words": 7886,
+      "semantic_review": {
+        "complete_received_text": true,
+        "read_word_interval_half_open": [
+          0,
+          7886
+        ],
+        "unread_word_interval_half_open": [],
+        "basis": "Root read the captured publisher transcript text; no audio/frame/speaker-authentication or linked book/code review.",
+        "reviewed_utc_date": "2026-10-27"
+      },
+      "profit_evidence": "Speaker/publisher claims and selected stories only; no audited complete ledger, executable strategy return or prospective result received.",
+      "copyright_access": "Public native transcript. Raw text stays private/ignored; only own concise paraphrases and identities published."
+    },
+    {
+      "source_id": "SUN",
+      "episode_key": "72243d61fa1d",
+      "title": "Explained! Systematic Options Strategies with David Sun - David Sun",
+      "episode_url": "https://resolve-gestalt-university.captivate.fm/episode/explained-systematic-options-strategies-with-david-sun-david-sun",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/e804454f-1293-44c2-9869-08e8917b547d/transcript.srt",
+      "transcript_kind": "application/srt",
+      "published_utc": "2024-02-09T19:45:00Z",
+      "received_utc_ns": 1793047198527071335,
+      "rss_body_sha256": "e939569530bb1e8f48c8d42f3cf65d97a077b3b64902b1ac286e3c0fb5a7c9e6",
+      "body_sha256": "03f5ae390526423c90e4e721534268ad52b9883a7a453635eb0ce1f8b42a7869",
+      "normalized_text_sha256": "4d276cb6f6679747aa4e2ad543042a55332fe7b080c2e3c0b974131224a6fcbb",
+      "normalized_words": 10302,
+      "semantic_review": {
+        "complete_received_text": true,
+        "read_word_interval_half_open": [
+          0,
+          10302
+        ],
+        "unread_word_interval_half_open": [],
+        "basis": "Root read the captured publisher transcript text; no audio/frame/speaker-authentication or linked book/code review.",
+        "reviewed_utc_date": "2026-10-27"
+      },
+      "profit_evidence": "Speaker/publisher claims and selected stories only; no audited complete ledger, executable strategy return or prospective result received.",
+      "copyright_access": "Public native transcript. Raw text stays private/ignored; only own concise paraphrases and identities published."
+    },
+    {
+      "source_id": "NOOR",
+      "episode_key": "61f496fbe9d3",
+      "title": "Asif Noor – Modern Systematic Macro (S6E9)",
+      "episode_url": "http://www.flirtingwithmodels.com/",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/1a925ade-f348-4702-a669-d1352e848703/index.html",
+      "transcript_kind": "text/html",
+      "published_utc": "2023-06-26T04:00:00Z",
+      "received_utc_ns": 1793047199992415222,
+      "rss_body_sha256": "74a29cc76f475e12a84e55602a460c2666f978d09ea9904add68555cf51132d9",
+      "body_sha256": "0d0fbe5a182b4cfaac7fc83b04cc344d393fbfa00a5343dad61f7bfac62e98c3",
+      "normalized_text_sha256": "12503348026e50019db7acc0ebb25ed0969efd40c98e997de2329b13d7329b48",
+      "normalized_words": 8359,
+      "semantic_review": {
+        "complete_received_text": true,
+        "read_word_interval_half_open": [
+          0,
+          8359
+        ],
+        "unread_word_interval_half_open": [],
+        "basis": "Root read the captured publisher transcript text; no audio/frame/speaker-authentication or linked book/code review.",
+        "reviewed_utc_date": "2026-10-27"
+      },
+      "profit_evidence": "Speaker/publisher claims and selected stories only; no audited complete ledger, executable strategy return or prospective result received.",
+      "copyright_access": "Public native transcript. Raw text stays private/ignored; only own concise paraphrases and identities published."
+    },
+    {
+      "source_id": "CURNUTT",
+      "episode_key": "ff3b6b19c771",
+      "title": "Dean Curnutt - The Reflexivity of Equity Volatility (S6E16)",
+      "episode_url": "https://www.flirtingwithmodels.com/2023/09/11/s6e16-the-reflexivity-of-equity-volatility/",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/cc92f8b3-4d17-445e-9408-c6ac654f459e/index.html",
+      "transcript_kind": "text/html",
+      "published_utc": "2023-09-11T04:00:00Z",
+      "received_utc_ns": 1793047199122119124,
+      "rss_body_sha256": "74a29cc76f475e12a84e55602a460c2666f978d09ea9904add68555cf51132d9",
+      "body_sha256": "04aa670a06f245b715d738b6abdd8e0551b42bb2b7dfd52c3146edbb1510bab0",
+      "normalized_text_sha256": "c6d4fb401046bcfcd8ed1559771be666986f1a6eda4e96c4fc01ddc2d34e809b",
+      "normalized_words": 13118,
+      "semantic_review": {
+        "complete_received_text": false,
+        "read_word_interval_half_open": [
+          0,
+          4500
+        ],
+        "unread_word_interval_half_open": [
+          4500,
+          13118
+        ],
+        "basis": "Root read the captured publisher transcript text; no audio/frame/speaker-authentication or linked book/code review.",
+        "reviewed_utc_date": "2026-10-27"
+      },
+      "profit_evidence": "Speaker/publisher claims and selected stories only; no audited complete ledger, executable strategy return or prospective result received.",
+      "copyright_access": "Public native transcript. Raw text stays private/ignored; only own concise paraphrases and identities published."
+    }
+  ],
+  "methods": [
+    {
+      "id": "PC26-G-AUCTION",
+      "title": "Ordering auction and validator share of gross surplus",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        1500,
+        3060
+      ],
+      "kind": "execution",
+      "queue_id": "CONTEXT",
+      "also": "M288;M292",
+      "received_rules": [
+        "Public pending transactions, private ordered bundles and sealed bids; more searchers can transfer more of the opportunity to validators."
+      ],
+      "missing_mechanics": [
+        "2023 interview is not certification of current chain/auction mechanics. Need authenticated current rules, state, fees, capacity and receipt timing before any experiment.",
+        "No bidding policy, current builder coverage or net-cost distribution supplied."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-SANDWICH",
+      "title": "User-slippage sandwich mechanism (received context)",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        2500,
+        3760
+      ],
+      "kind": "execution_risk",
+      "queue_id": "CONTEXT",
+      "also": "M243",
+      "received_rules": [
+        "Source describes exploiting a user swap's permitted price movement before and after that swap; guest disputes the claim that UI slippage always equals willingness to pay."
+      ],
+      "missing_mechanics": [
+        "No implementation proposed. Retained as received user execution-risk context; not a MEXC-perp signal or authorization to target users."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-ATOMIC-ARB",
+      "title": "Atomic multi-hop DEX arbitrage",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        3740,
+        4110
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M288;M240;M243",
+      "received_rules": [
+        "Compose all legs in one state transition and assert ending asset balance exceeds the starting balance; failed assertion reverts the exchanges."
+      ],
+      "missing_mechanics": [
+        "2023 interview is not certification of current chain/auction mechanics. Need authenticated current rules, state, fees, capacity and receipt timing before any experiment.",
+        "Guest calls this effectively riskless; that assertion alone does not cover gas, builder bids, inclusion, contract/state errors or an external hedge. Not equivalent to independent CEX API orders."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-BACKRUN",
+      "title": "Backrun a swap-induced pool imbalance against another DEX",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4000,
+        4180
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M288",
+      "received_rules": [
+        "After a user changes AMM reserves, trade the resulting cross-DEX price difference; claimed profit is spread less transaction costs."
+      ],
+      "missing_mechanics": [
+        "2023 interview is not certification of current chain/auction mechanics. Need authenticated current rules, state, fees, capacity and receipt timing before any experiment.",
+        "Need exact same-state executable pools, pool fees, price impact, ordering and inclusion bid; a 5-minute DEX-CEX mark gap is not this atomic trade."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-LIQ-WALLET",
+      "title": "Repay lending debt and sell received collateral",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4170,
+        4450
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M140;M243",
+      "received_rules": [
+        "Use own wallet assets to liquidate an undercollateralized lending position for a collateral bonus."
+      ],
+      "missing_mechanics": [
+        "2023 interview is not certification of current chain/auction mechanics. Need authenticated current rules, state, fees, capacity and receipt timing before any experiment.",
+        "Liquidation threshold/bonus, debt availability, collateral liquidation depth and failure costs unknown; collateral may keep falling."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-LIQ-FLASH",
+      "title": "Flash-loan-funded liquidation and collateral sale",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4390,
+        4550
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M243",
+      "received_rules": [
+        "Borrow, repay liquidated debt, sell collateral and repay the flash loan within an atomic operation; retain any surplus."
+      ],
+      "missing_mechanics": [
+        "2023 interview is not certification of current chain/auction mechanics. Need authenticated current rules, state, fees, capacity and receipt timing before any experiment.",
+        "Loan fee, gas and exact repayment/inclusion conditions needed; flash-loan availability is not free capital and does not fund a non-atomic inventory hold."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-MINT-FAST",
+      "title": "Mint scarce NFT supply and resell promptly",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4600,
+        4910
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Deprecated source example: win initial mints when secondary demand exceeds issuance supply, then sell quickly."
+      ],
+      "missing_mechanics": [
+        "No present edge implied. Need item-specific fill/liquidation/fee data and capital; source says current flow may no longer support this. Outside active futures objective."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-MINT-HOLD",
+      "title": "Adaptive longer NFT inventory hold during mania",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4730,
+        4910
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Separate weaker variant: source stopped selling immediately after observing inventory continuing upward and held longer."
+      ],
+      "missing_mechanics": [
+        "Post-observation adaptation, no frozen holding rule or independently measured expectancy; item inventory can become worthless. Outside active futures objective."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-ERROR-LISTING",
+      "title": "Rare mistaken listing or crossed collection-wide bid",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4500,
+        5440
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Buy an unusually cheap item or buy at the floor and sell into a much higher collection-wide bid; anecdotal Moonbirds example."
+      ],
+      "missing_mechanics": [
+        "No event frequency, authentic executable offers, all fees or current competition measured. Capital can sit idle for long intervals; outside active perps objective."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-BUNDLED-RIGHTS",
+      "title": "Buy asset, redeem associated rights and resell atomically",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4930,
+        5120
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Interviewer describes buying an NFT with attached staking rewards, redeeming them and reselling the item in one operation."
+      ],
+      "missing_mechanics": [
+        "Interviewer anecdote is not the guest's verified trade. Exact redeemability, final inventory, costs and contract permissions unknown; outside active futures."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-RARE-BREADTH",
+      "title": "Breadth of independently eligible rare-event mechanisms",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        5070,
+        5340
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "M007",
+      "received_rules": [
+        "Guest prefers several rare mechanisms because any one may never occur; low event frequency may reduce competition."
+      ],
+      "missing_mechanics": [
+        "Event counts are not independent; count inactivity, failures, capital opportunity cost and development overhead. Does not justify unbounded collection or variant searches."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-INVENTORY-COST",
+      "title": "Own inventory versus flash loans and gas/inclusion efficiency",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        5330,
+        5790
+      ],
+      "kind": "capital_execution",
+      "queue_id": "CONTEXT",
+      "also": "M240;M243;M409",
+      "received_rules": [
+        "Guest prefers own inventory when feasible because flash loans add gas and may lower auction competitiveness; NFT resale outside one operation cannot repay an atomic loan."
+      ],
+      "missing_mechanics": [
+        "Compare both at total immobilized capital and identical risk, including loan/bid/failed-attempt cost; no capital or fee entitlement inferred."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-ROI-DECAY",
+      "title": "Development effort versus finite opportunity lifetime",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        5750,
+        6460
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Estimate opportunity value versus implementation effort; source admits wasted bots and failed deployments. New chains initially may have less efficient flow, then competition erodes margins."
+      ],
+      "missing_mechanics": [
+        "No measured success rate, development budget or stable chain ranking supplied; chain expansion remains a source claim, not a new collection mandate."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-SECURITY",
+      "title": "Searcher-versus-searcher vulnerability exploitation (source boundary)",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        4870,
+        5010
+      ],
+      "kind": "security_context",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Source admits extracting balances through vulnerable searcher contracts."
+      ],
+      "missing_mechanics": [
+        "Received security-risk context only. No exploit code, target, implementation or experiment proposed; outside authorized quant research."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-AIRDROP",
+      "title": "Past-use airdrop farming and allocation criteria",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        6510,
+        7130
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Guest describes targeting well-funded, high-usage protocols for possible future token distributions; mentions undisclosed account-eligibility tactics."
+      ],
+      "missing_mechanics": [
+        "Allocation is discretionary and uncertain, costs/opportunity capital unresolved. No eligibility evasion or account-deception procedure retained or proposed. Outside futures objective."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-G-ML-UNKNOWN",
+      "title": "Undisclosed niche ML use and auction competition",
+      "source_id": "GRUG",
+      "read_word_interval_half_open": [
+        7110,
+        7380
+      ],
+      "kind": "incomplete_claim",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Guest claims some niche ML use but gives no model, input, target, code or evaluation; rejects a general near-term deep-learning recipe."
+      ],
+      "missing_mechanics": [
+        "No received executable ML rule; do not invent an equation or claim the private strategy was extracted."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-RANDOM-PUT",
+      "title": "Early discretionary short puts on popular stocks",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        560,
+        790
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Source began by selling puts on names drawn from media attention, without a sophisticated systematic rule."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "Weak idea retained: no universe, selection clock, strike, tenor or risk/exit rule."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-STACK-BETA",
+      "title": "Equity beta plus margin-financed option overlay",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        1000,
+        1240
+      ],
+      "kind": "portfolio_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M403",
+      "received_rules": [
+        "Original first-fund mandate held market beta and overlaid option strategies against marginable assets."
+      ],
+      "missing_mechanics": [
+        "Broker margin offsets do not create extra capital or free risk; exact exposures/fees unavailable. Outside current perps-only implementation; related M403 is not this strategy."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-TENORS",
+      "title": "Separate 7/45/90-day, 2-3-day and zero-day option scopes",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        1180,
+        1500
+      ],
+      "kind": "variant_scope",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "All mentioned tenor alternatives retained; zero-DTE product closes intraday and holds treasury bills overnight."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "No source result is transferred across tenors, and no tested variant count inferred from a list of tenors. Overnight cash interest/margin and end-of-day exits remain costs."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-CONDOR",
+      "title": "Naive managed short put/call spread or iron condor",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        1530,
+        1950
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M237;M138",
+      "received_rules": [
+        "Sell both sides and add wings; manage losses rather than assume passive volatility-premium harvest always works."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "Source explicitly says realized volatility can exceed implied. Need exact strikes, wings, entries, exits and tail fills; related M237 uses different wall/flow conditions."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-TRANCHES",
+      "title": "Recentered small intraday entries through the session",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        1770,
+        2260
+      ],
+      "kind": "execution",
+      "queue_id": "CONTEXT",
+      "also": "M007",
+      "received_rules": [
+        "Illustrative cadence about30minutes, eight-to-fifteen or a dozen daily occurrences; source uses small tranches to smooth daily outcomes."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "Occurrences share market shocks and are not independent law-of-large-numbers proof. Freeze exact cadence, max concurrency, exits, notional and total capital."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-STAGED-STOP",
+      "title": "Split loss exits across several thresholds",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        2230,
+        2490
+      ],
+      "kind": "risk_execution",
+      "queue_id": "CONTEXT",
+      "also": "M237",
+      "received_rules": [
+        "Source example: sell for1, close for3 (loss2); divide exits at150/200/250percent loss thresholds, described as multiple fire exits."
+      ],
+      "missing_mechanics": [
+        "Clarify loss-versus-close-price conventions, tranche sizes and trigger order; a stop does not guarantee a fill or a hard2-unit maximum loss."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-EXIT-DEPTH",
+      "title": "Crowded one-sided exits versus easy staged entries",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        2440,
+        2910
+      ],
+      "kind": "capacity_risk",
+      "queue_id": "CONTEXT",
+      "also": "M240;M409",
+      "received_rules": [
+        "Source distinguishes routine small entry capacity from rapid liquidation of all same-side positions under stress."
+      ],
+      "missing_mechanics": [
+        "Current entry depth does not certify future exit depth; preserve widened spreads, missing market makers, gaps and failed exits."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-GEX-WEAK",
+      "title": "Dealer-positioning products and inconclusive signal research",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        2790,
+        3180
+      ],
+      "kind": "weak_signal_context",
+      "queue_id": "CONTEXT",
+      "also": "M300;M308",
+      "received_rules": [
+        "Guest has tried indirect dealer-position indicators and purchased data but reports no conclusive signal in that discussion."
+      ],
+      "missing_mechanics": [
+        "No direct dealer inventory obtained. Do not equate calls/puts/OI signs with authenticated positions, or assign this as a positive test of M300/M308."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-MA-DIRECTION",
+      "title": "Moving-average trend direction as a simple comparator",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        3170,
+        3310
+      ],
+      "kind": "comparator",
+      "queue_id": "CONTEXT",
+      "also": "M035;M194",
+      "received_rules": [
+        "Mentioned comparator: MA crossover direction can choose whether to sell puts or calls."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "No lengths, execution convention or reported live model specified."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-CALL-CONTRACT",
+      "title": "Call-premium contraction rate as bearish direction",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        0,
+        110
+      ],
+      "kind": "directional_signal",
+      "queue_id": "M424",
+      "also": "M412;M308",
+      "received_rules": [
+        "Main discussion atwords3290-3480: contracting call premiums at a selected surface region/rate imply downtrend; source then sells calls."
+      ],
+      "missing_mechanics": [
+        "Source does not identify surface point, rate horizon, threshold, moneyness/tenor controls or executable costs. Our short-perp transfer remains a new hypothesis, not the source's traded instrument."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules.",
+      "additional_read_word_intervals_half_open": [
+        [
+          3290,
+          3480
+        ]
+      ]
+    },
+    {
+      "id": "PC26-D-PUT-EXPAND",
+      "title": "Put-premium expansion rate as a separate bearish signal",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        3290,
+        3500
+      ],
+      "kind": "directional_signal",
+      "queue_id": "M424",
+      "also": "M412;M308",
+      "received_rules": [
+        "Source treats expanding put premiums as another downtrend signal, with timing differing from call contraction."
+      ],
+      "missing_mechanics": [
+        "Same missing surface/clock/threshold contract; not a definition of implied-volatility expansion. Two bearish source routes, not an invented symmetric bullish model. Our perp transfer is untested."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-FIXED-CREDIT",
+      "title": "Add signals while scaling all sleeves into one credit budget",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        3480,
+        3910
+      ],
+      "kind": "portfolio_risk",
+      "queue_id": "M007",
+      "also": "M403",
+      "received_rules": [
+        "Add differently timed strategies, reduce existing sizes, hold total premium target fixed instead of adding risk for each new signal."
+      ],
+      "missing_mechanics": [
+        "Credit target is a planned-risk proxy, not actual maximum loss; stops, joint shocks, margin and capital constraints must bind the common account."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-DELTA1",
+      "title": "Explored transfer of option signals into delta-one products",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        3890,
+        4460
+      ],
+      "kind": "incomplete_transfer",
+      "queue_id": "M424",
+      "also": "M412",
+      "received_rules": [
+        "Guest says some signals transfer to delta-one but execution speed, adverse movement and meaningful notional make comfortable implementation difficult."
+      ],
+      "missing_mechanics": [
+        "No transfer rule, audited expectancy or executable risk-capacity demonstration supplied. This does not validate M424."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-PAYOFF-HURDLE",
+      "title": "Risk2-to-win1 versus cost-aware break-even probability",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        4430,
+        4990
+      ],
+      "kind": "decision_math",
+      "queue_id": "CONTEXT",
+      "also": "M412",
+      "received_rules": [
+        "Source gives2/3break-even before commission/slippage and distinguishes payoff ratio from hit rate. Farther-out strikes change win rate but also the tail/cost profile."
+      ],
+      "missing_mechanics": [
+        "Fixed realized win/loss and costs are assumptions, not stop guarantees. Delta is not a calibrated physical win probability or a stop-path probability."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-LOWDELTA",
+      "title": "Short10-15delta range with stop/profit management",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        4990,
+        5480
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Source reports10-15delta as a balance and claims roughly85percent wins in some strategies; illustrative profit capture60percent and loss200percent."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "Full tenor/strike/stop/tail distribution and charges absent; source claim is not a calibrated probability or executable net edge. Retain severe tail losses and no high-win-rate guarantee."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-PCR",
+      "title": "Premium capture rate as empirical expectancy proxy",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        5190,
+        5500
+      ],
+      "kind": "measurement",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "PCR is average retained PnL per unit premium sold; includes partial wins, expirations and stopped losses, with clustered bad periods explicitly acknowledged."
+      ],
+      "missing_mechanics": [
+        "Need actual all-trade net cash, fees and held-capital denominator; empirical sample average is not guaranteed future expectancy."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-CALENDAR-HEDGE",
+      "title": "Short1-day options hedged with7-day ATM straddles",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        5510,
+        6130
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Sell next-day/weekend exposure and hedge with a longer-tenor ATM straddle. Source says the standalone hedge roughly scratched over2013-2023 after a lumpy path."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "Source-selected historical hedge result is not zero-cost future protection. Need exact roll schedule, weights, prices, commissions and joint-path capital/margin."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-WING-RATIO",
+      "title": "Long wings or extra options as alternative shock hedges",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        6020,
+        6160
+      ],
+      "kind": "hedge_alternatives",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Separate mentioned alternatives are buying a wing, or a ratio with two additional options, to create shock sensitivity."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "No exact strikes/tenors/ratios beyond that example; no comparative costed result received."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-LONG0DTE",
+      "title": "Small conditional outright zero-day puts or calls",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        6740,
+        6980
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "A small allocation sometimes buys puts/calls instead of selling premium; source cites a selected late-session large-move day."
+      ],
+      "missing_mechanics": [
+        "Original SPX/index-option strategy, not demonstrated crypto-perp alpha. Need causal surface/quote, fill, settlement, fee, margin and session data.",
+        "No trigger, loss budget, contract choice or full sample; selected payday is not an expectancy estimate."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-REGIMES",
+      "title": "2013-history and post2020/post2022 structural-change checks",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        6140,
+        6570
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Source prefers cleaner2013+data and separately examines newer regimes after COVID and daily expirations."
+      ],
+      "missing_mechanics": [
+        "This is not authority to reuse spent holdouts, change a frozen window, optimize splits or discard earlier losses."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-STACK-TREND",
+      "title": "Trend-ETF basket plus options/treasury margin layering",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        6980,
+        8010
+      ],
+      "kind": "portfolio_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M403",
+      "received_rules": [
+        "Later fund replaces equity beta with a trend-following ETF basket and overlays option strategies; marginable return-stacked funds and treasury collateral are discussed."
+      ],
+      "missing_mechanics": [
+        "Original ETF/options/margin strategy is outside active perps implementation. Count leverage already inside wrappers, correlation stress and every unit of pledged capital; no leverage rescue or free capital inference."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-PERMANENT",
+      "title": "Permanent portfolio alternatives received without full mechanics",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        8000,
+        8340
+      ],
+      "kind": "portfolio_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Separately named passive alternatives:60/40, HarryBrowne permanent portfolio and GoldenButterfly; repeatable option rules can be treated as another sleeve."
+      ],
+      "missing_mechanics": [
+        "Only60/40weights supplied; constituents, rebalance rules and all other weights unread/unspecified. No source strategy executed here."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-OTHER-PREMIA",
+      "title": "Host examples of additional style and risk premia",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        8490,
+        8850
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M194;M138",
+      "received_rules": [
+        "Host separately suggests multi-market short volatility (gold/rates/oil), global carry, trend, market-neutral value, low-volatility and quality."
+      ],
+      "missing_mechanics": [
+        "Examples are not the guest's disclosed live rules; no full specifications or tested returns. Keep received versus private/unread scope distinct."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-D-ZEROEV",
+      "title": "Zero-mean hedge and volatility-drag/rebalancing thesis",
+      "source_id": "SUN",
+      "read_word_interval_half_open": [
+        8780,
+        9360
+      ],
+      "kind": "portfolio_risk",
+      "queue_id": "CONTEXT",
+      "also": "M403;M007",
+      "received_rules": [
+        "Guest keeps a potentially low/zero-return hedge if it helps bad days; host stresses long-term diversification and benchmark-relative discomfort."
+      ],
+      "missing_mechanics": [
+        "A hedge's historical zero mean is not free protection. Any benefit must be evaluated at the same capital/risk, net trading/rebalance costs and dependent uncertainty."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-OBJECTIVE",
+      "title": "Objective before product combination",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        1200,
+        1800
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Define the intended utility/risk profile before choosing a subset of forecasting models; multistrategy is not every model combined."
+      ],
+      "missing_mechanics": [
+        "Institutional smoothness objective is not achieved return evidence or an objective we can assume with public APIs."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-RV-CLASSES",
+      "title": "Relative-value carry/value/sentiment/technical and mean-reversion families",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        500,
+        1210
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M193;M194;M409",
+      "received_rules": [
+        "Source contrasts historical relative-value macro with later price/non-price and mean-reversion forecasting; carry, value and trend could secretly share exposure."
+      ],
+      "missing_mechanics": [
+        "Family names supply no exact entry/exit. No private forecast or primitive rule extracted."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-CARRY-TIMING",
+      "title": "Conditional rather than unconditional carry exposure",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        1800,
+        2180
+      ],
+      "kind": "incomplete_signal",
+      "queue_id": "M409",
+      "also": "M410",
+      "received_rules": [
+        "Capture carry only in some periods or with nonlinear construction, rather than treating a family label as alpha proof."
+      ],
+      "missing_mechanics": [
+        "No timing predicate or measured conditional forecast. R310/R311's twelve policies stay exact, negative stressed costs and incomplete coverage unchanged."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-OPTION-SENT",
+      "title": "Option-market sentiment as a forecast cluster",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2260,
+        2510
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M424;M300",
+      "received_rules": [
+        "An example cluster contains option-derived sentiment models."
+      ],
+      "missing_mechanics": [
+        "Inputs and rules are private/unspecified; not proof of M424, dealer GEX or a directional edge."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-FASTMOM",
+      "title": "Fast momentum as a separate return cluster",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2450,
+        2570
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M035;M194",
+      "received_rules": [
+        "Shorter-horizon momentum can have low correlation to medium-term momentum."
+      ],
+      "missing_mechanics": [
+        "No actual horizons, turnover, fees or coefficients supplied; no transferable return claim."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-CURVE-TWIST",
+      "title": "Time-series curve dynamics across assets",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2490,
+        2600
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M251;M409",
+      "received_rules": [
+        "Source describes forecasts from curve twists across commodities, rates and currencies."
+      ],
+      "missing_mechanics": [
+        "Not the same as M251's exact joint cross-sectional ranks. Contract-specific price/roll/funding state and formula remain missing."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-SEASONALITY",
+      "title": "Seasonality with alternate data or ML variants",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2550,
+        2740
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M114;M042",
+      "received_rules": [
+        "Seasonality may use different data or ML; taxonomy alone does not identify a distinct private rule."
+      ],
+      "missing_mechanics": [
+        "No frequency, feature, training split or target disclosed; retain as incomplete received alternatives."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-CLUSTER",
+      "title": "Correlation-based allocation groups instead of strategy-name buckets",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2170,
+        2790
+      ],
+      "kind": "portfolio_risk",
+      "queue_id": "M007",
+      "also": "",
+      "received_rules": [
+        "Cluster return profiles into groups to avoid many nominally different models losing together;110models/14clusters are source examples."
+      ],
+      "missing_mechanics": [
+        "No clustering distance/window/linkage or our measured correlation matrix supplied. Cluster count is not a proposed tuning grid or our tested models."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-RESEARCH",
+      "title": "Economic rationale, bounded resource allocation and adversarial review",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        2850,
+        3720
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Ideas need economic rationale and usable raw data; allocate research to a smaller set; peer reviewers challenge results. Source reports2-4month projects and8-12percent acceptance, not our rates."
+      ],
+      "missing_mechanics": [
+        "No promise of positive returns or a permanent schedule; our multiplicity and frozen protocols still bind."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-GRAVEYARD",
+      "title": "Preserve failures; reopen only a changed relevant question",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        3670,
+        4140
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Maintain rejected-research memory; genuinely changed data/technique/horizon may warrant reopening. Restrict applicable markets ex ante, not after finding only2of20working."
+      ],
+      "missing_mechanics": [
+        "No license to erase nulls, rerun identical inputs, rescue winners, or redefine the universe post validation."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-CONVICTION",
+      "title": "Magnitude-based versus direction-only model sizing",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        4120,
+        4540
+      ],
+      "kind": "confidence_sizing",
+      "queue_id": "M007",
+      "also": "M412",
+      "received_rules": [
+        "Compare score strength with opportunity case by case. Direction-only normalization and magnitude-sensitive sizing are distinct alternatives; small noisy scores should not automatically be amplified."
+      ],
+      "missing_mechanics": [
+        "Neither score size nor sign is a calibrated success probability. Need causal score-to-return/error calibration and cost/capital equivalence before testing M007 refinements."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-HRP",
+      "title": "Hierarchical risk allocation with model/cluster bounds",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        4510,
+        5000
+      ],
+      "kind": "portfolio_risk",
+      "queue_id": "M007",
+      "also": "",
+      "received_rules": [
+        "HRP-style grouping plus explicit minima/maxima bounds addresses uncomfortable covariance-driven corner allocations."
+      ],
+      "missing_mechanics": [
+        "No covariance estimator, bounds, hierarchy or exact objective disclosed; source is not a recipe to force a weak strategy into the book."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-STICKY",
+      "title": "Long covariance lookback and bounded allocation changes",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        4930,
+        5200
+      ],
+      "kind": "risk_execution",
+      "queue_id": "M007",
+      "also": "",
+      "received_rules": [
+        "Separately discussed controls: longer covariance history and sticky quarter-to-quarter allocation changes."
+      ],
+      "missing_mechanics": [
+        "No window or change cap specified; slower turnover can preserve or lose alpha, so compare common net risk/capital before any outcome."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-VOL-BAND",
+      "title": "Directional conviction within a capped volatility band",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        5230,
+        5610
+      ],
+      "kind": "confidence_sizing",
+      "queue_id": "M007",
+      "also": "",
+      "received_rules": [
+        "Constant-risk normalization may erase magnitude information; example benchmark10percent annual risk with15percent ceiling allows bounded variation."
+      ],
+      "missing_mechanics": [
+        "Example is not a recommended leverage level. Need actually measured realized risk, constraints and calibration; caps remain fixed before outcomes."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-COMMON-FORECAST",
+      "title": "Comparable sleeves, implied forecasts and one constrained portfolio",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        5600,
+        6020
+      ],
+      "kind": "portfolio_construction",
+      "queue_id": "M007",
+      "also": "M403;M410",
+      "received_rules": [
+        "Standardize model portfolios, combine, infer comparable forecasts, then enforce common constraints through an optimizer. Rank, positions and buy/sell scores have different units."
+      ],
+      "missing_mechanics": [
+        "No optimizer formulation or authenticated forecast values supplied. Reuse the common account; forecasts never credit cash and offsetting target units do not erase venue/capital risk."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-DECAY",
+      "title": "Model-specific alpha decay and execution deadline contract",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        6020,
+        6300
+      ],
+      "kind": "execution_contract",
+      "queue_id": "M007",
+      "also": "M240;M410",
+      "received_rules": [
+        "The originating researcher must provide horizon, decay, roll and execution information, not merely desired positions. Slow views may allow VWAP/TWAP; fast ones expire."
+      ],
+      "missing_mechanics": [
+        "No universal decay law or interpolation from a monthly forecast supplied. Need expected-net-at-execution calibration and first-seen executable inputs."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-NO-ACCELERATE",
+      "title": "Do not accelerate slow same-side size with a fast signal",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        6280,
+        6850
+      ],
+      "kind": "capacity_execution",
+      "queue_id": "M007",
+      "also": "M240",
+      "received_rules": [
+        "Source example keeps500fast and500slow lots on their researched execution schedules instead of sending1000fast; capacity/cost assumptions apply to the researched size."
+      ],
+      "missing_mechanics": [
+        "These are explanatory source lot numbers, not our capital or capacity. Requires model-lot attribution, partial receipts and shared risk; common direction is not free capacity."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-INCREMENTAL",
+      "title": "High-confidence improvement versus uncertain new model",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        6830,
+        7140
+      ],
+      "kind": "research_process",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Source prefers improving an already observed strategy over an uncertain backtest-only novelty; real out-of-sample history matters."
+      ],
+      "missing_mechanics": [
+        "We have no validated positive executable strategy to assume as the live baseline; do not infer positive net returns from source confidence."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-CROWDING",
+      "title": "Signal agreement as concentration risk",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        7100,
+        7440
+      ],
+      "kind": "portfolio_risk",
+      "queue_id": "M007",
+      "also": "M412",
+      "received_rules": [
+        "Formerly low-correlated models agreeing simultaneously may indicate correlation breakdown and warrants aggregate downside limits."
+      ],
+      "missing_mechanics": [
+        "No fixed probability multiplier or concentration threshold supplied. Do not count correlated votes as independent evidence."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-LIVE-DATA",
+      "title": "Timestamped execution data and incubation before outside capital",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        7500,
+        8010
+      ],
+      "kind": "data_execution_contract",
+      "queue_id": "M409",
+      "also": "M240;M412",
+      "received_rules": [
+        "Execution researchers challenge short-term simulations; data available live can differ from downloaded data. Processing and receipt latency can remove alpha; incubation checks the actual feed."
+      ],
+      "missing_mechanics": [
+        "No source infrastructure/latency or capital transferred to us. Existing missing first-seen depth/session/fee/funding notionals remain binding; no historical quote replaces an on-time observation."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-N-NOWCAST",
+      "title": "Business-travel, shipping, satellite and macro-nowcast leads",
+      "source_id": "NOOR",
+      "read_word_interval_half_open": [
+        7990,
+        8359
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "",
+      "received_rules": [
+        "Specific received examples: transatlantic business travel as an equity-growth indicator; shipping/satellite data; inflation and growth nowcasts."
+      ],
+      "missing_mechanics": [
+        "No commercial subscription, legal usage right, vintage, feature mapping, prediction interval or trade rule obtained; host gives opportunities, not disclosed models. No data purchase/download proposed."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-C-PORTFOLIO-INSURANCE",
+      "title": "Mechanistic portfolio-insurance short-gamma feedback",
+      "source_id": "CURNUTT",
+      "read_word_interval_half_open": [
+        1030,
+        1910
+      ],
+      "kind": "risk_context",
+      "queue_id": "CONTEXT",
+      "also": "M300;M308",
+      "received_rules": [
+        "Source describes stressed markets amplified by many actors following the same dynamic insurance rule and trying to exit together."
+      ],
+      "missing_mechanics": [
+        "Historical narrative, not an executable rebound/continuation rule; need actual causal positions and depth. Rest of this interview is unread."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-C-ROLLDOWN",
+      "title": "Treasury carry and roll-down under forward guidance",
+      "source_id": "CURNUTT",
+      "read_word_interval_half_open": [
+        1970,
+        2780
+      ],
+      "kind": "strategy_outside_active_perps",
+      "queue_id": "CONTEXT",
+      "also": "M244;M409",
+      "received_rules": [
+        "Two-year paper becoming one-year paper may earn roll-down if the curve/rates evolve favorably; policy certainty may crowd carry positions."
+      ],
+      "missing_mechanics": [
+        "No guaranteed future roll, duration hedge, executable terms or crypto funding bridge. Outside current short-hold futures implementation."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-C-CONVERGENCE",
+      "title": "LTCM convergence and correlation trades with gap risk",
+      "source_id": "CURNUTT",
+      "read_word_interval_half_open": [
+        2820,
+        3550
+      ],
+      "kind": "incomplete_family_scope",
+      "queue_id": "CONTEXT",
+      "also": "M236;M240",
+      "received_rules": [
+        "Source describes liquidity provision in convergence/correlation exposures; successful history and reputation weakened collateral discipline."
+      ],
+      "missing_mechanics": [
+        "No actual private pricing/entry/exit rules or full return path. Historical fame is not permission to assume zero collateral or replicate leverage."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    },
+    {
+      "id": "PC26-C-RISK-RECYCLE",
+      "title": "Structured-product correlation/variance risk recycling",
+      "source_id": "CURNUTT",
+      "read_word_interval_half_open": [
+        3530,
+        4500
+      ],
+      "kind": "execution_risk_context",
+      "queue_id": "CONTEXT",
+      "also": "M236;M300;M308",
+      "received_rules": [
+        "Retail structures can concentrate correlation/cross-Greek exposure, recycled through swaps and simpler options; model prices need a real hedge-market counterparty."
+      ],
+      "missing_mechanics": [
+        "No exact book or current dealer-sign observations received. Not identical to M236 dispersion or M308 inferred GEX; no private flow or model obtained."
+      ],
+      "source_strategy_tested_here": false,
+      "market_trials": 0,
+      "profitability_verified": false,
+      "exact_tested_scope": "Received-source extraction only. Related old NULL/PARTIAL lanes are not exact tests of these speaker-specific rules."
+    }
+  ],
+  "source_record_count": 65,
+  "source_record_notice": "Records enumerate received strategies, variants, comparators, incomplete families, risks and process. Count is not executable methods, independent models or tested trials.",
+  "economic_bridge": {
+    "active_new_queue_scope": "M424: two distinct bearish option-premium definitions, with a crypto-perp transfer proposed by us. No calibrated directional probability or positive net return supplied.",
+    "common_account": "Reuse R334 PaperAccount/PaperRisk and R319 lifecycle attribution; neither institutional target normalization nor premium credits replace realized cash.",
+    "horizon_and_capacity_contract": [
+      "model_id and source/version",
+      "forecast_target and units",
+      "forecast_origin/first_seen clocks",
+      "valid_until and holding horizon",
+      "expected payoff and calibrated error evidence",
+      "side and model-attributed target quantity",
+      "quantity-specific execution deadline/cost/capacity",
+      "same fixed total capital and per-venue/symbol/currency risk limits"
+    ],
+    "missing_option_contract": [
+      "same underlying and payout currency",
+      "causal expiry/strike/moneyness or delta convention",
+      "bid/ask and source/first-seen clocks",
+      "surface-location/rate-window/threshold",
+      "distinguish premium movement from IV, delta and theta",
+      "matched executable perp depth and funding/fee/session availability",
+      "certify actual option coverage for the named perp universe; never assume every altcoin has an executable options surface"
+    ],
+    "required_controls_if_registered": [
+      "lagged underlying momentum at same horizon/turnover",
+      "IV or constant-moneyness controls fixed before outcomes",
+      "call contraction versus put expansion kept as separate variants",
+      "same notional/capital and fixed1x/2x/3x costs",
+      "causal delay/abstain and dependent uncertainty/multiplicity; no validation-winner rescue"
+    ],
+    "math_boundary": "For fixed gross win W>0, gross loss L>0 and equal known all-in cost c, expected net=p*W-(1-p)*L-c, so break-even p=(L+c)/(W+L). For W=1,L=2,2/3 applies only at c=0. Real stop slippage/tail losses and uncertain p can violate the fixed-payoff assumptions.",
+    "atomic_boundary": "Reverting exchanged asset balances does not establish net profit after gas/bids/failed attempts, nor make two independent venue orders atomic.",
+    "implementation_limit": "R334 is one offline allocation batch: durable reservation/lifecycle bridging and authenticated calibration/fees/quotes remain unfinished; no repeated allocator or strategy activation authorized by these source records."
+  },
+  "validation": {
+    "full_suite_before_collector_commit": {
+      "tests": 1449,
+      "skipped": 3,
+      "seconds": 212.166,
+      "status": "PASS"
+    },
+    "focused_tests": 20,
+    "independent_mocked_review_groups": 8,
+    "independent_review_note_sha256": "375a7d0f06395bdadb57ff3bf24a75f42704a673d08500f60c009637739f0a2f",
+    "review_scope": "Independent reviewer checked collector at df836552 before root isolated custom-budget cache naming and added that regression; final code fully tested before real capture. No delegated transcript review completed.",
+    "real_restart_replay": "After an actual environment restart, both phases reran with an opener that raises on any network call:6240episodes/22texts/66charged requests preserved.",
+    "new_market_strategy_trials": 0,
+    "new_prospective_days": 0,
+    "profitability_validated": false,
+    "fresh_clone_without_raw_cache": "Using a copy of the published66-attempt journal, all66completed operation identities reject dispatch when raw receipts are absent:0HTTP,66charged and byte-identical ledger. Missing source content is not reacquired under a reset budget.",
+    "root_metadata_identity_audit": {
+      "checks_passed": 12650,
+      "public_episode_rows": 6240,
+      "native_links": 877,
+      "complete_received_text_reviews": 3,
+      "partial_text_reviews": 1,
+      "records_imported": 65,
+      "canonical_records": 530,
+      "new_queue_rows": [
+        "M424"
+      ],
+      "market_strategy_trials": 0,
+      "prospective_days": 0,
+      "old465source_objects_and21manifests_preserved": true,
+      "old_alias_queue_bytes_prefix": true,
+      "collector_financial_artifacts_unchanged": true,
+      "scope": "Metadata/identity/preservation assertions, not independent content verification or financial tests."
+    }
+  },
+  "reproduction": {
+    "public_recount": "gzip.decompress(index); csv.DictReader ->6240rows, unique canonical_id/key; count has_native_transcript and grouped feed/source identity. Match CSV/gzip SHA256 in this bundle.",
+    "private_restart_commands": [
+      "python scripts/dig_podcasts.py episodes --bounded --out data/videos/corpus_20261026",
+      "python scripts/dig_podcasts.py text --bounded --out data/videos/corpus_20261026"
+    ],
+    "limits": "Raw RSS/transcripts are private source snapshots. Hashes identify them but cannot replace payloads for independent speech-content verification. Live publisher URLs may change; metadata index, receipt counts and canonical reconciliation can be recounted from published artifacts."
+  }
+}

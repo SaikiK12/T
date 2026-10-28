@@ -1,0 +1,17 @@
+{
+  "coins": ["BTC", "ETH"],
+  "maturities": ["CURRENT_QUARTER", "NEXT_QUARTER"],
+  "cost_multiples": [1, 2, 3],
+  "delivery_price_scales": ["1/2", "1", "2"],
+  "fee_controls": ["zero_charge", "R335_assumed_rates"],
+  "spot_fee_assets": ["base", "quote"],
+  "spot_rate": "0.001",
+  "future_entry_rate": "0.0005",
+  "held_plan_path": "experiments/dated_carry_v2/results.json",
+  "rounded_ticket_path": "experiments/locked_carry_v1/results/locks.csv",
+  "actual_owner_fee_terms_known": false,
+  "actual_future_sale_settlement_ratio_known": false,
+  "actual_funding_or_margin_rule_attested": false,
+  "new_historical_data_reads": false,
+  "normalized_scope": "All received R335 rounded published ticket rows; S0=B=1 algebra only. Not actual fills, quantity grids, historical PnL rescore or price paths. Delivery/other fees zero is an optimistic diagnostic floor, actual values unknown. R328 is an old Deribit source, never current Binance data."
+}

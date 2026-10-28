@@ -1,0 +1,54 @@
+{
+  "capital_usdc": "10000",
+  "cash_benchmark_annual_rates": [
+    "0",
+    ".03",
+    ".05"
+  ],
+  "coins": [
+    "BTC",
+    "ETH"
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "delivery_price_scales": [
+    "1/2",
+    "1",
+    "2"
+  ],
+  "delivery_rate": ".00025",
+  "depth_profiles": [
+    "full",
+    "top_only"
+  ],
+  "expiry_ns": 1798185600000000000,
+  "face_targets": [
+    "1000",
+    "5000"
+  ],
+  "fallback_model_anchor_utc_ns": 1793059200000000000,
+  "fee_controls": [
+    "public_standard",
+    "zero_charge"
+  ],
+  "future_rate": ".00035",
+  "instruments": {
+    "BTC": {
+      "future": "BTC-25DEC26",
+      "spot": "BTC_USDC"
+    },
+    "ETH": {
+      "future": "ETH-25DEC26",
+      "spot": "ETH_USDC"
+    }
+  },
+  "registry_id": "R344",
+  "spot_fee_assets": [
+    "base",
+    "quote"
+  ],
+  "spot_rate": ".0005"
+}

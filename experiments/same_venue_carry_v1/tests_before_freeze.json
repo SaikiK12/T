@@ -1,0 +1,12 @@
+{
+  "command": "/workspace/T-consolidation/.venv/bin/python -m unittest discover -s tests -t .",
+  "conclusion": "OK",
+  "exit_code": 0,
+  "log_sha256": "046e7813949a6b6a25b7106b2b0fcdcad55fad8cc7fe0bf6110c1f7461d7620b",
+  "runtime": "Python3.12.14",
+  "scope": "Full repository suite before R343 freeze/collection; invented inputs, no R343 market report or acquisition",
+  "seconds": 206.445,
+  "skipped": 3,
+  "targeted_new_tests": 10,
+  "tests": 1549
+}

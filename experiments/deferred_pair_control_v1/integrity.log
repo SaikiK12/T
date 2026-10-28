@@ -1,0 +1,19 @@
+Research integrity: 169 registry rows, 164 local specs, 163 verified frozen, 1 planned drafts; 0 errors, 14 warnings.
+WARNING REGISTRY_SHA_MISSING [R143: registry/rounds.csv]: Registry row has no preregistration digest.
+WARNING EXPERIMENT_MISSING [R143: experiments/funded]: Registered experiment directory is absent (possibly a legacy import).
+WARNING REGISTRY_SHA_MISSING [R144: registry/rounds.csv]: Registry row has no preregistration digest.
+WARNING EXPERIMENT_MISSING [R144: experiments/challengeoption]: Registered experiment directory is absent (possibly a legacy import).
+WARNING REGISTRY_SHA_MISSING [R180: registry/rounds.csv]: Registry row has no preregistration digest.
+WARNING EXPERIMENT_MISSING [R180: experiments/unlocks_sf]: Registered experiment directory is absent (possibly a legacy import).
+WARNING EXPERIMENT_MISSING [R181: experiments/unlocks_deep]: Registered experiment directory is absent (possibly a legacy import).
+WARNING EXPERIMENT_MISSING [R182: experiments/hypermine]: Registered experiment directory is absent (possibly a legacy import).
+WARNING REGISTRY_SHA_MISSING [R183: registry/rounds.csv]: Registry row has no preregistration digest.
+WARNING EXPERIMENT_MISSING [R183: experiments/hypermine_expand]: Registered experiment directory is absent (possibly a legacy import).
+WARNING REGISTRY_SHA_MISSING [R184: registry/rounds.csv]: Registry row has no preregistration digest.
+WARNING REGISTRY_ID_MISSING [experiments/allocation_v1/PREREG.md]: PREREG has no explicit Registry id metadata.
+INFO PLANNED_DRAFT [experiments/battery_v1/PREREG.md]: PLANNED preregistration is not frozen yet.
+INFO REGISTRY_ID_REASSIGNED [R255: experiments/cascmkt_v1/PREREG.md]: PREREG declares R253; registered as R255 (documented).
+INFO REGISTRY_ID_REASSIGNED [R256: experiments/dow_v1/PREREG.md]: PREREG declares R254; registered as R256 (documented).
+WARNING UNREGISTERED_PREREG [experiments/levels_lighter_v1/PREREG.md]: Frozen local spec has no registry row.
+WARNING REGISTRY_ID_MISSING [experiments/unlocks_funding_bounds_v1/PREREG.md]: PREREG has no explicit Registry id metadata.
+{"aliases": 530, "errors": 0, "id_reassignments": 4, "provider_entries": 54, "queue_rows": 340, "source_files": 27, "source_methods": 530, "warnings": 0}

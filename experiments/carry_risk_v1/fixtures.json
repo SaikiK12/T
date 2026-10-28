@@ -1,0 +1,41 @@
+{
+  "additional_same_coin_requirements_model": "zero only within segregated paper subaccount; actual complete state unknown",
+  "canonical_method": "M244",
+  "capital_usdc": "10000",
+  "coin_price_scales": [
+    ".25",
+    ".5",
+    "1",
+    "2",
+    "4"
+  ],
+  "coins": [
+    "BTC",
+    "ETH"
+  ],
+  "common_future_mark_factors": [
+    ".9",
+    "1",
+    "1.02",
+    "1.1",
+    "1.25"
+  ],
+  "default_mark_band_advisory": "10percent per reused R327 inverse contract, adjustable; outside-band stress retained, not reachable-market claim",
+  "denominator_controls": [
+    "index",
+    "mark"
+  ],
+  "loss_floor_fractions": [
+    ".02",
+    ".05",
+    ".1"
+  ],
+  "new_prospective_strategy_days": 0,
+  "parent_model_count": 48,
+  "planned_conditional_states": 2400,
+  "planned_loss_frontiers": 720,
+  "predictive_trials": 0,
+  "primary_illustration": "5000-full-public_standard-base (all1x/2x/3x retained)",
+  "registry_id": "R346",
+  "same_allocation_as_parent": true
+}

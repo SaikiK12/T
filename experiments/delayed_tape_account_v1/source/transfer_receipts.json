@@ -1,0 +1,184 @@
+{
+  "scope_closed": true,
+  "max_requests": 12,
+  "requests": 12,
+  "ref": "ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+  "response_bodies_are_connector_normalized_UTF8": true,
+  "records": [
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta0.5_h30.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/9ac98f38b58fd9c07f717223902d177be042cb2c",
+      "expected_git_blob": "9ac98f38b58fd9c07f717223902d177be042cb2c",
+      "expected_size": 105419,
+      "elapsed_ms": 933,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta0.5_h5.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/9192c4796225ac0bf68a172b2cfa852666f21bcf",
+      "expected_git_blob": "9192c4796225ac0bf68a172b2cfa852666f21bcf",
+      "expected_size": 183017,
+      "elapsed_ms": 583,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta1_h30.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/4840d09ed6b298afa7549442296c087c38720e26",
+      "expected_git_blob": "4840d09ed6b298afa7549442296c087c38720e26",
+      "expected_size": 30651,
+      "elapsed_ms": 465,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta1_h5.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/05bba5ee0b6214fa2d6ffb1fc6c8fd67f27c1d4e",
+      "expected_git_blob": "05bba5ee0b6214fa2d6ffb1fc6c8fd67f27c1d4e",
+      "expected_size": 42374,
+      "elapsed_ms": 495,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta2_h30.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/31c99a5d7dd5e64edfaf7f76081bea7167805c51",
+      "expected_git_blob": "31c99a5d7dd5e64edfaf7f76081bea7167805c51",
+      "expected_size": 8187,
+      "elapsed_ms": 495,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/trades_theta2_h5.csv.gz",
+      "url": "https://api.github.com/repos/SaikiK12/T/git/blobs/b15934de896e582dd19586d08dc4fd983fdb089e",
+      "expected_git_blob": "b15934de896e582dd19586d08dc4fd983fdb089e",
+      "expected_size": 9416,
+      "elapsed_ms": 486,
+      "returned_content_characters": null,
+      "error": true,
+      "keys": [
+        "error",
+        "error_code"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/results/summary.json",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/experiments/tapelag_lighter_v2/results/summary.json?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 567,
+      "returned_content_characters": 15751,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v1/PREREG.sha256",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/experiments/tapelag_lighter_v1/PREREG.sha256?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 514,
+      "returned_content_characters": 65,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    },
+    {
+      "path": "experiments/tapelag_lighter_v2/PREREG.sha256",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/experiments/tapelag_lighter_v2/PREREG.sha256?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 517,
+      "returned_content_characters": 65,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    },
+    {
+      "path": "docs/VENUE_STRUCTURE.md",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/docs/VENUE_STRUCTURE.md?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 404,
+      "returned_content_characters": 10794,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    },
+    {
+      "path": "lab/tape.py",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/lab/tape.py?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 414,
+      "returned_content_characters": 10492,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    },
+    {
+      "path": "scripts/record_tape.py",
+      "url": "https://api.github.com/repos/SaikiK12/T/contents/scripts/record_tape.py?ref=ec9b36bc7fdd47bbb01a1261ddfa73b1daebc131",
+      "elapsed_ms": 414,
+      "returned_content_characters": 14842,
+      "error": false,
+      "keys": [
+        "content",
+        "title",
+        "modified_date",
+        "url",
+        "display_url",
+        "display_title",
+        "structuredContent"
+      ]
+    }
+  ],
+  "raw_market_or_history_requests": 0
+}

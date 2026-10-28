@@ -1,0 +1,49 @@
+{
+  "after_merge_sha256": {
+    "registry/methods.csv": "a5da05bf642c7efc717bfa65c65b750d9b6e68954d84a70d1a714f08a8918532",
+    "registry/rounds.csv": "6d1b56d47a460859f55c017773b85b548c314a4308be176d7c065929e1bcce30"
+  },
+  "common_ancestor": "68c8f0a0f89ff99cfa00ce79230f014863681497",
+  "incoming_base_commit": "139d0e788d6abb9f3ecf75585cdc5c7d5e714f45",
+  "our_premerge_commit": "9c594cafe5f640c246ea63bc34e2e14ce2c35014",
+  "registries": {
+    "registry/methods.csv": {
+      "appended": [
+        "M425",
+        "M426"
+      ],
+      "incoming_rows": 331,
+      "original_ours_rows": 340,
+      "replaced_inactive_base_rows": [
+        "M267",
+        "M306",
+        "M412"
+      ],
+      "result_rows": 342
+    },
+    "registry/rounds.csv": {
+      "appended": [
+        "R337",
+        "R347",
+        "R348",
+        "R349",
+        "R351",
+        "R353",
+        "R354",
+        "R355",
+        "R356",
+        "R362",
+        "R363"
+      ],
+      "incoming_rows": 163,
+      "original_ours_rows": 171,
+      "program_trials": 9479141,
+      "replaced_inactive_base_rows": [],
+      "result_rows": 182
+    }
+  },
+  "scope": "Disjoint registry reconciliation for draft branch; no PR merged and no prior journal row rewritten.",
+  "strategy_trial_interpretation": "9479141 is the mechanically summed merged registry count; R365/R366 add zero strategy variants. It is not a confidence calculation or proof of independent trials.",
+  "writer_status": "Incoming branch last observed 2026-10-28 14:40 UTC; R364 was claimed but is not present in this commit. Its files were not modified by this reconciliation.",
+  "xbook_journal_precision_audit": "experiments/xbook_fwd/journal_merge_20261028.json"
+}

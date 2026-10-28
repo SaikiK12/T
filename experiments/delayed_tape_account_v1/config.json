@@ -1,0 +1,29 @@
+{
+  "canonical_dependency": "M409",
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "existing_alias": "FV26-LT-ACCOUNT-FEE-LATENCY",
+  "first_seen_source": "R316 archived MEXC depth full messages",
+  "hypothetical_mid_notional": "1000",
+  "native_cases": [
+    "flat_crossing_only",
+    "unknown_exit_retained"
+  ],
+  "normalized_account_convention": "fixed1000 entry midpoint notional; absolute entry mid100 and quantity10 constructed; exit crossing at its own midpoint; no actual source price/fill proof",
+  "original_binary_export_scope_stays_closed": true,
+  "predictive_variants_added": 0,
+  "processing_clocks": "constructed replay timer, not measured production",
+  "processing_interval_seconds": [
+    1,
+    600
+  ],
+  "prospective_strategy_days_added": 0,
+  "registry_id": "R350",
+  "related_active_method_not_edited": "M264",
+  "settlement_grace_ms": 2000,
+  "six_new_UTF8_exports_received": true,
+  "whole_native_fixture_capital": "10000"
+}

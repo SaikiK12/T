@@ -1,0 +1,156 @@
+{
+  "commit": "f7935da10cac2c4969310bc93ad0705d8a5c8d2c",
+  "files": [
+    {
+      "bytes": 19299,
+      "local": "experiments/settlement_account_v1/source/experiments__settlehop_v1__PREREG.md",
+      "path": "experiments/settlehop_v1/PREREG.md",
+      "producer_prereg_hash_verified": false,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "37727fd22c185c20a6b9015b49340d8c71daad8643d03ed638395e4c5c3a1381"
+    },
+    {
+      "bytes": 9181,
+      "local": "experiments/settlement_account_v1/source/experiments__settlehop_v1__FINDINGS.md",
+      "path": "experiments/settlehop_v1/FINDINGS.md",
+      "producer_prereg_hash_verified": false,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "0b5165dabdf80a9b03592046345bafe46cbfb2bf12cd530075bf3082d23cb46a"
+    },
+    {
+      "bytes": 15387,
+      "local": "experiments/settlement_account_v1/source/experiments__settlehop_pred_v1__PREREG.md",
+      "path": "experiments/settlehop_pred_v1/PREREG.md",
+      "producer_prereg_hash_verified": false,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "799ffb1bbb7367189dcb6294f75892979de580dedbca31d883b265cfa1426e05"
+    },
+    {
+      "bytes": 11929,
+      "local": "experiments/settlement_account_v1/source/experiments__settlehop_pred_v1__FINDINGS.md",
+      "path": "experiments/settlehop_pred_v1/FINDINGS.md",
+      "producer_prereg_hash_verified": false,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "0e35d0f8bee59484675af59679780aff1585f352dc40f9580ed4320170a03a25"
+    },
+    {
+      "bytes": 15492,
+      "local": "experiments/settlement_account_v1/source/experiments__settlehop_fwd__PREREG.md",
+      "path": "experiments/settlehop_fwd/PREREG.md",
+      "producer_prereg_hash_verified": false,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "5a93c2c170829a3bca1df0bfe7fb8b9f4717ec88fd3a5a4ddf309c6614e4c908"
+    },
+    {
+      "bytes": 27446,
+      "local": "experiments/settlement_account_v1/source/scripts__forward_settlehop.py",
+      "path": "scripts/forward_settlehop.py",
+      "producer_prereg_hash_verified": true,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "9c69d549a1f713da011d8241211f1976def358ecdff85fda5fc26880874082df"
+    },
+    {
+      "bytes": 10931,
+      "local": "experiments/settlement_account_v1/source/scripts__settlehop_rule.py",
+      "path": "scripts/settlehop_rule.py",
+      "producer_prereg_hash_verified": true,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "bea20ba88c511261038f9e1e4fadca258cd37349ad9fc9f4b911f5feb4ca146c"
+    },
+    {
+      "bytes": 21570,
+      "local": "experiments/settlement_account_v1/source/tests__test_forward_settlehop.py",
+      "path": "tests/test_forward_settlehop.py",
+      "producer_prereg_hash_verified": true,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "7ed4e12586a9143300d4870ed2089c1762a82844e746035384d5a9ef0643412a"
+    },
+    {
+      "bytes": 24528,
+      "local": "experiments/settlement_account_v1/source/scripts__run_settlehop.py",
+      "path": "scripts/run_settlehop.py",
+      "producer_prereg_hash_verified": true,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "009145b050e50f4394499e318737fe4ef86a00ef21136fb327658d4072c86829"
+    },
+    {
+      "bytes": 13985,
+      "local": "experiments/settlement_account_v1/source/scripts__run_settlehop_pred.py",
+      "path": "scripts/run_settlehop_pred.py",
+      "producer_prereg_hash_verified": true,
+      "scope_read": "full pure score/walk/rule and relevant forward entry/exit/scoring sections; R354 finding/prereg mechanics; remaining downloaded scopes retained, not claimed fully read",
+      "sha256": "64e87553239835ebbab85638e2503062fabbbeb67f996cca8ada80d5b02ba9ce"
+    }
+  ],
+  "live_tickets_read": false,
+  "official_mechanics_reused": [
+    "experiments/funding_values_v1/sources.json",
+    "experiments/fee_routes_v1/sources.json",
+    "experiments/funding_values_v1/FINDINGS.md"
+  ],
+  "source_claims_are_not_authenticated_fills": true,
+  "transfer_scope": {
+    "bytes": 169748,
+    "max_body_bytes": 524288,
+    "max_requests": 12,
+    "max_tool_ms": 120000,
+    "max_total_bytes": 3145728,
+    "receipts": [
+      {
+        "bytes": 19299,
+        "path": "experiments/settlehop_v1/PREREG.md",
+        "tool_ms": 364
+      },
+      {
+        "bytes": 9181,
+        "path": "experiments/settlehop_v1/FINDINGS.md",
+        "tool_ms": 356
+      },
+      {
+        "bytes": 15387,
+        "path": "experiments/settlehop_pred_v1/PREREG.md",
+        "tool_ms": 776
+      },
+      {
+        "bytes": 11929,
+        "path": "experiments/settlehop_pred_v1/FINDINGS.md",
+        "tool_ms": 323
+      },
+      {
+        "bytes": 15492,
+        "path": "experiments/settlehop_fwd/PREREG.md",
+        "tool_ms": 366
+      },
+      {
+        "bytes": 27446,
+        "path": "scripts/forward_settlehop.py",
+        "tool_ms": 478
+      },
+      {
+        "bytes": 10931,
+        "path": "scripts/settlehop_rule.py",
+        "tool_ms": 402
+      },
+      {
+        "bytes": 21570,
+        "path": "tests/test_forward_settlehop.py",
+        "tool_ms": 334
+      },
+      {
+        "bytes": 24528,
+        "path": "scripts/run_settlehop.py",
+        "tool_ms": 480
+      },
+      {
+        "bytes": 13985,
+        "path": "scripts/run_settlehop_pred.py",
+        "tool_ms": 321
+      }
+    ],
+    "requests": 10,
+    "source_ref": "f7935da10cac2c4969310bc93ad0705d8a5c8d2c",
+    "state": "CLOSED",
+    "tool_ms": 4200,
+    "unused_requests_closed": 2
+  }
+}

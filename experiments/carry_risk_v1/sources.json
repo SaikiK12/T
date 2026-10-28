@@ -1,0 +1,118 @@
+{
+  "canonical_method": "M244",
+  "existing_alias": "YT26-04-DATED-CASH-CARRY",
+  "limits": [
+    "Liquidations",
+    "Cross collateral specifications",
+    "Portfolio Margin",
+    "account settings",
+    "Position Builder engine",
+    "private account endpoints",
+    "fee proof",
+    "historical risk changes"
+  ],
+  "new_market_history_private_order_requests": 0,
+  "new_static_body_bytes": 266298,
+  "new_static_gets": 3,
+  "new_web_queries": 1,
+  "not_an_actual_account_or_historical_risk_schedule": true,
+  "registry_id": "R346",
+  "reused_source_paths": [
+    "experiments/dated_carry_v1/sources.json",
+    "experiments/dated_carry_v1/formal_receipts.json",
+    "experiments/same_venue_carry_v1/sources.json"
+  ],
+  "scope": "current source-defined SM flat-segment fractions and settlement-asset segregation plus readonly R344 marked-state diagnostic",
+  "scope_closed": true,
+  "sources": [
+    {
+      "bytes": 74219,
+      "displayed_updated": "2026-10-13 08:20",
+      "facts": {
+        "dated_BTC_ETH_tier": 4,
+        "default_mode": "S:SM",
+        "leverage_formula": "L(N)=C1*(C1/C2)^(-[max(0,(N/Nmax-C3)/(1-C3))]^C4)",
+        "margin_fraction": "IM=1/L(N); MM=(2/3)*IM",
+        "margin_summation": "position-level requirements summed; no SM hedge offset claimed",
+        "max_amount_effective_utc": "2026-09-24T09:00:00Z",
+        "sm_modes": [
+          "S:SM",
+          "X:SM"
+        ],
+        "tier4": {
+          "C1": "25",
+          "C2": "4",
+          "C3": "0.03",
+          "C4": "0.35"
+        }
+      },
+      "limits": [
+        "Generic N unit text says underlying coin; instrument-specific inverse exception requires the separately read table.",
+        "No inverse coin-conversion denominator defined.",
+        "No historical schedule established.",
+        "No deployed engine, rounding, account mode or trigger certified."
+      ],
+      "name": "standard_margin",
+      "read_scope": "Main article in full, all six tier parameter rows, perpetual/futures tier classifications, source MathML expression and example. Navigation/templates and every linked destination unread.",
+      "sha256": "cbff9d143cf3eaf938bf2c06ddc8de150be2aacb99aa3187f9389824cd251a41",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811528477-Standard-Margin"
+    },
+    {
+      "bytes": 115626,
+      "displayed_updated": "2026-10-13 08:24",
+      "facts": {
+        "BTC_ETH_inverse_dated_max_amount_usd": "75000000",
+        "BTC_ETH_inverse_dated_tier": 4,
+        "at_max_IM_fraction": "1/4",
+        "at_max_MM_fraction": "1/6",
+        "flat_segment_IM_fraction": "1/25",
+        "flat_segment_MM_fraction": "2/75",
+        "flat_segment_max_usd": "2250000",
+        "inverse_position_size_unit": "USD face, not underlying coins",
+        "precedence": "SM formula and contract specification outrank derived requirements table if inconsistent",
+        "scope": [
+          "S:SM",
+          "X:SM"
+        ],
+        "table_rounded_MM_percent": "2.67"
+      },
+      "limits": [
+        "Inverse USD-to-coin conversion price not specified.",
+        "Table margin percentages are rounded, not exact fractions.",
+        "No historical-vintage data or account-specific change established.",
+        "No rule for risk N aggregation across distinct expiries/open orders defined."
+      ],
+      "name": "requirements",
+      "read_scope": "Intro, table interpretation and source-precedence rules; six tier-curve rows; inverse perpetual table; dated futures table with BTC/ETH inverse rows checked. Other linear-perpetual numeric rows not extracted. Navigation/templates/links unread.",
+      "sha256": "640700ea3ee7c1885b2b80d87956a52cf03a468c24fdafbd50da5f3e81a1fae1",
+      "url": "https://support.deribit.com/hc/en-us/articles/39858424876829-Standard-Margin-Requirements-by-Instrument"
+    },
+    {
+      "bytes": 76453,
+      "displayed_updated": "2026-10-21 11:11",
+      "facts": {
+        "PM": "Scenario portfolio methodology differs from SM. Cross PM recognizes within-asset hedges, not cross-asset risk netting.",
+        "SM_IM": "sum position IM plus open-order IM",
+        "SM_MM": "sum position MM",
+        "SM_margin_balance": "cash balance + sum futures UPL/RPL",
+        "S_SM": "Each settlement asset independently supports its own instruments; requirements summed per asset. Idle USDC cannot automatically satisfy BTC or ETH inverse requirements.",
+        "X_SM": "Cross-collateral mode combines supported assets, with haircuts/collateral fees; exact rules require unread specification.",
+        "available_balance": "margin balance minus IM",
+        "equity": "cash balance + sum futures UPL/RPL + option values",
+        "model_choice_scope": "main/subaccount separately",
+        "pre_expiry_transition": "During last30min, IM/MM converge to projected IM/MM excluding nearest-expiry instruments.",
+        "withdrawal_balance": "available balance minus session profits"
+      },
+      "limits": [
+        "No numerical haircut, collateral fee or supported cross-collateral list read.",
+        "No source defines exact greater-than/equal liquidation trigger or engine sequence.",
+        "Available margin is not settled cash/withdrawal cash/spot-spendable cash.",
+        "Owner mode, balances, other positions, live fills and cash state unobserved."
+      ],
+      "name": "margin_types",
+      "read_scope": "Main article in full: four mode definitions, segregation/cross and SM/PM distinctions, account/subaccount selection and full margin-parameter table. Navigation/templates and linked cross-collateral/liquidation/PM pages unread.",
+      "sha256": "c822cacc02669f0ff77e00eb3a5d51752e674e981c6b6a1dc5240fafcf6919fd",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811317149-Margin-types-and-usage"
+    }
+  ]
+}

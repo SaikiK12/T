@@ -1,0 +1,74 @@
+{
+  "actual_orders": 0,
+  "blocked": [
+    "coinm_info_doc:source_access_stop",
+    "coinm_info:unavailable_public_metadata"
+  ],
+  "budget": {
+    "authorization_verified": false,
+    "baseline": {
+      "body_bytes_upper_bound": 0,
+      "requests_used": 0,
+      "reserved_duration_ns": 0
+    },
+    "body_bytes_charged_upper_bound": 1048576,
+    "dispatch_block_reasons": [],
+    "duration_ns_charged_upper_bound": 16000000000,
+    "limits": {
+      "max_attempt_duration_ns": 8000000000,
+      "max_body_bytes": 8388608,
+      "max_requests": 16,
+      "max_reserved_duration_ns": 128000000000
+    },
+    "new_dispatch_blocked": false,
+    "pending": [],
+    "remaining_body_bytes": 7340032,
+    "remaining_requests": 14,
+    "requests_charged": 2,
+    "scope": "R340/one-off-source-and-current-Binance-inputs",
+    "violations": []
+  },
+  "closed_source_batch_reopened": false,
+  "historical_reported_mib_spent_unchanged": "229.85",
+  "historical_requests_spent_unchanged": 7757,
+  "phase": "sources",
+  "records": [
+    {
+      "accepted_body_bytes": 138,
+      "body": "coinm_info_doc.gz",
+      "body_cap_reached": false,
+      "body_sha256": "753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0",
+      "complete": true,
+      "error": null,
+      "http_status": 302,
+      "name": "coinm_info_doc",
+      "raw_body_private": true,
+      "received_mono_ns": 231662207116476,
+      "received_utc_ns": 1793077723174865077,
+      "redirects": 0,
+      "retries": 0,
+      "started_mono_ns": 231661015830040,
+      "started_utc_ns": 1793077721983578340,
+      "url": "https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Exchange-Information"
+    },
+    {
+      "accepted_body_bytes": 224,
+      "body": "coinm_info.gz",
+      "body_cap_reached": false,
+      "body_sha256": "79c1db471a4cdc1c8565b5dfc52e0ed2d29962738ee4d28597696fcd0920e348",
+      "complete": true,
+      "error": null,
+      "http_status": 451,
+      "name": "coinm_info",
+      "raw_body_private": false,
+      "received_mono_ns": 231663255374980,
+      "received_utc_ns": 1793077724223123481,
+      "redirects": 0,
+      "retries": 0,
+      "started_mono_ns": 231662211962816,
+      "started_utc_ns": 1793077723179711206,
+      "url": "https://dapi.binance.com/dapi/v1/exchangeInfo"
+    }
+  ],
+  "registry_id": "R340"
+}

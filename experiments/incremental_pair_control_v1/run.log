@@ -1,0 +1,22 @@
+{"repetition": 1, "profile": "baseline", "exact_original_equivalence": true}
+{"repetition": 1, "profile": "incremental", "exact_original_equivalence": true}
+{"repetition": 2, "profile": "incremental", "exact_original_equivalence": true}
+{"repetition": 2, "profile": "baseline", "exact_original_equivalence": true}
+{"repetition": 3, "profile": "baseline", "exact_original_equivalence": true}
+{"repetition": 3, "profile": "incremental", "exact_original_equivalence": true}
+{"repetition": 4, "profile": "incremental", "exact_original_equivalence": true}
+{"repetition": 4, "profile": "baseline", "exact_original_equivalence": true}
+{"repetition": 5, "profile": "baseline", "exact_original_equivalence": true}
+{"repetition": 5, "profile": "incremental", "exact_original_equivalence": true}
+Traceback (most recent call last):
+  File "/workspace/T-opportunity-admission/scripts/benchmark_incremental_pair_control.py", line 255, in <module>
+    result = run(args.out)
+             ^^^^^^^^^^^^^
+  File "/workspace/T-opportunity-admission/scripts/benchmark_incremental_pair_control.py", line 215, in run
+    depths = depth_equivalence(source, config['prefix_checkpoints'], started, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/T-opportunity-admission/scripts/benchmark_incremental_pair_control.py", line 170, in depth_equivalence
+    guard(started, config)
+  File "/workspace/T-opportunity-admission/scripts/benchmark_incremental_pair_control.py", line 39, in guard
+    raise RuntimeError('finite benchmark wall budget exhausted; retain partial outputs')
+RuntimeError: finite benchmark wall budget exhausted; retain partial outputs

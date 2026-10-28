@@ -1,0 +1,38 @@
+{
+  "R355_R356_and_collectors_unchanged": true,
+  "all_prior_method_objects_preserved": 530,
+  "all_prior_sources_preserved": 27,
+  "appended_rounds": [
+    "R360",
+    "R361"
+  ],
+  "audit_sha256": "f568220ed21aee2c14be360ac9c365c320242b154cdda0e1198b1918052ba454",
+  "benchmark_sha256": "da7b569d8301ff6b3a7731266900cbab5c27ea123ac56cb4d5bde0110b8568aa",
+  "code_inputs_verified": 109,
+  "historical_MiB_cap": 250,
+  "historical_MiB_used_reported": 229.85,
+  "historical_requests_cap": 8000,
+  "historical_requests_used": 7757,
+  "integrity": {
+    "errors": 0,
+    "intake_aliases": 530,
+    "intake_errors": 0,
+    "intake_queue_rows": 340,
+    "intake_source_files": 27,
+    "intake_warnings": 0,
+    "legacy_warnings_unchanged": 14,
+    "planned": 1,
+    "registry_rows": 169,
+    "specs": 164,
+    "verified_frozen": 163
+  },
+  "new_alpha_trials": 0,
+  "new_market_requests": 0,
+  "new_prospective_tickets": 0,
+  "old_registry_byte_prefix_preserved": true,
+  "only_mutated_canonical_method_note": "M409",
+  "panel_sha256_unchanged": "18365a440f1042ab05f117033fb9d4a22f270381e4afcf9b35feb943556a9a07",
+  "program_trials": 9479034,
+  "registry_id": "R361",
+  "sealed_old_input_files_verified": 75
+}

@@ -1,0 +1,39 @@
+{
+  "collector_added_or_run": false,
+  "current_input_batch_count": 1,
+  "financial_logic_change": "one exact spot contract_size literal1 -> Fraction(0.00000001), from both sealed current raw records; no amount conversion",
+  "new_network_attempts": 0,
+  "oracle_changes": [
+    "same exact literal correction independently",
+    "new registry/lane identity",
+    "EVIDENCE points to original raw capture; original R343 budget scope unchanged"
+  ],
+  "other_parameters_unchanged": [
+    "capital",
+    "symbols",
+    "face sizes",
+    "depth",
+    "all clock/gap/state guards",
+    "fees",
+    "debit controls",
+    "terminal worlds",
+    "cash benchmark",
+    "unknown actual execution fields"
+  ],
+  "parent_module_unchanged": true,
+  "registry_id": "R344",
+  "runner_changes": [
+    "new registry/lane/module identities",
+    "EVIDENCE points to exact committed parent capture, no duplicated dataset"
+  ],
+  "source": {
+    "literal_substitution_exact": true,
+    "new": "lab/venue_carry_v2.py",
+    "parent": "lab/venue_carry.py"
+  },
+  "tests_changes": [
+    "bind separate v2 module/runner/oracle",
+    "invented fixture matches observed source contract_size",
+    "old1 and1000 must both reject"
+  ]
+}

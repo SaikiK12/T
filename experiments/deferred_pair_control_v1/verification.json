@@ -1,0 +1,33 @@
+{
+  "actual_expected_net": null,
+  "byte_identical_native_and_receipt_files_per_report": 38,
+  "byte_identical_reports": 10,
+  "full_tests": {
+    "R360": {
+      "failures": 0,
+      "log_sha256": "1c2577abe5c7ea21a7d23df046fb983cd8b2c5f46cba70a683ad12ee5b1bec6e",
+      "seconds": 205.602,
+      "skips": 3,
+      "tests": 1634
+    },
+    "R361": {
+      "failures": 0,
+      "log_sha256": "ca8ce9c177de9a84203e1fcd37f8750d16fffa19bcea92f57c129a3633536a1d",
+      "seconds": 198.441,
+      "skips": 3,
+      "tests": 1650
+    }
+  },
+  "independent_checks": 9995,
+  "independent_finance": "stdlib/Fraction; declared supplied float-midpoint convention; original financial code unchanged",
+  "independent_venue_parser": false,
+  "new_alpha_variants": 0,
+  "new_market_requests": 0,
+  "new_prospective_tickets": 0,
+  "original_timeliness_preserved": true,
+  "prereg_sha256": "924f1d89866c2a7931f846906658a3b72784d2b525433b9235f349abcaf14f6c",
+  "protocol_code_input_freeze": "cd02a26d3096590b5f0c5298b00ea67497ce2f35",
+  "registry_id": "R361",
+  "shared_state_parser": true,
+  "state_comparisons": 896
+}

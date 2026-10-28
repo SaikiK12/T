@@ -1,0 +1,74 @@
+{
+  "scope": "R346read-only final module/source financial review; inventednumbers only; noR344data",
+  "checks": [
+    {
+      "check": "independent_short_equity",
+      "expected": "89/10",
+      "actual": "89/10",
+      "passed": true
+    },
+    {
+      "check": "implementation_short_equity",
+      "expected": "89/10",
+      "actual": "89/10",
+      "passed": true
+    },
+    {
+      "check": "independent_marked_NAV",
+      "expected": "1890",
+      "actual": "1890",
+      "passed": true
+    },
+    {
+      "check": "no_cash_mutation",
+      "expected": "{'coin_asset': 'BTC', 'known_coin_component': '109/10', 'coin_cash': '109/10', 'signed_face_usd': '-1000', 'entry_reciprocal': '1/100', 'realized_price_pnl_coin': '0', 'fees_coin': '1/10', 'pending_fees': [], 'conflicts': [], 'risk_flags': [], 'delivered': False, 'actual_account_credit_verified': False, 'net_usdt': None}",
+      "actual": "{'coin_asset': 'BTC', 'known_coin_component': '109/10', 'coin_cash': '109/10', 'signed_face_usd': '-1000', 'entry_reciprocal': '1/100', 'realized_price_pnl_coin': '0', 'fees_coin': '1/10', 'pending_fees': [], 'conflicts': [], 'risk_flags': [], 'delivered': False, 'actual_account_credit_verified': False, 'net_usdt': None}",
+      "passed": true
+    },
+    {
+      "check": "unknown_individual_margin",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "unknown_portfolio_margin_must_stay_unknown",
+      "expected": "None",
+      "actual": "False",
+      "passed": false
+    },
+    {
+      "check": "samecoin_MM_known_shortfall",
+      "expected": "False",
+      "actual": "False",
+      "passed": true
+    },
+    {
+      "check": "current_flat_MM_exact",
+      "expected": "2/75",
+      "actual": "2/75",
+      "passed": true
+    },
+    {
+      "check": "unknown_nonlinear_not_extrapolated",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "independent_frontier_substitution",
+      "expected": "980",
+      "actual": "980",
+      "passed": true
+    },
+    {
+      "check": "independent_frontier_monotone",
+      "expected": "True",
+      "actual": "True",
+      "passed": true
+    }
+  ],
+  "module_sha256": "58d639fc5fc5df68c32a4c9f50a68c8c7cb32acfca26278076418a4fcc4c8da1",
+  "test_sha256": "9cab404ee84c8af3e94ba1b22c6ac5b02062ed1d968a19450221d637911f60fb",
+  "material_blocker": "UNKNOWN aggregate margin incorrectly becomesFalse"
+}

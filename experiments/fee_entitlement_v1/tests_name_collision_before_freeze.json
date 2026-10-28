@@ -1,0 +1,23 @@
+{
+  "cause": "New component/test names accidentally replaced existing tracked fee_evidence files, breaking FeeStatement imports.",
+  "first_log_sha256": "99dd8fc4f824d28a2cb207cf1571c99df515580b2787516cc30e42d7416e94b5",
+  "first_suite_errors": 2,
+  "first_suite_seconds": 197.185,
+  "first_suite_skipped": 3,
+  "first_suite_tests": 1550,
+  "new_paths": [
+    "lab/fee_entitlement.py",
+    "tests/test_fee_entitlement.py"
+  ],
+  "original_files_restored": {
+    "lab/fee_evidence.py": "5040ce5b6c10ea1b6dd5e5ddf6d20c664478b24476fc4d17e1442913b80cb05d",
+    "tests/test_fee_evidence.py": "710876017f2eae201edff18005c1ca380708f4a3a8a73f6d68e120534f4877bf"
+  },
+  "phase": "unfrozen implementation, before any R345 market calculation or commit",
+  "resolution": "Restored both original files byte-for-byte from unchanged HEAD; moved new code to exclusive fee_entitlement paths; no old file was committed.",
+  "targeted_after_restore": {
+    "conclusion": "PASS",
+    "errors": 0,
+    "tests": 31
+  }
+}

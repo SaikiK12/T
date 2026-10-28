@@ -1,0 +1,22 @@
+{
+  "exact_liquidation_trigger": null,
+  "flat_share": ".03",
+  "inverse_usd_to_coin_conversion_denominator": null,
+  "last_30min_projection_implemented": false,
+  "maintenance_share_of_initial": "2/3",
+  "maximum_face_usd": "75000000",
+  "mode": "S:SM",
+  "nonlinear_segment_implemented": false,
+  "owner_mode_verified": false,
+  "registry_id": "R346",
+  "risk_size_aggregation_across_expiries_and_orders": null,
+  "risk_size_unit": "USD_face",
+  "scope": "BTC/ETH dated inverse futures only, per-position exact flat segment",
+  "source_asof": "posthoc 2026-10-27T12:55Z documentation; no on-time R343 risk evidence",
+  "source_sha256": [
+    "cbff9d143cf3eaf938bf2c06ddc8de150be2aacb99aa3187f9389824cd251a41",
+    "640700ea3ee7c1885b2b80d87956a52cf03a468c24fdafbd50da5f3e81a1fae1",
+    "c822cacc02669f0ff77e00eb3a5d51752e674e981c6b6a1dc5240fafcf6919fd"
+  ],
+  "start_leverage": "25"
+}

@@ -1,0 +1,95 @@
+{
+  "cases": [
+    {
+      "h_mid": "100",
+      "id": "flat",
+      "s_mid": "100"
+    },
+    {
+      "h_mid": "200",
+      "id": "common_double",
+      "s_mid": "200"
+    },
+    {
+      "h_mid": "50",
+      "id": "common_half",
+      "s_mid": "50"
+    },
+    {
+      "h_mid": "100",
+      "id": "relative_squeeze",
+      "s_mid": "142.6"
+    },
+    {
+      "id": "thin_s_exit",
+      "s_size": "1"
+    },
+    {
+      "id": "missing_s_exit",
+      "missing_s": true
+    },
+    {
+      "id": "future_s_exit",
+      "s_receive_second": 31
+    },
+    {
+      "id": "stale_s_exit",
+      "s_receive_second": 27
+    },
+    {
+      "funding": "bound",
+      "id": "event_bound_funding"
+    },
+    {
+      "funding": "missing",
+      "id": "funding_value_missing"
+    },
+    {
+      "exit_second": 15,
+      "funding": "bound",
+      "id": "nominal_plus5_exit"
+    },
+    {
+      "h_capital": "9000",
+      "id": "separate_capital_shortfall",
+      "s_capital": "1000"
+    }
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "coverage_second": 40,
+  "directions": [
+    1,
+    -1
+  ],
+  "entry_mid": "100",
+  "entry_second": 1,
+  "exit_second": 30,
+  "fees_bp": {
+    "lighter": "0",
+    "mexc": "3"
+  },
+  "funding_basis": "explicit invented pre_update_event_index declaration",
+  "funding_second": 10,
+  "fx_scenario": {
+    "USDC": "1",
+    "USDT": "1"
+  },
+  "h_effective_value": "80",
+  "half_spread": "0.1",
+  "independent_absolute_tolerance": "1e-65",
+  "initial_per_venue": "5000",
+  "kind": "invented_accounting_counterexamples_not_strategy",
+  "leg_quote_budget": "1000",
+  "legacy_float_tolerance": "2e-12",
+  "legacy_quote_tolerance": "2e-9",
+  "precision": 80,
+  "registry_id": "R357",
+  "s_effective_value": "120",
+  "scope": "compressed synthetic clocks, complete declared event list; no actual sessions/fees/fills/margin or live evidence",
+  "source_h_rate": ".001",
+  "source_s_rate": ".01"
+}

@@ -1,0 +1,1589 @@
+{
+  "activation_allowed": false,
+  "actual_executable_expected_net": null,
+  "checks": 24602,
+  "failures": [],
+  "passed": true,
+  "paths": [
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "cross_batch_capital_restart",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "997.600",
+          "known_realized_net_component": "-2.400",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "cross_batch_capital_restart",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "995.200",
+          "known_realized_net_component": "-4.800",
+          "nav": "995.200",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "cross_batch_capital_restart",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "992.800",
+          "known_realized_net_component": "-7.200",
+          "nav": "992.800",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_symbol_floor",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_symbol_floor",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_symbol_floor",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_venue_floor",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_venue_floor",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "pending_venue_floor",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 2,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "same_sign_shared_basis",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "945.4480",
+          "known_realized_net_component": "-54.5520",
+          "nav": "945.4480",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 16,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "same_sign_shared_basis",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "940.892",
+          "known_realized_net_component": "-59.108",
+          "nav": "940.892",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 16,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "same_sign_shared_basis",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "936.3320",
+          "known_realized_net_component": "-63.6680",
+          "nav": "936.3320",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 16,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "cancel_requires_final_cumulative",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "cancel_requires_final_cumulative",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "cancel_requires_final_cumulative",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_fill_join",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "998.8000",
+          "known_realized_net_component": "-1.2000",
+          "nav": "998.8000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_fill_join",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "997.600",
+          "known_realized_net_component": "-2.400",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_fill_join",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "996.4000",
+          "known_realized_net_component": "-3.6000",
+          "nav": "996.4000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 11,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_between_risk_and_allocation",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_between_risk_and_allocation",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "crash_between_risk_and_allocation",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "global_trade_ownership",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.8995",
+          "known_realized_net_component": "-0.1005",
+          "nav": "998.8000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "trade_identity_or_owner_conflict"
+      ],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "global_trade_ownership",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.798",
+          "known_realized_net_component": "-0.202",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "trade_identity_or_owner_conflict"
+      ],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ],
+      "case_id": "global_trade_ownership",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.6955",
+          "known_realized_net_component": "-0.3045",
+          "nav": "996.4000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "trade_identity_or_owner_conflict"
+      ],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "unknown_fee_and_funding",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "998.6000",
+          "known_realized_net_component": "-1.4000",
+          "nav": "998.6000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 13,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "unknown_fee_and_funding",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "997.400",
+          "known_realized_net_component": "-2.600",
+          "nav": "997.400",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 13,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "unknown_fee_and_funding",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "996.2000",
+          "known_realized_net_component": "-3.8000",
+          "nav": "996.2000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 13,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "gap_horizon_and_late_fill",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.8895",
+          "known_realized_net_component": "-0.1105",
+          "nav": "988.7900",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "expired_entry_intent_with_unresolved_orders",
+        "mandatory_horizon_exit_unobserved",
+        "observed_fill_after_model_horizon",
+        "source_gap_requires_reconciliation"
+      ],
+      "observations": 7,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "gap_horizon_and_late_fill",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.778",
+          "known_realized_net_component": "-0.222",
+          "nav": "987.580",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "expired_entry_intent_with_unresolved_orders",
+        "mandatory_horizon_exit_unobserved",
+        "observed_fill_after_model_horizon",
+        "source_gap_requires_reconciliation"
+      ],
+      "observations": 7,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "gap_horizon_and_late_fill",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.6655",
+          "known_realized_net_component": "-0.3345",
+          "nav": "986.3700",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "expired_entry_intent_with_unresolved_orders",
+        "mandatory_horizon_exit_unobserved",
+        "observed_fill_after_model_horizon",
+        "source_gap_requires_reconciliation"
+      ],
+      "observations": 7,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ],
+      "case_id": "negative_unknown_uncalibrated",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 3,
+      "stateless_control": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ],
+      "case_id": "negative_unknown_uncalibrated",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 3,
+      "stateless_control": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ],
+      "case_id": "negative_unknown_uncalibrated",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 3,
+      "stateless_control": [
+        [
+          "weak",
+          false
+        ],
+        [
+          "unknown",
+          false
+        ],
+        [
+          "uncalibrated",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "segregated_venue_and_currency",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDC",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "lighter"
+        },
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "segregated_venue_and_currency",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDC",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "lighter"
+        },
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ],
+        [
+          "c",
+          true
+        ]
+      ],
+      "case_id": "segregated_venue_and_currency",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDC",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "lighter"
+        },
+        {
+          "asset": "USDT",
+          "cash": "1000",
+          "known_realized_net_component": "0",
+          "nav": "1000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "wrong",
+          false
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          true
+        ],
+        [
+          "c",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "short_roundtrip",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "997.600",
+          "known_realized_net_component": "-2.400",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "short_roundtrip",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "995.200",
+          "known_realized_net_component": "-4.800",
+          "nav": "995.200",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "short_roundtrip",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "992.800",
+          "known_realized_net_component": "-7.200",
+          "nav": "992.800",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 8,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "observed_loss_then_price_recovery",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.8995",
+          "known_realized_net_component": "-0.1005",
+          "nav": "998.8000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "observed_loss_then_price_recovery",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.798",
+          "known_realized_net_component": "-0.202",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ],
+      "case_id": "observed_loss_then_price_recovery",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.6955",
+          "known_realized_net_component": "-0.3045",
+          "nav": "996.4000",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [],
+      "observations": 6,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ],
+        [
+          "b",
+          false
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "observed_overfill",
+      "cost_multiple": 1,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.799",
+          "known_realized_net_component": "-0.201",
+          "nav": "997.600",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "observed_overfill_or_unknown_requested_total"
+      ],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "observed_overfill",
+      "cost_multiple": 2,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.596",
+          "known_realized_net_component": "-0.404",
+          "nav": "995.200",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "observed_overfill_or_unknown_requested_total"
+      ],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    },
+    {
+      "admissions": [
+        [
+          "a",
+          true
+        ]
+      ],
+      "case_id": "observed_overfill",
+      "cost_multiple": 3,
+      "final_accounts": [
+        {
+          "asset": "USDT",
+          "cash": "999.391",
+          "known_realized_net_component": "-0.609",
+          "nav": "992.800",
+          "venue": "mexc"
+        }
+      ],
+      "final_reasons": [
+        "observed_overfill_or_unknown_requested_total"
+      ],
+      "observations": 4,
+      "stateless_control": [
+        [
+          "a",
+          true
+        ]
+      ]
+    }
+  ],
+  "predictive_strategy_trials": 0,
+  "prior_completed_paths_compared": 34,
+  "prior_failures_retained": 11,
+  "prospective_days": 0,
+  "scope": "R339 canonical-mark correction, unchanged R338 independent rational oracle"
+}

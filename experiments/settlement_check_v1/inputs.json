@@ -1,0 +1,29 @@
+{
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "registry_id": "R358",
+  "result_identity": {
+    "journals.json.gz": "04480861d832b86258230dd4e3ea8acde43232043a56b705456e315d35edb9c3",
+    "results.json.gz": "46c42cd020b7229ad312688646c441120c347d276e161572ab8a15eb0e6f5f02"
+  },
+  "sha256": {
+    "experiments/settlement_account_v1/PREREG.md": "10dbb5d40132549d57a51810fe89f980a5d1bbb6a1c1999bff08e932bd4294b3",
+    "experiments/settlement_account_v1/PREREG.sha256": "23a4d17981f153872519446c65abd3421e2512d8bcc2db1243482cdac9d5347e",
+    "experiments/settlement_account_v1/checker_failure.txt": "77b7e710f3dc9b426ced03e37240459d305d4291be0c43a06f2ee2a1b137998a",
+    "experiments/settlement_account_v1/code_inputs.json": "f3b607727b3b3bf6a14ec849ae884f0e53565609767103844ce634f7f27450e8",
+    "experiments/settlement_account_v1/config.json": "95a2a9484d5730faef6365b6a41b0dc7d71113cc5f7b9e05419c2e4ef8e331ec",
+    "experiments/settlement_account_v1/inputs.json": "6137d906574955e0b77b1c172ee482268a6497778e43cfe8b69a96675e6bd15f",
+    "experiments/settlement_account_v1/journals.json.gz": "04480861d832b86258230dd4e3ea8acde43232043a56b705456e315d35edb9c3",
+    "experiments/settlement_account_v1/results.json.gz": "46c42cd020b7229ad312688646c441120c347d276e161572ab8a15eb0e6f5f02",
+    "experiments/settlement_account_v1/sources.json": "3de78cd09aecda499b48fb2d6a0431c341948bd0cb36dc613c550cbd5e9764aa",
+    "lab/settlement_account.py": "afca29a905c2cadda0a0c7730f01f506424914eb07aeed4957027b0bb28194e8",
+    "scripts/check_settlement_account.py": "a831d7bc2056c875a5255be280a8152595ec8807e2ffb7f86570897ae50a70ca",
+    "scripts/check_settlement_account_v2.py": "a085fd3a701d4937f09ffcebbeebaa5722e19c7658909770db910f0cffc37f27",
+    "scripts/run_settlement_account.py": "9439e46c445c2622a4245474d88250062adb2450082d7936b61d55032fe4a5a4",
+    "tests/test_settlement_account.py": "d321a00c4bc87f9233aadf9f2f6ecad882fa816a1a0a0d83525a14296c9f2f54",
+    "tests/test_settlement_checker_correction.py": "8878e20350198f9d09745f2f9a288d31ca874d6535fa0f373a48894d6300db5a"
+  }
+}

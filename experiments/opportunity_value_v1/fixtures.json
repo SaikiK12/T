@@ -1,0 +1,177 @@
+{
+  "anchor": {
+    "utc_ns": 1790000000000000000,
+    "mono_ns": 10000000000
+  },
+  "cases": [
+    {
+      "name": "high_confidence_small_move",
+      "opportunities": [
+        {
+          "id": "small",
+          "outcomes": [
+            [
+              ".7",
+              "1",
+              "0"
+            ],
+            [
+              ".3",
+              "-1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "positive_conditional_forecast",
+      "opportunities": [
+        {
+          "id": "break"
+        }
+      ]
+    },
+    {
+      "name": "funding_and_breakout_same_budget",
+      "opportunities": [
+        {
+          "id": "break"
+        },
+        {
+          "id": "carry",
+          "model_id": "invented-funding",
+          "outcomes": [
+            [
+              "1",
+              "0",
+              "80"
+            ]
+          ]
+        },
+        {
+          "id": "third"
+        }
+      ]
+    },
+    {
+      "name": "same_capital_twice",
+      "max_symbol_fraction": "1",
+      "opportunities": [
+        {
+          "id": "first",
+          "quantity": "6"
+        },
+        {
+          "id": "second",
+          "quantity": "6"
+        }
+      ]
+    },
+    {
+      "name": "calibration_missing",
+      "opportunities": [
+        {
+          "id": "uncalibrated",
+          "uncalibrated": true
+        }
+      ]
+    },
+    {
+      "name": "funding_unknown",
+      "opportunities": [
+        {
+          "id": "unknown",
+          "outcomes": [
+            [
+              "1",
+              "20",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fee_unknown",
+      "opportunities": [
+        {
+          "id": "unknown",
+          "fee_unknown": true
+        }
+      ]
+    },
+    {
+      "name": "session_unknown",
+      "opportunities": [
+        {
+          "id": "unknown",
+          "market_unknown": true
+        }
+      ]
+    },
+    {
+      "name": "future_book",
+      "opportunities": [
+        {
+          "id": "future",
+          "future_book": true
+        }
+      ]
+    },
+    {
+      "name": "insufficient_depth",
+      "opportunities": [
+        {
+          "id": "thin",
+          "thin": true
+        }
+      ]
+    },
+    {
+      "name": "wrong_asset",
+      "opportunities": [
+        {
+          "id": "wrong",
+          "asset": "USDC"
+        }
+      ]
+    },
+    {
+      "name": "risk_halted",
+      "risk_stop": true,
+      "opportunities": [
+        {
+          "id": "halted"
+        }
+      ]
+    },
+    {
+      "name": "short_forecast",
+      "opportunities": [
+        {
+          "id": "short",
+          "quantity": "-1"
+        }
+      ]
+    },
+    {
+      "name": "future_exit_unknown",
+      "opportunities": [
+        {
+          "id": "unknown",
+          "reserve_unknown": true
+        }
+      ]
+    },
+    {
+      "name": "error_unknown",
+      "opportunities": [
+        {
+          "id": "unknown",
+          "error": null
+        }
+      ]
+    }
+  ]
+}

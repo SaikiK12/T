@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "actual": 0,
+      "check": "pregrace empty",
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "actual": 10900000000,
+      "check": "received original",
+      "expected": 10900000000,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "cannot backdate",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "known when finalized",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": true,
+      "check": "late preserves earlier knowledge",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "late blocks later knowledge",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": 10900000000,
+      "check": "aggregate original clock",
+      "expected": 10900000000,
+      "passed": true
+    },
+    {
+      "actual": 10900000000,
+      "check": "duplicate original first_seen",
+      "expected": 10900000000,
+      "passed": true
+    },
+    {
+      "actual": 11000000000,
+      "check": "duplicate observed later clock",
+      "expected": 11000000000,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "forged row blocked",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "same-named sibling blocked",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "invalid market input retains incomplete",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": "invalid_input_requires_reconciliation",
+      "check": "invalid evidence retained",
+      "expected": "invalid_input_requires_reconciliation",
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "terminal incomplete",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "check": "invalid UTC clock cannot poison earlier decision",
+      "expected": true,
+      "passed": false
+    },
+    {
+      "actual": false,
+      "check": "invalid UTC clock stops later decision",
+      "expected": false,
+      "passed": true
+    }
+  ],
+  "failed": 1,
+  "module_sha256": "b963582243e0a097a1a001b6fe1be387d28958db966e54b1f5c7e13d12b5b416",
+  "passed": 15,
+  "scope": "independent inventedcases, no market outcomes"
+}

@@ -1,0 +1,319 @@
+{
+  "adversarial": [
+    {
+      "name": "quote_received_late",
+      "v1": {
+        "component_usd": "0.35996",
+        "status": "SCORED_COUNTERFACTUAL"
+      },
+      "v2": {
+        "reason": "quote first seen after fill receipt",
+        "status": "REJECTED"
+      }
+    },
+    {
+      "name": "quote_after_economic_fill",
+      "v1": {
+        "component_usd": "0.35996",
+        "status": "SCORED_COUNTERFACTUAL"
+      },
+      "v2": {
+        "reason": "quote may have arrived after economic fill",
+        "status": "REJECTED"
+      }
+    },
+    {
+      "name": "inconsistent_source_receipt_clock",
+      "v1": {
+        "component_usd": "0.35996",
+        "status": "SCORED_COUNTERFACTUAL"
+      },
+      "v2": {
+        "reason": "source and receive clocks violate asserted uncertainty bound",
+        "status": "REJECTED"
+      }
+    },
+    {
+      "name": "asof_before_anchor",
+      "v1": {
+        "component_usd": "-0.010",
+        "status": "NO_REPORTED_FILL"
+      },
+      "v2": {
+        "component_usd": null,
+        "status": "UNKNOWN_RECEIPTS_OR_ACTION_FUNDING"
+      }
+    },
+    {
+      "name": "cancel_partial_history_unknown",
+      "v1": {
+        "component_usd": "-0.001",
+        "status": "NO_REPORTED_FILL"
+      },
+      "v2": {
+        "component_usd": null,
+        "status": "UNKNOWN_RECEIPTS_OR_ACTION_FUNDING"
+      }
+    },
+    {
+      "name": "prepaid_capital_shortfall",
+      "v1": {
+        "component_usd": "0.34996",
+        "status": "SCORED_COUNTERFACTUAL"
+      },
+      "v2": {
+        "reason": "segregated capital cannot fund simulated entry",
+        "status": "REJECTED"
+      }
+    },
+    {
+      "name": "end_capital_insolvent",
+      "v1": {
+        "component_usd": "-400.000",
+        "status": "SCORED_COUNTERFACTUAL"
+      },
+      "v2": {
+        "component_usd": "-400.000",
+        "status": "INSOLVENT_COUNTERFACTUAL"
+      }
+    },
+    {
+      "name": "no_fill_capital_exhausted",
+      "v1": {
+        "component_usd": "-0.010",
+        "status": "NO_REPORTED_FILL"
+      },
+      "v2": {
+        "component_usd": "-0.010",
+        "status": "INSOLVENT_COUNTERFACTUAL"
+      }
+    }
+  ],
+  "cells": [
+    {
+      "action_cost_usd": "0.0500",
+      "case": "paid_fill",
+      "component_per_capital_bps": "-0.2002325",
+      "component_usd": "-0.0400465",
+      "cost_per_filled_notional_bps": "3.5004650",
+      "counterfactual_end_capital_usd": "1999.9599535",
+      "entry_fee_usd": "0.15",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.1500465",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 1,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.0500",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.1000",
+      "case": "paid_fill",
+      "component_per_capital_bps": "-1.950465",
+      "component_usd": "-0.390093",
+      "cost_per_filled_notional_bps": "7.000930",
+      "counterfactual_end_capital_usd": "1999.609907",
+      "entry_fee_usd": "0.3",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.300093",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 2,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.1000",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.1500",
+      "case": "paid_fill",
+      "component_per_capital_bps": "-3.7006975",
+      "component_usd": "-0.7401395",
+      "cost_per_filled_notional_bps": "10.5013950",
+      "counterfactual_end_capital_usd": "1999.2598605",
+      "entry_fee_usd": "0.45",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.4501395",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 3,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.1500",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.0000",
+      "case": "buffer_fill",
+      "component_per_capital_bps": "0.0497675",
+      "component_usd": "0.0099535",
+      "cost_per_filled_notional_bps": "3.0004650",
+      "counterfactual_end_capital_usd": "2000.0099535",
+      "entry_fee_usd": "0.15",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.1500465",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 1,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.0000",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.0000",
+      "case": "buffer_fill",
+      "component_per_capital_bps": "-1.450465",
+      "component_usd": "-0.290093",
+      "cost_per_filled_notional_bps": "6.000930",
+      "counterfactual_end_capital_usd": "1999.709907",
+      "entry_fee_usd": "0.3",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.300093",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 2,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.0000",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.0000",
+      "case": "buffer_fill",
+      "component_per_capital_bps": "-2.9506975",
+      "component_usd": "-0.5901395",
+      "cost_per_filled_notional_bps": "9.0013950",
+      "counterfactual_end_capital_usd": "1999.4098605",
+      "entry_fee_usd": "0.45",
+      "entry_notional_usd": "1000",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "exit_fee_usd": "0.4501395",
+      "extra_cost_usd": "0",
+      "markout_usd": "0.310",
+      "midpoint_move_usd": "0.110",
+      "multiple": 3,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.0000",
+      "spread_component_usd": "0.20",
+      "status": "SCORED_COUNTERFACTUAL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.0500",
+      "case": "paid_no_fill",
+      "component_per_capital_bps": "-0.2500",
+      "component_usd": "-0.0500",
+      "cost_per_filled_notional_bps": null,
+      "counterfactual_end_capital_usd": "1999.9500",
+      "entry_notional_usd": "0",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "markout_usd": null,
+      "multiple": 1,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.0500",
+      "status": "NO_REPORTED_FILL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.1000",
+      "case": "paid_no_fill",
+      "component_per_capital_bps": "-0.5000",
+      "component_usd": "-0.1000",
+      "cost_per_filled_notional_bps": null,
+      "counterfactual_end_capital_usd": "1999.9000",
+      "entry_notional_usd": "0",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "markout_usd": null,
+      "multiple": 2,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.1000",
+      "status": "NO_REPORTED_FILL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "action_cost_usd": "0.1500",
+      "case": "paid_no_fill",
+      "component_per_capital_bps": "-0.7500",
+      "component_usd": "-0.1500",
+      "cost_per_filled_notional_bps": null,
+      "counterfactual_end_capital_usd": "1999.8500",
+      "entry_notional_usd": "0",
+      "execution_status": "HYPOTHETICAL_MID_EXIT_AND_PREPAID_COSTS_ONLY",
+      "markout_usd": null,
+      "multiple": 3,
+      "original_segregated_capital_usd": "2000",
+      "path_solvency_unknown": true,
+      "prepaid_costs_usd": "0.1500",
+      "status": "NO_REPORTED_FILL",
+      "submitted": 100,
+      "unresolved": 0
+    },
+    {
+      "assumed_prepaid_action_cost_usd": "0.0500",
+      "assumed_prepaid_extra_cost_usd": "0",
+      "case": "terminal_unknown",
+      "component_per_capital_bps": null,
+      "component_usd": null,
+      "multiple": 1,
+      "reason": "unresolved_order",
+      "status": "UNKNOWN_RECEIPTS_OR_ACTION_FUNDING"
+    },
+    {
+      "assumed_prepaid_action_cost_usd": "0.1000",
+      "assumed_prepaid_extra_cost_usd": "0",
+      "case": "terminal_unknown",
+      "component_per_capital_bps": null,
+      "component_usd": null,
+      "multiple": 2,
+      "reason": "unresolved_order",
+      "status": "UNKNOWN_RECEIPTS_OR_ACTION_FUNDING"
+    },
+    {
+      "assumed_prepaid_action_cost_usd": "0.1500",
+      "assumed_prepaid_extra_cost_usd": "0",
+      "case": "terminal_unknown",
+      "component_per_capital_bps": null,
+      "component_usd": null,
+      "multiple": 3,
+      "reason": "unresolved_order",
+      "status": "UNKNOWN_RECEIPTS_OR_ACTION_FUNDING"
+    }
+  ],
+  "prospective_days": 0,
+  "scope": "constructed midpoint exits and attested fixtures, not market PnL",
+  "strategy_trials": 0
+}

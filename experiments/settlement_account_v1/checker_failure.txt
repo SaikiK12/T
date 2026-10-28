@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/T-opportunity-admission/scripts/check_settlement_account.py", line 237, in <module>
+    main()
+  File "/workspace/T-opportunity-admission/scripts/check_settlement_account.py", line 83, in main
+    c.eq(cell['native_entry']['state'], 'blocked' if blocked else 'conditional_model', 'separate capital admission')
+  File "/workspace/T-opportunity-admission/scripts/check_settlement_account.py", line 30, in eq
+    raise AssertionError((label, actual, expected))
+AssertionError: ('separate capital admission', 'conditional_model', 'blocked')

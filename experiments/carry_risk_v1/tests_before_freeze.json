@@ -1,0 +1,15 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /workspace/T-consolidation/.venv/bin/python -m unittest discover -s tests -t .",
+  "exit_code": 0,
+  "full_log_sha256": "fa83d109b62e00622d51e084536a8ae5ab5ccd327ead615330df9a80343e412f",
+  "independent_financial_checks": 13,
+  "independent_source_example_checks": 8,
+  "independent_targeted_tests": 11,
+  "new_lab_sha256": "ea1e90ae7325ecb43daf93faf04930b3bf1b68df365624d0538b913c8f07649b",
+  "new_test_sha256": "3011704464ec3fd47632040ba380facdbca80999a258d534eb005f86f4d1e85c",
+  "prefreeze_material_failure": "UNKNOWN margin aggregate incorrectlyFalse, found by reviewer and fixed beforefreeze; original receipt retained",
+  "seconds": "207.242",
+  "skipped": 3,
+  "status": "PASS",
+  "tests": 1580
+}

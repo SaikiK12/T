@@ -1,0 +1,101 @@
+{
+  "scope": "read-only final implementation review; inventednumbers only,noR344data or financialoutcomes",
+  "checks": [
+    {
+      "check": "shortequityindependent",
+      "expected": "89/10",
+      "actual": "89/10",
+      "passed": true
+    },
+    {
+      "check": "markedNAVonce",
+      "expected": "1890",
+      "actual": "1890",
+      "passed": true
+    },
+    {
+      "check": "nomutation",
+      "expected": "{'coin_asset': 'BTC', 'known_coin_component': '109/10', 'coin_cash': '109/10', 'signed_face_usd': '-1000', 'entry_reciprocal': '1/100', 'realized_price_pnl_coin': '0', 'fees_coin': '1/10', 'pending_fees': [], 'conflicts': [], 'risk_flags': [], 'delivered': False, 'actual_account_credit_verified': False, 'net_usdt': None}",
+      "actual": "{'coin_asset': 'BTC', 'known_coin_component': '109/10', 'coin_cash': '109/10', 'signed_face_usd': '-1000', 'entry_reciprocal': '1/100', 'realized_price_pnl_coin': '0', 'fees_coin': '1/10', 'pending_fees': [], 'conflicts': [], 'risk_flags': [], 'delivered': False, 'actual_account_credit_verified': False, 'net_usdt': None}",
+      "passed": true
+    },
+    {
+      "check": "unknowninitialaggregate",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "unknownMMaggregate",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "knownNAVdespiteunknownmargin",
+      "expected": "1890",
+      "actual": "1890",
+      "passed": true
+    },
+    {
+      "check": "knownMMshortfall",
+      "expected": "False",
+      "actual": "False",
+      "passed": true
+    },
+    {
+      "check": "exactMMfraction",
+      "expected": "2/75",
+      "actual": "2/75",
+      "passed": true
+    },
+    {
+      "check": "nonlinearunknown",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "frontierindependent",
+      "expected": "980",
+      "actual": "980",
+      "passed": true
+    },
+    {
+      "check": "frontiermonotone",
+      "expected": "True",
+      "actual": "True",
+      "passed": true
+    },
+    {
+      "check": "incompletecapitalNAVunknown",
+      "expected": "None",
+      "actual": "None",
+      "passed": true
+    },
+    {
+      "check": "runnercommonfactoralgebra",
+      "expected": "19495/11",
+      "actual": "19495/11",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "sha256": {
+    "lab/inverse_risk.py": "ea1e90ae7325ecb43daf93faf04930b3bf1b68df365624d0538b913c8f07649b",
+    "tests/test_inverse_risk.py": "3011704464ec3fd47632040ba380facdbca80999a258d534eb005f86f4d1e85c",
+    "scripts/run_carry_risk.py": "de1192b0e244b13d64f38c068b8b3bb4cfb90f273049b95f0308834dc41fe6c7"
+  },
+  "targeted_tests": {
+    "tests": 11,
+    "pass": true
+  },
+  "runner_read_scope": "sourcecodeflow only; copying/reopenunchangedjournals; sourcebodymark/index read; original-snapshot labels; control/scale/frontieralgebra; noexecute marketrunner",
+  "remaining_limits": [
+    "Actualinverseconversiondenominator/accountmode/otherpositions/liquidationengineunverified",
+    "Newdocsfirstseen12:55UTC afterR343prices07:07UTC; posthocsourcecontract noton-timehistoricalevidence",
+    "Genericconstructorpermitsparameterizedcontracts; runtimebinding toexactsourcebundle remainsrunnerresponsibility",
+    "Fullsuite/protocol/committedclosure and independentchecker notreviewed"
+  ],
+  "material_blockers_remaining": []
+}

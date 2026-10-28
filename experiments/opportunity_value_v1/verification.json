@@ -1,0 +1,166 @@
+{
+  "actual_expected_net": null,
+  "artifacts": {
+    "held_hurdles.jsonl.gz": "63dc3a645a4c3f9204e548d883b626065dccfd06aac4d9c8c75802550eedf94d",
+    "manifest.json": "6c365e264bccdb9d7aa8010134ef744ae15a3718f30042d0a1c28f3b69b879d3",
+    "results.json": "45260d2c379b90c82a12bb817c22d21c2ed8038eacd8a0b2928cfae1aac916eb"
+  },
+  "baseline": "c54872e925c404c071fb7cec8e57ebcbb4c36b1b",
+  "byte_reproduction_artifacts": 3,
+  "canonical_queue_and_alias_bytes_preserved": true,
+  "code_closure_files": 16,
+  "freeze_commit": "a98b737",
+  "independent_audit": {
+    "checks": 4178,
+    "held_cells": 1296,
+    "invented_cases": 15,
+    "passed": true,
+    "scope": "Fraction oracle on fixed supplied fixtures and published held cost-cell identity; not source authentication or forecast/return validation"
+  },
+  "intake_summary": {
+    "aliases": 408,
+    "errors": 0,
+    "id_reassignments": 4,
+    "provider_entries": 54,
+    "queue_rows": 329,
+    "source_files": 20,
+    "source_methods": 408,
+    "warnings": 0
+  },
+  "new_integrity_errors": 0,
+  "new_market_history_source_requests": 0,
+  "old_changed_paths": [
+    "registry/rounds.csv"
+  ],
+  "preexisting_integrity_error_verified_at_base": true,
+  "prereg_sha256": "b0f5a222e9358f052b850bf6eafb99fc100beea5c05651f41d15dd30eae830e6",
+  "prospective_days": 0,
+  "registry_old_prefix_preserved": true,
+  "research_integrity": {
+    "issues": [
+      {
+        "code": "REGISTRY_SHA_MISSING",
+        "message": "Registry row has no preregistration digest.",
+        "path": "registry/rounds.csv",
+        "round_id": "R143",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/funded",
+        "round_id": "R143",
+        "severity": "warning"
+      },
+      {
+        "code": "REGISTRY_SHA_MISSING",
+        "message": "Registry row has no preregistration digest.",
+        "path": "registry/rounds.csv",
+        "round_id": "R144",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/challengeoption",
+        "round_id": "R144",
+        "severity": "warning"
+      },
+      {
+        "code": "REGISTRY_SHA_MISSING",
+        "message": "Registry row has no preregistration digest.",
+        "path": "registry/rounds.csv",
+        "round_id": "R180",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/unlocks_sf",
+        "round_id": "R180",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/unlocks_deep",
+        "round_id": "R181",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/hypermine",
+        "round_id": "R182",
+        "severity": "warning"
+      },
+      {
+        "code": "REGISTRY_SHA_MISSING",
+        "message": "Registry row has no preregistration digest.",
+        "path": "registry/rounds.csv",
+        "round_id": "R183",
+        "severity": "warning"
+      },
+      {
+        "code": "EXPERIMENT_MISSING",
+        "message": "Registered experiment directory is absent (possibly a legacy import).",
+        "path": "experiments/hypermine_expand",
+        "round_id": "R183",
+        "severity": "warning"
+      },
+      {
+        "code": "REGISTRY_SHA_MISSING",
+        "message": "Registry row has no preregistration digest.",
+        "path": "registry/rounds.csv",
+        "round_id": "R184",
+        "severity": "warning"
+      },
+      {
+        "code": "REGISTRY_ID_MISSING",
+        "message": "PREREG has no explicit Registry id metadata.",
+        "path": "experiments/allocation_v1/PREREG.md",
+        "severity": "warning"
+      },
+      {
+        "code": "PLANNED_DRAFT",
+        "message": "PLANNED preregistration is not frozen yet.",
+        "path": "experiments/battery_v1/PREREG.md",
+        "severity": "info"
+      },
+      {
+        "code": "REGISTRY_ID_REASSIGNED",
+        "message": "PREREG declares R253; registered as R255 (documented).",
+        "path": "experiments/cascmkt_v1/PREREG.md",
+        "round_id": "R255",
+        "severity": "info"
+      },
+      {
+        "code": "REGISTRY_ID_REASSIGNED",
+        "message": "PREREG declares R254; registered as R256 (documented).",
+        "path": "experiments/dow_v1/PREREG.md",
+        "round_id": "R256",
+        "severity": "info"
+      },
+      {
+        "code": "SIDECAR_MISSING",
+        "message": "PREREG.md has no frozen sidecar.",
+        "path": "experiments/mlrank_v3/PREREG.sha256",
+        "severity": "error"
+      },
+      {
+        "code": "REGISTRY_ID_MISSING",
+        "message": "PREREG has no explicit Registry id metadata.",
+        "path": "experiments/unlocks_funding_bounds_v1/PREREG.md",
+        "severity": "warning"
+      }
+    ],
+    "summary": {
+      "errors": 1,
+      "local_specs": 146,
+      "planned_drafts": 1,
+      "registry_rows": 151,
+      "verified_frozen": 144,
+      "warnings": 13
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "registry_id": "R346",
+  "review_kind": "Bounded public primary-source contract reading; no economic or risk outcomes computed",
+  "query_receipt": "search.json",
+  "query_count": 1,
+  "query_scope": "official Deribit standard-margin inverse requirements only",
+  "acquisition_receipt": "receipts.json",
+  "scope_closed": true,
+  "actual_gets": 3,
+  "actual_bytes": 266298,
+  "reserved_body_bytes": 3145728,
+  "elapsed_get_wall_seconds": "3.3794935360201634",
+  "unused_gets_closed": 0,
+  "old_source_and_historical_allowances_unchanged": true,
+  "account_or_market_requests": 0,
+  "sources": [
+    {
+      "name": "standard_margin",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811528477-Standard-Margin",
+      "sha256": "cbff9d143cf3eaf938bf2c06ddc8de150be2aacb99aa3187f9389824cd251a41",
+      "bytes": 74219,
+      "displayed_updated": "2026-10-13 08:20",
+      "read_scope": "Main article in full, all six tier parameter rows, perpetual/futures tier classifications, source MathML expression and example. Navigation/templates and every linked destination unread.",
+      "facts": {
+        "sm_modes": ["S:SM", "X:SM"],
+        "default_mode": "S:SM",
+        "margin_fraction": "IM=1/L(N); MM=(2/3)*IM",
+        "leverage_formula": "L(N)=C1*(C1/C2)^(-[max(0,(N/Nmax-C3)/(1-C3))]^C4)",
+        "dated_BTC_ETH_tier": 4,
+        "tier4": {"C1": "25", "C2": "4", "C3": "0.03", "C4": "0.35"},
+        "max_amount_effective_utc": "2026-09-24T09:00:00Z",
+        "margin_summation": "position-level requirements summed; no SM hedge offset claimed"
+      },
+      "limits": ["Generic N unit text says underlying coin; instrument-specific inverse exception requires the separately read table.", "No inverse coin-conversion denominator defined.", "No historical schedule established.", "No deployed engine, rounding, account mode or trigger certified."]
+    },
+    {
+      "name": "requirements",
+      "url": "https://support.deribit.com/hc/en-us/articles/39858424876829-Standard-Margin-Requirements-by-Instrument",
+      "sha256": "640700ea3ee7c1885b2b80d87956a52cf03a468c24fdafbd50da5f3e81a1fae1",
+      "bytes": 115626,
+      "displayed_updated": "2026-10-13 08:24",
+      "read_scope": "Intro, table interpretation and source-precedence rules; six tier-curve rows; inverse perpetual table; dated futures table with BTC/ETH inverse rows checked. Other linear-perpetual numeric rows not extracted. Navigation/templates/links unread.",
+      "facts": {
+        "scope": ["S:SM", "X:SM"],
+        "inverse_position_size_unit": "USD face, not underlying coins",
+        "BTC_ETH_inverse_dated_tier": 4,
+        "BTC_ETH_inverse_dated_max_amount_usd": "75000000",
+        "flat_segment_max_usd": "2250000",
+        "flat_segment_IM_fraction": "1/25",
+        "flat_segment_MM_fraction": "2/75",
+        "table_rounded_MM_percent": "2.67",
+        "at_max_IM_fraction": "1/4",
+        "at_max_MM_fraction": "1/6",
+        "precedence": "SM formula and contract specification outrank derived requirements table if inconsistent"
+      },
+      "limits": ["Inverse USD-to-coin conversion price not specified.", "Table margin percentages are rounded, not exact fractions.", "No historical-vintage data or account-specific change established.", "No rule for risk N aggregation across distinct expiries/open orders defined."]
+    },
+    {
+      "name": "margin_types",
+      "url": "https://support.deribit.com/hc/en-us/articles/25944811317149-Margin-types-and-usage",
+      "sha256": "c822cacc02669f0ff77e00eb3a5d51752e674e981c6b6a1dc5240fafcf6919fd",
+      "bytes": 76453,
+      "displayed_updated": "2026-10-21 11:11",
+      "read_scope": "Main article in full: four mode definitions, segregation/cross and SM/PM distinctions, account/subaccount selection and full margin-parameter table. Navigation/templates and linked cross-collateral/liquidation/PM pages unread.",
+      "facts": {
+        "S_SM": "Each settlement asset independently supports its own instruments; requirements summed per asset. Idle USDC cannot automatically satisfy BTC or ETH inverse requirements.",
+        "X_SM": "Cross-collateral mode combines supported assets, with haircuts/collateral fees; exact rules require unread specification.",
+        "PM": "Scenario portfolio methodology differs from SM. Cross PM recognizes within-asset hedges, not cross-asset risk netting.",
+        "equity": "cash balance + sum futures UPL/RPL + option values",
+        "SM_margin_balance": "cash balance + sum futures UPL/RPL",
+        "SM_IM": "sum position IM plus open-order IM",
+        "SM_MM": "sum position MM",
+        "available_balance": "margin balance minus IM",
+        "withdrawal_balance": "available balance minus session profits",
+        "pre_expiry_transition": "During last30min, IM/MM converge to projected IM/MM excluding nearest-expiry instruments.",
+        "model_choice_scope": "main/subaccount separately"
+      },
+      "limits": ["No numerical haircut, collateral fee or supported cross-collateral list read.", "No source defines exact greater-than/equal liquidation trigger or engine sequence.", "Available margin is not settled cash/withdrawal cash/spot-spendable cash.", "Owner mode, balances, other positions, live fills and cash state unobserved."]
+    }
+  ],
+  "existing_cached_sources_reused_not_new": [
+    {"lane": "R327", "path": "/workspace/T-consolidation/.cache/R327-deribit-source/inverse.raw", "scope": "Previously received inverse contract specification; corroborates USD face and coin settlement, mark/index roles, 08:00 settlement/TWAP and75M current Max Amount. Not a new fetch/read claim."},
+    {"lane": "R329", "path": "/workspace/T-consolidation/.cache/R329-venue-source/spot_contract.raw", "scope": "Previously received spot contract: only settled funds spendable for spot, 08:00 daily settlement; spot orders reserve assets and may be cancelled before derivative liquidation. Not a new fetch/read claim."}
+  ],
+  "critical_implementation_guidance": [
+    "Use exact1/25 IM and2/75 MM fractions ONLY in dated-tier4 flat segment under declared conditional USDface N, not table-rounded0.0267.",
+    "Do not implement stale2025 search result formula2%+.005% perBTC as current2026 rule.",
+    "N/Nmax for inverse uses USD/USD; price decreases do not by themselves increase that ratio. No extrapolated coin-size convexity.",
+    "Keep actual margin certification unknown without index-vs-future-mark conversion denominator, account mode and all competing positions/open orders.",
+    "Keep margin balance separate from total marked quote NAV, settled coin and cash available for spot sales/withdrawal.",
+    "A source-defined MM fraction is not a proved liquidation price or perpetual all-state immunity; no liquidation engine page read."
+  ],
+  "unread": ["Liquidations", "Cross collateral specifications", "Portfolio Margin", "account settings", "Position Builder engine", "private account endpoints", "fee proof", "historical risk changes"],
+  "no_economic_outcomes": true,
+  "no_R344_market_input_read_or_calculation": true
+}
