@@ -200,6 +200,12 @@ class FileTests(unittest.TestCase):
         self.assertEqual(len(rr.frame("clock", [(T_US, 123)])), 1)
 
 
+class SslTests(unittest.TestCase):
+    def test_an_unreadable_ca_bundle_falls_back_to_the_default_context(self):
+        with mock.patch.object(rr.Path, "exists", side_effect=PermissionError(13, "Permission denied")):
+            self.assertIsNotNone(rr.ssl_context())
+
+
 class CapTests(unittest.TestCase):
     def test_free_space_floor_and_size_cap(self):
         with tempfile.TemporaryDirectory() as d:

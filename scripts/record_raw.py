@@ -109,6 +109,16 @@ def in_window(wall_ns, hours=HOURS):
     return a <= h < b if a < b else (h >= a or h < b)
 
 
+def ssl_context():
+    """The agent proxy's CA bundle when this user can read it, else the system default (CI runs as another user)."""
+    try:
+        if Path(CA).exists():
+            return ssl.create_default_context(cafile=CA)
+    except OSError:
+        pass
+    return ssl.create_default_context()
+
+
 def px(x):
     return int(round(float(x) * PX))
 
@@ -337,7 +347,6 @@ class Recorder:
         self.tape = Tape()
         self.stop = asyncio.Event()
         self.msgs, self.connected, self.rows, self.why_stopped = {}, {}, 0, ""
-        self.ctx = ssl.create_default_context(cafile=CA) if Path(CA).exists() else ssl.create_default_context()
 
     def session(self, name, t0, n, reason):
         p = self.out / "sessions.csv"
@@ -355,7 +364,7 @@ class Recorder:
         while not self.stop.is_set():
             t0, n, reason = time.time(), 0, "stopped"
             try:
-                async with websockets.connect(url, ssl=self.ctx, open_timeout=20, close_timeout=2,
+                async with websockets.connect(url, ssl=ssl_context(), open_timeout=20, close_timeout=2,
                                               max_size=2**23) as ws:
                     for s in subs:
                         await ws.send(json.dumps(s))
