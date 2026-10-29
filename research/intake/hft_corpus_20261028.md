@@ -221,3 +221,7 @@ lane. This pass leaves M444 PARTIAL, adds zero trials, and changes neither round
 no local market-data directory, and `docs/PANEL.md` still marks the R369 receipt UNKNOWN/UNVERIFIED; the cross-venue
 collector's coverage cannot be independently confirmed here.
 
+
+## Additional M444 consensus snapshot (2026-10-29; no new trial)
+
+Before the scheduled 14:30 UTC gas-storage release, Trading Economics displayed a 75 Bcf survey consensus and a 77 Bcf prior value; actual and its separate TEForecast model field were blank. Its API docs distinguish the consensus Forecast from its own model and require authenticated access for snapshots. Estimize separately displayed 58.06 from nine estimates, but its public page did not expose the indicator unit. The 16.94 displayed-unit difference is not yet a verified forecast disagreement. `SRC28-069` and its card preserve the retrieval time and access boundary. R368 does not use either forecast; R369 is unchanged.
