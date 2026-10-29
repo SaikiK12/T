@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from pathlib import Path
 
 import pandas as pd
 
@@ -39,7 +40,7 @@ def fake(name, body=None):
 
 class FundingBoardTest(unittest.TestCase):
     def test_normalization(self):
-        df, failed = rb.snapshot(fake, now_ms=1792530000000)
+        df, failed = rb.snapshot(fake, now_ms=1792530000000, clock_ms=lambda: 1792530000000)
         self.assertEqual(failed, ["dydx: OSError: down"])
         self.assertEqual(sorted(df.venue.unique()), ["bitget", "gate", "hyperliquid", "kucoin", "okx"])
         g = df[(df.venue == "gate") & (df.base == "PEPE")].iloc[0]
@@ -57,14 +58,14 @@ class FundingBoardTest(unittest.TestCase):
 
     def test_record_once_per_hour(self):
         with tempfile.TemporaryDirectory() as d:
-            p, n, _ = rb.record(fake, now_ms=1792530000000, out=d)
+            p, n, _ = rb.record(fake, now_ms=1792530000000, out=d, clock_ms=lambda: 1792530000000)
             self.assertGreater(n, 0)
             p2, n2, _ = rb.record(fake, now_ms=1792530000000 + 60_000, out=d)
             self.assertEqual((p2, n2), (p, 0))
             self.assertEqual(len(pd.read_parquet(p)), n)
 
     def test_board_spread(self):
-        df, _ = rb.snapshot(fake, now_ms=1792530000000)
+        df, _ = rb.snapshot(fake, now_ms=1792530000000, clock_ms=lambda: 1792530000000)
         mexc = pd.DataFrame({"symbol": ["BTC_USDT"], "f_fundingRate": [-0.0001], "f_collectCycle": [8]})
         b = rb.board(df, mexc)
         btc = b[b.base == "BTC"].iloc[0]
@@ -74,6 +75,25 @@ class FundingBoardTest(unittest.TestCase):
         self.assertAlmostEqual(btc.spread_ann, 0.0005 * 3 * 365)
         pepe = b[b.base == "PEPE"].iloc[0]
         self.assertEqual(pepe.venues, 2)
+
+    def test_each_venue_receipt_is_after_its_requests(self):
+        start = 1792530000000
+        stamps = iter(start + n for n in range(1, 13))
+        df, failed = rb.snapshot(fake, now_ms=start, clock_ms=lambda: next(stamps))
+        self.assertEqual(failed, ["dydx: OSError: down"])
+        for i, venue in enumerate(("gate", "hyperliquid", "okx", "bitget", "kucoin")):
+            rows = df[df.venue == venue]
+            self.assertTrue((rows.request_start_ms == start).all())
+            self.assertTrue((rows.venue_start_ms == start + 2 * i + 1).all())
+            self.assertTrue((rows.recv_ms == start + 2 * i + 2).all())
+
+    def test_clock_regression_leaves_no_snapshot(self):
+        with tempfile.TemporaryDirectory() as d:
+            start = 1792530000000
+            stamps = iter((start + 1, start))
+            with self.assertRaisesRegex(ValueError, "clock moved backwards"):
+                rb.record(fake, now_ms=start, out=d, clock_ms=lambda: next(stamps))
+            self.assertFalse(list(Path(d).rglob('*.parquet')))
 
 
 if __name__ == "__main__":
