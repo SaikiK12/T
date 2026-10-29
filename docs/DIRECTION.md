@@ -27,6 +27,10 @@ for current recorded scope. Recheck actual inputs and authorization before any a
   - Trade: $1k walked on Lighter's live book at T − 10 s and T + 60 s, paying Lighter's settlement at T.
   - It records Lighter's book and trades from T − 7 min to T + 6 min.
   - Decision: futility at 20/40 hops; PASS at 40 (t ≥ 2.80) or at 80 (t ≥ 1.98).
+  - Funding accounting (Codex's PR #58 review, answered on #7 2026-10-29): the index/entry-price factor on funding is
+    about 0.05 bp a hop (estimate from R363's reported means), so no correction lane. A settlement missing from Lighter's
+    history 24 h after T is scored 0 and flagged (`fund_missing`); at read-out report the flagged count and the net
+    without those hops as a descriptive line.
 - **The owner's 19:00 shift, to the pasted high-frequency plan** (selective maker on Binance USDC perps, anticipatory
   post-only queue capture on Hyperliquid, wallet toxicity). Queue rows M427-M429 hold what public data can and cannot
   say. Measured from this container (public websockets, 2026-10-28):
