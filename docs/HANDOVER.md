@@ -78,8 +78,10 @@ absent), `ensure` for every daemon and one full forward tick. It is safe to run 
 in restarted six times between 02:44 and 05:48 UTC, and each time every daemon was down until it was run (idle time looked
 like the trigger, which is unproven); the recordings have a gap for each, and a forward lane whose decision falls in a gap
 writes "missed". The clock is not disciplined either: after the 05:48 restart it ran 99 ppm slow, 1.7 s behind by 10:22.
-`python scripts/clock_check.py status` measures it against MEXC, Deribit and OKX and `slew` removes it gradually; run `slew`
-hourly (details and the correction for affected data in `experiments/recorders/README.md`).
+`python scripts/clock_check.py status` measures it against MEXC, Deribit and OKX and `slew` removes it gradually. Nothing
+runs it on a schedule: `restart_all.sh` runs it once, and on 2026-10-29 it was run by hand every 10 minutes. Whoever takes
+over needs to run it regularly (details, log columns and the correction for affected data in
+`experiments/recorders/README.md`).
 The tick runs `ensure` for every recorder and forward lane, so one loop restarts the rest. `python -m lab status
 --state-dir "$FORWARD_STATE_DIR"` shows what ran. The machine must stay on and reach the public exchange websockets;
 a gap in a recording is a gap in the evidence, not something to fill later. The forward lanes (R364 settlement scalp,

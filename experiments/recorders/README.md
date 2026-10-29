@@ -30,8 +30,16 @@ this boot is the exception; the drift can differ on each boot.
   at 10:22); add that to `recv_ms`, and remove it from `lag_ms`. Hourly ticker files from 06:15 to 10:15 carry it too.
   Earlier boots that day were not measured.
 - **From 10:22 UTC** `scripts/clock_check.py slew` removes the offset gradually with `adjtime` (at most 0.5 ms a second, never
-  a step), and `experiments/recorders/journal/clock_check.csv` logs every measurement. Run it hourly and after a restart
-  (`restart_all.sh` does). Positive `median_offset_ms` means the local clock is behind.
+  a step). Measurements to 13:47 UTC are in `experiments/recorders/journal/clock_check.csv` (median offset and each venue's
+  offset only). Later runs are rows of `clock_check_v2.csv`: local time, estimated true time, median offset, which venues
+  were used, `bound_ms` (half the longest round trip used, the error each venue's offset can carry if the network delay is
+  lopsided), `spread_ms` and each venue's offset and round trip. Positive `median_offset_ms` means the local clock is
+  behind. Round trips are timed on the monotonic clock, and a sample whose wall-clock interval disagrees with it (a step of
+  the wall clock during the request) is dropped; a venue's offset is itself only as good as that venue's clock.
+- **Cadence:** nothing in the repository schedules the check. `restart_all.sh` runs it once at a restart, and the session
+  that watched on 2026-10-29 ran it by hand about every 10 minutes (the clock drifted about 6 ms a minute before it was
+  slewed). A reading bounds the offset at that moment only. Without a person or a scheduler running it, the offset grows again
+  by roughly 0.35 s an hour on a boot like this one.
 - **Who is affected:** lanes that align recorded times to a true-time event (R369's EIA release at 14:30 UTC, whose PREREG says
   the clock was not measured; R364 and R355 entries at T - 10 s). R367 stamps every venue with the same local clock in 100 ms
   buckets, so a common offset cancels between venues. This is a measurement of the clock, not a change to any frozen rule.

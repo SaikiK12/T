@@ -87,7 +87,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (127)
+## Run: one lane's frozen measurement (128)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -156,6 +156,7 @@ line is the first line of the script's own docstring.
 - [`run_merge_v2.py`](run_merge_v2.py): merge_v2 (R187): trade-consistent, faster, session-aware merge, as set out in experiments/merge_v2/PREREG.md.
 - [`run_minflow.py`](run_minflow.py): R349 minflow_v1: minute-scale order flow and overreaction on the BTC, ETH and SOL perps (M426, M306), priced at Lighter's zero-fee book cost.
 - [`run_minflow_alts.py`](run_minflow_alts.py): R351 minflow_alts_v1: R349's frozen pick, unchanged, on nine more coins whose 1-minute bars no lane has read (M426).
+- [`run_mixed_signals.py`](run_mixed_signals.py): Finite mixture of distinct price-rule targets; imports read no market data.
 - [`run_mlaudit.py`](run_mlaudit.py): R305 mlaudit_v1: what carries R304's pick (GBM h7 on the 24 clean features)?.
 - [`run_mlrank.py`](run_mlrank.py): mlrank_v1 (R299): machine-learned cross-sectional rankers on the daily point-in-time panel.
 - [`run_mlrank2.py`](run_mlrank2.py): R304 mlrank_v2: R299's rankers again, without the three features whose coverage leaks survival.
@@ -261,14 +262,16 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (55)
+## Tools and everything else (57)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
 - [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
+- [`capture_mexc_funding_forecasts.py`](capture_mexc_funding_forecasts.py): One-shot public MEXC next-funding capture.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
 - [`check.py`](check.py): One offline unittest entry point: full release gate or bounded feedback.
+- [`clock_check.py`](clock_check.py): Local clock check against three public exchange clocks, and a gradual correction (data collection support only).
 - [`cmelead_rule.py`](cmelead_rule.py): R370 cmelead_v1 rule, frozen in experiments/cmelead_v1/PREREG.md: when an EIA release moves CME's front-month crude or natural-gas future by a lot, does Binance's TradFi perp still trade at the ...
 - [`dashboard_data.py`](dashboard_data.py): Export the lab's state as the dashboard's datasets: dashboard/data/<id>.json, one array of row objects each.
 - [`dashboard_jobs.py`](dashboard_jobs.py): Read-only operational job metadata for the control room.

@@ -8,22 +8,33 @@ steps the clock, so no running recorder sees a jump.
 offset = exchange time - local time at the request midpoint, so a positive offset means this clock is behind. Each venue
 contributes its lowest-round-trip sample; the median over venues is used, and nothing is applied unless the venues agree.
 
+A round trip is timed on the monotonic clock, and a sample whose wall-clock interval disagrees with it (a step of the wall
+clock during the request) or whose interval is not positive is dropped. Two runs never overlap (lock file).
+
 usage: python scripts/clock_check.py status | slew [--min-ms 250] [--max-ms 10000]
-Every run appends one row to experiments/recorders/journal/clock_check.csv (committed, so the offset at an event is on
-record). Only this script writes that file.
+Every run appends one row to experiments/recorders/journal/clock_check_v2.csv (committed, so the offset at an event is on
+record): local time, the estimated true time, the median offset, which venues were used, an error bound (half the longest
+round trip used) and each venue's offset and round trip. Rows before 2026-10-29 13:50 UTC are in clock_check.csv, which has
+fewer columns and is no longer written. Only this script writes these files.
 """
 import argparse
 import ctypes
+import fcntl
+import math
 import statistics
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
-LOG = Path(__file__).resolve().parents[1] / "experiments" / "recorders" / "journal" / "clock_check.csv"
+ROOT = Path(__file__).resolve().parents[1]
+LOG = ROOT / "experiments" / "recorders" / "journal" / "clock_check_v2.csv"
+LOCK = ROOT / "data" / "logs" / "clock_check.lock"
 SAMPLES = 6
 AGREE_MS = 500          # the venues' offsets must lie within this of each other
 MAX_RTT_MS = 450        # a sample with a longer round trip is too noisy (error up to half of it) and is not used
 PENDING_TOL_MS = 400    # a new offset this far from the adjustment still pending is taken as a bad measurement
+STEP_TOL_MS = 25        # wall-clock and monotonic intervals of one request may differ by this much (slew is ~0.2 ms)
 VENUES = {
     "mexc": ("https://contract.mexc.com/api/v1/contract/ping", lambda j: int(j["data"])),
     "deribit": ("https://www.deribit.com/api/v2/public/get_time", lambda j: int(j["result"])),
@@ -35,22 +46,31 @@ def wall_ms():
     return time.time_ns() / 1e6
 
 
+def mono_ms():
+    return time.monotonic_ns() / 1e6
+
+
 def fetch_json(url):
     import requests
     return requests.get(url, timeout=10).json()
 
 
-def venue_offset(url, parse, samples=SAMPLES, get=fetch_json, clock_ms=wall_ms):
-    """(offset_ms, rtt_ms) of the lowest-round-trip sample. Raises when no sample succeeds."""
+def venue_offset(url, parse, samples=SAMPLES, get=fetch_json, clock_ms=wall_ms, mono=mono_ms):
+    """(offset_ms, rtt_ms) of the lowest-round-trip sample; rtt is the monotonic elapsed time. A sample is dropped when
+    the request failed, when its monotonic interval is not a positive finite number, or when the wall clock moved by a
+    different amount (a step during the request). Raises when no sample is left."""
     best = None
     for _ in range(samples):
-        t0 = clock_ms()
+        t0, m0 = clock_ms(), mono()
         try:
             srv = parse(get(url))
         except Exception:
             continue
-        t1 = clock_ms()
-        cand = (srv - (t0 + t1) / 2, t1 - t0)
+        t1, m1 = clock_ms(), mono()
+        rtt = m1 - m0
+        if not math.isfinite(rtt) or rtt <= 0 or not math.isfinite(t1 - t0) or abs((t1 - t0) - rtt) > STEP_TOL_MS:
+            continue
+        cand = (srv - (t0 + rtt / 2), rtt)
         if best is None or cand[1] < best[1]:
             best = cand
     if best is None:
@@ -69,12 +89,19 @@ def measure(venues=VENUES, **kw):
     return out
 
 
+def usable(res, max_rtt_ms=MAX_RTT_MS):
+    """The venues whose round trip is a positive, finite time of at most max_rtt_ms."""
+    return {k: v for k, v in res.items()
+            if all(math.isfinite(x) for x in v) and 0 < v[1] <= max_rtt_ms}
+
+
 def consensus(res, agree_ms=AGREE_MS, max_rtt_ms=MAX_RTT_MS):
     """(median offset ms, ok): ok needs at least two venues with a round trip of at most max_rtt_ms, within agree_ms of
     each other."""
-    use = {k: v for k, v in res.items() if v[1] <= max_rtt_ms}
+    use = usable(res, max_rtt_ms)
     if len(use) < 2:
-        return (statistics.median(o for o, _ in res.values()) if res else float("nan")), False
+        offs = [o for o, _ in res.values() if math.isfinite(o)]
+        return (statistics.median(offs) if offs else float("nan")), False
     offs = [o for o, _ in use.values()]
     return statistics.median(offs), max(offs) - min(offs) <= agree_ms
 
@@ -101,17 +128,30 @@ def pending_ms():
     return old.tv_sec * 1000 + old.tv_usec / 1000
 
 
-def log_row(res, med, ok, path=LOG, applied="", pending=""):
+def iso_ms(ms):
+    return datetime.fromtimestamp(ms / 1000, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+
+
+def log_row(res, med, ok, path=LOG, applied="", pending="", now_ms=None):
+    """One row: local time, estimated true time (local + median offset, when the venues agree), the median, whether they
+    agree, the venues used, bound_ms (half the longest round trip used) and spread_ms (their widest disagreement), what was
+    slewed or still pending, then every venue's offset and round trip."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     new = not path.exists()
-    cells = [time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), f"{med:.0f}", str(ok), str(applied),
-             f"{pending:.0f}" if pending != "" else ""]
+    now_ms = wall_ms() if now_ms is None else now_ms
+    use = usable(res)
+    members = "+".join(sorted(use)) if ok else ""
+    bound = f"{max(r for _, r in use.values()) / 2:.0f}" if ok else ""
+    spread = f"{max(o for o, _ in use.values()) - min(o for o, _ in use.values()):.0f}" if ok else ""
+    cells = [iso_ms(now_ms), iso_ms(now_ms + med) if ok else "", f"{med:.0f}", str(ok), members, bound, spread,
+             str(applied), f"{pending:.0f}" if pending != "" else ""]
     for name in VENUES:
-        cells.append(f"{res[name][0]:.0f}" if name in res else "")
+        cells += [f"{res[name][0]:.0f}", f"{res[name][1]:.0f}"] if name in res else ["", ""]
     with path.open("a") as f:
         if new:
-            f.write("utc,median_offset_ms,agree,slewed_ms,pending_ms," + ",".join(f"{n}_ms" for n in VENUES) + "\n")
+            f.write("utc_local,utc_est_true,median_offset_ms,agree,used,bound_ms,spread_ms,slewed_ms,pending_ms,"
+                    + ",".join(f"{n}_ms,{n}_rtt_ms" for n in VENUES) + "\n")
         f.write(",".join(cells) + "\n")
 
 
@@ -121,12 +161,24 @@ def report(res, med, ok):
     print(f"median {med:+.0f} ms (positive: this clock is behind); venues agree within {AGREE_MS} ms: {ok}")
 
 
-def main(argv=None, measure_fn=measure, adjust=adjtime_ms, pending_fn=pending_ms):
+def main(argv=None, measure_fn=measure, adjust=adjtime_ms, pending_fn=pending_ms, lock_path=LOCK):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("cmd", choices=["status", "slew"])
     ap.add_argument("--min-ms", type=float, default=250)
     ap.add_argument("--max-ms", type=float, default=10_000)
     a = ap.parse_args(argv)
+    lock_path = Path(lock_path)
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("w") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            print("another clock check is running; nothing measured")
+            return 0
+        return run(a, measure_fn, adjust, pending_fn)
+
+
+def run(a, measure_fn, adjust, pending_fn):
     res = measure_fn()
     med, ok = consensus(res)
     report(res, med, ok)
