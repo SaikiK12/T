@@ -201,3 +201,24 @@ expected absolute move from a standard deviation. Unknown other legs prevent por
 [official Fed calendar](https://www.federalreserve.gov/newsevents/2026-november.htm). These are mechanism/payoff
 checks, not a market backtest or a new profitability claim. The new owner-approved funding/basis family R310 is
 a separate research question; it does not copy these VIX puts or infer a complete strategy from them.
+
+## Owner link 2026-10-29: a GEX plus failed-buyers short on the Nasdaq (@aleks_rosme)
+Owner link `https://vm.tiktok.com/ZGdX1JVQW/` resolves to @aleks_rosme video `7701736934955076886`, published 2026-10-28,
+45 s, 36.3k views, 2,979 likes. Caption: "10/28 723QQQ GEX + Failed Buyers = 1:4R 75POINTS Trade #options #nasdaq #propfirm
+#gamma #orderflow". Download with yt-dlp 2026.10.26 and browser impersonation (the owner authorised the download on
+2026-10-29 after the sandbox first declined it), speech by faster-whisper "small" on CPU, media kept in the session scratchpad.
+
+What is said, in the narrator's order:
+1. Before the FOMC decision, SPX opened in negative-gamma territory with large downside GEX magnets.
+2. The pre-market plan was to respect 7,750 on SPX (a pivot and positive-gamma level).
+3. NDX and SPX options then showed put-heavy premium flow, read as bearish sentiment.
+4. QQQ broke 723 together with the previous regular session's value-area high; buyers tried to hold above it and
+   failed, which was the confirmation to short, for a final 4R (75 index points on the caption).
+
+How it maps to the lab: it is the mirror (short) image of M235 (QQQ GEX-level reclaim with call-heavy flow and value-area
+context), so it is recorded there and creates no new row. The pieces the lab can test on data it holds are only the
+price-and-value-area part (R290 `auction_v1`: value-area and VWAP-band rules on BTC, ETH and SOL 1-minute bars, NULL). The gamma and premium-flow parts need option
+trades with greeks for SPX or QQQ, which are not held (M446, M451 and M235 are BLOCKED on that). The video gives no
+entry, stop, size, GEX vendor or cost, shows one winning day on a prop account, and nothing in it is a result. It is
+one event day (a Fed announcement), so a single win says little about the rule.
+
