@@ -30,7 +30,7 @@ class TickerRecorderTests(unittest.TestCase):
     def test_one_file_per_hour_and_outer_join(self):
         with tempfile.TemporaryDirectory() as d:
             t = 1792500248570
-            path, n = record_mexc_ticker.record(fake_mexc, t, d)
+            path, n = record_mexc_ticker.record(fake_mexc, t, d, clock_ms=lambda: t)
             self.assertEqual(n, 2)
             self.assertTrue(path.name == "12.parquet" and path.parent.name == "2026-10-20")
             again, n2 = record_mexc_ticker.record(fake_mexc, t + 600_000, d)   # same hour
@@ -39,6 +39,28 @@ class TickerRecorderTests(unittest.TestCase):
             self.assertEqual(df.loc[df.symbol == "BTC_USDT", "t_holdVol"].item(), 456242850)
             self.assertTrue(pd.isna(df.loc[df.symbol == "NEW_USDT", "f_fundingRate"].item()))
             self.assertTrue((df.recv_ms == t).all())
+
+    def test_response_bounds_use_completion_even_across_an_hour_boundary(self):
+        with tempfile.TemporaryDirectory() as d:
+            hour = (1792500248570 // 3_600_000) * 3_600_000
+            start = hour + 3_599_500
+            times = iter([start + 1_200, start + 4_200])
+            path, _ = record_mexc_ticker.record(fake_mexc, start, d, clock_ms=lambda: next(times))
+            df = pd.read_parquet(path)
+            self.assertEqual(path.name, pd.Timestamp(start, unit="ms", tz="UTC").strftime("%H.parquet"))
+            self.assertTrue((df.request_start_ms == start).all())
+            self.assertTrue((df.funding_recv_ms == start + 1_200).all())
+            self.assertTrue((df.ticker_recv_ms == start + 4_200).all())
+            self.assertTrue((df.recv_ms == start + 4_200).all())
+            self.assertGreater(df.funding_recv_ms.iloc[0], hour + 3_600_000)
+
+    def test_clock_regression_rejects_snapshot_without_writing(self):
+        with tempfile.TemporaryDirectory() as d:
+            start = 1792500248570
+            times = iter([start - 1, start + 1])
+            with self.assertRaisesRegex(ValueError, "clock moved backwards"):
+                record_mexc_ticker.record(fake_mexc, start, d, clock_ms=lambda: next(times))
+            self.assertEqual(list(Path(d).rglob("*.parquet")), [])
 
 
 class NoticeRecorderTests(unittest.TestCase):

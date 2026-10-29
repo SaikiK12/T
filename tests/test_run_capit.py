@@ -80,6 +80,16 @@ class SignalTest(unittest.TestCase):
         np.testing.assert_allclose(cp.decision(rows, "cascade", 2, 1, 0.003),
                                    [0.01 - 2 * cp.COST - 0.003, -0.02 - 2 * cp.COST - 0.003])
 
+    def test_breadth_uses_up_to_top_150_and_needs_180_prior_valid_shares(self):
+        days = pd.date_range("2020-01-01", periods=205, freq="D")
+        close = pd.DataFrame(100.0, index=days, columns=["A", "B"])
+        close.iloc[203:] = 50.0
+        w = {"close": close, "rank_qvol30": close * 0 + 1}
+        share, trigger = cp.breadth(w)
+        self.assertEqual(share.iloc[203], 1.0)
+        self.assertFalse(trigger.iloc[203])  # only 179 earlier valid shares
+        self.assertTrue(trigger.iloc[204])   # 180 earlier shares; only two names
+
     def test_constants(self):
         self.assertEqual(cp.WINDOWS, qb.WINDOWS)
         self.assertEqual(cp.TRIALS, 10)
