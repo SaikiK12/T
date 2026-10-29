@@ -1,0 +1,51 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "collect_cycle_hours": 8,
+  "funding_fair_price": 0.2175,
+  "funding_index_price": 0.2175,
+  "funding_rate_ceiling_fraction": 0.03,
+  "funding_rate_floor_fraction": -0.03,
+  "funding_rate_fraction": 8.2e-05,
+  "funding_system_timestamp_ms": 1792499028511,
+  "next_settle_time_ms": 1792512000000,
+  "request_metadata": [
+    {
+      "body_truncated": false,
+      "end_ms": 1792499028773,
+      "end_utc": "2026-10-20T12:23:48.773158Z",
+      "http_status": 200,
+      "kind": "funding",
+      "raw_file": "ADA_USDT_funding.raw",
+      "retained_bytes": 233,
+      "sha256": "963c2dba32ef061e9eb33aa6353b8bf59a0d1771f3bd70f61ec7149f426de7e8",
+      "start_ms": 1792499027521,
+      "start_utc": "2026-10-20T12:23:47.521104Z",
+      "symbol": "ADA_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/funding_rate/ADA_USDT"
+    },
+    {
+      "body_truncated": false,
+      "end_ms": 1792499029548,
+      "end_utc": "2026-10-20T12:23:49.548335Z",
+      "http_status": 200,
+      "kind": "ticker",
+      "raw_file": "ADA_USDT_ticker.raw",
+      "retained_bytes": 577,
+      "sha256": "eab2a4da7d7dfc6e9c69491f5390efc7883a231ffa6860bfa0710b6949252733",
+      "start_ms": 1792499028774,
+      "start_utc": "2026-10-20T12:23:48.774589Z",
+      "symbol": "ADA_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/ticker?symbol=ADA_USDT"
+    }
+  ],
+  "symbol": "ADA_USDT",
+  "ticker_best_ask": 0.2174,
+  "ticker_best_bid": 0.2173,
+  "ticker_fair_price": 0.2175,
+  "ticker_index_price": 0.2175,
+  "ticker_last_price": 0.2174,
+  "ticker_trade_age_ms_at_capture_end": 703,
+  "ticker_trade_timestamp_ms": 1792499028845
+}
