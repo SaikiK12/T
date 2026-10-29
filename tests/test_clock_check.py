@@ -1,8 +1,10 @@
 import fcntl
+import io
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import clock_check  # noqa: E402
@@ -14,6 +16,28 @@ def fake_clock(*stamps):
 
 
 class VenueOffsetTests(unittest.TestCase):
+    def test_nonfinite_server_reply_cannot_displace_a_valid_sample(self):
+        for invalid in (float("nan"), float("inf"), True, "2500"):
+            replies = iter([invalid, 2500])
+            result = clock_check.venue_offset(
+                "u", lambda j: j, samples=2, get=lambda _: next(replies),
+                clock_ms=fake_clock(1000, 1100, 2000, 2200), mono=fake_clock(0, 100, 1000, 1200))
+            self.assertEqual(result, (400, 200))
+
+    def test_http_failure_is_not_a_time_reply(self):
+        with patch.object(clock_check.urllib.request, "urlopen", side_effect=OSError("HTTP failure")), \
+                patch.object(clock_check.json, "load") as decode:
+            with self.assertRaisesRegex(OSError, "HTTP failure"):
+                clock_check.fetch_json("https://invalid.example/time")
+        decode.assert_not_called()
+
+    def test_http_json_uses_the_standard_library_and_closes_its_response(self):
+        response = io.BytesIO(b'{"data": 2500}')
+        with patch.object(clock_check.urllib.request, "urlopen", return_value=response) as open_:
+            self.assertEqual(clock_check.fetch_json("https://invalid.example/time"), {"data": 2500})
+        self.assertTrue(response.closed)
+        self.assertEqual(open_.call_args.kwargs["timeout"], 10)
+
     def test_lowest_round_trip_sample_wins(self):
         # sample 1: round trip 800 ms, midpoint 5,400, server 7,300 (offset 1,900); sample 2: round trip 200 ms,
         # midpoint 6,100, server 7,600 (offset 1,500). The shorter round trip is the better estimate.
@@ -75,6 +99,36 @@ class ConsensusTests(unittest.TestCase):
 
 
 class MainTests(unittest.TestCase):
+    def test_invalid_limits_stop_before_measurement_or_lock_creation(self):
+        for args in (["--max-ms", "nan"], ["--min-ms", "nan"], ["--max-ms", "inf"],
+                     ["--min-ms", "-1"], ["--max-ms", "0"], ["--min-ms", "500", "--max-ms", "100"]):
+            with self.subTest(args=args), tempfile.TemporaryDirectory() as d:
+                measure = Mock()
+                lock = Path(d) / "lock"
+                with self.assertRaises(SystemExit) as exit_:
+                    clock_check.main(["slew", *args], measure_fn=measure, lock_path=lock)
+                self.assertEqual(exit_.exception.code, 2)
+                measure.assert_not_called()
+                self.assertFalse(lock.exists())
+
+    def test_unknown_pending_slew_refuses_adjustment_and_records_the_attempt(self):
+        for pending in (OSError("unavailable"), float("nan"), float("inf"), None, True):
+            with self.subTest(pending=pending), tempfile.TemporaryDirectory() as d:
+                applied = []
+                def read_pending():
+                    if isinstance(pending, OSError):
+                        raise pending
+                    return pending
+                log = Path(d) / "clock.csv"
+                with patch.object(clock_check, "LOG", log):
+                    status = clock_check.main(
+                        ["slew"], measure_fn=lambda: {"mexc": (1500, 200), "okx": (1510, 200)},
+                        adjust=applied.append, pending_fn=read_pending, lock_path=Path(d) / "lock")
+                self.assertEqual((status, applied), (1, []))
+                rows = log.read_text().splitlines()
+                cells = dict(zip(rows[0].split(","), rows[1].split(",")))
+                self.assertEqual((cells["slewed_ms"], cells["pending_ms"]), ("", ""))
+
     def run_main(self, res, args, pending=0):
         applied = []
         with tempfile.TemporaryDirectory() as d:
