@@ -101,7 +101,8 @@ class FileTests(unittest.TestCase):
             self.assertEqual(lt.full(out, free_gb=9.0), "")
             self.assertIn("free", lt.full(out, free_gb=lt.MIN_FREE_GB - 0.1))
             (out / "x").mkdir()
-            (out / "x" / "big.parquet").write_bytes(b"0" * int(lt.MAX_MB * 1e6))
+            with (out / "x" / "big.parquet").open("wb") as f:
+                f.truncate(int(lt.MAX_MB * 1e6))
             self.assertIn("MB", lt.full(out, free_gb=9.0))
 
 

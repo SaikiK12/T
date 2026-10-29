@@ -236,7 +236,7 @@ class DepthReportTests(unittest.TestCase):
 
 def fixture_trickle_worker(url,pipe,limit,timeout):
     pipe.send(('status',200));pipe.send(('chunk',b'{"partial":'))
-    time.sleep(2)
+    time.sleep(5)
 
 
 def fixture_cap_worker(url,pipe,limit,timeout):
@@ -250,9 +250,11 @@ def fixture_complete_worker(url,pipe,limit,timeout):
 class AbsoluteMetadataTests(unittest.TestCase):
     def test_trickling_owned_worker_is_stopped_and_partial_receipt_survives(self):
         with tempfile.TemporaryDirectory() as d,mock.patch.object(probe,'REST_BYTES',128):
-            m=probe.Metadata(d,worker=fixture_trickle_worker,request_seconds=.8)
+            # Spawn must have time to deliver the first chunk on slower hosts;
+            # the worker then outlives the deadline and must still be stopped.
+            m=probe.Metadata(d,worker=fixture_trickle_worker,request_seconds=2)
             begin=time.monotonic();value=m.get('one','https://fixture.test/public')
-            self.assertIsNone(value);self.assertLess(time.monotonic()-begin,1.5)
+            self.assertIsNone(value);self.assertLess(time.monotonic()-begin,3.5)
             self.assertEqual(len(m.records),1);self.assertIn('deadline',m.records[0]['error'])
             self.assertEqual(gzip.decompress((Path(d)/'one.json.gz').read_bytes()),b'{"partial":')
             self.assertEqual(m.read_upper_bound,128)

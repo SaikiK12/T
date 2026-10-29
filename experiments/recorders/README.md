@@ -10,6 +10,15 @@ from the first run on: none of it can be backfilled.
 | `scripts/record_notices.py` | `notices/binance_{delisting,listing}.csv`, append-only | Binance announcement id, title, release time and the UTC time this recorder first saw it |
 | `scripts/record_unlocks.py` | `unlocks/<date>.json.gz`, one per UTC day | DefiLlama emissions index (upcoming unlocks, circulating supply, market cap) as published that day |
 
+For new MEXC ticker files, `request_start_ms` marks the start of the capture,
+`funding_recv_ms` and `ticker_recv_ms` are local response-completion bounds,
+and `recv_ms` is the later ticker bound. Files are still named for the request's
+starting UTC hour, even if a response finishes in the next hour. These times use
+the local wall clock; synchronization and subsequent durable publication still
+need independent evidence. Older files lacking the two per-response columns used
+`recv_ms` for request start, so that value is not a receipt-time bound and must
+not be treated as one in an M090 forecast test. Missing hours remain missing.
+
 `scripts/record_digest.py` runs last in the tick and appends the size and sha256 of every new or changed file to
 `journal/digests.csv` (committed), so a later lane can show its inputs were recorded before it was frozen.
 

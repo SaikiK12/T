@@ -60,7 +60,8 @@ class SnapshotTests(unittest.TestCase):
             self.assertEqual(oe.full(out, free_gb=9.0), "")
             self.assertIn("free", oe.full(out, free_gb=oe.MIN_FREE_GB - 0.1))
             (out / "x").mkdir()
-            (out / "x" / "big.parquet").write_bytes(b"0" * int(oe.MAX_MB * 1e6))
+            with (out / "x" / "big.parquet").open("wb") as f:
+                f.truncate(int(oe.MAX_MB * 1e6))
             self.assertIn("MB", oe.full(out, free_gb=9.0))
 
 

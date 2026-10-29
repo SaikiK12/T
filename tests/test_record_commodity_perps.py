@@ -201,7 +201,11 @@ class FileTests(unittest.TestCase):
             self.assertEqual(cp.full(out, free_gb=9.0), "")
             self.assertIn("free", cp.full(out, free_gb=cp.MIN_FREE_GB - 0.1))
             (out / "x").mkdir()
-            (out / "x" / "big.parquet").write_bytes(b"0" * int(cp.MAX_MB * 1e6))
+            # The recorder checks st_size, so allocating MAX_MB bytes in RAM
+            # and writing them to disk is unnecessary. A sparse file exercises
+            # the same cap without exhausting the test runner.
+            with (out / "x" / "big.parquet").open("wb") as f:
+                f.truncate(int(cp.MAX_MB * 1e6))
             self.assertIn("MB", cp.full(out, free_gb=9.0))
 
     def test_subscriptions_cover_every_coin_and_product(self):
