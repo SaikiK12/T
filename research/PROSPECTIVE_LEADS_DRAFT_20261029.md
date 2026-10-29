@@ -36,6 +36,17 @@ forecast scorer and dependent-day inference; no-change baseline availability;
 power/selection disclosure; exact runner/input hashes, registry id and frozen
 PREREG. Until those exist, do not run the primitive on actual market records.
 
+The [deep source batch](intake/deep_leads_batch_20261029.json) identifies Inan's final
+funding-predictability paper (SRC26-032), but does not supply its full costed
+implementation or validate MEXC transfer. Keep this first lane to the displayed
+and previous-settled forecasts. Proposed primary paired loss is
+`(display - target_settled)^2 - (previous_settled - target_settled)^2` on the same
+eligible events. Record rate units explicitly; direction accuracy is secondary.
+The 90/30 count establishes coverage, not significance or a calibrated pass bar.
+Dependence-aware inference and power remain pre-freeze work, especially given
+the inference-control limitations already recorded in R320/R321. A later fitted
+DAR predictor is a new declared challenger, not a retrospective rescue of this test.
+
 ## M322: prospective panic basket
 
 The candidate preserves R303's breadth calculation: rank <=150, 25 consecutive
@@ -47,6 +58,13 @@ five-day hold. The selected basket is fixed before execution; unmapped/missing
 names stay in cash. Five slots each reserve 20% of initial capital. The eventual
 paper comparison must include an always-on basket and cash on the same calendar,
 including no-trade days, and one final look after at least 30 eligible events.
+
+At a five-day rollover, release a slot only after its exit and funding
+reconciliation have actually completed with the required evidence. Do not free
+it merely because its nominal exit timestamp has passed. Process the exit before
+reusing the slot; if it cannot be completed before the new entry deadline, skip
+that entry while retaining the old exposure and its missing-exit status. This is
+a draft policy that the future runner and frozen specification must enforce.
 
 `scripts/m322_signal_rule.py` constructs synthetic tickets and rejects late,
 duplicated or incomplete inputs; it does not authenticate them. The provisional

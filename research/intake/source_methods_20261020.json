@@ -15160,6 +15160,286 @@
           "label": "Creator post; performance claim not independently verified"
         }
       ]
+    },
+    {
+      "id": "DL26-FUNDING-DAR",
+      "parent_claim_id": "SRC26-032",
+      "title": "Funding prediction: final DAR study and venue transfer",
+      "method_type": "source_refinement",
+      "hypothesis": "Check displayed MEXC funding against the last exact settlement before adding a fitted DAR model.",
+      "testable_rule": "Complete M090 input authentication and a single-look paired-loss contract first; do not tune DAR orders on the future evaluation sample.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "MEXC is a venue transfer; an external settled-rate forecast study does not validate its displayed-rate feed or account return.",
+      "status": "partial",
+      "required_inputs": [
+        "Authenticated on-time MEXC display snapshots, exact previous/target settlements, publication receipts and a justified clock bound."
+      ],
+      "blockers": [
+        "MEXC is a venue transfer; an external settled-rate forecast study does not validate its displayed-rate feed or account return.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Complete M090 input authentication and a single-look paired-loss contract first; do not tune DAR orders on the future evaluation sample.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-032.md",
+          "label": "Publisher-indexed abstract, introduction and calculation/sample/method/results snippets. Direct publisher and SSRN bodies inaccessible; full model, tables and economic-cost appendix unread."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.irfa.2026.105464",
+          "label": "Emre Inan, Predictability of funding rates, IRFA, 10.1016/j.irfa.2026.105464; available online 2026-10-17"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-EXPIRY-IDENTITY",
+      "parent_claim_id": "SRC26-033",
+      "title": "Identified BTC expiry reversal source; full methods still missing",
+      "method_type": "source_refinement",
+      "hypothesis": "Evaluate a pre-expiry observable OI state against same-clock future BTC returns without inferring dealer positions from aggregate OI.",
+      "testable_rule": "Reconcile the final source methods and freeze one primary expiry/OI question; retain the old expiry NULLs and selection history.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "This resolves the first unnamed source in M440; the reported 1,059-day count and net strategy mechanics remain unverified here.",
+      "status": "partial",
+      "required_inputs": [
+        "Raw chain snapshots before the outcome window, expiry/strike/contract units, underlying reference, complete all-day control prices and executable perp costs."
+      ],
+      "blockers": [
+        "This resolves the first unnamed source in M440; the reported 1,059-day count and net strategy mechanics remain unverified here.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Reconcile the final source methods and freeze one primary expiry/OI question; retain the old expiry NULLs and selection history.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-033.md",
+          "label": "Publisher-indexed title/authors/abstract/highlights and data-availability statement. Direct full text returned 403. A related earlier working-paper identity was discovered, not treated as the final version."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.frl.2026.110340",
+          "label": "Dustin Weiss, Robert Gaudiosi, Z. Ivy Zhou and Robert I. Webb, Bitcoin option expiration, gamma exposure, and intraday price reversals, FRL 107 (2026), 110340"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-FUNDING-ACCRUAL",
+      "parent_claim_id": "SRC26-034",
+      "title": "Cross-venue funding study: continuous accrual versus settlement cash",
+      "method_type": "source_refinement",
+      "hypothesis": "Require event-by-event payment schedules before interpreting a quoted cross-venue rate spread as collectable carry.",
+      "testable_rule": "Use this study as a mechanism/cost warning, not an executable-return benchmark or a reason to replace the preselected R311 policy.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "Autocorrelation from carried values and continuous accrual can differ from the information and cash available at a real decision.",
+      "status": "partial",
+      "required_inputs": [
+        "First-seen quotes and rate roles, both venues' actual settlement schedules, funding notionals, quantities, fees, depth and segregated collateral."
+      ],
+      "blockers": [
+        "Autocorrelation from carried values and continuous accrual can differ from the information and cash available at a real decision.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Use this study as a mechanism/cost warning, not an executable-return benchmark or a reason to replace the preselected R311 policy.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-034.md",
+          "label": "Publisher-indexed abstract, sections 3.1.1, 3.1.2, 3.5.1, 4.1 and Table 1. Direct article fetch returned 429; no claim of complete paper/table review."
+        },
+        {
+          "path": "https://doi.org/10.3390/math14020346",
+          "label": "Petar Zhivkov, The Two-Tiered Structure of Cryptocurrency Funding Rate Markets, Mathematics 14(2), 346 (2026)"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-GUARANTEED-FUNDING",
+      "parent_claim_id": "SRC26-035",
+      "title": "No-arbitrage funding guarantee versus an ex-post realized payment",
+      "method_type": "source_refinement",
+      "hypothesis": "A guaranteed funding floor and a probabilistic funding forecast must be separate fields in any candidate trade calculation.",
+      "testable_rule": "Keep a protocol/version audit ahead of a tradability claim. Do not substitute the eventual settlement rate for information known at entry.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "The paper's protocol vintage and entry-time guarantee need deployed-code verification; current redirected documentation cannot authenticate an older state.",
+      "status": "partial",
+      "required_inputs": [
+        "Versioned funding rules, inclusion times, guaranteed bounds, actual index/mark notionals and all cost/basis/margin states."
+      ],
+      "blockers": [
+        "The paper's protocol vintage and entry-time guarantee need deployed-code verification; current redirected documentation cannot authenticate an older state.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Keep a protocol/version audit ahead of a tradability claim. Do not substitute the eventual settlement rate for information known at entry.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-035.md",
+          "label": "Publisher-indexed abstract/introduction and funding-timing, protocol, data and results snippets. Issue labelled November 2026; first-online date unverified. Full proof/appendices and SSRN PDF not accessed."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.frl.2026.110598",
+          "label": "Erce Erez and Mikhail Smirnov, No-arbitrage bounds in decentralized perpetual markets, 10.1016/j.frl.2026.110598; related May 2026 working paper"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-SELECTION-COSTS",
+      "parent_claim_id": "SRC26-036",
+      "title": "Rolling rule portfolios: relative-risk result and exact cost controls",
+      "method_type": "source_refinement",
+      "hypothesis": "A candidate ensemble must beat a matched parent after its own turnover, rather than earn credit merely for holding more cash.",
+      "testable_rule": "Retain rolling evaluation and matched-risk controls; do not reopen the spent brute-force universe or choose a new best rule from the reported tables.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "Spot Bitstamp evidence and a very large rule search do not establish modern MEXC perpetual execution or an independent sleeve blend.",
+      "status": "partial",
+      "required_inputs": [
+        "Predeclared finite candidates, prior-only selection data, point-in-time membership, synchronized parent/cash accounts and actual execution/funding costs."
+      ],
+      "blockers": [
+        "Spot Bitstamp evidence and a very large rule search do not establish modern MEXC perpetual execution or an independent sleeve blend.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Retain rolling evaluation and matched-risk controls; do not reopen the spent brute-force universe or choose a new best rule from the reported tables.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-036.md",
+          "label": "Accepted PDF, 22 pages received; bounded reading of section 2, sections 3.3-3.4, section 4/Table 3 and section 5 cost limitations/conclusion. Other appendix results not fully reviewed."
+        },
+        {
+          "path": "https://biblio.ugent.be/publication/01HY3C3S169G1N6QNYR55NZMFB/file/01HY60XZGZYHNQ6188MSVJT0SG.pdf",
+          "label": "Niek Deprez and Michael Frommel, Are simple technical trading rules profitable in bitcoin markets?, accepted manuscript for IREF 93 (2024)"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-PHASE-EXECUTION",
+      "parent_claim_id": "SRC26-037",
+      "title": "Quarter-hour source: short OOS forecast versus long-horizon association",
+      "method_type": "source_refinement",
+      "hypothesis": "Test phase-aware timing only on fixed parent tickets, with identical target quantities and opportunity-cost accounting.",
+      "testable_rule": "Keep standalone taker trading parked. Any execution test must retain skipped trades and use the same terminal mark; public books do not prove maker fills.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "Minute bars cannot reconstruct the first-ten-second input or its lagged boundary returns; a long-horizon coefficient is not a costed trading return.",
+      "status": "partial",
+      "required_inputs": [
+        "Causal trade/quote receipts, exact phase windows, fixed parent tickets, actual depth/fees, delayed-entry and missed-fill marks."
+      ],
+      "blockers": [
+        "Minute bars cannot reconstruct the first-ten-second input or its lagged boundary returns; a long-horizon coefficient is not a costed trading return.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Keep standalone taker trading parked. Any execution test must retain skipped trades and use the same terminal mark; public books do not prove maker fills.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-037.md",
+          "label": "Version-1 HTML received; section 2 input definitions, section 5 forecasting/economic magnitude, section 6.1 regressions and 6.2 inference, conclusion and Appendix A.4. Not all figures/appendices independently reproduced."
+        },
+        {
+          "path": "https://arxiv.org/html/2607.09426v1",
+          "label": "The Quarter-Hour Effect: Periodic Algorithmic Trading and Return Predictability in Cryptocurrency Futures, arXiv:2607.09426v1"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-WORLD-FLOW-VERSION",
+      "parent_claim_id": "SRC26-038",
+      "title": "World-flow paper version and proxy reconciliation",
+      "method_type": "source_refinement",
+      "hypothesis": "Retain weekly momentum plus return/volume-residualized local flow as an explicitly new proxy test with parent and flow-only controls.",
+      "testable_rule": "Use fresh dates and disclose prior selection; preserve R305's prescribed follow-ups before adding another fitted interaction.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "The source is a mechanism precedent, not validation of the local proxy or of the historical R304 model.",
+      "status": "partial",
+      "required_inputs": [
+        "Point-in-time MEXC mappings, causally available trailing features, fixed missing/tie rules, tradeable quantities and short-squeeze/margin accounting."
+      ],
+      "blockers": [
+        "The source is a mechanism precedent, not validation of the local proxy or of the historical R304 model.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Use fresh dates and disclose prior selection; preserve R305's prescribed follow-ups before adding another fitted interaction.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-038.md",
+          "label": "Final publisher-indexed introduction and section 2.1; 51-page conference PDF received and bounded introduction/data/forecast discussion read. Earlier full-conference review is retained separately; final methods/tables not fully reviewed."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.finmar.2026.101047",
+          "label": "Anastasopoulos, Gradojevic, Liu, Maynard and Tsiakas, Order flow and cryptocurrency returns, JFM 79 (2026), 101047; November 2024 conference version"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
+    },
+    {
+      "id": "DL26-PROTOCOL-VINTAGE",
+      "parent_claim_id": "SRC26-039",
+      "title": "Current funding documentation: dYdX timing and Drift URL redirect",
+      "method_type": "source_refinement",
+      "hypothesis": "Bind each funding forecast or guaranteed bound to the named venue, market, rule version and actual effective event.",
+      "testable_rule": "Record the redirected destination explicitly. Do not port a published Drift guarantee into current Velocity or MEXC without a fresh protocol bridge.",
+      "exact_tested_scope": "No new project strategy test. Source access and version boundaries are recorded in the card.",
+      "unrun_scope": "A current help page cannot establish the deployed calculation or historical event inclusion for another venue/version.",
+      "status": "partial",
+      "required_inputs": [
+        "Versioned source/code, live market parameters, authentic account funding events and verified value units."
+      ],
+      "blockers": [
+        "A current help page cannot establish the deployed calculation or historical event inclusion for another venue/version.",
+        "Authenticated inputs and a frozen, registered study remain required."
+      ],
+      "next_action": "Record the redirected destination explicitly. Do not port a published Drift guarantee into current Velocity or MEXC without a fresh protocol bridge.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-039.md",
+          "label": "Complete short dYdX funding page and current redirected https://docs.drift.trade/trading/funding-rates -> https://docs.velocity.exchange/protocol/trading/funding-rates page. No deployed program/code or historical document snapshot authenticated."
+        },
+        {
+          "path": "https://docs.dydx.xyz/concepts/trading/funding",
+          "label": "dYdX Funding documentation and the currently redirected Drift funding documentation"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep batch decisions and project comparisons"
+        }
+      ]
     }
   ],
   "sources": [
@@ -19349,6 +19629,41 @@
         "meaning and evidence for 4R/75 points",
         "Estimize unit and historical consensus vintage"
       ]
+    },
+    {
+      "intake_id": "deep_leads_source_reconciliation_20261029",
+      "records_added": [
+        "DL26-FUNDING-DAR",
+        "DL26-EXPIRY-IDENTITY",
+        "DL26-FUNDING-ACCRUAL",
+        "DL26-GUARANTEED-FUNDING",
+        "DL26-SELECTION-COSTS",
+        "DL26-PHASE-EXECUTION",
+        "DL26-WORLD-FLOW-VERSION",
+        "DL26-PROTOCOL-VINTAGE"
+      ],
+      "base_method_objects_before": 409,
+      "method_objects_after": 417,
+      "source_records_added": [
+        "SRC26-032",
+        "SRC26-033",
+        "SRC26-034",
+        "SRC26-035",
+        "SRC26-036",
+        "SRC26-037",
+        "SRC26-038",
+        "SRC26-039"
+      ],
+      "source_catalog_paths": [
+        "research/intake/source_catalog_20261020.csv"
+      ],
+      "received_scope": "Eight bounded primary-source refinements; exact card read scopes distinguish indexed excerpts, accepted PDF and arXiv HTML. Public small-document receipts are in the batch manifest; no complete-corpus claim.",
+      "reconciliation": "Existing queue only: no new strategy rows, market outcomes, reserved reads or new lane registrations. Phase execution is separated from full-sample horizon association; source-version and settlement-cash mismatches remain explicit.",
+      "source_version_path": "research/intake/deep_leads_batch_20261029.json",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 0,
+      "source_version_sha256": "d0000113b08b7a5147a312058c2e393f863ecf8e2e95f7e90415c12758df3574"
     }
   ],
   "reassignment_refs": [

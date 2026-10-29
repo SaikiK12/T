@@ -1,0 +1,95 @@
+{
+  "batch_id": "deep_leads_source_reconciliation_20261029",
+  "date": "2026-10-29",
+  "base_commit": "1ddac14",
+  "query_tracks": [
+    "perpetual futures funding predictability and economic costs",
+    "exact identity and accessible methods for BTC option expiration/gamma reversals",
+    "funding timing and no-arbitrage guarantees versus current protocol rules",
+    "quarter-hour return forecasting versus fee and horizon evidence",
+    "world order-flow final/conference version and local proxy transfer",
+    "rolling technical-rule selection, risk controls and cost robustness",
+    "cross-venue funding normalization and actual settlement cash",
+    "official MEXC funding, API fee and fair-price documentation"
+  ],
+  "source_records": [
+    {
+      "source_id": "SRC26-032",
+      "url": "https://doi.org/10.1016/j.irfa.2026.105464",
+      "read_scope": "Publisher-indexed abstract, introduction and calculation/sample/method/results snippets. Direct publisher and SSRN bodies inaccessible; full model, tables and economic-cost appendix unread."
+    },
+    {
+      "source_id": "SRC26-033",
+      "url": "https://doi.org/10.1016/j.frl.2026.110340",
+      "read_scope": "Publisher-indexed title/authors/abstract/highlights and data-availability statement. Direct full text returned 403. A related earlier working-paper identity was discovered, not treated as the final version."
+    },
+    {
+      "source_id": "SRC26-034",
+      "url": "https://doi.org/10.3390/math14020346",
+      "read_scope": "Publisher-indexed abstract, sections 3.1.1, 3.1.2, 3.5.1, 4.1 and Table 1. Direct article fetch returned 429; no claim of complete paper/table review."
+    },
+    {
+      "source_id": "SRC26-035",
+      "url": "https://doi.org/10.1016/j.frl.2026.110598",
+      "read_scope": "Publisher-indexed abstract/introduction and funding-timing, protocol, data and results snippets. Issue labelled November 2026; first-online date unverified. Full proof/appendices and SSRN PDF not accessed."
+    },
+    {
+      "source_id": "SRC26-036",
+      "url": "https://biblio.ugent.be/publication/01HY3C3S169G1N6QNYR55NZMFB/file/01HY60XZGZYHNQ6188MSVJT0SG.pdf",
+      "read_scope": "Accepted PDF, 22 pages received; bounded reading of section 2, sections 3.3-3.4, section 4/Table 3 and section 5 cost limitations/conclusion. Other appendix results not fully reviewed."
+    },
+    {
+      "source_id": "SRC26-037",
+      "url": "https://arxiv.org/html/2607.09426v1",
+      "read_scope": "Version-1 HTML received; section 2 input definitions, section 5 forecasting/economic magnitude, section 6.1 regressions and 6.2 inference, conclusion and Appendix A.4. Not all figures/appendices independently reproduced."
+    },
+    {
+      "source_id": "SRC26-038",
+      "url": "https://doi.org/10.1016/j.finmar.2026.101047",
+      "read_scope": "Final publisher-indexed introduction and section 2.1; 51-page conference PDF received and bounded introduction/data/forecast discussion read. Earlier full-conference review is retained separately; final methods/tables not fully reviewed."
+    },
+    {
+      "source_id": "SRC26-039",
+      "url": "https://docs.dydx.xyz/concepts/trading/funding",
+      "read_scope": "Complete short dYdX funding page and current redirected https://docs.drift.trade/trading/funding-rates -> https://docs.velocity.exchange/protocol/trading/funding-rates page. No deployed program/code or historical document snapshot authenticated."
+    }
+  ],
+  "small_document_receipts": [
+    {
+      "file": "deprez_accepted.pdf",
+      "url": "https://biblio.ugent.be/publication/01HY3C3S169G1N6QNYR55NZMFB/file/01HY60XZGZYHNQ6188MSVJT0SG.pdf",
+      "received_url": "https://backoffice.biblio.ugent.be/download/01HY3C3S169G1N6QNYR55NZMFB/01HY60XZGZYHNQ6188MSVJT0SG",
+      "bytes": 1191236,
+      "sha256": "65d19149fc9d46d52af73a831638f82460953139141c5c61f764ccab26ea3b8f",
+      "content_type": "application/pdf"
+    },
+    {
+      "file": "orderflow_conference.pdf",
+      "url": "https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/OrderFlowpaper.pdf",
+      "received_url": "https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/OrderFlowpaper.pdf",
+      "bytes": 468176,
+      "sha256": "25d099cf97d64f4ed246d3cdb2835532377e5b0ad9dae623cc0bf04d6830495d",
+      "content_type": "application/pdf"
+    },
+    {
+      "file": "quarterhour.html",
+      "url": "https://arxiv.org/html/2607.09426v1",
+      "received_url": "https://arxiv.org/html/2607.09426v1",
+      "bytes": 727683,
+      "sha256": "ae4e4c5a783d4843178a4f0668d78972724be429eb95c6e65e2a12800e518720",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "receipt_notice": "Hashes identify the separately received public bodies, not reproduction of publisher results or authentication of a market feed. Bodies remain outside git; only stated bounded sections were reviewed.",
+  "excluded_access": [
+    "Publisher 403 bodies",
+    "SSRN inaccessible PDFs",
+    "MDPI direct-page 429",
+    "unidentified second M440 activity paper",
+    "unverified 1,059/1,224 expiry counts"
+  ],
+  "source_only": true,
+  "new_market_statistics": 0,
+  "new_strategy_trials": 0,
+  "new_prospective_days": 0
+}

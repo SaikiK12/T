@@ -71,7 +71,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Methods and research notes**
 
-- [Leading-strategy hybrid review](research/HYBRID_REVIEW_20261029.md): six parallel source reviews, ranked combinations, prior nulls, comparison controls and current data blockers.
+- [Leading-strategy hybrid review](research/HYBRID_REVIEW_20261029.md): source reviews and the latest deep-batch decisions, ranked work paths, prior nulls, comparison controls and current data blockers.
 - Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
   [`OLD_SESSION_EDGES.md`](docs/OLD_SESSION_EDGES.md).
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
