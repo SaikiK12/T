@@ -5,40 +5,35 @@ A pre-registered strategy-discovery lab for crypto perpetual futures. The goal i
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
-## At a glance (2026-10-28)
+## At a glance (refreshed 2026-10-29, 02:45 UTC)
 
-**Money:** no strategy has passed paper trading, and no real money has moved. No paper lane has a strict on-time day
-that counts toward a decision yet ([PANEL](docs/PANEL.md)). The owner now wants short-hold futures trades only.
+**Use the generated [panel](docs/PANEL.md) for status** (last built 02:23 UTC) and
+[issue #7](https://github.com/SaikiK12/T/issues/7) for current writer claims.
 
-**Alive.** Every lead below is gate 0 on data the lab has seen, or still in forward paper:
+**Evidence status:** the panel reports zero strict on-time paper days, 218 hours of processing lag (347 minutes
+median), 0/80 scored hops in R355 and R364, and 0/500 scored days in R371. Their process receipts say SUCCESS,
+but their data states are UNVERIFIED; the Lighter recorder reports FAILED. This prevents lane decisions; it is not
+a strategy null. No strategy has passed paper or been approved for real trading.
 
-| Lead | Best evidence so far | Now |
-|---|---|---|
-| **Settlement scalp on Lighter:** short Lighter at the last trade before a deep negative Binance settlement, cover a minute after | +23.4 bp a hop at 1x (t 4.34), +15.8 at 3x, on 134 hops held out from R356 but not blind: R362 had read their Binance seconds. About one event every two days ([R363](experiments/settlelit_v1/FINDINGS.md)) | R364 paper on Lighter's live book, from 2026-10-28 20:00 UTC ([PREREG](experiments/settlelit_fwd/PREREG.md)) |
-| **Settlement hop:** hold the side that receives a deep funding lump on Binance, hedged on Lighter, from T − 1 h to T + 5 min | +50.5 bp a hop at 1x, t 4.08, about one hop a week; most of the gain over R354's T + 1 h exit is a funding hour not paid ([R354](experiments/settlehop_pred_v1/FINDINGS.md), [R356](experiments/settlehop_exit_v1/FINDINGS.md)) | R355 paper on MEXC + Lighter |
-| **US-open leaders:** at 10:00 New York long the 3 strongest and short the 3 weakest top-50 perps since 00:00 UTC, flat at 24:00 UTC | R300 NULL: validation +72.7 bp/day gross, +38.7 net at API 1x (t 1.28), -3.3 without the best 10 days, -29.3 at 3x ([R300](experiments/intrars_v1/FINDINGS.md)). The +61 at MEXC cost is a re-price on seen days | R371 paper on MEXC and Binance from 2026-10-29, about 500 NYSE days to an expected t of 2 ([PREREG](experiments/usopen_fwd/PREREG.md)) |
-| **Funding carry** (short perp, long spot) | The only holdout pass, at 1x only, about 1%/yr ([R191](experiments/carry_holdout/)) | R220 paper |
-| **Flow books A, B, X2** (72 h order-flow shorts) | Strong in-sample; holdout not confirmed ([R198](experiments/flow72_holdout/), [R216](experiments/venue_gap_v1/)) | R200, R215, R218, R221 paper, all negative so far |
-| **Event lanes** (unlocks, delisting notices, Monitoring Tag, announcements) | The unlock short replicated at gate 0 ([R265](experiments/unlocks_v1/FINDINGS.md)). The three notice studies were NULL at gate 0 (R267, R269, R271); their forward lanes test the best variants as hypotheses | R266, R268, R270, R272 paper |
-| **Sub-second cross-venue family** (Binance USDC against USDT and Bybit books, Retail Price Improvement flow, Bybit liquidations) | No result yet, recording only. About 250 ms of round trip from this container sets the floor, so only slower rules are executable | R367 screen runs once on or after 2026-11-02 ([PREREG](experiments/hftlead_v1/PREREG.md)); M430-M435 wait for the raw tape from 2026-10-29 13:00 UTC ([intake note](research/intake/hft_corpus_20261028.md)) |
+**Best historical lead:** [M042/R304](experiments/mlrank_v2/FINDINGS.md) reported +58.9 bp/day at 1x, t=4.21, on validation data already
+read by the research team. [R305](experiments/mlaudit_v1/FINDINGS.md) found the score unexplained and a severe
+short squeeze tail. It needs fresh confirmation, not more fitting on that sample.
 
-**Closed** (NULL, kept on record):
-- Lighter taker scalps toward Binance's quote (R348).
-- Minute flow fades on liquid perps: they decayed to about 0 since 2025-07 (R349, R351).
-- The level model's automated route (R337).
-- Unhedged settlement capture (R223), and the hop on the last settled rate (R353).
-- A Binance taker against the receiving side after a deep settlement: the price moves about 85 bp within 15 s of T,
-  before Binance's stated funding deviation lets a position open safely (R362).
-- 5,472 chart rules (R263), the cross-sectional battery (R238) and intraday relative strength (R300).
-- The full list is [`docs/EDGE_SCOREBOARD.md`](docs/EDGE_SCOREBOARD.md).
+**Current priority:** verify timely recorder and journal receipts first, then let frozen forward lanes run
+unchanged. No external study reviewed in this pass establishes executable net PnL for this project's MEXC altcoin
+universe. The top-vs-crowd
+positioning impulse is closed by R234/R240; do not reopen it under a new name. See [docs/DIRECTION.md](docs/DIRECTION.md)
+for the ranked next steps and research findings.
+
+**Useful queued research:** M090 can test whether MEXC's timestamped displayed funding rate improves on a
+no-change forecast of the subsequent settled rate. It remains blocked until the hourly recorder's continuity and
+settlement joins are verified; a forecast improvement by itself is not trading PnL.
 
 **Working here:**
-1. Read [`AGENTS.md`](AGENTS.md), then the fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).
-2. Read the "Now" section of [`docs/DIRECTION.md`](docs/DIRECTION.md) for the plan.
-3. Start a lane from `templates/lane/`, claim its id on #7, freeze its PREREG, run it, write FINDINGS and append the
-   registry row.
-4. Before a commit, run `python -m lab integrity`, `python -m lab check --suite fast` and the full
-   `python -m unittest discover -s tests -t .`.
+1. Read [AGENTS.md](AGENTS.md) and fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).
+2. Read the timestamp and limits in [docs/PANEL.md](docs/PANEL.md), then the linked lane's frozen PREREG and FINDINGS.
+3. Use the live queue [registry/methods.csv](registry/methods.csv); claim and freeze a new lane before any statistics.
+4. Check `python -m lab integrity`, `python -m lab check --suite fast`, and the full unit suite before code changes.
 
 ## Where things are
 
@@ -83,6 +78,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - [`FREE_AI_AGENT.md`](docs/FREE_AI_AGENT.md): running an AI coding agent from a phone through GitHub Actions.
 
 **Methods and research notes**
+
+- [Leading-strategy hybrid review](research/HYBRID_REVIEW_20261029.md): six parallel source reviews, ranked combinations, prior nulls, comparison controls and current data blockers.
 - Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
   [`OLD_SESSION_EDGES.md`](docs/OLD_SESSION_EDGES.md).
 - Sources and literature: [`SOURCES.md`](docs/SOURCES.md),

@@ -39,6 +39,19 @@ Per side, in basis points of notional.
 **What this changes.** The lab has priced every automated (API) lane at MEXC's 6/8 bp. On the same coins, Lighter's
 Standard account removes the fee, and what is left is the spread and the book.
 
+### MEXC fee-entitlement update (2026-10-29)
+
+MEXC's published API schedule lists 6 bp maker / 8 bp taker effective 2026-06-01. The API schedule is distinct from
+web/app promotions. MEXC's announcement effective 2026-10-26 applies to selected users and regions, with rates varying by region
+and futures pair; the public schedule is not the owner's entitlement. Before treating a cost cell as owner-executable,
+verify the current fee page or authenticated fee endpoint for the owner's account and symbol. The PREREG's frozen rate
+remains the tested assumption; this update does not rewrite earlier trials.
+
+Sources: MEXC [API futures fee update](https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742),
+[Oct. 26 selected-region fee update](https://www.mexc.com/announcements/article/adjustments-to-trading-fees-on-btc-wld-and-14-other-futures-in-selected-countries-and-regions-17827791539309),
+and [contract API](https://mexcdevelop.github.io/apidocs/contract_v1_en/).
+
+
 ## First Lighter measurement (one snapshot, 2026-10-21 16:30 UTC)
 
 `scripts/record_lighter_book.py` read 200 active Lighter perps: the best bid and ask, and the cost per side of a

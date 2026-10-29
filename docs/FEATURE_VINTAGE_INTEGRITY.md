@@ -1,6 +1,6 @@
 # Feature vintage integrity: use what was knowable at the decision time
 
-Reviewed 2026-10-19. A feature can be aligned to the correct event window and still leak future information if its provider revises the historical value after the strategy decision. This is distinct from signal-computation latency: the stored value itself can change later.
+Originally reviewed 2026-10-19; new-lane template addendum 2026-10-29. A feature can be aligned to the correct event window and still leak future information if its provider revises the historical value after the strategy decision. This is distinct from signal-computation latency: the stored value itself can change later.
 
 ## Why event time is not enough
 
@@ -93,6 +93,16 @@ The panel's column table labels them `pit`. That label is about timing only.
 - **R282** (`pitfac_v1`): `n_venues_7d` and `kr_rel_7d` did not pass there, so no result changes.
 - **R275-R279 and R288 carry books:** their KuCoin, MEXC and Hyperliquid universes are survivor-only. This is a limit
   on their backtests, not on their forward days.
+
+## Capture this in new lane specifications
+
+The new-lane template now requires a lineage table for each input and derived feature, with measurement-window close,
+provider publication and first-receipt times, decision-time availability, point-in-time membership, survival class,
+and explicit revision/missing-value handling. For cross-sectional inputs, report survivor versus later-delisted
+coverage and both portfolio legs. lab.coverage.clean_columns and coverage_by_survival are available for the
+current panel; derived composites must be checked through their parent fields, not judged by their column name alone.
+This is a required human-reviewed pre-freeze contract; current integrity tooling does not automatically adjudicate
+feature availability or survival coverage. It does not reopen R299/R304 or change any frozen lane.
 
 ## Sources
 
