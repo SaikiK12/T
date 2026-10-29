@@ -76,7 +76,7 @@ setsid nohup sh scripts/notice_loop.sh  >/dev/null 2>&1 &
 The tick runs `ensure` for every recorder and forward lane, so one loop restarts the rest. `python -m lab status
 --state-dir "$FORWARD_STATE_DIR"` shows what ran. The machine must stay on and reach the public exchange websockets;
 a gap in a recording is a gap in the evidence, not something to fill later. The forward lanes (R364 settlement scalp,
-R369 EIA-release lag, the carry books, ...) are paper only: nothing in this repo places an order.
+R369 EIA-release lag, R371 US-open leaders, the carry books, ...) are paper only: nothing in this repo places an order.
 
 ## 5. What was scheduled in Claude's account
 Reminders, with their exact steps, are copied into `docs/handover/SCHEDULED_CHECKS.md` (R369 first event, raw-tape window,

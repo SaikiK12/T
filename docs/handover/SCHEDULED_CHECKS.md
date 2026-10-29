@@ -65,6 +65,10 @@ tests before committing `lab/`, `scripts/` or `engine/` changes (`cargo test --r
 Do not run Workflows or subagents."
 
 ## Not scheduled anywhere but due
+- R371 `usopen_fwd`: a daemon (`scripts/forward_usopen.py`, restarted by `ensure` in the forward tick) writes a ticket at
+  10:00 New York (14:00 UTC until 2026-11-01, then 15:00) on each NYSE day and scores it after 24:00 UTC. After a container
+  restart run `.venv/bin/python scripts/forward_usopen.py ensure` before the next 10:00 New York. A missed day is logged and not made up.
+  Futility is read at 125 scored days, PASS or NULL at 500; `experiments/usopen_fwd/journal/status.json` has the table.
 - R369 `eventlag_fwd`: scoring is an ops task that runs on the forward tick; the first read is about 2026-12-23 (8 valid
   events per type and 6 lag-filtered trades). Calendar in `experiments/eventlag_fwd/`.
 - R364 `settlelit_fwd`: futility at 20 / 40 hops, PASS at 40 or 80 (rule in its PREREG).

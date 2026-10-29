@@ -100,6 +100,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R355", "forward_settlehop.py", timeout=60),   # starts the lane's hourly daemon if it is down
         task("R364", "forward_settlelit.py", timeout=60),   # starts the lane's settlement daemon if it is down
         task("R369", "run_eventlag.py", (), ("REC_CPERPS", "REC_LTRADES"), timeout=300),   # scores EIA releases 15 min after
+        task("R371", "forward_usopen.py", timeout=60),   # starts the lane's 10:00 New York daemon if it is down
         task("R285", "forward_xbook.py", (),
              ("R278", "R279", "R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
@@ -164,6 +165,10 @@ LANES = (
          "Lighter (Binance's rate)", "API", 80,
          "futility at 20/40 hops; PASS at 40 if CR1 t >= 2.80, else at 80 or 2027-10-28 if t >= 1.98; 2x > 0",
          kind="event", unit="scored hops"),
+    Lane("R371", "usopen_fwd", "US-open leaders: long 3 strongest, short 3 weakest top-50 perps since 00:00 UTC (10:00 New York to 24:00 UTC)",
+         "MEXC (book M), Binance (book B)", "manual-web", 500,
+         "futility at 125 scored days; PASS at 500 if NW t >= 2 at 1x, 2x > 0 and the mean without the best 10 days > 0",
+         kind="event", unit="scored days"),
     Lane("R285", "xbook_fwd", "cross-family derived book", "Multiple venues", "mixed", 180,
          "180/365 final-day sequential looks; native and gate decisions remain separate", kind="derived"),
 )
@@ -209,6 +214,7 @@ LABELS.update({
     "R355": ("Prospective paper", "Settlement hop on the displayed funding rate", "settlehop_fwd"),
     "R364": ("Prospective paper", "Lighter settlement scalp on Binance's predicted rate", "settlelit_fwd"),
     "R369": ("Prospective paper", "Lighter lag after EIA gas and crude releases (events scored from the recordings)", "eventlag_fwd"),
+    "R371": ("Prospective paper", "US-open leaders: 10:00 New York relative-strength book on MEXC", "usopen_fwd"),
     "R285": ("Prospective paper", "Cross-family derived book", "xbook_fwd"),
     "CATALOG": ("Reporting", "Repository catalogs", "vt_fwd"),
 })

@@ -7,6 +7,13 @@ use [the live queue](../registry/methods.csv), [round registry](../registry/roun
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
 ## Now (2026-10-28, 20:15 UTC)
+- **Added 2026-10-29: R371 `usopen_fwd` is running on paper** (PREREG frozen, daemon up, first ticket 14:00 UTC the same
+  day). It is R300's "us10 n3 follow" (C17) on days nobody has read: at 10:00 New York, long the 3 strongest and short the 3
+  weakest top-50 Binance perps since 00:00 UTC, flat at 24:00 UTC. Book M (coins with a MEXC perp, one-minute opens, MEXC's
+  fee and measured half-spread) decides; book B repeats R300 at API cost. Futility is read at 125 scored days, PASS or NULL at
+  500 (about two years). Nothing is PnL yet: R300 itself is NULL (net +38.7 bp/day, t 1.28, minus the best 10 days
+  -3.3), and the +61 bp/day at MEXC cost is a re-price on seen days. The 2020 read of C17 stays one frozen batch-2 PREREG
+  on or after 2026-11-17, not pooled with this lane.
 - **The owner's latest ask (13:42 UTC):** intraday futures trading with good PnL through the day, a better organized
   lab, and a clean PR. The plan is the last section, "Intraday through the day".
 - **Best lead: the settlement scalp on Lighter (R363, gate 0, recorded PARTIAL).** Short Lighter at the last trade

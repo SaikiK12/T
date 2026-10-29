@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-29 01:43 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-29 02:18 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -24,8 +24,8 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 | Ideas in the queue, untested | 49 |
 | Ideas partly tested | 48 |
 | Ideas blocked (data, download, compute) | 105 |
-| Rounds in the registry | 168 (NULL 92, PARTIAL 34, PENDING 28, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,189 |
+| Rounds in the registry | 169 (NULL 92, PARTIAL 34, PENDING 29, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,191 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -52,6 +52,7 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 1 / 90 on-time days | -0.0% | -0.0% / -0.0% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R355 settlehop_fwd | settlement hop on the displayed funding rate (MEXC decided, Gate reported) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2028-03-01 | UNASSESSED |
 | R364 settlelit_fwd | settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28 | UNASSESSED |
+| R371 usopen_fwd | US-open leaders: long 3 strongest, short 3 weakest top-50 perps since 00:00 UTC (10:00 New York to 24:00 UTC) | 0 / 500 scored days | - | - / - | pending (0 of 500 scored) | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
 Processing lag of on-time hours: 217 hours, median 347.76666666666665 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
@@ -95,6 +96,7 @@ Process state, declared data checks and statistical eligibility are separate.
 | R355 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R364 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R369 | Prospective paper | UNKNOWN | UNVERIFIED | None |
+| R371 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | R285 | Prospective paper | UNKNOWN | UNVERIFIED | None |
 | LAG | Data integrity | UNKNOWN | UNVERIFIED | None |
 | PANEL | Reporting | UNKNOWN | UNVERIFIED | None |
@@ -133,7 +135,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R356 | settlehop_exit_v1 | DONE | PARTIAL | 5 |
 | R362 | settleticks_v1 | DONE | NULL | 7 |
 | R363 | settlelit_v1 | DONE | PARTIAL | 6 |
 | R364 | settlelit_fwd | RUNNING | PENDING | 1 |
@@ -141,5 +142,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R368 | eventdrift_v1 | DONE | NULL | 26 |
 | R369 | eventlag_fwd | REGISTERED | PENDING | 24 |
 | R370 | cmelead_v1 | DONE | PENDING | 16 |
+| R371 | usopen_fwd | REGISTERED | PENDING | 2 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).
