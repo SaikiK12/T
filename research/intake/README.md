@@ -2,13 +2,15 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 418 source records/aliases and 133 catalog/tool entries; the queue holds 360 rows.
+Current received scope: 424 source records/aliases and 139 catalog/tool entries; the queue holds 360 rows.
 
 The [2026-10-29 deep batch](deep_leads_batch_20261029.json) adds nine bounded primary-source refinements
 (SRC26-032–040), with source cards and existing queue aliases. It separates quarter-hour execution evidence
 from long-horizon association, identifies both of M440's unnamed papers, and records funding cash/version limits.
 Directly received PDF/HTML hashes and unread scopes are explicit. No strategy was registered or scored.
 
+
+The [owner-reel and TradingView follow-up](reels_tradingview_batch_20261029.json) adds six source refinements (SRC26-041–046), including complete reading of three public Pine sources. It records exact code versions and costs/timing limits, distinguishes the unavailable IV Walls speech from the received ORB frames, and proposes one four-arm parent/filter comparison. No Pine code was compiled or republished, no market outcome was computed, and the existing queue statuses remain unchanged.
 
 The owner's HFT/crypto-microstructure corpus (2026-10-28) adds 46 catalog entries in
 [`source_catalog_hft_20261028.csv`](source_catalog_hft_20261028.csv) (3,347 known pages, 37 index-only, 7 bounded

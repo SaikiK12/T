@@ -4,6 +4,8 @@ Six parallel reviews examined mechanisms, primary literature, existing nulls, po
 
 **Latest decision:** the [deep batch below](#deep-batch-decision-after-primary-source-reconciliation) qualifies the earlier rankings. Its source/version and cost findings take precedence over a headline interpretation of the earlier tables. This remains a research judgment, not a ranking of expected profit.
 
+The subsequent [owner-reel and TradingView review](#reels-and-tradingview-community-follow-up) supplies three fully read public Pine sources and a bounded combination design. It adds no measured edge and does not displace the deep batch's work order.
+
 ## Ranked combinations to take forward
 
 | Priority | Combination | Incremental question | Present blocker |
@@ -128,3 +130,63 @@ Any timing overlay must keep the parent's target quantity and common terminal ma
 trade carries opportunity cost, and a maker quote is not a fill. A cost reduction could improve an existing
 account without creating a new return predictor. These are finite next implementations, not new profitable
 strategies or permission to activate an unfrozen lane.
+
+## Reels and TradingView community follow-up
+
+The owner supplied two reels, then requested community strategies and systematic combinations. The
+[source manifest](intake/reels_tradingview_batch_20261029.json) retains six source refinements, exact versions,
+access failures and receipt hashes. Public Pine access was confirmed as `open_no_auth` for all three retrieved
+scripts. No closed/invite-only source was requested, login bypass attempted, paid access purchased or
+third-party code republished. Full source reading is separate from compilation and market validation.
+
+| Lead | Research judgment | Evidence still needed |
+|---|---|---|
+| [ATrain IV Walls](intake/cards/SRC26-041.md) | A potentially useful level hypothesis; weakest reproducibility of this group. The cover's win-rate label is insufficient to rank profitability. | Exact generator and publication timestamps, full rules, all losing trades, conversion/cost model. Video/audio remain unavailable. Related vendor descriptions do not authenticate the reel. |
+| [Benny / TradeX ORB](intake/cards/SRC26-042.md) | More concrete than the wall claim, but the current publication is not a frozen reproduction of the reel. | Exact revision, settings, trade export and fill/cost assumptions. Keep simulated reports separate from live-account evidence. |
+| [QQQ paper parent](intake/cards/SRC26-043.md) | A precisely described but different entry; useful as a replication reference. | Validated ETF/minute inputs and realistic execution. Its first-candle-direction entry is not a close-confirmed range break. |
+| [Community ORB/VWAP/ATR strategy](intake/cards/SRC26-044.md) | Inspectable components with material implementation choices. | Correct and name any adaptation; chart defaults do not prove fills or returns. |
+| [Community ORB/VWAP/volume signal](intake/cards/SRC26-045.md) | Best specified component candidate in this small intake, as a research judgment. | It lacks an account/exit model; close-time signal and VWAP anchoring need a causal contract. |
+| [Manual-IV rails](intake/cards/SRC26-046.md) | Transparent volatility-band proxy, not ATrain's model or verified gamma. | Historical IV known then, causal anchor, physical calibration, comparator and economics. |
+
+### A finite combination family, not an open-ended profitable-curve search
+
+This is an **own proposed adaptation**, not a frozen PREREG or source replication. Its purpose is to find out
+whether two observable filters improve the same ORB parent. The community signal is long-only, so the first
+comparison stays long-only. Do not quietly add shorts, retests, more sessions or a grid of exits.
+
+1. Form one 09:30–10:00 **America/New_York** range from complete one-minute observations. After 10:00 and
+   before 11:30, create one parent ticket at the first completed one-minute close above its high. Use the
+   official trading calendar, including DST, holidays and early closes; an incomplete opening range is missing.
+2. Make four accounts: parent; parent with VWAP filter; parent with volume filter; parent with both filters.
+   Evaluate all filters on that same first parent ticket. A rejection stays in cash for the session; it does
+   not wait for a later better-looking entry. This intentionally differs from the source indicator's first
+   qualifying entry. Define VWAP explicitly from session-open typical prices and actual venue volume; freeze
+   its units. The volume comparison is the ticket bar versus 1.5 times mean per-minute opening-range volume.
+   The source's upper-half-close condition is excluded from this initial family rather than another tuned knob.
+3. Give all arms the same proposed $1,000 notional cap, cash reserve and entry opportunity at the **next**
+   executable minute, with current spread/fees and latency. Fix the stop at the opening-range low and otherwise
+   close at the session end; no target/ATR/trailing optimization. If executable entry is at/below the stop,
+   skip the shared parent ticket. A gap cannot be filled at an unavailable stop price. Missing marks/exits,
+   intrabar ordering, capital/margin and liquidation handling must be specified before implementation.
+4. Pair **calendar-day** returns, including cash/no-trade days, and compare each filter with the parent and
+   the joint account with both single-filter accounts. Match capital and cost rules at 1x/2x/3x. Report
+   turnover, coverage and break-even cost; a higher win rate or conditional mean alone does not select a winner.
+5. Freeze the instrument/venue/data manifest, one training/selection schedule and untouched final dates before
+   any market evaluation. Count all four arms and any implementation alternatives that are actually searched;
+   a family correction must cover the complete search and disclose the much larger prior program. Use
+   dependence-aware inference fixed in advance. Repeated community browsing is also idea selection, not an
+   untouched strategy universe. These are design choices, not a completed power/inference specification.
+
+The blocking choice is an authenticated **index** instrument and executable data, not another indicator.
+M206's old hourly-data note is not proof that minute data is available in this workspace. M213's ETF/CME route
+and M320's reported LSE/index-perp inputs require provenance and contract validation. R290 already tested
+crypto OR15 with real versus placebo session anchors and returned NULL; do not relabel that parent as a new
+independent discovery. A different index/filter rule is untested and needs its own lane, not a reinterpretation
+of that result. No reserved 2020 data was read.
+
+An eventual IV overlay should be a separate question after numerical walls exist. First compare a
+timestamped IV band with a realized-volatility band at matched coverage, then test any improvement in the
+fixed parent's net account. Combining unverified walls with a fitted breakout now would hide which component
+helped. Broad parameter searches can be useful in the training stage, subject to a declared budget and full
+trial accounting; the best curve in such a search is not confirmation. The deep batch's M090/R305/M440 work
+order remains in place while these new source/data gaps are resolved.

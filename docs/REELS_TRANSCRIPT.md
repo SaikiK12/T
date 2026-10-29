@@ -1,5 +1,7 @@
 # The owner's two reels: what the media actually says (2026-10-19)
 
+Latest additions: the [2026-10-29 IV Walls / TradeX ORB review](#the-owners-two-reels-of-2026-10-29-iv-walls-and-tradex-orb) distinguishes recovered captions/frames from unknown speech. Open community code is assessed in [the research review](../research/HYBRID_REVIEW_20261029.md#reels-and-tradingview-community-follow-up).
+
 How it was obtained:
 - **Download:** `yt-dlp` 2026.08.19, with no login. The public page itself is a login shell.
 - **Speech:** `faster-whisper` "small" on CPU, with audio decoded by ffmpeg.
@@ -472,3 +474,28 @@ the video address came from the public page's own data, with the page's cookies.
 - **Timing check:** The public post timestamp is 15:12:58 UTC (11:12:58 EDT); the Fed statement was scheduled for 14:00 EDT. The “pre-FOMC” label is consistent with the calendar.
 - **Lab:** `TT26-04-QQQ-GEX-FAILED-BUYERS` maps to existing M235 as a bearish variation of the earlier bullish 713 reclaim narration. M235 remains BLOCKED. No contract, GEX sign/vendor, option-flow definition, trigger, entry, stop, size, fills or costs are specified; “4R / 75 points” is an unverified creator claim. Zero trials and zero market outcomes.
 - **Sources:** [TikTok post](https://www.tiktok.com/@aleks_rosme/video/7701736934955076886); [Fed statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm); [OptionsDepth FAQ](https://www.optionsdepth.com/faq); [Cboe TBT](https://datashop.cboe.com/enhanced-us-options-trade-by-trade-execution-detail); [Cboe Open-Close](https://datashop.cboe.com/cboe-options-open-close-volume-summary); [OIC open-interest FAQ](https://www.optionseducation.org/referencelibrary/faq/general-information).
+
+## The owner's two reels of 2026-10-29: IV Walls and TradeX ORB
+
+Public pages and ordinary captioned embeds were fetched without login after the web reader was throttled.
+Receipts are in the [intake manifest](../research/intake/reels_tradingview_batch_20261029.json); media remains
+outside Git. There is **no verified complete speech transcript for either reel**.
+
+- [DdTNtTLNSLU](https://www.instagram.com/reel/DdTNtTLNSLU/) is @atraintrades, Austin Green, captioned
+  “Can’t beat the IV Walls.” Its cover advertises a 90% win rate with a performance screenshot. The embed marks
+  video copyright-blocked and supplies no video URL. Only caption, metadata and cover were received; no claim
+  is made about the unavailable speech. [SRC26-041](../research/intake/cards/SRC26-041.md) distinguishes related
+  public Fractal/TradeWellX descriptions from this reel's unknown exact model.
+- [DZvAMYZA1ae](https://www.instagram.com/reel/DZvAMYZA1ae/) is @bennnytrades, Benny. Its caption promotes
+  data-backed systems and asks for an ORB comment. The public video was received (108.017 seconds). Sixteen
+  seven-second-spaced frames, plus 41/77-second frames, show chart examples, a parameter-optimization slide
+  and historical strategy reports. No exact PnL statistic is adopted from the screenshots. An OCR attempt
+  produced noisy subtitle fragments and does not establish the audio. The author-linked public TradeX
+  description and later revision notes supply the bounded rule/version evidence in
+  [SRC26-042](../research/intake/cards/SRC26-042.md); invite-only code and trade export remain unavailable.
+
+These refine existing M206/M213/M412 scopes. They do not establish a profitable system or revive prior nulls.
+The owner's subsequent community-strategy request led to complete reading of three public Pine sources,
+SRC26-044–046, and an exact distinction from the QQQ paper in SRC26-043. The
+[four-arm proposed comparison](../research/HYBRID_REVIEW_20261029.md#reels-and-tradingview-community-follow-up)
+keeps parent, single filters and combined filters on common tickets and dates. It has not been registered or run.
