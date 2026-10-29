@@ -1,6 +1,6 @@
 # Selection and trial-accounting audit
 
-Reviewed 2026-10-19 from the repository at R226/R227. Static review only: no market outcomes were recalculated, no data were downloaded, and frozen lanes were not edited.
+Originally reviewed 2026-10-19 from the repository at R226/R227; cross-family addendum 2026-10-29. Static review only: no market outcomes were recalculated, no data were downloaded, and frozen lanes were not edited.
 
 ## The registry total is not an effective trial count
 
@@ -56,6 +56,23 @@ Append an immutable row for every generated candidate, not just each promoted ro
 - full candidate outcome-vector hash and the follow-up rationale connecting a result to a new hypothesis.
 
 Historical gaps should be marked unknown or incomplete, not reconstructed as a precise denominator from surviving registry rows. Keep the raw computational count separate from researcher degrees of freedom and from the dependence-aware test performed on a declared family.
+
+## Cross-family selection remains outside the current correction
+
+Reviewed 2026-10-29 against the current checkout. registry.program_trials() sums recorded computational trials;
+it does not estimate an effective independent-test count or allocate error across separately selected families.
+SPA/Reality Check can correct the declared finite family supplied to them, but they do not automatically correct a
+later choice among families or a follow-up lane selected because an earlier result looked strong.
+
+lab.inference.lord_plus and OnlineFDR are present but have no production caller. LORD++ guarantees depend on
+valid null p-values and its dependence assumptions; adjacent research families often reuse dates, symbols, baselines
+and selected parent results. Do not treat this helper as a ready project-wide correction. The next lane must name its
+decision family, parent/search lineage, all prior views and sequential looks. If no valid program-level allocation or
+dependence-aware correction covers the selection path, label its historical result exploratory and reserve fresh
+forward/unread data for confirmation. Raw trial counts remain useful disclosure, not a calibrated global p-value.
+
+No historical verdict, registry trial count or frozen lane was changed by this review.
+See Ramdas et al.'s primary [LORD++ paper](https://proceedings.neurips.cc/paper_files/paper/2017/file/7f018eb7b301a66658931cb8a93fd6e8-Paper.pdf).
 
 ## Sources
 

@@ -1,6 +1,6 @@
 # Positioning, open interest and signed flow: feature definitions before prediction
 
-Reviewed 2026-10-19. This note distinguishes what the feeds measure, what the literature can transfer, and the integrity checks needed before treating a feature as predictive. It reports no new project return result.
+Originally reviewed 2026-10-19; literature addendum 2026-10-29. This note distinguishes what the feeds measure, what the literature can transfer, and the integrity checks needed before treating a feature as predictive. It reports no new project return result.
 
 ## Similar names can mean different market objects
 
@@ -15,6 +15,27 @@ Liquidation messages are a censored event feed, not a position census. Binance's
 The clearest positioning evidence in the reviewed literature is lower-frequency and institutionally classified. Baur and Smales report timing information in weekly CFTC trader categories for CME Bitcoin futures, especially changes in leveraged-money short positions. Those observations are taken Tuesday and normally released Friday, so the Tuesday record cannot be used as if it were known Tuesday. Dunbar and Owusu-Amoako also find predictive relations using CFTC-based trader-behavior measures. Neither study establishes that Binance's margin-balance-ranked ratios predict MEXC altcoin perpetual returns ([Baur & Smales 2022](https://doi.org/10.1002/fut.22332); [Dunbar & Owusu-Amoako 2023](https://doi.org/10.1016/j.jbef.2023.100812); [CFTC release schedule](https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm)).
 
 Recent cross-asset order-flow evidence aggregates buyer-initiated less seller-initiated trades across hundreds of exchanges and multiple fiat quote currencies. It supports testing signed transaction flow as its own feature family; it cannot validate exchange positioning ratios, venue-specific execution, or the five-minute project feature ([Anastasopoulos et al. 2026](https://doi.org/10.1016/j.finmar.2026.101047)). OI evidence is more directly useful as a possible activity or risk-state measure. It should be tested against price, volume, funding, basis and signed flow rather than given a directional interpretation by definition.
+
+## A distinct weekly CFTC option-position result (2026-10-29)
+
+Shen, Li and Luo's 2026 Finance Research Letters paper, [“Option positions, non-momentum trading, and Bitcoin
+futures returns”](https://www.sciencedirect.com/science/article/pii/S1544612326008287), uses weekly CFTC CME Bitcoin
+data (2020-01-21 to 2025-03-04). The accessible publisher abstract/search extract reports that asset-manager
+option-only position changes predict a second-week-ahead non-momentum component, with futures returns leading the
+position changes. This is a forecast association, not causal flow or net trading PnL. The publisher and author
+repository pages returned 403 in this review, so the full methods and portfolio construction were not independently
+audited or reproduced.
+
+The CFTC says observations are taken Tuesday and generally released Friday, normally at 3:30 p.m. Eastern; holidays
+can change the schedule. It also cautions that deriving options-only figures by subtracting futures-only from
+combined reports can lose information about spreads. Thus this source is too slow for an intraday lane and must use
+the actual public release time. It is related to blocked M100's weekly CFTC timing idea, but the asset-manager options
+measure is not the same as leveraged-money positioning. Check M100's existing source/data scope before considering
+any new queue item; this paper alone does not earn a lane.
+
+Sources: [publisher record](https://www.sciencedirect.com/science/article/pii/S1544612326008287),
+[Hull repository record](https://hull-repository.worktribe.com/output/5680567/option-positions-non-momentum-trading-and-bitcoin-futures-returns),
+and [CFTC COT descriptions and release timing](https://www.cftc.gov/es/node/128971).
 
 ## Timestamp and archive risks
 
