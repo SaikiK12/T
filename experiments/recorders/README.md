@@ -7,6 +7,7 @@ from the first run on: none of it can be backfilled.
 | Recorder | Output | What it keeps |
 |---|---|---|
 | `scripts/record_mexc_ticker.py` | `mexc_ticker/<date>/<HH>.parquet`, one per UTC hour | every MEXC perp: displayed next funding rate, caps, cycle and settle time; last, bid1/ask1, index, fair, 24 h volume, holdVol (open interest) |
+| `scripts/record_funding_board.py` | `funding_board/<date>/<HH>.parquet`, one per UTC hour | normalized funding observations from six venues, with per-venue response-completion bounds on new files |
 | `scripts/record_notices.py` | `notices/binance_{delisting,listing}.csv`, append-only | Binance announcement id, title, release time and the UTC time this recorder first saw it |
 | `scripts/record_unlocks.py` | `unlocks/<date>.json.gz`, one per UTC day | DefiLlama emissions index (upcoming unlocks, circulating supply, market cap) as published that day |
 
@@ -18,6 +19,14 @@ the local wall clock; synchronization and subsequent durable publication still
 need independent evidence. Older files lacking the two per-response columns used
 `recv_ms` for request start, so that value is not a receipt-time bound and must
 not be treated as one in an M090 forecast test. Missing hours remain missing.
+
+For new cross-venue funding-board files, `request_start_ms` is the snapshot
+start, `venue_start_ms` marks the start of that venue's collection, and
+`recv_ms` is recorded after all responses used for that venue. Older board
+files without `venue_start_ms` stamp the whole capture's start as `recv_ms`;
+they have no per-venue completion bound. All of these use the local wall clock,
+and neither response timing nor a file's name proves durable, on-time
+publication. Clock-quality and publication evidence remain required.
 
 ## The local clock (measured 2026-10-29)
 Every `recv_ms` and `lag_ms` comes from this machine's wall clock, which nothing disciplines. After the container's last

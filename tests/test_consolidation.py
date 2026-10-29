@@ -291,6 +291,30 @@ class SharedCatalog(unittest.TestCase):
             self.assertIsNone(rows[0]["mexc_snapshot_at"])
             self.assertEqual(rows[0]["alignment"], "MEXC hour absent")
 
+    def test_funding_dashboard_discloses_legacy_clocks_and_uses_worst_new_skew(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            funding = root / "recorders/funding_board/1970-01-01/00.parquet"
+            mexc = root / "recorders/mexc_ticker/1970-01-01/00.parquet"
+            funding.parent.mkdir(parents=True)
+            mexc.parent.mkdir(parents=True)
+            old = pd.DataFrame([dict(venue=v, base="TOY", rate_8h=.001, recv_ms=t)
+                                for v, t in (("gate", 1000), ("bitget", 6000))])
+            mx = pd.DataFrame([dict(symbol="TOY_USDT", f_fundingRate=.002, f_collectCycle=8, recv_ms=3000)])
+            old.to_parquet(funding); mx.to_parquet(mexc)
+            with patch.object(dashboard_perf.data, "ROOT", root):
+                legacy = dashboard_perf.funding_board()[0]
+            self.assertIsNone(legacy["component_skew_ms"])
+            self.assertIn("legacy", legacy["alignment"])
+            old["venue_start_ms"] = [900, 5000]
+            mx["funding_recv_ms"] = 2500
+            mx["ticker_recv_ms"] = 3000
+            old.to_parquet(funding); mx.to_parquet(mexc)
+            with patch.object(dashboard_perf.data, "ROOT", root):
+                current = dashboard_perf.funding_board()[0]
+            self.assertEqual(current["component_skew_ms"], 3000)
+            self.assertEqual(current["alignment"], "same UTC-hour files")
+
 
 class EngineBuildIdentity(unittest.TestCase):
     def test_binary_and_source_drift_invalidate_receipt_binding(self):

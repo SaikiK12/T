@@ -235,17 +235,22 @@ def funding_board(top=120):
         return []
     from scripts.record_funding_board import board
     snap = pd.read_parquet(snaps[-1])
+    if snap.empty:
+        return []
     # Combine only the same nominal hour; never disguise independent latest
     # snapshots as one simultaneous observation.
     mx = rec / "mexc_ticker" / snaps[-1].parent.name / snaps[-1].name
     mexc = pd.read_parquet(mx) if mx.is_file() else None
     b = board(snap, mexc, top=top)
-    at = pd.Timestamp(int(snap.recv_ms.iloc[0]), unit="ms", tz="UTC").strftime("%Y-%m-%dT%H:%MZ")
+    at = pd.Timestamp(int(snap.recv_ms.max()), unit="ms", tz="UTC").strftime("%Y-%m-%dT%H:%MZ")
     mx_at = (pd.Timestamp(int(mexc.recv_ms.iloc[0]), unit="ms", tz="UTC").strftime("%Y-%m-%dT%H:%MZ")
              if mexc is not None and len(mexc) else None)
-    skew = (abs(int(mexc.recv_ms.iloc[0]) - int(snap.recv_ms.iloc[0]))
-            if mexc is not None and len(mexc) else None)
+    timed = ("venue_start_ms" in snap.columns and mexc is not None and len(mexc)
+             and "funding_recv_ms" in mexc.columns and "ticker_recv_ms" in mexc.columns)
+    skew = (int((snap.recv_ms - int(mexc.recv_ms.iloc[0])).abs().max()) if timed else None)
+    alignment = ("MEXC hour absent" if mx_at is None else
+                 "same UTC-hour files" if timed else "same UTC-hour files; legacy start times")
     return [{"key": r["base"], "snapshot_at": at, "funding_snapshot_at": at, "mexc_snapshot_at": mx_at,
-             "component_skew_ms": skew, "alignment": "same UTC-hour files" if mx_at else "MEXC hour absent",
+             "component_skew_ms": skew, "alignment": alignment,
              **{k: clean(v) for k, v in r.items()}}
             for r in b.to_dict("records")]

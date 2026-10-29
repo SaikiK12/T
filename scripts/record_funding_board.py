@@ -8,7 +8,9 @@ published, per settlement), interval_h, rate_8h (rate x 8 / interval_h), next_ms
 interest in the venue's units, and the venue's predicted or last-settled rate where it gives one (`alt_rate`).
 
 One file per UTC hour, data/recorders/funding_board/<YYYY-MM-DD>/<HH>.parquet (gitignored); a second run in the same
-hour writes nothing. A venue that fails is skipped and named in the log; the others are still written. Data
+hour writes nothing. New rows carry the local request start and the venue's response-completion bound; older
+files used recv_ms for the start of the whole snapshot and do not provide a receipt bound.
+A venue that fails is skipped and named in the log; the others are still written. Data
 collection only. `board()` turns a snapshot into the cross-venue spread table shown on the control room.
 
 usage: python scripts/record_funding_board.py
@@ -135,30 +137,43 @@ def dydx(get):
 VENUES = {"gate": gate, "hyperliquid": hyperliquid, "okx": okx, "bitget": bitget, "kucoin": kucoin, "dydx": dydx}
 
 
-def snapshot(get=http, now_ms=None):
+def wall_ms():
+    return time.time_ns() // 1_000_000
+
+
+def snapshot(get=http, now_ms=None, *, clock_ms=wall_ms):
     """(frame, failed venues). Rows from every venue that answered."""
-    recv = now_ms or int(time.time() * 1000)
+    start = clock_ms() if now_ms is None else now_ms
+    previous = start
     rows, failed = [], []
     for name, parse in VENUES.items():
+        venue_start = clock_ms()
+        if venue_start < previous:
+            raise ValueError("Local wall clock moved backwards during snapshot")
         try:
-            rows += parse(get)
+            venue_rows = parse(get)
         except Exception as e:                     # one venue down must not lose the others' hour
             failed.append(f"{name}: {type(e).__name__}: {str(e)[:120]}")
-    df = pd.DataFrame(rows, columns=["venue", "symbol", "base", "rate", "interval_h", "next_ms", "mark", "oi",
-                                     "alt_rate"])
+            venue_rows = []
+        recv = clock_ms()
+        if recv < venue_start:
+            raise ValueError("Local wall clock moved backwards during snapshot")
+        rows.extend((start, venue_start, recv, *row) for row in venue_rows)
+        previous = recv
+    df = pd.DataFrame(rows, columns=["request_start_ms", "venue_start_ms", "recv_ms", "venue", "symbol", "base",
+                                     "rate", "interval_h", "next_ms", "mark", "oi", "alt_rate"])
     df["rate_8h"] = df["rate"] * 8 / df["interval_h"]
-    df = df[COLS]
-    df.insert(0, "recv_ms", recv)
+    df = df[["recv_ms", "request_start_ms", "venue_start_ms", *COLS]]
     return df, failed
 
 
-def record(get=http, now_ms=None, out=OUT):
-    now_ms = now_ms or int(time.time() * 1000)
+def record(get=http, now_ms=None, out=OUT, *, clock_ms=wall_ms):
+    now_ms = clock_ms() if now_ms is None else now_ms
     stamp = pd.Timestamp(now_ms, unit="ms", tz="UTC")
     path = Path(out) / stamp.strftime("%Y-%m-%d") / f"{stamp:%H}.parquet"
     if path.exists():
         return path, 0, []
-    df, failed = snapshot(get, now_ms)
+    df, failed = snapshot(get, now_ms, clock_ms=clock_ms)
     if df.empty:
         return path, 0, failed
     path.parent.mkdir(parents=True, exist_ok=True)
