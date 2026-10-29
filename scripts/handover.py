@@ -12,14 +12,15 @@
 usage:
   python scripts/handover.py status                       # sizes per class; unclassified entries; what is absent
   python scripts/handover.py commands [--missing]         # the commands that restore REFETCH / DERIVED folders
-  python scripts/handover.py pack --out DIR [--max-chunk-mb 50] [--budget-mb N] [--min-age-min 15]
+  python scripts/handover.py pack --out DIR [--max-chunk-mb 50] [--budget-mb N] [--min-age-min 15] [--public] [--exclude data/x]
   python scripts/handover.py restore --src DIR [--force]  # put a packed archive back into data/
 
 `pack` is incremental: a file already in DIR/files.csv with the same size and mtime is skipped, a changed file goes into a
 new chunk, and a file above 95 MB (GitHub's limit is 100 MB) is reported and left out. Files younger than --min-age-min
 minutes, locks, pids, logs and the daemons' status.json are never read, so a running recorder is not disturbed. `restore`
 checks every chunk's sha256 and every file's sha256, rejects any member outside data/, and never overwrites a file that
-differs unless --force. Nothing here reads a key or places an order, and nothing is deleted.
+differs unless --force. --public leaves out data/news (third-party text) for an archive that goes on the public repo.
+Nothing here reads a key or places an order, and nothing is deleted.
 """
 import argparse
 import csv
@@ -35,6 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "registry" / "data_manifest.csv"
 CLASSES = ("REFETCH", "RECORDED", "DERIVED", "LICENSED", "SCRATCH")
 MAX_FILE_MB = 95
+PUBLIC_EXCLUDE = ("data/news",)      # third-party news text: kept in a private archive, not on the public branch
 SKIP_SUFFIX = (".lock", ".tmp", ".pid", ".log", ".part")
 SKIP_NAME = {"status.json"}
 FILE_COLS = ["path", "size", "mtime_ns", "sha256", "chunk"]
@@ -125,17 +127,22 @@ def append_csv(path, cols, rows):
         w.writerows([[r[c] for c in cols] for r in rows])
 
 
-def candidates(root, rows, now, min_age_s):
+def excluded(rel, exclude):
+    return any(rel == p.rstrip("/") or rel.startswith(p.rstrip("/") + "/") for p in exclude)
+
+
+def candidates(root, rows, now, min_age_s, exclude=()):
     for rel, size, mtime in walk(root):
-        if classify(rel, rows) != "RECORDED" or skipped(os.path.basename(rel)):
+        if classify(rel, rows) != "RECORDED" or skipped(os.path.basename(rel)) or excluded(rel, exclude):
             continue
         if now - mtime / 1e9 < min_age_s:
             continue
         yield rel, size, mtime
 
 
-def pack(root, out, rows, max_chunk_mb=50, budget_mb=None, min_age_min=15, now=None):
-    """Copy RECORDED files not yet archived into tar.gz chunks under out; returns a summary dict."""
+def pack(root, out, rows, max_chunk_mb=50, budget_mb=None, min_age_min=15, now=None, exclude=()):
+    """Copy RECORDED files not yet archived into tar.gz chunks under out; returns a summary dict.
+    exclude: path prefixes left out (PUBLIC_EXCLUDE for an archive that goes on a public branch)."""
     now = time.time() if now is None else now
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
@@ -147,7 +154,7 @@ def pack(root, out, rows, max_chunk_mb=50, budget_mb=None, min_age_min=15, now=N
     budget = None if budget_mb is None else int(budget_mb * 1e6)
     seq = seq0 = max([int(c["chunk"].split("-")[1].split(".")[0]) for c in chunks], default=0)
     todo, oversize, unchanged = [], [], 0
-    for rel, size, mtime in sorted(candidates(root, rows, now, min_age_min * 60)):
+    for rel, size, mtime in sorted(candidates(root, rows, now, min_age_min * 60, exclude)):
         if (rel, size, mtime) in seen:
             unchanged += 1
         elif size > MAX_FILE_MB * 1_000_000:
@@ -268,6 +275,8 @@ def main(argv=None):
     p.add_argument("--max-chunk-mb", type=float, default=50)
     p.add_argument("--budget-mb", type=float)
     p.add_argument("--min-age-min", type=float, default=15)
+    p.add_argument("--exclude", action="append", default=[], metavar="PREFIX", help="leave out this data/ path (repeatable)")
+    p.add_argument("--public", action="store_true", help="for a public branch: also leave out " + ", ".join(PUBLIC_EXCLUDE))
     p = sub.add_parser("restore")
     p.add_argument("--src", required=True)
     p.add_argument("--force", action="store_true")
@@ -292,7 +301,8 @@ def main(argv=None):
             print(f"{r['path']:34} {r['class']:9} {r['restore']}")
         return 0
     if a.cmd == "pack":
-        s = pack(ROOT, a.out, rows, a.max_chunk_mb, a.budget_mb, a.min_age_min)
+        s = pack(ROOT, a.out, rows, a.max_chunk_mb, a.budget_mb, a.min_age_min,
+                 exclude=tuple(a.exclude) + (PUBLIC_EXCLUDE if a.public else ()))
         print(f"added {s['added']} files in {s['chunks']} new chunk(s); {s['unchanged']} unchanged; archive {human(s['archive_bytes'])}")
         for rel in s["oversize"]:
             print(f"NOT ARCHIVED (above {MAX_FILE_MB} MB): {rel}")

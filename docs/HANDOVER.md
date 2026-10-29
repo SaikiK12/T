@@ -12,6 +12,8 @@ Nothing here needs a key except the two marked in section 6, and nothing here pl
   (`registry/rounds.csv`, `registry/methods.csv`), the forward lanes' journals (`experiments/*/journal/`), the
   per-folder data receipts (`docs/provenance/*.json`: every file's size and sha256), and the notes
   (`docs/DIRECTION.md` is the plan, `docs/DATA_SOURCES.md` the data, `AGENTS.md` the rules).
+- On the branch `data-archive` (same repository, no code): the packed live recordings, the only copy of what the recorders
+  captured since 2026-10-20. The owner chose this place on 2026-10-29. Section 3 says how to restore it.
 - Not in git: `data/` (13 GB, gitignored), the live processes, the two keys, and Claude's own scheduler.
   The Control Room dashboard was published as a Claude artifact, which will not outlive the account; its source is `dashboard/`
   and `scripts/dashboard_data.py` rebuilds its data files.
@@ -36,7 +38,7 @@ lock. System Chromium is needed only for the browser test.
 | Class | What | Size now | How it comes back |
 |---|---|---|---|
 | REFETCH | public history (Binance archive, MEXC, Gate, Kraken, Hyperliquid, macro, ...) | 12 GB | `python scripts/handover.py commands --missing`, then the printed command per folder |
-| RECORDED | live captures of public streams that no endpoint serves again (tape, hft, rawtape, Lighter trades, commodity perps, option expiry, news, hourly recorders) | 0.24 GB, growing | `python scripts/handover.py pack --out DIR` makes the archive, `... restore --src DIR` puts it back |
+| RECORDED | live captures of public streams that no endpoint serves again (tape, hft, rawtape, Lighter trades, commodity perps, option expiry, news, hourly recorders) | 0.24 GB, growing | on branch `data-archive` (not `data/news`, see below): `git worktree add ../T-data-archive data-archive`, then `python scripts/handover.py restore --src ../T-data-archive` |
 | DERIVED | rebuilt from the downloads by frozen code | 0.9 GB | the printed command |
 | LICENSED | CME trades from Databento | 8 MB | needs the owner's Databento key, about $0.68 (section 6); never committed or archived |
 | SCRATCH | logs, locks, third-party forum and video text | 0.2 GB | not kept |
@@ -51,6 +53,16 @@ Read these limits before trusting a re-download:
 - **RECORDED data is the only copy.** What the recorders captured since 2026-10-21 cannot be fetched again. The archive
   holds it in chunks of at most 50 MB with a sha256 for every chunk and file; it is incremental (`pack` again to add what
   is new) and `restore` never overwrites a different file.
+  - `sh scripts/archive_recordings.sh` packs what is new into the `data-archive` checkout (default `../T-data-archive`),
+    commits and pushes it. **Run it once a day**: git keeps every chunk, so many small runs only add clutter. It stops adding
+    chunks at 900 MB (`ARCHIVE_BUDGET_MB`); 190 MB came in the first 9 days and the 100 ms and raw feeds were added only
+    in the last two, so expect 25-40 MB a day (not measured over a longer span): a few weeks. Then the owner has to choose a
+    bigger home (a release asset, a private repository or a disk).
+  - **`data/news` is not on the branch**: it is third-party headline text and the repository is public. It stays on the
+    machine (2 MB); `pack` without `--public` includes it for a private archive. Lighter and Hyperliquid captures carry
+    public account and wallet ids, as the exchanges publish them.
+  - Files a recorder rewrites (a changed size or mtime) go into a new chunk, so the branch can hold two versions of one file;
+    `restore` applies them in chunk order.
 - The recorders stop at their caps (`data/commodity_perps` 4,000 MB, `data/rawtape` 4 GB, `data/tape` 3 GB, ...) or
   under 2.5 GB free disk, and say so in their `status.json`.
 
@@ -88,8 +100,9 @@ demonstrated net profit. Real money needs gates 1-3 and the owner. `docs/DIRECTI
 could still produce one.
 
 ## 8. What was checked, and what was not
-- Checked: `scripts/handover.py` packed the 240 MB of recordings into 4 chunks (139 MB), and a restore into an empty
-  tree reproduced all 2,222 files with matching sha256; 11 tests in `tests/test_handover.py`; the manifest names only scripts
-  and provenance files that exist.
+- Checked: `scripts/handover.py` packed the recordings (2026-10-29: 2,564 files, 6 chunks, 190 MB) and pushed them to
+  `data-archive`; a fresh `git clone` of that branch restored into an empty tree reproduced all 2,564 files with matching
+  sha256, identical to the live copies; `scripts/archive_recordings.sh` ran from scratch (new worktree) and again
+  incrementally; 12 tests in `tests/test_handover.py`; the manifest names only scripts and provenance files that exist.
 - Not checked: restoring the 12 GB of REFETCH data from scratch (it would take hours and the sources may have changed);
   running the forward loop on a machine other than this container.

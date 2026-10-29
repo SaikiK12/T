@@ -49,7 +49,9 @@ issue #7 and update `candidates.csv`. The sample is read once; see `docs/GATES.m
 3. Read issue #7 and the open PR comments.
 4. Advance `docs/DIRECTION.md` as `AGENTS.md` allows (freeze before measuring, one writer per file, a null is a result;
    1x/2x/3x; read against `registry.program_trials()`).
-5. Run `python scripts/handover.py status`; pack the recordings into the agreed archive.
+5. Run `python scripts/handover.py status` (an UNCLASSIFIED line is an error: add it to `registry/data_manifest.csv`). Once a
+   day (the 00:43 tick), run `ARCHIVE_TRAILERS="<the two Claude trailers>" sh scripts/archive_recordings.sh`: it packs the
+   recordings into the `data-archive` branch and pushes it. Check the "of 900 MB" figure it prints.
 6. Commit and push to `claude/yo-9a1k5w`. No Workflows, no subagents, no orders, no keys in the repo.
 
 ## The older hourly loop (disabled since 2026-10-23, kept because its steps still describe the housekeeping)

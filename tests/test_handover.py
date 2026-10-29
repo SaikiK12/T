@@ -19,6 +19,7 @@ ROWS = [
     {"path": "data/unlocks/2026-10-20", "class": "REFETCH", "restore": "x", "provenance": "", "note": ""},
     {"path": "data/klines_1h", "class": "REFETCH", "restore": "x", "provenance": "", "note": ""},
     {"path": "data/databento", "class": "LICENSED", "restore": "x", "provenance": "", "note": ""},
+    {"path": "data/news", "class": "RECORDED", "restore": "none", "provenance": "", "note": ""},
 ]
 OLD = 10_000.0
 
@@ -86,6 +87,19 @@ class PackRestore(unittest.TestCase):
         s = h.pack(self.root, self.out, ROWS, min_age_min=15)
         self.assertEqual(self.names(), ["data/tape/binance/2026-10-28.parquet", "data/unlocks/2026-10-21/a.json"])
         self.assertEqual(s["added"], 2)
+
+    def test_excluded_prefixes_are_left_out_by_path_not_by_string(self):
+        put(self.root, "data/news/feed/a.json", b"third party text")
+        put(self.root, "data/news_extra/a.json", b"x")      # not under data/news; unlisted, so never packed anyway
+        h.pack(self.root, self.out, ROWS)
+        self.assertIn("data/news/feed/a.json", self.names())
+        out2 = Path(self.tmp.name) / "public"
+        h.pack(self.root, out2, ROWS, exclude=h.PUBLIC_EXCLUDE)
+        with open(out2 / "files.csv", newline="") as f:
+            public = sorted(r["path"] for r in csv.DictReader(f))
+        self.assertEqual(public, ["data/tape/binance/2026-10-28.parquet", "data/unlocks/2026-10-21/a.json"])
+        self.assertTrue(h.excluded("data/news", ("data/news/",)))
+        self.assertFalse(h.excluded("data/news2/a", ("data/news",)))
 
     def test_packing_twice_adds_nothing_and_a_changed_file_goes_into_a_new_chunk(self):
         h.pack(self.root, self.out, ROWS)
