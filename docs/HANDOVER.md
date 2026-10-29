@@ -73,6 +73,10 @@ export FORWARD_STATE_DIR=/absolute/path/outside/the/checkout
 setsid nohup sh scripts/forward_loop.sh >/dev/null 2>&1 &   # full tick at :15, R200 alone at :45
 setsid nohup sh scripts/notice_loop.sh  >/dev/null 2>&1 &
 ```
+After a restart of the machine, `sh scripts/restart_all.sh` does all of it at once: the two loops (only if absent), `ensure`
+for every daemon and one full forward tick. It is safe to run twice. On 2026-10-29 the container Claude ran in restarted
+five times in 45 minutes, and each time every daemon was down until it was run (idle time looked like the trigger, which is
+unproven); the recordings have a gap for each, and a forward lane whose decision falls in a gap writes "missed".
 The tick runs `ensure` for every recorder and forward lane, so one loop restarts the rest. `python -m lab status
 --state-dir "$FORWARD_STATE_DIR"` shows what ran. The machine must stay on and reach the public exchange websockets;
 a gap in a recording is a gap in the evidence, not something to fill later. The forward lanes (R364 settlement scalp,
