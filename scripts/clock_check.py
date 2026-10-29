@@ -13,17 +13,21 @@ clock during the request) or whose interval is not positive is dropped. Two runs
 
 usage: python scripts/clock_check.py status | slew [--min-ms 250] [--max-ms 10000]
 Every run appends one row to experiments/recorders/journal/clock_check_v2.csv (committed, so the offset at an event is on
-record): local time, the estimated true time, the median offset, which venues were used, an error bound (half the longest
-round trip used) and each venue's offset and round trip. Rows before 2026-10-29 13:50 UTC are in clock_check.csv, which has
+record): local time, an estimated time, the median offset, which venues were used, half the longest round trip used
+and each venue's offset and round trip. The legacy column name bound_ms is a network-delay diagnostic, not a verified
+UTC error bound; server accuracy, caching, source disagreement and drift between samples are not certified. Rows before
+2026-10-29 13:50 UTC are in clock_check.csv, which has
 fewer columns and is no longer written. Only this script writes these files.
 """
 import argparse
 import ctypes
 import fcntl
+import json
 import math
 import statistics
 import sys
 import time
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -51,8 +55,9 @@ def mono_ms():
 
 
 def fetch_json(url):
-    import requests
-    return requests.get(url, timeout=10).json()
+    request = urllib.request.Request(url, headers={"User-Agent": "T-clock-check/1", "Cache-Control": "no-cache"})
+    with urllib.request.urlopen(request, timeout=10) as response:
+        return json.load(response)
 
 
 def venue_offset(url, parse, samples=SAMPLES, get=fetch_json, clock_ms=wall_ms, mono=mono_ms):
@@ -68,7 +73,9 @@ def venue_offset(url, parse, samples=SAMPLES, get=fetch_json, clock_ms=wall_ms, 
             continue
         t1, m1 = clock_ms(), mono()
         rtt = m1 - m0
-        if not math.isfinite(rtt) or rtt <= 0 or not math.isfinite(t1 - t0) or abs((t1 - t0) - rtt) > STEP_TOL_MS:
+        if (not isinstance(srv, (int, float)) or isinstance(srv, bool) or not math.isfinite(srv)
+                or not math.isfinite(rtt) or rtt <= 0 or not math.isfinite(t1 - t0)
+                or abs((t1 - t0) - rtt) > STEP_TOL_MS):
             continue
         cand = (srv - (t0 + rtt / 2), rtt)
         if best is None or cand[1] < best[1]:
@@ -134,8 +141,8 @@ def iso_ms(ms):
 
 def log_row(res, med, ok, path=LOG, applied="", pending="", now_ms=None):
     """One row: local time, estimated true time (local + median offset, when the venues agree), the median, whether they
-    agree, the venues used, bound_ms (half the longest round trip used) and spread_ms (their widest disagreement), what was
-    slewed or still pending, then every venue's offset and round trip."""
+    agree, the venues used, bound_ms (a half-RTT diagnostic, not a UTC certificate) and spread_ms (their widest
+    disagreement), what was slewed or still pending, then every venue's offset and round trip."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     new = not path.exists()
@@ -167,6 +174,9 @@ def main(argv=None, measure_fn=measure, adjust=adjtime_ms, pending_fn=pending_ms
     ap.add_argument("--min-ms", type=float, default=250)
     ap.add_argument("--max-ms", type=float, default=10_000)
     a = ap.parse_args(argv)
+    if not (math.isfinite(a.min_ms) and math.isfinite(a.max_ms)
+            and 0 <= a.min_ms <= a.max_ms and a.max_ms > 0):
+        ap.error("limits must be finite, with 0 <= --min-ms <= --max-ms and --max-ms > 0")
     lock_path = Path(lock_path)
     lock_path.parent.mkdir(parents=True, exist_ok=True)
     with lock_path.open("w") as lock:
@@ -186,11 +196,17 @@ def run(a, measure_fn, adjust, pending_fn):
         pend = pending_fn()
     except OSError:
         pend = ""
+    if not isinstance(pend, (int, float)) or isinstance(pend, bool) or not math.isfinite(pend):
+        pend = ""
     if pend != "":
         print(f"still pending from an earlier slew: {pend:+.0f} ms")
     applied = ""
+    exit_code = 0
     if a.cmd == "slew":
-        if not ok:
+        if pend == "":
+            print("not applied: pending clock correction could not be read; existing correction is unknown")
+            exit_code = 1
+        elif not ok:
             print(f"not applied: fewer than two venues within {MAX_RTT_MS} ms round trip, or they disagree")
         elif pend not in ("", 0) and abs(med - pend) > PENDING_TOL_MS:
             print(f"not applied: the offset is {abs(med - pend):.0f} ms from the pending slew; measure again")
@@ -203,7 +219,7 @@ def run(a, measure_fn, adjust, pending_fn):
             applied = f"{med:.0f}"
             print(f"slewing by {med:+.0f} ms (at most 0.5 ms per second: about {abs(med) / 0.5 / 60:.0f} min)")
     log_row(res, med, ok, path=LOG, applied=applied, pending=pend)
-    return 0
+    return exit_code
 
 
 if __name__ == "__main__":
