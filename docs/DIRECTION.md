@@ -554,6 +554,12 @@ paying the least funding, short the fifth paying the most, net of the funding ea
    coverage for survivors against later-delisted perps. `lab/daily.py` stays as is, because it is a frozen input of four
    lanes. Still to do: refetch the survivor-only venues with delisted markets where their APIs allow it.
 5. **M322** goes into reserved batch 2's candidate list and gets a forward paper ticket design.
+   - **Checked 2026-10-29, `data/klines_1h` first bar per coin:** 3 perps trade on 2020-01-01, 24 by 2020-02-21 (so 24 in
+     March 2020) and 81 by 2020-12-31; no 2019 bar is held. The rule as written needs a top-150 breadth share and its
+     95th percentile over the prior 365 days, and Binance perps only began in September 2019. Neither 2020 nor a 2019
+     warm-up can supply that universe or that look-back, so M322 cannot be read on 2020 as written. A shortened look-back
+     on about 24 coins is a different rule (new id, its own trial count), and its March-2020 sample is a handful of days.
+     The clean test of the rule as written is forward paper days.
 6. **M320 / M321 (owner's reels, 2026-10-22):**
    - MEXC lists NAS100, SPX500 and US30 perps at a 0 / 2 bp fee, and the LSE vault has their index ticks from 2023.
    - First, validate LSE's index bars against an independent close.
