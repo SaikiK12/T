@@ -221,4 +221,3 @@ price-and-value-area part (R290 `auction_v1`: value-area and VWAP-band rules on 
 trades with greeks for SPX or QQQ, which are not held (M446, M451 and M235 are BLOCKED on that). The video gives no
 entry, stop, size, GEX vendor or cost, shows one winning day on a prop account, and nothing in it is a result. It is
 one event day (a Fed announcement), so a single win says little about the rule.
-

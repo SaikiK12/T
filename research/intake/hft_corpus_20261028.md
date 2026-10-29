@@ -146,12 +146,13 @@ residual = M443 (paste M441); EIA natural gas and crude = M444 (paste M439 and M
   open-interest and charm tests (R289, R296; M303, M309, M317) were NULL; M440 differs in covering every expiry and
   in conditioning on the expiring share.
 
-Reported in the paste and not read or checked: the 1,224-settlement study (volatility jump is time-of-day seasonality),
-the September 2026 partial match, the Energy Journal natural-gas study and the Estimize consensus claim, the HIP-3
-oracle and TradeXYZ pricing-band mechanics, the 0DTE gamma-conditioned paper, the leveraged-ETF closing-momentum and
-Treasury-auction papers, and the negative after-cost evidence behind the weekend-WTI downgrade. M442 carries that
-evidence label. First-stage context for EIA, WASDE and 0DTE is not in the repo, and no CME futures, OPRA or consensus
-data is held. Power for M440 (sigma 80 bp, effect 15 bp, about 220 expiry days) is an assumption, not a measurement.
+Reported in the paste and still not read or checked: the 1,224-settlement study (volatility jump is time-of-day
+seasonality), the September 2026 partial match, the HIP-3 oracle and TradeXYZ pricing-band mechanics, the 0DTE
+gamma-conditioned paper, the leveraged-ETF closing-momentum and Treasury-auction papers, and the negative after-cost
+evidence behind the weekend-WTI downgrade. M442 carries that evidence label. The Energy Journal study, the EIA
+schedules, the 2026 liquidity-paper abstract and the current Estimize page/documentation are now boundedly checked in
+the M444 addendum below. Historical CME futures, OPRA and point-in-time consensus data are not held. Power for M440
+(sigma 80 bp, effect 15 bp, about 220 expiry days) is an assumption, not a measurement.
 
 ## Addendum 2026-10-28 (fifth owner paste): event mechanisms in place of generic chart rules
 
@@ -175,9 +176,10 @@ schedules. What was run:
 - **A second lane, R369 `eventlag_fwd`** (M444/M443's tick-level form), frozen before the first release it scores: a forward paper lane that, at each of 19 EIA
   releases to 2026-12-31, tests whether Lighter's displayed quote lags a 20 bp (gas) or 8 bp (crude) jump on Binance or Hyperliquid and whether a taker
   there earns the catch-up by T + 60 s. 24 trials counted, first read when each type has 8 valid events (about 2026-12-23). Nothing is traded.
-- **Not run, by rule.** The paper claims (a JFE crude result, an Energy Journal gas result, a 0DTE paper, a NY Fed
-  replication that is reported to have killed the ES European-open drift, the prop-firm rules and fee schedules, a
-  Databento credit) were reported in review and not read or verified. The review's suggested allocation (about 35%
+- **Not run, by rule.** The JFE crude result, a 0DTE paper, a NY Fed replication that is reported to have killed the
+  ES European-open drift, the prop-firm rules and fee schedules, and a Databento credit were reported in review and
+  remain unread or unverified. The Energy Journal gas paper is now boundedly read below; its separate 2026 SSRN
+  liquidity abstract is abstract-only. The review's suggested allocation (about 35%
   crypto microstructure, 30% CME events, 25% 24/7 TradFi perps, 10% replication and prop) is the author's, not a
   measurement. The review's "next five registrations" (EIA petroleum, EIA gas, WTI cross-venue residual, WTI
   re-anchoring, USDA wheat) map to M444 (R368 for the cheap form), M443 and M447, with wheat blocked on data (M445).
@@ -186,3 +188,40 @@ schedules. What was run:
   the 20-release forward replication of R368 (about five months) is worth waiting for or the budget goes to order-book
   data now.
 
+## Targeted 2026-10-29 source check for M444 (four new sources; no new trial)
+
+This source-only pass adds catalog rows `SRC28-065`–`SRC28-068` and cards for them. It also records a bounded read of
+the already-catalogued official schedule source `SRC28-064`. The accepted 2021 Energy Journal manuscript was read in
+sections II, III.A–B, IV, V.C and VI, plus Table 8 and Table A.3; the rest of its appendix was not read. Dani's 2026
+SSRN paper was read at abstract scope only. The official EIA schedule tables, one public Estimize WK43 page captured
+before release, and Estimize's public data dictionary were checked. No trial, new statistic, market outcome or data
+acquisition was run for this pass.
+
+The 2021 paper's “more than half” headline is the share of the full-sample annualized NG return associated with
+announcement days in 2003–2018; it is not evidence of a current positive long edge. The sample has 699 gas-report
+days. Table A.3 shows no announcement/non-announcement mean difference in 2014–2018 (−0.05% versus −0.14%,
+`p=0.642`). The paper's short-before/cover-after strategy earns 12.01% annualized after bid/ask and full overnight
+funding costs across the full sample, but −0.97% in its post-2011 sample (Sharpe −0.17, `p=0.843`). The historical
+inputs are Bloomberg and Thomson Reuters Tick History; the implementation does not model modern queue position,
+latency or market impact. These results argue against copying its old rule into a current perp.
+
+The 2026 liquidity-paper abstract reports five-minute near-mid depth depletion after 29 petroleum and 31 gas releases,
+but its four controls per release were not Wednesdays or Thursdays. The abstract therefore cannot separate release
+effects from the 10:30 weekday clock, and does not establish a profitable event entry. Full methods, results and data
+remain unread. EIA confirms the usual Thursday 10:30 Eastern gas schedule and Wednesday 10:30 Eastern petroleum
+schedule, with listed holiday exceptions; the 2026-10-29 gas event converts to 14:30 UTC and the next petroleum
+event on 2026-11-04 converts to 15:30 UTC after the US clock change.
+
+At approximately 00:20 UTC, Estimize's public WK43 page displayed nine estimates and consensus 58.06 before the
+scheduled release. Its rendered page did not expose the indicator unit, so this is not yet a validated Bcf surprise
+input. The data dictionary describes point-in-time consensus snapshots and API/history access, but no historical
+Bloomberg forecast vintage or licensed Estimize history is held. The existing repo record says R368's cheap
+minute-bar continuation form is NULL and underpowered; R369 is already frozen as Claude's forward tick-level paper
+lane. This pass leaves M444 PARTIAL, adds zero trials, and changes neither round nor lane. In this checkout there is
+no local market-data directory, and `docs/PANEL.md` still marks the R369 receipt UNKNOWN/UNVERIFIED; the cross-venue
+collector's coverage cannot be independently confirmed here.
+
+
+## Additional M444 consensus snapshot (2026-10-29; no new trial)
+
+Before the scheduled 14:30 UTC gas-storage release, Trading Economics displayed a 75 Bcf survey consensus and a 77 Bcf prior value; actual and its separate TEForecast model field were blank. Its API docs distinguish the consensus Forecast from its own model and require authenticated access for snapshots. Estimize separately displayed 58.06 from nine estimates, but its public page did not expose the indicator unit. The 16.94 displayed-unit difference is not yet a verified forecast disagreement. `SRC28-069` and its card preserve the retrieval time and access boundary. R368 does not use either forecast; R369 is unchanged.
