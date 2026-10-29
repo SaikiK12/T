@@ -19,6 +19,23 @@ need independent evidence. Older files lacking the two per-response columns used
 `recv_ms` for request start, so that value is not a receipt-time bound and must
 not be treated as one in an M090 forecast test. Missing hours remain missing.
 
+## The local clock (measured 2026-10-29)
+Every `recv_ms` and `lag_ms` comes from this machine's wall clock, which nothing disciplines. After the container's last
+restart (05:48 UTC on 2026-10-29) it ran slow by 99 ppm (5.9 ms a minute), 1.7 s behind by 10:22 UTC. Three exchange
+clocks (MEXC, Deribit, OKX) put it +1.68 to +1.81 s behind then, and the tape's own `lag_ms` medians (Binance, Lighter,
+MEXC: -5.9 ms a minute, zero near 06:05 where true feed delay is about 0.1 s, about -1.5 s at 10:20) agree; the fit
+extrapolates back to no offset at the 05:48 restart. Days 10-21 to 10-28 show normal lags (daily medians 40 to 150 ms), so
+this boot is the exception; the drift can differ on each boot.
+- **Correction for data from this boot before 10:22:** local time is early by about `5.9 ms x minutes since 05:48 UTC` (1.6 s
+  at 10:22); add that to `recv_ms`, and remove it from `lag_ms`. Hourly ticker files from 06:15 to 10:15 carry it too.
+  Earlier boots that day were not measured.
+- **From 10:22 UTC** `scripts/clock_check.py slew` removes the offset gradually with `adjtime` (at most 0.5 ms a second, never
+  a step), and `experiments/recorders/journal/clock_check.csv` logs every measurement. Run it hourly and after a restart
+  (`restart_all.sh` does). Positive `median_offset_ms` means the local clock is behind.
+- **Who is affected:** lanes that align recorded times to a true-time event (R369's EIA release at 14:30 UTC, whose PREREG says
+  the clock was not measured; R364 and R355 entries at T - 10 s). R367 stamps every venue with the same local clock in 100 ms
+  buckets, so a common offset cancels between venues. This is a measurement of the clock, not a change to any frozen rule.
+
 `scripts/record_digest.py` runs last in the tick and appends the size and sha256 of every new or changed file to
 `journal/digests.csv` (committed), so a later lane can show its inputs were recorded before it was frozen.
 

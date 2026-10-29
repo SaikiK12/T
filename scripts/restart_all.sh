@@ -12,6 +12,7 @@ export FORWARD_STATE_DIR
 mkdir -p "$FORWARD_STATE_DIR" data/logs
 PY=.venv/bin/python
 [ -x "$PY" ] || PY=python3
+timeout 90 "$PY" scripts/clock_check.py slew >/dev/null 2>&1 || echo "clock check failed or timed out" >&2
 
 # notice_loop.sh has no lock of its own, so a second copy would double the 5-minute cycle: start each loop only if absent
 pgrep -f "sh scripts/forward_loop.sh" >/dev/null || setsid nohup sh scripts/forward_loop.sh >/dev/null 2>&1 &
