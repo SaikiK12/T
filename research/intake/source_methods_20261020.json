@@ -15440,6 +15440,40 @@
           "label": "Deep batch decisions and project comparisons"
         }
       ]
+    },
+    {
+      "id": "DL26-EXPIRY-ACTIVITY",
+      "parent_claim_id": "SRC26-040",
+      "title": "Identified BTC expiry activity source and same-clock control",
+      "method_type": "source_refinement",
+      "hypothesis": "Separate settlement-clock activity from conditional expiry/OI return predictability.",
+      "testable_rule": "Use a fixed same-clock control and preserve the distinction between activity and directional payoff; no new test before a frozen input/outcome contract.",
+      "exact_tested_scope": "Source identity and bounded text only; no new project result.",
+      "unrun_scope": "All-day activity coverage, source clocks, complete final methods and executable costs remain unverified.",
+      "status": "partial",
+      "required_inputs": [
+        "Pre-event chain states, all-day transaction or quote records, same-clock controls and authenticated execution costs."
+      ],
+      "blockers": [
+        "The activity peak does not establish return direction or net strategy profit."
+      ],
+      "next_action": "Complete the M440 comparison contract without conflating its two identified papers.",
+      "source_refs": [
+        {
+          "path": "research/intake/cards/SRC26-040.md",
+          "label": "Publisher-indexed abstract, introduction, Figure 5 minute-level discussion, section 3.2 and conclusion; Crossref title/authors verified. Full tables, supplement and data not independently reviewed."
+        },
+        {
+          "path": "https://doi.org/10.1016/j.frl.2026.110008",
+          "label": "Hoang and Phan 2026"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "research/HYBRID_REVIEW_20261029.md",
+          "label": "Deep source batch decisions"
+        }
+      ]
     }
   ],
   "sources": [
@@ -19640,10 +19674,11 @@
         "DL26-SELECTION-COSTS",
         "DL26-PHASE-EXECUTION",
         "DL26-WORLD-FLOW-VERSION",
-        "DL26-PROTOCOL-VINTAGE"
+        "DL26-PROTOCOL-VINTAGE",
+        "DL26-EXPIRY-ACTIVITY"
       ],
       "base_method_objects_before": 409,
-      "method_objects_after": 417,
+      "method_objects_after": 418,
       "source_records_added": [
         "SRC26-032",
         "SRC26-033",
@@ -19652,18 +19687,19 @@
         "SRC26-036",
         "SRC26-037",
         "SRC26-038",
-        "SRC26-039"
+        "SRC26-039",
+        "SRC26-040"
       ],
       "source_catalog_paths": [
         "research/intake/source_catalog_20261020.csv"
       ],
-      "received_scope": "Eight bounded primary-source refinements; exact card read scopes distinguish indexed excerpts, accepted PDF and arXiv HTML. Public small-document receipts are in the batch manifest; no complete-corpus claim.",
+      "received_scope": "Nine bounded primary-source refinements; exact card read scopes distinguish indexed excerpts, accepted PDF and arXiv HTML. Public small-document receipts are in the batch manifest; no complete-corpus claim.",
       "reconciliation": "Existing queue only: no new strategy rows, market outcomes, reserved reads or new lane registrations. Phase execution is separated from full-sample horizon association; source-version and settlement-cash mismatches remain explicit.",
       "source_version_path": "research/intake/deep_leads_batch_20261029.json",
       "strategy_trials_added": 0,
       "prospective_days_added": 0,
       "market_outcomes_added": 0,
-      "source_version_sha256": "d0000113b08b7a5147a312058c2e393f863ecf8e2e95f7e90415c12758df3574"
+      "source_version_sha256": "a4f12c9c34093fd3027d17908ec2ea828babed9862c001cd319eed255c46c013"
     }
   ],
   "reassignment_refs": [

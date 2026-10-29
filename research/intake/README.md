@@ -2,11 +2,11 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 417 source records/aliases and 132 catalog/tool entries; the queue holds 360 rows.
+Current received scope: 418 source records/aliases and 133 catalog/tool entries; the queue holds 360 rows.
 
-The [2026-10-29 deep batch](deep_leads_batch_20261029.json) adds eight bounded primary-source refinements
-(SRC26-032–039), with source cards and existing queue aliases. It separates quarter-hour execution evidence
-from long-horizon association, identifies M440's first unnamed paper, and records funding cash/version limits.
+The [2026-10-29 deep batch](deep_leads_batch_20261029.json) adds nine bounded primary-source refinements
+(SRC26-032–040), with source cards and existing queue aliases. It separates quarter-hour execution evidence
+from long-horizon association, identifies both of M440's unnamed papers, and records funding cash/version limits.
 Directly received PDF/HTML hashes and unread scopes are explicit. No strategy was registered or scored.
 
 

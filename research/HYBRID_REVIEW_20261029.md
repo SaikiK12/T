@@ -73,8 +73,8 @@ The best empirical evidence is for **how** to validate a combination (rolling, m
 
 ## Deep batch decision after primary-source reconciliation
 
-Eight source refinements are now in the [canonical intake manifest](intake/deep_leads_batch_20261029.json),
-source cards SRC26-032–039 and the existing queue. Full bodies and indexed excerpts are distinguished there.
+Nine source refinements are now in the [canonical intake manifest](intake/deep_leads_batch_20261029.json),
+source cards SRC26-032–040 and the existing queue. Full bodies and indexed excerpts are distinguished there.
 No new strategy rows, market statistics, reserved reads or prospective days were added.
 
 | Work order | Existing lead | Decision and next concrete deliverable | What would disconfirm or block it |
@@ -90,8 +90,9 @@ No new strategy rows, market statistics, reserved reads or prospective days were
 
 The final [funding-forecast record](intake/cards/SRC26-032.md) is now identified, but its full economic-cost
 implementation remains unread. That improves attribution without qualifying a MEXC model.
-The [expiry paper](intake/cards/SRC26-033.md) resolves the first unnamed M440 reference; the second activity paper,
-the quoted expiry counts and a net trading rule remain unverified.
+The [expiry paper](intake/cards/SRC26-033.md) resolves the first unnamed M440 reference.
+The [Hoang–Phan activity paper](intake/cards/SRC26-040.md) resolves the second and supplies a clock/activity
+control, not a directional-profit result. The quoted expiry counts and a net trading rule remain unverified.
 
 The [quarter-hour review](intake/cards/SRC26-037.md) separates the short OOS forecast from the full-sample
 medium-horizon association. The [world-flow version check](intake/cards/SRC26-038.md) also prevents mixing the

@@ -52,6 +52,11 @@
       "source_id": "SRC26-039",
       "url": "https://docs.dydx.xyz/concepts/trading/funding",
       "read_scope": "Complete short dYdX funding page and current redirected https://docs.drift.trade/trading/funding-rates -> https://docs.velocity.exchange/protocol/trading/funding-rates page. No deployed program/code or historical document snapshot authenticated."
+    },
+    {
+      "source_id": "SRC26-040",
+      "url": "https://doi.org/10.1016/j.frl.2026.110008",
+      "read_scope": "Publisher-indexed abstract, introduction, Figure 5 minute-level discussion, section 3.2 and conclusion; Crossref title/authors verified. Full tables, supplement and data not independently reviewed."
     }
   ],
   "small_document_receipts": [
@@ -78,6 +83,13 @@
       "bytes": 727683,
       "sha256": "ae4e4c5a783d4843178a4f0668d78972724be429eb95c6e65e2a12800e518720",
       "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "file": "expiry_activity_crossref.json",
+      "url": "https://api.crossref.org/works/10.1016/j.frl.2026.110008",
+      "bytes": 10997,
+      "sha256": "8094308666a426e4ce803c06c905061ac42e3b3f01eb12b54e263d3be80aadab",
+      "content_type": "application/json"
     }
   ],
   "receipt_notice": "Hashes identify the separately received public bodies, not reproduction of publisher results or authentication of a market feed. Bodies remain outside git; only stated bounded sections were reviewed.",
@@ -85,8 +97,8 @@
     "Publisher 403 bodies",
     "SSRN inaccessible PDFs",
     "MDPI direct-page 429",
-    "unidentified second M440 activity paper",
-    "unverified 1,059/1,224 expiry counts"
+    "unverified 1,059/1,224 expiry counts",
+    "Full expiry-return methods/costs and the claimed 1,224-settlement volatility result remain unverified"
   ],
   "source_only": true,
   "new_market_statistics": 0,
