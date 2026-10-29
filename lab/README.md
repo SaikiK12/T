@@ -62,6 +62,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
 - [`operations`](operations.py): Shared operational catalog for execution and read-only views.
+- [`orb_family`](orb_family.py): Causal long-only OR30 component and funded bar-account comparison.
 - [`orderflow`](orderflow.py): Order flow from bars that carry the taker-buy volume (Binance klines): delta, cumulative volume delta (CVD), the delta profile, and two patterns traders name, absorption and exhaustion ...
 - [`pack`](pack.py): A pack: many signal cells traded in one book, each entry a limit order (lab/maker.py rules) or a market order, marked to market every hour, with an optional hedge that holds the opposite of the ...
 - [`paired_execution`](paired_execution.py): Observed paper pair lifecycle; never places, cancels or retries an order.
