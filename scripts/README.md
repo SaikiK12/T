@@ -5,7 +5,7 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (26)
+## Fetch: download archives and public history (27)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -30,12 +30,14 @@ line is the first line of the script's own docstring.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
 - [`fetch_spot.py`](fetch_spot.py): Binance spot hourly klines from data.binance.vision for every perp with a USDT spot pair (data/spot_pairs.json, 481 pairs): the spot leg for carry and basis lanes (M047, C09).
+- [`fetch_tradfi_perps.py`](fetch_tradfi_perps.py): Binance USD-M TradFi perpetuals, 1-minute klines from the public archive (data.binance.vision), every file checked against its published SHA-256.
 - [`fetch_trend_daily.py`](fetch_trend_daily.py): Fetch the frozen slow_trend_v1 spot sample; never calculate market outcomes.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (18)
+## Record: point-in-time collectors (cannot be backfilled) (19)
 
+- [`record_commodity_perps.py`](record_commodity_perps.py): Best quote, trades and reference prices of the 24/7 commodity and index perps on Hyperliquid (HIP-3 `xyz` dex) and Kraken Futures, plus Binance's own TradFi perps, side by side (M443 WTI ...
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
 - [`record_digest.py`](record_digest.py): Append a SHA-256 digest of every recorder file under data/recorders/ to experiments/recorders/journal/digests.csv (committed).
@@ -80,7 +82,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (124)
+## Run: one lane's frozen measurement (126)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -118,6 +120,8 @@ line is the first line of the script's own docstring.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
 - [`run_equations_v2.py`](run_equations_v2.py): R311: exact R310 policy repeat after source-only Lighter page-seam recovery.
+- [`run_eventdrift.py`](run_eventdrift.py): R368 eventdrift_v1 runner, frozen in experiments/eventdrift_v1/PREREG.md: do Binance's crude-oil and natural-gas perpetuals keep moving the way their first minute after an EIA release moved, far ...
+- [`run_eventlag.py`](run_eventlag.py): R369 eventlag_fwd runner, frozen in experiments/eventlag_fwd/PREREG.md: at each EIA release, does Lighter still show the old price after Binance or Hyperliquid has moved, long enough that a taker ...
 - [`run_flow72.py`](run_flow72.py): flow72_v1 (R196): short the coins with heavy taker selling / top traders short vs the crowd, 72 h, universe-hedged, as set out in experiments/flow72_v1/PREREG.md.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
@@ -251,7 +255,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (47)
+## Tools and everything else (52)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -264,6 +268,11 @@ line is the first line of the script's own docstring.
 - [`dashboard_perf.py`](dashboard_perf.py): The control room's performance and coverage datasets (docs/BENCHMARK.md build items 2-3), used by dashboard_data.py.
 - [`data_provenance.py`](data_provenance.py): Provenance record for a downloaded data folder (docs/DATA_PROVENANCE_AUDIT.md): every file's size and sha256, a combined digest, file counts per subfolder, and for hourly parquet folders the bar ...
 - [`delist_events.py`](delist_events.py): Legs for the delisting-notice short (E03, docs/OLD_SESSION_EDGES.md S2) from the Binance delisting catalog (data/recorders/notices/binance_delisting.csv, scripts/record_notices.py) and the ...
+- [`eventdrift_calendar.py`](eventdrift_calendar.py): EIA release calendar for R368 eventdrift_v1: the Weekly Petroleum Status Report (crude) and the Weekly Natural Gas Storage Report, as release instants in UTC. Built from the rules on EIA's two ...
+- [`eventdrift_rule.py`](eventdrift_rule.py): R368 eventdrift_v1 rule, frozen in experiments/eventdrift_v1/PREREG.md: after an EIA release, does the market keep moving in the direction of its own first-minute reaction for long enough to pay a ...
+- [`eventlag_calendar.py`](eventlag_calendar.py): EIA release calendar for R369 eventlag_fwd, from 2026-10-29 to 2026-12-31: the Weekly Natural Gas Storage Report ("ng", Thursdays) and the Weekly Petroleum Status Report ("wpsr", Wednesdays), as ...
+- [`eventlag_gaps.py`](eventlag_gaps.py): Websocket-gap check for R369 eventlag_fwd (a diagnostic; not one of the frozen inputs, it decides nothing).
+- [`eventlag_rule.py`](eventlag_rule.py): R369 eventlag_fwd rule, frozen in experiments/eventlag_fwd/PREREG.md: when a scheduled EIA release moves a lead venue by a lot, does a lagging venue still show the old price for long enough that a ...
 - [`funding_events.py`](funding_events.py): Extreme-funding events on every Binance USD-M perp, as event legs for the qx engine (R273 fundext_v1).
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).

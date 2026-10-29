@@ -70,6 +70,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_DERIBIT", "record_deribit_chain.py", timeout=120),
         task("REC_LTRADES", "record_lighter_trades.py", timeout=60),   # public stream with account ids, WTI/NG/Brent
         task("REC_OPTEXP", "record_option_expiry.py", timeout=60),    # starts the 08:00 UTC expiry-window daemon if down
+        task("REC_CPERPS", "record_commodity_perps.py", timeout=60),  # Hyperliquid xyz, Kraken, Binance TradFi perps
         task("REC_LIGHTER", "record_lighter_book.py", timeout=600),   # backgrounded in forward_all.sh
         task("REC_DEX", "record_dex_prices.py", timeout=60),     # starts the 5-minute daemon if it is down
         task("REC_WALLETS", "record_wallets.py", timeout=120),
@@ -98,6 +99,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R294", "forward_xfund_lt.py", timeout=1500),
         task("R355", "forward_settlehop.py", timeout=60),   # starts the lane's hourly daemon if it is down
         task("R364", "forward_settlelit.py", timeout=60),   # starts the lane's settlement daemon if it is down
+        task("R369", "run_eventlag.py", (), ("REC_CPERPS", "REC_LTRADES"), timeout=300),   # scores EIA releases 15 min after
         task("R285", "forward_xbook.py", (),
              ("R278", "R279", "R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
@@ -193,6 +195,7 @@ LABELS.update({
     "REC_DERIBIT": ("Market data collection", "Deribit option chain snapshots", "recorders"),
     "REC_OPTEXP": ("Market data collection", "Deribit BTC option chain, minute snapshots around the 08:00 UTC expiry", "recorders"),
     "REC_LTRADES": ("Market data collection", "Lighter WTI/NATGAS/BRENTOIL trades with account ids", "recorders"),
+    "REC_CPERPS": ("Market data collection", "24/7 commodity and index perps on Hyperliquid, Kraken and Binance", "recorders"),
     "REC_LIGHTER": ("Market data collection", "Lighter order-book snapshots", "recorders"),
     "REC_DEX": ("Market data collection", "DEX price recorder supervision", "recorders"),
     "REC_WALLETS": ("Market data collection", "Public wallet snapshots", "recorders"),
@@ -205,6 +208,7 @@ LABELS.update({
     "R294": ("Prospective paper", "Lighter cross-venue carry", "xfund_lt_fwd"),
     "R355": ("Prospective paper", "Settlement hop on the displayed funding rate", "settlehop_fwd"),
     "R364": ("Prospective paper", "Lighter settlement scalp on Binance's predicted rate", "settlelit_fwd"),
+    "R369": ("Prospective paper", "Lighter lag after EIA gas and crude releases (events scored from the recordings)", "eventlag_fwd"),
     "R285": ("Prospective paper", "Cross-family derived book", "xbook_fwd"),
     "CATALOG": ("Reporting", "Repository catalogs", "vt_fwd"),
 })

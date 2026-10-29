@@ -152,3 +152,37 @@ oracle and TradeXYZ pricing-band mechanics, the 0DTE gamma-conditioned paper, th
 Treasury-auction papers, and the negative after-cost evidence behind the weekend-WTI downgrade. M442 carries that
 evidence label. First-stage context for EIA, WASDE and 0DTE is not in the repo, and no CME futures, OPRA or consensus
 data is held. Power for M440 (sigma 80 bp, effect 15 bp, about 220 expiry days) is an assumption, not a measurement.
+
+## Addendum 2026-10-28 (fifth owner paste): event mechanisms in place of generic chart rules
+
+Four more reviews, ending "Now WE need to produce edges data pnl". They recommend structural mechanisms (EIA crude and
+natural-gas second-stage drift, USDA wheat, 24/7 WTI venue disagreement and its re-anchoring at the CME reopen, the
+CME-reopen convergence of index and gold perps, 0DTE flow, an MNQ noise-band replication, FX after macro releases,
+conditional dealer-gamma closing momentum, cross-venue funding carry on tokenised assets) and prop-firm wrappers as
+arithmetic, and say to kill generic ORB, RSI, MACD and OHLCV rules. Queue: M444, M443, M321, M445, M446 updated; new
+rows M447-M453 (reopen re-anchoring, MNQ replication, RWA funding carry, FX second stage, gamma closing momentum,
+prop-wrapper arithmetic, Databento MBO slices). Sources `SRC28-062` to `SRC28-064` hold the live checks and the EIA
+schedules. What was run:
+
+- **Data.** `scripts/record_commodity_perps.py` (daemon since 2026-10-28 23:56 UTC) records Hyperliquid xyz, Kraken and
+  Binance commodity and index perps at tick level, 24/7. `scripts/fetch_tradfi_perps.py` fetched Binance's TradFi perp
+  one-minute archive from 2026-04-01 (published SHA-256 checked per file; `docs/provenance/tradfi_perps.json`).
+- **One lane, R368 `eventdrift_v1`** (M444's cheap form): continuation of the first minute after 60 EIA releases on
+  CLUSDT and NATGASUSDT, frozen before any return was read. **NULL, underpowered** (26 trials): crude after a falling
+  first minute reversed by 8.1 bp over five minutes (14 events), gas storage moved -0.1 bp (29 events), against a 12 bp
+  round trip and a minimum detectable size of 15.6 and 20.5 bp. No cell paid a taker cost. See
+  `experiments/eventdrift_v1/FINDINGS.md`.
+- **A second lane, R369 `eventlag_fwd`** (M444/M443's tick-level form), frozen before the first release it scores: a forward paper lane that, at each of 19 EIA
+  releases to 2026-12-31, tests whether Lighter's displayed quote lags a 20 bp (gas) or 8 bp (crude) jump on Binance or Hyperliquid and whether a taker
+  there earns the catch-up by T + 60 s. 24 trials counted, first read when each type has 8 valid events (about 2026-12-23). Nothing is traded.
+- **Not run, by rule.** The paper claims (a JFE crude result, an Energy Journal gas result, a 0DTE paper, a NY Fed
+  replication that is reported to have killed the ES European-open drift, the prop-firm rules and fee schedules, a
+  Databento credit) were reported in review and not read or verified. The review's suggested allocation (about 35%
+  crypto microstructure, 30% CME events, 25% 24/7 TradFi perps, 10% replication and prop) is the author's, not a
+  measurement. The review's "next five registrations" (EIA petroleum, EIA gas, WTI cross-venue residual, WTI
+  re-anchoring, USDA wheat) map to M444 (R368 for the cheap form), M443 and M447, with wheat blocked on data (M445).
+- **Owner decisions this leaves.** Databento (account and key, M453) and CME minute data for M448/M450; a check of
+  Binance, Kraken and Hyperliquid availability and fees for a French resident before any calibration order; whether
+  the 20-release forward replication of R368 (about five months) is worth waiting for or the budget goes to order-book
+  data now.
+
