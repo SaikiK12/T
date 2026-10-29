@@ -258,7 +258,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (53)
+## Tools and everything else (54)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -278,6 +278,7 @@ line is the first line of the script's own docstring.
 - [`eventlag_gaps.py`](eventlag_gaps.py): Websocket-gap check for R369 eventlag_fwd (a diagnostic; not one of the frozen inputs, it decides nothing).
 - [`eventlag_rule.py`](eventlag_rule.py): R369 eventlag_fwd rule, frozen in experiments/eventlag_fwd/PREREG.md: when a scheduled EIA release moves a lead venue by a lot, does a lagging venue still show the old price for long enough that a ...
 - [`funding_events.py`](funding_events.py): Extreme-funding events on every Binance USD-M perp, as event legs for the qx engine (R273 fundext_v1).
+- [`handover.py`](handover.py): Hand-over tooling: what lives outside git, and how to get it back without Claude.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
