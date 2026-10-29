@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-29 00:29 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-29 01:43 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 48 |
-| Ideas partly tested | 47 |
-| Ideas blocked (data, download, compute) | 106 |
-| Rounds in the registry | 167 (NULL 92, PARTIAL 34, PENDING 27, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,173 |
+| Ideas in the queue, untested | 49 |
+| Ideas partly tested | 48 |
+| Ideas blocked (data, download, compute) | 105 |
+| Rounds in the registry | 168 (NULL 92, PARTIAL 34, PENDING 28, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,189 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
 | Strict on-time paper days so far | 0 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -37,24 +37,24 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 
 | lane | scope | observations | on-time 1x | 2x / 3x | decided by | gate |
 |---|---|---|---|---|---|---|
-| R215 mexc_fwd | flow books A and B, one bar late | 8 / 90 on-time days | +0.5% | +0.3% / +0.1% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
-| R218 mexc_fwd_sq | flow book X2 (k squared) | 8 / 90 on-time days | +0.6% | +0.2% / -0.2% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
-| R220 carry_fwd | funding carry (R191 rule) | 8 / 90 on-time days | -0.1% | -0.1% / -0.1% | go_real at 90 on-time days | UNASSESSED |
-| R200 flow72_fwd2 | flow books A and B | 9 / 90 on-time days | -5.8% | -6.2% / -6.5% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
-| R214 flow72_fwd3 | A and B one bar late (delay check) | 8 / 90 on-time days | -6.0% | -6.2% / -6.5% | same days as R200 | UNASSESSED |
-| R225 vt_fwd | volatility target on A, B, X2 | 8 / 365 on-time days | +0.2% | +0.0% / -0.1% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
+| R215 mexc_fwd | flow books A and B, one bar late | 9 / 90 on-time days | +0.2% | -0.0% / -0.2% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R218 mexc_fwd_sq | flow book X2 (k squared) | 9 / 90 on-time days | +0.0% | -0.4% / -0.8% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R220 carry_fwd | funding carry (R191 rule) | 9 / 90 on-time days | -0.1% | -0.1% / -0.1% | go_real at 90 on-time days | UNASSESSED |
+| R200 flow72_fwd2 | flow books A and B | 10 / 90 on-time days | -5.8% | -6.2% / -6.6% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
+| R214 flow72_fwd3 | A and B one bar late (delay check) | 9 / 90 on-time days | -6.0% | -6.3% / -6.6% | same days as R200 | UNASSESSED |
+| R225 vt_fwd | volatility target on A, B, X2 | 9 / 365 on-time days | +0.1% | -0.1% / -0.4% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
 | R266 unlocks_fwd | unlock short, D-7 to unlock | 1 / 120 scored tickets | -1.5% | -1.7% / - | pending (1 of 120 scored) | UNASSESSED |
 | R268 delist_fwd | spot delisting-notice short +1 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R270 montag_fwd | Monitoring Tag short +24 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R272 announce_fwd | funding-frequency long 1 h; pre-listing short 168 h | 0 / 12 scored notices per book (least observed book) | - | - / - | FF pending (0 of 12 scored notices); PL pending (0 of 12 scored notices) | UNASSESSED |
-| R278 xfund_fwd | cross-venue funding carry, books A, B, C | 1 / 90 on-time days | +0.0% | -0.0% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
-| R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 1 / 90 on-time days | -0.1% | -0.1% / -0.2% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
-| R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 0 / 90 on-time days | - | - / - | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R278 xfund_fwd | cross-venue funding carry, books A, B, C | 2 / 90 on-time days | -0.0% | -0.1% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 2 / 90 on-time days | -0.0% | -0.1% / -0.2% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 1 / 90 on-time days | -0.0% | -0.0% / -0.0% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R355 settlehop_fwd | settlement hop on the displayed funding rate (MEXC decided, Gate reported) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2028-03-01 | UNASSESSED |
 | R364 settlelit_fwd | settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28 | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
-Processing lag of on-time hours: 214 hours, median 375.3666666666667 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
+Processing lag of on-time hours: 217 hours, median 347.76666666666665 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
 
 ### Execution receipts
 
@@ -133,7 +133,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R355 | settlehop_fwd | RUNNING | PENDING | 1 |
 | R356 | settlehop_exit_v1 | DONE | PARTIAL | 5 |
 | R362 | settleticks_v1 | DONE | NULL | 7 |
 | R363 | settlelit_v1 | DONE | PARTIAL | 6 |
@@ -141,5 +140,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R367 | hftlead_v1 | REGISTERED | PENDING | 16 |
 | R368 | eventdrift_v1 | DONE | NULL | 26 |
 | R369 | eventlag_fwd | REGISTERED | PENDING | 24 |
+| R370 | cmelead_v1 | DONE | PENDING | 16 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

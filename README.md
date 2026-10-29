@@ -63,6 +63,8 @@ is a timestamped generated snapshot; consult fresh claims in [issue #7](https://
 for active writers. Dated proposals, audits and source notes below retain history, not a second current queue.
 
 **Start here**
+- [`HANDOVER.md`](docs/HANDOVER.md): how to get everything back without Claude: what is in git, what is not, the data
+  manifest and archive commands, the keys (names only), and the scheduled checks ([`handover/`](docs/handover/SCHEDULED_CHECKS.md)).
 - [`PANEL.md`](docs/PANEL.md): live status.
 - [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
 - [`MAP.md`](docs/MAP.md): what is known, lane by lane.

@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-10-28T00:45:17.586151+00:00",
+ "updated": "2026-10-29T00:54:13.039870+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.116
+  "lighter": 0.91
  },
  "data": {
   "lighter": {
@@ -57,12 +57,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0603
-   },
-   {
-    "coin": "ETHFIUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0926
    },
    {
     "coin": "NEARUSDT",
@@ -147,18 +141,24 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.106
+   },
+   {
+    "coin": "PAXGUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0835
    }
   ],
-  "scored_days": 5,
+  "scored_days": 6,
   "late_days": 5,
-  "total": 0.0003383635,
-  "total_2x": -0.0003766365,
-  "total_3x": -0.0010916364999999997,
-  "total_close": 0.0008883634999999999,
-  "nw_t": 0.7683820805582948,
-  "max_drawdown": -0.0008648875,
+  "total": -9.39801e-05,
+  "total_2x": -0.0008089801,
+  "total_3x": -0.0015239800999999997,
+  "total_close": 0.0004560198999999999,
+  "nw_t": -0.1637897175218953,
+  "max_drawdown": -0.0012972311,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-10-28"
+ "last_day": "2026-10-29"
 }

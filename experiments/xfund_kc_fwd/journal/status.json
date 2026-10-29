@@ -1,24 +1,14 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-10-28T00:33:43.161999+00:00",
+ "updated": "2026-10-29T00:42:27.698773+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 0.989,
+  "binance": 0.999,
+  "gate": 1.0,
   "kucoin": 1.0
  },
  "data": {
-  "binance": {
-   "files": 873,
-   "failed": 3,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "AERGOUSDT",
-    "BDXNUSDT",
-    "SXPUSDT"
-   ]
-  },
   "kucoin": {
    "files": 642,
    "failed": 0,
@@ -30,6 +20,16 @@
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "binance": {
+   "files": 873,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AERGOUSDT",
+    "BDXNUSDT",
+    "SXPUSDT"
+   ]
   }
  },
  "A": {
@@ -100,22 +100,10 @@
     "spread_in": 0.4786
    },
    {
-    "coin": "TRUTHUSDT",
-    "long": "kucoin",
-    "short": "gate",
-    "spread_in": 0.4172
-   },
-   {
     "coin": "RSRUSDT",
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.4053
-   },
-   {
-    "coin": "ONEUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.5694
    },
    {
     "coin": "BRUSDT",
@@ -158,15 +146,27 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.3515
+   },
+   {
+    "coin": "CYSUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.4346
+   },
+   {
+    "coin": "BWETUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3333
    }
   ],
-  "scored_days": 6,
+  "scored_days": 7,
   "late_days": 5,
-  "total": -0.0016657289000000003,
-  "total_2x": -0.0027857288999999998,
-  "total_3x": -0.0039057288999999997,
-  "total_close": -0.0008068733,
-  "nw_t": -4.054330771848016,
+  "total": -0.0011814626000000003,
+  "total_2x": -0.0024414626,
+  "total_3x": -0.0037014625999999998,
+  "total_close": -0.000278301,
+  "nw_t": -1.5329826066092758,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -178,12 +178,6 @@
   "slots": 20,
   "why": "R277's other replicating set (NW t 11.17)",
   "held_now": [
-   {
-    "coin": "BLUAIUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.6827
-   },
    {
     "coin": "LYNUSDT",
     "long": "kucoin",
@@ -297,18 +291,24 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.3912
+   },
+   {
+    "coin": "CSOPSAMSUNG2LUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.4477
    }
   ],
-  "scored_days": 6,
+  "scored_days": 7,
   "late_days": 5,
-  "total": -0.00036184070000000007,
-  "total_2x": -0.0013418407000000002,
-  "total_3x": -0.0023218407,
-  "total_close": 0.000745299,
-  "nw_t": -0.7420792165013287,
+  "total": 0.0001479186999999999,
+  "total_2x": -0.0009020813000000002,
+  "total_3x": -0.0019520813000000001,
+  "total_close": 0.0012334513,
+  "nw_t": 0.1999114387771439,
   "max_drawdown": -0.0008626846,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-10-28"
+ "last_day": "2026-10-29"
 }

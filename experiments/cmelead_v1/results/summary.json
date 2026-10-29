@@ -1,0 +1,49 @@
+{
+ "registry": "R370",
+ "state": "INCONCLUSIVE",
+ "text": "no type has 10 valid events and 6 lag-filtered trades",
+ "valid": {
+  "ngs": 30,
+  "wpsr": 30
+ },
+ "decisions": [
+  {
+   "event": "ngs",
+   "lag_s": 1.0,
+   "subset": "filtered",
+   "decision": true,
+   "valid": 30,
+   "n": 0,
+   "mean": null,
+   "sd": null,
+   "t": null,
+   "hit": null,
+   "p": null,
+   "mde80": null,
+   "net_1x": null,
+   "net_2x": null,
+   "net_3x": null,
+   "p_holm": 1.0
+  },
+  {
+   "event": "wpsr",
+   "lag_s": 1.0,
+   "subset": "filtered",
+   "decision": true,
+   "valid": 30,
+   "n": 1,
+   "mean": 2.5374270626,
+   "sd": null,
+   "t": null,
+   "hit": 1.0,
+   "p": 0.5,
+   "mde80": null,
+   "net_1x": -7.4625729374,
+   "net_2x": -17.4625729374,
+   "net_3x": -27.4625729374,
+   "p_holm": 1.0
+  }
+ ],
+ "cells": 16,
+ "cost_unit_bp": 10.0
+}
