@@ -262,7 +262,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (57)
+## Tools and everything else (63)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -287,6 +287,11 @@ line is the first line of the script's own docstring.
 - [`handover.py`](handover.py): Hand-over tooling: what lives outside git, and how to get it back without Claude.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
+- [`m090_event_rule.py`](m090_event_rule.py): Causal ticket construction for the proposed M090 forecast comparison.
+- [`m090_history_rule.py`](m090_history_rule.py): Strict single-page MEXC history parsing; preserves exact settlement times.
+- [`m322_account_rule.py`](m322_account_rule.py): Synthetic-safe cash and inventory primitives for a proposed M322 paper book.
+- [`m322_calendar_rule.py`](m322_calendar_rule.py): Calendar coverage gate for a proposed M322 paper comparison.
+- [`m322_signal_rule.py`](m322_signal_rule.py): Prospective M322 signal and fixed-capital ticket construction.
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
@@ -307,6 +312,7 @@ line is the first line of the script's own docstring.
 - [`project_status.py`](project_status.py): Read-only project status using the Control Room's existing execution receipts.
 - [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
+- [`prospective_clock_rule.py`](prospective_clock_rule.py): Conditional clock bounds from authenticated, bounded request samples.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
