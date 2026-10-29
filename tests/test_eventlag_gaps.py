@@ -64,6 +64,12 @@ class GapTests(unittest.TestCase):
         self.assertAlmostEqual(out["ng"]["mean_gross"], 40.0)
         self.assertAlmostEqual(out["ng"]["mean_net_2x"], 40.0 - 2 * 2 * 2.5)
 
+    def test_decision_cells_with_no_trade_taken_is_empty(self):
+        # the first release (2026-10-29 14:30 UTC) was valid but the rule fired nothing: the filter leaves no rows
+        rows = [{"event": "ng", "release_utc": "A", "kind": "event", "follower": "lighter", "lag_s": 1.0, "status": "ok",
+                 "lag_ok": False, "gross": float("nan")}]
+        self.assertEqual(g.decision_cells(pd.DataFrame(rows), {("ng", "A")}), {})
+
 
 if __name__ == "__main__":
     unittest.main()

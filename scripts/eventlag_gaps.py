@@ -64,8 +64,10 @@ def decision_cells(cells, clean):
     """Frozen decision cell (Lighter follower, L = DECISION_L, lag-filtered, a trade taken) on the given releases."""
     keep = cells[(cells.kind == "event") & (cells.follower == rule.PRIMARY_FOLLOWER) & (cells.lag_s == rule.DECISION_L)
                  & (cells.status == "ok") & (cells.lag_ok.astype(str) == "True")]
-    keep = keep[keep.apply(lambda r: (r.event, r.release_utc) in clean, axis=1)]
     out = {}
+    if keep.empty:                         # no release fired a trade yet
+        return out
+    keep = keep[keep.apply(lambda r: (r.event, r.release_utc) in clean, axis=1)]
     for name, g in keep.groupby("event"):
         x = g.gross.astype(float).to_numpy()
         out[name] = {"n": len(x), "mean_gross": float(x.mean()) if len(x) else float("nan"),
