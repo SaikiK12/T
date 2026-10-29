@@ -20,6 +20,7 @@ eligibility. See [DIRECTION](docs/DIRECTION.md) for the working priorities and
 
 The [M090/M322 implementation handoff](research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
 synthetic prototypes and the inputs still needed before a prospective run.
+The [R372 ORB implementation and pilot](experiments/orb_index_v1/FINDINGS.md) contains the runnable four-account engine, frozen input contract, independently checked result and exact execution limits.
 
 **Working here:**
 1. Read [AGENTS.md](AGENTS.md) and fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).

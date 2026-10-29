@@ -1,5 +1,7 @@
 # Leading-strategy combinations: research decision, 2026-10-29
 
+**Implementation update:** [R372](../experiments/orb_index_v1/FINDINGS.md) has now implemented and run the fixed index OR30/VWAP/volume adaptation below. It is economically NULL within its declared bar-cost model; all four accounts lose, VWAP adds no decisions, and the exact family is parked. The earlier source/design text is retained as history, not an unrun recommendation. No profitable or prospective result is implied.
+
 Six parallel reviews examined mechanisms, primary literature, existing nulls, portfolio accounting and available inputs. These are candidate designs, not frozen PREREGs or measured new returns. No new market outcomes, parameter searches or trial statistics were computed.
 
 **Latest decision:** the [deep batch below](#deep-batch-decision-after-primary-source-reconciliation) qualifies the earlier rankings. Its source/version and cost findings take precedence over a headline interpretation of the earlier tables. This remains a research judgment, not a ranking of expected profit.

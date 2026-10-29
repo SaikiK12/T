@@ -5,7 +5,7 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (29)
+## Fetch: download archives and public history (30)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -28,6 +28,7 @@ line is the first line of the script's own docstring.
 - [`fetch_mexc_history.py`](fetch_mexc_history.py): Download MEXC public history for every crypto USDT perpetual listed today: hourly contract klines, hourly index klines and settled funding, from 2025-04-01 (funding history starts 2025-04-27 on ...
 - [`fetch_mexc_tradfi.py`](fetch_mexc_tradfi.py): Download MEXC public history for its TradFi USDT perpetuals (contract type 2: stocks, indices, commodities, ETFs).
 - [`fetch_notice_bodies.py`](fetch_notice_bodies.py): Plain text of each Binance delisting article in the notice journal (data/recorders/notices/binance_delisting.csv), from the public CMS detail endpoint.
+- [`fetch_orb_pilot.py`](fetch_orb_pilot.py): Bounded, public, exclusive raw acquisition for the frozen ORB pilot.
 - [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
@@ -87,7 +88,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (128)
+## Run: one lane's frozen measurement (129)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -167,6 +168,7 @@ line is the first line of the script's own docstring.
 - [`run_oiwick.py`](run_oiwick.py): oiwick_v1 (R252): fade liquidation cascades proxied by a >= 3% hourly open-interest drop plus a >= 3 ATR wick, on the top-50 perps, as set out in experiments/oiwick_v1/PREREG.md.
 - [`run_optflow.py`](run_optflow.py): optflow_v1 (R295): does signed Deribit option flow lead BTC and ETH perp returns over the next 1, 4 or 24 hours? As set out in experiments/optflow_v1/PREREG.md.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
+- [`run_orb_family.py`](run_orb_family.py): Run one frozen four-arm ORB pilot with exact code/data byte verification.
 - [`run_owner_acceptance.py`](run_owner_acceptance.py): R320 finite risk/component validation and integrated owner acceptance evidence.
 - [`run_pack.py`](run_pack.py): pack_v1 (R194): many maker cells in one hedged book, as set out in experiments/pack_v1/PREREG.md.
 - [`run_paired_account.py`](run_paired_account.py): R319 registered paper lifecycle and held-book economic accounting, offline only.
@@ -218,7 +220,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (22)
+## Check: parity, audits and integrity (23)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
@@ -234,6 +236,7 @@ line is the first line of the script's own docstring.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_level_probability_v2.py`](check_level_probability_v2.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
+- [`check_orb_pilot.py`](check_orb_pilot.py): Independent Fraction/array audit of R372's frozen historical proxy receipts.
 - [`check_owner_acceptance.py`](check_owner_acceptance.py): R320 independent literal risk-target/forecast and paper-report audit.
 - [`check_paired_account.py`](check_paired_account.py): Independent arithmetic for R319 reports, standard library only.
 - [`check_paper_account.py`](check_paper_account.py): Independent Decimal oracle for linear simulated-account integration.
