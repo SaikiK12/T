@@ -1,0 +1,716 @@
+{
+  "candidate_scores": [
+    {
+      "annual_arithmetic": 0.21050096866645482,
+      "annual_vol": 0.43031931990335065,
+      "candidate": "btc_ret28_p25_cash",
+      "days": 730,
+      "ending_nav": 1.2670064986941005,
+      "max_drawdown": 0.4515439340866091,
+      "mean_bp_day": 5.767149826478214,
+      "mean_exposure": 0.426179604261796,
+      "nw10_t": 0.6122612269531224,
+      "sharpe": 0.4891738737496915,
+      "total_cost_dollars": 0.1872621459356647,
+      "turnover": 102.94279805598421
+    },
+    {
+      "annual_arithmetic": 0.17501950728817084,
+      "annual_vol": 0.4353032980015956,
+      "candidate": "btc_ret28_p25_trend",
+      "days": 730,
+      "ending_nav": 1.1751681116919335,
+      "max_drawdown": 0.45666129998847804,
+      "mean_bp_day": 4.7950549941964615,
+      "mean_exposure": 0.48713850837138506,
+      "nw10_t": 0.5064862382794876,
+      "sharpe": 0.40206336154965056,
+      "total_cost_dollars": 0.19593024541311962,
+      "turnover": 110.16737146525728
+    },
+    {
+      "annual_arithmetic": 0.033302670035202264,
+      "annual_vol": 0.5216789346902513,
+      "candidate": "btc_ret28_p25_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.81459033184285,
+      "max_drawdown": 0.6170341299800237,
+      "mean_bp_day": 0.9124019187726647,
+      "mean_exposure": 0.7046042617960426,
+      "nw10_t": 0.08705738974893451,
+      "sharpe": 0.06383748282835272,
+      "total_cost_dollars": 0.23649110554115216,
+      "turnover": 176.29940777242848
+    },
+    {
+      "annual_arithmetic": -0.12425700284707376,
+      "annual_vol": 0.7026267711274629,
+      "candidate": "btc_ret28_p25_reversal",
+      "days": 730,
+      "ending_nav": 0.4745389016008422,
+      "max_drawdown": 0.7844277178179263,
+      "mean_bp_day": -3.4043014478650346,
+      "mean_exposure": 0.9220700152207001,
+      "nw10_t": -0.2589745693665671,
+      "sharpe": -0.17684638267865313,
+      "total_cost_dollars": 0.24327403030226172,
+      "turnover": 255.8981198216286
+    },
+    {
+      "annual_arithmetic": 0.1922569867707331,
+      "annual_vol": 0.34623352244627803,
+      "candidate": "btc_ret28_p50_cash",
+      "days": 730,
+      "ending_nav": 1.3034713363188473,
+      "max_drawdown": 0.3685476690927675,
+      "mean_bp_day": 5.2673147060474825,
+      "mean_exposure": 0.3482496194824962,
+      "nw10_t": 0.6947317265507957,
+      "sharpe": 0.5552812604982924,
+      "total_cost_dollars": 0.1532965726342576,
+      "turnover": 78.009500168861
+    },
+    {
+      "annual_arithmetic": 0.15830679037975898,
+      "annual_vol": 0.35245485132993015,
+      "candidate": "btc_ret28_p50_trend",
+      "days": 730,
+      "ending_nav": 1.2126531728299221,
+      "max_drawdown": 0.3740992884997191,
+      "mean_bp_day": 4.337172339171479,
+      "mean_exposure": 0.40920852359208515,
+      "nw10_t": 0.5668067434487243,
+      "sharpe": 0.4491548060195921,
+      "total_cost_dollars": 0.16156306528421027,
+      "turnover": 83.97328816198353
+    },
+    {
+      "annual_arithmetic": 0.01672881896797862,
+      "annual_vol": 0.4549035032623325,
+      "candidate": "btc_ret28_p50_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.8407632510240282,
+      "max_drawdown": 0.5616211691144415,
+      "mean_bp_day": 0.45832380734188005,
+      "mean_exposure": 0.6266742770167427,
+      "nw10_t": 0.05125463414768354,
+      "sharpe": 0.036774434243764205,
+      "total_cost_dollars": 0.21641699592812236,
+      "turnover": 150.01525877569014
+    },
+    {
+      "annual_arithmetic": -0.15328086161473414,
+      "annual_vol": 0.6543822575726943,
+      "candidate": "btc_ret28_p50_reversal",
+      "days": 730,
+      "ending_nav": 0.47784360737512016,
+      "max_drawdown": 0.763065321403336,
+      "mean_bp_day": -4.199475660677647,
+      "mean_exposure": 0.8441400304414004,
+      "nw10_t": -0.35005291285537665,
+      "sharpe": -0.23423749626602058,
+      "total_cost_dollars": 0.24204651579038566,
+      "turnover": 239.88830755811912
+    },
+    {
+      "annual_arithmetic": 0.17375736632040772,
+      "annual_vol": 0.2656843451614705,
+      "candidate": "btc_ret28_p75_cash",
+      "days": 730,
+      "ending_nav": 1.3192440895378765,
+      "max_drawdown": 0.2815963717394919,
+      "mean_bp_day": 4.7604757896002114,
+      "mean_exposure": 0.2703196347031963,
+      "nw10_t": 0.8210868630923491,
+      "sharpe": 0.6539992644835966,
+      "total_cost_dollars": 0.1123751525992947,
+      "turnover": 53.284381492627965
+    },
+    {
+      "annual_arithmetic": 0.14118400633109596,
+      "annual_vol": 0.2737970612164503,
+      "candidate": "btc_ret28_p75_trend",
+      "days": 730,
+      "ending_nav": 1.2306690389877661,
+      "max_drawdown": 0.28775650835813615,
+      "mean_bp_day": 3.8680549679752314,
+      "mean_exposure": 0.33127853881278535,
+      "nw10_t": 0.6551674924443815,
+      "sharpe": 0.5156520150502379,
+      "total_cost_dollars": 0.12011379056816934,
+      "turnover": 58.11364036607192
+    },
+    {
+      "annual_arithmetic": -0.011600089356070877,
+      "annual_vol": 0.39698550660975845,
+      "candidate": "btc_ret28_p75_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.8343995361035871,
+      "max_drawdown": 0.5232415130225572,
+      "mean_bp_day": -0.31781066728961305,
+      "mean_exposure": 0.5487442922374428,
+      "nw10_t": -0.04193126333887945,
+      "sharpe": -0.029220435413713736,
+      "total_cost_dollars": 0.20341765664384742,
+      "turnover": 133.46153829777393
+    },
+    {
+      "annual_arithmetic": -0.18257302594081248,
+      "annual_vol": 0.6154218520135079,
+      "candidate": "btc_ret28_p75_reversal",
+      "days": 730,
+      "ending_nav": 0.47336318706378605,
+      "max_drawdown": 0.7432274015818475,
+      "mean_bp_day": -5.002000710707191,
+      "mean_exposure": 0.7662100456621004,
+      "nw10_t": -0.4523505719860549,
+      "sharpe": -0.2966632162044275,
+      "total_cost_dollars": 0.23871277239132785,
+      "turnover": 224.09608940112864
+    },
+    {
+      "annual_arithmetic": 0.3895721221162488,
+      "annual_vol": 0.3894391152166676,
+      "candidate": "btc_ret56_p25_cash",
+      "days": 730,
+      "ending_nav": 1.8755444845778015,
+      "max_drawdown": 0.32884584169151676,
+      "mean_bp_day": 10.673208825102707,
+      "mean_exposure": 0.38719558599695586,
+      "nw10_t": 1.314511528271335,
+      "sharpe": 1.0003415345156255,
+      "total_cost_dollars": 0.19631065441428136,
+      "turnover": 73.58370667783569
+    },
+    {
+      "annual_arithmetic": 0.2720033966309202,
+      "annual_vol": 0.3990416502066582,
+      "candidate": "btc_ret56_p25_trend",
+      "days": 730,
+      "ending_nav": 1.471551492770645,
+      "max_drawdown": 0.36492941168453386,
+      "mean_bp_day": 7.452147852901923,
+      "mean_exposure": 0.45203576864535766,
+      "nw10_t": 0.8910537729870993,
+      "sharpe": 0.6816416193398693,
+      "total_cost_dollars": 0.18915256083713017,
+      "turnover": 86.79060091552608
+    },
+    {
+      "annual_arithmetic": -0.05870344866378113,
+      "annual_vol": 0.5110127451624054,
+      "candidate": "btc_ret56_p25_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.6846241293598139,
+      "max_drawdown": 0.6763342955651287,
+      "mean_bp_day": -1.608313662021401,
+      "mean_exposure": 0.6929033485540335,
+      "nw10_t": -0.15668713977808824,
+      "sharpe": -0.11487668207790892,
+      "total_cost_dollars": 0.19885044111020295,
+      "turnover": 156.49449215372408
+    },
+    {
+      "annual_arithmetic": -0.40024678445060863,
+      "annual_vol": 0.7202467547104583,
+      "candidate": "btc_ret56_p25_reversal",
+      "days": 730,
+      "ending_nav": 0.2643823006750038,
+      "max_drawdown": 0.8778775680518719,
+      "mean_bp_day": -10.965665327413936,
+      "mean_exposure": 0.9337709284627091,
+      "nw10_t": -0.7911502032160651,
+      "sharpe": -0.5557078623860084,
+      "total_cost_dollars": 0.1861606381346984,
+      "turnover": 235.61737025987452
+    },
+    {
+      "annual_arithmetic": 0.33943163341831883,
+      "annual_vol": 0.31666036715234197,
+      "candidate": "btc_ret56_p50_cash",
+      "days": 730,
+      "ending_nav": 1.7847328370848323,
+      "max_drawdown": 0.26042259981958316,
+      "mean_bp_day": 9.299496805981338,
+      "mean_exposure": 0.3209665144596651,
+      "nw10_t": 1.406572366108921,
+      "sharpe": 1.07191069242657,
+      "total_cost_dollars": 0.15067791133939148,
+      "turnover": 56.10010096937258
+    },
+    {
+      "annual_arithmetic": 0.22292866345147927,
+      "annual_vol": 0.32833681744065707,
+      "candidate": "btc_ret56_p50_trend",
+      "days": 730,
+      "ending_nav": 1.4032980890783708,
+      "max_drawdown": 0.3001068270732452,
+      "mean_bp_day": 6.1076346151090215,
+      "mean_exposure": 0.3858066971080669,
+      "nw10_t": 0.8832220880652705,
+      "sharpe": 0.6789633437674742,
+      "total_cost_dollars": 0.15045832677333998,
+      "turnover": 68.41631568303839
+    },
+    {
+      "annual_arithmetic": -0.10782594304978743,
+      "annual_vol": 0.4578742287621181,
+      "candidate": "btc_ret56_p50_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.6527887174908252,
+      "max_drawdown": 0.661979284332427,
+      "mean_bp_day": -2.9541354260215735,
+      "mean_exposure": 0.6266742770167428,
+      "nw10_t": -0.3232794283150519,
+      "sharpe": -0.23549249177290305,
+      "total_cost_dollars": 0.1793822658915893,
+      "turnover": 138.17426554767584
+    },
+    {
+      "annual_arithmetic": -0.45609107780489205,
+      "annual_vol": 0.6835329572716224,
+      "candidate": "btc_ret56_p50_reversal",
+      "days": 730,
+      "ending_nav": 0.2487081926835892,
+      "max_drawdown": 0.8734253320191796,
+      "mean_bp_day": -12.495645967257316,
+      "mean_exposure": 0.8675418569254185,
+      "nw10_t": -0.9569694793501904,
+      "sharpe": -0.6672554307043463,
+      "total_cost_dollars": 0.18091048784977654,
+      "turnover": 222.91688333996382
+    },
+    {
+      "annual_arithmetic": 0.2890003937115115,
+      "annual_vol": 0.24726353437668844,
+      "candidate": "btc_ret56_p75_cash",
+      "days": 730,
+      "ending_nav": 1.677134730908809,
+      "max_drawdown": 0.19353817661636652,
+      "mean_bp_day": 7.9178190057948346,
+      "mean_exposure": 0.25473744292237444,
+      "nw10_t": 1.5383199582740088,
+      "sharpe": 1.1687950446879882,
+      "total_cost_dollars": 0.10458374568764865,
+      "turnover": 38.853121978258436
+    },
+    {
+      "annual_arithmetic": 0.17335818505123218,
+      "annual_vol": 0.26196821116984403,
+      "candidate": "btc_ret56_p75_trend",
+      "days": 730,
+      "ending_nav": 1.320980856748526,
+      "max_drawdown": 0.24083276395645936,
+      "mean_bp_day": 4.749539316472115,
+      "mean_exposure": 0.31957762557077624,
+      "nw10_t": 0.8573664336295058,
+      "sharpe": 0.6617527534241069,
+      "total_cost_dollars": 0.111328520398843,
+      "turnover": 50.44726886999361
+    },
+    {
+      "annual_arithmetic": -0.16350382186730106,
+      "annual_vol": 0.41283783059934676,
+      "candidate": "btc_ret56_p75_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.6069997953692128,
+      "max_drawdown": 0.6514240007621108,
+      "mean_bp_day": -4.4795567634877,
+      "mean_exposure": 0.5604452054794521,
+      "nw10_t": -0.54867793070236,
+      "sharpe": -0.39604854436409237,
+      "total_cost_dollars": 0.16538529742985392,
+      "turnover": 125.31770926643365
+    },
+    {
+      "annual_arithmetic": -0.5122384331655085,
+      "annual_vol": 0.6541382969755842,
+      "candidate": "btc_ret56_p75_reversal",
+      "days": 730,
+      "ending_nav": 0.23104750525886614,
+      "max_drawdown": 0.8701923282808073,
+      "mean_bp_day": -14.033929675767357,
+      "mean_exposure": 0.8013127853881278,
+      "nw10_t": -1.1315945701354935,
+      "sharpe": -0.7830736031414895,
+      "total_cost_dollars": 0.1754645759458604,
+      "turnover": 210.45021916384644
+    },
+    {
+      "annual_arithmetic": 0.2905788072571326,
+      "annual_vol": 0.3220623406471391,
+      "candidate": "btc_sma200_p25_cash",
+      "days": 730,
+      "ending_nav": 1.6134495534377156,
+      "max_drawdown": 0.3235917110424781,
+      "mean_bp_day": 7.961063212524181,
+      "mean_exposure": 0.3429604261796042,
+      "nw10_t": 1.2604802608475751,
+      "sharpe": 0.9022439775891066,
+      "total_cost_dollars": 0.12835089263392027,
+      "turnover": 49.145826795830075
+    },
+    {
+      "annual_arithmetic": 0.2416770324720912,
+      "annual_vol": 0.34319263913799075,
+      "candidate": "btc_sma200_p25_trend",
+      "days": 730,
+      "ending_nav": 1.4427075448833304,
+      "max_drawdown": 0.32865277178489305,
+      "mean_bp_day": 6.621288560879211,
+      "mean_exposure": 0.4244672754946728,
+      "nw10_t": 0.9558829893241229,
+      "sharpe": 0.7042022610948767,
+      "total_cost_dollars": 0.15253600565719622,
+      "turnover": 66.5234073055239
+    },
+    {
+      "annual_arithmetic": -0.07246471508427388,
+      "annual_vol": 0.4802331248151901,
+      "candidate": "btc_sma200_p25_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.686158167068463,
+      "max_drawdown": 0.6690135300594285,
+      "mean_bp_day": -1.9853346598431199,
+      "mean_exposure": 0.6837138508371384,
+      "nw10_t": -0.21384144659670162,
+      "sharpe": -0.15089487030316937,
+      "total_cost_dollars": 0.18010515175837477,
+      "turnover": 140.45481089720653
+    },
+    {
+      "annual_arithmetic": -0.39216265632895225,
+      "annual_vol": 0.7164805210262654,
+      "candidate": "btc_sma200_p25_reversal",
+      "days": 730,
+      "ending_nav": 0.26994104067245717,
+      "max_drawdown": 0.8854632286859887,
+      "mean_bp_day": -10.744182365176773,
+      "mean_exposure": 0.9429604261796042,
+      "nw10_t": -0.8192199939646196,
+      "sharpe": -0.5473458730842118,
+      "total_cost_dollars": 0.17288616249346034,
+      "turnover": 219.3720605322602
+    },
+    {
+      "annual_arithmetic": 0.25105661451162314,
+      "annual_vol": 0.2668072235665414,
+      "candidate": "btc_sma200_p50_cash",
+      "days": 730,
+      "ending_nav": 1.5394307734495114,
+      "max_drawdown": 0.26606646046612703,
+      "mean_bp_day": 6.878263411277347,
+      "mean_exposure": 0.28592085235920855,
+      "nw10_t": 1.3151663872659065,
+      "sharpe": 0.9409663320041629,
+      "total_cost_dollars": 0.0979733152789666,
+      "turnover": 37.985376679138625
+    },
+    {
+      "annual_arithmetic": 0.2024065604423677,
+      "annual_vol": 0.29194013228866905,
+      "candidate": "btc_sma200_p50_trend",
+      "days": 730,
+      "ending_nav": 1.377219357160802,
+      "max_drawdown": 0.27138287946329076,
+      "mean_bp_day": 5.545385217599116,
+      "mean_exposure": 0.367427701674277,
+      "nw10_t": 0.932160174747447,
+      "sharpe": 0.6933153001459527,
+      "total_cost_dollars": 0.12494547374613517,
+      "turnover": 55.15194682026504
+    },
+    {
+      "annual_arithmetic": -0.11166838549974961,
+      "annual_vol": 0.44497549190888586,
+      "candidate": "btc_sma200_p50_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.6550998314584132,
+      "max_drawdown": 0.6690135300594285,
+      "mean_bp_day": -3.059407821910948,
+      "mean_exposure": 0.6266742770167428,
+      "nw10_t": -0.35740007300746746,
+      "sharpe": -0.2509540132664544,
+      "total_cost_dollars": 0.16744973164424465,
+      "turnover": 129.0278454827377
+    },
+    {
+      "annual_arithmetic": -0.4323008076954424,
+      "annual_vol": 0.6933003822647514,
+      "candidate": "btc_sma200_p50_reversal",
+      "days": 730,
+      "ending_nav": 0.2572378712345691,
+      "max_drawdown": 0.8854632286859887,
+      "mean_bp_day": -11.843857745080612,
+      "mean_exposure": 0.8859208523592085,
+      "nw10_t": -0.9400055660145623,
+      "sharpe": -0.6235404144496188,
+      "total_cost_dollars": 0.16835038435200636,
+      "turnover": 208.72835070485692
+    },
+    {
+      "annual_arithmetic": 0.21128633527680413,
+      "annual_vol": 0.2141006378601795,
+      "candidate": "btc_sma200_p75_cash",
+      "days": 730,
+      "ending_nav": 1.4578115701964802,
+      "max_drawdown": 0.20549431505111615,
+      "mean_bp_day": 5.788666719912442,
+      "mean_exposure": 0.22888127853881277,
+      "nw10_t": 1.3799908273593362,
+      "sharpe": 0.9868552349423019,
+      "total_cost_dollars": 0.06867582124432048,
+      "turnover": 27.029685145110534
+    },
+    {
+      "annual_arithmetic": 0.16284464833137519,
+      "annual_vol": 0.24469014276342105,
+      "candidate": "btc_sma200_p75_trend",
+      "days": 730,
+      "ending_nav": 1.3047412627526667,
+      "max_drawdown": 0.2241957736693324,
+      "mean_bp_day": 4.461497214558224,
+      "mean_exposure": 0.31038812785388126,
+      "nw10_t": 0.8820897065677956,
+      "sharpe": 0.6655137247961056,
+      "total_cost_dollars": 0.09835649436292297,
+      "turnover": 44.023389999087186
+    },
+    {
+      "annual_arithmetic": -0.1518149421402586,
+      "annual_vol": 0.4154340245065391,
+      "candidate": "btc_sma200_p75_half_trend_reversal",
+      "days": 730,
+      "ending_nav": 0.6198948210676931,
+      "max_drawdown": 0.6690135300594285,
+      "mean_bp_day": -4.159313483294756,
+      "mean_exposure": 0.569634703196347,
+      "nw10_t": -0.5234110029841885,
+      "sharpe": -0.36543694831107637,
+      "total_cost_dollars": 0.15568870482879474,
+      "turnover": 118.38924242105048
+    },
+    {
+      "annual_arithmetic": -0.47269059006548414,
+      "annual_vol": 0.674659834386097,
+      "candidate": "btc_sma200_p75_reversal",
+      "days": 730,
+      "ending_nav": 0.24329827579829139,
+      "max_drawdown": 0.8854632286859887,
+      "mean_bp_day": -12.950427125081756,
+      "mean_exposure": 0.8288812785388127,
+      "nw10_t": -1.063543395918242,
+      "sharpe": -0.7006354402224141,
+      "total_cost_dollars": 0.16396549279309244,
+      "turnover": 198.28796977609687
+    }
+  ],
+  "control_index": 0,
+  "control_scores": [
+    {
+      "annual_arithmetic": 0.12151912184230557,
+      "annual_vol": 0.20424973389275336,
+      "control": "trend",
+      "days": 730,
+      "ending_nav": 1.2230508629047294,
+      "max_drawdown": 0.20923971306685285,
+      "mean_bp_day": 3.3292910093782346,
+      "mean_exposure": 0.25334855403348555,
+      "nw10_t": 0.7725889571994085,
+      "sharpe": 0.5949536360527761,
+      "total_cost_dollars": 0.07558595592766303,
+      "turnover": 34.36455015363778
+    },
+    {
+      "annual_arithmetic": 0.13623906782753692,
+      "annual_vol": 0.6944243203013887,
+      "control": "momentum28",
+      "days": 730,
+      "ending_nav": 0.8107311315611009,
+      "max_drawdown": 0.6814078923492273,
+      "mean_bp_day": 3.732577200754436,
+      "mean_exposure": 1.0,
+      "nw10_t": 0.2793250837024525,
+      "sharpe": 0.19618994301410336,
+      "total_cost_dollars": 0.17281280548778605,
+      "turnover": 142.26878363835004
+    },
+    {
+      "annual_arithmetic": -0.4642856365662192,
+      "annual_vol": 0.7579610217602515,
+      "control": "reversal7",
+      "days": 730,
+      "ending_nav": 0.22108917880765885,
+      "max_drawdown": 0.8854632286859887,
+      "mean_bp_day": -12.720154426471758,
+      "mean_exposure": 1.0,
+      "nw10_t": -0.9389555242206915,
+      "sharpe": -0.612545531019504,
+      "total_cost_dollars": 0.19666157439991722,
+      "turnover": 278.86483717836086
+    },
+    {
+      "annual_arithmetic": 0.1343594228321371,
+      "annual_vol": 0.6981294068767987,
+      "control": "passive",
+      "days": 730,
+      "ending_nav": 0.8010338318073069,
+      "max_drawdown": 0.7277816183070436,
+      "mean_bp_day": 3.6810800775927968,
+      "mean_exposure": 1.0,
+      "nw10_t": 0.2788893883911421,
+      "sharpe": 0.1924563290253263,
+      "total_cost_dollars": 0.0070907205963874845,
+      "turnover": 4.371691378514526
+    }
+  ],
+  "scales": [
+    [
+      0.47469572335624793,
+      1.0
+    ],
+    [
+      0.4692019795887513,
+      1.0
+    ],
+    [
+      0.3916467430437833,
+      1.0
+    ],
+    [
+      0.29085294573884046,
+      1.0
+    ],
+    [
+      0.5899442633276173,
+      1.0
+    ],
+    [
+      0.5794691041369127,
+      1.0
+    ],
+    [
+      0.4492120720013916,
+      1.0
+    ],
+    [
+      0.31229103350183746,
+      1.0
+    ],
+    [
+      0.7687248877540904,
+      1.0
+    ],
+    [
+      0.745918144249662,
+      1.0
+    ],
+    [
+      0.5147840997624291,
+      1.0
+    ],
+    [
+      0.3320477552993518,
+      1.0
+    ],
+    [
+      0.5244226125205628,
+      1.0
+    ],
+    [
+      0.5118427448447854,
+      1.0
+    ],
+    [
+      0.39982327205369345,
+      1.0
+    ],
+    [
+      0.2837273485313145,
+      1.0
+    ],
+    [
+      0.6449002021861797,
+      1.0
+    ],
+    [
+      0.6220415073475051,
+      1.0
+    ],
+    [
+      0.44627559526312044,
+      1.0
+    ],
+    [
+      0.29899650126828925,
+      1.0
+    ],
+    [
+      0.8258035704127373,
+      1.0
+    ],
+    [
+      0.7796035402857694,
+      1.0
+    ],
+    [
+      0.4950545176010928,
+      1.0
+    ],
+    [
+      0.3124597438964937,
+      1.0
+    ],
+    [
+      0.6341820445308567,
+      1.0
+    ],
+    [
+      0.5951781379443085,
+      1.0
+    ],
+    [
+      0.42548761578434124,
+      1.0
+    ],
+    [
+      0.2852137094502228,
+      1.0
+    ],
+    [
+      0.7654507931698131,
+      1.0
+    ],
+    [
+      0.6996223517359498,
+      1.0
+    ],
+    [
+      0.4592152488541044,
+      1.0
+    ],
+    [
+      0.2947567783470769,
+      1.0
+    ],
+    [
+      0.9537772947843929,
+      1.0
+    ],
+    [
+      0.8346825101202201,
+      1.0
+    ],
+    [
+      0.4918994651035177,
+      1.0
+    ],
+    [
+      0.3029067343904003,
+      1.0
+    ]
+  ],
+  "selected_candidate": "btc_ret56_p75_cash",
+  "selected_control": "trend",
+  "selected_index": 20
+}
