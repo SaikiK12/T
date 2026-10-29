@@ -15516,7 +15516,7 @@
       "path": "docs/REELS_TRANSCRIPT.md",
       "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
       "review_status": "reviewed_bounded_code_fidelity_audit_not_performance_evidence",
-      "scope": "Bounded digest of owner videos and selected public sources; reels 15–17 remain as previously reconciled. The 2026-10-28 @aleks_rosme TikTok is added at metadata/caption-track scope through 00:24.8 under TT26-04; the track is marked Source: MT, provenance unclear, and not checked against speech. It says SPX was in negative gamma with downside GEX magnets; a phrase about the 7750 pivot is garbled. The earlier 2026-10-20 QQQ speech is corrected from VAL to VAH based on the existing transcript. The remainder of the clip, broader channel coverage and creator outcome claims remain unverified.",
+      "scope": "Bounded digest of owner videos and selected public sources; reels 15–17 remain as previously reconciled. The 2026-10-28 @aleks_rosme TikTok is covered at public page/caption scope through 00:24.8 under TT26-04. On 2026-10-29 the linked seven-cue VTT was re-fetched and hashed; captionInfos labels eng-US big_caption as isAutoGen:false and isOriginalCaption:true, while the VTT says Source: MT, so provenance remains ambiguous and speech is not verified. The 7750 pivot cue is garbled. The earlier 2026-10-20 QQQ speech is corrected from VAL to VAH based on the existing transcript. The remaining 20.2 seconds, broader channel coverage and creator outcome claims remain unverified.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -15619,7 +15619,7 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "82aa4e97be911d70d1210ec6e409418f4a097dfb70feabedf29a7c40492485ca",
+      "current_sha256": "bdf7f7717e58e82d44a8d3069cda3c91b3191f75099077fd273d352b4a4077a7",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
@@ -15674,6 +15674,12 @@
           "reviewed_utc_date": "2026-10-29",
           "intake_id": "public_tiktok_qqq_gex_20261029",
           "preservation": "Current transcript digest reviewed at bounded caption/metadata scope; no market trial or verified creator outcome."
+        },
+        {
+          "sha256": "bdf7f7717e58e82d44a8d3069cda3c91b3191f75099077fd273d352b4a4077a7",
+          "reviewed_utc_date": "2026-10-29",
+          "intake_id": "public_tiktok_qqq_gex_20261029",
+          "preservation": "Second bounded public-page/VTT check records the exact seven-cue coverage and checksum; ambiguous TikTok labels remain unverified speech, and no market trial was added."
         }
       ],
       "observed_unreviewed_version": {
@@ -19329,9 +19335,9 @@
         "research/intake/source_catalog_hft_20261028.csv"
       ],
       "source_version_path": "docs/REELS_TRANSCRIPT.md",
-      "source_version_sha256": "82aa4e97be911d70d1210ec6e409418f4a097dfb70feabedf29a7c40492485ca",
-      "received_scope": "Public TikTok page metadata, caption, English caption track through 00:24.8/00:45 (Source: MT; provenance unclear, not checked against speech) and cover frame; official Fed event timing and bounded OptionsDepth/Cboe/OIC source checks. Separately, a public pre-release Trading Economics gas consensus row and API snapshot definitions. No authenticated feeds, verified full audio, historical market data or licensed data accessed.",
-      "reconciliation": "The October 28 short is a bearish narration variant under M235. Correct the October 20 narration to daily VAH (legacy TT26-03-DAILY-VAL ID retained). No new queue row; M235 remains BLOCKED.",
+      "source_version_sha256": "bdf7f7717e58e82d44a8d3069cda3c91b3191f75099077fd273d352b4a4077a7",
+      "received_scope": "Public TikTok page metadata, caption and linked eng-US big_caption WebVTT with seven cues through 00:24.8/00:45. Page labels isAutoGen:false/isOriginalCaption:true while the VTT says Source: MT; ambiguity retained and no speech verification. VTT SHA-256 d90339d6c33a737982fbbb7ce09245d4757937a1f9d0e4a49114ea96cc0bf1a0. Cover frame; official Fed event timing and bounded OptionsDepth/Cboe/OIC source checks. Separately, a public pre-release Trading Economics gas consensus row and API snapshot definitions. No authenticated feeds, verified full audio, historical market data or licensed data accessed.",
+      "reconciliation": "The October 28 short is a bearish narration variant under M235. The public linked VTT was re-fetched and its seven-cue coverage/checksum recorded; remaining 20.2 seconds and speech remain unverified. Correct the October 20 narration to daily VAH (legacy TT26-03-DAILY-VAL ID retained). No new queue row; M235 remains BLOCKED.",
       "strategy_trials_added": 0,
       "prospective_days_added": 0,
       "market_outcomes_added": 0,
