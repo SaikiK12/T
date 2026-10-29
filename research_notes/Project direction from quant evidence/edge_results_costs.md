@@ -1,5 +1,7 @@
 # Edge results and costs: what every tested lane found (as of 2026-10-20)
 
+> **Historical review — 2026-10-20.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/ec9029ecdefd5e88f1f335226dd0abbaeda0ebe2/research_notes/Project%20direction%20from%20quant%20evidence/edge_results_costs.md) retains the received text. Use the [current panel](../../docs/PANEL.md), [live queue](../../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Source: per-lane research subagent, returned in its reply. The coordinator saved this text unchanged because the subagent did not write the file. Its figures are unverified by the coordinator, and no lab code, registry row or run script was executed.
 
 **Verdict.** At base cost, two results clear holdout t>=2: carry (t 2.07) and top-trader book B (t 2.72). At 3x, carry is negative and B still clears (t 2.44). Neither has a family-wise test, and B was not the frozen decision.

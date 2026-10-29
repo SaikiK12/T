@@ -5,29 +5,21 @@ A pre-registered strategy-discovery lab for crypto perpetual futures. The goal i
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
-## At a glance (refreshed 2026-10-29, 02:45 UTC)
+## Current status
 
-**Use the generated [panel](docs/PANEL.md) for status** (last built 02:23 UTC) and
-[issue #7](https://github.com/SaikiK12/T/issues/7) for current writer claims.
+Read the generated [panel](docs/PANEL.md) with its build timestamp, then use
+[issue #7](https://github.com/SaikiK12/T/issues/7) for fresh writer claims and operational updates.
+The README does not duplicate changing observation counts, recorder failures or lane returns.
+`python -m lab status --state-dir /absolute/external/paper-runs --strict` checks existing run
+receipts without starting work; missing receipts and unverified data remain explicit.
 
-**Evidence status:** the panel reports zero strict on-time paper days, 218 hours of processing lag (347 minutes
-median), 0/80 scored hops in R355 and R364, and 0/500 scored days in R371. Their process receipts say SUCCESS,
-but their data states are UNVERIFIED; the Lighter recorder reports FAILED. This prevents lane decisions; it is not
-a strategy null. No strategy has passed paper or been approved for real trading.
+The [live methods queue](registry/methods.csv) and each lane's frozen PREREG and FINDINGS define
+what was tested. A process receipt marked SUCCESS does not establish on-time evidence or gate
+eligibility. See [DIRECTION](docs/DIRECTION.md) for the working priorities and
+[GATES](docs/GATES.md) for admission requirements.
 
-**Best historical lead:** [M042/R304](experiments/mlrank_v2/FINDINGS.md) reported +58.9 bp/day at 1x, t=4.21, on validation data already
-read by the research team. [R305](experiments/mlaudit_v1/FINDINGS.md) found the score unexplained and a severe
-short squeeze tail. It needs fresh confirmation, not more fitting on that sample.
-
-**Current priority:** verify timely recorder and journal receipts first, then let frozen forward lanes run
-unchanged. No external study reviewed in this pass establishes executable net PnL for this project's MEXC altcoin
-universe. The top-vs-crowd
-positioning impulse is closed by R234/R240; do not reopen it under a new name. See [docs/DIRECTION.md](docs/DIRECTION.md)
-for the ranked next steps and research findings.
-
-**Useful queued research:** M090 can test whether MEXC's timestamped displayed funding rate improves on a
-no-change forecast of the subsequent settled rate. It remains blocked until the hourly recorder's continuity and
-settlement joins are verified; a forecast improvement by itself is not trading PnL.
+The [M090/M322 implementation handoff](research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
+synthetic prototypes and the inputs still needed before a prospective run.
 
 **Working here:**
 1. Read [AGENTS.md](AGENTS.md) and fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).
@@ -116,6 +108,10 @@ for active writers. Dated proposals, audits and source notes below retain histor
   `lab.capital` combines accounts with explicit capital denominators.
 
 **Audits and reviews**
+
+- [Historical project-direction review](reports/Project%20direction%20from%20quant%20evidence.md)
+  and [repository hygiene review](reports/Repo%20hygiene%20plan.md): preserved 2026-10-20/26 snapshots,
+  with original-revision links; their numerical status and recommendations require current evidence.
 - Program-level: [`AUDIT.md`](docs/AUDIT.md), [`CRITIQUE.md`](docs/CRITIQUE.md),
   [`SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md`](docs/SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md),
   [`CONFIDENCE_REVIEW.md`](docs/CONFIDENCE_REVIEW.md),

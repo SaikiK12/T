@@ -1,5 +1,7 @@
 # Registry multiplicity: how much the search has done and what survived
 
+> **Historical review — 2026-10-20.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/fac49bea9788451e6b605dfee22e91faa94eb777/research_notes/Project%20direction%20from%20quant%20evidence/registry_multiplicity.md) retains the received text. Use the [current panel](../../docs/PANEL.md), [live queue](../../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Repo: /home/user/T (branch ccr-23562535-bd0mr3), audited 2026-10-20, read-only. No market data read; no statistic recomputed. Paths are repo-relative.
 
 ## Verdict

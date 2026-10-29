@@ -1,5 +1,7 @@
 # Project direction from quant evidence: external literature
 
+> **Historical review — 2026-10-20.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/a3a709bf18fe9f1824db46a4229de8ceef0a96fa/research_notes/Project%20direction%20from%20quant%20evidence/external_literature.md) retains the received text. Use the [current panel](../../docs/PANEL.md), [live queue](../../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 **Verdict: partly.** The lab's one holdout-passed edge (funding carry) matches published work, and the most literature-supported family (weekly cross-sectional momentum on liquid perps) is still untested in long-short form. But most search effort (top-trader and flow books, intraday clocks, indicator cells, sub-minute scalping) has little or no net-of-cost published support, and the anomalies the literature finds sit in micro-cap coins that the top-50 universe excludes.
 
 Scope and grade: standard-mode WebSearch (about 13 queries), three page fetches. The icm.edu.pl pages returned HTTP 403, so the Fieberg and Mercik items come from search snippets. Repo facts come from the docs named in the brief. No external result below is a net-of-cost return with 1x/2x/3x figures; where a source gives no cost figure, I say so.

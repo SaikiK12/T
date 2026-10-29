@@ -1,5 +1,7 @@
 # Alternatives to crypto perpetuals: a web scan
 
+> **Historical review — 2026-10-26.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/49e59af551cf636bfd5930cd20a4dfe31ecb6cde/reports/Alternatives%20to%20crypto%20perps.md) retains the received text. Use the [current panel](../docs/PANEL.md), [live queue](../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Written 2026-10-26 on `ccr-23562535-bd0mr3`. The web results are search snippets and secondary summaries. Full texts were not read, and each claim below says what it rests on. Reachability was tested from the sandbox on 2026-10-26. Nothing was downloaded, frozen, registered or ordered.
 
 ## 1. Short answer

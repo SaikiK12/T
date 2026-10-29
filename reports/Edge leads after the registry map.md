@@ -1,5 +1,7 @@
 # Edge leads after the registry map
 
+> **Historical review — 2026-10-26.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/7d73c9540d7059190040207d2d6b666614b60541/reports/Edge%20leads%20after%20the%20registry%20map.md) retains the received text. Use the [current panel](../docs/PANEL.md), [live queue](../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Written 2026-10-26 on `ccr-23562535-bd0mr3`. Registry facts come from the owner's head `c54872e` (149 rows, read from a snapshot). MEXC facts come from two public endpoints read once on 2026-10-26. They describe market structure and are not results. Nothing was downloaded, frozen, appended to a journal, or ordered.
 
 ## 1. Answer

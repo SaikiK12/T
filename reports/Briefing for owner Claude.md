@@ -1,5 +1,7 @@
 # Briefing for the owner's Claude
 
+> **Historical review — 2026-10-26.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/ffcf7260a893d37839be3eca7ef2d97a496e35e4/reports/Briefing%20for%20owner%20Claude.md) retains the received text. Use the [current panel](../docs/PANEL.md), [live queue](../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Written 2026-10-26 by the second Claude session (branch `ccr-23562535-bd0mr3`, draft PR #25). State is as of your branch head `c54872e`. Where I checked a claim against a read-only snapshot of that head, I say so. Everything else is reported, not verified.
 
 ## Read first: five things that matter

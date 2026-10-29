@@ -1,5 +1,7 @@
 # Repo hygiene plan (read-only audit)
 
+> **Historical review — 2026-10-26.** This document describes an earlier checkout. Its counts, data coverage, calculations and recommendations have not been refreshed or revalidated. The [original revision](https://github.com/SaikiK12/T/blob/a2891c12da404284e12dbfcb7299914e5f3032e2/reports/Repo%20hygiene%20plan.md) retains the received text. Use the [current panel](../docs/PANEL.md), [live queue](../registry/methods.csv) and linked lane evidence for present decisions. Local links below have been made portable; unavailable source paths are labelled.
+
 Scope: the owner branch `claude/yo-9a1k5w` at `2e0efb9`, read from a snapshot in the scratchpad. Nothing was modified, merged or deleted. This plan is a proposal for the owner and the active writer.
 
 Method: workflow `wf_c1dfaf39-072` (10 agents). Nine returned. The synthesis agent hit the session limit, so this plan was written by the coordinator from the journal. Every path in it was checked to exist, and the headline numbers were recomputed from `registry/rounds.csv`.
