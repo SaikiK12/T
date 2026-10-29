@@ -2,6 +2,8 @@
 
 Six parallel reviews examined mechanisms, primary literature, existing nulls, portfolio accounting and available inputs. These are candidate designs, not frozen PREREGs or measured new returns. No new market outcomes, parameter searches or trial statistics were computed.
 
+**Latest decision:** the [deep batch below](#deep-batch-decision-after-primary-source-reconciliation) qualifies the earlier rankings. Its source/version and cost findings take precedence over a headline interpretation of the earlier tables. This remains a research judgment, not a ranking of expected profit.
+
 ## Ranked combinations to take forward
 
 | Priority | Combination | Incremental question | Present blocker |
@@ -68,3 +70,61 @@ Six distinct searches covered macro/cross-asset signals, perp funding and basis,
 ### Decision from this sweep
 
 The best empirical evidence is for **how** to validate a combination (rolling, multiple-testing-aware selection with costs), not for a new profitable perpetual-futures blend. The closest actionable candidates are a score-only toxicity execution filter on one frozen alpha and a funding/volatility exposure or holding-period gate; each still needs a specific, pre-registered parent comparison and execution costs. Do not change R285 or reopen tested nulls from source claims alone. The direct carry-and-macro results are not interchangeable with a new combined rule, and the weaker preprints should stay in the source review until their full methods and sample definitions can be checked.
+
+## Deep batch decision after primary-source reconciliation
+
+Nine source refinements are now in the [canonical intake manifest](intake/deep_leads_batch_20261029.json),
+source cards SRC26-032–040 and the existing queue. Full bodies and indexed excerpts are distinguished there.
+No new strategy rows, market statistics, reserved reads or prospective days were added.
+
+| Work order | Existing lead | Decision and next concrete deliverable | What would disconfirm or block it |
+|---|---|---|---|
+| 1: finish the input question | M090, displayed funding versus last settled | Complete the exact-event, on-time input adapter and paired-loss specification in the [implementation handoff](PROSPECTIVE_LEADS_DRAFT_20261029.md). Keep a fitted DAR challenger outside this first comparison. | No reliable publication/clock evidence, no exact settlement match, or no incremental forecast value. A forecast pass still earns no cash-return claim. |
+| 2: fresh return evidence | M042/R304, using the R305 follow-ups already chosen | Prioritize the long-leg/equal-weight hedge and protected-short variants named in [R305](../experiments/mlaudit_v1/FINDINGS.md). Finish the missing-metrics and MEXC execution audit before registering or scoring them. | Missingness drives the ranking, executable constituents fail coverage, or funding/fees/margin erase the result. Keep the original model and all variants separately identified. |
+| 3: complete the newly identified event source | M440, expiry OI and reversal | Reconcile the final Weiss et al. paper's state and cost definitions against the recorded chain schema. Draft one primary post-expiry question with time-of-day controls. | Full mechanics remain unavailable, the pre-event state cannot be authenticated, or the apparent effect reduces to a clock effect/already-tested expiry rule. |
+| Later, one explicit proxy family | Weekly momentum × residual local flow | Retain the existing three-book parent/flow/joint comparison from the factor review. It is an adaptation requiring fresh data and a short-risk model. | Too few eligible corner names, no paired improvement over momentum, or losses under actual execution and squeeze costs. No percentile or benchmark switch. |
+| Execution only | M082 quarter-hour timing | Consider a bounded timing comparison on fixed parent tickets. Park standalone taker trading; a long-horizon regression is not an OOS trading system. | No improvement in total execution shortfall after delays, skipped trades and opportunity cost; no authenticated parent tickets or books. |
+| Unchanged reserve lead | M322 panic basket | Keep the existing breadth/basket constants and finish the funded-account, comparator and publication requirements in the handoff. | Insufficient warm-up/basket coverage, incomplete marks or no incremental return versus the unconditional basket. Do not read reserved 2020 opportunistically. |
+
+### What changed in the evidence
+
+The final [funding-forecast record](intake/cards/SRC26-032.md) is now identified, but its full economic-cost
+implementation remains unread. That improves attribution without qualifying a MEXC model.
+The [expiry paper](intake/cards/SRC26-033.md) resolves the first unnamed M440 reference.
+The [Hoang–Phan activity paper](intake/cards/SRC26-040.md) resolves the second and supplies a clock/activity
+control, not a directional-profit result. The quoted expiry counts and a net trading rule remain unverified.
+
+The [quarter-hour review](intake/cards/SRC26-037.md) separates the short OOS forecast from the full-sample
+medium-horizon association. The [world-flow version check](intake/cards/SRC26-038.md) also prevents mixing the
+conference and final samples or calling local taker flow a replication.
+The [selection-paper card](intake/cards/SRC26-036.md) supports a prior-only comparison protocol, without
+establishing a new absolute-return edge here.
+
+The [cross-venue accrual review](intake/cards/SRC26-034.md) and
+[guarantee/timing review](intake/cards/SRC26-035.md) make settlement cash a prerequisite to carry claims.
+The [protocol-version card](intake/cards/SRC26-039.md) records the Drift-to-Velocity documentation redirect;
+current help text cannot authenticate the older paper's deployed rules.
+
+### Own experiment contracts to finish before freeze
+
+For M090, publish both forecasts before the same decision. The primary proposed loss difference for event e is
+`d_e = (display_e - settled_e)^2 - (previous_e - settled_e)^2`; a negative mean favors the display.
+Direction accuracy is secondary. This is rate-error skill, not capital return. The 90-event/30-date gate is
+coverage only: inference, power and a single-look guard still need an explicit dependence-aware contract.
+
+For the residual-flow hybrid, compare actual accounts on identical future dates with the momentum-only and
+flow-only parents, cash substitution and matched exposure. Keep the initial allocation of rejected names in cash.
+The proposed quintiles and residualization are fixed design choices already disclosed; no historical grid earns
+fresh confirmation. Funding is charged on actual held quantities, and short losses cannot be silently capped.
+
+For M440, the state must be fixed before its outcome begins. A candidate observable state is expiring OI in a
+single preregistered ATM band divided by total BTC-option OI from one pre-07:00 snapshot; the band, units and
+snapshot deadline must be frozen. Keep 08:00–10:00 as a proposed primary post-expiry horizon and the existing
+other horizons in the disclosed secondary family. Pre-expiry return can only condition a decision made after
+08:00. Public OI does not identify dealer gamma. Freeze one sample/selection/inference rule and same-clock
+controls before any outcome analysis; no source card automatically authorizes this test.
+
+Any timing overlay must keep the parent's target quantity and common terminal mark fixed. A delayed or skipped
+trade carries opportunity cost, and a maker quote is not a fill. A cost reduction could improve an existing
+account without creating a new return predictor. These are finite next implementations, not new profitable
+strategies or permission to activate an unfrozen lane.
