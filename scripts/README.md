@@ -5,13 +5,15 @@
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (27)
+## Fetch: download archives and public history (29)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
 - [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
+- [`fetch_cmelead.py`](fetch_cmelead.py): R370's data: CME Globex trades (Databento) and Binance USD-M aggregated trades around 60 EIA releases and their placebo days.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
 - [`fetch_coinmetrics.py`](fetch_coinmetrics.py): Coin Metrics community API (free, no key): daily market caps and on-chain metrics for every asset it serves free.
+- [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
@@ -82,7 +84,7 @@ line is the first line of the script's own docstring.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 
-## Run: one lane's frozen measurement (126)
+## Run: one lane's frozen measurement (127)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -104,6 +106,7 @@ line is the first line of the script's own docstring.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
 - [`run_chartxm.py`](run_chartxm.py): chartxm_v1 (R247): R243's seven chart rules (run_chartist.states, unchanged) on daily bars of 11 forex pairs and 10 world equity indices, equal-weight books per group, as set out in ...
 - [`run_clockflow.py`](run_clockflow.py): clockflow_v1 (R289): fixed-clock flows on 1-minute bars of the BTC, ETH and SOL perps, as set out in experiments/clockflow_v1/PREREG.md.
+- [`run_cmelead.py`](run_cmelead.py): R370 cmelead_v1 runner, frozen in experiments/cmelead_v1/PREREG.md: after an EIA release moves CME's crude or gas future, does Binance's TradFi perp lag it long enough for a taker to earn the ...
 - [`run_confidence.py`](run_confidence.py): R331 four committed stages: train, calibrate, select, evaluate.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_continuation_control.py`](run_continuation_control.py): R323 fixed conditional continuation policies and common-account replay.
@@ -255,7 +258,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (52)
+## Tools and everything else (53)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -263,6 +266,7 @@ line is the first line of the script's own docstring.
 - [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
 - [`check.py`](check.py): One offline unittest entry point: full release gate or bounded feedback.
+- [`cmelead_rule.py`](cmelead_rule.py): R370 cmelead_v1 rule, frozen in experiments/cmelead_v1/PREREG.md: when an EIA release moves CME's front-month crude or natural-gas future by a lot, does Binance's TradFi perp still trade at the ...
 - [`dashboard_data.py`](dashboard_data.py): Export the lab's state as the dashboard's datasets: dashboard/data/<id>.json, one array of row objects each.
 - [`dashboard_jobs.py`](dashboard_jobs.py): Read-only operational job metadata for the control room.
 - [`dashboard_perf.py`](dashboard_perf.py): The control room's performance and coverage datasets (docs/BENCHMARK.md build items 2-3), used by dashboard_data.py.

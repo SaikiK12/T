@@ -28,3 +28,16 @@ own validity test (a reference needs 25 of 51 marks and a quote in the 60 s afte
 `scripts/record_commodity_perps.py` was restarted at 00:26 UTC on 2026-10-29 with MAX_MB 4,000 (was 800; measured about
 4.3 MB stored over the first 1.5 h, which would have lasted days, not the 55 until 2026-12-23). Re-measure after the first
 US session and set the cap again if the rate is far above 150 MB a day.
+
+## What R370 says about reading this lane (2026-10-29)
+`experiments/cmelead_v1` (R370) replayed 60 past EIA releases with CME trade ticks (Databento) against Binance aggregated
+trades. It does not change this lane's frozen rule, calendar or runner. Three readings for the FINDINGS of R369:
+
+- **Gas timing.** CME's first trade 20 bp from its pre-release median comes 1.04-1.08 s after the nominal 10:30:00 in at least
+  75% of the releases. The market reacts about a second after the stamp, so this lane's gas t* should land near T + 1 s and its
+  decision (L = 1 s) near T + 2 s. A t* far from that points to the noise, not the report.
+- **Crude threshold.** 8 bp is crossed within a minute of 14:30 UTC on 24-27 of 29 ordinary days (placebo), against 30 of 30
+  release days. The crude cell is therefore close to a generic lag test, not an event test. Read a crude hit with the
+  placebo in mind. The gas threshold (20 bp) is specific to the release: it is crossed on 3-5 of 29 ordinary days.
+- **Binance is not a laggard.** At CME's threshold trade Binance's CL and NG perps had already moved about 0.9 of CME's
+  displacement. A lag found on Lighter here is Lighter's own, not a delay inherited from CME.
