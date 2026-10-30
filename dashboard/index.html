@@ -1,0 +1,1416 @@
+<style>
+.qx { font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.qx-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+.qx-take { font-size: var(--cds-font-size-body); margin: var(--cds-gap-xs) 0 0; max-width: 78ch; }
+.qx-asof { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-top: var(--cds-gap-xs); }
+.qx-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); margin: var(--cds-gap-md) 0; }
+.qx-tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
+.qx-tab[aria-selected=true] { color: var(--color-fg); border-bottom-color: var(--color-fg); }
+.qx-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--cds-gap-md); }
+.qx-kpi { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); }
+.qx-kpi .lab { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.qx-kpi .val { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; margin: var(--cds-gap-xs) 0; min-height: 1.2em; }
+.qx-kpi .sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.qx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); margin-top: var(--cds-gap-md); }
+.qx-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.qx-card.wide { grid-column: 1 / -1; }
+.qx-page[hidden] { display: none; }
+.qx-card h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.qx-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: var(--cds-gap-xs) 0 var(--cds-gap-md); }
+.qx-chart { position: relative; min-height: 320px; }
+.qx-chart.short { min-height: 160px; }
+.qx-chart svg { display: block; overflow: visible; }
+.qx-chart text { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-caption); fill: var(--color-fg-muted); }
+.qx-chart text.lead { fill: var(--color-fg); }
+.qx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); opacity: 0; z-index: 3; max-width: 18rem; }
+.qx-tip .d { color: var(--cds-text-secondary); margin-bottom: 2px; }
+.qx-tip .r { display: flex; align-items: center; gap: 6px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.qx-sw { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+.qx-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
+.qx-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.qx-tools { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; margin-bottom: var(--cds-gap-sm); }
+.qx-search, .qx-select { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+.qx-search { width: min(100%, 18rem); }
+.qx-tablebox { max-height: 30rem; overflow: auto; }
+table.qx-t { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.qx-t th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); border-bottom: 1px solid var(--color-border-line); padding: 0; white-space: nowrap; z-index: 1; }
+.qx-t th button { all: unset; cursor: pointer; display: block; padding: var(--cds-pad-xs) var(--cds-pad-sm); }
+.qx-t th[aria-sort=ascending] button::after { content: " \2191"; }
+.qx-t th[aria-sort=descending] button::after { content: " \2193"; }
+.qx-t td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.qx-t .n { text-align: right; white-space: nowrap; }
+.qx-t .w { min-width: 16rem; }
+.qx-cellbar { display: inline-block; height: 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+.qx-dot { display: inline-block; width: .375rem; height: .375rem; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.qx-fail { display: flex; align-items: center; justify-content: center; gap: .5rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: inherit; }
+.qx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.qx [data-dash-source-state=empty] { color: transparent; }
+.qx [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+@media (max-width: 640px) { .qx-t .opt { display: none; } }
+</style>
+
+<div class="qx" id="qx">
+  <header class="qx-head">
+    <h1 id="title">Quant Lab Control Room</h1>
+    <p class="qx-take" id="takeaway">
+      <span data-source="program" data-field="candidates" data-row="0" data-fmt="int">—</span> candidate edges are in the funnel,
+      <span data-source="stage_counts" data-field="n" data-where="stage=forward paper" data-fmt="int">—</span> of them on forward paper;
+      <span data-source="gate1" data-field="passed" data-row="0" data-fmt="int">—</span> have passed unseen days (gate 1).
+      Candidates remain hypotheses; archive, holdout and prospective evidence are shown separately in their study records.
+      Next scheduled read: <span data-source="program" data-field="next_due" data-row="0" data-fmt="day">—</span>.
+    </p>
+    <div class="qx-asof">Lab state exported <span data-source="program" data-field="generated_at" data-row="0" data-fmt="dt">—</span> UTC. Export and delivery are separate recorded actions.</div>
+  </header>
+
+  <nav class="qx-tabs" role="tablist">
+    <button class="qx-tab" role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button class="qx-tab" role="tab" data-tab="paper" aria-selected="false">Compte simulé</button>
+    <button class="qx-tab" role="tab" data-tab="edges" aria-selected="false">Edge map</button>
+    <button class="qx-tab" role="tab" data-tab="forward" aria-selected="false">Forward paper</button>
+    <button class="qx-tab" role="tab" data-tab="perf" aria-selected="false">Performance</button>
+    <button class="qx-tab" role="tab" data-tab="board" aria-selected="false">Leaderboard</button>
+    <button class="qx-tab" role="tab" data-tab="factors" aria-selected="false">Factors</button>
+    <button class="qx-tab" role="tab" data-tab="funding" aria-selected="false">Funding board</button>
+    <button class="qx-tab" role="tab" data-tab="rounds" aria-selected="false">Rounds</button>
+    <button class="qx-tab" role="tab" data-tab="queue" aria-selected="false">Method queue</button>
+    <button class="qx-tab" role="tab" data-tab="health" aria-selected="false">Data and loop</button>
+  </nav>
+
+  <section id="paper" class="qx-page" hidden>
+    <div class="qx-card">
+      <h2>Argent, coûts et preuves</h2>
+      <p class="qx-note">Les montants ci-dessous servent à vérifier le code avec des cas inventés. Le PnL réellement observé reste inconnu. Chaque devise et chaque plateforme gardent leur capital séparé ; rien ne tourne ni ne place un ordre depuis cette page.</p>
+      <div id="paper-accounts" style="overflow:auto"></div>
+    </div>
+    <div class="qx-card">
+      <h2>Peut-on prendre une nouvelle position simulée ?</h2>
+      <div id="paper-controls"></div>
+      <p class="qx-note">Le gain attendu doit couvrir les coûts et une marge d’erreur mesurée. Une prévision de volatilité n’est pas une prévision de gain.</p>
+      <details><summary>Source et reproduction vérifiable</summary><div id="paper-provenance"></div></details>
+    </div>
+    <div class="qx-card">
+      <h2>Anciens journaux : ce qui manque pour les compter comme preuve</h2>
+      <p class="qx-note">Leurs résultats historiques restent dans les vues existantes. La projection stricte conserve les trous ; une ancienne étiquette « net » ou « à temps » ne suffit pas.</p>
+      <div id="paper-admission" style="overflow:auto"></div>
+    </div>
+    <div class="qx-card">
+      <h2>Les 100 demandes : preuve, limite ou blocage</h2>
+      <p id="paper-coverage" class="qx-note">État inconnu.</p>
+      <details><summary>Détail des demandes reçues</summary><div id="paper-requirements" style="overflow:auto;max-height:32rem"></div></details>
+    </div>
+  </section>
+
+  <section id="overview" class="qx-page">
+    <div class="qx-kpis">
+      <div class="qx-kpi" id="kpi-trials"><div class="lab">Program trials</div>
+        <div class="val" data-source="program" data-field="program_trials" data-row="0" data-fmt="compact">—</div>
+        <div class="sub">every test counted, all rounds</div></div>
+      <div class="qx-kpi" id="kpi-rounds"><div class="lab">Rounds registered</div>
+        <div class="val" data-source="program" data-field="rounds" data-row="0" data-fmt="int">—</div>
+        <div class="sub"><span data-source="program" data-field="null" data-row="0" data-fmt="int">—</span> null, <span data-source="program" data-field="partial" data-row="0" data-fmt="int">—</span> partial</div></div>
+      <div class="qx-kpi" id="kpi-cands"><div class="lab">Candidate edges</div>
+        <div class="val" data-source="program" data-field="candidates" data-row="0" data-fmt="int">—</div>
+        <div class="sub"><span data-source="stage_counts" data-field="n" data-where="stage=forward paper" data-fmt="int">—</span> on forward paper</div></div>
+      <div class="qx-kpi" id="kpi-ontime"><div class="lab">Strict on-time paper days</div>
+        <div class="val" data-source="program" data-field="strict_ontime_days" data-row="0" data-fmt="int">—</div>
+        <div class="sub">R200 feed days used by R215 paper: all 24 hourly bars computed within 60 minutes of close; live trades and fills are not measured.</div></div>
+      <div class="qx-kpi" id="kpi-due"><div class="lab">Next scheduled read</div>
+        <div class="val" data-source="program" data-field="next_due" data-row="0" data-fmt="day">—</div>
+        <div class="sub">earliest due date on the watchlist</div></div>
+      <div class="qx-kpi" id="kpi-disk"><div class="lab">Disk free</div>
+        <div class="val" data-source="program" data-field="disk_free_gb" data-row="0" data-fmt="gb">—</div>
+        <div class="sub">container allowance left</div></div>
+    </div>
+    <div class="qx-grid">
+      <div class="qx-card" id="card-stages">
+        <h2>Where the candidates are</h2>
+        <p class="qx-note">Watchlist edges by funnel stage. Gate 0 is the archive; gate 1 is days nobody had seen when the rule was frozen.</p>
+        <div class="qx-chart short" id="chart-stages" data-source="stage_counts"></div>
+      </div>
+      <div class="qx-card" id="card-verdicts-mini">
+        <h2>Paper net to date, by lane</h2>
+        <p class="qx-note">Daily books: summed native on-time net on dates present for every listed book, averaged across books. Replay and late rows remain separate. Event lanes: mean per scored ticket.</p>
+        <div class="qx-chart short" id="chart-lanes" data-source="forward_lanes"></div>
+      </div>
+      <div class="qx-card wide" id="card-watchlist">
+        <h2>Candidate follow-ups</h2>
+        <p class="qx-note">Selected follow-ups, not a second methods queue or proof of an edge. Evidence may be exploratory or holdout; read the evidence column and the linked round before comparing t values.</p>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-cands" data-source="candidates" data-row-key="id">
+            <thead><tr>
+              <th data-field="id"><button>ID</button></th>
+              <th data-field="edge" class="w"><button>Edge</button></th>
+              <th data-field="stage"><button>Stage</button></th>
+              <th data-field="t" class="n"><button>t</button></th>
+              <th data-field="best_evidence" class="opt w"><button>Best evidence</button></th>
+              <th data-field="cost_2x_3x" class="opt"><button>At 2x / 3x cost</button></th>
+              <th data-field="forward_lane"><button>Forward lane</button></th>
+              <th data-field="next_step" class="opt"><button>Next step</button></th>
+              <th data-field="due"><button>Due</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="edges" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-edgemap">
+        <h2>Every event strategy tested: size against strength</h2>
+        <p class="qx-note">One dot per strategy: mean net return per event at 1x cost (symmetric log scale) against its t. Rings indicate an explicit pass in the source report, not approval for live trading. t = 2 alone does not account for the research search.</p>
+        <div class="qx-chart" id="chart-edgemap" data-source="strategies"></div>
+      </div>
+      <div class="qx-card wide" id="card-strats">
+        <h2>Strategy table</h2>
+        <p class="qx-note">Per-event stats from family reports (qx) and event-lane verdicts. RC p is the family reality check; null p the matched-date null.</p>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search strategies" aria-label="Search strategies" data-for="tbl-strats"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-strats" data-source="strategies" data-row-key="key">
+            <thead><tr>
+              <th data-field="round"><button>Round</button></th>
+              <th data-field="strategy"><button>Strategy</button></th>
+              <th data-field="n" class="n"><button>n</button></th>
+              <th data-field="mean_pct" class="n"><button>Mean 1x</button></th>
+              <th data-field="median_pct" class="n opt"><button>Median</button></th>
+              <th data-field="t" class="n"><button>t</button></th>
+              <th data-field="mean_2x_pct" class="n opt"><button>2x</button></th>
+              <th data-field="mean_3x_pct" class="n opt"><button>3x</button></th>
+              <th data-field="p_rc" class="n opt"><button>RC p</button></th>
+              <th data-field="null_p" class="n opt"><button>Null p</button></th>
+              <th data-field="y2025_pct" class="n opt"><button>2025+</button></th>
+              <th data-field="passed"><button>Passed</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="forward" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-cum">
+        <h2>Cumulative paper net, daily books</h2>
+        <p class="qx-note">Sum of daily net returns at 1x cost, not compounded. Replay and on-time rows retain their own labels. A missing return makes the subsequent cumulative total unknown.</p>
+        <div class="qx-tools"><select class="qx-select" id="sel-group" aria-label="Book group" data-source="cum_paper"></select></div>
+        <div class="qx-chart" id="chart-cum" data-source="cum_paper"></div>
+      </div>
+      <div class="qx-card wide" id="card-lanes">
+        <h2>Forward lanes</h2>
+        <p class="qx-note">Progress counts only what decides the lane: on-time days for daily books, scored tickets or notices for event lanes.</p>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-lanes" data-source="forward_lanes" data-row-key="lane">
+            <thead><tr>
+              <th data-field="round"><button>Round</button></th>
+              <th data-field="display_name"><button>Paper study</button></th>
+              <th data-field="what" class="opt"><button>Trades</button></th>
+              <th data-field="venue" class="opt"><button>Venue</button></th>
+              <th data-field="mode" class="opt"><button>Mode</button></th>
+              <th data-field="scored" class="n"><button>Scored</button></th>
+              <th data-field="needed" class="n"><button>Milestone</button></th>
+              <th data-field="unit" class="opt"><button>Unit</button></th>
+              <th data-field="net_pct" class="n"><button>Net 1x</button></th>
+              <th data-field="net_2x_pct" class="n opt"><button>2x</button></th>
+              <th data-field="net_3x_pct" class="n opt"><button>3x</button></th>
+              <th data-field="age_h" class="n"><button>Status file age</button></th>
+              <th data-field="decision" class="opt w"><button>Decision rule</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="qx-card wide" id="card-tickets">
+        <h2>Event tickets</h2>
+        <p class="qx-note">Unlock, delisting and Monitoring Tag tickets, frozen before entry, plus the unlocks due next on the recorded calendar.</p>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-tickets" data-source="event_tickets" data-row-key="key">
+            <thead><tr>
+              <th data-field="round"><button>Round</button></th>
+              <th data-field="symbol"><button>Symbol</button></th>
+              <th data-field="state"><button>State</button></th>
+              <th data-field="entry_at"><button>Entry (UTC)</button></th>
+              <th data-field="exit_at" class="opt"><button>Exit (UTC)</button></th>
+              <th data-field="size_pct_supply" class="n opt"><button>Unlock, % of supply</button></th>
+              <th data-field="net_pct" class="n"><button>Net 1x</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="perf" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-sheet">
+        <h2>Tear sheet</h2>
+        <p class="qx-note">Compounded daily net at 1x cost. Forward paper series are weeks old; backtests are gate 0 (in-sample or already-spent windows). Sharpe is shown naive and adjusted for autocorrelation (Lo 2002). PSR and the deflated Sharpe use the effective sample size, and the deflated Sharpe is taken at the program's full trial count, so it is a deliberately harsh bar.</p>
+        <div class="qx-tools"><select class="qx-select" id="sel-series" aria-label="Series"></select><span class="qx-asof" id="sheet-note"></span></div>
+        <div class="qx-kpis" id="sheet-kpis"></div>
+        <div class="qx-chart" id="chart-equity" data-source="equity" style="margin-top: var(--cds-gap-md)"></div>
+        <div class="qx-chart short" id="chart-dd" data-source="equity"></div>
+      </div>
+      <div class="qx-card wide" id="card-monthly">
+        <h2>Monthly returns</h2>
+        <p class="qx-note">Compounded net per calendar month for the selected series; the last column is the year.</p>
+        <div class="qx-chart short" id="chart-monthly" data-source="monthly"></div>
+      </div>
+      <div class="qx-card wide" id="card-sheets">
+        <h2>All series</h2>
+        <p class="qx-note">One row per paper book or saved research stream. NW t is the Newey-West t of the daily mean; n eff is the AR(1) effective number of independent days.</p>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-sheets" data-source="tearsheets" data-row-key="series">
+            <thead><tr>
+              <th data-field="series"><button>Series</button></th>
+              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="days" class="n"><button>Days</button></th>
+              <th data-field="total_return" class="n"><button>Total</button></th>
+              <th data-field="cagr" class="n"><button>CAGR</button></th>
+              <th data-field="sharpe" class="n opt"><button>Sharpe</button></th>
+              <th data-field="sharpe_ac" class="n"><button>Sharpe (AC adj.)</button></th>
+              <th data-field="max_drawdown" class="n"><button>Max DD</button></th>
+              <th data-field="t_nw" class="n"><button>NW t</button></th>
+              <th data-field="n_eff" class="n opt"><button>n eff</button></th>
+              <th data-field="psr" class="n opt"><button>PSR</button></th>
+              <th data-field="dsr" class="n"><button>Deflated</button></th>
+              <th data-field="hit_rate" class="n opt"><button>Hit</button></th>
+              <th data-field="cvar95" class="n opt"><button>CVaR 95</button></th>
+              <th data-field="label" class="w opt"><button>What</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="board" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-board">
+        <h2>Best result per round against what chance gives</h2>
+        <p class="qx-note">Filled dot: the round's best t from its family report. Hollow dot: the largest t written in its registry note (parsed text, approximate). Dash: the best t that pure chance reaches among that many independent tries. Diamond: the family's own reality-check null (95th percentile of its max t), where one was run; values off the top are clipped and labelled. A best t below either bar is what the search alone would produce.</p>
+        <div class="qx-chart" id="chart-board" data-source="leaderboard"></div>
+      </div>
+      <div class="qx-card wide" id="card-trials">
+        <h2>Program trials, cumulative</h2>
+        <p class="qx-note">Every strategy tried, all rounds, log scale. Each new result is read against this total, not only against its own family.</p>
+        <div class="qx-chart short" id="chart-trials" data-source="leaderboard"></div>
+      </div>
+      <div class="qx-card wide" id="card-boardtbl">
+        <h2>Rounds with their bars</h2>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search rounds" aria-label="Search leaderboard" data-for="tbl-board"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-board" data-source="leaderboard" data-row-key="id">
+            <thead><tr>
+              <th data-field="id"><button>Round</button></th>
+              <th data-field="lane"><button>Lane</button></th>
+              <th data-field="verdict"><button>Verdict</button></th>
+              <th data-field="trials" class="n"><button>Trials</button></th>
+              <th data-field="best_t" class="n"><button>Best t</button></th>
+              <th data-field="notes_t" class="n opt"><button>t in note</button></th>
+              <th data-field="chance_bar_t" class="n"><button>Chance bar</button></th>
+              <th data-field="family_null_p95" class="n opt"><button>Family null</button></th>
+              <th data-field="best_strategy" class="opt"><button>Best strategy</button></th>
+              <th data-field="program_trials" class="n opt"><button>Program total</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="factors" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-fic">
+        <h2>Cumulative rank IC by factor</h2>
+        <div class="qx-tools"><select class="qx-select" id="sel-fround" aria-label="Factor report"></select><select class="qx-select" id="sel-fh" aria-label="Horizon"></select></div>
+        <p class="qx-note">Each line adds up the daily Spearman correlation between a factor and the next return across coins (approximated as each month's mean times its days). A line that climbs steadily is a factor that ranks coins the same way month after month; a line that wanders around zero is noise. Backtest on the archive (gate 0). Whether a factor passes is decided by its frozen reality check, not by this chart.</p>
+        <div class="qx-chart" id="chart-fic" data-source="factor_ic"></div>
+      </div>
+      <div class="qx-card wide" id="card-fictbl">
+        <h2>Factor stability</h2>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fic" data-source="factor_summary" data-row-key="key">
+            <thead><tr>
+              <th data-field="round"><button>Round</button></th>
+              <th data-field="factor"><button>Factor</button></th>
+              <th data-field="horizon_h" class="n"><button>Horizon (h)</button></th>
+              <th data-field="rank_ic" class="n"><button>Mean rank IC</button></th>
+              <th data-field="ic" class="n opt"><button>Mean IC</button></th>
+              <th data-field="pos_months" class="n"><button>Months > 0</button></th>
+              <th data-field="months" class="n opt"><button>Months</button></th>
+              <th data-field="ls_bp" class="n"><button>Long-short / day</button></th>
+              <th data-field="names" class="n opt"><button>Coins / day</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="funding" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-fund">
+        <h2>Widest cross-venue funding spreads</h2>
+        <p class="qx-note">Latest hourly snapshot of seven venues (MEXC, Gate, Hyperliquid, OKX, Bitget, KuCoin, dYdX), each rate scaled to 8 hours; spread = highest minus lowest venue, annualized at 3 settlements a day. Descriptive only: the same ticker on two venues is not proven to be the same coin, and a spread pays only if it persists after price moves and costs, which a frozen lane must test. Funding clock <span data-source="funding_board" data-field="snapshot_at" data-row="0" data-fmt="text">—</span> UTC.</p>
+        <div class="qx-chart" id="chart-fund" data-source="funding_board"></div>
+      </div>
+      <div class="qx-card wide" id="card-fundtbl">
+        <h2>Funding by venue, 8-hour equivalent</h2>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search coins or venues" aria-label="Search funding" data-for="tbl-fund"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fund" data-source="funding_board" data-row-key="key">
+            <thead><tr>
+              <th data-field="base"><button>Coin</button></th>
+              <th data-field="venues" class="n"><button>Venues</button></th>
+              <th data-field="spread_ann" class="n"><button>Spread / yr</button></th>
+              <th data-field="max_venue"><button>Highest</button></th>
+              <th data-field="min_venue"><button>Lowest</button></th>
+              <th data-field="r8h_mexc" class="n opt"><button>MEXC</button></th>
+              <th data-field="r8h_gate" class="n opt"><button>Gate</button></th>
+              <th data-field="r8h_hyperliquid" class="n opt"><button>Hyperliquid</button></th>
+              <th data-field="r8h_okx" class="n opt"><button>OKX</button></th>
+              <th data-field="r8h_bitget" class="n opt"><button>Bitget</button></th>
+              <th data-field="r8h_kucoin" class="n opt"><button>KuCoin</button></th>
+              <th data-field="r8h_dydx" class="n opt"><button>dYdX</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rounds" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card" id="card-verdicts">
+        <h2>Rounds by verdict</h2>
+        <p class="qx-note">Every registered round. A null is a result.</p>
+        <div class="qx-chart short" id="chart-verdicts" data-source="verdict_counts"></div>
+      </div>
+      <div class="qx-card wide" id="card-rounds">
+        <h2>Registry</h2>
+        <p class="qx-note">All rounds in registry order, with their trial counts.</p>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search rounds" aria-label="Search rounds" data-for="tbl-rounds"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-rounds" data-source="rounds" data-row-key="id">
+            <thead><tr>
+              <th data-field="id"><button>Round</button></th>
+              <th data-field="date"><button>Date</button></th>
+              <th data-field="lane"><button>Lane</button></th>
+              <th data-field="verdict"><button>Verdict</button></th>
+              <th data-field="trials" class="n"><button>Trials</button></th>
+              <th data-field="title" class="w"><button>Title</button></th>
+              <th data-field="notes" class="w opt"><button>Notes</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="queue" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card" id="card-mstatus">
+        <h2>Methods by status</h2>
+        <p class="qx-note">The queue of methods from the literature, old sessions and both AIs.</p>
+        <div class="qx-chart short" id="chart-mstatus" data-source="method_counts"></div>
+      </div>
+      <div class="qx-card wide" id="card-methods">
+        <h2>Method queue</h2>
+        <p class="qx-note">The canonical methods registry. Untested and partial rules remain candidates; blocked rows retain the missing input or mechanics.</p>
+        <div class="qx-tools"><input class="qx-search" type="search" placeholder="Search methods, sources or blockers" aria-label="Search methods" data-for="tbl-methods">
+          <select class="qx-select qx-filter" data-for="tbl-methods" data-field="status" aria-label="Method status"><option value="">All statuses</option></select>
+        </div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-methods" data-source="methods" data-row-key="id">
+            <thead><tr>
+              <th data-field="id"><button>ID</button></th>
+              <th data-field="method" class="w"><button>Method</button></th>
+              <th data-field="status"><button>Status</button></th>
+              <th data-field="data_held" class="opt"><button>Data</button></th>
+              <th data-field="round" class="opt w"><button>Result</button></th>
+              <th data-field="note" class="opt w"><button>Open scope / blocker</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="health" class="qx-page" hidden>
+    <div class="qx-grid">
+      <div class="qx-card wide" id="card-fresh">
+        <h2>Freshness</h2>
+        <p class="qx-note">Every recorder, loop and forward lane, stalest first: its last write against how often it should write. FRESH within 1.5 slots, LATE within 4.5, then STALE. For R200, the newest hour it computed and how long after that hour closed; more than 60 minutes is late. A write says the writer ran, not that its data is complete.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search streams" aria-label="Search streams" data-for="tbl-fresh">
+          <select class="qx-select qx-filter" data-for="tbl-fresh" data-field="state" aria-label="Freshness state"><option value="">All states</option></select>
+        </div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-fresh" data-source="freshness" data-row-key="stream">
+            <thead><tr>
+              <th data-field="what"><button>Stream</button></th>
+              <th data-field="state"><button>State</button></th>
+              <th data-field="age_min" class="n"><button>Last write</button></th>
+              <th data-field="cadence_min" class="n"><button>Writes every</button></th>
+              <th data-field="how" class="opt"><button>Written by</button></th>
+              <th data-field="data_at" class="opt"><button>Newest hour closed</button></th>
+              <th data-field="lag_at_compute_min" class="n opt"><button>Computed after close</button></th>
+              <th data-field="path" class="w opt"><button>File</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="qx-card wide" id="card-jobs">
+        <h2>Operations by responsibility</h2>
+        <p class="qx-note">Collection, paper scoring, decisions and reporting have distinct categories. A recent legacy log is unverified activity, not a successful run. Structured success means exit zero only; observation quality is assessed separately. Process command lines and raw log contents are not exported.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search tasks or stable IDs" aria-label="Search operations" data-for="tbl-jobs">
+          <select class="qx-select qx-filter" data-for="tbl-jobs" data-field="category" aria-label="Operation category"><option value="">All categories</option></select>
+          <select class="qx-select qx-filter" data-for="tbl-jobs" data-field="state" aria-label="Operation state"><option value="">All states</option></select>
+        </div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-jobs" data-source="jobs" data-row-key="key">
+            <thead><tr>
+              <th data-field="display_name"><button>Task</button></th>
+              <th data-field="category"><button>Category</button></th>
+              <th data-field="state"><button>State</button></th>
+              <th data-field="age_h" class="n"><button>Age</button></th>
+              <th data-field="data_state"><button>Declared data checks</button></th>
+              <th data-field="run_id" class="opt"><button>Run</button></th>
+              <th data-field="status_source" class="opt"><button>Evidence source</button></th>
+              <th data-field="returncode" class="n opt"><button>Exit code</button></th>
+              <th data-field="log_path" class="w opt"><button>Log reference</button></th>
+              <th data-field="note" class="w opt"><button>Interpretation</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="qx-card wide" id="card-coverage">
+        <h2>Data coverage</h2>
+        <p class="qx-note">First to last bar of each downloaded dataset (from its provenance record) and first to last day of each live recorder. Holes are missing hours between a file's first and last bar, summed over files.</p>
+        <div class="qx-chart" id="chart-coverage" data-source="coverage"></div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-coverage" data-source="coverage" data-row-key="key">
+            <thead><tr>
+              <th data-field="key"><button>Dataset</button></th>
+              <th data-field="kind" class="opt"><button>Kind</button></th>
+              <th data-field="first"><button>From</button></th>
+              <th data-field="last"><button>To</button></th>
+              <th data-field="files" class="n"><button>Files</button></th>
+              <th data-field="gb" class="n"><button>Size</button></th>
+              <th data-field="bars" class="n opt"><button>Bars</button></th>
+              <th data-field="holes" class="n opt"><button>Holes</button></th>
+              <th data-field="source" class="w opt"><button>Source</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="qx-card wide" id="card-data">
+        <h2>Data sources</h2>
+        <p class="qx-note">Folder metadata grouped by purpose. File activity does not prove recent market observations or complete history. Partial scans exclude unreadable entries and symbolic links; provenance means a note exists, not that its contents were verified.</p>
+        <div class="qx-tools">
+          <input class="qx-search" type="search" placeholder="Search datasets or folder names" aria-label="Search data sources" data-for="tbl-data">
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="category" aria-label="Data category"><option value="">All data categories</option></select>
+          <select class="qx-select qx-filter" data-for="tbl-data" data-field="inventory_state" aria-label="Inventory state"><option value="">All scan states</option></select>
+        </div>
+        <div class="qx-tablebox">
+          <table class="qx-t" id="tbl-data" data-source="data_sources" data-row-key="source">
+            <thead><tr>
+              <th data-field="display_name"><button>Dataset</button></th>
+              <th data-field="category" class="opt"><button>Category</button></th>
+              <th data-field="files" class="n"><button>Files</button></th>
+              <th data-field="size_gb" class="n"><button>Size</button></th>
+              <th data-field="age_h" class="n"><button>File activity age</button></th>
+              <th data-field="stale"><button>File activity overdue</button></th>
+              <th data-field="inventory_state"><button>Scan state</button></th>
+              <th data-field="skipped_links" class="n opt"><button>Links excluded</button></th>
+              <th data-field="scan_errors" class="n opt"><button>Scan errors</button></th>
+              <th data-field="provenance" class="opt"><button>Provenance note</button></th>
+            </tr></thead><tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+dash.calc('stage_counts', {
+  inputs: ['candidates'], title: 'Candidates by stage',
+  description: 'Watchlist candidates counted per funnel stage.',
+  fn: (candidates) => {
+    const n = {};
+    candidates.forEach((c) => { n[c.stage] = (n[c.stage] || 0) + 1; });
+    return Object.keys(n).map((stage) => ({ stage, n: n[stage] }));
+  },
+});
+dash.calc('gate1', {
+  inputs: ['candidates'], title: 'Passed gate 1',
+  description: 'Watchlist candidates whose stage says they passed unseen days (gate 1) or later.',
+  fn: (candidates) => [{ passed: candidates.filter((c) => /gate 1 passed|gate 2|gate 3|live/i.test(c.stage)).length }],
+});
+dash.calc('top_candidate', {
+  inputs: ['candidates'], title: 'Highest t on the watchlist',
+  description: 'The watchlist candidate with the largest t.',
+  fn: (candidates) => {
+    const best = candidates.filter((c) => c.t != null).sort((a, b) => b.t - a.t)[0];
+    return best ? [{ id: best.id, edge: best.edge, t: best.t }] : [];
+  },
+});
+dash.calc('verdict_counts', {
+  inputs: ['rounds'], title: 'Rounds by verdict',
+  description: 'Registered rounds counted per verdict.',
+  fn: (rounds) => {
+    const n = {};
+    rounds.forEach((r) => { n[r.verdict] = (n[r.verdict] || 0) + 1; });
+    return Object.keys(n).map((verdict) => ({ verdict, n: n[verdict] })).sort((a, b) => b.n - a.n);
+  },
+});
+dash.calc('method_counts', {
+  inputs: ['methods'], title: 'Methods by status',
+  description: 'Queue methods counted per status.',
+  fn: (methods) => {
+    const n = {};
+    methods.forEach((m) => { n[m.status] = (n[m.status] || 0) + 1; });
+    return Object.keys(n).map((status) => ({ status, n: n[status] })).sort((a, b) => b.n - a.n);
+  },
+});
+dash.calc('factor_summary', {
+  inputs: ['factor_ic'], title: 'Factor stability',
+  description: 'Per factor report, factor and horizon: day-weighted mean IC and rank IC, the share of months with a positive mean rank IC, and the mean long-short per day in basis points.',
+  fn: (factor_ic) => {
+    const g = {};
+    factor_ic.forEach((r) => {
+      const k = `${r.round}|${r.factor}|${r.horizon_h}`;
+      const a = g[k] || (g[k] = { key: k, round: r.round, factor: r.factor, horizon_h: r.horizon_h, d: 0, ic: 0, ric: 0, ls: 0, nm: 0, pos: 0, months: 0 });
+      a.d += r.days; a.ic += (r.ic ?? 0) * r.days; a.ric += (r.rank_ic ?? 0) * r.days; a.ls += (r.ls ?? 0) * r.days;
+      a.nm += r.names * r.days; a.months += 1; a.pos += r.rank_ic > 0 ? 1 : 0;
+    });
+    return Object.values(g).map((a) => ({ key: a.key, round: a.round, factor: a.factor, horizon_h: a.horizon_h,
+      ic: a.ic / a.d, rank_ic: a.ric / a.d, ls_bp: (a.ls / a.d) * 1e4, names: a.nm / a.d, months: a.months,
+      pos_months: a.pos / a.months })).sort((x, y) => Math.abs(y.rank_ic) - Math.abs(x.rank_ic));
+  },
+});
+dash.calc('cum_paper', {
+  inputs: ['forward_days'], title: 'Cumulative paper net',
+  description: 'Running sum of each daily book’s net return at 1x cost, in percent, by day.',
+  fn: (forward_days) => {
+    const sum = {};
+    return forward_days.slice().sort((a, b) => (a.series + a.day).localeCompare(b.series + b.day)).map((d) => {
+      const previous = Object.hasOwn(sum, d.series) ? sum[d.series] : 0;
+      sum[d.series] = previous == null || !Number.isFinite(d.net) ? null : previous + d.net * 100;
+      return { key: d.key, series: d.series, group: d.group, day: d.day, kind: d.kind, cum_pct: sum[d.series] };
+    });
+  },
+});
+
+const F = {
+  text: (v) => (v == null ? '' : String(v)),
+  int: (v) => (v == null ? '' : d3.format(',')(v)),
+  compact: (v) => (v == null ? '' : new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 2 }).format(v)),
+  pct: (v) => (v == null ? '' : d3.format('+.2f')(v) + '%'),
+  t: (v) => (v == null ? '' : d3.format('.2f')(v)),
+  p: (v) => (v == null ? '' : v < 0.001 ? '< 0.001' : d3.format('.3f')(v)),
+  day: (v) => (v ? d3.utcFormat('%b %-d, %Y')(new Date(v)) : ''),
+  dt: (v) => (v ? d3.utcFormat('%b %-d, %H:%M')(new Date(v)) : ''),
+  hours: (v) => (v == null ? '' : v < 0 ? 'clock ahead' : v < 1 ? Math.round(v * 60) + ' min ago' : v < 48 ? d3.format('.1f')(v) + ' h ago' : d3.format('.0f')(v / 24) + ' d ago'),
+  gb: (v) => (v == null ? '' : d3.format(',.1f')(v) + ' GB'),
+  size: (v) => (v == null ? '' : v < 1 ? d3.format(',.0f')(v * 1000) + ' MB' : d3.format(',.2f')(v) + ' GB'),
+  yes: (v) => (v == null ? 'unknown' : v ? 'yes' : 'no'),
+};
+const ok = (id) => dash.data(id).status === 'ok';
+const rowsOf = (id) => (ok(id) ? dash.data(id).data || [] : []);
+const BAD = ['error', 'connect', 'declined', 'missing'];
+const isVisible = (el) => !el.closest('.qx-page[hidden]');
+
+function stateBox(el, ids) {
+  el.classList.remove('dash-skeleton');
+  if (ids.every(ok)) return true;
+  el.replaceChildren();
+  if (ids.some((id) => BAD.includes(dash.data(id).status))) {
+    const d = document.createElement('div');
+    d.className = 'qx-fail';
+    d.textContent = 'Failed to load';
+    el.append(d);
+  } else el.classList.add('dash-skeleton');
+  return false;
+}
+
+function fillMarks() {
+  document.querySelectorAll('#qx [data-fmt]').forEach((el) => {
+    const d = dash.data(el.dataset.source);
+    if (d.status !== 'ok') {
+      el.textContent = '—';
+      if (d.status === 'loading') el.classList.add('dash-skeleton');
+      return;
+    }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data || [];
+    let row;
+    if (el.dataset.row != null) row = rows[+el.dataset.row];
+    else if (el.dataset.where) {
+      const [k, v] = el.dataset.where.split('=');
+      row = rows.find((r) => String(r[k]) === decodeURIComponent(v));
+    }
+    const v = row ? row[el.dataset.field] : null;
+    el.textContent = v == null ? '—' : F[el.dataset.fmt](v);
+  });
+}
+
+// tables: sortable headers, search, rows written as text
+const TABLES = {};
+function table(id, source, key, cols) {
+  const tbl = document.getElementById(id);
+  TABLES[id] = { tbl, source, key, cols, sort: null, q: '', filters: {} };
+  tbl.querySelectorAll('th').forEach((th, i) => {
+    th.querySelector('button').addEventListener('click', () => {
+      const t = TABLES[id];
+      t.sort = t.sort && t.sort.i === i ? { i, dir: -t.sort.dir } : { i, dir: cols[i].num ? -1 : 1 };
+      tbl.querySelectorAll('th').forEach((h, j) => h.setAttribute('aria-sort', j === i ? (t.sort.dir > 0 ? 'ascending' : 'descending') : 'none'));
+      drawTable(id);
+    });
+  });
+}
+function drawTable(id) {
+  const t = TABLES[id];
+  const tb = t.tbl.tBodies[0];
+  if (!ok(t.source)) { tb.replaceChildren(); return; }
+  let rows = rowsOf(t.source);
+  document.querySelectorAll(`.qx-filter[data-for="${id}"]`).forEach((select) => {
+    const value = select.value;
+    const label = select.options[0].text;
+    const values = Array.from(new Set(rows.map((r) => r[select.dataset.field]).filter((v) => v != null))).sort();
+    select.replaceChildren(new Option(label, ''), ...values.map((v) => new Option(v, v)));
+    select.value = values.includes(value) ? value : '';
+    t.filters[select.dataset.field] = select.value;
+  });
+  rows = rows.filter((r) => Object.entries(t.filters).every(([field, value]) => !value || String(r[field]) === value));
+  if (t.q) {
+    const q = t.q.toLowerCase();
+    rows = rows.filter((r) => Object.values(r).some((v) => String(v ?? '').toLowerCase().includes(q)));
+  }
+  if (t.sort) {
+    const c = t.cols[t.sort.i];
+    rows = rows.slice().sort((a, b) => {
+      const x = a[c.f], y = b[c.f];
+      if (x == null && y == null) return 0;
+      if (x == null) return 1;
+      if (y == null) return -1;
+      return (typeof x === 'number' && typeof y === 'number' ? x - y : String(x).localeCompare(String(y))) * t.sort.dir;
+    });
+  }
+  const ths = t.tbl.querySelectorAll('th');
+  tb.replaceChildren(...rows.map((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = r[t.key];
+    t.cols.forEach((c, i) => {
+      const td = document.createElement('td');
+      td.className = ths[i].className;
+      const v = r[c.f];
+      if (c.bar && v != null) {
+        const b = document.createElement('span');
+        b.className = 'qx-cellbar';
+        const frac = Math.min(Math.abs(v) / c.bar.max(rows), 1);
+        b.style.width = Math.max(2, frac * 44) + 'px';
+        b.style.background = v >= 0 ? dash.colors[0] : 'var(--cds-chart-muted)';
+        td.append(b);
+      }
+      if (c.dot) {
+        const s = c.dot(v, r);
+        if (s) {
+          const dot = document.createElement('span');
+          dot.className = 'qx-dot';
+          dot.style.background = s === 'bad' ? 'var(--color-bad)' : s === 'warn' ? 'var(--color-warn)' : 'var(--color-ok)';
+          td.append(dot);
+        }
+      }
+      td.append(document.createTextNode((c.fmt || F.text)(v)));
+      if (c.secondary && r[c.secondary]) {
+        const small = document.createElement('div');
+        small.className = 'qx-asof';
+        small.textContent = r[c.secondary];
+        td.append(small);
+      }
+      tr.append(td);
+    });
+    return tr;
+  }));
+}
+document.querySelectorAll('#qx .qx-search').forEach((inp) => {
+  inp.addEventListener('input', () => { TABLES[inp.dataset.for].q = inp.value; drawTable(inp.dataset.for); });
+});
+document.querySelectorAll('#qx .qx-filter').forEach((select) => {
+  select.addEventListener('change', () => drawTable(select.dataset.for));
+});
+const maxAbs = (f) => (rows) => d3.max(rows, (r) => Math.abs(r[f] ?? 0)) || 1;
+table('tbl-cands', 'candidates', 'id', [
+  { f: 'id' }, { f: 'edge' }, { f: 'stage' }, { f: 't', fmt: F.t, num: true, bar: { max: maxAbs('t') } },
+  { f: 'best_evidence' }, { f: 'cost_2x_3x' }, { f: 'forward_lane' }, { f: 'next_step' }, { f: 'due', fmt: F.day }]);
+table('tbl-strats', 'strategies', 'key', [
+  { f: 'round' }, { f: 'strategy' }, { f: 'n', fmt: F.int, num: true }, { f: 'mean_pct', fmt: F.pct, num: true },
+  { f: 'median_pct', fmt: F.pct, num: true }, { f: 't', fmt: F.t, num: true, bar: { max: maxAbs('t') } },
+  { f: 'mean_2x_pct', fmt: F.pct, num: true }, { f: 'mean_3x_pct', fmt: F.pct, num: true },
+  { f: 'p_rc', fmt: F.p, num: true }, { f: 'null_p', fmt: F.p, num: true }, { f: 'y2025_pct', fmt: F.pct, num: true },
+  { f: 'passed', fmt: F.yes, dot: (v) => (v ? 'ok' : null) }]);
+table('tbl-lanes', 'forward_lanes', 'lane', [
+  { f: 'round' }, { f: 'display_name', secondary: 'lane' }, { f: 'what' }, { f: 'venue' }, { f: 'mode' },
+  { f: 'scored', fmt: F.int, num: true }, { f: 'needed', fmt: F.int, num: true }, { f: 'unit' },
+  { f: 'net_pct', fmt: F.pct, num: true }, { f: 'net_2x_pct', fmt: F.pct, num: true }, { f: 'net_3x_pct', fmt: F.pct, num: true },
+  { f: 'age_h', fmt: F.hours, num: true, dot: (v) => (v == null ? null : v > 2 ? 'warn' : null) },
+  { f: 'decision' }]);
+table('tbl-tickets', 'event_tickets', 'key', [
+  { f: 'round' }, { f: 'symbol' }, { f: 'state' }, { f: 'entry_at', fmt: F.dt }, { f: 'exit_at', fmt: F.dt },
+  { f: 'size_pct_supply', fmt: (v) => (v == null ? '' : d3.format('.2f')(v) + '%'), num: true }, { f: 'net_pct', fmt: F.pct, num: true }]);
+table('tbl-rounds', 'rounds', 'id', [
+  { f: 'id' }, { f: 'date', fmt: F.day }, { f: 'lane' }, { f: 'verdict' }, { f: 'trials', fmt: F.int, num: true },
+  { f: 'title' }, { f: 'notes' }]);
+table('tbl-methods', 'methods', 'id', [{ f: 'id' }, { f: 'method' }, { f: 'status' }, { f: 'data_held' }, { f: 'round' }, { f: 'note' }]);
+const mins = (v) => (v == null ? '' : v < 120 ? d3.format('.0f')(v) + ' min' : v < 2880 ? d3.format('.1f')(v / 60) + ' h' : d3.format('.1f')(v / 1440) + ' d');
+table('tbl-fresh', 'freshness', 'stream', [
+  { f: 'what', secondary: 'stream' },
+  { f: 'state', dot: (v) => (v === 'FRESH' ? 'ok' : v === 'LATE' ? 'warn' : 'bad') },
+  { f: 'age_min', fmt: mins, num: true }, { f: 'cadence_min', fmt: mins, num: true }, { f: 'how' },
+  { f: 'data_at', fmt: F.dt }, { f: 'lag_at_compute_min', fmt: mins, num: true, dot: (v) => (v == null ? null : v > 60 ? 'warn' : 'ok') },
+  { f: 'path' }]);
+table('tbl-jobs', 'jobs', 'key', [
+  { f: 'display_name', secondary: 'task_id' }, { f: 'category' },
+  { f: 'state', dot: (v, r) => (r.stale || r.ok == null ? 'warn' : r.ok === true ? 'ok' : 'bad') },
+  { f: 'age_h', fmt: F.hours, num: true }, { f: 'data_state', fmt: (v) => v || 'UNVERIFIED' }, { f: 'run_id' }, { f: 'status_source' }, { f: 'returncode', fmt: F.int, num: true },
+  { f: 'log_path' }, { f: 'note' }]);
+table('tbl-data', 'data_sources', 'source', [
+  { f: 'display_name', secondary: 'source' }, { f: 'category' }, { f: 'files', fmt: F.int, num: true },
+  { f: 'size_gb', fmt: F.size, num: true }, { f: 'age_h', fmt: F.hours, num: true },
+  { f: 'stale', fmt: F.yes, dot: (v) => (v === true ? 'warn' : null) },
+  { f: 'inventory_state', dot: (v) => (v === 'PARTIAL' ? 'warn' : null) },
+  { f: 'skipped_links', fmt: F.int, num: true }, { f: 'scan_errors', fmt: F.int, num: true },
+  { f: 'provenance', fmt: F.yes }]);
+const FR = {
+  pct1: (v) => (v == null ? '' : d3.format('+.1%')(v)),
+  pct2: (v) => (v == null ? '' : d3.format('.2%')(v)),
+  bp8h: (v) => (v == null ? '' : d3.format('+.3%')(v)),
+  num2: (v) => (v == null ? '' : d3.format('.2f')(v)),
+  int0: (v) => (v == null ? '' : d3.format(',.0f')(v)),
+};
+table('tbl-sheets', 'tearsheets', 'series', [
+  { f: 'series', secondary: 'note' }, { f: 'kind' }, { f: 'days', fmt: F.int, num: true },
+  { f: 'total_return', fmt: FR.pct1, num: true }, { f: 'cagr', fmt: FR.pct1, num: true, bar: { max: maxAbs('cagr') } }, { f: 'sharpe', fmt: FR.num2, num: true },
+  { f: 'sharpe_ac', fmt: FR.num2, num: true }, { f: 'max_drawdown', fmt: FR.pct1, num: true },
+  { f: 't_nw', fmt: F.t, num: true }, { f: 'n_eff', fmt: FR.int0, num: true }, { f: 'psr', fmt: F.p, num: true },
+  { f: 'dsr', fmt: F.p, num: true, dot: (v) => (v != null && v >= 0.95 ? 'ok' : null) },
+  { f: 'hit_rate', fmt: FR.pct2, num: true }, { f: 'cvar95', fmt: FR.pct2, num: true }, { f: 'label' }]);
+table('tbl-board', 'leaderboard', 'id', [
+  { f: 'id' }, { f: 'lane' }, { f: 'verdict' }, { f: 'trials', fmt: F.int, num: true },
+  { f: 'best_t', fmt: F.t, num: true, dot: (v, r) => (v == null ? null : v > Math.max(r.chance_bar_t ?? 0, r.family_null_p95 ?? 0) ? 'ok' : null) },
+  { f: 'notes_t', fmt: F.t, num: true },
+  { f: 'chance_bar_t', fmt: F.t, num: true }, { f: 'family_null_p95', fmt: F.t, num: true }, { f: 'best_strategy' },
+  { f: 'program_trials', fmt: F.int, num: true }]);
+table('tbl-fund', 'funding_board', 'key', [
+  { f: 'base' }, { f: 'venues', fmt: F.int, num: true }, { f: 'spread_ann', fmt: FR.pct1, num: true, bar: { max: maxAbs('spread_ann') } },
+  { f: 'max_venue' }, { f: 'min_venue' },
+  ...['mexc', 'gate', 'hyperliquid', 'okx', 'bitget', 'kucoin', 'dydx'].map((v) => ({ f: `r8h_${v}`, fmt: FR.bp8h, num: true }))]);
+table('tbl-fic', 'factor_summary', 'key', [
+  { f: 'round' }, { f: 'factor' }, { f: 'horizon_h', fmt: F.int, num: true },
+  { f: 'rank_ic', fmt: (v) => (v == null ? '' : d3.format('+.4f')(v)), num: true, bar: { max: maxAbs('rank_ic') } },
+  { f: 'ic', fmt: (v) => (v == null ? '' : d3.format('+.4f')(v)), num: true },
+  { f: 'pos_months', fmt: (v) => (v == null ? '' : d3.format('.0%')(v)), num: true }, { f: 'months', fmt: F.int, num: true },
+  { f: 'ls_bp', fmt: (v) => (v == null ? '' : d3.format('+.1f')(v) + ' bp'), num: true }, { f: 'names', fmt: FR.int0, num: true }]);
+table('tbl-coverage', 'coverage', 'key', [
+  { f: 'key' }, { f: 'kind' }, { f: 'first', fmt: F.day }, { f: 'last', fmt: F.day }, { f: 'files', fmt: F.int, num: true },
+  { f: 'gb', fmt: F.size, num: true }, { f: 'bars', fmt: F.int, num: true }, { f: 'holes', fmt: F.int, num: true }, { f: 'source' }]);
+
+// charts
+function svgIn(el, W, H) {
+  return d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+}
+function textW(svg, s) {
+  const t = svg.append('text').text(s);
+  const w = t.node().getComputedTextLength();
+  t.remove();
+  return w;
+}
+function tipIn(el) {
+  const tip = document.createElement('div');
+  tip.className = 'qx-tip';
+  el.append(tip);
+  return tip;
+}
+function showTip(el, tip, x, y, head, lines) {
+  tip.replaceChildren();
+  const d = document.createElement('div');
+  d.className = 'd';
+  d.textContent = head;
+  tip.append(d);
+  lines.forEach((l) => {
+    const r = document.createElement('div');
+    r.className = 'r';
+    if (l.color) {
+      const s = document.createElement('span');
+      s.className = 'qx-sw';
+      s.style.background = l.color;
+      r.append(s);
+    }
+    r.append(document.createTextNode(l.text));
+    tip.append(r);
+  });
+  tip.style.opacity = 1;
+  const W = el.clientWidth;
+  const tw = tip.offsetWidth;
+  tip.style.left = Math.max(0, Math.min(x + 12, W - tw)) + 'px';
+  tip.style.top = Math.max(0, y - tip.offsetHeight - 8) + 'px';
+}
+function thin(ticks, pos, label, svg, gap) {
+  const kept = [];
+  let last = -Infinity;
+  ticks.forEach((v) => {
+    const w = textW(svg, label(v));
+    const left = pos(v) - w / 2;
+    if (left > last + gap) { kept.push(v); last = pos(v) + w / 2; }
+  });
+  return kept;
+}
+function styleAxis(g) {
+  g.attr('font-size', null).attr('font-family', null);
+  g.select('.domain').style('stroke', 'var(--cds-chart-axis)');
+  g.selectAll('.tick line').style('stroke', 'var(--cds-chart-axis)');
+}
+
+function drawBars(el, rows, label, value, fmt, head) {
+  el.replaceChildren();
+  const W = Math.max(el.clientWidth, 240), rowH = 30, H = Math.max(rows.length * rowH + 8, 40);
+  el.style.minHeight = H + 'px';
+  const svg = svgIn(el, W, H);
+  const ml = (d3.max(rows, (r) => textW(svg, label(r))) || 0) + 12;
+  const mr = (d3.max(rows, (r) => textW(svg, fmt(value(r)))) || 0) + 10;
+  const lo = Math.min(0, d3.min(rows, value) || 0), hi = Math.max(0, d3.max(rows, value) || 0) || 1;
+  const x = d3.scaleLinear([lo, hi], [ml, W - mr]);
+  const tip = tipIn(el);
+  const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row').attr('transform', (r, i) => `translate(0,${i * rowH + 4})`);
+  g.append('text').attr('class', 'lead').attr('x', ml - 12).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(label);
+  g.append('rect')
+    .attr('x', (r) => Math.min(x(0), x(value(r)))).attr('y', rowH / 2 - 7).attr('height', 14).attr('rx', 4)
+    .attr('width', (r) => Math.max(2, Math.abs(x(value(r)) - x(0))))
+    .style('fill', (r) => (value(r) >= 0 ? dash.colors[0] : 'var(--cds-chart-muted)'));
+  g.append('text').attr('x', (r) => Math.max(x(0), x(value(r))) + 6).attr('y', rowH / 2).attr('dy', '0.35em').text((r) => fmt(value(r)));
+  if (lo < 0) svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 0).attr('y2', H).style('stroke', 'var(--cds-chart-reference)');
+  g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => { const [mx, my] = d3.pointer(ev, el); showTip(el, tip, mx, my, label(r), [{ text: `${head}: ${fmt(value(r))}` }]); })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+
+function drawScatter(el) {
+  el.replaceChildren();
+  const rows = rowsOf('strategies').filter((r) => r.mean_pct != null && r.t != null);
+  const rounds = Array.from(new Set(rows.map((r) => r.round))).sort();
+  const lanes = {};
+  rows.forEach((r) => { lanes[r.round] = r.lane; });
+  const color = (rd) => dash.colors[rounds.indexOf(rd) % dash.colors.length];
+  const leg = document.createElement('div');
+  leg.className = 'qx-legend';
+  rounds.forEach((rd) => {
+    const s = document.createElement('span');
+    const sw = document.createElement('span');
+    sw.className = 'qx-sw';
+    sw.style.background = color(rd);
+    sw.style.borderRadius = '50%';
+    s.append(sw, document.createTextNode(`${rd} ${lanes[rd]}`));
+    leg.append(s);
+  });
+  el.append(leg);
+  const W = Math.max(el.clientWidth, 280), H = 340;
+  const svg = svgIn(el, W, H);
+  const lim = Math.max(1, d3.max(rows, (r) => Math.abs(r.mean_pct)) || 1);
+  const yDom = d3.extent([-1, 3, ...rows.map((r) => r.t)]);
+  const y = d3.scaleLinear(yDom, [H - 30, 10]).nice();
+  const yt = y.ticks(6);
+  const ml = (d3.max(yt, (v) => textW(svg, d3.format('.0f')(v))) || 0) + 30;
+  const x = d3.scaleSymlog([-lim, lim], [ml, W - 16]).constant(1);
+  const fmtX = (v) => (v === 0 ? '0%' : d3.format('+')(v) + '%');
+  const xt = thin([-300, -100, -30, -10, -3, -1, 0, 1, 3, 10, 30, 100, 300].filter((v) => Math.abs(v) <= lim), x, fmtX, svg, 8);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const gx = svg.append('g').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(fmtX).tickSizeOuter(0));
+  styleAxis(gx);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(d3.format('.0f')).tickSizeOuter(0));
+  styleAxis(gy);
+  svg.append('text').attr('x', ml - 26).attr('y', 4).attr('dy', '0.7em').text('t');
+  svg.append('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y(2)).attr('y2', y(2)).style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
+  svg.append('text').attr('x', W - 16).attr('y', y(2) - 6).attr('text-anchor', 'end').text('t = 2');
+  svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 10).attr('y2', H - 30).style('stroke', 'var(--cds-chart-reference)');
+  svg.append('g').selectAll('circle').data(rows).join('circle')
+    .attr('cx', (r) => x(r.mean_pct)).attr('cy', (r) => y(r.t)).attr('r', (r) => (r.passed ? 6.5 : 4.5))
+    .style('fill', (r) => color(r.round)).style('stroke', (r) => (r.passed ? 'var(--color-fg)' : 'var(--color-panel)'))
+    .style('stroke-width', (r) => (r.passed ? 2 : 1.5)).style('fill-opacity', 0.85);
+  const tip = tipIn(el);
+  const ring = svg.append('circle').attr('r', 8).style('fill', 'none').style('stroke-width', 2).style('opacity', 0);
+  const del = d3.Delaunay.from(rows, (r) => x(r.mean_pct), (r) => y(r.t));
+  svg.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px, py] = d3.pointer(ev);
+      const i = del.find(px, py);
+      const r = rows[i];
+      if (!r || Math.hypot(x(r.mean_pct) - px, y(r.t) - py) > 28) { tip.style.opacity = 0; ring.style('opacity', 0); return; }
+      ring.attr('cx', x(r.mean_pct)).attr('cy', y(r.t)).style('stroke', color(r.round)).style('opacity', 1);
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${r.round} · ${r.strategy}`, [
+        { color: color(r.round), text: `mean ${F.pct(r.mean_pct)} per event, t ${F.t(r.t)}, n ${F.int(r.n)}` },
+        { text: `2x ${F.pct(r.mean_2x_pct)} · 3x ${F.pct(r.mean_3x_pct)}` },
+        { text: r.p_rc != null ? `reality check p ${F.p(r.p_rc)}` : r.null_p != null ? `null p ${F.p(r.null_p)}` : 'no family p' },
+      ]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; ring.style('opacity', 0); });
+}
+
+let GROUP = null;
+const sel = document.getElementById('sel-group');
+sel.addEventListener('change', () => { GROUP = sel.value; drawCum(document.getElementById('chart-cum')); });
+function drawCum(el) {
+  if (!stateBox(el, ['cum_paper'])) return;
+  el.replaceChildren();
+  const all = rowsOf('cum_paper');
+  const groups = Array.from(new Set(all.map((r) => r.group))).sort();
+  if (!GROUP || !groups.includes(GROUP)) GROUP = groups.includes('MEXC flow books') ? 'MEXC flow books' : groups[0];
+  sel.replaceChildren(...groups.map((g) => new Option(g, g)));
+  sel.value = GROUP;
+  const rows = all.filter((r) => r.group === GROUP).map((r) => ({ ...r, d: new Date(r.day) }));
+  if (!rows.length) return;
+  const names = Array.from(new Set(rows.map((r) => r.series))).sort();
+  const color = (n) => dash.colors[names.indexOf(n) % dash.colors.length];
+  const W = Math.max(el.clientWidth, 280), H = 320;
+  const svg = svgIn(el, W, H);
+  const y = d3.scaleLinear(d3.extent([0, ...rows.map((r) => r.cum_pct)]), [H - 28, 12]).nice();
+  const yt = y.ticks(5);
+  const fy = (v) => d3.format('+.0f')(v) + '%';
+  const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
+  const series = names.map((n) => ({ n, pts: rows.filter((r) => r.series === n).sort((a, b) => a.d - b.d) }));
+  const ends = series.filter((s) => Number.isFinite(s.pts[s.pts.length - 1].cum_pct)).map((s) => ({ n: s.n, v: s.pts[s.pts.length - 1].cum_pct, label: `${s.n} ${F.pct(s.pts[s.pts.length - 1].cum_pct)}` }));
+  const mr = (d3.max(ends, (e) => textW(svg, e.label)) || 0) + 14;
+  const x = d3.scaleUtc(d3.extent(rows, (r) => r.d), [ml, W - mr]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const xt = thin(x.ticks(6), x, d3.utcFormat('%b %-d'), svg, 10);
+  const gx = svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(d3.utcFormat('%b %-d')).tickSizeOuter(0));
+  styleAxis(gx);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fy).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  const firstOn = d3.min(rows.filter((r) => r.kind === 'ontime'), (r) => r.d);
+  if (firstOn) {
+    svg.append('line').attr('x1', x(firstOn)).attr('x2', x(firstOn)).attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
+    svg.append('text').attr('x', x(firstOn) - 6).attr('y', 12).attr('dy', '0.7em').attr('text-anchor', 'end').text('on time →');
+  }
+  const line = d3.line().defined((r) => Number.isFinite(r.cum_pct)).x((r) => x(r.d)).y((r) => y(r.cum_pct));
+  series.forEach((s) => {
+    svg.append('path').datum(s.pts).attr('d', line).style('fill', 'none').style('stroke', color(s.n))
+      .style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round');
+  });
+  ends.forEach((e) => { e.y = y(e.v); });
+  ends.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  const over = ends.length ? ends[ends.length - 1].y - (H - 28) : 0;
+  if (over > 0) ends.forEach((e) => { e.y -= over; });
+  ends.forEach((e) => {
+    svg.append('text').attr('class', 'lead').attr('x', W - mr + 8).attr('y', e.y).attr('dy', '0.35em').text(e.label);
+  });
+  const tip = tipIn(el);
+  const rule = svg.append('line').attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+  const dots = svg.append('g');
+  const days = Array.from(new Set(rows.map((r) => +r.d))).sort((a, b) => a - b);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - mr - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev);
+      const t = +x.invert(px);
+      const day = days[d3.minIndex(days, (d) => Math.abs(d - t))];
+      const at = series.map((s) => ({ n: s.n, p: s.pts.find((r) => +r.d === day) })).filter((a) => a.p && Number.isFinite(a.p.cum_pct));
+      rule.attr('x1', x(day)).attr('x2', x(day)).style('opacity', 1);
+      dots.selectAll('circle').data(at).join('circle').attr('cx', x(day)).attr('cy', (a) => y(a.p.cum_pct)).attr('r', 4)
+        .style('fill', (a) => color(a.n)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+      const [mx, my] = d3.pointer(ev, el);
+      const kind = at.length ? (at[0].p.kind === 'ontime' ? 'on time' : 'replay') : '';
+      showTip(el, tip, mx, my, `${d3.utcFormat('%b %-d, %Y')(new Date(day))} · ${kind}`,
+        at.sort((a, b) => b.p.cum_pct - a.p.cum_pct).map((a) => ({ color: color(a.n), text: `${a.n} ${F.pct(a.p.cum_pct)}` })));
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dots.selectAll('circle').remove(); });
+}
+
+// factors: cumulative rank IC per factor for one report and horizon
+let FROUND = null, FH = null;
+const selFR = document.getElementById('sel-fround'), selFH = document.getElementById('sel-fh');
+selFR.addEventListener('change', () => { FROUND = selFR.value; render(); });
+selFH.addEventListener('change', () => { FH = +selFH.value; render(); });
+function drawFactorIC(el) {
+  el.replaceChildren();
+  const all = rowsOf('factor_ic');
+  const rounds = Array.from(new Set(all.map((r) => r.round))).sort();
+  if (!rounds.length) { const d = document.createElement('div'); d.className = 'qx-fail'; d.textContent = 'No factor report registered yet'; el.append(d); return; }
+  if (!rounds.includes(FROUND)) FROUND = rounds[rounds.length - 1];
+  selFR.replaceChildren(...rounds.map((r) => new Option(r, r)));
+  selFR.value = FROUND;
+  const hs = Array.from(new Set(all.filter((r) => r.round === FROUND).map((r) => r.horizon_h))).sort((a, b) => a - b);
+  if (!hs.includes(FH)) FH = hs[0];
+  selFH.replaceChildren(...hs.map((h) => new Option(`${h} h`, h)));
+  selFH.value = FH;
+  const rows = all.filter((r) => r.round === FROUND && r.horizon_h === FH);
+  const names = Array.from(new Set(rows.map((r) => r.factor))).sort();
+  const color = (n) => dash.colors[names.indexOf(n) % dash.colors.length];
+  const series = names.map((n) => {
+    let c = 0;
+    return { n, pts: rows.filter((r) => r.factor === n).sort((a, b) => a.month.localeCompare(b.month))
+      .map((r) => { c += (r.rank_ic ?? 0) * r.days; return { d: new Date(r.month + '-01T00:00:00Z'), v: c, r }; }) };
+  });
+  const pts = series.flatMap((s) => s.pts);
+  const W = Math.max(el.clientWidth, 280), H = 320;
+  const svg = svgIn(el, W, H);
+  const y = d3.scaleLinear(d3.extent([0, ...pts.map((p) => p.v)]), [H - 28, 12]).nice();
+  const yt = y.ticks(5);
+  const fy = d3.format('+.1f');
+  const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
+  const ends = series.filter((s) => s.pts.length).map((s) => ({ n: s.n, v: s.pts[s.pts.length - 1].v, label: `${s.n} ${fy(s.pts[s.pts.length - 1].v)}` }));
+  const mr = (d3.max(ends, (e) => textW(svg, e.label)) || 0) + 14;
+  const x = d3.scaleUtc(d3.extent(pts, (p) => p.d), [ml, W - mr]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const xt = thin(x.ticks(6), x, d3.utcFormat('%Y'), svg, 10);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(d3.utcFormat('%Y')).tickSizeOuter(0)));
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fy).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-reference)');
+  const line = d3.line().x((p) => x(p.d)).y((p) => y(p.v));
+  series.forEach((s) => svg.append('path').datum(s.pts).attr('d', line).style('fill', 'none').style('stroke', color(s.n))
+    .style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round'));
+  ends.forEach((e) => { e.y = y(e.v); });
+  ends.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  const over = ends.length ? ends[ends.length - 1].y - (H - 28) : 0;
+  if (over > 0) ends.forEach((e) => { e.y -= over; });
+  ends.forEach((e) => svg.append('text').attr('class', 'lead').attr('x', W - mr + 8).attr('y', e.y).attr('dy', '0.35em').text(e.label));
+  const tip = tipIn(el);
+  const rule = svg.append('line').attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+  const dots = svg.append('g');
+  const months = Array.from(new Set(pts.map((p) => +p.d))).sort((a, b) => a - b);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - mr - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev);
+      const t = +x.invert(px);
+      const m = months[d3.minIndex(months, (d) => Math.abs(d - t))];
+      const at = series.map((s) => ({ n: s.n, p: s.pts.find((p) => +p.d === m) })).filter((a) => a.p);
+      rule.attr('x1', x(m)).attr('x2', x(m)).style('opacity', 1);
+      dots.selectAll('circle').data(at).join('circle').attr('cx', x(m)).attr('cy', (a) => y(a.p.v)).attr('r', 4)
+        .style('fill', (a) => color(a.n)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${d3.utcFormat('%b %Y')(new Date(m))} · ${FH} h`,
+        at.sort((a, b) => b.p.v - a.p.v).map((a) => ({ color: color(a.n), text: `${a.n}: month ${d3.format('+.3f')(a.p.r.rank_ic)}, cumulative ${fy(a.p.v)}` })));
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dots.selectAll('circle').remove(); });
+}
+
+// performance: one selected series
+let SERIES = null;
+const selSeries = document.getElementById('sel-series');
+selSeries.addEventListener('change', () => { SERIES = selSeries.value; render(); });
+function pickSeries() {
+  const sheets = rowsOf('tearsheets');
+  if (!SERIES || !sheets.some((s) => s.series === SERIES)) {
+    const best = sheets.filter((s) => s.kind === 'backtest').sort((a, b) => (b.days || 0) - (a.days || 0))[0] || sheets[0];
+    SERIES = best ? best.series : null;
+  }
+  selSeries.replaceChildren(...sheets.map((s) => new Option(`${s.series} · ${s.kind}`, s.series)));
+  if (SERIES) selSeries.value = SERIES;
+  return sheets.find((s) => s.series === SERIES);
+}
+function drawSheetKpis(s) {
+  const box = document.getElementById('sheet-kpis');
+  document.getElementById('sheet-note').textContent = s ? `${s.label} · ${s.start} to ${s.end} · ${s.note}` : '';
+  if (!s) { box.replaceChildren(); return; }
+  const tiles = [
+    s.cagr != null ? ['CAGR', FR.pct1(s.cagr), `total ${FR.pct1(s.total_return)}`] : ['Total return', FR.pct1(s.total_return), `${F.int(s.days)} days: too short to annualize`],
+    ['Sharpe, AC-adjusted', FR.num2(s.sharpe_ac), `naive ${FR.num2(s.sharpe)} · lag-1 autocorr ${FR.num2(s.ac1)}`],
+    ['Max drawdown', FR.pct1(s.max_drawdown), `${F.int(s.max_dd_days)} days under water`],
+    ['Newey-West t', F.t(s.t_nw), `naive t ${F.t(s.t)} · ${F.int(s.days)} days`],
+    ['PSR (Sharpe > 0)', F.p(s.psr), `effective days ${FR.int0(s.n_eff)}`],
+    ['Deflated Sharpe', F.p(s.dsr), `at ${F.compact(s.dsr_trials)} trials (bar Sharpe ${FR.num2(s.dsr_bar_sharpe)})`],
+  ];
+  box.replaceChildren(...tiles.map(([lab, val, sub]) => {
+    const d = document.createElement('div');
+    d.className = 'qx-kpi';
+    [['lab', lab], ['val', val || '—'], ['sub', sub]].forEach(([c, t]) => {
+      const e = document.createElement('div');
+      e.className = c;
+      e.textContent = t;
+      d.append(e);
+    });
+    return d;
+  }));
+}
+function drawLineChart(el, pts, yf, fmtY, area, H) {
+  el.replaceChildren();
+  if (!pts.length) return;
+  const W = Math.max(el.clientWidth, 280);
+  const svg = svgIn(el, W, H);
+  const vals = pts.map(yf).filter(Number.isFinite);
+  const y = d3.scaleLinear(d3.extent([0, ...vals]), [H - 28, 12]).nice();
+  const yt = y.ticks(area ? 3 : 5);
+  const ml = (d3.max(yt, (v) => textW(svg, fmtY(v))) || 0) + 10;
+  const x = d3.scaleUtc(d3.extent(pts, (p) => p.d), [ml, W - 16]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const fx = (pts[pts.length - 1].d - pts[0].d) > 400 * 864e5 ? d3.utcFormat('%Y') : d3.utcFormat('%b %-d');
+  const xt = thin(x.ticks(6), x, fx, svg, 10);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(fx).tickSizeOuter(0)));
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fmtY).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-reference)');
+  const def = (p) => Number.isFinite(yf(p));
+  if (area) {
+    svg.append('path').datum(pts).attr('d', d3.area().defined(def).x((p) => x(p.d)).y0(y(0)).y1((p) => y(yf(p))))
+      .style('fill', 'var(--cds-chart-muted)').style('opacity', 0.6);
+  }
+  svg.append('path').datum(pts).attr('d', d3.line().defined(def).x((p) => x(p.d)).y((p) => y(yf(p))))
+    .style('fill', 'none').style('stroke', area ? 'var(--cds-chart-muted)' : dash.colors[0]).style('stroke-width', 2).style('stroke-linejoin', 'round');
+  const tip = tipIn(el);
+  const rule = svg.append('line').attr('y1', 12).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+  const dot = svg.append('circle').attr('r', 4).style('fill', area ? 'var(--cds-chart-muted)' : dash.colors[0]).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5).style('opacity', 0);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - 16 - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev);
+      const t = +x.invert(px);
+      const p = pts[d3.minIndex(pts, (q) => Math.abs(+q.d - t))];
+      if (!p || !def(p)) return;
+      rule.attr('x1', x(p.d)).attr('x2', x(p.d)).style('opacity', 1);
+      dot.attr('cx', x(p.d)).attr('cy', y(yf(p))).style('opacity', 1);
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, d3.utcFormat('%b %-d, %Y')(p.d), [
+        { text: `equity ${FR.pct1(p.equity - 1)} · drawdown ${FR.pct1(p.drawdown)}` },
+        { text: p.rolling_sharpe != null ? `90-day Sharpe ${FR.num2(p.rolling_sharpe)}` : '90-day Sharpe needs 90 days' }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; rule.style('opacity', 0); dot.style('opacity', 0); });
+}
+function drawMonthly(el) {
+  el.replaceChildren();
+  const rows = rowsOf('monthly').filter((m) => m.series === SERIES && m.ret != null);
+  if (!rows.length) return;
+  const years = Array.from(new Set(rows.map((m) => m.year))).sort();
+  const W = Math.max(el.clientWidth, 300), rowH = 26, H = years.length * rowH + 24;
+  el.style.minHeight = H + 'px';
+  const svg = svgIn(el, W, H);
+  const ml = textW(svg, '2026') + 12;
+  const cw = (W - ml) / 13;
+  const yearRet = (yr) => rows.filter((m) => m.year === yr).reduce((a, m) => a * (1 + m.ret), 1) - 1;
+  const lim = d3.max(rows, (m) => Math.abs(m.ret)) || 0.01;
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Year'];
+  months.forEach((m, i) => svg.append('text').attr('x', ml + i * cw + cw / 2).attr('y', 12).attr('text-anchor', 'middle').text(cw > 30 ? m : m[0]));
+  const tip = tipIn(el);
+  years.forEach((yr, j) => {
+    const y0 = 20 + j * rowH;
+    svg.append('text').attr('class', 'lead').attr('x', ml - 8).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(yr);
+    for (let k = 0; k < 13; k++) {
+      const v = k < 12 ? (rows.find((m) => m.year === yr && m.month === k + 1) || {}).ret : yearRet(yr);
+      if (v == null) continue;
+      const g = svg.append('g');
+      g.append('rect').attr('x', ml + k * cw + 1).attr('y', y0 + 1).attr('width', cw - 2).attr('height', rowH - 2).attr('rx', 3)
+        .style('fill', v >= 0 ? dash.colors[0] : 'var(--cds-chart-muted)')
+        .style('opacity', k === 12 ? 1 : 0.25 + 0.75 * Math.min(Math.abs(v) / lim, 1));
+      if (cw > 38) g.append('text').attr('x', ml + k * cw + cw / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle')
+        .style('fill', 'var(--color-fg)').text(d3.format('+.1f')(v * 100));
+      g.on('pointermove', (ev) => { const [mx, my] = d3.pointer(ev, el); showTip(el, tip, mx, my, `${months[k]} ${yr}`, [{ text: FR.pct2(v) }]); })
+        .on('pointerleave', () => { tip.style.opacity = 0; });
+    }
+  });
+}
+function drawBoard(el) {
+  el.replaceChildren();
+  const rows = rowsOf('leaderboard').filter((r) => r.best_t != null || r.notes_t != null || r.family_null_p95 != null);
+  if (!rows.length) return;
+  const verdicts = Array.from(new Set(rows.map((r) => r.verdict))).sort();
+  const color = (v) => dash.colors[verdicts.indexOf(v) % dash.colors.length];
+  const leg = document.createElement('div');
+  leg.className = 'qx-legend';
+  verdicts.forEach((v) => {
+    const s = document.createElement('span');
+    const sw = document.createElement('span');
+    sw.className = 'qx-sw';
+    sw.style.background = color(v);
+    sw.style.borderRadius = '50%';
+    s.append(sw, document.createTextNode(`best t, ${v}`));
+    leg.append(s);
+  });
+  [['t in note (parsed)', '○'], ['chance bar', '—'], ['family null', '◇']].forEach(([lab, sym]) => {
+    const s = document.createElement('span');
+    s.textContent = `${sym} ${lab}`;
+    leg.append(s);
+  });
+  el.append(leg);
+  const W = Math.max(el.clientWidth, 300), H = 320;
+  const svg = svgIn(el, W, H);
+  const vals = rows.flatMap((r) => [r.best_t ?? r.notes_t, r.chance_bar_t]).filter(Number.isFinite);
+  const top = Math.max(4, d3.max(vals) || 0) * 1.25;
+  const y = d3.scaleLinear([Math.min(0, d3.min(vals) || 0), top], [H - 34, 10]).nice();
+  const cy = (v) => y(Math.min(v, y.domain()[1]));
+  const yt = y.ticks(6);
+  const ml = (d3.max(yt, (v) => textW(svg, d3.format('.0f')(v))) || 0) + 26;
+  const x = d3.scaleBand(rows.map((r) => r.id), [ml, W - 10]).padding(0.3);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 10).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(d3.format('.0f')).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  svg.append('text').attr('x', ml - 22).attr('y', 4).attr('dy', '0.7em').text('t');
+  const xt = thin(rows.map((r) => r.id), (id) => x(id) + x.bandwidth() / 2, (id) => id, svg, 6);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 34})`).call(d3.axisBottom(x).tickValues(xt).tickSizeOuter(0)));
+  const g = svg.selectAll('g.r').data(rows).join('g').attr('class', 'r').attr('transform', (r) => `translate(${x(r.id) + x.bandwidth() / 2},0)`);
+  const bw = Math.max(6, Math.min(18, x.bandwidth()));
+  g.filter((r) => r.chance_bar_t != null).append('line').attr('x1', -bw / 2).attr('x2', bw / 2)
+    .attr('y1', (r) => y(r.chance_bar_t)).attr('y2', (r) => y(r.chance_bar_t)).style('stroke', 'var(--color-fg-muted)').style('stroke-width', 2);
+  g.filter((r) => r.family_null_p95 != null).append('path').attr('d', d3.symbol(d3.symbolDiamond2, 70))
+    .attr('transform', (r) => `translate(0,${cy(r.family_null_p95)})`).style('fill', 'none').style('stroke', 'var(--color-fg-muted)').style('stroke-width', 1.5);
+  g.filter((r) => r.family_null_p95 != null && r.family_null_p95 > y.domain()[1]).append('text').attr('y', y(y.domain()[1]) + 16)
+    .attr('text-anchor', 'middle').text((r) => `↑ ${d3.format('.0f')(r.family_null_p95)}`);
+  g.filter((r) => r.best_t != null).append('circle').attr('cy', (r) => cy(r.best_t)).attr('r', 5)
+    .style('fill', (r) => color(r.verdict)).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+  g.filter((r) => r.best_t == null && r.notes_t != null).append('circle').attr('cy', (r) => cy(r.notes_t)).attr('r', 4.5)
+    .style('fill', 'var(--color-panel)').style('stroke', (r) => color(r.verdict)).style('stroke-width', 2);
+  const tip = tipIn(el);
+  g.append('rect').attr('x', -x.step() / 2).attr('y', 0).attr('width', x.step()).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => {
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${r.id} · ${r.lane} · ${r.verdict}`, [
+        { color: color(r.verdict), text: r.best_t != null ? `best t ${F.t(r.best_t)}${r.best_strategy ? ' (' + r.best_strategy + ')' : ''}` : `t in note ${F.t(r.notes_t)} (parsed)` },
+        { text: `chance bar ${F.t(r.chance_bar_t)} for ${F.int(r.trials)} tries` },
+        { text: r.family_null_p95 != null ? `family null 95% ${F.t(r.family_null_p95)}` : 'no family reality check on file' }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+function drawTrials(el) {
+  el.replaceChildren();
+  const rows = rowsOf('leaderboard').filter((r) => r.program_trials > 0);
+  if (!rows.length) return;
+  const W = Math.max(el.clientWidth, 300), H = 180;
+  const svg = svgIn(el, W, H);
+  const y = d3.scaleLog([1, d3.max(rows, (r) => r.program_trials)], [H - 28, 10]).nice();
+  const yt = [10, 1e3, 1e5, 1e7].filter((v) => v <= y.domain()[1]);
+  const fy = (v) => new Intl.NumberFormat('en', { notation: 'compact' }).format(v);
+  const ml = (d3.max(yt, (v) => textW(svg, fy(v))) || 0) + 10;
+  const x = d3.scaleLinear([1, rows.length], [ml, W - 16]);
+  svg.append('g').selectAll('line').data(yt).join('line').attr('x1', ml).attr('x2', W - 16).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yt).tickFormat(fy).tickSize(0));
+  styleAxis(gy);
+  gy.select('.domain').remove();
+  const idx = rows.map((r, i) => ({ ...r, i: i + 1 }));
+  const xt = thin(d3.range(0, idx.length, Math.max(1, Math.round(idx.length / 8))).map((i) => i + 1), x, (i) => idx[i - 1].id, svg, 8);
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat((i) => idx[i - 1].id).tickSizeOuter(0)));
+  svg.append('path').datum(idx).attr('d', d3.line().curve(d3.curveStepAfter).x((r) => x(r.i)).y((r) => y(r.program_trials)))
+    .style('fill', 'none').style('stroke', dash.colors[0]).style('stroke-width', 2);
+  const tip = tipIn(el);
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', Math.max(0, W - 16 - ml)).attr('height', H).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const r = idx[Math.max(0, Math.min(idx.length - 1, Math.round(x.invert(d3.pointer(ev)[0])) - 1))];
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, `${r.id} · ${r.lane}`, [{ text: `${F.int(r.trials)} trials; program total ${F.int(r.program_trials)}` }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+function drawCoverage(el) {
+  el.replaceChildren();
+  const rows = rowsOf('coverage').filter((r) => r.first && r.last).map((r) => ({ ...r, a: new Date(r.first), b: new Date(r.last) }))
+    .sort((p, q) => p.a - q.a);
+  if (!rows.length) return;
+  const kinds = Array.from(new Set(rows.map((r) => r.kind))).sort();
+  const color = (k) => dash.colors[kinds.indexOf(k) % dash.colors.length];
+  const W = Math.max(el.clientWidth, 300), rowH = 22, H = rows.length * rowH + 30;
+  el.style.minHeight = H + 'px';
+  const svg = svgIn(el, W, H);
+  const ml = (d3.max(rows, (r) => textW(svg, r.key)) || 0) + 12;
+  const x = d3.scaleUtc([d3.min(rows, (r) => r.a), new Date()], [ml, W - 12]);
+  const xt = thin(x.ticks(8), x, d3.utcFormat('%Y'), svg, 10);
+  svg.append('g').selectAll('line').data(xt).join('line').attr('x1', x).attr('x2', x).attr('y1', 0).attr('y2', H - 24).style('stroke', 'var(--cds-chart-grid)');
+  styleAxis(svg.append('g').attr('transform', `translate(0,${H - 24})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(d3.utcFormat('%Y')).tickSizeOuter(0)));
+  const tip = tipIn(el);
+  const g = svg.selectAll('g.c').data(rows).join('g').attr('class', 'c').attr('transform', (r, i) => `translate(0,${i * rowH})`);
+  g.append('text').attr('class', 'lead').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((r) => r.key);
+  g.append('rect').attr('x', (r) => x(r.a)).attr('y', rowH / 2 - 6).attr('height', 12).attr('rx', 4)
+    .attr('width', (r) => Math.max(3, x(r.b) - x(r.a))).style('fill', (r) => color(r.kind));
+  g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => {
+      const [mx, my] = d3.pointer(ev, el);
+      showTip(el, tip, mx, my, r.key, [
+        { color: color(r.kind), text: `${r.kind}: ${F.day(r.first)} to ${F.day(r.last)}` },
+        { text: `${F.int(r.files)} files, ${F.size(r.gb)}${r.holes != null ? `, ${F.int(r.holes)} missing hours` : ''}` }]);
+    })
+    .on('pointerleave', () => { tip.style.opacity = 0; });
+}
+
+function renderPaper() {
+  if (document.getElementById('paper').hidden) return;
+  const words = {verified:'vérifié dans le périmètre indiqué',partial:'partiel',blocked:'bloqué',not_selected:'écarté avec raison'};
+  const needed = {first_seen_quote_depth:'Carnets et délais de réception',complete_session_availability:'Ouverture des deux marchés',event_bound_fair_index_notional:'Prix exact de financement',source_bound_fees:'Frais prouvés',complete_fill_and_capital_accounting:'Exécutions et capital complets',on_time_frozen_protocol:'Protocole figé et observations à temps'};
+  const money = (v) => v == null ? 'inconnu' : Number.isFinite(Number(v)) ? new Intl.NumberFormat('fr', {maximumFractionDigits:2}).format(Number(v)) : 'inconnu';
+  const cells = (id, headers, rows) => {
+    const el = document.getElementById(id); el.replaceChildren();
+    if (!rows.length) { el.textContent = 'Rapport absent ou inconnu ; aucun zéro supposé.'; return; }
+    const t = document.createElement('table'); t.className = 'qx-t';
+    const head = document.createElement('thead'); const tr = document.createElement('tr');
+    headers.forEach(h => {const th=document.createElement('th');th.textContent=h;th.style.padding='var(--cds-pad-xs, 6px) var(--cds-pad-sm, 10px)';tr.append(th);}); head.append(tr);t.append(head);
+    const body=document.createElement('tbody');
+    rows.forEach(r => {const tr=document.createElement('tr');r.forEach(v => {const td=document.createElement('td');td.textContent=v==null?'inconnu':String(v);tr.append(td);});body.append(tr);});
+    t.append(body);el.append(t);
+  };
+  const accounts=rowsOf('paper_accounts');
+  cells('paper-accounts',['Plateforme','Devise','Capital initial fictif','Prix réalisé','Financement','Frais payés','Gain net fermé fictif','Sortie des positions ouvertes','Frais futurs de sortie','Valeur totale fictive','Capital disponible','Capital immobilisé','PnL observé'],
+    accounts.map(a=>[a.venue,a.asset,...['initial_cash','realized_price_pnl','funding_pnl','fees_paid','realized_net_pnl','unrealized_liquidation_pnl','estimated_future_exit_fees','nav','available_capital','locked_capital','observed_net_pnl'].map(k=>money(a[k]))]));
+  const controls=rowsOf('paper_controls');
+  cells('paper-controls',['Coûts','Gain attendu','Coût prévu','Erreur mesurée','Gain net prudent','Code','Marché','État du risque','Entrée manquante'],
+    controls.map(r=>[r.cost_multiple==null?'inconnu':r.cost_multiple+'x',money(r.expected_gross_quote),money(r.all_in_cost_quote),money(r.calibrated_error_quote),money(r.expected_net_lower_quote),r.code_state||'inconnu',r.market_state||'inconnu',r.risk_state==='HALTED'?'arrêté':r.risk_state,r.missing_input]));
+  const proof=document.getElementById('paper-provenance');proof.replaceChildren();
+  const a=accounts[0],c=controls.find(r=>r.reproduce);
+  const line=document.createElement('p');line.textContent=a?`Origine : ${a.evidence_mode}. Réception réelle du marché : inconnue. Rapport : ${a.source_report}. SHA256 du rapport : ${a.report_sha256}. Entrées figées : ${a.source_input_sha256}. Code figé : ${a.source_code_sha256||'inconnu'}. Période : ${a.period_label||'inconnue'}.`:'Identité de la preuve inconnue.';proof.append(line);
+  if(c){const code=document.createElement('code');code.textContent=c.reproduce;proof.append(code);const note=document.createElement('p');note.textContent='Commande à copier dans le checkout correspondant. Elle vérifie les identités figées avant calcul. Cette page n’exécute aucune commande.';proof.append(note);}
+  cells('paper-admission',['Étude','Lignes conservées','Anciennes étiquettes à temps','Jours exécutables prouvés','Rendement net strict','Entrées manquantes'],
+    rowsOf('paper_admission').map(r=>[r.series,r.reported_rows,r.native_ontime_labels,r.strict_executable_scored_days,money(r.strict_net_return),(r.missing_inputs||[]).map(k=>needed[k]||k).join(' ; ')]));
+  const req=rowsOf('paper_requirements'),count={};req.forEach(r=>{count[r.state]=(count[r.state]||0)+1;});
+  document.getElementById('paper-coverage').textContent=req.length?`${req.length} demandes reçues : `+Object.entries(count).map(([k,v])=>v+' '+(words[k]||k)).join(' ; ')+'. Aucun compteur ne signifie100 stratégies rentables.':'État inconnu.';
+  cells('paper-requirements',['N°','Demande du propriétaire','État','Preuve et limite'],req.map(r=>[r.id,r.text,words[r.state]||r.state,r.reason]));
+}
+
+function render() {
+  fillMarks();
+  renderPaper();
+  Object.keys(TABLES).forEach(drawTable);
+  const vis = (id) => { const el = document.getElementById(id); return isVisible(el) ? el : null; };
+  let el;
+  if ((el = vis('chart-stages')) && stateBox(el, ['stage_counts'])) drawBars(el, rowsOf('stage_counts'), (r) => r.stage, (r) => r.n, F.int, 'candidates');
+  if ((el = vis('chart-lanes')) && stateBox(el, ['forward_lanes'])) {
+    const rows = rowsOf('forward_lanes').filter((r) => r.net_pct != null);
+    if (rows.length) drawBars(el, rows, (r) => `${r.round} ${r.display_name || r.what}`, (r) => r.net_pct, F.pct, 'net 1x');
+    else el.replaceChildren();
+  }
+  if ((el = vis('chart-verdicts')) && stateBox(el, ['verdict_counts'])) drawBars(el, rowsOf('verdict_counts'), (r) => r.verdict, (r) => r.n, F.int, 'rounds');
+  if ((el = vis('chart-mstatus')) && stateBox(el, ['method_counts'])) drawBars(el, rowsOf('method_counts'), (r) => r.status, (r) => r.n, F.int, 'methods');
+  if ((el = vis('chart-edgemap')) && stateBox(el, ['strategies'])) drawScatter(el);
+  if ((el = vis('chart-cum'))) drawCum(el);
+  if (vis('chart-equity') && ok('tearsheets')) {
+    drawSheetKpis(pickSeries());
+    if ((el = vis('chart-equity')) && stateBox(el, ['equity'])) {
+      const pts = rowsOf('equity').filter((p) => p.series === SERIES).map((p) => ({ ...p, d: new Date(p.date) }));
+      drawLineChart(el, pts, (p) => (p.equity == null ? NaN : (p.equity - 1) * 100), (v) => d3.format('+.0f')(v) + '%', false, 300);
+      const dd = vis('chart-dd');
+      if (dd) drawLineChart(dd, pts, (p) => (p.drawdown == null ? NaN : p.drawdown * 100), (v) => d3.format('.0f')(v) + '%', true, 150);
+    }
+    if ((el = vis('chart-monthly')) && stateBox(el, ['monthly'])) drawMonthly(el);
+  }
+  if ((el = vis('chart-board')) && stateBox(el, ['leaderboard'])) drawBoard(el);
+  if ((el = vis('chart-trials')) && stateBox(el, ['leaderboard'])) drawTrials(el);
+  if ((el = vis('chart-fic')) && stateBox(el, ['factor_ic'])) drawFactorIC(el);
+  if ((el = vis('chart-fund')) && stateBox(el, ['funding_board'])) {
+    const rows = rowsOf('funding_board').slice(0, 25);
+    drawBars(el, rows, (r) => `${r.base} · ${r.max_venue} over ${r.min_venue}`, (r) => r.spread_ann * 100, (v) => d3.format(',.0f')(v) + '%/yr', 'spread');
+  }
+  if ((el = vis('chart-coverage')) && stateBox(el, ['coverage'])) drawCoverage(el);
+}
+
+const tabs = Array.from(document.querySelectorAll('#qx .qx-tab'));
+function show(name) {
+  tabs.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === name)));
+  document.querySelectorAll('#qx .qx-page').forEach((p) => { p.hidden = p.id !== name; });
+  dash.setLink(name);
+  render();
+}
+tabs.forEach((b) => b.addEventListener('click', () => show(b.dataset.tab)));
+document.querySelectorAll('#qx .qx-chart').forEach((c) => c.classList.add('dash-skeleton'));
+dash.onData(render);
+const named = location.hash.slice(1);
+if (tabs.some((b) => b.dataset.tab === named)) show(named);
+</script>

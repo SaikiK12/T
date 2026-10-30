@@ -1,0 +1,51 @@
+{
+  "external_replay_packages": {
+    "websockets": "16.0"
+  },
+  "note": "All local AST-resolved imported calculation/collector/verification dependencies and direct finite tests/review scripts. Shared mutable account CLI dispatcher excluded; it delegates to frozen report.",
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "registry_id": "R327",
+  "sha256": {
+    "experiments/dated_carry_v1/dated_handchecks_final.py": "0570a35d6041917ba1bb1a85841c39e6072be23edc55f11782ed95d04b41fefd",
+    "experiments/dated_carry_v1/math_handchecks_final.py": "599b7f9a98dc5d23a76d802c7640a67751348221ca42b846fc3e9bb0ba1424c0",
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/acquisition_budget.py": "0a5da0a741d8fa1280f0a8a5b2e08f1e4ced787565de8260bb0d53c101ea98bb",
+    "lab/data.py": "a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe",
+    "lab/dated_carry.py": "ce0daa930a4f821f9eec13bbd0f10597ac4b67c9b2eee405f285b47ee64e94bb",
+    "lab/depth_replay.py": "9e5696116b7813b9cd97079338e1f233b955094ae6ce2bd363a2903a0fd8c264",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/funding_values.py": "47cdafb63f4104c96760f8cf5778a25670e285bec8125201e573a33c5a7ec864",
+    "lab/inverse_cash.py": "18d57d37737288a4655efdeaef8e15693a3565ba8f6d7c1a4a1c5bf0f589348f",
+    "lab/lighter_depth_state.py": "453be0de2ee114618b2ea8f94498b50b7f94a2ebf82f003a5cf3383eb9db88cb",
+    "lab/mexc.py": "7d371f0aba11aeaeaf3c050bfbc0f0f072c1c425786688ab2dbc7683c4c997d6",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/mexc_spot_wire.py": "46094c2b1abc1e2d81c0536b8c73f567aaacd1a56ab1fd502b094b58fe61dd0f",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/paper_account.py": "b862ac3cc3b7012f1768b55e179165ed36ef46684ee6edf931efc357c7c9f0f2",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/spot_cash.py": "7ab221fd898cf25ce48c77fb05a16e8a7e445f6b90a65fb34e1be078b53c6a71",
+    "lab/spot_input_bridge.py": "dbf2162685740a888e9964ec99e638a07cc8d9b191ed9da6b6413acd21887d34",
+    "lab/spot_pair.py": "ed46f386c6fae731c337d888708e80eb5772e52ae964dbb11f87f424c6a478ce",
+    "lab/spot_quote_costs.py": "bc682b8dcc1153ed66125e21aa202c5783a59c66d9b393e4c5c41ca911231e95",
+    "lab/stream_quotes.py": "8402a10afdc15bafca31dc5eddab017a8cfd2e7ba673b5917e77330801a4fcf9",
+    "lab/tape.py": "51f1c98f92ab288f7544e1cf591a96067a69eec27aa28c5cfe93bb3889a0d4d2",
+    "scripts/check_dated_carry.py": "f3340b03b44d28cad6db879b160b620471db6cadf8a138ef3e84faa4e624be99",
+    "scripts/probe_dated_carry.py": "91354c112d52caf571a0fcbdc5eab86adc7c870c74d01daa33ada25571396e37",
+    "scripts/probe_depth_quotes.py": "fb84bf4d268f84c41dd514930a635bb54c580fb7588e26ce458a21ef1ecfb528",
+    "scripts/probe_spot_costs.py": "a3af943c98ed4791f1c2b5020676bca64351ff126598736e3bdd271bf4ac0c42",
+    "scripts/probe_stream_quotes.py": "923f8797197a9c40f932465e3fdb2f7aa6084e6933259f7c9480094c7d0b089a",
+    "scripts/record_lighter_book.py": "fb152eaf22ae864080fc3e93b4aecf4eb5e228ea50f1d7730209ff9185f9ca92",
+    "scripts/record_tape.py": "5590c59fc21cf0f26f94471d089ba251b3135da251cc8a438346a32ae2d41641",
+    "scripts/run_dated_carry.py": "0e8242d4e119e0280bde798a5ff92081d96aaaab2228a3e89ab98e5abc7e3d1a",
+    "scripts/run_spot_costs.py": "091c6c1ddbbc35a2ffc1ef22e2c3263b88f0a9c47846580448285e96e29c3b11",
+    "scripts/run_spot_perp_account.py": "257d51ad23d3bdd16da451a886d6a037139f54721470633dca04c0994301a6be",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_dated_carry.py": "d0261cab26e42f1909579d2dff8c2592b24b828f38c32eb91e869e646c3d3b13",
+    "tests/test_dated_workflow.py": "4feaa5b1ac3089d8939cf2249666f7d758d7749a8ff6bb7eeb5c569355d7d366",
+    "tests/test_inverse_cash.py": "4afb52fa8dbefde5aaf5bd72545d9fdb0fde8295dedcff6176c68c192bdbbd31"
+  }
+}

@@ -1,0 +1,16 @@
+12:00:00 PREREG verified 19f56764c4a8; 7 inputs match
+12:00:12 fit ridge h1 clean
+12:00:30 fit ic h1 clean
+12:00:52 fit gbm h1 clean
+12:11:18 fit ridge h7 clean
+12:11:23 fit ic h7 clean
+12:11:33 fit gbm h7 clean
+12:13:34 fit gbm h7 leak
+12:14:30 ridge h1 clean: disc net +7.56 bp/day t 0.99452547074213, valid net -12.33 t -1.0932506180521802; rank IC disc 0.10987288305814184 valid 0.10222181401964879
+12:14:30 ic h1 clean: disc net +2.43 bp/day t 0.29922873484221607, valid net -22.83 t -1.9367101965290714; rank IC disc 0.10245009585454157 valid 0.1002630784990798
+12:14:30 gbm h1 clean: disc net +23.98 bp/day t 3.4448069846530065, valid net +44.48 t 4.730433130107734; rank IC disc 0.12404602665837379 valid 0.12083253068589309
+12:14:30 ridge h7 clean: disc net +10.57 bp/day t 1.4768745741522191, valid net -17.65 t -1.0197343271984933; rank IC disc 0.13781681694114858 valid 0.14387671240528452
+12:14:30 ic h7 clean: disc net +1.47 bp/day t 0.19053002128260524, valid net -27.39 t -1.5624155488117377; rank IC disc 0.12526740227920402 valid 0.14309934132207883
+12:14:30 gbm h7 clean: disc net +36.02 bp/day t 5.992050857021662, valid net +58.92 t 4.206243164206296; rank IC disc 0.15929351394490818 valid 0.18950022900246802
+12:14:30 gbm h7 leak: disc net -3.29 bp/day t -0.899916324587078, valid net -20.53 t -1.424593631735196; rank IC disc 0.013185910116653089 valid 0.07417333973105922
+12:14:30 pick gbm h7 clean, passes True {'t_1x': True, 'mean_2x': True, 'wo_best': True}; verdict PARTIAL

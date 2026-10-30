@@ -1,0 +1,73 @@
+path,class,restore,provenance,note
+data/raw,REFETCH,python -m lab.data build klines 1h (and the other kinds); the zips are the archive's own files,,Raw data.binance.vision zips behind the Binance folders; public archive.
+data/klines_1h,REFETCH,python -m lab.data build klines 1h,docs/provenance/klines_1h.json,"Binance USD-M hourly klines, 2020-.."
+data/klines_1m,REFETCH,"python -m lab.data build klines 1m --symbols BTCUSDT,ETHUSDT,SOLUSDT",docs/provenance/klines_1m.json,"Public monthly zips, CRC checked."
+data/klines_1m_tape,REFETCH,python scripts/fetch_klines_stream.py,docs/provenance/klines_1m_tape.json,One-minute bars for the tape coins.
+data/markPriceKlines_1h,REFETCH,python -m lab.data build markPriceKlines 1h,docs/provenance/markPriceKlines_1h.json,
+data/premiumIndexKlines_1h,REFETCH,python -m lab.data build premiumIndexKlines 1h,docs/provenance/premiumIndexKlines_1h.json,
+data/fundingRate,REFETCH,python -m lab.data build fundingRate,docs/provenance/fundingRate.json,Settled Binance funding.
+data/metrics_1h,REFETCH,"lab/flow.py needed_days() fetch; a frozen input of earlier lanes, so compare with docs/provenance/metrics_1h.json after any re-download",docs/provenance/metrics_1h.json,Binance futures metrics for a data-dependent coin set; a re-fetch is not guaranteed byte-identical.
+data/metrics_full,REFETCH,python scripts/fetch_metrics_full.py,,Complete metrics for the daily panel's top-150 universe.
+data/bookDepth_1h,REFETCH,see the data/bookDepth_1h row of docs/DATA_SOURCES.md and lab/flow.py,docs/provenance/bookDepth_1h.json,Binance bookDepth archive reduced to hours.
+data/spot_1h,REFETCH,python scripts/fetch_spot.py,docs/provenance/spot_1h.json,
+data/spot_pairs.json,DERIVED,python scripts/fetch_spot.py,,Spot pair map written by the spot fetch.
+data/spot_symbols.json,DERIVED,python scripts/fetch_spot.py,,
+data/binance_spot,REFETCH,python scripts/fetch_extra.py,,"BTC and ETH spot, for the basis lanes."
+data/coinbase,REFETCH,python scripts/fetch_extra.py,,"BTC-USD, ETH-USD, USDT-USD candles for the Coinbase premium."
+data/deribit,REFETCH,python scripts/fetch_extra.py,,Deribit index and volatility series.
+data/deribit_trades,REFETCH,python scripts/fetch_deribit_trades.py,docs/provenance/deribit_trades.json,Deribit public trade history.
+data/binance_options,REFETCH,python scripts/fetch_binance_options.py,docs/provenance/binance_options.json,
+data/binance_recent,REFETCH,python scripts/fetch_binance_recent.py --end 2026-10-20 --unlock-post-archive,docs/provenance/binance_recent.json,
+data/coinm_1h,REFETCH,python scripts/fetch_coinm.py,docs/provenance/coinm_1h.json,
+data/gate_hist,REFETCH,python scripts/fetch_gate_history.py,docs/provenance/gate_hist.json,Gate public bulk archive; 2020 rows are reserved (docs/GATES.md).
+data/gate_1h,REFETCH,python scripts/fetch_gate.py,,
+data/mexc_hist,REFETCH,python scripts/fetch_mexc_history.py,docs/provenance/mexc_hist.json,Only contracts listed on 2026-10-20 can be fetched; delisted ones are gone.
+data/mexc_tradfi,REFETCH,python scripts/fetch_mexc_tradfi.py,docs/provenance/mexc_tradfi.json,
+data/mexc/klines_1h,REFETCH,python scripts/fetch_mexc_history.py,docs/provenance/klines_1h.json,
+data/mexc/index_price_1h,REFETCH,python scripts/fetch_mexc_history.py,,
+data/mexc/spot,REFETCH,python scripts/fetch_mexc_history.py,,
+data/mexc/contracts,RECORDED,"none: dated snapshots of MEXC's contract list (fees, leverage, listing state)",,Point-in-time; the endpoint only shows today.
+data/hyperliquid,REFETCH,python scripts/fetch_hyperliquid_history.py,docs/provenance/hyperliquid.json,Hourly candles are limited to the API's recent window.
+data/kucoin_hist,REFETCH,python scripts/fetch_venue_history.py kucoin,docs/provenance/kucoin_hist.json,
+data/dydx_hist,REFETCH,python scripts/fetch_venue_history.py dydx,docs/provenance/dydx_hist.json,
+data/lighter_hist,REFETCH,python scripts/fetch_venue_history.py lighter --workers 1 --pause 2,,
+data/kraken_hist,REFETCH,python scripts/fetch_venue_history.py kraken,docs/provenance/kraken_hist.json,Public funding history goes back one year only.
+data/upbit_hist,REFETCH,python scripts/fetch_venue_history.py upbit,docs/provenance/upbit_hist.json,
+data/bithumb_hist,REFETCH,python scripts/fetch_venue_history.py bithumb,docs/provenance/bithumb_hist.json,
+data/coinmetrics,REFETCH,python scripts/fetch_coinmetrics.py,docs/provenance/coinmetrics.json,"Latest vintage, not point-in-time."
+data/defillama,REFETCH,python scripts/fetch_fundamentals.py,docs/provenance/defillama.json,"Latest vintage, not point-in-time."
+data/macro,REFETCH,python scripts/fetch_macro.py,docs/provenance/macro.json,
+data/cboe,REFETCH,python scripts/fetch_cboe.py,docs/provenance/cboe.json,
+data/markets,REFETCH,python scripts/fetch_macro.py,,Yahoo index series.
+data/tradfi_perps,REFETCH,python scripts/fetch_tradfi_perps.py,docs/provenance/tradfi_perps.json,Binance TradFi perp 1-minute klines since 2026-04-01; re-running re-verifies the cache.
+data/settle_ticks,REFETCH,python scripts/fetch_settle_ticks.py,docs/provenance/settle_ticks.json,Binance aggTrades windows around settlement hops (R362).
+data/settlehop_1m,REFETCH,python scripts/fetch_settlehop_1m.py,docs/provenance/settlehop_1m.json,
+data/settlelit_1m,REFETCH,python scripts/fetch_settlelit_1m.py,docs/provenance/settlelit_1m.json,
+data/unlocks/2026-10-20,REFETCH,python scripts/fetch_unlocks.py,,DefiLlama calendar as of 2026-10-20; not point-in-time.
+data/unlocks,RECORDED,none: the daily snapshots from scripts/record_unlocks.py (other dated folders),docs/provenance/unlocks.json,Point-in-time calendar revisions.
+data/cmelead,REFETCH,python -I scripts/fetch_cmelead.py fetch,docs/provenance/cmelead.json,R370: Binance aggTrades windows; free archive.
+data/databento,LICENSED,python -I scripts/fetch_cmelead.py fetch (needs the owner's Databento key; about $0.68 for the R370 set),,CME data is licensed: never committed or archived to git. Exact requests and sha256 are in data/databento/*/manifest.csv and docs/provenance/cmelead.json.
+data/research,DERIVED,python scripts/build_views.py (and the lab/ builders named in docs/DATA_SOURCES.md),,"Compressed research tensors, rebuilt from the downloads."
+data/daily,DERIVED,python scripts/build_daily.py; python scripts/build_daily_v2.py,,Daily point-in-time panel.
+data/optflow_v1,DERIVED,python scripts/run_optflow.py,,R295 hourly option-flow frame.
+data/book_symbols.txt,DERIVED,lab/data.py universe build,,
+data/universe.json,DERIVED,python -m lab.data (universe manifest),,
+data/tape,RECORDED,none: scripts/record_tape.py,,Binance and MEXC book and trade tape since 2026-10-21; a live websocket capture.
+data/hft,RECORDED,none: scripts/record_hft.py,,100 ms BTC/ETH feeds on four venues since 2026-10-28.
+data/rawtape,RECORDED,none: scripts/record_raw.py,,Raw-event arrival-order tape (13:00-17:00 UTC).
+data/lighter_trades,RECORDED,none: scripts/record_lighter_trades.py,,Lighter commodity-perp trades with account ids and quotes since 2026-10-28 22:28 UTC.
+data/commodity_perps,RECORDED,none: scripts/record_commodity_perps.py,,"Hyperliquid xyz, Kraken and Binance commodity/gold/index perps at tick level since 2026-10-28 23:56 UTC; R369's input."
+data/option_expiry,RECORDED,none: scripts/record_option_expiry.py,,BTC option chain every minute 06:45-10:15 UTC (M440).
+data/news,RECORDED,none: scripts/record_news.py,,"22 public feeds, headlines with first-seen time."
+data/kraken_probe,RECORDED,none: one-off Kraken order-event probes (2026-10-28),,
+data/recorders,RECORDED,none: hourly recorders listed in docs/DATA_SOURCES.md,,"funding_board, deribit_chain, lighter_book, dex_prices, wallets, notices, mexc_ticker, unlocks. Point-in-time."
+data/live/ratios_5m,RECORDED,none: scripts/forward_tick.py,,Top-trader ratios at 5 minutes; Binance keeps about 30 days.
+data/live/klines_1h,REFETCH,scripts/forward_tick.py refetches the recent window,docs/provenance/klines_1h.json,
+data/live/spot,REFETCH,scripts/forward_tick.py refetches the recent window,,
+data/xfund_fwd,REFETCH,python scripts/forward_xfund.py (its tickets are in experiments/xfund_fwd/journal),,Forward-lane funding inputs; the journal in git is the record.
+data/xfund_kc_fwd,REFETCH,python scripts/forward_xfund_kc.py,,"Same, KuCoin books."
+data/xfund_lt_fwd,REFETCH,python scripts/forward_xfund_lt.py,,"Same, Lighter books."
+data/comments,SCRATCH,python scripts/dig_comments.py,,Third-party forum text; not archived.
+data/videos,SCRATCH,python scripts/dig_videos.py,,Transcripts of third-party videos; the notes are in docs/VIDEO_DIG.md.
+data/logs,SCRATCH,none,,Run logs and lock files.
+data/.lighter_api.lock,SCRATCH,none,,Lock file of the Lighter API client.

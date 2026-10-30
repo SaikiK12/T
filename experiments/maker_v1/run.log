@@ -1,0 +1,56 @@
+22:21:25 prereg sha dc39e9e790a3
+22:21:48 413 cells; fires per cell computed on episode starts
+22:21:59 discovery kappa -1.0 exit 0
+22:22:06 discovery kappa -1.0 exit 1
+22:22:15 discovery kappa 0.0 exit 0
+22:22:22 discovery kappa 0.0 exit 1
+22:22:30 discovery kappa 0.25 exit 0
+22:22:37 discovery kappa 0.25 exit 1
+22:22:44 discovery kappa 0.5 exit 0
+22:22:55 discovery kappa 0.5 exit 1
+22:23:03 discovery kappa 1.0 exit 0
+22:23:14 discovery kappa 1.0 exit 1
+22:23:19 validation kappa -1.0 exit 0
+22:23:26 validation kappa -1.0 exit 1
+22:23:31 validation kappa 0.0 exit 0
+22:23:35 validation kappa 0.0 exit 1
+22:23:39 validation kappa 0.25 exit 0
+22:23:42 validation kappa 0.25 exit 1
+22:23:47 validation kappa 0.5 exit 0
+22:23:51 validation kappa 0.5 exit 1
+22:23:55 validation kappa 1.0 exit 0
+22:23:59 validation kappa 1.0 exit 1
+22:24:00 
+     split  kappa  exit  fee_bp  cmult  cells  positive  median_bp
+ discovery  -1.00     0     0.0    1.0    413     0.429     -3.375
+ discovery  -1.00     0     2.0    1.0    413     0.429     -3.375
+ discovery   0.00     0     0.0    1.0    413     0.533      1.355
+ discovery   0.00     0     2.0    1.0    413     0.482     -0.645
+ discovery   0.25     0     0.0    1.0    413     0.678      7.802
+ discovery   0.25     0     2.0    1.0    413     0.630      5.802
+ discovery   0.50     0     0.0    1.0    413     0.770     12.347
+ discovery   0.50     0     2.0    1.0    413     0.705     10.347
+ discovery   1.00     0     0.0    1.0    413     0.833     23.502
+ discovery   1.00     0     2.0    1.0    413     0.801     21.502
+validation  -1.00     0     0.0    1.0    413     0.274     -9.774
+validation  -1.00     0     2.0    1.0    413     0.274     -9.774
+validation   0.00     0     0.0    1.0    413     0.337     -5.880
+validation   0.00     0     2.0    1.0    413     0.312     -7.880
+validation   0.25     0     0.0    1.0    413     0.407     -3.092
+validation   0.25     0     2.0    1.0    413     0.361     -5.092
+validation   0.50     0     0.0    1.0    413     0.501      0.022
+validation   0.50     0     2.0    1.0    413     0.450     -1.978
+validation   1.00     0     0.0    1.0    413     0.685     11.421
+validation   1.00     0     2.0    1.0    413     0.646      9.421
+22:24:00 selected on discovery: 4 cells
+22:24:01 
+     split entry  fee_bp  cmult  gross_ann  avg_open  conflicts     ann  sharpe    t_nw  max_dd  y2021   y2022  y2023  y2024   y2025
+ discovery maker     0.0    1.0     0.8732    7.4762          0  0.6841  0.9817  1.5887  1.1373 2.0439 -0.9074 0.9158    NaN     NaN
+ discovery maker     2.0    1.0     0.8732    7.4762          0  0.6317  0.9064  1.4672  1.1629 1.9921 -0.9583 0.8613    NaN     NaN
+ discovery taker     0.0    1.0     0.5938    8.4808          0  0.1642  0.2114  0.3394  2.1888 1.7324 -1.5825 0.3428    NaN     NaN
+ discovery taker     2.0    1.0     0.5938    8.4808          0  0.1642  0.2114  0.3394  2.1888 1.7324 -1.5825 0.3428    NaN     NaN
+validation maker     0.0    1.0     0.3991    7.8649          0  0.1990  0.2298  0.2497  1.2473    NaN     NaN    NaN 0.4430 -0.1448
+validation maker     2.0    1.0     0.3991    7.8649          0  0.1439  0.1662  0.1806  1.3059    NaN     NaN    NaN 0.3884 -0.1727
+validation taker     0.0    1.0     0.1913    8.8723          0 -0.2596 -0.2973 -0.3377  1.5742    NaN     NaN    NaN 0.1725 -0.5616
+validation taker     2.0    1.0     0.1913    8.8723          0 -0.2596 -0.2973 -0.3377  1.5742    NaN     NaN    NaN 0.1725 -0.5616
+22:24:01 verdict NULL

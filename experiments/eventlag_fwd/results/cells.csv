@@ -1,0 +1,13 @@
+event,follower,lag_s,lag_filter,valid_events,ok_quotes,n,mean,sd,t,hit,p,net_1x,net_2x,net_3x,fire_rate,decision,p_holm
+ng,binance,1.0,True,1,1,0,,,,,,,,,0.0,False,
+ng,binance,1.0,False,1,1,1,0.0,,,0.0,1.0,-10.0,-20.0,-30.0,1.0,False,
+ng,hl,1.0,True,1,1,0,,,,,,,,,0.0,False,
+ng,hl,1.0,False,1,1,1,38.12640784022573,,,1.0,0.5,20.12640784022573,2.126407840225731,-15.873592159774269,1.0,False,
+ng,lighter,0.5,True,1,1,0,,,,,,,,,0.0,False,
+ng,lighter,0.5,False,1,1,1,4.08942208534357,,,1.0,0.5,-0.9105779146564297,-5.91057791465643,-10.910577914656429,1.0,False,
+ng,lighter,1.0,True,1,1,0,,,,,,,,,0.0,True,1.0
+ng,lighter,1.0,False,1,1,1,-9.8896797325167,,,0.0,1.0,-14.8896797325167,-19.8896797325167,-24.8896797325167,1.0,False,
+ng,lighter,2.0,True,1,0,0,,,,,,,,,0.0,False,
+ng,lighter,2.0,False,1,0,0,,,,,,,,,0.0,False,
+ng,lighter,5.0,True,1,1,0,,,,,,,,,0.0,False,
+ng,lighter,5.0,False,1,1,1,-59.14243859970129,,,0.0,1.0,-64.1424385997013,-69.1424385997013,-74.1424385997013,1.0,False,

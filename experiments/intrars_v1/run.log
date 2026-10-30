@@ -1,0 +1,28 @@
+08:18:08 PREREG verified 47548a7601b3; 10 inputs match
+08:18:19 499 coins' bars loaded, digest 6be8ab9e16a5
+08:18:29 k1 n3 follow: disc net -77.55 bp/day t -3.4759527026066137, valid net -66.99 t -1.6685629223480336
+08:18:29 k1 n3 fade: disc net +9.55 bp/day t 0.42788461201870837, valid net -1.01 t -0.025173130528750472
+08:18:29 k1 n5 follow: disc net -84.10 bp/day t -5.2046927482558205, valid net -38.26 t -1.2844235319841713
+08:18:29 k1 n5 fade: disc net +16.10 bp/day t 0.996131595813591, valid net -29.74 t -0.9983769386598005
+08:18:29 k2 n3 follow: disc net -69.85 bp/day t -2.919912133058759, valid net -8.66 t -0.2495944198417896
+08:18:29 k2 n3 fade: disc net +1.85 bp/day t 0.0772526638122033, valid net -59.34 t -1.7113544063006585
+08:18:29 k2 n5 follow: disc net -73.01 bp/day t -3.851572588874364, valid net -23.01 t -0.8793135469645919
+08:18:29 k2 n5 fade: disc net +5.01 bp/day t 0.2642183662758357, valid net -44.99 t -1.7193803862635801
+08:18:29 k4 n3 follow: disc net -37.85 bp/day t -1.5424777183466498, valid net -6.97 t -0.20413539686009535
+08:18:29 k4 n3 fade: disc net -30.15 bp/day t -1.2286501253166744, valid net -61.03 t -1.7876733977635026
+08:18:29 k4 n5 follow: disc net -20.16 bp/day t -1.2111670619135724, valid net -3.01 t -0.10774515559985684
+08:18:29 k4 n5 fade: disc net -47.84 bp/day t -2.8741923253706583, valid net -64.99 t -2.328178073694019
+08:18:29 k8 n3 follow: disc net +15.91 bp/day t 0.7618025229541636, valid net +3.47 t 0.10772458344503397
+08:18:29 k8 n3 fade: disc net -83.91 bp/day t -4.016953712009767, valid net -71.47 t -2.217467657177158
+08:18:29 k8 n5 follow: disc net -4.12 bp/day t -0.27812176040217146, valid net +0.21 t 0.009023342122263528
+08:18:29 k8 n5 fade: disc net -63.88 bp/day t -4.306958870319631, valid net -68.21 t -2.924414020902253
+08:18:29 k12 n3 follow: disc net +13.28 bp/day t 0.7767952283967092, valid net +1.54 t 0.0619462398147957
+08:18:29 k12 n3 fade: disc net -81.28 bp/day t -4.755720875780838, valid net -69.54 t -2.7991820362523367
+08:18:29 k12 n5 follow: disc net +2.19 bp/day t 0.17745781263583732, valid net -10.36 t -0.4761383591321876
+08:18:29 k12 n5 fade: disc net -70.19 bp/day t -5.679474524010086, valid net -57.64 t -2.6504715837812123
+08:18:29 us10 n3 follow: disc net +34.64 bp/day t 1.8820254722232592, valid net +38.73 t 1.281894348814006
+08:18:29 us10 n3 fade: disc net -102.64 bp/day t -5.576626784480511, valid net -106.73 t -3.532484588053956
+08:18:29 us10 n5 follow: disc net +9.02 bp/day t 0.6527508072193862, valid net -3.36 t -0.11548104502760448
+08:18:29 us10 n5 fade: disc net -77.02 bp/day t -5.5754982854693464, valid net -64.64 t -2.22418022870147
+08:18:29 pick us10 n3 follow, passes False {'t_1x': False, 'mean_2x': True, 'wo_best': False}; verdict NULL
+08:18:29 clocks: {'0': {'max_disc_t': 0.996131595813591, 'pick': 'k1 n5 fade', 'passes': False, 'pick_valid_t': -0.9983769386598005, 'pick_valid_bp_day': -29.739625824465925}, '1': {'max_disc_t': 2.4059651683261625, 'pick': 'k12 n3 follow', 'passes': False, 'pick_valid_t': 0.09624171647187665, 'pick_valid_bp_day': 3.057446585582614}, '6': {'max_disc_t': 1.6137483893920432, 'pick': 'k8 n3 follow', 'passes': False, 'pick_valid_t': 0.25746300814405726, 'pick_valid_bp_day': 9.88999653928002}, '8': {'max_disc_t': 2.459565142257376, 'pick': 'k8 n3 follow', 'passes': True, 'pick_valid_t': 2.372214801577468, 'pick_valid_bp_day': 84.62204521435136}, '11': {'max_disc_t': 1.6043032748055959, 'pick': 'k4 n3 follow', 'passes': False, 'pick_valid_t': 1.931844561094122, 'pick_valid_bp_day': 78.46361172264623}, '12': {'max_disc_t': 1.5604421647738917, 'pick': 'k4 n3 follow', 'passes': False, 'pick_valid_t': 1.8141859089106565, 'pick_valid_bp_day': 79.24143760115955}, '14': {'max_disc_t': 0.8214395056369094, 'pick': 'k1 n3 follow', 'passes': False, 'pick_valid_t': -0.3802260365576377, 'pick_valid_bp_day': -17.60164346228653}, '15': {'max_disc_t': 0.6955565025940542, 'pick': 'k1 n3 follow', 'passes': False, 'pick_valid_t': 0.7299505522252658, 'pick_valid_bp_day': 26.84203455883571}, '21': {'max_disc_t': 0.3848772195504282, 'pick': 'k12 n3 follow', 'passes': False, 'pick_valid_t': 0.908659051805222, 'pick_valid_bp_day': 25.252678775917865}}; real clock rank {'max_disc_t': 6, 'pick_valid_t': 9}

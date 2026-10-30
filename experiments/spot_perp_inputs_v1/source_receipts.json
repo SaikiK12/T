@@ -1,0 +1,265 @@
+{
+  "body_bytes_total": 118731,
+  "initial_reader": {
+    "assertion_boundaries": {
+      "account_access_authorized": false,
+      "canonical_files_edited": false,
+      "commit_verified": false,
+      "deployment_verified": false,
+      "depth5_subscription_normatively_verified": false,
+      "fee_account_contract_verified": false,
+      "market_history_account_rpc_requests": 0,
+      "outcome_statistics_computed": false,
+      "spot_quantity_asset_normatively_verified": false,
+      "timestamp_units_normatively_verified": false,
+      "tree_and_two_blob_identities_validated": true
+    },
+    "limits": {
+      "acquisition_wall_seconds": 90,
+      "combined_body_bytes": 2097152,
+      "market_history_account_rpc_requests": 0,
+      "redirects": 0,
+      "retries": 0,
+      "single_body_bytes": 524288,
+      "static_gets": 6
+    },
+    "network": {
+      "credential_values_inspected": false,
+      "http_policy": "unrestricted",
+      "http_policy_state": "enforced",
+      "proxy": "inherited normal proxy",
+      "runtime_observations_current": true,
+      "tls_verification": true,
+      "vpn_configured": false
+    },
+    "notes": "source_review.md records verified facts versus inference/unread scope. Static GET budget exhausted; no retries or follow-up requests.",
+    "official_tree": {
+      "tree_sha": "0c9c4f35dd0fadc3a46a350e909a93379d81e811",
+      "tree_url": "https://api.github.com/repos/mexcdevelop/websocket-proto/git/trees/0c9c4f35dd0fadc3a46a350e909a93379d81e811",
+      "truncated": false,
+      "version_kind": "Git tree, not a commit or deployment identifier"
+    },
+    "sources": [
+      {
+        "body_bytes": 4352,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "f85c16bedce801a90f624eafecda826a7cdc3ea364748c1c13cab924e68b0481",
+        "complete": true,
+        "elapsed_total_seconds": 0.488796,
+        "headers": {
+          "content-length": "4352",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 04:50:44 GMT",
+          "etag": "\"9099d2604976c28ff4fad15494ed0a1d84f625d2f377e4b9e7573f7d9050b143\"",
+          "last-modified": "Wed, 09 Sep 2026 02:25:23 GMT"
+        },
+        "method": "GET",
+        "name": "official_tree",
+        "read_scope": "Full 4352-byte Git tree/path/blob metadata inspected.",
+        "redirects_followed": 0,
+        "request_number": 1,
+        "retries": 0,
+        "started_utc": "2026-10-26T04:50:43.609995+00:00",
+        "status": 200,
+        "successful_source_acquisition": true,
+        "unread": "All repository blob bodies except the two separately fetched protos unread.",
+        "url": "https://api.github.com/repos/mexcdevelop/websocket-proto/git/trees/main?recursive=1"
+      },
+      {
+        "body_bytes": 3063,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "f7900fd4f348e3df38b0add9df304703dcc3bbb486fc769ff18cb0658b5e374e",
+        "complete": true,
+        "elapsed_total_seconds": 0.953018,
+        "headers": {
+          "content-length": "3063",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 04:50:44 GMT",
+          "etag": "\"07e38ba838225e48c82229bea2abfce9b836803f9a3185a75d450579c062261d\""
+        },
+        "method": "GET",
+        "name": "PushDataV3ApiWrapper",
+        "read_scope": "Full 2008-byte decoded proto read, including imports/comments/all fields.",
+        "redirects_followed": 0,
+        "request_number": 2,
+        "retries": 0,
+        "source_version": {
+          "api_blob_sha": "bd77f48b6ed95efa15f755613323f64f06970e55",
+          "blob_identity_validated": true,
+          "blob_sha": "bd77f48b6ed95efa15f755613323f64f06970e55",
+          "computed_git_blob_sha": "bd77f48b6ed95efa15f755613323f64f06970e55",
+          "decoded_bytes": 2008,
+          "decoded_sha256": "1869bbb700319ea4a0844ec11860dade0868c6a3a444dd3db6455db3c578c4fd",
+          "not_claimed": "commit/deployment/current-wire verification",
+          "path": "PushDataV3ApiWrapper.proto",
+          "tree_sha": "0c9c4f35dd0fadc3a46a350e909a93379d81e811"
+        },
+        "started_utc": "2026-10-26T04:50:44.091232+00:00",
+        "status": 200,
+        "successful_source_acquisition": true,
+        "unread": "Imported schemas except PublicLimitDepthsV3Api unread; live deployment/frames not checked.",
+        "url": "https://api.github.com/repos/mexcdevelop/websocket-proto/git/blobs/bd77f48b6ed95efa15f755613323f64f06970e55"
+      },
+      {
+        "body_bytes": 1024,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "0ca71644f28891ceaedb120a96ac303fc267dc2d84b4d398c77b40b1ede165d5",
+        "complete": true,
+        "elapsed_total_seconds": 1.386617,
+        "headers": {
+          "content-length": "1024",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 04:50:44 GMT",
+          "etag": "\"38a0aa4aa25a6850cd82ce0ebd4fb5d4e407c5c0caafc874f26877d04f8e56aa\""
+        },
+        "method": "GET",
+        "name": "PublicLimitDepthsV3Api",
+        "read_scope": "Full 531-byte decoded proto read.",
+        "redirects_followed": 0,
+        "request_number": 3,
+        "retries": 0,
+        "source_version": {
+          "api_blob_sha": "5a31293f1d5ad998e98f2f68271538015d80ef29",
+          "blob_identity_validated": true,
+          "blob_sha": "5a31293f1d5ad998e98f2f68271538015d80ef29",
+          "computed_git_blob_sha": "5a31293f1d5ad998e98f2f68271538015d80ef29",
+          "decoded_bytes": 531,
+          "decoded_sha256": "16a5a787aaf40d71bfcc42224fe14cf1f64fe463c9f91e0677898682ae5f410c",
+          "not_claimed": "commit/deployment/current-wire verification",
+          "path": "PublicLimitDepthsV3Api.proto",
+          "tree_sha": "0c9c4f35dd0fadc3a46a350e909a93379d81e811"
+        },
+        "started_utc": "2026-10-26T04:50:44.555557+00:00",
+        "status": 200,
+        "successful_source_acquisition": true,
+        "unread": "Timestamp units, quantity asset units, depth suffix/snapshot semantics not stated in acquired schema; live deployment not checked.",
+        "url": "https://api.github.com/repos/mexcdevelop/websocket-proto/git/blobs/5a31293f1d5ad998e98f2f68271538015d80ef29"
+      },
+      {
+        "body_bytes": 21731,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "df8c3530d89f36a7f8d7f2df811c8d19c018877a0af44dd9d3d10b249babfed9",
+        "complete": true,
+        "elapsed_total_seconds": 2.053452,
+        "headers": {
+          "content-length": "21731",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 04:50:45 GMT",
+          "last-modified": "Fri, 09 Oct 2026 10:39:32 GMT"
+        },
+        "method": "GET",
+        "name": "websocket_market_streams",
+        "read_scope": "Full visible main prose and navigation hrefs inspected.",
+        "redirects_followed": 0,
+        "request_number": 4,
+        "retries": 0,
+        "started_utc": "2026-10-26T04:50:44.989631+00:00",
+        "status": 200,
+        "successful_source_acquisition": true,
+        "unread": "Linked detailed subscription/protocol/partial-depth/local-book pages and script/style bundles unread.",
+        "url": "https://www.mexc.com/api-docs/spot-v3/websocket-market-streams"
+      },
+      {
+        "body_bytes": 91,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+        "complete": true,
+        "elapsed_total_seconds": 7.192362,
+        "headers": {
+          "content-length": "91",
+          "content-type": "text/plain",
+          "date": "Mon, 26 Oct 2026 04:50:50 GMT"
+        },
+        "method": "GET",
+        "name": "market_data_endpoints",
+        "read_scope": "Complete91-byte503 upstream connection-timeout error read.",
+        "redirects_followed": 0,
+        "request_number": 5,
+        "retries": 0,
+        "started_utc": "2026-10-26T04:50:45.656015+00:00",
+        "status": 503,
+        "successful_source_acquisition": false,
+        "unread": "Intended exchangeInfo/depth documentation not acquired/read.",
+        "url": "https://www.mexc.com/api-docs/spot-v3/market-data-endpoints"
+      },
+      {
+        "body_bytes": 80,
+        "body_cap_reached": false,
+        "body_complete_semantics": "Complete response body, including an error body when status is not200.",
+        "body_sha256": "d3c0644107ea757e4783a7cdcd683b3a781b6a88f30e0de8c6ed1c69ef4113ee",
+        "complete": true,
+        "elapsed_total_seconds": 7.459835,
+        "headers": {
+          "content-length": "80",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 04:50:51 GMT"
+        },
+        "method": "GET",
+        "name": "account_endpoints",
+        "read_scope": "Complete80-byte404 not-found error JSON read.",
+        "redirects_followed": 0,
+        "request_number": 6,
+        "retries": 0,
+        "started_utc": "2026-10-26T04:50:50.795031+00:00",
+        "status": 404,
+        "successful_source_acquisition": false,
+        "unread": "Guessed path failed; account/fee documentation not acquired/read.",
+        "url": "https://www.mexc.com/api-docs/spot-v3/account-endpoints"
+      }
+    ],
+    "task": "R324 bounded official spot contracts",
+    "usage": {
+      "acquisition_wall_seconds": 7.46044,
+      "combined_body_bytes": 30341,
+      "market_history_account_rpc_requests": 0,
+      "static_gets": 6
+    }
+  },
+  "market_requests_before_freeze": 0,
+  "no_more_static_requests_in_this_lane": true,
+  "separately_declared_final_introduction": {
+    "bytes": 50543,
+    "cap_reached": false,
+    "elapsed": 0.8522277080046479,
+    "limit_bytes": 131072,
+    "limit_seconds": 15,
+    "sha256": "10202636662eae762477b56d64305f9bd407b3f5441781f9910ada0f0a923347",
+    "status": 200,
+    "url": "https://www.mexc.com/api-docs/spot-v3/introduction"
+  },
+  "separately_declared_followup": {
+    "limits": {
+      "body_bytes": 524288,
+      "combined_bytes": 786432,
+      "requests": 2,
+      "seconds": 30
+    },
+    "market_requests": 0,
+    "records": [
+      {
+        "body_cap_reached": false,
+        "bytes": 30699,
+        "elapsed_total": 0.403014429990435,
+        "name": "depth",
+        "sha256": "b875f65bd7a43edb7ab2a775eec7976943b55e514983f703a52fe2330b4ea925",
+        "status": 200,
+        "url": "https://www.mexc.com/api-docs/spot-v3/websocket-market-streams/partial-book-depth-streams"
+      },
+      {
+        "body_cap_reached": false,
+        "bytes": 7148,
+        "elapsed_total": 0.7797196809842717,
+        "name": "integration",
+        "sha256": "2f8aafab8003f9c7a77b22221742fe45b64867e8b8b26d33d230606d5b1faf0f",
+        "status": 404,
+        "url": "https://www.mexc.com/api-docs/spot-v3/protocol-buffers-integration"
+      }
+    ]
+  },
+  "static_requests_total": 9
+}

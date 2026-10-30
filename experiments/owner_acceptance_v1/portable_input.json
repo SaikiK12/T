@@ -1,0 +1,13 @@
+{
+  "bytes": 402923,
+  "checks": {
+    "already_identical_no_write": true,
+    "conflict_preserved_and_refused": true,
+    "restore_on_clean_root_exact": true
+  },
+  "origin": "Small exact already-held publicMEXC input from the approved R310/R311 accumulation. No new acquisition or new observations.",
+  "portable_path": "research/datasets/owner_acceptance_v1/BTC_USDT.parquet",
+  "restoration_entrypoint": "python -m lab account --controls --restore-input --out /tmp/R320-reproduction",
+  "sha256": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9",
+  "source_existing_path": "data/equations_v2/mexc/prices/BTC_USDT.parquet"
+}

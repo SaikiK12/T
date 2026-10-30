@@ -1,0 +1,131 @@
+== tick 2026-10-19T15:28:56Z code bc71ce5+dirty
+15:32:43 prereg sha ed1f4c2698a8
+Traceback (most recent call last):
+  File "/home/user/T/scripts/forward_mexc_sq.py", line 54, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/T/scripts/forward_mexc_sq.py", line 28, in main
+    st = fm.load()
+  File "/home/user/T/scripts/forward_mexc.py", line 66, in load
+    c[:, j] = cm_[:T + 1, ki[m]]
+    ~^^^^^^
+ValueError: could not broadcast input array from shape (447,) into shape (448,)
+15:35:27 prereg sha ed1f4c2698a8
+15:36:02 {"X2_replay": {"days": 18, "total": 0.06159594265810456, "total_2x": 0.05216733199393441, "total_3x": 0.042738721329763786}, "vs_R215_A_replay": {"days": 18}}
+== tick 2026-10-19T19:40:21Z code 5c3710b
+19:43:59 prereg sha ed1f4c2698a8
+19:44:32 {"X2_replay": {"days": 18, "total": 0.06159594265810456, "total_2x": 0.05216733199393441, "total_3x": 0.042738721329763786}, "vs_R215_A_replay": {"days": 18}}
+== tick 2026-10-20T00:37:26Z code babe092
+00:42:04 prereg sha ed1f4c2698a8
+00:42:14 {"X2_replay": {"days": 18, "total": 0.06159594265810456, "total_2x": 0.05216733199393441, "total_3x": 0.042738721329763786}, "vs_R215_A_replay": {"days": 18}}
+== tick 2026-10-20T01:12:20Z code 174e1a9
+01:15:51 prereg sha ed1f4c2698a8
+01:15:59 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T06:17:13Z code 174e1a9
+06:21:10 prereg sha ed1f4c2698a8
+06:21:18 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T06:58:12Z code f76aef6
+07:00:21 prereg sha ed1f4c2698a8
+07:00:29 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T11:16:11Z code 45223d8
+11:20:17 prereg sha ed1f4c2698a8
+11:20:26 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T12:06:00Z code 50408a9
+12:08:47 prereg sha ed1f4c2698a8
+12:08:57 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T13:06:00Z code bb4859c
+13:10:53 prereg sha ed1f4c2698a8
+13:11:28 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T16:15:31Z code 83554e1
+16:19:50 prereg sha ed1f4c2698a8
+16:20:23 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T17:06:00Z code 5addcda
+17:08:18 prereg sha ed1f4c2698a8
+17:08:28 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T18:06:00Z code 399adaf
+18:10:56 prereg sha ed1f4c2698a8
+18:11:05 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T21:14:12Z code d5200f6+dirty
+21:18:19 prereg sha ed1f4c2698a8
+21:18:28 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T22:06:00Z code a8f7f57+dirty
+22:08:14 prereg sha ed1f4c2698a8
+22:08:23 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-20T23:06:00Z code d968692+dirty
+23:09:32 prereg sha ed1f4c2698a8
+23:09:42 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T03:06:00Z code a905046
+03:09:31 prereg sha ed1f4c2698a8
+03:09:40 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T05:06:00Z code 813d089
+05:09:31 prereg sha ed1f4c2698a8
+05:09:40 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T06:06:00Z code 0a867b4
+06:09:42 prereg sha ed1f4c2698a8
+06:09:51 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T09:51:24Z code 2c57ca2
+09:56:27 prereg sha ed1f4c2698a8
+09:56:36 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T10:06:00Z code 2c57ca2+dirty
+10:08:23 prereg sha ed1f4c2698a8
+10:08:32 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T11:06:00Z code 86b9a11
+11:10:26 prereg sha ed1f4c2698a8
+11:10:36 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T15:18:41Z code d901ac7+dirty
+15:23:06 prereg sha ed1f4c2698a8
+15:23:16 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T16:06:00Z code 668e3af
+16:08:23 prereg sha ed1f4c2698a8
+16:08:58 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T17:06:00Z code 2ba9486
+17:09:50 prereg sha ed1f4c2698a8
+17:10:00 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T20:14:30Z code 920aa39
+20:20:00 prereg sha ed1f4c2698a8
+20:20:10 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T21:14:20Z code b71c436
+21:18:19 prereg sha ed1f4c2698a8
+21:18:28 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-21T22:07:01Z code 88f85c3
+22:09:47 prereg sha ed1f4c2698a8
+22:09:57 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 1, "total": -0.0046522378422116, "total_2x": -0.0051166207742804, "total_3x": -0.0055810037063492}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T01:14:21Z code da7ef4d+dirty
+01:19:05 prereg sha ed1f4c2698a8
+01:19:15 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T02:13:49Z code 40fd1d6
+02:17:47 prereg sha ed1f4c2698a8
+02:17:56 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T03:06:00Z code f6bade5+dirty
+03:08:26 prereg sha ed1f4c2698a8
+03:08:34 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T04:14:36Z code 90cf744
+04:18:58 prereg sha ed1f4c2698a8
+04:19:07 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T06:16:25Z code 90cf744
+06:20:09 prereg sha ed1f4c2698a8
+06:20:19 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T07:21:01Z code bf15fb1
+07:25:19 prereg sha ed1f4c2698a8
+07:25:28 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T08:06:00Z code a747dbb
+08:08:21 prereg sha ed1f4c2698a8
+08:08:30 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T09:06:00Z code f358a20
+09:09:32 prereg sha ed1f4c2698a8
+09:09:41 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T12:06:00Z code 811283d
+12:09:43 prereg sha ed1f4c2698a8
+12:09:52 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T16:16:09Z code 0b4636f
+16:21:20 prereg sha ed1f4c2698a8
+16:21:30 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-22T17:06:00Z code 5bb9309
+17:08:18 prereg sha ed1f4c2698a8
+17:08:27 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 2, "total": 0.0199298927208484, "total_2x": 0.018986947157245502, "total_3x": 0.0180440015936425}, "vs_R215_A_replay": {"days": 19}}
+== tick 2026-10-26T15:32:00Z code 1d603e2+dirty
+15:43:43 prereg sha ed1f4c2698a8
+15:43:54 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 6, "total": -0.0144839231343778, "total_2x": -0.017311096583780494, "total_3x": -0.020138270033183296}, "vs_R215_A_replay": {"days": 19}, "vs_R215_A_ontime": {"days": 6}}
+== tick 2026-10-26T16:06:00Z code 1d603e2+dirty
+16:08:39 prereg sha ed1f4c2698a8
+16:08:49 {"X2_replay": {"days": 19, "total": 0.059415245815031555, "total_2x": 0.049606432179498214, "total_3x": 0.03979761854396439}, "X2_ontime": {"days": 6, "total": -0.0144839231343778, "total_2x": -0.017311096583780494, "total_3x": -0.020138270033183296}, "vs_R215_A_replay": {"days": 19}, "vs_R215_A_ontime": {"days": 6}}

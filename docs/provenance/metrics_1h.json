@@ -1,0 +1,5393 @@
+{
+"folder": "data/metrics_1h",
+"source": "data.binance.vision USD-M metrics (open interest, top-trader and taker ratios), hourly",
+"script": "lab/data.py (python -m lab.data <kind>)",
+"recorded_utc": "2026-10-20T21:45:51Z",
+"files": 488,
+"bytes": 188049449,
+"combined_sha256": "68c2ccbcde091f381dc9932db3b3e1d17668d4ac4f97b15a615f01105730e47f",
+"subfolders": {
+".": {
+"files": 488,
+"bytes": 188049449
+}
+},
+"hourly_coverage": {
+"": {
+"files": 487,
+"bars": 3080061,
+"files_with_holes": 257,
+"holes": 1884030,
+"first": 1609459200000,
+"last": 1790809200000
+}
+},
+"coverage": {
+"": {
+"0GUSDT": {
+"first": 1758121200000,
+"last": 1790809200000,
+"bars": 9081,
+"holes": 0
+},
+"1000BONKUSDT": {
+"first": 1700661600000,
+"last": 1790809200000,
+"bars": 25032,
+"holes": 10
+},
+"1000FLOKIUSDT": {
+"first": 1683388800000,
+"last": 1790809200000,
+"bars": 29830,
+"holes": 10
+},
+"1000LUNCUSDT": {
+"first": 1662728400000,
+"last": 1790809200000,
+"bars": 35569,
+"holes": 10
+},
+"1000PEPEUSDT": {
+"first": 1683302400000,
+"last": 1790809200000,
+"bars": 29854,
+"holes": 10
+},
+"1000RATSUSDT": {
+"first": 1702648800000,
+"last": 1790809200000,
+"bars": 24480,
+"holes": 10
+},
+"1000SATSUSDT": {
+"first": 1702389600000,
+"last": 1790809200000,
+"bars": 24552,
+"holes": 10
+},
+"1000SHIBUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"1000XECUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"1000XUSDT": {
+"first": 1731499200000,
+"last": 1769133600000,
+"bars": 8852,
+"holes": 1603
+},
+"1INCHUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"1MBABYDOGEUSDT": {
+"first": 1726484400000,
+"last": 1790809200000,
+"bars": 17869,
+"holes": 0
+},
+"2ZUSDT": {
+"first": 1759406400000,
+"last": 1790809200000,
+"bars": 8724,
+"holes": 0
+},
+"4USDT": {
+"first": 1759921200000,
+"last": 1790809200000,
+"bars": 8581,
+"holes": 0
+},
+"AAVEUSDT": {
+"first": 1638316800000,
+"last": 1790118000000,
+"bars": 33528,
+"holes": 8640
+},
+"ACEUSDT": {
+"first": 1702893600000,
+"last": 1789426800000,
+"bars": 2438,
+"holes": 21600
+},
+"ACHUSDT": {
+"first": 1677974400000,
+"last": 1741042800000,
+"bars": 2952,
+"holes": 14568
+},
+"ACTUSDT": {
+"first": 1731326400000,
+"last": 1746140400000,
+"bars": 3804,
+"holes": 312
+},
+"ADAUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"AERGOUSDT": {
+"first": 1741996800000,
+"last": 1747612800000,
+"bars": 1080,
+"holes": 481
+},
+"AEVOUSDT": {
+"first": 1710334800000,
+"last": 1718924400000,
+"bars": 2387,
+"holes": 0
+},
+"AGIXUSDT": {
+"first": 1676556000000,
+"last": 1712358000000,
+"bars": 4896,
+"holes": 5050
+},
+"AGLDUSDT": {
+"first": 1695168000000,
+"last": 1738537200000,
+"bars": 2616,
+"holes": 9432
+},
+"AI16ZUSDT": {
+"first": 1735822800000,
+"last": 1742079600000,
+"bars": 1739,
+"holes": 0
+},
+"AIAUSDT": {
+"first": 1758182400000,
+"last": 1765411200000,
+"bars": 2009,
+"holes": 0
+},
+"AIGENSYNUSDT": {
+"first": 1777471200000,
+"last": 1780441200000,
+"bars": 826,
+"holes": 0
+},
+"AIOTUSDT": {
+"first": 1772928000000,
+"last": 1778540400000,
+"bars": 1560,
+"holes": 0
+},
+"AIUSDT": {
+"first": 1704715200000,
+"last": 1710543600000,
+"bars": 1610,
+"holes": 10
+},
+"AIXBTUSDT": {
+"first": 1734717600000,
+"last": 1740178800000,
+"bars": 1518,
+"holes": 0
+},
+"AKEUSDT": {
+"first": 1781222400000,
+"last": 1790809200000,
+"bars": 2664,
+"holes": 0
+},
+"ALCHUSDT": {
+"first": 1738022400000,
+"last": 1746226800000,
+"bars": 2280,
+"holes": 0
+},
+"ALGOUSDT": {
+"first": 1638316800000,
+"last": 1735686000000,
+"bars": 9480,
+"holes": 17568
+},
+"ALICEUSDT": {
+"first": 1638316800000,
+"last": 1656370800000,
+"bars": 5016,
+"holes": 0
+},
+"ALLOUSDT": {
+"first": 1762869600000,
+"last": 1783638000000,
+"bars": 2578,
+"holes": 3192
+},
+"ALPACAUSDT": {
+"first": 1724320800000,
+"last": 1748397600000,
+"bars": 1664,
+"holes": 5025
+},
+"ALPHAUSDT": {
+"first": 1645747200000,
+"last": 1689202800000,
+"bars": 5832,
+"holes": 6240
+},
+"ALPINEUSDT": {
+"first": 1756166400000,
+"last": 1761606000000,
+"bars": 1512,
+"holes": 0
+},
+"ALTUSDT": {
+"first": 1706191200000,
+"last": 1710543600000,
+"bars": 1200,
+"holes": 10
+},
+"AMBUSDT": {
+"first": 1682726400000,
+"last": 1698706800000,
+"bars": 3240,
+"holes": 1200
+},
+"ANIMEUSDT": {
+"first": 1746403200000,
+"last": 1752015600000,
+"bars": 1560,
+"holes": 0
+},
+"ANKRUSDT": {
+"first": 1638316800000,
+"last": 1679871600000,
+"bars": 3672,
+"holes": 7872
+},
+"ANTUSDT": {
+"first": 1640570400000,
+"last": 1646262000000,
+"bars": 1582,
+"holes": 0
+},
+"APEUSDT": {
+"first": 1647529200000,
+"last": 1779663600000,
+"bars": 20399,
+"holes": 16306
+},
+"API3USDT": {
+"first": 1645498800000,
+"last": 1758236400000,
+"bars": 7667,
+"holes": 23650
+},
+"APRUSDT": {
+"first": 1783814400000,
+"last": 1788735600000,
+"bars": 1368,
+"holes": 0
+},
+"APTUSDT": {
+"first": 1666144800000,
+"last": 1766962800000,
+"bars": 24252,
+"holes": 3754
+},
+"ARBUSDT": {
+"first": 1679583600000,
+"last": 1790809200000,
+"bars": 22607,
+"holes": 8290
+},
+"ARCUSDT": {
+"first": 1737118800000,
+"last": 1774652400000,
+"bars": 5123,
+"holes": 5304
+},
+"ARIAUSDT": {
+"first": 1772323200000,
+"last": 1778540400000,
+"bars": 1728,
+"holes": 0
+},
+"ARKMUSDT": {
+"first": 1706572800000,
+"last": 1711407600000,
+"bars": 1334,
+"holes": 10
+},
+"ARKUSDT": {
+"first": 1695132000000,
+"last": 1730329200000,
+"bars": 3418,
+"holes": 6360
+},
+"ARPAUSDT": {
+"first": 1642809600000,
+"last": 1689116400000,
+"bars": 3096,
+"holes": 9768
+},
+"ARUSDT": {
+"first": 1638748800000,
+"last": 1717628400000,
+"bars": 5568,
+"holes": 16344
+},
+"ASTERUSDT": {
+"first": 1758283200000,
+"last": 1782774000000,
+"bars": 6612,
+"holes": 192
+},
+"ATAUSDT": {
+"first": 1711584000000,
+"last": 1716591600000,
+"bars": 1392,
+"holes": 0
+},
+"ATOMUSDT": {
+"first": 1638316800000,
+"last": 1712271600000,
+"bars": 19022,
+"holes": 1522
+},
+"ATUSDT": {
+"first": 1763856000000,
+"last": 1768863600000,
+"bars": 1392,
+"holes": 0
+},
+"AUCTIONUSDT": {
+"first": 1702645200000,
+"last": 1745535600000,
+"bars": 2627,
+"holes": 9288
+},
+"AUDIOUSDT": {
+"first": 1645747200000,
+"last": 1678230000000,
+"bars": 3624,
+"holes": 5400
+},
+"AVAXUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 41942,
+"holes": 418
+},
+"AVNTUSDT": {
+"first": 1757430000000,
+"last": 1763679600000,
+"bars": 1737,
+"holes": 0
+},
+"AXSUSDT": {
+"first": 1638316800000,
+"last": 1773356400000,
+"bars": 18648,
+"holes": 18864
+},
+"AZTECUSDT": {
+"first": 1770782400000,
+"last": 1773874800000,
+"bars": 860,
+"holes": 0
+},
+"BABYUSDT": {
+"first": 1743858000000,
+"last": 1747263600000,
+"bars": 947,
+"holes": 0
+},
+"BAKEUSDT": {
+"first": 1645747200000,
+"last": 1760061600000,
+"bars": 9041,
+"holes": 22714
+},
+"BANANAS31USDT": {
+"first": 1747958400000,
+"last": 1775602800000,
+"bars": 4248,
+"holes": 3432
+},
+"BANANAUSDT": {
+"first": 1740528000000,
+"last": 1744326000000,
+"bars": 1056,
+"holes": 0
+},
+"BANDUSDT": {
+"first": 1642291200000,
+"last": 1674601200000,
+"bars": 4248,
+"holes": 4728
+},
+"BANKUSDT": {
+"first": 1781395200000,
+"last": 1788044400000,
+"bars": 1848,
+"holes": 0
+},
+"BARDUSDT": {
+"first": 1758193200000,
+"last": 1776466800000,
+"bars": 2581,
+"holes": 2496
+},
+"BASEDUSDT": {
+"first": 1774864800000,
+"last": 1778972400000,
+"bars": 1142,
+"holes": 0
+},
+"BASUSDT": {
+"first": 1757894400000,
+"last": 1763074800000,
+"bars": 1440,
+"holes": 0
+},
+"BATUSDT": {
+"first": 1638316800000,
+"last": 1641423600000,
+"bars": 864,
+"holes": 0
+},
+"BBUSDT": {
+"first": 1715601600000,
+"last": 1722034800000,
+"bars": 1788,
+"holes": 0
+},
+"BCHUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 41438,
+"holes": 922
+},
+"BEATUSDT": {
+"first": 1762948800000,
+"last": 1788908400000,
+"bars": 5292,
+"holes": 1920
+},
+"BELUSDT": {
+"first": 1650758400000,
+"last": 1714950000000,
+"bars": 5760,
+"holes": 12072
+},
+"BERAUSDT": {
+"first": 1738854000000,
+"last": 1773529200000,
+"bars": 4065,
+"holes": 5568
+},
+"BICOUSDT": {
+"first": 1783814400000,
+"last": 1788217200000,
+"bars": 1224,
+"holes": 0
+},
+"BIDUSDT": {
+"first": 1748044800000,
+"last": 1751583600000,
+"bars": 984,
+"holes": 0
+},
+"BIGTIMEUSDT": {
+"first": 1697119200000,
+"last": 1732316400000,
+"bars": 4786,
+"holes": 4992
+},
+"BILLUSDT": {
+"first": 1778140800000,
+"last": 1781737200000,
+"bars": 1000,
+"holes": 0
+},
+"BIOUSDT": {
+"first": 1735905600000,
+"last": 1780182000000,
+"bars": 4308,
+"holes": 7992
+},
+"BIRBUSDT": {
+"first": 1769662800000,
+"last": 1772751600000,
+"bars": 859,
+"holes": 0
+},
+"BLESSUSDT": {
+"first": 1758618000000,
+"last": 1788390000000,
+"bars": 2799,
+"holes": 5472
+},
+"BLURUSDT": {
+"first": 1696032000000,
+"last": 1709506800000,
+"bars": 3734,
+"holes": 10
+},
+"BLZUSDT": {
+"first": 1642809600000,
+"last": 1700262000000,
+"bars": 7224,
+"holes": 8736
+},
+"BMTUSDT": {
+"first": 1742216400000,
+"last": 1744930800000,
+"bars": 755,
+"holes": 0
+},
+"BNBUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"BNTUSDT": {
+"first": 1693785600000,
+"last": 1700002800000,
+"bars": 1728,
+"holes": 0
+},
+"BNXUSDT": {
+"first": 1648771200000,
+"last": 1742958000000,
+"bars": 7219,
+"holes": 18945
+},
+"BOBUSDT": {
+"first": 1763719200000,
+"last": 1766530800000,
+"bars": 782,
+"holes": 0
+},
+"BOMEUSDT": {
+"first": 1710590400000,
+"last": 1734217200000,
+"bars": 6564,
+"holes": 0
+},
+"BONDUSDT": {
+"first": 1697378400000,
+"last": 1723503600000,
+"bars": 2194,
+"holes": 5064
+},
+"BREVUSDT": {
+"first": 1767088800000,
+"last": 1770418800000,
+"bars": 926,
+"holes": 0
+},
+"BROCCOLI714USDT": {
+"first": 1764720000000,
+"last": 1769900400000,
+"bars": 1440,
+"holes": 0
+},
+"BROCCOLIF3BUSDT": {
+"first": 1742547600000,
+"last": 1745967600000,
+"bars": 951,
+"holes": 0
+},
+"BRUSDT": {
+"first": 1772064000000,
+"last": 1790809200000,
+"bars": 2448,
+"holes": 2760
+},
+"BSBUSDT": {
+"first": 1774436400000,
+"last": 1782514800000,
+"bars": 2245,
+"holes": 0
+},
+"BSVUSDT": {
+"first": 1701043200000,
+"last": 1706569200000,
+"bars": 1536,
+"holes": 0
+},
+"BTCUSDT": {
+"first": 1609459200000,
+"last": 1790809200000,
+"bars": 50354,
+"holes": 22
+},
+"BTRUSDT": {
+"first": 1785024000000,
+"last": 1790377200000,
+"bars": 1488,
+"holes": 0
+},
+"BTTUSDT": {
+"first": 1638316800000,
+"last": 1641769200000,
+"bars": 960,
+"holes": 0
+},
+"BTWUSDT": {
+"first": 1780581600000,
+"last": 1789772400000,
+"bars": 2554,
+"holes": 0
+},
+"BULLAUSDT": {
+"first": 1766880000000,
+"last": 1778108400000,
+"bars": 3096,
+"holes": 24
+},
+"BUSDT": {
+"first": 1747929600000,
+"last": 1780527600000,
+"bars": 2264,
+"holes": 6792
+},
+"BZUSDT": {
+"first": 1775034000000,
+"last": 1790809200000,
+"bars": 4383,
+"holes": 0
+},
+"C98USDT": {
+"first": 1666915200000,
+"last": 1694214000000,
+"bars": 2736,
+"holes": 4848
+},
+"CAKEUSDT": {
+"first": 1737763200000,
+"last": 1762297200000,
+"bars": 3384,
+"holes": 3432
+},
+"CATIUSDT": {
+"first": 1726830000000,
+"last": 1731020400000,
+"bars": 1165,
+"holes": 0
+},
+"CELOUSDT": {
+"first": 1645747200000,
+"last": 1729897200000,
+"bars": 6192,
+"holes": 17184
+},
+"CELRUSDT": {
+"first": 1638316800000,
+"last": 1684278000000,
+"bars": 4920,
+"holes": 7848
+},
+"CFXUSDT": {
+"first": 1676901600000,
+"last": 1756767600000,
+"bars": 11472,
+"holes": 10714
+},
+"CGPTUSDT": {
+"first": 1734721200000,
+"last": 1739142000000,
+"bars": 1229,
+"holes": 0
+},
+"CHIPUSDT": {
+"first": 1776322800000,
+"last": 1780182000000,
+"bars": 1073,
+"holes": 0
+},
+"CHRUSDT": {
+"first": 1638316800000,
+"last": 1648940400000,
+"bars": 2952,
+"holes": 0
+},
+"CHZUSDT": {
+"first": 1638316800000,
+"last": 1708210800000,
+"bars": 12182,
+"holes": 7234
+},
+"CKBUSDT": {
+"first": 1704758400000,
+"last": 1729119600000,
+"bars": 4550,
+"holes": 2218
+},
+"CLOUSDT": {
+"first": 1765065600000,
+"last": 1770505200000,
+"bars": 1512,
+"holes": 0
+},
+"CLUSDT": {
+"first": 1775034000000,
+"last": 1790809200000,
+"bars": 4383,
+"holes": 0
+},
+"COAIUSDT": {
+"first": 1758783600000,
+"last": 1764370800000,
+"bars": 1553,
+"holes": 0
+},
+"COCOSUSDT": {
+"first": 1679011200000,
+"last": 1685412000000,
+"bars": 1671,
+"holes": 108
+},
+"COMPUSDT": {
+"first": 1654473600000,
+"last": 1698102000000,
+"bars": 6480,
+"holes": 5640
+},
+"COOKIEUSDT": {
+"first": 1745366400000,
+"last": 1750633200000,
+"bars": 1464,
+"holes": 0
+},
+"COTIUSDT": {
+"first": 1640476800000,
+"last": 1787871600000,
+"bars": 4598,
+"holes": 36346
+},
+"COWUSDT": {
+"first": 1732233600000,
+"last": 1737327600000,
+"bars": 1416,
+"holes": 0
+},
+"CRCLUSDT": {
+"first": 1771286400000,
+"last": 1790809200000,
+"bars": 5424,
+"holes": 0
+},
+"CRVUSDT": {
+"first": 1638316800000,
+"last": 1758409200000,
+"bars": 28680,
+"holes": 4680
+},
+"CTSIUSDT": {
+"first": 1678665600000,
+"last": 1708470000000,
+"bars": 3470,
+"holes": 4810
+},
+"CUSDT": {
+"first": 1752570000000,
+"last": 1776121200000,
+"bars": 1839,
+"holes": 4704
+},
+"CYBERUSDT": {
+"first": 1692619200000,
+"last": 1697497200000,
+"bars": 1356,
+"holes": 0
+},
+"CYSUSDT": {
+"first": 1783382400000,
+"last": 1789081200000,
+"bars": 1584,
+"holes": 0
+},
+"DARUSDT": {
+"first": 1651201200000,
+"last": 1726700400000,
+"bars": 2157,
+"holes": 18816
+},
+"DASHUSDT": {
+"first": 1645747200000,
+"last": 1790809200000,
+"bars": 8856,
+"holes": 31440
+},
+"DEGOUSDT": {
+"first": 1770422400000,
+"last": 1775948400000,
+"bars": 1536,
+"holes": 0
+},
+"DENTUSDT": {
+"first": 1642809600000,
+"last": 1774306800000,
+"bars": 1872,
+"holes": 34656
+},
+"DEXEUSDT": {
+"first": 1781568000000,
+"last": 1787612400000,
+"bars": 1680,
+"holes": 0
+},
+"DIAUSDT": {
+"first": 1727870400000,
+"last": 1731798000000,
+"bars": 1092,
+"holes": 0
+},
+"DODOUSDT": {
+"first": 1642809600000,
+"last": 1646089200000,
+"bars": 912,
+"holes": 0
+},
+"DOGEUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"DOGSUSDT": {
+"first": 1724673600000,
+"last": 1780614000000,
+"bars": 3852,
+"holes": 11688
+},
+"DOLOUSDT": {
+"first": 1755043200000,
+"last": 1758582000000,
+"bars": 984,
+"holes": 0
+},
+"DOTUSDT": {
+"first": 1638316800000,
+"last": 1778886000000,
+"bars": 38318,
+"holes": 730
+},
+"DRAMUSDT": {
+"first": 1779321600000,
+"last": 1790204400000,
+"bars": 3024,
+"holes": 0
+},
+"DRIFTUSDT": {
+"first": 1731078000000,
+"last": 1732316400000,
+"bars": 345,
+"holes": 0
+},
+"DUSKUSDT": {
+"first": 1641524400000,
+"last": 1771887600000,
+"bars": 4557,
+"holes": 31656
+},
+"DYDXUSDT": {
+"first": 1638316800000,
+"last": 1711321200000,
+"bars": 20270,
+"holes": 10
+},
+"DYMUSDT": {
+"first": 1707289200000,
+"last": 1710025200000,
+"bars": 751,
+"holes": 10
+},
+"EDENUSDT": {
+"first": 1759230000000,
+"last": 1781910000000,
+"bars": 2269,
+"holes": 4032
+},
+"EDGEUSDT": {
+"first": 1773928800000,
+"last": 1777849200000,
+"bars": 1090,
+"holes": 0
+},
+"EDUUSDT": {
+"first": 1682856000000,
+"last": 1719010800000,
+"bars": 2532,
+"holes": 7512
+},
+"EGLDUSDT": {
+"first": 1638316800000,
+"last": 1667602800000,
+"bars": 6192,
+"holes": 1944
+},
+"EIGENUSDT": {
+"first": 1727762400000,
+"last": 1761174000000,
+"bars": 2394,
+"holes": 6888
+},
+"ENAUSDT": {
+"first": 1712059200000,
+"last": 1790809200000,
+"bars": 21876,
+"holes": 0
+},
+"ENJUSDT": {
+"first": 1638316800000,
+"last": 1778886000000,
+"bars": 6264,
+"holes": 32784
+},
+"ENSOUSDT": {
+"first": 1766275200000,
+"last": 1774911600000,
+"bars": 2400,
+"holes": 0
+},
+"ENSUSDT": {
+"first": 1642809600000,
+"last": 1736809200000,
+"bars": 14246,
+"holes": 11866
+},
+"EOSUSDT": {
+"first": 1638316800000,
+"last": 1747818000000,
+"bars": 24624,
+"holes": 5794
+},
+"ERAUSDT": {
+"first": 1752764400000,
+"last": 1755471600000,
+"bars": 753,
+"holes": 0
+},
+"ESPORTSUSDT": {
+"first": 1777852800000,
+"last": 1787007600000,
+"bars": 2544,
+"holes": 0
+},
+"ESPUSDT": {
+"first": 1770710400000,
+"last": 1774566000000,
+"bars": 1072,
+"holes": 0
+},
+"ETCUSDT": {
+"first": 1638316800000,
+"last": 1757804400000,
+"bars": 27350,
+"holes": 5842
+},
+"ETHFIUSDT": {
+"first": 1710774000000,
+"last": 1751238000000,
+"bars": 5649,
+"holes": 5592
+},
+"ETHUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"EVAAUSDT": {
+"first": 1759485600000,
+"last": 1786402800000,
+"bars": 2846,
+"holes": 4632
+},
+"EWYUSDT": {
+"first": 1778025600000,
+"last": 1788476400000,
+"bars": 2904,
+"holes": 0
+},
+"FARTCOINUSDT": {
+"first": 1734717600000,
+"last": 1777071600000,
+"bars": 11766,
+"holes": 0
+},
+"FETUSDT": {
+"first": 1673920800000,
+"last": 1776726000000,
+"bars": 17028,
+"holes": 11530
+},
+"FFUSDT": {
+"first": 1759150800000,
+"last": 1762210800000,
+"bars": 851,
+"holes": 0
+},
+"FHEUSDT": {
+"first": 1762819200000,
+"last": 1771455600000,
+"bars": 2400,
+"holes": 0
+},
+"FIDAUSDT": {
+"first": 1776556800000,
+"last": 1781737200000,
+"bars": 1440,
+"holes": 0
+},
+"FILUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 41606,
+"holes": 754
+},
+"FLMUSDT": {
+"first": 1651968000000,
+"last": 1698015600000,
+"bars": 6216,
+"holes": 6576
+},
+"FLOWUSDT": {
+"first": 1656633600000,
+"last": 1690844400000,
+"bars": 3480,
+"holes": 6024
+},
+"FOGOUSDT": {
+"first": 1768053600000,
+"last": 1770937200000,
+"bars": 802,
+"holes": 0
+},
+"FOLKSUSDT": {
+"first": 1762646400000,
+"last": 1768690800000,
+"bars": 1680,
+"holes": 0
+},
+"FOOTBALLUSDT": {
+"first": 1662001200000,
+"last": 1671318000000,
+"bars": 2301,
+"holes": 288
+},
+"FORMUSDT": {
+"first": 1758499200000,
+"last": 1761692400000,
+"bars": 888,
+"holes": 0
+},
+"FRAXUSDT": {
+"first": 1768464000000,
+"last": 1771196400000,
+"bars": 760,
+"holes": 0
+},
+"FRONTUSDT": {
+"first": 1695391200000,
+"last": 1718146800000,
+"bars": 3624,
+"holes": 2698
+},
+"FTMUSDT": {
+"first": 1638316800000,
+"last": 1736301600000,
+"bars": 26354,
+"holes": 865
+},
+"FTTUSDT": {
+"first": 1664841600000,
+"last": 1670889600000,
+"bars": 1211,
+"holes": 470
+},
+"FUNUSDT": {
+"first": 1743408000000,
+"last": 1754175600000,
+"bars": 2752,
+"holes": 240
+},
+"FXSUSDT": {
+"first": 1674183600000,
+"last": 1678316400000,
+"bars": 1149,
+"holes": 0
+},
+"GALAUSDT": {
+"first": 1638316800000,
+"last": 1739142000000,
+"bars": 25334,
+"holes": 2674
+},
+"GALUSDT": {
+"first": 1651759200000,
+"last": 1661814000000,
+"bars": 2794,
+"holes": 0
+},
+"GASUSDT": {
+"first": 1698199200000,
+"last": 1746486000000,
+"bars": 2374,
+"holes": 11040
+},
+"GIGGLEUSDT": {
+"first": 1760000400000,
+"last": 1767222000000,
+"bars": 2007,
+"holes": 0
+},
+"GLMUSDT": {
+"first": 1711843200000,
+"last": 1717023600000,
+"bars": 1440,
+"holes": 0
+},
+"GMTUSDT": {
+"first": 1647316800000,
+"last": 1738018800000,
+"bars": 18332,
+"holes": 6864
+},
+"GOATUSDT": {
+"first": 1729774800000,
+"last": 1749423600000,
+"bars": 3587,
+"holes": 1872
+},
+"GRIFFAINUSDT": {
+"first": 1735822800000,
+"last": 1739401200000,
+"bars": 995,
+"holes": 0
+},
+"GRTUSDT": {
+"first": 1644278400000,
+"last": 1681858800000,
+"bars": 6216,
+"holes": 4224
+},
+"GTCUSDT": {
+"first": 1638316800000,
+"last": 1694041200000,
+"bars": 2304,
+"holes": 13176
+},
+"GUNUSDT": {
+"first": 1743426000000,
+"last": 1747004400000,
+"bars": 995,
+"holes": 0
+},
+"HAEDALUSDT": {
+"first": 1746068400000,
+"last": 1748991600000,
+"bars": 813,
+"holes": 0
+},
+"HBARUSDT": {
+"first": 1673222400000,
+"last": 1764025200000,
+"bars": 12408,
+"holes": 12816
+},
+"HEIUSDT": {
+"first": 1782950400000,
+"last": 1788562800000,
+"bars": 1560,
+"holes": 0
+},
+"HEMIUSDT": {
+"first": 1756440000000,
+"last": 1789426800000,
+"bars": 2396,
+"holes": 6768
+},
+"HFTUSDT": {
+"first": 1748908800000,
+"last": 1752188400000,
+"bars": 912,
+"holes": 0
+},
+"HIFIUSDT": {
+"first": 1694872800000,
+"last": 1760407200000,
+"bars": 2191,
+"holes": 16014
+},
+"HIGHUSDT": {
+"first": 1682553600000,
+"last": 1779145200000,
+"bars": 6384,
+"holes": 20448
+},
+"HIVEUSDT": {
+"first": 1734951600000,
+"last": 1738710000000,
+"bars": 1045,
+"holes": 0
+},
+"HMSTRUSDT": {
+"first": 1727352000000,
+"last": 1733266800000,
+"bars": 1644,
+"holes": 0
+},
+"HNTUSDT": {
+"first": 1642809600000,
+"last": 1674255600000,
+"bars": 5760,
+"holes": 2976
+},
+"HOMEUSDT": {
+"first": 1749553200000,
+"last": 1786748400000,
+"bars": 3085,
+"holes": 7248
+},
+"HOOKUSDT": {
+"first": 1674442800000,
+"last": 1679526000000,
+"bars": 1413,
+"holes": 0
+},
+"HOTUSDT": {
+"first": 1638316800000,
+"last": 1638399600000,
+"bars": 24,
+"holes": 0
+},
+"HUMAUSDT": {
+"first": 1748264400000,
+"last": 1751238000000,
+"bars": 827,
+"holes": 0
+},
+"HUSDT": {
+"first": 1750842000000,
+"last": 1784156400000,
+"bars": 5775,
+"holes": 3480
+},
+"HYPERUSDT": {
+"first": 1749081600000,
+"last": 1755903600000,
+"bars": 1896,
+"holes": 0
+},
+"HYPEUSDT": {
+"first": 1748599200000,
+"last": 1790809200000,
+"bars": 11726,
+"holes": 0
+},
+"ICPUSDT": {
+"first": 1640217600000,
+"last": 1771023600000,
+"bars": 7550,
+"holes": 28786
+},
+"ICXUSDT": {
+"first": 1644278400000,
+"last": 1683500400000,
+"bars": 2928,
+"holes": 7968
+},
+"IDUSDT": {
+"first": 1679580000000,
+"last": 1712876400000,
+"bars": 4632,
+"holes": 4618
+},
+"IMXUSDT": {
+"first": 1644548400000,
+"last": 1704409200000,
+"bars": 6237,
+"holes": 10392
+},
+"INITUSDT": {
+"first": 1744783200000,
+"last": 1773788400000,
+"bars": 2466,
+"holes": 5592
+},
+"INJUSDT": {
+"first": 1662940800000,
+"last": 1782169200000,
+"bars": 20750,
+"holes": 12370
+},
+"INTCUSDT": {
+"first": 1777248000000,
+"last": 1790809200000,
+"bars": 3768,
+"holes": 0
+},
+"IOSTUSDT": {
+"first": 1645660800000,
+"last": 1651359600000,
+"bars": 1584,
+"holes": 0
+},
+"IOTAUSDT": {
+"first": 1698537600000,
+"last": 1703977200000,
+"bars": 1512,
+"holes": 0
+},
+"IOTXUSDT": {
+"first": 1638316800000,
+"last": 1648940400000,
+"bars": 2640,
+"holes": 312
+},
+"IOUSDT": {
+"first": 1718114400000,
+"last": 1727305200000,
+"bars": 2554,
+"holes": 0
+},
+"IPUSDT": {
+"first": 1739466000000,
+"last": 1771369200000,
+"bars": 4759,
+"holes": 4104
+},
+"JASMYUSDT": {
+"first": 1650423600000,
+"last": 1724886000000,
+"bars": 12179,
+"holes": 8506
+},
+"JELLYJELLYUSDT": {
+"first": 1759104000000,
+"last": 1768172400000,
+"bars": 2520,
+"holes": 0
+},
+"JOEUSDT": {
+"first": 1690588800000,
+"last": 1696114800000,
+"bars": 1536,
+"holes": 0
+},
+"JTOUSDT": {
+"first": 1702029600000,
+"last": 1724540400000,
+"bars": 5438,
+"holes": 816
+},
+"JUPUSDT": {
+"first": 1706724000000,
+"last": 1742684400000,
+"bars": 5420,
+"holes": 4570
+},
+"KAITOUSDT": {
+"first": 1740056400000,
+"last": 1787094000000,
+"bars": 4235,
+"holes": 8832
+},
+"KATUSDT": {
+"first": 1773964800000,
+"last": 1779663600000,
+"bars": 1584,
+"holes": 0
+},
+"KAVAUSDT": {
+"first": 1639526400000,
+"last": 1688684400000,
+"bars": 8520,
+"holes": 5136
+},
+"KERNELUSDT": {
+"first": 1744632000000,
+"last": 1746658800000,
+"bars": 564,
+"holes": 0
+},
+"KEYUSDT": {
+"first": 1684929600000,
+"last": 1688166000000,
+"bars": 900,
+"holes": 0
+},
+"KGENUSDT": {
+"first": 1759845600000,
+"last": 1763247600000,
+"bars": 946,
+"holes": 0
+},
+"KITEUSDT": {
+"first": 1761732000000,
+"last": 1775602800000,
+"bars": 2702,
+"holes": 1152
+},
+"KLAYUSDT": {
+"first": 1663545600000,
+"last": 1679439600000,
+"bars": 3096,
+"holes": 1320
+},
+"KNCUSDT": {
+"first": 1640563200000,
+"last": 1698188400000,
+"bars": 10608,
+"holes": 5400
+},
+"KORUUSDT": {
+"first": 1782133200000,
+"last": 1790809200000,
+"bars": 2404,
+"holes": 7
+},
+"LABUSDT": {
+"first": 1774656000000,
+"last": 1786575600000,
+"bars": 3312,
+"holes": 0
+},
+"LAUSDT": {
+"first": 1749114000000,
+"last": 1751756400000,
+"bars": 735,
+"holes": 0
+},
+"LAYERUSDT": {
+"first": 1739286000000,
+"last": 1749250800000,
+"bars": 2769,
+"holes": 0
+},
+"LDOUSDT": {
+"first": 1669680000000,
+"last": 1757977200000,
+"bars": 13680,
+"holes": 10848
+},
+"LEVERUSDT": {
+"first": 1689724800000,
+"last": 1699052400000,
+"bars": 2592,
+"holes": 0
+},
+"LIGHTUSDT": {
+"first": 1758970800000,
+"last": 1769900400000,
+"bars": 2605,
+"holes": 432
+},
+"LINAUSDT": {
+"first": 1647993600000,
+"last": 1692313200000,
+"bars": 6984,
+"holes": 5328
+},
+"LINEAUSDT": {
+"first": 1756713600000,
+"last": 1761001200000,
+"bars": 1192,
+"holes": 0
+},
+"LINKUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"LISTAUSDT": {
+"first": 1718884800000,
+"last": 1722985200000,
+"bars": 1140,
+"holes": 0
+},
+"LITUSDT": {
+"first": 1652054400000,
+"last": 1770678000000,
+"bars": 7927,
+"holes": 25025
+},
+"LOOMUSDT": {
+"first": 1697032800000,
+"last": 1701126000000,
+"bars": 1138,
+"holes": 0
+},
+"LPTUSDT": {
+"first": 1688688000000,
+"last": 1751929200000,
+"bars": 5534,
+"holes": 12034
+},
+"LQTYUSDT": {
+"first": 1678449600000,
+"last": 1699830000000,
+"bars": 4116,
+"holes": 1824
+},
+"LRCUSDT": {
+"first": 1638316800000,
+"last": 1677798000000,
+"bars": 7248,
+"holes": 3720
+},
+"LSKUSDT": {
+"first": 1762128000000,
+"last": 1790809200000,
+"bars": 2184,
+"holes": 5784
+},
+"LTCUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 40286,
+"holes": 2074
+},
+"LUNA2USDT": {
+"first": 1662778800000,
+"last": 1768172400000,
+"bars": 7245,
+"holes": 22032
+},
+"LUNAUSDT": {
+"first": 1638316800000,
+"last": 1652367600000,
+"bars": 3904,
+"holes": 0
+},
+"LYNUSDT": {
+"first": 1770508800000,
+"last": 1776553200000,
+"bars": 1680,
+"holes": 0
+},
+"MAGICUSDT": {
+"first": 1674615600000,
+"last": 1756940400000,
+"bars": 5901,
+"holes": 16968
+},
+"MANAUSDT": {
+"first": 1638316800000,
+"last": 1683154800000,
+"bars": 12456,
+"holes": 0
+},
+"MANTAUSDT": {
+"first": 1705586400000,
+"last": 1711148400000,
+"bars": 1536,
+"holes": 10
+},
+"MARSCOINUSDT": {
+"first": 1788253200000,
+"last": 1790809200000,
+"bars": 711,
+"holes": 0
+},
+"MASKUSDT": {
+"first": 1638316800000,
+"last": 1751842800000,
+"bars": 15168,
+"holes": 16368
+},
+"MATICUSDT": {
+"first": 1638316800000,
+"last": 1725760800000,
+"bars": 24193,
+"holes": 98
+},
+"MAVUSDT": {
+"first": 1704499200000,
+"last": 1707865200000,
+"bars": 936,
+"holes": 0
+},
+"MELANIAUSDT": {
+"first": 1737363600000,
+"last": 1740438000000,
+"bars": 855,
+"holes": 0
+},
+"MEMEFIUSDT": {
+"first": 1745564400000,
+"last": 1748473200000,
+"bars": 809,
+"holes": 0
+},
+"MEMEUSDT": {
+"first": 1699012800000,
+"last": 1758495600000,
+"bars": 4730,
+"holes": 11794
+},
+"MERLUSDT": {
+"first": 1761696000000,
+"last": 1766876400000,
+"bars": 1440,
+"holes": 0
+},
+"MEUSDT": {
+"first": 1733850000000,
+"last": 1737327600000,
+"bars": 967,
+"holes": 0
+},
+"MEWUSDT": {
+"first": 1718668800000,
+"last": 1732575600000,
+"bars": 3864,
+"holes": 0
+},
+"MINAUSDT": {
+"first": 1675648800000,
+"last": 1706655600000,
+"bars": 4024,
+"holes": 4590
+},
+"MIRAUSDT": {
+"first": 1758888000000,
+"last": 1761519600000,
+"bars": 732,
+"holes": 0
+},
+"MITOUSDT": {
+"first": 1756396800000,
+"last": 1759186800000,
+"bars": 776,
+"holes": 0
+},
+"MKRUSDT": {
+"first": 1662422400000,
+"last": 1742943600000,
+"bars": 8232,
+"holes": 14136
+},
+"MMTUSDT": {
+"first": 1762257600000,
+"last": 1766358000000,
+"bars": 1140,
+"holes": 0
+},
+"MOCAUSDT": {
+"first": 1734346800000,
+"last": 1737673200000,
+"bars": 925,
+"holes": 0
+},
+"MONUSDT": {
+"first": 1761436800000,
+"last": 1767481200000,
+"bars": 1680,
+"holes": 0
+},
+"MOODENGUSDT": {
+"first": 1729850400000,
+"last": 1754175600000,
+"bars": 4598,
+"holes": 2160
+},
+"MOVEUSDT": {
+"first": 1733752800000,
+"last": 1747782000000,
+"bars": 3754,
+"holes": 144
+},
+"MRVLUSDT": {
+"first": 1778853600000,
+"last": 1788908400000,
+"bars": 2794,
+"holes": 0
+},
+"MSTRUSDT": {
+"first": 1779408000000,
+"last": 1790809200000,
+"bars": 3168,
+"holes": 0
+},
+"MTLUSDT": {
+"first": 1646956800000,
+"last": 1696978800000,
+"bars": 9288,
+"holes": 4608
+},
+"MUBARAKUSDT": {
+"first": 1742216400000,
+"last": 1749510000000,
+"bars": 2027,
+"holes": 0
+},
+"MUSDT": {
+"first": 1751878800000,
+"last": 1759791600000,
+"bars": 2199,
+"holes": 0
+},
+"MUUSDT": {
+"first": 1776211200000,
+"last": 1790809200000,
+"bars": 4056,
+"holes": 0
+},
+"MUUUSDT": {
+"first": 1784192400000,
+"last": 1788130800000,
+"bars": 1095,
+"holes": 0
+},
+"MYXUSDT": {
+"first": 1750248000000,
+"last": 1773356400000,
+"bars": 4164,
+"holes": 2256
+},
+"NBISUSDT": {
+"first": 1783987200000,
+"last": 1787353200000,
+"bars": 936,
+"holes": 0
+},
+"NEARUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 40934,
+"holes": 1426
+},
+"NEIROETHUSDT": {
+"first": 1725631200000,
+"last": 1733094000000,
+"bars": 2074,
+"holes": 0
+},
+"NEIROUSDT": {
+"first": 1726484400000,
+"last": 1754089200000,
+"bars": 7669,
+"holes": 0
+},
+"NEOUSDT": {
+"first": 1642291200000,
+"last": 1715986800000,
+"bars": 6480,
+"holes": 13992
+},
+"NEWTUSDT": {
+"first": 1750341600000,
+"last": 1753484400000,
+"bars": 874,
+"holes": 0
+},
+"NIGHTUSDT": {
+"first": 1765364400000,
+"last": 1776207600000,
+"bars": 2101,
+"holes": 912
+},
+"NILUSDT": {
+"first": 1742821200000,
+"last": 1780786800000,
+"bars": 1811,
+"holes": 8736
+},
+"NMRUSDT": {
+"first": 1690675200000,
+"last": 1759791600000,
+"bars": 3384,
+"holes": 15816
+},
+"NOMUSDT": {
+"first": 1768780800000,
+"last": 1777676400000,
+"bars": 2448,
+"holes": 24
+},
+"NOTUSDT": {
+"first": 1715868000000,
+"last": 1731970800000,
+"bars": 4474,
+"holes": 0
+},
+"NVDAUSDT": {
+"first": 1777939200000,
+"last": 1790809200000,
+"bars": 3336,
+"holes": 240
+},
+"NXPCUSDT": {
+"first": 1747288800000,
+"last": 1751324400000,
+"bars": 1122,
+"holes": 0
+},
+"OCEANUSDT": {
+"first": 1664668800000,
+"last": 1689634800000,
+"bars": 5616,
+"holes": 1320
+},
+"OGNUSDT": {
+"first": 1644278400000,
+"last": 1698879600000,
+"bars": 7584,
+"holes": 7584
+},
+"OMGUSDT": {
+"first": 1638316800000,
+"last": 1682290800000,
+"bars": 1824,
+"holes": 10392
+},
+"OMNIUSDT": {
+"first": 1750982400000,
+"last": 1756422000000,
+"bars": 1512,
+"holes": 0
+},
+"OMUSDT": {
+"first": 1709337600000,
+"last": 1749510000000,
+"bars": 8040,
+"holes": 3120
+},
+"ONDOUSDT": {
+"first": 1705755600000,
+"last": 1790809200000,
+"bars": 17281,
+"holes": 6346
+},
+"ONEUSDT": {
+"first": 1638316800000,
+"last": 1790636400000,
+"bars": 5448,
+"holes": 36864
+},
+"ONGUSDT": {
+"first": 1710374400000,
+"last": 1789945200000,
+"bars": 3120,
+"holes": 18984
+},
+"ONTUSDT": {
+"first": 1642982400000,
+"last": 1777503600000,
+"bars": 5400,
+"holes": 31968
+},
+"ONUSDT": {
+"first": 1783036800000,
+"last": 1787266800000,
+"bars": 1176,
+"holes": 0
+},
+"OPENUSDT": {
+"first": 1757336400000,
+"last": 1760223600000,
+"bars": 803,
+"holes": 0
+},
+"OPNUSDT": {
+"first": 1771686000000,
+"last": 1774825200000,
+"bars": 873,
+"holes": 0
+},
+"OPUSDT": {
+"first": 1654063200000,
+"last": 1773961200000,
+"bars": 26840,
+"holes": 6466
+},
+"ORBSUSDT": {
+"first": 1697522400000,
+"last": 1700262000000,
+"bars": 762,
+"holes": 0
+},
+"ORCAUSDT": {
+"first": 1740009600000,
+"last": 1780009200000,
+"bars": 3528,
+"holes": 7584
+},
+"ORDIUSDT": {
+"first": 1699358400000,
+"last": 1779318000000,
+"bars": 13586,
+"holes": 8626
+},
+"PARTIUSDT": {
+"first": 1742907600000,
+"last": 1747177200000,
+"bars": 1187,
+"holes": 0
+},
+"PAXGUSDT": {
+"first": 1757548800000,
+"last": 1780700400000,
+"bars": 6432,
+"holes": 0
+},
+"PENDLEUSDT": {
+"first": 1704499200000,
+"last": 1727650800000,
+"bars": 5424,
+"holes": 1008
+},
+"PENGUUSDT": {
+"first": 1734451200000,
+"last": 1780182000000,
+"bars": 10856,
+"holes": 1848
+},
+"PEOPLEUSDT": {
+"first": 1640257200000,
+"last": 1749942000000,
+"bars": 18085,
+"holes": 12384
+},
+"PERPUSDT": {
+"first": 1690934400000,
+"last": 1706828400000,
+"bars": 3264,
+"holes": 1152
+},
+"PHBUSDT": {
+"first": 1682380800000,
+"last": 1686956400000,
+"bars": 1272,
+"holes": 0
+},
+"PIEVERSEUSDT": {
+"first": 1763118000000,
+"last": 1779318000000,
+"bars": 3229,
+"holes": 1272
+},
+"PIPPINUSDT": {
+"first": 1760918400000,
+"last": 1777762800000,
+"bars": 4680,
+"holes": 0
+},
+"PIXELUSDT": {
+"first": 1708354800000,
+"last": 1776034800000,
+"bars": 2865,
+"holes": 15936
+},
+"PLAYUSDT": {
+"first": 1776643200000,
+"last": 1781996400000,
+"bars": 1488,
+"holes": 0
+},
+"PNUTUSDT": {
+"first": 1731326400000,
+"last": 1754694000000,
+"bars": 6492,
+"holes": 0
+},
+"POLYXUSDT": {
+"first": 1698199200000,
+"last": 1714518000000,
+"bars": 2470,
+"holes": 2064
+},
+"POPCATUSDT": {
+"first": 1724331600000,
+"last": 1748386800000,
+"bars": 6371,
+"holes": 312
+},
+"POWERUSDT": {
+"first": 1765011600000,
+"last": 1775170800000,
+"bars": 2607,
+"holes": 216
+},
+"POWRUSDT": {
+"first": 1701561600000,
+"last": 1707260400000,
+"bars": 1584,
+"holes": 0
+},
+"PROMPTUSDT": {
+"first": 1744351200000,
+"last": 1747090800000,
+"bars": 762,
+"holes": 0
+},
+"PROMUSDT": {
+"first": 1785110400000,
+"last": 1789167600000,
+"bars": 1128,
+"holes": 0
+},
+"PROVEUSDT": {
+"first": 1754413200000,
+"last": 1757631600000,
+"bars": 895,
+"holes": 0
+},
+"PTBUSDT": {
+"first": 1764374400000,
+"last": 1768258800000,
+"bars": 1080,
+"holes": 0
+},
+"PUMPBTCUSDT": {
+"first": 1756166400000,
+"last": 1759273200000,
+"bars": 864,
+"holes": 0
+},
+"PUMPUSDT": {
+"first": 1749513600000,
+"last": 1790809200000,
+"bars": 9174,
+"holes": 2298
+},
+"PYTHUSDT": {
+"first": 1703980800000,
+"last": 1759186800000,
+"bars": 4334,
+"holes": 11002
+},
+"QNTUSDT": {
+"first": 1787529600000,
+"last": 1790809200000,
+"bars": 912,
+"holes": 0
+},
+"QQQUSDT": {
+"first": 1778630400000,
+"last": 1788649200000,
+"bars": 2784,
+"holes": 0
+},
+"QTUMUSDT": {
+"first": 1642809600000,
+"last": 1648940400000,
+"bars": 1704,
+"holes": 0
+},
+"RAREUSDT": {
+"first": 1723726800000,
+"last": 1745967600000,
+"bars": 3275,
+"holes": 2904
+},
+"RAVEUSDT": {
+"first": 1765724400000,
+"last": 1779750000000,
+"bars": 2865,
+"holes": 1032
+},
+"RDNTUSDT": {
+"first": 1680696000000,
+"last": 1683759600000,
+"bars": 852,
+"holes": 0
+},
+"REDUSDT": {
+"first": 1741276800000,
+"last": 1776898800000,
+"bars": 2000,
+"holes": 7896
+},
+"REEFUSDT": {
+"first": 1660089600000,
+"last": 1731625200000,
+"bars": 5472,
+"holes": 14400
+},
+"RENUSDT": {
+"first": 1645747200000,
+"last": 1680822000000,
+"bars": 4512,
+"holes": 5232
+},
+"RESOLVUSDT": {
+"first": 1749560400000,
+"last": 1765926000000,
+"bars": 2315,
+"holes": 2232
+},
+"REUSDT": {
+"first": 1781791200000,
+"last": 1785452400000,
+"bars": 1018,
+"holes": 0
+},
+"REZUSDT": {
+"first": 1714485600000,
+"last": 1743980400000,
+"bars": 1786,
+"holes": 6408
+},
+"RIFUSDT": {
+"first": 1782172800000,
+"last": 1785625200000,
+"bars": 960,
+"holes": 0
+},
+"RIVERUSDT": {
+"first": 1764115200000,
+"last": 1778540400000,
+"bars": 4008,
+"holes": 0
+},
+"RLCUSDT": {
+"first": 1653609600000,
+"last": 1686006000000,
+"bars": 7344,
+"holes": 1656
+},
+"RNDRUSDT": {
+"first": 1675389600000,
+"last": 1719788400000,
+"bars": 9036,
+"holes": 3298
+},
+"ROBOUSDT": {
+"first": 1772179200000,
+"last": 1775257200000,
+"bars": 856,
+"holes": 0
+},
+"ROSEUSDT": {
+"first": 1640829600000,
+"last": 1677020400000,
+"bars": 4186,
+"holes": 5868
+},
+"RSRUSDT": {
+"first": 1638316800000,
+"last": 1668812400000,
+"bars": 5640,
+"holes": 2832
+},
+"RUNEUSDT": {
+"first": 1638662400000,
+"last": 1741215600000,
+"bars": 13728,
+"holes": 14760
+},
+"RVNUSDT": {
+"first": 1659398400000,
+"last": 1752188400000,
+"bars": 3720,
+"holes": 22056
+},
+"SAGAUSDT": {
+"first": 1712656800000,
+"last": 1781132400000,
+"bars": 5798,
+"holes": 13224
+},
+"SAHARAUSDT": {
+"first": 1750939200000,
+"last": 1775170800000,
+"bars": 2940,
+"holes": 3792
+},
+"SAMSUNGUSDT": {
+"first": 1781222400000,
+"last": 1790809200000,
+"bars": 2664,
+"holes": 0
+},
+"SANDUSDT": {
+"first": 1638316800000,
+"last": 1738278000000,
+"bars": 17856,
+"holes": 9912
+},
+"SAPIENUSDT": {
+"first": 1761696000000,
+"last": 1765062000000,
+"bars": 936,
+"holes": 0
+},
+"SEIUSDT": {
+"first": 1692237600000,
+"last": 1755039600000,
+"bars": 11436,
+"holes": 6010
+},
+"SENTUSDT": {
+"first": 1766793600000,
+"last": 1772492400000,
+"bars": 1584,
+"holes": 0
+},
+"SFPUSDT": {
+"first": 1638316800000,
+"last": 1695510000000,
+"bars": 4368,
+"holes": 11520
+},
+"SHELLUSDT": {
+"first": 1739811600000,
+"last": 1743289200000,
+"bars": 967,
+"holes": 0
+},
+"SIGNUSDT": {
+"first": 1745838000000,
+"last": 1775516400000,
+"bars": 2293,
+"holes": 5952
+},
+"SIRENUSDT": {
+"first": 1767830400000,
+"last": 1783465200000,
+"bars": 4344,
+"holes": 0
+},
+"SKHYNIXUSDT": {
+"first": 1780369200000,
+"last": 1790809200000,
+"bars": 2901,
+"holes": 0
+},
+"SKHYUSDT": {
+"first": 1783695600000,
+"last": 1790809200000,
+"bars": 1977,
+"holes": 0
+},
+"SKLUSDT": {
+"first": 1752796800000,
+"last": 1757804400000,
+"bars": 1392,
+"holes": 0
+},
+"SKYAIUSDT": {
+"first": 1774483200000,
+"last": 1781996400000,
+"bars": 2088,
+"holes": 0
+},
+"SLXUSDT": {
+"first": 1780297200000,
+"last": 1785193200000,
+"bars": 1361,
+"holes": 0
+},
+"SNDKUSDT": {
+"first": 1775779200000,
+"last": 1790809200000,
+"bars": 4176,
+"holes": 0
+},
+"SNXUSDT": {
+"first": 1642809600000,
+"last": 1761606000000,
+"bars": 9552,
+"holes": 23448
+},
+"SNXXUSDT": {
+"first": 1783605600000,
+"last": 1790809200000,
+"bars": 2002,
+"holes": 0
+},
+"SOLUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"SOMIUSDT": {
+"first": 1756112400000,
+"last": 1771887600000,
+"bars": 2295,
+"holes": 2088
+},
+"SOONUSDT": {
+"first": 1751932800000,
+"last": 1765062000000,
+"bars": 2880,
+"holes": 768
+},
+"SOPHUSDT": {
+"first": 1748437200000,
+"last": 1751497200000,
+"bars": 851,
+"holes": 0
+},
+"SOXLUSDT": {
+"first": 1778853600000,
+"last": 1790809200000,
+"bars": 3322,
+"holes": 0
+},
+"SOXSUSDT": {
+"first": 1784192400000,
+"last": 1790809200000,
+"bars": 1839,
+"holes": 0
+},
+"SPACEUSDT": {
+"first": 1769166000000,
+"last": 1773788400000,
+"bars": 1285,
+"holes": 0
+},
+"SPCXUSDT": {
+"first": 1779336000000,
+"last": 1790809200000,
+"bars": 3188,
+"holes": 0
+},
+"SPELLUSDT": {
+"first": 1692057600000,
+"last": 1740524400000,
+"bars": 2952,
+"holes": 10512
+},
+"SPKUSDT": {
+"first": 1750150800000,
+"last": 1757026800000,
+"bars": 1911,
+"holes": 0
+},
+"SPXUSDT": {
+"first": 1747180800000,
+"last": 1752966000000,
+"bars": 1608,
+"holes": 0
+},
+"SRMUSDT": {
+"first": 1645488000000,
+"last": 1660345200000,
+"bars": 2544,
+"holes": 1584
+},
+"STABLEUSDT": {
+"first": 1763510400000,
+"last": 1767826800000,
+"bars": 1200,
+"holes": 0
+},
+"STBLUSDT": {
+"first": 1758085200000,
+"last": 1761433200000,
+"bars": 931,
+"holes": 0
+},
+"STEEMUSDT": {
+"first": 1733961600000,
+"last": 1737500400000,
+"bars": 984,
+"holes": 0
+},
+"STGUSDT": {
+"first": 1661428800000,
+"last": 1782687600000,
+"bars": 4212,
+"holes": 29472
+},
+"STMXUSDT": {
+"first": 1686960000000,
+"last": 1724799600000,
+"bars": 4944,
+"holes": 5568
+},
+"STORJUSDT": {
+"first": 1638316800000,
+"last": 1724713200000,
+"bars": 8952,
+"holes": 15048
+},
+"STOUSDT": {
+"first": 1771977600000,
+"last": 1777935600000,
+"bars": 1656,
+"holes": 0
+},
+"STRAXUSDT": {
+"first": 1696989600000,
+"last": 1700089200000,
+"bars": 862,
+"holes": 0
+},
+"STRKUSDT": {
+"first": 1708448400000,
+"last": 1766271600000,
+"bars": 2455,
+"holes": 13608
+},
+"STXUSDT": {
+"first": 1676988000000,
+"last": 1723244400000,
+"bars": 11256,
+"holes": 1594
+},
+"SUIUSDT": {
+"first": 1683129600000,
+"last": 1790809200000,
+"bars": 29470,
+"holes": 442
+},
+"SUNUSDT": {
+"first": 1724331600000,
+"last": 1727996400000,
+"bars": 1019,
+"holes": 0
+},
+"SUSDT": {
+"first": 1737590400000,
+"last": 1743375600000,
+"bars": 1608,
+"holes": 0
+},
+"SUSHIUSDT": {
+"first": 1638316800000,
+"last": 1702422000000,
+"bars": 11616,
+"holes": 6192
+},
+"SWARMSUSDT": {
+"first": 1736251200000,
+"last": 1742252400000,
+"bars": 1668,
+"holes": 0
+},
+"SXPUSDT": {
+"first": 1638316800000,
+"last": 1689289200000,
+"bars": 6336,
+"holes": 7824
+},
+"SYNUSDT": {
+"first": 1779235200000,
+"last": 1785452400000,
+"bars": 1728,
+"holes": 0
+},
+"SYRUPUSDT": {
+"first": 1746662400000,
+"last": 1749942000000,
+"bars": 912,
+"holes": 0
+},
+"TAOUSDT": {
+"first": 1724025600000,
+"last": 1790809200000,
+"bars": 16320,
+"holes": 2232
+},
+"TAUSDT": {
+"first": 1753833600000,
+"last": 1759532400000,
+"bars": 1584,
+"holes": 0
+},
+"THETAUSDT": {
+"first": 1638316800000,
+"last": 1711666800000,
+"bars": 8798,
+"holes": 11578
+},
+"THEUSDT": {
+"first": 1732708800000,
+"last": 1735426800000,
+"bars": 756,
+"holes": 0
+},
+"TIAUSDT": {
+"first": 1698775200000,
+"last": 1757631600000,
+"bars": 16148,
+"holes": 202
+},
+"TLMUSDT": {
+"first": 1638316800000,
+"last": 1785711600000,
+"bars": 4361,
+"holes": 36583
+},
+"TNSRUSDT": {
+"first": 1714435200000,
+"last": 1766617200000,
+"bars": 2688,
+"holes": 11808
+},
+"TOMOUSDT": {
+"first": 1679443200000,
+"last": 1698102000000,
+"bars": 5184,
+"holes": 0
+},
+"TONUSDT": {
+"first": 1710460800000,
+"last": 1782525600000,
+"bars": 8799,
+"holes": 11220
+},
+"TRADOORUSDT": {
+"first": 1761523200000,
+"last": 1767222000000,
+"bars": 1584,
+"holes": 0
+},
+"TRBUSDT": {
+"first": 1653091200000,
+"last": 1751756400000,
+"bars": 17486,
+"holes": 9922
+},
+"TREEUSDT": {
+"first": 1753797600000,
+"last": 1756681200000,
+"bars": 802,
+"holes": 0
+},
+"TROYUSDT": {
+"first": 1730379600000,
+"last": 1733439600000,
+"bars": 851,
+"holes": 0
+},
+"TRUMPUSDT": {
+"first": 1737205200000,
+"last": 1790809200000,
+"bars": 14771,
+"holes": 120
+},
+"TRUSTUSDT": {
+"first": 1762333200000,
+"last": 1766358000000,
+"bars": 1119,
+"holes": 0
+},
+"TRUTHUSDT": {
+"first": 1763596800000,
+"last": 1767999600000,
+"bars": 1224,
+"holes": 0
+},
+"TRUUSDT": {
+"first": 1678190400000,
+"last": 1681167600000,
+"bars": 828,
+"holes": 0
+},
+"TRXUSDT": {
+"first": 1638316800000,
+"last": 1775862000000,
+"bars": 25776,
+"holes": 12432
+},
+"TSLAUSDT": {
+"first": 1771545600000,
+"last": 1778108400000,
+"bars": 1824,
+"holes": 0
+},
+"TSTUSDT": {
+"first": 1739106000000,
+"last": 1743375600000,
+"bars": 1187,
+"holes": 0
+},
+"TURBOUSDT": {
+"first": 1717081200000,
+"last": 1766962800000,
+"bars": 8073,
+"holes": 5784
+},
+"TUTUSDT": {
+"first": 1742461200000,
+"last": 1789599600000,
+"bars": 2703,
+"holes": 10392
+},
+"UAIUSDT": {
+"first": 1771200000000,
+"last": 1775430000000,
+"bars": 1176,
+"holes": 0
+},
+"UBUSDT": {
+"first": 1757671200000,
+"last": 1781391600000,
+"bars": 2534,
+"holes": 4056
+},
+"UMAUSDT": {
+"first": 1702771200000,
+"last": 1717974000000,
+"bars": 3206,
+"holes": 1018
+},
+"UNFIUSDT": {
+"first": 1651536000000,
+"last": 1699657200000,
+"bars": 8160,
+"holes": 5208
+},
+"UNIUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 32246,
+"holes": 10114
+},
+"USELESSUSDT": {
+"first": 1785628800000,
+"last": 1790809200000,
+"bars": 1440,
+"holes": 0
+},
+"USTCUSDT": {
+"first": 1701086400000,
+"last": 1704063600000,
+"bars": 828,
+"holes": 0
+},
+"USUALUSDT": {
+"first": 1734526800000,
+"last": 1740870000000,
+"bars": 1763,
+"holes": 0
+},
+"UXLINKUSDT": {
+"first": 1726412400000,
+"last": 1738191600000,
+"bars": 3129,
+"holes": 144
+},
+"VANAUSDT": {
+"first": 1734354000000,
+"last": 1743116400000,
+"bars": 1907,
+"holes": 528
+},
+"VANRYUSDT": {
+"first": 1780790400000,
+"last": 1785970800000,
+"bars": 1440,
+"holes": 0
+},
+"VELVETUSDT": {
+"first": 1778112000000,
+"last": 1785366000000,
+"bars": 2016,
+"holes": 0
+},
+"VETUSDT": {
+"first": 1638316800000,
+"last": 1653865200000,
+"bars": 4320,
+"holes": 0
+},
+"VICUSDT": {
+"first": 1749081600000,
+"last": 1753225200000,
+"bars": 1152,
+"holes": 0
+},
+"VIDTUSDT": {
+"first": 1724403600000,
+"last": 1744945200000,
+"bars": 1613,
+"holes": 4094
+},
+"VINEUSDT": {
+"first": 1737712800000,
+"last": 1756422000000,
+"bars": 3926,
+"holes": 1272
+},
+"VIRTUALUSDT": {
+"first": 1733832000000,
+"last": 1770073200000,
+"bars": 8076,
+"holes": 1992
+},
+"VOXELUSDT": {
+"first": 1742083200000,
+"last": 1747782000000,
+"bars": 1584,
+"holes": 0
+},
+"VVVUSDT": {
+"first": 1738137600000,
+"last": 1781737200000,
+"bars": 4048,
+"holes": 8064
+},
+"WAVESUSDT": {
+"first": 1641859200000,
+"last": 1692140400000,
+"bars": 12048,
+"holes": 1920
+},
+"WCTUSDT": {
+"first": 1744714800000,
+"last": 1751410800000,
+"bars": 1861,
+"holes": 0
+},
+"WETUSDT": {
+"first": 1765350000000,
+"last": 1767999600000,
+"bars": 737,
+"holes": 0
+},
+"WIFUSDT": {
+"first": 1705586400000,
+"last": 1775170800000,
+"bars": 19320,
+"holes": 10
+},
+"WLDUSDT": {
+"first": 1690200000000,
+"last": 1790809200000,
+"bars": 27914,
+"holes": 34
+},
+"WLFIUSDT": {
+"first": 1755936000000,
+"last": 1774393200000,
+"bars": 5128,
+"holes": 0
+},
+"WOOUSDT": {
+"first": 1679616000000,
+"last": 1684969200000,
+"bars": 1488,
+"holes": 0
+},
+"WUSDT": {
+"first": 1712156400000,
+"last": 1720393200000,
+"bars": 2289,
+"holes": 0
+},
+"XAGUSDT": {
+"first": 1767780000000,
+"last": 1790809200000,
+"bars": 6398,
+"holes": 0
+},
+"XAIUSDT": {
+"first": 1704808800000,
+"last": 1710284400000,
+"bars": 1512,
+"holes": 10
+},
+"XAUTUSDT": {
+"first": 1774533600000,
+"last": 1777935600000,
+"bars": 946,
+"holes": 0
+},
+"XAUUSDT": {
+"first": 1766534400000,
+"last": 1790809200000,
+"bars": 6744,
+"holes": 0
+},
+"XLMUSDT": {
+"first": 1638316800000,
+"last": 1785193200000,
+"bars": 15408,
+"holes": 25392
+},
+"XMRUSDT": {
+"first": 1644192000000,
+"last": 1771974000000,
+"bars": 9110,
+"holes": 26386
+},
+"XNYUSDT": {
+"first": 1755082800000,
+"last": 1758063600000,
+"bars": 829,
+"holes": 0
+},
+"XPINUSDT": {
+"first": 1758240000000,
+"last": 1763334000000,
+"bars": 1416,
+"holes": 0
+},
+"XPLUSDT": {
+"first": 1755853200000,
+"last": 1777158000000,
+"bars": 5463,
+"holes": 456
+},
+"XRPUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 42350,
+"holes": 10
+},
+"XTZUSDT": {
+"first": 1638316800000,
+"last": 1659049200000,
+"bars": 5208,
+"holes": 552
+},
+"XVGUSDT": {
+"first": 1688558400000,
+"last": 1691708400000,
+"bars": 876,
+"holes": 0
+},
+"YFIUSDT": {
+"first": 1638316800000,
+"last": 1702767600000,
+"bars": 8016,
+"holes": 9888
+},
+"YGGUSDT": {
+"first": 1691204400000,
+"last": 1714518000000,
+"bars": 3381,
+"holes": 3096
+},
+"ZBTUSDT": {
+"first": 1763942400000,
+"last": 1779836400000,
+"bars": 3024,
+"holes": 1392
+},
+"ZECUSDT": {
+"first": 1638316800000,
+"last": 1790809200000,
+"bars": 15288,
+"holes": 27072
+},
+"ZENUSDT": {
+"first": 1718841600000,
+"last": 1770678000000,
+"bars": 5976,
+"holes": 8424
+},
+"ZEREBROUSDT": {
+"first": 1742515200000,
+"last": 1748041200000,
+"bars": 1536,
+"holes": 0
+},
+"ZETAUSDT": {
+"first": 1706860800000,
+"last": 1725922800000,
+"bars": 1614,
+"holes": 3682
+},
+"ZILUSDT": {
+"first": 1645315200000,
+"last": 1772665200000,
+"bars": 8256,
+"holes": 27120
+},
+"ZKCUSDT": {
+"first": 1757944800000,
+"last": 1760482800000,
+"bars": 706,
+"holes": 0
+},
+"ZKJUSDT": {
+"first": 1747785600000,
+"last": 1752620400000,
+"bars": 1344,
+"holes": 0
+},
+"ZKPUSDT": {
+"first": 1766311200000,
+"last": 1770418800000,
+"bars": 1142,
+"holes": 0
+},
+"ZKUSDT": {
+"first": 1718622000000,
+"last": 1764716400000,
+"bars": 2725,
+"holes": 10080
+},
+"ZORAUSDT": {
+"first": 1753441200000,
+"last": 1757026800000,
+"bars": 997,
+"holes": 0
+},
+"ZROUSDT": {
+"first": 1718892000000,
+"last": 1773529200000,
+"bars": 5866,
+"holes": 9312
+},
+"ZRXUSDT": {
+"first": 1647561600000,
+"last": 1713049200000,
+"bars": 6686,
+"holes": 11506
+}
+}
+},
+"file_hashes": [
+{
+"path": "0GUSDT.parquet",
+"bytes": 587047,
+"sha256": "62a2635539d1bbae962dbeaf7144110032053550c21d91a87f405947e9db22df"
+},
+{
+"path": "1000BONKUSDT.parquet",
+"bytes": 1654869,
+"sha256": "f1225020292f2a62eb442388c9018c7f49612ebc201db3e48e3927a441638a4a"
+},
+{
+"path": "1000FLOKIUSDT.parquet",
+"bytes": 1947524,
+"sha256": "0f4d4d446129683ef82d07cfad74718a2cd703464ccf969b2e5e66eadc0d9fed"
+},
+{
+"path": "1000LUNCUSDT.parquet",
+"bytes": 2287999,
+"sha256": "6a86853d59c21f64759f01f9bf52abd8cc0f6ae9c8085c60ef4764b7414c42e2"
+},
+{
+"path": "1000PEPEUSDT.parquet",
+"bytes": 1977549,
+"sha256": "8bc9cdc039376fd1b515381865dfea3832f3943608b0fcb866b0af2400f21fd7"
+},
+{
+"path": "1000RATSUSDT.parquet",
+"bytes": 1595755,
+"sha256": "a653d891d68934f0790dcb18ffa228b52a8db38f63b8ad147df544f1f516d4fe"
+},
+{
+"path": "1000SATSUSDT.parquet",
+"bytes": 1632083,
+"sha256": "6c5cf5b02e32ebedee526148fb19e95e0c4df5f451c401bbdb5bc262d331b191"
+},
+{
+"path": "1000SHIBUSDT.parquet",
+"bytes": 2624938,
+"sha256": "6af9c4b2b129328acd359fe7f3a2a3a370c27e346bb5a0e73fe06370d82d3af0"
+},
+{
+"path": "1000XECUSDT.parquet",
+"bytes": 2589217,
+"sha256": "9cb4370a8ac076a3622c0cdbab30709fb1618fcbd676a807efe7728a5a61b386"
+},
+{
+"path": "1000XUSDT.parquet",
+"bytes": 569185,
+"sha256": "7780e9fcf5421d498fbf5b8d058195a2d18548f6dec3ad0967e71a35a0325575"
+},
+{
+"path": "1INCHUSDT.parquet",
+"bytes": 2583301,
+"sha256": "3317b027253d2901fac456104c52b7c800e1026c9013f82883e2cb0dc111f455"
+},
+{
+"path": "1MBABYDOGEUSDT.parquet",
+"bytes": 1183989,
+"sha256": "6d3b36fc3ed9a15ed23db6baeda0ae510dd806669f4349652d4e72e298e91eee"
+},
+{
+"path": "2ZUSDT.parquet",
+"bytes": 564682,
+"sha256": "a8a44be8318386dbfe2dffc09159c55e8936bdc0ecefc39a9bd66345d074666f"
+},
+{
+"path": "4USDT.parquet",
+"bytes": 555381,
+"sha256": "6443bb9f8784f5203b56815426fa4ad545764ebbfddc042e6d7ed3e64baada02"
+},
+{
+"path": "AAVEUSDT.parquet",
+"bytes": 1974487,
+"sha256": "1de2c7c99f323039ec481df674db3115a25c7cda5515147223e52f4490d0d421"
+},
+{
+"path": "ACEUSDT.parquet",
+"bytes": 158405,
+"sha256": "d1ae1d0b6363f35fbdf49148a4ca200a5e5cd24974ad16ff1fe767f781e6843c"
+},
+{
+"path": "ACHUSDT.parquet",
+"bytes": 189559,
+"sha256": "3d0d38b2435686fe3dcfff19b23f9ae583058292ae2a48c4d7b96501f75bf893"
+},
+{
+"path": "ACTUSDT.parquet",
+"bytes": 242438,
+"sha256": "0e991c67e74a1f0a37b061d183511a47612f9d7695b1392817f8c00501a7f9d7"
+},
+{
+"path": "ADAUSDT.parquet",
+"bytes": 2585054,
+"sha256": "f50fccf5713b7521321a2df9006517d4d7965a22464d242d4fc18404d1995a84"
+},
+{
+"path": "AERGOUSDT.parquet",
+"bytes": 71358,
+"sha256": "12f38470aaab863b3ace0a7808ebee86e596b7b6bba566835d036eaec416f246"
+},
+{
+"path": "AEVOUSDT.parquet",
+"bytes": 154429,
+"sha256": "ed24ded0270fd4cb5595f0da981880a580abf2897703d1854578b4d030bb5b6d"
+},
+{
+"path": "AGIXUSDT.parquet",
+"bytes": 315105,
+"sha256": "e2c6260d0bbbd81fe68dcdde9ea11631dc4159bfe9ec3e4bbd38e858fbb3c08a"
+},
+{
+"path": "AGLDUSDT.parquet",
+"bytes": 167983,
+"sha256": "304b3e100f18e74f67c917c1126a8f15d9d6540c42b8f96b840abeb0474da3aa"
+},
+{
+"path": "AI16ZUSDT.parquet",
+"bytes": 112428,
+"sha256": "c58569a2f4d79151ecac064a913a81e39120dededd922c61eaaef3788a8c01e9"
+},
+{
+"path": "AIAUSDT.parquet",
+"bytes": 128522,
+"sha256": "3a21be72f13dd8fa394cf228941bf5fee223667f18b81d6ba708feb843bc0ae7"
+},
+{
+"path": "AIGENSYNUSDT.parquet",
+"bytes": 54986,
+"sha256": "ffe1771662b3a482c17e4ecc550f75eede5308e60375169351706738435d4767"
+},
+{
+"path": "AIOTUSDT.parquet",
+"bytes": 100937,
+"sha256": "0e73cd67bd1d2ca724dabd5e4946c77cf8764eb9917843b309025e03381c4271"
+},
+{
+"path": "AIUSDT.parquet",
+"bytes": 103896,
+"sha256": "99d47c2b8a255169ad7579ba782ed26217abe6abbe3c17dc68df4ec267c2a209"
+},
+{
+"path": "AIXBTUSDT.parquet",
+"bytes": 98368,
+"sha256": "381c42edd032656916ca4c4f17130ac6d5a0f1d7cdff023b726c49ccbdbde6c7"
+},
+{
+"path": "AKEUSDT.parquet",
+"bytes": 173459,
+"sha256": "d686eb86460d79b1e45a2cafdd4149e29f32dc86138a46b5799c2c427a908f57"
+},
+{
+"path": "ALCHUSDT.parquet",
+"bytes": 147313,
+"sha256": "9b28d9df8e2b5a2ca4305bdf92c52a4b2a979ee0e04d8a6cc9b146abbb43496e"
+},
+{
+"path": "ALGOUSDT.parquet",
+"bytes": 454108,
+"sha256": "7043a1e06a6729cdd5c0b2f26a0737771a837ca8cdb3225465e13e15d8034852"
+},
+{
+"path": "ALICEUSDT.parquet",
+"bytes": 217245,
+"sha256": "8c556ee8ba8cb00c5ca07e9277fcb8d83cf455b20df78c4b860897b2d43343c4"
+},
+{
+"path": "ALLOUSDT.parquet",
+"bytes": 165891,
+"sha256": "5d41cf428ba3b41a567ec30761a623835764e54a1f2651724c8dccd9c0236ef2"
+},
+{
+"path": "ALPACAUSDT.parquet",
+"bytes": 106240,
+"sha256": "2738772ef7c32f9861715eae12265825fdefad86fe230139dc4992a336f9220f"
+},
+{
+"path": "ALPHAUSDT.parquet",
+"bytes": 321009,
+"sha256": "6ba2022915164270af6ec2dbf7580a1a402b96d91537b9ffc0c874baa4405184"
+},
+{
+"path": "ALPINEUSDT.parquet",
+"bytes": 98016,
+"sha256": "000c565eee3b1fb65d8669b91ef92c59e496818ede28d950fc4eb76b12432586"
+},
+{
+"path": "ALTUSDT.parquet",
+"bytes": 78642,
+"sha256": "9460e9e9947c8c7fbc313588126c1c9ef9fd073f5ed984de3b06fccf9cccfba5"
+},
+{
+"path": "AMBUSDT.parquet",
+"bytes": 208646,
+"sha256": "ca38bbb8d19f27d24e40e0d12af3ffa5a023365717e9a06264f2a2c8a2580025"
+},
+{
+"path": "ANIMEUSDT.parquet",
+"bytes": 101266,
+"sha256": "e873af250a7c54e1ed215de0f99b8bac5570bc61e89a7e47fee148aed4768e71"
+},
+{
+"path": "ANKRUSDT.parquet",
+"bytes": 202274,
+"sha256": "f7245242aa2f5a3b02b9763a3a6ea897eadb9785f17fb9836cfbec034a0e801a"
+},
+{
+"path": "ANTUSDT.parquet",
+"bytes": 55286,
+"sha256": "f97791f53a09e4b2dfd59da1b7da8335b51503d55f120bb44ba9a6b743a0d87f"
+},
+{
+"path": "APEUSDT.parquet",
+"bytes": 1198483,
+"sha256": "37aefbc9d5d215249da1e943e54df2fc3a80a5242737ae612c080a306005eb60"
+},
+{
+"path": "API3USDT.parquet",
+"bytes": 464210,
+"sha256": "4cce4d5cb41a766b61ce7dccc82cf0fef051c318ce0b5de4dd2e87dc16d65e0e"
+},
+{
+"path": "APRUSDT.parquet",
+"bytes": 88725,
+"sha256": "1183531778137f84ee24522034e67ce8a727362373825c5a401a0f44aea67b86"
+},
+{
+"path": "APTUSDT.parquet",
+"bytes": 1559756,
+"sha256": "9288e628ba1cad5e0a9c79b248be4cf8af28acbc44980c7acf04bd509e0d622d"
+},
+{
+"path": "ARBUSDT.parquet",
+"bytes": 1481453,
+"sha256": "0c7f0c272585cc8d3734f933fb0b5e4941dbb7abb221786825f488138f7b7b80"
+},
+{
+"path": "ARCUSDT.parquet",
+"bytes": 330022,
+"sha256": "e19a0d5d3a3fc9cb530f5a3d47e10baa116af7f43e785a86ac40a767c69fe7ec"
+},
+{
+"path": "ARIAUSDT.parquet",
+"bytes": 111179,
+"sha256": "1de82a3ae20280476cb716dc39820c709092875629734f6e8d88f6c3aad7782d"
+},
+{
+"path": "ARKMUSDT.parquet",
+"bytes": 86833,
+"sha256": "25603abb4c6db7ba1a510f233ee75bb4d62afebd4118c6ec47a2e846c6d67e3b"
+},
+{
+"path": "ARKUSDT.parquet",
+"bytes": 218265,
+"sha256": "37fbae9e56df68150b7242cbeb9daae890e898e4cf1b57cb13e409884b4f1964"
+},
+{
+"path": "ARPAUSDT.parquet",
+"bytes": 173438,
+"sha256": "67bf0156e13c9a8e0be833f39e1e37a6b48a4ddf2ef49dc8afe32ca46f26cd13"
+},
+{
+"path": "ARUSDT.parquet",
+"bytes": 259800,
+"sha256": "4a4b1b02fdfe4eed386ee33ba43ef8878e45b112adcf1ddaa9a2953752f3c32d"
+},
+{
+"path": "ASTERUSDT.parquet",
+"bytes": 423066,
+"sha256": "0066e7046624133fd6004e547e32c35167e66f5225271f608a37368617298f3a"
+},
+{
+"path": "ATAUSDT.parquet",
+"bytes": 90546,
+"sha256": "59c6c1bed8623fc2462f93c0a20670a31a308b7925db3e5593e332bc307bb6b8"
+},
+{
+"path": "ATOMUSDT.parquet",
+"bytes": 1058822,
+"sha256": "ab2143967230af7e85137a81aced4641030cd8ed85bc7970444cae7332679305"
+},
+{
+"path": "ATUSDT.parquet",
+"bytes": 90555,
+"sha256": "d81cc403214dee3ebd043604f9bcc34149b55f90ffa2d8fdfdde1b5b17a83432"
+},
+{
+"path": "AUCTIONUSDT.parquet",
+"bytes": 169145,
+"sha256": "22c134af14711e18addc867957b114d3e4516662ec83b41c7ec6ca56816cb0a4"
+},
+{
+"path": "AUDIOUSDT.parquet",
+"bytes": 180398,
+"sha256": "b9cb75d858c1ee055140b887223eace7d9e7f22037fdf001fd1a5ea77d4585f6"
+},
+{
+"path": "AVAXUSDT.parquet",
+"bytes": 2536151,
+"sha256": "82b73babe4fc2ad20d6b7305eb9287dc6316a1a7c4fe1fc65dd349d8858f229a"
+},
+{
+"path": "AVNTUSDT.parquet",
+"bytes": 111831,
+"sha256": "89f84cae7aac79ef6cf1fd34bd839984c13705db32296f57a70fb66c176cbf74"
+},
+{
+"path": "AXSUSDT.parquet",
+"bytes": 1011626,
+"sha256": "28bd2a46f04eeb2101ebf1539cc0427ba20a064a6d6e8504e1f246f5c0efebee"
+},
+{
+"path": "AZTECUSDT.parquet",
+"bytes": 57083,
+"sha256": "9c0ee5177ee606f0dcebb4d8d96a628513f11394ec3721414bbe19fe72ebe4a8"
+},
+{
+"path": "BABYUSDT.parquet",
+"bytes": 62329,
+"sha256": "36a2fa3d1cea8531914cba0cfdcc52f9088c243368fab0dfcdcb79bf434da870"
+},
+{
+"path": "BAKEUSDT.parquet",
+"bytes": 536536,
+"sha256": "070d1bd567cc819773b1facdc85373b7f7cf30c15a503e1bfa72bce2e0d91900"
+},
+{
+"path": "BANANAS31USDT.parquet",
+"bytes": 277111,
+"sha256": "1ff94ae0ce72feba6abc18e2d20d21924a88e0fb57bd2b718be30f388b39e4e8"
+},
+{
+"path": "BANANAUSDT.parquet",
+"bytes": 69028,
+"sha256": "b5bf02a81e4c432cb92fe3448d972e3aa82277b2e0d98a640ee8cee86aaaf586"
+},
+{
+"path": "BANDUSDT.parquet",
+"bytes": 196518,
+"sha256": "66c0ca12c30f336ae4a43f7e0df22e942d2fe12e6925a2a7e96779736f0e5af2"
+},
+{
+"path": "BANKUSDT.parquet",
+"bytes": 118453,
+"sha256": "1f937edc9b8ae150202305c8dc382fcf342888587a25df2e8481d5de3d255964"
+},
+{
+"path": "BARDUSDT.parquet",
+"bytes": 165874,
+"sha256": "fb31958a0c1926b778cff71fb327f709465fa886cf707c52fcf3eff635de76db"
+},
+{
+"path": "BASEDUSDT.parquet",
+"bytes": 75117,
+"sha256": "d718c0353276bdb9ab5c32050e96321f6dd3b5cd2c18e52135af06e44dfca907"
+},
+{
+"path": "BASUSDT.parquet",
+"bytes": 93680,
+"sha256": "e342ce185dbe0fa7f71128af8b518dae951b779f1cb89e90e995417002cf73af"
+},
+{
+"path": "BATUSDT.parquet",
+"bytes": 51690,
+"sha256": "69c2c878eacbaa263e213b12cf00a0bafb40de29412c654e49e485b1d83282b2"
+},
+{
+"path": "BBUSDT.parquet",
+"bytes": 114954,
+"sha256": "573e1e630b7f3c1b9b86dca5ff654f1b94154f3edb2c3f0f0c7815bf827f7ae8"
+},
+{
+"path": "BCHUSDT.parquet",
+"bytes": 2543684,
+"sha256": "b10d8dfa6452c320ae78e444051b05cf99cf1315a81ab450825864422f379fe3"
+},
+{
+"path": "BEATUSDT.parquet",
+"bytes": 339742,
+"sha256": "b199b6d00a388a8a3443e4005aaa00756bd1256a40b05d27bd4ca4b4f6661160"
+},
+{
+"path": "BELUSDT.parquet",
+"bytes": 336421,
+"sha256": "ee92ff7646466cdd4699ffdc4e999579f533c9d01f2a9d741d0543152573cc9c"
+},
+{
+"path": "BERAUSDT.parquet",
+"bytes": 259272,
+"sha256": "8641650acf870285d6327c0a454435b966eb1ee54afdbd13aaa4a8d8435407c9"
+},
+{
+"path": "BICOUSDT.parquet",
+"bytes": 80165,
+"sha256": "16d0d05d8185c77ec214f79200c7d5728607e6c7e5885f652246665085970bde"
+},
+{
+"path": "BIDUSDT.parquet",
+"bytes": 64588,
+"sha256": "e759aeb4e048ce9d1aec8be2795d1cc38b443a00b282870f7c41cbb5bbe3e001"
+},
+{
+"path": "BIGTIMEUSDT.parquet",
+"bytes": 308202,
+"sha256": "878afd2b06ec837526202a64dbb45f752cc44ed4d33327ebfbc7f5e843292a21"
+},
+{
+"path": "BILLUSDT.parquet",
+"bytes": 65495,
+"sha256": "5b83e2fee37181f38b717276a4b4a332131fa1f87f3e628fb1ebe83643c29687"
+},
+{
+"path": "BIOUSDT.parquet",
+"bytes": 277859,
+"sha256": "05933307e1735d2221dd90a548adc67657a7408fd45ce9c5f6a48a0b9c8eac82"
+},
+{
+"path": "BIRBUSDT.parquet",
+"bytes": 56915,
+"sha256": "4b7e1649b3c28ca6c41ce08b7b8518f69d224ddb6c02f2d522a97380965163e1"
+},
+{
+"path": "BLESSUSDT.parquet",
+"bytes": 180392,
+"sha256": "edc867fe4d0604995f9e524a5d565e1ef8f91fac28564da106fe2b7256076f50"
+},
+{
+"path": "BLURUSDT.parquet",
+"bytes": 238051,
+"sha256": "33ec217420766a7137582b035b9296dbfbbd9fda130c1eaa22b3f00cdd32dff2"
+},
+{
+"path": "BLZUSDT.parquet",
+"bytes": 388428,
+"sha256": "6e4807510d6c3c26ae8ae653e68558d613314c158dfb0a046824b0f09bfb3ada"
+},
+{
+"path": "BMTUSDT.parquet",
+"bytes": 50594,
+"sha256": "00efa021186b79a30e576a755de98bd3f9fb91f178709ff2a4c869eea5f1a26a"
+},
+{
+"path": "BNBUSDT.parquet",
+"bytes": 2573236,
+"sha256": "c2519303aa36b791f0a162219c5578d498da1099d36b11429c737d1f118347dc"
+},
+{
+"path": "BNTUSDT.parquet",
+"bytes": 111086,
+"sha256": "666a1405f2f5da2947cadec4d3055d6f6a16de4ebfc711a5699c6841a47fb58c"
+},
+{
+"path": "BNXUSDT.parquet",
+"bytes": 442445,
+"sha256": "cb80a26129b3fc81df9be3824d82c1c27a196e1cded5ed88d2b043e34fcb7df5"
+},
+{
+"path": "BOBUSDT.parquet",
+"bytes": 52272,
+"sha256": "f83f1de6c4aac680c5c30c7347d9289be5c7d63e57fb857f87a09ad1d943e7e3"
+},
+{
+"path": "BOMEUSDT.parquet",
+"bytes": 426538,
+"sha256": "58e314d22882b3b76f82e26d7819804b64adf4b5aaaa55196dcbf764c308a475"
+},
+{
+"path": "BONDUSDT.parquet",
+"bytes": 141975,
+"sha256": "951264e206429eba5132abdc7ef2c3f0944f884f7dff03de417235cf19b22d1f"
+},
+{
+"path": "BREVUSDT.parquet",
+"bytes": 60920,
+"sha256": "9d4a876f24582e736cecf232f1dca71ac831adc8d575f98e796716b412f0cec0"
+},
+{
+"path": "BROCCOLI714USDT.parquet",
+"bytes": 93429,
+"sha256": "52dd3e9a008c03bc3956841daf85c6fe1aa3db48786cf6bba4ef5974114a8f53"
+},
+{
+"path": "BROCCOLIF3BUSDT.parquet",
+"bytes": 62801,
+"sha256": "26347661779f6361c23d426e6c5d0a21bca124193642594bc548197c900f340d"
+},
+{
+"path": "BRUSDT.parquet",
+"bytes": 157573,
+"sha256": "b537e7b5a5bf3589930a4f35487581bc923f5db339ba27b70b9fd5d7a6d6dd79"
+},
+{
+"path": "BSBUSDT.parquet",
+"bytes": 145048,
+"sha256": "92435c6678a91001f998918b8821631704d1091a9c4a4da8f8ea94166cd15ac2"
+},
+{
+"path": "BSVUSDT.parquet",
+"bytes": 98235,
+"sha256": "f9fcb60e7d1157791e246d1928a648b46b5d51129edc7a5230dcd53f805f0efe"
+},
+{
+"path": "BTCUSDT.parquet",
+"bytes": 3109970,
+"sha256": "41f606159e65fc2b22fb65ea2fdf4afc959442d611356b5d2c082168cfc42a5e"
+},
+{
+"path": "BTRUSDT.parquet",
+"bytes": 96356,
+"sha256": "ce67ba7f5e85d3c49d9b3a16b01fd0668ab451d3a40c31730a0096f87c3b3dcc"
+},
+{
+"path": "BTTUSDT.parquet",
+"bytes": 54729,
+"sha256": "3b8a4eef9aff63db8c744aba8246e733cd714bab461d6670f9f06aa30288486c"
+},
+{
+"path": "BTWUSDT.parquet",
+"bytes": 164432,
+"sha256": "c3bfaba50580235fe982eabbeb54107ce9dc82c5a818a67a511c937d5d368f85"
+},
+{
+"path": "BULLAUSDT.parquet",
+"bytes": 198943,
+"sha256": "9141ec3aec6c3ac47f95bf94b676893d3d2c937ecb626654b1059af1e0717ede"
+},
+{
+"path": "BUSDT.parquet",
+"bytes": 145916,
+"sha256": "1c13467ca45ba9544faa8da016ca7518616f86583c6032f332ccabfe9665be5e"
+},
+{
+"path": "BZUSDT.parquet",
+"bytes": 282764,
+"sha256": "52d2346537d6a0c608c28dc9a8aefa8575ecce6c145fbeeab46b092ff80633df"
+},
+{
+"path": "C98USDT.parquet",
+"bytes": 153600,
+"sha256": "1ba1e00495d1ff21357c551e715981360f755ab80ed1ac8e6512d00ecb5391e5"
+},
+{
+"path": "CAKEUSDT.parquet",
+"bytes": 215816,
+"sha256": "bf2236862cef6aa1c75c30f4cbee0fbaf05cbb09b756910acb616512e296c4df"
+},
+{
+"path": "CATIUSDT.parquet",
+"bytes": 76550,
+"sha256": "cb06e7c72ac1b52c20330fc4c3ece875d690d2dc6950f2e298b1f0e65f42a56d"
+},
+{
+"path": "CELOUSDT.parquet",
+"bytes": 329945,
+"sha256": "4d070347eed71fb973922f9c8860116c8a71f23f0e92491f1cdf0cdabbf292f0"
+},
+{
+"path": "CELRUSDT.parquet",
+"bytes": 234161,
+"sha256": "696c03d38b21a335c5204709301e372dc3fb3703253ecafcab721c392da2cf20"
+},
+{
+"path": "CFXUSDT.parquet",
+"bytes": 741786,
+"sha256": "e542ae4755b4af74a5670cf88440f1c9e70853685488b7fabc9c41f04be9c01b"
+},
+{
+"path": "CGPTUSDT.parquet",
+"bytes": 80576,
+"sha256": "93e9c218ee6f7e21b2547c97ef058931ded88b62c023deaa36824b9aed269a5b"
+},
+{
+"path": "CHIPUSDT.parquet",
+"bytes": 70879,
+"sha256": "a467a6d96646e9d94f20b16ec65010e20bb00fba7a55b5b2bdc24e278bc3ac51"
+},
+{
+"path": "CHRUSDT.parquet",
+"bytes": 121390,
+"sha256": "28502dfee92914a87e958bdea22a4905236a69620bff2955c8a0677e7c1e3fd7"
+},
+{
+"path": "CHZUSDT.parquet",
+"bytes": 638029,
+"sha256": "d5362d3be089fb205ceefc5790df8b3b5277962b49c6473735765772d6729297"
+},
+{
+"path": "CKBUSDT.parquet",
+"bytes": 296093,
+"sha256": "0e64305052ecc8befdb8d40a8d4aa3b0e914ff43b4ace38aee3645ae2bf5a7c1"
+},
+{
+"path": "CLOUSDT.parquet",
+"bytes": 97953,
+"sha256": "086a79f0a23626895f5d1bfcd17a83f6f08be246f61ec5ba4839bc92cfc8dd17"
+},
+{
+"path": "CLUSDT.parquet",
+"bytes": 284243,
+"sha256": "d00cb39aac3906dea5b5d586fe17bfa3626b0af5de76ea6521f7725873e3f3dc"
+},
+{
+"path": "COAIUSDT.parquet",
+"bytes": 100401,
+"sha256": "d8cdd2453899285f4faad17f6d5dffb624b6a5507773c9326239c0fa83ce9c37"
+},
+{
+"path": "COCOSUSDT.parquet",
+"bytes": 107787,
+"sha256": "830b96ef7a16992ecb27b99f970f48994e457597721705c34fe053b4d1fa25a9"
+},
+{
+"path": "COMPUSDT.parquet",
+"bytes": 372486,
+"sha256": "5ccd0aa532cb28372d518373b3ebc041f8b4a80dd9699611fd16f0b807c2b4c3"
+},
+{
+"path": "COOKIEUSDT.parquet",
+"bytes": 94965,
+"sha256": "b589cdac8d0daaca92781d2687df813cc9fc93ba01a24f85a70e6b00485480bb"
+},
+{
+"path": "COTIUSDT.parquet",
+"bytes": 249672,
+"sha256": "1add89258be0d1082d2c2d9b5c1a39da59a9fdf8a7733224f4633f2841dfad58"
+},
+{
+"path": "COWUSDT.parquet",
+"bytes": 91980,
+"sha256": "c20583037e01d938f675b12d0992fae8c0131698c2f6316e4fa2743614a92823"
+},
+{
+"path": "CRCLUSDT.parquet",
+"bytes": 347457,
+"sha256": "3292f10c93d2607a17e028ad59aed26d2949d6e07e48483a5d2df0490ca9c345"
+},
+{
+"path": "CRVUSDT.parquet",
+"bytes": 1687363,
+"sha256": "1b6a5ed25b2a2d79b154f5552c6f7fc9113c923757c9b0aa91f1d259e859d6b1"
+},
+{
+"path": "CTSIUSDT.parquet",
+"bytes": 221707,
+"sha256": "568c6b1e3125fa2717e140cf20b9644cdebf1d307255fcce057e44be27804455"
+},
+{
+"path": "CUSDT.parquet",
+"bytes": 118047,
+"sha256": "5411539992101627ee8891ed7cc2bf6f95cc9b2013206b53e7288fb8224f6872"
+},
+{
+"path": "CYBERUSDT.parquet",
+"bytes": 88401,
+"sha256": "b7fc0067befe3d60b2b2c90dd63a628f647d7235e1d626e167842de9e131876e"
+},
+{
+"path": "CYSUSDT.parquet",
+"bytes": 101926,
+"sha256": "c58b2692b6a6b627a7c5c6612519c1cef0a7a648d59b8e166d25d91bcea6bc94"
+},
+{
+"path": "DARUSDT.parquet",
+"bytes": 124214,
+"sha256": "c7496434bc0d9918bfbed366eff3553a24b36cae730f681b3a10e39d2a17a053"
+},
+{
+"path": "DASHUSDT.parquet",
+"bytes": 533716,
+"sha256": "befdc8399068ed32b4359d8d899216f6f8a049eb925414dd4fd59494740fb0a0"
+},
+{
+"path": "DEGOUSDT.parquet",
+"bytes": 99496,
+"sha256": "fab141b391359ee9e8ae5074a605363517633131a3fb14122eaa1a805ee21916"
+},
+{
+"path": "DENTUSDT.parquet",
+"bytes": 97160,
+"sha256": "2a43101f87ef7ccf9653b1070ba73ee77015cc1ea1c5c295bf72efc8dd4129d5"
+},
+{
+"path": "DEXEUSDT.parquet",
+"bytes": 108957,
+"sha256": "ad9bc5738af8d307a0b27fadf011f0011185d7c71a4d2208bc959a0aa9886c79"
+},
+{
+"path": "DIAUSDT.parquet",
+"bytes": 71973,
+"sha256": "158d42a78237f0e056bf60cd28fb281ab3bf1a529e2a86d143ff6584fb80f7c4"
+},
+{
+"path": "DODOUSDT.parquet",
+"bytes": 35570,
+"sha256": "aa01282c166bd98f5e71f4677896079cf726c446966a53e000f36b74a04aefc5"
+},
+{
+"path": "DOGEUSDT.parquet",
+"bytes": 2616668,
+"sha256": "2cd6ee3040ed94409e78b91ed250a9ca34cecdbff584557b44cd88ab2044016f"
+},
+{
+"path": "DOGSUSDT.parquet",
+"bytes": 249359,
+"sha256": "c9936c55b15d715966567d6868645f9b7985947bb99344f3bbf71b526abb1d55"
+},
+{
+"path": "DOLOUSDT.parquet",
+"bytes": 64468,
+"sha256": "0e6665b7fe6a126f26c5baaf244b1e48496a87bde6d24a2c7a8fc926ab222263"
+},
+{
+"path": "DOTUSDT.parquet",
+"bytes": 2325327,
+"sha256": "26dd610d1478821e701d77dd13563adfe1181bd5b0b702a0210a734ffaf617b6"
+},
+{
+"path": "DRAMUSDT.parquet",
+"bytes": 193903,
+"sha256": "5833346e35090844201dbc48a98d23cacdb6815dc327843b019f77b1c650f4b8"
+},
+{
+"path": "DRIFTUSDT.parquet",
+"bytes": 25383,
+"sha256": "68ef9922d0a9101ae4c8478f89ae074a43de6df896eb88c6ab21165d4673bd83"
+},
+{
+"path": "DUSKUSDT.parquet",
+"bytes": 253559,
+"sha256": "8043bc631bde8784e31358525e2d576ea2162c3b517a3ac2c3060f179303ad7b"
+},
+{
+"path": "DYDXUSDT.parquet",
+"bytes": 1137999,
+"sha256": "a33dfb12bc2d56d3a629a0bec3daede9f970deeccea01a3f934a0be2b937356a"
+},
+{
+"path": "DYMUSDT.parquet",
+"bytes": 50338,
+"sha256": "bd7dcdcf4cec4f6a3131819fb591c35333e05cb8367d5bbf7db704cb6e328a85"
+},
+{
+"path": "EDENUSDT.parquet",
+"bytes": 146610,
+"sha256": "be56806685d30c3f0ae5c1a0e3762b06c0635463bc0f67b89243901eae8a996d"
+},
+{
+"path": "EDGEUSDT.parquet",
+"bytes": 71875,
+"sha256": "ae634a04b29af80f88cc5520a2c763dcf742f0fcc59c4bcd594d0770706944fd"
+},
+{
+"path": "EDUUSDT.parquet",
+"bytes": 162972,
+"sha256": "4681444b035596c473db141b0ce051175bd9ae04e82d9f70c2617931d4dfa395"
+},
+{
+"path": "EGLDUSDT.parquet",
+"bytes": 269573,
+"sha256": "5c716a6e1928f4876eb85152b095b946f6ebd5c130e6e9a6202e4d0436c7c915"
+},
+{
+"path": "EIGENUSDT.parquet",
+"bytes": 154874,
+"sha256": "01dcd9711b559fd4217298c07afac1c44390f3f705b09a53324170c045a166c1"
+},
+{
+"path": "ENAUSDT.parquet",
+"bytes": 1429523,
+"sha256": "95dc438d94b5d4ddd2c25e2c4951f7840d61c32ff3353d5410ae17d4e9333457"
+},
+{
+"path": "ENJUSDT.parquet",
+"bytes": 331633,
+"sha256": "e5243855cfffa983550edbe7d71e50e8b25445e84fbb1621ae48c60bb386af3c"
+},
+{
+"path": "ENSOUSDT.parquet",
+"bytes": 155032,
+"sha256": "b1a95b7d81bd63fb461013882ecb0d96d1d5b12b07d48dda386a9e75f1cb5a62"
+},
+{
+"path": "ENSUSDT.parquet",
+"bytes": 758477,
+"sha256": "7a69701a301f92926eaac4f2dd102a9fa443431ecf4fae448174743c2fc1a84f"
+},
+{
+"path": "EOSUSDT.parquet",
+"bytes": 1422725,
+"sha256": "75f3bcae6f72aa8f64b916457683cda02b84272ce1fb7df2df10dfb91fce5cf9"
+},
+{
+"path": "ERAUSDT.parquet",
+"bytes": 50443,
+"sha256": "9148e5f57c92070610986927ead5fe729cbdd186183a3e06f3598d714d31a2e6"
+},
+{
+"path": "ESPORTSUSDT.parquet",
+"bytes": 163933,
+"sha256": "cdd81cf63e07327da214914db6e0ee85025cc3b2aadb22cc45e966304c4d9d1b"
+},
+{
+"path": "ESPUSDT.parquet",
+"bytes": 70872,
+"sha256": "4925f66c2f66ff0313b8e63d8a8d87c77486a769dba1bf473c32efe21b96f713"
+},
+{
+"path": "ETCUSDT.parquet",
+"bytes": 1604351,
+"sha256": "1738ecd4313d8136168d461e8013ca6d88e3ab3bbd5c9096efc510cd9b2dc4f2"
+},
+{
+"path": "ETHFIUSDT.parquet",
+"bytes": 363591,
+"sha256": "6da5bd9dca5ed55158aa88eb73a236da1cc32ef11b2c69be37809446dc43a5ca"
+},
+{
+"path": "ETHUSDT.parquet",
+"bytes": 2624125,
+"sha256": "f0f3c7d26d332b1bc052e1c589954a3a53bdbdb01e4e7c1eb12b016ea30693bb"
+},
+{
+"path": "EVAAUSDT.parquet",
+"bytes": 182974,
+"sha256": "52083d7078c2b70833aa9e45af62f1aadfff7395f3ed1e7872b611bcdeabfddb"
+},
+{
+"path": "EWYUSDT.parquet",
+"bytes": 185117,
+"sha256": "2be2c0ca060a897a4535ccdb128a91dfb638a1d27da7338702b42bc949c60ef6"
+},
+{
+"path": "FARTCOINUSDT.parquet",
+"bytes": 762947,
+"sha256": "07fca55eb972294e8939d32007103743b02e896b49d2b0ad2db418db66b168b3"
+},
+{
+"path": "FETUSDT.parquet",
+"bytes": 1113003,
+"sha256": "416ba4b70b80e8e41d35804ef9a20075bb98bef2192ef1528cc79bdab1704006"
+},
+{
+"path": "FFUSDT.parquet",
+"bytes": 56398,
+"sha256": "a238be7c141594d38c252344f9afb563d642116631522de9b3e130dbdfd5d8af"
+},
+{
+"path": "FHEUSDT.parquet",
+"bytes": 154815,
+"sha256": "6de29dab35f53098a4f354ffced755c8d4d016b27011b93c781289746a504a4b"
+},
+{
+"path": "FIDAUSDT.parquet",
+"bytes": 93488,
+"sha256": "f40c7d1bfe0fbf560b11fd4389f4a552a00e753c2d032d3b9c2f3b7fb1b90bbb"
+},
+{
+"path": "FILUSDT.parquet",
+"bytes": 2542510,
+"sha256": "60fe722b1b5241383111f86940815785106edcc31fa5e38b49e7bc6559f1e2b2"
+},
+{
+"path": "FLMUSDT.parquet",
+"bytes": 354092,
+"sha256": "c7ba1de4fa78406e8045c0b9a15a200a8184bff8ff2393c740961f89d6ddb91b"
+},
+{
+"path": "FLOWUSDT.parquet",
+"bytes": 185027,
+"sha256": "2359f004ef2a2934fb65e8b0fd4e7f369f7aad504625ddb8668338a2bd73bba9"
+},
+{
+"path": "FOGOUSDT.parquet",
+"bytes": 53556,
+"sha256": "f5833b6f33b2c7929d9dc164f2dea9a65bedc96551ae46a5ab2eb0447cce9ccb"
+},
+{
+"path": "FOLKSUSDT.parquet",
+"bytes": 107570,
+"sha256": "c9c0e87af8023b69f47dae605aaf4318a2376dd48664037ef074d4ccfeafccd2"
+},
+{
+"path": "FOOTBALLUSDT.parquet",
+"bytes": 105233,
+"sha256": "b7c66b3b12e5bc1124dfdebe50fe68498e8719a91683f3691b5937641f7d0c7d"
+},
+{
+"path": "FORMUSDT.parquet",
+"bytes": 58882,
+"sha256": "7fc6efea8fbf5a801c60b4a50fb460e5cb09f33b21c742d9da4290e07a2360a6"
+},
+{
+"path": "FRAXUSDT.parquet",
+"bytes": 50760,
+"sha256": "4440d817f6ddbc05433b16f8e1c776483a6cd6cc7da461636be6e8c15b2adbe6"
+},
+{
+"path": "FRONTUSDT.parquet",
+"bytes": 231116,
+"sha256": "400710c6957bfa5c202c266f6e45c16413214aceb4389585c2f6bc559fabd412"
+},
+{
+"path": "FTMUSDT.parquet",
+"bytes": 1530651,
+"sha256": "e7db3e82417a53255c399976b6f61718e459f34244ff90862fc208dcd759b974"
+},
+{
+"path": "FTTUSDT.parquet",
+"bytes": 47579,
+"sha256": "e9f48fab64e309123d4a45af67927f1785be220bd0869051f5583a14bb6d9282"
+},
+{
+"path": "FUNUSDT.parquet",
+"bytes": 178806,
+"sha256": "c2f495e96f6ef30b07bb9e88b28383f7dc553ff1b3ba40970ce51aec6fa61b47"
+},
+{
+"path": "FXSUSDT.parquet",
+"bytes": 75043,
+"sha256": "74cf3bf32fec87aca0641f48e5a5379e76e10cff2adfbffac798560501b00617"
+},
+{
+"path": "GALAUSDT.parquet",
+"bytes": 1474802,
+"sha256": "873170e7a9949f103ef5b9b0dab626f62f9fa77a5e09153bea46eb98c89aa54a"
+},
+{
+"path": "GALUSDT.parquet",
+"bytes": 136450,
+"sha256": "c33d9a22bee42b3c95a6f289519b37e9df1235cb588dd36216dad6837baf6298"
+},
+{
+"path": "GASUSDT.parquet",
+"bytes": 153102,
+"sha256": "02909518ba9c82a75a0f3b26631cc7b437ec702eb1ccbd43ac0932402aabd2f4"
+},
+{
+"path": "GIGGLEUSDT.parquet",
+"bytes": 127454,
+"sha256": "2a84678bf7bf954e4bc4491e1728d9e640f149dd2f62b2e6baefac0ec71bd671"
+},
+{
+"path": "GLMUSDT.parquet",
+"bytes": 93372,
+"sha256": "cd063c8f1068ae4a68026c81fdcd440d174f3228b95f78afa811a398686e450e"
+},
+{
+"path": "GMTUSDT.parquet",
+"bytes": 1065463,
+"sha256": "45a3326aea6caed1c1d424f2fd172b04fd8e48bf969793456a8217851589fdcb"
+},
+{
+"path": "GOATUSDT.parquet",
+"bytes": 228949,
+"sha256": "7b596cf41691cf52bb3beb749986c02e4baebdee3a8340128a842106bc3b38c6"
+},
+{
+"path": "GRIFFAINUSDT.parquet",
+"bytes": 65251,
+"sha256": "dc0f3cda08f543d8dd87bc551fcd755b28632e6e1a83dc7811749579408ef53a"
+},
+{
+"path": "GRTUSDT.parquet",
+"bytes": 317059,
+"sha256": "b61a099430eb8fa0627748b383235566bb2057db91e9ee859afb6bb2e73e5ab9"
+},
+{
+"path": "GTCUSDT.parquet",
+"bytes": 123316,
+"sha256": "2b49c62787187a5a2ac90da92e0044af3b4fb1cd64292c1aeb6ad2604758a9b3"
+},
+{
+"path": "GUNUSDT.parquet",
+"bytes": 65266,
+"sha256": "8465fdce99c94ae0015dd40fb08d4ec4d37b3881eb916c70ebc56feb614253b5"
+},
+{
+"path": "HAEDALUSDT.parquet",
+"bytes": 54183,
+"sha256": "5a9f9f10f636c3e71889fdd1a8085ad186cdcbab0505fd5a6d8f0335e0615ff5"
+},
+{
+"path": "HBARUSDT.parquet",
+"bytes": 802055,
+"sha256": "3a4217f3f3fd90555e6bbc1225b819997553170d723103ae38677dee21d39600"
+},
+{
+"path": "HEIUSDT.parquet",
+"bytes": 101137,
+"sha256": "f34f21b2f26a459406dc0439e5457f10103b914ed9490b954de1224c7c3e4352"
+},
+{
+"path": "HEMIUSDT.parquet",
+"bytes": 155271,
+"sha256": "0e204ad2247304a9753265fcae98ae4f1517155e8849b1d67e46921d62678f7e"
+},
+{
+"path": "HFTUSDT.parquet",
+"bytes": 60095,
+"sha256": "9a0595ec10c0edacf48977449e28ef9a1ebf2cde51d5d3064de4fdc2e3229c39"
+},
+{
+"path": "HIFIUSDT.parquet",
+"bytes": 141124,
+"sha256": "30f185e3069bfec3f46378fcdddc55aac441a988ff6622daa2834b7ea455615d"
+},
+{
+"path": "HIGHUSDT.parquet",
+"bytes": 410245,
+"sha256": "3f2ac1d75618300a52cb8651b2327b3056c8121d27e067794d450187b58c5d4b"
+},
+{
+"path": "HIVEUSDT.parquet",
+"bytes": 69252,
+"sha256": "988c89d08e1458fdc7713da1ceb5d649b2500ac85a117ca10a5228bf1b06a71f"
+},
+{
+"path": "HMSTRUSDT.parquet",
+"bytes": 107566,
+"sha256": "40745c0296222f6943b57c12d7d3dddc0be86cb488de69d517fca744d644a9d6"
+},
+{
+"path": "HNTUSDT.parquet",
+"bytes": 276983,
+"sha256": "c5be81afdf22fad0ff76bee9ee57f6e8acb338aafac78022351c64b38fdae7c7"
+},
+{
+"path": "HOMEUSDT.parquet",
+"bytes": 198083,
+"sha256": "1b6fd76b9c52811a75a02adefefd8b523c7781b2e42e8d1e9ef5e641717af0ee"
+},
+{
+"path": "HOOKUSDT.parquet",
+"bytes": 92001,
+"sha256": "4db891b63a8fbd01ba1eda169b38592eb55fe17ae1cc49719db00c483a937f63"
+},
+{
+"path": "HOTUSDT.parquet",
+"bytes": 5948,
+"sha256": "abac551a8115da86be668139506aededf17061134fbed3b3d2e646d2ff44b96f"
+},
+{
+"path": "HUMAUSDT.parquet",
+"bytes": 55049,
+"sha256": "df1f66be94618133bedc62e9063abb9890ccd56198757415e884a4814ed16196"
+},
+{
+"path": "HUSDT.parquet",
+"bytes": 370562,
+"sha256": "32a066e66d641c8bac8015d9afac075010a3401f7c8edbb6421db7cba4fd8ba8"
+},
+{
+"path": "HYPERUSDT.parquet",
+"bytes": 121464,
+"sha256": "f790ab02225aee434de0eed1d85953624742cbf27cf20bbbdc4a11ef4b41a156"
+},
+{
+"path": "HYPEUSDT.parquet",
+"bytes": 761831,
+"sha256": "539e964153332d00271acca2289084205af139e1c90970255c854cc52ebf0a42"
+},
+{
+"path": "ICPUSDT.parquet",
+"bytes": 479717,
+"sha256": "5b004785c62bd4355a5b8dfa2dfaca925f56278c4739e3c72780c3504040c018"
+},
+{
+"path": "ICXUSDT.parquet",
+"bytes": 149994,
+"sha256": "971843cb935a8160dd60036a07f5b4c1cd120c412f6ba82bd2cd05b4d658749d"
+},
+{
+"path": "IDUSDT.parquet",
+"bytes": 298411,
+"sha256": "8120fe0d16dbf855ee9e2cb75fcd94b3629267eb9fd58c8e5bc34ce6a516d7d8"
+},
+{
+"path": "IMXUSDT.parquet",
+"bytes": 352611,
+"sha256": "9d9f04a3026a31718a5fb7007331f0942c5dd17d9b6b07bb464a0eb188dd326f"
+},
+{
+"path": "INITUSDT.parquet",
+"bytes": 158785,
+"sha256": "0da63fb598283d543872cd2dcd381e0090b12bd3c910751fb341487cbed4b843"
+},
+{
+"path": "INJUSDT.parquet",
+"bytes": 1316422,
+"sha256": "15781077a58a79602a31b37854aad8a27d8733f9351bfbb933664eebe11e3729"
+},
+{
+"path": "INTCUSDT.parquet",
+"bytes": 239278,
+"sha256": "1e9082f53769609e30aa14d8b1d4d03603f2651a6f89470e5a902654e34fd9dd"
+},
+{
+"path": "IOSTUSDT.parquet",
+"bytes": 57458,
+"sha256": "5b581dc1bc298ad8df2a44b5142298dbc7a52072661f0ad39f457965a549c434"
+},
+{
+"path": "IOTAUSDT.parquet",
+"bytes": 98266,
+"sha256": "158f5a7200c007046d1e54b8f89ae44fd916d61dae8a075fa045a214e5040fe6"
+},
+{
+"path": "IOTXUSDT.parquet",
+"bytes": 112699,
+"sha256": "b764f75e2c717ed8cf117eeb65c5ef4a2200b27cd54e9540e6779180eea3bd3a"
+},
+{
+"path": "IOUSDT.parquet",
+"bytes": 164750,
+"sha256": "79290314c79b134fa0ac536d01940aa46570e875f4b51836c984665013aaa1e3"
+},
+{
+"path": "IPUSDT.parquet",
+"bytes": 306949,
+"sha256": "272f03df667504a5e4fc901d0c5ce520645a5f1716de36fc5de516f6d4f16f9e"
+},
+{
+"path": "JASMYUSDT.parquet",
+"bytes": 711476,
+"sha256": "d6412bcc030d8538469ce15f2de9b6aa45eaa1c8ad81ffc4ab900df98dba18f1"
+},
+{
+"path": "JELLYJELLYUSDT.parquet",
+"bytes": 162478,
+"sha256": "3aaa6d95ce60bb18ca648108b0b3f10befb12c5a71957636fee2b336560c20f9"
+},
+{
+"path": "JOEUSDT.parquet",
+"bytes": 99313,
+"sha256": "66754ff64d0463264dacf0421c687856e0007ebd3f3bdfdec41349b6c7ef524a"
+},
+{
+"path": "JTOUSDT.parquet",
+"bytes": 348583,
+"sha256": "ace0c217335b3f5f140acc2f20fdaf1c509e85fa7e0e19804c0ee30a0f423356"
+},
+{
+"path": "JUPUSDT.parquet",
+"bytes": 348187,
+"sha256": "156e786556b0f6c228f63793fdd0bf1ec43eb4ddfd289ce337f3e9408fb1461e"
+},
+{
+"path": "KAITOUSDT.parquet",
+"bytes": 273830,
+"sha256": "3ca04815f3f54aa3307fbfd9636f5beb5dee88b74b0430ee30470f6010c2b137"
+},
+{
+"path": "KATUSDT.parquet",
+"bytes": 102944,
+"sha256": "7c723552405f339336c7772cc9c2894ebcc95b166378c875afce946689c35595"
+},
+{
+"path": "KAVAUSDT.parquet",
+"bytes": 469572,
+"sha256": "ba6c798449517362386d6fdff0e21993ad740c4bfe8cb5746f5b4883bb0eacf3"
+},
+{
+"path": "KERNELUSDT.parquet",
+"bytes": 38986,
+"sha256": "aefc6d49e30de4a4c21be5fad689299d0dd7e2c33822af4500b663c99bc3f25f"
+},
+{
+"path": "KEYUSDT.parquet",
+"bytes": 59949,
+"sha256": "7a9552e2ae807e23e7ab6443027f223179378c683785ed2d5ce6a73e44337df4"
+},
+{
+"path": "KGENUSDT.parquet",
+"bytes": 62210,
+"sha256": "8fcc613d0bf3da39bd32c4521c49b2b309413a8b2c362ab989feaa0b814302fd"
+},
+{
+"path": "KITEUSDT.parquet",
+"bytes": 173629,
+"sha256": "7e514fcfe9f3753bdf328bdd8a7d3bceb2cbb733c5239268962de8dadb2793d3"
+},
+{
+"path": "KLAYUSDT.parquet",
+"bytes": 166165,
+"sha256": "d24475b0decdf13d28a56664e72f7afaea6ef0e42f17d9e4b00195a4f54dc491"
+},
+{
+"path": "KNCUSDT.parquet",
+"bytes": 531176,
+"sha256": "071b5b2e0577f2859548babb8311e23e2e90e1b9aa21783e0a67aa44246b2e38"
+},
+{
+"path": "KORUUSDT.parquet",
+"bytes": 155977,
+"sha256": "3e753fc318b7a4174622e2ebeed7cc595276791e76fa88bd55f131f2d3812786"
+},
+{
+"path": "LABUSDT.parquet",
+"bytes": 211372,
+"sha256": "0f50cdbabb22a5c9d6c2d50387c5f52fc18c6638bf8abe39867a3d36062664b7"
+},
+{
+"path": "LAUSDT.parquet",
+"bytes": 49460,
+"sha256": "846c3e23253511fdec8d8a7f90b4139febd65ebef19efc9db610374f8ab4a1e9"
+},
+{
+"path": "LAYERUSDT.parquet",
+"bytes": 178447,
+"sha256": "931572a72b27f9038675914735409ffbb48240c70e6c2cfde7b669c10df730e4"
+},
+{
+"path": "LDOUSDT.parquet",
+"bytes": 874976,
+"sha256": "529193e348a655aa8e3136d2d488e5b87e51e062dd1338668072f27d95a2e83b"
+},
+{
+"path": "LEVERUSDT.parquet",
+"bytes": 169182,
+"sha256": "36eacbaa8fcbdd6ccc3484b045cf2a98ca7dca5b62bbb85f11f9a1fac3d8aaeb"
+},
+{
+"path": "LIGHTUSDT.parquet",
+"bytes": 167353,
+"sha256": "c0da808d381df54feb47c3d79f55333b5213ae3638f3964665ec3b0c4ccf5581"
+},
+{
+"path": "LINAUSDT.parquet",
+"bytes": 392229,
+"sha256": "5c061a0a895b74d50a653753d22b34b7f753427f34e12800d1975556f588e435"
+},
+{
+"path": "LINEAUSDT.parquet",
+"bytes": 79010,
+"sha256": "261cb4bed2c323b902270fdc0e5fc9c0f10ee5b077f242b309a9ead34fc99532"
+},
+{
+"path": "LINKUSDT.parquet",
+"bytes": 2603789,
+"sha256": "f537756b54998a03f7733bd3b57c957957ca7b414d24af3222149835211f4d50"
+},
+{
+"path": "LISTAUSDT.parquet",
+"bytes": 74952,
+"sha256": "f5e8edd1777e14c22fa390ed7cc41ad86b3e1aaf6d18c1a666811d08eee742f1"
+},
+{
+"path": "LITUSDT.parquet",
+"bytes": 430010,
+"sha256": "468bb060235637a003403d61f93eab97899e33e75eb9d4435d2c1ee70d6f96fb"
+},
+{
+"path": "LOOMUSDT.parquet",
+"bytes": 74944,
+"sha256": "8c0c8b431a83059f0c3860b987e7659441bb2cf4afa07a744219beb7354fa1fc"
+},
+{
+"path": "LPTUSDT.parquet",
+"bytes": 353803,
+"sha256": "efb9c82afd8a6c2105da396d0e1fe25a721d9fb0913a7af15f1c134bcedd24ad"
+},
+{
+"path": "LQTYUSDT.parquet",
+"bytes": 266411,
+"sha256": "c3bdd487a6f4a92102972ecf64ed4443f4cbc988c7d2486460a6f10974a63bf9"
+},
+{
+"path": "LRCUSDT.parquet",
+"bytes": 341654,
+"sha256": "b00b7a52dca825c9658174bdc5102ee20227b62ddf89404fac2ea9cdab3cb3fb"
+},
+{
+"path": "LSKUSDT.parquet",
+"bytes": 141149,
+"sha256": "e33fdbf3e9edeee9c5e0318e7229ca14287835aa9742124372847f2325978e12"
+},
+{
+"path": "LTCUSDT.parquet",
+"bytes": 2486483,
+"sha256": "e35566315194cda3b7bf59da88f92e5f31b2d665244ae513d02f1b0ea733e78e"
+},
+{
+"path": "LUNA2USDT.parquet",
+"bytes": 430054,
+"sha256": "df6a392ee4a33d5cfa358e8f9e3ecdb1d5102898074483dfb2cf40df2ef8649d"
+},
+{
+"path": "LUNAUSDT.parquet",
+"bytes": 152100,
+"sha256": "a39f3af99cb7bf9125b464f10ac6fb226812d85937ccd64acfcc4bb9d98fb461"
+},
+{
+"path": "LYNUSDT.parquet",
+"bytes": 108270,
+"sha256": "f7c3370b4382cc36b4ac91f71336165af73c25611511ffaea0f48814caabdbbd"
+},
+{
+"path": "MAGICUSDT.parquet",
+"bytes": 380153,
+"sha256": "e2347fff5a08d1307414ff673307b6597c74b4d81c222156392dfc23afe63959"
+},
+{
+"path": "MANAUSDT.parquet",
+"bytes": 618512,
+"sha256": "b57b41148a98bda48f697f6b3db0db89ca832660dd4e8a4a183ea45e755221d1"
+},
+{
+"path": "MANTAUSDT.parquet",
+"bytes": 99654,
+"sha256": "e89e2dc9c4d955ec589fde6461adff349fae349198e83376cc26db913aaae44a"
+},
+{
+"path": "MARSCOINUSDT.parquet",
+"bytes": 47924,
+"sha256": "9d8e7c1de90202c3a99cfe2fd06d0c67364d2943ddf68863e86354a9dabd50aa"
+},
+{
+"path": "MASKUSDT.parquet",
+"bytes": 937575,
+"sha256": "1b51622bcddd0ded9a120c60a8339c964a1434366f9e5f35b37c019983bbad5b"
+},
+{
+"path": "MATICUSDT.parquet",
+"bytes": 1389364,
+"sha256": "1a2523e188272b29ae185ba5bf250dd57a103daca77d100abf05608b168ecae6"
+},
+{
+"path": "MAVUSDT.parquet",
+"bytes": 61581,
+"sha256": "04e5a4eee966a776a85b459b3eefcbe9d4514bbe698deda43000185437a330d5"
+},
+{
+"path": "MELANIAUSDT.parquet",
+"bytes": 57150,
+"sha256": "e87a6cd021cfd16800eb2eebfd82ac405194d88900d10a12a405b46042c79a11"
+},
+{
+"path": "MEMEFIUSDT.parquet",
+"bytes": 54646,
+"sha256": "5e4f31adaf963cb1e4b2fa1d32f208ae1c391b55f6ebb3032f3b2773defb2075"
+},
+{
+"path": "MEMEUSDT.parquet",
+"bytes": 307730,
+"sha256": "3b54c95f6c9c36de6e699449d842dbffbcc47676dd6f760596531843d5faeb3d"
+},
+{
+"path": "MERLUSDT.parquet",
+"bytes": 93319,
+"sha256": "cc3ba9479aa2afad856a3b1e4a4d57556a177447c75a7fadb9b61d772865987b"
+},
+{
+"path": "MEUSDT.parquet",
+"bytes": 63594,
+"sha256": "f44d533f1e5deced2559d7dc55fc66d9e08db24a231e018d52a1bb5e3ad8366f"
+},
+{
+"path": "MEWUSDT.parquet",
+"bytes": 249805,
+"sha256": "45e1a6c68de37084c789b4fc9f48e951078d9254b2653766a762ba1fe56679b5"
+},
+{
+"path": "MINAUSDT.parquet",
+"bytes": 256005,
+"sha256": "479b63c63968ad67c676f6a4e31ee41c21031ddb5073e107b00045508c6d2e18"
+},
+{
+"path": "MIRAUSDT.parquet",
+"bytes": 49161,
+"sha256": "ef3bf407ca5d9d73a5abb274788744fda27ce7c78ab41097f4cc086fe4e5a0b1"
+},
+{
+"path": "MITOUSDT.parquet",
+"bytes": 51876,
+"sha256": "2d7cabd0b4a16443e09e2a78f7a4220371ee0d9d7a3576086843e5a26db04d6e"
+},
+{
+"path": "MKRUSDT.parquet",
+"bytes": 502021,
+"sha256": "c6078e821e426077b6ee1cea1e1d2296b4c9fa874ee3d2e584f0c59c02f86825"
+},
+{
+"path": "MMTUSDT.parquet",
+"bytes": 74978,
+"sha256": "d0bd48fb0f04c6e87a58df780fed403fe43a25eef06775c6f8b1cc106419eac3"
+},
+{
+"path": "MOCAUSDT.parquet",
+"bytes": 60999,
+"sha256": "97ca8fa6e482205b4dd625355271b74b04c12cd7b000e12dd31d2da2980cb756"
+},
+{
+"path": "MONUSDT.parquet",
+"bytes": 108980,
+"sha256": "a144b3f3a6e3d46b65cf3f0e6b92564ad54f7f5fb8b28b6b34f20c6ce3805f2c"
+},
+{
+"path": "MOODENGUSDT.parquet",
+"bytes": 296145,
+"sha256": "73981f5f3e683aa56e41f4d670dfa8cebc0e145a91bbbbd02d7bd98b3d6dd0a2"
+},
+{
+"path": "MOVEUSDT.parquet",
+"bytes": 239481,
+"sha256": "67c17291befe4625e007b2928ea87e00f33a6b7c2a102c29418d0c63a4ae3f8f"
+},
+{
+"path": "MRVLUSDT.parquet",
+"bytes": 178224,
+"sha256": "72b2ebe84c030e5a57328ee15699d534bcaaac72b4ed2ec1072259836b8eb8e4"
+},
+{
+"path": "MSTRUSDT.parquet",
+"bytes": 201412,
+"sha256": "e076f351e67c73c0d81a0bb94f42323dea4a7f06c0262df8dfde51cab3042584"
+},
+{
+"path": "MTLUSDT.parquet",
+"bytes": 526487,
+"sha256": "7edc24dc450f0567c879cbdfca710345cd6799a4061ba268a109665383003e8b"
+},
+{
+"path": "MUBARAKUSDT.parquet",
+"bytes": 129782,
+"sha256": "9edd66c85c438c2ac021512c79ff3e9d9a47021a5a1fe78f8ec332c9461cd778"
+},
+{
+"path": "MUSDT.parquet",
+"bytes": 142099,
+"sha256": "88660771560411deaf9863f092d3da9c90e62f1fcdf3beee0a24790a4c9f0777"
+},
+{
+"path": "MUUSDT.parquet",
+"bytes": 256413,
+"sha256": "5706ede79dfe075771924c62afcf6e31cbc4991301b0ceb1de9843663a4d4edf"
+},
+{
+"path": "MUUUSDT.parquet",
+"bytes": 72010,
+"sha256": "7284bc327dd68b9aa43a70c305a4b2a44a745db1cd89279c5c18db86090bc7db"
+},
+{
+"path": "MYXUSDT.parquet",
+"bytes": 268223,
+"sha256": "a6e6d5bfc7304ee990922d6f1b9535e2197d9cc5348ff565a573a1c9dd1fbc30"
+},
+{
+"path": "NBISUSDT.parquet",
+"bytes": 61317,
+"sha256": "0883071f461b98fc026fa9671a3405eaf1f72a6343ec9540aca9874e1b0042f0"
+},
+{
+"path": "NEARUSDT.parquet",
+"bytes": 2486281,
+"sha256": "f0a205e9a53c8ae48587479a1845bb2d2d0e67497037f23d14e4dbaab6654946"
+},
+{
+"path": "NEIROETHUSDT.parquet",
+"bytes": 134492,
+"sha256": "a895d0c291e5d7deac67a711c08c2c9597bf4f17d4ecf3336ba1865b0f9709a3"
+},
+{
+"path": "NEIROUSDT.parquet",
+"bytes": 498443,
+"sha256": "33ce975ec453477b17a4dbe2e03db1625f1afd30a7b9a6b05b6e4678c9dd00e8"
+},
+{
+"path": "NEOUSDT.parquet",
+"bytes": 371558,
+"sha256": "e73c776c164d593d0a657efd0f1e8a63f367a4802a885b8e622cc6d4e642744e"
+},
+{
+"path": "NEWTUSDT.parquet",
+"bytes": 57848,
+"sha256": "bbc08bbb812692cb98d43e01bc2dfdcd27ae326826ba98f6e8aec0834171b9d6"
+},
+{
+"path": "NIGHTUSDT.parquet",
+"bytes": 136130,
+"sha256": "766d5279f893eae4217941785743c2d45f00ba93a74f81822c6baf0bcbef155d"
+},
+{
+"path": "NILUSDT.parquet",
+"bytes": 116761,
+"sha256": "a9596b0c9d4c11976295d23adf523c8b92b92fcbf7f05739f7917f3750a9a47f"
+},
+{
+"path": "NMRUSDT.parquet",
+"bytes": 213909,
+"sha256": "cf56aba91851676ef7600f421f239267a3da1682208b9f9603d62d7864e93a83"
+},
+{
+"path": "NOMUSDT.parquet",
+"bytes": 158758,
+"sha256": "0b10a94a0302ea3c2bcd689ccc311dcbe5f87da60cc935d2acc800ae5daa02f0"
+},
+{
+"path": "NOTUSDT.parquet",
+"bytes": 292374,
+"sha256": "d392d9a695546172b10dfe85801618dcba0081c8fcaed60f8d320fc44795b7c4"
+},
+{
+"path": "NVDAUSDT.parquet",
+"bytes": 212178,
+"sha256": "5bb8ec65756517d3bfe4024c65bddff5902c6c03b7a5c22239bf5439990f491e"
+},
+{
+"path": "NXPCUSDT.parquet",
+"bytes": 73828,
+"sha256": "b7e97aa80a529653dc7f80c113a77ec45bae476f6ae11848cc5b40df0fa2b3a4"
+},
+{
+"path": "OCEANUSDT.parquet",
+"bytes": 325967,
+"sha256": "bd4139e8d2e580314e2dd6791f6e45279b288139b76a7d5b1bc8210fd5ab7c18"
+},
+{
+"path": "OGNUSDT.parquet",
+"bytes": 392961,
+"sha256": "b85439042a20a25cb4e1acf7d0ec634138b497950dee78cd883990eed70c2327"
+},
+{
+"path": "OMGUSDT.parquet",
+"bytes": 117290,
+"sha256": "b6ff08d7b38d3c74b78b7e3334382148a4866e96822f041141d5d7cad5bd5e75"
+},
+{
+"path": "OMNIUSDT.parquet",
+"bytes": 98667,
+"sha256": "bb6273d59e5088b8d7c8eacca4caf6f901087cc1c51ed8625c0471c1ccdb6d53"
+},
+{
+"path": "OMUSDT.parquet",
+"bytes": 515712,
+"sha256": "d26c3c715310857c88b1be6e8a41143329720a8658d788469a824c9f845a4212"
+},
+{
+"path": "ONDOUSDT.parquet",
+"bytes": 1133132,
+"sha256": "408d1a2472b70e634c12e99cc453ceab3707d3cda5b02f4d3bebe7ac3acf009b"
+},
+{
+"path": "ONEUSDT.parquet",
+"bytes": 255927,
+"sha256": "71cc8ba9bb3b7e326e14af7212c0adc3ee0318cb1b88bf3fed0126453c681481"
+},
+{
+"path": "ONGUSDT.parquet",
+"bytes": 199637,
+"sha256": "894c6736dc0f6d2dc6f31ce7b336df9906fc60d707b751baf9149fa2b7aa3185"
+},
+{
+"path": "ONTUSDT.parquet",
+"bytes": 324018,
+"sha256": "33bc73c91cce3a19a4c27624502d1024f2eb246fca6efe41e6dec71774df8b13"
+},
+{
+"path": "ONUSDT.parquet",
+"bytes": 77045,
+"sha256": "6681e14145fef67143c5c728debfaca3a6830d18869f66f68b3dd07b35288f85"
+},
+{
+"path": "OPENUSDT.parquet",
+"bytes": 53528,
+"sha256": "c29762abfb050dbd0ec2f42f6cf91b893e923016b8904b171a9c32d049c0d380"
+},
+{
+"path": "OPNUSDT.parquet",
+"bytes": 57759,
+"sha256": "9496478e46c32f029efd02f29fdf8a725bcbd9221b35a97b3dcfccbc2afb9e68"
+},
+{
+"path": "OPUSDT.parquet",
+"bytes": 1671741,
+"sha256": "a60303e2a5e1401631b096459a0464466166ec9196de5b26be94e37fbe7dd9b2"
+},
+{
+"path": "ORBSUSDT.parquet",
+"bytes": 51136,
+"sha256": "953b055ae584111a92f399a39f6a3fd81c0c3408233689f0a0e2e277df8eeae6"
+},
+{
+"path": "ORCAUSDT.parquet",
+"bytes": 225319,
+"sha256": "1eea9e308bb132f34fd29ee3fcc1f5e162b78391e375c56c267887e0f82a62aa"
+},
+{
+"path": "ORDIUSDT.parquet",
+"bytes": 874701,
+"sha256": "b6005a92e591e482827b296c1ce769bc9d8e650f88ac76264ddaca49d2ad2118"
+},
+{
+"path": "PARTIUSDT.parquet",
+"bytes": 77949,
+"sha256": "e5195597a499faaedd13b984f28a37f7947795bdb24b4ec366a796d24d88c7ea"
+},
+{
+"path": "PAXGUSDT.parquet",
+"bytes": 412537,
+"sha256": "11dd93affa583b513b9d61bd1b98b5296c7d02fff7f1a6f9ce435be91fc6840d"
+},
+{
+"path": "PENDLEUSDT.parquet",
+"bytes": 347408,
+"sha256": "4e332283cbdf070a6d24ef7da4efff6c12d67d48b92326f140e3c55dd08a1912"
+},
+{
+"path": "PENGUUSDT.parquet",
+"bytes": 711031,
+"sha256": "a7dd3ff52b15d673d315849fca47ffbbfd83118307e126803ae0fe34ab718870"
+},
+{
+"path": "PEOPLEUSDT.parquet",
+"bytes": 994656,
+"sha256": "2cf01208ca8c5fefc6e9f80d275aa469246aec8bac243bf5ab42245689bf9cb4"
+},
+{
+"path": "PERPUSDT.parquet",
+"bytes": 209231,
+"sha256": "039b576e3014747e3eb544fecec6c2370566bae80ed2d1f13be70a47cd78d678"
+},
+{
+"path": "PHBUSDT.parquet",
+"bytes": 82893,
+"sha256": "b60704d90c34130330b004b47477704c28c48cc08aae3f1f451dea3301ff5ddd"
+},
+{
+"path": "PIEVERSEUSDT.parquet",
+"bytes": 206090,
+"sha256": "40d46948221d5473268410262465fefc9664c356bc5ccc9ccde67a97e1b248b9"
+},
+{
+"path": "PIPPINUSDT.parquet",
+"bytes": 301482,
+"sha256": "f3fe5241ed7b8b64e3df60806604042d7e54d20982877023449465637a19dbe9"
+},
+{
+"path": "PIXELUSDT.parquet",
+"bytes": 184214,
+"sha256": "95e3488e7523f3bdc07ce4f030c763ef8ba01c688ae486570f49e617487b6e3c"
+},
+{
+"path": "PLAYUSDT.parquet",
+"bytes": 96491,
+"sha256": "bd3d9bbec3face2695fdd54ed164732639dbb710d8346005e1e6d1778681207a"
+},
+{
+"path": "PNUTUSDT.parquet",
+"bytes": 415983,
+"sha256": "961418704a336898f64fa7ca08b35ad66ad5e58ee9f091323c3d3c7782cfd9f1"
+},
+{
+"path": "POLYXUSDT.parquet",
+"bytes": 159262,
+"sha256": "2055d75aa75c51175674af5dc89d087fd75b7f8a92e1183639848ac7954d72ff"
+},
+{
+"path": "POPCATUSDT.parquet",
+"bytes": 408439,
+"sha256": "8062c856ef338fd17b0d2068e87b83dfd50dc8ea8ea29e1eef3dc00ac2a9204c"
+},
+{
+"path": "POWERUSDT.parquet",
+"bytes": 167718,
+"sha256": "201d56174e620ef43dcc16191e90f6459f6054df4d913e15b9220fd3a65e45ce"
+},
+{
+"path": "POWRUSDT.parquet",
+"bytes": 102171,
+"sha256": "87e7c137fc680972f4558ebf333045151f5d171f610d363c415ec323a86c0f55"
+},
+{
+"path": "PROMPTUSDT.parquet",
+"bytes": 51010,
+"sha256": "bd0ecdcbcabccf8f5b66164e1f8830f49fa2a2078990fcf87b7b609ddb476c22"
+},
+{
+"path": "PROMUSDT.parquet",
+"bytes": 74105,
+"sha256": "c4da5f0f77fa60f139f70aa0952d3d6de04c13fab140831ef34c555432a44e10"
+},
+{
+"path": "PROVEUSDT.parquet",
+"bytes": 59276,
+"sha256": "7cce536ab131067783125b2749b42ff07f57bc98a4664b5747860cfcde1f5420"
+},
+{
+"path": "PTBUSDT.parquet",
+"bytes": 71942,
+"sha256": "21ee89a9cb713e14a9ceaa2c0975ce422fa2a7c83d8780d9460f43d081eba6c7"
+},
+{
+"path": "PUMPBTCUSDT.parquet",
+"bytes": 57232,
+"sha256": "17f49c44b5702c2430416f65364efc2d9f9a121a32ee02a1241548cd6967dce1"
+},
+{
+"path": "PUMPUSDT.parquet",
+"bytes": 601362,
+"sha256": "4a7b1efa3601ca2181ebe9f4f40e3dcfb5fc3584f81fc24edeeae990dd6e8594"
+},
+{
+"path": "PYTHUSDT.parquet",
+"bytes": 279301,
+"sha256": "8d8728c85ebaf91f428455ccfc01001e78c8d0ef36c8bda419c2241e53c2c30d"
+},
+{
+"path": "QNTUSDT.parquet",
+"bytes": 59358,
+"sha256": "ec1b6932bc652f00e5a7f6101f27b1be5329f37c9488e2426c851a0f3d584477"
+},
+{
+"path": "QQQUSDT.parquet",
+"bytes": 177431,
+"sha256": "eed9036ef3ddfbad86959361e6a925d652305f06d0e90d8b98e2a50c0f7a0bc4"
+},
+{
+"path": "QTUMUSDT.parquet",
+"bytes": 61883,
+"sha256": "8612c53c0306775d11f466d105e47015e3e11212c2372d1ac20e2901238e6f8a"
+},
+{
+"path": "RAREUSDT.parquet",
+"bytes": 209634,
+"sha256": "7f182df03077031a2b64b5476368969bf0c3ada564229a16a91cc15b68829a61"
+},
+{
+"path": "RAVEUSDT.parquet",
+"bytes": 183649,
+"sha256": "b95ef05c819ca92e8dc8a3cf1e16b2f2694e16df9b5a667c7e0164eca68dd375"
+},
+{
+"path": "RDNTUSDT.parquet",
+"bytes": 56561,
+"sha256": "82a2da33cde2639ffa231f4a064c5ac9b67032140d38795826ac256ea7fdd1a1"
+},
+{
+"path": "REDUSDT.parquet",
+"bytes": 127879,
+"sha256": "d280d109ac994c0a54fa25bebf769d6ea1ca319dd8cc13134d7cb39236d600d5"
+},
+{
+"path": "REEFUSDT.parquet",
+"bytes": 300103,
+"sha256": "c2dfe52520d2bf0c51a3650030f2ec85f865c25a6ea4660fe316b280ec8a23a3"
+},
+{
+"path": "RENUSDT.parquet",
+"bytes": 239434,
+"sha256": "576b1511f4658f0d6d556ac6bed01c93edffe4513533e9c3b66fea5b4f954bb1"
+},
+{
+"path": "RESOLVUSDT.parquet",
+"bytes": 149557,
+"sha256": "9e357fed3a5a977f0fec773d75d35224ec6093cf78df04caa726b8246ce317c1"
+},
+{
+"path": "REUSDT.parquet",
+"bytes": 66619,
+"sha256": "f71b1d8ab19d47d8931069b0fbb59cb40bd31118bcf9190493e767642f835518"
+},
+{
+"path": "REZUSDT.parquet",
+"bytes": 115103,
+"sha256": "d6c81c4de5b09b16f94808be8b66934af6544a3c34ac6b1a454bb480a6fef017"
+},
+{
+"path": "RIFUSDT.parquet",
+"bytes": 63079,
+"sha256": "b2255f983039c4bff1dd6396af66e160faa7ca00ee2272ced8220dd4e32a5dfe"
+},
+{
+"path": "RIVERUSDT.parquet",
+"bytes": 254708,
+"sha256": "e664910fed2a920259582a4ad37edb805d8a880ffd403428843a20554d9bcfd7"
+},
+{
+"path": "RLCUSDT.parquet",
+"bytes": 401601,
+"sha256": "bb92adee5ff5916a8ebcca81a6dcf7372c2d22dbd9715d2227b079d4ab7a50c8"
+},
+{
+"path": "RNDRUSDT.parquet",
+"bytes": 586539,
+"sha256": "bae7d8d15c9b90eac90d6bec667fa0f8441ea74b42377fad70295a2e88abd0e8"
+},
+{
+"path": "ROBOUSDT.parquet",
+"bytes": 56704,
+"sha256": "877d18ac7355fc32a5d4c0b7bab6ca9a769098a3cacc98e026aab33a85ac743a"
+},
+{
+"path": "ROSEUSDT.parquet",
+"bytes": 186214,
+"sha256": "c9f79116f29eab9f46dadb122db0939a82ad4583e91738d4839415a9e91d9785"
+},
+{
+"path": "RSRUSDT.parquet",
+"bytes": 278339,
+"sha256": "ee30377b3c068757cd21bad6543e58ccebbd1c6af42f9d93bea044fa08b8d9e6"
+},
+{
+"path": "RUNEUSDT.parquet",
+"bytes": 736888,
+"sha256": "3731317e4cb2a6bcb2b4723c069e6ccc6e0032f3a39bd8be5f9ba23e67812971"
+},
+{
+"path": "RVNUSDT.parquet",
+"bytes": 196723,
+"sha256": "7029df4f8674a88e4cd5c73027ebb5887c16f026f9341cd63c130a8693e00620"
+},
+{
+"path": "SAGAUSDT.parquet",
+"bytes": 373532,
+"sha256": "a58c3aa6b09cd39efb460c3bf5adbf7514879e38eef153f728d29a32087cfbd8"
+},
+{
+"path": "SAHARAUSDT.parquet",
+"bytes": 188591,
+"sha256": "e516d0170d38a87fc304e8ae2e72827d5f6b521c543bd7b23ac532a3a2b2670f"
+},
+{
+"path": "SAMSUNGUSDT.parquet",
+"bytes": 170267,
+"sha256": "132365379e1be03f0bdba64b475d91f5c739d7cdcc8867c65da9d63d9beb4bb4"
+},
+{
+"path": "SANDUSDT.parquet",
+"bytes": 975555,
+"sha256": "b755346606a4fbadd5514d7d5a75b7332ad4c6239118a075f76ffadd90b852a1"
+},
+{
+"path": "SAPIENUSDT.parquet",
+"bytes": 61571,
+"sha256": "f94576200ded4540aa76f686396c5443cf2e767832c0ceb0c2cb05c039b22a33"
+},
+{
+"path": "SEIUSDT.parquet",
+"bytes": 739215,
+"sha256": "7140586a14e65ccc462205f4424d5c7cfc013bd5cbe7566b95b2280e280132b4"
+},
+{
+"path": "SENTUSDT.parquet",
+"bytes": 102554,
+"sha256": "1120ac4d802678f5d78924b5a0cf9f342d794a5469d7305f899b8eae839ae120"
+},
+{
+"path": "SFPUSDT.parquet",
+"bytes": 241676,
+"sha256": "7febc403b4a3832e3f6c36cdc4b760d9f21c677c75af2abcaecede5fc17b1775"
+},
+{
+"path": "SHELLUSDT.parquet",
+"bytes": 63392,
+"sha256": "3c55aefa3c329c5c9b372297e0275970e4b54b27070d624362d3ac4ed667d82b"
+},
+{
+"path": "SIGNUSDT.parquet",
+"bytes": 148218,
+"sha256": "a772f80f3b2c7ad96164d52762db311ab154d0d03976e34806e41a2e520bc896"
+},
+{
+"path": "SIRENUSDT.parquet",
+"bytes": 279958,
+"sha256": "5ac008e5b13c2c5807e764fa309c1f204eaf363295aab7574c0df761d617df3b"
+},
+{
+"path": "SKHYNIXUSDT.parquet",
+"bytes": 185047,
+"sha256": "0b57586071d94ff847f1eed5ff653df42ced82d2f0aa9fce2a0de75d8ba87bf7"
+},
+{
+"path": "SKHYUSDT.parquet",
+"bytes": 126992,
+"sha256": "45371318cd82ff9eccc7c84b84123193ab4c8dae5ed753d6fdc19ff7e741b3d4"
+},
+{
+"path": "SKLUSDT.parquet",
+"bytes": 90580,
+"sha256": "a5d7334f7bd2400208f3f356f83d1b9bde59cd4aadc452f437b13dd4bb9a67e9"
+},
+{
+"path": "SKYAIUSDT.parquet",
+"bytes": 135038,
+"sha256": "2aaad3269efff9c459447ff5aaca0eff4d773ef675982fa75c7d12794c1a1e85"
+},
+{
+"path": "SLXUSDT.parquet",
+"bytes": 88679,
+"sha256": "c0de9f9eb526f30836da144ba130741857404774b572f2d826fa96d888a73fc7"
+},
+{
+"path": "SNDKUSDT.parquet",
+"bytes": 267614,
+"sha256": "992a8ea18feed0880225c39231d231eacea892ef8bc9363f01321cf18fc14490"
+},
+{
+"path": "SNXUSDT.parquet",
+"bytes": 516637,
+"sha256": "5b479cd593d2ef958e8e0010b49bae412a083909ec119c4d2a360a50f39476f8"
+},
+{
+"path": "SNXXUSDT.parquet",
+"bytes": 128863,
+"sha256": "6e3bb0c9221e7498c4faf4c17316f9dc2845ae44ffa352934175532d767c3c1f"
+},
+{
+"path": "SOLUSDT.parquet",
+"bytes": 2578836,
+"sha256": "7ae98cb21101d7fbc4e4abb0b65a998102b40528722665c1a217f0e4562ba495"
+},
+{
+"path": "SOMIUSDT.parquet",
+"bytes": 148025,
+"sha256": "43603582ccaae6a3365f8ab614ed0f08c9c8b3b07f8af05065a52d24d2bf0307"
+},
+{
+"path": "SOONUSDT.parquet",
+"bytes": 184527,
+"sha256": "4fc6ad4a3474e3d388aa7eb4cf269a5022c6787f0b3229edc61e08740c149d6c"
+},
+{
+"path": "SOPHUSDT.parquet",
+"bytes": 56461,
+"sha256": "46a8714a03d2a69c0dc42868b786393d59b7c0ef1c96ff9378957ec24aced343"
+},
+{
+"path": "SOXLUSDT.parquet",
+"bytes": 212560,
+"sha256": "ae967e8776badee48789cb91cd11e6eeff3244e1610564a21b8bace4d14ae8ec"
+},
+{
+"path": "SOXSUSDT.parquet",
+"bytes": 117558,
+"sha256": "f5f8915f307fb84a5cfe4432880c3b6ef16b302a4f99676d0a943fed1d5dee3e"
+},
+{
+"path": "SPACEUSDT.parquet",
+"bytes": 84138,
+"sha256": "08584386a7770c21bcfd504dbf596ff530713c37a194ec5b81e148b179f57897"
+},
+{
+"path": "SPCXUSDT.parquet",
+"bytes": 205066,
+"sha256": "df585ad96843c63eaf4cf4a038419e45b149275d5898eec9a999c67993ed9b7b"
+},
+{
+"path": "SPELLUSDT.parquet",
+"bytes": 192211,
+"sha256": "4e2374f4badacf4e977e18dfd322ff771280dac648b9c561eda40a0190c5872a"
+},
+{
+"path": "SPKUSDT.parquet",
+"bytes": 122603,
+"sha256": "6b541070c0158c7af7a6905b05428a6c82a0e840dc8ee84df199354322a981cb"
+},
+{
+"path": "SPXUSDT.parquet",
+"bytes": 103652,
+"sha256": "e2d9e3a1e9db457401d8d753bbde7c2acdfd9576d8564940f225ff5a9cb9469a"
+},
+{
+"path": "SRMUSDT.parquet",
+"bytes": 112961,
+"sha256": "7b7495579317c6450b350d90d2e10bb4710438f4ce4c1358f609099884b64965"
+},
+{
+"path": "STABLEUSDT.parquet",
+"bytes": 79060,
+"sha256": "d3a6fa38a7678791888109a3f6bac6eaa30753d05b921a8a6153a314f73fbed3"
+},
+{
+"path": "STBLUSDT.parquet",
+"bytes": 61372,
+"sha256": "e0d51b85feeec389314eb136180dde7de7f90b8f7d2809adc802eefd06747c8a"
+},
+{
+"path": "STEEMUSDT.parquet",
+"bytes": 64490,
+"sha256": "0a1835008f5be2367387cca43fe7578f4353a5a811034ea6982927781cf62b63"
+},
+{
+"path": "STGUSDT.parquet",
+"bytes": 249876,
+"sha256": "78fd101055b7a96535020ec4849959ba552fce5d4083f4b98d0b12f8a8670d92"
+},
+{
+"path": "STMXUSDT.parquet",
+"bytes": 321928,
+"sha256": "36cefca0ecb63f6f41546f7cf86b9205f3591f8e79d31b26aa570ef2050a2e00"
+},
+{
+"path": "STORJUSDT.parquet",
+"bytes": 552123,
+"sha256": "9ca57e843232c7aad1aefcc35ecd624550328c190d697a87449f6e40a4b11d07"
+},
+{
+"path": "STOUSDT.parquet",
+"bytes": 106597,
+"sha256": "54cb2d008342b1210f76cd8248470beda8e108b07fbbae310f0015eae8d3b5f7"
+},
+{
+"path": "STRAXUSDT.parquet",
+"bytes": 56997,
+"sha256": "2051e894e3a04e62fa614306dffda5da830854f9c75e3d54778d10095e49ad62"
+},
+{
+"path": "STRKUSDT.parquet",
+"bytes": 158636,
+"sha256": "2c3e6ee63aaca2db0903411a0fa7073d0ac35e94c71b316e87b82e25b5bc270a"
+},
+{
+"path": "STXUSDT.parquet",
+"bytes": 727707,
+"sha256": "cf3739fec4368ab5122a6df1422238827dda64adbb99f0c56083b789224de2c2"
+},
+{
+"path": "SUIUSDT.parquet",
+"bytes": 1929489,
+"sha256": "dba0e15a15af1df9e35252222b3dffdd98a48b9c0c20e38831aeefade81490f0"
+},
+{
+"path": "SUNUSDT.parquet",
+"bytes": 67271,
+"sha256": "b1d976fcb78885bd641ff2b92099f4d622fc8c837b719ce77f9be0bb371e97dc"
+},
+{
+"path": "SUSDT.parquet",
+"bytes": 103800,
+"sha256": "f4e901bf428e6d3bfb71fe33b0256b0e3b383e8eca5b514b20f4a40e13e6874d"
+},
+{
+"path": "SUSHIUSDT.parquet",
+"bytes": 572467,
+"sha256": "8c55a580e5a9d3c06c6e66730b5eeb8eb38004da89ff2ff89928b619164af211"
+},
+{
+"path": "SWARMSUSDT.parquet",
+"bytes": 107725,
+"sha256": "5b6ad51610f18a465718dc2c4cef6770a21a02cfb95cc06d294a7ebdc48415d8"
+},
+{
+"path": "SXPUSDT.parquet",
+"bytes": 338820,
+"sha256": "5dee3fcd6850e2fa533a65b86e3cf6064665365b5bba4d977b91718ee14c2c38"
+},
+{
+"path": "SYNUSDT.parquet",
+"bytes": 111183,
+"sha256": "d3fc722a8ffbbd64a6903f649d11803afaab612468a0a95d16f1f0994c558f64"
+},
+{
+"path": "SYRUPUSDT.parquet",
+"bytes": 60160,
+"sha256": "881e44729e5566c152747c7918eea9757b2c854b93e4bf1991dc182e6b2abee5"
+},
+{
+"path": "TAOUSDT.parquet",
+"bytes": 1055728,
+"sha256": "f20167d00e2fbfce1022585508bcb1e4ffec39cb354b6c3f00d90c4caf239559"
+},
+{
+"path": "TAUSDT.parquet",
+"bytes": 102339,
+"sha256": "b5dfd7db63a4af5ae12dbc9c8b36f8ffabd54ccd261983fdeeb20a0792a2f244"
+},
+{
+"path": "THETAUSDT.parquet",
+"bytes": 412841,
+"sha256": "117a7b9cd33364ebc619ea1475dadfe1c3202a639e73af7d7c035c053fb7e8df"
+},
+{
+"path": "THEUSDT.parquet",
+"bytes": 50817,
+"sha256": "89b88f9594c584173f9a43f7394fdd9906712d0bfa5b509767a631779261f755"
+},
+{
+"path": "TIAUSDT.parquet",
+"bytes": 1038273,
+"sha256": "8d863fa1ce5fc92289c48729e9e151e353fab73be8f3f187ecc0636366ef9a0a"
+},
+{
+"path": "TLMUSDT.parquet",
+"bytes": 282235,
+"sha256": "5099536832cc4c4a68fa0a2dfbc0a4f8f84a10b96dd384a26655c8089203c4e0"
+},
+{
+"path": "TNSRUSDT.parquet",
+"bytes": 173266,
+"sha256": "e2bb8f2d13c1e6010a2274c705c6c86d08df25355130fad908ef83385e3a1a92"
+},
+{
+"path": "TOMOUSDT.parquet",
+"bytes": 333150,
+"sha256": "71084ec23d89a4fa735a7dd3c41809363662ba8a32ad7885c611cf06af372743"
+},
+{
+"path": "TONUSDT.parquet",
+"bytes": 571069,
+"sha256": "b043c7bebe414c2f082cd67f9b8116a39afa251bcf2d8ae97091868e1161e287"
+},
+{
+"path": "TRADOORUSDT.parquet",
+"bytes": 101385,
+"sha256": "9f1fd913bebb0c7d734d237ae2f3fbd277869b824437cd07c5e1aa3e5592ba8a"
+},
+{
+"path": "TRBUSDT.parquet",
+"bytes": 1054266,
+"sha256": "27cb28c3c1ba796cd045f225930e0056135f2abb982db05964ec40152985437d"
+},
+{
+"path": "TREEUSDT.parquet",
+"bytes": 53463,
+"sha256": "aa1b69434c603abf2815119525efacdb2551cb406e69b2abc02e3e332e216be0"
+},
+{
+"path": "TROYUSDT.parquet",
+"bytes": 57321,
+"sha256": "281102ac554ed91247dddaab4dce3ad0a076b0079872984781d4ef80e900e7b0"
+},
+{
+"path": "TRUMPUSDT.parquet",
+"bytes": 959865,
+"sha256": "574e3bd8c9e26a2ecddd5243a6a385e26a39d1bdcd93160420e8a29e3a888096"
+},
+{
+"path": "TRUSTUSDT.parquet",
+"bytes": 73649,
+"sha256": "f2f21b5b47cdcecf499957b33b5fc1d3567bb8ea52276c38aab81134609f0efd"
+},
+{
+"path": "TRUTHUSDT.parquet",
+"bytes": 80242,
+"sha256": "5f66751f3b0818cfe4a174616fbc5dcbc0e70b4faf1fce53d5e20e43085a43e1"
+},
+{
+"path": "TRUUSDT.parquet",
+"bytes": 55101,
+"sha256": "c88454ce51c95133a1108e49727a9baa387f91da1dd1e2178f9c650f0ae4cb54"
+},
+{
+"path": "TRXUSDT.parquet",
+"bytes": 1497133,
+"sha256": "10fae0b34ba0bd8fc8d05a201fa55ac74baa09cb2ea3727639a0c23c8f2ff332"
+},
+{
+"path": "TSLAUSDT.parquet",
+"bytes": 116264,
+"sha256": "6d90686d26c31c8f852104ba2b31f2eb06a11954fa7b66e53a762ac6df3fae32"
+},
+{
+"path": "TSTUSDT.parquet",
+"bytes": 77943,
+"sha256": "1f416061785b62445cc6e32a0a443e1c0e30dccb1d336420a81bfb12b4a2f751"
+},
+{
+"path": "TURBOUSDT.parquet",
+"bytes": 523674,
+"sha256": "d85bf89be38d0dc1ef0fc8705fae022c4c8911c818660c490020852a94ead1a3"
+},
+{
+"path": "TUTUSDT.parquet",
+"bytes": 173774,
+"sha256": "751282c10cd6ad7163044a4b9aedc6eeb53ec59311b73bce2846287b8cd021f2"
+},
+{
+"path": "UAIUSDT.parquet",
+"bytes": 77132,
+"sha256": "bf232704c937005c687a0435ca81bc9a83948f51d3b0adb32dffc66b893b4302"
+},
+{
+"path": "UBUSDT.parquet",
+"bytes": 163304,
+"sha256": "b4b0a846a1b15ba74d5bc2b72bd446cd66c71d25e537f30fe81a476b1c3951b6"
+},
+{
+"path": "UMAUSDT.parquet",
+"bytes": 203093,
+"sha256": "02f3fea221e98db0116fcf5d396fa79481a9dc4f7f7271a0e8ca5672973f6767"
+},
+{
+"path": "UNFIUSDT.parquet",
+"bytes": 432391,
+"sha256": "b71e75d0d34bcd914dc8d72fe9c954c5843a84770275e11caf94dc41c2616b62"
+},
+{
+"path": "UNIUSDT.parquet",
+"bytes": 1938202,
+"sha256": "8d95bc75cf9f4ed4a4ef1cfb6f265d931e77c548004ab131662bdf9506362a26"
+},
+{
+"path": "USELESSUSDT.parquet",
+"bytes": 93478,
+"sha256": "2adf68242129e239a6d78eda3176bd8f23f92c786a9db4951746b70a57debea7"
+},
+{
+"path": "USTCUSDT.parquet",
+"bytes": 55034,
+"sha256": "918261a1c11bd5c48ef3f74d4a938ead4ec887cf8771da07f83eb1b498dba135"
+},
+{
+"path": "USUALUSDT.parquet",
+"bytes": 113485,
+"sha256": "b32200b7ee3bbacb3e57003caf1b704a2e2ece16ec0c9bdd3331aace4fc1dc3f"
+},
+{
+"path": "UXLINKUSDT.parquet",
+"bytes": 200450,
+"sha256": "39605842b8db61a76f7c71343936b1486a9c3db8a4b435086cdc4688192cbdec"
+},
+{
+"path": "VANAUSDT.parquet",
+"bytes": 123130,
+"sha256": "878dab41f3988ad5838f378ab12c2549f9935edcbe1966114fa3bc3e8aebdc6e"
+},
+{
+"path": "VANRYUSDT.parquet",
+"bytes": 93882,
+"sha256": "e5551ee8a7f50aad33201e4b2539fab146635f032ba0fdf3e687342a3a3aa5dc"
+},
+{
+"path": "VELVETUSDT.parquet",
+"bytes": 128852,
+"sha256": "9df8b4d5383b3e7807a57f51b959b5f0ab52813f7ca7c689e286af7584bf99b6"
+},
+{
+"path": "VETUSDT.parquet",
+"bytes": 174531,
+"sha256": "1e96cbb8d6391c02e50a13e77da9392f76c49328ff8d17159da651c4354f29b4"
+},
+{
+"path": "VICUSDT.parquet",
+"bytes": 75516,
+"sha256": "930088cf57674c02a226915451ba6905105b9228e26d24864c6debb0cd133017"
+},
+{
+"path": "VIDTUSDT.parquet",
+"bytes": 104184,
+"sha256": "8b62c877471d3958fd6b7ceae441f6d947befd08fffc593aac7074ef60b88faf"
+},
+{
+"path": "VINEUSDT.parquet",
+"bytes": 250321,
+"sha256": "c518709ea01bb87c9e80358f171b8a6f068fe68c171592fff0ca6bed39644512"
+},
+{
+"path": "VIRTUALUSDT.parquet",
+"bytes": 518031,
+"sha256": "a3c027b43f0a8595b47685bc96ad8904fecdeaf1839efbda5b89360e4da6deee"
+},
+{
+"path": "VOXELUSDT.parquet",
+"bytes": 102365,
+"sha256": "ccca2cbeab0e4a19c0c1de4209ed68dc5b4e51ba599f5102b8773baca2e9ef3e"
+},
+{
+"path": "VVVUSDT.parquet",
+"bytes": 259196,
+"sha256": "24fe5794cdf05a63206290c7e6d72ba3d06e63454de403f4afff963512da695b"
+},
+{
+"path": "WAVESUSDT.parquet",
+"bytes": 604479,
+"sha256": "9f5843a360dc8f91db14f9eeb7c0c75a4b161711a652a65e60519f8d36a075a4"
+},
+{
+"path": "WCTUSDT.parquet",
+"bytes": 119519,
+"sha256": "d8dd0e61c5a119e5b68252f621a071e7bc8c7513b863cb9f749f907e209a59cd"
+},
+{
+"path": "WETUSDT.parquet",
+"bytes": 49513,
+"sha256": "f113b51a76c89378bb645572cc04013340a6cc0293f3b3e77aec370f93f9b884"
+},
+{
+"path": "WIFUSDT.parquet",
+"bytes": 1266060,
+"sha256": "636425cfc79047c45012932e739e8f62d7164004d6035324c58c137fdce47e8b"
+},
+{
+"path": "WLDUSDT.parquet",
+"bytes": 1820961,
+"sha256": "8c51f046f258c70727448e4a949ad6a5c3e931cf533a41b00cab0931c7892259"
+},
+{
+"path": "WLFIUSDT.parquet",
+"bytes": 331729,
+"sha256": "f28d14bde5a5bcadf66c8703e1df1606e063b2d19804fa6ca74575c13e6edcd1"
+},
+{
+"path": "WOOUSDT.parquet",
+"bytes": 96416,
+"sha256": "abeb41bb1005497e79198c6e45805fad0b2e977ccf401489d28baa49423a348e"
+},
+{
+"path": "WUSDT.parquet",
+"bytes": 148373,
+"sha256": "cbc39b2ed16a01387003a6e6e6790a66331bc8df9c6d38e91f8893138555fc3d"
+},
+{
+"path": "XAGUSDT.parquet",
+"bytes": 416715,
+"sha256": "b9521eda9ea9fd4505b1ceda19375036d46e335c13af8860563829079e441edc"
+},
+{
+"path": "XAIUSDT.parquet",
+"bytes": 97864,
+"sha256": "4674b280e402dce5d35edfbc857d16a81837cd53301c01835e3eb5204d99893b"
+},
+{
+"path": "XAUTUSDT.parquet",
+"bytes": 62304,
+"sha256": "690649a92e5de706d407d17a03a6fd064bbb2a769916ffbb6a71441c5e08f5a6"
+},
+{
+"path": "XAUUSDT.parquet",
+"bytes": 432910,
+"sha256": "ba627ecd25bacc22f7ffbadee11998eee0cfbea54a78437c2d508e1050fe2fd6"
+},
+{
+"path": "XLMUSDT.parquet",
+"bytes": 918718,
+"sha256": "4c64296b682b52d026cce7291206313f368388244e3b46aa3e75b2efcc140a3d"
+},
+{
+"path": "XMRUSDT.parquet",
+"bytes": 480901,
+"sha256": "5ba627b2648fa4b3e8da0f9c476835c467d41c23d53d2db18ac85d3144b27f17"
+},
+{
+"path": "XNYUSDT.parquet",
+"bytes": 55691,
+"sha256": "74f7f40486a6395aa0e4ad4c730ec2692afb19898a18705ec587878937df5edb"
+},
+{
+"path": "XPINUSDT.parquet",
+"bytes": 93251,
+"sha256": "6f1c494afc8bd2b16c209a726a0fa1ea0d16ad5bfe20811ed5b76a6215d3c40d"
+},
+{
+"path": "XPLUSDT.parquet",
+"bytes": 350526,
+"sha256": "da7f64f02b6597b02f2beb68edc0e435799b01e983a910647563b96a001872ef"
+},
+{
+"path": "XRPUSDT.parquet",
+"bytes": 2608532,
+"sha256": "775fbfc21afea06dac0e32987ecdeab6f64e232486122935c82202f01eb6ff0d"
+},
+{
+"path": "XTZUSDT.parquet",
+"bytes": 232065,
+"sha256": "63e22d2a2efc4c71ac4337ecbc98793f28a4f8d54c3e14882d78022e6a7adfd6"
+},
+{
+"path": "XVGUSDT.parquet",
+"bytes": 58773,
+"sha256": "b98a3ea4ad94a7021038fb549032b9aa4cb5256e0b163219f539312bf0ef9ac3"
+},
+{
+"path": "YFIUSDT.parquet",
+"bytes": 428872,
+"sha256": "d2f5a2458ab860ac8ed4d51ea84bb0632d8a6529d6d775ea84e41a984431d608"
+},
+{
+"path": "YGGUSDT.parquet",
+"bytes": 216132,
+"sha256": "91d9d03e96aaf7e2f973065c1fe3de45de56b7a54edd9ba70d0b98a68e5d0b84"
+},
+{
+"path": "ZBTUSDT.parquet",
+"bytes": 193565,
+"sha256": "19493abe163ee5c300a5278e31264857775cd91875adb8cc061518d65d2cf8b7"
+},
+{
+"path": "ZECUSDT.parquet",
+"bytes": 868096,
+"sha256": "addaf66f49933db6db8073085619ea57624854147c6845b41dcd0745d9c26dd9"
+},
+{
+"path": "ZENUSDT.parquet",
+"bytes": 381337,
+"sha256": "92a1cbe73c44c83b75510d13971850adc909a3c6849cdb60a14a2650d694ff4f"
+},
+{
+"path": "ZEREBROUSDT.parquet",
+"bytes": 99372,
+"sha256": "f7626143960c7224732c0b8e6e86eff5ec76c1169f03589162be13c7f1f6460a"
+},
+{
+"path": "ZETAUSDT.parquet",
+"bytes": 104124,
+"sha256": "3ded0b39f26c012757988c0fe71b2af10e1b926dfd9b03350c1bbc33e7d1ddc2"
+},
+{
+"path": "ZILUSDT.parquet",
+"bytes": 443918,
+"sha256": "08cb66a5479dee1f6f98d6a5f598c5301b68dd129b4d86f26ff98dca35382322"
+},
+{
+"path": "ZKCUSDT.parquet",
+"bytes": 47667,
+"sha256": "23fc7229f23c5482669ecc93b4479cc34309857c7d48ccf92215508643582ce5"
+},
+{
+"path": "ZKJUSDT.parquet",
+"bytes": 87628,
+"sha256": "c3afb783da918932a1b5a261dbc49ebe836cb38e67c4173919a32b3c1d41b328"
+},
+{
+"path": "ZKPUSDT.parquet",
+"bytes": 75203,
+"sha256": "54ccd8f1b2f27b490fb740e40675a3107c6fce5650dd7d185d6d8cd48065f080"
+},
+{
+"path": "ZKUSDT.parquet",
+"bytes": 174986,
+"sha256": "1bd53cdbc4a6cae1b386cc6ee1d455a6ef647017e720fbb8fe5fbf4696071a4d"
+},
+{
+"path": "ZORAUSDT.parquet",
+"bytes": 65338,
+"sha256": "90903d9109d0d2b0b130a93aec6f6c438090d838340a90aeff3f3509ff3bd15e"
+},
+{
+"path": "ZROUSDT.parquet",
+"bytes": 377289,
+"sha256": "6b50ac79e8a671388e320d367e91e07ef97eaef0726551dbaa6fbc7e1bd88751"
+},
+{
+"path": "ZRXUSDT.parquet",
+"bytes": 385305,
+"sha256": "73f0bd83c1f1eddfdbe7725b19ae4a6ae4c88452c92f23ed6e7da84fd9b29959"
+},
+{
+"path": "manifest.json",
+"bytes": 56858,
+"sha256": "13466e6a4a4fbc35e4f80ba3bb014a5a8f67d9ab621c446518ca5b8276724607"
+}
+]
+}

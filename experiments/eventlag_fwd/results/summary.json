@@ -1,0 +1,32 @@
+{
+ "registry": "R369",
+ "state": "INCONCLUSIVE",
+ "text": "no type has 8 valid events and 6 lag-filtered trades yet",
+ "valid": {
+  "ng": 1
+ },
+ "processed": 1,
+ "invalid": 0,
+ "decisions": [
+  {
+   "event": "ng",
+   "follower": "lighter",
+   "lag_s": 1.0,
+   "lag_filter": true,
+   "valid_events": 1,
+   "ok_quotes": 1,
+   "n": 0,
+   "mean": null,
+   "sd": null,
+   "t": null,
+   "hit": null,
+   "p": null,
+   "net_1x": null,
+   "net_2x": null,
+   "net_3x": null,
+   "fire_rate": 0.0,
+   "decision": true,
+   "p_holm": 1.0
+  }
+ ]
+}

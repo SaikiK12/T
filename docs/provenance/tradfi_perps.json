@@ -1,0 +1,62 @@
+{
+"folder": "data/tradfi_perps",
+"source": "https://data.binance.vision data/futures/um klines 1m (published SHA-256 checked per file); CLUSDT BZUSDT NATGASUSDT XAUUSDT XAGUSDT QQQUSDT SPYUSDT, through 2026-10-27",
+"script": "scripts/fetch_tradfi_perps.py",
+"recorded_utc": "2026-10-29T00:06:26Z",
+"excluded": [
+"raw"
+],
+"files": 8,
+"bytes": 97140412,
+"combined_sha256": "87877e3190c265d780e80624937175373ddd4b6bdca4c9df2cbb3d08489b2b9a",
+"subfolders": {
+"klines_1m": {
+"files": 8,
+"bytes": 97140412
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "klines_1m/BZUSDT.parquet",
+"bytes": 12672264,
+"sha256": "0af7519eb54a6c132c6f2d86a90d9c344c28361584e9695b29c54ccb3ef65ef5"
+},
+{
+"path": "klines_1m/CLUSDT.parquet",
+"bytes": 13426608,
+"sha256": "2f57530cffdd208fa08fe9e4b2cd8973f040be289a6f93a21aeec5efab5dc729"
+},
+{
+"path": "klines_1m/NATGASUSDT.parquet",
+"bytes": 10016939,
+"sha256": "c4216c50967ef57437ae42db6a81966c8b50a27bfaec3fd2de4d8a135b52d947"
+},
+{
+"path": "klines_1m/QQQUSDT.parquet",
+"bytes": 10664802,
+"sha256": "f994683fe9c5b7ad7ff9103e916b30e5bfb66211c9ffd967a9a1695914451d31"
+},
+{
+"path": "klines_1m/SPYUSDT.parquet",
+"bytes": 9975859,
+"sha256": "1a8a6dfe7d4fb808c1bc40fbebb75af41d6017f6ff462d7c2678bac43abf9135"
+},
+{
+"path": "klines_1m/XAGUSDT.parquet",
+"bytes": 18905400,
+"sha256": "3ae64576ee84404436b0dd8c6ff21e7373b1605c854b5e990d8f4ccacb3f900d"
+},
+{
+"path": "klines_1m/XAUUSDT.parquet",
+"bytes": 21477177,
+"sha256": "dceb42700e002af73752cabb070739e02eb1451ca0ef6b890cd0ba163bf4d53a"
+},
+{
+"path": "klines_1m/manifest.json",
+"bytes": 1363,
+"sha256": "d941bffed424c79f2afddce68f9df4086b1fb345830bb35ba46b8a8583137bd0"
+}
+]
+}

@@ -1,0 +1,793 @@
+{
+  "anchor": {
+    "mono_ns": 10000000000,
+    "utc_ns": 1790000000000000000
+  },
+  "cases": [
+    {
+      "asof_mono_ns": 16000000000,
+      "cost_multiple": 1,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "1",
+            "fee": "0.2",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "2",
+            "reference_mid": "100",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 12000000000,
+              "utc_ns": 1790000002000000000
+            },
+            "event_id": "2",
+            "fee": "0.22",
+            "kind": "fill",
+            "occurred_ns": 1790000002000000000,
+            "price": "110",
+            "quantity": "2",
+            "reference_mid": "110",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 13000000000,
+              "utc_ns": 1790000003000000000
+            },
+            "event_id": "3",
+            "fee": "0.12",
+            "kind": "fill",
+            "occurred_ns": 1790000003000000000,
+            "price": "120",
+            "quantity": "-1",
+            "reference_mid": "120",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 14000000000,
+              "utc_ns": 1790000004000000000
+            },
+            "event_id": "4",
+            "fee": "0.45",
+            "kind": "fill",
+            "occurred_ns": 1790000004000000000,
+            "price": "90",
+            "quantity": "-5",
+            "reference_mid": "90",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 15000000000,
+              "utc_ns": 1790000005000000000
+            },
+            "event_id": "5",
+            "fee": "0.16",
+            "kind": "fill",
+            "occurred_ns": 1790000005000000000,
+            "price": "80",
+            "quantity": "2",
+            "reference_mid": "80",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "closed_and_reversed"
+    },
+    {
+      "asof_mono_ns": 16000000000,
+      "cost_multiple": 2,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "1",
+            "fee": "0.4",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "2",
+            "reference_mid": "100",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 12000000000,
+              "utc_ns": 1790000002000000000
+            },
+            "event_id": "2",
+            "fee": "0.44",
+            "kind": "fill",
+            "occurred_ns": 1790000002000000000,
+            "price": "110",
+            "quantity": "2",
+            "reference_mid": "110",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 13000000000,
+              "utc_ns": 1790000003000000000
+            },
+            "event_id": "3",
+            "fee": "0.24",
+            "kind": "fill",
+            "occurred_ns": 1790000003000000000,
+            "price": "120",
+            "quantity": "-1",
+            "reference_mid": "120",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 14000000000,
+              "utc_ns": 1790000004000000000
+            },
+            "event_id": "4",
+            "fee": "0.9",
+            "kind": "fill",
+            "occurred_ns": 1790000004000000000,
+            "price": "90",
+            "quantity": "-5",
+            "reference_mid": "90",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 15000000000,
+              "utc_ns": 1790000005000000000
+            },
+            "event_id": "5",
+            "fee": "0.32",
+            "kind": "fill",
+            "occurred_ns": 1790000005000000000,
+            "price": "80",
+            "quantity": "2",
+            "reference_mid": "80",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "closed_and_reversed_cost2"
+    },
+    {
+      "asof_mono_ns": 16000000000,
+      "cost_multiple": 3,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "1",
+            "fee": "0.6",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "2",
+            "reference_mid": "100",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 12000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 12000000000,
+              "utc_ns": 1790000002000000000
+            },
+            "event_id": "2",
+            "fee": "0.66",
+            "kind": "fill",
+            "occurred_ns": 1790000002000000000,
+            "price": "110",
+            "quantity": "2",
+            "reference_mid": "110",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 13000000000,
+              "utc_ns": 1790000003000000000
+            },
+            "event_id": "3",
+            "fee": "0.36",
+            "kind": "fill",
+            "occurred_ns": 1790000003000000000,
+            "price": "120",
+            "quantity": "-1",
+            "reference_mid": "120",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 14000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 14000000000,
+              "utc_ns": 1790000004000000000
+            },
+            "event_id": "4",
+            "fee": "1.35",
+            "kind": "fill",
+            "occurred_ns": 1790000004000000000,
+            "price": "90",
+            "quantity": "-5",
+            "reference_mid": "90",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 15000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 15000000000,
+              "utc_ns": 1790000005000000000
+            },
+            "event_id": "5",
+            "fee": "0.48",
+            "kind": "fill",
+            "occurred_ns": 1790000005000000000,
+            "price": "80",
+            "quantity": "2",
+            "reference_mid": "80",
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "closed_and_reversed_cost3"
+    },
+    {
+      "asof_mono_ns": 16000000000,
+      "events": [],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "inactive_control"
+    },
+    {
+      "asof_mono_ns": 12000000000,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "unknown",
+            "fee": null,
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "1",
+            "reference_mid": null,
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "missing_fee_and_mark"
+    },
+    {
+      "asof_mono_ns": 12000000000,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "open",
+            "fee": ".2",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "2",
+            "reference_mid": null,
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [
+        {
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "estimated_exit_fee": ".2",
+          "exit_notional": "198",
+          "position_quantity": "2",
+          "source_identity": "invented conservative exit",
+          "source_time_ns": 1790000002000000000,
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "name": "long_bid_mark"
+    },
+    {
+      "asof_mono_ns": 12000000000,
+      "events": [
+        {
+          "asof_mono_ns": 11000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "open",
+            "fee": ".2",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "100",
+            "quantity": "-2",
+            "reference_mid": null,
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [
+        {
+          "asset": "USDT",
+          "clock": {
+            "mono_ns": 12000000000,
+            "utc_ns": 1790000002000000000
+          },
+          "estimated_exit_fee": ".2",
+          "exit_notional": "202",
+          "position_quantity": "-2",
+          "source_identity": "invented conservative exit",
+          "source_time_ns": 1790000002000000000,
+          "symbol": "BTC",
+          "venue": "mexc"
+        }
+      ],
+      "name": "short_ask_mark"
+    },
+    {
+      "asof_mono_ns": 13000000000,
+      "events": [
+        {
+          "asof_mono_ns": 12000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 12000000000,
+              "utc_ns": 1790000002000000000
+            },
+            "event_id": "first",
+            "fee": "0",
+            "kind": "fill",
+            "occurred_ns": 1790000002000000000,
+            "price": "100",
+            "quantity": "1",
+            "reference_mid": null,
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        },
+        {
+          "asof_mono_ns": 13000000000,
+          "event": {
+            "amount": null,
+            "asset": "USDT",
+            "clock": {
+              "mono_ns": 11000000000,
+              "utc_ns": 1790000001000000000
+            },
+            "event_id": "late",
+            "fee": "0",
+            "kind": "fill",
+            "occurred_ns": 1790000001000000000,
+            "price": "80",
+            "quantity": "1",
+            "reference_mid": null,
+            "resolves": null,
+            "simulation_only": true,
+            "source_identity": "invented R318 validation",
+            "symbol": "BTC",
+            "venue": "mexc"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "asset": "USDT",
+          "cash": "5000",
+          "venue": "mexc"
+        },
+        {
+          "asset": "USDC",
+          "cash": "5000",
+          "venue": "lighter"
+        }
+      ],
+      "marks": [],
+      "name": "late_fill_reconciliation"
+    }
+  ],
+  "fee_statement": {
+    "account_scope": "invented-owner-scope",
+    "entitlement_attested": false,
+    "entitlement_id": null,
+    "evidence_level": "synthetic",
+    "fee_asset": "USDT",
+    "instrument": "BTC_USDT",
+    "notional_asset": "USDT",
+    "order_class": "regular_market",
+    "order_role": "taker",
+    "promotional": false,
+    "quota_total_notional": null,
+    "quota_used_notional": null,
+    "rate": "10",
+    "rate_unit": "bp",
+    "revision": 1,
+    "schema_version": 1,
+    "source_identity": "invented fee statement",
+    "source_time_ns": 1790000000000000000,
+    "statement_id": "invented-regular",
+    "valid_from_ns": 1790000000000000000,
+    "valid_until_ns": 1790003600000000000,
+    "venue": "mexc"
+  },
+  "funding": {
+    "contract": {
+      "asset_verified": true,
+      "base_asset": "BTC",
+      "batch_delay_ns": 15000000000,
+      "model": "linear_base",
+      "price_quote_asset": "USDT",
+      "settlement_asset": "USDT",
+      "source_version": "invented dimensional fixture; not attested source",
+      "symbol": "BTC",
+      "venue": "mexc"
+    },
+    "estimated": {
+      "clock": {
+        "mono_ns": 15000000000,
+        "utc_ns": 1790000005000000000
+      },
+      "event_id": "invented-funding-event",
+      "funding_ns": 1790000010000000000,
+      "rate": ".02",
+      "rate_unit": "percent",
+      "stage": "estimated",
+      "symbol": "BTC",
+      "venue": "mexc"
+    },
+    "observed_clock": {
+      "mono_ns": 40000000000,
+      "utc_ns": 1790000030000000000
+    },
+    "opening": {
+      "amount": null,
+      "asset": "USDT",
+      "clock": {
+        "mono_ns": 11000000000,
+        "utc_ns": 1790000001000000000
+      },
+      "event_id": "short-before-funding",
+      "fee": ".3",
+      "kind": "fill",
+      "occurred_ns": 1790000001000000000,
+      "price": "30000",
+      "quantity": "-.01",
+      "reference_mid": null,
+      "resolves": null,
+      "simulation_only": true,
+      "source_identity": "invented R318 validation",
+      "symbol": "BTC",
+      "venue": "mexc"
+    },
+    "settled": {
+      "clock": {
+        "mono_ns": 23000000000,
+        "utc_ns": 1790000013000000000
+      },
+      "event_id": "invented-funding-event",
+      "funding_ns": 1790000010000000000,
+      "rate": ".01",
+      "rate_unit": "percent",
+      "stage": "settled",
+      "symbol": "BTC",
+      "venue": "mexc"
+    },
+    "value": {
+      "clock": {
+        "mono_ns": 23000000000,
+        "utc_ns": 1790000013000000000
+      },
+      "clock_role": "settlement_value",
+      "effective_value_ns": 1790000012000000000,
+      "kind": "fair",
+      "price": "30000",
+      "settlement_event_id": "invented-funding-event",
+      "source_identity": "invented bound notional",
+      "source_time_ns": 1790000012000000000,
+      "symbol": "BTC",
+      "venue": "mexc"
+    }
+  },
+  "operations": {
+    "gap": {
+      "channel": "order_book:1",
+      "order_book": {
+        "asks": [],
+        "begin_nonce": 999,
+        "bids": [],
+        "code": 0,
+        "last_updated_at": 1790000000000000,
+        "nonce": 101,
+        "offset": 11
+      },
+      "type": "update/order_book"
+    },
+    "snapshot": {
+      "channel": "order_book:1",
+      "order_book": {
+        "asks": [
+          {
+            "price": "101",
+            "size": "10"
+          }
+        ],
+        "bids": [
+          {
+            "price": "99",
+            "size": "10"
+          }
+        ],
+        "code": 0,
+        "last_updated_at": 1790000000000000,
+        "nonce": 100,
+        "offset": 10
+      },
+      "type": "subscribed/order_book"
+    }
+  },
+  "schema_version": 1,
+  "scope": "ALL INVENTED engine fixtures; no strategy evidence"
+}

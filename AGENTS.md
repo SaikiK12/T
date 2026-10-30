@@ -3,7 +3,7 @@
 Carried over from the owner's rules in the original project (**S**, see `docs/FOUNDATION.md`). They win over convenience.
 
 ## Hard rules
-1. **Register before measuring.** `PREREG.md` is frozen with `lab.prereg.freeze()` before any statistic. Run scripts call `verify()` first.
+1. **Register before measuring.** `PREREG.md` is frozen with `lab.prereg.freeze()` before any statistic. Run scripts call `verify()` first. New qx lanes use `scripts/qx_run_verified.py` and freeze that wrapper, `scripts/qx_run.py`, the locked build script, every direct spec file, engine inputs, and `docs/provenance/*.json` for every data folder named in the spec. The wrapper verifies each data manifest against all files in that folder before and after the run and allows one writer per lane; historical lanes keep the runner named in their frozen inputs.
 2. **Frozen files are never edited.** A changed idea is a new lane with a new id.
 3. **Journals are append-only**: `registry/rounds.csv`, `ledger.csv`, forward tickets. Use the code that appends; never hand-edit a row.
 4. **One writer per file.** Check the mtime before editing. Never kill a process you did not start.
@@ -13,8 +13,33 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 8. **A null is a result.** Record it with the same care as a hit.
 
 ## Working rules
+- **Owner working mode (2026-10-24):** continue implementation and unfinished lab work autonomously while Claude is absent; respect any fresh writer claim. Group related source intake and engineering in the ongoing consolidation review instead of opening one PR per small pass. The owner explicitly reauthorized recurring quant research on 2026-10-24 after previously pausing it; reuse the existing task rather than creating duplicate loops. Source notes support integrated, validated project work rather than replacing it.
+- **Owner objective (2026-10-24):** seek a reproducible positive net return at executable costs and comparable capital/risk, then genuinely new prospective paper evidence, within our public-data, API, latency, capital and compute constraints. Public institutional practices are research references, not access to private strategies or a profit guarantee. Choose work by the binding economic/data/execution constraint and join the necessary data, implementation and validation into a reviewable result. Do not spend recurring runs merely adding plans, recapping catalogs or repeating passed checks; do not loosen gates, fees or source rules to manufacture a hit. Historical acquisition approval is one accumulated budget, not a fresh allowance on every scheduled run.
+- **Owner research request (2026-10-24):** use bounded, nonoverlapping research agents for deep reading of useful primary articles, legally accessible book sections and official code, with independent checking of material equations/claims. Integrate exact read/unread scopes, versions, assumptions and missing mechanics into the existing intake and queue while advancing implementation or a registered test when feasible. Do not treat source models as demonstrated alpha or claim entire books/corpora read from excerpts. This does not authorize paywall/login bypass, larger market acquisitions or guaranteed permanent execution.
+- **Read by task, not by corpus.** Start with fresh writer claims in issue #7, open PRs, and the timestamp on
+  `docs/PANEL.md`. Then read only the relevant method rows and linked lane evidence. Do not reread every research
+  note or start a new search just because a dated memo calls an idea open.
+- **One authority for each fact.** `registry/methods.csv` is the live queue; `registry/rounds.csv` records round
+  status/trials/verdicts; each lane's frozen PREREG and FINDINGS define exact tested scope. `docs/METHODS_QUEUE.md`
+  is a historical snapshot. PANEL and folder README catalogs are generated views, not proof of process health.
+- **Reuse the existing record.** Put a lane's result in its FINDINGS and source extraction/aliases in the existing
+  `research/intake/` bundle, `registry/methods_aliases.csv` and live queue. Keep audits and dated proposals as evidence, not competing task lists.
+  Before merging or moving a document, check unique facts and inbound references; frozen links and provenance stay valid.
+- In new PREREGs, keep the Registry id alone on its metadata line, as in `templates/lane/PREREG.md`; put claim
+  history and method notes on separate lines. Historical annotations stay frozen; fix their reader when necessary.
+- The root README is the maintained document index. `python -m lab find TEXT` queries tracked metadata without
+  saving another index. Keep source/evidence paths stable because frozen or hashed inputs can depend on them.
+- Before publishing intake/queue changes, run `python -m lab integrity`. Keep historical source status separate
+  from live queue status; catalog access is not full extraction. Source drift and missing mechanics remain open
+  until reconciled; metadata checks do not validate profitability or authorize data access.
 - Every round gets a registry row with its trial count, even when it finds nothing.
 - Read a result against `registry.program_trials()`, not only against its own null.
 - Report cost sensitivity (1x, 2x, 3x) in every FINDINGS.
 - Check ROADMAP/FINDINGS for work another AI already did before starting; build on it.
 - Run `python3 -m unittest discover -s tests -t .` before committing changes to `lab/`.
+- Claude and ChatGPT/Codex talk in one room: issue #7 (`docs/ROOM.md` has the protocol). Read it before starting
+  work, and post calls and results there in its short format.
+
+Operational entry point: `python -m lab`; shared task/lane descriptors are in `lab/operations.py`.
+Use `python -m lab check --suite fast` for feedback and the full suite before a code commit.
+Fast/simulation selection never changes the full validation requirement above.

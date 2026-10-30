@@ -1,0 +1,49 @@
+{
+ "late_threshold_min": 60,
+ "hours": 711,
+ "ontime_days": 11,
+ "strict_ontime_days": 1,
+ "ontime_days_with_late_hours": [
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22",
+  "2026-10-23",
+  "2026-10-24",
+  "2026-10-25",
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28"
+ ],
+ "ontime_hour_lag_min": {
+  "n": 255,
+  "median": 199.88333333333333,
+  "p90": 4157.933333333333,
+  "max": 5681.933333333333
+ },
+ "order": {
+  "flow72_fwd2": {
+   "rows": 58,
+   "problems": {}
+  },
+  "flow72_fwd3": {
+   "rows": 68,
+   "problems": {}
+  },
+  "mexc_fwd": {
+   "rows": 58,
+   "problems": {}
+  },
+  "mexc_fwd_sq": {
+   "rows": 29,
+   "problems": {}
+  },
+  "carry_fwd": {
+   "rows": 58,
+   "problems": {}
+  },
+  "vt_fwd": {
+   "rows": 87,
+   "problems": {}
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "scope": "Finite R314 code/source/static symbol identity before current-data capture; no strategy outcomes or history allowance renewal.",
+  "sha256": {
+    "docs/GATES.md": "e7dd02fa43747598959838677cb413578ce8f7cfee59704bd20e4fdfca15a926",
+    "experiments/depth_quotes_v1/check_depth.py": "4e623d4ef179046985157926e435a2d0708eb0b71284d1edcdae4278d3998602",
+    "experiments/depth_quotes_v1/sources.json": "dc7711ffe9107fd99a3eb616786e355f2c3d7863d0d740f4663e0aca04bb626e",
+    "experiments/stream_quotes_v1/sources.json": "12b950137a33e7a1f3d65a35abff3df8c6b1be83a543c2fb23ac632dcb99b858",
+    "experiments/xfund_lt_v1/symbols.csv": "e5a689a3bce5f16759104ab7dac945be2ad617317099b124b2137ef308fff1b1",
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/data.py": "a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe",
+    "lab/depth_replay.py": "9e5696116b7813b9cd97079338e1f233b955094ae6ce2bd363a2903a0fd8c264",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/lighter_depth_state.py": "453be0de2ee114618b2ea8f94498b50b7f94a2ebf82f003a5cf3383eb9db88cb",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stream_quotes.py": "8402a10afdc15bafca31dc5eddab017a8cfd2e7ba673b5917e77330801a4fcf9",
+    "lab/tape.py": "51f1c98f92ab288f7544e1cf591a96067a69eec27aa28c5cfe93bb3889a0d4d2",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/probe_depth_quotes.py": "fb84bf4d268f84c41dd514930a635bb54c580fb7588e26ce458a21ef1ecfb528",
+    "scripts/probe_stream_quotes.py": "923f8797197a9c40f932465e3fdb2f7aa6084e6933259f7c9480094c7d0b089a",
+    "scripts/record_lighter_book.py": "fb152eaf22ae864080fc3e93b4aecf4eb5e228ea50f1d7730209ff9185f9ca92",
+    "scripts/record_tape.py": "5590c59fc21cf0f26f94471d089ba251b3135da251cc8a438346a32ae2d41641",
+    "tests/test_depth_quotes.py": "2de6e6399c410941933bc75e512ca203677bb80fbe6da6c2dd8fda56420bbfba",
+    "tests/test_lighter_depth_state.py": "631b245e13b06a10c77a2e238f58ef9c37be6b5ea046bd7c2366f2df1a3773d7",
+    "tests/test_stream_quote_probe.py": "c1880a79d756ca1e0d69be2915ebf3f7ac464b6d317a62d9f99e3fdb50d146a8",
+    "tests/test_stream_quotes.py": "7765d38e893325df0282b53376c85758a97a8bd4755111a3f021fefb63f71d8a"
+  },
+  "websockets_version": "16.0"
+}

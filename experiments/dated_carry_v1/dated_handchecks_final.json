@@ -1,0 +1,30 @@
+{
+  "reviewed_code_sha256": "ce0daa930a4f821f9eec13bbd0f10597ac4b67c9b2eee405f285b47ee64e94bb",
+  "scope": "constructed literal adapter cases; no marketdata/network; not wholecollector/bridge",
+  "passed_handchecks": 11,
+  "checks": [
+    "fixed_face_harmonic_hedge_and_three_cost_coin_reserve",
+    "fractional_contracts_use_minimum_as_step_not_contract_size",
+    "source_grid_unit_admission_flags_withheld",
+    "literal_all_three_cost_prices_fees_terminal_cash_passive_capital_hurdles",
+    "zero_fee_control_same_quantity_and_reserve_delta",
+    "top_capacity_failure_retains_fixed_face",
+    "supported_full_top_share_fixed_quantity",
+    "visibility_not_tradability_and_inverse_identity",
+    "per_level_USD_amount_increment",
+    "unknown_future_exit_net_retained",
+    "whole_capital_idle_plus_terminal_identity"
+  ],
+  "crossreceipt_clock_jump_flags": [
+    "cross_receipt_clock_step_over_50ms"
+  ],
+  "known_clock_gap_fixed": true,
+  "new_market_observations": 0,
+  "additional_guard_regressions": [
+    "crossreceipt_clockstep",
+    "commondecision_request_age",
+    "commondecision_publication_age",
+    "negative_version",
+    "opening_after_expiry"
+  ]
+}

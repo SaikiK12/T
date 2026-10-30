@@ -1,0 +1,39 @@
+{
+  "append_only_round_prefix_preserved": true,
+  "base_commit": "651deff61536bb546039c65b5be21f5a35b517ce",
+  "frozen_current_inputs_verified": true,
+  "intake": {
+    "aliases": 407,
+    "errors": 0,
+    "provider_entries": 54,
+    "queue_rows": 328,
+    "source_manifests": 17,
+    "source_methods": 407,
+    "warnings": 0
+  },
+  "new_prospective_strategy_days": 0,
+  "old_alias_bytes_preserved": true,
+  "old_method_objects_preserved": 407,
+  "old_pinned_calculation_inputs_changed": [],
+  "only_queue_rows_supplemented": [
+    "M047",
+    "M134"
+  ],
+  "owner100_frozen_coverage_unchanged": true,
+  "queue_rows_retained": 328,
+  "registry_id": "R324",
+  "required_full_suite": {
+    "passed": true,
+    "skip_entries": 2,
+    "tests": 1350,
+    "timing": "before code freeze; no later lab changes"
+  },
+  "research_integrity": {
+    "errors": 0,
+    "frozen_verified": 137,
+    "legacy_warnings": 13,
+    "local_specs": 138,
+    "planned": 1,
+    "registry_rows": 144
+  }
+}

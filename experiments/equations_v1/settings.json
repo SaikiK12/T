@@ -1,0 +1,13 @@
+{
+  "registry_id": "R310",
+  "labels": ["F0_h1", "F0_h7", "F0_h14", "F1_h1", "F1_h7", "F1_h14", "F0+B_h1", "F0+B_h7", "F0+B_h14", "F1+B_h1", "F1+B_h7", "F1+B_h14"],
+  "trials": 12,
+  "one_way_costs": [0.001, 0.0004],
+  "start": "2025-04-27",
+  "validation_start": "2026-01-01",
+  "end_exclusive": "2026-10-01",
+  "spa_reps": 2000,
+  "paired_reps": 5000,
+  "seed": 20261024,
+  "program_trials_before": 9478758
+}

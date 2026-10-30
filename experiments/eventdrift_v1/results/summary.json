@@ -1,0 +1,47 @@
+{
+ "registry": "R368",
+ "state": "NULL",
+ "text": "no decision cell is significant and above cost",
+ "decisions": [
+  {
+   "event": "wpsr",
+   "symbol": "CLUSDT",
+   "subset": "neg",
+   "h": 5,
+   "entry": "open",
+   "decision": true,
+   "n": 14,
+   "mean": -8.1240831345,
+   "sd": 20.8456258366,
+   "t": -1.4582213031,
+   "mde80": 15.5994379787,
+   "hit": 0.3571428571,
+   "p": 0.9134521484,
+   "p_holm": 1.0,
+   "net_1x": -20.1240831345,
+   "net_2x": -32.1240831345,
+   "net_3x": -44.1240831345
+  },
+  {
+   "event": "ngs",
+   "symbol": "NATGASUSDT",
+   "subset": "all",
+   "h": 5,
+   "entry": "open",
+   "decision": true,
+   "n": 29,
+   "mean": -0.095889745,
+   "sd": 39.3303755139,
+   "t": -0.0131293453,
+   "mde80": 20.4497086687,
+   "hit": 0.6206896552,
+   "p": 0.504402478,
+   "p_holm": 1.0,
+   "net_1x": -12.095889745,
+   "net_2x": -24.095889745,
+   "net_3x": -36.095889745
+  }
+ ],
+ "cells": 26,
+ "cost_unit_bp": 12.0
+}

@@ -1,0 +1,16 @@
+{
+  "dimensional_counterexample": {
+    "correct_fraction_on_entry_notional": "0.02",
+    "entry_price": "100",
+    "executed_base": "2",
+    "net_quote": "4",
+    "source_formula_quote_per_base": "2",
+    "upstream_module_executed": false
+  },
+  "failure_scenarios_checked": 792,
+  "held_direction_rows": 144,
+  "invented_lifecycle_paths": 48,
+  "scope": "arithmetic on reported invented fills and prior reported sweeps only; no independent raw decoder, provider/fill proof or alpha test",
+  "segregated_account_states": 96,
+  "states_match_finite_contract": true
+}

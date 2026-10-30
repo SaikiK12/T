@@ -1,0 +1,34 @@
+{
+ "stages": {
+  "WKND-QQQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "WKND-SPY": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "data_sha256": {
+  "BTCUSDT_klines_1h": "ee2577fa45bdbb6b8582ab86c63958bf53717db638ae2fe4a76d32000f45cb3b",
+  "QQQ": "cdd726a6876d19f8fd9284759f3ac9d17f2c9779be63cb87c26b1928ac33ac29",
+  "SPY": "93da2bdee4e4776002353b112b67097264c36df905e9019b310d06b18e460ced"
+ },
+ "QQQ_btc_missing": 1046,
+ "SPY_btc_missing": 1046,
+ "by_year_1x": {
+  "WKND-QQQ/discovery": {
+   "2020": 8.40141881141836,
+   "2021": -7.210957069830715,
+   "2022": -6.536276047604755,
+   "2023": 0.8961138128827424
+  },
+  "WKND-SPY/discovery": {
+   "2020": 5.261383290588984,
+   "2021": -7.4104426117879125,
+   "2022": -9.417568383808597,
+   "2023": -3.0036068845880304
+  }
+ },
+ "validation_passers": []
+}

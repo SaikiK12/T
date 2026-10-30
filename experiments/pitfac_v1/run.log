@@ -1,0 +1,18 @@
+06:13:49 prereg sha f3f756400347
+06:17:56 14 inputs match the frozen hashes; rebuild is byte-identical
+06:17:59 R282 PARTIAL; survivors ['vol_mcap 24h', 'oi_mcap 24h', 'age 24h', 'wick_30d 24h', 'vol_mcap 72h', 'oi_mcap 72h', 'age 72h', 'wick_30d 72h', 'vol_mcap 168h', 'size 24h', 'age 168h', 'wick_30d 168h', 'oi_mcap 168h', 'n_venues_7d 24h', 'size 72h', 'n_venues_7d 72h', 'size 168h', 'n_venues_7d 168h']; cost policy complete_paid_v1; summary in /home/user/T/experiments/pitfac_v1/results/SUMMARY.md
+06:17:59 registered R282 PARTIAL, 27 trials; program 9,478,385
+                    24h rankIC +0.0531 t +13.82 IR +0.301 LS    +4.3 bp t +0.71 turn 0.01/0.02 net +14.3%/yr p_rc 0.0005
+[    2.5s] wick_30d                       24h rankIC -0.0356 t -13.16 IR -0.287 LS    +6.7 bp t +1.22 turn 0.06/0.03 net +19.9%/yr p_rc 0.0005
+[    2.5s] vol_mcap                       72h rankIC -0.0816 t -12.53 IR -0.401 LS   -11.3 bp t -0.65 turn 0.04/0.03 net - p_rc 0.0005
+[    2.5s] oi_mcap                        72h rankIC -0.0908 t -11.61 IR -0.398 LS   +96.5 bp t +3.01 turn 0.08/0.05 net - p_rc 0.0005
+[    2.5s] age                            72h rankIC +0.0691 t +11.41 IR +0.380 LS    +6.9 bp t +0.38 turn 0.01/0.02 net - p_rc 0.0005
+[    2.5s] wick_30d                       72h rankIC -0.0445 t -10.82 IR -0.348 LS   +16.9 bp t +1.13 turn 0.06/0.03 net - p_rc 0.0005
+[    2.5s] vol_mcap                      168h rankIC -0.1004 t -10.41 IR -0.492 LS   -21.9 bp t -0.55 turn 0.04/0.03 net - p_rc 0.0005
+[    2.5s] size                           24h rankIC +0.0455 t +10.38 IR +0.228 LS    -4.7 bp t -0.78 turn 0.01/0.04 net -20.4%/yr p_rc 0.0005
+[    2.5s] age                           168h rankIC +0.0903 t +10.16 IR +0.489 LS    -4.5 bp t -0.10 turn 0.01/0.02 net - p_rc 0.0005
+[    2.5s] wick_30d                      168h rankIC -0.0588 t  -9.92 IR -0.470 LS   +33.6 bp t +0.94 turn 0.06/0.03 net - p_rc 0.0005
+[    2.5s] oi_mcap                       168h rankIC -0.1081 t  -9.72 IR -0.489 LS  +160.7 bp t +2.26 turn 0.08/0.05 net - p_rc 0.0005
+[    2.5s] n_venues_7d                    24h rankIC +0.0335 t  +9.60 IR +0.215 LS    -0.6 bp t -0.11 turn 0.01/0.03 net -4.2%/yr p_rc 0.0005
+[    2.5s] size                           72h rankIC +0.0556 t  +8.35 IR +0.272 LS    -6.8 bp t -0.43 turn 0.01/0.04 net - p_rc 0.0005
+[    2.5s] survivors (p_rc < alpha): ["vol_mcap 24h", "oi_mcap 24h", "age 24h", "wick_30d 24h", "vol_mcap 72h", "oi_mcap 72h", "age 72h", "wick_30d 72h", "vol_mcap 168h", "size 24h", "age 168h", "wick_30d 168h", "oi_mcap 168h", "n_venues_7d 24h", "size 72h", "n_venues_7d 72h", "size 168h", "n_venues_7d 168h"]

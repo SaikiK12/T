@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "providers": {
+    "gemini-free": {
+      "name": "Gemini Free Tier",
+      "env": ["GEMINI_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai/"
+      },
+      "models": {
+        "gemini-3.8-flash": {
+          "name": "Gemini 3.8 Flash (Free Tier)",
+          "modelID": "gemini-3.8-flash"
+        }
+      }
+    },
+    "cohere-free": {
+      "name": "Cohere Free Tier",
+      "env": ["COHERE_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.cohere.com/compatibility/v1"
+      },
+      "models": {
+        "north-mini-code": {
+          "name": "North Mini Code",
+          "modelID": "north-mini-code-1-0"
+        }
+      }
+    }
+  }
+}

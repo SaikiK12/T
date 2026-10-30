@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "primary_bootstrap_lower_above_zero": false,
+    "selected_is_interior": true,
+    "validation_mean_1x_positive": true,
+    "validation_mean_2x_positive": true,
+    "validation_sharpe_gain_at_least_0_15": false
+  },
+  "interpretation": "exploratory spent-sample screen; cannot confirm an edge",
+  "validation_sharpe_difference": 0.007251482015404376,
+  "verdict": "NULL"
+}

@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "drawdown_no_worse": false,
+    "paired_mean_lower95_positive": false,
+    "positive_2x_mean": true,
+    "sharpe_improvement_at_least_015": false
+  },
+  "discovery_risk_scale": 0.11175514757239029,
+  "evidence": "exploratory, selected surviving-coin spot adaptation",
+  "trials": 2,
+  "validation_bootstrap": [
+    {
+      "block_days": 30,
+      "lower95": -0.0002107196228039797,
+      "mean": 9.567392092275027e-05,
+      "replicates": 5000,
+      "seed": 20261019259,
+      "upper95": 0.0004655589030302682
+    },
+    {
+      "block_days": 10,
+      "lower95": -0.00016586406623648694,
+      "mean": 9.567392092275027e-05,
+      "replicates": 5000,
+      "seed": 20261019239,
+      "upper95": 0.000416767596835039
+    },
+    {
+      "block_days": 60,
+      "lower95": -0.00019477409315504023,
+      "mean": 9.567392092275027e-05,
+      "replicates": 5000,
+      "seed": 20261019289,
+      "upper95": 0.0004304521345203326
+    }
+  ],
+  "verdict": "NULL"
+}

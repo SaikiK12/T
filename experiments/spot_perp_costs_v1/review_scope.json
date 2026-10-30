@@ -1,0 +1,15 @@
+{
+  "conventions": "250 max-mid size budget, not walked cash cap; receipt asof at pair epoch, not report/live freshness; actual eligibility alwaysFalse.",
+  "final_boundary_handcases": 2,
+  "final_core_sha256": "bc682b8dcc1153ed66125e21aa202c5783a59c66d9b393e4c5c41ca911231e95",
+  "initial_constructed_handcases": 8,
+  "initial_core_review_sha256": "e7f2eac8ef47a91d3d1ea181a7500ca5c4a709564cea8615f48af37c3e552dc9",
+  "not_peer_verified": [
+    "new HTTP capture",
+    "full report/account bridge",
+    "final rational audit",
+    "source quantity/lot/clock/owner fee/actual fill/funding authenticity"
+  ],
+  "review_note": "experiments/spot_perp_costs_v1/cost_review.md",
+  "review_scope": "Separate reader found public-state/grid bypass before freeze; root fixed. Full earlier core read +8handcases; final1e-8min/max/cash guard diff read +2minimum-boundary cases. Not every final branch dynamically exercised."
+}

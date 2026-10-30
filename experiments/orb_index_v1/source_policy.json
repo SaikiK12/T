@@ -1,0 +1,26 @@
+{
+  "symbol": "NAS100_USDT",
+  "venue": "MEXC USDT perpetual",
+  "source_mode": "latest-vintage public REST; retrospective conditional model",
+  "fee_rate_per_side": 0.0008,
+  "adverse_slippage_per_side": 0.0002,
+  "cost_scales": [
+    1,
+    2,
+    3
+  ],
+  "initial_capital_each": 2000,
+  "notional_cap": 1000,
+  "fee_source": "https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742",
+  "funding_formula_source": "https://www.mexc.com/learn/article/mexc-futures-funding-rates-how-to-check-calculate-optimize-costs/1",
+  "calendar_source": "https://www.nyse.com/trade/hours-calendars",
+  "data_schema_source": "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+  "limits": [
+    "Current metadata is not historical contract-unit or membership proof.",
+    "API-fee announcement overrides lower current contract metadata; historical account-specific fees not verified.",
+    "Funding uses returned exact events and fair minute opens, not actual settlement marks/payouts; provider history completeness not independently established.",
+    "Bar-open entry and worse-of-stop/next-open exit plus fixed adverse cost are scenarios, not authenticated quotes, fills, margin or liquidation.",
+    "20 NYSE sessions and 28 calendar dates are an exploratory implementation pilot, not calibrated statistical confirmation or prospective days.",
+    "No cross-family selection correction; all old outcomes and prior program selection disclosed."
+  ]
+}

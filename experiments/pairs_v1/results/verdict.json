@@ -1,0 +1,89 @@
+{
+ "stages": {
+  "DIST/TOP20": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "DIST/TOP50": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "EG/TOP20": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "EG/TOP50": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "info": {
+  "DIST/TOP20": {
+   "trades": 1797,
+   "mean_hours": 103.39788536449639,
+   "exit_share": {
+    "week_end": 0.781,
+    "revert": 0.218,
+    "elig": 0.001
+   },
+   "pairs_per_week_mean": 9.956521739130435,
+   "weeks": 230
+  },
+  "DIST/TOP50": {
+   "trades": 2125,
+   "mean_hours": 88.8324705882353,
+   "exit_share": {
+    "week_end": 0.668,
+    "revert": 0.274,
+    "elig": 0.057
+   },
+   "pairs_per_week_mean": 9.956521739130435,
+   "weeks": 230
+  },
+  "EG/TOP20": {
+   "trades": 1529,
+   "mean_hours": 86.00784826684107,
+   "exit_share": {
+    "week_end": 0.699,
+    "revert": 0.296,
+    "elig": 0.005
+   },
+   "pairs_per_week_mean": 7.456521739130435,
+   "weeks": 230
+  },
+  "EG/TOP50": {
+   "trades": 2391,
+   "mean_hours": 77.23337515683815,
+   "exit_share": {
+    "week_end": 0.585,
+    "revert": 0.346,
+    "elig": 0.069
+   },
+   "pairs_per_week_mean": 9.956521739130435,
+   "weeks": 230
+  }
+ },
+ "by_year_1x": {
+  "DIST/TOP20/discovery": {
+   "2021": -1.0862198307540092,
+   "2022": -4.107555569180479,
+   "2023": -2.6505635234988314
+  },
+  "DIST/TOP50/discovery": {
+   "2021": 6.887690594910415,
+   "2022": -7.136576415213117,
+   "2023": 2.415206643063793
+  },
+  "EG/TOP20/discovery": {
+   "2021": -2.2211357604874915,
+   "2022": -2.6029854519745657,
+   "2023": 0.4753688209243146
+  },
+  "EG/TOP50/discovery": {
+   "2021": -5.546104737760891,
+   "2022": -3.5968311106076345,
+   "2023": -1.6778843705652748
+  }
+ },
+ "validation_passers": []
+}

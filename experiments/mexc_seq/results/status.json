@@ -1,0 +1,39 @@
+{
+ "A": {
+  "ontime_days": 10,
+  "total": -0.010093998529019495,
+  "total_2x": -0.01446208019519599,
+  "total_3x": -0.01883016186137251,
+  "monitor_t": null,
+  "next_look": "look 1 at 90 days",
+  "closed": false
+ },
+ "X2": {
+  "ontime_days": 10,
+  "total": 0.006809936038769898,
+  "total_2x": 0.002068695887409198,
+  "total_3x": -0.0026725442639514907,
+  "monitor_t": null,
+  "next_look": "look 1 at 90 days",
+  "closed": false
+ },
+ "B": {
+  "ontime_days": 10,
+  "total": 0.0179111209415338,
+  "total_2x": 0.0174305726339777,
+  "total_3x": 0.0169500243264216,
+  "monitor_t": null,
+  "next_look": "look 1 at 90 days",
+  "closed": false
+ },
+ "X2_minus_A": {
+  "days": 10,
+  "mean_bp_day": 16.90393456778939,
+  "t": null
+ },
+ "B_minus_A": {
+  "days": 10,
+  "mean_bp_day": 28.005119470553304,
+  "t": null
+ }
+}

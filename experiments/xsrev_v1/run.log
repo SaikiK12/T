@@ -1,0 +1,44 @@
+07:04:27 prereg sha 78d5649fdeb9
+07:04:46 r1d/LIQ discovery: -17.5 bp/day t -3.73 stop
+07:04:59 r7d/LIQ discovery: -6.2 bp/day t -1.57 stop
+07:05:09 r1d/ILLIQ discovery: -13.6 bp/day t -3.30 stop
+07:05:21 r7d/ILLIQ discovery: -0.0 bp/day t -0.01 stop
+07:05:22 
+     book    window  cmult     K  gross_bp_day  cost_bp_day  days  total  mean_bp_day  t_nw10  sharpe  max_dd  trimmed_bp_day
+  r1d/LIQ discovery    1.0 8.931        -8.859        8.616  1095 -1.914      -17.476  -3.730  -1.711   1.983         -14.510
+  r1d/LIQ discovery    2.0 8.931        -8.859       17.233  1095 -2.857      -26.092  -5.594  -2.561   2.920             NaN
+  r1d/LIQ discovery    3.0 8.931        -8.859       25.849  1095 -3.801      -34.709  -7.473  -3.413   3.858             NaN
+  r7d/LIQ discovery    1.0 8.907        -4.919        1.299  1095 -0.681       -6.218  -1.569  -0.748   0.763          -5.485
+  r7d/LIQ discovery    2.0 8.907        -4.919        2.598  1095 -0.823       -7.517  -1.900  -0.904   0.897             NaN
+  r7d/LIQ discovery    3.0 8.907        -4.919        3.896  1095 -0.965       -8.815  -2.231  -1.061   1.031             NaN
+r1d/ILLIQ discovery    1.0 8.931        -1.550       12.096  1095 -1.494      -13.647  -3.301  -1.534   1.647         -11.836
+r1d/ILLIQ discovery    2.0 8.931        -1.550       24.193  1095 -2.819      -25.743  -6.261  -2.902   2.894             NaN
+r1d/ILLIQ discovery    3.0 8.931        -1.550       36.289  1095 -4.143      -37.840  -9.251  -4.278   4.158             NaN
+r7d/ILLIQ discovery    1.0 8.866         1.992        2.042  1095 -0.005       -0.050  -0.013  -0.007   0.478           1.191
+r7d/ILLIQ discovery    2.0 8.866         1.992        4.084  1095 -0.229       -2.092  -0.530  -0.290   0.493             NaN
+r7d/ILLIQ discovery    3.0 8.866         1.992        6.127  1095 -0.453       -4.134  -1.049  -0.574   0.557             NaN
+07:05:22 {
+ "stages": {
+  "r1d/LIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r7d/LIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r1d/ILLIQ": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "r7d/ILLIQ": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "validation_passers": [],
+ "illiq_minus_liq_discovery_bp_day": {
+  "r1d": 3.828794834645528,
+  "r7d": 6.167886700193383
+ }
+}

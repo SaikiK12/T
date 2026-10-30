@@ -1,0 +1,58 @@
+{
+ "registry": "R371",
+ "updated": "2026-10-30T15:44:00Z",
+ "state": "running",
+ "decision": "pending (1 of 500 scored)",
+ "scored": 1,
+ "tickets": 2,
+ "open": 1,
+ "mean_net": -0.145825,
+ "mean_net_2x": -0.147094,
+ "t_nw": null,
+ "mean_wo_best10": null,
+ "hit": 0.0,
+ "go_real": {
+  "pass": false,
+  "n": 1,
+  "mean": -0.145825,
+  "hit": 0.0,
+  "worst": -0.145825,
+  "n_clusters": 1,
+  "checks": {
+   "finite_returns": true,
+   "enough_scored": false,
+   "mean_positive": false,
+   "hit_rate": false,
+   "no_tail_event": true
+  }
+ },
+ "book_b": {
+  "n": 1,
+  "mean": -0.077101,
+  "t": null,
+  "mean_wo_best": null,
+  "hit": 0.0,
+  "best_share": null,
+  "mean_2x": -0.080501,
+  "verdict": "pending (1 of 500 scored)",
+  "mean_net_3x": -0.083901,
+  "mean_gross": -0.073701,
+  "mean_cost": 0.0034
+ },
+ "book_m": {
+  "n": 1,
+  "mean": -0.145825,
+  "t": null,
+  "mean_wo_best": null,
+  "hit": 0.0,
+  "best_share": null,
+  "mean_2x": -0.147094,
+  "verdict": "pending (1 of 500 scored)",
+  "mean_net_3x": -0.148362,
+  "mean_gross": -0.144557,
+  "mean_cost": 0.001268
+ },
+ "missed": 0,
+ "no_book": 0,
+ "unpriced_m": 0
+}
