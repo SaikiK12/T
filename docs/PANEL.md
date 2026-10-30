@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-30 03:23 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-10-30 04:23 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -55,7 +55,7 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 | R371 usopen_fwd | US-open leaders: long 3 strongest, short 3 weakest top-50 perps since 00:00 UTC (10:00 New York to 24:00 UTC) | 1 / 500 scored days | -14.6% | -14.7% / - | pending (1 of 500 scored) | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
-Processing lag of on-time hours: 243 hours, median 228.8 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
+Processing lag of on-time hours: 244 hours, median 228.28333333333336 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
 
 ### Execution receipts
 
@@ -63,46 +63,46 @@ Process state, declared data checks and statistical eligibility are separate.
 
 | task_id | category | state | data_state | run_id |
 |---|---|---|---|---|
-| R200 | Prospective paper | SUCCESS | COMPLETE | 20261030T031500_19755 |
-| REC_TICKER | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_FUNDING | Market data collection | SUCCESS | COMPLETE | 20261030T031500_19755 |
-| REC_DERIBIT | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_LTRADES | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_OPTEXP | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_CPERPS | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_LIGHTER | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_DEX | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_WALLETS | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_NOTICES | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_UNLOCKS | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_TAPE | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_HFT | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_RAW | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| REC_NEWS | Market data collection | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R268 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R270 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R272 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R214 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R215 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R224 | Execution measurement | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R218 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R220 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R221 | Evidence decisions | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R225 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R266 | Prospective paper | SUCCESS | COMPLETE | 20261030T031500_19755 |
-| R278 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R279 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R294 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R355 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R364 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R369 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R371 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| R285 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| LAG | Data integrity | SUCCESS | UNVERIFIED | 20261030T031500_19755 |
-| PANEL | Reporting | RUNNING | UNVERIFIED | 20261030T031500_19755 |
-| CATALOG | Reporting | PENDING | UNVERIFIED | 20261030T031500_19755 |
-| DASH | Reporting | PENDING | UNVERIFIED | 20261030T031500_19755 |
-| REC_DIGEST | Data integrity | PENDING | UNVERIFIED | 20261030T031500_19755 |
+| R200 | Prospective paper | SUCCESS | COMPLETE | 20261030T041500_29768 |
+| REC_TICKER | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_FUNDING | Market data collection | SUCCESS | COMPLETE | 20261030T041500_29768 |
+| REC_DERIBIT | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_LTRADES | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_OPTEXP | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_CPERPS | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_LIGHTER | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_DEX | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_WALLETS | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_NOTICES | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_UNLOCKS | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_TAPE | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_HFT | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_RAW | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| REC_NEWS | Market data collection | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R268 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R270 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R272 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R214 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R215 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R224 | Execution measurement | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R218 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R220 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R221 | Evidence decisions | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R225 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R266 | Prospective paper | SUCCESS | COMPLETE | 20261030T041500_29768 |
+| R278 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R279 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R294 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R355 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R364 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R369 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R371 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| R285 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| LAG | Data integrity | SUCCESS | UNVERIFIED | 20261030T041500_29768 |
+| PANEL | Reporting | RUNNING | UNVERIFIED | 20261030T041500_29768 |
+| CATALOG | Reporting | PENDING | UNVERIFIED | 20261030T041500_29768 |
+| DASH | Reporting | PENDING | UNVERIFIED | 20261030T041500_29768 |
+| REC_DIGEST | Data integrity | PENDING | UNVERIFIED | 20261030T041500_29768 |
 
 ## 3. Open methods
 
