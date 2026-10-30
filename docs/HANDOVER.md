@@ -55,9 +55,12 @@ Read these limits before trusting a re-download:
   is new) and `restore` never overwrites a different file.
   - `sh scripts/archive_recordings.sh` packs what is new into the `data-archive` checkout (default `../T-data-archive`),
     commits and pushes it. **Run it once a day**: git keeps every chunk, so many small runs only add clutter. It stops adding
-    chunks at 900 MB (`ARCHIVE_BUDGET_MB`); 190 MB came in the first 9 days and the 100 ms and raw feeds were added only
-    in the last two, so expect 25-40 MB a day (not measured over a longer span): a few weeks. Then the owner has to choose a
-    bigger home (a release asset, a private repository or a disk).
+    chunks at 900 MB (`ARCHIVE_BUDGET_MB`). The first estimate here (25-40 MB a day) was wrong: 190 MB came in the first
+    9 days, but once the 100 ms and raw feeds were on, the run of 2026-10-30 00:43 UTC added 8 chunks (about 370 MB)
+    for one day, and the branch reached its cap (854 MB of 900) with 695 files (82 MB, mostly `tape/_parts` and the
+    newest commodity-perp parts) left out and listed as "NOT ARCHIVED (over budget)". At about 400 MB a day, nothing
+    more fits from now on. The owner has to choose a bigger home (a larger cap on this branch, a release asset, a
+    private repository or a disk); until then the newest recordings exist only on this machine.
   - **`data/news` is not on the branch**: it is third-party headline text and the repository is public. It stays on the
     machine (2 MB); `pack` without `--public` includes it for a private archive. Lighter and Hyperliquid captures carry
     public account and wallet ids, as the exchanges publish them.
