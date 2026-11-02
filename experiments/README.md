@@ -33,8 +33,11 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (147)
+## Other registered rounds (done, registered or planned) (151)
 
+- **[fundvol_v1](fundvol_v1/)** R382, DONE NULL, 6 trials. M455 sizing half: trailing-volatility scaling or gating of R277 gate+kucoin carry book (saved daily net), chosen on first half, tested on second at 2x cost ([PREREG](fundvol_v1/PREREG.md), [FINDINGS](fundvol_v1/FINDINGS.md))
+- **[m090_content_v2](m090_content_v2/)** R374, REGISTERED PENDING, 0 trials. M090 one bounded signed-content capture and head-pinned offline replay; UTC/forecast scoring disabled ([PREREG](m090_content_v2/PREREG.md))
+- **[m090_publication_v1](m090_publication_v1/)** R373, ABANDONED PARTIAL, 0 trials. M090 publication engineering interrupted before commit/push/source capture ([PREREG](m090_publication_v1/PREREG.md), [FINDINGS](m090_publication_v1/FINDINGS.md))
 - **[orb_index_v1](orb_index_v1/)** R372, REGISTERED PENDING, 12 trials. M206 NAS100 common-parent OR30 with VWAP and volume: 4 fixed accounts x 1x/2x/3x conditional funded bar costs ([PREREG](orb_index_v1/PREREG.md), [FINDINGS](orb_index_v1/FINDINGS.md))
 - **[usopen_fwd](usopen_fwd/)** R371, REGISTERED PENDING, 2 trials. M318/C17 forward paper lane: at 10:00 New York on each NYSE day from 2026-10-29, long the 3 strongest and short the 3 weakest top-50 Binance perps by move since 00:00 UTC, flat at 24:00 UTC; book M among MEXC-listed coins at one-minute opens and measured web cost decides, book B repeats R300 at API cost ([PREREG](usopen_fwd/PREREG.md), [journal](usopen_fwd/journal/))
 - **[cmelead_v1](cmelead_v1/)** R370, DONE PENDING, 16 trials. M444/M443 on tick trades: at each of 60 EIA releases 2026-04..10, when CME's front-month crude or gas future has traded 8 bp (crude) or 20 bp (gas) from its pre-release price, has Binance's CLUSDT / NATGASUSDT covered less than half of it 1 s later, and does a taker print entry closed at T+60 s earn more than 2 cost units of 10 bp (Databento CME trades vs Binance aggTrades) ([PREREG](cmelead_v1/PREREG.md), [FINDINGS](cmelead_v1/FINDINGS.md))
@@ -54,6 +57,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[levels_mexc0_v1](levels_mexc0_v1/)** R336, DONE PARTIAL, 6 trials. R333's frozen level model (M412) re-priced on MEXC's zero-fee perps: 55 coins 0/0 on all five contract snapshots, each charged its median quoted MEXC half-spread (floor 1 bp); constant-size day-sum primary, manual 7-a-day book, stricter P1 trades, THROUGH/AWAY controls ([PREREG](levels_mexc0_v1/PREREG.md), [FINDINGS](levels_mexc0_v1/FINDINGS.md))
 - **[locked_carry_v1](locked_carry_v1/)** R335, DONE DATA_PASS, 6 trials. The guarantee engine: coin-margined cash-and-carry locked to expiry on Binance BTC/ETH quarterlies vs the 3-month T-bill (M244), hurdles 0/3/6%/yr, measurement ([PREREG](locked_carry_v1/PREREG.md), [FINDINGS](locked_carry_v1/FINDINGS.md))
 - **[level_probability_v2](level_probability_v2/)** R333, DONE NULL, 11 trials. The owner's break-or-rebound model (M412) at scale: R330's levels/barriers on the point-in-time Binance top 100, every hour 2021-01..2026-09, quarterly-refit gradient boosting, V0-V4 + controls ([PREREG](level_probability_v2/PREREG.md), [FINDINGS](level_probability_v2/FINDINGS.md))
+- **[mlrank_v3](mlrank_v3/)** R332, DONE NULL, 7 trials. R304's ML rankers (ridge/IC/GBM x hold 1/7 d, 24 clean features, top 150 Binance perps, API costs) re-run on a panel with complete Binance metrics, plus the presence book on R304's panel ([PREREG](mlrank_v3/PREREG.md), [FINDINGS](mlrank_v3/FINDINGS.md))
 - **[level_probability_v1](level_probability_v1/)** R330, DONE PARTIAL, 6 trials. Causal close-level probability, payoff and shared-capital cost diagnostic ([PREREG](level_probability_v1/PREREG.md), [FINDINGS](level_probability_v1/FINDINGS.md))
 - **[dated_carry_v2](dated_carry_v2/)** R328, DONE PARTIAL, 0 trials. Same-data exact-ratio dated carry: small conditional margin, actual net unknown ([PREREG](dated_carry_v2/PREREG.md), [FINDINGS](dated_carry_v2/FINDINGS.md))
 - **[dated_carry_v1](dated_carry_v1/)** R327, DONE PARTIAL, 0 trials. Inverse dated-carry source/account component; terminal driver ratio-format failure ([PREREG](dated_carry_v1/PREREG.md), [FINDINGS](dated_carry_v1/FINDINGS.md))
@@ -202,10 +206,9 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (2)
+## Unregistered folders (1)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.
-- **[mlrank_v3](mlrank_v3/)** No registry row; scope unclassified.
