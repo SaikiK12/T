@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-10-30T00:49:16.698617+00:00",
+ "updated": "2026-11-02T18:20:36.919644+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.176
+  "lighter": 1.102
  },
  "data": {
   "mexc": {
@@ -41,12 +41,6 @@
     "spread_in": 0.0989
    },
    {
-    "coin": "VVVUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0777
-   },
-   {
     "coin": "WLDUSDT",
     "long": "mexc",
     "short": "lighter",
@@ -57,12 +51,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0603
-   },
-   {
-    "coin": "NEARUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1932
    },
    {
     "coin": "1000BONKUSDT",
@@ -95,22 +83,10 @@
     "spread_in": 0.1676
    },
    {
-    "coin": "TRXUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1322
-   },
-   {
     "coin": "STRKUSDT",
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1214
-   },
-   {
-    "coin": "PONSUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.115
    },
    {
     "coin": "XLMUSDT",
@@ -147,18 +123,42 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.0835
+   },
+   {
+    "coin": "EIGENUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1027
+   },
+   {
+    "coin": "ADAUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0842
+   },
+   {
+    "coin": "DASHUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0775
+   },
+   {
+    "coin": "MEGAUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0843
    }
   ],
-  "scored_days": 7,
-  "late_days": 5,
-  "total": -3.6484e-05,
-  "total_2x": -0.000806484,
-  "total_3x": -0.0015764839999999997,
-  "total_close": 0.0005460355999999999,
-  "nw_t": -0.06602350730444002,
-  "max_drawdown": -0.0012972311,
+  "scored_days": 10,
+  "late_days": 7,
+  "total": -0.00014535880000000022,
+  "total_2x": -0.0010803588000000003,
+  "total_3x": -0.0020153588,
+  "total_close": 0.00043716079999999997,
+  "nw_t": -0.21815743190755696,
+  "max_drawdown": -0.0013486098,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-10-30"
+ "last_day": "2026-11-02"
 }
