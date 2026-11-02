@@ -59,8 +59,9 @@ Read these limits before trusting a re-download:
     9 days, but once the 100 ms and raw feeds were on, the run of 2026-10-30 00:43 UTC added 8 chunks (about 370 MB)
     for one day, and the branch reached its cap (854 MB of 900) with 695 files (82 MB, mostly `tape/_parts` and the
     newest commodity-perp parts) left out and listed as "NOT ARCHIVED (over budget)". At about 400 MB a day, nothing
-    more fits from now on. The owner has to choose a bigger home (a larger cap on this branch, a release asset, a
-    private repository or a disk); until then the newest recordings exist only on this machine.
+    more fit. On 2026-11-02 (`ARCHIVE_BUDGET_MB=1800`) 15 more chunks went in, leaving 1,345 of 1,800 MB, one file over 95 MB
+    (`rawtape/kbook/PF_XBTUSD/2026-10-29.parquet`) left out, and room for about one more day. The owner has to choose a bigger home (a
+    release asset, a private repository or a disk); until then newer recordings exist only on this machine.
   - **`data/news` is not on the branch**: it is third-party headline text and the repository is public. It stays on the
     machine (2 MB); `pack` without `--public` includes it for a private archive. Lighter and Hyperliquid captures carry
     public account and wallet ids, as the exchanges publish them.

@@ -64,8 +64,10 @@ The paste is a literature scan. None of these is evidence: each is a source's cl
 
 ## Decisions that are the owner's
 - **Where the recordings live.** The `data-archive` branch hit its 900 MB cap on 2026-10-30. On 2026-11-02 it was packed
-  again with the cap raised to 1,800 MB, which covers about two more days at the measured 400 MB a day. After that a
-  bigger home is needed (a private repository, a release asset, or a disk), or the raw tape should be stopped.
+  again with the cap raised to 1,800 MB: 9,736 files in 15 new chunks, so everything recorded up to then is on the branch
+  except one 95 MB+ raw-tape file (`data/rawtape/kbook/PF_XBTUSD/2026-10-29.parquet`, too large for git). It now holds
+  1,345 MB of 1,800, which is about one more day at the measured 400 MB a day. After that a bigger home is needed (a
+  private repository, a release asset, or a disk), or the raw tape should be stopped.
 - **Keep the machine up.** Forward evidence needs a continuous, restartable machine; see "Operational risk" above.
 - **Rotate the Databento key** pasted into a chat on 2026-10-29 (`docs/HANDOVER.md` section 6).
 - **Whether to keep going after 2026-11-17.** The reads on 11-03, 11-05, 11-17 and the first 40 settlement hops will say
