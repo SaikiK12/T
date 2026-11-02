@@ -73,3 +73,5 @@ data/logs,SCRATCH,none,,Run logs and lock files.
 data/.lighter_api.lock,SCRATCH,none,,Lock file of the Lighter API client.
 data/daily_v2,DERIVED,python scripts/fetch_metrics_full.py; python scripts/build_daily_v2.py,,R332 mlrank_v3's panel: the daily panel rebuilt with complete Binance metrics (data/metrics_full). Manifest sha256 09ff2747 in experiments/mlrank_v3/PREREG.md.
 data/daily_v2_src,SCRATCH,python scripts/build_daily_v2.py,,Shadow root of symlinks made by build_daily_v2.py; rebuilt on each run.
+data/events/listings,RECORDED,none: scripts/record_listings.py,,"Contract-list diffs on 8 perp venues (mexc, lighter, hyperliquid, kucoin, gate, dydx, okx, bitget) since 2026-11-02: new, gone, back and per-field changes with poll time and the venue listing-time field."
+data/events/tradfi_calendar,RECORDED,none: scripts/record_tradfi_calendar.py,,"Nasdaq halts and earnings calendar, Fed calendar and Treasury auctions with poll time, since 2026-11-02. SEC EDGAR is not used (needs an owner decision on the contact)."
