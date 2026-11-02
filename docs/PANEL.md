@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-10-30 15:23 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-11-02 18:20 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,7 +21,7 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 48 |
+| Ideas in the queue, untested | 52 |
 | Ideas partly tested | 49 |
 | Ideas blocked (data, download, compute) | 105 |
 | Rounds in the registry | 171 (NULL 93, PARTIAL 34, PENDING 30, CONFIRMED 8, DATA_PASS 6) |
@@ -37,25 +37,25 @@ Replay, late and on-time observations remain distinct. Lane-native decisions do 
 
 | lane | scope | observations | on-time 1x | 2x / 3x | decided by | gate |
 |---|---|---|---|---|---|---|
-| R215 mexc_fwd | flow books A and B, one bar late | 10 / 90 on-time days | +0.4% | +0.1% / -0.1% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
-| R218 mexc_fwd_sq | flow book X2 (k squared) | 10 / 90 on-time days | +0.7% | +0.2% / -0.3% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
-| R220 carry_fwd | funding carry (R191 rule) | 10 / 90 on-time days | -0.1% | -0.1% / -0.1% | go_real at 90 on-time days | UNASSESSED |
-| R200 flow72_fwd2 | flow books A and B | 11 / 90 on-time days | -4.8% | -5.2% / -5.6% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
-| R214 flow72_fwd3 | A and B one bar late (delay check) | 10 / 90 on-time days | -5.0% | -5.3% / -5.6% | same days as R200 | UNASSESSED |
-| R225 vt_fwd | volatility target on A, B, X2 | 10 / 365 on-time days | +0.3% | +0.1% / -0.2% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
+| R215 mexc_fwd | flow books A and B, one bar late | 13 / 90 on-time days | +2.1% | +1.8% / +1.5% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R218 mexc_fwd_sq | flow book X2 (k squared) | 13 / 90 on-time days | +5.5% | +4.9% / +4.3% | R221: day 90 futility only; efficacy at 182/365 days; owner approval remains separate | UNASSESSED |
+| R220 carry_fwd | funding carry (R191 rule) | 13 / 90 on-time days | -0.1% | -0.2% / -0.2% | go_real at 90 on-time days | UNASSESSED |
+| R200 flow72_fwd2 | flow books A and B | 14 / 90 on-time days | -2.8% | -3.4% / -3.9% | go_real at 90 scored days, NW t >= 2 | UNASSESSED |
+| R214 flow72_fwd3 | A and B one bar late (delay check) | 13 / 90 on-time days | -3.1% | -3.5% / -4.0% | same days as R200 | UNASSESSED |
+| R225 vt_fwd | volatility target on A, B, X2 | 13 / 365 on-time days | +2.0% | +1.7% / +1.4% | risk-only decision at 365 on-time days; reported beside R215/R218 | UNASSESSED |
 | R266 unlocks_fwd | unlock short, D-7 to unlock | 1 / 120 scored tickets | -1.5% | -1.7% / - | pending (1 of 120 scored) | UNASSESSED |
 | R268 delist_fwd | spot delisting-notice short +1 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R270 montag_fwd | Monitoring Tag short +24 h | 0 / 12 scored notices | - | - / - | pending (0 of 12 scored notices) | UNASSESSED |
 | R272 announce_fwd | funding-frequency long 1 h; pre-listing short 168 h | 0 / 12 scored notices per book (least observed book) | - | - / - | FF pending (0 of 12 scored notices); PL pending (0 of 12 scored notices) | UNASSESSED |
-| R278 xfund_fwd | cross-venue funding carry, books A, B, C | 3 / 90 on-time days | -0.0% | -0.1% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
-| R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 3 / 90 on-time days | +0.0% | -0.0% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
-| R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 2 / 90 on-time days | -0.0% | -0.0% / -0.0% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R278 xfund_fwd | cross-venue funding carry, books A, B, C | 4 / 90 on-time days | -0.0% | -0.1% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R279 xfund_kc_fwd | cross-venue funding carry on KuCoin, books A, B | 4 / 90 on-time days | +0.1% | -0.0% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
+| R294 xfund_lt_fwd | cross-venue funding carry on Lighter, book A | 3 / 90 on-time days | -0.0% | -0.0% / -0.1% | NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3% | UNASSESSED |
 | R355 settlehop_fwd | settlement hop on the displayed funding rate (MEXC decided, Gate reported) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2028-03-01 | UNASSESSED |
 | R364 settlelit_fwd | settlement scalp on Lighter against Binance's deep lump (T - 10 s to T + 60 s) | 0 / 80 scored hops | - | - / - | 0 scored on-time primary hops; interim look at 40, final at 80 or 2027-10-28 | UNASSESSED |
-| R371 usopen_fwd | US-open leaders: long 3 strongest, short 3 weakest top-50 perps since 00:00 UTC (10:00 New York to 24:00 UTC) | 1 / 500 scored days | -14.6% | -14.7% / - | pending (1 of 500 scored) | UNASSESSED |
+| R371 usopen_fwd | US-open leaders: long 3 strongest, short 3 weakest top-50 perps since 00:00 UTC (10:00 New York to 24:00 UTC) | 2 / 500 scored days | -7.0% | -7.3% / - | pending (2 of 500 scored) | UNASSESSED |
 | R285 xbook_fwd | cross-family derived book | unknown / 180 native final days (strict eligibility unassessed) | - | - / - | 180/365 final-day sequential looks; native and gate decisions remain separate | UNASSESSED |
 
-Processing lag of on-time hours: 255 hours, median 199.88333333333333 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28.
+Processing lag of on-time hours: 329 hours, median 521.2833333333333 min, max 5681.933333333333 min; days with late hours: 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28, 2026-10-30, 2026-10-31, 2026-11-01, 2026-11-02.
 
 ### Execution receipts
 
@@ -63,46 +63,46 @@ Process state, declared data checks and statistical eligibility are separate.
 
 | task_id | category | state | data_state | run_id |
 |---|---|---|---|---|
-| R200 | Prospective paper | SUCCESS | COMPLETE | 20261030T151500_14520 |
-| REC_TICKER | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_FUNDING | Market data collection | SUCCESS | COMPLETE | 20261030T151500_14520 |
-| REC_DERIBIT | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_LTRADES | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_OPTEXP | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_CPERPS | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_LIGHTER | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_DEX | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_WALLETS | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_NOTICES | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_UNLOCKS | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_TAPE | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_HFT | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_RAW | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| REC_NEWS | Market data collection | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R268 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R270 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R272 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R214 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R215 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R224 | Execution measurement | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R218 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R220 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R221 | Evidence decisions | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R225 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R266 | Prospective paper | SUCCESS | COMPLETE | 20261030T151500_14520 |
-| R278 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R279 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R294 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R355 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R364 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R369 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R371 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| R285 | Prospective paper | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| LAG | Data integrity | SUCCESS | UNVERIFIED | 20261030T151500_14520 |
-| PANEL | Reporting | RUNNING | UNVERIFIED | 20261030T151500_14520 |
-| CATALOG | Reporting | PENDING | UNVERIFIED | 20261030T151500_14520 |
-| DASH | Reporting | PENDING | UNVERIFIED | 20261030T151500_14520 |
-| REC_DIGEST | Data integrity | PENDING | UNVERIFIED | 20261030T151500_14520 |
+| R200 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_TICKER | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_FUNDING | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_DERIBIT | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_LTRADES | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_OPTEXP | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_CPERPS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_LIGHTER | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_DEX | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_WALLETS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_NOTICES | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_UNLOCKS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_TAPE | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_HFT | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_RAW | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_NEWS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R268 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R270 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R272 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R214 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R215 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R224 | Execution measurement | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R218 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R220 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R221 | Evidence decisions | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R225 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R266 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R278 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R279 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R294 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R355 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R364 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R369 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R371 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R285 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| LAG | Data integrity | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| PANEL | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| CATALOG | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| DASH | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| REC_DIGEST | Data integrity | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
 
 ## 3. Open methods
 
