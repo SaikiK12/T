@@ -50,19 +50,25 @@
   }
  },
  "decision": "pending (1 of 120 scored)",
- "updated": "2026-10-30T15:23:45Z",
- "snapshot": "2026-10-30.json.gz",
- "tickets": 2,
- "open": 1,
+ "updated": "2026-11-02T17:48:27Z",
+ "snapshot": "2026-11-02.json.gz",
+ "tickets": 3,
+ "open": 2,
  "skipped": {
   "missed": 5,
   "no_contract": 2
  },
- "new_tickets": [],
+ "new_tickets": [
+  "U20766-MOVE_USDT"
+ ],
  "book_equity": 0.9981302932068083,
  "book_max_drawdown": -0.0021882455425563663,
  "next_entries": [
   "2026-11-03T00:00:00Z MOVE",
-  "2026-11-05T00:00:00Z BB"
+  "2026-11-05T00:00:00Z BB",
+  "2026-11-07T00:00:00Z AGT",
+  "2026-11-07T00:00:00Z SEI",
+  "2026-11-07T00:00:00Z STRK",
+  "2026-11-08T00:00:00Z CYBER"
  ]
 }
