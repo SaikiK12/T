@@ -5,10 +5,17 @@ It is not a queue: `registry/methods.csv` is the live queue, `registry/rounds.cs
 PREREG and FINDINGS say exactly what was tested. Every number below is copied from those files or from a lane journal.
 
 ## The honest state
-- **No lane has prospective, on-time evidence of a net profit yet, and the best retrospective result is not the one first quoted here.** 171 registered rounds: NULL 93, PARTIAL 34, PENDING 30,
-  CONFIRMED 8, DATA_PASS 6. Program trials 9,479,239 (`registry.program_trials()`), of which four early mining rounds (R182, R185, R192, R195) hold
-  99.6%; the other 167 rounds total 37,080. `AGENTS.md` says to read a result against that count, but the gates in
+- **No lane has prospective, on-time evidence of a net profit yet, and the best retrospective result is not the one first quoted here.** 172 registered rounds: NULL 94, PARTIAL 34, PENDING 30,
+  CONFIRMED 8, DATA_PASS 6. Program trials 9,479,246 (`registry.program_trials()`), of which four early mining rounds (R182, R185, R192, R195) hold
+  99.6%; the other 168 rounds total 37,087. `AGENTS.md` says to read a result against that count, but the gates in
   `docs/GATES.md` correct each lane for its own family, so the 9.5M is context, not a threshold.
+- **The largest retrospective positive in the project was a data leak (R332, 2026-11-02, NULL).** R304's weekly GBM ranker
+  (+58.9 bp/day net in validation, t 4.21) came from a metrics panel in which a coin-day held open-interest and top-trader
+  columns only if the coin would be among the 100 most traded within 35 days. Re-run on a complete-metrics panel
+  (`data/daily_v2`, 99-100% coverage of top-150 rows from 2022) with the same code, the pick nets -16.5 bp/day (t -1.02;
+  2x -18.7, 3x -20.8). A rule with no model, "long a random fifth of the rows that have metrics, short a random fifth that
+  do not", earns +50.3 bp/day (t 4.47) on the old panel. `experiments/mlrank_v3/FINDINGS.md`; queue row M459 lists what
+  else may share the rule.
 - **The best-evidenced lead is cross-venue funding carry (R275, replicated by R277 and R288), not the single-venue carry
   (R191) that an earlier draft of this page quoted.** Long the venue with the lower funding rate, short the one with the
   higher, about 20 pairs, 1x per leg, frozen rule and costs of 7 / 14 / 21 bp a leg. It earns the funding difference
@@ -77,12 +84,11 @@ The paste is a literature scan. None of these is evidence: each is a source's cl
 ## Tier D: what five read-only subagents added on 2026-11-02 (hypotheses, nothing run)
 Each came from a fresh reviewer with one lens (post-mortem of the nulls, structural costs, markets outside the crypto-perp
 box, event timing, an auditor). Their claims about outside sources are unverified; the repo claims were checked above.
-- **R332 `mlrank_v3`: the largest unexplained positive in the project, parked since 10-26.** R304's weekly GBM ranker made
-  +58.9 bp/day net in validation (t 4.21; 2x +56.8, 3x +54.6; discovery t 5.99; rank IC 0.19), and R305 could not explain it.
-  Its metrics columns exist only for coins that entered the top 100 by volume within 35 days: a look-ahead. Both the
-  post-mortem and the auditor ranked a leak-free rerun first. Code, the complete metrics refetch (`data/metrics_full`) and
-  a draft PREREG are in the repo; it needs a freeze, a registry row and a run (7 trials). A NULL closes M042 on this
-  panel; a PARTIAL earns a forward lane.
+- **R332 `mlrank_v3`: done, NULL (run 2026-11-02, 7 trials).** The leak-free rerun that both the post-mortem and the
+  auditor ranked first. R304's pick fails all three checks on the complete-metrics panel (validation net 1x -16.5 bp/day,
+  t -1.02; 2x -18.7; without the 10 best weeks -245.7 bp/week). The presence book earns +50.3 bp/day net (t 4.47), so
+  R304's PARTIAL is labelled `metrics-leak`, M042 closes on this panel and R304 gets no forward lane. It closes a lead; it
+  does not open a profitable one.
 - **Cost re-pricing (R371's parent, R300):** at MEXC's web taker (2 bp on 956 contracts, 0 on 142) rather than the lab's
   8.5 bp a side, R300 re-prices to about +61 bp/day and t about 2.0, on seen days only.
 - **Untested directions with data on disk:** Deribit weekend defined-risk short volatility (needs chain-priced fills the
@@ -104,8 +110,9 @@ box, event timing, an auditor). Their claims about outside sources are unverifie
 1. **Reserved batch 1 on 2026-11-03.** A pass on unseen days is the first real news in weeks; a null is also a result.
    The auditor notes that only about 2 of its 10 cells (carry C14 at alpha 0.0273, unlock short C01 at 0.0147) have a
    non-trivial alpha; the other eight sit at 0.001 and need N_min 8 events.
-2. **R332 (leak-free ML ranker).** The biggest backtest number in the program and the cheapest to settle: data and code
-   exist.
+2. **R332 is settled: NULL.** The biggest backtest number in the program was the metrics availability rule. The cheap
+   follow-up is M459, a presence-control audit of the few other lanes with a wide universe (R282 first), which can only
+   remove evidence.
 3. **Cross-venue carry forward lanes (R278, R279, R294).** Not exciting in dollars ($500 to $1,000 a year on $10k) but the
    only family with a replicated, net-of-2x-cost backtest; the Lighter sets are fading, the KuCoin sets are not yet.
 4. **Settlement scalp (R364, R355).** Treat the +23.4 bp as an upper bound that the cost gate cuts to about +11.5.

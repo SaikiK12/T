@@ -8,6 +8,11 @@ for current recorded scope. Recheck actual inputs and authorization before any a
 
 ## Now (2026-10-28, 20:15 UTC)
 - **Added 2026-11-02: the container was off from about 2026-10-30 15:45 to 2026-11-02 17:29 UTC (about 3.1 days).** Every recorder and forward lane has a gap for it (R371's 11-02 ticket is `missed`; R367 has only 2026-10-29 as a usable day, so its run moves to on or after 2026-11-05 00:30 UTC and ends INCONCLUSIVE if 3 usable days are not there by 11-08). `restart_all.sh` brought all 12 daemons back at 17:36. The owner asked to finish what is open and summarise the leads: see [LEADS](LEADS.md). Four lead rows from the owner's 2026-11-02 literature paste are queued as M455-M458 (none started).
+- **Added 2026-11-02: R332 `mlrank_v3` is NULL, and R304's +58.9 bp/day was a data leak.** With complete Binance metrics
+  (`data/daily_v2`) the same GBM ranker nets -16.5 bp/day in validation (t -1.02); a rule that only asks whether a row has
+  metrics earns +50.3 (t 4.47) on the old panel, so R304 is labelled `metrics-leak`, M042 closes on this panel and R304
+  gets no forward lane (`experiments/mlrank_v3/FINDINGS.md`). M459 queues a presence-control audit of the other lanes
+  that read these columns on a universe wider than the top 50.
 - **Added 2026-10-29: R371 `usopen_fwd` is running on paper** (PREREG frozen, daemon up, first ticket 14:00 UTC the same
   day). It is R300's "us10 n3 follow" (C17) on days nobody has read: at 10:00 New York, long the 3 strongest and short the 3
   weakest top-50 Binance perps since 00:00 UTC, flat at 24:00 UTC. Book M (coins with a MEXC perp, one-minute opens, MEXC's
