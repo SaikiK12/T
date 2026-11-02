@@ -38,10 +38,15 @@ prospective trading observation without a separately frozen admission policy.
 No SEC endpoint/contact address or fee/execution assumption is added.
 
 Validation: 15 new contracts pass on the correction. Against the original
-three modules, those same tests produce 6 failures and 6 errors (including
-malformed-payload subtests). The 12 unchanged frozen R386 synthetic tests also
-pass, for 27 focused checks. The full suite and PR CI provide the integration
-gate; the tests create temporary journals and mock network/process startup.
+three modules, the final tests produce 8 failures and 6 errors (including
+malformed-payload subtests). After integrating the recorder agent's changes,
+all 50 focused checks pass: 15 new contracts, 23 recorder tests and the 12
+unchanged frozen R386 synthetic tests. Zero-delay legacy fixtures now mock
+their observation clock as well as the scheduled time; the delayed-fetch and
+retry tests independently check actual completion semantics. The local full
+suite before that integration passed 2,035 tests with 3 skips; final-head CI
+checks the combined tree. Tests use temporary journals and mock network and
+process startup.
 
 ## R386 snapshot and stash limits
 
@@ -67,6 +72,14 @@ A one-time copy does not preserve later messages: keep a reader descriptor
 open or follow that descriptor until the producer finishes. Inspect errors
 only while the experiment is in flight; outcome admission follows its PREREG.
 These are diagnostic steps for the owning runtime, not checks completed here.
+
+Follow-up at owner commit `55a9c3b`: the process did have an unlinked output
+descriptor, and its owner preserved an 11-line snapshot in
+`run.stdout.recovered.log`. Error-only scans of that copy and the published
+`run.log` find no listed exception/error pattern. This confirms the logging
+side effect, not the health of the entire numerical run. A snapshot alone
+does not preserve subsequent output; the descriptor still needs to be kept
+open/followed until the producer exits. No interim statistics were inspected.
 
 Integrations use a separate persistent worktree. An active writer's tree is
 not stashed, reset or switched; its uncommitted state and open descriptors

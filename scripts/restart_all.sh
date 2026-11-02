@@ -19,7 +19,7 @@ pgrep -f "sh scripts/forward_loop.sh" >/dev/null || setsid nohup sh scripts/forw
 pgrep -f "sh scripts/notice_loop.sh" >/dev/null || setsid nohup sh scripts/notice_loop.sh >/dev/null 2>&1 &
 
 for s in forward_usopen record_tape record_hft record_raw record_option_expiry record_lighter_trades record_dex_prices \
-         record_news record_commodity_perps forward_settlelit forward_settlehop; do
+         record_news record_commodity_perps forward_settlelit forward_settlehop record_listings record_tradfi_calendar; do
   timeout 40 "$PY" "scripts/$s.py" ensure >/dev/null 2>&1 || echo "ensure failed or timed out: $s" >&2
 done
 

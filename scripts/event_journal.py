@@ -186,7 +186,8 @@ class Journal:
             elif not cur["present"]:
                 rows.append(row(key, "back", et, src_field=src.key_field, snapshot=snap(fields)))
             else:
-                for f in sorted(set(cur["fields"]) | set(fields)):
+                names = set(fields) | (set(cur["fields"]) & set(smap) if smap else set(cur["fields"]))
+                for f in sorted(names):        # fields retired from the spec are ignored, not reported as changes
                     o, n = cur["fields"].get(f, ""), fields.get(f, "")
                     if o != n:
                         rows.append(row(key, "change", et, f, o, n, smap.get(f, f)))
@@ -358,9 +359,9 @@ def cli(name, folder, sources, script, argv=None):
             log(f"{name} recorder running")
             return 0
         held.close()
-        logf = open(folder / "recorder.log", "a")
-        subprocess.Popen([sys.executable, str(Path(script).resolve()), "run"], cwd=Path(script).resolve().parent.parent,
-                         stdout=logf, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL, start_new_session=True)
+        with open(folder / "recorder.log", "a") as logf:
+            subprocess.Popen([sys.executable, str(Path(script).resolve()), "run"], cwd=Path(script).resolve().parent.parent,
+                             stdout=logf, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL, start_new_session=True)
         log(f"{name} recorder started")
         return 0
     if cmd != "run":
@@ -372,8 +373,11 @@ def cli(name, folder, sources, script, argv=None):
         log(f"another {name} recorder holds {folder}/recorder.lock")
         return 1
     if "--once" in rest:
-        for s in poll_all(j, sources, force="--force" in rest, only=only):
-            log(name, json.dumps(s, sort_keys=True))
+        try:
+            for s in poll_all(j, sources, force="--force" in rest, only=only):
+                log(name, json.dumps(s, sort_keys=True))
+        finally:
+            held.close()
         return 0
     stop = {"now": False}
     for sig in (signal.SIGTERM, signal.SIGINT):
