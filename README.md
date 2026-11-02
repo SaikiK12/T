@@ -24,6 +24,9 @@ the prototypes and remaining admission requirements. The
 The [R372 ORB implementation and pilot](experiments/orb_index_v1/FINDINGS.md) contains the runnable four-account engine, frozen input contract, independently checked result and exact execution limits.
 
 **Working here:**
+
+The [event-recorder review](docs/reviews/event_recorders_20261102.md) covers receipt-time semantics, calendar error handling and safe integration around active writers.
+
 1. Read [AGENTS.md](AGENTS.md) and fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).
 2. Read the timestamp and limits in [docs/PANEL.md](docs/PANEL.md), then the linked lane's frozen PREREG and FINDINGS.
 3. Use the live queue [registry/methods.csv](registry/methods.csv); claim and freeze a new lane before any statistics.

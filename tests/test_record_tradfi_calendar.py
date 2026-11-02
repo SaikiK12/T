@@ -69,7 +69,8 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(set(ok), {"2026-11-03|AMD", "2026-11-03|AMGN"})
         self.assertEqual(ok["2026-11-03|AMD"]["fields"]["time"], "time-after-hours")
         self.assertNotIn("marketCap", ok["2026-11-03|AMD"]["fields"])
-        self.assertEqual(rc.parse_earnings(earnings("x", "Mon, Nov 2, 2026", ["AMD"]), "2026-11-03"), {})
+        with self.assertRaisesRegex(ValueError, "asOf"):
+            rc.parse_earnings(earnings("x", "Mon, Nov 2, 2026", ["AMD"]), "2026-11-03")
         self.assertEqual(rc.parse_earnings(b'{"data": {"asOf": "Sat, Nov 7, 2026", "rows": null}}', "2026-11-07"), {})
 
     def test_earn_dates_are_the_next_weekdays_in_eastern_time(self):
@@ -115,7 +116,8 @@ class Rec(unittest.TestCase):
             return list(csv.DictReader(f))
 
     def run_pass(self, t, names, **kw):
-        return ej.poll_all(self.j, [s for s in rc.SOURCES if s.name in names], now_s=t, pace=0, **kw)
+        with mock.patch.object(ej.time, "time", return_value=t):
+            return ej.poll_all(self.j, [s for s in rc.SOURCES if s.name in names], now_s=t, pace=0, **kw)
 
 
 class JournalTests(Rec):

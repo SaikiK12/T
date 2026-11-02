@@ -121,7 +121,9 @@ class Rec(unittest.TestCase):
             return list(csv.DictReader(f))
 
     def run_pass(self, t, **kw):
-        return ej.poll_all(self.j, self.sources, now_s=t, pace=0, **kw)
+        # Zero-latency fixture: observation and completion occur at t as well.
+        with mock.patch.object(ej.time, "time", return_value=t):
+            return ej.poll_all(self.j, self.sources, now_s=t, pace=0, **kw)
 
 
 class JournalTests(Rec):
