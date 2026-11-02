@@ -73,7 +73,9 @@ panel, earns +50.3 bp/day net in validation (t 4.47), about 85% of R304's +58.9.
 - **The largest positive in the project was a data leak,** found by a complete refetch and one frozen rerun.
 - **Open, not tested here:** every other lane that reads `data/metrics_1h` or the panel's metrics columns inherits the
   same availability rule. How far it reaches depends on how each lane picks rows or coins. The lanes are named in the
-  queue row M459; this lane tests none of them.
+  queue row M459; this lane tests none of them. By code reading only (not run): the flow cells behind the forward lanes
+  trade point-in-time top-100 rows whose trailing metrics `lab/flow.py needed_days` fetches in full, so they do not have
+  the daily panel's rank 101-150 problem; top-50 lanes had 98-99.5% coverage in the old panel.
 
 ## Not checked
 - Lanes other than R304's family (above).
