@@ -84,6 +84,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
   [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
   [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
   [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md).
+- Owner digest of the best leads and what is left to read: [`LEADS.md`](docs/LEADS.md) (dated 2026-11-02).
 - Topic briefs: [`ALTCOIN_LEADS.md`](docs/ALTCOIN_LEADS.md), [`FOREX_AND_INDICES.md`](docs/FOREX_AND_INDICES.md),
   [`MARKET_DIRECTION_AND_REGIME.md`](docs/MARKET_DIRECTION_AND_REGIME.md),
   [`VOLATILITY_AND_TAIL_RISK_FORECASTS.md`](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),

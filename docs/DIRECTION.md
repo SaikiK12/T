@@ -7,6 +7,7 @@ use [the live queue](../registry/methods.csv), [round registry](../registry/roun
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
 ## Now (2026-10-28, 20:15 UTC)
+- **Added 2026-11-02: the container was off from about 2026-10-30 16:00 to 2026-11-02 17:29 UTC.** Every recorder and forward lane has a gap for those 2.5 days (R371's 11-02 ticket is `missed`; R367 has only 2026-10-29 as a usable day, so its run moves to on or after 2026-11-05 00:30 UTC and ends INCONCLUSIVE if 3 usable days are not there by 11-08). `restart_all.sh` brought all 12 daemons back at 17:36. The owner asked to finish what is open and summarise the leads: see [LEADS](LEADS.md). Four lead rows from the owner's 2026-11-02 literature paste are queued as M455-M458 (none started).
 - **Added 2026-10-29: R371 `usopen_fwd` is running on paper** (PREREG frozen, daemon up, first ticket 14:00 UTC the same
   day). It is R300's "us10 n3 follow" (C17) on days nobody has read: at 10:00 New York, long the 3 strongest and short the 3
   weakest top-50 Binance perps since 00:00 UTC, flat at 24:00 UTC. Book M (coins with a MEXC perp, one-minute opens, MEXC's

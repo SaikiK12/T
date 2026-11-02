@@ -1,41 +1,41 @@
 {
- "last_hour": "2026-10-30T14:00:00+00:00",
- "days_scored": 29,
+ "last_hour": "2026-11-02T16:00:00+00:00",
+ "days_scored": 32,
  "short_now": {
   "tvc": [
    "GOOGLUSDT",
    "INTCUSDT",
    "KORUUSDT",
+   "SNDKUSDT",
    "SOXLUSDT",
-   "TSLAUSDT",
    "XAGUSDT"
   ],
   "t24": [
-   "BNBUSDT",
-   "CRCLUSDT",
-   "SNDKUSDT",
-   "SNXXUSDT",
-   "SOXLUSDT",
-   "SPCXUSDT"
+   "AVAXUSDT",
+   "JCTUSDT",
+   "LINKUSDT",
+   "QUSDT",
+   "SKHYNIXUSDT",
+   "SOXLUSDT"
   ],
   "t4": [
-   "INTCUSDT",
-   "MUUSDT",
-   "NVDAUSDT",
-   "SNDKUSDT",
+   "AVAXUSDT",
+   "CRCLUSDT",
+   "ENAUSDT",
+   "LINKUSDT",
    "SNXXUSDT",
-   "SPCXUSDT"
+   "SOXLUSDT"
   ]
  },
  "A": {
-  "days": 29,
-  "total": 0.1582791950017687,
-  "total_2x": 0.13927556916130956,
-  "total_3x": 0.12027194332085034,
+  "days": 32,
+  "total": 0.19828876421135289,
+  "total_2x": 0.17731779426059635,
+  "total_3x": 0.15634682430983982,
   "go_real": {
-   "n": 29,
-   "mean": 0.005457903275923059,
-   "hit": 0.5862068965517241,
+   "n": 32,
+   "mean": 0.006196523881604778,
+   "hit": 0.59375,
    "worst": -0.1072537748171812,
    "invalid_n": 0,
    "n_clusters": null,
@@ -48,6 +48,10 @@
    },
    "pass": true
   },
+  "ann": 2.2617312167857437,
+  "sharpe": 3.239138504836435,
+  "t_nw": 1.14447859071009,
+  "max_dd": 0.1818745574396799,
   "prereg": {
    "pass_now": false,
    "decision_at_days": 90,
@@ -56,14 +60,14 @@
   }
  },
  "B": {
-  "days": 29,
-  "total": 0.0655216003404364,
-  "total_2x": 0.06216143142560421,
-  "total_3x": 0.05880126251077258,
+  "days": 32,
+  "total": 0.0640543702113324,
+  "total_2x": 0.06029792965454481,
+  "total_3x": 0.05654148909775779,
   "go_real": {
-   "n": 29,
-   "mean": 0.0022593655289805657,
-   "hit": 0.5862068965517241,
+   "n": 32,
+   "mean": 0.0020016990691041374,
+   "hit": 0.5625,
    "worst": -0.0184272522629367,
    "invalid_n": 0,
    "n_clusters": null,
@@ -76,6 +80,10 @@
    },
    "pass": true
   },
+  "ann": 0.7306201602230101,
+  "sharpe": 3.0520127661097467,
+  "t_nw": 0.6971368684904489,
+  "max_dd": 0.0583616954241605,
   "prereg": {
    "pass_now": false,
    "decision_at_days": 90,
