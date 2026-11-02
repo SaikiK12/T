@@ -1,0 +1,62 @@
+{
+ "parity": {
+  "gate+kucoin": {
+   "trades_mine": 1153,
+   "trades_r277": 1153,
+   "trades_identical": true,
+   "days_mine": 2078,
+   "days_r277": 2078,
+   "max_net_diff_1x_2x_3x": [
+    4.9996125369865165e-11,
+    4.9996125369865165e-11,
+    4.9996125369865165e-11
+   ],
+   "dates_identical": true,
+   "ok": true
+  },
+  "binance+kucoin": {
+   "trades_mine": 1168,
+   "trades_r277": 1168,
+   "trades_identical": true,
+   "days_mine": 2078,
+   "days_r277": 2078,
+   "max_net_diff_1x_2x_3x": [
+    4.9958599567358555e-11,
+    4.995859955380603e-11,
+    4.99585995402535e-11
+   ],
+   "dates_identical": true,
+   "ok": true
+  }
+ },
+ "extra": {
+  "gate+kucoin": {
+   "reconcile_attribution_vs_replay": {
+    "gross": 1.1102230246251565e-16,
+    "fund": 5.551115123125783e-17,
+    "legs": 0.0,
+    "held": 0,
+    "other_leg_plus_kucoin_leg_vs_fund": 9.71445146547012e-17
+   },
+   "unk_or_oth_trades": 0,
+   "trade_pnl_vs_r277_trades_csv_max_abs_diff_funding_price": [
+    5.835609773185979e-15,
+    4.996151520709341e-09
+   ]
+  },
+  "binance+kucoin": {
+   "reconcile_attribution_vs_replay": {
+    "gross": 3.3306690738754696e-16,
+    "fund": 1.3877787807814457e-17,
+    "legs": 0.0,
+    "held": 0,
+    "other_leg_plus_kucoin_leg_vs_fund": 8.326672684688674e-17
+   },
+   "unk_or_oth_trades": 0,
+   "trade_pnl_vs_r277_trades_csv_max_abs_diff_funding_price": [
+    3.2335245592207684e-15,
+    4.9982839789818045e-09
+   ]
+  }
+ }
+}
