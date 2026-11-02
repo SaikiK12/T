@@ -38,11 +38,12 @@ URL = {
     "okx": "https://www.okx.com/api/v5/public/instruments?instType=SWAP",
     "bitget": "https://api.bitget.com/api/v2/mix/market/contracts?productType=usdt-futures",
 }
-# field name -> the venue's own key (dotted: nested). Raw values are stored as the venue sent them.
+# field name -> the venue's own key (dotted: nested). Raw values are stored as the venue sent them. MEXC's takerFeeRate /
+# makerFeeRate are left out on purpose: consecutive requests to contract/detail return 0.0002/0 and 0.0004/0.0001 for the
+# same contract (checked 2026-11-02), so they would be noise, not events.
 FIELDS = {
     "mexc": {"status": "state", "kind": "type", "tick": "priceUnit", "lot": "volUnit", "contract_size": "contractSize",
-             "min_lev": "minLeverage", "max_lev": "maxLeverage", "taker_fee": "takerFeeRate",
-             "maker_fee": "makerFeeRate", "opening_time": "openingTime", "hidden": "isHidden",
+             "min_lev": "minLeverage", "max_lev": "maxLeverage", "opening_time": "openingTime", "hidden": "isHidden",
              "pre_market": "preMarket", "api_allowed": "apiAllowed", "appraisal": "appraisal"},
     "lighter": {"market_id": "market_id", "status": "status", "kind": "market_type", "taker_fee": "taker_fee",
                 "maker_fee": "maker_fee", "min_base": "min_base_amount", "min_quote": "min_quote_amount",
