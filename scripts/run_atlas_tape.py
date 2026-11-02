@@ -464,7 +464,7 @@ def load_tape(root=ROOT, days=B_DAYS, coins=COINS):
         t["tf"] = np.where(present[c] & np.isnan(t["tf"]), 0.0, t["tf"])
         t["tf"][~present[c]] = np.nan
         for key, raw in (("l", lraw[c]), ("m", mraw[c])):
-            mid = pd.Series(raw["mid"]).groupby(rid).ffill(limit=120).to_numpy()
+            mid = pd.Series(raw["mid"]).groupby(rid).ffill(limit=120).to_numpy().copy()
             mid[~up] = np.nan
             t[key + "mid"] = mid
             f = raw["ofi"].copy()
