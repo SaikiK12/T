@@ -31,6 +31,13 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
     days (mexc+lighter 7.0% to 2.6%), near or below a T-bill. In the KuCoin 4h contracts the median per-settlement rate
     fell from about 2-3e-4 to exactly 5e-5 (the scaled baseline) in July. Whether the engine treats every venue's
     settlement interval correctly is not frozen as an audit yet.
+  - **Known limits written into the lanes' own PREREGs:** KuCoin's and Lighter's contract lists hold only contracts live
+    on 2026-10-20 / 2026-10-21, so coins those venues delisted are missing from their sets (Gate and dYdX include
+    delisted markets; the size of the bias for KuCoin is not measured). The engine's delisting accounting is
+    conservative, not generous: after a venue stops trading a coin, one leg's close is carried forward for a day while
+    the other moves, which produced the family's largest losses (−83% NEIROETH, −140% A2Z, −114% YALA on one leg); R275
+    reports all 212 passing books stay positive with every forced exit removed. Capacity is not checked against order
+    books ($250 a leg at K = 20 on $10k).
   - It is gate 0 plus venue replications of a rule frozen before the new venues were read; it is not prospective evidence.
     R280: no leverage is safe, so it stays at 1x per leg (about 5-10% a year on capital: $500-1,000 on $10k). It needs two
     funded accounts, transfers, and the spread has shrunk on older venues (Hyperliquid books decayed to 5-8%).
