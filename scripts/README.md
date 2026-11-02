@@ -88,7 +88,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (129)
+## Run: one lane's frozen measurement (135)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -124,6 +124,7 @@ line is the first line of the script's own docstring.
 - [`run_dependent_null.py`](run_dependent_null.py): R321 registered null-only size/power study; no market outcome is read.
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
+- [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
 - [`run_equations_v2.py`](run_equations_v2.py): R311: exact R310 policy repeat after source-only Lighter page-seam recovery.
@@ -134,10 +135,12 @@ line is the first line of the script's own docstring.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
 - [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
+- [`run_fundvol.py`](run_fundvol.py): R382 fundvol_v1 (M455): does trailing volatility sizing improve a funding-carry book's net return at executable cost?.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_fxindex.py`](run_fxindex.py): fxindex_v1 (R239): G10 forex momentum, dollar trend, VIX reversal, Halloween, pre-holiday and the variance risk premium, as set out in experiments/fxindex_v1/PREREG.md.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
 - [`run_hftlead.py`](run_hftlead.py): R367 hftlead_v1 runner, frozen in experiments/hftlead_v1/PREREG.md: does the Binance USDT or Bybit mid, when it has moved away from the Binance USDC mid, make a one-second passive quote on the ...
+- [`run_hvrev.py`](run_hvrev.py): hvrev_v1 (R380): weekly reversal at an 8-10 week lookback inside the high-volatility tercile, with and without the high-volatility / winner tilt removed.
 - [`run_ictlevels.py`](run_ictlevels.py): ictlevels_v1 (R246): round-number levels, SMT divergence against BTC and the 8 AM New York range on hourly bars of the top-50 perps, directional books, as set out in ...
 - [`run_impact.py`](run_impact.py): impact_v1 (R262): square-root market impact on flow books A, B and X2 at capital $1k-$10M, on top of the tier costs, as set out in experiments/impact_v1/PREREG.md.
 - [`run_intrars.py`](run_intrars.py): intrars_v1 (R300): intraday cross-sectional relative strength among the top 50 perps (M318, from Linda Raschke on Better System Trader 124).
@@ -165,6 +168,7 @@ line is the first line of the script's own docstring.
 - [`run_montag.py`](run_montag.py): R269 montag_v1: short the perps of coins Binance adds to its Monitoring Tag (experiments/montag_v1/PREREG.md).
 - [`run_msnr.py`](run_msnr.py): R306 msnr_v1: Malaysian support and resistance (M323) on 4-hour candles, as set out in experiments/msnr_v1/PREREG.md.
 - [`run_nagel.py`](run_nagel.py): nagel_v1 (R308): the 1-day cross-sectional reversal only after market stress (M325), as set out in experiments/nagel_v1/PREREG.md.
+- [`run_negfundprior.py`](run_negfundprior.py): negfundprior_v1 (R381): R273's negative-funding onsets split by the coin's prior 30-day direction (M458), as set out in experiments/negfundprior_v1/PREREG.md.
 - [`run_oiwick.py`](run_oiwick.py): oiwick_v1 (R252): fade liquidation cascades proxied by a >= 3% hourly open-interest drop plus a >= 3 ATR wick, on the top-50 perps, as set out in experiments/oiwick_v1/PREREG.md.
 - [`run_optflow.py`](run_optflow.py): optflow_v1 (R295): does signed Deribit option flow lead BTC and ETH perp returns over the next 1, 4 or 24 hours? As set out in experiments/optflow_v1/PREREG.md.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
@@ -180,6 +184,7 @@ line is the first line of the script's own docstring.
 - [`run_posfam.py`](run_posfam.py): posfam_v1 (R211): the two halves of top_vs_crowd and the top-account ratio as 72 h slice books; posfam_v2 (R212): the top-account ratio as a contrarian book.
 - [`run_posimpulse.py`](run_posimpulse.py): posimpulse_v1 (R234): the 24 h and 72 h change in top-vs-crowd positioning as 72 h spread books, tested for information beyond the level book, as set out in experiments/posimpulse_v1/PREREG.md.
 - [`run_posimpulse_v2.py`](run_posimpulse_v2.py): posimpulse_v2 (R240): imp24/H and imp72/H from R234 tested on validation only, with K fixed on 2023, as set out in experiments/posimpulse_v2/PREREG.md.
+- [`run_presence.py`](run_presence.py): R383 presence_v1: does R282's oi_mcap book depend on whether a row has Binance metrics?.
 - [`run_propfirm.py`](run_propfirm.py): propfirm_v1 (R202): the lab's return streams under prop-firm rule sets, as set out in experiments/propfirm_v1/PREREG.md.
 - [`run_qbasis.py`](run_qbasis.py): qbasis_v1 (R301): the dated-futures basis as a cross-sectional signal on Binance perps (M170, from Chi, Hao, Hu and Ran, J. Futures Markets 2023).
 - [`run_rebalancing.py`](run_rebalancing.py): R232: fixed equal-weight rebalance cadences versus unchanged buy-and-hold units.
@@ -216,6 +221,7 @@ line is the first line of the script's own docstring.
 - [`run_vrp.py`](run_vrp.py): vrp_v1 (R209): implied minus realized volatility as a BTC/ETH timing signal, as set out in experiments/vrp_v1/PREREG.md.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
+- [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
 - [`run_xsalt.py`](run_xsalt.py): xsalt_v1 (R222): slow altcoin cross-sections (low beta, residual momentum, MAX, premium net of funding), as set out in experiments/xsalt_v1/PREREG.md.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
