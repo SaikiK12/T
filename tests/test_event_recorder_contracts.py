@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -41,7 +42,13 @@ class EventRecorderContracts(unittest.TestCase):
         self.wall = patch.object(ej.time,"time",side_effect=lambda: self.clock.now)
         self.mono = patch.object(ej.time,"monotonic",side_effect=lambda: self.clock.elapsed)
         self.net = patch.object(ej,"http_get",side_effect=AssertionError("synthetic tests forbid public requests"))
+        def disk_usage(path):
+            if not Path(path).exists():
+                raise FileNotFoundError(path)
+            return SimpleNamespace(free=10e9)
+        self.disk = patch.object(ej.shutil,"disk_usage",side_effect=disk_usage)
         self.wall.start(); self.mono.start(); self.net.start()
+        self.disk.start(); self.addCleanup(self.disk.stop)
         self.addCleanup(self.wall.stop); self.addCleanup(self.mono.stop); self.addCleanup(self.net.stop)
         self.addCleanup(self.temp.cleanup)
 
