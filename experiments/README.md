@@ -33,10 +33,12 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (151)
+## Other registered rounds (done, registered or planned) (153)
 
+- **[dvolbeta_v1](dvolbeta_v1/)** R385, DONE NULL, 4 trials. M456 DVOL-beta sort (sort half only): trailing 90-day return beta to BTC/ETH DVOL changes, long low / short high beta and the reverse, top-150 perps, hold 7 d, API costs ([PREREG](dvolbeta_v1/PREREG.md), [FINDINGS](dvolbeta_v1/FINDINGS.md))
 - **[fundvol_v1](fundvol_v1/)** R382, DONE NULL, 6 trials. M455 sizing half: trailing-volatility scaling or gating of R277 gate+kucoin carry book (saved daily net), chosen on first half, tested on second at 2x cost ([PREREG](fundvol_v1/PREREG.md), [FINDINGS](fundvol_v1/FINDINGS.md))
-- **[m090_content_v2](m090_content_v2/)** R374, REGISTERED PENDING, 0 trials. M090 one bounded signed-content capture and head-pinned offline replay; UTC/forecast scoring disabled ([PREREG](m090_content_v2/PREREG.md))
+- **[hvrev_v1](hvrev_v1/)** R380, DONE NULL, 8 trials. M457: weekly 8/9/10-week reversal inside the high-volatility tercile of the top-150 Binance perps, raw and residualised against the vol30/mom7/max7 tilt, plus two ungated 9-week controls (API costs) ([PREREG](hvrev_v1/PREREG.md), [FINDINGS](hvrev_v1/FINDINGS.md))
+- **[m090_content_v2](m090_content_v2/)** R374, REGISTERED PENDING, 0 trials. M090 one bounded signed-content capture and head-pinned offline replay; UTC/forecast scoring disabled ([PREREG](m090_content_v2/PREREG.md), [FINDINGS](m090_content_v2/FINDINGS.md))
 - **[m090_publication_v1](m090_publication_v1/)** R373, ABANDONED PARTIAL, 0 trials. M090 publication engineering interrupted before commit/push/source capture ([PREREG](m090_publication_v1/PREREG.md), [FINDINGS](m090_publication_v1/FINDINGS.md))
 - **[orb_index_v1](orb_index_v1/)** R372, REGISTERED PENDING, 12 trials. M206 NAS100 common-parent OR30 with VWAP and volume: 4 fixed accounts x 1x/2x/3x conditional funded bar costs ([PREREG](orb_index_v1/PREREG.md), [FINDINGS](orb_index_v1/FINDINGS.md))
 - **[usopen_fwd](usopen_fwd/)** R371, REGISTERED PENDING, 2 trials. M318/C17 forward paper lane: at 10:00 New York on each NYSE day from 2026-10-29, long the 3 strongest and short the 3 weakest top-50 Binance perps by move since 00:00 UTC, flat at 24:00 UTC; book M among MEXC-listed coins at one-minute opens and measured web cost decides, book B repeats R300 at API cost ([PREREG](usopen_fwd/PREREG.md), [journal](usopen_fwd/journal/))
@@ -206,9 +208,10 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (1)
+## Unregistered folders (2)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.
+- **[presence_v1](presence_v1/)** No registry row; scope unclassified.
