@@ -71,3 +71,5 @@ data/comments,SCRATCH,python scripts/dig_comments.py,,Third-party forum text; no
 data/videos,SCRATCH,python scripts/dig_videos.py,,Transcripts of third-party videos; the notes are in docs/VIDEO_DIG.md.
 data/logs,SCRATCH,none,,Run logs and lock files.
 data/.lighter_api.lock,SCRATCH,none,,Lock file of the Lighter API client.
+data/daily_v2,DERIVED,python scripts/fetch_metrics_full.py; python scripts/build_daily_v2.py,,R332 mlrank_v3's panel: the daily panel rebuilt with complete Binance metrics (data/metrics_full). Manifest sha256 09ff2747 in experiments/mlrank_v3/PREREG.md.
+data/daily_v2_src,SCRATCH,python scripts/build_daily_v2.py,,Shadow root of symlinks made by build_daily_v2.py; rebuilt on each run.
