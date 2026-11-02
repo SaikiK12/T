@@ -1,9 +1,6 @@
 # PREREG: mlrank_v3 (R332). R304's rankers on a panel whose metrics were fetched without a look-ahead (M042)
 
-Freeze with `lab.prereg.freeze()` before the first statistic. Never edited afterwards; a change is a new lane.
-
-Draft: this file becomes `PREREG.md` at the freeze. Until then `python -m lab integrity` would read an unfrozen
-`PREREG.md` without a registry row as an error (SIDECAR_MISSING).
+Frozen with `lab.prereg.freeze()` before the first statistic. Never edited afterwards; a change is a new lane.
 
 - **Registry id:** R332
 - **Id history:** drafted as R309 in the Claude block R300-R319 claimed on issue #7 on 2026-10-22; Codex's
@@ -54,9 +51,31 @@ Draft: this file becomes `PREREG.md` at the freeze. Until then `python -m lab in
     of +117.
   - R305 found it is not age, the risk features or beta.
 - **The coverage table above.**
-- **The fetch's counts** (`data/metrics_full/metrics_1h/manifest.json`): days needed, listed in the archive, used,
-  missing from the archive, and failed.
-- **The plumbing run of this script** (column check and coverage only; no return read). [Filled in at the freeze.]
+- **The fetch's counts** (`data/metrics_full/metrics_1h/manifest.json`, built 2026-11-02): 317,531 coin-days needed,
+  278,615 listed in the archive, 278,161 used, 38,916 missing from the archive, 454 failed (a download error, not a
+  missing file).
+- **The plumbing run of this script** (`--plumbing`: column check and coverage only; no return read), on
+  `data/daily_v2/panel.parquet` built 2026-11-02 (591,598 rows, 899 perps, 2021-01-02..2026-09-30, the same rows as
+  `data/daily/panel.parquet`):
+  - **Columns that differ** between the panels (rows where either holds a value and the two disagree): `oi_usd`
+    165,441, `top_ls_pos` 142,087, `ls_acc` 164,021, `taker_ls` 156,742. Every other column, `n_venues`, `age_days`,
+    `rank_qvol30`, `mcap_est` and the six funding-gap columns included, differs on 0 rows.
+  - **Coverage of `oi_usd`** (share of rows with a value, by year and rank band), v1 → v2:
+
+    | Year | Rank 1-50 | Rank 51-100 | Rank 101-150 |
+    |---|---|---|---|
+    | 2022 | 0.992 → 0.994 | 0.247 → 0.997 | 0.091 → 1.000 |
+    | 2023 | 0.995 → 1.000 | 0.237 → 0.999 | 0.091 → 0.999 |
+    | 2024 | 0.992 → 1.000 | 0.251 → 1.000 | 0.074 → 1.000 |
+    | 2025 | 0.978 → 0.998 | 0.276 → 0.998 | 0.063 → 1.000 |
+    | 2026 | 0.985 → 0.990 | 0.262 → 0.990 | 0.074 → 0.995 |
+
+    2021 is thin in both (Binance's metrics start in December 2021): 0.101 → 0.101, 0.017 → 0.089, 0.012 → 0.179.
+  - **Rows v1 holds and v2 does not:** 7,905 `oi_usd` rows, all with `rank_qvol30` above 150, so none is a universe
+    row (the fetch reads only top-150 rows).
+  - **Rows both hold:** 120,372 `oi_usd` rows; all but 3 agree to 1e-9. The three: BNXUSDT 2023-01-20 (6.96e6 against
+    7.43e6), AERGOUSDT 2025-05-20 (3.11e6 against 3.12e6) and AIAUSDT 2025-12-12 (9.2e6 against 711). `top_ls_pos`,
+    `ls_acc` and `taker_ls` have 2-3 such rows each. They stay as built; 3 rows in 165k.
 - **The fetch's test on two coins:** for ETCUSDT the complete fetch holds 42,134 hours against 27,350 before. On every
   hour both hold, `oi_value`, `top_ls_sum`, `ls_count` and `taker_ls_vol` are identical.
 - **Never computed before the freeze:**
@@ -67,7 +86,24 @@ Draft: this file becomes `PREREG.md` at the freeze. Until then `python -m lab in
 ## Inputs (frozen)
 
 ```inputs
-[filled in at the freeze]
+b44a28f0f009b00ce481adf66e6bb0b3fb93981a523fc1eaf4c47fad13ef27f6  data/daily/panel.parquet
+09ff274763e1476cdbf178f87eb0fba0884fa314927dfa7fbdffbe52617105d1  data/daily_v2/panel.parquet
+9e2600d87cfe58df534a5028678dee3cb0d800b3791879e511f539517d1cbffd  data/metrics_full/metrics_1h/manifest.json
+96053b6a8ba4e22469acfa4da4fb59f1d56e610e5b18460a50e40e82da8d4a6f  lab/inference.py
+bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34  lab/stats.py
+a32e993454728aa37e52559d798406ee64bffdcd9196b183ec908addd63b5dbe  lab/data.py
+831fe1dfa2c794bc0467137bb10f9395895ecddecfffcbc860b2c6273faae18d  lab/sessions.py
+3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508  lab/prereg.py
+4475f8962fb723e798383c839d6b0cc390c51b373937755a6d6ed2a62663cad6  lab/daily.py
+f1184b3961111aa7b74c8c4813c4b6d7ded7841648cf10a078a20d5d6d1cd59b  lab/flow.py
+3eb47ec2ae78a6531a71f4f564ceac71987d1616097c50cdd8d2913009bd5dba  scripts/run_clockflow.py
+d3cb4b35879bb491245e94a64931cfda2f9e77a79c781fb45342618cad02a82d  scripts/run_lotcap.py
+a96ba3034440e83fb90c3211cef6388229ef4b04af1c6bc93c772672412caca3  scripts/run_mlrank.py
+ee4bbe450e70307481f39d75e86b12e09a792475c2cc4b2f62efd36e799ee403  scripts/run_mlrank2.py
+ea93102b8e33b2323570cb6a80863bd849f056a3a9a60e65a070ee0cc4fa9347  scripts/run_mlrank3.py
+1a3c0e45e92c9a8149f1f688c36e2c5bb2f9aef2f14ea5349b8a0b9c61853df8  scripts/fetch_metrics_full.py
+7363ac7b8d3fea936931f42a5e9f879438a6247ffe57dbc8f4f317c65c8743cf  scripts/build_daily.py
+7cce10ac02834e3de4727a51255e566923e449a19c12c4ebaec2777827a02427  scripts/build_daily_v2.py
 ```
 
 ## The family (6 trials) and the diagnostic (1)
@@ -135,7 +171,7 @@ As R304's, from its own run:
 - **2021:** Binance's metrics start in December 2021 for most coins. The 2021 training rows have few metrics in both
   panels.
 - **Gaps left in the archive:** days missing from Binance's archive stay missing (the fetch's counts). They do not
-  depend on the future.
+  depend on the future. The 454 failed downloads are gaps too, caused by the network and not by the coin's future.
 - **Other columns:** the column check shows whether any column besides the five metrics ones changed.
 
 ## Outputs
