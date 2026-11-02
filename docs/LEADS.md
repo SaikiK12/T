@@ -30,7 +30,12 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
     the old unscaled rates, but half the 2025-26 pace. The Lighter sets fell from 5-7% to 2.2-3.4%/yr over the same 69
     days (mexc+lighter 7.0% to 2.6%), near or below a T-bill. In the KuCoin 4h contracts the median per-settlement rate
     fell from about 2-3e-4 to exactly 5e-5 (the scaled baseline) in July. Whether the engine treats every venue's
-    settlement interval correctly is not frozen as an audit yet.
+    settlement interval correctly is not frozen as an audit yet. **Audited 2026-11-02 (R384 `xfundint_v1`, label
+    `robust`):** the replay of `lab/xfund.py` matches R277's trades and net to 5e-11; before the scaling about 65% of
+    the KuCoin-leg funding came from 1h/4h contracts, but after it (69 days, 99% of funding in scaled 4h contracts)
+    the two KuCoin sets still earn +10.5 and +10.0 %/yr at 1x (+8.4 and +8.2 at 2x, +6.4 and +6.3 at 3x; Newey-West t
+    3.7 and 3.1). It is one short regime, and recorded versus paid rates, per-contract interval history and capacity
+    are still unchecked (33% of KuCoin position-days imply a different class from that day's settlement count).
   - **Known limits written into the lanes' own PREREGs:** KuCoin's and Lighter's contract lists hold only contracts live
     on 2026-10-20 / 2026-10-21, so coins those venues delisted are missing from their sets (Gate and dYdX include
     delisted markets; the size of the bias for KuCoin is not measured). The engine's delisting accounting is
@@ -96,6 +101,11 @@ box, event timing, an auditor). Their claims about outside sources are unverifie
   t -1.02; 2x -18.7; without the 10 best weeks -245.7 bp/week). The presence book earns +50.3 bp/day net (t 4.47), so
   R304's PARTIAL is labelled `metrics-leak`, M042 closes on this panel and R304 gets no forward lane. It closes a lead; it
   does not open a profitable one.
+- **R380, R382, R385: three cheap gate-0 lanes, all NULL (2026-11-02).** R380 (M457): 8-10 week reversal in the
+  high-volatility tercile; all 8 books lose in validation (t -2.2 to -3.3), so the 2024-26 sign is continuation. R382
+  (M455 sizing half): trailing-volatility scaling or gating of the R277 carry book does not beat the unscaled book
+  (2nd-half 2x Sharpe 6.37 vs 6.88). R385 (M456 sort half): beta to DVOL changes sorts nothing net (pick t +0.15).
+  The HAR-forecast and option-inventory halves remain untested. R381 and R383 are claimed and paused.
 - **Cost re-pricing (R371's parent, R300):** at MEXC's web taker (2 bp on 956 contracts, 0 on 142) rather than the lab's
   8.5 bp a side, R300 re-prices to about +61 bp/day and t about 2.0, on seen days only.
 - **Untested directions with data on disk:** Deribit weekend defined-risk short volatility (needs chain-priced fills the
