@@ -1,11 +1,13 @@
 # M090 and M322: prospective implementation review (not a PREREG)
 
-This is an implementation handoff, not a frozen specification, registered lane,
-or authority to compute an outcome. The local modules listed below are pure
-synthetic-testable primitives: they have no data adapter, journal, scheduler,
-network client, scoring command, or order endpoint. Their SHA strings and clock
-bounds are caller-provided inputs, not proof of authenticated files or a reliable
-clock. No market data, reserved rows or outcomes were read for this work.
+This is an implementation handoff, not a forecast PREREG or authority to score
+an outcome. The original rule modules below remain pure prototypes with
+caller-supplied hashes/clock bounds. Subsequent
+[R374 content engineering](../experiments/m090_content_v2/PREREG.md) implements
+a bounded public adapter and signed local archive, without UTC/forecast
+qualification. R373's uncommitted implementation was lost at restart; its
+[original frozen text and interruption](../experiments/m090_publication_v1/FINDINGS.md)
+are preserved exactly. The original prototype work read no market outcomes.
 
 ## M090: displayed funding versus last settled rate
 
@@ -30,11 +32,19 @@ are response bounds, not evidence of durable publication; legacy `recv_ms`
 is only a request-start time. The old clock journal lacks per-source round-trip
 times and cannot alone establish the 1,000 ms bound used by the primitive.
 
-Still required: authenticated source adapter and publication receipts; fixed
+R374 now supplies a bounded public-response adapter, exclusive fsynced archive,
+signed content checkpoint, exact reported event ids, restart/tamper guards and
+head-pinned replay. It deliberately supplies no UTC interval, candidate
+admission, later-label pairing or forecast score. A signed hash does not prove
+exchange truth, public dissemination or independently verified clock accuracy.
+
+Still required: qualified source/clock evidence and authenticated previous-event
+completeness; fixed
 scheduled collector and append-only ticket/label journal; single-look paired
 forecast scorer and dependent-day inference; no-change baseline availability;
 power/selection disclosure; exact runner/input hashes, registry id and frozen
-PREREG. Until those exist, do not run the primitive on actual market records.
+forecast PREREG. Until those exist, do not score the primitive on market records
+or count an engineering packet as an eligible prospective forecast.
 
 The [deep source batch](intake/deep_leads_batch_20261029.json) identifies Inan's final
 funding-predictability paper (SRC26-032), but does not supply its full costed
@@ -111,3 +121,28 @@ all active forward lanes, their journals, and the reserved batches are unchanged
 An M090 forecast is one research question and M322 one previously selected
 candidate; each needs its own registered trial accounting and a disclosure that
 the candidates were chosen after prior searches. Neither result is proven alpha.
+
+## Intraday continuation: cost and independence constraints (2026-11-02)
+
+Re-read the [official June API fee announcement](https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742)
+on Nov 2, bounded article table and API-precedence/applicability paragraphs.
+The effective table gives maker 0.06% and taker 0.08% per executed notional;
+the page's example still uses the earlier 0.04%/0.06% and must not replace the
+effective table. No exhaustive later-notice/account-entitlement audit is claimed.
+
+At equal entry/exit notionals, fees alone are 12/14/16 bp round trip for
+maker-maker/maker-taker/taker-taker; at 2x they are 24/28/32 and at 3x
+36/42/48. These are arithmetic hurdles, not measured costs or expected profit.
+Actual account models must charge exit notional, spread, impact, latency,
+adverse selection and funding separately. Web promotions are no API-fee proof;
+maker fills require evidence of executions/queue assumptions. Region/account
+eligibility and any current discounts must be established before a live lane.
+
+More trades do not automatically provide more independent evidence. Overlapping
+positions, same-event coin baskets and persistent order flow can leave the
+effective independent sample close to the number of days or event clusters.
+A new intraday lane must freeze its dependence units, loss/PnL account, family
+correction and stopping/power rules before data outcomes. Do not accelerate it
+by counting correlated fills as independent trials or reading the reserved
+batch early. Existing hourly automation stays stopped; dated Nov 3/5 reads
+stay with their current owner. This note starts no new alpha trial or scheduler.

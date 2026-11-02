@@ -50,6 +50,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`level_probability`](level_probability.py): Causal close-level probabilities and common-capital research accounting.
 - [`lighter_depth_state`](lighter_depth_state.py): Fail-closed Lighter full-depth assembly, separate from executable freshness.
 - [`live`](live.py): Public live data from Binance USD-M futures, for paper trading only: no keys, no orders, nothing private.
+- [`m090_capture`](m090_capture.py): Bounded, durable M090 content capture; never qualifies a forecast clock.
 - [`maker`](maker.py): Maker entries: trade a signal with a resting limit order instead of a market order, so the entry pays the maker fee and earns the distance to the reference price instead of paying spread and ...
 - [`markbars`](markbars.py): Offline mark-price contracts for a future registered M265 follow-up.
 - [`market_readiness`](market_readiness.py): Pure source/session readiness for a simulated account, never a trading gate.

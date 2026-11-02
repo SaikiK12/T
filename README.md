@@ -19,7 +19,8 @@ eligibility. See [DIRECTION](docs/DIRECTION.md) for the working priorities and
 [GATES](docs/GATES.md) for admission requirements.
 
 The [M090/M322 implementation handoff](research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
-synthetic prototypes and the inputs still needed before a prospective run.
+the prototypes and remaining admission requirements. The
+[R374 signed-content capture](experiments/m090_content_v2/FINDINGS.md) adds a tested public adapter and replayable signed archive; UTC and forecast scoring remain disabled.
 The [R372 ORB implementation and pilot](experiments/orb_index_v1/FINDINGS.md) contains the runnable four-account engine, frozen input contract, independently checked result and exact execution limits.
 
 **Working here:**
