@@ -4,12 +4,16 @@ A source is polled on a fixed interval; its parsed items (key -> flat dict of ra
 state replayed from the journal, and only differences are appended to <folder>/events.csv:
 
     baseline  first sight of a key in a source's first poll (NOT a true first-seen time: the key may be older)
-    new       key absent from the replayed state, source already had a baseline: poll_utc is the first-seen bound
+    new       key absent from the replayed state, source already had a baseline
     gone      key present before and missing now (only if the source tracks it and the poll covers that key)
     back      key returns after `gone`
     change    one row per field whose raw value differs (old, new, and the source's own field name in src_field)
 
-Every row carries the poll time (poll_utc, poll_ms), the source's own field name (src_field), the source's own event
+Event poll_utc/poll_ms record the local observation time after fetch/parse, never the start of a slow request.
+These local times are NOT a verified UTC clock or durable-publication/deadline evidence. Rows produced before this
+fix used pass-start time and must not be reinterpreted as response-availability times; old rows are never rewritten.
+Poll-attempt rows are stamped on completion; bucket and monthly file still identify the scheduled poll interval.
+Every row carries the source's own field name (src_field), the source's own event
 time as given (event_time_field/event_time_raw) with a derived UTC column where the clock is unambiguous, and the raw
 field values (snapshot) for rows that open or close a key. The journal is the only state: nothing else has to survive
 for the diff to be right, and a repeated poll writes nothing.
@@ -219,7 +223,10 @@ class Journal:
 
 
 def disk_problem(folder, journal):
-    free = shutil.disk_usage(folder if Path(folder).exists() else Path(folder).parent).free / 1e9
+    ancestor = Path(folder)
+    while not ancestor.exists():
+        ancestor = ancestor.parent
+    free = shutil.disk_usage(ancestor).free / 1e9
     if free < MIN_FREE_GB:
         return f"free disk {free:.1f} GB < {MIN_FREE_GB} GB"
     if journal.size_mb() > MAX_FOLDER_MB:
@@ -236,7 +243,7 @@ def poll_one(journal, src, now_s, force=False, state=None):
             return {"source": src.name, "status": "skip", "why": "polled this interval"}
         if fails >= MAX_TRIES or (fails and now_s - last < RETRY_S):
             return {"source": src.name, "status": "skip", "why": f"{fails} failed tries this interval"}
-    t0 = time.time()
+    t0, mono0 = time.time(), time.monotonic()
     counts = {k: 0 for k in ("baseline", "new", "back", "gone", "change")}
     try:
         items, covered = src.fetch(now_s)
@@ -247,16 +254,20 @@ def poll_one(journal, src, now_s, force=False, state=None):
             prev = [k for k, v in known.items() if v["present"] and (covered is None or covered(v["fields"]))]
             if len(prev) >= 5 and len(items) < len(prev) / 2:
                 raise Suspicious(f"list shrank {len(prev)} -> {len(items)}")
-        rows = journal.diff(src, items, covered, known, now_s)
+        observed_s = time.time()
+        if observed_s < t0:
+            raise Suspicious("local wall clock moved backwards during poll")
+        rows = journal.diff(src, items, covered, known, observed_s)
         journal.append_events(rows)
         for r in rows:
             counts[r["event"]] += 1
         err = ""
     except Exception as e:  # noqa: BLE001  (one bad source must not stop the others)
         rows, items, err = [], {}, f"{type(e).__name__}: {e}"[:200].replace("\n", " ")
-    journal.append_poll({"poll_utc": utc(now_s), "poll_ms": int(now_s * 1000), "source": src.name, "bucket": bucket,
+    finished_s = time.time()
+    journal.append_poll({"poll_utc": utc(finished_s), "poll_ms": int(finished_s * 1000), "source": src.name, "bucket": bucket,
                          "interval_s": src.interval_s, "ok": 0 if err else 1, "items": len(items), **counts,
-                         "elapsed_ms": int((time.time() - t0) * 1000), "error": err}, now_s)
+                         "elapsed_ms": int((time.monotonic() - mono0) * 1000), "error": err}, now_s)
     return {"source": src.name, "status": "error" if err else "ok", "items": len(items), "error": err, **counts}
 
 

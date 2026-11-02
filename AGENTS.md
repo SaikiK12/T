@@ -7,6 +7,8 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 2. **Frozen files are never edited.** A changed idea is a new lane with a new id.
 3. **Journals are append-only**: `registry/rounds.csv`, `ledger.csv`, forward tickets. Use the code that appends; never hand-edit a row.
 4. **One writer per file.** Check the mtime before editing. Never kill a process you did not start.
+   Do not stash, reset or switch a worktree while another agent, recorder or research run is writing in it.
+   Integrate and review in a separate persistent worktree; leave active writers' trees in place.
 5. **No real orders, no money movement, no credentials, no deleted data.** Those need the owner. Large downloads need the owner's explicit yes.
 6. **Real money only after paper proves a net gain**, through `lab.gate.go_real()`, in small stakes, placed by the owner.
 7. **Never claim something works without running it.** Say plainly what was not checked.

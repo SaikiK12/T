@@ -103,17 +103,33 @@ def earn_dates(now_s, n=EARN_DAYS):
 
 
 def parse_earnings(raw, date):
-    """Rows of one date. A reply whose asOf is not that date is treated as no rows (never filed under another date)."""
+    """Rows of one validated date; a mismatched/invalid partition fails the whole source poll.
+
+    Returning an empty partition on error would falsely mark its old rows gone.
+    A valid asOf with rows=[]/null remains a genuine empty result.
+    """
     d = json.loads(raw)
-    data = d.get("data") or {}
+    if not isinstance(d, dict) or not isinstance(d.get("data"), dict):
+        raise ValueError("nasdaq earnings: missing data object")
+    status = d.get("status")
+    if status is not None and (not isinstance(status, dict) or str(status.get("rCode")) != "200"):
+        raise ValueError("nasdaq earnings: unsuccessful status")
+    data = d["data"]
     try:
         as_of = datetime.strptime(data.get("asOf", ""), "%a, %b %d, %Y").date().isoformat()
-    except ValueError:
-        as_of = ""
-    out = {}
+    except (TypeError, ValueError) as exc:
+        raise ValueError("nasdaq earnings: invalid asOf") from exc
     if as_of != date:
-        return out
-    for r in data.get("rows") or []:
+        raise ValueError(f"nasdaq earnings: asOf {as_of} differs from requested {date}")
+    if "rows" not in data:
+        raise ValueError("nasdaq earnings: missing rows field")
+    rows = data["rows"]
+    if rows is None:
+        rows = []
+    if not isinstance(rows, list) or any(not isinstance(r, dict) for r in rows):
+        raise ValueError("nasdaq earnings: invalid rows")
+    out = {}
+    for r in rows:
         if not r.get("symbol"):
             continue
         fields = {"date": date, "name": ej.text(r.get("name")), "time": ej.text(r.get("time")),
