@@ -11,6 +11,7 @@ This is a screen. It never claims an edge; the candidate list goes to a later re
 import argparse
 import json
 import multiprocessing as mp
+import shutil
 import sys
 import time
 from pathlib import Path
@@ -23,7 +24,7 @@ from numba import njit
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
-from lab import nulls, prereg, registry  # noqa: E402
+from lab import nulls, prereg  # noqa: E402
 import run_minflow as r349  # noqa: E402  R349's frozen runner: bar loader, input check, calendar constants
 
 LANE = ROOT / "experiments" / "atlas_tape_v1"
@@ -37,6 +38,7 @@ QS = (0.90, 0.95, 0.98, 0.99, 0.995)
 SEED = 386
 NPLACEBO = 300
 MIN_TRADES = 100            # per period, for a cell to be testable (it is still a trial)
+MIN_CLUSTERS = 10           # days (A) or half hours (B) with a trade, per period: fewer leaves the t undefined
 T_PASS = 2.0
 P_PASS = 0.05
 MEXC_WEB_BP, MEXC_API_BP = 3.0, 8.5      # a side, reported only
@@ -179,10 +181,10 @@ def sets_of(coins):
 
 def agg(G, N, cost_rt, W):
     """Per set: summed gross, trades and round-trip cost per cluster. cost_rt is per coin in return units."""
-    Gs = np.einsum("sc,cgqkd->sgqkd", W, G)
-    Ns = np.einsum("sc,cgqkd->sgqkd", W, N)
-    Cs = np.einsum("sc,cgqkd->sgqkd", W * cost_rt[None, :], N)
-    return Gs, Ns, Cs
+    sh = G.shape
+    flat = lambda a: a.reshape(sh[0], -1)  # noqa: E731
+    out = (W @ flat(G), W @ flat(N), (W * cost_rt[None, :]) @ flat(N))
+    return tuple(o.reshape((W.shape[0],) + sh[1:]) for o in out)
 
 
 def cluster_t(G, N, C, sigma, m):
@@ -214,6 +216,8 @@ def real_stats(Gd, Nd, Cd, Gv, Nv, Cv):
     out = {k: np.stack(v) for k, v in out.items()}
     out["n_val"] = Nv.sum(-1)
     out["n_disc"] = Nd.sum(-1)
+    out["ncl_val"] = (Nv > 0).sum(-1)
+    out["ncl_disc"] = (Nd > 0).sum(-1)
     with np.errstate(all="ignore"):
         out["cost_rt"] = Cv.sum(-1) / Nv.sum(-1)
     return out
@@ -259,7 +263,8 @@ def run_base(args):
     Gd, Nd, Cd = agg(Gd, Nd, blk.cost_rt, blk.W)
     Gv, Nv, Cv = agg(Gv, Nv, blk.cost_rt, blk.W)
     st = real_stats(Gd, Nd, Cd, Gv, Nv, Cv)
-    elig = (st["n_val"] >= MIN_TRADES) & (st["n_disc"] >= MIN_TRADES)              # (set, gate, q, k)
+    elig = ((st["n_val"] >= MIN_TRADES) & (st["n_disc"] >= MIN_TRADES)
+            & (st["ncl_val"] >= MIN_CLUSTERS) & (st["ncl_disc"] >= MIN_CLUSTERS))      # (set, gate, q, k)
     disc_ok = elig[None] & (st["disc_m1"] > 0)                                       # (sigma, ...)
     shape = disc_ok.shape
     tab = labels(blk, base, shape)
@@ -567,7 +572,7 @@ def combine(parts, nplacebo):
 
 def write_outputs(df, joint, joint_s, cnt, cnt2, M, sizes, shas, nplacebo, elapsed):
     RES.mkdir(parents=True, exist_ok=True)
-    num = df.select_dtypes("float64").columns
+    num = [c for c in df.select_dtypes("float64").columns if c != "q"]
     out = df.copy()
     out[num] = out[num].astype("float32")
     out.to_csv(RES / "grid.csv.gz", index=False, compression="gzip")
@@ -581,7 +586,8 @@ def write_outputs(df, joint, joint_s, cnt, cnt2, M, sizes, shas, nplacebo, elaps
     sv, q95 = nulls.search_verdict(real_pass, cnt)
     summary = dict(
         lane="atlas_tape_v1", registry=REG_ID, trials=int(sum(sizes.values())), sizes=sizes, placebos=nplacebo,
-        eligible=int(df["eligible"].sum()), disc_ok=int(df["disc_ok"].sum()),
+        eligible=int(df["eligible"].sum()), eligible_by_block=df[df["eligible"]].groupby("block").size().to_dict(),
+        disc_ok=int(df["disc_ok"].sum()), min_trades=MIN_TRADES, min_clusters=MIN_CLUSTERS,
         real_pass_without_maxstat=real_pass, null_pass_mean=float(np.mean(cnt)), null_pass_q95=float(q95),
         null_pass_max=int(np.max(cnt)), null_t2_eligible_mean=float(np.mean(cnt2)),
         count_verdict=sv, candidates=int(len(cand)),
@@ -630,6 +636,10 @@ def main(workers=3, nplacebo=NPLACEBO):
     sha = prereg.verify(LANE / "PREREG.md")
     shas = r349.frozen_inputs(LANE / "PREREG.md")
     log(f"PREREG verified {sha[:12]}; {len(shas)} inputs match")
+    free = shutil.disk_usage(ROOT).free
+    if free < 2e9:
+        raise SystemExit(f"free disk {free / 1e9:.1f} GB < 2 GB: stop")
+    workers = min(workers, 3)
     t_start = time.time()
     walk = walk_costs()
     bars = load_block_a()
