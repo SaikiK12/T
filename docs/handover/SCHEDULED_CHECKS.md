@@ -21,7 +21,7 @@ not compute any markout, lead or fill statistic: M430-M432 need a frozen PREREG 
 the window, note it in M432; if above 0, note which symbols. Then plan the PREREG for M430 (one primary rule, hourly-block
 power) once at least 3 windows exist.
 
-## 2026-11-02 00:40: R367 run and FINDINGS (not run: only 2026-10-29 was usable after the 2.5-day outage; repeat on or after 2026-11-05 00:30 UTC, last chance 2026-11-08)
+## 2026-11-02 00:40: R367 run and FINDINGS (not run: only 2026-10-29 was usable after the 3.1-day outage; repeat on or after 2026-11-05 00:30 UTC, last chance 2026-11-08)
 Verify the PREREG (`experiments/hftlead_v1`), confirm `data/hft` has compacted whole days 2026-10-29 .. 2026-11-01 and that
 the 2026-11-01 merge is done, run `.venv/bin/python scripts/run_hftlead.py` once (re-run only if INCONCLUSIVE for too few
 days), then write `experiments/hftlead_v1/FINDINGS.md` (1x/2x/3x, program trials from `registry.program_trials()`). State

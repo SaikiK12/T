@@ -6,7 +6,9 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
 
 ## The honest state
 - **No lane has prospective, on-time evidence of a net profit yet, and the best retrospective result is not the one first quoted here.** 171 registered rounds: NULL 93, PARTIAL 34, PENDING 30,
-  CONFIRMED 8, DATA_PASS 6. Program trials 9,479,239 (`registry.program_trials()`), so a lone t of 2 to 3 means little.
+  CONFIRMED 8, DATA_PASS 6. Program trials 9,479,239 (`registry.program_trials()`), of which four early mining rounds (R182, R185, R192, R195) hold
+  99.6%; the other 167 rounds total 37,080. `AGENTS.md` says to read a result against that count, but the gates in
+  `docs/GATES.md` correct each lane for its own family, so the 9.5M is context, not a threshold.
 - **The best-evidenced lead is cross-venue funding carry (R275, replicated by R277 and R288), not the single-venue carry
   (R191) that an earlier draft of this page quoted.** Long the venue with the lower funding rate, short the one with the
   higher, about 20 pairs, 1x per leg, frozen rule and costs of 7 / 14 / 21 bp a leg. It earns the funding difference
@@ -15,6 +17,13 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
     max drawdown -0.7%, positive every year (2025 +20.0%, 2026 to Sept +23.7% at 1x). binance+kucoin similar.
   - R288 on Lighter sets: mexc+lighter +6.20% / +5.00% / +3.79%, NW t 6.77, max drawdown -0.2%, 507 days; five of six
     sets replicate, but only 3.5-6.2% at 1x, near a T-bill.
+  - **Post-hoc split of those saved daily series (not a decision), around the dates the venues started scaling funding by
+    interval (Binance 2025-09-18, KuCoin 2026-07-14/24; before that 1h and 4h contracts paid 8x and 2x per settlement):**
+    KuCoin sets still net about +10%/yr at 1x over the 69 days from 2026-07-25 (to 06-30: +11%), so the effect is not only
+    the old unscaled rates, but half the 2025-26 pace. The Lighter sets fell from 5-7% to 2.2-3.4%/yr over the same 69
+    days (mexc+lighter 7.0% to 2.6%), near or below a T-bill. In the KuCoin 4h contracts the median per-settlement rate
+    fell from about 2-3e-4 to exactly 5e-5 (the scaled baseline) in July. Whether the engine treats every venue's
+    settlement interval correctly is not frozen as an audit yet.
   - It is gate 0 plus venue replications of a rule frozen before the new venues were read; it is not prospective evidence.
     R280: no leverage is safe, so it stays at 1x per leg (about 5-10% a year on capital: $500-1,000 on $10k). It needs two
     funded accounts, transfers, and the spread has shrunk on older venues (Hyperliquid books decayed to 5-8%).
@@ -25,17 +34,17 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
 - **Evidence now accrues only on live days, and slowly.** A daily book with a true annual Sharpe of 1.5 needs about 650
   to 1,000 days to reach t 2 (`docs/PAPER_REFINEMENT.md`). The event lanes below are faster, but each is a few events
   a week at most.
-- **Operational risk is the largest cost we measured.** This container was off from about 2026-10-30 16:00 to
-  2026-11-02 17:29 UTC. Every recorder and forward lane has a gap for those 2.5 days: R371 missed its 11-02 ticket, R367
+- **Operational risk is the largest cost we measured.** This container was off from about 2026-10-30 15:45 to
+  2026-11-02 17:29 UTC, about 3.1 days (a 4-day outage on 10-26..29 is in `docs/DIRECTION.md`). Every recorder and forward lane has a gap for it: R371 missed its 11-02 ticket, R367
   lost 10-31 and 11-01, and any settlement or release inside the gap is gone. Nothing in the repository restarts a dead
   machine; `scripts/restart_all.sh` brings everything back once someone runs it.
 
 ## Tier A: running forward on paper (the only road to money)
 | Lane | What it bets | Evidence so far | Needs | Earliest read |
 |---|---|---|---|---|
-| **R364 / R355** settlement scalp (Lighter vs a deep Binance settlement; MEXC+Lighter hop) | Short Lighter at T-10 s, cover at T+60 s, when Binance's predicted rate is at least 0.3% negative | Gate 0 (R363): +23.4 / +19.6 / +15.8 bp a hop at 1x / 2x / 3x, t 4.34 / 3.58 / 2.83, on 134 hops. They were **not blind**: R362 had read their Binance seconds. Forward: R364 has logged 11 decisions and R355 93, with 0 scored hops in both | 40 scored hops for an interim look, 80 for the final one. About one qualifying hop every two days | Months |
-| **R371** US-open leaders (R300 "us10 n3 follow") | 10:00 New York: long the 3 strongest, short the 3 weakest top-50 perps since 00:00 UTC, flat at 24:00 | Parent R300 was NULL (+38.7 bp/day, t 1.28; 2x +4.7). Forward, MEXC book: day 1 -14.6% (2.2 daily SDs), day 2 +0.5%, 1x. 2 of 500 scored days; 11-02 ticket missed (outage) | Futility read at 125 scored days, PASS or NULL at 500 | About 6 months for futility |
-| **R369** EIA release lag (Lighter lags Binance/Hyperliquid after a release) | Follow the lead after crude and gas storage releases | 1 valid event (gas, 10-29), no trade yet. R370 (CME tick leader) was INCONCLUSIVE | 8 valid events and 6 lag-filtered trades per type | Crude 11-04 15:30, gas 11-05 15:30 are the next two events; at one release a week per type, the 8-event bar is about two months away |
+| **R364 / R355** settlement scalp (Lighter vs a deep Binance settlement; MEXC+Lighter hop) | Short Lighter at T-10 s, cover at T+60 s, when Binance's predicted rate is at least 0.3% negative | Gate 0 (R363): +23.4 / +19.6 / +15.8 bp a hop at 1x / 2x / 3x, t 4.34 / 3.58 / 2.83, on 134 hops. Not blind (R362 had read their Binance seconds) **and not cost-robust**: R363 charged volume-band costs (3.8 bp a round trip) while R364's PREREG measured $1k round trips of 70 / 61 / 163 / 22 bp for KAITO, RIVER, AVNT, BERA, the four coins that hold 77% of the sum. The other 62 hops net +11.5 bp, which is what R364's cost gate keeps; its own PREREG says power there is low and it is a futility screen. Trigger: the Binance predicted rate at T-1h, either sign, at least 0.3% in size. Forward: R364 has logged 11 decisions and R355 95, with 0 scored hops in both | 40 scored hops for an interim look, 80 for the final one. The ungated archive rate was one hop every 2.4 days; with the cost gate fewer | Months |
+| **R371** US-open leaders (R300 "us10 n3 follow") | 10:00 New York: long the 3 strongest, short the 3 weakest top-50 perps since 00:00 UTC, flat at 24:00 | Parent R300 was NULL (+38.7 bp/day, t 1.28; 2x +4.7). Forward, MEXC book: day 1 -14.6% (2.2 daily SDs), day 2 +0.5%, 1x. 2 of 500 scored days; 11-02 ticket missed (outage) | Futility read at 125 scored days, PASS or NULL at 500. Power: the daily SD is about 650 bp, so even a true +52 bp/day reaches t 2 at 500 days only about 41% of the time (17% if +30), and the futility rule rarely fires on a true +50 | About 6 months for futility |
+| **R369** EIA release lag (Lighter lags Binance/Hyperliquid after a release) | Follow the lead after crude and gas storage releases | 1 valid event (gas, 10-29), no trade yet. R370 (CME tick leader) was INCONCLUSIVE | 8 valid events and 6 lag-filtered trades per type | Crude 11-04 15:30, gas 11-05 15:30 are the next two events; at one release a week per type, the 8-event bar is about two months away. The first event had a lag ratio near 1 at 1 s, R370 found 0 of 24 and 1 of 21 filtered, and PASS needs 6 filtered trades in 8 events, so INCONCLUSIVE is the likely outcome; a pass is worth about $1 a trade (a probe, not a money lane) |
 | **Cross-venue carry books** (R278 Gate/Binance/Hyperliquid, R279 KuCoin, R294 MEXC+Lighter, R285 mix; R220 is the single-venue book) | Long the low-funding venue, short the high-funding one, about 20 pairs at 1x | Gate 0 and replications: +5 to +10% a year at 2x, max drawdown under 1% (see above). Forward: 2 to 3 on-time days, about 0% | 90 / 180 scored days, NW t at least 2.5, 2x above 0, drawdown above -3% | About late January 2027 for 90 days |
 | **Flow books** (R215, R218, R200, R214) | Order-flow shorts, universe-hedged | R215 +0.4%, R218 +0.7% over 10 on-time days at 1x; R200 -4.8%, R214 -5.0% | Day-90 futility, efficacy at 182 / 365 | Months |
 | **Event shorts** (R266 unlocks, R268 delist, R270 Monitoring Tag, R272 announcements) | Short after unlock or notice | 0 to 1 scored | 12 to 120 scored events | Months |
@@ -65,14 +74,42 @@ The paste is a literature scan. None of these is evidence: each is a source's cl
 | Options signals (DVOL-beta, gamma inventory) | R209 (DVOL minus realized) was NULL. M300 (dealer gamma) is queued. No net perp results in either study | **M456**, held until a parent passes |
 | High-volatility reversal (8-10 weeks) | R238 found its rev28, MAX, IVOL and skew books were one high-volatility tilt that paid in 2021; the preprint was not fully accessible and has no clean holdout | **M457**, only as a residual of that tilt |
 
+## Tier D: what five read-only subagents added on 2026-11-02 (hypotheses, nothing run)
+Each came from a fresh reviewer with one lens (post-mortem of the nulls, structural costs, markets outside the crypto-perp
+box, event timing, an auditor). Their claims about outside sources are unverified; the repo claims were checked above.
+- **R332 `mlrank_v3`: the largest unexplained positive in the project, parked since 10-26.** R304's weekly GBM ranker made
+  +58.9 bp/day net in validation (t 4.21; 2x +56.8, 3x +54.6; discovery t 5.99; rank IC 0.19), and R305 could not explain it.
+  Its metrics columns exist only for coins that entered the top 100 by volume within 35 days: a look-ahead. Both the
+  post-mortem and the auditor ranked a leak-free rerun first. Code, the complete metrics refetch (`data/metrics_full`) and
+  a draft PREREG are in the repo; it needs a freeze, a registry row and a run (7 trials). A NULL closes M042 on this
+  panel; a PARTIAL earns a forward lane.
+- **Cost re-pricing (R371's parent, R300):** at MEXC's web taker (2 bp on 956 contracts, 0 on 142) rather than the lab's
+  8.5 bp a side, R300 re-prices to about +61 bp/day and t about 2.0, on seen days only.
+- **Untested directions with data on disk:** Deribit weekend defined-risk short volatility (needs chain-priced fills the
+  repo lacks, which is why M249 is blocked); spot-hedged tokenised-gold carry (PAXG/XAUT); a MEXC-native index deviation
+  on 0/0 contracts; a monthly supply-growth and fee-yield factor (R282 tested only 1 to 7 days).
+- **Events with public timestamps and no recorder:** Binance pre-market, TradFi and pre-IPO perp launches (R271's
+  perp_launch excludes them), earnings 8-Ks on stock perps (about 400 a year), CME-closure weekend convergence on gold,
+  silver and WTI (the first closure, 10-30 to 11-01, fell inside the outage; the next is 11-06 22:00 to 11-08 23:00 UTC),
+  Upbit and Bithumb listings (blocked by 403s), and new-instrument openings on Hyperliquid and Lighter. They cannot be
+  backfilled, which is the argument for a first-sight detector.
+- **Outside the box:** prediction-market structural bias (Kalshi 72M trades: takers -1.12%, makers +1.12% a trade, gross;
+  needs data and an access check) and Polymarket against option-implied digitals. Rejected with reasons: DEX LP, depeg
+  reversion, dated-futures carry (basis below T-bills).
+- **Structural costs:** negative-cost tiers are out of reach at $10k; zero-cost venues only help a gross edge, so the PnL
+  has to come from funding mechanics or house-side roles (Hyperliquid HLP measured +19% in 2025, +8.2% in 2026 to 10-21,
+  4.3%/yr over the last 30 days; depositing needs a real order, which is the owner's).
+
 ## What would change the picture, in order
 1. **Reserved batch 1 on 2026-11-03.** A pass on unseen days is the first real news in weeks; a null is also a result.
-2. **Settlement scalp forward hops (R364, R355).** It has the largest gate-0 net of any lane. It is also a number
-   that was not blind, so treat the +23.4 bp as an upper bound until forward hops count.
-3. **EIA lag (R369) on 11-04 and 11-05.** A small, event-driven lane; its first two real events decide whether it is
-   worth keeping.
-4. **Nothing else in the queue is close.** The 105 blocked and 48 untested rows are ideas, and 93 of 171 rounds were
-   nulls. More strategy descriptions will not move this faster than the forward clocks do.
+   The auditor notes that only about 2 of its 10 cells (carry C14 at alpha 0.0273, unlock short C01 at 0.0147) have a
+   non-trivial alpha; the other eight sit at 0.001 and need N_min 8 events.
+2. **R332 (leak-free ML ranker).** The biggest backtest number in the program and the cheapest to settle: data and code
+   exist.
+3. **Cross-venue carry forward lanes (R278, R279, R294).** Not exciting in dollars ($500 to $1,000 a year on $10k) but the
+   only family with a replicated, net-of-2x-cost backtest; the Lighter sets are fading, the KuCoin sets are not yet.
+4. **Settlement scalp (R364, R355).** Treat the +23.4 bp as an upper bound that the cost gate cuts to about +11.5.
+5. **Nothing else in the queue is close.** More strategy descriptions will not move this faster than the forward clocks.
 
 ## Decisions that are the owner's
 - **Where the recordings live.** The `data-archive` branch hit its 900 MB cap on 2026-10-30. On 2026-11-02 it was packed
