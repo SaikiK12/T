@@ -1,32 +1,33 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-10-30T00:37:23.368913+00:00",
+ "updated": "2026-11-02T18:06:37.665593+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 1.067,
+  "binance": 1.001,
+  "gate": 1.093,
   "kucoin": 1.0
  },
  "data": {
   "binance": {
    "files": 873,
-   "failed": 3,
+   "failed": 4,
    "changed_on_overlap": 0,
    "failed_some": [
     "AERGOUSDT",
     "BDXNUSDT",
+    "NUUSDT",
     "SXPUSDT"
    ]
   },
-  "kucoin": {
-   "files": 642,
+  "gate": {
+   "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "gate": {
-   "files": 860,
+  "kucoin": {
+   "files": 642,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -39,12 +40,6 @@
   "slots": 20,
   "why": "R277's replicating set with the higher NW t (11.41)",
   "held_now": [
-   {
-    "coin": "1000RATSUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.4975
-   },
    {
     "coin": "LIGHTUSDT",
     "long": "gate",
@@ -92,12 +87,6 @@
     "long": "kucoin",
     "short": "gate",
     "spread_in": 0.4786
-   },
-   {
-    "coin": "RSRUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.4053
    },
    {
     "coin": "BRUSDT",
@@ -158,15 +147,27 @@
     "long": "kucoin",
     "short": "gate",
     "spread_in": 0.3202
+   },
+   {
+    "coin": "DOODUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.3635
+   },
+   {
+    "coin": "AKEUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.4851
    }
   ],
-  "scored_days": 8,
-  "late_days": 5,
-  "total": -0.00017280400000000036,
-  "total_2x": -0.0015728040000000001,
-  "total_3x": -0.002972804,
-  "total_close": 0.0007961859999999999,
-  "nw_t": -0.12264094301373223,
+  "scored_days": 11,
+  "late_days": 7,
+  "total": -0.00014533080000000043,
+  "total_2x": -0.0017553308,
+  "total_3x": -0.0033653308000000004,
+  "total_close": 0.0008055720999999999,
+  "nw_t": -0.09709436554728015,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -239,12 +240,6 @@
     "spread_in": 0.445
    },
    {
-    "coin": "MINAUSDT",
-    "long": "binance",
-    "short": "kucoin",
-    "spread_in": 0.3826
-   },
-   {
     "coin": "BLURUSDT",
     "long": "binance",
     "short": "kucoin",
@@ -297,18 +292,24 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.4477
+   },
+   {
+    "coin": "ARKUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.4746
    }
   ],
-  "scored_days": 8,
-  "late_days": 5,
-  "total": 0.0006025059999999998,
-  "total_2x": -0.0005174940000000001,
-  "total_3x": -0.0016374940000000004,
-  "total_close": 0.0016700889,
-  "nw_t": 0.6346453068256528,
+  "scored_days": 11,
+  "late_days": 7,
+  "total": 0.0010291488,
+  "total_2x": -0.00016085120000000012,
+  "total_3x": -0.0013508512000000004,
+  "total_close": 0.0020967317,
+  "nw_t": 0.9773601805622263,
   "max_drawdown": -0.0008626846,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-10-30"
+ "last_day": "2026-11-02"
 }

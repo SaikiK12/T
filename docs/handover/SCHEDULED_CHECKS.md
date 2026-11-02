@@ -33,6 +33,8 @@ closes M427 as registered only (the successor family is M430-M433, new ids); a P
 orders. Also check `data/rawtape/status.json` and report the RPI pilot count.
 
 ## 2026-11-03 01:07: reserved batch 1 (R286)
+**Found by the dry run on 2026-11-02:** the runner's dry parity (repeated inside `--run`) loads `data/research/bins.npy` for C11, which had been compressed to `bins.npy.xz` (6.8 GB uncompressed; 7.8 GB free, 2.5 GB recorder floor). C11 discards the bins, so a sparse placeholder with the true header (`data/research/bins.npy`, see `bins.npy.PLACEHOLDER.txt` beside it) stands in. Remove it after the batch has run: `rm data/research/bins.npy data/research/bins.npy.PLACEHOLDER.txt`, and say in FINDINGS that the placeholder was used. Never run `run_battery.py`, `speed_test.py` or `build_extra_views.py` while it exists.
+
 First refresh the post-archive bars: `.venv/bin/python scripts/fetch_binance_recent.py --unlock-post-archive --end <yesterday>`.
 Then run `.venv/bin/python scripts/run_reserved_batch.py --run` in the background. It verifies the frozen PREREG and the
 inputs and re-runs the dry parity check before the read. Afterwards write `experiments/reserved_batch1/FINDINGS.md`
