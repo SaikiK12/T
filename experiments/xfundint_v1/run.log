@@ -1,0 +1,8 @@
+22:36:13 data files verified against docs/provenance: 4750
+22:37:02 KuCoin contracts in the table by class: {'1h': 1, '4h': 396, '8h': 245, 'oth': 0, 'unk': 0}
+22:37:11 parity gate+kucoin L14d th5% K20: trades 1153 vs 1153 identical True; days 2078 vs 2078; max|net diff| 5.0e-11; dates True; OK
+22:37:18 gate+kucoin done in 16s
+22:37:28 parity binance+kucoin L14d th5% K20: trades 1168 vs 1168 identical True; days 2078 vs 2078; max|net diff| 5.0e-11; dates True; OK
+22:37:36 binance+kucoin done in 18s
+22:37:36 cells: 56 expected 56
+22:37:36 decision {"gate+kucoin": {"pre_share_1h4h_of_net_funding": 0.6498919457580634, "A": true, "post_8h_class_net1x_ann_pct": 0.3360956090164928, "B": false, "post_full_net1x_ann_pct": 10.521258091954481, "post_full_nw_t": 3.7040553589476235, "post_days": 69, "C": true, "label": "robust"}, "binance+kucoin": {"pre_share_1h4h_of_net_funding": 0.6661861484290975, "A": true, "post_8h_class_net1x_ann_pct": 0.0682978570965773, "B": false, "post_full_net1x_ann_pct": 10.038333507811071, "post_full_nw_t": 3.1148579665245557, "post_days": 69, "C": true, "label": "robust"}, "lead_label": "robust", "trials": 56}

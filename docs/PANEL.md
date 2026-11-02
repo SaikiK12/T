@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-11-02 18:20 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-11-02 22:38 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 52 |
-| Ideas partly tested | 49 |
+| Ideas in the queue, untested | 53 |
+| Ideas partly tested | 48 |
 | Ideas blocked (data, download, compute) | 105 |
-| Rounds in the registry | 171 (NULL 93, PARTIAL 34, PENDING 30, CONFIRMED 8, DATA_PASS 6) |
-| Program trials | 9,479,239 |
+| Rounds in the registry | 175 (NULL 97, PARTIAL 34, PENDING 30, CONFIRMED 8, DATA_PASS 6) |
+| Program trials | 9,479,264 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 15 |
 | Strict on-time paper days so far | 1 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -63,46 +63,46 @@ Process state, declared data checks and statistical eligibility are separate.
 
 | task_id | category | state | data_state | run_id |
 |---|---|---|---|---|
-| R200 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_TICKER | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_FUNDING | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_DERIBIT | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_LTRADES | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_OPTEXP | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_CPERPS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_LIGHTER | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_DEX | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_WALLETS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_NOTICES | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_UNLOCKS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_TAPE | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_HFT | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_RAW | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_NEWS | Market data collection | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R268 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R270 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R272 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R214 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R215 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R224 | Execution measurement | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R218 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R220 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R221 | Evidence decisions | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R225 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R266 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R278 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R279 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R294 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R355 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R364 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R369 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R371 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| R285 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| LAG | Data integrity | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| PANEL | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| CATALOG | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| DASH | Reporting | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
-| REC_DIGEST | Data integrity | BLOCKED | UNVERIFIED | 20261102T181500_24626 |
+| R200 | Prospective paper | FAILED | COMPLETE | 20261102T223014_1530 |
+| REC_TICKER | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_FUNDING | Market data collection | SUCCESS | COMPLETE | 20261102T223014_1530 |
+| REC_DERIBIT | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_LTRADES | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_OPTEXP | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_CPERPS | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_LIGHTER | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_DEX | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_WALLETS | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_NOTICES | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_UNLOCKS | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_TAPE | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_HFT | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_RAW | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| REC_NEWS | Market data collection | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R268 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R270 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R272 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R214 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R215 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R224 | Execution measurement | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R218 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R220 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R221 | Evidence decisions | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R225 | Prospective paper | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| R266 | Prospective paper | SUCCESS | COMPLETE | 20261102T223014_1530 |
+| R278 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R279 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R294 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R355 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R364 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R369 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R371 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| R285 | Prospective paper | SUCCESS | UNVERIFIED | 20261102T223014_1530 |
+| LAG | Data integrity | BLOCKED | UNVERIFIED | 20261102T223014_1530 |
+| PANEL | Reporting | RUNNING | UNVERIFIED | 20261102T223014_1530 |
+| CATALOG | Reporting | PENDING | UNVERIFIED | 20261102T223014_1530 |
+| DASH | Reporting | PENDING | UNVERIFIED | 20261102T223014_1530 |
+| REC_DIGEST | Data integrity | PENDING | UNVERIFIED | 20261102T223014_1530 |
 
 ## 3. Open methods
 
@@ -135,13 +135,13 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R364 | settlelit_fwd | RUNNING | PENDING | 1 |
-| R367 | hftlead_v1 | REGISTERED | PENDING | 16 |
-| R368 | eventdrift_v1 | DONE | NULL | 26 |
-| R369 | eventlag_fwd | REGISTERED | PENDING | 24 |
 | R370 | cmelead_v1 | DONE | PENDING | 16 |
 | R371 | usopen_fwd | REGISTERED | PENDING | 2 |
 | R257 | mixed_signals_v1 | DONE | NULL | 36 |
 | R372 | orb_index_v1 | REGISTERED | PENDING | 12 |
+| R332 | mlrank_v3 | DONE | NULL | 7 |
+| R382 | fundvol_v1 | DONE | NULL | 6 |
+| R385 | dvolbeta_v1 | DONE | NULL | 4 |
+| R380 | hvrev_v1 | DONE | NULL | 8 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

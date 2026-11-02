@@ -293,8 +293,10 @@ def main():
                 diffs.append(float(np.abs(mynet - en).max()) if len(mynet) == len(en) else float("inf"))
         dates = np.array([day(d + 1) for d in rows.day])
         eng1 = eng_d[(eng_d.strategy == lab) & (eng_d.cost_multiple == 1)]
-        dates_ok = bool((dates[:len(eng1) - (1 if dev_end else 0)] == eng1.date.to_numpy()[:len(dates) - (1 if dev_end else 0)]).all()) \
-            and (dev_end is not None or len(dates) == len(eng1))
+        cut = 1 if dev_end else 0                          # a prefix run: the last row's legs differ, so it is left out
+        ed = eng1.date.to_numpy()
+        dates_ok = bool(len(dates) - cut <= len(ed) and (dates[:len(dates) - cut] == ed[:len(dates) - cut]).all()
+                        and (dev_end is not None or len(dates) == len(ed)))
         same = (dev_end is not None or mine == theirs) and max(diffs) < R277_PARITY_TOL and dates_ok
         ok &= same
         parity[sname] = {"trades_mine": len(mine), "trades_r277": len(theirs), "trades_identical": mine == theirs,
