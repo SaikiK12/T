@@ -86,3 +86,10 @@ not stashed, reset or switched; its uncommitted state and open descriptors
 remain in place. Only the owning session restarts its event collectors after
 review, recording the cutover and retaining legacy journals. R386 and the
 other forward daemons are not restarted for these recorder fixes.
+
+## Cutover (owning session, 2026-11-02T23:45:07Z)
+The two event collectors started at 23:12 UTC on the pre-fix code (pids 15805, 15810) were stopped with SIGTERM and
+restarted with `ensure` on `cf671a5` at 23:45:07 UTC. Rows before that time carry pass-start timestamps; rows after it
+carry post-fetch receipt times. The journals were kept in place (`data/events/listings/events.csv` 5,483 lines and
+`data/events/tradfi_calendar/events.csv` 1,750 lines before and after the restart). R386, its stdout follower and the
+other forward daemons were not touched.
