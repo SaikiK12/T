@@ -5,11 +5,23 @@ It is not a queue: `registry/methods.csv` is the live queue, `registry/rounds.cs
 PREREG and FINDINGS say exactly what was tested. Every number below is copied from those files or from a lane journal.
 
 ## The honest state
-- **No lane has shown a net profit that survives 2x costs.** 171 registered rounds: NULL 93, PARTIAL 34, PENDING 30,
+- **No lane has prospective, on-time evidence of a net profit yet, and the best retrospective result is not the one first quoted here.** 171 registered rounds: NULL 93, PARTIAL 34, PENDING 30,
   CONFIRMED 8, DATA_PASS 6. Program trials 9,479,239 (`registry.program_trials()`), so a lone t of 2 to 3 means little.
-- **The only frozen holdout pass is funding carry** (R191): +1.45% over 457 days, t 2.07 at 1x, t 1.14 at 2x. That is
-  below a T-bill and is not the goal. The flow books' holdout was chosen after the fact (book B t 2.72, MEXC replay about
-  zero) and the holdout is spent (`docs/CRITIQUE.md`).
+- **The best-evidenced lead is cross-venue funding carry (R275, replicated by R277 and R288), not the single-venue carry
+  (R191) that an earlier draft of this page quoted.** Long the venue with the lower funding rate, short the one with the
+  higher, about 20 pairs, 1x per leg, frozen rule and costs of 7 / 14 / 21 bp a leg. It earns the funding difference
+  (funding share 0.94-1.04 of net gross) and was caught by a post-hoc audit of this page on 2026-11-02:
+  - R277 on KuCoin sets: gate+kucoin +11.76% / +10.34% / +8.92% a year at 1x / 2x / 3x over 2,078 days, NW t 11.41,
+    max drawdown -0.7%, positive every year (2025 +20.0%, 2026 to Sept +23.7% at 1x). binance+kucoin similar.
+  - R288 on Lighter sets: mexc+lighter +6.20% / +5.00% / +3.79%, NW t 6.77, max drawdown -0.2%, 507 days; five of six
+    sets replicate, but only 3.5-6.2% at 1x, near a T-bill.
+  - It is gate 0 plus venue replications of a rule frozen before the new venues were read; it is not prospective evidence.
+    R280: no leverage is safe, so it stays at 1x per leg (about 5-10% a year on capital: $500-1,000 on $10k). It needs two
+    funded accounts, transfers, and the spread has shrunk on older venues (Hyperliquid books decayed to 5-8%).
+    Forward lanes R278 / R279 / R294 have 2 to 3 on-time days, which cannot show a few percent a year yet.
+  The single-venue carry (R191, the only holdout pass of the first program) is +1.45% over 457 days at 1x, t 1.14 at 2x.
+  The flow books' holdout was chosen after the fact (book B t 2.72, MEXC replay about zero) and is spent
+  (`docs/CRITIQUE.md`).
 - **Evidence now accrues only on live days, and slowly.** A daily book with a true annual Sharpe of 1.5 needs about 650
   to 1,000 days to reach t 2 (`docs/PAPER_REFINEMENT.md`). The event lanes below are faster, but each is a few events
   a week at most.
@@ -24,7 +36,7 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
 | **R364 / R355** settlement scalp (Lighter vs a deep Binance settlement; MEXC+Lighter hop) | Short Lighter at T-10 s, cover at T+60 s, when Binance's predicted rate is at least 0.3% negative | Gate 0 (R363): +23.4 / +19.6 / +15.8 bp a hop at 1x / 2x / 3x, t 4.34 / 3.58 / 2.83, on 134 hops. They were **not blind**: R362 had read their Binance seconds. Forward: R364 has logged 11 decisions and R355 93, with 0 scored hops in both | 40 scored hops for an interim look, 80 for the final one. About one qualifying hop every two days | Months |
 | **R371** US-open leaders (R300 "us10 n3 follow") | 10:00 New York: long the 3 strongest, short the 3 weakest top-50 perps since 00:00 UTC, flat at 24:00 | Parent R300 was NULL (+38.7 bp/day, t 1.28; 2x +4.7). Forward, MEXC book: day 1 -14.6% (2.2 daily SDs), day 2 +0.5%, 1x. 2 of 500 scored days; 11-02 ticket missed (outage) | Futility read at 125 scored days, PASS or NULL at 500 | About 6 months for futility |
 | **R369** EIA release lag (Lighter lags Binance/Hyperliquid after a release) | Follow the lead after crude and gas storage releases | 1 valid event (gas, 10-29), no trade yet. R370 (CME tick leader) was INCONCLUSIVE | 8 valid events and 6 lag-filtered trades per type | Crude 11-04 15:30, gas 11-05 15:30 are the next two events; at one release a week per type, the 8-event bar is about two months away |
-| **Carry books** (R220, R278, R279, R294, R285 mix) | Funding carry on MEXC, KuCoin, Lighter | About 0% on 2 to 10 on-time days at 1x | 90 / 180 scored days | Months |
+| **Cross-venue carry books** (R278 Gate/Binance/Hyperliquid, R279 KuCoin, R294 MEXC+Lighter, R285 mix; R220 is the single-venue book) | Long the low-funding venue, short the high-funding one, about 20 pairs at 1x | Gate 0 and replications: +5 to +10% a year at 2x, max drawdown under 1% (see above). Forward: 2 to 3 on-time days, about 0% | 90 / 180 scored days, NW t at least 2.5, 2x above 0, drawdown above -3% | About late January 2027 for 90 days |
 | **Flow books** (R215, R218, R200, R214) | Order-flow shorts, universe-hedged | R215 +0.4%, R218 +0.7% over 10 on-time days at 1x; R200 -4.8%, R214 -5.0% | Day-90 futility, efficacy at 182 / 365 | Months |
 | **Event shorts** (R266 unlocks, R268 delist, R270 Monitoring Tag, R272 announcements) | Short after unlock or notice | 0 to 1 scored | 12 to 120 scored events | Months |
 
