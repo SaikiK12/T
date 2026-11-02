@@ -1,0 +1,18 @@
+{
+  "url": "http://timestamp.digicert.com",
+  "policy": "2.16.840.1.114412.7.1",
+  "signer_sha256": "2da09da7f4131f9fe72db6c5e6e9c9656755af043f1ea742cc0d2120e141ebfc",
+  "crl_urls": [
+    "https://crl3.digicert.com/DigiCertTrustedG4TimeStampingRSA4096SHA2562025CA1.crl",
+    "https://crl3.digicert.com/DigiCertTrustedRootG4.crl"
+  ],
+  "precision_policy": "Content evidence only. No UTC interval or forecast eligibility, regardless of reported Accuracy. No CPS/local-clock fallback.",
+  "sources": [
+    "https://datatracker.ietf.org/doc/html/rfc3161",
+    "https://knowledge.digicert.com/general-information/rfc3161-compliant-time-stamp-authority-server",
+    "https://www.digicert.com/content/dam/digicert/pdfs/legal/digicert-public-trust-cp-cps-v7-09.pdf"
+  ],
+  "public_material_only": true,
+  "chain_source": "https://knowledge.digicert.com/content/dam/kb/attachments/time-stamp/DigiCertTrustedG4TimeStampingRSA4096SHA2562025CA1.pem",
+  "chain_download_sha256": "5e13de210e735b614d6ec948361aadef9dd6c0ef575382a75f57fd59e183b90e"
+}

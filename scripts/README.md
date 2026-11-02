@@ -38,7 +38,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (19)
+## Record: point-in-time collectors (cannot be backfilled) (20)
 
 - [`record_commodity_perps.py`](record_commodity_perps.py): Best quote, trades and reference prices of the 24/7 commodity and index perps on Hyperliquid (HIP-3 `xyz` dex) and Kraken Futures, plus Binance's own TradFi perps, side by side (M443 WTI ...
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
@@ -48,6 +48,7 @@ line is the first line of the script's own docstring.
 - [`record_hft.py`](record_hft.py): High-rate feed recorder (M427-M429 data): BTC and ETH top of book and trades at 100 ms on Binance USDT and USDC perps, Bybit USDT perps and Hyperliquid, into data/hft/. Public websockets only; ...
 - [`record_lighter_book.py`](record_lighter_book.py): Hourly snapshot of what a taker order costs on Lighter, the zero-fee perp DEX (docs/VENUE_STRUCTURE.md): for every active perp, the best bid and ask, the cost per side of a market order of USD 1k ...
 - [`record_lighter_trades.py`](record_lighter_trades.py): Lighter public trade and best-quote stream for the commodity perps (M441, M443): every trade with both account ids, who was the maker, each side's position and entry value before the fill, the ...
+- [`record_m090_content.py`](record_m090_content.py): One frozen public M090 signed-content capture or head-pinned offline audit.
 - [`record_mexc_depth.py`](record_mexc_depth.py): mexc_costs (R224): what a taker order costs on MEXC for the coins the forward books trade, measured from the public order book, as set out in experiments/mexc_costs/PREREG.md.
 - [`record_mexc_ticker.py`](record_mexc_ticker.py): Hourly snapshot of every MEXC perpetual: the displayed funding rate with its next settlement time, cycle and caps (funding_rate), and the ticker (last, bid/ask, index and fair price, 24 h volume, ...
 - [`record_news.py`](record_news.py): Point-in-time headline recorder: every FEEDS source polled every POLL_S seconds, each new item kept once with the time we first saw it.
@@ -88,7 +89,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (135)
+## Run: one lane's frozen measurement (136)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -96,6 +97,7 @@ line is the first line of the script's own docstring.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
 - [`run_atlas.py`](run_atlas.py): atlas_v1 (R185): the gross-edge atlas, as set out in experiments/atlas_v1/PREREG.md.
+- [`run_atlas_tape.py`](run_atlas_tape.py): R386 atlas_tape_v1: one large gate-0 screen of short-horizon conditional forward returns on the recorded tape-scale data.
 - [`run_auction.py`](run_auction.py): auction_v1 (R290): auction-market levels on 1-minute bars of the BTC, ETH and SOL perps, from real session anchors and from placebo clocks, as set out in experiments/auction_v1/PREREG.md (M305, ...
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
