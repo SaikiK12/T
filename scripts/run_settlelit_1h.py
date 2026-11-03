@@ -55,6 +55,7 @@ ENTRIES, EXITS, MULTS = lit.ENTRIES, lit.EXITS, lit.MULTS
 PRIMARY = (0, 1)
 TRIALS = len(ENTRIES) * len(EXITS)
 T_MIN = 2.0
+MEASURED_RT_BP = {"RIVERUSDT": 61.0}    # R364's PREREG: a $1k Lighter round trip measured on 2026-10-28 (reported only)
 log = base.log
 
 
@@ -296,6 +297,13 @@ def main():
                                      price_bp=("price", lambda v: v.mean() * 1e4),
                                      fund_bp=("fund", lambda v: v.mean() * 1e4),
                                      cost_rt_bp=("cost_h_bp", lambda v: 2 * v.mean())))
+    pt = tr[tr.trial == lit.name(*PRIMARY)]
+    rt = pt.coin.map(MEASURED_RT_BP).fillna(2 * pt.cost_h_bp).to_numpy(float)
+    measured = (pt.price + pt.fund).to_numpy() - rt / 1e4
+    prim["net1_measured_river_bp"] = float(measured.mean() * 1e4)
+    prim["t1_measured_river"] = rule.decide_stats(measured, pt.cluster.to_numpy())[1]
+    log(f"reported: primary net1 with RIVER at its measured {MEASURED_RT_BP['RIVERUSDT']:.0f} bp round trip "
+        f"{prim['net1_measured_river_bp']:+.1f} bp (t {prim['t1_measured_river']:.2f})")
     bk.to_csv(res / "trials.csv", index=False, float_format="%.6g")
     per_coin.to_csv(res / "per_coin.csv", float_format="%.6g")
     tr.to_csv(res / "hops.csv.gz", index=False, float_format="%.8g")
