@@ -53,7 +53,7 @@ def forward_tasks(python=".venv/bin/python"):
     recorders, and scripts/forward_lag.py counts an hour it computes more than
     60 minutes after the bar's close as late.
     """
-    carry_locks = {"R278": ".xfund.lock", "R279": ".xfund_kc.lock", "R294": ".xfund_lt.lock"}
+    carry_locks = {"R278": ".xfund.lock", "R279": ".xfund_kc.lock", "R294": ".xfund_lt.lock", "R390": ".xfund_bg.lock"}
 
     def task(name, script, needs=(), optional=(), timeout=900, files=()):
         lock = carry_locks.get(name)
@@ -97,6 +97,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R278", "forward_xfund.py", timeout=1500),
         task("R279", "forward_xfund_kc.py", timeout=1500),
         task("R294", "forward_xfund_lt.py", timeout=1500),
+        task("R390", "forward_xfund_bg.py", timeout=1500),
         task("R355", "forward_settlehop.py", timeout=60),   # starts the lane's hourly daemon if it is down
         task("R364", "forward_settlelit.py", timeout=60),   # starts the lane's settlement daemon if it is down
         task("R369", "run_eventlag.py", (), ("REC_CPERPS", "REC_LTRADES"), timeout=300),   # scores EIA releases 15 min after
@@ -157,6 +158,8 @@ LANES = (
          'NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%', (('A', 'cross-venue carry, Gate + KuCoin'), ('B', 'cross-venue carry, Binance + KuCoin'))),
     Lane('R294', 'xfund_lt_fwd', 'cross-venue funding carry on Lighter, book A', 'MEXC, Lighter', 'API', 90,
          'NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%', (('A', 'cross-venue carry, MEXC + Lighter'),)),
+    Lane('R390', 'xfund_bg_fwd', 'cross-venue funding carry, Binance + Gate (R286 C14 gate-1 pass), book A', 'Binance, Gate', 'API', 90,
+         'NW t >= 2.5 at 90 / 180 scored days, 2x > 0, drawdown above -3%', (('A', 'cross-venue carry, Binance + Gate'),)),
     Lane("R355", "settlehop_fwd", "settlement hop on the displayed funding rate (MEXC decided, Gate reported)",
          "MEXC + Lighter", "manual-web", 80,
          "futility at 20/40 hops; PASS at 40 if CR1 t >= 2.97, else at 80 or 2028-03-01 if t >= 2.10; 2x > 0",
@@ -211,6 +214,7 @@ LABELS.update({
     "R278": ("Prospective paper", "Cross-venue funding carry", "xfund_fwd"),
     "R279": ("Prospective paper", "KuCoin cross-venue carry", "xfund_kc_fwd"),
     "R294": ("Prospective paper", "Lighter cross-venue carry", "xfund_lt_fwd"),
+    "R390": ("Prospective paper", "Binance + Gate cross-venue carry (R286 C14)", "xfund_bg_fwd"),
     "R355": ("Prospective paper", "Settlement hop on the displayed funding rate", "settlehop_fwd"),
     "R364": ("Prospective paper", "Lighter settlement scalp on Binance's predicted rate", "settlelit_fwd"),
     "R369": ("Prospective paper", "Lighter lag after EIA gas and crude releases (events scored from the recordings)", "eventlag_fwd"),
@@ -275,7 +279,8 @@ def forward_days(root):
                         "net_2x": num(r.get("net_2x")), "net_3x": num(r.get("net_3x"))})
     carry = {"xfund_fwd": ("R278", {"A": "Gate + Hyperliquid", "B": "Binance + MEXC", "C": "Gate + MEXC (post hoc)"}),
              "xfund_kc_fwd": ("R279", {"A": "Gate + KuCoin", "B": "Binance + KuCoin"}),
-             "xfund_lt_fwd": ("R294", {"A": "MEXC + Lighter"})}
+             "xfund_lt_fwd": ("R294", {"A": "MEXC + Lighter"}),
+             "xfund_bg_fwd": ("R390", {"A": "Binance + Gate"})}
     for lane, (rid, sets) in carry.items():
         done = {(r["book"], r["day"], r["run"]) for r in rows_csv(EXP / lane / "journal" / "decisions.csv")}
         for r in rows_csv(EXP / lane / "journal" / "days.csv"):

@@ -243,7 +243,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
                     for name in ("REC_NOTICES", "R268", "R270", "R272")}
         expected.update({name: {"path": path, "wait_seconds": 0}
                          for name, path in (("R278", ".xfund.lock"), ("R279", ".xfund_kc.lock"),
-                                            ("R294", ".xfund_lt.lock"))})
+                                            ("R294", ".xfund_lt.lock"), ("R390", ".xfund_bg.lock"))})
         self.assertEqual(locked, set(expected))
         plan = orchestration.plan(tasks, self.root)
         for node in plan["tasks"]:
@@ -254,7 +254,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
 
     def test_busy_carry_lock_blocks_only_that_lane_and_is_reported_to_cross_family_book(self):
         actual = {t.name: t for t in orchestration.forward_tasks()}
-        carry = [replace(actual[name], argv=self.task(name).argv) for name in ("R278", "R279", "R294")]
+        carry = [replace(actual[name], argv=self.task(name).argv) for name in ("R278", "R279", "R294", "R390")]
         # Use invented children, preserving the real carry lock settings and the book's carry edges.
         book_code = ("from pathlib import Path; "
                      "assert not Path('R278.ran').exists(); assert Path('R279.ran').exists(); "
@@ -270,6 +270,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
         self.assertIn(".xfund.lock", nodes["R278"]["reason"])
         self.assertEqual(nodes["R279"]["status"], "SUCCESS")
         self.assertEqual(nodes["R294"]["status"], "SUCCESS")
+        self.assertEqual(nodes["R390"]["status"], "SUCCESS")
         self.assertEqual(nodes["R285"]["status"], "SUCCESS")
         self.assertEqual(nodes["R285"]["optional_unavailable"], ["R278"])
         self.assertTrue((self.root / "BOOK.ran").exists())
@@ -280,7 +281,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
     @unittest.skipUnless(shutil.which("flock"), "requires shell-compatible flock")
     def test_each_carry_lock_is_held_for_child_and_released_after_failure(self):
         actual = {t.name: t for t in orchestration.forward_tasks()}
-        for name in ("R278", "R279", "R294"):
+        for name in ("R278", "R279", "R294", "R390"):
             with self.subTest(name=name):
                 task = actual[name]
                 check = ("import subprocess; "
@@ -503,6 +504,7 @@ class ForwardOrchestratorTests(unittest.TestCase):
         order = [t.name for t in orchestration.ordered_tasks(tasks.values())]
         self.assertTrue(all(order.index(name) < order.index("R285") for name in carry_names))
         self.assertNotIn("R294", tasks["R285"].needs + tasks["R285"].optional)
+        self.assertNotIn("R390", tasks["R285"].needs + tasks["R285"].optional)
 
     def test_r200_starts_first(self):
         order = [t.name for t in orchestration.ordered_tasks(orchestration.forward_tasks())]
