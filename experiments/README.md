@@ -12,9 +12,10 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (19)
+## Running or armed registered rounds (20)
 
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
+- **[settlelit_1h_v1](settlelit_1h_v1/)** R387, RUNNING PENDING, 6 trials. M460: R363's Lighter settlement scalp (enter before T, cover T+1 min, against the side that received Binance's lump) on Binance 1 h-interval settlements (|r_prev| >= 0.3%), a population no settlement lane read; 222 hops, 9 coins, 30 coin-days ([PREREG](settlelit_1h_v1/PREREG.md), [FINDINGS](settlelit_1h_v1/FINDINGS.md))
 - **[settlelit_fwd](settlelit_fwd/)** R364, RUNNING PENDING, 1 trial. R363's Lighter settlement scalp forward on paper: Binance's live predicted rate at T-1h+20s vs Lighter's last hourly rate (e = r - 2h), position on Lighter against the side receiving Binance's lump, $1k walked through Lighter's live book at T-10 s and T+60 s, Lighter's own settlement at T ([PREREG](settlelit_fwd/PREREG.md), [journal](settlelit_fwd/journal/))
 - **[settlehop_fwd](settlehop_fwd/)** R355, RUNNING PENDING, 1 trial. R354's settlement hop forward on paper: MEXC's displayed rate at T-1h vs Lighter's hourly rate (e = F - 2h), two $1k legs walked through the live books, held T-1h to T+1h (MEXC decided, Gate reported) ([PREREG](settlehop_fwd/PREREG.md), [journal](settlehop_fwd/journal/))
 - **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
@@ -34,8 +35,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (155)
+## Other registered rounds (done, registered or planned) (156)
 
+- **[path_response_v1](path_response_v1/)** R400, REGISTERED PENDING, 1,478 trials. Arrival-order area and same-price replenishment: bounded equation search beyond the fixed OFI baseline ([PREREG](path_response_v1/PREREG.md), [FINDINGS](path_response_v1/FINDINGS.md))
 - **[atlas_tape_v1](atlas_tape_v1/)** R386, DONE NULL, 303,520 trials. Gate-0 screen of seconds-to-minutes conditional returns: 303,520 cells (22+26 features x gates x 5 thresholds x 7/12 holds x 14 coin sets x 2 sides) on 12 coins' minute bars 2021-26 and the 1-s tape, measured Lighter walk costs, shifted-signal max-statistic ([PREREG](atlas_tape_v1/PREREG.md), [FINDINGS](atlas_tape_v1/FINDINGS.md))
 - **[dvolbeta_v1](dvolbeta_v1/)** R385, DONE NULL, 4 trials. M456 DVOL-beta sort (sort half only): trailing 90-day return beta to BTC/ETH DVOL changes, long low / short high beta and the reverse, top-150 perps, hold 7 d, API costs ([PREREG](dvolbeta_v1/PREREG.md), [FINDINGS](dvolbeta_v1/FINDINGS.md))
 - **[xfundint_v1](xfundint_v1/)** R384, DONE PARTIAL, 56 trials. Settlement-interval audit of R277's KuCoin carry (gate+kucoin, binance+kucoin L14d th5% K20): replay of lab/xfund.py attributed to 1h/4h/8h KuCoin legs, before and after the 2026 scaling ([PREREG](xfundint_v1/PREREG.md), [FINDINGS](xfundint_v1/FINDINGS.md))
