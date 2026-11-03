@@ -1,21 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-02T18:20:36.919644+00:00",
+ "updated": "2026-11-03T09:28:59.149336+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.102
+  "lighter": 0.986
  },
  "data": {
-  "mexc": {
-   "files": 117,
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "lighter": {
-   "files": 195,
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -33,12 +33,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.2499
-   },
-   {
-    "coin": "AAVEUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0989
    },
    {
     "coin": "WLDUSDT",
@@ -63,18 +57,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0911
-   },
-   {
-    "coin": "RAYUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.2887
-   },
-   {
-    "coin": "METUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1986
    },
    {
     "coin": "1000PEPEUSDT",
@@ -105,12 +87,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1268
-   },
-   {
-    "coin": "TIAUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0877
    },
    {
     "coin": "QNTUSDT",
@@ -147,18 +123,42 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0843
+   },
+   {
+    "coin": "USELESSUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0883
+   },
+   {
+    "coin": "PENDLEUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0753
+   },
+   {
+    "coin": "ICPUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0743
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0691
    }
   ],
-  "scored_days": 10,
-  "late_days": 7,
-  "total": -0.00014535880000000022,
-  "total_2x": -0.0010803588000000003,
-  "total_3x": -0.0020153588,
-  "total_close": 0.00043716079999999997,
-  "nw_t": -0.21815743190755696,
-  "max_drawdown": -0.0013486098,
+  "scored_days": 11,
+  "late_days": 8,
+  "total": -0.0002879247000000002,
+  "total_2x": -0.0012779247000000004,
+  "total_3x": -0.0022679247,
+  "total_close": 0.0002945949,
+  "nw_t": -0.40110524572126866,
+  "max_drawdown": -0.0014911757,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-02"
+ "last_day": "2026-11-03"
 }

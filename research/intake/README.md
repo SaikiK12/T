@@ -2,13 +2,21 @@
 
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
-Current received scope: 424 source records/aliases and 139 catalog/tool entries; the queue holds 360 rows.
+Current received scope: 439 source records/aliases and 174 catalog/tool entries; the queue holds 373 rows.
 
 The [2026-10-29 deep batch](deep_leads_batch_20261029.json) adds nine bounded primary-source refinements
 (SRC26-032–040), with source cards and existing queue aliases. It separates quarter-hour execution evidence
 from long-horizon association, identifies both of M440's unnamed papers, and records funding cash/version limits.
 Directly received PDF/HTML hashes and unread scopes are explicit. No strategy was registered or scored.
 
+
+The [2026-11-03 web-deep wave](web_deep_20261103.json) ([catalog](source_catalog_webdeep_20261103.csv), cards SRC1103-*)
+read 35 public sources through four lens agents (ledgers of winners, exchange rulebooks, forensic and Korean sources,
+2025-26 papers and prediction markets). Independent verifiers re-fetched every queue-changing claim and contradicted
+three (HL funding cap 4%/h, hyperp cap 10x, a never-reverting Binance hourly switch). It adds M460-M467: an unread
+population for the settlement scalp (Binance 1 h-interval settlements), the forced-switch natural experiment, Lighter
+roll steps, the ex-dividend funding atom, two Korean events, and two persistence tests that wait on the owner's pull
+approval. M291 is BLOCKED because prediction markets are not legal in France. No price, return or trial was computed.
 
 The [owner-reel and TradingView follow-up](reels_tradingview_batch_20261029.json) adds six source refinements (SRC26-041–046), including complete reading of three public Pine sources. It records exact code versions and costs/timing limits, distinguishes the unavailable IV Walls speech from the received ORB frames, and proposes one four-arm parent/filter comparison. No Pine code was compiled or republished, no market outcome was computed, and the existing queue statuses remain unchanged.
 

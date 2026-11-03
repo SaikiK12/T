@@ -75,3 +75,4 @@ data/daily_v2,DERIVED,python scripts/fetch_metrics_full.py; python scripts/build
 data/daily_v2_src,SCRATCH,python scripts/build_daily_v2.py,,Shadow root of symlinks made by build_daily_v2.py; rebuilt on each run.
 data/events/listings,RECORDED,none: scripts/record_listings.py,,"Contract-list diffs on 8 perp venues (mexc, lighter, hyperliquid, kucoin, gate, dydx, okx, bitget) since 2026-11-02: new, gone, back and per-field changes with poll time and the venue listing-time field."
 data/events/tradfi_calendar,RECORDED,none: scripts/record_tradfi_calendar.py,,"Nasdaq halts and earnings calendar, Fed calendar and Treasury auctions with poll time, since 2026-11-02. SEC EDGAR is not used (needs an owner decision on the contact)."
+data/xfund_bg_fwd,REFETCH,python scripts/forward_xfund_bg.py,,"Same, R390 binance+gate book."

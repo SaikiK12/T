@@ -12,12 +12,13 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (18)
+## Running or armed registered rounds (19)
 
+- **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
 - **[settlelit_fwd](settlelit_fwd/)** R364, RUNNING PENDING, 1 trial. R363's Lighter settlement scalp forward on paper: Binance's live predicted rate at T-1h+20s vs Lighter's last hourly rate (e = r - 2h), position on Lighter against the side receiving Binance's lump, $1k walked through Lighter's live book at T-10 s and T+60 s, Lighter's own settlement at T ([PREREG](settlelit_fwd/PREREG.md), [journal](settlelit_fwd/journal/))
 - **[settlehop_fwd](settlehop_fwd/)** R355, RUNNING PENDING, 1 trial. R354's settlement hop forward on paper: MEXC's displayed rate at T-1h vs Lighter's hourly rate (e = F - 2h), two $1k legs walked through the live books, held T-1h to T+1h (MEXC decided, Gate reported) ([PREREG](settlehop_fwd/PREREG.md), [journal](settlehop_fwd/journal/))
 - **[xfund_lt_fwd](xfund_lt_fwd/)** R294, RUNNING PENDING, 1 trial. R288's mexc+lighter carry book forward on paper: A mexc+lighter L14 th5% K20 ([PREREG](xfund_lt_fwd/PREREG.md), [journal](xfund_lt_fwd/journal/))
-- **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md))
+- **[reserved_batch1](reserved_batch1/)** R286, RUNNING PENDING, 10 trials. Reserved batch 1: ten pre-committed candidates (C14 carry, C01 unlock short, C09/C10 notice shorts, C11a/b R263, C12a-d funding onsets) read once on 2020, Gate 2020 and MEXC-only coins ([PREREG](reserved_batch1/PREREG.md), [FINDINGS](reserved_batch1/FINDINGS.md))
 - **[xbook_fwd](xbook_fwd/)** R285, RUNNING PENDING, 1 trial. Cross-family forward book (M281): carry (R278 A/B, R279 A/B), flow (R215 A/B, R218 X2) and events (R266, R268, R270, R272) at equal archive risk, decided on book days from 2026-10-23 ([PREREG](xbook_fwd/PREREG.md), [journal](xbook_fwd/journal/))
 - **[xfund_kc_fwd](xfund_kc_fwd/)** R279, RUNNING PENDING, 2 trials. R277's two replicating KuCoin carry books forward on paper: A gate+kucoin L14 th5% K20, B binance+kucoin L14 th5% K20 ([PREREG](xfund_kc_fwd/PREREG.md), [journal](xfund_kc_fwd/journal/))
 - **[xfund_fwd](xfund_fwd/)** R278, RUNNING PENDING, 3 trials. R275's cross-venue funding carry books forward on paper: A gate+hyperliquid L14 th5% K20, B binance+mexc L14 th10% K20, C gate+mexc L7 th10% K20 (post hoc) ([PREREG](xfund_fwd/PREREG.md), [journal](xfund_fwd/journal/))
@@ -33,8 +34,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (154)
+## Other registered rounds (done, registered or planned) (155)
 
+- **[atlas_tape_v1](atlas_tape_v1/)** R386, DONE NULL, 303,520 trials. Gate-0 screen of seconds-to-minutes conditional returns: 303,520 cells (22+26 features x gates x 5 thresholds x 7/12 holds x 14 coin sets x 2 sides) on 12 coins' minute bars 2021-26 and the 1-s tape, measured Lighter walk costs, shifted-signal max-statistic ([PREREG](atlas_tape_v1/PREREG.md), [FINDINGS](atlas_tape_v1/FINDINGS.md))
 - **[dvolbeta_v1](dvolbeta_v1/)** R385, DONE NULL, 4 trials. M456 DVOL-beta sort (sort half only): trailing 90-day return beta to BTC/ETH DVOL changes, long low / short high beta and the reverse, top-150 perps, hold 7 d, API costs ([PREREG](dvolbeta_v1/PREREG.md), [FINDINGS](dvolbeta_v1/FINDINGS.md))
 - **[xfundint_v1](xfundint_v1/)** R384, DONE PARTIAL, 56 trials. Settlement-interval audit of R277's KuCoin carry (gate+kucoin, binance+kucoin L14d th5% K20): replay of lab/xfund.py attributed to 1h/4h/8h KuCoin legs, before and after the 2026 scaling ([PREREG](xfundint_v1/PREREG.md), [FINDINGS](xfundint_v1/FINDINGS.md))
 - **[fundvol_v1](fundvol_v1/)** R382, DONE NULL, 6 trials. M455 sizing half: trailing-volatility scaling or gating of R277 gate+kucoin carry book (saved daily net), chosen on first half, tested on second at 2x cost ([PREREG](fundvol_v1/PREREG.md), [FINDINGS](fundvol_v1/FINDINGS.md))
@@ -209,10 +211,9 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (2)
+## Unregistered folders (1)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
-- **[atlas_tape_v1](atlas_tape_v1/)** No registry row; scope unclassified.
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.

@@ -85,6 +85,15 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
   (10-30 reached 65%). With the recorders back, 11-03 and 11-04 complete the set and the run is due on or after
   **2026-11-05 00:30 UTC**, by 11-08 at the latest, else INCONCLUSIVE. Its 200 ms rules sit below the measured 233-255 ms
   websocket round trip, so only the 500 ms rules are executable from this container. A NULL closes M427 as registered.
+- **R390 `xfund_bg_fwd` (C14's forward lane), frozen 2026-11-03.** Binance+Gate carry book, first live day 11-04;
+  looks at 90 scored days (2027-02-02) and 180 (2027-05-03). Power is modest: at the 2020 strength a 90-day PASS is
+  about one chance in three.
+- **Web-deep wave (2026-11-03, `research/intake/web_deep_20261103.json`): new queue rows M460-M467, nothing run.**
+  The strongest is M460: R363's settlement scalp on Binance's 1 h-interval settlements. Since 2025-05-02 a cap or floor
+  print switches a perp to hourly, and no settlement lane has read those settlements (R353-R363 kept 4 h and 8 h).
+  M462 (Lighter BRENTOIL roll steps) needs an index recorder before the 2026-11-06..11-12 window. M466/M467 (HL vault
+  and Lighter winner persistence) wait on the owner's yes for ~300 MB and ~1 GB pulls. Prediction markets are not legal
+  for the owner (ANJ block of Polymarket, Kalshi restricts France).
 - **Reserved batch 2 (C17), on or after 2026-11-17.** The PREREG is not frozen. It must be frozen before that read.
 
 ## Tier C: the owner's 2026-11-02 paste, sorted
