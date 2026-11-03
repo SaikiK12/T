@@ -1,0 +1,179 @@
+{
+  "name": "reserved_batch2",
+  "trials": 1,
+  "coins": 28,
+  "coins_by_venue": {
+    "dydx": 9,
+    "kucoin": 18,
+    "lighter": 9,
+    "mexc": 25
+  },
+  "rc_null_p95": 0.8512062090752841,
+  "verdict": "PASS (gate 0)",
+  "survivors": [
+    "kucoin+dydx+lighter+mexc L14d th5% K20"
+  ],
+  "sets": [
+    {
+      "set": "kucoin+dydx+lighter+mexc",
+      "lookback": 14,
+      "window_from": "2025-05-12",
+      "coins_ever": 18,
+      "mean_candidates": {
+        "0.05": 4.840304182509506
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "label": "kucoin+dydx+lighter+mexc L14d th5% K20",
+      "strat": {
+        "set": "kucoin+dydx+lighter+mexc",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-05-12",
+      "stats": [
+        {
+          "days": 526,
+          "mean_bp": 0.6786148826197993,
+          "ann_pct": 2.4769443215622675,
+          "vol_pct": 1.4806046908777288,
+          "sharpe": 1.6729275118626634,
+          "t": 2.0082767627940177,
+          "t_nw": 3.9018107450732877,
+          "half1_bp": 0.4072032906807151,
+          "half2_bp": 0.9500264745588833,
+          "recent_bp": 0.7174721074471448,
+          "recent_days": 476,
+          "trimmed_bp": 0.6388807988552685,
+          "max_dd_pct": -0.42920070316198045,
+          "top10_share": 0.9484981377758607,
+          "total_pct": 3.617531424763598
+        },
+        {
+          "days": 526,
+          "mean_bp": 0.5282346544829167,
+          "ann_pct": 1.9280564888626461,
+          "vol_pct": 1.4858648798214276,
+          "sharpe": 1.2975988025871916,
+          "t": 1.5577109612858882,
+          "t_nw": 3.036732066313201,
+          "half1_bp": 0.3140473971445933,
+          "half2_bp": 0.7424219118212408,
+          "recent_bp": 0.5564426956824391,
+          "recent_days": 476,
+          "trimmed_bp": 0.4896559926537175,
+          "max_dd_pct": -0.4994167009716888,
+          "top10_share": 1.2122225431441358,
+          "total_pct": 2.8010827724806786
+        },
+        {
+          "days": 526,
+          "mean_bp": 0.37785442634603467,
+          "ann_pct": 1.3791686561630265,
+          "vol_pct": 1.4935542115554938,
+          "sharpe": 0.9234138576909517,
+          "t": 1.108518199200349,
+          "t_nw": 2.148228141421143,
+          "half1_bp": 0.22089150360847165,
+          "half2_bp": 0.5348173490835983,
+          "recent_bp": 0.3954132839177333,
+          "recent_days": 476,
+          "trimmed_bp": 0.3404311864521691,
+          "max_dd_pct": -0.5794903148045982,
+          "top10_share": 1.6858634321066794,
+          "total_pct": 1.9910014990977887
+        }
+      ],
+      "funding_share": 0.8295758861405625,
+      "avg_held": 5.330798479087452,
+      "trades": 113,
+      "forced_exits": 0,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    }
+  ],
+  "spec": {
+    "name": "reserved_batch2",
+    "start": "2021-01-01",
+    "end": "2026-10-19",
+    "symbols": "experiments/reserved_batch2/symbols.csv",
+    "venues": [
+      {
+        "name": "kucoin",
+        "prices": "kucoin_hist/reserved/candles_1d",
+        "vol": "volume",
+        "funding": "kucoin_hist/reserved/funding",
+        "bar_h": 24
+      },
+      {
+        "name": "dydx",
+        "prices": "dydx_hist/reserved/candles_1h",
+        "vol": "volume",
+        "funding": "dydx_hist/reserved/funding",
+        "bar_h": 1
+      },
+      {
+        "name": "lighter",
+        "prices": "lighter_hist/reserved/candles_1h",
+        "vol": "volume",
+        "funding": "lighter_hist/reserved/funding",
+        "bar_h": 1
+      },
+      {
+        "name": "mexc",
+        "prices": "mexc_hist/klines_1h",
+        "vol": "vol",
+        "funding": "mexc_hist/funding",
+        "bar_h": 1
+      }
+    ],
+    "reserved_prereg": "experiments/reserved_batch2/RESERVED.md",
+    "sets": [
+      [
+        "kucoin",
+        "dydx",
+        "lighter",
+        "mexc"
+      ]
+    ],
+    "lookbacks": [
+      14
+    ],
+    "thresholds": [
+      0.05
+    ],
+    "slots": [
+      20
+    ],
+    "costs": [
+      0.0007,
+      0.0014,
+      0.0021
+    ],
+    "corr_days": 30,
+    "corr_min": 0.9,
+    "corr_obs": 20,
+    "block_days": 10,
+    "reps": 2000,
+    "seed": 391,
+    "out": "experiments/reserved_batch2/results",
+    "alpha": 0.05,
+    "recent_from": "2025-07-01",
+    "trim": 0.01,
+    "nw_lags": 10,
+    "keep_daily": 1,
+    "hurdle_ann_pct": 0.0
+  }
+}

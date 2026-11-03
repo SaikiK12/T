@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (22)
+## Running or armed registered rounds (23)
 
+- **[reserved_batch2](reserved_batch2/)** R391, RUNNING PENDING, 1 trial. Reserved batch 2: R275's carry book (L14d th5% K20) on the KuCoin, dYdX and Lighter long-tail samples with MEXC, first blind read ([PREREG](reserved_batch2/PREREG.md), [FINDINGS](reserved_batch2/FINDINGS.md))
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
 - **[lighter_roll_fwd](lighter_roll_fwd/)** R389, RUNNING PENDING, 1 trial. Lighter BRENTOIL index roll steps: does the book lag the documented step? (M462, forward paper) ([PREREG](lighter_roll_fwd/PREREG.md))
 - **[forcedswitch_v1](forcedswitch_v1/)** R388, RUNNING PENDING, 3 trials. Binance forced hourly switch as a natural experiment: post-rule switch prints vs pre-rule prints (M461) ([PREREG](forcedswitch_v1/PREREG.md), [FINDINGS](forcedswitch_v1/FINDINGS.md))

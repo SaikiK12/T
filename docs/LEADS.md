@@ -101,7 +101,12 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
   - **M463 (ex-dividend): BLOCKED.** MEXC shows no credit row on 16 of 67 ex-dates, unexplained.
   - M466/M467 (HL vault and Lighter winner persistence) wait on the owner's yes for ~300 MB and ~1 GB pulls.
     Prediction markets are not legal for the owner (ANJ block of Polymarket, Kalshi restricts France).
-- **Reserved batch 2 (C17), on or after 2026-11-17.** The PREREG is not frozen. It must be frozen before that read.
+- **Reserved batch 2 (R391), read 2026-11-03: PASS, small.** R275's carry book on the never-read KuCoin, dYdX and
+  Lighter long tail with MEXC earns +2.48 / +1.93 / +1.38 %/yr at 1x / 2x / 3x (NW t 3.90). Only 5.3 of 20 slots
+  fill, and the top 10 days are 95% of the sum. Next: measure the long-tail book costs, then a forward lane with a new
+  id ([FINDINGS](../experiments/reserved_batch2/FINDINGS.md)).
+- **Reserved batch 3 (R392: C17 on 2020, Gate long tail read 2), on or after 2026-11-17.** The PREREG is not frozen.
+  It must be frozen before that read.
 
 ## Tier C: the owner's 2026-11-02 paste, sorted
 The paste is a literature scan. None of these is evidence: each is a source's claim that we did not verify.
