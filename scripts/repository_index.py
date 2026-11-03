@@ -100,6 +100,38 @@ def script_group(name):
     return "Builders and supporting tools"
 
 
+def document_group(path):
+    """Classify human documentation; never inspect payloads to classify them."""
+    parts = PurePosixPath(path).parts
+    if not path.endswith('.md'):
+        return None
+    if path in ('README.md', 'AGENTS.md'):
+        return 'Operating rules and decisions'
+    if len(parts) == 2 and parts[1] == 'README.md' and parts[0] in {
+        'dashboard', 'engine', 'experiments', 'lab', 'registry', 'scripts', 'templates', 'tests',
+    }:
+        return 'Folder guides'
+    if len(parts) < 2 or parts[0] not in {'docs', 'research', 'reports', 'research_notes'}:
+        return None
+    if parts[:2] == ('research', 'intake'):
+        return None  # Existing intake entries expose filenames, not source bodies.
+    if any(p.lower() in {'results', 'journal', 'journals', 'data', 'cache', '.cache',
+                        'reserved', 'snapshots', 'fixtures', 'raw', 'downloads'} for p in parts[1:-1]):
+        return None
+    if parts[:2] == ('docs', 'guides'):
+        return 'User guides'
+    if parts[:2] == ('docs', 'reviews'):
+        return 'Integrity reviews and fixes'
+    if parts[:2] == ('docs', 'handover'):
+        return 'Operating rules and decisions'
+    if parts[0] in {'reports', 'research_notes'}:
+        return 'Historical reports and supporting notes'
+    if parts[0] == 'research':
+        return 'Research designs and reviews'
+    stem = PurePosixPath(path).stem
+    return next((g for g, names in DOC_GROUPS.items() if stem in names), 'New / unclassified documents')
+
+
 def build_index(root, files):
     """Return a deterministic catalog from an explicit list of tracked files."""
     root = Path(root)
@@ -114,9 +146,8 @@ def build_index(root, files):
             rows = list(csv.DictReader(source))
     for path in files:
         parts = PurePosixPath(path).parts
-        if len(parts) == 2 and parts[0] == "docs" and path.endswith(".md"):
-            stem = PurePosixPath(path).stem
-            group = next((g for g, names in DOC_GROUPS.items() if stem in names), "New / unclassified documents")
+        group = document_group(path)
+        if group is not None:
             entries.append(dict(kind="document", path=path, title=heading(root, path), group=group))
         elif len(parts) == 2 and parts[0] == "scripts" and path.endswith((".py", ".sh")):
             safe_file(root, path)  # Existence/symlink validation; never execute or import it.
