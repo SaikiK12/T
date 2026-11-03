@@ -16034,7 +16034,7 @@
       "path": "docs/REELS_TRANSCRIPT.md",
       "sha256": "b89360c59d3fc58ed552338e48c93c03d4737ac30335d408c9646451fad63d02",
       "review_status": "reviewed_bounded_code_fidelity_audit_not_performance_evidence",
-      "scope": "Bounded digest of owner videos and selected public sources; reels 15–17 remain as previously reconciled. The 2026-10-28 @aleks_rosme TikTok is covered at public page/caption scope through 00:24.8 under TT26-04. On 2026-10-29 the linked seven-cue VTT was re-fetched and hashed; captionInfos labels eng-US big_caption as isAutoGen:false and isOriginalCaption:true, while the VTT says Source: MT, so provenance remains ambiguous and speech is not verified. The 7750 pivot cue is garbled. The earlier 2026-10-20 QQQ speech is corrected from VAL to VAH based on the existing transcript. The remaining 20.2 seconds, broader channel coverage and creator outcome claims remain unverified. Bounded 2026-10-29 owner-reel delta: ATrain caption/cover only, Benny public frames without verified speech; source/code interpretation in SRC26-041-046.",
+      "scope": "Bounded digest of owner videos and selected public sources; reels 15–17 remain as previously reconciled. The 2026-10-28 @aleks_rosme TikTok is covered at public page/caption scope through 00:24.8 under TT26-04. On 2026-10-29 the linked seven-cue VTT was re-fetched and hashed; captionInfos labels eng-US big_caption as isAutoGen:false and isOriginalCaption:true, while the VTT says Source: MT, so provenance remains ambiguous and speech is not verified. The 7750 pivot cue is garbled. The earlier 2026-10-20 QQQ speech is corrected from VAL to VAH based on the existing transcript. The remaining 20.2 seconds, broader channel coverage and creator outcome claims remain unverified. Bounded 2026-10-29 owner-reel delta: ATrain caption/cover only, Benny public frames without verified speech; source/code interpretation in SRC26-041-046. Bounded 2026-11-03 owner-reel delta: Reel 18 (rational_edge DfPJm5FB754, 51 s) full speech transcribed with faster-whisper small and caption read; it lists Monte Carlo reshuffles, walk-forward and parameter sensitivity, maps to CONTEXT only, no new method row.",
       "method_ids": [
         "IG26-01-ENGINE-PARITY",
         "IG26-02-TOOL-STACK",
@@ -16140,7 +16140,7 @@
       ],
       "current_source_review_required": false,
       "prior_sha256": "24cf420675d3c1aadc112c65222f1ecd23434729d9d95146281b650268749859",
-      "current_sha256": "cd8dff91d34f1b95e8dfb830d63c9b6c25efb9be4ccafafae331f8647b4911cc",
+      "current_sha256": "0d33778adf7396513a3b924571cc08bc7db515fb9be31065307190a7a9be887d",
       "reviewed_version_history": [
         {
           "sha256": "a468960badd0ee632d8f5348f8c077b28987cfe89e902e9875c640a03928dbcf",
@@ -16207,6 +16207,12 @@
           "reviewed_utc_date": "2026-10-29",
           "intake_id": "reels_tradingview_code_review_20261029",
           "preservation": "Prior transcript, source digests and all 418 previous method objects retained; only new source/media scopes and open-code references appended."
+        },
+        {
+          "sha256": "0d33778adf7396513a3b924571cc08bc7db515fb9be31065307190a7a9be887d",
+          "reviewed_utc_date": "2026-11-03",
+          "intake_id": "owner_reel18_robustness_20261103",
+          "preservation": "Prior transcript digest cd8dff91 retained in Git; this delta appends Reel 18 only, with no new method, market trial or creator outcome."
         }
       ],
       "observed_unreviewed_version": {
@@ -19941,6 +19947,23 @@
       "reconciliation": "Existing queue scopes only. Proprietary IV walls, manual-IV proxies, QQQ first-candle direction and TradeX close-confirmed ORB are distinct. Four-arm own adaptation remains design-only.",
       "source_version_path": "research/intake/reels_tradingview_batch_20261029.json",
       "source_version_sha256": "fe393cc2a878ca33a71051e24b7221b7be6624fefa1a1b4655f97acd399ec7e4",
+      "strategy_trials_added": 0,
+      "market_outcomes_added": 0,
+      "prospective_days_added": 0
+    },
+    {
+      "intake_id": "owner_reel18_robustness_20261103",
+      "records_added": [],
+      "records_updated": [],
+      "media_sources": [
+        {
+          "url": "https://www.instagram.com/reel/DfPJm5FB754/",
+          "basis": "yt-dlp 2026.10.26 public download without login; full 51 s speech transcribed (faster-whisper small, CPU) and caption/metadata read; media kept in the session scratchpad, not committed."
+        }
+      ],
+      "media_source_count": 1,
+      "received_scope": "One owner-sent 51 s reel, complete speech and caption. The promised robustness guide and engine were not requested or read.",
+      "reconciliation": "CONTEXT only. Trade reshuffling, walk-forward and parameter-plateau checks are covered by existing practice (frozen discovery/validation reads, R263 walk-forward and bootstrap, lab/dependent_null.py, R386 placebo max over the whole grid); no new queue row.",
       "strategy_trials_added": 0,
       "market_outcomes_added": 0,
       "prospective_days_added": 0

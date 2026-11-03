@@ -1,35 +1,35 @@
 {
- "scored": 1,
- "mean_net": -0.0152372783150883,
- "t_net": NaN,
- "mean_net_2x": -0.0171370681679853,
- "mean_gross": -0.0152160681679853,
- "mean_funding": 0.002079,
- "hit": 0.0,
+ "scored": 2,
+ "mean_net": 0.029105462358085706,
+ "t_net": 0.6563749086373819,
+ "mean_net_2x": 0.027155567431637204,
+ "mean_gross": 0.029177567431637203,
+ "mean_funding": 0.0019779999999999503,
+ "hit": 0.5,
  "liq_flags": {
   "1x": 0,
   "2x": 0,
   "3x": 0
  },
  "binance_listed": {
-  "n": 1,
-  "mean_net": -0.0152372783150883
+  "n": 2,
+  "mean_net": 0.029105462358085706
  },
  "mexc_only": {
   "n": 0,
   "mean_net": NaN
  },
  "go_real": {
-  "n": 1,
-  "mean": -0.0152372783150883,
-  "hit": 0.0,
+  "n": 2,
+  "mean": 0.029105462358085706,
+  "hit": 0.5,
   "worst": -0.0152372783150883,
   "invalid_n": 0,
-  "n_clusters": 1,
+  "n_clusters": 2,
   "checks": {
    "finite_returns": true,
    "enough_scored": false,
-   "mean_positive": false,
+   "mean_positive": true,
    "hit_rate": false,
    "no_tail_event": true
   },
@@ -37,8 +37,8 @@
  },
  "dose": {
   "1-2%": {
-   "n": 1,
-   "mean_net": -0.0152372783150883
+   "n": 2,
+   "mean_net": 0.029105462358085706
   },
   "2-5%": {
    "n": 0,
@@ -49,20 +49,19 @@
    "mean_net": null
   }
  },
- "decision": "pending (1 of 120 scored)",
- "updated": "2026-11-02T23:23:32Z",
- "snapshot": "2026-11-02.json.gz",
+ "decision": "pending (2 of 120 scored)",
+ "updated": "2026-11-03T09:00:56Z",
+ "snapshot": "2026-11-03.json.gz",
  "tickets": 3,
- "open": 2,
+ "open": 1,
  "skipped": {
   "missed": 5,
   "no_contract": 2
  },
  "new_tickets": [],
- "book_equity": 0.9981302932068083,
- "book_max_drawdown": -0.0021882455425563663,
+ "book_equity": 1.0051845120997154,
+ "book_max_drawdown": -0.005678151598670245,
  "next_entries": [
-  "2026-11-03T00:00:00Z MOVE",
   "2026-11-05T00:00:00Z BB",
   "2026-11-07T00:00:00Z AGT",
   "2026-11-07T00:00:00Z SEI",

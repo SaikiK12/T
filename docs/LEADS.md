@@ -69,9 +69,18 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
 | **Event shorts** (R266 unlocks, R268 delist, R270 Monitoring Tag, R272 announcements) | Short after unlock or notice | 0 to 1 scored | 12 to 120 scored events | Months |
 
 ## Tier B: dated reads that are already frozen
-- **Reserved batch 1 (R286), on or after 2026-11-03.** Ten pre-committed candidates (carry, unlock short, event shorts, an
-  R263 strategy) read once on 2020 crypto and the MEXC-only coins, with a weighted Bonferroni. This is the one test in the
-  queue that can still confirm something on days nobody has looked at. The sample is read once.
+- **Reserved batch 1 (R286), read 2026-11-03 (done): 1 PASS, 5 FAIL, 4 UNREADABLE**
+  (`experiments/reserved_batch1/FINDINGS.md`).
+  - **C14 passes, the cross-venue carry binance+gate L14d th10% K20.**
+    - 2020 at 1x/2x/3x: +2.86 / +1.86 / +0.85 %/yr.
+    - NW t 4.03, p 2.8e-5 against α 0.0297. Trimmed, leave-two-coins-out and 2x means are all positive.
+    - This is gate-1 evidence that the carry mechanism is real on unread days, at about 28% of its 2021-26 size.
+    - It earns a new frozen forward paper lane for that exact set, which none of R278/R279/R294 trades.
+  - **The unlock short C01 fails.**
+    - 57 reserved events, -3.45% per event, t -0.87.
+    - The four 2020 events averaged -55.7%; the 15 post-archive events made +3.36%.
+    - R266 continues on its own rule.
+  - **C10, C11a/b and C12d fail. C09 and C12a-c are unreadable** (no 2020 events).
 - **R367 `hftlead_v1`, blocked by the outage.** It needs 3 usable recorded days (80% coverage); only 2026-10-29 qualifies
   (10-30 reached 65%). With the recorders back, 11-03 and 11-04 complete the set and the run is due on or after
   **2026-11-05 00:30 UTC**, by 11-08 at the latest, else INCONCLUSIVE. Its 200 ms rules sit below the measured 233-255 ms
