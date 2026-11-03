@@ -106,6 +106,11 @@ box, event timing, an auditor). Their claims about outside sources are unverifie
   (M455 sizing half): trailing-volatility scaling or gating of the R277 carry book does not beat the unscaled book
   (2nd-half 2x Sharpe 6.37 vs 6.88). R385 (M456 sort half): beta to DVOL changes sorts nothing net (pick t +0.15).
   The HAR-forecast and option-inventory halves remain untested. R381 and R383 are claimed and paused.
+- **R386 `atlas_tape_v1`: a 303,520-cell screen of seconds-to-minutes conditional returns, NULL (2026-11-03).** Best
+  validation net-1x t 4.21 against a placebo max-statistic 95th percentile of 5.25 (full-grid p 0.87); no candidate.
+  A non-decisive count surplus (1,218 cells against a null 95th percentile of 899) sits in fades of extreme taker flow
+  on SOL/BTC/ETH at 3-15 minutes, which is R349's seen family, so it is not new evidence. Block B (1-second tape,
+  two validation days) has nothing. Costs are Lighter's $1k walk; latency and fills are unchecked.
 - **Cost re-pricing (R371's parent, R300):** at MEXC's web taker (2 bp on 956 contracts, 0 on 142) rather than the lab's
   8.5 bp a side, R300 re-prices to about +61 bp/day and t about 2.0, on seen days only.
 - **Untested directions with data on disk:** Deribit weekend defined-risk short volatility (needs chain-priced fills the
