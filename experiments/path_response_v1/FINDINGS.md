@@ -92,3 +92,33 @@ Market 1x/2x/3x PnL: **unknown**. No positive-return or novelty claim.
   with no equation and gate-ineligible; the Nov 4-10 score step has no artifact to score.
 - Not checked: why label coverage fell below 99% (a data gap, the 17:00 recording edge, or the rule's age limits).
   A follow-up would be a new lane id with its own frozen coverage rule.
+
+## Source timing audit, 2026-11-03 (timestamps and IDs only; R400 stays terminal)
+
+- Command, run once from `0f3750f`: `OPENBLAS_NUM_THREADS=1 nice .venv/bin/python scripts/audit_path_timing.py --data
+  data/rawtape`. Its stdout is in `results/timing_metadata_20261103.json`.
+- It loaded only `t/off/u` (bbo) and `t/off/a` (trade) and confirmed the frozen file hashes. It reports
+  `price_columns_loaded: false`, `returns_computed: false` and `r400_resumed: false`.
+- **Diagnosis: the 100 ms next-quote limit is the main cause; the offset limit adds a little.** Among the 10-29
+  decisions that pass the past-side timing checks, these failed a future-side timing or ID check:
+
+| Coin | Eligible | Any future failure | Exit wait > 100 ms | Entry wait > 100 ms | Offset span > 1 ms | ID backsteps |
+|---|---|---|---|---|---|---|
+| BTCUSDT | 1,225 | 110 (9.0%) | 62 | 37 | 19 | 0 |
+| ETHUSDT | 1,183 | 82 (6.9%) | 46 | 18 | 22 | 0 |
+
+- **No ID or ordering defect.** Both coins have zero nonincreasing `u` or `a` IDs and zero backwards receive stamps.
+- **Normal quote spacing.**
+  - The median next-BBO wait is about 8-11 ms.
+  - The p95 is 57-101 ms, already at the 100 ms limit.
+  - The p99 exit wait is 4.6-4.7 s, so a few decisions fall inside stream stalls.
+- **One stream-wide stall.** The longest receive gap is about 18.9 s on book and trade for both coins, at similar
+  values. That points to a single reconnect, not a coin-specific loss.
+- **Past side.** 161 BTC and 196 ETH decisions fail the stale-quote check before the decision (also 100 ms), and 18
+  each fail at the window boundary. These sit outside the "eligible" denominator above.
+- **So:** with the frozen 100 ms wait at both d + 500 ms and d + 5.5 s, about 5-8% of decisions on this source
+  cannot get a label, from ordinary quote spacing plus one stall. The 99% coverage bar could not be met on 10-29 by
+  design, not because a file was lost.
+  - Any successor is a new lane id. Its coverage or wait rule must be frozen before it reads any market value.
+- **Not checked:** the full R400 price- and size-qualified decision set (this denominator is timing-only), and
+  whether other days show the same rates.
