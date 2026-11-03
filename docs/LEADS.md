@@ -91,11 +91,16 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
 - **Web-deep wave (2026-11-03, `research/intake/web_deep_20261103.json`): new queue rows M460-M467, nothing run.**
   The strongest, M460, was run the same day as **R387: NULL** (222 hourly-cycle Binance settlements, 9 coins, 30
   coin-days). The capture crowd's move is there (+54.5 bp a hop on Lighter) but Lighter settles at the same T near its
-  clamp (-42.4 bp), leaving +9.2 bp at 1x, t 1.64; -7.2 bp with RIVER at its measured cost. Next, untested and now not
-  blind: the same move on a venue that does not settle at T (MEXC on a 4 h/8 h cycle), as a forward lane.
-  M462 (Lighter BRENTOIL roll steps) needs an index recorder before the 2026-11-06..11-12 window. M466/M467 (HL vault
-  and Lighter winner persistence) wait on the owner's yes for ~300 MB and ~1 GB pulls. Prediction markets are not legal
-  for the owner (ANJ block of Polymarket, Kalshi restricts France).
+  clamp (-42.4 bp), leaving +9.2 bp at 1x, t 1.64; -7.2 bp with RIVER at its measured cost. The MEXC follow-up is dead:
+  MEXC also settled at T on 205 of the 206 hops it lists.
+  - **R388 (M461, forced hourly switch): NULL.** Post-rule floor prints are not followed by a stronger rebound
+    (post − pre +166 bp, t 0.72). The long's +197 bp mean at 1x is ~+296 bp of hourly funding and a squeeze tail
+    (median −174 bp, trimmed −105 bp).
+  - **R389 (M462, Lighter BRENTOIL roll steps): frozen forward**, with `record_lighter_index.py` running since 11-03.
+    The first step is 11-06; the decision comes after 20 traded steps (about 2027-03).
+  - **M463 (ex-dividend): BLOCKED.** MEXC shows no credit row on 16 of 67 ex-dates, unexplained.
+  - M466/M467 (HL vault and Lighter winner persistence) wait on the owner's yes for ~300 MB and ~1 GB pulls.
+    Prediction markets are not legal for the owner (ANJ block of Polymarket, Kalshi restricts France).
 - **Reserved batch 2 (C17), on or after 2026-11-17.** The PREREG is not frozen. It must be frozen before that read.
 
 ## Tier C: the owner's 2026-11-02 paste, sorted

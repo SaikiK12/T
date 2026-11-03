@@ -91,3 +91,10 @@ None reaches the family's Bonferroni t of 2.39.
 - Program trials: 9,782,841 before this lane, 9,782,847 after (`registry.program_trials('registry/rounds.csv')`).
 - Against the program's ~9.8M trials, a t of 1.64 carries no evidence. A PASS would have needed the forward lane anyway.
 - The rounds row stays RUNNING, as for R286 and others; this FINDINGS holds the verdict.
+
+## Follow-up check after the verdict (2026-11-03, read-only, no new statistic on returns)
+- The idea in "next" was to trade the same lumps on a venue that does not settle at T. MEXC does settle at T on 205 of
+  the 206 hops that have a MEXC funding file (`data/mexc_hist/funding`, `t` and `cycle_h` only). ZK (16 hops) has no
+  MEXC file.
+- So MEXC was hourly on these coins at these times, and a MEXC version would pay MEXC's own settlement at T, the same
+  drag as Lighter's. No MEXC lane is opened (M460 note).
