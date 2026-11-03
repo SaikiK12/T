@@ -1,0 +1,67 @@
+{
+  "compressed_paths": [
+    {
+      "candle": {
+        "close": 105,
+        "high": 110,
+        "low": 90,
+        "open": 100,
+        "volume": 4
+      },
+      "path": [
+        100,
+        110,
+        90,
+        105
+      ],
+      "total_variation": 45
+    },
+    {
+      "candle": {
+        "close": 105,
+        "high": 110,
+        "low": 90,
+        "open": 100,
+        "volume": 4
+      },
+      "path": [
+        100,
+        90,
+        110,
+        105
+      ],
+      "total_variation": 35
+    }
+  ],
+  "family": {
+    "attempts": 471,
+    "budget_exhausted": false,
+    "invalid_attempts": 129,
+    "proven_duplicate_attempts": 210,
+    "retained_forms": 132
+  },
+  "gate_eligible": false,
+  "market_fit": false,
+  "ordered_response": {
+    "flow_first_area": "-1/2",
+    "predictive_skill_tested": false,
+    "price_first_area": "1/2",
+    "same_endpoints": true
+  },
+  "prospective_events": 0,
+  "redundancy": {
+    "clv_identity_proved": true,
+    "location_080_vs_clv_060_same_predicate": true,
+    "zero_range": "undefined, never silently zero-filled"
+  },
+  "scope": "invented-world engineering only; no market statistic or strategy result",
+  "strategy_trials": 0,
+  "synthetic_recovery": {
+    "exact_algebraic_identity": true,
+    "heldout_exact": true,
+    "heldout_invented_points": 9,
+    "planted": "x / (1 + z)",
+    "recovered": "(x / (z + 1))",
+    "training_points": 9
+  }
+}
