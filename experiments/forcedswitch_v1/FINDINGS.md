@@ -54,3 +54,40 @@ All values are bp per event. The costs are 40 / 80 / 120 bp round trip, R273's.
 - The cap state of each coin, which changed before the rule on some alts.
 - Liquidation and margin paths of a long held across hourly floor prints.
 - Gate 0 on seen data (R273, M261, M458, R387): even a PASS would not have been evidence.
+
+## Engineering clarification: funding notional (2026-11-03, no market rerun)
+
+The frozen funding rule sums `-direction * rate`. Its reported funding/net
+columns therefore use an entry-notional approximation. A fixed-base-quantity
+linear position instead has funding cash `-quantity * settlement_value * rate`
+at each eligible settlement, as in `lab/funding_values.py`. Price PnL here uses
+fixed-quantity return arithmetic; the two funding conventions coincide only
+when the settlement value equals the entry value (or their weighted errors cancel).
+
+An **invented** example demonstrates why this matters: entry/exit100, quantity1,
+one eligible settlement at200 with rate−0.003, and round-trip cost0.4 quote.
+The rate-sum estimate is−10bp net; fixed-quantity cash gives+20bp. The error
+can also go the other way. This example is not a reanalysis of these events.
+The reproducible conditional audit is
+`python scripts/audit_funding_notional.py --demo`; its missing values,
+eligibility or schedule coverage remain unscored, and it never verifies real credit.
+
+**The frozen NULL remains.** The failed primary gross-price contrast does not
+depend on funding, and none of the historical aggregates above was recomputed.
+The funding/net columns must not be treated as verified cash-ledger returns.
+Testing a corrected cash model requires a separately frozen design with the
+contract's actual settlement-value basis, event-bound values, ownership,
+complete settlements, costs and collateral/liquidation rules. Traded bar closes
+must not silently substitute for the required settlement value.
+
+The [source check](../../research/intake/funding_notional_20261103/README.md)
+records Binance's documented settlement `markPrice` and `rateType` fields.
+Regular and dividend-related special components need distinct identities;
+their presence in this archive was not checked. A one-row public REST probe
+returned HTTP451 here, so this audit does not claim the required values are held.
+
+Window scope also matters: this lane enters atT+1h. It does not measure an
+entry between the documented switch-confirmation delay and that first hour.
+Such a design would need separately frozen minute/tick inputs and the original
+interval-availability observations; this NULL does not answer that different
+question. No earlier-entry prices or returns were read in this clarification.

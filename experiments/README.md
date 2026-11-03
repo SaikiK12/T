@@ -2,6 +2,8 @@
 
 <!-- written by scripts/catalog.py; edit the sources (registry, docstrings), not this file -->
 
+Source: tracked and staged Git-index metadata; untracked files and unstaged edits are excluded.
+
 One folder per lane. A lane is frozen (`PREREG.md`) before any statistic and reports in `FINDINGS.md`; a
 forward paper lane also keeps a `journal/`. The ids, statuses and trial counts come from
 [`registry/rounds.csv`](../registry/rounds.csv). Newest first.
@@ -12,10 +14,11 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (21)
+## Running or armed registered rounds (22)
 
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
 - **[lighter_roll_fwd](lighter_roll_fwd/)** R389, RUNNING PENDING, 1 trial. Lighter BRENTOIL index roll steps: does the book lag the documented step? (M462, forward paper) ([PREREG](lighter_roll_fwd/PREREG.md))
+- **[forcedswitch_v1](forcedswitch_v1/)** R388, RUNNING PENDING, 3 trials. Binance forced hourly switch as a natural experiment: post-rule switch prints vs pre-rule prints (M461) ([PREREG](forcedswitch_v1/PREREG.md), [FINDINGS](forcedswitch_v1/FINDINGS.md))
 - **[settlelit_1h_v1](settlelit_1h_v1/)** R387, RUNNING PENDING, 6 trials. M460: R363's Lighter settlement scalp (enter before T, cover T+1 min, against the side that received Binance's lump) on Binance 1 h-interval settlements (|r_prev| >= 0.3%), a population no settlement lane read; 222 hops, 9 coins, 30 coin-days ([PREREG](settlelit_1h_v1/PREREG.md), [FINDINGS](settlelit_1h_v1/FINDINGS.md))
 - **[settlelit_fwd](settlelit_fwd/)** R364, RUNNING PENDING, 1 trial. R363's Lighter settlement scalp forward on paper: Binance's live predicted rate at T-1h+20s vs Lighter's last hourly rate (e = r - 2h), position on Lighter against the side receiving Binance's lump, $1k walked through Lighter's live book at T-10 s and T+60 s, Lighter's own settlement at T ([PREREG](settlelit_fwd/PREREG.md), [journal](settlelit_fwd/journal/))
 - **[settlehop_fwd](settlehop_fwd/)** R355, RUNNING PENDING, 1 trial. R354's settlement hop forward on paper: MEXC's displayed rate at T-1h vs Lighter's hourly rate (e = F - 2h), two $1k legs walked through the live books, held T-1h to T+1h (MEXC decided, Gate reported) ([PREREG](settlehop_fwd/PREREG.md), [journal](settlehop_fwd/journal/))

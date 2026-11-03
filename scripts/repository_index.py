@@ -220,6 +220,156 @@ def render(entries):
     return "\n".join(lines) + ("\n" if lines else "")
 
 
+PROVENANCE_LIMIT = 2 * 1024**2
+SHA256 = re.compile(r'[a-f0-9]{64}')
+
+
+def provenance_text(root, name):
+    """Read a bounded declarative source, never one of its declared targets."""
+    path = safe_file(root, name)
+    if path.stat().st_size > PROVENANCE_LIMIT:
+        raise ValueError('oversized provenance metadata')
+    with path.open('rb') as source:
+        raw = source.read(PROVENANCE_LIMIT + 1)
+    if len(raw) > PROVENANCE_LIMIT:
+        raise ValueError('oversized provenance metadata')
+    return raw.decode('utf-8-sig')
+
+
+def declaration_path(value):
+    """Validate the declaration lexically without resolving/opening its target."""
+    if not isinstance(value, str) or not value or value != value.strip():
+        raise ValueError('explicit provenance path required')
+    path = PurePosixPath(value)
+    if (path.is_absolute() or '..' in path.parts or '\\' in value or
+            re.match(r'^[A-Za-z][A-Za-z0-9+.-]*:', value) or
+            any(ord(c) < 32 for c in value) or str(path) == '.'):
+        raise ValueError('unsafe declared provenance path')
+    return str(path)
+
+
+def declared_identities(root, prefix, files):
+    """Project supported metadata to hashes and paths; verification stays false."""
+    identities = []
+    issues = []
+    seen = {}
+
+    def add(manifest, field, digest, path=None):
+        if not isinstance(digest, str) or not SHA256.fullmatch(digest):
+            raise ValueError('invalid declared SHA256 in '+manifest)
+        normalized = declaration_path(path) if path is not None else None
+        if normalized is not None:
+            key = manifest, normalized
+            if key in seen:
+                raise ValueError('duplicate provenance path in '+manifest+': '+normalized)
+            seen[key] = digest
+        else:
+            issues.append(dict(kind='hash_path_unknown', manifest=manifest, field=field))
+        identities.append(dict(manifest=manifest, field=field, path=path,
+                               reported_sha256=digest, local_tracked=normalized in files,
+                               identity_reverified=False, declaration_conflict=False))
+
+    def unique(pairs):
+        out = {}
+        for key, value in pairs:
+            if key in out:
+                raise ValueError('duplicate JSON provenance key')
+            out[key] = value
+        return out
+
+    def nonfinite(_):
+        raise ValueError('nonfinite provenance metadata')
+
+    metadata = sorted(p for p in files if p.startswith(prefix+'/') and p.endswith('.json') and
+                      '/' not in p[len(prefix)+1:] and
+                      ('inputs' in Path(p).name or Path(p).name == 'training_manifest.json'))
+    for name in metadata:
+        try:
+            obj = json.loads(provenance_text(root, name), object_pairs_hook=unique,
+                             parse_constant=nonfinite)
+        except RecursionError as exc:
+            raise ValueError('provenance metadata is too deeply nested') from exc
+        if Path(name).name == 'training_manifest.json':
+            if not isinstance(obj, list):
+                raise ValueError('training manifest must be a list of path/hash records')
+            for i, record in enumerate(obj):
+                if (not isinstance(record, dict) or not {'path', 'sha256'} <= set(record) or
+                        set(record) - {'path', 'bytes', 'sha256'}):
+                    raise ValueError('unsupported training manifest record')
+                if 'bytes' in record and (type(record['bytes']) is not int or record['bytes'] < 0):
+                    raise ValueError('invalid provenance byte count')
+                add(name, f'/{i}/sha256', record['sha256'], record['path'])
+            continue
+        # Legacy inputs can be nested maps or explicit path/sha256 records.
+        stack = [(obj, '', '', 0)]
+        while stack:
+            value, at, container, depth = stack.pop()
+            if depth > 128:
+                raise ValueError('provenance metadata is too deeply nested')
+            if isinstance(value, dict):
+                record = 'path' in value and 'sha256' in value
+                if record:
+                    add(name, at+'/sha256', value['sha256'], value['path'])
+                for key, child in value.items():
+                    if record and key in ('path', 'sha256'):
+                        continue
+                    field = at+'/'+key
+                    if isinstance(child, (dict, list)):
+                        stack.append((child, field, key, depth+1))
+                    elif isinstance(child, str) and SHA256.fullmatch(child):
+                        path = key if container == 'sha256' or '/' in key or PurePosixPath(key).suffix else None
+                        add(name, field, child, path)
+                    elif container == 'sha256':
+                        raise ValueError('invalid path-to-SHA256 mapping in '+name)
+            elif isinstance(value, list):
+                stack.extend((child, at+'/'+str(i), container, depth+1)
+                             for i, child in reversed(list(enumerate(value))))
+
+    spec = prefix+'/PREREG.md'
+    if spec in files:
+        fence = None
+        for line_no, line in enumerate(provenance_text(root, spec).splitlines(), 1):
+            marker = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', line)
+            if fence is None:
+                if marker:
+                    fence = (marker[1][0], len(marker[1]), marker[2].strip() == 'inputs')
+                continue
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= fence[1] and not marker[2].strip():
+                fence = None
+                continue
+            if not fence[2] or not line.strip():
+                continue
+            if re.fullmatch(r'\s*rebuild:[ \t]+\S.*', line):
+                issues.append(dict(kind='rebuild_recipe_not_executed', manifest=spec,
+                                   field='/inputs/'+str(line_no)))
+                continue
+            digest_first = re.fullmatch(r'\s*([a-f0-9]{64})[ \t]+(.+?)\s*', line)
+            path_first = re.fullmatch(r'\s*(.+?)[ \t]+([a-f0-9]{64})\s*', line)
+            if digest_first and path_first:
+                raise ValueError('ambiguous inputs declaration in '+spec+':'+str(line_no))
+            if not digest_first and not path_first:
+                raise ValueError('malformed inputs declaration in '+spec+':'+str(line_no))
+            digest, path = ((digest_first[1], digest_first[2]) if digest_first else
+                            (path_first[2], path_first[1]))
+            add(spec, '/inputs/'+str(line_no), digest, path)
+        if fence is not None and fence[2]:
+            raise ValueError('unterminated inputs declaration in '+spec)
+
+    by_path = {}
+    for entry in identities:
+        if entry['path'] is not None:
+            by_path.setdefault(declaration_path(entry['path']), []).append(entry)
+    for path, declarations in sorted(by_path.items()):
+        if len({entry['reported_sha256'] for entry in declarations}) > 1:
+            issues.append(dict(kind='conflicting_declared_hashes', path=path,
+                               manifests=sorted({entry['manifest'] for entry in declarations})))
+            for entry in declarations:
+                entry['declaration_conflict'] = True
+    if not identities:
+        issues.append(dict(kind='no_supported_identity_declarations'))
+    return identities, issues
+
+
 def trace(root,identifier,files=None):
     """Follow canonical method→round→spec/code/data identities, metadata only.
 
@@ -236,30 +386,19 @@ def trace(root,identifier,files=None):
     rids={identifier} if identifier.startswith('R') else set(re.findall(r'\bR[0-9]+\b',selected[0].get('rid','')))
     records=[r for r in registered if r['id'] in rids];lanes=[]
     for r in records:
-        prefix='experiments/'+r['lane'];identities=[]
-        metadata=sorted(p for p in files if p.startswith(prefix+'/') and p.endswith('.json') and
-            '/' not in p[len(prefix)+1:] and 'inputs' in Path(p).name)
-        for name in metadata:
-            p=safe_file(root,name)
-            if p.stat().st_size>2*1024**2:raise ValueError('oversized provenance metadata')
-            obj=json.loads(p.read_text())
-            def visit(x,at=''):
-                if isinstance(x,dict):
-                    for k,v in x.items():
-                        if isinstance(v,str) and re.fullmatch('[a-f0-9]{64}',v):
-                            identities.append({'manifest':name,'field':at+'/'+k,'reported_sha256':v,
-                                'local_tracked':k in files,'identity_reverified':False})
-                        elif isinstance(v,(dict,list)):visit(v,at+'/'+k)
-                elif isinstance(x,list):
-                    for i,v in enumerate(x):visit(v,at+'/'+str(i))
-            visit(obj)
+        if not re.fullmatch(r'[A-Za-z0-9_][A-Za-z0-9_.-]*', r['lane']):
+            raise ValueError('invalid lane name in registry')
+        prefix='experiments/'+r['lane']
+        identities, issues = declared_identities(root, prefix, files)
         lanes.append({'id':r['id'],'lane':r['lane'],'status':r['status'],'verdict':r['verdict'],
             'trials':r['trials'],'spec':prefix+'/PREREG.md' if prefix+'/PREREG.md' in files else None,
             'findings':prefix+'/FINDINGS.md' if prefix+'/FINDINGS.md' in files else None,
-            'registered_prereg_sha256':r['prereg_sha'],'identities':identities})
+            'registered_prereg_sha256':r['prereg_sha'],'identities':identities,
+            'provenance_issues':issues})
     if identifier.startswith('R') and not records:raise ValueError('unknown registered round')
     return {'query':identifier,'canonical_methods':selected,'rounds':lanes,
-        'scope':'Metadata links only; reported identities, verdicts and input completeness are not independently verified here.'}
+        'scope':'Metadata links only; reported identities, verdicts and input completeness are not independently verified here. '
+                'Paths retain the declaration\'s own base; local_tracked is exact normalized path membership, not target availability or verification.'}
 
 
 def main(argv=None):

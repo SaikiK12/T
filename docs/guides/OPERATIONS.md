@@ -115,6 +115,37 @@ The original `python -m unittest discover -s tests -t .` remains the same full g
 New lane: copy `templates/lane/`, write the PREREG, claim its id on issue #7, freeze it with `lab.prereg.freeze()`,
 then run.
 
+## Maintain catalog and provenance views
+
+Folder catalogs use one commit-ready snapshot of the Git index. Stage intended
+source, protocol and registry changes before regenerating them; untracked files,
+unstaged edits, intent-to-add placeholders and source symlinks are excluded.
+
+```sh
+.venv/bin/python scripts/catalog.py
+.venv/bin/python scripts/catalog.py --check
+```
+
+The check exits1 for stale/missing views and2 for invalid inputs/outputs. It does
+not rewrite catalogs or the real index/object cache. Publication validates all
+three views first and replaces changed files atomically; output symlinks are
+rejected. Unchanged views retain their timestamps. This checks metadata
+consistency, not observation freshness, on-time collection or a research verdict.
+CI runs the same catalog check, so intended sources and regenerated views must
+be included together in a publication.
+
+`lab find --trace R389` reports supported frozen declarations from inputs JSON,
+training manifests and `inputs` fences (both historical path/hash orderings).
+Conflicts and unsupported/missing declarations remain explicit. Tracked-name
+membership does not prove target availability or matching bytes; declared data,
+results and journals are not opened or independently verified by this command.
+
+The [funding-notional audit](../../lab/funding_notional.py) compares rate-sum and
+fixed-quantity cash conventions with supplied eligibility, coverage and values.
+Its [demo](../../scripts/audit_funding_notional.py) uses invented inputs only;
+missing evidence remains unscored. It does not retrofit any frozen lane or prove
+a historical gain. A market reanalysis needs a new frozen design.
+
 ## Related integration records
 
 The [M090/M322 implementation handoff](../../research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes

@@ -2,6 +2,8 @@
 
 <!-- written by scripts/catalog.py; edit the sources (registry, docstrings), not this file -->
 
+Source: tracked and staged Git-index metadata; untracked files and unstaged edits are excluded.
+
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
@@ -235,9 +237,10 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (25)
+## Check: parity, audits and integrity (26)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
+- [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
 - [`audit_level_probability.py`](audit_level_probability.py): Frozen R330 audit-only sign correction; original failure/model stay intact.
 - [`audit_path_timing.py`](audit_path_timing.py): Read-only timing/ID diagnosis after R400 refusal; never loads price/size columns.

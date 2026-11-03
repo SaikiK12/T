@@ -116,3 +116,32 @@ The only test that could promote this would be a frozen forward paper lane on a 
 - the daily-sum series pre-registered.
 
 That needs the owner's go, and an API route the owner does not have today.
+
+## Reporting clarification (2026-11-03, no new market statistic)
+
+The primary **NULL is specific to the frozen day-weighted decision and its
+checks**. The broad sentence in "Reading" about no variant paying at any cost
+must not be read as denying the positive per-trade 1x values already reported
+above. Those are different estimands; neither alone certifies a tradable capital
+account. This clarification does not recompute any result or change the verdict.
+
+There is also a unit mismatch in that paragraph: approximately14.8bp **per
+side** break-even is29.6bp **round trip**, not a quantity smaller than the
+reported roughly18bp API round trip. The positive V0P1 per-trade 1x figure
+(+11.52bp) was already measured here. Price fills, capital feasibility, timing,
+funding and stability still limit what can be concluded from it.
+
+The weighting difference can change signs without any new predictor: an
+**invented** day with one−10bp trade and another day with nine+5bp trades has
+an equal-day mean-trade statistic of−2.5bp, but average daily sums of+17.5bp
+in units of one trade's notional. Those sums are not returns on the same total
+capital/risk, and that toy is not evidence about this archive.
+
+The earlier "Next" section is historical. Related follow-ups already exist:
+[R336 on MEXC zero-fee contracts](../levels_mexc0_v1/FINDINGS.md) is PARTIAL;
+[R337 on Lighter](../levels_lighter_v1/FINDINGS.md) is NULL. Their native scope
+and cost/price limitations must be read before proposing another variant.
+A distinct allocation test would need its own frozen chronological shared-capital
+rule, capped simultaneous exposure, eligibility/fee history, marks and funding,
+with the declared controls and1x/2x/3x costs. A different weighting alone is not
+new executable alpha, and no such account was run in this clarification.
