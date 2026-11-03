@@ -37,6 +37,29 @@ class RepositoryIndexTests(unittest.TestCase):
         self.assertIn("New family", render(entries))
         self.assertFalse((self.root/'docs/README.md').exists())
 
+    def test_nested_guides_reviews_and_folder_readmes_are_searchable(self):
+        paths = ['README.md', 'docs/guides/OPERATIONS.md', 'docs/reviews/engineering.md',
+                 'research/discovery/README.md', 'research/reviews/batch/funding.md',
+                 'reports/Review with spaces.md', 'research_notes/batch/source.md',
+                 'registry/README.md', 'tests/README.md']
+        for path in paths:
+            self.write(path, '# Human heading for '+path+'\n')
+        entries = build_index(self.root, paths)
+        self.assertEqual({e['path'] for e in entries}, set(paths))
+        self.assertTrue(all(e['kind'] == 'document' and e['title'].startswith('Human heading') for e in entries))
+        self.assertEqual(next(e['group'] for e in entries if e['path'] == paths[1]), 'User guides')
+        self.assertEqual(entries, build_index(self.root, reversed(paths)))
+
+    def test_nested_payload_markdown_is_not_opened_or_indexed_as_documentation(self):
+        # The listed files deliberately do not exist: inspecting them would fail.
+        paths = [f'{root}/{folder}/secret.md'
+                 for root in ('docs/reviews', 'research/discovery', 'reports', 'research_notes')
+                 for folder in ('results', 'journal', 'data', 'reserved', 'cache', 'snapshots', 'fixtures')]
+        self.assertEqual(build_index(self.root, paths), [])
+        self.write('research/intake/cards/source.md', '# Source text is not a document heading\n')
+        source = build_index(self.root, ['research/intake/cards/source.md'])[0]
+        self.assertEqual((source['kind'], source['title']), ('source', 'source.md'))
+
     def test_registry_is_authority_missing_imports_and_unregistered_folders_visible(self):
         self.registry([
             dict(id="R1", lane="local", status="DONE", verdict="NULL"),
