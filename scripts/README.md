@@ -282,7 +282,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (67)
+## Tools and everything else (69)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -298,6 +298,7 @@ line is the first line of the script's own docstring.
 - [`dashboard_jobs.py`](dashboard_jobs.py): Read-only operational job metadata for the control room.
 - [`dashboard_perf.py`](dashboard_perf.py): The control room's performance and coverage datasets (docs/BENCHMARK.md build items 2-3), used by dashboard_data.py.
 - [`data_provenance.py`](data_provenance.py): Provenance record for a downloaded data folder (docs/DATA_PROVENANCE_AUDIT.md): every file's size and sha256, a combined digest, file counts per subfolder, and for hourly parquet folders the bar ...
+- [`decide_reserved_batch2.py`](decide_reserved_batch2.py): R391 reserved batch 2: the decision on qx spread's tables (experiments/reserved_batch2/PREREG.md).
 - [`delist_events.py`](delist_events.py): Legs for the delisting-notice short (E03, docs/OLD_SESSION_EDGES.md S2) from the Binance delisting catalog (data/recorders/notices/binance_delisting.csv, scripts/record_notices.py) and the ...
 - [`demo_formula_discovery.py`](demo_formula_discovery.py): Invented-world formula discovery and chart information-loss demonstration.
 - [`event_journal.py`](event_journal.py): Shared engine of the point-in-time event recorders (record_listings.py, record_tradfi_calendar.py).
@@ -339,6 +340,7 @@ line is the first line of the script's own docstring.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
+- [`reserved_venue_table.py`](reserved_venue_table.py): qx spread symbol table for reserved batch 2 (R391): the long-tail contracts in the KuCoin, dYdX and Lighter `reserved/` folders (docs/GATES.md), matched with each other and with MEXC by base name.
 - [`score_lighter_roll.py`](score_lighter_roll.py): R389 lighter_roll_fwd: does Lighter's BRENTOIL book lag the documented index roll steps? (M462, SRC1103-014).
 - [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`settlelit_fwd_rule.py`](settlelit_fwd_rule.py): R364 settlelit_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
