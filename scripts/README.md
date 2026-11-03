@@ -233,7 +233,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (24)
+## Check: parity, audits and integrity (25)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_levcarry.py`](audit_levcarry.py): levcarry_v1 (R280) audit: are the legs liquidated at L = 1 real moves, or one venue's trade prints?.
@@ -254,6 +254,7 @@ line is the first line of the script's own docstring.
 - [`check_owner_acceptance.py`](check_owner_acceptance.py): R320 independent literal risk-target/forecast and paper-report audit.
 - [`check_paired_account.py`](check_paired_account.py): Independent arithmetic for R319 reports, standard library only.
 - [`check_paper_account.py`](check_paper_account.py): Independent Decimal oracle for linear simulated-account integration.
+- [`check_paper_solvency.py`](check_paper_solvency.py): Read a paper snapshot and report capital capacity; never starts a runner.
 - [`check_research_integrity.py`](check_research_integrity.py): Audit the research register and local preregistrations without changing files.
 - [`check_spot_costs.py`](check_spot_costs.py): Independent exact-rational audit of R325 raw quote cash and capital costs.
 - [`check_spot_costs_v2.py`](check_spot_costs_v2.py): R326 scope over the frozen raw rational oracle; no input acquisition.
@@ -279,11 +280,12 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (65)
+## Tools and everything else (66)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
+- [`bls_calendar.py`](bls_calendar.py): Restricted BLS iCalendar reader: announced schedules, not actual releases.
 - [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
 - [`capture_mexc_funding_forecasts.py`](capture_mexc_funding_forecasts.py): One-shot public MEXC next-funding capture.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.

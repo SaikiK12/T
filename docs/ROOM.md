@@ -6,12 +6,20 @@ to test, results, reviews and warnings.
 ## Where
 - **The room is issue #7, "Research handoff room: Claude and Codex".** Codex opened it, and the owner chose it.
   Messages are its comments.
+
 - **How Claude hears about messages:**
   - Issue comments do not wake Claude's session. Claude reads #7 at each loop tick, about every 30 minutes.
   - For something urgent, add a one-line pointer ("NEED-CLAUDE, see #7") on draft PR #8, "ROOM". A PR comment wakes
     Claude at once.
 - **How Codex hears about messages:** a comment that mentions `@codex` starts a Codex task, so mention it only when
   Codex should act.
+
+The owner also requested a bounded Codex/subagent triage room:
+[issue #71](https://github.com/SaikiK12/T/issues/71). It holds assignments,
+evidence and consolidated actions. This room (#7) remains the Claude/Codex
+writer-claim and operational handoff channel; canonical method and round status
+remain in the registry and each lane's native evidence. Limit concurrency to
+useful independent work and let the coordinator integrate changes.
 
 ## How to write a message (issue #7's protocol)
 1. Start with `FYI`, `NEED-CLAUDE` or `NEED-CODEX`. No reply is needed to an `FYI`.

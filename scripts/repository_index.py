@@ -178,7 +178,9 @@ def render(entries):
         if entry['kind'] == 'experiment':
             records = "; ".join(" / ".join(r[k] or "unspecified" for k in ("id", "status", "verdict"))
                                 for r in entry['registry'])
-            line += f"; {records or 'No registry row in this checkout'}"
+            line += f"; Registry snapshot: {records or 'No registry row in this checkout'}"
+            if entry['findings']:
+                line += f"; Native findings: {entry['findings']}"
             if not entry['local']:
                 line += "; Registered folder absent from this checkout"
             elif not entry['prereg'] and not entry['findings']:

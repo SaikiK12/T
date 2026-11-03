@@ -1,0 +1,49 @@
+{
+  "archive_bytes": 80672,
+  "archive_request_start_local_utc": "2026-11-03T17:58:58.419792+00:00",
+  "archive_response_observed_local_utc": "2026-11-03T17:58:58.881012+00:00",
+  "archive_sha256": "92a350111ace106deaab5584e4084366bd367b594a0d0bad116008d82d63e501",
+  "client": "scripts/event_journal.py http_get, project User-Agent lab/1",
+  "final_url": "https://www.bls.gov/schedule/news_release/bls.ics",
+  "limits": [
+    "Local system-clock observations are not independently verified UTC or first-public timestamps.",
+    "HTTP Date and Last-Modified describe this response/resource, not actual release publication times.",
+    "DTSTART is the announced schedule. The manual journal poll was a separate earlier response; its raw bytes were not archived.",
+    "No market prices, outcomes, interim strategy results or reserved samples were read. No recurring process was started."
+  ],
+  "parsed_scope": {
+    "from_day_in_America_New_York": "2026-11-03",
+    "includes_earlier_times_on_same_day": true,
+    "scheduled_items_on_or_after_day": 23
+  },
+  "selected_headers": {
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/calendar",
+    "Date": "Tue, 03 Nov 2026 17:58:58 GMT",
+    "Last-Modified": "Wed, 10 Jun 2026 16:56:37 GMT"
+  },
+  "separate_manual_recorder_check": {
+    "command": "python scripts/record_tradfi_calendar.py run --once --force --only bls_calendar",
+    "event_rows": 23,
+    "events_sha256": "50f0c66245e793796c9bc0bc7c88c4f54f9f262f7a8e0ee08cbd69d7c5be645e",
+    "events_snapshot": "manual_baseline.csv",
+    "poll": {
+      "back": "0",
+      "baseline": "23",
+      "bucket": "83042",
+      "change": "0",
+      "elapsed_ms": "439",
+      "error": "",
+      "gone": "0",
+      "interval_s": "21600",
+      "items": "23",
+      "new": "0",
+      "ok": "1",
+      "poll_ms": "1793728495742",
+      "poll_utc": "2026-11-03T17:54:55Z",
+      "source": "bls_calendar"
+    }
+  },
+  "source_url": "https://www.bls.gov/schedule/news_release/bls.ics",
+  "status": 200
+}
