@@ -80,6 +80,8 @@ def forward_tasks(python=".venv/bin/python"):
         task("REC_HFT", "record_hft.py", timeout=60),
         task("REC_RAW", "record_raw.py", timeout=60),
         task("REC_NEWS", "record_news.py", timeout=60),
+        task("REC_LINDEX", "record_lighter_index.py", timeout=60),   # R389: BRENTOIL/WTI market_stats daemon
+        task("REC_HLLB", "scrape_hyperliquid.py", timeout=900),      # M466/M467: daily leaderboard, hourly picks
         task("R268", "forward_delist.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R270", "forward_montag.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
         task("R272", "forward_announce.py", (), ("REC_TICKER", "REC_NOTICES"), timeout=300),
@@ -211,6 +213,8 @@ LABELS.update({
     "REC_HFT": ("Market data collection", "100 ms BTC/ETH feed recorder supervision", "recorders"),
     "REC_RAW": ("Market data collection", "Raw-event BTC/ETH feed recorder supervision", "recorders"),
     "REC_NEWS": ("Market data collection", "News recorder supervision", "recorders"),
+    "REC_LINDEX": ("Market data collection", "Lighter BRENTOIL/WTI index and book stats (R389)", "recorders"),
+    "REC_HLLB": ("Market data collection", "Hyperliquid leaderboard snapshot and picks' positions", "copylead_data"),
     "R278": ("Prospective paper", "Cross-venue funding carry", "xfund_fwd"),
     "R279": ("Prospective paper", "KuCoin cross-venue carry", "xfund_kc_fwd"),
     "R294": ("Prospective paper", "Lighter cross-venue carry", "xfund_lt_fwd"),
