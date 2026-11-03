@@ -38,7 +38,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (22)
+## Record: point-in-time collectors (cannot be backfilled) (23)
 
 - [`record_commodity_perps.py`](record_commodity_perps.py): Best quote, trades and reference prices of the 24/7 commodity and index perps on Hyperliquid (HIP-3 `xyz` dex) and Kraken Futures, plus Binance's own TradFi perps, side by side (M443 WTI ...
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
@@ -47,6 +47,7 @@ line is the first line of the script's own docstring.
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
 - [`record_hft.py`](record_hft.py): High-rate feed recorder (M427-M429 data): BTC and ETH top of book and trades at 100 ms on Binance USDT and USDC perps, Bybit USDT perps and Hyperliquid, into data/hft/. Public websockets only; ...
 - [`record_lighter_book.py`](record_lighter_book.py): Hourly snapshot of what a taker order costs on Lighter, the zero-fee perp DEX (docs/VENUE_STRUCTURE.md): for every active perp, the best bid and ask, the cost per side of a market order of USD 1k ...
+- [`record_lighter_index.py`](record_lighter_index.py): Lighter's public market_stats stream for the oil perps (M462): index, mark, mid, best bid and ask, last trade, the funding fields and open interest, as Lighter sends them (about one message a ...
 - [`record_lighter_trades.py`](record_lighter_trades.py): Lighter public trade and best-quote stream for the commodity perps (M441, M443): every trade with both account ids, who was the maker, each side's position and entry value before the fill, the ...
 - [`record_listings.py`](record_listings.py): Perp contract-list watcher: the public contract list of eight venues diffed every few minutes, so the moment a contract appears, disappears or changes status, funding interval, tick, lot size, ...
 - [`record_m090_content.py`](record_m090_content.py): One frozen public M090 signed-content capture or head-pinned offline audit.
@@ -92,7 +93,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (138)
+## Run: one lane's frozen measurement (139)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -138,6 +139,7 @@ line is the first line of the script's own docstring.
 - [`run_flow72.py`](run_flow72.py): flow72_v1 (R196): short the coins with heavy taker selling / top traders short vs the crowd, 72 h, universe-hedged, as set out in experiments/flow72_v1/PREREG.md.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
+- [`run_forcedswitch.py`](run_forcedswitch.py): R388 forcedswitch_v1: Binance's forced hourly switch as a natural experiment (M461, web-deep SRC1103-010).
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
 - [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
 - [`run_fundvol.py`](run_fundvol.py): R382 fundvol_v1 (M455): does trailing volatility sizing improve a funding-carry book's net return at executable cost?.
@@ -280,7 +282,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (66)
+## Tools and everything else (67)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -337,6 +339,7 @@ line is the first line of the script's own docstring.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
+- [`score_lighter_roll.py`](score_lighter_roll.py): R389 lighter_roll_fwd: does Lighter's BRENTOIL book lag the documented index roll steps? (M462, SRC1103-014).
 - [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`settlelit_fwd_rule.py`](settlelit_fwd_rule.py): R364 settlelit_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
