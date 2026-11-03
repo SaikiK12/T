@@ -13,8 +13,11 @@ Sources (public GET, no key, no login; User-Agent `lab/1`, no contact data):
   fed_calendar      every 6 h    federalreserve.gov/json/calendar.json for the current month on: FOMC, speeches, testimony,
                     Beige Book, statistical releases (time as published, ET).
   treasury_auctions every 6 h    treasurydirect.gov upcoming auctions: announcement, close times (ET), offering amount.
+  bls_calendar      every 6 h    bls.gov iCalendar: UID, announced schedule and revisions. Scheduled times are not
+                    actual release or first-publication times; local observations are not verified UTC.
 Not available without a login or a contact address: SEC EDGAR (its fair-access policy asks for a contact in the
-User-Agent; owner decision, not used), BLS release schedule and CME holiday calendar (HTTP 403), NYSE calendar page (404).
+User-Agent; owner decision, not used), CME holiday calendar (HTTP 403), NYSE calendar page (404).
+BLS access was previously blocked; its public ICS returned 200 with this client on 2026-11-03.
 
 Journal: data/events/tradfi_calendar/events.csv and polls_<YYYYMM>.csv, the shared engine of scripts/event_journal.py
 (columns and the baseline / new / gone / back / change events are described there). `event_time_raw` is the source's own
@@ -34,6 +37,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import event_journal as ej  # noqa: E402
+import bls_calendar as bls  # noqa: E402
 
 OUT = ROOT / "data" / "events" / "tradfi_calendar"
 NY = ZoneInfo("America/New_York")
@@ -42,9 +46,11 @@ URL = {
     "nasdaq_earnings": "https://api.nasdaq.com/api/calendar/earnings?date={date}",
     "fed_calendar": "https://www.federalreserve.gov/json/calendar.json",
     "treasury_auctions": "https://www.treasurydirect.gov/TA_WS/securities/upcoming?format=json",
+    "bls_calendar": "https://www.bls.gov/schedule/news_release/bls.ics",
 }
 EARN_DAYS = 7
 MAP = {
+    "bls_calendar": bls.FIELDS,
     "nasdaq_halts": {"name": "ndaq:IssueName", "market": "ndaq:Market", "reason": "ndaq:ReasonCode",
                      "pause_price": "ndaq:PauseThresholdPrice", "resume_date": "ndaq:ResumptionDate",
                      "resume_quote": "ndaq:ResumptionQuoteTime", "resume_trade": "ndaq:ResumptionTradeTime",
@@ -206,12 +212,19 @@ def fetch_treasury(now_s):
     return parse_treasury(ej.http_get(URL["treasury_auctions"])), None
 
 
+def fetch_bls(now_s):
+    day=datetime.fromtimestamp(now_s,timezone.utc).astimezone(NY).date().isoformat()
+    items=bls.parse(ej.http_get(URL['bls_calendar'],headers={'Accept':'text/calendar, */*'}),day)
+    return items,lambda fields: fields.get('schedule_day','')>=day
+
+
 SOURCES = [
     ej.Source("nasdaq_halts", 300, fetch_halts, "ndaq:IssueSymbol+HaltDate+HaltTime", MAP["nasdaq_halts"],
               track_gone=False, guard=False),
     ej.Source("nasdaq_earnings", 21600, fetch_earnings, "symbol", MAP["nasdaq_earnings"]),
     ej.Source("fed_calendar", 21600, fetch_fed, "type+month+days+title", MAP["fed_calendar"]),
     ej.Source("treasury_auctions", 21600, fetch_treasury, "cusip", MAP["treasury_auctions"], guard=False),
+    ej.Source("bls_calendar", 21600, fetch_bls, "UID", MAP["bls_calendar"]),
 ]
 
 

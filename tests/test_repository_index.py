@@ -57,6 +57,8 @@ class RepositoryIndexTests(unittest.TestCase):
         self.assertIn("Registered folder absent", text)
         self.assertNotIn("](../experiments/imported)", text)
         self.assertIn("No registry row in this checkout", text)
+        self.assertIn('Registry snapshot: R1 / DONE / NULL',text)
+        self.assertIn('Native findings: experiments/local/FINDINGS.md',text)
 
     def test_deterministic_and_never_reads_or_changes_result_journal_or_runner(self):
         paths = ["scripts/run_demo.py", "experiments/demo/results/outcome.json",
