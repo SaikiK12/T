@@ -89,8 +89,10 @@ PREREG and FINDINGS say exactly what was tested. Every number below is copied fr
   looks at 90 scored days (2027-02-02) and 180 (2027-05-03). Power is modest: at the 2020 strength a 90-day PASS is
   about one chance in three.
 - **Web-deep wave (2026-11-03, `research/intake/web_deep_20261103.json`): new queue rows M460-M467, nothing run.**
-  The strongest is M460: R363's settlement scalp on Binance's 1 h-interval settlements. Since 2025-05-02 a cap or floor
-  print switches a perp to hourly, and no settlement lane has read those settlements (R353-R363 kept 4 h and 8 h).
+  The strongest, M460, was run the same day as **R387: NULL** (222 hourly-cycle Binance settlements, 9 coins, 30
+  coin-days). The capture crowd's move is there (+54.5 bp a hop on Lighter) but Lighter settles at the same T near its
+  clamp (-42.4 bp), leaving +9.2 bp at 1x, t 1.64; -7.2 bp with RIVER at its measured cost. Next, untested and now not
+  blind: the same move on a venue that does not settle at T (MEXC on a 4 h/8 h cycle), as a forward lane.
   M462 (Lighter BRENTOIL roll steps) needs an index recorder before the 2026-11-06..11-12 window. M466/M467 (HL vault
   and Lighter winner persistence) wait on the owner's yes for ~300 MB and ~1 GB pulls. Prediction markets are not legal
   for the owner (ANJ block of Polymarket, Kalshi restricts France).
