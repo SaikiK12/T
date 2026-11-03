@@ -76,3 +76,19 @@ control. Gate admission and real orders remain blocked regardless of result.
 
 Pending. Actual market fits: **0 here**; prospective observations: **0**.
 Market 1x/2x/3x PnL: **unknown**. No positive-return or novelty claim.
+
+## Prepare run, 2026-11-03 (executed by Claude on the raw-tape host)
+
+- Code: branch head `7573f72` (PR #69 merge); `tests.test_path_response` 23 OK before the run.
+- Command, run once: `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 nice .venv/bin/python scripts/run_path_response.py
+  prepare --data data/rawtape`, 10:24:52-10:25:09 UTC. Log: `results/prepare.log`.
+- The frozen inputs and `training_manifest.json` passed: all four 10-29 files matched bytes and SHA256.
+- **Result: REFUSED**, exit 2: `label coverage below 99%: 2026-10-29/BTCUSDT`, raised in `load_windows`.
+- The first look is consumed. `prepare.started.json` and `development_inputs.json` were written; no
+  `development_samples.csv`, `model.json` or `model.sha256` exists.
+- Per this lane's protocol, the run was not retried, no file was substituted and the coverage was not diagnosed on
+  the market data. Nobody read a price, label value or coverage fraction beyond the refusal line.
+- Market fits: 0. Prospective observations: 0. 1x/2x/3x PnL: none, since there is no model. R400 is closed at prepare
+  with no equation and gate-ineligible; the Nov 4-10 score step has no artifact to score.
+- Not checked: why label coverage fell below 99% (a data gap, the 17:00 recording edge, or the rule's age limits).
+  A follow-up would be a new lane id with its own frozen coverage rule.
