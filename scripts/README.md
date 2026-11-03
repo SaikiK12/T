@@ -92,7 +92,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (136)
+## Run: one lane's frozen measurement (138)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -184,6 +184,7 @@ line is the first line of the script's own docstring.
 - [`run_pairs.py`](run_pairs.py): pairs_v1 (R250): weekly-formed pairs on the top-50 perps, distance (Gatev) and Engle-Granger selection, z-score entry 2 and exit 0, as set out in experiments/pairs_v1/PREREG.md.
 - [`run_paper_account.py`](run_paper_account.py): R318 offline account integration, on invented fixtures and sealed seen books.
 - [`run_partial_execution.py`](run_partial_execution.py): R231: pre-registered partial adjustment of the unchanged R229 spot target.
+- [`run_path_response.py`](run_path_response.py): R400 frozen raw-tape equation discovery, then one delayed forward evaluation.
 - [`run_pcares.py`](run_pcares.py): pcares_v1 (R287): Avellaneda-Lee PCA residual reversion on the top-50 Binance perps at hourly scale, as set out in experiments/pcares_v1/PREREG.md (M298).
 - [`run_pivotfade.py`](run_pivotfade.py): pivotfade_v1 (R248): fade a close beyond the prior day's floor pivot R1/S1 (the mirror of R243/R247's PIVOT_BREAK) on daily world indices and forex (validation 2013-19, then the 2020-26 holdout ...
 - [`run_posfam.py`](run_posfam.py): posfam_v1 (R211): the two halves of top_vs_crowd and the top-account ratio as 72 h slice books; posfam_v2 (R212): the top-account ratio as a contrarian book.
@@ -203,6 +204,7 @@ line is the first line of the script's own docstring.
 - [`run_settlehop_exit.py`](run_settlehop_exit.py): R356 settlehop_exit_v1: R354's settlement hops closed minutes after the settlement, frozen in experiments/settlehop_exit_v1/PREREG.md.
 - [`run_settlehop_pred.py`](run_settlehop_pred.py): R354 settlehop_pred_v1: R353's settlement-window hop on a point-in-time predicted rate, frozen in experiments/settlehop_pred_v1/PREREG.md.
 - [`run_settlelit.py`](run_settlelit.py): R363 settlelit_v1: short Lighter across a deep Binance settlement and cover a minute later, frozen in experiments/settlelit_v1/PREREG.md.
+- [`run_settlelit_1h.py`](run_settlelit_1h.py): R387 settlelit_1h_v1: R363's Lighter settlement scalp on Binance settlements whose interval is 1 hour, frozen in experiments/settlelit_1h_v1/PREREG.md.
 - [`run_settleticks.py`](run_settleticks.py): R362 settleticks_v1: the seconds after a deep Binance funding settlement, from Binance's tick archive, frozen in experiments/settleticks_v1/PREREG.md.
 - [`run_sizecarry.py`](run_sizecarry.py): sizecarry_v1 (R281): confidence-sized carry books, as set out in experiments/sizecarry_v1/PREREG.md.
 - [`run_sizing.py`](run_sizing.py): sizing_v1 (R217): confidence-scaled multipliers on the flow books against a constant size, as set out in experiments/sizing_v1/PREREG.md.

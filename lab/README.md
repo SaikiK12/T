@@ -72,6 +72,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_account`](paper_account.py): One append-only simulated linear-futures account, separated by venue/asset.
 - [`paper_admission`](paper_admission.py): Conservative projection of legacy reports, without rewriting their journals.
 - [`paper_controls`](paper_controls.py): Persistent paper-only entry/data/loss/concentration controls.
+- [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.
 - [`propfirm`](propfirm.py): Prop-firm economics: what a strategy's return stream is worth inside an evaluation and a funded account.
