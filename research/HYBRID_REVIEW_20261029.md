@@ -34,12 +34,12 @@ The checkout has no restored `data/` tree, but it does contain the validated `re
 
 ## Detailed reviews and source access
 
-- [Factor mechanisms and exact small variants](hybrid_factor_review_20261029.md): full-text and abstract-only scopes, momentum/residual-flow, state gate and funding guard.
-- [Intraday momentum and flow](hybrid_intraday_review_20261029.md): causal timing, breadth coverage, activity controls and power.
-- [Funding forecast and settlement cash](hybrid_funding_review_20261029.md): two-arm design and per-venue accounting prerequisites.
-- [Portfolio feasibility](hybrid_portfolio_review_20261029.md): archive schemas and capital controls.
-- [Adversarial validation](hybrid_validation_review_20261029.md): dependence, paired comparisons and multiple selection.
-- [Overlap with existing queue and results](hybrid_overlap_review_20261029.md): tested/closed variants and existing identifiers.
+- [Factor mechanisms and exact small variants](reviews/hybrid_20261029/hybrid_factor_review_20261029.md): full-text and abstract-only scopes, momentum/residual-flow, state gate and funding guard.
+- [Intraday momentum and flow](reviews/hybrid_20261029/hybrid_intraday_review_20261029.md): causal timing, breadth coverage, activity controls and power.
+- [Funding forecast and settlement cash](reviews/hybrid_20261029/hybrid_funding_review_20261029.md): two-arm design and per-venue accounting prerequisites.
+- [Portfolio feasibility](reviews/hybrid_20261029/hybrid_portfolio_review_20261029.md): archive schemas and capital controls.
+- [Adversarial validation](reviews/hybrid_20261029/hybrid_validation_review_20261029.md): dependence, paired comparisons and multiple selection.
+- [Overlap with existing queue and results](reviews/hybrid_20261029/hybrid_overlap_review_20261029.md): tested/closed variants and existing identifiers.
 
 Primary mechanisms include [order flow incremental to lagged returns](https://doi.org/10.1016/j.finmar.2026.101047), [quarter-hour crypto flow](https://arxiv.org/abs/2607.09426), and [cost-aware combination of predictors with different persistence](https://www.nber.org/papers/w15205). Market/sample differences and accessible versions are recorded in the detailed reviews; none supplies a proven MEXC hybrid.
 

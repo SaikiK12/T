@@ -5,49 +5,77 @@ A pre-registered strategy-discovery lab for crypto perpetual futures. The goal i
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
+[Guide de lecture en français](docs/guides/START_HERE.fr.md) · [Operator guide](docs/guides/OPERATIONS.md) · [Complete document index](#docs)
+
+## Start here
+
+| I want to… | Open |
+|---|---|
+| Understand the project and the identifiers | [Human reading guide](docs/guides/START_HERE.fr.md) |
+| See priorities and existing ideas | [Working direction](docs/DIRECTION.md), then the [live methods queue](registry/methods.csv) |
+| Read an experiment's actual scope and result | [Experiment catalog](experiments/README.md), then its PREREG and FINDINGS |
+| Find a source or a research design | [Research folder guide](research/README.md) |
+| Set up, inspect or run the software | [Operator guide](docs/guides/OPERATIONS.md) |
+| Make a change | [AGENTS.md](AGENTS.md), then fresh writer claims in [issue #7](https://github.com/SaikiK12/T/issues/7) |
+
 ## Current status
 
-Read the generated [panel](docs/PANEL.md) with its build timestamp, then use
-[issue #7](https://github.com/SaikiK12/T/issues/7) for fresh writer claims and operational updates.
-The README does not duplicate changing observation counts, recorder failures or lane returns.
-`python -m lab status --state-dir /absolute/external/paper-runs --strict` checks existing run
-receipts without starting work; missing receipts and unverified data remain explicit.
+The [panel](docs/PANEL.md) is a generated snapshot: check its build timestamp.
+[Issue #7](https://github.com/SaikiK12/T/issues/7) holds fresh writer claims and
+operational handoffs; [room #71](https://github.com/SaikiK12/T/issues/71) holds
+bounded Codex/subagent triage. The [live methods queue](registry/methods.csv),
+[round registry](registry/rounds.csv) and each lane's native PREREG/FINDINGS
+remain the authorities for ideas, registered work and exact tested scope.
 
-The [live methods queue](registry/methods.csv) and each lane's frozen PREREG and FINDINGS define
-what was tested. A process receipt marked SUCCESS does not establish on-time evidence or gate
-eligibility. See [DIRECTION](docs/DIRECTION.md) for the working priorities and
-[GATES](docs/GATES.md) for admission requirements.
-
-The [M090/M322 implementation handoff](research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
-the prototypes and remaining admission requirements. The
-[R374 signed-content capture](experiments/m090_content_v2/FINDINGS.md) adds a tested public adapter and replayable signed archive; UTC and forecast scoring remain disabled.
-The [R372 ORB implementation and pilot](experiments/orb_index_v1/FINDINGS.md) contains the runnable four-account engine, frozen input contract, independently checked result and exact execution limits.
-
-**Working here:**
-
-The [event-recorder review](docs/reviews/event_recorders_20261102.md) covers receipt-time semantics, calendar error handling and safe integration around active writers.
-
-1. Read [AGENTS.md](AGENTS.md) and fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7).
-2. Read the timestamp and limits in [docs/PANEL.md](docs/PANEL.md), then the linked lane's frozen PREREG and FINDINGS.
-3. Use the live queue [registry/methods.csv](registry/methods.csv); claim and freeze a new lane before any statistics.
-4. Check `python -m lab integrity`, `python -m lab check --suite fast`, and the full unit suite before code changes.
+Process success, complete on-time data and admission through the
+[research gates](docs/GATES.md) are separate states. This page does not copy
+changing returns, observation counts or process-health claims.
 
 ## Where things are
 
-| Path | What it holds |
+| Folder | Purpose and entry point |
 |---|---|
-| [`AGENTS.md`](AGENTS.md) | The hard rules for anyone working here, human or AI |
-| [`docs/PANEL.md`](docs/PANEL.md) | Live status: objective, forward lanes, next decisions (`scripts/panel.py`) |
-| `registry/` | `rounds.csv` (every round and its trial count, append-only), `methods.csv` (the method queue), `candidates.csv` (edges still alive) |
-| [`experiments/`](experiments/README.md) | One folder per lane: `PREREG.md` (frozen before any statistic), `FINDINGS.md`, `results/`; forward lanes keep a `journal/`. The catalog lists every lane with its round, status and verdict |
-| [`lab/`](lab/README.md) | Python research library: data, panel, features, backtester, inference (DSR, SPA/MCS, PBO), prereg, registry, gates, live paper |
-| `engine/` | `qx`, the Rust engine: event, factor and cross-venue spread families from one TOML spec ([`engine/README.md`](engine/README.md)) |
-| [`scripts/`](scripts/README.md) | Fetchers (`fetch_*`), recorders (`record_*`), lane runners (`run_*`, `qx_run.py`), the forward and notice loops, the dashboard export |
-| `dashboard/` | The Control Room page; `scripts/dashboard_data.py` exports its datasets |
-| `data/` | Downloaded and recorded data (not in git). Reserved samples sit under `reserved/` folders and are read only by a frozen batch PREREG |
-| `templates/` | `lane/` is the starting point for a new lane; `research_card.md` is the card for a source that was read |
+| [docs/](docs/README.md) | Reading guides, operating rules, topic notes, provenance and dated reviews |
+| [registry/](registry/README.md) | The canonical method queue, rounds, aliases and data manifest |
+| [experiments/](experiments/README.md) | Frozen protocols, native findings and lane evidence |
+| [research/](research/README.md) | Received sources, research designs, grouped reviews and bounded prototypes |
+| [reports/](reports/README.md) | Preserved narrative reviews and owner briefings |
+| [research_notes/](research_notes/README.md) | Supporting evidence for narrative reviews |
+| [lab/](lab/README.md) | Python research and paper-account library |
+| [scripts/](scripts/README.md) | Acquisition, recorders, runners, checks and navigation commands |
+| [engine/](engine/README.md) | The locked Rust qx execution engine |
+| [dashboard/](dashboard/README.md) | Control Room view and its data-publication contract |
+| [templates/](templates/README.md) | Starting a lane or a source card |
+| [tests/](tests/README.md) | Validation commands and test conventions |
+| data/ | Local market inputs and recordings; bulk data is excluded from Git |
+
+## Use
+
+Reading documents on GitHub needs no environment setup. After following the
+[operator setup](docs/guides/OPERATIONS.md#setup-inspection-and-explicit-execution),
+these commands inspect existing metadata without starting a research run:
+
+```sh
+.venv/bin/python -m lab find funding
+.venv/bin/python -m lab find --trace M290
+.venv/bin/python -m lab find R400
+.venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --strict
+.venv/bin/python -m lab integrity
+```
+
+The operator guide holds environment installation, complete test commands,
+explicit execution, paper-account examples and dashboard-publication details.
+Read [AGENTS.md](AGENTS.md) before writing; run the relevant checks and the full
+suite before a code commit. Generated folder catalogs come from
+`scripts/catalog.py`; update their registry/docstring sources.
 
 ## Docs
+
+The maintained complete topic index is below. Folder READMEs explain where to
+look; they do not maintain separate method queues or changing result counts.
+
+<details>
+<summary>Open the full document index: rules, data, methods, execution and reviews</summary>
 
 Read by task instead of loading this entire list. The authority for current method status is
 [`registry/methods.csv`](registry/methods.csv), and for recorded round status/trials/verdicts it is
@@ -120,6 +148,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Audits and reviews**
 
+- [Event-recorder review](docs/reviews/event_recorders_20261102.md): receipt-time semantics,
+  calendar error handling and safe integration around active writers.
 - [Room actions, 2026-11-03](docs/reviews/room_actions_20261103.md): external paper-capital veto,
   BLS schedule access/capture and native-findings navigation, coordinated in [issue #71](https://github.com/SaikiK12/T/issues/71).
 - [Historical project-direction review](reports/Project%20direction%20from%20quant%20evidence.md)
@@ -142,111 +172,4 @@ source receipts, proposed mechanics, a frozen test and its verdict answer differ
 existing intake, lane or process document before creating another review. Generated folder catalogs come from
 `scripts/catalog.py`; edit their registry/docstring sources, not the generated text.
 
-## Use
-
-`python -m lab` is the common entry point. `lab/operations.py` supplies the task graph, lane descriptions and
-paper projections to the orchestrator, panel and dashboard. Methods remain in the canonical CSV; runtime descriptors
-are not another research queue. Per-run receipts live outside the checkout. A successful process, complete declared
-checks and admission through the research gates are separate states.
-
-R266 now has an external journal guard around its unchanged writer: unique ticket/skip/score identities, frozen entry/exit cutoffs, retained snapshot hashes and score arithmetic. Postflight also requires matching native status/book outputs and a status no older than15 minutes. Missing snapshots or damaged appends block execution; no historical repair occurs. Passing these structural checks does not certify the raw price/funding feed, original calendar availability or statistical gates.
-
-`lab status` reads the same receipt adapter as the Control Room. Pass the existing external run directory; it lists process state, declared data checks, stale receipts and required/optional task dependencies (`--json`). `--strict` exits nonzero for missing, failed, stale or unverified observations; it never authorizes trading or starts a collector. It also shows the canonical queue counts and engine build binding.
-
-```sh
-python -m pip install uv==0.12.23
-uv venv --python 3.12.14 .venv
-uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
-.venv/bin/python -m lab                               # commands; does not start work
-.venv/bin/python -m lab status                        # read-only; missing receipts stay unknown
-.venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --json
-.venv/bin/python -m lab find funding                  # existing metadata index
-.venv/bin/python -m lab find --trace M018             # method → registered specs/code/data identities
-.venv/bin/python -m lab integrity                     # register/spec + canonical intake
-.venv/bin/python -m lab check --suite fast            # feedback; explicit simulations deferred
-.venv/bin/python -m lab check --suite full            # required commit gate, simulations retained
-.venv/bin/python -m lab forward                      # offline plan; no collector/writer starts
-.venv/bin/python -m lab engine                       # offline locked-build plan
-.venv/bin/python -m lab account --out /absolute/new-output  # frozen offline account/cost integration
-.venv/bin/python -m lab account --lifecycle --out /absolute/new-paired-output  # partial fills and residual exposure
-.venv/bin/python -m lab account --controls --restore-input --out /absolute/new-controls-output # R320; one small pinned portable input
-```
-
-The Control Room's **Compte simulé** tab separates model amounts from observed money, currencies,
-missing inputs and legacy reports. [R320](experiments/owner_acceptance_v1/PREREG.md) binds the exact
-owner100 requirements and their bounded acceptance evidence. That coverage is not another methods
-queue or a claim that100 improvements or profitable strategies are complete. Shared views never start
-a collector or an order; the reproduction command verifies frozen calculation/input identities first.
-
-The lock captures the tested Python 3.12 stack, including scikit-learn and the optional browser-test dependency.
-System Chromium is required for the browser fixture; unavailable archive/parity/browser checks report explicit skips.
-Historical lanes retain their recorded environments; this lock does not reproduce every old study automatically.
-Keep native thread pools bounded during checks (`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1`).
-
-Explicit operator actions, when ready to run (none installs a scheduler):
-
-```sh
-.venv/bin/python -m lab engine --execute --state-dir /absolute/external/build-runs --run-id unique_build
-cargo test --locked --release --manifest-path engine/Cargo.toml
-.venv/bin/python -m lab forward --execute --state-dir /absolute/external/paper-runs --run-id unique_tick
-.venv/bin/python -m lab panel --jobs-state-dir /absolute/external/paper-runs
-.venv/bin/python -m lab export --jobs-state-dir /absolute/external/paper-runs
-```
-
-`forward_all.sh` is a compatibility delegate to that same orchestrator. The optional `forward_loop.sh` requires
-`FORWARD_STATE_DIR` outside the checkout, owns a singleton lock and reports success/failure from the run. Starting it
-is an explicit deployment action; merging a patch does not establish that a host changed scheduler. All wrappers share
-`.forward.lock` with old ticks; do not kill an existing owner process. A blocked partial signal hour requires inspection,
-not automatic history repair. Funding checks expose partial venue snapshots; unimplemented checks remain UNVERIFIED.
-
-Dashboard exports are immutable `dashboard/data/generations/<generation>/<dataset>.json`; `manifest.json` is the
-atomic latest pointer. `lab export --changed` returns `{generation, files}`. Upload those exact files, then acknowledge
-with `lab export --record dataset=/_blob/returned-id --generation <that-generation>`. `lab export --docs` rebuilds the
-store documents from acknowledged receipts. A new export cannot silently change the hash/clock of an earlier upload.
-Old upload files lack this proof and require a new explicit acknowledgement; they are never guessed into validity.
-Exports bind uploaded bytes, not an atomic snapshot of every upstream collector or successful remote delivery.
-
-The [integrated account evidence](experiments/paper_account_v1/FINDINGS.md) joins positions, price PnL,
-fees, funding, liquidation marks and missing-input controls in one offline report (`account.html` and
-`account.txt`). Its account figures are invented engine validation; its size costs use already-seen
-quotes. No live collection, prospective scoring or actual account fee/permission is implied.
-`scripts/check_paper_account.py /absolute/new-output/results.json` checks the reported arithmetic.
-The same command's [paired lifecycle protocol](experiments/paired_execution_v1/FINDINGS.md) retains
-partial fills, cancel/reject totals, residual quantities and interrupted receipt/cash joins. Its
-one-leg unwind and funding break-even figures are conditional costs, not observed profit.
-`scripts/check_paired_account.py /absolute/new-paired-output/results.json` checks that integration.
-
-The same entry point's [spot/perpetual component](experiments/spot_perp_inputs_v1/FINDINGS.md),
-`python -m lab account --spot-perp --out /fresh/output`, spends physical spot principal,
-tracks base/quote fees and joins both funded wallets once. It replays sealed public wire
-receipts and constructed accounting controls; actual executable return remains unknown.
-`scripts/check_spot_perp_account.py /fresh/output/results.json` checks literal cash/cost arithmetic.
-For [source-aware spot/perpetual quote costs](experiments/spot_perp_costs_v2/FINDINGS.md),
-use `python -m lab account --spot-costs-v2 --out /fresh/output` and
-`python scripts/check_spot_costs_v2.py /fresh/output/results.json`. The original
-R325 input failures are retained; corrected costs use the same sealed inputs.
-Public-rate/depth assumptions remain conditional and funding keeps total PnL unknown.
-
-The [dated inverse-futures component](experiments/dated_carry_v2/FINDINGS.md) uses
-the same account entry point: `python -m lab account --dated-v2 --out /fresh/output`,
-then `python scripts/check_dated_carry_v2.py /fresh/output/results.json`. It separates
-USD face, coin collateral, daily realization and delivery, counting purchased
-coins once. Its small BTC/ETH quote-based margins assume zero routing cost and
-hypothetical terminal conversion; actual expected net return remains unknown.
-The original R327 driver failure and all sealed inputs are preserved.
-
-The [conditional close-level probability study](experiments/level_probability_v1/FINDINGS.md)
-shares that entry point: `python -m lab account --levels --out /fresh/output`, then
-`python scripts/audit_level_probability.py /fresh/output`. Its training-only model
-was committed before later periods. It distinguishes probability from payoff,
-uses one capital account across coins, and retains inactivity, costs and gaps.
-This exact model found no probability improvement or net edge. The first audit's
-signed-notional guard failure is preserved; the named audit-only correction does
-not change financial results. Reproduction requires the eight pinned held inputs.
-
-The bounded engineering benchmark uses invented arrays only:
-`python -m lab benchmark --report /absolute/external/new-benchmark.json`. It is not a market experiment.
-The original `python -m unittest discover -s tests -t .` remains the same full gate. No framework migration is required.
-
-New lane: copy `templates/lane/`, write the PREREG, claim its id on issue #7, freeze it with `lab.prereg.freeze()`,
-then run.
+</details>
