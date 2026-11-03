@@ -1,0 +1,33 @@
+# Reserved batch 2 (R391): R275's best carry book (L14d th5% K20) on the KuCoin, dYdX and Lighter long-tail samples,
+# with MEXC as the open partner venue (qx spread). Frozen with PREREG.md; never edited afterwards. Every rule is R275's
+# (experiments/xfund_v1/spec.toml) and R288's: only the venues, the symbol table, the dates, the seed and the out
+# folder differ. One four-venue set: per coin and day the engine takes the widest eligible pair of the set.
+name = "reserved_batch2"
+start = "2021-01-01"
+end = "2026-10-19"
+symbols = "experiments/reserved_batch2/symbols.csv"
+reserved_prereg = "experiments/reserved_batch2/RESERVED.md"
+venues = [
+  { name = "kucoin", prices = "kucoin_hist/reserved/candles_1d", vol = "volume", funding = "kucoin_hist/reserved/funding", bar_h = 24 },
+  { name = "dydx", prices = "dydx_hist/reserved/candles_1h", vol = "volume", funding = "dydx_hist/reserved/funding", bar_h = 1 },
+  { name = "lighter", prices = "lighter_hist/reserved/candles_1h", vol = "volume", funding = "lighter_hist/reserved/funding", bar_h = 1 },
+  { name = "mexc", prices = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding", bar_h = 1 },
+]
+sets = [["kucoin", "dydx", "lighter", "mexc"]]
+lookbacks = [14]
+thresholds = [0.05]
+slots = [20]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 391
+alpha = 0.05
+recent_from = "2025-07-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 1
+hurdle_ann_pct = 0.0
+out = "experiments/reserved_batch2/results"
