@@ -499,3 +499,28 @@ The owner's subsequent community-strategy request led to complete reading of thr
 SRC26-044–046, and an exact distinction from the QQQ paper in SRC26-043. The
 [four-arm proposed comparison](../research/HYBRID_REVIEW_20261029.md#reels-and-tradingview-community-follow-up)
 keeps parent, single filters and combined filters on common tickets and dates. It has not been registered or run.
+
+## Reel 18: instagram.com/reel/DfPJm5FB754 (rational_edge, 2026-11-02, 51 s, 853 likes, 219 comments)
+- **Source.** The owner sent it on 2026-11-03. Downloaded with yt-dlp 2026.10.26 and browser impersonation, no login.
+  Speech transcribed with faster-whisper "small" on CPU. The media stayed in the session scratchpad.
+- **Caption.** "Your backtest looks too good? Good. Now try to break it."
+  - Monte Carlo: "same trades, same +72% return, but the worst order hits 3.1× the drawdown".
+  - Walk-forward: "+32% a year in-sample, −0.4% out-of-sample. That's memory, not edge."
+  - Sensitivity: "a plateau survives a regime change. A spike dies."
+  - Labelled "Simulated example · not financial advice". It is a lead for a free guide ("Comment TEST").
+- **Speech** (English): three tests before going live.
+  1. Shuffle the trades 1,000 times: "you're not testing the strategy, you're testing the luck of the sequence".
+  2. Walk forward: "optimize on one chunk of history, then test on the next one… window after window".
+  3. Nudge every parameter: "a real edge is a plateau… if it's a lonely spike, the first regime change kills it".
+- **Lab: nothing new to test. All three are already standard here, and the reel leaves out the test that removed most
+  of our candidates: how many rules were tried.**
+  - **Walk-forward and out-of-sample.** Every lane is frozen on discovery and read once on validation. R263 scored a
+    rolling walk-forward stream. Reserved samples (2020, MEXC-only coins, post-archive) are read in batches.
+  - **Reshuffling.** R263 bootstrapped its walk-forward stream to size leverage. `lab/dependent_null.py` resamples days
+    in blocks rather than shuffling trades. Shuffling trade order keeps the mean and sum. It sizes drawdown but cannot
+    tell an edge from luck.
+  - **Plateau versus spike.** R386 counted all 303,520 grid cells as trials and compared the best one with a placebo
+    maximum over the whole grid, which is a stricter form of this test. Families are frozen with their neighbours, and
+    every cell counts as a trial (`registry.program_trials()`).
+  - **What the reel does not cover.** It omits costs at 1x/2x/3x, the number of trials, a placebo or shifted-signal
+    null, and survivorship. Most of our nulls failed on those points, which these three tests do not check.
