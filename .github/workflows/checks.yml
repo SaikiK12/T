@@ -34,7 +34,9 @@ jobs:
       - name: Full Python gate
         run: .venv/bin/python -m lab check --suite full --report "$RUNNER_TEMP/quant-full.json"
       - name: Canonical metadata integrity
-        run: .venv/bin/python -m lab integrity
+        run: |
+          .venv/bin/python -m lab integrity
+          .venv/bin/python scripts/catalog.py --check
       - name: Preserve diagnostic receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

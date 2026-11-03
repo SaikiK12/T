@@ -2,6 +2,8 @@
 
 <!-- written by scripts/catalog.py; edit the sources (registry, docstrings), not this file -->
 
+Source: tracked and staged Git-index metadata; untracked files and unstaged edits are excluded.
+
 One folder per lane. A lane is frozen (`PREREG.md`) before any statistic and reports in `FINDINGS.md`; a
 forward paper lane also keeps a `journal/`. The ids, statuses and trial counts come from
 [`registry/rounds.csv`](../registry/rounds.csv). Newest first.
