@@ -1,0 +1,30 @@
+{
+  "scope": "Independent checker used local hashlib/ZIP/CSV metadata directly, without the qualification parser; no numerical metric values or additional requests.",
+  "body_checks": {
+    "BTCUSDT-metrics-2026-06-24.zip.CHECKSUM": {
+      "bytes": 97,
+      "sha256": "3219fb9bd0b0ebfc50f930b5cde915a10930a3ec3af72832ebc984c3e30c9c0f"
+    },
+    "BTCUSDT-metrics-2026-06-24.zip": {
+      "bytes": 11317,
+      "sha256": "6bb5ab473189fa7c935b4d9a58d34b2c96cc329cd74fd6f9f17f8abc48ece649"
+    },
+    "BTCUSDT-metrics-2026-06-25.zip.CHECKSUM": {
+      "bytes": 97,
+      "sha256": "4d56c033651a245dd3cd05a0b77f17546d402415663cac4ddacd135246e85d7f"
+    },
+    "BTCUSDT-metrics-2026-06-25.zip": {
+      "bytes": 11316,
+      "sha256": "56e0751dabd8108d61d1f9de86931ac68e901dad202d4dbac03173e2768be68e"
+    }
+  },
+  "header_symbol_labels_match": true,
+  "row_counts": [
+    288,
+    288
+  ],
+  "shared_labels": [],
+  "period_semantics": "UNKNOWN",
+  "historical_availability_proven": false,
+  "predictive_trials": 0
+}

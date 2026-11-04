@@ -8,7 +8,7 @@ methods queue. A source claim or prototype is not a measured new trading edge.
 | Area | What to open |
 |---|---|
 | Received sources and exact read scope | [intake/README.md](intake/README.md): source cards, catalogs, public captures and receipts |
-| Equation-discovery engineering | [discovery/README.md](discovery/README.md): bounded grammar, alias checks and synthetic examples |
+| Mechanisms, data and equation discovery | [discovery/README.md](discovery/README.md): fourteen cross-family lenses, source capabilities, bounded grammar and declaration checks |
 | Combination reviews | [Main hybrid review](HYBRID_REVIEW_20261029.md), which links the grouped detailed reviews in `reviews/hybrid_20261029/` |
 | Prospective implementation handoff | [Dated M090/M322 handoff](PROSPECTIVE_LEADS_DRAFT_20261029.md); check native findings for subsequent work |
 | Pinned dataset package | [Unlock-data package](datasets/unlock_market_data_v1/README.md); its declared scope and admission rules remain applicable |
