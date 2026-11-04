@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (30)
+## Fetch: download archives and public history (31)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -22,6 +22,7 @@ line is the first line of the script's own docstring.
 - [`fetch_fundamentals.py`](fetch_fundamentals.py): Protocol fundamentals from DefiLlama's free API for every token that has a Binance perp: daily TVL, fees and revenue.
 - [`fetch_gate.py`](fetch_gate.py): Gate.io USDT-perp hourly contract stats (top-trader and all-account long/short ratios, taker sizes, liquidations, open interest) for the coins of the Binance research universe.
 - [`fetch_gate_history.py`](fetch_gate_history.py): Gate.io's public bulk archive (gateio-public-data on S3, no keys): hourly candles and settled funding for every USDT perp, delisted ones included, from 2020-01 to the last complete month.
+- [`fetch_hl_vaults.py`](fetch_hl_vaults.py): Hyperliquid user-vault histories for M466 (vault persistence; edge map family F4).
 - [`fetch_hlp.py`](fetch_hlp.py): Hyperliquid's HLP vault (the exchange's community liquidity vault: market making, liquidations, a share of fees), measured from its public history (POST api.hyperliquid.xyz/info, vaultDetails, no ...
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
 - [`fetch_klines_stream.py`](fetch_klines_stream.py): Stream Binance USD-M kline archives into one parquet per symbol without keeping the zips (a disk-bounded build).
