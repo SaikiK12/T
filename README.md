@@ -149,6 +149,10 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Audits and reviews**
 
+- [Repository execution batch, 2026-11-04](docs/reviews/project_execution_20261104.md):
+  new paper-session bridge, segmented recovery, independent dashboard bundle,
+  funding schema evidence and bounded R401 source qualification; the report
+  separates shipped engineering from missing inputs and prospective dates.
 - [Funding-notional audit](lab/funding_notional.py) and [invented sign-flip demo](scripts/audit_funding_notional.py):
   [R388's funding approximation](experiments/forcedswitch_v1/FINDINGS.md#engineering-clarification-funding-notional-2026-11-03-no-market-rerun)
   and [R333's fee/weighting clarification](experiments/level_probability_v2/FINDINGS.md#reporting-clarification-2026-11-03-no-new-market-statistic)

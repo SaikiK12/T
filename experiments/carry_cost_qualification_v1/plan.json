@@ -1,0 +1,233 @@
+{
+  "activation_allowed": false,
+  "actual_order_allowed": false,
+  "cohort": [
+    {
+      "dydx": "",
+      "key": "ANSEM",
+      "kucoin": "",
+      "lighter": "ANSEM",
+      "mexc": "ANSEM_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "APEX",
+      "kucoin": "",
+      "lighter": "APEX",
+      "mexc": "APEX_USDT"
+    },
+    {
+      "dydx": "AURORA-USD",
+      "key": "AURORA",
+      "kucoin": "",
+      "lighter": "",
+      "mexc": "AURORA_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "BLEND",
+      "kucoin": "BLENDUSDTM",
+      "lighter": "",
+      "mexc": "BLEND_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "BP",
+      "kucoin": "BPUSDTM",
+      "lighter": "",
+      "mexc": "BP_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "CASHCAT",
+      "kucoin": "CASHCATUSDTM",
+      "lighter": "CASHCAT",
+      "mexc": "CASHCAT_USDT"
+    },
+    {
+      "dydx": "CORE-USD",
+      "key": "CORE",
+      "kucoin": "",
+      "lighter": "",
+      "mexc": "CORE_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "CP",
+      "kucoin": "CPUSDTM",
+      "lighter": "",
+      "mexc": "CP_USDT"
+    },
+    {
+      "dydx": "CRO-USD",
+      "key": "CRO",
+      "kucoin": "CROUSDTM",
+      "lighter": "CRO",
+      "mexc": "CRO_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "CT",
+      "kucoin": "CTUSDTM",
+      "lighter": "",
+      "mexc": "CT_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "CTC",
+      "kucoin": "CTCUSDTM",
+      "lighter": "",
+      "mexc": "CTC_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "DATA",
+      "kucoin": "DATAUSDTM",
+      "lighter": "DATA",
+      "mexc": "DATA_USDT"
+    },
+    {
+      "dydx": "EUR-USD",
+      "key": "EUR",
+      "kucoin": "",
+      "lighter": "",
+      "mexc": "EUR_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "HAJIMI",
+      "kucoin": "HAJIMIUSDTM",
+      "lighter": "",
+      "mexc": "HAJIMI_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "KIOXIA",
+      "kucoin": "KIOXIAUSDTM",
+      "lighter": "KIOXIA",
+      "mexc": ""
+    },
+    {
+      "dydx": "",
+      "key": "LONGXIA",
+      "kucoin": "LONGXIAUSDTM",
+      "lighter": "",
+      "mexc": "LONGXIA_USDT"
+    },
+    {
+      "dydx": "MNT-USD",
+      "key": "MNT",
+      "kucoin": "",
+      "lighter": "MNT",
+      "mexc": "MNT_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "NEIROCTO",
+      "kucoin": "NEIROCTOUSDTM",
+      "lighter": "",
+      "mexc": "NEIROCTO_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "NES",
+      "kucoin": "NESUSDTM",
+      "lighter": "",
+      "mexc": "NES_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "NEX",
+      "kucoin": "NEXUSDTM",
+      "lighter": "",
+      "mexc": "NEX_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "NIULAI",
+      "kucoin": "NIULAIUSDTM",
+      "lighter": "",
+      "mexc": "NIULAI_USDT"
+    },
+    {
+      "dydx": "PI-USD",
+      "key": "PI",
+      "kucoin": "",
+      "lighter": "",
+      "mexc": "PI_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "STONK",
+      "kucoin": "",
+      "lighter": "STONK",
+      "mexc": "STONK_USDT"
+    },
+    {
+      "dydx": "TRY-USD",
+      "key": "TRY",
+      "kucoin": "",
+      "lighter": "",
+      "mexc": "TRY_USDT"
+    },
+    {
+      "dydx": "",
+      "key": "WOTAMALAILE",
+      "kucoin": "WOTAMALAILEUSDTM",
+      "lighter": "",
+      "mexc": "WOTAMALAILE_USDT"
+    },
+    {
+      "dydx": "WTI-USD",
+      "key": "WTI",
+      "kucoin": "",
+      "lighter": "WTI",
+      "mexc": ""
+    },
+    {
+      "dydx": "XDC-USD",
+      "key": "XDC",
+      "kucoin": "XDCUSDTM",
+      "lighter": "",
+      "mexc": ""
+    },
+    {
+      "dydx": "",
+      "key": "XDP",
+      "kucoin": "XDPUSDTM",
+      "lighter": "",
+      "mexc": "XDP_USDT"
+    }
+  ],
+  "cohort_path": "experiments/reserved_batch2/symbols.csv",
+  "depth_levels": 20,
+  "depth_selection": "First predeclared keys with both MEXC and KuCoin symbols, sorted by key; no PnL selection.",
+  "execution_allowed": false,
+  "fees": "UNKNOWN for the owner; public advertised fields are not applied.",
+  "inputs": {
+    ".python-version": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc",
+    "experiments/reserved_batch2/symbols.csv": "5ebfaec83a5c2c47831ec5fbf9b0e683ac3bdf0e88562caf99bfbb834c9ed748",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/qualify_carry_costs.py": "172a7e6b8d8cc60fd1c5d9c324d14124e6628a4faab97b342dd61d2415d491c2"
+  },
+  "kucoin_depth": "UNQUALIFIED: primary depth schema, quantity units and snapshot identity not bound.",
+  "max_body_bytes": 2097152,
+  "max_requests": 4,
+  "max_total_body_bytes": 5242880,
+  "metadata_urls": {
+    "kucoin": "https://api-futures.kucoin.com/api/v1/contracts/active",
+    "mexc": "https://contract.mexc.com/api/v1/contract/detail"
+  },
+  "mexc_depth_candidates": [
+    "BLEND_USDT",
+    "BP_USDT"
+  ],
+  "notional_quote": "1000",
+  "plan_sha256": "02666c07e4eb8751c3b03c9a93b7003a6ac70083ef2b7b9743235c656d2749a8",
+  "request_seconds": 3,
+  "schema": "carry_cost_qualification/v1",
+  "scope": "Current public source qualification; all cohort rows retained; no historical returns.",
+  "total_seconds": 20
+}
