@@ -286,7 +286,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (74)
+## Tools and everything else (75)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -306,6 +306,7 @@ line is the first line of the script's own docstring.
 - [`delist_events.py`](delist_events.py): Legs for the delisting-notice short (E03, docs/OLD_SESSION_EDGES.md S2) from the Binance delisting catalog (data/recorders/notices/binance_delisting.csv, scripts/record_notices.py) and the ...
 - [`demo_formula_discovery.py`](demo_formula_discovery.py): Invented-world formula discovery and chart information-loss demonstration.
 - [`demo_paper_session.py`](demo_paper_session.py): Invented durable paper admission/receipt/close demo; no market files or orders.
+- [`edge_map.py`](edge_map.py): Generate docs/EDGE_MAP.md: every queued method and registered round placed in one edge family.
 - [`event_journal.py`](event_journal.py): Shared engine of the point-in-time event recorders (record_listings.py, record_tradfi_calendar.py).
 - [`eventdrift_calendar.py`](eventdrift_calendar.py): EIA release calendar for R368 eventdrift_v1: the Weekly Petroleum Status Report (crude) and the Weekly Natural Gas Storage Report, as release instants in UTC. Built from the rules on EIA's two ...
 - [`eventdrift_rule.py`](eventdrift_rule.py): R368 eventdrift_v1 rule, frozen in experiments/eventdrift_v1/PREREG.md: after an EIA release, does the market keep moving in the direction of its own first-minute reaction for long enough to pay a ...
