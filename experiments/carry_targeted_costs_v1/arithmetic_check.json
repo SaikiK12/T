@@ -1,0 +1,29 @@
+{
+  "scope": "Independent Fraction reference on the already captured raw depth bodies; no new request, selection or predictive trial.",
+  "checks": [
+    {
+      "key": "BLEND",
+      "buy": "mexc",
+      "sell": "kucoin",
+      "rational_reference_passed": true
+    },
+    {
+      "key": "BLEND",
+      "buy": "kucoin",
+      "sell": "mexc",
+      "rational_reference_passed": true
+    },
+    {
+      "key": "CASHCAT",
+      "buy": "mexc",
+      "sell": "kucoin",
+      "rational_reference_passed": true
+    },
+    {
+      "key": "CASHCAT",
+      "buy": "kucoin",
+      "sell": "mexc",
+      "rational_reference_passed": true
+    }
+  ]
+}

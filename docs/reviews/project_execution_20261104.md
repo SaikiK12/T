@@ -39,7 +39,7 @@ absentes, l’hôte inaccessible et les dates prospectives restent des dépendan
   Coût de paire, frais du propriétaire, fills et PnL demeurent inconnus.
 - [Disponibilité des archives](project_execution_20261104/archive_availability.json) :12dossiers indexés à distance, mais daily_v2/metrics_full/fundingRate absents de cet index. Aucun chunk supplémentaire récupéré. Les noms ne prouvent ni couverture complète ni admissibilité.
 - [Diagnostic qx](project_execution_20261104/qx_registration_diagnostic.json) :le seul reçu de calcul versionné indique que l’enregistrement n’était pas demandé. Aucune interruption de registre démontrée et aucune réparation silencieuse ; la reprise automatique reste ouverte.
-- [R402](../../experiments/carry_targeted_costs_v1/PREREG.md) :successeur distinct par contrat, avec sources officielles et tests de lots/unités ; les2MiB R401 restent dans le même budget5MiB. Protocole figé avant collecte ; résultat à ajouter après sa publication et sa tentative unique.
+- [R402](../../experiments/carry_targeted_costs_v1/PREREG.md) :successeur distinct par contrat, avec sources officielles et tests de lots/unités ; les2MiB R401 restent dans le même budget5MiB. Tentative terminée PARTIAL :19requêtes,2paires avec calcul d’entrée conditionnel ; arrêt sur timeout/dépassement de temps, journal bloqué sans retry. [Résultat](../../experiments/carry_targeted_costs_v1/FINDINGS.md).
 - [Reprise courante](../handover/SCHEDULED_CHECKS.md) : aucun registre réécrit,
   aucun lot réservé terminé relancé, aucune manipulation d’un writer actif.
 
@@ -48,9 +48,11 @@ absentes, l’hôte inaccessible et les dates prospectives restent des dépendan
 Avant publication R402 : **2 248 tests, 3 ignorés, 0 échec**,514,640 s. Les 82 tests ciblés
 passent, dont le navigateur avec D3 réel et refus de corruption. Les contrôles
 sont des validations de code sur fixtures, pas des résultats de marché.
-R401 est enregistré une seule fois :186lignes,0essai supplémentaire.
-Son commit7f15cb9 a une CI verte. R402 est figé et publié avant sa collecte unique ;
-son absence temporaire du registre est explicite, puis une seule ligne finale sera ajoutée.
+R401 et R402 ont chacun une seule ligne finale :187lignes,0essai prédictif ajouté.
+Le code R402 est publié avant capture à31d3ce9. Ses quatre calculs directionnels
+ont été vérifiés indépendamment par arithmétique rationnelle sur les corps conservés.
+Intégrité finale :0erreur/14warnings historiques,182protocoles locaux dont181gelés
+et vérifiés ; les catalogues correspondent à l’index Git.
 La CI du dernier état sera vérifiée avant fusion. Aucun ancien fichier
 lié par un digest gelé n’a été modifié.
 
@@ -63,7 +65,7 @@ admission statistique, ni déploiement, ni validation de profit.
 
 | N° | Chantier | État du lot | Preuve ou dépendance |
 |---|---|---|---|
-| 1 | Coûts R391 | PARTIEL | R401 terminé PARTIAL : HTTP200 mais corps au plafond2MiB, aucune paire tarifée. |
+| 1 | Coûts R391 | PARTIEL | R401/R402 PARTIAL :2paires ont un coût conditionnel d’entrée ; frais/sorties/PnL inconnus, collecte arrêtée et journal bloqué. |
 | 2 | Audit M459 | DÉPENDANCE | metrics_full/daily_v2 absents ici ; aucune mesure de présence ni relance historique. |
 | 3 | Champs du financement | PARTIEL | Une archive officielle vérifiée : trois colonnes ; schéma du parquet distant encore attendu. |
 | 4 | Cash de financement corrigé | DÉPENDANCE | Outil conditionnel existant ; valeurs de règlement, couverture et éligibilité non vérifiées. |
@@ -79,7 +81,7 @@ admission statistique, ni déploiement, ni validation de profit.
 | 14 | Surveillance des réceptions | PARTIEL | Reçus existants et procédure actuelle reliés ; santé du vrai hôte non vérifiée. |
 | 15 | Source avant successeur R400 | DÉPENDANCE | R400 demeure terminal REFUSED ; aucune fenêtre de score armée. |
 | 16 | Horloges distinctes | PARTIEL | Le nouveau pont refuse les anciens reçus pour une intention ultérieure ; flux réels non authentifiés. |
-| 17 | Séquences de carnet | DÉPENDANCE | R401 garde version/timestamp mais ne prouve pas une continuité de flux. |
+| 17 | Séquences de carnet | DÉPENDANCE | R402 conserve versions/horloges mais ne prouve pas une continuité de flux. |
 | 18 | Gros fichiers de sauvegarde | LIVRÉ | Segmentation bornée et restauration testées sur 96 MB ; fichier source intact. |
 | 19 | Répétition de restauration | PARTIEL | 54 vrais fichiers restaurés depuis la copie GitHub ; pas une reconstruction de machine complète. |
 | 20 | Stockage des captures | PARTIEL | Deux dossiers classés et sauvegardés ; capacité et rétention du vrai hôte restent à vérifier. |
@@ -119,7 +121,7 @@ admission statistique, ni déploiement, ni validation de profit.
 | 54 | Journal de recherche complet | PARTIEL | Plan/source/unique tentative R401 traçables ; aucun essai historique effacé. |
 | 55 | Sélection chronologique | PARTIEL | Aucune nouvelle sélection sur résultats ; cadres des futures études restent à figer. |
 | 56 | Lectures répétées | DÉPENDANCE | Calibration nouvelle requise avant nouveaux looks ; anciens seuils intacts. |
-| 57 | Sensibilités de coûts | PARTIEL | R401 doit laisser1x/2x/3x inconnus sans frais/sortie de paire. |
+| 57 | Sensibilités de coûts | PARTIEL | R401/R402 laissent1x/2x/3x inconnus sans frais/sortie de paire. |
 | 58 | Prévision distincte du portefeuille | PARTIEL | Distinction maintenue dans le pont et les rapports ; aucun score M090 inventé. |
 | 59 | Décomposition des gains | DÉPENDANCE | Cash/financement connus requis ; aucune source inconnue transformée en gain. |
 | 60 | Concentration des résultats | DÉPENDANCE | À préspécifier dans la prochaine étude ; aucun ancien NULL sauvé par exclusion. |
