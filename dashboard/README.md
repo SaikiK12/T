@@ -23,18 +23,53 @@ certify observation timestamps, complete history or valid provenance. Empty/part
 have unknown activity freshness; historical datasets have no live-activity deadline. A provenance flag means a
 note exists, not that its claims were checked.
 
-The live shell is unchanged. In particular, adopting the orchestrator for execution needs its own compatibility
-review of the notice lock shared with the five-minute notice loop. Do not infer that the optional report reader
-deploys or changes the scheduler.
+The repository's `forward_all.sh` already delegates to the orchestrator. The configured
+notice tasks share `.notices.lock` with the five-minute notice loop, with synthetic
+compatibility coverage. This does not establish which revision runs on a capture host.
+Check that host and its active writers before any controlled reload; the optional
+report reader never deploys or changes a scheduler.
 
 Unknown returns stay unknown, including cumulative totals after a missing row. A completed interval without a score
 is `awaiting score`; a future frozen ticket is not an open position. R225's decision is at 365 on-time days; R272's
 two books each need 12 notices. A milestone at day 90 for the MEXC positioning books is futility review only.
 
-The page is hosted through Claude's existing Artifact adapter (`dash`, D3 and host theme variables). Repository
-changes and local synthetic browser tests do not publish or update that private artifact. Existing upload commands
-are documented in `scripts/dashboard_data.py`; review and publication remain separate from these draft changes.
+The original page supports Claude's Artifact adapter (`dash`, D3 and host theme
+variables). Repository changes do not publish or update that private artifact.
+Existing upload commands are documented in `scripts/dashboard_data.py`.
+
+## Independent static bundle
+
+`scripts/build_dashboard_standalone.py` reuses that same view with a local adapter,
+theme and pinned D3 asset. It accepts one explicitly selected schema-v2 immutable
+export generation; it never runs the exporter, scans lanes, starts jobs or uploads.
+Every declared dataset identity, row count and generation identity is checked before
+publication. The browser independently checks dataset bytes before displaying them.
+Missing/error values remain unknown. An export clock is not live-feed freshness.
+
+First inspect an existing generation (replace GENERATION with its full64-character id):
+
+```sh
+python scripts/build_dashboard_standalone.py \
+  --export-dir /absolute/export/dashboard/data/generations/GENERATION \
+  --generation GENERATION \
+  --d3-asset dashboard/vendor/d3.v7.9.0.min.js \
+  --d3-sha256 f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539
+```
+
+The default is a read-only plan. To build, add `--build --out /absolute/new-bundle`;
+its parent must exist and the destination must be new, outside the export directory.
+Publication uses Linux atomic no-overwrite rename. The [vendored dependency record](vendor/README.md)
+preserves D3's version, source, identity and license. No runtime CDN is required.
+Serve only that bundle directory on localhost or an explicitly chosen host; WebCrypto
+requires localhost or HTTPS. Opening it directly as `file:` is unsupported. Building
+does not deploy a site or install a recurring refresh.
+
+```sh
+python -m http.server --bind 127.0.0.1 --directory /absolute/new-bundle 8000
+```
 
 Checks: `python -m unittest tests.test_dashboard_data tests.test_dashboard_jobs tests.test_dashboard_view
-tests.test_forward_orchestrator`. The browser fixture uses Playwright and system Chromium when available; it tests
-table filters and missing-value behavior with a synthetic host, not live feeds or the private Artifact service.
+tests.test_forward_orchestrator tests.test_dashboard_standalone`. Browser tests use
+Playwright and system Chromium when available. The standalone test serves invented
+export rows with the real pinned D3 asset, exercises filters/unknown/calculation
+states and refuses tampered bytes; it does not validate live feeds or publication.

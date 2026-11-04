@@ -16,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carry_control`](carry_control.py): Finite-deadline conditional carry control; no forecast calibration or orders.
+- [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
 - [`config`](config.py): Constants every lane shares.
@@ -75,11 +76,13 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_account`](paper_account.py): One append-only simulated linear-futures account, separated by venue/asset.
 - [`paper_admission`](paper_admission.py): Conservative projection of legacy reports, without rewriting their journals.
 - [`paper_controls`](paper_controls.py): Persistent paper-only entry/data/loss/concentration controls.
+- [`paper_session`](paper_session.py): Single-writer paper admission and explicit-receipt bridge for new consumers.
 - [`paper_solvency`](paper_solvency.py): Current-capital veto around frozen paper risk controls; no real activation.
 - [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.
 - [`propfirm`](propfirm.py): Prop-firm economics: what a strategy's return stream is worth inside an evaluation and a funded account.
+- [`recording_segments`](recording_segments.py): Streaming, non-overwriting recovery bundles for explicit RECORDED files.
 - [`registry`](registry.py): Append-only register of research rounds (the machine-readable ROADMAP).
 - [`research`](research.py): Glue between data and search: the point-in-time research universe, costs, and guarded rule evaluation.
 - [`runtime`](runtime.py): Offline execution receipts and fail-closed checks around legacy paper writers.

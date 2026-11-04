@@ -1,5 +1,9 @@
 # Funding settlement-value source check, 2026-11-03
 
+The [2026-11-04 carry contract/depth supplement](carry_sources_20261104.md)
+records the bounded official-source sections used for R402's separate input
+qualification. It establishes no historical funding cash or net pair return.
+
 Existing method: M461 / R388. This is source availability and schema reading,
 not an archive reanalysis, a new method or a result.
 
@@ -26,3 +30,33 @@ therefore requires supplied settlement values, complete schedule, payment-kind
 classification and eligibility. Missing inputs stay unscored. It does not
 verify actual credit or a portfolio's fills/margin. Any real reanalysis needs a
 separate frozen protocol and the actual contract/value/ownership evidence.
+
+## Archive schema checked, 2026-11-04
+
+The REST response and the public monthly archive are different source products.
+One bounded check of the BTCUSDT May2025 archive returned HTTP200: the ZIP is
+943 bytes and matches its separately published SHA256. Only its CSV header was
+decoded: `calc_time,funding_interval_hours,last_funding_rate`. That file has no
+`markPrice` or `rateType` column. This verifies one file's schema, not every month
+or a parquet held on another machine, and it does not show that an ingestion
+step discarded those two fields. The checked-in `lab/data.py` archive parser
+selects the corresponding three normalized fields `t,interval_h,rate`.
+
+The [archive receipt](archive_schema_20261104.json) records both HTTP identities,
+the published checksum and the schema inspection. The raw ZIP was held in the
+temporary execution workspace, not committed. No rate observation was decoded,
+no price was read and no historical outcome was recalculated. This public
+archive check does not establish access to the REST endpoint that returned451.
+
+The new read-only command can inspect an explicitly held file without loading
+observation rows:
+
+```sh
+python scripts/inspect_funding_schema.py /absolute/path/funding.parquet
+python scripts/inspect_funding_schema.py /absolute/path/source.zip --expected-sha256 FULL_SHA256
+```
+
+It reads a bounded CSV header or Parquet schema and hashes opaque source bytes.
+Missing settlement-value or payment-kind fields remain explicit; even present
+field names do not prove economic semantics, event coverage or eligibility.
+Historical cash remains unscored until those separate requirements are met.

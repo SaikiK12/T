@@ -266,10 +266,11 @@ line is the first line of the script's own docstring.
 - [`check_spot_perp_account.py`](check_spot_perp_account.py): Independent literal cash-flow oracle for R324's fixed constructed accounts.
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
-## Build: tables, views and symbol maps (8)
+## Build: tables, views and symbol maps (9)
 
 - [`build_daily.py`](build_daily.py): Build the daily point-in-time panel (lab/daily.py): one row per (day, Binance perp) from every source the lab holds, plus the market-wide series, into data/daily/.
 - [`build_daily_v2.py`](build_daily_v2.py): Build the daily panel again with the complete Binance metrics (data/metrics_full/metrics_1h, from scripts/fetch_metrics_full.py) in place of data/metrics_1h, into data/daily_v2/. Same code ...
+- [`build_dashboard_standalone.py`](build_dashboard_standalone.py): Verify an explicit immutable export and optionally build a new static dashboard.
 - [`build_engine.py`](build_engine.py): Build qx from the locked dependency graph and bind binary/source/toolchain.
 - [`build_extra_views.py`](build_extra_views.py): Extra feature tensors next to data/research/bins.npy, same [V, T, S] int8 layout and binning conventions.
 - [`build_views.py`](build_views.py): Build the point-in-time research universe and the int8 feature-bin tensor, and save them under data/research/.
@@ -285,7 +286,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (69)
+## Tools and everything else (74)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -304,6 +305,7 @@ line is the first line of the script's own docstring.
 - [`decide_reserved_batch2.py`](decide_reserved_batch2.py): R391 reserved batch 2: the decision on qx spread's tables (experiments/reserved_batch2/PREREG.md).
 - [`delist_events.py`](delist_events.py): Legs for the delisting-notice short (E03, docs/OLD_SESSION_EDGES.md S2) from the Binance delisting catalog (data/recorders/notices/binance_delisting.csv, scripts/record_notices.py) and the ...
 - [`demo_formula_discovery.py`](demo_formula_discovery.py): Invented-world formula discovery and chart information-loss demonstration.
+- [`demo_paper_session.py`](demo_paper_session.py): Invented durable paper admission/receipt/close demo; no market files or orders.
 - [`event_journal.py`](event_journal.py): Shared engine of the point-in-time event recorders (record_listings.py, record_tradfi_calendar.py).
 - [`eventdrift_calendar.py`](eventdrift_calendar.py): EIA release calendar for R368 eventdrift_v1: the Weekly Petroleum Status Report (crude) and the Weekly Natural Gas Storage Report, as release instants in UTC. Built from the rules on EIA's two ...
 - [`eventdrift_rule.py`](eventdrift_rule.py): R368 eventdrift_v1 rule, frozen in experiments/eventdrift_v1/PREREG.md: after an EIA release, does the market keep moving in the direction of its own first-minute reaction for long enough to pay a ...
@@ -313,6 +315,7 @@ line is the first line of the script's own docstring.
 - [`funding_events.py`](funding_events.py): Extreme-funding events on every Binance USD-M perp, as event legs for the qx engine (R273 fundext_v1).
 - [`handover.py`](handover.py): Hand-over tooling: what lives outside git, and how to get it back without Claude.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
+- [`inspect_funding_schema.py`](inspect_funding_schema.py): Inspect one funding ZIP header or Parquet schema; never decode observation rows.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
 - [`m090_event_rule.py`](m090_event_rule.py): Causal ticket construction for the proposed M090 forecast comparison.
 - [`m090_history_rule.py`](m090_history_rule.py): Strict single-page MEXC history parsing; preserves exact settlement times.
@@ -340,6 +343,9 @@ line is the first line of the script's own docstring.
 - [`prop_cost_map.py`](prop_cost_map.py): How much trading can a book afford inside a prop firm? Synthetic map for queue M211, next to prop_edge_map.py.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
 - [`prospective_clock_rule.py`](prospective_clock_rule.py): Conditional clock bounds from authenticated, bounded request samples.
+- [`qualify_carry_costs.py`](qualify_carry_costs.py): Bounded public-source qualification for R391's whole frozen symbol table.
+- [`qualify_carry_costs_targeted.py`](qualify_carry_costs_targeted.py): One prospective, bounded per-contract public source qualification; no orders.
+- [`recording_segments.py`](recording_segments.py): Segment, verify or restore one explicit RECORDED file; never uploads or deletes originals.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
