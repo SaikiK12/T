@@ -144,3 +144,13 @@ with t far above its reality-check null. Gate 0 cannot confirm it. Confirmation 
   - use the delisting fix above;
   - add the leg-liquidation check at 2x and 3x;
   - add venues as they arrive (KuCoin, dYdX, Kraken).
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+- **F4, verified on ALPACA ([review](../../docs/reviews/hidden_edge_audit_20261104.md)).** A delisted leg is valued at
+  its stale last trade. One ALPACA leg books price_pnl 3.26 leg units.
+  - Such fake legs of ±100-500% add about +1.1%/yr to K20 books and inflate their variance (recomputed).
+  - The same exit logic runs in the forward lanes R278, R279, R294 and R390.
+- **H2, marking (recomputed).** Legs are marked as constant notional, not a fixed quantity. That creates profit or
+  loss on venue dislocations; the sign differs by book.
+- **Next.** A venue-neutral engine with fixed-quantity marks and delisting at mark/index is queued as M468.
+  Delisting-aware forward exits are queued as M470.

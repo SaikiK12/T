@@ -185,3 +185,17 @@ The mean path of S against H in the hop's favour, in bp from the entry close (pr
   - The Gate books' nets are therefore overstated by at least 1 bp a hop, plus two Gate book walks. They were reported
     only. The decided book (Binance + Lighter) is not affected.
   - R355 charges Gate its published fee plus its measured book.
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+This note comes from the hidden-edge audit ([review](../../docs/reviews/hidden_edge_audit_20261104.md)). The figures
+are diagnostics recomputed on held data, not registered results.
+- **F1, cost (verified).** The Lighter leg was charged a volume band keyed on the coin's 24 h volume, and that volume
+  spikes before deep settlements. The band is about 1.1 bp a side. Each coin's measured Lighter snapshot cost is far
+  higher: KAITO 33.5, RIVER 33.5, AVNT 89.2, ZORA 51.4 and NMR 25.6 bp a side. At each coin's own cost the primary is
+  −26.2 bp a hop, and all six books are negative.
+- **F2, payment timing (recomputed).** The T + 1 h Binance payment is credited at an exit priced before it. Corrected,
+  the primary is +26.2 bp at 1x (from +30.9) and +5.8 bp at 2x (from 10.4), before F1.
+- **H3, the 4 h rate (recomputed).** Before 2025-09-19 the formula halves the 4 h contracts' rate. Corrected: 95 hops,
+  t 3.48. This does not matter once F1 applies.
+- **Reading.** The PASS does not survive measured costs. The live test is R355, which charges each coin's live
+  book. A backtest re-score is queued as M471.

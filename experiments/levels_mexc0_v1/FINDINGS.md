@@ -117,3 +117,9 @@ A **frozen forward paper lane on MEXC's zero-fee perps**, with a new id, frozen 
 - **The "Next" section above is withdrawn.**
   - R336's forward lane is dropped.
   - PZ_CAP7 alone is t 2.02 at 1x and −5.3 bp a trade in 2026, which is not worth a lane.
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+- **F3 ([review](../../docs/reviews/hidden_edge_audit_20261104.md)).** The PREREG names API fills, but the run charged
+  MEXC's web fee of 0. At the API fee (8 bp a side) the primary's t is 0.12 (recomputed diagnostic).
+- **Reading.** The book is NULL at its own named execution. The forward lane was already dropped. The registry keeps
+  PARTIAL as recorded; read it as NULL at API cost.

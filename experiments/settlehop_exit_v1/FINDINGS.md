@@ -131,3 +131,9 @@ The mean hedged price of S against H, in the hop's favour, in bp from the entry 
     It is reported, not decided on.
 - **Read against the program:** trials go from 9,479,088 to 9,479,093 on this branch, or 9,479,110 counting #56's
   R338-R346.
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+- **F1 (verified costs; [review](../../docs/reviews/hidden_edge_audit_20261104.md)).** R354's Lighter volume-band cost
+  (about 1.1 bp a side) is far below each coin's measured book: 25-90 bp a side on the coins that carry the sum.
+- **Effect.** At each coin's own cost the T + 5 exit is −6.6 bp a hop (recomputed diagnostic). The PASS does not
+  survive measured costs. Re-score queued as M471.

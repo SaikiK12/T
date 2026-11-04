@@ -77,3 +77,14 @@ eligible.
   - `scripts/decide_reserved_batch2.py` runs batch 1's checks for this one candidate.
 - **Data provenance:** `docs/provenance/lighter_hist.json`, new (2026-11-03). Its hourly coverage is recorded for
   `open/` only.
+
+## Audit note, 2026-11-04 (after the read; the verdict is not changed)
+- **H1, verified in `engine/src/spread.rs:147-159` ([review](../../docs/reviews/hidden_edge_audit_20261104.md)).** The
+  engine counts a day as fresh only when a bar ends exactly at midnight. A daily KuCoin bar always does. An hourly
+  dYdX or Lighter bar does only when the coin traded in the 23:00 hour.
+  - The identity guard needs fresh days, so most thin dYdX coin-days fail it.
+  - The 7 dYdX-only contracts were never eligible, which is why dYdX took no trade.
+- **What this means.** This read measured "R275's frozen engine on these coins", which is what was registered. It
+  does not measure what dYdX's long tail would earn under a venue-neutral rule.
+- **No re-read.** These rows are now spent for this sample (read 1 of 4). A corrected engine (M468) may read them
+  only through a later frozen batch PREREG that counts it as a further read.

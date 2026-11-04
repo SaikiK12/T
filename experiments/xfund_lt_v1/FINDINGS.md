@@ -156,3 +156,13 @@ At R275's uniform 7 / 14 / 21 bp per leg (from the same daily file, `results/aud
   R288 Lighter), and still no gate-1 pass.
 - **For the owner:** using Lighter needs an on-chain wallet and a bridge. That is an account and a key, so it is
   the owner's call (AGENTS.md rule 5). Until then the lane is paper only.
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+These are recomputed diagnostics from the [review](../../docs/reviews/hidden_edge_audit_20261104.md).
+- **F6, freshness.** The engine counts a day as fresh only when a bar ends at midnight. That favours hourly Lighter
+  over daily venues in the identity guard. With daily Lighter bars, MEXC+Lighter falls from 6.20 to 3.67 %/yr. The
+  frozen rule still passes.
+- **F7, cost.** The Lighter leg was priced at 4 bp a side. The coins it trades measure 14.7 bp a side on average. At
+  that cost MEXC+Lighter is about 5.07%/yr.
+- **H1 (the other way).** dYdX+Lighter recomputes to +7.90%/yr, t 2.79, on daily dYdX bars.
+- **Next.** The venue-neutral re-test is queued as M468 and M469.

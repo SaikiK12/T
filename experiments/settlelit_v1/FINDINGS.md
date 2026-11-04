@@ -124,3 +124,11 @@ position takes it. Cost is R354's Lighter band cost for a $1k order, a side.
     decided on.
 - **Read against the program:** trials go from 9,479,100 to 9,479,106 on this branch, or 9,479,123 counting #56's
   R338-R346.
+
+## Audit note, 2026-11-04 (outside the frozen record; the verdict is not changed)
+- **F1 (verified costs; [review](../../docs/reviews/hidden_edge_audit_20261104.md)).** The 3.8 bp cost comes from a
+  Lighter volume band keyed on 24 h volume, which spikes before deep settlements. The coins that hold 77% of the sum
+  measure far higher a side: KAITO 33.5, RIVER 33.5 and AVNT 89.2 bp.
+- **Effect.** At each coin's own cost the primary is −35.9 bp a hop, t −5.53 (recomputed diagnostic).
+- **Reading.** The PASS does not survive measured costs. R364 trades only when the live book's cost clears the
+  bounds, so it remains the real test. Re-score queued as M471.

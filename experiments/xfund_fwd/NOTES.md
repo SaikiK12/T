@@ -14,3 +14,15 @@ Facts found after the freeze. The PREREG is not changed by them; a fix is a new 
     same day.
   - Such days are counted when R278 is read.
   - R279 (xfund_kc_fwd, on `lab/carrylane.py`) blocks those entries (its Deviation 7).
+
+## 2026-11-04: the live result so far is mostly one dead-leg windfall (audit F5)
+- **What:** a leg whose contract is delisted keeps its stale last trade as its close. The pair's price_pnl then books
+  the gap between that stale print and the live leg as profit or loss. Audit F4 verified this on ALPACA in R275's run.
+- **Size, recomputed from the journal** ([review](../../docs/reviews/hidden_edge_audit_20261104.md)):
+  - PTB alone is 86% of book B's +0.665% to date.
+  - Without dead legs, book C's NW t falls from 2.65 to 1.18.
+- **What is done:**
+  - R278 keeps its frozen accounting.
+  - When R278 is read at day 90 and day 180, the decided series is reported next to the same series without the
+    dead-leg days. A PASS that rests on dead legs is labelled as such.
+  - Delisting-aware exits (close at mark or index on the last trading day) are queued as M470 for a new lane.
