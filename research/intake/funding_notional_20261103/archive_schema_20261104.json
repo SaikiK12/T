@@ -1,0 +1,67 @@
+{
+  "raw_zip_committed": false,
+  "read_scope": "one CSV header; opaque hashing and published identity check; no observation rows decoded",
+  "request_receipt": {
+    "published_checksum_verified": true,
+    "requested_at_utc": "2026-11-04T00:33:58.819105+00:00",
+    "requests": [
+      {
+        "body_limit_bytes": 4096,
+        "bytes": 98,
+        "http_status": 200,
+        "sha256": "c36ce8b616f6c6f7dbbb9271ed12b1f59eda3073a849fa988b8cd4fe372cbca3",
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-05.zip.CHECKSUM"
+      },
+      {
+        "body_limit_bytes": 65536,
+        "bytes": 943,
+        "http_status": 200,
+        "sha256": "e7355e2775b88009c984db1783bb8ed6b5f24ede2b52bb764151b5722d6a5e42",
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-05.zip"
+      }
+    ],
+    "research_trials_added": 0,
+    "scope": "one public archive identity and CSV header; no rate rows decoded or outcomes computed"
+  },
+  "schema_inspection": {
+    "cash_settlement_ready": false,
+    "column_types": null,
+    "columns": [
+      "calc_time",
+      "funding_interval_hours",
+      "last_funding_rate"
+    ],
+    "expected_identity_matched": true,
+    "field_name_candidates": {
+      "payment_kind": [],
+      "settled_rate": [
+        "last_funding_rate"
+      ],
+      "settlement_interval": [
+        "funding_interval_hours"
+      ],
+      "settlement_time": [
+        "calc_time"
+      ],
+      "settlement_value": []
+    },
+    "field_semantics_verified": false,
+    "format": "zip",
+    "historical_coverage_verified": false,
+    "member": "BTCUSDT-fundingRate-2025-05.csv",
+    "missing_cash_field_roles": [
+      "settlement_value",
+      "payment_kind"
+    ],
+    "observation_rows_decoded": false,
+    "research_trials_added": 0,
+    "schema_version": 1,
+    "scope": "Opaque byte identity and schema only; name candidates are not authenticated economic semantics.",
+    "source_bytes": 943,
+    "source_eligibility_verified": false,
+    "source_path": "/workspace/scratch/funding_schema_20261104/source.zip",
+    "source_sha256": "e7355e2775b88009c984db1783bb8ed6b5f24ede2b52bb764151b5722d6a5e42"
+  },
+  "schema_version": 1,
+  "scope_limit": "one BTCUSDT May2025 file only; not all historical files or remote-held Parquet schema"
+}

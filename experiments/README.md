@@ -2,6 +2,8 @@
 
 <!-- written by scripts/catalog.py; edit the sources (registry, docstrings), not this file -->
 
+Source: tracked and staged Git-index metadata; untracked files and unstaged edits are excluded.
+
 One folder per lane. A lane is frozen (`PREREG.md`) before any statistic and reports in `FINDINGS.md`; a
 forward paper lane also keeps a `journal/`. The ids, statuses and trial counts come from
 [`registry/rounds.csv`](../registry/rounds.csv). Newest first.
@@ -38,8 +40,10 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (156)
+## Other registered rounds (done, registered or planned) (158)
 
+- **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** R402, DONE PARTIAL, 0 trials. Targeted public carry contract and lot-matched depth qualification; no strategy test ([PREREG](carry_targeted_costs_v1/PREREG.md), [FINDINGS](carry_targeted_costs_v1/FINDINGS.md))
+- **[carry_cost_qualification_v1](carry_cost_qualification_v1/)** R401, DONE PARTIAL, 0 trials. Current carry source qualification on the published R391 cohort; no strategy test ([PREREG](carry_cost_qualification_v1/PREREG.md), [FINDINGS](carry_cost_qualification_v1/FINDINGS.md))
 - **[path_response_v1](path_response_v1/)** R400, REGISTERED PENDING, 1,478 trials. Arrival-order area and same-price replenishment: bounded equation search beyond the fixed OFI baseline ([PREREG](path_response_v1/PREREG.md), [FINDINGS](path_response_v1/FINDINGS.md))
 - **[atlas_tape_v1](atlas_tape_v1/)** R386, DONE NULL, 303,520 trials. Gate-0 screen of seconds-to-minutes conditional returns: 303,520 cells (22+26 features x gates x 5 thresholds x 7/12 holds x 14 coin sets x 2 sides) on 12 coins' minute bars 2021-26 and the 1-s tape, measured Lighter walk costs, shifted-signal max-statistic ([PREREG](atlas_tape_v1/PREREG.md), [FINDINGS](atlas_tape_v1/FINDINGS.md))
 - **[dvolbeta_v1](dvolbeta_v1/)** R385, DONE NULL, 4 trials. M456 DVOL-beta sort (sort half only): trailing 90-day return beta to BTC/ETH DVOL changes, long low / short high beta and the reverse, top-150 perps, hold 7 d, API costs ([PREREG](dvolbeta_v1/PREREG.md), [FINDINGS](dvolbeta_v1/FINDINGS.md))

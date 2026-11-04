@@ -67,7 +67,8 @@ The operator guide holds environment installation, complete test commands,
 explicit execution, paper-account examples and dashboard-publication details.
 Read [AGENTS.md](AGENTS.md) before writing; run the relevant checks and the full
 suite before a code commit. Generated folder catalogs come from
-`scripts/catalog.py`; update their registry/docstring sources.
+`scripts/catalog.py`; stage intended registry/source changes before regenerating.
+`python scripts/catalog.py --check` reports stale views without rewriting them.
 
 ## Docs
 
@@ -148,6 +149,14 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Audits and reviews**
 
+- [Repository execution batch, 2026-11-04](docs/reviews/project_execution_20261104.md):
+  new paper-session bridge, segmented recovery, independent dashboard bundle,
+  funding schema evidence and bounded R401/R402 source qualification; the report
+  separates shipped engineering from missing inputs and prospective dates.
+- [Funding-notional audit](lab/funding_notional.py) and [invented sign-flip demo](scripts/audit_funding_notional.py):
+  [R388's funding approximation](experiments/forcedswitch_v1/FINDINGS.md#engineering-clarification-funding-notional-2026-11-03-no-market-rerun)
+  and [R333's fee/weighting clarification](experiments/level_probability_v2/FINDINGS.md#reporting-clarification-2026-11-03-no-new-market-statistic)
+  preserve the frozen verdicts while narrowing claims to their actual scope.
 - [Event-recorder review](docs/reviews/event_recorders_20261102.md): receipt-time semantics,
   calendar error handling and safe integration around active writers.
 - [Room actions, 2026-11-03](docs/reviews/room_actions_20261103.md): external paper-capital veto,

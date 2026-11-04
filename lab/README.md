@@ -2,6 +2,8 @@
 
 <!-- written by scripts/catalog.py; edit the sources (registry, docstrings), not this file -->
 
+Source: tracked and staged Git-index metadata; untracked files and unstaged edits are excluded.
+
 Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; run them all with
 `python -m unittest discover -s tests -t .` before committing a change here.
 
@@ -14,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carry_control`](carry_control.py): Finite-deadline conditional carry control; no forecast calibration or orders.
+- [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
 - [`config`](config.py): Constants every lane shares.
@@ -40,6 +43,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...
 - [`formula_space`](formula_space.py): Bounded rational formula discovery with units and definition domains.
 - [`freshness`](freshness.py): Freshness of the lab's live streams: when each recorder, loop and forward lane last wrote, against its cadence.
+- [`funding_notional`](funding_notional.py): Conditional funding-notional audit for one fixed-base-quantity linear position.
 - [`funding_prefix`](funding_prefix.py): Bounded model of pinned Lighter encoded funding, never an API cash decoder.
 - [`funding_values`](funding_values.py): Source-typed value observations and conservative funding-cash evidence.
 - [`gate`](gate.py): The go-real screen: one input to the owner's decision, never an order.
@@ -72,11 +76,13 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_account`](paper_account.py): One append-only simulated linear-futures account, separated by venue/asset.
 - [`paper_admission`](paper_admission.py): Conservative projection of legacy reports, without rewriting their journals.
 - [`paper_controls`](paper_controls.py): Persistent paper-only entry/data/loss/concentration controls.
+- [`paper_session`](paper_session.py): Single-writer paper admission and explicit-receipt bridge for new consumers.
 - [`paper_solvency`](paper_solvency.py): Current-capital veto around frozen paper risk controls; no real activation.
 - [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.
 - [`propfirm`](propfirm.py): Prop-firm economics: what a strategy's return stream is worth inside an evaluation and a funded account.
+- [`recording_segments`](recording_segments.py): Streaming, non-overwriting recovery bundles for explicit RECORDED files.
 - [`registry`](registry.py): Append-only register of research rounds (the machine-readable ROADMAP).
 - [`research`](research.py): Glue between data and search: the point-in-time research universe, costs, and guarded rule evaluation.
 - [`runtime`](runtime.py): Offline execution receipts and fail-closed checks around legacy paper writers.

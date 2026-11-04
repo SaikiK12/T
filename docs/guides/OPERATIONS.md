@@ -115,7 +115,101 @@ The original `python -m unittest discover -s tests -t .` remains the same full g
 New lane: copy `templates/lane/`, write the PREREG, claim its id on issue #7, freeze it with `lab.prereg.freeze()`,
 then run.
 
+## Maintain catalog and provenance views
+
+Folder catalogs use one commit-ready snapshot of the Git index. Stage intended
+source, protocol and registry changes before regenerating them; untracked files,
+unstaged edits, intent-to-add placeholders and source symlinks are excluded.
+
+```sh
+.venv/bin/python scripts/catalog.py
+.venv/bin/python scripts/catalog.py --check
+```
+
+The check exits1 for stale/missing views and2 for invalid inputs/outputs. It does
+not rewrite catalogs or the real index/object cache. Publication validates all
+three views first and replaces changed files atomically; output symlinks are
+rejected. Unchanged views retain their timestamps. This checks metadata
+consistency, not observation freshness, on-time collection or a research verdict.
+CI runs the same catalog check, so intended sources and regenerated views must
+be included together in a publication.
+
+`lab find --trace R389` reports supported frozen declarations from inputs JSON,
+training manifests and `inputs` fences (both historical path/hash orderings).
+Conflicts and unsupported/missing declarations remain explicit. Tracked-name
+membership does not prove target availability or matching bytes; declared data,
+results and journals are not opened or independently verified by this command.
+
+The [funding-notional audit](../../lab/funding_notional.py) compares rate-sum and
+fixed-quantity cash conventions with supplied eligibility, coverage and values.
+Its [demo](../../scripts/audit_funding_notional.py) uses invented inputs only;
+missing evidence remains unscored. It does not retrofit any frozen lane or prove
+a historical gain. A market reanalysis needs a new frozen design.
+
+## Integrated paper session and recovery tools
+
+New paper consumers can use [PaperSession](../../lab/paper_session.py) to connect
+the native cash account, persistent risk controls and `PaperSolvencyGuard`.
+An admission persists an intent, never a fill. Pending/partial intents block
+new entries across restart until explicit receipt identities join them. Old
+receipts cannot discharge later intents, even with a refreshed delivery clock.
+Observed receipts remain recordable after a risk stop. Close planning uses the
+held base quantity and a supplied fee on exit notional; it does not execute.
+
+```sh
+python scripts/demo_paper_session.py --demo
+```
+
+That command uses invented inputs and temporary journals only. Source/forecast
+authentication, live fills, cancellation reconciliation, scale/reversal entries
+and exchange liquidation mechanics remain outside this narrow bridge. Historical
+frozen runners have not been retrofitted or credited with new paper evidence.
+
+For an oversized stable file classified `RECORDED`, the new segmented tool
+supplements `handover.py`'s ordinary archive. It never uploads, deletes an original,
+or replaces a destination. Replace the example source with an actual classified
+file; archive and repository roots must be separate.
+
+```sh
+python scripts/recording_segments.py pack --root /absolute/repository \
+  --source data/rawtape/selected-file.bin --out /absolute/external/new-bundle \
+  --chunk-mb 50 --budget-mb 250
+python scripts/recording_segments.py verify --archive /absolute/external/new-bundle \
+  --expected-manifest-sha256 MANIFEST_SHA256 --budget-mb 250
+python scripts/recording_segments.py restore --archive /absolute/external/new-bundle \
+  --root /absolute/restore-repository --expected-manifest-sha256 MANIFEST_SHA256 --budget-mb 250
+```
+
+Keep the pack receipt's real manifest SHA256 outside the bundle. The destination
+repository must already classify that path in `registry/data_manifest.csv`.
+Budgets above are local bundle examples, not remote archive-capacity increases.
+The tool refuses licensed/unclassified inputs, public news exclusions, unstable
+sources, path/symlink ambiguity, corrupted segments and existing destinations.
+Linux atomic directory publication is required. A synthetic round trip proves
+recovery code, not the completeness of a capture host's actual backups.
+
+The [standalone dashboard procedure](../../dashboard/README.md#independent-static-bundle)
+builds a verified static bundle from an existing explicit export generation.
+It does not scan research inputs, start a scheduler or publish a site.
+The [current recovery checklist](../handover/SCHEDULED_CHECKS.md) separates
+active instructions from historical reminders and completed reserved reads.
+
 ## Related integration records
+
+Current carry source qualification is prospective and one-shot. The R401
+inventory attempt is complete and must not be repeated. Its new targeted
+successor plans without network by default:
+
+```sh
+python -m scripts.qualify_carry_costs_targeted
+```
+
+Execution requires its exact frozen and published protocol, an unused attempt
+marker and an explicit new output path. The journal includes R401's2MiB inside
+the same5MiB allowance. It never renews that allowance. Snapshot arithmetic
+matches contract lots but establishes no account fee, future exit cost, actual
+fill or pair PnL. See the native R402 protocol and findings in the experiment
+catalog; a consumed attempt is not a recurring operational task.
 
 The [M090/M322 implementation handoff](../../research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
 the prototypes and remaining admission requirements. The
