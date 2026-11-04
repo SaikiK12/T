@@ -34,7 +34,8 @@ absentes, l’hôte inaccessible et les dates prospectives restent des dépendan
   [Reçu](project_execution_20261104/recording_recovery_receipt.json).
   Ce contrôle ne prouve pas l’exhaustivité des sauvegardes du vrai hôte.
 - [R401](../../experiments/carry_cost_qualification_v1/PREREG.md) figé pour une
-  seule qualification de sources bornée, publication requise avant capture.
+  seule qualification de sources bornée, publiée avant capture : le premier corps HTTP200
+  a atteint2MiB ; aucune complétude établie, arrêt sans retry. [Résultat](../../experiments/carry_cost_qualification_v1/FINDINGS.md).
   Coût de paire, frais du propriétaire, fills et PnL demeurent inconnus.
 - [Reprise courante](../handover/SCHEDULED_CHECKS.md) : aucun registre réécrit,
   aucun lot réservé terminé relancé, aucune manipulation d’un writer actif.
@@ -46,7 +47,8 @@ passent, dont le navigateur avec D3 réel et refus de corruption. Les contrôles
 sont des validations de code sur fixtures, pas des résultats de marché.
 L’intégrité avant ajout du protocole :0 erreur / 14 warnings historiques ; le protocole
 R401 non encore enregistré ajoute temporairement un warning, sans erreur.
-Le registre final et la CI seront vérifiés avant fusion. Aucun ancien fichier
+R401 est maintenant enregistré une seule fois :186lignes,0essai supplémentaire.
+La CI sera vérifiée avant fusion. Aucun ancien fichier
 lié par un digest gelé n’a été modifié.
 
 ## Carte des 70 actions après ce lot
@@ -58,7 +60,7 @@ admission statistique, ni déploiement, ni validation de profit.
 
 | N° | Chantier | État du lot | Preuve ou dépendance |
 |---|---|---|---|
-| 1 | Coûts R391 | PARTIEL | R401 figé : inventaires et deux carnets MEXC prévus ; coût réel de paire encore inconnu. |
+| 1 | Coûts R391 | PARTIEL | R401 terminé PARTIAL : HTTP200 mais corps au plafond2MiB, aucune paire tarifée. |
 | 2 | Audit M459 | DÉPENDANCE | metrics_full/daily_v2 absents ici ; aucune mesure de présence ni relance historique. |
 | 3 | Champs du financement | PARTIEL | Une archive officielle vérifiée : trois colonnes ; schéma du parquet distant encore attendu. |
 | 4 | Cash de financement corrigé | DÉPENDANCE | Outil conditionnel existant ; valeurs de règlement, couverture et éligibilité non vérifiées. |
