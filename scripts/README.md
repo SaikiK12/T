@@ -286,7 +286,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (73)
+## Tools and everything else (74)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -344,6 +344,7 @@ line is the first line of the script's own docstring.
 - [`prop_edge_map.py`](prop_edge_map.py): How much edge does a prop challenge need? Synthetic map for queue M211, from lab/propfirm presets.
 - [`prospective_clock_rule.py`](prospective_clock_rule.py): Conditional clock bounds from authenticated, bounded request samples.
 - [`qualify_carry_costs.py`](qualify_carry_costs.py): Bounded public-source qualification for R391's whole frozen symbol table.
+- [`qualify_carry_costs_targeted.py`](qualify_carry_costs_targeted.py): One prospective, bounded per-contract public source qualification; no orders.
 - [`recording_segments.py`](recording_segments.py): Segment, verify or restore one explicit RECORDED file; never uploads or deletes originals.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.

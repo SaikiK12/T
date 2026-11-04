@@ -16,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carry_control`](carry_control.py): Finite-deadline conditional carry control; no forecast calibration or orders.
+- [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
 - [`config`](config.py): Constants every lane shares.

@@ -196,6 +196,21 @@ active instructions from historical reminders and completed reserved reads.
 
 ## Related integration records
 
+Current carry source qualification is prospective and one-shot. The R401
+inventory attempt is complete and must not be repeated. Its new targeted
+successor plans without network by default:
+
+```sh
+python -m scripts.qualify_carry_costs_targeted
+```
+
+Execution requires its exact frozen and published protocol, an unused attempt
+marker and an explicit new output path. The journal includes R401's2MiB inside
+the same5MiB allowance. It never renews that allowance. Snapshot arithmetic
+matches contract lots but establishes no account fee, future exit cost, actual
+fill or pair PnL. See the native R402 protocol and findings in the experiment
+catalog; a consumed attempt is not a recurring operational task.
+
 The [M090/M322 implementation handoff](../../research/PROSPECTIVE_LEADS_DRAFT_20261029.md) describes
 the prototypes and remaining admission requirements. The
 [R374 signed-content capture](../../experiments/m090_content_v2/FINDINGS.md) adds a tested public adapter and replayable signed archive; UTC and forecast scoring remain disabled.

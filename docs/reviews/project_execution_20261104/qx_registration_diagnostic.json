@@ -1,0 +1,25 @@
+{
+  "automatic_repair_performed": false,
+  "base_commit": "c534cf6cee0aa9447609b3d754525f8ec4ce7950",
+  "calculation_receipts": [
+    {
+      "calculation_status": "SUCCESS",
+      "classification": "REGISTRATION_NOT_REQUESTED",
+      "path": "experiments/reserved_batch2/results/run_receipts/20261103T222256.385627Z-070c4208.json",
+      "receipt_version": 2,
+      "register_requested": false,
+      "run_id": "20261103T222256.385627Z-070c4208",
+      "sha256": "29ed4e8010e10b9d54f23fabe43e3f2893d6f5bd7ff1910148c3029fef304043"
+    }
+  ],
+  "limitations": [
+    "This checkout contains one tracked calculation receipt and no native registration receipts; it is not a full capture-host inventory.",
+    "The sole receipt explicitly did not request registration; its SUCCESS is calculation/output verification only.",
+    "No interrupted registration is demonstrated by this inventory. No registry rows were edited or appended, and no calculation was repeated.",
+    "Automated idempotent repair of a genuinely interrupted registration remains unimplemented; any future append must preserve the original calculation identity and existing rows."
+  ],
+  "registration_receipt_paths": [],
+  "registry_sha256": "49f2c92acaf3e3e4dc7b5faa46f982dac29fb19d42607263e037e5492df5c89a",
+  "review_date_utc": "2026-11-04",
+  "scope": "Tracked calculation/registration receipt metadata only; no report, summary, data row or market statistic decoded."
+}

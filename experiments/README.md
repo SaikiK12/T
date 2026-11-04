@@ -219,9 +219,10 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (1)
+## Unregistered folders (2)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
+- **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** No registry row; scope unclassified.
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.

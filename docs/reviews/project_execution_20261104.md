@@ -37,18 +37,21 @@ absentes, l’hôte inaccessible et les dates prospectives restent des dépendan
   seule qualification de sources bornée, publiée avant capture : le premier corps HTTP200
   a atteint2MiB ; aucune complétude établie, arrêt sans retry. [Résultat](../../experiments/carry_cost_qualification_v1/FINDINGS.md).
   Coût de paire, frais du propriétaire, fills et PnL demeurent inconnus.
+- [Disponibilité des archives](project_execution_20261104/archive_availability.json) :12dossiers indexés à distance, mais daily_v2/metrics_full/fundingRate absents de cet index. Aucun chunk supplémentaire récupéré. Les noms ne prouvent ni couverture complète ni admissibilité.
+- [Diagnostic qx](project_execution_20261104/qx_registration_diagnostic.json) :le seul reçu de calcul versionné indique que l’enregistrement n’était pas demandé. Aucune interruption de registre démontrée et aucune réparation silencieuse ; la reprise automatique reste ouverte.
+- [R402](../../experiments/carry_targeted_costs_v1/PREREG.md) :successeur distinct par contrat, avec sources officielles et tests de lots/unités ; les2MiB R401 restent dans le même budget5MiB. Protocole figé avant collecte ; résultat à ajouter après sa publication et sa tentative unique.
 - [Reprise courante](../handover/SCHEDULED_CHECKS.md) : aucun registre réécrit,
   aucun lot réservé terminé relancé, aucune manipulation d’un writer actif.
 
 ## Validation
 
-Avant publication : **2 227 tests, 3 ignorés, 0 échec**,632,459 s. Les 61 tests ciblés
+Avant publication R402 : **2 248 tests, 3 ignorés, 0 échec**,514,640 s. Les 82 tests ciblés
 passent, dont le navigateur avec D3 réel et refus de corruption. Les contrôles
 sont des validations de code sur fixtures, pas des résultats de marché.
-L’intégrité avant ajout du protocole :0 erreur / 14 warnings historiques ; le protocole
-R401 non encore enregistré ajoute temporairement un warning, sans erreur.
-R401 est maintenant enregistré une seule fois :186lignes,0essai supplémentaire.
-La CI sera vérifiée avant fusion. Aucun ancien fichier
+R401 est enregistré une seule fois :186lignes,0essai supplémentaire.
+Son commit7f15cb9 a une CI verte. R402 est figé et publié avant sa collecte unique ;
+son absence temporaire du registre est explicite, puis une seule ligne finale sera ajoutée.
+La CI du dernier état sera vérifiée avant fusion. Aucun ancien fichier
 lié par un digest gelé n’a été modifié.
 
 ## Carte des 70 actions après ce lot
@@ -120,7 +123,7 @@ admission statistique, ni déploiement, ni validation de profit.
 | 58 | Prévision distincte du portefeuille | PARTIEL | Distinction maintenue dans le pont et les rapports ; aucun score M090 inventé. |
 | 59 | Décomposition des gains | DÉPENDANCE | Cash/financement connus requis ; aucune source inconnue transformée en gain. |
 | 60 | Concentration des résultats | DÉPENDANCE | À préspécifier dans la prochaine étude ; aucun ancien NULL sauvé par exclusion. |
-| 61 | Enregistrements qx interrompus | OUVERT | Diagnostic/reprise idempotente reste une tâche distincte ; aucune réparation silencieuse. |
+| 61 | Enregistrements qx interrompus | PARTIEL | Inventaire de métadonnées : un reçu versionné, enregistrement non demandé, aucune interruption établie ; réparation idempotente générique encore ouverte. |
 | 62 | Tests des interfaces critiques | LIVRÉ | Reprise paper, corruption de sauvegarde et intégrité navigateur couvertes. |
 | 63 | Profilage des calculs | DÉPENDANCE | Pipeline GBM et jeux d’entrée non détenus ici ; aucune promesse de vitesse Rust. |
 | 64 | Provenance | PARTIEL | Schéma borné ZIP/Parquet ajouté et 43 fichiers ORB vérifiés ; autres formats selon preuve réelle. |

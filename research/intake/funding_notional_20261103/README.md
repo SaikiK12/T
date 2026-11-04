@@ -1,5 +1,9 @@
 # Funding settlement-value source check, 2026-11-03
 
+The [2026-11-04 carry contract/depth supplement](carry_sources_20261104.md)
+records the bounded official-source sections used for R402's separate input
+qualification. It establishes no historical funding cash or net pair return.
+
 Existing method: M461 / R388. This is source availability and schema reading,
 not an archive reanalysis, a new method or a result.
 
