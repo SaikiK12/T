@@ -1,41 +1,41 @@
 {
- "last_hour": "2026-11-03T22:00:00+00:00",
- "days_scored": 33,
+ "last_hour": "2026-11-04T07:00:00+00:00",
+ "days_scored": 34,
  "short_now": {
   "tvc": [
-   "GOOGLUSDT",
+   "BNBUSDT",
    "INTCUSDT",
    "KORUUSDT",
+   "MUUSDT",
    "SOXLUSDT",
-   "TSLAUSDT",
-   "XAGUSDT"
+   "TSLAUSDT"
   ],
   "t24": [
+   "INTCUSDT",
+   "KORUUSDT",
    "LINKUSDT",
    "QUSDT",
-   "SKHYNIXUSDT",
    "SOXSUSDT",
-   "SPCXUSDT",
-   "UNIUSDT"
+   "SPCXUSDT"
   ],
   "t4": [
-   "ENAUSDT",
-   "ETHUSDT",
+   "INTCUSDT",
+   "JCTUSDT",
    "QUSDT",
-   "SOXSUSDT",
+   "SKHYNIXUSDT",
    "SPCXUSDT",
-   "STRKUSDT"
+   "XAUUSDT"
   ]
  },
  "A": {
-  "days": 33,
-  "total": 0.23001217429327747,
-  "total_2x": 0.20847706141025496,
-  "total_3x": 0.18694194852723242,
+  "days": 34,
+  "total": 0.24042758994700109,
+  "total_2x": 0.21838051437186107,
+  "total_3x": 0.1963334387967209,
   "go_real": {
-   "n": 33,
-   "mean": 0.006970065887675075,
-   "hit": 0.6060606060606061,
+   "n": 34,
+   "mean": 0.007071399704323561,
+   "hit": 0.6176470588235294,
    "worst": -0.1072537748171812,
    "invalid_n": 0,
    "n_clusters": null,
@@ -48,9 +48,9 @@
    },
    "pass": true
   },
-  "ann": 2.544074049001402,
-  "sharpe": 3.6738708766119963,
-  "t_nw": 1.3145913436805265,
+  "ann": 2.5810608920780997,
+  "sharpe": 3.7845554278573097,
+  "t_nw": 1.3696862209275926,
   "max_dd": 0.1818745574396799,
   "prereg": {
    "pass_now": false,
@@ -60,14 +60,14 @@
   }
  },
  "B": {
-  "days": 33,
-  "total": 0.08593647885324049,
-  "total_2x": 0.08213173430363191,
-  "total_3x": 0.07832698975402379,
+  "days": 34,
+  "total": 0.08838750189982879,
+  "total_2x": 0.0845377332589305,
+  "total_3x": 0.08068796461803268,
   "go_real": {
-   "n": 33,
-   "mean": 0.0026041357228254692,
-   "hit": 0.5757575757575758,
+   "n": 34,
+   "mean": 0.002599632408818494,
+   "hit": 0.5882352941176471,
    "worst": -0.0184272522629367,
    "invalid_n": 0,
    "n_clusters": null,
@@ -80,9 +80,9 @@
    },
    "pass": true
   },
-  "ann": 0.9505095388312963,
-  "sharpe": 3.8840650287643848,
-  "t_nw": 0.9596095625225983,
+  "ann": 0.9488658292187503,
+  "sharpe": 3.937457322725296,
+  "t_nw": 0.9870287182283909,
   "max_dd": 0.0583616954241605,
   "prereg": {
    "pass_now": false,
