@@ -1,5 +1,12 @@
 # Received-source extraction for the single methods queue
 
+The [2026-11-04 market-input supplement](market_inputs_20261104/README.md) links
+the existing discovery guide's fourteen cross-family observation/equation lenses to
+ten bounded official-source capability records and R403's two-archive metadata
+qualification. Documented, qualified and acquired inputs remain separate;
+unknown clocks, historical availability and cash mechanics are not inferred.
+No new method ID, predictive trial or strategy result follows from the map.
+
 The operating panel is `docs/PANEL.md`; the live methods queue is `registry/methods.csv`. Files here are source-reading inputs, not another priority list or authority to run a study.
 
 Current received scope: 439 source records/aliases and 174 catalog/tool entries; the queue holds 373 rows.

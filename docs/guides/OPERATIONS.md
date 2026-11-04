@@ -196,6 +196,21 @@ active instructions from historical reminders and completed reserved reads.
 
 ## Related integration records
 
+The [mechanism/data/equation map](../../research/discovery/README.md#global-mechanism-data-equation-map)
+links existing families to their minimum observations and falsifiers. Source
+capabilities distinguish documentation from qualified or acquired inputs.
+`lab.input_contracts` checks caller-declared metadata consistency only; its
+passing result never authenticates timestamps, provenance or trading eligibility.
+
+```sh
+python -m scripts.qualify_metric_archives
+```
+
+This default command makes a dry plan with no requests. R403's explicit execution
+is one-shot under its frozen published protocol. Its guard and accumulated
+journal must not be removed or reset. Two source ZIPs do not reconstruct the
+missing full metrics panel or establish when their observations were available.
+
 Current carry source qualification is prospective and one-shot. The R401
 inventory attempt is complete and must not be repeated. Its new targeted
 successor plans without network by default:

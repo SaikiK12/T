@@ -107,7 +107,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Methods and research notes**
 
-- [Original equation discovery workbench](research/discovery/README.md): bounded symbolic grammar, exact alias checks, information lost by candles, synthetic recovery and the protocol for a future market test.
+- [Original equation discovery workbench](research/discovery/README.md): fourteen observation/equation lenses linked to the canonical edge map, source capabilities, declaration checks, bounded grammar and the protocol for a future market test. The canonical methods queue remains authoritative.
 - [R400 path-response experiment](experiments/path_response_v1/FINDINGS.md): frozen raw-event equation search and its terminal source-coverage refusal; [timestamp-only diagnosis](scripts/audit_path_timing.py) reads no price or size columns.
 - [Leading-strategy hybrid review](research/HYBRID_REVIEW_20261029.md): source reviews and the latest deep-batch decisions, ranked work paths, prior nulls, comparison controls and current data blockers.
 - Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),

@@ -37,8 +37,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (161)
+## Other registered rounds (done, registered or planned) (162)
 
+- **[metrics_archive_qualification_v1](metrics_archive_qualification_v1/)** R403, DONE DATA_PASS, 0 trials. Two official BTCUSDT metrics archive identities, schemas and raw time labels; no strategy test ([PREREG](metrics_archive_qualification_v1/PREREG.md), [FINDINGS](metrics_archive_qualification_v1/FINDINGS.md))
 - **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** R402, DONE PARTIAL, 0 trials. Targeted public carry contract and lot-matched depth qualification; no strategy test ([PREREG](carry_targeted_costs_v1/PREREG.md), [FINDINGS](carry_targeted_costs_v1/FINDINGS.md))
 - **[carry_cost_qualification_v1](carry_cost_qualification_v1/)** R401, DONE PARTIAL, 0 trials. Current carry source qualification on the published R391 cohort; no strategy test ([PREREG](carry_cost_qualification_v1/PREREG.md), [FINDINGS](carry_cost_qualification_v1/FINDINGS.md))
 - **[path_response_v1](path_response_v1/)** R400, REGISTERED PENDING, 1,478 trials. Arrival-order area and same-price replenishment: bounded equation search beyond the fixed OFI baseline ([PREREG](path_response_v1/PREREG.md), [FINDINGS](path_response_v1/FINDINGS.md))
@@ -220,10 +221,9 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (2)
+## Unregistered folders (1)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.
-- **[metrics_archive_qualification_v1](metrics_archive_qualification_v1/)** No registry row; scope unclassified.

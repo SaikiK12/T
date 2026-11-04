@@ -13,6 +13,7 @@ from lab.stream_quotes import FrameClock, NS, SYMBOLS
 from scripts import probe_depth_quotes as probe
 from tests.test_lighter_depth_state import message, snapshot
 from tests.test_stream_quotes import ANCHOR, UTC, frame, metadata
+from tests.depth_quote_workers import fixture_trickle_worker, fixture_cap_worker, fixture_complete_worker
 
 
 def depth_frame(second=5, *, initial=True, data=None):
@@ -232,19 +233,6 @@ class DepthReportTests(unittest.TestCase):
             lane=Path(d);fixture(lane)
             with self.assertRaises(FileExistsError):probe.capture(lane)
             with self.assertRaisesRegex(ValueError,'already sealed'):probe.seal(lane)
-
-
-def fixture_trickle_worker(url,pipe,limit,timeout):
-    pipe.send(('status',200));pipe.send(('chunk',b'{"partial":'))
-    time.sleep(5)
-
-
-def fixture_cap_worker(url,pipe,limit,timeout):
-    pipe.send(('status',200));pipe.send(('chunk',b'x'*limit));pipe.send(('done',None))
-
-
-def fixture_complete_worker(url,pipe,limit,timeout):
-    pipe.send(('status',200));pipe.send(('chunk',b'{}'));pipe.send(('done',None))
 
 
 class AbsoluteMetadataTests(unittest.TestCase):
