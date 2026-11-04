@@ -1,15 +1,27 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-03T09:09:20.635000+00:00",
+ "updated": "2026-11-04T09:26:45.507728+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.002,
+  "gate": 1.019,
   "hyperliquid": 1.0,
-  "mexc": 1.0
+  "mexc": 0.998
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "binance": {
    "files": 867,
    "failed": 4,
@@ -21,20 +33,8 @@
     "SXPUSDT"
    ]
   },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "mexc": {
    "files": 520,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -47,12 +47,6 @@
   "slots": 20,
   "why": "R275's best passing book by 1x t",
   "held_now": [
-   {
-    "coin": "GRASSUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.1648
-   },
    {
     "coin": "ZROUSDT",
     "long": "gate",
@@ -166,15 +160,21 @@
     "long": "hyperliquid",
     "short": "gate",
     "spread_in": 0.2146
+   },
+   {
+    "coin": "ETCUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.1772
    }
   ],
-  "scored_days": 12,
-  "late_days": 8,
-  "total": 0.000523845,
-  "total_2x": -0.0007361550000000001,
-  "total_3x": -0.0019961550000000003,
-  "total_close": 0.0014133003999999998,
-  "nw_t": 0.6916684834145063,
+  "scored_days": 13,
+  "late_days": 9,
+  "total": 0.0004323555,
+  "total_2x": -0.0008976445,
+  "total_3x": -0.0022276445,
+  "total_close": 0.0013218109,
+  "nw_t": 0.6003259708778347,
   "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -235,13 +235,13 @@
     "spread_in": 0.1032
    }
   ],
-  "scored_days": 12,
-  "late_days": 8,
-  "total": 0.0066509652,
-  "total_2x": 0.006160965199999999,
-  "total_3x": 0.005670965200000001,
-  "total_close": 0.0069713448,
-  "nw_t": 1.72409550281789,
+  "scored_days": 13,
+  "late_days": 9,
+  "total": 0.0067298667,
+  "total_2x": 0.006239866699999999,
+  "total_3x": 0.005749866700000001,
+  "total_close": 0.0070502463,
+  "nw_t": 1.6459111797864885,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -326,22 +326,10 @@
     "spread_in": 1.4012
    },
    {
-    "coin": "SIRENUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.6807
-   },
-   {
     "coin": "AINUSDT",
     "long": "gate",
     "short": "mexc",
     "spread_in": 0.7664
-   },
-   {
-    "coin": "STORJUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.455
    },
    {
     "coin": "ESPORTSUSDT",
@@ -372,18 +360,30 @@
     "long": "mexc",
     "short": "gate",
     "spread_in": 0.4105
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 1.4642
+   },
+   {
+    "coin": "RPLUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.497
    }
   ],
-  "scored_days": 12,
-  "late_days": 8,
-  "total": 0.0033746199999999996,
-  "total_2x": 0.0013446200000000001,
-  "total_3x": -0.0006853800000000002,
-  "total_close": 0.0036045646,
-  "nw_t": 2.6501523576031834,
+  "scored_days": 13,
+  "late_days": 9,
+  "total": 0.003924019999999999,
+  "total_2x": 0.0018240200000000002,
+  "total_3x": -0.0002759800000000002,
+  "total_close": 0.0041539646,
+  "nw_t": 2.91556938365853,
   "max_drawdown": -0.0014498958,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-03"
+ "last_day": "2026-11-04"
 }
