@@ -40,16 +40,38 @@ def slim(details, fetched):
     return out
 
 
-def done_addresses(path):
-    seen = set()
-    if path.exists():
+def good_lines(path):
+    """The complete JSON lines of a gzip file, and whether its end was cut (a run killed mid-write)."""
+    lines, cut = [], False
+    try:
         with gzip.open(path, "rt") as f:
             for line in f:
-                try:
-                    seen.add(json.loads(line)["vaultAddress"].lower())
-                except (ValueError, KeyError):
-                    continue          # a torn last line from an interrupted run is skipped and refetched
-    return seen
+                lines.append(line)
+    except (EOFError, gzip.BadGzipFile, OSError):
+        cut = True
+    ok = []
+    for line in lines:
+        try:
+            json.loads(line)["vaultAddress"]
+            ok.append(line if line.endswith("\n") else line + "\n")
+        except (ValueError, KeyError, TypeError):
+            cut = True                # a torn last line is dropped and refetched
+    return ok, cut
+
+
+def done_addresses(path):
+    """Addresses already saved. A file cut by an interrupted run is first rewritten with its complete lines only,
+    so later appends stay readable."""
+    if not path.exists():
+        return set()
+    ok, cut = good_lines(path)
+    if cut:
+        tmp = path.with_suffix(".tmp")
+        with gzip.open(tmp, "wt") as f:
+            f.writelines(ok)
+        tmp.replace(path)
+        log(f"recovered {len(ok)} complete lines from a cut file")
+    return {json.loads(line)["vaultAddress"].lower() for line in ok}
 
 
 def addresses(list_path):
@@ -66,7 +88,8 @@ def post(body, timeout=30):
 def run(date, pause=PAUSE, fetch=post, free_gb=lambda: shutil.disk_usage(OUT).free / 1e9, limit=None):
     list_path = OUT / f"list_{date}.json"
     out_path = OUT / f"details_{date}.jsonl.gz"
-    todo = [a for a in addresses(list_path) if a not in done_addresses(out_path)]
+    done = done_addresses(out_path)
+    todo = [a for a in addresses(list_path) if a not in done]
     log(f"{len(todo)} vaults to fetch -> {out_path.name}")
     wait, n = pause, 0
     with gzip.open(out_path, "at") as f:

@@ -50,3 +50,18 @@ class FetchTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RecoverTests(unittest.TestCase):
+    def test_a_cut_file_is_rewritten_with_its_complete_lines(self):
+        with tempfile.TemporaryDirectory() as t:
+            path = Path(t) / "details.jsonl.gz"
+            with gzip.open(path, "wt") as f:
+                f.write(json.dumps({"vaultAddress": "0xA"}) + "\n" + json.dumps({"vaultAddress": "0xB"}) + "\n")
+            blob = path.read_bytes()
+            path.write_bytes(blob[:-12])                  # cut the gzip trailer, as a killed writer would
+            seen = hv.done_addresses(path)
+            self.assertLessEqual(seen, {"0xa", "0xb"})
+            with gzip.open(path, "at") as f:              # appending after recovery keeps the file readable
+                f.write(json.dumps({"vaultAddress": "0xC"}) + "\n")
+            self.assertEqual(hv.done_addresses(path), seen | {"0xc"})
