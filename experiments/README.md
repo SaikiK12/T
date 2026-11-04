@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (20)
+## Running or armed registered rounds (21)
 
+- **[book_costs_v1](book_costs_v1/)** R404, RUNNING PENDING, 0 trials. Taker cost from public order books on every listed dYdX, KuCoin and MEXC perp, 3-hourly to 2026-11-18; cost input for M469, no strategy test ([PREREG](book_costs_v1/PREREG.md), [journal](book_costs_v1/journal/))
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
 - **[lighter_roll_fwd](lighter_roll_fwd/)** R389, RUNNING PENDING, 1 trial. Lighter BRENTOIL index roll steps: does the book lag the documented step? (M462, forward paper) ([PREREG](lighter_roll_fwd/PREREG.md), [FINDINGS](lighter_roll_fwd/FINDINGS.md))
 - **[settlelit_fwd](settlelit_fwd/)** R364, RUNNING PENDING, 1 trial. R363's Lighter settlement scalp forward on paper: Binance's live predicted rate at T-1h+20s vs Lighter's last hourly rate (e = r - 2h), position on Lighter against the side receiving Binance's lump, $1k walked through Lighter's live book at T-10 s and T+60 s, Lighter's own settlement at T ([PREREG](settlelit_fwd/PREREG.md), [journal](settlelit_fwd/journal/))

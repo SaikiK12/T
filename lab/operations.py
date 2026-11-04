@@ -88,6 +88,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R214", "forward_delayed.py", ("R200",)),
         task("R215", "forward_mexc.py", ("R200",), ("R214",),
              files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
+        task("R404", "record_book_costs.py", timeout=900),   # one snapshot per 3 h slot: dYdX, KuCoin, MEXC books
         task("R224", "record_mexc_depth.py", ("R200",), timeout=300,
              files=(Requirement("experiments/venue_gap_v1/results/tradfi_symbols.json"),)),
         task("R218", "forward_mexc_sq.py", ("R200", "R215")),
@@ -191,6 +192,7 @@ LABELS = {
     "R220": ("Prospective paper", "Funding carry books", "carry_fwd"),
     "R221": ("Evidence decisions", "MEXC sequential evidence review", "mexc_seq"),
     "R224": ("Execution measurement", "MEXC order-book execution costs", "mexc_costs"),
+    "R404": ("Execution measurement", "dYdX, KuCoin and MEXC order-book costs, every listed perp", "book_costs_v1"),
     "R225": ("Prospective paper", "MEXC volatility-targeted books", "vt_fwd"),
     "R266": ("Prospective paper", "MEXC token unlock events", "unlocks_fwd"),
     "R268": ("Prospective paper", "MEXC delisting announcement events", "delist_fwd"),

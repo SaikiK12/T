@@ -1,21 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-03T09:28:59.149336+00:00",
+ "updated": "2026-11-04T19:47:24.101492+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
   "lighter": 0.986
  },
  "data": {
-  "lighter": {
-   "files": 195,
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "mexc": {
-   "files": 117,
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -149,16 +149,16 @@
     "spread_in": 0.0691
    }
   ],
-  "scored_days": 11,
-  "late_days": 8,
-  "total": -0.0002879247000000002,
-  "total_2x": -0.0012779247000000004,
-  "total_3x": -0.0022679247,
-  "total_close": 0.0002945949,
-  "nw_t": -0.40110524572126866,
-  "max_drawdown": -0.0014911757,
+  "scored_days": 12,
+  "late_days": 9,
+  "total": -0.0009897656000000003,
+  "total_2x": -0.0021997656000000004,
+  "total_3x": -0.0034097655999999997,
+  "total_close": -0.000407246,
+  "nw_t": -0.9043452420374996,
+  "max_drawdown": -0.0021930166,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-03"
+ "last_day": "2026-11-04"
 }

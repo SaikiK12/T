@@ -59,7 +59,7 @@ The map is refined one family at a time, cheapest informative test first, each a
 
 | Id | Family | Group | Methods (open) | Confirmed | Partial | Null | Running |
 |---|---|---|---|---|---|---|---|
-| P1 | Cross-venue funding carry | Risk premia | 8 (5) | 2 | 15 | 0 | 4 |
+| P1 | Cross-venue funding carry | Risk premia | 8 (5) | 2 | 15 | 0 | 5 |
 | P2 | Spot-perp carry and dated basis | Risk premia | 3 (1) | 3 | 5 | 0 | 1 |
 | P3 | Funding and basis as signals | Risk premia | 8 (1) | 0 | 2 | 5 | 0 |
 | P4 | Liquidity provision and market making | Risk premia | 14 (10) | 0 | 1 | 3 | 1 |
@@ -101,7 +101,7 @@ Rounds are counted in every family whose methods link them (the R185 atlas, for 
 - **Binding constraint:** Cost and capacity on thin coins; per-venue margin; delisting and freshness accounting.
 - **Fake-edge checks:** Freshness rule by bar length (audit H1); constant-notional marks (H2); stale delisted legs (F4, F5); band vs per-coin cost (F7); funding-interval scaling (R384); name mis-joins (H6).
 - **Methods (8):** BLOCKED 1, PARTIAL 2, QUEUED 3, TESTED 1, UNTESTED 1. M059, M241, M409, M410, M449, M468, M469, M470
-- **Rounds:** confirmed R288, R391; partial R275, R277, R312, R313, R314, R315, R316, R317, R318, R319, R322, R323, R384, R401, R402; null none; running R278, R279, R294, R390; pending R310, R311
+- **Rounds:** confirmed R288, R391; partial R275, R277, R312, R313, R314, R315, R316, R317, R318, R319, R322, R323, R384, R401, R402; null none; running R278, R279, R294, R390, R404; pending R310, R311
 - **Reading:** The only family confirmed on data nobody had read (R288, R391), and it is small: R391 earns +2.5%/yr on book capital. No forward lane has decided yet. The audit found artifacts in both directions: H1 hides dYdX, F4/F5 inflate R278.
 - **Gaps:** Venue-neutral engine; dYdX long tail (H1); measured thin-coin costs (R401/R402 priced 2 of 28 contracts); collateral yield on top; capacity per coin.
 - **Next:** M468 engine, then M469 re-test at measured costs; M470 dead-leg split of R278-R390.

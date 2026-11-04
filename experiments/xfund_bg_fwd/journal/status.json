@@ -1,11 +1,11 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-03T09:33:08.569488+00:00",
+ "updated": "2026-11-04T19:53:47.013845+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.002
+  "gate": 1.019
  },
  "data": {
   "binance": {
@@ -22,7 +22,7 @@
   "gate": {
    "files": 860,
    "failed": 0,
-   "changed_on_overlap": 17,
+   "changed_on_overlap": 0,
    "failed_some": []
   }
  },
@@ -112,18 +112,6 @@
     "spread_in": 0.4559
    },
    {
-    "coin": "CSOPSKHYNIX2LUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.4572
-   },
-   {
-    "coin": "ERAUSDT",
-    "long": "binance",
-    "short": "gate",
-    "spread_in": 0.448
-   },
-   {
     "coin": "BULLAUSDT",
     "long": "gate",
     "short": "binance",
@@ -152,6 +140,18 @@
     "long": "binance",
     "short": "gate",
     "spread_in": 0.3789
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "gate",
+    "short": "binance",
+    "spread_in": 0.6032
+   },
+   {
+    "coin": "RPLUSDT",
+    "long": "gate",
+    "short": "binance",
+    "spread_in": 0.412
    }
   ],
   "scored_days": 0,
@@ -162,8 +162,8 @@
   "total_close": 0.0,
   "nw_t": null,
   "max_drawdown": 0.0,
-  "replay_days": 73,
-  "replay_total": 0.013569191599999999
+  "replay_days": 74,
+  "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-03"
+ "last_day": "2026-11-04"
 }
