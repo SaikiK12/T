@@ -39,8 +39,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (163)
+## Other registered rounds (done, registered or planned) (164)
 
+- **[locked_carry_mechanics_v1](locked_carry_mechanics_v1/)** R407, DONE DATA_PASS, 0 trials. Exact fee-aware inverse carry sizing and grid-exit cash mechanics on invented inputs ([PREREG](locked_carry_mechanics_v1/PREREG.md), [FINDINGS](locked_carry_mechanics_v1/FINDINGS.md))
 - **[lockcarry_fwd](lockcarry_fwd/)** R405, ABANDONED NULL, 0 trials. R335's locked cash-and-carry forward on paper on Deribit BTC/ETH: executable locked yield vs the T-bill hourly, books H0 (shortest beating the T-bill) and H3 (best beating it by 3%/yr), settled at the published delivery price ([PREREG](lockcarry_fwd/PREREG.md), [journal](lockcarry_fwd/journal/))
 - **[metrics_archive_qualification_v1](metrics_archive_qualification_v1/)** R403, DONE DATA_PASS, 0 trials. Two official BTCUSDT metrics archive identities, schemas and raw time labels; no strategy test ([PREREG](metrics_archive_qualification_v1/PREREG.md), [FINDINGS](metrics_archive_qualification_v1/FINDINGS.md))
 - **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** R402, DONE PARTIAL, 0 trials. Targeted public carry contract and lot-matched depth qualification; no strategy test ([PREREG](carry_targeted_costs_v1/PREREG.md), [FINDINGS](carry_targeted_costs_v1/FINDINGS.md))

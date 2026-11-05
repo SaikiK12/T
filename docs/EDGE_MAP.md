@@ -113,7 +113,7 @@ Rounds are counted in every family whose methods link them (the R185 atlas, for 
 - **Binding constraint:** Funding level is regime-bound; spot and perp fees on both legs.
 - **Fake-edge checks:** Funding-interval changes; spot borrow availability; survivorship of coins with spot markets.
 - **Methods (3):** BLOCKED 1, PARTIAL 1, TESTED 1. M047, M134, M244
-- **Rounds:** confirmed R185, R190, R191; partial R324, R325, R326, R327, R328; null R405; running R220, R406; data_pass R335
+- **Rounds:** confirmed R185, R190, R191; partial R324, R325, R326, R327, R328; null R405; running R220, R406; data_pass R335, R407
 - **Reading:** Real but regime-bound: R190/R191 earned about +35% in 2021, ~0 in 2022-23, +8% in 2024 and about 1%/yr since. Dated cash-and-carry rounds R324-R328 are PARTIAL.
 - **Gaps:** Regime trigger for when the premium comes back; dated futures on more venues.
 - **Next:** No new test; keep a regime monitor and combine with P1 capital.
@@ -480,7 +480,7 @@ Rounds are counted in every family whose methods link them (the R185 atlas, for 
 
 ## Not yet placed
 
-- **Methods:** none
+- **Methods:** M476
 - **Rounds:** none
 
 Place a new method by adding a row to `registry/edge_map_links.csv`, then regenerate.
