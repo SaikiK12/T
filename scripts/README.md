@@ -68,7 +68,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (26)
+## Forward: paper lanes and the loops that run them (28)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -77,6 +77,8 @@ line is the first line of the script's own docstring.
 - [`forward_delayed.py`](forward_delayed.py): flow72_fwd3 (R214): R200's forward books with each slice entered one bar after its signal bar, as set out in experiments/flow72_fwd3/PREREG.md.
 - [`forward_delist.py`](forward_delist.py): R268 delist_fwd: the spot delisting-notice short, forward on MEXC paper (experiments/delist_fwd/PREREG.md).
 - [`forward_lag.py`](forward_lag.py): Processing lag of the forward lanes: how long after each hour's bar closed R200 computed its signal, and which on-time days were scored from hours computed late (a backfill after the container or ...
+- [`forward_lockcarry.py`](forward_lockcarry.py): lockcarry_fwd (R405): R335's locked cash-and-carry, forward on paper on Deribit, as set out in experiments/lockcarry_fwd/PREREG.md.
+- [`forward_lockcarry2.py`](forward_lockcarry2.py): lockcarry_fwd2 (R406): R335's locked cash-and-carry, forward on paper on Deribit, as set out in experiments/lockcarry_fwd2/PREREG.md.
 - [`forward_loop.sh`](forward_loop.sh): Optional scheduler: the full tick at minute 15 of every hour, and R200 alone at minute 45.
 - [`forward_mexc.py`](forward_mexc.py): mexc_fwd (R215): R200's forward signals traded one bar late on MEXC hourly closes and MEXC funding, as set out in experiments/mexc_fwd/PREREG.md.
 - [`forward_mexc_sq.py`](forward_mexc_sq.py): mexc_fwd_sq (R218): the agreement-squared flow book on MEXC prices and funding, one bar late, as set out in experiments/mexc_fwd_sq/PREREG.md.
@@ -288,7 +290,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (76)
+## Tools and everything else (77)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -320,6 +322,7 @@ line is the first line of the script's own docstring.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`inspect_funding_schema.py`](inspect_funding_schema.py): Inspect one funding ZIP header or Parquet schema; never decode observation rows.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
+- [`lockcarry_rule.py`](lockcarry_rule.py): lockcarry_fwd (R405) rule: the locked cash-and-carry of R335 priced on Deribit's live books.
 - [`m090_event_rule.py`](m090_event_rule.py): Causal ticket construction for the proposed M090 forecast comparison.
 - [`m090_history_rule.py`](m090_history_rule.py): Strict single-page MEXC history parsing; preserves exact settlement times.
 - [`m322_account_rule.py`](m322_account_rule.py): Synthetic-safe cash and inventory primitives for a proposed M322 paper book.

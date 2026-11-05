@@ -60,7 +60,7 @@ The map is refined one family at a time, cheapest informative test first, each a
 | Id | Family | Group | Methods (open) | Confirmed | Partial | Null | Running |
 |---|---|---|---|---|---|---|---|
 | P1 | Cross-venue funding carry | Risk premia | 8 (5) | 2 | 15 | 0 | 5 |
-| P2 | Spot-perp carry and dated basis | Risk premia | 3 (1) | 3 | 5 | 0 | 1 |
+| P2 | Spot-perp carry and dated basis | Risk premia | 3 (1) | 3 | 5 | 1 | 2 |
 | P3 | Funding and basis as signals | Risk premia | 8 (1) | 0 | 2 | 5 | 0 |
 | P4 | Liquidity provision and market making | Risk premia | 14 (10) | 0 | 1 | 3 | 1 |
 | P5 | Volatility and tail premia | Risk premia | 12 (4) | 0 | 0 | 5 | 0 |
@@ -113,7 +113,7 @@ Rounds are counted in every family whose methods link them (the R185 atlas, for 
 - **Binding constraint:** Funding level is regime-bound; spot and perp fees on both legs.
 - **Fake-edge checks:** Funding-interval changes; spot borrow availability; survivorship of coins with spot markets.
 - **Methods (3):** BLOCKED 1, PARTIAL 1, TESTED 1. M047, M134, M244
-- **Rounds:** confirmed R185, R190, R191; partial R324, R325, R326, R327, R328; null none; running R220; data_pass R335
+- **Rounds:** confirmed R185, R190, R191; partial R324, R325, R326, R327, R328; null R405; running R220, R406; data_pass R335
 - **Reading:** Real but regime-bound: R190/R191 earned about +35% in 2021, ~0 in 2022-23, +8% in 2024 and about 1%/yr since. Dated cash-and-carry rounds R324-R328 are PARTIAL.
 - **Gaps:** Regime trigger for when the premium comes back; dated futures on more venues.
 - **Next:** No new test; keep a regime monitor and combine with P1 capital.

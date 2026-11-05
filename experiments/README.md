@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (21)
+## Running or armed registered rounds (22)
 
+- **[lockcarry_fwd2](lockcarry_fwd2/)** R406, RUNNING PENDING, 2 trials. R335's locked cash-and-carry forward on paper on Deribit BTC/ETH (R405 with its FRED fetch fixed): executable locked yield vs the T-bill hourly, books H0 (shortest beating the T-bill) and H3 (best beating it by 3%/yr), settled at the published delivery price ([PREREG](lockcarry_fwd2/PREREG.md), [journal](lockcarry_fwd2/journal/))
 - **[book_costs_v1](book_costs_v1/)** R404, RUNNING PENDING, 0 trials. Taker cost from public order books on every listed dYdX, KuCoin and MEXC perp, 3-hourly to 2026-11-18; cost input for M469, no strategy test ([PREREG](book_costs_v1/PREREG.md), [journal](book_costs_v1/journal/))
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))
 - **[lighter_roll_fwd](lighter_roll_fwd/)** R389, RUNNING PENDING, 1 trial. Lighter BRENTOIL index roll steps: does the book lag the documented step? (M462, forward paper) ([PREREG](lighter_roll_fwd/PREREG.md), [FINDINGS](lighter_roll_fwd/FINDINGS.md))
@@ -38,8 +39,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (162)
+## Other registered rounds (done, registered or planned) (163)
 
+- **[lockcarry_fwd](lockcarry_fwd/)** R405, ABANDONED NULL, 0 trials. R335's locked cash-and-carry forward on paper on Deribit BTC/ETH: executable locked yield vs the T-bill hourly, books H0 (shortest beating the T-bill) and H3 (best beating it by 3%/yr), settled at the published delivery price ([PREREG](lockcarry_fwd/PREREG.md), [journal](lockcarry_fwd/journal/))
 - **[metrics_archive_qualification_v1](metrics_archive_qualification_v1/)** R403, DONE DATA_PASS, 0 trials. Two official BTCUSDT metrics archive identities, schemas and raw time labels; no strategy test ([PREREG](metrics_archive_qualification_v1/PREREG.md), [FINDINGS](metrics_archive_qualification_v1/FINDINGS.md))
 - **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** R402, DONE PARTIAL, 0 trials. Targeted public carry contract and lot-matched depth qualification; no strategy test ([PREREG](carry_targeted_costs_v1/PREREG.md), [FINDINGS](carry_targeted_costs_v1/FINDINGS.md))
 - **[carry_cost_qualification_v1](carry_cost_qualification_v1/)** R401, DONE PARTIAL, 0 trials. Current carry source qualification on the published R391 cohort; no strategy test ([PREREG](carry_cost_qualification_v1/PREREG.md), [FINDINGS](carry_cost_qualification_v1/FINDINGS.md))
