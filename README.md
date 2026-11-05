@@ -153,6 +153,10 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - Capital-level carry/spot comparison: [R309 findings](experiments/capital_mix_v1/FINDINGS.md), with fixed
   initial allocations, parent/passive/cash controls and all three cost tiers. Historical model evidence;
   `lab.capital` combines accounts with explicit capital denominators.
+- Inverse carry mechanics: [R407 findings](experiments/locked_carry_mechanics_v1/FINDINGS.md)
+  and [`locked_carry`](lab/locked_carry.py) size fixed orders after fees, model
+  grid exits and retain unsold coin. Conditional cash bounds require explicit
+  exit assumptions; the invented-input audit establishes no market edge.
 
 **Audits and reviews**
 
