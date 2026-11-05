@@ -77,6 +77,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_account`](paper_account.py): One append-only simulated linear-futures account, separated by venue/asset.
 - [`paper_admission`](paper_admission.py): Conservative projection of legacy reports, without rewriting their journals.
 - [`paper_controls`](paper_controls.py): Persistent paper-only entry/data/loss/concentration controls.
+- [`paper_entry_risk`](paper_entry_risk.py): Explicit loss-at-size scenarios for new linear-futures paper consumers.
 - [`paper_session`](paper_session.py): Single-writer paper admission and explicit-receipt bridge for new consumers.
 - [`paper_solvency`](paper_solvency.py): Current-capital veto around frozen paper risk controls; no real activation.
 - [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
