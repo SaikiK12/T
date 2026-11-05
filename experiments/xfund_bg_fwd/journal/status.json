@@ -1,11 +1,11 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-04T19:53:47.013845+00:00",
+ "updated": "2026-11-05T15:57:11.128189+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.019
+  "gate": 0.988
  },
  "data": {
   "binance": {
@@ -118,12 +118,6 @@
     "spread_in": 0.692
    },
    {
-    "coin": "CSOPSAMSUNG2LUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.4948
-   },
-   {
     "coin": "BWETUSDT",
     "long": "gate",
     "short": "binance",
@@ -152,18 +146,24 @@
     "long": "gate",
     "short": "binance",
     "spread_in": 0.412
+   },
+   {
+    "coin": "ESPORTSUSDT",
+    "long": "gate",
+    "short": "binance",
+    "spread_in": 0.3809
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
+  "scored_days": 1,
+  "late_days": 1,
+  "total": -0.0005245701,
+  "total_2x": -0.0012245701,
+  "total_3x": -0.0019245701,
+  "total_close": 3.54299e-05,
   "nw_t": null,
-  "max_drawdown": 0.0,
+  "max_drawdown": -0.0005245701,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-04"
+ "last_day": "2026-11-05"
 }

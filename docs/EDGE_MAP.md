@@ -480,7 +480,7 @@ Rounds are counted in every family whose methods link them (the R185 atlas, for 
 
 ## Not yet placed
 
-- **Methods:** none
+- **Methods:** M476
 - **Rounds:** none
 
 Place a new method by adding a row to `registry/edge_map_links.csv`, then regenerate.

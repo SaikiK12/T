@@ -3,9 +3,9 @@
  "state": "INCONCLUSIVE",
  "text": "no type has 8 valid events and 6 lag-filtered trades yet",
  "valid": {
-  "ng": 1
+  "ng": 2
  },
- "processed": 2,
+ "processed": 3,
  "invalid": 1,
  "decisions": [
   {
@@ -13,8 +13,8 @@
    "follower": "lighter",
    "lag_s": 1.0,
    "lag_filter": true,
-   "valid_events": 1,
-   "ok_quotes": 1,
+   "valid_events": 2,
+   "ok_quotes": 2,
    "n": 0,
    "mean": null,
    "sd": null,
