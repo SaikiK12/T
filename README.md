@@ -144,6 +144,11 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - New paper consumers can combine the frozen risk engine with the external
   [`PaperSolvencyGuard`](lab/paper_solvency.py); the read-only
   [`snapshot capacity check`](scripts/check_paper_solvency.py) never admits entries by itself.
+- For loss at the proposed size, [`PaperSession`](lab/paper_session.py) accepts a
+  persistent [`EntryLossPolicy`](lab/paper_entry_risk.py), exact-size price/fee/funding
+  scenarios and native loss/drawdown headroom. See the [scope and formulas](docs/PAPER_REFINEMENT.md#7-loss-at-the-proposed-size-engineering-2026-11-05)
+  and [invented demo](scripts/demo_paper_entry_risk.py). These are paper vetoes,
+  not profitable-strategy or real-order approval.
 - Capital: [`CAPITAL_GATE_REVIEW.md`](docs/CAPITAL_GATE_REVIEW.md), [`PROP_FIRMS.md`](docs/PROP_FIRMS.md).
 - Capital-level carry/spot comparison: [R309 findings](experiments/capital_mix_v1/FINDINGS.md), with fixed
   initial allocations, parent/passive/cash controls and all three cost tiers. Historical model evidence;

@@ -15,6 +15,7 @@ from pathlib import Path
 from lab.paper_account import PaperAccount, PaperEvent, number, text, _precision
 from lab.paper_controls import PaperRisk, RiskPolicy, entry_threshold
 from lab.paper_solvency import PaperSolvencyGuard
+from lab.paper_entry_risk import EntryLossPolicy, EntryScenario, assess_entry_loss, risk_headroom
 from lab.stream_quotes import FrameClock
 
 
@@ -67,9 +68,13 @@ class PaperSession:
     General order cancellation/retry belongs to the existing execution layer;
     this bridge cannot infer that a pending intent was cancelled or filled.
     """
-    def __init__(self, directory, initial_balances, anchor, policy, *, contract_version):
+    def __init__(self, directory, initial_balances, anchor, policy, *, contract_version,
+                 entry_loss_policy=None):
         if not isinstance(anchor, FrameClock) or not isinstance(policy, RiskPolicy):
             raise ValueError('typed common anchor and frozen risk policy required')
+        if entry_loss_policy is not None and not isinstance(entry_loss_policy, EntryLossPolicy):
+            raise ValueError('typed entry loss policy required')
+        self.entry_loss_policy = entry_loss_policy
         self.directory = Path(directory)
         self.closed = False
         self.lease = None
@@ -84,6 +89,7 @@ class PaperSession:
             self.risk = PaperRisk(self.directory / 'risk.jsonl', policy, anchor,
                                   contract_version=contract_version, initial_balances=initial_balances)
             self.guard = PaperSolvencyGuard(self.risk)
+            self._bind_loss_policy()
             self._rebuild()
         except BaseException:
             self.close()
@@ -101,6 +107,21 @@ class PaperSession:
     def _open(self):
         if self.closed:
             raise ValueError('paper session is closed')
+
+    def _bind_loss_policy(self):
+        configs = [e['payload']['policy'] for e in self.account.evidence
+                   if e['namespace'] == 'recovery'
+                   and e['payload'].get('component') == 'paper_session_loss_policy']
+        desired = None if self.entry_loss_policy is None else self.entry_loss_policy.mapping()
+        if configs:
+            if len(configs) != 1 or configs[0] != desired:
+                raise ValueError('registered entry loss policy cannot change or be omitted on reopen')
+        elif desired is not None:
+            if self.account.evidence or self.account.accepted_events:
+                raise ValueError('entry loss policy must be registered before session activity')
+            if {(v, a) for v, a, _ in self.entry_loss_policy.account_limits} != set(self.account.initial):
+                raise ValueError('loss policy must name exactly the separate funded accounts')
+            self.account.record_evidence('recovery', dict(component='paper_session_loss_policy', policy=desired))
 
     @_precision
     def _rebuild(self):
@@ -139,6 +160,7 @@ class PaperSession:
             self.filled[intent_id] += e.quantity
             if abs(self.filled[intent_id]) > abs(i.quantity_base):
                 raise ValueError('session joined quantity exceeds intent')
+        self._check_entry_fees()
 
     def _pending(self):
         return sorted(key for key, p in self.intents.items() if p['admitted'] is True
@@ -148,33 +170,41 @@ class PaperSession:
         # Use the native accepted event, whose first-seen clock is immutable.
         # A duplicate old fill must not discharge a later model reservation,
         # even when its caller supplies a fresh delivery clock.
+        decision = declaration['asof_mono_ns']
+        decision_utc = self.account.anchor.utc_ns + decision - self.account.anchor.mono_ns
         return (self.event_indices[event.event_id] >= declaration['accepted_events_before_intent']
-                and event.clock.mono_ns >= declaration['clock']['mono_ns']
-                and event.occurred_ns >= declaration['clock']['utc_ns'])
+                and event.clock.mono_ns >= decision
+                and event.occurred_ns >= decision_utc)
 
     def status(self, asof, marks=()):
         self._open()
         snapshot = self.account.snapshot(asof, marks)
+        self._bind_loss_policy()
         self._rebuild()
         return {**FLAGS, 'model_new_entries_allowed': False, 'snapshot': snapshot,
                 'pending_intents': self._pending(), 'issues': sorted(self.issues),
                 'scope': 'explicit receipts only; admission is not a fill or executable market evidence'}
 
-    def _save_intent(self, intent, asof, clock, reasons, threshold=None, risk=None):
+    def _save_intent(self, intent, asof, clock, reasons, threshold=None, risk=None,
+                     loss_assessment=None, loss_scenarios=()):
         admitted = not reasons
         result = {**FLAGS, 'state': 'INTENT_ADMITTED' if admitted else 'ENTRY_BLOCKED',
                   'intent_id': intent.intent_id, 'intent_admitted': admitted,
                   'model_new_entries_allowed': admitted, 'receipt_required': admitted,
-                  'reasons': sorted(set(reasons)), 'threshold': threshold, 'risk': risk}
+                  'reasons': sorted(set(reasons)), 'threshold': threshold, 'risk': risk,
+                  'loss_assessment': loss_assessment,
+                  'loss_at_size_required': self.entry_loss_policy is not None}
         self.account.record_evidence('recovery', {'component': 'paper_session_entry', 'intent': intent.mapping(),
             'admitted': admitted, 'asof_mono_ns': asof, 'clock': asdict(clock), 'report': result,
-            'accepted_events_before_intent': len(self.account.accepted_events)})
+            'accepted_events_before_intent': len(self.account.accepted_events),
+            'loss_scenarios': [s.mapping() for s in loss_scenarios]})
         self._rebuild()
         return result
 
     @_precision
     def propose_entry(self, intent, *, asof, clock, marks=(), complete, session_open,
-                      fee_inputs_known, expected_contract_version, mode='historical', cost_multiple=1):
+                      fee_inputs_known, expected_contract_version, mode='historical', cost_multiple=1,
+                      loss_scenarios=()):
         """Record one fresh conditional admission, with no financial posting.
 
         Supplied forecasts/calibration/fees are not authenticated by this API.
@@ -187,7 +217,13 @@ class PaperSession:
             raise ValueError('typed proposed entry required')
         if not isinstance(clock, FrameClock):
             raise ValueError('explicit proposed decision clock required')
+        if (not isinstance(loss_scenarios, (tuple, list)) or len(loss_scenarios) > 16
+                or any(not isinstance(s, EntryScenario) for s in loss_scenarios)):
+            raise ValueError('bounded typed loss scenarios required')
+        if loss_scenarios and self.entry_loss_policy is None:
+            raise ValueError('loss scenarios require a policy registered at session creation')
         snapshot = self.account.snapshot(asof, marks)
+        self._bind_loss_policy()
         self._rebuild()
         if intent.intent_id in self.intents:
             old = self.intents[intent.intent_id]
@@ -204,20 +240,33 @@ class PaperSession:
         if self.issues: reasons.append('session_receipt_join_requires_reconciliation')
         if self.account.positions.get((*key, intent.symbol), (Decimal(0), Decimal(0)))[0] != 0:
             reasons.append('new_entry_requires_flat_instrument')
+        account = next(a for a in snapshot['accounts'] if (a['venue'], a['asset']) == key)
+        if self.entry_loss_policy is not None and any(number(p['quantity_base']) for p in account['positions']):
+            reasons.append('loss_at_size_requires_flat_account_without_portfolio_stress')
         if reasons:
             # An already-ineligible proposal is not a new observation of risk.
             # In particular a pending admission must not accidentally turn a
             # missing interim mark into a persistent legacy data stop.
-            return self._save_intent(intent, asof, clock, reasons)
+            return self._save_intent(intent, asof, clock, reasons, loss_scenarios=loss_scenarios)
         threshold = entry_threshold(intent.expected_gross_quote, intent.round_trip_cost_quote,
             intent.error_bound_quote, asset=intent.asset, cost_multiple=cost_multiple,
             error_calibrated=intent.error_calibrated, extra_reserve_quote=intent.extra_reserve_quote)
         if threshold['model_entry_allowed'] is not True:
             reasons.append('conditional_forecast_cost_or_error_not_admissible')
-        notional = abs(intent.quantity_base) * intent.reference_price
+        # A stress with a worse entry price must reserve at that price. This is
+        # still declared model arithmetic, not a price-bound executable order.
+        reserve_price = max([intent.reference_price] +
+                            [s.entry_price for s in loss_scenarios if s.entry_price is not None])
+        notional = abs(intent.quantity_base) * reserve_price
         reserves = None
         if intent.round_trip_cost_quote is not None and intent.extra_reserve_quote is not None:
-            reserves = {key: notional + cost_multiple * (intent.round_trip_cost_quote + intent.extra_reserve_quote)}
+            cash_cost = cost_multiple * (intent.round_trip_cost_quote + intent.extra_reserve_quote)
+            for s in loss_scenarios:
+                if all(x is not None for x in (s.entry_fee_quote, s.exit_fee_quote,
+                                               s.funding_quote, s.extra_loss_quote)):
+                    cash_cost = max(cash_cost, cost_multiple * (s.entry_fee_quote + s.exit_fee_quote)
+                                    + max(Decimal(0), -s.funding_quote) + s.extra_loss_quote)
+            reserves = {key: notional + cash_cost}
         else:
             reasons.append('proposed_reserve_unknown')
         risk = self.guard.observe(snapshot, required_reserves=reserves, asof=asof, clock=clock,
@@ -225,6 +274,13 @@ class PaperSession:
             contract_version=self.risk.contract_version, expected_contract_version=expected_contract_version, mode=mode)
         if risk['model_new_entries_allowed'] is not True:
             reasons.append('current_risk_or_capital_veto')
+        loss_assessment = None
+        if self.entry_loss_policy is not None:
+            loss_assessment = assess_entry_loss(intent, loss_scenarios, self.entry_loss_policy,
+                risk_headroom(self.risk, risk['legacy_risk'], key, current_account=account),
+                cost_multiple=cost_multiple)
+            if loss_assessment['model_size_within_loss_limits'] is not True:
+                reasons.append('proposed_loss_at_size_veto')
         existing = next(a for a in risk['legacy_risk']['accounts'] if (a['venue'], a['asset']) == key)
         if existing['gross_notional'] is None:
             reasons.append('projected_gross_exposure_unknown')
@@ -235,12 +291,31 @@ class PaperSession:
             gross = number(existing['symbol_gross'].get(intent.symbol, '0')) + notional
             if gross > base * self.risk.policy.max_symbol_gross_fraction:
                 reasons.append('proposed_symbol_gross_limit')
-        return self._save_intent(intent, asof, clock, reasons, threshold, risk)
+        return self._save_intent(intent, asof, clock, reasons, threshold, risk,
+                                 loss_assessment, loss_scenarios)
 
     def _issue(self, issue):
         if issue not in self.issues:
             self.account.record_evidence('recovery', {'component': 'paper_session_issue', 'issue': issue})
             self.issues.add(issue)
+
+    def _check_entry_fees(self):
+        resolutions = {e.resolves: e.amount for e in self.account.accepted_events if e.kind == 'fee_resolution'}
+        accepted = {e.event_id: e for e in self.account.accepted_events}
+        for intent_id, p in self.intents.items():
+            loss = p['report'].get('loss_assessment')
+            if not loss or loss.get('entry_fee_budget_quote') is None:
+                continue
+            fees = Decimal(0)
+            for event_id, joined_intent in self.joins.items():
+                if joined_intent != intent_id:
+                    continue
+                e = accepted[event_id]
+                fee = e.fee if e.fee is not None else resolutions.get(event_id)
+                if fee is not None:
+                    fees += fee
+            if fees > number(loss['entry_fee_budget_quote']):
+                self._issue(intent_id + ':entry_fees_exceed_declared_budget')
 
     @_precision
     def record_receipt(self, event, asof, *, intent_id=None):
@@ -271,6 +346,12 @@ class PaperSession:
                         not self._receipt_after_intent(p, native)):
                     self._issue(event.event_id + ':intent_receipt_identity_or_quantity_mismatch')
                 else:
+                    loss = p['report'].get('loss_assessment')
+                    if loss is not None and not (number(loss['entry_price_floor']) <= native.price
+                                                 <= number(loss['entry_price_ceiling'])):
+                        # Keep the financial receipt; exceeding declared price
+                        # scenarios requires reconciliation, never a fake close.
+                        self._issue(event.event_id + ':fill_outside_declared_entry_prices')
                     self.account.record_evidence('recovery', {'component': 'paper_session_join',
                         'intent_id': intent_id, 'event_id': event.event_id})
                     joined = True
