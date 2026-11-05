@@ -95,3 +95,71 @@ I.i.d. normal daily returns, one-sided 5% test of Sharpe > 0, 365-day year:
 **Not verified:** the Harvey-Liu haircut formula; the minimum track record length formula (Bailey & López de Prado
 2012), quoted from memory by the subagent; the Chordia et al. figures. The group-sequential constants were
 re-derived here with `scipy` for R221's own looks.
+
+## 7. Loss at the proposed size (engineering, 2026-11-05)
+
+New linear-futures paper consumers can construct `PaperSession` with an
+[`EntryLossPolicy`](../lab/paper_entry_risk.py). This additional veto joins the
+existing forecast/cost/error threshold, capital reservation and gross exposure
+controls. It does not change historical lanes or their frozen risk engine.
+
+The policy names separate (venue, settlement asset) loss limits and the exact
+required scenario identifiers **before any session activity**. Its declaration
+is durable: reopening cannot omit it, raise its budget or replace its required
+scenario identifiers. Economic stress assumptions still need their frozen lane
+protocol; an identifier alone does not authenticate a scenario's severity.
+Every proposal supplies `EntryScenario` inputs for its exact instrument, signed
+base quantity and settlement asset. Missing scenarios, quantities, entry/exit
+prices, either fee, funding or additional loss remain unknown and block entry.
+There is no probability or win-rate multiplier.
+
+For each scenario and requested cost tier `k` in {1, 2, 3}:
+
+```
+price_pnl   = q * (exit_price - entry_price)
+terminal_pnl = price_pnl + funding
+               - k * (entry_fee + exit_fee) - extra_loss
+cash_debits  = max(0, -price_pnl) + k * (entry_fee + exit_fee)
+               + max(0, -funding) + extra_loss
+loss_budget_used = max(0, -terminal_pnl, cash_debits)
+```
+
+Requiring at least the cash debits avoids financing fees with a future favorable
+move or funding receipt. Every scenario must fit the registered incremental loss
+budget and stay strictly inside the native account's remaining loss/drawdown
+room, and cannot exhaust current cash, liquidation NAV or available capital.
+Withdrawals reduce current solvency room even when flow-adjusted trading PnL is
+unchanged. Native high-water marks are those recorded in the risk journal; a deposit
+or restart does not reset them. The proposed reserve also covers the highest
+declared entry price and the larger of intent costs or scenario fee/funding/extra
+cash debits. Price loss is separately constrained by the loss budget; this
+entry-notional reservation does not model the intratrade margin path.
+
+This mode requires the target settlement account to be flat. Concurrent positions
+need a joint portfolio stress design; independent single-entry scenarios cannot
+establish their combined downside. Other venues/assets cannot fund the account.
+Admission remains an intent, not a fill. Received fills and fees outside declared
+entry bounds are still booked, with a durable reconciliation issue blocking new
+entries. Partial-fill fees consume the full-size fee allowance cumulatively;
+later fee resolutions are checked against the same allowance.
+
+Run the finite invented example, with no market reads or orders:
+
+```sh
+.venv/bin/python scripts/demo_paper_entry_risk.py --demo
+```
+
+The example's three sizes share a declared 50% price-gap stress and are checked
+at all three fee tiers. The largest passing **evaluated** size is not a maximum
+safe size; no interpolation or extrapolation of liquidity is supported. Scenario
+selection and supplied forecasts/fees are not authenticated here. Full price
+paths, exchange margin/liquidation, actual fills, predictive evidence and the
+owner's capital decision still require their own gates. Legacy sessions without
+this policy explicitly report `loss_at_size_required: false` on new proposals;
+they do not acquire a new sizing claim.
+
+Receipt timing is separately tightened: both economic execution and first-seen
+receipt must follow the persisted decision `asof`, using its anchored UTC time.
+A stale observation clock within the receive-age allowance cannot move that
+decision backward. Predecision receipts remain accounted exposure and cannot
+discharge the later intent, including after restart.
