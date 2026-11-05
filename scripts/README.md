@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (31)
+## Fetch: download archives and public history (32)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -16,6 +16,7 @@ line is the first line of the script's own docstring.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
 - [`fetch_coinmetrics.py`](fetch_coinmetrics.py): Coin Metrics community API (free, no key): daily market caps and on-chain metrics for every asset it serves free.
 - [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
+- [`fetch_deribit_atm_windows.py`](fetch_deribit_atm_windows.py): Raw Deribit trades of the two at-the-money legs R410 (vrpexec_v1) trades each Friday: for every Friday D of 2021-01-01..2026-09-18 and BTC/ETH, the call and the put of the strike ...
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
@@ -99,7 +100,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (141)
+## Run: one lane's frozen measurement (143)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -137,6 +138,7 @@ line is the first line of the script's own docstring.
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
+- [`run_dvolvrp.py`](run_dvolvrp.py): R411 dvolvrp_v1 (M477, item 41): Deribit's 30-day implied volatility index (DVOL) against the realized volatility of the next 30 days, BTC and ETH, as set out in experiments/dvolvrp_v1/PREREG.md.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
 - [`run_equations_v2.py`](run_equations_v2.py): R311: exact R310 policy repeat after source-only Lighter page-seam recovery.
@@ -234,6 +236,7 @@ line is the first line of the script's own docstring.
 - [`run_volrisk.py`](run_volrisk.py): volrisk_v1 (R241): SVXY in VIX contango, SVXY in contango with calm VIX, and R239's VIXREV-QQQ on 2013-2026, as set out in experiments/volrisk_v1/PREREG.md.
 - [`run_vpin.py`](run_vpin.py): vpin_v1 (R291): does VPIN, the order-flow toxicity measure of Easley, López de Prado and O'Hara, forecast the realized volatility of the BTC, ETH and SOL perps beyond volume and past volatility? ...
 - [`run_vrp.py`](run_vrp.py): vrp_v1 (R209): implied minus realized volatility as a BTC/ETH timing signal, as set out in experiments/vrp_v1/PREREG.md.
+- [`run_vrpexec.py`](run_vrpexec.py): R410 vrpexec_v1 (M477): R409's weekly short straddle with a maker sale, band hedges and maker-first hedges, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`run_vrpsell.py`](run_vrpsell.py): R408 vrpsell_v1 (M477): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v1/PREREG.md.
 - [`run_vrpsell2.py`](run_vrpsell2.py): R409 vrpsell_v2 (M477; R408 with its stats call fixed): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v2/PREREG.md.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
@@ -293,7 +296,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (78)
+## Tools and everything else (79)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -371,5 +374,6 @@ line is the first line of the script's own docstring.
 - [`unlocks_daily_check.py`](unlocks_daily_check.py): R258: bounded Binance daily-bar cross-check of the fixed R265 unlock events.
 - [`unlocks_funding_bounds.py`](unlocks_funding_bounds.py): R259: fixed-cohort funding bounds and necessary isolated collateral; no fills.
 - [`usopen_rule.py`](usopen_rule.py): usopen_fwd (R371): R300's pick, forward.
+- [`vrpexec_rule.py`](vrpexec_rule.py): R410 vrpexec_v1 (M477): the execution rule for R409's weekly short straddle with three cost levers, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.
