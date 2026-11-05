@@ -99,7 +99,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (139)
+## Run: one lane's frozen measurement (141)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -234,6 +234,8 @@ line is the first line of the script's own docstring.
 - [`run_volrisk.py`](run_volrisk.py): volrisk_v1 (R241): SVXY in VIX contango, SVXY in contango with calm VIX, and R239's VIXREV-QQQ on 2013-2026, as set out in experiments/volrisk_v1/PREREG.md.
 - [`run_vpin.py`](run_vpin.py): vpin_v1 (R291): does VPIN, the order-flow toxicity measure of Easley, López de Prado and O'Hara, forecast the realized volatility of the BTC, ETH and SOL perps beyond volume and past volatility? ...
 - [`run_vrp.py`](run_vrp.py): vrp_v1 (R209): implied minus realized volatility as a BTC/ETH timing signal, as set out in experiments/vrp_v1/PREREG.md.
+- [`run_vrpsell.py`](run_vrpsell.py): R408 vrpsell_v1 (M477): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v1/PREREG.md.
+- [`run_vrpsell2.py`](run_vrpsell2.py): R409 vrpsell_v2 (M477; R408 with its stats call fixed): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v2/PREREG.md.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
