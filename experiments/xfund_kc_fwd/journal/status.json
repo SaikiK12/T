@@ -1,16 +1,16 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-11-04T09:32:53.842918+00:00",
+ "updated": "2026-11-05T15:38:58.071289+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.019,
+  "gate": 0.988,
   "kucoin": 1.0
  },
  "data": {
-  "kucoin": {
-   "files": 642,
+  "gate": {
+   "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -26,8 +26,8 @@
     "SXPUSDT"
    ]
   },
-  "gate": {
-   "files": 860,
+  "kucoin": {
+   "files": 642,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -161,13 +161,13 @@
     "spread_in": 0.4851
    }
   ],
-  "scored_days": 13,
-  "late_days": 9,
-  "total": 0.0004993819999999996,
-  "total_2x": -0.001180618,
-  "total_3x": -0.0028606180000000005,
-  "total_close": 0.0014502849,
-  "nw_t": 0.2711668200666479,
+  "scored_days": 14,
+  "late_days": 10,
+  "total": 0.0010469414999999998,
+  "total_2x": -0.0006330585,
+  "total_3x": -0.0023130585000000004,
+  "total_close": 0.0019978444,
+  "nw_t": 0.49659243005375747,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -300,16 +300,16 @@
     "spread_in": 0.6648
    }
   ],
-  "scored_days": 13,
-  "late_days": 9,
-  "total": 0.0014237834999999998,
-  "total_2x": 0.00016378349999999982,
-  "total_3x": -0.0010962165000000005,
-  "total_close": 0.0024913663999999998,
-  "nw_t": 1.251514388642393,
+  "scored_days": 14,
+  "late_days": 10,
+  "total": 0.0014236416999999998,
+  "total_2x": 0.00016364169999999982,
+  "total_3x": -0.0010963583000000005,
+  "total_close": 0.0024912245999999996,
+  "nw_t": 1.2695675303831415,
   "max_drawdown": -0.0008626846,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-11-04"
+ "last_day": "2026-11-05"
 }
