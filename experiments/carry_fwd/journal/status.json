@@ -1,37 +1,37 @@
 {
- "last_scored_hour": "2026-11-04T18:00:00+00:00",
- "days_ticketed": 34,
+ "last_scored_hour": "2026-11-05T12:00:00+00:00",
+ "days_ticketed": 35,
  "BIN": {
   "coverage": {
-   "symbols": 67,
+   "symbols": 68,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": 0.05019830314717809,
+  "market_mean_apr_now": 0.0874158685446929,
   "top_apr_now": [
    {
+    "symbol": "SOXLUSDT",
+    "apr": 0.49073641145999625,
+    "spot": false
+   },
+   {
     "symbol": "JCTUSDT",
-    "apr": 0.4183118968588436,
+    "apr": 0.4149319952011865,
     "spot": false
    },
    {
     "symbol": "AGTUSDT",
-    "apr": 0.4130826632778432,
+    "apr": 0.3787215617194306,
     "spot": false
    },
    {
-    "symbol": "SOXLUSDT",
-    "apr": 0.3739765689654936,
+    "symbol": "SNDKUSDT",
+    "apr": 0.3438263527944704,
     "spot": false
    },
    {
     "symbol": "SPCXUSDT",
-    "apr": 0.3256554298877745,
-    "spot": false
-   },
-   {
-    "symbol": "GOOGLUSDT",
-    "apr": 0.2937763324007392,
+    "apr": 0.3193311937229737,
     "spot": false
    }
   ],
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 15,
+   "days": 16,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -66,7 +66,7 @@
  },
  "MEXC": {
   "coverage": {
-   "symbols": 67,
+   "symbols": 68,
    "with_spot_pair": 42,
    "mapped": 43,
    "spot_taker_mean": 0.0005809523809523809
@@ -74,28 +74,28 @@
   "held_now": [
    {
     "symbol": "AGTUSDT",
-    "apr": 0.4112333353380867
+    "apr": 0.37972166862649226
    },
    {
     "symbol": "JCTUSDT",
-    "apr": 0.41877666635627975
+    "apr": 0.41597833296085207
    }
   ],
-  "market_mean_apr_now": -0.012136251786277596,
+  "market_mean_apr_now": 0.02744709702196281,
   "top_apr_now": [
    {
     "symbol": "JCTUSDT",
-    "apr": 0.41877666635627975,
+    "apr": 0.41597833296085207,
     "spot": true
    },
    {
     "symbol": "AGTUSDT",
-    "apr": 0.4112333353380867,
+    "apr": 0.37972166862649226,
     "spot": true
    },
    {
     "symbol": "1000PEPEUSDT",
-    "apr": 0.1424716653248955,
+    "apr": 0.13468499912050902,
     "spot": true
    },
    {
@@ -139,21 +139,21 @@
    }
   },
   "ontime": {
-   "days": 15,
-   "days_invested": 7,
-   "total": -0.0016574578755949585,
-   "total_2x": -0.0027374578634689027,
-   "total_3x": -0.003817457851343151,
-   "total_spot5": -0.0013574578755949987,
-   "total_r191_timing": -0.0009819925027527627,
-   "funding": -0.0011633000202893062,
-   "basis": 0.0005858421325681598,
+   "days": 16,
+   "days_invested": 8,
+   "total": -0.0010555995173177585,
+   "total_2x": -0.0021355995051917025,
+   "total_3x": -0.0032155994930659505,
+   "total_spot5": -0.0007555995173177987,
+   "total_r191_timing": -0.00038013414447556255,
+   "funding": -0.0010583000203953064,
+   "basis": 0.00108270049095126,
    "cost": 0.001079999987874,
-   "avg_open": 0.611111111111111,
+   "avg_open": 0.6979166666666666,
    "go_real_invested": {
-    "n": 7,
-    "mean": -0.0002367796965135655,
-    "hit": 0.5714285714285714,
+    "n": 8,
+    "mean": -0.0001319499396647198,
+    "hit": 0.625,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
