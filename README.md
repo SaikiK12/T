@@ -120,7 +120,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
   [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
   [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
-  [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md).
+  [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md),
+  [`IMPROVEMENTS_20261105.md`](docs/IMPROVEMENTS_20261105.md) (100 improvements, ten picked to start; M477-M481).
 - Owner digest of the best leads and what is left to read: [`LEADS.md`](docs/LEADS.md) (dated 2026-11-02).
 - Topic briefs: [`ALTCOIN_LEADS.md`](docs/ALTCOIN_LEADS.md), [`FOREX_AND_INDICES.md`](docs/FOREX_AND_INDICES.md),
   [`MARKET_DIRECTION_AND_REGIME.md`](docs/MARKET_DIRECTION_AND_REGIME.md),
