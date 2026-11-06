@@ -109,6 +109,7 @@ def forward_tasks(python=".venv/bin/python"):
         task("R371", "forward_usopen.py", timeout=60),   # starts the lane's 10:00 New York daemon if it is down
         task("R285", "forward_xbook.py", (),
              ("R278", "R279", "R215", "R218", "R266", "R268", "R270", "R272"), timeout=300),
+        task("R415", "forward_paperacct.py", (), ("R285",), timeout=120),   # the owner's $10k paper account over R285
         task("LAG", "forward_lag.py", ("R200", "R214", "R215", "R218", "R220", "R225"), timeout=120),
         task("PANEL", "panel.py", (), ("LAG",), timeout=120),  # A failed lane must not hide operational status.
         task("CATALOG", "catalog.py", (), ("PANEL",), timeout=60),
@@ -179,6 +180,10 @@ LANES = (
          kind="event", unit="scored days"),
     Lane("R285", "xbook_fwd", "cross-family derived book", "Multiple venues", "mixed", 180,
          "180/365 final-day sequential looks; native and gate decisions remain separate", kind="derived"),
+    Lane("R415", "paperacct_fwd", "the owner's $10k paper account: R285's carry, flow and event families at equal capital",
+         "Multiple venues", "mixed", 180,
+         "GAIN at 180/365 official days: 1x and 2x balance > $10k, NW t >= 2.24, DD >= -25%; LOSS if 1x <= $10k",
+         kind="derived"),
 )
 
 LABELS = {
@@ -230,6 +235,7 @@ LABELS.update({
     "R369": ("Prospective paper", "Lighter lag after EIA gas and crude releases (events scored from the recordings)", "eventlag_fwd"),
     "R371": ("Prospective paper", "US-open leaders: 10:00 New York relative-strength book on MEXC", "usopen_fwd"),
     "R285": ("Prospective paper", "Cross-family derived book", "xbook_fwd"),
+    "R415": ("Prospective paper", "The owner's $10,000 paper account over R285's families", "paperacct_fwd"),
     "CATALOG": ("Reporting", "Repository catalogs", "vt_fwd"),
 })
 
