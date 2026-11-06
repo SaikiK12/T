@@ -43,9 +43,10 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (24)
+## Record: point-in-time collectors (cannot be backfilled) (25)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
+- [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
 - [`record_commodity_perps.py`](record_commodity_perps.py): Best quote, trades and reference prices of the 24/7 commodity and index perps on Hyperliquid (HIP-3 `xyz` dex) and Kraken Futures, plus Binance's own TradFi perps, side by side (M443 WTI ...
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
@@ -103,7 +104,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (145)
+## Run: one lane's frozen measurement (146)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -159,6 +160,7 @@ line is the first line of the script's own docstring.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_fxindex.py`](run_fxindex.py): fxindex_v1 (R239): G10 forex momentum, dollar trend, VIX reversal, Halloween, pre-holiday and the variance risk premium, as set out in experiments/fxindex_v1/PREREG.md.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
+- [`run_gexfilter.py`](run_gexfilter.py): R416 gexfilter_v1: does the S&P 500 dealer gamma exposure (SqueezeMetrics' free daily GEX) known after the US close predict BTC and ETH volatility over the next US session, beyond VIX and the ...
 - [`run_hftlead.py`](run_hftlead.py): R367 hftlead_v1 runner, frozen in experiments/hftlead_v1/PREREG.md: does the Binance USDT or Bybit mid, when it has moved away from the Binance USDC mid, make a one-second passive quote on the ...
 - [`run_hvrev.py`](run_hvrev.py): hvrev_v1 (R380): weekly reversal at an 8-10 week lookback inside the high-volatility tercile, with and without the high-volatility / winner tilt removed.
 - [`run_ictlevels.py`](run_ictlevels.py): ictlevels_v1 (R246): round-number levels, SMT divergence against BTC and the 8 AM New York range on hourly bars of the top-50 perps, directional books, as set out in ...
