@@ -1,0 +1,10 @@
+{
+"folder": "data/squeezemetrics",
+"source": "SqueezeMetrics free daily DIX and GEX history, https://squeezemetrics.com/monitor/static/DIX.csv (public, no login)",
+"script": "curl, one GET with User-Agent lab-research/1.0, 2026-11-06 15:3x UTC",
+"recorded_utc": "2026-11-06T15:40:00Z",
+"files": {"DIX_20261106.csv": {"bytes": 223947, "rows": 3903, "first": "2011-05-02", "last": "2026-11-05",
+  "sha256": "17763aa98650afc11086245d477d8c07a429287b9316bc3197494c961b896f0e"}},
+"columns": "date, price (S&P 500 close), dix (dark index), gex (SqueezeMetrics' S&P 500 dealer gamma exposure, $ per 1% move)",
+"notes": "Methodology is SqueezeMetrics' own (their white papers); the publication time after each close is not stated. Not committed: kept locally, verified by hash."
+}

@@ -27,6 +27,7 @@ STREAMS = (
     ("mexc_ticker", "MEXC funding and ticker snapshots", "recorder, hourly tick", "data/recorders/mexc_ticker/*/*", 60),
     ("funding_board", "Funding board, six venues", "recorder, hourly tick", "data/recorders/funding_board/*/*", 60),
     ("deribit_chain", "Deribit option chains", "recorder, hourly tick", "data/recorders/deribit_chain/*/*", 60),
+    ("cboe_chain", "Cboe QQQ, SPY and SPX option chains", "recorder, before the open and after the close", "data/recorders/cboe_chain/*/*", 4320),
     ("lighter_book", "Lighter order books", "recorder, hourly tick", "data/recorders/lighter_book/*/*", 60),
     ("book_costs", "dYdX, KuCoin and MEXC order books (R404)", "recorder, 3-hour slot", "data/recorders/book_costs/*/*", 180),
     ("wallets", "Deposit and withdrawal status, five venues", "recorder, hourly tick", "data/recorders/wallets/*/*", 60),
