@@ -1,0 +1,25 @@
+{
+  "full_suite": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PYTHONFAULTHANDLER=1 /workspace/T/.venv/bin/python -m unittest discover -s tests -t .",
+    "tests": 2455,
+    "skipped": 3,
+    "seconds": "402.632",
+    "exit_code": 0,
+    "log_sha256": "0e100975b3a27ed8307b795dbcb4a06b7bb1f8fcc5786ff56a8d580f9b7f73ff"
+  },
+  "earlier_validation_attempts": [
+    "Preliminary suite superseded after synthetic adapter integration/number normalization was added; interrupted own process.",
+    "Next suite stopped without summary during managed-environment transition; no pass claimed."
+  ],
+  "economic_runs": 1,
+  "frozen_before_measurement_commit": "f599e4dc7c4f77396e364609f213e4093b5eb01f",
+  "independent_checker": {
+    "round": "R418",
+    "checker": "independent Fraction ledger, no Decimal kernel import",
+    "equalities": 16632,
+    "tolerance_usd": "1e-12",
+    "verdict": "PASS",
+    "report_sha256": "991093b57e06a9f29653ca70080bc3b97680de815a4525db623afed8da8d06dc"
+  },
+  "no_frozen_inputs_modified": true
+}
