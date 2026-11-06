@@ -50,15 +50,19 @@
   }
  },
  "decision": "pending (2 of 120 scored)",
- "updated": "2026-11-05T20:49:05Z",
- "snapshot": "2026-11-05.json.gz",
- "tickets": 4,
- "open": 2,
+ "updated": "2026-11-06T01:38:32Z",
+ "snapshot": "2026-11-06.json.gz",
+ "tickets": 7,
+ "open": 5,
  "skipped": {
   "missed": 5,
   "no_contract": 2
  },
- "new_tickets": [],
+ "new_tickets": [
+  "U20770-SEI_USDT",
+  "U20770-STRK_USDT",
+  "U20770-AGT_USDT"
+ ],
  "book_equity": 1.0051845120997154,
  "book_max_drawdown": -0.005678151598670245,
  "next_entries": [
@@ -66,6 +70,7 @@
   "2026-11-07T00:00:00Z SEI",
   "2026-11-07T00:00:00Z STRK",
   "2026-11-08T00:00:00Z CYBER",
-  "2026-11-11T00:00:00Z SOLV"
+  "2026-11-11T00:00:00Z SOLV",
+  "2026-11-13T00:00:00Z ZRO"
  ]
 }

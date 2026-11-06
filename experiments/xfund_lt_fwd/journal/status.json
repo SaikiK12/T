@@ -1,21 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-05T15:51:05.212689+00:00",
+ "updated": "2026-11-06T02:03:10.331174+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.0
+  "lighter": 1.11
  },
  "data": {
-  "lighter": {
-   "files": 195,
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "mexc": {
-   "files": 117,
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -65,22 +65,10 @@
     "spread_in": 0.1676
    },
    {
-    "coin": "STRKUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1214
-   },
-   {
     "coin": "XLMUSDT",
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1053
-   },
-   {
-    "coin": "BCHUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0949
    },
    {
     "coin": "OPUSDT",
@@ -147,18 +135,30 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0691
+   },
+   {
+    "coin": "METUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.1251
+   },
+   {
+    "coin": "PONSUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1001
    }
   ],
-  "scored_days": 13,
-  "late_days": 10,
-  "total": -0.0010950113000000002,
-  "total_2x": -0.0023050113000000006,
-  "total_3x": -0.0035150113,
-  "total_close": -0.0005124917,
-  "nw_t": -0.9878577079026788,
+  "scored_days": 14,
+  "late_days": 11,
+  "total": 0.00022799189999999974,
+  "total_2x": -0.0009820081000000006,
+  "total_3x": -0.0021920081,
+  "total_close": 0.0008105114999999999,
+  "nw_t": 0.24436479335853462,
   "max_drawdown": -0.0022982623,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-05"
+ "last_day": "2026-11-06"
 }
