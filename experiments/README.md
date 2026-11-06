@@ -39,8 +39,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (168)
+## Other registered rounds (done, registered or planned) (169)
 
+- **[boroslock_v1](boroslock_v1/)** R412, DONE DATA_PASS, 0 trials. M480 item 97: does a Boros (Pendle) funding-rate lock at the best bid deliver its locked APR? Matured BTC/ETH markets on Binance and Hyperliquid, 2025-08..2026-09; a measurement, no trade ([PREREG](boroslock_v1/PREREG.md), [FINDINGS](boroslock_v1/FINDINGS.md))
 - **[dvolvrp_v1](dvolvrp_v1/)** R411, DONE DATA_PASS, 0 trials. M477 item 41: Deribit DVOL at day start vs realized volatility of the next 30 days (Binance perp hourly), BTC/ETH 2021-03..2026-09; a measurement, no trade ([PREREG](dvolvrp_v1/PREREG.md), [FINDINGS](dvolvrp_v1/FINDINGS.md))
 - **[vrpexec_v1](vrpexec_v1/)** R410, DONE NULL, 2 trials. M477 cost levers on R409 weekly short straddle: maker sale at the ask (trade-through replay on raw Deribit leg trades), delta band 0.10/0.20, maker-first perp hedge; primary maker/band10_mk, 1x/2x/3x ([PREREG](vrpexec_v1/PREREG.md), [FINDINGS](vrpexec_v1/FINDINGS.md))
 - **[vrpsell_v2](vrpsell_v2/)** R409, DONE NULL, 2 trials. M477 crypto variance risk premium (R408 with its stats call fixed): delta-hedged short weekly ATM straddles on Deribit BTC/ETH from held hourly option flow IVs, measured half-spread, listed fees, 5 bp hedge, 1x/2x/3x ([PREREG](vrpsell_v2/PREREG.md), [FINDINGS](vrpsell_v2/FINDINGS.md))

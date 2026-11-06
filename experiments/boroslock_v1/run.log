@@ -1,0 +1,5 @@
+01:48:31 PREREG verified bbbd3b48dab9; 11 inputs match
+01:48:31 551 Boros files match docs/provenance/boros_hist.json
+01:48:32 BINANCE: LOCK_DEVIATES {"venue_events_with_settlement_ge_99pct": true, "settlements_within_1bp_ge_99pct": true, "fidelity_median_abs_le_10bp": false, "fidelity_p95_abs_le_50bp": true}
+01:48:32 HYPERLIQUID: LOCK_HOLDS {"venue_events_with_settlement_ge_99pct": true, "settlements_within_1bp_ge_99pct": true, "fidelity_median_abs_le_10bp": true, "fidelity_p95_abs_le_50bp": true}
+01:48:32 done: 3250 entries, 53616 settlements

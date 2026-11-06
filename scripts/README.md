@@ -7,10 +7,11 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (32)
+## Fetch: download archives and public history (33)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
+- [`fetch_boros_history.py`](fetch_boros_history.py): Public Boros (Pendle) funding-rate swap history for R412 boroslock_v1: the market list from the open API and, for every BTC/ETH single-venue funding market, the monthly hourly market snapshots ...
 - [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
 - [`fetch_cmelead.py`](fetch_cmelead.py): R370's data: CME Globex trades (Databento) and Binance USD-M aggregated trades around 60 EIA releases and their placebo days.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
@@ -100,7 +101,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (143)
+## Run: one lane's frozen measurement (144)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -111,6 +112,7 @@ line is the first line of the script's own docstring.
 - [`run_atlas_tape.py`](run_atlas_tape.py): R386 atlas_tape_v1: one large gate-0 screen of short-horizon conditional forward returns on the recorded tape-scale data.
 - [`run_auction.py`](run_auction.py): auction_v1 (R290): auction-market levels on 1-minute bars of the BTC, ETH and SOL perps, from real session anchors and from placebo clocks, as set out in experiments/auction_v1/PREREG.md (M305, ...
 - [`run_battery.py`](run_battery.py): Run the battery_v1 lane for one walk-forward fold, as set out in experiments/battery_v1/PREREG.md.
+- [`run_boroslock.py`](run_boroslock.py): R412 boroslock_v1 (M480, item 97): does a Boros funding-rate lock deliver the APR it locked? A historical fidelity audit of matured BTC/ETH single-venue markets on Binance and Hyperliquid, as set ...
 - [`run_brute5k.py`](run_brute5k.py): brute5k_v1 (R263): 5,472 chart strategies (76 base rules x 4 timeframes x 3 directions x 3 filters x 2 stops) on the top-20 perps, a monthly walk-forward selection of what worked over the last L ...
 - [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
 - [`run_capital_mix.py`](run_capital_mix.py): R309: fixed initial-capital carry/spot comparison; archived inputs only, no trading.

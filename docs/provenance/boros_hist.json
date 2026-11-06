@@ -1,0 +1,2884 @@
+{
+ "source": "https://api-boros.pendle.finance/apis/v1/markets (market list) and https://historical-data.boros.finance (monthly ndjson.zip)",
+ "kinds": [
+  "market-data",
+  "settlement"
+ ],
+ "fetched_utc": "2026-11-06T01:26:47Z",
+ "markets_listed": 242,
+ "markets_selected": [
+  "10-HYPERLIQUID-BTC-31OCT2025",
+  "101-BINANCE-ETHUSDT-25SEP2026",
+  "102-HYPERLIQUID-ETH-25SEP2026",
+  "107-BINANCE-BTCUSDT-29MAY2026",
+  "108-HYPERLIQUID-BTC-29MAY2026",
+  "109-HYPERLIQUID-BTC-29MAY2026",
+  "11-HYPERLIQUID-ETH-31OCT2025",
+  "110-OKX-BTCUSDT-29MAY2026",
+  "111-HYPERLIQUID-BTC-26JUN2026",
+  "112-BINANCE-ETHUSDT-29MAY2026",
+  "113-HYPERLIQUID-ETH-29MAY2026",
+  "114-OKX-ETHUSDT-29MAY2026",
+  "12-BINANCE-BTCUSDT-28NOV2025",
+  "127-LIGHTER-ETH-29MAY2026",
+  "13-BINANCE-ETHUSDT-28NOV2025",
+  "130-BINANCE-BTCUSDT-25SEP2026",
+  "135-HYPERLIQUID-BTC-26JUN2026",
+  "136-OKX-BTCUSDT-26JUN2026",
+  "137-HYPERLIQUID-BTC-25SEP2026",
+  "14-HYPERLIQUID-BTC-28NOV2025",
+  "149-LIGHTER-ETH-26JUN2026",
+  "15-HYPERLIQUID-ETH-28NOV2025",
+  "150-KUCOIN-ETHUSDT-26JUN2026",
+  "151-KUCOIN-BTCUSDT-26JUN2026",
+  "154-BINANCE-ETHUSDT-31JUL2026",
+  "155-HYPERLIQUID-ETH-31JUL2026",
+  "156-BINANCE-BTCUSDT-31JUL2026",
+  "157-HYPERLIQUID-BTC-31JUL2026",
+  "158-OKX-ETHUSDT-31JUL2026",
+  "159-KUCOIN-ETHUSDT-31JUL2026",
+  "16-HYPERLIQUID-BTC-28NOV2025",
+  "160-LIGHTER-ETH-31JUL2026",
+  "161-HYPERLIQUID-BTC-31JUL2026",
+  "162-OKX-BTCUSDT-31JUL2026",
+  "163-KUCOIN-BTCUSDT-31JUL2026",
+  "168-BINANCE-ETHUSDT-28AUG2026",
+  "169-HYPERLIQUID-ETH-28AUG2026",
+  "17-HYPERLIQUID-ETH-28NOV2025",
+  "170-BINANCE-BTCUSDT-28AUG2026",
+  "171-HYPERLIQUID-BTC-28AUG2026",
+  "174-KUCOIN-BTCUSDT-28AUG2026",
+  "175-KUCOIN-BTCUSDT-25SEP2026",
+  "177-OKX-BTCUSDT-28AUG2026",
+  "178-HYPERLIQUID-BTC-28AUG2026",
+  "182-KUCOIN-ETHUSDT-28AUG2026",
+  "183-OKX-ETHUSDT-28AUG2026",
+  "184-LIGHTER-ETH-28AUG2026",
+  "185-OKX-ETHUSDT-25SEP2026",
+  "186-GATE-BTCUSDT-25SEP2026",
+  "187-LIGHTER-ETH-25SEP2026",
+  "188-GATE-ETHUSDT-25SEP2026",
+  "19-HYPERLIQUID-BTC-26DEC2025",
+  "193-OKX-BTCUSDT-25SEP2026",
+  "194-HYPERLIQUID-BTC-25SEP2026",
+  "195-KUCOIN-ETHUSDT-25SEP2026",
+  "196-HYPERLIQUID-ETH-30OCT2026",
+  "197-BINANCE-ETHUSDT-30OCT2026",
+  "198-OKX-ETHUSDT-30OCT2026",
+  "199-LIGHTER-ETH-30OCT2026",
+  "2-BINANCE-BTCUSDT-26SEP2025",
+  "20-HYPERLIQUID-ETH-26DEC2025",
+  "200-GATE-ETHUSDT-30OCT2026",
+  "201-HYPERLIQUID-BTC-30OCT2026",
+  "202-BINANCE-BTCUSDT-30OCT2026",
+  "203-KUCOIN-BTCUSDT-30OCT2026",
+  "204-OKX-BTCUSDT-30OCT2026",
+  "205-GATE-BTCUSDT-30OCT2026",
+  "206-HYPERLIQUID-BTC-30OCT2026",
+  "207-KUCOIN-ETHUSDT-30OCT2026",
+  "21-HYPERLIQUID-BTC-26DEC2025",
+  "214-LIGHTER-BTC-30OCT2026",
+  "22-HYPERLIQUID-ETH-26DEC2025",
+  "23-BINANCE-BTCUSDT-27MAR2026",
+  "24-BINANCE-ETHUSDT-27MAR2026",
+  "26-OKX-BTCUSDT-30JAN2026",
+  "27-OKX-ETHUSDT-30JAN2026",
+  "28-BINANCE-BTCUSDT-30JAN2026",
+  "29-BINANCE-ETHUSDT-30JAN2026",
+  "3-BINANCE-ETHUSDT-26SEP2025",
+  "30-HYPERLIQUID-BTC-30JAN2026",
+  "31-HYPERLIQUID-ETH-30JAN2026",
+  "32-HYPERLIQUID-BTC-30JAN2026",
+  "33-HYPERLIQUID-ETH-30JAN2026",
+  "4-BINANCE-BTCUSDT-26DEC2025",
+  "40-OKX-ETHUSDT-27MAR2026",
+  "41-HYPERLIQUID-ETH-27MAR2026",
+  "44-BINANCE-ETHUSDT-27FEB2026",
+  "45-HYPERLIQUID-ETH-27FEB2026",
+  "46-OKX-ETHUSDT-27FEB2026",
+  "47-HYPERLIQUID-ETH-27FEB2026",
+  "48-BINANCE-BTCUSDT-27FEB2026",
+  "49-HYPERLIQUID-BTC-27FEB2026",
+  "5-BINANCE-ETHUSDT-26DEC2025",
+  "50-HYPERLIQUID-BTC-27FEB2026",
+  "53-GATE-BTCUSDT-27FEB2026",
+  "54-GATE-ETHUSDT-27FEB2026",
+  "6-HYPERLIQUID-BTC-31OCT2025",
+  "60-HYPERLIQUID-BTC-27MAR2026",
+  "61-HYPERLIQUID-BTC-27MAR2026",
+  "62-GATE-BTCUSDT-27MAR2026",
+  "63-GATE-ETHUSDT-27MAR2026",
+  "7-HYPERLIQUID-ETH-31OCT2025",
+  "74-HYPERLIQUID-ETH-26JUN2026",
+  "75-OKX-ETHUSDT-26JUN2026",
+  "76-BINANCE-ETHUSDT-26JUN2026",
+  "78-BINANCE-BTCUSDT-26JUN2026",
+  "8-BINANCE-BTCUSDT-31OCT2025",
+  "86-BINANCE-ETHUSDT-24APR2026",
+  "87-HYPERLIQUID-ETH-24APR2026",
+  "88-OKX-ETHUSDT-24APR2026",
+  "89-BINANCE-BTCUSDT-24APR2026",
+  "9-BINANCE-ETHUSDT-31OCT2025",
+  "90-HYPERLIQUID-BTC-24APR2026",
+  "91-HYPERLIQUID-BTC-24APR2026",
+  "92-OKX-BTCUSDT-24APR2026"
+ ],
+ "requests": 2239,
+ "not_found": 1684,
+ "file_hashes": [
+  {
+   "path": "data/boros/markets.json",
+   "sha256": "227ebefc6399acc1275903be19fd82c83cd3fb077ee6677a4fabf3cbc3207c12"
+  },
+  {
+   "path": "data/boros/hist/market-data/10-HYPERLIQUID-BTC-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "1975a3093d8937639e2080ebebb5a0765c7d8d9d1cc96ff9bb56d6c9202c3aa8",
+   "bytes": 23290
+  },
+  {
+   "path": "data/boros/hist/settlement/10-HYPERLIQUID-BTC-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "4a4b738f12930e53e05de39604375ff31a565665c2dcea551f91d1a98df50f14",
+   "bytes": 41033
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-03.ndjson.zip",
+   "sha256": "3fe5d4162d033c78e08eda23064caaf0d9e50af279be50279f9c0b7911351b9c",
+   "bytes": 633
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-04.ndjson.zip",
+   "sha256": "9335ba318799ebd60a9f62195597e9c3d676998eba1f37058db7c13d03596009",
+   "bytes": 15118
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "d9985f3aade28df5545dfec03873ded3f1678bd143c6d0e64f64b74ef3cbb8a1",
+   "bytes": 15332
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "32aef430ae744042a54288325e739ee57fe268f8e083cb8244fa8e66f9e4d6d3",
+   "bytes": 16326
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "a3f1c2fc92246cc6d487e4ef549e901294647285549e2e9b6a5014a67bf0dd6b",
+   "bytes": 15716
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "dac251bb8ea32d4969990800ed8443c284c6026cf226cbb3691dc345b67400eb",
+   "bytes": 19037
+  },
+  {
+   "path": "data/boros/hist/market-data/101-BINANCE-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "1d142f4877feda5aff9c23eacfd4be90d2a12f29c8801a5730d6ef14ebe963a3",
+   "bytes": 18025
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-03.ndjson.zip",
+   "sha256": "c4b2ac2af1e3edb9f205cf83611760fa437b0b98a43e369287768106c05ad83b",
+   "bytes": 457
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-04.ndjson.zip",
+   "sha256": "7b808db709a41ebeeda63392155fc091e0fed371c829a122cb6b47e32723d089",
+   "bytes": 5669
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "5725535bb8b8c0a2a55cca90ba98d1a37c277c2ba1db681550eae2be12617713",
+   "bytes": 5852
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "19801a7f13e1b008cb17cbb8971a20524d799ffbd3b1e252a214dbf2f5b0d1a3",
+   "bytes": 5676
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "fb1ebae8e39f93d5771372d90b8ba25d7727fd7463a64498a63d30c0370e2271",
+   "bytes": 5890
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "9807ab04e46b598c7978b79df6ad5e42b5320f2083b94e97f4d16c35f3455992",
+   "bytes": 5892
+  },
+  {
+   "path": "data/boros/hist/settlement/101-BINANCE-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "bfeee60599467dfef57e1ca64890c194d490eee0e8893bfe28089b8d8f054fe0",
+   "bytes": 4726
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-03.ndjson.zip",
+   "sha256": "c9fb97c78f968f051ca090d95330a7d0818e5dc6d5c6158be6164e36e92c6aec",
+   "bytes": 773
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-04.ndjson.zip",
+   "sha256": "a77bcdc86da8e58eb5452d40f627fe444c59e932cb334bbf8f282fd144d771ff",
+   "bytes": 22325
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "73f99d4239ba4e275c356c797faf469a630eaa37d38800b247f01da6bfeeb1c1",
+   "bytes": 17667
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "a3e09df501e51884d96361a00adae821e9f9a7ba00a4256f62999cce9f008843",
+   "bytes": 19281
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "bb82d1d57bf944946de16ff17927ea19388bd81e66b2057dbc89ef0a3ba12fec",
+   "bytes": 14837
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "406f62315da9f928e01ab32b40b46012ea080967d431ab3f9c2fa3d008aa136e",
+   "bytes": 22107
+  },
+  {
+   "path": "data/boros/hist/market-data/102-HYPERLIQUID-ETH-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "4165449051ca42ee2407d8952a8ff4a41ab97710235bab04bdfdf9103e5e30c2",
+   "bytes": 19780
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-03.ndjson.zip",
+   "sha256": "b8dad248de60da24222f237435e22dfb78131978f9acffa513cb2988acf0c0c0",
+   "bytes": 1281
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-04.ndjson.zip",
+   "sha256": "57f3bf19e32f137171ea37f5ca3ec06f23cda9cd025924028cd6a0464b5bf9db",
+   "bytes": 43013
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "82cf587d011196c6a128daa1a5033e270bc960a6dbe3af41eff49967336729aa",
+   "bytes": 42714
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "08fb9d7d420dc62b9595b62ed9ae2617d1cb76576272aaf3b6d74585060452d2",
+   "bytes": 41895
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "4123d146ee8f2d34c13e631d7e10d3d7a03265c3ff1b1f2ed7f73cbfc2928a7b",
+   "bytes": 41125
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "356b96ad325fe844bb97467d5dde1760c0839c8f6b3707b442601fac8ec3e873",
+   "bytes": 42347
+  },
+  {
+   "path": "data/boros/hist/settlement/102-HYPERLIQUID-ETH-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "bbcc9000a80b969fb6c8bd587426760706475da1d6f6b9e3883be855ce6e8b8e",
+   "bytes": 32244
+  },
+  {
+   "path": "data/boros/hist/market-data/107-BINANCE-BTCUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "6339f05aeb38da7e03f8533c3e8dfa6da791b295eaf8c96cd453247cecef3dcd",
+   "bytes": 10415
+  },
+  {
+   "path": "data/boros/hist/market-data/107-BINANCE-BTCUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "643761e38c77757ac4891e53902f24d4a81404d3c7713d96c3938c11f09b4a25",
+   "bytes": 20985
+  },
+  {
+   "path": "data/boros/hist/settlement/107-BINANCE-BTCUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "0cb1455c08552ec91c53e1d154a3998112c2329db55f851b355407a7018463ee",
+   "bytes": 3106
+  },
+  {
+   "path": "data/boros/hist/settlement/107-BINANCE-BTCUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "a281bf69cbb703f6559916f9a1676baf2783475f61811c8603cbe9f2e6782770",
+   "bytes": 5376
+  },
+  {
+   "path": "data/boros/hist/market-data/108-HYPERLIQUID-BTC-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "92274eae463e0936f2552669a19c57b6832ac2d1ed4b25c1e348c38062c56133",
+   "bytes": 16256
+  },
+  {
+   "path": "data/boros/hist/market-data/108-HYPERLIQUID-BTC-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "ed84cc7fa7b87cf60fce6a85766ed91e079e1b74f86cbeab598618f37eb45199",
+   "bytes": 31050
+  },
+  {
+   "path": "data/boros/hist/settlement/108-HYPERLIQUID-BTC-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "78621b04c5680d613a9ce1ac789d3a7a6b3d3ab9fa4447a6ee0da2e1f8b5d4e9",
+   "bytes": 22712
+  },
+  {
+   "path": "data/boros/hist/settlement/108-HYPERLIQUID-BTC-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "0fa245400be4c4df5e4cbea61819f6031d13db9645bf7b8f72e7ad820129d17e",
+   "bytes": 39821
+  },
+  {
+   "path": "data/boros/hist/market-data/109-HYPERLIQUID-BTC-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "e46f970611efa9be222ba5b266773b543cb49a9fd5c45bb610cd73a5f7c79063",
+   "bytes": 14189
+  },
+  {
+   "path": "data/boros/hist/market-data/109-HYPERLIQUID-BTC-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "fc6b226285fb25003faa3d6f58270a0008c00691228b6dc6f033459ff22eab18",
+   "bytes": 28405
+  },
+  {
+   "path": "data/boros/hist/settlement/109-HYPERLIQUID-BTC-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "0cf9d9399252cc50d7b44aa17b8a2fab1db184aeb0a2c66bb23a3a6237f2118f",
+   "bytes": 22715
+  },
+  {
+   "path": "data/boros/hist/settlement/109-HYPERLIQUID-BTC-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "47d7a45d0dd8837dd75e21eecd7859c6a73fad514faf30423c17238af069e89b",
+   "bytes": 39830
+  },
+  {
+   "path": "data/boros/hist/market-data/11-HYPERLIQUID-ETH-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "de758a185837afa3a738d1561ca9d57f4ce308ed78e7427a8a00f3debab8a25e",
+   "bytes": 24256
+  },
+  {
+   "path": "data/boros/hist/settlement/11-HYPERLIQUID-ETH-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "cd0ca9098e777b2b7680b3a780406087fe90e712326855c8db24c64d20e67899",
+   "bytes": 41158
+  },
+  {
+   "path": "data/boros/hist/market-data/110-OKX-BTCUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "38ca1bf215db39cbfcbd59a174b4532d460574fdfc737cac8ee610a949fe7dde",
+   "bytes": 8896
+  },
+  {
+   "path": "data/boros/hist/market-data/110-OKX-BTCUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "3969a296716f75fbc4a66297032be7eeafea6579bdb8759f5b9633c7d2aea1da",
+   "bytes": 17302
+  },
+  {
+   "path": "data/boros/hist/settlement/110-OKX-BTCUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "2240b2a988d66d00d987d90384b4ac928386261b65cb9ec4bcacc3add6b8687e",
+   "bytes": 3306
+  },
+  {
+   "path": "data/boros/hist/settlement/110-OKX-BTCUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "527f17b1ebe8789c79e98521babf7daaacd2eff03144e21143fa5fcf03078c91",
+   "bytes": 5726
+  },
+  {
+   "path": "data/boros/hist/market-data/111-HYPERLIQUID-BTC-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "65c0500e8d240bcd357ca87a11ed7f506a3dc923c9c48dec022f40646e30298d",
+   "bytes": 11204
+  },
+  {
+   "path": "data/boros/hist/market-data/111-HYPERLIQUID-BTC-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "0f9b3cd3340683e93265fb5e9a42dcfafb9e83c85d5763371b44fb99854803e6",
+   "bytes": 22937
+  },
+  {
+   "path": "data/boros/hist/market-data/111-HYPERLIQUID-BTC-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "8a6248b346a802ac0f801badd5045bafb5f351ba1e8b0ffc30d6497aa715099e",
+   "bytes": 26832
+  },
+  {
+   "path": "data/boros/hist/settlement/111-HYPERLIQUID-BTC-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "1dcf74fba3a36f4afca5da7e789a7a30711e0c489e4913b69e5facc5b025d4e3",
+   "bytes": 22707
+  },
+  {
+   "path": "data/boros/hist/settlement/111-HYPERLIQUID-BTC-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "45af6985f18b83226f0557f7b1492d75817d717dbcb29ed560e16c57c2660e75",
+   "bytes": 43937
+  },
+  {
+   "path": "data/boros/hist/settlement/111-HYPERLIQUID-BTC-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "faae22724b4d728df99f01f9638960240ef485f4e0e519016e0efd170efa588c",
+   "bytes": 34861
+  },
+  {
+   "path": "data/boros/hist/market-data/112-BINANCE-ETHUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "d7db786fa47a721a1fb73f84c448bc38afb1dfc67aa4203b8a77790592ea1641",
+   "bytes": 13012
+  },
+  {
+   "path": "data/boros/hist/market-data/112-BINANCE-ETHUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "9d9dd6df6e5a1274775e039811c095635c772439d1078ea1d7027a8d850cc00a",
+   "bytes": 25278
+  },
+  {
+   "path": "data/boros/hist/settlement/112-BINANCE-ETHUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "c7949e034a4b9d90aa961568b618183af1235f4261e8d803daaa1b12eb88aff4",
+   "bytes": 3092
+  },
+  {
+   "path": "data/boros/hist/settlement/112-BINANCE-ETHUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "c7e66d91768f6e0cf4b3a5eadf6b5793d4cdfcec8995e6ad1320f6bf38288f1a",
+   "bytes": 5377
+  },
+  {
+   "path": "data/boros/hist/market-data/113-HYPERLIQUID-ETH-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "57734248642d94a17ae7b5dc80db56e9d8cc11c63192533750a986a6938a16fb",
+   "bytes": 16903
+  },
+  {
+   "path": "data/boros/hist/market-data/113-HYPERLIQUID-ETH-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "269d7d0c18bec9fce42cd7f387fb8a8cfa2644e744ed39f4a4ea1dbc9acaf798",
+   "bytes": 26014
+  },
+  {
+   "path": "data/boros/hist/settlement/113-HYPERLIQUID-ETH-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "003a2c7b5879b9e87ecac1aa74db7dd655101232113619e5aaacb190a1324011",
+   "bytes": 22712
+  },
+  {
+   "path": "data/boros/hist/settlement/113-HYPERLIQUID-ETH-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "b553b4520b47d8fdbd909cea445f3a0b6ac2286c93071510981132369688c427",
+   "bytes": 38834
+  },
+  {
+   "path": "data/boros/hist/market-data/114-OKX-ETHUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "e7ee85753fd5d468ffbf60a6c217f0f4073fdbe4a3f54de089cdfad55968e095",
+   "bytes": 11921
+  },
+  {
+   "path": "data/boros/hist/market-data/114-OKX-ETHUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "4e7b4f081601ada1c701210fd102a1aacb0a1641144091be2f6794a2fc6fa7ee",
+   "bytes": 20429
+  },
+  {
+   "path": "data/boros/hist/settlement/114-OKX-ETHUSDT-29MAY2026/2026-04.ndjson.zip",
+   "sha256": "aa83bcf21e9c17b46f5349a09aa1a4cc431063126f51beda9bb66b2c21cd13c4",
+   "bytes": 3297
+  },
+  {
+   "path": "data/boros/hist/settlement/114-OKX-ETHUSDT-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "0b9c0ed4c16ccf3400a0b2e77adc7fc07d8a4d2cd6ce481a9640b8c49d54cacc",
+   "bytes": 5714
+  },
+  {
+   "path": "data/boros/hist/market-data/12-BINANCE-BTCUSDT-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "89685ab6728e6cf80db37fc53ec226d63460a889ed11e883319948f6258154d0",
+   "bytes": 8323
+  },
+  {
+   "path": "data/boros/hist/market-data/12-BINANCE-BTCUSDT-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "b5cc0870c240c3d0f8760baa8881c962470e4e22a80ba9fbfbcbf1eb65444b11",
+   "bytes": 19804
+  },
+  {
+   "path": "data/boros/hist/settlement/12-BINANCE-BTCUSDT-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "a6617a319ad86b9f51ba9bf2c40f22200f5485d6a047e983170fc60a46f0fc05",
+   "bytes": 2956
+  },
+  {
+   "path": "data/boros/hist/settlement/12-BINANCE-BTCUSDT-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "5288cbf5326d5709004dedc1d84712e935e95af9645d9d3c01d0f08173a22edd",
+   "bytes": 5221
+  },
+  {
+   "path": "data/boros/hist/market-data/127-LIGHTER-ETH-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "72d24c196c3019ecca3675094eb833b1ed83cb1f775aa251be2218efebc57039",
+   "bytes": 13536
+  },
+  {
+   "path": "data/boros/hist/settlement/127-LIGHTER-ETH-29MAY2026/2026-05.ndjson.zip",
+   "sha256": "007e6ccf5ff6026cb831ec6621e73da632ee0d7fab760aa9647dc04bf065b979",
+   "bytes": 22784
+  },
+  {
+   "path": "data/boros/hist/market-data/13-BINANCE-ETHUSDT-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "160d80051c65d2340fb6d2a7adac6781c5b446f7e07e9cf6dd4b00e1fe9bdd48",
+   "bytes": 10150
+  },
+  {
+   "path": "data/boros/hist/market-data/13-BINANCE-ETHUSDT-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "a41a7bf7f56f28d6a831851b2315cadea0516c59633cd1d366946944a528f77c",
+   "bytes": 23519
+  },
+  {
+   "path": "data/boros/hist/settlement/13-BINANCE-ETHUSDT-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "8db9c68ef97c0307212b88f0935aa824bbe8569a5e7aa081aa2bd1b246cbc238",
+   "bytes": 2937
+  },
+  {
+   "path": "data/boros/hist/settlement/13-BINANCE-ETHUSDT-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "c409d43461f2a40f73471a9706081c554f2f2dadb4d36d76d713fe67497fff2a",
+   "bytes": 5246
+  },
+  {
+   "path": "data/boros/hist/market-data/130-BINANCE-BTCUSDT-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "586ddba3dfa11eb49e560f6e122a4d37eabe21e857e7f1c4e428a6816a2c9dd3",
+   "bytes": 8918
+  },
+  {
+   "path": "data/boros/hist/market-data/130-BINANCE-BTCUSDT-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "b61e08c765da7690dfb5d8b891c0cb3fd2fdc687548a2e3f6517276fe1ba1ee7",
+   "bytes": 11814
+  },
+  {
+   "path": "data/boros/hist/market-data/130-BINANCE-BTCUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "e5e63ceaf3ef323aa1e369b678ad88c16793a586aac560ba653df306a9d5d6c0",
+   "bytes": 12061
+  },
+  {
+   "path": "data/boros/hist/market-data/130-BINANCE-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "20f9edfdbab6269780fced23f5ad976494fbab5e424283bd93df1eb613f841b5",
+   "bytes": 12795
+  },
+  {
+   "path": "data/boros/hist/market-data/130-BINANCE-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "196825c41f125ecc717e68293233b4c6db3676f7a94213b3c269d1c02770c754",
+   "bytes": 15222
+  },
+  {
+   "path": "data/boros/hist/settlement/130-BINANCE-BTCUSDT-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "ff0dc65a4885a3abfc50df3650a5eb41d30bd1b608d4d33502d77882f0b97691",
+   "bytes": 3857
+  },
+  {
+   "path": "data/boros/hist/settlement/130-BINANCE-BTCUSDT-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "7a9845378d235e161e198a7c9bb46a2bc28a03d1bfe01ba3b52e18c94c7efd68",
+   "bytes": 5652
+  },
+  {
+   "path": "data/boros/hist/settlement/130-BINANCE-BTCUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "0d2dad09c96b5bf16ff7ffba414bc34066e7c7bff375afc9df7db566391065ba",
+   "bytes": 5822
+  },
+  {
+   "path": "data/boros/hist/settlement/130-BINANCE-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "e4ef6ddde6d24d7149be23ab287308728d145bff2b97d81613a3a5ca5772c37e",
+   "bytes": 5845
+  },
+  {
+   "path": "data/boros/hist/settlement/130-BINANCE-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "c5975f3760d3f2102e49643a99d1edb2b6984deb10cef0f888b89944e09f9a67",
+   "bytes": 4678
+  },
+  {
+   "path": "data/boros/hist/market-data/135-HYPERLIQUID-BTC-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "2d67a18e9bbe872f6a3e7cdc18a540182a4e10e03ab01fe1528dc7008985b68a",
+   "bytes": 11745
+  },
+  {
+   "path": "data/boros/hist/market-data/135-HYPERLIQUID-BTC-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "911c850abceac3fa960b542367440a8449bdc65112b29244068912d9ada17975",
+   "bytes": 26772
+  },
+  {
+   "path": "data/boros/hist/settlement/135-HYPERLIQUID-BTC-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "7bc7e1d418fb6b321566b4f300ecc41e7329873437c7974de59afbb8d3c3db9c",
+   "bytes": 18207
+  },
+  {
+   "path": "data/boros/hist/settlement/135-HYPERLIQUID-BTC-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "4320656cd329c7e31f82df6843d3173c816557b9263222d67e4b806a90965f17",
+   "bytes": 34861
+  },
+  {
+   "path": "data/boros/hist/market-data/136-OKX-BTCUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "2c33f647d962b6c78773d6ca60b125b0a27996bf608035c5a0f4e44a4896ed06",
+   "bytes": 7515
+  },
+  {
+   "path": "data/boros/hist/market-data/136-OKX-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "75f2016b673494d79cbc4239470068039b7a136b680c27396dc451fc87bdfd00",
+   "bytes": 17915
+  },
+  {
+   "path": "data/boros/hist/settlement/136-OKX-BTCUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "4fd47650d467670321983060779304b6691b9630d43855b48e986e47a9ec6f5b",
+   "bytes": 2744
+  },
+  {
+   "path": "data/boros/hist/settlement/136-OKX-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "6582f487eef2ccfe9b91a1884fcb3b499aab64e64dd97c75d5d6837e72aa8b81",
+   "bytes": 5172
+  },
+  {
+   "path": "data/boros/hist/market-data/137-HYPERLIQUID-BTC-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "b7ed4c790d6ac9d663b7bc8af8d4079ec4cb97aed2922589422c00fa3673e1ff",
+   "bytes": 7050
+  },
+  {
+   "path": "data/boros/hist/market-data/137-HYPERLIQUID-BTC-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "b0a236912d7a46ea06a6c9fd132ac9e7455f75230c043e84010a08972c9f3582",
+   "bytes": 14719
+  },
+  {
+   "path": "data/boros/hist/market-data/137-HYPERLIQUID-BTC-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "d9b8664fa3a11d792955b7fbd92a648a7edaf1e86cd72897c24a87575e86977b",
+   "bytes": 12736
+  },
+  {
+   "path": "data/boros/hist/market-data/137-HYPERLIQUID-BTC-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "f48f7ba86b7e65bd71bd9b590500b0fbab3e562cb392b0b1ac1c783bc8a553db",
+   "bytes": 18489
+  },
+  {
+   "path": "data/boros/hist/market-data/137-HYPERLIQUID-BTC-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "d6c5a2bfe6d3d0fbbe62dabe4a4e3e119275ab7ecee99f51d9489deacd17c69d",
+   "bytes": 18750
+  },
+  {
+   "path": "data/boros/hist/settlement/137-HYPERLIQUID-BTC-25SEP2026/2026-05.ndjson.zip",
+   "sha256": "b396164a70543561228aa49d75e65da4499ce9ca9880a9d13b8368b2e579d123",
+   "bytes": 18204
+  },
+  {
+   "path": "data/boros/hist/settlement/137-HYPERLIQUID-BTC-25SEP2026/2026-06.ndjson.zip",
+   "sha256": "531acb5c254184f3dbe34638bd632089a5a9fc0b04d473d5896e8b5b6a3a9618",
+   "bytes": 41924
+  },
+  {
+   "path": "data/boros/hist/settlement/137-HYPERLIQUID-BTC-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "72bb753ff1a3eecb8dba3fadb7c050dca0947d52d200db04c383c21a93ecfb95",
+   "bytes": 41340
+  },
+  {
+   "path": "data/boros/hist/settlement/137-HYPERLIQUID-BTC-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "612219d7472841fd4ac7d3eb319708e427a6b9b352cbbe65fdea0c65a81000d6",
+   "bytes": 42508
+  },
+  {
+   "path": "data/boros/hist/settlement/137-HYPERLIQUID-BTC-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "c4b0ac70c3cf9f7f7377990496baa4c0ba58ff1ff9ac75ac697fdbf7b2fabe5e",
+   "bytes": 32629
+  },
+  {
+   "path": "data/boros/hist/market-data/14-HYPERLIQUID-BTC-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "2a4a6d5b1a103c36b228d7c58388aa2fc892560d1d301f02e2686c7951530f1f",
+   "bytes": 5139
+  },
+  {
+   "path": "data/boros/hist/market-data/14-HYPERLIQUID-BTC-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "87ae48efad8df6e1a7ca8498c56b81b9ac71ecc37cb2e44036b20069dad29f8b",
+   "bytes": 17407
+  },
+  {
+   "path": "data/boros/hist/settlement/14-HYPERLIQUID-BTC-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "bb683ef07be14bc7f69ac67c34b643f95737f7333ec87cd50e78ed6c3230232d",
+   "bytes": 19619
+  },
+  {
+   "path": "data/boros/hist/settlement/14-HYPERLIQUID-BTC-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "e64750d861b8cd215596b2604bab6e23666ae92d39d394a6731f778ec3816dad",
+   "bytes": 36773
+  },
+  {
+   "path": "data/boros/hist/market-data/149-LIGHTER-ETH-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "a00096993ee619d62fa7ebbbf667cf5dcde0bbfd461c49efaebb30e0a1f5825b",
+   "bytes": 20668
+  },
+  {
+   "path": "data/boros/hist/settlement/149-LIGHTER-ETH-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "ddf6b8859975ce130a597b8b9a92a854b98902a9109b4dec96ff453ef5e42f1b",
+   "bytes": 30667
+  },
+  {
+   "path": "data/boros/hist/market-data/15-HYPERLIQUID-ETH-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "f0eed1fcbf8d861bb5ad7b59653aa75e6bae00c6d598bd5409f95c75f2ffe1d4",
+   "bytes": 9507
+  },
+  {
+   "path": "data/boros/hist/market-data/15-HYPERLIQUID-ETH-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "e3c26d47c0a29e78013905c9729bd175e58e55853bd976896fc05cd3dea1df48",
+   "bytes": 22411
+  },
+  {
+   "path": "data/boros/hist/settlement/15-HYPERLIQUID-ETH-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "918be9a8c92d7a79b1ad11b260955d492c45aec2c031b9551542611ef8032173",
+   "bytes": 19847
+  },
+  {
+   "path": "data/boros/hist/settlement/15-HYPERLIQUID-ETH-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "5ad557fda686e7baf29377642a9ece156734736c2a068567c85dae4c874d5108",
+   "bytes": 37160
+  },
+  {
+   "path": "data/boros/hist/market-data/150-KUCOIN-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "bb1d11ecb70397777db726f478b2c8cd81256a71af5ed3769f3f08899c111243",
+   "bytes": 16104
+  },
+  {
+   "path": "data/boros/hist/settlement/150-KUCOIN-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "f7157591390415a33e5040ad9c70c73f785edffc5fa624e47cbd5ed1fb67376d",
+   "bytes": 4333
+  },
+  {
+   "path": "data/boros/hist/market-data/151-KUCOIN-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "de2f359dbebeb3ab30af682e4b328eff9b623d2f142e3a59772a70ce61c866a5",
+   "bytes": 10174
+  },
+  {
+   "path": "data/boros/hist/settlement/151-KUCOIN-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "a52783ef18ce3ff04f1eb4f9a661afee546de9fadabb2e1eaa8b29f07c9ef6cb",
+   "bytes": 4333
+  },
+  {
+   "path": "data/boros/hist/market-data/154-BINANCE-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "541d857bcc977bfe77cd0d0b45eb870c2e8a402675dfc1ed134be2a580a77e2f",
+   "bytes": 12667
+  },
+  {
+   "path": "data/boros/hist/market-data/154-BINANCE-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "6482dacf35818efc3e09ff6570a6c06dd3080b584edbb850f944f45febee93ac",
+   "bytes": 24231
+  },
+  {
+   "path": "data/boros/hist/settlement/154-BINANCE-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "d63093da069b90c42aea16747232dd1951469c32448d5205de33a710a7ecdc6e",
+   "bytes": 3852
+  },
+  {
+   "path": "data/boros/hist/settlement/154-BINANCE-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "a83abbbceb2c82ffba6fec05d0dbe10d43fd6f88b4b99666c4fe838387d00172",
+   "bytes": 5765
+  },
+  {
+   "path": "data/boros/hist/market-data/155-HYPERLIQUID-ETH-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "88fdac9aca095813c03435c786598d7e14c64f38421193bd02912944e00c967a",
+   "bytes": 17180
+  },
+  {
+   "path": "data/boros/hist/market-data/155-HYPERLIQUID-ETH-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "134d6f15cfdc8f47375ec05bd3ab6cebfaf5b8e62b7a0bc5ddf7f41d83c695ff",
+   "bytes": 20421
+  },
+  {
+   "path": "data/boros/hist/settlement/155-HYPERLIQUID-ETH-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "6ebaf54135bbfdd2ad53dff6c93b971393f96f7e732524233109067cfd809c61",
+   "bytes": 27747
+  },
+  {
+   "path": "data/boros/hist/settlement/155-HYPERLIQUID-ETH-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "69a6af6ebda0f2fccc1caa78cc060a89c1ad66fdd93310dd1e996d5af004e737",
+   "bytes": 39770
+  },
+  {
+   "path": "data/boros/hist/market-data/156-BINANCE-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "1803e20094985fd685d84638d31d9873475a6b828f88ca46a777a0203d249417",
+   "bytes": 13115
+  },
+  {
+   "path": "data/boros/hist/market-data/156-BINANCE-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "f5dbfd986052b2ea4c6739106074ef313a60141fd11ce7bb0721e78b7f706b82",
+   "bytes": 22865
+  },
+  {
+   "path": "data/boros/hist/settlement/156-BINANCE-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "07cdaaadab45c84aa73f88b799c237a179541851014457c7947eaa7e66399b53",
+   "bytes": 3856
+  },
+  {
+   "path": "data/boros/hist/settlement/156-BINANCE-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "1b6899f2f82de77a41d965bb58fc6a6b407322bbfb5ce6008e73d61c18dab7a5",
+   "bytes": 5705
+  },
+  {
+   "path": "data/boros/hist/market-data/157-HYPERLIQUID-BTC-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "ceba65f3c0107af0600f2223e2d48092a3a8c02eecb8168ce759d9d50377cd34",
+   "bytes": 16268
+  },
+  {
+   "path": "data/boros/hist/market-data/157-HYPERLIQUID-BTC-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "0a34c84783f14175ea19f63a66c97bee71cd6c3009f1ab93218d4c1fff53f408",
+   "bytes": 21678
+  },
+  {
+   "path": "data/boros/hist/settlement/157-HYPERLIQUID-BTC-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "13c44f3ba0562f6d7168f1d8478bad954c821f0e7d4a51479897d0493167e989",
+   "bytes": 28029
+  },
+  {
+   "path": "data/boros/hist/settlement/157-HYPERLIQUID-BTC-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "aef2675666c8b00bf960bfbe5d384ca02fb91b30a5cf8165ece9fefb9b5616b1",
+   "bytes": 40023
+  },
+  {
+   "path": "data/boros/hist/market-data/158-OKX-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "ee93c698bb44c131405f2fe2e1b483e422879ea4e9a33169153cf70cd60fdae6",
+   "bytes": 8487
+  },
+  {
+   "path": "data/boros/hist/market-data/158-OKX-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "262636250f40b0c22ede887ef58add9269d7a9dc4efeedbfc46ff2fa7702af7f",
+   "bytes": 23086
+  },
+  {
+   "path": "data/boros/hist/settlement/158-OKX-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "d340b4d94144a38f708871725b69bbbb7601a35c8edf7f3ac752ef4a55095bee",
+   "bytes": 3179
+  },
+  {
+   "path": "data/boros/hist/settlement/158-OKX-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "c6e09eac56205e100b40655b0c50bd94b8510d87796ba2c5518d13860207d4bf",
+   "bytes": 6188
+  },
+  {
+   "path": "data/boros/hist/market-data/159-KUCOIN-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "527eef8999e6ef1d41567226ce92487f9318f602942714fadf9193aa6220a760",
+   "bytes": 9660
+  },
+  {
+   "path": "data/boros/hist/market-data/159-KUCOIN-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "61e416052bfc76956d14295585a794c061451e1482bdc4dddd63f36b987a8284",
+   "bytes": 22282
+  },
+  {
+   "path": "data/boros/hist/settlement/159-KUCOIN-ETHUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "dc26a6d8af74e80affa48e9b97d46d2ba6c16604aa9023048e5cff6d01413f38",
+   "bytes": 2869
+  },
+  {
+   "path": "data/boros/hist/settlement/159-KUCOIN-ETHUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "0b215a8b981ed930ec34243874f6ea43280fbbd2fa576c61b6daef466f53b0ff",
+   "bytes": 5548
+  },
+  {
+   "path": "data/boros/hist/market-data/16-HYPERLIQUID-BTC-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "eb34b1ad90cdffe08747cb344f2d65baee453d14e5d0f075d441cfb0eb4f0ba6",
+   "bytes": 5168
+  },
+  {
+   "path": "data/boros/hist/market-data/16-HYPERLIQUID-BTC-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "a64406e7e104b61f8bb7ffb55d07a27cffc9ea60c0b9976c3e089471e9bc5cda",
+   "bytes": 20135
+  },
+  {
+   "path": "data/boros/hist/settlement/16-HYPERLIQUID-BTC-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "b8003d6bda9f4b368fa62446e6fd04216679233ba351422f5307d72808bc4752",
+   "bytes": 19661
+  },
+  {
+   "path": "data/boros/hist/settlement/16-HYPERLIQUID-BTC-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "4859934c568b524144a5868d330b1b8b93d6fed3c50c27bb681926a64f75235e",
+   "bytes": 36785
+  },
+  {
+   "path": "data/boros/hist/market-data/160-LIGHTER-ETH-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "0952fc82aad0cd4abc4802b10dda9ff67d3396e2f4b29ef910368051240db3d3",
+   "bytes": 10385
+  },
+  {
+   "path": "data/boros/hist/market-data/160-LIGHTER-ETH-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "b6a2b7949ad3c16bee569a5c747b377978111e6fc14c6c54f5313d8c4d38d2ac",
+   "bytes": 19310
+  },
+  {
+   "path": "data/boros/hist/settlement/160-LIGHTER-ETH-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "bbcda82646b21885b317977f4cfcba9ff36023215903ede5c0ff06dac0fb09a7",
+   "bytes": 20010
+  },
+  {
+   "path": "data/boros/hist/settlement/160-LIGHTER-ETH-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "93390e1fdeaccb9a5111e5ab12e3ea1b32af76ebad476cfa0cd0d693057cbf21",
+   "bytes": 39346
+  },
+  {
+   "path": "data/boros/hist/market-data/161-HYPERLIQUID-BTC-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "d6d55e8a374bcc2db395fafb8b9693dce6e1de34e0d9595381c7757656317333",
+   "bytes": 13426
+  },
+  {
+   "path": "data/boros/hist/market-data/161-HYPERLIQUID-BTC-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "607d18e342789ef859fa39b3e6b2de0c2bf6826af5d29da58349a399024c36be",
+   "bytes": 20604
+  },
+  {
+   "path": "data/boros/hist/settlement/161-HYPERLIQUID-BTC-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "fd1c3e87a4a65794581eb332a7d801b549de62f59fdb209739d44f5cafb091df",
+   "bytes": 21231
+  },
+  {
+   "path": "data/boros/hist/settlement/161-HYPERLIQUID-BTC-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "55671701cf8ec5899debc845e4d8fbe8afae1896383350eecf87ca1a77b878d7",
+   "bytes": 40023
+  },
+  {
+   "path": "data/boros/hist/market-data/162-OKX-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "042307e119aaccf631743479c75296650df9bf2b996700ac2ed03e574b95fb52",
+   "bytes": 9174
+  },
+  {
+   "path": "data/boros/hist/market-data/162-OKX-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "5381688081799d0a7ff23140358af54575868521d0660c7858b03495a799e63e",
+   "bytes": 24224
+  },
+  {
+   "path": "data/boros/hist/settlement/162-OKX-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "4c21f33b0eb1fd2d5e96f20fbac788788bf162562f5cb75ef9612afb3d2cbc1d",
+   "bytes": 3180
+  },
+  {
+   "path": "data/boros/hist/settlement/162-OKX-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "3ac169f271652c9f07b49de1cb10c5d3952394cc0fa2f57d2a6347747dec8e34",
+   "bytes": 6143
+  },
+  {
+   "path": "data/boros/hist/market-data/163-KUCOIN-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "08d1fece401c92aa69c6ee0398877624ad1eae2686dd8b4c0ed6ed2dd1593ebe",
+   "bytes": 9113
+  },
+  {
+   "path": "data/boros/hist/market-data/163-KUCOIN-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "5a0b2c0f9a8120a812f7b826a7a25be30d94a54a4bf675d8426df08cae0c37b9",
+   "bytes": 21809
+  },
+  {
+   "path": "data/boros/hist/settlement/163-KUCOIN-BTCUSDT-31JUL2026/2026-06.ndjson.zip",
+   "sha256": "a0fc688dc893d021c67e8df3a507ee03a8216397b092bc70011f5d5797346cf3",
+   "bytes": 2884
+  },
+  {
+   "path": "data/boros/hist/settlement/163-KUCOIN-BTCUSDT-31JUL2026/2026-07.ndjson.zip",
+   "sha256": "a7776a33ea8fe0c1ee9b61cac32f6ba9514ed67ba336ab57c76195cc2ab2542f",
+   "bytes": 5532
+  },
+  {
+   "path": "data/boros/hist/market-data/168-BINANCE-ETHUSDT-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "f16b10a51243f1ad1bd13cbc13c674d35fe8f9a7d9faf31fb3fd5f19340b4fad",
+   "bytes": 981
+  },
+  {
+   "path": "data/boros/hist/market-data/168-BINANCE-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "882fe7cde6d7fa73822d63dc908c485fad0620ac35795686220e617f72bf4d1d",
+   "bytes": 18219
+  },
+  {
+   "path": "data/boros/hist/market-data/168-BINANCE-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "efa9337904c7dc4dd19ca1bcd43e2ff69fd303d567c74ff1e3d0ab98904a6479",
+   "bytes": 19850
+  },
+  {
+   "path": "data/boros/hist/settlement/168-BINANCE-ETHUSDT-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "0539757bf0bf9c29a9357df480e0db414925e744feaa4675b85649f98a1654a3",
+   "bytes": 573
+  },
+  {
+   "path": "data/boros/hist/settlement/168-BINANCE-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "3208cba0bccdfa0f814814181ccef84ff766ca8bdd226d9fce334adec33c5d62",
+   "bytes": 5887
+  },
+  {
+   "path": "data/boros/hist/settlement/168-BINANCE-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "63735ece15ee1747ffb2cb0b9e6c765a0640e8c91c0b329cc9141e6495a0c3f0",
+   "bytes": 5223
+  },
+  {
+   "path": "data/boros/hist/market-data/169-HYPERLIQUID-ETH-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "4f48174490f01b9f4ed610998c6760545ec021dc65745c7e4207b3448c70be29",
+   "bytes": 1206
+  },
+  {
+   "path": "data/boros/hist/market-data/169-HYPERLIQUID-ETH-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "c19c6b6d22fa12a9e01f40ee2105ef4b9d22574d186840054f19304df5da0181",
+   "bytes": 16652
+  },
+  {
+   "path": "data/boros/hist/market-data/169-HYPERLIQUID-ETH-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "1811f5e41747e083b2a27205ab59f288ec0f951c171e617de5e116a3847b85d7",
+   "bytes": 25933
+  },
+  {
+   "path": "data/boros/hist/settlement/169-HYPERLIQUID-ETH-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "424f9e8892f4f6d71f6abc8d66f7dc1a2523c65e97967d4755496dc1d85f1c09",
+   "bytes": 2651
+  },
+  {
+   "path": "data/boros/hist/settlement/169-HYPERLIQUID-ETH-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "dae9bb99271192288c6db7bea4d9db654fc387a355c668d2cf1ccb515427b539",
+   "bytes": 41125
+  },
+  {
+   "path": "data/boros/hist/settlement/169-HYPERLIQUID-ETH-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "a8b5d8d5fdfe9b6fc6ca1ddd52edc47360e2288b00ae0c31bab2c3c4e292d208",
+   "bytes": 37210
+  },
+  {
+   "path": "data/boros/hist/market-data/17-HYPERLIQUID-ETH-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "82b68015636b4abd392e04849c0145522a379d26a1eafe960740597766693356",
+   "bytes": 9075
+  },
+  {
+   "path": "data/boros/hist/market-data/17-HYPERLIQUID-ETH-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "5d93deb1f0770ca25a4f5076d2f85841c1191ee2dfbf52e7a2291a3682e9f6cc",
+   "bytes": 23865
+  },
+  {
+   "path": "data/boros/hist/settlement/17-HYPERLIQUID-ETH-28NOV2025/2025-10.ndjson.zip",
+   "sha256": "06bfa7076ae5051f0e3e6964bd48da5af2d3b47fe0e19753b136c3b671f2da3b",
+   "bytes": 19881
+  },
+  {
+   "path": "data/boros/hist/settlement/17-HYPERLIQUID-ETH-28NOV2025/2025-11.ndjson.zip",
+   "sha256": "5add594a6f872bbb535f57b235c0a0611043eaed0529eafbe05ef4588ed6d81a",
+   "bytes": 37144
+  },
+  {
+   "path": "data/boros/hist/market-data/170-BINANCE-BTCUSDT-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "4a72628b0d6d920f7735081f451322d0013befeecf5e8e12714bd76a6c2313f2",
+   "bytes": 1008
+  },
+  {
+   "path": "data/boros/hist/market-data/170-BINANCE-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "7358eade2ed65814db5720ead9a59b842fa06a236d3eb114305f928178a06680",
+   "bytes": 14658
+  },
+  {
+   "path": "data/boros/hist/market-data/170-BINANCE-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "fc1f14f528cfc757c4994da9f37c0b14d6dcffbc05c2d09b323dcaffd45a7c42",
+   "bytes": 18308
+  },
+  {
+   "path": "data/boros/hist/settlement/170-BINANCE-BTCUSDT-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "dad61b803ae6d39378fe4b163d1a9dec9fffbc234715453c03ff94a2509ba543",
+   "bytes": 573
+  },
+  {
+   "path": "data/boros/hist/settlement/170-BINANCE-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "0bf8dd87c8834d9a111e62dde542ad9a0aa3ee502eb153e98527350b5add916e",
+   "bytes": 5828
+  },
+  {
+   "path": "data/boros/hist/settlement/170-BINANCE-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "20c4f40c2cda17a152574d91a494dbb88ca1057c3f2ff4b8da833af3cede1800",
+   "bytes": 5205
+  },
+  {
+   "path": "data/boros/hist/market-data/171-HYPERLIQUID-BTC-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "1c929541391bd7704c61eaa6f0a1b7fe8fa60ef2af3739469a6378f94caef29c",
+   "bytes": 1216
+  },
+  {
+   "path": "data/boros/hist/market-data/171-HYPERLIQUID-BTC-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "dadb8d3c92a6f78bfbecae326a41d4e56eb982a4c6d3f165da097fd27360ff48",
+   "bytes": 15444
+  },
+  {
+   "path": "data/boros/hist/market-data/171-HYPERLIQUID-BTC-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "ea66c356f0ccd84f8f5eb11ffc039bc301134f3067947f8898763313311555c1",
+   "bytes": 22460
+  },
+  {
+   "path": "data/boros/hist/settlement/171-HYPERLIQUID-BTC-28AUG2026/2026-06.ndjson.zip",
+   "sha256": "b7cfd6f08fe908341a26245dc7c14027aad0a6bfca0298daf47cd532f84e6cd6",
+   "bytes": 2622
+  },
+  {
+   "path": "data/boros/hist/settlement/171-HYPERLIQUID-BTC-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "9bff51b907d835ab0be53e3dab4cc376df31f659d7ad3f337f56326ef8106e46",
+   "bytes": 41340
+  },
+  {
+   "path": "data/boros/hist/settlement/171-HYPERLIQUID-BTC-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "b4981cca24a64374f007236890bc5bbd5bcbf1a2600e4fad4f3ec7d2c572012b",
+   "bytes": 37291
+  },
+  {
+   "path": "data/boros/hist/market-data/174-KUCOIN-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "97b6ed76447f69cec437485a62df57c59caa5e4214a96618eb9e68685c9e14ef",
+   "bytes": 9303
+  },
+  {
+   "path": "data/boros/hist/market-data/174-KUCOIN-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "12cc5668895fa0e025268d9faa5499d65d5daeba3f3bc0afa86f06ffba085117",
+   "bytes": 18724
+  },
+  {
+   "path": "data/boros/hist/settlement/174-KUCOIN-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "9be369758bf13af14738c6f201e481dccbddf061b0e543c38686c3a83178c179",
+   "bytes": 3187
+  },
+  {
+   "path": "data/boros/hist/settlement/174-KUCOIN-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "187df9b6a79c0f22f15a6b4aa4326b30262b863d2207f859d9b0821f86d32087",
+   "bytes": 4995
+  },
+  {
+   "path": "data/boros/hist/market-data/175-KUCOIN-BTCUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "ec91546833cd18a8d8f389bffa9381c5a777ec9d01fea5a3edfc4a135d42dc05",
+   "bytes": 6809
+  },
+  {
+   "path": "data/boros/hist/market-data/175-KUCOIN-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "6a82888c3d1ed719fc9e58dd30cb0727e6b20161a678b0672da51da974e54f2b",
+   "bytes": 13442
+  },
+  {
+   "path": "data/boros/hist/market-data/175-KUCOIN-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "33520779b626b3226c6388af079d44476aa3c89d241f2c9eaace8fef15e0720a",
+   "bytes": 10467
+  },
+  {
+   "path": "data/boros/hist/settlement/175-KUCOIN-BTCUSDT-25SEP2026/2026-07.ndjson.zip",
+   "sha256": "9be369758bf13af14738c6f201e481dccbddf061b0e543c38686c3a83178c179",
+   "bytes": 3187
+  },
+  {
+   "path": "data/boros/hist/settlement/175-KUCOIN-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "db2cc18dabda6608e6c3a9c83a50f32c4796d0ea5df58a01e09a8e5eff242f39",
+   "bytes": 5626
+  },
+  {
+   "path": "data/boros/hist/settlement/175-KUCOIN-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "e04cc97e77ff35b5ea6d33b0801106ec328a180331e942a53971f4231776569c",
+   "bytes": 4492
+  },
+  {
+   "path": "data/boros/hist/market-data/177-OKX-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "99edc4f87c687c7d74a0bdc1807ba64a39136f7daf4f32e12430cf25d7b4edc8",
+   "bytes": 6544
+  },
+  {
+   "path": "data/boros/hist/market-data/177-OKX-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "4a3d370c20c8a43db953c3b1cf8a3d22fbdfd6e0c86e56b08390344eb3cac76b",
+   "bytes": 17533
+  },
+  {
+   "path": "data/boros/hist/settlement/177-OKX-BTCUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "f8bbfe88ae1188e0cad9e867f15d020e405d9f689746061d4ecea557a66d627e",
+   "bytes": 2424
+  },
+  {
+   "path": "data/boros/hist/settlement/177-OKX-BTCUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "480611da836b45795716dfc2da58bc68f8c23aae88d8c4e8172c5c9ea087e463",
+   "bytes": 5421
+  },
+  {
+   "path": "data/boros/hist/market-data/178-HYPERLIQUID-BTC-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "7c73338cdbfbe49a8dc56561a658f7c256117c5a6f2584c4c0a1fac3b4c74d1b",
+   "bytes": 5436
+  },
+  {
+   "path": "data/boros/hist/market-data/178-HYPERLIQUID-BTC-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "dbbe0efd1f811077559dfc67ca136d8c400ae3f022ceee1fe7a9d503c56e906b",
+   "bytes": 16621
+  },
+  {
+   "path": "data/boros/hist/settlement/178-HYPERLIQUID-BTC-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "c9d6709434cc366e1f2ee8f18610116be40d5c1e60640edbbec06534007c4630",
+   "bytes": 15132
+  },
+  {
+   "path": "data/boros/hist/settlement/178-HYPERLIQUID-BTC-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "cba7896711e004a9afcf051c7bf5c79e0d3d3fff47d16bda4f5d8c852393616a",
+   "bytes": 37298
+  },
+  {
+   "path": "data/boros/hist/market-data/182-KUCOIN-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "87b8f04b39e2b3aa03d98a1a1c2e5cb701c2b43b73467f22680c8e03456c4155",
+   "bytes": 6388
+  },
+  {
+   "path": "data/boros/hist/market-data/182-KUCOIN-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "8073bc7f8c6254298457e3d80c6e95c5b3b28b6a098a899d5826ec389eee548f",
+   "bytes": 16942
+  },
+  {
+   "path": "data/boros/hist/settlement/182-KUCOIN-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "6a9b8e78f6c692d8baf8275c9d0b3bb63684ef2e46edb9faa4f5d0ad4279bf28",
+   "bytes": 2177
+  },
+  {
+   "path": "data/boros/hist/settlement/182-KUCOIN-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "8e8852eb6a3ffe10cc5bce1536ab55351e6034d512b5c3bd058b9035c1944e3a",
+   "bytes": 5026
+  },
+  {
+   "path": "data/boros/hist/market-data/183-OKX-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "470c4381333864728de2c94ef72ff11d5aa450faada514919318276d17129671",
+   "bytes": 6830
+  },
+  {
+   "path": "data/boros/hist/market-data/183-OKX-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "c44736e9d40e0e772748bb07681eaafabe2b5229b21867358a7af1020d20effa",
+   "bytes": 20388
+  },
+  {
+   "path": "data/boros/hist/settlement/183-OKX-ETHUSDT-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "db054710669ae6d42ef928cb873225f977eee67dec90463b83931ba20750972d",
+   "bytes": 2425
+  },
+  {
+   "path": "data/boros/hist/settlement/183-OKX-ETHUSDT-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "3e63251c1c74a3aa4cf82c9a3ffa306622dc2237ec385d6fabd7776a247009cd",
+   "bytes": 5413
+  },
+  {
+   "path": "data/boros/hist/market-data/184-LIGHTER-ETH-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "8f71e33f1a1f66497f3582926bc4bad319e3b8bcc0e09aa794c57b19632e81eb",
+   "bytes": 4887
+  },
+  {
+   "path": "data/boros/hist/market-data/184-LIGHTER-ETH-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "bf18e93b1f61dc382e6d2d81017bf117a320fc64953b6fa4666babb79512edee",
+   "bytes": 12372
+  },
+  {
+   "path": "data/boros/hist/settlement/184-LIGHTER-ETH-28AUG2026/2026-07.ndjson.zip",
+   "sha256": "811ceeb2dac1b4fa758fd1a437acad499e626b5db0e12cc0aa4b4de27dda4769",
+   "bytes": 14459
+  },
+  {
+   "path": "data/boros/hist/settlement/184-LIGHTER-ETH-28AUG2026/2026-08.ndjson.zip",
+   "sha256": "545715dc43d8db175701ae2eaf82186880a5c249ed92802344385d3905ecd76a",
+   "bytes": 35773
+  },
+  {
+   "path": "data/boros/hist/market-data/185-OKX-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "8d31c452932799eb1127165e15d5d03e0f32f5866d1357758bd0b9a64e52f71f",
+   "bytes": 15389
+  },
+  {
+   "path": "data/boros/hist/market-data/185-OKX-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "448ec2a7e1fce3c27cccab43eae79464287d6a36eca59b8029cc5ea84df761fa",
+   "bytes": 16981
+  },
+  {
+   "path": "data/boros/hist/settlement/185-OKX-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "51dab1b76dd8c965674d42379e0151307aa9e08ef1acd252a986847ea0efb620",
+   "bytes": 5318
+  },
+  {
+   "path": "data/boros/hist/settlement/185-OKX-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "dfd4ad98024f3d52db7a7bbb8931a3cee5ab4039e161fde0c8f96ee8a23ec467",
+   "bytes": 4946
+  },
+  {
+   "path": "data/boros/hist/market-data/186-GATE-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "71a084c9cc7b42336eaaaf3ba353bd96461974b0fbf80e0eacee15b85b96f640",
+   "bytes": 13162
+  },
+  {
+   "path": "data/boros/hist/market-data/186-GATE-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "e70b1d932ebb0cad0872f3f0a69b99bc66f3420a944a4aa31c068cbd51c364c0",
+   "bytes": 15979
+  },
+  {
+   "path": "data/boros/hist/settlement/186-GATE-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "161d860e8265b3a41df6548770fd3c18bba5d18e2b1e40368eed9458972cc3ea",
+   "bytes": 4962
+  },
+  {
+   "path": "data/boros/hist/settlement/186-GATE-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "9a36d8ffb8916d1575a6534e216dcbe6b142ab09dc17a3a06c2c6ec5682c0314",
+   "bytes": 4481
+  },
+  {
+   "path": "data/boros/hist/market-data/187-LIGHTER-ETH-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "b358096993b4bb687934b810027deb9ecec451e2036d6cc2c47c31bf318a1739",
+   "bytes": 10657
+  },
+  {
+   "path": "data/boros/hist/market-data/187-LIGHTER-ETH-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "cb6b7a9fe64ffc0a34af8e7d46f71c9aefbb519fd38fda746389369c97165db2",
+   "bytes": 11946
+  },
+  {
+   "path": "data/boros/hist/settlement/187-LIGHTER-ETH-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "19594f14430ef43c6da96a1909389fcf45485001b5fda81e6c4651daaf52a7c7",
+   "bytes": 35482
+  },
+  {
+   "path": "data/boros/hist/settlement/187-LIGHTER-ETH-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "9268e6028026ea45a7fae792ff28503ece8141dbbe903f562e4a83d1e9e49b34",
+   "bytes": 31825
+  },
+  {
+   "path": "data/boros/hist/market-data/188-GATE-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "15b68118763b801298c1143b83eca829c62113dd62f9ee112c299159ecbe389d",
+   "bytes": 13959
+  },
+  {
+   "path": "data/boros/hist/market-data/188-GATE-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "4c3ea88e6d4c0fe0599b105cb9b22eabfa20b04a3f615f1f598f4fef95ba62f0",
+   "bytes": 17690
+  },
+  {
+   "path": "data/boros/hist/settlement/188-GATE-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "f1edadb2a67db23dba7dc8f9e315e72f1dbf8fbb363e85b621b1e882d220c597",
+   "bytes": 4992
+  },
+  {
+   "path": "data/boros/hist/settlement/188-GATE-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "edcbde7dc7d95c4349cd11e40ebd3a5e4ca24d049f6a6c0c26dcc057914890e1",
+   "bytes": 4462
+  },
+  {
+   "path": "data/boros/hist/market-data/19-HYPERLIQUID-BTC-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "d1ae14b2225f812e866bbc73542fcf741e3bbf2aa984ae513b16b6052a346756",
+   "bytes": 7638
+  },
+  {
+   "path": "data/boros/hist/market-data/19-HYPERLIQUID-BTC-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "6623aad4910136eefa5779637e1b7eae39a16ed6330e594f5c3ae2e16673ed97",
+   "bytes": 21729
+  },
+  {
+   "path": "data/boros/hist/settlement/19-HYPERLIQUID-BTC-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "4c4faee495be021cb30506991e2557aa56e169b6a05117fbad6e03be2df2d455",
+   "bytes": 16637
+  },
+  {
+   "path": "data/boros/hist/settlement/19-HYPERLIQUID-BTC-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "dd91f07519b63a792ef8d84111f71357589284c99d6d84aa2221fe61acc2d62a",
+   "bytes": 35587
+  },
+  {
+   "path": "data/boros/hist/market-data/193-OKX-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "72cc91b4b987ef8c7e09781ebb22478b323c9ee74157d54479c46bd3dac170a1",
+   "bytes": 5975
+  },
+  {
+   "path": "data/boros/hist/market-data/193-OKX-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "7fbd46086fda666273d9d87ae78945619bc7a363668026acd48e6b10e723755d",
+   "bytes": 11409
+  },
+  {
+   "path": "data/boros/hist/settlement/193-OKX-BTCUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "29dae845dbdb95936cfde0c1fe8c12fcfb682eaacf48fee79cad430a82a3449a",
+   "bytes": 2844
+  },
+  {
+   "path": "data/boros/hist/settlement/193-OKX-BTCUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "78b399f1ddb3257ae9a6fdda81b841475eceb25f1e4f607188553f86397c16d8",
+   "bytes": 4914
+  },
+  {
+   "path": "data/boros/hist/market-data/194-HYPERLIQUID-BTC-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "da6f6d10582ba332441ffa4a0bc0edd5eef7a9b04683617703bae087e6598b1d",
+   "bytes": 7127
+  },
+  {
+   "path": "data/boros/hist/market-data/194-HYPERLIQUID-BTC-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "c8ab4f0baec8b54591beac4c445a071c8cbece2da7cb5672acb863ee905c9035",
+   "bytes": 15704
+  },
+  {
+   "path": "data/boros/hist/settlement/194-HYPERLIQUID-BTC-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "f30ca27c32349df3d1a6fdbe9c579df1ebc77bf3fc27653a57570ff36df331e4",
+   "bytes": 18815
+  },
+  {
+   "path": "data/boros/hist/settlement/194-HYPERLIQUID-BTC-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "e04b9e1dfaed2f6b808a9c66814fcf7ff271ad269016834223c056f362ca4ee9",
+   "bytes": 32634
+  },
+  {
+   "path": "data/boros/hist/market-data/195-KUCOIN-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "baff65607e675741e9deb023717905bbdd4fb2326a6db433b84c4b39ff7f8d06",
+   "bytes": 6128
+  },
+  {
+   "path": "data/boros/hist/market-data/195-KUCOIN-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "9c19254b65671220c1fd3279c05bb677efb3d87ce491d40a1f90542143c491ca",
+   "bytes": 10786
+  },
+  {
+   "path": "data/boros/hist/settlement/195-KUCOIN-ETHUSDT-25SEP2026/2026-08.ndjson.zip",
+   "sha256": "26ee985916029d54145e6db7a3f0895790733ddd63e6884b53f20e386ed86671",
+   "bytes": 2686
+  },
+  {
+   "path": "data/boros/hist/settlement/195-KUCOIN-ETHUSDT-25SEP2026/2026-09.ndjson.zip",
+   "sha256": "f9721afb68e50f32f6c37ef8e265b636eb32d778e7097cd9765c588825bcb43e",
+   "bytes": 4468
+  },
+  {
+   "path": "data/boros/hist/market-data/196-HYPERLIQUID-ETH-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "141ebcd1e7b03f732fee0fb8cbb10cc212623474e058bf0b0bb8e4e87e5024e2",
+   "bytes": 3857
+  },
+  {
+   "path": "data/boros/hist/market-data/196-HYPERLIQUID-ETH-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "a7b4d6de55bcf9daa815535ed39a95e0f49bc590d1365069104e0bd1cb8ccf63",
+   "bytes": 19504
+  },
+  {
+   "path": "data/boros/hist/market-data/196-HYPERLIQUID-ETH-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "d0e1fdb0dace9dac30bd95bb21284dd783461e7854c69d31c7493bc816e80af2",
+   "bytes": 27042
+  },
+  {
+   "path": "data/boros/hist/settlement/196-HYPERLIQUID-ETH-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "9ab28b56f8a8ae9d793c9900a389d5d7c149852818dd5b57633495c0e56044da",
+   "bytes": 9286
+  },
+  {
+   "path": "data/boros/hist/settlement/196-HYPERLIQUID-ETH-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "78a8e7f1b3e0610cd81536e6e76d12b5baaa159039ea76e5faa5feda1f62af99",
+   "bytes": 39898
+  },
+  {
+   "path": "data/boros/hist/settlement/196-HYPERLIQUID-ETH-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "05a5f28f184f9240a1eb58ed5e723f045ba1a26434127f1cc8c5ef30514a3bcf",
+   "bytes": 39789
+  },
+  {
+   "path": "data/boros/hist/market-data/197-BINANCE-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "af302f128f63a86fe510ccad4927227d50f36576f29cfccfaca08a88b4adc941",
+   "bytes": 2798
+  },
+  {
+   "path": "data/boros/hist/market-data/197-BINANCE-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "eadb6bd653a6eb8d413524e12bb4950ea6bfc00bbdc825ede33b71c048475dfd",
+   "bytes": 15720
+  },
+  {
+   "path": "data/boros/hist/market-data/197-BINANCE-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "679f723bc5e4ba08f82892b75b89021fa8ed38a10ce06b997a6d6faffa9cce4b",
+   "bytes": 26087
+  },
+  {
+   "path": "data/boros/hist/settlement/197-BINANCE-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "e0a077d32946adaa65c6c4a26080d4ae800a07d265ef8fd9f51066dfbbf3f680",
+   "bytes": 1539
+  },
+  {
+   "path": "data/boros/hist/settlement/197-BINANCE-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "a8f2abbac3c8523d28e2a79e5a812875dcb41a7385a75cb70fefbb0e38541383",
+   "bytes": 5746
+  },
+  {
+   "path": "data/boros/hist/settlement/197-BINANCE-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "4e31bd9994957173b8ff1c55c22614545bc17945c3121892608d7aaed14c5a16",
+   "bytes": 5647
+  },
+  {
+   "path": "data/boros/hist/market-data/198-OKX-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "586dfd5ca5f129bc02b6ebf8e85fb1091a130011316cefffcf09500f68a1eced",
+   "bytes": 3011
+  },
+  {
+   "path": "data/boros/hist/market-data/198-OKX-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "b0d8c0aaa707c1aae3ae6b77f4b5e426bdae0e233fc06f45bbfe483088433c28",
+   "bytes": 14026
+  },
+  {
+   "path": "data/boros/hist/market-data/198-OKX-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "2d800f39cdf811154eb1c660e610be819e21113b5d0f037e94de9b4c14623505",
+   "bytes": 15989
+  },
+  {
+   "path": "data/boros/hist/settlement/198-OKX-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "08ab3c17a018d28e1f7699ef53b2082b07903fcfd3eecfae947aeb20a3c43fcb",
+   "bytes": 1575
+  },
+  {
+   "path": "data/boros/hist/settlement/198-OKX-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "c5c9ac32a2b2adecc27a3a6fe20d3056b955b109840a0e70333134696c88a88c",
+   "bytes": 6024
+  },
+  {
+   "path": "data/boros/hist/settlement/198-OKX-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "730b49388d58d4ee780d17e7bf903c6df7dfc2905378f543618f826e2412c035",
+   "bytes": 5966
+  },
+  {
+   "path": "data/boros/hist/market-data/199-LIGHTER-ETH-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "40852f2fbcbd7314a54bb9c7146e9f21cfee2816ebb2d777168c6b3ea807b36a",
+   "bytes": 2970
+  },
+  {
+   "path": "data/boros/hist/market-data/199-LIGHTER-ETH-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "6fce8e63b4c657cff72f1d429da0e4d4efd294091b7c99d7e777087278c334d2",
+   "bytes": 12988
+  },
+  {
+   "path": "data/boros/hist/market-data/199-LIGHTER-ETH-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "11fedf47fbdbd271e1e38a99ebe6af762989dd5c86a0005be882fbd2674ced8d",
+   "bytes": 16135
+  },
+  {
+   "path": "data/boros/hist/settlement/199-LIGHTER-ETH-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "5d3b50ee0c6b5dcc386e0a800bc3c6b2ddc4b80b246c4071e569a2cb1674ea3b",
+   "bytes": 9131
+  },
+  {
+   "path": "data/boros/hist/settlement/199-LIGHTER-ETH-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "5000c55e086340656a2155ed804ba8899add6fd0332cd9b5e2c87780c13b4778",
+   "bytes": 39547
+  },
+  {
+   "path": "data/boros/hist/settlement/199-LIGHTER-ETH-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "587c59333fd2aae734ae50d541e1ac9b9135f0e847e8e0e9b161508b109fe918",
+   "bytes": 38613
+  },
+  {
+   "path": "data/boros/hist/market-data/2-BINANCE-BTCUSDT-26SEP2025/2025-08.ndjson.zip",
+   "sha256": "1572c8d537b89a90b07f3c6193a86e60672d25a6928e46c52ce64b8c69627392",
+   "bytes": 25186
+  },
+  {
+   "path": "data/boros/hist/market-data/2-BINANCE-BTCUSDT-26SEP2025/2025-09.ndjson.zip",
+   "sha256": "33983ecfa26d04c5eac36ea743d6cd67d6d57979a3a4c148e4118b2111fcac38",
+   "bytes": 20222
+  },
+  {
+   "path": "data/boros/hist/settlement/2-BINANCE-BTCUSDT-26SEP2025/2025-08.ndjson.zip",
+   "sha256": "ad94bad0024963278099bd6c4a264b4785bc87c56e0e8cabf40e38963e8342e6",
+   "bytes": 5869
+  },
+  {
+   "path": "data/boros/hist/settlement/2-BINANCE-BTCUSDT-26SEP2025/2025-09.ndjson.zip",
+   "sha256": "755b4baec38f8a466c848097ff11d89211b7e6358b5d3c4d5c7806bedda4c5e5",
+   "bytes": 4936
+  },
+  {
+   "path": "data/boros/hist/market-data/20-HYPERLIQUID-ETH-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "07fe8478c6dfe2fc35102932d593ad522fc88a58500b6dbdbb9f2a8482f9d6b7",
+   "bytes": 7794
+  },
+  {
+   "path": "data/boros/hist/market-data/20-HYPERLIQUID-ETH-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "cdf07c9e761d5d83b1ddc5cae9aa1d0f038c08e2fbe6f0490c4c1eaba39342bf",
+   "bytes": 19390
+  },
+  {
+   "path": "data/boros/hist/settlement/20-HYPERLIQUID-ETH-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "3fc66c12f40a512c67ae61937d6b7a048a6eda988a1a4100d97f44bab05d20ac",
+   "bytes": 16305
+  },
+  {
+   "path": "data/boros/hist/settlement/20-HYPERLIQUID-ETH-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "c7bb3af5dbc16020c5546a2b53b338b18e5b9a9dadb8b77b681ffd5a0e5106df",
+   "bytes": 34539
+  },
+  {
+   "path": "data/boros/hist/market-data/200-GATE-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "f2cd361edb1ef3a8915391f54664056880ccdbb3552b6e6f4347312786233016",
+   "bytes": 3594
+  },
+  {
+   "path": "data/boros/hist/market-data/200-GATE-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "0f8fa667b8a6ff3a775fc713f38554f08cb5a58bfe8fe391d907e859e9193d87",
+   "bytes": 19109
+  },
+  {
+   "path": "data/boros/hist/market-data/200-GATE-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "09e9c0da1468867dec8a85e97b4836cc1c73e412cb57600822592a7853f4167c",
+   "bytes": 24569
+  },
+  {
+   "path": "data/boros/hist/settlement/200-GATE-ETHUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "94b21d47dba16c3845311d58f9b4223bdf241582d9976b372c451871398ec634",
+   "bytes": 1485
+  },
+  {
+   "path": "data/boros/hist/settlement/200-GATE-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "7a294c9d5cecaafbeab5c2c88737dd7c438307545cb5e96b2e7e59c32602a44b",
+   "bytes": 5473
+  },
+  {
+   "path": "data/boros/hist/settlement/200-GATE-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "55452840afb697959e5efb7494cc5ec6cefc58844b063258021624aec21bfd4d",
+   "bytes": 5376
+  },
+  {
+   "path": "data/boros/hist/market-data/201-HYPERLIQUID-BTC-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "82cde10925a1d1ffba8361532f88f97d675f3ef048123e6177fdf9578ddd93a9",
+   "bytes": 3141
+  },
+  {
+   "path": "data/boros/hist/market-data/201-HYPERLIQUID-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "2961b624580db0586045435ab08857d3ec85b898da7ef026e2b802c33967e15b",
+   "bytes": 19359
+  },
+  {
+   "path": "data/boros/hist/market-data/201-HYPERLIQUID-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "992328fa58ade5f1bedd8a31ea32069dfcc50080b63496f472a3603950354c60",
+   "bytes": 23635
+  },
+  {
+   "path": "data/boros/hist/settlement/201-HYPERLIQUID-BTC-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "722456eec010ea71bfc420e69b1b879c63fcd21e62f5f7b232023458af3f83ad",
+   "bytes": 9130
+  },
+  {
+   "path": "data/boros/hist/settlement/201-HYPERLIQUID-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "6b84545ffbcce62b863526aa262d743cb938e4b329034969d66024f852055359",
+   "bytes": 40769
+  },
+  {
+   "path": "data/boros/hist/settlement/201-HYPERLIQUID-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "880f4e7d3a9b1c92c1fa3aa797355883fb7752dfc474748684091aa9abebba99",
+   "bytes": 39387
+  },
+  {
+   "path": "data/boros/hist/market-data/202-BINANCE-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "898c4385848f2ffab424523dc30cb83db7b1ae4c92db390b881f2e9dfbfbb749",
+   "bytes": 2837
+  },
+  {
+   "path": "data/boros/hist/market-data/202-BINANCE-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "7a2643b5dbda33896564f84505fd9f485b624b1eec6798fd4975cd37b4e97882",
+   "bytes": 12393
+  },
+  {
+   "path": "data/boros/hist/market-data/202-BINANCE-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "518400897b30849c4118f9e8a72becdb39ead9dd264534cb0a74e54b37475aa5",
+   "bytes": 13089
+  },
+  {
+   "path": "data/boros/hist/settlement/202-BINANCE-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "d6b6515d00e4dad5d7974f464c91fe0f32f6f7e402fdd7a60d4b242a323d9725",
+   "bytes": 1504
+  },
+  {
+   "path": "data/boros/hist/settlement/202-BINANCE-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "809401d62502c054732ce4676c1e62461cee0c0191370b899ae96fdaa9de878c",
+   "bytes": 5713
+  },
+  {
+   "path": "data/boros/hist/settlement/202-BINANCE-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "3550d7495a0610e36f007c027862ca9eedc8272fefd5680edbaab75a9e003d79",
+   "bytes": 5627
+  },
+  {
+   "path": "data/boros/hist/market-data/203-KUCOIN-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "96f95aed98d24b13a85696c94ee64603b27cc440059a1b19df84bfd854068cd3",
+   "bytes": 3110
+  },
+  {
+   "path": "data/boros/hist/market-data/203-KUCOIN-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "73297e963c830f157f1faae3a81b1e043172486f5ec03d6abb70f7685150c576",
+   "bytes": 11557
+  },
+  {
+   "path": "data/boros/hist/market-data/203-KUCOIN-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "3662292daac7c266d0c6f4c38def128b905ac1d72a4f527af57f212d90ccfd7f",
+   "bytes": 12896
+  },
+  {
+   "path": "data/boros/hist/settlement/203-KUCOIN-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "cc8169f89c530a1b747f601b04880e9d571697f5391bcfad7d06264719d704ca",
+   "bytes": 1478
+  },
+  {
+   "path": "data/boros/hist/settlement/203-KUCOIN-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "d3b637a6fe14bd4f281580ee8b3924ffc8edfcc6bd316e889cd40fe6cfdcb2b5",
+   "bytes": 5484
+  },
+  {
+   "path": "data/boros/hist/settlement/203-KUCOIN-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "505fa7d51d7d13b30f979168109ccc35df1ccc955787f4d6f8b8d1b08ef93dd4",
+   "bytes": 5314
+  },
+  {
+   "path": "data/boros/hist/market-data/204-OKX-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "ffad106f3a1949692dc1ac634f841a9cd82d5534766aa31dc934a11a388fa077",
+   "bytes": 3018
+  },
+  {
+   "path": "data/boros/hist/market-data/204-OKX-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "af0eeaddff11a091c3d0f800180158e5c1c026fc4c4df9064b8e75ba2c17cfa6",
+   "bytes": 12868
+  },
+  {
+   "path": "data/boros/hist/market-data/204-OKX-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "84b26b5f599d4ed8af7eb002a4d26f4e21da9862e29407ce3778d9c8077e63fd",
+   "bytes": 13278
+  },
+  {
+   "path": "data/boros/hist/settlement/204-OKX-BTCUSDT-30OCT2026/2026-08.ndjson.zip",
+   "sha256": "d44b74c2de802141e9c6eba271c97cb3d77c64748b32a6409c41b98729dfac74",
+   "bytes": 1591
+  },
+  {
+   "path": "data/boros/hist/settlement/204-OKX-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "aba6d593050a1e3380b227f41f1d9755b771b6fe1fb0e2ce635b142302e46bed",
+   "bytes": 5985
+  },
+  {
+   "path": "data/boros/hist/settlement/204-OKX-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "b65f716e632e9e512db125d5e2c0d680476d7ce67530de2d3c0817e880a3fb36",
+   "bytes": 5880
+  },
+  {
+   "path": "data/boros/hist/market-data/205-GATE-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "508d122c1531f733f9a50febbc05c9b64c392e39987ad13e76534644c4c12c1b",
+   "bytes": 14753
+  },
+  {
+   "path": "data/boros/hist/market-data/205-GATE-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "4f687b03878f7b838ab1e157119bf4d2fa69d3d21f43c4e01447024b48c1701f",
+   "bytes": 21125
+  },
+  {
+   "path": "data/boros/hist/settlement/205-GATE-BTCUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "683ad906bc06f2b0cae0ab92f7edc7ff964d9d054c7651164dd4d873da447762",
+   "bytes": 5335
+  },
+  {
+   "path": "data/boros/hist/settlement/205-GATE-BTCUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "987c3888c988f93addce3368f63e1e345c8562ab3aee32eed7e45cd144e8f682",
+   "bytes": 5362
+  },
+  {
+   "path": "data/boros/hist/market-data/206-HYPERLIQUID-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "daa37a4a686ac204ee1378ef620a36dd4373d9d28e4107bf4eea32e3cd5734a3",
+   "bytes": 14646
+  },
+  {
+   "path": "data/boros/hist/market-data/206-HYPERLIQUID-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "965e1b98915f7f2d519b0c4816b0db4cbec8348ff3b629e977725ad27e07e557",
+   "bytes": 14847
+  },
+  {
+   "path": "data/boros/hist/settlement/206-HYPERLIQUID-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "a789281b2b7416ef7143dfd1e5ca2841653c65eb1fda904067b61a1b215553bb",
+   "bytes": 39362
+  },
+  {
+   "path": "data/boros/hist/settlement/206-HYPERLIQUID-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "c7ee1c5c9b4fba2a8caf09112e37ccb8eb99f8a68f133c9cff30709b92115e11",
+   "bytes": 39387
+  },
+  {
+   "path": "data/boros/hist/market-data/207-KUCOIN-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "dd1c0feb7250cadc9f86143205666d6bec82fa6c90af272e8a451c648699d165",
+   "bytes": 11668
+  },
+  {
+   "path": "data/boros/hist/market-data/207-KUCOIN-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "dcc80f5de3a0de50857649304f442f74910eefd929f7c83393d54f9a053d183a",
+   "bytes": 13277
+  },
+  {
+   "path": "data/boros/hist/settlement/207-KUCOIN-ETHUSDT-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "4ba038ccf84e691ce9abcca826d51f9f22ce376e1b96586423f8654053b12713",
+   "bytes": 5306
+  },
+  {
+   "path": "data/boros/hist/settlement/207-KUCOIN-ETHUSDT-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "7d0d730d0c21bc175d1dfd4d46619a47bc904d89ebdd6491f0155383d77e5d5c",
+   "bytes": 5353
+  },
+  {
+   "path": "data/boros/hist/market-data/21-HYPERLIQUID-BTC-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "8b4c978d7123eb7b44a1e1e230ea67d931f635665ed77e78b36847525244f54c",
+   "bytes": 8831
+  },
+  {
+   "path": "data/boros/hist/market-data/21-HYPERLIQUID-BTC-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "38d443546ecf032a5b9d24a61e116d0e43a4b5fca1e2c118c3ba0b5fea4347f7",
+   "bytes": 24151
+  },
+  {
+   "path": "data/boros/hist/settlement/21-HYPERLIQUID-BTC-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "f339283cac2c0daed5e519f77460ce2aa8c9f484c06f267b2938468dd57d7710",
+   "bytes": 16593
+  },
+  {
+   "path": "data/boros/hist/settlement/21-HYPERLIQUID-BTC-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "78650a4aa034236e5673a835eff2ce90aa7c6e9055a29f9c131dbec6a992332a",
+   "bytes": 35560
+  },
+  {
+   "path": "data/boros/hist/market-data/214-LIGHTER-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "484800b1ed9465d45170b0ad6c829292b0d7eedc51a502e401de7a9426feb456",
+   "bytes": 5733
+  },
+  {
+   "path": "data/boros/hist/market-data/214-LIGHTER-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "7863bf75c5072f85945b6ba4c954b4e8ed6b1476cfff5cf6e13709c556c1a1e6",
+   "bytes": 11999
+  },
+  {
+   "path": "data/boros/hist/settlement/214-LIGHTER-BTC-30OCT2026/2026-09.ndjson.zip",
+   "sha256": "28602bd3ca427e8bfc8c3313c18741a181618f13a8d6756b87b9816f9b25e374",
+   "bytes": 19532
+  },
+  {
+   "path": "data/boros/hist/settlement/214-LIGHTER-BTC-30OCT2026/2026-10.ndjson.zip",
+   "sha256": "af481d33163a913a024ff6949d2f96f959c799a567853b91c597138d867ba458",
+   "bytes": 38308
+  },
+  {
+   "path": "data/boros/hist/market-data/22-HYPERLIQUID-ETH-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "16ddbe4ea60998536512c32ad1b91ea0bb3a970cc858c449f103f81e55e47bb8",
+   "bytes": 8455
+  },
+  {
+   "path": "data/boros/hist/market-data/22-HYPERLIQUID-ETH-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "47b83d1cffe2245b1e4580d095b1a31dc0f58aba840de989b9bc9a0dd00df5f1",
+   "bytes": 20690
+  },
+  {
+   "path": "data/boros/hist/settlement/22-HYPERLIQUID-ETH-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "5832f896293b03a0f6f9c32d746cc2aa801ff420394e1a5dda80de263a86501a",
+   "bytes": 16304
+  },
+  {
+   "path": "data/boros/hist/settlement/22-HYPERLIQUID-ETH-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "bc9213dc92cddd709b0c82fc603c371ab44c2b73ff3d969649efe4649a1da623",
+   "bytes": 34565
+  },
+  {
+   "path": "data/boros/hist/market-data/23-BINANCE-BTCUSDT-27MAR2026/2025-11.ndjson.zip",
+   "sha256": "c54d1189d30d3de0b66e387182cf9744b852be7ee68895a0c6a9943ce1c44adb",
+   "bytes": 2527
+  },
+  {
+   "path": "data/boros/hist/market-data/23-BINANCE-BTCUSDT-27MAR2026/2025-12.ndjson.zip",
+   "sha256": "096b8832d3301cefb6177caad36f0bac31795c874e17948eff071ec4bacb4edb",
+   "bytes": 17601
+  },
+  {
+   "path": "data/boros/hist/market-data/23-BINANCE-BTCUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "4050d1d4d915abf4b81daad24153227727e7a4d74a2da25e17b33da72b60b8ad",
+   "bytes": 14615
+  },
+  {
+   "path": "data/boros/hist/market-data/23-BINANCE-BTCUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "bf6001071c8bc48c95e09b8fa4ad04ea8ed06dbfe01e0386e6c736cf9a926394",
+   "bytes": 20334
+  },
+  {
+   "path": "data/boros/hist/market-data/23-BINANCE-BTCUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "bfb137b9d831750cde5ea9c09d3387f899804842b3d76bb98b2043f07461deb5",
+   "bytes": 20730
+  },
+  {
+   "path": "data/boros/hist/settlement/23-BINANCE-BTCUSDT-27MAR2026/2025-11.ndjson.zip",
+   "sha256": "04a39981c1310d84345663a393db008398e4a9f3550a19d63fb580419e3db02e",
+   "bytes": 1017
+  },
+  {
+   "path": "data/boros/hist/settlement/23-BINANCE-BTCUSDT-27MAR2026/2025-12.ndjson.zip",
+   "sha256": "503cd9161f616c9d4f1564368a215abf6e6324eda52e38726099b3845151fdf7",
+   "bytes": 5892
+  },
+  {
+   "path": "data/boros/hist/settlement/23-BINANCE-BTCUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "c4437f589d744c85156d4d06878514aa2483ec30f26cbe3f35735475f1a02bd3",
+   "bytes": 5829
+  },
+  {
+   "path": "data/boros/hist/settlement/23-BINANCE-BTCUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "a589407a49742b97bee5cd68fbe84c77f8d6c26c41b5390ed8e9504ffaa5fe20",
+   "bytes": 5347
+  },
+  {
+   "path": "data/boros/hist/settlement/23-BINANCE-BTCUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "8cdb7bda85fe5540e37734e71863a0ea7b33ce2a58800da52f1126a6ba4de021",
+   "bytes": 5048
+  },
+  {
+   "path": "data/boros/hist/market-data/24-BINANCE-ETHUSDT-27MAR2026/2025-11.ndjson.zip",
+   "sha256": "2b475c41c5382e65f6f0fc9d91f452861f9cad2c583c075e181de57733a45cdd",
+   "bytes": 2845
+  },
+  {
+   "path": "data/boros/hist/market-data/24-BINANCE-ETHUSDT-27MAR2026/2025-12.ndjson.zip",
+   "sha256": "11a650090993c65a151b7cf8773f024206274696921a44ff3137d552377272a9",
+   "bytes": 17263
+  },
+  {
+   "path": "data/boros/hist/market-data/24-BINANCE-ETHUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "42272b85d8e3f8a1ddeebb0b11af8aa1e87a7ca524e23fe59c5e639b8e29081a",
+   "bytes": 16899
+  },
+  {
+   "path": "data/boros/hist/market-data/24-BINANCE-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "c71315075a30b8f504d785348ec7ff356f839d1735d36588683e4ff6f9477680",
+   "bytes": 24545
+  },
+  {
+   "path": "data/boros/hist/market-data/24-BINANCE-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "d8e6f48f531b1b831cc0746616372c99c619e2d1bb6335ffbee9e911e426072a",
+   "bytes": 26102
+  },
+  {
+   "path": "data/boros/hist/settlement/24-BINANCE-ETHUSDT-27MAR2026/2025-11.ndjson.zip",
+   "sha256": "5ff242bc7a5b553d0774d29fa593aa7877f7a92bd3c0237f5fbfbc6d0fde2e60",
+   "bytes": 1016
+  },
+  {
+   "path": "data/boros/hist/settlement/24-BINANCE-ETHUSDT-27MAR2026/2025-12.ndjson.zip",
+   "sha256": "d0f1f1e16f88ee363044e33278d88790709a1f358bfdcc57ce8abfbad0fa0597",
+   "bytes": 5917
+  },
+  {
+   "path": "data/boros/hist/settlement/24-BINANCE-ETHUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "99417ee91a690b9193122a9c01d7d3081fe37fcd6c7ae6352ace72ff60a7c28e",
+   "bytes": 5835
+  },
+  {
+   "path": "data/boros/hist/settlement/24-BINANCE-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "95e85efc86bf76bebbce15098485476049cbb2fdde0a811106d5925a2d472705",
+   "bytes": 5349
+  },
+  {
+   "path": "data/boros/hist/settlement/24-BINANCE-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "23782d5bf3ef8d5e2739bee9f077fdeb818cb9c9a77177b9622f8347b77e140c",
+   "bytes": 5040
+  },
+  {
+   "path": "data/boros/hist/market-data/26-OKX-BTCUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "e2d2c79eb3c6392681367115223194763dea5cfb99afe189a86c540e97e168cb",
+   "bytes": 15862
+  },
+  {
+   "path": "data/boros/hist/market-data/26-OKX-BTCUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "e46a63187173027d1a9c17974eab03e511a0c5f1c0c25ce9ee67aa804ec804f7",
+   "bytes": 20088
+  },
+  {
+   "path": "data/boros/hist/settlement/26-OKX-BTCUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "df7a5729debd617da666d067b9d59b7feb51d0c09b3af3466357c93ecce98e73",
+   "bytes": 4786
+  },
+  {
+   "path": "data/boros/hist/settlement/26-OKX-BTCUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "dfbf02be910fb93d8805f8fd29f0d54e59de46dcbd0c5693973648798deacef5",
+   "bytes": 5961
+  },
+  {
+   "path": "data/boros/hist/market-data/27-OKX-ETHUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "f19da88dacb6a9a6c9d696b539df132ead2f37c82523597e824be690cbc233da",
+   "bytes": 17159
+  },
+  {
+   "path": "data/boros/hist/market-data/27-OKX-ETHUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "dad1425e83f77076922ac36abb2c69cd8064c8edb8bc5e5ef917e18060d4951b",
+   "bytes": 27072
+  },
+  {
+   "path": "data/boros/hist/settlement/27-OKX-ETHUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "d85867016bad94775229f5452668767fa05a7c82a0457cfcf19904d566460418",
+   "bytes": 4833
+  },
+  {
+   "path": "data/boros/hist/settlement/27-OKX-ETHUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "08cacf8a665fb06c898047de0eac1bc9d2dbd9c1f08f245faa07ab13e996ab8f",
+   "bytes": 5973
+  },
+  {
+   "path": "data/boros/hist/market-data/28-BINANCE-BTCUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "41c111cdb9b77f5a83dd3b4992a558b1c76f726889499ad42329da7eaeea7e1e",
+   "bytes": 8798
+  },
+  {
+   "path": "data/boros/hist/market-data/28-BINANCE-BTCUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "1183d069c8fd7b2072a06e23b09027a2cb6e6065c3d02d422bfa475c77ef9ef7",
+   "bytes": 19521
+  },
+  {
+   "path": "data/boros/hist/settlement/28-BINANCE-BTCUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "a01a6f717ac98066e401ab8b57b7c327572544e2ff21b88123d72375405bed17",
+   "bytes": 3126
+  },
+  {
+   "path": "data/boros/hist/settlement/28-BINANCE-BTCUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "0effaff4d15d5de9637627eccf77e5bb70ca63b36b39fca09b6428dbb9f64896",
+   "bytes": 5533
+  },
+  {
+   "path": "data/boros/hist/market-data/29-BINANCE-ETHUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "b7b4468a749c28826b9c7b42402c31a82d96cbcdbe6de8e8766cebc248155bb4",
+   "bytes": 9219
+  },
+  {
+   "path": "data/boros/hist/market-data/29-BINANCE-ETHUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "6fdb93d0e248f4185734e63dd874af7bdc21e090e6a66a4b659c9d2d0546b361",
+   "bytes": 22800
+  },
+  {
+   "path": "data/boros/hist/settlement/29-BINANCE-ETHUSDT-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "be11c9a0f57c993ee4944b32445b4dacd820c4cbedf4526685807b9f6a949a1d",
+   "bytes": 3153
+  },
+  {
+   "path": "data/boros/hist/settlement/29-BINANCE-ETHUSDT-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "8c5a3b5d775a5854e5538246c2a22f0695186bba892e7e479ba4396bd95bf23d",
+   "bytes": 5543
+  },
+  {
+   "path": "data/boros/hist/market-data/3-BINANCE-ETHUSDT-26SEP2025/2025-08.ndjson.zip",
+   "sha256": "eee1ebeae5733416f9fa3cf634a203ab05ce2e9240f6d4caf495bf5460d6611c",
+   "bytes": 31180
+  },
+  {
+   "path": "data/boros/hist/market-data/3-BINANCE-ETHUSDT-26SEP2025/2025-09.ndjson.zip",
+   "sha256": "c355a1f8b955355ff5caa6a15c2454256399fd8584487f382ba71db37eb31c43",
+   "bytes": 30997
+  },
+  {
+   "path": "data/boros/hist/settlement/3-BINANCE-ETHUSDT-26SEP2025/2025-08.ndjson.zip",
+   "sha256": "6a6c8e34212eb5f04aacc1da5f295885996f2d2da5c9a6117efcc103b554b511",
+   "bytes": 5859
+  },
+  {
+   "path": "data/boros/hist/settlement/3-BINANCE-ETHUSDT-26SEP2025/2025-09.ndjson.zip",
+   "sha256": "900eb2d4bc427d78be81a340f5e6f86b470751540cdad84fe2c6d5919382eb62",
+   "bytes": 4967
+  },
+  {
+   "path": "data/boros/hist/market-data/30-HYPERLIQUID-BTC-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "4e75d3224655b99473ece6e180de4c66b346699790799324e8327e724c67cb9c",
+   "bytes": 10219
+  },
+  {
+   "path": "data/boros/hist/market-data/30-HYPERLIQUID-BTC-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "0ea110fd5a82ae0891985368be0ddfbe59467b2e2911bff7d2aaa40a4bec03a8",
+   "bytes": 22570
+  },
+  {
+   "path": "data/boros/hist/settlement/30-HYPERLIQUID-BTC-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "435f54dee4c39bfffd77272e9be7109889063664f20cd1b17d502f56cdafd55b",
+   "bytes": 21865
+  },
+  {
+   "path": "data/boros/hist/settlement/30-HYPERLIQUID-BTC-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "836251b3bfc5f18bb8fe128bffb573e771dcf886a9ac710386c684be1caad01f",
+   "bytes": 39710
+  },
+  {
+   "path": "data/boros/hist/market-data/31-HYPERLIQUID-ETH-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "614ae43a469b2332d88027fd0f11a7dbfa4070963d75a01dc4efb6b3f14cf139",
+   "bytes": 11926
+  },
+  {
+   "path": "data/boros/hist/market-data/31-HYPERLIQUID-ETH-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "812f23a0a0da5c2012e09665d63bf7b7f123b2bec750f7ed8302abcf1d99eb4e",
+   "bytes": 25956
+  },
+  {
+   "path": "data/boros/hist/settlement/31-HYPERLIQUID-ETH-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "c5fc8067e2d4cf5de8e2ceae8a17bfcc96084c9de9dbf88a52b3e9258cd45443",
+   "bytes": 21974
+  },
+  {
+   "path": "data/boros/hist/settlement/31-HYPERLIQUID-ETH-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "07fc7e7fa825e74e77dd651f07a6a66bcbbd20a71a4ee24d9b8f0e6ace61b641",
+   "bytes": 39240
+  },
+  {
+   "path": "data/boros/hist/market-data/32-HYPERLIQUID-BTC-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "802544bcbcd6e62a9515d98a89721d8e6da3d354a384cd07cad2656ba6b7e1aa",
+   "bytes": 11374
+  },
+  {
+   "path": "data/boros/hist/market-data/32-HYPERLIQUID-BTC-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "33ac6c9a265f38db706013ffe765d92634ddf3e81d74aabba81cfba90ccf848b",
+   "bytes": 22838
+  },
+  {
+   "path": "data/boros/hist/settlement/32-HYPERLIQUID-BTC-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "324104359f0392e163ba012956b09665426781237f8cf5ade9df297d9e12efa7",
+   "bytes": 21862
+  },
+  {
+   "path": "data/boros/hist/settlement/32-HYPERLIQUID-BTC-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "5d96c4a886369a133fca71a34a2e1fa3703756ea81f81bd58d434d8b4956a493",
+   "bytes": 39719
+  },
+  {
+   "path": "data/boros/hist/market-data/33-HYPERLIQUID-ETH-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "a6a2dd89978e1852e62a5b88145103f568ccba2525c9e67bd3fc00ffff28788a",
+   "bytes": 13752
+  },
+  {
+   "path": "data/boros/hist/market-data/33-HYPERLIQUID-ETH-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "25aac2a6579c9f34f4690430c2951b147219fdd68ba3bca6de7d7c8fb82160c1",
+   "bytes": 25575
+  },
+  {
+   "path": "data/boros/hist/settlement/33-HYPERLIQUID-ETH-30JAN2026/2025-12.ndjson.zip",
+   "sha256": "28a689adbb8a6ea31e8541dd3ca96c9ee3831482122ae1e2b370c06608ebdb74",
+   "bytes": 21975
+  },
+  {
+   "path": "data/boros/hist/settlement/33-HYPERLIQUID-ETH-30JAN2026/2026-01.ndjson.zip",
+   "sha256": "ca6c7dd58e3c32228ab5b101303e30a6ade8affe5fef24f41c34fafbe4d0b052",
+   "bytes": 39144
+  },
+  {
+   "path": "data/boros/hist/market-data/4-BINANCE-BTCUSDT-26DEC2025/2025-08.ndjson.zip",
+   "sha256": "aae3522e0b815e05e6cbaa53da27d3de76be9212a28ea7a8a37039a09e576232",
+   "bytes": 5216
+  },
+  {
+   "path": "data/boros/hist/market-data/4-BINANCE-BTCUSDT-26DEC2025/2025-09.ndjson.zip",
+   "sha256": "b8af3f5d744a9295e72dffd0ae814657a0ad03cf5afdb17ab9929c6d81cb1e11",
+   "bytes": 15451
+  },
+  {
+   "path": "data/boros/hist/market-data/4-BINANCE-BTCUSDT-26DEC2025/2025-10.ndjson.zip",
+   "sha256": "f62abfae80603cb3656a891df209e4e085d4bf060401040ed8c04d6fad8dc6e7",
+   "bytes": 23980
+  },
+  {
+   "path": "data/boros/hist/market-data/4-BINANCE-BTCUSDT-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "d65ca752c0a4c2bc3c391d7b3d3e003da48f812e68d171cf82efe72ec1ba7294",
+   "bytes": 19710
+  },
+  {
+   "path": "data/boros/hist/market-data/4-BINANCE-BTCUSDT-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "61a667feea06980987a9c7ace18f2edba46dff946cfdd11b3e577e311381f89f",
+   "bytes": 19631
+  },
+  {
+   "path": "data/boros/hist/settlement/4-BINANCE-BTCUSDT-26DEC2025/2025-08.ndjson.zip",
+   "sha256": "df500bf7f500c2515779303f0940b9cddcab883f345241b467cea52d3f620135",
+   "bytes": 2206
+  },
+  {
+   "path": "data/boros/hist/settlement/4-BINANCE-BTCUSDT-26DEC2025/2025-09.ndjson.zip",
+   "sha256": "cbfe9a0fb32cefd579634c50fd2bddc689ef727f1040f6379cfc164fe0489565",
+   "bytes": 5776
+  },
+  {
+   "path": "data/boros/hist/settlement/4-BINANCE-BTCUSDT-26DEC2025/2025-10.ndjson.zip",
+   "sha256": "c516644c89deeaa7cd30ec91f9d157f2ac47a78927326ed5ef5ccc6465411471",
+   "bytes": 5929
+  },
+  {
+   "path": "data/boros/hist/settlement/4-BINANCE-BTCUSDT-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "fda4e698d6a9bbdd7249cb877daafd34e4c3d47070cefe5b357ef684fc129812",
+   "bytes": 5724
+  },
+  {
+   "path": "data/boros/hist/settlement/4-BINANCE-BTCUSDT-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "d5a0e22dfaa4c49434443b39dff54820af86e3c9f23029d55d8e8157f1a0994a",
+   "bytes": 4897
+  },
+  {
+   "path": "data/boros/hist/market-data/40-OKX-ETHUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "450faa14388b8857ca34b646708640f40a86f44abd70c1b63fc69c5458f1362b",
+   "bytes": 11575
+  },
+  {
+   "path": "data/boros/hist/market-data/40-OKX-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "cc0197e67e7896d8db940432ed45014fca3a8220500263e17e29ee8b4e4d173c",
+   "bytes": 18470
+  },
+  {
+   "path": "data/boros/hist/market-data/40-OKX-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "5b752b2b2fd07c06dbb0d62c5012de9baa6b0dee45823ef8c6eedf13fc3a3c48",
+   "bytes": 25174
+  },
+  {
+   "path": "data/boros/hist/settlement/40-OKX-ETHUSDT-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "87a748df3832ca9949c12b11d3fa9642381b769274b17cf9df52a5b33adeb6c3",
+   "bytes": 3940
+  },
+  {
+   "path": "data/boros/hist/settlement/40-OKX-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "f0c9a592a53e808f82bd5ccd17612e63fb4c5d1ef16f749a8c8cd9e88fb1f34f",
+   "bytes": 5688
+  },
+  {
+   "path": "data/boros/hist/settlement/40-OKX-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "e37088047c21d70bc282d16912e2e04759836f097a61a07337292d637874caf3",
+   "bytes": 5414
+  },
+  {
+   "path": "data/boros/hist/market-data/41-HYPERLIQUID-ETH-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "e7addb3c2fbf42fd3101eea5ccbaf354febf7d35ebdcdb86ff17059a205d5457",
+   "bytes": 11580
+  },
+  {
+   "path": "data/boros/hist/market-data/41-HYPERLIQUID-ETH-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "330d45bd1a9785e56b27a06c56b5a3a20ac68bab8038313fab40dc274af4cbd6",
+   "bytes": 28048
+  },
+  {
+   "path": "data/boros/hist/market-data/41-HYPERLIQUID-ETH-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "e1b891b5ad737865ef61a950fc09f69324949223dbd74d30488bc48334ad8cb1",
+   "bytes": 34029
+  },
+  {
+   "path": "data/boros/hist/settlement/41-HYPERLIQUID-ETH-27MAR2026/2026-01.ndjson.zip",
+   "sha256": "ded98a488408a64bf9b2b37eeee6593dbe51fe2d7adfe7613c99d79b7fb418a4",
+   "bytes": 25635
+  },
+  {
+   "path": "data/boros/hist/settlement/41-HYPERLIQUID-ETH-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "baa21b6ddd8458d544c423a3564b14cbd64632249cd5bc0640ca2cc0ded18f8b",
+   "bytes": 39684
+  },
+  {
+   "path": "data/boros/hist/settlement/41-HYPERLIQUID-ETH-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "c9b84b0fab7edf4a28812cc3992773aaa448342ea23a48b32c658b28c44af9ef",
+   "bytes": 37065
+  },
+  {
+   "path": "data/boros/hist/market-data/44-BINANCE-ETHUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "85bb538ad8771900b75f991a816514921a777128215ec373896bcb17d9c146f0",
+   "bytes": 5892
+  },
+  {
+   "path": "data/boros/hist/market-data/44-BINANCE-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "354bbea0a9d52b04f43df5c34617e99d03a1c87eb85ca38877dfa1665441fc1e",
+   "bytes": 25729
+  },
+  {
+   "path": "data/boros/hist/settlement/44-BINANCE-ETHUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "fba3f5ab8e60c62dd662149cd7f1495f75455f46a7dd2e7120f133f0d67271c6",
+   "bytes": 2435
+  },
+  {
+   "path": "data/boros/hist/settlement/44-BINANCE-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "19a13acc4d2683f555709264af994ba3a7285367d5798af843dd07bfb553b70e",
+   "bytes": 5052
+  },
+  {
+   "path": "data/boros/hist/market-data/45-HYPERLIQUID-ETH-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "57cb9f88db09114417b59a41c382de3c58d1ed0ea2794874a09dcc6da6ad0914",
+   "bytes": 9186
+  },
+  {
+   "path": "data/boros/hist/market-data/45-HYPERLIQUID-ETH-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "6e703916f5350b9cdd3fdb6f0fe382ea9e936598dccdc7ac4f6e198417b527a9",
+   "bytes": 31096
+  },
+  {
+   "path": "data/boros/hist/settlement/45-HYPERLIQUID-ETH-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "22c2aac3831559aa473190222c5d3c64cb38411cc3865f068e6e6be4067e1d2a",
+   "bytes": 16495
+  },
+  {
+   "path": "data/boros/hist/settlement/45-HYPERLIQUID-ETH-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "53c92f34a3e503ecaef5d493c957828bdfb47d675b4117114c33920f50fb5581",
+   "bytes": 36877
+  },
+  {
+   "path": "data/boros/hist/market-data/46-OKX-ETHUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "5345e117e85b2d0b7b626eb4674a2e08f583b41ac791c5ab72571df3c024f9b4",
+   "bytes": 8197
+  },
+  {
+   "path": "data/boros/hist/market-data/46-OKX-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "adf49399d362081b3981d631a41f8b830fac80919653882054178d1b1117dc9a",
+   "bytes": 21391
+  },
+  {
+   "path": "data/boros/hist/settlement/46-OKX-ETHUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "90b87f637c4d0018914f1ba78a167064af31e927737d606c4af1a034ed42b084",
+   "bytes": 2605
+  },
+  {
+   "path": "data/boros/hist/settlement/46-OKX-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "b14d604349570eef851d2ed30b29ff2f9c3c9c46d4d0fcd3eaade82e7662bea1",
+   "bytes": 5364
+  },
+  {
+   "path": "data/boros/hist/market-data/47-HYPERLIQUID-ETH-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "a1b624ceccb4d2d32b28240d5132a7ed2825cb7958e88ecf2cfc7a14f84c1fce",
+   "bytes": 4208
+  },
+  {
+   "path": "data/boros/hist/market-data/47-HYPERLIQUID-ETH-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "071e25c239c5e4b9f9aa2ebfcdb1209dd53e72d0c851d50cc1b1bbae8132cb7f",
+   "bytes": 29260
+  },
+  {
+   "path": "data/boros/hist/settlement/47-HYPERLIQUID-ETH-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "b815e66cd03043adafef78fdbbf372a6197e1f1dd975666367b13d071b775f3d",
+   "bytes": 7935
+  },
+  {
+   "path": "data/boros/hist/settlement/47-HYPERLIQUID-ETH-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "21ec581b0c0f8b6ff1ceb0b66a91b507c848323c4de011be5195325e85ebc149",
+   "bytes": 36886
+  },
+  {
+   "path": "data/boros/hist/market-data/48-BINANCE-BTCUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "179dd6fbb795ea141f0781e1d4464cd55a86bfc2064ec61f15a1c1866b056a3d",
+   "bytes": 2812
+  },
+  {
+   "path": "data/boros/hist/market-data/48-BINANCE-BTCUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "489ed02790967edc5022679d2b9edcb75501a70fe141ca91ba43f0ef86cc1131",
+   "bytes": 20830
+  },
+  {
+   "path": "data/boros/hist/settlement/48-BINANCE-BTCUSDT-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "88e397ab28383f9b7638dbdf21ad944a7133677ab7368e2e32a5d73fcd7d7810",
+   "bytes": 1289
+  },
+  {
+   "path": "data/boros/hist/settlement/48-BINANCE-BTCUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "aaca09f40ec410cd6a3752d37297f72b9ebe82c75632c31af69ce7df40a72ffa",
+   "bytes": 5047
+  },
+  {
+   "path": "data/boros/hist/market-data/49-HYPERLIQUID-BTC-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "ca0e8a39efa8fa6ffc76d4ddf7ac8a844f26544d4b5c922ca68486ba2b908793",
+   "bytes": 4290
+  },
+  {
+   "path": "data/boros/hist/market-data/49-HYPERLIQUID-BTC-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "cc2635bcc6d2a87685a808feb31aec7b02a5648912135a9bdcbf223f5196ed9e",
+   "bytes": 26708
+  },
+  {
+   "path": "data/boros/hist/settlement/49-HYPERLIQUID-BTC-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "366028a2ab0d41d3faa6fc1f17a4f357a1f01d40a7ecd47f410864252e95fe79",
+   "bytes": 8001
+  },
+  {
+   "path": "data/boros/hist/settlement/49-HYPERLIQUID-BTC-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "34c74ca21be82176c82c2d5ef58cd4c9bf8116322589261364192f4822fdc3e9",
+   "bytes": 36925
+  },
+  {
+   "path": "data/boros/hist/market-data/5-BINANCE-ETHUSDT-26DEC2025/2025-08.ndjson.zip",
+   "sha256": "1a80a9f78ce867bc907abdb70b7e03a824eaf01dd86ad2698dc60b14f69a649a",
+   "bytes": 5039
+  },
+  {
+   "path": "data/boros/hist/market-data/5-BINANCE-ETHUSDT-26DEC2025/2025-09.ndjson.zip",
+   "sha256": "0a3526204cdbd114a7bbe61055494f49a8e73282818c724a636b91fae906fe40",
+   "bytes": 24323
+  },
+  {
+   "path": "data/boros/hist/market-data/5-BINANCE-ETHUSDT-26DEC2025/2025-10.ndjson.zip",
+   "sha256": "aedeec437ef5154d21a61c93cd8141e093e7aa1b095b95bc0eff79b77139c80a",
+   "bytes": 25363
+  },
+  {
+   "path": "data/boros/hist/market-data/5-BINANCE-ETHUSDT-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "274e881d385e620a5339a9b5635e6c4b020a83eea44308bdada1749a6f30e6e5",
+   "bytes": 23548
+  },
+  {
+   "path": "data/boros/hist/market-data/5-BINANCE-ETHUSDT-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "329811f3249900aec1ef20dd156f7b9679565e3e575f90d9a227a0d68e957e0d",
+   "bytes": 22245
+  },
+  {
+   "path": "data/boros/hist/settlement/5-BINANCE-ETHUSDT-26DEC2025/2025-08.ndjson.zip",
+   "sha256": "748aeb490031908031c9cbe8b96f524927ab26b16add13750ef450533ae5300b",
+   "bytes": 2217
+  },
+  {
+   "path": "data/boros/hist/settlement/5-BINANCE-ETHUSDT-26DEC2025/2025-09.ndjson.zip",
+   "sha256": "47bca6e0783dadff6b865d4fcab8047d8b39d5cb098fac6f90e423e8950c3c71",
+   "bytes": 5799
+  },
+  {
+   "path": "data/boros/hist/settlement/5-BINANCE-ETHUSDT-26DEC2025/2025-10.ndjson.zip",
+   "sha256": "0794860c5c63cc645afc3bd692cd15f51913b2d5e551a814c1d94bbb7bf43a88",
+   "bytes": 5941
+  },
+  {
+   "path": "data/boros/hist/settlement/5-BINANCE-ETHUSDT-26DEC2025/2025-11.ndjson.zip",
+   "sha256": "9b81b9bb6867ceeb97128e0b2e37f437b0aed300714d56c3e29dca0d161973b6",
+   "bytes": 5731
+  },
+  {
+   "path": "data/boros/hist/settlement/5-BINANCE-ETHUSDT-26DEC2025/2025-12.ndjson.zip",
+   "sha256": "a62d85e672dde011b48d1933e3bd90bd1dcc401efc1e5aa424f80ca3e5f0f0d2",
+   "bytes": 4907
+  },
+  {
+   "path": "data/boros/hist/market-data/50-HYPERLIQUID-BTC-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "d2beb00c2d4bd0865512e5f005765255c6b2359f528822f3f33191af606046f9",
+   "bytes": 4218
+  },
+  {
+   "path": "data/boros/hist/market-data/50-HYPERLIQUID-BTC-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "95938877ecf5386a610a2c9f63185bb0179af2b746c63936e414a6aedd1723c9",
+   "bytes": 28021
+  },
+  {
+   "path": "data/boros/hist/settlement/50-HYPERLIQUID-BTC-27FEB2026/2026-01.ndjson.zip",
+   "sha256": "274430343d10d04857b1f9b02d8b9eaf759931bb9340e51f34a5e288e3583f26",
+   "bytes": 8006
+  },
+  {
+   "path": "data/boros/hist/settlement/50-HYPERLIQUID-BTC-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "9372312705cf109fb0f07081d69a3ffdc4d994ea2fb9da48629997157a36a18a",
+   "bytes": 36925
+  },
+  {
+   "path": "data/boros/hist/market-data/53-GATE-BTCUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "8419e0ec32c44d4d34d669c7bf0183ceb6b2adeedd42fba4fce8c8782492dbf7",
+   "bytes": 15069
+  },
+  {
+   "path": "data/boros/hist/settlement/53-GATE-BTCUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "48d0895f08cfc5c27e682de827d20660435cb87bc580cae1d55f5ca07d6a3360",
+   "bytes": 4523
+  },
+  {
+   "path": "data/boros/hist/market-data/54-GATE-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "f7c482fb1e50e3edda528f9df16cc75a9d1e78343041130277b2c285a9a6460f",
+   "bytes": 15980
+  },
+  {
+   "path": "data/boros/hist/settlement/54-GATE-ETHUSDT-27FEB2026/2026-02.ndjson.zip",
+   "sha256": "d27d81ae23baa8f956cbf8ff277fc69837d205e1c57400f814b78c3b21ee9118",
+   "bytes": 4528
+  },
+  {
+   "path": "data/boros/hist/market-data/6-HYPERLIQUID-BTC-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "ea9848916b65ba250fd531a9bafc93a3cadf5587a0cdfa91ed96b1555ae816a1",
+   "bytes": 12377
+  },
+  {
+   "path": "data/boros/hist/market-data/6-HYPERLIQUID-BTC-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "a071e03c77fea50184ed4f90224415c4ac9a73ad2ca298e340643a1703d09024",
+   "bytes": 22853
+  },
+  {
+   "path": "data/boros/hist/settlement/6-HYPERLIQUID-BTC-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "0d0646ca072135df164cb4e6a2a72e752f9731a6a59a83e54cad37bb91a9819f",
+   "bytes": 28247
+  },
+  {
+   "path": "data/boros/hist/settlement/6-HYPERLIQUID-BTC-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "957299fc0b8bb3060f7b9443ac0de1dc02ddffe378d8fb5397b293062c51eab5",
+   "bytes": 41215
+  },
+  {
+   "path": "data/boros/hist/market-data/60-HYPERLIQUID-BTC-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "be313c74cace476f641fec8c7a04aa736e59e2463eb8e67e30a13ea94cc3afe9",
+   "bytes": 4639
+  },
+  {
+   "path": "data/boros/hist/market-data/60-HYPERLIQUID-BTC-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "b975ad536dffd84fed6efc1be81912f9bc095dd61dda8003550e437b728eb563",
+   "bytes": 30051
+  },
+  {
+   "path": "data/boros/hist/settlement/60-HYPERLIQUID-BTC-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "fc468cb44643365ea407261c7d49bbcd6e3d43cdd09ea213940de3bcc3aaa01f",
+   "bytes": 5910
+  },
+  {
+   "path": "data/boros/hist/settlement/60-HYPERLIQUID-BTC-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "05e5c19e0aab3081c3cefd8af36e13bab03b6c14ab15a7913f3865b2c6508bd8",
+   "bytes": 37187
+  },
+  {
+   "path": "data/boros/hist/market-data/61-HYPERLIQUID-BTC-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "8dc20d4e1eabc309ac98c06620edcf4d0b219eeecfe25c35f06fd186ad682743",
+   "bytes": 4828
+  },
+  {
+   "path": "data/boros/hist/market-data/61-HYPERLIQUID-BTC-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "212a9272fddcc117a2779716c908f61182a583dde6b035b6c25eacc9f4516333",
+   "bytes": 32347
+  },
+  {
+   "path": "data/boros/hist/settlement/61-HYPERLIQUID-BTC-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "4f9fce76dcb29d8da5d1d58bd218f00520fd4a239ea52e41a2eaf4f0e997a10f",
+   "bytes": 5912
+  },
+  {
+   "path": "data/boros/hist/settlement/61-HYPERLIQUID-BTC-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "ccca87e7c9aa5a6c72c8db04cc9009e7bd8648408d25c771946a1982bb8028b7",
+   "bytes": 37187
+  },
+  {
+   "path": "data/boros/hist/market-data/62-GATE-BTCUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "04c3d75208d603e5efaf322c24f118ddb6bfe22b047b6d08dd1537a8a5e89ca2",
+   "bytes": 3083
+  },
+  {
+   "path": "data/boros/hist/market-data/62-GATE-BTCUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "3ad813332553b94ad9e30168ac5f669bbf2e2a5a483b3b4d4c0483260d168009",
+   "bytes": 15544
+  },
+  {
+   "path": "data/boros/hist/settlement/62-GATE-BTCUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "536652fa5012e9a8ad4a2f74c296826c84cd2229776344328550f5b9fe97e4fa",
+   "bytes": 975
+  },
+  {
+   "path": "data/boros/hist/settlement/62-GATE-BTCUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "d1d694d4aeb68697de97355e35d420257c3955b5c5f5383a0371dcc451fec98a",
+   "bytes": 4870
+  },
+  {
+   "path": "data/boros/hist/market-data/63-GATE-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "fcd8cf01b97bf7675b943b9b29f830f7400cb61fe78447875ba4eac384b0b7c1",
+   "bytes": 3199
+  },
+  {
+   "path": "data/boros/hist/market-data/63-GATE-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "a01564d6cb53f7c57674c5bb976b00dfef0ab542a65b8463e8b606ec0d06014e",
+   "bytes": 20768
+  },
+  {
+   "path": "data/boros/hist/settlement/63-GATE-ETHUSDT-27MAR2026/2026-02.ndjson.zip",
+   "sha256": "dafa65da7dff52932b9bbad1231c04617ec3a24ac9f941a6e2293b471da54f9f",
+   "bytes": 977
+  },
+  {
+   "path": "data/boros/hist/settlement/63-GATE-ETHUSDT-27MAR2026/2026-03.ndjson.zip",
+   "sha256": "f1dc24b560fac3ae91b517f091d06e6bc5ac0cf5bdfaa4c8eab2a6cb120fa9d9",
+   "bytes": 4862
+  },
+  {
+   "path": "data/boros/hist/market-data/7-HYPERLIQUID-ETH-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "3e2504beace03d00c5d27cf13494d9dc8410ac26903d3cff18f97285cc3cff00",
+   "bytes": 21227
+  },
+  {
+   "path": "data/boros/hist/market-data/7-HYPERLIQUID-ETH-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "da9838e4b37faabaf3d25a6a85aabcdc0a17689c39f1672ce1f6c7bef4dbf0af",
+   "bytes": 25191
+  },
+  {
+   "path": "data/boros/hist/settlement/7-HYPERLIQUID-ETH-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "29293c3992cf8dbbf3b32993a9967a292a7771fefa5faf03c32add6683aaaee8",
+   "bytes": 28964
+  },
+  {
+   "path": "data/boros/hist/settlement/7-HYPERLIQUID-ETH-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "084e1aa1f8604e99fc67de921f9e4ef1e261dbfc3fff51f0198e9e34f183bcc2",
+   "bytes": 41385
+  },
+  {
+   "path": "data/boros/hist/market-data/74-HYPERLIQUID-ETH-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "afd0f84bd1317c593a231db816eb8b2cc7630a49e6ff78a445af7466b68ea123",
+   "bytes": 16237
+  },
+  {
+   "path": "data/boros/hist/market-data/74-HYPERLIQUID-ETH-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "f091c9cad5e66ae3bb265ef02bbe4981f810a65c424e69286345c39cdb043dc5",
+   "bytes": 22483
+  },
+  {
+   "path": "data/boros/hist/market-data/74-HYPERLIQUID-ETH-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "18eb040b7dbef9b383dd220945f1ff775ef9dcd44f1d7123f1a984707613b83e",
+   "bytes": 21115
+  },
+  {
+   "path": "data/boros/hist/market-data/74-HYPERLIQUID-ETH-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "ddb38d70b29fa7cfcd4a32224060757ebddf54e73976dff6ff914a84fb6cdaf1",
+   "bytes": 29470
+  },
+  {
+   "path": "data/boros/hist/settlement/74-HYPERLIQUID-ETH-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "787ec35d737b8323542bda0f6751f141b4bd6a089f22cfdaf723aafe5bc1a03b",
+   "bytes": 30982
+  },
+  {
+   "path": "data/boros/hist/settlement/74-HYPERLIQUID-ETH-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "0094526e665d595d37322b1f24cb6fbd4a2d1abea8495fa575ed4336c5920869",
+   "bytes": 43004
+  },
+  {
+   "path": "data/boros/hist/settlement/74-HYPERLIQUID-ETH-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "015ba5ab350ffe9e5196a849d0f814943e132cc080cdd56bd921cb1b45f6f30c",
+   "bytes": 42722
+  },
+  {
+   "path": "data/boros/hist/settlement/74-HYPERLIQUID-ETH-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "6dc49728ed9f03b76e0f51c898918c2722c7af6b1ed235da1f4eb8b16a6c0ca4",
+   "bytes": 34786
+  },
+  {
+   "path": "data/boros/hist/market-data/75-OKX-ETHUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "9bb74f549b478455a83f3a37e097bc20d0012d195f09638420898272906c26ac",
+   "bytes": 11590
+  },
+  {
+   "path": "data/boros/hist/market-data/75-OKX-ETHUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "f359201feee7af3bce4fba1870976c5cf777a8023dc04f75d2e254c5fc6f14d7",
+   "bytes": 14075
+  },
+  {
+   "path": "data/boros/hist/market-data/75-OKX-ETHUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "952b1a8adc8aab9a056ab9faa9ddcd972c638cde5290b67c39a5544a4c009e44",
+   "bytes": 15575
+  },
+  {
+   "path": "data/boros/hist/market-data/75-OKX-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "24d10ca24df7982b8ed3f5716a1a07e3a33d232e0a83a623b353b662b347c7ff",
+   "bytes": 18474
+  },
+  {
+   "path": "data/boros/hist/settlement/75-OKX-ETHUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "766a50a5ac44b484ef14d54372d93e7870ec730787713d742f924390afa8de44",
+   "bytes": 4527
+  },
+  {
+   "path": "data/boros/hist/settlement/75-OKX-ETHUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "88ce9869c5166e7aa96b986f58ce19d3f10c807a9dc3b0f4c46e5c04bd12c8dc",
+   "bytes": 6077
+  },
+  {
+   "path": "data/boros/hist/settlement/75-OKX-ETHUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "2ec6ae1b02b5237e91b7cb936008397715ccb2b00115e22e8457e398a40f6ac4",
+   "bytes": 6228
+  },
+  {
+   "path": "data/boros/hist/settlement/75-OKX-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "49a9e355360fcdd8f161797a39c131575fcf494ef73aecf03ee120a2cad9e54f",
+   "bytes": 5175
+  },
+  {
+   "path": "data/boros/hist/market-data/76-BINANCE-ETHUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "be72c1dae3fb4557891fe9f09c9170778c0b9725f8899e7df8d00eeff206c4f1",
+   "bytes": 14294
+  },
+  {
+   "path": "data/boros/hist/market-data/76-BINANCE-ETHUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "42a9e09eee1f9dcfcc3a077ce8fa415e068d5f30cb227af18aaa0875047c2c41",
+   "bytes": 18056
+  },
+  {
+   "path": "data/boros/hist/market-data/76-BINANCE-ETHUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "dffb85ded344fbfeb830beaa5f88263fba9a21473a6d405b5f63e40023e57192",
+   "bytes": 18840
+  },
+  {
+   "path": "data/boros/hist/market-data/76-BINANCE-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "a28ec4166c9c3a02f1828c37a0d20d6ce95331273858e29fd19e6ec923a5c90d",
+   "bytes": 22512
+  },
+  {
+   "path": "data/boros/hist/settlement/76-BINANCE-ETHUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "05aef55e2bb49813f9c6917a59fa227fc17c4e67449b13ab4ba08247e7c6b930",
+   "bytes": 4227
+  },
+  {
+   "path": "data/boros/hist/settlement/76-BINANCE-ETHUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "0d1d03fc42a7129c0a3a2cbfe2ccaaa26f176671768416a449a1de778b3f36b7",
+   "bytes": 5673
+  },
+  {
+   "path": "data/boros/hist/settlement/76-BINANCE-ETHUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "f88224715a1d523a19a0f97e54918b132b10f3a3f6e8c2c1ec31fc5fa5d95784",
+   "bytes": 5847
+  },
+  {
+   "path": "data/boros/hist/settlement/76-BINANCE-ETHUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "9154f37af66bcc18cac4441b82a6db7cd6c008cbd09c83543bf8596d5cb21d09",
+   "bytes": 4846
+  },
+  {
+   "path": "data/boros/hist/market-data/78-BINANCE-BTCUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "8b83a42200611d9a2416690e11285e84f067f7adce17d36bbfa9102b650d3eba",
+   "bytes": 11397
+  },
+  {
+   "path": "data/boros/hist/market-data/78-BINANCE-BTCUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "0788f2a40c05fda0822486cc4aca9f461957e862b144113b5f1aa59a388a8332",
+   "bytes": 15441
+  },
+  {
+   "path": "data/boros/hist/market-data/78-BINANCE-BTCUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "20685018b73d013fd5766fe9242a6a9edce84604ebc3a2736dc8d654047018cf",
+   "bytes": 17475
+  },
+  {
+   "path": "data/boros/hist/market-data/78-BINANCE-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "c0a5cf508fa0d80810195ad1e1208767b0b28bf50384c5b1507596ddd38c9dff",
+   "bytes": 17987
+  },
+  {
+   "path": "data/boros/hist/settlement/78-BINANCE-BTCUSDT-26JUN2026/2026-03.ndjson.zip",
+   "sha256": "f49d8e2331d6ea5b2c8eda3892d8842dfec0bdcaaa26691c256f2eaa7dc641d9",
+   "bytes": 4229
+  },
+  {
+   "path": "data/boros/hist/settlement/78-BINANCE-BTCUSDT-26JUN2026/2026-04.ndjson.zip",
+   "sha256": "c85c4e6bf008587e83c914d94cb55fc884676ae36a4ae1594db7c99e64c4f3b6",
+   "bytes": 5695
+  },
+  {
+   "path": "data/boros/hist/settlement/78-BINANCE-BTCUSDT-26JUN2026/2026-05.ndjson.zip",
+   "sha256": "b9d350e11c8cd778721ae0891e17d8817a2f308134557245499e92f65ceb2f14",
+   "bytes": 5857
+  },
+  {
+   "path": "data/boros/hist/settlement/78-BINANCE-BTCUSDT-26JUN2026/2026-06.ndjson.zip",
+   "sha256": "d96015a282fdce02655b952e4ed0fa32c3321bbfbafff0eb3b9c7fb0d02e9ba2",
+   "bytes": 4827
+  },
+  {
+   "path": "data/boros/hist/market-data/8-BINANCE-BTCUSDT-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "34d14528c5db273a257ab5ea3d8cb02f69f4c06c134a130358561ac2c2bf960b",
+   "bytes": 8273
+  },
+  {
+   "path": "data/boros/hist/market-data/8-BINANCE-BTCUSDT-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "d89d8167702680d7c7bec911fa2986d9eb1b5698388c6952e1b9af9823938584",
+   "bytes": 26400
+  },
+  {
+   "path": "data/boros/hist/settlement/8-BINANCE-BTCUSDT-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "b5eafbc167d392b22533187d9e34672c67e77a79e00acb0dbfe4a10418969dce",
+   "bytes": 3021
+  },
+  {
+   "path": "data/boros/hist/settlement/8-BINANCE-BTCUSDT-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "4852ffc6dc8157f053bac61d6cf389dd67ae58d6d0140e571a162b9a0b2ef207",
+   "bytes": 5821
+  },
+  {
+   "path": "data/boros/hist/market-data/86-BINANCE-ETHUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "968d6e8e50945d1463d0f6fb2c792958f4f6fd65ba1169f7818f0b4a15a80550",
+   "bytes": 6707
+  },
+  {
+   "path": "data/boros/hist/market-data/86-BINANCE-ETHUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "7400bf2f8222ce2df036c4fb2b9d69eeb114e3ab66a28785f9fdce5922cd8c58",
+   "bytes": 20903
+  },
+  {
+   "path": "data/boros/hist/settlement/86-BINANCE-ETHUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "21841e653067d3111a52ccf454a6745a19009d85112bb955137b965b02eeeb35",
+   "bytes": 1697
+  },
+  {
+   "path": "data/boros/hist/settlement/86-BINANCE-ETHUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "c364cf36412c9a702edebfcac054922acdcc2a88378b8debfe509b979ffdfde1",
+   "bytes": 4451
+  },
+  {
+   "path": "data/boros/hist/market-data/87-HYPERLIQUID-ETH-24APR2026/2026-03.ndjson.zip",
+   "sha256": "a1abae3963ab07badf47330c4441c0549e6154e5acb876316d4a1f06ddb12fbf",
+   "bytes": 8501
+  },
+  {
+   "path": "data/boros/hist/market-data/87-HYPERLIQUID-ETH-24APR2026/2026-04.ndjson.zip",
+   "sha256": "18a507a89ede84fb12765b06bb718eae01561cf565cd1039eaf0b4beca6f4a17",
+   "bytes": 30527
+  },
+  {
+   "path": "data/boros/hist/settlement/87-HYPERLIQUID-ETH-24APR2026/2026-03.ndjson.zip",
+   "sha256": "e70e7ad4d07ef296a51ede7732efc9543a9f50669c099ce6cac9f4dcaafe1a71",
+   "bytes": 11185
+  },
+  {
+   "path": "data/boros/hist/settlement/87-HYPERLIQUID-ETH-24APR2026/2026-04.ndjson.zip",
+   "sha256": "686c5135ba523b12a65183adf053ca2a55312a083b19be3cd23c357a2633f657",
+   "bytes": 33124
+  },
+  {
+   "path": "data/boros/hist/market-data/88-OKX-ETHUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "8d66ce304299ef6661df43a6851ca24fb0bf73632ae797a14f4073e6df55d11c",
+   "bytes": 5565
+  },
+  {
+   "path": "data/boros/hist/market-data/88-OKX-ETHUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "ceab1f14fc031ac855c22836ff873fee308ce41e17dbbdf4e64bf11565a105f2",
+   "bytes": 20282
+  },
+  {
+   "path": "data/boros/hist/settlement/88-OKX-ETHUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "b88258c1a91122c81e7346401275ec3bae3b988a9588399593a0211889d10eb6",
+   "bytes": 1812
+  },
+  {
+   "path": "data/boros/hist/settlement/88-OKX-ETHUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "e3890bfe6532be9ee8bec322a503310992b1810977a7338edebabb95b13007de",
+   "bytes": 4771
+  },
+  {
+   "path": "data/boros/hist/market-data/89-BINANCE-BTCUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "d538459e77861d892f4d4ecb86bf6da1b7d1e8624ba4d9d81dafa9a90621c944",
+   "bytes": 5197
+  },
+  {
+   "path": "data/boros/hist/market-data/89-BINANCE-BTCUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "e84dd8a3a929d3016e9dfa5f561e20b9fdf5bd1a7fc44ecb1e4d3aaba04a0db1",
+   "bytes": 18218
+  },
+  {
+   "path": "data/boros/hist/settlement/89-BINANCE-BTCUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "23317a7f8a95111e3110956764bcd3242795ef64ca05abf3c9d9dcfcb861204a",
+   "bytes": 1704
+  },
+  {
+   "path": "data/boros/hist/settlement/89-BINANCE-BTCUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "cf52e860fca564e0bd1ed089f1a39d39ffde155e24ccd57686c0a1bf63215d21",
+   "bytes": 4469
+  },
+  {
+   "path": "data/boros/hist/market-data/9-BINANCE-ETHUSDT-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "f2b07ba15bb2e891dc77f8cc337ebf91144103298765b9e783f98b6ec9583945",
+   "bytes": 12142
+  },
+  {
+   "path": "data/boros/hist/market-data/9-BINANCE-ETHUSDT-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "cdb7d6d38cdafdef7e63bd9efeefa3053afcde8b96a44fe099cfc93fb339431f",
+   "bytes": 29306
+  },
+  {
+   "path": "data/boros/hist/settlement/9-BINANCE-ETHUSDT-31OCT2025/2025-09.ndjson.zip",
+   "sha256": "40596729959f517e788110d7298e23fae01b7f5dc52bd81275f6acd0e8be8eea",
+   "bytes": 3028
+  },
+  {
+   "path": "data/boros/hist/settlement/9-BINANCE-ETHUSDT-31OCT2025/2025-10.ndjson.zip",
+   "sha256": "3717877ecdaaa3063ab5e4c87b8df569d4b43f5b5f2b3a9a0a01b25617a8afe3",
+   "bytes": 5826
+  },
+  {
+   "path": "data/boros/hist/market-data/90-HYPERLIQUID-BTC-24APR2026/2026-03.ndjson.zip",
+   "sha256": "ea739ab8fecb9320f8197e67f65e0f1c4f9ef22c8e648811ad3102a7c5e24381",
+   "bytes": 7919
+  },
+  {
+   "path": "data/boros/hist/market-data/90-HYPERLIQUID-BTC-24APR2026/2026-04.ndjson.zip",
+   "sha256": "0b293306f5612669aef16a154761e6bb7f1ed753109ddbb1f6e04135b3a549d8",
+   "bytes": 28962
+  },
+  {
+   "path": "data/boros/hist/settlement/90-HYPERLIQUID-BTC-24APR2026/2026-03.ndjson.zip",
+   "sha256": "f33a55aa4e9f35d288884e3c76dc5d5e4ac2b836d547e4fb38a563c08a1600a6",
+   "bytes": 11082
+  },
+  {
+   "path": "data/boros/hist/settlement/90-HYPERLIQUID-BTC-24APR2026/2026-04.ndjson.zip",
+   "sha256": "4cae50a44f7fc0f82561e716970f63a1be3f3e6f221fc887c125e21898c8540c",
+   "bytes": 33110
+  },
+  {
+   "path": "data/boros/hist/market-data/91-HYPERLIQUID-BTC-24APR2026/2026-03.ndjson.zip",
+   "sha256": "77e78be1ea6cd791d7a968f4d5eeb2ee928aa7624de21757fa6c5393d3ef10a0",
+   "bytes": 6168
+  },
+  {
+   "path": "data/boros/hist/market-data/91-HYPERLIQUID-BTC-24APR2026/2026-04.ndjson.zip",
+   "sha256": "a6269c80844a9430aa85cf59ab1d9ac3da140a9cda4a6f0a95cd461e24e35bc3",
+   "bytes": 23285
+  },
+  {
+   "path": "data/boros/hist/settlement/91-HYPERLIQUID-BTC-24APR2026/2026-03.ndjson.zip",
+   "sha256": "bf6e8ab65ef15e5c085c1a255c9075af4431b21f58ec43b077974fb78a534296",
+   "bytes": 11082
+  },
+  {
+   "path": "data/boros/hist/settlement/91-HYPERLIQUID-BTC-24APR2026/2026-04.ndjson.zip",
+   "sha256": "fba9e25184465e4c03ad265c39902367725f1353db8cf4bef16593ce43c7c2c7",
+   "bytes": 33110
+  },
+  {
+   "path": "data/boros/hist/market-data/92-OKX-BTCUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "40c378cb6b29c63f9e3d7cfca09249a231b74d50834fa3ed0504004db24f2043",
+   "bytes": 4707
+  },
+  {
+   "path": "data/boros/hist/market-data/92-OKX-BTCUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "3d9edbca1fe7120887f153bee00c30c254b2df1a6880e1ef5aab8fd20c99650d",
+   "bytes": 14791
+  },
+  {
+   "path": "data/boros/hist/settlement/92-OKX-BTCUSDT-24APR2026/2026-03.ndjson.zip",
+   "sha256": "b32382aca3ed9537c024f2121482115fbcb3e5b2c5ecce56385c575b8bf0d3f0",
+   "bytes": 1793
+  },
+  {
+   "path": "data/boros/hist/settlement/92-OKX-BTCUSDT-24APR2026/2026-04.ndjson.zip",
+   "sha256": "6f3692c8713198ddf8eb2b65491ae82a037b9e7fc6450cea107d938f06609e41",
+   "bytes": 4806
+  }
+ ]
+}
