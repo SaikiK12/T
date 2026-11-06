@@ -104,7 +104,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (147)
+## Run: one lane's frozen measurement (148)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -168,6 +168,7 @@ line is the first line of the script's own docstring.
 - [`run_impact.py`](run_impact.py): impact_v1 (R262): square-root market impact on flow books A, B and X2 at capital $1k-$10M, on top of the tier costs, as set out in experiments/impact_v1/PREREG.md.
 - [`run_intrars.py`](run_intrars.py): intrars_v1 (R300): intraday cross-sectional relative strength among the top 50 perps (M318, from Linda Raschke on Better System Trader 124).
 - [`run_itsm.py`](run_itsm.py): itsm_v1 (R203): intraday time-series momentum, as set out in experiments/itsm_v1/PREREG.md.
+- [`run_kraken_carry.py`](run_kraken_carry.py): R418: sole offline Kraken EEA funding/capital/cost screen, with public-source gaps explicit.
 - [`run_levcarry.py`](run_levcarry.py): levcarry_v1 (R280): leverage and liquidation on the forward carry books, as set out in experiments/levcarry_v1/PREREG.md.
 - [`run_level_probability.py`](run_level_probability.py): R330 two-stage, offline close-level probability and net-cost diagnostic.
 - [`run_levels_lighter.py`](run_levels_lighter.py): R337 levels_lighter_v1: R333's level trades on Lighter's own hourly prices, at Lighter's measured book cost (gate 0).
@@ -254,7 +255,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (28)
+## Check: parity, audits and integrity (29)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -271,6 +272,7 @@ line is the first line of the script's own docstring.
 - [`check_dated_carry_v2.py`](check_dated_carry_v2.py): R328 label/lineage wrapper around the frozen independent R327 raw oracle.
 - [`check_dependent_null.py`](check_dependent_null.py): Independent literal R321 binomial/OBM/selected-bootstrap arithmetic audit.
 - [`check_funding_prefix.py`](check_funding_prefix.py): Literal rational audit of R322 saved component fixtures; no market validation.
+- [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_level_probability_v2.py`](check_level_probability_v2.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
