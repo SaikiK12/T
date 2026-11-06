@@ -13,6 +13,7 @@ recommendation to the current repository.
 | [Briefing for owner Claude](Briefing%20for%20owner%20Claude.md) | Preserved owner briefing |
 | [Edge leads after the registry map](Edge%20leads%20after%20the%20registry%20map.md) | Dated lead review against the registry |
 | [Alternatives to crypto perps](Alternatives%20to%20crypto%20perps.md) | Alternative market/access discussion |
+| [Crypto strategy evidence review (2026-11-06)](crypto-strategy-evidence-2026-11-06.md) | Source-verified carry, event, order-flow, venue execution, France access and data review |
 
 Current method status belongs to [the registry](../registry/README.md), and
 exact tested scope belongs to each experiment's native files. These reports
