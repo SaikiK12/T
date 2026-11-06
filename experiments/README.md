@@ -43,7 +43,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 
 ## Other registered rounds (done, registered or planned) (172)
 
-- **[carry_execution_v1](carry_execution_v1/)** R417, REGISTERED PENDING, 0 trials. M485 bounded BTC displayed-depth sizes and segregated linear-perp one-leg stress accounting; zero predictive trials ([PREREG](carry_execution_v1/PREREG.md))
+- **[carry_execution_v1](carry_execution_v1/)** R417, REGISTERED PENDING, 0 trials. M485 bounded BTC displayed-depth sizes and segregated linear-perp one-leg stress accounting; zero predictive trials ([PREREG](carry_execution_v1/PREREG.md), [FINDINGS](carry_execution_v1/FINDINGS.md))
 - **[gexfilter_v1](gexfilter_v1/)** R416, DONE NULL, 2 trials. M486: S&P 500 dealer gamma (SqueezeMetrics' free daily GEX, rank over 252 days) as a predictor of BTC/ETH log realized volatility over the next US session, beyond VIX and lagged RV; NW t, IS 2021-01..2025-06, HOLD 2025-07..2026-09 ([PREREG](gexfilter_v1/PREREG.md), [FINDINGS](gexfilter_v1/FINDINGS.md))
 - **[famswitch_v1](famswitch_v1/)** R414, DONE NULL, 2 trials. Owner's blind-switch idea: exponential weights (HEDGE) and monthly follow-the-leader (FTL) across 12 lab strategy streams (carry, flow, events archive results) vs equal capital, 2023-09..2026-09, switching cost 0.20%/unit moved x m ([PREREG](famswitch_v1/PREREG.md), [FINDINGS](famswitch_v1/FINDINGS.md))
 - **[boroslock_v1](boroslock_v1/)** R412, DONE DATA_PASS, 0 trials. M480 item 97: does a Boros (Pendle) funding-rate lock at the best bid deliver its locked APR? Matured BTC/ETH markets on Binance and Hyperliquid, 2025-08..2026-09; a measurement, no trade ([PREREG](boroslock_v1/PREREG.md), [FINDINGS](boroslock_v1/FINDINGS.md))
