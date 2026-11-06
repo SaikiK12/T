@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (22)
+## Running or armed registered rounds (23)
 
+- **[boroslock_fwd](boroslock_fwd/)** R413, RUNNING PENDING, 2 trials. M480 forward: Boros funding locks on paper at live order-book bids ($10k), BTC/ETH on Binance and Hyperliquid; books K0 (best carry over T-bill + 0.30% round trip >= 0) and K1 (>= 1%/yr), settled against venue funding and Boros settlements ([PREREG](boroslock_fwd/PREREG.md), [journal](boroslock_fwd/journal/))
 - **[lockcarry_fwd2](lockcarry_fwd2/)** R406, RUNNING PENDING, 2 trials. R335's locked cash-and-carry forward on paper on Deribit BTC/ETH (R405 with its FRED fetch fixed): executable locked yield vs the T-bill hourly, books H0 (shortest beating the T-bill) and H3 (best beating it by 3%/yr), settled at the published delivery price ([PREREG](lockcarry_fwd2/PREREG.md), [journal](lockcarry_fwd2/journal/))
 - **[book_costs_v1](book_costs_v1/)** R404, RUNNING PENDING, 0 trials. Taker cost from public order books on every listed dYdX, KuCoin and MEXC perp, 3-hourly to 2026-11-18; cost input for M469, no strategy test ([PREREG](book_costs_v1/PREREG.md), [journal](book_costs_v1/journal/))
 - **[xfund_bg_fwd](xfund_bg_fwd/)** R390, RUNNING PENDING, 1 trial. R286 C14's binance+gate cross-venue carry book (R275 L14d th10% K20) forward on paper from 2026-11-04 ([PREREG](xfund_bg_fwd/PREREG.md), [journal](xfund_bg_fwd/journal/))

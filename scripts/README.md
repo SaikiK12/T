@@ -70,11 +70,12 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (28)
+## Forward: paper lanes and the loops that run them (29)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
 - [`forward_announce.py`](forward_announce.py): R272 announce_fwd: R271's two candidates forward on MEXC paper (experiments/announce_fwd/PREREG.md).
+- [`forward_boroslock.py`](forward_boroslock.py): boroslock_fwd (R413): Boros funding locks forward on paper, as set out in experiments/boroslock_fwd/PREREG.md.
 - [`forward_carry.py`](forward_carry.py): carry_fwd (R220): the R191 funding carry rule forward on paper, entered one bar late, on Binance and on MEXC, as set out in experiments/carry_fwd/PREREG.md.
 - [`forward_delayed.py`](forward_delayed.py): flow72_fwd3 (R214): R200's forward books with each slice entered one bar after its signal bar, as set out in experiments/flow72_fwd3/PREREG.md.
 - [`forward_delist.py`](forward_delist.py): R268 delist_fwd: the spot delisting-notice short, forward on MEXC paper (experiments/delist_fwd/PREREG.md).
@@ -298,12 +299,13 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (79)
+## Tools and everything else (80)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
 - [`bls_calendar.py`](bls_calendar.py): Restricted BLS iCalendar reader: announced schedules, not actual releases.
+- [`boroslock_fwd_rule.py`](boroslock_fwd_rule.py): The rule of R413 boroslock_fwd: Boros funding locks on paper, priced from the live order book (pure functions only).
 - [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
 - [`capture_mexc_funding_forecasts.py`](capture_mexc_funding_forecasts.py): One-shot public MEXC next-funding capture.
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
