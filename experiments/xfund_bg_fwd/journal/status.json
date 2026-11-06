@@ -1,13 +1,19 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-05T15:57:11.128189+00:00",
+ "updated": "2026-11-06T02:09:01.468084+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.988
+  "gate": 1.074
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "binance": {
    "files": 867,
    "failed": 4,
@@ -18,12 +24,6 @@
     "NUUSDT",
     "SXPUSDT"
    ]
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -154,16 +154,16 @@
     "spread_in": 0.3809
    }
   ],
-  "scored_days": 1,
-  "late_days": 1,
-  "total": -0.0005245701,
-  "total_2x": -0.0012245701,
-  "total_3x": -0.0019245701,
-  "total_close": 3.54299e-05,
+  "scored_days": 2,
+  "late_days": 2,
+  "total": 3.248250000000008e-05,
+  "total_2x": -0.0007375175,
+  "total_3x": -0.0015075175,
+  "total_close": 0.0005924825,
   "nw_t": null,
   "max_drawdown": -0.0005245701,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-05"
+ "last_day": "2026-11-06"
 }
