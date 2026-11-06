@@ -37,8 +37,9 @@ class GexFilter(unittest.TestCase):
                           "gex": np.arange(300.0)})
         g2 = g.copy()
         g2.loc[299, "gex"] = -1e9                        # only the last day changes
-        vix = "data/cboe/VIX.parquet"
         with tempfile.TemporaryDirectory() as tmp:
+            vix = Path(tmp) / "vix.parquet"                 # synthetic: data/ is not in the checkout on CI
+            pd.DataFrame({"day": g.date, "close": 20.0}).to_parquet(vix)
             p, p2 = Path(tmp) / "g1.csv", Path(tmp) / "g2.csv"
             g.to_csv(p, index=False)
             g2.to_csv(p2, index=False)

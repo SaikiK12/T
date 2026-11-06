@@ -58,3 +58,12 @@ t −0.91 in HOLD.
 - **One market, one cycle:** 2021-2026, with 2020 reserved and unread.
 - **No costs:** this is a volatility forecast, not a trade, so there is no 1x/2x/3x. A filter built on it would inherit
   the books' own costs.
+
+## Note added after the run (2026-11-06)
+`tests/test_run_gexfilter.py` was changed after the run, and this is disclosed as a deviation from the frozen inputs.
+- **Why:** CI failed because one test read the gitignored `data/cboe/VIX.parquet`.
+- **What changed:** that test now writes a synthetic VIX file in a temporary directory. No assertion changed, and the
+  runner is unchanged.
+- **What the run used:** the version frozen in the PREREG (sha256 `e6734527…`, commit 689bec1). It matched at run time
+  (`run.log`: 8 inputs match).
+- **Consequence:** a re-run would now fail the input check on that file. R416 is closed and is not re-run.
