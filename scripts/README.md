@@ -70,7 +70,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (29)
+## Forward: paper lanes and the loops that run them (30)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -86,6 +86,7 @@ line is the first line of the script's own docstring.
 - [`forward_mexc.py`](forward_mexc.py): mexc_fwd (R215): R200's forward signals traded one bar late on MEXC hourly closes and MEXC funding, as set out in experiments/mexc_fwd/PREREG.md.
 - [`forward_mexc_sq.py`](forward_mexc_sq.py): mexc_fwd_sq (R218): the agreement-squared flow book on MEXC prices and funding, one bar late, as set out in experiments/mexc_fwd_sq/PREREG.md.
 - [`forward_montag.py`](forward_montag.py): R270 montag_fwd: the Monitoring Tag short at +24 h, forward on MEXC paper (experiments/montag_fwd/PREREG.md).
+- [`forward_paperacct.py`](forward_paperacct.py): paperacct_fwd (R415): a $10,000 paper account run like a real one, as set out in experiments/paperacct_fwd/PREREG.md.
 - [`forward_seq.py`](forward_seq.py): mexc_seq (R221): the sequential decision for the MEXC flow books A, X2 and B, as set out in experiments/mexc_seq/PREREG.md.
 - [`forward_settlehop.py`](forward_settlehop.py): R355 settlehop_fwd: R354's settlement hop, forward on paper, on the funding rate a trader sees, hedged on Lighter.
 - [`forward_settlelit.py`](forward_settlelit.py): R364 settlelit_fwd: R363's Lighter settlement scalp, forward on paper, on Binance's live predicted funding rate.
