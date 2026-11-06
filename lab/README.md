@@ -16,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carry_control`](carry_control.py): Finite-deadline conditional carry control; no forecast calibration or orders.
+- [`carry_execution`](carry_execution.py): Conditional depth sweeps and segregated linear-perp cash accounting.
 - [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
@@ -69,6 +70,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`mexc_spot_wire`](mexc_spot_wire.py): Bounded structural decoder of pinned public MEXC spot-depth protobuf fields.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
+- [`okx_eea_public`](okx_eea_public.py): Bounded public EEA capability probe.
 - [`operations`](operations.py): Shared operational catalog for execution and read-only views.
 - [`orb_family`](orb_family.py): Causal long-only OR30 component and funded bar-account comparison.
 - [`orderflow`](orderflow.py): Order flow from bars that carry the taker-buy volume (Binance klines): delta, cumulative volume delta (CVD), the delta profile, and two patterns traders name, absorption and exhaustion ...
