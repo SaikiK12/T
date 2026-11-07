@@ -1,4 +1,11 @@
-# R426: negative frozen-model pilot; trade-side qualification remains open
+# R426: negative conditional pilot; recorded trade roles supported by R427
+
+**Later sampled qualification, R427:** the existing maker-side convention
+matches219/219recorded account-position transitions across WTI/Brent; the
+opposite convention matches0/219. See [R427](../lighter_trade_contract_v1/FINDINGS.md).
+This supports the recorded assignment, while global field/deployment, clock,
+queue, funding and own-fill qualification remain open. R426 was not rerun;
+all frozen inputs and the original negative/unknown outputs are unchanged.
 
 **Post-run source warning, 2026-11-07:** Lighter's agent-kit trade example
 describes `is_maker_ask` in the opposite direction to this frozen model and
