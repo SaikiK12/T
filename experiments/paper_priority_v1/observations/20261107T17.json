@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-11-07T18:36:02.569628+00:00",
+  "scope": "Read-only native health/transport proof; no local source tick or financial-statistical run",
+  "state_commit": "89cc3a8fb66aa1b63245b1c6d1d6492f6b944590",
+  "manifest_sha256": "af051e713c63eb2558122c07925c33cdc550c3611a7a1538b78d34736e14de3c",
+  "active_contract": "R422",
+  "manifest_updated_utc": "2026-11-07T17:50:38.712293+00:00",
+  "selected_workflow_run_id": 42398223226,
+  "selected_report": "data/operations/quant_priority_v1/latest.json",
+  "verified_manifest_file_hashes": 462,
+  "verified_wire_content_pairs": 168,
+  "new_contract_starts": 168,
+  "new_contract_ends": 168,
+  "new_contract_charged_wire_bytes": 140252,
+  "decoded_content_bytes": 601801,
+  "inherited_calls": 190,
+  "inherited_charged_bytes": 14976815,
+  "cumulative_calls": 358,
+  "cumulative_charged_bytes": 15117067,
+  "original_aux_byte_ceiling": 16777216,
+  "remaining_original_aux_bytes": 1660149,
+  "budget_reset": false,
+  "native_statuses": [
+    {
+      "rid": "R413",
+      "path": "experiments/boroslock_fwd/journal/status.json",
+      "source_updated_utc": "2026-11-07T17:50:32Z",
+      "ticks": 10,
+      "locks": 4,
+      "settled": 0,
+      "sha256": "846c51a1a61efc05241e8cfc34b70fbddbdab5e83bbf230f2d198b1728ee98b4"
+    },
+    {
+      "rid": "R406",
+      "path": "experiments/lockcarry_fwd2/journal/status.json",
+      "source_updated_utc": "2026-11-07T17:50:37Z",
+      "ticks": 13,
+      "locks": 2,
+      "settled": 0,
+      "sha256": "5dad193be94c3a0168e6fbd368ead5424c2a4cee9bf8ae4f37823f12afd8772c"
+    }
+  ],
+  "R419_latest_packet": {
+    "path": "data/recorders/eea_pair_capture_v1/packets/20261107T17/packet.json",
+    "sha256": "f6b03b4ca44a48be4039dfd7b5e1054485d1e1fcd363f53c90e644c3c5e8536d",
+    "hour": "20261107T17"
+  },
+  "legacy_stale_rids": [
+    "R415",
+    "R285",
+    "R278",
+    "R279",
+    "R390"
+  ],
+  "all_project_lanes_running": false,
+  "settlement_profit_proven": false,
+  "real_orders_allowed": false
+}

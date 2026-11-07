@@ -1,4 +1,13 @@
-# R426: simple touch quoting loses on this short conditional pilot
+# R426: negative frozen-model pilot; trade-side qualification remains open
+
+**Post-run source warning, 2026-11-07:** Lighter's agent-kit trade example
+describes `is_maker_ask` in the opposite direction to this frozen model and
+the existing tape parser. Nautilus's independently maintained connector
+supports the model's convention, but is not an exchange cash/ack witness.
+The disagreement is unresolved; the outputs below are conditional on the
+registered convention, not a source-qualified empirical rejection of touch
+quoting. See the [source supplement](SOURCE_QUALIFICATION.md). No frozen
+code/input, native result, trade sign or outcome was changed or rerun.
 
 **PARTIAL_EXECUTION_DIAGNOSTIC_ONLY.** Among36fixed cases,18have a numerical
 before-funding outcome, all negative;6WTI1000cases have an unpriced terminal
@@ -62,7 +71,8 @@ Fresh doc-reader failures are disclosed in the frozen source note.
 
 ## Unresolved mechanics and evidence grade
 
-**OOS/live:no. Costs:partly. Evidence:C, conditional short-fragment model.**
+**OOS/live:no. Costs:partly. Evidence:C for the conditional model only;
+observed trade-side qualification is unresolved.**
 Funding is unmeasured, source matching/local clock alignment is not calibrated,
 private order/cancel/fill acks and queue position are absent, counterfactual
 impact is unproved, historical tick/minimum equivalence is assumed, and

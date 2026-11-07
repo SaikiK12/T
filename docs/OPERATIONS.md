@@ -53,6 +53,14 @@ total15,011,954of16,777,216charged auxiliary bytes. The [deployment receipt](../
 binds282file hashes and42wire/content pairs. This is observed source health,
 not proof of paper profit, future uptime or all-project recovery.
 
+A later [read-only observation](../experiments/paper_priority_v1/observations/20261107T17.json)
+verifies state89cc3a8f after workflow42398223226: all462manifested file hashes
+and168wire/content pairs match. Native papers updated at17:50UTC, with
+zero settlements; R419 has its17UTC source packet. Cumulative auxiliary
+spend is358calls/15117067bytes, leaving1660149bytes of the same original
+ceiling. Five legacy lanes remain stale. These are observed source receipts,
+not proof that every lane runs or that the account earns money.
+
 The paragraphs below retain R420's original scope/evidence and ceilings.
 
 Originally [Paper lab runtime](../.github/workflows/quant-runtime.yml) was the

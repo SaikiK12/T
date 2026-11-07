@@ -1,0 +1,32 @@
+{
+  "scope": "raw transport identity only; no rates/prices/PnL summarized",
+  "responses": [
+    {
+      "source": "WTI_lighter",
+      "response_bytes": 27342,
+      "sha256": "7b95435ba383c74ab963b243f88389e85d3d6e7917fd9af051df2ec5222a2478",
+      "pass": true
+    },
+    {
+      "source": "BRENTOIL_lighter",
+      "response_bytes": 27292,
+      "sha256": "0a9ccb6b7c79155588d0ce244996b4cdc499fd6a92da9f1d98053dbac4d1c9ed",
+      "pass": true
+    },
+    {
+      "source": "WTI_kraken",
+      "response_bytes": 454711,
+      "sha256": "599d5ee71b6a75dda7ec729dae22280d9900b38486235ae788c8c81cb42aff15",
+      "pass": true
+    },
+    {
+      "source": "BRENTOIL_kraken",
+      "response_bytes": 221488,
+      "sha256": "00647b27ab77456987f280aaee781e5dbb4439eef0332a07813de612757e74e2",
+      "pass": true
+    }
+  ],
+  "calls": 4,
+  "actual_new_bytes": 730833,
+  "allowance_reset": false
+}

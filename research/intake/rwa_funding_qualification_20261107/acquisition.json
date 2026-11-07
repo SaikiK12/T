@@ -1,0 +1,147 @@
+{
+  "requests": [
+    {
+      "name": "WTI_lighter",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=145&resolution=1h&start_timestamp=1792800000&end_timestamp=1794009600&count_back=0",
+      "organization": "Lighter",
+      "symbol": "WTI",
+      "publication_date": "undated public historical API",
+      "started_utc": "2026-11-07T18:23:51.791151+00:00",
+      "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "auth": false,
+      "cap": 65536,
+      "counts_only": {
+        "rows": 335,
+        "unique_timestamps": 335,
+        "oldest": 1792803600,
+        "newest": 1794006000,
+        "envelope_fields": [
+          "code",
+          "fundings",
+          "resolution"
+        ],
+        "row_fields": [
+          "direction",
+          "rate",
+          "timestamp",
+          "value"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T18:23:52.202691+00:00",
+      "bytes_read": 27342,
+      "charged_bytes": 27342,
+      "response_complete": true,
+      "sha256": "7b95435ba383c74ab963b243f88389e85d3d6e7917fd9af051df2ec5222a2478",
+      "body": "WTI_lighter.body.gz",
+      "error": null
+    },
+    {
+      "name": "BRENTOIL_lighter",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=159&resolution=1h&start_timestamp=1792800000&end_timestamp=1794009600&count_back=0",
+      "organization": "Lighter",
+      "symbol": "BRENTOIL",
+      "publication_date": "undated public historical API",
+      "started_utc": "2026-11-07T18:23:52.204379+00:00",
+      "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "auth": false,
+      "cap": 65536,
+      "counts_only": {
+        "rows": 335,
+        "unique_timestamps": 335,
+        "oldest": 1792803600,
+        "newest": 1794006000,
+        "envelope_fields": [
+          "code",
+          "fundings",
+          "resolution"
+        ],
+        "row_fields": [
+          "direction",
+          "rate",
+          "timestamp",
+          "value"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T18:23:52.756793+00:00",
+      "bytes_read": 27292,
+      "charged_bytes": 27292,
+      "response_complete": true,
+      "sha256": "0a9ccb6b7c79155588d0ce244996b4cdc499fd6a92da9f1d98053dbac4d1c9ed",
+      "body": "BRENTOIL_lighter.body.gz",
+      "error": null
+    },
+    {
+      "name": "WTI_kraken",
+      "url": "https://futures.kraken.com/derivatives/api/v3/historical-funding-rates?symbol=PF_WTIOILUSD",
+      "organization": "Kraken",
+      "symbol": "WTI",
+      "publication_date": "undated public historical API",
+      "started_utc": "2026-11-07T18:23:52.758151+00:00",
+      "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "auth": false,
+      "cap": 524288,
+      "counts_only": {
+        "rows": 3918,
+        "unique_timestamps": 3918,
+        "oldest": "2026-05-28T12:00:00Z",
+        "newest": "2026-11-07T18:00:00Z",
+        "row_fields": [
+          "fundingRate",
+          "relativeFundingRate",
+          "timestamp"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T18:23:53.219976+00:00",
+      "bytes_read": 454711,
+      "charged_bytes": 454711,
+      "response_complete": true,
+      "sha256": "599d5ee71b6a75dda7ec729dae22280d9900b38486235ae788c8c81cb42aff15",
+      "body": "WTI_kraken.body.gz",
+      "error": null
+    },
+    {
+      "name": "BRENTOIL_kraken",
+      "url": "https://futures.kraken.com/derivatives/api/v3/historical-funding-rates?symbol=PF_BRENTOILUSD",
+      "organization": "Kraken",
+      "symbol": "BRENTOIL",
+      "publication_date": "undated public historical API",
+      "started_utc": "2026-11-07T18:23:53.248594+00:00",
+      "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "auth": false,
+      "cap": 524288,
+      "counts_only": {
+        "rows": 1902,
+        "unique_timestamps": 1902,
+        "oldest": "2026-08-20T12:00:00Z",
+        "newest": "2026-11-07T18:00:00Z",
+        "row_fields": [
+          "fundingRate",
+          "relativeFundingRate",
+          "timestamp"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T18:23:53.707268+00:00",
+      "bytes_read": 221488,
+      "charged_bytes": 221488,
+      "response_complete": true,
+      "sha256": "00647b27ab77456987f280aaee781e5dbb4439eef0332a07813de612757e74e2",
+      "body": "BRENTOIL_kraken.body.gz",
+      "error": null
+    }
+  ],
+  "total_calls": 4,
+  "total_charged_bytes": 730833,
+  "financial_values_summarized": false
+}
