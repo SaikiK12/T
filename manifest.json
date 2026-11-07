@@ -4,8 +4,8 @@
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
-      "mtime_ns": 1794045241962017411,
-      "sha256": "4861110c9a1e34be567d9a89baa8dbff1766565275541258fa466b1346e04aab"
+      "mtime_ns": 1794048614114003300,
+      "sha256": "da5fbece1ae90d47810520df3b34c550d38f01149fe8afbba7766d62897975ee"
     },
     "data/operations/quant_takeover_v1/latest.json": {
       "mtime_ns": 1794045241962017411,
@@ -194,6 +194,10 @@
     "data/operations/quant_takeover_v1/runs/20261107T09/reservation.json": {
       "mtime_ns": 1794045230737670417,
       "sha256": "6b2485abb4163d57aebb1fdc088702d6d255728a5d855dfc69f896a5ec98e53e"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T10/reservation.json": {
+      "mtime_ns": 1794048614114003300,
+      "sha256": "c046cdf880f7711422623c9f865b65a181d108f02154f8a2032b8c516979debb"
     },
     "data/recorders/deribit_chain/2026-11-07/04.parquet": {
       "mtime_ns": 1794024511091961283,
@@ -524,12 +528,12 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_takeover_v1/latest.json",
+  "last_report": "data/operations/quant_takeover_v1/runs/20261107T10/reservation.json",
   "meaning": "Bootstrap only. No live source invocation or journal continuity is certified.",
   "owner": "github-actions",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T09:54:02.248358+00:00"
+  "updated_utc": "2026-11-07T10:50:14.207649+00:00"
 }
