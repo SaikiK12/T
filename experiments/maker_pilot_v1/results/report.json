@@ -1,0 +1,5683 @@
+{
+  "round": "R426",
+  "prereg_sha256": "67b52c8b7cb8e9255ce4775b34a5fe0599324020f6dc7e63200ce06f805e34d0",
+  "strategy_arms": 12,
+  "program_trials": 9784361,
+  "cases": [
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.196152333333",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.136899000000",
+      "mid_mark_before_funding": "-0.136860000000",
+      "terminal_exit_drag": "0.000039000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.196152333333",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.136938000000",
+      "mid_mark_before_funding": "-0.136860000000",
+      "terminal_exit_drag": "0.000078000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.196152333333",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.136977000000",
+      "mid_mark_before_funding": "-0.136860000000",
+      "terminal_exit_drag": "0.000117000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.175654596653",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.003998450800",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000317310240",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.003997861000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000423217600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.003577002600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.004004702680",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.004004977920",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.004005213840",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.024328736680",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.163453385560",
+      "mid_mark_before_funding": "-0.161188736680",
+      "terminal_exit_drag": "0.000039000000",
+      "terminal_taker_fee": "0.002225648880",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.151325859973",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.007996901600",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000634620480",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.007995722000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000846435200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.007154005200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.008009405360",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.008009955840",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.008010427680",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.048657473360",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.190046771120",
+      "mid_mark_before_funding": "-0.185517473360",
+      "terminal_exit_drag": "0.000078000000",
+      "terminal_taker_fee": "0.004451297760",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.983000000000",
+      "quote_usd": "100",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.126997123293",
+      "hypothetical_orders": 23,
+      "accepted_in_model": 15,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.011995352400",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.983000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000951930720",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.011993583000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.001269652800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.182000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "0.879000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.010731007800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.061000000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.012014108040",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "0.983000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.012014933760",
+          "receive_after_effective_cancel": false,
+          "inventory": "0.905000000000"
+        },
+        {
+          "order": 22,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "0.983000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.012015641520",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.078000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.061000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-0.078000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "0.905000000000"
+        }
+      ],
+      "terminal_inventory": "-0.078000000000",
+      "quote_currency_cashflow": "7.811847000000",
+      "maker_fees": "0.072986210040",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.216640156680",
+      "mid_mark_before_funding": "-0.209846210040",
+      "terminal_exit_drag": "0.000117000000",
+      "terminal_taker_fee": "0.006676946640",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.177650833333",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.280983500000"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.177650833333",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.280983500000"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.177650833333",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.280983500000"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.016953878533",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.030604622400",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000317310240",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.006455281200",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.004998343000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000398566000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.005396909000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.005396909000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.013665120000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.010134964000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000423217600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.004972806800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.005396024400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000423217600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.001599274200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.001596098560",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000317591040",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.005399153760",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.005398633000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.018290161160",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.005397997000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000004073960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.004999092480",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.005398368000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.004298323200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.014016211200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.004999386960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000399299040",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.160696954800",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.441680454800"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3331.856256923733",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.061209244800",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000634620480",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.012910562400",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.009996686000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.000797132000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.010793818000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.010793818000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.027330240000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.020269928000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000846435200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.009945613600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.010792048800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.000846435200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.003198548400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.003192197120",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000635182080",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.010798307520",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.010797266000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.036580322320",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.010795994000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000008147920",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.009998184960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.010796736000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.008596646400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.028032422400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.009998773920",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.000798598080",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.321393909600",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.602377409600"
+    },
+    {
+      "symbol": "WTI",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.833000000000",
+      "quote_usd": "1000",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3331.695559968933",
+      "hypothetical_orders": 22,
+      "accepted_in_model": 17,
+      "fills": [
+        {
+          "order": 0,
+          "receive_us": 1793237508197889,
+          "match_us": 1793237508213247,
+          "source_trade_id": 36982670385,
+          "side": 1,
+          "quantity": "7.524000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.091813867200",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.524000000000"
+        },
+        {
+          "order": 1,
+          "receive_us": 1793237514634363,
+          "match_us": 1793237514647978,
+          "source_trade_id": 36982685492,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.702000000000",
+          "maker_fee": "0.000951930720",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.446000000000"
+        },
+        {
+          "order": 0,
+          "receive_us": 1793237519596850,
+          "match_us": 1793237519610103,
+          "source_trade_id": 36982702689,
+          "side": 1,
+          "quantity": "1.587000000000",
+          "price": "101.690000000000",
+          "maker_fee": "0.019365843600",
+          "receive_after_effective_cancel": false,
+          "inventory": "9.033000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569688319,
+          "match_us": 1793237569704310,
+          "source_trade_id": 36982852200,
+          "side": -1,
+          "quantity": "1.229000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.014995029000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.804000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237569788885,
+          "match_us": 1793237569805996,
+          "source_trade_id": 36982852444,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.001195698000",
+          "receive_after_effective_cancel": false,
+          "inventory": "7.706000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570328504,
+          "match_us": 1793237570346154,
+          "source_trade_id": 36982853637,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.016190727000",
+          "receive_after_effective_cancel": false,
+          "inventory": "6.379000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694097,
+          "source_trade_id": 36982854465,
+          "side": -1,
+          "quantity": "1.327000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.016190727000",
+          "receive_after_effective_cancel": false,
+          "inventory": "5.052000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237570676686,
+          "match_us": 1793237570694191,
+          "source_trade_id": 36982854466,
+          "side": -1,
+          "quantity": "3.360000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.040995360000",
+          "receive_after_effective_cancel": false,
+          "inventory": "1.692000000000"
+        },
+        {
+          "order": 7,
+          "receive_us": 1793237571041665,
+          "match_us": 1793237571058205,
+          "source_trade_id": 36982855431,
+          "side": -1,
+          "quantity": "2.492000000000",
+          "price": "101.675000000000",
+          "maker_fee": "0.030404892000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.800000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237581937941,
+          "match_us": 1793237581954063,
+          "source_trade_id": 36982884016,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.001269652800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.904000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237582349649,
+          "match_us": 1793237582367614,
+          "source_trade_id": 36982885188,
+          "side": -1,
+          "quantity": "1.222000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.014918420400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-2.126000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592585445,
+          "match_us": 1793237592600713,
+          "source_trade_id": 36982915690,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.016188073200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.452000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592900211,
+          "match_us": 1793237592918254,
+          "source_trade_id": 36982916567,
+          "side": -1,
+          "quantity": "0.104000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.001269652800",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.556000000000"
+        },
+        {
+          "order": 9,
+          "receive_us": 1793237592907247,
+          "match_us": 1793237592924284,
+          "source_trade_id": 36982916576,
+          "side": -1,
+          "quantity": "0.393000000000",
+          "price": "101.735000000000",
+          "maker_fee": "0.004797822600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-3.949000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237599543920,
+          "match_us": 1793237599560074,
+          "source_trade_id": 36982935659,
+          "side": -1,
+          "quantity": "0.392000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.004788295680",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.341000000000"
+        },
+        {
+          "order": 11,
+          "receive_us": 1793237604648868,
+          "match_us": 1793237604663448,
+          "source_trade_id": 36982961716,
+          "side": -1,
+          "quantity": "0.078000000000",
+          "price": "101.792000000000",
+          "maker_fee": "0.000952773120",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.419000000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237619217321,
+          "match_us": 1793237619234517,
+          "source_trade_id": 36983009923,
+          "side": -1,
+          "quantity": "1.326000000000",
+          "price": "101.794000000000",
+          "maker_fee": "0.016197461280",
+          "receive_after_effective_cancel": false,
+          "inventory": "-5.745000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645222926,
+          "source_trade_id": 36983079375,
+          "side": -1,
+          "quantity": "1.325000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.016195899000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.070000000000"
+        },
+        {
+          "order": 15,
+          "receive_us": 1793237645205001,
+          "match_us": 1793237645223041,
+          "source_trade_id": 36983079376,
+          "side": -1,
+          "quantity": "4.489000000000",
+          "price": "101.861000000000",
+          "maker_fee": "0.054870483480",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.559000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021343,
+          "source_trade_id": 36983099563,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.016193991000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.234000000000"
+        },
+        {
+          "order": 14,
+          "receive_us": 1793237652002787,
+          "match_us": 1793237652021467,
+          "source_trade_id": 36983099564,
+          "side": 1,
+          "quantity": "0.001000000000",
+          "price": "101.849000000000",
+          "maker_fee": "0.000012221880",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.233000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237702433406,
+          "match_us": 1793237702451226,
+          "source_trade_id": 36983250547,
+          "side": 1,
+          "quantity": "1.227000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.014997277440",
+          "receive_after_effective_cancel": false,
+          "inventory": "-9.006000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676262,
+          "source_trade_id": 36983261515,
+          "side": 1,
+          "quantity": "1.325000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.016195104000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-7.681000000000"
+        },
+        {
+          "order": 19,
+          "receive_us": 1793237706659138,
+          "match_us": 1793237706676428,
+          "source_trade_id": 36983261516,
+          "side": 1,
+          "quantity": "1.055000000000",
+          "price": "101.856000000000",
+          "maker_fee": "0.012894969600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-6.626000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237726713250,
+          "match_us": 1793237726732061,
+          "source_trade_id": 36983318461,
+          "side": -1,
+          "quantity": "3.440000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.042048633600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-10.066000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729022596,
+          "match_us": 1793237729042972,
+          "source_trade_id": 36983323860,
+          "side": -1,
+          "quantity": "1.227000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.014998160880",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.293000000000"
+        },
+        {
+          "order": 21,
+          "receive_us": 1793237729813588,
+          "match_us": 1793237729832875,
+          "source_trade_id": 36983325957,
+          "side": -1,
+          "quantity": "0.098000000000",
+          "price": "101.862000000000",
+          "maker_fee": "0.001197897120",
+          "receive_after_effective_cancel": false,
+          "inventory": "-11.391000000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": false,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "9.033000000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.800000000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-3.949000000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.419000000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": false,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-5.745000000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-10.233000000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-6.626000000000"
+        }
+      ],
+      "terminal_inventory": "-11.391000000000",
+      "quote_currency_cashflow": "1159.535958000000",
+      "maker_fees": "0.482090864400",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "EXIT_DEPTH_UNQUALIFIED",
+      "pnl": null,
+      "mid_mark_before_funding": "-1.763074364400"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "standard_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "NATGAS",
+      "fee_profile": "premium_hypothesis",
+      "state": "NO_TRADE_FILE",
+      "pnl": null,
+      "actual_fills": false,
+      "meaning": "Missing trade file is not zero trades or zero profit"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.170955333333",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.251760000000",
+      "mid_mark_before_funding": "-0.242811000000",
+      "terminal_exit_drag": "0.008949000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.170955333333",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.260709000000",
+      "mid_mark_before_funding": "-0.242811000000",
+      "terminal_exit_drag": "0.017898000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.170955333333",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.269658000000",
+      "mid_mark_before_funding": "-0.242811000000",
+      "terminal_exit_drag": "0.026847000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.162902654133",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.003999571200",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000047740320",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.004005367680",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000047761920",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.008100441120",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.315296990400",
+      "mid_mark_before_funding": "-0.250911441120",
+      "terminal_exit_drag": "0.008949000000",
+      "terminal_taker_fee": "0.055436549280",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.154849974933",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.007999142400",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000095480640",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.008010735360",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000095523840",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.016200882240",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.387782980800",
+      "mid_mark_before_funding": "-0.259011882240",
+      "terminal_exit_drag": "0.017898000000",
+      "terminal_taker_fee": "0.110873098560",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "0.905700000000",
+      "quote_usd": "100",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3333.146797295733",
+      "hypothetical_orders": 17,
+      "accepted_in_model": 13,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.011998713600",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.905700000000"
+        },
+        {
+          "order": 8,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000143220960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-0.894900000000"
+        },
+        {
+          "order": 10,
+          "receive_us": 1793237632497261,
+          "match_us": 1793237632512426,
+          "source_trade_id": 36983044248,
+          "side": -1,
+          "quantity": "0.905700000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.012016103040",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.800600000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000143285760",
+          "receive_after_effective_cancel": false,
+          "inventory": "-1.789800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-0.905700000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-0.894900000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-1.800600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-1.789800000000"
+        }
+      ],
+      "terminal_inventory": "-1.789800000000",
+      "quote_currency_cashflow": "197.735916000000",
+      "maker_fees": "0.024301323360",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-0.460268971200",
+      "mid_mark_before_funding": "-0.267112323360",
+      "terminal_exit_drag": "0.026847000000",
+      "terminal_taker_fee": "0.166309647840",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.221557333333",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-1.935204000000",
+      "mid_mark_before_funding": "-1.866585000000",
+      "terminal_exit_drag": "0.068619000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.221557333333",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-2.003823000000",
+      "mid_mark_before_funding": "-1.866585000000",
+      "terminal_exit_drag": "0.137238000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "standard_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.221557333333",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000000000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.000000000000",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-2.072442000000",
+      "mid_mark_before_funding": "-1.866585000000",
+      "terminal_exit_drag": "0.205857000000",
+      "terminal_taker_fee": "0.000000000000",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 1,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.160718666773",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.020700000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000047740320",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.040043164320",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000047761920",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.060838666560",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-2.421118158240",
+      "mid_mark_before_funding": "-1.927423666560",
+      "terminal_exit_drag": "0.068619000000",
+      "terminal_taker_fee": "0.425075491680",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 2,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.099880000213",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.041400000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000095480640",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.080086328640",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000095523840",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.121677333120",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-2.975651316480",
+      "mid_mark_before_funding": "-1.988262333120",
+      "terminal_exit_drag": "0.137238000000",
+      "terminal_taker_fee": "0.850150983360",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    },
+    {
+      "symbol": "BRENTOIL",
+      "fee_profile": "premium_hypothesis",
+      "quantity": "9.057900000000",
+      "quote_usd": "1000",
+      "multiple": 3,
+      "capital_allocation": "3333.333333333333",
+      "minimum_fill_time_marked_equity": "3332.039041333653",
+      "hypothetical_orders": 21,
+      "accepted_in_model": 16,
+      "fills": [
+        {
+          "order": 3,
+          "receive_us": 1793237529576498,
+          "match_us": 1793237529590747,
+          "source_trade_id": 36982734350,
+          "side": -1,
+          "quantity": "4.687500000000",
+          "price": "110.400000000000",
+          "maker_fee": "0.062100000000",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.687500000000"
+        },
+        {
+          "order": 12,
+          "receive_us": 1793237613723584,
+          "match_us": 1793237613738060,
+          "source_trade_id": 36982985357,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.510000000000",
+          "maker_fee": "0.000143220960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-4.676700000000"
+        },
+        {
+          "order": 13,
+          "receive_us": 1793237621748876,
+          "match_us": 1793237621752431,
+          "source_trade_id": 36983017307,
+          "side": -1,
+          "quantity": "9.057900000000",
+          "price": "110.520000000000",
+          "maker_fee": "0.120129492960",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.734600000000"
+        },
+        {
+          "order": 17,
+          "receive_us": 1793237673771176,
+          "match_us": 1793237673788090,
+          "source_trade_id": 36983172710,
+          "side": 1,
+          "quantity": "0.010800000000",
+          "price": "110.560000000000",
+          "maker_fee": "0.000143285760",
+          "receive_after_effective_cancel": false,
+          "inventory": "-13.723800000000"
+        }
+      ],
+      "decisions": [
+        {
+          "time": 1793237505000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237520000000,
+          "fresh": true,
+          "pos_known": "0.000000000000"
+        },
+        {
+          "time": 1793237535000000,
+          "fresh": false,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237550000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237565000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237580000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237595000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237610000000,
+          "fresh": true,
+          "pos_known": "-4.687500000000"
+        },
+        {
+          "time": 1793237625000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237640000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237655000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237670000000,
+          "fresh": true,
+          "pos_known": "-13.734600000000"
+        },
+        {
+          "time": 1793237685000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237700000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        },
+        {
+          "time": 1793237715000000,
+          "fresh": true,
+          "pos_known": "-13.723800000000"
+        }
+      ],
+      "terminal_inventory": "-13.723800000000",
+      "quote_currency_cashflow": "1516.191552000000",
+      "maker_fees": "0.182515999680",
+      "actual_fills": false,
+      "engine_clock_and_ack_certified": false,
+      "funding_and_owner_fee_entitlement_certified": false,
+      "meaning": "Conditional strict-through candidates; no queue/ack/inclusion or income-rate proof",
+      "state": "CONDITIONAL_BEFORE_FUNDING",
+      "pnl": "-3.530184474720",
+      "mid_mark_before_funding": "-2.049100999680",
+      "terminal_exit_drag": "0.205857000000",
+      "terminal_taker_fee": "1.275226475040",
+      "net_is_settled_broker_profit": false,
+      "costs": "maker fee, terminal taker fee and terminal crossing stressed1x/2x/3x; no maker touch fills"
+    }
+  ],
+  "start": "2026-10-29T01:31:45Z",
+  "end": "2026-10-29T01:35:30Z",
+  "verdict": "PARTIAL_EXECUTION_DIAGNOSTIC_ONLY",
+  "out_of_sample": false,
+  "prospective_days": 0,
+  "real_orders": false,
+  "deployed": false,
+  "portfolio_return": null,
+  "recurring_income_rate": null,
+  "confidence_of_profit": null,
+  "statement": "Source fragment, assumed ack/clock/fee/minimum conditions and unmeasured funding; no certified economic net or successful strategy"
+}
