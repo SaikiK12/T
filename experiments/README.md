@@ -41,8 +41,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (181)
+## Other registered rounds (done, registered or planned) (182)
 
+- **[lighter_trade_contract_v1](lighter_trade_contract_v1/)** R427, REGISTERED PENDING, 0 trials. Recorded Lighter trade role contract via exact signed base-position identities; two named source conventions ([PREREG](lighter_trade_contract_v1/PREREG.md), [FINDINGS](lighter_trade_contract_v1/FINDINGS.md))
 - **[maker_pilot_v1](maker_pilot_v1/)** R426, REGISTERED PENDING, 12 trials. Fixed Lighter commodity two-sided quote partial-fill inventory diagnostic on a short restored source fragment;12economic arms ([PREREG](maker_pilot_v1/PREREG.md), [FINDINGS](maker_pilot_v1/FINDINGS.md))
 - **[atomic_v2_routes_v1](atomic_v2_routes_v1/)** R425, REGISTERED PENDING, 0 trials. Disclosed prior metadata-only atomic-route RPC source qualification; no economic test ([PREREG](atomic_v2_routes_v1/PREREG.md), [FINDINGS](atomic_v2_routes_v1/FINDINGS.md))
 - **[cde_carry_screen_v1](cde_carry_screen_v1/)** R424, REGISTERED PENDING, 4 trials. Fixed CDE/Kraken opposing-perp net proxy economics with current fees, recorded-depth drag and segregated cash;4economic arms ([PREREG](cde_carry_screen_v1/PREREG.md), [FINDINGS](cde_carry_screen_v1/FINDINGS.md))

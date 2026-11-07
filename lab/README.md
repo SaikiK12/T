@@ -61,6 +61,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`level_features`](level_features.py): Receipt-bound retained candle features; no invented order-flow inputs.
 - [`level_probability`](level_probability.py): Causal close-level probabilities and common-capital research accounting.
 - [`lighter_depth_state`](lighter_depth_state.py): Fail-closed Lighter full-depth assembly, separate from executable freshness.
+- [`lighter_trade_contract`](lighter_trade_contract.py): Recorded Lighter maker/taker role qualification through signed base-position identities.
 - [`live`](live.py): Public live data from Binance USD-M futures, for paper trading only: no keys, no orders, nothing private.
 - [`locked_carry`](locked_carry.py): Fee-aware fixed-quantity inverse carry, with conditional terminal bounds.
 - [`m090_capture`](m090_capture.py): Bounded, durable M090 content capture; never qualifies a forecast clock.

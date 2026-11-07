@@ -1,0 +1,27 @@
+{
+  "round": "R427",
+  "method": "M474",
+  "hypotheses": ["true_is_maker_ask", "true_is_taker_ask"],
+  "coverage": {"min_transitions": 8, "min_accounts": 2, "min_side_transitions": 2},
+  "static_receipts": "research/intake/lighter_contract_20261107/source_receipts.json",
+  "markets": {
+    "WTI": {
+      "file": "research/intake/maker_pilot_20261107/source/data/lighter_trades/trade/WTI/2026-10-29/013600-293.parquet",
+      "expected_rows": 102,
+      "size_decimals": 3
+    },
+    "BRENTOIL": {
+      "file": "research/intake/maker_pilot_20261107/source/data/lighter_trades/trade/BRENTOIL/2026-10-29/013600-293.parquet",
+      "expected_rows": 32,
+      "size_decimals": 4
+    }
+  },
+  "ordering": ["tx_us", "trade_id"],
+  "quantization_tolerance_lots": "0.000001",
+  "identity_tolerance_lots": 0,
+  "liquidation_policy": "clear all account predecessor states before skipping the liquidation row",
+  "trade_id_gap_policy": "report known gaps; do not infer counter scope, drop transitions or certify feed completeness",
+  "prices_read": false,
+  "profit_measured": false,
+  "fitted_scale_time_or_tolerance": false
+}

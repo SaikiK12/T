@@ -1,5 +1,16 @@
 # Lighter trade-side documentation conflict
 
+## Later registered check, R427
+
+After a separately frozen/committed protocol, the existing convention
+matched169/169WTI and50/50Brent signed account-position transitions; the
+opposite convention matched none. [R427's findings](../lighter_trade_contract_v1/FINDINGS.md)
+and native report retain both interpretations and all mismatches. This
+supports the recorded convention, without certifying complete capture,
+global semantics, production vintage or private order/fill acknowledgements.
+No frozen R426 input or result was changed or rerun. The original source
+conflict below remains part of the evidence history.
+
 Read after R426's sole run on 2026-11-07, approximately18:27–18:35UTC. This
 is source/code reading, not another market-data measurement. The original
 report, frozen inputs and pre-registration remain unchanged.

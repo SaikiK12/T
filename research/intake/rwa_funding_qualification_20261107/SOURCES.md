@@ -1,5 +1,14 @@
 # M449: public WTI/Brent funding history exists; cash units remain unqualified
 
+Nov7follow-up: the official [historical-funding issue182](https://github.com/elliottech/lighter-python/issues/182)
+still has only public-user questions and no maintainer cash-unit answer in
+the retained thread. Exact body/comment identities and read scopes are in
+[R427's source intake](../lighter_contract_20261107/SOURCES.md). R427 supports
+the recorded trade-role assignment; it does not qualify funding cash.
+The latest conservative acquisition proof is now7819calls/251220970bytes,
+including the whole tiny static-document cap; the730833market bytes below
+are unchanged, with no new market source or allowance renewal.
+
 This is **counts/schema/identity/time qualification only**, acquired before
 any new financial PREREG. No rate magnitude, mean, sign distribution,
 cross-venue spread, price, return or PnL was summarized. M449 remains
