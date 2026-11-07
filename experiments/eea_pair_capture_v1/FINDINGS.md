@@ -40,6 +40,18 @@ exact. Source arithmetic inconsistencies are recorded, never used as settled
 funding scale. See [validation](validation.json) for the dated test-code hashes
 and final metadata checks.
 
+## Post-freeze source qualification, still no economic run
+
+After the immutable collector commit, the official public dashboard exposed a
+separate [MDA history route](../../research/intake/funding_notional_20261103/coinbase_public_history_20261107.md).
+Two small HTTP200 responses preserve 2,160 BTC and 2,160 ETH hourly rate rows
+from Aug9..Nov7, with one missing grid slot each. Schema/identity/date counts
+only; rate values were not summarized or scored. The earlier FairX401 remains
+true for that resource, not all Coinbase history. Cash scale/fixing and missing
+historical marks are still open. This removes a data-access obstacle for M488.
+No frozen input/code/allowlist is changed; a successor test needs a new R-id.
+The paired-book collector remains inactive and useful for execution evidence.
+
 ## Operational handoff, only to Claude's existing writer
 
 After reviewing the fresh issue-7 claim and frozen commit, Claude may invoke
