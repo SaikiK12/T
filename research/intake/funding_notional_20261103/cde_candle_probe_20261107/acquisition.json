@@ -1,0 +1,79 @@
+{
+  "requests": [
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BIP-20DEC30-CDE/candles?start=1786240800&end=1786255200&granularity=ONE_HOUR&limit=8",
+      "started_utc": "2026-11-07T14:53:56.021549+00:00",
+      "requested_start": 1786240800,
+      "requested_end": 1786255200,
+      "cap": 32768,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 5,
+        "unique_times": 5,
+        "oldest": 1786240800,
+        "newest": 1786255200,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:53:56.293263+00:00",
+      "bytes_read": 536,
+      "response_complete": true,
+      "charged_bytes": 536,
+      "sha256": "bd3f8dd9180c840934644f1b1e0471b2e1dc1137a2f089814cc8f7291573e67c",
+      "body": "btc.body.gz",
+      "error": null
+    },
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/ETP-20DEC30-CDE/candles?start=1786240800&end=1786255200&granularity=ONE_HOUR&limit=8",
+      "started_utc": "2026-11-07T14:53:56.294494+00:00",
+      "requested_start": 1786240800,
+      "requested_end": 1786255200,
+      "cap": 32768,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 5,
+        "unique_times": 5,
+        "oldest": 1786240800,
+        "newest": 1786255200,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:53:56.562078+00:00",
+      "bytes_read": 534,
+      "response_complete": true,
+      "charged_bytes": 534,
+      "sha256": "a753d805512b480421e9614eea163f1d9df7d1fc4d0df140ac6d6c8ff7cb6bbc",
+      "body": "eth.body.gz",
+      "error": null
+    }
+  ],
+  "total_calls": 2,
+  "total_charged_bytes": 1070,
+  "financial_values_inspected": false
+}

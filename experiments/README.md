@@ -41,8 +41,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (178)
+## Other registered rounds (done, registered or planned) (179)
 
+- **[cde_carry_screen_v1](cde_carry_screen_v1/)** R424, REGISTERED PENDING, 4 trials. Fixed CDE/Kraken opposing-perp net proxy economics with current fees, recorded-depth drag and segregated cash;4economic arms ([PREREG](cde_carry_screen_v1/PREREG.md), [FINDINGS](cde_carry_screen_v1/FINDINGS.md))
 - **[cde_rate_contract_v1](cde_rate_contract_v1/)** R423, REGISTERED PENDING, 0 trials. M488 exact sampled Advanced outer funding-rate field versus MDA at declared time; no fitted scale or lag ([PREREG](cde_rate_contract_v1/PREREG.md), [FINDINGS](cde_rate_contract_v1/FINDINGS.md))
 - **[paper_priority_v1](paper_priority_v1/)** R422, REGISTERED PENDING, 0 trials. Priority native papers with ordinary HTTP gzip, endpoint reservations and inherited R420 spend; same16MiB byte cap ([PREREG](paper_priority_v1/PREREG.md), [FINDINGS](paper_priority_v1/FINDINGS.md))
 - **[eea_execution_v1](eea_execution_v1/)** R421, REGISTERED PENDING, 0 trials. M488 fixed CDE/Kraken first-packet displayed-depth execution costs; two explicit raw-unit hypotheses, no funding or return ([PREREG](eea_execution_v1/PREREG.md), [FINDINGS](eea_execution_v1/FINDINGS.md))

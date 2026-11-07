@@ -19,6 +19,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`carry_execution`](carry_execution.py): Conditional depth sweeps and segregated linear-perp cash accounting.
 - [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
+- [`cde_carry_screen`](cde_carry_screen.py): Fixed-quantity segregated CDE/Kraken proxy accounting, never certified cash or fills.
 - [`cde_rate_contract`](cde_rate_contract.py): Exact sampled API-field identity, with no fitted scale/time shift or return.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
 - [`config`](config.py): Constants every lane shares.
