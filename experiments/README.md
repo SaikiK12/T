@@ -43,7 +43,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 
 ## Other registered rounds (done, registered or planned) (178)
 
-- **[cde_rate_contract_v1](cde_rate_contract_v1/)** R423, REGISTERED PENDING, 0 trials. M488 exact sampled Advanced outer funding-rate field versus MDA at declared time; no fitted scale or lag ([PREREG](cde_rate_contract_v1/PREREG.md))
+- **[cde_rate_contract_v1](cde_rate_contract_v1/)** R423, REGISTERED PENDING, 0 trials. M488 exact sampled Advanced outer funding-rate field versus MDA at declared time; no fitted scale or lag ([PREREG](cde_rate_contract_v1/PREREG.md), [FINDINGS](cde_rate_contract_v1/FINDINGS.md))
 - **[paper_priority_v1](paper_priority_v1/)** R422, REGISTERED PENDING, 0 trials. Priority native papers with ordinary HTTP gzip, endpoint reservations and inherited R420 spend; same16MiB byte cap ([PREREG](paper_priority_v1/PREREG.md), [FINDINGS](paper_priority_v1/FINDINGS.md))
 - **[eea_execution_v1](eea_execution_v1/)** R421, REGISTERED PENDING, 0 trials. M488 fixed CDE/Kraken first-packet displayed-depth execution costs; two explicit raw-unit hypotheses, no funding or return ([PREREG](eea_execution_v1/PREREG.md), [FINDINGS](eea_execution_v1/FINDINGS.md))
 - **[ops_takeover_v1](ops_takeover_v1/)** R420, REGISTERED PENDING, 0 trials. Owner-transferred durable paper operations: one serialized writer, canonical state and committed pre-HTTP reservation ([PREREG](ops_takeover_v1/PREREG.md), [FINDINGS](ops_takeover_v1/FINDINGS.md))
