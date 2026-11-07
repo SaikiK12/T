@@ -1,0 +1,134 @@
+{
+  "start": "2026-11-07T13:00:00+00:00",
+  "end": "2026-11-19T00:00:00+00:00",
+  "tasks": [
+    {
+      "id": "R419",
+      "script": "scripts/record_eea_pair.py",
+      "policy": "r419",
+      "timeout": 180,
+      "args": [
+        "--execute"
+      ]
+    },
+    {
+      "id": "R413",
+      "script": "scripts/forward_boroslock.py",
+      "policy": "aux",
+      "timeout": 240,
+      "args": []
+    },
+    {
+      "id": "R406",
+      "script": "scripts/forward_lockcarry2.py",
+      "policy": "aux",
+      "timeout": 240,
+      "args": []
+    }
+  ],
+  "policies": {
+    "r419": {
+      "max_requests": 1351,
+      "max_body_bytes": 16777216,
+      "response_cap": 1048576,
+      "prefixes": [
+        "https://api.coinbase.com/api/v3/brokerage/market/products/",
+        "https://api.coinbase.com/api/v3/brokerage/market/product_book?",
+        "https://futures.kraken.com/derivatives/api/v3/instruments",
+        "https://futures.kraken.com/derivatives/api/v3/tickers/PF_",
+        "https://futures.kraken.com/derivatives/api/v3/orderbook?symbol=PF_"
+      ]
+    },
+    "aux": {
+      "max_requests": 4096,
+      "max_body_bytes": 16777216,
+      "max_decoded_bytes": 4194304,
+      "prefixes": [
+        "https://api-boros.pendle.finance/apis/v1/assets",
+        "https://api-boros.pendle.finance/apis/v1/markets/order-book?",
+        "https://api-boros.pendle.finance/apis/v1/markets?",
+        "https://www.deribit.com/api/v2/public/get_instruments?",
+        "https://www.deribit.com/api/v2/public/get_order_book?",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
+        "https://contract.mexc.com/api/v1/contract/funding_rate"
+      ],
+      "wire_caps": {
+        "https://api-boros.pendle.finance/apis/v1/assets": 32768,
+        "https://api-boros.pendle.finance/apis/v1/markets/order-book?": 16384,
+        "https://api-boros.pendle.finance/apis/v1/markets?": 98304,
+        "https://www.deribit.com/api/v2/public/get_instruments?": 32768,
+        "https://www.deribit.com/api/v2/public/get_order_book?": 32768,
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3": 393216,
+        "https://contract.mexc.com/api/v1/contract/funding_rate": 393216
+      }
+    }
+  },
+  "state_prefixes": [
+    "data/operations/quant_takeover_v1",
+    "data/recorders/eea_pair_capture_v1",
+    "data/recorders/mexc_ticker",
+    "data/recorders/deribit_chain",
+    "data/recorders/cboe_chain",
+    "data/recorders/unlocks",
+    "experiments/boroslock_fwd/journal",
+    "experiments/lockcarry_fwd2/journal",
+    "data/operations/quant_priority_v1"
+  ],
+  "max_stored_bytes": 67108864,
+  "health_lanes": {
+    "R415": "paperacct_fwd",
+    "R285": "xbook_fwd",
+    "R278": "xfund_fwd",
+    "R279": "xfund_kc_fwd",
+    "R390": "xfund_bg_fwd",
+    "R413": "boroslock_fwd",
+    "R406": "lockcarry_fwd2"
+  },
+  "blocked": {
+    "R200": "Historical flow/metrics datasets absent; no automatic archive backfill or late-to-on-time relabeling",
+    "REC_FUNDING": "Existing multi-venue collector includes the previously geo-blocked Binance futures source",
+    "REC_NOTICES": "Existing collector uses a browser User-Agent; requires a separately frozen honest-transport successor",
+    "R404": "Full-universe cost recording and historical recovery need a separately qualified acquisition scope; native Nov18 read remains gated",
+    "R415": "Frozen account depends on fresh R285 inputs; current source snapshot is stale, no fabricated account day",
+    "R285": "Source family histories cannot be resumed completely from this checkout",
+    "R278": "Warm archive and registered carry state missing; Binance futures remains denied",
+    "R279": "Warm archives missing; Binance futures remains denied",
+    "R294": "Warm historical price/funding cache absent; no broad automatic backfill",
+    "R390": "Warm archives missing; Binance futures remains denied",
+    "REC_LIGHTER": "Unqualified full-universe capture volume; recover/qualify before resuming",
+    "REC_LTRADES": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_OPTEXP": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_CPERPS": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_DEX": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_TAPE": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_HFT": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_RAW": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_NEWS": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "REC_LINDEX": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "R355": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "R364": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "R371": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+    "R214": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R215": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R218": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R220": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R221": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R225": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R224": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R266": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R268": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R270": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R272": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "R369": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "LAG": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "PANEL": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "CATALOG": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "DASH": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "REC_DIGEST": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "REC_HLLB": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+    "REC_TICKER": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained.",
+    "REC_DERIBIT": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained.",
+    "REC_CBOE": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained.",
+    "REC_UNLOCKS": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained."
+  }
+}

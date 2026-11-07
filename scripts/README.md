@@ -310,7 +310,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (82)
+## Tools and everything else (83)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -376,6 +376,7 @@ line is the first line of the script's own docstring.
 - [`qualify_carry_costs_targeted.py`](qualify_carry_costs_targeted.py): One prospective, bounded per-contract public source qualification; no orders.
 - [`qualify_metric_archives.py`](qualify_metric_archives.py): One frozen, bounded metrics archive schema/time-label qualification; no returns.
 - [`quant_runtime.py`](quant_runtime.py): One GitHub Actions writer for the paper lab; default is a read-only operational plan.
+- [`quant_runtime_v2.py`](quant_runtime_v2.py): R422 priority paper runtime; immutable R420 state primitives, new frozen adapter.
 - [`recording_segments.py`](recording_segments.py): Segment, verify or restore one explicit RECORDED file; never uploads or deletes originals.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.

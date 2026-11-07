@@ -86,6 +86,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_entry_risk`](paper_entry_risk.py): Explicit loss-at-size scenarios for new linear-futures paper consumers.
 - [`paper_session`](paper_session.py): Single-writer paper admission and explicit-receipt bridge for new consumers.
 - [`paper_solvency`](paper_solvency.py): Current-capital veto around frozen paper risk controls; no real activation.
+- [`paper_transport`](paper_transport.py): Small, public HTTP content decoding with inherited, never-reset campaign spend.
 - [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.

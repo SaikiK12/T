@@ -5,7 +5,32 @@ Codex to take over the whole project. Issue [#7](https://github.com/SaikiK12/T/i
 records the transfer. Frozen strategy definitions, source rules, unread samples,
 existing journal history, acquisition limits and **no real stakes** remain.
 
-## One writer, independent of the chat container
+## One selected writer, independent of the chat container
+
+The canonical `manifest.json` on `codex/quant-runtime-state` selects the
+**active_contract** and **last_report**. Read those fields for the current
+writer and its native receipt. R420 is the first deployed contract. Its
+[R422 priority successor](../experiments/paper_priority_v1/FINDINGS.md) is
+reviewed/activated separately through
+[Priority paper runtime](../.github/workflows/quant-paper-priority.yml).
+Until that transition is published, R420 remains selected. After it, R420
+skips source work and only R422 writes. Both immutable workflows use the same
+global concurrency group; no second local loop.
+
+R422 admits only R419/R413/R406 and retains the original16MiB auxiliary byte
+ceiling, all old spend/blocks and native R419 limits. Smaller per-endpoint wire
+reservations and standard gzip content negotiation protect paper work from
+the paused broad recorders. Its newly frozen4096total-call limit includes the
+old calls; this is no budget reset. Gzip decoding has its own4MiB limit and
+records both wire/content hashes. The remaining original bytes can still bind.
+
+After current CI/merge, the operational owner uses the exact
+`/quant-paper-migrate` comment on issue7 for the initial serialized transition.
+That workflow checks the completed old host and publishes migration, then a
+prepared hour, before any HTTP. `/quant-tick` subsequently reaches the selected
+contract. Never fake GITHUB_ACTIONS locally or write a journal by hand.
+
+The paragraphs below retain R420's original scope/evidence and ceilings.
 
 [Paper lab runtime](../.github/workflows/quant-runtime.yml) is the sole admitted
 writer. It is scheduled at minute17 each UTC hour; `workflow_dispatch` and the
@@ -32,8 +57,10 @@ missed slots remain visible; no backdating or invented on-time days.
 Live state is persisted on branch
 [`codex/quant-runtime-state`](https://github.com/SaikiK12/T/tree/codex/quant-runtime-state),
 through `manifest.json` and `state/<original repository-relative path>`.
-The latest controller receipt is
-`state/data/operations/quant_takeover_v1/latest.json`; its per-hour run directory
+R420's controller receipt is
+`state/data/operations/quant_takeover_v1/latest.json`; R422 uses
+`state/data/operations/quant_priority_v1/latest.json`. The manifest's current
+`last_report` is authoritative. Each per-hour run directory
 holds source task logs. Native paper journals retain their original schemas.
 Code-branch journal copies remain the historical seed, not a live heartbeat.
 The methods queue and round registry on the default branch remain canonical.
@@ -76,6 +103,10 @@ whole takeover campaign, not per hour; each response has a **2MiB** ceiling.
 The first cycle consumed about6.2MB of that auxiliary byte allowance, including
 the over-limit calendar debit. These are finite pilot ceilings and may halt
 sources after only a few cycles. No schedule or later research turn renews them.
+This actually bound by the12UTC observation on Nov7:190calls and14,976,815bytes,
+with native paper status last updated08:08UTC. R422's successor preserves that
+spend and the same byte ceiling; it does not make the old papers continuous
+through their missed observations.
 R419's admitted native ceiling is **1,351 calls / 16MiB**, with **1MiB** per
 response; its own frozen transport and stricter source caps run intact. Stored state is capped
 at **64MiB**. R420 dispatch ends **2026-11-19 00:00 UTC**; only health reporting
