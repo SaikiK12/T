@@ -1,0 +1,152 @@
+{
+  "canonical_method": "M244",
+  "canonical_alias": "YT26-04-DATED-CASH-CARRY",
+  "new_strategy_count": 0,
+  "mechanisms": [
+    {
+      "id": "inverse_identity",
+      "rule": "BTC/ETH dated futures quote USD, margin/settle respectively BTC/ETH; no physical coin delivery.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "usd_face_quantity",
+      "rule": "BTC contract10USD,ETH1USD. Order amount is USDface, not contract count or coin;1000USD BTC order=100contracts.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "instrument_size_fields",
+      "rule": "base_currency identifies underlying/settlementcoin; contract_size USD. reversed instrument_type distinguishesinverse. lot_size reserved, contract_size/min_trade_amount for sizing.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "dated_delivery",
+      "rule": "Finalprice is07:30\u201308UTC30minuteindexTWAP; BTCandETH each ownindex; daily08UTCsettlementdistinct.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "mark_valuation",
+      "rule": "Unrealizedmark uses index+EMA boundedmid-minusindex; thinmarket termstructure stabilization/bounds; mark isnotlasttrade.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "bandwidth_and_adjustment",
+      "rule": "Dynamicmark/tradingbands canchange; out-of-band limitreject,marketconvertedtocappedlimit;>2.5percentmarkmistradepossibleadjust/reverse. Source table prose calls a linear future inside inversepage, retained as copy inconsistency.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "trading_session",
+      "rule": "24/7advertised; actualdailysettlementbriefmatchpause, submit/cancel/edit/massquotereject settlement_in_progress. Notcontinuousactualavailability.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "maker_execution",
+      "rule": "Limitdoesnotimplymaker; post/nonicebergcondition;hiddenicebergportiontaker. Notactualfillassumption.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "fee_ladder",
+      "rule": "Currentperp/futuremaker/takerbp:Standard1.5/3.5;VIP1 0/3;VIP2 0/2.5;VIP3 0/2;VIP4 -0.2/1.75;VIP5 -0.3/1.5;VIP6and7 -0.4/1.4. Allaccounteffectiveproofunknown.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "fee_eligibility",
+      "rule": "Equity/dollarvolumecriteria;30dayvolume;VIP1specificUSDCvs totalequity;separateoptions/futuresqualificationcanapplyhighesttier toboth. Spotnotvolumequalifying,subaccount/SMA/brokerexceptions.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "fee_migrations",
+      "rule": "Upgrade12UTCdaily rolling30days;monthlydowngradesonelevel/minimumtenure andVIP1cooldown. Notimmediatebesttierchoice.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "native_vs_routed_spot",
+      "rule": "NativeDeribitspotadvertisedzero, routedCoinbasepairssubjecttierfees; exactroutingmapunread. DoesnotproveMEXCspotentitlement.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "option_combo_discount",
+      "rule": "Buysandsellsoptionscombosdiscountlesseraggregatefee side;one-directionnoteligible; optionsratesandpremiumcapseparatefromfuture.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "futures_combo_discount",
+      "rule": "Takercheapestcombo leg100percentdiscount,makerrebateszero;blockspreadexcluded. Standalonecashcarrynotautomaticallyeligible.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "block_fee",
+      "rule": "Futures/perpblock0.025percent,option0.03percentwithcomboconditions; minimumblocksizesfaraboveintendedsmalltrade.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "collateral_fee",
+      "rule": "Negativecurrency-equitycrosscollateraldefault0.05percent/day,secondgranularity; rebalancealternative. USDsummarynotnaivesumcurrencydisplaymargin; readonlyprose,notimplementation.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "delivery_fee",
+      "rule": "WeeklyBTCETHfutures0;otherBTCETHfuturesandUSDCfutures0.025percent;DVOL0.05percent; dailyoption0,otheroption0.015percentcap. Discountsdonotapplytodelivery/liquidation; exactdatedclassificationnecessary.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "liquidation_fee",
+      "rule": "BTC/ETH/USDCfutures1percenttotalregular+liquidation; doNOTadd1percentagainonregular. Optioncapsandcombodiscountsseparate.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "transfer_and_deposit_fee",
+      "rule": "Deribitdeposit/subaccounttransferfree, externalwithdrawal/networkvariable andthirdpartychargespossible. NozeroMEXCwithdrawalassumption.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "fee_balance",
+      "rule": "Promotionalbalancepaystrading/liquidation/deliveryonly,notwithdrawable/collateral/funding/collateralfee;correctsettlementcurrencyrequired.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "fee_precedence",
+      "rule": "Basefee,onediscount,creditbalance,partnercommission;volumeoveraffiliateevenifworse,nostacking;optionscapanddiscountspecific.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "no_overnight_platform_fee",
+      "rule": "Noextraovernightholding/leverage/API/fundingplatformcommission listed;notproofnoperpetualfundingtransfer,counterpartyexposureoropportunitycost.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "daily_cash_realization",
+      "rule": "08UTCdailyPnLrealizedinternallywithoutfee/positionclose/externaltransfer; totalsinceopenunchanged andsessioncounterreset. Donotpostfullsince-entryPnLagainafterdailyposts.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "profits_available",
+      "rule": "Derivativeprofitusableasmarginbefore08,spot/transfers/withdrawalsonlyaftersettlement. Do nottreatimmediateavailablecoinaswithdrawable.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "insurance_socialization",
+      "rule": "Negativeaccountsuseinsurance; insufficiencycanallocatepro-ratasocializedlosstoprofitabletraders. Sourcecashflowconditionalonvenueperformance.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "delivery_controls",
+      "rule": "Deliveryautomaticpositionremoval; expiryGreeks/marginadjust,linearDeltadecaylast30minutes. Actualpathriskunverified.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "delivery_sampling",
+      "rule": "FinaldeliveryindexTWAPsamples4seconds; dailypricearound08notidenticalrule; time/pathandactualindexeventneeded.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "inverse_pnl_missing",
+      "rule": "CurrentinversearticlecontainsnofullreciprocalPnLworkedexample; algebrabelowisexplicitownderivationpendingformalprimarypayoffcorroboration.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    },
+    {
+      "id": "api_contract_missing",
+      "rule": "OriginalexactAPIguidancelink301only; no get_instrument/get_order_book contractsreceivedhere. Publicendpointpaths/clock/amountfieldsnotguessed.",
+      "status": "source mechanism only; not strategy tested or account verified"
+    }
+  ]
+}

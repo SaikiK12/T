@@ -1,0 +1,25 @@
+name = "announce_v1"
+events = "experiments/announce_v1/legs.csv"
+filter = { window = "reserved_2020" }
+venues = [
+  { name = "perp", col = "perp", klines = "klines_1h", funding = "fundingRate" },
+  { name = "mexc", col = "mexc", klines = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding" },
+  { name = "spot", col = "spot", klines = "spot_1h" },
+]
+horizons = [1, 24, 72, 168]
+directions = ["short", "long"]
+lines = ["net"]
+costs = [0.004, 0.008, 0.012]
+hedge = "BTCUSDT"
+hedge_cost = 0.001
+min_clusters = 10
+reps = 2000
+seed = 271
+alpha = 0.05
+g3_min = 3
+null_for = "rc_pass"
+start = "2020-01-01"
+end = "2021-01-08"
+out = "/home/user/T/experiments/reserved_batch1/work/announce_v1/results"
+kinds = ["earn_add", "prelist"]
+reserved_prereg = "/home/user/T/experiments/reserved_batch1/PREREG.md"

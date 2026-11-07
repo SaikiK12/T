@@ -1,0 +1,15 @@
+23:52:52 PREREG verified 799ffb1bbb73; 36 inputs match
+23:52:53 Lighter bands match 22 snapshots; 1071 data files in the manifest
+23:52:53 binance+lighter: 0/261 coins, 27 hops
+23:53:00 binance+lighter: 352 candidates, 244 same-coin, 622 days
+23:53:00 binance+lighter th0.3%: 221 hops, net1 12.9 bp a hop, 0.92 bp/day t 2.24
+23:53:00 binance+lighter th0.5%: 87 hops, net1 30.9 bp a hop, 0.86 bp/day t 3.24
+23:53:00 mexc+lighter: 0/261 coins, 27 hops
+23:53:05 mexc+lighter: 332 candidates, 236 same-coin, 521 days
+23:53:05 mexc+lighter th0.3%: 215 hops, net1 4.7 bp a hop, 0.38 bp/day t 0.92
+23:53:05 mexc+lighter th0.5%: 85 hops, net1 18.8 bp a hop, 0.61 bp/day t 2.36
+23:53:05 gate+lighter: 0/261 coins, 16 hops
+23:53:12 gate+lighter: 328 candidates, 225 same-coin, 622 days
+23:53:12 gate+lighter th0.3%: 205 hops, net1 17.0 bp a hop, 1.12 bp/day t 2.21
+23:53:12 gate+lighter th0.5%: 95 hops, net1 38.0 bp a hop, 1.16 bp/day t 2.75
+23:53:12 verdict PASS {'t1': True, 'day2_positive': True, 'halves_positive': True, 'without_best_coin_positive': True}; family {'bonferroni_t': 2.39, 'books_at_or_above': 2, 'books_t2': 5, 'books': 6}

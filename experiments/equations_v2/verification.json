@@ -1,0 +1,26 @@
+{
+  "R310_and_prior_registry_prefix_preserved": true,
+  "R310_outputs_unchanged": true,
+  "byte_identical_artifacts": 11,
+  "cash_reconstruction": {
+    "max_abs_dollar_error": 6.45741238258779e-11,
+    "proxy_arithmetic_only": true,
+    "unknown_intervals_remain_unscored": true,
+    "venue_day_tier_balances_checked": 40716
+  },
+  "paper_activated": false,
+  "program_trials": 9478782,
+  "reproduction_output_sha256": {
+    "coin_pnl.npz": "6846251c2d39bbf8aeb74c80ddc03e9fd2ef2105b389348fb3053b2706f9c7e9",
+    "coverage.json": "0adb3e811c5565979bd08eaaf4a9a12aa7f85b365f37f4083896523d2753b4b4",
+    "daily.csv.gz": "71515aa1f4ee3a3c679deeb8b7d9532cc554b00d44ee9f36b7b86c877227ffc9",
+    "forecast_schema.json": "7b856db042313a7aec3e27476ad03c4a3dcf829b94bdf3b8a27ac54b4d970a60",
+    "forecasts.npz": "a5236973e2d314b55c933c71f7d18151ee120d26a11898362a44a36b000d55c2",
+    "legacy_rule_replay.csv.gz": "79c44fd98a361f8cce46d5f0015db721b67ae405b639f95bf6cc82b2954959f3",
+    "manifest.json": "d98462ec405ce9f9f3d9a10e3ee0f54f913c0b91e429e61035d151ded1a7ff93",
+    "selection.json": "be7457088da6aa9ed62646d2d7cf6578ae38f8834add6b0f42a08b504cd80928",
+    "summary.csv": "8c53b804cfdaa4412e92e2460451b618c674a86ea7c00e8380658dbd6c0d509f",
+    "tickets.csv.gz": "638625b571be2e6355c952007aaacd73f1ec918ff8a99a107c29215afccb2b19",
+    "verdict.json": "0a15da357ffdd4eea3cf0eea9319277a70765f1827b828a033649be0bff424b6"
+  }
+}

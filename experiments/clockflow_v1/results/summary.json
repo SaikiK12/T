@@ -1,0 +1,80 @@
+{
+ "rid": "R289",
+ "verdict": "NULL",
+ "trials": 40,
+ "prereg_sha256": "2cd79fe519ae282e532d0b22de659790eee7c30a03198189abfa679359476232",
+ "inputs": {
+  "data/klines_1m/BTCUSDT.parquet": "9e2c7fd717811a58bca2fa5816b92b4bf59aaa5d9706c10af2522af04a1c82a0",
+  "data/klines_1m/ETHUSDT.parquet": "7c7c05b387d59fd3e40555718c28388fb66c737602102297a34de9af9c67da70",
+  "data/klines_1m/SOLUSDT.parquet": "966602440c3573e677b7578feed150b5065d2062d84869acd54e79ad58af1706",
+  "data/fundingRate/BTCUSDT.parquet": "b1cb8c15d60cc2495a8215e9c081e196c069ebf9a324f0e164a69ebdf2536ae3",
+  "data/fundingRate/ETHUSDT.parquet": "3b640724ed7ed8985b3b8ce41d5ffb6b3eaea7a6b399389ee50ceb91ef2b2e89",
+  "data/fundingRate/SOLUSDT.parquet": "e110881032024bc2f52a14511c0d3a70a0a444db5b6f4499e31418e7e93c967e",
+  "lab/sessions.py": "831fe1dfa2c794bc0467137bb10f9395895ecddecfffcbc860b2c6273faae18d",
+  "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34"
+ },
+ "families": {
+  "OPEN": {
+   "rc_p": 0.31,
+   "rc_null_p95": 2.6624996804612553,
+   "best": "OPEN_w15_k2_fade_h120",
+   "best_disc_stat": 1.8043111720309697,
+   "best_disc_net1_bp": 4.064526675605125,
+   "valid_t1": -0.4811003383686103,
+   "valid_net1_bp": -0.5562809407728433,
+   "valid_net2_bp": -0.7853646061114888,
+   "valid_net3_bp": -1.0144482714501342,
+   "valid_api_bp": -0.9762676605603597,
+   "valid_halves_net1_bp": [
+    0.4558613801498964,
+    -1.7677510710676763
+   ],
+   "pass": false,
+   "best_net1_bp_by_year": {
+    "2021": 1.385,
+    "2022": 8.919,
+    "2023": 1.122,
+    "2024": 0.192,
+    "2025": 1.094,
+    "2026": -3.766
+   },
+   "best_top5_days_share": 0.8685900245911189,
+   "best_gross_bp_per_trade_by_coin": {
+    "BTCUSDT": 24.478,
+    "ETHUSDT": 34.941,
+    "SOLUSDT": 104.608
+   }
+  },
+  "SETTLE": {
+   "rc_p": 0.8745,
+   "rc_null_p95": 2.5794728974026033,
+   "best": "SETTLE_weekly_w30_k1_fade_h120",
+   "best_disc_stat": 0.8231919673022641,
+   "best_disc_net1_bp": 0.5468405240730466,
+   "valid_t1": 1.3714117436532767,
+   "valid_net1_bp": 0.6543263244267368,
+   "valid_net2_bp": 0.38340998976538204,
+   "valid_net3_bp": 0.11249365510402756,
+   "valid_api_bp": 0.15764637754758654,
+   "valid_halves_net1_bp": [
+    0.8416004619218783,
+    0.4301710657618734
+   ],
+   "pass": false,
+   "best_net1_bp_by_year": {
+    "2021": -0.104,
+    "2022": 0.72,
+    "2023": 1.472,
+    "2024": 1.169,
+    "2025": 0.45,
+    "2026": 0.238
+   },
+   "best_top5_days_share": 0.7165964525926027,
+   "best_gross_bp_per_trade_by_coin": {
+    "BTCUSDT": 17.45,
+    "ETHUSDT": 24.609,
+    "SOLUSDT": 24.133
+   }
+  }
+ }
+}

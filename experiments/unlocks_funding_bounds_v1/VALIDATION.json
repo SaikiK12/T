@@ -1,0 +1,22 @@
+{
+ "appended_round": "R259",
+ "appended_rows": 1,
+ "branch_program_trials_after_append": 9472065,
+ "five_result_files_byte_identical": true,
+ "freeze_commit": "92075e9",
+ "full_suite_tests": 386,
+ "integrity_audit": {
+  "errors": 0,
+  "new_metadata_warning": "REGISTRY_ID_MISSING: frozen text says Registry id R259 without the parser-required colon. Explicit registry row path/SHA match; frozen text preserved.",
+  "warnings": 15
+ },
+ "new_synthetic_tests": 12,
+ "prereg_sha256": "f60aeaabbb2cd63a133edf77c485153ac3290b462c936b2011c2942a4963e056",
+ "registry_old_prefix_bytes": 32767,
+ "registry_old_prefix_sha256": "73a6050402713f349dccba47cc2e01eab866777850acb559864467f0f3a7a208",
+ "registry_prefix_preserved": true,
+ "scope_limit": "Excludes unmerged sibling R257 and unfinished R263/R265; no fresh/prospective/MEXC evidence.",
+ "second_run_from_restored_bundle": true,
+ "status": "PASS",
+ "trials_added": 2
+}

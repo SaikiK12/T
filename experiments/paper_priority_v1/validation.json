@@ -1,0 +1,32 @@
+{
+  "round": "R422",
+  "full_tests": 2542,
+  "skipped": 3,
+  "seconds": "454.588",
+  "result": "OK",
+  "new_synthetic_tests": 24,
+  "targeted_new_and_parent_tests": 67,
+  "full_log_sha256": "28dee433957578c613484b8f4e6d7e44d08e54ac2d75632ebe39f06cf491183c",
+  "prereg_sha256": "37c7da06226a54b5f19c7a0fe282166b274dacffd87c06e4ed90dcb484e6e118",
+  "frozen_inputs": 78,
+  "predictive_trials": 0,
+  "program_trials": 9784345,
+  "integrity_errors": 0,
+  "legacy_warnings": 14,
+  "catalog_matches_staged_index": true,
+  "workflow_yaml": "Parsed; same global concurrency; migration and reservation publish before HTTP; unique step ids",
+  "new_live_source_calls_before_commit": 0,
+  "activation": "Observed workflow42380207329 SUCCESS at14UTC; active_contract R422 in b9538b958fcc901604a759855afd3895ffd0932b; exact deployment.json receipt",
+  "financial_costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "tested_sha256": {
+    "lab/paper_transport.py": "53338a176f380a6b59eb43290eae5bcf6421aff7f7d748ff5590c1529f506bd4",
+    "scripts/quant_runtime_v2.py": "b1b7dfada7c988f29d0a1d4d63ad028d0f062f8183bda93ad040019f736215b9",
+    "tests/test_paper_priority.py": "bf8a0ad1f857850bbe7fa8c4d3d13f901ab4ab8d476db48bab62da9263fc12ce",
+    ".github/workflows/quant-paper-priority.yml": "b8e6a7d83e0be0113db1e60a9bbdcd726b03a93c9d897a441134393a4326535e",
+    "experiments/paper_priority_v1/config.json": "2d1625dbccead3b8c3e756cf011eab48c9b5a59055c7429cb1261c4b988bf22c"
+  }
+}

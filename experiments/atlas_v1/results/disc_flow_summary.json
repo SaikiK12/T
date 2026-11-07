@@ -1,0 +1,115 @@
+{
+ "tensors": [
+  "flow"
+ ],
+ "eras": [
+  0,
+  181,
+  365,
+  546,
+  730,
+  911,
+  1095
+ ],
+ "groupings": {
+  "session": {
+   "trials": 19250,
+   "tau_all": {
+    "flow|excess|1": 3.5,
+    "flow|excess|4": 3.0,
+    "flow|excess|12": 3.25,
+    "flow|excess|24": 3.5,
+    "flow|excess|72": 3.5,
+    "flow|raw|1": 4.5,
+    "flow|raw|4": 4.75,
+    "flow|raw|12": Infinity,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "tau_group": {
+    "flow|excess|1": Infinity,
+    "flow|excess|4": Infinity,
+    "flow|excess|12": 3.25,
+    "flow|excess|24": 3.0,
+    "flow|excess|72": 3.5,
+    "flow|raw|1": 3.5,
+    "flow|raw|4": 2.75,
+    "flow|raw|12": Infinity,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "cge_all": 28,
+   "conditional": 165,
+   "placebo_cge_all": [
+    0,
+    1
+   ]
+  },
+  "tier": {
+   "trials": 8250,
+   "tau_all": {
+    "flow|excess|1": 3.0,
+    "flow|excess|4": 2.75,
+    "flow|excess|12": 2.75,
+    "flow|excess|24": 2.75,
+    "flow|excess|72": 3.0,
+    "flow|raw|1": 3.25,
+    "flow|raw|4": 3.5,
+    "flow|raw|12": 3.75,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "tau_group": {
+    "flow|excess|1": 2.75,
+    "flow|excess|4": 3.25,
+    "flow|excess|12": 2.75,
+    "flow|excess|24": 3.0,
+    "flow|excess|72": 3.25,
+    "flow|raw|1": 3.5,
+    "flow|raw|4": 3.5,
+    "flow|raw|12": 3.75,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "cge_all": 43,
+   "conditional": 119,
+   "placebo_cge_all": [
+    1,
+    1
+   ]
+  },
+  "regime": {
+   "trials": 11000,
+   "tau_all": {
+    "flow|excess|1": 2.75,
+    "flow|excess|4": 2.75,
+    "flow|excess|12": 2.75,
+    "flow|excess|24": 3.0,
+    "flow|excess|72": 3.25,
+    "flow|raw|1": 3.75,
+    "flow|raw|4": 3.25,
+    "flow|raw|12": 3.5,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "tau_group": {
+    "flow|excess|1": Infinity,
+    "flow|excess|4": Infinity,
+    "flow|excess|12": Infinity,
+    "flow|excess|24": 3.25,
+    "flow|excess|72": 3.25,
+    "flow|raw|1": Infinity,
+    "flow|raw|4": Infinity,
+    "flow|raw|12": Infinity,
+    "flow|raw|24": Infinity,
+    "flow|raw|72": Infinity
+   },
+   "cge_all": 33,
+   "conditional": 7,
+   "placebo_cge_all": [
+    1,
+    0
+   ]
+  }
+ }
+}

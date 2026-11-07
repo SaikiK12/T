@@ -1,0 +1,91 @@
+{
+  "R327_failure_and_round_prefix_preserved": true,
+  "all_own_and_parent_code_source_raw_hashes_verified": true,
+  "all_previous_source_and_supplement_entries_preserved": true,
+  "base_commit": "1f8a480d223795ed9d03120ed3c15ea40b2e1834",
+  "full_tests": {
+    "elapsed_seconds": "201.426",
+    "passed": true,
+    "run": 1394,
+    "skipped": 2
+  },
+  "independent_numeric_audit": {
+    "actual_cash_or_expected_return_verified": false,
+    "chained_rows_checked": 324,
+    "conditional_scenarios_checked": 162,
+    "constructed_models_checked": 54,
+    "exact_fraction_equalities": true,
+    "native_journals_checked": 108,
+    "new_prospective_strategy_days": 0,
+    "parent_raw_registry_id": "R327",
+    "public_payoff_serialization_verified": false,
+    "registry_id": "R328",
+    "uncomputed_scenarios_retained": 54
+  },
+  "intake": {
+    "alias_rows": 407,
+    "errors": 0,
+    "old_method_objects": 407,
+    "provider_entries": 54,
+    "queue_rows": 328,
+    "source_manifests": 19,
+    "warnings": 0
+  },
+  "integrity": {
+    "errors": 0,
+    "frozen_verified": 141,
+    "legacy_warnings": 13,
+    "local_specs": 142,
+    "planned": 1,
+    "registry_rows": 148
+  },
+  "logs_sha256": {
+    ".cache/R328-intake.log": "42879aef26d5cd9351ae5c01d6ce50fc0a18996382deb8d4f66bc221c604f319",
+    ".cache/R328-integrity.log": "3d4c5d55d40c1500b20d4ba7f31ee2854ae8ea172164df934e950dc913cf68fd"
+  },
+  "new_market_requests_R328": 0,
+  "new_prospective_strategy_days": 0,
+  "new_strategy_trials": 0,
+  "old_407_method_objects_preserved": true,
+  "old_alias_bytes_preserved": true,
+  "old_frozen_inputs_changed": [],
+  "old_historical_budget_unchanged": {
+    "exact_remaining_bytes_known": false,
+    "reported_mib": "229.85",
+    "requests": 7757
+  },
+  "old_round_registry_prefix_preserved": true,
+  "old_spec_sidecar_code_manifests_preserved": 295,
+  "old_tracked_frozen_calculation_inputs_preserved": 122,
+  "only_method_rows_supplemented": [
+    "M244"
+  ],
+  "original_method_status_unchanged": true,
+  "owner_100_frozen_coverage_unchanged": true,
+  "program_trials": 9478970,
+  "queue_rows": 328,
+  "reproduction": {
+    "artifacts": [
+      {
+        "byte_equal": true,
+        "bytes": 452706,
+        "path": "results.json",
+        "sha256": "2f051f2de883f068b13ac8d9c38deeb273ed59b2a7e3dec4c95af99ebf423afa"
+      },
+      {
+        "byte_equal": true,
+        "bytes": 13631,
+        "path": "journals.json.gz",
+        "sha256": "2c4dd11f65208b0002c506a46bad7bc7b3ab2797e503c7b731a667c9ac0988cc"
+      },
+      {
+        "byte_equal": true,
+        "bytes": 420,
+        "path": "audit.json",
+        "sha256": "c9536668a0bac6447a186580c3bd0299b43515034e729d2fd90ec6337e634e21"
+      }
+    ],
+    "native_journals_preserved": true,
+    "new_network_requests": 0
+  }
+}

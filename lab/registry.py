@@ -57,8 +57,9 @@ def _check(row):
         raise RegistryError(f"prereg_sha {row['prereg_sha']!r} is not 8-64 lowercase hex characters")
 
 
-def append(path, id=None, **fields) -> str:
-    """Add one row and return its id. Pass id only to import an existing round; otherwise the next free one is used."""
+def append(path, /, id=None, **fields) -> str:
+    """Add one row and return its id. Pass id only to import an existing round; otherwise the next free one is used.
+    `path` is positional-only so the row's own "path" field can be passed by name."""
     unknown = set(fields) - set(FIELDS)
     if unknown:
         raise RegistryError(f"unknown fields {sorted(unknown)}")

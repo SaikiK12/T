@@ -1,0 +1,24 @@
+# R273 fundext_v1: onset of extreme funding on every Binance USD-M perp (experiments/fundext_v1/PREREG.md).
+name = "fundext_v1"
+events = "experiments/fundext_v1/legs.csv"
+filter = { window = "archive" }
+venues = [
+  { name = "perp", col = "perp", klines = "klines_1h", funding = "fundingRate" },
+]
+horizons = [1, 8, 24, 72]
+directions = ["long", "short"]
+lines = ["net"]
+costs = [0.004, 0.008, 0.012]
+hedge = "BTCUSDT"
+hedge_cost = 0.001
+min_clusters = 10
+reps = 2000
+seed = 273
+alpha = 0.05
+g3_min = 3
+null_for = "rc_pass"
+winsor = 0.05
+max_bar_jump = 20
+start = "2021-01-01"
+end = "2026-09-30"
+out = "experiments/fundext_v1/results"

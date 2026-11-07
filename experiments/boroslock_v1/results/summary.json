@@ -1,0 +1,403 @@
+{
+ "prereg_sha256": "bbbd3b48dab905e26467a81fe8610a3f85120e47abace974fab9aad69f3ad233",
+ "boros_files": 551,
+ "venue_end": {
+  "BINANCE": {
+   "BTC": 1790784000,
+   "ETH": 1790784000
+  },
+  "HYPERLIQUID": {
+   "BTC": 1792497600,
+   "ETH": 1792501200
+  }
+ },
+ "markets": [
+  "2-BINANCE-BTCUSDT-26SEP2025",
+  "8-BINANCE-BTCUSDT-31OCT2025",
+  "12-BINANCE-BTCUSDT-28NOV2025",
+  "4-BINANCE-BTCUSDT-26DEC2025",
+  "28-BINANCE-BTCUSDT-30JAN2026",
+  "48-BINANCE-BTCUSDT-27FEB2026",
+  "23-BINANCE-BTCUSDT-27MAR2026",
+  "89-BINANCE-BTCUSDT-24APR2026",
+  "107-BINANCE-BTCUSDT-29MAY2026",
+  "78-BINANCE-BTCUSDT-26JUN2026",
+  "156-BINANCE-BTCUSDT-31JUL2026",
+  "170-BINANCE-BTCUSDT-28AUG2026",
+  "130-BINANCE-BTCUSDT-25SEP2026",
+  "3-BINANCE-ETHUSDT-26SEP2025",
+  "9-BINANCE-ETHUSDT-31OCT2025",
+  "13-BINANCE-ETHUSDT-28NOV2025",
+  "5-BINANCE-ETHUSDT-26DEC2025",
+  "29-BINANCE-ETHUSDT-30JAN2026",
+  "44-BINANCE-ETHUSDT-27FEB2026",
+  "24-BINANCE-ETHUSDT-27MAR2026",
+  "86-BINANCE-ETHUSDT-24APR2026",
+  "112-BINANCE-ETHUSDT-29MAY2026",
+  "76-BINANCE-ETHUSDT-26JUN2026",
+  "154-BINANCE-ETHUSDT-31JUL2026",
+  "168-BINANCE-ETHUSDT-28AUG2026",
+  "101-BINANCE-ETHUSDT-25SEP2026",
+  "6-HYPERLIQUID-BTC-31OCT2025",
+  "10-HYPERLIQUID-BTC-31OCT2025",
+  "14-HYPERLIQUID-BTC-28NOV2025",
+  "16-HYPERLIQUID-BTC-28NOV2025",
+  "19-HYPERLIQUID-BTC-26DEC2025",
+  "21-HYPERLIQUID-BTC-26DEC2025",
+  "30-HYPERLIQUID-BTC-30JAN2026",
+  "32-HYPERLIQUID-BTC-30JAN2026",
+  "49-HYPERLIQUID-BTC-27FEB2026",
+  "50-HYPERLIQUID-BTC-27FEB2026",
+  "60-HYPERLIQUID-BTC-27MAR2026",
+  "61-HYPERLIQUID-BTC-27MAR2026",
+  "90-HYPERLIQUID-BTC-24APR2026",
+  "91-HYPERLIQUID-BTC-24APR2026",
+  "108-HYPERLIQUID-BTC-29MAY2026",
+  "109-HYPERLIQUID-BTC-29MAY2026",
+  "111-HYPERLIQUID-BTC-26JUN2026",
+  "135-HYPERLIQUID-BTC-26JUN2026",
+  "157-HYPERLIQUID-BTC-31JUL2026",
+  "161-HYPERLIQUID-BTC-31JUL2026",
+  "171-HYPERLIQUID-BTC-28AUG2026",
+  "178-HYPERLIQUID-BTC-28AUG2026",
+  "137-HYPERLIQUID-BTC-25SEP2026",
+  "194-HYPERLIQUID-BTC-25SEP2026",
+  "7-HYPERLIQUID-ETH-31OCT2025",
+  "11-HYPERLIQUID-ETH-31OCT2025",
+  "15-HYPERLIQUID-ETH-28NOV2025",
+  "17-HYPERLIQUID-ETH-28NOV2025",
+  "20-HYPERLIQUID-ETH-26DEC2025",
+  "22-HYPERLIQUID-ETH-26DEC2025",
+  "31-HYPERLIQUID-ETH-30JAN2026",
+  "33-HYPERLIQUID-ETH-30JAN2026",
+  "45-HYPERLIQUID-ETH-27FEB2026",
+  "47-HYPERLIQUID-ETH-27FEB2026",
+  "41-HYPERLIQUID-ETH-27MAR2026",
+  "87-HYPERLIQUID-ETH-24APR2026",
+  "113-HYPERLIQUID-ETH-29MAY2026",
+  "74-HYPERLIQUID-ETH-26JUN2026",
+  "155-HYPERLIQUID-ETH-31JUL2026",
+  "169-HYPERLIQUID-ETH-28AUG2026",
+  "102-HYPERLIQUID-ETH-25SEP2026"
+ ],
+ "venues": {
+  "BINANCE": {
+   "markets": 26,
+   "entries": 1613,
+   "settlements": 5513,
+   "settlements_matched": 5513,
+   "oracle_abs_diff_bp": {
+    "median": 0.0,
+    "p99": 1.3877787807814457e-13,
+    "max": 146.01825000000005
+   },
+   "oracle_within_1bp_share": 0.9996372211137312,
+   "fidelity_bp": {
+    "mean": 1.1188707397607552e-14,
+    "median_abs": 0.0,
+    "p95_abs": 1.0023968700518047e-13,
+    "max_abs": 2.0207683044623444e-13
+   },
+   "locked_pct": {
+    "mean": 3.9073907326803083,
+    "median": 4.578263721018735
+   },
+   "realized_pct_mean": 3.9073907326803083,
+   "naked_pct": {
+    "mean": 3.343712832660659,
+    "median": 3.9575364760432774
+   },
+   "naked_minus_locked_pct": {
+    "mean": -0.5636779000196498,
+    "p05": -5.307103993490292,
+    "p95": 3.495926380635237
+   },
+   "locked_minus_tbill_pct": {
+    "mean": 0.0783330761397011,
+    "median": 0.7187368092114961,
+    "share_gt0": 0.5437073775573465,
+    "share_ge1pct": 0.47303161810291383
+   },
+   "carry_minus_tbill_pct": {
+    "1x": {
+     "mean": -3.6261399328216077,
+     "share_gt0": 0.15375077495350278
+    },
+    "2x": {
+     "mean": -7.509131230685583,
+     "share_gt0": 0.02541847489150651
+    },
+    "3x": {
+     "mean": -11.392122528549558,
+     "share_gt0": 0.0
+    }
+   },
+   "spread_bp_median": 4.079069416963524,
+   "oi_median": 310.9947733543074,
+   "by_coin": {
+    "BTC": {
+     "entries": 782,
+     "locked_pct": 4.2353639939002905,
+     "fidelity_bp_mean": 1.427108607383392e-14
+    },
+    "ETH": {
+     "entries": 831,
+     "locked_pct": 3.598756448355368,
+     "fidelity_bp_mean": 8.288081495310296e-15
+    }
+   },
+   "by_month": {
+    "2025-08": {
+     "entries": 72,
+     "locked_pct": 7.153,
+     "naked_pct": 5.088,
+     "tbill_pct": 4.293
+    },
+    "2025-09": {
+     "entries": 124,
+     "locked_pct": 6.341,
+     "naked_pct": 4.07,
+     "tbill_pct": 4.066
+    },
+    "2025-10": {
+     "entries": 128,
+     "locked_pct": 5.627,
+     "naked_pct": 4.071,
+     "tbill_pct": 3.983
+    },
+    "2025-11": {
+     "entries": 106,
+     "locked_pct": 5.689,
+     "naked_pct": 4.443,
+     "tbill_pct": 3.93
+    },
+    "2025-12": {
+     "entries": 128,
+     "locked_pct": 5.11,
+     "naked_pct": 3.3,
+     "tbill_pct": 3.671
+    },
+    "2026-01": {
+     "entries": 121,
+     "locked_pct": 5.162,
+     "naked_pct": 1.404,
+     "tbill_pct": 3.664
+    },
+    "2026-02": {
+     "entries": 94,
+     "locked_pct": 2.647,
+     "naked_pct": -1.104,
+     "tbill_pct": 3.686
+    },
+    "2026-03": {
+     "entries": 94,
+     "locked_pct": 1.322,
+     "naked_pct": -0.114,
+     "tbill_pct": 3.719
+    },
+    "2026-04": {
+     "entries": 152,
+     "locked_pct": 0.738,
+     "naked_pct": 0.854,
+     "tbill_pct": 3.697
+    },
+    "2026-05": {
+     "entries": 154,
+     "locked_pct": 1.938,
+     "naked_pct": 3.766,
+     "tbill_pct": 3.685
+    },
+    "2026-06": {
+     "entries": 134,
+     "locked_pct": 2.341,
+     "naked_pct": 3.929,
+     "tbill_pct": 3.809
+    },
+    "2026-07": {
+     "entries": 170,
+     "locked_pct": 3.652,
+     "naked_pct": 5.567,
+     "tbill_pct": 3.863
+    },
+    "2026-08": {
+     "entries": 102,
+     "locked_pct": 4.753,
+     "naked_pct": 6.661,
+     "tbill_pct": 3.873
+    },
+    "2026-09": {
+     "entries": 34,
+     "locked_pct": 5.77,
+     "naked_pct": 5.603,
+     "tbill_pct": 3.997
+    }
+   },
+   "venue_events": 5513,
+   "venue_events_missed": 2,
+   "coverage": 0.9996372211137312,
+   "checks": {
+    "venue_events_with_settlement_ge_99pct": true,
+    "settlements_within_1bp_ge_99pct": true,
+    "fidelity_median_abs_le_10bp": false,
+    "fidelity_p95_abs_le_50bp": true
+   },
+   "verdict": "LOCK_DEVIATES"
+  },
+  "HYPERLIQUID": {
+   "markets": 41,
+   "entries": 1637,
+   "settlements": 48103,
+   "settlements_matched": 48103,
+   "oracle_abs_diff_bp": {
+    "median": 0.0,
+    "p99": 2.7755575615628914e-13,
+    "max": 9643.21386
+   },
+   "oracle_within_1bp_share": 0.999771324033844,
+   "fidelity_bp": {
+    "mean": -0.33808103976899473,
+    "median_abs": 3.625042378233976e-14,
+    "p95_abs": 3.5551948051949074,
+    "max_abs": 53.88844523999989
+   },
+   "locked_pct": {
+    "mean": 5.864658600543547,
+    "median": 5.842541776394227
+   },
+   "realized_pct_mean": 5.861277790145857,
+   "naked_pct": {
+    "mean": 6.5874767488131845,
+    "median": 7.68981058781726
+   },
+   "naked_minus_locked_pct": {
+    "mean": 0.7228181482696372,
+    "p05": -4.720086766234255,
+    "p95": 4.616284199772947
+   },
+   "locked_minus_tbill_pct": {
+    "mean": 2.0733085699998695,
+    "median": 1.9779756169534783,
+    "share_gt0": 0.7825290164935859,
+    "share_ge1pct": 0.592547342700061
+   },
+   "carry_minus_tbill_pct": {
+    "1x": {
+     "mean": -2.737480053930499,
+     "share_gt0": 0.21624923640806354
+    },
+    "2x": {
+     "mean": -7.71879402911316,
+     "share_gt0": 0.03176542455711668
+    },
+    "3x": {
+     "mean": -12.70010800429582,
+     "share_gt0": 0.002443494196701283
+    }
+   },
+   "spread_bp_median": 7.430801127671985,
+   "oi_median": 1925.281212664693,
+   "by_coin": {
+    "BTC": {
+     "entries": 842,
+     "locked_pct": 5.755101414966857,
+     "fidelity_bp_mean": 0.8861896446337998
+    },
+    "ETH": {
+     "entries": 795,
+     "locked_pct": 5.9806927518084185,
+     "fidelity_bp_mean": -1.6347299910484319
+    }
+   },
+   "by_month": {
+    "2025-09": {
+     "entries": 40,
+     "locked_pct": 10.152,
+     "naked_pct": 8.721,
+     "tbill_pct": 4.037
+    },
+    "2025-10": {
+     "entries": 110,
+     "locked_pct": 9.191,
+     "naked_pct": 8.682,
+     "tbill_pct": 3.992
+    },
+    "2025-11": {
+     "entries": 114,
+     "locked_pct": 8.593,
+     "naked_pct": 8.504,
+     "tbill_pct": 3.928
+    },
+    "2025-12": {
+     "entries": 132,
+     "locked_pct": 7.957,
+     "naked_pct": 7.951,
+     "tbill_pct": 3.67
+    },
+    "2026-01": {
+     "entries": 129,
+     "locked_pct": 7.961,
+     "naked_pct": 5.184,
+     "tbill_pct": 3.665
+    },
+    "2026-02": {
+     "entries": 110,
+     "locked_pct": 4.575,
+     "naked_pct": 4.078,
+     "tbill_pct": 3.685
+    },
+    "2026-03": {
+     "entries": 99,
+     "locked_pct": 3.848,
+     "naked_pct": 1.387,
+     "tbill_pct": 3.716
+    },
+    "2026-04": {
+     "entries": 168,
+     "locked_pct": 2.991,
+     "naked_pct": 2.74,
+     "tbill_pct": 3.696
+    },
+    "2026-05": {
+     "entries": 180,
+     "locked_pct": 3.257,
+     "naked_pct": 5.606,
+     "tbill_pct": 3.685
+    },
+    "2026-06": {
+     "entries": 166,
+     "locked_pct": 4.045,
+     "naked_pct": 7.244,
+     "tbill_pct": 3.809
+    },
+    "2026-07": {
+     "entries": 203,
+     "locked_pct": 5.785,
+     "naked_pct": 8.663,
+     "tbill_pct": 3.864
+    },
+    "2026-08": {
+     "entries": 135,
+     "locked_pct": 6.714,
+     "naked_pct": 9.441,
+     "tbill_pct": 3.873
+    },
+    "2026-09": {
+     "entries": 51,
+     "locked_pct": 7.873,
+     "naked_pct": 9.826,
+     "tbill_pct": 3.997
+    }
+   },
+   "venue_events": 48247,
+   "venue_events_missed": 144,
+   "coverage": 0.997015358467884,
+   "checks": {
+    "venue_events_with_settlement_ge_99pct": true,
+    "settlements_within_1bp_ge_99pct": true,
+    "fidelity_median_abs_le_10bp": true,
+    "fidelity_p95_abs_le_50bp": true
+   },
+   "verdict": "LOCK_HOLDS"
+  }
+ }
+}

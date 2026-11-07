@@ -1,0 +1,45 @@
+{
+  "costs": "Fixed size per pair from250/maxmid, rounded down to perp volUnit*contractSize and declared spot decimal grid, not increased by profiles/fees/tiers. This is a midpoint budget, not guaranteed walked gross cost <=250. Actual entry spot cash and perp reserve each <=5000.",
+  "current_capture": {
+    "budget_scope": "R325/current-spot-perp-costs/one-attempt; reservations never refunded or reset",
+    "combined_body_allowance_bytes": 2097152,
+    "concurrent_gets_max": 2,
+    "cumulative_reserved_seconds_max": 154,
+    "cycle_pause_seconds": 2,
+    "cycles": 3,
+    "depth_levels": 5,
+    "metadata_gets_max": 4,
+    "overall_wall_seconds": 180,
+    "per_attempt_reserved_seconds": 7,
+    "per_attempt_response_deadline_seconds": 6,
+    "public_gets_max": 22,
+    "quote_gets_max": 18,
+    "retries_redirects_reconnects": 0,
+    "single_accepted_body_bytes_max": 65536,
+    "stop": "incomplete/denied/redirect/429/451/5xx; unavailable400/404 stays fixed symbol row. No alternate route or replacement symbol.",
+    "symbols": [
+      "BTC",
+      "WIF",
+      "SKR"
+    ]
+  },
+  "economic_interpretation": "Four hypothetical same-book taker fills; one spot buy/sell plus perpetual short/cover. Opening premium is not realized profit. Required gross quote to break even equals crossing+explicit hypothetical quote commissions. Stress1/2/3 scales this total, with identical q/book/profile. No source prediction, horizon or funding persistence inferred.",
+  "fees": "zero-charge is an explicit floor control, never owner fees. Advertised-quote-fee uses unauthenticated public takerCommission/takerFeeRate as scenario rate inputs, not proof of owner rate/asset/promotion. No signed/account/private call.",
+  "freeze_sequence": "Commit code/spec/input contracts before capture; seal+commit original bodies/receipts/data identity before offline costs. Replay never collects or overwrites originals.",
+  "historical_allowance": "R310/R311 unchanged7757/8000requests and reported229.85/250MiB; exact remaining bytes unknown. New CURRENT tiny scope is separate, not renewed historical approval.",
+  "ledger": "Reuse frozen R324 SpotCashAccount, existing PaperAccount and pair snapshot. Supplied quote fills/fees are invented execution assumptions; explicitly post unknown funding so full NAV/PnL stays unknown. Only known four-fill price-fee component reconciles to negative1xcost, within1e-8quote. Cash reference same total10000capital; risk equivalence not asserted.",
+  "local_guards": {
+    "asof": "max completed body first-seen clocks, not report-time/live freshness",
+    "pair_receive_skew_ns": 1000000000,
+    "request_and_receipt_age_ns": 2000000000,
+    "rounded_quote_boundary_unknown_within": "1e-8",
+    "utc_vs_monotonic_step_ns": 50000000
+  },
+  "registry_id": "R325",
+  "scope": "source-bound minimum/status/permission interpretation and conditional spot/perp displayed quote frictions, never executable PnL",
+  "source_followup": "6staticGETs184953bytes completed in separately bounded source scope; no further static calls here. Official Java sendTime ms example and repo link found; aggregate bootstrap does not validate303 partial snapshots. REST depth has no source clock; crossed source example is rejected.",
+  "spot_minima": "baseSizePrecision=minimum base order quantity; quoteAmountPrecisionMarket=minimum MARKET amount; maxQuoteAmountMarket=maximum MARKET amount. None are increments. baseAssetPrecision supports only declared decimal-grid diagnostic. Actual lot/tick contract unverified.",
+  "spot_quantity_convention": "REST quantity treated as base ONLY as declared conditional convention; explicit normative asset-unit statement still absent. All actual admission remains false.",
+  "trials_and_inference": "9pair slots/36diagnostic control cells/108cost tier slots all retained,0predictive/optimization strategy trials. No sample inference, calibrated uncertainty, dependent-null acceptance, empirical profitability or new prospective strategy day. R311/R321 and owner100 frozen coverage unchanged.",
+  "unknowns": "Missing/closed/public-API-disabled/direction-restricted metadata, local clock/latency/skew, insufficient shown depth and unknown advertised-fee control stay None. Source quote age, actual spot increments/fee asset/ownerpermission/funding/exit/fills remain unresolved even when descriptive costs compute."
+}

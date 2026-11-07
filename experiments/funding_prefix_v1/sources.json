@@ -1,0 +1,136 @@
+{
+  "actual_body_bytes": 322994,
+  "actual_static_gets": 4,
+  "api_cash_decoder": false,
+  "canonical_aliases": [
+    "FV26-LT-FUNDING-PREFIX",
+    "FV26-LT-POSITION-CHECKPOINT"
+  ],
+  "license_and_access": "BUSL-1.1 headers; ordinary public static source reading, ignored targeted bodies only, no repository mirror/installation; not a full source/circuit audit",
+  "market_rpc_account_requests": 0,
+  "math_review_path": "experiments/funding_prefix_v1/math_review.md",
+  "mechanisms": [
+    {
+      "canonical_alias": "FV26-LT-FUNDING-PREFIX",
+      "id": "encoded_delta",
+      "rule": "liquidation helper q*Q*(checkpoint-prefix), no extra rate/index or division",
+      "scope_kind": "new received bounded source scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-FUNDING-PREFIX",
+      "id": "valuation_cross_check",
+      "rule": "separate risk valuation repeats same equation; not an executed Rust oracle",
+      "scope_kind": "new received bounded source scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "cross_selector",
+      "rule": "cross aggregate includes matching strategy and nonisolated slots; no extra active-market selector in exact function",
+      "scope_kind": "new received bounded source scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "old_inventory_order",
+      "rule": "initialize old position, accrue old size, route funding, update checkpoint, then resize; stale initialization outside adapter",
+      "scope_kind": "new received bounded source scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "checkpoint_route",
+      "rule": "isolated allocated margin vs cross risk collateral; no double booking; full persistent caller remains unread",
+      "scope_kind": "new received bounded source scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "aggregate_quantization",
+      "rule": "old/new aggregate margin division plus fixed entry quote; model floor component is not paid wallet credit",
+      "scope_kind": "new received bounded source scope"
+    }
+  ],
+  "missing_mechanics": [
+    "authentic_encoded_states",
+    "complete_persistent_account_route",
+    "imported_arithmetic_constraints",
+    "API_Funding.value_units",
+    "deployment_binding",
+    "actual_public_prefix_history",
+    "decimal_epoch_mapping",
+    "actual_fills_fees_sessions"
+  ],
+  "new_alias_rows": 0,
+  "new_method_rows": 0,
+  "protocol_collateral_model_implemented": true,
+  "receipts_path": "experiments/funding_prefix_v1/source_receipts.json",
+  "received_read_unread_note": "experiments/funding_prefix_v1/source_review.md",
+  "records": [
+    {
+      "body_sha256": "17e1a261d25b13defa6410cfc4d27dd203cfa903ebf37ca5371fd949026ca55f",
+      "bytes": 187132,
+      "elapsed_seconds": 0.3918904919992201,
+      "expected_blob_sha1": "152e001bebda5aeb9e12622fdada5e5ff9b2d0c3",
+      "git_blob_sha1": "152e001bebda5aeb9e12622fdada5e5ff9b2d0c3",
+      "license_seen": "BUSL-1.1 in received file header; source consulted only, not installed or bulk mirrored",
+      "name": "tx_constraints",
+      "path": "circuit/src/tx_constraints.rs",
+      "read_scope": "Imports1-220; transaction/matching/state-delta order845-980; funding/checkpoint-name search; account collateral loading1270-1290,1380-1405; margin/position/aggregate application1710-1860,1928-2005; ancillary targeted snippets3700-3830.",
+      "received_scope": "Complete body received; only listed ranges read.",
+      "source_pin_kind": "cached official Git tree object; not independently linked to commit or deployment",
+      "status": 200,
+      "tree_blob_match": true,
+      "unread_or_missing_scope": "Remainder and imported matching_engine, transaction implementations, hash/proof/arithmetic helpers unread; did not execute circuit or prove returned risk info reaches persistent cross balance.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/tx_constraints.rs"
+    },
+    {
+      "body_sha256": "f5d00993aa2a347639872384ceaeb900b1f474597694dc712ae10d7a085d55a2",
+      "bytes": 55453,
+      "elapsed_seconds": 0.34926540599553846,
+      "expected_blob_sha1": "8bcf2d4fefbbeca19a7e883da22b5c36302feb89",
+      "git_blob_sha1": "8bcf2d4fefbbeca19a7e883da22b5c36302feb89",
+      "license_seen": "BUSL-1.1 in received file header; source consulted only, not installed or bulk mirrored",
+      "name": "risk_info",
+      "path": "circuit/src/types/risk_info.rs",
+      "read_scope": "Imports/struct1-80; cross collateral/funding construction145-215; isolated funding construction275-323; position notional/unrealized funding875-939; cross strategy/isolation aggregation1072-1112; full-file funding-name index.",
+      "received_scope": "Complete body received; only listed ranges read.",
+      "source_pin_kind": "cached official Git tree object; not independently linked to commit or deployment",
+      "status": 200,
+      "tree_blob_match": true,
+      "unread_or_missing_scope": "Margin requirement helpers, other risk updates and imported bigint/unsafe arithmetic constraints not audited; no circuit execution.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/risk_info.rs"
+    },
+    {
+      "body_sha256": "b10db66da2bdbf8b30e05dabb99ccdfc91f9ba67d5302276e3b823911308c487",
+      "bytes": 59662,
+      "elapsed_seconds": 0.3875306119880406,
+      "expected_blob_sha1": "69f3e81a5e4ccf436a08e8e541970d11301e8c22",
+      "git_blob_sha1": "69f3e81a5e4ccf436a08e8e541970d11301e8c22",
+      "license_seen": "BUSL-1.1 in received file header; source consulted only, not installed or bulk mirrored",
+      "name": "apply_trade",
+      "path": "circuit/src/apply_trade.rs",
+      "read_scope": "Imports1-25; perps funding/position sequence230-404; fee and margin routing390-665; calculate_position_change668-710; targeted funding/checkpoint call-name index.",
+      "received_scope": "Complete body received; only listed ranges read.",
+      "source_pin_kind": "cached official Git tree object; not independently linked to commit or deployment",
+      "status": 200,
+      "tree_blob_match": true,
+      "unread_or_missing_scope": "Spot/binary options, full isolated margin calculation800+, later full position-change liquidation/rounding logic, matching caller, and disabled final selection logic not fully audited.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/apply_trade.rs"
+    },
+    {
+      "body_sha256": "e387c17c449e7f3e1114eb7a3ee0c50c5a4078f80d60bef73076e0abc19353c8",
+      "bytes": 20747,
+      "elapsed_seconds": 0.44717353000305593,
+      "expected_blob_sha1": "ac75fc4e1412534fc8a9b525c35ef7a2da52016d",
+      "git_blob_sha1": "ac75fc4e1412534fc8a9b525c35ef7a2da52016d",
+      "license_seen": "BUSL-1.1 in received file header; source consulted only, not installed or bulk mirrored",
+      "name": "liquidation",
+      "path": "circuit/src/liquidation.rs",
+      "read_scope": "Imports1-24; complete get_funding_delta_for_position_and_market26-57; targeted function/funding-name search of rest.",
+      "received_scope": "Complete body received; only listed ranges read.",
+      "source_pin_kind": "cached official Git tree object; not independently linked to commit or deployment",
+      "status": 200,
+      "tree_blob_match": true,
+      "unread_or_missing_scope": "Remaining liquidation calculations, imported bigint conversion/mul/sub helpers and proof constraints unread.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/liquidation.rs"
+    }
+  ],
+  "source_version": "official prover tree16c0f36d75f2306ee242e26e507e4c237f7f4074, not proven commit/deployment"
+}

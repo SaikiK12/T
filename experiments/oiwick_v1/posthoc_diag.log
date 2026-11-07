@@ -1,0 +1,12 @@
+long_cascade 4 n 658 raw mean 65.0 median 45.8 | book-ret sum mean 70.7 median 48.7 | market-adj mean 4.7 | top5 share of raw sum 0.06
+long_cascade 24 n 656 raw mean 143.4 median 111.1 | book-ret sum mean 172.9 median 121.1 | market-adj mean 22.8 | top5 share of raw sum 0.05
+long_cascade by year counts {2021: 54, 2022: 141, 2023: 463}
+squeeze 4 n 166 raw mean -219.3 median -11.1 | book-ret sum mean -127.7 median -7.6 | market-adj mean -140.3 | top5 share of raw sum 0.41
+squeeze 24 n 166 raw mean -390.7 median -162.9 | book-ret sum mean -212.9 median -120.6 | market-adj mean -190.1 | top5 share of raw sum 0.28
+squeeze by year counts {2021: 2, 2022: 54, 2023: 110}
+masked gross bp/day 0.344 exposure 0.00290
+unmasked gross bp/day 0.344 exposure 0.00292
+event sum bp/day 0.645
+held rows per event 23.08433734939759
+re-triggers within 24h 7 of 166
+first-event-only sum bp/day 0.283

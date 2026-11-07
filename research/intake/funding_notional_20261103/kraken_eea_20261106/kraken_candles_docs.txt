@@ -1,0 +1,169 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.kraken.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Market Candles
+
+> Candles for specified tick type, market, and resolution.
+
+List of available tick types can be fetched from the [tick types](#operation/tickTypes)
+endpoint. List of available markets can be fetched from the [markets](#operation/symbols)
+endpoint. List of available resolutions can be fetched from the
+[resolutions](#operation/resolutions) endpoint.
+
+
+
+## OpenAPI
+
+````yaml /openapi/futures-charts-rest.yaml get /{tick_type}/{symbol}/{resolution}
+openapi: 3.1.0
+info:
+  title: Charts
+  version: v1.0
+  description: Public chart candle and analytics APIs.
+servers:
+  - url: https://futures.kraken.com/api/charts/v1
+    description: Kraken Futures
+    x-kfOnly: true
+security: []
+tags:
+  - name: Candles
+  - name: Analytics
+paths:
+  /{tick_type}/{symbol}/{resolution}:
+    get:
+      tags:
+        - Candles
+      summary: Market Candles
+      description: >-
+        Candles for specified tick type, market, and resolution.
+
+
+        List of available tick types can be fetched from the [tick
+        types](#operation/tickTypes)
+
+        endpoint. List of available markets can be fetched from the
+        [markets](#operation/symbols)
+
+        endpoint. List of available resolutions can be fetched from the
+
+        [resolutions](#operation/resolutions) endpoint.
+      operationId: candles
+      parameters:
+        - name: tick_type
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/TickTypes'
+        - name: symbol
+          in: path
+          required: true
+          description: Market symbol
+          schema:
+            type: string
+        - name: resolution
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/Resolution'
+        - name: from
+          in: query
+          description: From date in epoch seconds
+          schema:
+            type: number
+        - name: to
+          in: query
+          description: To date in epoch seconds
+          schema:
+            type: number
+        - name: count
+          in: query
+          description: Number of candles to return.
+          schema:
+            type: integer
+            minimum: 0
+      responses:
+        '200':
+          $ref: '#/components/responses/Candles'
+      security: []
+components:
+  schemas:
+    TickTypes:
+      title: Tick Types
+      type: string
+      enum:
+        - spot
+        - mark
+        - trade
+    Resolution:
+      title: Resolution
+      type: string
+      enum:
+        - 1m
+        - 5m
+        - 15m
+        - 30m
+        - 1h
+        - 4h
+        - 12h
+        - 1d
+        - 1w
+    CandlesResponse:
+      type: object
+      properties:
+        candles:
+          type: array
+          description: OHLC candles
+          items:
+            $ref: '#/components/schemas/Candlestick'
+        more_candles:
+          type: boolean
+          description: True if there are more candles in time range
+      required:
+        - candles
+        - more_candles
+    Candlestick:
+      title: Candlestick
+      type: object
+      properties:
+        time:
+          description: Epoch in ms
+          type: integer
+          format: int64
+          example: 1620816960000
+        high:
+          type: string
+          format: big-decimal
+          example: '56475.00000000000'
+        low:
+          type: string
+          format: big-decimal
+          example: '55935.00000000000'
+        open:
+          type: string
+          format: big-decimal
+          example: '56294.00000000000'
+        close:
+          type: string
+          format: big-decimal
+          example: '56250.00000000000'
+        volume:
+          type: number
+          format: int64
+          example: 10824
+      required:
+        - time
+        - high
+        - low
+        - open
+        - close
+        - volume
+  responses:
+    Candles:
+      description: OHLC candles
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CandlesResponse'
+
+````

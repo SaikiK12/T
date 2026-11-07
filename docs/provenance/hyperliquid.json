@@ -1,0 +1,4963 @@
+{
+"folder": "data/hyperliquid",
+"source": "Hyperliquid public POST /info (meta, candleSnapshot 1d and 1h, fundingHistory), fetched 2026-10-20",
+"script": "scripts/fetch_hyperliquid_history.py",
+"recorded_utc": "2026-10-20T23:06:46Z",
+"excluded": [],
+"files": 703,
+"bytes": 162250332,
+"combined_sha256": "9c8ca0af334b0e3b747a56407da2f2dbbb0d84fd54c596af0d5a47cb47a17d0c",
+"subfolders": {
+"candles_1d": {
+"files": 234,
+"bytes": 12467987
+},
+"candles_1h": {
+"files": 234,
+"bytes": 51747035
+},
+"funding": {
+"files": 234,
+"bytes": 98015411
+},
+".": {
+"files": 1,
+"bytes": 19899
+}
+},
+"hourly_coverage": {
+"candles_1h": {
+"files": 234,
+"bars": 1149337,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1696636800000,
+"last": 1792530000000
+}
+},
+"coverage": {
+"candles_1h": {
+"0G": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"2Z": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"AAVE": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"ACE": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"ADA": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"AERO": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"AI": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"AI16Z": {
+"first": 1744419600000,
+"last": 1762416000000,
+"bars": 5000,
+"holes": 0
+},
+"AIXBT": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"ALGO": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"ALT": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ANIME": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"APE": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"APEX": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"APT": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"AR": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ARB": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"ARK": {
+"first": 1764381600000,
+"last": 1782378000000,
+"bars": 5000,
+"holes": 0
+},
+"ASTER": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ATOM": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"AVAX": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"AVNT": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"AXS": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"AZTEC": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"BABY": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"BADGER": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"BANANA": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"BCH": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"BERA": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"BIGTIME": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"BIO": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"BLAST": {
+"first": 1761703200000,
+"last": 1779699600000,
+"bars": 5000,
+"holes": 0
+},
+"BLUR": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"BLZ": {
+"first": 1716858000000,
+"last": 1734854400000,
+"bars": 5000,
+"holes": 0
+},
+"BNB": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"BNT": {
+"first": 1725771600000,
+"last": 1743768000000,
+"bars": 5000,
+"holes": 0
+},
+"BOME": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"BRETT": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"BSV": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"BTC": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"CAKE": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"CANTO": {
+"first": 1705539600000,
+"last": 1723536000000,
+"bars": 5000,
+"holes": 0
+},
+"CASHCAT": {
+"first": 1783742400000,
+"last": 1792530000000,
+"bars": 2442,
+"holes": 0
+},
+"CATI": {
+"first": 1726830000000,
+"last": 1744372800000,
+"bars": 4874,
+"holes": 0
+},
+"CC": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"CELO": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"CFX": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"CHILLGUY": {
+"first": 1761703200000,
+"last": 1779699600000,
+"bars": 5000,
+"holes": 0
+},
+"CHIP": {
+"first": 1776823200000,
+"last": 1792530000000,
+"bars": 4364,
+"holes": 0
+},
+"COMP": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"CRV": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"CYBER": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"DASH": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"DOGE": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"DOOD": {
+"first": 1764381600000,
+"last": 1782378000000,
+"bars": 5000,
+"holes": 0
+},
+"DOT": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"DYDX": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"DYM": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"EIGEN": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"ENA": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"ENS": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"ETC": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"ETH": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"ETHFI": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"FARTCOIN": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"FET": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"FIL": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"FOGO": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"FRIEND": {
+"first": 1696636800000,
+"last": 1714633200000,
+"bars": 5000,
+"holes": 0
+},
+"FTM": {
+"first": 1718654400000,
+"last": 1736650800000,
+"bars": 5000,
+"holes": 0
+},
+"FTT": {
+"first": 1761703200000,
+"last": 1779699600000,
+"bars": 5000,
+"holes": 0
+},
+"FXS": {
+"first": 1749690000000,
+"last": 1767686400000,
+"bars": 5000,
+"holes": 0
+},
+"GALA": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"GAS": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"GMT": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"GMX": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"GOAT": {
+"first": 1774537200000,
+"last": 1792530000000,
+"bars": 4999,
+"holes": 0
+},
+"GRAM": {
+"first": 1782982800000,
+"last": 1792530000000,
+"bars": 2653,
+"holes": 0
+},
+"GRASS": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"GRIFFAIN": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"HBAR": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"HEMI": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"HMSTR": {
+"first": 1774530000000,
+"last": 1792526400000,
+"bars": 5000,
+"holes": 0
+},
+"HPOS": {
+"first": 1725768000000,
+"last": 1743764400000,
+"bars": 5000,
+"holes": 0
+},
+"HYPE": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"HYPER": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"ICP": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ILV": {
+"first": 1725771600000,
+"last": 1743768000000,
+"bars": 5000,
+"holes": 0
+},
+"IMX": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"INIT": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"INJ": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"IO": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"IOTA": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"IP": {
+"first": 1764730800000,
+"last": 1782727200000,
+"bars": 5000,
+"holes": 0
+},
+"JELLY": {
+"first": 1738209600000,
+"last": 1743001200000,
+"bars": 1332,
+"holes": 0
+},
+"JTO": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"JUP": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"KAITO": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"KAS": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"LAUNCHCOIN": {
+"first": 1747231200000,
+"last": 1761375600000,
+"bars": 3930,
+"holes": 0
+},
+"LAYER": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"LDO": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"LINEA": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"LINK": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"LISTA": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"LIT": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"LOOM": {
+"first": 1715990400000,
+"last": 1733986800000,
+"bars": 5000,
+"holes": 0
+},
+"LTC": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"MANTA": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"MATIC": {
+"first": 1707868800000,
+"last": 1725865200000,
+"bars": 5000,
+"holes": 0
+},
+"MAV": {
+"first": 1759975200000,
+"last": 1777971600000,
+"bars": 5000,
+"holes": 0
+},
+"MAVIA": {
+"first": 1759975200000,
+"last": 1777971600000,
+"bars": 5000,
+"holes": 0
+},
+"ME": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"MEGA": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"MELANIA": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"MEME": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"MERL": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"MET": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"MEW": {
+"first": 1759968000000,
+"last": 1777964400000,
+"bars": 5000,
+"holes": 0
+},
+"MINA": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"MKR": {
+"first": 1739070000000,
+"last": 1757066400000,
+"bars": 5000,
+"holes": 0
+},
+"MNT": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"MON": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"MOODENG": {
+"first": 1774537200000,
+"last": 1792530000000,
+"bars": 4999,
+"holes": 0
+},
+"MORPHO": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"MOVE": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"MYRO": {
+"first": 1725256800000,
+"last": 1743253200000,
+"bars": 5000,
+"holes": 0
+},
+"NEAR": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"NEIROETH": {
+"first": 1740794400000,
+"last": 1758790800000,
+"bars": 5000,
+"holes": 0
+},
+"NEO": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"NFTI": {
+"first": 1701349200000,
+"last": 1719345600000,
+"bars": 5000,
+"holes": 0
+},
+"NIL": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"NOT": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"NTRN": {
+"first": 1725771600000,
+"last": 1743768000000,
+"bars": 5000,
+"holes": 0
+},
+"NXPC": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"OGN": {
+"first": 1736305200000,
+"last": 1754301600000,
+"bars": 5000,
+"holes": 0
+},
+"OM": {
+"first": 1753837200000,
+"last": 1771833600000,
+"bars": 5000,
+"holes": 0
+},
+"OMNI": {
+"first": 1740794400000,
+"last": 1758790800000,
+"bars": 5000,
+"holes": 0
+},
+"ONDO": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"OP": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"ORBS": {
+"first": 1725771600000,
+"last": 1743768000000,
+"bars": 5000,
+"holes": 0
+},
+"ORDI": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"OX": {
+"first": 1701511200000,
+"last": 1719507600000,
+"bars": 5000,
+"holes": 0
+},
+"PANDORA": {
+"first": 1706864400000,
+"last": 1719525600000,
+"bars": 3518,
+"holes": 0
+},
+"PAXG": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"PENDLE": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"PENGU": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"PEOPLE": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"PIXEL": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"PNUT": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"POL": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"POLYX": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"PONS": {
+"first": 1788145200000,
+"last": 1792530000000,
+"bars": 1219,
+"holes": 0
+},
+"POPCAT": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"PROMPT": {
+"first": 1759975200000,
+"last": 1777971600000,
+"bars": 5000,
+"holes": 0
+},
+"PROVE": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"PUMP": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"PURR": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"PYTH": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"RDNT": {
+"first": 1726376400000,
+"last": 1744372800000,
+"bars": 5000,
+"holes": 0
+},
+"RENDER": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"REQ": {
+"first": 1736301600000,
+"last": 1754298000000,
+"bars": 5000,
+"holes": 0
+},
+"RESOLV": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"REZ": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"RLB": {
+"first": 1725634800000,
+"last": 1743631200000,
+"bars": 5000,
+"holes": 0
+},
+"RNDR": {
+"first": 1703563200000,
+"last": 1721559600000,
+"bars": 5000,
+"holes": 0
+},
+"RSR": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"RUNE": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"S": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"SAGA": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"SAND": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"SCR": {
+"first": 1759968000000,
+"last": 1777964400000,
+"bars": 5000,
+"holes": 0
+},
+"SEI": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"SHIA": {
+"first": 1701558000000,
+"last": 1719554400000,
+"bars": 5000,
+"holes": 0
+},
+"SKR": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"SKY": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"SNX": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"SOL": {
+"first": 1774501200000,
+"last": 1792497600000,
+"bars": 5000,
+"holes": 0
+},
+"SOPH": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"SPX": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"STABLE": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"STBL": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"STG": {
+"first": 1736305200000,
+"last": 1754301600000,
+"bars": 5000,
+"holes": 0
+},
+"STRAX": {
+"first": 1696989600000,
+"last": 1710464400000,
+"bars": 3744,
+"holes": 0
+},
+"STRK": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"STX": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"SUI": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"SUPER": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"SUSHI": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"SYRUP": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"TAO": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"TIA": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"TNSR": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"TON": {
+"first": 1763517600000,
+"last": 1781514000000,
+"bars": 5000,
+"holes": 0
+},
+"TRB": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"TRUMP": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"TRX": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"TST": {
+"first": 1761703200000,
+"last": 1779699600000,
+"bars": 5000,
+"holes": 0
+},
+"TURBO": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"UMA": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"UNI": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"UNIBOT": {
+"first": 1701493200000,
+"last": 1719489600000,
+"bars": 5000,
+"holes": 0
+},
+"USELESS": {
+"first": 1788883200000,
+"last": 1792530000000,
+"bars": 1014,
+"holes": 0
+},
+"USTC": {
+"first": 1759975200000,
+"last": 1777971600000,
+"bars": 5000,
+"holes": 0
+},
+"USUAL": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"VINE": {
+"first": 1769742000000,
+"last": 1787738400000,
+"bars": 5000,
+"holes": 0
+},
+"VIRTUAL": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"VVV": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"W": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"WCT": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"WIF": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"WLD": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"WLFI": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"XAI": {
+"first": 1774515600000,
+"last": 1792512000000,
+"bars": 5000,
+"holes": 0
+},
+"XLM": {
+"first": 1774522800000,
+"last": 1792530000000,
+"bars": 5003,
+"holes": 0
+},
+"XMR": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"XPL": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"XRP": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"YGG": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+},
+"YZY": {
+"first": 1759968000000,
+"last": 1777964400000,
+"bars": 5000,
+"holes": 0
+},
+"ZEC": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ZEN": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"ZEREBRO": {
+"first": 1759975200000,
+"last": 1777971600000,
+"bars": 5000,
+"holes": 0
+},
+"ZETA": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"ZK": {
+"first": 1774533600000,
+"last": 1792530000000,
+"bars": 5000,
+"holes": 0
+},
+"ZORA": {
+"first": 1774526400000,
+"last": 1792530000000,
+"bars": 5002,
+"holes": 0
+},
+"ZRO": {
+"first": 1774508400000,
+"last": 1792512000000,
+"bars": 5002,
+"holes": 0
+},
+"kBONK": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"kDOGS": {
+"first": 1736305200000,
+"last": 1754301600000,
+"bars": 5000,
+"holes": 0
+},
+"kFLOKI": {
+"first": 1774530000000,
+"last": 1792530000000,
+"bars": 5001,
+"holes": 0
+},
+"kLUNC": {
+"first": 1774512000000,
+"last": 1792512000000,
+"bars": 5001,
+"holes": 0
+},
+"kNEIRO": {
+"first": 1774537200000,
+"last": 1792530000000,
+"bars": 4999,
+"holes": 0
+},
+"kPEPE": {
+"first": 1774501200000,
+"last": 1792512000000,
+"bars": 5004,
+"holes": 0
+},
+"kSHIB": {
+"first": 1774504800000,
+"last": 1792512000000,
+"bars": 5003,
+"holes": 0
+}
+}
+},
+"file_hashes": [
+{
+"path": "candles_1d/0G.parquet",
+"bytes": 26308,
+"sha256": "cdbd5312f609102f8c29815fd8846c7071fdeba16aa5729bbd946964b5897164"
+},
+{
+"path": "candles_1d/2Z.parquet",
+"bytes": 25821,
+"sha256": "40edd417cdd60c6f9a2e34e1858baadc11d5eaf4535b361a6e7b02edd33aae89"
+},
+{
+"path": "candles_1d/AAVE.parquet",
+"bytes": 91819,
+"sha256": "bed2aeace84f5c12c37e2d6c0a3d0fbf79f1ebaa4de36dc894a7560cc27c6032"
+},
+{
+"path": "candles_1d/ACE.parquet",
+"bytes": 56391,
+"sha256": "ae26d224ea1bea26c9d34d22bc7b1bf39a71a30cdb127873eed4e39897680ad3"
+},
+{
+"path": "candles_1d/ADA.parquet",
+"bytes": 107117,
+"sha256": "4cd9b4cd4a96a83dcd2e811c6e9309e5c6ec2eceb04a7a1d09a5f39eea51e5a0"
+},
+{
+"path": "candles_1d/AERO.parquet",
+"bytes": 36991,
+"sha256": "bbb03f7a5a88bbe38b88bebe05e118ec9a89911404de6ccd587e9ed42de54039"
+},
+{
+"path": "candles_1d/AI.parquet",
+"bytes": 29490,
+"sha256": "6e91d80a44b619b10cb62163a56dc6affcd3611b40f43467895024b0ce93024c"
+},
+{
+"path": "candles_1d/AI16Z.parquet",
+"bytes": 22012,
+"sha256": "e60a417b6eb15c37b72ee5cb4aed3658f2744fb364d1be7d524b71d9881a7867"
+},
+{
+"path": "candles_1d/AIXBT.parquet",
+"bytes": 42240,
+"sha256": "e7cba1426761017479ee9ad357ea2c83fb58e3ad19e2778b42dee3c87db349e2"
+},
+{
+"path": "candles_1d/ALGO.parquet",
+"bytes": 75546,
+"sha256": "696fad1bfe4ed6e81edfddd825c8628d01e607de701542abff68ce926d04d310"
+},
+{
+"path": "candles_1d/ALT.parquet",
+"bytes": 60131,
+"sha256": "fca624b7e5968861902f25e697e924c4959611f6be66c14fd75f3d2d608af8b7"
+},
+{
+"path": "candles_1d/ANIME.parquet",
+"bytes": 39956,
+"sha256": "d1656c2143925f870c0864ba14d0e052e0a2c7729100e0fa6d182b260d7fc39b"
+},
+{
+"path": "candles_1d/APE.parquet",
+"bytes": 86046,
+"sha256": "8fc0d00fe75bea3c041bfbc2f90c93b2bf2f1e043ca17aca70b66b787fa65a90"
+},
+{
+"path": "candles_1d/APEX.parquet",
+"bytes": 25919,
+"sha256": "2aa827e0d68ca925488ff1171fb54770125236743a3905fbb4cab593ee09373c"
+},
+{
+"path": "candles_1d/APT.parquet",
+"bytes": 75921,
+"sha256": "43935216c7adf4450cd4b6337903343719263c41c8cb59a6239c57776a3d3c56"
+},
+{
+"path": "candles_1d/AR.parquet",
+"bytes": 81547,
+"sha256": "27a9a1c5a3612469289fcbe8deb6df8d8607a23c20ec215edb96a92f26742478"
+},
+{
+"path": "candles_1d/ARB.parquet",
+"bytes": 76007,
+"sha256": "1822d220a9e8d758264740f5453aedc22dec891734a1280d5660da2d87a58b63"
+},
+{
+"path": "candles_1d/ARK.parquet",
+"bytes": 59717,
+"sha256": "919f2143ce18f60e29569d95c5a091c64042541f5ec204b808abc3abc3b4934b"
+},
+{
+"path": "candles_1d/ASTER.parquet",
+"bytes": 26770,
+"sha256": "461cf4ac782b5a201ef5897d761a0e4f4dcbca94258624cbd9d41f8c34b5d8bf"
+},
+{
+"path": "candles_1d/ATOM.parquet",
+"bytes": 102474,
+"sha256": "87169a2f4678787343f572a44ff64a5e115a13f58ab564e7eed8cd7a5df566e5"
+},
+{
+"path": "candles_1d/AVAX.parquet",
+"bytes": 99785,
+"sha256": "9cd657dc67538802f0c144ebd683cc258e22f294825fd10f2cb657052422a41c"
+},
+{
+"path": "candles_1d/AVNT.parquet",
+"bytes": 27002,
+"sha256": "0520a677d21acc8ead185e96f35e171e4402c882b3112aee47b9a5da18ec85f4"
+},
+{
+"path": "candles_1d/AXS.parquet",
+"bytes": 50626,
+"sha256": "c2ae321b92ae06cd02121f71c38bb093db440ce4634ed71aea02d320df2591bc"
+},
+{
+"path": "candles_1d/AZTEC.parquet",
+"bytes": 18334,
+"sha256": "a5c996b39f8184850fa6ecf68fe4fe78cc8f2c609f51e747529eabf58d90343b"
+},
+{
+"path": "candles_1d/BABY.parquet",
+"bytes": 36036,
+"sha256": "5f7ff9c6bad297329dceff7047f1a4cfab931bb7c0082c0ca6323208a4e778da"
+},
+{
+"path": "candles_1d/BADGER.parquet",
+"bytes": 31289,
+"sha256": "6d2e18c7ba5bf668967beb772d0c755abbbadb30c6004050f9a95c2e33a12869"
+},
+{
+"path": "candles_1d/BANANA.parquet",
+"bytes": 58899,
+"sha256": "d941255d2e63086c3979ec7b77c5c8a73de242136f2542b616075884cdfe9521"
+},
+{
+"path": "candles_1d/BCH.parquet",
+"bytes": 89720,
+"sha256": "805dead70b0868b1bed107dafbde4a27ec8e39f3b542dcf11193b46088620f21"
+},
+{
+"path": "candles_1d/BERA.parquet",
+"bytes": 39051,
+"sha256": "99fdc11e6a14fd78923384bc4a6b58124d17e87a9ab70d9fc68c5c5ecddc5df2"
+},
+{
+"path": "candles_1d/BIGTIME.parquet",
+"bytes": 67001,
+"sha256": "a586de11fb5edd5a4baa3c92b9e2a5aa198c6e687b15bf7dc560f7fde998af80"
+},
+{
+"path": "candles_1d/BIO.parquet",
+"bytes": 41548,
+"sha256": "6ccfd96e4f8c4af3ff80d21d48728f770b7e0806734319774b97ce05bde43fe8"
+},
+{
+"path": "candles_1d/BLAST.parquet",
+"bytes": 41995,
+"sha256": "f398e32415428da84948bbe707f3145dfacc0cc671bafd9e2c38f6bb5ca8139d"
+},
+{
+"path": "candles_1d/BLUR.parquet",
+"bytes": 72895,
+"sha256": "720af111b9ff7b4b5e727ed3ef26b6ddaaa164ebf0d85288235ce8e670716d80"
+},
+{
+"path": "candles_1d/BLZ.parquet",
+"bytes": 74142,
+"sha256": "ec17c054ed97ba23419dd5684a83e77955149a1540f69fb7c994fdf37d1a44b1"
+},
+{
+"path": "candles_1d/BNB.parquet",
+"bytes": 93525,
+"sha256": "4732b1616f1469809ff45b25a61974bad5714d242f963bc01fe5008b66ea02e3"
+},
+{
+"path": "candles_1d/BNT.parquet",
+"bytes": 36755,
+"sha256": "9a85805e60fc0328f79e01d182a2fa4b678e566bb20e1d5ca6250bdacc5ba08d"
+},
+{
+"path": "candles_1d/BOME.parquet",
+"bytes": 54028,
+"sha256": "fb2cf200d1c595c8d18ec7b72b1fe30d9eb7bc4f3b7b6f252e8243479c8e805a"
+},
+{
+"path": "candles_1d/BRETT.parquet",
+"bytes": 52807,
+"sha256": "df5d143ffb497f56b71f6478c60efc3d9b07e7abb6f4330b0ed7ea68816270b4"
+},
+{
+"path": "candles_1d/BSV.parquet",
+"bytes": 54324,
+"sha256": "36ead2e4a9efe800ce1b188b98882578774067e4c30d929206a4ecfc60702916"
+},
+{
+"path": "candles_1d/BTC.parquet",
+"bytes": 99795,
+"sha256": "2bfd561687d6405721a9aa70b84a6216170487d24d0a437123171d766d43936c"
+},
+{
+"path": "candles_1d/CAKE.parquet",
+"bytes": 58202,
+"sha256": "3455ffcc957a4b95e2f596770433237285081dcb80dfd7c4d526f3a31cd84a9d"
+},
+{
+"path": "candles_1d/CANTO.parquet",
+"bytes": 21214,
+"sha256": "637e9462667e6cfe0e62b49edb3423ce28081b8d13e54c95264d89c9a960e710"
+},
+{
+"path": "candles_1d/CASHCAT.parquet",
+"bytes": 10137,
+"sha256": "2c0715b530dd021f40e3378155d410c4f670523662a6b476a9050b1c12eb46e8"
+},
+{
+"path": "candles_1d/CATI.parquet",
+"bytes": 15458,
+"sha256": "073b783380347dec96977689ee429e402071ec862d885a53d46da6616d51348f"
+},
+{
+"path": "candles_1d/CC.parquet",
+"bytes": 24119,
+"sha256": "57389241d8152a097e50473e96c02032280f8d3694c805dbd72fd596016ffdc3"
+},
+{
+"path": "candles_1d/CELO.parquet",
+"bytes": 71449,
+"sha256": "5a89d0f6d3d4c053d0ae95ff333dda8394f0f2a4e0b2b17497b51330a780f821"
+},
+{
+"path": "candles_1d/CFX.parquet",
+"bytes": 78737,
+"sha256": "f6934e839aa7b9a03bc2a61caad2db318bb1fbfe285271efa378cbc19cbf5d6d"
+},
+{
+"path": "candles_1d/CHILLGUY.parquet",
+"bytes": 35497,
+"sha256": "a486eeced32bf1c43516f11795ec9bee5e99342f615f564c8bdd5117250fd415"
+},
+{
+"path": "candles_1d/CHIP.parquet",
+"bytes": 14625,
+"sha256": "9af6514b3c363b9541dd213ed9d9fcac1b0fe8666a4780a7d01b6cbaee0ffad6"
+},
+{
+"path": "candles_1d/COMP.parquet",
+"bytes": 90526,
+"sha256": "1495d34a57ac51b3a12f05b88a4d018f71c09f7087ca99a399cc65b49e5a0908"
+},
+{
+"path": "candles_1d/CRV.parquet",
+"bytes": 103887,
+"sha256": "6187588bbf265d549a82a97ce589077b9cca3f21590919399e6c78ce7f962e69"
+},
+{
+"path": "candles_1d/CYBER.parquet",
+"bytes": 35470,
+"sha256": "c76440457fdf096b8035f420b127f34572c427d765bf242899e2a57939cc9c4a"
+},
+{
+"path": "candles_1d/DASH.parquet",
+"bytes": 45346,
+"sha256": "33dc9d1d328e2fcf615548e394a102b1edbb0f1cb5ff56833e07303f0c621dd3"
+},
+{
+"path": "candles_1d/DOGE.parquet",
+"bytes": 121947,
+"sha256": "4f3fd132b48f4ea74ac92a2ec1cead4358f88cdcfc8b244942f68c6bd8f89ac6"
+},
+{
+"path": "candles_1d/DOOD.parquet",
+"bytes": 27031,
+"sha256": "5d12335a410a58da1dfc38c815dcba40eaf67aff0fe9335fa5f69a5e980c7a50"
+},
+{
+"path": "candles_1d/DOT.parquet",
+"bytes": 96006,
+"sha256": "e32ed4028b16c05aa39ded2a602372aff681ea32464e2d74fafb91c0333a13e1"
+},
+{
+"path": "candles_1d/DYDX.parquet",
+"bytes": 91331,
+"sha256": "1b8e88d51a83ebf70da2542a275e6ed0fde6ad45026a9781df4d6e08f0896587"
+},
+{
+"path": "candles_1d/DYM.parquet",
+"bytes": 57489,
+"sha256": "3ed557c5d3a9cb4be8aeb99f3f47b1dd9b9f289bd2ff496f0ac52b41311cf9ef"
+},
+{
+"path": "candles_1d/EIGEN.parquet",
+"bytes": 49465,
+"sha256": "fead379e03cd73223513e55f5f59ca6830af71fa3ef17d68d4af4429b50edbae"
+},
+{
+"path": "candles_1d/ENA.parquet",
+"bytes": 57673,
+"sha256": "7e63e2eb0bee8797fae951209a8c4623ced08cb219a59046e5373015a3e905cb"
+},
+{
+"path": "candles_1d/ENS.parquet",
+"bytes": 77648,
+"sha256": "c6337776ac39cd5858578e56f699322c6426e9d99a74d21f088f6d78be73b257"
+},
+{
+"path": "candles_1d/ETC.parquet",
+"bytes": 84150,
+"sha256": "70601691dec96740feb568beadce6b1ba72399e8dff5bdaf6524a0b6d1041efc"
+},
+{
+"path": "candles_1d/ETH.parquet",
+"bytes": 95116,
+"sha256": "84f86261cfb42c72f2daa4939c8bbd4b5a875639f897ec5003bdd1a997264ec2"
+},
+{
+"path": "candles_1d/ETHFI.parquet",
+"bytes": 56155,
+"sha256": "235ec44606c846860ad851449b59f77172866856b341967488456d9044d70586"
+},
+{
+"path": "candles_1d/FARTCOIN.parquet",
+"bytes": 43121,
+"sha256": "351d6688cfd09f5805cc57c9e4fc72752f97fa356f373370f8eef2b79d90b5fa"
+},
+{
+"path": "candles_1d/FET.parquet",
+"bytes": 74154,
+"sha256": "67ce6d1d933f48aac6ea78174ad0b5b30fd89d580b5b1a3f7c4ec19ef4856bc5"
+},
+{
+"path": "candles_1d/FIL.parquet",
+"bytes": 92161,
+"sha256": "661d9ff73d41f2c7acfa20c97344f0359524029fcd0c87d578d9c122beb0c0c2"
+},
+{
+"path": "candles_1d/FOGO.parquet",
+"bytes": 22075,
+"sha256": "fb05dd0166de916981e9ed8b5b394c6b76cceb7da1dd68b5c9f2746a7129e24d"
+},
+{
+"path": "candles_1d/FRIEND.parquet",
+"bytes": 17894,
+"sha256": "b73ec360b2fee72aeb5e1cdf4f9a4d1279f09ac3caedee6fa8c6c0ad3105f869"
+},
+{
+"path": "candles_1d/FTM.parquet",
+"bytes": 81345,
+"sha256": "d4ec84929e69f61da41e08e4a06294ad408f42de5bda812a9d7d831db0be3042"
+},
+{
+"path": "candles_1d/FTT.parquet",
+"bytes": 55216,
+"sha256": "faeed443cadd43a0a68d55683bd4557909fd88f74e35138ba0bbbd23165a8054"
+},
+{
+"path": "candles_1d/FXS.parquet",
+"bytes": 56462,
+"sha256": "4d8ceb0269b958244ae3ff1eb7b39e2bafba460adf856835788b37373d8dd216"
+},
+{
+"path": "candles_1d/GALA.parquet",
+"bytes": 97726,
+"sha256": "d751f9ae80c917918b1945d106e503a9e77449ad41fea7965d707558bb43567b"
+},
+{
+"path": "candles_1d/GAS.parquet",
+"bytes": 62352,
+"sha256": "7f90226649eeb747a6ae8b4a0734dc32d6e15bb91e01e87c2cb487f743e57d9b"
+},
+{
+"path": "candles_1d/GMT.parquet",
+"bytes": 89741,
+"sha256": "a6ed4a1bce8ec2a4f8ab1ba3722826c64dae871fc30ae94d705058f6bb24337c"
+},
+{
+"path": "candles_1d/GMX.parquet",
+"bytes": 66548,
+"sha256": "f945cda514efef1e413a329fb45b144f96fd328e97394c6e59d5b9e634e9fdf7"
+},
+{
+"path": "candles_1d/GOAT.parquet",
+"bytes": 45622,
+"sha256": "249867730c5e67aa2edee7b1f99cab39bc3d3e505fa1fd64b57d6245fe43ab78"
+},
+{
+"path": "candles_1d/GRAM.parquet",
+"bytes": 10439,
+"sha256": "c625831814fe128f1d2df7356f61bd5f4de877b4e3c4e9b815ebda5eaf36c070"
+},
+{
+"path": "candles_1d/GRASS.parquet",
+"bytes": 44429,
+"sha256": "de25a799f7f5787cb2b0858c8f80422fa1016d5c40e32969346ac7abef90639f"
+},
+{
+"path": "candles_1d/GRIFFAIN.parquet",
+"bytes": 41596,
+"sha256": "7c7f6e8b36c86d32f9ff0619e3ce1c1e26ae2a5a1015d3a750b28c5c2555a4a2"
+},
+{
+"path": "candles_1d/HBAR.parquet",
+"bytes": 99049,
+"sha256": "93b20af3c739f1f703470ae191f7b552e89263897114274136dbf3afb9dc1572"
+},
+{
+"path": "candles_1d/HEMI.parquet",
+"bytes": 27454,
+"sha256": "8cde160660859f7cc4d7d12c71d4c6540907437d1d71bef65be755cd3298ca6f"
+},
+{
+"path": "candles_1d/HMSTR.parquet",
+"bytes": 38200,
+"sha256": "e2be0bec9c3a40fa6fb9bf8d90ce361b6a25f43790923072249c106a01d9eeb5"
+},
+{
+"path": "candles_1d/HPOS.parquet",
+"bytes": 40903,
+"sha256": "c697ae1915eed9482eca718abd421bb8c9d4ffcf57ece1322920cf662d309356"
+},
+{
+"path": "candles_1d/HYPE.parquet",
+"bytes": 37503,
+"sha256": "6aa7bd2571372bce920709e184514990003d3698e8b10cd84a509d053ed9842c"
+},
+{
+"path": "candles_1d/HYPER.parquet",
+"bytes": 34902,
+"sha256": "c1be34c4e3522028098395c46bd64807898ff33b890828fca7d0aecf8bbaf287"
+},
+{
+"path": "candles_1d/ICP.parquet",
+"bytes": 54050,
+"sha256": "8f6aecb9aea0e31bc81449a721a95553466109650b96c6ff4fb3c0088bdaa3ea"
+},
+{
+"path": "candles_1d/ILV.parquet",
+"bytes": 27672,
+"sha256": "8e1ff4290f8518dd07e3a914b5687444626065ba71bdfac5c242ee13ed78c4c7"
+},
+{
+"path": "candles_1d/IMX.parquet",
+"bytes": 84155,
+"sha256": "4d83e3a6e92db76e220c91ba6a18a63f89532baea716e4e5abce03384c9edba7"
+},
+{
+"path": "candles_1d/INIT.parquet",
+"bytes": 35617,
+"sha256": "4728f529db6ff9ed0219ce4afa8aed5e57cb735172b3ec30e3d51625c326ab3a"
+},
+{
+"path": "candles_1d/INJ.parquet",
+"bytes": 74642,
+"sha256": "798c828f581449d69c4513da3522173d1ccbbc7f82087f13f7813fd168404bd0"
+},
+{
+"path": "candles_1d/IO.parquet",
+"bytes": 51856,
+"sha256": "f5cc4df9bd1cc015a48badccf4e26c564a88438fbfaaf3d37187810e9a093784"
+},
+{
+"path": "candles_1d/IOTA.parquet",
+"bytes": 78317,
+"sha256": "4eaba0f1cdd2b078c72c1b74ce5ac088a3500b7c438c521aee78fd39d2e1eda6"
+},
+{
+"path": "candles_1d/IP.parquet",
+"bytes": 31923,
+"sha256": "5ae0ad893a23d38e6ade0563660231afc16e8bccc2dfedce767ac8dec2cfd244"
+},
+{
+"path": "candles_1d/JELLY.parquet",
+"bytes": 7449,
+"sha256": "5d8074eef5213e6d36f7930eb839b11a9b10e2e09cb72994143295ea5a8c8cfb"
+},
+{
+"path": "candles_1d/JTO.parquet",
+"bytes": 59890,
+"sha256": "83d43769f090d116b615f5f19f449f0b153f43e53070e9ff4bbb68c75c981d4b"
+},
+{
+"path": "candles_1d/JUP.parquet",
+"bytes": 63565,
+"sha256": "8da33b5361f4ad5237e2ceccbfe41f9abc83bae3b06ebff430cca93b1ad5939c"
+},
+{
+"path": "candles_1d/KAITO.parquet",
+"bytes": 38171,
+"sha256": "b53a052fca0b32157e09eae6caadf4fea6a85652b59fdceb556a86096183f46c"
+},
+{
+"path": "candles_1d/KAS.parquet",
+"bytes": 66600,
+"sha256": "b197790d1b17cdf5bf186956a375d473d70ea2809803f80ffa183cdfee76e401"
+},
+{
+"path": "candles_1d/LAUNCHCOIN.parquet",
+"bytes": 13701,
+"sha256": "b39c555c7ed7f4d928b5051e4f674f9edd6f13e0b124ac5bbeb83d07d714582b"
+},
+{
+"path": "candles_1d/LAYER.parquet",
+"bytes": 38973,
+"sha256": "1b84ed28c90672b0cb7ca4e8feddc643f556fd5737fa7afae32c03c2644776e5"
+},
+{
+"path": "candles_1d/LDO.parquet",
+"bytes": 78771,
+"sha256": "0696d74fa9082f7c8d24c68f22a9c3ff8c25848955d2e8b26bb2b688ced00e5b"
+},
+{
+"path": "candles_1d/LINEA.parquet",
+"bytes": 27215,
+"sha256": "b1b27b88919504ab34ae58859692beac21c9081c5c273814dea9059e4e0ca754"
+},
+{
+"path": "candles_1d/LINK.parquet",
+"bytes": 96284,
+"sha256": "4a0f6ec41cc7e56c07af1ce8c2ddd17e034b92ffd1cc623457f542fe21a84bc2"
+},
+{
+"path": "candles_1d/LISTA.parquet",
+"bytes": 20563,
+"sha256": "eb03b10f5f294908f70649dff9e577ab57276f02eeb6725f26f0f84ffa218342"
+},
+{
+"path": "candles_1d/LIT.parquet",
+"bytes": 21216,
+"sha256": "e345eca728550d366d48a050615d6649caf9bcb6ac7c8e7bda2dfed1069ca116"
+},
+{
+"path": "candles_1d/LOOM.parquet",
+"bytes": 28735,
+"sha256": "56524688484668a145b1e63670baaef4122104859d640ef2a5a4de780285dfb3"
+},
+{
+"path": "candles_1d/LTC.parquet",
+"bytes": 94775,
+"sha256": "c059dd6ee58ed8204ec9d597a79bd9abebbd3605716c29fce9071f8fce12b1e5"
+},
+{
+"path": "candles_1d/MANTA.parquet",
+"bytes": 59867,
+"sha256": "238ad837df10e07bf4db40262116c480ea456e71f4c812f60c9dce8fb678efe4"
+},
+{
+"path": "candles_1d/MATIC.parquet",
+"bytes": 73006,
+"sha256": "8a78dbe7d3c056ae62d1ab6f93ef651407aa0b2dfa6fe52f8ef67b2979d5c569"
+},
+{
+"path": "candles_1d/MAV.parquet",
+"bytes": 60042,
+"sha256": "5edd02af7315d2ec7c914270db72f7ea16c1c538bd3476b2dd41dd4e49ab1304"
+},
+{
+"path": "candles_1d/MAVIA.parquet",
+"bytes": 48400,
+"sha256": "eb336c399e4236863cdc2c24ecaa469153651842e2f3f9fae9d6d807868c9c6b"
+},
+{
+"path": "candles_1d/ME.parquet",
+"bytes": 42310,
+"sha256": "ed5208a8938a09de9c894d7e2e3006015e31c01b146de5a67caa09094e3851f7"
+},
+{
+"path": "candles_1d/MEGA.parquet",
+"bytes": 24781,
+"sha256": "30224696a8c94a7b7d63238b4a5fdc38dddf8c4a5909d96f7857247fb92a9c56"
+},
+{
+"path": "candles_1d/MELANIA.parquet",
+"bytes": 40532,
+"sha256": "450b93a75920e8059e2854aa6502488af9d47e237a9ccf93bd0d585be9c14c25"
+},
+{
+"path": "candles_1d/MEME.parquet",
+"bytes": 61462,
+"sha256": "b8dd6416a21f9c1772896f73e100bc343292610f2b0c8e932e56ee49bf98f737"
+},
+{
+"path": "candles_1d/MERL.parquet",
+"bytes": 55297,
+"sha256": "678f994571456c6825ca6cddcd7eb112e3ea6555203acef55a5f57eeaeef642d"
+},
+{
+"path": "candles_1d/MET.parquet",
+"bytes": 25334,
+"sha256": "76becd10e6e622b81d2f6e0cc53eb7297d7a1def92ad4fde39b10ae66e0d4bc1"
+},
+{
+"path": "candles_1d/MEW.parquet",
+"bytes": 41215,
+"sha256": "c6aad37b5a2db13044f239a44cea2f0e10adfd711fa33aebbbe18fc13e99fb06"
+},
+{
+"path": "candles_1d/MINA.parquet",
+"bytes": 74574,
+"sha256": "5fd9a369bdd8f9c8d9455eb08b8347ced9f763f3d9a536b7651075eb4d4c92c8"
+},
+{
+"path": "candles_1d/MKR.parquet",
+"bytes": 68713,
+"sha256": "4ec866fe50ee79a46186bf43a8f0c264a0d5c5eebf43afdc21cbda5581e1e901"
+},
+{
+"path": "candles_1d/MNT.parquet",
+"bytes": 56238,
+"sha256": "2068908a27e51ef453a1c38278465a8a696107598fc3b60ff18f167e9fb7f86a"
+},
+{
+"path": "candles_1d/MON.parquet",
+"bytes": 25821,
+"sha256": "4b7dc62abd4c7fc9a0e9fb9a3fc619bf2a5c55d6f7ee3522368aea2ff3f37d67"
+},
+{
+"path": "candles_1d/MOODENG.parquet",
+"bytes": 45579,
+"sha256": "651897b8ed0716fedd517b411d6b9df3d66ac4a29f442d54e2c7c695ede7f296"
+},
+{
+"path": "candles_1d/MORPHO.parquet",
+"bytes": 40378,
+"sha256": "856a5d0bbedd2f3fe0a8d7a46bc52f33939eba6adc9fa7aca6d370326e609536"
+},
+{
+"path": "candles_1d/MOVE.parquet",
+"bytes": 42979,
+"sha256": "42ed04a49b02fd5ba78753117a3f599cb83d87ead6f49c3f796fe9462c06feec"
+},
+{
+"path": "candles_1d/MYRO.parquet",
+"bytes": 26080,
+"sha256": "d3d6a43349d6327229627bf07a4f1777cb9bf0c4f234004fb52dea3b239f1dd5"
+},
+{
+"path": "candles_1d/NEAR.parquet",
+"bytes": 95917,
+"sha256": "8407a894a7552107a2ca90795f4aa5ba1fc67c9c912fc5dd72369d9c90aefa14"
+},
+{
+"path": "candles_1d/NEIROETH.parquet",
+"bytes": 25477,
+"sha256": "316df72de989c2c3a9e59b3a32dd1615fc86f37706203dcc4802f595d2a24252"
+},
+{
+"path": "candles_1d/NEO.parquet",
+"bytes": 89626,
+"sha256": "2335c8ac5173dea71c0eef7b1ed3e02660bfa541987ed88a566f0c1451f7b1be"
+},
+{
+"path": "candles_1d/NFTI.parquet",
+"bytes": 14595,
+"sha256": "e02e7d5ce5468f918deb407e4216637225a6e637cff60068833c3a1a5a6cc16c"
+},
+{
+"path": "candles_1d/NIL.parquet",
+"bytes": 36974,
+"sha256": "31fc9fb228ab331a3cc058544f6404773b3ea91ab927c9629a83c6a817cc2fde"
+},
+{
+"path": "candles_1d/NOT.parquet",
+"bytes": 48934,
+"sha256": "9dfdd6a9298c94827fb927de9c904a4d7211cdee2f8ad55bb5e58caf43574f54"
+},
+{
+"path": "candles_1d/NTRN.parquet",
+"bytes": 31430,
+"sha256": "f3296a97a0715002c7cbf543540716bfdb417e1592c1561aa7070e03029f737a"
+},
+{
+"path": "candles_1d/NXPC.parquet",
+"bytes": 33530,
+"sha256": "243d2b082f37c8f81453543f4fffe41fef559126c98b945c04731663c58a0e7f"
+},
+{
+"path": "candles_1d/OGN.parquet",
+"bytes": 73793,
+"sha256": "096a9b70347342f145eb1a0bba45d2183993936e66b3782a0984090544ec0b65"
+},
+{
+"path": "candles_1d/OM.parquet",
+"bytes": 41984,
+"sha256": "0594230b4f7ec93381c87564758756ef47e15813cca8e8397f64f0d18ff80ed0"
+},
+{
+"path": "candles_1d/OMNI.parquet",
+"bytes": 31425,
+"sha256": "459b2de712478eea1ed12eae57c651226334dcdff7060a5c768f18d7c413ccae"
+},
+{
+"path": "candles_1d/ONDO.parquet",
+"bytes": 61180,
+"sha256": "8009e21fe586f3cc85d542b8aef5d81d907637b88d496d94ed14ded3180b9d01"
+},
+{
+"path": "candles_1d/OP.parquet",
+"bytes": 84363,
+"sha256": "cbeff9a6ac28f59b5e722ba481820d84808bbc6b608d387f3ea37732bb05e644"
+},
+{
+"path": "candles_1d/ORBS.parquet",
+"bytes": 34342,
+"sha256": "82a30dfbc65d5783aa5b2874f35390144d91a5528a505728531f7083aa2904b9"
+},
+{
+"path": "candles_1d/ORDI.parquet",
+"bytes": 57858,
+"sha256": "c500f3d1dcdeb20b0eabf7886180a2b9a48979bd68227664c8c341f2840cc127"
+},
+{
+"path": "candles_1d/OX.parquet",
+"bytes": 24616,
+"sha256": "85259ea5ecf668f76a74871a1f55220581a7e54215cb6ab11231aeb458e79042"
+},
+{
+"path": "candles_1d/PANDORA.parquet",
+"bytes": 10519,
+"sha256": "61ed5f3cdc1942f1100e6edfac127753fa4306df4a08257c4e8a8e0b1c13a406"
+},
+{
+"path": "candles_1d/PAXG.parquet",
+"bytes": 28737,
+"sha256": "083ec8fb753c1a59dc74c760cdb5f6662626947e5897cd974c68e62667d77a3e"
+},
+{
+"path": "candles_1d/PENDLE.parquet",
+"bytes": 64393,
+"sha256": "8b8ea69b9a078c721c106655eaf480dc02ea6d58dcc6bace613ce6e36d6adcc6"
+},
+{
+"path": "candles_1d/PENGU.parquet",
+"bytes": 42606,
+"sha256": "a8f160d5fb33def9d0f9a0915d996d539293f76a7501b5fbb437457d9539afc5"
+},
+{
+"path": "candles_1d/PEOPLE.parquet",
+"bytes": 91418,
+"sha256": "461f75c675a93d9ef695021ee9effb65b832c0bd5a50edffe3dacdb2bd2fd30a"
+},
+{
+"path": "candles_1d/PIXEL.parquet",
+"bytes": 27424,
+"sha256": "61d83cb9b806ac6881f3b9315c9a3f4081cb745d9be9c5457b3324e360f6e019"
+},
+{
+"path": "candles_1d/PNUT.parquet",
+"bytes": 44211,
+"sha256": "57b336d3a0be48817987a92ab97fe087b7847699742beeaaf1a7b6b230cbd9d4"
+},
+{
+"path": "candles_1d/POL.parquet",
+"bytes": 47509,
+"sha256": "7f28c5e9d5575e4650f96b54a2bcad487e2a58d23b6fdcd2202f79cee6a49dbb"
+},
+{
+"path": "candles_1d/POLYX.parquet",
+"bytes": 65386,
+"sha256": "118815bb6e7a9e4f08598ab0973c4a55c64daafb29199b627f29752d80fc0b04"
+},
+{
+"path": "candles_1d/PONS.parquet",
+"bytes": 7221,
+"sha256": "d8639d30b740aed62a652cc6d96784739206a91286401013fd5d70d6cbc25c80"
+},
+{
+"path": "candles_1d/POPCAT.parquet",
+"bytes": 55936,
+"sha256": "a943ae76e9ae678dc337b8a7a9c1024e76e84a0b4a880a3dddac2e61c5c21558"
+},
+{
+"path": "candles_1d/PROMPT.parquet",
+"bytes": 26193,
+"sha256": "8ec4f4342a767788b310413a896fca6b1d7122aa415c4522bc128619fcf71da4"
+},
+{
+"path": "candles_1d/PROVE.parquet",
+"bytes": 28683,
+"sha256": "9760ce74dbf97fd140a29e8830cfc16dc2b014160c303a4bfa7c4ef4b8ebda58"
+},
+{
+"path": "candles_1d/PUMP.parquet",
+"bytes": 30592,
+"sha256": "37ebeb5ed86b66cbd34c42917867cb6941dd0ed8600f51bc523dc2bc6ec12be2"
+},
+{
+"path": "candles_1d/PURR.parquet",
+"bytes": 44945,
+"sha256": "6fe837fcee1f6771c4937b2e461123c2dafbc1847c79b2400efc64b5236f39c3"
+},
+{
+"path": "candles_1d/PYTH.parquet",
+"bytes": 65088,
+"sha256": "1d4c9378e3e3eb84b1d4a2bed658f6d44dcaabc79b3ccfb33ea206ca8d3a3d72"
+},
+{
+"path": "candles_1d/RDNT.parquet",
+"bytes": 42652,
+"sha256": "d2d3c6ba33591ab413052d47c99f1b37f685fd14196442cd9b32e13a7774e321"
+},
+{
+"path": "candles_1d/RENDER.parquet",
+"bytes": 46815,
+"sha256": "8c759676d3a5ae5344b3aed8e9fd76755bb3253628f3b41c1bcae0f4627c2a48"
+},
+{
+"path": "candles_1d/REQ.parquet",
+"bytes": 40749,
+"sha256": "0848c864bf497461ef01e79254ac4f0a9647d0e4e43054992716646e1a0f41cb"
+},
+{
+"path": "candles_1d/RESOLV.parquet",
+"bytes": 32364,
+"sha256": "28c1ea6e50751e3591aaa3a8651e47c1587cde42a86ae24602558b254004aadc"
+},
+{
+"path": "candles_1d/REZ.parquet",
+"bytes": 54551,
+"sha256": "bf56fc5f08c2cdb99ed3922dad6b6b8e117ae4c84148926dd56a18d5feab1615"
+},
+{
+"path": "candles_1d/RLB.parquet",
+"bytes": 38330,
+"sha256": "539ff1acfec4ced9cc5a1fcd853d684b58aa6fa0d54f8ca0c2e01f971abafc1c"
+},
+{
+"path": "candles_1d/RNDR.parquet",
+"bytes": 30968,
+"sha256": "e8641a51e5b46162a2da0472567cd1c5505b98ca881ce8b838105c7c189b88d7"
+},
+{
+"path": "candles_1d/RSR.parquet",
+"bytes": 104207,
+"sha256": "5ec663765967b947fa0e33aee16b78a793a34f6226cb8ee0809f0b2ce8afd30c"
+},
+{
+"path": "candles_1d/RUNE.parquet",
+"bytes": 102052,
+"sha256": "0a057c0a63d805ef85cc5980ad2de6eab4f447eea95a0188cd75772875930921"
+},
+{
+"path": "candles_1d/S.parquet",
+"bytes": 40843,
+"sha256": "caac0a6e2477dbe6eeba6b64940c93f935990a88c6bdc453a7a48ae0bf01ab4b"
+},
+{
+"path": "candles_1d/SAGA.parquet",
+"bytes": 54466,
+"sha256": "9cff04e2f74039f0b70a9712c5d5826471c46c2332a239319d9ee055a692b8ea"
+},
+{
+"path": "candles_1d/SAND.parquet",
+"bytes": 81708,
+"sha256": "dd7e12036f12f6d46e45fbf7fb73f470b42901ea2cb8dd880391cc41fa9fe73d"
+},
+{
+"path": "candles_1d/SCR.parquet",
+"bytes": 36454,
+"sha256": "ff3ddcdbaabb7f92a8342ec43853a313caa260b7869b5b17ab3919c3f9d43525"
+},
+{
+"path": "candles_1d/SEI.parquet",
+"bytes": 71121,
+"sha256": "ead15a4f168fa0a3c73d3065170eac20cb35dda9b8949266637a0460a5ff4332"
+},
+{
+"path": "candles_1d/SHIA.parquet",
+"bytes": 20969,
+"sha256": "2db5ee3705d8478fbaacafc776c15777e5151a7a5f02e2b4570a01afb448c621"
+},
+{
+"path": "candles_1d/SKR.parquet",
+"bytes": 19726,
+"sha256": "6d917d9b5ad0719ee434472bb739883bf4b1f3ce82c73c5a8cc45cdf6a39406f"
+},
+{
+"path": "candles_1d/SKY.parquet",
+"bytes": 27057,
+"sha256": "48567e5a72867d8f211a4367cd5bfb2b1b0f455b2d1d8bd0fb6cf1cccb3917cd"
+},
+{
+"path": "candles_1d/SNX.parquet",
+"bytes": 102345,
+"sha256": "a5ce6b0f911ffeb55b83766fbd610ad570493557bece8bde1024ef2cf2ce9d3d"
+},
+{
+"path": "candles_1d/SOL.parquet",
+"bytes": 101871,
+"sha256": "01e3646e64964c6a5180a86af8198ed9a0cf129a8665a03d443dc0884025c6cb"
+},
+{
+"path": "candles_1d/SOPH.parquet",
+"bytes": 32845,
+"sha256": "207333cbfac5f81b064ddc65a079cedea65918fde4a55c6ea7745c9a14ea8d23"
+},
+{
+"path": "candles_1d/SPX.parquet",
+"bytes": 42300,
+"sha256": "e251147d1b88cb60546b865702b85e208f027e434f9517add6f8977c18250c1b"
+},
+{
+"path": "candles_1d/STABLE.parquet",
+"bytes": 23623,
+"sha256": "7038c525b3d5c2278723161987ddace32ceee22fe7f6e54ab5670d4353ebd395"
+},
+{
+"path": "candles_1d/STBL.parquet",
+"bytes": 26667,
+"sha256": "9bf96e983ce02dbefeb52902177c7c3577e06e578e4b7538be62d69971b3a58f"
+},
+{
+"path": "candles_1d/STG.parquet",
+"bytes": 55399,
+"sha256": "b73ccf85a7878bc05a40c4a02682caaa9be779985dcd2177d52f25a151d9a6ce"
+},
+{
+"path": "candles_1d/STRAX.parquet",
+"bytes": 12787,
+"sha256": "0beb142dc91fbdb51917e038139a7daa16741ac838614893169472bf1e19cfce"
+},
+{
+"path": "candles_1d/STRK.parquet",
+"bytes": 59726,
+"sha256": "938ad05d8f77c5e4e21b26536dde2755257602157ab560a27a83ec1543468ac9"
+},
+{
+"path": "candles_1d/STX.parquet",
+"bytes": 76435,
+"sha256": "ce6238e8a2930a19e3db831817c91835aa582c82d665b8e952c31637aad0bb14"
+},
+{
+"path": "candles_1d/SUI.parquet",
+"bytes": 76051,
+"sha256": "a3b34a96b86f794246939fd27cfbc5ec86abad9b9f56584b6e4158f59d2514c1"
+},
+{
+"path": "candles_1d/SUPER.parquet",
+"bytes": 63048,
+"sha256": "aaf760ad4ac114b25964a6f39c53c71add4ffa82990d1da2de83b72812d97fd2"
+},
+{
+"path": "candles_1d/SUSHI.parquet",
+"bytes": 93727,
+"sha256": "2a844c2fe52e6e5aad69d9c572c543265a994dfaea945dad9cd427d76940609d"
+},
+{
+"path": "candles_1d/SYRUP.parquet",
+"bytes": 33742,
+"sha256": "4139d6ee2eff1d3389d26069de4878a92d270d2f0e330fcde1f1bae94f272e61"
+},
+{
+"path": "candles_1d/TAO.parquet",
+"bytes": 47593,
+"sha256": "f0f45a6c9d66eb5115dd0ee4a29c0cf2b3140a07e462d7947aa23d731181af68"
+},
+{
+"path": "candles_1d/TIA.parquet",
+"bytes": 63414,
+"sha256": "44b7259fa5d17d32989f3b8e5b05af3bdb35c85417e0609fd30b284696970afa"
+},
+{
+"path": "candles_1d/TNSR.parquet",
+"bytes": 55380,
+"sha256": "4f3d137d5e9e663e60ad7422d063f03c7af6d62409e02763de100df8fdc53988"
+},
+{
+"path": "candles_1d/TON.parquet",
+"bytes": 54586,
+"sha256": "52b8f893a765d389ff2f41b3a536a22cc5bfa9e120ff9fa369b9fcef1f65024c"
+},
+{
+"path": "candles_1d/TRB.parquet",
+"bytes": 85520,
+"sha256": "9cc3d8fccb3e59d439ab7ab773c6d023a5c67c47e82d6c069ba436ce91aa25f4"
+},
+{
+"path": "candles_1d/TRUMP.parquet",
+"bytes": 37886,
+"sha256": "4cfe3401332f15f44108aca954c5cf955947b9f0346e64ba39b68b7d119d043d"
+},
+{
+"path": "candles_1d/TRX.parquet",
+"bytes": 112198,
+"sha256": "4b1ff2b0c8647ae8a59ea072f425d6efeff13df8e035b1c4d8f97a8c045848f8"
+},
+{
+"path": "candles_1d/TST.parquet",
+"bytes": 30746,
+"sha256": "3ed011cd5f0632c7a28396b0a235c595cd64c9fac03f963698023b42233dec71"
+},
+{
+"path": "candles_1d/TURBO.parquet",
+"bytes": 51168,
+"sha256": "265b6130b9fc9329c6e32c26a42f5376f379c2bfc73883eb6a90e95253e45724"
+},
+{
+"path": "candles_1d/UMA.parquet",
+"bytes": 64104,
+"sha256": "eec6b7554a4baea32f644ee70a57fa6c008464d591232e7d31cd758b7567c9b4"
+},
+{
+"path": "candles_1d/UNI.parquet",
+"bytes": 97462,
+"sha256": "702a0580371be914a478b805e09ae3b9b26e81011f0ee73596ea590332bffe87"
+},
+{
+"path": "candles_1d/UNIBOT.parquet",
+"bytes": 21665,
+"sha256": "0f4ba5c62f091b3e09c6020b00a3935a2496b79bb439180ba3cd446572ad5dce"
+},
+{
+"path": "candles_1d/USELESS.parquet",
+"bytes": 6777,
+"sha256": "6ea9b8d70ce4d728012da6b7e227e7f9033ca26c761f15d221ed7ae8e0029d6d"
+},
+{
+"path": "candles_1d/USTC.parquet",
+"bytes": 53728,
+"sha256": "c9d754d25948653e08448efa3c29e31cfc566e5da6f8fe33da58917392213f1f"
+},
+{
+"path": "candles_1d/USUAL.parquet",
+"bytes": 41597,
+"sha256": "43cf87054966719283ec8288612cccec2d68ac51f358188861377a79c77c07c1"
+},
+{
+"path": "candles_1d/VINE.parquet",
+"bytes": 37459,
+"sha256": "ca1e349aebd1913d68ef3467bcadfa6f9a690cf0e7646cf633d3f68aff4132ea"
+},
+{
+"path": "candles_1d/VIRTUAL.parquet",
+"bytes": 42719,
+"sha256": "3a66ee6599f8d1cfa4a77d9b6a84375faa3cb0614e2386dc1a4188fe0b676a9c"
+},
+{
+"path": "candles_1d/VVV.parquet",
+"bytes": 38204,
+"sha256": "439380afbe9270de6831cf13a58dad842668e6374fad754600f78255c278d686"
+},
+{
+"path": "candles_1d/W.parquet",
+"bytes": 58367,
+"sha256": "81758fe719e7b2df815622aa34192a07724f8689f62dc621117abd99b4c28f47"
+},
+{
+"path": "candles_1d/WCT.parquet",
+"bytes": 35350,
+"sha256": "b08a30f055569a6d317c8e25e03e8d87ef98b55227bddaa4ee0afd04c06fd947"
+},
+{
+"path": "candles_1d/WIF.parquet",
+"bytes": 63379,
+"sha256": "90f2e105eaec6bcf07877d61612383d9df01691dc7636d428fd67701b0dd5cb0"
+},
+{
+"path": "candles_1d/WLD.parquet",
+"bytes": 71465,
+"sha256": "90cacc36c59e85d537ee8241076aca8c7405d25dc3c6affd46ec07dd220a2b2e"
+},
+{
+"path": "candles_1d/WLFI.parquet",
+"bytes": 28236,
+"sha256": "f767d2422de89b43f243b53d5d2676182615d2dc2d1de294e945a377113144dc"
+},
+{
+"path": "candles_1d/XAI.parquet",
+"bytes": 59001,
+"sha256": "08d189e086ae238b675e046385f4090790a5d5fa543d496e881e9b9acfa310a0"
+},
+{
+"path": "candles_1d/XLM.parquet",
+"bytes": 86003,
+"sha256": "856ef358def9f5a193f9dca6e514e25b5ed88c434a5af7aba8a68e9524bb6c4e"
+},
+{
+"path": "candles_1d/XMR.parquet",
+"bytes": 47173,
+"sha256": "423d70b081ffee469172205ecf00fca3c27fcd1f263ab6add52fedacc5198952"
+},
+{
+"path": "candles_1d/XPL.parquet",
+"bytes": 28522,
+"sha256": "39cb757082d17d555b26578f6d11b436b197d2304f634ffcf3c249ae6fed8ddd"
+},
+{
+"path": "candles_1d/XRP.parquet",
+"bytes": 104257,
+"sha256": "e2a7a9322cbeaececcb437af9c69016939feda21b1f02f376b809cb4632f130b"
+},
+{
+"path": "candles_1d/YGG.parquet",
+"bytes": 69884,
+"sha256": "3f0bb93020e2183e11efe1e4320b2369cf64e1fc06959cd172aed081eb0e1290"
+},
+{
+"path": "candles_1d/YZY.parquet",
+"bytes": 18533,
+"sha256": "3befb328f3aa616da77c33497712456423ea1e3e2c2c1c009c2bbb3020efe1b2"
+},
+{
+"path": "candles_1d/ZEC.parquet",
+"bytes": 50255,
+"sha256": "dae2f94d2719f6a884980b9b3561d4ab1afe7bab63a7964121bd8b134eccb492"
+},
+{
+"path": "candles_1d/ZEN.parquet",
+"bytes": 90806,
+"sha256": "5f64c6556964dd400bfbb004c3c29db637428dd05a74719e6ef95aa20988e3fe"
+},
+{
+"path": "candles_1d/ZEREBRO.parquet",
+"bytes": 31872,
+"sha256": "eea3e3221d55b936256d3c3ac3e3cb70ec21ac30c935376e67eae6c49ce196c3"
+},
+{
+"path": "candles_1d/ZETA.parquet",
+"bytes": 58655,
+"sha256": "41f602696dee629d90fcf0e74a174486731666830b233a20b2ff6108ef6c8615"
+},
+{
+"path": "candles_1d/ZK.parquet",
+"bytes": 52871,
+"sha256": "212af40c6b7f9c6db4980646a9b64506cfb462b13bb28eabaae7f06107ae5851"
+},
+{
+"path": "candles_1d/ZORA.parquet",
+"bytes": 35431,
+"sha256": "dc0b0694ded6ce1a703142d53e526deb8f2b6cf8a00ae3e7ce2fa9b96cf82896"
+},
+{
+"path": "candles_1d/ZRO.parquet",
+"bytes": 62088,
+"sha256": "430ea261391f75e4f58cd702e415d7d0c2882435f80163693c58db90b4ad3b18"
+},
+{
+"path": "candles_1d/kBONK.parquet",
+"bytes": 65687,
+"sha256": "044e723db099b353d5ec4aa669498ea924ac466d0d85ed93ff3cca784a1d1630"
+},
+{
+"path": "candles_1d/kDOGS.parquet",
+"bytes": 22775,
+"sha256": "c75cf52a20b9fdb45591e997dea0aa7d4316fecd1cfb347e2006f6c3690378c4"
+},
+{
+"path": "candles_1d/kFLOKI.parquet",
+"bytes": 71835,
+"sha256": "e195b8651607221be710efaf0b51b6092db843c4aa9ac28c1d7feab8ec0309df"
+},
+{
+"path": "candles_1d/kLUNC.parquet",
+"bytes": 81989,
+"sha256": "5f383a1939b59396f8a39eb7327aba24164b679c5aa3e460da91885c4a5c969b"
+},
+{
+"path": "candles_1d/kNEIRO.parquet",
+"bytes": 45374,
+"sha256": "2e2b3d0ac0475052197f4b15d840a5349b73b53a64352ebc531f0656b9a4af17"
+},
+{
+"path": "candles_1d/kPEPE.parquet",
+"bytes": 76421,
+"sha256": "cacdbd8a11a13f29069a781611e8ce094d1d1bf1264f7c2db1ae6afa6b8c363b"
+},
+{
+"path": "candles_1d/kSHIB.parquet",
+"bytes": 104951,
+"sha256": "f2f51cd7d09726b4137fec24604fe1e88a8b968ff44601f02f1a5fcc919fc1ea"
+},
+{
+"path": "candles_1h/0G.parquet",
+"bytes": 258711,
+"sha256": "7087dba3915d0a39c014e8ff1d454c9404503790350fa07e01f4d1a4ddccb8e8"
+},
+{
+"path": "candles_1h/2Z.parquet",
+"bytes": 269577,
+"sha256": "1f360388671c1581845bb2221d80294ad39dd7a8f13100d3f25a3b91184f62df"
+},
+{
+"path": "candles_1h/AAVE.parquet",
+"bytes": 209920,
+"sha256": "881c029792717a46deddce6dd7f5d8928ef9330ea419fc0bc95a08784cf9e93b"
+},
+{
+"path": "candles_1h/ACE.parquet",
+"bytes": 156258,
+"sha256": "756da342fbb634da79f0f7018f7d1d788dea888d91c666e1c2f350210a1631d8"
+},
+{
+"path": "candles_1h/ADA.parquet",
+"bytes": 243374,
+"sha256": "044a3a22a41e62d2be2f6a4453c6e447551e11bc3e62bb452d987fae6c138258"
+},
+{
+"path": "candles_1h/AERO.parquet",
+"bytes": 259189,
+"sha256": "977d6f651bfd6fb98019221717ebadd07de4ef0917a9aa029d4476b61db77ddb"
+},
+{
+"path": "candles_1h/AI.parquet",
+"bytes": 269414,
+"sha256": "767b56c202cd6b3f9421bf7c662adb304173622e647e115859c79681de082704"
+},
+{
+"path": "candles_1h/AI16Z.parquet",
+"bytes": 259877,
+"sha256": "16326ae6abbda39caa9481c3b70669d1c66cef2195d814572c73fd6135cb1f8b"
+},
+{
+"path": "candles_1h/AIXBT.parquet",
+"bytes": 249219,
+"sha256": "791a1ca11e3957381338f1796282f464c71a681cdb44d2c1e7b287de9e74b1d8"
+},
+{
+"path": "candles_1h/ALGO.parquet",
+"bytes": 247930,
+"sha256": "7ca30579de8752fa53a5d7956b1e4d42f96600b28fcc3c6db3eb15a0b56c05e5"
+},
+{
+"path": "candles_1h/ALT.parquet",
+"bytes": 187322,
+"sha256": "c5ae4ede8b6f1a237d835775f6c4aab1dab6b05a3ea8833ca1e87132c468b1eb"
+},
+{
+"path": "candles_1h/ANIME.parquet",
+"bytes": 171724,
+"sha256": "005f95f5de153e0fc155b3ff47e3fb62656ae070160d965102d4a288b5cd689e"
+},
+{
+"path": "candles_1h/APE.parquet",
+"bytes": 220162,
+"sha256": "0074141f6860bc4cdecfde9ea3d041c3bd9b61833c1e20eb6825c92faf10e03e"
+},
+{
+"path": "candles_1h/APEX.parquet",
+"bytes": 235013,
+"sha256": "00661e046adb2f49e4148fa904a8f434cde1d920082a9a7bf56707d1b9e7194f"
+},
+{
+"path": "candles_1h/APT.parquet",
+"bytes": 184471,
+"sha256": "307a506ff7f27b74ebda3d4f8e069db86809016dfa578db8394f024c0b706032"
+},
+{
+"path": "candles_1h/AR.parquet",
+"bytes": 212690,
+"sha256": "cdd0a9f7d8822c7a08abc277d7d2917ce8e566a32e11445e85da186123110ee2"
+},
+{
+"path": "candles_1h/ARB.parquet",
+"bytes": 242800,
+"sha256": "c2534cb9e8942dc9da469e2c43157ff09c6923ba9df69b468400527ddaafa52f"
+},
+{
+"path": "candles_1h/ARK.parquet",
+"bytes": 233880,
+"sha256": "93d5ed022258be1d8100d664b10654033aafd44e3f31bbd3d518016fa910401a"
+},
+{
+"path": "candles_1h/ASTER.parquet",
+"bytes": 246922,
+"sha256": "0eededd065b611cfd2cc05113d920a7f2aebcc3acd1ee48ca11857275f5ace2e"
+},
+{
+"path": "candles_1h/ATOM.parquet",
+"bytes": 199091,
+"sha256": "3986ef464b70343430f00940ec2039dfd1793d39774fd459334046b02bfc957c"
+},
+{
+"path": "candles_1h/AVAX.parquet",
+"bytes": 238482,
+"sha256": "4fac57f03a22499c427f353395a2fc7b4c39382e8217487fd19a3128b985ea69"
+},
+{
+"path": "candles_1h/AVNT.parquet",
+"bytes": 241312,
+"sha256": "8301e09ee7dd22b3021272982b61b59353ca2d91cf3280d80e0e710b96820785"
+},
+{
+"path": "candles_1h/AXS.parquet",
+"bytes": 212526,
+"sha256": "79245565c0d055c9598f0bb8b69e7fd7a06225edc183b88ccd59a20f35c10613"
+},
+{
+"path": "candles_1h/AZTEC.parquet",
+"bytes": 241642,
+"sha256": "92e72f7eec564101436b05942c16aadd459d729c58bf6f81c61afd8f37ce7a76"
+},
+{
+"path": "candles_1h/BABY.parquet",
+"bytes": 227505,
+"sha256": "9985c30b83de4a79be271174d8169f884f21ea4639753715fd717f28b7b2a1c3"
+},
+{
+"path": "candles_1h/BADGER.parquet",
+"bytes": 220858,
+"sha256": "d18e3c1118d6e6379dbf1d0d6becb803a8de6f9fc83d2637db5045dc4719333a"
+},
+{
+"path": "candles_1h/BANANA.parquet",
+"bytes": 203291,
+"sha256": "02332fab33ba17ddda3625803c5259a5fb9d5c9d6ecdb85c325fbd7333ab9a5b"
+},
+{
+"path": "candles_1h/BCH.parquet",
+"bytes": 192636,
+"sha256": "6f15f59cdca3b423f5b5cdecd65e6107a5a9f207e4cceac0ea4d80a4f9722c1e"
+},
+{
+"path": "candles_1h/BERA.parquet",
+"bytes": 250502,
+"sha256": "6578f072c03317819e1bbb7a96ebfba95256ccc6ead2b1beae557ed341038edf"
+},
+{
+"path": "candles_1h/BIGTIME.parquet",
+"bytes": 226568,
+"sha256": "88e7a16a007301d08a57a6f6673f6d78aad9e7d634454df8c9cf26c7a5d9dca6"
+},
+{
+"path": "candles_1h/BIO.parquet",
+"bytes": 258005,
+"sha256": "5f40a1362ef66786a8aa72eb644efa137addbf4fdf56a84bbb3734332d50578b"
+},
+{
+"path": "candles_1h/BLAST.parquet",
+"bytes": 138120,
+"sha256": "a9382b0025083b0ee51b7cd230eb118aebc4dcc5b5e4fa0e5ae6f2f8bd57215b"
+},
+{
+"path": "candles_1h/BLUR.parquet",
+"bytes": 252039,
+"sha256": "0983256dfaeeda255207aef4c8aac6a077a7a7d76c765f7a1a00bb582b76dc8e"
+},
+{
+"path": "candles_1h/BLZ.parquet",
+"bytes": 241734,
+"sha256": "f833e99b23d114c2dec3074a5479536ddfb2b6f2b38938447e151449fac5c1aa"
+},
+{
+"path": "candles_1h/BNB.parquet",
+"bytes": 194196,
+"sha256": "c606d5261dd316365a9a409d325e47b869af4b9780ecf67004f75d7aa963599a"
+},
+{
+"path": "candles_1h/BNT.parquet",
+"bytes": 248131,
+"sha256": "a8a22a734e85c3ea6790b83cc95d5ea4b492ed1c1d8e1eec1ab482bdde565979"
+},
+{
+"path": "candles_1h/BOME.parquet",
+"bytes": 138120,
+"sha256": "9e89e07704e2404c550120abf52de57ada856b9bdf24b41ba6e7fcdd0f96e5d4"
+},
+{
+"path": "candles_1h/BRETT.parquet",
+"bytes": 206342,
+"sha256": "069c64857dc6a5d528cf53904961939fc6a1facb931c77176bcafdae7030bbda"
+},
+{
+"path": "candles_1h/BSV.parquet",
+"bytes": 181333,
+"sha256": "4a6e1d1cfa09fdcf8ccacf69f730a85395cb6456a6088d64fb16948477f78ea8"
+},
+{
+"path": "candles_1h/BTC.parquet",
+"bytes": 228769,
+"sha256": "4be9fc6cbb425c344985afa32be32038fc6471c9c95644ac3c67e48258dd0ea0"
+},
+{
+"path": "candles_1h/CAKE.parquet",
+"bytes": 192814,
+"sha256": "b1243cde135bf3b9cd13fe840310eea103783fa2bcc33e9e1b2f16b25dfc35da"
+},
+{
+"path": "candles_1h/CANTO.parquet",
+"bytes": 208432,
+"sha256": "131a5d070a87767c027b6f5f35175f8f94148d00a8541b8901a35ef104f53cf7"
+},
+{
+"path": "candles_1h/CASHCAT.parquet",
+"bytes": 139655,
+"sha256": "e53f864c448c638ce5dcaf578325acb2ea04c3fbe8d51a4d6d154ea842266675"
+},
+{
+"path": "candles_1h/CATI.parquet",
+"bytes": 230056,
+"sha256": "846c821cd701e018db57b3e8524b5e9af637d94b0d7d83fd780d843b4fa37eba"
+},
+{
+"path": "candles_1h/CC.parquet",
+"bytes": 229626,
+"sha256": "03476fad4768d8b78fad9fb98bb6909eb0c72656caf8ae5c693d15d384fa550a"
+},
+{
+"path": "candles_1h/CELO.parquet",
+"bytes": 265025,
+"sha256": "8c2fea5799a4022b6cd3485632cd413329479d0b00fb17f4ce10ed7f76619b0a"
+},
+{
+"path": "candles_1h/CFX.parquet",
+"bytes": 261405,
+"sha256": "dca35b46f1d5b12da186390aea9c6631379806dec6d3b1fc347b84b0372cf409"
+},
+{
+"path": "candles_1h/CHILLGUY.parquet",
+"bytes": 252908,
+"sha256": "da214eae22272b44c139c3631e0d6f7f6cdda234c2b48145f568c03a9ec29f69"
+},
+{
+"path": "candles_1h/CHIP.parquet",
+"bytes": 238568,
+"sha256": "e5cd116e97d88d49d1cc66e960a0c726d629efa38a98d5bbb89760748abfe753"
+},
+{
+"path": "candles_1h/COMP.parquet",
+"bytes": 184685,
+"sha256": "1cb873f6ee2b234dffea21817fb07dcb7cff2cd798d9dcc4100782356f731292"
+},
+{
+"path": "candles_1h/CRV.parquet",
+"bytes": 246806,
+"sha256": "3646ba186f312f4db00bba0a20fc200cfd91606fd752d243f96a1ae8083620a2"
+},
+{
+"path": "candles_1h/CYBER.parquet",
+"bytes": 221253,
+"sha256": "481d49a58cd3d8197fb252fd3bf38c225da1aa5d55306b8cd04ab9c806d183b9"
+},
+{
+"path": "candles_1h/DASH.parquet",
+"bytes": 204732,
+"sha256": "656feec67e857527a8ed381c10c7ed31851445fca332dfbd875f13a71e82b318"
+},
+{
+"path": "candles_1h/DOGE.parquet",
+"bytes": 268629,
+"sha256": "4c8ddeae1d6fa0acab1bd1c96a3247079880b1712af399df10dc862556349893"
+},
+{
+"path": "candles_1h/DOOD.parquet",
+"bytes": 197971,
+"sha256": "0e7cd29e27e4def7e92cc0f95033989dec060512d073eb3e768a289b6d60e8f4"
+},
+{
+"path": "candles_1h/DOT.parquet",
+"bytes": 215697,
+"sha256": "2db6c09bd46ee604c513c3e1b675c7cf5c03dcdf63f92b2efc1da4451f56693f"
+},
+{
+"path": "candles_1h/DYDX.parquet",
+"bytes": 227003,
+"sha256": "5c1e54f5a1c5fda917f560318ab4e9f82c32c5a9f81fe93e81a13aa0ccb05521"
+},
+{
+"path": "candles_1h/DYM.parquet",
+"bytes": 153421,
+"sha256": "745e3789f744d32817575fe0c18e137f3d06cd068f8c785d1c2a588b49cbb893"
+},
+{
+"path": "candles_1h/EIGEN.parquet",
+"bytes": 152917,
+"sha256": "d1aa43a8d121803c7d591a17a757a8e594f8ef32dd81d105e4a72981732c5d8c"
+},
+{
+"path": "candles_1h/ENA.parquet",
+"bytes": 275155,
+"sha256": "3debd1b94a621f04663b9ee518381803d401fb38aac12c37850946d51b169827"
+},
+{
+"path": "candles_1h/ENS.parquet",
+"bytes": 219389,
+"sha256": "a868881e567b88fec78408fb1c840718b00b83154dfeb7a72307327f896f3ae0"
+},
+{
+"path": "candles_1h/ETC.parquet",
+"bytes": 230498,
+"sha256": "732b691a1969d9ae0f337fa4564199a5e9e74af08b58d11aedbd308a6cfc23ca"
+},
+{
+"path": "candles_1h/ETH.parquet",
+"bytes": 204693,
+"sha256": "040d60a79381ab3b87b5b0e808311efd8d0fe12a014c5ef19c04f7469c805304"
+},
+{
+"path": "candles_1h/ETHFI.parquet",
+"bytes": 263393,
+"sha256": "2fa98830b2a2ae02a709a43d09097b0ac2ba8fc06ef70bf4a984fb5ca14220c4"
+},
+{
+"path": "candles_1h/FARTCOIN.parquet",
+"bytes": 255808,
+"sha256": "758e5b35cf6eca3df77d5d92fc20616995819fc376088ca355b121d8e364ac7c"
+},
+{
+"path": "candles_1h/FET.parquet",
+"bytes": 243231,
+"sha256": "91e73629421ca889d55afa445892c6cd80f4d979a85ad28a7ce2c5d0e6da273c"
+},
+{
+"path": "candles_1h/FIL.parquet",
+"bytes": 253257,
+"sha256": "d0d9a56f2b92a2a77a66486e05986d300fd808b0ab573d8c04e4a01cdf9c0a32"
+},
+{
+"path": "candles_1h/FOGO.parquet",
+"bytes": 241641,
+"sha256": "2e55ebe5072300e9252042e0662176fa48546a9c26bfda45139dbf4b74f52e77"
+},
+{
+"path": "candles_1h/FRIEND.parquet",
+"bytes": 179611,
+"sha256": "cf81f55a8ac8e451efb3e7145980dfb4b8873d6a324497201f770894e829f92c"
+},
+{
+"path": "candles_1h/FTM.parquet",
+"bytes": 256805,
+"sha256": "90f678389184df7a06b9c4b54f8e62515a6e059554fabfcb0d47fd02007747e2"
+},
+{
+"path": "candles_1h/FTT.parquet",
+"bytes": 246846,
+"sha256": "fd310cda3a7665f5b6122257b71a0ea671f282e9655baef1d0431b071874cbc5"
+},
+{
+"path": "candles_1h/FXS.parquet",
+"bytes": 231186,
+"sha256": "81344b0ca0fe3327afb7a82fbfb5b78590f10199ced887cbc080293a4c1fc4dd"
+},
+{
+"path": "candles_1h/GALA.parquet",
+"bytes": 172934,
+"sha256": "2d675c01f704943ab746f08f0070cfb9818ff141f6659cfcfed1731b88ed2aa7"
+},
+{
+"path": "candles_1h/GAS.parquet",
+"bytes": 197047,
+"sha256": "1cf39622128c177a9a5d207ab5f60bd6fb1175fcea08af6569ed0d1f50a2f400"
+},
+{
+"path": "candles_1h/GMT.parquet",
+"bytes": 214070,
+"sha256": "36f3dcf7b13396a45acede2f6abfd01aed2d03e7d1ba278ba4741b2565fea181"
+},
+{
+"path": "candles_1h/GMX.parquet",
+"bytes": 222462,
+"sha256": "edf6173a8e47718d498457fdcc07343cf106a11171d53b17d8c04a41f9e47f43"
+},
+{
+"path": "candles_1h/GOAT.parquet",
+"bytes": 228311,
+"sha256": "8673fb51dc6c11946ee35929e6cadd83aad7f38a0ab25b9d577e1d5fc5435427"
+},
+{
+"path": "candles_1h/GRAM.parquet",
+"bytes": 104680,
+"sha256": "6ff2e908b47a74ba862beda2659a721db25e5075875874519dc35c71359ea2bf"
+},
+{
+"path": "candles_1h/GRASS.parquet",
+"bytes": 260047,
+"sha256": "357428a1c020f972740d1e34a528262a91214fad9a8b9fbc727152e0c121c5dd"
+},
+{
+"path": "candles_1h/GRIFFAIN.parquet",
+"bytes": 237555,
+"sha256": "46c42070769d6c63c1a326e7273119f3039bf537e58efda522d0d149c2cf09e3"
+},
+{
+"path": "candles_1h/HBAR.parquet",
+"bytes": 265726,
+"sha256": "7c0c4deb324d7831b1ed4ca5f954b1847696016aef33ca1329643d62bc632909"
+},
+{
+"path": "candles_1h/HEMI.parquet",
+"bytes": 219981,
+"sha256": "4513f9b482dbd3a901bf5fc8eef887688922bedaa47bf41f261621e067d73a68"
+},
+{
+"path": "candles_1h/HMSTR.parquet",
+"bytes": 111447,
+"sha256": "ec896e52ec032c953f8a11af47c3bd5fa74d29d3fc275e90b14fc1a9665ec0fb"
+},
+{
+"path": "candles_1h/HPOS.parquet",
+"bytes": 207330,
+"sha256": "577cadcaa856f36b2f4ef90a025af4a098d006df7e566ae4cd251c4700897112"
+},
+{
+"path": "candles_1h/HYPE.parquet",
+"bytes": 232315,
+"sha256": "a17e8f7a294cd0a90afaad57b392cd52553a9f990744300c328ed51609232a6f"
+},
+{
+"path": "candles_1h/HYPER.parquet",
+"bytes": 262595,
+"sha256": "f107ce64e5fd3286c39a846a239aa48966d212909b8073cfdd8a514946252a36"
+},
+{
+"path": "candles_1h/ICP.parquet",
+"bytes": 210136,
+"sha256": "202e17bee46c4b7d963622f400e9846f4ccc1328e6248b5baff95c78dc493c3b"
+},
+{
+"path": "candles_1h/ILV.parquet",
+"bytes": 202535,
+"sha256": "07ed9475b450ed7d6c2024f508d585957e39f4b865dc7b681750e2ede3c77873"
+},
+{
+"path": "candles_1h/IMX.parquet",
+"bytes": 229806,
+"sha256": "0627ede191a3aad5a5120341b6209b377f788900d3df49a6166a8ed8ad7463e0"
+},
+{
+"path": "candles_1h/INIT.parquet",
+"bytes": 265605,
+"sha256": "1f45c2ca93b03fbc4188d5e4aeffa7987d399463ced81b9c69dea8187b88c195"
+},
+{
+"path": "candles_1h/INJ.parquet",
+"bytes": 229128,
+"sha256": "a8ffb137667cefc33038816c71875ee3bc0288e1d75068e1872446191adcff36"
+},
+{
+"path": "candles_1h/IO.parquet",
+"bytes": 230539,
+"sha256": "e5d84784ea774bbe1548327fc06060d06688505f4295ee4f08082a70782d85a3"
+},
+{
+"path": "candles_1h/IOTA.parquet",
+"bytes": 261321,
+"sha256": "8dd0406139293c1c8a37656e546198fc9aa26cd26b65a5ecb7d7b3a8753741cf"
+},
+{
+"path": "candles_1h/IP.parquet",
+"bytes": 238678,
+"sha256": "a191867ee92403a543c09a31452cef9d783225a5c6780888bb6e320eb337dffa"
+},
+{
+"path": "candles_1h/JELLY.parquet",
+"bytes": 76131,
+"sha256": "1bb12d1fdb6215577d342e81e556661daaaa2436a28dff4f99d5e5b950276368"
+},
+{
+"path": "candles_1h/JTO.parquet",
+"bytes": 266652,
+"sha256": "d4dd0fdb3abf450901046809c06ce3b15b88d0a5cadc09dbb262dc16f89ef4fd"
+},
+{
+"path": "candles_1h/JUP.parquet",
+"bytes": 248599,
+"sha256": "e088f776e5d429e2722ee6134708874ae2eac4c98bcc3e805f3fd1beba9ac6e1"
+},
+{
+"path": "candles_1h/KAITO.parquet",
+"bytes": 267837,
+"sha256": "2e26f75e97ac3965e1e6eea4a626c24d7153ff6a18ac7bd70ba71ceee327f0de"
+},
+{
+"path": "candles_1h/KAS.parquet",
+"bytes": 252701,
+"sha256": "957e01408fe1acc32281a71fd9b8654a45eaf58ea3038453205651d4ef5cb5c1"
+},
+{
+"path": "candles_1h/LAUNCHCOIN.parquet",
+"bytes": 215857,
+"sha256": "b8e5db2f7c2058ddced8a98183a2f2c0f4ee5119102298ad003009e76c444e89"
+},
+{
+"path": "candles_1h/LAYER.parquet",
+"bytes": 262286,
+"sha256": "c1bbefc7f0703320c3d7c223a459cc9548a6e9c6ac1c027f507960c1c4af4067"
+},
+{
+"path": "candles_1h/LDO.parquet",
+"bytes": 249476,
+"sha256": "2c5c02e3beb4daed91b86d414262717bffc3d27b2318fcccd38cbbc211a043f5"
+},
+{
+"path": "candles_1h/LINEA.parquet",
+"bytes": 164850,
+"sha256": "06c9b44444ed4829b2f025bdd6e340b455d405d084394b2d8348f18ad850e801"
+},
+{
+"path": "candles_1h/LINK.parquet",
+"bytes": 225403,
+"sha256": "ec62ffb079823ef3506516f318ce7b0d1f7162624ec5371bea768a03f546ebda"
+},
+{
+"path": "candles_1h/LISTA.parquet",
+"bytes": 253632,
+"sha256": "ead3069a8472806463a2a8400938f7b3e259021f0248682373d1894376c52b08"
+},
+{
+"path": "candles_1h/LIT.parquet",
+"bytes": 274137,
+"sha256": "b523f56ce1b5e871335f56b79980b2015a27651f4b22d200ec48afc766abaa2a"
+},
+{
+"path": "candles_1h/LOOM.parquet",
+"bytes": 263794,
+"sha256": "eb6b0d445baa8e5e03ead4d6b5804ac4401f0ff3ef2ba5215a2be4476b63c307"
+},
+{
+"path": "candles_1h/LTC.parquet",
+"bytes": 203647,
+"sha256": "cf0029004d5b564f031d76cbe1a5238914e727fbacff2b064dca8934ce596585"
+},
+{
+"path": "candles_1h/MANTA.parquet",
+"bytes": 187742,
+"sha256": "988f66562beab89d004eba8c25253dac87585c6136541260d47fa35bd1a9cea5"
+},
+{
+"path": "candles_1h/MATIC.parquet",
+"bytes": 253349,
+"sha256": "9c7377a356e4a7cf6ce2228cd69b18cc2e8f9e4b4e7b1cfa067666cc44e27832"
+},
+{
+"path": "candles_1h/MAV.parquet",
+"bytes": 253726,
+"sha256": "986a5e03e5bf8415647fc6a8e0c902ad256c816e59b3a30985243dac85bfef50"
+},
+{
+"path": "candles_1h/MAVIA.parquet",
+"bytes": 211550,
+"sha256": "fa69f6123c70a717b68eb5a8e01b37d1e4689a3f9a55555f713926f8c357bf0b"
+},
+{
+"path": "candles_1h/ME.parquet",
+"bytes": 201249,
+"sha256": "f149a5a619c459f369d692091316d8ac3c94df9a24bff7a2ebdf504b61a4218c"
+},
+{
+"path": "candles_1h/MEGA.parquet",
+"bytes": 266019,
+"sha256": "68bbfea92b895de49d920a8d1ae92491f6be7759c5a1857b521ce0c88f387889"
+},
+{
+"path": "candles_1h/MELANIA.parquet",
+"bytes": 206438,
+"sha256": "46a807d3962e14a2e9eacef6feb343935e7361e3b7acbe27c908dfb734c5b787"
+},
+{
+"path": "candles_1h/MEME.parquet",
+"bytes": 113239,
+"sha256": "b51ead8c473783d58b4470745b5645dca14db6ef71bed6de8f25be97c486ee55"
+},
+{
+"path": "candles_1h/MERL.parquet",
+"bytes": 254465,
+"sha256": "5dcca4cdb27318046701701a806d891d222925c5adb455cc358540506b5f7c8b"
+},
+{
+"path": "candles_1h/MET.parquet",
+"bytes": 248701,
+"sha256": "a1408c577b48a2dea6a485154d97e0761e59c447acf54b009fa195c9ea4ab195"
+},
+{
+"path": "candles_1h/MEW.parquet",
+"bytes": 150382,
+"sha256": "7c5b1f720e350617e8683f339b084adc2d844ed9169ce81ecfef184feb3b4043"
+},
+{
+"path": "candles_1h/MINA.parquet",
+"bytes": 265929,
+"sha256": "e44ee7bc8bc7841f4a2306885da5ebe69c263b7303c229636cf443ac82bd032b"
+},
+{
+"path": "candles_1h/MKR.parquet",
+"bytes": 194394,
+"sha256": "f8769e2f0177db94ac33deb075bd57d80ac228c3cdcb0da0f479ce1bdf4cadca"
+},
+{
+"path": "candles_1h/MNT.parquet",
+"bytes": 256413,
+"sha256": "75dc3bed7e39eda576c87f3547f49be8c7e156d6855a1ceceef45c661a9e3d6c"
+},
+{
+"path": "candles_1h/MON.parquet",
+"bytes": 256702,
+"sha256": "34e2cfa4e4bd487f21122e755b2872a5c7e19510488e475b42101209a7b58765"
+},
+{
+"path": "candles_1h/MOODENG.parquet",
+"bytes": 258459,
+"sha256": "fa29f4b325f66607f18c5b62ffdf26b0c2e75b6d5c2bbb347fc36d6b18bfab60"
+},
+{
+"path": "candles_1h/MORPHO.parquet",
+"bytes": 205955,
+"sha256": "d8e37604c948449e5b712656f1d42a034ecd7ff4a36e50859932b6541d3e6c9a"
+},
+{
+"path": "candles_1h/MOVE.parquet",
+"bytes": 237616,
+"sha256": "2b9b65a6ada04680e46dabb842260a96f0f4bf153d755902993ec440d64ec92e"
+},
+{
+"path": "candles_1h/MYRO.parquet",
+"bytes": 262034,
+"sha256": "7cc6c854aa299dc194f1bc8d89466d4f0e70662dff7f7949d2b18146bb41fde5"
+},
+{
+"path": "candles_1h/NEAR.parquet",
+"bytes": 229421,
+"sha256": "61a2b7774baa589d81e9a35fa6b39f03cccfe2606457d9c45164f213c68f4490"
+},
+{
+"path": "candles_1h/NEIROETH.parquet",
+"bytes": 270643,
+"sha256": "5c19d50b5952a09136434441c1dfc4928f381851b0cb32403832782aaafd725d"
+},
+{
+"path": "candles_1h/NEO.parquet",
+"bytes": 215858,
+"sha256": "748fd302b271cb862a3e501d7b579c4a18209c954dcc7089ad75d1521c424b4e"
+},
+{
+"path": "candles_1h/NFTI.parquet",
+"bytes": 120153,
+"sha256": "c47fc2972c336729fcdceefda953495896acaf66c1c68844385421011f875d8d"
+},
+{
+"path": "candles_1h/NIL.parquet",
+"bytes": 268396,
+"sha256": "3300f5d602fa4c59fd5b6a6a0a52b83365c8015863fc86a2436a43a733e4a21d"
+},
+{
+"path": "candles_1h/NOT.parquet",
+"bytes": 117610,
+"sha256": "c042ed06405489e52d2536b7841fab37e09b121d134f5a22efef3b90ee43d4a9"
+},
+{
+"path": "candles_1h/NTRN.parquet",
+"bytes": 251042,
+"sha256": "95f921546c80fbd0544fdfe7292eea6371fd270a49d6d0c2714473e693ecac4f"
+},
+{
+"path": "candles_1h/NXPC.parquet",
+"bytes": 246741,
+"sha256": "f2b238faf438132e79ea37c0cc6debeb4aa8f8de8ae5c8ffa91ca33e72a1555c"
+},
+{
+"path": "candles_1h/OGN.parquet",
+"bytes": 261735,
+"sha256": "edb3c8ac8d2220cec806d6eeb3b95923e9dd9bb55ab196abf7d8ddc52446983a"
+},
+{
+"path": "candles_1h/OM.parquet",
+"bytes": 240405,
+"sha256": "e25fa1f1d96e3eb19194f10691e9ad7fe1b82af3f7f5c653f4a9c5b7238caed0"
+},
+{
+"path": "candles_1h/OMNI.parquet",
+"bytes": 225094,
+"sha256": "9719395f874b4b5ea3e7bf8e3163c0f622fcdbac3b7b87bfa6fb9ffd2f2ca8c4"
+},
+{
+"path": "candles_1h/ONDO.parquet",
+"bytes": 261162,
+"sha256": "d17e32649d60cb345152af04a434b25a57d2081f932217b420f9042c2dbaf90a"
+},
+{
+"path": "candles_1h/OP.parquet",
+"bytes": 225418,
+"sha256": "39e3dae0ca04c5dd7e4ca9c0973a5f16449a607a5dfc02c59163d921cf6bcbeb"
+},
+{
+"path": "candles_1h/ORBS.parquet",
+"bytes": 249828,
+"sha256": "6a67e72d5f440d0e830bca579dd71dbc21f5bfddd9bfab67e91fbee92a53fe05"
+},
+{
+"path": "candles_1h/ORDI.parquet",
+"bytes": 244592,
+"sha256": "5aa99a4e1120692f3a879ad265970c44d66cfdfbc58fa5eab9f20b367b9f9cf4"
+},
+{
+"path": "candles_1h/OX.parquet",
+"bytes": 157949,
+"sha256": "d853dcb92649553d21ab9216914ce5a035caa0504c105ce0251d804450c04f07"
+},
+{
+"path": "candles_1h/PANDORA.parquet",
+"bytes": 85100,
+"sha256": "2179c79f016ae330874c1c87bc6233b0de2907e4d9882ea4619377700f1799ff"
+},
+{
+"path": "candles_1h/PAXG.parquet",
+"bytes": 174002,
+"sha256": "4883c4c1e38abab785518e4ea42746a5b55a4b4eebdacce84fb031d108aaee2d"
+},
+{
+"path": "candles_1h/PENDLE.parquet",
+"bytes": 207931,
+"sha256": "561e06d8a13c75fdfdfec921200af0d196336471417c3e7ec88be80156379880"
+},
+{
+"path": "candles_1h/PENGU.parquet",
+"bytes": 214690,
+"sha256": "3679deb85ae8ff5b351e572ba87d8be3b167bb1f2a02814186b1373e6a30b4b3"
+},
+{
+"path": "candles_1h/PEOPLE.parquet",
+"bytes": 206940,
+"sha256": "1cbddc7ac905fc7dea5b4e94769bb302094936d93388b30d4d09edc13d28530f"
+},
+{
+"path": "candles_1h/PIXEL.parquet",
+"bytes": 258133,
+"sha256": "68b87295a9aed14e74fd05b51e781a22c015472737d8b126a1eec8c9f0686a05"
+},
+{
+"path": "candles_1h/PNUT.parquet",
+"bytes": 177749,
+"sha256": "3cebc30c0bed18633f259fb170ee7965b3682ab5f5bae1b4a23d2e7c5b045a1e"
+},
+{
+"path": "candles_1h/POL.parquet",
+"bytes": 260562,
+"sha256": "7f2acccde04f196ebee3d9ad517b09548b075ee96c007cfd55461688f2996e9a"
+},
+{
+"path": "candles_1h/POLYX.parquet",
+"bytes": 258467,
+"sha256": "05aed6393f3e13e258459e56040edf9d446209243abe490dc48d3dbb506d38a8"
+},
+{
+"path": "candles_1h/PONS.parquet",
+"bytes": 72619,
+"sha256": "dad4af73122adbef878d1907ea5cce4208ddb88906a8a803b0ba80d6e705a917"
+},
+{
+"path": "candles_1h/POPCAT.parquet",
+"bytes": 260117,
+"sha256": "6cd1638a39a64b516c4125ac723597967caddbf37296de0bfd2a247d9efbfc69"
+},
+{
+"path": "candles_1h/PROMPT.parquet",
+"bytes": 268165,
+"sha256": "bc03cd3a2d2745b6f5e113ba0c0b212a54365499e26e1792a4c6610bcd7b6ede"
+},
+{
+"path": "candles_1h/PROVE.parquet",
+"bytes": 233814,
+"sha256": "64c38942529bd24edd5af830c2f91399ecdcae6ec91173c2c76f9b9e5df67377"
+},
+{
+"path": "candles_1h/PUMP.parquet",
+"bytes": 203716,
+"sha256": "a7249825286124b7bf6c99402e0d89d5f61e558e1c84e09a0f6de4f8c751b1ba"
+},
+{
+"path": "candles_1h/PURR.parquet",
+"bytes": 263828,
+"sha256": "58a1320d11b274c5a63abe76443a998d6db651101ca07a81ad353f461e311cad"
+},
+{
+"path": "candles_1h/PYTH.parquet",
+"bytes": 265492,
+"sha256": "fb669b81da8d7f8e9499d84a7fcb2ac4439882b2ad08e55c56d57977bfc63ec2"
+},
+{
+"path": "candles_1h/RDNT.parquet",
+"bytes": 267693,
+"sha256": "abdd886e37e0d2ccee69fc3ce3c4f3f264fb88ffd99fea518d8e8372940852d7"
+},
+{
+"path": "candles_1h/RENDER.parquet",
+"bytes": 196664,
+"sha256": "f0db567a6acfa72ceadf701462bc45106999aa9f0502a6b1b4cd5235df83d2be"
+},
+{
+"path": "candles_1h/REQ.parquet",
+"bytes": 219557,
+"sha256": "480d9fb504ebc6ced052083c2b3c9205a58a4f7e8d8189670dbbc5a1263d33e9"
+},
+{
+"path": "candles_1h/RESOLV.parquet",
+"bytes": 248722,
+"sha256": "69bd3762a9fc62d7be4eba385584351f31eec585d892f061dba42bc74f0e0c99"
+},
+{
+"path": "candles_1h/REZ.parquet",
+"bytes": 191898,
+"sha256": "6ef8cfdabcf4c33c512f01ed6a71bda3ae11ff58ea9066883a60498fc2451998"
+},
+{
+"path": "candles_1h/RLB.parquet",
+"bytes": 150280,
+"sha256": "c9c87fa6afe39658e2641f7e47754bae3dc2253b416097ae7d99d13cb23c56e0"
+},
+{
+"path": "candles_1h/RNDR.parquet",
+"bytes": 222011,
+"sha256": "67234d66a658c5a5defb4fa7f8adfb3862e069577083955eca13138c9e67e3ab"
+},
+{
+"path": "candles_1h/RSR.parquet",
+"bytes": 141939,
+"sha256": "10f2f368afa71f9f431efa17adb2dd0d85bbc0608a7ee5665e221817c1a1abe0"
+},
+{
+"path": "candles_1h/RUNE.parquet",
+"bytes": 258198,
+"sha256": "4d4f888b8a74db02992ada2a9e7b408e46a373eeb852ad3a87609375b1823d15"
+},
+{
+"path": "candles_1h/S.parquet",
+"bytes": 263430,
+"sha256": "bb01c8c00a2716a867caf559f1154c88901ab201f1a6a78388e0fec4191ef045"
+},
+{
+"path": "candles_1h/SAGA.parquet",
+"bytes": 168090,
+"sha256": "37e1eeac063f186a021055b7d84bc3b5e2fb56e98ff239170562bf933ecd9767"
+},
+{
+"path": "candles_1h/SAND.parquet",
+"bytes": 267237,
+"sha256": "00050b2635b055109149be5f1af645d8efb8623be0343717091e400b543b4dd0"
+},
+{
+"path": "candles_1h/SCR.parquet",
+"bytes": 220304,
+"sha256": "7060c6e2d3c96ed85d6fc70a8be70cd383b4eb6de741cdb75bda898f1d2cfd57"
+},
+{
+"path": "candles_1h/SEI.parquet",
+"bytes": 265284,
+"sha256": "41b1ebd6e38d414b07dc66602eae7608d281c84feb7304bafb31aba58158bd59"
+},
+{
+"path": "candles_1h/SHIA.parquet",
+"bytes": 175551,
+"sha256": "23f099701e631e27ae26ecbc5ec404ee5eb2b1571899c3fecbb451fccb783a71"
+},
+{
+"path": "candles_1h/SKR.parquet",
+"bytes": 242163,
+"sha256": "861bfb0de4425f3c54ade802985347a3605c1e5a7e3076991ff7f60cd75d276a"
+},
+{
+"path": "candles_1h/SKY.parquet",
+"bytes": 266280,
+"sha256": "e32f5aeb934a363ce1d06d8c2421001ed16061aa33f55523858c6eace96b1252"
+},
+{
+"path": "candles_1h/SNX.parquet",
+"bytes": 236696,
+"sha256": "b72ca31b24d83947416736d88c885d55b86c8467c52ef532f964f8e913c05571"
+},
+{
+"path": "candles_1h/SOL.parquet",
+"bytes": 217072,
+"sha256": "0fc4c568069436d09d5a5a0777df2a9a35419c8b2b8937e6fcbb89159e725eb3"
+},
+{
+"path": "candles_1h/SOPH.parquet",
+"bytes": 208075,
+"sha256": "54978033626c0e564a0ccdfa8cd45370d753395adf3a7d4f4c1ba2f128b21c53"
+},
+{
+"path": "candles_1h/SPX.parquet",
+"bytes": 255103,
+"sha256": "ace34acbcab9033d18cac16da9629f436525395e4bff17c65f55206fa6a5a7d1"
+},
+{
+"path": "candles_1h/STABLE.parquet",
+"bytes": 251955,
+"sha256": "9f3dee7be6110c40e8f520a1a0a9e55df8c95c2730b784e7f1754fcb379b139d"
+},
+{
+"path": "candles_1h/STBL.parquet",
+"bytes": 246485,
+"sha256": "841bc7d71fb603d3fd1ccfbe5990a1793d1e50a232924fffd72e070de3ef4a0e"
+},
+{
+"path": "candles_1h/STG.parquet",
+"bytes": 240291,
+"sha256": "48cb0ed73bf0af2620a0f0b62ecf2014982b6f09c91df39f901258f51fedb447"
+},
+{
+"path": "candles_1h/STRAX.parquet",
+"bytes": 168891,
+"sha256": "ce1a16e55d4315471eac84602a874b2a3290d30f564e5eaa413f6b85ea78ae18"
+},
+{
+"path": "candles_1h/STRK.parquet",
+"bytes": 198058,
+"sha256": "d4c7563051b15d05ca7cbed0a4a17ba727c8e04ada120c2d304114f6c6e95761"
+},
+{
+"path": "candles_1h/STX.parquet",
+"bytes": 254353,
+"sha256": "258d2c6c1cb255a69c266b24657e1d38c16ad5e5423e525de617f6984c4f5c16"
+},
+{
+"path": "candles_1h/SUI.parquet",
+"bytes": 264062,
+"sha256": "e370dab89cfdad4ecc59404774c186476b064f2096d50723e6ba9964925b0726"
+},
+{
+"path": "candles_1h/SUPER.parquet",
+"bytes": 246581,
+"sha256": "7a13f79ddb2abf54e60e688d4e765768eb87f3da1e98f07f16f33e9b2a167544"
+},
+{
+"path": "candles_1h/SUSHI.parquet",
+"bytes": 240076,
+"sha256": "4224541cb6c248a9b73846cf29fb213b7a3d8da072dc813a9544359c5f2c3381"
+},
+{
+"path": "candles_1h/SYRUP.parquet",
+"bytes": 246416,
+"sha256": "6ebab82876bc00d46531306dbb5b7ad6ccaeb9f720049b95c8f76722140ecb78"
+},
+{
+"path": "candles_1h/TAO.parquet",
+"bytes": 199166,
+"sha256": "950fd4522e44f75a5a51f05d84a36dd7bbdb7a44fe4267090bfd976a8c7a196b"
+},
+{
+"path": "candles_1h/TIA.parquet",
+"bytes": 257545,
+"sha256": "c39dc56fafb72bda4b2de6056cff089520b9b09dcfa64efbe0ffef6b988714ad"
+},
+{
+"path": "candles_1h/TNSR.parquet",
+"bytes": 159052,
+"sha256": "18cb5b6ad56c0a613c9e37b5a5c6af2f86b007e2357d89b9a39535fa8f5bd6dc"
+},
+{
+"path": "candles_1h/TON.parquet",
+"bytes": 198126,
+"sha256": "9994a7cb1fcffddebc6892df2fd3037070da4cca115483fbd39e4fde02fb4583"
+},
+{
+"path": "candles_1h/TRB.parquet",
+"bytes": 179756,
+"sha256": "36b8464a158e31e98a1888613038ef0def0b54c2059b3ea140d534174035e386"
+},
+{
+"path": "candles_1h/TRUMP.parquet",
+"bytes": 215039,
+"sha256": "4029548d9ac65faaeb5f8959bcf291639ee4805e5b891f49438f98020d18aac1"
+},
+{
+"path": "candles_1h/TRX.parquet",
+"bytes": 204774,
+"sha256": "994c6302407bfb65f6f3dc6e48b4085f5bd313d87285362c4e17d9b57c2aea49"
+},
+{
+"path": "candles_1h/TST.parquet",
+"bytes": 238741,
+"sha256": "53143ba91df94b89b17455eb622fcf59719859ea55373a4718cb7aca6396c26f"
+},
+{
+"path": "candles_1h/TURBO.parquet",
+"bytes": 130202,
+"sha256": "965f85200719094d50ad1c83407027b5395c695ae72ba90ca83bc3d6a17de5a8"
+},
+{
+"path": "candles_1h/UMA.parquet",
+"bytes": 246218,
+"sha256": "6b54b8c5569a3db33c580dc88160504f826aa971ad51d14aa5f43fceed563155"
+},
+{
+"path": "candles_1h/UNI.parquet",
+"bytes": 228699,
+"sha256": "f60552ad41b68e4cfe392530874b5a7622e4642899dee69b9b451ff6d6cc4577"
+},
+{
+"path": "candles_1h/UNIBOT.parquet",
+"bytes": 149901,
+"sha256": "2ea78dabd6fe50e2fcfc8cd28e8d05393ee26fdb5587b20a7593d981827fde96"
+},
+{
+"path": "candles_1h/USELESS.parquet",
+"bytes": 59630,
+"sha256": "89ceb5f970df14230a37173824ca1b3342cd99722d463501587ae11aa39e01e3"
+},
+{
+"path": "candles_1h/USTC.parquet",
+"bytes": 203262,
+"sha256": "5ebd7c45d6b967c7c6edbfa2d91b7f3211d9200fa1ab0f846729a88bcd665a7c"
+},
+{
+"path": "candles_1h/USUAL.parquet",
+"bytes": 139719,
+"sha256": "e4525462ab3ea09a1867a33c4c91c50cda90ce281d91083f16697cf73ab0b1d0"
+},
+{
+"path": "candles_1h/VINE.parquet",
+"bytes": 241389,
+"sha256": "df3a8be236202ad0a831089593f35036f37278995bef6b6c7e524cb5ac643057"
+},
+{
+"path": "candles_1h/VIRTUAL.parquet",
+"bytes": 263633,
+"sha256": "a6634030f06482b09067e321a8aa1fe364745232b7173a0347d250e39f5bb109"
+},
+{
+"path": "candles_1h/VVV.parquet",
+"bytes": 223766,
+"sha256": "3462db7ddb7a94396eabfb0ec9199cdcf49a7322a938637047e85d1caf4a9c2d"
+},
+{
+"path": "candles_1h/W.parquet",
+"bytes": 143466,
+"sha256": "94f1d13812ffc0a0ee1e942f4aea991c25a8d1c360a6de2a1aaa50e625e86467"
+},
+{
+"path": "candles_1h/WCT.parquet",
+"bytes": 259922,
+"sha256": "7a0787ef1470fbf3ce04fadc3043aa8df6ebe6a7fcc97882b4c1f36e113fa78c"
+},
+{
+"path": "candles_1h/WIF.parquet",
+"bytes": 237934,
+"sha256": "16c61852d621dfab8d8c90dc55da29406cc8a45adab2250614503ff0bd1b5831"
+},
+{
+"path": "candles_1h/WLD.parquet",
+"bytes": 276783,
+"sha256": "a400886676bc827fefc1680e5f163f5b4640af049960b3de01f91fa9b18bf11c"
+},
+{
+"path": "candles_1h/WLFI.parquet",
+"bytes": 245990,
+"sha256": "35f728db48b7ae0714971f05f08f3e6f27c35c7b71a098193e9a0213b3452d8e"
+},
+{
+"path": "candles_1h/XAI.parquet",
+"bytes": 131414,
+"sha256": "b4de1b48afb616b6a53418883683a454d09fb11fc371356e45fef30ee9f5e99e"
+},
+{
+"path": "candles_1h/XLM.parquet",
+"bytes": 229802,
+"sha256": "c582686dbd88b4cd0311427bce1a25eb6bc4f21cf079fbbc79c7ed7e5094e7ea"
+},
+{
+"path": "candles_1h/XMR.parquet",
+"bytes": 199590,
+"sha256": "7945f47ddc6c3653a81a1611e13f69a92be77fbbe62af5542b1894c82f148ad9"
+},
+{
+"path": "candles_1h/XPL.parquet",
+"bytes": 273093,
+"sha256": "089e6416833a7e78d9fa43298c41b25f54fa63fd7d681d69e3617c600d2c4bae"
+},
+{
+"path": "candles_1h/XRP.parquet",
+"bytes": 190251,
+"sha256": "a3d4b1a992d9879934b7049a6f6c89bb9d61bb710f27d6a280ca0ab346e626c1"
+},
+{
+"path": "candles_1h/YGG.parquet",
+"bytes": 255692,
+"sha256": "f5a275ba7b93682c987084b5e8dcd406131b26b393e8595547d7a22391d34a65"
+},
+{
+"path": "candles_1h/YZY.parquet",
+"bytes": 207839,
+"sha256": "9e3d851ac4740f4300b91cedd4e73596a9b15622a7ecb200bb06156ad3821fdc"
+},
+{
+"path": "candles_1h/ZEC.parquet",
+"bytes": 216341,
+"sha256": "a3256682eb6556eabeac0f088ca306a62a873e1e8f7f052455c1bcf31574c77f"
+},
+{
+"path": "candles_1h/ZEN.parquet",
+"bytes": 227759,
+"sha256": "31c9dbb9d98a48603aa3577b04cad5dc41c951690ee12df42e9e1aef9f1e670d"
+},
+{
+"path": "candles_1h/ZEREBRO.parquet",
+"bytes": 257265,
+"sha256": "4b7a6e7dfb4e3374437a24c994714f4bcbac193b1137dfb97d797e02a002430a"
+},
+{
+"path": "candles_1h/ZETA.parquet",
+"bytes": 189255,
+"sha256": "3fcd8810c443e45fa2723e1f0e586e400cf979c9f4867ab163a3a7d275da1d3c"
+},
+{
+"path": "candles_1h/ZK.parquet",
+"bytes": 238901,
+"sha256": "dcbd264edb0d3410b87cf22cde46fdf9ed0b946003a514fe8a0931e8c79d3ae7"
+},
+{
+"path": "candles_1h/ZORA.parquet",
+"bytes": 229192,
+"sha256": "1f65311aba0ba1e269564b4ed2904746f017d2e92116b7843b4d70d20221b520"
+},
+{
+"path": "candles_1h/ZRO.parquet",
+"bytes": 243417,
+"sha256": "7e8838d59a700c018458a44636ecfa03b77a54712b4c6bcbd372b70eefbdadfc"
+},
+{
+"path": "candles_1h/kBONK.parquet",
+"bytes": 207760,
+"sha256": "44df97df434becb0d4737a5bb9d07ea1e9693d1e3392df10b6d9d5dec3fa2ab8"
+},
+{
+"path": "candles_1h/kDOGS.parquet",
+"bytes": 226842,
+"sha256": "ffb89d12dba715257371840db8ae96da7ec7a62c75797c61f89412ba446260d7"
+},
+{
+"path": "candles_1h/kFLOKI.parquet",
+"bytes": 247680,
+"sha256": "6423ae3ba22bd89f4811e027619ddb0a76ea142903f5409294741b3b6aa57faa"
+},
+{
+"path": "candles_1h/kLUNC.parquet",
+"bytes": 263314,
+"sha256": "1e39e06e153b77b6123bb182848684272fc990791490fbc83af9677f70918bf0"
+},
+{
+"path": "candles_1h/kNEIRO.parquet",
+"bytes": 205113,
+"sha256": "4a6ec24cb178ff197d2ccaf4efe3cc21d60b30dee6d51a9646ef537eaf2c4831"
+},
+{
+"path": "candles_1h/kPEPE.parquet",
+"bytes": 178982,
+"sha256": "6b8e4a0836448aa8e697a34060f9ed45b52b405195ca59a06bc6dc5339549ef6"
+},
+{
+"path": "candles_1h/kSHIB.parquet",
+"bytes": 181650,
+"sha256": "2598b09eac20db4831da72ee877f3af8614327122500fd68deac91b6094a78ec"
+},
+{
+"path": "funding/0G.parquet",
+"bytes": 232367,
+"sha256": "4e520414a2c60b018584b96245cd35c0439a00da8ac3dcb60f3d375a6e5e6520"
+},
+{
+"path": "funding/2Z.parquet",
+"bytes": 225267,
+"sha256": "5dd5b147bb38d89d1a618ff014bb9fbd15a0801204daff5a20dd3d0e5ff11767"
+},
+{
+"path": "funding/AAVE.parquet",
+"bytes": 629021,
+"sha256": "340b9912867287a9e8a5585f258f07465dcbb896f6463e15e0bc0f284b9add32"
+},
+{
+"path": "funding/ACE.parquet",
+"bytes": 533716,
+"sha256": "69ac85fb3e0b5f8b339fe93dfc503e93e0d602fa51e8aa8ab6b3ceb487464fc4"
+},
+{
+"path": "funding/ADA.parquet",
+"bytes": 608165,
+"sha256": "907d91556095db012372017e56522d5571bbb54056d7f6d7a3696c8170330266"
+},
+{
+"path": "funding/AERO.parquet",
+"bytes": 175635,
+"sha256": "f61caaa64c8fc5f4e167ddfbe51d6dd824fe106ab98b0eae3f1f3b386a490c11"
+},
+{
+"path": "funding/AI.parquet",
+"bytes": 329416,
+"sha256": "887968ea4124283880d247abbc4b75d223d5e5703b4f4e384c42077a39bcc8a0"
+},
+{
+"path": "funding/AI16Z.parquet",
+"bytes": 216202,
+"sha256": "e46f20a1580282b8495a2f1d3930bd993f8d503aff98a0f34df03a90051cba87"
+},
+{
+"path": "funding/AIXBT.parquet",
+"bytes": 343411,
+"sha256": "9ee9b3da3f76d506599cb9633abf6b0fa4ff75e716578cbb68db9edf6f74de87"
+},
+{
+"path": "funding/ALGO.parquet",
+"bytes": 344562,
+"sha256": "594c7ef25d3bff95d5ca97087f2d0c95387bf72a96f237384bf1e77be75942b7"
+},
+{
+"path": "funding/ALT.parquet",
+"bytes": 558363,
+"sha256": "f12b6093e3149d30b50d27103cc407822ef578f3af7fd9a775510fe1007415fb"
+},
+{
+"path": "funding/ANIME.parquet",
+"bytes": 343960,
+"sha256": "3f4f71655ead043ee29c025e888eecfbfeb6d0d5295ae929a4c9e21219a68e46"
+},
+{
+"path": "funding/APE.parquet",
+"bytes": 667311,
+"sha256": "6466310b87b01e5f39bea2374745efd5e4531943c4486bc80f8eedbb5b80be5b"
+},
+{
+"path": "funding/APEX.parquet",
+"bytes": 183852,
+"sha256": "3d8f4c840603bc4cb9cbe0d708d1769901d18d69e83b8942d736bbee11cec1ee"
+},
+{
+"path": "funding/APT.parquet",
+"bytes": 700915,
+"sha256": "e8a7b7401a10594edd0fef61456d68a3ccb91f2c7110e66082b6e3cbd1927f8a"
+},
+{
+"path": "funding/AR.parquet",
+"bytes": 493739,
+"sha256": "5b20cb162718abcc4524efad5dc0c85efe23c39e699a0321ea59477debf7ce32"
+},
+{
+"path": "funding/ARB.parquet",
+"bytes": 688207,
+"sha256": "42cf8adb6cb9193f00b5453131021283eb928b0d3efffeebc408953d34e999f4"
+},
+{
+"path": "funding/ARK.parquet",
+"bytes": 556051,
+"sha256": "55655bceb543501a9656f34d90332798e5e047958b9a9090e7c9620db624b6bf"
+},
+{
+"path": "funding/ASTER.parquet",
+"bytes": 195549,
+"sha256": "0ab75b092dc1487f926007bb53fe1326c09e5b100b84858a33bed71134ccf2cd"
+},
+{
+"path": "funding/ATOM.parquet",
+"bytes": 710972,
+"sha256": "06016a1a4fbb4730b4a526c65e096a9e731d9747df6ee7f7962e9c63ecfba1ed"
+},
+{
+"path": "funding/AVAX.parquet",
+"bytes": 693398,
+"sha256": "b56ed2718de5d7656747508a4da3587ed5124f65a541944965706e3b492a78a7"
+},
+{
+"path": "funding/AVNT.parquet",
+"bytes": 225553,
+"sha256": "3168b331934fee6c0d1883889c64b72940087fbd4239cfec3ed898d598c68dbd"
+},
+{
+"path": "funding/AXS.parquet",
+"bytes": 151526,
+"sha256": "ed2d64bbe67325385e4debb5bbeec50db52d13de9d3a4b30f724725b911e2be3"
+},
+{
+"path": "funding/AZTEC.parquet",
+"bytes": 120717,
+"sha256": "4a1b1837718dd293471776f570de1543d739c8ed6a7d59f07a6bb24bd4372b80"
+},
+{
+"path": "funding/BABY.parquet",
+"bytes": 299894,
+"sha256": "41c4e3d4143d9d0887b4097c4f6fe100e78f5efd015e335b66e2a078367ba472"
+},
+{
+"path": "funding/BADGER.parquet",
+"bytes": 385481,
+"sha256": "d65866a3a7dc3e9dbd4c736c93de2cfb87a758be62cf6a730f99270c4f3fe8cc"
+},
+{
+"path": "funding/BANANA.parquet",
+"bytes": 554265,
+"sha256": "0f0dcbeeb68c506cd3b1405e00fcbeb96ce4f77de9ac3dbe9248bda4af2ad7ad"
+},
+{
+"path": "funding/BCH.parquet",
+"bytes": 695776,
+"sha256": "3e3172eaf8b835dded00921c5263836ab52b899b48d902c09572a9322786d76f"
+},
+{
+"path": "funding/BERA.parquet",
+"bytes": 365751,
+"sha256": "6e4132fab1d9379f424c8e73ae1a3993408feb18d6cd8bee1dc77535e9445435"
+},
+{
+"path": "funding/BIGTIME.parquet",
+"bytes": 584934,
+"sha256": "addc2351056b63598e4437a727848b702d5e86673557576826e406275d546a37"
+},
+{
+"path": "funding/BIO.parquet",
+"bytes": 354880,
+"sha256": "ffd009e2ce022fd086e1faac5fa429c508d1893d0f3a364df8510fd729bad534"
+},
+{
+"path": "funding/BLAST.parquet",
+"bytes": 447969,
+"sha256": "6a66a188d47cb461299c604d657419793e5697550223a86f00b2e0e6d93cba0e"
+},
+{
+"path": "funding/BLUR.parquet",
+"bytes": 597340,
+"sha256": "4a94fc0ed1413d37f4aec6a336aad60fa2e9bece85924b1c479ba5e2800f8718"
+},
+{
+"path": "funding/BLZ.parquet",
+"bytes": 383863,
+"sha256": "fb188993bffa27b9025ce9757d2051bcc59c67b0732f1584c71fdd9d97833e1f"
+},
+{
+"path": "funding/BNB.parquet",
+"bytes": 685796,
+"sha256": "90e67a19c3fccd5469125a3469efa0c8c3edd127914f96385dfe53d1afe9fa07"
+},
+{
+"path": "funding/BNT.parquet",
+"bytes": 388297,
+"sha256": "fbe81441c1cf80ce7dca92a5d7482430e9436878affc5e810fd7d63e87ec989a"
+},
+{
+"path": "funding/BOME.parquet",
+"bytes": 454228,
+"sha256": "0d41d92bd3a58053e56cd91d69cfe13e3262623ee827fd672c82dc908b827887"
+},
+{
+"path": "funding/BRETT.parquet",
+"bytes": 431686,
+"sha256": "52e5a50c6961003daa9de876bc466cd100d6ec5ea8314532051776064a8d7b04"
+},
+{
+"path": "funding/BSV.parquet",
+"bytes": 570266,
+"sha256": "306a080fc6a9edf77c4741bbd7eef88492682ad7a434d7efae8337397953f5cf"
+},
+{
+"path": "funding/BTC.parquet",
+"bytes": 679909,
+"sha256": "4926bbad8b61773dbc71317efe86a7009d4e15a4282dd04cfc9fb1db285fa5da"
+},
+{
+"path": "funding/CAKE.parquet",
+"bytes": 519529,
+"sha256": "d5e89ad59008511902064f209c4bedf3bd56e0bc93deedc921d9111d13dd164e"
+},
+{
+"path": "funding/CANTO.parquet",
+"bytes": 313755,
+"sha256": "b6a717627c486a98b3304a9794df5694f3543740ecbed9b9af61b92d1286e7b9"
+},
+{
+"path": "funding/CASHCAT.parquet",
+"bytes": 54810,
+"sha256": "979b90c1df948ad66a5511f8d0e778b2343c6b8a045b513c31458ee3fb16995a"
+},
+{
+"path": "funding/CATI.parquet",
+"bytes": 205356,
+"sha256": "21b8093a62145ee4392c487490b80fbacfba2e750bef9fc0f4f6d751377da2ba"
+},
+{
+"path": "funding/CC.parquet",
+"bytes": 172082,
+"sha256": "623623d45d8139ea126913d6b01b66f270310e258887da38d96660f0f73d65a4"
+},
+{
+"path": "funding/CELO.parquet",
+"bytes": 394807,
+"sha256": "18075a98b8f4a458a188e1b082f9cf94c684bd88c71c2fc8591f450922200430"
+},
+{
+"path": "funding/CFX.parquet",
+"bytes": 661791,
+"sha256": "f154c1e5d0edb198584f85b40c9069a4eabcadc1286e026a3b3367630b33d3f1"
+},
+{
+"path": "funding/CHILLGUY.parquet",
+"bytes": 289278,
+"sha256": "c51945ac15af9b79484e18b9d011ef89bb6d7178c06543c7d4b834e4ad0efdaa"
+},
+{
+"path": "funding/CHIP.parquet",
+"bytes": 95936,
+"sha256": "9d98ce5e5adeddfb43f9cf484518d29d3d096f2a68c64c262429317a1135f254"
+},
+{
+"path": "funding/COMP.parquet",
+"bytes": 646692,
+"sha256": "f9dacf0783988b4d45d04a26dfee07f19b14de73410d244d8bcd540506677e96"
+},
+{
+"path": "funding/CRV.parquet",
+"bytes": 650385,
+"sha256": "f90c241dd3df957c350215ca56ca4cffbb875b311dcf5d7589db91b614ce657e"
+},
+{
+"path": "funding/CYBER.parquet",
+"bytes": 430934,
+"sha256": "a3d31230f44bfb67f07089ac08171c7172f74b62daada03e765b63e3f002fb2d"
+},
+{
+"path": "funding/DASH.parquet",
+"bytes": 136455,
+"sha256": "3861394e04598ac2668df58353d7c31fd455e439aa66e4c3c6bad689bb72017b"
+},
+{
+"path": "funding/DOGE.parquet",
+"bytes": 700105,
+"sha256": "94204a978ad4bdf519a3eccae2cdbf77579b64f9c7d15cac4beac60971674e9d"
+},
+{
+"path": "funding/DOOD.parquet",
+"bytes": 220859,
+"sha256": "f139394f8735a95b38e99c3798de5dd7b4edacc35212314464a49f32636f5741"
+},
+{
+"path": "funding/DOT.parquet",
+"bytes": 626275,
+"sha256": "5415cd8935849a75caff8c75b1911557b144ed3ba54ce26b288881705e547457"
+},
+{
+"path": "funding/DYDX.parquet",
+"bytes": 624668,
+"sha256": "e9d8aea20f3c3d6d812e1cb93f93e3d0148f36f24e1cd0a98d67fb7ee075191a"
+},
+{
+"path": "funding/DYM.parquet",
+"bytes": 526044,
+"sha256": "241c74e7daedebd4e7f2e4bfbdcbd1876e88712bbb0dc629e8a364e49d7453f7"
+},
+{
+"path": "funding/EIGEN.parquet",
+"bytes": 449271,
+"sha256": "849b64da2f32434030073403b8fd44cd26c688a8af7271dbccc8e394dbc8f500"
+},
+{
+"path": "funding/ENA.parquet",
+"bytes": 513797,
+"sha256": "4b1328cb4910fdd98c3b5fb5cc78d369dac0239c461e74579ddc11ce85aea9bc"
+},
+{
+"path": "funding/ENS.parquet",
+"bytes": 517774,
+"sha256": "90498eeb03bfd7e768bd4487ba4c61136942b2735b13767109d17a64a517c5cf"
+},
+{
+"path": "funding/ETC.parquet",
+"bytes": 541417,
+"sha256": "160c84a9030f401eb0c54178a80d0cd5ebbc195b64dca58fd6b7d26dedcfcabe"
+},
+{
+"path": "funding/ETH.parquet",
+"bytes": 686887,
+"sha256": "98d3d057f10bca0d85fb891bf5d302d7fd414ea0608f67897e49d955dc41f325"
+},
+{
+"path": "funding/ETHFI.parquet",
+"bytes": 484569,
+"sha256": "2bc7e01a0da22f3a7e78a4ad6eb1a513f9385e234cfb1afd29c079e265154ef4"
+},
+{
+"path": "funding/FARTCOIN.parquet",
+"bytes": 344558,
+"sha256": "afc888d5b4b3e86fa120280306a765dd9b8cf4fbf44194115fcdee1cbc5213c1"
+},
+{
+"path": "funding/FET.parquet",
+"bytes": 591146,
+"sha256": "54a9b0ce7caadcb789fc47a7b91a0a8b1fb5035d9ee0481dc26262e7cc342533"
+},
+{
+"path": "funding/FIL.parquet",
+"bytes": 563336,
+"sha256": "6fb0e32735630571d7392b431ee5e7a6ed69cf13a0c29fdb0e969527edbb4b1b"
+},
+{
+"path": "funding/FOGO.parquet",
+"bytes": 139504,
+"sha256": "f0ba34550c0287ed2d90f53af0aa1509ca600dfe23f3569cb488997793b79f06"
+},
+{
+"path": "funding/FRIEND.parquet",
+"bytes": 323980,
+"sha256": "1e5e23db713dbcb2f52adbd765c282f75e0d4e32d6bbe0d43dc29a1fe5d80b69"
+},
+{
+"path": "funding/FTM.parquet",
+"bytes": 473227,
+"sha256": "5503a43dc2439350233f30806e918e5ea3e68904d021f3746c5a3227d3c61571"
+},
+{
+"path": "funding/FTT.parquet",
+"bytes": 467093,
+"sha256": "6a2f144fb390284842d7a3e509ee893029477a908e45d14dc180954f5ab9ebdf"
+},
+{
+"path": "funding/FXS.parquet",
+"bytes": 535910,
+"sha256": "f6317edc747c7678b8eb15d75cae165da23e76b61f617365f5343c81b4fe0dc6"
+},
+{
+"path": "funding/GALA.parquet",
+"bytes": 522472,
+"sha256": "bbac31fee8941a5101291ebbfc42570e74fd233c23232b900904dce93fac1e78"
+},
+{
+"path": "funding/GAS.parquet",
+"bytes": 562690,
+"sha256": "4daa42fcfa2cc39976d7a676350b2023ffed03f9b9f716490d9c80ce150bbc47"
+},
+{
+"path": "funding/GMT.parquet",
+"bytes": 554509,
+"sha256": "a1e48027bb5573ee34054b3098e5b23794a432f1e5870ad9cc0270556b00750b"
+},
+{
+"path": "funding/GMX.parquet",
+"bytes": 665308,
+"sha256": "7018838115818d09759e0df1b5458f9e6fa6ffbe35de301be9cdf90c5dc59c0a"
+},
+{
+"path": "funding/GOAT.parquet",
+"bytes": 365288,
+"sha256": "c39d80da3a030020b36cac8aef2d47e2a29beeddd779e3822ef91ccf23700e71"
+},
+{
+"path": "funding/GRAM.parquet",
+"bytes": 54237,
+"sha256": "5fd42a15cee929228500266e8a79bc5b01a565bf2bab487626d53372864a1415"
+},
+{
+"path": "funding/GRASS.parquet",
+"bytes": 375475,
+"sha256": "229ac71478a482b53714cfd16ea2aded870cfdc85759e46644d2e6d50f3fe0bc"
+},
+{
+"path": "funding/GRIFFAIN.parquet",
+"bytes": 315231,
+"sha256": "0dc4e2ad94874e20af56be1277e3be063a713779547299b545b0ddc65bc96186"
+},
+{
+"path": "funding/HBAR.parquet",
+"bytes": 471658,
+"sha256": "0cad2ac30fdc468070ed6a75859c3f099296ba88e63452aac69f5369e6335eb7"
+},
+{
+"path": "funding/HEMI.parquet",
+"bytes": 201301,
+"sha256": "998a8a4028b3e71668f15799246d92f4e5c953b4191b57a282546185ede3a065"
+},
+{
+"path": "funding/HMSTR.parquet",
+"bytes": 294496,
+"sha256": "5e798cfeee1839744ebe492a1c08c0ea65aca36b87dab02beee891b7c62f7f01"
+},
+{
+"path": "funding/HPOS.parquet",
+"bytes": 359472,
+"sha256": "5e3778038c7a4c64cbb3d32cdb78b407b43ae79d528695ba650b8eb45c239c73"
+},
+{
+"path": "funding/HYPE.parquet",
+"bytes": 355939,
+"sha256": "da37fad778b1728aa3659ac6a188c6d9a8fb193ddd33fc1de09c6abd51eba466"
+},
+{
+"path": "funding/HYPER.parquet",
+"bytes": 306983,
+"sha256": "9c43709d472b2a7f8513aa0dd15cff77bb2326e1aeba8ba27658f976942123bc"
+},
+{
+"path": "funding/ICP.parquet",
+"bytes": 184907,
+"sha256": "8e92fd0201ef2c1786265ff52613e470de02ce1bf64745f6d87fb239fa4aea44"
+},
+{
+"path": "funding/ILV.parquet",
+"bytes": 368570,
+"sha256": "d57c625717d7ccfa63afd5d4551af0d05a5e4e2a065208707d516c37ad7918f1"
+},
+{
+"path": "funding/IMX.parquet",
+"bytes": 564951,
+"sha256": "e11ec0acd61129e094bb65c042588af8b0fb2025a0418b44c85b18a82ab2517f"
+},
+{
+"path": "funding/INIT.parquet",
+"bytes": 278896,
+"sha256": "61e57220d88f4b72a70e413ae1d58dca41a959d9597486c23ffa7b169f5b0ed1"
+},
+{
+"path": "funding/INJ.parquet",
+"bytes": 688949,
+"sha256": "e52f92227d4094ab23697d47445e1fdfbf110c3ee2ca0ea47c2dfb8304401c5c"
+},
+{
+"path": "funding/IO.parquet",
+"bytes": 479680,
+"sha256": "7389e7eb0db71f80916852cb5a8346e9fd8779faf4ffba0abc04ef7841ea8235"
+},
+{
+"path": "funding/IOTA.parquet",
+"bytes": 330999,
+"sha256": "201e6c74ece89a554d481ea886495726d441edfdd159291e69811f1ec40bbe8e"
+},
+{
+"path": "funding/IP.parquet",
+"bytes": 312632,
+"sha256": "6fcb2b153fc71735af10d958f84392d2ef0821566b08553f5917d2fce1a02a49"
+},
+{
+"path": "funding/JELLY.parquet",
+"bytes": 139803,
+"sha256": "7c1aa9604fd5d5617cc61b829c025569a0c250af5de90c99d2895a21a2cb8846"
+},
+{
+"path": "funding/JTO.parquet",
+"bytes": 566910,
+"sha256": "59408a7aa7839f34aee6a198e15846665c614f3da6c8f46fb3b35dcfd82d9947"
+},
+{
+"path": "funding/JUP.parquet",
+"bytes": 576001,
+"sha256": "09572566d2acb3fe324d09690fefbaf90d4c28ecf2a9cc0a3e41dcdc74eb97cc"
+},
+{
+"path": "funding/KAITO.parquet",
+"bytes": 350369,
+"sha256": "c7a0ac3f330a20b6ff97554f968ddc44b5826362b533d74b7ef740b2ed87d58e"
+},
+{
+"path": "funding/KAS.parquet",
+"bytes": 585586,
+"sha256": "0f31d4d2076ba7a3223689c9206880a0951d78415aa8af4201592b5bff53e545"
+},
+{
+"path": "funding/LAUNCHCOIN.parquet",
+"bytes": 161601,
+"sha256": "4e81fcbcfd32266572301588d337957176ebbacb79e64bc5d073223894a70aaf"
+},
+{
+"path": "funding/LAYER.parquet",
+"bytes": 338373,
+"sha256": "94f05446d38c3ea33ab90d5a085c5631ad8180c81317845a91ca63214c0b5c5c"
+},
+{
+"path": "funding/LDO.parquet",
+"bytes": 652712,
+"sha256": "27955bd002524c8c558f866038f1e2f5e01d9867cdc296e4428f607d3c3e45db"
+},
+{
+"path": "funding/LINEA.parquet",
+"bytes": 193116,
+"sha256": "ef3c28254b6bca7b583b0583fb00906520af3fe22650219dedac7b7dada029a4"
+},
+{
+"path": "funding/LINK.parquet",
+"bytes": 655821,
+"sha256": "2296d87512cdfdb133c948ce78bef796f674ebb499d4c1a405a81a55b67875a2"
+},
+{
+"path": "funding/LISTA.parquet",
+"bytes": 252468,
+"sha256": "95f1ad7a559f14cdc9a72ecbb99ff880d7382a866fc7735b9ab73ab723479900"
+},
+{
+"path": "funding/LIT.parquet",
+"bytes": 146577,
+"sha256": "4ddb8034fa71f31d67ac5ff55b947273cb74e30b8f1e47cf2a362689196fa545"
+},
+{
+"path": "funding/LOOM.parquet",
+"bytes": 379408,
+"sha256": "9248079b7d86ccdc25373c64685cc0c2c24c9e02218c5adb6da42972cc568a9e"
+},
+{
+"path": "funding/LTC.parquet",
+"bytes": 663853,
+"sha256": "66adc88417f0239cd401c04c27198009b21a4c2672bb030f373515b6a2ff44c3"
+},
+{
+"path": "funding/MANTA.parquet",
+"bytes": 516495,
+"sha256": "bc3812b4ed9f9c28aeec2cd74950b3d77434a9f4d8f6812814678c8e4d346464"
+},
+{
+"path": "funding/MATIC.parquet",
+"bytes": 417880,
+"sha256": "2eb3462643a6cefd27a9467c49ddb43d66b65efdaf0a3d4d5e465e3f45c67f92"
+},
+{
+"path": "funding/MAV.parquet",
+"bytes": 481644,
+"sha256": "bf27ae164b075cb91ebabc23b4ee43fc80f8d2073f3abafa6f852a82e7fbb568"
+},
+{
+"path": "funding/MAVIA.parquet",
+"bytes": 458281,
+"sha256": "043a504e592ebd6a6f479ae642f45cd31f633b3e136a18d5a3a412b84e9143fe"
+},
+{
+"path": "funding/ME.parquet",
+"bytes": 366269,
+"sha256": "76d197c88affcf34751b1af6f1e37cf35ef0b8371a96f60030f21dc492fe9f07"
+},
+{
+"path": "funding/MEGA.parquet",
+"bytes": 157607,
+"sha256": "ba0eb33c4e2c24a279e086f356cfcdd2adb2684579ee45d6957847770b775398"
+},
+{
+"path": "funding/MELANIA.parquet",
+"bytes": 316118,
+"sha256": "607e03e2a6e666613b64930a711613652176cf2815e379e53467117ef80fc2f8"
+},
+{
+"path": "funding/MEME.parquet",
+"bytes": 557349,
+"sha256": "5b18da6f2edf46b2ea56b417d530cfb02a91bfdf6c52877a2e5b3cf8824608c9"
+},
+{
+"path": "funding/MERL.parquet",
+"bytes": 471622,
+"sha256": "0ad730373f8fe60bbbeb6e266d6437b0893c688af4bd5056dc3665fa5901af54"
+},
+{
+"path": "funding/MET.parquet",
+"bytes": 179137,
+"sha256": "404dc24ab9e0072b54c82e234e5f13481d1072773c1d2892eeedcc47ec14ae9c"
+},
+{
+"path": "funding/MEW.parquet",
+"bytes": 374407,
+"sha256": "0b091b78a66ee11df46e0889d815a75e053b34d4e27a778550050015b5c244dc"
+},
+{
+"path": "funding/MINA.parquet",
+"bytes": 582957,
+"sha256": "85cb7cf71519b10060baac0b3d652544c825679e4aa93c16f426a59224f767f3"
+},
+{
+"path": "funding/MKR.parquet",
+"bytes": 505506,
+"sha256": "8300be37a0388b17ff9fa9bc5a16bf7537dc489c28317f4825f919a6b9355508"
+},
+{
+"path": "funding/MNT.parquet",
+"bytes": 486444,
+"sha256": "e60e95312a94094b122be6896785585a111c383f12f34dce200f3b3727a3b359"
+},
+{
+"path": "funding/MON.parquet",
+"bytes": 188242,
+"sha256": "8f496149ac236be09fdf30f0f9bdf26e8f1fc38857731c685891edaa8ff7a519"
+},
+{
+"path": "funding/MOODENG.parquet",
+"bytes": 396316,
+"sha256": "f434b3688aac35a63a2dfb4b58b2c565b1ce53fbf302a62c49b7c16195c13758"
+},
+{
+"path": "funding/MORPHO.parquet",
+"bytes": 334277,
+"sha256": "4e748b3ad70c10c7a6f1b038d98060c64d893fad905d12dce9b122da41459d21"
+},
+{
+"path": "funding/MOVE.parquet",
+"bytes": 389909,
+"sha256": "60c6e254073cf6290d8a017b0a21794c437352f4dd7bc1dd2fd5cebb0b9510a5"
+},
+{
+"path": "funding/MYRO.parquet",
+"bytes": 305996,
+"sha256": "a2ad6b4d2cc710871613f03fb3d8eee93ff474dec4bd1b5e6646c3e00e710acc"
+},
+{
+"path": "funding/NEAR.parquet",
+"bytes": 563226,
+"sha256": "3894a778a21bf59efdca672e75b9900c31c766a9d458f6d8edafe1c3d925412f"
+},
+{
+"path": "funding/NEIROETH.parquet",
+"bytes": 249571,
+"sha256": "b1d5369f86bbe107e0710bfef2ce8925dea9fe8f11c0a4b99c06e2d2ace2ec5a"
+},
+{
+"path": "funding/NEO.parquet",
+"bytes": 574586,
+"sha256": "4e50865868fa0dbfd4cdf0d2d941a180cd6ecf1bb28fe9377a4ccbfde6c1d206"
+},
+{
+"path": "funding/NFTI.parquet",
+"bytes": 244246,
+"sha256": "6017440c26d6ba4deebb54448409a4133de99e658799ba9fc49699cc544d90df"
+},
+{
+"path": "funding/NIL.parquet",
+"bytes": 282398,
+"sha256": "f5d52003539fd1458ae7062643bef27bd1a89fac86852dbed38aedac98d3e5f5"
+},
+{
+"path": "funding/NOT.parquet",
+"bytes": 425820,
+"sha256": "fa108bcb51e9903c899e40c027396b2358e41dab8d54191a4662ea57caa6fea4"
+},
+{
+"path": "funding/NTRN.parquet",
+"bytes": 352469,
+"sha256": "aa236eaa6ed3308323e318c605caadc7b6fb9b5ca012606387484b82c34d51e7"
+},
+{
+"path": "funding/NXPC.parquet",
+"bytes": 262706,
+"sha256": "e7194225d0d220afbb74b22ab253e22c713acab64ff654334b8539a663b7c165"
+},
+{
+"path": "funding/OGN.parquet",
+"bytes": 411749,
+"sha256": "f0d251fdd9aed55996af32838c7cf86574dfd0320e1d3eb58a0dd0e4f1d5bd17"
+},
+{
+"path": "funding/OM.parquet",
+"bytes": 254367,
+"sha256": "cd99d0133273415a0fabca8026e45ac6d4eb0c2a19749a6351054db8d61b4932"
+},
+{
+"path": "funding/OMNI.parquet",
+"bytes": 348036,
+"sha256": "fe91e5f587f0685996da5c613036ee8e69673b1cb2b44a8d4a8dd1e42842e2c6"
+},
+{
+"path": "funding/ONDO.parquet",
+"bytes": 555229,
+"sha256": "055bd9780a46e42d1a886486f1f06e59c671b458ab634db77f35bd6a83870da0"
+},
+{
+"path": "funding/OP.parquet",
+"bytes": 685797,
+"sha256": "d9be78aef692d6a5e2d70f6663b75484975c14b9811fdd363c8e597959291a65"
+},
+{
+"path": "funding/ORBS.parquet",
+"bytes": 394590,
+"sha256": "a14db0a2e41169bb7aea6989cf20a82f63bccb52cf4c411129ab508301b37f36"
+},
+{
+"path": "funding/ORDI.parquet",
+"bytes": 557220,
+"sha256": "e18e06010fc01f2fedc5786495616dcdac4eb291cf82f6d2a15e99402befe564"
+},
+{
+"path": "funding/OX.parquet",
+"bytes": 319732,
+"sha256": "cd4c8f7d5c8939a0df2ea9a2d26bc28fb3a038ae2f1a386e4f0c1e2b4ae2a19f"
+},
+{
+"path": "funding/PANDORA.parquet",
+"bytes": 202759,
+"sha256": "9a08fa2ad1c83fbb13defc5541ea1301b31f8e4a26cc637d61112996ad0feed6"
+},
+{
+"path": "funding/PAXG.parquet",
+"bytes": 285831,
+"sha256": "b2ad7bad9f944a1363f3040593b18958d5426c14d2861f494a456f555df81030"
+},
+{
+"path": "funding/PENDLE.parquet",
+"bytes": 566866,
+"sha256": "8692c83465e1b68dca21f5228e22747f92c8ea2e10e71c3df3b169b30fc5487f"
+},
+{
+"path": "funding/PENGU.parquet",
+"bytes": 378284,
+"sha256": "2f7c12e5ba07a767a97537da7972bb0c330d953850b239ae4a8e46cc08bdc7e9"
+},
+{
+"path": "funding/PEOPLE.parquet",
+"bytes": 489532,
+"sha256": "7f30e996cff3d966eb733713da40efa939a138b30563621f26c65481ef93d7e9"
+},
+{
+"path": "funding/PIXEL.parquet",
+"bytes": 320373,
+"sha256": "6f55e82adeaf19295f98705246b33ddeaa62fd7b7c8b1ed2bfeb81bbf2feafcd"
+},
+{
+"path": "funding/PNUT.parquet",
+"bytes": 377461,
+"sha256": "37ca7aaa3458b9ae6f12c0d9c1f246d300581f79796ec19a611e76ef13a27903"
+},
+{
+"path": "funding/POL.parquet",
+"bytes": 402255,
+"sha256": "16e72899d0442f74d4d71f6c70b34344ec4f3f8a45af3786bf0603e91fd3af39"
+},
+{
+"path": "funding/POLYX.parquet",
+"bytes": 570924,
+"sha256": "7e04d17a273a76a79157f5db04a76ceb06e990c40da9633586ed1b2b28c1c3b8"
+},
+{
+"path": "funding/PONS.parquet",
+"bytes": 27817,
+"sha256": "bd462f93daf50e2598289a72f2870b79ee426458f1b7bf503df2f6fb257c98fe"
+},
+{
+"path": "funding/POPCAT.parquet",
+"bytes": 473213,
+"sha256": "6eced48367459a40e63d49f574ad211848451d8540a5aeecfd7edb4f08e3e759"
+},
+{
+"path": "funding/PROMPT.parquet",
+"bytes": 235599,
+"sha256": "c76b2b952fc1178f2c73ccd0d0f5583155c89a7fd551e227e51ed50cd8a9a31c"
+},
+{
+"path": "funding/PROVE.parquet",
+"bytes": 248150,
+"sha256": "0bbd443cc7a6a2806b0fd677cdc0a608ef8c3efc6515c1cb05b880540acf0a45"
+},
+{
+"path": "funding/PUMP.parquet",
+"bytes": 230834,
+"sha256": "249c3a87a3be67b5a4c760cb5c0864dd8f75e0b25e4e0e45b04455c0fc235e63"
+},
+{
+"path": "funding/PURR.parquet",
+"bytes": 305587,
+"sha256": "9b312d30a565352199664912e5fae1a97047129ecb025b3efacdff7f8a3486a2"
+},
+{
+"path": "funding/PYTH.parquet",
+"bytes": 586519,
+"sha256": "f024245e3ee4564929a2c643d38809dcf21c8a56c5e1bc7922cb775f2d8b9d98"
+},
+{
+"path": "funding/RDNT.parquet",
+"bytes": 430050,
+"sha256": "4984106b46bcc71ff5fbe861d48e2e7daf35a0a6d60bdfa102d63a888b3f6e37"
+},
+{
+"path": "funding/RENDER.parquet",
+"bytes": 412936,
+"sha256": "1e70017d0c416422ef7de5d7ced9f5825028d2cc6ddd873778c392fd65addb97"
+},
+{
+"path": "funding/REQ.parquet",
+"bytes": 439369,
+"sha256": "228a53c29f086163c0d465d9b2f05b3e6c149468d46f9d33860d674cd3654538"
+},
+{
+"path": "funding/RESOLV.parquet",
+"bytes": 254769,
+"sha256": "96c30721b34b7a05535efca467d39fdaa88c6cfb0250c8d48b95952a0f9c701a"
+},
+{
+"path": "funding/REZ.parquet",
+"bytes": 486192,
+"sha256": "57b5ee02667eae5446e104e8d59d2acfab10aa42ee5bddcc3ddc44d788f73fd0"
+},
+{
+"path": "funding/RLB.parquet",
+"bytes": 355347,
+"sha256": "5ab7d6fb429026d09e2020ec652b02faff574b5be8358073684ef722d55e4770"
+},
+{
+"path": "funding/RNDR.parquet",
+"bytes": 408185,
+"sha256": "18732276a964eedb04fd23210dbf2bc48b11e2bef9d3e0b4a4157382e661cd65"
+},
+{
+"path": "funding/RSR.parquet",
+"bytes": 528323,
+"sha256": "e18d131fa5da4499f4ea03f5d083066387530d8e2dd08a04f5b7a037da71191b"
+},
+{
+"path": "funding/RUNE.parquet",
+"bytes": 602943,
+"sha256": "b181eff327888dcaf6fe75daeef3e9da5ae497629cbc8939eb90316bf1a2699c"
+},
+{
+"path": "funding/S.parquet",
+"bytes": 346755,
+"sha256": "c443b740cedf8e61a47cfb8d829285d4564b376965bc0808c035d718881cba26"
+},
+{
+"path": "funding/SAGA.parquet",
+"bytes": 453867,
+"sha256": "f45b19132a5ac613387e234e34d90f2986acceb3f0051d1f643b7f936ba122c9"
+},
+{
+"path": "funding/SAND.parquet",
+"bytes": 379249,
+"sha256": "8c3634e91c0aa17d35c5721cd86c539f240af7763e44466b6182a07144f4a21d"
+},
+{
+"path": "funding/SCR.parquet",
+"bytes": 326780,
+"sha256": "0c2450f4d7658ecc34d160488aa4efe3b3cd50773c0b622cda8e6df0d23da034"
+},
+{
+"path": "funding/SEI.parquet",
+"bytes": 685850,
+"sha256": "5d84ed87da7dffbb460fd61efa544de982982516a60f150bbda918491e6a4fd4"
+},
+{
+"path": "funding/SHIA.parquet",
+"bytes": 320373,
+"sha256": "accd48fc26065750050ffe76c269577273d9bde3da938b9fe7ca4bdebf125514"
+},
+{
+"path": "funding/SKR.parquet",
+"bytes": 132237,
+"sha256": "c72d42989821862f56f5066c58a54fa703a7ee76cb1a670cacb2340a0113dbde"
+},
+{
+"path": "funding/SKY.parquet",
+"bytes": 208057,
+"sha256": "186a98b27cbc23d26068252db5326d75ea606e51718f9bafa84c07288e2d39cb"
+},
+{
+"path": "funding/SNX.parquet",
+"bytes": 636230,
+"sha256": "daa95315103784bec2c4d2f11316b33817babb37083957fab213f6b56784300e"
+},
+{
+"path": "funding/SOL.parquet",
+"bytes": 709530,
+"sha256": "91bc13533dfc7d70a5b4b42aa9add898decb8948ab3be860cdb777cf26c2cb84"
+},
+{
+"path": "funding/SOPH.parquet",
+"bytes": 275366,
+"sha256": "520092a6ced399da3c686f76a526311ce85b1b806ea4a631381cdd89a194cab6"
+},
+{
+"path": "funding/SPX.parquet",
+"bytes": 327985,
+"sha256": "21a37c0cbfab5853724f399330eabbde67d78cc38506e9636ba625d3303d0f45"
+},
+{
+"path": "funding/STABLE.parquet",
+"bytes": 180558,
+"sha256": "e45473831b433496bae52bf659b8f7f0f5a3b1de9e94145f43941184232b0559"
+},
+{
+"path": "funding/STBL.parquet",
+"bytes": 196718,
+"sha256": "bc1622e9e5b01051d655b242f2fcc20e15a479119957313fff4622836df8e0e9"
+},
+{
+"path": "funding/STG.parquet",
+"bytes": 427497,
+"sha256": "6d4710306df165bfcd7fa9a0a0f4013f4f3caf1dd2ac34367a85beeaffd4b135"
+},
+{
+"path": "funding/STRAX.parquet",
+"bytes": 273207,
+"sha256": "19e88dfee70eb405b2b539be8afc88d250f97bf94cd8c41b70e3563a429faf66"
+},
+{
+"path": "funding/STRK.parquet",
+"bytes": 527356,
+"sha256": "6a651ac1d0b6256c52b80a599137d7db5e7e7facd146bd994500d3ac6c1d033a"
+},
+{
+"path": "funding/STX.parquet",
+"bytes": 675788,
+"sha256": "66248691d30136e6a346ea9c375f14448b8dc687e322ec6370141ec34a80dad4"
+},
+{
+"path": "funding/SUI.parquet",
+"bytes": 694280,
+"sha256": "336207660a82321c7213831abc3a1058bce12c0c6572364c23a82464f3f6f9cc"
+},
+{
+"path": "funding/SUPER.parquet",
+"bytes": 551579,
+"sha256": "549f2bc019cfba59ba397fe4644ce980f8d28dfd465522b3b8291339d110baff"
+},
+{
+"path": "funding/SUSHI.parquet",
+"bytes": 577517,
+"sha256": "4f95f4cd17d869c59c57ffe4186449e59d451cd4f10ce72b22cf19c85c3f75bd"
+},
+{
+"path": "funding/SYRUP.parquet",
+"bytes": 236019,
+"sha256": "1e6f3146ff5832e23e8b84b6d3b3a6e89ef0134bdae5492f702644eef6d487b1"
+},
+{
+"path": "funding/TAO.parquet",
+"bytes": 517485,
+"sha256": "37f4c69e47d54a55c32521d7b249d07e917bea05d65ce0fbe1bfcdebb2e53501"
+},
+{
+"path": "funding/TIA.parquet",
+"bytes": 627726,
+"sha256": "64ae7e30c35cac641ea7c656116828351744461d527a90ec58c349bf55b944ff"
+},
+{
+"path": "funding/TNSR.parquet",
+"bytes": 447678,
+"sha256": "977d68a38c79fdafd872bf4ac61c85b4de4f92173cb8d8f12edcfaa7813915a1"
+},
+{
+"path": "funding/TON.parquet",
+"bytes": 560682,
+"sha256": "24fad9d89a897748d3cb17e12f1f29e1deb64fa55f7d5d796dc4d26cffb7a25c"
+},
+{
+"path": "funding/TRB.parquet",
+"bytes": 569240,
+"sha256": "fd2f4e9e5c267a34a56a40262e6b47bd36619b8206d9bad0f4a36eb39cee32da"
+},
+{
+"path": "funding/TRUMP.parquet",
+"bytes": 376256,
+"sha256": "c442e0c5f2d7084949d77d1ff9a6404f648a89e51d27e08594bb3ad988e67b3c"
+},
+{
+"path": "funding/TRX.parquet",
+"bytes": 645404,
+"sha256": "e6598de376f5ae2fab9b41b4f9bf798ecd0a9aac58fcae1084b730cc4a71b43f"
+},
+{
+"path": "funding/TST.parquet",
+"bytes": 260625,
+"sha256": "c23ae17e37c01002fbbadf0fa96c593b443216e5dba593f5ce9ded6ef055f940"
+},
+{
+"path": "funding/TURBO.parquet",
+"bytes": 466038,
+"sha256": "35c498c8d935189ef99f0e6eda176f91403e113a5435362d29b09c2921869853"
+},
+{
+"path": "funding/UMA.parquet",
+"bytes": 514020,
+"sha256": "f8b302b9edc31abae13a26531013d32f33246c3fad29aecf3b1539ffee937df8"
+},
+{
+"path": "funding/UNI.parquet",
+"bytes": 620370,
+"sha256": "b7f9c91a25dde68a4ede1da11f76c2c3c6157c423e76eaf857008271fb603000"
+},
+{
+"path": "funding/UNIBOT.parquet",
+"bytes": 324416,
+"sha256": "bfff43a1f9d675f272f402ae883492584ff501c44191241f25bef42d6f247148"
+},
+{
+"path": "funding/USELESS.parquet",
+"bytes": 22698,
+"sha256": "cb5f0d3eb24a717ba1e5f428c25a956915c41628a54274e09ec4cd2d31e47516"
+},
+{
+"path": "funding/USTC.parquet",
+"bytes": 474154,
+"sha256": "15e43677ecac336a4a3148d6ae11dc3deb9f6869d6d30242c1b4c5d543260fec"
+},
+{
+"path": "funding/USUAL.parquet",
+"bytes": 350292,
+"sha256": "f21e593721f6c164017122710407a4096188c2c6b3a207380e383b70a0e4e192"
+},
+{
+"path": "funding/VINE.parquet",
+"bytes": 297583,
+"sha256": "18073869fd4bd939c2e9e8565ef845d959fd43bc05b8772e5ce75f2f7fcf1dd7"
+},
+{
+"path": "funding/VIRTUAL.parquet",
+"bytes": 353885,
+"sha256": "b0a3a7522ad86f56a814e93c42597b1b3662cab91d12739eddf78e836e3ddf9f"
+},
+{
+"path": "funding/VVV.parquet",
+"bytes": 336433,
+"sha256": "828fb31bc104815c10c5f8463fb154e3d2b96e23d374bdf8db7ef04340ee05db"
+},
+{
+"path": "funding/W.parquet",
+"bytes": 517298,
+"sha256": "9d06a8343945b0368e191b5b92e37a64d4b7015a7e249680a414c85f1a1fe338"
+},
+{
+"path": "funding/WCT.parquet",
+"bytes": 284282,
+"sha256": "79766c3bede2dbb3f78d942469a12cd7a0f5e109c2c1771b51b161bfad2c9d18"
+},
+{
+"path": "funding/WIF.parquet",
+"bytes": 553189,
+"sha256": "7254069a889a7ee4ddfc5f62ce64ffa53c148eb46032477bbe6a950571296d09"
+},
+{
+"path": "funding/WLD.parquet",
+"bytes": 655043,
+"sha256": "da32c97d329b7f6b7baf78a52593156b263edd8832a604abbb2c8e60513dd65a"
+},
+{
+"path": "funding/WLFI.parquet",
+"bytes": 233530,
+"sha256": "e4a9fec9f8b827a1c906a7e1d7b7e01c1bdd52ec4ff39a8dc3e4357978d08c15"
+},
+{
+"path": "funding/XAI.parquet",
+"bytes": 549948,
+"sha256": "2698123f703c89a7c6c5448259ec66d0da125ea1d0492c47c4afedcd4d3d78da"
+},
+{
+"path": "funding/XLM.parquet",
+"bytes": 387347,
+"sha256": "951eb723cc5fb83bea6619678f406276f428c0e9b4458ffae236131943e45efb"
+},
+{
+"path": "funding/XMR.parquet",
+"bytes": 145352,
+"sha256": "c0d16b7cc5bcdc3204c5934be92101b657895b9d3e250d1ec35ad547e08626da"
+},
+{
+"path": "funding/XPL.parquet",
+"bytes": 204442,
+"sha256": "2e8f7c6578f1b874a05a5aa4d27200d3ab60dc195ba1d8f587588bc305a613c6"
+},
+{
+"path": "funding/XRP.parquet",
+"bytes": 679523,
+"sha256": "23338f8841fc47240e325b2b0b3f46a8f2ca4f870f12929c0e914d8996d10cdb"
+},
+{
+"path": "funding/YGG.parquet",
+"bytes": 609273,
+"sha256": "c57d4dccf92c00c67c8fcb6b9e4de40538ee8d8fc3753fcaf10ae2e046ea6ef1"
+},
+{
+"path": "funding/YZY.parquet",
+"bytes": 162085,
+"sha256": "d91f9f6b52d72665ca92ee7e5d150a312db763b346eb8046eafaa8f23f659bc6"
+},
+{
+"path": "funding/ZEC.parquet",
+"bytes": 197450,
+"sha256": "f4c03489eac598b70b6be423be0a9ee68a5dfde6c02cb2b5ef49b165bf375ce8"
+},
+{
+"path": "funding/ZEN.parquet",
+"bytes": 543123,
+"sha256": "1f794fa648570244d5643dc91c52a43de369997094c5f9683c5aa0c173bce6eb"
+},
+{
+"path": "funding/ZEREBRO.parquet",
+"bytes": 283696,
+"sha256": "ac0e4607c633b2c703a03a59678970095a9c5be9c2921d27704b2ace925b65cc"
+},
+{
+"path": "funding/ZETA.parquet",
+"bytes": 543471,
+"sha256": "8d6db501148af7e583347b9ce18ce792ce97c44e2f72e4c78a19f3e913710b1b"
+},
+{
+"path": "funding/ZK.parquet",
+"bytes": 437121,
+"sha256": "5e69e9c1111a9fc3c86d42b5534ec19bb64c7ee204cd8b8e47441e326b2404b1"
+},
+{
+"path": "funding/ZORA.parquet",
+"bytes": 296641,
+"sha256": "80f23a40fc7e07dc5bceb811f955ebad47e596e5ada988e425f470f35061444a"
+},
+{
+"path": "funding/ZRO.parquet",
+"bytes": 616608,
+"sha256": "999eaaf9f5295a9931a7a45b748f4496c7d0c860b52db9208d1671e709e0a59c"
+},
+{
+"path": "funding/kBONK.parquet",
+"bytes": 583287,
+"sha256": "65a566158eac834cf34f859f6d498df9d54bfe9a6011586edc6994bc95e3d626"
+},
+{
+"path": "funding/kDOGS.parquet",
+"bytes": 246010,
+"sha256": "8daee2ce3377ee865ec570e792e60436bc82dc7f232130b6ff5792306b27a09b"
+},
+{
+"path": "funding/kFLOKI.parquet",
+"bytes": 521123,
+"sha256": "f5752c576f2bdd813a0e7717a3a12aba25d41cc931effdd8e9eae99be0575a47"
+},
+{
+"path": "funding/kLUNC.parquet",
+"bytes": 548810,
+"sha256": "dfa36637a70d7292edcc8185a34f0f42f5d84db17c739de7ecad39539c828b48"
+},
+{
+"path": "funding/kNEIRO.parquet",
+"bytes": 385719,
+"sha256": "cfbe418cfd52dca880da1ed33ebb37d8fdee27f3b36143317b213f7979c35f8c"
+},
+{
+"path": "funding/kPEPE.parquet",
+"bytes": 685219,
+"sha256": "47549e47c71a8c813e4256ffced76894f6408f2f1b4f41a6772917ac84877ab5"
+},
+{
+"path": "funding/kSHIB.parquet",
+"bytes": 662041,
+"sha256": "d72bd550cb83c11b07cda33232ee313ad33c924875947faf569a23c26ca2b08a"
+},
+{
+"path": "manifest.json",
+"bytes": 19899,
+"sha256": "5b237bb95927a7596f5542fdd663a143b656acda03070f26eeb3c702218053c1"
+}
+]
+}

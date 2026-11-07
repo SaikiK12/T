@@ -1,0 +1,106 @@
+16:16:24 prereg sha f0726c626aec
+16:16:34 242 coins are ever members; members per row mean 19.21
+16:16:37 member cells with a missing next return (legacy zero): 29
+/home/user/T/scripts/run_brute5k.py:356: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  mon = pd.to_datetime(days, unit="ms", utc=True).to_period("M")
+16:17:12 timeframe 1 h: 50376 bars
+16:17:22 parity strategy 0: max |diff| 1.11e-16
+16:21:19 360 strategies done
+16:25:13 720 strategies done
+16:28:31 1080 strategies done
+16:32:18 timeframe 4 h: 12594 bars
+16:32:59 1440 strategies done
+16:36:05 1800 strategies done
+16:37:47 parity strategy 2000: max |diff| 5.55e-17
+16:38:59 2160 strategies done
+16:41:37 2520 strategies done
+16:43:19 timeframe 12 h: 4198 bars
+16:44:15 2880 strategies done
+16:46:26 3240 strategies done
+16:48:37 3600 strategies done
+16:50:49 3960 strategies done
+16:51:12 parity strategy 4000: max |diff| 1.39e-17
+16:51:54 timeframe 24 h: 2099 bars
+16:53:26 4320 strategies done
+16:56:00 4680 strategies done
+16:58:33 5040 strategies done
+17:01:01 5400 strategies done
+17:01:32 saved 5472 strategies
+/home/user/T/scripts/run_brute5k.py:507: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  per = dt.to_period("M")
+17:01:42 
+ L_months                       window  cmult  days  mean_bp_day  t_nw10  sharpe
+        3     decided 2021-07..2025-06    1.0  1461        2.024   1.510   0.658
+        3     decided 2021-07..2025-06    2.0  1461        0.921   0.685   0.299
+        3     decided 2021-07..2025-06    3.0  1461       -0.181  -0.133  -0.059
+        3    2022-01..2025-06 (common)    1.0  1277        1.058   0.773   0.359
+        3    2022-01..2025-06 (common)    2.0  1277        0.039   0.028   0.013
+        3    2022-01..2025-06 (common)    3.0  1277       -0.981  -0.707  -0.331
+        3 exploratory 2025-07..2026-09    1.0   457        1.028   0.433   0.388
+        3 exploratory 2025-07..2026-09    2.0   457        0.115   0.047   0.043
+        3 exploratory 2025-07..2026-09    3.0   457       -0.799  -0.323  -0.299
+        6     decided 2021-07..2025-06    1.0  1461        1.181   0.962   0.421
+        6     decided 2021-07..2025-06    2.0  1461        0.286   0.230   0.102
+        6     decided 2021-07..2025-06    3.0  1461       -0.610  -0.486  -0.216
+        6    2022-01..2025-06 (common)    1.0  1277        0.522   0.410   0.191
+        6    2022-01..2025-06 (common)    2.0  1277       -0.398  -0.309  -0.145
+        6    2022-01..2025-06 (common)    3.0  1277       -1.318  -1.008  -0.480
+        6 exploratory 2025-07..2026-09    1.0   457        1.006   0.535   0.480
+        6 exploratory 2025-07..2026-09    2.0   457        0.168   0.086   0.080
+        6 exploratory 2025-07..2026-09    3.0   457       -0.670  -0.328  -0.315
+       12     decided 2021-07..2025-06    1.0  1277        0.309   0.224   0.110
+       12     decided 2021-07..2025-06    2.0  1277       -0.709  -0.514  -0.251
+       12     decided 2021-07..2025-06    3.0  1277       -1.727  -1.248  -0.610
+       12    2022-01..2025-06 (common)    1.0  1277        0.309   0.224   0.110
+       12    2022-01..2025-06 (common)    2.0  1277       -0.709  -0.514  -0.251
+       12    2022-01..2025-06 (common)    3.0  1277       -1.727  -1.248  -0.610
+       12 exploratory 2025-07..2026-09    1.0   457        1.139   0.597   0.491
+       12 exploratory 2025-07..2026-09    2.0   457        0.057   0.029   0.024
+       12 exploratory 2025-07..2026-09    3.0   457       -1.025  -0.498  -0.437
+17:01:51 primary {"mean_1x_bp": 1.1812761595360781, "t_1x": 0.9616840849157625, "mean_2x_bp": 0.2856840627747729, "null_mean_bp": -1.1117275678364562, "null_p95_bp": -0.039282403658275275, "null_share_above": 0.001, "all_strategies_ew_bp": -1.0204741263176675, "passed": false}
+17:02:01 secondary {"strategy": {"id": 330, "tf_h": 1, "family": "rsi", "params": "(14, 10)", "direction": "long", "filter": "none", "stop": "none"}, "disc_t_1x": 3.114237089160935, "disc_mean_1x_bp": 0.8895946763916244, "rc_stat": 3.2056539341095927, "rc_p": 0.334, "rc_null_p95": 4.111620820228672, "val_mean_1x_bp": 0.008471998481537084, "val_t_1x": 0.02298521836363123, "val_mean_2x_bp": -0.010357983958383025, "val_mean_3x_bp": -0.029187966398303136, "passed": false}
+17:02:01 landscape {"share_disc_net_positive": 0.41246345029239767, "share_disc_gross_positive": 0.53125, "share_disc_t_ge_2": 0.006030701754385965, "share_val_t_ge_2": 0.009868421052631578, "corr_disc_val_t": NaN, "top100_disc_val_mean_t": 1.1053661183122865}
+17:02:01 
+                 disc_mean_1x_bp  val_mean_1x_bp  disc_gross_bp  disc_cost_bp
+family     tf_h                                                              
+boll       1               -3.81           -3.53           0.14          3.95
+           4               -1.06           -1.52          -0.05          1.01
+           12              -0.20           -0.58           0.18          0.38
+           24              -0.08           -0.07           0.14          0.23
+donchian   1               -3.00           -1.74          -0.31          2.68
+           4                0.71           -0.77           1.48          0.77
+           12               1.05           -1.63           1.39          0.34
+           24               0.22           -1.58           0.44          0.22
+ema        1                0.89            0.16           4.47          3.57
+           4                2.00            1.12           3.01          1.01
+           12               1.86           -0.88           2.31          0.45
+           24               1.15           -0.76           1.47          0.32
+fib        1               -1.41           -2.09           0.08          1.49
+           4               -0.61           -1.02          -0.18          0.43
+           12              -0.68           -0.56          -0.50          0.18
+           24              -0.82           -1.25          -0.69          0.12
+macd       1               -8.86          -10.34           3.23         12.09
+           4                1.52            0.07           4.63          3.12
+           12               3.74            1.44           4.87          1.14
+           24               5.11            1.27           5.75          0.64
+rsi        1               -8.37           -6.70           0.37          8.74
+           4               -2.66           -2.28          -0.46          2.19
+           12              -1.60           -1.39          -0.85          0.75
+           24              -1.82           -0.19          -1.43          0.39
+supertrend 1               -4.52           -2.23          -0.36          4.16
+           4                1.35            1.66           2.54          1.19
+           12               3.77           -1.00           4.28          0.51
+           24               2.74           -0.92           3.10          0.36
+tsmom      1               -8.12           -8.76           3.30         11.42
+           4                1.55           -0.24           4.46          2.91
+           12               1.98            0.60           3.04          1.06
+           24               0.58           -1.98           1.20          0.62
+vwap       1               -3.01           -2.90           0.24          3.24
+           4               -1.08           -1.08          -0.22          0.86
+           12              -0.41           -0.59          -0.08          0.32
+           24              -0.14           -0.05           0.04          0.19
+17:02:03 persistence {"mean_ic_decided": 0.04420302428379038, "t_nw3": 1.2956314032141278, "share_positive": 0.5416666666666666, "mean_ic_exploratory": 0.0726160042191769}
+17:02:05 regime {"boll": {"corr_btc_month_ret": 0.129574915326093, "corr_btc_abs_ret": 0.17781969928022034, "corr_btc_vol": -0.10494535606482158}, "donchian": {"corr_btc_month_ret": 0.12487004831290308, "corr_btc_abs_ret": 0.35662297005434307, "corr_btc_vol": -0.10794560453007292}, "ema": {"corr_btc_month_ret": -0.008646960075603087, "corr_btc_abs_ret": 0.28276578318706025, "corr_btc_vol": -0.07895695619095665}, "fib": {"corr_btc_month_ret": 0.24724053139461585, "corr_btc_abs_ret": 0.21778720489987974, "corr_btc_vol": 0.1927325795349219}, "macd": {"corr_btc_month_ret": -0.024560566034778242, "corr_btc_abs_ret": 0.2317636769102853, "corr_btc_vol": 0.033286490749432934}, "rsi": {"corr_btc_month_ret": -0.024550548143308072, "corr_btc_abs_ret": -0.1429567063169019, "corr_btc_vol": 0.13795652674878647}, "supertrend": {"corr_btc_month_ret": 0.0390559591899678, "corr_btc_abs_ret": 0.28094268176351506, "corr_btc_vol": -0.10919244500993744}, "tsmom": {"corr_btc_month_ret": 0.01797600419784442, "corr_btc_abs_ret": 0.34368793919009594, "corr_btc_vol": 0.002693657372082394}, "vwap": {"corr_btc_month_ret": 0.09240618941167152, "corr_btc_abs_ret": 0.1475516055841703, "corr_btc_vol": -0.11260553731913882}}
+17:02:14 mc walk-forward {"1": {"median_wealth": 1.0368890156124677, "p05_wealth": 0.8971671523646506, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.3439}, "2": {"median_wealth": 1.064752817798976, "p05_wealth": 0.7938707461785244, "p_dd50": 0.0001, "p_ruin": 0.0, "p_loss_year": 0.3653}, "3": {"median_wealth": 1.080977116166088, "p05_wealth": 0.6941107178688828, "p_dd50": 0.0124, "p_ruin": 0.0, "p_loss_year": 0.3887}, "5": {"median_wealth": 1.0825697024881717, "p05_wealth": 0.5045962947968587, "p_dd50": 0.2033, "p_ruin": 0.0, "p_loss_year": 0.4316}, "10": {"median_wealth": 0.8886827964962971, "p05_wealth": 0.1672972365718987, "p_dd50": 0.8102, "p_ruin": 0.0, "p_loss_year": 0.5497}, "growth_optimal_leverage": 4.0}
+17:02:14 mc best single {"1": {"median_wealth": 1.0318257294000757, "p05_wealth": 1.0085420918189785, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.0032}, "2": {"median_wealth": 1.06433057638651, "p05_wealth": 1.0170290460931044, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.0032}, "3": {"median_wealth": 1.0974728762053236, "p05_wealth": 1.025447145320154, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.0033}, "5": {"median_wealth": 1.1660105246574672, "p05_wealth": 1.0420074885226158, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.0033}, "10": {"median_wealth": 1.3496428906771956, "p05_wealth": 1.0821556729684143, "p_dd50": 0.0, "p_ruin": 0.0, "p_loss_year": 0.0048}, "growth_optimal_leverage": 20.0}
+17:02:14 verdict NULL

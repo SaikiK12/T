@@ -1,0 +1,296 @@
+{
+  "schema": "research_input_capabilities/v1",
+  "checked_at": "2026-11-04",
+  "scope": "Bounded source-documentation reading; not a strategy queue, exhaustive data catalog, acquisition permission or proof of point-in-time availability.",
+  "sources": [
+    {
+      "id": "binance_archive_metrics",
+      "docs_url": "https://github.com/binance/binance-public-data/blob/master/README.md",
+      "read_scope": "Archive publication cadence, checksum/update statements; metrics schema is absent from README.",
+      "candidate_path": "data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-{YYYY-MM-DD}.zip",
+      "candidate_route_report": "https://github.com/binance/binance-public-data/issues/491",
+      "route_report_authority": "community report, not exchange confirmation of timestamp semantics",
+      "documented": true,
+      "archive_objects_qualified": true,
+      "acquired_files": [
+        {
+          "name": "BTCUSDT-metrics-2026-06-24.zip",
+          "sha256": "6bb5ab473189fa7c935b4d9a58d34b2c96cc329cd74fd6f9f17f8abc48ece649",
+          "row_count": 288
+        },
+        {
+          "name": "BTCUSDT-metrics-2026-06-25.zip",
+          "sha256": "56e0751dabd8108d61d1f9de86931ac68e901dad202d4dbac03173e2768be68e",
+          "row_count": 288
+        }
+      ],
+      "retention_start": null,
+      "historical_coverage_complete": false,
+      "period_start_or_end": null,
+      "historical_availability_proven": false,
+      "next_receipt": "../../../experiments/metrics_archive_qualification_v1/PREREG.md",
+      "dataset_terms_url": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "dataset_terms_version": "1.0; last updated2026-08-26; checked2026-11-04",
+      "dataset_license": "CC BY-NC-SA4.0, subject to provider terms",
+      "declared_use_this_pass": "purely personal non-production source/schema research",
+      "production_trading_use_established": false,
+      "qualification_receipt": "../../../experiments/metrics_archive_qualification_v1/evidence/qualification.json",
+      "reported_label_range_flip_reproduced_on_current_bytes": false
+    },
+    {
+      "id": "binance_rest_derivatives",
+      "docs_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "read_scope": "Only OI statistics, top-trader/taker ratios and funding-history endpoint sections.",
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "open_interest": {
+        "path": "/futures/data/openInterestHist",
+        "retention": "latest one month",
+        "max_rows": 500,
+        "timestamp_role": "period end"
+      },
+      "taker_ratio": {
+        "path": "/futures/data/takerlongshortRatio",
+        "retention": "latest30days",
+        "timestamp_role": "period start"
+      },
+      "top_trader_ratios": {
+        "auth_requirement": "current docs require X-MBX-APIKEY",
+        "retention": "latest30days"
+      },
+      "funding": {
+        "path": "/fapi/v1/fundingRate",
+        "max_rows": 1000,
+        "fields_to_preserve": [
+          "fundingTime",
+          "fundingRate",
+          "markPrice",
+          "rateType"
+        ]
+      },
+      "limits": "REST retention does not prove archive retention. End/start labels require separate interval contracts. Special funding must not silently become ordinary funding. No credentials or new REST probe."
+    },
+    {
+      "id": "kucoin_funding",
+      "docs_url": "https://www.kucoin.com/docs-new/rest/futures-trading/funding-fees/get-public-funding-history",
+      "read_scope": "Public endpoint, parameters, response example and permission wording only.",
+      "host": "https://api-futures.kucoin.com",
+      "path": "/api/v1/contract/funding-rates",
+      "parameters": [
+        "symbol",
+        "from",
+        "to"
+      ],
+      "fields": [
+        "symbol",
+        "fundingRate",
+        "timepoint"
+      ],
+      "timestamp_unit": "milliseconds",
+      "auth_requirement": "public channel and unsigned example; page permission wording needs actual qualification",
+      "settlement_price_basis": null,
+      "retention_start": null,
+      "inactive_market_supported": null,
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false
+    },
+    {
+      "id": "kucoin_contract_metadata",
+      "docs_url": "https://www.kucoin.com/docs-new/rest/futures-trading/market-data/get-symbol",
+      "read_scope": "Public endpoint and multiplier/lifecycle/status fields only.",
+      "path": "/api/v1/contracts/{symbol}",
+      "fields": [
+        "multiplier",
+        "lotSize",
+        "isInverse",
+        "isQuanto",
+        "settleCurrency",
+        "firstOpenDate",
+        "expireDate",
+        "settleDate",
+        "status"
+      ],
+      "historical_metadata_supported": null,
+      "inactive_market_supported": null,
+      "owner_fees_verified": false,
+      "documented": true,
+      "limits": "Current tradable-contract metadata and current marks do not prove past multipliers or settlement-time marks. R402 remains consumed; no repeat probe."
+    },
+    {
+      "id": "dydx_historical_funding",
+      "docs_url": "https://docs.dydx.xyz/indexer-client/http",
+      "read_scope": "Perpetual-market and historical-funding methods/parameters and response model name only.",
+      "candidate_route": "/v4/historicalFunding/{ticker}",
+      "parameters": [
+        "ticker",
+        "limit",
+        "effectiveBeforeOrAt",
+        "effectiveBeforeOrAtHeight"
+      ],
+      "payload_model": "HistoricalFundingResponseObject",
+      "settlement_price_basis": null,
+      "retention_start": null,
+      "inactive_market_supported": null,
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "limits": "Source mapping qualifies the reported oracle reference, not exact chain-settlement basis, upstream units, intrablock order, active deployment or held-file lineage. No history acquisition.",
+      "source_commit": "7b8822a5b0344ba676564a7e3d6a445ef37ef9ba",
+      "response_price_field": "price",
+      "response_price_maps_to": "funding_index_updates.oraclePrice",
+      "oracle_reference_selection": "latest market oracle row at or before funding block height",
+      "exact_chain_settlement_basis_verified": false,
+      "active_deployment_correspondence_verified": false,
+      "held_file_column_mapping_verified": false,
+      "source_trace": [
+        {
+          "path": "indexer/services/comlink/src/controllers/api/v4/historical-funding-controller.ts",
+          "read_lines": "40-81"
+        },
+        {
+          "path": "indexer/services/comlink/src/request-helpers/request-transformer.ts",
+          "read_lines": "178-189",
+          "git_blob": "24b4e48f4afa3fc4ce7977fafd80b0ae415efbfd"
+        },
+        {
+          "path": "indexer/services/ender/src/scripts/handlers/dydx_funding_handler.sql",
+          "read_lines": "1-102",
+          "git_blob": "4d3423f2bc5bfcb5c5284e0150b28ec2ea5347c8"
+        }
+      ]
+    },
+    {
+      "id": "lighter_funding_and_mark",
+      "docs_url": "https://github.com/elliottech/lighter-python/blob/main/docs/CandlestickApi.md",
+      "read_scope": "Public fundings and markPriceCandles methods/parameter tables only.",
+      "paths": [
+        "/api/v1/fundings",
+        "/api/v1/markPriceCandles"
+      ],
+      "parameters": [
+        "market_id",
+        "resolution",
+        "start_timestamp",
+        "end_timestamp",
+        "count_back"
+      ],
+      "funding_max_rows": 750,
+      "auth_requirement": "SDK documents no authorization",
+      "rate_unit": null,
+      "settlement_price_basis": null,
+      "historical_metadata_supported": null,
+      "inactive_market_supported": null,
+      "retention_start": null,
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "limits": "A mark candle is not necessarily the precise funding settlement value."
+    },
+    {
+      "id": "deribit_options",
+      "docs_url": "https://docs.deribit.com/articles/options-data-collection-best-practices",
+      "read_scope": "Chain discovery, books, ticker/Greeks/IV sections only.",
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "methods": [
+        "public/get_instruments",
+        "public/get_book_summary_by_currency",
+        "public/ticker"
+      ],
+      "instrument_fields": [
+        "expiration_timestamp",
+        "option_type",
+        "strike",
+        "is_active"
+      ],
+      "ticker_fields": [
+        "mark_price",
+        "mark_iv",
+        "bid_iv",
+        "ask_iv",
+        "greeks"
+      ],
+      "measurement_roles": [
+        "exchange-reported observations",
+        "exchange model outputs"
+      ],
+      "auth_requirement": "Public100ms/agg2 book intervals; raw updates require authentication",
+      "dealer_inventory_observed": false,
+      "contract_scaling_verified": false,
+      "history_coverage_verified": false
+    },
+    {
+      "id": "fred_alfred_vintages",
+      "docs_url": "https://fred.stlouisfed.org/docs/api/fred/series_observations.html",
+      "read_scope": "Description, response and api_key through vintage_dates parameters only.",
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "path": "/fred/series/observations",
+      "auth_requirement": "registered API key required",
+      "fields": [
+        "date",
+        "value",
+        "realtime_start",
+        "realtime_end"
+      ],
+      "vintage_granularity": "calendar date",
+      "default_real_time_bounds": "today unless explicitly supplied",
+      "units_parameter": "transformation code, not physical units/currency",
+      "historical_intraday_first_seen_proven": false,
+      "limits": "Source vintage dates are not receipt clocks; series definitions and rights need separate qualification."
+    },
+    {
+      "id": "bls_release_index",
+      "docs_url": "https://www.bls.gov/bls/newsrels.htm",
+      "read_scope": "Schedules, archive caution and employment/inflation release links only.",
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "source_kind": "official schedule/archive discovery index",
+      "required_later_fields": [
+        "release_id",
+        "reference_period",
+        "scheduled_time_timezone",
+        "archive_url_sha256",
+        "reported_publication_time",
+        "collector_receipt_time",
+        "revision_status"
+      ],
+      "consensus_available": false,
+      "historical_first_seen_proven": false,
+      "limits": "Archived values may later be revised; a schedule is not observed publication or surprise."
+    },
+    {
+      "id": "ethereum_event_logs",
+      "docs_url": "https://ethereum.github.io/execution-apis/api/methods/eth_getLogs/",
+      "read_scope": "Version, filter parameters, log result and errors only.",
+      "docs_version": "1.0.0-beta.7",
+      "documented": true,
+      "qualified_in_this_pass": false,
+      "acquired_in_this_pass": false,
+      "method": "eth_getLogs",
+      "fields": [
+        "address",
+        "blockHash",
+        "blockNumber",
+        "transactionHash",
+        "transactionIndex",
+        "logIndex",
+        "topics",
+        "data",
+        "removed",
+        "blockTimestamp"
+      ],
+      "host": null,
+      "auth_requirement": null,
+      "history_coverage_verified": false,
+      "finality_proven": false,
+      "entity_labels_observed": false,
+      "limits": "Protocol is not a hosted-access commitment; pruned-history error4444 is documented. Pin provider/schema, ABI/upgrades, token scales and chain identity. removed=false alone does not establish finality."
+    }
+  ]
+}

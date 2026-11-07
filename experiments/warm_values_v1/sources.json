@@ -1,0 +1,161 @@
+{
+  "actual_static_acquisition": {
+    "body_bytes": 1142975,
+    "body_read_upper_bound": 1142975,
+    "market_requests": 0,
+    "network_seconds": 4.436511266001617,
+    "requests": 8,
+    "search_queries_attempted": 1,
+    "search_result": "websearch tool returned isError=true/content=[]; no source claim inferred"
+  },
+  "binding_missing_contract": "Atomic symbol-bound current perp index/mark with its own meaningful effective/source-as-of timestamp and cache/idle/settlement semantics; cannot borrow priceOracleInfo time for orderBookDetails prices.",
+  "cached_additional_scope": {
+    "requests_added": 0,
+    "sdk": "R314 generated perps/detail/wrapper schemas at a7a9ba88514d38a863a33642acd41f8adf442e5c; exact retained identities in experiments/depth_quotes_v1/sources.json",
+    "ws_bytes": 400785,
+    "ws_date_modified": "2026-10-18",
+    "ws_read_scope": "Market Stats field prose/schema only; no snapshot effective-age or idle heartbeat attestation",
+    "ws_sha256": "861d70b16479e9303a42826aece613a06d7ab15d9456566f80e39c8f8ff16c5c",
+    "ws_url": "https://apidocs.lighter.xyz/docs/websocket-reference"
+  },
+  "distinct_received_mechanics": [
+    "Public orderBookDetails index/mark fields have no own value/as-of timestamp; creation time is not a value clock.",
+    "priceOracleInfo computed_at_ms timestamps source/median/internal/cap POLICY; cap_reference*(1 +/- cap_bps/10000), not an actual price or atomic join clock.",
+    "marketPriceCharts uses last24h hourly marks for perps, index for spot; not current perp index.",
+    "funding-rates model/schema has numeric rate without scale/settlement asset/realized event clock; official real-time advice is market_stats WS.",
+    "Market Stats receipt/publication remains distinct from effective age and account settlement; resubscription/pong is not documented proof."
+  ],
+  "prior_frozen_sources": [
+    "experiments/funding_values_v1/sources.json",
+    "experiments/depth_quotes_v1/sources.json",
+    "experiments/stream_quotes_v1/sources.json"
+  ],
+  "received_access_boundary": "/reference/info returned302; destination unread/not followed. No whole SDK/API corpus, oracle-provider implementation, account or live endpoint audit.",
+  "registry_id": "R316",
+  "retrieved_utc_date": "2026-10-25",
+  "scope": "Selected previously unread Lighter value/policy/units contracts; no market calls or effective-value/settlement inference.",
+  "sources": [
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 248418,
+      "bytes": 248418,
+      "date_modified": "2026-05-29T18:13:49.000Z",
+      "error": null,
+      "http_status": 200,
+      "name": "orderbookdetails_doc",
+      "read_scope": "Official endpoint description, parameters and embedded OpenAPI response schemas, including PerpsOrderBookDetail/OrderBookDetails clocks and values.",
+      "sha256": "e3a1f0a5f37dbd624c3fb9f9612ac719ce65b3abf11e18f8bc13757c7dfd3d82",
+      "truncated": false,
+      "unread_or_missing_scope": "No live response/caching/effective-value-age or account test; no full endpoint corpus.",
+      "url": "https://apidocs.lighter.xyz/reference/orderbookdetails",
+      "version": "unversioned public page; exact HTTP body hash retained"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 172121,
+      "bytes": 172121,
+      "error": null,
+      "http_status": 200,
+      "name": "order_api",
+      "read_scope": "Pinned order_book_details, its HTTP-info/preload variants, and _order_book_details_serialize; method-name index for public candidates.",
+      "sha256": "a411eca93227cfc7c5e2f73a7e8fab115a1696f45e43ee68bf6697ce0def5e47",
+      "truncated": false,
+      "unread_or_missing_scope": "Other API functions/account/export/trade code not audited or run; SDK not installed.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/api/order_api.py",
+      "version": "official elliottech/lighter-python commit a7a9ba88514d38a863a33642acd41f8adf442e5c"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 3668,
+      "bytes": 3668,
+      "error": null,
+      "http_status": 200,
+      "name": "funding_rate_model",
+      "read_scope": "Full generated FundingRate field/enum/serialization model.",
+      "sha256": "0cab50e2e93b3d42d3e97ca803cf57c7a9b38035a5ff0b73fb12abb04650b014",
+      "truncated": false,
+      "unread_or_missing_scope": "No field unit, settlement asset, realized/estimated classification or economic event timestamp specified.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/funding_rate.py",
+      "version": "official elliottech/lighter-python commit a7a9ba88514d38a863a33642acd41f8adf442e5c"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 3745,
+      "bytes": 3745,
+      "error": null,
+      "http_status": 200,
+      "name": "funding_rates_model",
+      "read_scope": "Full generated FundingRates wrapper model.",
+      "sha256": "2b13d5078d86c9e1f770aba60f606347121c509cf109bfcb3ba5115f167baf68",
+      "truncated": false,
+      "unread_or_missing_scope": "No as-of timestamp or scaling contract in wrapper; no market call.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/funding_rates.py",
+      "version": "official elliottech/lighter-python commit a7a9ba88514d38a863a33642acd41f8adf442e5c"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 239648,
+      "bytes": 239648,
+      "date_modified": "2026-10-07T18:38:09.000Z",
+      "error": null,
+      "http_status": 200,
+      "name": "priceoracleinfo_doc",
+      "read_scope": "Official endpoint description and full embedded RespPriceOracleInfo/PriceOracleMarket/PriceOraclePrice schemas.",
+      "sha256": "fa684924a76f2b559e541e0f13dad4e4b8122440605648ce15c6801b1265a08b",
+      "truncated": false,
+      "unread_or_missing_scope": "No actual current index/mark price in schema, no per-source price effective time or atomic linkage to orderBookDetails; no live request.",
+      "url": "https://apidocs.lighter.xyz/reference/priceoracleinfo",
+      "version": "unversioned public page; exact HTTP body hash retained"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 46,
+      "bytes": 46,
+      "date_modified": null,
+      "error": null,
+      "http_status": 302,
+      "name": "info_doc",
+      "read_scope": "Ordinary HTTP302 body redirecting to /reference/exchangestats. Redirect deliberately not followed.",
+      "sha256": "997b5d447ea69e5d9ae333e4d8bdd511bf7afa9b350e14c24449358bfc6082e1",
+      "truncated": false,
+      "unread_or_missing_scope": "Destination content unread; no info/exchangeStats endpoint conclusion or market request.",
+      "url": "https://apidocs.lighter.xyz/reference/info",
+      "version": "unversioned public page; exact HTTP body hash retained"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 239077,
+      "bytes": 239077,
+      "date_modified": "2026-07-17T15:37:09.000Z",
+      "error": null,
+      "http_status": 200,
+      "name": "marketpricecharts_doc",
+      "read_scope": "Official endpoint description, market_ids query and embedded chart response schemas.",
+      "sha256": "bdde2826db9d8bd8e59753227b857b12aa2b1313194f3da6a6d1c716a0ad09a7",
+      "truncated": false,
+      "unread_or_missing_scope": "No live chart records/history acquired; perps use mark, spot uses index; no current perps-index guarantee.",
+      "url": "https://apidocs.lighter.xyz/reference/marketpricecharts",
+      "version": "unversioned public page; exact HTTP body hash retained"
+    },
+    {
+      "access": "normal public static HTTP; no redirects/retries/logins; raw body retained only in ignored scratch",
+      "body_read_upper_bound": 236252,
+      "bytes": 236252,
+      "date_modified": "2026-05-29T18:13:49.000Z",
+      "error": null,
+      "http_status": 200,
+      "name": "fundingrates_doc",
+      "read_scope": "Official endpoint description and full embedded FundingRate/FundingRates schemas.",
+      "sha256": "75b5dbe28d125445acf99f27bdfb90befac56edbca499e1ff4b9c51099eff501",
+      "truncated": false,
+      "unread_or_missing_scope": "No percent/fraction rate unit, settled cash asset, value timestamp or market request; direct WS recommendation not a heartbeat guarantee.",
+      "url": "https://apidocs.lighter.xyz/reference/funding-rates",
+      "version": "unversioned public page; exact HTTP body hash retained"
+    }
+  ],
+  "static_read_budget": {
+    "max_body_upper_bound": 4194304,
+    "max_network_seconds": 120,
+    "max_requests": 8
+  }
+}

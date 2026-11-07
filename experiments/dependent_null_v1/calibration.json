@@ -1,0 +1,135 @@
+{
+  "actual_order_allowed": false,
+  "cells": [
+    {
+      "block_days": 14,
+      "cell_cutoff": 2.8565864399616974,
+      "paths": 500,
+      "profile": "gaussian_rho0",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 3.2016662211083062,
+      "paths": 500,
+      "profile": "gaussian_rho0.3",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 3.19619542812334,
+      "paths": 500,
+      "profile": "gaussian_rho0.6",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 4.671756463114489,
+      "paths": 500,
+      "profile": "gaussian_rho0.9",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 3.0903760999918926,
+      "paths": 500,
+      "profile": "t5_rho0",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 2.974968636385825,
+      "paths": 500,
+      "profile": "t5_rho0.3",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 3.0398198564149648,
+      "paths": 500,
+      "profile": "t5_rho0.6",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 14,
+      "cell_cutoff": 4.095129878404216,
+      "paths": 500,
+      "profile": "t5_rho0.9",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.027617891098185,
+      "paths": 500,
+      "profile": "gaussian_rho0",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.4942345836083035,
+      "paths": 500,
+      "profile": "gaussian_rho0.3",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.2871615729716774,
+      "paths": 500,
+      "profile": "gaussian_rho0.6",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 4.207071656628468,
+      "paths": 500,
+      "profile": "gaussian_rho0.9",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.3566814825418065,
+      "paths": 500,
+      "profile": "t5_rho0",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.3690538641041408,
+      "paths": 500,
+      "profile": "t5_rho0.3",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.1491617975388695,
+      "paths": 500,
+      "profile": "t5_rho0.6",
+      "tolerance_order": 490
+    },
+    {
+      "block_days": 28,
+      "cell_cutoff": 3.7302525019281014,
+      "paths": 500,
+      "profile": "t5_rho0.9",
+      "tolerance_order": 490
+    }
+  ],
+  "cutoffs": {
+    "14": 4.671756463114489,
+    "28": 4.207071656628468
+  },
+  "family": 3,
+  "market_validated": false,
+  "n": 273,
+  "scope": "Only the declared simulated null profiles; no market coverage,profitability or activation certified.",
+  "state": "CALIBRATED",
+  "tolerance": {
+    "alpha": 0.05,
+    "calibration_cells": 16,
+    "cell_error_budget": 0.0006250000000000006,
+    "joint_calibration_confidence": 0.99,
+    "order": 490,
+    "paths": 500,
+    "tail_probability": 0.000460007154266826
+  }
+}

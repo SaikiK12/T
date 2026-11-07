@@ -1,0 +1,25 @@
+name = "squeeze_v1"
+events = "/home/user/T/experiments/reserved_batch1/work/legs/squeeze_legs.csv"
+filter = { window = "reserved_2020" }
+venues = [
+  { name = "binance", col = "perp", klines = "klines_1h", funding = "fundingRate" },
+  { name = "mexc", col = "mexc", klines = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding" },
+]
+horizons = [24, 72, 168]
+directions = ["short"]
+lines = ["net"]
+stops = [0.0, 0.1, 0.2, 0.35]
+costs = [0.004, 0.008, 0.012]
+min_clusters = 10
+reps = 2000
+seed = 274
+alpha = 0.05
+g3_min = 3
+null_for = "rc_pass"
+winsor = 0
+max_bar_jump = 20
+start = "2020-01-01"
+end = "2021-01-08"
+out = "/home/user/T/experiments/reserved_batch1/work/squeeze_v1/results"
+kinds = ["bn_neg0.3"]
+reserved_prereg = "/home/user/T/experiments/reserved_batch1/PREREG.md"

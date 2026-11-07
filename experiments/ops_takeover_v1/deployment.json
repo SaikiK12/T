@@ -1,0 +1,530 @@
+{
+  "all_project_lanes_running": false,
+  "aux_campaign": {
+    "charged_bytes": 6201163,
+    "closing_receipts": 50,
+    "pending_reservations": 0,
+    "request_reservations": 50,
+    "source_blocks": [
+      {
+        "event": "BLOCK",
+        "key": "defillama-datasets.llama.fi/emissionsIndex",
+        "reason": "response cap exceeded",
+        "utc_ns": 1794024512400222605
+      }
+    ]
+  },
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "final_state_commit": "686be7fb3982f4d4170bb970a212728cb1428540",
+  "kind": "post-activation operational source receipt; not an economic result",
+  "manifest_sha256": "ce4dc8b8158f466ca4dc789c5fc24c34fb70de70f01874ff9ad1a1d56dc16517",
+  "merge_pr": "https://github.com/SaikiK12/T/pull/81",
+  "native_R419_packet": {
+    "actual_fills": false,
+    "body_bytes": 993966,
+    "counts": {
+      "btc_cde_book": {
+        "ask_rows": 100,
+        "bid_rows": 100
+      },
+      "btc_cde_book_delayed": {
+        "ask_rows": 100,
+        "bid_rows": 100
+      },
+      "btc_cde_product": {
+        "funding_is_verified_settled_cash": false,
+        "funding_rate_present": true,
+        "funding_time_present": true,
+        "owner_access_verified": false
+      },
+      "btc_kraken_book": {
+        "ask_rows": 1661,
+        "bid_rows": 1423,
+        "identity_from_request": true
+      },
+      "btc_kraken_book_delayed": {
+        "ask_rows": 1659,
+        "bid_rows": 1425,
+        "identity_from_request": true
+      },
+      "btc_kraken_ticker": {
+        "absolute_rate_present": true,
+        "raw_rate_is_verified_settled_cash": false,
+        "relative_rate_present": true
+      },
+      "eth_cde_book": {
+        "ask_rows": 100,
+        "bid_rows": 100
+      },
+      "eth_cde_book_delayed": {
+        "ask_rows": 100,
+        "bid_rows": 100
+      },
+      "eth_cde_product": {
+        "funding_is_verified_settled_cash": false,
+        "funding_rate_present": true,
+        "funding_time_present": true,
+        "owner_access_verified": false
+      },
+      "eth_kraken_book": {
+        "ask_rows": 546,
+        "bid_rows": 590,
+        "identity_from_request": true
+      },
+      "eth_kraken_book_delayed": {
+        "ask_rows": 547,
+        "bid_rows": 590,
+        "identity_from_request": true
+      },
+      "eth_kraken_ticker": {
+        "absolute_rate_present": true,
+        "raw_rate_is_verified_settled_cash": false,
+        "relative_rate_present": true
+      },
+      "kraken_metadata": {
+        "instrument_rows": 219,
+        "named_pairs_present": 2
+      }
+    },
+    "funding_cash": null,
+    "hour": "20261107T04",
+    "kraken_metadata_packet": "20261107T04",
+    "pnl": null,
+    "provenance": {
+      "config_sha256": "34daca7b098822cca683d89cc2bfc89e4d35cb278193abae9492d673a4394e70",
+      "input_commit": "9edd1ef9be69000eac564a057726bcfd87424371",
+      "prereg_sha256": "8adce2d3ca9534c854ffa0cb805143f3460c2db03276e35ff8adabe7b1ddf14f"
+    },
+    "reobservation_delay_seconds": 3,
+    "requests": 13,
+    "state": "CAPTURED"
+  },
+  "native_R419_packet_path": "data/recorders/eea_pair_capture_v1/packets/20261107T04/packet.json",
+  "native_controller_report": {
+    "all_project_lanes_running": false,
+    "code_commit": "9edd1ef9be69000eac564a057726bcfd87424371",
+    "costs": {
+      "1x": "N/A",
+      "2x": "N/A",
+      "3x": "N/A"
+    },
+    "finished_utc": "2026-11-07T04:08:32.471661+00:00",
+    "health": [
+      {
+        "hours_old": 13.76,
+        "path": "experiments/paperacct_fwd/journal/status.json",
+        "rid": "R415",
+        "source_updated": "2026-11-06T14:23Z",
+        "status": "STALE_OR_CLOCK"
+      },
+      {
+        "hours_old": 13.56,
+        "path": "experiments/xbook_fwd/journal/status.json",
+        "rid": "R285",
+        "source_updated": "2026-11-06T14:35:10Z",
+        "status": "STALE_OR_CLOCK"
+      },
+      {
+        "hours_old": 26.39,
+        "path": "experiments/xfund_fwd/journal/status.json",
+        "rid": "R278",
+        "source_updated": "2026-11-06T01:45:16.934297+00:00",
+        "status": "STALE_OR_CLOCK"
+      },
+      {
+        "hours_old": 26.29,
+        "path": "experiments/xfund_kc_fwd/journal/status.json",
+        "rid": "R279",
+        "source_updated": "2026-11-06T01:51:18.164460+00:00",
+        "status": "STALE_OR_CLOCK"
+      },
+      {
+        "hours_old": 25.99,
+        "path": "experiments/xfund_bg_fwd/journal/status.json",
+        "rid": "R390",
+        "source_updated": "2026-11-06T02:09:01.468084+00:00",
+        "status": "STALE_OR_CLOCK"
+      },
+      {
+        "hours_old": 0.0,
+        "path": "experiments/boroslock_fwd/journal/status.json",
+        "rid": "R413",
+        "source_updated": "2026-11-07T04:08:21Z",
+        "status": "FRESH"
+      },
+      {
+        "hours_old": 0.0,
+        "path": "experiments/lockcarry_fwd2/journal/status.json",
+        "rid": "R406",
+        "source_updated": "2026-11-07T04:08:27Z",
+        "status": "FRESH"
+      }
+    ],
+    "hour": "20261107T04",
+    "inventory": [
+      {
+        "id": "R200",
+        "reason": "Historical flow/metrics datasets absent; no automatic archive backfill or late-to-on-time relabeling",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_TICKER",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "REC_FUNDING",
+        "reason": "Existing multi-venue collector includes the previously geo-blocked Binance futures source",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_DERIBIT",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "REC_CBOE",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "REC_LTRADES",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_OPTEXP",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_CPERPS",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_LIGHTER",
+        "reason": "Unqualified full-universe capture volume; recover/qualify before resuming",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_DEX",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_WALLETS",
+        "reason": "Not admitted to this bounded takeover; requires source/input qualification before activation",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_NOTICES",
+        "reason": "Existing collector uses a browser User-Agent; requires a separately frozen honest-transport successor",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_UNLOCKS",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "REC_TAPE",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_HFT",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_RAW",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_NEWS",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_LINDEX",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_HLLB",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R268",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R270",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R272",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R214",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R215",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R404",
+        "reason": "Full-universe cost recording and historical recovery need a separately qualified acquisition scope; native Nov18 read remains gated",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R406",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "R413",
+        "reason": null,
+        "state": "ADMITTED"
+      },
+      {
+        "id": "R224",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R218",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R220",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R221",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R225",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R266",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R278",
+        "reason": "Warm archive and registered carry state missing; Binance futures remains denied",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R279",
+        "reason": "Warm archives missing; Binance futures remains denied",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R294",
+        "reason": "Warm historical price/funding cache absent; no broad automatic backfill",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R390",
+        "reason": "Warm archives missing; Binance futures remains denied",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R355",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R364",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R369",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R371",
+        "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R285",
+        "reason": "Source family histories cannot be resumed completely from this checkout",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R415",
+        "reason": "Frozen account depends on fresh R285 inputs; current source snapshot is stale, no fabricated account day",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "LAG",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "PANEL",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "CATALOG",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "DASH",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "REC_DIGEST",
+        "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane",
+        "state": "BLOCKED"
+      },
+      {
+        "id": "R419",
+        "reason": null,
+        "state": "ADMITTED"
+      }
+    ],
+    "meaning": "Process results and receipt freshness only; no new profitability/gate verdict",
+    "predictive_trials": 0,
+    "prereg_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
+    "real_orders_allowed": false,
+    "run_id": "gha_42337055267_1",
+    "started_utc": "2026-11-07T04:08:09.470550+00:00",
+    "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
+    "tasks": [
+      {
+        "id": "R419",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:09.476109+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "R413",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:16.369730+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "R406",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:21.660495+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "REC_TICKER",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:27.701366+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "REC_DERIBIT",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:29.883255+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "REC_CBOE",
+        "returncode": 0,
+        "started_utc": "2026-11-07T04:08:31.213927+00:00",
+        "state": "PROCESS_OK"
+      },
+      {
+        "id": "REC_UNLOCKS",
+        "returncode": 42,
+        "started_utc": "2026-11-07T04:08:31.692627+00:00",
+        "state": "FAILED"
+      }
+    ]
+  },
+  "new_predictive_trials": 0,
+  "no_budget_reset": true,
+  "observed_utc": "2026-11-07T04:11:32Z",
+  "other_native_counts": {
+    "R406": "status updated; no new settlement",
+    "R413": "status updated; no new settlement",
+    "cboe": "outside recording windows; no snapshot",
+    "deribit_option_rows": 5376,
+    "mexc_ticker_rows": 1198
+  },
+  "pre_activation_ci": {
+    "conclusion": "success",
+    "url": "https://github.com/SaikiK12/T/actions/runs/42336050104"
+  },
+  "pre_activation_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
+  "prepared_checkpoint_commit": "ee1e2b988bbf6e8fd0ee04d2bf1cc68e16434b97",
+  "private_container_continuity_certified": false,
+  "source_code_commit": "9edd1ef9be69000eac564a057726bcfd87424371",
+  "state_branch": "codex/quant-runtime-state",
+  "verified_file_sha256": {
+    "data/operations/quant_takeover_v1/dispatch.jsonl": "f2536ddcb5248657ced0cdfa90b590e049c6cf731b5cc6513cfaee4e68abb9c7",
+    "data/operations/quant_takeover_v1/latest.json": "f5c00dec3bb499ee013279ee59c18e4f3f0eb7311a685d6f2afa74ad8151e1ce",
+    "data/operations/quant_takeover_v1/network/aux/requests.jsonl": "325cdd4635fc1139aeaff0a50a902d71f8c0808be2763569eb4fd28829834a7f",
+    "data/operations/quant_takeover_v1/runs/20261107T04/R406.log": "ff591701c8b4b121c2104b9cebd5cb842b940f77b3d7d220365a219b9c0d9217",
+    "data/operations/quant_takeover_v1/runs/20261107T04/R413.log": "59e0e78937787d364d990e5b304f6efe8dd8df57ea0571a19bed3f7f507de64b",
+    "data/operations/quant_takeover_v1/runs/20261107T04/R419.log": "2d807312c815eb6e06eacf251a84c15f3ab227604c8dabf044f434b106fb01aa",
+    "data/operations/quant_takeover_v1/runs/20261107T04/REC_CBOE.log": "1757d4045147a096da653bae70e98fbd8648cfab7537588125c7a732b6248800",
+    "data/operations/quant_takeover_v1/runs/20261107T04/REC_DERIBIT.log": "e5e0ffdd167dc3d359f4a971121f48585c71ca129cf3fe2277065469216fdcc5",
+    "data/operations/quant_takeover_v1/runs/20261107T04/REC_TICKER.log": "b92da60ae59674ccca2b591712d74fb0060e80054a8ed45fea85529edb738e9c",
+    "data/operations/quant_takeover_v1/runs/20261107T04/REC_UNLOCKS.log": "936ef034caf72d99fec86c2d6fa0fcdcf95b2ccbc02f541996edcb1f883c065c",
+    "data/operations/quant_takeover_v1/runs/20261107T04/report.json": "f5c00dec3bb499ee013279ee59c18e4f3f0eb7311a685d6f2afa74ad8151e1ce",
+    "data/operations/quant_takeover_v1/runs/20261107T04/reservation.json": "6614774f43554e3862f21d611750ce0b8e77f952c34961408c5f20e10ad4c354",
+    "data/recorders/deribit_chain/2026-11-07/04.parquet": "be4fa82e382ce4a54799dce7411434b99a03325dc5654c887352a626566da4d0",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_cde_book.body.gz": "ad701cff7c0c7d6fd52f9059e87fca25cce05e93cb7f199459ab0b7951c1f3a6",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_cde_book_delayed.body.gz": "dba15f8692e89c9a93578d96f0a30bd99a9c26137c4262903468100f7afc9638",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_cde_product.body.gz": "4a5051a6f4965a76fbcc8bb3397a7cd7acb22452507baff36b77710ef00a53a2",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_kraken_book.body.gz": "ff65d6876768437865feb4c563b9f404e247127c8da2eb72ab1f4002e8009c6d",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_kraken_book_delayed.body.gz": "bee97df5313a1de6da594d7de55d0ca0f7457d9d0eb7c5f505a327d33223036b",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/btc_kraken_ticker.body.gz": "58139d54f24d6327515b90b0c9e4c35266bd0a63842da94deba6d4d27d2b95ea",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_cde_book.body.gz": "d3349c58e894bba9a22a36b6ab6b8023d96db75864748e37cef6f5bd7f1086ad",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_cde_book_delayed.body.gz": "eeed6e4bbfe7aacd74a243c14ee8ba1dac7a583e7a65d469e598bac4560f5998",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_cde_product.body.gz": "08c5658e3a977c876b3b2adebc0cac3589a11ab91be9fe94e58fcd301ad7583d",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_kraken_book.body.gz": "797f96acb437c226efc55aae54d094751d5d3db517d17771bad129939239e0e7",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_kraken_book_delayed.body.gz": "fca78b64b940026e35d28f9265a2bc2e89aaa45e3604fb2c3814e09898981f2c",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/eth_kraken_ticker.body.gz": "d38b352a618168a4d438f18e610b8bbe67a29c80f9f720643e3d09f2d9043bfd",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/kraken_metadata.body.gz": "99bdf3f71186103e86897fede5c57063870c75af9687355fd6d1df5a50a4db38",
+    "data/recorders/eea_pair_capture_v1/packets/20261107T04/packet.json": "e616d8ad0164d1eb6a406bd66350126ab5dd242642d9b2994f36f3878e0b953d",
+    "data/recorders/eea_pair_capture_v1/requests.jsonl": "9b10a4d2c88c1dfbc5156eb58f0fa4352ab1327a44da9414acd2025eb26bb07d",
+    "data/recorders/mexc_ticker/2026-11-07/04.parquet": "fc49f887e6d4a1c9caf2511add66f63ec638a351e1ab3f5fc6b2f4c65a0381e8",
+    "experiments/boroslock_fwd/journal/locks.csv": "0d1cce2355a30a25bac46d48a312c2eb0439f09841f15253a585142b0ce0b7d0",
+    "experiments/boroslock_fwd/journal/offers.csv": "b13d4a13ee59d05f222fdc454794403cf681e96e35185d3b13520ab18a44e0f8",
+    "experiments/boroslock_fwd/journal/status.json": "0de5d7a76324b8c408ccc52d0e80d75be4bdcf1c51635afb4db259dd74c2734a",
+    "experiments/boroslock_fwd/journal/tbill.csv": "32c70a4146f2efea9a1027cb5608b91b5144eacd664973ee9d4fdbb680565a0a",
+    "experiments/lockcarry_fwd2/journal/locks.csv": "279902a7ccf19cf25152dbb7de37bcc52d4396679ff8d7ba242837d2a0a6ba4e",
+    "experiments/lockcarry_fwd2/journal/offers.csv": "8d82941f5ffd71564c81f6c053839f3200caa93e4949d6187472dec7b6d222da",
+    "experiments/lockcarry_fwd2/journal/status.json": "39bce7c8f9f398f1f63107feba705a450476153beb5ac82d9ee5a7425fca778f",
+    "experiments/lockcarry_fwd2/journal/tbill.csv": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
+  },
+  "workflow": {
+    "conclusion": "success",
+    "run_id": "gha_42337055267_1",
+    "url": "https://github.com/SaikiK12/T/actions/runs/42337055267"
+  }
+}

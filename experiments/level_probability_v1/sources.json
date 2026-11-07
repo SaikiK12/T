@@ -1,0 +1,627 @@
+{
+  "calibration_source": {
+    "body_bytes": 72417,
+    "complete": true,
+    "date": "Mon, 26 Oct 2026 12:42:22 GMT",
+    "documented_drift": "Usage paragraph names two methods while temperature subsection documents a third; liveHTMLversion/hash retained, no installedsklearn capability asserted.",
+    "elapsed_seconds": 0.8062905360129662,
+    "last_modified": "Mon, 26 Oct 2026 09:26:41 GMT",
+    "max_attempts": 1,
+    "max_body_bytes": 786432,
+    "max_duration_seconds": 20,
+    "mechanics": [
+      {
+        "id": "proper-brier",
+        "rule": "Multiclass sum squared probability errors; mixes reliability,resolution and target uncertainty. Lowerloss alone is not calibration."
+      },
+      {
+        "id": "proper-log-loss",
+        "rule": "Negative log probability of observedclass; separate calibration/discrimination not automatically identified."
+      },
+      {
+        "id": "reliability",
+        "rule": "Bin probabilities and compare meanpredicted vs actualfrequency, retain counts/emptybins; no dependent-sample confidence guarantee."
+      },
+      {
+        "id": "sigmoid",
+        "rule": "Fit Platt logistic mapA/B on independent calibrationpredictions; assumptions canfail for asymmetric/imbalancedclasserrors."
+      },
+      {
+        "id": "isotonic",
+        "rule": "Fit monotone step function with squaredloss; flexible but smallsample overfit and introducedrankties."
+      },
+      {
+        "id": "temperature",
+        "rule": "Optimize one logittemperature via calibrationcrossentropy; multiclasssoftmax, argmaxunchanged. Not adopted/tested."
+      },
+      {
+        "id": "ensemble-cv",
+        "rule": "Trainclassifier/calibrator perheld-outfold and averagepredictions; eachclassmustoccur in eachfold. DefaultnoncausalCV not appropriate for ourtime-series."
+      },
+      {
+        "id": "pooled-outfold",
+        "rule": "One calibrator on out-of-foldpredictions, thenonebaseclassifierfitalltraining; lowercompute. Temporalpurging wouldbe required."
+      },
+      {
+        "id": "frozen-base",
+        "rule": "Calibrate alreadyfitted classifier on disjointdata; callerresponsible fordisjointness."
+      },
+      {
+        "id": "multiclass-ovr",
+        "rule": "Separatebinarysigmoid/isotonic perclass and normalize theirprobabilities; notjointtemperature."
+      },
+      {
+        "id": "example-classifiers",
+        "rule": "LogisticRegression conditionalwell-specification, GaussianNB redundantfeatureextremes, RandomForest averagingbias and LinearSVC margins discussed; linkedexamplecode notread/tested."
+      }
+    ],
+    "read_scope": "Entire main probability-calibration guide sections1.16.1–1.16.3.4 read; example classifier discussion and references enumerated. Embedded linked example CODE/references/papers/API implementation NOT read or executed. Full HTML received; templates/scripts not audited. No copyright mirror.",
+    "sha256": "00860ac6c19e425758b76adf27721d343ad3d5cbc72f865da7a9fe1aa32b9864",
+    "started_utc": "2026-10-26T12:42:21.392261+00:00",
+    "status": 200,
+    "url": "https://scikit-learn.org/stable/modules/calibration.html"
+  },
+  "new_market_requests": 0,
+  "new_source_attempts": 4,
+  "new_source_body_bytes": 728693,
+  "old_historical_allowance": {
+    "exact_remaining_bytes": null,
+    "mib_cap": 250,
+    "reported_mib_spent": "229.85",
+    "requests_cap": 8000,
+    "requests_spent": 7757,
+    "reset": false
+  },
+  "owner_scope": {
+    "canonical_method": "M412",
+    "distinct_scopes": [
+      "Causal support continuation probability",
+      "Causal resistance continuation probability",
+      "Opposite rebound probability",
+      "Confidence/reliability must be empiricallychecked",
+      "Cost/payoff-aware abstention proposal",
+      "Public institutional researchprocess as inspiration, notprivate strategy access"
+    ],
+    "new_alias": "OWN26-LEVEL-PROBABILITY",
+    "received_utc_date": "2026-10-26",
+    "related_not_exact": [
+      "M044 flowmeta-label",
+      "M203 pivots/fractals",
+      "M323 MSNR NULL",
+      "M115 indicators"
+    ]
+  },
+  "reused_institutional_scope": "Prior canonical IG26 Citadel EQR/JaneStreet process extracts reused. No new acquisition/privateknowledge claim; earlier inaccessible interview/audio remain unread.",
+  "scope": "R329 completed bounded venue-contract extraction plus R330 owner conditional-level hypothesis/probability diagnostics. No private institutional strategy or full-book replication.",
+  "venue_contract": {
+    "acquisition": {
+      "account_requests": 0,
+      "actual_body_bytes": 656276,
+      "actual_gets": 3,
+      "all_http_200": true,
+      "complete_receipts": true,
+      "declared_get_cap": 3,
+      "declared_scope": "R329/venue-source/one-pass",
+      "historical_budget_reset": false,
+      "market_requests": 0,
+      "reviewer_additional_gets": 0,
+      "web_searches": 0
+    },
+    "actual_order_allowed": false,
+    "canonical_method": "M244",
+    "enumerated_mechanisms": 42,
+    "existing_alias": "YT26-04-DATED-CASH-CARRY",
+    "limitations": [
+      "No new source acquisition by reviewer;3previously collectedGETs exhaust declaredR329static scope; no redirects/retries/search/market/history/account/chainRPC.",
+      "No current kind=spot instrument metadata or order-book message acquired; routing/lot/state/effective-time validation remains open.",
+      "No owner account eligibility,VIP tier,custody/margin mode,settled balance or fill evidence inspected.",
+      "Actual spot fee debit asset/rounding and deployed inverse payoff/coinfee serialization remain unverified; cached fee schedule is conditional.",
+      "USDC/USD conversion and future executable spot exit,deliveryTWAP,inventory residual,margin/haircuts,insurance/socializedloss and counterparty risk remain unresolved.",
+      "Direct Coinbase source targets,linked transfer/collateral/account/order-limit/error-code/margin pages were not followed.",
+      "No same-venue portfolio implemented,frozen or market-tested inR329; no complete M244 strategy/roll/history result,expectedreturn or prospective strategy evidence."
+    ],
+    "new_sources": [
+      {
+        "access": "ordinary public static GET; no login/subscription/private/account/market/history/chainRPC",
+        "body_bytes": 489516,
+        "complete": true,
+        "content_type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 10:04:47 GMT",
+        "elapsed_seconds": 0.5811919209954794,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "venues",
+        "read_scope": "Entire main guide, including route identification, JSON-RPC/FIX feature matrices, all errors, asynchronous fills, public data omissions/rejections and direct-source alternatives. Navigation/templates and linked target pages unread.",
+        "sha256": "acb7ba2b8bccddd1b2a406c75083a3494bebad3dc51c36b7f27611da66c382f5",
+        "start_utc": "2026-10-26T10:04:46.559068+00:00",
+        "status": 200,
+        "text_sha256": "3e681a10d074871d561a2489a02a0becfd63d0b6fdf611982cea1b66e86b8d9e",
+        "url": "https://docs.deribit.com/articles/spot-trading-venues"
+      },
+      {
+        "access": "ordinary public static GET; no login/subscription/private/account/market/history/chainRPC",
+        "body_bytes": 79062,
+        "complete": true,
+        "content_type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 10:05:02 GMT",
+        "elapsed_seconds": 0.7905778999847826,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "routing_background",
+        "read_scope": "Entire main release: outage and removed risk fields plus route/order/fill/market/FIX details. Navigation/templates and linked target pages unread.",
+        "sha256": "6cad18456ed0c3cfda792dc030ab44e522d22804cbd3eb194f4c8bf841685f77",
+        "start_utc": "2026-10-26T10:05:02.142186+00:00",
+        "status": 200,
+        "text_sha256": "565e3a9db3bf7a342a553ad1373b41c784324f4e5546864431abed97b5767f3e",
+        "url": "https://support.deribit.com/hc/en-us/articles/38375233938205-18-August-2026"
+      },
+      {
+        "access": "ordinary public static GET; no login/subscription/private/account/market/history/chainRPC",
+        "body_bytes": 87698,
+        "complete": true,
+        "content_type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 10:05:19 GMT",
+        "elapsed_seconds": 1.0017202000017278,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "spot_contract",
+        "read_scope": "Entire main article, including settlement/collateral/custody discussion,48wallet rows and56pair table rows scanned; only fixedBTC/ETH_USDC specs extracted. Navigation/templates and linked target pages unread.",
+        "sha256": "15de06b25f8a28e595689ddf349097f91332af612a7914ba2c52c5bce17d9d8b",
+        "start_utc": "2026-10-26T10:05:18.659011+00:00",
+        "status": 200,
+        "text_sha256": "53f66acbe12481ae9a1f4ae65ae88d9cb857b24b0a95af2abe9b3c60ee93729a",
+        "url": "https://support.deribit.com/hc/en-us/articles/31424969480093-Spot-Instruments"
+      }
+    ],
+    "new_strategy_or_alias_records": 0,
+    "predictive_trials": 0,
+    "profitability_validated": false,
+    "prospective_days": 0,
+    "records": [
+      {
+        "id": "R329-S01",
+        "implementation_or_data_requirement": "Venue identity must be separate from API host identity.",
+        "kind": "mechanical contract",
+        "received_rule": "Spot matches on native Deribit or is routed to Coinbase Exchange; APIs, sessions, names and order/trade object shapes remain shared.",
+        "section": "Opening",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S02",
+        "implementation_or_data_requirement": "Require kind=spot before applying route interpretation; never apply spot fee/data rules to futures.",
+        "kind": "mechanical contract",
+        "received_rule": "Routing concerns spot only; derivatives in the same currencies are unaffected.",
+        "section": "Opening",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S03",
+        "implementation_or_data_requirement": "Read current method-supported metadata with exact kind. Omission is informative only under this typed/source-version contract; false/contradictory fields need failure handling.",
+        "kind": "mechanical contract",
+        "received_rule": "public/get_instrument(s) returns is_cbe_routed=true and is_csr=true only for routed spot; native spot and other kinds omit both.",
+        "section": "Telling the two apart",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S04",
+        "implementation_or_data_requirement": "Do not hardcode pair route indefinitely; retain source and effective observation identity.",
+        "kind": "mechanical contract",
+        "received_rule": "Route selection is configuration that can change.",
+        "section": "Telling the two apart",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S05",
+        "implementation_or_data_requirement": "Do not demand both flags on a notification or infer native from FIX absence; obtain route identity using the documented JSON-RPC surface.",
+        "kind": "mechanical contract",
+        "received_rule": "Instrument creation/state notifications carry is_csr only; JSON-RPC instrument queries add the alias. FIX reference data lacks a routing flag.",
+        "section": "Telling the two apart",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S06",
+        "implementation_or_data_requirement": "Omitted block fields are unavailability, not zero fee or zero minimum.",
+        "kind": "mechanical contract",
+        "received_rule": "Routed spot omits block_trade_commission, block_trade_tick_size and block_trade_min_trade_amount.",
+        "section": "Telling the two apart",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S07",
+        "implementation_or_data_requirement": "Retain this source conflict; treat example as illustrative, not pair-level market evidence. No live metadata was acquired.",
+        "kind": "source inconsistency",
+        "received_rule": "Guide example names USDC_USDT with route flags true; formal table calls USDC_USDT native and USDT_USDC routed.",
+        "section": "Example versus formal Spot Instruments table",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S08",
+        "implementation_or_data_requirement": "Version pair rules; preserve migration unavailability/cancellation rather than bridging old and new books as one uninterrupted series.",
+        "kind": "mechanical contract",
+        "received_rule": "Migration to routing changes applicable tick/base/minimum specifications; a switching market is paused and outstanding orders cancelled.",
+        "section": "Spot order routing",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S09",
+        "implementation_or_data_requirement": "No symbol reversal or USDT substitution to obtain lower fees. Account eligibility is unknown without owner-provided proof; no login was accessed.",
+        "kind": "mechanical contract",
+        "received_rule": "USDC_USDT is native; USDT_USDC routed. Client custody/access differs and only the account-permitted book is displayed after login.",
+        "section": "Two USDT books",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S10",
+        "implementation_or_data_requirement": "Public visibility is not owner permission, nor proof of native matching.",
+        "kind": "mechanical contract",
+        "received_rule": "Public pre-login display follows native-account visibility and can differ from post-login entitlement; BTC_USDC can appear publicly as routed.",
+        "section": "Instruments shown before you log in",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S11",
+        "implementation_or_data_requirement": "Pair facts support source contract only; validate current API metadata and quantity rules before using live prices. Do not mirror the complete table or classify all rows as tested strategies.",
+        "kind": "mechanical contract",
+        "received_rule": "Received table has56pair rows:44routed/12native. Fixed BTC_USDC and ETH_USDC are routed, base BTC/ETH and quote USDC; each listed minimum is1e-8base and tick0.01USDC.",
+        "section": "Spot instruments specification table",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S12",
+        "implementation_or_data_requirement": "Wallet support does not prove which owner wallet/margin mode is available or that collateral haircuts/transfers are absent.",
+        "kind": "mechanical contract",
+        "received_rule": "Received table has48assets:36CBBM-only,8both,4native-only. BTC,ETH,USDC support both wallet families.",
+        "section": "Supported wallets",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S13",
+        "implementation_or_data_requirement": "Avoid fictitious external per-trade coin transfer; retain account/margin/currency collateral restrictions and do not count the same inventory twice.",
+        "kind": "mechanical contract",
+        "received_rule": "Purchased spot assets may serve as collateral within Deribit.",
+        "section": "Spot order routing",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S14",
+        "implementation_or_data_requirement": "Separate equity/collateral from settled spendable spot cash; do not spend unrealized derivative gains as immediately available spot proceeds.",
+        "kind": "mechanical contract",
+        "received_rule": "Only settled funds can fund spot trades; unsettled funds become available following daily08UTCsettlement.",
+        "section": "Settlements",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S15",
+        "implementation_or_data_requirement": "Maintain cash-and-inventory ledger in actual currencies, no fictitious USD principal or derivative-position object for spot.",
+        "kind": "mechanical contract",
+        "received_rule": "Spot settles immediately and is held as balances, not derivative positions; buying base spends quote and selling base receives quote.",
+        "section": "Spot instruments specification",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S16",
+        "implementation_or_data_requirement": "Reserve quote for buys and base for sells; account limit/cancellation behavior must be separately verified.",
+        "kind": "mechanical contract",
+        "received_rule": "Outstanding spot buy/sell orders count against the currency being spent.",
+        "section": "Spot instruments specification",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S17",
+        "implementation_or_data_requirement": "No borrowing or guaranteed fill inferred. Session/state/band limits remain independently observed inputs; derivative collateral margin still applies.",
+        "kind": "mechanical contract",
+        "received_rule": "Spot is24/7 and requires the full amount to be available; table says no spot maintenance margin. Trading bandwidths use risk-management matrix.",
+        "section": "Specification paragraph",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S18",
+        "implementation_or_data_requirement": "Joint cash/risk state must include reservations and derivative margin. Source is no executable liquidation-price guarantee.",
+        "kind": "mechanical contract",
+        "received_rule": "Outstanding spot orders reserve balances. A derivative-margin liquidation attempts to cancel relevant reserving spot orders before regular liquidation.",
+        "section": "Spot reserve",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S19",
+        "implementation_or_data_requirement": "Use spot balances and compatible orders; do not send derivative risk flags or assume those flags enforce a spot hedge.",
+        "kind": "mechanical contract",
+        "received_rule": "good_til_day is rejected for all spot; reduce_only and mmp unsupported, mass quotes derivatives-only; get_positions(kind=spot) rejected.",
+        "section": "What applies to every spot instrument",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S20",
+        "implementation_or_data_requirement": "Weak native conditional-order alternative is retained, but cannot be substituted onto the fixed routed USDC pairs.",
+        "kind": "weak executable alternative / contract",
+        "received_rule": "Routed spot supports limit,market,stop_limit only; native spot also permits market_limit,stop_market,take_limit,take_market,trailing_stop.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S21",
+        "implementation_or_data_requirement": "Validate type-specific TIF rather than reusing a derivatives/default market order form.",
+        "kind": "mechanical contract",
+        "received_rule": "Limit TIFs GTC,IOC,FOK are accepted on both; market orders native omit/GTC, routed omit/IOC.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S22",
+        "implementation_or_data_requirement": "Maker alternative needs explicit reject handling, uncertain queue/fills and hedge risk. A limit price alone is not maker execution.",
+        "kind": "weak maker alternative / contract",
+        "received_rule": "Native post-only adjusts an immediately crossing price by a tick unless reject_post_only is set. Routed post-only requires reject_post_only=true and never adjusts price.",
+        "section": "Post-only",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S23",
+        "implementation_or_data_requirement": "Do not model hidden displayed-size advantages for routed pairs; preserve rejection.",
+        "kind": "mechanical contract",
+        "received_rule": "Native supports iceberg; routed does not.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S24",
+        "implementation_or_data_requirement": "Forecast/margin/index references are not automatically supported execution triggers.",
+        "kind": "mechanical contract",
+        "received_rule": "Native stop triggers may use last,mark,index; routed stop-limit allows last_price only.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S25",
+        "implementation_or_data_requirement": "No atomic bracket or cross-leg protection assumed for fixed routed pairs; no RFQ fee/fill benefit inherited.",
+        "kind": "mechanical contract",
+        "received_rule": "Linked OTO,OCO,OTOCO and block trades/BlockRFQ supported natively but unavailable routed.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S26",
+        "implementation_or_data_requirement": "Cancellation acknowledgments do not erase previously executed inventory or certify zero race exposure.",
+        "kind": "mechanical contract",
+        "received_rule": "Cancellation methods work for routed orders including untriggered stop-limit.",
+        "section": "Order entry JSON-RPC",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S27",
+        "implementation_or_data_requirement": "No FIX capability shortcut around JSON-RPC restrictions. FIX was documented, not connected or run.",
+        "kind": "mechanical contract",
+        "received_rule": "FIX offers equivalent routed restrictions:OrdType1/2/4;TIF1/3/4;ExecInst6Aonly;noDisplayQty;trigger2=trade.",
+        "section": "FIX order entry",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S28",
+        "implementation_or_data_requirement": "Normalize documented aliases, preserve exact rejection and partial hedge state; do not classify reject as fill or economic zero.",
+        "kind": "mechanical contract",
+        "received_rule": "11030other_reject may carry Coinbase price-band/funding failure;11054post_only_reject,11055post_only_not_allowed,11059iceberg_not_allowed,11060unsupported,13922linked unsupported. Legacy11060message not_supported_for_csr_spot is equivalent. General spot invalid params use-32602.",
+        "section": "Errors and rejections",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S29",
+        "implementation_or_data_requirement": "Acknowledgement is not execution. A paper bridge requires fill evidence/dedup/order life cycle before crediting inventory.",
+        "kind": "mechanical contract",
+        "received_rule": "Routed order acknowledgement follows Coinbase acceptance but can contain no fills; subsequent user-order/trade events or FIX reports carry execution.",
+        "section": "Errors and rejections",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S30",
+        "implementation_or_data_requirement": "Do not estimate participation, trade flow or volume profile from nonexistent Deribit routed tape.",
+        "kind": "mechanical contract",
+        "received_rule": "Deribit sees routed matches only when its own orders participate; it rejects public trade-derived outputs instead of publishing a partial tape.",
+        "section": "Market data",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S31",
+        "implementation_or_data_requirement": "Specify kind and preserve failed source scope; no fallback from derivatives tape to spot history.",
+        "kind": "mechanical contract",
+        "received_rule": "Routed public get_last_trades variants and get_tradingview_chart_data reject11060. Currency-wide kind=spot or any can fail when a routed pair uses the currency as base or quote; any is default. Derivative kind remains available.",
+        "section": "Methods that return an error",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S32",
+        "implementation_or_data_requirement": "Use exact channel error semantics; no hidden bulk/default subscription retry loop.",
+        "kind": "mechanical contract",
+        "received_rule": "Instrument/currency trades and chart.trades channels reject as invalid channels rather than11060. currency=any also rejects when any routed spot pair exists.",
+        "section": "Subscriptions that are rejected",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S33",
+        "implementation_or_data_requirement": "Current executable-depth collection is feasible in principle; clock/freshness, quantity units, updates, request limits and account executability still need validation.",
+        "kind": "mechanical contract",
+        "received_rule": "Book methods and book/quote/ticker channels remain available and derive from the full Coinbase L2 book.",
+        "section": "Market data",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S34",
+        "implementation_or_data_requirement": "A book-only FIX feed cannot establish public routed trade flow or fill priority.",
+        "kind": "mechanical contract",
+        "received_rule": "Trade MDEntryType2 is rejected but bid0/offer1 remain; W/X refreshes omit trades, security list/status remain supported.",
+        "section": "FIX market data",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S35",
+        "implementation_or_data_requirement": "Missing field is unknown/unavailable, not zero; maintain base/quote units and avoid ranking against incompatible volume fields.",
+        "kind": "mechanical contract",
+        "received_rule": "Routed ticker stats omit volume_notional and volume_usd but return base volume. Trade-volume responses omit spot_volume and extended7d/30dspot fields, while futures/options remain unaffected.",
+        "section": "Responses that omit fields",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S36",
+        "implementation_or_data_requirement": "Links received but target docs/feed/history not read/acquired. Any future acquisition needs its own finite scope and clock/symbol/route reconciliation.",
+        "kind": "weak alternative data source",
+        "received_rule": "Direct Coinbase trades,candles,product volume,matchesWS,FIX are listed as alternative sources.",
+        "section": "Getting routed data from Coinbase",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S37",
+        "implementation_or_data_requirement": "For fixedBTC_USDC/ETH_USDC the native0fee alternative is inapplicable. Zerocharge can only be a clearly labeled counterfactual floor.",
+        "kind": "weak native-zero-fee alternative / contract",
+        "received_rule": "Native spot maker/taker fees are zero; routed spot follows tier-based Spot column, applying once a pair switches route.",
+        "section": "Spot fees",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S38",
+        "implementation_or_data_requirement": "Use source rates as conditional scenarios, not actual ownerfee entitlement. Actual fee debit asset/serialization and tier/access remain unverified. No new fee-page fetch or whole-table extraction counted.",
+        "kind": "mechanical contract",
+        "received_rule": "Public Standard routed spot maker2bp/taker5bp; inverse futures taker3.5bp and dated delivery2.5bp already recorded underR327. VIP routes depend on equity/volume/account terms.",
+        "section": "Previously read public Standard/VIP fee table",
+        "source": "R327_cached_fees",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S39",
+        "implementation_or_data_requirement": "Do not derive a lot from contract_size or decimal precision alone; current kind/units/grid needed. Reused previously read API source, not newR329acquisition.",
+        "kind": "mechanical contract",
+        "received_rule": "min_trade_amount is minimum AND amount increment; contract_size converts amount/contracts and is not quantity step. Spot contract_size is basecoin.",
+        "section": "Previously read min_trade_amount and contract_size fields",
+        "source": "R327_cached_instrument",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S40",
+        "implementation_or_data_requirement": "Historical release is not current live downtime, route effective-time proof or a fresh observation; current spot article updatedSep28 differs in vintage.",
+        "kind": "mechanical contract",
+        "received_rule": "Dated release reports an expected15–30min outage, routing introduction/restrictions and asynchronous fills; article visible updateSep15.",
+        "section": "18August2026release",
+        "source": "routing_background",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S41",
+        "implementation_or_data_requirement": "Do not treat removed or null estimated fields as usable account risk evidence. Unrelated full account schema/margin policy remains unread.",
+        "kind": "mechanical contract",
+        "received_rule": "Release removes estimated_liquidation_ratio(_map) from segregated_sm account/portfolio surfaces; estimated_liquidation_price remains null on named position surfaces.",
+        "section": "Estimated liquidation fields removal",
+        "source": "routing_background",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S42",
+        "implementation_or_data_requirement": "Retain scope distinction: general endpoint reuse is not universal historical-tape availability for routed spot.",
+        "kind": "source scope qualification",
+        "received_rule": "Formal article broadly says spot uses same APIs including historical/FIX; detailed routing guide excludes routed trade-derived history.",
+        "section": "API usage versus route-specific guide",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      }
+    ],
+    "reused_sources": [
+      {
+        "access": "Ordinary public static page, no login or subscription bypass; copyright retained by source, raw HTML ignored and not mirrored in tracked repository.",
+        "body_bytes": 92238,
+        "complete": true,
+        "content_type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 08:32:58 GMT",
+        "elapsed_seconds": 0.5062659200048074,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "fees",
+        "read_scope": "All main article fee mechanisms read, including complete current tier table and conditions, combo, collateral, delivery, liquidation, transfer, balance and precedence rules. No linked private account methods, order attributes, collateral implementation, routed-pair list or account-specific proof read.",
+        "received_scope": "Full HTML received; no account data or private method called.",
+        "reused_not_new_reading": true,
+        "sha256": "bb9fbdd8be93e2e690156dd038d94348f2a3640013a600f42817f8334876b9c6",
+        "source_visible_updated_utc_or_unspecified_timezone": "2026-10-22 12:43",
+        "start_utc": "2026-10-26T08:32:58.170786+00:00",
+        "status": 200,
+        "url": "https://support.deribit.com/hc/en-us/articles/25944746248989-Fees"
+      },
+      {
+        "access": "Ordinary public static page, no login/bypass/account/market/RPC request; raw material ignored only.",
+        "body_bytes": 649411,
+        "complete": true,
+        "content_type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 08:36:22 GMT",
+        "elapsed_seconds": 0.6982278020004742,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "instrument",
+        "read_scope": "All instrument query/response field descriptions and lifecycle states read, with introductory distinctions and one example. Repeated language wrappers, embedded schema/scripts and unrelated navigation not audited.",
+        "received_scope": "Complete HTML649411bytes; exampleoptionnotmarketinput.",
+        "reused_not_new_reading": true,
+        "sha256": "1a23db884dfc2ef1a0c11e24264b19bbe1fd403f0b47b443a27223dd0dd7e406",
+        "source_visible_updated_utc_or_unspecified_timezone": null,
+        "start_utc": "2026-10-26T08:36:21.887011+00:00",
+        "status": 200,
+        "url": "https://docs.deribit.com/api-reference/market-data/public-get_instrument"
+      }
+    ],
+    "scope": "R329/source-only completion, no-network reviewer",
+    "source_conflicts": [
+      {
+        "id": "R329-S07",
+        "implementation_or_data_requirement": "Retain this source conflict; treat example as illustrative, not pair-level market evidence. No live metadata was acquired.",
+        "kind": "source inconsistency",
+        "received_rule": "Guide example names USDC_USDT with route flags true; formal table calls USDC_USDT native and USDT_USDC routed.",
+        "section": "Example versus formal Spot Instruments table",
+        "source": "venues",
+        "source_strategy_outcome_tested": false
+      },
+      {
+        "id": "R329-S42",
+        "implementation_or_data_requirement": "Retain scope distinction: general endpoint reuse is not universal historical-tape availability for routed spot.",
+        "kind": "source scope qualification",
+        "received_rule": "Formal article broadly says spot uses same APIs including historical/FIX; detailed routing guide excludes routed trade-derived history.",
+        "section": "API usage versus route-specific guide",
+        "source": "spot_contract",
+        "source_strategy_outcome_tested": false
+      }
+    ]
+  }
+}

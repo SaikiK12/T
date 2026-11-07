@@ -82,6 +82,32 @@ class GateTests(unittest.TestCase):
         self.assertTrue(out["pass"])
         self.assertEqual(out["n_clusters"], 2)
 
+    def test_infinite_return_blocks_pass_without_poisoning_summary(self):
+        out = gate.go_real([0.05] * 20 + [float("inf")])
+        self.assertEqual(out["n"], 20)
+        self.assertEqual(out["invalid_n"], 1)
+        self.assertFalse(out["checks"]["finite_returns"])
+        self.assertFalse(out["pass"])
+        self.assertAlmostEqual(out["mean"], 0.05)
+
+    def test_missing_return_does_not_create_a_false_entry_day_cluster(self):
+        out = gate.go_real([0.05] * 20 + [float("nan")], entry_days=["2026-10-13"] * 20 + [None])
+        self.assertTrue(out["pass"])
+        self.assertEqual(out["n"], 20)
+        self.assertEqual(out["n_clusters"], 1)
+
+    def test_entry_days_must_align_to_original_returns(self):
+        with self.assertRaisesRegex(ValueError, "align"):
+            gate.go_real([0.05] * 20 + [float("nan")], entry_days=["2026-10-13"] * 20)
+
+    def test_entry_day_is_required_only_for_a_scored_return(self):
+        with self.assertRaisesRegex(ValueError, "missing"):
+            gate.go_real([0.05] * 20, entry_days=["2026-10-13"] * 19 + [None])
+
+    def test_non_vector_returns_fail_closed(self):
+        with self.assertRaisesRegex(ValueError, "one-dimensional"):
+            gate.go_real([[0.05] * 20])
+
 
 class PreregTests(unittest.TestCase):
     def test_freeze_verify_and_tamper(self):
@@ -104,14 +130,18 @@ class RegistryTests(unittest.TestCase):
     def test_seed_file_is_valid(self):
         path = ROOT / "registry" / "rounds.csv"
         registry.validate(path)
-        self.assertEqual(registry.program_trials(path), 139377)
+        seed = [r for r in registry.rows(path) if int(r["id"][1:]) <= 183]   # rows imported from the original project
+        self.assertEqual(sum(int(r["trials"]) for r in seed if r["trials"]), 139377)
+        self.assertGreaterEqual(registry.program_trials(path), 139377)       # the journal only grows
         self.assertNotIn(b"\r", path.read_bytes())
 
     def test_ids_continue_and_never_repeat(self):
         with tempfile.TemporaryDirectory() as d:
             path = Path(d) / "rounds.csv"
             registry.append(path, id="R183", lane="a", title="t", status="DONE", verdict="NULL")
-            self.assertEqual(registry.append(path, lane="b", title="t", status="PLANNED", verdict="PENDING"), "R184")
+            self.assertEqual(registry.append(path, lane="b", title="t", status="PLANNED", verdict="PENDING",
+                                             path="experiments/b"), "R184")
+            self.assertEqual(registry.rows(path)[-1]["path"], "experiments/b")
             with self.assertRaises(registry.RegistryError):
                 registry.append(path, id="R184", lane="c", title="t", status="DONE", verdict="NULL")
             with self.assertRaises(registry.RegistryError):

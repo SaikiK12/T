@@ -1,0 +1,19 @@
+{
+  "url": "https://api.exchange.fairx.net/rest/instruments",
+  "method": "POST",
+  "request_body": {
+    "product_codes": [
+      "BIP",
+      "ETP"
+    ]
+  },
+  "operation": "Get Instrument Details, read-only; primary OpenAPI security=[]",
+  "started_utc": "2026-11-06T19:00:49.793912+00:00",
+  "max_response_bytes": 250000,
+  "no_authentication": true,
+  "request_ua": "Python urllib default",
+  "redirects": false,
+  "status": 401,
+  "error": "HTTPError",
+  "received_utc": "2026-11-06T19:00:50.449171+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "scope": "Existing-source schema/identity counts only. Asynchronous qualification bodies, not a forward capture or trading statistic.",
+  "capture_campaign_started": false,
+  "rows": [
+    {
+      "name": "kraken_metadata",
+      "source": "research/intake/funding_notional_20261103/kraken_eea_20261106/kraken_instruments.json.gz",
+      "sha256": "bafd062ae93a8d054c3df5c147bee287885277d834b45afbdb9570edf5f2ec15",
+      "counts": {
+        "instrument_rows": 219,
+        "named_pairs_present": 2
+      }
+    },
+    {
+      "name": "btc_cde_product",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/btc_product.json.gz",
+      "sha256": "67465fb6f0a4fa0de17093990ab7d5d0889a2cbf3ffd7eb2c9f0a1957b94da18",
+      "counts": {
+        "funding_rate_present": true,
+        "funding_time_present": true,
+        "funding_is_verified_settled_cash": false,
+        "owner_access_verified": false
+      }
+    },
+    {
+      "name": "btc_cde_book",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/btc_book.json.gz",
+      "sha256": "ecb046c1a7aa188a0513fe46e10dbdf53246ff51a8a403c1811e161f3654621e",
+      "counts": {
+        "bid_rows": 100,
+        "ask_rows": 100
+      }
+    },
+    {
+      "name": "btc_kraken_ticker",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/btc_kraken_ticker.json.gz",
+      "sha256": "233a01ec458dddaed41c44af6e5c163011d4a5a379e86e5d0366db90c40d702f",
+      "counts": {
+        "absolute_rate_present": true,
+        "relative_rate_present": true,
+        "raw_rate_is_verified_settled_cash": false
+      }
+    },
+    {
+      "name": "btc_kraken_book",
+      "source": "research/intake/funding_notional_20261103/kraken_eea_20261106/kraken_xbt_perp_depth.json.gz",
+      "sha256": "83cdd1cb1fc327a70dea8f35551c83ce12a737f66cefb546fe902af9f9532c2e",
+      "counts": {
+        "bid_rows": 1433,
+        "ask_rows": 1662,
+        "identity_from_request": true
+      }
+    },
+    {
+      "name": "eth_cde_product",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/eth_product.json.gz",
+      "sha256": "a8f14aeb096ce5030ae7d81736fdd071aade712cecbc940ddc9febf8c2cf6727",
+      "counts": {
+        "funding_rate_present": true,
+        "funding_time_present": true,
+        "funding_is_verified_settled_cash": false,
+        "owner_access_verified": false
+      }
+    },
+    {
+      "name": "eth_cde_book",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/eth_book.json.gz",
+      "sha256": "12315f2561de218df8fc72ef1d5271ddcfdb6807487daf67a62132dfc76ef13d",
+      "counts": {
+        "bid_rows": 100,
+        "ask_rows": 100
+      }
+    },
+    {
+      "name": "eth_kraken_ticker",
+      "source": "research/intake/funding_notional_20261103/coinbase_eea_20261106/eth_kraken_ticker.json.gz",
+      "sha256": "ddb56bb17b8fea4148401d6e16cec718d67440fffc19ea249f7a8db2b7d90768",
+      "counts": {
+        "absolute_rate_present": true,
+        "relative_rate_present": true,
+        "raw_rate_is_verified_settled_cash": false
+      }
+    },
+    {
+      "name": "eth_kraken_book",
+      "source": "research/intake/funding_notional_20261103/kraken_eea_20261106/kraken_eth_perp_depth.json.gz",
+      "sha256": "9f39cd924a85fc7cbc6b041936230031895ceae436472c896386fb1b8869b58e",
+      "counts": {
+        "bid_rows": 583,
+        "ask_rows": 548,
+        "identity_from_request": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+..........................................................................................19:02:07 decided 21..81 (2026-08-22..2026-10-21): 3 tickets, 120 day rows
+19:02:07 decided 82..82 (2026-10-22..2026-10-22): 3 tickets, 2 day rows
+19:02:08 decided 83..83 (2026-10-23..2026-10-23): 2 tickets, 2 day rows
+.19:02:08 decided 21..81 (2026-08-22..2026-10-21): 4 tickets, 180 day rows
+19:02:08 decided 21..81 (2026-08-22..2026-10-21): 4 tickets, 180 day rows
+19:02:08 decided 82..82 (2026-10-22..2026-10-22): 4 tickets, 3 day rows
+19:02:08 decided 82..82 (2026-10-22..2026-10-22): 4 tickets, 3 day rows
+19:02:08 decided 83..83 (2026-10-23..2026-10-23): 2 tickets, 3 day rows
+19:02:08 decided 83..83 (2026-10-23..2026-10-23): 2 tickets, 3 day rows
+19:02:08 decided 84..84 (2026-10-24..2026-10-24): 0 tickets, 3 day rows
+19:02:08 decided 84..84 (2026-10-24..2026-10-24): 0 tickets, 3 day rows
+..19:02:09 mid Q failed 'Q'
+.19:02:09 decided 21..81 (2026-08-22..2026-10-21): 2 tickets, 60 day rows
+19:02:09 decided 82..82 (2026-10-22..2026-10-22): 2 tickets, 1 day rows
+................................................................................................................................................................................................................................................19:02:26 0 COIN-M contracts
+19:02:26 done: 0 of 0 with data
+..........................................................................................................19:02:30 decided 21..81 (2026-08-22..2026-10-21): 4 tickets, 180 day rows
+19:02:30 decided 82..82 (2026-10-22..2026-10-22): 4 tickets, 3 day rows
+19:02:30 decided 83..83 (2026-10-23..2026-10-23): 0 tickets, 3 day rows
+...19:02:31 decided 21..81 (2026-08-22..2026-10-21): 4 tickets, 180 day rows
+/workspace/T-consolidation/tests/test_forward_xfund.py:107: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0hxb2cg5/journal/tickets.csv' mode='r' encoding='UTF-8'>
+  n = sum(1 for _ in open(fx.J / "tickets.csv"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+19:02:31 day 2026-10-21 already decided
+/workspace/T-consolidation/tests/test_forward_xfund.py:109: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp0hxb2cg5/journal/tickets.csv' mode='r' encoding='UTF-8'>
+  self.assertEqual(n, sum(1 for _ in open(fx.J / "tickets.csv")))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.19:02:32 decided 21..81 (2026-08-22..2026-10-21): 4 tickets, 180 day rows
+.............................................................................................................................................................................................................19:02:41 1 crypto contracts; history 2025-04-01 00:00:00 .. 2026-10-25 19:00:00
+19:02:41 1/1 TOY_USDT: error legacy cache
+19:02:41 done; 1 errors: ['TOY_USDT']
+..19:02:41 1 crypto contracts; history 2025-04-01 00:00:00 .. 2025-04-01 03:00:00
+19:02:41 done; 0 errors: []
+19:02:41 1 crypto contracts; history 2025-04-01 00:00:00 .. 2025-04-01 03:00:00
+19:02:41 done; 0 errors: []
+..............................................................................................................................................................................................s.....19:03:23 2 inputs match the frozen hashes; rebuild is byte-identical
+..........................................19:03:23 wallets: 6 rows on 5 venues, 5 with deposit or withdrawal off; 0 changes -> recorders/wallets/2026-10-21/00.parquet
+19:03:23 wallets: recorders/wallets/2026-10-21/00.parquet already written
+19:03:23 wallets: kucoin: OSError: down
+19:03:23 wallets: 5 rows on 4 venues, 5 with deposit or withdrawal off; 1 changes -> recorders/wallets/2026-10-21/01.parquet
+./workspace/T-consolidation/tests/test_recorders.py:63: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp4ayho3_z/binance_delisting.csv' mode='r' encoding='UTF-8'>
+  rows = list(csv.DictReader((Path(d) / "binance_delisting.csv").open()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+../workspace/T-consolidation/tests/test_recorders.py:84: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpalifal1l/digests.csv' mode='r' encoding='UTF-8'>
+  self.assertEqual(len(list(csv.DictReader(journal.open()))), 3)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.............................................../workspace/T-consolidation/scripts/run_reserved_batch.py:336: RuntimeWarning: Mean of empty slice.
+  out["l2co_mean_pct"] = float(x[~priced.perp.isin(top).values].mean() * 100)
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+.s..............................................................................19:04:14 fit ridge h1 pit
+19:04:16 fit ic h1 pit
+19:04:19 fit ridge h1 all
+19:04:21 fit ic h1 all
+19:04:24 fit ridge h7 pit
+19:04:25 fit ic h7 pit
+19:04:27 fit ridge h7 all
+19:04:28 fit ic h7 all
+19:04:31 fit ridge h1 pit
+19:04:33 fit ridge h1 all
+19:04:35 fit ridge h7 pit
+19:04:36 fit ridge h7 all
+.......19:04:39 fit ridge h1 clean
+19:04:41 fit ridge h1 leak
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+........................./workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+/workspace/T-consolidation/scripts/run_qbasis.py:153: RuntimeWarning: All-NaN slice encountered
+  out[win] = {"median_rank_corr": float(np.nanmedian(cs)) if cs else None, "days": len(cs)}
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/workspace/T-consolidation/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+/workspace/T-consolidation/scripts/run_qbasis.py:153: RuntimeWarning: All-NaN slice encountered
+  out[win] = {"median_rank_corr": float(np.nanmedian(cs)) if cs else None, "days": len(cs)}
+.........................................................................................................................................................................................19:05:26 deribit chain: USDC failed: down
+19:05:26 deribit chain: 3 options (BTC 2, ETH 1) -> 2026-10-25/19.parquet
+19:05:26 deribit chain: 2026-10-25/19.parquet already written
+....19:05:26 lighter book: 1 markets -> 2026-10-25/19.parquet; median half-spread 1.00 bp, median 1k side 2.00 bp
+19:05:26 lighter book: 2026-10-25/19.parquet already written
+....................................../workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+./workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+../workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+19:05:26 decisions [(1, 'PASS')]
+/workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+19:05:26 190 book days, 182 final; next look at 365
+/workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:92: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events"] = e.net.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:93: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["events_2x"] = e.net_2x.reindex(days).fillna(0.0)
+/workspace/T-consolidation/scripts/forward_xbook.py:94: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["event_tickets"] = e.tickets.reindex(days).fillna(0).astype(int)
+/workspace/T-consolidation/scripts/forward_xbook.py:95: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  b["unscored"] = e.unscored.reindex(days).fillna(0).astype(int)
+19:05:26 190 book days, 182 final; next look at 365
+....
+----------------------------------------------------------------------
+Ran 1284 tests in 199.857s
+
+OK (skipped=2)

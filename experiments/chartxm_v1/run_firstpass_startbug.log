@@ -1,0 +1,123 @@
+07:17:56 prereg sha 9c0a3cbb6d1f
+07:17:59 FX calendar 2000-01-03 to 2026-10-19 6979 days
+07:17:59 SUPERTREND_RSI/FX discovery net -0.64 bp/day (gross -0.50, cost 0.15), alpha -0.63 t -0.60, beta -0.47 (2x alpha -0.77) stop
+07:17:59 MACD/FX discovery net -0.48 bp/day (gross -0.32, cost 0.16), alpha -0.46 t -0.58, beta -0.20 (2x alpha -0.62) stop
+07:17:59 STOCH/FX discovery net +1.40 bp/day (gross +1.56, cost 0.16), alpha +1.40 t +1.98, beta +0.03 (2x alpha +1.24) stop
+07:17:59 CCI/FX discovery net -1.63 bp/day (gross -1.42, cost 0.20), alpha -1.73 t -1.52, beta +0.27 (2x alpha -1.93) stop
+07:17:59 BOLL/FX discovery net +0.23 bp/day (gross +0.35, cost 0.12), alpha +0.21 t +0.96, beta +0.08 (2x alpha +0.09) stop
+07:17:59 ICHIMOKU/FX discovery net +0.39 bp/day (gross +0.48, cost 0.09), alpha +0.35 t +0.35, beta -0.39 (2x alpha +0.25) stop
+07:17:59 PIVOT_BREAK/FX discovery net -1.41 bp/day (gross -0.70, cost 0.71), alpha -1.45 t -1.47, beta -0.12 (2x alpha -2.16) stop
+07:18:02 IDX calendar 2000-01-03 to 2026-10-19 6972 days
+07:18:02 SUPERTREND_RSI/IDX discovery net +0.65 bp/day (gross +0.78, cost 0.14), alpha +1.14 t +0.80, beta -0.33 (2x alpha +1.00) stop
+07:18:02 MACD/IDX discovery net +0.37 bp/day (gross +0.52, cost 0.15), alpha +0.67 t +0.43, beta -0.20 (2x alpha +0.51) stop
+07:18:02 STOCH/IDX discovery net +1.28 bp/day (gross +1.44, cost 0.16), alpha +1.08 t +1.03, beta +0.13 (2x alpha +0.92) stop
+07:18:02 CCI/IDX discovery net +1.83 bp/day (gross +2.04, cost 0.20), alpha +1.49 t +1.50, beta +0.23 (2x alpha +1.29) stop
+07:18:02 BOLL/IDX discovery net +0.92 bp/day (gross +1.03, cost 0.11), alpha +0.67 t +0.84, beta +0.15 (2x alpha +0.56) stop
+07:18:02 ICHIMOKU/IDX discovery net +0.99 bp/day (gross +1.07, cost 0.08), alpha +1.50 t +1.10, beta -0.34 (2x alpha +1.42) stop
+07:18:02 PIVOT_BREAK/IDX discovery net -3.98 bp/day (gross -3.22, cost 0.76), alpha -3.81 t -4.16, beta -0.12 (2x alpha -4.57) stop
+07:18:02 
+              book    window  cmult  days  mean_bp_day  ann_return  sharpe  max_dd   beta  gross_bp_day  cost_bp_day  turnover_per_year  long_share  invested  test_mean_bp_day  test_t  trimmed_bp_day
+ SUPERTREND_RSI/FX discovery    1.0  1676       -0.644      -0.016  -0.198   0.279 -0.470        -0.498        0.146             36.797       0.517     1.000            -0.627  -0.598          -0.359
+ SUPERTREND_RSI/FX discovery    2.0  1676       -0.790      -0.020  -0.243   0.294 -0.470        -0.498        0.292             36.797       0.517     1.000            -0.773  -0.735          -0.506
+ SUPERTREND_RSI/FX discovery    3.0  1676       -0.936      -0.024  -0.287   0.310 -0.470        -0.498        0.438             36.797       0.517     1.000            -0.919  -0.872          -0.653
+           MACD/FX discovery    1.0  2331       -0.485      -0.012  -0.167   0.220 -0.202        -0.325        0.160             40.338       0.508     1.000            -0.459  -0.579          -0.205
+           MACD/FX discovery    2.0  2331       -0.645      -0.016  -0.222   0.234 -0.202        -0.325        0.320             40.338       0.508     1.000            -0.619  -0.779          -0.366
+           MACD/FX discovery    3.0  2331       -0.805      -0.020  -0.278   0.248 -0.202        -0.325        0.480             40.338       0.508     1.000            -0.779  -0.977          -0.527
+          STOCH/FX discovery    1.0   835        1.398       0.035   0.934   0.033  0.034         1.562        0.164             41.374       0.474     0.952             1.405   1.977           1.263
+          STOCH/FX discovery    2.0   835        1.234       0.031   0.825   0.034  0.034         1.562        0.328             41.374       0.474     0.952             1.240   1.749           1.099
+          STOCH/FX discovery    3.0   835        1.070       0.027   0.715   0.034  0.034         1.562        0.493             41.374       0.474     0.952             1.076   1.520           0.936
+            CCI/FX discovery    1.0  1105       -1.626      -0.041  -0.640   0.372  0.265        -1.423        0.202             50.939       0.507     0.956            -1.727  -1.519          -2.446
+            CCI/FX discovery    2.0  1105       -1.828      -0.046  -0.720   0.392  0.265        -1.423        0.404             50.939       0.507     0.956            -1.929  -1.699          -2.648
+            CCI/FX discovery    3.0  1105       -2.030      -0.051  -0.800   0.412  0.265        -1.423        0.606             50.939       0.507     0.956            -2.131  -1.878          -2.849
+           BOLL/FX discovery    1.0  3125        0.232       0.006   0.238   0.079  0.077         0.349        0.116             29.278       0.474     0.461             0.211   0.960           0.055
+           BOLL/FX discovery    2.0  3125        0.116       0.003   0.119   0.096  0.077         0.349        0.232             29.278       0.474     0.461             0.095   0.431          -0.060
+           BOLL/FX discovery    3.0  3125        0.000       0.000   0.000   0.115  0.077         0.349        0.349             29.278       0.474     0.461            -0.022  -0.098          -0.175
+       ICHIMOKU/FX discovery    1.0  1589        0.386       0.010   0.125   0.180 -0.391         0.481        0.095             23.832       0.520     0.996             0.349   0.351           0.492
+       ICHIMOKU/FX discovery    2.0  1589        0.292       0.007   0.094   0.188 -0.391         0.481        0.189             23.832       0.520     0.996             0.254   0.256           0.397
+       ICHIMOKU/FX discovery    3.0  1589        0.197       0.005   0.064   0.196 -0.391         0.481        0.284             23.832       0.520     0.996             0.160   0.160           0.302
+    PIVOT_BREAK/FX discovery    1.0  1337       -1.407      -0.035  -0.591   0.188 -0.119        -0.699        0.708            178.372       0.506     0.948            -1.448  -1.471          -1.271
+    PIVOT_BREAK/FX discovery    2.0  1337       -2.115      -0.053  -0.889   0.280 -0.119        -0.699        1.416            178.372       0.506     0.948            -2.156  -2.179          -1.977
+    PIVOT_BREAK/FX discovery    3.0  1337       -2.823      -0.071  -1.186   0.374 -0.119        -0.699        2.123            178.372       0.506     0.948            -2.863  -2.880          -2.683
+SUPERTREND_RSI/IDX discovery    1.0  3123        0.645       0.016   0.117   0.348 -0.330         0.783        0.138             34.703       0.591     0.999             1.138   0.797           1.177
+SUPERTREND_RSI/IDX discovery    2.0  3123        0.508       0.013   0.092   0.360 -0.330         0.783        0.275             34.703       0.591     0.999             1.000   0.699           1.038
+SUPERTREND_RSI/IDX discovery    3.0  3123        0.370       0.009   0.067   0.372 -0.330         0.783        0.413             34.703       0.591     0.999             0.863   0.602           0.900
+          MACD/IDX discovery    1.0  3123        0.367       0.009   0.064   0.436 -0.201         0.521        0.154             38.838       0.510     1.000             0.668   0.430           0.814
+          MACD/IDX discovery    2.0  3123        0.213       0.005   0.037   0.460 -0.201         0.521        0.308             38.838       0.510     1.000             0.514   0.330           0.658
+          MACD/IDX discovery    3.0  3123        0.059       0.001   0.010   0.485 -0.201         0.521        0.462             38.838       0.510     1.000             0.360   0.231           0.503
+         STOCH/IDX discovery    1.0  3123        1.280       0.032   0.321   0.173  0.135         1.442        0.162             40.894       0.344     0.934             1.079   1.030           0.792
+         STOCH/IDX discovery    2.0  3123        1.118       0.028   0.281   0.173  0.135         1.442        0.325             40.894       0.344     0.934             0.917   0.876           0.629
+         STOCH/IDX discovery    3.0  3123        0.956       0.024   0.240   0.174  0.135         1.442        0.487             40.894       0.344     0.934             0.754   0.722           0.467
+           CCI/IDX discovery    1.0  3123        1.832       0.046   0.458   0.208  0.228         2.036        0.204             51.459       0.415     0.902             1.491   1.501           1.107
+           CCI/IDX discovery    2.0  3123        1.628       0.041   0.407   0.209  0.228         2.036        0.408             51.459       0.415     0.902             1.287   1.297           0.902
+           CCI/IDX discovery    3.0  3123        1.424       0.036   0.356   0.209  0.228         2.036        0.613             51.459       0.415     0.902             1.083   1.092           0.697
+          BOLL/IDX discovery    1.0  1723        0.924       0.023   0.369   0.137  0.152         1.030        0.106             26.760       0.557     0.386             0.670   0.844           0.475
+          BOLL/IDX discovery    2.0  1723        0.818       0.021   0.326   0.137  0.152         1.030        0.212             26.760       0.557     0.386             0.564   0.711           0.372
+          BOLL/IDX discovery    3.0  1723        0.712       0.018   0.284   0.138  0.152         1.030        0.319             26.760       0.557     0.386             0.457   0.578           0.268
+      ICHIMOKU/IDX discovery    1.0  3123        0.986       0.025   0.187   0.342 -0.345         1.069        0.083             20.900       0.629     0.984             1.502   1.101           1.618
+      ICHIMOKU/IDX discovery    2.0  3123        0.903       0.023   0.172   0.349 -0.345         1.069        0.166             20.900       0.629     0.984             1.419   1.040           1.535
+      ICHIMOKU/IDX discovery    3.0  3123        0.820       0.021   0.156   0.357 -0.345         1.069        0.249             20.900       0.629     0.984             1.336   0.978           1.452
+   PIVOT_BREAK/IDX discovery    1.0  3123       -3.982      -0.100  -1.152   1.327 -0.117        -3.218        0.764            192.554       0.526     0.986            -3.807  -4.163          -3.681
+   PIVOT_BREAK/IDX discovery    2.0  3123       -4.746      -0.120  -1.373   1.532 -0.117        -3.218        1.528            192.554       0.526     0.986            -4.572  -4.980          -4.444
+   PIVOT_BREAK/IDX discovery    3.0  3123       -5.510      -0.139  -1.594   1.749 -0.117        -3.218        2.292            192.554       0.526     0.986            -5.336  -5.791          -5.207
+07:18:02 {
+ "stages": {
+  "SUPERTREND_RSI/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MACD/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "STOCH/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "CCI/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "BOLL/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "ICHIMOKU/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "PIVOT_BREAK/FX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SUPERTREND_RSI/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "MACD/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "STOCH/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "CCI/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "BOLL/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "ICHIMOKU/IDX": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "PIVOT_BREAK/IDX": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "validation_passers": [],
+ "holdout_passers": []
+}

@@ -1,0 +1,169 @@
+{
+  "archive_commit": "2011de73202cd8733ad8ac029d461e5166c1d086",
+  "chunks_index_sha256": "a4a566f7dcc55b56cd59648d342fe075b3bed95d2544e3be5fe410a5d7496129",
+  "download_performed": false,
+  "files_index_sha256": "47836b75adeffc4146156d74a646a250fa7bed5c9d50b039102379ccd2d51814",
+  "folders": {
+    "data/commodity_perps": {
+      "chunks": [
+        "chunk-00001.tar.gz",
+        "chunk-00007.tar.gz",
+        "chunk-00008.tar.gz",
+        "chunk-00009.tar.gz",
+        "chunk-00010.tar.gz",
+        "chunk-00023.tar.gz",
+        "chunk-00024.tar.gz",
+        "chunk-00025.tar.gz"
+      ],
+      "files": 21661,
+      "uncompressed_bytes": 343730476,
+      "whole_chunks_required_bytes": 238040128
+    },
+    "data/hft": {
+      "chunks": [
+        "chunk-00001.tar.gz",
+        "chunk-00006.tar.gz",
+        "chunk-00010.tar.gz",
+        "chunk-00011.tar.gz",
+        "chunk-00012.tar.gz",
+        "chunk-00026.tar.gz",
+        "chunk-00027.tar.gz"
+      ],
+      "files": 438,
+      "uncompressed_bytes": 183452197,
+      "whole_chunks_required_bytes": 249404956
+    },
+    "data/kraken_probe": {
+      "chunks": [
+        "chunk-00001.tar.gz"
+      ],
+      "files": 4,
+      "uncompressed_bytes": 2512188,
+      "whole_chunks_required_bytes": 37778274
+    },
+    "data/lighter_trades": {
+      "chunks": [
+        "chunk-00001.tar.gz",
+        "chunk-00006.tar.gz",
+        "chunk-00012.tar.gz",
+        "chunk-00013.tar.gz",
+        "chunk-00027.tar.gz",
+        "chunk-00028.tar.gz"
+      ],
+      "files": 2654,
+      "uncompressed_bytes": 68438641,
+      "whole_chunks_required_bytes": 185628355
+    },
+    "data/live": {
+      "chunks": [
+        "chunk-00001.tar.gz",
+        "chunk-00002.tar.gz",
+        "chunk-00013.tar.gz",
+        "chunk-00014.tar.gz",
+        "chunk-00028.tar.gz"
+      ],
+      "files": 777,
+      "uncompressed_bytes": 75935521,
+      "whole_chunks_required_bytes": 168596063
+    },
+    "data/m090_content_v2": {
+      "chunks": [
+        "chunk-00038.tar.gz"
+      ],
+      "files": 11,
+      "uncompressed_bytes": 14800,
+      "whole_chunks_required_bytes": 243169
+    },
+    "data/mexc": {
+      "chunks": [
+        "chunk-00002.tar.gz",
+        "chunk-00028.tar.gz"
+      ],
+      "files": 9,
+      "uncompressed_bytes": 22744625,
+      "whole_chunks_required_bytes": 52963982
+    },
+    "data/option_expiry": {
+      "chunks": [
+        "chunk-00014.tar.gz",
+        "chunk-00028.tar.gz"
+      ],
+      "files": 420,
+      "uncompressed_bytes": 17852422,
+      "whole_chunks_required_bytes": 75417732
+    },
+    "data/orb_index_pilot": {
+      "chunks": [
+        "chunk-00038.tar.gz"
+      ],
+      "files": 43,
+      "uncompressed_bytes": 1472028,
+      "whole_chunks_required_bytes": 243169
+    },
+    "data/rawtape": {
+      "chunks": [
+        "chunk-00002.tar.gz",
+        "chunk-00006.tar.gz",
+        "chunk-00014.tar.gz",
+        "chunk-00015.tar.gz",
+        "chunk-00016.tar.gz",
+        "chunk-00017.tar.gz",
+        "chunk-00018.tar.gz",
+        "chunk-00019.tar.gz",
+        "chunk-00020.tar.gz",
+        "chunk-00021.tar.gz",
+        "chunk-00022.tar.gz",
+        "chunk-00028.tar.gz",
+        "chunk-00029.tar.gz",
+        "chunk-00030.tar.gz",
+        "chunk-00031.tar.gz",
+        "chunk-00032.tar.gz",
+        "chunk-00033.tar.gz",
+        "chunk-00034.tar.gz"
+      ],
+      "files": 2898,
+      "uncompressed_bytes": 653512766,
+      "whole_chunks_required_bytes": 730962808
+    },
+    "data/recorders": {
+      "chunks": [
+        "chunk-00002.tar.gz",
+        "chunk-00003.tar.gz",
+        "chunk-00022.tar.gz",
+        "chunk-00034.tar.gz",
+        "chunk-00035.tar.gz"
+      ],
+      "files": 909,
+      "uncompressed_bytes": 70953917,
+      "whole_chunks_required_bytes": 190339910
+    },
+    "data/tape": {
+      "chunks": [
+        "chunk-00003.tar.gz",
+        "chunk-00004.tar.gz",
+        "chunk-00005.tar.gz",
+        "chunk-00006.tar.gz",
+        "chunk-00022.tar.gz",
+        "chunk-00035.tar.gz",
+        "chunk-00036.tar.gz",
+        "chunk-00037.tar.gz"
+      ],
+      "files": 271,
+      "uncompressed_bytes": 231375884,
+      "whole_chunks_required_bytes": 262191993
+    }
+  },
+  "limitations": [
+    "Index paths are not proof of complete, fresh or admissible source coverage.",
+    "Whole-chunk bytes overlap across folders and are not summed into a new download budget.",
+    "Historical recorded tapes are indexed remotely; they are not installed in this checkout.",
+    "Large recovery remains unexecuted; historical recreateable candle/metrics archives require their original source or capture host."
+  ],
+  "required_but_absent_prefixes": [
+    "data/daily_v2",
+    "data/metrics_full",
+    "data/fundingRate"
+  ],
+  "review_date_utc": "2026-11-04",
+  "scope": "Existing downloaded archive index metadata only; no new chunk acquisition or market-data decode."
+}

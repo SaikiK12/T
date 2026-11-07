@@ -1,0 +1,42 @@
+{
+  "archive_commit": "2011de73202cd8733ad8ac029d461e5166c1d086",
+  "archive_limit_bytes": 1800000000,
+  "archive_tree": "b1c59a9c88a0df8ecf91ef81958eff3802875780",
+  "base_archive_commit": "2dd54224bd7a59bb26f29d246770b4c35a162496",
+  "files": [
+    {
+      "bytes": 5230831,
+      "git_sha": "42f5f811a9a3d8a56046b2fe881f2b5621004764",
+      "name": "files.csv",
+      "sha256": "47836b75adeffc4146156d74a646a250fa7bed5c9d50b039102379ccd2d51814"
+    },
+    {
+      "bytes": 4502,
+      "git_sha": "f5e6f0f5fdcbc70a9b8e24fd3ff0e199c2e1bea2",
+      "name": "chunks.csv",
+      "sha256": "a4a566f7dcc55b56cd59648d342fe075b3bed95d2544e3be5fe410a5d7496129"
+    },
+    {
+      "bytes": 243169,
+      "git_sha": "63bef09f8f4e68b90406c8546496dce461924fdb",
+      "name": "chunk-00038.tar.gz",
+      "sha256": "48e1099179f2d4bd76be5b894c7b1e9c634893dd4fdb22a967abdea901f8d5d7"
+    }
+  ],
+  "off_host_committed": true,
+  "remote_readback_sha256": "48e1099179f2d4bd76be5b894c7b1e9c634893dd4fdb22a967abdea901f8d5d7",
+  "remote_restore_problems": [],
+  "remote_restored_files": 54,
+  "restore_problems": [],
+  "restored_files": 54,
+  "result": {
+    "added": 54,
+    "archive_bytes": 1404430652,
+    "chunks": 1,
+    "over_budget": [],
+    "oversize": [],
+    "unchanged": 0
+  },
+  "scope": "opaque byte backup and separate-directory restore of newly classified local public captures only; no observation decoding",
+  "scope_limit": "Only these54 held files verified; no capture-host completeness, live daemon, publication-clock or whole-machine recovery claim."
+}

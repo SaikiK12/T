@@ -1,0 +1,102 @@
+{
+  "execution_scope": [
+    "trading_signal",
+    "place_order"
+  ],
+  "limits": "Mocks record submitted targets only. No imports/history/hedge-ratio/z-score helper, scheduler, fills, costs or PnL execute.",
+  "sentinel_999_skips_orders": true,
+  "signal_cases": [
+    {
+      "signal": 1,
+      "z": -3
+    },
+    {
+      "signal": 0,
+      "z": -2
+    },
+    {
+      "signal": 0,
+      "z": -1
+    },
+    {
+      "signal": 0,
+      "z": 0
+    },
+    {
+      "signal": 0,
+      "z": 0.5
+    },
+    {
+      "signal": 0,
+      "z": 1
+    },
+    {
+      "signal": 0,
+      "z": 2
+    },
+    {
+      "signal": -1,
+      "z": 3
+    }
+  ],
+  "source_sha256": "ae3f1ffa8695abb1d6756630a93f9cd0d3d147904d7b038fd94ebdd2a4c6baa1",
+  "source_url": "https://raw.githubusercontent.com/QuantInsti/blueshift-demo-strategies/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/equities/pair_example.py",
+  "weight_cases": [
+    {
+      "gross_target": 3.75,
+      "hedge_ratio": 0.5,
+      "targets": [
+        [
+          "invented-x",
+          -1.25
+        ],
+        [
+          "invented-y",
+          2.5
+        ]
+      ]
+    },
+    {
+      "gross_target": 5.0,
+      "hedge_ratio": 1.0,
+      "targets": [
+        [
+          "invented-x",
+          -2.5
+        ],
+        [
+          "invented-y",
+          2.5
+        ]
+      ]
+    },
+    {
+      "gross_target": 7.5,
+      "hedge_ratio": 2.0,
+      "targets": [
+        [
+          "invented-x",
+          -5.0
+        ],
+        [
+          "invented-y",
+          2.5
+        ]
+      ]
+    },
+    {
+      "gross_target": 5.0,
+      "hedge_ratio": -1.0,
+      "targets": [
+        [
+          "invented-x",
+          2.5
+        ],
+        [
+          "invented-y",
+          2.5
+        ]
+      ]
+    }
+  ]
+}

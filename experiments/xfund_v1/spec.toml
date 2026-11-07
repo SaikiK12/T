@@ -1,0 +1,37 @@
+# R275 xfund_v1: cross-venue funding carry family (qx spread). Frozen with PREREG.md; never edited afterwards.
+name = "xfund_v1"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/xfund_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/open/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/open/funding_applies", bar_h = 1 },
+  { name = "hyperliquid", prices = "hyperliquid/candles_1d", vol = "volume", funding = "hyperliquid/funding", bar_h = 24 },
+  { name = "mexc", prices = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding", bar_h = 1 },
+]
+sets = [
+  ["binance", "gate"],
+  ["binance", "hyperliquid"],
+  ["binance", "mexc"],
+  ["gate", "hyperliquid"],
+  ["gate", "mexc"],
+  ["hyperliquid", "mexc"],
+  ["binance", "gate", "hyperliquid", "mexc"],
+]
+lookbacks = [1, 3, 7, 14]
+thresholds = [0.05, 0.10, 0.20, 0.40, 0.80]
+slots = [3, 5, 10, 20]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 275
+alpha = 0.05
+recent_from = "2025-01-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 10
+hurdle_ann_pct = 4.13
+out = "experiments/xfund_v1/results"

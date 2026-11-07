@@ -1,0 +1,654 @@
+{
+  "complete": true,
+  "duration_seconds": 21.623851148999165,
+  "monotonic_scope": "one capture process only",
+  "records": [
+    {
+      "body": "lighter_markets.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "lighter_markets",
+      "receipt": {
+        "received_mono_ns": 10572785722103,
+        "received_utc_ns": 1792856633753468591,
+        "started_mono_ns": 10571912785034,
+        "started_utc_ns": 1792856632880532733
+      },
+      "response_bytes": 391955,
+      "sha256": "55914bfc9ec3446c241fa81fd4b5f1299a513d0e2120d1ba6cf2fadb40c6eaab",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?filter=perp"
+    },
+    {
+      "body": "BTC_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10574086687409,
+        "received_utc_ns": 1792856635054434437,
+        "started_mono_ns": 10572795975238,
+        "started_utc_ns": 1792856633763723118
+      },
+      "response_bytes": 2387,
+      "sha256": "efd99eefbeab68ddc31c7c99a65d28f5d8577fca9725d8dfefe1291878ac82b7",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=BTC_USDT"
+    },
+    {
+      "body": "BTC_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10574591612965,
+        "received_utc_ns": 1792856635559360034,
+        "started_mono_ns": 10574087234473,
+        "started_utc_ns": 1792856635054982863
+      },
+      "response_bytes": 1721,
+      "sha256": "0039e4d9aa7e8d767891ffe77b010bbd9c95b878df82fa515fc42dedd0f66a43",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=1"
+    },
+    {
+      "body": "BTC_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_fair",
+      "receipt": {
+        "received_mono_ns": 10575219153025,
+        "received_utc_ns": 1792856636186900254,
+        "started_mono_ns": 10574591910042,
+        "started_utc_ns": 1792856635559658623
+      },
+      "response_bytes": 100,
+      "sha256": "c379c8688f99e28861dcf0ee0ec402db5f6a4efb015f6262b1d52427048c6bbc",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/BTC_USDT"
+    },
+    {
+      "body": "BTC_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10575857793987,
+        "received_utc_ns": 1792856636825541436,
+        "started_mono_ns": 10575220101660,
+        "started_utc_ns": 1792856636187850180
+      },
+      "response_bytes": 1819,
+      "sha256": "7412e7428a75d89cb47e278124a91b906adab007a244c611c6f718481410a155",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/BTC_USDT?limit=50"
+    },
+    {
+      "body": "BTC_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10575762244958,
+        "received_utc_ns": 1792856636729992467,
+        "started_mono_ns": 10575220626476,
+        "started_utc_ns": 1792856636188375007
+      },
+      "response_bytes": 45411,
+      "sha256": "0a0648a37634402cd9fa2567d657b77fbfcaf4249f7b2159dabebae632275598",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=1&limit=100"
+    },
+    {
+      "body": "BTC_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10576535308360,
+        "received_utc_ns": 1792856637503055769,
+        "started_mono_ns": 10576321164107,
+        "started_utc_ns": 1792856637288912167
+      },
+      "response_bytes": 1797,
+      "sha256": "138e7692ca8d33269a521fa179216bf42987e888a935a2455b96732271bec017",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/BTC_USDT?limit=50"
+    },
+    {
+      "body": "BTC_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "BTC_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10576807541280,
+        "received_utc_ns": 1792856637775288920,
+        "started_mono_ns": 10576321717335,
+        "started_utc_ns": 1792856637289465696
+      },
+      "response_bytes": 45426,
+      "sha256": "08073f6b1fe2c5e950616b68ab4080ba49dc2f4fb638ef69c60c0ac0f436eb08",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=1&limit=100"
+    },
+    {
+      "body": "WIF_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10577727851381,
+        "received_utc_ns": 1792856638695598750,
+        "started_mono_ns": 10576810465795,
+        "started_utc_ns": 1792856637778214215
+      },
+      "response_bytes": 1889,
+      "sha256": "4acbff3069778782716fa287e81147f3caab3ff5d2206d7c8e5edc0935afc3ac",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=WIF_USDT"
+    },
+    {
+      "body": "WIF_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10578187229315,
+        "received_utc_ns": 1792856639154976774,
+        "started_mono_ns": 10577728345217,
+        "started_utc_ns": 1792856638696093758
+      },
+      "response_bytes": 1709,
+      "sha256": "21051387a28a0af42dd1100cd7fc68c0c98c05a2bfe929d4f20559de972d3a8a",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=5"
+    },
+    {
+      "body": "WIF_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_fair",
+      "receipt": {
+        "received_mono_ns": 10578497770222,
+        "received_utc_ns": 1792856639465517351,
+        "started_mono_ns": 10578187517950,
+        "started_utc_ns": 1792856639155266601
+      },
+      "response_bytes": 99,
+      "sha256": "9c373bfdd0fc647f2b5a0b8e66714b9d986b692b78ffbd7bf5d8141052c18877",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/WIF_USDT"
+    },
+    {
+      "body": "WIF_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10579049113535,
+        "received_utc_ns": 1792856640016861034,
+        "started_mono_ns": 10578828843959,
+        "started_utc_ns": 1792856639796591888
+      },
+      "response_bytes": 1816,
+      "sha256": "7139f3170bfba2b9852c5c7dc63d307ca343aa1211a57883fa629294f8abb2dc",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/WIF_USDT?limit=50"
+    },
+    {
+      "body": "WIF_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10579273731397,
+        "received_utc_ns": 1792856640241478745,
+        "started_mono_ns": 10578829625658,
+        "started_utc_ns": 1792856639797373988
+      },
+      "response_bytes": 12246,
+      "sha256": "d612645a2bdb9ffecc086c914b80dfa9576bef0469f7544a1a4cb91a723a1ed4",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=5&limit=100"
+    },
+    {
+      "body": "WIF_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10580171357902,
+        "received_utc_ns": 1792856641139105371,
+        "started_mono_ns": 10579930111380,
+        "started_utc_ns": 1792856640897859350
+      },
+      "response_bytes": 1817,
+      "sha256": "4c47984625526823ce581d6a7ca5ed3ebce3eb45f561e2f4733c700839fcbf16",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/WIF_USDT?limit=50"
+    },
+    {
+      "body": "WIF_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "WIF_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10580300727651,
+        "received_utc_ns": 1792856641268475150,
+        "started_mono_ns": 10579930660102,
+        "started_utc_ns": 1792856640898408523
+      },
+      "response_bytes": 12246,
+      "sha256": "d612645a2bdb9ffecc086c914b80dfa9576bef0469f7544a1a4cb91a723a1ed4",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=5&limit=100"
+    },
+    {
+      "body": "SKR_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10581014307274,
+        "received_utc_ns": 1792856641982054613,
+        "started_mono_ns": 10580302126779,
+        "started_utc_ns": 1792856641269875420
+      },
+      "response_bytes": 1877,
+      "sha256": "0a57c9c20725dd6233cac22c81ded1115462e7dc9668ae2eab694dd3d4ad5ac5",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=SKR_USDT"
+    },
+    {
+      "body": "SKR_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10581507605882,
+        "received_utc_ns": 1792856642475353211,
+        "started_mono_ns": 10581030756508,
+        "started_utc_ns": 1792856641998504688
+      },
+      "response_bytes": 1717,
+      "sha256": "7ecf8d95178f68f88267a54f3d7ee5d6c676c04f3c7223b23b5304a9c0ec688f",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=130"
+    },
+    {
+      "body": "SKR_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_fair",
+      "receipt": {
+        "received_mono_ns": 10581823271173,
+        "received_utc_ns": 1792856642791018412,
+        "started_mono_ns": 10581508052600,
+        "started_utc_ns": 1792856642475801141
+      },
+      "response_bytes": 101,
+      "sha256": "18d74640e8a8d18718eddc0554fec581dd7b1485e64c792353de34787af0dd9c",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/SKR_USDT"
+    },
+    {
+      "body": "SKR_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10582350487426,
+        "received_utc_ns": 1792856643318033859,
+        "started_mono_ns": 10582131299921,
+        "started_utc_ns": 1792856643099048142
+      },
+      "response_bytes": 1840,
+      "sha256": "c069d8cc0aa10fd667d6140e3a44bce62564bdbc89b03886f88b3d2d6481bc58",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/SKR_USDT?limit=50"
+    },
+    {
+      "body": "SKR_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10582561987019,
+        "received_utc_ns": 1792856643529734358,
+        "started_mono_ns": 10582132036351,
+        "started_utc_ns": 1792856643099784851
+      },
+      "response_bytes": 13564,
+      "sha256": "155c19fe393c1292220ad9b685119378ef6e70f6211614af2113071ea4042637",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=130&limit=100"
+    },
+    {
+      "body": "SKR_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10583547293829,
+        "received_utc_ns": 1792856644515041449,
+        "started_mono_ns": 10583232465105,
+        "started_utc_ns": 1792856644200213455
+      },
+      "response_bytes": 1840,
+      "sha256": "166de59b1c651fa0bc10c057708c7ae31b2632130686ae5f8b376f70f06fe17a",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/SKR_USDT?limit=50"
+    },
+    {
+      "body": "SKR_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "SKR_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10583456158261,
+        "received_utc_ns": 1792856644423905629,
+        "started_mono_ns": 10583233054893,
+        "started_utc_ns": 1792856644200803324
+      },
+      "response_bytes": 13571,
+      "sha256": "aaa5877e75102b513edeec082957ee7cda1a64ec6208e6cbfd0ffc3919817c6c",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=130&limit=100"
+    },
+    {
+      "body": "ROBO_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10584093430200,
+        "received_utc_ns": 1792856645061177719,
+        "started_mono_ns": 10583549002541,
+        "started_utc_ns": 1792856644516751102
+      },
+      "response_bytes": 1915,
+      "sha256": "75e5126a39df09d1db5c52f85abe5344b036c74653218b1c2c5603a11c7961df",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=ROBO_USDT"
+    },
+    {
+      "body": "ROBO_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10584725997845,
+        "received_utc_ns": 1792856645693745094,
+        "started_mono_ns": 10584333194172,
+        "started_utc_ns": 1792856645300941641
+      },
+      "response_bytes": 1708,
+      "sha256": "7e2c4c7d2a9d2a76ad8073ececba48b85f71c80a62a83105f4703e54a4362084",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=149"
+    },
+    {
+      "body": "ROBO_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_fair",
+      "receipt": {
+        "received_mono_ns": 10584929289758,
+        "received_utc_ns": 1792856645897037267,
+        "started_mono_ns": 10584726334521,
+        "started_utc_ns": 1792856645694083172
+      },
+      "response_bytes": 102,
+      "sha256": "4ff1170ff25abff477878afcd05989a0a2103b692a3e07fd501d2a2cae151051",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/ROBO_USDT"
+    },
+    {
+      "body": "ROBO_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10585625271407,
+        "received_utc_ns": 1792856646593018896,
+        "started_mono_ns": 10585433742269,
+        "started_utc_ns": 1792856646401490318
+      },
+      "response_bytes": 2015,
+      "sha256": "90ba83894aad8bb02d9a569d8d258873cb438610d0a4ef7e3399c12e2e0284fb",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/ROBO_USDT?limit=50"
+    },
+    {
+      "body": "ROBO_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10585657653845,
+        "received_utc_ns": 1792856646625400864,
+        "started_mono_ns": 10585434415579,
+        "started_utc_ns": 1792856646402164060
+      },
+      "response_bytes": 6668,
+      "sha256": "192304846d226f9099980dea1500fa36038667afd9d176d6c124f76cfaca0a74",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=149&limit=100"
+    },
+    {
+      "body": "ROBO_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10586737512123,
+        "received_utc_ns": 1792856647705259182,
+        "started_mono_ns": 10586534853573,
+        "started_utc_ns": 1792856647502601663
+      },
+      "response_bytes": 2015,
+      "sha256": "90ba83894aad8bb02d9a569d8d258873cb438610d0a4ef7e3399c12e2e0284fb",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/ROBO_USDT?limit=50"
+    },
+    {
+      "body": "ROBO_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "ROBO_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10586748270540,
+        "received_utc_ns": 1792856647716018140,
+        "started_mono_ns": 10586535536913,
+        "started_utc_ns": 1792856647503285443
+      },
+      "response_bytes": 6668,
+      "sha256": "192304846d226f9099980dea1500fa36038667afd9d176d6c124f76cfaca0a74",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=149&limit=100"
+    },
+    {
+      "body": "MEGA_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10587168606982,
+        "received_utc_ns": 1792856648136354622,
+        "started_mono_ns": 10586749595634,
+        "started_utc_ns": 1792856647717344184
+      },
+      "response_bytes": 1889,
+      "sha256": "63664524b32698b9ecc9ab9f4904725fade75c4b63f370231598be74d661da24",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=MEGA_USDT"
+    },
+    {
+      "body": "MEGA_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10587850151630,
+        "received_utc_ns": 1792856648817898979,
+        "started_mono_ns": 10587635673644,
+        "started_utc_ns": 1792856648603421083
+      },
+      "response_bytes": 1712,
+      "sha256": "f1ed068d8c331c8a72ff2005b07899e2c81a14b044f3c02c572f265980c26308",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=94"
+    },
+    {
+      "body": "MEGA_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_fair",
+      "receipt": {
+        "received_mono_ns": 10588040802729,
+        "received_utc_ns": 1792856649008550268,
+        "started_mono_ns": 10587850470519,
+        "started_utc_ns": 1792856648818219160
+      },
+      "response_bytes": 101,
+      "sha256": "37b60583d3eabe99c332144381e1f044e6e3ad351877af818b7b980a6d8d81e3",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/MEGA_USDT"
+    },
+    {
+      "body": "MEGA_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10588935279924,
+        "received_utc_ns": 1792856649903027333,
+        "started_mono_ns": 10588736146479,
+        "started_utc_ns": 1792856649703894368
+      },
+      "response_bytes": 1933,
+      "sha256": "684310dec453e1530a835e2e9b6ce6bf544342a6e31023d7585dfd5fbc3c07b6",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/MEGA_USDT?limit=50"
+    },
+    {
+      "body": "MEGA_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10589144610861,
+        "received_utc_ns": 1792856650112358510,
+        "started_mono_ns": 10588736586316,
+        "started_utc_ns": 1792856649704334877
+      },
+      "response_bytes": 13052,
+      "sha256": "e23991568f74b6edf2ebf75436016a76305a7ad4d51d8f65af2c2c9915a9355c",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=94&limit=100"
+    },
+    {
+      "body": "MEGA_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10590045465815,
+        "received_utc_ns": 1792856651013213024,
+        "started_mono_ns": 10589837084350,
+        "started_utc_ns": 1792856650804832340
+      },
+      "response_bytes": 1933,
+      "sha256": "9ac4a44dc8af0fabc1d60375d629fac89e5ef0a040ba716f021284374d08cd79",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/MEGA_USDT?limit=50"
+    },
+    {
+      "body": "MEGA_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "MEGA_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10590267866127,
+        "received_utc_ns": 1792856651235613856,
+        "started_mono_ns": 10589837664618,
+        "started_utc_ns": 1792856650805413169
+      },
+      "response_bytes": 13052,
+      "sha256": "d2625d66f96a65325cda01f307188db47aeff9131c2dcdba91ee6e02d582576a",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=94&limit=100"
+    },
+    {
+      "body": "XPD_mexc_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_mexc_meta",
+      "receipt": {
+        "received_mono_ns": 10590741592437,
+        "received_utc_ns": 1792856651709339826,
+        "started_mono_ns": 10590270627793,
+        "started_utc_ns": 1792856651238376284
+      },
+      "response_bytes": 2315,
+      "sha256": "5eb7e9890d4f41ef3801ca6f2f741677cd957b8535770f380dc2eb134629b29c",
+      "url": "https://contract.mexc.com/api/v1/contract/detail?symbol=XPD_USDT"
+    },
+    {
+      "body": "XPD_lighter_meta.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_lighter_meta",
+      "receipt": {
+        "received_mono_ns": 10591028438528,
+        "received_utc_ns": 1792856651996185577,
+        "started_mono_ns": 10590937810875,
+        "started_utc_ns": 1792856651905558134
+      },
+      "response_bytes": 1701,
+      "sha256": "536311b30a7bc1531c653af1d70381f273fc62c52fa91a1dd8c7582565d02ea0",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=146"
+    },
+    {
+      "body": "XPD_fair.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_fair",
+      "receipt": {
+        "received_mono_ns": 10591226609960,
+        "received_utc_ns": 1792856652194357079,
+        "started_mono_ns": 10591028923327,
+        "started_utc_ns": 1792856651996671837
+      },
+      "response_bytes": 100,
+      "sha256": "a60d4379e0a2de2183ba37514d4ecaa47db90b7019111ce553ad986eb73cbeea",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/XPD_USDT"
+    },
+    {
+      "body": "XPD_mexc_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_mexc_book_0",
+      "receipt": {
+        "received_mono_ns": 10592240049778,
+        "received_utc_ns": 1792856653207796767,
+        "started_mono_ns": 10592038384921,
+        "started_utc_ns": 1792856653006132901
+      },
+      "response_bytes": 1700,
+      "sha256": "d8f22903c53cf3666eb5d5d269b85d82133dd366b9f255df00a61bfcd69cb1b2",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/XPD_USDT?limit=50"
+    },
+    {
+      "body": "XPD_lighter_book_0.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_lighter_book_0",
+      "receipt": {
+        "received_mono_ns": 10592433731948,
+        "received_utc_ns": 1792856653401479267,
+        "started_mono_ns": 10592038987513,
+        "started_utc_ns": 1792856653006735904
+      },
+      "response_bytes": 11932,
+      "sha256": "ce61b6097501ebdac5bb6af13485b53006011ee5688db5b5d6881938502d60ef",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=146&limit=100"
+    },
+    {
+      "body": "XPD_mexc_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_mexc_book_1",
+      "receipt": {
+        "received_mono_ns": 10593465857365,
+        "received_utc_ns": 1792856654433604995,
+        "started_mono_ns": 10593139508027,
+        "started_utc_ns": 1792856654107256357
+      },
+      "response_bytes": 1700,
+      "sha256": "93669f518c1ab1b4582e7865afcd840c00b41858cff708c1f383252769f8ff41",
+      "url": "https://contract.mexc.com/api/v1/contract/depth/XPD_USDT?limit=50"
+    },
+    {
+      "body": "XPD_lighter_book_1.json.gz",
+      "error": null,
+      "http_status": 200,
+      "name": "XPD_lighter_book_1",
+      "receipt": {
+        "received_mono_ns": 10593534176997,
+        "received_utc_ns": 1792856654501924045,
+        "started_mono_ns": 10593140445522,
+        "started_utc_ns": 1792856654108194043
+      },
+      "response_bytes": 11932,
+      "sha256": "ce61b6097501ebdac5bb6af13485b53006011ee5688db5b5d6881938502d60ef",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookOrders?market_id=146&limit=100"
+    }
+  ],
+  "requests": 43,
+  "response_bytes": 643091
+}

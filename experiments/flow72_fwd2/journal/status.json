@@ -1,0 +1,94 @@
+{
+ "last_hour": "2026-11-06T13:00:00+00:00",
+ "days_scored": 36,
+ "short_now": {
+  "tvc": [
+   "BNBUSDT",
+   "KORUUSDT",
+   "MUUSDT",
+   "SAMSUNGUSDT",
+   "TSLAUSDT",
+   "XAGUSDT"
+  ],
+  "t24": [
+   "BNBUSDT",
+   "DOGEUSDT",
+   "JCTUSDT",
+   "KORUUSDT",
+   "LINKUSDT",
+   "SKHYUSDT"
+  ],
+  "t4": [
+   "DOGEUSDT",
+   "ENAUSDT",
+   "QUSDT",
+   "SAMSUNGUSDT",
+   "TAOUSDT",
+   "XRPUSDT"
+  ]
+ },
+ "A": {
+  "days": 36,
+  "total": 0.33855530754131136,
+  "total_2x": 0.31514498593044366,
+  "total_3x": 0.2917346643195759,
+  "go_real": {
+   "n": 36,
+   "mean": 0.00940431409836976,
+   "hit": 0.6388888888888888,
+   "worst": -0.1072537748171812,
+   "invalid_n": 0,
+   "n_clusters": null,
+   "checks": {
+    "finite_returns": true,
+    "enough_scored": true,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": true
+  },
+  "ann": 3.4325746459049626,
+  "sharpe": 4.750895844238289,
+  "t_nw": 1.637849986470372,
+  "max_dd": 0.1818745574396799,
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "verdict": "PENDING",
+   "stop_rule_hit_day": "2026-10-26"
+  }
+ },
+ "B": {
+  "days": 36,
+  "total": 0.17114029269444897,
+  "total_2x": 0.1670332009282791,
+  "total_3x": 0.16292610916210987,
+  "go_real": {
+   "n": 36,
+   "mean": 0.004753897019290249,
+   "hit": 0.6111111111111112,
+   "worst": -0.0184272522629367,
+   "invalid_n": 0,
+   "n_clusters": null,
+   "checks": {
+    "finite_returns": true,
+    "enough_scored": true,
+    "mean_positive": true,
+    "hit_rate": true,
+    "no_tail_event": true
+   },
+   "pass": true
+  },
+  "ann": 1.7351724120409409,
+  "sharpe": 5.757876462455744,
+  "t_nw": 1.4374620444374864,
+  "max_dd": 0.0583616954241605,
+  "prereg": {
+   "pass_now": false,
+   "decision_at_days": 90,
+   "verdict": "PENDING",
+   "stop_rule_hit_day": null
+  }
+ }
+}

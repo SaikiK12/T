@@ -1,0 +1,9 @@
+13:44:47 PREREG verified 157849e9aecb; 13 inputs match; 164 minute files match their provenance
+13:44:48 parity with R354: price 87/87, price0 87/87
+13:44:48 T+1m: net1 +52.0 bp a hop, 1.46 bp/day t 4.44, gain +21.1 bp t 3.80
+13:44:48 T+2m: net1 +52.1 bp a hop, 1.46 bp/day t 4.41, gain +21.2 bp t 4.06
+13:44:48 T+5m: net1 +50.5 bp a hop, 1.41 bp/day t 4.08, gain +19.6 bp t 3.99
+13:44:48 T+15m: net1 +44.1 bp a hop, 1.24 bp/day t 3.75, gain +13.3 bp t 2.79
+13:44:48 T+30m: net1 +51.9 bp a hop, 1.45 bp/day t 4.43, gain +21.1 bp t 5.13
+13:44:48 T+60m: net1 +30.9 bp a hop, 0.86 bp/day t 3.24
+13:44:48 verdict PASS {'t1': True, 'day2_positive': True, 'halves_positive': True, 'without_best_coin_positive': True, 'gain_t': True}; family {'bonferroni_t': 2.33, 'gain_t_at_or_above': 5, 'gain_t2': 5, 'four_checks': 5, 'exits': 5}

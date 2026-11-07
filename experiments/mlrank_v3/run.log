@@ -1,0 +1,17 @@
+18:27:26 PREREG verified 7f7118adc74c; 18 inputs match
+18:27:28 columns that differ v1/v2: {'oi_usd': 165441, 'top_ls_pos': 142087, 'ls_acc': 164021, 'taker_ls': 156742}
+18:27:49 fit ridge h1 clean
+18:28:22 fit ic h1 clean
+18:29:06 fit gbm h1 clean
+18:34:35 fit ridge h7 clean
+18:34:45 fit ic h7 clean
+18:35:02 fit gbm h7 clean
+18:39:00 ridge h1 clean: disc net +1.80 bp/day t 0.2401405200604039, valid net -14.76 t -1.333524926508794
+18:39:00 ic h1 clean: disc net +1.93 bp/day t 0.2382709930176216, valid net -22.30 t -1.9018178923202995
+18:39:00 gbm h1 clean: disc net +10.68 bp/day t 1.5611079358790338, valid net -0.64 t -0.0661008686008114
+18:39:00 ridge h7 clean: disc net +6.37 bp/day t 0.8730735229999, valid net -25.74 t -1.4836894776046063
+18:39:00 ic h7 clean: disc net -0.10 bp/day t -0.013836237458855576, valid net -26.70 t -1.5471291399185443
+18:39:00 gbm h7 clean: disc net +11.93 bp/day t 1.937662507425267, valid net -16.53 t -1.0195928780876968
+18:39:00 pick gbm h7 clean, passes False {'t_1x': False, 'mean_2x': False, 'wo_best': False}; verdict NULL
+18:39:12 presence v1 disc: net 23.474211400895197 bp/day t 5.6610891649200035, long 66.97584051275604 short 118.26931830000831 bp/period
+18:39:12 presence v1 valid: net 50.278952459005936 bp/day t 4.473402933045505, long 202.59182509953078 short 170.91811910881594 bp/period

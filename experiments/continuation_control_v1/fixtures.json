@@ -1,0 +1,481 @@
+{
+  "base_per_unit": "1/4",
+  "best_level_capacity_base": "1",
+  "capital": [
+    "5000",
+    "5000"
+  ],
+  "capital_equivalence": "Declared1:1 simulated USDT/USDC quote parity; no collateral transfers/pooling. Each branch is an alternative world with the same total10000.",
+  "controller_variants": 4,
+  "exit_capital_buffer": "0.01",
+  "expected_counts": {
+    "alternative_world_paths": 120,
+    "fixed_tier_replays": 96,
+    "reference_plans": 32,
+    "root_dynamic_policy_enumerations": 7000,
+    "scenarios": 8
+  },
+  "fee_fraction": [
+    "0.001",
+    "0.0004"
+  ],
+  "horizon": 3,
+  "input_scope": "invented_scenario_fixture",
+  "inventory_units": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "maximum_loss_fraction": "0.02",
+  "minimum_base": "0.01",
+  "minimum_notional": "1",
+  "missing_for_market": [
+    "causally_calibrated_transition_law",
+    "forecast_error_and_uncertainty_calibration",
+    "first_seen_executable_depth_after_latency",
+    "source_bound_owner_fees_permissions_sessions",
+    "event_bound_funding_cash_and_units",
+    "contract_lot_and_decimal_epochs",
+    "margin_and_intraperiod_liquidation_rules",
+    "independent_new_prospective_protocol_and_on_time_observations"
+  ],
+  "modes": [
+    "dynamic",
+    "myopic",
+    "cash",
+    "hold_long"
+  ],
+  "new_market_strategy_runs": 0,
+  "new_prospective_paper_days": 0,
+  "planning_cost_multiple": 2,
+  "quote_half_spread": "0.02",
+  "registered_diagnostic_trials": 32,
+  "replay_cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "root_reference": [
+    "100",
+    "100"
+  ],
+  "scenarios": [
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "zero_edge"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0.4",
+            "0.4",
+            "0.4"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "persistent_carry"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0",
+            "0.4",
+            "0.4"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "closed",
+              "closed"
+            ],
+            [
+              "closed",
+              "closed"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "delayed_closure"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "1",
+            "-0.1",
+            "1"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "funding_reversal"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100.8",
+            "100.4",
+            "100"
+          ],
+          "probability": "1/2",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        },
+        {
+          "lighter_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "99.2",
+            "99.6",
+            "100"
+          ],
+          "probability": "1/2",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "basis_reversion"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0.4",
+            "0.4",
+            "0.4"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "capital": [
+        "10",
+        "9990"
+      ],
+      "id": "unbalanced_capital"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0.4",
+            "0.4",
+            "0.4"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "999999/1000000",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        },
+        {
+          "lighter_funding_quote_per_base": [
+            "0.4",
+            "0.4",
+            "0.4"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            null,
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1/1000000",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ]
+          ]
+        }
+      ],
+      "id": "unknown_funding_tail"
+    },
+    {
+      "branches": [
+        {
+          "lighter_funding_quote_per_base": [
+            "0.6",
+            "0.6",
+            "0.6"
+          ],
+          "lighter_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "mexc_funding_quote_per_base": [
+            "0",
+            "0",
+            "0"
+          ],
+          "mexc_reference": [
+            "100",
+            "100",
+            "100"
+          ],
+          "probability": "1",
+          "sessions": [
+            [
+              "open",
+              "open"
+            ],
+            [
+              "open",
+              "open"
+            ],
+            [
+              "closed",
+              "closed"
+            ]
+          ]
+        }
+      ],
+      "id": "terminal_session_closed"
+    }
+  ],
+  "scope": "Constructed deterministic/finite-branch engineering controls, not sampled/forecast market returns. Some signs and boundary behavior are known by construction."
+}

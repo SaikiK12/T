@@ -1,0 +1,33 @@
+{
+ "source": "history.deribit.com get_last_trades_by_instrument_and_time (public)",
+ "window_utc": "Fri 00:00-12:00",
+ "fetched_utc": "2026-11-05T20:56:20Z",
+ "coins": {
+  "BTC": {
+   "fridays": 299,
+   "picked": 299,
+   "no_strike": 0,
+   "trades": 40693,
+   "requests": 598
+  },
+  "ETH": {
+   "fridays": 299,
+   "picked": 299,
+   "no_strike": 0,
+   "trades": 32960,
+   "requests": 598
+  }
+ },
+ "file_hashes": [
+  {
+   "path": "data/deribit_trades/BTC/atm_windows.parquet",
+   "sha256": "698bfc07d080f91349fb872c4514b95c9ae6dbab984a0f7588e79270d0ac751d",
+   "rows": 40693
+  },
+  {
+   "path": "data/deribit_trades/ETH/atm_windows.parquet",
+   "sha256": "8097dddb02054702eff57da847c7585c733a6cc3cf2da92d628378e3e16265f7",
+   "rows": 32960
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "organization": "Coinbase",
+  "publication_date": "undated API",
+  "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BIP-20DEC30-CDE/candles?start=1786316400&end=1787572800&granularity=ONE_HOUR&limit=350",
+  "started_utc": "2026-11-07T14:57:34.817801+00:00",
+  "requested_start": 1786316400,
+  "requested_end": 1787572800,
+  "cap": 65536,
+  "scope": "counts/schema/time bounds only; no OHLC values summarized",
+  "auth": false,
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "content_type": "application/json; charset=utf-8",
+  "counts_only": {
+    "rows": 300,
+    "unique_times": 300,
+    "oldest": 1786489200,
+    "newest": 1787572800,
+    "fields": [
+      "close",
+      "high",
+      "low",
+      "open",
+      "start",
+      "volume"
+    ]
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T14:57:35.197111+00:00",
+  "bytes_read": 31671,
+  "response_complete": true,
+  "charged_bytes": 31671,
+  "sha256": "76dbcf7fcf330edad77ab9d6c05d128a3b9237cda598d63f92f69f3bc7c283b1",
+  "body": "btc0.body.gz",
+  "error": null
+}

@@ -1,0 +1,37 @@
+{
+  "anchor": {
+    "mono_ns": 10000000000,
+    "utc_ns": 1790000000000000000
+  },
+  "risk_forecast": {
+    "block_days": [
+      7,
+      14
+    ],
+    "confidence_repetitions": 2000,
+    "end": "2026-10-01T00:00:00Z",
+    "ewma_half_life_hours": 72,
+    "ewma_window_hours": 168,
+    "mean_windows_days": [
+      1,
+      7,
+      30
+    ],
+    "models": [
+      "mean1",
+      "mean7",
+      "mean30",
+      "ewma72"
+    ],
+    "null_ar1": 0.6,
+    "null_paths": 100,
+    "null_repetitions": 400,
+    "null_seed": 1320,
+    "preselected_reference": "mean7",
+    "seed": 320,
+    "start": "2025-04-01T00:00:00Z",
+    "validation_start": "2026-01-01T00:00:00Z",
+    "winner_selection": false
+  },
+  "scope": "Invented paper lifecycle reused verbatim from frozenR319;historical riskcomponent only. No actual orders,fills,propaccount or strategy PnL."
+}

@@ -1,0 +1,43 @@
+{
+  "accessed_date_utc": "2026-11-07",
+  "organization": "Coinbase",
+  "publication_date": "undated content-hashed deployed frontend",
+  "transport": "ordinary urllib default User-Agent; no auth/cookies/custom geographic routing; normal website locale redirect",
+  "sources": [
+    {
+      "url": "https://www.coinbase.com/market-data/derivatives",
+      "status": 200,
+      "client_body_bytes": 633578,
+      "sha256": "63ae1db02dd5f9bfb839435ba3107ae9cfc2a0d8676cad481752e45bb72cce88",
+      "read_scope": "relevant native script route/adapter/percentage formatter and export only; no funding values evaluated"
+    },
+    {
+      "url": "https://www.coinbase.com/assets/sw-cache/e_DUioEnG0.js",
+      "status": 200,
+      "client_body_bytes": 456418,
+      "sha256": "992c1ac547760fd6e71363677b9847f8eebd6500df9ca4b40c8a069fa2500ac1",
+      "read_scope": "relevant native script route/adapter/percentage formatter and export only; no funding values evaluated"
+    },
+    {
+      "url": "https://www.coinbase.com/assets/sw-cache/c_CXQJLpmP.js",
+      "status": 200,
+      "client_body_bytes": 95398,
+      "sha256": "ebdd653b1b21e1cc82a3d143f70f84e313de92a573b4b9888ee1f8f52f6a818f",
+      "read_scope": "relevant native script route/adapter/percentage formatter and export only; no funding values evaluated"
+    }
+  ],
+  "new_market_history_requests": 0,
+  "financial_statistics_computed": false,
+  "qualification": "official dashboard display convention for the MDA CDE funding_rate field is a decimal fraction per hour; this does not certify the distinct Advanced field or broker ledger",
+  "evidence_fragments": {
+    "CDE_adapter": "parseFloat(e.funding_rate); value:t; annualizedValue:t*8760",
+    "percentage_export": "Funding Rate (%): e.value*100; Annualized Rate (%): e.annualizedValue*100",
+    "formatter": "Intl.NumberFormat style percent; current-rate 4 digits / annualized 2 digits"
+  },
+  "limits": [
+    "web display adapter is source code, not a clearing statement",
+    "Advanced REST rate scale/fixing linkage is a distinct unverified mapping",
+    "historical mark base unavailable in preserved MDA bodies",
+    "current expiry metadata and SID reference2089 conflict with August exchange rulebook no-expiry wording"
+  ]
+}

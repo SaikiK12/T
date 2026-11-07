@@ -1,0 +1,50 @@
+{
+ "lane": "settlehop_exit_v1",
+ "registry": "R356",
+ "trials": 5,
+ "primary_k": 5,
+ "decision": {
+  "checks": {
+   "t1": true,
+   "day2_positive": true,
+   "halves_positive": true,
+   "without_best_coin_positive": true,
+   "gain_t": true
+  },
+  "verdict": "PASS"
+ },
+ "verdict": "PASS",
+ "family": {
+  "bonferroni_t": 2.33,
+  "gain_t_at_or_above": 5,
+  "gain_t2": 5,
+  "four_checks": 5,
+  "exits": 5
+ },
+ "parity": [
+  87,
+  87
+ ],
+ "costs_bp": {
+  "mexc": 8.5,
+  "binance": 8.5,
+  "gate": 7.0,
+  "dydx": 7.0
+ },
+ "inputs": {
+  "scripts/run_settlehop_exit.py": "f81769a74f97074ea32d44ee927bd342272672157cebe81be9d39f8c8cd47e44",
+  "scripts/run_settlehop.py": "009145b050e50f4394499e318737fe4ef86a00ef21136fb327658d4072c86829",
+  "scripts/settlehop_rule.py": "bea20ba88c511261038f9e1e4fadca258cd37349ad9fc9f4b911f5feb4ca146c",
+  "scripts/fetch_settlehop_1m.py": "2827686d38b2e90cd9d24bbfca05d15a666771a7ad476b6db0d582dae44c2730",
+  "tests/test_settlehop_exit.py": "85f95bbbb9c8bfbaee010e2187b9280032b9819db97e217ca3c8a271b4761c71",
+  "tests/test_settlehop.py": "c1a56b86965711c6dd8316582392267a5a7a664bcf0241564005b8935f77cc43",
+  "experiments/settlehop_pred_v1/results/hops.csv.gz": "d1e6d7f0c515b451986b2567c3bef5929f8289413a1ea0738a9054780bf8f71e",
+  "experiments/settlehop_pred_v1/results/daily.csv.gz": "f0bcff9a2cca809f8d62a4df74b4fbb6bc5cfadb75fa549fa646cb87d559f1a9",
+  "experiments/settlehop_v1/symbols.csv": "aa34e5e4586bdc5f2adf4bb744cf1a6c78f6e72627565e950763465a2e4c94b3",
+  "docs/provenance/settlehop_1m.json": "968b3a1b805bf72729282c21623179651d7e99c842303d30ae8cfb4b931631f2",
+  "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34",
+  "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+  "docs/GATES.md": "e7dd02fa43747598959838677cb413578ce8f7cfee59704bd20e4fdfca15a926"
+ },
+ "minute_files": 164
+}

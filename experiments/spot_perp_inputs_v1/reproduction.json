@@ -1,0 +1,13 @@
+{
+  "artifacts_identical": {
+    "audit.json": true,
+    "journals.json.gz": true,
+    "observations.json.gz": true,
+    "results.json": true
+  },
+  "command": ".venv/bin/python -m lab account --spot-perp --out /fresh/output",
+  "new_market_requests": 0,
+  "outputs_never_overwritten": true,
+  "registry_id": "R324",
+  "sealed_data_reused": true
+}

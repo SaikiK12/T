@@ -1,0 +1,46 @@
+{
+  "additional_browser_reference": [
+    {
+      "received_scope": "Public Standard taker-delay context only; no account fee lookup or latency guarantee.",
+      "url": "https://apidocs.lighter.xyz/docs/account-types",
+      "version": "unversioned; inspected 2026-10-24"
+    }
+  ],
+  "contract_notes": {
+    "lighter_market_stats": "index_price with its own envelope publication clock; funding forecasts are not settlements.",
+    "lighter_ticker": "Full one-level BBO, last_updated_at microseconds per official example; nonce gaps are not incremental continuity.",
+    "mexc_depth": "Current depth page documents cts matching-engine production time but not the existing record_tape full-mode command; only full-channel payloads are admitted. Row interpretation reuses the earlier bounded MEXC decoder audit.",
+    "mexc_fair": "WS data.price plus envelope ts, not REST fairPrice."
+  },
+  "received_utc": "2026-10-24T16:35:19Z",
+  "requests": 4,
+  "response_bytes": 476830,
+  "scope": "Official WS field/clock declarations only, not full API mastery, session calendars, fills or private institutional strategies.",
+  "sources": [
+    {
+      "bytes": 28594,
+      "sha256": "04641ea47a253403ed232abae4084b0de8b60834a549e799ed3550e517319e4e",
+      "status": 200,
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/order-book-depth"
+    },
+    {
+      "bytes": 27592,
+      "sha256": "7f63dc76a70965f0ea792e33a9e34874e2b78a304cafb71b7fdba1b626d6d04f",
+      "status": 200,
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/fair-price"
+    },
+    {
+      "bytes": 19859,
+      "sha256": "018394473ca557b6fccd838a4a7928d15bfb3292ea801fd88b42e2763c092dc3",
+      "status": 200,
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/incremental-order-book-maintenance-mechanism"
+    },
+    {
+      "bytes": 400785,
+      "sha256": "ceed2daf60f7dc84e93b4de47f307988d4d36b7106ceb4b13f1972f6df17b305",
+      "status": 200,
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference"
+    }
+  ],
+  "version": "Unversioned official pages; exact retrieved HTML body SHA-256 and receipt date retained."
+}

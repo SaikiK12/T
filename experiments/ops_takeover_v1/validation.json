@@ -1,0 +1,88 @@
+{
+  "full_suite": {
+    "started_utc": "2026-11-07T03:40:20.192739+00:00",
+    "command": [
+      "/workspace/T/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-t",
+      "."
+    ],
+    "tested_sha256": {
+      "lab/runtime_takeover.py": "588cd76db00acdf3c9784d061c4945826c7b19a5a26b9c9269906e9bd8bb443c",
+      "lab/runtime_transport.py": "34231495bb734763d861b034fa2e826b4f751956c92af5619161f23edad513f4",
+      "scripts/quant_runtime.py": "30a9e2b2e002aef6f50db6a9e76cd29e63795f0c49228b90150158059039f4ae",
+      "tests/test_runtime_takeover.py": "57ccd0732c22757cff6610809d4c17669c133f28f6270aa1b3ea148cf24e3ab5",
+      ".github/workflows/quant-runtime.yml": "dbe93a5be0e69c3f0bb0b35ee05cbd151cca7ddb70c757637f909eae1c7ef5b1",
+      "experiments/ops_takeover_v1/config.json": "e1c39dce42c89c15b06eb97e49059f7c607e3225bb9f603bcbd34331ce03629f"
+    },
+    "thread_limits": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1"
+    },
+    "completed_utc": "2026-11-07T03:46:05.485501+00:00",
+    "returncode": 0,
+    "log_sha256": "ccbfee748366810d030a0479b451bb4eae7e6c749be3a08607c6af7cab862ffa"
+  },
+  "tests": 2506,
+  "skipped": 3,
+  "seconds": "341.271",
+  "targeted_tests": 31,
+  "prior_successful_suites": [
+    {
+      "tests": 2498,
+      "note": "superseded by window/lock/child admission guards"
+    },
+    {
+      "tests": 2501,
+      "note": "superseded by durable before-HTTP checkpoint/cut-journal guards"
+    }
+  ],
+  "no_test_suppressed": true,
+  "workflow_yaml": "Parsed; unique ids; explicit owner-only manual trigger and global noncancelling concurrency",
+  "closed_inputs": 68,
+  "predictive_trials": 0,
+  "program_trials": 9784345,
+  "prereg_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
+  "old_rounds_prefix_sha256": "527b73000fb537cf13b6afca6ca3f7c956b83f2411c83b45dbc0b6a326350c24",
+  "native_R417_R418_R419_inputs": "exact",
+  "new_live_ticks_before_freeze": 0,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "integrity": {
+    "errors": 0,
+    "legacy_warnings": 14,
+    "exit_code": 0
+  },
+  "catalog": {
+    "matches_staged_index": true,
+    "exit_code": 0
+  },
+  "deployment": {
+    "receipt": "experiments/ops_takeover_v1/deployment.json",
+    "first_workflow": 42337055267,
+    "state_commit": "686be7fb3982f4d4170bb970a212728cb1428540",
+    "verified_files": 37,
+    "status": "first cycle and durable publication verified; individual source/research blockers remain"
+  },
+  "post_activation_evidence_validation": {
+    "tests": 2506,
+    "skipped": 3,
+    "seconds": "413.442",
+    "result": "OK",
+    "log_sha256": "118742c28d29eb280f81ffc36913841c92e708cd754b389d7184490ab301acac",
+    "handover_tests": 12,
+    "integrity_errors": 0,
+    "legacy_warnings": 14,
+    "catalog": "matches staged index",
+    "frozen_code_changed": false,
+    "native_R419_PnL_measured": false
+  }
+}

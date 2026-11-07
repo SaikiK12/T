@@ -1,0 +1,17 @@
+{
+  "changes_only": [
+    "Decimal source depth values become exactdecimal strings at frozen Real/string decoder boundary. Boolean/negative/nonfinite/row/unit checks retained.",
+    "Explicit baseSizePrecision=0 is admitted as documented nonnegative MINIMUM lower bound only, not lot step or zero trade size. Unknown/negative/bool stillfail."
+  ],
+  "historical_budget_unchanged": "7757/8000requests,reported229.85/250MiB spent. Original newcurrentR325 budget remains22GETs/13970acceptedbodybytes; no second acquisition allowance.",
+  "multiplicity": "R325/R326 one input-compatibility decision group;72attempted control cells/216tier slots on SAME9rawpairs, not18independent samples.",
+  "parent_failure_results_sha256": "51ad59e1d44af594355dcda85d3247d1a2351fc8693526c626aa54995638c90b",
+  "parent_prereg": "experiments/spot_perp_costs_v1/PREREG.md",
+  "parent_prereg_sha256": "8d713558edb17362ed00be6efb1f25cf778201e75c5b731004c0f4072057868c",
+  "predictive_trials_added": 0,
+  "program_trials_entering": 9478970,
+  "registry_id": "R326",
+  "same_raw_manifest": "experiments/spot_perp_costs_v1/data_inputs.json",
+  "scope": "Same-data conditional quote friction repair, not selected market policy or calibration. No positive net market return or new prospective paper evidence inferred.",
+  "unchanged": "All9pairs/36controls/108tiers, q/size/cost/capital/rates/latency/skew/permission/source/admission/funding guards; source/actuallot/tick units unverified, public fees not ownerfees. Unknown funding still prevents fullNAV. No source/market/RPC/history/account call."
+}

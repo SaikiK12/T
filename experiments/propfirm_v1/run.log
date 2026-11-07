@@ -1,0 +1,129 @@
+09:57:11 prereg sha d4314f64ef23
+09:57:11 own capital
+                     ann  sharpe  max_dd  kelly_scale  scale_dd10  kelly_frac_at_dd10  ann_at_dd10
+flowA_hold        0.8289  1.0524  0.4712       1.3391      0.2122              0.1585       0.1759
+flowA_hold_top10  1.3360  1.0787  0.8200       0.8729      0.1219              0.1397       0.1629
+tvc_hold          0.7135  2.4918  0.1594       8.7208      0.6275              0.0720       0.4477
+flowA_ins         0.4258  1.5372  0.2681       5.5528      0.3730              0.0672       0.1588
+tvc_ins           0.6927  1.1770  0.5979       2.0011      0.1673              0.0836       0.1159
+carry_ins         0.1047  5.4377  0.0081     282.6925     12.3079              0.0435       1.2881
+zero_flowA_hold  -0.0000 -0.0000  0.8943      -0.0000      0.1118                 NaN      -0.0000
+zero_tvc_hold    -0.0000 -0.0000  0.2834      -0.0000      0.3528                 NaN      -0.0000
+09:57:12 flowA_hold         hyro_2step    scale 0.2   pass 0.634 paid 0.603 payout      6155 ev       nan breakeven fee     15494
+09:57:13 flowA_hold         hyro_1step    scale 0.15  pass 0.668 paid 0.620 payout      4640 ev       nan breakeven fee     12204
+09:57:13 flowA_hold         ftmo_2step    scale 0.2   pass 0.667 paid 0.617 payout      6264 ev      6027 breakeven fee     16355
+09:57:14 flowA_hold         ftmo_1step    scale 0.2   pass 0.555 paid 0.484 payout      4520 ev       nan breakeven fee      4520
+09:57:14 flowA_hold         cft_1phase    scale 0.15  pass 0.459 paid 0.404 payout      2999 ev       nan breakeven fee      2999
+09:57:15 flowA_hold         cft_2phase    scale 0.2   pass 0.708 paid 0.652 payout      6667 ev       nan breakeven fee      6667
+09:57:16 flowA_hold         breakout_pro  scale 0.2   pass 0.471 paid 0.375 payout      3180 ev       nan breakeven fee      3180
+09:57:17 flowA_hold_top10   hyro_2step    scale 0.1   pass 0.633 paid 0.605 payout      5116 ev       nan breakeven fee     12951
+09:57:17 flowA_hold_top10   hyro_1step    scale 0.1   pass 0.653 paid 0.591 payout      4698 ev       nan breakeven fee     11493
+09:57:18 flowA_hold_top10   ftmo_2step    scale 0.2   pass 0.531 paid 0.449 payout      6762 ev      6421 breakeven fee     12278
+09:57:18 flowA_hold_top10   ftmo_1step    scale 0.1   pass 0.580 paid 0.515 payout      4141 ev       nan breakeven fee      4141
+09:57:19 flowA_hold_top10   cft_1phase    scale 0.15  pass 0.415 paid 0.321 payout      3174 ev       nan breakeven fee      3174
+09:57:19 flowA_hold_top10   cft_2phase    scale 0.2   pass 0.564 paid 0.474 payout      7194 ev       nan breakeven fee      7194
+09:57:20 flowA_hold_top10   breakout_pro  scale 0.1   pass 0.488 paid 0.410 payout      3132 ev       nan breakeven fee      3132
+09:57:21 tvc_hold           hyro_2step    scale 0.5   pass 0.954 paid 0.943 payout     14662 ev       nan breakeven fee    258363
+09:57:21 tvc_hold           hyro_1step    scale 0.3   pass 0.934 paid 0.925 payout      8644 ev       nan breakeven fee    116033
+09:57:23 tvc_hold           ftmo_2step    scale 0.75  pass 0.879 paid 0.846 payout     18828 ev     18732 breakeven fee    121861
+09:57:23 tvc_hold           ftmo_1step    scale 0.5   pass 0.931 paid 0.916 payout     14140 ev       nan breakeven fee     14140
+09:57:24 tvc_hold           cft_1phase    scale 0.5   pass 0.712 paid 0.663 payout      9572 ev       nan breakeven fee      9572
+09:57:25 tvc_hold           cft_2phase    scale 0.75  pass 0.882 paid 0.848 payout     19072 ev       nan breakeven fee     19072
+09:57:26 tvc_hold           breakout_pro  scale 0.5   pass 0.862 paid 0.802 payout     11353 ev       nan breakeven fee     11353
+09:57:27 flowA_ins          hyro_2step    scale 0.5   pass 0.784 paid 0.763 payout      8120 ev       nan breakeven fee     34263
+09:57:28 flowA_ins          hyro_1step    scale 0.5   pass 0.744 paid 0.688 payout      6913 ev       nan breakeven fee     22173
+09:57:29 flowA_ins          ftmo_2step    scale 0.75  pass 0.681 paid 0.615 payout      9327 ev      9088 breakeven fee     24241
+09:57:29 flowA_ins          ftmo_1step    scale 0.5   pass 0.709 paid 0.655 payout      6543 ev       nan breakeven fee      6543
+09:57:30 flowA_ins          cft_1phase    scale 0.5   pass 0.556 paid 0.491 payout      4750 ev       nan breakeven fee      4750
+09:57:31 flowA_ins          cft_2phase    scale 0.75  pass 0.703 paid 0.635 payout      9742 ev       nan breakeven fee      9742
+09:57:31 flowA_ins          breakout_pro  scale 0.5   pass 0.613 paid 0.529 payout      4926 ev       nan breakeven fee      4926
+09:57:32 tvc_ins            hyro_2step    scale 0.3   pass 0.610 paid 0.572 payout      6398 ev       nan breakeven fee     14931
+09:57:33 tvc_ins            hyro_1step    scale 0.2   pass 0.718 paid 0.668 payout      5055 ev       nan breakeven fee     15227
+09:57:34 tvc_ins            ftmo_2step    scale 0.3   pass 0.680 paid 0.625 payout      7063 ev      6831 breakeven fee     18835
+09:57:34 tvc_ins            ftmo_1step    scale 0.2   pass 0.652 paid 0.604 payout      4424 ev       nan breakeven fee      4424
+09:57:35 tvc_ins            cft_1phase    scale 0.2   pass 0.551 paid 0.497 payout      3640 ev       nan breakeven fee      3640
+09:57:35 tvc_ins            cft_2phase    scale 0.3   pass 0.708 paid 0.653 payout      7366 ev       nan breakeven fee      7366
+09:57:36 tvc_ins            breakout_pro  scale 0.2   pass 0.549 paid 0.480 payout      3396 ev       nan breakeven fee      3396
+09:57:37 carry_ins          hyro_2step    scale 2     pass 0.955 paid 0.955 payout      7929 ev       nan breakeven fee    175216
+09:57:38 carry_ins          hyro_1step    scale 2     pass 0.957 paid 0.957 payout      7977 ev       nan breakeven fee    184445
+09:57:39 carry_ins          ftmo_2step    scale 2     pass 0.955 paid 0.955 payout      7990 ev      7962 breakeven fee    177557
+09:57:39 carry_ins          ftmo_1step    scale 2     pass 0.957 paid 0.957 payout      7933 ev       nan breakeven fee      7933
+09:57:40 carry_ins          cft_1phase    scale 2     pass 0.957 paid 0.957 payout      7933 ev       nan breakeven fee      7933
+09:57:41 carry_ins          cft_2phase    scale 2     pass 0.981 paid 0.980 payout      8202 ev       nan breakeven fee      8202
+09:57:41 carry_ins          breakout_pro  scale 2     pass 0.915 paid 0.915 payout      7611 ev       nan breakeven fee      7611
+09:57:42 zero_flowA_hold    hyro_2step    scale 0.3   pass 0.214 paid 0.174 payout      1595 ev       nan breakeven fee      1931
+09:57:43 zero_flowA_hold    hyro_1step    scale 0.2   pass 0.313 paid 0.251 payout      1455 ev       nan breakeven fee      1943
+09:57:44 zero_flowA_hold    ftmo_2step    scale 0.3   pass 0.281 paid 0.205 payout      1863 ev      1370 breakeven fee      2345
+09:57:44 zero_flowA_hold    ftmo_1step    scale 0.2   pass 0.333 paid 0.261 payout      1633 ev       nan breakeven fee      1633
+09:57:45 zero_flowA_hold    cft_1phase    scale 0.3   pass 0.233 paid 0.140 payout       893 ev       nan breakeven fee       893
+09:57:46 zero_flowA_hold    cft_2phase    scale 0.3   pass 0.322 paid 0.243 payout      2148 ev       nan breakeven fee      2148
+09:57:46 zero_flowA_hold    breakout_pro  scale 0.2   pass 0.247 paid 0.170 payout       948 ev       nan breakeven fee       948
+09:57:46 zero_flowA_hold    topstep_50k   scale 2     pass 0.273 paid 0.057 payout      1025 ev       935 breakeven fee       984
+09:57:48 zero_tvc_hold      hyro_2step    scale 0.75  pass 0.295 paid 0.245 payout      2129 ev       nan breakeven fee      2821
+09:57:48 zero_tvc_hold      hyro_1step    scale 0.5   pass 0.365 paid 0.303 payout      1781 ev       nan breakeven fee      2557
+09:57:49 zero_tvc_hold      ftmo_2step    scale 0.75  pass 0.322 paid 0.247 payout      2153 ev      1686 breakeven fee      2859
+09:57:49 zero_tvc_hold      ftmo_1step    scale 0.5   pass 0.315 paid 0.260 payout      1557 ev       nan breakeven fee      1557
+09:57:50 zero_tvc_hold      cft_1phase    scale 0.75  pass 0.236 paid 0.145 payout      1030 ev       nan breakeven fee      1030
+09:57:51 zero_tvc_hold      cft_2phase    scale 0.75  pass 0.354 paid 0.273 payout      2443 ev       nan breakeven fee      2443
+09:57:51 zero_tvc_hold      breakout_pro  scale 0.5   pass 0.234 paid 0.173 payout       928 ev       nan breakeven fee       928
+09:57:52 zero_tvc_hold      topstep_50k   scale 0.75  pass 0.305 paid 0.164 payout       551 ev       457 breakeven fee       506
+09:57:52 
+          stream         firm   fee  scale  p_pass  p_paid  days_to_pass  fail_daily  fail_dd  fail_time  exp_payout        ev  breakeven_fee  payout_if_passed
+      flowA_hold   hyro_2step   NaN   0.20   0.634   0.603         192.0           0     1115        349    6154.987       NaN      15493.989          9708.182
+      flowA_hold   hyro_1step   NaN   0.15   0.668   0.620         141.0           0     1006        321    4640.410       NaN      12203.576          6944.122
+      flowA_hold   ftmo_2step 620.0   0.20   0.668   0.617         174.5           0     1079        251    6264.052  6026.592      16355.228          9384.348
+      flowA_hold   ftmo_1step   NaN   0.20   0.555   0.484          85.0         826      934         20    4519.877       NaN       4519.877          8143.922
+      flowA_hold   cft_1phase   NaN   0.15   0.459   0.404         112.0           0     2156          7    2999.445       NaN       2999.445          6531.182
+      flowA_hold   cft_2phase   NaN   0.20   0.708   0.652         151.0           0     1058        111    6667.198       NaN       6667.198          9420.272
+      flowA_hold breakout_pro   NaN   0.20   0.471   0.375         101.0         811     1263         42    3180.054       NaN       3180.054          6751.707
+flowA_hold_top10   hyro_2step   NaN   0.10   0.633   0.605         232.0           0      941        527    5115.748       NaN      12951.262          8081.751
+flowA_hold_top10   hyro_1step   NaN   0.10   0.653   0.591         123.0           0     1212        176    4697.628       NaN      11492.667          7193.917
+flowA_hold_top10   ftmo_2step 620.0   0.20   0.531   0.449          76.0         701     1173          2    6762.297  6420.832      12278.343         12735.023
+flowA_hold_top10   ftmo_1step   NaN   0.10   0.580   0.515         115.0        1052      564         63    4140.682       NaN       4140.682          7136.030
+flowA_hold_top10   cft_1phase   NaN   0.15   0.416   0.321          48.0         386     1952          0    3174.170       NaN       3174.170          7639.397
+flowA_hold_top10   cft_2phase   NaN   0.20   0.564   0.474          64.0         600     1145          0    7194.347       NaN       7194.347         12761.592
+flowA_hold_top10 breakout_pro   NaN   0.10   0.488   0.410         134.0        1040      894        114    3131.539       NaN       3131.539          6417.087
+        tvc_hold   hyro_2step   NaN   0.50   0.954   0.943         136.0           0      150         33   14662.108       NaN     258363.130         15365.059
+        tvc_hold   hyro_1step   NaN   0.30   0.934   0.926         145.0           0       82        181    8644.470       NaN     116033.151          9252.844
+        tvc_hold   ftmo_2step 620.0   0.75   0.879   0.846          81.0           0      481          3   18827.565 18731.775     121861.265         21419.301
+        tvc_hold   ftmo_1step   NaN   0.50   0.932   0.916          81.0           0      264         10   14140.117       NaN      14140.117         15179.943
+        tvc_hold   cft_1phase   NaN   0.50   0.712   0.663          67.0           0     1151          0    9572.496       NaN       9572.496         13439.797
+        tvc_hold   cft_2phase   NaN   0.75   0.882   0.848          69.0           0      470          0   19071.512       NaN      19071.512         21610.779
+        tvc_hold breakout_pro   NaN   0.50   0.862   0.802          96.0           0      525         27   11353.425       NaN      11353.425         13171.027
+       flowA_ins   hyro_2step   NaN   0.50   0.784   0.763         213.0           0      500        363    8120.422       NaN      34263.384         10354.379
+       flowA_ins   hyro_1step   NaN   0.50   0.744   0.688         105.0         259      669         95    6912.533       NaN      22173.322          9287.918
+       flowA_ins   ftmo_2step 620.0   0.75   0.681   0.615         108.0         554      712         11    9326.596  9088.051      24240.665         13700.471
+       flowA_ins   ftmo_1step   NaN   0.50   0.709   0.655         101.0         763      353         47    6543.244       NaN       6543.244          9225.582
+       flowA_ins   cft_1phase   NaN   0.50   0.556   0.491          83.0         196     1578          2    4750.058       NaN       4750.058          8543.269
+       flowA_ins   cft_2phase   NaN   0.75   0.702   0.635          93.0         489      696          5    9741.870       NaN       9741.870         13867.430
+       flowA_ins breakout_pro   NaN   0.50   0.613   0.529         117.0         802      679         67    4926.432       NaN       4926.432          8036.593
+         tvc_ins   hyro_2step   NaN   0.30   0.610   0.572         188.0         521      779        261    6398.090       NaN      14931.366         10492.973
+         tvc_ins   hyro_1step   NaN   0.20   0.718   0.668         149.0           0      739        389    5055.228       NaN      15226.589          7040.707
+         tvc_ins   ftmo_2step 620.0   0.30   0.680   0.625         158.0         426      737        117    7063.033  6830.533      18834.756         10386.814
+         tvc_ins   ftmo_1step   NaN   0.20   0.652   0.604         142.0         754      389        247    4424.055       NaN       4424.055          6780.161
+         tvc_ins   cft_1phase   NaN   0.20   0.552   0.497         125.0           0     1762         32    3639.825       NaN       3639.825          6599.865
+         tvc_ins   cft_2phase   NaN   0.30   0.708   0.653         134.0         377      731         61    7366.401       NaN       7366.401         10408.197
+         tvc_ins breakout_pro   NaN   0.20   0.549   0.480         163.0         788      738        277    3395.600       NaN       3395.600          6182.248
+       carry_ins   hyro_2step   NaN   2.00   0.955   0.955         282.0           0        0        180    7928.521       NaN     175215.931          8302.116
+       carry_ins   hyro_1step   NaN   2.00   0.957   0.957         178.0           0        0        172    7977.227       NaN     184444.558          8335.661
+       carry_ins   ftmo_2step 620.0   2.00   0.955   0.955         282.0           0        0        180    7990.066  7962.166     177557.017          8366.561
+       carry_ins   ftmo_1step   NaN   2.00   0.957   0.957         178.0           0        0        172    7933.362       NaN       7933.362          8289.824
+       carry_ins   cft_1phase   NaN   2.00   0.957   0.957         178.0           0        0        172    7933.362       NaN       7933.362          8289.824
+       carry_ins   cft_2phase   NaN   2.00   0.981   0.980         252.0           0        0         77    8201.792       NaN       8201.792          8362.776
+       carry_ins breakout_pro   NaN   2.00   0.915   0.915         207.0           0        0        339    7611.013       NaN       7611.013          8315.775
+ zero_flowA_hold   hyro_2step   NaN   0.30   0.214   0.174         110.0         890     2205         49    1594.688       NaN       1931.200          7451.815
+ zero_flowA_hold   hyro_1step   NaN   0.20   0.313   0.251          95.0         781     1900         66    1455.312       NaN       1943.007          4645.848
+ zero_flowA_hold   ftmo_2step 620.0   0.30   0.281   0.206          93.0         774     2097          5    1863.035  1370.445       2344.915          6630.016
+ zero_flowA_hold   ftmo_1step   NaN   0.20   0.333   0.260          94.0         842     1809         16    1633.455       NaN       1633.455          4901.589
+ zero_flowA_hold   cft_1phase   NaN   0.30   0.233   0.140          34.0         698     2371          0     892.517       NaN        892.517          3834.661
+ zero_flowA_hold   cft_2phase   NaN   0.30   0.322   0.244          75.0         680     2029          2    2147.550       NaN       2147.550          6664.237
+ zero_flowA_hold breakout_pro   NaN   0.20   0.247   0.170         110.0         765     2174         74     948.159       NaN        948.159          3842.591
+ zero_flowA_hold  topstep_50k  49.0   2.00   0.273   0.057           5.0           0     2907          0    1024.987   935.273        984.273          3751.097
+   zero_tvc_hold   hyro_2step   NaN   0.75   0.295   0.245         115.0           0     2786         33    2128.957       NaN       2820.744          7210.691
+   zero_tvc_hold   hyro_1step   NaN   0.50   0.365   0.303         112.0           0     2380        160    1781.488       NaN       2556.854          4880.790
+   zero_tvc_hold   ftmo_2step 620.0   0.75   0.322   0.247         107.0           0     2681         31    2152.966  1686.106       2859.185          6686.230
+   zero_tvc_hold   ftmo_1step   NaN   0.50   0.315   0.260         103.0         994     1701         44    1557.158       NaN       1557.158          4939.438
+   zero_tvc_hold   cft_1phase   NaN   0.75   0.236   0.145          36.0         539     2518          0    1030.454       NaN       1030.454          4370.961
+   zero_tvc_hold   cft_2phase   NaN   0.75   0.354   0.272          90.0           0     2570         12    2443.438       NaN       2443.438          6892.631
+   zero_tvc_hold breakout_pro   NaN   0.50   0.234   0.174         120.0         885     2083         97     928.392       NaN        928.392          3971.733
+   zero_tvc_hold  topstep_50k  49.0   0.75   0.305   0.164          18.0           0     2779          0     551.256   456.773        505.773          1805.916

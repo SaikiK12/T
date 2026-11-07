@@ -1,0 +1,60 @@
+{
+  "R311_R321_unchanged": true,
+  "aliases_old_byte_prefix_preserved": true,
+  "base_commit": "85cba5e4aecfef073d5ff1c59216afdac2946bde",
+  "cli_byte_reproduction": true,
+  "financial_results_unchanged_by_audit_correction": true,
+  "full_test_after_audit": {
+    "log_sha256": "a8c3dd6814b16dc2bb212b6ba8c56a13bfb0eae8e0c77a2bdaa78e6bdce83c22",
+    "seconds": 196.843,
+    "skipped": 2,
+    "state": "PASS",
+    "tests": 1406
+  },
+  "intake": {
+    "aliases": 408,
+    "errors": 0,
+    "method_objects": 408,
+    "provider_entries": 54,
+    "queue_rows": 329,
+    "source_manifests": 20,
+    "warnings": 0
+  },
+  "integrity": {
+    "errors": 0,
+    "frozen": 142,
+    "legacy_warnings": 13,
+    "local_specs": 143,
+    "planned": 1,
+    "rounds": 149
+  },
+  "new_fixed_policies": 6,
+  "new_market_requests": 0,
+  "new_prospective_days": 0,
+  "new_queue_row": "M412",
+  "old_git_paths_unchanged_outside_explicit_mutable_views": 2172,
+  "old_method_objects_preserved": 407,
+  "old_mutable_views_allowed": [
+    "README.md",
+    "docs/PANEL.md",
+    "registry/methods.csv",
+    "registry/methods_aliases.csv",
+    "registry/rounds.csv",
+    "research/intake/README.md",
+    "research/intake/source_methods_20261020.json",
+    "scripts/paper_account.py"
+  ],
+  "old_paths_missing_in_local_checkout": 2,
+  "old_queue_rows_changed": [
+    "M244"
+  ],
+  "old_source_entries_preserved": 19,
+  "old_supplement_entries_preserved": 41,
+  "original_failed_oracle_preserved": true,
+  "original_frozen_research_13files_unchanged": true,
+  "owner100_coverage_unchanged": true,
+  "preservation_scope": "Gitdiff proves nooldtrackedpathoutsideallowedviews changed; not a read/assertionofall sparse/local oldfilecontents. Eightheldrawinputs and13researchcodefiles separately byteverified.",
+  "program_trials": 9478976,
+  "raw_input_files_unchanged": 8,
+  "registry_old_byte_prefix_preserved": true
+}

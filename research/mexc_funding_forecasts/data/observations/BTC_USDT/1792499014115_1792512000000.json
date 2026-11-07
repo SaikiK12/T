@@ -1,0 +1,51 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "collect_cycle_hours": 8,
+  "funding_fair_price": 81532.6,
+  "funding_index_price": 81567.7,
+  "funding_rate_ceiling_fraction": 0.0018,
+  "funding_rate_floor_fraction": -0.0018,
+  "funding_rate_fraction": 2.5e-05,
+  "funding_system_timestamp_ms": 1792499014115,
+  "next_settle_time_ms": 1792512000000,
+  "request_metadata": [
+    {
+      "body_truncated": false,
+      "end_ms": 1792499014418,
+      "end_utc": "2026-10-20T12:23:34.418283Z",
+      "http_status": 200,
+      "kind": "funding",
+      "raw_file": "BTC_USDT_funding.raw",
+      "retained_bytes": 239,
+      "sha256": "390790b659b9f238885cc12a48b4af3b0cbb2486c36aa35bbee294627e5613c2",
+      "start_ms": 1792499012636,
+      "start_utc": "2026-10-20T12:23:32.636374Z",
+      "symbol": "BTC_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/funding_rate/BTC_USDT"
+    },
+    {
+      "body_truncated": false,
+      "end_ms": 1792499016129,
+      "end_utc": "2026-10-20T12:23:36.129818Z",
+      "http_status": 200,
+      "kind": "ticker",
+      "raw_file": "BTC_USDT_ticker.raw",
+      "retained_bytes": 590,
+      "sha256": "864011302097a77c3ee3fcb8644fe109bdf25aeb15acc2bec2a77a41702c4c9b",
+      "start_ms": 1792499014419,
+      "start_utc": "2026-10-20T12:23:34.419675Z",
+      "symbol": "BTC_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/ticker?symbol=BTC_USDT"
+    }
+  ],
+  "symbol": "BTC_USDT",
+  "ticker_best_ask": 81530.2,
+  "ticker_best_bid": 81530.1,
+  "ticker_fair_price": 81532.6,
+  "ticker_index_price": 81567.7,
+  "ticker_last_price": 81530.2,
+  "ticker_trade_age_ms_at_capture_end": 2213,
+  "ticker_trade_timestamp_ms": 1792499013916
+}

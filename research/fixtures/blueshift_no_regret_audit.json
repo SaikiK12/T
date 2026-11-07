@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "source_url": "https://raw.githubusercontent.com/QuantInsti/blueshift-demo-strategies/8dfeb49f615dbd57acf092924fdfc1fb8c336f37/portfolio/no_regret_portfolio.py",
+  "source_commit": "8dfeb49f615dbd57acf092924fdfc1fb8c336f37",
+  "source_sha256": "f78baa1cda81234fdb84d5ba43c1c2abc4369ede4d6a6279f0694ce5316784a9",
+  "source_bytes": 14350,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "execution_scope": [
+    "Advisor.update_performance",
+    "Agent.weighing_function"
+  ],
+  "checks": [
+    {
+      "case": "two_equal_risers",
+      "kind": "accounting_discrepancy",
+      "returns": [
+        0.1,
+        0.1
+      ],
+      "submitted_weights": [
+        0.5,
+        0.5
+      ],
+      "starting_wealth": 100.0,
+      "source_wealth": 105.06249999999997,
+      "simultaneous_target_wealth": 110.00000000000001,
+      "source_lines": "323-344"
+    },
+    {
+      "case": "offsetting_equal_positions",
+      "kind": "accounting_discrepancy",
+      "returns": [
+        0.1,
+        -0.1
+      ],
+      "submitted_weights": [
+        0.5,
+        0.5
+      ],
+      "starting_wealth": 100.0,
+      "source_wealth": 99.93749999999999,
+      "simultaneous_target_wealth": 100.0,
+      "source_lines": "323-344"
+    },
+    {
+      "case": "four_equal_risers",
+      "kind": "accounting_discrepancy",
+      "returns": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "submitted_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "starting_wealth": 100.0,
+      "source_wealth": 102.52353530883794,
+      "simultaneous_target_wealth": 110.00000000000001,
+      "source_lines": "323-344"
+    },
+    {
+      "case": "flat_wealth_resets_prior_weights",
+      "kind": "algorithm_identity",
+      "previous_weights": [
+        0.9,
+        0.1
+      ],
+      "source_weights": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "interpretation": "Custom normalized exponential scores; equal wealth resets to equal weights. A multiplicative Hedge update with equal rewards preserves prior weights. This difference alone is not evidence of a defect or loss.",
+      "source_lines": "245-288"
+    },
+    {
+      "case": "method0_flat_history",
+      "kind": "numeric_degeneracy",
+      "method": 0,
+      "source_weights": {
+        "a": null,
+        "b": null
+      },
+      "nonfinite_keys": [
+        "a",
+        "b"
+      ],
+      "interpretation": "Zero return divided by zero sample volatility propagates NaN. JSON null here denotes an observed nonfinite result, not zero weight.",
+      "source_lines": "261-288"
+    },
+    {
+      "case": "lookback60_is_not_rolling_window",
+      "kind": "algorithm_identity",
+      "history_rows": 61,
+      "identical_last_rows": 60,
+      "source_weights_first": {
+        "a": 0.5148261608297735,
+        "b": 0.48517383917022655
+      },
+      "source_weights_changed_first_row": {
+        "a": 0.5539921982018708,
+        "b": 0.44600780179812904
+      },
+      "interpretation": "lookback controls minimum sample count only; first/last wealth and pct_change use all stored rows.",
+      "source_lines": "245-268"
+    },
+    {
+      "case": "warmup59",
+      "kind": "control",
+      "history_rows": 59,
+      "source_weights": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "source_lines": "245-248"
+    }
+  ],
+  "checks_passed": 7,
+  "market_trials": 0,
+  "cost_sensitivity": "Not applicable to source arithmetic; no executable portfolio or 1x/2x/3x market-cost result computed.",
+  "limits": [
+    "No TA-Lib, Blueshift scheduler, order or fill callback executed.",
+    "No market data or original platform backtest received.",
+    "Simultaneous fixed target-weight wealth is the accounting comparator; it omits fees, funding and fills, exactly as these invented arithmetic cases do.",
+    "This audit neither implements a corrected strategy nor tests its alpha."
+  ]
+}

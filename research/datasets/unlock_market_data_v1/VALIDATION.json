@@ -1,0 +1,22 @@
+{
+ "bundle_sha256": "c55dd46019719db709e1a887626b418fb9f9c75ccc15a227f384c0c070a71998",
+ "meaning": "Data/schema/reproducibility proof only; no new funding, margin or return study.",
+ "r258_result_artifacts_byte_identical": [
+  "events.csv",
+  "excluded.csv",
+  "manifest.json",
+  "summary.csv",
+  "verdict.json"
+ ],
+ "restored_validation": {
+  "archives": 6183,
+  "series": 196,
+  "status": "COMPLETE"
+ },
+ "roundtrip_files_byte_identical": 18914,
+ "second_pack_identical": true,
+ "tests": {
+  "full_suite": 374,
+  "status": "PASS"
+ }
+}

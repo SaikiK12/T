@@ -1,0 +1,52 @@
+{
+  "candidate_capital_scale": 1.0,
+  "checks": {
+    "family_max_p_le_005": false,
+    "paired_mean_lower95_positive": false,
+    "validation_2x_mean_positive": true,
+    "validation_drawdown_no_worse": false,
+    "validation_sharpe_gain_ge_015": false
+  },
+  "discovery_selection": "highest unscaled discovery 2x net Sharpe; fixed grid tie order",
+  "evidence": "exploratory six-surviving-coin spot search on previously observed dates",
+  "passive_capital_scale": 0.648319530868464,
+  "selected_candidate": "h28_mom_k3_gate1_a1",
+  "selected_index": 58,
+  "trials": 96,
+  "validation_bootstrap": {
+    "10": {
+      "block_days": 10,
+      "family_max_p": 1.0,
+      "family_size": 96,
+      "lower95": -0.0015516527940457464,
+      "replicates": 5000,
+      "seed": 20261020240,
+      "selected_mean": -1.2884257947279753e-05,
+      "selected_nw10_t": -0.015906145122212424,
+      "upper95": 0.00160461368565629
+    },
+    "30": {
+      "block_days": 30,
+      "family_max_p": 1.0,
+      "family_size": 96,
+      "lower95": -0.0016717458638512183,
+      "replicates": 5000,
+      "seed": 20261020260,
+      "selected_mean": -1.2884257947279753e-05,
+      "selected_nw10_t": -0.015906145122212424,
+      "upper95": 0.0019031577560213713
+    },
+    "60": {
+      "block_days": 60,
+      "family_max_p": 1.0,
+      "family_size": 96,
+      "lower95": -0.0017628490441857537,
+      "replicates": 5000,
+      "seed": 20261020290,
+      "selected_mean": -1.2884257947279753e-05,
+      "selected_nw10_t": -0.015906145122212424,
+      "upper95": 0.0020900776397289877
+    }
+  },
+  "verdict": "NULL"
+}

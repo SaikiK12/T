@@ -1,0 +1,69 @@
+Compte simulé — résultats et données
+Simulation uniquement. Activation interdite.
+Les calculs présentés ne prouvent pas un gain futur.
+Chaque compte conserve son actif et son solde propres.
+Portée : invented lifecycle validation plus already-seen quote arithmetic; no observed account or prospective PnL
+
+lighter — USDC
+État de la valeur : known_simulated_liquidation
+Capital initial : 5 000,00 USDC
+Solde comptable : 4 998,80 USDC
+Gain ou perte de prix réalisé : -1,00 USDC
+Financement imputé : 0,00 USDC
+Frais imputés : 0,20 USDC
+Gain ou perte net réalisé : -1,20 USDC
+Gain ou perte ouvert au prix de sortie : 0,00 USDC
+Valeur totale du compte : 4 998,80 USDC
+Capital immobilisé : 0,00 USDC
+Capital disponible : 4 998,80 USDC
+Prix, financement et frais sont déjà compris dans le résultat fourni ; cette vue ne les additionne pas de nouveau.
+Positions simulées fournies : 0
+Motifs : aucun motif enregistré
+
+mexc — USDT
+État de la valeur : known_simulated_liquidation
+Capital initial : 5 000,00 USDT
+Solde comptable : 4 998,80 USDT
+Gain ou perte de prix réalisé : -1,00 USDT
+Financement imputé : 0,00 USDT
+Frais imputés : 0,20 USDT
+Gain ou perte net réalisé : -1,20 USDT
+Gain ou perte ouvert au prix de sortie : 0,00 USDT
+Valeur totale du compte : 4 998,80 USDT
+Capital immobilisé : 0,00 USDT
+Capital disponible : 4 998,80 USDT
+Prix, financement et frais sont déjà compris dans le résultat fourni ; cette vue ne les additionne pas de nouveau.
+Positions simulées fournies : 0
+Motifs : aucun motif enregistré
+
+État des données et contrôles
+collecte historique : bloqué
+  Motifs : existing accumulated byte baseline not exact; no renewed allowance
+compte simulé : conditional
+  Motifs : invented engine validation only
+index exact du financement Lighter : inconnu
+  Preuve nécessaire : pre-update event/proof/API-unit bridge
+sessions et droits API : inconnu
+  Preuve nécessaire : current venue/session/account permission evidence
+vrais frais du compte : inconnu
+  Preuve nécessaire : redacted source-bound owner fee statement and charged fills
+exposition entre les deux plateformes : conditional
+  Motifs : Lifecycle conserves supplied partial fills; actual complete/authenticated fill reports still absent
+  Preuve nécessaire : First-seen complete fills, terminal cumulative quantities and cancel/gap reconciliation
+
+Couverture des observations
+invented_lifecycle_paths : 48
+held_deadlines : 72
+new_prospective_days : 0
+
+Preuves encore nécessaires
+Prix et profondeur synchronisés, connus à temps
+Frais réellement applicables au compte
+Sessions ouvertes et droits API
+Index Lighter lié à son événement de financement
+Rapports complets des exécutions, annulations et positions par plateforme
+
+Coûts hypothétiques : sensibilités, sans preuve de frais réels ou de remplissage
+1x : résultat fourni -1,20 ; unité USDT ; hypothèse invented matched lifecycle; same capital/prices and fixed1x/2x/3x charges
+2x : résultat fourni -1,40 ; unité USDT ; hypothèse invented matched lifecycle; same capital/prices and fixed1x/2x/3x charges
+3x : résultat fourni -1,60 ; unité USDT ; hypothèse invented matched lifecycle; same capital/prices and fixed1x/2x/3x charges

@@ -1,0 +1,3518 @@
+{
+  "actual_executable_net": null,
+  "actual_order_allowed": false,
+  "calibrated_uncertainty": null,
+  "historical_acquisition": {
+    "approved_mib": 250,
+    "approved_requests": 8000,
+    "exact_remaining_bytes": null,
+    "reported_mib_spent": "229.85",
+    "requests_spent": 7757,
+    "reset": false
+  },
+  "historical_out_of_sample": false,
+  "limitations": [
+    "All dates/assets/data already seen by other studies; no fresh out-of-sample market discovery or prospective day.",
+    "Hourly CLOSE extrema/proximity and delayed entry-relative hourly CLOSE barriers; NOT intrabar support first-touch/MSNR/fill probabilities. Actual intrabar both-barrier ordering is unidentified.",
+    "Trade closes plus nonzero volume are historical activity proxies, not executable bid/ask/depth, on-time reception or latency certification.",
+    "Funding intervals require both adjacent cycle fields to explain the exact gap. Traded-close funding notional is a proxy, not fair/index verified cash.",
+    "Fixed4snapshot asset universe includes BTCcontrol and3alts, no point-in-time universe or lot/rule/ownerfee vintage.",
+    "Fixed8bp/side includes fee/spread/impact as ONE lumped proxy, no extra spread counted; actual capital-dependent cost/capacity unknown.",
+    "Six fixed policies including cash; no calibration/validation winner, tuning, temperature change, leverage-up or cost-tier entry rescue.",
+    "10000USDT shared once acrosscoins per alternative account, at most2000 initialgross; markedgross, intrahorizon margin/liquidation and realized risk equivalence not validated.",
+    "Funding posts in aggregate at exit; actual intrahorizon margin/equity not validated. Capital stops use known chronological3xshadowcash/100percent initial-notional reserves at alltiers.",
+    "Feature gaps, entry failures, path gaps, funding unknowns and inactive days retained. Admitted unknown exposure/cash blocks newrisk; unentered candidate unknown cannot poison account.",
+    "Training financial-known subset differs from price-label scoring coverage. Counts and censoring reported; missingness can bias both.",
+    "Brier/logloss combine reliability and discrimination; fixedbins report actual frequencies/counts, not calibrated confidence intervals.",
+    "Fixed.25sigma decision reserve is heuristic, NOT a calibrated error bound. Joint14day circular shifts retain shared calendars but do not establish exchangeability or a valid pvalue.",
+    "Prior R321 interval controls failed their predeclared acceptance. No inference, program-wide significance, positive expected net or activation is granted here.",
+    "Any promising result needs new frozen candidate and genuinely on-time prospective quotes/values/risk evidence before admission."
+  ],
+  "method_id": "M412",
+  "model_sha256": "b87e34fe8a42ae9fc36223c3329c0143f060f82074acec78606b37af26a83db3",
+  "new_market_requests": 0,
+  "new_prospective_days": 0,
+  "policy_screen": "NULL_INACTIVE",
+  "predictive_models": 2,
+  "registry_id": "R330",
+  "selection_or_retuning": false,
+  "strategy_variants": 6,
+  "verdict": "PARTIAL",
+  "windows": {
+    "calibration": {
+      "accounts": [
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "19.226374115358152975676268992472076191222968187407819095071602516558850847547038",
+              "known_funding": "-0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-7.9156312162793930226245865173672325265232547923643458692267469832254771841730274",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "22.358455747834289954006018773394939158325462839651173714554783916008168414908621",
+              "known_funding": "-0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "-5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-28.511530160990908918858163881880643759473990600210124486516122303076872658236539",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "18.348905137184536435755997045481884104998695153430287469968847586617678312983978",
+              "known_funding": "-1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "-52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "-72.293298642532943450943865957049371383822996083175198685077190139808456359145599",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "20.679995766715207728055609277978219863385389147813947308248399625130303804701796",
+              "known_funding": "-1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "-83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "-106.39385813333865564782017295559742502963337968264380374115835699907466061118695",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-215.1143181531419010402467893118946726994536211583934727819784164251854668127387",
+          "cost": "80.613730767092187093493894089327119317932515328303227587843633644315001380141430",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "-3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "-215.1143181531419010402467893118946726994536211583934727819784164251854668127387",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "-131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 15.782555275787374,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -275.9274737063689,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9784.8856818468580989597532106881053273005463788416065272180215835748145331872613",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "38.452748230716305951352537984944152382445936374815638190143205033117701695094076",
+              "known_funding": "-0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-27.142005331637545998300855509839308717746222979772164964298349499784328031720065",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "44.716911495668579908012037546789878316650925679302347429109567832016336829817243",
+              "known_funding": "-0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "-5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-50.869985908825198872864182655275582917799453439861298201070906219085041073145160",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "36.697810274369072871511994090963768209997390306860574939937695173235356625967957",
+              "known_funding": "-1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "-52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "-90.642203779717479886699863002531255488821691236605486155046037726426134672129577",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "41.359991533430415456111218555956439726770778295627894616496799250260607609403589",
+              "known_funding": "-1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "-83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "-127.07385390005386337587578223357564489301876883045775104940675662420496441588874",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-295.7280489202340881337406834012217920173861364866967003698220500695004681928827",
+          "cost": "161.22746153418437418698778817865423863586503065660645517568726728863000276028289",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "-3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "-295.7280489202340881337406834012217920173861364866967003698220500695004681928827",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "-131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 15.972135224504504,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -324.59243235725194,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9704.2719510797659118662593165987782079826138635133032996301779499304995318071173",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "57.679122346074458927028806977416228573668904562223457285214807549676552542641114",
+              "known_funding": "-0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-46.368379446995698973977124502311384908969191167179984059369952016343178879267103",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "67.075367243502869862018056320184817474976388518953521143664351748024505244725860",
+              "known_funding": "-0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "-5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-73.228441656659488826870201428670522076124916279512471915625690135093209488053784",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "55.046715411553609307267991136445652314996085460290862409906542759853034938951932",
+              "known_funding": "-1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "-52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "-108.99110891690201632245586004801313959382038639003577362501488531304381298511355",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "62.039987300145623184166827833934659590156167443441841924745198875390911414105388",
+              "known_funding": "-1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "-83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "-147.75384966676907110393139151155386475640415797827169835765515624933526822059053",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-376.3417796873262752272345774905489113353186518149999279576656837138154695730249",
+          "cost": "241.84119230127656128048168226798135795379754598490968276353090093294500414042429",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "-3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "-376.3417796873262752272345774905489113353186518149999279576656837138154695730249",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "-131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 16.20029176990912,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -380.6213004679552,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9623.6582203126737247727654225094510886646813481850000720423343162861845304269751",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "19.226374115358152975676268992472076191222968187407819095071602516558850847547038",
+              "known_funding": "0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "-11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-30.537117014436912928727951467576919855922681582451292320916458049892224510921050",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "22.358455747834289954006018773394939158325462839651173714554783916008168414908621",
+              "known_funding": "0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-16.205381334677670989153873664909234557176935079092222942593445528939464171580701",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "18.348905137184536435755997045481884104998695153430287469968847586617678312983978",
+              "known_funding": "1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "35.595488368163870579431871866085603173825605776314623745139494966573099733177644",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "20.679995766715207728055609277978219863385389147813947308248399625130303804701796",
+              "known_funding": "1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "65.033866599908240191708954399640985302862601387015909124661557748814053001783360",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "53.886856618957526853259001133240434063588590501787017606291149136555464052459",
+          "cost": "80.613730767092187093493894089327119317932515328303227587843633644315001380141430",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "53.886856618957526853259001133240434063588590501787017606291149136555464052459",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 15.524491536002037,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -153.46403612369937,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10053.886856618957526853259001133240434063588590501787017606291149136555464052459",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "38.452748230716305951352537984944152382445936374815638190143205033117701695094076",
+              "known_funding": "0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "-11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-49.763491129795065904404220460048996047145649769859111415988060566451075358468086",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "44.716911495668579908012037546789878316650925679302347429109567832016336829817243",
+              "known_funding": "0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-38.563837082511960943159892438304173715502397918743396657148229444947632586489324",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "36.697810274369072871511994090963768209997390306860574939937695173235356625967957",
+              "known_funding": "1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "17.246583230979334143675874820603719068826910622884336275170647379955421420193667",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "41.359991533430415456111218555956439726770778295627894616496799250260607609403589",
+              "known_funding": "1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "44.353870833193032463653345121662765439477212239201961816413158123683749197081565",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-26.7268741481346602402348929560866852543439248265162099815524845077595373276819",
+          "cost": "161.22746153418437418698778817865423863586503065660645517568726728863000276028289",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "-26.7268741481346602402348929560866852543439248265162099815524845077595373276819",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 15.45802951433615,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -179.0383509113392,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9973.2731258518653397597651070439133147456560751734837900184475154922404626723181",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "57.679122346074458927028806977416228573668904562223457285214807549676552542641114",
+              "known_funding": "0.12782477562707243659100814264547338491114181972814159123997356450273458570433456",
+              "known_price": "-11.438567674705832389642690617750317049610855214771614817084829097836108249078346",
+              "net": "-68.989865245153218880080489452521072238368617957266930511059663083009926206015124",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "67.075367243502869862018056320184817474976388518953521143664351748024505244725860",
+              "known_funding": "0.17545114357649476652641838611419643991364484849094269409115809098633084346366977",
+              "known_price": "5.9776232695801241983257267223715081612348829120680080778701802960823733998642479",
+              "net": "-60.922292830346250897165911211699112873827860758394570371703013360955801001397944",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "55.046715411553609307267991136445652314996085460290862409906542759853034938951932",
+              "known_funding": "1.3172188942567710867968955460475373135877647647507323301685352576990504462369166",
+              "known_price": "52.627174611091635928390973365519949965236536164994178884939807295491727599924705",
+              "net": "-1.102321906205202292080122224878165036171784530545951194798200206662256892790309",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "62.039987300145623184166827833934659590156167443441841924745198875390911414105388",
+              "known_funding": "1.8557501379235022313191578671602733414559227419864756091945809798678055035170173",
+              "known_price": "83.858112228699945688445405810458931824792067792843380823715376394076551302968137",
+              "net": "23.673875066477824735597735843684545576091823091388014508164758498553445392379768",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-107.3406049152268473337287870454138045722764401548194375693961181520745387078243",
+          "cost": "241.84119230127656128048168226798135795379754598490968276353090093294500414042429",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "3.4762449513838405212334799419674804798684741749562922246942478930559213789219386",
+          "initial_capital": "10000",
+          "known_cash_component": "-107.3406049152268473337287870454138045722764401548194375693961181520745387078243",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "131.02434243466587342551941528060007290165263165513395296944053488781454405367875",
+          "risk": {
+            "daily_std_usdt": 15.434111982376255,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -204.6126656989791,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9892.6593950847731526662712129545861954277235598451805624306038818479254612921757",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "19.226374115358152975676268992472076191222968187407819095071602516558850847547038",
+              "known_funding": "-0.41865701993977823449596285398718427227182335990707198194454266982913673107031606",
+              "known_price": "32.967644197691219595336240590095239028710234259773868839503145698563559433797322",
+              "net": "13.322613062393288385164008743635978565215442712458977762487000512175571855179967",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "22.358455747834289954006018773394939158325462839651173714554783916008168414908621",
+              "known_funding": "-0.30814796972109413014843906541563773667294224305953773809625310143155845154676451",
+              "known_price": "-51.930315207137557492476533256326052093171450436032856806520104989789481364223685",
+              "net": "-74.596918924692941576630991095136628988169855518743568259171142007229208230679065",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "18.348905137184536435755997045481884104998695153430287469968847586617678312983978",
+              "known_funding": "0.36309810883583505532317259070227432174086380601516466559724118346854447173809527",
+              "known_price": "-63.868578519329455305003693147644868751631058212140662538940516727902108770028631",
+              "net": "-81.854385547678156685436517602424478534888889559555785343312123131051242611274515",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "20.679995766715207728055609277978219863385389147813947308248399625130303804701796",
+              "known_funding": "1.3473090623659299922378512591568943634815282934757781702563285148346657967890796",
+              "known_price": "-150.00529160599033993048840252722517076826356523256586468950046858712024412275558",
+              "net": "-169.33797831033961766630616054604649626816742608690403382749253969741588213066831",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-312.4666697203174275432096604999716252260107284527444096674888043235207611174437",
+          "cost": "80.613730767092187093493894089327119317932515328303227587843633644315001380141430",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0.98360218154089268291662193045634667627762649652433311581277392704251508591009445",
+          "initial_capital": "10000",
+          "known_cash_component": "-312.4666697203174275432096604999716252260107284527444096674888043235207611174437",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "-232.83654113476613313263238834110085258435583962096551519545794460624827482321058",
+          "risk": {
+            "daily_std_usdt": 15.69274177122086,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -383.9970412352153,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9687.5333302796825724567903395000283747739892715472555903325111956764792388825563",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "38.452748230716305951352537984944152382445936374815638190143205033117701695094076",
+              "known_funding": "-0.41865701993977823449596285398718427227182335990707198194454266982913673107031606",
+              "known_price": "32.967644197691219595336240590095239028710234259773868839503145698563559433797322",
+              "net": "-5.9037610529648645905122602488360976260075254749488413325846020043832789923670707",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "44.716911495668579908012037546789878316650925679302347429109567832016336829817243",
+              "known_funding": "-0.30814796972109413014843906541563773667294224305953773809625310143155845154676451",
+              "known_price": "-51.930315207137557492476533256326052093171450436032856806520104989789481364223685",
+              "net": "-96.955374672527231530637009868531568146495318358394741973725925923237376645587683",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "36.697810274369072871511994090963768209997390306860574939937695173235356625967957",
+              "known_funding": "0.36309810883583505532317259070227432174086380601516466559724118346854447173809527",
+              "known_price": "-63.868578519329455305003693147644868751631058212140662538940516727902108770028631",
+              "net": "-100.20329068486269312119251464790636263988758471298607281328097071766892092425849",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "41.359991533430415456111218555956439726770778295627894616496799250260607609403589",
+              "known_funding": "1.3473090623659299922378512591568943634815282934757781702563285148346657967890796",
+              "known_price": "-150.00529160599033993048840252722517076826356523256586468950046858712024412275558",
+              "net": "-190.01797407705482539436176982402471613155281523471798113574093932254618593537011",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-393.0804004874096146367035545892987445439432437810476372553324379678357624975831",
+          "cost": "161.22746153418437418698778817865423863586503065660645517568726728863000276028289",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0.98360218154089268291662193045634667627762649652433311581277392704251508591009445",
+          "initial_capital": "10000",
+          "known_cash_component": "-393.0804004874096146367035545892987445439432437810476372553324379678357624975831",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "-232.83654113476613313263238834110085258435583962096551519545794460624827482321058",
+          "risk": {
+            "daily_std_usdt": 15.870454191992318,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -439.7337469263789,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9606.9195995125903853632964454107012554560567562189523627446675620321642375024169",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "57.679122346074458927028806977416228573668904562223457285214807549676552542641114",
+              "known_funding": "-0.41865701993977823449596285398718427227182335990707198194454266982913673107031606",
+              "known_price": "32.967644197691219595336240590095239028710234259773868839503145698563559433797322",
+              "net": "-25.130135168323017566188529241308173817230493662356660427656204520942129839914108",
+              "states": {
+                "closed": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "67.075367243502869862018056320184817474976388518953521143664351748024505244725860",
+              "known_funding": "-0.30814796972109413014843906541563773667294224305953773809625310143155845154676451",
+              "known_price": "-51.930315207137557492476533256326052093171450436032856806520104989789481364223685",
+              "net": "-119.31383042036152148464302864192650730482078119804591568828070983924554506049632",
+              "states": {
+                "closed": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "55.046715411553609307267991136445652314996085460290862409906542759853034938951932",
+              "known_funding": "0.36309810883583505532317259070227432174086380601516466559724118346854447173809527",
+              "known_price": "-63.868578519329455305003693147644868751631058212140662538940516727902108770028631",
+              "net": "-118.55219582204722955694851169338824674488627986641636028324981830428659923724247",
+              "states": {
+                "closed": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "62.039987300145623184166827833934659590156167443441841924745198875390911414105388",
+              "known_funding": "1.3473090623659299922378512591568943634815282934757781702563285148346657967890796",
+              "known_price": "-150.00529160599033993048840252722517076826356523256586468950046858712024412275558",
+              "net": "-210.69796984377003312241737910200293599493820438253192844398933894767648974007191",
+              "states": {
+                "closed": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-473.6941312545018017301974486786258638618757591093508648431760716121507638777251",
+          "cost": "241.84119230127656128048168226798135795379754598490968276353090093294500414042429",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0.98360218154089268291662193045634667627762649652433311581277392704251508591009445",
+          "initial_capital": "10000",
+          "known_cash_component": "-473.6941312545018017301974486786258638618757591093508648431760716121507638777251",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "-232.83654113476613313263238834110085258435583962096551519545794460624827482321058",
+          "risk": {
+            "daily_std_usdt": 16.087286453152597,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -499.570421862279,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9526.3058687454981982698025513213741361381242408906491351568239283878492361222749",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 24
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 28
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 23
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 26
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 122,
+          "days_scored": 122,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 101
+          },
+          "unknown_markers": []
+        }
+      ],
+      "opportunities": 488,
+      "outcome_states": {
+        "break": 21,
+        "rebound": 19,
+        "timeout": 61
+      },
+      "scores": {
+        "calibrated_uncertainty": null,
+        "climatology": {
+          "brier": 0.5630398927188813,
+          "calibrated": false,
+          "log_loss": 0.9624387841513536,
+          "n": 101,
+          "reliability": [
+            {
+              "bin": 0,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 60,
+              "label": "break",
+              "n": 101,
+              "observed": 0.2079207920792079,
+              "predicted": 0.1428571428571428
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 60,
+              "label": "rebound",
+              "n": 101,
+              "observed": 0.18811881188118812,
+              "predicted": 0.226890756302521
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 60,
+              "label": "timeout",
+              "n": 101,
+              "observed": 0.6039603960396039,
+              "predicted": 0.630252100840336
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            }
+          ]
+        },
+        "conditional": {
+          "brier": 0.5784354293841657,
+          "calibrated": false,
+          "log_loss": 0.9849603963407391,
+          "n": 97,
+          "reliability": [
+            {
+              "bin": 0,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 58,
+              "label": "break",
+              "n": 97,
+              "observed": 0.21649484536082475,
+              "predicted": 0.13968253968253963
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 58,
+              "label": "rebound",
+              "n": 97,
+              "observed": 0.1958762886597938,
+              "predicted": 0.22620603797074382
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 9,
+              "calibrated_interval": null,
+              "days": 58,
+              "label": "timeout",
+              "n": 97,
+              "observed": 0.5876288659793815,
+              "predicted": 0.6341114223467165
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            }
+          ]
+        },
+        "joint_14day_shifts": [
+          {
+            "difference": 0.001742729529478168,
+            "n": 20,
+            "shift_days": 14
+          },
+          {
+            "difference": 8.97226477131135e-05,
+            "n": 9,
+            "shift_days": 28
+          },
+          {
+            "difference": -0.0008472919863745412,
+            "n": 23,
+            "shift_days": 42
+          },
+          {
+            "difference": 0.0024155912667656585,
+            "n": 21,
+            "shift_days": 56
+          },
+          {
+            "difference": 0.004101895418055808,
+            "n": 20,
+            "shift_days": 70
+          },
+          {
+            "difference": -0.00010986335952927644,
+            "n": 21,
+            "shift_days": 84
+          },
+          {
+            "difference": 0.00156909282333372,
+            "n": 19,
+            "shift_days": 98
+          },
+          {
+            "difference": 0.001271429898514666,
+            "n": 14,
+            "shift_days": 112
+          }
+        ],
+        "paired_brier_difference": 0.0007795034601271747,
+        "paired_n": 97,
+        "significance_or_activation_allowed": false
+      },
+      "states": {
+        "event": 101,
+        "not_near_prior_close_level": 387
+      }
+    },
+    "validation": {
+      "accounts": [
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "conditional",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "climatology",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "32.811923555195523025018085627845698868608587577642642901313140179153446864767445",
+              "known_funding": "-0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "-16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-49.484747462567850464788406873695057955738963549886162925254929719114248965554857",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "36.019799243860988647646977627894307575741445826381745746687312291551313831905212",
+              "known_funding": "-0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "-8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-44.481688698993946616594571198919661791045612617927712768011714974627351212665494",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "42.412006652350092579538477205495821712079596601579834525916515261599776721069945",
+              "known_funding": "-0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-16.849826529904644621466520910168943045886914292119956642592004047574522253471916",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "31.344176506288489416016476407122127845691129316227229503291068072512885384207898",
+              "known_funding": "-3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "164.67191296628277134664528301947548035975295891280456826445779593718746248383016",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "53.855650274816329643795784036691817567081468452870735928599147195871340052142",
+          "cost": "142.58790595769509366822001686835795600212075932183145267720803580481742280195047",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "-5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "53.855650274816329643795784036691817567081468452870735928599147195871340052142",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.1628016907006,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -193.10028824158303,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10053.855650274816329643795784036691817567081468452870735928599147195871340052142",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "65.623847110391046050036171255691397737217175155285285802626280358306893729534887",
+              "known_funding": "-0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "-16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-82.296671017763373489806492501540756824347551127528805826568069898267695830322297",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "72.039598487721977295293955255788615151482891652763491493374624583102627663810428",
+              "known_funding": "-0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "-8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-80.501487942854935264241548826813969366787058444309458514699027266178665044570710",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "84.824013304700185159076954410991643424159193203159669051833030523199553442139890",
+              "known_funding": "-0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-59.261833182254737201004998115664764757966510893699791168508519309174298974541853",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "62.688353012576978832032952814244255691382258632454459006582136145025770768415791",
+              "known_funding": "-3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "133.32773645999428193062880661235335251406182959657733876116672786467457709962228",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-88.7322556828787640244242328316661384350392908689607167486088886089460827498102",
+          "cost": "285.17581191539018733644003373671591200424151864366290535441607160963484560390102",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "-5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "-88.7322556828787640244242328316661384350392908689607167486088886089460827498102",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.175558648297182,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -256.5551972640044,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9911.2677443171212359755757671683338615649607091310392832513911113910539172501898",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "98.435770665586569075054256883537096605825762732927928703939420537460340594302330",
+              "known_funding": "-0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "-16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-115.10859457295889651482457812938645569295613870517144872788121007742114269508975",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "108.05939773158296594294093288368292272722433747914523724006193687465394149571565",
+              "known_funding": "-0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "-8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-116.52128718671592391188852645470827694252850427069120426138633955772997887647593",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "127.23601995705027773861543161648746513623878980473950357774954578479933016320984",
+              "known_funding": "-0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-101.67383983460482978054347532116058647004610749527962569442503457077407569561179",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "94.032529518865468248049429221366383537073387948681688509873204217538656152623689",
+              "known_funding": "-3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "101.98355995370579251461233020523122466837070028035010925787565979216169171541438",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-231.3201616405738576926442497000240944371600501907921694258169244137635055517644",
+          "cost": "427.76371787308528100466005060507386800636227796549435803162410741445226840585151",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "-5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "-231.3201616405738576926442497000240944371600501907921694258169244137635055517644",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_break",
+          "price": "201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.236541723208203,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -352.63051107255853,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9768.6798383594261423073557502999759055628399498092078305741830755862364944482356",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "32.811923555195523025018085627845698868608587577642642901313140179153446864767445",
+              "known_funding": "0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-16.139099647823195585247764381996339781478211605399122877371350639192644763980033",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "36.019799243860988647646977627894307575741445826381745746687312291551313831905212",
+              "known_funding": "0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-27.557909788728030678699384056868953360437279034835778725362909608475276451144928",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "42.412006652350092579538477205495821712079596601579834525916515261599776721069945",
+              "known_funding": "0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "-26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-67.974186774795540537610433500822700378272278911039712409241026475625031188667978",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "31.344176506288489416016476407122127845691129316227229503291068072512885384207898",
+              "known_funding": "3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "-199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "-227.36026597885975017867823583371973605113521754525902727103993208221323325224596",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-339.0314621902065169802358177734077295713229870965336412830152188055061856560392",
+          "cost": "142.58790595769509366822001686835795600212075932183145267720803580481742280195047",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "-339.0314621902065169802358177734077295713229870965336412830152188055061856560392",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "-201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.28199664603215,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -340.0647339633379,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9660.9685378097934830197641822265922704286770129034663587169847811944938143439608",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "65.623847110391046050036171255691397737217175155285285802626280358306893729534887",
+              "known_funding": "0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-48.951023203018718610265850009842038650086799183041765778684490818346091628747476",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "72.039598487721977295293955255788615151482891652763491493374624583102627663810428",
+              "known_funding": "0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-63.577709032589019326346361684763260936178724861217524472050221900026590283050148",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "84.824013304700185159076954410991643424159193203159669051833030523199553442139890",
+              "known_funding": "0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "-26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-110.38619342714563311714891070631852209035187551261954693515754173722480790973792",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "62.688353012576978832032952814244255691382258632454459006582136145025770768415791",
+              "known_funding": "3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "-199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "-258.70444248514823959469471224084186389682634686148625677433100015472611863645388",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-481.6193681479016106484558346417656855734437464183650939602232546103236084579898",
+          "cost": "285.17581191539018733644003373671591200424151864366290535441607160963484560390102",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "-481.6193681479016106484558346417656855734437464183650939602232546103236084579898",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "-201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.412662629311006,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -481.8541216464199,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9518.3806318520983893515441653582343144265562535816349060397767453896763915420102",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "98.435770665586569075054256883537096605825762732927928703939420537460340594302330",
+              "known_funding": "0.21856295175864923234592616619231710167880974022472959417941313494808955244089728",
+              "known_price": "16.454260955613678207424395079657041985451566232018790429762376405012712548346514",
+              "net": "-81.762946758214241635283935637687737518695386760684408679997630997499538493514920",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "108.05939773158296594294093288368292272722433747914523724006193687465394149571565",
+              "known_funding": "0.40984153528471543284608330085098687808263704657047665120507144753902583495475183",
+              "known_price": "8.0520479198482425361015102701743673372215297449754903701193312355370115458055312",
+              "net": "-99.597508276450007973993339312657568511920170687599270218737534191577904114955366",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "127.23601995705027773861543161648746513623878980473950357774954578479933016320984",
+              "known_funding": "0.61990643673195206352666926510788435977531087569508967158875267420031448696293109",
+              "known_price": "-26.182086559177400021598625560434763025967993185154967554913263888225568954560964",
+              "net": "-152.79820007949572569668738791181434380243147211419938146107405699882458463080786",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "94.032529518865468248049429221366383537073387948681688509873204217538656152623689",
+              "known_funding": "3.7729848486658886191342862083257794851260085832881496653478600747967875343272671",
+              "known_price": "-199.78907432123714938179604563492338769057009681231994743309672408449713540236532",
+              "net": "-290.04861899143672901071118864796399174251747617771348627762206822723900402066174",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-624.2072741055967043166758515101236415755645057401965466374312904151410312599408",
+          "cost": "427.76371787308528100466005060507386800636227796549435803162410741445226840585151",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "5.0212957724412053478529649404769678246627662457784455823210973314842174086858470",
+          "initial_capital": "10000",
+          "known_cash_component": "-624.2072741055967043166758515101236415755645057401965466374312904151410312599408",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "always_rebound",
+          "price": "-201.46485200495262865986876584552674139386499402048063418812828033217298026277420",
+          "risk": {
+            "daily_std_usdt": 13.589050609212096,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -624.2072741055968,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9375.7927258944032956833241484898763584244354942598034533625687095848589687400592",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "32.811923555195523025018085627845698868608587577642642901313140179153446864767445",
+              "known_funding": "-0.54366667248818662057490189909243345058821456390757849429842940504737676305840840",
+              "known_price": "14.904443994403781272607034807123585760734472053303626641425223941808580959304120",
+              "net": "-18.451146233279928372985952719814546558462330088246594754186345642392242668521730",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "36.019799243860988647646977627894307575741445826381745746687312291551313831905212",
+              "known_funding": "-0.53547815974238926889032586284442633652643491848070864123730912928730785186061579",
+              "known_price": "24.749054826235809558722034867884469676807282977182183359140364439142289881517369",
+              "net": "-11.806222577367568357815268622854264235460597767680271028784256981696331802248459",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "42.412006652350092579538477205495821712079596601579834525916515261599776721069945",
+              "known_funding": "-0.57937319863444152215776228324875614164125479357875462510186075880284554818160909",
+              "known_price": "15.008315437615724423096506869777140099495751974793157395644076999720901337428462",
+              "net": "-27.983064413368809678599732618967437754225099420365431755374299020681720931823092",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "31.344176506288489416016476407122127845691129316227229503291068072512885384207898",
+              "known_funding": "2.5918059959119783507486247325473390226398039371149295526678694035684035800436015",
+              "known_price": "180.22063286061177002059550890265980711391164528403687911383509064110673025987036",
+              "net": "151.46826235023525895532765722808501829086031990492457916321189197216224845570607",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "93.227829126218952545926703266448769742712292628632281624866990327391953053111",
+          "cost": "142.58790595769509366822001686835795600212075932183145267720803580481742280195047",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0.93328796504696093912563468736172309388389966114788779203027011043087341694296835",
+          "initial_capital": "10000",
+          "known_cash_component": "93.227829126218952545926703266448769742712292628632281624866990327391953053111",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "234.88244711886708527502108544744500265094915228931584651004475602177850243812034",
+          "risk": {
+            "daily_std_usdt": 13.104664410221083,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -203.06767162393368,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10093.227829126218952545926703266448769742712292628632281624866990327391953053111",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "65.623847110391046050036171255691397737217175155285285802626280358306893729534887",
+              "known_funding": "-0.54366667248818662057490189909243345058821456390757849429842940504737676305840840",
+              "known_price": "14.904443994403781272607034807123585760734472053303626641425223941808580959304120",
+              "net": "-51.263069788475451398004038347660245427070917665889237655499485821545689533289173",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "72.039598487721977295293955255788615151482891652763491493374624583102627663810428",
+              "known_funding": "-0.53547815974238926889032586284442633652643491848070864123730912928730785186061579",
+              "known_price": "24.749054826235809558722034867884469676807282977182183359140364439142289881517369",
+              "net": "-47.826021821228557005462246250748571811202043594062016775471569273247645634153676",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "84.824013304700185159076954410991643424159193203159669051833030523199553442139890",
+              "known_funding": "-0.57937319863444152215776228324875614164125479357875462510186075880284554818160909",
+              "known_price": "15.008315437615724423096506869777140099495751974793157395644076999720901337428462",
+              "net": "-70.395071065718902258138209824463259466304696021945266281290814282281497652893037",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "62.688353012576978832032952814244255691382258632454459006582136145025770768415791",
+              "known_funding": "2.5918059959119783507486247325473390226398039371149295526678694035684035800436015",
+              "known_price": "180.22063286061177002059550890265980711391164528403687911383509064110673025987036",
+              "net": "120.12408584394676953931118082096289044516919058869734965992082389964936307149817",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-49.3600768314761411222933136019091862594084666931991710523410454774254697488378",
+          "cost": "285.17581191539018733644003373671591200424151864366290535441607160963484560390102",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0.93328796504696093912563468736172309388389966114788779203027011043087341694296835",
+          "initial_capital": "10000",
+          "known_cash_component": "-49.3600768314761411222933136019091862594084666931991710523410454774254697488378",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "234.88244711886708527502108544744500265094915228931584651004475602177850243812034",
+          "risk": {
+            "daily_std_usdt": 13.06791112128858,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -260.79907653541875,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9950.6399231685238588777066863980908137405915333068008289476589545225745302511622",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "98.435770665586569075054256883537096605825762732927928703939420537460340594302330",
+              "known_funding": "-0.54366667248818662057490189909243345058821456390757849429842940504737676305840840",
+              "known_price": "14.904443994403781272607034807123585760734472053303626641425223941808580959304120",
+              "net": "-84.074993343670974423022123975505944295679505243531880556812626000699136398056618",
+              "states": {
+                "closed": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "108.05939773158296594294093288368292272722433747914523724006193687465394149571565",
+              "known_funding": "-0.53547815974238926889032586284442633652643491848070864123730912928730785186061579",
+              "known_price": "24.749054826235809558722034867884469676807282977182183359140364439142289881517369",
+              "net": "-83.845821065089545653109223878642879386943489420443762522158881564798959466058891",
+              "states": {
+                "closed": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "127.23601995705027773861543161648746513623878980473950357774954578479933016320984",
+              "known_funding": "-0.57937319863444152215776228324875614164125479357875462510186075880284554818160909",
+              "known_price": "15.008315437615724423096506869777140099495751974793157395644076999720901337428462",
+              "net": "-112.80707771806899483767668702995908117838429262352510080720732954388127437396299",
+              "states": {
+                "closed": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "94.032529518865468248049429221366383537073387948681688509873204217538656152623689",
+              "known_funding": "2.5918059959119783507486247325473390226398039371149295526678694035684035800436015",
+              "known_price": "180.22063286061177002059550890265980711391164528403687911383509064110673025987036",
+              "net": "88.779909337658280123294704413840762599478061272470120156629755827136477687290274",
+              "states": {
+                "closed": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "-191.9479827891712347905133304702671422615292260150306237295490812822428925507904",
+          "cost": "427.76371787308528100466005060507386800636227796549435803162410741445226840585151",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0.93328796504696093912563468736172309388389966114788779203027011043087341694296835",
+          "initial_capital": "10000",
+          "known_cash_component": "-191.9479827891712347905133304702671422615292260150306237295490812822428925507904",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "long_control",
+          "price": "234.88244711886708527502108544744500265094915228931584651004475602177850243812034",
+          "risk": {
+            "daily_std_usdt": 13.079872575556129,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": -319.08442208551423,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "9808.0520172108287652094866695297328577384707739849693762704509187177571074492096",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "closed": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 1,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 2,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        },
+        {
+          "actual_executable_net": null,
+          "actual_order_allowed": false,
+          "by_symbol": {
+            "BTC": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 41
+              }
+            },
+            "ETH": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 45
+              }
+            },
+            "SOL": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 53
+              }
+            },
+            "WIF": {
+              "known_cost": "0",
+              "known_funding": "0",
+              "known_price": "0",
+              "net": "0",
+              "states": {
+                "inactive": 39
+              }
+            }
+          },
+          "capital_admission": "causal3x shadow shared across alltiers;100percent entry-notional reserve",
+          "capital_stopped": false,
+          "complete": true,
+          "conditional_net": "0",
+          "cost": "0",
+          "cost_multiple": 3,
+          "days_expected": 273,
+          "days_scored": 273,
+          "full_expected_net": null,
+          "funding": "0",
+          "initial_capital": "10000",
+          "known_cash_component": "0",
+          "margin_and_liquidation_verified": false,
+          "marked_gross_limit_verified": false,
+          "maximum_entry_gross_fraction": ".2",
+          "open_positions": {},
+          "pending": 0,
+          "per_symbol_notional": "500",
+          "policy": "cash",
+          "price": "0",
+          "risk": {
+            "daily_std_usdt": 0.0,
+            "matched_empirical_risk": false,
+            "max_drawdown_usdt": 0.0,
+            "maximum_initial_gross_usdt": "2000"
+          },
+          "shared_cash": "10000",
+          "source_scope": "historical trade-close/cost/funding-notional proxies; no first-seen execution evidence",
+          "states": {
+            "inactive": 178
+          },
+          "unknown_markers": []
+        }
+      ],
+      "opportunities": 1092,
+      "outcome_states": {
+        "break": 43,
+        "rebound": 36,
+        "timeout": 99
+      },
+      "scores": {
+        "calibrated_uncertainty": null,
+        "climatology": {
+          "brier": 0.6072414425122329,
+          "calibrated": false,
+          "log_loss": 1.0268222335010355,
+          "n": 178,
+          "reliability": [
+            {
+              "bin": 0,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "break",
+              "n": 178,
+              "observed": 0.24157303370786518,
+              "predicted": 0.14285714285714282
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "rebound",
+              "n": 178,
+              "observed": 0.20224719101123595,
+              "predicted": 0.22689075630252103
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "timeout",
+              "n": 178,
+              "observed": 0.5561797752808989,
+              "predicted": 0.630252100840336
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            }
+          ]
+        },
+        "conditional": {
+          "brier": 0.6061043308961429,
+          "calibrated": false,
+          "log_loss": 1.0268859542532813,
+          "n": 177,
+          "reliability": [
+            {
+              "bin": 0,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "break",
+              "n": 177,
+              "observed": 0.24293785310734464,
+              "predicted": 0.13968253968253966
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "break",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "rebound",
+              "n": 177,
+              "observed": 0.1977401129943503,
+              "predicted": 0.22620603797074382
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "rebound",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 0,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 1,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 2,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            },
+            {
+              "bin": 3,
+              "blocks14": 20,
+              "calibrated_interval": null,
+              "days": 106,
+              "label": "timeout",
+              "n": 177,
+              "observed": 0.559322033898305,
+              "predicted": 0.6341114223467165
+            },
+            {
+              "bin": 4,
+              "blocks14": 0,
+              "calibrated_interval": null,
+              "days": 0,
+              "label": "timeout",
+              "n": 0,
+              "observed": null,
+              "predicted": null
+            }
+          ]
+        },
+        "joint_14day_shifts": [
+          {
+            "difference": 0.0012299318178009093,
+            "n": 21,
+            "shift_days": 14
+          },
+          {
+            "difference": 0.0007351042571470132,
+            "n": 32,
+            "shift_days": 28
+          },
+          {
+            "difference": 0.0018983473321547914,
+            "n": 32,
+            "shift_days": 42
+          },
+          {
+            "difference": 0.002676436345537924,
+            "n": 31,
+            "shift_days": 56
+          },
+          {
+            "difference": 0.002371640097536801,
+            "n": 29,
+            "shift_days": 70
+          },
+          {
+            "difference": 0.00221402916044167,
+            "n": 28,
+            "shift_days": 84
+          },
+          {
+            "difference": 0.0026492032300695053,
+            "n": 32,
+            "shift_days": 98
+          },
+          {
+            "difference": -0.0003674478748168744,
+            "n": 20,
+            "shift_days": 112
+          },
+          {
+            "difference": 0.00016391618595894402,
+            "n": 33,
+            "shift_days": 126
+          },
+          {
+            "difference": 0.0018865418436758716,
+            "n": 29,
+            "shift_days": 140
+          },
+          {
+            "difference": 0.00037599926249215005,
+            "n": 23,
+            "shift_days": 154
+          },
+          {
+            "difference": 0.000990105247442126,
+            "n": 33,
+            "shift_days": 168
+          },
+          {
+            "difference": 0.0026850221553407667,
+            "n": 29,
+            "shift_days": 182
+          },
+          {
+            "difference": 0.0018250563670232107,
+            "n": 31,
+            "shift_days": 196
+          },
+          {
+            "difference": 0.0018983473321547914,
+            "n": 32,
+            "shift_days": 210
+          },
+          {
+            "difference": 0.0027291069864438574,
+            "n": 26,
+            "shift_days": 224
+          },
+          {
+            "difference": 0.004198478854297692,
+            "n": 31,
+            "shift_days": 238
+          },
+          {
+            "difference": 0.0019571362798326305,
+            "n": 27,
+            "shift_days": 252
+          },
+          {
+            "difference": 0.0008419770716322894,
+            "n": 34,
+            "shift_days": 266
+          }
+        ],
+        "paired_brier_difference": 0.0011684382938376456,
+        "paired_n": 177,
+        "significance_or_activation_allowed": false
+      },
+      "states": {
+        "event": 178,
+        "not_near_prior_close_level": 914
+      }
+    }
+  }
+}

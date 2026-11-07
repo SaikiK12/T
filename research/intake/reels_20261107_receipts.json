@@ -1,0 +1,100 @@
+{
+  "recorded_utc": "2026-11-07T02:20:16.733287+00:00",
+  "scope": "Source retrieval, not a trading experiment; media/website copies remain local in /tmp/reels_20261107, not reposted in git",
+  "sources": [
+    {
+      "shortcode": "DcLxgVqzv9T",
+      "source_url": "https://www.instagram.com/reel/DcLxgVqzv9T/",
+      "author": "thefiscalgrind",
+      "publication_as_shown": "2026-08-18",
+      "canonical_and_og_url_match_requested_shortcode": true,
+      "page_receipt": {
+        "url": "https://www.instagram.com/reel/DcLxgVqzv9T/",
+        "started_utc": "2026-11-07T02:03:19.397676+00:00",
+        "user_agent": "Python urllib default, no override",
+        "max_bytes": 2000000,
+        "no_cookies_or_auth": true,
+        "status": 200,
+        "final_url": "https://www.instagram.com/reel/DcLxgVqzv9T/",
+        "received_utc": "2026-11-07T02:03:20.255213+00:00",
+        "bytes_read": 549358,
+        "sha256": "c43e50568f6f545115394d5f495a2771a84aa3a942431021e753177278e1baf0"
+      },
+      "media_receipts": {
+        "full_media_receipt.json": {
+          "accessed_utc": "2026-11-07T02:15:09.573536+00:00",
+          "status": 200,
+          "content_type": "video/mp4",
+          "content_length_header": "5631629",
+          "bytes": 5631629,
+          "sha256": "e9a1b66119d0005c9058b437738ac13ff5ed201047994ef4d5c728c9102b6688",
+          "source": "Native anonymous Chromium CDN URL; omitted byte-range query for whole file; urllib default UA, no cookies/auth/impersonation",
+          "source_url_index": 0
+        },
+        "audio_receipt.json": {
+          "accessed_utc": "2026-11-07T02:15:51.820549+00:00",
+          "status": 200,
+          "content_type": "video/mp4",
+          "bytes": 361223,
+          "sha256": "2e2e5060af9a63a3c6e94041caf9656c090633c3ebfcd5aa252ae130b960ef39",
+          "source": "Native anonymous Chromium public CDN request; byte-range query omitted; default urllib UA, no cookies/auth",
+          "source_url_index": 2
+        }
+      },
+      "local_read_scope": "Public captions; complete video/audio files downloaded; one-frame-per-second OCR plus visually read contact sheets/targeted frames. No speech recognition or claim of an exact audio transcript.",
+      "video_probe": {
+        "duration": "45.257362",
+        "size": "5631629"
+      },
+      "ocr_frame_count": 45,
+      "local_ocr_sha256": "f9edcdd2acb9101a7f303193be08ccd8f1ee94a2651ec387b6eac37dddfa5fe4"
+    },
+    {
+      "shortcode": "DbrjiwqT3FS",
+      "source_url": "https://www.instagram.com/reel/DbrjiwqT3FS/",
+      "author": "daytrading",
+      "publication_as_shown": "2026-08-05 OG; August6 browser (timezone unresolved)",
+      "canonical_and_og_url_match_requested_shortcode": true,
+      "page_receipt": {
+        "url": "https://www.instagram.com/reel/DbrjiwqT3FS/",
+        "started_utc": "2026-11-07T02:03:20.282632+00:00",
+        "user_agent": "Python urllib default, no override",
+        "max_bytes": 2000000,
+        "no_cookies_or_auth": true,
+        "status": 200,
+        "final_url": "https://www.instagram.com/reel/DbrjiwqT3FS/",
+        "received_utc": "2026-11-07T02:03:21.546322+00:00",
+        "bytes_read": 550066,
+        "sha256": "b016fe6fdfcde0522b310892c66c0567395769eeb1943bf753400454a8a48cd2"
+      },
+      "media_receipts": {
+        "full_media_receipt.json": {
+          "accessed_utc": "2026-11-07T02:15:10.104245+00:00",
+          "status": 200,
+          "content_type": "video/mp4",
+          "content_length_header": "1313456",
+          "bytes": 1313456,
+          "sha256": "4deb5b11bf720edffe81bc5798742bf9e0cfdb36d22b01294a127a802c4161fd",
+          "source": "Native anonymous Chromium CDN URL; omitted byte-range query for whole file; urllib default UA, no cookies/auth/impersonation",
+          "source_url_index": 5
+        },
+        "audio_receipt.json": {
+          "accessed_utc": "2026-11-07T02:15:52.268297+00:00",
+          "status": 200,
+          "content_type": "video/mp4",
+          "bytes": 318742,
+          "sha256": "7fb3f52396d41fd38c8da228d921ce852a0cd0434f60a4216049d87f86d5f602",
+          "source": "Native anonymous Chromium public CDN request; byte-range query omitted; default urllib UA, no cookies/auth",
+          "source_url_index": 7
+        }
+      },
+      "local_read_scope": "Public captions; complete video/audio files downloaded; one-frame-per-second OCR plus visually read contact sheets/targeted frames. No speech recognition or claim of an exact audio transcript.",
+      "video_probe": {
+        "duration": "42.308976",
+        "size": "1313456"
+      },
+      "ocr_frame_count": 42,
+      "local_ocr_sha256": "f41d72e4cb38ece7081ab626b749452b3edc3a1c571289939154a36e7c3eb5c3"
+    }
+  ]
+}

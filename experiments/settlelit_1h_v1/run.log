@@ -1,0 +1,9 @@
+09:45:00 PREREG verified 2dc5c24ce984; 10 frozen inputs, 27 data files, 222 minute files match
+09:45:02 in0_out1: 222 hops, price +54.5 fund -42.4 net1 +9.2 (t 1.64) net2 +6.4 net3 +3.5
+09:45:02 in0_out2: 222 hops, price +56.0 fund -42.4 net1 +10.7 (t 1.42) net2 +7.8 net3 +5.0
+09:45:02 in0_out5: 222 hops, price +57.7 fund -42.4 net1 +12.4 (t 1.40) net2 +9.5 net3 +6.6
+09:45:02 in5_out1: 220 hops, price +63.4 fund -42.6 net1 +18.1 (t 1.68) net2 +15.4 net3 +12.8
+09:45:02 in5_out2: 220 hops, price +63.0 fund -42.6 net1 +17.7 (t 1.34) net2 +15.1 net3 +12.4
+09:45:02 in5_out5: 220 hops, price +64.9 fund -42.6 net1 +19.6 (t 1.33) net2 +16.9 net3 +14.3
+09:45:02 reported: primary net1 with RIVER at its measured 61 bp round trip -7.2 bp (t -0.85)
+09:45:02 verdict NULL {'t1': False, 'net2_positive': True, 'net3_positive': True, 'both_halves': True, 'without_best_coin': True, 'trimmed_positive': True, 'leave_two_coins_out': True}

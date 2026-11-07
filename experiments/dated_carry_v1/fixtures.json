@@ -1,0 +1,43 @@
+{
+  "conditional_terminal_slots": 216,
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "delivery_price_scales": [
+    "1/2",
+    "1",
+    "2"
+  ],
+  "depth_profiles": [
+    "full",
+    "top_only"
+  ],
+  "entry_plan_slots": 4,
+  "exit_conversion_ratios": [
+    "399/400",
+    "1",
+    "401/400"
+  ],
+  "expiry_ns": 1798185600000000000,
+  "fee_controls": [
+    "zero_charge",
+    "public_standard"
+  ],
+  "fee_cost_cells": 24,
+  "initial_coin_purchase_cash_limit_usdt": "5000",
+  "instruments": {
+    "BTC": "BTC-25DEC26",
+    "ETH": "ETH-25DEC26"
+  },
+  "maximum_constructed_models": 72,
+  "paper_days_added": 0,
+  "program_trials_entering": 9478970,
+  "registry_id": "R327",
+  "standard_delivery_rate": "0.00025",
+  "standard_future_taker_rate": "0.00035",
+  "strategy_trials_added": 0,
+  "target_USD_face": "250",
+  "total_initial_capital_usdt": "10000"
+}

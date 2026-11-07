@@ -1,0 +1,45 @@
+{
+  "start": "2026-08-10T00:00:00Z",
+  "end": "2026-09-07T00:00:00Z",
+  "capital": "10000",
+  "allowed_missing_cde_bars": [
+    "2026-08-14T21:00:00+00:00",
+    "2026-08-21T21:00:00+00:00",
+    "2026-08-28T21:00:00+00:00",
+    "2026-09-04T21:00:00+00:00"
+  ],
+  "instruments": {
+    "btc": {
+      "cde": "BIP-20DEC30-CDE",
+      "mda": "BIPZ30",
+      "kraken": "PF_XBTUSD",
+      "kraken_key": "xbt",
+      "lot": "0.01"
+    },
+    "eth": {
+      "cde": "ETP-20DEC30-CDE",
+      "mda": "ETPZ30",
+      "kraken": "PF_ETHUSD",
+      "kraken_key": "eth",
+      "lot": "0.1"
+    }
+  },
+  "fees": {
+    "cde": "0.0002",
+    "kraken": "0.0005",
+    "cde_per_contract": "0.12"
+  },
+  "directions": [
+    1,
+    -1
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "price_proxy": "CDE entry/exit trade open; cash and intermediate mark last completed trade close. Hypothetical low/high cash-price envelope from that same bar, stale at four declared missing hours; not certified mark bounds",
+  "positive_funding_reuse": "unavailable until exit",
+  "friction": "R421 first5k per-leg cost family, worst per venue/side over both units and both phases at1x; reused proportionally at entry/exit price at1x/2x/3x, not historical books",
+  "purpose": "gate0 conditional proxy economics only; no paper or legal/cash/execution admission"
+}

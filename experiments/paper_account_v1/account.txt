@@ -1,0 +1,65 @@
+Compte simulé — résultats et données
+Simulation uniquement. Activation interdite.
+Les calculs présentés ne prouvent pas un gain futur.
+Chaque compte conserve son actif et son solde propres.
+Portée : invented engine validation plus post-hoc already-seen R316 quote diagnostics; NO actual paper PnL
+
+lighter — USDC
+État de la valeur : known_simulated_liquidation
+Capital initial : 5 000,00 USDC
+Solde comptable : 5 000,00 USDC
+Gain ou perte de prix réalisé : 0,00 USDC
+Financement imputé : 0,00 USDC
+Frais imputés : 0,00 USDC
+Gain ou perte net réalisé : 0,00 USDC
+Gain ou perte ouvert au prix de sortie : 0,00 USDC
+Valeur totale du compte : 5 000,00 USDC
+Capital immobilisé : 0,00 USDC
+Capital disponible : 5 000,00 USDC
+Prix, financement et frais sont déjà compris dans le résultat fourni ; cette vue ne les additionne pas de nouveau.
+Positions simulées fournies : 0
+Motifs : aucun motif enregistré
+
+mexc — USDT
+État de la valeur : known_simulated_liquidation
+Capital initial : 5 000,00 USDT
+Solde comptable : 4 988,85 USDT
+Gain ou perte de prix réalisé : -10,00 USDT
+Financement imputé : 0,00 USDT
+Frais imputés : 1,15 USDT
+Gain ou perte net réalisé : -11,15 USDT
+Gain ou perte ouvert au prix de sortie : 0,00 USDT
+Valeur totale du compte : 4 988,85 USDT
+Capital immobilisé : 0,00 USDT
+Capital disponible : 4 988,85 USDT
+Prix, financement et frais sont déjà compris dans le résultat fourni ; cette vue ne les additionne pas de nouveau.
+Positions simulées fournies : 0
+Motifs : aucun motif enregistré
+
+État des données et contrôles
+compte simulé : conditional
+  Motifs : invented engine validation only
+vrais frais du compte : inconnu
+  Preuve nécessaire : redacted source-bound owner fee statement and charged fills
+sessions et droits API : inconnu
+  Preuve nécessaire : current venue/session/account permission evidence
+index exact du financement Lighter : inconnu
+  Preuve nécessaire : pre-update event/proof/API-unit bridge
+collecte historique : bloqué
+  Motifs : existing accumulated byte baseline not exact; no renewed allowance
+
+Couverture des observations
+invented_cases : 8
+held_book_deadlines : 72
+new_paper_days : 0
+
+Preuves encore nécessaires
+Prix et profondeur synchronisés, connus à temps
+Frais réellement applicables au compte
+Sessions ouvertes et droits API
+Index Lighter lié à son événement de financement
+
+Coûts hypothétiques : sensibilités, sans preuve de frais réels ou de remplissage
+1x : résultat fourni -11,15 ; unité USDT ; hypothèse original10bp MEXC reserve multiplied; no actual fees or strategy inference
+2x : résultat fourni -12,30 ; unité USDT ; hypothèse original10bp MEXC reserve multiplied; no actual fees or strategy inference
+3x : résultat fourni -13,45 ; unité USDT ; hypothèse original10bp MEXC reserve multiplied; no actual fees or strategy inference

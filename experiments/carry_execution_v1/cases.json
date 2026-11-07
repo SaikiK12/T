@@ -1,0 +1,684 @@
+{
+  "scope": "invented paths/tiers/depth; a 33-minute no-transfer assumption anchored to the incident duration, not a reconstruction",
+  "notionals_per_leg": [
+    "10000",
+    "25000",
+    "50000",
+    "100000"
+  ],
+  "snapshot_fee_scenarios": [
+    ".0008",
+    "0"
+  ],
+  "synthetic_cases": [
+    {
+      "name": "flat",
+      "episode_date": "2025-10-10",
+      "lot": ".001",
+      "transfer_outage_until_ms": 1760132940000,
+      "entry_books": {
+        "long": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        },
+        "short": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        }
+      },
+      "legs": {
+        "long": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0008",
+          "liquidation_fee": ".005"
+        },
+        "short": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0006",
+          "liquidation_fee": ".005"
+        }
+      },
+      "events": [
+        {
+          "time_ms": 1760131020000,
+          "label": "ordinary",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          }
+        },
+        {
+          "time_ms": 1760133060000,
+          "label": "terminal",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          },
+          "close_all": true
+        }
+      ]
+    },
+    {
+      "name": "one_leg_liquidation",
+      "episode_date": "2025-10-10",
+      "lot": ".001",
+      "transfer_outage_until_ms": 1760132940000,
+      "entry_books": {
+        "long": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        },
+        "short": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        }
+      },
+      "legs": {
+        "long": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0008",
+          "liquidation_fee": ".005"
+        },
+        "short": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0006",
+          "liquidation_fee": ".005"
+        }
+      },
+      "events": [
+        {
+          "time_ms": 1760131020000,
+          "label": "gap",
+          "marks": {
+            "long": "210",
+            "short": "210"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "209.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "210.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "209.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "210.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          },
+          "transfer": [
+            "long",
+            "short",
+            ".3"
+          ]
+        },
+        {
+          "time_ms": 1760131800000,
+          "label": "before_recovery",
+          "marks": {
+            "long": "80",
+            "short": "80"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "79.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "80.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "79.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "80.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          }
+        },
+        {
+          "time_ms": 1760133000000,
+          "label": "recovery",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          }
+        },
+        {
+          "time_ms": 1760133060000,
+          "label": "terminal",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          },
+          "close_all": true
+        }
+      ]
+    },
+    {
+      "name": "adl_then_further_drop",
+      "episode_date": "2025-10-10",
+      "lot": ".001",
+      "transfer_outage_until_ms": 1760132940000,
+      "entry_books": {
+        "long": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        },
+        "short": {
+          "bids": [
+            [
+              "99.95",
+              "10000"
+            ]
+          ],
+          "asks": [
+            [
+              "100.05",
+              "10000"
+            ]
+          ]
+        }
+      },
+      "legs": {
+        "long": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0008",
+          "liquidation_fee": ".005"
+        },
+        "short": {
+          "tiers": [
+            {
+              "ceiling": "50000",
+              "initial": ".1",
+              "maintenance": ".05",
+              "deduction": "0"
+            },
+            {
+              "ceiling": "1000000",
+              "initial": ".2",
+              "maintenance": ".1",
+              "deduction": "2500"
+            }
+          ],
+          "fee_rate": ".0006",
+          "liquidation_fee": ".005"
+        }
+      },
+      "events": [
+        {
+          "time_ms": 1760131020000,
+          "label": "adl",
+          "marks": {
+            "long": "80",
+            "short": "80"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "79.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "80.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "79.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "80.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          },
+          "forced": {
+            "short": {
+              "kind": "ADL",
+              "price": "80",
+              "fee_rate": "0"
+            }
+          }
+        },
+        {
+          "time_ms": 1760131800000,
+          "label": "before_recovery",
+          "marks": {
+            "long": "40",
+            "short": "40"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "39.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "40.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "39.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "40.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          }
+        },
+        {
+          "time_ms": 1760133000000,
+          "label": "recovery",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          }
+        },
+        {
+          "time_ms": 1760133060000,
+          "label": "terminal",
+          "marks": {
+            "long": "100",
+            "short": "100"
+          },
+          "books": {
+            "long": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            },
+            "short": {
+              "bids": [
+                [
+                  "99.95",
+                  "10000"
+                ]
+              ],
+              "asks": [
+                [
+                  "100.05",
+                  "10000"
+                ]
+              ]
+            }
+          },
+          "funding_cash_per_notional": {
+            "long": "0",
+            "short": "0"
+          },
+          "close_all": true
+        }
+      ]
+    }
+  ],
+  "account_capitals": [
+    "10000",
+    "25000",
+    "50000",
+    "100000"
+  ]
+}

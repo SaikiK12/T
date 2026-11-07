@@ -1,0 +1,138 @@
+{
+  "records": [
+    {
+      "name": "constants",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/constants.rs",
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "status": 200,
+      "content_length": "30784",
+      "body_limit": 262144,
+      "bytes": 30784,
+      "sha256": "2245c914875768a63f2c0c1de542076815be57762edeb001fcf8fbaba75525ee",
+      "at_body_cap": false,
+      "network_seconds": 0.3990295699913986,
+      "read_scope": "Targeted funding/USDC/collateral/asset/quote definitions: lines205-272,382-398,438-452; full-file funding/decimal/multiplier name search.",
+      "unread_or_missing_scope": "Other constants not fully read; no application call site, market decimal history or deployment mapping.",
+      "verified_body_sha256": "2245c914875768a63f2c0c1de542076815be57762edeb001fcf8fbaba75525ee",
+      "git_blob_sha1": "d7606ef5735127873b8fb1af4f7bd5b1b18e1d7f"
+    },
+    {
+      "name": "account",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/account/account.rs",
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "status": 200,
+      "content_length": "46477",
+      "body_limit": 262144,
+      "bytes": 46477,
+      "sha256": "25a4c2deee0d235c7b76848e68a6c13454a30478745ddb11ef3b34a0e059a4c8",
+      "at_body_cap": false,
+      "network_seconds": 0.31988475999969523,
+      "read_scope": "Imports/struct context1-80 and collateral access/mutation620-715; full-file funding-name search returned no funding occurrence. get_relevant_usdc_collateral644-659; apply_collateral_delta664-681.",
+      "unread_or_missing_scope": "Remainder not audited; generic helper does not identify funding caller, cash formula, account/deployed/API semantics.",
+      "verified_body_sha256": "25a4c2deee0d235c7b76848e68a6c13454a30478745ddb11ef3b34a0e059a4c8",
+      "git_blob_sha1": "9fcc5fdaa786bc40facd8dd91f9c6a6c2da13931"
+    },
+    {
+      "name": "funding_model",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/funding.py",
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "status": 200,
+      "content_length": "3280",
+      "body_limit": 262144,
+      "bytes": 3280,
+      "sha256": "29715b2d22bb7b23dc400f911df6e26a5a90463c5d43725ea89f07286daadeed",
+      "at_body_cap": false,
+      "network_seconds": 0.3404914480051957,
+      "read_scope": "Full generated Funding model1-106, especially fields29-34 and from_dict85-104.",
+      "unread_or_missing_scope": "String identity model supplies no value/rate scale, asset, direction enum, settled-event or timestamp-unit contract; no server serializer or actual response.",
+      "verified_body_sha256": "29715b2d22bb7b23dc400f911df6e26a5a90463c5d43725ea89f07286daadeed",
+      "git_blob_sha1": "99e0204ec4a815bd9861163ff0a9851a8677fc63"
+    },
+    {
+      "name": "funding_api",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/api/funding_api.py",
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "status": 200,
+      "content_length": "10481",
+      "body_limit": 262144,
+      "bytes": 10481,
+      "sha256": "4237e4d54620aff181ad585aebb14793fce45e14561edb94ae22913c641bca00",
+      "at_body_cap": false,
+      "network_seconds": 0.3657214919949183,
+      "read_scope": "Full generated FundingApi1-279; funding_rates39-99 and _funding_rates_serialize224-277.",
+      "unread_or_missing_scope": "This file only serializes cross-venue /api/v1/funding-rates requests, not historical /fundings. Historical FundingsApi/server serializer not received.",
+      "verified_body_sha256": "4237e4d54620aff181ad585aebb14793fce45e14561edb94ae22913c641bca00",
+      "git_blob_sha1": "9309b9051707ba32ed694ddc3b89ab5ac03994e8"
+    }
+  ],
+  "max_requests": 4,
+  "max_total_body": 1048576,
+  "max_body": 262144,
+  "max_aggregate_seconds": 90,
+  "actual_total_bytes": 91022,
+  "actual_network_seconds": 1.4252918220008723,
+  "market_rpc_account_requests": 0,
+  "read_scope": "Completed targeted source inspection; note.md contains exact scopes, conditional dimensional equation and unresolved bridge.",
+  "tree_role": "prover 16c0f36d75f2306ee242e26e507e4c237f7f4074 is cached main tree object; not verified commit/deployment",
+  "sdk_role": "SDK a7a9ba88514d38a863a33642acd41f8adf442e5c commit inherited from R316 receipt",
+  "completed_utc": "2026-10-25T22:38:12.945498+00:00",
+  "cached_scope_checks": {
+    ".cache/r316_lighter_source/info_doc.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 0
+    },
+    ".cache/r316_lighter_source/priceoracleinfo_doc.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 1
+    },
+    ".cache/r316_lighter_source/fundingrates_doc.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 1
+    },
+    ".cache/r316_lighter_source/marketpricecharts_doc.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 1
+    },
+    ".cache/r316_lighter_source/order_api.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 0
+    },
+    ".cache/r316_lighter_source/funding_rate_model.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 0
+    },
+    ".cache/r316_lighter_source/funding_rates_model.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 0
+    },
+    ".cache/r316_lighter_source/orderbookdetails_doc.raw": {
+      "/api/v1/fundings": 0,
+      "\"Funding\"": 0,
+      "funding_rate_prefix_sum": 0,
+      "last_funding_rate_prefix_sum": 0,
+      "\"slug\":\"fundings\"": 1
+    }
+  },
+  "additional_network_requests": 0
+}

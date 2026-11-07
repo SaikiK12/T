@@ -1,0 +1,188 @@
+{
+  "round": "R423",
+  "prereg_sha256": "04b979b7d6630aba3f0bb8f7e6806114b3ed45d13576bc4616260a68840c270f",
+  "predictive_trials": 0,
+  "program_trials": 9784345,
+  "assets": {
+    "btc": {
+      "verdict": "SAMPLED_FIELD_CONSISTENT",
+      "observations": 8,
+      "exact_matches": 8,
+      "missing_final_rows": 0,
+      "mismatches": 0,
+      "nonzero_matching_points": 8,
+      "distinct_nonzero_values": 6,
+      "rows": [
+        {
+          "source_hour": "20261107T04",
+          "funding_time": "2026-11-07T04:00:00Z",
+          "received_utc_ns": 1794024490728399815,
+          "future_timestamp": false,
+          "advanced_raw": "0.000002",
+          "mda_raw": "0.0000020",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T05",
+          "funding_time": "2026-11-07T05:00:00Z",
+          "received_utc_ns": 1794030894333678144,
+          "future_timestamp": false,
+          "advanced_raw": "0.000003",
+          "mda_raw": "0.0000030",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T07",
+          "funding_time": "2026-11-07T07:00:00Z",
+          "received_utc_ns": 1794035202474552238,
+          "future_timestamp": false,
+          "advanced_raw": "0.000005",
+          "mda_raw": "0.0000050",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T08",
+          "funding_time": "2026-11-07T08:00:00Z",
+          "received_utc_ns": 1794038910974786763,
+          "future_timestamp": false,
+          "advanced_raw": "0.000006",
+          "mda_raw": "0.0000060",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T09",
+          "funding_time": "2026-11-07T09:00:00Z",
+          "received_utc_ns": 1794045232539304199,
+          "future_timestamp": false,
+          "advanced_raw": "0.000008",
+          "mda_raw": "0.0000080",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T10",
+          "funding_time": "2026-11-07T10:00:00Z",
+          "received_utc_ns": 1794048615986868328,
+          "future_timestamp": false,
+          "advanced_raw": "0.000009",
+          "mda_raw": "0.0000090",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T11",
+          "funding_time": "2026-11-07T11:00:00Z",
+          "received_utc_ns": 1794052032217088743,
+          "future_timestamp": false,
+          "advanced_raw": "0.000009",
+          "mda_raw": "0.0000090",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T12",
+          "funding_time": "2026-11-07T12:00:00Z",
+          "received_utc_ns": 1794056306705836539,
+          "future_timestamp": false,
+          "advanced_raw": "0.000008",
+          "mda_raw": "0.0000080",
+          "exact_numeric_equal": true
+        }
+      ],
+      "fitted_scale": null,
+      "fitted_time_shift": null,
+      "historical_cash_or_revisions_certified": false,
+      "pnl": null
+    },
+    "eth": {
+      "verdict": "SAMPLED_FIELD_CONSISTENT",
+      "observations": 8,
+      "exact_matches": 8,
+      "missing_final_rows": 0,
+      "mismatches": 0,
+      "nonzero_matching_points": 6,
+      "distinct_nonzero_values": 2,
+      "rows": [
+        {
+          "source_hour": "20261107T04",
+          "funding_time": "2026-11-07T04:00:00Z",
+          "received_utc_ns": 1794024491455976128,
+          "future_timestamp": false,
+          "advanced_raw": "0.000003",
+          "mda_raw": "0.0000030",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T05",
+          "funding_time": "2026-11-07T05:00:00Z",
+          "received_utc_ns": 1794030895048903401,
+          "future_timestamp": false,
+          "advanced_raw": "0",
+          "mda_raw": "0.0",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T07",
+          "funding_time": "2026-11-07T07:00:00Z",
+          "received_utc_ns": 1794035203291529880,
+          "future_timestamp": false,
+          "advanced_raw": "0.000002",
+          "mda_raw": "0.0000020",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T08",
+          "funding_time": "2026-11-07T08:00:00Z",
+          "received_utc_ns": 1794038911960743418,
+          "future_timestamp": false,
+          "advanced_raw": "0.000002",
+          "mda_raw": "0.0000020",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T09",
+          "funding_time": "2026-11-07T09:00:00Z",
+          "received_utc_ns": 1794045233258134687,
+          "future_timestamp": false,
+          "advanced_raw": "0",
+          "mda_raw": "0.0",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T10",
+          "funding_time": "2026-11-07T10:00:00Z",
+          "received_utc_ns": 1794048616624253752,
+          "future_timestamp": false,
+          "advanced_raw": "0.000003",
+          "mda_raw": "0.0000030",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T11",
+          "funding_time": "2026-11-07T11:00:00Z",
+          "received_utc_ns": 1794052033073004573,
+          "future_timestamp": false,
+          "advanced_raw": "0.000003",
+          "mda_raw": "0.0000030",
+          "exact_numeric_equal": true
+        },
+        {
+          "source_hour": "20261107T12",
+          "funding_time": "2026-11-07T12:00:00Z",
+          "received_utc_ns": 1794056307449844363,
+          "future_timestamp": false,
+          "advanced_raw": "0.000003",
+          "mda_raw": "0.0000030",
+          "exact_numeric_equal": true
+        }
+      ],
+      "fitted_scale": null,
+      "fitted_time_shift": null,
+      "historical_cash_or_revisions_certified": false,
+      "pnl": null
+    }
+  },
+  "verdict": "SAMPLED_CONTRACT_PASS",
+  "pnl": null,
+  "funding_cash": null,
+  "historic_or_broker_cash_certified": false,
+  "actual_fills": false,
+  "scope": "Exact same-time raw-field identity on fixed eight source hours; no fitted scale/time shift"
+}

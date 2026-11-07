@@ -1,0 +1,36 @@
+{
+  "organization": "Coinbase",
+  "publication_date": "undated API",
+  "url": "https://api.coinbase.com/api/v3/brokerage/market/products/ETP-20DEC30-CDE/candles?start=1786316400&end=1786485600&granularity=ONE_HOUR&limit=350",
+  "started_utc": "2026-11-07T14:59:09.370247+00:00",
+  "requested_start": 1786316400,
+  "requested_end": 1786485600,
+  "cap": 16384,
+  "scope": "counts/schema/time bounds only; no OHLC values summarized",
+  "auth": false,
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "content_type": "application/json; charset=utf-8",
+  "counts_only": {
+    "rows": 48,
+    "unique_times": 48,
+    "oldest": 1786316400,
+    "newest": 1786485600,
+    "fields": [
+      "close",
+      "high",
+      "low",
+      "open",
+      "start",
+      "volume"
+    ]
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T14:59:09.607394+00:00",
+  "bytes_read": 5092,
+  "response_complete": true,
+  "charged_bytes": 5092,
+  "sha256": "1af58f9dcce47548db59e46ca316cbcd8cab365765df52f20b0b89d52328423c",
+  "body": "eth0.body.gz",
+  "error": null
+}

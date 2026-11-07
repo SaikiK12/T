@@ -1,0 +1,75 @@
+{
+  "scope": "Plumbing only, not a return/statistical experiment. No extra pages or financial rate summaries.",
+  "results": [
+    {
+      "asset": "btc",
+      "rows": 2160,
+      "unique_timestamps": 2160,
+      "symbol": "BIPZ30",
+      "row_fields": [
+        "symbol",
+        "funding_rate",
+        "event_time"
+      ],
+      "field_types": {
+        "symbol": "str",
+        "funding_rate": "str",
+        "event_time": "str"
+      },
+      "first_event_time": "2026-11-07T02:00:00Z",
+      "last_event_time": "2026-08-09T02:00:00Z",
+      "one_hour_grid_slots_between_bounds": 2161,
+      "missing_grid_slots": 1,
+      "strictly_descending": true,
+      "pagination": {
+        "result_limit": 2160,
+        "result_offset": 0
+      },
+      "rate_values_inspected": false,
+      "historical_marks_present": false,
+      "fees_included": false,
+      "cash_posting_proven": false,
+      "closed_full_history_proven": false,
+      "hour_aligned": true,
+      "missing_event_times": [
+        "2026-09-10T15:00:00Z"
+      ]
+    },
+    {
+      "asset": "eth",
+      "rows": 2160,
+      "unique_timestamps": 2160,
+      "symbol": "ETPZ30",
+      "row_fields": [
+        "symbol",
+        "funding_rate",
+        "event_time"
+      ],
+      "field_types": {
+        "symbol": "str",
+        "funding_rate": "str",
+        "event_time": "str"
+      },
+      "first_event_time": "2026-11-07T02:00:00Z",
+      "last_event_time": "2026-08-09T02:00:00Z",
+      "one_hour_grid_slots_between_bounds": 2161,
+      "missing_grid_slots": 1,
+      "strictly_descending": true,
+      "pagination": {
+        "result_limit": 2160,
+        "result_offset": 0
+      },
+      "rate_values_inspected": false,
+      "historical_marks_present": false,
+      "fees_included": false,
+      "cash_posting_proven": false,
+      "closed_full_history_proven": false,
+      "hour_aligned": true,
+      "missing_event_times": [
+        "2026-09-10T15:00:00Z"
+      ]
+    }
+  ],
+  "new_history_responses": 2,
+  "new_history_client_body_bytes": 356783
+}

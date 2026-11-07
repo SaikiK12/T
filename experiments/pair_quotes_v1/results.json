@@ -1,0 +1,1077 @@
+{
+  "acquisition": {
+    "duration_seconds": 21.623851148999165,
+    "requests": 43,
+    "response_bytes": 643091
+  },
+  "base_leg_budget_usd": 250,
+  "capital_per_venue_usd": 5000,
+  "capital_usd": 10000,
+  "economic_scope": "same-snapshot displayed round-trip cost, not executed PnL or a funding forecast",
+  "evidence_manifest_sha256": "fa76ba23ef1ff9dc49cd939ed17cd04259cd9262c464bdd5b81df92bc420add6",
+  "fee_bp_per_side": {
+    "lighter": 4,
+    "mexc": 10
+  },
+  "fee_interpretation": "explicit charge reserve using R310 total-cost values PLUS displayed crossing; not verified account fees or an exact parent cost replay",
+  "observations": [
+    {
+      "books": [
+        {
+          "ask": 79391.3,
+          "bid": 79391.2,
+          "mid": 79391.25,
+          "receipt_latency_ms": 637.692327,
+          "reported_timestamp_ms": 1792856636264,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 42911899845
+        },
+        {
+          "ask": 79413.6,
+          "bid": 79413.1,
+          "mid": 79413.35,
+          "receipt_latency_ms": 541.618482,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "0.0001",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.0035590000000240707,
+        "displayed_fillable": true,
+        "fee_usd": 0.6891715375999999,
+        "leg_mid_notional_usd": 246.14713,
+        "long_lighter_entry_cost_usd": 0.3472152636000131,
+        "long_mexc_entry_cost_usd": 0.34551527400001103,
+        "quantity_base": 0.0031,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 28.142945952691953,
+            "capital_cost_bp": 0.692730537600024,
+            "multiple": 1,
+            "round_trip_cost_usd": 0.692730537600024
+          },
+          {
+            "break_even_leg_bp": 56.285891905383906,
+            "capital_cost_bp": 1.385461075200048,
+            "multiple": 2,
+            "round_trip_cost_usd": 1.385461075200048
+          },
+          {
+            "break_even_leg_bp": 84.42883785807585,
+            "capital_cost_bp": 2.078191612800072,
+            "multiple": 3,
+            "round_trip_cost_usd": 2.078191612800072
+          }
+        ],
+        "shown_two_way_capacity_base": 19.235599999999998,
+        "venue_margin_mid_notionals_usd": [
+          246.112875,
+          246.181385
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 79449.7,
+        "lighter_index_quote_usd": 246.29407,
+        "lighter_index_receipt_age_ms": 1266.181022,
+        "mexc_fair_price": 79394.8,
+        "mexc_fair_quote_usd": 246.12388,
+        "mexc_fair_receipt_age_ms": 638.640962,
+        "mexc_system_timestamp_ms": 1792856636102,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 1266.181022,
+        "mexc": 1771.106578
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "BTC",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 79400.7,
+          "bid": 79400.6,
+          "mid": 79400.65,
+          "receipt_latency_ms": 214.144253,
+          "reported_timestamp_ms": 1792856637183,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 42911901240
+        },
+        {
+          "ask": 79421.0,
+          "bid": 79420.9,
+          "mid": 79420.95,
+          "receipt_latency_ms": 485.823945,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "0.0001",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.009956999999985783,
+        "displayed_fillable": true,
+        "fee_usd": 0.6892497368,
+        "leg_mid_notional_usd": 246.17347999999998,
+        "long_lighter_entry_cost_usd": 0.3517936428000097,
+        "long_mexc_entry_cost_usd": 0.3474130939999761,
+        "quantity_base": 0.0031,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 28.403008187558864,
+            "capital_cost_bp": 0.6992067367999858,
+            "multiple": 1,
+            "round_trip_cost_usd": 0.6992067367999858
+          },
+          {
+            "break_even_leg_bp": 56.80601637511773,
+            "capital_cost_bp": 1.3984134735999716,
+            "multiple": 2,
+            "round_trip_cost_usd": 1.3984134735999716
+          },
+          {
+            "break_even_leg_bp": 85.20902456267659,
+            "capital_cost_bp": 2.0976202103999575,
+            "multiple": 3,
+            "round_trip_cost_usd": 2.0976202103999575
+          }
+        ],
+        "shown_two_way_capacity_base": 27.36944,
+        "venue_margin_mid_notionals_usd": [
+          246.142015,
+          246.20494499999998
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 79449.7,
+        "lighter_index_quote_usd": 246.29407,
+        "lighter_index_receipt_age_ms": 2215.928315,
+        "mexc_fair_price": 79394.8,
+        "mexc_fair_quote_usd": 246.12388,
+        "mexc_fair_receipt_age_ms": 1588.388255,
+        "mexc_system_timestamp_ms": 1792856636102,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2215.928315,
+        "mexc": 2720.853871
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "BTC",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.1792,
+          "bid": 0.1791,
+          "mid": 0.17915,
+          "receipt_latency_ms": 220.269576,
+          "reported_timestamp_ms": 1792856638958,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 3660389732
+        },
+        {
+          "ask": 0.1793,
+          "bid": 0.17902,
+          "mid": 0.17915999999999999,
+          "receipt_latency_ms": 444.105739,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "10",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.5281999999999982,
+        "displayed_fillable": true,
+        "fee_usd": 0.69726292,
+        "leg_mid_notional_usd": 249.02544999999998,
+        "long_lighter_entry_cost_usd": 0.6127398000000418,
+        "long_mexc_entry_cost_usd": 0.6127231199999564,
+        "quantity_base": 1390.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 49.21034858083775,
+            "capital_cost_bp": 1.2254629199999982,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.2254629199999982
+          },
+          {
+            "break_even_leg_bp": 98.4206971616755,
+            "capital_cost_bp": 2.4509258399999965,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.4509258399999965
+          },
+          {
+            "break_even_leg_bp": 147.63104574251327,
+            "capital_cost_bp": 3.6763887599999947,
+            "multiple": 3,
+            "round_trip_cost_usd": 3.6763887599999947
+          }
+        ],
+        "shown_two_way_capacity_base": 2172778.0,
+        "venue_margin_mid_notionals_usd": [
+          249.01850000000002,
+          249.03239999999997
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.1793,
+        "lighter_index_quote_usd": 249.227,
+        "lighter_index_receipt_age_ms": 1086.502082,
+        "mexc_fair_price": 0.1791,
+        "mexc_fair_quote_usd": 248.949,
+        "mexc_fair_receipt_age_ms": 775.961175,
+        "mexc_system_timestamp_ms": 1792856639383,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 1086.502082,
+        "mexc": 1545.880016
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "WIF",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.1791,
+          "bid": 0.179,
+          "mid": 0.17905,
+          "receipt_latency_ms": 241.246522,
+          "reported_timestamp_ms": 1792856640269,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 3660389748
+        },
+        {
+          "ask": 0.1793,
+          "bid": 0.17902,
+          "mid": 0.17915999999999999,
+          "receipt_latency_ms": 370.067549,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "10",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.5282000000000266,
+        "displayed_fillable": true,
+        "fee_usd": 0.69698492,
+        "leg_mid_notional_usd": 248.95594999999997,
+        "long_lighter_entry_cost_usd": 0.6126008000000133,
+        "long_mexc_entry_cost_usd": 0.6125841200000134,
+        "quantity_base": 1390.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 49.21291979565167,
+            "capital_cost_bp": 1.2251849200000269,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.2251849200000267
+          },
+          {
+            "break_even_leg_bp": 98.42583959130334,
+            "capital_cost_bp": 2.4503698400000538,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.4503698400000533
+          },
+          {
+            "break_even_leg_bp": 147.638759386955,
+            "capital_cost_bp": 3.6755547600000793,
+            "multiple": 3,
+            "round_trip_cost_usd": 3.6755547600000797
+          }
+        ],
+        "shown_two_way_capacity_base": 2172778.0,
+        "venue_margin_mid_notionals_usd": [
+          248.87949999999998,
+          249.03239999999997
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.1793,
+        "lighter_index_quote_usd": 249.227,
+        "lighter_index_receipt_age_ms": 2113.498336,
+        "mexc_fair_price": 0.1791,
+        "mexc_fair_quote_usd": 248.949,
+        "mexc_fair_receipt_age_ms": 1802.957429,
+        "mexc_system_timestamp_ms": 1792856639383,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2113.498336,
+        "mexc": 2572.87627
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "WIF",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.014305,
+          "bid": 0.0143,
+          "mid": 0.0143025,
+          "receipt_latency_ms": 219.187505,
+          "reported_timestamp_ms": 1792856642273,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1298659397
+        },
+        {
+          "ask": 0.014301,
+          "bid": 0.014296,
+          "mid": 0.014298499999999999,
+          "receipt_latency_ms": 429.950668,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "100",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.23125900000002275,
+        "displayed_fillable": true,
+        "fee_usd": 0.6967492972,
+        "leg_mid_notional_usd": 248.82869999999997,
+        "long_lighter_entry_cost_usd": 0.45372123040003526,
+        "long_mexc_entry_cost_usd": 0.47428706679998756,
+        "quantity_base": 17400.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 37.29506673466617,
+            "capital_cost_bp": 0.9280082972000228,
+            "multiple": 1,
+            "round_trip_cost_usd": 0.9280082972000228
+          },
+          {
+            "break_even_leg_bp": 74.59013346933234,
+            "capital_cost_bp": 1.8560165944000455,
+            "multiple": 2,
+            "round_trip_cost_usd": 1.8560165944000455
+          },
+          {
+            "break_even_leg_bp": 111.88520020399851,
+            "capital_cost_bp": 2.784024891600068,
+            "multiple": 3,
+            "round_trip_cost_usd": 2.784024891600068
+          }
+        ],
+        "shown_two_way_capacity_base": 426100.0,
+        "venue_margin_mid_notionals_usd": [
+          248.8635,
+          248.79389999999998
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.014311,
+        "lighter_index_quote_usd": 249.0114,
+        "lighter_index_receipt_age_ms": 1054.381137,
+        "mexc_fair_price": 0.014312,
+        "mexc_fair_quote_usd": 249.0288,
+        "mexc_fair_receipt_age_ms": 738.715846,
+        "mexc_system_timestamp_ms": 1792856642708,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 1054.381137,
+        "mexc": 1547.679745
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "SKR",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.014305,
+          "bid": 0.0143,
+          "mid": 0.0143025,
+          "receipt_latency_ms": 314.828724,
+          "reported_timestamp_ms": 1792856642967,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1298659397
+        },
+        {
+          "ask": 0.014314,
+          "bid": 0.014304,
+          "mid": 0.014309,
+          "receipt_latency_ms": 223.103368,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "100",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.36010500000000434,
+        "displayed_fillable": true,
+        "fee_usd": 0.6968857156,
+        "leg_mid_notional_usd": 248.92005,
+        "long_lighter_entry_cost_usd": 0.5060612087999751,
+        "long_mexc_entry_cost_usd": 0.5509295068000293,
+        "quantity_base": 17400.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 42.46306055297693,
+            "capital_cost_bp": 1.0569907156000045,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.0569907156000045
+          },
+          {
+            "break_even_leg_bp": 84.92612110595385,
+            "capital_cost_bp": 2.113981431200009,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.113981431200009
+          },
+          {
+            "break_even_leg_bp": 127.3891816589308,
+            "capital_cost_bp": 3.1709721468000134,
+            "multiple": 3,
+            "round_trip_cost_usd": 3.1709721468000134
+          }
+        ],
+        "shown_two_way_capacity_base": 426100.0,
+        "venue_margin_mid_notionals_usd": [
+          248.8635,
+          248.97660000000002
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.014311,
+        "lighter_index_quote_usd": 249.0114,
+        "lighter_index_receipt_age_ms": 2039.687947,
+        "mexc_fair_price": 0.014312,
+        "mexc_fair_quote_usd": 249.0288,
+        "mexc_fair_receipt_age_ms": 1724.022656,
+        "mexc_system_timestamp_ms": 1792856642708,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2039.687947,
+        "mexc": 2532.986555
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "SKR",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.005577,
+          "bid": 0.005575,
+          "mid": 0.005576,
+          "receipt_latency_ms": 191.529138,
+          "reported_timestamp_ms": 1792856644112,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1076018590
+        },
+        {
+          "ask": 0.005578,
+          "bid": 0.005564,
+          "mid": 0.0055709999999999996,
+          "receipt_latency_ms": 223.238266,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "10",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.7202849999999899,
+        "displayed_fillable": true,
+        "fee_usd": 0.699743706,
+        "leg_mid_notional_usd": 249.860005,
+        "long_lighter_entry_cost_usd": 0.7115981480000384,
+        "long_mexc_entry_cost_usd": 0.7084305579999515,
+        "quantity_base": 44830.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 56.832973568538506,
+            "capital_cost_bp": 1.4200287059999899,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.4200287059999899
+          },
+          {
+            "break_even_leg_bp": 113.66594713707701,
+            "capital_cost_bp": 2.8400574119999797,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.8400574119999797
+          },
+          {
+            "break_even_leg_bp": 170.49892070561555,
+            "capital_cost_bp": 4.26008611799997,
+            "multiple": 3,
+            "round_trip_cost_usd": 4.26008611799997
+          }
+        ],
+        "shown_two_way_capacity_base": 2735930.0,
+        "venue_margin_mid_notionals_usd": [
+          249.97208,
+          249.74792999999997
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.00559,
+        "lighter_index_quote_usd": 250.5997,
+        "lighter_index_receipt_age_ms": 931.656,
+        "mexc_fair_price": 0.005582,
+        "mexc_fair_quote_usd": 250.24106,
+        "mexc_fair_receipt_age_ms": 728.364087,
+        "mexc_system_timestamp_ms": 1792856645812,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 931.656,
+        "mexc": 1564.223645
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "ROBO",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.005577,
+          "bid": 0.005575,
+          "mid": 0.005576,
+          "receipt_latency_ms": 202.65855,
+          "reported_timestamp_ms": 1792856644112,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1076018590
+        },
+        {
+          "ask": 0.005578,
+          "bid": 0.005564,
+          "mid": 0.0055709999999999996,
+          "receipt_latency_ms": 212.733627,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "10",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.7202849999999899,
+        "displayed_fillable": true,
+        "fee_usd": 0.699743706,
+        "leg_mid_notional_usd": 249.860005,
+        "long_lighter_entry_cost_usd": 0.7115981480000384,
+        "long_mexc_entry_cost_usd": 0.7084305579999515,
+        "quantity_base": 44830.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 56.832973568538506,
+            "capital_cost_bp": 1.4200287059999899,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.4200287059999899
+          },
+          {
+            "break_even_leg_bp": 113.66594713707701,
+            "capital_cost_bp": 2.8400574119999797,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.8400574119999797
+          },
+          {
+            "break_even_leg_bp": 170.49892070561555,
+            "capital_cost_bp": 4.26008611799997,
+            "multiple": 3,
+            "round_trip_cost_usd": 4.26008611799997
+          }
+        ],
+        "shown_two_way_capacity_base": 2735930.0,
+        "venue_margin_mid_notionals_usd": [
+          249.97208,
+          249.74792999999997
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.00559,
+        "lighter_index_quote_usd": 250.5997,
+        "lighter_index_receipt_age_ms": 2022.272695,
+        "mexc_fair_price": 0.005582,
+        "mexc_fair_quote_usd": 250.24106,
+        "mexc_fair_receipt_age_ms": 1818.980782,
+        "mexc_system_timestamp_ms": 1792856645812,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2022.272695,
+        "mexc": 2654.84034
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "ROBO",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.0445,
+          "bid": 0.04449,
+          "mid": 0.044495,
+          "receipt_latency_ms": 199.133445,
+          "reported_timestamp_ms": 1792856644375,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1631998780
+        },
+        {
+          "ask": 0.0445,
+          "bid": 0.04448,
+          "mid": 0.04449,
+          "receipt_latency_ms": 408.024545,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "1",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.1699700000000064,
+        "displayed_fillable": true,
+        "fee_usd": 0.699903106,
+        "leg_mid_notional_usd": 249.958865,
+        "long_lighter_entry_cost_usd": 0.43421522000000357,
+        "long_mexc_entry_cost_usd": 0.43565788600000277,
+        "quantity_base": 5618.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 34.80065033900704,
+            "capital_cost_bp": 0.8698731060000064,
+            "multiple": 1,
+            "round_trip_cost_usd": 0.8698731060000064
+          },
+          {
+            "break_even_leg_bp": 69.60130067801408,
+            "capital_cost_bp": 1.739746212000013,
+            "multiple": 2,
+            "round_trip_cost_usd": 1.739746212000013
+          },
+          {
+            "break_even_leg_bp": 104.40195101702112,
+            "capital_cost_bp": 2.6096193180000196,
+            "multiple": 3,
+            "round_trip_cost_usd": 2.6096193180000196
+          }
+        ],
+        "shown_two_way_capacity_base": 1007694.0,
+        "venue_margin_mid_notionals_usd": [
+          249.97291,
+          249.94482000000002
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.04454,
+        "lighter_index_quote_usd": 250.22572,
+        "lighter_index_receipt_age_ms": 1294.459231,
+        "mexc_fair_price": 0.04452,
+        "mexc_fair_quote_usd": 250.11336,
+        "mexc_fair_receipt_age_ms": 1103.808132,
+        "mexc_system_timestamp_ms": 1792856648927,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 1294.459231,
+        "mexc": 1976.003879
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "MEGA",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 0.0445,
+          "bid": 0.04449,
+          "mid": 0.044495,
+          "receipt_latency_ms": 208.381465,
+          "reported_timestamp_ms": 1792856650498,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1631998860
+        },
+        {
+          "ask": 0.04449,
+          "bid": 0.04448,
+          "mid": 0.044485,
+          "receipt_latency_ms": 430.201509,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "1",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.13362300000000005,
+        "displayed_fillable": true,
+        "fee_usd": 0.6998885672,
+        "leg_mid_notional_usd": 249.94482,
+        "long_lighter_entry_cost_usd": 0.4259436812000458,
+        "long_mexc_entry_cost_usd": 0.4075678859999542,
+        "quantity_base": 5618.0,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 33.34782321954102,
+            "capital_cost_bp": 0.8335115672000001,
+            "multiple": 1,
+            "round_trip_cost_usd": 0.8335115672000001
+          },
+          {
+            "break_even_leg_bp": 66.69564643908204,
+            "capital_cost_bp": 1.6670231344000002,
+            "multiple": 2,
+            "round_trip_cost_usd": 1.6670231344000002
+          },
+          {
+            "break_even_leg_bp": 100.04346965862308,
+            "capital_cost_bp": 2.5005347016000004,
+            "multiple": 3,
+            "round_trip_cost_usd": 2.5005347016000004
+          }
+        ],
+        "shown_two_way_capacity_base": 1007694.0,
+        "venue_margin_mid_notionals_usd": [
+          249.97291,
+          249.91672999999997
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 0.04454,
+        "lighter_index_quote_usd": 250.22572,
+        "lighter_index_receipt_age_ms": 2417.714497,
+        "mexc_fair_price": 0.04452,
+        "mexc_fair_quote_usd": 250.11336,
+        "mexc_fair_receipt_age_ms": 2227.063398,
+        "mexc_system_timestamp_ms": 1792856648927,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2417.714497,
+        "mexc": 3099.259145
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "MEGA",
+      "tradfi_control": false,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 1042.81,
+          "bid": 1042.64,
+          "mid": 1042.725,
+          "receipt_latency_ms": 201.664857,
+          "reported_timestamp_ms": 1792856652785,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1730079815
+        },
+        {
+          "ask": 1041.3,
+          "bid": 1040.0,
+          "mid": 1040.65,
+          "receipt_latency_ms": 394.744435,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "0.001",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.5667459999999949,
+        "displayed_fillable": true,
+        "fee_usd": 0.6971837436,
+        "leg_mid_notional_usd": 248.96331249999997,
+        "long_lighter_entry_cost_usd": 0.7323960399999575,
+        "long_mexc_entry_cost_usd": 0.5315337036000374,
+        "quantity_base": 0.239,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 50.767710748546335,
+            "capital_cost_bp": 1.263929743599995,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.263929743599995
+          },
+          {
+            "break_even_leg_bp": 101.53542149709267,
+            "capital_cost_bp": 2.52785948719999,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.52785948719999
+          },
+          {
+            "break_even_leg_bp": 152.30313224563903,
+            "capital_cost_bp": 3.791789230799985,
+            "multiple": 3,
+            "round_trip_cost_usd": 3.791789230799985
+          }
+        ],
+        "shown_two_way_capacity_base": 6.631,
+        "venue_margin_mid_notionals_usd": [
+          249.21127499999997,
+          248.71535
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 1042.3,
+        "lighter_index_quote_usd": 249.1097,
+        "lighter_index_receipt_age_ms": 1405.29342,
+        "mexc_fair_price": 1042.77,
+        "mexc_fair_quote_usd": 249.22203,
+        "mexc_fair_receipt_age_ms": 1207.121988,
+        "mexc_system_timestamp_ms": 1792856652109,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 1405.29342,
+        "mexc": 1692.139511
+      },
+      "metadata_fresh": true,
+      "observation": 0,
+      "session_calendar_verified": false,
+      "symbol": "XPD",
+      "tradfi_control": true,
+      "venue_reported_active": true
+    },
+    {
+      "books": [
+        {
+          "ask": 1042.81,
+          "bid": 1042.64,
+          "mid": 1042.725,
+          "receipt_latency_ms": 326.349338,
+          "reported_timestamp_ms": 1792856652984,
+          "timestamp_role": "provider_system_time_not_verified_book_event_time",
+          "venue": "mexc",
+          "version": 1730079818
+        },
+        {
+          "ask": 1041.3,
+          "bid": 1040.0,
+          "mid": 1040.65,
+          "receipt_latency_ms": 393.731475,
+          "reported_timestamp_ms": null,
+          "timestamp_role": "not_documented_in_rest_contract",
+          "venue": "lighter",
+          "version": null
+        }
+      ],
+      "common_step_base": "0.001",
+      "conditional_cost": {
+        "capital_usd": 10000.0,
+        "crossing_usd": 0.5667459999999949,
+        "displayed_fillable": true,
+        "fee_usd": 0.6971837436,
+        "leg_mid_notional_usd": 248.96331249999997,
+        "long_lighter_entry_cost_usd": 0.7323960399999575,
+        "long_mexc_entry_cost_usd": 0.5315337036000374,
+        "quantity_base": 0.239,
+        "scenarios": [
+          {
+            "break_even_leg_bp": 50.767710748546335,
+            "capital_cost_bp": 1.263929743599995,
+            "multiple": 1,
+            "round_trip_cost_usd": 1.263929743599995
+          },
+          {
+            "break_even_leg_bp": 101.53542149709267,
+            "capital_cost_bp": 2.52785948719999,
+            "multiple": 2,
+            "round_trip_cost_usd": 2.52785948719999
+          },
+          {
+            "break_even_leg_bp": 152.30313224563903,
+            "capital_cost_bp": 3.791789230799985,
+            "multiple": 3,
+            "round_trip_cost_usd": 3.791789230799985
+          }
+        ],
+        "shown_two_way_capacity_base": 6.631,
+        "venue_margin_mid_notionals_usd": [
+          249.21127499999997,
+          248.71535
+        ]
+      },
+      "execution_blockers": [
+        "REST_book_event_age_unverified",
+        "latency_and_fill_unverified",
+        "market_session_calendar_not_verified"
+      ],
+      "execution_ready": false,
+      "first_seen_flags": [],
+      "first_seen_pair_ok": true,
+      "funding_notional_observation": {
+        "lighter_index_price": 1042.3,
+        "lighter_index_quote_usd": 249.1097,
+        "lighter_index_receipt_age_ms": 2505.738469,
+        "mexc_fair_price": 1042.77,
+        "mexc_fair_quote_usd": 249.22203,
+        "mexc_fair_receipt_age_ms": 2307.567037,
+        "mexc_system_timestamp_ms": 1792856652109,
+        "settlement_notional_verified": false
+      },
+      "metadata_age_ms": {
+        "lighter": 2505.738469,
+        "mexc": 2792.58456
+      },
+      "metadata_fresh": true,
+      "observation": 1,
+      "session_calendar_verified": false,
+      "symbol": "XPD",
+      "tradfi_control": true,
+      "venue_reported_active": true
+    }
+  ],
+  "predictive_trials": 0,
+  "registry_id": "R312"
+}

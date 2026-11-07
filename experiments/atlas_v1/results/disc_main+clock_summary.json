@@ -1,0 +1,146 @@
+{
+ "tensors": [
+  "main",
+  "clock"
+ ],
+ "eras": [
+  0,
+  181,
+  365,
+  546,
+  730,
+  911,
+  1095
+ ],
+ "groupings": {
+  "session": {
+   "trials": 149870,
+   "tau_all": {
+    "clock|raw|1": Infinity,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": Infinity,
+    "clock|raw|72": Infinity,
+    "main|excess|1": 2.5,
+    "main|excess|4": 2.75,
+    "main|excess|12": 3.0,
+    "main|excess|24": 3.0,
+    "main|excess|72": 3.0,
+    "main|raw|1": 2.5,
+    "main|raw|4": 2.5,
+    "main|raw|12": 2.25,
+    "main|raw|24": 2.25,
+    "main|raw|72": 3.0
+   },
+   "tau_group": {
+    "clock|raw|1": Infinity,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": Infinity,
+    "clock|raw|72": Infinity,
+    "main|excess|1": 3.5,
+    "main|excess|4": 3.25,
+    "main|excess|12": 3.25,
+    "main|excess|24": 3.5,
+    "main|excess|72": 4.25,
+    "main|raw|1": 3.25,
+    "main|raw|4": 2.25,
+    "main|raw|12": 3.0,
+    "main|raw|24": 3.0,
+    "main|raw|72": 3.25
+   },
+   "cge_all": 956,
+   "conditional": 3947,
+   "placebo_cge_all": [
+    57,
+    53
+   ]
+  },
+  "tier": {
+   "trials": 64230,
+   "tau_all": {
+    "clock|raw|1": Infinity,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": Infinity,
+    "clock|raw|72": Infinity,
+    "main|excess|1": 2.75,
+    "main|excess|4": 2.75,
+    "main|excess|12": 2.75,
+    "main|excess|24": 3.0,
+    "main|excess|72": 3.0,
+    "main|raw|1": 2.75,
+    "main|raw|4": 2.75,
+    "main|raw|12": 2.75,
+    "main|raw|24": 2.75,
+    "main|raw|72": 3.25
+   },
+   "tau_group": {
+    "clock|raw|1": 3.0,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": Infinity,
+    "clock|raw|72": Infinity,
+    "main|excess|1": 2.75,
+    "main|excess|4": 3.0,
+    "main|excess|12": 3.5,
+    "main|excess|24": 4.25,
+    "main|excess|72": Infinity,
+    "main|raw|1": 2.75,
+    "main|raw|4": 3.0,
+    "main|raw|12": 3.0,
+    "main|raw|24": 3.0,
+    "main|raw|72": 3.5
+   },
+   "cge_all": 896,
+   "conditional": 4351,
+   "placebo_cge_all": [
+    86,
+    49
+   ]
+  },
+  "regime": {
+   "trials": 85640,
+   "tau_all": {
+    "clock|raw|1": Infinity,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": Infinity,
+    "clock|raw|72": Infinity,
+    "main|excess|1": 2.5,
+    "main|excess|4": 2.75,
+    "main|excess|12": 2.75,
+    "main|excess|24": 3.25,
+    "main|excess|72": 3.5,
+    "main|raw|1": 2.5,
+    "main|raw|4": 2.75,
+    "main|raw|12": 2.75,
+    "main|raw|24": 2.75,
+    "main|raw|72": 3.75
+   },
+   "tau_group": {
+    "clock|raw|1": Infinity,
+    "clock|raw|4": Infinity,
+    "clock|raw|12": Infinity,
+    "clock|raw|24": 2.5,
+    "clock|raw|72": 2.5,
+    "main|excess|1": 3.25,
+    "main|excess|4": 4.0,
+    "main|excess|12": 3.5,
+    "main|excess|24": 4.0,
+    "main|excess|72": Infinity,
+    "main|raw|1": 2.5,
+    "main|raw|4": 2.5,
+    "main|raw|12": 3.0,
+    "main|raw|24": 3.0,
+    "main|raw|72": Infinity
+   },
+   "cge_all": 821,
+   "conditional": 1606,
+   "placebo_cge_all": [
+    109,
+    53
+   ]
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "common_validation_days": 224,
+  "conditional_inference_only": true,
+  "gate": 0,
+  "gates": {},
+  "historical_status": "spent dates/current-survivor universe/current contract rules/close-price proxies",
+  "new_trials": 12,
+  "paper_candidate": null,
+  "program_trials_before": 9478770,
+  "prospective_days": 0,
+  "reason": "fewer than 60 common validation days, unknown intervals, or no risk-comparable calibration candidate; missing calendar days are not compressed into adjacent bootstrap observations",
+  "risk_scales": {
+    "F0+B_h1": 0.8523696815486075,
+    "F0+B_h14": 0.6216600961709625,
+    "F0+B_h7": 0.6387061761924593,
+    "F0_h1": 1.0,
+    "F0_h14": 0.4554662446891466,
+    "F0_h7": 0.47567496200470866,
+    "F1+B_h1": 0.8956694995478278,
+    "F1+B_h14": 0.4365963034171562,
+    "F1+B_h7": 0.48019097753290185,
+    "F1_h1": 0.8850952603089384,
+    "F1_h14": 0.5557590757537056,
+    "F1_h7": 0.48222022596110026,
+    "reference": 0.3343280371194782
+  },
+  "selected": "F0+B_h14",
+  "verdict": "INCONCLUSIVE"
+}

@@ -1,0 +1,389 @@
+{
+  "access_limit": "No market/RPC/account calls; two HTTP200 semantic not-found fee pages retained; restricted endpoint/fee account response not accessed; raw copyrighted bodies remain ignored cache.",
+  "distinct_received_index_mechanics": [
+    "Sparse PriceUpdates arrays/default zeros with separate calculation flags; no per-value source clock.",
+    "Funding uses prior stored index before same-block oracle updates.",
+    "Next-hour need_funding condition applied at actual block created_at; not proof of API event/inclusion time.",
+    "Integer premium average/small-big clamps/divide magnitude by8/price-weighted prefix increment; imported constants, deployed/API scaling unread.",
+    "Public partial market fields/root/block time omit full committed index; no authenticated value extraction/proof verification.",
+    "Account signed-position funding-prefix checkpoint and USDC-named aggregation context; asset/scaling/application constants unread."
+  ],
+  "fee_source_receipts": {
+    "body_bytes": 876687,
+    "body_read_upper_bound": 876687,
+    "budget": {
+      "max_body_per_response": 1048576,
+      "max_body_upper_bound": 4194304,
+      "max_network_seconds": 120,
+      "max_requests": 8
+    },
+    "cached_sources": [
+      {
+        "access": "R315 cache; zero new GETs",
+        "bytes": 692349,
+        "read_scope": "Previously unread trading-fee section and long USDT fee example: fillP*contracts*size*rate,0.02%=0.0002,30000*10000*.0001*.0002=6USDT; opening/closing fee example1.4/1.6USDT. Other guide sections not newly extracted.",
+        "sha256": "77bd8ba27b6de216cad226723b13d2117b56ac853e1dc17ddb4b1006308f3d2b",
+        "url": "https://www.mexc.com/support/article/mexc-futures-calculation-guide-312060306409668608"
+      },
+      {
+        "access": "Frozen R316 held public data; zero new requests",
+        "path": "experiments/warm_values_v1/evidence/metadata.json",
+        "read_scope": "Only fee/settlement/account-mode-related fields in held six-pair public instrument metadata; no economic row outcomes recomputed.",
+        "sha256": "39ff9148194b1357704803df56a94f14e5f072ba7776a52f6d01c81900d513c0"
+      }
+    ],
+    "market_requests": 0,
+    "network_seconds": 4.64430096198339,
+    "records": [
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 2167,
+        "bytes": 2167,
+        "error": null,
+        "http_status": 200,
+        "name": "lighter_accounts",
+        "read_scope": "HTTP200 semantic Page Not Found; suggested Trading Fees page only.",
+        "redirect_location": null,
+        "sha256": "fb53950d22599fdfa57db6ffd3e37a5d0038080a1f6a43d2beeb68406d4e899a",
+        "truncated": false,
+        "unread_or_missing_scope": "No account-types page received; suggestions are discovery, not fee authority.",
+        "url": "https://docs.lighter.xyz/trading/account-types",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 2118,
+        "bytes": 2118,
+        "error": null,
+        "http_status": 200,
+        "name": "lighter_fees",
+        "read_scope": "HTTP200 semantic Page Not Found; suggested Trading Fees page only.",
+        "redirect_location": null,
+        "sha256": "16eb6799806baa00ae6139c139e7ef7c613de646373a676de73f5a48657cd3ab",
+        "truncated": false,
+        "unread_or_missing_scope": "No fees page at this old path; no substantive fee claim from this body.",
+        "url": "https://docs.lighter.xyz/trading/fees",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 84736,
+        "bytes": 84736,
+        "error": null,
+        "http_status": 200,
+        "name": "mexc_contract",
+        "read_scope": "Full contract-info response field table/example: maker/taker rates, settlement asset, fee/zero flags, NORMAL/LEVERAGE/TIERED, BASE/TEMP and country path.",
+        "redirect_location": null,
+        "sha256": "4d7fd58ca8ea371e64c6df33b25ba25e5e1520c7e39b6536126dc4459461c24a",
+        "truncated": false,
+        "unread_or_missing_scope": "No account-effective fee, region quota or API order test; current docs endpoint /detail/country is not a historical contract for retained /detail request.",
+        "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-contract-info",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 352134,
+        "bytes": 352134,
+        "error": null,
+        "http_status": 200,
+        "name": "mexc_fees",
+        "read_scope": "Understanding maker/taker, region/event/actual-history caveats and MX deduction eligibility text.",
+        "redirect_location": null,
+        "sha256": "9e7921bca5489c7d73fbbe371117ff74729fc183028181885473b56d6abada1a",
+        "truncated": false,
+        "unread_or_missing_scope": "Rendered public rate table not populated with account-effective values; displayed0% MX discount is not a verified user discount. No login/account history accessed.",
+        "url": "https://www.mexc.com/fee",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 5133,
+        "bytes": 5133,
+        "error": null,
+        "http_status": 200,
+        "name": "lighter_trading_fees",
+        "read_scope": "Complete account-type fee/latency/staking table and API tier pointer through rate-limit considerations.",
+        "redirect_location": null,
+        "sha256": "9864f00fc9ebf431889c1dd19a0fb179a75f28b2370148b465512e6d4904d49e",
+        "truncated": false,
+        "unread_or_missing_scope": "Binary-options linked fee model and volume-quota details unread; no owner account tier, staking or actual charged fees verified. Generic GitBook agent/query instructions are source text, not followed.",
+        "url": "https://docs.lighter.xyz/trading/trading-fees.md",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 2782,
+        "bytes": 2782,
+        "error": null,
+        "http_status": 200,
+        "name": "lighter_api",
+        "read_scope": "API key/account/sub-account conceptual access prose.",
+        "redirect_location": null,
+        "sha256": "64915ea0c27225efd97cb1ccee8a95f1c73f9852678ee25cb783eb5bab6f79c1",
+        "truncated": false,
+        "unread_or_missing_scope": "No keys/accounts/wallets/signatures/transactions accessed or created; no SDK execution; links and GitBook generated query instructions not followed.",
+        "url": "https://docs.lighter.xyz/trading/api.md",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 405610,
+        "bytes": 405610,
+        "error": null,
+        "http_status": 200,
+        "name": "mexc_zero_fee",
+        "read_scope": "Futures eligibility/quota/expiry/risk FAQ, maker/taker/base-rate/spread explanations; generic comparative table retained as marketing context.",
+        "redirect_location": null,
+        "sha256": "a182461aecf75c9f0cdf1bacf4edd2a82b7bf4af68a721a19df495cedad36c41",
+        "truncated": false,
+        "unread_or_missing_scope": "No owner0-fee entitlement or live per-pair quota checked; generic2026 marketing conflicts with conditional FAQ and differs from held instrument rates. No account or trade history accessed.",
+        "url": "https://www.mexc.com/zero-fee",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      },
+      {
+        "access": "ordinary static GET; no retry/redirect/login, raw body retained only in ignored cache",
+        "body_read_upper_bound": 22007,
+        "bytes": 22007,
+        "error": null,
+        "http_status": 200,
+        "name": "mexc_account_index",
+        "read_scope": "Account-module index and authentication requirement; Get Fee Details path discovered.",
+        "redirect_location": null,
+        "sha256": "576f61f4b6f76ac76084d2346e8f7c82664e6ebb69795c69d4d7e01cc84ea2f7",
+        "truncated": false,
+        "unread_or_missing_scope": "Individual authenticated endpoint pages/response contract not fetched; no actual private endpoint invoked.",
+        "url": "https://www.mexc.com/api-docs/futures/account-and-trading-endpoints",
+        "version": "unversioned official public page; body SHA-256 pins this inspection, not historical fee eligibility"
+      }
+    ],
+    "requests": 8,
+    "scope": "R317 bounded static fee/latency primary reading only",
+    "search_queries_attempted": 2,
+    "search_result": "one web tool call with two focused queries returned isError/content=[]; no source claim supplied"
+  },
+  "index_source_receipts": {
+    "budget": {
+      "max_body": 1048576,
+      "max_body_upper_bound": 3145728,
+      "max_network_seconds": 120,
+      "max_requests": 6
+    },
+    "market_rpc_account_requests": 0,
+    "records": [
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 168970,
+        "bytes": 168970,
+        "error": null,
+        "name": "prover_tree",
+        "network_seconds": 0.6960437749949051,
+        "read_scope": "Recursive tree path metadata only, filtered funding/price/block/market/position candidates; tree not truncated.",
+        "sha256": "9807f913c32e3c96f09933a3de1b481b6b0a02ad411b11457cb3dce52056005b",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "No whole repository/code/circuit audit or deployment mapping.",
+        "url": "https://api.github.com/repos/elliottech/lighter-prover/git/trees/main?recursive=1"
+      },
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 3535,
+        "bytes": 3535,
+        "error": null,
+        "name": "price_updates",
+        "network_seconds": 0.3419521670002723,
+        "read_scope": "Full99-line module; arrays/defaults/target/witness serialization.",
+        "sha256": "6adf6d3a4afc79e68d247b8c342a7229b2182c0f8e9fbad5e078bc7917ba41f1",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "No deserializer or constants definitions, external source/effective clock or proof verification.",
+        "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/price_updates.rs"
+      },
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 15606,
+        "bytes": 15606,
+        "error": null,
+        "name": "block_pre_execution",
+        "network_seconds": 0.33290446500177495,
+        "read_scope": "Structs/from_block lines1\u2013115 and public-input parsing120\u2013285.",
+        "sha256": "ee1a0cbd73623a5e508092c49c5239df15c433c11a58508cd08a04bc8e68911a",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "No actual block witness or cryptographic validation; unread tail and full block module.",
+        "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution.rs"
+      },
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 37019,
+        "bytes": 37019,
+        "error": null,
+        "name": "block_pre_execution_constraints",
+        "network_seconds": 0.36170882600708865,
+        "read_scope": "Imports/target context1\u2013125, public registration349\u2013380, state checks410\u2013440, full pre-execution442\u2013815 and post-state binding817\u2013884.",
+        "sha256": "38aeef836aa8e4be6d2973523fa2f50f87c8aa38dc8cf778722eff4012f7dce6",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "No compiled circuit/proof, imported constants/helper definitions, deployed version or API serializer mapping.",
+        "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/block_pre_execution_constraints.rs"
+      },
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 38774,
+        "bytes": 38774,
+        "error": null,
+        "name": "market_details",
+        "network_seconds": 0.4128660900023533,
+        "read_scope": "Full and partial field definitions/conversion/public registration1\u2013180,620\u2013690,800\u2013900; targeted field-name search.",
+        "sha256": "bfda0e2d630fb3034362715e16d5eba72807f621e93614348ec62e78b37ccf00",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "Remaining hashing/selection/helpers not fully audited; no actual values or authenticated index proof.",
+        "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/market_details.rs"
+      },
+      {
+        "access": "ordinary public static HTTP200; no redirects/retries/logins; raw source only in ignored cache",
+        "body_read_upper_bound": 25644,
+        "bytes": 25644,
+        "error": null,
+        "name": "account_position",
+        "network_seconds": 0.39781956700608134,
+        "read_scope": "Imports/position fields1\u2013100, aggregation295\u2013325 and function/field-name index.",
+        "sha256": "a025a517b908e249c960151cc1fe6df1a47101c3aeafe86a38539ca5a9a8caf1",
+        "status": 200,
+        "truncated": false,
+        "unread_or_missing_scope": "Funding application function, decimal conversion constants and actual account/API cash path not inspected.",
+        "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/account_position/account_position.rs"
+      }
+    ],
+    "resolved_tree_sha": "16c0f36d75f2306ee242e26e507e4c237f7f4074",
+    "search_queries": 2,
+    "total_body_bytes": 289548,
+    "total_body_read_upper_bound": 289548,
+    "total_network_seconds": 2.5432948900124757,
+    "version_role": "repository tree object resolved from main; commit/deployed version not queried"
+  },
+  "lighter_unstaked_taker_paths": {
+    "plus": {
+      "additional_ms": 300,
+      "bp": "0.5",
+      "order_class": "regular market taker only"
+    },
+    "premium": {
+      "additional_ms": 140,
+      "bp": "2.8",
+      "order_class": "regular market taker only"
+    },
+    "standard": {
+      "additional_ms": 300,
+      "bp": "0",
+      "order_class": "regular market taker only"
+    }
+  },
+  "mexc_nominal_interpretation": "Public decimal takerFeeRate treated as a fraction consistently with the official0.02%=0.0002=6USDT worked example; independent account/API scaling and /detail vs /detail/country equivalence unverified.",
+  "protocol_version_role": "repository TREE object16c0f36d75f2306ee242e26e507e4c237f7f4074 resolved from main, not asserted commit or deployed program; BUSL source remains ignored cache and is not installed/mirrored",
+  "received_unrun_fee_alternatives": {
+    "binary_option_fees": "Linked fee model not read; not transferred to perps.",
+    "maker_roles": "Marketable limit is taker; post-only placement does not imply fill/queue/hedge recovery. Maker source rates retained, no maker cost/fill strategy tested.",
+    "mexc_MX_deduction": "Requires enabling, relevant wallet asset, eligible pair/account, depletion handling and capital/FX/opportunity costs; public0% render is not owner discount.",
+    "mexc_modes": [
+      "NORMAL",
+      "LEVERAGE",
+      "TIERED",
+      "BASE",
+      "TEMP"
+    ],
+    "mexc_zero_entitlement": [
+      "account/activity/volume/risk/region",
+      "per-pair expiry",
+      "quota consumption/exhaustion/reversion",
+      "quota reduced/removed"
+    ],
+    "plus_capacity": "4000 sends/min,24000 weighted reads/min,16subaccounts; burst/instantaneous entitlement unverified and no tier change.",
+    "premium_staking_ladder": [
+      {
+        "discount_percent": 0,
+        "maker_percent": "0.0040",
+        "staked_LIT": 0,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0280",
+        "tested": false
+      },
+      {
+        "discount_percent": 2.5,
+        "maker_percent": "0.0039",
+        "staked_LIT": 1000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0273",
+        "tested": false
+      },
+      {
+        "discount_percent": 5,
+        "maker_percent": "0.0038",
+        "staked_LIT": 3000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0266",
+        "tested": false
+      },
+      {
+        "discount_percent": 10,
+        "maker_percent": "0.0036",
+        "staked_LIT": 10000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0252",
+        "tested": false
+      },
+      {
+        "discount_percent": 15,
+        "maker_percent": "0.0034",
+        "staked_LIT": 30000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0238",
+        "tested": false
+      },
+      {
+        "discount_percent": 20,
+        "maker_percent": "0.0032",
+        "staked_LIT": 100000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0224",
+        "tested": false
+      },
+      {
+        "discount_percent": 25,
+        "maker_percent": "0.0030",
+        "staked_LIT": 300000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0210",
+        "tested": false
+      },
+      {
+        "discount_percent": 30,
+        "maker_percent": "0.0028",
+        "staked_LIT": 500000,
+        "taker_additional_ms": 140,
+        "taker_percent": "0.0196",
+        "tested": false
+      }
+    ],
+    "staking_limits": "No staking/asset acquisition; LIT capital, price risk, liquidity/opportunity cost, eligibility and effective date unverified. Account aggregation is not extra capital.",
+    "standard_advanced_orders": {
+      "RFQ_bp": "1",
+      "TWAP_bp": "1",
+      "advanced_orders_bp": "1",
+      "status": "received unrun, distinct order-class semantics required"
+    }
+  },
+  "registry_id": "R317",
+  "retrieved_utc_date": "2026-10-25",
+  "scenario_sources": {
+    "floor": "Mathematical nonnegative-fee current-book crossing floor; no execution entitlement",
+    "lighter_plus": "https://docs.lighter.xyz/trading/trading-fees.md ; plus regular-order public account-type hypothesis; later-read, not owner tier",
+    "lighter_premium": "https://docs.lighter.xyz/trading/trading-fees.md ; premium regular-order public account-type hypothesis; later-read, not owner tier",
+    "lighter_standard": "https://docs.lighter.xyz/trading/trading-fees.md ; standard regular-order public account-type hypothesis; later-read, not owner tier",
+    "metadata": "R316 sealed public instrument nominal fields; fraction interpretation only; experiments/fee_routes_v1/sources.json",
+    "mexc_advertised": "https://www.mexc.com/zero-fee ; generic4bp hypothesis, not owner rate/cap/as-of vintage",
+    "reserve": "R312/R316 frozen10/4bp reserve PLUS crossing, unchanged"
+  },
+  "scope": "Bounded exact fee/order/account-delay and protocol funding/index source inspection; not effective owner fees, deployed proof, whole-book or source alpha evidence.",
+  "source_vintage_limit": "Fee prose inspected after already-seen R316 capture, not an as-of rate/entitlement/history reconstruction."
+}

@@ -1,0 +1,161 @@
+{
+  "name": "reserved_batch1_carry",
+  "trials": 1,
+  "coins": 867,
+  "coins_by_venue": {
+    "binance": 867,
+    "gate": 48
+  },
+  "rc_null_p95": 1.075461663495633,
+  "verdict": "PASS (gate 0)",
+  "survivors": [
+    "binance+gate L14d th10% K20"
+  ],
+  "sets": [
+    {
+      "set": "binance+gate",
+      "lookback": 14,
+      "window_from": "2020-01-22",
+      "coins_ever": 32,
+      "mean_candidates": {
+        "0.10": 6.397101449275362
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "label": "binance+gate L14d th10% K20",
+      "strat": {
+        "set": "binance+gate",
+        "lookback": 14,
+        "threshold": 0.1,
+        "slots": 20
+      },
+      "window_from": "2020-01-22",
+      "stats": [
+        {
+          "days": 345,
+          "mean_bp": 0.7845355896789221,
+          "ann_pct": 2.8635549023280658,
+          "vol_pct": 1.0389164684244536,
+          "sharpe": 2.75628983595835,
+          "t": 2.6797112462688046,
+          "t_nw": 4.026694554932612,
+          "half1_bp": 0.3091066155196023,
+          "half2_bp": 1.2572164194789386,
+          "recent_bp": 1.2109505365782727,
+          "recent_days": 184,
+          "trimmed_bp": 0.7593728629943485,
+          "max_dd_pct": -0.23418327372098924,
+          "top10_share": 0.6181810890556468,
+          "total_pct": 2.738277049116933
+        },
+        {
+          "days": 345,
+          "mean_bp": 0.5085935606934145,
+          "ann_pct": 1.8563664965309632,
+          "vol_pct": 1.0587236505192297,
+          "sharpe": 1.7534004228776274,
+          "t": 1.704685324126652,
+          "t_nw": 2.4997936149732523,
+          "half1_bp": 0.0954438248219276,
+          "half2_bp": 0.9193551478026387,
+          "recent_bp": 0.8913853191869683,
+          "recent_days": 184,
+          "trimmed_bp": 0.49063506091845893,
+          "max_dd_pct": -0.3270148386035565,
+          "top10_share": 0.9378811621341561,
+          "total_pct": 1.7647124497657707
+        },
+        {
+          "days": 345,
+          "mean_bp": 0.2326515317079072,
+          "ann_pct": 0.8491780907338613,
+          "vol_pct": 1.086687355311115,
+          "sharpe": 0.7814373532401546,
+          "t": 0.7597265122171329,
+          "t_nw": 1.0689664414490625,
+          "half1_bp": -0.11821896587574675,
+          "half2_bp": 0.5814938761263377,
+          "recent_bp": 0.5718201017956636,
+          "recent_days": 184,
+          "trimmed_bp": 0.23587531415673757,
+          "max_dd_pct": -0.5305365350262714,
+          "top10_share": 2.033249309176114,
+          "total_pct": 0.8002592436395339
+        }
+      ],
+      "funding_share": 1.0555365882648027,
+      "avg_held": 8.330434782608696,
+      "trades": 136,
+      "forced_exits": 0,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    }
+  ],
+  "spec": {
+    "name": "reserved_batch1_carry",
+    "start": "2020-01-01",
+    "end": "2020-12-31",
+    "symbols": "experiments/xfund_v1/symbols.csv",
+    "venues": [
+      {
+        "name": "binance",
+        "prices": "klines_1h",
+        "vol": "volume",
+        "funding": "fundingRate",
+        "bar_h": 1
+      },
+      {
+        "name": "gate",
+        "prices": "gate_hist/reserved/candlesticks_1h",
+        "vol": "vol_contracts",
+        "funding": "gate_hist/reserved/funding_applies",
+        "bar_h": 1
+      }
+    ],
+    "reserved_prereg": "experiments/reserved_batch1/PREREG.md",
+    "sets": [
+      [
+        "binance",
+        "gate"
+      ]
+    ],
+    "lookbacks": [
+      14
+    ],
+    "thresholds": [
+      0.1
+    ],
+    "slots": [
+      20
+    ],
+    "costs": [
+      0.0007,
+      0.0014,
+      0.0021
+    ],
+    "corr_days": 30,
+    "corr_min": 0.9,
+    "corr_obs": 20,
+    "block_days": 10,
+    "reps": 2000,
+    "seed": 275,
+    "out": "experiments/reserved_batch1/results/carry",
+    "alpha": 0.05,
+    "recent_from": "2020-07-01",
+    "trim": 0.01,
+    "nw_lags": 10,
+    "keep_daily": 1,
+    "hurdle_ann_pct": 0.0
+  }
+}

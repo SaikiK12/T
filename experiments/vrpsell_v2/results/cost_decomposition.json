@@ -1,0 +1,35 @@
+{
+ "note": "post-hoc diagnostic of R409, not pre-registered, decides nothing; m=1 components in bp of entry price",
+ "BTC": {
+  "weeks": 295,
+  "mean_bp": {
+   "spread_on_premium": 9.82815121079901,
+   "option_fee": 5.999999999999999,
+   "delivery_fee": 1.5024748648726831,
+   "hedge_fee": 38.832872456013384,
+   "funding": 6.316692591875678,
+   "gross_premium": 594.1361402281029,
+   "gross_payoff": 566.3605709973724,
+   "gross_hedge_pnl": 22.51501766828149
+  },
+  "iv_minus_rv_median_volpts": 4.279381249592859,
+  "iv_minus_rv_share_positive": 0.6372881355932203,
+  "hedge_turnover_coins_per_week_median": 7.784576051782742
+ },
+ "ETH": {
+  "weeks": 296,
+  "mean_bp": {
+   "spread_on_premium": 11.900597241189695,
+   "option_fee": 6.0,
+   "delivery_fee": 1.4952483302631983,
+   "hedge_fee": 39.41124700805318,
+   "funding": 9.87499478433725,
+   "gross_premium": 753.858897178905,
+   "gross_payoff": 762.466512762938,
+   "gross_hedge_pnl": 59.33149170642104
+  },
+  "iv_minus_rv_median_volpts": 2.365667258152314,
+  "iv_minus_rv_share_positive": 0.5743243243243243,
+  "hedge_turnover_coins_per_week_median": 7.904289693926369
+ }
+}

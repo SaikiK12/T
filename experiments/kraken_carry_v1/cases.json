@@ -1,0 +1,21 @@
+{
+  "round": "R418",
+  "method": "M487",
+  "start": "2025-12-01T00:00:00Z",
+  "end": "2026-11-01T00:00:00Z",
+  "instruments": {
+    "xbt": {"base": "BTC", "perp": "PF_XBTUSD", "spot": "XXBTZUSD"},
+    "eth": {"base": "ETH", "perp": "PF_ETHUSD", "spot": "XETHZUSD"}
+  },
+  "capitals": ["10000", "25000", "50000", "100000"],
+  "spot_taker": "0.008",
+  "perp_taker": "0.0005",
+  "historical_slip_per_side": "0.0001",
+  "annual_hurdle_assumption": "0.04",
+  "fee_scope": "Current published Tier 1 ceiling, held constant; no owner tier, volume discount or historical fee-vintage claim",
+  "slip_scope": "Invented 1 bp per order-side historical spread/impact assumption, not measured historical liquidity",
+  "capital_scope": "USD already on venue: half cash reserved for spot purchase including worst-cost entry; half cash in separate USD derivative wallet; no spot collateral offset, transfer or borrowing",
+  "gap_scope": "Missing funding is unknown. Bounds assume the current instrument relative cap held historically and reference prices fall within captured surrounding index-bar highs. Neither assumption certifies the omitted settlements.",
+  "decision": "One continuous fixed-quantity hold per asset; monthly attribution only; no parameter or best-asset selection",
+  "gate_scope": "Exploratory economic screen only; exact executable net remains unknown even on a model pass"
+}

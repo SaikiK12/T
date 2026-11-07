@@ -1,0 +1,127 @@
+14:25:22 prereg sha 0ae50ac9962f
+14:25:25 TradFi symbols in the archive: 26 ['BZUSDT', 'CLUSDT', 'CRCLUSDT', 'DEFIUSDT', 'DRAMUSDT', 'EWYUSDT', 'INTCUSDT', 'KORUUSDT', 'MRVLUSDT', 'MSTRUSDT', 'MUUSDT', 'MUUUSDT', 'NBISUSDT', 'NVDAUSDT', 'QQQUSDT', 'SAMSUNGUSDT', 'SKHYNIXUSDT', 'SKHYUSDT', 'SNDKUSDT', 'SNXXUSDT', 'SOXLUSDT', 'SOXSUSDT', 'SPCXUSDT', 'TSLAUSDT', 'XAGUSDT', 'XAUUSDT']
+14:25:42 A in_sample all {'cmult': 1.0, 'total': 1.987, 'mean_bp_day': 12.098, 't_nw10': 3.362, 'max_dd': 0.257, 'tradfi_share_of_gross': 0.0, 'tradfi_gross_bp_day': 0.0}
+14:25:56 A in_sample crypto {'cmult': 1.0, 'total': 1.987, 'mean_bp_day': 12.098, 't_nw10': 3.362, 'max_dd': 0.257}
+14:25:58 A holdout all {'cmult': 1.0, 'total': 1.056, 'mean_bp_day': 23.105, 't_nw10': 1.237, 'max_dd': 0.468, 'tradfi_share_of_gross': -0.012, 'tradfi_gross_bp_day': -0.492}
+14:26:01 A holdout crypto {'cmult': 1.0, 'total': 1.02, 'mean_bp_day': 22.325, 't_nw10': 1.246, 'max_dd': 0.46}
+14:26:09 B in_sample all {'cmult': 1.0, 'total': 0.809, 'mean_bp_day': 4.925, 't_nw10': 2.637, 'max_dd': 0.155, 'tradfi_share_of_gross': 0.0, 'tradfi_gross_bp_day': 0.0}
+14:26:17 B in_sample crypto {'cmult': 1.0, 'total': 0.809, 'mean_bp_day': 4.925, 't_nw10': 2.637, 'max_dd': 0.155}
+14:26:18 B holdout all {'cmult': 1.0, 'total': 0.897, 'mean_bp_day': 19.619, 't_nw10': 2.726, 'max_dd': 0.159, 'tradfi_share_of_gross': 0.03, 'tradfi_gross_bp_day': 0.733}
+14:26:19 B holdout crypto {'cmult': 1.0, 'total': 0.834, 'mean_bp_day': 18.251, 't_nw10': 2.735, 'max_dd': 0.159}
+14:27:17 replay all A 0.2253
+14:27:17 replay all B 0.0971
+14:27:17 replay crypto A 0.087
+14:27:17 replay crypto B -0.0049
+14:27:17 replay mexc_mapped A 0.0466
+14:27:17 replay mexc_mapped B -0.001
+14:27:17 
+   part book         window    universe  cmult  days   total  mean_bp_day  t_nw10  max_dd  tradfi_share_of_gross  tradfi_gross_bp_day
+archive    A      in_sample         all    1.0  1642  1.9865      12.0983  3.3622  0.2566                 0.0000               0.0000
+archive    A      in_sample         all    2.0  1642  1.3533       8.2419  2.3074  0.3513                    NaN                  NaN
+archive    A      in_sample         all    3.0  1642  0.7201       4.3855  1.2332  0.4480                    NaN                  NaN
+archive    A      in_sample      crypto    1.0  1642  1.9865      12.0983  3.3622  0.2566                    NaN                  NaN
+archive    A      in_sample      crypto    2.0  1642  1.3533       8.2419  2.3074  0.3513                    NaN                  NaN
+archive    A      in_sample      crypto    3.0  1642  0.7201       4.3855  1.2332  0.4480                    NaN                  NaN
+archive    A        holdout         all    1.0   457  1.0559      23.1052  1.2369  0.4679                -0.0124              -0.4916
+archive    A        holdout         all    2.0   457  0.8156      17.8459  0.9551  0.5050                    NaN                  NaN
+archive    A        holdout         all    3.0   457  0.5752      12.5866  0.6734  0.5530                    NaN                  NaN
+archive    A        holdout      crypto    1.0   457  1.0203      22.3255  1.2462  0.4597                    NaN                  NaN
+archive    A        holdout      crypto    2.0   457  0.7909      17.3069  0.9652  0.4968                    NaN                  NaN
+archive    A        holdout      crypto    3.0   457  0.5616      12.2883  0.6847  0.5431                    NaN                  NaN
+archive    B      in_sample         all    1.0  1642  0.8086       4.9247  2.6372  0.1552                 0.0000               0.0000
+archive    B      in_sample         all    2.0  1642  0.6818       4.1520  2.2280  0.1599                    NaN                  NaN
+archive    B      in_sample         all    3.0  1642  0.5549       3.3792  1.8156  0.1737                    NaN                  NaN
+archive    B      in_sample      crypto    1.0  1642  0.8086       4.9247  2.6372  0.1552                    NaN                  NaN
+archive    B      in_sample      crypto    2.0  1642  0.6818       4.1520  2.2280  0.1599                    NaN                  NaN
+archive    B      in_sample      crypto    3.0  1642  0.5549       3.3792  1.8156  0.1737                    NaN                  NaN
+archive    B        holdout         all    1.0   457  0.8966      19.6187  2.7259  0.1594                 0.0301               0.7334
+archive    B        holdout         all    2.0   457  0.8527      18.6580  2.5919  0.1641                    NaN                  NaN
+archive    B        holdout         all    3.0   457  0.8088      17.6974  2.4579  0.1688                    NaN                  NaN
+archive    B        holdout      crypto    1.0   457  0.8341      18.2510  2.7352  0.1594                    NaN                  NaN
+archive    B        holdout      crypto    2.0   457  0.7949      17.3941  2.6046  0.1641                    NaN                  NaN
+archive    B        holdout      crypto    3.0   457  0.7557      16.5372  2.4741  0.1688                    NaN                  NaN
+ replay    A 2026-10-01..18         all    1.0    18  0.2253     125.1788  2.2255     NaN                 0.4904                  NaN
+ replay    A 2026-10-01..18         all    2.0    18  0.2141     118.9604  2.0966     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18         all    3.0    18  0.2029     112.7420  1.9699     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18         all    1.0    18  0.0971      53.9494  1.7353     NaN                 0.8994                  NaN
+ replay    B 2026-10-01..18         all    2.0    18  0.0948      52.6601  1.6801     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18         all    3.0    18  0.0925      51.3708  1.6258     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18      crypto    1.0    18  0.0870      48.3442  2.3583     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18      crypto    2.0    18  0.0776      43.1254  2.0788     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18      crypto    3.0    18  0.0682      37.9066  1.8055     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18      crypto    1.0    18 -0.0049      -2.7371 -0.4277     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18      crypto    2.0    18 -0.0061      -3.3615 -0.5268     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18      crypto    3.0    18 -0.0072      -3.9858 -0.6261     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18 mexc_mapped    1.0    18  0.0466      25.8958  1.3702     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18 mexc_mapped    2.0    18  0.0377      20.9658  1.1140     NaN                    NaN                  NaN
+ replay    A 2026-10-01..18 mexc_mapped    3.0    18  0.0289      16.0357  0.8554     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18 mexc_mapped    1.0    18 -0.0010      -0.5698 -0.1050     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18 mexc_mapped    2.0    18 -0.0024      -1.3137 -0.2460     NaN                    NaN                  NaN
+ replay    B 2026-10-01..18 mexc_mapped    3.0    18 -0.0037      -2.0576 -0.3912     NaN                    NaN                  NaN
+14:27:17 
+book    window       symbol  gross_total  tradfi
+   A in_sample     AEVOUSDT       0.1803   False
+   A in_sample     GOATUSDT       0.1508   False
+   A in_sample    USUALUSDT       0.1462   False
+   A in_sample      GMTUSDT       0.1296   False
+   A in_sample  MUBARAKUSDT       0.1142   False
+   A in_sample     PNUTUSDT       0.1073   False
+   A in_sample  MELANIAUSDT       0.1055   False
+   A in_sample   UXLINKUSDT       0.1052   False
+   A in_sample     HIGHUSDT       0.1033   False
+   A in_sample      ARCUSDT       0.1022   False
+   A   holdout     BEATUSDT       0.4496   False
+   A   holdout      LABUSDT       0.4417   False
+   A   holdout    FOLKSUSDT       0.1670   False
+   A   holdout      AIAUSDT       0.1316   False
+   A   holdout      SLXUSDT       0.1273   False
+   A   holdout      ENAUSDT       0.1237   False
+   A   holdout    BLESSUSDT       0.1191   False
+   A   holdout     HIFIUSDT       0.1075   False
+   A   holdout     SOONUSDT       0.0981   False
+   A   holdout     COAIUSDT       0.0968   False
+   B in_sample     GOATUSDT       0.1450   False
+   B in_sample     AEVOUSDT       0.1063   False
+   B in_sample    USUALUSDT       0.1013   False
+   B in_sample   POPCATUSDT       0.1001   False
+   B in_sample  MELANIAUSDT       0.0918   False
+   B in_sample      ENAUSDT       0.0696   False
+   B in_sample    TRUMPUSDT       0.0684   False
+   B in_sample    MATICUSDT       0.0556   False
+   B in_sample      OMGUSDT       0.0516   False
+   B in_sample      GMTUSDT       0.0502   False
+   B   holdout      LABUSDT       0.2500   False
+   B   holdout     BEATUSDT       0.1499   False
+   B   holdout      AIAUSDT       0.1420   False
+   B   holdout      ENAUSDT       0.1050   False
+   B   holdout    RIVERUSDT       0.0673   False
+   B   holdout    LIGHTUSDT       0.0609   False
+   B   holdout      SOLUSDT       0.0528   False
+   B   holdout 1000PEPEUSDT       0.0478   False
+   B   holdout     KORUUSDT       0.0477    True
+   B   holdout     PUMPUSDT       0.0460   False
+   A    replay     KORUUSDT       0.0680    True
+   A    replay     SOXLUSDT       0.0628    True
+   A    replay       龙虾USDT       0.0600   False
+   A    replay      ONEUSDT       0.0477   False
+   A    replay     SNXXUSDT       0.0395    True
+   A    replay     SNDKUSDT       0.0376    True
+   A    replay  SKHYNIXUSDT       0.0248    True
+   A    replay      AKEUSDT       0.0228   False
+   A    replay      UNIUSDT       0.0211   False
+   A    replay      LSKUSDT       0.0168   False
+   B    replay     KORUUSDT       0.0641    True
+   B    replay     SOXLUSDT       0.0409    True
+   B    replay     SNDKUSDT       0.0280    True
+   B    replay     SNXXUSDT       0.0251    True
+   B    replay  SKHYNIXUSDT       0.0172    True
+   B    replay      AKEUSDT       0.0143   False
+   B    replay      ETHUSDT       0.0079   False
+   B    replay      XAGUSDT       0.0056    True
+   B    replay      BNBUSDT       0.0025   False
+   B    replay     SOXSUSDT       0.0013    True
+14:27:17 {
+ "tradfi_share_A_holdout": -0.01239135514169635,
+ "tradfi_share_A_replay": 0.4903752659415537,
+ "flag_partly_non_crypto": true
+}

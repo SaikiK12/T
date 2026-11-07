@@ -1,0 +1,21 @@
+{
+  "allocation_clock": "01:00 UTC, using then-known closing prices for economic costs/quantities",
+  "basis_axes": [
+    "horizon1/7/14d",
+    "as_of_UTC_midnight",
+    "frozen_coin"
+  ],
+  "basis_units": "equal-underlying-quantity price PnL divided by larger entry leg price",
+  "fill_model": "immediate 01:00 closing-price proxy after same-clock funding; not BBO/fill evidence",
+  "funding_axes": [
+    "model F0/F1",
+    "horizon1/7/14d",
+    "as_of_UTC_midnight",
+    "frozen_coin",
+    "MEXC/Lighter"
+  ],
+  "funding_units": "sum of predicted signed settlement fractions per venue, positive longs pay",
+  "missing": "NaN/unavailable, never substituted with predicted zero",
+  "prediction_clock": "midnight closed history only; price labels end strictly before it",
+  "rule_vintage": "current metadata only, historical venue rules not verified"
+}

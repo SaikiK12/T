@@ -1,0 +1,33 @@
+{
+  "capital": "10000USDT initial once; <=5000spent to buy owned coins incl reserve; remaining idlecash, samecoins earmarked as inversecollateral; no borrowed or second independent coin capital.",
+  "controls": "fullfive vs toponly, publicStandard vs zerochargefloor, cash10000 and sameinitialcoins unhedgedpassive; realizedrisk/counterparty comparability not established.",
+  "cost_stress": "1/2/3x entry spot and inverse crossing away from each own midpoint plus assumed entry/delivery/spot-exit commissions. Same exogenous terminal conversion ratio; not a complete future-exit impact stress.",
+  "current_capture_bound": {
+    "GET_attempts": 7,
+    "cleanup_reservation_seconds": 1,
+    "combined_body_bytes": 524288,
+    "cumulative_reserved_seconds": 49,
+    "fatal": "denied/redirect/429/451/5xx/incomplete/deadline stops remaining dispatch;400/404source-unavailable stays, no instrument substitution",
+    "max_parallel": 2,
+    "orders_accounts_history_chainRPC": 0,
+    "overall_wall_seconds": 90,
+    "perbody_bytes": 65536,
+    "request_plan": "one spot CSVmetadata, two fixed dated metadata; one parallel spot+dated depth5 pair per BTC/ETH",
+    "response_seconds": 6,
+    "retries_redirects_replacements": 0
+  },
+  "daily": "same face remains open; coin PnL retained, reciprocal checkpoint resets; delivery adds only last interval and closes",
+  "fixed_sizing": "250USDface rounded down to source min_trade_amount step. Basecoins rounded UP only to declared spot decimal precision from full3x adverse hedge+3xpublic entry-coinfee. Same face/base quantity all depth/fee/cost/exit worlds, no failure resizing.",
+  "hedge": "sum(USDface_i/short_fill_i); no arithmetic entry VWAP, no second copy of collateral or cash from future face",
+  "historical_budget": "R310/R311 accumulated7757/8000requests,reported229.85/250MiB unchanged; exact remainingbytes unknown. Separate smallCURRENTscope not renewal.",
+  "inverse_payoff_model": "signed USD face*(1/previous_reference-1/new_reference) coin; own conditional reciprocal interpretation, not verified deployed serializer",
+  "method": "M244/YT26-04-DATED-CASH-CARRY",
+  "question": "Can fixed unlevered inverse dated-future carry clear source-conditioned entry/fee costs and explicit terminal conversion risk on a small current BTC/ETH book sample?",
+  "registry_id": "R327",
+  "source_admission": "Always false. Public current quote compatibility is not prospective strategy scoring or payout attestation.",
+  "terminal": "USDT=[face*(1-deliveryFee)+(initialCoin-entryFee-hedgeCoin)*deliveryIndexUSD]*(spotExitUSDT/deliveryIndexUSD)*(1-spotExitFee)",
+  "timing_guards": "both commondecision-request age<=2s,receipt skew<=1s,within and crossreceipt UTC/mono drift<=50ms,Deribit publication age<=2s at commondecision,beforefixedexpiry; spot effective age remains unknown",
+  "transfer_cost": "Unknown in actual result. Numerical projections use zero transfer/network/withdrawal cost floor; not net executable economics.",
+  "trials": "4entry slots/24fee-cost cells/216conditional terminalvalues,72maximumconstructed accountworlds; one implementation and same2current pairs, not216independentopportunities;0predictive trials.",
+  "verdict": "PARTIAL component/conditional economic diagnosis. No pvalue/CI/positiveexpectancy/activation; missing expectedfunding irrelevant to datedmodel but spotexit/TWAP/FX/costs remain unknown."
+}

@@ -1,0 +1,164 @@
+{
+ "lane": "xfund_lt_fwd",
+ "rid": "R294",
+ "updated": "2026-11-06T02:03:10.331174+00:00",
+ "waiting": false,
+ "ready": {
+  "mexc": 1.0,
+  "lighter": 1.11
+ },
+ "data": {
+  "mexc": {
+   "files": 117,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "lighter": {
+   "files": 195,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  }
+ },
+ "A": {
+  "set": "mexc+lighter",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R288's Lighter set with the highest 1x net (6.20%/yr, NW t 6.77)",
+  "held_now": [
+   {
+    "coin": "ZROUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.2499
+   },
+   {
+    "coin": "WLDUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0713
+   },
+   {
+    "coin": "ZECUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0603
+   },
+   {
+    "coin": "1000BONKUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0899
+   },
+   {
+    "coin": "POLUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0911
+   },
+   {
+    "coin": "1000PEPEUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1676
+   },
+   {
+    "coin": "XLMUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1053
+   },
+   {
+    "coin": "OPUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1268
+   },
+   {
+    "coin": "QNTUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.106
+   },
+   {
+    "coin": "PAXGUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0835
+   },
+   {
+    "coin": "EIGENUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1027
+   },
+   {
+    "coin": "ADAUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0842
+   },
+   {
+    "coin": "DASHUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0775
+   },
+   {
+    "coin": "MEGAUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0843
+   },
+   {
+    "coin": "USELESSUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0883
+   },
+   {
+    "coin": "PENDLEUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0753
+   },
+   {
+    "coin": "ICPUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0743
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0691
+   },
+   {
+    "coin": "METUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.1251
+   },
+   {
+    "coin": "PONSUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1001
+   }
+  ],
+  "scored_days": 14,
+  "late_days": 11,
+  "total": 0.00022799189999999974,
+  "total_2x": -0.0009820081000000006,
+  "total_3x": -0.0021920081,
+  "total_close": 0.0008105114999999999,
+  "nw_t": 0.24436479335853462,
+  "max_drawdown": -0.0022982623,
+  "replay_days": 62,
+  "replay_total": 0.0068659169
+ },
+ "last_day": "2026-11-06"
+}

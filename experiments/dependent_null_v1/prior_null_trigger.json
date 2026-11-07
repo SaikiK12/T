@@ -1,0 +1,31 @@
+{
+  "diagnostics": [
+    {
+      "binomial_standard_error": 0.03249615361854384,
+      "block_days": 7,
+      "family_false_exclusions": 12,
+      "fraction": 0.12,
+      "null": "three zero-mean AR1(.6) series after128 burn-in; not a universal coverage guarantee",
+      "paths": 100,
+      "wilson_95_interval": [
+        0.06999337365267776,
+        0.19812268002908368
+      ]
+    },
+    {
+      "binomial_standard_error": 0.030000000000000002,
+      "block_days": 14,
+      "family_false_exclusions": 10,
+      "fraction": 0.1,
+      "null": "three zero-mean AR1(.6) series after128 burn-in; not a universal coverage guarantee",
+      "paths": 100,
+      "wilson_95_interval": [
+        0.05522854161313613,
+        0.1743673043676654
+      ]
+    }
+  ],
+  "parent_reference": "experiments/owner_acceptance_v1/FINDINGS.md",
+  "parent_registry_id": "R320",
+  "scope": "Prior synthetic diagnostics only; no R320market predictions/losses are consumed by R321."
+}

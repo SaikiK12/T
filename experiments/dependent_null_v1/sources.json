@@ -1,0 +1,144 @@
+{
+  "access_bounds": {
+    "aggregate_network_seconds": 90,
+    "combined_body_bytes": 1048576,
+    "per_body_bytes": 262144,
+    "redirect_retry_login": false,
+    "requests": 4
+  },
+  "actual_body_bytes": 91022,
+  "actual_network_seconds": 1.4251272699912079,
+  "canonical_aliases": [
+    "FV26-LT-HOURLY",
+    "FV26-LT-RATE-SCHEMA",
+    "FV26-LT-FUNDING-PREFIX",
+    "FV26-LT-PROOF-PUBLICNESS",
+    "FV26-LT-POSITION-CHECKPOINT"
+  ],
+  "cash_conversion_implemented": false,
+  "license_and_access": "Official public source read only. Prover tree is BUSL and not asserted commit/deployed;SDK commit inherited from R316. Bodies remain ignored cache,not mirrored/installed or used as private protocol data.",
+  "market_rpc_account_requests": 0,
+  "math_review_path": "experiments/dependent_null_v1/math_review.md",
+  "mechanisms": [
+    {
+      "canonical_alias": "FV26-LT-HOURLY",
+      "id": "historical_string_schema",
+      "rule": "Historical Funding.value/rate/direction are copied strings,not documented normalized cash; endpoint/API bridge remains missing.",
+      "scope_kind": "reconfirmation"
+    },
+    {
+      "canonical_alias": "FV26-LT-RATE-SCHEMA",
+      "id": "cross_venue_endpoint_distinction",
+      "rule": "FundingApi.funding_rates calls /api/v1/funding-rates;this is not the historical /fundings serializer. No new market request.",
+      "scope_kind": "new client-function read"
+    },
+    {
+      "canonical_alias": "FV26-LT-FUNDING-PREFIX",
+      "id": "internal_scale_constants",
+      "rule": "Funding rate tick1e6,USDC internal1e6,USDC collateral multiplier1e6,USDC collateral1e12;asset indices3/0 are internal,not public API-unit definitions.",
+      "scope_kind": "new selected constant scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "collateral_helper_route",
+      "rule": "Generic supplied collateral delta changes USDC margin and insurance strategy balance as specified;funding caller and base/price conversion are not established.",
+      "scope_kind": "new selected helper scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-PROOF-PUBLICNESS",
+      "id": "public_prefix_layout",
+      "rule": "Public market-prefix sign and four16-bit magnitude limbs,mark,quote_multiplier are registered/decoded;no actual public history endpoint/proof/deployed mapping received.",
+      "scope_kind": "new selected full public-input scope"
+    },
+    {
+      "canonical_alias": "FV26-LT-POSITION-CHECKPOINT",
+      "id": "checkpoint_initialization",
+      "rule": "Empty/stale position initialization resets its funding checkpoint under flags;generic diff/init is not an identified funding-cash application function.",
+      "scope_kind": "new cached initialization scope"
+    }
+  ],
+  "new_alias_rows": 0,
+  "new_method_rows": 0,
+  "prefix_dimensional_identity_is_conditional": true,
+  "receipts_path": "experiments/dependent_null_v1/source_receipts.json",
+  "received_read_unread_note": "experiments/dependent_null_v1/source_review.md",
+  "records": [
+    {
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "at_body_cap": false,
+      "body_limit": 262144,
+      "bytes": 30784,
+      "content_length": "30784",
+      "git_blob_sha1": "d7606ef5735127873b8fb1af4f7bd5b1b18e1d7f",
+      "name": "constants",
+      "network_seconds": 0.3990295699913986,
+      "read_scope": "Targeted funding/USDC/collateral/asset/quote definitions: lines205-272,382-398,438-452; full-file funding/decimal/multiplier name search.",
+      "sha256": "2245c914875768a63f2c0c1de542076815be57762edeb001fcf8fbaba75525ee",
+      "status": 200,
+      "unread_or_missing_scope": "Other constants not fully read; no application call site, market decimal history or deployment mapping.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/constants.rs",
+      "verified_body_sha256": "2245c914875768a63f2c0c1de542076815be57762edeb001fcf8fbaba75525ee"
+    },
+    {
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "at_body_cap": false,
+      "body_limit": 262144,
+      "bytes": 46477,
+      "content_length": "46477",
+      "git_blob_sha1": "9fcc5fdaa786bc40facd8dd91f9c6a6c2da13931",
+      "name": "account",
+      "network_seconds": 0.31988475999969523,
+      "read_scope": "Imports/struct context1-80 and collateral access/mutation620-715; full-file funding-name search returned no funding occurrence. get_relevant_usdc_collateral644-659; apply_collateral_delta664-681.",
+      "sha256": "25a4c2deee0d235c7b76848e68a6c13454a30478745ddb11ef3b34a0e059a4c8",
+      "status": 200,
+      "unread_or_missing_scope": "Remainder not audited; generic helper does not identify funding caller, cash formula, account/deployed/API semantics.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-prover/16c0f36d75f2306ee242e26e507e4c237f7f4074/circuit/src/types/account/account.rs",
+      "verified_body_sha256": "25a4c2deee0d235c7b76848e68a6c13454a30478745ddb11ef3b34a0e059a4c8"
+    },
+    {
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "at_body_cap": false,
+      "body_limit": 262144,
+      "bytes": 3280,
+      "content_length": "3280",
+      "git_blob_sha1": "99e0204ec4a815bd9861163ff0a9851a8677fc63",
+      "name": "funding_model",
+      "network_seconds": 0.3404914480051957,
+      "read_scope": "Full generated Funding model1-106, especially fields29-34 and from_dict85-104.",
+      "sha256": "29715b2d22bb7b23dc400f911df6e26a5a90463c5d43725ea89f07286daadeed",
+      "status": 200,
+      "unread_or_missing_scope": "String identity model supplies no value/rate scale, asset, direction enum, settled-event or timestamp-unit contract; no server serializer or actual response.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/models/funding.py",
+      "verified_body_sha256": "29715b2d22bb7b23dc400f911df6e26a5a90463c5d43725ea89f07286daadeed"
+    },
+    {
+      "access": "ordinary static GET; no redirect/retry/login; no market/RPC/account data",
+      "at_body_cap": false,
+      "body_limit": 262144,
+      "bytes": 10481,
+      "content_length": "10481",
+      "git_blob_sha1": "9309b9051707ba32ed694ddc3b89ab5ac03994e8",
+      "name": "funding_api",
+      "network_seconds": 0.3657214919949183,
+      "read_scope": "Full generated FundingApi1-279; funding_rates39-99 and _funding_rates_serialize224-277.",
+      "sha256": "4237e4d54620aff181ad585aebb14793fce45e14561edb94ae22913c641bca00",
+      "status": 200,
+      "unread_or_missing_scope": "This file only serializes cross-venue /api/v1/funding-rates requests, not historical /fundings. Historical FundingsApi/server serializer not received.",
+      "url": "https://raw.githubusercontent.com/elliottech/lighter-python/a7a9ba88514d38a863a33642acd41f8adf442e5c/lighter/api/funding_api.py",
+      "verified_body_sha256": "4237e4d54620aff181ad585aebb14793fce45e14561edb94ae22913c641bca00"
+    }
+  ],
+  "scope": "Bounded supplementary official source contract,not a new strategy corpus or assumed API cash adapter. Synthetic inference uses independently derived standard OBM/order-statistic/binomial equations.",
+  "unreceived": [
+    "Historical FundingsApi/server serializer defining value units,asset/sign,event semantics",
+    "Account funding-application function and base/price/quote_multiplier conversion",
+    "Deployed historical protocol/API correspondence",
+    "Authentic accessible event-aligned public prefix/proof records"
+  ],
+  "weak_open_alternatives": [
+    "RawAPI value might be a prefix increment",
+    "Might be normalized quote/base",
+    "Might be notional cash or magnitude-only",
+    "Authenticated public-prefix differences might avoid separate index observations once scales/application/data bridge are established"
+  ]
+}

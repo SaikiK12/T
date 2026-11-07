@@ -1,0 +1,32 @@
+{
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "scope": "R326 bridge and source-bound report/audit plus every direct imported local component and newtests; no mutable sharedCLI pin",
+  "sha256": {
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/acquisition_budget.py": "0a5da0a741d8fa1280f0a8a5b2e08f1e4ced787565de8260bb0d53c101ea98bb",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/funding_values.py": "47cdafb63f4104c96760f8cf5778a25670e285bec8125201e573a33c5a7ec864",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/mexc_spot_wire.py": "46094c2b1abc1e2d81c0536b8c73f567aaacd1a56ab1fd502b094b58fe61dd0f",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/paper_account.py": "b862ac3cc3b7012f1768b55e179165ed36ef46684ee6edf931efc357c7c9f0f2",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/spot_cash.py": "7ab221fd898cf25ce48c77fb05a16e8a7e445f6b90a65fb34e1be078b53c6a71",
+    "lab/spot_input_bridge.py": "dbf2162685740a888e9964ec99e638a07cc8d9b191ed9da6b6413acd21887d34",
+    "lab/spot_pair.py": "ed46f386c6fae731c337d888708e80eb5772e52ae964dbb11f87f424c6a478ce",
+    "lab/spot_quote_costs.py": "bc682b8dcc1153ed66125e21aa202c5783a59c66d9b393e4c5c41ca911231e95",
+    "lab/stream_quotes.py": "8402a10afdc15bafca31dc5eddab017a8cfd2e7ba673b5917e77330801a4fcf9",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/check_spot_costs.py": "d83efd6f3f52bddf6ce9c494344b555eea105ca74346c2ce91f9ae9db5028e00",
+    "scripts/check_spot_costs_v2.py": "aa207086ea60873e59a6a44f5328c2491d88ac0e42a348be197523df26c4bac0",
+    "scripts/run_spot_costs.py": "091c6c1ddbbc35a2ffc1ef22e2c3263b88f0a9c47846580448285e96e29c3b11",
+    "scripts/run_spot_costs_v2.py": "005df2bd24a54aa9cccd6beabd6d0f0fd029a8431f0c5ffe346575a2b86ab9d9",
+    "scripts/run_spot_perp_account.py": "257d51ad23d3bdd16da451a886d6a037139f54721470633dca04c0994301a6be",
+    "tests/test_spot_input_bridge.py": "a68d430cabcbdc33585783478090dc961374e9d818de8d22bc5dca37db85b534",
+    "tests/test_spot_quote_costs.py": "129c6880298cbe425ea0cd5b98f30a25b7aebfb9ce1a8bb6468da40db2ba268e"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "canonical_method": "M244",
+  "canonical_alias": "YT26-04-DATED-CASH-CARRY",
+  "new_strategy_count": 0,
+  "mechanisms": [
+    {
+      "id": "environment_and_protocol",
+      "rule": "Public docs recommendWSJSONRPC,alsoHTTPJSONRPC/FIX;test/productionindependent. Publicmethoddocsreadonly,privatekeysnotaccessed.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "quantity_increment",
+      "rule": "get_instrument min_trade_amount explicitly minimumorderANDquantityincrement; distinctfromcontract_size; noJSONqty_tick_size. contract_size convertsamount/contracts; fractionalcontractspossible.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "reserved_lot",
+      "rule": "lot_size reservedforfuturefee-lotcounting; fallbackcontractsize\u2014nottradingstep.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "inverse_instrument_identity",
+      "rule": "Inverse/reversed futuresamountandcontract_sizeUSD; base_currencycoin. kindfuture,instrument_type reversed,settlementbasecoin,countercurrencyUSD requiredforselected scope.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "dated_identity",
+      "rule": "expiration_timestamp existsperpetualtoo; nonzeroexpiryinsufficient. settlement_periodperpetualmustrejectforcashcarry. Calendarperiodweekmaybiweekly;weeklyfeeclassification needscare.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "price_grid",
+      "rule": "tick_size minimumpricechange,tick_size_steps appliesaboveprice withmultiplebase; actualmetadata needed,notfixedabstracttick.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "lifecycle_visibility",
+      "rule": "is_activetrue meansvisibleopen/settlement/locked/halted; ONLYstateopenallowsnew. Lockedcancelonly,haltedblockssettlement,delivered/archivizedterminal.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "metadata_query",
+      "rule": "public/get_instrument queryinstrument_name required; expired/archiveaccepted; unknownnamefail. ExactshownHTTPbaseisTESTenvironment; production mappingcanonicalguidancedefineswww.deribit.com separately.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "public_metadata_optional_fields",
+      "rule": "Publicmaker/takercommissionpresent;extendedget_instruments-onlyoptionalfeeceilings/margin/bandwidth fields doNOTmakeaccountproof. Spotroutingflagsomittedratherthanfalse; stateoptionalmetadata mustnotdefaultopen.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_request",
+      "rule": "public/get_order_book requiresinstrument_name;depthenum1/5/10/20/50/100/1000/10000,notallintegers1to10000despiteintroprose.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_depth",
+      "rule": "bidsdescending,asksascending;price-amountpairs; inverseorderamountisUSDface asinstrumentcontractdefines. Individualrowtypedescriptionjustsaysamount,notindependentbaseassetproof.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_clock",
+      "rule": "timestampmillisecondsUnix; publicationvscreation/matching/cacheeffectivetimeunexplained,notexactsettlementvalueclock.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_state_and_capacity",
+      "rule": "Orderbookstatecomplete7-lifecycleenum; bestbidaskmaynull/empty (exampleone-sided); min/maxtradeboundsclampmarketorders. Rejectempty/crossed/mismatchnotinventfills.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_reference_prices",
+      "rule": "index_pricecurrentreference,mark_pricevaluation,last_pricetrade,settlement/deliveryfieldsnotcurrentexitquotes. delivery_price saysstateclosedwhileenumexcludesclosed; inconsistencyretained.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "book_options_alternatives",
+      "rule": "ReceivedGreeksdistinguishaccountNTDvsBlackScholesdelta,equity+deltaaccounthedge,last30minuteexpirydecay,theta=minoneday,lifetime;ownoptionsimplnotused. Narrative\u201c2Futurescontracts\u201dexamplecannotoverrideUSDfacecontract.",
+      "status": "source mechanics only; not market/account tested"
+    },
+    {
+      "id": "missing_primary_reciprocal_formula",
+      "rule": "Current3formalpagesandAPIfieldsdonotexpressreciprocalPnL/feechargeconversionasexactequation. OldofficialFutures-inverse searchsnippetcontainsworkedexample1000/10000-1000/12000, but fulloldpageNOTfetchedandthisisnotupgradedtofullsourceevidence.",
+      "status": "source mechanics only; not market/account tested"
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "scope": "invented only; no market rows",
+  "cases": [
+    {
+      "id": "zero_fee",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "depth_and_fees",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "50"
+        ],
+        [
+          "50",
+          "1000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": ".01",
+        "delivery": ".00025",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300",
+      "legacy_comparison": true
+    },
+    {
+      "id": "spot_quote_fee",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": ".01",
+        "spot_buy_basis": "quote_in_addition",
+        "future_entry": ".00035",
+        "delivery": ".00025",
+        "spot_sell": ".005",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "spot_base_fee",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": ".01",
+        "spot_buy_basis": "base_received",
+        "future_entry": ".00035",
+        "delivery": ".00025",
+        "spot_sell": ".005",
+        "spot_sell_basis": "base_in_addition"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "coarse_spot_grid",
+      "budget": "10",
+      "spot_step": "1",
+      "spot_min": "1",
+      "spot_min_quote": "0",
+      "face_step": "1",
+      "face_min": "1",
+      "spot_asks": [
+        [
+          "3",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "4",
+          "1000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "exit_dust_above_ceiling",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "20000"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "unknown_exit",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": null,
+      "exit_ratio_floor": null,
+      "delivery_price_ceiling": null
+    },
+    {
+      "id": "exit_ratio_breach",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": ".9",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "quote_minimum_unproven",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "99",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300"
+    },
+    {
+      "id": "thin_spot",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          ".01"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": "0",
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300",
+      "expected_error": true
+    },
+    {
+      "id": "unknown_fee",
+      "budget": "100",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "10000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": null,
+        "delivery": "0",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300",
+      "expected_error": true
+    },
+    {
+      "id": "entry_fee_without_depth",
+      "budget": "10000",
+      "spot_step": ".01",
+      "spot_min": ".01",
+      "spot_min_quote": "0",
+      "face_step": "10",
+      "face_min": "10",
+      "spot_asks": [
+        [
+          "100",
+          "1000"
+        ]
+      ],
+      "spot_bids": [
+        [
+          "99",
+          "100"
+        ]
+      ],
+      "future_bids": [
+        [
+          "100",
+          "1000000"
+        ]
+      ],
+      "fees": {
+        "spot_buy": "0",
+        "spot_buy_basis": "base_received",
+        "future_entry": ".00035",
+        "delivery": ".00025",
+        "spot_sell": "0",
+        "spot_sell_basis": "quote_received"
+      },
+      "delivery_prices": [
+        "50",
+        "100",
+        "300"
+      ],
+      "exit_ratio": "1",
+      "exit_ratio_floor": ".99",
+      "delivery_price_ceiling": "300",
+      "legacy_comparison": true
+    }
+  ]
+}
