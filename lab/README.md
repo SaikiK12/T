@@ -16,6 +16,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.
 - [`carry`](carry.py): Funding carry: short the perpetual and hold the same coin spot, so price moves cancel and the position collects the funding that longs pay shorts, minus changes in the perp-spot basis and the cost ...
 - [`carry_control`](carry_control.py): Finite-deadline conditional carry control; no forecast calibration or orders.
+- [`carry_execution`](carry_execution.py): Conditional depth sweeps and segregated linear-perp cash accounting.
 - [`carry_snapshot_cost`](carry_snapshot_cost.py): Conditional, lot-matched book costs from explicitly supplied linear contracts.
 - [`carrylane`](carrylane.py): Forward paper lanes for cross-venue funding carry books (R275's rule, run with lab.xfund), on any set of venues.
 - [`confidence_models`](confidence_models.py): Small finite multiclass family with disjoint-data calibration.
@@ -27,6 +28,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`dated_carry`](dated_carry.py): Source-bound inverse dated-future entry and conditional terminal conversion.
 - [`dependent_null`](dependent_null.py): Finite dependent-mean controls and Monte Carlo tolerance calibration.
 - [`depth_replay`](depth_replay.py): R314 paired-depth replay with a same-state top-level capacity control.
+- [`eea_pair_capture`](eea_pair_capture.py): Bounded raw Coinbase CDE/Kraken observations; no rate normalization, signal or PnL.
 - [`engine`](engine.py): Vectorized backtester.
 - [`equation_data`](equation_data.py): Input adapters for the frozen equation family; no network and no hidden gap fill.
 - [`equations`](equations.py): Causal funding/basis forecasts and a fixed-quantity, segregated pair-PnL model.
@@ -51,6 +53,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`inference`](inference.py): Honest statistics for a program that tries thousands of strategies.
 - [`input_contracts`](input_contracts.py): Check consistency of caller-declared equation-input metadata, without values.
 - [`inverse_cash`](inverse_cash.py): Exact simulated inverse-futures COIN cash, separate from linear futures.
+- [`kraken_carry`](kraken_carry.py): Fixed-quantity spot/perp carry screen with funded cash and unknown funding intervals.
 - [`levcarry`](levcarry.py): Leverage and liquidation on cross-venue carry books (method M265): R275's rule, run with lab.xfund, where each leg sits on its venue at leverage L and can be liquidated by an intraday move.
 - [`level_features`](level_features.py): Receipt-bound retained candle features; no invented order-flow inputs.
 - [`level_probability`](level_probability.py): Causal close-level probabilities and common-capital research accounting.
@@ -69,6 +72,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`mexc_spot_wire`](mexc_spot_wire.py): Bounded structural decoder of pinned public MEXC spot-depth protobuf fields.
 - [`microstructure`](microstructure.py): Offline features from caller-validated, consecutive best-quote observations.
 - [`nulls`](nulls.py): Full-pipeline null: the whole search reruns on a forward panel shifted in time against the features.
+- [`okx_eea_public`](okx_eea_public.py): Bounded public EEA capability probe.
 - [`operations`](operations.py): Shared operational catalog for execution and read-only views.
 - [`orb_family`](orb_family.py): Causal long-only OR30 component and funded bar-account comparison.
 - [`orderflow`](orderflow.py): Order flow from bars that carry the taker-buy volume (Binance klines): delta, cumulative volume delta (CVD), the delta profile, and two patterns traders name, absorption and exhaustion ...

@@ -1,0 +1,14 @@
+{
+  "url": "https://api.exchange.fairx.net/rest/funding-rate?symbol=BIPZ30&trading_session_date=2026-11-05",
+  "started_utc": "2026-11-06T19:06:36.547966+00:00",
+  "max_response_bytes": 100000,
+  "no_authentication": true,
+  "request_ua": "Python urllib default",
+  "redirects": false,
+  "scope": "distinct documented public historical-funding GET; counts/schema/date bounds only; denied instrument POST not repeated",
+  "primary_doc": "https://docs.cdp.coinbase.com/api-reference/derivatives-api/rest-api/cde-spec.json",
+  "documented_operation_security": [],
+  "status": 401,
+  "error": "HTTPError",
+  "received_utc": "2026-11-06T19:06:37.235411+00:00"
+}

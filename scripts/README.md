@@ -43,7 +43,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (25)
+## Record: point-in-time collectors (cannot be backfilled) (26)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
 - [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
@@ -51,6 +51,7 @@ line is the first line of the script's own docstring.
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
 - [`record_digest.py`](record_digest.py): Append a SHA-256 digest of every recorder file under data/recorders/ to experiments/recorders/journal/digests.csv (committed).
+- [`record_eea_pair.py`](record_eea_pair.py): R419 public Coinbase CDE/Kraken raw packets; inactive until Claude runs --execute.
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
 - [`record_hft.py`](record_hft.py): High-rate feed recorder (M427-M429 data): BTC and ETH top of book and trades at 100 ms on Binance USDT and USDC perps, Bybit USDT perps and Hyperliquid, into data/hft/. Public websockets only; ...
 - [`record_lighter_book.py`](record_lighter_book.py): Hourly snapshot of what a taker order costs on Lighter, the zero-fee perp DEX (docs/VENUE_STRUCTURE.md): for every active perp, the best bid and ask, the cost per side of a market order of USD 1k ...
@@ -104,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (146)
+## Run: one lane's frozen measurement (148)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -120,6 +121,7 @@ line is the first line of the script's own docstring.
 - [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
 - [`run_capital_mix.py`](run_capital_mix.py): R309: fixed initial-capital carry/spot comparison; archived inputs only, no trading.
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.
+- [`run_carry_execution.py`](run_carry_execution.py): R417: one offline, frozen depth/cash diagnostic; no network or forward tick.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.
@@ -167,6 +169,7 @@ line is the first line of the script's own docstring.
 - [`run_impact.py`](run_impact.py): impact_v1 (R262): square-root market impact on flow books A, B and X2 at capital $1k-$10M, on top of the tier costs, as set out in experiments/impact_v1/PREREG.md.
 - [`run_intrars.py`](run_intrars.py): intrars_v1 (R300): intraday cross-sectional relative strength among the top 50 perps (M318, from Linda Raschke on Better System Trader 124).
 - [`run_itsm.py`](run_itsm.py): itsm_v1 (R203): intraday time-series momentum, as set out in experiments/itsm_v1/PREREG.md.
+- [`run_kraken_carry.py`](run_kraken_carry.py): R418: sole offline Kraken EEA funding/capital/cost screen, with public-source gaps explicit.
 - [`run_levcarry.py`](run_levcarry.py): levcarry_v1 (R280): leverage and liquidation on the forward carry books, as set out in experiments/levcarry_v1/PREREG.md.
 - [`run_level_probability.py`](run_level_probability.py): R330 two-stage, offline close-level probability and net-cost diagnostic.
 - [`run_levels_lighter.py`](run_levels_lighter.py): R337 levels_lighter_v1: R333's level trades on Lighter's own hourly prices, at Lighter's measured book cost (gate 0).
@@ -253,7 +256,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (27)
+## Check: parity, audits and integrity (29)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -262,6 +265,7 @@ line is the first line of the script's own docstring.
 - [`audit_locked_carry_mechanics.py`](audit_locked_carry_mechanics.py): R407: frozen invented carry mechanics, fixed quantities and independent cash ledger.
 - [`audit_path_timing.py`](audit_path_timing.py): Read-only timing/ID diagnosis after R400 refusal; never loads price/size columns.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
+- [`check_carry_execution.py`](check_carry_execution.py): Frozen R417 independent Fraction cash/depth checker; no kernel import.
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
 - [`check_confidence.py`](check_confidence.py): Independent R331 OHLC-feature/logit/calibration/selection/Fraction cash audit.
 - [`check_continuation_control.py`](check_continuation_control.py): Independent rational policy enumeration and saved-account audit for R323.
@@ -269,6 +273,7 @@ line is the first line of the script's own docstring.
 - [`check_dated_carry_v2.py`](check_dated_carry_v2.py): R328 label/lineage wrapper around the frozen independent R327 raw oracle.
 - [`check_dependent_null.py`](check_dependent_null.py): Independent literal R321 binomial/OBM/selected-bootstrap arithmetic audit.
 - [`check_funding_prefix.py`](check_funding_prefix.py): Literal rational audit of R322 saved component fixtures; no market validation.
+- [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_level_probability_v2.py`](check_level_probability_v2.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
@@ -303,7 +308,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (80)
+## Tools and everything else (81)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -355,6 +360,7 @@ line is the first line of the script's own docstring.
 - [`probe_depth_quotes.py`](probe_depth_quotes.py): R314 finite public depth probe: capture, seal, then report fixed cost controls.
 - [`probe_funding_values.py`](probe_funding_values.py): R315 fixed fair-value snapshot diagnostic; no orders or strategy scoring.
 - [`probe_kraken_orders.py`](probe_kraken_orders.py): Retention probe for Kraken Futures' public order-event history (M437).
+- [`probe_okx_eea_public.py`](probe_okx_eea_public.py): Inactive manual capability handoff.
 - [`probe_pair_quotes.py`](probe_pair_quotes.py): R312 bounded first-seen public REST evidence: capture -> seal -> report.
 - [`probe_spot_costs.py`](probe_spot_costs.py): One finite R325 public REST input capture; no account/history/order access.
 - [`probe_spot_perp.py`](probe_spot_perp.py): R324 one-shot, public spot/perp wire compatibility capture; never trades.

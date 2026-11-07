@@ -1,0 +1,208 @@
+{
+  "source_url": "https://docs.cdp.coinbase.com/api-reference/derivatives-api/rest-api/cde-spec.json",
+  "accessed_date_utc": "2026-11-06",
+  "full_openapi_sha256": "9a28c5c0726cf62cfe0237cebcc4fab9ca7d428797e203ce191d920bf151c6b1",
+  "info": {
+    "title": "Derivatives Public REST API",
+    "version": "0.1.0",
+    "description": "Public REST API for Coinbase Derivatives Exchange Public REST Gateway"
+  },
+  "servers": [
+    {
+      "url": "https://api.exchange.fairx.net",
+      "variables": {}
+    }
+  ],
+  "selected_paths": {
+    "/rest/instruments": {
+      "post": {
+        "tags": [
+          "Instruments"
+        ],
+        "summary": "Get Instrument Details",
+        "description": "Retrieves detailed information about instruments based on the provided filter criteria. Allows optional filtering by product codes, symbols, instrument IDs, trading states, activation date, and expiration date.",
+        "operationId": "getInstruments",
+        "parameters": [],
+        "requestBody": {
+          "description": "Optional instrument filter criteria, can be omitted",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetInstrumentDetailsRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved instrument details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InstrumentDetailsResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid parameters"
+          },
+          "403": {
+            "description": "Forbidden - insufficient permissions"
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/rest/funding-rate": {
+      "get": {
+        "tags": [
+          "Funding Rate"
+        ],
+        "summary": "Get historical funding rates",
+        "description": "Retrieves the historical funding rate data for a specific instrument.",
+        "operationId": "historicalFundingRate",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "The instrument symbol (e.g., \"BIPZ30\")",
+            "required": true,
+            "deprecated": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string",
+              "example": "BIPZ30"
+            }
+          },
+          {
+            "name": "trading_session_date",
+            "in": "query",
+            "description": "Trading session date in YYYY-MM-DD format (defaults to today's date if absent)",
+            "required": false,
+            "deprecated": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string",
+              "example": "2025-08-01"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved funding rate data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundingRateResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid parameters"
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    }
+  },
+  "selected_schemas": {
+    "FundingRateResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "example": "BIPZ30"
+        },
+        "funding_rate": {
+          "type": "string",
+          "example": "0.000100"
+        },
+        "future_mark_price": {
+          "type": "string",
+          "example": "62850.25"
+        },
+        "spot_mark_price": {
+          "type": "string",
+          "example": "62840.10"
+        },
+        "fair_value_price": {
+          "type": "string",
+          "example": "62845.00"
+        },
+        "event_time": {
+          "type": "string",
+          "example": "2025-08-13T12:00:00Z"
+        }
+      }
+    },
+    "GetInstrumentDetailsRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "BIP"
+          ]
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "BIPZ30",
+            "B*"
+          ]
+        },
+        "instrument_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "example": [
+            1234,
+            12345
+          ]
+        },
+        "trading_states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/InstrumentTradingState"
+          },
+          "example": [
+            "PRE_OPEN",
+            "EXPIRED"
+          ]
+        },
+        "activation_date": {
+          "type": "string",
+          "format": "date",
+          "example": "2026-02-12"
+        },
+        "expiration_date": {
+          "type": "string",
+          "format": "date",
+          "example": "2026-02-12"
+        }
+      }
+    }
+  },
+  "actual_unauthenticated_access": "Both probed resources returned401; documented security=[] is not evidence of successful access"
+}

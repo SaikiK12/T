@@ -1,0 +1,492 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.kraken.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Market Analytics
+
+> Analytics data divided into time buckets
+
+
+
+## OpenAPI
+
+````yaml /openapi/futures-charts-rest.yaml get /analytics/{symbol}/{analytics_type}
+openapi: 3.1.0
+info:
+  title: Charts
+  version: v1.0
+  description: Public chart candle and analytics APIs.
+servers:
+  - url: https://futures.kraken.com/api/charts/v1
+    description: Kraken Futures
+    x-kfOnly: true
+security: []
+tags:
+  - name: Candles
+  - name: Analytics
+paths:
+  /analytics/{symbol}/{analytics_type}:
+    get:
+      tags:
+        - Analytics
+      summary: Market Analytics
+      description: Analytics data divided into time buckets
+      operationId: marketAnalytics
+      parameters:
+        - name: symbol
+          in: path
+          required: true
+          description: Market symbol
+          schema:
+            type: string
+        - name: analytics_type
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsType'
+        - name: since
+          in: query
+          required: true
+          description: epoch time in seconds
+          schema:
+            type: integer
+            format: int64
+            example: 1676556478
+        - name: interval
+          in: query
+          required: true
+          schema:
+            $ref: '#/components/schemas/Interval'
+        - name: to
+          in: query
+          required: false
+          description: epoch time in seconds, default now
+          schema:
+            type: integer
+            example: 1676556478
+      responses:
+        '200':
+          description: Available analytics by type and symbol
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyticsResponse'
+        '400':
+          description: Query has invalid arguments
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyticsResponse'
+        '404':
+          description: Symbol or analytics type could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyticsResponse'
+      security: []
+components:
+  schemas:
+    AnalyticsType:
+      title: Type of analytics
+      type: string
+      enum:
+        - open-interest
+        - aggressor-differential
+        - trade-volume
+        - trade-count
+        - liquidation-volume
+        - rolling-volatility
+        - long-short-ratio
+        - long-short-info
+        - cvd
+        - top-traders
+        - orderbook
+        - spreads
+        - liquidity
+        - slippage
+        - future-basis
+        - funding
+    Interval:
+      title: Resolution in seconds
+      type: integer
+      enum:
+        - 60
+        - 300
+        - 900
+        - 1800
+        - 3600
+        - 14400
+        - 43200
+        - 86400
+        - 604800
+    AnalyticsResponse:
+      title: Analytics response
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/AnalyticsResponseResult'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/AnalyticsResponseError'
+      required:
+        - result
+        - errors
+    AnalyticsResponseResult:
+      title: Result container for analytics response
+      type: object
+      properties:
+        timestamp:
+          type: array
+          items:
+            type: integer
+        more:
+          type: boolean
+          description: True if there are more candles in time range
+        data:
+          oneOf:
+            - type: array
+              items:
+                oneOf:
+                  - type: number
+                  - type: string
+                    format: big-decimal
+                  - type: array
+                    title: Ohlc
+                    minItems: 4
+                    maxItems: 4
+                    items:
+                      type: number
+            - $ref: '#/components/schemas/AnalyticsLongShortData'
+            - $ref: '#/components/schemas/AnalyticsOrderbookData'
+            - $ref: '#/components/schemas/AnalyticsCvdData'
+            - $ref: '#/components/schemas/AnalyticsTopTradersData'
+            - $ref: '#/components/schemas/AnalyticsLiquidityPoolData'
+            - $ref: '#/components/schemas/AnalyticsFutureBasisData'
+            - $ref: '#/components/schemas/AnalyticsFundingData'
+      required:
+        - timestamp
+        - data
+        - more
+    AnalyticsResponseError:
+      title: Analytics response error
+      type: object
+      properties:
+        severity:
+          type: string
+        error_class:
+          type: string
+        type:
+          type: string
+        msg:
+          type: string
+        value:
+          type: string
+        field:
+          type: string
+      required:
+        - severity
+        - error_class
+        - type
+    AnalyticsLongShortData:
+      title: Statistic of long and short positions
+      type: object
+      properties:
+        longCount:
+          type: array
+          items:
+            type: integer
+        shortCount:
+          type: array
+          items:
+            type: integer
+        longPercent:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        shortPercent:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        ratio:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+      required:
+        - long_count
+        - short_count
+        - long_percent
+        - short_percent
+        - ratio
+    AnalyticsOrderbookData:
+      title: Orderbook analytics data
+      type: object
+      properties:
+        bid:
+          title: Bids statistics
+          oneOf:
+            - $ref: '#/components/schemas/AnalyticsSpreadsData'
+            - $ref: '#/components/schemas/AnalyticsLiquidityData'
+            - $ref: '#/components/schemas/AnalyticsSlippageData'
+            - $ref: '#/components/schemas/AnalyticsFullOrderbookData'
+        ask:
+          title: Asks statistics
+          oneOf:
+            - $ref: '#/components/schemas/AnalyticsSpreadsData'
+            - $ref: '#/components/schemas/AnalyticsLiquidityData'
+            - $ref: '#/components/schemas/AnalyticsSlippageData'
+            - $ref: '#/components/schemas/AnalyticsFullOrderbookData'
+      required:
+        - bid
+        - ask
+    AnalyticsCvdData:
+      type: object
+      properties:
+        buyVolume:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        sellVolume:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        cvd:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+      required:
+        - buyVolume
+        - sellVolume
+        - cvd
+    AnalyticsTopTradersData:
+      type: object
+      properties:
+        top20Percent:
+          $ref: '#/components/schemas/AnalyticsTopTradersLevelData'
+      required:
+        - top20Percent
+    AnalyticsLiquidityPoolData:
+      type: object
+      properties:
+        usdValue:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+      required:
+        - usdValue
+    AnalyticsFutureBasisData:
+      type: object
+      properties:
+        basis:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+      required:
+        - basis
+    AnalyticsFundingData:
+      type: object
+      properties:
+        rate:
+          type: array
+          items:
+            type: array
+            title: Ohlc
+            minItems: 4
+            maxItems: 4
+            items:
+              type: number
+        relativeRate:
+          type: array
+          items:
+            type: array
+            title: Ohlc
+            minItems: 4
+            maxItems: 4
+            items:
+              type: number
+      required:
+        - rate
+        - relativeRate
+    AnalyticsSpreadsData:
+      title: Orderbook spread data
+      type: object
+      properties:
+        best_price:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+      required:
+        - best_price
+    AnalyticsLiquidityData:
+      title: Orderbook liquidity data
+      type: object
+      properties:
+        liquidity_005:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity_01:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity_025:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity_05:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity_10:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity_100:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+      required:
+        - liquidity_005
+        - liquidity_01
+        - liquidity_025
+        - liquidity_05
+        - liquidity_10
+        - liquidity_100
+    AnalyticsSlippageData:
+      title: Orderbook slippage data
+      type: object
+      properties:
+        slippage_1k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage_10k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage_100k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage_1m:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+      required:
+        - slippage_1k
+        - slippage_10k
+        - slippage_100k
+        - slippage_1m
+    AnalyticsFullOrderbookData:
+      title: Combination of all orderbook metrics
+      type: object
+      properties:
+        slippage1k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage10k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage100k:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        slippage1m:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        bestPrice:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity005:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity01:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity025:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity05:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity10:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+        liquidity100:
+          type: array
+          items:
+            $ref: '#/components/schemas/NullableBigDecimal'
+      required:
+        - slippage1k
+        - slippage10k
+        - slippage100k
+        - slippage1m
+        - bestPrice
+        - liquidity005
+        - liquidity01
+        - liquidity025
+        - liquidity05
+        - liquidity10
+        - liquidity100
+    AnalyticsTopTradersLevelData:
+      type: object
+      properties:
+        openInterest:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        longCount:
+          type: array
+          items:
+            type: integer
+        shortCount:
+          type: array
+          items:
+            type: integer
+        longPercent:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        shortPercent:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+        ratio:
+          type: array
+          items:
+            type: string
+            format: big-decimal
+      required:
+        - openInterest
+        - longCount
+        - shortCount
+        - longPercent
+        - shortPercent
+        - ratio
+    NullableBigDecimal:
+      type:
+        - string
+        - 'null'
+      format: big-decimal
+
+````

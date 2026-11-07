@@ -1,0 +1,31 @@
+{
+  "python": "3.12.14",
+  "command": "python3 -m unittest discover -s tests -t .",
+  "first_attempt": {
+    "tests": 2435,
+    "skipped": 3,
+    "summary": "OK",
+    "seconds": 514.336,
+    "process_exit": 134,
+    "after_summary": "terminate called without an active exception"
+  },
+  "bounded_repeat": {
+    "environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "PYTHONFAULTHANDLER": "1"
+    },
+    "tests": 2435,
+    "skipped": 3,
+    "seconds": 384.05,
+    "process_exit": 0,
+    "summary": "OK"
+  },
+  "new_targeted_tests": 26,
+  "integrity": {
+    "errors": 0,
+    "legacy_warnings": 14
+  },
+  "market_measurement_run": false
+}
