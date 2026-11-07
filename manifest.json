@@ -4,12 +4,12 @@
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
-      "mtime_ns": 1794052029029802111,
-      "sha256": "46217d364e2f10882b7d6882028a8363f4923a262fccdf745722e6b75e6206ba"
+      "mtime_ns": 1794052040268471582,
+      "sha256": "63dc1b5450d393a4785374e3359d2d8353c4e83fdbe7651ac539431fe2c5fb3b"
     },
     "data/operations/quant_takeover_v1/latest.json": {
-      "mtime_ns": 1794048625006103857,
-      "sha256": "db545e7198f7f6d125228f752bf3c68044d02a42afe9efdf914ee799cfaa3810"
+      "mtime_ns": 1794052040268419967,
+      "sha256": "1b24bb83e0ad4cb552a92b49be783d216c9d5661d180848995188addc00ee0cb"
     },
     "data/operations/quant_takeover_v1/network/aux/requests.jsonl": {
       "mtime_ns": 1794038933270297775,
@@ -230,6 +230,38 @@
     "data/operations/quant_takeover_v1/runs/20261107T10/reservation.json": {
       "mtime_ns": 1794048614114003300,
       "sha256": "c046cdf880f7711422623c9f865b65a181d108f02154f8a2032b8c516979debb"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/R406.log": {
+      "mtime_ns": 1794052038001455449,
+      "sha256": "0c1acebae89744ff8c9558ee424c635e8d9cf1146cf0a8cfef42ab22754ff2c5"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/R413.log": {
+      "mtime_ns": 1794052037874454545,
+      "sha256": "43fc087c7940c4885ed0c0f45e7c47e859d615ce4aa7c6c9e45fc14f1ad1ed52"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/R419.log": {
+      "mtime_ns": 1794052037761453741,
+      "sha256": "db2455c01daaa11c18ade7f3524dbd744f24e8d96039593530e51059725aa2ad"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/REC_CBOE.log": {
+      "mtime_ns": 1794052039844468565,
+      "sha256": "b2b0452d87cde31295134795fdf94e50fd5490734c7ebdbad9dca3c762f872c4"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/REC_DERIBIT.log": {
+      "mtime_ns": 1794052039538466387,
+      "sha256": "d3f99a51b9eeda0af36ecd3cc041bb5de1d79e6a55965cd6188809a70200824c"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/REC_TICKER.log": {
+      "mtime_ns": 1794052039204464010,
+      "sha256": "d3f99a51b9eeda0af36ecd3cc041bb5de1d79e6a55965cd6188809a70200824c"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/REC_UNLOCKS.log": {
+      "mtime_ns": 1794052040191471034,
+      "sha256": "6d08056f7b270f36234bd7773b71544f98f08ea11e3719d0e0078762970dbdbc"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T11/report.json": {
+      "mtime_ns": 1794052040268077664,
+      "sha256": "1b24bb83e0ad4cb552a92b49be783d216c9d5661d180848995188addc00ee0cb"
     },
     "data/operations/quant_takeover_v1/runs/20261107T11/reservation.json": {
       "mtime_ns": 1794052029029802111,
@@ -563,9 +595,61 @@
       "mtime_ns": 1794048621383577134,
       "sha256": "5540a3e2f4f6b8db4e18c963222a03ee0af0e66d37026e4188a0e98c508742ee"
     },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_cde_book.body.gz": {
+      "mtime_ns": 1794052032503159989,
+      "sha256": "a9dff1bc526bf6d88ed3061eb1596a2cde65b8428f5e919ca2b454a785b9efdd"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794052036907986173,
+      "sha256": "40e49a2e46ec3d5b19043bdc5fbb0992c218532d6f308d71cabd11e5ba418a78"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_cde_product.body.gz": {
+      "mtime_ns": 1794052032217322072,
+      "sha256": "b8c2932448f78d02ee934a2bd1865e5675f48aa59d6e38424200b36d7c195b1c"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_kraken_book.body.gz": {
+      "mtime_ns": 1794052032947052474,
+      "sha256": "e7c6f7066452b80638428f3c5d15b470eb149204507db6938eed794f1e6da21d"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794052037204449776,
+      "sha256": "59772e7a8c0891864e725d1dd193821a0a2bcda83f60f4841e558fc70747f0ad"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/btc_kraken_ticker.body.gz": {
+      "mtime_ns": 1794052032740899422,
+      "sha256": "0d2bf2d2fcca39ba3472378b6102a25502970f49fcfc613046f0593f69f9e3ac"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_cde_book.body.gz": {
+      "mtime_ns": 1794052033183260623,
+      "sha256": "8f53a73c9b014b53eb78936ebc9336bafcebc116f88dfbe56f31af3b49524db6"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794052037392239006,
+      "sha256": "3d114babb917df279a0d0179b19a56594ec57357f4e01e399d9f2f4313695bd4"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_cde_product.body.gz": {
+      "mtime_ns": 1794052033073217332,
+      "sha256": "ebd0056652084f42cb6426fbf6b6a16c47ca075b6163f43071ecb4ba604828e9"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_kraken_book.body.gz": {
+      "mtime_ns": 1794052033590228976,
+      "sha256": "9b8b4fb37525234dfbaf7fb180f1d81b63e5db0d038fb366f329cba1dc9132ea"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794052037629452801,
+      "sha256": "67d90190cfbf660f42b09afedc741e42f0098ff65e67e29f8130d15dce9d1cf7"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/eth_kraken_ticker.body.gz": {
+      "mtime_ns": 1794052033388426913,
+      "sha256": "4f6a6b99f91d588248ddb686885fa3529f6a04880c2035b53fbf172cf83389c4"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T11/packet.json": {
+      "mtime_ns": 1794052037707453355,
+      "sha256": "866cc6830c1a4acc816826dcde8e7362f215af45ce850bb94acbd41a61cffbd7"
+    },
     "data/recorders/eea_pair_capture_v1/requests.jsonl": {
-      "mtime_ns": 1794048621223631563,
-      "sha256": "c739781be146f7fce47d56fa0b402a3d2e483e0599165a92e908fbd25164eae1"
+      "mtime_ns": 1794052037629452801,
+      "sha256": "b5627291cdc4323b325f7be59d6ff3cb45e69ae54dc766d45624c00b0bfbd163"
     },
     "data/recorders/mexc_ticker/2026-11-07/04.parquet": {
       "mtime_ns": 1794024509760962314,
@@ -616,12 +700,12 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_takeover_v1/runs/20261107T11/reservation.json",
+  "last_report": "data/operations/quant_takeover_v1/latest.json",
   "meaning": "Bootstrap only. No live source invocation or journal continuity is certified.",
   "owner": "github-actions",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T11:47:10.306509+00:00"
+  "updated_utc": "2026-11-07T11:47:20.659389+00:00"
 }
