@@ -1,8 +1,16 @@
 {
-  "active_contract": "R422",
+  "active_contract": "R428",
   "bootstrap": false,
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
+    "data/operations/quant_participant_v1/aux_baseline.jsonl": {
+      "mtime_ns": 1794083256037601175,
+      "sha256": "cbe00e6e3ffb1376cc5933cff99d87e917dd8aaf9f78c5de9f2a855bcffd711c"
+    },
+    "data/operations/quant_participant_v1/migrations/gha_42411122446_1.json": {
+      "mtime_ns": 1794083256040740506,
+      "sha256": "4947bdf50951a33b7b7e61e51f3fdba3655ac8f34d29f05245af04961ffd79e5"
+    },
     "data/operations/quant_priority_v1/dispatch.jsonl": {
       "mtime_ns": 1794078134355604393,
       "sha256": "24433599957ed884593a86e10e4ea6041716347d5fc2f303fbb83cb250c350dc"
@@ -2332,14 +2340,15 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_priority_v1/latest.json",
-  "meaning": "R422 selected; native task receipts, source stops and inherited budget determine health",
+  "last_report": "data/operations/quant_participant_v1/migrations/gha_42411122446_1.json",
+  "meaning": "R428 selected; inherited paper spend plus a finite original-budget participant campaign",
   "owner": "github-actions",
-  "previous_contract": "R420",
+  "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
+  "previous_contract": "R422",
   "priority_prereg_sha256": "37c7da06226a54b5f19c7a0fe282166b274dacffd87c06e4ed90dcb484e6e118",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T19:54:53.582767+00:00"
+  "updated_utc": "2026-11-07T20:27:36.415938+00:00"
 }

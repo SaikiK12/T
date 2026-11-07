@@ -1,0 +1,24 @@
+{
+  "state": "MIGRATED_NEEDS_REMOTE_COMMIT",
+  "previous_contract": "R422",
+  "active_contract": "R428",
+  "utc": "2026-11-07T20:27:36.040337+00:00",
+  "prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
+  "inherited_aux_baseline_sha256": "cbe00e6e3ffb1376cc5933cff99d87e917dd8aaf9f78c5de9f2a855bcffd711c",
+  "source_http_requests": 0,
+  "historical_campaign_reservation": {
+    "parent_proof": "research/intake/lighter_contract_20261107/budget_before.json",
+    "old_conservative_calls": 7819,
+    "old_conservative_bytes": 251220970,
+    "max_new_campaign_calls": 32,
+    "max_new_campaign_bytes": 8388608,
+    "original_max_calls": 8000,
+    "original_max_bytes": 262144000,
+    "conservative_reserved_total_calls": 7851,
+    "conservative_reserved_total_bytes": 259609578,
+    "remaining_unreserved_original_calls": 149,
+    "remaining_unreserved_original_bytes": 2534422,
+    "reset_or_refund": false,
+    "scope": "four bounded new source windows; includes metadata, subscriptions/handshakes and decoded payload/buffer/unknown spend; no broad/continuous archive; not measured TLS/network wire"
+  }
+}
