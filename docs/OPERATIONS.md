@@ -24,6 +24,35 @@ new ideas require fresh registered tests and new prospective evidence.
 
 ## One selected writer, independent of the chat container
 
+### Bounded participant-source successor
+
+[R428](../experiments/participant_capture_v1/PREREG.md) adds a finite raw
+Lighter WTI/Brent ticker/trade campaign for M441/M474. Its source-only
+windows are Nov7qualification65seconds and Nov8/9/10observations180seconds
+each, at the first selected cycle inside the frozen eligible start windows.
+These are short observations, not full trading days or R367coverage. Raw
+source strings, account before-state and original receive clocks are kept;
+no markout/return/PnL is scored by this collector.
+
+The [new workflow](../.github/workflows/quant-participant-runtime.yml) stays
+inactive until the reviewed owner command `/quant-participant-migrate`
+selects R428 in the canonical manifest. While R428 is selected, its operational
+report is `data/operations/quant_participant_v1/latest.json` and its distinct
+manual command is `/quant-participant-tick`; the earlier workflows skip.
+Its requested cron minute37and the unchanged global concurrency group
+reduce overlap. GitHub delay, pending replacement or source failure can still
+leave a gap; actual receipts remain the evidence.
+
+Existing papers retain their native scripts/journals, actual prior-hour
+attempt guards, all old source blocks and original16MiB auxiliary ceiling.
+The new source separately reserves the entire32calls/8MiB within the original
+historical allowance, conservatively7851calls/259609578bytes including all
+old reservations. It cannot renew that grant, the native R419Nov14end, the
+dispatcher Nov19end or the64MiB state cap. No source is activated or paper
+income proved by a green code test alone. The canonical active_contract,
+last_report and native source receipts decide which of these contracts is
+actually operating; default-branch journal copies remain historical seeds.
+
 The canonical `manifest.json` on `codex/quant-runtime-state` selects the
 **active_contract** and **last_report**. Read those fields for the current
 writer and its native receipt. R420 was the first deployed contract. Its

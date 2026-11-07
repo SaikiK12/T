@@ -43,7 +43,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
-## Record: point-in-time collectors (cannot be backfilled) (26)
+## Record: point-in-time collectors (cannot be backfilled) (27)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
 - [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
@@ -64,6 +64,7 @@ line is the first line of the script's own docstring.
 - [`record_news.py`](record_news.py): Point-in-time headline recorder: every FEEDS source polled every POLL_S seconds, each new item kept once with the time we first saw it.
 - [`record_notices.py`](record_notices.py): Binance announcement catalogs (Delisting, New Cryptocurrency Listing, Latest Binance News) as an append-only journal: one row per article with its id, title, release time (ms, as published) and ...
 - [`record_option_expiry.py`](record_option_expiry.py): Minute snapshots of the Deribit BTC option chain around the 08:00 UTC expiry (M440).
+- [`record_participant_windows.py`](record_participant_windows.py): R428 counts-only native participant windows; no local recorder or PnL reader.
 - [`record_raw.py`](record_raw.py): Raw-event recorder (M430-M432 data): every Binance USDT/USDC perp top-of-book update and trade, Binance's RPI depth near the touch, and Bybit's depth-1 stream, one row per message as it reached ...
 - [`record_tape.py`](record_tape.py): Order-flow tape recorder (M264): Binance USD-M, MEXC and Lighter perps' best bid/ask and trades for `COINS`, bucketed to the second by lab/tape.py, into data/tape/. Paper only: it reads public ...
 - [`record_tradfi_calendar.py`](record_tradfi_calendar.py): TradFi event stamper: public schedules and halt feeds that move stock, index and rates perps, each key stamped with the time this recorder first saw it and every later revision.
@@ -318,7 +319,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (87)
+## Tools and everything else (88)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -389,6 +390,7 @@ line is the first line of the script's own docstring.
 - [`qualify_metric_archives.py`](qualify_metric_archives.py): One frozen, bounded metrics archive schema/time-label qualification; no returns.
 - [`quant_runtime.py`](quant_runtime.py): One GitHub Actions writer for the paper lab; default is a read-only operational plan.
 - [`quant_runtime_v2.py`](quant_runtime_v2.py): R422 priority paper runtime; immutable R420 state primitives, new frozen adapter.
+- [`quant_runtime_v3.py`](quant_runtime_v3.py): R428 serialized participant-source composition; preserve old paper journals, budgets and windows.
 - [`recording_segments.py`](recording_segments.py): Segment, verify or restore one explicit RECORDED file; never uploads or deletes originals.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
