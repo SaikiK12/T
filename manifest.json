@@ -1,8 +1,12 @@
 {
-  "active_contract": "R420",
+  "active_contract": "R422",
   "bootstrap": false,
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
+    "data/operations/quant_priority_v1/migrations/gha_42380207329_1.json": {
+      "mtime_ns": 1794060547706340845,
+      "sha256": "b0a83cd558e0bed13fc753d90f67b4da79d0546b4f3d1326cd2644b8714b2980"
+    },
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
       "mtime_ns": 1794059802320170768,
       "sha256": "e78f8b5e0ebb0f1fb3fcc7248bb344617cfc753191e5bafab77e2c35088e1b55"
@@ -876,12 +880,14 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_takeover_v1/latest.json",
-  "meaning": "Bootstrap only. No live source invocation or journal continuity is certified.",
+  "last_report": "data/operations/quant_priority_v1/migrations/gha_42380207329_1.json",
+  "meaning": "R422 selected; native task receipts, source stops and inherited budget determine health",
   "owner": "github-actions",
+  "previous_contract": "R420",
+  "priority_prereg_sha256": "37c7da06226a54b5f19c7a0fe282166b274dacffd87c06e4ed90dcb484e6e118",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T13:56:42.644477+00:00"
+  "updated_utc": "2026-11-07T14:09:09.186275+00:00"
 }
