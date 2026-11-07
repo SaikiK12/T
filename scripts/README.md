@@ -105,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (151)
+## Run: one lane's frozen measurement (152)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -184,6 +184,7 @@ line is the first line of the script's own docstring.
 - [`run_locked_carry.py`](run_locked_carry.py): R335 locked_carry_v1: the guarantee engine, a coin-margined cash-and-carry locked to expiry (measurement).
 - [`run_lotcap.py`](run_lotcap.py): lotcap_v1 (R298): harvest R282's lottery-cluster median while capping the squeezes.
 - [`run_maker.py`](run_maker.py): maker_v1 (R193): limit-order entries on the replicated gross edges, as set out in experiments/maker_v1/PREREG.md.
+- [`run_maker_pilot.py`](run_maker_pilot.py): R426 sole registered partial-fill/inventory diagnostic on fixed archived Lighter fragments.
 - [`run_merge.py`](run_merge.py): merge_v1 (R186): walk-forward merge of many signals into one forecast, traded only where it clears costs, as set out in experiments/merge_v1/PREREG.md.
 - [`run_merge_v2.py`](run_merge_v2.py): merge_v2 (R187): trade-consistent, faster, session-aware merge, as set out in experiments/merge_v2/PREREG.md.
 - [`run_minflow.py`](run_minflow.py): R349 minflow_v1: minute-scale order flow and overreaction on the BTC, ETH and SOL perps (M426, M306), priced at Lighter's zero-fee book cost.
@@ -259,7 +260,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (31)
+## Check: parity, audits and integrity (33)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -268,6 +269,7 @@ line is the first line of the script's own docstring.
 - [`audit_locked_carry_mechanics.py`](audit_locked_carry_mechanics.py): R407: frozen invented carry mechanics, fixed quantities and independent cash ledger.
 - [`audit_path_timing.py`](audit_path_timing.py): Read-only timing/ID diagnosis after R400 refusal; never loads price/size columns.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
+- [`check_atomic_source.py`](check_atomic_source.py): R425 single source-qualification record; prior plumbing status is disclosed, no network.
 - [`check_carry_execution.py`](check_carry_execution.py): Frozen R417 independent Fraction cash/depth checker; no kernel import.
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
 - [`check_cde_carry_screen.py`](check_cde_carry_screen.py): Independent Decimal identities on R424 serialized accounts, not a second strategy run.
@@ -281,6 +283,7 @@ line is the first line of the script's own docstring.
 - [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_level_probability_v2.py`](check_level_probability_v2.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
+- [`check_maker_pilot.py`](check_maker_pilot.py): Independent Decimal cash/inventory and liquidation identities on R426 outputs.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
 - [`check_orb_pilot.py`](check_orb_pilot.py): Independent Fraction/array audit of R372's frozen historical proxy receipts.
 - [`check_owner_acceptance.py`](check_owner_acceptance.py): R320 independent literal risk-target/forecast and paper-report audit.

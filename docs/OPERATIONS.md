@@ -5,6 +5,23 @@ Codex to take over the whole project. Issue [#7](https://github.com/SaikiK12/T/i
 records the transfer. Frozen strategy definitions, source rules, unread samples,
 existing journal history, acquisition limits and **no real stakes** remain.
 
+## Research objective clarified by the owner, 2026-11-07
+
+The owner wants substantial net gains and recurring opportunities, with strong
+evidence of reliability. A low single-digit annual yield is a benchmark, not
+the intended discovery. The owner has not specified a precise monthly target
+or loss budget; do not invent either or turn leverage into a claimed edge.
+No strategy currently has prospective evidence certifying reliable high gains.
+
+Research prioritizes mechanisms with an economic payer and realistic repeated
+execution, including liquidity provision and mechanically constrained cash
+flows. Keep full fees, inventory/tail losses, total cash and missing data in
+the result. Distinguish a token-balance/revert condition, an observed fill,
+positive expected net, opportunity frequency and confidence of profit. None
+proves the others. Do not annualize a short pilot or equate a high win rate
+with a safe account. Existing frozen papers remain intact as measurements;
+new ideas require fresh registered tests and new prospective evidence.
+
 ## One selected writer, independent of the chat container
 
 The canonical `manifest.json` on `codex/quant-runtime-state` selects the

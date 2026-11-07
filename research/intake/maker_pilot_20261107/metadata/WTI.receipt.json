@@ -1,0 +1,31 @@
+{
+  "symbol": "WTI",
+  "market_id": 145,
+  "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=145",
+  "organization": "Lighter",
+  "publication_date": "current public API, undated",
+  "started_utc": "2026-11-07T16:23:39.906080+00:00",
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "cap": 32768,
+  "metadata_only": {
+    "symbol": "WTI",
+    "market_id": 145,
+    "status": "active",
+    "supported_size_decimals": 3,
+    "supported_price_decimals": 3,
+    "min_base_amount": "0.060",
+    "min_quote_amount": "10.000000",
+    "maker_fee": "0.0000",
+    "taker_fee": "0.0000",
+    "margin_mode": null
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T16:23:40.491699+00:00",
+  "bytes_read": 1739,
+  "response_complete": true,
+  "charged_bytes": 1739,
+  "sha256": "c89a2694455338f3281359aa23e7e711d16849b9ed23f0ea37921cb0822e5d2c",
+  "body": "WTI.body.gz",
+  "error": null
+}

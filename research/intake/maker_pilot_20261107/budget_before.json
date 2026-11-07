@@ -1,0 +1,15 @@
+{
+  "original_calls": 8000,
+  "original_bytes": 262144000,
+  "parent_proof": "research/intake/funding_notional_20261103/cde_bar_edges_20261107/budget_before.json",
+  "parent_conservative_calls": 7806,
+  "parent_conservative_bytes": 247546845,
+  "new_reserved_calls": 5,
+  "new_worst_bytes": 2199557,
+  "conservative_total_calls": 7811,
+  "conservative_total_bytes": 249746402,
+  "actual_new_client_bytes": 1412636,
+  "allowance_reset": false,
+  "old_exact_bytes_known": false,
+  "note": "Retain all earlier worst-case charges; count RPC denial, the bounded archive restore and3market metadata responses cumulatively. No original grant renewal."
+}
