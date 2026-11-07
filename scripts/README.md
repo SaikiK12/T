@@ -105,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (148)
+## Run: one lane's frozen measurement (149)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -146,6 +146,7 @@ line is the first line of the script's own docstring.
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
 - [`run_dvolvrp.py`](run_dvolvrp.py): R411 dvolvrp_v1 (M477, item 41): Deribit's 30-day implied volatility index (DVOL) against the realized volatility of the next 30 days, BTC and ETH, as set out in experiments/dvolvrp_v1/PREREG.md.
+- [`run_eea_execution.py`](run_eea_execution.py): R421: one frozen packet, two explicit CDE size conventions, no new acquisition.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
 - [`run_equations_v2.py`](run_equations_v2.py): R311: exact R310 policy repeat after source-only Lighter page-seam recovery.
@@ -256,7 +257,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (29)
+## Check: parity, audits and integrity (30)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -272,6 +273,7 @@ line is the first line of the script's own docstring.
 - [`check_dated_carry.py`](check_dated_carry.py): Independent stdlib/Fraction audit of every R327 value and packed cash row.
 - [`check_dated_carry_v2.py`](check_dated_carry_v2.py): R328 label/lineage wrapper around the frozen independent R327 raw oracle.
 - [`check_dependent_null.py`](check_dependent_null.py): Independent literal R321 binomial/OBM/selected-bootstrap arithmetic audit.
+- [`check_eea_execution.py`](check_eea_execution.py): Independent Fraction check of R421; does not import either execution kernel.
 - [`check_funding_prefix.py`](check_funding_prefix.py): Literal rational audit of R322 saved component fixtures; no market validation.
 - [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
@@ -308,7 +310,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (82)
+## Tools and everything else (83)
 
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
@@ -374,6 +376,7 @@ line is the first line of the script's own docstring.
 - [`qualify_carry_costs_targeted.py`](qualify_carry_costs_targeted.py): One prospective, bounded per-contract public source qualification; no orders.
 - [`qualify_metric_archives.py`](qualify_metric_archives.py): One frozen, bounded metrics archive schema/time-label qualification; no returns.
 - [`quant_runtime.py`](quant_runtime.py): One GitHub Actions writer for the paper lab; default is a read-only operational plan.
+- [`quant_runtime_v2.py`](quant_runtime_v2.py): R422 priority paper runtime; immutable R420 state primitives, new frozen adapter.
 - [`recording_segments.py`](recording_segments.py): Segment, verify or restore one explicit RECORDED file; never uploads or deletes originals.
 - [`repair_equation_funding.py`](repair_equation_funding.py): Recover only missing Lighter page seams into a new copy; never edit R310 inputs.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.

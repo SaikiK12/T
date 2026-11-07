@@ -56,3 +56,24 @@ genuinely continuous tapes; inherited browser-UA notice transport; qualified
 whole-universe book scope; and native reserved/due-date rules. The indexed HFT
 archive largely covers Oct29 with surrounding fragments, not three proven
 usable full days. No large archive was fetched merely because it was indexed.
+
+## Later-host reprise and the finite pilot stop
+
+At **2026-11-07 12:58UTC**, canonical state `83e43254` has **196** manifested
+files, all independently checked. Native R419 has **8** captured packets and
+**97/97** closed requests, **2,200,486** charged bytes. The06UTC slot is absent
+and stays absent. [Workflow42374781848](https://github.com/SaikiK12/T/actions/runs/42374781848)
+completed restoration, before-HTTP checkpoint, dispatch and publication.
+This verifies actual repeated host restoration rather than just a schedule.
+Exact receipt: [resume evidence](resume_20261107T12.json).
+
+The auxiliary ledger has **190/190** closed requests and **14,976,815** charged
+bytes. Its next2MiB worst-response reservation cannot fit the16MiB ceiling.
+R413/R406/MEXC/Deribit now stop **before HTTP**, with no counter reset. Native
+paper status last updated08:08UTC and is correctly stale at this observation.
+DefiLlama's prior source block persists. A green controller is still not a
+healthy source panel. Heavy full-chain captures consumed much of this finite
+pilot; a separately registered successor needs to preserve spend, protect
+paper tasks from broad recorders and qualify a smaller source/transport scope.
+R419 remains active within its unchanged native budget/window. Costs1x/2x/3x
+remain N/A for this operational receipt; no financial result is implied.

@@ -28,6 +28,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`dated_carry`](dated_carry.py): Source-bound inverse dated-future entry and conditional terminal conversion.
 - [`dependent_null`](dependent_null.py): Finite dependent-mean controls and Monte Carlo tolerance calibration.
 - [`depth_replay`](depth_replay.py): R314 paired-depth replay with a same-state top-level capacity control.
+- [`eea_execution`](eea_execution.py): Conditional CDE/Kraken displayed-depth costs; never fills, funding or a return.
 - [`eea_pair_capture`](eea_pair_capture.py): Bounded raw Coinbase CDE/Kraken observations; no rate normalization, signal or PnL.
 - [`engine`](engine.py): Vectorized backtester.
 - [`equation_data`](equation_data.py): Input adapters for the frozen equation family; no network and no hidden gap fill.
@@ -85,6 +86,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`paper_entry_risk`](paper_entry_risk.py): Explicit loss-at-size scenarios for new linear-futures paper consumers.
 - [`paper_session`](paper_session.py): Single-writer paper admission and explicit-receipt bridge for new consumers.
 - [`paper_solvency`](paper_solvency.py): Current-capital veto around frozen paper risk controls; no real activation.
+- [`paper_transport`](paper_transport.py): Small, public HTTP content decoding with inherited, never-reset campaign spend.
 - [`path_response`](path_response.py): R400: causal raw-tape features, bounded equation selection and quote replay.
 - [`policy`](policy.py): Judging the PROCESS of picking strategies, because strategies work for a time and not forever.
 - [`prereg`](prereg.py): Pre-registration: the spec is hashed before any statistic runs, and every run re-checks the hash.
