@@ -26,6 +26,16 @@ new ideas require fresh registered tests and new prospective evidence.
 
 ### Bounded participant-source successor
 
+**Observed activation:** reviewed merge b4063110 was activated by workflow
+42411122446. Canonical state 34bed188 selects R428; [deployment proof](../experiments/participant_capture_v1/deployment.json)
+verifies 656 file hashes and actual 20:00 UTC R419/R413/R406 receipts. Papers updated
+at 20:27 UTC, with zero settlements. The Lighter qualification returned a
+jurisdiction refusal (HTTP 400/code 20558), with 0 stream frames; SOURCE_BLOCK prevents
+future acquisition attempts. Its raw refusal/reservation remains. Do not
+try alternate query/region/header/provider/REST access around that refusal.
+Other native papers continue under their original finite limits; this is
+not all-project recovery or proof of paper income.
+
 [R428](../experiments/participant_capture_v1/PREREG.md) adds a finite raw
 Lighter WTI/Brent ticker/trade campaign for M441/M474. Its source-only
 windows are Nov7qualification65seconds and Nov8/9/10observations180seconds

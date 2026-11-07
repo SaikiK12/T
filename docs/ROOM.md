@@ -15,6 +15,12 @@ its own reviewed migration before it can write. Its distinct command is
 `/quant-participant-tick` while selected; consult the canonical manifest
 rather than assuming a code PR activated it. The immutable workflows share
 one concurrency group; unselected contracts skip.
+
+R428 was actually selected by workflow 42411122446 at 20:27 UTC on 2026-11-07;
+the native papers updated, while its new Lighter stream received a geographic
+refusal and stays blocked. The [deployment proof](../experiments/participant_capture_v1/deployment.json)
+and source outcome distinguish those facts. No access variant or region
+change is authorized by a source failure.
 The recurring Codex research task reads that state and
 advances registered work; it must not start another local forward loop.
 Unmigrated continuous recorders and missing historical inputs remain explicit
