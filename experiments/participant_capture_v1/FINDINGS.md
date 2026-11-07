@@ -1,4 +1,43 @@
-# R428: finite participant-source campaign registered; actual receipts decide deployment
+# R428: native papers deployed; participant stream blocked by jurisdiction
+
+## Observed deployment, 2026-11-07
+
+**The runtime was deployed; the new participant stream did not collect data.**
+Migration comment 6712606118 ran reviewed merge b4063110 through workflow
+42411122446. Canonical state 34bed1882942a49555f092d79840881e702a7d38 selects
+R428. The [read-only deployment proof](deployment.json) independently verifies
+all 656 manifest hashes and 42 new auxiliary wire/content pairs.
+
+R419 captured its 20:00 UTC packet: 12 GETs/172,589 body bytes. R413 updated at 20:27:52 UTC
+(13 ticks, 4 locks, 0 settled); R406 at 20:27:59 UTC (16 ticks, 2 locks, 0 settled).
+These are actual native receipts, not source health inferred from workflow
+success. Five legacy lanes remain stale; all-project-running remains false.
+
+At 20:28 UTC the two Lighter metadata GETs returned 200 (1,739/1,743 bytes), but the
+WebSocket handshake returned **HTTP 400, provider code 20558**, with this exact
+primary response from Lighter's runtime API (undated publication, retained
+at 20:28:00 UTC; accessed from the stored body on 2026-11-07):
+
+> You are accessing Lighter from a restricted jurisdiction. For more information, see the https://lighter.xyz/terms
+
+Endpoint: `wss://mainnet.zklighter.elliot.ai/stream`. The 153-byte body has SHA256
+`9504eba0eed7d0ebeccb2d6394693664e9d12c4822995806bd69a34bafe1e4f7`.
+The source attempt made 3 requests, processed 3,635 known application-body bytes
+and received **0 frames/0 transactions**. Its 8-call/2 MiB reservation is retained;
+the whole 32-call/8 MiB campaign remains reserved inside the original historical
+cap, with no refund. The original native auxiliary total is now 484 calls /
+15,221,875 charged bytes, leaving 1,555,341 of 16,777,216 bytes.
+
+**BLOCKED_JURISDICTION, not an economic null.** The source wrote SOURCE_BLOCK;
+subsequent windows cannot retry it. No readonly/query/header/IP/provider/
+region/REST variant was attempted after learning the restriction. Successful
+metadata access is not proof of permission to use the refused stream. This
+observed server restriction does not determine every French resident's legal
+status; individual execution eligibility is still unqualified. Already-held
+data remains intact. No quote, position-flow, markout, strategy PnL or new
+source day was measured; no real orders, money or credentials.
+
+The paragraphs below preserve the code-registration scope and limits.
 
 At code registration, the source campaign has **no actual market connection
 or captured window yet**. The implementation is locally validated and

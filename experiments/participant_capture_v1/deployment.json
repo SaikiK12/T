@@ -1,0 +1,138 @@
+{
+  "observed_utc": "2026-11-07T20:42:31.456860+00:00",
+  "code_merge": "b4063110f24f9624800aa2ad07c89616e929d2a4",
+  "code_ci": 42410148632,
+  "migration_command_comment": 6712606118,
+  "workflow_run": 42411122446,
+  "state_commit": "34bed1882942a49555f092d79840881e702a7d38",
+  "active_contract": "R428",
+  "manifest_sha256": "17f5653e9415f23671ab1c1b7661970c8ba41e83a7c133b4953e621256c4417d",
+  "verified_manifest_file_hashes": 656,
+  "verified_new_aux_wire_content_pairs": 42,
+  "native_aux_cumulative_calls": 484,
+  "native_aux_cumulative_charged_bytes": 15221875,
+  "native_aux_original_byte_ceiling": 16777216,
+  "native_aux_remaining_original_bytes": 1555341,
+  "aux_budget_reset": false,
+  "source_qualification": {
+    "state": "SOURCE_STOP",
+    "slot": "20261107_qualification",
+    "actual_started_utc": "2026-11-07T20:28:00.291747+00:00",
+    "source_calls": 3,
+    "decoded_application_bytes": 3635,
+    "frames": 0,
+    "counts": {
+      "145": {
+        "subscribed/ticker": 0,
+        "update/ticker": 0,
+        "subscribed/trade": 0,
+        "update/trade": 0,
+        "bootstrap_trade_rows": 0,
+        "update_trade_rows": 0
+      },
+      "159": {
+        "subscribed/ticker": 0,
+        "update/ticker": 0,
+        "subscribed/trade": 0,
+        "update/trade": 0,
+        "bootstrap_trade_rows": 0,
+        "update_trade_rows": 0
+      }
+    },
+    "pnl": null,
+    "markout": null,
+    "real_orders_allowed": false,
+    "full_day": false,
+    "R367_usable_day": false,
+    "error": "InvalidStatus: server rejected WebSocket connection: HTTP 400",
+    "handshake_error_status": 400,
+    "handshake_error_body_bytes": 153,
+    "handshake_error_body_sha256": "9504eba0eed7d0ebeccb2d6394693664e9d12c4822995806bd69a34bafe1e4f7",
+    "actual_finished_utc": "2026-11-07T20:28:00.880770+00:00",
+    "reserved_bytes": 2097152,
+    "reserved_calls": 8,
+    "byte_scope": "decoded application bodies; fixed reservation additionally retains buffer/unknown spend; not measured network wire",
+    "reservation_refunded": false
+  },
+  "source_error": {
+    "status": 400,
+    "code": 20558,
+    "message": "You are accessing Lighter from a restricted jurisdiction. For more information, see the https://lighter.xyz/terms",
+    "url": "wss://mainnet.zklighter.elliot.ai/stream",
+    "body_bytes": 153,
+    "body_sha256": "9504eba0eed7d0ebeccb2d6394693664e9d12c4822995806bd69a34bafe1e4f7",
+    "source_pub_date": "undated runtime API response",
+    "received_utc": "2026-11-07T20:28:00.880770+00:00",
+    "accessed_from_preserved_body_utc": "2026-11-07T20:42:31.456983+00:00"
+  },
+  "source_metadata": [
+    {
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=145",
+      "status": 200,
+      "body_bytes": 1739,
+      "sha256": "633cf664ee2f6cc9c14db995dec33a3b43654e4cf174ca8fc45b50c646054c61",
+      "received_utc_ns": 1794083280489350307,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=159",
+      "status": 200,
+      "body_bytes": 1743,
+      "sha256": "6dc933dd8d31c79513b5f8d984ba201b43b8212efcc9c8bd4467075cba2705ca",
+      "received_utc_ns": 1794083280705187218,
+      "content_type": "application/json; charset=utf-8"
+    }
+  ],
+  "source_followup": "BLOCKED_JURISDICTION; no reconnect, URI/header/provider/region/REST workaround or further source request",
+  "source_reserved_calls_retained": 8,
+  "source_reserved_bytes_retained": 2097152,
+  "whole_original_historical_reservation": {
+    "calls": 7851,
+    "bytes": 259609578,
+    "new_source_grant": false,
+    "refund": false
+  },
+  "R419": {
+    "path": "data/recorders/eea_pair_capture_v1/packets/20261107T20/packet.json",
+    "state": "CAPTURED",
+    "hour": "20261107T20",
+    "requests": 12,
+    "body_bytes": 172589,
+    "sha256": "e50ea08496ebd313f2cb78c15ac1503d6b58572f28d37e3e3ecd954560fde495"
+  },
+  "native_papers": [
+    {
+      "rid": "R413",
+      "updated": "2026-11-07T20:27:52Z",
+      "ticks": 13,
+      "locks": 4,
+      "settled": 0,
+      "path": "experiments/boroslock_fwd/journal/status.json",
+      "sha256": "3f01df4ae8cbc58d1d5ac50c2b5d92cf1df40d66ace3084efe9b1eced1a630d9"
+    },
+    {
+      "rid": "R406",
+      "updated": "2026-11-07T20:27:59Z",
+      "ticks": 16,
+      "locks": 2,
+      "settled": 0,
+      "path": "experiments/lockcarry_fwd2/journal/status.json",
+      "sha256": "63a3cf840a135420360c7cef688a02b6bf5591840f9d16f6365cfc376aa0bb66"
+    }
+  ],
+  "legacy_stale_rids": [
+    "R415",
+    "R285",
+    "R278",
+    "R279",
+    "R390"
+  ],
+  "all_project_lanes_running": false,
+  "pnl_proven": false,
+  "real_orders_allowed": false,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  }
+}
