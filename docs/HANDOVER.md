@@ -4,6 +4,15 @@ The owner's ask (2026-10-29): everything must be in the repo, or there must be a
 access to Claude. This page is that way. It says what is in git, what is not, and the exact command for each part.
 Nothing here needs a key except the two marked in section 6, and nothing here places an order.
 
+**Operational takeover, 2026-11-07.** Claude is no longer the designated
+operator. Start with [current operations](OPERATIONS.md): one serialized GitHub
+workflow owns the admitted live paper/source writes, with durable state on
+`codex/quant-runtime-state`. Its first observed cycle and exact blockers are
+in [R420 FINDINGS](../experiments/ops_takeover_v1/FINDINGS.md). The old archive,
+private-host inventory and recovery commands below retain their dated scope;
+do not start a second local loop from them. Missing original private data is
+not restored merely by this takeover.
+
 **Recovery review, 2026-11-04 (code/metadata only, at `99e9ba1`).** Sizes, host
 observations, test failures and scheduler dates below retain their original dated
 scope. They are not a current inventory or proof that a daemon, archive or

@@ -38,6 +38,16 @@ holds source task logs. Native paper journals retain their original schemas.
 Code-branch journal copies remain the historical seed, not a live heartbeat.
 The methods queue and round registry on the default branch remain canonical.
 
+The first actual cycle, [42337055267](https://github.com/SaikiK12/T/actions/runs/42337055267),
+completed on **2026-11-07 04:08 UTC** and published both its before-HTTP
+checkpoint and final state. The [native deployment receipt](../experiments/ops_takeover_v1/deployment.json)
+binds the state commit, verified hashes and individual source outcomes. R419,
+R413/R406 and MEXC/Deribit captures produced native output; Cboe skipped its
+closed window; DefiLlama exceeded its response cap and remains stopped.
+This is one observed cycle, not proof of future schedule execution or a full
+private-container recovery. `manifest.meaning` retains its bootstrap text;
+use the current native report and `bootstrap` flag for deployment status.
+
 A new runner restores the manifested state before any source call. Missing or
 corrupt state fails closed rather than resetting budgets. Hashes, append-only
 prefixes, path safety and immutable raw captures are checked before copying.
@@ -63,6 +73,9 @@ Its closed config names every task and preserved state prefix. R419 retains
 its own Nov14 end and native caps; additional external guards can only stop it
 earlier. Auxiliary sources share **512 calls / 16MiB client-body** across the
 whole takeover campaign, not per hour; each response has a **2MiB** ceiling.
+The first cycle consumed about6.2MB of that auxiliary byte allowance, including
+the over-limit calendar debit. These are finite pilot ceilings and may halt
+sources after only a few cycles. No schedule or later research turn renews them.
 R419's admitted native ceiling is **1,351 calls / 16MiB**, with **1MiB** per
 response; its own frozen transport and stricter source caps run intact. Stored state is capped
 at **64MiB**. R420 dispatch ends **2026-11-19 00:00 UTC**; only health reporting
