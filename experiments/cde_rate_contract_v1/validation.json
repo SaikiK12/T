@@ -1,0 +1,30 @@
+{
+  "round": "R423",
+  "full_tests": 2551,
+  "skipped": 3,
+  "seconds": "439.656",
+  "result": "OK",
+  "new_synthetic_tests": 9,
+  "full_log_sha256": "e1bdcce1414635726fc8a2f323b916c7c465506b5d293a1a653dd190089f999b",
+  "prereg_sha256": "04b979b7d6630aba3f0bb8f7e6806114b3ed45d13576bc4616260a68840c270f",
+  "frozen_inputs": 112,
+  "predictive_trials": 0,
+  "program_trials": 9784345,
+  "integrity_errors": 0,
+  "legacy_warnings": 14,
+  "catalog_matches_staged_index": true,
+  "real_rate_values_compared_before_commit": false,
+  "one_shot_acquisition_calls": 2,
+  "one_shot_acquisition_client_bytes": 5420,
+  "tested_sha256": {
+    "lab/cde_rate_contract.py": "b8ec9d22832a4222cd6221c393137a6263abef83beb46a3c90df1f138813d6c0",
+    "scripts/run_cde_rate_contract.py": "e95b41785ff175b148032311dbd6d198dbdd09b037e5f11b8f5a2565d9960705",
+    "scripts/acquire_cde_contract_tail.py": "5a7f2dc9ac180575441b6507c4ce6c8f7d6aa78cf97486175f3153ab17d471ab",
+    "tests/test_cde_rate_contract.py": "61ba4257a0d3a7bd16fda12a72252f7199f5350313377af0db1ec5e4068d038c"
+  },
+  "financial_costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  }
+}

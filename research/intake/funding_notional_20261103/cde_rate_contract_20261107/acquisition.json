@@ -1,0 +1,64 @@
+{
+  "requests": [
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated public hourly data",
+      "url": "https://www.coinbase.com/api/mda/v1/instruments/CDE/BIPZ30/funding?result_limit=32",
+      "started_utc": "2026-11-07T14:21:40.685897+00:00",
+      "started_mono_ns": 102886382198379,
+      "max_response_bytes": 32768,
+      "scope": "counts, schemas, identities and time bounds only; no rate-value comparison",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json",
+      "counts_only": {
+        "rows": 32,
+        "unique_timestamps": 32,
+        "oldest": "2026-11-06T07:00:00Z",
+        "newest": "2026-11-07T14:00:00Z"
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:21:40.965654+00:00",
+      "received_mono_ns": 102886661972774,
+      "bytes_read": 2720,
+      "response_complete": true,
+      "charged_bytes": 2720,
+      "sha256": "18aeb24162e4d76118a28457a6cd0064bcaff9b7fcff79bffb043c48ce98e0dd",
+      "body": "btc.body.gz",
+      "error": null
+    },
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated public hourly data",
+      "url": "https://www.coinbase.com/api/mda/v1/instruments/CDE/ETPZ30/funding?result_limit=32",
+      "started_utc": "2026-11-07T14:21:40.966386+00:00",
+      "started_mono_ns": 102886662691772,
+      "max_response_bytes": 32768,
+      "scope": "counts, schemas, identities and time bounds only; no rate-value comparison",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json",
+      "counts_only": {
+        "rows": 32,
+        "unique_timestamps": 32,
+        "oldest": "2026-11-06T07:00:00Z",
+        "newest": "2026-11-07T14:00:00Z"
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:21:41.215779+00:00",
+      "received_mono_ns": 102886912098574,
+      "bytes_read": 2700,
+      "response_complete": true,
+      "charged_bytes": 2700,
+      "sha256": "6de04e72d983f951b1ba082a38f9ba73def1c27514a74e6d9c5d78d638bba4c7",
+      "body": "eth.body.gz",
+      "error": null
+    }
+  ],
+  "total_requests": 2,
+  "total_charged_bytes": 5420,
+  "rate_values_compared": false,
+  "new_forward_tick": false
+}

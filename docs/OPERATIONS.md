@@ -9,12 +9,12 @@ existing journal history, acquisition limits and **no real stakes** remain.
 
 The canonical `manifest.json` on `codex/quant-runtime-state` selects the
 **active_contract** and **last_report**. Read those fields for the current
-writer and its native receipt. R420 is the first deployed contract. Its
-[R422 priority successor](../experiments/paper_priority_v1/FINDINGS.md) is
-reviewed/activated separately through
+writer and its native receipt. R420 was the first deployed contract. Its
+[R422 priority successor](../experiments/paper_priority_v1/FINDINGS.md) was
+activated on2026-11-07 at14UTC through
 [Priority paper runtime](../.github/workflows/quant-paper-priority.yml).
-Until that transition is published, R420 remains selected. After it, R420
-skips source work and only R422 writes. Both immutable workflows use the same
+The transition is published in state b9538b958fcc901604a759855afd3895ffd0932b;
+R420 now skips source work and only R422 writes. Both immutable workflows use the same
 global concurrency group; no second local loop.
 
 R422 admits only R419/R413/R406 and retains the original16MiB auxiliary byte
@@ -24,16 +24,22 @@ the paused broad recorders. Its newly frozen4096total-call limit includes the
 old calls; this is no budget reset. Gzip decoding has its own4MiB limit and
 records both wire/content hashes. The remaining original bytes can still bind.
 
-After current CI/merge, the operational owner uses the exact
+After successful CI/merge, the operational owner used the exact
 `/quant-paper-migrate` comment on issue7 for the initial serialized transition.
 That workflow checks the completed old host and publishes migration, then a
 prepared hour, before any HTTP. `/quant-tick` subsequently reaches the selected
 contract. Never fake GITHUB_ACTIONS locally or write a journal by hand.
 
+At its first completed cycle, R422 verified fresh native R413/R406 statuses
+at14:09UTC. Its42new requests used35,139wire bytes, retaining old spend for a
+total15,011,954of16,777,216charged auxiliary bytes. The [deployment receipt](../experiments/paper_priority_v1/deployment.json)
+binds282file hashes and42wire/content pairs. This is observed source health,
+not proof of paper profit, future uptime or all-project recovery.
+
 The paragraphs below retain R420's original scope/evidence and ceilings.
 
-[Paper lab runtime](../.github/workflows/quant-runtime.yml) is the sole admitted
-writer. It is scheduled at minute17 each UTC hour; `workflow_dispatch` and the
+Originally [Paper lab runtime](../.github/workflows/quant-runtime.yml) was the
+sole admitted writer. Its immutable workflow is scheduled at minute17 each UTC hour; `workflow_dispatch` and the
 owner's exact `/quant-tick` comment on issue7 use the same concurrency group.
 The workflow runs reviewed default-branch code, never an unreviewed PR head.
 GitHub Actions serializes runs without cancelling the active writer. No local

@@ -1,0 +1,31 @@
+{
+  "round": "R423",
+  "method": "M488",
+  "hours": [
+    "20261107T04",
+    "20261107T05",
+    "20261107T07",
+    "20261107T08",
+    "20261107T09",
+    "20261107T10",
+    "20261107T11",
+    "20261107T12"
+  ],
+  "instruments": {
+    "btc": {
+      "advanced": "BIP-20DEC30-CDE",
+      "mda": "BIPZ30"
+    },
+    "eth": {
+      "advanced": "ETP-20DEC30-CDE",
+      "mda": "ETPZ30"
+    }
+  },
+  "mapping": "outer Advanced funding_rate == MDA funding_rate at exactly outer funding_time",
+  "exact_comparison": true,
+  "fitted_scale": null,
+  "fitted_time_shift": null,
+  "min_nonzero_matching_points": 2,
+  "min_distinct_nonzero_values": 2,
+  "required_per_asset": 8
+}
