@@ -1,0 +1,16 @@
+{
+  "url": "https://api.coinbase.com/api/v3/brokerage/market/products?product_type=FUTURE&limit=50",
+  "started_utc": "2026-11-06T18:54:54.675428+00:00",
+  "started_mono_ns": 32880371745190,
+  "max_response_bytes": 1500000,
+  "request_ua": "Python urllib default",
+  "no_authentication": true,
+  "redirects": false,
+  "scope": "public metadata, counts/schema/identity only; prices and funding outcomes not summarized",
+  "status": 200,
+  "received_utc": "2026-11-06T18:54:55.853921+00:00",
+  "received_mono_ns": 32881550275062,
+  "bytes_read": 141632,
+  "sha256": "5e29c5c8a401d4907bb47eb5d80b8c606b705160a52de1cb8a29b4c88a9b31ba",
+  "body": "public_products.json.gz"
+}

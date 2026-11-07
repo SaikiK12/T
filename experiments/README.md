@@ -41,8 +41,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (173)
+## Other registered rounds (done, registered or planned) (174)
 
+- **[eea_pair_capture_v1](eea_pair_capture_v1/)** R419, REGISTERED PENDING, 0 trials. M488 bounded inactive Coinbase CDE/Kraken raw capture with delayed book reobservations; zero predictive trials ([PREREG](eea_pair_capture_v1/PREREG.md), [FINDINGS](eea_pair_capture_v1/FINDINGS.md))
 - **[kraken_carry_v1](kraken_carry_v1/)** R418, REGISTERED PENDING, 2 trials. Kraken EEA fixed-quantity carry: funding gaps, funded capital and current costs ([PREREG](kraken_carry_v1/PREREG.md), [FINDINGS](kraken_carry_v1/FINDINGS.md))
 - **[carry_execution_v1](carry_execution_v1/)** R417, REGISTERED PENDING, 0 trials. M485 bounded BTC displayed-depth sizes and segregated linear-perp one-leg stress accounting; zero predictive trials ([PREREG](carry_execution_v1/PREREG.md), [FINDINGS](carry_execution_v1/FINDINGS.md))
 - **[gexfilter_v1](gexfilter_v1/)** R416, DONE NULL, 2 trials. M486: S&P 500 dealer gamma (SqueezeMetrics' free daily GEX, rank over 252 days) as a predictor of BTC/ETH log realized volatility over the next US session, beyond VIX and lagged RV; NW t, IS 2021-01..2025-06, HOLD 2025-07..2026-09 ([PREREG](gexfilter_v1/PREREG.md), [FINDINGS](gexfilter_v1/FINDINGS.md))

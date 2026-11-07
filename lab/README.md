@@ -28,6 +28,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`dated_carry`](dated_carry.py): Source-bound inverse dated-future entry and conditional terminal conversion.
 - [`dependent_null`](dependent_null.py): Finite dependent-mean controls and Monte Carlo tolerance calibration.
 - [`depth_replay`](depth_replay.py): R314 paired-depth replay with a same-state top-level capacity control.
+- [`eea_pair_capture`](eea_pair_capture.py): Bounded raw Coinbase CDE/Kraken observations; no rate normalization, signal or PnL.
 - [`engine`](engine.py): Vectorized backtester.
 - [`equation_data`](equation_data.py): Input adapters for the frozen equation family; no network and no hidden gap fill.
 - [`equations`](equations.py): Causal funding/basis forecasts and a fixed-quantity, segregated pair-PnL model.
