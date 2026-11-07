@@ -1,0 +1,15 @@
+{
+  "parent_proof": "research/intake/rwa_funding_qualification_20261107/budget_before.json",
+  "previous_conservative_calls": 7815,
+  "previous_conservative_bytes": 250926054,
+  "new_static_document_calls_counted_conservatively": 4,
+  "new_market_data_calls": 0,
+  "new_worst_case_document_bytes": 294916,
+  "actual_new_static_document_bytes": 25490,
+  "original_call_ceiling": 8000,
+  "original_byte_ceiling": 262144000,
+  "conservative_total_calls": 7819,
+  "conservative_total_bytes": 251220970,
+  "allowance_reset": false,
+  "note": "Old exact bytes remain unknown; retain all prior worst reservations and additionally charge the entire cap of this tiny static-source batch. Existing local prover copies add no new network."
+}

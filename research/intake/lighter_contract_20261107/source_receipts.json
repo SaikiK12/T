@@ -1,0 +1,74 @@
+[
+  {
+    "name": "agent_schema",
+    "url": "https://raw.githubusercontent.com/elliottech/lighter-agent-kit/main/references/schemas-read.md",
+    "organization": "elliottech/Lighter or public issue participant, see authors",
+    "started_utc": "2026-11-07T18:59:35.623828+00:00",
+    "received_utc": "2026-11-07T18:59:35.941549+00:00",
+    "bytes": 8868,
+    "sha256": "fcb26ad9a70d4377398d4035d1d98e03c80e5daf715d08dfb090b7431c1f4a16",
+    "status": 200,
+    "body": "research/intake/lighter_contract_20261107/source/agent_schema.body.gz",
+    "kind": "static documentation/source metadata only; no market-data acquisition"
+  },
+  {
+    "name": "sdk_trade_model",
+    "url": "https://raw.githubusercontent.com/elliottech/lighter-python/main/lighter/models/trade.py",
+    "organization": "elliottech/Lighter or public issue participant, see authors",
+    "started_utc": "2026-11-07T18:59:35.941594+00:00",
+    "received_utc": "2026-11-07T18:59:36.265174+00:00",
+    "bytes": 9402,
+    "sha256": "fad8796f1a610d2facaa4610daad83a20632f25f289a927fd3eabfd66f683db5",
+    "status": 200,
+    "body": "research/intake/lighter_contract_20261107/source/sdk_trade_model.body.gz",
+    "kind": "static documentation/source metadata only; no market-data acquisition"
+  },
+  {
+    "name": "funding_issue",
+    "url": "https://api.github.com/repos/elliottech/lighter-python/issues/182",
+    "organization": "elliottech/Lighter or public issue participant, see authors",
+    "started_utc": "2026-11-07T18:59:36.265215+00:00",
+    "received_utc": "2026-11-07T18:59:36.852465+00:00",
+    "bytes": 3498,
+    "sha256": "c0a8f35fa72bd0af3972977b93d03bfe26111aef7a3e8f0c66248f3c5051c433",
+    "status": 200,
+    "body": "research/intake/lighter_contract_20261107/source/funding_issue.body.gz",
+    "kind": "static documentation/source metadata only; no market-data acquisition"
+  },
+  {
+    "name": "funding_issue_comments",
+    "url": "https://api.github.com/repos/elliottech/lighter-python/issues/182/comments?per_page=100",
+    "organization": "elliottech/Lighter or public issue participant, see authors",
+    "started_utc": "2026-11-07T18:59:36.852502+00:00",
+    "received_utc": "2026-11-07T18:59:37.415031+00:00",
+    "bytes": 3722,
+    "sha256": "98d2a9128244506a9dc4df2abf6333fb894516c70f721251c55fd993701638ae",
+    "status": 200,
+    "body": "research/intake/lighter_contract_20261107/source/funding_issue_comments.body.gz",
+    "kind": "static documentation/source metadata only; no market-data acquisition"
+  },
+  {
+    "name": "apply_trade.rs",
+    "url": "https://github.com/elliottech/lighter-prover/blob/main/circuit/src/apply_trade.rs",
+    "organization": "elliottech/Lighter",
+    "source_git_tree": "fa85b33197710ece649739bc38f5e23e816ddbdf",
+    "git_blob_sha1": "c6eb4735ed1f706490239f2e2835509ebd67c00a",
+    "bytes": 59413,
+    "sha256": "1b8c3c43c7ecd8af1210f38486d6113473da2f062f4f322959c5eb3764b6d3ad",
+    "body": "research/intake/lighter_contract_20261107/source/apply_trade.rs.gz",
+    "read_scope": "partial; apply_trade.rs320..405 and1110..1190, matching_engine.rs maker/taker/ask keyword contexts only; not full source review",
+    "acquisition": "already acquired earlier this conversation; unchanged local copy, no new network"
+  },
+  {
+    "name": "matching_engine.rs",
+    "url": "https://github.com/elliottech/lighter-prover/blob/main/circuit/src/matching_engine.rs",
+    "organization": "elliottech/Lighter",
+    "source_git_tree": "fa85b33197710ece649739bc38f5e23e816ddbdf",
+    "git_blob_sha1": "77d0f0c92b84f3c0296f05faa7f3ccc1d2cf4b50",
+    "bytes": 158547,
+    "sha256": "bde76d72ee306bac2d6d231aebe7d4eaf0b24b1ef3524f61e18ad295bf738534",
+    "body": "research/intake/lighter_contract_20261107/source/matching_engine.rs.gz",
+    "read_scope": "partial; apply_trade.rs320..405 and1110..1190, matching_engine.rs maker/taker/ask keyword contexts only; not full source review",
+    "acquisition": "already acquired earlier this conversation; unchanged local copy, no new network"
+  }
+]

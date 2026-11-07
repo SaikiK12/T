@@ -105,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (152)
+## Run: one lane's frozen measurement (153)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -178,6 +178,7 @@ line is the first line of the script's own docstring.
 - [`run_levels_lighter.py`](run_levels_lighter.py): R337 levels_lighter_v1: R333's level trades on Lighter's own hourly prices, at Lighter's measured book cost (gate 0).
 - [`run_levels_mexc0.py`](run_levels_mexc0.py): R336 levels_mexc0_v1: R333's level model on MEXC's zero-fee perps, at the measured MEXC spread (gate 0).
 - [`run_levels_v2.py`](run_levels_v2.py): R333 level_probability_v2: the owner's break-or-rebound probability model (M412) on the top 100 Binance perps.
+- [`run_lighter_trade_contract.py`](run_lighter_trade_contract.py): R427 one-run recorded trade-role qualification, without prices, markouts or returns.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
 - [`run_lmw.py`](run_lmw.py): lmw_v1 (R251): Lo-Mamaysky-Wang kernel chart patterns (head-and-shoulders, broadening, triangle and rectangle tops and bottoms) on daily bars of the top-50 perps, 11 forex pairs and 10 world ...
@@ -260,7 +261,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (33)
+## Check: parity, audits and integrity (34)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -283,6 +284,7 @@ line is the first line of the script's own docstring.
 - [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
 - [`check_level_probability_v2.py`](check_level_probability_v2.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
+- [`check_lighter_trade_contract.py`](check_lighter_trade_contract.py): R427 independent Fraction/account-history check of the unchanged one-run role report.
 - [`check_maker_pilot.py`](check_maker_pilot.py): Independent Decimal cash/inventory and liquidation identities on R426 outputs.
 - [`check_method_intake.py`](check_method_intake.py): Validate source/alias/queue metadata without reading outcomes or contacting providers.
 - [`check_orb_pilot.py`](check_orb_pilot.py): Independent Fraction/array audit of R372's frozen historical proxy receipts.
