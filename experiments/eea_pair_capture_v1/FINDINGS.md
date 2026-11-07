@@ -1,9 +1,21 @@
-# R419 status: raw data collector ready for handoff; not activated
+# R419 status: bounded raw collection active; no economic result
 
 Status recorded **2026-11-07 UTC**; the planned window has opened, elapsed
 unobserved slots remain missing and will not be backfilled.
 
-**No recorder invocation, forward tick or campaign journal exists here.**
+The first native invocation completed at **2026-11-07 04:08 UTC** in the
+single GitHub Actions writer installed by R420, after PR81's passing CI and
+merge. Packet **20261107T04** reports **CAPTURED**, **13** requests and
+**993,966** client-body bytes. All thirteen reservations have closing receipts.
+The daily instrument metadata, BTC/ETH rate fields, paired books and delayed
+book reobservations were preserved; no raw rate or depth statistic was scored.
+Canonical campaign state is on branch `codex/quant-runtime-state`, at
+`state/data/recorders/eea_pair_capture_v1/`. The first state commit is
+`686be7fb3982f4d4170bb970a212728cb1428540`; see R420's
+[bound deployment receipt](../ops_takeover_v1/deployment.json) and
+[actual workflow](https://github.com/SaikiK12/T/actions/runs/42337055267).
+
+The earlier implementation/qualification work below preceded activation.
 This is source collection plumbing, **0 predictive trials**, not a profitable
 paper strategy or a completed source week. Program trials remain **9,784,345**.
 **Costs 1x/2x/3x: N/A, not zero.** No return, funding cash or execution score.
@@ -15,7 +27,7 @@ question: Coinbase CDE and Kraken. Historical CDE access returned401 without
 authentication, so historical cashflow testing has not been substituted with
 live/predicted rates. Raw scale/fixing/cash-credit semantics remain open.
 
-The inactive implementation preserves full raw named books/rate/mark metadata,
+The implementation preserves full raw named books/rate/mark metadata,
 independent UTC and monotonic receipts, SHA-256 body hashes, protocol/config
 provenance and daily Kraken EEA risk rules. No financial normalization or score.
 Each packet also waits three seconds after the first request group, then
@@ -50,17 +62,20 @@ only; rate values were not summarized or scored. The earlier FairX401 remains
 true for that resource, not all Coinbase history. Cash scale/fixing and missing
 historical marks are still open. This removes a data-access obstacle for M488.
 No frozen input/code/allowlist is changed; a successor test needs a new R-id.
-The paired-book collector remains inactive and useful for execution evidence.
+The paired-book collector is now active for raw execution evidence; the frozen
+history allowlist remains unchanged.
 
-## Operational handoff, only to Claude's existing writer
+## Current operational owner and unchanged native contract
 
-After reviewing the fresh issue-7 claim and frozen commit, Claude may invoke
-`python scripts/record_eea_pair.py --execute` from his single existing hourly
-loop during **2026-11-07..2026-11-14 UTC**. The default CLI is inactive and no
-loop entry is added by this PR. Output is solely
+The owner transferred operations to Codex on **2026-11-07**. R420's serialized
+GitHub workflow now invokes the unchanged frozen native collector during
+**2026-11-07..2026-11-14 UTC**. The default CLI remains inactive; there is no
+second local loop or daemon. Output is solely
 `data/recorders/eea_pair_capture_v1/`, with a counts-only `packet.json` per hour
-and append-only `requests.jsonl`; no competing daemon. Window and cumulative
-caps bind even after restarts. An occupied lock/hour causes no network.
+and append-only `requests.jsonl`. Native window and cumulative caps bind even
+after restarts, alongside R420's state/checkpoint safeguards. An occupied
+lock/hour causes no network. At about one MiB per initial packet, the small
+finite byte limit may stop acquisition before Nov14; no budget is renewed.
 
 Before any future economic test, qualify CDE rate scale and fixing identity,
 cash settlement timing, current SID/rule drift and account availability, book quantity units,

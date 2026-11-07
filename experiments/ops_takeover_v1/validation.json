@@ -65,5 +65,24 @@
     "matches_staged_index": true,
     "exit_code": 0
   },
-  "deployment": "not activated; latest-head CI and canonical first-run receipts required"
+  "deployment": {
+    "receipt": "experiments/ops_takeover_v1/deployment.json",
+    "first_workflow": 42337055267,
+    "state_commit": "686be7fb3982f4d4170bb970a212728cb1428540",
+    "verified_files": 37,
+    "status": "first cycle and durable publication verified; individual source/research blockers remain"
+  },
+  "post_activation_evidence_validation": {
+    "tests": 2506,
+    "skipped": 3,
+    "seconds": "413.442",
+    "result": "OK",
+    "log_sha256": "118742c28d29eb280f81ffc36913841c92e708cd754b389d7184490ab301acac",
+    "handover_tests": 12,
+    "integrity_errors": 0,
+    "legacy_warnings": 14,
+    "catalog": "matches staged index",
+    "frozen_code_changed": false,
+    "native_R419_PnL_measured": false
+  }
 }

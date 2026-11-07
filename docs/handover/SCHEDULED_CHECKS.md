@@ -1,5 +1,12 @@
 # Operational checks and preserved session reminders
 
+**Operator update, 2026-11-07:** follow [current operations](../OPERATIONS.md)
+and [R420's actual deployment evidence](../../experiments/ops_takeover_v1/FINDINGS.md).
+Claude's operational assignment has ended. The single GitHub writer and its
+canonical state branch replace the old hourly-host assignment for admitted
+tasks. Continuous tapes, missing warm data and dated native reads remain
+separate dependencies. Do not execute the old local loop as a second writer.
+
 Current procedure reviewed **2026-11-04**, against repository commit `99e9ba1`.
 This review inspected code and published metadata; it did not check the capture host,
 restart a daemon, restore an archive or score a market event. Fresh ownership comes
