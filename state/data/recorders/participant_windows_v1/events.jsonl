@@ -1,0 +1,6 @@
+{"actual_started_utc": "2026-11-07T20:28:00.291747+00:00", "cumulative_reserved_bytes": 2097152, "cumulative_reserved_calls": 8, "event": "SLOT_STARTED", "no_refund": true, "planned": {"duration_seconds": 65, "end": "2026-11-08T00:00:00+00:00", "id": "20261107_qualification", "start": "2026-11-07T20:00:00+00:00"}, "reserved_bytes": 2097152, "reserved_calls": 8, "slot": "20261107_qualification", "source_calls_before_reservation": 0}
+{"event": "HTTP_STARTED", "slot": "20261107_qualification", "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=145", "utc_ns": 1794083280292206930}
+{"event": "HTTP_STARTED", "slot": "20261107_qualification", "url": "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=159", "utc_ns": 1794083280489560737}
+{"event": "WS_STARTED", "slot": "20261107_qualification", "url": "wss://mainnet.zklighter.elliot.ai/stream", "utc_ns": 1794083280759936290}
+{"event": "SOURCE_BLOCK", "reason": "InvalidStatus: server rejected WebSocket connection: HTTP 400", "slot": "20261107_qualification", "utc_ns": 1794083280880678664}
+{"decoded_application_bytes": 3635, "event": "SLOT_FINISHED", "reservation_refunded": false, "slot": "20261107_qualification", "source_calls": 3, "state": "SOURCE_STOP", "utc_ns": 1794083280880908471}
