@@ -105,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (149)
+## Run: one lane's frozen measurement (150)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -126,6 +126,7 @@ line is the first line of the script's own docstring.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.
 - [`run_cbprem.py`](run_cbprem.py): cbprem_v1 (R210): the Coinbase premium as a BTC/ETH signal, as set out in experiments/cbprem_v1/PREREG.md.
+- [`run_cde_rate_contract.py`](run_cde_rate_contract.py): R423 one-run exact Advanced/MDA field qualification; no return or rate summary.
 - [`run_charmexpiry.py`](run_charmexpiry.py): charm_expiry_v1 (R296): does Deribit's Friday 08:00 UTC expiry move the BTC and ETH perps? As set out in experiments/charm_expiry_v1/PREREG.md.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
 - [`run_chartxm.py`](run_chartxm.py): chartxm_v1 (R247): R243's seven chart rules (run_chartist.states, unchanged) on daily bars of 11 forex pairs and 10 world equity indices, equal-weight books per group, as set out in ...
@@ -310,8 +311,9 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (83)
+## Tools and everything else (84)
 
+- [`acquire_cde_contract_tail.py`](acquire_cde_contract_tail.py): One tiny historical-source qualification, not a forward loop or native journal writer.
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.

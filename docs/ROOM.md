@@ -8,7 +8,8 @@ assignment below; it does not change any frozen scientific rule or authorize
 real stakes. See [operations](OPERATIONS.md) for the canonical writer/state.
 Only the serialized GitHub Actions workflow selected by the canonical
 `active_contract` may write the admitted live journals: initially R420, with
-R422's priority successor activated by an explicit recorded migration. The
+R422's priority successor activated on2026-11-07 at14UTC by an explicit
+recorded migration (workflow42380207329, state b9538b95). The
 immutable workflows share one concurrency group; the unselected contract skips.
 The recurring Codex research task reads that state and
 advances registered work; it must not start another local forward loop.

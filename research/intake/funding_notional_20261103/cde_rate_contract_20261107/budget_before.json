@@ -1,0 +1,16 @@
+{
+  "older_reported_requests": 7757,
+  "older_reported_mib": 229.85,
+  "old_exact_bytes_known": false,
+  "conservative_older_mib": 230,
+  "all_existing_bundle_bodies_charged_again_bytes": 5915601,
+  "all_existing_bundle_receipts_charged_again_requests": 37,
+  "worst_new_requests": 2,
+  "worst_new_bytes": 65538,
+  "original_request_ceiling": 8000,
+  "original_byte_ceiling": 262144000,
+  "conservative_total_requests": 7796,
+  "conservative_total_bytes": 247153619,
+  "allowance_reset": false,
+  "note": "Double-charge the whole existing market-body/receipt bundle beyond rounded-up prior reported usage. Source documents/browser resources are not historical market panels; no new grant."
+}
