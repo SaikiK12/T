@@ -105,7 +105,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (150)
+## Run: one lane's frozen measurement (151)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -126,6 +126,7 @@ line is the first line of the script's own docstring.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.
 - [`run_cbprem.py`](run_cbprem.py): cbprem_v1 (R210): the Coinbase premium as a BTC/ETH signal, as set out in experiments/cbprem_v1/PREREG.md.
+- [`run_cde_carry_screen.py`](run_cde_carry_screen.py): R424 sole offline fixed CDE/Kraken net proxy screen; no native journal or HTTP.
 - [`run_cde_rate_contract.py`](run_cde_rate_contract.py): R423 one-run exact Advanced/MDA field qualification; no return or rate summary.
 - [`run_charmexpiry.py`](run_charmexpiry.py): charm_expiry_v1 (R296): does Deribit's Friday 08:00 UTC expiry move the BTC and ETH perps? As set out in experiments/charm_expiry_v1/PREREG.md.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
@@ -258,7 +259,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (30)
+## Check: parity, audits and integrity (31)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -269,6 +270,7 @@ line is the first line of the script's own docstring.
 - [`audit_xfund_lt.py`](audit_xfund_lt.py): R288 xfund_lt_v1 audit, as committed in its PREREG before the result: Lighter's funding sign and units against Binance's, funding recomputed from the raw files for 2 random trades per set, ...
 - [`check_carry_execution.py`](check_carry_execution.py): Frozen R417 independent Fraction cash/depth checker; no kernel import.
 - [`check_carry_venues.py`](check_carry_venues.py): Diagnostic for carry_fwd (R220): do Binance and MEXC settle the same funding on the same coins? Compares trailing 72 h funding APR per hour over the forward grid for symbols mapped to a MEXC ...
+- [`check_cde_carry_screen.py`](check_cde_carry_screen.py): Independent Decimal identities on R424 serialized accounts, not a second strategy run.
 - [`check_confidence.py`](check_confidence.py): Independent R331 OHLC-feature/logit/calibration/selection/Fraction cash audit.
 - [`check_continuation_control.py`](check_continuation_control.py): Independent rational policy enumeration and saved-account audit for R323.
 - [`check_dated_carry.py`](check_dated_carry.py): Independent stdlib/Fraction audit of every R327 value and packed cash row.
@@ -311,8 +313,11 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (84)
+## Tools and everything else (87)
 
+- [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
+- [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
+- [`acquire_cde_carry_bars.py`](acquire_cde_carry_bars.py): Four fixed public CDE candle pages for a registered economic successor; counts only.
 - [`acquire_cde_contract_tail.py`](acquire_cde_contract_tail.py): One tiny historical-source qualification, not a forward loop or native journal writer.
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.

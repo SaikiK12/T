@@ -1,0 +1,151 @@
+{
+  "requests": [
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BIP-20DEC30-CDE/candles?start=1786316400&end=1786485600&granularity=ONE_HOUR&limit=350",
+      "started_utc": "2026-11-07T14:59:08.661046+00:00",
+      "requested_start": 1786316400,
+      "requested_end": 1786485600,
+      "cap": 16384,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 48,
+        "unique_times": 48,
+        "oldest": 1786316400,
+        "newest": 1786485600,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:59:08.993832+00:00",
+      "bytes_read": 5081,
+      "response_complete": true,
+      "charged_bytes": 5081,
+      "sha256": "c440d67d2bf285dc28913eea9d0ce87309e35cd8274a6ae0a5a30f6afbd9ff8a",
+      "body": "btc0.body.gz",
+      "error": null
+    },
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BIP-20DEC30-CDE/candles?start=1787576400&end=1787652000&granularity=ONE_HOUR&limit=350",
+      "started_utc": "2026-11-07T14:59:08.994614+00:00",
+      "requested_start": 1787576400,
+      "requested_end": 1787652000,
+      "cap": 16384,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 22,
+        "unique_times": 22,
+        "oldest": 1787576400,
+        "newest": 1787652000,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:59:09.369079+00:00",
+      "bytes_read": 2345,
+      "response_complete": true,
+      "charged_bytes": 2345,
+      "sha256": "17bbb808ca45011ed4cc87dd6ec9ee2444b8b84919f9dd68ac2bb52a41c194bc",
+      "body": "btc1.body.gz",
+      "error": null
+    },
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/ETP-20DEC30-CDE/candles?start=1786316400&end=1786485600&granularity=ONE_HOUR&limit=350",
+      "started_utc": "2026-11-07T14:59:09.370247+00:00",
+      "requested_start": 1786316400,
+      "requested_end": 1786485600,
+      "cap": 16384,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 48,
+        "unique_times": 48,
+        "oldest": 1786316400,
+        "newest": 1786485600,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:59:09.607394+00:00",
+      "bytes_read": 5092,
+      "response_complete": true,
+      "charged_bytes": 5092,
+      "sha256": "1af58f9dcce47548db59e46ca316cbcd8cab365765df52f20b0b89d52328423c",
+      "body": "eth0.body.gz",
+      "error": null
+    },
+    {
+      "organization": "Coinbase",
+      "publication_date": "undated API",
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/ETP-20DEC30-CDE/candles?start=1787576400&end=1787652000&granularity=ONE_HOUR&limit=350",
+      "started_utc": "2026-11-07T14:59:09.622481+00:00",
+      "requested_start": 1787576400,
+      "requested_end": 1787652000,
+      "cap": 16384,
+      "scope": "counts/schema/time bounds only; no OHLC values summarized",
+      "auth": false,
+      "user_agent": "Python urllib default",
+      "redirects": false,
+      "content_type": "application/json; charset=utf-8",
+      "counts_only": {
+        "rows": 22,
+        "unique_times": 22,
+        "oldest": 1787576400,
+        "newest": 1787652000,
+        "fields": [
+          "close",
+          "high",
+          "low",
+          "open",
+          "start",
+          "volume"
+        ]
+      },
+      "status": 200,
+      "received_utc": "2026-11-07T14:59:09.931268+00:00",
+      "bytes_read": 2343,
+      "response_complete": true,
+      "charged_bytes": 2343,
+      "sha256": "dcb1c3ee11e5862565ac40ea20af4c7cdf15c5ec7c97f24b17e6d775989cbed8",
+      "body": "eth1.body.gz",
+      "error": null
+    }
+  ],
+  "total_calls": 4,
+  "total_charged_bytes": 14861,
+  "financial_values_inspected": false
+}
