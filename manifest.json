@@ -4,8 +4,8 @@
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
     "data/operations/quant_priority_v1/dispatch.jsonl": {
-      "mtime_ns": 1794073837997573843,
-      "sha256": "bf5049d5a9416c24960aa10c9c6d10e256d042d2a06f00263f2414ce42088c14"
+      "mtime_ns": 1794076801352532218,
+      "sha256": "89c1f5eb7492b34dfe4e2f98eebfa13e1ceffbf1b5150f9eec910851ee550284"
     },
     "data/operations/quant_priority_v1/latest.json": {
       "mtime_ns": 1794073837997573843,
@@ -770,6 +770,10 @@
     "data/operations/quant_priority_v1/runs/20261107T17/reservation.json": {
       "mtime_ns": 1794073810731377299,
       "sha256": "3b3134888cd82eb6dd809a1306e99655182100b9d4ddc1bca635971e789bc431"
+    },
+    "data/operations/quant_priority_v1/runs/20261107T18/reservation.json": {
+      "mtime_ns": 1794076801352532218,
+      "sha256": "82872235ae9282175824303676401cd580f82bee8b9b1d631ebc1fce29fe5cff"
     },
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
       "mtime_ns": 1794059802320170768,
@@ -1852,7 +1856,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_priority_v1/latest.json",
+  "last_report": "data/operations/quant_priority_v1/runs/20261107T18/reservation.json",
   "meaning": "R422 selected; native task receipts, source stops and inherited budget determine health",
   "owner": "github-actions",
   "previous_contract": "R420",
@@ -1861,5 +1865,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T17:50:38.712293+00:00"
+  "updated_utc": "2026-11-07T18:40:01.708299+00:00"
 }
