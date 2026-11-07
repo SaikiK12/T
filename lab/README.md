@@ -93,6 +93,8 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`registry`](registry.py): Append-only register of research rounds (the machine-readable ROADMAP).
 - [`research`](research.py): Glue between data and search: the point-in-time research universe, costs, and guarded rule evaluation.
 - [`runtime`](runtime.py): Offline execution receipts and fail-closed checks around legacy paper writers.
+- [`runtime_takeover`](runtime_takeover.py): Durable operational state and honest task health for the Codex paper-lab takeover.
+- [`runtime_transport`](runtime_transport.py): Fail-closed public HTTP limits for the owner's operational takeover, without changing source bodies.
 - [`screen`](screen.py): The standard screen for a cross-sectional feature, so a queued method needs a frozen PREREG and a feature, not a new runner.
 - [`search`](search.py): Staged beam search over conditions on feature bins, with a placebo to calibrate what counts as a find.
 - [`sessions`](sessions.py): Market clocks: where each decision time sits against the hours of other markets and scheduled events.

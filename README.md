@@ -20,6 +20,10 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
 ## Current status
 
+The [current paper runtime](docs/OPERATIONS.md) records the 2026-11-07 transfer
+to Codex, the single scheduled writer, canonical saved state and unresolved
+operational dependencies. The operator guide above covers local setup.
+
 The [panel](docs/PANEL.md) is a generated snapshot: check its build timestamp.
 [Issue #7](https://github.com/SaikiK12/T/issues/7) holds fresh writer claims and
 operational handoffs; [room #71](https://github.com/SaikiK12/T/issues/71) holds
