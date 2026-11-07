@@ -4,16 +4,16 @@
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
   "files": {
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
-      "mtime_ns": 1794038907724381970,
-      "sha256": "62314a3f34dcd7640548ad94d19fdffbdbacfcb5306d319baa34d7fe2b7d4e24"
+      "mtime_ns": 1794038934284175132,
+      "sha256": "a30e068efd8bd846ec281a6e487add1dd3ec5d5c005dc47d28d8b54e0b990961"
     },
     "data/operations/quant_takeover_v1/latest.json": {
-      "mtime_ns": 1794035223094878594,
-      "sha256": "462b054e3986713469949283db90871ef392f3c2fb2048299fc066a2f56cc919"
+      "mtime_ns": 1794038934284175132,
+      "sha256": "b271bf138ec81670773684423075f2852634b2f8251cae7e4e821e7ae22b61df"
     },
     "data/operations/quant_takeover_v1/network/aux/requests.jsonl": {
-      "mtime_ns": 1794035222268287294,
-      "sha256": "51b68e52512f03f3b3d8359894ae67f555010dcee4bc4cfd7f661c8f544d2616"
+      "mtime_ns": 1794038933270297775,
+      "sha256": "85e4008ee7315c13b432023b49fb56e6b71e684c1b53fe62f785a50c2ccb3c19"
     },
     "data/operations/quant_takeover_v1/runs/20261107T04/R406.log": {
       "mtime_ns": 1794024507631004722,
@@ -122,6 +122,38 @@
     "data/operations/quant_takeover_v1/runs/20261107T07/reservation.json": {
       "mtime_ns": 1794035199757413975,
       "sha256": "e9a25bd44e4127e8c3898fdcd59950bac95d35327c9106c2e93231926292e9fe"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/R406.log": {
+      "mtime_ns": 1794038929798851127,
+      "sha256": "ac0797522d8be30494cd133c2da167a68a7d9dc56790ec0a05ef24e07a40362b"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/R413.log": {
+      "mtime_ns": 1794038922630597558,
+      "sha256": "db75b2b72ec5a49fb41833bc333576d35535623590a0296720df80d4fc2a8adf"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/R419.log": {
+      "mtime_ns": 1794038916662466027,
+      "sha256": "31dd7c4f5ba183be11821a2488a898ba158a42e13e55edeee0878fbf0492770d"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/REC_CBOE.log": {
+      "mtime_ns": 1794038933712293240,
+      "sha256": "1468c15f510b1a482c6e05f1dba9bfc9d9019d86d8b62dd3c80616044d89bfd9"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/REC_DERIBIT.log": {
+      "mtime_ns": 1794038933277297703,
+      "sha256": "d3f99a51b9eeda0af36ecd3cc041bb5de1d79e6a55965cd6188809a70200824c"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/REC_TICKER.log": {
+      "mtime_ns": 1794038932314307583,
+      "sha256": "051684bcc0e0b1a6e82f3ee093a0748798c36f7d663e06a0847450c28010e659"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/REC_UNLOCKS.log": {
+      "mtime_ns": 1794038934167288572,
+      "sha256": "6d08056f7b270f36234bd7773b71544f98f08ea11e3719d0e0078762970dbdbc"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T08/report.json": {
+      "mtime_ns": 1794038934283736307,
+      "sha256": "b271bf138ec81670773684423075f2852634b2f8251cae7e4e821e7ae22b61df"
     },
     "data/operations/quant_takeover_v1/runs/20261107T08/reservation.json": {
       "mtime_ns": 1794038907724381970,
@@ -299,9 +331,61 @@
       "mtime_ns": 1794035207663365321,
       "sha256": "8a9e38ec24783f72e4a292ec285046f5e6629ac5037196b1ec2ae5d3f22ac7a9"
     },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_cde_book.body.gz": {
+      "mtime_ns": 1794038911241884501,
+      "sha256": "8719b0216026c26344403f6dbc4099f25f0ede794369e6a12f7e2ce85d3d6732"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794038915692475577,
+      "sha256": "fe82ee2ae26c269f24c4fc9995d6c228f60f08e0c5403baf0a47aa11be1fc252"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_cde_product.body.gz": {
+      "mtime_ns": 1794038910975077681,
+      "sha256": "550f2404367beeeacddb00572566dc241d36fc8580f74f373c7ed9ac61a0b22c"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_kraken_book.body.gz": {
+      "mtime_ns": 1794038911781514895,
+      "sha256": "9cc75d35a841dbc1da053e1038ebc6b49c359a0a75bc5059001dbf46a4950553"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794038916103471532,
+      "sha256": "7ef60f3834d07f5556d701e001c34acac5d4fe142f23191cd87568d9cb0eeb87"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/btc_kraken_ticker.body.gz": {
+      "mtime_ns": 1794038911526246724,
+      "sha256": "0eb91630fe794af21d047be749b3b92fc70c10dfe3a917a84fab370b795a1b21"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_cde_book.body.gz": {
+      "mtime_ns": 1794038912086260834,
+      "sha256": "f2734803233a6706876700dbafe4f5f9209057df7ff8fac37a8224e28b83a949"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794038916266451695,
+      "sha256": "fda17ae17077981938641820e1ed49dcf16ed32d6a76f1509bfd3631f53e7431"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_cde_product.body.gz": {
+      "mtime_ns": 1794038911960977202,
+      "sha256": "0c5e679b7f5088be1ea321c2e8f4abf393be6ee193097d27b88b77a9b1c29fe1"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_kraken_book.body.gz": {
+      "mtime_ns": 1794038912526507527,
+      "sha256": "950aed9bfd5ae8b1cb7dfc8cc6dd52b68e24facf677ac48e365ae40ce1a3672d"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794038916574466894,
+      "sha256": "1b5f32f1dcb2b73d7ac9e894b607a0c4c5a9dc57d834206eceb0ac59c0674549"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/eth_kraken_ticker.body.gz": {
+      "mtime_ns": 1794038912320103903,
+      "sha256": "dd10cce203846574ddd9d11e3c45f1f0b8234546287398819f7277f998c223e9"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261107T08/packet.json": {
+      "mtime_ns": 1794038916598007537,
+      "sha256": "45d7b1bc9fc751176b5330270b266a8f925139aeb4eb9fc3cbf028ea9599f80e"
+    },
     "data/recorders/eea_pair_capture_v1/requests.jsonl": {
-      "mtime_ns": 1794035207646985008,
-      "sha256": "9c3ab8c1e7dc3e5efa01e0763eeee1d959353b2f4e944ee2cc471828feb3f1f6"
+      "mtime_ns": 1794038916574466894,
+      "sha256": "332308eda39343f98a720fe41849925d88b2c78d3b53afb41d4f1e04cb968746"
     },
     "data/recorders/mexc_ticker/2026-11-07/04.parquet": {
       "mtime_ns": 1794024509760962314,
@@ -315,17 +399,21 @@
       "mtime_ns": 1794035221175189861,
       "sha256": "df9b6543beca953c34ac060f350db6a6eb6a94cd308c99b5e9e7e40ce0f30392"
     },
+    "data/recorders/mexc_ticker/2026-11-07/08.parquet": {
+      "mtime_ns": 1794038932314307583,
+      "sha256": "8727f538e963a845781a79e3a43515d6469f13c8a76b67a13f2d02936002cc6c"
+    },
     "experiments/boroslock_fwd/journal/locks.csv": {
       "mtime_ns": 1794024475349295765,
       "sha256": "0d1cce2355a30a25bac46d48a312c2eb0439f09841f15253a585142b0ce0b7d0"
     },
     "experiments/boroslock_fwd/journal/offers.csv": {
-      "mtime_ns": 1794035213546041157,
-      "sha256": "0537462f5d0c4b9424df1dde8ab566c5675c47946497501003e5b481c79ccb52"
+      "mtime_ns": 1794038922629406813,
+      "sha256": "f6f70f0b98986a223658dce623a3347b2b2913ef73753a47fd6c51afbef5fa97"
     },
     "experiments/boroslock_fwd/journal/status.json": {
-      "mtime_ns": 1794035213548093475,
-      "sha256": "c9091e70e616b30bc477477a5bc1820442dd4e5d77570946398ed45215c51a1f"
+      "mtime_ns": 1794038922630597558,
+      "sha256": "f4eb35d04a00b89afb5e937c66e5f20df48646be2097aece28188b7c576923e3"
     },
     "experiments/boroslock_fwd/journal/tbill.csv": {
       "mtime_ns": 1794024496757001474,
@@ -336,24 +424,24 @@
       "sha256": "279902a7ccf19cf25152dbb7de37bcc52d4396679ff8d7ba242837d2a0a6ba4e"
     },
     "experiments/lockcarry_fwd2/journal/offers.csv": {
-      "mtime_ns": 1794035219485177216,
-      "sha256": "1fa815f2503d6365bf712b94cf10768465ac4dee8ddbed6e44e9f76a4058b1e7"
+      "mtime_ns": 1794038929796333391,
+      "sha256": "19e7212c6f60254c5abd22977bdd1d3cbe41ab75e74c58e2c7f9745a85526e09"
     },
     "experiments/lockcarry_fwd2/journal/status.json": {
-      "mtime_ns": 1794035219486575306,
-      "sha256": "dbec222c9125420e9b54eb3b6fdc8d015edd8dc43e0353780aff2f6cff50ebfd"
+      "mtime_ns": 1794038929798851127,
+      "sha256": "99700d188fbfcccf8d62b61d637a13ed49ac1a03853fb87a814fe2d11ec8ace2"
     },
     "experiments/lockcarry_fwd2/journal/tbill.csv": {
       "mtime_ns": 1794024501988037115,
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_takeover_v1/runs/20261107T08/reservation.json",
+  "last_report": "data/operations/quant_takeover_v1/latest.json",
   "meaning": "Bootstrap only. No live source invocation or journal continuity is certified.",
   "owner": "github-actions",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T08:08:29.026282+00:00"
+  "updated_utc": "2026-11-07T08:08:54.495110+00:00"
 }
