@@ -1,0 +1,45 @@
+{
+  "start": "2026-10-29T01:31:45Z",
+  "end": "2026-10-29T01:35:30Z",
+  "capital": "10000",
+  "quote_usd": [
+    "100",
+    "1000"
+  ],
+  "markets": {
+    "WTI": {
+      "market_id": 145,
+      "quote_file": "quote/WTI/2026-10-29/013600-293.parquet",
+      "trade_file": "trade/WTI/2026-10-29/013600-293.parquet"
+    },
+    "NATGAS": {
+      "market_id": 158,
+      "quote_file": "quote/NATGAS/2026-10-29/013600-293.parquet",
+      "trade_file": null
+    },
+    "BRENTOIL": {
+      "market_id": 159,
+      "quote_file": "quote/BRENTOIL/2026-10-29/013600-293.parquet",
+      "trade_file": "trade/BRENTOIL/2026-10-29/013600-293.parquet"
+    }
+  },
+  "fee_profiles": {
+    "standard_hypothesis": {
+      "maker": "0",
+      "taker": "0"
+    },
+    "premium_hypothesis": {
+      "maker": "0.00004",
+      "taker": "0.00028"
+    }
+  },
+  "timing": {
+    "refresh_us": 15000000,
+    "arrival_us": 1000000,
+    "cancel_us": 1000000,
+    "max_quote_age_us": 1000000,
+    "max_report_delay_us": 5000000
+  },
+  "funding": "UNMEASURED; all PnL is before funding and cannot certify complete net",
+  "clock": "Hypothetical matching/receive alignment, not private ack calibration"
+}

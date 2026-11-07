@@ -1,0 +1,32 @@
+{
+  "name": "BRENTOIL_kraken",
+  "url": "https://futures.kraken.com/derivatives/api/v3/historical-funding-rates?symbol=PF_BRENTOILUSD",
+  "organization": "Kraken",
+  "symbol": "BRENTOIL",
+  "publication_date": "undated public historical API",
+  "started_utc": "2026-11-07T18:23:53.248594+00:00",
+  "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "auth": false,
+  "cap": 524288,
+  "counts_only": {
+    "rows": 1902,
+    "unique_timestamps": 1902,
+    "oldest": "2026-08-20T12:00:00Z",
+    "newest": "2026-11-07T18:00:00Z",
+    "row_fields": [
+      "fundingRate",
+      "relativeFundingRate",
+      "timestamp"
+    ]
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T18:23:53.707268+00:00",
+  "bytes_read": 221488,
+  "charged_bytes": 221488,
+  "response_complete": true,
+  "sha256": "00647b27ab77456987f280aaee781e5dbb4439eef0332a07813de612757e74e2",
+  "body": "BRENTOIL_kraken.body.gz",
+  "error": null
+}

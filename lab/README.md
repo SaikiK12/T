@@ -65,6 +65,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`locked_carry`](locked_carry.py): Fee-aware fixed-quantity inverse carry, with conditional terminal bounds.
 - [`m090_capture`](m090_capture.py): Bounded, durable M090 content capture; never qualifies a forecast clock.
 - [`maker`](maker.py): Maker entries: trade a signal with a resting limit order instead of a market order, so the entry pays the maker fee and earns the distance to the reference price instead of paying spread and ...
+- [`maker_pilot`](maker_pilot.py): Conditional two-sided quoting on recorded BBO/trades; never actual fill/queue proof.
 - [`markbars`](markbars.py): Offline mark-price contracts for a future registered M265 follow-up.
 - [`market_readiness`](market_readiness.py): Pure source/session readiness for a simulated account, never a trading gate.
 - [`markets`](markets.py): Daily bars for markets beyond crypto perps (indices, index futures, forex, commodities, rates, volatility), from Yahoo Finance's public chart endpoint, cached under data/markets/yahoo/. Small: one ...

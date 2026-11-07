@@ -5,6 +5,23 @@ Codex to take over the whole project. Issue [#7](https://github.com/SaikiK12/T/i
 records the transfer. Frozen strategy definitions, source rules, unread samples,
 existing journal history, acquisition limits and **no real stakes** remain.
 
+## Research objective clarified by the owner, 2026-11-07
+
+The owner wants substantial net gains and recurring opportunities, with strong
+evidence of reliability. A low single-digit annual yield is a benchmark, not
+the intended discovery. The owner has not specified a precise monthly target
+or loss budget; do not invent either or turn leverage into a claimed edge.
+No strategy currently has prospective evidence certifying reliable high gains.
+
+Research prioritizes mechanisms with an economic payer and realistic repeated
+execution, including liquidity provision and mechanically constrained cash
+flows. Keep full fees, inventory/tail losses, total cash and missing data in
+the result. Distinguish a token-balance/revert condition, an observed fill,
+positive expected net, opportunity frequency and confidence of profit. None
+proves the others. Do not annualize a short pilot or equate a high win rate
+with a safe account. Existing frozen papers remain intact as measurements;
+new ideas require fresh registered tests and new prospective evidence.
+
 ## One selected writer, independent of the chat container
 
 The canonical `manifest.json` on `codex/quant-runtime-state` selects the
@@ -35,6 +52,14 @@ at14:09UTC. Its42new requests used35,139wire bytes, retaining old spend for a
 total15,011,954of16,777,216charged auxiliary bytes. The [deployment receipt](../experiments/paper_priority_v1/deployment.json)
 binds282file hashes and42wire/content pairs. This is observed source health,
 not proof of paper profit, future uptime or all-project recovery.
+
+A later [read-only observation](../experiments/paper_priority_v1/observations/20261107T17.json)
+verifies state89cc3a8f after workflow42398223226: all462manifested file hashes
+and168wire/content pairs match. Native papers updated at17:50UTC, with
+zero settlements; R419 has its17UTC source packet. Cumulative auxiliary
+spend is358calls/15117067bytes, leaving1660149bytes of the same original
+ceiling. Five legacy lanes remain stale. These are observed source receipts,
+not proof that every lane runs or that the account earns money.
 
 The paragraphs below retain R420's original scope/evidence and ceilings.
 

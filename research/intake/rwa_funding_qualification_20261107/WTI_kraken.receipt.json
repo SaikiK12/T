@@ -1,0 +1,32 @@
+{
+  "name": "WTI_kraken",
+  "url": "https://futures.kraken.com/derivatives/api/v3/historical-funding-rates?symbol=PF_WTIOILUSD",
+  "organization": "Kraken",
+  "symbol": "WTI",
+  "publication_date": "undated public historical API",
+  "started_utc": "2026-11-07T18:23:52.758151+00:00",
+  "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "auth": false,
+  "cap": 524288,
+  "counts_only": {
+    "rows": 3918,
+    "unique_timestamps": 3918,
+    "oldest": "2026-05-28T12:00:00Z",
+    "newest": "2026-11-07T18:00:00Z",
+    "row_fields": [
+      "fundingRate",
+      "relativeFundingRate",
+      "timestamp"
+    ]
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T18:23:53.219976+00:00",
+  "bytes_read": 454711,
+  "charged_bytes": 454711,
+  "response_complete": true,
+  "sha256": "599d5ee71b6a75dda7ec729dae22280d9900b38486235ae788c8c81cb42aff15",
+  "body": "WTI_kraken.body.gz",
+  "error": null
+}

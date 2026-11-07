@@ -1,0 +1,26 @@
+{
+  "scope": "source identity/schema validation counts only, no returns/markouts/fills",
+  "markets": {
+    "WTI": {
+      "quote_rows": 2803,
+      "invalid_bbo_rows": 0,
+      "off_current_price_grid_values": 0,
+      "duplicate_local_timestamps": 0,
+      "trade_file_present": true
+    },
+    "NATGAS": {
+      "quote_rows": 120,
+      "invalid_bbo_rows": 0,
+      "off_current_price_grid_values": 0,
+      "duplicate_local_timestamps": 0,
+      "trade_file_present": false
+    },
+    "BRENTOIL": {
+      "quote_rows": 2806,
+      "invalid_bbo_rows": 0,
+      "off_current_price_grid_values": 0,
+      "duplicate_local_timestamps": 0,
+      "trade_file_present": true
+    }
+  }
+}
