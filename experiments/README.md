@@ -43,7 +43,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 
 ## Other registered rounds (done, registered or planned) (176)
 
-- **[eea_execution_v1](eea_execution_v1/)** R421, REGISTERED PENDING, 0 trials. M488 fixed CDE/Kraken first-packet displayed-depth execution costs; two explicit raw-unit hypotheses, no funding or return ([PREREG](eea_execution_v1/PREREG.md))
+- **[eea_execution_v1](eea_execution_v1/)** R421, REGISTERED PENDING, 0 trials. M488 fixed CDE/Kraken first-packet displayed-depth execution costs; two explicit raw-unit hypotheses, no funding or return ([PREREG](eea_execution_v1/PREREG.md), [FINDINGS](eea_execution_v1/FINDINGS.md))
 - **[ops_takeover_v1](ops_takeover_v1/)** R420, REGISTERED PENDING, 0 trials. Owner-transferred durable paper operations: one serialized writer, canonical state and committed pre-HTTP reservation ([PREREG](ops_takeover_v1/PREREG.md), [FINDINGS](ops_takeover_v1/FINDINGS.md))
 - **[eea_pair_capture_v1](eea_pair_capture_v1/)** R419, REGISTERED PENDING, 0 trials. M488 bounded inactive Coinbase CDE/Kraken raw capture with delayed book reobservations; zero predictive trials ([PREREG](eea_pair_capture_v1/PREREG.md), [FINDINGS](eea_pair_capture_v1/FINDINGS.md))
 - **[kraken_carry_v1](kraken_carry_v1/)** R418, REGISTERED PENDING, 2 trials. Kraken EEA fixed-quantity carry: funding gaps, funded capital and current costs ([PREREG](kraken_carry_v1/PREREG.md), [FINDINGS](kraken_carry_v1/FINDINGS.md))
