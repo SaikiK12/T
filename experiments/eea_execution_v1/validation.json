@@ -1,0 +1,23 @@
+{
+  "round": "R421",
+  "tests": 2518,
+  "skipped": 3,
+  "seconds": "465.437",
+  "result": "OK",
+  "targeted_synthetic_tests": 12,
+  "full_log_sha256": "09ececab92bcc5d8c540f92e7cb22a2133cdefe72b97cde3348517957822fff2",
+  "integrity_errors": 0,
+  "legacy_warnings": 14,
+  "catalog_matches_staged_index": true,
+  "pre_measurement_run_count": 0,
+  "frozen_inputs": 76,
+  "prereg_sha256": "9ea855773e6d937cea58d09e9a6e475320becde813e8b0893543d6149f4452dc",
+  "tests_read_ignored_data": false,
+  "raw_book_costs_read_before_commit": false,
+  "tested_code_sha256": {
+    "lab/eea_execution.py": "0473b0c7ca5312e7afdac8c93460eb53ecfe1d77d9856b19950358f7e797a778",
+    "scripts/run_eea_execution.py": "fece69b9e9196b6a962502edfefe9eba15c6a6e28104e099b416081ae7e25b0d",
+    "scripts/check_eea_execution.py": "8af2a199b71c36a510d9772b23c1108ce8cc1c31ddcfa41359d97742e78f7b46",
+    "tests/test_eea_execution.py": "402c50a8780a742d7ccd2c67b25807fe92ef62cb7c169da23c38d3d75b5c8b78"
+  }
+}

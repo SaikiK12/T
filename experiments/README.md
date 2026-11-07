@@ -41,8 +41,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (175)
+## Other registered rounds (done, registered or planned) (176)
 
+- **[eea_execution_v1](eea_execution_v1/)** R421, REGISTERED PENDING, 0 trials. M488 fixed CDE/Kraken first-packet displayed-depth execution costs; two explicit raw-unit hypotheses, no funding or return ([PREREG](eea_execution_v1/PREREG.md))
 - **[ops_takeover_v1](ops_takeover_v1/)** R420, REGISTERED PENDING, 0 trials. Owner-transferred durable paper operations: one serialized writer, canonical state and committed pre-HTTP reservation ([PREREG](ops_takeover_v1/PREREG.md), [FINDINGS](ops_takeover_v1/FINDINGS.md))
 - **[eea_pair_capture_v1](eea_pair_capture_v1/)** R419, REGISTERED PENDING, 0 trials. M488 bounded inactive Coinbase CDE/Kraken raw capture with delayed book reobservations; zero predictive trials ([PREREG](eea_pair_capture_v1/PREREG.md), [FINDINGS](eea_pair_capture_v1/FINDINGS.md))
 - **[kraken_carry_v1](kraken_carry_v1/)** R418, REGISTERED PENDING, 2 trials. Kraken EEA fixed-quantity carry: funding gaps, funded capital and current costs ([PREREG](kraken_carry_v1/PREREG.md), [FINDINGS](kraken_carry_v1/FINDINGS.md))
