@@ -1,10 +1,10 @@
 {
   "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
-  "run_id": "gha_42380207329_1",
-  "hour": "20261107T14",
-  "started_utc": "2026-11-07T14:09:12.068826+00:00",
+  "run_id": "gha_42386227926_1",
+  "hour": "20261107T15",
+  "started_utc": "2026-11-07T15:25:01.426413+00:00",
   "prereg_sha256": "37c7da06226a54b5f19c7a0fe282166b274dacffd87c06e4ed90dcb484e6e118",
-  "code_commit": "dc45ea73ef02493aa665a2bb853310c41453b2c1",
+  "code_commit": "e8fe346ce874351ece1bb24622a5b5d268d4e418",
   "inventory": [
     {
       "id": "R200",
@@ -255,19 +255,19 @@
   "tasks": [
     {
       "id": "R419",
-      "started_utc": "2026-11-07T14:09:12.072868+00:00",
+      "started_utc": "2026-11-07T15:25:01.431948+00:00",
       "state": "PROCESS_OK",
       "returncode": 0
     },
     {
       "id": "R413",
-      "started_utc": "2026-11-07T14:09:17.983302+00:00",
+      "started_utc": "2026-11-07T15:25:06.515320+00:00",
       "state": "PROCESS_OK",
       "returncode": 0
     },
     {
       "id": "R406",
-      "started_utc": "2026-11-07T14:09:28.237648+00:00",
+      "started_utc": "2026-11-07T15:25:12.602079+00:00",
       "state": "PROCESS_OK",
       "returncode": 0
     }
@@ -279,41 +279,41 @@
     "2x": "N/A",
     "3x": "N/A"
   },
-  "finished_utc": "2026-11-07T14:09:33.728015+00:00",
+  "finished_utc": "2026-11-07T15:25:16.688128+00:00",
   "health": [
     {
       "rid": "R415",
       "path": "experiments/paperacct_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 23.78,
+      "hours_old": 25.04,
       "source_updated": "2026-11-06T14:23Z"
     },
     {
       "rid": "R285",
       "path": "experiments/xbook_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 23.57,
+      "hours_old": 24.84,
       "source_updated": "2026-11-06T14:35:10Z"
     },
     {
       "rid": "R278",
       "path": "experiments/xfund_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 36.4,
+      "hours_old": 37.67,
       "source_updated": "2026-11-06T01:45:16.934297+00:00"
     },
     {
       "rid": "R279",
       "path": "experiments/xfund_kc_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 36.3,
+      "hours_old": 37.57,
       "source_updated": "2026-11-06T01:51:18.164460+00:00"
     },
     {
       "rid": "R390",
       "path": "experiments/xfund_bg_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 36.01,
+      "hours_old": 37.27,
       "source_updated": "2026-11-06T02:09:01.468084+00:00"
     },
     {
@@ -321,14 +321,14 @@
       "path": "experiments/boroslock_fwd/journal/status.json",
       "status": "FRESH",
       "hours_old": 0.0,
-      "source_updated": "2026-11-07T14:09:28Z"
+      "source_updated": "2026-11-07T15:25:12Z"
     },
     {
       "rid": "R406",
       "path": "experiments/lockcarry_fwd2/journal/status.json",
       "status": "FRESH",
       "hours_old": 0.0,
-      "source_updated": "2026-11-07T14:09:33Z"
+      "source_updated": "2026-11-07T15:25:16Z"
     }
   ],
   "all_project_lanes_running": false,
