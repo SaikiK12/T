@@ -8,8 +8,8 @@
       "sha256": "cbe00e6e3ffb1376cc5933cff99d87e917dd8aaf9f78c5de9f2a855bcffd711c"
     },
     "data/operations/quant_participant_v1/dispatch.jsonl": {
-      "mtime_ns": 1794086023563785997,
-      "sha256": "c576b53b6d021e3b15ee9f0989a9a05940e6e48c3b6591a5b9ccec0485da4209"
+      "mtime_ns": 1794089633015476873,
+      "sha256": "a4e037e654ebce6d935e5f8cd48eb188577bf0d4d2c228824667647cce25e2d7"
     },
     "data/operations/quant_participant_v1/latest.json": {
       "mtime_ns": 1794086023563785997,
@@ -406,6 +406,10 @@
     "data/operations/quant_participant_v1/runs/20261107T21/reservation.json": {
       "mtime_ns": 1794086000522078419,
       "sha256": "e606b06435c2abb0f28d17df29fb88f4e2eba07fb936227f72fb446e66e53957"
+    },
+    "data/operations/quant_participant_v1/runs/20261107T22/reservation.json": {
+      "mtime_ns": 1794089633015476873,
+      "sha256": "620ff50f492f98fb1d96210d037a357c46af48434b9eb5d6ef9f19bf2dd34c7a"
     },
     "data/operations/quant_priority_v1/dispatch.jsonl": {
       "mtime_ns": 1794078134355604393,
@@ -2872,7 +2876,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_participant_v1/latest.json",
+  "last_report": "data/operations/quant_participant_v1/runs/20261107T22/reservation.json",
   "meaning": "R428 selected; inherited paper spend plus a finite original-budget participant campaign",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -2882,5 +2886,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-07T21:13:44.720482+00:00"
+  "updated_utc": "2026-11-07T22:13:53.461048+00:00"
 }
