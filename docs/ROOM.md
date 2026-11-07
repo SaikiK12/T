@@ -10,7 +10,11 @@ Only the serialized GitHub Actions workflow selected by the canonical
 `active_contract` may write the admitted live journals: initially R420, with
 R422's priority successor activated on2026-11-07 at14UTC by an explicit
 recorded migration (workflow42380207329, state b9538b95). The
-immutable workflows share one concurrency group; the unselected contract skips.
+separately registered R428participant-window successor must be selected by
+its own reviewed migration before it can write. Its distinct command is
+`/quant-participant-tick` while selected; consult the canonical manifest
+rather than assuming a code PR activated it. The immutable workflows share
+one concurrency group; unselected contracts skip.
 The recurring Codex research task reads that state and
 advances registered work; it must not start another local forward loop.
 Unmigrated continuous recorders and missing historical inputs remain explicit

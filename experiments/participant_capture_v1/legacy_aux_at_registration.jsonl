@@ -1,0 +1,381 @@
+{"event": "START", "id": "0", "reserved_bytes": 2097153, "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3", "utc_ns": 1794024496491659058}
+{"body_sha256": "124e0cc2985c721af0c859e3c94e09f6a8003ff1e4fde8accfd8c4f109bc267f", "charged_bytes": 301601, "event": "END", "id": "0", "status": 200, "utc_ns": 1794024496599078905}
+{"event": "START", "id": "1", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/assets", "utc_ns": 1794024496758953513}
+{"body_sha256": "bd176cf3e5e0c8e0f4532d014857e8deeac7cadf7e84bebc339e15668f4efdbd", "charged_bytes": 3269, "event": "END", "id": "1", "status": 200, "utc_ns": 1794024497617554877}
+{"event": "START", "id": "2", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets?isMatured=false&limit=100", "utc_ns": 1794024497618479899}
+{"body_sha256": "7196bc21349b338ade3f7e736f92367b6771adc296cd82ae156426bd8e850e21", "charged_bytes": 62633, "event": "END", "id": "2", "status": 200, "utc_ns": 1794024497879382743}
+{"event": "START", "id": "3", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=128&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024497880912237}
+{"body_sha256": "fbcfc2d42841adeea2d90803c600180ea60298ea23921e6ba51d38e23377ea16", "charged_bytes": 2519, "event": "END", "id": "3", "status": 200, "utc_ns": 1794024498618817862}
+{"event": "START", "id": "4", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=129&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024498619982243}
+{"body_sha256": "ffc0418b7553d2528343d3e9e72157c361b54c8585e67a4e99d0b367d5b97d3a", "charged_bytes": 2535, "event": "END", "id": "4", "status": 200, "utc_ns": 1794024498895947446}
+{"event": "START", "id": "5", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=209&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024498897023400}
+{"body_sha256": "c60095c650418d8eab62982b8b56edb56d9b4c2a9b4fa1ba8f3fa275288c687c", "charged_bytes": 1931, "event": "END", "id": "5", "status": 200, "utc_ns": 1794024499163564213}
+{"event": "START", "id": "6", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=210&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024499164521957}
+{"body_sha256": "02719cc6959437cf8e1399785cb881a8a80bf96f53985a690e62413031850218", "charged_bytes": 1145, "event": "END", "id": "6", "status": 200, "utc_ns": 1794024499381560532}
+{"event": "START", "id": "7", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=219&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024499382507415}
+{"body_sha256": "3318d76b2645d21d396f46094b421f0382eecb80e8cdaf13995938ca7e6464fa", "charged_bytes": 1492, "event": "END", "id": "7", "status": 200, "utc_ns": 1794024499645627393}
+{"event": "START", "id": "8", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=220&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024499648096546}
+{"body_sha256": "4d9d0e3d405d888f5fc58edf1ec8fc6e280e5177b379a068c36fa2e56d51d9b7", "charged_bytes": 1430, "event": "END", "id": "8", "status": 200, "utc_ns": 1794024499900149214}
+{"event": "START", "id": "9", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=221&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024499901304768}
+{"body_sha256": "53db86270ff5e1aaac2bdc9f25e287de596a2dc787047be0e1470df8af2b274b", "charged_bytes": 1033, "event": "END", "id": "9", "status": 200, "utc_ns": 1794024500798619247}
+{"event": "START", "id": "10", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=229&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024500799593822}
+{"body_sha256": "e02bf199227ed55d2585f62cdac98d6a8ec126e31d1d3d05085ad8d8243fc70c", "charged_bytes": 1239, "event": "END", "id": "10", "status": 200, "utc_ns": 1794024501089891576}
+{"event": "START", "id": "11", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=237&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024501091040678}
+{"body_sha256": "f95dc1f8d0d9708ac875610d349e0c1e2d3ecb610fd039fe34428fdc78c304df", "charged_bytes": 773, "event": "END", "id": "11", "status": 200, "utc_ns": 1794024501358749509}
+{"event": "START", "id": "12", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=241&tickSize=0.0001&includeAmm=true", "utc_ns": 1794024501359891267}
+{"body_sha256": "605a383d91adb222d829a2d79ca072ae884fbc634c321ce2739142eba35364af", "charged_bytes": 1434, "event": "END", "id": "12", "status": 200, "utc_ns": 1794024501619019426}
+{"event": "START", "id": "13", "reserved_bytes": 2097153, "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3", "utc_ns": 1794024501774579465}
+{"body_sha256": "124e0cc2985c721af0c859e3c94e09f6a8003ff1e4fde8accfd8c4f109bc267f", "charged_bytes": 301601, "event": "END", "id": "13", "status": 200, "utc_ns": 1794024501831588606}
+{"event": "START", "id": "14", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=spot", "utc_ns": 1794024501989919044}
+{"body_sha256": "d15a645de4085cc5852c374b6e6be3a506153d6142522a1a7a14545a376fd16d", "charged_bytes": 2962, "event": "END", "id": "14", "status": 200, "utc_ns": 1794024502201409100}
+{"event": "START", "id": "15", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC_USDC&depth=50", "utc_ns": 1794024502202442948}
+{"body_sha256": "231b902189f9f6f12df3e07e9e462980d199037bc7437dc5b78328c67bd1a3ef", "charged_bytes": 2625, "event": "END", "id": "15", "status": 200, "utc_ns": 1794024502408347467}
+{"event": "START", "id": "16", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=future", "utc_ns": 1794024502409486438}
+{"body_sha256": "9c8a5465f8e154f2a174748587ca8a8a375193955394da1b366a9fe10d9a84f3", "charged_bytes": 11787, "event": "END", "id": "16", "status": 200, "utc_ns": 1794024502624747627}
+{"event": "START", "id": "17", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-7NOV26&depth=50", "utc_ns": 1794024502625942234}
+{"body_sha256": "32c22d038bdab6fc7e0ea4491c61f83338be2573975d8bfa729f980fff5ed0ae", "charged_bytes": 1016, "event": "END", "id": "17", "status": 200, "utc_ns": 1794024502835204330}
+{"event": "START", "id": "18", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-8NOV26&depth=50", "utc_ns": 1794024502836380332}
+{"body_sha256": "913eb02a8a487f209ee57ce149f3b2d147c6c60fa185681ece88368b6f0445eb", "charged_bytes": 1063, "event": "END", "id": "18", "status": 200, "utc_ns": 1794024503048410950}
+{"event": "START", "id": "19", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-9NOV26&depth=50", "utc_ns": 1794024503049548811}
+{"body_sha256": "f5278cb02f348c36eb84747760d41eba622196e0fee255dd9b4c4ffacab18b51", "charged_bytes": 1110, "event": "END", "id": "19", "status": 200, "utc_ns": 1794024503234383198}
+{"event": "START", "id": "20", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-10NOV26&depth=50", "utc_ns": 1794024503235533211}
+{"body_sha256": "21299044320c60e06767046204c0f6d7c994e7bddf7cbf732e4be9029f10c4d1", "charged_bytes": 1073, "event": "END", "id": "20", "status": 200, "utc_ns": 1794024503403939025}
+{"event": "START", "id": "21", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-13NOV26&depth=50", "utc_ns": 1794024503407066842}
+{"body_sha256": "f208a5ce3b73b40c8cac999a36a43a34e365ef121036458ee0e0bdc3b27da84e", "charged_bytes": 1692, "event": "END", "id": "21", "status": 200, "utc_ns": 1794024503622673126}
+{"event": "START", "id": "22", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-20NOV26&depth=50", "utc_ns": 1794024503623901881}
+{"body_sha256": "1b81a07dfbf97e72afb4a8c1d5dcaf3a779d13070fd030ee9dd14da5c4cf6566", "charged_bytes": 1231, "event": "END", "id": "22", "status": 200, "utc_ns": 1794024503840403268}
+{"event": "START", "id": "23", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-27NOV26&depth=50", "utc_ns": 1794024503841558731}
+{"body_sha256": "cdc2e1662d327c11edf5379aa6f4ec0e6f7b18de1fe4ebc53d0b0dd00a4eacb1", "charged_bytes": 1740, "event": "END", "id": "23", "status": 200, "utc_ns": 1794024503999709190}
+{"event": "START", "id": "24", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25DEC26&depth=50", "utc_ns": 1794024504001123607}
+{"body_sha256": "d8a8b0498d6a72c2a08c98ebae0ea0592f532bf3cf49a166062be010cf925468", "charged_bytes": 2313, "event": "END", "id": "24", "status": 200, "utc_ns": 1794024504219285671}
+{"event": "START", "id": "25", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-29JAN27&depth=50", "utc_ns": 1794024504220743211}
+{"body_sha256": "91204babea5ca7414e4de755c276efa59463d527d2bad78b1b4ff61463e0caae", "charged_bytes": 1259, "event": "END", "id": "25", "status": 200, "utc_ns": 1794024504421561587}
+{"event": "START", "id": "26", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-26MAR27&depth=50", "utc_ns": 1794024504423186657}
+{"body_sha256": "05d771eecd0ce3d1e578fa6eb85f2378f20f539e22f2a3c2d8ff78394d7a72ac", "charged_bytes": 2251, "event": "END", "id": "26", "status": 200, "utc_ns": 1794024504621637547}
+{"event": "START", "id": "27", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25JUN27&depth=50", "utc_ns": 1794024504625085126}
+{"body_sha256": "c60cd2439349df6e6f75f8152a9f5c23c264e07f05033fc1caa83392a85e250a", "charged_bytes": 2086, "event": "END", "id": "27", "status": 200, "utc_ns": 1794024504783042474}
+{"event": "START", "id": "28", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-24SEP27&depth=50", "utc_ns": 1794024504784344853}
+{"body_sha256": "358de98a85a3ba90cc8819805c5d11b3485aa0af77641d136348e1d7f53c360b", "charged_bytes": 2105, "event": "END", "id": "28", "status": 200, "utc_ns": 1794024504947369157}
+{"event": "START", "id": "29", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=spot", "utc_ns": 1794024504948732139}
+{"body_sha256": "550c7d050e8c7e35597974cb786f674062241fd93e7d8513119bcb4b4e4b3c1c", "charged_bytes": 4382, "event": "END", "id": "29", "status": 200, "utc_ns": 1794024505148451514}
+{"event": "START", "id": "30", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH_USDC&depth=50", "utc_ns": 1794024505149620554}
+{"body_sha256": "0b1b18f9dc97df61c3f9899de39f8d1942dabddcd4951848ee241380b58c21f1", "charged_bytes": 2388, "event": "END", "id": "30", "status": 200, "utc_ns": 1794024505311420480}
+{"event": "START", "id": "31", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=future", "utc_ns": 1794024505312623404}
+{"body_sha256": "20cda22c625b41e37b24acd6a3a781dcb4a52cabc5010d97c1ee8fabd2dbe49b", "charged_bytes": 11735, "event": "END", "id": "31", "status": 200, "utc_ns": 1794024505471556656}
+{"event": "START", "id": "32", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-7NOV26&depth=50", "utc_ns": 1794024505473137735}
+{"body_sha256": "de356d94f53d33df1bd6ca366cee4583fc7de125319ebb6d13b783a70f2a4080", "charged_bytes": 772, "event": "END", "id": "32", "status": 200, "utc_ns": 1794024505708014316}
+{"event": "START", "id": "33", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-8NOV26&depth=50", "utc_ns": 1794024505709409407}
+{"body_sha256": "66e46f75b81f4ceea05a5b2b6cd094884471b6de71a5567d76f50f8e95b81e9b", "charged_bytes": 774, "event": "END", "id": "33", "status": 200, "utc_ns": 1794024505885319119}
+{"event": "START", "id": "34", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-9NOV26&depth=50", "utc_ns": 1794024505886623952}
+{"body_sha256": "8bb25ab9f1212e630feda025d825b57920b1fa876392a08dc31e935ecbb2dc67", "charged_bytes": 757, "event": "END", "id": "34", "status": 200, "utc_ns": 1794024506054753706}
+{"event": "START", "id": "35", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-10NOV26&depth=50", "utc_ns": 1794024506056269420}
+{"body_sha256": "614bfc007820cd6f2d0574804f3e3f6cb84af91a3e2fb4772bfabb68901a0823", "charged_bytes": 697, "event": "END", "id": "35", "status": 200, "utc_ns": 1794024506219877368}
+{"event": "START", "id": "36", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-13NOV26&depth=50", "utc_ns": 1794024506221323946}
+{"body_sha256": "1992d89b9833a7e7e75599f909195bc1bc43bf15294b49f8db3457622544955c", "charged_bytes": 1384, "event": "END", "id": "36", "status": 200, "utc_ns": 1794024506385152529}
+{"event": "START", "id": "37", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-20NOV26&depth=50", "utc_ns": 1794024506386533845}
+{"body_sha256": "94d3352dd8e75e9f2bc9deb18dd8cbe55df90115684808acc6c615809ae65403", "charged_bytes": 931, "event": "END", "id": "37", "status": 200, "utc_ns": 1794024506600875068}
+{"event": "START", "id": "38", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-27NOV26&depth=50", "utc_ns": 1794024506602190181}
+{"body_sha256": "839f30de58d583d85b90937579f63655e1dc036eb4e77721098d1b52546a5f30", "charged_bytes": 997, "event": "END", "id": "38", "status": 200, "utc_ns": 1794024506763562390}
+{"event": "START", "id": "39", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25DEC26&depth=50", "utc_ns": 1794024506765035718}
+{"body_sha256": "5291325e5d4e588186913e277c8807a714e5666eae95e3aaae1521c151a768ec", "charged_bytes": 1784, "event": "END", "id": "39", "status": 200, "utc_ns": 1794024506965630456}
+{"event": "START", "id": "40", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-29JAN27&depth=50", "utc_ns": 1794024506966942663}
+{"body_sha256": "aac856daa02c98553ea9a0a2ff1b3816f28202330b4c36eabd1e5aefc6e8af61", "charged_bytes": 1702, "event": "END", "id": "40", "status": 200, "utc_ns": 1794024507134262395}
+{"event": "START", "id": "41", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-26MAR27&depth=50", "utc_ns": 1794024507135928159}
+{"body_sha256": "6a52a27002a90c6b3e10032d86cd74cb94cc8a68c7fad2a7172240b502d83382", "charged_bytes": 1325, "event": "END", "id": "41", "status": 200, "utc_ns": 1794024507295616400}
+{"event": "START", "id": "42", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25JUN27&depth=50", "utc_ns": 1794024507297226062}
+{"body_sha256": "d6975d28e1d9c1748240d5e50cb63d7d5ad8eaa17d5e15325e9aefeb13d931ee", "charged_bytes": 1068, "event": "END", "id": "42", "status": 200, "utc_ns": 1794024507457402283}
+{"event": "START", "id": "43", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-24SEP27&depth=50", "utc_ns": 1794024507458884447}
+{"body_sha256": "0ec616e70bf57bbb6e78a9616d1e26f453db7b14533dd67f322b7b8ace400880", "charged_bytes": 1132, "event": "END", "id": "43", "status": 200, "utc_ns": 1794024507628539644}
+{"event": "START", "id": "44", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/funding_rate", "utc_ns": 1794024509293234377}
+{"body_sha256": "b9d95f82ae339e444e6da4969028fc911ec59b66b6d538ee3e2628967b9b7c3c", "charged_bytes": 242955, "event": "END", "id": "44", "status": 200, "utc_ns": 1794024509537309362}
+{"event": "START", "id": "45", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/ticker", "utc_ns": 1794024509538920341}
+{"body_sha256": "2f11f42a38e12f04d8ef07ed2ba4281d8c407ac5f4992d3e48c87a2266539c77", "charged_bytes": 624835, "event": "END", "id": "45", "status": 200, "utc_ns": 1794024509718416621}
+{"event": "START", "id": "46", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option", "utc_ns": 1794024510289544888}
+{"body_sha256": "0a82e20e59160ec8ac294a8561c229d47526533c85a16744a1380deec1185ea6", "charged_bytes": 419712, "event": "END", "id": "46", "status": 200, "utc_ns": 1794024510480238959}
+{"event": "START", "id": "47", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=ETH&kind=option", "utc_ns": 1794024510488871719}
+{"body_sha256": "03d409c32d937a46037938c05a755c35a7756fc0cea511d4aafd24b91fd4c486", "charged_bytes": 355470, "event": "END", "id": "47", "status": 200, "utc_ns": 1794024510720504716}
+{"event": "START", "id": "48", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=USDC&kind=option", "utc_ns": 1794024510727951554}
+{"body_sha256": "3bb691998860d4948f0b05fcdb6278d215e85e0da505c84313b7fbeb843375ca", "charged_bytes": 1708262, "event": "END", "id": "48", "status": 200, "utc_ns": 1794024511037148788}
+{"event": "START", "id": "49", "reserved_bytes": 2097153, "url": "https://defillama-datasets.llama.fi/emissionsIndex", "utc_ns": 1794024512106268836}
+{"event": "BLOCK", "key": "defillama-datasets.llama.fi/emissionsIndex", "reason": "response cap exceeded", "utc_ns": 1794024512400222605}
+{"body_sha256": "84a47bb18deafd93fa809465a78cb0203a03ae229cc6ad18a9b4b03743d52a96", "charged_bytes": 2097153, "event": "END", "id": "49", "status": 200, "utc_ns": 1794024512400854509}
+{"event": "START", "id": "50", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/assets", "utc_ns": 1794030899366378646}
+{"body_sha256": "78b02b1b3d77e3ba08fec442e25bf171726f5b3f07c4b40f6df6d6878a2e944a", "charged_bytes": 3267, "event": "END", "id": "50", "status": 200, "utc_ns": 1794030900560455951}
+{"event": "START", "id": "51", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets?isMatured=false&limit=100", "utc_ns": 1794030900609320410}
+{"body_sha256": "68acde02dddf6d4bb6a1e596bce9b9e497b3f7813a12cb0ba9103e7b075fbcca", "charged_bytes": 62515, "event": "END", "id": "51", "status": 200, "utc_ns": 1794030901664469409}
+{"event": "START", "id": "52", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=128&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030901688355063}
+{"body_sha256": "d5f745053d2b0741cae0b4d794eb1b92a5519b58cefc4035f3411b11f2287ed2", "charged_bytes": 2514, "event": "END", "id": "52", "status": 200, "utc_ns": 1794030902801842039}
+{"event": "START", "id": "53", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=129&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030902961342134}
+{"body_sha256": "ab897b29c2f880b67dc5c9af5b0f25e1bbe20837e887f8b9e55d6ff26a2db4fa", "charged_bytes": 2532, "event": "END", "id": "53", "status": 200, "utc_ns": 1794030903996549743}
+{"event": "START", "id": "54", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=209&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030904025129921}
+{"body_sha256": "c958b4a5de76ab847a991723d5bf3bd2eda093a4d52ce92781331a2fa1a1637f", "charged_bytes": 1930, "event": "END", "id": "54", "status": 200, "utc_ns": 1794030905071401224}
+{"event": "START", "id": "55", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=210&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030906703202022}
+{"body_sha256": "ef756b659dc21cd980f474f203080c55872b721ad08a7363cbff6999ea007737", "charged_bytes": 1144, "event": "END", "id": "55", "status": 200, "utc_ns": 1794030907847470813}
+{"event": "START", "id": "56", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=219&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030907860869691}
+{"body_sha256": "76f0b799aef215a699ade8c5e87e7c7858b592e360c0a6dff5d080691cb68d08", "charged_bytes": 1492, "event": "END", "id": "56", "status": 200, "utc_ns": 1794030908845992479}
+{"event": "START", "id": "57", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=220&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030909025062366}
+{"body_sha256": "7637f005eba158b52923ed9b77756d5e02946852b5675d9ed51e69b689973491", "charged_bytes": 1430, "event": "END", "id": "57", "status": 200, "utc_ns": 1794030910047750387}
+{"event": "START", "id": "58", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=221&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030910601537614}
+{"body_sha256": "43e004b5ddc3bee4b665592cae7e57c644f5f9815889f14ef25e04ba5e432a3a", "charged_bytes": 1033, "event": "END", "id": "58", "status": 200, "utc_ns": 1794030910915904720}
+{"event": "START", "id": "59", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=229&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030910917319235}
+{"body_sha256": "0f94cb5ca3cdc36be01838bc9cca5dedca9c8feac82e177f63879ad1a0fd8f04", "charged_bytes": 1239, "event": "END", "id": "59", "status": 200, "utc_ns": 1794030911896560388}
+{"event": "START", "id": "60", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=237&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030911897952661}
+{"body_sha256": "f0b701c68ee4d9f769e99f508ea21b84347eacf89ca0744517e2be8a39ca46e4", "charged_bytes": 773, "event": "END", "id": "60", "status": 200, "utc_ns": 1794030912929845180}
+{"event": "START", "id": "61", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=241&tickSize=0.0001&includeAmm=true", "utc_ns": 1794030912931374003}
+{"body_sha256": "55984e31454edb926f013a88d1e7432f04f60469e7f7321ca9f4daa7174f5918", "charged_bytes": 1434, "event": "END", "id": "61", "status": 200, "utc_ns": 1794030913262442048}
+{"event": "START", "id": "62", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=spot", "utc_ns": 1794030913420659270}
+{"body_sha256": "10b9ce286591c528e55af097077f7ed2aa36359b38bae3eb8975906dfb965fc4", "charged_bytes": 2962, "event": "END", "id": "62", "status": 200, "utc_ns": 1794030913671707044}
+{"event": "START", "id": "63", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC_USDC&depth=50", "utc_ns": 1794030913673114439}
+{"body_sha256": "81f8d228dcf01ec288b66a2ec5458b73f541a81b2b1ae25bce50f287719273be", "charged_bytes": 2618, "event": "END", "id": "63", "status": 200, "utc_ns": 1794030913810326729}
+{"event": "START", "id": "64", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=future", "utc_ns": 1794030913811627977}
+{"body_sha256": "1ede693897e564cb5bd6d9607689ef5458ba241274b1ffbf388f009deb2882ab", "charged_bytes": 11787, "event": "END", "id": "64", "status": 200, "utc_ns": 1794030913998461751}
+{"event": "START", "id": "65", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-7NOV26&depth=50", "utc_ns": 1794030913999835406}
+{"body_sha256": "8f7f900239a124566bb09f75340a48d99e82c50b37f4bfe05224ba9590a88f6e", "charged_bytes": 994, "event": "END", "id": "65", "status": 200, "utc_ns": 1794030914140999351}
+{"event": "START", "id": "66", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-8NOV26&depth=50", "utc_ns": 1794030914142406805}
+{"body_sha256": "7f1b1644929aaf4d328ff4778148bf0749e364a7968e3f3ce64a9be6a5672740", "charged_bytes": 1014, "event": "END", "id": "66", "status": 200, "utc_ns": 1794030914284966537}
+{"event": "START", "id": "67", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-9NOV26&depth=50", "utc_ns": 1794030914286357202}
+{"body_sha256": "a1df3119afd49f7d03e93f65eb5a5fe0db782c3a54121b3ea50d77b916b673c4", "charged_bytes": 1331, "event": "END", "id": "67", "status": 200, "utc_ns": 1794030914423201230}
+{"event": "START", "id": "68", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-10NOV26&depth=50", "utc_ns": 1794030914424610277}
+{"body_sha256": "fa69d00b19790196c360bd009a240c2eb897839b26c4994d1af9ff691cb631f4", "charged_bytes": 1235, "event": "END", "id": "68", "status": 200, "utc_ns": 1794030914556689098}
+{"event": "START", "id": "69", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-13NOV26&depth=50", "utc_ns": 1794030914558156631}
+{"body_sha256": "98ec7013fa5ddd29ee5e72b2e967fbe6f1f3ad142ed12431fce448fde4616702", "charged_bytes": 1693, "event": "END", "id": "69", "status": 200, "utc_ns": 1794030914693656256}
+{"event": "START", "id": "70", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-20NOV26&depth=50", "utc_ns": 1794030914695233932}
+{"body_sha256": "0c3ccbef5a1ce7ef267bc3fd093168c985dd8771da233d6c1e615a42e493268b", "charged_bytes": 1318, "event": "END", "id": "70", "status": 200, "utc_ns": 1794030914837237103}
+{"event": "START", "id": "71", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-27NOV26&depth=50", "utc_ns": 1794030914838644558}
+{"body_sha256": "35043cdc95dc6db57457c5adc241e69c1c3980e5abfdc6ebe9661489831b3bfc", "charged_bytes": 1743, "event": "END", "id": "71", "status": 200, "utc_ns": 1794030914971531833}
+{"event": "START", "id": "72", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25DEC26&depth=50", "utc_ns": 1794030914973056340}
+{"body_sha256": "83010002813ec7311c8fdbd07527a21c4653106a12f83b498d0ccce02d22318f", "charged_bytes": 2303, "event": "END", "id": "72", "status": 200, "utc_ns": 1794030915106682342}
+{"event": "START", "id": "73", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-29JAN27&depth=50", "utc_ns": 1794030915108186590}
+{"body_sha256": "75a92f974b007c42a4847c98130e760ebf777da0b0a9bc1b36a76f33ef37d1de", "charged_bytes": 1238, "event": "END", "id": "73", "status": 200, "utc_ns": 1794030915263510697}
+{"event": "START", "id": "74", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-26MAR27&depth=50", "utc_ns": 1794030915269810944}
+{"body_sha256": "34b7a7f87c0c92fabceba92078d29f4d8d8058f1b5a220bb0bafaabe4115d27a", "charged_bytes": 2261, "event": "END", "id": "74", "status": 200, "utc_ns": 1794030915411322661}
+{"event": "START", "id": "75", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25JUN27&depth=50", "utc_ns": 1794030915412859326}
+{"body_sha256": "f9453bfad67148c41e33539de104cc93c5350a1471a51c7e346bbbd77646d57f", "charged_bytes": 2181, "event": "END", "id": "75", "status": 200, "utc_ns": 1794030915624092076}
+{"event": "START", "id": "76", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-24SEP27&depth=50", "utc_ns": 1794030915625717232}
+{"body_sha256": "9c52cc4f4f0ec3398363eb6a0e4b1a18f126d400af97f6982d69eb26125064ad", "charged_bytes": 2121, "event": "END", "id": "76", "status": 200, "utc_ns": 1794030915758737221}
+{"event": "START", "id": "77", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=spot", "utc_ns": 1794030915760275158}
+{"body_sha256": "4fb5ee63097acad764ef076598a3ee3065013480071798b0131ad8763be512d7", "charged_bytes": 4383, "event": "END", "id": "77", "status": 200, "utc_ns": 1794030915891969679}
+{"event": "START", "id": "78", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH_USDC&depth=50", "utc_ns": 1794030915893595561}
+{"body_sha256": "f3c7074d7e847440c068d41c17f5da0815f60a256684076be7ffe4efb547a40a", "charged_bytes": 2349, "event": "END", "id": "78", "status": 200, "utc_ns": 1794030916036492149}
+{"event": "START", "id": "79", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=future", "utc_ns": 1794030916038062368}
+{"body_sha256": "1b6877487e0eefb2897da6e108bd8cddce8ec0594eb6a16149d6b242b5dec421", "charged_bytes": 11735, "event": "END", "id": "79", "status": 200, "utc_ns": 1794030916192146588}
+{"event": "START", "id": "80", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-7NOV26&depth=50", "utc_ns": 1794030916193719897}
+{"body_sha256": "64b4d7ef4b3e03753033cd6459eebd115ee91e717bb19548524b7640dc577f39", "charged_bytes": 768, "event": "END", "id": "80", "status": 200, "utc_ns": 1794030916331185770}
+{"event": "START", "id": "81", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-8NOV26&depth=50", "utc_ns": 1794030916332743516}
+{"body_sha256": "ed91a59fd63db6e8b6cb8abca50b140f9cfb284e464247fb028350b49bc80113", "charged_bytes": 759, "event": "END", "id": "81", "status": 200, "utc_ns": 1794030916461179469}
+{"event": "START", "id": "82", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-9NOV26&depth=50", "utc_ns": 1794030916462683106}
+{"body_sha256": "bcad70fb2fd4a66a275f9024f12a9b9b483e8c817faa5913949148d7af528a56", "charged_bytes": 757, "event": "END", "id": "82", "status": 200, "utc_ns": 1794030916598983602}
+{"event": "START", "id": "83", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-10NOV26&depth=50", "utc_ns": 1794030916600580425}
+{"body_sha256": "ab3524653603d3babb8eb1534f290f58d57ec24bf233c56fa807eaba82b19770", "charged_bytes": 707, "event": "END", "id": "83", "status": 200, "utc_ns": 1794030916802120839}
+{"event": "START", "id": "84", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-13NOV26&depth=50", "utc_ns": 1794030916803597666}
+{"body_sha256": "b8feb1877012fcb39cc443a92b3237c606c50fffcdb91a8918b9cd13fe9a49b5", "charged_bytes": 1383, "event": "END", "id": "84", "status": 200, "utc_ns": 1794030916950883565}
+{"event": "START", "id": "85", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-20NOV26&depth=50", "utc_ns": 1794030916952431727}
+{"body_sha256": "a83d7df920cfd96afa21bc6454266f5771d823154e32c6c299f2aa2db2d7c3d9", "charged_bytes": 946, "event": "END", "id": "85", "status": 200, "utc_ns": 1794030917091358062}
+{"event": "START", "id": "86", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-27NOV26&depth=50", "utc_ns": 1794030917092968356}
+{"body_sha256": "856309432ed1d78b104d962a70e181e2a78e7078acf89e984b3f92aba05f8c7d", "charged_bytes": 1044, "event": "END", "id": "86", "status": 200, "utc_ns": 1794030917221620748}
+{"event": "START", "id": "87", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25DEC26&depth=50", "utc_ns": 1794030917223278111}
+{"body_sha256": "ce9fc4e39dd9864425acd26217273d007589bf6d3630d226e8435d71ba34234a", "charged_bytes": 1717, "event": "END", "id": "87", "status": 200, "utc_ns": 1794030917350828889}
+{"event": "START", "id": "88", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-29JAN27&depth=50", "utc_ns": 1794030917352513072}
+{"body_sha256": "dc533cc0c6f99f3fb64153b3ba6cd84ac5983fc7ccd1190a0dc1ba10f1be5f03", "charged_bytes": 1704, "event": "END", "id": "88", "status": 200, "utc_ns": 1794030917480288170}
+{"event": "START", "id": "89", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-26MAR27&depth=50", "utc_ns": 1794030917490098030}
+{"body_sha256": "6692b1a232d49a72e410ba144fca32fb180c39b239b4c0b15388b9e1908cfa09", "charged_bytes": 1313, "event": "END", "id": "89", "status": 200, "utc_ns": 1794030917622654026}
+{"event": "START", "id": "90", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25JUN27&depth=50", "utc_ns": 1794030917624273844}
+{"body_sha256": "8b6aabf47751826078048d6c507b422f933cd684f8f25bf811166912e08c4649", "charged_bytes": 1138, "event": "END", "id": "90", "status": 200, "utc_ns": 1794030917762297199}
+{"event": "START", "id": "91", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-24SEP27&depth=50", "utc_ns": 1794030917763926090}
+{"body_sha256": "ac2d53095c7e9de1fcc3169059648861e8dcd31a59876eccca19b7fea845b591", "charged_bytes": 1158, "event": "END", "id": "91", "status": 200, "utc_ns": 1794030917895937844}
+{"event": "START", "id": "92", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/funding_rate", "utc_ns": 1794030919260700205}
+{"body_sha256": "6a65139dc45ac4801549a21dd359f62b56cd1f0c0934f3c1a4351efff42ae770", "charged_bytes": 242843, "event": "END", "id": "92", "status": 200, "utc_ns": 1794030919635421335}
+{"event": "START", "id": "93", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/ticker", "utc_ns": 1794030919637131941}
+{"body_sha256": "3ced32dfdb0a8d58e5a41b31a4b6068bd04c55ba6e77b7a0846ae9857f058488", "charged_bytes": 624832, "event": "END", "id": "93", "status": 200, "utc_ns": 1794030920055042922}
+{"event": "START", "id": "94", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option", "utc_ns": 1794030920546998473}
+{"body_sha256": "ff731aa95fed0397875e64adf90e424e20d6392728e65c836dac4fb3369fa517", "charged_bytes": 419558, "event": "END", "id": "94", "status": 200, "utc_ns": 1794030920713748389}
+{"event": "START", "id": "95", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=ETH&kind=option", "utc_ns": 1794030920720670442}
+{"body_sha256": "7856df41283da585c3dca29baf6d605136ad4d19fe6408f07806d49f52df63e1", "charged_bytes": 355408, "event": "END", "id": "95", "status": 200, "utc_ns": 1794030920885706251}
+{"event": "START", "id": "96", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=USDC&kind=option", "utc_ns": 1794030920891725623}
+{"body_sha256": "3453b9269cb363b3bbdc2bf02fcba6ff77d44abdf6ec86c8a2f3d2a6d1c71f0b", "charged_bytes": 1708399, "event": "END", "id": "96", "status": 200, "utc_ns": 1794030921101672500}
+{"event": "START", "id": "97", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/assets", "utc_ns": 1794035207841510212}
+{"body_sha256": "2aa2086bd7a89277c7b0da0de6f468625ade52fde4359cd70317a9be6564e434", "charged_bytes": 3268, "event": "END", "id": "97", "status": 200, "utc_ns": 1794035208123308024}
+{"event": "START", "id": "98", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets?isMatured=false&limit=100", "utc_ns": 1794035208264785467}
+{"body_sha256": "77011b669e1d3d952d2816c6fdfe1b6760a8a47f2c56e8f8d15b9b2957db6f05", "charged_bytes": 62516, "event": "END", "id": "98", "status": 200, "utc_ns": 1794035208560277512}
+{"event": "START", "id": "99", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=128&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035208574886144}
+{"body_sha256": "40f6d7b74e8758af5d3353a963e726efcb864e98e4b8ddf5b05af84d417b319b", "charged_bytes": 2515, "event": "END", "id": "99", "status": 200, "utc_ns": 1794035209389034593}
+{"event": "START", "id": "100", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=129&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035209417135395}
+{"body_sha256": "10a8556dd765bfccd74ed39fc737ed4b2b6248fc42f40800e451fb3d87b57494", "charged_bytes": 2532, "event": "END", "id": "100", "status": 200, "utc_ns": 1794035209712795649}
+{"event": "START", "id": "101", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=209&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035209888237459}
+{"body_sha256": "094b2836a16c55c36363886db788075d4b79b199be10090c793d5535e257cd62", "charged_bytes": 1901, "event": "END", "id": "101", "status": 200, "utc_ns": 1794035210472861716}
+{"event": "START", "id": "102", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=210&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035210474453112}
+{"body_sha256": "664ace91fa4d17a40f9c7c50b1afc9a0913bdf48aaf6b0d5ed72b643fb79b468", "charged_bytes": 1092, "event": "END", "id": "102", "status": 200, "utc_ns": 1794035210947576341}
+{"event": "START", "id": "103", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=219&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035210949025995}
+{"body_sha256": "a151174c047901fa91e8754416ecd40f7c880d4678e4177c25be38b73af73d10", "charged_bytes": 1492, "event": "END", "id": "103", "status": 200, "utc_ns": 1794035211219002381}
+{"event": "START", "id": "104", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=220&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035211220698063}
+{"body_sha256": "974200080b287c3ba4ab50bd827fea01971c769b0362190e6e0430ea9d99fb97", "charged_bytes": 1430, "event": "END", "id": "104", "status": 200, "utc_ns": 1794035211971096390}
+{"event": "START", "id": "105", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=221&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035211973171271}
+{"body_sha256": "4d12a72038caa18ad09e0552e01f558bb6a4a8de4490c249aac0422959caa100", "charged_bytes": 1033, "event": "END", "id": "105", "status": 200, "utc_ns": 1794035212233668596}
+{"event": "START", "id": "106", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=229&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035212235297729}
+{"body_sha256": "e18558c3f901a36759e33ebe5bf8a8e4901b0e3b957c9100072faeb5e2d81938", "charged_bytes": 1239, "event": "END", "id": "106", "status": 200, "utc_ns": 1794035213040013433}
+{"event": "START", "id": "107", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=237&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035213041610178}
+{"body_sha256": "f02b15ad62561074cf25440dd440e29a5b898d96560c063815b3fae4ac040068", "charged_bytes": 773, "event": "END", "id": "107", "status": 200, "utc_ns": 1794035213285028525}
+{"event": "START", "id": "108", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=241&tickSize=0.0001&includeAmm=true", "utc_ns": 1794035213286655044}
+{"body_sha256": "47131cd64cce8df43e5177a85653744938c0149da68a94ee574a7b16d5f2ffa4", "charged_bytes": 1434, "event": "END", "id": "108", "status": 200, "utc_ns": 1794035213546572738}
+{"event": "START", "id": "109", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=spot", "utc_ns": 1794035213672590346}
+{"body_sha256": "3e8cdd5b9e903267b5e53ecab2238a500a6bd3f6e0c35b91c8322cc4ce1c9a83", "charged_bytes": 2962, "event": "END", "id": "109", "status": 200, "utc_ns": 1794035213888553712}
+{"event": "START", "id": "110", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC_USDC&depth=50", "utc_ns": 1794035213895611145}
+{"body_sha256": "99a39225df4fbb014e890d95388a5fe5ff714b84e897f327dc5b5babc3d65d4b", "charged_bytes": 2583, "event": "END", "id": "110", "status": 200, "utc_ns": 1794035214108965358}
+{"event": "START", "id": "111", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=future", "utc_ns": 1794035214110498549}
+{"body_sha256": "91617ab830cfd2bbaaea0833e59fb9b4f4da07f916ceaf415caa988e84b47cfe", "charged_bytes": 11787, "event": "END", "id": "111", "status": 200, "utc_ns": 1794035214308091312}
+{"event": "START", "id": "112", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-7NOV26&depth=50", "utc_ns": 1794035214316959092}
+{"body_sha256": "88ab61607ca02be4f0362ec04c1930d07089f883b41ec904a2384fbd4b2c9644", "charged_bytes": 946, "event": "END", "id": "112", "status": 200, "utc_ns": 1794035214497956501}
+{"event": "START", "id": "113", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-8NOV26&depth=50", "utc_ns": 1794035214499668238}
+{"body_sha256": "c630037a5035b2e632f6c297269526bbdecfc7816b5d1627815c69b7942c0699", "charged_bytes": 1018, "event": "END", "id": "113", "status": 200, "utc_ns": 1794035214671445366}
+{"event": "START", "id": "114", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-9NOV26&depth=50", "utc_ns": 1794035214676532085}
+{"body_sha256": "3c4e73a511cd9bd8aece94f2a52b00af125a127e7ab8490ad0ba05838badd3eb", "charged_bytes": 1378, "event": "END", "id": "114", "status": 200, "utc_ns": 1794035214844173620}
+{"event": "START", "id": "115", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-10NOV26&depth=50", "utc_ns": 1794035214845820590}
+{"body_sha256": "4dfff1c83b6ef8f78ee7f8b6fe56511d7cc5ab1399963955ab646e14713983b9", "charged_bytes": 1297, "event": "END", "id": "115", "status": 200, "utc_ns": 1794035215058963006}
+{"event": "START", "id": "116", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-13NOV26&depth=50", "utc_ns": 1794035215060624208}
+{"body_sha256": "7a5d358fe314d18a88c3c12f5aa42bd84bd56fdf2efb7a49e3fdcb1999073dd0", "charged_bytes": 1520, "event": "END", "id": "116", "status": 200, "utc_ns": 1794035215277708126}
+{"event": "START", "id": "117", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-20NOV26&depth=50", "utc_ns": 1794035215279415347}
+{"body_sha256": "19d13b22033b99a3008af491337fe5d3f159fc9c25d87b6a0b375f043e365cfe", "charged_bytes": 1259, "event": "END", "id": "117", "status": 200, "utc_ns": 1794035215505565512}
+{"event": "START", "id": "118", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-27NOV26&depth=50", "utc_ns": 1794035215507225401}
+{"body_sha256": "e21f0913036bf5a33bb587b16acf9d7971806f835ebb2f90269125478037d11e", "charged_bytes": 1706, "event": "END", "id": "118", "status": 200, "utc_ns": 1794035215731618421}
+{"event": "START", "id": "119", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25DEC26&depth=50", "utc_ns": 1794035215733272452}
+{"body_sha256": "f4066f88f24d0a4e8fc6643f8cb10c5eb4719de2860f18796bacb365037fdab8", "charged_bytes": 2271, "event": "END", "id": "119", "status": 200, "utc_ns": 1794035215906994387}
+{"event": "START", "id": "120", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-29JAN27&depth=50", "utc_ns": 1794035215908792624}
+{"body_sha256": "e4dc77a6b72e41f7d44aed05c69ff7b6465b86225bbf5070789b1a59d412ffcb", "charged_bytes": 1029, "event": "END", "id": "120", "status": 200, "utc_ns": 1794035216132489529}
+{"event": "START", "id": "121", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-26MAR27&depth=50", "utc_ns": 1794035216134227737}
+{"body_sha256": "2f7e8bc9aec3caa79f0a29fd593cdcb450c51d4e039bce52f1551e8ab326e61a", "charged_bytes": 2216, "event": "END", "id": "121", "status": 200, "utc_ns": 1794035216336419959}
+{"event": "START", "id": "122", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25JUN27&depth=50", "utc_ns": 1794035216338260790}
+{"body_sha256": "221515cd8489adc5a1d7ac78867b79a3892aed32af0147ee24fe3236b91c9765", "charged_bytes": 2059, "event": "END", "id": "122", "status": 200, "utc_ns": 1794035216510863576}
+{"event": "START", "id": "123", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-24SEP27&depth=50", "utc_ns": 1794035216512723586}
+{"body_sha256": "f9ded108912c1f514f5f7f547d41ed8d9556c54ded50082e8e64b03358265dbe", "charged_bytes": 2005, "event": "END", "id": "123", "status": 200, "utc_ns": 1794035216739845639}
+{"event": "START", "id": "124", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=spot", "utc_ns": 1794035216741589464}
+{"body_sha256": "5f4f4d9263e80916229a9f746ba1042c01c190fd996e04dbcaca7962000851ff", "charged_bytes": 4382, "event": "END", "id": "124", "status": 200, "utc_ns": 1794035216955627033}
+{"event": "START", "id": "125", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH_USDC&depth=50", "utc_ns": 1794035216957321024}
+{"body_sha256": "fdf770acacb2ba960527bb4ba0f65d7d1968d4709e2adf740e8383cc27d493de", "charged_bytes": 2359, "event": "END", "id": "125", "status": 200, "utc_ns": 1794035217193442143}
+{"event": "START", "id": "126", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=future", "utc_ns": 1794035217195230765}
+{"body_sha256": "778c117c9eaa8e4351a747ff4a5feb64c6419c844e37ea6423616637b2a3f022", "charged_bytes": 11735, "event": "END", "id": "126", "status": 200, "utc_ns": 1794035217386838867}
+{"event": "START", "id": "127", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-7NOV26&depth=50", "utc_ns": 1794035217388703512}
+{"body_sha256": "cd79aad57f5a9749f25b1da7f84140696a9c1f68bac6df6edcc5ccca0e5991dc", "charged_bytes": 767, "event": "END", "id": "127", "status": 200, "utc_ns": 1794035217563597114}
+{"event": "START", "id": "128", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-8NOV26&depth=50", "utc_ns": 1794035217565397975}
+{"body_sha256": "771e05842766a707c419eeb902aa9616f9752ff232177abe56a4b42cb07a98fd", "charged_bytes": 775, "event": "END", "id": "128", "status": 200, "utc_ns": 1794035217733132470}
+{"event": "START", "id": "129", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-9NOV26&depth=50", "utc_ns": 1794035217734976405}
+{"body_sha256": "410ee7dce04790a0da34fb4eb2460ee0b8b0a40b16a14999eca41662d51d36b0", "charged_bytes": 775, "event": "END", "id": "129", "status": 200, "utc_ns": 1794035217916829484}
+{"event": "START", "id": "130", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-10NOV26&depth=50", "utc_ns": 1794035217918570665}
+{"body_sha256": "3958accdbfc3ca955bd02594bcad8034c181be189f32a7cb13b4e615961ad421", "charged_bytes": 695, "event": "END", "id": "130", "status": 200, "utc_ns": 1794035218085629697}
+{"event": "START", "id": "131", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-13NOV26&depth=50", "utc_ns": 1794035218087256637}
+{"body_sha256": "cbfce06b58b4eec179833edf9c6d8b6af4a7e3f153b36fdc89d2182f2f4ab120", "charged_bytes": 1417, "event": "END", "id": "131", "status": 200, "utc_ns": 1794035218256838462}
+{"event": "START", "id": "132", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-20NOV26&depth=50", "utc_ns": 1794035218258658592}
+{"body_sha256": "055fd781f1103dd08c69f616db8d7f3ed988572a3e32fc46784e6519f2668b98", "charged_bytes": 946, "event": "END", "id": "132", "status": 200, "utc_ns": 1794035218434410031}
+{"event": "START", "id": "133", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-27NOV26&depth=50", "utc_ns": 1794035218436379735}
+{"body_sha256": "107719b33ff63955203c0ecb5f85424a605b873eb0e199ce4e93a416bc6c143a", "charged_bytes": 1054, "event": "END", "id": "133", "status": 200, "utc_ns": 1794035218601942211}
+{"event": "START", "id": "134", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25DEC26&depth=50", "utc_ns": 1794035218603703663}
+{"body_sha256": "f3b434a16054ec6eef31768b52ae88bb00045552a0e53af5d4fceaded2602650", "charged_bytes": 1649, "event": "END", "id": "134", "status": 200, "utc_ns": 1794035218784887454}
+{"event": "START", "id": "135", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-29JAN27&depth=50", "utc_ns": 1794035218786739887}
+{"body_sha256": "e516e68587bc9fb5612dd204776d4af0a05aa41cfbc142f29b8d7474b1a0eeae", "charged_bytes": 1688, "event": "END", "id": "135", "status": 200, "utc_ns": 1794035218964264866}
+{"event": "START", "id": "136", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-26MAR27&depth=50", "utc_ns": 1794035218966194550}
+{"body_sha256": "db9c3372d3aee79bb4a13b7e6e54129dcb0948c0c574471737a5d02bc2e19e9d", "charged_bytes": 1184, "event": "END", "id": "136", "status": 200, "utc_ns": 1794035219137415934}
+{"event": "START", "id": "137", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25JUN27&depth=50", "utc_ns": 1794035219139146950}
+{"body_sha256": "22cf671a7c281d45d0bc6d3d20ffaf91d226dd3512577a5551822bc2277f36f2", "charged_bytes": 1062, "event": "END", "id": "137", "status": 200, "utc_ns": 1794035219313563626}
+{"event": "START", "id": "138", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-24SEP27&depth=50", "utc_ns": 1794035219315469955}
+{"body_sha256": "a2d39611dd61abf5a773772757088afe24d39012a7e7df9c1fdbf2f6a44c4ad1", "charged_bytes": 1108, "event": "END", "id": "138", "status": 200, "utc_ns": 1794035219484658842}
+{"event": "START", "id": "139", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/funding_rate", "utc_ns": 1794035220555870833}
+{"body_sha256": "147321cb5cc962c4315d8ee0ab3daebeed36d904e5212afc3ceaab8acbf3ff0a", "charged_bytes": 242787, "event": "END", "id": "139", "status": 200, "utc_ns": 1794035220865465185}
+{"event": "START", "id": "140", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/ticker", "utc_ns": 1794035220867311204}
+{"body_sha256": "b8b01806f53eeac3cf5af702e8b1fb74b7bdc6f7807b97d66fa34c646d44590e", "charged_bytes": 624346, "event": "END", "id": "140", "status": 200, "utc_ns": 1794035221148386695}
+{"event": "START", "id": "141", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option", "utc_ns": 1794035221539275545}
+{"body_sha256": "a301899dab90248605ee45655520fddcbaedad49b029c334de7c2e4e1d524009", "charged_bytes": 419530, "event": "END", "id": "141", "status": 200, "utc_ns": 1794035221787162078}
+{"event": "START", "id": "142", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=ETH&kind=option", "utc_ns": 1794035221792794236}
+{"body_sha256": "a8704143b947505b2864e3692b7103c2204c9efdb1c9455697520aea99b59670", "charged_bytes": 355190, "event": "END", "id": "142", "status": 200, "utc_ns": 1794035221987443790}
+{"event": "START", "id": "143", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=USDC&kind=option", "utc_ns": 1794035221992422599}
+{"body_sha256": "219b61c7c84aa053d666ca644d98afeb660034f4f562ffe5a03ae6111bc8a8d8", "charged_bytes": 1708294, "event": "END", "id": "143", "status": 200, "utc_ns": 1794035222268413141}
+{"event": "START", "id": "144", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/assets", "utc_ns": 1794038916928792101}
+{"body_sha256": "5b68f457453562a4aa71bedebfd74d5eeedd0c08328c2a4bacd706059e667771", "charged_bytes": 3269, "event": "END", "id": "144", "status": 200, "utc_ns": 1794038917481372449}
+{"event": "START", "id": "145", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets?isMatured=false&limit=100", "utc_ns": 1794038917513391963}
+{"body_sha256": "bf77e616bb8aeb4afcb6839ba23ed64553c8cfc97da1307a912fc3057d55d279", "charged_bytes": 62537, "event": "END", "id": "145", "status": 200, "utc_ns": 1794038917741817102}
+{"event": "START", "id": "146", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=128&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038917768198427}
+{"body_sha256": "693764430241812ee7b77bd8985b9b63904b9363451702e18ec4c3877cf888c6", "charged_bytes": 2521, "event": "END", "id": "146", "status": 200, "utc_ns": 1794038918533541795}
+{"event": "START", "id": "147", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=129&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038918671750055}
+{"body_sha256": "d0f044e9ccdaa4073a456358a01b2f144983cf4856d83a446d653cb585079e28", "charged_bytes": 2538, "event": "END", "id": "147", "status": 200, "utc_ns": 1794038918974402111}
+{"event": "START", "id": "148", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=209&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038919039755191}
+{"body_sha256": "566adfe9c3395c1aaaf4462fd402af02ec878cb585da6ad2faaa00967260d387", "charged_bytes": 1901, "event": "END", "id": "148", "status": 200, "utc_ns": 1794038919294595628}
+{"event": "START", "id": "149", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=210&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038919318490037}
+{"body_sha256": "2905ff7252d6d0d52604650d57be3d7cfadc95c28400702db72a13027e56f7c3", "charged_bytes": 1117, "event": "END", "id": "149", "status": 200, "utc_ns": 1794038919592767473}
+{"event": "START", "id": "150", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=219&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038919714246002}
+{"body_sha256": "77ac11793b1c97da9d6e1705a9097e2ce5b7e8437719214d91a71fda84faba98", "charged_bytes": 1492, "event": "END", "id": "150", "status": 200, "utc_ns": 1794038919967105107}
+{"event": "START", "id": "151", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=220&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038919977847840}
+{"body_sha256": "cd520be2017c4c4b38dc4f6179e4f5338aeadc916aaab2c1defea1fb41cc58fb", "charged_bytes": 1432, "event": "END", "id": "151", "status": 200, "utc_ns": 1794038920337618994}
+{"event": "START", "id": "152", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=221&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038920535641487}
+{"body_sha256": "078eafecfb86c54798c6ff9fb1fa6c0d5f01a47cafa96c11da49c095271c19c3", "charged_bytes": 1032, "event": "END", "id": "152", "status": 200, "utc_ns": 1794038920915837793}
+{"event": "START", "id": "153", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=229&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038921092734873}
+{"body_sha256": "ad6ce6e22363122e3d0b446159ee58f399c114727c2f1d6b976905fe74549c7d", "charged_bytes": 1265, "event": "END", "id": "153", "status": 200, "utc_ns": 1794038922072935862}
+{"event": "START", "id": "154", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=237&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038922086037533}
+{"body_sha256": "3d8470a364caedf97394041229bd176e14919b2cd65b67fda700653161bad796", "charged_bytes": 747, "event": "END", "id": "154", "status": 200, "utc_ns": 1794038922309411615}
+{"event": "START", "id": "155", "reserved_bytes": 2097153, "url": "https://api-boros.pendle.finance/apis/v1/markets/order-book?marketId=241&tickSize=0.0001&includeAmm=true", "utc_ns": 1794038922371565231}
+{"body_sha256": "338c512fe816ca78fe5e3fffaf0eecf72ec813911f8a8d222c41e8e88395bac3", "charged_bytes": 1464, "event": "END", "id": "155", "status": 200, "utc_ns": 1794038922629019148}
+{"event": "START", "id": "156", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=spot", "utc_ns": 1794038922765881016}
+{"body_sha256": "8350ff13817f0dd246405da47e8463a7e42fc863f71c00b52f5cda625e7da217", "charged_bytes": 2962, "event": "END", "id": "156", "status": 200, "utc_ns": 1794038923018492610}
+{"event": "START", "id": "157", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC_USDC&depth=50", "utc_ns": 1794038923044417304}
+{"body_sha256": "83879eea97192417db2a1636983b07dc2cc6974a3825401da05a386abf60348c", "charged_bytes": 2576, "event": "END", "id": "157", "status": 200, "utc_ns": 1794038923279292999}
+{"event": "START", "id": "158", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=future", "utc_ns": 1794038923281658155}
+{"body_sha256": "d902be6c097a75c57b93f4def29460ab0a69dc3b0f0607b779e9c2ba06fc0e7e", "charged_bytes": 11788, "event": "END", "id": "158", "status": 200, "utc_ns": 1794038923534224130}
+{"event": "START", "id": "159", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-8NOV26&depth=50", "utc_ns": 1794038923536644357}
+{"body_sha256": "8e36e2d1d06936f68d884205757742f8e4753d3fd35eeb152e577c82401df711", "charged_bytes": 913, "event": "END", "id": "159", "status": 200, "utc_ns": 1794038923779688836}
+{"event": "START", "id": "160", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-9NOV26&depth=50", "utc_ns": 1794038923782101332}
+{"body_sha256": "2dfb313829e38f2057d5950a47193e4c69049475b35f3518cbaa5a5203401ee8", "charged_bytes": 1392, "event": "END", "id": "160", "status": 200, "utc_ns": 1794038924002666252}
+{"event": "START", "id": "161", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-10NOV26&depth=50", "utc_ns": 1794038924024227828}
+{"body_sha256": "6aa35538e8d0a6ad09b423af93b6ae565242e034f1aef4a2cd1101f7fffc1487", "charged_bytes": 1535, "event": "END", "id": "161", "status": 200, "utc_ns": 1794038924257504752}
+{"event": "START", "id": "162", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-11NOV26&depth=50", "utc_ns": 1794038924260017225}
+{"body_sha256": "279d5147893d3dedb9fe4033a72167431deda58240c5a5ce0c33ed2941534391", "charged_bytes": 665, "event": "END", "id": "162", "status": 200, "utc_ns": 1794038924536987149}
+{"event": "START", "id": "163", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-13NOV26&depth=50", "utc_ns": 1794038924539370151}
+{"body_sha256": "e2197cdcfdfb2e6b93595e188c3fc2fca89b60d799349ef41630918d61c6837c", "charged_bytes": 1773, "event": "END", "id": "163", "status": 200, "utc_ns": 1794038924716316461}
+{"event": "START", "id": "164", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-20NOV26&depth=50", "utc_ns": 1794038924722355727}
+{"body_sha256": "2e616390f1b8a6664f2db55fcf890d8624ba63cc80cd34082321c7434f0d892b", "charged_bytes": 1428, "event": "END", "id": "164", "status": 200, "utc_ns": 1794038924954199945}
+{"event": "START", "id": "165", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-27NOV26&depth=50", "utc_ns": 1794038925051737324}
+{"body_sha256": "aaf9d1242694a24d9318a4056033266ea6b5de5ca2f6f41b37939eda0c3950db", "charged_bytes": 1871, "event": "END", "id": "165", "status": 200, "utc_ns": 1794038925296931699}
+{"event": "START", "id": "166", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25DEC26&depth=50", "utc_ns": 1794038925299441738}
+{"body_sha256": "08c9fd2c8daef014b2d99d886d45e8a745d593d7293a5debdd5d3909d5edf984", "charged_bytes": 2293, "event": "END", "id": "166", "status": 200, "utc_ns": 1794038925487603063}
+{"event": "START", "id": "167", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-29JAN27&depth=50", "utc_ns": 1794038925490170747}
+{"body_sha256": "80b4bb39674d8e587dad885bdc4192f2ed1bf643aa78675974c74f135ac39fb4", "charged_bytes": 1043, "event": "END", "id": "167", "status": 200, "utc_ns": 1794038925780599028}
+{"event": "START", "id": "168", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-26MAR27&depth=50", "utc_ns": 1794038925783016762}
+{"body_sha256": "f158dae203c61bfc5094c1d463f87d8ce3e4d4754ae4abdd47e9cef69bd3bf2b", "charged_bytes": 2223, "event": "END", "id": "168", "status": 200, "utc_ns": 1794038926007546971}
+{"event": "START", "id": "169", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-25JUN27&depth=50", "utc_ns": 1794038926039768484}
+{"body_sha256": "61bf127fa1a72c9ab60c9fb89dd1493f39bec089df067dec738ec376d6ea3353", "charged_bytes": 2059, "event": "END", "id": "169", "status": 200, "utc_ns": 1794038926225955216}
+{"event": "START", "id": "170", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=BTC-24SEP27&depth=50", "utc_ns": 1794038926277201317}
+{"body_sha256": "5bdd5a698c52647d853e7cb5c6286868f1fbf9e996ef0fbefa284c87e28cfa18", "charged_bytes": 2060, "event": "END", "id": "170", "status": 200, "utc_ns": 1794038926460342903}
+{"event": "START", "id": "171", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=spot", "utc_ns": 1794038926468434776}
+{"body_sha256": "e09b7339bbd92356c9733fde834fb8a18d6d2dfa47cb124a7e1562eb4c34c03c", "charged_bytes": 4382, "event": "END", "id": "171", "status": 200, "utc_ns": 1794038926709166035}
+{"event": "START", "id": "172", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH_USDC&depth=50", "utc_ns": 1794038926711607083}
+{"body_sha256": "dfc11045c6eba85b3fad18947d4893b1bb70b5fa3f5e7870949875637d0a8dec", "charged_bytes": 2361, "event": "END", "id": "172", "status": 200, "utc_ns": 1794038926908220590}
+{"event": "START", "id": "173", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=future", "utc_ns": 1794038926910597794}
+{"body_sha256": "bf1baf25031c82fddbc13a62a0c9023b1cf5de10a4db463daef162be5fbcb95c", "charged_bytes": 11736, "event": "END", "id": "173", "status": 200, "utc_ns": 1794038927099925222}
+{"event": "START", "id": "174", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-8NOV26&depth=50", "utc_ns": 1794038927102498073}
+{"body_sha256": "cba7b715c92cf7a76cb39d25a07ace36619228ed9b2fbccd4aff3cad9fecb67c", "charged_bytes": 756, "event": "END", "id": "174", "status": 200, "utc_ns": 1794038927283196018}
+{"event": "START", "id": "175", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-9NOV26&depth=50", "utc_ns": 1794038927285693018}
+{"body_sha256": "0d297e1eb2a585de02c678d23834ffe46461adb3c9e7bb79b195f732e9d45ad2", "charged_bytes": 756, "event": "END", "id": "175", "status": 200, "utc_ns": 1794038927472627720}
+{"event": "START", "id": "176", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-10NOV26&depth=50", "utc_ns": 1794038927475085473}
+{"body_sha256": "bda7f26a45cb95db5768f3525a4aa063b81c196e9a1344629d7818c8fbb05a9f", "charged_bytes": 717, "event": "END", "id": "176", "status": 200, "utc_ns": 1794038927648926729}
+{"event": "START", "id": "177", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-11NOV26&depth=50", "utc_ns": 1794038927677866254}
+{"body_sha256": "4d2fd5d2c791ea024467d8cc0b269cbae7b78367968fd2c6683a47b4a0438130", "charged_bytes": 632, "event": "END", "id": "177", "status": 200, "utc_ns": 1794038927858250068}
+{"event": "START", "id": "178", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-13NOV26&depth=50", "utc_ns": 1794038927872143898}
+{"body_sha256": "1405d96c16d5c0429879628efc1157e614b4aba0c848717ea15982c4efcc43e6", "charged_bytes": 1346, "event": "END", "id": "178", "status": 200, "utc_ns": 1794038928055286666}
+{"event": "START", "id": "179", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-20NOV26&depth=50", "utc_ns": 1794038928135423759}
+{"body_sha256": "53177dbb56dbe99d809724447d72b70a6ea221c793825d289693cf2db926265a", "charged_bytes": 929, "event": "END", "id": "179", "status": 200, "utc_ns": 1794038928315124408}
+{"event": "START", "id": "180", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-27NOV26&depth=50", "utc_ns": 1794038928334650897}
+{"body_sha256": "c3a97b584671495735cc4a7fa4be69bbcf1822ccff0fe25a9060fe1e838ec0aa", "charged_bytes": 1089, "event": "END", "id": "180", "status": 200, "utc_ns": 1794038928530414025}
+{"event": "START", "id": "181", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25DEC26&depth=50", "utc_ns": 1794038928706125050}
+{"body_sha256": "d29213cd0439f1f6ef585aa710818fa6e9e37f9a192cbc31a3cb3618803aff81", "charged_bytes": 1652, "event": "END", "id": "181", "status": 200, "utc_ns": 1794038928911229566}
+{"event": "START", "id": "182", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-29JAN27&depth=50", "utc_ns": 1794038928992004712}
+{"body_sha256": "17537e34be913b3155c7764320f71fce5957f8d76f7c8a5c146bf226973ed71c", "charged_bytes": 1684, "event": "END", "id": "182", "status": 200, "utc_ns": 1794038929191314347}
+{"event": "START", "id": "183", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-26MAR27&depth=50", "utc_ns": 1794038929193846329}
+{"body_sha256": "d3bde09d609a41770c4987f0040d017d8e2c4f6846f48e3c7750c29d8f3814e5", "charged_bytes": 1329, "event": "END", "id": "183", "status": 200, "utc_ns": 1794038929404279237}
+{"event": "START", "id": "184", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-25JUN27&depth=50", "utc_ns": 1794038929406836786}
+{"body_sha256": "b0d70a679357f9d22b3e6003cb39e9687553b406e2d9250335acfba7db2f7efa", "charged_bytes": 1053, "event": "END", "id": "184", "status": 200, "utc_ns": 1794038929619764501}
+{"event": "START", "id": "185", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_order_book?instrument_name=ETH-24SEP27&depth=50", "utc_ns": 1794038929622329140}
+{"body_sha256": "c7905a7590c849d8e175a5c094a53eb5fd0b322398a2dcca4d4a8dd8d271ef6c", "charged_bytes": 1125, "event": "END", "id": "185", "status": 200, "utc_ns": 1794038929796649862}
+{"event": "START", "id": "186", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/funding_rate", "utc_ns": 1794038931261591948}
+{"body_sha256": "425f1bb9069223d0c5cc56f1f291a7cdeaebcb33100b085e0c272c881af66631", "charged_bytes": 242799, "event": "END", "id": "186", "status": 200, "utc_ns": 1794038931740785306}
+{"event": "START", "id": "187", "reserved_bytes": 2097153, "url": "https://contract.mexc.com/api/v1/contract/ticker", "utc_ns": 1794038931743340431}
+{"body_sha256": "99fac6df7adcb75cca2f3d63ec40a3d5d76258cc68ecc0ddff1187fc4f21e31b", "charged_bytes": 624508, "event": "END", "id": "187", "status": 200, "utc_ns": 1794038932276985379}
+{"event": "START", "id": "188", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option", "utc_ns": 1794038932797437462}
+{"body_sha256": "7430d4353533a715cb339275681efed5957dac0fac52ca6e248194ce3973da33", "charged_bytes": 414874, "event": "END", "id": "188", "status": 200, "utc_ns": 1794038933007547902}
+{"event": "START", "id": "189", "reserved_bytes": 2097153, "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=ETH&kind=option", "utc_ns": 1794038933015620157}
+{"body_sha256": "ca410d22e56921deb50cc0d13f03d5113cabf3f05029c9bb648e0fed2bb64c4d", "charged_bytes": 344021, "event": "END", "id": "189", "status": 200, "utc_ns": 1794038933271094932}

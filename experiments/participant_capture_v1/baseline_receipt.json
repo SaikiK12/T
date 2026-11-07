@@ -1,0 +1,19 @@
+{
+  "state_commit": "b57bd4032c4577037518baa428cb22e653f8f30d",
+  "manifest_sha256": "a8764aee3c341a7fecd8e83c3c29d31736a492d7ffffc290f359e211e1f316d5",
+  "verified_hashes": 582,
+  "active_contract": "R422",
+  "last_report": "data/operations/quant_priority_v1/latest.json",
+  "last_report_hour": "20261107T19",
+  "source_scope": "read-only canonical baseline identity and counts; no financial statistics",
+  "old_files": {
+    "data/operations/quant_takeover_v1/network/aux/requests.jsonl": "85e4008ee7315c13b432023b49fb56e6b71e684c1b53fe62f785a50c2ccb3c19",
+    "data/operations/quant_priority_v1/network/aux/requests.jsonl": "77c9a3d0d9f09a6a385b2e925a96da29c8b831cca8b031abfc8974ba803fec23"
+  },
+  "inherited_aux_calls_at_registration": 442,
+  "inherited_aux_charged_bytes_at_registration": 15186923,
+  "remaining_original_aux_bytes_at_registration": 1590293,
+  "aux_byte_ceiling": 16777216,
+  "aux_call_ceiling": 4096,
+  "allowance_reset": false
+}
