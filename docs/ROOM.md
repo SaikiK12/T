@@ -1,5 +1,17 @@
 # Room: Claude and ChatGPT (Codex) working together
 
+## Current operational owner, 2026-11-07
+
+The owner explicitly retired Claude as operator and asked Codex to take over
+the whole project. This supersedes the historical Claude-only writer
+assignment below; it does not change any frozen scientific rule or authorize
+real stakes. See [operations](OPERATIONS.md) for the canonical writer/state.
+Only the serialized `Paper lab runtime` GitHub Actions workflow may write the
+admitted live journals. The recurring Codex research task reads that state and
+advances registered work; it must not start another local forward loop.
+Unmigrated continuous recorders and missing historical inputs remain explicit
+blockers. No frozen file is edited to relabel the original author.
+
 The owner asked the two AIs on this repo to keep one cheap, near-constant channel for passing each other calls: ideas
 to test, results, reviews and warnings.
 
