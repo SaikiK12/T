@@ -1,13 +1,55 @@
 {
   "active_contract": "R420",
-  "bootstrap": true,
+  "bootstrap": false,
   "created_utc": "2026-11-07T03:54:44.481427+00:00",
-  "files": {},
-  "last_report": null,
+  "files": {
+    "data/operations/quant_takeover_v1/dispatch.jsonl": {
+      "mtime_ns": 1794024488099564559,
+      "sha256": "12076f483ea7ef5727e236e3468ff6255aaa9f2e3683786aec2c20377aa0427e"
+    },
+    "data/operations/quant_takeover_v1/runs/20261107T04/reservation.json": {
+      "mtime_ns": 1794024488099453698,
+      "sha256": "6614774f43554e3862f21d611750ce0b8e77f952c34961408c5f20e10ad4c354"
+    },
+    "experiments/boroslock_fwd/journal/locks.csv": {
+      "mtime_ns": 1794024475349295765,
+      "sha256": "0d1cce2355a30a25bac46d48a312c2eb0439f09841f15253a585142b0ce0b7d0"
+    },
+    "experiments/boroslock_fwd/journal/offers.csv": {
+      "mtime_ns": 1794024475349389731,
+      "sha256": "555bcedf1d7aa07a0e0c2a6e90b591333a073cfce9ccbd0a09481f0758568af6"
+    },
+    "experiments/boroslock_fwd/journal/status.json": {
+      "mtime_ns": 1794024475349389731,
+      "sha256": "a04d393f9713fc340806e86f5c808241de768180328bbd8eef8a1ca8fd93a152"
+    },
+    "experiments/boroslock_fwd/journal/tbill.csv": {
+      "mtime_ns": 0,
+      "sha256": "76187ba9fdd0d5e604e43b46abb0ce52886f297bef48f3d3796283297bc4c02d"
+    },
+    "experiments/lockcarry_fwd2/journal/locks.csv": {
+      "mtime_ns": 1794024475516418916,
+      "sha256": "279902a7ccf19cf25152dbb7de37bcc52d4396679ff8d7ba242837d2a0a6ba4e"
+    },
+    "experiments/lockcarry_fwd2/journal/offers.csv": {
+      "mtime_ns": 1794024475516571812,
+      "sha256": "d9b0ad816fab50e7b51c9cb56ced28181e63308ceb15ba2b494f17dfd482493d"
+    },
+    "experiments/lockcarry_fwd2/journal/status.json": {
+      "mtime_ns": 1794024475516571812,
+      "sha256": "dc7b292fcaa49c20758487f6654ec2e2de5c6a363c8e9c1594a390ebc6bc793f"
+    },
+    "experiments/lockcarry_fwd2/journal/tbill.csv": {
+      "mtime_ns": 0,
+      "sha256": "f691f590b957324c9fbcd0ec93858c15de6f4d44d57c5f963ccb5141f3a70345"
+    }
+  },
+  "last_report": "data/operations/quant_takeover_v1/runs/20261107T04/reservation.json",
   "meaning": "Bootstrap only. No live source invocation or journal continuity is certified.",
   "owner": "github-actions",
   "registered_protocol_sha256": "1ae4e0d36ed902c5731218e82ed1558dfa36e045f58001c3e8355b54829206ee",
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
-  "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70"
+  "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
+  "updated_utc": "2026-11-07T04:08:08.114470+00:00"
 }
