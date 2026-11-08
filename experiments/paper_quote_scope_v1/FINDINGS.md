@@ -1,4 +1,4 @@
-# R429 — native DTB3 source view passed; writer selected
+# R429 — source view passed; actual native paper updates resumed
 
 ## Result
 
@@ -91,6 +91,29 @@ preserved prefixes and actual current-hour native timestamps without
 HTTP or invoking a writer. A native status update and complete source
 receipts are required before claiming recovery; a skip/green host is
 insufficient. No historical gap is filled.
+
+### Actual native observation,16UTC
+
+After confirming no current-hour reservation or pending/running writer,
+owner comment6723711480 requested the sole16UTC tick. Workflow42497672540
+finished with actual native source receipts. Canonical state9632578e
+([audit](observations/20261108T16.json)) verifies1362manifest hashes,
+44new encoded-body/decoded-content pairs, all837paired auxiliary requests,
+the six old CSV prefixes and the unchanged R428 jurisdiction stop.
+
+R413 updated2026-11-08T16:01:25Z (22ticks/4locks/0settled), R406 at
+16:01:32Z (24ticks/2locks/0settled). Both native health entries are FRESH;
+their previously skipped or failed hours were not filled. R419 has an
+actual16UTC CAPTURED packet,12GET/173279bytes. This proves the observed
+data/writer recovery, not hypothetical future uptime or profitable income.
+
+The two actual scoped FRED responses retain original provider CSV bytes
+and dated-view receipts. New auxiliary traffic used44062encoded body
+bytes; cumulative16428076 leaves349140 of the SAME16777216-byte ceiling,
+with837 of4096calls. Historical/media reservation is still7907calls/
+262112395bytes. No allowance, campaign date or state limit was reset.
+Five legacy lanes remain STALE_OR_CLOCK; no all-project-running claim.
+This observation adds no predictive trial and has costs1x/2x/3x N/A.
 
 ## Limits that remain
 

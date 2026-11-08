@@ -52,6 +52,12 @@ A prior actual paper attempt in the current UTC hour, including a failure,
 prevents another attempt until a fresh hour. Observe new native rows and
 receipts after selection before claiming recovery; no old gap is filled.
 The baseline seven stale lanes and no proven settled income stay visible.
+At16UTC the [actual native audit](../experiments/paper_quote_scope_v1/observations/20261108T16.json)
+verified state9632578e/1362manifest hashes/44new wire-content pairs. R413
+and R406 genuinely updated at16:01:25/16:01:32UTC, with zero settlements;
+R419 captured12GET/173279bytes. Five legacy lanes remain stale. Auxiliary
+cumulative837calls/16428076bytes leaves349140 of the original16MiB; this
+finite recovery does not renew limits or guarantee subsequent observations.
 The [Treasury source note](../research/intake/treasury_benchmark_20261108.md)
 distinguishes the frozen DTB3 reference from an investable cash benchmark;
 do not label a mean discount quote as the owner's realized T-bill return.
