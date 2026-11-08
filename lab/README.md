@@ -47,6 +47,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`flow`](flow.py): Order-flow datasets streamed from the public archive and reduced to hourly bars on the fly (raw files are not kept).
 - [`flowfeat`](flowfeat.py): Order-flow features from the hourly metrics and bookDepth tables written by lab/flow.py, binned the same way as lab/features.py (cross-sectional rank buckets, trailing 30-day z-score buckets, or ...
 - [`formula_space`](formula_space.py): Bounded rational formula discovery with units and definition domains.
+- [`fred_quote_scope`](fred_quote_scope.py): A dated view of the same public DTB3 series, keeping native 400-day paper rules and old budgets.
 - [`freshness`](freshness.py): Freshness of the lab's live streams: when each recorder, loop and forward lane last wrote, against its cadence.
 - [`funding_notional`](funding_notional.py): Conditional funding-notional audit for one fixed-base-quantity linear position.
 - [`funding_prefix`](funding_prefix.py): Bounded model of pinned Lighter encoded funding, never an API cash decoder.

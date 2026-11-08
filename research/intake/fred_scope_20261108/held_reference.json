@@ -1,0 +1,31 @@
+{
+  "state_commit": "cd469d7d8f4cd426b015d17e9cfd2b3cc3e5b8b7",
+  "original_start": {
+    "event": "START",
+    "id": "780",
+    "reserved_bytes": 393217,
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
+    "utc_ns": 1794115533492401661
+  },
+  "original_content": {
+    "content_bytes": 301601,
+    "content_encoding": "",
+    "content_sha256": "124e0cc2985c721af0c859e3c94e09f6a8003ff1e4fde8accfd8c4f109bc267f",
+    "event": "CONTENT",
+    "id": "780",
+    "stored_wire": "raw/780.wire.gz",
+    "wire_bytes": 301601,
+    "wire_sha256": "124e0cc2985c721af0c859e3c94e09f6a8003ff1e4fde8accfd8c4f109bc267f"
+  },
+  "original_stored_file_sha256": "f8a435d0ec5edc327ed0b791994df83db18241592fade6cee2b2065ea843cff1",
+  "derived_view_sha256": "17b041c4302458ecec3556098cd66648e6d7b89a38c4d2a5cb464be7189f44c0",
+  "derivation": "opaque streamed content hash and 8192-byte recent tail; date columns only",
+  "allowed_start": "2025-10-04",
+  "allowed_end": "2026-11-08",
+  "counts": {
+    "rows": 284,
+    "oldest": "2025-10-06",
+    "newest": "2026-11-05"
+  },
+  "rate_values_inspected": false
+}
