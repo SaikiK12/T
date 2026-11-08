@@ -1,0 +1,76 @@
+{
+  "actual_fills": false,
+  "body_bytes": 172631,
+  "counts": {
+    "btc_cde_book": {
+      "ask_rows": 100,
+      "bid_rows": 100
+    },
+    "btc_cde_book_delayed": {
+      "ask_rows": 100,
+      "bid_rows": 100
+    },
+    "btc_cde_product": {
+      "funding_is_verified_settled_cash": false,
+      "funding_rate_present": true,
+      "funding_time_present": true,
+      "owner_access_verified": false
+    },
+    "btc_kraken_book": {
+      "ask_rows": 1627,
+      "bid_rows": 1458,
+      "identity_from_request": true
+    },
+    "btc_kraken_book_delayed": {
+      "ask_rows": 1630,
+      "bid_rows": 1453,
+      "identity_from_request": true
+    },
+    "btc_kraken_ticker": {
+      "absolute_rate_present": true,
+      "raw_rate_is_verified_settled_cash": false,
+      "relative_rate_present": true
+    },
+    "eth_cde_book": {
+      "ask_rows": 100,
+      "bid_rows": 100
+    },
+    "eth_cde_book_delayed": {
+      "ask_rows": 100,
+      "bid_rows": 100
+    },
+    "eth_cde_product": {
+      "funding_is_verified_settled_cash": false,
+      "funding_rate_present": true,
+      "funding_time_present": true,
+      "owner_access_verified": false
+    },
+    "eth_kraken_book": {
+      "ask_rows": 554,
+      "bid_rows": 626,
+      "identity_from_request": true
+    },
+    "eth_kraken_book_delayed": {
+      "ask_rows": 554,
+      "bid_rows": 627,
+      "identity_from_request": true
+    },
+    "eth_kraken_ticker": {
+      "absolute_rate_present": true,
+      "raw_rate_is_verified_settled_cash": false,
+      "relative_rate_present": true
+    }
+  },
+  "funding_cash": null,
+  "hour": "20261108T10",
+  "kraken_metadata_packet": "20261108T00",
+  "pnl": null,
+  "provenance": {
+    "config_sha256": "34daca7b098822cca683d89cc2bfc89e4d35cb278193abae9492d673a4394e70",
+    "input_commit": "5dcca1d16496ce81e13dc834da7ebcb031b1bab2",
+    "prereg_sha256": "8adce2d3ca9534c854ffa0cb805143f3460c2db03276e35ff8adabe7b1ddf14f"
+  },
+  "reobservation_delay_seconds": 3,
+  "requests": 12,
+  "state": "CAPTURED"
+}
