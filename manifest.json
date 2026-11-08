@@ -8,12 +8,12 @@
       "sha256": "cbe00e6e3ffb1376cc5933cff99d87e917dd8aaf9f78c5de9f2a855bcffd711c"
     },
     "data/operations/quant_participant_v1/dispatch.jsonl": {
-      "mtime_ns": 1794144517458152608,
-      "sha256": "567bb9435b689230037b1965076ef314e9262b19fc72fcd0f855db22c16920da"
+      "mtime_ns": 1794144528706569146,
+      "sha256": "b7c6d35797072baee163f1950539cf2b33974975efb34b763e31f2de968f0fc6"
     },
     "data/operations/quant_participant_v1/latest.json": {
-      "mtime_ns": 1794139983505013871,
-      "sha256": "63876bc3d68b5e981b84f4d0060f2c3eaf8e92257ab2a5bad59f7a05463966d7"
+      "mtime_ns": 1794144528706569146,
+      "sha256": "3f5c652160a0bfb666b8f82d700107214bf2d198ff3b859b198c6ed8b53a877f"
     },
     "data/operations/quant_participant_v1/migrations/gha_42411122446_1.json": {
       "mtime_ns": 1794083256040740506,
@@ -1786,6 +1786,26 @@
     "data/operations/quant_participant_v1/runs/20261108T12/reservation.json": {
       "mtime_ns": 1794139972957112562,
       "sha256": "847d470335e346ffc8dfd4190020a9633f9ee5781f938b19a888d0a4efedccfb"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T13/R406.log": {
+      "mtime_ns": 1794144527381540711,
+      "sha256": "904b39f6caed41394fa70f7507b4ff5820759b0ab4dece67d635f41812086cef"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T13/R413.log": {
+      "mtime_ns": 1794144526620535939,
+      "sha256": "3a5516853e23f91809e66bbf4c1d98f97bc663681cffc0b56697ae1ddd5237a5"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T13/R419.log": {
+      "mtime_ns": 1794144525841531055,
+      "sha256": "4a29f1e52d02abaed24011e0370f615b631ef01972389eeb7fce6965d22c0ecd"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T13/R428.log": {
+      "mtime_ns": 1794144528468547528,
+      "sha256": "1ba92bd34db42cd2d939552d529fe953d20f7c4361d1351cbe2c14274a4a6c61"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T13/report.json": {
+      "mtime_ns": 1794144528706131929,
+      "sha256": "3f5c652160a0bfb666b8f82d700107214bf2d198ff3b859b198c6ed8b53a877f"
     },
     "data/operations/quant_participant_v1/runs/20261108T13/reservation.json": {
       "mtime_ns": 1794144517458152608,
@@ -4851,9 +4871,61 @@
       "mtime_ns": 1794139981334571255,
       "sha256": "770c19658458d3b2cab962bf502b1477977e8ed26b0ff1656a94325e22c68bef"
     },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_cde_book.body.gz": {
+      "mtime_ns": 1794144521064594872,
+      "sha256": "22b7eacf65fa32431baffcb4d45767914bb9b11da10e8501ee3074e9e4ce6854"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794144525368573059,
+      "sha256": "6c39b5a626d333ad879d7018435f25decf2f41208907b07f470e7dec10137c49"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_cde_product.body.gz": {
+      "mtime_ns": 1794144520881964409,
+      "sha256": "3bba1afba03c79bf82053c63412458cae92800e60c333f51656c9cd8b7a34244"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_kraken_book.body.gz": {
+      "mtime_ns": 1794144521513598040,
+      "sha256": "32a5e4144232a0fd28e1a8fdeeec2486ebb654b96d4deb476290d7729ed8981e"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794144525542529180,
+      "sha256": "2b5aaf7e0dbaec5d190469bacc1a6b0641561714627ca636af05ae7becd6787b"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/btc_kraken_ticker.body.gz": {
+      "mtime_ns": 1794144521283419929,
+      "sha256": "5ef698d84e8affb56c597aa2f079eb745d5dce3d54e8681c1f7a693a82c0227f"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_cde_book.body.gz": {
+      "mtime_ns": 1794144521943575102,
+      "sha256": "889663530e7efdb58f5820127289d32696024acd60804558e1cd2804aa06451c"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794144525639679520,
+      "sha256": "889663530e7efdb58f5820127289d32696024acd60804558e1cd2804aa06451c"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_cde_product.body.gz": {
+      "mtime_ns": 1794144521631767817,
+      "sha256": "b9e8c84ea07d961b45a93c324b178a6ef51c8225ceb1490de1172e0e8a306e81"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_kraken_book.body.gz": {
+      "mtime_ns": 1794144522249549086,
+      "sha256": "5526a013ca86a62dd835fb7bef64a4f2136755241702178ed6a1af91b4f16fe6"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794144525782530684,
+      "sha256": "157ffb1b6633e31868d12694c342279b5ab15d1d9265c18c228713fd828e88a5"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/eth_kraken_ticker.body.gz": {
+      "mtime_ns": 1794144522100158716,
+      "sha256": "9006c52c4612c4b3c8dc1a7af1e6416468ad217220e68a2cfe9ea38bfc6d3bee"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T13/packet.json": {
+      "mtime_ns": 1794144525784782689,
+      "sha256": "778f870091c5057075eb83d24a69feb78529149c39714947067564b288426d77"
+    },
     "data/recorders/eea_pair_capture_v1/requests.jsonl": {
-      "mtime_ns": 1794139981331979423,
-      "sha256": "7b4fe76b832113c001e2654e6aec10e5c7e83031bf382323042ef837277a8fe9"
+      "mtime_ns": 1794144525782530684,
+      "sha256": "4590b59b164f5127505f6c77a89699283e3df2d3f978c26e9165a806f75dc0ac"
     },
     "data/recorders/mexc_ticker/2026-11-07/04.parquet": {
       "mtime_ns": 1794024509760962314,
@@ -4936,7 +5008,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_participant_v1/runs/20261108T13/reservation.json",
+  "last_report": "data/operations/quant_participant_v1/latest.json",
   "meaning": "R428 selected; inherited paper spend plus a finite original-budget participant campaign",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -4946,5 +5018,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-08T13:28:38.066242+00:00"
+  "updated_utc": "2026-11-08T13:28:50.092710+00:00"
 }
