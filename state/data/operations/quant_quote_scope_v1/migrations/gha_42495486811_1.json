@@ -1,0 +1,28 @@
+{
+  "state": "MIGRATED_NEEDS_REMOTE_COMMIT",
+  "previous_contract": "R428",
+  "active_contract": "R429",
+  "utc": "2026-11-08T15:34:46.004939+00:00",
+  "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
+  "inherited_aux_baseline_sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48",
+  "source_http_requests": 0,
+  "historical_campaign_reservation": {
+    "reserved_utc": "2026-11-08T14:28:45.535257+00:00",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2025-10-04&coed=2026-11-08",
+    "source": "Federal Reserve Bank of St. Louis / FRED",
+    "publication_date": "undated dynamic series view",
+    "added_calls": 1,
+    "added_reserved_bytes": 16385,
+    "inherited_calls": 7906,
+    "inherited_bytes": 262096010,
+    "conservative_calls": 7907,
+    "conservative_bytes": 262112395,
+    "original_calls": 8000,
+    "original_bytes": 262144000,
+    "remaining_calls": 93,
+    "remaining_bytes": 31605,
+    "refund": false,
+    "new_grant": false,
+    "scope": "400-day date/schema/byte counts only; no rate reading"
+  }
+}
