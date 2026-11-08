@@ -27,8 +27,10 @@ Unmigrated continuous recorders and missing historical inputs remain explicit
 blockers. No frozen file is edited to relabel the original author.
 
 R429 is the separately frozen FRED source-scope successor. Its committed
-source-view check passed; CI/merge and an explicit `/quant-quote-migrate`
-must precede selection. The canonical manifest decides activation; while
+source-view check and CI passed; owner comment6723421811 and workflow
+42495486811 selected it in canonical state62236577 after mergec5133669.
+The15UTC papers skipped the already-attempted hour, so selection itself
+did not establish fresh data. The canonical manifest decides activation; while
 R429 is selected use `/quant-quote-tick` and its own operational report,
 with the same global writer lock, original spend/limits and Lighter stop.
 See [R429 findings](../experiments/paper_quote_scope_v1/FINDINGS.md) for actual
