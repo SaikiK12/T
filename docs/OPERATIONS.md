@@ -24,6 +24,31 @@ new ideas require fresh registered tests and new prospective evidence.
 
 ## One selected writer, independent of the chat container
 
+### Native FRED source-scope successor, 2026-11-08
+
+[R429](../experiments/paper_quote_scope_v1/FINDINGS.md) repairs a source
+admission shortage: R413/R406 stopped overnight while the controller stayed
+green. The original auxiliary allowance still has393202bytes, but the old
+full-history FRED reservation needs393217. The native consumer already uses
+only400days. One frozen, committed source check passed284/284date/rate/
+missingness pairs and its latest usable pair, independently reproduced.
+
+The [successor workflow](../.github/workflows/quant-quote-runtime.yml) remains
+unselected until reviewed CI/merge and explicit `/quant-quote-migrate`.
+Only canonical manifest.active_contract=R429 makes it the writer. Its
+distinct command is `/quant-quote-tick`, requested cron minute47, report
+`data/operations/quant_quote_scope_v1/latest.json`. Earlier immutable
+workflows then skip under the same global concurrency group. Never start
+a second local loop or infer activation from a code merge.
+
+It inherits ALL spend/source stops, same4096calls/16MiB auxiliary ceiling,
+R419Nov14/dispatcherNov19 and64MiB state cap. Only the FRED400-day source
+query and its16KiB reservation change. Lighter's jurisdiction block stays.
+A prior actual paper attempt in the current UTC hour, including a failure,
+prevents another attempt until a fresh hour. Observe new native rows and
+receipts after selection before claiming recovery; no old gap is filled.
+The baseline seven stale lanes and no proven settled income stay visible.
+
 ### Bounded participant-source successor
 
 **Observed activation:** reviewed merge b4063110 was activated by workflow
