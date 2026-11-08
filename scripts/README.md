@@ -263,7 +263,7 @@ line is the first line of the script's own docstring.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
 
-## Check: parity, audits and integrity (35)
+## Check: parity, audits and integrity (36)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -295,6 +295,7 @@ line is the first line of the script's own docstring.
 - [`check_paired_account.py`](check_paired_account.py): Independent arithmetic for R319 reports, standard library only.
 - [`check_paper_account.py`](check_paper_account.py): Independent Decimal oracle for linear simulated-account integration.
 - [`check_paper_solvency.py`](check_paper_solvency.py): Read a paper snapshot and report capital capacity; never starts a runner.
+- [`check_quote_deployment.py`](check_quote_deployment.py): Read-only R429 canonical-state receipt/hash audit; never invokes a native writer or scores PnL.
 - [`check_research_integrity.py`](check_research_integrity.py): Audit the research register and local preregistrations without changing files.
 - [`check_spot_costs.py`](check_spot_costs.py): Independent exact-rational audit of R325 raw quote cash and capital costs.
 - [`check_spot_costs_v2.py`](check_spot_costs_v2.py): R326 scope over the frozen raw rational oracle; no input acquisition.

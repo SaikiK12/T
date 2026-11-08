@@ -1,4 +1,4 @@
-# R429 — native DTB3 source view: identity passed; deployment pending
+# R429 — native DTB3 source view passed; writer selected
 
 ## Result
 
@@ -67,9 +67,30 @@ remain. CI and actual deployment proof must be recorded separately.
 Both passing reports must be committed before runtime admission. Only a
 reviewed, green, merged default-branch successor may be selected through
 the serialized migration. No local forward tick/daemon has run here.
-Deployment has not yet been observed at this findings revision. A native
-status update, complete receipt/content hashes and preserved spend/blocks
-are required before claiming recovery; a skipped/green host is insufficient.
+The reviewed headc6998877 passed CI42494500508 and merged as c5133669;
+reviewed and merged tree db4df52eb2fa05613609b3ea2e6ba1cadba4aa84 is
+identical. Owner migration comment6723421811 triggered workflow42495486811.
+Its canonical state62236577 selects R429 with the correct prereg hash.
+The [selection audit](deployment_selection.json) independently verifies
+1298 manifest hashes, all793 paired inherited requests, the exact baseline,
+six existing journal prefixes and unchanged R428 source-stop events.
+
+At15:34UTC both native papers correctly skipped because the predecessor
+had already attempted them in that UTC hour. Their logs explicitly record
+PREDECESSOR_PAPER_HOUR_ALREADY_ATTEMPTED. R419 likewise retained its earlier
+15UTC packet (12GET/173257bytes) without a duplicate. The migration made
+zero new source requests and kept exactly16384014charged auxiliary bytes,
+393202remaining; it did not refresh the old paper timestamps. Native
+recovery was **not yet observed in this15UTC snapshot**.
+
+Subsequent actual observations belong to canonical manifest.last_report,
+the native journals on codex/quant-runtime-state and issue7; a static
+selection audit is not a promise about future data. The read-only
+scripts/check_quote_deployment.py can verify later manifest/content pairs,
+preserved prefixes and actual current-hour native timestamps without
+HTTP or invoking a writer. A native status update and complete source
+receipts are required before claiming recovery; a skip/green host is
+insufficient. No historical gap is filled.
 
 ## Limits that remain
 
@@ -87,3 +108,9 @@ and R406 settlements were still zero in the baseline. Funding units/cash,
 own execution, venue risk/margin, real costs/capacity, sufficient fresh
 observations and France eligibility remain separate economic/access gates.
 No almost-infallible/high-return method follows from this engineering.
+
+The [Treasury benchmark source note](../../research/intake/treasury_benchmark_20261108.md)
+also distinguishes DTB3's already-declared bank-discount quote from an
+actual investment/cash-account return. Native reference formulas and
+historical results were not changed or rescored. No strategy-income
+comparison is admitted merely by a source identity pass.
