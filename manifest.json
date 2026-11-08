@@ -8,12 +8,12 @@
       "sha256": "cbe00e6e3ffb1376cc5933cff99d87e917dd8aaf9f78c5de9f2a855bcffd711c"
     },
     "data/operations/quant_participant_v1/dispatch.jsonl": {
-      "mtime_ns": 1794115523992994408,
-      "sha256": "bbae24d6b966a7e8138c22c11977e85244079000f085a3dd7b0c08368ee7ce8e"
+      "mtime_ns": 1794115541119967533,
+      "sha256": "acfbc87c8f9d7444fa894711c6983d9454c8e8928e9841624ea5b58469dc2a56"
     },
     "data/operations/quant_participant_v1/latest.json": {
-      "mtime_ns": 1794112180172563400,
-      "sha256": "b94b56b0b72b8816876c643bb50a45a91e762652b560d6705d9b82d0a0acd0d5"
+      "mtime_ns": 1794115541119967533,
+      "sha256": "fa2de2a73c9c8bcc9bfd1ed135e97c9acf5a30c46665e73754572884eaa8f611"
     },
     "data/operations/quant_participant_v1/migrations/gha_42411122446_1.json": {
       "mtime_ns": 1794083256040740506,
@@ -1371,9 +1371,61 @@
       "mtime_ns": 1794112178600368724,
       "sha256": "7cf7a98c8563a65b8801376efadb5a364aeec3060b3d7dc652b08a8b437b3e42"
     },
+    "data/operations/quant_participant_v1/network/aux/raw/780.wire.gz": {
+      "mtime_ns": 1794115533797484121,
+      "sha256": "f8a435d0ec5edc327ed0b791994df83db18241592fade6cee2b2065ea843cff1"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/781.wire.gz": {
+      "mtime_ns": 1794115535052602851,
+      "sha256": "df9afd41a03b1f2f6b7a6d8b00cd48fb7aeb67a590445b38e8c317dae49f4810"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/782.wire.gz": {
+      "mtime_ns": 1794115535561503550,
+      "sha256": "247231165e8324c49966d129e8f96cfb41eb910daf83317c48fabf52cda4cc12"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/783.wire.gz": {
+      "mtime_ns": 1794115535870506731,
+      "sha256": "594b5433c9f431491f3f224eb74d70520c7d9188952ea3cc45aa27e632705cf4"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/784.wire.gz": {
+      "mtime_ns": 1794115536188127010,
+      "sha256": "ed1eb92bebb817c574bf3b4569e4eca64a616421f78a5fbb03b5278755233535"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/785.wire.gz": {
+      "mtime_ns": 1794115536477214069,
+      "sha256": "6eca11920712d050a6c985e0aea4816a5e7f4b6c97caf07eda94173574659c26"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/786.wire.gz": {
+      "mtime_ns": 1794115536800905567,
+      "sha256": "0f257624f156abd7162c2bc5db63ee64890bc8f654c1b472b7c2689726e13af6"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/787.wire.gz": {
+      "mtime_ns": 1794115537126435849,
+      "sha256": "8bcb40b0244e95e190500823477caa786d9a0b34a045bcbe7c22aea75a222fae"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/788.wire.gz": {
+      "mtime_ns": 1794115538059170902,
+      "sha256": "1a899b423cd27d044b0eb7dab2e08d60e1d79fc8de448f8787a1deaab862de32"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/789.wire.gz": {
+      "mtime_ns": 1794115538390532670,
+      "sha256": "ede0f6248dbbc98068bc36bbd46398c600256f9b39b234bc984687987f97e53b"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/790.wire.gz": {
+      "mtime_ns": 1794115538700462324,
+      "sha256": "fc53536b1f31951ed51b10c57f748b71346ca9f4bb5900ffb2b2312f35d63dcb"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/791.wire.gz": {
+      "mtime_ns": 1794115539009294529,
+      "sha256": "1b7d653e8cf51201f4452c687e68f2b788a7d5771bbf6e68a0c5f08c026d5a36"
+    },
+    "data/operations/quant_participant_v1/network/aux/raw/792.wire.gz": {
+      "mtime_ns": 1794115539304542077,
+      "sha256": "69da6355c14f9b5cd229d35863af8affeaa06ff9e16904e5334ccac1f7165b48"
+    },
     "data/operations/quant_participant_v1/network/aux/requests.jsonl": {
-      "mtime_ns": 1794112178601462746,
-      "sha256": "e776aae34320061a4fd3d2859c1632d13169612f6962b4d8e4b86fb71d23cb1d"
+      "mtime_ns": 1794115539305441253,
+      "sha256": "99c89a71f5f0f32b5f3c89a5443a66555a92c23582bdeac8ce8ccf67fcd8f61d"
     },
     "data/operations/quant_participant_v1/runs/20261107T20/R406.log": {
       "mtime_ns": 1794083279036172481,
@@ -1566,6 +1618,26 @@
     "data/operations/quant_participant_v1/runs/20261108T04/reservation.json": {
       "mtime_ns": 1794112154455057050,
       "sha256": "a2e71cb739b3d6023714880c71c85a13299b525ed0ca4629d4621190ab7a861c"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T05/R406.log": {
+      "mtime_ns": 1794115539997549211,
+      "sha256": "b8bcb0752978bda9c52d59084bf7b837959a35b79cef30699c7383ea105c951a"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T05/R413.log": {
+      "mtime_ns": 1794115539307031443,
+      "sha256": "00c591c453af01e4724a85b536ca5da4f52c3fb283c93e56c88599787a24b513"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T05/R419.log": {
+      "mtime_ns": 1794115532724471970,
+      "sha256": "43a70895c5d1671d0fae7dd5a5c9c98d68faa3ccc9db8498c13a3840b5a6455a"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T05/R428.log": {
+      "mtime_ns": 1794115540875558248,
+      "sha256": "1ba92bd34db42cd2d939552d529fe953d20f7c4361d1351cbe2c14274a4a6c61"
+    },
+    "data/operations/quant_participant_v1/runs/20261108T05/report.json": {
+      "mtime_ns": 1794115541119623566,
+      "sha256": "fa2de2a73c9c8bcc9bfd1ed135e97c9acf5a30c46665e73754572884eaa8f611"
     },
     "data/operations/quant_participant_v1/runs/20261108T05/reservation.json": {
       "mtime_ns": 1794115523992994408,
@@ -4267,9 +4339,61 @@
       "mtime_ns": 1794112163681281782,
       "sha256": "f0458e6fbf0a2da48fc99bf1332d33f5223981dab7dd7027146b78f29806cc81"
     },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_cde_book.body.gz": {
+      "mtime_ns": 1794115527202305693,
+      "sha256": "e0b6ec6d4c7f73149add19b8116b8700746e1a99dc24e996961886441862008e"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794115531601310199,
+      "sha256": "b4f40c198187495f571528871019aa9120eb11dad4749536182e0112193d6a9f"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_cde_product.body.gz": {
+      "mtime_ns": 1794115527072345743,
+      "sha256": "8b28bd3d27a98d341a9093a7f2fe69a019d8270342f85085fc905ec0ec10e8b6"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_kraken_book.body.gz": {
+      "mtime_ns": 1794115527655414566,
+      "sha256": "faa4f6b95b10c2126b76f361430ca70738401f30d1416640dc69be5e162f8fe9"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794115531896462594,
+      "sha256": "c59f532549caa171c9ced57232cdfbb165dbb7a49b02435d679f975819733877"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/btc_kraken_ticker.body.gz": {
+      "mtime_ns": 1794115527443412166,
+      "sha256": "5b0e50b3e3e814662310cf26ab843a33ccf9e64c5ff2068792e23e92347e92d3"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_cde_book.body.gz": {
+      "mtime_ns": 1794115527897767962,
+      "sha256": "2fea3e57139b94a9cc88cd51a3dfecf202ca4b0397dbe517e9347599c9f715cb"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_cde_book_delayed.body.gz": {
+      "mtime_ns": 1794115532027335316,
+      "sha256": "9984954a0b2eee6ef959d5b38ac05433aed8f3b91a8cbf4e332f07698b862de3"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_cde_product.body.gz": {
+      "mtime_ns": 1794115527774156667,
+      "sha256": "f2eb1c7b735a85174c296e4f76ae0d0490c02853707dfade1290d5fad8dc4817"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_kraken_book.body.gz": {
+      "mtime_ns": 1794115528344422369,
+      "sha256": "012b0f5c71b8d7a255d353fbe418ca525ba7e30362d73b7ff05fac314fb51732"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_kraken_book_delayed.body.gz": {
+      "mtime_ns": 1794115532530469773,
+      "sha256": "e9a83bbeaec2e24cd3243e2f6980118d7910e87d697d175d132d3f4f464a1ae3"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/eth_kraken_ticker.body.gz": {
+      "mtime_ns": 1794115528118054864,
+      "sha256": "ec6b7864828074a7ed238f1317f8b1bfdbd13e0f315377779856beb3b2c598bb"
+    },
+    "data/recorders/eea_pair_capture_v1/packets/20261108T05/packet.json": {
+      "mtime_ns": 1794115532671637893,
+      "sha256": "ae1d593edcffc4a376b64a41e5cdc0fa7d3e82ac7cfedf2fa5d4ca2b6c5139e8"
+    },
     "data/recorders/eea_pair_capture_v1/requests.jsonl": {
-      "mtime_ns": 1794112163678711638,
-      "sha256": "0c6f50cfe7e72232931e485cd0d0de08014bf809552840fd202282028a620907"
+      "mtime_ns": 1794115532530469773,
+      "sha256": "13c86d30f6be59b885788e1990c1b8077a4340bebb5b52f8fda58bec7e76563b"
     },
     "data/recorders/mexc_ticker/2026-11-07/04.parquet": {
       "mtime_ns": 1794024509760962314,
@@ -4324,12 +4448,12 @@
       "sha256": "0d1cce2355a30a25bac46d48a312c2eb0439f09841f15253a585142b0ce0b7d0"
     },
     "experiments/boroslock_fwd/journal/offers.csv": {
-      "mtime_ns": 1794112171505465008,
-      "sha256": "21e3aeeea52d7e9c98219c5405eed5cfa4e7dbae6fafdd6581b71bd22509742e"
+      "mtime_ns": 1794115539305542088,
+      "sha256": "af6f49921f74e53e79012d875574c88208315b5a01b3cf2e677f66f44003ab36"
     },
     "experiments/boroslock_fwd/journal/status.json": {
-      "mtime_ns": 1794112171508284700,
-      "sha256": "2b6de014b78e14711bc36ad01d40b80b29f84488b74f0d27076c60d6804ef415"
+      "mtime_ns": 1794115539307031443,
+      "sha256": "e4c69fd75167e658043f268cdd476aa14ec82fc2feeba435fa0ce10eee1c492c"
     },
     "experiments/boroslock_fwd/journal/tbill.csv": {
       "mtime_ns": 1794024496757001474,
@@ -4352,7 +4476,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_participant_v1/runs/20261108T05/reservation.json",
+  "last_report": "data/operations/quant_participant_v1/latest.json",
   "meaning": "R428 selected; inherited paper spend plus a finite original-budget participant campaign",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -4362,5 +4486,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-08T05:25:24.436927+00:00"
+  "updated_utc": "2026-11-08T05:25:42.251749+00:00"
 }
