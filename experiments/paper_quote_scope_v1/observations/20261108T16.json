@@ -1,0 +1,158 @@
+{
+  "state": "SELECTED_NATIVE_RECEIPTS_AUDITED",
+  "accessed_utc": "2026-11-08T16:02:34.726750+00:00",
+  "state_commit": "9632578e00629500119b66e4e3c84f2cef631a97",
+  "manifest_sha256": "a1a1aaae7bab9fec429c16263b3ce7ecc36b63f05e32a302ac35ecb5a7204b03",
+  "active_contract": "R429",
+  "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
+  "verified_manifest_hashes": 1362,
+  "inherited_aux_baseline_sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48",
+  "inherited_prefix_preserved": true,
+  "all_requests_paired": true,
+  "cumulative_aux_calls": 837,
+  "cumulative_aux_charged_bytes": 16428076,
+  "remaining_original_aux_bytes": 349140,
+  "original_aux_max_bytes": 16777216,
+  "original_aux_max_calls": 4096,
+  "no_reset": true,
+  "new_wire_content_pairs_verified": 44,
+  "new_encoded_body_bytes": 44062,
+  "quote_view_receipts": [
+    {
+      "body_sha256": "17b041c4302458ecec3556098cd66648e6d7b89a38c4d2a5cb464be7189f44c0",
+      "event": "FRED_VIEW",
+      "native_lookback_days": 400,
+      "newest": "2026-11-05",
+      "oldest": "2025-10-06",
+      "original_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
+      "physical_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2025-10-04&coed=2026-11-08",
+      "receipt_utc": "2026-11-08T16:01:16.653808+00:00",
+      "rows": 284,
+      "source_body_unchanged": true
+    },
+    {
+      "body_sha256": "17b041c4302458ecec3556098cd66648e6d7b89a38c4d2a5cb464be7189f44c0",
+      "event": "FRED_VIEW",
+      "native_lookback_days": 400,
+      "newest": "2026-11-05",
+      "oldest": "2025-10-06",
+      "original_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
+      "physical_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2025-10-04&coed=2026-11-08",
+      "receipt_utc": "2026-11-08T16:01:26.664001+00:00",
+      "rows": 284,
+      "source_body_unchanged": true
+    }
+  ],
+  "native_journal_prefixes_verified": 6,
+  "native_status": {
+    "R413": {
+      "updated": "2026-11-08T16:01:25Z",
+      "ticks": 22,
+      "locks": 4,
+      "settled": 0
+    },
+    "R406": {
+      "updated": "2026-11-08T16:01:32Z",
+      "ticks": 24,
+      "locks": 2,
+      "settled": 0
+    }
+  },
+  "native_dispatch": {
+    "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
+    "run_id": "gha_42497672540_1",
+    "hour": "20261108T16",
+    "tasks": [
+      {
+        "id": "R419",
+        "started_utc": "2026-11-08T16:01:09.648556+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      },
+      {
+        "id": "R413",
+        "started_utc": "2026-11-08T16:01:16.073785+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      },
+      {
+        "id": "R406",
+        "started_utc": "2026-11-08T16:01:26.099870+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      }
+    ],
+    "health": [
+      {
+        "rid": "R415",
+        "path": "experiments/paperacct_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 49.64,
+        "source_updated": "2026-11-06T14:23Z"
+      },
+      {
+        "rid": "R285",
+        "path": "experiments/xbook_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 49.44,
+        "source_updated": "2026-11-06T14:35:10Z"
+      },
+      {
+        "rid": "R278",
+        "path": "experiments/xfund_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 62.27,
+        "source_updated": "2026-11-06T01:45:16.934297+00:00"
+      },
+      {
+        "rid": "R279",
+        "path": "experiments/xfund_kc_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 62.17,
+        "source_updated": "2026-11-06T01:51:18.164460+00:00"
+      },
+      {
+        "rid": "R390",
+        "path": "experiments/xfund_bg_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 61.88,
+        "source_updated": "2026-11-06T02:09:01.468084+00:00"
+      },
+      {
+        "rid": "R413",
+        "path": "experiments/boroslock_fwd/journal/status.json",
+        "status": "FRESH",
+        "hours_old": 0.0,
+        "source_updated": "2026-11-08T16:01:25Z"
+      },
+      {
+        "rid": "R406",
+        "path": "experiments/lockcarry_fwd2/journal/status.json",
+        "status": "FRESH",
+        "hours_old": 0.0,
+        "source_updated": "2026-11-08T16:01:32Z"
+      }
+    ]
+  },
+  "native_recovery_observed": true,
+  "latest_r419_packet": {
+    "path": "data/recorders/eea_pair_capture_v1/packets/20261108T16/packet.json",
+    "sha256": "132b6ed8b2b47a4d1b5cde3d2c3a31c8eb4b12ae017b46ddcc3c7f3110c11647",
+    "state": "CAPTURED",
+    "source_http_requests": 12,
+    "body_bytes": 173279
+  },
+  "r428_source_block_unchanged": true,
+  "source_http_requests_by_this_audit": 0,
+  "predictive_trials": 0,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "settled_income_proven": false,
+  "workflow_run": 42497672540,
+  "owner_tick_comment": 6723711480,
+  "reviewed_code_merge": "fa393a33832491a6e6957c8a7ba40e7a03fe7c8f",
+  "selection_workflow": 42495486811
+}

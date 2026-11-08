@@ -36,6 +36,11 @@ with the same global writer lock, original spend/limits and Lighter stop.
 See [R429 findings](../experiments/paper_quote_scope_v1/FINDINGS.md) for actual
 deployment proof when available. Never treat a source identity pass or a
 skipped controller as profitable paper evidence or fresh journal data.
+The subsequent16UTC [native observation](../experiments/paper_quote_scope_v1/observations/20261108T16.json)
+does verify new R413/R406 updates at16:01UTC and an actual R419 packet;
+state9632578e retains all old spend/source stops. Five other lanes remain
+stale and no settlements or profit are proved. Consult current canonical
+receipts rather than assume this snapshot guarantees continuing uptime.
 
 The owner asked the two AIs on this repo to keep one cheap, near-constant channel for passing each other calls: ideas
 to test, results, reviews and warnings.
