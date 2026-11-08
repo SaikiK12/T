@@ -1,0 +1,2296 @@
+{
+  "started_utc": "2026-11-08T15:20:52.661649+00:00",
+  "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
+  "premeasurement_commit": "6df231a897bf14f9a7f5e1478e398953484687bd",
+  "source_http_calls": 0,
+  "predictive_trials": 0,
+  "program_trials": 9784361,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "cash_funding_or_income_proven": false,
+  "real_orders_allowed": false,
+  "state": "SOURCE_VIEW_PARITY_PASS",
+  "comparisons": [
+    {
+      "date": "2025-10-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.86",
+      "view": "3.86",
+      "equal": true
+    },
+    {
+      "date": "2025-10-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.85",
+      "view": "3.85",
+      "equal": true
+    },
+    {
+      "date": "2025-10-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.85",
+      "view": "3.85",
+      "equal": true
+    },
+    {
+      "date": "2025-10-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.87",
+      "view": "3.87",
+      "equal": true
+    },
+    {
+      "date": "2025-10-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.86",
+      "view": "3.86",
+      "equal": true
+    },
+    {
+      "date": "2025-10-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2025-10-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.85",
+      "view": "3.85",
+      "equal": true
+    },
+    {
+      "date": "2025-10-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.87",
+      "view": "3.87",
+      "equal": true
+    },
+    {
+      "date": "2025-10-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.86",
+      "view": "3.86",
+      "equal": true
+    },
+    {
+      "date": "2025-10-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.84",
+      "view": "3.84",
+      "equal": true
+    },
+    {
+      "date": "2025-10-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.81",
+      "view": "3.81",
+      "equal": true
+    },
+    {
+      "date": "2025-10-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-10-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-10-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-10-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2025-10-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2025-10-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2025-10-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2025-10-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.76",
+      "view": "3.76",
+      "equal": true
+    },
+    {
+      "date": "2025-10-31",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2025-11-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.82",
+      "view": "3.82",
+      "equal": true
+    },
+    {
+      "date": "2025-11-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-11-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-11-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2025-11-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2025-11-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.79",
+      "view": "3.79",
+      "equal": true
+    },
+    {
+      "date": "2025-11-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2025-11-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.79",
+      "view": "3.79",
+      "equal": true
+    },
+    {
+      "date": "2025-11-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-11-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-11-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2025-11-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.78",
+      "view": "3.78",
+      "equal": true
+    },
+    {
+      "date": "2025-11-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.79",
+      "view": "3.79",
+      "equal": true
+    },
+    {
+      "date": "2025-11-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.78",
+      "view": "3.78",
+      "equal": true
+    },
+    {
+      "date": "2025-11-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.75",
+      "view": "3.75",
+      "equal": true
+    },
+    {
+      "date": "2025-11-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.75",
+      "view": "3.75",
+      "equal": true
+    },
+    {
+      "date": "2025-11-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2025-11-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.76",
+      "view": "3.76",
+      "equal": true
+    },
+    {
+      "date": "2025-11-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2025-11-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2025-12-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2025-12-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.68",
+      "view": "3.68",
+      "equal": true
+    },
+    {
+      "date": "2025-12-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2025-12-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2025-12-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2025-12-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2025-12-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2025-12-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2025-12-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.58",
+      "view": "3.58",
+      "equal": true
+    },
+    {
+      "date": "2025-12-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.54",
+      "view": "3.54",
+      "equal": true
+    },
+    {
+      "date": "2025-12-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2025-12-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2025-12-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.55",
+      "view": "3.55",
+      "equal": true
+    },
+    {
+      "date": "2025-12-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.53",
+      "view": "3.53",
+      "equal": true
+    },
+    {
+      "date": "2025-12-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.54",
+      "view": "3.54",
+      "equal": true
+    },
+    {
+      "date": "2025-12-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2025-12-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2025-12-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2025-12-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2025-12-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2025-12-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2025-12-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.55",
+      "view": "3.55",
+      "equal": true
+    },
+    {
+      "date": "2025-12-31",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-01-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-01-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.54",
+      "view": "3.54",
+      "equal": true
+    },
+    {
+      "date": "2026-01-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.54",
+      "view": "3.54",
+      "equal": true
+    },
+    {
+      "date": "2026-01-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.53",
+      "view": "3.53",
+      "equal": true
+    },
+    {
+      "date": "2026-01-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.52",
+      "view": "3.52",
+      "equal": true
+    },
+    {
+      "date": "2026-01-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.52",
+      "view": "3.52",
+      "equal": true
+    },
+    {
+      "date": "2026-01-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.52",
+      "view": "3.52",
+      "equal": true
+    },
+    {
+      "date": "2026-01-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.56",
+      "view": "3.56",
+      "equal": true
+    },
+    {
+      "date": "2026-01-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-01-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-01-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-01-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-01-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-01-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-01-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.58",
+      "view": "3.58",
+      "equal": true
+    },
+    {
+      "date": "2026-01-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-01-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.58",
+      "view": "3.58",
+      "equal": true
+    },
+    {
+      "date": "2026-02-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-02-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-02-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-02-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-02-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-02-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-02-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-02-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-02-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-03-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-03-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-03-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-03-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.58",
+      "view": "3.58",
+      "equal": true
+    },
+    {
+      "date": "2026-03-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-03-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-03-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-03-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-03-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-03-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-03-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-03-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-03-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-03-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-03-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-03-31",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-04-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-04-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-04-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2026-04-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-04-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-04-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.62",
+      "view": "3.62",
+      "equal": true
+    },
+    {
+      "date": "2026-04-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-04-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.61",
+      "view": "3.61",
+      "equal": true
+    },
+    {
+      "date": "2026-05-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.57",
+      "view": "3.57",
+      "equal": true
+    },
+    {
+      "date": "2026-05-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-05-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.59",
+      "view": "3.59",
+      "equal": true
+    },
+    {
+      "date": "2026-05-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-05-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.60",
+      "view": "3.60",
+      "equal": true
+    },
+    {
+      "date": "2026-06-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.65",
+      "view": "3.65",
+      "equal": true
+    },
+    {
+      "date": "2026-06-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2026-06-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2026-06-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.63",
+      "view": "3.63",
+      "equal": true
+    },
+    {
+      "date": "2026-06-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2026-06-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.64",
+      "view": "3.64",
+      "equal": true
+    },
+    {
+      "date": "2026-06-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.68",
+      "view": "3.68",
+      "equal": true
+    },
+    {
+      "date": "2026-06-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.67",
+      "view": "3.67",
+      "equal": true
+    },
+    {
+      "date": "2026-06-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-06-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-06-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-06-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-06-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.69",
+      "view": "3.69",
+      "equal": true
+    },
+    {
+      "date": "2026-06-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.67",
+      "view": "3.67",
+      "equal": true
+    },
+    {
+      "date": "2026-06-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-06-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-07-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-07-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.68",
+      "view": "3.68",
+      "equal": true
+    },
+    {
+      "date": "2026-07-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-07-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-07-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2026-07-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2026-07-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.69",
+      "view": "3.69",
+      "equal": true
+    },
+    {
+      "date": "2026-07-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-07-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.76",
+      "view": "3.76",
+      "equal": true
+    },
+    {
+      "date": "2026-07-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-07-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-07-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-07-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-07-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.73",
+      "view": "3.73",
+      "equal": true
+    },
+    {
+      "date": "2026-07-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-07-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.75",
+      "view": "3.75",
+      "equal": true
+    },
+    {
+      "date": "2026-07-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.81",
+      "view": "3.81",
+      "equal": true
+    },
+    {
+      "date": "2026-07-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.81",
+      "view": "3.81",
+      "equal": true
+    },
+    {
+      "date": "2026-07-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.82",
+      "view": "3.82",
+      "equal": true
+    },
+    {
+      "date": "2026-07-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2026-07-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-07-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.69",
+      "view": "3.69",
+      "equal": true
+    },
+    {
+      "date": "2026-07-31",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.69",
+      "view": "3.69",
+      "equal": true
+    },
+    {
+      "date": "2026-08-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.75",
+      "view": "3.75",
+      "equal": true
+    },
+    {
+      "date": "2026-08-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.72",
+      "view": "3.72",
+      "equal": true
+    },
+    {
+      "date": "2026-08-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.72",
+      "view": "3.72",
+      "equal": true
+    },
+    {
+      "date": "2026-08-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.72",
+      "view": "3.72",
+      "equal": true
+    },
+    {
+      "date": "2026-08-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.72",
+      "view": "3.72",
+      "equal": true
+    },
+    {
+      "date": "2026-08-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.72",
+      "view": "3.72",
+      "equal": true
+    },
+    {
+      "date": "2026-08-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.71",
+      "view": "3.71",
+      "equal": true
+    },
+    {
+      "date": "2026-08-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.70",
+      "view": "3.70",
+      "equal": true
+    },
+    {
+      "date": "2026-08-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.69",
+      "view": "3.69",
+      "equal": true
+    },
+    {
+      "date": "2026-08-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.74",
+      "view": "3.74",
+      "equal": true
+    },
+    {
+      "date": "2026-08-31",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.78",
+      "view": "3.78",
+      "equal": true
+    },
+    {
+      "date": "2026-09-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.78",
+      "view": "3.78",
+      "equal": true
+    },
+    {
+      "date": "2026-09-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.78",
+      "view": "3.78",
+      "equal": true
+    },
+    {
+      "date": "2026-09-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.75",
+      "view": "3.75",
+      "equal": true
+    },
+    {
+      "date": "2026-09-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.77",
+      "view": "3.77",
+      "equal": true
+    },
+    {
+      "date": "2026-09-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-09-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.80",
+      "view": "3.80",
+      "equal": true
+    },
+    {
+      "date": "2026-09-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.81",
+      "view": "3.81",
+      "equal": true
+    },
+    {
+      "date": "2026-09-10",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.86",
+      "view": "3.86",
+      "equal": true
+    },
+    {
+      "date": "2026-09-11",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.92",
+      "view": "3.92",
+      "equal": true
+    },
+    {
+      "date": "2026-09-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.97",
+      "view": "3.97",
+      "equal": true
+    },
+    {
+      "date": "2026-09-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.97",
+      "view": "3.97",
+      "equal": true
+    },
+    {
+      "date": "2026-09-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.99",
+      "view": "3.99",
+      "equal": true
+    },
+    {
+      "date": "2026-09-17",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.97",
+      "view": "3.97",
+      "equal": true
+    },
+    {
+      "date": "2026-09-18",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.99",
+      "view": "3.99",
+      "equal": true
+    },
+    {
+      "date": "2026-09-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.02",
+      "view": "4.02",
+      "equal": true
+    },
+    {
+      "date": "2026-09-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.01",
+      "view": "4.01",
+      "equal": true
+    },
+    {
+      "date": "2026-09-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.04",
+      "view": "4.04",
+      "equal": true
+    },
+    {
+      "date": "2026-09-24",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.08",
+      "view": "4.08",
+      "equal": true
+    },
+    {
+      "date": "2026-09-25",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.08",
+      "view": "4.08",
+      "equal": true
+    },
+    {
+      "date": "2026-09-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.10",
+      "view": "4.10",
+      "equal": true
+    },
+    {
+      "date": "2026-09-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.07",
+      "view": "4.07",
+      "equal": true
+    },
+    {
+      "date": "2026-09-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.03",
+      "view": "4.03",
+      "equal": true
+    },
+    {
+      "date": "2026-10-01",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.00",
+      "view": "4.00",
+      "equal": true
+    },
+    {
+      "date": "2026-10-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.01",
+      "view": "4.01",
+      "equal": true
+    },
+    {
+      "date": "2026-10-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.05",
+      "view": "4.05",
+      "equal": true
+    },
+    {
+      "date": "2026-10-06",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.04",
+      "view": "4.04",
+      "equal": true
+    },
+    {
+      "date": "2026-10-07",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.05",
+      "view": "4.05",
+      "equal": true
+    },
+    {
+      "date": "2026-10-08",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.05",
+      "view": "4.05",
+      "equal": true
+    },
+    {
+      "date": "2026-10-09",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.06",
+      "view": "4.06",
+      "equal": true
+    },
+    {
+      "date": "2026-10-12",
+      "reference_present": true,
+      "view_present": true,
+      "reference": null,
+      "view": null,
+      "equal": true
+    },
+    {
+      "date": "2026-10-13",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.09",
+      "view": "4.09",
+      "equal": true
+    },
+    {
+      "date": "2026-10-14",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.10",
+      "view": "4.10",
+      "equal": true
+    },
+    {
+      "date": "2026-10-15",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.10",
+      "view": "4.10",
+      "equal": true
+    },
+    {
+      "date": "2026-10-16",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.08",
+      "view": "4.08",
+      "equal": true
+    },
+    {
+      "date": "2026-10-19",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.10",
+      "view": "4.10",
+      "equal": true
+    },
+    {
+      "date": "2026-10-20",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.08",
+      "view": "4.08",
+      "equal": true
+    },
+    {
+      "date": "2026-10-21",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.07",
+      "view": "4.07",
+      "equal": true
+    },
+    {
+      "date": "2026-10-22",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.04",
+      "view": "4.04",
+      "equal": true
+    },
+    {
+      "date": "2026-10-23",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.04",
+      "view": "4.04",
+      "equal": true
+    },
+    {
+      "date": "2026-10-26",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.05",
+      "view": "4.05",
+      "equal": true
+    },
+    {
+      "date": "2026-10-27",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.05",
+      "view": "4.05",
+      "equal": true
+    },
+    {
+      "date": "2026-10-28",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.01",
+      "view": "4.01",
+      "equal": true
+    },
+    {
+      "date": "2026-10-29",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.00",
+      "view": "4.00",
+      "equal": true
+    },
+    {
+      "date": "2026-10-30",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "3.99",
+      "view": "3.99",
+      "equal": true
+    },
+    {
+      "date": "2026-11-02",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.03",
+      "view": "4.03",
+      "equal": true
+    },
+    {
+      "date": "2026-11-03",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.03",
+      "view": "4.03",
+      "equal": true
+    },
+    {
+      "date": "2026-11-04",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.03",
+      "view": "4.03",
+      "equal": true
+    },
+    {
+      "date": "2026-11-05",
+      "reference_present": true,
+      "view_present": true,
+      "reference": "4.00",
+      "view": "4.00",
+      "equal": true
+    }
+  ],
+  "matched_dates": 284,
+  "date_count": 284,
+  "latest_date_equal": true,
+  "latest_value_equal": true,
+  "latest_date": "2026-11-05",
+  "pairing": "one held native response versus one later scoped response; not independent bets"
+}

@@ -1,0 +1,25 @@
+{
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2025-10-04&coed=2026-11-08",
+  "started_utc": "2026-11-08T14:28:45.560594+00:00",
+  "user_agent": "Python urllib default; no override",
+  "redirects": false,
+  "authentication": false,
+  "cookies": false,
+  "max_wire_body": 16384,
+  "status": 200,
+  "received_utc": "2026-11-08T14:28:46.342857+00:00",
+  "body_bytes": 4518,
+  "body_sha256": "17b041c4302458ecec3556098cd66648e6d7b89a38c4d2a5cb464be7189f44c0",
+  "encoding": "",
+  "content_type": "application/csv",
+  "location": null,
+  "decoded_bytes": 4518,
+  "decoded_sha256": "17b041c4302458ecec3556098cd66648e6d7b89a38c4d2a5cb464be7189f44c0",
+  "counts": {
+    "rows": 284,
+    "oldest": "2025-10-06",
+    "newest": "2026-11-05"
+  },
+  "state": "DATE_SCHEMA_BYTE_COUNTS_ONLY",
+  "rate_values_inspected": false
+}
