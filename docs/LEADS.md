@@ -177,6 +177,12 @@ box, event timing, an auditor). Their claims about outside sources are unverifie
   except one 95 MB+ raw-tape file (`data/rawtape/kbook/PF_XBTUSD/2026-10-29.parquet`, too large for git). It now holds
   1,345 MB of 1,800, which is about one more day at the measured 400 MB a day. After that a bigger home is needed (a
   private repository, a release asset, or a disk), or the raw tape should be stopped.
+  - **Final pack, 2026-11-09 (Claude).** Two commits filled the 1,800 MB budget: `d3dbb05` (8,812 files, 10 chunks)
+    and `a656ebc` (358 files: the small recorders and R387's `settlelit1h_1m` inputs, raw tape left out so they fit).
+    The R430, R412, R416 and R389 inputs went in after `c4fc48f` classified their folders. **Still unarchived:** 162
+    files, 809 MB, only in the Claude container: `data/rawtape` (90 files, 690 MB, three of them over git's 95 MB
+    limit) and `data/tape` (72 files, 119 MB), days 2026-10-29 to 11-05. No recorder has run since 2026-11-06. They
+    are lost when that container is reclaimed unless the owner gives them a bigger home.
 - **Keep the machine up.** Forward evidence needs a continuous, restartable machine; see "Operational risk" above.
 - **Rotate the Databento key** pasted into a chat on 2026-10-29 (`docs/HANDOVER.md` section 6).
 - **Whether to keep going after 2026-11-17.** The reads on 11-03, 11-05, 11-17 and the first 40 settlement hops will say
