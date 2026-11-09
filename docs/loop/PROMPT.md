@@ -129,3 +129,8 @@ small, public-data player can still reach.
   helpers now get the list of spent families, because about 25 ideas in tick 1 gave one new row. Step 7 now names
   the venv interpreter and the 3 known test errors. The scheduled task was moved to every 3 hours (the server
   anchored it at minute 30).
+- 2026-11-09 ~22:45 UTC, owner: hunt mode. "Work continuously, not every 3 hours; the subscription ends soon; use
+  100% of compute." Ticks give way to parallel forks, one lane each, with pre-assigned R-ids and a two-phase protocol:
+  freeze and register, FROZEN, the orchestrator commits, GO, run once, FINDINGS, the orchestrator closes. Forks never
+  run git or touch shared files. The scheduled task is now an hourly safety net. The owner also approved reading R392
+  today.

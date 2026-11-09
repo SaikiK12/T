@@ -4,29 +4,38 @@ This is the loop's working memory for `docs/loop/PROMPT.md`. The live queue stay
 holds only the current focus, the lenses last used and one line per tick.
 
 ## Current focus
-- **Tick 2: the M321/M188 weekend-reopen test on held data.**
-  - **Data:** Binance TradFi perps, 1-minute klines in `data/tradfi_perps/klines_1m`.
-    - QQQUSDT and SPYUSDT from 2026-04-06.
-    - XAUUSDT from 2025-12-11 and XAGUSDT from 2026-01-07.
-    - CLUSDT, BZUSDT and NATGASUSDT from 2026-04-01.
-  - **The question:** at the CME reopen (Sunday 22:00 UTC in summer, 23:00 UTC in winter), does the perp continue or
-    reverse its weekend move over the next 15-60 minutes and into the cash open?
-  - **Who pays:** weekend traders on thin perp books, before the reference market reopens.
-  - **Why the fast firms might leave it:** the weekend books are small, and the payoff needs a hedge-less hold of
-    minutes to hours.
-  - **Priors against:** an unread paper reported in M442 found negative out-of-sample Sharpe after costs. R244 (BTC's
-    weekend move into QQQ and SPY) is a different question and was NULL.
-  - **Before freezing:**
-    - Check coverage and the Binance TradFi taker fee.
-    - Cluster by weekend; seven assets share each one.
-    - Split commodities at the 2026-05 EWMA mark change (M188 note); count the split as trials.
-    - State power: about 30-47 weekends.
-- **Standing duties** (`docs/OPERATIONS.md`): the R392 freeze before 11-17 (check-in fires 11-16 11:20 UTC), R404's
-  close on 11-18, and the R406/R413 successors after 11-19.
+**Hunt mode (owner, 2026-11-09 ~22:45 UTC):** "work continuously, not every 3 hours; the subscription ends soon; hunt
+for breakthroughs at 100% of compute".
+
+**How the hunt runs:**
+- Parallel forks, one lane each. R-ids and folders are pre-assigned.
+- Two-phase protocol: the fork freezes and registers, then replies FROZEN. The orchestrator commits and pushes, then
+  sends GO. The fork runs once and writes FINDINGS. The orchestrator closes the registry row, updates methods.csv,
+  commits and posts on #7.
+- Forks never run git and never touch shared files.
+- Haiku helpers generate ideas in between.
+- The scheduled task is an hourly safety net only.
+
+**Wave 1, launched about 22:50 UTC:**
+| Round | Lane | Method | What it tests |
+|---|---|---|---|
+| R432 | weekend_reopen_v1 | M321/M188 | Binance TradFi 1-minute perps at the CME reopen |
+| R433 | lighter_flow_v1 | M441 | Lighter public account flow, follow the informed accounts |
+| R434 | wti_residual_v1 | M443 | Cross-venue commodity residual, CME open vs closed |
+| R435 | stock_tugofwar_v1 | M492, new | Overnight vs intraday cross-section on MEXC stock perps |
+| R436 | stock_carry_v1 | M493, new | Stock-perp funding carry hedged with the cash stock |
+| R392 | reserved_batch3 | C17 on 2020 + Gate long-tail carry | The owner approved reading it today, not 11-17 |
+
+**Wave 2 candidates:**
+- The unlock-short red-team checks: skipped tickets against their outcomes, and margin per event at $10k.
+- M494, once a dated history of index changes exists.
+- The M296 HIP-3 convergence event study.
+
+**Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
+R392 is being done now.
 
 ## Lenses last used
-1, 2, 3+4 (tick 1). Next: 5 (red team on R391, R300 and R265/R266), 6 (forced and scheduled flow), 7 (cross-market
-gaps reachable from France).
+1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09). Next: 8 (market making for the slow), then 1.
 
 ## Tick log
 - **2026-11-09, tick 1 (by hand).**
