@@ -1,0 +1,13 @@
+{
+"folder": "data/rawtape",
+"source": "Binance USD-M public websockets (wss://fstream.binance.com/public/stream: bookTicker and rpiDepth@500ms; market stream: aggTrade), Bybit v5 public (orderbook.1, publicTrade, orderbook.rpi, tickers, allLiquidation), Kraken Futures public (book, trade); no key",
+"script": "scripts/record_raw.py (one row per message in arrival order; local wall-clock receive time t and wall-minus-monotonic off; exchange stamps kept unmerged)",
+"recorded_utc": "2026-10-28T20:09Z to 2026-11-06T14:38Z, while the chat container was awake; market rows only 13:00-17:00 UTC (HOURS), ping and clock rows all day",
+"merged_days_used_by_R431": {
+  "2026-10-29": "13:00:00-16:59:59 UTC (4.0 h)",
+  "2026-10-30": "13:00:00-15:45:41 UTC (2.76 h)",
+  "2026-11-05": "15:08:47-16:16:36 UTC (1.13 h)"},
+"R431_inputs": "sha256 of the 21 files read (bbo x4 symbols, trade USDC x2, rtt) are frozen in experiments/rawlead_v1/PREREG.md",
+"archive": "Not committed (data/ is gitignored) and not in the data-archive branch: 162 files / 809 MB of data/rawtape + data/tape stay only in the Claude container (docs/LEADS.md receipt, commit 2bc06d2)",
+"quality": "Feed lag (local wall ms - E) has a heavy tail: share of USDT rows queued > 1 s is about 4% on 10-29/10-30 and 15-51% on 11-05; the local clock offset drifts up to 30 ms a minute on 10-29/10-30 (experiments/rawlead_v1/plumbing.json)"
+}

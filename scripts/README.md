@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (155)
+## Run: one lane's frozen measurement (156)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -222,6 +222,7 @@ line is the first line of the script's own docstring.
 - [`run_presence.py`](run_presence.py): R383 presence_v1: does R282's oi_mcap book depend on whether a row has Binance metrics?.
 - [`run_propfirm.py`](run_propfirm.py): propfirm_v1 (R202): the lab's return streams under prop-firm rule sets, as set out in experiments/propfirm_v1/PREREG.md.
 - [`run_qbasis.py`](run_qbasis.py): qbasis_v1 (R301): the dated-futures basis as a cross-sectional signal on Binance perps (M170, from Chi, Hao, Hu and Ran, J. Futures Markets 2023).
+- [`run_rawlead.py`](run_rawlead.py): R431 rawlead_v1 (M430 + M431): the sub-second lead of Binance's USDT perp book over its USDC perp book on the raw event tape, and what is left of it after this machine's latency and the taker fee.
 - [`run_rebalancing.py`](run_rebalancing.py): R232: fixed equal-weight rebalance cadences versus unchanged buy-and-hold units.
 - [`run_regime.py`](run_regime.py): regime_v1 (R233): flow books A, B and X2 traded only in some trend x volatility regimes, and a regime-wise choice among them (MacroHFT's sub-agents and hyper-agent), against constant size, as set ...
 - [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.

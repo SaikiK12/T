@@ -40,8 +40,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (186)
+## Other registered rounds (done, registered or planned) (187)
 
+- **[rawlead_v1](rawlead_v1/)** R431, REGISTERED PENDING, 148 trials. M430+M431 gate 0: does a taker on Binance's USDC perp book, triggered when the USDT book moves >= 2 bp away, beat a 4 bp/fill fee after this container's own delay (drained socket, Binance-clock fills); frontier over 1-1500 ms, catch-up times and maker markouts; BTC/ETH raw tape 10-29, 10-30, 11-05 ([PREREG](rawlead_v1/PREREG.md))
 - **[okxcarry_v1](okxcarry_v1/)** R430, DONE NULL, 2 trials. M484 gate 0: static short OKX Europe X-Perp / long spot carry on BTC and ETH over every funding print the public API served (2026-08-06 16:00 to 2026-11-09 16:00 UTC, 285 prints), 1x/2x/3x taker round trips, capital at L=2, vs the T-bill ([PREREG](okxcarry_v1/PREREG.md), [FINDINGS](okxcarry_v1/FINDINGS.md))
 - **[paper_quote_scope_v1](paper_quote_scope_v1/)** R429, REGISTERED PENDING, 0 trials. Native DTB3 source scope and paper continuity ([PREREG](paper_quote_scope_v1/PREREG.md), [FINDINGS](paper_quote_scope_v1/FINDINGS.md))
 - **[participant_capture_v1](participant_capture_v1/)** R428, REGISTERED PENDING, 0 trials. Finite raw Lighter participant windows and selected runtime composition preserving inherited paper spend; no alpha measurement ([PREREG](participant_capture_v1/PREREG.md), [FINDINGS](participant_capture_v1/FINDINGS.md))
