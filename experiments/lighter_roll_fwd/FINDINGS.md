@@ -20,3 +20,20 @@ The PREREG and the scorer are frozen and are not changed by these notes.
   - The scorer's own count is printed beside it, so the difference is visible.
   - A DST-aware successor lane (new id, M472) must be frozen before 2027-03-28 to cover summer steps.
 - **Found by:** the hidden-edge audit ([review](../../docs/reviews/hidden_edge_audit_20261104.md)).
+
+## 2026-11-09: lane ABANDONED with 0 traded steps (no host can record the windows)
+- **No step was ever scored.** The scorer's own summary reads `0 of 20 traded steps` (`results/summary.json`).
+- **The first window was missed.** It ran from 23:29 on 2026-11-06 to 00:29 UTC on 11-07, and the chat container
+  that ran `record_lighter_index.py` was down from about 21:00 UTC on 11-06 to 16:40 UTC on 11-09.
+- **The index files stop on 2026-11-06.** `data/lighter_index` holds BRENTOIL and WTI files for 2026-11-03 to 11-06
+  only, all before that first window.
+- **No remaining host can record a window.**
+  - The project's only paper writer since 2026-11-07 is Codex's GitHub Actions runtime (R420, `docs/OPERATIONS.md`).
+  - That runtime is refused by Lighter's WebSocket as a "restricted jurisdiction" (R428).
+  - It also runs hourly jobs, not a stream held open across 23:29-00:29 UTC.
+- **The decision cannot be reached.**
+  - The mechanism stop needs all five November jumps measured, and the 11-06 jump is already lost.
+  - The primary decision needs 20 traded steps by the end of 2027-05.
+- **What this means.** The lane closes as ABANDONED, with no result either way on M462 (whether Lighter's book lags its
+  documented BRENTOIL index step). Running it again would take a new lane id, a host that can reach Lighter and stay
+  up across the step windows, and a DST-aware window (M472).
