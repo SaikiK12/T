@@ -42,7 +42,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 
 ## Other registered rounds (done, registered or planned) (186)
 
-- **[okxcarry_v1](okxcarry_v1/)** R430, REGISTERED PENDING, 2 trials. M484 gate 0: static short OKX Europe X-Perp / long spot carry on BTC and ETH over every funding print the public API served (2026-08-06 16:00 to 2026-11-09 16:00 UTC, 285 prints), 1x/2x/3x taker round trips, capital at L=2, vs the T-bill ([PREREG](okxcarry_v1/PREREG.md))
+- **[okxcarry_v1](okxcarry_v1/)** R430, DONE NULL, 2 trials. M484 gate 0: static short OKX Europe X-Perp / long spot carry on BTC and ETH over every funding print the public API served (2026-08-06 16:00 to 2026-11-09 16:00 UTC, 285 prints), 1x/2x/3x taker round trips, capital at L=2, vs the T-bill ([PREREG](okxcarry_v1/PREREG.md), [FINDINGS](okxcarry_v1/FINDINGS.md))
 - **[paper_quote_scope_v1](paper_quote_scope_v1/)** R429, REGISTERED PENDING, 0 trials. Native DTB3 source scope and paper continuity ([PREREG](paper_quote_scope_v1/PREREG.md), [FINDINGS](paper_quote_scope_v1/FINDINGS.md))
 - **[participant_capture_v1](participant_capture_v1/)** R428, REGISTERED PENDING, 0 trials. Finite raw Lighter participant windows and selected runtime composition preserving inherited paper spend; no alpha measurement ([PREREG](participant_capture_v1/PREREG.md), [FINDINGS](participant_capture_v1/FINDINGS.md))
 - **[lighter_trade_contract_v1](lighter_trade_contract_v1/)** R427, REGISTERED PENDING, 0 trials. Recorded Lighter trade role contract via exact signed base-position identities; two named source conventions ([PREREG](lighter_trade_contract_v1/PREREG.md), [FINDINGS](lighter_trade_contract_v1/FINDINGS.md))
