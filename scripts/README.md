@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (33)
+## Fetch: download archives and public history (34)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -33,6 +33,7 @@ line is the first line of the script's own docstring.
 - [`fetch_mexc_history.py`](fetch_mexc_history.py): Download MEXC public history for every crypto USDT perpetual listed today: hourly contract klines, hourly index klines and settled funding, from 2025-04-01 (funding history starts 2025-04-27 on ...
 - [`fetch_mexc_tradfi.py`](fetch_mexc_tradfi.py): Download MEXC public history for its TradFi USDT perpetuals (contract type 2: stocks, indices, commodities, ETFs).
 - [`fetch_notice_bodies.py`](fetch_notice_bodies.py): Plain text of each Binance delisting article in the notice journal (data/recorders/notices/binance_delisting.csv), from the public CMS detail endpoint.
+- [`fetch_okx_xperp.py`](fetch_okx_xperp.py): OKX Europe X-Perps (MiFID, 5-year expiry crypto contracts with 8-hourly funding; M484): public data, no key.
 - [`fetch_orb_pilot.py`](fetch_orb_pilot.py): Bounded, public, exclusive raw acquisition for the frozen ORB pilot.
 - [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
