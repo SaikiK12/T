@@ -13,6 +13,18 @@ private-host inventory and recovery commands below retain their dated scope;
 do not start a second local loop from them. Missing original private data is
 not restored merely by this takeover.
 
+**Owner update, 2026-11-09: Codex is no longer available.** The owner told Claude, in the session of 2026-11-09,
+that they no longer have Codex.
+- **What keeps running:** the selected GitHub workflow (R420, R429 successor) runs on its own schedule until its
+  dispatch ends on 2026-11-19 00:00 UTC. It needs no agent to run, but nobody maintains it.
+- **Duties without an owner:** the native duties listed below fall to Claude when the owner opens a session:
+  - R392's freeze before 11-17 (its read on or after 11-17);
+  - R404's 11-18 close;
+  - a registered successor if R406 or R413 locks mature after 11-19.
+- **No always-on host:** the chat container sleeps between sessions, so no recorder or daemon runs in between.
+- **Check-in:** a one-shot check-in is scheduled in Claude's session for 2026-11-16 11:20 UTC (trigger
+  `trig_014YTgYRN5RzBkqzCyaKPoW4`) to prepare R392.
+
 **Recovery review, 2026-11-04 (code/metadata only, at `99e9ba1`).** Sizes, host
 observations, test failures and scheduler dates below retain their original dated
 scope. They are not a current inventory or proof that a daemon, archive or
