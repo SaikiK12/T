@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (154)
+## Run: one lane's frozen measurement (155)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -203,6 +203,7 @@ line is the first line of the script's own docstring.
 - [`run_nagel.py`](run_nagel.py): nagel_v1 (R308): the 1-day cross-sectional reversal only after market stress (M325), as set out in experiments/nagel_v1/PREREG.md.
 - [`run_negfundprior.py`](run_negfundprior.py): negfundprior_v1 (R381): R273's negative-funding onsets split by the coin's prior 30-day direction (M458), as set out in experiments/negfundprior_v1/PREREG.md.
 - [`run_oiwick.py`](run_oiwick.py): oiwick_v1 (R252): fade liquidation cascades proxied by a >= 3% hourly open-interest drop plus a >= 3 ATR wick, on the top-50 perps, as set out in experiments/oiwick_v1/PREREG.md.
+- [`run_okxcarry.py`](run_okxcarry.py): R430 okxcarry_v1 (M484, gate 0): a static cash-and-carry on OKX Europe X-Perps, as set out in experiments/okxcarry_v1/PREREG.md.
 - [`run_optflow.py`](run_optflow.py): optflow_v1 (R295): does signed Deribit option flow lead BTC and ETH perp returns over the next 1, 4 or 24 hours? As set out in experiments/optflow_v1/PREREG.md.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
 - [`run_orb_family.py`](run_orb_family.py): Run one frozen four-arm ORB pilot with exact code/data byte verification.

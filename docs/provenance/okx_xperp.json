@@ -1,0 +1,14 @@
+{
+"folder": "data/okx_xperp",
+"source": "OKX Europe public REST, https://eea.okx.com/api/v5/ : public/instruments (FUTURES, crypto X-Perps), public/funding-rate-history, market/history-mark-price-candles (1D), market/history-index-candles (1D); no key",
+"script": "scripts/fetch_okx_xperp.py (User-Agent lab-research/1.0, 0.25 s between requests)",
+"recorded_utc": "2026-11-09T17:39:23Z",
+"runs": ["2026-11-06 (failed: HBAR-USD_UM_XPERP-310815 once, connection reset)", "2026-11-09 (no failure)"],
+"snapshot_for_R430": {"folder": "data/okx_xperp/snap_20261109", "files": {
+  "funding.parquet": {"rows": 63716, "instruments": 167, "sha256": "d39df46e17975b9790edfe01388745eac340ba5258f76d09d6a09d4aea1a4b71"},
+  "mark_1d.parquet": {"sha256": "1b2760e32cfd0d1d7a4567936930a975fff76b945f1145a32edcd17acae8ba10"},
+  "index_1d.parquet": {"sha256": "f42ab5c65974abe2dca2349d1b534e1bc4f0c3b4e71195e3e86b256ab1beabe9"},
+  "instruments.json": {"sha256": "b47d4f9644c7a5be51b27086aebfe72515c3e7e3ee00a348dbed2262e9eac7b5"}}},
+"coverage": "BTC and ETH X-Perp funding: 286 prints each, 2026-08-06 16:00 to 2026-11-09 16:00 UTC, every 8 h, realizedRate on all; the API keeps about 3 months, so later runs only add prints",
+"notes": "Not committed (data/ is gitignored); verified by hash in experiments/okxcarry_v1/PREREG.md. Codex's runtime host received HTTP 403 from eea.okx.com (M484 note); the Claude container did not."
+}
