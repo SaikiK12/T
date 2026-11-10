@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (26)
+## Running or armed registered rounds (27)
 
+- **[hlspot_pm_v1](hlspot_pm_v1/)** R445, RUNNING PENDING, 1 trial. M504 R444's Hyperliquid spot-against-perp carry on HYPE and BTC only (the spot tokens with a listed portfolio-margin LTV), fully deployed: capital split equally across the pairs held, spot paid in full and backing the perp under portfolio margin with a 10% USDC buffer (capital N x 1.1); gate 0 (stop only) on 2025-01-01..2026-11-10, gate 1 forward from 2026-11-11 ([PREREG](hlspot_pm_v1/PREREG.md))
 - **[xperp_hl_v1](xperp_hl_v1/)** R443, RUNNING PENDING, 1 trial. M502 cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps (the two perp venues found reachable from France): short the venue paying more trailing 7-day funding when the spread is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each venue), long the other; gate 0 reported only, gate 1 forward from 2026-11-11 ([PREREG](xperp_hl_v1/PREREG.md), [FINDINGS](xperp_hl_v1/FINDINGS.md))
 - **[xperp_carry_v1](xperp_carry_v1/)** R441, RUNNING PENDING, 1 trial. M490 OKX Europe alt X-Perp carry: short the crypto X-Perps with trailing 7-day realized funding >= 10%/yr (exit < 5%, 10 slots, $100k volume), long OKX EEA spot; gate 0 reported on the held window (seen cross-section), gate 1 forward from 2026-11-11 on claude/okx-xperp-data ([PREREG](xperp_carry_v1/PREREG.md), [FINDINGS](xperp_carry_v1/FINDINGS.md))
 - **[xfund5_fwd](xfund5_fwd/)** R440, RUNNING PENDING, 1 trial. R439's five-venue carry book (binance+gate+hyperliquid+mexc+kucoin L14d th10% K20) forward on paper from 2026-11-11 ([PREREG](xfund5_fwd/PREREG.md), [journal](xfund5_fwd/journal/))

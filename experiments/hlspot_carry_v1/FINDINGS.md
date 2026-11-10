@@ -59,6 +59,18 @@ less than the 4% hurdle on its capital. Gate 1 is not run. Weekly status reads c
   were not confirmed.
 - If capital were N × 1/2 instead of N × 3/2, the same book would read +7.70%/yr at 1x, an excess of +3.70 points.
 - This changes the capital, not the trades. Liquidation risk on the perp is not modelled.
+- **Correction (same day, after a second read of the docs).** The N × 1/2 figure is an upper bound, not a reading:
+  - Capital of N × 1/2 means borrowing half of the spot's cost in USDC. The docs give the borrow rate as
+    5% + 4.75 × max(0, utilization − 0.8) a year, so the borrow is never free.
+  - At 5% on half of each held slot's spot (3.8 of 10 slots held), the borrow costs about 1.9%/yr of book capital.
+    The reading falls to about +5.8%/yr, an excess of about +1.8 points. This also assumes the same collateral can
+    back both the borrow and the perp's margin; the docs do not say so.
+  - With no borrow (spot paid in full, and the spot backing the perp's margin), capital is N. The book then reads
+    +3.85%/yr at 1x, an excess of −0.15 points.
+  - The docs list LTVs for HYPE and BTC only; the other Unit coins are not listed. They also require an account value
+    above $10,000 (or $5M of weighted volume).
+  - So portfolio margin does not lift this book to the hurdle plus 3 points.
+  - These figures come from summarized fetches of the docs' portfolio-margin page and its FAQ, not a verbatim read.
 
 ## Power
 - **Frozen statistic** (daily sd of the excess): 0.045% a day, so the detectable excess (t 2.5, 80% power) is +5.7
@@ -74,8 +86,9 @@ less than the 4% hurdle on its capital. Gate 1 is not run. Weekly status reads c
 These are not tested here; each would be a new lane, read against this one.
 - **A fully deployed variant:** slots sized to the pairs held, or a lower entry band. Measured per held slot, it is
   about +2.7 points over the hurdle before any selection change.
-- **Portfolio margin:** this read gives the capital effect, but it needs the venue's eligibility, caps and a
-  liquidation model.
+- **Portfolio margin:** this read gives the capital effect (a no-borrow book on capital N reads −0.15 points), but it
+  needs the venue's eligibility, caps and a liquidation model. R445 (`experiments/hlspot_pm_v1`) tests the HYPE and
+  BTC pairs, the two with a listed LTV, fully deployed under portfolio margin, forward only.
 
 ## Limits
 - **Survivor universe:** today's pairs, by a name rule. Unit coins that were delisted are absent.
