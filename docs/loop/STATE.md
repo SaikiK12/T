@@ -35,7 +35,9 @@ for breakthroughs at 100% of compute".
 R392 is being done now.
 
 ## Lenses last used
-1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10). Next: 2, then 3+4.
+1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,
+2026-11-10). Next: 5, then 6+7. Three waves in a row produced no new testable row: run a wave only when a lane is
+waiting, and pick tests from our own measurements first.
 
 ## Tick log
 - **2026-11-09, tick 1 (by hand).**
@@ -84,3 +86,14 @@ R392 is being done now.
     eventual small real test can answer.
   - **Ops lesson:** `scripts/catalog.py` rewrites `scripts/README.md`, which the forward orchestrator hashes as
     code. Running it during a batch marked R404 and R278 FAILED, though their ticks completed.
+- **2026-11-10, wave 3 and R438 carry_v2_audit_kc_v1 (registered test, gate 0): CONFIRMED.**
+  - **Forward batch:** R294, R285 and R415 completed. All forward journals are committed.
+  - **Lenses 2 and 3+4:** about 9 ideas, no new row (all duplicates or dead by arithmetic). Two carry regime
+    variables were logged against M136: the floor share and cross-venue dispersion.
+  - **R438:** R279's KuCoin books on the M468 engine. Both survive: gate+kucoin +14.98%/yr, t 9.63; binance+kucoin
+    +11.28%/yr, t 8.50.
+  - **Measured post hoc:** v2's funding gain is notional drift, mostly a price-funding covariance rather than leverage
+    (mean notional/entry 0.91-1.12). This corrects R437's "leverage, not edge" (addendum there). Constant-notional
+    figures stay the conservative read.
+  - **Deduction:** every forward carry book except R294 is now accounting-clean on held data. R294 waits for M469
+    (R404's costs on 11-18). The binding constraint is still forward evidence and execution, not ideas.

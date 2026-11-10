@@ -1,0 +1,5 @@
+{"book": "gate+kucoin L14d th5% K20", "v1": {"held": 19.57, "funding_pct": 13.39, "price_pct": -0.22, "cost_pct": 1.42, "net_pct": 11.76, "trades": 1153}, "v2": {"held": 19.6, "funding_pct": 17.0, "price_pct": -0.62, "cost_pct": 1.4, "net_pct": 14.98, "trades": 1140, "price_by_reason_pct": {"blowout": -0.21, "dead": 0.01, "end": 0.01, "spread": -0.43}, "exits": {"spread": 1115, "end": 20, "blowout": 4, "dead": 1}}}
+{"book": "binance+kucoin L14d th5% K20", "v1": {"held": 19.62, "funding_pct": 12.72, "price_pct": -0.49, "cost_pct": 1.44, "net_pct": 10.8, "trades": 1168}, "v2": {"held": 19.62, "funding_pct": 13.95, "price_pct": -1.22, "cost_pct": 1.44, "net_pct": 11.28, "trades": 1173, "price_by_reason_pct": {"blowout": -0.16, "dead": 0.01, "end": -0.01, "spread": -1.06}, "exits": {"spread": 1150, "end": 20, "blowout": 2, "dead": 1}}}
+SENSITIVITY
+{"book": "gate+kucoin L14d th5% K20", "excl_trades": 5, "ann_1x": 14.93, "ann_2x": 13.53, "nw_t": 9.91, "half1_bp": 2.03, "half2_bp": 6.15}
+{"book": "binance+kucoin L14d th5% K20", "excl_trades": 3, "ann_1x": 11.19, "ann_2x": 9.75, "nw_t": 10.07, "half1_bp": 1.55, "half2_bp": 4.58}

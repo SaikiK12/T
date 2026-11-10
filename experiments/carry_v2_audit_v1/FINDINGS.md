@@ -106,3 +106,17 @@ Annual P&L on book capital, split into funding, price and costs (v1 → v2):
 - **The 20% blowout threshold** is v2's fixed constant and was not varied. The sensitivity table drops those trades;
   it does not re-price them at a realistic exit.
 - **Costs** are R275's flat 7/14/21 bp per leg. R402/R404 measure long-tail book costs separately.
+
+## Addendum (2026-11-10, measured in R438; post hoc, no decision changes)
+Point 1 above ("leverage drift, not new edge") was an assumption. R438's `diagnostics/drift.py` measured it on these
+seven books.
+- **Drift is the source of the funding rise.** Pricing v2's funding on constant entry notional gives back v1's funding
+  on the Hyperliquid books and on gate+mexc. On binance+gate (R390 A) and all four, about +1 point a year comes from
+  the other v2 changes.
+- **About half of the drift is leverage, the rest covariance.**
+  - Average notional held is 0.91-1.12 times entry. That accounts for about half of the drift on the Hyperliquid books,
+    gate+mexc and all four.
+  - It accounts for almost none on R390 A: mean notional 1.014, drift +1.15.
+  - The rest is a covariance: funding spreads widen on legs whose price rose since entry.
+- **What this means:** a real fixed-quantity position would collect that covariance. v1 stays the conservative
+  figure, but it is not the only fair one. Tables and caveats are in `experiments/carry_v2_audit_kc_v1/FINDINGS.md`.
