@@ -14,9 +14,8 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (27)
+## Running or armed registered rounds (26)
 
-- **[hlspot_carry_v1](hlspot_carry_v1/)** R444, RUNNING PENDING, 1 trial. M503 Hyperliquid spot-against-perp carry on one venue: long the USDC spot pair (HYPE or a Unit-bridged coin such as UBTC), short the same coin's perp when its trailing 7-day funding is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each leg); gate 0 (stop only) on 2025-01-01..2026-11-10, gate 1 forward from 2026-11-11 ([PREREG](hlspot_carry_v1/PREREG.md))
 - **[xperp_hl_v1](xperp_hl_v1/)** R443, RUNNING PENDING, 1 trial. M502 cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps (the two perp venues found reachable from France): short the venue paying more trailing 7-day funding when the spread is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each venue), long the other; gate 0 reported only, gate 1 forward from 2026-11-11 ([PREREG](xperp_hl_v1/PREREG.md), [FINDINGS](xperp_hl_v1/FINDINGS.md))
 - **[xperp_carry_v1](xperp_carry_v1/)** R441, RUNNING PENDING, 1 trial. M490 OKX Europe alt X-Perp carry: short the crypto X-Perps with trailing 7-day realized funding >= 10%/yr (exit < 5%, 10 slots, $100k volume), long OKX EEA spot; gate 0 reported on the held window (seen cross-section), gate 1 forward from 2026-11-11 on claude/okx-xperp-data ([PREREG](xperp_carry_v1/PREREG.md), [FINDINGS](xperp_carry_v1/FINDINGS.md))
 - **[xfund5_fwd](xfund5_fwd/)** R440, RUNNING PENDING, 1 trial. R439's five-venue carry book (binance+gate+hyperliquid+mexc+kucoin L14d th10% K20) forward on paper from 2026-11-11 ([PREREG](xfund5_fwd/PREREG.md), [journal](xfund5_fwd/journal/))
@@ -44,8 +43,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (197)
+## Other registered rounds (done, registered or planned) (198)
 
+- **[hlspot_carry_v1](hlspot_carry_v1/)** R444, DONE NULL, 1 trial. M503 Hyperliquid spot-against-perp carry on one venue: long the USDC spot pair (HYPE or a Unit-bridged coin such as UBTC), short the same coin's perp when its trailing 7-day funding is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each leg); gate 0 (stop only) on 2025-01-01..2026-11-10, gate 1 forward from 2026-11-11 ([PREREG](hlspot_carry_v1/PREREG.md), [FINDINGS](hlspot_carry_v1/FINDINGS.md))
 - **[xperp_stock_v1](xperp_stock_v1/)** R442, DONE NULL, 1 trial. M501 OKX Europe stock X-Perp carry: short the X-Perps of 62 US-listed stocks with trailing 7-day realized funding >= 10%/yr, long the same stock at an EU broker (index as hedge price), actions Tue-Sat 00:00 UTC; gate 0 (stop only) on unseen held data, gate 1 forward from 2026-11-11 ([PREREG](xperp_stock_v1/PREREG.md), [FINDINGS](xperp_stock_v1/FINDINGS.md))
 - **[carry5_v1](carry5_v1/)** R439, DONE CONFIRMED, 1 trial. R275's all-four carry rule (L14d th10% K20) as one book over five venues (Binance, Gate, Hyperliquid, MEXC, KuCoin) on the M468 engine, paired against the four-venue book ([PREREG](carry5_v1/PREREG.md), [FINDINGS](carry5_v1/FINDINGS.md))
 - **[carry_v2_audit_kc_v1](carry_v2_audit_kc_v1/)** R438, DONE CONFIRMED, 2 trials. Accounting audit: R277's two KuCoin carry books (forward R279 A gate+kucoin, B binance+kucoin) re-run on the M468 engine (lab/xfund_v2) with R437's frozen runner ([PREREG](carry_v2_audit_kc_v1/PREREG.md), [FINDINGS](carry_v2_audit_kc_v1/FINDINGS.md))

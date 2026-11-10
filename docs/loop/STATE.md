@@ -189,3 +189,12 @@ waiting, and pick tests from our own measurements first.
     - the funding spread earns +14.4%/yr, but costs take −14.6%/yr.
     - The spread flips within about a week (mean hold 7.7 days), and a 39 bp taker round trip on two venues eats it.
   - Gate 1 is forward from 2026-11-11 through `claude-xperp-reads.yml`.
+- **2026-11-10, R444 frozen and NULL (stop) at gate 0: Hyperliquid spot against Hyperliquid perp (M503).**
+  - `scripts/record_hl_spot.py` writes `hl_spot/` on the same data branch: 12 pairs (HYPE and Unit coins with a
+    same-name perp), funding from 2024-11-01, both legs' daily candles. Data commit 814573b is gate 0.
+  - Over 679 days (2025-01-01..2026-11-10) the book nets +2.57%/yr on capital at 1x, an excess of −1.43 points
+    (t −3.66). It is steady: both years about +2.5, every held pair positive, worst day −0.42%.
+  - It fails on idle cash: 3.8 of 10 slots held. Per held slot it earns about +6.7%/yr on that slot's capital, which
+    is +2.7 points over the hurdle and still under the +3-point bar.
+  - **Deduction for France:** the Hyperliquid-only cash-and-carry is real but thin. It is a T-bill-plus-a-little
+    product, not a breakthrough. The confirmed carry edges remain on venues that exclude France.

@@ -100,6 +100,21 @@ futures. R441 (crypto X-Perps hedged with OKX EEA spot) and R442 (stock X-Perps 
 test it on paper. Before any real use the owner still has to confirm in the app that his account can open X-Perps:
 the appropriateness test and the account's country decide.
 
+## What the France-reachable routes earned on paper (same day)
+Each lane was frozen before its own statistic. Excess is over a 4% hurdle on the book's capital, at 1x costs.
+
+| Lane | Book | Window | Excess, points | NW t | Verdict |
+|---|---|---|---|---|---|
+| R441 | OKX crypto X-Perp short, OKX EEA spot long | 83 days, seen | +1.37 | 0.62 | reported; forward to 2027 |
+| R442 | OKX stock X-Perp short, stock long at a broker | 83 days | −4.50 | −4.65 | NULL (stop) |
+| R443 | OKX X-Perps against Hyperliquid perps, by funding spread | 83 days, seen | −3.05 | −0.55 | reported; forward to 2027 |
+| R444 | Hyperliquid spot long, Hyperliquid perp short | 679 days | −1.43 | −3.66 | NULL (stop) |
+
+- **Read:** what is reachable from France earns about the T-bill, plus or minus a point or two.
+  - The cross-venue spread (R443) is large before costs but flips within a week, so a two-venue round trip eats it.
+  - The Hyperliquid-only carry (R444) is steady but leaves most of its slots in cash.
+- The +10 to +18%/yr carry books stay on venues that exclude France (table above).
+
 ## Not checked
 - Binance's own notice and restricted-country page.
 - Hyperliquid's primary terms.

@@ -35,14 +35,14 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-carry-paper.yml` | hourly 00:29-07:29 | journals of R278, R279, R294, R390, R440 (carry books), R285 and R415; lane data in the Actions cache |
 | `claude-usopen.yml` | 13:01, 13:31, 14:01, 14:31 on weekdays (the daemon starts in the hour before 10:00 New York), 00:47 daily | `experiments/usopen_fwd/journal/` (R371) |
 | `claude-cboe-recorder.yml` | 13:12 and 21:33 on weekdays | data branch `claude/cboe-chain-data` (QQQ/SPY/SPX chains) |
-| `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data` (OKX Europe X-Perps) |
-| `claude-xperp-reads.yml` | Mondays 04:23 | R441 status reads, and its frozen decisions after 2027-02-08 and 2027-05-09; R442 status only |
+| `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data`: OKX Europe X-Perps; Hyperliquid perps matching them under `hl/`; Hyperliquid HYPE and Unit spot pairs with their perps under `hl_spot/` |
+| `claude-xperp-reads.yml` | Mondays 04:23 | status reads of R441, R442, R443 and R444, and the frozen decisions of R441 and R443 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
 
 - **Check them:** the repository's Actions tab. A red run names the lane that failed; the others still ran.
 - **Stop one:** disable that workflow in the Actions tab. Never run the same lane by hand while its workflow is on.
 - **Decision dates:**
   - R440: 90 and 180 scored days, 2027-02-09 and 2027-05-10;
-  - R441: 2027-02-08 and 2027-05-09, written by `claude-xperp-reads.yml` itself;
+  - R441 and R443: 2027-02-08 and 2027-05-09, written by `claude-xperp-reads.yml` itself;
   - R371: its 125th and 500th scored days.
 - **Not covered:** GitHub disables scheduled workflows after 60 days without repository activity. The bots' own
   commits should count as activity; if runs stop, re-enable them in the Actions tab.

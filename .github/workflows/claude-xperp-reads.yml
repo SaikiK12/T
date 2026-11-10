@@ -1,9 +1,9 @@
 name: OKX X-Perp lane reads (Claude)
-# Weekly reads of R441 (scripts/run_xperp_carry.py), R442 (scripts/run_xperp_stock_carry.py) and R443
-# (scripts/run_xperp_hl.py) on the recorded data branch claude/okx-xperp-data:
+# Weekly reads of R441 (scripts/run_xperp_carry.py), R442 (scripts/run_xperp_stock_carry.py), R443
+# (scripts/run_xperp_hl.py) and R444 (scripts/run_hlspot_carry.py) on the recorded data branch claude/okx-xperp-data:
 # a status read (no decision) for each, and the frozen 90- and 180-day decisions of the lanes marked `looks` once a
-# look date has passed (--until the look date, written once to results/look90 or results/look180). R442 stopped at
-# gate 0 (NULL), so it gets status reads only.
+# look date has passed (--until the look date, written once to results/look90 or results/look180). R442 and R444
+# stopped at gate 0 (NULL), so they get status reads only.
 # Single writer of these lanes' results folders. Paper only.
 on:
   schedule:
@@ -46,9 +46,9 @@ jobs:
           set -uo pipefail
           today=$(date -u +%F)
           fail=0
-          # R442 stopped at gate 0 (NULL): status reads only, never a look decision.
+          # R442 and R444 stopped at gate 0 (NULL): status reads only, never a look decision.
           for pair in "xperp_carry_v1 run_xperp_carry.py looks" "xperp_stock_v1 run_xperp_stock_carry.py status" \
-                      "xperp_hl_v1 run_xperp_hl.py looks"; do
+                      "xperp_hl_v1 run_xperp_hl.py looks" "hlspot_carry_v1 run_hlspot_carry.py status"; do
             set -- $pair
             lane=$1; script=scripts/$2; mode=$3
             echo "== $lane status"
@@ -72,7 +72,7 @@ jobs:
           set -eu
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A experiments/{xperp_carry_v1,xperp_stock_v1,xperp_hl_v1}/results
+          git add -A experiments/{xperp_carry_v1,xperp_stock_v1,xperp_hl_v1,hlspot_carry_v1}/results
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -q -m "X-Perp and Hyperliquid lane weekly reads ${GITHUB_RUN_ID}"
           br="${{ github.event.repository.default_branch }}"
