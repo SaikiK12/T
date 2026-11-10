@@ -126,3 +126,8 @@ waiting, and pick tests from our own measurements first.
   - `REC_CBOE` had stopped with the container restart, and the QQQ/SPY/SPX chains before 2026-11-10 are gone (Cboe
     serves only today's chain). Restarted at 13:40 UTC (pre-open map recorded). It runs only when a batch or a wake
     runs it.
+- **2026-11-10, ops: the container is reclaimed while the session is idle.** The VM rebooted at 14:52 UTC (uptime 0)
+  and every daemon died with it; files survive. This, not a bug in the lane, is why R371's daemon kept vanishing and
+  missed 2026-11-09. Daemons are reliable only while a turn is active. The carry ticks and R440 run at a wake, so they
+  are unaffected. R371 decides at 10:00 New York (15:00 UTC in winter): the 14:51 wake starts the daemon and stays
+  active until the day's ticket is written.
