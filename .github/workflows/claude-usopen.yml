@@ -5,7 +5,9 @@ name: R371 US-open paper lane (Claude)
 # Paper only: public endpoints, no key, no order.
 on:
   schedule:
-    - cron: '31 13,14 * * 1-5'   # one of the two is 30 min before 10:00 New York (winter 15:00 UTC, summer 14:00 UTC)
+    - cron: '1,31 13,14 * * 1-5' # two runs fall within 65 min before 10:00 New York (winter 15:00 UTC, summer
+                                 # 14:00 UTC): the earlier one runs the daemon, the later one is a backup when
+                                 # GitHub delays a scheduled start
     - cron: '47 0 * * *'         # scoring pass after the 24:00 UTC exit
   workflow_dispatch:
 permissions:
@@ -17,7 +19,7 @@ jobs:
   lane:
     if: github.repository == 'SaikiK12/T'
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
@@ -48,14 +50,14 @@ jobs:
           now = dt.datetime.now(dt.timezone.utc).astimezone(ny)
           d = now.replace(hour=10, minute=0, second=0, microsecond=0)
           m = (d - now).total_seconds() / 60
-          print(int(m) + 1 if 0 < m <= 50 else -1)
+          print(int(m) + 1 if 0 < m <= 65 else -1)
           PY
           )
           if [ "$left" -gt 0 ]; then
             echo "10:00 New York in about $left min: daemon until 6 min after it"
             timeout $(( (left + 6) * 60 )) .venv/bin/python scripts/forward_usopen.py run || true
           else
-            echo "10:00 New York is not within 50 min: one tick (scoring, missed-day log, status)"
+            echo "10:00 New York is not within 65 min: one tick (scoring, missed-day log, status)"
           fi
           .venv/bin/python scripts/forward_usopen.py tick | tail -n 20
           tail -n 15 data/logs/usopen_fwd.log 2>/dev/null || true

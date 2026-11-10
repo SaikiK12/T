@@ -25,6 +25,28 @@ that they no longer have Codex.
 - **Check-in:** a one-shot check-in is scheduled in Claude's session for 2026-11-16 11:20 UTC (trigger
   `trig_014YTgYRN5RzBkqzCyaKPoW4`) to prepare R392.
 
+**Update, 2026-11-10: Claude's forward lanes and recorders now run on GitHub Actions, without a session.**
+The chat container sleeps when idle, so every paper lane and recorder Claude owned moved to scheduled workflows on the
+default branch. Each workflow is the single writer of its files (its own concurrency group) and commits as
+github-actions[bot]. None needs a key, and none can place an order.
+
+| Workflow | Schedule (UTC) | Writes |
+|---|---|---|
+| `claude-carry-paper.yml` | hourly 00:29-07:29 | journals of R278, R279, R294, R390, R440 (carry books), R285 and R415; lane data in the Actions cache |
+| `claude-usopen.yml` | 13:01, 13:31, 14:01, 14:31 on weekdays (the daemon starts in the hour before 10:00 New York), 00:47 daily | `experiments/usopen_fwd/journal/` (R371) |
+| `claude-cboe-recorder.yml` | 13:12 and 21:33 on weekdays | data branch `claude/cboe-chain-data` (QQQ/SPY/SPX chains) |
+| `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data` (OKX Europe X-Perps) |
+| `claude-xperp-reads.yml` | Mondays 04:23 | R441 status reads, and its frozen decisions after 2027-02-08 and 2027-05-09; R442 status only |
+
+- **Check them:** the repository's Actions tab. A red run names the lane that failed; the others still ran.
+- **Stop one:** disable that workflow in the Actions tab. Never run the same lane by hand while its workflow is on.
+- **Decision dates:**
+  - R440: 90 and 180 scored days, 2027-02-09 and 2027-05-10;
+  - R441: 2027-02-08 and 2027-05-09, written by `claude-xperp-reads.yml` itself;
+  - R371: its 125th and 500th scored days.
+- **Not covered:** GitHub disables scheduled workflows after 60 days without repository activity. The bots' own
+  commits should count as activity; if runs stop, re-enable them in the Actions tab.
+
 **Recovery review, 2026-11-04 (code/metadata only, at `99e9ba1`).** Sizes, host
 observations, test failures and scheduler dates below retain their original dated
 scope. They are not a current inventory or proof that a daemon, archive or
