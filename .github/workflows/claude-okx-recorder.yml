@@ -3,7 +3,8 @@ name: OKX X-Perp recorder (Claude)
 # candles and book-cost snapshots (scripts/record_okx_xperp.py), and, under hl/, Hyperliquid funding and daily candles
 # of the coins that match an OKX crypto X-Perp (scripts/record_hl_daily.py), and, under hl_spot/, Hyperliquid's HYPE and
 # Unit spot pairs with their perps (scripts/record_hl_spot.py), and, under vaults/, the public liquidity vaults HLP
-# (Hyperliquid) and LLP (Lighter) (scripts/record_dex_vaults.py). Public data only: no key, no order, no deposit.
+# (Hyperliquid) and LLP (Lighter) (scripts/record_dex_vaults.py), and, under lit/, Lighter's LIT perp funding and LIT
+# candles (scripts/record_lit_hedge.py). Public data only: no key, no order, no deposit.
 on:
   schedule:
     - cron: '37 2,14 * * *'
@@ -43,6 +44,10 @@ jobs:
         id: vaults
         if: always() && steps.rec.outcome != 'skipped'
         run: python3 scripts/record_dex_vaults.py --out .okx-data/vaults
+      - name: Record Lighter's LIT perp funding and LIT candles (the LLP stake's hedge)
+        id: lit
+        if: always() && steps.rec.outcome != 'skipped'
+        run: python3 scripts/record_lit_hedge.py --out .okx-data/lit
       - name: Commit recordings
         if: always() && steps.rec.outcome != 'skipped'
         run: |
