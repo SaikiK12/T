@@ -1,11 +1,11 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-11-06T01:51:18.164460+00:00",
+ "updated": "2026-11-10T08:32:15.234919+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.074,
+  "gate": 0.945,
   "kucoin": 1.0
  },
  "data": {
@@ -45,12 +45,6 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.3651
-   },
-   {
-    "coin": "MYXUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.358
    },
    {
     "coin": "TRADOORUSDT",
@@ -93,12 +87,6 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.4904
-   },
-   {
-    "coin": "ZILUSDT",
-    "long": "kucoin",
-    "short": "gate",
-    "spread_in": 0.4048
    },
    {
     "coin": "ZESTUSDT",
@@ -159,15 +147,27 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.4851
+   },
+   {
+    "coin": "ERAUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.9079
+   },
+   {
+    "coin": "1000CHEEMSUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.6449
    }
   ],
-  "scored_days": 15,
-  "late_days": 11,
-  "total": 0.0008337933999999997,
-  "total_2x": -0.0008462065999999999,
-  "total_3x": -0.0025262066000000002,
-  "total_close": 0.0017846963,
-  "nw_t": 0.42142074095186616,
+  "scored_days": 19,
+  "late_days": 14,
+  "total": 0.0019038983,
+  "total_2x": 8.38983000000003e-05,
+  "total_3x": -0.0017361017000000001,
+  "total_close": 0.0028548012,
+  "nw_t": 0.8660657723005186,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -192,12 +192,6 @@
     "spread_in": 0.4831
    },
    {
-    "coin": "AGTUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.4
-   },
-   {
     "coin": "SUNUSDT",
     "long": "binance",
     "short": "kucoin",
@@ -208,12 +202,6 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.3911
-   },
-   {
-    "coin": "ZILUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.6088
    },
    {
     "coin": "AVAUSDT",
@@ -252,22 +240,10 @@
     "spread_in": 0.4558
    },
    {
-    "coin": "RSRUSDT",
-    "long": "binance",
-    "short": "kucoin",
-    "spread_in": 0.3521
-   },
-   {
     "coin": "USUSDT",
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.3515
-   },
-   {
-    "coin": "IRYSUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.3681
    },
    {
     "coin": "ZESTUSDT",
@@ -298,18 +274,42 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.5271
+   },
+   {
+    "coin": "GTCUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.5894
+   },
+   {
+    "coin": "STARUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.4363
+   },
+   {
+    "coin": "1000CHEEMSUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.5495
+   },
+   {
+    "coin": "BMTUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.447
    }
   ],
-  "scored_days": 15,
-  "late_days": 11,
-  "total": 0.0020436861,
-  "total_2x": 0.0007836860999999998,
-  "total_3x": -0.00047631390000000054,
-  "total_close": 0.0031112689999999994,
-  "nw_t": 1.6789709549169083,
-  "max_drawdown": -0.0008626846,
+  "scored_days": 19,
+  "late_days": 14,
+  "total": 0.0023502787999999998,
+  "total_2x": 0.0007402787999999997,
+  "total_3x": -0.0008697212000000008,
+  "total_close": 0.0032841536,
+  "nw_t": 2.027479685153631,
+  "max_drawdown": -0.0011970589,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-11-06"
+ "last_day": "2026-11-10"
 }
