@@ -112,7 +112,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (170)
+## Run: one lane's frozen measurement (171)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -154,6 +154,7 @@ line is the first line of the script's own docstring.
 - [`run_delay.py`](run_delay.py): delay_v1 (R213): the flow books with entry delayed d hours after the signal bar, as set out in experiments/delay_v1/PREREG.md.
 - [`run_delist.py`](run_delist.py): R267 delist_v1: the Binance delisting-notice short on the hourly archive (experiments/delist_v1/PREREG.md).
 - [`run_dependent_null.py`](run_dependent_null.py): R321 registered null-only size/power study; no market outcome is read.
+- [`run_dexvault.py`](run_dexvault.py): dexvault_v1 (R446, M505): a deposit in each of two public liquidity vaults on perp DEXes that do not exclude France, Hyperliquid's HLP and Lighter's LLP, read as a return on capital against the 4% ...
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
