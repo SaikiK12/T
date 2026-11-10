@@ -174,7 +174,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
   for OKX Europe X-Perps (all 30 EEA countries), so R441 (crypto X-Perps vs spot), R442 (stock X-Perps vs the
   stock at a broker) and R443 (OKX X-Perps against Hyperliquid perps) test that route on recorded data; R444 tests
   long spot against short perp on Hyperliquid alone, and R445 the same on HYPE and BTC, fully deployed under
-  portfolio margin (forward to 2027).
+  portfolio margin (forward to 2027). R446 holds deposits in Hyperliquid's HLP and Lighter's LLP vaults: about
+  +10.7%/yr each in 2026, short the venue's tail; LLP needs staked LIT (forward to 2027).
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.

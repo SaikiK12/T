@@ -208,3 +208,13 @@ waiting, and pick tests from our own measurements first.
   - The level is falling: +15.2%/yr in 2025, +4.2%/yr in 2026 (about the hurdle). The pairs were picked after R444,
     so gate 0 is not evidence; gate 1 decides on 2027-02-08 and 2027-05-09 and has about a one-in-four chance of
     passing even at gate 0's full level.
+- **2026-11-10, R446 frozen, gate 0 CONTINUE for both books (stops only): deposits in HLP and LLP (M505).**
+  - New recorder `scripts/record_dex_vaults.py`, run by `claude-okx-recorder.yml` into `vaults/`. The PREREG was frozen
+    before either vault's return series was read.
+  - HLP: +14.30%/yr, excess +10.30, t 1.87 on two-week periods; 2026 +10.65%/yr (t 0.89). Gate 1 can detect only
+    about +19 points at 180 days, so a NULL there is the likely read.
+  - LLP: +73.26%/yr from a small pool's first months; 2026 +10.80%/yr, excess +6.80, t 3.27. It lost 5.35% on
+    2025-10-11. At 2026's level, gate 1 has roughly an even chance at 90 days and about seven in ten at 180, if no
+    crash day falls in the window.
+  - Read after the run: LLP takes deposits only against staked LIT (1 LIT per 10 USDC, 6% staking APR, 3-day
+    unstaking). R446 measures the vault per USDC; a book with the stake is a new lane.

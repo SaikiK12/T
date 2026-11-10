@@ -110,6 +110,8 @@ Each lane was frozen before its own statistic. Excess is over a 4% hurdle on the
 | R443 | OKX X-Perps against Hyperliquid perps, by funding spread | 83 days, seen | −3.05 | −0.55 | reported; forward to 2027 |
 | R444 | Hyperliquid spot long, Hyperliquid perp short | 679 days | −1.43 | −3.66 | NULL (stop) |
 | R445 | R444 on HYPE and BTC only, fully deployed, spot backing the perp | 679 days, seen | +6.06 (2026: +0.15) | 3.67 | reported; forward to 2027 |
+| R446 | Deposit in Hyperliquid's HLP vault | 2025-01..2026-11, APRs known | +10.30 (2026: +6.65) | 1.87 | reported; forward to 2027 |
+| R446 | Deposit in Lighter's LLP pool (needs staked LIT) | 2025-01..2026-11, APRs known | +69.26 (2026: +6.80) | 3.16 | reported; forward to 2027 |
 
 - **Read:** what is reachable from France earns about the T-bill, plus or minus a point or two.
   - The cross-venue spread (R443) is large before costs but flips within a week, so a two-venue round trip eats it.
@@ -118,6 +120,10 @@ Each lane was frozen before its own statistic. Excess is over a 4% hurdle on the
     hurdle. Its pairs were picked after R444, so only its forward read (2027-02-08, 2027-05-09) can decide.
   - R288's DEX-only cross-venue book (Hyperliquid against Lighter, both reachable) earned +3.53%/yr at 1x on seen
     rows, below the hurdle.
+  - R446's vaults earned about +10.7%/yr each in 2026, so about +6.7 points over the hurdle, with no trading by the
+    depositor. LLP's 2026 level has t 3.27 on its own. It is a short position in the venue's tail: LLP lost 5.35% on
+    2025-10-11. LLP also needs 1 LIT staked per 10 USDC, so its book as measured leaves out that stake and its price
+    risk.
 - The +10 to +18%/yr carry books stay on venues that exclude France (table above).
 
 ## Not checked
