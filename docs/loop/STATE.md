@@ -171,3 +171,11 @@ waiting, and pick tests from our own measurements first.
   - Gate 1 for both is forward from 2026-11-11, with looks on 2027-02-08 and 2027-05-09. `claude-xperp-reads.yml`
     (Mondays 04:23 UTC) writes status reads and, once each look date has passed, the frozen decision. So no session
     is needed for the decision.
+  - **Gate 0 results (same day):**
+    - **R442 is NULL (stop).** Net −0.50%/yr on capital at 1x, excess −4.5 points, NW t −4.65. The hedge works (price
+      part flat). Funding above 10%/yr lasts about two weeks, which is too short to pay a 50 bp round trip, and half
+      the slots sit idle.
+    - **R441 is reported only.** Net +5.37%/yr at 1x, excess +1.37 points, t 0.62; 2x excess −0.25. Gate 1 needs
+      about +4 points to decide (NW-implied power), so the likely path is CONTINUE, then NULL.
+    - **Deduction:** the one France-reachable perp route earns about the T-bill plus a point at best on seen data.
+      The confirmed carry edge (+10 to +18%/yr) needs Binance, Gate, MEXC or KuCoin legs.

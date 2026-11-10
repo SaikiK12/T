@@ -1,7 +1,8 @@
 name: OKX X-Perp lane reads (Claude)
 # Weekly reads of R441 (scripts/run_xperp_carry.py) and R442 (scripts/run_xperp_stock_carry.py) on the recorded data
-# branch claude/okx-xperp-data: a status read (no decision), and each lane's frozen 90- and 180-day decision once its
-# look date has passed (--until the look date, written once to results/look90 or results/look180).
+# branch claude/okx-xperp-data: a status read (no decision) for both, and R441's frozen 90- and 180-day decision once
+# its look date has passed (--until the look date, written once to results/look90 or results/look180). R442 stopped
+# at gate 0 (NULL), so it gets status reads only.
 # Single writer of experiments/xperp_carry_v1/results and experiments/xperp_stock_v1/results. Paper only.
 on:
   schedule:
@@ -41,15 +42,17 @@ jobs:
       - name: Read the lanes
         id: reads
         run: |
-          set -u
+          set -uo pipefail
           today=$(date -u +%F)
           fail=0
-          for pair in "xperp_carry_v1 run_xperp_carry.py" "xperp_stock_v1 run_xperp_stock_carry.py"; do
+          # R442 stopped at gate 0 (NULL): status reads only, never a look decision.
+          for pair in "xperp_carry_v1 run_xperp_carry.py looks" "xperp_stock_v1 run_xperp_stock_carry.py status"; do
             set -- $pair
-            lane=$1; script=scripts/$2
+            lane=$1; script=scripts/$2; mode=$3
             echo "== $lane status"
             .venv/bin/python "$script" --data .okx-data --window forward --status \
               --out "experiments/$lane/results/forward_status" | tail -n 12 || fail=1
+            [ "$mode" = looks ] || continue
             for look in "90 2027-02-08" "180 2027-05-09"; do
               set -- $look
               out="experiments/$lane/results/look$1"
