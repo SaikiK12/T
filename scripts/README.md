@@ -114,7 +114,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (171)
+## Run: one lane's frozen measurement (172)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -198,6 +198,7 @@ line is the first line of the script's own docstring.
 - [`run_lighter_trade_contract.py`](run_lighter_trade_contract.py): R427 one-run recorded trade-role qualification, without prices, markouts or returns.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
+- [`run_llpstake.py`](run_llpstake.py): llpstake_v1 (R447, M506): Lighter's LLP pool as a depositor must hold it.
 - [`run_lmw.py`](run_lmw.py): lmw_v1 (R251): Lo-Mamaysky-Wang kernel chart patterns (head-and-shoulders, broadening, triangle and rectangle tops and bottoms) on daily bars of the top-50 perps, 11 forex pairs and 10 world ...
 - [`run_locked_carry.py`](run_locked_carry.py): R335 locked_carry_v1: the guarantee engine, a coin-margined cash-and-carry locked to expiry (measurement).
 - [`run_lotcap.py`](run_lotcap.py): lotcap_v1 (R298): harvest R282's lottery-cluster median while capping the squeezes.
