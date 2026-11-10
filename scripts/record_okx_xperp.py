@@ -11,8 +11,9 @@ Each run, for every X-Perp listed (crypto, stocks and commodities), writes day-p
   c, vol_quote) of each X-Perp's mark price and last trades, its underlying index (`uly`) and, for crypto, the OKX
   EEA spot pair {base}-USDC (else {base}-EUR) that would hold the hedge leg. vol_quote (quote-currency volume) is
   blank for mark and index candles;
-- books/YYYY-MM-DDTHHMM.csv: one snapshot per run of each crypto X-Perp and its spot pair: best bid and ask, and the
-  cost in bp from mid of a $1k and a $10k market order on each side (blank when the shown book is too thin).
+- books/YYYY-MM-DDTHHMM.csv: one snapshot per run of each crypto X-Perp and its spot pair, and (from the evening of
+  2026-11-10) of each stock X-Perp: best bid and ask, and the cost in bp from mid of a $1k and a $10k market order on
+  each side (blank when the shown book is too thin).
 Existing day files are merged by key, so a re-run is idempotent and a closed day never loses a row.
 
 Paper only: no account, no order. Pace: one request per 0.21 s (OKX allows 10 per 2 s on the funding history).
@@ -194,20 +195,24 @@ def record(out, days_back=100, now_ms=None):
 
     snap = []
     ct = {i["instId"]: float(i["ctVal"]) * float(i.get("ctMult") or 1) for i in inst}
+    legs = []
     for x, sp in pairs.items():
-        for kind, iid, conv in (("xperp", x, lambda px, sz, c=ct[x]: px * sz * c), ("spot", sp, lambda px, sz: px * sz)):
-            try:
-                b = get(f"market/books?instId={iid}&sz=100")[0]
-                bid, ask = float(b["bids"][0][0]), float(b["asks"][0][0])
-                mid = (bid + ask) / 2
-                snap.append({"instId": iid, "kind": kind, "ts": b["ts"], "bid": bid, "ask": ask,
-                             "buy_1k_bp": walk_cost(b["asks"], 1e3, mid, "buy", conv),
-                             "sell_1k_bp": walk_cost(b["bids"], 1e3, mid, "sell", conv),
-                             "buy_10k_bp": walk_cost(b["asks"], 1e4, mid, "buy", conv),
-                             "sell_10k_bp": walk_cost(b["bids"], 1e4, mid, "sell", conv)})
-            except Exception as e:  # noqa: BLE001
-                stats["failed"].append(f"{iid} book")
-                log(f"{iid} book: {type(e).__name__}: {e}")
+        legs += [("xperp", x, lambda px, sz, c=ct[x]: px * sz * c), ("spot", sp, lambda px, sz: px * sz)]
+    legs += [("xperp", i["instId"], lambda px, sz, c=ct[i["instId"]]: px * sz * c)       # stock X-Perps: no spot leg
+             for i in inst if str(i.get("instCategory")) == "3"]
+    for kind, iid, conv in legs:
+        try:
+            b = get(f"market/books?instId={iid}&sz=100")[0]
+            bid, ask = float(b["bids"][0][0]), float(b["asks"][0][0])
+            mid = (bid + ask) / 2
+            snap.append({"instId": iid, "kind": kind, "ts": b["ts"], "bid": bid, "ask": ask,
+                         "buy_1k_bp": walk_cost(b["asks"], 1e3, mid, "buy", conv),
+                         "sell_1k_bp": walk_cost(b["bids"], 1e3, mid, "sell", conv),
+                         "buy_10k_bp": walk_cost(b["asks"], 1e4, mid, "buy", conv),
+                         "sell_10k_bp": walk_cost(b["bids"], 1e4, mid, "sell", conv)})
+        except Exception as e:  # noqa: BLE001
+            stats["failed"].append(f"{iid} book")
+            log(f"{iid} book: {type(e).__name__}: {e}")
     stamp = datetime.fromtimestamp(now_ms / 1000, timezone.utc).strftime("%Y-%m-%dT%H%M")
     stats["book_rows"] = merge_rows(out / "books" / f"{stamp}.csv", snap, BOOK_COLS, ["instId", "kind"])
     stats["instruments"] = len(inst)

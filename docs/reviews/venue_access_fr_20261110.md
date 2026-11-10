@@ -61,11 +61,44 @@ The forward lanes still measure whether the edge exists. They do not measure a b
    - M487/R418 Kraken EEA: does not clear its frozen screen.
    - M488 Coinbase CDE against Kraken: execution capture only.
    - M490 cross-sectional alt X-Perp carry on OKX Europe: UNTESTED, the open lead.
-   - Whether OKX Europe's X-Perps are open to French residents is itself unverified (see
-     `research/intake/funding_notional_20261103/okx_eea_sources_20261106.md`).
+   - OKX's own X-Perps guide says they are open to all 30 EEA countries, so France is included. Availability still
+     "may vary" by residence and account, and the regulator records were not reached. See "OKX Europe X-Perps,
+     checked later the same day" below.
 4. **Paper lanes keep running.** They are the only way to learn whether the edge holds live. But a PASS on R278,
    R279, R294, R390 or R440 would not, by itself, give the owner a book he can hold from France. `lab.gate.go_real()`
    and the owner's own legal check decide any real use.
+
+## OKX Europe X-Perps, checked later the same day
+**How it was done.**
+- One read-only Haiku agent searched the web.
+- I re-read OKX's X-Perps guide myself through the fetch tool, which summarises:
+  https://www.okx.com/en-eu/learn/what-are-x-perps-guide-for-european-traders (published 15 Apr 2026, modified
+  29 Oct 2026, from the page's metadata).
+
+**OKX's own guide says, quoted:**
+- "X-Perps are available to eligible traders in the EEA, which includes all 30 European Economic Area countries."
+  France is one of the 30. The page names no country, included or excluded.
+- Requirements: "Be 18+ and reside in one of the supported EEA countries". The user also needs a verified account
+  with KYC and must pass "a mandatory appropriateness test".
+- "Both retail and professional clients can trade X-Perps."
+- Caveats: "Availability may vary depending on your country of residence and account status." and "Certain services
+  and features may not be available in your jurisdiction."
+- "On X-Perps, you can trade with up to 10x leverage." "On X-Perps, the funding rate is settled every 8 hours."
+- Seller: "OKX Europe Markets Ltd ("OEM"), which is authorised and regulated by the Malta Financial Services
+  Authority", "Investment Services Licence Holder (Licence No. OEML-15905)."
+
+**Not reached, so not verified:**
+- OKX Europe's terms of service. The en-eu terms URL tried returns 404, so the restricted-country clause was not read.
+- The MFSA register (HTTP 403).
+- The ESMA MiFID register (captcha).
+- REGAFI.
+- So whether OEM's MiFID passport covers France is not confirmed from a register. It is only implied by the guide's
+  "all 30" sentence.
+
+**Read:** of every route checked, this is the only one where the seller's own page puts France in scope for perpetual
+futures. R441 (crypto X-Perps hedged with OKX EEA spot) and R442 (stock X-Perps hedged with the stock at a broker)
+test it on paper. Before any real use the owner still has to confirm in the app that his account can open X-Perps:
+the appropriateness test and the account's country decide.
 
 ## Not checked
 - Binance's own notice and restricted-country page.

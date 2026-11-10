@@ -160,3 +160,14 @@ waiting, and pick tests from our own measurements first.
   - `claude-okx-recorder.yml`: 02:37 and 14:37 UTC, writing `claude/okx-xperp-data`.
   - **The local loop now runs no forward lane and no recorder.** It checks the workflows and fixes failures by code
     pushes.
+- **2026-11-10, R441 and R442 frozen: the France-reachable carry route on OKX Europe X-Perps.**
+  - OKX's own X-Perps guide says they are open in all 30 EEA countries (France included), with KYC, an
+    appropriateness test and "availability may vary". No register entry for a French passport was reached (venue
+    note, later section).
+  - The recorder's first run (data commit 013dc72, 0 failures) is gate 0 for both lanes.
+  - R441 (M490): crypto X-Perps against OKX EEA spot. Gate 0 is reported only (R430's cross-section was seen).
+  - R442 (M501, new): X-Perps of 62 US-listed stocks against the stock held at an EU broker. No stock X-Perp number
+    was read before the freeze, so its gate 0 is unseen data. It decides only a stop.
+  - Gate 1 for both is forward from 2026-11-11, with looks on 2027-02-08 and 2027-05-09. `claude-xperp-reads.yml`
+    (Mondays 04:23 UTC) writes status reads and, once each look date has passed, the frozen decision. So no session
+    is needed for the decision.
