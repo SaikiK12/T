@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (156)
+## Run: one lane's frozen measurement (158)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -181,6 +181,7 @@ line is the first line of the script's own docstring.
 - [`run_levels_lighter.py`](run_levels_lighter.py): R337 levels_lighter_v1: R333's level trades on Lighter's own hourly prices, at Lighter's measured book cost (gate 0).
 - [`run_levels_mexc0.py`](run_levels_mexc0.py): R336 levels_mexc0_v1: R333's level model on MEXC's zero-fee perps, at the measured MEXC spread (gate 0).
 - [`run_levels_v2.py`](run_levels_v2.py): R333 level_probability_v2: the owner's break-or-rebound probability model (M412) on the top 100 Binance perps.
+- [`run_lighter_flow.py`](run_lighter_flow.py): R433 lighter_flow_v1 (M441): does Lighter's public, account-level taker flow carry information that persists out of sample, and can a slow follower (or fader) of the accounts that were informed on ...
 - [`run_lighter_trade_contract.py`](run_lighter_trade_contract.py): R427 one-run recorded trade-role qualification, without prices, markouts or returns.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
@@ -259,6 +260,7 @@ line is the first line of the script's own docstring.
 - [`run_vrpexec.py`](run_vrpexec.py): R410 vrpexec_v1 (M477): R409's weekly short straddle with a maker sale, band hedges and maker-first hedges, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`run_vrpsell.py`](run_vrpsell.py): R408 vrpsell_v1 (M477): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v1/PREREG.md.
 - [`run_vrpsell2.py`](run_vrpsell2.py): R409 vrpsell_v2 (M477; R408 with its stats call fixed): sell the crypto variance risk premium on Deribit, as set out in experiments/vrpsell_v2/PREREG.md.
+- [`run_weekend_reopen.py`](run_weekend_reopen.py): R432 weekend_reopen_v1 (M321 + M188): do Binance's 24/7 TradFi perps continue or reverse their weekend move when the CME Globex week reopens on Sunday at 18:00 New York? Gate 0, files only, no orders.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
