@@ -1,6 +1,7 @@
 name: OKX X-Perp recorder (Claude)
 # Single writer of the data branch claude/okx-xperp-data: OKX Europe X-Perp funding prints, daily mark/index/spot
-# candles and book-cost snapshots (scripts/record_okx_xperp.py). Public data only: no key, no order.
+# candles and book-cost snapshots (scripts/record_okx_xperp.py), and, under hl/, Hyperliquid funding and daily candles
+# of the coins that match an OKX crypto X-Perp (scripts/record_hl_daily.py). Public data only: no key, no order.
 on:
   schedule:
     - cron: '37 2,14 * * *'
@@ -14,7 +15,7 @@ jobs:
   record:
     if: github.repository == 'SaikiK12/T'
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 100
     steps:
       - name: Checkout the default branch (code)
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -28,6 +29,10 @@ jobs:
       - name: Record
         id: rec
         run: python3 scripts/record_okx_xperp.py --out .okx-data
+      - name: Record Hyperliquid (coins matching an OKX crypto X-Perp)
+        id: hl
+        if: always() && steps.rec.outcome != 'skipped'
+        run: python3 scripts/record_hl_daily.py --okx .okx-data --out .okx-data/hl
       - name: Commit recordings
         if: always() && steps.rec.outcome != 'skipped'
         run: |
