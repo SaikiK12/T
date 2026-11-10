@@ -1,0 +1,11 @@
+02:59:39 PREREG verified 0e334ec6f3c9; 6 inputs match; trials 228
+03:00:16 data manifest: 9268 files match
+03:00:16 WTI: building the 1-second residuals
+03:00:27 BRENT: building the 1-second residuals
+03:00:38 NATGAS: building the 1-second residuals
+03:00:48 GOLD: building the 1-second residuals
+03:00:56 verdict NULL: {"instrument": "WTI", "scope": "pooled", "k": 2.0, "hold": 60, "stratum": "open", "n": 468, "blocks": 55, "gross": -0.18791868251602326, "cost": 0.974600842064932, "lo_1x": -1.83985269060594, "hi_1x": -0.5200258248099637, "p_le0_1x": 0.9998, "mde80_1x": 0.9356550987718816, "thin": 0.7905982905982906, "net_1x": -1.1625195245809554, "net_2x": -2.1371203666458873, "net_3x": -3.111721208710819}
+
+real	1m17.253s
+user	0m44.347s
+sys	0m4.397s
