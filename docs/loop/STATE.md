@@ -131,3 +131,13 @@ waiting, and pick tests from our own measurements first.
   missed 2026-11-09. Daemons are reliable only while a turn is active. The carry ticks and R440 run at a wake, so they
   are unaffected. R371 decides at 10:00 New York (15:00 UTC in winter): the 14:51 wake starts the daemon and stays
   active until the day's ticket is written.
+- **2026-11-10, venue access from France (owner: "rien ne dépend de moi").** Evidence in
+  `docs/reviews/venue_access_fr_20261110.md` (one Haiku agent, decisive pages re-read by me).
+  - Binance (left France 1 Jul 2026, reported), Gate (clause 2.5), MEXC (terms) and KuCoin (Art. 17(5)) exclude France
+    for perps. The MiCA entities of Gate and KuCoin list no derivatives. Hyperliquid and Lighter do not exclude France
+    but are authorised nowhere; ESMA treats perps as likely CFDs (24 Feb 2026).
+  - **Every forward carry lane has a leg on an excluded venue.** The DEX-only book is below cash on seen rows (R288
+    hyperliquid+lighter +3.53%/yr vs 4.13%).
+  - **Deduction:** the binding constraint for the owner is venue access, not ideas. France-reachable routes are M490
+    (OKX Europe alt X-Perp carry, UNTESTED; its France eligibility is itself unverified), M487/M488 (Kraken, Coinbase
+    CDE) and DEX books. Paper lanes keep running as evidence on the edge, not on an executable book.

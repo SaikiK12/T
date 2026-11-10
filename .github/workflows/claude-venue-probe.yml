@@ -1,0 +1,56 @@
+name: Venue reachability probe (read-only)
+# One-off network probe: which public market-data endpoints answer from a GitHub-hosted runner.
+# No secrets, no writes, no orders. Started by hand only. Used to decide whether forward paper lanes can run here.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: claude-venue-probe
+  cancel-in-progress: true
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Runner location
+        run: |
+          curl -s -m 10 https://ipinfo.io/json | python3 -c "import json,sys; d=json.load(sys.stdin); print('runner', d.get('country'), d.get('region'), d.get('org'))" || echo "ipinfo unreachable"
+      - name: Probe public endpoints
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request, urllib.error
+          GETS = [
+              ("binance www fapi", "https://www.binance.com/fapi/v1/time"),
+              ("binance fapi", "https://fapi.binance.com/fapi/v1/time"),
+              ("binance vision", "https://data.binance.vision/?prefix=data/futures/um/monthly/fundingRate/BTCUSDT/"),
+              ("gate", "https://api.gateio.ws/api/v4/futures/usdt/contracts/BTC_USDT"),
+              ("kucoin futures", "https://api-futures.kucoin.com/api/v1/timestamp"),
+              ("mexc contract", "https://contract.mexc.com/api/v1/contract/ping"),
+              ("mexc spot", "https://api.mexc.com/api/v3/ping"),
+              ("lighter", "https://mainnet.zklighter.elliot.ai/api/v1/orderBooks"),
+              ("okx eea", "https://eea.okx.com/api/v5/public/time"),
+              ("okx global", "https://www.okx.com/api/v5/public/time"),
+              ("kraken futures", "https://futures.kraken.com/derivatives/api/v3/tickers"),
+              ("kraken spot", "https://api.kraken.com/0/public/Time"),
+              ("coinbase", "https://api.exchange.coinbase.com/time"),
+              ("cboe chain", "https://cdn-api.cboe.com/api/global/delayed_quotes/options/QQQ.json"),
+          ]
+          POSTS = [("hyperliquid", "https://api.hyperliquid.xyz/info", {"type": "meta"})]
+          def hit(name, url, body=None):
+              t = time.monotonic()
+              try:
+                  req = urllib.request.Request(url, json.dumps(body).encode() if body else None,
+                                               {"Content-Type": "application/json", "User-Agent": "lab-paper/1"})
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      n = len(r.read())
+                      print(f"{name:18s} {r.status} {n:>9d} B {time.monotonic() - t:5.2f} s  {url}")
+              except urllib.error.HTTPError as e:
+                  print(f"{name:18s} {e.code} {'':>9s}   {time.monotonic() - t:5.2f} s  {url}  {e.reason}")
+              except Exception as e:  # noqa: BLE001
+                  print(f"{name:18s} ERR {'':>9s}   {time.monotonic() - t:5.2f} s  {url}  {type(e).__name__}: {str(e)[:80]}")
+          for n, u in GETS:
+              hit(n, u)
+          for n, u, b in POSTS:
+              hit(n, u, b)
+          PY

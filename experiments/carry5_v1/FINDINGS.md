@@ -65,6 +65,8 @@
 - **Fills** at daily last-trade closes; KuCoin prices are daily bars, the other venues hourly. No mark prices. Moving
   collateral across five venues is not priced, and it is harder with more venues.
 - **Costs** are the flat 7/14/21 bp per leg of R275 and R277, not measured KuCoin book costs.
-- **Venue access:** whether the owner can hold positions on all five venues from France was not checked. It is the
-  owner's call before any real use.
+- **Venue access (checked 2026-11-10, `docs/reviews/venue_access_fr_20261110.md`):** Binance, Gate, MEXC and KuCoin
+  do not serve French residents with perps (their own terms, or Binance's July 2026 exit). Only the Hyperliquid legs
+  are open to a French resident by the venue's terms, and Hyperliquid is authorised nowhere. As held, the book is
+  not one the owner can hold from France.
 - **Capital:** returns on entry notional; peak margin is above average (see R438's limits).
