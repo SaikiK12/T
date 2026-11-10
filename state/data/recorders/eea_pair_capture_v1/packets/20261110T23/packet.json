@@ -1,0 +1,38 @@
+{
+  "actual_fills": false,
+  "body_bytes": 60076,
+  "counts": {
+    "btc_cde_book": {
+      "ask_rows": 100,
+      "bid_rows": 100
+    },
+    "btc_cde_product": {
+      "funding_is_verified_settled_cash": false,
+      "funding_rate_present": true,
+      "funding_time_present": true,
+      "owner_access_verified": false
+    },
+    "btc_kraken_book": {
+      "ask_rows": 1638,
+      "bid_rows": 1368,
+      "identity_from_request": true
+    },
+    "btc_kraken_ticker": {
+      "absolute_rate_present": true,
+      "raw_rate_is_verified_settled_cash": false,
+      "relative_rate_present": true
+    }
+  },
+  "funding_cash": null,
+  "hour": "20261110T23",
+  "kraken_metadata_packet": "20261110T00",
+  "pnl": null,
+  "provenance": {
+    "config_sha256": "34daca7b098822cca683d89cc2bfc89e4d35cb278193abae9492d673a4394e70",
+    "input_commit": "c50f3639447b3f30531b13ac486401d4f1623e09",
+    "prereg_sha256": "8adce2d3ca9534c854ffa0cb805143f3460c2db03276e35ff8adabe7b1ddf14f"
+  },
+  "reobservation_delay_seconds": 3,
+  "requests": 4,
+  "state": "BUDGET_STOP"
+}
