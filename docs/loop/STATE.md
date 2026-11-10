@@ -35,7 +35,7 @@ for breakthroughs at 100% of compute".
 R392 is being done now.
 
 ## Lenses last used
-1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09). Next: 8 (market making for the slow), then 1.
+1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10). Next: 2, then 3+4.
 
 ## Tick log
 - **2026-11-09, tick 1 (by hand).**
@@ -63,4 +63,12 @@ R392 is being done now.
   - **Owner decision, 2026-11-09:** batch 3 was read on 11-10, not on or after 11-17. The two-week spacing was shortened
     once; the 4-read budget is unchanged. This sat in `docs/GATES.md` until 11-10, when GATES was restored to its
     frozen content (rule 2).
-
+- **2026-11-10, idea wave 2 and forward restart.**
+  - **Lenses 8 and 1:** about 8 ideas gave 2 new rows, both BLOCKED (M495 Deribit Block RFQ maker, M496 batch-auction
+    maker), and a note on M285 (Lighter LLP). Lens 1 found nothing new; its basis-by-ETF-flow idea is dominated by
+    R335/R406 because a locked yield is known at entry.
+  - **No registered test.** Nothing new was testable on held data at $10k.
+  - **Act instead:** every forward lane had been stopped since 11-06. Restarted as frozen: R371's daemon, then the
+    carry ticks (R390 first). Catch-up days are `late` under each PREREG.
+  - **Deduction:** the binding constraint is prospective evidence on the carry family, not ideas. Keep the daily
+    ticks before 07:00 UTC so days count as `ontime`; the hourly prompt now says so.
