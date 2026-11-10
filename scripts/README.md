@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (159)
+## Run: one lane's frozen measurement (160)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -243,6 +243,7 @@ line is the first line of the script's own docstring.
 - [`run_spot_costs.py`](run_spot_costs.py): R325 fixed source-aware spot/perp cost controls; no market PnL inference.
 - [`run_spot_costs_v2.py`](run_spot_costs_v2.py): R326 same-data mechanical input repair; frozen R325 failures remain untouched.
 - [`run_spot_perp_account.py`](run_spot_perp_account.py): R324 finite spot/principal, futures/collateral and raw-wire compatibility audit.
+- [`run_stock_tugofwar.py`](run_stock_tugofwar.py): R435 stock_tugofwar_v1: the overnight-versus-intraday tug of war across MEXC's US-stock perps (M492).
 - [`run_tapelag_lighter.py`](run_tapelag_lighter.py): R347 tapelag_lighter_v1: zero-fee scalps on Lighter, traded toward Binance's quote after a dislocation (M264, M293).
 - [`run_tapelag_lighter_v2.py`](run_tapelag_lighter_v2.py): R348 tapelag_lighter_v2: R347's frozen rule, rerun after R347's runner crashed before any statistic.
 - [`run_tradesize.py`](run_tradesize.py): tradesize_v1 (R226): trade count and mean print size as 72 h spread books, tested for information beyond quote volume, as set out in experiments/tradesize_v1/PREREG.md.
