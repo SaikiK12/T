@@ -114,3 +114,13 @@ waiting, and pick tests from our own measurements first.
     top-10-day share 33% -> 18%), not return. The PREREG names a forward lane as the next id.
   - **Deduction:** choose tests by power first. Directional ideas go in pooled registered families or forward, not
     one-by-one on short samples; structural high-Sharpe trades are where held data can decide.
+- **2026-11-10, R440 xfund5_fwd armed (forward, gate 1).**
+  - R439's frozen next id: the five-venue book forward on paper from 2026-11-11 on `lab/carrylane.py` (v1). Looks at
+    90 / 180 scored days (2027-02-09 / 2027-05-10). Orchestrator task R440, own lock.
+  - Why it matters: on the archive it has half the daily volatility of the four-venue book, so a forward test decides
+    about three times sooner (about 110 days to NW t 2 at the archive rate, against about 365).
+  - Forward carry so far (19 days, R278/R279; 6 days R390): small positive means, none significant. Expected at this
+    length; no forward book can decide before about 3 months.
+  - `REC_CBOE` had stopped with the container restart, and the QQQ/SPY/SPX chains before 2026-11-10 are gone (Cboe
+    serves only today's chain). Restarted at 13:40 UTC (pre-open map recorded). It runs only when a batch or a wake
+    runs it.
