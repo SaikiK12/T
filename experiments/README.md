@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (25)
+## Running or armed registered rounds (26)
 
+- **[xperp_hl_v1](xperp_hl_v1/)** R443, RUNNING PENDING, 1 trial. M502 cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps (the two perp venues found reachable from France): short the venue paying more trailing 7-day funding when the spread is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each venue), long the other; gate 0 reported only, gate 1 forward from 2026-11-11 ([PREREG](xperp_hl_v1/PREREG.md))
 - **[xperp_carry_v1](xperp_carry_v1/)** R441, RUNNING PENDING, 1 trial. M490 OKX Europe alt X-Perp carry: short the crypto X-Perps with trailing 7-day realized funding >= 10%/yr (exit < 5%, 10 slots, $100k volume), long OKX EEA spot; gate 0 reported on the held window (seen cross-section), gate 1 forward from 2026-11-11 on claude/okx-xperp-data ([PREREG](xperp_carry_v1/PREREG.md), [FINDINGS](xperp_carry_v1/FINDINGS.md))
 - **[xfund5_fwd](xfund5_fwd/)** R440, RUNNING PENDING, 1 trial. R439's five-venue carry book (binance+gate+hyperliquid+mexc+kucoin L14d th10% K20) forward on paper from 2026-11-11 ([PREREG](xfund5_fwd/PREREG.md), [journal](xfund5_fwd/journal/))
 - **[paperacct_fwd](paperacct_fwd/)** R415, RUNNING PENDING, 1 trial. Owner's paper account: $10,000 from 2026-11-07, one third each in R285's carry, flow and event families, never rebalanced, unlevered; pots close at half; 1x/2x/3x ([PREREG](paperacct_fwd/PREREG.md), [journal](paperacct_fwd/journal/))
