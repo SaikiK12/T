@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (158)
+## Run: one lane's frozen measurement (159)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -263,6 +263,7 @@ line is the first line of the script's own docstring.
 - [`run_weekend_reopen.py`](run_weekend_reopen.py): R432 weekend_reopen_v1 (M321 + M188): do Binance's 24/7 TradFi perps continue or reverse their weekend move when the CME Globex week reopens on Sunday at 18:00 New York? Gate 0, files only, no orders.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
+- [`run_wti_residual.py`](run_wti_residual.py): R434 wti_residual_v1 (M443): cross-venue residual on the 24/7 commodity perps, CME open versus closed.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
 - [`run_xsalt.py`](run_xsalt.py): xsalt_v1 (R222): slow altcoin cross-sections (low beta, residual momentum, MAX, premium net of funding), as set out in experiments/xsalt_v1/PREREG.md.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
