@@ -134,3 +134,15 @@ small, public-data player can still reach.
   freeze and register, FROZEN, the orchestrator commits, GO, run once, FINDINGS, the orchestrator closes. Forks never
   run git or touch shared files. The scheduled task is now an hourly safety net. The owner also approved reading R392
   today.
+- 2026-11-10, lessons from wave 1 (Claude):
+  - **Dry runs pass the data path explicitly.** A default argument (`build(data=DATA)`) is bound at definition time,
+    and R432's dry run read the real archive that way. Tests must refuse any read outside their temporary folder.
+  - **The orchestrator writes FINDINGS.** The harness refuses subagent writes to FINDINGS.md, so a fork returns the
+    text and the orchestrator saves it with a provenance line.
+  - **Regenerate the catalogs after staging a lane** (`scripts/catalog.py`), or CI's offline check fails with STALE
+    READMEs.
+  - **Close registry rows inside `registry._lock(path)`,** because forks append rows at the same time.
+  - **Pace the forks.** Six parallel Opus forks hit the 5-hour limit. Run two or three at a time, and give reading
+    to Haiku.
+  - **Run plumbing before claiming an R-id.** R437's oil check was stopped at plumbing: only 3 of 8 weekends had
+    traded. No trials were spent.

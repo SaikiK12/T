@@ -19,8 +19,8 @@ for breakthroughs at 100% of compute".
 **Wave 1, launched about 22:50 UTC:**
 | Round | Lane | Method | What it tests |
 |---|---|---|---|
-| R432 | weekend_reopen_v1 | M321/M188 | Binance TradFi 1-minute perps at the CME reopen |
-| R433 | lighter_flow_v1 | M441 | Lighter public account flow, follow the informed accounts |
+| R432 | weekend_reopen_v1 | M321/M188 | Binance TradFi 1-minute perps at the CME reopen: **NULL** (gate-0 screen) |
+| R433 | lighter_flow_v1 | M441 | Lighter public account flow, follow the informed accounts: **NULL** as a trade; the information persists |
 | R434 | wti_residual_v1 | M443 | Cross-venue commodity residual, CME open vs closed |
 | R435 | stock_tugofwar_v1 | M492, new | Overnight vs intraday cross-section on MEXC stock perps |
 | R436 | stock_carry_v1 | M493, new | Stock-perp funding carry hedged with the cash stock |
@@ -51,3 +51,10 @@ R392 is being done now.
     prompt.
   - **The deduction that changes the next choice:** look for payers who are not racing (capacity, long holds, rule
     clocks), not for speed.
+- **2026-11-09 to 11-10, hunt wave 1.**
+  - **R432 NULL.** Its only lead, an oil fade held to the cash open, cannot be checked on fresh pre-April weekends:
+    MEXC traded only 3 of them. It is forward-only.
+  - **R433 NULL as a trade.** Informed Lighter accounts stay informed out of sample (Spearman 0.42 at 60 s), but a
+    follower 1.3 s late keeps less than the touch. The open use is the maker side (M474).
+  - **YouTube @losingloonies:** blocked by YouTube's bot wall from this container. A script was left for the owner.
+
