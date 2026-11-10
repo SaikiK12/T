@@ -40,8 +40,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (194)
+## Other registered rounds (done, registered or planned) (195)
 
+- **[carry_v2_audit_kc_v1](carry_v2_audit_kc_v1/)** R438, REGISTERED PENDING, 2 trials. Accounting audit: R277's two KuCoin carry books (forward R279 A gate+kucoin, B binance+kucoin) re-run on the M468 engine (lab/xfund_v2) with R437's frozen runner ([PREREG](carry_v2_audit_kc_v1/PREREG.md))
 - **[carry_v2_audit_v1](carry_v2_audit_v1/)** R437, DONE CONFIRMED, 7 trials. Accounting audit: R275's 7 headline carry books (incl. forward R278 A/B/C, R390 A) re-run on the M468 engine (fresh = traded bar in day, fixed-quantity legs, dead/blowout exits); SURVIVES if v2 NW t >= 2.5, 2x > 0, both halves > 0 ([PREREG](carry_v2_audit_v1/PREREG.md), [FINDINGS](carry_v2_audit_v1/FINDINGS.md))
 - **[stock_carry_v1](stock_carry_v1/)** R436, DONE NULL, 12 trials. M493 gate 0: weekly short of the top trailing-funding MEXC US-stock/ETF perps, each hedged with the same notional of cash stock (IBKR), vs the 3-month T-bill ([PREREG](stock_carry_v1/PREREG.md), [FINDINGS](stock_carry_v1/FINDINGS.md))
 - **[stock_tugofwar_v1](stock_tugofwar_v1/)** R435, DONE NULL, 20 trials. M492 gate 0: overnight-vs-intraday tug of war (Lou-Polk-Skouras) across MEXC US-stock perps; primary B1 long top/short bottom quintile of trailing-20 overnight return among the top 30 by volume, close to 10:00 NY, at listed fee + recorded half-spread + funding ([PREREG](stock_tugofwar_v1/PREREG.md), [FINDINGS](stock_tugofwar_v1/FINDINGS.md))
