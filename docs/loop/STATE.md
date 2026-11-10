@@ -179,3 +179,13 @@ waiting, and pick tests from our own measurements first.
       about +4 points to decide (NW-implied power), so the likely path is CONTINUE, then NULL.
     - **Deduction:** the one France-reachable perp route earns about the T-bill plus a point at best on seen data.
       The confirmed carry edge (+10 to +18%/yr) needs Binance, Gate, MEXC or KuCoin legs.
+- **2026-11-10, R443 frozen and its gate 0 read: OKX Europe X-Perps against Hyperliquid perps (M502).**
+  - `scripts/record_hl_daily.py` now runs in `claude-okx-recorder.yml`. It writes Hyperliquid funding and daily
+    candles of the 97 coins that match an OKX crypto X-Perp under `hl/` of the same data branch. Data commit 8b01167
+    is R443's gate 0.
+  - The rule: short the venue paying more trailing 7-day funding when the spread is at least 10%/yr, long the other.
+  - **Gate 0 (reported only; funding on both venues was seen):**
+    - net +0.95%/yr at 1x, excess −3.05 points, t −0.55; 2x −13.6%/yr;
+    - the funding spread earns +14.4%/yr, but costs take −14.6%/yr.
+    - The spread flips within about a week (mean hold 7.7 days), and a 39 bp taker round trip on two venues eats it.
+  - Gate 1 is forward from 2026-11-11 through `claude-xperp-reads.yml`.
