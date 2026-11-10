@@ -116,7 +116,9 @@ waiting, and pick tests from our own measurements first.
     one-by-one on short samples; structural high-Sharpe trades are where held data can decide.
 - **2026-11-10, R440 xfund5_fwd armed (forward, gate 1).**
   - R439's frozen next id: the five-venue book forward on paper from 2026-11-11 on `lab/carrylane.py` (v1). Looks at
-    90 / 180 scored days (2027-02-09 / 2027-05-10). Orchestrator task R440, own lock.
+    90 / 180 scored days (2027-02-09 / 2027-05-10). Run directly: `.venv/bin/python scripts/forward_xfund5.py`
+    (not through the orchestrator: `lab/operations.py` is a pinned input of Codex's R429 runtime, and wiring R440
+    there broke its `paper` check at 13:50 UTC; reverted).
   - Why it matters: on the archive it has half the daily volatility of the four-venue book, so a forward test decides
     about three times sooner (about 110 days to NW t 2 at the archive rate, against about 365).
   - Forward carry so far (19 days, R278/R279; 6 days R390): small positive means, none significant. Expected at this
