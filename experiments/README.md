@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (23)
+## Running or armed registered rounds (24)
 
+- **[xfund5_fwd](xfund5_fwd/)** R440, RUNNING PENDING, 1 trial. R439's five-venue carry book (binance+gate+hyperliquid+mexc+kucoin L14d th10% K20) forward on paper from 2026-11-11 ([PREREG](xfund5_fwd/PREREG.md))
 - **[paperacct_fwd](paperacct_fwd/)** R415, RUNNING PENDING, 1 trial. Owner's paper account: $10,000 from 2026-11-07, one third each in R285's carry, flow and event families, never rebalanced, unlevered; pots close at half; 1x/2x/3x ([PREREG](paperacct_fwd/PREREG.md), [journal](paperacct_fwd/journal/))
 - **[boroslock_fwd](boroslock_fwd/)** R413, RUNNING PENDING, 2 trials. M480 forward: Boros funding locks on paper at live order-book bids ($10k), BTC/ETH on Binance and Hyperliquid; books K0 (best carry over T-bill + 0.30% round trip >= 0) and K1 (>= 1%/yr), settled against venue funding and Boros settlements ([PREREG](boroslock_fwd/PREREG.md), [journal](boroslock_fwd/journal/))
 - **[lockcarry_fwd2](lockcarry_fwd2/)** R406, RUNNING PENDING, 2 trials. R335's locked cash-and-carry forward on paper on Deribit BTC/ETH (R405 with its FRED fetch fixed): executable locked yield vs the T-bill hourly, books H0 (shortest beating the T-bill) and H3 (best beating it by 3%/yr), settled at the published delivery price ([PREREG](lockcarry_fwd2/PREREG.md), [journal](lockcarry_fwd2/journal/))

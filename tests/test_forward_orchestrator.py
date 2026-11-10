@@ -243,7 +243,8 @@ class ForwardOrchestratorTests(unittest.TestCase):
                     for name in ("REC_NOTICES", "R268", "R270", "R272")}
         expected.update({name: {"path": path, "wait_seconds": 0}
                          for name, path in (("R278", ".xfund.lock"), ("R279", ".xfund_kc.lock"),
-                                            ("R294", ".xfund_lt.lock"), ("R390", ".xfund_bg.lock"))})
+                                            ("R294", ".xfund_lt.lock"), ("R390", ".xfund_bg.lock"),
+                                            ("R440", ".xfund5.lock"))})
         self.assertEqual(locked, set(expected))
         plan = orchestration.plan(tasks, self.root)
         for node in plan["tasks"]:

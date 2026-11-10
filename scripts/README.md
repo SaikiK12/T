@@ -74,7 +74,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (30)
+## Forward: paper lanes and the loops that run them (31)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -100,6 +100,7 @@ line is the first line of the script's own docstring.
 - [`forward_vt.py`](forward_vt.py): vt_fwd (R225): R217's volatility target (rule R1) applied forward to the MEXC flow books A and B (R215) and X2 (R218), warmed up on R217's archived daily nets, as set out in ...
 - [`forward_xbook.py`](forward_xbook.py): xbook_fwd (R285): the cross-family forward book (M281), as set out in experiments/xbook_fwd/PREREG.md.
 - [`forward_xfund.py`](forward_xfund.py): xfund_fwd (R278): R275's cross-venue funding carry books forward on paper, as set out in experiments/xfund_fwd/PREREG.md.
+- [`forward_xfund5.py`](forward_xfund5.py): xfund5_fwd (R440): R439's five-venue carry book forward on paper, as set out in experiments/xfund5_fwd/PREREG.md.
 - [`forward_xfund_bg.py`](forward_xfund_bg.py): xfund_bg_fwd (R390): the binance+gate cross-venue carry book that passed reserved batch 1 (R286 C14), forward on paper, as set out in experiments/xfund_bg_fwd/PREREG.md.
 - [`forward_xfund_kc.py`](forward_xfund_kc.py): xfund_kc_fwd (R279): R277's two replicating KuCoin carry books forward on paper, as set out in experiments/xfund_kc_fwd/PREREG.md.
 - [`forward_xfund_lt.py`](forward_xfund_lt.py): xfund_lt_fwd (R294): R288's mexc+lighter carry book forward on paper, as set out in experiments/xfund_lt_fwd/PREREG.md.
