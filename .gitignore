@@ -50,3 +50,7 @@ experiments/msnr_v1/results/trades.csv.gz
 # R327 native hypothetical coin/spot journals stay append-only locally; compact pack is tracked.
 /experiments/dated_carry_v1/model_journals/
 /experiments/dated_carry_v2/model_journals/
+# R436's Yahoo cash prices and corporate actions are third-party market data, kept out of git like /data/;
+# their sha256 is in experiments/stock_carry_v1/PREREG.md (inputs block) and inputs/cash_receipts.json
+experiments/stock_carry_v1/inputs/cash_daily.parquet
+experiments/stock_carry_v1/inputs/cash_events.parquet
