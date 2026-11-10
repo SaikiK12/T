@@ -141,3 +141,13 @@ waiting, and pick tests from our own measurements first.
   - **Deduction:** the binding constraint for the owner is venue access, not ideas. France-reachable routes are M490
     (OKX Europe alt X-Perp carry, UNTESTED; its France eligibility is itself unverified), M487/M488 (Kraken, Coinbase
     CDE) and DEX books. Paper lanes keep running as evidence on the edge, not on an executable book.
+- **2026-11-10, forward carry lanes move to GitHub Actions (single writer).** The container is reclaimed when idle and
+  the session will end, so the lanes now run on `.github/workflows/claude-carry-paper.yml` (hourly 00:29-07:29 UTC):
+  R278, R279, R294, R390, R440, then R285 and R415.
+  - Probe run 42863150912: every endpoint the lanes use answers from a GitHub runner (Binance through
+    www.binance.com; fapi.binance.com returns 451 there and is not used). OKX EEA, Kraken, Coinbase and Cboe answer too.
+  - Data roots live in the Actions cache. `scripts/prefetch_carry_data.py` (dispatch input `prefetch_only`) fills it
+    without ticking. Journals are committed to the default branch by the workflow. Each lane's NOTES.md records the
+    writer change.
+  - **The local loop no longer ticks these seven lanes.** It checks that the workflow ran and fixes it with a code
+    push if it failed. R371 (10:00 New York daemon) and the Cboe recorder still run locally for now.

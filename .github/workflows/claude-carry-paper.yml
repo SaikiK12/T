@@ -1,0 +1,133 @@
+name: Carry paper lanes (Claude)
+# Single writer, from 2026-11-10, of the journals of the forward carry paper lanes R278, R279, R294, R390 and R440,
+# and of R285/R415, which read only those journals. Paper only: public market data, no key, no order.
+# Each lane's data root (data/<lane>/, gitignored) lives in the Actions cache. If the cache is lost, the lane rebuilds
+# it from the public APIs from its warm day (2026-08-01), exactly as a lane without an archive does.
+# The local loop must not tick these lanes while this workflow owns them (docs/loop/STATE.md, 2026-11-10).
+on:
+  schedule:
+    - cron: '29 0-7 * * *'      # the carry lanes book day D after 00:00 UTC and wait up to 6 h for every venue's closes
+  workflow_dispatch:
+    inputs:
+      prefetch_only:
+        description: 'Refresh the lanes data roots only (scripts/prefetch_carry_data.py); no tick, no journal write'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: claude-carry-paper-single-writer
+  cancel-in-progress: false
+jobs:
+  tick:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+      LANES: xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xbook_fwd paperacct_fwd
+    steps:
+      - name: Checkout the default branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 50
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-test.lock
+      - name: Install locked runtime
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Restore lane data roots
+        id: restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/xfund_fwd
+            data/xfund_kc_fwd
+            data/xfund_lt_fwd
+            data/xfund_bg_fwd
+            data/xfund5_fwd
+          key: carry-paper-data-${{ github.run_id }}
+          restore-keys: carry-paper-data-
+      - name: Mark the data roots before the run
+        run: mkdir -p data && touch data/.carry_paper_marker
+      - name: Prefetch data only
+        id: prefetch
+        if: inputs.prefetch_only
+        run: .venv/bin/python scripts/prefetch_carry_data.py
+      - name: Tick the carry lanes, then R285 and R415
+        id: tick
+        if: ${{ !inputs.prefetch_only }}
+        run: |
+          set -u
+          echo "data cache: ${{ steps.restore.outputs.cache-matched-key || 'none (rebuild from the APIs)' }}"
+          fail=""
+          run() {   # one lane's failure must not stop the others
+            name=$1; shift
+            echo "::group::$name"
+            start=$(date +%s)
+            timeout 2400 .venv/bin/python "$@"; rc=$?
+            echo "$name exit $rc after $(( $(date +%s) - start )) s"
+            echo "::endgroup::"
+            [ $rc -eq 0 ] || fail="$fail $name"
+          }
+          run R278 scripts/forward_xfund.py
+          run R279 scripts/forward_xfund_kc.py
+          run R294 scripts/forward_xfund_lt.py
+          run R390 scripts/forward_xfund_bg.py
+          run R440 scripts/forward_xfund5.py
+          run R285 scripts/forward_xbook.py
+          run R415 scripts/forward_paperacct.py
+          for l in xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd; do
+            n=$(find "data/$l" -name '*.parquet' 2>/dev/null | wc -l)
+            last=$(tail -n 1 "experiments/$l/journal/days.csv" | cut -d, -f1-3)
+            echo "$l: $n data files; last journal day: $last"
+          done
+          echo "failed=${fail# }" >> "$GITHUB_OUTPUT"
+      - name: Did any data file change
+        id: changed
+        if: always()
+        run: |
+          n=$(find data/xfund_fwd data/xfund_kc_fwd data/xfund_lt_fwd data/xfund_bg_fwd data/xfund5_fwd \
+                -newer data/.carry_paper_marker -type f 2>/dev/null | wc -l)
+          echo "data files written this run: $n"
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+      - name: Save lane data roots
+        if: always() && steps.changed.outputs.n != '0'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/xfund_fwd
+            data/xfund_kc_fwd
+            data/xfund_lt_fwd
+            data/xfund_bg_fwd
+            data/xfund5_fwd
+          key: carry-paper-data-${{ github.run_id }}
+      - name: Commit journals
+        if: always() && steps.tick.outcome != 'skipped'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for l in $LANES; do git add -A "experiments/$l/journal"; done
+          if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
+          git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R285 R415)" \
+            -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
+          br="${{ github.event.repository.default_branch }}"
+          for i in 1 2 3 4 5; do
+            if git pull -q --rebase --autostash origin "$br" && git push -q origin "HEAD:$br"; then echo "pushed"; exit 0; fi
+            sleep $((i * 10))
+          done
+          echo "push failed after 5 tries"; exit 1
+      - name: Fail the run when a lane failed
+        if: steps.tick.outputs.failed != ''
+        run: |
+          echo "failed lanes: ${{ steps.tick.outputs.failed }}"
+          exit 1
