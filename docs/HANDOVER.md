@@ -37,13 +37,13 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-cboe-recorder.yml` | 13:12 and 21:33 on weekdays | data branch `claude/cboe-chain-data` (QQQ/SPY/SPX chains) |
 | `claude-hlvaults-recorder.yml` | Sundays 09:13 | data branch `claude/hl-vaults-data`: every Hyperliquid vault, closed ones included, and each vault's allTime account value and pnl (M507) |
 | `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data`: OKX Europe X-Perps; Hyperliquid perps matching them under `hl/`; Hyperliquid HYPE and Unit spot pairs with their perps under `hl_spot/`; Hyperliquid's HLP and Lighter's LLP vaults under `vaults/`; Lighter's LIT perp funding and LIT candles under `lit/` |
-| `claude-xperp-reads.yml` | Mondays 04:23 | status reads of R441-R446, and the frozen decisions of R441, R443, R445 and R446 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
+| `claude-xperp-reads.yml` | Mondays 04:23 | status reads of R441-R447, and the frozen decisions of R441, R443, R445, R446 and R447 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
 
 - **Check them:** the repository's Actions tab. A red run names the lane that failed; the others still ran.
 - **Stop one:** disable that workflow in the Actions tab. Never run the same lane by hand while its workflow is on.
 - **Decision dates:**
   - R440: 90 and 180 scored days, 2027-02-09 and 2027-05-10;
-  - R441, R443, R445 and R446 (each vault on its own): 2027-02-08 and 2027-05-09, written by
+  - R441, R443, R445, R446 (each vault on its own) and R447: 2027-02-08 and 2027-05-09, written by
     `claude-xperp-reads.yml` itself;
   - R371: its 125th and 500th scored days.
 - **Not covered:** GitHub disables scheduled workflows after 60 days without repository activity. The bots' own

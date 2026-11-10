@@ -112,6 +112,7 @@ Each lane was frozen before its own statistic. Excess is over a 4% hurdle on the
 | R445 | R444 on HYPE and BTC only, fully deployed, spot backing the perp | 679 days, seen | +6.06 (2026: +0.15) | 3.67 | reported; forward to 2027 |
 | R446 | Deposit in Hyperliquid's HLP vault | 2025-01..2026-11, APRs known | +10.30 (2026: +6.65) | 1.87 | reported; forward to 2027 |
 | R446 | Deposit in Lighter's LLP pool (needs staked LIT) | 2025-01..2026-11, APRs known | +69.26 (2026: +6.80) | 3.16 | reported; forward to 2027 |
+| R447 | LLP with its LIT stake, the stake hedged by a LIT perp short | 2026-01..2026-11, LLP seen | +6.04 | 3.94 | reported; forward to 2027 |
 
 - **Read:** what is reachable from France earns about the T-bill, plus or minus a point or two.
   - The cross-venue spread (R443) is large before costs but flips within a week, so a two-venue round trip eats it.
@@ -124,6 +125,8 @@ Each lane was frozen before its own statistic. Excess is over a 4% hurdle on the
     depositor. LLP's 2026 level has t 3.27 on its own. It is a short position in the venue's tail: LLP lost 5.35% on
     2025-10-11. LLP also needs 1 LIT staked per 10 USDC, so its book as measured leaves out that stake and its price
     risk.
+  - R447 adds the stake and hedges its price with a LIT perp short on Lighter: +10.04%/yr on all capital in 2026.
+    The staking reward and the short's funding make back most of the dilution.
 - The +10 to +18%/yr carry books stay on venues that exclude France (table above).
 
 ## Not checked

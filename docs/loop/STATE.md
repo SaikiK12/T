@@ -218,3 +218,10 @@ waiting, and pick tests from our own measurements first.
     crash day falls in the window.
   - Read after the run: LLP takes deposits only against staked LIT (1 LIT per 10 USDC, 6% staking APR, 3-day
     unstaking). R446 measures the vault per USDC; a book with the stake is a new lane.
+- **2026-11-10, R447 frozen, gate 0 CONTINUE (stops only): LLP as a depositor must hold it (M506).**
+  - Per LIT staked, 10 USDC in LLP and a 1-LIT short on Lighter's LIT perp with margin equal to its notional. New
+    recorder `scripts/record_lit_hedge.py` writes `lit/` (LIT perp hourly funding, perp and spot daily bars).
+  - Gate 0 (2026-01-15..2026-11-10): +10.04%/yr on all capital at 1x, excess +6.04, t 3.94; 3x +5.78. Parts: LLP
+    +7.65, staking +0.85, funding received +1.65, basis +0.02, costs -0.13. Max drawdown -0.35%, no liquidation.
+  - LLP's part was seen in R446, so gate 0 is not evidence. Gate 1 (2027-02-08, 2027-05-09) has about seven chances
+    in ten at 90 days if no crash day like 2025-10-11 falls in the window; one such day would end the lane.
