@@ -72,3 +72,15 @@ R392 is being done now.
     carry ticks (R390 first). Catch-up days are `late` under each PREREG.
   - **Deduction:** the binding constraint is prospective evidence on the carry family, not ideas. Keep the daily
     ticks before 07:00 UTC so days count as `ontime`; the hourly prompt now says so.
+- **2026-11-10, R437 carry_v2_audit_v1 (registered test, gate 0): CONFIRMED.**
+  - R275's 7 headline carry books re-run on the corrected M468 engine. All 7 survive, including the four forward
+    books.
+  - The fixes raise %/yr through two effects. The deflated read: R390 A is about +9.7%/yr at 1x (t 8.35) without
+    blowout and dead-leg trades, not v2's +13.4.
+    - Fixed-quantity funding drift.
+    - Blowout exits, about +3.4 pt/yr in the Binance+Gate books.
+  - **Deduction:** the carry family is not an accounting artifact on its own venues. The binding question is now
+    live execution (fills at 00:00 on two venues, collateral, capacity), which only the forward lanes and the owner's
+    eventual small real test can answer.
+  - **Ops lesson:** `scripts/catalog.py` rewrites `scripts/README.md`, which the forward orchestrator hashes as
+    code. Running it during a batch marked R404 and R278 FAILED, though their ticks completed.

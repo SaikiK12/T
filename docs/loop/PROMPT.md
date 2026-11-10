@@ -149,4 +149,6 @@ small, public-data player can still reach.
   - **Never edit a file that any PREREG hashes.** `docs/GATES.md` is a frozen input of earlier lanes. Check
     with `grep -l "docs/GATES.md" experiments/*/PREREG.md` before editing any doc. Record owner decisions in STATE.md
     or in the lane's PREREG.
-
+- 2026-11-10: never run `scripts/catalog.py` or add or edit files under `lab/` or `scripts/` while a forward
+  orchestrator batch runs. It hashes those trees as code and marks a task FAILED if they change (R404 and R278 on
+  11-10). Their ticks still completed. Wait for the batch, or regenerate catalogs only after it ends.
