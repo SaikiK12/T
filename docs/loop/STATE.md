@@ -151,3 +151,12 @@ waiting, and pick tests from our own measurements first.
     writer change.
   - **The local loop no longer ticks these seven lanes.** It checks that the workflow ran and fixes it with a code
     push if it failed. R371 (10:00 New York daemon) and the Cboe recorder still run locally for now.
+- **2026-11-10, R371 and the Cboe recorder also move to GitHub Actions.**
+  - `claude-usopen.yml`: the daemon runs from about 30 min before 10:00 New York to 6 min after, and a scoring tick
+    runs at 00:47 UTC. It is the sole writer of `experiments/usopen_fwd/journal/` from 2026-11-11. Since 11-02 the
+    container left 5 of 8 tickets missed and none scored after 10-30.
+  - `claude-cboe-recorder.yml`: 13:12 and 21:33 UTC on weekdays, writing the data branch `claude/cboe-chain-data`
+    (seeded with 2026-11-10 pre).
+  - `claude-okx-recorder.yml`: 02:37 and 14:37 UTC, writing `claude/okx-xperp-data`.
+  - **The local loop now runs no forward lane and no recorder.** It checks the workflows and fixes failures by code
+    pushes.

@@ -1,0 +1,66 @@
+name: Cboe chain recorder (Claude)
+# Single writer of the data branch claude/cboe-chain-data: QQQ/SPY/SPX delayed option chains, once in the New York
+# pre window (08:00-09:29) and once in the post window (16:20-18:59) on weekdays (scripts/record_cboe_chain.py).
+# 13:12 UTC falls in the pre window and 21:33 UTC in the post window both in winter and in summer time.
+on:
+  schedule:
+    - cron: '12 13 * * 1-5'
+    - cron: '33 21 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-cboe-recorder-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the default branch (code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Checkout the data branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: claude/cboe-chain-data
+          path: .cboe-data
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-test.lock
+      - name: Install locked runtime
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Record
+        id: rec
+        run: |
+          mkdir -p data/recorders/cboe_chain
+          cp -r .cboe-data/20* data/recorders/cboe_chain/ 2>/dev/null || true   # a session already held is skipped
+          .venv/bin/python scripts/record_cboe_chain.py
+          for d in data/recorders/cboe_chain/20*; do
+            mkdir -p ".cboe-data/$(basename "$d")"
+            cp -n "$d"/*.parquet ".cboe-data/$(basename "$d")/" 2>/dev/null || true
+          done
+      - name: Commit recordings
+        if: always() && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          cd .cboe-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "Cboe chains ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git pull -q --rebase origin claude/cboe-chain-data && git push -q origin HEAD:claude/cboe-chain-data; then
+              echo "pushed"; exit 0
+            fi
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1
