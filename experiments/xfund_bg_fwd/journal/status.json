@@ -1,19 +1,13 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-06T02:09:01.468084+00:00",
+ "updated": "2026-11-10T08:14:12.831743+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.074
+  "gate": 0.945
  },
  "data": {
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
    "failed": 4,
@@ -24,6 +18,12 @@
     "NUUSDT",
     "SXPUSDT"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -94,22 +94,10 @@
     "spread_in": 0.2517
    },
    {
-    "coin": "IOSTUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.8532
-   },
-   {
     "coin": "UNITREEUSDT",
     "long": "binance",
     "short": "gate",
     "spread_in": 0.4856
-   },
-   {
-    "coin": "IRYSUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.4559
    },
    {
     "coin": "BULLAUSDT",
@@ -152,18 +140,30 @@
     "long": "gate",
     "short": "binance",
     "spread_in": 0.3809
+   },
+   {
+    "coin": "CSOPSKHYNIX2LUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 0.4403
+   },
+   {
+    "coin": "AGPUUSDT",
+    "long": "gate",
+    "short": "binance",
+    "spread_in": 0.3938
    }
   ],
-  "scored_days": 2,
-  "late_days": 2,
-  "total": 3.248250000000008e-05,
-  "total_2x": -0.0007375175,
-  "total_3x": -0.0015075175,
-  "total_close": 0.0005924825,
-  "nw_t": null,
-  "max_drawdown": -0.0005245701,
+  "scored_days": 6,
+  "late_days": 5,
+  "total": -0.00021846029999999982,
+  "total_2x": -0.0011284602999999999,
+  "total_3x": -0.0020384603,
+  "total_close": 0.0003415397000000001,
+  "nw_t": -0.6799630821539572,
+  "max_drawdown": -0.0006159814,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-06"
+ "last_day": "2026-11-10"
 }
