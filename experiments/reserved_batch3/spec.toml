@@ -1,0 +1,31 @@
+# Reserved batch 3 (R392), candidate GLT: R275's carry book (gate+mexc L14d th5% K20) on the Gate long tail
+# (data/gate_hist/reserved/, read 2 of 4 of the Gate sample) with MEXC as the open partner venue (qx spread). Frozen
+# with PREREG.md; never edited afterwards. Every rule is R275's (experiments/xfund_v1/spec.toml): only the Gate
+# folders, the symbol table, the end date, the seed, recent_from, keep_daily, the hurdle and the out folder differ.
+name = "reserved_batch3"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/reserved_batch3/symbols.csv"
+reserved_prereg = "experiments/reserved_batch3/RESERVED.md"
+venues = [
+  { name = "gate", prices = "gate_hist/reserved/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/reserved/funding_applies", bar_h = 1 },
+  { name = "mexc", prices = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding", bar_h = 1 },
+]
+sets = [["gate", "mexc"]]
+lookbacks = [14]
+thresholds = [0.05]
+slots = [20]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 392
+alpha = 0.05
+recent_from = "2026-01-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 1
+hurdle_ann_pct = 0.0
+out = "experiments/reserved_batch3/results"

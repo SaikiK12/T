@@ -40,7 +40,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (192)
+## Other registered rounds (done, registered or planned) (193)
 
 - **[stock_carry_v1](stock_carry_v1/)** R436, REGISTERED PENDING, 12 trials. M493 gate 0: weekly short of the top trailing-funding MEXC US-stock/ETF perps, each hedged with the same notional of cash stock (IBKR), vs the 3-month T-bill ([PREREG](stock_carry_v1/PREREG.md))
 - **[stock_tugofwar_v1](stock_tugofwar_v1/)** R435, DONE NULL, 20 trials. M492 gate 0: overnight-vs-intraday tug of war (Lou-Polk-Skouras) across MEXC US-stock perps; primary B1 long top/short bottom quintile of trailing-20 overnight return among the top 30 by volume, close to 10:00 NY, at listed fee + recorded half-spread + funding ([PREREG](stock_tugofwar_v1/PREREG.md), [FINDINGS](stock_tugofwar_v1/FINDINGS.md))
@@ -75,6 +75,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[carry_targeted_costs_v1](carry_targeted_costs_v1/)** R402, DONE PARTIAL, 0 trials. Targeted public carry contract and lot-matched depth qualification; no strategy test ([PREREG](carry_targeted_costs_v1/PREREG.md), [FINDINGS](carry_targeted_costs_v1/FINDINGS.md))
 - **[carry_cost_qualification_v1](carry_cost_qualification_v1/)** R401, DONE PARTIAL, 0 trials. Current carry source qualification on the published R391 cohort; no strategy test ([PREREG](carry_cost_qualification_v1/PREREG.md), [FINDINGS](carry_cost_qualification_v1/FINDINGS.md))
 - **[path_response_v1](path_response_v1/)** R400, REGISTERED PENDING, 1,478 trials. Arrival-order area and same-price replenishment: bounded equation search beyond the fixed OFI baseline ([PREREG](path_response_v1/PREREG.md), [FINDINGS](path_response_v1/FINDINGS.md))
+- **[reserved_batch3](reserved_batch3/)** R392, REGISTERED PENDING, 3 trials. Reserved batch 3: C17 (R300 us10 n3 follow, M318) and M319 (08:00-clock k8 n3 follow) on reserved 2020, R275's gate+mexc L14d th5% K20 carry on the Gate long tail (31 bases), read once ([PREREG](reserved_batch3/PREREG.md))
 - **[reserved_batch2](reserved_batch2/)** R391, DONE CONFIRMED, 1 trial. Reserved batch 2: R275's carry book (L14d th5% K20) on the KuCoin, dYdX and Lighter long-tail samples with MEXC, first blind read ([PREREG](reserved_batch2/PREREG.md), [FINDINGS](reserved_batch2/FINDINGS.md))
 - **[lighter_roll_fwd](lighter_roll_fwd/)** R389, ABANDONED PENDING, 1 trial. Lighter BRENTOIL index roll steps: does the book lag the documented step? (M462, forward paper) ([PREREG](lighter_roll_fwd/PREREG.md), [FINDINGS](lighter_roll_fwd/FINDINGS.md))
 - **[forcedswitch_v1](forcedswitch_v1/)** R388, DONE NULL, 3 trials. Binance forced hourly switch as a natural experiment: post-rule switch prints vs pre-rule prints (M461) ([PREREG](forcedswitch_v1/PREREG.md), [FINDINGS](forcedswitch_v1/FINDINGS.md))
@@ -235,12 +236,11 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[atlas_v1](atlas_v1/)** R185, DONE CONFIRMED, 338,240 trials. gross-edge atlas: 284 price + 6 clock + 37 flow views x bins x 5 horizons x groupings ([PREREG](atlas_v1/PREREG.md), [FINDINGS](atlas_v1/FINDINGS.md))
 - **[battery_v1](battery_v1/)** R184, PLANNED PENDING, trials not set. adaptive selection: does recent performance pick next week winners out of a mined rule library? ([PREREG](battery_v1/PREREG.md))
 
-## Registered rounds with no local folder (7)
+## Registered rounds with no local folder (6)
 
 The registry retains these rounds. Missing local evidence may be a legacy import or an incomplete checkout;
 it is neither a null result nor permission to recreate the round. Paths below are declarations, not links.
 
-- **R392** `experiments/reserved_batch3`: REGISTERED PENDING. Reserved batch 3: C17 (R300 us10 n3 follow, M318) and M319 (08:00-clock k8 n3 follow) on reserved 2020, R275's gate+mexc L14d th5% K20 carry on the Gate long tail (31 bases), read once
 - **R183** `experiments/hypermine_expand`: DONE DATA_PASS. Bybit perps cross-listed on MEXC: data coverage for 22 new labels
 - **R182** `experiments/hypermine`: DONE NULL. 38-feature search over 900 Binance USD-M perps 2021-2026
 - **R181** `experiments/unlocks_deep`: DONE CONFIRMED. what drives the unlock short
