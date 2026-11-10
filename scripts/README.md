@@ -107,7 +107,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (164)
+## Run: one lane's frozen measurement (165)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -123,6 +123,7 @@ line is the first line of the script's own docstring.
 - [`run_capit.py`](run_capit.py): capit_v1 (R303): buying capitulation on Binance perps.
 - [`run_capital_mix.py`](run_capital_mix.py): R309: fixed initial-capital carry/spot comparison; archived inputs only, no trading.
 - [`run_carry.py`](run_carry.py): carry_v1 (R190): hedged funding carry, as set out in experiments/carry_v1/PREREG.md.
+- [`run_carry5.py`](run_carry5.py): R439 carry5_v1: R275's all-four carry rule (L14d th10% K20) on one book over five venues (Binance, Gate, Hyperliquid, MEXC, KuCoin), on the M468 engine (lab/xfund_v2), as set out in ...
 - [`run_carry_execution.py`](run_carry_execution.py): R417: one offline, frozen depth/cash diagnostic; no network or forward tick.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
 - [`run_carry_v2_audit.py`](run_carry_v2_audit.py): R437 carry_v2_audit_v1: R275's seven headline carry books re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_v1/PREREG.md.

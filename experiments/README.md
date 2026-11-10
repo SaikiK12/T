@@ -40,8 +40,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (195)
+## Other registered rounds (done, registered or planned) (196)
 
+- **[carry5_v1](carry5_v1/)** R439, REGISTERED PENDING, 1 trial. R275's all-four carry rule (L14d th10% K20) as one book over five venues (Binance, Gate, Hyperliquid, MEXC, KuCoin) on the M468 engine, paired against the four-venue book ([PREREG](carry5_v1/PREREG.md))
 - **[carry_v2_audit_kc_v1](carry_v2_audit_kc_v1/)** R438, DONE CONFIRMED, 2 trials. Accounting audit: R277's two KuCoin carry books (forward R279 A gate+kucoin, B binance+kucoin) re-run on the M468 engine (lab/xfund_v2) with R437's frozen runner ([PREREG](carry_v2_audit_kc_v1/PREREG.md), [FINDINGS](carry_v2_audit_kc_v1/FINDINGS.md))
 - **[carry_v2_audit_v1](carry_v2_audit_v1/)** R437, DONE CONFIRMED, 7 trials. Accounting audit: R275's 7 headline carry books (incl. forward R278 A/B/C, R390 A) re-run on the M468 engine (fresh = traded bar in day, fixed-quantity legs, dead/blowout exits); SURVIVES if v2 NW t >= 2.5, 2x > 0, both halves > 0 ([PREREG](carry_v2_audit_v1/PREREG.md), [FINDINGS](carry_v2_audit_v1/FINDINGS.md))
 - **[stock_carry_v1](stock_carry_v1/)** R436, DONE NULL, 12 trials. M493 gate 0: weekly short of the top trailing-funding MEXC US-stock/ETF perps, each hedged with the same notional of cash stock (IBKR), vs the 3-month T-bill ([PREREG](stock_carry_v1/PREREG.md), [FINDINGS](stock_carry_v1/FINDINGS.md))
