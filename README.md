@@ -168,6 +168,11 @@ for active writers. Dated proposals, audits and source notes below retain histor
 
 **Audits and reviews**
 
+- [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
+  edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
+  underpowered; one second-writer incident on Codex's forward lanes.
+- [Hidden-edge audit, 2026-11-04](docs/reviews/hidden_edge_audit_20261104.md): six checkers on units, costs,
+  timing, data, statistics and the qx engine; more inflated gains than hidden ones.
 - [Repository execution batch, 2026-11-04](docs/reviews/project_execution_20261104.md):
   new paper-session bridge, segmented recovery, independent dashboard bundle,
   funding schema evidence and bounded R401/R402 source qualification; the report

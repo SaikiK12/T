@@ -31,6 +31,9 @@ for breakthroughs at 100% of compute".
 - M494, once a dated history of index changes exists.
 - The M296 HIP-3 convergence event study.
 
+**Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
+directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
+
 **Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
 R392 is being done now.
 
@@ -97,3 +100,17 @@ waiting, and pick tests from our own measurements first.
     figures stay the conservative read.
   - **Deduction:** every forward carry book except R294 is now accounting-clean on held data. R294 waits for M469
     (R404's costs on 11-18). The binding constraint is still forward evidence and execution, not ideas.
+- **2026-11-10, false-null audit and R439 carry5_v1 (registered test, gate 0): CONFIRMED.**
+  - **Owner's question:** if the engine had accounting errors, why not others that hid edges? Six Haiku auditors
+    (Opus ones hit the rate limit) read survivorship, the cross-section engine, cross-asset lanes, NULL power, unused
+    data and event timing. Evidence in `docs/reviews/false_null_audit_20261110.md`.
+  - **Code:** mostly clean. Two hidden-edge items, neither moves a verdict: the listing cost tier (E1, note on M155)
+    and R271's unpriced legs (E2). Delisted exits booked at zero hide short gains (E3, unquantified).
+  - **Process (the real error):** most NULLs could detect only 30-190%/yr; they were read as "no edge". Low-Sharpe
+    directional ideas were tested one at a time. DIX, SKEW and the index perps were never used (M499, M500 queued).
+  - **Ops (mine):** I ran R406/R413 locally while Codex's GitHub runtime owns them; restored in 1ec28d2.
+  - **R439:** R275's all-four rule over five venues (adds KuCoin): +18.46%/yr at 1x, NW t 8.71, SURVIVES. Paired vs
+    four venues +1.48%/yr, t 0.54; level on constant notional (~+14.7%/yr). KuCoin buys steadiness (t 4.77 -> 8.71,
+    top-10-day share 33% -> 18%), not return. The PREREG names a forward lane as the next id.
+  - **Deduction:** choose tests by power first. Directional ideas go in pooled registered families or forward, not
+    one-by-one on short samples; structural high-Sharpe trades are where held data can decide.
