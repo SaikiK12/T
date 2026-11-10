@@ -81,10 +81,6 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
 |---|---|---|---|---|---|
 | 1 | R286 `experiments/reserved_batch1` | 2026-10-21 | 2020 1/4, Gate 1/4, MEXC-only 1/4 (KuCoin and dYdX 0/4) | 10 | on or after 2026-11-03 |
 
-**Owner decision, 2026-11-09:** batch 3 (R392) is read on 2026-11-09, not on or after 11-17. The owner chose this in
-the session because the subscription ends before 11-17. The two-week spacing is shortened once. The read budget of 4
-batches per sample is unchanged, and the freeze still comes before any read.
-
 ## Rules for gate 2
 - `go_real()` at the PREREG's day count, never earlier. It leaves NaNs unscored, blocks on infinite returns, and
   requires supplied entry-day keys to align with the original return vector; reported clusters count scored returns

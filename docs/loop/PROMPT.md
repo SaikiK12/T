@@ -146,3 +146,7 @@ small, public-data player can still reach.
     to Haiku.
   - **Run plumbing before claiming an R-id.** R437's oil check was stopped at plumbing: only 3 of 8 weekends had
     traded. No trials were spent.
+  - **Never edit a file that any PREREG hashes.** `docs/GATES.md` is a frozen input of earlier lanes. Check
+    with `grep -l "docs/GATES.md" experiments/*/PREREG.md` before editing any doc. Record owner decisions in STATE.md
+    or in the lane's PREREG.
+

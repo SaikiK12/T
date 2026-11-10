@@ -170,3 +170,9 @@ The NULL holds under any correction for multiple testing.
     median move.
   - A maker version needs two things first: a check of feed latency on the
     receive clock, and a measured fill model.
+
+## Note added 2026-11-10: `docs/GATES.md` was restored
+This lane's inputs block hashes `docs/GATES.md` at `ed486814…`. That version came from a paragraph added in 5d13ba1,
+which broke rule 2: GATES.md is a frozen input of seven earlier lanes, at `e7dd02fa…`. GATES.md has since been
+restored to `e7dd02fa…`, and the paragraph now lives in `docs/loop/STATE.md`. To re-verify this lane's inputs, check
+out GATES.md from 5d13ba1. The file holds rules text only; no result here depends on it.

@@ -57,4 +57,10 @@ R392 is being done now.
   - **R433 NULL as a trade.** Informed Lighter accounts stay informed out of sample (Spearman 0.42 at 60 s), but a
     follower 1.3 s late keeps less than the touch. The open use is the maker side (M474).
   - **YouTube @losingloonies:** blocked by YouTube's bot wall from this container. A script was left for the owner.
+- **2026-11-10, wave 1 closed.** R434, R435 and R436 NULL. R392 PARTIAL:
+  - GLT carry PASS but +0.73%/yr, below cash.
+  - C17 on 2020 at t 3.04 fails α 0.001 by a hair, and its 10 best days carry it.
+  - **Owner decision, 2026-11-09:** batch 3 was read on 11-10, not on or after 11-17. The two-week spacing was shortened
+    once; the 4-read budget is unchanged. This sat in `docs/GATES.md` until 11-10, when GATES was restored to its
+    frozen content (rule 2).
 

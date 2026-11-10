@@ -1,0 +1,161 @@
+{
+  "name": "reserved_batch3",
+  "trials": 1,
+  "coins": 31,
+  "coins_by_venue": {
+    "gate": 31,
+    "mexc": 31
+  },
+  "rc_null_p95": 1.4794991658541667,
+  "verdict": "PASS (gate 0)",
+  "survivors": [
+    "gate+mexc L14d th5% K20"
+  ],
+  "sets": [
+    {
+      "set": "gate+mexc",
+      "lookback": 14,
+      "window_from": "2025-05-12",
+      "coins_ever": 23,
+      "mean_candidates": {
+        "0.05": 4.32741617357002
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "label": "gate+mexc L14d th5% K20",
+      "strat": {
+        "set": "gate+mexc",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-05-12",
+      "stats": [
+        {
+          "days": 507,
+          "mean_bp": 0.20112577968059775,
+          "ann_pct": 0.7341090958341818,
+          "vol_pct": 0.4184833524390157,
+          "sharpe": 1.7542133792315218,
+          "t": 2.0674735704173197,
+          "t_nw": 2.257186667065615,
+          "half1_bp": 0.05323419473156086,
+          "half2_bp": 0.3484351142951895,
+          "recent_bp": 0.337699220012291,
+          "recent_days": 273,
+          "trimmed_bp": 0.2429669807711657,
+          "max_dd_pct": -0.3383037126950206,
+          "top10_share": 0.5687959181350213,
+          "total_pct": 1.0236875334096673
+        },
+        {
+          "days": 507,
+          "mean_bp": 0.031303294473497126,
+          "ann_pct": 0.1142570248282645,
+          "vol_pct": 0.4410259172963441,
+          "sharpe": 0.25907099865854444,
+          "t": 0.3053348292342889,
+          "t_nw": 0.32715267890596744,
+          "half1_bp": -0.08510572621705569,
+          "half2_bp": 0.14725401193298474,
+          "recent_bp": 0.14154537385844496,
+          "recent_days": 273,
+          "trimmed_bp": 0.0920991124139817,
+          "max_dd_pct": -0.5030806983794878,
+          "top10_share": 3.488639797070184,
+          "total_pct": 0.15748271541273784
+        },
+        {
+          "days": 507,
+          "mean_bp": -0.13851919073360347,
+          "ann_pct": -0.5055950461776527,
+          "vol_pct": 0.4736592326422466,
+          "sharpe": -1.0674236061171156,
+          "t": -1.2580397118242594,
+          "t_nw": -1.3057089053447657,
+          "half1_bp": -0.22344564716567225,
+          "half2_bp": -0.05392709042921991,
+          "recent_bp": -0.05460847229540122,
+          "recent_days": 273,
+          "trimmed_bp": -0.05860511293813021,
+          "max_dd_pct": -0.7990557965270595,
+          "top10_share": -0.7596517467483632,
+          "total_pct": -0.7013817799869204
+        }
+      ],
+      "funding_share": 1.0718385407818756,
+      "avg_held": 4.968441814595661,
+      "trades": 123,
+      "forced_exits": 3,
+      "p_rc": 0.014992503748125937,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    }
+  ],
+  "spec": {
+    "name": "reserved_batch3",
+    "start": "2021-01-01",
+    "end": "2026-09-30",
+    "symbols": "experiments/reserved_batch3/symbols.csv",
+    "venues": [
+      {
+        "name": "gate",
+        "prices": "gate_hist/reserved/candlesticks_1h",
+        "vol": "vol_contracts",
+        "funding": "gate_hist/reserved/funding_applies",
+        "bar_h": 1
+      },
+      {
+        "name": "mexc",
+        "prices": "mexc_hist/klines_1h",
+        "vol": "vol",
+        "funding": "mexc_hist/funding",
+        "bar_h": 1
+      }
+    ],
+    "reserved_prereg": "experiments/reserved_batch3/RESERVED.md",
+    "sets": [
+      [
+        "gate",
+        "mexc"
+      ]
+    ],
+    "lookbacks": [
+      14
+    ],
+    "thresholds": [
+      0.05
+    ],
+    "slots": [
+      20
+    ],
+    "costs": [
+      0.0007,
+      0.0014,
+      0.0021
+    ],
+    "corr_days": 30,
+    "corr_min": 0.9,
+    "corr_obs": 20,
+    "block_days": 10,
+    "reps": 2000,
+    "seed": 392,
+    "out": "experiments/reserved_batch3/results",
+    "alpha": 0.05,
+    "recent_from": "2026-01-01",
+    "trim": 0.01,
+    "nw_lags": 10,
+    "keep_daily": 1,
+    "hurdle_ann_pct": 0.0
+  }
+}

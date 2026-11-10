@@ -97,3 +97,9 @@ FINDINGS was written by the orchestrator from the lane agent's text. The harness
 ## What it means
 
 The overnight/intraday cross-section on MEXC US-stock perps is real enough to show the textbook signs at the pre-open proxy. It is too small and too noisy to pay about 22 bp a day of taker costs on a 6-name-a-leg book. Retuning this sample is closed. A successor needs a new id and a structurally cheaper route, such as maker fills or a weekly signal with much lower turnover, frozen before reading.
+
+## Note added 2026-11-10: `docs/GATES.md` was restored
+This lane's inputs block hashes `docs/GATES.md` at `ed486814…`. That version came from a paragraph added in 5d13ba1,
+which broke rule 2: GATES.md is a frozen input of seven earlier lanes, at `e7dd02fa…`. GATES.md has since been
+restored to `e7dd02fa…`, and the paragraph now lives in `docs/loop/STATE.md`. To re-verify this lane's inputs, check
+out GATES.md from 5d13ba1. The file holds rules text only; no result here depends on it.
