@@ -1,0 +1,48 @@
+name: OKX X-Perp recorder (Claude)
+# Single writer of the data branch claude/okx-xperp-data: OKX Europe X-Perp funding prints, daily mark/index/spot
+# candles and book-cost snapshots (scripts/record_okx_xperp.py). Public data only: no key, no order.
+on:
+  schedule:
+    - cron: '37 2,14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-okx-recorder-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout the default branch (code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Checkout the data branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: claude/okx-xperp-data
+          path: .okx-data
+      - name: Record
+        id: rec
+        run: python3 scripts/record_okx_xperp.py --out .okx-data
+      - name: Commit recordings
+        if: always() && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          cd .okx-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          find . -name '*.tmp' -delete
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "OKX X-Perp recordings ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git pull -q --rebase origin claude/okx-xperp-data && git push -q origin HEAD:claude/okx-xperp-data; then
+              echo "pushed"; exit 0
+            fi
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1
