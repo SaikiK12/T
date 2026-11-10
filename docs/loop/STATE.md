@@ -198,3 +198,13 @@ waiting, and pick tests from our own measurements first.
     is +2.7 points over the hurdle and still under the +3-point bar.
   - **Deduction for France:** the Hyperliquid-only cash-and-carry is real but thin. It is a T-bill-plus-a-little
     product, not a breakthrough. The confirmed carry edges remain on venues that exclude France.
+  - Correction, same day: R444's portfolio-margin figure (+7.70%/yr at capital N/2) needs a USDC borrow at 5%/yr or
+    more. With no borrow (capital N) the book reads +3.85%/yr, excess −0.15.
+- **2026-11-10, R445 frozen, gate 0 CONTINUE (seen, stops only): HYPE and BTC carry, fully deployed (M504).**
+  - R444's rule on the two pairs whose spot has a listed portfolio-margin LTV, every qualifying pair held, capital
+    split across them, spot backing the perp with a 10% USDC buffer (capital N × 1.1).
+  - Gate 0 (2025-01-01..2026-11-10): +10.06%/yr at 1x, excess +6.06 points, t 3.67; 2x +3.21, 3x +0.36. Without
+    portfolio margin (N × 1.5): excess +3.38.
+  - The level is falling: +15.2%/yr in 2025, +4.2%/yr in 2026 (about the hurdle). The pairs were picked after R444,
+    so gate 0 is not evidence; gate 1 decides on 2027-02-08 and 2027-05-09 and has about a one-in-four chance of
+    passing even at gate 0's full level.
