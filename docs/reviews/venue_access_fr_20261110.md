@@ -65,7 +65,7 @@ The forward lanes still measure whether the edge exists. They do not measure a b
      "may vary" by residence and account, and the regulator records were not reached. See "OKX Europe X-Perps,
      checked later the same day" below.
 4. **Paper lanes keep running.** They are the only way to learn whether the edge holds live. But a PASS on R278,
-   R279, R294, R390 or R440 would not, by itself, give the owner a book he can hold from France. `lab.gate.go_real()`
+   R279, R294, R390 or R440 would not, by itself, give the owner a book they can hold from France. `lab.gate.go_real()`
    and the owner's own legal check decide any real use.
 
 ## OKX Europe X-Perps, checked later the same day
@@ -97,7 +97,7 @@ The forward lanes still measure whether the edge exists. They do not measure a b
 
 **Read:** of every route checked, this is the only one where the seller's own page puts France in scope for perpetual
 futures. R441 (crypto X-Perps hedged with OKX EEA spot) and R442 (stock X-Perps hedged with the stock at a broker)
-test it on paper. Before any real use the owner still has to confirm in the app that his account can open X-Perps:
+test it on paper. Before any real use the owner still has to confirm in the app that their account can open X-Perps:
 the appropriateness test and the account's country decide.
 
 ## What the France-reachable routes earned on paper (same day)
