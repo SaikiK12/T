@@ -84,8 +84,28 @@ threshold. R275's reality-check p values are not recomputed.
   is a gate-0 accounting audit; it is not a gate pass and admits nothing to real money.
 
 ## Plumbing record (2026-11-10, before the freeze)
-PLUMBING_RECORD
+Run `python scripts/run_carry_v2_audit.py --plumbing` at about 08:20 UTC: 867 coins x 4 venues, 2,100 days loaded
+in 86 s. For every book, v1's 1x daily net equals R275's `results/daily.csv` (max |diff| 5.0e-11), and v1's %/yr and
+NW t equal R275's FINDINGS table (gate+hyperliquid +9.73% t 8.63; binance+hyperliquid +8.63% t 8.95; binance+mexc
++6.33% t 4.80; all four +13.21% t 7.68; gate+mexc +16.29% t 7.38; binance+gate +10.05% t 5.96; hyperliquid+mexc +7.98%
+t 4.02). Fresh coin-days over each book's venues, v1 -> v2 (counts only, no return): gate+hyperliquid 757,937 ->
+798,633; binance+hyperliquid 746,601 -> 746,775; binance+mexc 825,698 -> 825,874; all four 1,583,635 -> 1,624,507;
+gate+mexc 837,034 -> 877,732; binance+gate 1,170,386 -> 1,211,256; hyperliquid+mexc 413,249 -> 413,251. The dry run
+on a synthetic universe and 4 runner tests plus 10 `tests/test_xfund_v2.py` tests passed.
 
 ```inputs
-INPUTS_BLOCK
+1ba92fe3df40a0eac920e47c69ac4b7b9024750d4ba13f94edcfbe8f4550b7e5 scripts/run_carry_v2_audit.py
+36af3a33706a575344bef234e21f9c0dbd5e0b6872ce49d7fad5c64c34f25a03 tests/test_run_carry_v2_audit.py
+d34e99a05241899543feacc4f443a0115dfd779c61f134b9880e241101dafe1d lab/xfund.py
+fa85ef56885a1d6736dd92e73f8bce44e97ce9ee001739526caef86ae1ba62cd lab/xfund_v2.py
+bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34 lab/stats.py
+3eb47ec2ae78a6531a71f4f564ceac71987d1616097c50cdd8d2913009bd5dba scripts/run_clockflow.py
+ffab653a52f37385103bd89ad11fd5d925caf905d0ff5c0aa5af1674de135874 experiments/xfund_v1/spec.toml
+78201a341b9fc498b67f4893f1dd30d67d790d94ca8257a4b1a2ce8f569ab8e0 experiments/xfund_v1/symbols.csv
+790d4a0fae2d0fa51e3c5c8e0d28c9ce7be9c5f037187c39b95959fb68fa8dfc experiments/xfund_v1/results/daily.csv
+55e45182aade91c169b5a58b94ea9c831a64bc7753828fd276b7c94ed26e8de6 docs/provenance/klines_1h.json
+84a3aadbf5ac0439b99209714c85ab0484b775f1258701835a64029c1ec3e4de docs/provenance/fundingRate.json
+e496f80737a33ccffd3be5fb2d119310d91930021f7477338e124290950563c0 docs/provenance/gate_hist.json
+72a6204069af064911d82339e7e637079cba343df4e8914f83d88197396a065b docs/provenance/hyperliquid.json
+5fb2f74b0ffbfde94f9a73830b728e22387bce12475802fba01ac42fb7898c55 docs/provenance/mexc_hist.json
 ```
