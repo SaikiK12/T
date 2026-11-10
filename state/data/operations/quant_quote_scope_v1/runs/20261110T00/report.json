@@ -1,0 +1,346 @@
+{
+  "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
+  "run_id": "gha_42726775873_1",
+  "hour": "20261110T00",
+  "started_utc": "2026-11-10T00:14:58.659878+00:00",
+  "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
+  "code_commit": "d852a13b6b8d327ee2a66a98e0d036319e2d68f7",
+  "inventory": [
+    {
+      "id": "R200",
+      "state": "BLOCKED",
+      "reason": "Historical flow/metrics datasets absent; no automatic archive backfill or late-to-on-time relabeling"
+    },
+    {
+      "id": "REC_TICKER",
+      "state": "BLOCKED",
+      "reason": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained."
+    },
+    {
+      "id": "REC_FUNDING",
+      "state": "BLOCKED",
+      "reason": "Existing multi-venue collector includes the previously geo-blocked Binance futures source"
+    },
+    {
+      "id": "REC_DERIBIT",
+      "state": "BLOCKED",
+      "reason": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained."
+    },
+    {
+      "id": "REC_CBOE",
+      "state": "BLOCKED",
+      "reason": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained."
+    },
+    {
+      "id": "REC_LTRADES",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_OPTEXP",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_CPERPS",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_LIGHTER",
+      "state": "BLOCKED",
+      "reason": "Unqualified full-universe capture volume; recover/qualify before resuming"
+    },
+    {
+      "id": "REC_DEX",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_WALLETS",
+      "state": "BLOCKED",
+      "reason": "Not admitted to this bounded takeover; requires source/input qualification before activation"
+    },
+    {
+      "id": "REC_NOTICES",
+      "state": "BLOCKED",
+      "reason": "Existing collector uses a browser User-Agent; requires a separately frozen honest-transport successor"
+    },
+    {
+      "id": "REC_UNLOCKS",
+      "state": "BLOCKED",
+      "reason": "Paused in R422: preserve remaining original auxiliary bytes for native paper tasks; needs separately qualified source scope/budget. Prior source stops are retained."
+    },
+    {
+      "id": "REC_TAPE",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_HFT",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_RAW",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_NEWS",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_LINDEX",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "REC_HLLB",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R268",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R270",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R272",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R214",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R215",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R404",
+      "state": "BLOCKED",
+      "reason": "Full-universe cost recording and historical recovery need a separately qualified acquisition scope; native Nov18 read remains gated"
+    },
+    {
+      "id": "R406",
+      "state": "ADMITTED",
+      "reason": null
+    },
+    {
+      "id": "R413",
+      "state": "ADMITTED",
+      "reason": null
+    },
+    {
+      "id": "R224",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R218",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R220",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R221",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R225",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R266",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R278",
+      "state": "BLOCKED",
+      "reason": "Warm archive and registered carry state missing; Binance futures remains denied"
+    },
+    {
+      "id": "R279",
+      "state": "BLOCKED",
+      "reason": "Warm archives missing; Binance futures remains denied"
+    },
+    {
+      "id": "R294",
+      "state": "BLOCKED",
+      "reason": "Warm historical price/funding cache absent; no broad automatic backfill"
+    },
+    {
+      "id": "R390",
+      "state": "BLOCKED",
+      "reason": "Warm archives missing; Binance futures remains denied"
+    },
+    {
+      "id": "R355",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "R364",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "R369",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R371",
+      "state": "BLOCKED",
+      "reason": "Requires a continuous recorder host and its original append-only state; hourly ephemeral jobs cannot prove continuity"
+    },
+    {
+      "id": "R285",
+      "state": "BLOCKED",
+      "reason": "Source family histories cannot be resumed completely from this checkout"
+    },
+    {
+      "id": "R415",
+      "state": "BLOCKED",
+      "reason": "Frozen account depends on fresh R285 inputs; current source snapshot is stale, no fabricated account day"
+    },
+    {
+      "id": "LAG",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "PANEL",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "CATALOG",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "DASH",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "REC_DIGEST",
+      "state": "BLOCKED",
+      "reason": "Mandatory source/input history unavailable; do not run a partial substitute as the original lane"
+    },
+    {
+      "id": "R419",
+      "state": "ADMITTED",
+      "reason": null
+    },
+    {
+      "id": "R428",
+      "state": "BLOCKED",
+      "reason": "Original Lighter jurisdiction stop retained; no new stream request"
+    },
+    {
+      "id": "R429",
+      "state": "ADMITTED",
+      "reason": "Bounded source view, not a new profit rule"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R419",
+      "started_utc": "2026-11-10T00:14:58.664725+00:00",
+      "state": "PROCESS_OK",
+      "returncode": 0
+    },
+    {
+      "id": "R413",
+      "started_utc": "2026-11-10T00:15:06.283702+00:00",
+      "state": "FAILED",
+      "returncode": 42
+    },
+    {
+      "id": "R406",
+      "started_utc": "2026-11-10T00:15:07.137943+00:00",
+      "state": "FAILED",
+      "returncode": 42
+    }
+  ],
+  "real_orders_allowed": false,
+  "predictive_trials": 0,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "finished_utc": "2026-11-10T00:15:07.990918+00:00",
+  "health": [
+    {
+      "rid": "R415",
+      "path": "experiments/paperacct_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 81.87,
+      "source_updated": "2026-11-06T14:23Z"
+    },
+    {
+      "rid": "R285",
+      "path": "experiments/xbook_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 81.67,
+      "source_updated": "2026-11-06T14:35:10Z"
+    },
+    {
+      "rid": "R278",
+      "path": "experiments/xfund_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 94.5,
+      "source_updated": "2026-11-06T01:45:16.934297+00:00"
+    },
+    {
+      "rid": "R279",
+      "path": "experiments/xfund_kc_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 94.4,
+      "source_updated": "2026-11-06T01:51:18.164460+00:00"
+    },
+    {
+      "rid": "R390",
+      "path": "experiments/xfund_bg_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 94.1,
+      "source_updated": "2026-11-06T02:09:01.468084+00:00"
+    },
+    {
+      "rid": "R413",
+      "path": "experiments/boroslock_fwd/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 25.98,
+      "source_updated": "2026-11-08T22:16:32Z"
+    },
+    {
+      "rid": "R406",
+      "path": "experiments/lockcarry_fwd2/journal/status.json",
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 24.98,
+      "source_updated": "2026-11-08T23:16:03Z"
+    }
+  ],
+  "all_project_lanes_running": false,
+  "meaning": "Process results and receipt freshness only; no new profitability/gate verdict"
+}
