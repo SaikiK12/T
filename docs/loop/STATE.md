@@ -319,3 +319,8 @@ waiting, and pick tests from our own measurements first.
   pick, one-minute fills 3 minutes after each clock, venue funding, fee + $1k book cost from the nearest
   snapshot. Book L on Lighter (0 fee) decides at R371's 125/500 scored days; book H on Hyperliquid main + xyz is
   reported. Forward from 2026-11-12, daily in `claude-usopen-dex.yml`.
+- **2026-11-11, R458 flow_hl_mc_v1 frozen `f938cec8` (0 trials).** R448's crypto flow books recomputed unchanged at
+  Hyperliquid's 4.5 bp taker fee + $1k slippage from `main/books/` (nearest snapshot within 90 minutes, else R448's
+  6-20 bp tier cost); stops if its recomputation differs from R448's tickets. Book A's gate-0 net fell to +0.1
+  bp/day at 3x, so its cost decides it. Weekly in `claude-xperp-reads.yml`. Also: R215 now runs through
+  `run_paced_mexc.py` after a MEXC 510 refusal (run 42980224484).
