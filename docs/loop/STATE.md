@@ -431,3 +431,9 @@ waiting, and pick tests from our own measurements first.
   - A leans on the Hong Kong AI listings (ZHIPU, MINIMAX); KRX A +54.5 (p 0.12), B -13; TSE negative.
   - Post hoc: W lagged 1 h gives A +94.8 (p 0.015, not entry bounce), B -1.3. Same decay as R465's C.
   - Program total 9,785,237.
+- 2026-11-11, R469 `asiaclose_c` frozen (`bcf3a776`) before its first opening: R468's rule and universe read once
+  on unseen openings 2026-11-12 .. 2027-01-29 (sample C).
+  - Decision: R468's cell, fade, one-sided day-clustered p <= 0.05 and mean > 2 units; 7 trials.
+  - `claude-asiaclose-c.yml` runs it on 2027-02-01..04 at 07:41 UTC; the runner refuses earlier and reads once.
+  - Power: PASS about 61% if A's +88 bp held, 8% if B's +9.5 bp is the truth. PASS earns a forward lane.
+  - Program total 9,785,244.

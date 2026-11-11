@@ -125,7 +125,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (194)
+## Run: one lane's frozen measurement (195)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -133,6 +133,7 @@ line is the first line of the script's own docstring.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
 - [`run_asiaclose.py`](run_asiaclose.py): R468 asiaclose_v1 runner, frozen in experiments/asiaclose_v1/PREREG.md: Asian single-stock perps on trade.xyz and Lighter across the daily closure of their local exchange (M526).
+- [`run_asiaclose_c.py`](run_asiaclose_c.py): R469 asiaclose_c, frozen in experiments/asiaclose_c/PREREG.md: R468's frozen rule (scripts/asiaclose_rule.py) and universe (experiments/asiaclose_v1/universe.csv) read once on openings that no ...
 - [`run_atlas.py`](run_atlas.py): atlas_v1 (R185): the gross-edge atlas, as set out in experiments/atlas_v1/PREREG.md.
 - [`run_atlas_tape.py`](run_atlas_tape.py): R386 atlas_tape_v1: one large gate-0 screen of short-horizon conditional forward returns on the recorded tape-scale data.
 - [`run_auction.py`](run_auction.py): auction_v1 (R290): auction-market levels on 1-minute bars of the BTC, ETH and SOL perps, from real session anchors and from placebo clocks, as set out in experiments/auction_v1/PREREG.md (M305, ...
