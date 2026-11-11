@@ -16,3 +16,11 @@
   flagged here as written after the fact.
 - The caches `data/live` and `data/mexc` (gitignored) live in the Actions cache. The first run refetches them from the
   public APIs. MEXC contracts are mapped with that day's snapshot, as before.
+
+## 2026-11-11, MEXC requests paced on GitHub's runners (no ticket affected)
+- On GitHub's shared runners MEXC refused part of R220's burst of requests with code 510 ("Endpoint rate limit
+  exceeded ... scope: IP"), after R215 and R218 had used the same IP. `lab/mexc.py` raises at once on such a reply
+  and R220 wrote nothing (runs 42933784241 and 42939724639; the last ticket stayed 2026-11-05).
+- The workflow, now hourly at :17, runs the script through `scripts/run_paced_mexc.py`: MEXC requests at most every
+  0.25 s, and each 510 retried after 5, 15 and 45 s. `scripts/forward_carry.py` and `lab/mexc.py` are unchanged; a
+  fetch that succeeds returns the same data as before, so the rule and every value are unchanged.

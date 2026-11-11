@@ -116,7 +116,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (178)
+## Run: one lane's frozen measurement (179)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -231,6 +231,7 @@ line is the first line of the script's own docstring.
 - [`run_optimizer.py`](run_optimizer.py): Finite static M027 allocation screen; imports never read project outcomes.
 - [`run_orb_family.py`](run_orb_family.py): Run one frozen four-arm ORB pilot with exact code/data byte verification.
 - [`run_owner_acceptance.py`](run_owner_acceptance.py): R320 finite risk/component validation and integrated owner acceptance evidence.
+- [`run_paced_mexc.py`](run_paced_mexc.py): Run a lane script with MEXC's public client paced: at most one request every 0.25 s across threads, and a request that MEXC refuses with code 510 ("Endpoint rate limit exceeded ... scope: IP") is ...
 - [`run_pack.py`](run_pack.py): pack_v1 (R194): many maker cells in one hedged book, as set out in experiments/pack_v1/PREREG.md.
 - [`run_paired_account.py`](run_paired_account.py): R319 registered paper lifecycle and held-book economic accounting, offline only.
 - [`run_pairs.py`](run_pairs.py): pairs_v1 (R250): weekly-formed pairs on the top-50 perps, distance (Gatev) and Engle-Granger selection, z-score entry 2 and exit 0, as set out in experiments/pairs_v1/PREREG.md.
