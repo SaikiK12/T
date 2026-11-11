@@ -114,7 +114,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (172)
+## Run: one lane's frozen measurement (173)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -171,6 +171,7 @@ line is the first line of the script's own docstring.
 - [`run_flow72.py`](run_flow72.py): flow72_v1 (R196): short the coins with heavy taker selling / top traders short vs the crowd, 72 h, universe-hedged, as set out in experiments/flow72_v1/PREREG.md.
 - [`run_flow72_holdout.py`](run_flow72_holdout.py): flow72_holdout (R198): one shot of the frozen 72 h flow slice book on 2025-07-01..2026-09-30, as set out in experiments/flow72_holdout/PREREG.md.
 - [`run_flow72_slices.py`](run_flow72_slices.py): flow72_v2 (R197): the three 72 h flow cells as overlapping slices, as set out in experiments/flow72_v2/PREREG.md.
+- [`run_flow_hl.py`](run_flow_hl.py): flow_hl_v1 (R448): R200's flow books on crypto perps only, traded on Hyperliquid's hourly closes and funding, as set out in experiments/flow_hl_v1/PREREG.md.
 - [`run_forcedswitch.py`](run_forcedswitch.py): R388 forcedswitch_v1: Binance's forced hourly switch as a natural experiment (M461, web-deep SRC1103-010).
 - [`run_fred_quote_scope.py`](run_fred_quote_scope.py): R429 sole frozen, offline DTB3 source-view identity measurement; default is an inactive plan.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
