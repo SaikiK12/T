@@ -281,3 +281,7 @@ waiting, and pick tests from our own measurements first.
     funding to ~5.5% annualized" (docs.trade.xyz changelog; `perpDexs` lists multiplier 0.5 on 136 of 138 xyz
     markets). Short perp and fully paid stock at 2x perp margin is then about 3.7%/yr on capital before costs, under
     the 4% hurdle, as R442 found on OKX (funding +3.7%/yr).
+- **2026-11-11, R453 flow_hlstock_mc_v1: R451's books at measured xyz costs (real money equal to paper).**
+  - 117 of 122 xyz markets run in HIP-3 growth mode: taker fee 0.9 bp, not the 9 bp floor R451 charges. R453
+    recomputes R451's positions with that fee plus the $1k slippage of the hourly snapshots. Frozen `26a0ed2d` before
+    any snapshot value was read; zero trials (it can only fail R451). Weekly in `claude-xperp-reads.yml`.

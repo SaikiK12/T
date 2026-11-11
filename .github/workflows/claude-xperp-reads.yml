@@ -4,7 +4,9 @@ name: OKX X-Perp lane reads (Claude)
 # (scripts/run_dexvault.py) and R447 (scripts/run_llpstake.py) on the recorded data branch claude/okx-xperp-data:
 # a status read (no decision) for each, and the frozen 90- and 180-day decisions of the lanes marked `looks` once a
 # look date has passed (--until the look date, written once to results/look90 or results/look180). R442 and R444
-# stopped at gate 0 (NULL), so they get status reads only.
+# stopped at gate 0 (NULL), so they get status reads only. Also R453 (scripts/run_flow_hlstock_mc.py): R451's books
+# re-priced at the costs recorded on claude/xyz-books-data; its 90- and 365-day decisions follow R451's own counted
+# days, so each weekly read writes the status and, once reached, the decision (results/forward).
 # Single writer of these lanes' results folders. Paper only.
 on:
   schedule:
@@ -31,6 +33,12 @@ jobs:
         with:
           ref: claude/okx-xperp-data
           path: .okx-data
+      - name: Checkout the xyz book data (R453)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: claude/xyz-books-data
+          path: .xyz-data
+          fetch-depth: 1
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version-file: .python-version
@@ -68,6 +76,10 @@ jobs:
               fi
             done
           done
+          echo "== flow_hlstock_mc_v1 (R453)"
+          if [ -f experiments/flow_hlstock_mc_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_flow_hlstock_mc.py --books .xyz-data | tail -n 20 || fail=1
+          fi
           exit $fail
       - name: Commit the reads
         if: always() && steps.reads.outcome != 'skipped'
@@ -76,6 +88,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           lanes="xperp_carry_v1 xperp_stock_v1 xperp_hl_v1 hlspot_carry_v1 hlspot_pm_v1 dexvault_v1 llpstake_v1"
+          lanes="$lanes flow_hlstock_mc_v1"
           for lane in $lanes; do
             if [ -d "experiments/$lane/results" ]; then git add -A "experiments/$lane/results"; fi
           done
