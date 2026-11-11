@@ -389,3 +389,11 @@ waiting, and pick tests from our own measurements first.
     Held to Monday 10:00 it is NULL (noise).
   - **Caveats:** prices are last trades and costs are assumed.
   - **Next:** the forward lane R463 at recorded xyz book costs. 32 trials; program total 9,785,101.
+- **2026-11-11, R463 `xyzwknd_fwd` frozen (RUNNING, PENDING), before the first weekend (Friday 2026-11-13).**
+  - **Measure A decides:** R462's frozen rule at that day's taker fee and the $1k book cost recorded on
+    `claude/xyz-books-data`.
+  - **Measure B must agree:** point-in-time tickets. `claude-xyzwknd-tick.yml` decides at Sunday 19:00 New York from
+    the candles then available, walks the live book, and walks it again at 22:00.
+  - **Reads:** futility at 15 traded weekends; PASS at 20 (p < 0.01) or 30 (p < 0.04) only if the tickets cover two
+    thirds of the weekends with a positive mean. Scored daily by `claude-xyzwknd.yml`.
+  - 1 trial; program total 9,785,102.
