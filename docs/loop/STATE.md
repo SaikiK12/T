@@ -397,3 +397,12 @@ waiting, and pick tests from our own measurements first.
   - **Reads:** futility at 15 traded weekends; PASS at 20 (p < 0.01) or 30 (p < 0.04) only if the tickets cover two
     thirds of the weekends with a positive mean. Scored daily by `claude-xyzwknd.yml`.
   - 1 trial; program total 9,785,102.
+- **2026-11-11, idea wave 6 (six Haiku web lenses) and R464 `xyzns_wknd_v1` NULL.**
+  - **Intake:** `research/intake/idea_wave6_20261111.md`. New rows M520 (tested), M521-M523 (UNTESTED: crypto-linked
+    stock perps against BTC's weekend move, month-end rebalancing, end-of-day momentum); notes on M515, M447, M492.
+  - **Correction:** the Blockworks/HPC slope of 0.834 has the reopen move as the dependent variable. The perp gives
+    back about a sixth of its weekend move, which supports R462's fade rather than contradicting it.
+  - **R464.** R462's rule on xyz's 14 index, commodity and FX perps: A +2.7 bp at |W| >= 25 (p 0.86), +1.9 bp at
+    |W| >= 50 (p 0.93), net negative from 1x. B (6 weekends) was +75/+102 bp but cannot rescue A. The overshoot is
+    at most a stock-perp effect; R463 still decides it forward.
+  - 40 trials; program total 9,785,142.

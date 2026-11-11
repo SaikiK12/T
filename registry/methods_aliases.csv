@@ -452,7 +452,7 @@ IW4-HYPERP,Hyperps convergence at launch,blocked,M296,,medium,About three events
 IW4-HIP3-WEEKEND,HIP-3 weekend gap and weekend convergence of stock perps,partial,M321,M188,medium,R432 gate 0 and R459 forward,research/intake/idea_wave4_20261111.md
 IW4-LISTING-DAY1,Perp-listing day-1 fade (BitMEX report),null,M155,,medium,Listing family tested (R188),research/intake/idea_wave4_20261111.md
 IW4-EARNINGS-PERP,Earnings reaction on 24/7 stock perps,null,M513,M222,medium,"Tested as R461, NULL",research/intake/idea_wave4_20261111.md
-IW5-XYZ-WEEKEND,trade.xyz US-stock perps weekend overshoot (oracle EMA while closed),partial,M515,M321;M188,high,"R462 gate-0 PASS; forward R463",research/intake/idea_wave5_20261111.md
+IW5-XYZ-WEEKEND,trade.xyz US-stock perps weekend overshoot (oracle EMA while closed),partial,M515,M321;M188,high,R462 gate-0 PASS; forward R463,research/intake/idea_wave5_20261111.md
 IW5-OVERNIGHT-SEO,Overnight secondary offerings on 24/7 stock perps,untested,M516,M513,medium,Queued; count offerings first,research/intake/idea_wave5_20261111.md
 IW5-SP500-ADD,S&P 500 additions announced after the close,blocked,M519,,low,No time-stamped archive held,research/intake/idea_wave5_20261111.md
 IW5-FDA-AFTERCLOSE,FDA decisions announced after the close,context,CONTEXT,M519,low,Very few perp-listed biotech names,research/intake/idea_wave5_20261111.md
@@ -464,3 +464,14 @@ IW5-PASSIVE-QUOTE,Slow passive quoting on zero-fee or thin stock perps,untested,
 IW5-XVENUE-STOCK,Cross-venue stock-perp residual while cash is closed,untested,M443,M515,low,Free history from mid-2026 only,research/intake/idea_wave5_20261111.md
 IW5-BUYBACK,Token buyback coverage long-short,blocked,M518,,low,About a year of data; sources 403,research/intake/idea_wave5_20261111.md
 IW5-MACRO-NOWCAST,Macro surprises against free nowcasts,blocked,M290,,low,No daily vintages; drift unmeasured,research/intake/idea_wave5_20261111.md
+IW6-XYZ-NONSTOCK,"trade.xyz index, commodity and FX perps weekend fade",null,M520,M515;M447,high,"Tested as R464, NULL",research/intake/idea_wave6_20261111.md
+IW6-BW-OVERSHOOT,Blockworks/HPC weekend reopen slope 0.834 (perp gives back a sixth),partial,M515,M321,high,Supports R462; vendor-side; R463 forward,research/intake/idea_wave6_20261111.md
+IW6-TOKEN-PASSTHRU,"Tokenized-stock off-hours pass-through (IMF GFSR 2026, Binance Research, Cong et al.)",context,CONTEXT,M515,low,Descriptive only; no net-of-cost result,research/intake/idea_wave6_20261111.md
+IW6-CRYPTO-MONDAY,Weekend crypto moves and Monday equities on crypto-linked stock perps,untested,M521,M198,medium,Queued; R244 NULL on QQQ gap,research/intake/idea_wave6_20261111.md
+IW6-XVENUE-WEEKEND,"Cross-venue weekend stock-perp pairs (OKX, Lighter, trade.xyz)",untested,M443,M515,low,No pair with free weekend history confirmed,research/intake/idea_wave6_20261111.md
+IW6-MONTH-END-REBAL,Month-end balanced-fund rebalancing (NBER w33554),untested,M522,,medium,Queued; needs long daily cash history,research/intake/idea_wave6_20261111.md
+IW6-EOD-MOMENTUM,End-of-day leveraged-ETF rebalancing momentum,untested,M523,,low,Queued; cost likely binds,research/intake/idea_wave6_20261111.md
+IW6-OVERNIGHT-DRIFT,"Overnight versus intraday drift, 2021-2025 update",null,M492,M195,high,NY Fed: drift near zero 2021-25; R235 and R435,research/intake/idea_wave6_20261111.md
+IW6-INDEX-RECON,Russell reconstitution and index effective dates,context,CONTEXT,M519,low,One event a year for few perp names,research/intake/idea_wave6_20261111.md
+IW6-OPEX-WITCHING,Option-expiry week and triple witching in US equities,context,CONTEXT,,low,About 14-20 events; snippets only,research/intake/idea_wave6_20261111.md
+IW6-BUYBACK-BLACKOUT,Corporate buyback blackout windows,context,CONTEXT,,low,"No strong link found (Alpha Architect, snippet)",research/intake/idea_wave6_20261111.md

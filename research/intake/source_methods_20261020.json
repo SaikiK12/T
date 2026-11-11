@@ -16775,6 +16775,285 @@
         }
       ],
       "evidence_refs": []
+    },
+    {
+      "id": "IW6-XYZ-NONSTOCK",
+      "parent_claim_id": "IW6-20261111",
+      "title": "trade.xyz index, commodity and FX perps weekend fade",
+      "method_type": "source_refinement",
+      "hypothesis": "trade.xyz index, commodity and FX perps weekend fade (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M520; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R464 xyzns_wknd_v1: fade of the Friday-close to reopen-1h move to reopen+2h, 14 xyz non-stock markets, May-Nov 2026; NULL (A +2.7 bp at |W|>=25, p 0.86).",
+      "unrun_scope": "Measured book costs, other exits, fresh weekends; the FX theta-0 diagnostic is not queued.",
+      "status": "null",
+      "required_inputs": [
+        "See live queue row M520."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M520.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/xyzns_wknd_v1/FINDINGS.md",
+          "label": "R464 FINDINGS"
+        }
+      ]
+    },
+    {
+      "id": "IW6-BW-OVERSHOOT",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Blockworks/HPC weekend reopen slope 0.834 (perp gives back a sixth)",
+      "method_type": "source_refinement",
+      "hypothesis": "Blockworks/HPC weekend reopen slope 0.834 (perp gives back a sixth) (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M515; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R462 xyzwknd_v1 gate-0 PASS on the stock perps; forward R463 running.",
+      "unrun_scope": "Measured book costs and fresh weekends (R463).",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M515."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M515.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/xyzwknd_v1/FINDINGS.md",
+          "label": "R462 FINDINGS"
+        }
+      ]
+    },
+    {
+      "id": "IW6-TOKEN-PASSTHRU",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Tokenized-stock off-hours pass-through (IMF GFSR 2026, Binance Research, Cong et al.)",
+      "method_type": "source_refinement",
+      "hypothesis": "Tokenized-stock off-hours pass-through (IMF GFSR 2026, Binance Research, Cong et al.) (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-CRYPTO-MONDAY",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Weekend crypto moves and Monday equities on crypto-linked stock perps",
+      "method_type": "source_refinement",
+      "hypothesis": "Weekend crypto moves and Monday equities on crypto-linked stock perps (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M521; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M521."
+      ],
+      "blockers": [
+        "The queue row M521 states what is missing."
+      ],
+      "next_action": "Follow live queue row M521.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-XVENUE-WEEKEND",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Cross-venue weekend stock-perp pairs (OKX, Lighter, trade.xyz)",
+      "method_type": "source_refinement",
+      "hypothesis": "Cross-venue weekend stock-perp pairs (OKX, Lighter, trade.xyz) (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M443; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M443."
+      ],
+      "blockers": [
+        "The queue row M443 states what is missing."
+      ],
+      "next_action": "Follow live queue row M443.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-MONTH-END-REBAL",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Month-end balanced-fund rebalancing (NBER w33554)",
+      "method_type": "source_refinement",
+      "hypothesis": "Month-end balanced-fund rebalancing (NBER w33554) (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M522; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M522."
+      ],
+      "blockers": [
+        "The queue row M522 states what is missing."
+      ],
+      "next_action": "Follow live queue row M522.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-EOD-MOMENTUM",
+      "parent_claim_id": "IW6-20261111",
+      "title": "End-of-day leveraged-ETF rebalancing momentum",
+      "method_type": "source_refinement",
+      "hypothesis": "End-of-day leveraged-ETF rebalancing momentum (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M523; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M523."
+      ],
+      "blockers": [
+        "The queue row M523 states what is missing."
+      ],
+      "next_action": "Follow live queue row M523.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-OVERNIGHT-DRIFT",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Overnight versus intraday drift, 2021-2025 update",
+      "method_type": "source_refinement",
+      "hypothesis": "Overnight versus intraday drift, 2021-2025 update (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M492; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R235 (M195, QQQ overnight) NULL and R435 (M492, MEXC cross-section); no new test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "null",
+      "required_inputs": [
+        "See live queue row M492."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M492.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-INDEX-RECON",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Russell reconstitution and index effective dates",
+      "method_type": "source_refinement",
+      "hypothesis": "Russell reconstitution and index effective dates (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-OPEX-WITCHING",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Option-expiry week and triple witching in US equities",
+      "method_type": "source_refinement",
+      "hypothesis": "Option-expiry week and triple witching in US equities (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW6-BUYBACK-BLACKOUT",
+      "parent_claim_id": "IW6-20261111",
+      "title": "Corporate buyback blackout windows",
+      "method_type": "source_refinement",
+      "hypothesis": "Corporate buyback blackout windows (idea wave 6 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave6_20261111.md",
+          "label": "Idea wave 6 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
     }
   ],
   "sources": [
@@ -21189,6 +21468,33 @@
       "source_version_path": "research/intake/idea_wave5_20261111.md",
       "source_version_sha256": "c491fe6193b985a14faca055204cce89a9212480eeb3e22262e9ba361d66096a",
       "strategy_trials_added": 32,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 1
+    },
+    {
+      "intake_id": "idea_wave6_20261111",
+      "records_added": [
+        "IW6-XYZ-NONSTOCK",
+        "IW6-BW-OVERSHOOT",
+        "IW6-TOKEN-PASSTHRU",
+        "IW6-CRYPTO-MONDAY",
+        "IW6-XVENUE-WEEKEND",
+        "IW6-MONTH-END-REBAL",
+        "IW6-EOD-MOMENTUM",
+        "IW6-OVERNIGHT-DRIFT",
+        "IW6-INDEX-RECON",
+        "IW6-OPEX-WITCHING",
+        "IW6-BUYBACK-BLACKOUT"
+      ],
+      "base_method_objects_before": 465,
+      "method_objects_after": 476,
+      "source_records_added": [],
+      "source_catalog_paths": [],
+      "received_scope": "Six Haiku lens reports (2026-11-11), bounded web reads; author re-checks marked [A] (Blockworks/HPC report, trade.xyz llms-full.txt, NY Fed post, Mourey et al. and NBER w33554 abstracts). No complete-corpus claim.",
+      "reconciliation": "Live queue: new M520 (TESTED, R464 NULL), M521-M523 (UNTESTED); notes added to M515, M447 and M492; the rest map to M443 or CONTEXT.",
+      "source_version_path": "research/intake/idea_wave6_20261111.md",
+      "source_version_sha256": "df9f015d220c0dfc23860eca05aa878c09dfce494a9b8baf626fea30332cc422",
+      "strategy_trials_added": 40,
       "prospective_days_added": 0,
       "market_outcomes_added": 1
     }
