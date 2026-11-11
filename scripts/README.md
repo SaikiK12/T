@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (37)
+## Fetch: download archives and public history (38)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -46,6 +46,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_usdt_mints.py`](fetch_usdt_mints.py): Tether USDT mints (the token contract's Issue events) on Tron and Ethereum, from free public APIs, for R460.
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
+- [`fetch_xyz_wknd.py`](fetch_xyz_wknd.py): Inputs for R462 xyzwknd_v1 (trade.xyz US-equity perps over the weekend).
 
 ## Record: point-in-time collectors (cannot be backfilled) (37)
 
@@ -121,7 +122,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (187)
+## Run: one lane's frozen measurement (188)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -310,6 +311,7 @@ line is the first line of the script's own docstring.
 - [`run_xsalt.py`](run_xsalt.py): xsalt_v1 (R222): slow altcoin cross-sections (low beta, residual momentum, MAX, premium net of funding), as set out in experiments/xsalt_v1/PREREG.md.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
+- [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
 
 ## Check: parity, audits and integrity (36)
 
@@ -370,7 +372,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (92)
+## Tools and everything else (93)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -464,3 +466,4 @@ line is the first line of the script's own docstring.
 - [`vrpexec_rule.py`](vrpexec_rule.py): R410 vrpexec_v1 (M477): the execution rule for R409's weekly short straddle with three cost levers, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.
+- [`xyzwknd_rule.py`](xyzwknd_rule.py): R462 xyzwknd_v1 rule, frozen in experiments/xyzwknd_v1/PREREG.md: trade.xyz (Hyperliquid HIP-3) US-equity perps are priced internally from Friday 20:00 to Sunday 20:05 New York time.
