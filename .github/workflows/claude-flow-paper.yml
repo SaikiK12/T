@@ -85,11 +85,12 @@ jobs:
               run R218 scripts/forward_mexc_sq.py && { run R221 scripts/forward_seq.py || true; } || true
               run R225 scripts/forward_vt.py || true
             fi
-            if ! run R220 scripts/forward_carry.py; then    # MEXC's funding endpoint limits by IP (510) after R215/R218
-              sleep 120
-              fail="${fail/ R220/}"
-              run R220 scripts/forward_carry.py || true
-            fi
+            # MEXC's funding endpoint limits by IP (510) after R215/R218 on shared runners, and one 120 s wait was
+            # not enough (run 42933784241). Up to 4 attempts, 3 minutes apart; R220 writes nothing on a failed fetch.
+            for i in 1 2 3 4; do
+              [ $i -gt 1 ] && { sleep 180; fail="${fail/ R220/}"; }
+              run R220 scripts/forward_carry.py && break
+            done
           fi
           for l in $LANES; do
             last=$(tail -n 1 "experiments/$l/journal/tickets.csv" 2>/dev/null | cut -d, -f1-2)
