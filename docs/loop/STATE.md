@@ -225,3 +225,13 @@ waiting, and pick tests from our own measurements first.
     +7.65, staking +0.85, funding received +1.65, basis +0.02, costs -0.13. Max drawdown -0.35%, no liquidation.
   - LLP's part was seen in R446, so gate 0 is not evidence. Gate 1 (2027-02-08, 2027-05-09) has about seven chances
     in ten at 90 days if no crash day like 2025-10-11 falls in the window; one such day would end the lane.
+- **2026-11-11, the flow-book forward lanes move to GitHub Actions.**
+  - R200, R214, R215, R218, R220, R221 and R225 stopped on 2026-11-06 13:00 UTC with the container. They were never
+    migrated, so R285's and R415's flow sleeves read stale journals.
+  - `.github/workflows/claude-flow-paper.yml` (every 2 hours at :41 UTC) is now their only writer. It runs the frozen
+    scripts unchanged, in the order set by `lab/operations.py`.
+  - Binance keeps 5-minute ratio history for 30 days, so the first run computes the missed hours from the same public
+    data. Each lane's DEVIATIONS.md flags those days as written after the fact.
+  - Why now: on the owner's request to rank the methods by PnL, the flow books are the lab's highest-PnL candidates.
+    Holdout: A +82.9%/yr (t 1.22), top_vs_crowd alone +71.4%/yr (t 2.72). Neither is confirmed, and only forward days
+    can decide them.

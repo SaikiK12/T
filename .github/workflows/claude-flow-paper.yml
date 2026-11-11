@@ -1,0 +1,123 @@
+name: Flow paper lanes (Claude)
+# Single writer, from 2026-11-11, of the journals of the forward flow-book lanes R200 (Binance), R214 (one bar late),
+# R215 (MEXC prices), R218 (X2 on MEXC), R220 (funding carry, R191 rule), R221 (sequential decision on R215/R218) and
+# R225 (volatility target). They stopped on 2026-11-06 13:00 UTC with the container and had no other writer.
+# Each run computes every closed hour not yet journaled (Binance keeps 5-minute ratio history for 30 days), so a missed
+# run is caught up by the next one; the frozen scripts are run unchanged, in their task order (lab/operations.py).
+# Paper only: public market data, no key, no order. The local loop must not tick these lanes while this workflow owns
+# them (docs/loop/STATE.md, 2026-11-11). data/live and data/mexc (gitignored caches) live in the Actions cache; if it is
+# lost, the scripts refetch from the public APIs.
+on:
+  schedule:
+    - cron: '41 */2 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-flow-paper-single-writer
+  cancel-in-progress: false
+jobs:
+  tick:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+      LANES: flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq vt_fwd
+    steps:
+      - name: Checkout the default branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 50
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-test.lock
+      - name: Install locked runtime
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Restore market-data caches
+        id: restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/live
+            data/mexc
+          key: flow-paper-data-${{ github.run_id }}
+          restore-keys: flow-paper-data-
+      - name: Mark the caches before the run
+        run: mkdir -p data && touch data/.flow_paper_marker
+      - name: Tick R200, R214, R215, R218, R220, R221, R225
+        id: tick
+        run: |
+          set -u
+          echo "data cache: ${{ steps.restore.outputs.cache-matched-key || 'none (refetch from the APIs)' }}"
+          fail=""
+          run() {   # name, then script; a lane's failure skips only the lanes that read it
+            name=$1; shift
+            echo "::group::$name"
+            start=$(date +%s)
+            timeout 3000 .venv/bin/python "$@"; rc=$?
+            echo "$name exit $rc after $(( $(date +%s) - start )) s"
+            echo "::endgroup::"
+            [ $rc -eq 0 ] || fail="$fail $name"
+            return $rc
+          }
+          if run R200 scripts/forward_tick.py; then
+            run R214 scripts/forward_delayed.py || true
+            if run R215 scripts/forward_mexc.py; then
+              run R218 scripts/forward_mexc_sq.py && { run R221 scripts/forward_seq.py || true; } || true
+              run R225 scripts/forward_vt.py || true
+            fi
+            run R220 scripts/forward_carry.py || true
+          fi
+          for l in $LANES; do
+            last=$(tail -n 1 "experiments/$l/journal/tickets.csv" 2>/dev/null | cut -d, -f1-2)
+            echo "$l: last ticket: $last"
+          done
+          echo "failed=${fail# }" >> "$GITHUB_OUTPUT"
+      - name: Did any cache file change
+        id: changed
+        if: always()
+        run: |
+          n=$(find data/live data/mexc -newer data/.flow_paper_marker -type f 2>/dev/null | wc -l)
+          echo "cache files written this run: $n"
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+      - name: Save market-data caches
+        if: always() && steps.changed.outputs.n != '0'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/live
+            data/mexc
+          key: flow-paper-data-${{ github.run_id }}
+      - name: Commit journals
+        if: always() && steps.tick.outcome != 'skipped'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for l in $LANES; do
+            if [ -d "experiments/$l/journal" ]; then git add -A "experiments/$l/journal"; fi
+          done
+          git add -A experiments/mexc_seq/results     # R221 writes its looks and status there
+          if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
+          git commit -q -m "Flow paper lanes: GitHub tick ${GITHUB_RUN_ID} (R200 R214 R215 R218 R220 R221 R225)" \
+            -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
+          br="${{ github.event.repository.default_branch }}"
+          for i in 1 2 3 4 5; do
+            if git pull -q --rebase --autostash origin "$br" && git push -q origin "HEAD:$br"; then echo "pushed"; exit 0; fi
+            sleep $((i * 10))
+          done
+          echo "push failed after 5 tries"; exit 1
+      - name: Fail the run when a lane failed
+        if: steps.tick.outputs.failed != ''
+        run: |
+          echo "failed lanes: ${{ steps.tick.outputs.failed }}"
+          exit 1
