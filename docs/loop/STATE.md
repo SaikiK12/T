@@ -371,3 +371,10 @@ waiting, and pick tests from our own measurements first.
   - **R460 `usdtmint_v1`: NULL.** It covers 262 Tether Issue events on Tron and Ethereum from free APIs (TronGrid and
     Blockscout). BTC 24 h: +23 bp per trade against a +6 bp placebo, Holm p 0.40, negative in the holdout, -3.4 bp at
     2x cost. BTC 4 h: p 0.44. 30 trials; program total 9,785,037.
+- **2026-11-11, R461 `earnperp_v1` (M513, earnings on 24/7 stock perps): NULL.**
+  - 1,735 EDGAR 8-K Item 2.02 filings timed to the second; MEXC hourly stock perps. Sample B (the Q3 season) was
+    fetched after the freeze into `data/mexc_stock_post`.
+  - After-close filings: the perp's first move does not continue or reverse on average. Next close +22 bp (n 219,
+    Holm p 1.0, MDE80 127 bp); next open +1 bp. Both lose at 1x (30 bp).
+  - Diagnostic lead only: before-open filings held to the close +80 bp in A, +70 bp in B (raw p 0.03 of 32 cells). It
+    needs a new prospective lane on fresh filings (season from 2027-01). 32 trials; program total 9,785,069.

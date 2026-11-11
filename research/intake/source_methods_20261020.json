@@ -16464,15 +16464,13 @@
       "method_type": "source_refinement",
       "hypothesis": "Earnings reaction on 24/7 stock perps (idea wave 4 lens report; see the intake note for read scopes).",
       "testable_rule": "See live queue row M513; nothing is tested until a PREREG is frozen.",
-      "exact_tested_scope": "No new project strategy test in this wave. Queued; power count first.",
-      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
-      "status": "untested",
+      "exact_tested_scope": "R461 earnperp_v1: after-close 8-K Item 2.02 filings, first perp move to the next open + 30 min and the next close, MEXC hourly stock perps 2025-07..2026-11, NULL.",
+      "unrun_scope": "Multi-day drift, surprise measures, xyz/Lighter prices, minute bars; the before-open continuation seen as a diagnostic needs a prospective lane.",
+      "status": "null",
       "required_inputs": [
         "See live queue row M513."
       ],
-      "blockers": [
-        "The queue row M513 states what is missing."
-      ],
+      "blockers": [],
       "next_action": "Follow live queue row M513.",
       "source_refs": [
         {
@@ -16480,7 +16478,12 @@
           "label": "Idea wave 4 intake, 2026-11-11"
         }
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        {
+          "path": "experiments/earnperp_v1/FINDINGS.md",
+          "label": "R461 FINDINGS"
+        }
+      ]
     }
   ],
   "sources": [
@@ -20863,12 +20866,12 @@
       "source_records_added": [],
       "source_catalog_paths": [],
       "received_scope": "Eight Haiku lens reports (2026-11-11), bounded web reads with rate-limited gaps listed in the note; author re-checks marked [A]. No complete-corpus claim.",
-      "reconciliation": "Live queue: new rows M512 (TESTED, R460 NULL), M513 (QUEUED), M514 (BLOCKED); the other ideas map to existing rows (M059, M503, M082, M023, M184, M192, M290, M296, M321, M155).",
+      "reconciliation": "Live queue: new rows M512 (TESTED, R460 NULL), M513 (TESTED, R461 NULL), M514 (BLOCKED); the other ideas map to existing rows (M059, M503, M082, M023, M184, M192, M290, M296, M321, M155).",
       "source_version_path": "research/intake/idea_wave4_20261111.md",
-      "source_version_sha256": "21b5a53379cf0bba54c3c518e86de74c7915867880a91a05abb180d7901c526d",
-      "strategy_trials_added": 30,
+      "source_version_sha256": "333a05c7d40cc746b9b17cf112c6eb32c42a6b2537050ff98ab96f27e9778766",
+      "strategy_trials_added": 62,
       "prospective_days_added": 0,
-      "market_outcomes_added": 1
+      "market_outcomes_added": 2
     }
   ],
   "reassignment_refs": [
