@@ -80,7 +80,7 @@ and R452 (`experiments/litpoolsel_v1`). It is not evidence of a return.
 
 ## Use
 - **R452** tests Lighter's operator pools picked by past record, on their own share prices.
-- **R450** (Hyperliquid user vaults) waits for its data branch.
+- **R450** tested Hyperliquid's user vaults picked by past record: NULL (−23.2%/yr net at 1x), real blowups.
 - **dYdX MegaVault:** only three months of daily history and a small vault; no lane now.
 - The scratch reports (`vault_competitors.md`, `hlp_llp_mechanics.md`) were not kept. This page holds their checked
   content.

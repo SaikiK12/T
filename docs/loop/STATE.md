@@ -267,4 +267,9 @@ waiting, and pick tests from our own measurements first.
   - NULL: 1x +7.2%/yr (excess +3.2, t 0.33). The mean/sd score picked dormant pools; the equal-weight pool lost
     5.2%/yr after fees; LLP +10.7%/yr and XLP -51%/yr over the same months.
   - Competitor survey: `research/intake/perp_vaults_20261111.md` (only dYdX's MegaVault publishes history; small).
-  - R450 (Hyperliquid user vaults) waits for `claude/hl-vaults-data`; its score must avoid dormant vaults.
+- **2026-11-11, R450 hlvaultsel_v1: Hyperliquid user vaults picked by past record, gate 0 decides.**
+  - Top 10 vaults (>=180 days, >=$500k, active in >=80% of periods) by 180-day mean/sd, monthly, net of the
+    leader's share. Data branch `claude/hl-vaults-data` at `ed333ff`. Frozen `a329f8cc` before any vault return.
+  - NULL: 1x -23.2%/yr net, excess -27.2 (t -2.26). Real blowups: three 2025-09-30 picks lost over 90% in the
+    2025-10-10 crash; the 2026-09-30 picks lost 21.5%. In 2026 the equal-weight eligible vault made +8.2%/yr.
+  - Both M507 venues are NULL: HLP and LLP (R446) remain the better deposits.

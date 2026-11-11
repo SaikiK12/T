@@ -97,8 +97,10 @@ isolated margin. They stay at 1x on cross margin.
 - **R452, Lighter's operator pools picked by their past record** (HLP/LLP competitors on the same venue):
   - NULL: +7.2%/yr net at 1x (t 0.33). The equal-weight pool lost 5.2%/yr after fees; LLP made +10.7%.
   - See `experiments/litpoolsel_v1/FINDINGS.md` and `research/intake/perp_vaults_20261111.md`.
-- **R450 (next), Hyperliquid user vaults picked by their past record:** France-reachable. It reads every
-  vault, closed ones included, from `claude/hl-vaults-data`.
+- **R450, Hyperliquid user vaults picked by their past record** (HLP's competitors on the same venue):
+  - NULL: −23.2%/yr net at 1x (t −2.26 against the hurdle). The steadiest vaults blew up in the 2025-10-10 crash
+    (three picks lost over 90%) and again in October 2026.
+  - See `experiments/hlvaultsel_v1/FINDINGS.md`.
 
 ## 7. Reading for the owner
 - No method has yet shown a high return (above about 30%/yr) on days nobody had seen, net of costs, on a venue

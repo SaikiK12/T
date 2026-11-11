@@ -184,12 +184,14 @@ for active writers. Dated proposals, audits and source notes below retain histor
   Hyperliquid's xyz (HIP-3) markets: they match Binance's to a daily correlation of 0.9998 (A +13.4% over 41 seen
   days), so the TradFi part can execute from France; R200's forward decides the signal. R452 picked Lighter's
   operator pools by past record: NULL; the average pool lost 5.2%/yr after fees while LLP made +10.7%
-  ([vault competitors](research/intake/perp_vaults_20261111.md)).
+  ([vault competitors](research/intake/perp_vaults_20261111.md)). R450 picked Hyperliquid's steadiest user vaults:
+  NULL, −23.2%/yr net (t −2.26 against the hurdle); several picks blew up in the 2025-10-10 crash.
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
   pool tokens (JLP, GM) decayed from +44%/yr in 2024 to about +6% in 2026; R451 shows the stock-perp flow books
-  execute on Hyperliquid's xyz as on Binance, and R452 that Lighter's operator pools do worse than LLP.
+  execute on Hyperliquid's xyz as on Binance, and R452 and R450 that operator pools and user vaults do worse
+  than LLP and HLP.
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.
