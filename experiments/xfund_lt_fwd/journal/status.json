@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-10T08:44:05.138920+00:00",
+ "updated": "2026-11-11T01:59:07.082587+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 0.973
+  "lighter": 0.951
  },
  "data": {
   "lighter": {
@@ -83,12 +83,6 @@
     "spread_in": 0.1027
    },
    {
-    "coin": "ADAUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.0842
-   },
-   {
     "coin": "DASHUSDT",
     "long": "mexc",
     "short": "lighter",
@@ -147,18 +141,24 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.1086
+   },
+   {
+    "coin": "AEROUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1066
    }
   ],
-  "scored_days": 18,
-  "late_days": 14,
-  "total": -2.1670800000000057e-05,
-  "total_2x": -0.0014516708,
-  "total_3x": -0.0028816707999999996,
-  "total_close": 0.0006688881,
-  "nw_t": -0.02160279335959661,
+  "scored_days": 19,
+  "late_days": 15,
+  "total": -4.474990000000006e-05,
+  "total_2x": -0.0015297499,
+  "total_3x": -0.0030147498999999996,
+  "total_close": 0.000645809,
+  "nw_t": -0.04502312719637248,
   "max_drawdown": -0.0022982623,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-10"
+ "last_day": "2026-11-11"
 }

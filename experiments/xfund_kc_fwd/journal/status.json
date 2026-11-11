@@ -1,11 +1,11 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-11-10T08:32:15.234919+00:00",
+ "updated": "2026-11-11T01:48:12.121125+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.945,
+  "gate": 1.009,
   "kucoin": 1.0
  },
  "data": {
@@ -20,14 +20,14 @@
     "SXPUSDT"
    ]
   },
-  "kucoin": {
-   "files": 642,
+  "gate": {
+   "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "gate": {
-   "files": 860,
+  "kucoin": {
+   "files": 642,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -75,12 +75,6 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.5256
-   },
-   {
-    "coin": "SIRENUSDT",
-    "long": "kucoin",
-    "short": "gate",
-    "spread_in": 0.4786
    },
    {
     "coin": "BRUSDT",
@@ -159,15 +153,21 @@
     "long": "kucoin",
     "short": "gate",
     "spread_in": 0.6449
+   },
+   {
+    "coin": "INITUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 3.118
    }
   ],
-  "scored_days": 19,
-  "late_days": 14,
-  "total": 0.0019038983,
-  "total_2x": 8.38983000000003e-05,
-  "total_3x": -0.0017361017000000001,
-  "total_close": 0.0028548012,
-  "nw_t": 0.8660657723005186,
+  "scored_days": 20,
+  "late_days": 15,
+  "total": 0.0022851964,
+  "total_2x": 0.0004651964000000003,
+  "total_3x": -0.0013548036000000001,
+  "total_close": 0.0032360993,
+  "nw_t": 1.0039646793499801,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -214,12 +214,6 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.3785
-   },
-   {
-    "coin": "COTIUSDT",
-    "long": "binance",
-    "short": "kucoin",
-    "spread_in": 0.3507
    },
    {
     "coin": "AINUSDT",
@@ -298,18 +292,24 @@
     "long": "binance",
     "short": "kucoin",
     "spread_in": 0.447
+   },
+   {
+    "coin": "CLOUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 0.4611
    }
   ],
-  "scored_days": 19,
-  "late_days": 14,
-  "total": 0.0023502787999999998,
-  "total_2x": 0.0007402787999999997,
-  "total_3x": -0.0008697212000000008,
-  "total_close": 0.0032841536,
-  "nw_t": 2.027479685153631,
+  "scored_days": 20,
+  "late_days": 15,
+  "total": 0.0029197519,
+  "total_2x": 0.0013097518999999995,
+  "total_3x": -0.0003002481000000008,
+  "total_close": 0.0038536267,
+  "nw_t": 2.2832447615452702,
   "max_drawdown": -0.0011970589,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-11-10"
+ "last_day": "2026-11-11"
 }

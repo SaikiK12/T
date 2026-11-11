@@ -1,15 +1,28 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-10T08:25:28.107822+00:00",
+ "updated": "2026-11-11T01:39:02.884162+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.945,
-  "hyperliquid": 1.0,
+  "gate": 1.009,
+  "hyperliquid": 0.971,
   "mexc": 1.0
  },
  "data": {
+  "hyperliquid": {
+   "files": 216,
+   "failed": 6,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "IO",
+    "IOTA",
+    "PENDLE",
+    "PEOPLE",
+    "VINE",
+    "VIRTUAL"
+   ]
+  },
   "mexc": {
    "files": 520,
    "failed": 0,
@@ -18,12 +31,6 @@
   },
   "gate": {
    "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -168,13 +175,13 @@
     "spread_in": 0.2032
    }
   ],
-  "scored_days": 19,
-  "late_days": 14,
-  "total": 0.0010782841,
-  "total_2x": -0.0005317159,
-  "total_3x": -0.0021417159000000005,
-  "total_close": 0.0020171734000000003,
-  "nw_t": 1.337351667277054,
+  "scored_days": 20,
+  "late_days": 15,
+  "total": 0.0028752084,
+  "total_2x": 0.0012652084,
+  "total_3x": -0.00034479160000000053,
+  "total_close": 0.0038140977000000005,
+  "nw_t": 1.4362576183325333,
   "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -251,15 +258,21 @@
     "long": "mexc",
     "short": "binance",
     "spread_in": 0.1051
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "mexc",
+    "short": "binance",
+    "spread_in": 0.1184
    }
   ],
-  "scored_days": 19,
-  "late_days": 14,
-  "total": 0.007186326500000001,
-  "total_2x": 0.006591326500000001,
-  "total_3x": 0.005996326500000001,
-  "total_close": 0.0075216545000000015,
-  "nw_t": 1.5018320422947922,
+  "scored_days": 20,
+  "late_days": 15,
+  "total": 0.007197809400000001,
+  "total_2x": 0.006602809400000001,
+  "total_3x": 0.006007809400000001,
+  "total_close": 0.0075331374000000015,
+  "nw_t": 1.480164308564389,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -392,16 +405,16 @@
     "spread_in": 0.7132
    }
   ],
-  "scored_days": 19,
-  "late_days": 14,
-  "total": 0.0035613601,
-  "total_2x": 0.0009013601000000003,
-  "total_3x": -0.0017586399000000003,
-  "total_close": 0.0039035652000000004,
-  "nw_t": 2.324552434729601,
+  "scored_days": 20,
+  "late_days": 15,
+  "total": 0.0036854444,
+  "total_2x": 0.0010254444000000003,
+  "total_3x": -0.0016345556000000004,
+  "total_close": 0.0040276495,
+  "nw_t": 2.386983357890318,
   "max_drawdown": -0.0015282559999999995,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-10"
+ "last_day": "2026-11-11"
 }
