@@ -341,3 +341,10 @@ waiting, and pick tests from our own measurements first.
     and 100 on crypto. That is a baseline of about 3.5%/yr, against xyz's about 5.5% (multiplier 0.5). The structural
     spread is about 2%/yr of notional, under the 4% hurdle at any safe leverage, so no lane. M073 (a resting bid
     ladder in cascades, the depositor's route to HLP's liquidation income) is already a trap at -0.84% per rung.
+- **2026-11-11, GitHub skips scheduled runs; guarded catch-up runs added.** `claude-flow-paper.yml`'s 06:17 and 08:17
+  UTC runs never fired, so R200 computed hours 02:00 and 05:00 of 11-11 75 and 94 minutes after their close (hour
+  07:00 is later still). A day counts for R448/R451 (and R453/R458) only if every hour is computed within 60 minutes,
+  so skipped runs would leave few counted days. The workflow now also fires at :32 and :47; a scheduled run ticks
+  only when R200's `ticks.csv` lacks the last closed hour, else it stops after the checkout and calls no API. The
+  book recorder (`claude-xyz-books.yml`) also fires at :27 and :47 and records only if the data branch has no commit
+  in the current UTC hour, so it keeps one snapshot an hour. No frozen script, rule or journal changed.

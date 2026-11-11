@@ -6,6 +6,9 @@ name: Flow paper lanes (Claude)
 # of R449's hedge tickets (jlphedge_v1: scripts/run_jlphedge.py, one per book and day, written the day before), and
 # of R451 (flow_hlstock_v1: R200's signals on stock/commodity perps priced on Hyperliquid's xyz) from 2026-11-12.
 # Hourly at :17, so R200 computes each hour within 60 minutes of its close (docs/GATES.md's strict on-time clock).
+# GitHub drops or delays some scheduled runs (06:17 and 08:17 UTC on 2026-11-11 never fired; hours 02:00 and 05:00
+# were computed 75 and 94 minutes after their close), so scheduled runs also fire at :32 and :47. A scheduled run
+# ticks only if R200 has a closed hour not yet computed; otherwise it stops after the checkout and touches no API.
 # Each run computes every closed hour not yet journaled (Binance keeps 5-minute ratio history for 30 days), so a missed
 # run is caught up by the next one; the frozen scripts are run unchanged, in their task order (lab/operations.py).
 # Paper only: public market data, no key, no order. The local loop must not tick these lanes while this workflow owns
@@ -13,7 +16,7 @@ name: Flow paper lanes (Claude)
 # lost, the scripts refetch from the public APIs.
 on:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17,32,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -37,17 +40,31 @@ jobs:
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 50
+      - name: Is a closed hour not yet computed by R200
+        id: due
+        run: |
+          set -eu
+          last=$(tail -n 1 experiments/flow72_fwd2/journal/ticks.csv | cut -d, -f1)
+          want=$(( ($(date +%s) / 3600 - 1) * 3600 * 1000 ))    # open of the last closed hour, in ms
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$last" -ge "$want" ] 2>/dev/null; then
+            echo "R200 is up to date (last hour $last); nothing to tick"; echo "due=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "R200 last hour $last, last closed hour $want: tick"; echo "due=1" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        if: steps.due.outputs.due == '1'
         with:
           python-version-file: .python-version
           cache: pip
           cache-dependency-path: requirements-test.lock
       - name: Install locked runtime
+        if: steps.due.outputs.due == '1'
         run: |
           python -m pip install uv==0.12.23
           uv venv --python 3.12.14 .venv
           uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
       - name: Restore market-data caches
+        if: steps.due.outputs.due == '1'
         id: restore
         uses: actions/cache/restore@v4
         with:
@@ -57,9 +74,11 @@ jobs:
           key: flow-paper-data-${{ github.run_id }}
           restore-keys: flow-paper-data-
       - name: Mark the caches before the run
+        if: steps.due.outputs.due == '1'
         run: mkdir -p data && touch data/.flow_paper_marker
       - name: Tick R200, R214, R215, R218, R220, R221, R225, R448, R449, R451
         id: tick
+        if: steps.due.outputs.due == '1'
         run: |
           set -u
           echo "data cache: ${{ steps.restore.outputs.cache-matched-key || 'none (refetch from the APIs)' }}"

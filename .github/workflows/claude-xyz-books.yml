@@ -9,10 +9,11 @@ name: xyz book-cost recorder (Claude)
 # - lighter/: the cost of a $1k and $10k market order on every active Lighter perp (scripts/record_lighter_costs.py),
 #   for measured-cost reads of R455 and later Lighter lanes.
 # Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
-# the branch.
+# the branch. GitHub drops or delays some scheduled runs, so scheduled runs also fire at :27 and :47; a scheduled
+# run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour, as before).
 on:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '7,27,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -37,8 +38,20 @@ jobs:
           else
             git worktree add -q --orphan -b claude/xyz-books-data .xyz-data
           fi
+      - name: Is this hour not yet recorded
+        id: due
+        run: |
+          set -u
+          last=$(git -C .xyz-data log -1 --format=%ct 2>/dev/null || echo 0)
+          hour=$(( $(date +%s) / 3600 * 3600 ))
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${last:-0}" -ge "$hour" ]; then
+            echo "already recorded this hour (last commit $last)"; echo "due=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "last recording $last, hour $hour: record"; echo "due=1" >> "$GITHUB_OUTPUT"
+          fi
       - name: Record
         id: rec
+        if: steps.due.outputs.due == '1'
         run: |
           set -u
           fail=0
