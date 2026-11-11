@@ -307,3 +307,6 @@ waiting, and pick tests from our own measurements first.
   Lighter: share = LLP's signed position value over open interest in USD, eligible markets active with $10M volume and
   $2M open interest, books F and R, Lighter's closes and funding, 9 bp a trade, placebo seed 455. Lighter does not
   exclude France. Two trials (program 9,785,003). Weekly in `claude-xperp-reads.yml`, read separately from R454.
+- **2026-11-11, Lighter book costs recorded hourly on GitHub.** `scripts/record_lighter_costs.py` (stdlib, the
+  arithmetic of `record_lighter_book.py`) writes the cost of a $1k and $10k market order on every active Lighter perp
+  to `lighter/books/` on `claude/xyz-books-data`, for a measured-cost read of R455 frozen before any cost is read.

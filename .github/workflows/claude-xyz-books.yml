@@ -5,7 +5,9 @@ name: xyz book-cost recorder (Claude)
 # costs; these snapshots let a registered read put measured costs on the same tickets (R453). Also:
 # - main/: the same book costs on Hyperliquid's main-dex perps (record_xyz_books.py --dex ""), for R448 and R454;
 # - hlp/: HLP's child-vault positions and every main-dex perp's context (scripts/record_hlp_positions.py, M510, R454);
-# - llp/: Lighter's LLP positions and every Lighter perp's open interest (scripts/record_llp_positions.py, M511).
+# - llp/: Lighter's LLP positions and every Lighter perp's open interest (scripts/record_llp_positions.py, M511);
+# - lighter/: the cost of a $1k and $10k market order on every active Lighter perp (scripts/record_lighter_costs.py),
+#   for measured-cost reads of R455 and later Lighter lanes.
 # Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
 # the branch.
 on:
@@ -21,7 +23,7 @@ jobs:
   record:
     if: github.repository == 'SaikiK12/T'
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout the default branch (code)
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -44,6 +46,7 @@ jobs:
           python3 scripts/record_hlp_positions.py --out .xyz-data || fail=1
           python3 scripts/record_llp_positions.py --out .xyz-data || fail=1
           python3 scripts/record_xyz_books.py --out .xyz-data/main --dex "" || fail=1
+          python3 scripts/record_lighter_costs.py --out .xyz-data || fail=1
           exit $fail
       - name: Commit recordings
         if: always() && steps.rec.outcome != 'skipped'
@@ -55,7 +58,7 @@ jobs:
           find . -name '*.tmp' -delete
           git add -A
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
-          git commit -q -m "xyz/main books, HLP and LLP snapshots ${GITHUB_RUN_ID}"
+          git commit -q -m "xyz/main/Lighter books, HLP and LLP snapshots ${GITHUB_RUN_ID}"
           for i in 1 2 3; do
             if git push -q origin HEAD:claude/xyz-books-data; then echo "pushed"; exit 0; fi
             git pull -q --rebase origin claude/xyz-books-data || true
