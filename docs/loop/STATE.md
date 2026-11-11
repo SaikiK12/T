@@ -16,20 +16,14 @@ for breakthroughs at 100% of compute".
 - Haiku helpers generate ideas in between.
 - The scheduled task is an hourly safety net only.
 
-**Wave 1, launched about 22:50 UTC:**
-| Round | Lane | Method | What it tests |
-|---|---|---|---|
-| R432 | weekend_reopen_v1 | M321/M188 | Binance TradFi 1-minute perps at the CME reopen: **NULL** (gate-0 screen) |
-| R433 | lighter_flow_v1 | M441 | Lighter public account flow, follow the informed accounts: **NULL** as a trade; the information persists |
-| R434 | wti_residual_v1 | M443 | Cross-venue commodity residual, CME open vs closed |
-| R435 | stock_tugofwar_v1 | M492, new | Overnight vs intraday cross-section on MEXC stock perps |
-| R436 | stock_carry_v1 | M493, new | Stock-perp funding carry hedged with the cash stock |
-| R392 | reserved_batch3 | C17 on 2020 + Gate long-tail carry | The owner approved reading it today, not 11-17 |
-
-**Wave 2 candidates:**
-- The unlock-short red-team checks: skipped tickets against their outcomes, and margin per event at $10k.
-- M494, once a dated history of index changes exists.
-- The M296 HIP-3 convergence event study.
+**State on 2026-11-11 23:10 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
+- **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
+- **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08.
+- **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
+  Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
+- **Running:** R470 `xvfund_v1` (M527), xyz-vs-Lighter funding carry on the same US stock perp, gate 0.
+- **Open queue rows worth a look:** M521 (crypto-linked stock perps vs BTC's weekend move); M522 (month-end
+  rebalancing on index perps); M523 (end-of-day LETF momentum, likely below costs); M296 (HIP-3 convergence).
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
