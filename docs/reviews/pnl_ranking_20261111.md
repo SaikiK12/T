@@ -1,7 +1,7 @@
 # The lab's methods ranked by PnL, 2026-11-11
 
 The owner asked for a ranking of the methods by return, and for experiments on the top ones instead of more
-work for its own sake. This page ranks rounds R143-R448. It is a reading of the registry and FINDINGS, not a new
+work for its own sake. This page ranks rounds R143-R449. It is a reading of the registry and FINDINGS, not a new
 test. Each round's FINDINGS stays the authority for its own numbers.
 
 **Method.**
@@ -42,7 +42,9 @@ to 2026-11-11 (container stop). `claude-flow-paper.yml` caught them up from Bina
 |---|---|---|---|---|---|
 | R439 | Five-venue funding carry | Binance, Gate, HL, MEXC, KuCoin (mostly no) | +18.5 | 8.71 | −4.4% |
 | R277 | Gate+KuCoin carry | (no) | +11.8 | 11.41 | −0.7% |
+| R449 | JLP held against SOL/ETH/BTC shorts (2024: +43.9; 2026: +5.6) | Jupiter + Hyperliquid (yes, as read) | +22.1 | 4.48 | −5.9% |
 | R446 | HLP deposit | Hyperliquid (yes) | +14.3 | 1.87 | −0.8% |
+| R449 | GM ETH-USDC held against an ETH short (2024: +19.4; 2026: +7.2) | GMX + Hyperliquid (terms not found) | +12.0 | 4.75 | −2.1% |
 | R445 | HYPE/BTC spot-perp carry, portfolio margin | Hyperliquid (yes) | +10.1 | 3.67 | −0.6% |
 | R447 | LLP + hedged LIT stake | Lighter (yes) | +10.0 | 3.94 | −0.35% |
 | R288 | HL+Lighter cross-venue carry | DEXes (yes) | +3.5 | 7.34 | |
@@ -83,14 +85,19 @@ isolated margin. They stay at 1x on cross margin.
     coins are listed on Hyperliquid, and the gain sat in LAB and BEAT, which neither Hyperliquid nor Lighter lists.
   - A runs forward from 2026-11-12; the expected answer is NULL.
   - See `experiments/flow_hl_v1/FINDINGS.md`.
-- **R449 (frozen next), Hyperliquid user vaults picked by their past record:** France-reachable. It reads every
+- **R449, perp-DEX pool tokens hedged on Hyperliquid** (popular "delta-neutral yield"):
+  - Gate 0, 2024-02..2026-11: JLP +22.1%/yr (t 4.48), GM ETH-USDC +12.0% (t 4.75). Both CONTINUE.
+  - By year, JLP went +43.9, +16.2 and +5.6 (2026). The high return was 2024's.
+  - See `experiments/jlphedge_v1/FINDINGS.md`.
+- **R450 (frozen next), Hyperliquid user vaults picked by their past record:** France-reachable. It reads every
   vault, closed ones included, from `claude/hl-vaults-data`.
-- **Research, not yet a lane:** other perp-DEX liquidity pools (Jupiter JLP, GMX GM pools), hedged.
 
 ## 7. Reading for the owner
 - No method has yet shown a high return (above about 30%/yr) on days nobody had seen, net of costs, on a venue
   reachable from France.
 - What holds up, and is reachable, earns about 10-14%/yr: the HLP and LLP deposits, and HYPE spot-perp carry. These
   are seen windows, short the venue's tail.
+- Hedged JLP shows the pattern behind most high yields: +44%/yr in 2024, +6% in 2026. A high figure over a whole
+  window can be one good year that has passed.
 - The flow books and C17 keep running forward. They decide on their frozen dates (R200 on 2026-12-29; R371 after
   500 scored days).

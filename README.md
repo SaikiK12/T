@@ -178,10 +178,13 @@ for active writers. Dated proposals, audits and source notes below retain histor
   +10.7%/yr each in 2026, short the venue's tail; LLP needs staked LIT. R447 holds LLP with that stake hedged by a
   LIT perp short: +10.04%/yr on all capital in 2026, t 3.94 on seen LLP returns (both forward to 2027). R448 prices
   the flow books on Hyperliquid: the same as Binance on the coins both list, but the crypto gain sat in coins
-  Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped).
+  Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped). R449 holds Jupiter's JLP and GMX's GM
+  ETH-USDC pool tokens with their crypto exposure shorted on Hyperliquid: hedged JLP earned +43.9%/yr in 2024 but
+  +5.6% in 2026, GM +7.2% in 2026, below the vaults (forward to 2027).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
-  venues closed to France, and R448 shows the flow books earn little on Hyperliquid's coins.
+  venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
+  pool tokens (JLP, GM) decayed from +44%/yr in 2024 to about +6% in 2026.
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.

@@ -246,3 +246,12 @@ waiting, and pick tests from our own measurements first.
     trade from France.
   - `claude-flow-paper.yml` now runs hourly at :17, so R200's hours are on time under docs/GATES.md, and ticks R448
     after R200 from 2026-11-12.
+- **2026-11-11, R449 jlphedge_v1: perp-DEX pool tokens hedged on Hyperliquid, gate 0.**
+  - Book J holds Jupiter's JLP against SOL/ETH/BTC shorts, and book G holds GMX v2's GM ETH-USDC against an ETH
+    short. The ratios come from an ex-ante 60-span regression. Frozen `7ae66e56` before any return.
+  - Gate 0 (2024-02..2026-11, public APYs known, so stop only): both CONTINUE. J made +22.1%/yr (t 4.48) and G +12.0%
+    (t 4.75).
+  - By year, J went +43.9, +16.2, +5.6 and G +19.4, +9.5, +7.2. The return was 2024's; in 2026 both sit below
+    HLP/LLP (R446) and HYPE carry (R445).
+  - Gate 1 is expected NULL at 180 days. `claude-flow-paper.yml` writes the tickets hourly (once per book and day,
+    the day before).

@@ -1,0 +1,327 @@
+{
+ "window": [
+  "2024-02-01",
+  "2026-11-10"
+ ],
+ "books": {
+  "J": {
+   "name": "JLP",
+   "hedge": [
+    "SOL",
+    "ETH",
+    "BTC"
+   ],
+   "verdict_gate0": "CONTINUE",
+   "summary": {
+    "1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1008,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 22.084313260096536,
+     "excess_pts_yr": 18.08431326009653,
+     "nw_t": 4.477152552606987,
+     "nw_n": 1008,
+     "max_dd_pct": -5.8792127562408485,
+     "worst_span_pct": -3.589772458197773,
+     "worst_day": "2024-04-13"
+    },
+    "2x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1008,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 21.63371037467165,
+     "excess_pts_yr": 17.633710374671647,
+     "nw_t": 4.374748622682344,
+     "nw_n": 1008,
+     "max_dd_pct": -5.903036707299947,
+     "worst_span_pct": -3.591242139046754,
+     "worst_day": "2024-04-13"
+    },
+    "3x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1008,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 21.183107489246773,
+     "excess_pts_yr": 17.18310748924677,
+     "nw_t": 4.271841437357378,
+     "nw_n": 1008,
+     "max_dd_pct": -5.9268555311460025,
+     "worst_span_pct": -3.5927118198957353,
+     "worst_day": "2024-04-13"
+    }
+   },
+   "parts_pct_yr_1x": {
+    "pool": 24.444711635411593,
+    "hedge": -4.961910990363043,
+    "funding": 3.0521155004728713,
+    "cost": 0.4506028854248823
+   },
+   "by_year_1x": {
+    "2024": {
+     "calendar_days": 335,
+     "covered_days": 335,
+     "spans": 334,
+     "scored_days": 335,
+     "idle_spans": 0,
+     "net_pct_yr": 43.9238650274384,
+     "excess_pts_yr": 39.923865027438396,
+     "nw_t": 4.262600023131737,
+     "nw_n": 334,
+     "max_dd_pct": -5.8792127562408485,
+     "worst_span_pct": -3.589772458197773,
+     "worst_day": "2024-04-13"
+    },
+    "2025": {
+     "calendar_days": 365,
+     "covered_days": 365,
+     "spans": 360,
+     "scored_days": 365,
+     "idle_spans": 0,
+     "net_pct_yr": 16.238111128553527,
+     "excess_pts_yr": 12.238111128553525,
+     "nw_t": 2.207408387846676,
+     "nw_n": 360,
+     "max_dd_pct": -3.2752226842279963,
+     "worst_span_pct": -3.275222684227999,
+     "worst_day": "2025-01-19"
+    },
+    "2026": {
+     "calendar_days": 314,
+     "covered_days": 314,
+     "spans": 314,
+     "scored_days": 314,
+     "idle_spans": 0,
+     "net_pct_yr": 5.579899043388488,
+     "excess_pts_yr": 1.5798990433884892,
+     "nw_t": 1.3744086708047,
+     "nw_n": 314,
+     "max_dd_pct": -0.6186337933947073,
+     "worst_span_pct": -0.3013272784804159,
+     "worst_day": "2026-03-22"
+    }
+   },
+   "stamps": 1077,
+   "spans": 1076,
+   "hedge_ratio_mean": {
+    "SOL": 0.3376,
+    "ETH": 0.0625,
+    "BTC": 0.1104
+   },
+   "hedge_ratio_min": {
+    "SOL": 0.0023,
+    "ETH": 0.0,
+    "BTC": 0.0
+   },
+   "hedge_ratio_max": {
+    "SOL": 0.485,
+    "ETH": 0.2114,
+    "BTC": 0.2144
+   },
+   "capital_mean": 1.5105142308890829,
+   "unhedged_pool_pct_yr": 32.48050186944067,
+   "power": {
+    "daily_sd_pct": 0.4637264552641146,
+    "detectable_pts_yr_90d": 59.5909006487411,
+    "detectable_pts_yr_180d": 42.137129945738664
+   },
+   "diagnostics": {
+    "window_30_1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1008,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 17.770448488563158,
+     "excess_pts_yr": 13.770448488563156,
+     "nw_t": 3.8938566277509445,
+     "nw_n": 1008,
+     "max_dd_pct": -7.954794934441811,
+     "worst_span_pct": -4.088743943049595,
+     "worst_day": "2024-04-13"
+    },
+    "window_120_1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1008,
+     "scored_days": 1001,
+     "idle_spans": 13,
+     "net_pct_yr": 18.883710377716987,
+     "excess_pts_yr": 14.883710377716985,
+     "nw_t": 3.62223439503029,
+     "nw_n": 1008,
+     "max_dd_pct": -5.939508906480939,
+     "worst_span_pct": -4.098924810931448,
+     "worst_day": "2024-04-13"
+    },
+    "corr_net_with_coin": {
+     "SOL": 0.13149514760177272,
+     "ETH": 0.05482954943518581,
+     "BTC": 0.07318859140910795
+    },
+    "spans_with_unchanged_pool_price": 63,
+    "spans_longer_than_one_day": 6
+   }
+  },
+  "G": {
+   "name": "GM ETH-USDC",
+   "hedge": [
+    "ETH"
+   ],
+   "verdict_gate0": "CONTINUE",
+   "summary": {
+    "1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1009,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 12.032037400817657,
+     "excess_pts_yr": 8.03203740081766,
+     "nw_t": 4.753089530050647,
+     "nw_n": 1009,
+     "max_dd_pct": -2.139116301916133,
+     "worst_span_pct": -1.0716206507552493,
+     "worst_day": "2026-01-18"
+    },
+    "2x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1009,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 11.724358595783485,
+     "excess_pts_yr": 7.724358595783487,
+     "nw_t": 4.569583593568519,
+     "nw_n": 1009,
+     "max_dd_pct": -2.1563906031192404,
+     "worst_span_pct": -1.0723344439019327,
+     "worst_day": "2026-01-18"
+    },
+    "3x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1009,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 11.416679790749317,
+     "excess_pts_yr": 7.416679790749314,
+     "nw_t": 4.386101357428052,
+     "nw_n": 1009,
+     "max_dd_pct": -2.173662028579282,
+     "worst_span_pct": -1.0730482370486158,
+     "worst_day": "2026-01-18"
+    }
+   },
+   "parts_pct_yr_1x": {
+    "pool": 13.816256657351941,
+    "hedge": -5.299886851963527,
+    "funding": 3.823346400463418,
+    "cost": 0.3076788050341732
+   },
+   "by_year_1x": {
+    "2024": {
+     "calendar_days": 335,
+     "covered_days": 335,
+     "spans": 333,
+     "scored_days": 335,
+     "idle_spans": 0,
+     "net_pct_yr": 19.391167226887234,
+     "excess_pts_yr": 15.391167226887232,
+     "nw_t": 4.885756778894163,
+     "nw_n": 333,
+     "max_dd_pct": -1.0155868274039026,
+     "worst_span_pct": -0.6153674127619981,
+     "worst_day": "2024-11-06"
+    },
+    "2025": {
+     "calendar_days": 365,
+     "covered_days": 365,
+     "spans": 362,
+     "scored_days": 365,
+     "idle_spans": 0,
+     "net_pct_yr": 9.462899797396515,
+     "excess_pts_yr": 5.462899797396514,
+     "nw_t": 1.9141667454089626,
+     "nw_n": 362,
+     "max_dd_pct": -1.4971749638810428,
+     "worst_span_pct": -0.8862924750660703,
+     "worst_day": "2025-05-08"
+    },
+    "2026": {
+     "calendar_days": 314,
+     "covered_days": 314,
+     "spans": 314,
+     "scored_days": 314,
+     "idle_spans": 0,
+     "net_pct_yr": 7.167154386535532,
+     "excess_pts_yr": 3.1671543865355325,
+     "nw_t": 1.5353007818982676,
+     "nw_n": 314,
+     "max_dd_pct": -2.1391163019161663,
+     "worst_span_pct": -1.0716206507552493,
+     "worst_day": "2026-01-18"
+    }
+   },
+   "stamps": 1129,
+   "spans": 1128,
+   "hedge_ratio_mean": {
+    "ETH": 0.4647
+   },
+   "hedge_ratio_min": {
+    "ETH": 0.377
+   },
+   "hedge_ratio_max": {
+    "ETH": 0.5442
+   },
+   "capital_mean": 1.4646768034305948,
+   "unhedged_pool_pct_yr": 19.743540933022917,
+   "power": {
+    "daily_sd_pct": 0.17297493067328457,
+    "detectable_pts_yr_90d": 22.22804369141249,
+    "detectable_pts_yr_180d": 15.71760042670863
+   },
+   "diagnostics": {
+    "window_30_1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1009,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 12.2495081895993,
+     "excess_pts_yr": 8.2495081895993,
+     "nw_t": 4.757265833613603,
+     "nw_n": 1009,
+     "max_dd_pct": -1.7162177825196911,
+     "worst_span_pct": -1.0484625130812195,
+     "worst_day": "2026-01-18"
+    },
+    "window_120_1x": {
+     "calendar_days": 1014,
+     "covered_days": 1014,
+     "spans": 1009,
+     "scored_days": 1014,
+     "idle_spans": 0,
+     "net_pct_yr": 11.657812335362372,
+     "excess_pts_yr": 7.657812335362372,
+     "nw_t": 4.211515159902292,
+     "nw_n": 1009,
+     "max_dd_pct": -3.527756481695643,
+     "worst_span_pct": -1.2070525719306593,
+     "worst_day": "2026-02-05"
+    },
+    "corr_net_with_coin": {
+     "ETH": 0.014670679216747123
+    },
+    "spans_with_unchanged_pool_price": 0,
+    "spans_longer_than_one_day": 5
+   }
+  }
+ },
+ "daily_sha256": "2958dd8d72a454ed74ab7041fa9b25f6dc0b241c5e50c14e29f6d606c30fa5cb"
+}
