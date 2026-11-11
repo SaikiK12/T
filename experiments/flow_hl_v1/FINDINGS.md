@@ -61,8 +61,9 @@ Same window, same rule and cells, net at 1x:
 
   Together they exceed B's whole gross of +0.37. Neither is listed on Hyperliquid or Lighter. Without its two largest
   coins, B's Binance gross is −1.4 bp/day.
-- **R216 agrees, from another angle.** It found that R200's forward profit came from stock and commodity perps. Here,
-  the archive's crypto profit comes from a few collapsing small caps.
+- **R216 agrees, from another angle.** It found that R200's forward profit came from stock and commodity perps, and
+  its registry note already put BEAT and LAB at about 68% of A's holdout gross. Here, the archive's crypto profit
+  comes from a few collapsing small caps.
 
   Either way, the flow books' high returns have not come from coins the owner can trade from France. The cells may
   carry a real effect on illiquid, fast-falling coins, but nothing here shows it is reachable.

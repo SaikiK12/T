@@ -179,6 +179,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   LIT perp short: +10.04%/yr on all capital in 2026, t 3.94 on seen LLP returns (both forward to 2027). R448 prices
   the flow books on Hyperliquid: the same as Binance on the coins both list, but the crypto gain sat in coins
   Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped).
+- [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
+  (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
+  venues closed to France, and R448 shows the flow books earn little on Hyperliquid's coins.
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.
