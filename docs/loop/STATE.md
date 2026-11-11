@@ -235,3 +235,14 @@ waiting, and pick tests from our own measurements first.
   - Why now: on the owner's request to rank the methods by PnL, the flow books are the lab's highest-PnL candidates.
     Holdout: A +82.9%/yr (t 1.22), top_vs_crowd alone +71.4%/yr (t 2.72). Neither is confirmed, and only forward days
     can decide them.
+- **2026-11-11, R448 flow_hl_v1: the flow books on Hyperliquid, gate 0.**
+  - R200's signals on crypto perps only, priced on Hyperliquid's hourly closes and funding (France-reachable). Frozen
+    `e87e3aed` before any Hyperliquid return.
+  - Gate 0 (2026-04..09, seen on Binance): book A CONTINUE at +4.9 bp/day (t 0.91), book B NULL at -0.7.
+  - Hyperliquid equals Binance on the same coins (correlation 0.9996). The gap is coverage: on every crypto coin,
+    Binance's books made A +47.1 and B +25.3 bp/day, carried by LAB and BEAT, which neither Hyperliquid nor Lighter
+    lists.
+  - With R216 (forward gain from stock perps), the flow books' high returns have not come from coins the owner can
+    trade from France.
+  - `claude-flow-paper.yml` now runs hourly at :17, so R200's hours are on time under docs/GATES.md, and ticks R448
+    after R200 from 2026-11-12.

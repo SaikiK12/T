@@ -176,7 +176,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   long spot against short perp on Hyperliquid alone, and R445 the same on HYPE and BTC, fully deployed under
   portfolio margin (forward to 2027). R446 holds deposits in Hyperliquid's HLP and Lighter's LLP vaults: about
   +10.7%/yr each in 2026, short the venue's tail; LLP needs staked LIT. R447 holds LLP with that stake hedged by a
-  LIT perp short: +10.04%/yr on all capital in 2026, t 3.94 on seen LLP returns (both forward to 2027).
+  LIT perp short: +10.04%/yr on all capital in 2026, t 3.94 on seen LLP returns (both forward to 2027). R448 prices
+  the flow books on Hyperliquid: the same as Binance on the coins both list, but the crypto gain sat in coins
+  Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped).
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.
