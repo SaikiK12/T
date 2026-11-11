@@ -62,10 +62,10 @@ and R452 (`experiments/litpoolsel_v1`). It is not evidence of a return.
 ## Lighter's public pools (checked by the author)
 - `publicPoolsMetadata?filter=all`, paged by `index`, lists **347 pools** [A]. The helper counted 247; the author's
   paging found 347.
-  - 196 are Lighter's own 1x-3x long/short index pools (master account 4, fee 0).
+  - 195 are Lighter's own 1x-3x long/short index pools (master account 4, fee 0).
   - 2 are protocol pools (account type 3): LLP (about $99.7M) and XLP ("Experimental Liquidity Provider", fee 0,
     about $40k). XLP's deposit rules were not found [U].
-  - 149 are operator pools: fees of 0-30% of profits; 82 with status 0 and 67 with status 1. Most were created in
+  - 150 are operator pools: fees of 0-30% of profits; 82 with status 0 and 68 with status 1. Most were created in
     2025-09 and 2025-10. Most hold under $10k; five hold over $400k.
 - `account?by=index&value=<pool>` returns `pool_info.share_prices`: one daily point per pool since its start (about
   415 points for pools from 2025-09) [A]. This is the series R452 reads.

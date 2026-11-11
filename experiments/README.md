@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (32)
+## Running or armed registered rounds (33)
 
+- **[litpoolsel_v1](litpoolsel_v1/)** R452, RUNNING PENDING, 1 trial. M507 on Lighter: the operator public pools picked by their past record (top 5 by mean/sd of 90-day daily share-price returns, monthly), deposits only, net of the operator's fee on gains and a 10 bp switch, vs the 4% hurdle ([PREREG](litpoolsel_v1/PREREG.md))
 - **[flow_hlstock_v1](flow_hlstock_v1/)** R451, RUNNING PENDING, 2 trials. M126/M127 R200's flow books on stock, index and commodity perps (R216's TradFi list) traded on Hyperliquid's xyz (HIP-3) markets at xyz's hourly closes and funding, costs never below xyz's 9 bp taker fee (France-reachable execution check of R200's TradFi gain) ([PREREG](flow_hlstock_v1/PREREG.md), [FINDINGS](flow_hlstock_v1/FINDINGS.md), [journal](flow_hlstock_v1/journal/))
 - **[jlphedge_v1](jlphedge_v1/)** R449, RUNNING PENDING, 2 trials. M509 two perp-DEX liquidity-pool tokens held against perp shorts on Hyperliquid: book J Jupiter's JLP hedged with SOL/ETH/BTC, book G GMX v2's ETH-USDC GM hedged with ETH; ex-ante 60-span OLS hedge ratios (clipped 0-1), shorts margined 1:1, 6 bp hedge turnover and 30 bp/yr pool round trip at 1x, 4% hurdle; gate 0 (stop only) 2024-02-01..2026-11-10, gate 1 forward from 2026-11-12 on tickets written the day before ([PREREG](jlphedge_v1/PREREG.md), [FINDINGS](jlphedge_v1/FINDINGS.md), [journal](jlphedge_v1/journal/))
 - **[flow_hl_v1](flow_hl_v1/)** R448, RUNNING PENDING, 2 trials. M126/M127 R200's flow books on crypto perps only, traded on Hyperliquid's hourly closes and funding (France-reachable execution check of the flow signal); gate 0 on 2026-04..09, forward from 2026-11-12 ([PREREG](flow_hl_v1/PREREG.md), [FINDINGS](flow_hl_v1/FINDINGS.md), [journal](flow_hl_v1/journal/))
