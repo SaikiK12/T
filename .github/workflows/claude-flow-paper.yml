@@ -81,7 +81,14 @@ jobs:
               run R451 scripts/run_flow_hlstock.py --window forward || true
             fi
             run R214 scripts/forward_delayed.py || true
-            if run R215 scripts/forward_mexc.py; then
+            # R215 met the same 510 refusal (run 42980224484: RLC_USDT funding, no tickets) and writes nothing on a
+            # failed fetch, so it gets R220's wrapper and attempts below. R218, R221 and R225 read R215's files only.
+            r215=1
+            for i in 1 2 3; do
+              [ $i -gt 1 ] && { sleep 180; fail="${fail/ R215/}"; }
+              run R215 scripts/run_paced_mexc.py scripts/forward_mexc.py && { r215=0; break; }
+            done
+            if [ $r215 -eq 0 ]; then
               run R218 scripts/forward_mexc_sq.py && { run R221 scripts/forward_seq.py || true; } || true
               run R225 scripts/forward_vt.py || true
             fi

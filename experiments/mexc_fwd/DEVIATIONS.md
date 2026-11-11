@@ -33,3 +33,11 @@ R215 reads R200's signals, so R200's `DEVIATIONS.md` applies here too.
   flagged here as written after the fact.
 - The caches `data/live` and `data/mexc` (gitignored) live in the Actions cache. The first run refetches them from the
   public APIs. MEXC contracts are mapped with that day's snapshot, as before.
+
+## 2026-11-11, MEXC requests paced on GitHub's runners (no ticket affected)
+- Run 42980224484: MEXC refused R215's funding request for RLC_USDT with code 510 ("Endpoint rate limit exceeded ...
+  scope: IP"). The script aborts on any failed fetch, so it wrote nothing that hour, and R218, R221 and R225, which
+  read its files, were skipped. R220 met the same refusal earlier (`experiments/carry_fwd/DEVIATIONS.md`).
+- The workflow now runs the script through `scripts/run_paced_mexc.py`: MEXC requests at most every 0.25 s, each 510
+  retried after 5, 15 and 45 s, and up to 3 attempts 180 s apart. `scripts/forward_mexc.py` and `lab/mexc.py` are
+  unchanged; a fetch that succeeds returns the same data, so the rule and every value are unchanged.
