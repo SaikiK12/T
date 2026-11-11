@@ -348,3 +348,12 @@ waiting, and pick tests from our own measurements first.
   only when R200's `ticks.csv` lacks the last closed hour, else it stops after the checkout and calls no API. The
   book recorder (`claude-xyz-books.yml`) also fires at :27 and :47 and records only if the data branch has no commit
   in the current UTC hour, so it keeps one snapshot an hour. No frozen script, rule or journal changed.
+- **2026-11-11, a clock for the time-bound runs (`claude-clock.yml`).** The catch-up crons were not enough: GitHub
+  started no run of `claude-flow-paper.yml` or `claude-xyz-books.yml` from 08:53 to 09:56 UTC, and Codex's hourly
+  workflows show scheduled starts 40-90 minutes after their cron minute. Hour 08:00 was computed by a manual dispatch
+  at 09:56. A `workflow_dispatch` starts within seconds, so one runner now stays awake for about 5 h 45 min and
+  dispatches `claude-xyz-books.yml` at :07/:35 and `claude-flow-paper.yml` at :14/:40 (both with `if_due`, the same
+  check as their crons: R200's hour due 12 minutes after its close, one book snapshot an hour) and
+  `claude-usopen.yml` at 09:20 New York on weekdays, then dispatches itself; a 3-hourly cron restarts a lost chain.
+  Before 2026-11-12 nothing counts for R448/R451, so the clock is in place for their first day. Public repository:
+  no minutes are billed. No frozen script, rule or journal changed.

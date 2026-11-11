@@ -11,10 +11,16 @@ name: xyz book-cost recorder (Claude)
 # Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
 # the branch. GitHub drops or delays some scheduled runs, so scheduled runs also fire at :27 and :47; a scheduled
 # run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour, as before).
+# claude-clock.yml also dispatches it at :07 and :35 each hour with if_due (the same check); a plain dispatch records.
 on:
   schedule:
     - cron: '7,27,47 * * * *'
   workflow_dispatch:
+    inputs:
+      if_due:
+        description: 'Record only if the data branch has no recording in the current UTC hour (as a scheduled run)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -44,7 +50,9 @@ jobs:
           set -u
           last=$(git -C .xyz-data log -1 --format=%ct 2>/dev/null || echo 0)
           hour=$(( $(date +%s) / 3600 * 3600 ))
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "${last:-0}" -ge "$hour" ]; then
+          guarded=0
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.if_due }}" = "true" ]; then guarded=1; fi
+          if [ $guarded -eq 1 ] && [ "${last:-0}" -ge "$hour" ]; then
             echo "already recorded this hour (last commit $last)"; echo "due=0" >> "$GITHUB_OUTPUT"
           else
             echo "last recording $last, hour $hour: record"; echo "due=1" >> "$GITHUB_OUTPUT"

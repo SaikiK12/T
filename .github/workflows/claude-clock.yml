@@ -1,0 +1,62 @@
+name: Clock for time-bound paper runs (Claude)
+# GitHub starts this repository's scheduled runs 40 to 90 minutes late and drops some: no run of
+# claude-flow-paper.yml or claude-xyz-books.yml started from 08:53 to 09:56 UTC on 2026-11-11, while a
+# workflow_dispatch starts within seconds. R200 must compute each hour within 60 minutes of its close for R448, R451,
+# R453 and R458 to count a day, and R371's daemon must be up before 10:00 New York. This job keeps one runner awake
+# for about 5 h 45 min and dispatches, on the clock:
+#   claude-xyz-books.yml   at :07 and :35 each hour, with if_due (records only if the hour has no recording yet)
+#   claude-flow-paper.yml  at :14 and :40 each hour, with if_due (ticks only if R200 has an hour due; R200 computes
+#                          an hour 12 minutes after its close)
+#   claude-usopen.yml      at 09:20 New York on weekdays (the lane's daemon then waits for 10:00)
+# and then dispatches itself; the next run waits in the concurrency group until this one ends. The cron restarts the
+# chain if a run is lost. The dispatched workflows keep their own guarded crons as a second path. This job reads and
+# writes no journal, calls no market API and needs only the right to start workflows (and to read the repository).
+on:
+  schedule:
+    - cron: '3 */3 * * *'
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+concurrency:
+  group: claude-clock
+  cancel-in-progress: false
+jobs:
+  clock:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      REF: ${{ github.event.repository.default_branch }}
+    steps:
+      - name: Dispatch the time-bound workflows for about 5 h 45 min
+        run: |
+          set +e -u
+          end=$(( $(date +%s) + 345 * 60 ))
+          sent=" "
+          fire() {   # key, workflow file, then gh flags: dispatch once per key
+            case "$sent" in *" $1 "*) return 0;; esac
+            sent="$sent$1 "
+            if gh workflow run "$2" --ref "$REF" "${@:3}"; then
+              echo "$(date -u +%FT%TZ) dispatched $2 ${*:3}"
+            else
+              echo "::warning::$(date -u +%FT%TZ) dispatch of $2 failed"
+            fi
+            return 0
+          }
+          echo "clock from $(date -u +%FT%TZ) until $(date -u -d @$end +%FT%TZ)"
+          while [ "$(date +%s)" -lt "$end" ]; do
+            h=$(date -u +%Y%m%d%H); m=$((10#$(date -u +%M)))
+            if [ $m -ge 7 ] && [ $m -lt 12 ]; then fire "x$h" claude-xyz-books.yml -f if_due=true; fi
+            if [ $m -ge 14 ] && [ $m -lt 19 ]; then fire "f$h" claude-flow-paper.yml -f if_due=true; fi
+            if [ $m -ge 35 ] && [ $m -lt 40 ]; then fire "y$h" claude-xyz-books.yml -f if_due=true; fi
+            if [ $m -ge 40 ] && [ $m -lt 45 ]; then fire "g$h" claude-flow-paper.yml -f if_due=true; fi
+            ny=$((10#$(TZ=America/New_York date +%H%M))); wd=$(TZ=America/New_York date +%u)
+            if [ "$wd" -le 5 ] && [ $ny -ge 920 ] && [ $ny -lt 930 ]; then
+              fire "u$(TZ=America/New_York date +%Y%m%d)" claude-usopen.yml
+            fi
+            sleep 20
+          done
+          fire next claude-clock.yml

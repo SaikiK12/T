@@ -8,7 +8,9 @@ name: Flow paper lanes (Claude)
 # Hourly at :17, so R200 computes each hour within 60 minutes of its close (docs/GATES.md's strict on-time clock).
 # GitHub drops or delays some scheduled runs (06:17 and 08:17 UTC on 2026-11-11 never fired; hours 02:00 and 05:00
 # were computed 75 and 94 minutes after their close), so scheduled runs also fire at :32 and :47. A scheduled run
-# ticks only if R200 has a closed hour not yet computed; otherwise it stops after the checkout and touches no API.
+# ticks only if R200 has an hour not yet computed that closed 12 minutes ago (R200's own margin); otherwise it stops
+# after the checkout and touches no API. GitHub then started no run of this file from 08:53 to 09:56 UTC, so
+# claude-clock.yml dispatches it at :14 and :40 each hour with if_due (the same check); a plain dispatch always ticks.
 # Each run computes every closed hour not yet journaled (Binance keeps 5-minute ratio history for 30 days), so a missed
 # run is caught up by the next one; the frozen scripts are run unchanged, in their task order (lab/operations.py).
 # Paper only: public market data, no key, no order. The local loop must not tick these lanes while this workflow owns
@@ -18,6 +20,11 @@ on:
   schedule:
     - cron: '17,32,47 * * * *'
   workflow_dispatch:
+    inputs:
+      if_due:
+        description: 'Tick only if R200 has a closed hour not yet computed (as a scheduled run)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -45,8 +52,10 @@ jobs:
         run: |
           set -eu
           last=$(tail -n 1 experiments/flow72_fwd2/journal/ticks.csv | cut -d, -f1)
-          want=$(( ($(date +%s) / 3600 - 1) * 3600 * 1000 ))    # open of the last closed hour, in ms
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$last" -ge "$want" ] 2>/dev/null; then
+          want=$(( (($(date +%s) - 720) / 3600 - 1) * 3600 * 1000 ))  # open of the last hour closed 12 min ago, ms
+          guarded=0
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.if_due }}" = "true" ]; then guarded=1; fi
+          if [ $guarded -eq 1 ] && [ "$last" -ge "$want" ] 2>/dev/null; then
             echo "R200 is up to date (last hour $last); nothing to tick"; echo "due=0" >> "$GITHUB_OUTPUT"
           else
             echo "R200 last hour $last, last closed hour $want: tick"; echo "due=1" >> "$GITHUB_OUTPUT"
