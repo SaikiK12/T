@@ -180,11 +180,16 @@ for active writers. Dated proposals, audits and source notes below retain histor
   the flow books on Hyperliquid: the same as Binance on the coins both list, but the crypto gain sat in coins
   Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped). R449 holds Jupiter's JLP and GMX's GM
   ETH-USDC pool tokens with their crypto exposure shorted on Hyperliquid: hedged JLP earned +43.9%/yr in 2024 but
-  +5.6% in 2026, GM +7.2% in 2026, below the vaults (forward to 2027).
+  +5.6% in 2026, GM +7.2% in 2026, below the vaults (forward to 2027). R451 prices R200's stock-perp flow books on
+  Hyperliquid's xyz (HIP-3) markets: they match Binance's to a daily correlation of 0.9998 (A +13.4% over 41 seen
+  days), so the TradFi part can execute from France; R200's forward decides the signal. R452 picked Lighter's
+  operator pools by past record: NULL; the average pool lost 5.2%/yr after fees while LLP made +10.7%
+  ([vault competitors](research/intake/perp_vaults_20261111.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
-  pool tokens (JLP, GM) decayed from +44%/yr in 2024 to about +6% in 2026.
+  pool tokens (JLP, GM) decayed from +44%/yr in 2024 to about +6% in 2026; R451 shows the stock-perp flow books
+  execute on Hyperliquid's xyz as on Binance, and R452 that Lighter's operator pools do worse than LLP.
 - [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
   edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
   underpowered; one second-writer incident on Codex's forward lanes.

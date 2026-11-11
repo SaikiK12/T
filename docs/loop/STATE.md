@@ -255,3 +255,16 @@ waiting, and pick tests from our own measurements first.
     HLP/LLP (R446) and HYPE carry (R445).
   - Gate 1 is expected NULL at 180 days. `claude-flow-paper.yml` writes the tickets hourly (once per book and day,
     the day before).
+- **2026-11-11, R451 flow_hlstock_v1: R200's stock-perp flow books on Hyperliquid's xyz markets, gate 0.**
+  - R216 found R200's forward gain mostly in Binance's TradFi perps (closed to France). xyz (HIP-3, trade.xyz)
+    lists 21 of R200's 24 TradFi symbols; its terms do not name France. Frozen `89eceed0` before any xyz return.
+  - Gate 0 (2026-10-01..11-10, seen): both CONTINUE. A +13.4% (t 1.81) on xyz vs +13.3% on Binance for the same
+    coins, B +7.6% on both; daily correlation 0.9998. Trimmed means about 0: a few days and leveraged-ETF shorts.
+  - Forward from 2026-11-12 in `claude-flow-paper.yml` after R448.
+- **2026-11-11, R452 litpoolsel_v1: Lighter's operator pools picked by past record, gate 0 decides.**
+  - The owner asked for HLP/LLP competitors that a real deposit would match. Lighter publishes every pool's daily
+    share price, so the test reads what a deposit earns. Frozen `45627260` before any pool return.
+  - NULL: 1x +7.2%/yr (excess +3.2, t 0.33). The mean/sd score picked dormant pools; the equal-weight pool lost
+    5.2%/yr after fees; LLP +10.7%/yr and XLP -51%/yr over the same months.
+  - Competitor survey: `research/intake/perp_vaults_20261111.md` (only dYdX's MegaVault publishes history; small).
+  - R450 (Hyperliquid user vaults) waits for `claude/hl-vaults-data`; its score must avoid dormant vaults.

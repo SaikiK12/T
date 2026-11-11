@@ -1,0 +1,70 @@
+{
+ "window": "gate0",
+ "formations": [
+  "2025-11-30",
+  "2026-09-30"
+ ],
+ "months": 11,
+ "1x": {
+  "net_ann": 0.07213477896233132,
+  "excess_ann": 0.032134778962331315,
+  "nw_t_excess": 0.33038317304374876
+ },
+ "2x": {
+  "net_ann": 0.06712283866382387,
+  "excess_ann": 0.027122838663823867,
+  "nw_t_excess": 0.27912776952385215
+ },
+ "3x": {
+  "net_ann": 0.062110898365316386,
+  "excess_ann": 0.022110898365316368,
+  "nw_t_excess": 0.22776547137316275
+ },
+ "max_dd": -0.04925910827014718,
+ "worst_month": -0.04925910827014718,
+ "worst_month_formation": "2026-09-30",
+ "sd_month": 0.038367074317650574,
+ "avg_picks": 4.545454545454546,
+ "avg_new": 2.090909090909091,
+ "fee_ann": 0.044895287971413685,
+ "pools_universe": 150,
+ "eligible_mean_ann": -0.05244060052970948,
+ "reference": {
+  "Experimental Liquidity Provider (XLP)": {
+   "net_ann": -0.5134234402640409,
+   "worst_month": -0.4760171695216894
+  },
+  "Lighter Liquidity Provider (LLP)": {
+   "net_ann": 0.10744913067582036,
+   "worst_month": -0.00020727293134914504
+  }
+ },
+ "last_picks_today": [
+  {
+   "pool": 281474976552443,
+   "tvl_today": 77705.19683,
+   "status_today": 0
+  },
+  {
+   "pool": 281474976656586,
+   "tvl_today": 408720.031121,
+   "status_today": 0
+  },
+  {
+   "pool": 281474976543116,
+   "tvl_today": 65465.49507,
+   "status_today": 0
+  },
+  {
+   "pool": 281474976656876,
+   "tvl_today": 955.436817,
+   "status_today": 1
+  },
+  {
+   "pool": 281474976651007,
+   "tvl_today": 69798.038016,
+   "status_today": 0
+  }
+ ],
+ "decision": "NULL (stop)"
+}

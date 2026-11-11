@@ -89,7 +89,15 @@ isolated margin. They stay at 1x on cross margin.
   - Gate 0, 2024-02..2026-11: JLP +22.1%/yr (t 4.48), GM ETH-USDC +12.0% (t 4.75). Both CONTINUE.
   - By year, JLP went +43.9, +16.2 and +5.6 (2026). The high return was 2024's.
   - See `experiments/jlphedge_v1/FINDINGS.md`.
-- **R450 (frozen next), Hyperliquid user vaults picked by their past record:** France-reachable. It reads every
+- **R451, R200's stock-perp flow books on Hyperliquid's xyz (HIP-3) markets** (where R200's gain sat, R216):
+  - Gate 0, 2026-10-01..11-10 (seen): A +13.4% on xyz vs +13.3% on Binance for the same coins (daily correlation
+    0.9998), B +7.6% on both. Both CONTINUE; the signal decides forward.
+  - Real execution from France would match the paper on Binance's prices, at xyz's 9 bp fee (depth not measured).
+  - See `experiments/flow_hlstock_v1/FINDINGS.md`.
+- **R452, Lighter's operator pools picked by their past record** (HLP/LLP competitors on the same venue):
+  - NULL: +7.2%/yr net at 1x (t 0.33). The equal-weight pool lost 5.2%/yr after fees; LLP made +10.7%.
+  - See `experiments/litpoolsel_v1/FINDINGS.md` and `research/intake/perp_vaults_20261111.md`.
+- **R450 (next), Hyperliquid user vaults picked by their past record:** France-reachable. It reads every
   vault, closed ones included, from `claude/hl-vaults-data`.
 
 ## 7. Reading for the owner
