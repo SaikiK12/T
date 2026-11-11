@@ -19,4 +19,7 @@ fade it until Sunday 22:00, after external prices (Blue Ocean's overnight sessio
 - Paper only: public endpoints, no key, no order.
 
 ## Faults and notes
-None yet.
+- 2026-11-11, before the first weekend: GitHub starts this repository's scheduled runs 40-90 minutes late and drops
+  some, so `claude-clock.yml` now also dispatches `claude-xyzwknd-tick.yml` at 18:10 and 21:10 New York on Sundays.
+  Each run sleeps to 19:00 or 22:00, as the PREREG allows. The tick's crons stay as a second path. No pinned file
+  changed, and no ticket rule changed.

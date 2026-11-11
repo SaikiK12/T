@@ -124,7 +124,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (192)
+## Run: one lane's frozen measurement (193)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -224,6 +224,7 @@ line is the first line of the script's own docstring.
 - [`run_locked_carry.py`](run_locked_carry.py): R335 locked_carry_v1: the guarantee engine, a coin-margined cash-and-carry locked to expiry (measurement).
 - [`run_lotcap.py`](run_lotcap.py): lotcap_v1 (R298): harvest R282's lottery-cluster median while capping the squeezes.
 - [`run_ltwknd.py`](run_ltwknd.py): R465 ltwknd_v1 runner, frozen in experiments/ltwknd_v1/PREREG.md: R462's frozen trade.xyz weekend fade (M515), run unchanged on Lighter's prices, funding and fees for the 50 of R462's US-stock ...
+- [`run_ltwknd_fwd.py`](run_ltwknd_fwd.py): ltwknd_fwd (R467): R465's weekend fade of Lighter's US-stock perps, tested forward on fresh weekends from 2026-11-13, as set out in experiments/ltwknd_fwd/PREREG.md.
 - [`run_maker.py`](run_maker.py): maker_v1 (R193): limit-order entries on the replicated gross edges, as set out in experiments/maker_v1/PREREG.md.
 - [`run_maker_pilot.py`](run_maker_pilot.py): R426 sole registered partial-fill/inventory diagnostic on fixed archived Lighter fragments.
 - [`run_merge.py`](run_merge.py): merge_v1 (R186): walk-forward merge of many signals into one forecast, traded only where it clears costs, as set out in experiments/merge_v1/PREREG.md.

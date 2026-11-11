@@ -417,3 +417,11 @@ waiting, and pick tests from our own measurements first.
     CME gap is gone; pre-IPO perps have too few conversions; M525 (US-holiday closure fade) queued UNTESTED; notes on
     M296, M475, M515.
   - Program total 9,785,184.
+- 2026-11-11, R467 `ltwknd_fwd` frozen (`e9fb7621`) before the first weekend, earned by R465's PARTIAL.
+  - R465's rule forward on Lighter's 50 US-stock perps from Friday 2026-11-13: A (traded candle closes, listed fee,
+    recorded `lighter/books` $1k cost) decides; B (live book-walk tickets at Sunday 19:00 and 22:00 New York) must
+    agree on two thirds of weekends. Futility at 15 traded weekends, PASS at 20 (p < 0.01) or 30 (p < 0.04).
+  - Power from R465's weekends: PASS 79% at a 10 bp round trip on A + B, 39% if C's flat months recur; 5.4% at zero.
+  - `claude-clock.yml` now dispatches R463's and R467's tick workflows at 18:10 and 21:10 New York on Sundays
+    (GitHub's crons start 40-90 minutes late). Read R463 and R467 together (weekend moves correlate at 0.96).
+  - Program total 9,785,185.
