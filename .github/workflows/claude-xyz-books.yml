@@ -2,8 +2,9 @@ name: xyz book-cost recorder (Claude)
 # Single writer of the data branch claude/xyz-books-data: hourly order-book snapshots of every market on trade.xyz's
 # HIP-3 dex on Hyperliquid (scripts/record_xyz_books.py): spread, depth and the cost in bp of a $1k-$25k market order
 # by side, with each market's fee settings by day. Why: R451 prices R200's stock-perp flow books on xyz at assumed
-# costs; these snapshots let a registered read put measured costs on the same tickets. Public data only: no key, no
-# order. The first run creates the branch.
+# costs; these snapshots let a registered read put measured costs on the same tickets (R453). Also, under hlp/, HLP's
+# child-vault positions and every main-dex perp's context (scripts/record_hlp_positions.py, method M510): Hyperliquid
+# keeps no history of a vault's positions. Public data only: no key, no order. The first run creates the branch.
 on:
   schedule:
     - cron: '7 * * * *'
@@ -33,7 +34,12 @@ jobs:
           fi
       - name: Record
         id: rec
-        run: python3 scripts/record_xyz_books.py --out .xyz-data
+        run: |
+          set -u
+          fail=0
+          python3 scripts/record_xyz_books.py --out .xyz-data || fail=1
+          python3 scripts/record_hlp_positions.py --out .xyz-data || fail=1
+          exit $fail
       - name: Commit recordings
         if: always() && steps.rec.outcome != 'skipped'
         run: |
@@ -44,7 +50,7 @@ jobs:
           find . -name '*.tmp' -delete
           git add -A
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
-          git commit -q -m "xyz book snapshots ${GITHUB_RUN_ID}"
+          git commit -q -m "xyz book and HLP snapshots ${GITHUB_RUN_ID}"
           for i in 1 2 3; do
             if git push -q origin HEAD:claude/xyz-books-data; then echo "pushed"; exit 0; fi
             git pull -q --rebase origin claude/xyz-books-data || true

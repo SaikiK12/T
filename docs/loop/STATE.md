@@ -285,3 +285,8 @@ waiting, and pick tests from our own measurements first.
   - 117 of 122 xyz markets run in HIP-3 growth mode: taker fee 0.9 bp, not the 9 bp floor R451 charges. R453
     recomputes R451's positions with that fee plus the $1k slippage of the hourly snapshots. Frozen `26a0ed2d` before
     any snapshot value was read; zero trials (it can only fail R451). Weekly in `claude-xperp-reads.yml`.
+- **2026-11-11, HLP inventory recorder (M510).** The owner asked to dig into HLP's and LLP's methods. HLP's edge
+  (spread capture, liquidation flow) is not open to a depositor, but its positions are public in real time and kept
+  nowhere. `scripts/record_hlp_positions.py` (in `claude-xyz-books.yml`, hourly, `hlp/` on `claude/xyz-books-data`)
+  records every child vault's positions and every main-dex perp's open interest and funding. A forward PREREG is
+  frozen before any snapshot value is read.
