@@ -124,7 +124,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (191)
+## Run: one lane's frozen measurement (192)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -314,6 +314,7 @@ line is the first line of the script's own docstring.
 - [`run_xsalt.py`](run_xsalt.py): xsalt_v1 (R222): slow altcoin cross-sections (low beta, residual momentum, MAX, premium net of funding), as set out in experiments/xsalt_v1/PREREG.md.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
+- [`run_xvwknd.py`](run_xvwknd.py): R466 xvwknd_v1 runner, frozen in experiments/xvwknd_v1/PREREG.md: the Sunday-evening gap between trade.xyz's and Lighter's perp on the same US stock, traded as a pair (sell the dearer venue, buy ...
 - [`run_xyzns.py`](run_xyzns.py): R464 xyzns_wknd_v1 runner, frozen in experiments/xyzns_wknd_v1/PREREG.md: fade the weekend move of trade.xyz index, commodity and FX perps (Hyperliquid HIP-3) from an hour before their reference ...
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
 - [`run_xyzwknd_fwd.py`](run_xyzwknd_fwd.py): xyzwknd_fwd (R463): R462's weekend fade of trade.xyz US-stock perps, tested forward on fresh weekends from 2026-11-13, as set out in experiments/xyzwknd_fwd/PREREG.md.
@@ -377,7 +378,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (94)
+## Tools and everything else (95)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -471,5 +472,6 @@ line is the first line of the script's own docstring.
 - [`vrpexec_rule.py`](vrpexec_rule.py): R410 vrpexec_v1 (M477): the execution rule for R409's weekly short straddle with three cost levers, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.
+- [`xvwknd_rule.py`](xvwknd_rule.py): R466 xvwknd_v1 rule, frozen in experiments/xvwknd_v1/PREREG.md: the same US stock trades as a perp on trade.xyz (Hyperliquid HIP-3) and on Lighter.
 - [`xyzns_rule.py`](xyzns_rule.py): R464 xyzns_wknd_v1 rule, frozen in experiments/xyzns_wknd_v1/PREREG.md: R462's weekend fade moved from trade.xyz US-stock perps to its US equity-index, commodity and FX perps.
 - [`xyzwknd_rule.py`](xyzwknd_rule.py): R462 xyzwknd_v1 rule, frozen in experiments/xyzwknd_v1/PREREG.md: trade.xyz (Hyperliquid HIP-3) US-equity perps are priced internally from Friday 20:00 to Sunday 20:05 New York time.
