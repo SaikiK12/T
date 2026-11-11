@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (34)
+## Running or armed registered rounds (35)
 
+- **[llpinv_v1](llpinv_v1/)** R455, RUNNING PENDING, 2 trials. M511 Lighter LLP's inventory as a cross-sectional signal on Lighter's perps: share = LLP's signed position value / open interest in USD at each hourly snapshot (claude/xyz-books-data llp/); R454's rule unchanged: 72 h short slices on the eighth where LLP is most net short (F, follow) or most net long (R, reverse), universe-hedged, 9 bp a trade, Lighter closes and funding, forward from 2026-11-12 ([PREREG](llpinv_v1/PREREG.md))
 - **[hlpinv_v1](hlpinv_v1/)** R454, RUNNING PENDING, 2 trials. M510 HLP's inventory as a cross-sectional signal on Hyperliquid's main-dex perps: share = HLP child vaults' net size / open interest at each hourly snapshot (claude/xyz-books-data hlp/); 72 h short slices on the eighth where HLP is most net short (F, follow) or most net long (R, reverse), universe-hedged, 9 bp a trade, forward from 2026-11-12 ([PREREG](hlpinv_v1/PREREG.md))
 - **[flow_hlstock_mc_v1](flow_hlstock_mc_v1/)** R453, RUNNING PENDING, 0 trials. R451's flow books (M126/M127 on xyz stock/commodity perps) re-priced at measured xyz costs: HIP-3 fee by growth mode and deployer fee scale + mean buy/sell cost of a $1k market order from hourly book snapshots (claude/xyz-books-data), R451's cost where none within 90 min ([PREREG](flow_hlstock_mc_v1/PREREG.md))
 - **[flow_hlstock_v1](flow_hlstock_v1/)** R451, RUNNING PENDING, 2 trials. M126/M127 R200's flow books on stock, index and commodity perps (R216's TradFi list) traded on Hyperliquid's xyz (HIP-3) markets at xyz's hourly closes and funding, costs never below xyz's 9 bp taker fee (France-reachable execution check of R200's TradFi gain) ([PREREG](flow_hlstock_v1/PREREG.md), [FINDINGS](flow_hlstock_v1/FINDINGS.md), [journal](flow_hlstock_v1/journal/))

@@ -189,7 +189,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
   R451's books at xyz's measured costs (growth-mode fee 0.9 bp plus recorded slippage), for real money equal to paper
   ([HIP-3 venues](research/intake/hip3_venues_20261111.md): 7 of 10 HIP-3 dexes are fully delisted). R454 tests
   HLP's own inventory, recorded hourly from 2026-11-11, as a signal: short where HLP is most net short (F) or long
-  (R), hedged, forward from 2026-11-12 ([lane](experiments/hlpinv_v1/README.md)).
+  (R), hedged, forward from 2026-11-12 ([lane](experiments/hlpinv_v1/README.md)). R455 applies the same frozen rule
+  to Lighter's LLP pool on Lighter's markets ([lane](experiments/llpinv_v1/README.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

@@ -9,7 +9,8 @@ name: OKX X-Perp lane reads (Claude)
 # days, so each weekly read writes the status and, once reached, the decision (results/forward). Also R454
 # (scripts/run_hlpinv.py): HLP's inventory books on the hlp/ snapshots of the same branch; each weekly read appends
 # the complete days' tickets to its journal and fetches Hyperliquid's hourly closes and funding into journal/hl/.
-# Single writer of these lanes' results folders and of R454's journal. Paper only.
+# Also R455 (scripts/run_llpinv.py): R454's rule on Lighter LLP's llp/ snapshots, with Lighter's closes and funding in
+# journal/px/. Single writer of these lanes' results folders and of R454's and R455's journals. Paper only.
 on:
   schedule:
     - cron: '23 4 * * 1'
@@ -86,6 +87,10 @@ jobs:
           if [ -f experiments/hlpinv_v1/PREREG.sha256 ]; then
             .venv/bin/python scripts/run_hlpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
           fi
+          echo "== llpinv_v1 (R455)"
+          if [ -f experiments/llpinv_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_llpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
           exit $fail
       - name: Commit the reads
         if: always() && steps.reads.outcome != 'skipped'
@@ -98,7 +103,9 @@ jobs:
           for lane in $lanes; do
             if [ -d "experiments/$lane/results" ]; then git add -A "experiments/$lane/results"; fi
           done
-          if [ -d experiments/hlpinv_v1/journal ]; then git add -A experiments/hlpinv_v1/journal; fi
+          for lane in hlpinv_v1 llpinv_v1; do
+            if [ -d "experiments/$lane/journal" ]; then git add -A "experiments/$lane/journal"; fi
+          done
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -q -m "X-Perp, Hyperliquid and vault lane weekly reads ${GITHUB_RUN_ID}"
           br="${{ github.event.repository.default_branch }}"

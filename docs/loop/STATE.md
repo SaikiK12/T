@@ -303,3 +303,7 @@ waiting, and pick tests from our own measurements first.
   kept: `scripts/record_llp_positions.py` writes `llp/` hourly on `claude/xyz-books-data`. The same workflow now
   records book costs on Hyperliquid's main-dex perps (`main/`, `record_xyz_books.py --dex ""`, 179 markets) for
   measured-cost reads of R448 and R454. An LLP lane is frozen before any `llp/` value is read.
+- **2026-11-11, R455 llpinv_v1 (M511) frozen `ea4f9f26` before any LLP value was read.** R454's rule unchanged on
+  Lighter: share = LLP's signed position value over open interest in USD, eligible markets active with $10M volume and
+  $2M open interest, books F and R, Lighter's closes and funding, 9 bp a trade, placebo seed 455. Lighter does not
+  exclude France. Two trials (program 9,785,003). Weekly in `claude-xperp-reads.yml`, read separately from R454.
