@@ -38,6 +38,7 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-flow-paper.yml` | hourly at :17 | the flow-book lanes' journals: R200, R214, R215, R218, R220, R221 and R225 (stopped with the container on 2026-11-06; caught up on the first run), R448 (the books on Hyperliquid) and R451 (the stock-perp books on Hyperliquid's xyz) from 2026-11-12, and R449's hedge tickets (JLP and GM, written the day before) |
 | `claude-hlvaults-recorder.yml` | Sundays 09:13 | data branch `claude/hl-vaults-data`: every Hyperliquid vault, closed ones included, and each vault's allTime account value and pnl (M507) |
 | `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data`: OKX Europe X-Perps; Hyperliquid perps matching them under `hl/`; Hyperliquid HYPE and Unit spot pairs with their perps under `hl_spot/`; Hyperliquid's HLP and Lighter's LLP vaults under `vaults/`; Lighter's LIT perp funding and LIT candles under `lit/` |
+| `claude-xyz-books.yml` | hourly at :07 | data branch `claude/xyz-books-data`: spread, depth and the cost of a $1k-$25k market order on every trade.xyz (HIP-3) market, with fee settings by day; for measured costs on R451's tickets |
 | `claude-xperp-reads.yml` | Mondays 04:23 | status reads of R441-R447, and the frozen decisions of R441, R443, R445, R446 and R447 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
 
 - **Check them:** the repository's Actions tab. A red run names the lane that failed; the others still ran.

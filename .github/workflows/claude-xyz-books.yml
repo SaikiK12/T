@@ -1,0 +1,53 @@
+name: xyz book-cost recorder (Claude)
+# Single writer of the data branch claude/xyz-books-data: hourly order-book snapshots of every market on trade.xyz's
+# HIP-3 dex on Hyperliquid (scripts/record_xyz_books.py): spread, depth and the cost in bp of a $1k-$25k market order
+# by side, with each market's fee settings by day. Why: R451 prices R200's stock-perp flow books on xyz at assumed
+# costs; these snapshots let a registered read put measured costs on the same tickets. Public data only: no key, no
+# order. The first run creates the branch.
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-xyz-books-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the default branch (code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Check out the data branch, or start it
+        run: |
+          set -eu
+          if git fetch -q --depth 1 origin claude/xyz-books-data; then
+            git worktree add -q -B claude/xyz-books-data .xyz-data FETCH_HEAD
+          else
+            git worktree add -q --orphan -b claude/xyz-books-data .xyz-data
+          fi
+      - name: Record
+        id: rec
+        run: python3 scripts/record_xyz_books.py --out .xyz-data
+      - name: Commit recordings
+        if: always() && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          cd .xyz-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          find . -name '*.tmp' -delete
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "xyz book snapshots ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:claude/xyz-books-data; then echo "pushed"; exit 0; fi
+            git pull -q --rebase origin claude/xyz-books-data || true
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1

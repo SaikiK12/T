@@ -273,3 +273,11 @@ waiting, and pick tests from our own measurements first.
   - NULL: 1x -23.2%/yr net, excess -27.2 (t -2.26). Real blowups: three 2025-09-30 picks lost over 90% in the
     2025-10-10 crash; the 2026-09-30 picks lost 21.5%. In 2026 the equal-weight eligible vault made +8.2%/yr.
   - Both M507 venues are NULL: HLP and LLP (R446) remain the better deposits.
+- **2026-11-11, xyz cost recorder and xyz funding.**
+  - `claude-xyz-books.yml` (hourly, data branch `claude/xyz-books-data`) records the cost of a $1k-$25k market order
+    on every trade.xyz market, so R451's tickets can later be read at measured costs (real equal to paper). Only a
+    smoke run's counts were looked at.
+  - No xyz funding-carry lane: trade.xyz scales Hyperliquid's funding by 0.5 since 2025-12-19, "lowers baseline
+    funding to ~5.5% annualized" (docs.trade.xyz changelog; `perpDexs` lists multiplier 0.5 on 136 of 138 xyz
+    markets). Short perp and fully paid stock at 2x perp margin is then about 3.7%/yr on capital before costs, under
+    the 4% hurdle, as R442 found on OKX (funding +3.7%/yr).
