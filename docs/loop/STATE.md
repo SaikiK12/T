@@ -21,7 +21,7 @@ for breakthroughs at 100% of compute".
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
-- **Running:** R470 `xvfund_v1` (M527), xyz-vs-Lighter funding carry on the same US stock perp, gate 0.
+- **Closed today:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
 - **Open queue rows worth a look:** M521 (crypto-linked stock perps vs BTC's weekend move); M522 (month-end
   rebalancing on index perps); M523 (end-of-day LETF momentum, likely below costs); M296 (HIP-3 convergence).
 
@@ -431,3 +431,9 @@ waiting, and pick tests from our own measurements first.
   - `claude-asiaclose-c.yml` runs it on 2027-02-01..04 at 07:41 UTC; the runner refuses earlier and reads once.
   - Power: PASS about 61% if A's +88 bp held, 8% if B's +9.5 bp is the truth. PASS earns a forward lane.
   - Program total 9,785,244.
+- 2026-11-11, R470 `xvfund_v1` (M527) NULL. Short the venue (xyz or Lighter) paying more 7-day funding on the same
+  US stock perp, long the other; 10 slots, taker costs, 4%/yr hurdle.
+  - A (272 days) 1x excess -2.64 pts (t -1.22), 2x -5.55; B (71 days) +7.42 (t 0.71), mostly venue price noise.
+  - Before costs A's excess is +0.28 pts (+1.79 after xyz's 2025-12-19 funding change): too thin at any cost.
+  - 96 of 241 exits were forced by missing Lighter closes (56 on Sundays); six Lighter markets never traded.
+  - Program total 9,785,245.

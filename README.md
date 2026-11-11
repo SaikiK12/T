@@ -211,6 +211,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
   September-November (frozen PASS, recorded PARTIAL; [findings](experiments/asiaclose_v1/FINDINGS.md)).
   R469 reads R468's frozen rule once on openings no lane has seen (2026-11-12 to 2027-01-29), by workflow on
   2027-02-01 ([lane](experiments/asiaclose_c/README.md)).
+  R470 found the funding carry between xyz and Lighter on the same stock perp too thin: A's excess over a 4%/yr
+  hurdle is -2.6 points at 1x and +0.3 before costs (NULL, [findings](experiments/xvfund_v1/FINDINGS.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
