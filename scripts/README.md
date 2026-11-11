@@ -114,7 +114,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (173)
+## Run: one lane's frozen measurement (174)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -189,6 +189,7 @@ line is the first line of the script's own docstring.
 - [`run_impact.py`](run_impact.py): impact_v1 (R262): square-root market impact on flow books A, B and X2 at capital $1k-$10M, on top of the tier costs, as set out in experiments/impact_v1/PREREG.md.
 - [`run_intrars.py`](run_intrars.py): intrars_v1 (R300): intraday cross-sectional relative strength among the top 50 perps (M318, from Linda Raschke on Better System Trader 124).
 - [`run_itsm.py`](run_itsm.py): itsm_v1 (R203): intraday time-series momentum, as set out in experiments/itsm_v1/PREREG.md.
+- [`run_jlphedge.py`](run_jlphedge.py): R449 jlphedge_v1: two perp-DEX liquidity-pool tokens held against perp shorts on Hyperliquid.
 - [`run_kraken_carry.py`](run_kraken_carry.py): R418: sole offline Kraken EEA funding/capital/cost screen, with public-source gaps explicit.
 - [`run_levcarry.py`](run_levcarry.py): levcarry_v1 (R280): leverage and liquidation on the forward carry books, as set out in experiments/levcarry_v1/PREREG.md.
 - [`run_level_probability.py`](run_level_probability.py): R330 two-stage, offline close-level probability and net-cost diagnostic.
