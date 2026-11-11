@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (35)
+## Fetch: download archives and public history (37)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -19,6 +19,7 @@ line is the first line of the script's own docstring.
 - [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
 - [`fetch_deribit_atm_windows.py`](fetch_deribit_atm_windows.py): Raw Deribit trades of the two at-the-money legs R410 (vrpexec_v1) trades each Friday: for every Friday D of 2021-01-01..2026-09-18 and BTC/ETH, the call and the put of the strike ...
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
+- [`fetch_edgar_earnings.py`](fetch_edgar_earnings.py): Earnings-release filings (8-K with Item 2.02, "Results of Operations and Financial Condition") from SEC EDGAR, timed by EDGAR's acceptance time, for the US single stocks that have a MEXC TradFi ...
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
 - [`fetch_fundamentals.py`](fetch_fundamentals.py): Protocol fundamentals from DefiLlama's free API for every token that has a Binance perp: daily TVL, fees and revenue.
@@ -31,6 +32,7 @@ line is the first line of the script's own docstring.
 - [`fetch_macro.py`](fetch_macro.py): Small free daily series for regime and context work: crypto sentiment, US rates and liquidity, stablecoin supply and DeFi activity.
 - [`fetch_metrics_full.py`](fetch_metrics_full.py): Complete Binance metrics for every day the daily panel's top-150 universe reads, reduced to hours by lab.flow.reduce_metrics into data/metrics_full/metrics_1h/. data/metrics_1h stays as it is: it ...
 - [`fetch_mexc_history.py`](fetch_mexc_history.py): Download MEXC public history for every crypto USDT perpetual listed today: hourly contract klines, hourly index klines and settled funding, from 2025-04-01 (funding history starts 2025-04-27 on ...
+- [`fetch_mexc_stock_1h.py`](fetch_mexc_stock_1h.py): Hourly MEXC contract klines for a list of TradFi perps over one window, into a separate folder, for R461's sample B (earnings releases of 2026-10-21 .. 2026-11-09, after data/mexc_tradfi ends).
 - [`fetch_mexc_tradfi.py`](fetch_mexc_tradfi.py): Download MEXC public history for its TradFi USDT perpetuals (contract type 2: stocks, indices, commodities, ETFs).
 - [`fetch_notice_bodies.py`](fetch_notice_bodies.py): Plain text of each Binance delisting article in the notice journal (data/recorders/notices/binance_delisting.csv), from the public CMS detail endpoint.
 - [`fetch_okx_xperp.py`](fetch_okx_xperp.py): OKX Europe X-Perps (MiFID, 5-year expiry crypto contracts with 8-hourly funding; M484): public data, no key.
@@ -119,7 +121,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (186)
+## Run: one lane's frozen measurement (187)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -166,6 +168,7 @@ line is the first line of the script's own docstring.
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
 - [`run_dvolvrp.py`](run_dvolvrp.py): R411 dvolvrp_v1 (M477, item 41): Deribit's 30-day implied volatility index (DVOL) against the realized volatility of the next 30 days, BTC and ETH, as set out in experiments/dvolvrp_v1/PREREG.md.
+- [`run_earnperp.py`](run_earnperp.py): R461 earnperp_v1 runner, frozen in experiments/earnperp_v1/PREREG.md: after an out-of-hours earnings release (SEC 8-K Item 2.02), does a 24/7 stock perp keep moving the way it first moved, or turn ...
 - [`run_eea_execution.py`](run_eea_execution.py): R421: one frozen packet, two explicit CDE size conventions, no new acquisition.
 - [`run_effratio.py`](run_effratio.py): er_v1 (R293): can tomorrow's efficiency ratio be forecast, and does skipping predicted chop days improve a trend rule? As set out in experiments/er_v1/PREREG.md (M314, from the owner's reel ...
 - [`run_equations.py`](run_equations.py): R310: one frozen 12-policy funding/basis family, offline only.
@@ -367,7 +370,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (91)
+## Tools and everything else (92)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -393,6 +396,7 @@ line is the first line of the script's own docstring.
 - [`demo_formula_discovery.py`](demo_formula_discovery.py): Invented-world formula discovery and chart information-loss demonstration.
 - [`demo_paper_entry_risk.py`](demo_paper_entry_risk.py): Compare finite invented sizes at1x/2x/3x costs through strict paper admission.
 - [`demo_paper_session.py`](demo_paper_session.py): Invented durable paper admission/receipt/close demo; no market files or orders.
+- [`earnperp_rule.py`](earnperp_rule.py): R461 earnperp_v1 rule, frozen in experiments/earnperp_v1/PREREG.md: when a US company files its earnings release (SEC 8-K, Item 2.02) outside cash hours, its 24/7 stock perpetual reacts while the ...
 - [`edge_map.py`](edge_map.py): Generate docs/EDGE_MAP.md: every queued method and registered round placed in one edge family.
 - [`event_journal.py`](event_journal.py): Shared engine of the point-in-time event recorders (record_listings.py, record_tradfi_calendar.py).
 - [`eventdrift_calendar.py`](eventdrift_calendar.py): EIA release calendar for R368 eventdrift_v1: the Weekly Petroleum Status Report (crude) and the Weekly Natural Gas Storage Report, as release instants in UTC. Built from the rules on EIA's two ...
