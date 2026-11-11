@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-11-06T13:00:00+00:00",
+ "last_hour": "2026-11-10T22:00:00+00:00",
  "mapped": 43,
  "dropped": [
   "BZUSDT",
@@ -31,12 +31,12 @@
  ],
  "mexc_fee": {
   "taker": {
-   "mean": 0.0001255813953488372,
+   "mean": 0.00013488372093023256,
    "min": 0.0,
    "max": 0.0004
   },
   "maker": {
-   "mean": 9.302325581395349e-06,
+   "mean": 1.6279069767441862e-05,
    "min": 0.0,
    "max": 0.0001
   }
@@ -50,27 +50,27 @@
   "coverage": 0.5603070175438597
  },
  "X2_ontime": {
-  "days": 17,
-  "total": 0.0632597688208223,
-  "total_2x": 0.05531340780807411,
-  "total_3x": 0.047367046795326204,
-  "funding": -0.04265829778041586,
-  "coverage": 0.42007080610021785,
+  "days": 21,
+  "total": 0.06692741118802,
+  "total_2x": 0.05732303252657041,
+  "total_3x": 0.04771865386512121,
+  "funding": -0.040240256699896365,
+  "coverage": 0.4326499118165784,
   "go_real": {
-   "n": 17,
-   "mean": 0.0037211628718130767,
-   "hit": 0.6470588235294118,
+   "n": 21,
+   "mean": 0.0031870195803819046,
+   "hit": 0.5714285714285714,
    "worst": -0.0998591801655121,
    "invalid_n": 0,
    "n_clusters": null,
    "checks": {
     "finite_returns": true,
-    "enough_scored": false,
+    "enough_scored": true,
     "mean_positive": true,
     "hit_rate": true,
     "no_tail_event": true
    },
-   "pass": false
+   "pass": true
   }
  },
  "vs_R215_A_replay": {
@@ -81,10 +81,10 @@
   "diff_t_nw10": null
  },
  "vs_R215_A_ontime": {
-  "days": 17,
-  "x2_total": 0.0632597688208223,
-  "a_total": 0.0339523878402644,
-  "diff_mean_bp_day": 17.239635870916405,
-  "diff_t_nw10": null
+  "days": 21,
+  "x2_total": 0.06692741118802,
+  "a_total": 0.026182867320950196,
+  "diff_mean_bp_day": 19.402163746223707,
+  "diff_t_nw10": 2.72399147855525
  }
 }
