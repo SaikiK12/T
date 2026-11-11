@@ -298,3 +298,8 @@ waiting, and pick tests from our own measurements first.
 - **2026-11-11, R220 on GitHub:** MEXC refused R220's request burst by IP (code 510), so it wrote nothing after
   2026-11-05. `scripts/run_paced_mexc.py` paces MEXC requests and retries 510s around the unchanged script; run
   42942661403 wrote its tickets through 2026-11-10 (`experiments/carry_fwd/DEVIATIONS.md`).
+- **2026-11-11, LLP inventory and main-dex book costs recorded (M511).** Lighter's public `account` endpoint lists
+  LLP's positions (199 non-zero on the first run) and `orderBookDetails` each market's open interest, with no history
+  kept: `scripts/record_llp_positions.py` writes `llp/` hourly on `claude/xyz-books-data`. The same workflow now
+  records book costs on Hyperliquid's main-dex perps (`main/`, `record_xyz_books.py --dex ""`, 179 markets) for
+  measured-cost reads of R448 and R454. An LLP lane is frozen before any `llp/` value is read.
