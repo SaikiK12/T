@@ -3,7 +3,8 @@ name: Flow paper lanes (Claude)
 # R215 (MEXC prices), R218 (X2 on MEXC), R220 (funding carry, R191 rule), R221 (sequential decision on R215/R218) and
 # R225 (volatility target). They stopped on 2026-11-06 13:00 UTC with the container and had no other writer. Also the
 # single writer of R448 (flow_hl_v1: the same signals on Hyperliquid's prices, scripts/run_flow_hl.py) from 2026-11-12,
-# and of R449's hedge tickets (jlphedge_v1: scripts/run_jlphedge.py, one per book and day, written the day before).
+# of R449's hedge tickets (jlphedge_v1: scripts/run_jlphedge.py, one per book and day, written the day before), and
+# of R451 (flow_hlstock_v1: R200's signals on stock/commodity perps priced on Hyperliquid's xyz) from 2026-11-12.
 # Hourly at :17, so R200 computes each hour within 60 minutes of its close (docs/GATES.md's strict on-time clock).
 # Each run computes every closed hour not yet journaled (Binance keeps 5-minute ratio history for 30 days), so a missed
 # run is caught up by the next one; the frozen scripts are run unchanged, in their task order (lab/operations.py).
@@ -28,7 +29,8 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       NUMBA_NUM_THREADS: '1'
-      LANES: flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq vt_fwd flow_hl_v1 jlphedge_v1
+      LANES: >-
+        flow72_fwd2 flow72_fwd3 mexc_fwd mexc_fwd_sq carry_fwd mexc_seq vt_fwd flow_hl_v1 jlphedge_v1 flow_hlstock_v1
     steps:
       - name: Checkout the default branch
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -56,7 +58,7 @@ jobs:
           restore-keys: flow-paper-data-
       - name: Mark the caches before the run
         run: mkdir -p data && touch data/.flow_paper_marker
-      - name: Tick R200, R214, R215, R218, R220, R221, R225, R448, R449
+      - name: Tick R200, R214, R215, R218, R220, R221, R225, R448, R449, R451
         id: tick
         run: |
           set -u
@@ -75,6 +77,9 @@ jobs:
           run R449 scripts/run_jlphedge.py --window forward || true    # DefiLlama and Hyperliquid only; reads no lane
           if run R200 scripts/forward_tick.py; then
             run R448 scripts/run_flow_hl.py --window forward || true
+            if [ -f experiments/flow_hlstock_v1/PREREG.sha256 ]; then     # R451 runs once frozen
+              run R451 scripts/run_flow_hlstock.py --window forward || true
+            fi
             run R214 scripts/forward_delayed.py || true
             if run R215 scripts/forward_mexc.py; then
               run R218 scripts/forward_mexc_sq.py && { run R221 scripts/forward_seq.py || true; } || true
@@ -117,7 +122,7 @@ jobs:
           done
           git add -A experiments/mexc_seq/results     # R221 writes its looks and status there
           if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
-          git commit -q -m "Flow paper lanes: GitHub tick ${GITHUB_RUN_ID} (R200, R214-R225, R448, R449)" \
+          git commit -q -m "Flow paper lanes: GitHub tick ${GITHUB_RUN_ID} (R200, R214-R225, R448, R449, R451)" \
             -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
           br="${{ github.event.repository.default_branch }}"
           for i in 1 2 3 4 5; do
