@@ -357,3 +357,17 @@ waiting, and pick tests from our own measurements first.
   `claude-usopen.yml` at 09:20 New York on weekdays, then dispatches itself; a 3-hourly cron restarts a lost chain.
   Before 2026-11-12 nothing counts for R448/R451, so the clock is in place for their first day. Public repository:
   no minutes are billed. No frozen script, rule or journal changed.
+- **2026-11-11, idea wave 4 and R460 (USDT mints).**
+  - **The wave.** At the owner's request for wide batched research, eight Haiku lenses read the web. The lenses were:
+    DEX funding, options, EU basis, papers, Hyperliquid quirks, vault methods, closed-market price discovery, and
+    scheduled events. Every idea and where it sits in the lab is recorded in
+    `research/intake/idea_wave4_20261111.md`, with 14 aliases (IW4-*).
+  - **What is new.**
+    - M512 (USDT mints) was tested.
+    - M513 (earnings reaction on 24/7 stock perps) is queued; it needs a power count first.
+    - M514 (ETF flows) is blocked: no free flow history.
+    - The rest already sits in tested or blocked rows. For example, Hyperliquid-Lighter carry is R288, below the
+      hurdle.
+  - **R460 `usdtmint_v1`: NULL.** It covers 262 Tether Issue events on Tron and Ethereum from free APIs (TronGrid and
+    Blockscout). BTC 24 h: +23 bp per trade against a +6 bp placebo, Holm p 0.40, negative in the holdout, -3.4 bp at
+    2x cost. BTC 4 h: p 0.44. 30 trials; program total 9,785,037.

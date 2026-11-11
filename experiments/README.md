@@ -56,8 +56,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (200)
+## Other registered rounds (done, registered or planned) (201)
 
+- **[usdtmint_v1](usdtmint_v1/)** R460, DONE NULL, 30 trials. M512 BTC after Tether USDT mints: 262 Issue events on Tron (TronGrid) and Ethereum (Blockscout) 2021-01-02..2026-09-28, >= 100M USDT; long BTC from block + 2 min for 24 h (D1) and 4 h (D2) against a circular-shift placebo (2,000 draws), Holm over 2; Hyperliquid taker 10 bp round trip plus Binance funding; 2020 bars not read ([PREREG](usdtmint_v1/PREREG.md), [FINDINGS](usdtmint_v1/FINDINGS.md))
 - **[litpoolsel_v1](litpoolsel_v1/)** R452, DONE NULL, 1 trial. M507 on Lighter: the operator public pools picked by their past record (top 5 by mean/sd of 90-day daily share-price returns, monthly), deposits only, net of the operator's fee on gains and a 10 bp switch, vs the 4% hurdle ([PREREG](litpoolsel_v1/PREREG.md), [FINDINGS](litpoolsel_v1/FINDINGS.md))
 - **[hlvaultsel_v1](hlvaultsel_v1/)** R450, DONE NULL, 1 trial. M507 Hyperliquid user vaults picked by their past record: monthly, top 10 vaults (>=180 days old, >=$500k) by mean/sd of their 180-day period returns (pnl in >=80% of periods, positive sum), net of the leader's profit share and a 10 bp switch, vs the 4% hurdle ([PREREG](hlvaultsel_v1/PREREG.md), [FINDINGS](hlvaultsel_v1/FINDINGS.md))
 - **[hlspot_carry_v1](hlspot_carry_v1/)** R444, DONE NULL, 1 trial. M503 Hyperliquid spot-against-perp carry on one venue: long the USDC spot pair (HYPE or a Unit-bridged coin such as UBTC), short the same coin's perp when its trailing 7-day funding is >= 10%/yr (exit < 5%, 10 slots, $100k volume on each leg); gate 0 (stop only) on 2025-01-01..2026-11-10, gate 1 forward from 2026-11-11 ([PREREG](hlspot_carry_v1/PREREG.md), [FINDINGS](hlspot_carry_v1/FINDINGS.md))
@@ -278,10 +279,9 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (2)
+## Unregistered folders (1)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.
-- **[usdtmint_v1](usdtmint_v1/)** No registry row; scope unclassified.

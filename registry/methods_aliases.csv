@@ -438,3 +438,17 @@ WD1103-PM-SIGNAL,Prediction-market prices as crypto signals: not legal for the o
 WD1103-PM-NO-BIAS,Prediction-market longshot/No bias: not legal for the owner,blocked,M291,,high,"Web-deep 2026-11-03 extraction; verifier-confirmed rule or source, not validated alpha.",research/intake/cards/SRC1103-028.md
 WD1103-HYPERP-CAP,"Hyperliquid hyperp mark cap (3x EMA, 1.5x external; 10x contradicted)",context,M296,,high,"Web-deep 2026-11-03 extraction; verifier-confirmed rule or source, not validated alpha.",research/intake/source_catalog_webdeep_20261103.csv
 WD1103-AUTO-INTERVAL,"Automatic funding-interval rules on OKX, KuCoin and Gate",context,M282,M449,high,"Web-deep 2026-11-03 extraction; verifier-confirmed rule or source, not validated alpha.",research/intake/source_catalog_webdeep_20261103.csv
+IW4-USDT-MINT,Tether USDT mints and BTC (events lens),null,M512,M192,high,"Tested as R460, NULL",research/intake/idea_wave4_20261111.md
+IW4-STABLE-TRANSFER,Stablecoin transfers of $1M+ and BTC (Ante et al. 2020),blocked,M512,,medium,Variant of M512; needs a transfer indexer,research/intake/idea_wave4_20261111.md
+IW4-STABLE-DRYPOWDER,Stablecoin supply factor (Jones et al. arXiv:2603.23480),blocked,M192,,medium,Same object as M192; abstract only,research/intake/idea_wave4_20261111.md
+IW4-HL-LIGHTER-CARRY,Hyperliquid-Lighter cross-DEX funding carry,null,M059,M403,high,"R288 covers hyperliquid+lighter: +3.53%/yr at 1x, below the 4.13% hurdle",research/intake/idea_wave4_20261111.md
+IW4-PERP-NOARB,"Perp deviation from no-arbitrage price (He, Manela, Ross, von Wachter)",partial,M503,M116,medium,Spot-perp carry (R444/R445) and premium views (R185),research/intake/idea_wave4_20261111.md
+IW4-QUARTER-HOUR,Quarter-hour order imbalance (Kim and Hansen arXiv:2607.09426),blocked,M082,,high,"About 0.5 bp per boundary vs 5 bp taker, by the authors' own comparison",research/intake/idea_wave4_20261111.md
+IW4-BTC-2123,BTC long 21:00-23:00 UTC (Quantpedia),partial,M023,M114,high,Claim C12; atlas clock views null,research/intake/idea_wave4_20261111.md
+IW4-ZARATTINI-TREND,Crypto Donchian ensemble trend with vol sizing (Zarattini et al. SFI 25-80),null,M184,M035,medium,R229 and R242 NULL on spot and perp trend ensembles,research/intake/idea_wave4_20261111.md
+IW4-ETF-FLOWS,Spot BTC ETF flows and next-day BTC,blocked,M514,,medium,No free flow history reached,research/intake/idea_wave4_20261111.md
+IW4-CPI-FOMC,CPI surprise and FOMC reactions in BTC perps,blocked,M290,,medium,Needs a consensus series,research/intake/idea_wave4_20261111.md
+IW4-HYPERP,Hyperps convergence at launch,blocked,M296,,medium,About three events,research/intake/idea_wave4_20261111.md
+IW4-HIP3-WEEKEND,HIP-3 weekend gap and weekend convergence of stock perps,partial,M321,M188,medium,R432 gate 0 and R459 forward,research/intake/idea_wave4_20261111.md
+IW4-LISTING-DAY1,Perp-listing day-1 fade (BitMEX report),null,M155,,medium,Listing family tested (R188),research/intake/idea_wave4_20261111.md
+IW4-EARNINGS-PERP,Earnings reaction on 24/7 stock perps,untested,M513,M222,medium,Queued; power count first,research/intake/idea_wave4_20261111.md
