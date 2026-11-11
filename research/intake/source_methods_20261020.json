@@ -16484,6 +16484,297 @@
           "label": "R461 FINDINGS"
         }
       ]
+    },
+    {
+      "id": "IW5-XYZ-WEEKEND",
+      "parent_claim_id": "IW5-20261111",
+      "title": "trade.xyz US-stock perps weekend overshoot (oracle EMA while closed)",
+      "method_type": "source_refinement",
+      "hypothesis": "trade.xyz US-stock perps weekend overshoot (oracle EMA while closed) (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M515; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R462 xyzwknd_v1: fade of the Fri 20:00 to Sun 19:00 ET move to Sun 22:00 or Mon 10:00 ET, 76 xyz US markets, May-Nov 2026; gate-0 PASS on the Sun 22:00 exit, Monday NULL.",
+      "unrun_scope": "Measured book costs, executable bid/ask, capacity, other venues; forward lane R463.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M515."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M515.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/xyzwknd_v1/FINDINGS.md",
+          "label": "R462 FINDINGS"
+        }
+      ]
+    },
+    {
+      "id": "IW5-OVERNIGHT-SEO",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Overnight secondary offerings on 24/7 stock perps",
+      "method_type": "source_refinement",
+      "hypothesis": "Overnight secondary offerings on 24/7 stock perps (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M516; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M516."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M516.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-SP500-ADD",
+      "parent_claim_id": "IW5-20261111",
+      "title": "S&P 500 additions announced after the close",
+      "method_type": "source_refinement",
+      "hypothesis": "S&P 500 additions announced after the close (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M519; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "See live queue row M519."
+      ],
+      "blockers": [
+        "The queue row M519 states what is missing."
+      ],
+      "next_action": "Follow live queue row M519.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-FDA-AFTERCLOSE",
+      "parent_claim_id": "IW5-20261111",
+      "title": "FDA decisions announced after the close",
+      "method_type": "source_refinement",
+      "hypothesis": "FDA decisions announced after the close (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None held."
+      ],
+      "blockers": [],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-FEE-LEVERS",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Fee and rebate levers for a small account",
+      "method_type": "source_refinement",
+      "hypothesis": "Fee and rebate levers for a small account (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M475; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M475."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M475.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-HL-LEADERBOARD",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Hyperliquid leaderboard endpoint for top-trader snapshots",
+      "method_type": "source_refinement",
+      "hypothesis": "Hyperliquid leaderboard endpoint for top-trader snapshots (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M065; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "See live queue row M065."
+      ],
+      "blockers": [
+        "The queue row M065 states what is missing."
+      ],
+      "next_action": "Follow live queue row M065.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-HL-TWAP",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Drift after visible Hyperliquid TWAP orders",
+      "method_type": "source_refinement",
+      "hypothesis": "Drift after visible Hyperliquid TWAP orders (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M517; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "See live queue row M517."
+      ],
+      "blockers": [
+        "The queue row M517 states what is missing."
+      ],
+      "next_action": "Follow live queue row M517.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-LIQ-WHALE",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Liquidation heatmaps and whale following on Hyperliquid",
+      "method_type": "source_refinement",
+      "hypothesis": "Liquidation heatmaps and whale following on Hyperliquid (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None held."
+      ],
+      "blockers": [],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-PASSIVE-QUOTE",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Slow passive quoting on zero-fee or thin stock perps",
+      "method_type": "source_refinement",
+      "hypothesis": "Slow passive quoting on zero-fee or thin stock perps (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M474; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M474."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M474.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-XVENUE-STOCK",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Cross-venue stock-perp residual while cash is closed",
+      "method_type": "source_refinement",
+      "hypothesis": "Cross-venue stock-perp residual while cash is closed (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M443; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M443."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M443.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-BUYBACK",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Token buyback coverage long-short",
+      "method_type": "source_refinement",
+      "hypothesis": "Token buyback coverage long-short (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M518; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "See live queue row M518."
+      ],
+      "blockers": [
+        "The queue row M518 states what is missing."
+      ],
+      "next_action": "Follow live queue row M518.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW5-MACRO-NOWCAST",
+      "parent_claim_id": "IW5-20261111",
+      "title": "Macro surprises against free nowcasts",
+      "method_type": "source_refinement",
+      "hypothesis": "Macro surprises against free nowcasts (idea wave 5 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M290; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "See live queue row M290."
+      ],
+      "blockers": [
+        "The queue row M290 states what is missing."
+      ],
+      "next_action": "Follow live queue row M290.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave5_20261111.md",
+          "label": "Idea wave 5 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
     }
   ],
   "sources": [
@@ -20872,6 +21163,34 @@
       "strategy_trials_added": 62,
       "prospective_days_added": 0,
       "market_outcomes_added": 2
+    },
+    {
+      "intake_id": "idea_wave5_20261111",
+      "records_added": [
+        "IW5-XYZ-WEEKEND",
+        "IW5-OVERNIGHT-SEO",
+        "IW5-SP500-ADD",
+        "IW5-FDA-AFTERCLOSE",
+        "IW5-FEE-LEVERS",
+        "IW5-HL-LEADERBOARD",
+        "IW5-HL-TWAP",
+        "IW5-LIQ-WHALE",
+        "IW5-PASSIVE-QUOTE",
+        "IW5-XVENUE-STOCK",
+        "IW5-BUYBACK",
+        "IW5-MACRO-NOWCAST"
+      ],
+      "base_method_objects_before": 453,
+      "method_objects_after": 465,
+      "source_records_added": [],
+      "source_catalog_paths": [],
+      "received_scope": "Eight Haiku lens reports (2026-11-11), bounded web reads; author re-checks marked [A]. No complete-corpus claim.",
+      "reconciliation": "Live queue: M515 (PARTIAL, R462 gate-0 PASS), new M516 (QUEUED), M517-M519 (BLOCKED); notes added to M065 and M443; the rest map to M474, M475, M290 or CONTEXT.",
+      "source_version_path": "research/intake/idea_wave5_20261111.md",
+      "source_version_sha256": "c491fe6193b985a14faca055204cce89a9212480eeb3e22262e9ba361d66096a",
+      "strategy_trials_added": 32,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 1
     }
   ],
   "reassignment_refs": [

@@ -378,3 +378,14 @@ waiting, and pick tests from our own measurements first.
     Holm p 1.0, MDE80 127 bp); next open +1 bp. Both lose at 1x (30 bp).
   - Diagnostic lead only: before-open filings held to the close +80 bp in A, +70 bp in B (raw p 0.03 of 32 cells). It
     needs a new prospective lane on fresh filings (season from 2027-01). 32 trials; program total 9,785,069.
+- **2026-11-11, idea wave 5 and R462 `xyzwknd_v1`: gate-0 PASS (recorded PARTIAL).**
+  - **The wave.** Eight more Haiku lenses read the web: off-hours stock events, fee levers, Hyperliquid public state,
+    the xyz oracle, passive quoting, venue price history, buybacks and macro proxies. The record is
+    `research/intake/idea_wave5_20261111.md`, with 12 aliases (IW5-*).
+  - **New queue rows:** M515 (tested); M516 (QUEUED, overnight offerings); M517-M519 (BLOCKED).
+  - **R462.** On trade.xyz (France-reachable, growth-mode fee 0.9 bp), US-stock perps price themselves on a 30-minute
+    EMA from Friday 20:00 to Sunday 20:05 New York. Fading weekend moves of at least 50 bp from Sunday 19:00 to 22:00
+    earns +42 bp per market-weekend in A (18 weekends, Holm p 0.004, net 2x +29 bp) and +36 bp in B (6 weekends).
+    Held to Monday 10:00 it is NULL (noise).
+  - **Caveats:** prices are last trades and costs are assumed.
+  - **Next:** the forward lane R463 at recorded xyz book costs. 32 trials; program total 9,785,101.
