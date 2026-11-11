@@ -324,3 +324,9 @@ waiting, and pick tests from our own measurements first.
   6-20 bp tier cost); stops if its recomputation differs from R448's tickets. Book A's gate-0 net fell to +0.1
   bp/day at 3x, so its cost decides it. Weekly in `claude-xperp-reads.yml`. Also: R215 now runs through
   `run_paced_mexc.py` after a MEXC 510 refusal (run 42980224484).
+- **2026-11-11, R459 oilwknd_fwd frozen `78454c92` (2 trials, program 9,785,007).** R432's only lead on fresh
+  weekends where a French resident can trade: Lighter WTI and BRENTOIL, |W| (Fri 17:00 ET to Sun 17:55 ET) >= 100 bp
+  faded from the first one-minute open in [S - 4, S - 1 min] to the Monday 09:30 ET cash open, hourly funding and the
+  $1k `lighter/books/` cost charged. Futility at 15 traded weekends, final at 40. Daily in `claude-oilwknd.yml`.
+  Lighter's candles return at most 500 bars (the last of the range), so the runner asks three short ranges; R457's
+  windows are under 70 minutes and unaffected.

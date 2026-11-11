@@ -35,6 +35,7 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-carry-paper.yml` | hourly 00:29-07:29 | journals of R278, R279, R294, R390, R440 (carry books), R285 and R415; lane data in the Actions cache |
 | `claude-usopen.yml` | 13:01, 13:31, 14:01, 14:31 on weekdays (the daemon starts in the hour before 10:00 New York), 00:47 daily | `experiments/usopen_fwd/journal/` (R371) |
 | `claude-usopen-dex.yml` | 03:17 daily | `experiments/usopen_dex_fwd/journal/` (R457: R371's picks scored on Lighter and Hyperliquid) |
+| `claude-oilwknd.yml` | 05:43 daily | `experiments/oilwknd_fwd/journal/` (R459: the oil weekend fade on Lighter, scored after each Monday cash open) |
 | `claude-cboe-recorder.yml` | 13:12 and 21:33 on weekdays | data branch `claude/cboe-chain-data` (QQQ/SPY/SPX chains) |
 | `claude-flow-paper.yml` | hourly at :17 | the flow-book lanes' journals: R200, R214, R215, R218, R220, R221 and R225 (stopped with the container on 2026-11-06; caught up on the first run), R448 (the books on Hyperliquid) and R451 (the stock-perp books on Hyperliquid's xyz) from 2026-11-12, and R449's hedge tickets (JLP and GM, written the day before) |
 | `claude-hlvaults-recorder.yml` | Sundays 09:13 | data branch `claude/hl-vaults-data`: every Hyperliquid vault, closed ones included, and each vault's allTime account value and pnl (M507) |

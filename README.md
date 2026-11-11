@@ -194,7 +194,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   book costs recorded hourly on each venue ([lane](experiments/invcost_v1/README.md)). R457 trades R371's US-open
   picks (C17, the strongest blind read) on Lighter and Hyperliquid at their own prices and book costs, from
   2026-11-12 ([lane](experiments/usopen_dex_fwd/README.md)). R458 re-prices R448's crypto flow books at
-  Hyperliquid's 4.5 bp fee plus the main-dex slippage recorded hourly ([lane](experiments/flow_hl_mc_v1/README.md)).
+  Hyperliquid's 4.5 bp fee plus the main-dex slippage recorded hourly ([lane](experiments/flow_hl_mc_v1/README.md)). R459
+  tests R432's oil lead, a fade of the WTI/Brent weekend move through the CME reopen, on Lighter from 2026-11-13
+  ([lane](experiments/oilwknd_fwd/README.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
