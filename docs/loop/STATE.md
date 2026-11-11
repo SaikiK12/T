@@ -406,3 +406,14 @@ waiting, and pick tests from our own measurements first.
     |W| >= 50 (p 0.93), net negative from 1x. B (6 weekends) was +75/+102 bp but cannot rescue A. The overshoot is
     at most a stock-perp effect; R463 still decides it forward.
   - 40 trials; program total 9,785,142.
+- **2026-11-11, R465 `ltwknd_v1` PARTIAL, R466 `xvwknd_v1` INCONCLUSIVE, idea wave 7.**
+  - **R465.** R462's frozen rule on Lighter's 50 shared US-stock perps at 0 fee: A +45.3 bp (p 0.005, net 2x +37.3),
+    B +35.6, unseen C (February-April) -1.3 at Sunday 22:00. Lighter and xyz weekend moves correlate 0.96 (a venue
+    replication). Post hoc: C gave the overshoot back at Monday 04:00-06:00, consistent with Lighter's equity oracle
+    (Pyth Pro) lacking the overnight session before mid-2026. Earns a forward Lighter lane under a new id. 32 trials.
+  - **R466 (new M524).** The xyz-versus-Lighter gap at Sunday 19:00: median 7.6 bp, decision cell n 55 < 100 in A;
+    the closure looks like last-trade bounce (persistence 0.25). No forward lane. 10 trials.
+  - **Wave 7** (`research/intake/idea_wave7_20261111.md`, six lenses): CME crypto is 24/7 since 2026-05-29, so the
+    CME gap is gone; pre-IPO perps have too few conversions; M525 (US-holiday closure fade) queued UNTESTED; notes on
+    M296, M475, M515.
+  - Program total 9,785,184.

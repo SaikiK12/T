@@ -57,8 +57,10 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (204)
+## Other registered rounds (done, registered or planned) (206)
 
+- **[xvwknd_v1](xvwknd_v1/)** R466, DONE PENDING, 10 trials. M524 trade.xyz vs Lighter Sunday gap on the same US stock as a hedged pair: sell the dearer venue at Sun 19:00 ET (fresh last trades in the prior hour on both), close Mon 10:00 ET (decision, |G| >= 25 bp) or Sun 22:00; 50 markets, A = 18 weekends decides, B = 6 confirms; unit 9.8 bp ([PREREG](xvwknd_v1/PREREG.md), [FINDINGS](xvwknd_v1/FINDINGS.md))
+- **[ltwknd_v1](ltwknd_v1/)** R465, DONE PARTIAL, 32 trials. M515 R462's frozen weekend fade on Lighter's US-stock perps at zero fee: fade W (Fri 20:00 to Sun 19:00 ET, last trades with volume) to Sun 22:00 ET, |W| >= 50 bp, the 50 of R462's markets Lighter lists; A = R462's 18 weekends decides, B = 6 confirms, C = 8 unseen weekends (Feb-Apr 2026) confirms when sized; weekend-cluster sign-flip; unit 4 bp ([PREREG](ltwknd_v1/PREREG.md), [FINDINGS](ltwknd_v1/FINDINGS.md))
 - **[xyzns_wknd_v1](xyzns_wknd_v1/)** R464, DONE NULL, 40 trials. M520 R462's weekend fade on trade.xyz index, commodity and FX perps (SP500, XYZ100, GOLD, SILVER, PLATINUM, PALLADIUM, COPPER, CL, BRENTOIL, NATGAS, HO, EUR, GBP, JPY): fade the Friday-close to reopen-1h move to reopen+2h; A = 18 weekends from 2026-05-01 decides, B = 6 from 2026-10-02 confirms; weekend-cluster sign-flip, Holm over 2; growth-mode unit 5.8 bp, GOLD 22 bp ([PREREG](xyzns_wknd_v1/PREREG.md), [FINDINGS](xyzns_wknd_v1/FINDINGS.md))
 - **[xyzwknd_v1](xyzwknd_v1/)** R462, DONE PARTIAL, 32 trials. M515 trade.xyz (Hyperliquid HIP-3) US-stock perps over the weekend: fade the perp-only move W (Fri 20:00 to Sun 19:00 ET, last trades) to Sun 22:00 ET (D2, after the Blue Ocean overnight session resumes) or Mon 10:00 ET (D1), |W| >= 50 bp, 76 markets of the US 24/5 session; A = 18 weekends from 2026-05-01 decides, B = 6 weekends from 2026-10-02 confirms; weekend-cluster sign-flip, Holm over 2; growth-mode unit 5.8 bp ([PREREG](xyzwknd_v1/PREREG.md), [FINDINGS](xyzwknd_v1/FINDINGS.md))
 - **[earnperp_v1](earnperp_v1/)** R461, DONE NULL, 32 trials. M513 earnings on 24/7 stock perps: 8-K Item 2.02 filings (EDGAR acceptance) after the close (amc) or before the open (bmo); first move from the last cash close to the filing hour + 1 h on MEXC hourly stock perps, followed to the next open + 30 min (D2) and the next close (D1) for amc; sample A < 2026-10-21 decides, sample B (Q3 season, fetched after the freeze) confirms; cluster sign-flip test by next-session day, Holm over 2; 30 bp xyz round trip ([PREREG](earnperp_v1/PREREG.md), [FINDINGS](earnperp_v1/FINDINGS.md))
@@ -283,11 +285,9 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (3)
+## Unregistered folders (1)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
 
 - **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.
-- **[ltwknd_v1](ltwknd_v1/)** No registry row; scope unclassified.
-- **[xvwknd_v1](xvwknd_v1/)** No registry row; scope unclassified.

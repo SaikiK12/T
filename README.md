@@ -200,7 +200,11 @@ for active writers. Dated proposals, audits and source notes below retain histor
   2026-11-13, at recorded fees and book costs, with point-in-time tickets that walk the live book
   ([lane](experiments/xyzwknd_fwd/README.md)). R464 found that the fade does not carry over to trade.xyz's index,
   commodity and FX perps (NULL; [findings](experiments/xyzns_wknd_v1/FINDINGS.md), idea wave 6
-  [intake](research/intake/idea_wave6_20261111.md)).
+  [intake](research/intake/idea_wave6_20261111.md)). R465 replicates the stock-perp fade on Lighter at zero fee
+  (A +45 bp, B +36 bp; the unseen February-April weekends gave it back only on Monday morning; PARTIAL,
+  [findings](experiments/ltwknd_v1/FINDINGS.md)). R466 found the xyz-versus-Lighter Sunday gap too small to trade
+  (INCONCLUSIVE, [findings](experiments/xvwknd_v1/FINDINGS.md), idea wave 7
+  [intake](research/intake/idea_wave7_20261111.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

@@ -1,0 +1,45 @@
+{
+ "registry": "R466",
+ "state": "INCONCLUSIVE",
+ "text": "A below its sample sizes",
+ "cells": 10,
+ "skipped": {
+  "no_file": 0,
+  "not_listed": 405,
+  "pre_ipo": 0,
+  "unpriced": 96
+ },
+ "decision": {
+  "theta": 25,
+  "exit": "x2",
+  "decision": true,
+  "n_a": 55,
+  "wk_a": 17,
+  "mean_a": 50.1269472155,
+  "sd_a": 75.4383707068,
+  "hit_a": 0.8363636364,
+  "gap_a": 50.1450676693,
+  "unit_a": 11.2727272727,
+  "mde80_a": 28.4819019268,
+  "p_a": 0.0003299984,
+  "n_b": 20,
+  "wk_b": 6,
+  "mean_b": -34.5143953846,
+  "sd_b": 296.671361645,
+  "hit_b": 0.75,
+  "gap_b": 3448.1721825802,
+  "unit_b": 12.23,
+  "mde80_b": 185.7456528524,
+  "p_b": 0.6257068715,
+  "net_1x_a": 38.8542199428,
+  "net_2x_a": 27.5814926701,
+  "net_3x_a": 16.3087653973
+ },
+ "persistence": {
+  "n": 33,
+  "corr": 0.24560899599402375,
+  "n_same": 7,
+  "mean_same": 24.07867147503773,
+  "mean_other": 46.55971736938292
+ }
+}

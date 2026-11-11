@@ -475,3 +475,13 @@ IW6-OVERNIGHT-DRIFT,"Overnight versus intraday drift, 2021-2025 update",null,M49
 IW6-INDEX-RECON,Russell reconstitution and index effective dates,context,CONTEXT,M519,low,One event a year for few perp names,research/intake/idea_wave6_20261111.md
 IW6-OPEX-WITCHING,Option-expiry week and triple witching in US equities,context,CONTEXT,,low,About 14-20 events; snippets only,research/intake/idea_wave6_20261111.md
 IW6-BUYBACK-BLACKOUT,Corporate buyback blackout windows,context,CONTEXT,,low,"No strong link found (Alpha Architect, snippet)",research/intake/idea_wave6_20261111.md
+IW7-XVENUE-STOCK-GAP,"trade.xyz vs Lighter Sunday gap on the same stock, traded as a hedged pair",partial,M524,M515;M443,high,"Tested as R466, INCONCLUSIVE (gaps small; closure looks like last-trade bounce)",research/intake/idea_wave7_20261111.md
+IW7-CME-GAP,Bitcoin CME weekend gap fill,context,CONTEXT,M198,low,CME crypto 24/7 since 2026-05-29; blog study (427 weekends) shows no edge over a random level,research/intake/idea_wave7_20261111.md
+IW7-PREIPO-PREMIUM,Pre-IPO perp premium at the IPO conversion,untested,M296,,low,3-5 documented conversions; about 70 needed,research/intake/idea_wave7_20261111.md
+IW7-HOLIDAY-CLOSURE,US weekday-closure gap fade on 24/7 stock perps,untested,M525,M515,low,About 9 full closures a year; pooled observation only,research/intake/idea_wave7_20261111.md
+IW7-SPLIT-FLATTEN,Flatten stock perps before split ex-dates,context,CONTEXT,M515,low,Risk control; Lighter delists and settles split markets,research/intake/idea_wave7_20261111.md
+IW7-DIVIDEND-FUNDING,Dividend paid through funding on Bitget/Kraken stock perps,context,CONTEXT,,low,Payment offset by the ex-date drop; Bitget access from France unchecked,research/intake/idea_wave7_20261111.md
+IW7-VENUE-COSTS,Lowest all-in cost for a $10k account reachable from France,partial,M475,,medium,Lighter Standard 0/0 is the floor; no maker rebate reachable at $1M a month,research/intake/idea_wave7_20261111.md
+IW7-PERP-SPOT-PAPER,"Perp-spot arbitrage Sharpe (He, Manela, Ross, von Wachter)",context,CONTEXT,,low,CEX funding carry; the lab's carry lanes measure this family,research/intake/idea_wave7_20261111.md
+IW7-TRADER-IDENTITY,Public DEX trader identity predicts one-second returns (Zhai),context,CONTEXT,,low,One-second horizon; not tradable at our latency,research/intake/idea_wave7_20261111.md
+IW7-ORACLE-SESSIONS,Stock-perp oracle sessions (xyz Sunday 20:05 ET; Lighter on Pyth Pro),partial,M515,M524,high,Both venues probably resume with the Blue Ocean session; supports reading X1 after it,research/intake/idea_wave7_20261111.md

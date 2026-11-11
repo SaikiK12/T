@@ -17054,6 +17054,262 @@
         }
       ],
       "evidence_refs": []
+    },
+    {
+      "id": "IW7-XVENUE-STOCK-GAP",
+      "parent_claim_id": "IW7-20261111",
+      "title": "trade.xyz vs Lighter Sunday gap on the same stock, traded as a hedged pair",
+      "method_type": "source_refinement",
+      "hypothesis": "trade.xyz vs Lighter Sunday gap on the same stock, traded as a hedged pair (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M524; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R466 xvwknd_v1: gap pair at Sunday 19:00 New York, exit Monday 10:00, 50 markets, May-Nov 2026; PARTIAL.",
+      "unrun_scope": "Measured book costs and fresh weekends.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M524."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M524.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/xvwknd_v1/FINDINGS.md",
+          "label": "R466 FINDINGS"
+        }
+      ]
+    },
+    {
+      "id": "IW7-CME-GAP",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Bitcoin CME weekend gap fill",
+      "method_type": "source_refinement",
+      "hypothesis": "Bitcoin CME weekend gap fill (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-PREIPO-PREMIUM",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Pre-IPO perp premium at the IPO conversion",
+      "method_type": "source_refinement",
+      "hypothesis": "Pre-IPO perp premium at the IPO conversion (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M296; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M296."
+      ],
+      "blockers": [
+        "The queue row M296 states what is missing."
+      ],
+      "next_action": "Follow live queue row M296.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-HOLIDAY-CLOSURE",
+      "parent_claim_id": "IW7-20261111",
+      "title": "US weekday-closure gap fade on 24/7 stock perps",
+      "method_type": "source_refinement",
+      "hypothesis": "US weekday-closure gap fade on 24/7 stock perps (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M525; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M525."
+      ],
+      "blockers": [
+        "The queue row M525 states what is missing."
+      ],
+      "next_action": "Follow live queue row M525.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-SPLIT-FLATTEN",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Flatten stock perps before split ex-dates",
+      "method_type": "source_refinement",
+      "hypothesis": "Flatten stock perps before split ex-dates (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-DIVIDEND-FUNDING",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Dividend paid through funding on Bitget/Kraken stock perps",
+      "method_type": "source_refinement",
+      "hypothesis": "Dividend paid through funding on Bitget/Kraken stock perps (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-VENUE-COSTS",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Lowest all-in cost for a $10k account reachable from France",
+      "method_type": "source_refinement",
+      "hypothesis": "Lowest all-in cost for a $10k account reachable from France (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M475; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M475."
+      ],
+      "blockers": [
+        "The queue row M475 states what is missing."
+      ],
+      "next_action": "Follow live queue row M475.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-PERP-SPOT-PAPER",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Perp-spot arbitrage Sharpe (He, Manela, Ross, von Wachter)",
+      "method_type": "source_refinement",
+      "hypothesis": "Perp-spot arbitrage Sharpe (He, Manela, Ross, von Wachter) (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-TRADER-IDENTITY",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Public DEX trader identity predicts one-second returns (Zhai)",
+      "method_type": "source_refinement",
+      "hypothesis": "Public DEX trader identity predicts one-second returns (Zhai) (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "IW7-ORACLE-SESSIONS",
+      "parent_claim_id": "IW7-20261111",
+      "title": "Stock-perp oracle sessions (xyz Sunday 20:05 ET; Lighter on Pyth Pro)",
+      "method_type": "source_refinement",
+      "hypothesis": "Stock-perp oracle sessions (xyz Sunday 20:05 ET; Lighter on Pyth Pro) (idea wave 7 lens report; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M515; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "R462 gate-0 PASS on xyz; R465 on Lighter (see its FINDINGS); forward R463 running.",
+      "unrun_scope": "Measured book costs and fresh weekends.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M515."
+      ],
+      "blockers": [],
+      "next_action": "Follow live queue row M515.",
+      "source_refs": [
+        {
+          "path": "research/intake/idea_wave7_20261111.md",
+          "label": "Idea wave 7 intake, 2026-11-11"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "experiments/ltwknd_v1/FINDINGS.md",
+          "label": "R465 FINDINGS"
+        }
+      ]
     }
   ],
   "sources": [
@@ -21495,6 +21751,32 @@
       "source_version_path": "research/intake/idea_wave6_20261111.md",
       "source_version_sha256": "df9f015d220c0dfc23860eca05aa878c09dfce494a9b8baf626fea30332cc422",
       "strategy_trials_added": 40,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 1
+    },
+    {
+      "intake_id": "idea_wave7_20261111",
+      "records_added": [
+        "IW7-XVENUE-STOCK-GAP",
+        "IW7-CME-GAP",
+        "IW7-PREIPO-PREMIUM",
+        "IW7-HOLIDAY-CLOSURE",
+        "IW7-SPLIT-FLATTEN",
+        "IW7-DIVIDEND-FUNDING",
+        "IW7-VENUE-COSTS",
+        "IW7-PERP-SPOT-PAPER",
+        "IW7-TRADER-IDENTITY",
+        "IW7-ORACLE-SESSIONS"
+      ],
+      "base_method_objects_before": 476,
+      "method_objects_after": 486,
+      "source_records_added": [],
+      "source_catalog_paths": [],
+      "received_scope": "Six Haiku lens reports (2026-11-11), bounded web reads; author re-checks marked [A] (trade.xyz and Lighter llms-full.txt, Lighter market-specifications oracle column, CME 24/7 search). No complete-corpus claim.",
+      "reconciliation": "Live queue: new M524 (R466) and M525 (UNTESTED); notes added to M515, M296 and M475; the rest map to CONTEXT.",
+      "source_version_path": "research/intake/idea_wave7_20261111.md",
+      "source_version_sha256": "137d39beeaed74430840c6aa7324a708c308ce6e6a2797eb0448719421155d58",
+      "strategy_trials_added": 10,
       "prospective_days_added": 0,
       "market_outcomes_added": 1
     }
