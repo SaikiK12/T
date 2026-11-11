@@ -1,37 +1,37 @@
 {
- "last_scored_hour": "2026-11-06T12:00:00+00:00",
- "days_ticketed": 36,
+ "last_scored_hour": "2026-11-10T23:00:00+00:00",
+ "days_ticketed": 41,
  "BIN": {
   "coverage": {
    "symbols": 69,
    "with_spot_pair": 35
   },
   "held_now": [],
-  "market_mean_apr_now": 0.07845487526179985,
+  "market_mean_apr_now": 0.01765653384676209,
   "top_apr_now": [
    {
-    "symbol": "SOXLUSDT",
-    "apr": 0.6263229622224269,
+    "symbol": "JCTUSDT",
+    "apr": 2.944399010708973,
     "spot": false
    },
    {
-    "symbol": "KORUUSDT",
-    "apr": 0.38914961508150253,
+    "symbol": "AGTUSDT",
+    "apr": 0.4886206333503651,
     "spot": false
    },
    {
-    "symbol": "MUUSDT",
-    "apr": 0.36240606418535515,
+    "symbol": "SOXSUSDT",
+    "apr": 0.4772241233422392,
     "spot": false
    },
    {
-    "symbol": "SNDKUSDT",
-    "apr": 0.350760139705623,
+    "symbol": "SKHYNIXUSDT",
+    "apr": 0.3279147930637313,
     "spot": false
    },
    {
-    "symbol": "SNXXUSDT",
-    "apr": 0.3135654115006522,
+    "symbol": "SAMSUNGUSDT",
+    "apr": 0.1646296126394494,
     "spot": false
    }
   ],
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 17,
+   "days": 22,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -74,38 +74,38 @@
   "held_now": [
    {
     "symbol": "AGTUSDT",
-    "apr": 0.29966500097240595
+    "apr": 0.498346660539634
    },
    {
     "symbol": "JCTUSDT",
-    "apr": 0.2733849991576184
+    "apr": 2.9496866494264395
    }
   ],
-  "market_mean_apr_now": 0.038905254605386595,
+  "market_mean_apr_now": 0.13447910052750794,
   "top_apr_now": [
    {
-    "symbol": "AGTUSDT",
-    "apr": 0.29966500097240595,
+    "symbol": "JCTUSDT",
+    "apr": 2.9496866494264395,
     "spot": true
    },
    {
-    "symbol": "JCTUSDT",
-    "apr": 0.2733849991576184,
+    "symbol": "AGTUSDT",
+    "apr": 0.498346660539634,
+    "spot": true
+   },
+   {
+    "symbol": "QUSDT",
+    "apr": 0.11850333051673564,
+    "spot": true
+   },
+   {
+    "symbol": "IRYSUSDT",
+    "apr": 0.10949999723379733,
     "spot": true
    },
    {
     "symbol": "1000PEPEUSDT",
-    "apr": 0.13468499912050902,
-    "spot": true
-   },
-   {
-    "symbol": "XRPUSDT",
-    "apr": 0.10949999723379733,
-    "spot": true
-   },
-   {
-    "symbol": "NEARUSDT",
-    "apr": 0.10949999723379733,
+    "apr": 0.10487666410578338,
     "spot": true
    }
   ],
@@ -139,28 +139,28 @@
    }
   },
   "ontime": {
-   "days": 17,
-   "days_invested": 9,
-   "total": -0.0009630608415733228,
-   "total_2x": -0.0020430608294472667,
-   "total_3x": -0.0031230608173215147,
-   "total_spot5": -0.000663060841573363,
-   "total_r191_timing": -0.00028759546873112696,
-   "funding": -0.0009539000203406064,
-   "basis": 0.0010708391666409572,
+   "days": 22,
+   "days_invested": 14,
+   "total": 0.0019599872201381935,
+   "total_2x": 0.0008799872322642495,
+   "total_3x": -0.00020001275560999846,
+   "total_spot5": 0.002259987220138153,
+   "total_r191_timing": 0.0026354525929803896,
+   "funding": 0.0024120999590190933,
+   "basis": 0.0006278872489926572,
    "cost": 0.001079999987874,
-   "avg_open": 0.7745098039215685,
+   "avg_open": 1.053030303030303,
    "go_real_invested": {
-    "n": 9,
-    "mean": -0.00010700676017481365,
-    "hit": 0.6666666666666666,
+    "n": 14,
+    "mean": 0.00013999908715272812,
+    "hit": 0.6428571428571429,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
     "checks": {
      "finite_returns": true,
      "enough_scored": false,
-     "mean_positive": false,
+     "mean_positive": true,
      "hit_rate": true,
      "no_tail_event": true
     },
