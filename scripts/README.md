@@ -118,7 +118,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (182)
+## Run: one lane's frozen measurement (183)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -283,6 +283,7 @@ line is the first line of the script's own docstring.
 - [`run_tsmom.py`](run_tsmom.py): tsmom_v1 (R237): cross-asset time-series momentum on equity ETFs, FX, metals and bond futures, as set out in experiments/tsmom_v1/PREREG.md.
 - [`run_unlocks.py`](run_unlocks.py): unlocks_v1 (R265): the old session's unlock short (E01, S1) on 2021-26 Binance perps, as set out in experiments/unlocks_v1/PREREG.md.
 - [`run_usindex_calendar.py`](run_usindex_calendar.py): usindex_calendar_v1 (R235): turn-of-month and overnight drift on SPY and QQQ, as alpha against buy-and-hold of the same ETF, as set out in experiments/usindex_calendar_v1/PREREG.md.
+- [`run_usopen_dex.py`](run_usopen_dex.py): usopen_dex_fwd (R457): R371's US-open picks traded on Lighter (book L, decides) and Hyperliquid (book H, reported), the two perp venues the lab found open to a French resident, at each venue's own ...
 - [`run_venue_gap.py`](run_venue_gap.py): venue_gap_v1 (R216): the flow books' PnL split into crypto and TradFi contracts, in the archive and on the forward replay, as set out in experiments/venue_gap_v1/PREREG.md.
 - [`run_vixpanic.py`](run_vixpanic.py): vixpanic_v1 (R283): long SPY, QQQ and the BTCUSDT perp after VIX-panic onsets (VIX above VIX3M, VVIX in its top 5%, or both), tested against random dates, as set out in ...
 - [`run_volrisk.py`](run_volrisk.py): volrisk_v1 (R241): SVXY in VIX contango, SVXY in contango with calm VIX, and R239's VIXREV-QQQ on 2013-2026, as set out in experiments/volrisk_v1/PREREG.md.

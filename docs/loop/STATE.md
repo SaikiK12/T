@@ -314,3 +314,8 @@ waiting, and pick tests from our own measurements first.
   measured costs: Hyperliquid 4.5 bp + $1k slippage from `main/books/`, Lighter 0 fee + $1k slippage from
   `lighter/books/` (nearest snapshot within 90 minutes, else 9 bp); stops if its 9 bp recomputation differs from a
   parent's tickets. EXECUTABLE AT MEASURED COSTS at 365 counted days only if the parent passed. Weekly reads.
+- **2026-11-11, R457 usopen_dex_fwd frozen `dee511b4` (2 trials, program 9,785,005).** R371's US-open picks
+  (C17) traded where a French resident can: R371's 50-name table filtered to the names each venue lists, R371's
+  pick, one-minute fills 3 minutes after each clock, venue funding, fee + $1k book cost from the nearest
+  snapshot. Book L on Lighter (0 fee) decides at R371's 125/500 scored days; book H on Hyperliquid main + xyz is
+  reported. Forward from 2026-11-12, daily in `claude-usopen-dex.yml`.
