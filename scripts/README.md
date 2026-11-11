@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (41)
+## Fetch: download archives and public history (42)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -48,6 +48,7 @@ line is the first line of the script's own docstring.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
 - [`fetch_usdt_mints.py`](fetch_usdt_mints.py): Tether USDT mints (the token contract's Issue events) on Tron and Ethereum, from free public APIs, for R460.
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
+- [`fetch_xvfund.py`](fetch_xvfund.py): Inputs for R470 xvfund_v1 (cross-venue funding carry on the same US stock perp, trade.xyz against Lighter).
 - [`fetch_xyz_ns.py`](fetch_xyz_ns.py): Inputs for R464 xyzns_wknd_v1 (trade.xyz index, commodity and FX perps over the weekend).
 - [`fetch_xyz_wknd.py`](fetch_xyz_wknd.py): Inputs for R462 xyzwknd_v1 (trade.xyz US-equity perps over the weekend).
 
@@ -125,7 +126,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (195)
+## Run: one lane's frozen measurement (196)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -318,6 +319,7 @@ line is the first line of the script's own docstring.
 - [`run_xsalt.py`](run_xsalt.py): xsalt_v1 (R222): slow altcoin cross-sections (low beta, residual momentum, MAX, premium net of funding), as set out in experiments/xsalt_v1/PREREG.md.
 - [`run_xsbattery.py`](run_xsbattery.py): xsbattery_v1 (R238): eight cross-sectional features as one-week spread books, as set out in experiments/xsbattery_v1/PREREG.md.
 - [`run_xsrev.py`](run_xsrev.py): xsrev_v1 (R245): 1-day and 7-day reversal books inside the most and least liquid terciles of the top-50, as set out in experiments/xsrev_v1/PREREG.md.
+- [`run_xvfund.py`](run_xvfund.py): R470 xvfund_v1, frozen in experiments/xvfund_v1/PREREG.md: cross-venue funding carry on the same US stock perp, trade.xyz (Hyperliquid HIP-3) against Lighter.
 - [`run_xvwknd.py`](run_xvwknd.py): R466 xvwknd_v1 runner, frozen in experiments/xvwknd_v1/PREREG.md: the Sunday-evening gap between trade.xyz's and Lighter's perp on the same US stock, traded as a pair (sell the dearer venue, buy ...
 - [`run_xyzns.py`](run_xyzns.py): R464 xyzns_wknd_v1 runner, frozen in experiments/xyzns_wknd_v1/PREREG.md: fade the weekend move of trade.xyz index, commodity and FX perps (Hyperliquid HIP-3) from an hour before their reference ...
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
