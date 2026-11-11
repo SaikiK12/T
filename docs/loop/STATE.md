@@ -330,3 +330,14 @@ waiting, and pick tests from our own measurements first.
   $1k `lighter/books/` cost charged. Futility at 15 traded weekends, final at 40. Daily in `claude-oilwknd.yml`.
   Lighter's candles return at most 500 bars (the last of the range), so the runner asks three short ranges; R457's
   windows are under 70 minutes and unaffected.
+- **2026-11-11, three quick checks; no lane (configuration and size only, no return series read).**
+  - **HLP/LLP competitors with no history yet read:** Paradex's largest active vault holds about $2.4M (the next
+    ones under $0.2M); Extended's vault holds about $52M at a seen last-30-day APR of 8.28%, below HLP and LLP.
+    Neither publishes a share-price history found by the author. Details: `research/intake/perp_vaults_20261111.md`.
+  - **Hyperliquid's HIP-3 dexes:** 10 listed; on 2026-11-11 only xyz (122), para (33), io (15) and mkts (1) had live
+    markets. 21 underlyings trade on two dexes, mostly small single stocks: too thin for a cross-dex funding book.
+  - **Lighter vs xyz on the same stocks:** Lighter's `orderBookDetails` gives each market's funding settings. Its
+    TradFi perps use an interest component of 0.0032 (per 8 h, in %) with a premium multiplier of 50, against 0.0100
+    and 100 on crypto. That is a baseline of about 3.5%/yr, against xyz's about 5.5% (multiplier 0.5). The structural
+    spread is about 2%/yr of notional, under the 4% hurdle at any safe leverage, so no lane. M073 (a resting bid
+    ladder in cascades, the depositor's route to HLP's liquidation income) is already a trap at -0.84% per rung.

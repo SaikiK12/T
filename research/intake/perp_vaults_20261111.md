@@ -43,8 +43,8 @@ and R452 (`experiments/litpoolsel_v1`). It is not evidence of a return.
 | Vault | Mechanism | Lockup / withdrawal | Public history | France in its terms |
 |---|---|---|---|---|
 | dYdX MegaVault | AMM market making across pairs [V] | On demand, slippage possible; future lockups flagged [V] | **Yes [A]:** `indexer.dydx.trade/v4/vault/v1/megavault/historicalPnl` (equity, totalPnl, netTransfers): 85 daily points from 2026-08-14, or 168 hourly points with `?resolution=hour` | Help center bars the US, Canada, UK, sanctioned countries; France not named [V] |
-| Paradex vaults | 1,659 vaults listed (7 protocol, "DIME" strategies) [V] | About 5 minutes after deposit, plus per-vault lockup [V] | No: per-vault endpoints return 401 [V] | [U] (terms 404) |
-| Extended (x10) | Market making and liquidations, 50% of net fees [V] | 24 h lockup per deposit; withdrawer bears price impact [V] | No endpoint found [U] | [U] (403) |
+| Paradex vaults | 1,659 vaults listed (7 protocol, "DIME" strategies) [V] | About 5 minutes after deposit, plus per-vault lockup of 1-4 days [A] | Summary only [A]: `/v1/vaults/summary` (tvl, roi 24h/7d/30d, total); no history endpoint probed | [U] (terms 404) |
+| Extended (x10) | Market making and liquidations, 50% of net fees [V] | 24 h lockup per deposit; withdrawer bears price impact [V] | Summary only [A]: `api.starknet.extended.exchange/api/v1/vault/public/summary` | [U] (403) |
 | edgeX eLP | Market making, liquidations, fees [S] | 48 h after request [S] | Not probed | Mirror terms bar US and Canada; France not named [V, mirror only] |
 | Aster ALP | NAV pool, counterparty [V] | 48 h burn lock [S] | No ALP endpoint [V] | [U] |
 | Drift insurance fund | Staked backstop, all revenue to stakers [V] | 13-day cooldown, 90% utilization gate [V] | API unreachable (502) | [U] |
@@ -57,6 +57,13 @@ and R452 (`experiments/litpoolsel_v1`). It is not evidence of a return.
 - **dYdX MegaVault's size [A]:** equity about $1.9M on 2026-11-11, against about $1.7M on 2026-08-14. The author saw
   its totalPnl move over those 89 days while probing the endpoint. That is a rough level, not a registered read: it
   is in the high single digits a year, below HLP and LLP in 2026 (R446). Any MegaVault lane lists it as seen.
+- **Paradex and Extended, probed by the author later on 2026-11-11 [A]:**
+  - Paradex `/v1/vaults/config`: profit share at most 20%, lockup 1-4 days, minimum deposit 100. The largest active
+    vault is a protocol options strategy ("DIME Volatility Premium Income", about $2.4M); the next ones hold under
+    $0.2M. Too small to compete with HLP or LLP for a depositor; no Paradex lane.
+  - Extended's vault: equity about $52M, 14,825 depositors, 581 days old, profit share 0. Its own summary shows a
+    last-30-day APR of 8.28% (plus "maxExtraApr" 6.12%, a points-style boost). That one figure was seen while probing;
+    it is a month, not a record, and it is below HLP and LLP in 2026 (R446). No history endpoint was found; no lane.
 - **APRs:** none of the competitors' published APRs was verified as current. All are [S] and undated.
 
 ## Lighter's public pools (checked by the author)
