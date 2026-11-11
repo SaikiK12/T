@@ -290,3 +290,11 @@ waiting, and pick tests from our own measurements first.
   nowhere. `scripts/record_hlp_positions.py` (in `claude-xyz-books.yml`, hourly, `hlp/` on `claude/xyz-books-data`)
   records every child vault's positions and every main-dex perp's open interest and funding. A forward PREREG is
   frozen before any snapshot value is read.
+- **2026-11-11, R454 hlpinv_v1 (M510) frozen `9df27190` before any HLP value was read.** Each hourly snapshot ranks
+  the main-dex perps by HLP's net size over open interest. Book F shorts the eighth where HLP is most net short (the
+  crowd long against HLP, the analogue of R197's crowd cells); book R the opposite. 72 h slices, universe hedge,
+  9 bp a trade. Counted from 2026-11-15; futility screen at 90 days, decision at 365 against 1,000 random-bin
+  placebo books. Two trials (program 9,785,001). Weekly in `claude-xperp-reads.yml`.
+- **2026-11-11, R220 on GitHub:** MEXC refused R220's request burst by IP (code 510), so it wrote nothing after
+  2026-11-05. `scripts/run_paced_mexc.py` paces MEXC requests and retries 510s around the unchanged script; run
+  42942661403 wrote its tickets through 2026-11-10 (`experiments/carry_fwd/DEVIATIONS.md`).

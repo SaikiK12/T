@@ -39,7 +39,7 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-hlvaults-recorder.yml` | Sundays 09:13 | data branch `claude/hl-vaults-data`: every Hyperliquid vault, closed ones included, and each vault's allTime account value and pnl (M507) |
 | `claude-okx-recorder.yml` | 02:37 and 14:37 | data branch `claude/okx-xperp-data`: OKX Europe X-Perps; Hyperliquid perps matching them under `hl/`; Hyperliquid HYPE and Unit spot pairs with their perps under `hl_spot/`; Hyperliquid's HLP and Lighter's LLP vaults under `vaults/`; Lighter's LIT perp funding and LIT candles under `lit/` |
 | `claude-xyz-books.yml` | hourly at :07 | data branch `claude/xyz-books-data`: spread, depth and the cost of a $1k-$25k market order on every trade.xyz (HIP-3) market, with fee settings by day; for measured costs on R451's tickets. Also `hlp/`: HLP's child-vault positions and every main-dex perp's context (M510) |
-| `claude-xperp-reads.yml` | Mondays 04:23 | R453 (R451's books at measured xyz costs) and status reads of R441-R447, and the frozen decisions of R441, R443, R445, R446 and R447 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
+| `claude-xperp-reads.yml` | Mondays 04:23 | R453 (R451's books at measured xyz costs), R454's tickets (HLP inventory books) and status reads of R441-R447, and the frozen decisions of R441, R443, R445, R446 and R447 after 2027-02-08 and 2027-05-09 (R442 and R444 stopped at gate 0) |
 
 - **Check them:** the repository's Actions tab. A red run names the lane that failed; the others still ran.
 - **Stop one:** disable that workflow in the Actions tab. Never run the same lane by hand while its workflow is on.

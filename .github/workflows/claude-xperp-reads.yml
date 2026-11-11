@@ -6,8 +6,10 @@ name: OKX X-Perp lane reads (Claude)
 # look date has passed (--until the look date, written once to results/look90 or results/look180). R442 and R444
 # stopped at gate 0 (NULL), so they get status reads only. Also R453 (scripts/run_flow_hlstock_mc.py): R451's books
 # re-priced at the costs recorded on claude/xyz-books-data; its 90- and 365-day decisions follow R451's own counted
-# days, so each weekly read writes the status and, once reached, the decision (results/forward).
-# Single writer of these lanes' results folders. Paper only.
+# days, so each weekly read writes the status and, once reached, the decision (results/forward). Also R454
+# (scripts/run_hlpinv.py): HLP's inventory books on the hlp/ snapshots of the same branch; each weekly read appends
+# the complete days' tickets to its journal and fetches Hyperliquid's hourly closes and funding into journal/hl/.
+# Single writer of these lanes' results folders and of R454's journal. Paper only.
 on:
   schedule:
     - cron: '23 4 * * 1'
@@ -21,7 +23,7 @@ jobs:
   read:
     if: github.repository == 'SaikiK12/T'
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout the default branch
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -80,6 +82,10 @@ jobs:
           if [ -f experiments/flow_hlstock_mc_v1/PREREG.sha256 ]; then
             .venv/bin/python scripts/run_flow_hlstock_mc.py --books .xyz-data | tail -n 20 || fail=1
           fi
+          echo "== hlpinv_v1 (R454)"
+          if [ -f experiments/hlpinv_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_hlpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
           exit $fail
       - name: Commit the reads
         if: always() && steps.reads.outcome != 'skipped'
@@ -92,6 +98,7 @@ jobs:
           for lane in $lanes; do
             if [ -d "experiments/$lane/results" ]; then git add -A "experiments/$lane/results"; fi
           done
+          if [ -d experiments/hlpinv_v1/journal ]; then git add -A experiments/hlpinv_v1/journal; fi
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -q -m "X-Perp, Hyperliquid and vault lane weekly reads ${GITHUB_RUN_ID}"
           br="${{ github.event.repository.default_branch }}"
