@@ -10,7 +10,9 @@ name: OKX X-Perp lane reads (Claude)
 # (scripts/run_hlpinv.py): HLP's inventory books on the hlp/ snapshots of the same branch; each weekly read appends
 # the complete days' tickets to its journal and fetches Hyperliquid's hourly closes and funding into journal/hl/.
 # Also R455 (scripts/run_llpinv.py): R454's rule on Lighter LLP's llp/ snapshots, with Lighter's closes and funding in
-# journal/px/. Single writer of these lanes' results folders and of R454's and R455's journals. Paper only.
+# journal/px/. Also R456 (scripts/run_invcost.py): R454's and R455's books at the book costs recorded on the same
+# branch (main/, lighter/). Single writer of these lanes' results folders and of R454's and R455's journals. Paper
+# only.
 on:
   schedule:
     - cron: '23 4 * * 1'
@@ -91,6 +93,10 @@ jobs:
           if [ -f experiments/llpinv_v1/PREREG.sha256 ]; then
             .venv/bin/python scripts/run_llpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
           fi
+          echo "== invcost_v1 (R456)"
+          if [ -f experiments/invcost_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_invcost.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
           exit $fail
       - name: Commit the reads
         if: always() && steps.reads.outcome != 'skipped'
@@ -99,7 +105,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           lanes="xperp_carry_v1 xperp_stock_v1 xperp_hl_v1 hlspot_carry_v1 hlspot_pm_v1 dexvault_v1 llpstake_v1"
-          lanes="$lanes flow_hlstock_mc_v1"
+          lanes="$lanes flow_hlstock_mc_v1 invcost_v1"
           for lane in $lanes; do
             if [ -d "experiments/$lane/results" ]; then git add -A "experiments/$lane/results"; fi
           done

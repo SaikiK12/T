@@ -310,3 +310,7 @@ waiting, and pick tests from our own measurements first.
 - **2026-11-11, Lighter book costs recorded hourly on GitHub.** `scripts/record_lighter_costs.py` (stdlib, the
   arithmetic of `record_lighter_book.py`) writes the cost of a $1k and $10k market order on every active Lighter perp
   to `lighter/books/` on `claude/xyz-books-data`, for a measured-cost read of R455 frozen before any cost is read.
+- **2026-11-11, R456 invcost_v1 frozen `ececc01b` (0 trials).** R454's and R455's books recomputed unchanged at
+  measured costs: Hyperliquid 4.5 bp + $1k slippage from `main/books/`, Lighter 0 fee + $1k slippage from
+  `lighter/books/` (nearest snapshot within 90 minutes, else 9 bp); stops if its 9 bp recomputation differs from a
+  parent's tickets. EXECUTABLE AT MEASURED COSTS at 365 counted days only if the parent passed. Weekly reads.
