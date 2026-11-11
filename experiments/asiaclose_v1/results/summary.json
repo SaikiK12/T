@@ -1,0 +1,40 @@
+{
+ "registry": "R468",
+ "state": "PASS",
+ "text": "side fade; A mean 87.8 bp p 0.0335 n 527 days 65; B mean 9.5 bp n 413 days 41",
+ "cells": 52,
+ "skipped": {
+  "no_file": 0,
+  "not_listed": 800,
+  "corporate": 2,
+  "unpriced": 191
+ },
+ "decision": {
+  "cell": "both/night/50/x1",
+  "venue": "both",
+  "kind": "night",
+  "theta": 50,
+  "exit": "x1",
+  "exchange": "all",
+  "decision": true,
+  "n_a": 527,
+  "days_a": 65,
+  "mean_a": 87.8012969395,
+  "sd_a": 492.6288209907,
+  "hit_a": 0.5654648956,
+  "unit_a": 5.0485768501,
+  "mde80_a": 60.0858957791,
+  "p_a": 0.0334998325,
+  "n_b": 413,
+  "days_b": 41,
+  "mean_b": 9.4541255248,
+  "sd_b": 304.3896188309,
+  "hit_b": 0.4987893462,
+  "unit_b": 5.1288135593,
+  "mde80_b": 41.9384950908,
+  "p_b": 0.70799646,
+  "net_1x_a": 82.7527200894,
+  "net_2x_a": 77.7041432393,
+  "net_3x_a": 72.6555663892
+ }
+}

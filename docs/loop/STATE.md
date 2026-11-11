@@ -425,3 +425,9 @@ waiting, and pick tests from our own measurements first.
   - `claude-clock.yml` now dispatches R463's and R467's tick workflows at 18:10 and 21:10 New York on Sundays
     (GitHub's crons start 40-90 minutes late). Read R463 and R467 together (weekend moves correlate at 0.96).
   - Program total 9,785,185.
+- 2026-11-11, R468 `asiaclose_v1` (M526, new): Asian single-stock perps (xyz 9, Lighter 9) across the weekday-night
+  closure of KRX, TSE, HKEX and SSE, frozen (`72983781`) before any price.
+  - Frozen verdict PASS, recorded PARTIAL: fade, A +87.8 bp (p 0.034, 65 days), B +9.5 bp (p 0.71, median -0.1).
+  - A leans on the Hong Kong AI listings (ZHIPU, MINIMAX); KRX A +54.5 (p 0.12), B -13; TSE negative.
+  - Post hoc: W lagged 1 h gives A +94.8 (p 0.015, not entry bounce), B -1.3. Same decay as R465's C.
+  - Program total 9,785,237.

@@ -206,6 +206,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   (INCONCLUSIVE, [findings](experiments/xvwknd_v1/FINDINGS.md), idea wave 7
   [intake](research/intake/idea_wave7_20261111.md)). R467 trades R465's Lighter fade forward from 2026-11-13, at the
   recorded Lighter book cost, with live book-walk tickets ([lane](experiments/ltwknd_fwd/README.md)).
+  R468 tested the same fade on Asian single-stock perps over the home exchange's weekday-night closure
+  (xyz and Lighter): A +88 bp (p 0.03), but B +9 bp with a zero median, so the effect did not carry into
+  September-November (frozen PASS, recorded PARTIAL; [findings](experiments/asiaclose_v1/FINDINGS.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
