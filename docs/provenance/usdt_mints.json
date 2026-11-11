@@ -1,0 +1,30 @@
+{
+"folder": "data/usdt_mints",
+"source": "TronGrid events API (contract TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t, Issue, confirmed) and eth.blockscout.com logs API (0xdAC17F958D2ee523a2206206994597C13D831ec7, topic0 Issue(uint256)); 2021-01-01..2026-11-10; 6 Ethereum events re-checked on eth-mainnet.public.blastapi.io",
+"script": "scripts/fetch_usdt_mints.py",
+"recorded_utc": "2026-11-11T12:20:51Z",
+"excluded": [],
+"files": 2,
+"bytes": 29880,
+"combined_sha256": "7a255d7b1313329e4b47bc5547f8f8b5a413c73617870b0598351f470702293f",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 29880
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "events.csv",
+"bytes": 28762,
+"sha256": "5e16ac8d848db8a5d2333212bf5d3ad9bcc91fae14771814aa12807bd6c6094c"
+},
+{
+"path": "manifest.json",
+"bytes": 1118,
+"sha256": "f4dfccfc5a765543436d020d944601a6c80555a33cd95bcb6662fee8b6cd7adf"
+}
+]
+}

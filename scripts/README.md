@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (34)
+## Fetch: download archives and public history (35)
 
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -42,6 +42,7 @@ line is the first line of the script's own docstring.
 - [`fetch_tradfi_perps.py`](fetch_tradfi_perps.py): Binance USD-M TradFi perpetuals, 1-minute klines from the public archive (data.binance.vision), every file checked against its published SHA-256.
 - [`fetch_trend_daily.py`](fetch_trend_daily.py): Fetch the frozen slow_trend_v1 spot sample; never calculate market outcomes.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
+- [`fetch_usdt_mints.py`](fetch_usdt_mints.py): Tether USDT mints (the token contract's Issue events) on Tron and Ethereum, from free public APIs, for R460.
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 
 ## Record: point-in-time collectors (cannot be backfilled) (37)
@@ -118,7 +119,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (185)
+## Run: one lane's frozen measurement (186)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -284,6 +285,7 @@ line is the first line of the script's own docstring.
 - [`run_tsbattery.py`](run_tsbattery.py): tsbattery_v1 (R242): week-open bias, pre-FOMC drift, ETH/BTC regime and vol-managed trend on the top-50 perps, as set out in experiments/tsbattery_v1/PREREG.md.
 - [`run_tsmom.py`](run_tsmom.py): tsmom_v1 (R237): cross-asset time-series momentum on equity ETFs, FX, metals and bond futures, as set out in experiments/tsmom_v1/PREREG.md.
 - [`run_unlocks.py`](run_unlocks.py): unlocks_v1 (R265): the old session's unlock short (E01, S1) on 2021-26 Binance perps, as set out in experiments/unlocks_v1/PREREG.md.
+- [`run_usdtmint.py`](run_usdtmint.py): R460 usdtmint_v1 runner, frozen in experiments/usdtmint_v1/PREREG.md: does BTC (and, reported, ETH) rise after a Tether USDT mint by more than at random times and by more than a Hyperliquid taker ...
 - [`run_usindex_calendar.py`](run_usindex_calendar.py): usindex_calendar_v1 (R235): turn-of-month and overnight drift on SPY and QQQ, as alpha against buy-and-hold of the same ETF, as set out in experiments/usindex_calendar_v1/PREREG.md.
 - [`run_usopen_dex.py`](run_usopen_dex.py): usopen_dex_fwd (R457): R371's US-open picks traded on Lighter (book L, decides) and Hyperliquid (book H, reported), the two perp venues the lab found open to a French resident, at each venue's own ...
 - [`run_venue_gap.py`](run_venue_gap.py): venue_gap_v1 (R216): the flow books' PnL split into crypto and TradFi contracts, in the archive and on the forward replay, as set out in experiments/venue_gap_v1/PREREG.md.
@@ -365,7 +367,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (90)
+## Tools and everything else (91)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -453,6 +455,7 @@ line is the first line of the script's own docstring.
 - [`unlock_market_data.py`](unlock_market_data.py): Immutable public funding/mark archive acquisition and portable data bundle; no PnL.
 - [`unlocks_daily_check.py`](unlocks_daily_check.py): R258: bounded Binance daily-bar cross-check of the fixed R265 unlock events.
 - [`unlocks_funding_bounds.py`](unlocks_funding_bounds.py): R259: fixed-cohort funding bounds and necessary isolated collateral; no fills.
+- [`usdtmint_rule.py`](usdtmint_rule.py): R460 usdtmint_v1 rule, frozen in experiments/usdtmint_v1/PREREG.md: after Tether mints USDT on Tron or Ethereum (an Issue event of the token contract), does BTC rise over the next 4 or 24 hours by ...
 - [`usopen_rule.py`](usopen_rule.py): usopen_fwd (R371): R300's pick, forward.
 - [`vrpexec_rule.py`](vrpexec_rule.py): R410 vrpexec_v1 (M477): the execution rule for R409's weekly short straddle with three cost levers, as set out in experiments/vrpexec_v1/PREREG.md.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
