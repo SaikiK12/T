@@ -185,7 +185,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   days), so the TradFi part can execute from France; R200's forward decides the signal. R452 picked Lighter's
   operator pools by past record: NULL; the average pool lost 5.2%/yr after fees while LLP made +10.7%
   ([vault competitors](research/intake/perp_vaults_20261111.md)). R450 picked Hyperliquid's steadiest user vaults:
-  NULL, −23.2%/yr net (t −2.26 against the hurdle); several picks blew up in the 2025-10-10 crash.
+  NULL, −23.2%/yr net (t −2.26 against the hurdle); several picks blew up in the 2025-10-10 crash. R453 re-prices
+  R451's books at xyz's measured costs (growth-mode fee 0.9 bp plus recorded slippage), for real money equal to paper
+  ([HIP-3 venues](research/intake/hip3_venues_20261111.md): 7 of 10 HIP-3 dexes are fully delisted).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
