@@ -216,15 +216,20 @@ for active writers. Dated proposals, audits and source notes below retain histor
   R471 found that Bitcoin-linked stocks (MSTR, COIN, MARA, RIOT) open with Bitcoin's weekend move already priced
   and then neither follow nor fade it during Monday's session (slope +0.06, t 0.48; NULL,
   [findings](experiments/cryptomon_v1/FINDINGS.md), idea wave 8 [intake](research/intake/idea_wave8_20261112.md)).
-  R472 rebuilds Harvey, Mazzoleni and Melone's balanced-fund rebalancing rule on SPY/IEF closes, decided after
-  their published span at xyz SP500 + TLT cost (frozen, waiting for its data;
-  [lane](experiments/rebalfront_v1/README.md)).
+  R472 rebuilt Harvey, Mazzoleni and Melone's balanced-fund rebalancing rule on SPY/IEF closes: it earned
+  +2.7 bp a day net in their published span, but only one of their two slopes reproduces at the bar, and after
+  2023 it earns +0.05 bp a day net (NULL, [findings](experiments/rebalfront_v1/FINDINGS.md)).
   R473 found the end-of-month Treasury rally (Hartley and Schwarz) still positive on TLT after 2018 before costs
   (+24.7 bp a month, t 1.79), but only +13.0 bp (t 0.95) net of xyz's TLT perp cost, and xyz:TLT longs have paid
   about 20%/yr funding since listing (PARTIAL, no lane; [findings](experiments/tlteom_v1/FINDINGS.md)).
   R474 turns that funding into a forward paper lane: hold the UCITS 20+ year Treasury ETF (DTLA) and short
   xyz:TLT, keeping the coupons and the funding, judged against the T-bill on 2027-02-13 and 2027-05-15 (frozen;
   [lane](experiments/tltcarry_fwd/README.md)).
+  R475 shorted trade.xyz US-stock perps whose longs pay high funding and held the same stocks: +11.2 points a
+  year over the T-bill in January-July (t 2.03), but about half of it is one liquidation day on one name, and the
+  funding carry alone fell below the bill from August (frozen PASS, recorded PARTIAL;
+  [findings](experiments/hip3stock_v1/FINDINGS.md)). R476 (the same rule on the other HIP-3 deployers) and R477
+  (xyz index, ETF and metal perps hedged with London-listed twins) are frozen and fetching.
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

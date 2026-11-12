@@ -16,7 +16,7 @@ for breakthroughs at 100% of compute".
 - Haiku helpers generate ideas in between.
 - The scheduled task is an hourly safety net only.
 
-**State on 2026-11-12 05:45 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
+**State on 2026-11-12 08:15 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08;
   R474 (hedged TLT carry) futility on 2027-02-13 and final on 2027-05-15, by `claude-tltcarry.yml`.
@@ -26,10 +26,15 @@ for breakthroughs at 100% of compute".
   R471 `cryptomon_v1` (M521) NULL: Bitcoin-linked stocks open with the weekend priced and do not drift after.
   R473 `tlteom_v1` (M528) PARTIAL: the Treasury month-end rally survives on TLT before costs, but not net of
   xyz:TLT's cost and funding (longs paid about 20%/yr since listing).
-- **Open queue rows:** wave 8 (`research/intake/idea_wave8_20261112.md`, owner: no shelving without web research)
-  re-read M521-M523. M522 is R472 (frozen 78340957; its fetch waits for FRED, down via the proxy since ~03:00
-  UTC 11-12); M523's negative-gamma regime is nearly absent since
-  2024-11 (18 of 504 sessions). M296 has too few events.
+- **Closed 11-12 (morning):** R472 `rebalfront_v1` (M522) NULL: the rebalancing front-run earned in its paper's
+  span, not after 2023 (+0.05 bp a day net). R475 `hip3stock_v1` (M530) frozen PASS recorded PARTIAL: xyz stock
+  funding carry +11.2 points over the bill in A, half from one BIRD liquidation day; carry alone below the bill in B.
+  Its earned forward lane waits for R476 and R477.
+- **Running:** R476 `hip3other_v1` (R475's rule on the other HIP-3 deployers; fetch running) and R477
+  `xyztwin_v1` (xyz index/ETF/metal perps hedged with London twins; fetch after R476's, one Hyperliquid fetcher at a
+  time).
+- **Open queue rows:** M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has
+  too few events. M531 (R477) and M532 (roll funding against the futures curve, UNTESTED) are new.
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
@@ -463,3 +468,13 @@ waiting, and pick tests from our own measurements first.
   - About +13 points a year over the bill at the listing-mean funding, +4 at base, about 0 at zero funding.
   - Reads: held (after the freeze, reported only); futility 2027-02-13 (NULL if excess < 0); final 2027-05-15
     (PASS at >= 2 points, NW t >= 2.0). Program total 9,785,250.
+- 2026-11-12 ~08:15 UTC: R472 and R475 closed; R476 fetching; owner reels read.
+  - R472 `rebalfront_v1` (M522) NULL. FRED refused the frozen client from the container and from a GitHub runner,
+    so DTB3 came from the Board's H.15 archive, byte-identical to FRED's file (`ce8a96cc`). R's Calendar×week4
+    slope t is -1.67 (needs <= -2); U 2023-03..2026-11 +0.05 bp/day net (t 0.05); 2026 -2.11.
+  - R475 `hip3stock_v1` (M530) frozen PASS recorded PARTIAL: A +11.18 pts/yr (t 2.03), 2x +9.79; carry only +5.56
+    in A, -0.84 in B; one BIRD liquidation day ~5 pts of A; leave-BIRD-out +5.80 (t 1.92); weekly sd 0.72%.
+    Earned forward lane to be designed after R476/R477: same-instant marks at the 16:00 New York close, measured
+    xyz costs, a stated liquidation policy, honest power (weekly sd ~0.7%).
+  - Owner reels: DfnLTPTCILu (Quant Guild model tier list) read, no test; DeoTlhAs0FE and DfnDCP9xLKi behind
+    Instagram's login wall, not read. Program total 9,785,259.
