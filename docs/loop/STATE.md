@@ -16,15 +16,16 @@ for breakthroughs at 100% of compute".
 - Haiku helpers generate ideas in between.
 - The scheduled task is an hourly safety net only.
 
-**State on 2026-11-11 23:10 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
+**State on 2026-11-12 01:30 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
-- **Closed today:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
+- **Closed:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
+  R471 `cryptomon_v1` (M521) NULL: Bitcoin-linked stocks open with the weekend priced and do not drift after.
 - **Open queue rows:** wave 8 (`research/intake/idea_wave8_20261112.md`, owner: no shelving without web research)
-  re-read M521-M523. M521 runs as R471 on about 320 cash weekends; M522 awaits a forward lane on xyz SP500;
-  M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has too few events.
+  re-read M521-M523. M522 awaits a forward lane on xyz SP500; M523's negative-gamma regime is nearly absent since
+  2024-11 (18 of 504 sessions). M296 has too few events.
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
@@ -438,3 +439,10 @@ waiting, and pick tests from our own measurements first.
   - Before costs A's excess is +0.28 pts (+1.79 after xyz's 2025-12-19 funding change): too thin at any cost.
   - 96 of 241 exits were forced by missing Lighter closes (56 on Sundays); six Lighter markets never traded.
   - Program total 9,785,245.
+- 2026-11-12, R471 `cryptomon_v1` (M521) NULL. Wave 8 re-read M521-M523 on the web (owner: no shelving without it).
+  Bitcoin's weekend return W against the Monday open-to-close move of MSTR, COIN, MARA and RIOT, 2020-09..2026-11.
+  - A (173 sessions) slope +0.057 (t 0.48, detectable ~0.34); follow events +39.1 bp gross (t 0.54); B -30.0 bp.
+  - The open gap carries the weekend: slope +0.91 (A) and +0.99 (B). B's negative-W rebound is three crash Mondays.
+  - M522 (month-end rebalancing): the authors' sample runs to 2025, so only a forward lane on xyz SP500 is clean.
+  - M523 (end-of-day momentum): lives on negative-gamma days, 18 of 504 sessions since 2024-11. Not registered.
+  - Program total 9,785,247.

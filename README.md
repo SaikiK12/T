@@ -213,6 +213,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   2027-02-01 ([lane](experiments/asiaclose_c/README.md)).
   R470 found the funding carry between xyz and Lighter on the same stock perp too thin: A's excess over a 4%/yr
   hurdle is -2.6 points at 1x and +0.3 before costs (NULL, [findings](experiments/xvfund_v1/FINDINGS.md)).
+  R471 found that Bitcoin-linked stocks (MSTR, COIN, MARA, RIOT) open with Bitcoin's weekend move already priced
+  and then neither follow nor fade it during Monday's session (slope +0.06, t 0.48; NULL,
+  [findings](experiments/cryptomon_v1/FINDINGS.md), idea wave 8 [intake](research/intake/idea_wave8_20261112.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
