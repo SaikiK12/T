@@ -1,0 +1,23 @@
+base A 3.12 t 2.14 | B 10.63 t 3.52
+ left_out  A_excess  A_t  A_2x  A_price  A_carry_only  A_slots  B_excess  B_t      verdict
+para_AVGO      2.65 1.87  1.85    -0.20          2.85     1.79      6.94 3.73 INCONCLUSIVE
+cash_META      2.73 1.56  2.00     0.24          2.49     1.52     10.63 3.52 INCONCLUSIVE
+  km_BMNR      2.86 2.20  2.17     0.40          2.46     1.89     10.63 3.52         PASS
+ flx_NVDA      3.07 2.16  2.34    -0.03          3.11     1.82     10.63 3.52         PASS
+para_COHR      3.12 2.14  2.32     0.07          3.05     1.89      7.83 2.95         PASS
+para_CIEN      3.12 2.14  2.32     0.07          3.05     1.89     10.63 3.52         PASS
+para_AAOI      3.12 2.14  2.32     0.07          3.05     1.89      7.82 2.10         PASS
+ para_GLW      3.12 2.14  2.32     0.07          3.05     1.89     10.29 4.54         PASS
+para_IREN      3.12 2.14  2.32     0.07          3.05     1.89      8.46 2.74         PASS
+para_CRDO      3.12 2.14  2.32     0.07          3.05     1.89     10.42 4.55         PASS
+ para_VST      3.12 2.14  2.32     0.07          3.05     1.89     10.50 3.42         PASS
+ para_NET      3.12 2.14  2.32     0.07          3.05     1.89     10.68 3.55         PASS
+cash_MSFT      3.25 2.15  2.51     0.14          3.11     1.86     10.63 3.52         PASS
+  km_BABA      3.32 2.49  2.59     0.06          3.26     1.78     10.63 3.52 INCONCLUSIVE
+    km_MU      3.61 1.99  2.90     0.37          3.24     1.86     10.63 3.52      PARTIAL
+cash_AMZN      3.69 2.07  2.95     0.53          3.16     1.71     10.63 3.52         PASS
+cash_INTC      3.87 1.86  3.17     0.37          3.50     1.74     10.63 3.52      PARTIAL
+cash_HOOD      4.25 1.98  3.52     0.42          3.83     1.86     10.63 3.52      PARTIAL
+verdict counts {'PASS': 12, 'INCONCLUSIVE': 3, 'PARTIAL': 3}
+without the 'gone' names ['cash_AMZN', 'cash_META', 'cash_MSFT', 'flx_NVDA', 'km_BMNR', 'km_MU']
+  A -0.90 t -0.60 2x -1.41 carry -0.27 price -0.63 slots 1.23 verdict INCONCLUSIVE

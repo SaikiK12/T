@@ -1,0 +1,537 @@
+{
+ "registry": "R476",
+ "markets": [
+  "cash_AMZN",
+  "cash_GOOGL",
+  "cash_HOOD",
+  "cash_INTC",
+  "cash_META",
+  "cash_MSFT",
+  "cash_NVDA",
+  "cash_TSLA",
+  "flx_COIN",
+  "flx_CRCL",
+  "flx_NVDA",
+  "flx_TSLA",
+  "io_SNDK",
+  "km_AAPL",
+  "km_BABA",
+  "km_BMNR",
+  "km_GOOGL",
+  "km_MU",
+  "km_NVDA",
+  "km_PLTR",
+  "km_RTX",
+  "km_TSLA",
+  "para_AAOI",
+  "para_AVGO",
+  "para_CIEN",
+  "para_COHR",
+  "para_CRDO",
+  "para_CRWD",
+  "para_GLW",
+  "para_IREN",
+  "para_LRCX",
+  "para_NET",
+  "para_RDDT",
+  "para_SMCI",
+  "para_STX",
+  "para_TER",
+  "para_VST"
+ ],
+ "dropped": [
+  [
+   "flx_GOLD",
+   "identity"
+  ],
+  [
+   "flx_USDE",
+   "identity"
+  ],
+  [
+   "hyna_SUI",
+   "identity"
+  ],
+  [
+   "hyna_PUMP",
+   "identity"
+  ],
+  [
+   "hyna_LTC",
+   "identity"
+  ],
+  [
+   "hyna_LINK",
+   "identity"
+  ],
+  [
+   "hyna_XPL",
+   "identity"
+  ],
+  [
+   "hyna_IP",
+   "identity"
+  ],
+  [
+   "hyna_BCH",
+   "identity"
+  ],
+  [
+   "hyna_GOLD",
+   "no funding or candles"
+  ],
+  [
+   "km_GOLD",
+   "identity"
+  ],
+  [
+   "cash_GOLD",
+   "identity"
+  ],
+  [
+   "cash_WTI",
+   "identity"
+  ],
+  [
+   "cash_CAR",
+   "identity"
+  ],
+  [
+   "para_MELI",
+   "identity"
+  ],
+  [
+   "para_SOFI",
+   "identity"
+  ],
+  [
+   "para_TTWO",
+   "identity"
+  ],
+  [
+   "para_CIFR",
+   "identity"
+  ],
+  [
+   "mkts_BABA",
+   "no funding or candles"
+  ],
+  [
+   "mkts_TSLA",
+   "no funding or candles"
+  ],
+  [
+   "mkts_GOLD",
+   "no funding or candles"
+  ],
+  [
+   "mkts_AAPL",
+   "no funding or candles"
+  ],
+  [
+   "mkts_GOOGL",
+   "no funding or candles"
+  ],
+  [
+   "mkts_NVDA",
+   "no funding or candles"
+  ],
+  [
+   "mkts_MU",
+   "no funding or candles"
+  ],
+  [
+   "mkts_PLTR",
+   "no funding or candles"
+  ],
+  [
+   "mkts_BMNR",
+   "no funding or candles"
+  ],
+  [
+   "mkts_RTX",
+   "no funding or candles"
+  ],
+  [
+   "io_IONQ",
+   "identity"
+  ],
+  [
+   "io_NBIS",
+   "identity"
+  ],
+  [
+   "io_GPRO",
+   "identity"
+  ],
+  [
+   "io_NVDA",
+   "identity"
+  ],
+  [
+   "io_AAPL",
+   "identity"
+  ],
+  [
+   "io_CRCL",
+   "identity"
+  ],
+  [
+   "io_GOOGL",
+   "no funding or candles"
+  ],
+  [
+   "io_MU",
+   "no funding or candles"
+  ],
+  [
+   "io_META",
+   "no funding or candles"
+  ],
+  [
+   "io_INTC",
+   "no funding or candles"
+  ]
+ ],
+ "variants": {
+  "decide": {
+   "params": {
+    "slots": 5,
+    "enter": 12.0,
+    "exit": 6.0
+   },
+   "A": {
+    "weeks": 27,
+    "active_weeks": 21,
+    "first": "2026-01-16",
+    "last": "2026-07-17",
+    "ann_excess_pts": 3.1185830432378747,
+    "nw_t": 2.1406221188819967,
+    "ann_excess_2x_pts": 2.3161420994621302,
+    "ann_excess_3x_pts": 1.5137011556863855,
+    "ann_carry_only_pts": 3.046142689862353,
+    "ann_funding_pts": 5.121716705796856,
+    "ann_price_pts": 0.07244035337552202,
+    "ann_div_pts": 0.06969456327677129,
+    "ann_excess_wht15_pts": 3.1081288587463596,
+    "ann_cost_pts": 0.8024409437757446,
+    "mean_slots": 1.8925925925925924,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 16,
+    "max_dd_pts": 0.2143396863793231,
+    "trades": 9,
+    "names": 9,
+    "mean_hold_days": 33.888888888888886,
+    "median_trade_ntl_usd": 209323.97704999894
+   },
+   "B": {
+    "weeks": 16,
+    "active_weeks": 16,
+    "first": "2026-07-24",
+    "last": "2026-11-06",
+    "ann_excess_pts": 10.628956903810646,
+    "nw_t": 3.5246674992892397,
+    "ann_excess_2x_pts": 9.21069724778062,
+    "ann_excess_3x_pts": 7.792437591750595,
+    "ann_carry_only_pts": 9.650821244278543,
+    "ann_funding_pts": 14.142685181747108,
+    "ann_price_pts": 0.9781356595321024,
+    "ann_div_pts": 0.19417158705551696,
+    "ann_excess_wht15_pts": 10.599831165752317,
+    "ann_cost_pts": 1.4182596560300251,
+    "mean_slots": 3.9250000000000003,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 35,
+    "max_dd_pts": 0.3699779632624387,
+    "trades": 9,
+    "names": 9,
+    "mean_hold_days": 52.22222222222222,
+    "median_trade_ntl_usd": 69976.57742999494
+   },
+   "all": {
+    "weeks": 43,
+    "active_weeks": 37,
+    "first": "2026-01-16",
+    "last": "2026-11-06",
+    "ann_excess_pts": 5.913140758799836,
+    "nw_t": 3.045591360846599,
+    "ann_excess_2x_pts": 4.881557968603894,
+    "ann_excess_3x_pts": 3.849975178407952,
+    "ann_carry_only_pts": 5.503697500807912,
+    "ann_funding_pts": 8.478356138708579,
+    "ann_price_pts": 0.40944325799192394,
+    "ann_div_pts": 0.11601159538049063,
+    "ann_excess_wht15_pts": 5.895739019492762,
+    "ann_cost_pts": 1.031582790195942,
+    "mean_slots": 2.6488372093023256,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 51,
+    "max_dd_pts": 0.36997796326243904,
+    "trades": 18,
+    "names": 18,
+    "mean_hold_days": 43.05555555555556,
+    "median_trade_ntl_usd": 143148.76751253288
+   },
+   "by_dex": {
+    "cash": {
+     "trades": 5,
+     "names": 5,
+     "why": {
+      "gone": 3,
+      "exit": 2
+     }
+    },
+    "flx": {
+     "trades": 1,
+     "names": 1,
+     "why": {
+      "gone": 1
+     }
+    },
+    "km": {
+     "trades": 3,
+     "names": 3,
+     "why": {
+      "gone": 2,
+      "exit": 1
+     }
+    },
+    "para": {
+     "trades": 9,
+     "names": 9,
+     "why": {
+      "end": 5,
+      "exit": 4
+     }
+    }
+   }
+  },
+  "slots10": {
+   "params": {
+    "slots": 10,
+    "enter": 12.0,
+    "exit": 6.0
+   },
+   "A": {
+    "weeks": 27,
+    "active_weeks": 21,
+    "first": "2026-01-16",
+    "last": "2026-07-17",
+    "ann_excess_pts": 1.36758023345784,
+    "nw_t": 1.678102300345488,
+    "ann_excess_2x_pts": 0.8189803256508411,
+    "ann_excess_3x_pts": 0.2703804178438422,
+    "ann_carry_only_pts": 1.6482775056825767,
+    "ann_funding_pts": 3.0922957819447547,
+    "ann_price_pts": -0.28069727222473695,
+    "ann_div_pts": 0.051183621193196506,
+    "ann_excess_wht15_pts": 1.3599026902788602,
+    "ann_cost_pts": 0.5485999078069989,
+    "mean_slots": 2.6685185185185185,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 20,
+    "max_dd_pts": 0.4202805474814249,
+    "trades": 13,
+    "names": 12,
+    "mean_hold_days": 33.92307692307692,
+    "median_trade_ntl_usd": 188200.89497749973
+   },
+   "B": {
+    "weeks": 16,
+    "active_weeks": 16,
+    "first": "2026-07-24",
+    "last": "2026-11-06",
+    "ann_excess_pts": 7.939017759725717,
+    "nw_t": 3.813383249276883,
+    "ann_excess_2x_pts": 6.675458278003017,
+    "ann_excess_3x_pts": 5.411898796280319,
+    "ann_carry_only_pts": 6.7973319341324725,
+    "ann_funding_pts": 10.734710967796637,
+    "ann_price_pts": 1.1416858255932438,
+    "ann_div_pts": 0.17318216010065263,
+    "ann_excess_wht15_pts": 7.913040435710618,
+    "ann_cost_pts": 1.2635594817226992,
+    "mean_slots": 6.8,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 53,
+    "max_dd_pts": 0.16247613467419292,
+    "trades": 17,
+    "names": 13,
+    "mean_hold_days": 46.588235294117645,
+    "median_trade_ntl_usd": 76823.75470500067
+   },
+   "all": {
+    "weeks": 43,
+    "active_weeks": 37,
+    "first": "2026-01-16",
+    "last": "2026-11-06",
+    "ann_excess_pts": 3.812766289743562,
+    "nw_t": 2.6892958376432534,
+    "ann_excess_2x_pts": 2.9981349125725814,
+    "ann_excess_3x_pts": 2.183503535401601,
+    "ann_carry_only_pts": 3.5642047348732357,
+    "ann_funding_pts": 5.935985153424526,
+    "ann_price_pts": 0.2485615548703257,
+    "ann_div_pts": 0.09657842636806391,
+    "ann_excess_wht15_pts": 3.798279525788352,
+    "ann_cost_pts": 0.8146313771709804,
+    "mean_slots": 4.205813953488373,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 73,
+    "max_dd_pts": 0.4202805474814249,
+    "trades": 30,
+    "names": 25,
+    "mean_hold_days": 41.1,
+    "median_trade_ntl_usd": 135266.89585253038
+   },
+   "by_dex": {
+    "cash": {
+     "trades": 6,
+     "names": 6,
+     "why": {
+      "gone": 4,
+      "exit": 2
+     }
+    },
+    "flx": {
+     "trades": 1,
+     "names": 1,
+     "why": {
+      "gone": 1
+     }
+    },
+    "km": {
+     "trades": 6,
+     "names": 5,
+     "why": {
+      "gone": 5,
+      "exit": 1
+     }
+    },
+    "para": {
+     "trades": 17,
+     "names": 13,
+     "why": {
+      "end": 10,
+      "exit": 7
+     }
+    }
+   }
+  },
+  "enter20": {
+   "params": {
+    "slots": 5,
+    "enter": 20.0,
+    "exit": 10.0
+   },
+   "A": {
+    "weeks": 27,
+    "active_weeks": 15,
+    "first": "2026-01-16",
+    "last": "2026-07-17",
+    "ann_excess_pts": 3.2540690560155396,
+    "nw_t": 1.8839565343818112,
+    "ann_excess_2x_pts": 2.778078088435781,
+    "ann_excess_3x_pts": 2.3020871208560223,
+    "ann_carry_only_pts": 2.906286048563284,
+    "ann_funding_pts": 4.19605195435385,
+    "ann_price_pts": 0.3477830074522551,
+    "ann_div_pts": 0.07218374574592373,
+    "ann_excess_wht15_pts": 3.2432414941536516,
+    "ann_cost_pts": 0.4759909675797586,
+    "mean_slots": 1.1888888888888889,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 8,
+    "max_dd_pts": 0.01685,
+    "trades": 5,
+    "names": 5,
+    "mean_hold_days": 36.8,
+    "median_trade_ntl_usd": 2509031.9480799437
+   },
+   "B": {
+    "weeks": 16,
+    "active_weeks": 16,
+    "first": "2026-07-24",
+    "last": "2026-11-06",
+    "ann_excess_pts": 10.006797633311567,
+    "nw_t": 3.1621576765872823,
+    "ann_excess_2x_pts": 8.40043844684527,
+    "ann_excess_3x_pts": 6.794079260378972,
+    "ann_carry_only_pts": 8.77481374777543,
+    "ann_funding_pts": 13.354045021250064,
+    "ann_price_pts": 1.231983885536137,
+    "ann_div_pts": 0.19417158705551696,
+    "ann_excess_wht15_pts": 9.977671895253241,
+    "ann_cost_pts": 1.6063591864662985,
+    "mean_slots": 3.8,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 33,
+    "max_dd_pts": 0.3180624256088973,
+    "trades": 11,
+    "names": 10,
+    "mean_hold_days": 41.45454545454545,
+    "median_trade_ntl_usd": 125340.62609000131
+   },
+   "all": {
+    "weeks": 43,
+    "active_weeks": 31,
+    "first": "2026-01-16",
+    "last": "2026-11-06",
+    "ann_excess_pts": 5.76671224756755,
+    "nw_t": 2.8979294996536185,
+    "ann_excess_2x_pts": 4.870119152030009,
+    "ann_excess_3x_pts": 3.9735260564924677,
+    "ann_carry_only_pts": 5.089924262223619,
+    "ann_funding_pts": 7.603677281571046,
+    "ann_price_pts": 0.6767879853439321,
+    "ann_div_pts": 0.11757457041926074,
+    "ann_excess_wht15_pts": 5.749076062004661,
+    "ann_cost_pts": 0.8965930955375407,
+    "mean_slots": 2.16046511627907,
+    "liquidations": 0,
+    "split_flags": 0,
+    "resplits": 41,
+    "max_dd_pts": 0.31806242560889697,
+    "trades": 16,
+    "names": 15,
+    "mean_hold_days": 40.0,
+    "median_trade_ntl_usd": 187704.54076649994
+   },
+   "by_dex": {
+    "cash": {
+     "trades": 3,
+     "names": 3,
+     "why": {
+      "gone": 2,
+      "exit": 1
+     }
+    },
+    "km": {
+     "trades": 2,
+     "names": 2,
+     "why": {
+      "gone": 2
+     }
+    },
+    "para": {
+     "trades": 11,
+     "names": 10,
+     "why": {
+      "exit": 6,
+      "end": 5
+     }
+    }
+   }
+  }
+ },
+ "state": "PASS",
+ "text": "A 27 weeks: excess +3.12 pts/yr (NW t 2.14), 2x +2.32, 3x +1.51; funding +5.12, price +0.07, cost 0.80; 1.9 slots"
+}
