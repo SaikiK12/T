@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (42)
+## Fetch: download archives and public history (43)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -17,6 +17,7 @@ line is the first line of the script's own docstring.
 - [`fetch_cmelead.py`](fetch_cmelead.py): R370's data: CME Globex trades (Databento) and Binance USD-M aggregated trades around 60 EIA releases and their placebo days.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
 - [`fetch_coinmetrics.py`](fetch_coinmetrics.py): Coin Metrics community API (free, no key): daily market caps and on-chain metrics for every asset it serves free.
+- [`fetch_cryptomon.py`](fetch_cryptomon.py): Inputs for R471 cryptomon_v1 (does a Bitcoin-linked US stock keep moving after Monday's open in the direction of Bitcoin's weekend move?).
 - [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
 - [`fetch_deribit_atm_windows.py`](fetch_deribit_atm_windows.py): Raw Deribit trades of the two at-the-money legs R410 (vrpexec_v1) trades each Friday: for every Friday D of 2021-01-01..2026-09-18 and BTC/ETH, the call and the put of the strike ...
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
@@ -126,7 +127,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (196)
+## Run: one lane's frozen measurement (197)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -162,6 +163,7 @@ line is the first line of the script's own docstring.
 - [`run_confidence.py`](run_confidence.py): R331 four committed stages: train, calibrate, select, evaluate.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_continuation_control.py`](run_continuation_control.py): R323 fixed conditional continuation policies and common-account replay.
+- [`run_cryptomon.py`](run_cryptomon.py): R471 cryptomon_v1, frozen in experiments/cryptomon_v1/PREREG.md: does a Bitcoin-linked US stock keep moving after Monday's open in the direction of Bitcoin's weekend move (or give it back)? Gate 0 ...
 - [`run_ctxslice.py`](run_ctxslice.py): ctxslice_v1 (R201): the replicated excess context edges of atlas_ctx (R192) and atlas_mtf (R195) as one slice book, as set out in experiments/ctxslice_v1/PREREG.md; ctxslice_v2 (R204): its 12-24 h ...
 - [`run_dated_carry.py`](run_dated_carry.py): R327 finite current-quote dated carry diagnosis; no executable-profit claim.
 - [`run_dated_carry_v2.py`](run_dated_carry_v2.py): R328 exact-ratio compatibility driver; frozen R327 failure/raw remain intact.

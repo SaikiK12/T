@@ -22,9 +22,9 @@ for breakthroughs at 100% of compute".
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
 - **Closed today:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
-- **Open queue rows:** the 2026-11-12 power checks put M521, M522 and M523 out of reach on held data (notes in
-  `registry/methods.csv`); M296 has too few events. The next decisions come from the forward lanes (R463 and R467
-  from the weekend of 11-13) or from new data, not from another gate-0 lane on the same windows.
+- **Open queue rows:** wave 8 (`research/intake/idea_wave8_20261112.md`, owner: no shelving without web research)
+  re-read M521-M523. M521 runs as R471 on about 320 cash weekends; M522 awaits a forward lane on xyz SP500;
+  M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has too few events.
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
