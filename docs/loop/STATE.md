@@ -19,7 +19,8 @@ for breakthroughs at 100% of compute".
 **State on 2026-11-12 08:15 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08;
-  R474 (hedged TLT carry) futility on 2027-02-13 and final on 2027-05-15, by `claude-tltcarry.yml`.
+  R474 (hedged TLT carry) futility on 2027-02-13 and final on 2027-05-15, by `claude-tltcarry.yml`; R479 (HIP-3
+  funding carry) on the same two dates, by `claude-hip3carry.yml`.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
 - **Closed:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
@@ -29,12 +30,17 @@ for breakthroughs at 100% of compute".
 - **Closed 11-12 (morning):** R472 `rebalfront_v1` (M522) NULL: the rebalancing front-run earned in its paper's
   span, not after 2023 (+0.05 bp a day net). R475 `hip3stock_v1` (M530) frozen PASS recorded PARTIAL: xyz stock
   funding carry +11.2 points over the bill in A, half from one BIRD liquidation day; carry alone below the bill in B.
-  Its earned forward lane waits for R476 and R477.
-- **Running:** R476 `hip3other_v1` (R475's rule on the other HIP-3 deployers; fetch running) and R477
-  `xyztwin_v1` (xyz index/ETF/metal perps hedged with London twins; fetch after R476's, one Hyperliquid fetcher at a
-  time).
+- **Closed 11-12 (late morning), all recorded PARTIAL:** R476 `hip3other_v1` (R475's rule on the other HIP-3
+  deployers) +3.12 points in A (t 2.14), pure carry with a weekly sd of 0.09%, but only 9 trades on venues that have
+  since closed. R477 `xyztwin_v1` (xyz index/ETF/metal perps hedged with London twins) +1.62 (t 0.50): carry
+  +2.48, drowned by hedge noise. R478 `rollcarry_v1` (M532) NATGAS short hedged with UNG +10.52 in A (t 1.68),
+  -0.09 in B: funding beat the contango roll-up in A only. The R475-R477 identity check drops markets with under 60
+  marks through a NaN; a post hoc rerun moves no verdict (`experiments/hip3stock_v1/posthoc/`).
+- **Running:** R479 `hip3carry_fwd` (M530/M531 forward from 2026-11-16): book S on every live HIP-3 dex's US-stock
+  perps (16:00 New York marks, $150k/day capacity floor), book T on R477's twin pairs; decides carry, with the
+  total positive at assumed and measured costs. Paragon and EntropyIO books are now recorded (`hip3/`).
 - **Open queue rows:** M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has
-  too few events. M531 (R477) and M532 (roll funding against the futures curve, UNTESTED) are new.
+  too few events. M532's forward lane needs a hedge a French account can hold (CME micro futures or LSE ETCs).
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
@@ -478,3 +484,7 @@ waiting, and pick tests from our own measurements first.
     xyz costs, a stated liquidation policy, honest power (weekly sd ~0.7%).
   - Owner reels: DfnLTPTCILu (Quant Guild model tier list) read, no test; DeoTlhAs0FE and DfnDCP9xLKi behind
     Instagram's login wall, not read. Program total 9,785,259.
+- 2026-11-12 ~09:00 UTC: R476-R478 closed PARTIAL; R479 frozen (`61a7db1e`, 2 trials).
+  - R479 `hip3carry_fwd` decides R475's rule forward on fresh weeks only, with the identity NaN fixed and costs
+    from the hourly book snapshots. A test dispatch of `claude-hip3carry.yml` ran checkout, install and the
+    snapshot worktree, and both reads refused before their dates. Program total 9,785,264.

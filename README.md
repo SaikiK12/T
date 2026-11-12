@@ -228,8 +228,15 @@ for active writers. Dated proposals, audits and source notes below retain histor
   R475 shorted trade.xyz US-stock perps whose longs pay high funding and held the same stocks: +11.2 points a
   year over the T-bill in January-July (t 2.03), but about half of it is one liquidation day on one name, and the
   funding carry alone fell below the bill from August (frozen PASS, recorded PARTIAL;
-  [findings](experiments/hip3stock_v1/FINDINGS.md)). R476 (the same rule on the other HIP-3 deployers) and R477
-  (xyz index, ETF and metal perps hedged with London-listed twins) are frozen and fetching.
+  [findings](experiments/hip3stock_v1/FINDINGS.md)). The same rule earned +3.1 points of nearly pure carry on the
+  other HIP-3 deployers, but in only nine trades on venues that have since closed (R476,
+  [findings](experiments/hip3other_v1/FINDINGS.md)). On xyz index, ETF and metal perps hedged with London-listed
+  twins it earned +1.6 points with too much hedge noise to tell from zero (R477,
+  [findings](experiments/xyztwin_v1/FINDINGS.md)). Shorting xyz's natural-gas perp against UNG, funding beat the
+  contango roll in January-July (+10.5 points, t 1.68) but not after (R478,
+  [findings](experiments/rollcarry_v1/FINDINGS.md)); all three are PARTIAL. R479 runs the stock and twin carry
+  forward from 2026-11-16 at measured costs, read on 2027-02-13 and 2027-05-15 (frozen;
+  [lane](experiments/hip3carry_fwd/README.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
