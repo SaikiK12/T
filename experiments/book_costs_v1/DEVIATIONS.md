@@ -9,10 +9,12 @@
   writes a file; the later runs find the slot written and add nothing. The workflow runs `scripts/record_book_costs.py`
   and `scripts/record_digest.py` unchanged, so the universe, endpoints, pacing, sizes, bands and the
   one-file-per-slot rule are as frozen. `lab/operations.py` is not changed.
-- **No local writer.** `lab/operations.py` still lists the tasks R404 (`record_book_costs.py`) and REC_DIGEST. While
-  the workflow is the writer, neither may run from a local forward loop: a local run would write its own file for a
-  slot the workflow already digested, add a second digest for that path and overwrite `status.json` with a summary
-  of other files. Anyone restarting the local loop before 2026-11-18 must leave both tasks out.
+- **No local writer.** `lab/operations.py` still lists the task R404 (`record_book_costs.py`). While the workflow is
+  the writer, R404 may not run from a local forward loop: a local run would write its own file for a slot the
+  workflow already digested, add a second digest for that path and overwrite `status.json` with a summary of other
+  files. Anyone restarting the local loop before 2026-11-18 must leave R404 out. The local REC_DIGEST task
+  (`record_digest.py`) digests every file under `data/recorders`, so it would also digest any local
+  `data/recorders/book_costs` files. It may run (the other recorders need it) as long as no such local tree exists.
 - **Where the files live.** The parquet files are gitignored on the default branch, so the workflow keeps them on the
   data branch `claude/book-costs-data`, at `book_costs/<YYYY-MM-DD>/<HH>.parquet`. Each run copies that tree into
   `data/recorders/book_costs` before the recorder runs and copies it back afterwards. Only
