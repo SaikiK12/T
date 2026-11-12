@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (43)
+## Fetch: download archives and public history (44)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -40,6 +40,7 @@ line is the first line of the script's own docstring.
 - [`fetch_notice_bodies.py`](fetch_notice_bodies.py): Plain text of each Binance delisting article in the notice journal (data/recorders/notices/binance_delisting.csv), from the public CMS detail endpoint.
 - [`fetch_okx_xperp.py`](fetch_okx_xperp.py): OKX Europe X-Perps (MiFID, 5-year expiry crypto contracts with 8-hourly funding; M484): public data, no key.
 - [`fetch_orb_pilot.py`](fetch_orb_pilot.py): Bounded, public, exclusive raw acquisition for the frozen ORB pilot.
+- [`fetch_rebalfront.py`](fetch_rebalfront.py): Inputs for R472 rebalfront_v1 (front-running balanced-fund rebalancing, Harvey, Mazzoleni and Melone).
 - [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
@@ -127,7 +128,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (197)
+## Run: one lane's frozen measurement (198)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -270,6 +271,7 @@ line is the first line of the script's own docstring.
 - [`run_qbasis.py`](run_qbasis.py): qbasis_v1 (R301): the dated-futures basis as a cross-sectional signal on Binance perps (M170, from Chi, Hao, Hu and Ran, J. Futures Markets 2023).
 - [`run_rawlead.py`](run_rawlead.py): R431 rawlead_v1 (M430 + M431): the sub-second lead of Binance's USDT perp book over its USDC perp book on the raw event tape, and what is left of it after this machine's latency and the taker fee.
 - [`run_rebalancing.py`](run_rebalancing.py): R232: fixed equal-weight rebalance cadences versus unchanged buy-and-hold units.
+- [`run_rebalfront.py`](run_rebalfront.py): R472 rebalfront_v1, frozen in experiments/rebalfront_v1/PREREG.md: front-running balanced-fund rebalancing (Harvey, Mazzoleni and Melone, NBER w33554), rebuilt on public ETF closes.
 - [`run_regime.py`](run_regime.py): regime_v1 (R233): flow books A, B and X2 traded only in some trend x volatility regimes, and a regime-wise choice among them (MacroHFT's sub-agents and hyper-agent), against constant size, as set ...
 - [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.
 - [`run_reserved_batch3.py`](run_reserved_batch3.py): R392 reserved batch 3 (docs/GATES.md): three pre-committed candidates, read once, as set out in experiments/reserved_batch3/PREREG.md.
