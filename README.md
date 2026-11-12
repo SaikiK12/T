@@ -234,7 +234,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   twins it earned +1.6 points with too much hedge noise to tell from zero (R477,
   [findings](experiments/xyztwin_v1/FINDINGS.md)). Shorting xyz's natural-gas perp against UNG, funding beat the
   contango roll in January-July (+10.5 points, t 1.68) but not after (R478,
-  [findings](experiments/rollcarry_v1/FINDINGS.md)); all three are PARTIAL. R479 runs the stock and twin carry
+  [findings](experiments/rollcarry_v1/FINDINGS.md)); all three are PARTIAL. R480 runs the natural-gas trade
+  forward with the NYMEX contracts the perp references, rolled on its own days, read on 2027-05-15 and 2027-11-13
+  (frozen; [lane](experiments/futroll_fwd/README.md)). R479 runs the stock and twin carry
   forward from 2026-11-16 at measured costs, read on 2027-02-13 and 2027-05-15 (frozen;
   [lane](experiments/hip3carry_fwd/README.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence

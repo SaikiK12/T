@@ -62,7 +62,7 @@ line is the first line of the script's own docstring.
 - [`fetch_xyz_wknd.py`](fetch_xyz_wknd.py): Inputs for R462 xyzwknd_v1 (trade.xyz US-equity perps over the weekend).
 - [`fetch_xyztwin.py`](fetch_xyztwin.py): Inputs for R477 xyztwin_v1: xyz index, ETF and metal perps against a USD UCITS ETF or ETC twin on the LSE. Keyless.
 
-## Record: point-in-time collectors (cannot be backfilled) (37)
+## Record: point-in-time collectors (cannot be backfilled) (38)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
 - [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
@@ -73,6 +73,7 @@ line is the first line of the script's own docstring.
 - [`record_digest.py`](record_digest.py): Append a SHA-256 digest of every recorder file under data/recorders/ to experiments/recorders/journal/digests.csv (committed).
 - [`record_eea_pair.py`](record_eea_pair.py): R419 public Coinbase CDE/Kraken raw packets; inactive until Claude runs --execute.
 - [`record_funding_board.py`](record_funding_board.py): Hourly snapshot of the live funding rate of every USDT perp on six more venues: Gate, Hyperliquid, OKX, Bitget, KuCoin and dYdX (MEXC is recorded by record_mexc_ticker.py; Binance and Bybit refuse ...
+- [`record_futroll.py`](record_futroll.py): Recorder for R480 futroll_fwd: the NYMEX contracts trade.xyz's commodity perps reference, and the perps' own 1-hour candles and funding, merged into CSVs on the data branch claude/futroll-data.
 - [`record_hft.py`](record_hft.py): High-rate feed recorder (M427-M429 data): BTC and ETH top of book and trades at 100 ms on Binance USDT and USDC perps, Bybit USDT perps and Hyperliquid, into data/hft/. Public websockets only; ...
 - [`record_hl_daily.py`](record_hl_daily.py): Daily recorder of Hyperliquid perps that match an OKX Europe crypto X-Perp: hourly funding prints and closed UTC daily candles.
 - [`record_hl_spot.py`](record_hl_spot.py): Daily recorder for a Hyperliquid spot-against-perp carry (M503): the USDC spot pairs of HYPE and of the Unit-bridged coins whose perp is listed under the same name, with the hourly funding of ...
@@ -136,7 +137,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (205)
+## Run: one lane's frozen measurement (206)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -207,6 +208,7 @@ line is the first line of the script's own docstring.
 - [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
 - [`run_fundvol.py`](run_fundvol.py): R382 fundvol_v1 (M455): does trailing volatility sizing improve a funding-carry book's net return at executable cost?.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
+- [`run_futroll.py`](run_futroll.py): R480 futroll_fwd: M532 forward.
 - [`run_fxindex.py`](run_fxindex.py): fxindex_v1 (R239): G10 forex momentum, dollar trend, VIX reversal, Halloween, pre-holiday and the variance risk premium, as set out in experiments/fxindex_v1/PREREG.md.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
 - [`run_gexfilter.py`](run_gexfilter.py): R416 gexfilter_v1: does the S&P 500 dealer gamma exposure (SqueezeMetrics' free daily GEX) known after the US close predict BTC and ETH volatility over the next US session, beyond VIX and the ...

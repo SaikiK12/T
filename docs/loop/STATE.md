@@ -20,7 +20,8 @@ for breakthroughs at 100% of compute".
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08;
   R474 (hedged TLT carry) futility on 2027-02-13 and final on 2027-05-15, by `claude-tltcarry.yml`; R479 (HIP-3
-  funding carry) on the same two dates, by `claude-hip3carry.yml`.
+  funding carry) on the same two dates, by `claude-hip3carry.yml`; R480 (NATGAS roll carry) futility on 2027-05-15
+  and final on 2027-11-13, by `claude-futroll.yml`.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
 - **Closed:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
@@ -39,8 +40,10 @@ for breakthroughs at 100% of compute".
 - **Running:** R479 `hip3carry_fwd` (M530/M531 forward from 2026-11-16): book S on every live HIP-3 dex's US-stock
   perps (16:00 New York marks, $150k/day capacity floor), book T on R477's twin pairs; decides carry, with the
   total positive at assumed and measured costs. Paragon and EntropyIO books are now recorded (`hip3/`).
+  R480 `futroll_fwd` (M532 forward from 2026-11-13): short xyz:NATGAS hedged with the NYMEX contracts its oracle
+  references, rolled on xyz's own days; recorder `claude-futroll-recorder.yml` writes `claude/futroll-data`.
 - **Open queue rows:** M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has
-  too few events. M532's forward lane needs a hedge a French account can hold (CME micro futures or LSE ETCs).
+  too few events. M532 runs forward in R480 with NYMEX futures; French access to CME energy futures is not verified.
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
@@ -488,3 +491,9 @@ waiting, and pick tests from our own measurements first.
   - R479 `hip3carry_fwd` decides R475's rule forward on fresh weeks only, with the identity NaN fixed and costs
     from the hourly book snapshots. A test dispatch of `claude-hip3carry.yml` ran checkout, install and the
     snapshot worktree, and both reads refused before their dates. Program total 9,785,264.
+- 2026-11-12 ~09:45 UTC: R480 `futroll_fwd` frozen (`d131c2a4`, 3 trials; program 9,785,267).
+  - R478's post hoc: priced against the continuous front future, NATGAS funding - roll was +1.29% of notional a cycle
+    (7 of 8 positive), so its carry is not UNG's roll timing; oil is smaller. xyz rolls every month (intake
+    `m532_hedge_20261112.md`).
+  - R480 keeps R478's book with a rolled-futures total-return index for the hedge; NATGAS decides at cycle 6
+    (futility) and 12 (final).
