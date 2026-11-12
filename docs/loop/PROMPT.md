@@ -153,4 +153,4 @@ small, public-data player can still reach.
   orchestrator batch runs. It hashes those trees as code and marks a task FAILED if they change (R404 and R278 on
   11-10). Their ticks still completed. Wait for the batch, or regenerate catalogs only after it ends.
 - 2026-11-10: R406 (lockcarry_fwd2), R413 (boroslock_fwd) and R419 are written by Codex's GitHub runtime (`.github/workflows/quant-paper-priority.yml`, canonical state on `codex/quant-runtime-state`, hourly since 11-07). Never run them through the local orchestrator: a local run on 11-10 08:14 made the branch journals diverge and failed the `paper` check every hour until the six files were restored to their pre-run versions. Before restarting any forward lane, check that runtime's manifest for the lane's journal paths.
-- 2026-11-11: step 1 now points to `docs/WEB_SEARCH.md` (dedupe with `python -m lab websearch seen`, ledger row after) instead of ad hoc web search wording.
+- 2026-11-12: step 1 now points to `docs/WEB_SEARCH.md` (dedupe with `python -m lab websearch seen`, ledger row after) instead of ad hoc web search wording.

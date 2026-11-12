@@ -9,6 +9,8 @@ import io
 from pathlib import Path
 import re
 
+from lab.registry import _lock
+
 LEDGER = Path("registry") / "web_searches.csv"
 COLUMNS = ("search_id", "date", "agent", "lens", "query", "tool", "urls_fetched", "fetch_status", "source_tier",
            "verification", "routed_to", "queue_ids", "note")
@@ -82,25 +84,32 @@ def validate(rows, root=None):
 
 
 def append(root, **fields):
-    """Assign the next WSnnnn id, validate the whole ledger plus the new row, append one line. Return the row."""
+    """Under ``registry._lock``: assign the next WSnnnn id, validate the ledger plus the new row, append one line.
+    A missing or empty ledger gets the header first. Return the row."""
     unknown = set(fields) - set(COLUMNS)
     if unknown:
         raise ValueError(f"unknown fields: {sorted(unknown)}")
-    rows = load(root)
-    number = 1 + max((int(r["search_id"][2:]) for r in rows if _ID.match(r.get("search_id") or "")), default=0)
-    row = {column: str(fields.get(column, "") or "") for column in COLUMNS}
-    row["search_id"] = f"WS{number:04d}"
-    row["date"] = row["date"] or date.today().isoformat()
-    problems = validate([*rows, row], root)
-    if problems:
-        raise ValueError("; ".join(problems))
-    buffer = io.StringIO()
-    csv.writer(buffer, lineterminator="\n").writerow([row[c] for c in COLUMNS])
     path = Path(root) / LEDGER
-    with path.open("ab") as handle:
-        if path.stat().st_size and not _ends_with_newline(path):
-            handle.write(b"\n")
-        handle.write(buffer.getvalue().encode("utf-8"))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with _lock(path):
+        rows = load(root)
+        number = 1 + max((int(r["search_id"][2:]) for r in rows if _ID.match(r.get("search_id") or "")), default=0)
+        row = {column: str(fields.get(column, "") or "") for column in COLUMNS}
+        row["search_id"] = f"WS{number:04d}"
+        row["date"] = row["date"] or date.today().isoformat()
+        problems = validate([*rows, row], root)
+        if problems:
+            raise ValueError("; ".join(problems))
+        buffer = io.StringIO()
+        writer = csv.writer(buffer, lineterminator="\n")
+        fresh = not path.exists() or path.stat().st_size == 0
+        if fresh:
+            writer.writerow(COLUMNS)
+        writer.writerow([row[c] for c in COLUMNS])
+        with path.open("ab") as handle:
+            if not fresh and not _ends_with_newline(path):
+                handle.write(b"\n")
+            handle.write(buffer.getvalue().encode("utf-8"))
     return row
 
 

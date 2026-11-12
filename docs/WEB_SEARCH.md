@@ -41,8 +41,16 @@ List the destinations in `routed_to` (`;` separated repo paths) and the affected
 
 ## Recording
 `python -m lab websearch add --date YYYY-MM-DD --agent NAME --lens TEXT --query TEXT --tool TEXT --urls-fetched "URL URL" --fetch-status ... --source-tier ... --verification ... --routed-to PATH --queue-ids "M001;M002" --note TEXT`
-assigns the next `WSnnnn` id, validates, and appends one row. The ledger is append-only: never edit earlier rows. Rows
-backfilled from older notes say so in `note`. Regenerating README catalogs is not required for this ledger.
+assigns the next `WSnnnn` id under `registry._lock`, validates, and appends one row. The ledger is append-only: never
+edit earlier rows. `check` validates only the current content, so it does not detect an edited or deleted earlier row;
+review ledger diffs for changes above the last line. Rows backfilled from older notes say so in `note`.
+
+A row that covers several sources records the weakest `source_tier` and `verification` that applies to any of them, or
+is split into one row per source. WS0001 predates this rule: its `primary` and `VERIFIED` overstate a mixed wave that
+includes secondary sources and three CONTRADICTED claims; read the per-source labels in its catalog and JSON instead.
+
+Adding a ledger row needs no catalog regeneration. Changing code under `lab/` or `scripts/` does: run
+`python scripts/catalog.py` after staging, and not while a forward orchestrator batch runs.
 
 ## Subagent brief template
 - Lens: one lens from `docs/loop/PROMPT.md`; the constraint table; the read-only rule.

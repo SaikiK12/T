@@ -60,6 +60,37 @@ class WebSearchTest(unittest.TestCase):
         self.assertEqual(websearch.seen(self.root, "q one")[0]["id"], "WS0001")
         self.assertEqual(websearch.seen(self.root, "absent text"), [])
 
+    def test_missing_ledger_gets_header_on_first_append(self):
+        (self.root / websearch.LEDGER).unlink()
+        websearch.append(self.root, **GOOD)
+        lines = (self.root / websearch.LEDGER).read_text(encoding="utf-8").splitlines()
+        self.assertEqual(lines[0], ",".join(websearch.COLUMNS))
+        self.assertEqual([r["search_id"] for r in websearch.load(self.root)], ["WS0001"])
+
+    def test_append_waits_for_registry_lock(self):
+        lock = Path(f"{self.root / websearch.LEDGER}.lock")
+        lock.write_text("", encoding="utf-8")
+        real = websearch._lock
+        websearch._lock = lambda path: real(path, timeout=0.1)
+        try:
+            with self.assertRaises(Exception):
+                websearch.append(self.root, **GOOD)
+        finally:
+            websearch._lock = real
+            lock.unlink()
+        self.assertEqual(websearch.load(self.root), [])
+        websearch.append(self.root, **GOOD)
+        self.assertFalse(lock.exists())
+
+    def test_cli_add_appends_and_refuses_bad_rows(self):
+        from scripts import web_search_ledger
+        base = ["add", "--root", str(self.root), "--agent", "a", "--query", "cli q", "--fetch-status", "NOT_FOUND",
+                "--source-tier", "secondary", "--verification", "UNVERIFIED", "--queue-ids", "C1"]
+        self.assertEqual(web_search_ledger.main(base), 0)
+        self.assertEqual(websearch.load(self.root)[0]["query"], "cli q")
+        self.assertEqual(web_search_ledger.main([*base, "--verification", "MAYBE"]), 1)
+        self.assertEqual(len(websearch.load(self.root)), 1)
+
     def test_committed_ledger_passes_and_cli_agrees(self):
         self.assertEqual(websearch.validate(websearch.load(ROOT), ROOT), [])
         done = subprocess.run([sys.executable, "-m", "lab", "websearch", "check", "--json"], cwd=ROOT,

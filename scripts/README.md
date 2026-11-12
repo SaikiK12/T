@@ -409,7 +409,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (96)
+## Tools and everything else (97)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -502,6 +502,7 @@ line is the first line of the script's own docstring.
 - [`usdtmint_rule.py`](usdtmint_rule.py): R460 usdtmint_v1 rule, frozen in experiments/usdtmint_v1/PREREG.md: after Tether mints USDT on Tron or Ethereum (an Issue event of the token contract), does BTC rise over the next 4 or 24 hours by ...
 - [`usopen_rule.py`](usopen_rule.py): usopen_fwd (R371): R300's pick, forward.
 - [`vrpexec_rule.py`](vrpexec_rule.py): R410 vrpexec_v1 (M477): the execution rule for R409's weekly short straddle with three cost levers, as set out in experiments/vrpexec_v1/PREREG.md.
+- [`web_search_ledger.py`](web_search_ledger.py): Check, query and append the web search ledger (registry/web_searches.csv) without any network access.
 - [`xbook_archive.py`](xbook_archive.py): xbook_fwd (R285) archive context: the three families of the cross-family book (carry, flow, events) rebuilt as daily series from the archive results of the lanes that feed it.
 - [`xvenue_factors.py`](xvenue_factors.py): Cross-venue factors for qx factors (R276 xvfac_v1): what another venue says about a Binance perp at 00:00 UTC.
 - [`xvwknd_rule.py`](xvwknd_rule.py): R466 xvwknd_v1 rule, frozen in experiments/xvwknd_v1/PREREG.md: the same US stock trades as a perp on trade.xyz (Hyperliquid HIP-3) and on Lighter.
