@@ -516,3 +516,10 @@ waiting, and pick tests from our own measurements first.
     Post hoc, xyz NATGAS longs paid +0.77% of notional a cycle more than Lighter's.
   - New M533 (QUEUED): the xyz-vs-Lighter NATGAS pair, with no futures broker. It is only testable forward, and
     RedStone's roll on Lighter is undocumented.
+- 2026-11-12 ~14:30-15:30 UTC: M533 forward lane.
+  - R482 `xvroll_fwd` frozen (`29ed0617`) before its first mark (2026-11-16 20:00 UTC). It is short xyz:NATGAS and
+    long Lighter NATGAS at equal notional (L = 1.5, M = 1/3 a leg); WTI and BRENTOIL are reported.
+  - It is an hourly book with funding, liquidation at maintenance and daily re-splits.
+  - Futility on 2027-05-15 and the final read on 2027-11-13 (the same days as R480), by `claude-xvroll.yml`. Inputs
+    are fetched at each read, plus R480's recorded xyz 1-hour candles (read only).
+  - Power: at R481's post hoc difference it is likely a PARTIAL. At the August-October pace, t ≈ 3 at 52 weeks.
