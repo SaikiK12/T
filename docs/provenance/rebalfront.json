@@ -1,0 +1,77 @@
+{
+"folder": "data/rebalfront",
+"source": "query1.finance.yahoo.com/v8/finance/chart (SPY, IEF, TLT) and federalreserve.gov H.15 (FRB_h15_xml.zip, RIFSGFSM03_N.B written as fred/DTB3.csv, byte-identical to FRED DTB3 on 2026-11-12); public",
+"script": "scripts/fetch_rebalfront_h15.py",
+"recorded_utc": "2026-11-12T07:58:20Z",
+"excluded": [],
+"files": 9,
+"bytes": 7382213,
+"combined_sha256": "f1b260a2e80bfd30ae30f73ee9f08440af184270dd3e678790f91ae963484961",
+"subfolders": {
+"fred": {
+"files": 1,
+"bytes": 301633
+},
+"h15": {
+"files": 1,
+"bytes": 4288030
+},
+".": {
+"files": 1,
+"bytes": 1281
+},
+"yahoo": {
+"files": 6,
+"bytes": 2791269
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "fred/DTB3.csv",
+"bytes": 301633,
+"sha256": "f524d6761c4728f2288fd6d8bc0dedb7b95ca0eb7836b9a73c7d6449c508640d"
+},
+{
+"path": "h15/FRB_h15_xml.zip",
+"bytes": 4288030,
+"sha256": "53d44bfd6c0a33dcfcf15017c15c668b9e78e39f621082aeb0edde5934dd5d1f"
+},
+{
+"path": "manifest.json",
+"bytes": 1281,
+"sha256": "d34d199f8a26a60f2b3af9c37070b7cd1b279a390e74a299dd23ec8c331ffb97"
+},
+{
+"path": "yahoo/IEF.json",
+"bytes": 670951,
+"sha256": "c8f386ff037e623406e184a586a19ada2db9dca0d7d42e838d5154894fc574e8"
+},
+{
+"path": "yahoo/IEF.parquet",
+"bytes": 222467,
+"sha256": "2880ceb9bc10580f14ff3aa38c684df124675fed649898d0b97eae8d5f4fa16a"
+},
+{
+"path": "yahoo/SPY.json",
+"bytes": 681251,
+"sha256": "950d9e5d948fc0af5e774eee3e531427c7ff06641c084fd3eb02318ac2c3b815"
+},
+{
+"path": "yahoo/SPY.parquet",
+"bytes": 295417,
+"sha256": "80b871f75a34acc8c6e6dfc8410ceb7300091426034515e12006cd92ce0f4261"
+},
+{
+"path": "yahoo/TLT.json",
+"bytes": 676169,
+"sha256": "1feaea4fd0dff267701d87715d135034ed98e9386ff0c7cfdaa7f2d349ec1b13"
+},
+{
+"path": "yahoo/TLT.parquet",
+"bytes": 245014,
+"sha256": "c095305689c4be1f10059047844446d7a4ec4ffd1cab15d0d17de8991047b3b2"
+}
+]
+}
