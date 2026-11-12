@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (46)
+## Fetch: download archives and public history (47)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -27,6 +27,7 @@ line is the first line of the script's own docstring.
 - [`fetch_fundamentals.py`](fetch_fundamentals.py): Protocol fundamentals from DefiLlama's free API for every token that has a Binance perp: daily TVL, fees and revenue.
 - [`fetch_gate.py`](fetch_gate.py): Gate.io USDT-perp hourly contract stats (top-trader and all-account long/short ratios, taker sizes, liquidations, open interest) for the coins of the Binance research universe.
 - [`fetch_gate_history.py`](fetch_gate_history.py): Gate.io's public bulk archive (gateio-public-data on S3, no keys): hourly candles and settled funding for every USDT perp, delisted ones included, from 2020-01 to the last complete month.
+- [`fetch_hip3stock.py`](fetch_hip3stock.py): Inputs for R475 hip3stock_v1 (short trade.xyz US-stock perps with high trailing funding, long the stock).
 - [`fetch_hl_vaults.py`](fetch_hl_vaults.py): Hyperliquid user-vault histories for M466 (vault persistence; edge map family F4).
 - [`fetch_hlp.py`](fetch_hlp.py): Hyperliquid's HLP vault (the exchange's community liquidity vault: market making, liquidations, a share of fees), measured from its public history (POST api.hyperliquid.xyz/info, vaultDetails, no ...
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
@@ -130,7 +131,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (200)
+## Run: one lane's frozen measurement (201)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -205,6 +206,7 @@ line is the first line of the script's own docstring.
 - [`run_gate_lanes.py`](run_gate_lanes.py): Lanes on Gate.io contract stats, traded on Binance returns: xvenue_v1 (R205, top traders vs the crowd measured on Gate) and liq_v1 (R206, liquidation cascades), as set out in their PREREGs.
 - [`run_gexfilter.py`](run_gexfilter.py): R416 gexfilter_v1: does the S&P 500 dealer gamma exposure (SqueezeMetrics' free daily GEX) known after the US close predict BTC and ETH volatility over the next US session, beyond VIX and the ...
 - [`run_hftlead.py`](run_hftlead.py): R367 hftlead_v1 runner, frozen in experiments/hftlead_v1/PREREG.md: does the Binance USDT or Bybit mid, when it has moved away from the Binance USDC mid, make a one-second passive quote on the ...
+- [`run_hip3stock.py`](run_hip3stock.py): R475 hip3stock_v1, frozen in experiments/hip3stock_v1/PREREG.md: funding carry on trade.xyz's US-stock perps.
 - [`run_hlpinv.py`](run_hlpinv.py): hlpinv_v1 (R454): HLP's inventory as a cross-sectional signal on Hyperliquid's main-dex perps (M510), as set out in experiments/hlpinv_v1/PREREG.md.
 - [`run_hlspot_carry.py`](run_hlspot_carry.py): hlspot_carry_v1 (R444, M503): Hyperliquid spot-against-perp carry on one venue.
 - [`run_hlspot_pm.py`](run_hlspot_pm.py): hlspot_pm_v1 (R445, M504): R444's Hyperliquid spot-against-perp carry on the two pairs whose spot token has a listed portfolio-margin LTV (HYPE and BTC), fully deployed: the book's capital is ...
