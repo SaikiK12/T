@@ -216,6 +216,12 @@ for active writers. Dated proposals, audits and source notes below retain histor
   R471 found that Bitcoin-linked stocks (MSTR, COIN, MARA, RIOT) open with Bitcoin's weekend move already priced
   and then neither follow nor fade it during Monday's session (slope +0.06, t 0.48; NULL,
   [findings](experiments/cryptomon_v1/FINDINGS.md), idea wave 8 [intake](research/intake/idea_wave8_20261112.md)).
+  R472 rebuilds Harvey, Mazzoleni and Melone's balanced-fund rebalancing rule on SPY/IEF closes, decided after
+  their published span at xyz SP500 + TLT cost (frozen, waiting for its data;
+  [lane](experiments/rebalfront_v1/README.md)).
+  R473 found the end-of-month Treasury rally (Hartley and Schwarz) still positive on TLT after 2018 before costs
+  (+24.7 bp a month, t 1.79), but only +13.0 bp (t 0.95) net of xyz's TLT perp cost, and xyz:TLT longs have paid
+  about 20%/yr funding since listing (PARTIAL, no lane; [findings](experiments/tlteom_v1/FINDINGS.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

@@ -16,15 +16,18 @@ for breakthroughs at 100% of compute".
 - Haiku helpers generate ideas in between.
 - The scheduled task is an hourly safety net only.
 
-**State on 2026-11-12 01:30 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
+**State on 2026-11-12 04:15 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
 - **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
 - **Closed:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
   R471 `cryptomon_v1` (M521) NULL: Bitcoin-linked stocks open with the weekend priced and do not drift after.
+  R473 `tlteom_v1` (M528) PARTIAL: the Treasury month-end rally survives on TLT before costs, but not net of
+  xyz:TLT's cost and funding (longs paid about 20%/yr since listing).
 - **Open queue rows:** wave 8 (`research/intake/idea_wave8_20261112.md`, owner: no shelving without web research)
-  re-read M521-M523. M522 awaits a forward lane on xyz SP500; M523's negative-gamma regime is nearly absent since
+  re-read M521-M523. M522 is R472 (frozen 78340957; its fetch waits for FRED, down via the proxy since ~03:00
+  UTC 11-12); M523's negative-gamma regime is nearly absent since
   2024-11 (18 of 504 sessions). M296 has too few events.
 
 **Test choice after the 2026-11-10 false-null audit:** compute the detectable edge before registering. Pool
@@ -446,3 +449,10 @@ waiting, and pick tests from our own measurements first.
   - M522 (month-end rebalancing): the authors' sample runs to 2025, so only a forward lane on xyz SP500 is clean.
   - M523 (end-of-day momentum): lives on negative-gamma days, 18 of 504 sessions since 2024-11. Not registered.
   - Program total 9,785,247.
+- 2026-11-12, R473 `tlteom_v1` (M528, new) PARTIAL. Found while R472 waited for FRED: Hartley and Schwarz's
+  end-of-month Treasury rally (1990-2018) as a long TLT over the last 3 trading days, priced for xyz:TLT.
+  - R (197 months, 2002-08..2018-12) +39.1 bp gross (t 4.15). U (94 months, 2019-01..2026-10) +24.7 (t 1.79); net
+    1x +13.0 (t 0.95) at 5.8 bp + 5.5%/yr funding; 2x +7.2, 3x +1.4. 2026 -51 bp (10 months). IEF U +22.2 (t 3.26).
+  - Post hoc: xyz:TLT longs paid a mean 20%/yr funding since listing (2026-09-17; median 5.5%), about 21 bp a hold.
+    No lane on the perp; reopen only on a funded instrument or with month-end funding near base.
+  - R472's FINDINGS must read its bond leg against that funding. Program total 9,785,249.
