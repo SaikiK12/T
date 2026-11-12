@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check, query and append the web search ledger (registry/web_searches.csv) without any network access.
 
-``audit(root: Path) -> dict`` returns ``summary`` (rows, errors) and ``issues`` (code, message). ``main(argv=None) -> int``
+``audit(root: Path) -> dict`` returns ``summary`` (rows, errors, warnings) and ``issues`` (severity, code, message). ``main(argv=None) -> int``
 implements ``check [--root --json --strict]``, ``seen TEXT`` and ``add --field value ...``. Only ``add`` writes, and
 only by appending one row through lab.websearch.append.
 """
@@ -12,6 +12,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lab import websearch
+from lab.registry import RegistryError
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,7 +25,10 @@ def audit(root: Path) -> dict:
     if not (root / websearch.LEDGER).exists():
         issues.append(dict(severity="error", code="WEBSEARCH_LEDGER_MISSING", message="ledger file is missing",
                            path=str(websearch.LEDGER)))
-    return dict(summary=dict(rows=len(rows), errors=len(issues), warnings=0), issues=issues)
+    errors = len(issues)
+    issues += [dict(severity="warning", code="WEBSEARCH_SUSPECT", message=m, path=str(websearch.LEDGER))
+               for m in websearch.warnings(rows)]
+    return dict(summary=dict(rows=len(rows), errors=errors, warnings=len(issues) - errors), issues=issues)
 
 
 def main(argv=None) -> int:
@@ -49,7 +53,8 @@ def main(argv=None) -> int:
         else:
             for issue in report["issues"]:
                 print(f"{issue['severity']} {issue['code']}: {issue['message']}")
-            print(f"web search ledger: {report['summary']['rows']} rows, {report['summary']['errors']} errors")
+            summary = report["summary"]
+            print(f"web search ledger: {summary['rows']} rows, {summary['errors']} errors, {summary['warnings']} warnings")
         return 1 if report["summary"]["errors"] or (args.strict and report["summary"]["warnings"]) else 0
     if args.command == "seen":
         hits = websearch.seen(Path(args.root), args.text)
@@ -60,7 +65,7 @@ def main(argv=None) -> int:
     fields = {c: getattr(args, c) for c in websearch.COLUMNS[1:]}
     try:
         row = websearch.append(Path(args.root), **fields)
-    except ValueError as error:
+    except (ValueError, RegistryError) as error:
         print(f"refused: {error}", file=sys.stderr)
         return 1
     print(f"appended {row['search_id']}")

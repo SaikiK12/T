@@ -44,6 +44,9 @@ List the destinations in `routed_to` (`;` separated repo paths) and the affected
 assigns the next `WSnnnn` id under `registry._lock`, validates, and appends one row. The ledger is append-only: never
 edit earlier rows. `check` validates only the current content, so it does not detect an edited or deleted earlier row;
 review ledger diffs for changes above the last line. Rows backfilled from older notes say so in `note`.
+`check` fails when the header differs from the expected columns. It warns (and `check --strict` fails) on a
+`FETCHED_PARTIAL` row with an empty `note`, on `SEARCH_SUMMARY_ONLY` without the `search_summary` tier or the reverse,
+and on a `VERIFIED` row that is `SEARCH_SUMMARY_ONLY`.
 
 A row that covers several sources records the weakest `source_tier` and `verification` that applies to any of them, or
 is split into one row per source. WS0001 predates this rule: its `primary` and `VERIFIED` overstate a mixed wave that

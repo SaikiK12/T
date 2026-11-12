@@ -35,6 +35,16 @@ def load(root):
         return list(csv.DictReader(handle))
 
 
+def header(root):
+    """Return the ledger's header row as a tuple; None for an absent or empty ledger."""
+    path = Path(root) / LEDGER
+    if not path.exists():
+        return None
+    with path.open(newline="", encoding="utf-8") as handle:
+        first = next(csv.reader(handle), None)
+    return tuple(first) if first else None
+
+
 def _queue_ids(root):
     ids = set()
     for name, columns in (("methods.csv", ("id",)), ("methods_aliases.csv", ("rec_id", "queue_id"))):
@@ -47,8 +57,12 @@ def _queue_ids(root):
 
 
 def validate(rows, root=None):
-    """Return a list of problem strings (empty when valid). With ``root`` also check paths and queue ids."""
+    """Return a list of problem strings (empty when valid). With ``root`` also check the header, paths and queue ids."""
     problems = []
+    if root is not None:
+        found = header(root)
+        if found is not None and found != COLUMNS:
+            problems.append(f"header: columns {found} differ from {COLUMNS}")
     seen_ids = set()
     known = _queue_ids(root) if root is not None else None
     for number, row in enumerate(rows, 1):
@@ -81,6 +95,21 @@ def validate(rows, root=None):
                 if queue_id not in known:
                     problems.append(f"{tag}: queue id {queue_id} not in registry/methods.csv or aliases")
     return problems
+
+
+def warnings(rows):
+    """Return label combinations that docs/WEB_SEARCH.md treats as suspect but that are not invalid."""
+    found = []
+    for number, row in enumerate(rows, 1):
+        tag = row.get("search_id") or f"row {number}"
+        status, tier = row.get("fetch_status"), row.get("source_tier")
+        if status == "FETCHED_PARTIAL" and not (row.get("note") or "").strip():
+            found.append(f"{tag}: FETCHED_PARTIAL with an empty note (name the pages read)")
+        if (status == "SEARCH_SUMMARY_ONLY") != (tier == "search_summary"):
+            found.append(f"{tag}: fetch_status {status} with source_tier {tier} (summary labels must agree)")
+        if status == "SEARCH_SUMMARY_ONLY" and row.get("verification") == "VERIFIED":
+            found.append(f"{tag}: VERIFIED with SEARCH_SUMMARY_ONLY (a claim seen only in a summary stays unread)")
+    return found
 
 
 def append(root, **fields):

@@ -1,4 +1,6 @@
+import contextlib
 import csv
+import io
 import json
 import subprocess
 import sys
@@ -90,6 +92,56 @@ class WebSearchTest(unittest.TestCase):
         self.assertEqual(websearch.load(self.root)[0]["query"], "cli q")
         self.assertEqual(web_search_ledger.main([*base, "--verification", "MAYBE"]), 1)
         self.assertEqual(len(websearch.load(self.root)), 1)
+
+    def test_header_mismatch_is_an_error(self):
+        from scripts import web_search_ledger
+        websearch.append(self.root, **GOOD)
+        path = self.root / websearch.LEDGER
+        lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+        original = lines[0]
+        for bad in (",".join(websearch.COLUMNS[:-1]) + "\n", ",".join((*websearch.COLUMNS, "extra")) + "\n",
+                    ",".join((websearch.COLUMNS[1], websearch.COLUMNS[0], *websearch.COLUMNS[2:])) + "\n"):
+            path.write_text(bad + "".join(lines[1:]), encoding="utf-8")
+            problems = websearch.validate(websearch.load(self.root), self.root)
+            self.assertTrue(any(p.startswith("header:") for p in problems), bad)
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(web_search_ledger.main(["check", "--root", str(self.root)]), 1)
+        path.write_text(original + "".join(lines[1:]), encoding="utf-8")
+        self.assertEqual(websearch.validate(websearch.load(self.root), self.root), [])
+
+    def test_cli_add_reports_lock_timeout_without_traceback(self):
+        from lab.registry import RegistryError
+        from scripts import web_search_ledger
+
+        def timeout(root, **fields):
+            raise RegistryError("registry/web_searches.csv.lock held for over 10.0s")
+        real = websearch.append
+        websearch.append = timeout
+        err = io.StringIO()
+        try:
+            with contextlib.redirect_stderr(err):
+                code = web_search_ledger.main(["add", "--root", str(self.root), "--agent", "a", "--query", "q"])
+        finally:
+            websearch.append = real
+        self.assertEqual(code, 1)
+        self.assertEqual(len(err.getvalue().strip().splitlines()), 1)
+        self.assertIn("held for over", err.getvalue())
+        self.assertNotIn("Traceback", err.getvalue())
+
+    def test_strict_fails_only_when_a_warning_exists(self):
+        from scripts import web_search_ledger
+        check = ["check", "--root", str(self.root)]
+        websearch.append(self.root, **GOOD)
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(web_search_ledger.main([*check, "--strict"]), 0)
+            websearch.append(self.root, **{**GOOD, "query": "partial", "fetch_status": "FETCHED_PARTIAL"})
+            self.assertEqual(web_search_ledger.audit(self.root)["summary"], dict(rows=2, errors=0, warnings=1))
+            self.assertEqual(web_search_ledger.main(check), 0)
+            self.assertEqual(web_search_ledger.main([*check, "--strict"]), 1)
+        self.assertEqual(len(websearch.warnings([{**GOOD, "fetch_status": "SEARCH_SUMMARY_ONLY"}])), 1)
+        self.assertEqual(len(websearch.warnings([{**GOOD, "source_tier": "search_summary"}])), 1)
+        self.assertEqual(len(websearch.warnings([{**GOOD, "fetch_status": "SEARCH_SUMMARY_ONLY",
+                                                  "source_tier": "search_summary", "verification": "VERIFIED"}])), 1)
 
     def test_committed_ledger_passes_and_cli_agrees(self):
         self.assertEqual(websearch.validate(websearch.load(ROOT), ROOT), [])
