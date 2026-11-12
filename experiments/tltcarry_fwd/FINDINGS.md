@@ -36,3 +36,10 @@ Yahoo had no DTLA bar for 2026-11-11 at the fetch, so the span ends on 11-10.
   about +4 points over the bill; at zero, about 0.
 - Costs here are assumed (5 bp ETF, 2.9 bp perp, 10 bp per transfer). Neither book's cost was measured.
 - Venue, transfer, currency and tax risks are not in the paper book (PREREG, Risks).
+- **Deployer exit is a live risk, not a theoretical one** (checked 2026-11-12, after the freeze):
+  - Of the nine other HIP-3 deployers in Hyperliquid's perpDexs, six have delisted every market: flx, vntl, hyna, km,
+    abcd and cash.
+  - Felix shut its dex on 2026-06-19/20 and Ventuals wound down in June 2026. News reports put trade.xyz above 90% of
+    HIP-3 open interest.
+  - A shutdown settles positions at the venue's price on short notice. The hedge would then be left as an unhedged
+    DTLA position until it is sold. R476 measures what such exits cost a stock-perp carry book.
