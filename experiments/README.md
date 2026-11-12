@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (45)
+## Running or armed registered rounds (46)
 
+- **[rollcarry_v1](rollcarry_v1/)** R478, RUNNING PENDING, 3 trials. M532 gate 0: short trade.xyz's futures-priced perps (NATGAS decides; CL, BRENTOIL reported) and hold the US fund on the same front futures (UNG, USO, BNO), M = 1/3: does funding exceed the roll-up the oracle passes to longs, against the 13-week bill ([PREREG](rollcarry_v1/PREREG.md))
 - **[xyztwin_v1](xyztwin_v1/)** R477, RUNNING PENDING, 3 trials. M531 gate 0: R475's frozen funding carry (5 slots, enter >= 12%/yr trailing funding, exit < 6%, M = 1/3) on 13 trade.xyz index, ETF and metal perps, each hedged with a USD UCITS ETF or ETC twin on the LSE (SMH.L, URNM.L, CSKR.L, IJPA.L, NDIA.L, CSPX.L, CNDX.L, XLES.L, IGLN.L, PHAG.L, DTLA.L), against the 13-week bill ([PREREG](xyztwin_v1/PREREG.md))
 - **[hip3other_v1](hip3other_v1/)** R476, RUNNING PENDING, 3 trials. M530 replication: R475's frozen stock-perp funding carry (5 slots, enter >= 12%/yr trailing 28-day funding, exit < 6%, long the stock, M = 1/3) on every HIP-3 deployer but trade.xyz (Felix, Kinetiq, Dreamcash, mkts in A; Paragon, EntropyIO in B), against the 13-week bill ([PREREG](hip3other_v1/PREREG.md))
 - **[tltcarry_fwd](tltcarry_fwd/)** R474, RUNNING PENDING, 1 trial. M529 forward: hedged TLT carry, long the iShares $ Treasury Bond 20+yr UCITS ETF (DTLA, London) and short the same notional of xyz:TLT with 1/3 USDC margin, marked at the London close; keeps the coupons plus the funding xyz:TLT longs pay; futility read 2027-02-13 (NULL if annualized excess over the 13-week bill < 0); final read 2027-05-15 decides: PASS if excess >= 2 points a year at NW t >= 2.0 ([PREREG](tltcarry_fwd/PREREG.md), [FINDINGS](tltcarry_fwd/FINDINGS.md))

@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (50)
+## Fetch: download archives and public history (51)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -44,6 +44,7 @@ line is the first line of the script's own docstring.
 - [`fetch_orb_pilot.py`](fetch_orb_pilot.py): Bounded, public, exclusive raw acquisition for the frozen ORB pilot.
 - [`fetch_rebalfront.py`](fetch_rebalfront.py): Inputs for R472 rebalfront_v1 (front-running balanced-fund rebalancing, Harvey, Mazzoleni and Melone).
 - [`fetch_rebalfront_h15.py`](fetch_rebalfront_h15.py): R472's frozen fetch (scripts/fetch_rebalfront.py) with DTB3 taken from its primary publisher, the Federal Reserve Board.
+- [`fetch_rollcarry.py`](fetch_rollcarry.py): Inputs for rollcarry_v1 (M532): trade.xyz's futures-priced perps and the US funds that hold the same front futures.
 - [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
@@ -134,7 +135,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (203)
+## Run: one lane's frozen measurement (204)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -284,6 +285,7 @@ line is the first line of the script's own docstring.
 - [`run_reserved_batch.py`](run_reserved_batch.py): Reserved batch 1 (docs/GATES.md): every candidate the earlier lanes pre-committed, read once on the reserved samples and decided together.
 - [`run_reserved_batch3.py`](run_reserved_batch3.py): R392 reserved batch 3 (docs/GATES.md): three pre-committed candidates, read once, as set out in experiments/reserved_batch3/PREREG.md.
 - [`run_rnfade.py`](run_rnfade.py): rnfade_v1 (R249): fade the day's first close through a round-number level (two- or one-significant-figure grid), held 4 h or 24 h, against the same book on a half-step-shifted grid, on the crypto ...
+- [`run_rollcarry.py`](run_rollcarry.py): rollcarry_v1 (M532), frozen in experiments/rollcarry_v1/PREREG.md: does the funding on trade.xyz's futures-priced perps exceed the futures roll its oracle passes to longs?.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
