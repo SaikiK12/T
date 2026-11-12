@@ -53,7 +53,8 @@ directional ideas into one family or run them forward; prefer structural, high-S
 **Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
 R392 was frozen and read on 2026-11-10 (PARTIAL, `registry/rounds.csv`).
 R404's recorder moved to `claude-book-costs-recorder.yml` (live once on the default branch). Close rule: DATA_PASS at
->= 40 snapshots with all three venues in the window, counted from `digests.csv` plus branch `claude/book-costs-data`.
+>= 40 snapshots with all three venues in the window; the close reports the count on `claude/book-costs-data` alone
+and with the six lost local snapshots (only the first proven three-venue). Local R404/REC_DIGEST must not run.
 
 ## Lenses last used
 1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,

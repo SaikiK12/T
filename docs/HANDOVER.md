@@ -21,8 +21,11 @@ that they no longer have Codex.
   - R392's freeze before 11-17 (its read on or after 11-17); done early: frozen and read on 2026-11-10 by the
     owner's 2026-11-09 decision, PARTIAL (`registry/rounds.csv` R392);
   - R404's 11-18 close; its recorder runs from `.github/workflows/claude-book-costs-recorder.yml` once that is on
-    the default branch (2026-11-12); DATA_PASS needs >= 40 snapshots with all three venues in the window, counted
-    from `experiments/recorders/journal/digests.csv` plus branch `claude/book-costs-data`;
+    the default branch (2026-11-12); DATA_PASS needs >= 40 snapshots with all three venues in the window. The
+    close reports two counts: three-venue files on branch `claude/book-costs-data`, and that count plus the six
+    lost local snapshots in `experiments/recorders/journal/digests.csv` (only the first proven to have all three
+    venues; `experiments/book_costs_v1/DEVIATIONS.md`). Do not run the local task graph's R404 or REC_DIGEST
+    tasks while the workflow is the writer (a second writer for the same slots);
   - a registered successor if R406 or R413 locks mature after 11-19.
 - **No always-on host:** the chat container sleeps between sessions, so no recorder or daemon runs in between.
 - **Check-in:** a one-shot check-in is scheduled in Claude's session for 2026-11-16 11:20 UTC (trigger
@@ -50,6 +53,7 @@ github-actions[bot]. None needs a key, and none can place an order.
 | `claude-futroll-recorder.yml` | 04:23 and 16:23 | data branch `claude/futroll-data`: Yahoo 60-minute bars of the NG, CL and BZ contracts xyz's NATGAS, CL and BRENTOIL reference, and those perps' 1-hour candles and funding (R480 depends on it: Yahoo drops expired contracts) |
 | `claude-xvroll.yml` | 08:53 on 15-18 May and 13-16 November (refuses before 2027-05-15 / 2027-11-13; reads `claude/futroll-data` read-only) | `experiments/xvroll_fwd/results/futility/` and `results/final/` (R482: short xyz:NATGAS, long Lighter NATGAS at equal notional; WTI and BRENTOIL reported) |
 | `claude-cuho-recorder.yml` | 04:29 and 16:29 | data branch `claude/cuho-data`: the same for xyz:COPPER (COMEX HG contracts) and xyz:HO (NYMEX ULSD). No lane reads it yet; values stay unread until one is frozen (M532) |
+| `claude-book-costs-recorder.yml` | every 3-hour slot at :11 and :47 in its first hour and :29 in its second; `claude-clock.yml` also dispatches it at :20 in both hours; ends 2026-11-18 00:00 UTC (later runs do nothing); a run is red when its new file lacks a venue | data branch `claude/book-costs-data`: R404's order-book snapshots (dYdX, KuCoin, MEXC); `experiments/recorders/journal/digests.csv` and `experiments/book_costs_v1/journal/status.json` on the default branch |
 | `claude-cboe-recorder.yml` | 13:12 and 21:33 on weekdays | data branch `claude/cboe-chain-data` (QQQ/SPY/SPX chains) |
 | `claude-flow-paper.yml` | dispatched by `claude-clock.yml` at :14 and :40; cron at :17, :32 and :47 as a second path; all of these tick only if R200 has an hour left to compute | the flow-book lanes' journals: R200, R214, R215, R218, R220, R221 and R225 (stopped with the container on 2026-11-06; caught up on the first run), R448 (the books on Hyperliquid) and R451 (the stock-perp books on Hyperliquid's xyz) from 2026-11-12, and R449's hedge tickets (JLP and GM, written the day before) |
 | `claude-clock.yml` | one run of about 5 h 45 min, then it dispatches itself; cron every 3 h restarts a lost chain | nothing: it starts the time-bound workflows on the clock (GitHub starts their crons 40-90 min late) |
