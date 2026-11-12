@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (45)
+## Running or armed registered rounds (46)
 
+- **[hip3other_v1](hip3other_v1/)** R476, RUNNING PENDING, 3 trials. M530 replication: R475's frozen stock-perp funding carry (5 slots, enter >= 12%/yr trailing 28-day funding, exit < 6%, long the stock, M = 1/3) on every HIP-3 deployer but trade.xyz (Felix, Kinetiq, Dreamcash, mkts in A; Paragon, EntropyIO in B), against the 13-week bill ([PREREG](hip3other_v1/PREREG.md))
 - **[hip3stock_v1](hip3stock_v1/)** R475, RUNNING PENDING, 3 trials. M530 gate 0: weekly-selected funding carry on trade.xyz US-stock perps (short up to 5 perps with trailing 28-day funding >= 12%/yr, exit < 6%, long the same stocks at a broker, M = 1/3), against the 13-week bill ([PREREG](hip3stock_v1/PREREG.md))
 - **[tltcarry_fwd](tltcarry_fwd/)** R474, RUNNING PENDING, 1 trial. M529 forward: hedged TLT carry, long the iShares $ Treasury Bond 20+yr UCITS ETF (DTLA, London) and short the same notional of xyz:TLT with 1/3 USDC margin, marked at the London close; keeps the coupons plus the funding xyz:TLT longs pay; futility read 2027-02-13 (NULL if annualized excess over the 13-week bill < 0); final read 2027-05-15 decides: PASS if excess >= 2 points a year at NW t >= 2.0 ([PREREG](tltcarry_fwd/PREREG.md), [FINDINGS](tltcarry_fwd/FINDINGS.md))
 - **[rebalfront_v1](rebalfront_v1/)** R472, RUNNING PENDING, 1 trial. M522 gate 0: front-running balanced-fund rebalancing (Harvey, Mazzoleni and Melone) on SPY/IEF closes: position mean(-Threshold/1.5%, CalMod) in stocks minus bonds, next day; R (2002-09..2023-03-17) must reproduce both slopes at t <= -2; U (2023-03-20..2026-11-11) decides: 1x net mean > 0 with NW t >= 1.0 and 2x > 0, unit 4.2 bp per |dw| (xyz SP500 + 0.45 TLT) ([PREREG](rebalfront_v1/PREREG.md))
