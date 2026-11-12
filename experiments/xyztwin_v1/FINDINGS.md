@@ -58,6 +58,9 @@ PREREG `2ee0cbb4`, frozen and pushed before the fetch. One frozen run on 2026-11
 - Post hoc (`summary.json` lists only the drop): TLT had 39 marks, and its correlation with DTLA over 38 returns is
   0.78, above the 0.5 bar. It was dropped by the NaN, not by its returns.
 - TLT listed on 2026-09-17, so only B is affected. TLT's B funding (20%/yr) would probably have taken a slot.
+- Rerun with the NaN dropped (`experiments/hip3stock_v1/posthoc/identity_nan.py`): A unchanged; B +13.12 (t 1.85)
+  instead of +12.92, carry only +4.14, with one TLT trade.
+- The same flaw sits in R475's check and dropped 6 names there and 8 in R476, all listed after A.
 - R474 trades the TLT pair forward on its own. A forward lane built on this rule must drop the NaN first.
 - Correlations of the kept pairs (last 59 returns): 0.96-0.98, except JP225 against IJPA.L at 0.75 (Nikkei 225
   against MSCI Japan IMI, priced 30 minutes apart).

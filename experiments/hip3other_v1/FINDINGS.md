@@ -18,9 +18,11 @@
 PREREG `5893d9ec`, frozen and pushed before the fetch. One frozen run on 2026-11-12 at 08:23 UTC (`results/`).
 - **Data** (`docs/provenance/hip3other.json`):
   - 183 markets on nine dexes, of which 75 listings are US equities by Yahoo's metadata.
-  - 37 were kept. 23 were dropped by R475's return-correlation identity check: crypto, gold and WTI tickers that
-    collide with US stocks, plus para_TTWO, para_MELI, para_SOFI, para_CIFR and six io names. 15 were dropped with
-    no funding or candles (hyna_GOLD, all ten mkts listings and four io names).
+  - 37 were kept. 23 were dropped by R475's identity check: crypto, gold and WTI tickers that collide with US
+    stocks, plus para_TTWO, para_MELI, para_SOFI, para_CIFR, cash_CAR and six io names. 15 were dropped with no
+    funding or candles (hyna_GOLD, all ten mkts listings and four io names).
+  - 8 of the 23 were dropped only by a NaN in the frozen check (fewer than 60 marks; see "A flaw in the identity
+    check" below).
 - Trials 3; program trials 9,785,262.
 
 ## Results (annualized points of capital; costs at 1x unless stated)
@@ -46,7 +48,7 @@ PREREG `5893d9ec`, frozen and pushed before the fetch. One frozen run on 2026-11
 | Kinetiq (km) | BABA, BMNR, MU | 1 by rule, 2 at shutdown (06-10, 06-15) | A |
 | Felix (flx) | NVDA | at shutdown (06-18) | A |
 | Paragon (para) | COHR, IREN, CRDO, VST, AVGO, GLW, AAOI, NET, CIEN | 4 by rule, 5 open at the end | B (AVGO opened 06-18) |
-| EntropyIO (io) | none | only io_SNDK passed the identity check | |
+| EntropyIO (io) | none | only io_SNDK passed the frozen identity check (IONQ, NBIS, GPRO failed on its NaN) | |
 
 - **What the shutdowns did to the paper book:**
   - On the five exit days the price leg added +0.46% of capital; on every other day of A it added −0.54%.
@@ -80,6 +82,15 @@ PREREG `5893d9ec`, frozen and pushed before the fetch. One frozen run on 2026-11
   - Felix, Kinetiq and Dreamcash all shut in June 2026, and six of nine trades in A ended that way.
   - A forward book on Paragon carries the same risk: the deployer can delist and settle at its own price.
 - **Fee schedules:** each deployer sets its own share. The paper charges R475's flat rule.
+
+## A flaw in the identity check (post hoc, decides nothing)
+- R475's frozen check returns NaN for a market with fewer than 60 marks (`experiments/hip3stock_v1/FINDINGS.md`).
+- Here it dropped cash_CAR, para_MELI, para_SOFI, para_TTWO, para_CIFR, io_IONQ, io_NBIS and io_GPRO. Their price
+  ratios were within 0.3% of 1 and their return correlations 0.90-0.99.
+- Rerun with the NaN dropped (`experiments/hip3stock_v1/posthoc/identity_nan.py`):
+  - A unchanged (+3.12, t 2.14).
+  - B +9.45 (t 2.96) instead of +10.63, carry only +10.26; io_GPRO, io_NBIS and para_MELI were traded.
+- So EntropyIO did list stock perps that passed identity. The forward lane's universe should include them.
 
 ## Reading against program trials (9,785,262)
 - One pre-named rule (R475's, frozen before this fetch) on new venues: a genuine replication, not a new search.

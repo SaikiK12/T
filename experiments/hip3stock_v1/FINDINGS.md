@@ -60,6 +60,16 @@ identity check, 7 with no funding or candles). Trials 3; program trials 9,785,25
 - This is the pattern of R462, R465, R468 and R470: large effects in the first months of the stock-perp venues,
   flat afterwards.
 
+## A flaw in the identity check (post hoc, decides nothing)
+- The frozen check (`Market.identity_ok`) correlates `diff().tail(59)` of daily log returns. With fewer than 60
+  marks the first return is NaN, the correlation is NaN, and the market fails.
+- Of the 10 identity drops, 6 were this flaw alone: BMNR, CVX, GLW, LRCX, TWST and UMC (27-48 marks, price ratio
+  within 0.3% of 1, correlation 0.85-0.99). GOLD and CL are real collisions; TTWO and ICE had under 20 marks.
+- Rerun with the NaN dropped (`posthoc/identity_nan.py`, `.csv`, `.log`):
+  - A unchanged (+11.18, t 2.03): all six listed after it.
+  - B +8.62 (t 1.09) instead of +8.86; BMNR and CVX were traded. Carry only −0.93.
+- The same flaw sits in R476 (8 names) and R477 (TLT). Any forward lane must drop the NaN first.
+
 ## Reading against program trials (9,785,259)
 One pre-named rule with three reported configurations. A t of 2.03 means little against the program's search. The
 lab's precedent is to let forward evidence decide, never to treat a gate-0 PASS as an edge. A PASS that turns PARTIAL
