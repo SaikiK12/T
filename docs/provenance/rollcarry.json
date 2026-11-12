@@ -1,0 +1,118 @@
+{
+"folder": "data/rollcarry",
+"source": "api.hyperliquid.xyz (xyz NATGAS, CL, BRENTOIL: funding, 4h and 1h candles) + Yahoo chart (UNG, USO, BNO, IRX)",
+"script": "scripts/fetch_rollcarry.py",
+"recorded_utc": "2026-11-12T08:32:14Z",
+"excluded": [],
+"files": 18,
+"bytes": 1981600,
+"combined_sha256": "ac18fa6e5b4a9bd74f3984150e1ff174accc9da562ff557c30ec79823c8d3be1",
+"subfolders": {
+".": {
+"files": 1,
+"bytes": 2174
+},
+"xyz": {
+"files": 9,
+"bytes": 1845541
+},
+"yahoo": {
+"files": 8,
+"bytes": 133885
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "manifest.json",
+"bytes": 2174,
+"sha256": "06df0baae81bf16dfef0e726b3f02f587bd29dd3ed08dee7ac9ffa9e64c54bd9"
+},
+{
+"path": "xyz/BRENTOIL_1h.csv",
+"bytes": 251279,
+"sha256": "dfa3558660d9bffffe71720404bc908e3a10e4f4d0346ef67f7e144549515d7d"
+},
+{
+"path": "xyz/BRENTOIL_4h.csv",
+"bytes": 77877,
+"sha256": "7db0e7123b761bb0015f81ba5fcb63b910a15e3e2afb095888c520168af6ce03"
+},
+{
+"path": "xyz/BRENTOIL_funding.csv",
+"bytes": 243789,
+"sha256": "40b500e87baf2817ed721aba1f89e8a4c5167a11bdfcee4b7228c222615009d5"
+},
+{
+"path": "xyz/CL_1h.csv",
+"bytes": 257850,
+"sha256": "6e7e190e7edf906c662d9e1f8c4a1bb8bed928e97d619586c3c4337d5730ddfa"
+},
+{
+"path": "xyz/CL_4h.csv",
+"bytes": 97750,
+"sha256": "6341d3d7fb41401f5661a38579031bf6b1d3b3327faccd97d8b84949ec3626f0"
+},
+{
+"path": "xyz/CL_funding.csv",
+"bytes": 298663,
+"sha256": "4dd5b52747ee89e4d809b1718bdd158b3a2c00fba6136324fc4ddb533b5fb1b0"
+},
+{
+"path": "xyz/NATGAS_1h.csv",
+"bytes": 248296,
+"sha256": "3df7426ef86170640648010c0b116261ddc1a8deebca2a7efcf999873df12c72"
+},
+{
+"path": "xyz/NATGAS_4h.csv",
+"bytes": 90352,
+"sha256": "5659df6c6a82cae661be029fe98d171b183e2ad526f5a5bb5c6976d771ff3ad7"
+},
+{
+"path": "xyz/NATGAS_funding.csv",
+"bytes": 279685,
+"sha256": "1cafd075d059010169c676ec09d7d989767f932ed7c7731ba1d91042612ffeb8"
+},
+{
+"path": "yahoo/BNO.json",
+"bytes": 26964,
+"sha256": "a4b157223227f57b13eb739cc838b7b0d8307f7369322c0fa0f712b83399fdbe"
+},
+{
+"path": "yahoo/BNO.parquet",
+"bytes": 6932,
+"sha256": "e328344a502c44f3ba6c393b2f2234621e1f03093d80d31fc55327202ac58760"
+},
+{
+"path": "yahoo/IRX.json",
+"bytes": 26240,
+"sha256": "14240263f95503995551180d9034b865699b5f4e5a8a043f7e4aeca1795118c4"
+},
+{
+"path": "yahoo/IRX.parquet",
+"bytes": 5480,
+"sha256": "639b5dafb1e491ff6e28921b2ca240722402fd9ccabeb0c710268d5a4a6c7f6e"
+},
+{
+"path": "yahoo/UNG.json",
+"bytes": 27678,
+"sha256": "b37ad3a14d1819f349d53459dc30f440e62673e7d7ce2dcba65e95100ee1870e"
+},
+{
+"path": "yahoo/UNG.parquet",
+"bytes": 6390,
+"sha256": "8463a0bce90e26489b969169d44a9e3e58b5029bcc2619529eed6cfeff95f866"
+},
+{
+"path": "yahoo/USO.json",
+"bytes": 27291,
+"sha256": "cf9fd7aa05bf5eefdc6f367376c953d7660b924cfe25c2e974d33d12f22c30e0"
+},
+{
+"path": "yahoo/USO.parquet",
+"bytes": 6910,
+"sha256": "759bb748de6a77196dbe2eae34caef3673da14448df68c72133181f317ce0488"
+}
+]
+}
