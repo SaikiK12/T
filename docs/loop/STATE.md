@@ -507,3 +507,12 @@ waiting, and pick tests from our own measurements first.
   - COPPER (bimonthly rolls, listed 2026-01-14) has 5 rolls of history, 3 unseen, which is too few for a gate 0. HO
     was listed on 2026-10-01. Started `claude-cuho-recorder.yml` (`scripts/record_cuho.py`) so a forward lane stays
     possible; nothing on them is registered or read.
+- 2026-11-12 ~13:40-14:30 UTC: M532 on Lighter.
+  - R481 `ltroll_v1` frozen (`d6696eb3`, pushed `c89fdc95`) before the fetch. It ran once: **NULL**.
+    - Lighter NATGAS funding (+52.3%/yr of notional) paid for its roll-up (+50.0%).
+    - Excess −0.41 points a year (t −0.11) over 7 cycles to the October roll; Lighter moved WTI, NATGAS and XCU to
+      RedStone on 10-22.
+  - Lighter's and xyz's roll measures agree within 0.22% per cycle. So R478's carry is xyz's funding, not the roll.
+    Post hoc, xyz NATGAS longs paid +0.77% of notional a cycle more than Lighter's.
+  - New M533 (QUEUED): the xyz-vs-Lighter NATGAS pair, with no futures broker. It is only testable forward, and
+    RedStone's roll on Lighter is undocumented.
