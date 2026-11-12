@@ -16,4 +16,14 @@ minus the roll-up the oracle passes them, minus costs. NATGAS decides; CL and BR
 Paper only. No order, no money, no key.
 
 ## Faults and notes
-- (none yet)
+- 2026-11-12, after the freeze (read only; nothing in the book changes): xyz's Roll Schedules page
+  (https://docs.trade.xyz/llms-full.txt, "Roll Schedules") lists each window as "<business day 5> 5:30PM ET to
+  <business day 9> 5:30PM ET". Its WTIOIL example: 80/20 on 2026-10-07 (business day 5), 60/40, 40/60, 20/80, and
+  0/100 on 10-13 (business day 9). This matches the runner's weights (0.2 after the mark of business day 5 ... 1.0
+  after business day 9). The designated contracts also match (NATGAS and WTIOIL the next calendar month, BRENTOIL the
+  one after; e.g. NATGAS Z26 to F27 in November 2026).
+  - Typos in xyz's own table: the August 2027 window reads "2027-08-06 to 2027-08-11" (business days 5-8), and June
+    2027 ends "2027-06-011". If xyz really rolls in four steps in August 2027, the paper hedge is off by one day's
+    calendar-spread change in that cycle. That is forward risk, not repaired.
+  - The same page lists COPPER (bimonthly: Z6 to H7 in November 2026) and DIESEL (ULSD, xyz:HO) as futures-referenced.
+    Neither is in this lane.

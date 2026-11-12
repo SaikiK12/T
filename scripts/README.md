@@ -62,11 +62,12 @@ line is the first line of the script's own docstring.
 - [`fetch_xyz_wknd.py`](fetch_xyz_wknd.py): Inputs for R462 xyzwknd_v1 (trade.xyz US-equity perps over the weekend).
 - [`fetch_xyztwin.py`](fetch_xyztwin.py): Inputs for R477 xyztwin_v1: xyz index, ETF and metal perps against a USD UCITS ETF or ETC twin on the LSE. Keyless.
 
-## Record: point-in-time collectors (cannot be backfilled) (38)
+## Record: point-in-time collectors (cannot be backfilled) (39)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
 - [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
 - [`record_commodity_perps.py`](record_commodity_perps.py): Best quote, trades and reference prices of the 24/7 commodity and index perps on Hyperliquid (HIP-3 `xyz` dex) and Kraken Futures, plus Binance's own TradFi perps, side by side (M443 WTI ...
+- [`record_cuho.py`](record_cuho.py): Recorder for trade.xyz's other futures-referenced perps, COPPER and HO (DIESEL), and the contracts they reference.
 - [`record_deribit_chain.py`](record_deribit_chain.py): Hourly snapshot of the Deribit option chains (BTC, ETH, and the USDC-settled ones such as SOL and XRP): open interest, mark implied volatility, prices and the underlying of every listed option, ...
 - [`record_dex_prices.py`](record_dex_prices.py): Hourly on-chain pool prices next to the MEXC perp price of the same coin, for M288 (DEX-CEX gap; the prop trader's "on-chain AMMs against exchange futures", docs/VENUE_STRUCTURE.md).
 - [`record_dex_vaults.py`](record_dex_vaults.py): Recorder for two public liquidity vaults on perp DEXes that do not exclude France (M505): Hyperliquid's HLP vault and Lighter's LLP pool.

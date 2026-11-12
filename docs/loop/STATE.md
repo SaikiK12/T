@@ -42,6 +42,8 @@ for breakthroughs at 100% of compute".
   total positive at assumed and measured costs. Paragon and EntropyIO books are now recorded (`hip3/`).
   R480 `futroll_fwd` (M532 forward from 2026-11-13): short xyz:NATGAS hedged with the NYMEX contracts its oracle
   references, rolled on xyz's own days; recorder `claude-futroll-recorder.yml` writes `claude/futroll-data`.
+  Recorder only (no lane): `claude-cuho-recorder.yml` keeps xyz:COPPER and xyz:HO with the HG/HO contracts they
+  reference on `claude/cuho-data`, unread, so a frozen M532 lane on them stays possible.
 - **Open queue rows:** M523's negative-gamma regime is nearly absent since 2024-11 (18 of 504 sessions). M296 has
   too few events. M532 runs forward in R480 with NYMEX futures; French access to CME energy futures is not verified.
 
@@ -497,3 +499,11 @@ waiting, and pick tests from our own measurements first.
     `m532_hedge_20261112.md`).
   - R480 keeps R478's book with a rolled-futures total-return index for the hedge; NATGAS decides at cycle 6
     (futility) and 12 (final).
+- 2026-11-12 ~13:00-13:40 UTC: wake checks and M532's other markets.
+  - Both R480 workflows ran green on dispatch: the recorder wrote all 12 contracts and the 3 perps, and the read did
+    nothing before its date. #7 FYI posted. The hourly task's prompt now carries R480.
+  - xyz's Roll Schedules page confirms R480's weights and contracts. Two typos in xyz's 2027 table (August's window
+    reads business days 5-8) are noted in R480's README as forward risk.
+  - COPPER (bimonthly rolls, listed 2026-01-14) has 5 rolls of history, 3 unseen, which is too few for a gate 0. HO
+    was listed on 2026-10-01. Started `claude-cuho-recorder.yml` (`scripts/record_cuho.py`) so a forward lane stays
+    possible; nothing on them is registered or read.
