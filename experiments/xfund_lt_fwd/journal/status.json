@@ -1,21 +1,30 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-11T01:59:07.082587+00:00",
+ "updated": "2026-11-12T02:09:13.655807+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 1.0,
-  "lighter": 0.951
+  "mexc": 0.932,
+  "lighter": 1.051
  },
  "data": {
-  "lighter": {
-   "files": 195,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "mexc": {
    "files": 117,
+   "failed": 8,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "JUP_USDT",
+    "LIT_USDT",
+    "TIA_USDT",
+    "TRX_USDT",
+    "UNI_USDT",
+    "WIF_USDT",
+    "XPT_USDT",
+    "XRP_USDT"
+   ]
+  },
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -149,16 +158,16 @@
     "spread_in": 0.1066
    }
   ],
-  "scored_days": 19,
+  "scored_days": 20,
   "late_days": 15,
-  "total": -4.474990000000006e-05,
-  "total_2x": -0.0015297499,
-  "total_3x": -0.0030147498999999996,
-  "total_close": 0.000645809,
-  "nw_t": -0.04502312719637248,
-  "max_drawdown": -0.0022982623,
+  "total": -0.0014026998000000001,
+  "total_2x": -0.0029426998000000003,
+  "total_3x": -0.0044826998,
+  "total_close": -0.0007185570999999999,
+  "nw_t": -1.1437735974753738,
+  "max_drawdown": -0.0026059508,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-11"
+ "last_day": "2026-11-12"
 }

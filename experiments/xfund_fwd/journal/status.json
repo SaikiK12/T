@@ -1,39 +1,31 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-11T01:39:02.884162+00:00",
+ "updated": "2026-11-12T01:49:51.113100+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.009,
-  "hyperliquid": 0.971,
-  "mexc": 1.0
+  "gate": 1.064,
+  "hyperliquid": 0.989,
+  "mexc": 0.979
  },
  "data": {
-  "hyperliquid": {
-   "files": 216,
-   "failed": 6,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "IO",
-    "IOTA",
-    "PENDLE",
-    "PEOPLE",
-    "VINE",
-    "VIRTUAL"
-   ]
-  },
   "mexc": {
    "files": 520,
-   "failed": 0,
+   "failed": 13,
    "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
+   "failed_some": [
+    "MERL_USDT",
+    "MEW_USDT",
+    "SIGN_USDT",
+    "STEEM_USDT",
+    "STORJ_USDT",
+    "TOSHI_USDT",
+    "USTC_USDT",
+    "XCN_USDT",
+    "XEC_USDT",
+    "XPIN_USDT"
+   ]
   },
   "binance": {
    "files": 867,
@@ -44,6 +36,23 @@
     "BDXNUSDT",
     "NUUSDT",
     "SXPUSDT"
+   ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 4,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "MAVIA",
+    "MEGA",
+    "SCR",
+    "SOPH"
    ]
   }
  },
@@ -59,12 +68,6 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.109
-   },
-   {
-    "coin": "BLURUSDT",
-    "long": "hyperliquid",
-    "short": "gate",
-    "spread_in": 0.208
    },
    {
     "coin": "NILUSDT",
@@ -173,15 +176,21 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.2032
+   },
+   {
+    "coin": "MELANIAUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.209
    }
   ],
-  "scored_days": 20,
+  "scored_days": 21,
   "late_days": 15,
-  "total": 0.0028752084,
-  "total_2x": 0.0012652084,
-  "total_3x": -0.00034479160000000053,
-  "total_close": 0.0038140977000000005,
-  "nw_t": 1.4362576183325333,
+  "total": 0.0023480979,
+  "total_2x": 0.0007380979,
+  "total_3x": -0.0008719021000000005,
+  "total_close": 0.0032869872000000004,
+  "nw_t": 1.5332701052533768,
   "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -248,12 +257,6 @@
     "spread_in": 0.1093
    },
    {
-    "coin": "OUSDT",
-    "long": "mexc",
-    "short": "binance",
-    "spread_in": 0.1027
-   },
-   {
     "coin": "AUSDT",
     "long": "mexc",
     "short": "binance",
@@ -266,13 +269,13 @@
     "spread_in": 0.1184
    }
   ],
-  "scored_days": 20,
+  "scored_days": 21,
   "late_days": 15,
-  "total": 0.007197809400000001,
-  "total_2x": 0.006602809400000001,
-  "total_3x": 0.006007809400000001,
-  "total_close": 0.0075331374000000015,
-  "nw_t": 1.480164308564389,
+  "total": 0.007361211700000001,
+  "total_2x": 0.0067312117000000015,
+  "total_3x": 0.006101211700000001,
+  "total_close": 0.007689622200000002,
+  "nw_t": 1.5019730669818194,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -369,12 +372,6 @@
     "spread_in": 0.497
    },
    {
-    "coin": "STARUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.5208
-   },
-   {
     "coin": "POWRUSDT",
     "long": "gate",
     "short": "mexc",
@@ -403,18 +400,24 @@
     "long": "mexc",
     "short": "gate",
     "spread_in": 0.7132
+   },
+   {
+    "coin": "INITUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 10.7864
    }
   ],
-  "scored_days": 20,
+  "scored_days": 21,
   "late_days": 15,
-  "total": 0.0036854444,
-  "total_2x": 0.0010254444000000003,
-  "total_3x": -0.0016345556000000004,
-  "total_close": 0.0040276495,
-  "nw_t": 2.386983357890318,
+  "total": 0.0047659147,
+  "total_2x": 0.0021059147,
+  "total_3x": -0.0005540853000000005,
+  "total_close": 0.0051081198,
+  "nw_t": 3.0354679858287317,
   "max_drawdown": -0.0015282559999999995,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-11"
+ "last_day": "2026-11-12"
 }

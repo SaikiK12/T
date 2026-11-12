@@ -1,19 +1,13 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-11T02:08:15.170748+00:00",
+ "updated": "2026-11-12T02:18:06.156622+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.009
+  "gate": 1.064
  },
  "data": {
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
    "failed": 4,
@@ -24,6 +18,12 @@
     "NUUSDT",
     "SXPUSDT"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -74,12 +74,6 @@
     "long": "binance",
     "short": "gate",
     "spread_in": 0.3798
-   },
-   {
-    "coin": "SIRENUSDT",
-    "long": "binance",
-    "short": "gate",
-    "spread_in": 0.3151
    },
    {
     "coin": "BLURUSDT",
@@ -152,18 +146,24 @@
     "long": "gate",
     "short": "binance",
     "spread_in": 0.3938
+   },
+   {
+    "coin": "INITUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 5.4387
    }
   ],
-  "scored_days": 7,
+  "scored_days": 8,
   "late_days": 6,
-  "total": 0.00012338240000000017,
-  "total_2x": -0.0007866175999999999,
-  "total_3x": -0.0016966175999999999,
-  "total_close": 0.0006833824000000001,
-  "nw_t": 0.2785498377463378,
+  "total": 0.0005122250000000002,
+  "total_2x": -0.00039777499999999984,
+  "total_3x": -0.001307775,
+  "total_close": 0.001072225,
+  "nw_t": 0.8394462086636605,
   "max_drawdown": -0.0006159814,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-11"
+ "last_day": "2026-11-12"
 }
