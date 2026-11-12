@@ -17,6 +17,8 @@ from long-horizon association, identifies both of M440's unnamed papers, and rec
 Directly received PDF/HTML hashes and unread scopes are explicit. No strategy was registered or scored.
 
 
+Web searches follow [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md) and are logged in [`registry/web_searches.csv`](../../registry/web_searches.csv).
+
 The [2026-11-03 web-deep wave](web_deep_20261103.json) ([catalog](source_catalog_webdeep_20261103.csv), cards SRC1103-*)
 read 35 public sources through four lens agents (ledgers of winners, exchange rulebooks, forensic and Korean sources,
 2025-26 papers and prediction markets). Independent verifiers re-fetched every queue-changing claim and contradicted

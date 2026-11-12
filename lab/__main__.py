@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS = {"status": "project_status.py", "check": "check.py", "find": "repository_index.py", "forward": "orchestrate_forward.py",
          "export": "dashboard_data.py", "panel": "panel.py", "engine": "build_engine.py",
-         "benchmark": "benchmark_evaluation.py", "account": "paper_account.py"}
+         "benchmark": "benchmark_evaluation.py", "account": "paper_account.py", "websearch": "web_search_ledger.py"}
 
 
 def main(argv=None):
@@ -23,6 +23,7 @@ def main(argv=None):
     if args.command == "integrity":
         # Metadata only. Neither command opens market arrays or appends rounds.
         commands = ("check_research_integrity.py", "check_method_intake.py")
+        extra = ("web_search_ledger.py", "check")
     else:
         commands = (TOOLS[args.command],)
         if args.command == "find" and not any(flag in rest for flag in ("-h", "--help", "--trace")):
@@ -31,6 +32,10 @@ def main(argv=None):
             rest = ["--python", sys.executable, *rest]
     for name in commands:
         code = subprocess.run((sys.executable, str(ROOT / "scripts" / name), *rest), cwd=ROOT).returncode
+        if code:
+            return code
+    if args.command == "integrity":
+        code = subprocess.run((sys.executable, str(ROOT / "scripts" / extra[0]), extra[1], *rest), cwd=ROOT).returncode
         if code:
             return code
     return 0
