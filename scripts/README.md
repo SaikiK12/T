@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (45)
+## Fetch: download archives and public history (46)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -45,6 +45,7 @@ line is the first line of the script's own docstring.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
 - [`fetch_spot.py`](fetch_spot.py): Binance spot hourly klines from data.binance.vision for every perp with a USDT spot pair (data/spot_pairs.json, 481 pairs): the spot leg for carry and basis lanes (M047, C09).
+- [`fetch_tltcarry.py`](fetch_tltcarry.py): Inputs for R474 tltcarry_fwd (short xyz:TLT, long iShares $ Treasury Bond 20+yr UCITS ETF).
 - [`fetch_tlteom.py`](fetch_tlteom.py): Inputs for R473 tlteom_v1 (the end-of-month Treasury rally on TLT, Hartley and Schwarz).
 - [`fetch_tradfi_perps.py`](fetch_tradfi_perps.py): Binance USD-M TradFi perpetuals, 1-minute klines from the public archive (data.binance.vision), every file checked against its published SHA-256.
 - [`fetch_trend_daily.py`](fetch_trend_daily.py): Fetch the frozen slow_trend_v1 spot sample; never calculate market outcomes.
@@ -129,7 +130,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (199)
+## Run: one lane's frozen measurement (200)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -296,6 +297,7 @@ line is the first line of the script's own docstring.
 - [`run_stock_tugofwar.py`](run_stock_tugofwar.py): R435 stock_tugofwar_v1: the overnight-versus-intraday tug of war across MEXC's US-stock perps (M492).
 - [`run_tapelag_lighter.py`](run_tapelag_lighter.py): R347 tapelag_lighter_v1: zero-fee scalps on Lighter, traded toward Binance's quote after a dislocation (M264, M293).
 - [`run_tapelag_lighter_v2.py`](run_tapelag_lighter_v2.py): R348 tapelag_lighter_v2: R347's frozen rule, rerun after R347's runner crashed before any statistic.
+- [`run_tltcarry.py`](run_tltcarry.py): R474 tltcarry_fwd, frozen in experiments/tltcarry_fwd/PREREG.md: a hedged carry on trade.xyz's TLT perp.
 - [`run_tlteom.py`](run_tlteom.py): R473 tlteom_v1, frozen in experiments/tlteom_v1/PREREG.md: the end-of-month Treasury rally (Hartley and Schwarz, "Predictable End-of-Month Treasury Returns", 2019) as a long TLT position over the ...
 - [`run_tradesize.py`](run_tradesize.py): tradesize_v1 (R226): trade count and mean print size as 72 h spread books, tested for information beyond quote volume, as set out in experiments/tradesize_v1/PREREG.md.
 - [`run_tradlead.py`](run_tradlead.py): tradlead_v1 (R261): does the last hour of TradFi perps (commodities CMD, US equities EQ) lead crypto? A market-timing book (TS) and a beta cross-section (XS), holds 1/4/24 h, sign chosen in ...

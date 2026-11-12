@@ -222,6 +222,9 @@ for active writers. Dated proposals, audits and source notes below retain histor
   R473 found the end-of-month Treasury rally (Hartley and Schwarz) still positive on TLT after 2018 before costs
   (+24.7 bp a month, t 1.79), but only +13.0 bp (t 0.95) net of xyz's TLT perp cost, and xyz:TLT longs have paid
   about 20%/yr funding since listing (PARTIAL, no lane; [findings](experiments/tlteom_v1/FINDINGS.md)).
+  R474 turns that funding into a forward paper lane: hold the UCITS 20+ year Treasury ETF (DTLA) and short
+  xyz:TLT, keeping the coupons and the funding, judged against the T-bill on 2027-02-13 and 2027-05-15 (frozen;
+  [lane](experiments/tltcarry_fwd/README.md)).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

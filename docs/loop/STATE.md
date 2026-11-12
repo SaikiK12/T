@@ -16,9 +16,10 @@ for breakthroughs at 100% of compute".
 - Haiku helpers generate ideas in between.
 - The scheduled task is an hourly safety net only.
 
-**State on 2026-11-12 04:15 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
+**State on 2026-11-12 05:45 UTC** (the 11-09 wave tables are in the tick log below and in `registry/rounds.csv`):
 - **Forward on GitHub Actions** (`docs/HANDOVER.md`): R441-R459 books, R463 and R467 (weekend fades, from 11-13).
-- **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08.
+- **Dated reads:** R469 (Asian closure fade on unseen openings) on 2027-02-01; R446's EARNED look on 2027-02-08;
+  R474 (hedged TLT carry) futility on 2027-02-13 and final on 2027-05-15, by `claude-tltcarry.yml`.
 - **Pattern:** R462, R465 and R468 found large effects on stock perps in spring-summer 2026 that were flat afterwards.
   Prefer structural trades (carry, inventory, fees) over price-pattern lanes.
 - **Closed:** R470 `xvfund_v1` (M527) NULL: the xyz-vs-Lighter funding carry is too thin even before costs.
@@ -456,3 +457,9 @@ waiting, and pick tests from our own measurements first.
   - Post hoc: xyz:TLT longs paid a mean 20%/yr funding since listing (2026-09-17; median 5.5%), about 21 bp a hold.
     No lane on the perp; reopen only on a funded instrument or with month-end funding near base.
   - R472's FINDINGS must read its bond leg against that funding. Program total 9,785,249.
+- 2026-11-12, R474 `tltcarry_fwd` (M529, new) frozen `b6d045f8`, forward. R473's funding fact turned around: long
+  the UCITS 20+ year Treasury ETF (DTLA, London, USD, accumulating) and short xyz:TLT at 1/3 USDC margin. The perp
+  follows TLT's unadjusted price, so the short keeps the coupon (~4.9%/yr) plus the funding longs pay.
+  - About +13 points a year over the bill at the listing-mean funding, +4 at base, about 0 at zero funding.
+  - Reads: held (after the freeze, reported only); futility 2027-02-13 (NULL if excess < 0); final 2027-05-15
+    (PASS at >= 2 points, NW t >= 2.0). Program total 9,785,250.
