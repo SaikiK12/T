@@ -12,7 +12,9 @@ that they no longer have Codex.
 - **Duties without an owner:** the native duties listed below fall to Claude when the owner opens a session:
   - R392's freeze before 11-17 (its read on or after 11-17); done early: frozen and read on 2026-11-10 by the
     owner's 2026-11-09 decision, PARTIAL (`registry/rounds.csv` R392);
-  - R404's 11-18 close;
+  - R404's 11-18 close; its recorder runs from `.github/workflows/claude-book-costs-recorder.yml` once that is on
+    the default branch (2026-11-12); DATA_PASS needs >= 40 snapshots with all three venues in the window, counted
+    from `experiments/recorders/journal/digests.csv` plus branch `claude/book-costs-data`;
   - a registered successor if R406 or R413 locks mature after 11-19.
 - **No always-on host:** the chat container sleeps between sessions, so no recorder or daemon runs in between.
 - **Check-in:** a one-shot check-in is scheduled in Claude's session for 2026-11-16 11:20 UTC (trigger

@@ -52,6 +52,8 @@ directional ideas into one family or run them forward; prefer structural, high-S
 
 **Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
 R392 was frozen and read on 2026-11-10 (PARTIAL, `registry/rounds.csv`).
+R404's recorder moved to `claude-book-costs-recorder.yml` (live once on the default branch). Close rule: DATA_PASS at
+>= 40 snapshots with all three venues in the window, counted from `digests.csv` plus branch `claude/book-costs-data`.
 
 ## Lenses last used
 1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,
@@ -534,3 +536,25 @@ waiting, and pick tests from our own measurements first.
   and R406/R413 successors after 11-19 (Claude or the owner); R420's dispatch ends 2026-11-19 (owner).
   No lane opened, no market measurement, no frozen file or registry row touched. Not checked: live recorder
   health and GitHub Actions runs.
+- 2026-11-12 ~22:15 UTC: wake check by a stand-in agent (Claude and Codex absent). Read only through `gh api`.
+  - Every "Flow paper lanes (Claude)" run that ticks R200 has ended `failure` since ~15:13 UTC (e.g. 43308253509 at
+    21:14 UTC). R448 (`scripts/run_flow_hl.py` line 117, `book_days`) and R451 (`scripts/run_flow_hlstock.py`, same
+    function) raise `ValueError: cannot reshape array of size 0 into shape (0,24,newaxis)`: the forward window
+    (FWD_START 2026-11-12) has no complete day yet (D = 0). The other lanes exit 0 and the journals are committed
+    ("failed: R448 R451"). `run_flow_hl.py` is hashed in R448's PREREG (line 149), so it is not fixed.
+  - Inferred from the code, not observed: D becomes 1 with the 2026-11-13 00:00 UTC Hyperliquid close, so the
+    failure should stop at the first tick after ~01:00 UTC on 11-13. The :40 dispatches pass because nothing ticks.
+  - R467 run 43108216123 (11-11 22:01 UTC, dispatch) shows failure but its job is `cancelled`; no Sunday tick is due
+    before 11-15. "Offline lab checks" on PR #1 is `action_required` since 11-12 14:19 UTC (owner approval).
+    All other active Claude and Codex workflows' latest runs are success.
+  - Issue #7: no comment after 14:16 UTC (R481 FYI), no fresh writer claim. Open PRs: #94, #56, #32, #9, #8, #6, #1.
+  - Not due yet: Claude check-in 11-16 11:20 UTC, R404 close on or after 11-18 00:00 UTC, R420/R429 dispatch end
+    11-19 00:00 UTC (owner), R406/R413 successors after 11-19.
+  - R404's local recorder died with the container (last snapshot 2026-11-10 06 UTC, 6 files, 5 digest rows). New
+    `.github/workflows/claude-book-costs-recorder.yml` (`08cac6f6`) runs the unchanged recorder each 3-hour slot,
+    parquet to `claude/book-costs-data`, and stops at 2026-11-18 00:00 UTC; see `experiments/book_costs_v1/DEVIATIONS.md`.
+    It is live only once cherry-picked onto `claude/yo-9a1k5w`. Its first run replaces status.json with the
+    data-branch files only.
+  - Sandbox dry run (scratch copy, ~22:17 UTC, not a snapshot): 2 min 26 s, 1,315 books (dYdX 57, KuCoin 712,
+    MEXC 546); 40 MEXC books had no `data` field, likely rate limiting. 40 slots remain; GitHub runs need ~34 of them.
+  - The stand-in dispatched nothing, pushed nothing and posted nothing.
