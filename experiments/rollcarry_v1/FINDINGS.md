@@ -94,6 +94,33 @@ funding + gap − cost − bill.
     a UCITS ETC (e.g. WisdomTree's on LSE).
   - WisdomTree's ETCs follow Bloomberg sub-indices with their own roll months, so they add curve exposure.
 
+## Post hoc: the roll priced against the continuous front future (decides nothing)
+`posthoc/front_roll.py` (run 2026-11-12, after the verdict; `front_roll_months.csv`, `front_roll_cycles.csv`,
+`front_roll.log`; Yahoo 60-minute CL=F, NG=F, BZ=F, raw files in `data/rollcarry_posthoc/`, not tracked).
+- **Method.** At 20:00 UTC on business day 10, xyz's oracle has moved to the next contract, while Yahoo's continuous
+  front future is still on the old one until it expires. So r = perp / front − 1 is about 0 on business day 4 and
+  about the next-to-front spread on business day 10. roll = r(BD10) − r(BD4) is the roll-up the oracle passed to
+  longs that month. Funding − roll is what a futures hedge rolled on xyz's own days would have kept, before cost and
+  bill.
+- **Check:** r on business day 4 stayed within ±0.8% (the perp's premium plus timing), so the two series line up.
+- **NATGAS: the carry is not an artifact of UNG's roll timing.**
+  - Over 8 cycles, UNG's gap and −roll correlate 0.99.
+  - Funding − roll: +1.29% of notional a cycle (sd 1.34), positive in 7 of 8.
+  - The three B cycles: +0.45, +1.23 and +1.53 by the front measure, against +0.36, +0.83 and −0.29 with UNG. Most
+    of R478's B shortfall on NATGAS is the October cycle, where UNG's gap was 1.8 points worse than the roll.
+- **Oil: smaller by this measure.**
+  - CL: funding − roll +0.23% a cycle (sd 2.33), positive in 6 of 9; corr(gap, −roll) only 0.56.
+  - BRENTOIL: +0.59% a cycle (sd 1.19), positive in 5 of 7.
+  - The difference sits in the spring spike (CL's April cycle: gap with USO +11.69, −roll +2.64). The business-day-10
+    spread misses spread moves during days 5-9 in a fast market, so neither measure is exact there.
+- **For the forward lane:**
+  - NATGAS is the candidate. A hedge rolled on xyz's own days removes the fund's timing noise.
+  - Per-cycle sd is about 1.3% of notional. With R478's layout (notional 3/4 of capital), the bill takes about
+    0.4% of notional a cycle.
+  - At +1.0% a cycle above costs and the bill, t = 2 needs about 7 cycles; at +0.6%, about 19.
+  - To price the roll exactly, the lane must record the front and next contracts during each roll window (Yahoo
+    drops expired contracts).
+
 ## Reading against program trials (9,785,262)
 - One pre-named decision (NATGAS) at t 1.68 is not significant on its own.
 - What stands out is the sign pattern: the hedged short netted positive in 22 of 27 cycles on three perps whose
