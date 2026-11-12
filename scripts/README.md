@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (49)
+## Fetch: download archives and public history (50)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -43,6 +43,7 @@ line is the first line of the script's own docstring.
 - [`fetch_okx_xperp.py`](fetch_okx_xperp.py): OKX Europe X-Perps (MiFID, 5-year expiry crypto contracts with 8-hourly funding; M484): public data, no key.
 - [`fetch_orb_pilot.py`](fetch_orb_pilot.py): Bounded, public, exclusive raw acquisition for the frozen ORB pilot.
 - [`fetch_rebalfront.py`](fetch_rebalfront.py): Inputs for R472 rebalfront_v1 (front-running balanced-fund rebalancing, Harvey, Mazzoleni and Melone).
+- [`fetch_rebalfront_h15.py`](fetch_rebalfront_h15.py): R472's frozen fetch (scripts/fetch_rebalfront.py) with DTB3 taken from its primary publisher, the Federal Reserve Board.
 - [`fetch_settle_ticks.py`](fetch_settle_ticks.py): R362's ticks around R354's settlement hops: Binance USD-M trades from T - 10 min to T + 15 min.
 - [`fetch_settlehop_1m.py`](fetch_settlehop_1m.py): R356's minute bars around R354's primary hops: Binance and Lighter 1-minute bars from T - 2 h to T + 1 h.
 - [`fetch_settlelit_1m.py`](fetch_settlelit_1m.py): R363's Lighter minutes around R354's settlement hops: Lighter 1-minute candles from T - 10 min to T + 10 min.
