@@ -34,7 +34,8 @@ PREREG `5893d9ec`, frozen and pushed before the fetch. One frozen run on 2026-11
 | enter20 | A | 27 (15) | +3.25 | 1.88 | +2.78 | +2.30 | +4.20 | +0.35 | 0.48 | +2.91 | 1.2 | 5 | 0.02 |
 | enter20 | B | 16 (16) | +10.01 | 3.16 | +8.40 | +6.79 | +13.35 | +1.23 | 1.61 | +8.78 | 3.8 | 11 | 0.32 |
 
-- "Carry only" is funding − cost − bill. Weeks without a slot count at −bill.
+- "Carry only" is funding − cost − bill on the capital in slots. Idle capital earns the bill (R475's rule), so a
+  week without a slot adds 0.
 - After a 15% US withholding on dividends, A is +3.11.
 - B is reported only: Paragon's funding in B was scanned before the freeze (PREREG).
 
@@ -60,7 +61,7 @@ PREREG `5893d9ec`, frozen and pushed before the fetch. One frozen run on 2026-11
     did not carry.
 
 ## A against B, and against xyz (R475)
-- **xyz (R475):** A +11.18 but mostly price and one liquidation. B's carry fell to −0.84 as funding halved.
+- **xyz (R475):** A +11.18, half carry (+5.56) and half price (+5.62), with one liquidation. B's carry fell to −0.84 as funding halved.
 - **Other deployers (here):** A +3.12, almost all carry. B (Paragon) +10.63, carry +9.65, price +0.98, no
   liquidation.
 - Paragon's B carry is the strongest carry evidence in M530 so far, and Paragon is live. But:
