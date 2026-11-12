@@ -51,7 +51,7 @@ for breakthroughs at 100% of compute".
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
 
 **Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
-R392 is being done now.
+R392 was frozen and read on 2026-11-10 (PARTIAL, `registry/rounds.csv`).
 
 ## Lenses last used
 1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,
@@ -523,3 +523,14 @@ waiting, and pick tests from our own measurements first.
   - Futility on 2027-05-15 and the final read on 2027-11-13 (the same days as R480), by `claude-xvroll.yml`. Inputs
     are fetched at each read, plus R480's recorded xyz 1-hour candles (read only).
   - Power: at R481's post hoc difference it is likely a PARTIAL. At the August-October pace, t ≈ 3 at 52 weeks.
+- 2026-11-12 ~17:00 UTC: maintenance pass by a stand-in agent (Claude and Codex absent). Added the web search protocol
+  (`docs/WEB_SEARCH.md`, `registry/web_searches.csv`, `scripts/web_search_ledger.py`, wired into `python -m lab integrity`).
+  Read issue #7 (last comment 2026-11-12 14:16 UTC, R481 NULL) and the open PRs (#1, #6, #8, #9, #32, #56): the
+  latest CLAIMs (R437-R440, R453, R467) are Claude's lane claims, none on these files, and no open NEED call.
+  Ran `python -m lab integrity` (0 errors, 14 legacy warnings on old registry rows and frozen PREREGs, left as they
+  are) and `python -m lab status` (48 tasks UNKNOWN: no local receipts, the runners live on GitHub Actions).
+  Marked R392 done (frozen and read 2026-11-10) where STATE, HANDOVER and OPERATIONS still listed it as a duty.
+  Added fixture tests for `scripts/data_provenance.py` and the prop map inputs. Still open: R404's close on 11-18
+  and R406/R413 successors after 11-19 (Claude or the owner); R420's dispatch ends 2026-11-19 (owner).
+  No lane opened, no market measurement, no frozen file or registry row touched. Not checked: live recorder
+  health and GitHub Actions runs.

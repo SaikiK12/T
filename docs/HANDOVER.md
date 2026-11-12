@@ -18,7 +18,8 @@ that they no longer have Codex.
 - **What keeps running:** the selected GitHub workflow (R420, R429 successor) runs on its own schedule until its
   dispatch ends on 2026-11-19 00:00 UTC. It needs no agent to run, but nobody maintains it.
 - **Duties without an owner:** the native duties listed below fall to Claude when the owner opens a session:
-  - R392's freeze before 11-17 (its read on or after 11-17);
+  - R392's freeze before 11-17 (its read on or after 11-17); done early: frozen and read on 2026-11-10 by the
+    owner's 2026-11-09 decision, PARTIAL (`registry/rounds.csv` R392);
   - R404's 11-18 close;
   - a registered successor if R406 or R413 locks mature after 11-19.
 - **No always-on host:** the chat container sleeps between sessions, so no recorder or daemon runs in between.
