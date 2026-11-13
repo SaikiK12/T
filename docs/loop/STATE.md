@@ -59,8 +59,9 @@ must not run; local REC_DIGEST may, if no local `data/recorders/book_costs` tree
 
 ## Lenses last used
 1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,
-2026-11-10). Next: 5, then 6+7. Three waves in a row produced no new testable row: run a wave only when a lane is
-waiting, and pick tests from our own measurements first.
+2026-11-10); 5 (web search wave and R483, 2026-11-12/13). Next: 6+7. Three waves in a row produced no new
+testable row before the 2026-11-12 wave: run a wave only when a lane is waiting, and pick tests from our own
+measurements first.
 
 ## Tick log
 - **2026-11-09, tick 1 (by hand).**
@@ -560,3 +561,14 @@ waiting, and pick tests from our own measurements first.
   - Sandbox dry run (scratch copy, ~22:17 UTC, not a snapshot): 2 min 26 s, 1,315 books (dYdX 57, KuCoin 712,
     MEXC 546); 40 MEXC books had no `data` field, likely rate limiting. 40 slots remain; GitHub runs need ~34 of them.
   - The stand-in dispatched nothing, pushed nothing and posted nothing.
+- 2026-11-13 ~00:10 UTC: lens 5 (red team on the carry books), by a stand-in agent. R483 `carryhurdle_v1` (M478, M481).
+  - Ideas in from the 2026-11-12 web search wave (WS0002-WS0008): M534 (ADL stress bound) and M535 (USDe supply
+    flow to funding) queued UNTESTED; M478 and M481 tested here. Ideas out: none dropped.
+  - Test: do the six forward carry books (R437/R438 v2 daily nets, 2x costs) beat holding sUSDe, NW t >= 2?
+    Frozen in `eb328f3f` before importing DefiLlama `/chart` bodies sealed unread on 11-12 (the free endpoint
+    stopped 11-13); import `e16ed783`; one run. The #7 CLAIM was not posted before the run (orchestrator posts it).
+  - PASS (CONFIRMED, 12 trials, program 9,785,286): R279 A +12.80 pts/yr (t 4.45), R278 C +10.03 (3.29), R279 B
+    +7.54 (3.74) beat; R278 A -0.45, R278 B -0.07, R390 A +8.91 (t 1.11) tie. sUSDe 8.81%/yr, 4.72 from 2025-04-09.
+  - Deduction: on the backtest R278 A (gate+hyperliquid) and R278 B (binance+mexc) earn no more than a passive
+    token paid by the same funding; since 2025 R278 A made 4.08%/yr against sUSDe's 5.33. The KuCoin books and
+    gate+mexc carry the case for running carry. Gate 0 on seen rows; risks unpriced; forward lanes decide.

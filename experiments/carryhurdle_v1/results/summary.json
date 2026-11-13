@@ -1,0 +1,36 @@
+{
+ "registry": "R483",
+ "decides": {
+  "bench": "susde",
+  "engine": "v2",
+  "cost": 2
+ },
+ "deciders": {
+  "gate+hyperliquid L14d th5% K20": {
+   "forward": "R278 A",
+   "call": "TIES"
+  },
+  "binance+mexc L14d th10% K20": {
+   "forward": "R278 B",
+   "call": "TIES"
+  },
+  "gate+mexc L7d th10% K20": {
+   "forward": "R278 C",
+   "call": "BEATS"
+  },
+  "binance+gate L14d th10% K20": {
+   "forward": "R390 A",
+   "call": "TIES"
+  },
+  "gate+kucoin L14d th5% K20": {
+   "forward": "R279 A",
+   "call": "BEATS"
+  },
+  "binance+kucoin L14d th5% K20": {
+   "forward": "R279 B",
+   "call": "BEATS"
+  }
+ },
+ "verdict": "PASS",
+ "registry_verdict": "CONFIRMED"
+}
