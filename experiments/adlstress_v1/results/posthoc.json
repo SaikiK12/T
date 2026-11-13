@@ -1,0 +1,203 @@
+{
+ "label": "post hoc, decides nothing",
+ "empty_1h_by_venue": {
+  "binance": {
+   "legs": 64,
+   "empty_1h": 0
+  },
+  "gate": {
+   "legs": 61,
+   "empty_1h": 8
+  },
+  "hyperliquid": {
+   "legs": 40,
+   "empty_1h": 37
+  },
+  "kucoin": {
+   "legs": 31,
+   "empty_1h": 0
+  },
+  "mexc": {
+   "legs": 50,
+   "empty_1h": 1
+  }
+ },
+ "window_check": {
+  "book": "gate+hyperliquid L14d th5% K20",
+  "pairs": 16,
+  "skipped": [
+   "IPUSDT"
+  ],
+  "full_day_2x_pct": 26.138515525,
+  "window_2x_pct": 19.97439674008192,
+  "window_2x_pct_cost_on_window_notional": 19.957137207446877
+ },
+ "s1_unstressed_hl_shorts": [
+  {
+   "book": "binance+gate+hyperliquid+mexc L14d th10% K20",
+   "coin": "ZORAUSDT",
+   "long": "mexc",
+   "hl_open": 0.082426,
+   "hl_low": 0.044551,
+   "hl_close": 0.090795,
+   "hl_low_vs_open": -0.4595030694198432,
+   "loss_2x_entry_notional_if_stressed": 1.362813440860215
+  },
+  {
+   "book": "binance+hyperliquid L14d th10% K20",
+   "coin": "ZORAUSDT",
+   "long": "binance",
+   "hl_open": 0.082426,
+   "hl_low": 0.044551,
+   "hl_close": 0.090795,
+   "hl_low_vs_open": -0.4595030694198432,
+   "loss_2x_entry_notional_if_stressed": 1.0249105409927495
+  },
+  {
+   "book": "gate+hyperliquid L14d th5% K20",
+   "coin": "ZORAUSDT",
+   "long": "gate",
+   "hl_open": 0.082426,
+   "hl_low": 0.044551,
+   "hl_close": 0.090795,
+   "hl_low_vs_open": -0.4595030694198432,
+   "loss_2x_entry_notional_if_stressed": 2.693861722846442
+  },
+  {
+   "book": "gate+hyperliquid L14d th5% K20",
+   "coin": "MERLUSDT",
+   "long": "gate",
+   "hl_open": 0.33973,
+   "hl_low": 0.32129,
+   "hl_close": 0.36015,
+   "hl_low_vs_open": -0.05427839755099628,
+   "loss_2x_entry_notional_if_stressed": 0.38433259985908624
+  },
+  {
+   "book": "hyperliquid+mexc L3d th5% K20",
+   "coin": "ZORAUSDT",
+   "long": "mexc",
+   "hl_open": 0.082426,
+   "hl_low": 0.044551,
+   "hl_close": 0.090795,
+   "hl_low_vs_open": -0.4595030694198432,
+   "loss_2x_entry_notional_if_stressed": 0.6647496862414536
+  }
+ ],
+ "s1_2x_pct_added_if_stressed": {
+  "binance+gate+hyperliquid+mexc L14d th10% K20": 3.4070336021505376,
+  "binance+hyperliquid L14d th10% K20": 2.5622763524818737,
+  "gate+hyperliquid L14d th5% K20": 7.695485806763821,
+  "hyperliquid+mexc L3d th5% K20": 1.6618742156036341
+ },
+ "cost_spread": {
+  "binance+gate L14d th10% K20": {
+   "S1": {
+    "1x": 0.0,
+    "3x": 0.0,
+    "spread_1x_3x": 0.0
+   },
+   "S2": {
+    "1x": 33.763973,
+    "3x": 33.928911,
+    "spread_1x_3x": 0.16493799999999936
+   }
+  },
+  "binance+gate+hyperliquid+mexc L14d th10% K20": {
+   "S1": {
+    "1x": 1.198507,
+    "3x": 1.202665,
+    "spread_1x_3x": 0.004158000000000106
+   },
+   "S2": {
+    "1x": 36.543578,
+    "3x": 36.707383,
+    "spread_1x_3x": 0.16380500000000353
+   }
+  },
+  "binance+hyperliquid L14d th10% K20": {
+   "S1": {
+    "1x": 30.019566,
+    "3x": 30.133566,
+    "spread_1x_3x": 0.11399999999999721
+   },
+   "S2": {
+    "1x": 37.828002,
+    "3x": 37.968776,
+    "spread_1x_3x": 0.1407740000000004
+   }
+  },
+  "binance+kucoin L14d th5% K20": {
+   "S1": {
+    "1x": 0.0,
+    "3x": 0.0,
+    "spread_1x_3x": 0.0
+   },
+   "S2": {
+    "1x": 34.309054,
+    "3x": 34.481662,
+    "spread_1x_3x": 0.17260799999999676
+   }
+  },
+  "binance+mexc L14d th10% K20": {
+   "S1": {
+    "1x": 0.0,
+    "3x": 0.0,
+    "spread_1x_3x": 0.0
+   },
+   "S2": {
+    "1x": 20.918106,
+    "3x": 21.0169,
+    "spread_1x_3x": 0.09879399999999805
+   }
+  },
+  "gate+hyperliquid L14d th5% K20": {
+   "S1": {
+    "1x": 29.292332,
+    "3x": 29.411284,
+    "spread_1x_3x": 0.11895200000000017
+   },
+   "S2": {
+    "1x": 38.749812,
+    "3x": 38.899515,
+    "spread_1x_3x": 0.14970300000000236
+   }
+  },
+  "gate+kucoin L14d th5% K20": {
+   "S1": {
+    "1x": 0.0,
+    "3x": 0.0,
+    "spread_1x_3x": 0.0
+   },
+   "S2": {
+    "1x": 54.729417,
+    "3x": 54.933955,
+    "spread_1x_3x": 0.20453799999999944
+   }
+  },
+  "gate+mexc L7d th10% K20": {
+   "S1": {
+    "1x": 0.0,
+    "3x": 0.0,
+    "spread_1x_3x": 0.0
+   },
+   "S2": {
+    "1x": 35.453915,
+    "3x": 35.621481,
+    "spread_1x_3x": 0.16756600000000077
+   }
+  },
+  "hyperliquid+mexc L3d th5% K20": {
+   "S1": {
+    "1x": 31.155315,
+    "3x": 31.28061,
+    "spread_1x_3x": 0.1252949999999977
+   },
+   "S2": {
+    "1x": 34.654483,
+    "3x": 34.790601,
+    "spread_1x_3x": 0.1361180000000033
+   }
+  }
+ }
+}

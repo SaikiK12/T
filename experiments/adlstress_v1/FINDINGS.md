@@ -14,7 +14,9 @@ to 55% of book capital, 29 to 132 months of 2x net.
   sha256. Results in `results/books.csv`, `results/pairs.csv`, `results/report.json`; one run in `run.log`.
 - **This is a bound, not an estimate.** It assumes every eligible pair was hit, the ADL'd leg's gain offsets nothing,
   and the naked leg lost its venue's full high-low range of the day. Per-account ADL incidence is not public keyless.
-  No margin cap is modeled because the engine defines no margin.
+  No margin cap is modeled because the engine defines no margin. Under S1 the frozen close-versus-open rule for the
+  profitable leg leaves some Hyperliquid shorts unstressed (ZORA, MERL), so S1 understates the bound for
+  Hyperliquid-leg books; see "Post hoc".
 
 ## ADL venues (fixed before the freeze, `research/intake/adl_venues_20261113.md`, WS0027-WS0032)
 | Venue | Class | Evidence |
@@ -32,6 +34,12 @@ to 55% of book capital, 29 to 132 months of 2x net.
   rule adds the 3 pairs closed at 00:00 UTC on D; their bounds are in `books.csv` (`incl_*`) and change no call.
 - Every leg's daily bars open at 00:00 UTC (binance 64/64, gate 53/53, hyperliquid 40/40, kucoin 31/31, mexc 49/49),
   so the daily candle of D was used everywhere; no day was rebuilt from 1h bars.
+- Hyperliquid's 1h series is missing: 37 of its 40 1h bodies are `[]` (HTTP 200 with an empty list, so `run.log`
+  counts them as bodies in "0 of 653 requests without a body"); `candleSnapshot` appears to serve a rolling window of
+  recent hourly candles that no longer reaches October 2025. The run never needed it, because every daily series is
+  UTC-aligned. It means no Hyperliquid intraday price is available for this day, which is why the post hoc window
+  check below uses Gate 1h bars only. (Added after review 2026-11-13-122155; counts from
+  `scripts/posthoc_adlstress_v1.py`, `results/posthoc.json`.)
 - 9 legs have no public candle (8 Gate contracts, 1 MEXC: delisted markets return an empty list). Under S1 one
   stressed pair needed a fill (R278 A IPUSDT: Hyperliquid's candle and notional); under S2 5 (R390 A), 3 (4-venue
   book), 1 (R278 A), 1 (R279 A). No pair needed the book-maximum fill.
@@ -51,8 +59,9 @@ to 55% of book capital, 29 to 132 months of 2x net.
 | - | `binance+gate+hyperliquid+mexc L14d th10% K20` | 20 | 1 | 1.20 / 1.20 / 1.20 | 0.94 | 10.96 | 20 | 36.54 / 36.63 / 36.71 | 28.5 | 2.38 | 1.416 / 1.284 / 1.152 | +0.394 | reported | EXPOSED |
 | - | `hyperliquid+mexc L3d th5% K20` | 20 | 18 | 31.16 / 31.22 / 31.28 | 118.8 | 31.22 | 20 | 34.65 / 34.72 / 34.79 | 132.1 | 11.01 | 0.676 / 0.263 / -0.151 | -0.086 | reported | EXPOSED |
 
-Cost sensitivity is small: the re-hedge round trip adds 2 x 7 bp per stressed pair per cost step, under 0.1 points
-of book capital between 1x and 3x. The comparison side moves more: at 3x one month of net falls (hyperliquid+mexc's
+Cost sensitivity is small: the re-hedge round trip adds 2 x 7 bp of the naked notional per stressed pair per cost
+step, about 0.05 to 0.1 points of book capital per step. From 1x to 3x the bound moves 0.12 points for R278 A under S1
+and 0.10 to 0.20 points under S2 (largest R279 A, 0.20). The comparison side moves more: at 3x one month of net falls (hyperliquid+mexc's
 3x net is negative, so its months are undefined at 3x). In months of net at 1x / 3x: R278 A S1 29.1 / 36.7; S2
 ranges 23.5 (R278 C) to 43.9 (R279 A) at 1x and 37.3 to 76.4 at 3x for the forward books.
 
@@ -74,6 +83,21 @@ ranges 23.5 (R278 C) to 43.9 (R279 A) at 1x and 37.3 to 76.4 at 3x for the forwa
   naked long runs only from the high of the 21:00 UTC hour (Hyperliquid's ADL bursts were 21:16-21:21) to the lowest
   low of 21:00-24:00, the bound is 19.97% of book capital at 2x, against 26.14% for the full-day range on the same 16
   pairs. Most of the day's range sits in the ADL hour, so the full-day bound is not mainly a timing artefact.
+  Method (recorded after review 2026-11-13-122155 in `scripts/posthoc_adlstress_v1.py`, output `results/posthoc.json`):
+  per pair (H21 - L) / P_e + 2 x 14 bp x N, H21 the high of Gate's 21:00 bar, L the lowest low of the 21:00-23:00
+  bars, P_e and N as in the frozen runner (N from the full day's high). With the re-hedge cost on the window notional
+  H21 / P_e instead, the figure is 19.96%.
+- **S1 is not a strict worst case for Hyperliquid-leg books** (added after review 2026-11-13-122155). The frozen rule
+  judges the profitable leg by the D close against the D open, but Hyperliquid's ADL ran at 21:16-21:21 UTC, near the
+  day's low, and closes whatever is in profit at that moment. A Hyperliquid short on a coin that crashed and then
+  closed above its open was likely in profit at ADL time, yet the rule leaves it un-ADL'd and its pair unstressed
+  under S1. The pairs: ZORA (Hyperliquid low 46.0% below its open, close +10.2%) in R278 A, binance+hyperliquid,
+  hyperliquid+mexc and the 4-venue book; MERL (low 5.4% below open, close +6.0%) in R278 A, where a profitable short
+  at 21:16 is less likely. If those Hyperliquid shorts had been ADL'd and their longs left naked, the runner's formula
+  would add at 2x: R278 A 7.70 points (ZORA 6.73, MERL 0.96; S1 29.35% to 37.05%), binance+hyperliquid 2.56, the
+  4-venue book 3.41 (1.20% to 4.61%, above its 1.28% month of net; it does not decide), hyperliquid+mexc 1.66. No
+  decider's call changes: R278 A is already EXPOSED and the other five have no Hyperliquid leg. An intraday rule would
+  be a new lane, and it would need Hyperliquid hourly data that is no longer served for this day.
 - Not modeled and possibly tighter in practice: the ADL'd short's realized gain (closed at Hyperliquid's previous
   mark, near the low), which offsets the naked long's loss up to that moment; liquidation of the naked leg at its
   margin; a faster re-hedge. Possibly looser: exchange outages that delayed re-hedging past the day, a second ADL day,

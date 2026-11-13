@@ -420,7 +420,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (99)
+## Tools and everything else (101)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -476,6 +476,8 @@ line is the first line of the script's own docstring.
 - [`paper_status.py`](paper_status.py): Read-only paper/account view over registered evidence; no runner is started.
 - [`pilot_kraken_orders.py`](pilot_kraken_orders.py): Completeness pilot for Kraken Futures' public order-event history (M437): one short window, hard request cap.
 - [`pitfac_factors.py`](pitfac_factors.py): Factors for qx factors (R282 pitfac_v1) from the daily point-in-time panel (lab/daily.py): what the panel's new sources say about a Binance perp at 00:00 UTC.
+- [`posthoc_adlstress_v1.py`](posthoc_adlstress_v1.py): Post hoc for adlstress_v1 (R487): the 21:00-24:00 UTC window check, the empty 1h series, the S1 pairs left unstressed by the close-versus-open rule, and the 1x-to-3x cost spread.
+- [`posthoc_usdeflow_v1.py`](posthoc_usdeflow_v1.py): Post hoc for usdeflow_v1 (R488): rank correlations of the USDe weekly supply change with this week's and next week's Hyperliquid funding, and the partial rank correlation of w(t) with f(t+1) given ...
 - [`prefetch_carry_data.py`](prefetch_carry_data.py): Refresh the data roots of the forward carry lanes, without ticking them: data only, no journal write.
 - [`probe_dated_carry.py`](probe_dated_carry.py): R327 ONE finite public CURRENT snapshot; no order/account/history requests.
 - [`probe_depth_quotes.py`](probe_depth_quotes.py): R314 finite public depth probe: capture, seal, then report fixed cost controls.

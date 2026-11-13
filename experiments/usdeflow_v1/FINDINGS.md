@@ -2,9 +2,12 @@
 
 **Verdict: NULL.** The weekly log change in USDe circulating supply does not predict the next week's change in
 Hyperliquid funding. BTC rho -0.031 (circular p one-sided 0.696), ETH rho -0.085 (p 0.870); n 147 weeks each. G1
-fails for both coins and G2 fails (BTC first half negative, ETH both halves negative). Both signs are negative, the
-direction the hedge-impact model predicts (Lorig, WS0033), but neither is distinguishable from the null (p_neg
-0.304 and 0.130).
+fails for both coins and G2 fails (BTC first half negative, ETH both halves negative). Both signs are negative and
+neither is distinguishable from the null (p_neg 0.304 and 0.130). The negative sign is not evidence for the
+hedge-impact model (Lorig, WS0033): the change target d = f(t+1) - f(t) puts a coefficient of 1 on f(t) while
+funding's lag-1 rank autocorrelation is only about 0.7, and w co-moves with f(t) (rho +0.47 BTC, +0.61 ETH), so the
+design pulls rho(w, d) toward zero or below without any impact mechanism. For ETH, rho(w, f(t+1)) - rho(w, f(t)) is
+-0.057, which accounts for most of the observed -0.085. (Corrected after review 2026-11-13-122155.)
 
 Run 2026-11-13 12:04 UTC, one run of `scripts/run_usdeflow.py`: PREREG sha 5e0e0896, 7 frozen inputs matched, raw
 manifest fetched 2026-11-13T12:02:01Z (103 bodies, all HTTP 200, manifest sha256 5b53072c...). Output:
@@ -34,9 +37,15 @@ manifest fetched 2026-11-13T12:02:01Z (103 bodies, all HTTP 200, manifest sha256
 - **Next-week funding level** f(t+1): BTC rho +0.481, ETH +0.551, circular p 0.000 (none of 138 shifts as large).
   **Post hoc** (computed after the run from `results/weekly.csv`, no decision): the concurrent rho(w(t), f(t)) is
   +0.473 (BTC) and +0.608 (ETH), and weekly mean funding has a Spearman lag-1 autocorrelation of 0.707 (BTC) and
-  0.687 (ETH). So supply grows in weeks when funding is already high, and funding persists; the level correlation
-  carries no information beyond this week's funding, which the change target removes. This reading is consistent
-  with mint demand following the sUSDe yield, not with mints moving later funding.
+  0.687 (ETH). So supply grows in weeks when funding is already high, and funding persists. Most of the level
+  correlation is concurrent, but not all of it: the partial rank correlation of w(t) with f(t+1) given f(t) is
+  +0.237 (BTC) and +0.235 (ETH), positive, in the PREREG's tested direction. It is post hoc, decides nothing and was
+  not tested against any null; it is computed by `scripts/posthoc_usdeflow_v1.py` (output `results/posthoc.json`).
+  The change target does not remove f(t): it subtracts it with a coefficient of 1, which is the wrong weight when
+  funding's autocorrelation is about 0.7. Whether w predicts next-week funding beyond this week's funding (a
+  residualized target) is an open question this lane did not test; it would be a new lane with a new id. (This
+  paragraph was corrected after review 2026-11-13-122155; the earlier text said the level correlation carried no
+  information beyond this week's funding, which the committed `weekly.csv` contradicts.)
 - **Sunday-stamp variant** (S_end on the Sunday of week t): BTC rho -0.030 (p_one 0.710), ETH -0.101 (p_one 0.906,
   p_neg 0.094); halves BTC -0.061 / +0.039, ETH -0.071 / -0.164. Same reading.
 - **Carry-book spread proxy** (mean daily v2 net of the six forward books in week t+1, fraction of book capital;
