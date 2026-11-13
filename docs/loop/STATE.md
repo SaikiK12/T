@@ -617,3 +617,12 @@ measurements first.
     2026-11-10 read (R447 forward window); one run.
   - rho +0.149 (n 306), p one-sided 0.154. Book 1x +2.86%/block (t 1.43; 2x +2.77, 3x +2.68) below always-long
     +4.17%. G1-G3 fail. M537 TESTED. Program 9,785,291. FINDINGS: `experiments/litbuyback_v1/FINDINGS.md`.
+- 2026-11-13 ~11:45 UTC: R487 `adlstress_v1` (M534), by a coder sub-agent. PARTIAL, 6 trials.
+  - Test: worst-case ADL bound on 2025-10-10 for the nine carry books: each exposed pair's profitable leg on an ADL
+    venue closed, the other leg naked over its venue's full high-low range, plus one round trip at 7/14/21 bp.
+    SURVIVES if the bound at 2x is below one month of the book's v2 2x net. Frozen in `a3159620` before any candle;
+    candles fetched once in `12ee748c` (Gate, KuCoin, MEXC, Hyperliquid, data.binance.vision); one run.
+  - ADL venues (WS0027-WS0032, `research/intake/adl_venues_20261113.md`): only Hyperliquid documented. S1: R278 A
+    29.35% of book capital at 2x (32 months of net) EXPOSED; the five books with no Hyperliquid leg 0. S2 (all
+    venues): 21% to 55% for every forward book. Realized net that day -0.09% to +0.57%. M534 TESTED. Program
+    9,785,297. FINDINGS: `experiments/adlstress_v1/FINDINGS.md`.
