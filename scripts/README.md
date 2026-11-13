@@ -142,7 +142,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (211)
+## Run: one lane's frozen measurement (212)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -244,6 +244,7 @@ line is the first line of the script's own docstring.
 - [`run_linstart.py`](run_linstart.py): linstart_v1 (R485, M538): short an OKX USDT swap from the 1Dutc close of D-7 to the 1Dutc close of D+14 around an insiders/privateSale linear-vesting start D, as set out in ...
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
+- [`run_litbuyback.py`](run_litbuyback.py): litbuyback_v1 (R486, M537): does Lighter's daily LIT buyback, as a share of LIT's own daily traded value, predict LIT's next-week return on Lighter's LIT perp? Gate 0 on history, as set out in ...
 - [`run_litpoolsel.py`](run_litpoolsel.py): litpoolsel_v1 (R452, M507 on Lighter): Lighter's public pools picked by their past record.
 - [`run_llphouse.py`](run_llphouse.py): llphouse_v1 (R484, M536): does Lighter LLP's day return, the house side of Lighter's crowd P&L, predict the next UTC day's BTC move on Hyperliquid? Rule, costs, window and decision are in ...
 - [`run_llpinv.py`](run_llpinv.py): llpinv_v1 (R455): Lighter LLP's inventory as a cross-sectional signal on Lighter's perps (M511), as set out in experiments/llpinv_v1/PREREG.md.
