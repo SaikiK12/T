@@ -1,5 +1,6 @@
 """scripts/run_llphouse.py (R484): prior-only thresholds, the t+1 trade window, book signs, costs and funding sign."""
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -133,6 +134,55 @@ class TestStats(unittest.TestCase):
         self.assertLess(b["lo"], x.mean())
         self.assertGreater(b["hi"], x.mean())
         self.assertEqual(b["p_le_0"], 0.0)
+
+
+class TestHlCrosscheck(unittest.TestCase):
+    """hl_crosscheck compares the fetched closes with the recorder's hl/candles_1d closes on common days <= end."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.data = Path(self.tmp.name)
+        self.days = ["2026-08-02", "2026-08-03", "2026-08-04"]
+        self.fetched = candles(self.days, [100.0, 101.0, 102.0], [101.0, 102.0, 104.0])
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def record(self, rows_by_file):
+        folder = self.data / "hl" / "candles_1d"
+        folder.mkdir(parents=True, exist_ok=True)
+        for name, rows in rows_by_file.items():
+            pd.DataFrame(rows, columns=["coin", "ts", "o", "h", "l", "c", "vol_base"]).to_csv(folder / name, index=False)
+
+    def row(self, coin, day, close):
+        return [coin, lh.rx.ms(day), close, close, close, close, 1.0]
+
+    def test_agreeing_closes_give_zero_gap(self):
+        self.record({f"{d}.csv": [self.row("BTC", d, c), self.row("ETH", d, 1.0)]
+                     for d, c in zip(self.days, (101.0, 102.0, 104.0))})
+        self.assertEqual(lh.hl_crosscheck(self.data, self.fetched, "BTC", "2026-08-04"),
+                         {"days": 3, "max_rel_gap": 0.0})
+
+    def test_mismatch_reports_the_largest_relative_gap(self):
+        self.record({f"{d}.csv": [self.row("BTC", d, c)] for d, c in zip(self.days, (101.0, 100.0, 104.0))})
+        r = lh.hl_crosscheck(self.data, self.fetched, "BTC", "2026-08-04")
+        self.assertEqual(r["days"], 3)
+        self.assertAlmostEqual(r["max_rel_gap"], 0.02)
+
+    def test_other_coins_days_after_end_and_duplicates_are_ignored(self):
+        self.record({
+            "2026-08-02.csv": [self.row("BTC", "2026-08-02", 101.0), self.row("ETH", "2026-08-02", 5.0)],
+            "2026-08-03.csv": [self.row("BTC", "2026-08-03", 102.0), self.row("BTC", "2026-08-03", 102.0)],
+            "2026-08-04.csv": [self.row("BTC", "2026-08-04", 50.0)],
+        })
+        self.assertEqual(lh.hl_crosscheck(self.data, self.fetched, "BTC", "2026-08-03"),
+                         {"days": 2, "max_rel_gap": 0.0})
+
+    def test_no_recorder_rows_or_no_common_day_gives_none(self):
+        (self.data / "hl" / "candles_1d").mkdir(parents=True)
+        self.assertIsNone(lh.hl_crosscheck(self.data, self.fetched, "BTC", "2026-08-04"))
+        self.record({"2026-07-01.csv": [self.row("BTC", "2026-07-01", 90.0)]})
+        self.assertIsNone(lh.hl_crosscheck(self.data, self.fetched, "BTC", "2026-08-04"))
 
 
 if __name__ == "__main__":

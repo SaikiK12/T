@@ -83,6 +83,16 @@ days (look on 2027-02-08), and runs past the 180-day look (2027-05-09).
 - **Buyback against supply.** The buyback bought 20,000 to 41,000 LIT a day in September and October; the stream adds
   about 456,000 a day, 11 to 23 times more. This matters for M537's flow and the unhedged line, not for the hedged book.
 
+### Addendum 2026-11-13 ~10:00 UTC: R447 watch note
+- DefiLlama's team and investor `linear_start` stream (3.194m LIT/week) starts on 2026-12-29, six weeks before R447's
+  first gate look on 2027-02-08, so about six weeks of the stream fall inside the scored window of that look.
+- R447 holds a short of 1 LIT on Lighter's LIT perp per LIT staked. The short receives funding while longs pay. To
+  2026-11-10 longs paid at a plain annualised mean of about 13.7%/yr over 7,485 hours (R484 intake note, funding
+  paragraph; R447's FINDINGS report about 12.3%/yr on notional with its own day convention). If unlock selling or
+  hedging makes shorts pay instead, the same leg becomes a cost to the book.
+- This is a watch item, not a test and not a prediction. No LIT, HLP or LLP return, price or funding after
+  2026-11-10 was read for it. R447's PREREG is unchanged; its 2027-02-08 look decides.
+
 ## What stays unread or unverified
 - LIT's vesting from a Lighter primary source (NOT_FOUND, SRC1113-011); DefiLlama's schedule cites no source.
 - The emissionsIndex body R266 snapshots (23.5 MB, not downloaded); whether MEXC lists a LIT perp.

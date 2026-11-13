@@ -577,7 +577,8 @@ measurements first.
     (LLP day return as the house's P&L signal, FEAT-003 tests it) and M537 (LIT buyback flow), both UNTESTED.
   - Found: Lighter's keyless `exchangeMetrics` has daily buybacks; Feb-Sep 2026 they equal maker+taker fees within
     1.8% (19.7m LIT, $34.9m since 2025-12-30). DefiLlama (secondary, UNVERIFIED) puts a 3.194m LIT/week team and
-    investor linear unlock from 2026-12-29, 11-23x the recent buyback; FEAT-004 checks it against R265's rule.
+    investor linear unlock from 2026-12-29, 11-23x the recent buyback; FEAT-004 checks it against R265's rule
+    (unlock material in `research/intake/lit_hype_unlocks_20261113.md`).
   - Moves to 2026-11-10: LLP's 20 largest days are all 2025 (worst -6.73% 2025-03-03; -5.35% 2025-10-11 took 117
     days to recover); HLP's largest step +$41.4m to 2025-10-15, account value $604m (2025-09-03) to $149m; LIT -74%
     (01-07 to 03-30) then +331%, -49% (09-23 to 10-29), 42 days beyond 10%. No trial, no cross-series statistic.
@@ -593,4 +594,10 @@ measurements first.
     Lighter publishes none): team and investors are a `linear_start` of 3.194m LIT/week (0.32% of max supply) from
     2026-12-29 with no cliff, so `cliff_days` gives no day. HYPE (WS0021): nothing dated in 2026-11-13..2027-03-31.
   - R266 tickets neither. New M538 (insider linear-start short, UNTESTED, kill test in the row); notes on M057, M506,
-    M537; R447 impact section in the intake note (funding sign is the exposed leg). No return after 2026-11-10 read.
+    M537; R447 impact section (funding sign is the exposed leg). No return after 2026-11-10 read.
+  - Unlock note: `research/intake/lit_hype_unlocks_20261113.md` (the R484 note `hlp_llp_lit_20261113.md` is frozen
+    and unchanged). Ledger WS0022 corrects WS0020/WS0021's routed_to to it.
+- 2026-11-13 ~10:00 UTC: R447 watch note added to `research/intake/lit_hype_unlocks_20261113.md` (addendum): the LIT
+  insider stream starts 2026-12-29, before R447's 2027-02-08 look; the short leg earns funding while longs pay (about
+  13.7%/yr to 2026-11-10) and pays if funding flips. No test, no return after 2026-11-10 read; tests added for
+  `hl_crosscheck` in `scripts/run_llphouse.py`.
