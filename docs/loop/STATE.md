@@ -610,3 +610,10 @@ measurements first.
     t 1.98; null mean +7.35%, p 0.259; G5 fails. Survivor-only swap list. Program 9,785,289.
   - Prior art WS0023-WS0026: no linear-start return figure found (The Tie read, Keyrock 403). LIT's 2026-12-29 start
     is a forward instance; R447 note unchanged. FINDINGS: `experiments/linstart_v1/FINDINGS.md`.
+- 2026-11-13 ~10:30 UTC: R486 `litbuyback_v1` (M537), by a coder sub-agent. NULL, 2 trials.
+  - Test: Lighter's daily buyback USDC over LIT perp plus spot quote volume against LIT perp's next 7-day return
+    (Spearman, circular-shift null), and a weekly long-or-flat book against always-long, 20/40/60 bp plus funding.
+    Frozen in `9d6cc3f6` before any buyback-return statistic; lit/ at okx-xperp-data `0364bbc6`, nothing after
+    2026-11-10 read (R447 forward window); one run.
+  - rho +0.149 (n 306), p one-sided 0.154. Book 1x +2.86%/block (t 1.43; 2x +2.77, 3x +2.68) below always-long
+    +4.17%. G1-G3 fail. M537 TESTED. Program 9,785,291. FINDINGS: `experiments/litbuyback_v1/FINDINGS.md`.
