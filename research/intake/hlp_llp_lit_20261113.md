@@ -2,9 +2,9 @@
 
 Source and mechanics intake, 2026-11-13 08:20 to 08:30 UTC, continuing the owner's line on Hyperliquid's HLP,
 Lighter's LLP and the LIT token (owner, 2026-11-13: "great movements and other factors that are interesting").
-Run under [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md); ledger rows WS0011 to WS0019 in
+Run under [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md); ledger rows WS0011 to WS0021 in
 [`registry/web_searches.csv`](../../registry/web_searches.csv); catalog
-[`source_catalog_websearch_20261113.csv`](source_catalog_websearch_20261113.csv) (SRC1113-001 to SRC1113-011);
+[`source_catalog_websearch_20261113.csv`](source_catalog_websearch_20261113.csv) (SRC1113-001 to SRC1113-012);
 cards [`cards/SRC1113-001.md`](cards/SRC1113-001.md) and [`cards/SRC1113-006.md`](cards/SRC1113-006.md); raw bodies
 with hashes in [`hlp_llp_lit_20261113/`](hlp_llp_lit_20261113/) (`SHA256SUMS`).
 
@@ -189,11 +189,11 @@ $71.1m; 2026-08-19 $59.9m; 2025-11-03 $57.4m. Largest net outflow day: 2025-10-1
    $801m market cap (0.3% to 0.5% a month) and against LIT's median daily traded value of about $21m (perp plus
    spot), so the TWAP is roughly 0.3% to 0.6% of daily turnover. It is public with one day's lag and scales with
    fees. New M537.
-2. **Insider unlock from 2026-12-29 outsizes the buyback 11 to 23 times** (secondary source, UNVERIFIED): 3,194,000
+2. **Insider unlock from 2026-12-29 outsizes the buyback 11 to 23 times** (secondary source; DefiLlama's copy VERIFIED by re-fetch, WS0020): 3,194,000
    LIT a week (about 456,000 a day, $1.46m a day at $3.20) for three years, against 20,000 to 41,000 LIT a day bought
    in September and October ($133,000 a day in October). The first year alone releases about 167m LIT, two thirds of
    today's circulating supply. This is
-   a linear start, not a cliff; whether it falls under R265's rule is FEAT-004's call (M057, R266).
+   a linear start, not a cliff; it does not fall under R265's rule (FEAT-004 section below; M057, M538).
    - For M518 (buyback coverage) it is one token with both histories keyless: buyback from SRC1113-006, schedule from
      SRC1113-009. That does not unblock M518, which needs a cross-section.
 3. **Staking reward purchases.** The 6% APR is paid in LIT bought from one named address (SRC1113-001). Its size
@@ -210,8 +210,78 @@ $71.1m; 2026-08-19 $59.9m; 2025-11-03 $57.4m. Largest net outflow day: 2025-10-1
 7. **LIT perp margin.** Initial 20% (5x), maintenance 12%, close-out 8%, liquidation fee 1% (SRC1113-007). With a
    daily sd of 6.5% and 42 days above 10%, R447's 1x-margined short is far from liquidation, but a 5x short is not.
 
+## LIT and HYPE unlocks against R265's rule (FEAT-004, 2026-11-13 09:03 UTC)
+
+**Rule read from the frozen files.** R265 ([`unlocks_v1/PREREG.md`](../../experiments/unlocks_v1/PREREG.md)) and R266
+([`unlocks_fwd/PREREG.md`](../../experiments/unlocks_fwd/PREREG.md)) both use `cliff_days` in
+[`scripts/unlock_events.py`](../../scripts/unlock_events.py): it sums only `cliffAllocations` whose category is
+`insiders` or `privateSale`, per UTC day D, and keeps D when the sum is at least 1% of max supply (14-day spacing).
+`linearAllocations` are never read. R266 applies the same function to each token's `unlockEvents` in the daily
+emissionsIndex snapshot (`scripts/forward_unlocks.py`, `snapshot_events`).
+
+**Sources and labels.**
+- SRC1113-009, DefiLlama [emissions/lighter](https://defillama-datasets.llama.fi/emissions/lighter): re-fetched by a
+  second agent at 09:03 UTC, 384,204 bytes, sha256 `605f1fb9...`, byte-identical to the 08:2x copy. **VERIFIED as
+  DefiLlama's published schedule** (WS0020). It is still a secondary source with no cited document, and Lighter
+  publishes no tokenomics page (SRC1113-011, WS0017, NOT_FOUND), so the schedule itself rests on DefiLlama alone.
+- SRC1113-012, DefiLlama [emissions/hyperliquid](https://defillama-datasets.llama.fi/emissions/hyperliquid): 383,701
+  bytes, sha256 `f834c1eb...`, saved in [`hlp_llp_lit_20261113/`](hlp_llp_lit_20261113/). Secondary, UNVERIFIED (one
+  fetch, WS0021). Not queue-changing: it has no event in the window under any reading.
+- Not read: the 23.5 MB emissionsIndex that R266 snapshots (HEAD request only). That the index rows carry the same
+  `unlockEvents` as the per-protocol bodies is assumed, not checked.
+
+**Events dated 2026-11-13 to 2027-03-31.**
+
+| Token | Event (DefiLlama) | Type and category | Size | R265 rule | R266 ticket |
+|---|---|---|---|---|---|
+| LIT | Team 1,661,000 + Investors 1,533,000 LIT a week from 2026-12-29 05:48 UTC to 2029-12-28 | `linear_start`, insiders; `cliffAllocations` empty | 3,194,000 LIT a week = 0.319% of the 1bn max supply a week (0.046% a day); first week 0.32%; first year about 166.7m (16.7%) | **Does not qualify**: no cliff, so `cliff_days` returns no day | No (no event) |
+| LIT | Ecosystem 250m | TBD, not scheduled | n/a | No event | No |
+| HYPE | none dated in the window. Last dated event 2026-11-06 (179,706 HYPE). Core Contributors cliffs 2026-01-06 to 2026-11-06 are observed HyperLabs transfers, category `Uncategorized`, largest 3,750,000 (0.375%) on 2026-10-07 | cliff, Uncategorized | below 1% even if relabelled insiders | **Does not qualify** | No |
+| HYPE | 609.3m TBD (Core Contributors TBD and others) | not scheduled | n/a | No event | No |
+
+The other check items in the plan:
+- **First-week tranche:** 0.32% of max supply, under 1%. No single day reaches 1% at 0.046% a day; adding weeks
+  together to cross 1% would be a different rule, so it is not done.
+- **Size against volume:** at the 2026-11-10 perp close of 3.4753, a week of the LIT stream is about $11.10m. That
+  is 0.56 days of the perp's mean daily quote volume over 2026-10-12..2026-11-10 ($19.73m; spot $4.27m), or 8.0% of
+  perp volume each day (6.6% of perp plus spot). R181's 0.82-day cut applies to one cliff day's tokens and is not
+  applied here. HYPE: N/A (no event).
+- **R266's venue:** moot, since R266's rule yields no LIT or HYPE event. Whether MEXC lists a LIT perp was not checked.
+
+**Decision: no lane.** No LIT or HYPE event in 2026-11-13..2027-03-31 falls under R265's rule, so nothing exists that
+R266 could miss, and FEAT-004 step 3 (`experiments/litunlock_fwd`) does not apply. Calling a linear stream an unlock
+event would change R265's rule, so it is a new idea: **M538** (UNTESTED) in `registry/methods.csv`, the short from
+the close of D-7 to the close of D+14 around a first insider `linear_start` of at least 0.25% of max supply a week,
+with its kill test written there (archive cross-section on the R265 snapshot first; LIT's own 2026-12-29 start is
+one forward instance and decides nothing alone). It would need its own frozen PREREG and round before any return is
+read. Notes added on M057, M506 and M537.
+
+## What a large LIT unlock means for R447 (llpstake_v1)
+
+No return, funding sum or price after 2026-11-10 was computed for this section. It reads R447's frozen book
+([PREREG](../../experiments/llpstake_v1/PREREG.md)): per 1 LIT staked, 10 USDC in LLP, the LIT held and staked, and a
+short of 1 LIT on Lighter's LIT perp margined at 1x. The stream starts on 2026-12-29, inside gate 1's first 90 scored
+days (look on 2027-02-08), and runs past the 180-day look (2027-05-09).
+- **Stake value against the short.** The stake and the short are the same size in LIT, so a fall in LIT from new
+  supply moves both legs by the same amount; only the spot-to-perp basis stays in the book. The unhedged line (R447
+  "stake held without the short") carries the full move and decides nothing.
+- **Funding sign.** The short earns funding only while longs pay. Longs paid in every month to 2026-11-10 (section
+  above). If holders of newly unlocked LIT, or traders front-running it, short the perp, funding can turn negative
+  and the short pays. This is the R447 leg most exposed to the unlock, and its PREREG already names a funding regime
+  shift on LIT as the lane's main unknown.
+- **Liquidation.** R447's check fires on a daily high of 2/1.2 times the previous close (+66.7%). Selling pressure
+  from an unlock moves price the other way; the risk stays a short squeeze, as before. A 5x short would be closer.
+- **LLP access demand.** LLP needs 0.1 LIT staked per USDC. Unlocked LIT that is staked for LLP access adds deposits,
+  which spread LLP's liquidation income over more capital; unlocked LIT that is sold adds supply. Which one dominates
+  is not known, and no staked-LIT total is available (unread list below).
+- **Lock-up timing.** Unstaking takes 3 days and LLP withdrawal 5 minutes, while the perp short can be closed at once.
+  An exit around the unlock would leave the stake unhedged for those 3 days if the short were closed first.
+- **Buyback against supply.** The buyback bought 20,000 to 41,000 LIT a day in September and October; the stream adds
+  about 456,000 a day, 11 to 23 times more. This matters for M537's flow and the unhedged line, not for the hedged book.
+
 ## What stays unread or unverified
 - LIT's vesting from a Lighter primary source (NOT_FOUND, SRC1113-011); DefiLlama's schedule cites no source.
+- The emissionsIndex body R266 snapshots (23.5 MB, not downloaded); whether MEXC lists a LIT perp.
 - Whether bought-back LIT is burned, held by the zero-address treasury or re-used for staking rewards.
 - The staked LIT total and the reward address's purchases (no keyless endpoint found; `exchangeMetrics` has no
   staking kind).
@@ -228,4 +298,7 @@ $71.1m; 2026-08-19 $59.9m; 2025-11-03 $57.4m. Largest net outflow day: 2025-10-1
 - Links: [M285](../../registry/methods.csv), M505 ([R446](../../experiments/dexvault_v1/FINDINGS.md)), M506
   ([R447](../../experiments/llpstake_v1/FINDINGS.md)), M510 ([R454](../../experiments/hlpinv_v1/PREREG.md)), M511
   (R455), M518 ([idea wave 5](idea_wave5_20261111.md)), M057 ([R266](../../experiments/unlocks_fwd/PREREG.md)).
+- FEAT-004: ledger WS0020 (SRC1113-009 re-fetch, VERIFIED) and WS0021 (SRC1113-012, HYPE); new **M538** (insider
+  linear-start short, UNTESTED, no lane); notes on M057, M506 and M537. `WS1113-LIT-INSIDER-UNLOCK` stays an alias of
+  M057: the decision is no R265 event.
 - No frozen file, lane, workflow, round row or earlier ledger row was changed.

@@ -588,3 +588,9 @@ measurements first.
   - 99 events (51 house-loss, 48 house-win). F 1x -0.162%/trade (t -0.64), 2x -0.292, 3x -0.422; R 1x -0.098%
     (t -0.39), 2x -0.228, 3x -0.358; placebo percentiles 31.8 and 68.2. Both halves agree. Program 9,785,288.
   - Reported: ETH F +0.03% (t 0.08), R -0.29%; LIT R +0.97% (t 1.21, placebo pct 95.3), F -1.23%. Not findings.
+- 2026-11-13 ~09:15 UTC: FEAT-004, LIT and HYPE unlocks against R265's rule. No R265 event, no lane.
+  - DefiLlama emissions/lighter re-fetched byte-identical by a second agent (WS0020, VERIFIED as DefiLlama's claim;
+    Lighter publishes none): team and investors are a `linear_start` of 3.194m LIT/week (0.32% of max supply) from
+    2026-12-29 with no cliff, so `cliff_days` gives no day. HYPE (WS0021): nothing dated in 2026-11-13..2027-03-31.
+  - R266 tickets neither. New M538 (insider linear-start short, UNTESTED, kill test in the row); notes on M057, M506,
+    M537; R447 impact section in the intake note (funding sign is the exposed leg). No return after 2026-11-10 read.
