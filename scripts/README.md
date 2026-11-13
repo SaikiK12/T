@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (55)
+## Fetch: download archives and public history (56)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -36,6 +36,7 @@ line is the first line of the script's own docstring.
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
 - [`fetch_klines_stream.py`](fetch_klines_stream.py): Stream Binance USD-M kline archives into one parquet per symbol without keeping the zips (a disk-bounded build).
 - [`fetch_lighter_wknd.py`](fetch_lighter_wknd.py): Inputs for R465 ltwknd_v1 (R462's trade.xyz weekend fade replicated on Lighter's US-stock perps).
+- [`fetch_linstart.py`](fetch_linstart.py): OKX public daily candles (bar 1Dutc) and funding-rate history for the swaps in experiments/linstart_v1/events.csv (R485).
 - [`fetch_llphouse.py`](fetch_llphouse.py): Inputs for llphouse_v1 (R484, M536): Hyperliquid's daily BTC and ETH perp candles and their hourly funding, 2025-01-01 to the end of 2026-11-10 UTC (the lane's seen-data cutoff).
 - [`fetch_ltroll.py`](fetch_ltroll.py): Inputs for ltroll_v1 (R481, M532 on Lighter): Lighter's futures-priced commodity perps and Yahoo's continuous front futures they are priced against.
 - [`fetch_macro.py`](fetch_macro.py): Small free daily series for regime and context work: crypto sentiment, US rates and liquidity, stablecoin supply and DeFi activity.
@@ -141,7 +142,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (210)
+## Run: one lane's frozen measurement (211)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -240,6 +241,7 @@ line is the first line of the script's own docstring.
 - [`run_levels_v2.py`](run_levels_v2.py): R333 level_probability_v2: the owner's break-or-rebound probability model (M412) on the top 100 Binance perps.
 - [`run_lighter_flow.py`](run_lighter_flow.py): R433 lighter_flow_v1 (M441): does Lighter's public, account-level taker flow carry information that persists out of sample, and can a slow follower (or fader) of the accounts that were informed on ...
 - [`run_lighter_trade_contract.py`](run_lighter_trade_contract.py): R427 one-run recorded trade-role qualification, without prices, markouts or returns.
+- [`run_linstart.py`](run_linstart.py): linstart_v1 (R485, M538): short an OKX USDT swap from the 1Dutc close of D-7 to the 1Dutc close of D+14 around an insiders/privateSale linear-vesting start D, as set out in ...
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
 - [`run_litpoolsel.py`](run_litpoolsel.py): litpoolsel_v1 (R452, M507 on Lighter): Lighter's public pools picked by their past record.
@@ -413,7 +415,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (98)
+## Tools and everything else (99)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -454,6 +456,7 @@ line is the first line of the script's own docstring.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`inspect_funding_schema.py`](inspect_funding_schema.py): Inspect one funding ZIP header or Parquet schema; never decode observation rows.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
+- [`linstart_events.py`](linstart_events.py): Linear-vesting start events for linstart_v1 (R485, M538) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py) and OKX's public swap list.
 - [`lockcarry_rule.py`](lockcarry_rule.py): lockcarry_fwd (R405) rule: the locked cash-and-carry of R335 priced on Deribit's live books.
 - [`m090_event_rule.py`](m090_event_rule.py): Causal ticket construction for the proposed M090 forecast comparison.
 - [`m090_history_rule.py`](m090_history_rule.py): Strict single-page MEXC history parsing; preserves exact settlement times.

@@ -93,6 +93,19 @@ days (look on 2027-02-08), and runs past the 180-day look (2027-05-09).
 - This is a watch item, not a test and not a prediction. No LIT, HLP or LLP return, price or funding after
   2026-11-10 was read for it. R447's PREREG is unchanged; its 2027-02-08 look decides.
 
+### Addendum 2026-11-13 ~10:10 UTC: prior art for M538 (R485 linstart_v1), read before its freeze
+- Searches WS0023 to WS0026, catalog `research/intake/source_catalog_linstart_20261113.csv` (SRC1113-013 to -015).
+- **The Tie** (SRC1113-013, read in full, practitioner): 12,350 priced unlock events in 2026 to 2026-08-19; the
+  median unlock is 0.20% of trailing 30-day volume and 95.6% are below one day's volume. It reports size against
+  volume only, and says so: no event return, no horizon, no linear-vs-cliff split.
+- **Keyrock's token unlocks report** (SRC1113-014): not read. keyrock.com answered 403/404; Tokenomist's blog 403.
+  Any linear-vs-cliff return figures in it stay unread.
+- **Academic indexes** (SRC1113-015): arXiv and OpenAlex searches found no study of unlock price impact by unlock type;
+  Semantic Scholar refused without a key (429).
+- No source seen reports a return number for linear-vesting starts. These are context, not edge evidence.
+- Snapshot for R485: `data/unlocks/2026-11-13/` (R265's fetcher, 374/374 protocols, 0 errors, manifest sha256
+  `7163cf7d...`). Lighter's file in it is byte-identical to the frozen R484 body (sha256 `605f1fb9...`).
+
 ## What stays unread or unverified
 - LIT's vesting from a Lighter primary source (NOT_FOUND, SRC1113-011); DefiLlama's schedule cites no source.
 - The emissionsIndex body R266 snapshots (23.5 MB, not downloaded); whether MEXC lists a LIT perp.
