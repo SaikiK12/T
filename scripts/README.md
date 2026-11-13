@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (54)
+## Fetch: download archives and public history (55)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
@@ -36,6 +36,7 @@ line is the first line of the script's own docstring.
 - [`fetch_hyperliquid_history.py`](fetch_hyperliquid_history.py): Hyperliquid public history for every listed perp (POST api.hyperliquid.xyz/info, no keys): hourly funding with premium since 2023-05 (500 rows per call, paged), daily candles over the full ...
 - [`fetch_klines_stream.py`](fetch_klines_stream.py): Stream Binance USD-M kline archives into one parquet per symbol without keeping the zips (a disk-bounded build).
 - [`fetch_lighter_wknd.py`](fetch_lighter_wknd.py): Inputs for R465 ltwknd_v1 (R462's trade.xyz weekend fade replicated on Lighter's US-stock perps).
+- [`fetch_llphouse.py`](fetch_llphouse.py): Inputs for llphouse_v1 (R484, M536): Hyperliquid's daily BTC and ETH perp candles and their hourly funding, 2025-01-01 to the end of 2026-11-10 UTC (the lane's seen-data cutoff).
 - [`fetch_ltroll.py`](fetch_ltroll.py): Inputs for ltroll_v1 (R481, M532 on Lighter): Lighter's futures-priced commodity perps and Yahoo's continuous front futures they are priced against.
 - [`fetch_macro.py`](fetch_macro.py): Small free daily series for regime and context work: crypto sentiment, US rates and liquidity, stablecoin supply and DeFi activity.
 - [`fetch_metrics_full.py`](fetch_metrics_full.py): Complete Binance metrics for every day the daily panel's top-150 universe reads, reduced to hours by lab.flow.reduce_metrics into data/metrics_full/metrics_1h/. data/metrics_1h stays as it is: it ...
@@ -140,7 +141,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (209)
+## Run: one lane's frozen measurement (210)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -242,6 +243,7 @@ line is the first line of the script's own docstring.
 - [`run_listings.py`](run_listings.py): listings_v1 (R188): returns after new perpetual listings, as set out in experiments/listings_v1/PREREG.md.
 - [`run_listings_holdout.py`](run_listings_holdout.py): listings_holdout (R189): one-shot holdout test, as set out in experiments/listings_holdout/PREREG.md.
 - [`run_litpoolsel.py`](run_litpoolsel.py): litpoolsel_v1 (R452, M507 on Lighter): Lighter's public pools picked by their past record.
+- [`run_llphouse.py`](run_llphouse.py): llphouse_v1 (R484, M536): does Lighter LLP's day return, the house side of Lighter's crowd P&L, predict the next UTC day's BTC move on Hyperliquid? Rule, costs, window and decision are in ...
 - [`run_llpinv.py`](run_llpinv.py): llpinv_v1 (R455): Lighter LLP's inventory as a cross-sectional signal on Lighter's perps (M511), as set out in experiments/llpinv_v1/PREREG.md.
 - [`run_llpstake.py`](run_llpstake.py): llpstake_v1 (R447, M506): Lighter's LLP pool as a depositor must hold it.
 - [`run_lmw.py`](run_lmw.py): lmw_v1 (R251): Lo-Mamaysky-Wang kernel chart patterns (head-and-shoulders, broadening, triangle and rectangle tops and bottoms) on daily bars of the top-50 perps, 11 forex pairs and 10 world ...
