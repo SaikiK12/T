@@ -572,3 +572,12 @@ measurements first.
   - Deduction: on the backtest R278 A (gate+hyperliquid) and R278 B (binance+mexc) earn no more than a passive
     token paid by the same funding; since 2025 R278 A made 4.08%/yr against sUSDe's 5.33. The KuCoin books and
     gate+mexc carry the case for running carry. Gate 0 on seen rows; risks unpriced; forward lanes decide.
+- 2026-11-13 ~08:40 UTC: HLP/LLP/LIT intake (owner: "great movements and other factors"), descriptive only.
+  - Note `research/intake/hlp_llp_lit_20261113.md`, ledger WS0011-WS0019, catalog SRC1113-001 to -011, new M536
+    (LLP day return as the house's P&L signal, FEAT-003 tests it) and M537 (LIT buyback flow), both UNTESTED.
+  - Found: Lighter's keyless `exchangeMetrics` has daily buybacks; Feb-Sep 2026 they equal maker+taker fees within
+    1.8% (19.7m LIT, $34.9m since 2025-12-30). DefiLlama (secondary, UNVERIFIED) puts a 3.194m LIT/week team and
+    investor linear unlock from 2026-12-29, 11-23x the recent buyback; FEAT-004 checks it against R265's rule.
+  - Moves to 2026-11-10: LLP's 20 largest days are all 2025 (worst -6.73% 2025-03-03; -5.35% 2025-10-11 took 117
+    days to recover); HLP's largest step +$41.4m to 2025-10-15, account value $604m (2025-09-03) to $149m; LIT -74%
+    (01-07 to 03-30) then +331%, -49% (09-23 to 10-29), 42 days beyond 10%. No trial, no cross-series statistic.

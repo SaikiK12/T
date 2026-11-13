@@ -411,7 +411,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (97)
+## Tools and everything else (98)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -438,6 +438,7 @@ line is the first line of the script's own docstring.
 - [`demo_formula_discovery.py`](demo_formula_discovery.py): Invented-world formula discovery and chart information-loss demonstration.
 - [`demo_paper_entry_risk.py`](demo_paper_entry_risk.py): Compare finite invented sizes at1x/2x/3x costs through strict paper admission.
 - [`demo_paper_session.py`](demo_paper_session.py): Invented durable paper admission/receipt/close demo; no market files or orders.
+- [`describe_hlp_llp_lit.py`](describe_hlp_llp_lit.py): Describe the large moves in HLP, LLP and LIT series the lab has already read (R446, R447), plus Lighter's exchange-level daily metrics (buybacks, fees, liquidations).
 - [`earnperp_rule.py`](earnperp_rule.py): R461 earnperp_v1 rule, frozen in experiments/earnperp_v1/PREREG.md: when a US company files its earnings release (SEC 8-K, Item 2.02) outside cash hours, its 24/7 stock perpetual reacts while the ...
 - [`edge_map.py`](edge_map.py): Generate docs/EDGE_MAP.md: every queued method and registered round placed in one edge family.
 - [`event_journal.py`](event_journal.py): Shared engine of the point-in-time event recorders (record_listings.py, record_tradfi_calendar.py).
