@@ -7,8 +7,9 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (56)
+## Fetch: download archives and public history (57)
 
+- [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
@@ -142,11 +143,12 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (212)
+## Run: one lane's frozen measurement (213)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
 - [`run_accounting.py`](run_accounting.py): accounting_v1 (R264): how much the legacy zero-fill of missing next returns moves flow books A, B and X2, as set out in experiments/accounting_v1/PREREG.md.
+- [`run_adlstress.py`](run_adlstress.py): adlstress_v1 (R487, M534, gate 0): a worst-case auto-deleveraging (ADL) stress bound on 2025-10-10 for the audited cross-venue carry books.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
 - [`run_asiaclose.py`](run_asiaclose.py): R468 asiaclose_v1 runner, frozen in experiments/asiaclose_v1/PREREG.md: Asian single-stock perps on trade.xyz and Lighter across the daily closure of their local exchange (M526).
