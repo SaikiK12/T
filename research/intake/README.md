@@ -19,6 +19,16 @@ Directly received PDF/HTML hashes and unread scopes are explicit. No strategy wa
 
 Web searches follow [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md) and are logged in [`registry/web_searches.csv`](../../registry/web_searches.csv).
 
+The [2026-11-12 web search wave](websearch_wave_20261112.md) (ledger WS0002-WS0008,
+[catalog](source_catalog_websearch_20261112.csv), cards SRC1112-001/-007/-008/-009/-010) red-teams the carry family
+and fixes the passive-yield benchmarks for R483 (M478, M481).
+- DefiLlama's free yield endpoints shut down on 2026-11-13. The sUSDe and Aave v3 Core USDC/USDT histories were
+  captured unread with sha256 before that date.
+- sUSDe is not offered to EU/EEA residents.
+- Aave's `apyBase` is an APR.
+- It adds M534 (ADL stress bound for 2025-10-10) and M535 (USDe flow and funding).
+- No return or APY statistic was computed.
+
 The [2026-11-03 web-deep wave](web_deep_20261103.json) ([catalog](source_catalog_webdeep_20261103.csv), cards SRC1103-*)
 read 35 public sources through four lens agents (ledgers of winners, exchange rulebooks, forensic and Korean sources,
 2025-26 papers and prediction markets). Independent verifiers re-fetched every queue-changing claim and contradicted
