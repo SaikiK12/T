@@ -1,0 +1,1340 @@
+{
+ "source": "https://stablecoins.llama.fi/stablecoin/146 (GET); https://api.hyperliquid.xyz/info fundingHistory (POST); public, no key",
+ "fetched_utc": "2026-11-13T12:02:01Z",
+ "requests": [
+  {
+   "file": "llama/stablecoin_146.json",
+   "url": "https://stablecoins.llama.fi/stablecoin/146",
+   "status": 200
+  },
+  {
+   "file": "hl/BTC_funding_000.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1704067200000,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_001.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1705863600335,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_002.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1707663600304,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_003.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1709463600282,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_004.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1711263600228,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_005.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1713063600242,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_006.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1714863600242,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_007.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1716663600011,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_008.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1718463600011,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_009.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1720263600032,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_010.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1722063600004,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_011.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1723867200112,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_012.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1725667200058,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_013.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1727467200193,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_014.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1729267200036,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_015.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1731067200096,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_016.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1732867200317,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_017.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1734667200008,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_018.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1736467200034,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_019.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1738267200165,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_020.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1740067200079,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_021.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1741867200072,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_022.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1743667200097,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_023.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1745467200053,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_024.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1747267200022,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_025.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1749067200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_026.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1750867200059,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_027.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1752667200030,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_028.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1754467200004,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_029.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1756267200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_030.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1758067200090,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_031.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1759867200007,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_032.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1761667200047,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_033.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1763467200036,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_034.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1765267200042,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_035.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1767067200064,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_036.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1768867200008,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_037.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1770667200060,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_038.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1772467200054,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_039.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1774267200046,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_040.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1776067200016,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_041.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1777867200015,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_042.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1779667200026,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_043.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1781467200067,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_044.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1783267200002,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_045.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1785067200122,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_046.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1786867200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_047.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1788667200037,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_048.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1790467200068,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_049.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1792267200060,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/BTC_funding_050.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1794067200002,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 31
+  },
+  {
+   "file": "hl/ETH_funding_000.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1704067200000,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_001.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1705863600335,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_002.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1707663600304,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_003.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1709463600282,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_004.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1711263600228,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_005.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1713063600242,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_006.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1714863600242,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_007.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1716663600011,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_008.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1718463600011,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_009.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1720263600032,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_010.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1722063600004,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_011.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1723867200112,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_012.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1725667200058,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_013.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1727467200193,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_014.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1729267200036,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_015.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1731067200096,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_016.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1732867200317,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_017.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1734667200008,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_018.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1736467200034,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_019.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1738267200165,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_020.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1740067200079,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_021.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1741867200072,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_022.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1743667200097,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_023.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1745467200053,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_024.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1747267200022,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_025.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1749067200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_026.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1750867200059,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_027.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1752667200030,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_028.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1754467200004,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_029.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1756267200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_030.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1758067200090,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_031.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1759867200007,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_032.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1761667200047,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_033.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1763467200036,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_034.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1765267200042,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_035.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1767067200064,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_036.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1768867200008,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_037.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1770667200060,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_038.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1772467200054,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_039.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1774267200046,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_040.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1776067200016,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_041.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1777867200015,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_042.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1779667200026,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_043.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1781467200067,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_044.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1783267200002,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_045.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1785067200122,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_046.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1786867200035,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_047.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1788667200037,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_048.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1790467200068,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_049.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1792267200060,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 500
+  },
+  {
+   "file": "hl/ETH_funding_050.json",
+   "url": "https://api.hyperliquid.xyz/info",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1794067200002,
+    "endTime": 1794182399999
+   },
+   "status": 200,
+   "rows": 31
+  }
+ ],
+ "files": {
+  "hl/BTC_funding_000.json": "d176d6e0be23f6c10e19bd069f21380afe5544a32d95a05c628e6e2ef4b1dc4b",
+  "hl/BTC_funding_001.json": "183c308f347145ff04728a434eed8287053b38cf05d85a44988af0be95f7c9c3",
+  "hl/BTC_funding_002.json": "54daaeff03f1d9b24186b7f82318051d6f81fc7f929757be7072f0122ae554ed",
+  "hl/BTC_funding_003.json": "6cce68621558e66a2e89d94e58cbed727ecc8a97dab9b216359c1c0cc8d4ef27",
+  "hl/BTC_funding_004.json": "c4c589c83c724090c6313c02a1deae992c3142febbcc75e4b5d175c04280250d",
+  "hl/BTC_funding_005.json": "6da5f6b9458932e6cb660a49b82b53cc9d74a7681d5b2dbc01ca35bf5ff8f6c8",
+  "hl/BTC_funding_006.json": "b773235a619dca34d1985f14c82268b612b6233647dbc0ff3010ae81496a82b5",
+  "hl/BTC_funding_007.json": "18dee5b52042445c940714daf537ca4ecfb96c6bfca8c1a72bfd3a30c70f943c",
+  "hl/BTC_funding_008.json": "879b176d7b00824e48c93fabf93ab96ec05ac5a99f8f361fe282cbbdc1406765",
+  "hl/BTC_funding_009.json": "79919b270e02e39677ff876e0a54bd049606851abd5e2a6ac5d7422e05c66cd4",
+  "hl/BTC_funding_010.json": "ce5a81379b1f186d6507f527ab214a8b36c63afe6c4e71d19c20cd4a34d4dd7d",
+  "hl/BTC_funding_011.json": "e8ddadac6caa7735eb4ff8f8ee3edbcccfdefae6f02249182789fb997425d395",
+  "hl/BTC_funding_012.json": "252b9892ba0d4fa9a47b5bf6b49a842320d68f09b85b6e4448690afa3d1b7e62",
+  "hl/BTC_funding_013.json": "c45586278be7cb3dec286d28f9a48c3b18cf71f840be64c8a1439ef4915aa81d",
+  "hl/BTC_funding_014.json": "f1758b7d947940924df838790882936d97bc73e8a9f26315f994d72d23e842a8",
+  "hl/BTC_funding_015.json": "551bb91d562e24c27a3e342a2c91a4bc959453d6a7e2488b2c2317f774d6e5a6",
+  "hl/BTC_funding_016.json": "bb0664bd965f15a4400fcec4ab3d1f0aca18c1728ec16ae886260e60fbc040ba",
+  "hl/BTC_funding_017.json": "6eba5ad62b1cc0d9b07f9b938dfe2698c56658034a3e0ccf0bdeca5dc7cb6d9e",
+  "hl/BTC_funding_018.json": "0f3bd7c963777ed76bfba75a46e6e59b5d4bf9d7ce859f74e3d4dec82cbffdcf",
+  "hl/BTC_funding_019.json": "8b4be891b80f5a7292d51952ed4d86cee4b1ac2b7fb8943bca5845ccb125630a",
+  "hl/BTC_funding_020.json": "faf974688abba0cc17cac80c6c0f6bec34963e3e5d582363c06a36460f972749",
+  "hl/BTC_funding_021.json": "bd98db616e8fb86b5d6f905055e6160fe9187e1fd04dedbd3b440102562cdb0d",
+  "hl/BTC_funding_022.json": "6a7bded953e83d55821978a400b6e9a9699a8962474548d4ca025fe253e46c27",
+  "hl/BTC_funding_023.json": "9fa80648351f774f117e94ecdfb064c080dd7e99011e65e9d97b57f15ff396f1",
+  "hl/BTC_funding_024.json": "085572173c30ddfbbb4d828364beb9b19be2779f4fdd000d20c69804afafe22d",
+  "hl/BTC_funding_025.json": "f4c157d7d120cf85cbbc307d95bc647a2ca80e5c19d375a132b0a374e39a282f",
+  "hl/BTC_funding_026.json": "651dfb60eeed0de3bbcf385222dfa4eb4e7c04f40f2437386531d26ae963b67e",
+  "hl/BTC_funding_027.json": "1cadb5a2b1edaafd1630eec823d1a4831f2c568118a363bcf7409836dcfa94ea",
+  "hl/BTC_funding_028.json": "ef2d97f392e277796be41b0abdc5767a047d04a7b90145433d0d753f8e8eed23",
+  "hl/BTC_funding_029.json": "a97ba55492c3093e538afc8e41c1d84ec3bd2ef68cd6ce42ecd12550550b91b8",
+  "hl/BTC_funding_030.json": "52fc8a6c498815d4486648399e7416a43d95d2d5657522b313ed7f9a9433db0e",
+  "hl/BTC_funding_031.json": "f251c99655363df72ca7941f52733981b7bcb948c2f706545e43eb3cb3c45c86",
+  "hl/BTC_funding_032.json": "514aada31023812b7caec1056a4fb02d2f6330c1d5a9539b02de5705e20b2f00",
+  "hl/BTC_funding_033.json": "6386db139d82f3537dfe34ac209215e9da2902469b1c0d191cb3571c773bad0f",
+  "hl/BTC_funding_034.json": "709762ceb8a558eb756cd11224b53c87977b027e67dd5afe4f5c62d976926666",
+  "hl/BTC_funding_035.json": "84d31ca4259f2636bc668d6bbc2b6d1f043465794395e7b6a556966beec5b519",
+  "hl/BTC_funding_036.json": "f813808a69068be99fc26d5fc8de24b3af15458161f152e73d6eefc453e5389b",
+  "hl/BTC_funding_037.json": "c3c1be57325303635c7d13b8e6232533fc8e3880e9ef19bf6568b174c3e6ce77",
+  "hl/BTC_funding_038.json": "ad2b20bc53e8963ff297b3b4041cb6e3ecb5456dc18974fb2327d34bb64da409",
+  "hl/BTC_funding_039.json": "f7c2305e8271ed1eafc83c09d5ca4d7e7ee3947ac5449f45f8d7fbae4e45009f",
+  "hl/BTC_funding_040.json": "8d2821f227101c10f9d17b3e5bc2964c40a8c9d11e98da727a67448faf66e647",
+  "hl/BTC_funding_041.json": "4ddcc5db47a725e3949738884eb7011fc4a97195afdd14468b3cee7b522fd6e6",
+  "hl/BTC_funding_042.json": "ef724557a0431d8cf4bb7deeb10acfe7cae35bf438d65adacd6c4aef2982199a",
+  "hl/BTC_funding_043.json": "1bc82d14cb92acfe3257c10d60189de771d405dff01758006af65c6868575bf4",
+  "hl/BTC_funding_044.json": "16047c7a90a4604707ff66eb8dabbde9eafebb82aac2009324f5581459be2fc7",
+  "hl/BTC_funding_045.json": "15aed8846ccaf578fe251e55eafe219e66291bb9559af6b1ad6e606a215ec159",
+  "hl/BTC_funding_046.json": "e9a96bcabf752ed5f9276bae15a5be07b9c91929a1e31d23f2e85e785b2ddf8c",
+  "hl/BTC_funding_047.json": "d6cc9b363d0f8bdde40512ab4deb57a1e3c99541cde722b7f7a5c79dad633d67",
+  "hl/BTC_funding_048.json": "3a4f385f22d3903fd9b7133563ba05b7f158491ef1be40d46d5e72f84d130c2b",
+  "hl/BTC_funding_049.json": "fe73c2bb3e19480ce996712c679ac220afe57378df9605424a92dbce18a7d243",
+  "hl/BTC_funding_050.json": "5ba2ceec2e2196350eaf3fa69f8dd0f0a0bdb740d855f668436751b889b6449d",
+  "hl/ETH_funding_000.json": "5393d4158c1692f29170d8f7ba02c44d7b8c1f1c73f5a9586c1203e79c577766",
+  "hl/ETH_funding_001.json": "fba356b535f0792d2a58668c4dacc35bc847a46738b00b930dfa37257b373fe8",
+  "hl/ETH_funding_002.json": "69776b0af440c0467857a2d7c0fa333c03ea90fca3ac26c7a8a26181a9115e38",
+  "hl/ETH_funding_003.json": "dfdfaa96fa05f9f63863355cbb0301b505122d9e84431950d2b7d51987667db6",
+  "hl/ETH_funding_004.json": "aa10af094722fd7796b8794305ba1b2b208f5dcffc7c248321b5b48c2d8521d5",
+  "hl/ETH_funding_005.json": "35c39a31c002bc2c72d545745c7b7fcd677efebe1e9468937e9bf77c270393dd",
+  "hl/ETH_funding_006.json": "3662cbb279f7e6b631dc98f143629778789d4c2490a0c6f01207342479104877",
+  "hl/ETH_funding_007.json": "d5db7c18a5a420b4a674a7393cb4c27a6badd4d979f17192cea4908e2eb7aec1",
+  "hl/ETH_funding_008.json": "48004bdf894b04b3e09f27f7ed26bf64b5e4c51cb435c3aaba4f5c79fdd09c4c",
+  "hl/ETH_funding_009.json": "10724bbc5078136a3bd2c79431152aabaa41c0b5a256668ca932e7dbc8070839",
+  "hl/ETH_funding_010.json": "121a47d1f7e000859d2341220fd2cb6bbdd9bea668b9d3c73350cbd348a45e47",
+  "hl/ETH_funding_011.json": "88cbf57e50c0fafe7e779cc271060a604c40e81c309f85f763f167f61180512b",
+  "hl/ETH_funding_012.json": "1e8446e5f2eb66488f23988b92172b5b49ece8abcc0aa25c4c755e908fda7cd5",
+  "hl/ETH_funding_013.json": "40f6d03587abfba41196e5fd4d4308d0c55cce84eb9ca4496d47b98441614d79",
+  "hl/ETH_funding_014.json": "8f7fafd544240744d4d3182b13846fd05b972ad7487b379e2daef62361facca8",
+  "hl/ETH_funding_015.json": "c65c900a0103dfb08521050e8f0bfed2049763b0f55661e02934f2db62d75484",
+  "hl/ETH_funding_016.json": "289b1ae81c4514b2a79ca5ebab9ee4aef778fd154f2ccc6c360545584eb47694",
+  "hl/ETH_funding_017.json": "05ab677edcb92e1fadc377dbe5bbca5152368fe46f21fa96bf940e0d24c076e2",
+  "hl/ETH_funding_018.json": "045a3768f3ef8fb1654b63394531bde7492b50a04e01ed544db0f298c0e8edef",
+  "hl/ETH_funding_019.json": "1f05db3db92b9415c1f6a9aa1c240f92f0b9fbba1a8a534aeccd26b021065894",
+  "hl/ETH_funding_020.json": "dd0acd2ca015f5e57fd106ebbafd083b09aa5d2315d62d38794e8168849fe104",
+  "hl/ETH_funding_021.json": "163beafb84a738c120e7b73f88151e427882ff689a4c360c0671c4a56dce31f9",
+  "hl/ETH_funding_022.json": "3acd29f26e41dfc940c232c012e1abf3a74d496a03b83c01d2be40d8c0f8cca1",
+  "hl/ETH_funding_023.json": "a167de159592219f8d4710e7a02ba4687930550e9b9b79c9397df4298b4f435a",
+  "hl/ETH_funding_024.json": "01306d09579bed905e7b7dab1c85c4dc80691ee4ca92aa7bbe0d42958db24f97",
+  "hl/ETH_funding_025.json": "c379182558a70528b485690271ddd253857bc3d6bc919c94302f711d05dc695d",
+  "hl/ETH_funding_026.json": "8324222ed4318971545b55c05ddc4459212da4623f89a15f024d09e6ac99955b",
+  "hl/ETH_funding_027.json": "3cb9a5fcfe29c79dd944892fbd0e83fdd3c2976711f164558b7456d21de2482f",
+  "hl/ETH_funding_028.json": "11f4b1ce174795fa501613769faf557a852d194b1b7df5ec7dfa674a5c561f28",
+  "hl/ETH_funding_029.json": "ad9ce1e5f17e3ba7e4b2408ca8b0948c066b042a6734cfb2b0e0e41f1e6ddeb3",
+  "hl/ETH_funding_030.json": "9b5f9f27d4a3d1a63f6caa565b9f99e5dbcb0ece23161fa4a9b08e06ef669519",
+  "hl/ETH_funding_031.json": "8eef962e92f7fa93d445d4dd0d6f8581a2f00219b7ae511622db15531b36dde1",
+  "hl/ETH_funding_032.json": "28e48b2af3a6b37848d594fd84cd0dabf326bad11a55853ddfeb85f03838fdd2",
+  "hl/ETH_funding_033.json": "fc9ea1fce15a0770c1f658b95b642ed9f39b353b2ff62dd90e0ceea9757a61d7",
+  "hl/ETH_funding_034.json": "b944fb2aa27019c4dfc3dcd9364c9c9f8bdd11d1dc13c178427bdb9bfb0cd1bb",
+  "hl/ETH_funding_035.json": "dbe225ad93562a41d9d91cfabef8a31ff9c888ed2dd9a6184ed4a2542cde6526",
+  "hl/ETH_funding_036.json": "56941f3bda92155c5622597829506af4fa2008012d3c821355df341b0e1843b1",
+  "hl/ETH_funding_037.json": "859db5d06a9a2b468d216ee041c049994572d0c935e0651ad36112c30c8bce9d",
+  "hl/ETH_funding_038.json": "a506768f12013c6005807f83bfb2dcd00e8e5c8a457279a9c6a6dc9138fb24a1",
+  "hl/ETH_funding_039.json": "d57faabd72bfcebb88ccae26b0b635a2be69360b7db28a3d7226537559819284",
+  "hl/ETH_funding_040.json": "e7fdbacc4bcdec69803bfe0c07548e7d2b8937b0cd1ece779ad1647cb39c2ced",
+  "hl/ETH_funding_041.json": "7afb875aa309eef76a730c5649fc81a5892833a4143dd0cdb8b109fea318422f",
+  "hl/ETH_funding_042.json": "8a731047d507038d49f0621ef192442ce96af717ad32ac04d3aded3ee886b306",
+  "hl/ETH_funding_043.json": "135abe8dbf912d3464df945c6367adcb99e7b84fe3432eec11dea3f0646adf1d",
+  "hl/ETH_funding_044.json": "a43a11f95a3e2987a590cae1cc62d29db9490bbaf68b03d00da0e90976594dca",
+  "hl/ETH_funding_045.json": "7bf070e8dfd8e3db7cb0cef92c94adcdf19b91197471134974ddd7ecdee7cb4c",
+  "hl/ETH_funding_046.json": "3d0b1fa6d4fc02333c7a0e894f69dc4ccf0d1dbac32b47f2cc614a8526b4ca94",
+  "hl/ETH_funding_047.json": "d08aafb0c9c7d7a4dd2ae62c1c5666ce11bef63243b56472e1830130919f107a",
+  "hl/ETH_funding_048.json": "2c3b6fe01b444cbde0b41a0a02dcff376a32e05f8f331be444a32cf487d2ed5d",
+  "hl/ETH_funding_049.json": "fa050cc951022ed4d3f06b37803cdaf57c93fba9fc01af3978d87583c08484af",
+  "hl/ETH_funding_050.json": "19e8559407e9304c3b4e86951deb933b37605045360c51b9d8d07e94ed51cdb8",
+  "llama/stablecoin_146.json": "be9726a6cadbe294839602ff4f9fc0a2ba3a47982757f7b6974949051f65ae80"
+ }
+}
