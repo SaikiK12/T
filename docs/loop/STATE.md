@@ -581,3 +581,10 @@ measurements first.
   - Moves to 2026-11-10: LLP's 20 largest days are all 2025 (worst -6.73% 2025-03-03; -5.35% 2025-10-11 took 117
     days to recover); HLP's largest step +$41.4m to 2025-10-15, account value $604m (2025-09-03) to $149m; LIT -74%
     (01-07 to 03-30) then +331%, -49% (09-23 to 10-29), 42 days beyond 10%. No trial, no cross-series statistic.
+- 2026-11-13 ~08:55 UTC: R484 `llphouse_v1` (M536), by a coder sub-agent. NULL for both books.
+  - Test: on days LLP's return leaves its prior-90-day 10th-90th percentile band, follow (F) or reverse (R) BTC's
+    same-day sign over the next UTC day on Hyperliquid, 13 bp a round trip plus funding. Frozen in `2025a9ee` before
+    the BTC/ETH fetch (`28aaf129`, 68 bodies, manifest sha256 2a48a12f); one run.
+  - 99 events (51 house-loss, 48 house-win). F 1x -0.162%/trade (t -0.64), 2x -0.292, 3x -0.422; R 1x -0.098%
+    (t -0.39), 2x -0.228, 3x -0.358; placebo percentiles 31.8 and 68.2. Both halves agree. Program 9,785,288.
+  - Reported: ETH F +0.03% (t 0.08), R -0.29%; LIT R +0.97% (t 1.21, placebo pct 95.3), F -1.23%. Not findings.
