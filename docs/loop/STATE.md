@@ -626,3 +626,12 @@ measurements first.
     29.35% of book capital at 2x (32 months of net) EXPOSED; the five books with no Hyperliquid leg 0. S2 (all
     venues): 21% to 55% for every forward book. Realized net that day -0.09% to +0.57%. M534 TESTED. Program
     9,785,297. FINDINGS: `experiments/adlstress_v1/FINDINGS.md`.
+- 2026-11-13 ~12:05 UTC: R488 `usdeflow_v1` (M535), by a coder sub-agent. NULL, 2 trials.
+  - Test: weekly log change in USDe supply (DefiLlama id 146) against the change in Hyperliquid mean hourly funding
+    from week t to t+1, BTC and ETH both deciding, circular-shift null excluding +/-4 weeks. Frozen in `0edafe4b`
+    before any supply or funding value; fetched once in `8a0b7678`; one run.
+  - n 147 weeks (2024-01-08..2026-10-26). BTC rho -0.031 (p one-sided 0.696), ETH -0.085 (0.870); G1 and G2 fail.
+    Next-week funding level rho +0.48/+0.55 is concurrent with this week's funding (post hoc). Carry proxy at 2x
+    0.0396%/day, slightly lower after inflow weeks (0.0366%) than outflow weeks (0.0426%), rho +0.114 (p 0.205).
+    No published estimate found (WS0033-WS0036). M535 TESTED. Program 9,785,299. FINDINGS:
+    `experiments/usdeflow_v1/FINDINGS.md`.
