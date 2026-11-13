@@ -601,3 +601,12 @@ measurements first.
   insider stream starts 2026-12-29, before R447's 2027-02-08 look; the short leg earns funding while longs pay (about
   13.7%/yr to 2026-11-10) and pays if funding flips. No test, no return after 2026-11-10 read; tests added for
   `hl_crosscheck` in `scripts/run_llphouse.py`.
+- 2026-11-13 ~10:15 UTC: R485 `linstart_v1` (M538), by a coder sub-agent. INSUFFICIENT (recorded NULL), 1 trial.
+  - Test: short the OKX USDT swap from the 1Dutc close of D-7 to D+14 around insiders/privateSale `linear_start`
+    streams raising the weekly rate by >= 0.25% of max supply (fresh DefiLlama snapshot 2026-11-13); pure events (no
+    R265 cliff in D-30..D+21) decide. OKX instead of Binance (451). Frozen in `97870aff` before the OKX fetch
+    (`d094fa9e`, manifest sha256 9b53b077); one run.
+  - 9 pure archive events, 5 before their OKX listing, 4 priced (< 20). 1x +14.92%/event (2x +14.72, 3x +14.52),
+    t 1.98; null mean +7.35%, p 0.259; G5 fails. Survivor-only swap list. Program 9,785,289.
+  - Prior art WS0023-WS0026: no linear-start return figure found (The Tie read, Keyrock 403). LIT's 2026-12-29 start
+    is a forward instance; R447 note unchanged. FINDINGS: `experiments/linstart_v1/FINDINGS.md`.

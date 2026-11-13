@@ -106,6 +106,17 @@ days (look on 2027-02-08), and runs past the 180-day look (2027-05-09).
 - Snapshot for R485: `data/unlocks/2026-11-13/` (R265's fetcher, 374/374 protocols, 0 errors, manifest sha256
   `7163cf7d...`). Lighter's file in it is byte-identical to the frozen R484 body (sha256 `605f1fb9...`).
 
+### Addendum 2026-11-13 ~10:15 UTC: R485 result and what it means for LIT and R447
+- R485 `linstart_v1` (M538) is **INSUFFICIENT** (recorded NULL, 1 trial;
+  [FINDINGS](../../experiments/linstart_v1/FINDINGS.md)). Only 9 pure linear starts (>= 0.25% of max supply a week,
+  no R265 cliff nearby) exist in DefiLlama's 2021-02..2026-10 calendar on tokens with a live OKX swap, and 5 predate
+  the swap's listing. The 4 priced events average +14.92% at 1x, but a short over random 21-day windows on the same
+  tokens averaged +7.35% (null p 0.259).
+- **LIT 2026-12-29:** the event list has LIT's start as a pure forward instance (0.319% of max supply a week). History
+  gives no support for shorting it and no evidence against; one instance decides nothing.
+- **R447:** the watch note above stands. R485 read no R447 number and no LIT, HLP or LLP return after 2026-11-10;
+  LIT's swap was not fetched (it has no archive event).
+
 ## What stays unread or unverified
 - LIT's vesting from a Lighter primary source (NOT_FOUND, SRC1113-011); DefiLlama's schedule cites no source.
 - The emissionsIndex body R266 snapshots (23.5 MB, not downloaded); whether MEXC lists a LIT perp.
