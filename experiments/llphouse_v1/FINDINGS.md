@@ -9,7 +9,14 @@ usable information about BTC's next day on Hyperliquid at these costs.
   the Hyperliquid fetch and before any LLP-against-later-price statistic.
 - Fetch once after the freeze (commit `28aaf129`): 68 byte-exact bodies, `raw/manifest.json` sha256
   `2a48a12f617daf7e081faff01ec167d6aae7e68f2adc992a8b1c63308897ac27`. BTC and ETH: 679 daily bars 2025-01-01 to
-  2026-11-10 and 16,296 hourly funding settlements each, no gap above one hour.
+  2026-11-10 and 16,296 hourly funding settlements each (2025-01-01 00:00 to 2026-11-10 23:00 UTC), no gap above one
+  hour inside that range.
+- The fetch stops one settlement short of the PREREG's "to the 2026-11-11 00:00 settlement": `fetch_llphouse.py`
+  sets `endTime` to 2026-11-11 00:00:00.000, and Hyperliquid settles a few milliseconds past the hour (the last one
+  fetched is 2026-11-10 23:00:00.008), so the 2026-11-11 00:00 settlement is not in `raw/`. Trade day 2026-11-10
+  therefore holds 23 funding hours, not 24 (`short_funding_days` 1 for BTC and ETH in `report.json`). No event trades
+  on 2026-11-10 (the last event's signal day is 2026-09-28), so only the placebo pool's last day is affected; a
+  Hyperliquid hourly rate is typically about 0.001%, so one missing hour cannot move the verdict. Noted after review (2026-11-13), not re-run.
 - LLP and LIT from `claude/okx-xperp-data` at `0364bbc63ec3bc4d7cc135ff4b060cabf8127062`. One run, 2026-11-13
   (`run.log`; `results/events.csv`, `results/report.json`).
 - Fetched closes against the recorder's `hl/candles_1d/` on the 101 common days (2026-08-02 to 2026-11-10): largest

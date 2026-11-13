@@ -28,6 +28,9 @@ and assistance-fund pages, and describes the large moves in series R446/R447 alr
 - DefiLlama (secondary, UNVERIFIED) schedules a 3.194m LIT/week team and investor unlock from 2026-12-29.
 - It adds M536 (LLP day return as the house's P&L signal) and M537 (LIT buyback flow), both UNTESTED.
 - No trial and no cross-series statistic was computed.
+- The [LIT and HYPE unlock follow-up](lit_hype_unlocks_20261113.md) (WS0020-WS0021, SRC1113-012) finds no event
+  under R265's cliff rule in 2026-11-13..2027-03-31, queues M538 (insider linear-start short, UNTESTED) and reads
+  what the 2026-12-29 LIT stream means for R447. The intake note itself is a frozen R484 input and stays unchanged.
 
 The [2026-11-12 web search wave](websearch_wave_20261112.md) (ledger WS0002-WS0008,
 [catalog](source_catalog_websearch_20261112.csv), cards SRC1112-001/-007/-008/-009/-010) red-teams the carry family
