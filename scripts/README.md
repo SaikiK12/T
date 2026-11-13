@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (57)
+## Fetch: download archives and public history (58)
 
 - [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
@@ -60,6 +60,7 @@ line is the first line of the script's own docstring.
 - [`fetch_tradfi_perps.py`](fetch_tradfi_perps.py): Binance USD-M TradFi perpetuals, 1-minute klines from the public archive (data.binance.vision), every file checked against its published SHA-256.
 - [`fetch_trend_daily.py`](fetch_trend_daily.py): Fetch the frozen slow_trend_v1 spot sample; never calculate market outcomes.
 - [`fetch_unlocks.py`](fetch_unlocks.py): DefiLlama token-unlock schedules (the old session's E01 source), from the free dataset mirror: the protocol list, the emissions index, and one schedule file per protocol (documented unlock events ...
+- [`fetch_usdeflow.py`](fetch_usdeflow.py): Inputs for usdeflow_v1 (R488, M535): USDe's daily circulating supply from DefiLlama and Hyperliquid's hourly BTC and ETH funding, 2024-01-01 00:00 UTC to 2026-11-09 00:00 UTC (exclusive; the last ...
 - [`fetch_usdt_mints.py`](fetch_usdt_mints.py): Tether USDT mints (the token contract's Issue events) on Tron and Ethereum, from free public APIs, for R460.
 - [`fetch_venue_history.py`](fetch_venue_history.py): Funding and candle history from two more perp venues, public APIs, no keys.
 - [`fetch_xvfund.py`](fetch_xvfund.py): Inputs for R470 xvfund_v1 (cross-venue funding carry on the same US stock perp, trade.xyz against Lighter).
@@ -143,7 +144,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (213)
+## Run: one lane's frozen measurement (214)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -329,6 +330,7 @@ line is the first line of the script's own docstring.
 - [`run_tsbattery.py`](run_tsbattery.py): tsbattery_v1 (R242): week-open bias, pre-FOMC drift, ETH/BTC regime and vol-managed trend on the top-50 perps, as set out in experiments/tsbattery_v1/PREREG.md.
 - [`run_tsmom.py`](run_tsmom.py): tsmom_v1 (R237): cross-asset time-series momentum on equity ETFs, FX, metals and bond futures, as set out in experiments/tsmom_v1/PREREG.md.
 - [`run_unlocks.py`](run_unlocks.py): unlocks_v1 (R265): the old session's unlock short (E01, S1) on 2021-26 Binance perps, as set out in experiments/unlocks_v1/PREREG.md.
+- [`run_usdeflow.py`](run_usdeflow.py): usdeflow_v1 (R488, M535): does the weekly change in USDe circulating supply rank-correlate with the next week's change in Hyperliquid BTC and ETH funding, beyond a circular-shift null? Gate 0 on ...
 - [`run_usdtmint.py`](run_usdtmint.py): R460 usdtmint_v1 runner, frozen in experiments/usdtmint_v1/PREREG.md: does BTC (and, reported, ETH) rise after a Tether USDT mint by more than at random times and by more than a Hyperliquid taker ...
 - [`run_usindex_calendar.py`](run_usindex_calendar.py): usindex_calendar_v1 (R235): turn-of-month and overnight drift on SPY and QQQ, as alpha against buy-and-hold of the same ETF, as set out in experiments/usindex_calendar_v1/PREREG.md.
 - [`run_usopen_dex.py`](run_usopen_dex.py): usopen_dex_fwd (R457): R371's US-open picks traded on Lighter (book L, decides) and Hyperliquid (book H, reported), the two perp venues the lab found open to a French resident, at each venue's own ...
