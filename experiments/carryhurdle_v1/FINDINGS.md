@@ -30,6 +30,23 @@ carry rows: only the benchmark side is new, and the forward lanes still decide e
   came from bodies fetched once at 2026-11-12T23:41:27Z and sealed unread, not from a live fetch.
 - **Outputs:** `results/table.csv` (648 cells: 9 books x 2 engines x 3 costs x 4 benchmarks x 3 windows),
   `results/summary.json`, `run.log`. No benchmark day was missing (0 dropped days in every cell).
+- **Corrections after review v1 (2026-11-13; the intake note is a frozen input, so they are recorded here):**
+  - Snapshot hours. The intake note says the stamps outside the 23:00 UTC hour fall "at 11, 16, 19, 21 or 22 h".
+    Counted from the committed bodies: sUSDe 22 h x3, 16 h, 19 h (5 of 1001); Aave USDC 22 h x3, 21 h x2, 11 h x2,
+    07, 12, 16, 17, 18 and 19 h (13 of 1376); Aave USDT 22 h x5, 21 h x4, 11 h x2, 07, 12, 16, 17 and 18 h (16 of
+    1369). So 07, 12, 17 and 18 h were missing from the note. Every stamp is still on its own UTC date, so the row
+    dated D-1 is observed before D starts and the alignment stays causal; no result changes.
+  - Verification labels. The note's "Verified claims (independent re-fetch)" and ledger rows WS0002 and WS0004
+    rest on the finder's own second fetch, which docs/WEB_SEARCH.md does not count. WS0009 records the
+    orchestrator's independent curl of DefiLlama's main-branch spec (2026-11-13 00:01 UTC, same shutdown sentence),
+    so claim 1 is VERIFIED. WS0010 relabels WS0004's EU/EEA and aggregator-rate claims UNVERIFIED until the
+    orchestrator or owner re-fetches them; neither claim enters the decision rule. Claims 3 and 4 of the note
+    (Aave Core pool id; sUSDe one-payment annualisation) rest on the same self-check. Review v1 confirmed claim 4's
+    conversion against DefiLlama's `aprToApy(apr, 52)`; claim 3 has no second-party check yet. It affects only the
+    report-only Aave columns, not the sUSDe decision.
+  - Tests. `tests/test_carryhurdle.py` (frozen) could not tell the v2/2x/sUSDe/full decision cell from other cells
+    and had no dates past 2024. `tests/test_carryhurdle_cells.py` adds synthetic data where every other engine,
+    cost, benchmark or sub-window gives a different call, and checks the 2025+, 2025-04-09+ and 2026-09-30 clips.
 
 ## Deciders (engine v2, costs 7/14/21 bp per leg, full window, excess in points a year, NW t in brackets)
 | Book | Forward | Days | sUSDe 1x | sUSDe 2x | sUSDe 3x | Aave USDC 1x | Aave USDC 2x | Aave USDC 3x | Bill 2x | Call (sUSDe 2x) |
