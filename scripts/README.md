@@ -7,12 +7,13 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (53)
+## Fetch: download archives and public history (54)
 
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
 - [`fetch_boros_history.py`](fetch_boros_history.py): Public Boros (Pendle) funding-rate swap history for R412 boroslock_v1: the market list from the open API and, for every BTC/ETH single-venue funding market, the monthly hourly market snapshots ...
+- [`fetch_carryhurdle.py`](fetch_carryhurdle.py): Inputs for carryhurdle_v1 (R483, M478/M481): import the sealed DefiLlama /chart bodies.
 - [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
 - [`fetch_cmelead.py`](fetch_cmelead.py): R370's data: CME Globex trades (Databento) and Binance USD-M aggregated trades around 60 EIA releases and their placebo days.
 - [`fetch_coinm.py`](fetch_coinm.py): Binance COIN-M hourly klines from data.binance.vision for every contract in the archive (272: perpetuals and dated quarterlies of about 10 coins, 2020 onward): the dated-futures basis term ...
@@ -139,7 +140,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (208)
+## Run: one lane's frozen measurement (209)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -163,6 +164,7 @@ line is the first line of the script's own docstring.
 - [`run_carry_v2_audit.py`](run_carry_v2_audit.py): R437 carry_v2_audit_v1: R275's seven headline carry books re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_v1/PREREG.md.
 - [`run_carry_v2_audit_kc.py`](run_carry_v2_audit_kc.py): R438 carry_v2_audit_kc_v1: R277's two KuCoin carry books (forward on paper as R279 A and B) re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_kc_v1/PREREG.md.
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
+- [`run_carryhurdle.py`](run_carryhurdle.py): carryhurdle_v1 (R483, M478/M481, gate 0): do the lab's audited cross-venue carry books beat the passive stablecoin yields that harvest the same payer (Ethena sUSDe) or lend the same dollars (Aave ...
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.
 - [`run_cbprem.py`](run_cbprem.py): cbprem_v1 (R210): the Coinbase premium as a BTC/ETH signal, as set out in experiments/cbprem_v1/PREREG.md.
 - [`run_cde_carry_screen.py`](run_cde_carry_screen.py): R424 sole offline fixed CDE/Kraken net proxy screen; no native journal or HTTP.
