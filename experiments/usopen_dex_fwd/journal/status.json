@@ -1,28 +1,38 @@
 {
  "registry": "R457",
- "updated": "2026-11-12T03:59:28Z",
+ "updated": "2026-11-13T03:58:38Z",
  "L": {
-  "decision": "pending (0 of 500 scored)",
+  "decision": "pending (1 of 500 scored)",
   "summary": {
-   "n": 0,
-   "mean": null,
+   "n": 1,
+   "mean": 0.0137820534558318,
    "t": null,
    "mean_wo_best": null,
-   "hit": null,
-   "best_share": null
+   "hit": 1.0,
+   "best_share": null,
+   "mean_2x": 0.013119254542785,
+   "mean_3x": 0.0124564556297381,
+   "mean_10k_1x": 0.0130437349456197,
+   "mean_cost": 0.0006627989130468,
+   "fallback_fill_share": 0.0
   },
   "no_book": 0,
   "unpriced": 0
  },
  "H": {
-  "decision": "reported only (pending (0 of 500 scored))",
+  "decision": "reported only (pending (1 of 500 scored))",
   "summary": {
-   "n": 0,
-   "mean": null,
+   "n": 1,
+   "mean": -0.0127883933644764,
    "t": null,
    "mean_wo_best": null,
-   "hit": null,
-   "best_share": null
+   "hit": 0.0,
+   "best_share": null,
+   "mean_2x": -0.0142105600311431,
+   "mean_3x": -0.0156327266978098,
+   "mean_10k_1x": -0.0132371933644764,
+   "mean_cost": 0.0014221666666666,
+   "fallback_fill_share": 0.0
   },
   "no_book": 0,
   "unpriced": 0
