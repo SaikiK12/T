@@ -3008,12 +3008,12 @@
       "sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48"
     },
     "data/operations/quant_quote_scope_v1/dispatch.jsonl": {
-      "mtime_ns": 1794569710071492033,
-      "sha256": "784569f95b6c4d4372042afab7b9ba743d74bb1750e0413771e5d1331685ba4d"
+      "mtime_ns": 1794569715797440369,
+      "sha256": "37a2fda0bbac22eb43a56def28ce2a241ef7bc14dce36ad63dcda31d4d8d935c"
     },
     "data/operations/quant_quote_scope_v1/latest.json": {
-      "mtime_ns": 1794566370778002720,
-      "sha256": "6133d1c9f21242f5599aa0530f8c10c845e234cea0112bac8e815c3f4c257a5d"
+      "mtime_ns": 1794569715797440369,
+      "sha256": "5041a9b125f0afb26099bc863859384b6eb8d7df08ab9f4c6c5a6cf25e85cfa9"
     },
     "data/operations/quant_quote_scope_v1/migrations/gha_42495486811_1.json": {
       "mtime_ns": 1794152086005433044,
@@ -6462,6 +6462,22 @@
     "data/operations/quant_quote_scope_v1/runs/20261113T10/reservation.json": {
       "mtime_ns": 1794566358986346831,
       "sha256": "cc858253522e1b64f462b8ac2ae8658fdaa712d8e78d92582432de331abd9b77"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261113T11/R406.log": {
+      "mtime_ns": 1794569715544573664,
+      "sha256": "23021dcc34514808bf53a1dcad7cb4db441de85cfbf955a32ae9ac1f7588b8e3"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261113T11/R413.log": {
+      "mtime_ns": 1794569714782494978,
+      "sha256": "100c2726a6b468636d5e49a22d0ad1651f796f2f8fe2b1ff094dc5f9f601c97b"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261113T11/R419.log": {
+      "mtime_ns": 1794569714035432409,
+      "sha256": "06751d7004a5e381a631e042931ea728ba58a1c65491ff2c166bf8a44dd28a06"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261113T11/report.json": {
+      "mtime_ns": 1794569715797172986,
+      "sha256": "5041a9b125f0afb26099bc863859384b6eb8d7df08ab9f4c6c5a6cf25e85cfa9"
     },
     "data/operations/quant_quote_scope_v1/runs/20261113T11/reservation.json": {
       "mtime_ns": 1794569710071492033,
@@ -11111,6 +11127,10 @@
       "mtime_ns": 1794566367941487942,
       "sha256": "83e668416c461d3f5fce8b7e266460002a37c23d6ff8a86d23aacb474b7703bc"
     },
+    "data/recorders/eea_pair_capture_v1/packets/20261113T11/packet.json": {
+      "mtime_ns": 1794569713991430906,
+      "sha256": "70451c725a0f07f119ef35f9ce229a8900ed45e9a8896d702f8de06c1e62e655"
+    },
     "data/recorders/eea_pair_capture_v1/requests.jsonl": {
       "mtime_ns": 1794352592257339173,
       "sha256": "6cd22ba98af09e3429d5ecae340f640d4a07f13f475504ba5cc1974466746f21"
@@ -11196,7 +11216,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_quote_scope_v1/runs/20261113T11/reservation.json",
+  "last_report": "data/operations/quant_quote_scope_v1/latest.json",
   "meaning": "R429 selected; same native paper rules, scoped DTB3 data and all original limits",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -11207,5 +11227,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-13T11:35:10.768796+00:00"
+  "updated_utc": "2026-11-13T11:35:18.034067+00:00"
 }
