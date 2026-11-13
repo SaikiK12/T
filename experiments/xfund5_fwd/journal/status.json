@@ -1,46 +1,16 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-12T02:27:10.857696+00:00",
+ "updated": "2026-11-13T02:23:28.733779+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 1.064,
-  "hyperliquid": 0.971,
-  "mexc": 0.994,
+  "binance": 1.001,
+  "gate": 0.918,
+  "hyperliquid": 0.983,
+  "mexc": 1.0,
   "kucoin": 1.0
  },
  "data": {
-  "binance": {
-   "files": 867,
-   "failed": 4,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "AERGOUSDT",
-    "BDXNUSDT",
-    "NUUSDT",
-    "SXPUSDT"
-   ]
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 6,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "ENA",
-    "ENS",
-    "MEME",
-    "MERL",
-    "SPX",
-    "STBL"
-   ]
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "kucoin": {
    "files": 633,
    "failed": 0,
@@ -49,13 +19,35 @@
   },
   "mexc": {
    "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
    "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
-    "HMSTR_USDT",
-    "XMR_USDT",
-    "XNY_USDT"
+    "INIT",
+    "INJ",
+    "SKY"
    ]
+  },
+  "binance": {
+   "files": 867,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AERGOUSDT",
+    "BDXNUSDT",
+    "SXPUSDT"
+   ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -186,16 +178,16 @@
     "spread_in": 1.0758
    }
   ],
-  "scored_days": 1,
+  "scored_days": 2,
   "late_days": 0,
-  "total": 0.0029179275,
-  "total_2x": 0.0022179275,
-  "total_3x": 0.0015179275,
-  "total_close": 0.001023926,
+  "total": 0.0031466371,
+  "total_2x": 0.0024466371,
+  "total_3x": 0.0017466371000000001,
+  "total_close": 0.0012526356,
   "nw_t": null,
   "max_drawdown": 0.0,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-12"
+ "last_day": "2026-11-13"
 }
