@@ -5,7 +5,7 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 ## Hard rules
 1. **Register before measuring.** `PREREG.md` is frozen with `lab.prereg.freeze()` before any statistic. Run scripts call `verify()` first. New qx lanes use `scripts/qx_run_verified.py` and freeze that wrapper, `scripts/qx_run.py`, the locked build script, every direct spec file, engine inputs, and `docs/provenance/*.json` for every data folder named in the spec. The wrapper verifies each data manifest against all files in that folder before and after the run and allows one writer per lane; historical lanes keep the runner named in their frozen inputs.
 2. **Frozen files are never edited.** A changed idea is a new lane with a new id.
-3. **Journals are append-only**: `registry/rounds.csv`, `ledger.csv`, forward tickets. Use the code that appends; never hand-edit a row.
+3. **Journals are append-only**: `registry/rounds.csv`, `registry/web_searches.csv`, and each lane's `journal/` files (forward tickets among them). Use the code that appends (`lab.registry`, `lab.websearch`, `lab.carrylane`); never hand-edit a row.
 4. **One writer per file.** Check the mtime before editing. Never kill a process you did not start.
    Do not stash, reset or switch a worktree while another agent, recorder or research run is writing in it.
    Integrate and review in a separate persistent worktree; leave active writers' trees in place.
@@ -37,10 +37,29 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 - Every round gets a registry row with its trial count, even when it finds nothing.
 - Read a result against `registry.program_trials()`, not only against its own null.
 - Report cost sensitivity (1x, 2x, 3x) in every FINDINGS.
-- Check ROADMAP/FINDINGS for work another AI already did before starting; build on it.
+- Check `registry/rounds.csv` and lane FINDINGS for work another AI already did before starting; build on it. (The "ROADMAP" named in `docs/FOUNDATION.md` is not in the checkout; the machine-readable rounds register is.)
 - Run `python3 -m unittest discover -s tests -t .` before committing changes to `lab/`.
 - Claude and ChatGPT/Codex talk in one room: issue #7 (`docs/ROOM.md` has the protocol). Read it before starting
   work, and post calls and results there in its short format.
+
+## Environment and commands
+- Python 3.12.14 (`.python-version`); the tested stack is pinned with hashes in `requirements-test.lock`. Set it up
+  from the repository root, then run everything through `.venv/bin/python` (system `python3` has no numpy/pandas):
+  ```sh
+  python -m pip install uv==0.12.23
+  uv venv --python 3.12.14 .venv
+  uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+  ```
+- Checks. Keep thread pools bounded (`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1`):
+  `.venv/bin/python -m lab check --suite fast` for feedback, `--suite full` as the commit gate (fast defers explicit
+  simulation classes; it never replaces the full gate). The same discovery entry point is
+  `.venv/bin/python -m unittest discover -s tests -t .`; a single module is e.g.
+  `.venv/bin/python -m unittest tests.test_repository_index`.
+- Metadata integrity before publishing intake/queue changes: `.venv/bin/python -m lab integrity`.
+- Rust engine (`engine/`, crate `qx`): toolchain 1.90.0 (`rust-toolchain.toml`), edition 2024. Run
+  `cargo test --locked --release --manifest-path engine/Cargo.toml` before every commit that touches `engine/`. New
+  qx lanes build through `scripts/build_engine.py` / `python -m lab engine` and run via `scripts/qx_run_verified.py`.
+- There is no linter or formatter config (no ruff/black/pre-commit); the gate is the test suite plus `lab integrity`.
 
 Operational entry point: `python -m lab`; shared task/lane descriptors are in `lab/operations.py`.
 Use `python -m lab check --suite fast` for feedback and the full suite before a code commit.
