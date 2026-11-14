@@ -28,6 +28,7 @@ class MethodIntakeTests(unittest.TestCase):
         }
         self.queue = [dict(id='M001', method='Weak rule', status='BLOCKED', data_held='N', rid='-')]
         self.aliases = [dict(rec_id='SRC1', title='Source rule', intake_status='blocked', queue_id='M001', also='')]
+        self.rounds = [dict(id='R276'), dict(id='R999')]
         self.save()
 
     def write(self, path, text):
@@ -46,6 +47,7 @@ class MethodIntakeTests(unittest.TestCase):
         self.write('research/intake/source_methods_20261020.json', json.dumps(self.payload))
         self.csv('registry/methods.csv', ['id', 'method', 'status', 'data_held', 'rid'], self.queue)
         self.csv('registry/methods_aliases.csv', ['rec_id', 'title', 'intake_status', 'queue_id', 'also'], self.aliases)
+        self.csv('registry/rounds.csv', ['id'], self.rounds)
 
     def codes(self):
         return {i['code'] for i in audit(self.root)['issues']}
@@ -77,6 +79,31 @@ class MethodIntakeTests(unittest.TestCase):
         self.save()
         self.assertEqual(audit(self.root)['summary']['errors'], 0)
         self.assertEqual(self.payload['methods'][0]['status'], 'blocked')
+
+    def test_rid_must_resolve_or_be_marked_legacy(self):
+        # A round that exists is fine; a missing one is excused only by an "old"/"reserved" marker on its citation.
+        self.queue[0]['rid'] = 'R999 NULL; R998 reserved; old R997 NULL'
+        self.save()
+        self.assertEqual(self.codes(), set())
+        self.queue[0]['rid'] = 'R999 NULL; R996 NULL'
+        self.save()
+        report = audit(self.root)
+        self.assertEqual([i['record_id'] for i in report['issues'] if i['code'] == 'RID_UNKNOWN'], ['M001'])
+        self.assertIn('R996', [i['message'] for i in report['issues'] if i['code'] == 'RID_UNKNOWN'][0])
+
+    def test_no_registry_row_marker_excuses_the_whole_cell(self):
+        # "no registry row" is a cell-level statement, as in M005/M008/M042 where old ids and real ids share a cell.
+        self.queue[0]['rid'] = 'old R997 NULL; R999 NULL; no registry row'
+        self.save()
+        self.assertEqual(self.codes(), set())
+
+    def test_legacy_marker_does_not_hide_a_later_dangling_id(self):
+        # "old" in an earlier clause must not excuse a different id in a later clause.
+        self.queue[0]['rid'] = 'old R997 NULL; R996 NULL'
+        self.save()
+        messages = [i['message'] for i in audit(self.root)['issues'] if i['code'] == 'RID_UNKNOWN']
+        self.assertEqual(len(messages), 1)
+        self.assertIn('R996', messages[0])
 
     def test_duplicate_and_dangling_ids_fail(self):
         self.queue.append(copy.deepcopy(self.queue[0]))
