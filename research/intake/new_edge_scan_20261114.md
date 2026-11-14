@@ -9,7 +9,13 @@ return; no backtest was run and no data was acquired.
 (15-min reversal -> M055, BLOCKED; Hyperliquid wallet markout -> M429; the quarter-hour effect -> M082, BLOCKED).
 The only genuinely-new, feasible, low-turnover lead is **session-decomposed MAX**, now **M539**.
 
-## M539 - Session-decomposed MAX on 24/7 altcoin perps [new]
+## M539 - Session-decomposed MAX on 24/7 altcoin perps [new] — TESTED NULL 2026-11-14
+- **Result (R490, `experiments/sessionmax_v1`):** NULL. Run on Binance Vision 1 h klines, 50 USDT perps, 2021-2026.
+  No book clears the discovery gate; the best (S-OVER, overnight-window MAX) is +2.13 bp/day t 0.29, negative at 2x
+  cost and -5.97 bp/day in validation. Block-bootstrap null 95th-pct alpha t 1.61 >> 0.24; session-label permutation
+  p 0.975 (the apparent overnight edge is not a session effect). Reproduces R222 (M144 plain 24 h MAX, NULL) and
+  extends R435 (M492 session split on MEXC stock perps, NULL). Do not re-open without a new frozen PREREG; the raw
+  premium/naive version is spent.
 - **Claim (source):** in 24/7 crypto the maximum *intraday* return over the past week positively predicts next-week
   *intraday* returns, and overnight MAX predicts overnight returns, while **cross-period** predictability is absent
   (intraday MAX does not predict overnight and vice versa). -- Haichen Yang, "Max Effect in Crypto Market: Evidence
