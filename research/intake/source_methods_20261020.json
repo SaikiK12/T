@@ -17310,6 +17310,234 @@
           "label": "R465 FINDINGS"
         }
       ]
+    },
+    {
+      "id": "WS1112-BIS-CRYPTO-CARRY",
+      "parent_claim_id": "WS1112-20261112",
+      "title": "Crypto carry: margin spikes liquidate the short futures leg; carry predicts short liquidations (Schmeling, Schrimpf, Todorov, BIS WP 1087)",
+      "method_type": "source_refinement",
+      "hypothesis": "Crypto carry: margin spikes liquidate the short futures leg; carry predicts short liquidations (Schmeling, Schrimpf, Todorov, BIS WP 1087) (web search wave 2026-11-12; see the intake note for read scopes).",
+      "testable_rule": "Context only; maps to M136 (R207 NULL) and the M534 red team.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/websearch_wave_20261112.md",
+          "label": "Web search wave intake, 2026-11-12"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1112-HMRW-FULLTEXT",
+      "parent_claim_id": "WS1112-20261112",
+      "title": "Perp-spot convergence arbitrage after fees and spreads (He, Manela, Ross, von Wachter, v7 sections 1 and 4)",
+      "method_type": "source_refinement",
+      "hypothesis": "Perp-spot convergence arbitrage after fees and spreads (He, Manela, Ross, von Wachter, v7 sections 1 and 4) (web search wave 2026-11-12; see the intake note for read scopes).",
+      "testable_rule": "Context only; no queue row.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/websearch_wave_20261112.md",
+          "label": "Web search wave intake, 2026-11-12"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1112-ADL-RISKBASED",
+      "parent_claim_id": "WS1112-20261112",
+      "title": "Risk-based ADL and the 2025-10-10 Hyperliquid event (Campbell, Hey, Moallemi, Nutz)",
+      "method_type": "source_refinement",
+      "hypothesis": "Risk-based ADL and the 2025-10-10 Hyperliquid event (Campbell, Hey, Moallemi, Nutz) (web search wave 2026-11-12; see the intake note for read scopes).",
+      "testable_rule": "Feeds M534: ADL stress bound on the carry books' 2025-10-10 open pairs.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "Committed trades_v2.csv of R437/R438",
+        "Public daily high/low candles of the long-leg venues"
+      ],
+      "blockers": [
+        "No PREREG; leverage per venue, ADL rank and re-hedge delay not fixed."
+      ],
+      "next_action": "Register M534 before any candle is read.",
+      "source_refs": [
+        {
+          "path": "research/intake/websearch_wave_20261112.md",
+          "label": "Web search wave intake, 2026-11-12"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1112-ETHENA-CONTROL",
+      "parent_claim_id": "WS1112-20261112",
+      "title": "Optimal control of Ethena's stETH long and ETH perp short (Lorig)",
+      "method_type": "source_refinement",
+      "hypothesis": "Optimal control of Ethena's stETH long and ETH perp short (Lorig) (web search wave 2026-11-12; see the intake note for read scopes).",
+      "testable_rule": "Context for M481 and M535; abstract only.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/websearch_wave_20261112.md",
+          "label": "Web search wave intake, 2026-11-12"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1112-DEFI-BASIS-COLLATERAL",
+      "parent_claim_id": "WS1112-20261112",
+      "title": "Dynamic collateral control for permissionless spot-perp basis trading (Krestenko et al.)",
+      "method_type": "source_refinement",
+      "hypothesis": "Dynamic collateral control for permissionless spot-perp basis trading (Krestenko et al.) (web search wave 2026-11-12; see the intake note for read scopes).",
+      "testable_rule": "Context only; abstract only.",
+      "exact_tested_scope": "No new project strategy test in this wave.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/websearch_wave_20261112.md",
+          "label": "Web search wave intake, 2026-11-12"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1113-LIT-BUYBACK-COVERAGE",
+      "parent_claim_id": "WS1113-20261113",
+      "title": "LIT: daily buybacks (SRC1113-006) against the 2026-12-29 insider linear unlock (SRC1113-009)",
+      "method_type": "source_refinement",
+      "hypothesis": "LIT: daily buybacks (SRC1113-006) against the 2026-12-29 insider linear unlock (SRC1113-009) (HLP/LLP/LIT intake 2026-11-13; see the intake note for read scopes).",
+      "testable_rule": "Maps to M518 (buyback coverage, BLOCKED); also M537 and M057.",
+      "exact_tested_scope": "No new project strategy test in this intake.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "blocked",
+      "required_inputs": [
+        "Lighter exchangeMetrics buyback history",
+        "DefiLlama emissions schedule for LIT"
+      ],
+      "blockers": [
+        "M518 needs a cross-section of tokens; one token does not unblock it."
+      ],
+      "next_action": "None until M518 has a cross-section.",
+      "source_refs": [
+        {
+          "path": "research/intake/hlp_llp_lit_20261113.md",
+          "label": "HLP/LLP/LIT intake, 2026-11-13"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1113-LIT-INSIDER-UNLOCK",
+      "parent_claim_id": "WS1113-20261113",
+      "title": "LIT team and investor linear unlock from 2026-12-29, 3.194m LIT/week (DefiLlama, UNVERIFIED)",
+      "method_type": "source_refinement",
+      "hypothesis": "LIT team and investor linear unlock from 2026-12-29, 3.194m LIT/week (DefiLlama, UNVERIFIED) (HLP/LLP/LIT intake 2026-11-13; see the intake note for read scopes).",
+      "testable_rule": "Instance for M057 / R266; linear start, not a cliff.",
+      "exact_tested_scope": "No new project strategy test in this intake.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "DefiLlama emissions/lighter (secondary)",
+        "A second-party re-fetch"
+      ],
+      "blockers": [
+        "Schedule UNVERIFIED; no Lighter primary source found."
+      ],
+      "next_action": "FEAT-004 decides against R265's rule.",
+      "source_refs": [
+        {
+          "path": "research/intake/hlp_llp_lit_20261113.md",
+          "label": "HLP/LLP/LIT intake, 2026-11-13"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1113-HYPE-ASSISTANCE-FUND",
+      "parent_claim_id": "WS1113-20261113",
+      "title": "Hyperliquid assistance fund converts fees to HYPE and burns it (SRC1113-008)",
+      "method_type": "source_refinement",
+      "hypothesis": "Hyperliquid assistance fund converts fees to HYPE and burns it (SRC1113-008) (HLP/LLP/LIT intake 2026-11-13; see the intake note for read scopes).",
+      "testable_rule": "Context for M518; no HYPE series read.",
+      "exact_tested_scope": "No new project strategy test in this intake.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/hlp_llp_lit_20261113.md",
+          "label": "HLP/LLP/LIT intake, 2026-11-13"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "WS1113-LLP-ACCESS-DEMAND",
+      "parent_claim_id": "WS1113-20261113",
+      "title": "LLP access needs 1 LIT staked per 10 USDC: a $99.2m LLP needs at least 9.9m LIT staked",
+      "method_type": "source_refinement",
+      "hypothesis": "LLP access needs 1 LIT staked per 10 USDC: a $99.2m LLP needs at least 9.9m LIT staked (HLP/LLP/LIT intake 2026-11-13; see the intake note for read scopes).",
+      "testable_rule": "Context for M506 (R447) and M505.",
+      "exact_tested_scope": "No new project strategy test in this intake.",
+      "unrun_scope": "Every price, return and P&L question beyond the existing rows named in the queue.",
+      "status": "untested",
+      "required_inputs": [
+        "None queued."
+      ],
+      "blockers": [
+        "Context only."
+      ],
+      "next_action": "None; recorded as context.",
+      "source_refs": [
+        {
+          "path": "research/intake/hlp_llp_lit_20261113.md",
+          "label": "HLP/LLP/LIT intake, 2026-11-13"
+        }
+      ],
+      "evidence_refs": []
     }
   ],
   "sources": [
@@ -21779,6 +22007,51 @@
       "strategy_trials_added": 10,
       "prospective_days_added": 0,
       "market_outcomes_added": 1
+    },
+    {
+      "intake_id": "websearch_wave_20261112",
+      "records_added": [
+        "WS1112-BIS-CRYPTO-CARRY",
+        "WS1112-HMRW-FULLTEXT",
+        "WS1112-ADL-RISKBASED",
+        "WS1112-ETHENA-CONTROL",
+        "WS1112-DEFI-BASIS-COLLATERAL"
+      ],
+      "base_method_objects_before": 486,
+      "method_objects_after": 491,
+      "source_records_added": [],
+      "source_catalog_paths": [
+        "research/intake/source_catalog_websearch_20261112.csv"
+      ],
+      "received_scope": "Web search wave under docs/WEB_SEARCH.md (lens 5, then 6+7), 2026-11-12: DefiLlama docs, /pools metadata and sealed /chart capture, yield-server adaptors, Aave v3 code, seven Ethena docs pages, bounded sections of four papers, Hyperliquid ADL page; read scopes per source in the catalog. No complete-corpus claim.",
+      "reconciliation": "Live queue: new M534 and M535 (UNTESTED); data_held and notes added to M478 and M481; the rest map to M136 or CONTEXT.",
+      "source_version_path": "research/intake/websearch_wave_20261112.md",
+      "source_version_sha256": "13b6699d5cb07860fcea7d494e4f133458c6a032a09653d38945353281ca994b",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 0
+    },
+    {
+      "intake_id": "hlp_llp_lit_20261113",
+      "records_added": [
+        "WS1113-LIT-BUYBACK-COVERAGE",
+        "WS1113-LIT-INSIDER-UNLOCK",
+        "WS1113-HYPE-ASSISTANCE-FUND",
+        "WS1113-LLP-ACCESS-DEMAND"
+      ],
+      "base_method_objects_before": 491,
+      "method_objects_after": 495,
+      "source_records_added": [],
+      "source_catalog_paths": [
+        "research/intake/source_catalog_websearch_20261113.csv"
+      ],
+      "received_scope": "HLP/LLP/LIT intake under docs/WEB_SEARCH.md, 2026-11-13: six Lighter docs pages and five Lighter API docs pages in full, ten Lighter exchangeMetrics bodies and one orderBookDetails body, three Hyperliquid docs pages (Fees partial), DefiLlama emissions/lighter and CoinGecko coins/lighter (secondary), Lighter tokenomics NOT_FOUND; read scopes per source in the catalog. No complete-corpus claim.",
+      "reconciliation": "Live queue: new M536 and M537 (UNTESTED); the rest map to M518, M057 or M506 as aliases.",
+      "source_version_path": "research/intake/hlp_llp_lit_20261113.md",
+      "source_version_sha256": "637797de1f2a504a5ff7e7eac45a0741e571aa46a83a6998db946407be035ffc",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 0
     }
   ],
   "reassignment_refs": [

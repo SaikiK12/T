@@ -1,0 +1,165 @@
+"""Append-only web search ledger (registry/web_searches.csv): validate, append, and look up prior searches.
+
+Metadata only. Nothing here touches the network. ``append`` adds exactly one row and never rewrites earlier bytes.
+List-valued fields (urls_fetched, routed_to, queue_ids) separate items with ``;`` or whitespace as noted below.
+"""
+import csv
+from datetime import date
+import io
+from pathlib import Path
+import re
+
+from lab.registry import _lock
+
+LEDGER = Path("registry") / "web_searches.csv"
+COLUMNS = ("search_id", "date", "agent", "lens", "query", "tool", "urls_fetched", "fetch_status", "source_tier",
+           "verification", "routed_to", "queue_ids", "note")
+STATUS = ("FETCHED_FULL", "FETCHED_PARTIAL", "SEARCH_SUMMARY_ONLY", "BLOCKED", "NOT_FOUND")
+TIER = ("primary", "secondary", "practitioner", "search_summary")
+VERIFICATION = ("VERIFIED", "CONTRADICTED", "UNVERIFIED")
+_ID = re.compile(r"WS[0-9]{4,}\Z")
+_URL = re.compile(r"https?://[^\s/$.?#][^\s]*\Z")
+_REQUIRED = ("search_id", "date", "agent", "query", "fetch_status", "source_tier", "verification")
+
+
+def _items(value, sep=r"[;\s]+"):
+    return [part for part in re.split(sep, value or "") if part]
+
+
+def load(root):
+    """Return ledger rows as dicts; an absent ledger is an empty list."""
+    path = Path(root) / LEDGER
+    if not path.exists():
+        return []
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def header(root):
+    """Return the ledger's header row as a tuple; None for an absent or empty ledger."""
+    path = Path(root) / LEDGER
+    if not path.exists():
+        return None
+    with path.open(newline="", encoding="utf-8") as handle:
+        first = next(csv.reader(handle), None)
+    return tuple(first) if first else None
+
+
+def _queue_ids(root):
+    ids = set()
+    for name, columns in (("methods.csv", ("id",)), ("methods_aliases.csv", ("rec_id", "queue_id"))):
+        path = Path(root) / "registry" / name
+        if path.exists():
+            with path.open(newline="", encoding="utf-8") as handle:
+                for row in csv.DictReader(handle):
+                    ids.update(row[c] for c in columns if row.get(c))
+    return ids
+
+
+def validate(rows, root=None):
+    """Return a list of problem strings (empty when valid). With ``root`` also check the header, paths and queue ids."""
+    problems = []
+    if root is not None:
+        found = header(root)
+        if found is not None and found != COLUMNS:
+            problems.append(f"header: columns {found} differ from {COLUMNS}")
+    seen_ids = set()
+    known = _queue_ids(root) if root is not None else None
+    for number, row in enumerate(rows, 1):
+        tag = row.get("search_id") or f"row {number}"
+        for column in _REQUIRED:
+            if not (row.get(column) or "").strip():
+                problems.append(f"{tag}: {column} is empty")
+        if row.get("search_id"):
+            if not _ID.match(row["search_id"]):
+                problems.append(f"{tag}: search_id must look like WS0001")
+            if row["search_id"] in seen_ids:
+                problems.append(f"{tag}: duplicate search_id")
+            seen_ids.add(row["search_id"])
+        try:
+            date.fromisoformat(row.get("date") or "")
+        except ValueError:
+            problems.append(f"{tag}: date is not ISO YYYY-MM-DD")
+        for column, allowed in (("fetch_status", STATUS), ("source_tier", TIER), ("verification", VERIFICATION)):
+            if row.get(column) and row[column] not in allowed:
+                problems.append(f"{tag}: {column} {row[column]!r} not in {', '.join(allowed)}")
+        for url in _items(row.get("urls_fetched")):
+            if not _URL.match(url):
+                problems.append(f"{tag}: bad URL {url!r}")
+        if root is not None:
+            for target in _items(row.get("routed_to"), r"[;]+"):
+                target = target.strip()
+                if "/" in target and not (Path(root) / target.split("#")[0]).exists():
+                    problems.append(f"{tag}: routed_to path does not exist: {target}")
+            for queue_id in _items(row.get("queue_ids")):
+                if queue_id not in known:
+                    problems.append(f"{tag}: queue id {queue_id} not in registry/methods.csv or aliases")
+    return problems
+
+
+def warnings(rows):
+    """Return label combinations that docs/WEB_SEARCH.md treats as suspect but that are not invalid."""
+    found = []
+    for number, row in enumerate(rows, 1):
+        tag = row.get("search_id") or f"row {number}"
+        status, tier = row.get("fetch_status"), row.get("source_tier")
+        if status == "FETCHED_PARTIAL" and not (row.get("note") or "").strip():
+            found.append(f"{tag}: FETCHED_PARTIAL with an empty note (name the pages read)")
+        if (status == "SEARCH_SUMMARY_ONLY") != (tier == "search_summary"):
+            found.append(f"{tag}: fetch_status {status} with source_tier {tier} (summary labels must agree)")
+        if status == "SEARCH_SUMMARY_ONLY" and row.get("verification") == "VERIFIED":
+            found.append(f"{tag}: VERIFIED with SEARCH_SUMMARY_ONLY (a claim seen only in a summary stays unread)")
+    return found
+
+
+def append(root, **fields):
+    """Under ``registry._lock``: assign the next WSnnnn id, validate the ledger plus the new row, append one line.
+    A missing or empty ledger gets the header first. Return the row."""
+    unknown = set(fields) - set(COLUMNS)
+    if unknown:
+        raise ValueError(f"unknown fields: {sorted(unknown)}")
+    path = Path(root) / LEDGER
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with _lock(path):
+        rows = load(root)
+        number = 1 + max((int(r["search_id"][2:]) for r in rows if _ID.match(r.get("search_id") or "")), default=0)
+        row = {column: str(fields.get(column, "") or "") for column in COLUMNS}
+        row["search_id"] = f"WS{number:04d}"
+        row["date"] = row["date"] or date.today().isoformat()
+        problems = validate([*rows, row], root)
+        if problems:
+            raise ValueError("; ".join(problems))
+        buffer = io.StringIO()
+        writer = csv.writer(buffer, lineterminator="\n")
+        fresh = not path.exists() or path.stat().st_size == 0
+        if fresh:
+            writer.writerow(COLUMNS)
+        writer.writerow([row[c] for c in COLUMNS])
+        with path.open("ab") as handle:
+            if not fresh and not _ends_with_newline(path):
+                handle.write(b"\n")
+            handle.write(buffer.getvalue().encode("utf-8"))
+    return row
+
+
+def _ends_with_newline(path):
+    with path.open("rb") as handle:
+        handle.seek(-1, 2)
+        return handle.read(1) == b"\n"
+
+
+def seen(root, text):
+    """Case-insensitive substring hits in the ledger and research/intake/source_catalog_*.csv."""
+    needle = (text or "").strip().lower()
+    hits = []
+    if not needle:
+        return hits
+    for row in load(root):
+        if any(needle in (row.get(c) or "").lower() for c in ("query", "urls_fetched", "lens", "note")):
+            hits.append(dict(source=str(LEDGER), id=row["search_id"], match=row["query"] or row["urls_fetched"]))
+    for path in sorted((Path(root) / "research" / "intake").glob("source_catalog_*.csv")):
+        with path.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                if any(needle in (row.get(c) or "").lower() for c in ("url", "provider", "research_gap", "id")):
+                    hits.append(dict(source=str(path.relative_to(root)), id=row.get("id", ""), match=row.get("url", "")))
+    return hits

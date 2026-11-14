@@ -110,6 +110,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 - [`DATA_SOURCES.md`](docs/DATA_SOURCES.md): every folder, its source and digests; `docs/provenance/` holds the records.
 - [`DATA_PROVENANCE_AUDIT.md`](docs/DATA_PROVENANCE_AUDIT.md).
 - [`BENCHMARK.md`](docs/BENCHMARK.md): the lab against the best open-source quant projects and free data.
+- [`WEB_SEARCH.md`](docs/WEB_SEARCH.md): the web search protocol; searches are logged in the append-only [`registry/web_searches.csv`](registry/web_searches.csv).
 - [`FREE_AI_AGENT.md`](docs/FREE_AI_AGENT.md): running an AI coding agent from a phone through GitHub Actions.
 
 **Methods and research notes**

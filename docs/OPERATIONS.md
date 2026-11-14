@@ -10,8 +10,15 @@ that they no longer have Codex.
 - **What keeps running:** the selected GitHub workflow (R420, R429 successor) runs on its own schedule until its
   dispatch ends on 2026-11-19 00:00 UTC. It needs no agent to run, but nobody maintains it.
 - **Duties without an owner:** the native duties listed below fall to Claude when the owner opens a session:
-  - R392's freeze before 11-17 (its read on or after 11-17);
-  - R404's 11-18 close;
+  - R392's freeze before 11-17 (its read on or after 11-17); done early: frozen and read on 2026-11-10 by the
+    owner's 2026-11-09 decision, PARTIAL (`registry/rounds.csv` R392);
+  - R404's 11-18 close; its recorder runs from `.github/workflows/claude-book-costs-recorder.yml` once that is on
+    the default branch (2026-11-12); DATA_PASS needs >= 40 snapshots with all three venues in the window. The
+    close reports two counts: three-venue files on branch `claude/book-costs-data`, and that count plus the six
+    lost local snapshots (five with rows in `experiments/recorders/journal/digests.csv`; only the first proven to
+    have all three venues; `experiments/book_costs_v1/DEVIATIONS.md`). Do not run the local task graph's R404 task
+    while the workflow is the writer (a second writer for the same slots). Local REC_DIGEST digests every local
+    recorder and may run, as long as no local `data/recorders/book_costs` tree exists;
   - a registered successor if R406 or R413 locks mature after 11-19.
 - **No always-on host:** the chat container sleeps between sessions, so no recorder or daemon runs in between.
 - **Check-in:** a one-shot check-in is scheduled in Claude's session for 2026-11-16 11:20 UTC (trigger

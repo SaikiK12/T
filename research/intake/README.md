@@ -17,6 +17,31 @@ from long-horizon association, identifies both of M440's unnamed papers, and rec
 Directly received PDF/HTML hashes and unread scopes are explicit. No strategy was registered or scored.
 
 
+Web searches follow [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md) and are logged in [`registry/web_searches.csv`](../../registry/web_searches.csv).
+
+The [2026-11-13 HLP/LLP/LIT intake](hlp_llp_lit_20261113.md) (ledger WS0011-WS0019,
+[catalog](source_catalog_websearch_20261113.csv), cards SRC1113-001/-006, bodies in
+[`hlp_llp_lit_20261113/`](hlp_llp_lit_20261113/)) reads Lighter's LLP, fee and LIT mechanics and Hyperliquid's HLP
+and assistance-fund pages, and describes the large moves in series R446/R447 already read (to 2026-11-10).
+- Lighter's keyless `exchangeMetrics` gives daily LIT buybacks; February to September 2026 they equal maker plus
+  taker fees within 1.8%.
+- DefiLlama (secondary, UNVERIFIED) schedules a 3.194m LIT/week team and investor unlock from 2026-12-29.
+- It adds M536 (LLP day return as the house's P&L signal) and M537 (LIT buyback flow), both UNTESTED.
+- No trial and no cross-series statistic was computed.
+- The [LIT and HYPE unlock follow-up](lit_hype_unlocks_20261113.md) (WS0020-WS0021, SRC1113-012) finds no event
+  under R265's cliff rule in 2026-11-13..2027-03-31, queues M538 (insider linear-start short, UNTESTED) and reads
+  what the 2026-12-29 LIT stream means for R447. The intake note itself is a frozen R484 input and stays unchanged.
+
+The [2026-11-12 web search wave](websearch_wave_20261112.md) (ledger WS0002-WS0008,
+[catalog](source_catalog_websearch_20261112.csv), cards SRC1112-001/-007/-008/-009/-010) red-teams the carry family
+and fixes the passive-yield benchmarks for R483 (M478, M481).
+- DefiLlama's free yield endpoints shut down on 2026-11-13. The sUSDe and Aave v3 Core USDC/USDT histories were
+  captured unread with sha256 before that date.
+- sUSDe is not offered to EU/EEA residents.
+- Aave's `apyBase` is an APR.
+- It adds M534 (ADL stress bound for 2025-10-10) and M535 (USDe flow and funding).
+- No return or APY statistic was computed.
+
 The [2026-11-03 web-deep wave](web_deep_20261103.json) ([catalog](source_catalog_webdeep_20261103.csv), cards SRC1103-*)
 read 35 public sources through four lens agents (ledgers of winners, exchange rulebooks, forensic and Korean sources,
 2025-26 papers and prediction markets). Independent verifiers re-fetched every queue-changing claim and contradicted

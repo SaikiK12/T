@@ -51,7 +51,7 @@ small, public-data player can still reach.
 1. **Ideas: launch 2-3 Haiku subagents in parallel.**
    - Use `model: haiku`, in the background, and give each a different lens from the rotation below. Take the next
      lenses after the ones `STATE.md` lists as last used.
-   - Give each one: the constraint table above; the read-only rule; web search allowed; no login, paywall, large
+   - Give each one: the constraint table above; the read-only rule; web search allowed under [`docs/WEB_SEARCH.md`](../WEB_SEARCH.md) (run `python -m lab websearch seen` first and add a ledger row after); no login, paywall, large
      download, order or credential; grep `registry/methods.csv` and cite the nearest Mxxx or say NEW; at most 900
      words; a URL per fact; UNVERIFIED where unsure.
    - Ask each for: the mechanism (who pays and why they accept it), frequency, the latency, fee and capital needed,
@@ -153,3 +153,4 @@ small, public-data player can still reach.
   orchestrator batch runs. It hashes those trees as code and marks a task FAILED if they change (R404 and R278 on
   11-10). Their ticks still completed. Wait for the batch, or regenerate catalogs only after it ends.
 - 2026-11-10: R406 (lockcarry_fwd2), R413 (boroslock_fwd) and R419 are written by Codex's GitHub runtime (`.github/workflows/quant-paper-priority.yml`, canonical state on `codex/quant-runtime-state`, hourly since 11-07). Never run them through the local orchestrator: a local run on 11-10 08:14 made the branch journals diverge and failed the `paper` check every hour until the six files were restored to their pre-run versions. Before restarting any forward lane, check that runtime's manifest for the lane's journal paths.
+- 2026-11-12: step 1 now points to `docs/WEB_SEARCH.md` (dedupe with `python -m lab websearch seen`, ledger row after) instead of ad hoc web search wording.

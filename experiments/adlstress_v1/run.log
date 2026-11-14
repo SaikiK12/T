@@ -1,0 +1,13 @@
+PREREG verified 748a0972d6f4; 13 inputs match
+raw manifest 7c55072891a8: 653 files verified; 0 of 653 requests without a body
+daily alignment (legs with daily bars / UTC-aligned): binance 64/64, gate 53/53, hyperliquid 40/40, kucoin 31/31, mexc 49/49
+R390 A binance+gate L14d th10% K20: pairs 20; S1 2x 0.000% (0.00 months, stressed 0); S1B 2x 18.562%; S2 2x 33.846% (34.94 months); month 2x 0.969% -> SURVIVES
+-      binance+gate+hyperliquid+mexc L14d th10% K20: pairs 20; S1 2x 1.201% (0.94 months, stressed 1); S1B 2x 10.964%; S2 2x 36.625% (28.52 months); month 2x 1.284% -> reported
+-      binance+hyperliquid L14d th10% K20: pairs 20; S1 2x 30.077% (41.40 months, stressed 16); S1B 2x 37.898%; S2 2x 37.898% (52.16 months); month 2x 0.727% -> reported
+R279 B binance+kucoin L14d th5% K20: pairs 20; S1 2x 0.000% (0.00 months, stressed 0); S1B 2x 21.345%; S2 2x 34.395% (41.93 months); month 2x 0.820% -> SURVIVES
+R278 B binance+mexc L14d th10% K20: pairs 14; S1 2x 0.000% (0.00 months, stressed 0); S1B 2x 10.132%; S2 2x 20.968% (53.80 months); month 2x 0.390% -> SURVIVES
+R278 A gate+hyperliquid L14d th5% K20: pairs 20; S1 2x 29.352% (32.43 months, stressed 17); S1B 2x 29.352%; S2 2x 38.825% (42.90 months); month 2x 0.905% -> EXPOSED
+R279 A gate+kucoin L14d th5% K20: pairs 20; S1 2x 0.000% (0.00 months, stressed 0); S1B 2x 0.000%; S2 2x 54.832% (48.47 months); month 2x 1.131% -> SURVIVES
+R278 C gate+mexc L7d th10% K20: pairs 20; S1 2x 0.000% (0.00 months, stressed 0); S1B 2x 0.000%; S2 2x 35.538% (28.88 months); month 2x 1.230% -> SURVIVES
+-      hyperliquid+mexc L3d th5% K20: pairs 20; S1 2x 31.218% (118.77 months, stressed 18); S1B 2x 31.218%; S2 2x 34.723% (132.10 months); month 2x 0.263% -> reported
+verdict: PARTIAL (registry PARTIAL)

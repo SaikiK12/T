@@ -51,12 +51,17 @@ for breakthroughs at 100% of compute".
 directional ideas into one family or run them forward; prefer structural, high-Sharpe trades on held data.
 
 **Standing duties** (`docs/OPERATIONS.md`): R404's close on 11-18, and the R406/R413 successors after 11-19.
-R392 is being done now.
+R392 was frozen and read on 2026-11-10 (PARTIAL, `registry/rounds.csv`).
+R404's recorder moved to `claude-book-costs-recorder.yml` (live once on the default branch). Close rule: DATA_PASS at
+>= 40 snapshots with all three venues in the window; the close reports the count on `claude/book-costs-data` alone
+and with the six lost local snapshots (five with digest rows; only the first proven three-venue). Local R404
+must not run; local REC_DIGEST may, if no local `data/recorders/book_costs` tree exists.
 
 ## Lenses last used
 1, 2, 3+4 (tick 1); 5, 6+7 (hunt wave, 2026-11-09); 8 and 1 (wave 2, 2026-11-10); 2 and 3+4 (wave 3,
-2026-11-10). Next: 5, then 6+7. Three waves in a row produced no new testable row: run a wave only when a lane is
-waiting, and pick tests from our own measurements first.
+2026-11-10); 5 (web search wave and R483, 2026-11-12/13). Next: 6+7. Three waves in a row produced no new
+testable row before the 2026-11-12 wave: run a wave only when a lane is waiting, and pick tests from our own
+measurements first.
 
 ## Tick log
 - **2026-11-09, tick 1 (by hand).**
@@ -523,3 +528,117 @@ waiting, and pick tests from our own measurements first.
   - Futility on 2027-05-15 and the final read on 2027-11-13 (the same days as R480), by `claude-xvroll.yml`. Inputs
     are fetched at each read, plus R480's recorded xyz 1-hour candles (read only).
   - Power: at R481's post hoc difference it is likely a PARTIAL. At the August-October pace, t ≈ 3 at 52 weeks.
+- 2026-11-12 ~17:00 UTC: maintenance pass by a stand-in agent (Claude and Codex absent). Added the web search protocol
+  (`docs/WEB_SEARCH.md`, `registry/web_searches.csv`, `scripts/web_search_ledger.py`, wired into `python -m lab integrity`).
+  Read issue #7 (last comment 2026-11-12 14:16 UTC, R481 NULL) and the open PRs (#1, #6, #8, #9, #32, #56): the
+  latest CLAIMs (R437-R440, R453, R467) are Claude's lane claims, none on these files, and no open NEED call.
+  Ran `python -m lab integrity` (0 errors, 14 legacy warnings on old registry rows and frozen PREREGs, left as they
+  are) and `python -m lab status` (48 tasks UNKNOWN: no local receipts, the runners live on GitHub Actions).
+  Marked R392 done (frozen and read 2026-11-10) where STATE, HANDOVER and OPERATIONS still listed it as a duty.
+  Added fixture tests for `scripts/data_provenance.py` and the prop map inputs. Still open: R404's close on 11-18
+  and R406/R413 successors after 11-19 (Claude or the owner); R420's dispatch ends 2026-11-19 (owner).
+  No lane opened, no market measurement, no frozen file or registry row touched. Not checked: live recorder
+  health and GitHub Actions runs.
+- 2026-11-12 ~22:15 UTC: wake check by a stand-in agent (Claude and Codex absent). Read only through `gh api`.
+  - Every "Flow paper lanes (Claude)" run that ticks R200 has ended `failure` since ~15:13 UTC (e.g. 43308253509 at
+    21:14 UTC). R448 (`scripts/run_flow_hl.py` line 117, `book_days`) and R451 (`scripts/run_flow_hlstock.py`, same
+    function) raise `ValueError: cannot reshape array of size 0 into shape (0,24,newaxis)`: the forward window
+    (FWD_START 2026-11-12) has no complete day yet (D = 0). The other lanes exit 0 and the journals are committed
+    ("failed: R448 R451"). `run_flow_hl.py` is hashed in R448's PREREG (line 149), so it is not fixed.
+  - Inferred from the code, not observed: D becomes 1 with the 2026-11-13 00:00 UTC Hyperliquid close, so the
+    failure should stop at the first tick after ~01:00 UTC on 11-13. The :40 dispatches pass because nothing ticks.
+  - R467 run 43108216123 (11-11 22:01 UTC, dispatch) shows failure but its job is `cancelled`; no Sunday tick is due
+    before 11-15. "Offline lab checks" on PR #1 is `action_required` since 11-12 14:19 UTC (owner approval).
+    All other active Claude and Codex workflows' latest runs are success.
+  - Issue #7: no comment after 14:16 UTC (R481 FYI), no fresh writer claim. Open PRs: #94, #56, #32, #9, #8, #6, #1.
+  - Not due yet: Claude check-in 11-16 11:20 UTC, R404 close on or after 11-18 00:00 UTC, R420/R429 dispatch end
+    11-19 00:00 UTC (owner), R406/R413 successors after 11-19.
+  - R404's local recorder died with the container (last snapshot 2026-11-10 06 UTC, 6 files, 5 digest rows). New
+    `.github/workflows/claude-book-costs-recorder.yml` (`08cac6f6`) runs the unchanged recorder each 3-hour slot,
+    parquet to `claude/book-costs-data`, and stops at 2026-11-18 00:00 UTC; see `experiments/book_costs_v1/DEVIATIONS.md`.
+    It is live only once cherry-picked onto `claude/yo-9a1k5w`. Its first run replaces status.json with the
+    data-branch files only.
+  - Sandbox dry run (scratch copy, ~22:17 UTC, not a snapshot): 2 min 26 s, 1,315 books (dYdX 57, KuCoin 712,
+    MEXC 546); 40 MEXC books had no `data` field, likely rate limiting. 40 slots remain; GitHub runs need ~34 of them.
+  - The stand-in dispatched nothing, pushed nothing and posted nothing.
+- 2026-11-13 ~00:10 UTC: lens 5 (red team on the carry books), by a stand-in agent. R483 `carryhurdle_v1` (M478, M481).
+  - Ideas in from the 2026-11-12 web search wave (WS0002-WS0008): M534 (ADL stress bound) and M535 (USDe supply
+    flow to funding) queued UNTESTED; M478 and M481 tested here. Ideas out: none dropped.
+  - Test: do the six forward carry books (R437/R438 v2 daily nets, 2x costs) beat holding sUSDe, NW t >= 2?
+    Frozen in `eb328f3f` before importing DefiLlama `/chart` bodies sealed unread on 11-12 (the free endpoint
+    stopped 11-13); import `e16ed783`; one run. The #7 CLAIM was not posted before the run (orchestrator posts it).
+  - PASS (CONFIRMED, 12 trials, program 9,785,286): R279 A +12.80 pts/yr (t 4.45), R278 C +10.03 (3.29), R279 B
+    +7.54 (3.74) beat; R278 A -0.45, R278 B -0.07, R390 A +8.91 (t 1.11) tie. sUSDe 8.81%/yr, 4.72 from 2025-04-09.
+  - Deduction: on the backtest R278 A (gate+hyperliquid) and R278 B (binance+mexc) earn no more than a passive
+    token paid by the same funding; since 2025 R278 A made 4.08%/yr against sUSDe's 5.33. The KuCoin books and
+    gate+mexc carry the case for running carry. Gate 0 on seen rows; risks unpriced; forward lanes decide.
+- 2026-11-13 ~08:40 UTC: HLP/LLP/LIT intake (owner: "great movements and other factors"), descriptive only.
+  - Note `research/intake/hlp_llp_lit_20261113.md`, ledger WS0011-WS0019, catalog SRC1113-001 to -011, new M536
+    (LLP day return as the house's P&L signal, FEAT-003 tests it) and M537 (LIT buyback flow), both UNTESTED.
+  - Found: Lighter's keyless `exchangeMetrics` has daily buybacks; Feb-Sep 2026 they equal maker+taker fees within
+    1.8% (19.7m LIT, $34.9m since 2025-12-30). DefiLlama (secondary, UNVERIFIED) puts a 3.194m LIT/week team and
+    investor linear unlock from 2026-12-29, 11-23x the recent buyback; FEAT-004 checks it against R265's rule
+    (unlock material in `research/intake/lit_hype_unlocks_20261113.md`).
+  - Moves to 2026-11-10: LLP's 20 largest days are all 2025 (worst -6.73% 2025-03-03; -5.35% 2025-10-11 took 117
+    days to recover); HLP's largest step +$41.4m to 2025-10-15, account value $604m (2025-09-03) to $149m; LIT -74%
+    (01-07 to 03-30) then +331%, -49% (09-23 to 10-29), 42 days beyond 10%. No trial, no cross-series statistic.
+- 2026-11-13 ~08:55 UTC: R484 `llphouse_v1` (M536), by a coder sub-agent. NULL for both books.
+  - Test: on days LLP's return leaves its prior-90-day 10th-90th percentile band, follow (F) or reverse (R) BTC's
+    same-day sign over the next UTC day on Hyperliquid, 13 bp a round trip plus funding. Frozen in `2025a9ee` before
+    the BTC/ETH fetch (`28aaf129`, 68 bodies, manifest sha256 2a48a12f); one run.
+  - 99 events (51 house-loss, 48 house-win). F 1x -0.162%/trade (t -0.64), 2x -0.292, 3x -0.422; R 1x -0.098%
+    (t -0.39), 2x -0.228, 3x -0.358; placebo percentiles 31.8 and 68.2. Both halves agree. Program 9,785,288.
+  - Reported: ETH F +0.03% (t 0.08), R -0.29%; LIT R +0.97% (t 1.21, placebo pct 95.3), F -1.23%. Not findings.
+- 2026-11-13 ~09:15 UTC: FEAT-004, LIT and HYPE unlocks against R265's rule. No R265 event, no lane.
+  - DefiLlama emissions/lighter re-fetched byte-identical by a second agent (WS0020, VERIFIED as DefiLlama's claim;
+    Lighter publishes none): team and investors are a `linear_start` of 3.194m LIT/week (0.32% of max supply) from
+    2026-12-29 with no cliff, so `cliff_days` gives no day. HYPE (WS0021): nothing dated in 2026-11-13..2027-03-31.
+  - R266 tickets neither. New M538 (insider linear-start short, UNTESTED, kill test in the row); notes on M057, M506,
+    M537; R447 impact section (funding sign is the exposed leg). No return after 2026-11-10 read.
+  - Unlock note: `research/intake/lit_hype_unlocks_20261113.md` (the R484 note `hlp_llp_lit_20261113.md` is frozen
+    and unchanged). Ledger WS0022 corrects WS0020/WS0021's routed_to to it.
+- 2026-11-13 ~10:00 UTC: R447 watch note added to `research/intake/lit_hype_unlocks_20261113.md` (addendum): the LIT
+  insider stream starts 2026-12-29, before R447's 2027-02-08 look; the short leg earns funding while longs pay (about
+  13.7%/yr to 2026-11-10) and pays if funding flips. No test, no return after 2026-11-10 read; tests added for
+  `hl_crosscheck` in `scripts/run_llphouse.py`.
+- 2026-11-13 ~10:15 UTC: R485 `linstart_v1` (M538), by a coder sub-agent. INSUFFICIENT (recorded NULL), 1 trial.
+  - Test: short the OKX USDT swap from the 1Dutc close of D-7 to D+14 around insiders/privateSale `linear_start`
+    streams raising the weekly rate by >= 0.25% of max supply (fresh DefiLlama snapshot 2026-11-13); pure events (no
+    R265 cliff in D-30..D+21) decide. OKX instead of Binance (451). Frozen in `97870aff` before the OKX fetch
+    (`d094fa9e`, manifest sha256 9b53b077); one run.
+  - 9 pure archive events, 5 before their OKX listing, 4 priced (< 20). 1x +14.92%/event (2x +14.72, 3x +14.52),
+    t 1.98; null mean +7.35%, p 0.259; G5 fails. Survivor-only swap list. Program 9,785,289.
+  - Prior art WS0023-WS0026: no linear-start return figure found (The Tie read, Keyrock 403). LIT's 2026-12-29 start
+    is a forward instance; R447 note unchanged. FINDINGS: `experiments/linstart_v1/FINDINGS.md`.
+- 2026-11-13 ~10:30 UTC: R486 `litbuyback_v1` (M537), by a coder sub-agent. NULL, 2 trials.
+  - Test: Lighter's daily buyback USDC over LIT perp plus spot quote volume against LIT perp's next 7-day return
+    (Spearman, circular-shift null), and a weekly long-or-flat book against always-long, 20/40/60 bp plus funding.
+    Frozen in `9d6cc3f6` before any buyback-return statistic; lit/ at okx-xperp-data `0364bbc6`, nothing after
+    2026-11-10 read (R447 forward window); one run.
+  - rho +0.149 (n 306), p one-sided 0.154. Book 1x +2.86%/block (t 1.43; 2x +2.77, 3x +2.68) below always-long
+    +4.17%. G1-G3 fail. M537 TESTED. Program 9,785,291. FINDINGS: `experiments/litbuyback_v1/FINDINGS.md`.
+- 2026-11-13 ~11:45 UTC: R487 `adlstress_v1` (M534), by a coder sub-agent. PARTIAL, 6 trials.
+  - Test: worst-case ADL bound on 2025-10-10 for the nine carry books: each exposed pair's profitable leg on an ADL
+    venue closed, the other leg naked over its venue's full high-low range, plus one round trip at 7/14/21 bp.
+    SURVIVES if the bound at 2x is below one month of the book's v2 2x net. Frozen in `a3159620` before any candle;
+    candles fetched once in `12ee748c` (Gate, KuCoin, MEXC, Hyperliquid, data.binance.vision); one run.
+  - ADL venues (WS0027-WS0032, `research/intake/adl_venues_20261113.md`): only Hyperliquid documented. S1: R278 A
+    29.35% of book capital at 2x (32 months of net) EXPOSED; the five books with no Hyperliquid leg 0. S2 (all
+    venues): 21% to 55% for every forward book. Realized net that day -0.09% to +0.57%. M534 TESTED. Program
+    9,785,297. FINDINGS: `experiments/adlstress_v1/FINDINGS.md`.
+  - After review 2026-11-13-122155: S1 is not a strict worst case (the close-versus-open rule leaves the
+    Hyperliquid shorts of ZORA and MERL unstressed; post hoc they would add 7.70 points to R278 A, no call changes);
+    1x-to-3x cost spread is 0.12 to 0.20 points; 37 of 40 Hyperliquid 1h bodies are empty. Post hoc code:
+    `scripts/posthoc_adlstress_v1.py`.
+- 2026-11-13 ~12:05 UTC: R488 `usdeflow_v1` (M535), by a coder sub-agent. NULL, 2 trials.
+  - Test: weekly log change in USDe supply (DefiLlama id 146) against the change in Hyperliquid mean hourly funding
+    from week t to t+1, BTC and ETH both deciding, circular-shift null excluding +/-4 weeks. Frozen in `0edafe4b`
+    before any supply or funding value; fetched once in `8a0b7678`; one run.
+  - n 147 weeks (2024-01-08..2026-10-26). BTC rho -0.031 (p one-sided 0.696), ETH -0.085 (0.870); G1 and G2 fail.
+    Next-week funding level rho +0.48/+0.55 is mostly concurrent with this week's funding, but the post hoc
+    partial rho of w(t) with f(t+1) given f(t) is +0.24/+0.24 (untested, decides nothing; corrected after review
+    2026-11-13-122155). The change target biases rho(w, d) toward zero or below, so the negative signs are not
+    support for the hedge-impact model. A residualized target would be a new lane. Carry proxy at 2x
+    0.0396%/day, slightly lower after inflow weeks (0.0366%) than outflow weeks (0.0426%), rho +0.114 (p 0.205).
+    No published estimate found (WS0033-WS0036). M535 TESTED. Program 9,785,299. FINDINGS:
+    `experiments/usdeflow_v1/FINDINGS.md`.

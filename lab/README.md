@@ -120,5 +120,6 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`tearsheet`](tearsheet.py): Performance tear sheet for a daily return stream: quantstats' core metrics, plus the lab's honesty terms.
 - [`venues`](venues.py): One symbol map from each Binance USD-M perp to the same coin on every other venue and data source the lab holds.
 - [`volatility_validation`](volatility_validation.py): Finite causal RV forecast controls; risk skill, not direction or net alpha.
+- [`websearch`](websearch.py): Append-only web search ledger (registry/web_searches.csv): validate, append, and look up prior searches.
 - [`xfund`](xfund.py): Cross-venue funding carry books (R275's rule) one day at a time, for forward paper.
 - [`xfund_v2`](xfund_v2.py): Venue-neutral carry books (M468): R275's rule with the three accounting fixes of the 2026-11-04 audit.
