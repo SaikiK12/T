@@ -54,3 +54,6 @@ martingale property is only approximate under dependence). It is a monitoring/fu
 prices no execution risk and replaces no frozen fixed look. `scripts/forward_monitor.py` prints the
 table read-only. Carry-audit daily files (`carry_v2_audit*`) interleave engine v1 and v2 rows per
 book — always split by `(book, engine)` and sort by date before treating a stream as one series.
+`mexc_seq` (R221) is a fixed 3-look Bonferroni design (90/182/365 d) and cannot be read between
+looks; the monitor complements it with a daily read of the same R215/R218 books without spending
+R221's alpha.
