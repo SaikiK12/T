@@ -1,5 +1,5 @@
 {
- "last_hour": "2026-11-13T23:00:00+00:00",
+ "last_hour": "2026-11-14T00:00:00+00:00",
  "mapped": 43,
  "dropped": [
   "AMDUSDT",
@@ -53,27 +53,27 @@
   "coverage": 0.5603070175438597
  },
  "X2_ontime": {
-  "days": 24,
-  "total": 0.11032391934114352,
-  "total_2x": 0.0995306051664781,
-  "total_3x": 0.088737290991813,
-  "funding": -0.04032105833560523,
-  "coverage": 0.43238811728395055,
+  "days": 25,
+  "total": -0.005243926253071379,
+  "total_2x": -0.016401399227946797,
+  "total_3x": -0.027558872202821896,
+  "funding": -0.04045456110509203,
+  "coverage": 0.4292592592592592,
   "go_real": {
-   "n": 24,
-   "mean": 0.004596829972547647,
-   "hit": 0.5833333333333334,
-   "worst": -0.0998591801655121,
+   "n": 25,
+   "mean": -0.00020975705012285517,
+   "hit": 0.56,
+   "worst": -0.1155678455942149,
    "invalid_n": 0,
    "n_clusters": null,
    "checks": {
     "finite_returns": true,
     "enough_scored": true,
-    "mean_positive": true,
+    "mean_positive": false,
     "hit_rate": true,
     "no_tail_event": true
    },
-   "pass": true
+   "pass": false
   }
  },
  "vs_R215_A_replay": {
@@ -84,10 +84,10 @@
   "diff_t_nw10": null
  },
  "vs_R215_A_ontime": {
-  "days": 24,
-  "x2_total": 0.11032391934114352,
-  "a_total": 0.07258472739258201,
-  "diff_mean_bp_day": 15.724663311900619,
-  "diff_t_nw10": 2.2975067293979663
+  "days": 25,
+  "x2_total": -0.005243926253071379,
+  "a_total": -0.027145266932142184,
+  "diff_mean_bp_day": 8.760536271628311,
+  "diff_t_nw10": 0.8211181138858271
  }
 }
