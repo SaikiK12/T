@@ -1,0 +1,22 @@
+{
+ "label": "post hoc, decides nothing, no null computed",
+ "source": "results/weekly.csv",
+ "coins": {
+  "BTC": {
+   "n": 147,
+   "rho_w_f_t": 0.4725762944941027,
+   "rho_w_f_t1": 0.48141655773749703,
+   "rho_f_t_f_t1": 0.7062879205736349,
+   "partial_rho_w_f_t1_given_f_t": 0.23664811094741856,
+   "rho_w_f_t1_minus_rho_w_f_t": 0.00884026324339432
+  },
+  "ETH": {
+   "n": 147,
+   "rho_w_f_t": 0.6082501879550919,
+   "rho_w_f_t1": 0.5513322780425975,
+   "rho_f_t_f_t1": 0.6819294586997914,
+   "partial_rho_w_f_t1_given_f_t": 0.23520161387499391,
+   "rho_w_f_t1_minus_rho_w_f_t": -0.05691790991249435
+  }
+ }
+}

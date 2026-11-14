@@ -1,0 +1,750 @@
+{
+ "folder": "data/settlehop_1m",
+ "source": {
+  "binance": "https://data.binance.vision USD-M daily 1m klines (each zip checked against its .CHECKSUM sha256)",
+  "lighter": "https://mainnet.zklighter.elliot.ai/api/v1/candles resolution 1m (lab.carrylane)"
+ },
+ "script": "python -I scripts/fetch_settlehop_1m.py",
+ "recorded_utc": "2026-10-28T01:11:22Z",
+ "hops": "experiments/settlehop_pred_v1/results/hops.csv.gz book 'binance+lighter th0.5%': 87 hops",
+ "window": "Binance: whole UTC days touching [T - 2 h, T + 1 h + 1 min); Lighter: [T - 2 h, T + 1 h + 1 min)",
+ "files": 164,
+ "bytes": 6642352,
+ "binance_zip_sha256": {
+  "data/settlehop_1m/binance/0GUSDT/2025-12-25.parquet": "db374f6cfe30879664ba28147c32e028b1658586aa37b04891728a34bb645a6b",
+  "data/settlehop_1m/binance/0GUSDT/2025-12-26.parquet": "1eac29210cb40ade7b68a6ce164ae6da26b34cd0c35c8e52ce5e3724e9c6a8d5",
+  "data/settlehop_1m/binance/0GUSDT/2025-12-27.parquet": "4b485fcfa4dadbab9d7903f0e89adb7e4a465db164819aae7992a4f3c18b6dfc",
+  "data/settlehop_1m/binance/0GUSDT/2026-01-22.parquet": "f78546603ce2c7182ff8970cffe3c46d67005c174ebac1368739cf4d7396244a",
+  "data/settlehop_1m/binance/0GUSDT/2026-01-23.parquet": "0e7d7e5e848c11e95cbf8e30dd2c8de689b3d077f3330ec50230945565b8d942",
+  "data/settlehop_1m/binance/0GUSDT/2026-01-31.parquet": "98fc7dabd8fb9057ab672fd336abea1742437420cc5a13841f79ef9aac135deb",
+  "data/settlehop_1m/binance/0GUSDT/2026-02-12.parquet": "59f41edb8bf40654e433fdd7944d1f36f47da4cb31c6e2622215d59ee13de790",
+  "data/settlehop_1m/binance/0GUSDT/2026-04-12.parquet": "2ef4d0c7ccd7ab1a695157cfff1e2d53b467d4d931ff7d598c25a03a750c563f",
+  "data/settlehop_1m/binance/0GUSDT/2026-04-27.parquet": "c79274423232068be342158a4f3bcc2d5685b83c1b905a24e67fedea864190b9",
+  "data/settlehop_1m/binance/2ZUSDT/2025-11-21.parquet": "7d572659a11e2220dd5403d019f9e9892ba7e5d2d7a8c625c8f1a9b3c094ece1",
+  "data/settlehop_1m/binance/AEROUSDT/2025-10-10.parquet": "035e7c3e612847e9030d9858b15d13db339e262c25f7a50d342fd2fad5b81755",
+  "data/settlehop_1m/binance/AEROUSDT/2025-10-11.parquet": "5266a948780d9bfb1ac5783ed38fd722a50cf2bfed30804f4d829e0ffc9ba310",
+  "data/settlehop_1m/binance/APTUSDT/2025-11-07.parquet": "68e2a804598856b9f2d2c3f08c0c9a2650956235d03cf557ec05c96ed8ceb71f",
+  "data/settlehop_1m/binance/AVNTUSDT/2025-10-10.parquet": "c7be816f06c63eaa36767813d42d60709a753b675745d3dd7ab96993cad40150",
+  "data/settlehop_1m/binance/AVNTUSDT/2025-10-11.parquet": "eb6a73e56d3625c572b94ed94cae644f344081df00e3ef165e43d1c9e702ea7c",
+  "data/settlehop_1m/binance/AVNTUSDT/2025-10-21.parquet": "260414d638711ee1d21adf3eaaad055d03bde0f0fecb9adae8f92fab3a94875f",
+  "data/settlehop_1m/binance/AVNTUSDT/2025-10-22.parquet": "ac708800e7ee3657d1ba1f3cf9fbe444b90931f6b65c96bceb7d0f43cd87cfa5",
+  "data/settlehop_1m/binance/AVNTUSDT/2026-01-25.parquet": "e629f2ba7b2aa8157a984fdfd4e82edc9f982d4da7138bbb623cd4f933c27cd2",
+  "data/settlehop_1m/binance/AXSUSDT/2026-02-20.parquet": "b3a65be7b795eb82335a61c85a63a5b7ebac34d150f8c694bce7608796032d37",
+  "data/settlehop_1m/binance/BERAUSDT/2026-01-14.parquet": "403283612c6e7a50ba2e7cd01e0640e5f6efa9cf85bbf20b6863b0c4b81ee2b2",
+  "data/settlehop_1m/binance/BERAUSDT/2026-01-17.parquet": "fc9c6c08180f548c6836f9c2e7c001425f1bbca8035a13ae16d2cd4a1a1ca29c",
+  "data/settlehop_1m/binance/BERAUSDT/2026-01-18.parquet": "71cf6a733f1565c3ca0e5adb2571f62ea320cb2b8d793506d2a7ec5e109ae09f",
+  "data/settlehop_1m/binance/BERAUSDT/2026-01-19.parquet": "8b905e69f9ba268394605966e315cd2568197f7ad670e2ec357296f0960c3e8a",
+  "data/settlehop_1m/binance/BERAUSDT/2026-02-06.parquet": "f9a7b277aae4a4d62ca0b551af75f3972d120acbdae041500c76daeccbddb342",
+  "data/settlehop_1m/binance/BERAUSDT/2026-02-08.parquet": "f7d823b6760a03be2a0f07ab90770a6ecb9429665bc4bfea9b4eeaf87373b6e1",
+  "data/settlehop_1m/binance/BERAUSDT/2026-02-09.parquet": "bdb1fffaf199bdeb5abf0febde93f3fd96431f7063124c76581be29c2b7b9f8f",
+  "data/settlehop_1m/binance/BERAUSDT/2026-02-11.parquet": "4122ed86faf7f6088bf433c21abc751ff5933f89134b85c113d0a4552332e901",
+  "data/settlehop_1m/binance/BERAUSDT/2026-02-12.parquet": "06292f37c4785c4f6b8cfc3d8ab489ff8ce64bb342112869b9a093bf801b0e30",
+  "data/settlehop_1m/binance/DUSKUSDT/2026-02-19.parquet": "c9db9c1c11ea5ad40ae095f76c6931fbfa7de6ce96512940d9e9331b1bff8ccc",
+  "data/settlehop_1m/binance/DUSKUSDT/2026-02-22.parquet": "aeb3f5d53cb308666d8bdf8e6f3fa694b10fcb0b645b210018ece036184a7fb9",
+  "data/settlehop_1m/binance/DUSKUSDT/2026-02-23.parquet": "4610c1dffe99c3c307b3d518507794c63373eabd579a476ef77f8256878b8905",
+  "data/settlehop_1m/binance/EIGENUSDT/2025-10-10.parquet": "0af8a6727608f1c12e88e109bdcaad8ba81eb6f547e0a82e44c1d35defc970fb",
+  "data/settlehop_1m/binance/EIGENUSDT/2025-10-11.parquet": "71491894c33aa380a9b6c2d825e5da0b35e434b601430ae51edaa1d3023ee064",
+  "data/settlehop_1m/binance/FFUSDT/2026-04-10.parquet": "8337f6557b0c0dca520fdf6baf6513d4c631fd7cd6c684d98b9b471bdcca5630",
+  "data/settlehop_1m/binance/FOGOUSDT/2026-06-25.parquet": "1ad52a3b42c372cb6f59aacd835e3208b0211bcfcda9ab27b594406469c9391c",
+  "data/settlehop_1m/binance/FOGOUSDT/2026-06-26.parquet": "5ae1596049c85611b79be4096f63b5d8528a821dba0e8dc2fc693b856f09b067",
+  "data/settlehop_1m/binance/ICPUSDT/2026-03-11.parquet": "fccb2fc9c089f87fa160c1703ecdf22028a186ab36190f714b16ff321cd9a450",
+  "data/settlehop_1m/binance/KAITOUSDT/2025-09-28.parquet": "466775c70a2b0fe94be41e92673ba98b5a9a3ca269adab9544b451c486268792",
+  "data/settlehop_1m/binance/KAITOUSDT/2025-11-17.parquet": "6bcc2e6426a3feffd678b295cedad6e0a902df33507eaeae3b2d7561aea141a0",
+  "data/settlehop_1m/binance/KAITOUSDT/2025-11-25.parquet": "ace42511376559811b9d6db22a0d88e375d42b00adada3389b8dd7d1461667d4",
+  "data/settlehop_1m/binance/KAITOUSDT/2025-12-27.parquet": "348796c3325783276f3e0544385d8df85067a73a2671cd6014eeef6cc006343a",
+  "data/settlehop_1m/binance/KAITOUSDT/2026-08-08.parquet": "3abb745f7573f840da399ec84fa616b43ddd2fbdbaff1582edd3feff921017fb",
+  "data/settlehop_1m/binance/KAITOUSDT/2026-08-09.parquet": "209763d1672cb47fa3e870610f72f44eaa72ae743e3551d403225be99f77b8fb",
+  "data/settlehop_1m/binance/KAITOUSDT/2026-08-10.parquet": "3dc24fb15a4dcda09829c51624c3fc6bb1909fd901d08d32111d6c6b5393bda6",
+  "data/settlehop_1m/binance/KAITOUSDT/2026-08-11.parquet": "125dd6733b1cd90fd117b8149c0927351cd7965854dae71c2e05b8b72fe1f1a0",
+  "data/settlehop_1m/binance/KAITOUSDT/2026-08-12.parquet": "76d379036023efc670506c1581ac1b0d6019c939e6c2b12b9733c2a30260b723",
+  "data/settlehop_1m/binance/NMRUSDT/2025-09-23.parquet": "f48126463f98093f4209558ba0e80c007e7dc5d0759abf79e97d7ced6bc9089a",
+  "data/settlehop_1m/binance/NMRUSDT/2025-11-03.parquet": "ec4098ec9de38eb18bf9b7530929b814092974d16e78020b5b58c9b395999968",
+  "data/settlehop_1m/binance/NMRUSDT/2025-11-20.parquet": "d3f396f9bec11c9d274109c2488321b903e60f4e91fed08f36f2b7e1bbe67df1",
+  "data/settlehop_1m/binance/ONDOUSDT/2025-10-10.parquet": "e3b3e89142d7cab6c97544eb24f03c08aabf01d806ce48203fb5db7fe145b8fd",
+  "data/settlehop_1m/binance/ONDOUSDT/2025-10-11.parquet": "1ec7a17f9d42b8d5c0c44f8764a9c4a70bcba38d8a503174709d020692f7d23a",
+  "data/settlehop_1m/binance/PIPPINUSDT/2026-03-04.parquet": "c0b17159c30bd3fa2f7f89435dc6d6921883c25fcbc060f220acae061035f46e",
+  "data/settlehop_1m/binance/PIPPINUSDT/2026-03-16.parquet": "4ea934bb4f6bb1a0b083e74c37d1cac04d83b931b9cf0acebce0778e958efafe",
+  "data/settlehop_1m/binance/PIPPINUSDT/2026-04-03.parquet": "b913cd896c300162b61eabecd03576ef0b0194de6307103ce34957d408e6a082",
+  "data/settlehop_1m/binance/PROVEUSDT/2026-02-06.parquet": "dffbc95b3f9226ec2b3a0a26992b3df64f34c98f75ec068b62763d205f3b1816",
+  "data/settlehop_1m/binance/PROVEUSDT/2026-03-25.parquet": "2632601c92eb974cbd62114ea9912e10f6c8373b61814a682db18550fcbff157",
+  "data/settlehop_1m/binance/PROVEUSDT/2026-03-26.parquet": "9674e206aecc369c8647e60ec19421c746cf0f0397bcf4632065bb92d8383ad0",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-02-14.parquet": "403956486dd065645b3952972c5dd1ee0ac99a817dd02d20a99e8c18590236b3",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-02-15.parquet": "a30a887c4c1f147c0d6eadf52e249ee2e2e3e9db4591e52aa66733415ac26623",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-02-17.parquet": "25e6c09144da00496640becd6e649c6aad9dc40ad28c4f9e092c6dba326d30ae",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-02-18.parquet": "8c18a36ac01d39cad1f910eed3395b0eac349bc5e0857395003e8a3c798329a1",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-03-08.parquet": "c2d2b51e4b9e1bd027321ee0d2439711c4363247ad173a1720e7a40ba04a8b6a",
+  "data/settlehop_1m/binance/RIVERUSDT/2026-03-25.parquet": "fbd456588869a5c176bbfbf429f625af49958cfac9a55a7a6a1eee5a6366bf31",
+  "data/settlehop_1m/binance/SEIUSDT/2025-10-10.parquet": "53b506442a7e6b82ffd262e12571c6085953976f101dd3ae0fe2f6963d4d1373",
+  "data/settlehop_1m/binance/SEIUSDT/2025-10-11.parquet": "718d020de1f6832827d65442b95d8e2e9c1c4bff526d102f1d9507dee02aa618",
+  "data/settlehop_1m/binance/SKRUSDT/2026-02-24.parquet": "5c940f3f447b94012d7761ca4a7a85bb3400d8bf0c45165fc98cb5585773fe0e",
+  "data/settlehop_1m/binance/STABLEUSDT/2026-04-02.parquet": "fc7c9ff6b90dee1e5022ef277cf13f6bae29cbcf0a23c9a136fcc8e9f5a58b2b",
+  "data/settlehop_1m/binance/STABLEUSDT/2026-04-13.parquet": "fe4d045e33b8daecfa0afa32e50a0f5db622cff046a9e60665223cac24b272a0",
+  "data/settlehop_1m/binance/STABLEUSDT/2026-04-24.parquet": "f4d313ace875dc1b90dbf287c78462c154cd4bf19b5875f83379e5a90f570e87",
+  "data/settlehop_1m/binance/TOSHIUSDT/2026-02-12.parquet": "75ebc1fb357a019e37537acbe4faa8956dafb95caa701f844e7c47a8c9dd09c2",
+  "data/settlehop_1m/binance/VVVUSDT/2026-02-15.parquet": "4bec912b42cafadb0d2ba05e174d29f67347aed069d5aaa25be6e140d01fc3c5",
+  "data/settlehop_1m/binance/VVVUSDT/2026-02-16.parquet": "084ee8ecab49434eeb6d264e3ea65aeda166a7bd1b8f3207d64d54a4651926d9",
+  "data/settlehop_1m/binance/WIFUSDT/2026-05-06.parquet": "6edd96ea2f27f1b83fb4ed165156939f671b79b0f7496eaccca3827f494891ac",
+  "data/settlehop_1m/binance/ZKUSDT/2026-02-01.parquet": "e5f58a371a91561b03dba18fdd8db23df22f4658c2c2003868fb170d26be1498",
+  "data/settlehop_1m/binance/ZORAUSDT/2025-11-13.parquet": "5cedc299598330ab6ce075f67d8b8ff02d3fbd30f4ff6941cc80552b1e699d74",
+  "data/settlehop_1m/binance/ZORAUSDT/2026-02-01.parquet": "73cffa7650e0588df88a8c8b5c725766de7fd3c5658d870210b577885ca529ba",
+  "data/settlehop_1m/binance/ZORAUSDT/2026-02-02.parquet": "b9a152176ef520a8bb785dfd2e26a2a67c5aaa60dac0c45a06cfb5e36b5ebd4d"
+ },
+ "file_hashes": [
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2025-12-25.parquet",
+   "sha256": "25cfb454d21fd27ce1ef360adc1e7ef704b9f7579da77ff2b5ffb669bb006aae"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2025-12-26.parquet",
+   "sha256": "f585cbc857092bd28a9e40c2f2f10d719170cdb030ae8fd52d71735c5f418640"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2025-12-27.parquet",
+   "sha256": "d9ddc954fb2110fa929b5809c6d4aca43f70d7d8a80d437f245fd285b22e84b9"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-01-22.parquet",
+   "sha256": "cf29e5d05f9fe1bbb76f0571d21593615c08ed31c7e8b10336c6a2262f3852f3"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-01-23.parquet",
+   "sha256": "f4d808fba53928b46f1770fd1209a29c6a2c34274218811f01a3cc26c98d65d9"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-01-31.parquet",
+   "sha256": "acdcd74d7f43224279e3c217b60a4e97bac433348f98773145b7ee1349310b6b"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-02-12.parquet",
+   "sha256": "ca0c46038719521a1b8f574cbe70bfaefb7631e140204a841c78b05e9eb42ed5"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-04-12.parquet",
+   "sha256": "4a7f0eeaee0b0bc8593d675bdaaa596c7c367612b9570291911ab95087ea449b"
+  },
+  {
+   "path": "data/settlehop_1m/binance/0GUSDT/2026-04-27.parquet",
+   "sha256": "f583dff34a79f86bc1c882b9eb4f65107b821027245683149dbe245e08ef7924"
+  },
+  {
+   "path": "data/settlehop_1m/binance/2ZUSDT/2025-11-21.parquet",
+   "sha256": "651296081725beef6422346be0b756a08116e70842727a185d98f17154b27159"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AEROUSDT/2025-10-10.parquet",
+   "sha256": "f85652248ddf3bc1b6a0361e8f6836842fc6d81b49b7d6bf624767b1e4b8b506"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AEROUSDT/2025-10-11.parquet",
+   "sha256": "990a3353c2baddb123b92901b865c0c543dc1e6fe13a33c96b4cf70eebecdbd6"
+  },
+  {
+   "path": "data/settlehop_1m/binance/APTUSDT/2025-11-07.parquet",
+   "sha256": "0946ec58db1fff337eb2aaca7a5f3d4a0f02cae717f12fc58713d8280ecab8bf"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AVNTUSDT/2025-10-10.parquet",
+   "sha256": "f237bb8e0da6cc81df5c66ff90f0379854e368639725a1b64ac669d3260a796f"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AVNTUSDT/2025-10-11.parquet",
+   "sha256": "301276f66c233788872bc44a0b2636aec3fd68185691c52eea45d26835487022"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AVNTUSDT/2025-10-21.parquet",
+   "sha256": "eda757411d487a656648f285ded4f3009c3f504c9d210e7af0f6d7b6bfd1144d"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AVNTUSDT/2025-10-22.parquet",
+   "sha256": "9988578f842822c728ae0fb6e11edec2f5bef02550d1b5090cd0007f5d2d59c1"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AVNTUSDT/2026-01-25.parquet",
+   "sha256": "d9870ce8cbc2f1d89a0f6cda7531442fbc86308b987d6e2f37df373348e454e4"
+  },
+  {
+   "path": "data/settlehop_1m/binance/AXSUSDT/2026-02-20.parquet",
+   "sha256": "3b7a27cde68a9f3a3e5430b313e8b0d612765d3a28953798016b990f30ad5076"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-01-14.parquet",
+   "sha256": "a740d283ac7ab8d7fd38ac40499f44dd669b1f1b221aaf488f0e4cb0d1622bc9"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-01-17.parquet",
+   "sha256": "0b5e8cdfbc2028b1f770a60a78e791942f97f915dc98dc8d22d93922412690cd"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-01-18.parquet",
+   "sha256": "54e42fb531169030486d43202c031eee7ad34a46b57935349120a838b6a21311"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-01-19.parquet",
+   "sha256": "ef802812d0b832a0b8ce3b53bf2f020ca4bc32e6c90b797896eeadd23086ca76"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-02-06.parquet",
+   "sha256": "99c76fdc919cda234f798a7ff5a2316e5c7684522a2d790184541cf3ee504735"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-02-08.parquet",
+   "sha256": "d00d67ddfbebc0e22b0babd2dfe3ee797cfda74c9b7681701ceea9ed870d64cc"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-02-09.parquet",
+   "sha256": "12edb3a204d2deb1c1c1b5762af9cb1feacc883eae962df89882e312cfad4365"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-02-11.parquet",
+   "sha256": "5afad2335c9459ff47653a979a23013a172f8ab82bc09ccbf9848363ca467373"
+  },
+  {
+   "path": "data/settlehop_1m/binance/BERAUSDT/2026-02-12.parquet",
+   "sha256": "316a27f655e2a63b0600dc99faf4a11025c16215b01f8ec214a4032fecbc98ab"
+  },
+  {
+   "path": "data/settlehop_1m/binance/DUSKUSDT/2026-02-19.parquet",
+   "sha256": "4f1fedc07c508ea9960e3d797e321f399e47ec28dcfca936adb67a0a874100ad"
+  },
+  {
+   "path": "data/settlehop_1m/binance/DUSKUSDT/2026-02-22.parquet",
+   "sha256": "1b1832581149eb13677437c9e8bdc0adb6c4bf26f80157ba4ca549167e479a35"
+  },
+  {
+   "path": "data/settlehop_1m/binance/DUSKUSDT/2026-02-23.parquet",
+   "sha256": "0f945c75c33333963ac8c172949f56bb9ea5bd267344052597ec9d6f1233849b"
+  },
+  {
+   "path": "data/settlehop_1m/binance/EIGENUSDT/2025-10-10.parquet",
+   "sha256": "e99f47c9f588c23259c299c5f0f4f0d1c7d7d694ad6059edd9ffedb14e1e48bf"
+  },
+  {
+   "path": "data/settlehop_1m/binance/EIGENUSDT/2025-10-11.parquet",
+   "sha256": "76cd89e1c9d26d3acb7a22f631b3e5e375c4bcd6579e79b7a3a9b445a5d1e438"
+  },
+  {
+   "path": "data/settlehop_1m/binance/FFUSDT/2026-04-10.parquet",
+   "sha256": "0c3d947054f38b3018461d5d707e5c41d75214996e666f38a15e34ec09100e3d"
+  },
+  {
+   "path": "data/settlehop_1m/binance/FOGOUSDT/2026-06-25.parquet",
+   "sha256": "7296a4ead3127ae9f24128af5734a40b754f29f1e0801ad4c1774387f2015c7a"
+  },
+  {
+   "path": "data/settlehop_1m/binance/FOGOUSDT/2026-06-26.parquet",
+   "sha256": "c93a62300c0f88a372f136d26b81e1dd4a6cb7c9279e14144e2dfae7462c4e8f"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ICPUSDT/2026-03-11.parquet",
+   "sha256": "bff4bcde5c6319680ecfdd9787c2e1471ba9410cf183d3819d6d9017dd001fbb"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2025-09-28.parquet",
+   "sha256": "f4f5893c139427c9c511b2e288184798e4821c6d40ce708aa9962c428e345d31"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2025-11-17.parquet",
+   "sha256": "7670ef1063671e1e0cd0b1b1f96fcde76000a3247ba60771650b431ed84ee595"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2025-11-25.parquet",
+   "sha256": "bacf6efa06cd2a6b50d513232e45ed7e29648e4d361e7424834741087293efa1"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2025-12-27.parquet",
+   "sha256": "cb124ab797f393108532add08a3bc78024bff3798c6351522457011336952de5"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2026-08-08.parquet",
+   "sha256": "c3ae6084acfa01c50d35575b66b15818ea36a5c356b2947e445f2b3b9674ba8c"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2026-08-09.parquet",
+   "sha256": "8274f9f11dbe8ad649406cd22b5c46ee08e5f8dc73adf6621830cf63eb5b3b7e"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2026-08-10.parquet",
+   "sha256": "6f348ecdcd4b3ef73d43f0fcf8b2ce050251b42846ccf7b74b7585aaa35c2a1f"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2026-08-11.parquet",
+   "sha256": "8c9d49c682eb1aa336059c5dd9f139522c9cc17c0adc3511b43ebe713c45cf9d"
+  },
+  {
+   "path": "data/settlehop_1m/binance/KAITOUSDT/2026-08-12.parquet",
+   "sha256": "d6eb07f956032fd9639b6f4cd81705ea16f5defb21140072f9458f26ed2756b0"
+  },
+  {
+   "path": "data/settlehop_1m/binance/NMRUSDT/2025-09-23.parquet",
+   "sha256": "936b653a3c9574786d204941b0fec0486f6911e77cc0a3bf5c826793d21ed99f"
+  },
+  {
+   "path": "data/settlehop_1m/binance/NMRUSDT/2025-11-03.parquet",
+   "sha256": "c3e432299654652abbd2d5d19620e225c1bf29e3fc9cba0af8f28f23c5e194d5"
+  },
+  {
+   "path": "data/settlehop_1m/binance/NMRUSDT/2025-11-20.parquet",
+   "sha256": "fc8ae5e293d949613b4755382cdb0f705c48f46ec7be4622ffe26d165aeb536a"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ONDOUSDT/2025-10-10.parquet",
+   "sha256": "d8f41778d765713197d037158aa80a8cfb320d876ad402235c5768cfb85ba672"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ONDOUSDT/2025-10-11.parquet",
+   "sha256": "a32f8d972295a0d1ab5c986c6d002018fa9b194816908cfedc45863ee95d3f03"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PIPPINUSDT/2026-03-04.parquet",
+   "sha256": "b3840ca96f2ffd8b245fa7387246bf5a2e8bb0c80a20d427164529dca75f9321"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PIPPINUSDT/2026-03-16.parquet",
+   "sha256": "acec74bbf7aeef4d60568ad65b615482a112a7dfaf468e8fd3369a1a491b2388"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PIPPINUSDT/2026-04-03.parquet",
+   "sha256": "32ca247a925cb6865154eed86af5ff1d02a3d885951c831f62356b602339e8a0"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PROVEUSDT/2026-02-06.parquet",
+   "sha256": "78b61435898f37e81ed0ae335fc2b42138d90d0d04ecf50d458fbe2c3d2605ea"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PROVEUSDT/2026-03-25.parquet",
+   "sha256": "3449552e63f368f1ec12ffcf410024d2022a7f88013a382ffcd3f041102812ac"
+  },
+  {
+   "path": "data/settlehop_1m/binance/PROVEUSDT/2026-03-26.parquet",
+   "sha256": "6ad785e0688b967ad6a7e8085974a51f753e8329e4178d53b1a0215fe332865c"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-02-14.parquet",
+   "sha256": "0d8e5ed459e5a816124a5daf4016b379f343d8a42bf80b99a00b4577a361ea71"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-02-15.parquet",
+   "sha256": "b24bf6918ac62cf4184a29237797dd009a518fd675b862fd0508b48974f66f76"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-02-17.parquet",
+   "sha256": "db118cef8c9c49cb3f8f2ea47a4e369be4d23f44e80166432a0d20a4623abb25"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-02-18.parquet",
+   "sha256": "883c72ba075ae8c9df4782c10bf36599033e8178a5733feb768dfe0103679ffe"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-03-08.parquet",
+   "sha256": "0651116f666ea105057f9ae3bdab02dfdf24dee373c8c710b22da52a015565de"
+  },
+  {
+   "path": "data/settlehop_1m/binance/RIVERUSDT/2026-03-25.parquet",
+   "sha256": "278fa945b2114c651e94731eadd51accf15bdd0cbfbc0e25a960a74e1164a0bf"
+  },
+  {
+   "path": "data/settlehop_1m/binance/SEIUSDT/2025-10-10.parquet",
+   "sha256": "797cd994d56660be77e01227401e2dde227778ab337f1838fbaec94e0d47fd05"
+  },
+  {
+   "path": "data/settlehop_1m/binance/SEIUSDT/2025-10-11.parquet",
+   "sha256": "b1c070fd7eb538e80829f359868d5199f70ac447d21588b2d7cc295e9e29462d"
+  },
+  {
+   "path": "data/settlehop_1m/binance/SKRUSDT/2026-02-24.parquet",
+   "sha256": "d630de99b1bf126ef59d7f10599383559cc5a79c8c5528d81b63c4b132cfde5b"
+  },
+  {
+   "path": "data/settlehop_1m/binance/STABLEUSDT/2026-04-02.parquet",
+   "sha256": "4dcc67b4f61455fe86a6bc205120e00e82ee7385e6b0508c114594923565c1c4"
+  },
+  {
+   "path": "data/settlehop_1m/binance/STABLEUSDT/2026-04-13.parquet",
+   "sha256": "25925bd56b5c449e26a1e52855831f7ebe0416cb02efd08d244a353e99aa8177"
+  },
+  {
+   "path": "data/settlehop_1m/binance/STABLEUSDT/2026-04-24.parquet",
+   "sha256": "1c9f1702c3d8e05daa01f4b82136b38cd3f77f4d87fcca23b6379be653dd3029"
+  },
+  {
+   "path": "data/settlehop_1m/binance/TOSHIUSDT/2026-02-12.parquet",
+   "sha256": "fe51185d338fe46cf8f4ede084378908823b47a0952e22cce99ddca333579d0b"
+  },
+  {
+   "path": "data/settlehop_1m/binance/VVVUSDT/2026-02-15.parquet",
+   "sha256": "c4bbcc2e00f4126141b97d8eb66916b52af562c6424937dca95fe84d4d869521"
+  },
+  {
+   "path": "data/settlehop_1m/binance/VVVUSDT/2026-02-16.parquet",
+   "sha256": "931fc5f085b922a184c8371acba2450e62d3ce19eb66b35c33f62e9a783054e4"
+  },
+  {
+   "path": "data/settlehop_1m/binance/WIFUSDT/2026-05-06.parquet",
+   "sha256": "48d734c904a943a2a41d4dc8dbfcb35b2d7e6e79c95a8dee0b7ffa0c7d6326d2"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ZKUSDT/2026-02-01.parquet",
+   "sha256": "1d136a4f92208f9704f767adf9106bea9761d9e943fea11179a8eaa04f4f3882"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ZORAUSDT/2025-11-13.parquet",
+   "sha256": "6d59ab0bf0ac290a37895386e85540671edfbc09036d2111ee568258e64096bf"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ZORAUSDT/2026-02-01.parquet",
+   "sha256": "db5b5d7c35d2e9af4e86158cf29df17561b7c7ec45c075b37a7c3b04323193be"
+  },
+  {
+   "path": "data/settlehop_1m/binance/ZORAUSDT/2026-02-02.parquet",
+   "sha256": "449bd7523ca1c5e82c2526f1273583fa45900237fd320e9bc28cc7ab17c5daab"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1766678400000.parquet",
+   "sha256": "52a47eb824fc5018ba1ec885532dc0d4544f4aaa060e742bfb40ce30243ae4b0"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1766721600000.parquet",
+   "sha256": "09565470f98ad0c963aa35562658cfee397b920751c48ab6fcffba79c772cb20"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1766736000000.parquet",
+   "sha256": "c01cfc367ad00178b71903c2e46d50610f1e0c2b48a8d929095f39c6c472ed0e"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1766750400000.parquet",
+   "sha256": "e10a13784080c8e041dd55b6ac5b61af348cd83ec130f3bd67d02cbcaa6494b3"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1766808000000.parquet",
+   "sha256": "294c67016c8131b28d90eeac7c18825bee213d0ac17ccd8330a2ac4c5f016e34"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1769097600000.parquet",
+   "sha256": "f54f033a1e3aa7100c2b45964f45ac82d60b34fe279da9578dbd1940c764eade"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1769169600000.parquet",
+   "sha256": "4d8454f33c82f0c945c8f0dcc2a89e89838ed9bab52dc96b6ef618d2ed195ae5"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1769889600000.parquet",
+   "sha256": "39e36511dab99a9a864eb19da63edcee08e351e397ca32afe0fdbadd19950a71"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1770883200000.parquet",
+   "sha256": "40ce448b9293e3f7430f1b830b1c24970e8b3323b0d77a905ac9866712560bdc"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1776024000000.parquet",
+   "sha256": "e2b7c49769ecee2efc5e1bb7cd18af048bccc8e7ec848a31b024589c8869b9a4"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/0G/1777305600000.parquet",
+   "sha256": "5b40083775609b6d538deea1199016ff141e29ae8fb0289d0f15a5670736e1e9"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/1000TOSHI/1770912000000.parquet",
+   "sha256": "72beee81f303817f8fa74898a35e3541940509401350d3c52725494d2a1cab25"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/2Z/1763755200000.parquet",
+   "sha256": "62ede7c66f510515b4e17fe07a54be775f373aa8bcc398ffb4dce02992987457"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AERO/1760140800000.parquet",
+   "sha256": "f1ca335873e08473edf7fa532a7057c7827b7a88326ca08ae474c7e28c16478d"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/APT/1762502400000.parquet",
+   "sha256": "064d728f8fbb4647da6fb8e4430ae96c6f0154a57492f2be916d1b6ec1da9dbb"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1760140800000.parquet",
+   "sha256": "c76de59fe855f36a67171da6f1572d1da8c0604fa2628155cf9a9e7f919b75f7"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1761019200000.parquet",
+   "sha256": "ab2087ecc7fd9002ff957cae71364bab31dcf37108812704473f49b955a10213"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1761062400000.parquet",
+   "sha256": "bf08350d1b8d8104de6db5d201e17764a34ad620c71a59ccefd095c755244b65"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1761076800000.parquet",
+   "sha256": "18e69e6073ab38b765bf5bf54ecf2b463923287f63166382d161962b26c96d9f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1761134400000.parquet",
+   "sha256": "64135bc25539106635f7343e3e77d869b937f82c0cadb5c44e23428f11ad5430"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1761148800000.parquet",
+   "sha256": "be4e4d78e592da374a676c3565462fab55d09cd120cdeb31e863a9f04571cf8f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AVNT/1769328000000.parquet",
+   "sha256": "f4eadfde00ca1fe56b9889d8111f09fb5e21efe5b3eb65c24946afe99bcc1895"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/AXS/1771560000000.parquet",
+   "sha256": "ccb173f2ed190b7696f8b4ea6939c43aea84c9a9a6306d4e9ad998726761d154"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768363200000.parquet",
+   "sha256": "53223f7bb2fa56629f4d0b1feb021919f5e8a1ddb98ba1c18a4ede5864406536"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768665600000.parquet",
+   "sha256": "0e7210c5fe670301310e7e585e0d4d54694f563dd180625b29f3d9c3fec98a4f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768708800000.parquet",
+   "sha256": "eafc83f5c8cc0069e5a9959d94e217319a1532cc47d3b34da83693efd493d95c"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768795200000.parquet",
+   "sha256": "548e137c3280d8cd306e6c9f8014e5f545d3e29ced00c2d1b917e9864f8481e5"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768809600000.parquet",
+   "sha256": "56a8769b09a1df948fc50b80da40391a56bcb32ab61c3147818ade0751a243f4"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1768824000000.parquet",
+   "sha256": "01ba29c0fc260e00f8f7f0a4885323185f954e8d2008b556cc958069dc2f2125"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1770408000000.parquet",
+   "sha256": "023eed61ef870b2157546de8642c5efd841d860cf167f7ae602337f3783e7647"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1770595200000.parquet",
+   "sha256": "a810c8b55730d1769a5318766f95f8a567b7dcc066463fb0175c63dd209ca9cc"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1770854400000.parquet",
+   "sha256": "447b4a85a8697fabd8e98af84ba32768cff2e3fda3e1945ed22f863843de5829"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/BERA/1770912000000.parquet",
+   "sha256": "686553d5924400c9d544c276a978fb12d13049c2024b15c2da4d70c4cf74d0a5"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/DUSK/1771488000000.parquet",
+   "sha256": "9df0bb1469f3aa624c8cac4e2d60821c0afc6897044d3f20b8700058585b5a7c"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/DUSK/1771531200000.parquet",
+   "sha256": "e16e63637325f2751065cdb4f432271ec171ce81c6aeabd1eda94de5ff5ff0ae"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/DUSK/1771804800000.parquet",
+   "sha256": "d282937b87c178e9fb4ff04ab6ea7b66b0d7132391d2f8124aa1beb16a5b2c91"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/EIGEN/1760140800000.parquet",
+   "sha256": "e4a9194d5ebe08e88de14d52ba7c1270bac5f8f7dbe1b6311b8fbc897f626b60"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/FF/1775851200000.parquet",
+   "sha256": "5a44b8512c5ac8963a7392299573c816c1d4785d2f57ffadab34825c16a3c177"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/FOGO/1782432000000.parquet",
+   "sha256": "e75f341f9d2fb2221fef60335474492d56fa316a1e4e074e94456f58fa2ab359"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ICP/1773244800000.parquet",
+   "sha256": "4e282ed2352168cb18104d6a254791911c192cdb5b29f6da1696e0560c5a1bf2"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1759046400000.parquet",
+   "sha256": "a20f8ad8d9501e5afc082a3eda8378eca269e40dc18d6c33c13c14931b9164f4"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1763409600000.parquet",
+   "sha256": "cd059301b52ed31dbecb2d105855a9fb11e8ee78997eca2147a2c8c3a9a464af"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1764100800000.parquet",
+   "sha256": "cfb241b2c9bf6cbead82274cb26d52276bfe7bc588d816179086d923c6bd3177"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1766808000000.parquet",
+   "sha256": "0c944b9cd17e6fb68306ccf6f148746cf2a6286f0dde12aa6e9f50920b1b5a68"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1766822400000.parquet",
+   "sha256": "f6db877485d7c5c885829c2f94b35d570b5eb0fc6847da848ccbe726801d39d9"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786219200000.parquet",
+   "sha256": "8018328b6c28b0d9167d36a27dc98768e2d14c45153e68cb554dc712917aeef8"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786233600000.parquet",
+   "sha256": "349796d241fc48ec23f71fdd561ecdf5de1cf4a9539fd724c31e899f1057292a"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786248000000.parquet",
+   "sha256": "2b8cf3c5af5724d5f7d72831a5a95f3c5d2ed4e1b7560725a46bbf550a29f953"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786305600000.parquet",
+   "sha256": "f5398747d775501dba6363ff05389509201d8b5cf058569624ff7cd4b0554302"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786363200000.parquet",
+   "sha256": "9d9761c2f23c3688367b408286997ca8a71e53a8a885032037870bbd841d888d"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786377600000.parquet",
+   "sha256": "6e65a3b35ea3e7eebdd97ffce7ca221af701a449332cd0a84f624d8d7d86e29c"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786492800000.parquet",
+   "sha256": "536a7c465192b8670bf66a0dc3d1e03de0450da85611488272e31d259bda5f9f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/KAITO/1786521600000.parquet",
+   "sha256": "7309fb6038164851e6a64096f314aacaec4ba486856d2a4ed753928afad5a212"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/NMR/1758628800000.parquet",
+   "sha256": "68a10ca027d895545b588778b352afa44ef28c42265430f53cad51d708871298"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/NMR/1762185600000.parquet",
+   "sha256": "d1516a8dffd3a8a3d90467b9ea6a97719fe8d8b909cb42081a22cee735a6824b"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/NMR/1763668800000.parquet",
+   "sha256": "011aaa8c5449e58ff067994a4b089b7aeb6004931e33b879c95246d2b3b5e306"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ONDO/1760140800000.parquet",
+   "sha256": "59af7581cb2454576f82781366569b90d3c92bdf3eb34f348306ae0f548ce8c7"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PIPPIN/1772596800000.parquet",
+   "sha256": "5992dc349a122c06ec8b43e7b5f0308ff93c4c08ce2a39519426a2ab15364e49"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PIPPIN/1773676800000.parquet",
+   "sha256": "5c3d5fab04f82baa5c08761163ef425dcc0dfb115644949755fb9e833618076b"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PIPPIN/1773691200000.parquet",
+   "sha256": "048f877aa1a5492e4757e6725f0efa34a5b224c24e5741011ad13741d4f8f90d"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PIPPIN/1775217600000.parquet",
+   "sha256": "30c35331b8dec8caccc7386553dbf48ab05aea2b6c11e9bab48ebeb2514dd349"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PIPPIN/1775232000000.parquet",
+   "sha256": "beff55ef2671881f6f21bfe2e6b9a5ddd99c0b0ce786b3178584e832a8e75b61"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PROVE/1770393600000.parquet",
+   "sha256": "5c3a6986840fc2e8feb8fc3b5e8d16089e975ca916536f8247d0f3e707141dbb"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/PROVE/1774483200000.parquet",
+   "sha256": "6a69ba1707f0a48bf5c0fb8b7fe32c83e1a02f1da386e1c927aba678882fe3fc"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771056000000.parquet",
+   "sha256": "0bfa590aaaa4bb55d3ef13e3a9f2937211162747368c6c1c3e52cefd7ace6394"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771070400000.parquet",
+   "sha256": "96c6bff829812e8351a3106ecf3fa7ed28d31ecae9a39a970cb09f01d7c96f8d"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771113600000.parquet",
+   "sha256": "92afe4e8053bb5596caea4685fb088ab113a940d007ded1dc8d2e1b40031be6f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771329600000.parquet",
+   "sha256": "c8ca25e661392a772e186702faaac2ad59c8df88528f8102f5b628d437d77dd7"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771372800000.parquet",
+   "sha256": "13d8323fb1e5ce0bf85c79c54f270ebcd7c6067d7ec1b452bf00644e12ff73c6"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1771430400000.parquet",
+   "sha256": "cfc76235ab6fc62fea709e0520a197bf33d6b96edc85bd8e545e1fb034c09eda"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1772985600000.parquet",
+   "sha256": "ee2de73ebc2f4ab7d308ea4e49da8a500fc0090ab281c028f740d782b26cc691"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1774454400000.parquet",
+   "sha256": "f8b96c5646e74538f1ced4ee7ac280e09f74d90245b9d7c08a679b37924240d5"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/RIVER/1774468800000.parquet",
+   "sha256": "03cef496773c4d5d7c582d330ef717bcd54ba2178ce9be878a1db6790a6d746f"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/SEI/1760140800000.parquet",
+   "sha256": "989c21791a03e09893eeba96f1170892ec4d91a70fcf83b532f6112e24542a92"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/SKR/1771920000000.parquet",
+   "sha256": "604c92789efc52f76faa0e46b2ab105d768695b0c74d19a81e229d8b4b233ba3"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/STABLE/1775131200000.parquet",
+   "sha256": "b7ae5bea096c202019bbd9b7016f0227bd1aa0d8023f7028910b810415e2e499"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/STABLE/1776096000000.parquet",
+   "sha256": "b324bc064f35c732175e43b145e4d506b6bbae0563e6b1cbff3cc2a3e3dd21db"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/STABLE/1777003200000.parquet",
+   "sha256": "ab9d7746e0590804258aa2d63f59509ff907c08e9f306e4cdbd442c2c4443400"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/VVV/1771200000000.parquet",
+   "sha256": "fa6f67ae439ac44cfb4226dd73f6951d19b3d77d6bb4d6e83514b4c83462bef0"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/WIF/1778054400000.parquet",
+   "sha256": "02a594ad6cc8b3b9b31f46025e5dbfc0a368572ff4039b1b2bc750ce6fd938ab"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZK/1769918400000.parquet",
+   "sha256": "c4843f9cd80d6b26e77058d6e5e1ef68e06fba0914d5bb4f327503258779c7ac"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZK/1769947200000.parquet",
+   "sha256": "c3728c5ba378cd51b7cc60b28ca96041526709c0936b9ad1b453b4811ccb6d06"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZORA/1763006400000.parquet",
+   "sha256": "50a6020e19e258fa21e181d79c38b75ec8a65f884d1e376157d6e4eb89d46e1a"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZORA/1763035200000.parquet",
+   "sha256": "a52726b75abf82291565da9d4ff5e38a166526fd47e58ed5276db1ce0445fe2b"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZORA/1769932800000.parquet",
+   "sha256": "1c4ee88f9b81e508be094211ac44d4fa8284b8e8a3496024b116b8c0cef9138c"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZORA/1769947200000.parquet",
+   "sha256": "edd96f04e82900e0c8fec9c089f88fbab80d4ecccf7c3f797b6d08ba80bc46dc"
+  },
+  {
+   "path": "data/settlehop_1m/lighter/ZORA/1770004800000.parquet",
+   "sha256": "3dbd94e193ee898f48c3f0546e7d2294d1abb083fe1b35a38ed54e8faabade2c"
+  }
+ ]
+}

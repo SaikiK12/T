@@ -1,0 +1,27 @@
+{
+  "scope": "final synthetic full suite before native source acquisition",
+  "tests": 2604,
+  "skipped": 3,
+  "seconds": 385.845,
+  "success": true,
+  "log_sha256": "1c76536b8c39eb2f3a73b41918ecd63e178b2bf5503443bd8248672adf4a9119",
+  "utc": "2026-11-07T20:10:25.153412+00:00",
+  "source_connections_before_freeze": 0,
+  "earlier_test_attempts": [
+    {
+      "path": "/tmp/participant-capture-full.log",
+      "sha256": "806cd2b670aae40b973b7989aaa922cc6bf6bbd71b93005228c2e1db1c1a9f60",
+      "meaning": "test-only YAML dependency failure; own suite interrupted; replaced by stdlib check before freeze"
+    },
+    {
+      "path": "/tmp/participant-capture-full-v2.log",
+      "sha256": "c88ef4ed3094962f91f28539f897232d94c025f1d53296c2a2f053715417d5b0",
+      "meaning": "own suite interrupted for an absolute start-window guard before freeze"
+    },
+    {
+      "path": "/tmp/participant-capture-full-v3.log",
+      "sha256": "a59ced6f50e2ca77c3f151ddf60a521ab57f7ce39819d085acf74673435204e6",
+      "meaning": "2602 synthetic tests passed before redirect/body-retention guards were added; superseded by final full gate"
+    }
+  ]
+}

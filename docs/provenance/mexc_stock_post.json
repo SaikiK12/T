@@ -1,0 +1,2061 @@
+{
+"folder": "data/mexc_stock_post",
+"source": "https://contract.mexc.com/api/v1/contract/kline (public, no key), Min60, 2026-10-14..2026-11-11 00:00 UTC, R461 sample B symbols; generic client name",
+"script": "scripts/fetch_mexc_stock_1h.py",
+"recorded_utc": "2026-11-11T12:50:35Z",
+"excluded": [],
+"files": 189,
+"bytes": 5298196,
+"combined_sha256": "3a5b3892ed02d9f41c242c90bd3ce280dd3df8e7a73706384bcf4dcc9e33648a",
+"subfolders": {
+"klines_1h": {
+"files": 187,
+"bytes": 5219853
+},
+".": {
+"files": 2,
+"bytes": 78343
+}
+},
+"hourly_coverage": {
+"klines_1h": {
+"files": 187,
+"bars": 113049,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1791936000000,
+"last": 1794351600000
+}
+},
+"coverage": {
+"klines_1h": {
+"AALSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AAOISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AAPLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ABNBSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ABTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ADMSTOCK_USDT": {
+"bars": 0
+},
+"AEHRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AKAMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ALABSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ALLSTOCK_USDT": {
+"first": 1792414800000,
+"last": 1794351600000,
+"bars": 539,
+"holes": 0
+},
+"ALNYSTOCK_USDT": {
+"first": 1794312000000,
+"last": 1794351600000,
+"bars": 12,
+"holes": 0
+},
+"AMCSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AMDSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AMGNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AMKRSTOCK_USDT": {
+"bars": 0
+},
+"AMTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AMZNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ANETSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AONSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"APDSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"APHSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"APPSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ASTSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AXONSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AXPSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"AXTISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BESTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BIIBSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BKNGSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BMYSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"BSXSTOCK_USDT": {
+"first": 1791975600000,
+"last": 1794351600000,
+"bars": 661,
+"holes": 0
+},
+"BXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CAHSTOCK_USDT": {
+"first": 1792062000000,
+"last": 1794351600000,
+"bars": 637,
+"holes": 0
+},
+"CATSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CCISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CDESTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CDNSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CEGSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CIFRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CLSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CMCSASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CMESTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"COHRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"COINBASE_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"COPSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CRCLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CVSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"CVXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"DASHSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"DDOGSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"DJTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"DKNGSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"DVNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"EBAYSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ELSTOCK_USDT": {
+"first": 1793710800000,
+"last": 1794351600000,
+"bars": 179,
+"holes": 0
+},
+"ENPHSTOCK_USDT": {
+"bars": 0
+},
+"EOGSTOCK_USDT": {
+"first": 1792414800000,
+"last": 1794351600000,
+"bars": 539,
+"holes": 0
+},
+"ETNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"EXPESTOCK_USDT": {
+"bars": 0
+},
+"FCXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"FICOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"FIGSTOCK_USDT": {
+"bars": 0
+},
+"FIXSTOCK_USDT": {
+"first": 1792144800000,
+"last": 1794351600000,
+"bars": 614,
+"holes": 0
+},
+"FLEXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"FOXASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"FTNTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"GEVSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"GILDSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"GLWSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"GLXYSTOCK_USDT": {
+"bars": 0
+},
+"GOOGLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"HCASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"HIMSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"HLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"HONASTOCK_USDT": {
+"bars": 0
+},
+"HTZSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"HUTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"IBMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ILMNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"INTCSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"IONQSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"IRENSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"JMKESTOCK_USDT": {
+"bars": 0
+},
+"KHCSTOCK_USDT": {
+"bars": 0
+},
+"KKRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"KLACSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"KMBSTOCK_USDT": {
+"first": 1792144800000,
+"last": 1794351600000,
+"bars": 614,
+"holes": 0
+},
+"KMISTOCK_USDT": {
+"first": 1792497600000,
+"last": 1794351600000,
+"bars": 516,
+"holes": 0
+},
+"KOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"LHXSTOCK_USDT": {
+"bars": 0
+},
+"LINSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"LITESTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"LLYSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"LMTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"LRCXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MARASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MARSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MCDSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MCKSTOCK_USDT": {
+"first": 1792062000000,
+"last": 1794351600000,
+"bars": 637,
+"holes": 0
+},
+"MDLZSTOCK_USDT": {
+"first": 1792497600000,
+"last": 1794351600000,
+"bars": 516,
+"holes": 0
+},
+"MELISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"METASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MNSTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MPCSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MPSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MPWRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MRKSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MRNASTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MRVLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MSFTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MSTRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"MTSISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"NEMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"NETSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"NOWSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"NVTSSTOCK_USDT": {
+"bars": 0
+},
+"NXPISTOCK_USDT": {
+"first": 1792414800000,
+"last": 1794351600000,
+"bars": 539,
+"holes": 0
+},
+"ONSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"OPENSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"OUSTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"OXYSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PCVXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PFESTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PGSTOCK_USDT": {
+"first": 1792144800000,
+"last": 1794351600000,
+"bars": 614,
+"holes": 0
+},
+"PHSTOCK_USDT": {
+"first": 1792497600000,
+"last": 1794351600000,
+"bars": 516,
+"holes": 0
+},
+"PLTRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PSXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PURRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PWRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"PYPLSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"QCOMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"QNTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RBLXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RDDTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RDWSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"REGNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RIOTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RIVNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"RKLBSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ROBINHOOD_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"ROKSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SBUXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SCCOSTOCK_USDT": {
+"bars": 0
+},
+"SHOPSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SITMSTOCK_USDT": {
+"bars": 0
+},
+"SLBSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SMCISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SMRSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SNDKSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SOFISTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SPX500_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"STRCSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"STXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"SWKSSTOCK_USDT": {
+"bars": 0
+},
+"TEAMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TEMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TERSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TESLA_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TLNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TMOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TMUSSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TSTOCK_USDT": {
+"first": 1791975600000,
+"last": 1794351600000,
+"bars": 661,
+"holes": 0
+},
+"TTWOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TWLOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"TXNSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"UBERSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"UNPSTOCK_USDT": {
+"first": 1792062000000,
+"last": 1794351600000,
+"bars": 637,
+"holes": 0
+},
+"URISTOCK_USDT": {
+"first": 1792144800000,
+"last": 1794351600000,
+"bars": 614,
+"holes": 0
+},
+"USARSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"USTOCK_USDT": {
+"first": 1794225600000,
+"last": 1794351600000,
+"bars": 36,
+"holes": 0
+},
+"VEEVSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VKTXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VLOSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VRTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VRTXSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VSTSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"VZSTOCK_USDT": {
+"first": 1792062000000,
+"last": 1794351600000,
+"bars": 637,
+"holes": 0
+},
+"WDCSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"WENSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"WMBSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+},
+"WMSTOCK_USDT": {
+"first": 1792501200000,
+"last": 1794351600000,
+"bars": 515,
+"holes": 0
+},
+"XOMSTOCK_USDT": {
+"first": 1791936000000,
+"last": 1794351600000,
+"bars": 672,
+"holes": 0
+}
+}
+},
+"file_hashes": [
+{
+"path": "klines_1h/AALSTOCK_USDT.parquet",
+"bytes": 31963,
+"sha256": "ce37d8564776891421b669544e59ce0d6d24501be8b456c763be52d61ed1c1e0"
+},
+{
+"path": "klines_1h/AAOISTOCK_USDT.parquet",
+"bytes": 33621,
+"sha256": "e6dc3d1b4af5606e36adf37957e9ad8849d5dbc83b3b390e5ad39d3740416431"
+},
+{
+"path": "klines_1h/AAPLSTOCK_USDT.parquet",
+"bytes": 31033,
+"sha256": "0bccf1b0e2a0ac4a7560c38d748e45e671fcdc82c5768f0e6ce3c6d8e63eab9d"
+},
+{
+"path": "klines_1h/ABNBSTOCK_USDT.parquet",
+"bytes": 29743,
+"sha256": "4fda7c2009cef9fc407554ea7d4f89f4246b6ee2814a55da43342fd7e2765924"
+},
+{
+"path": "klines_1h/ABTSTOCK_USDT.parquet",
+"bytes": 29036,
+"sha256": "b86da28e75c711dc4b160e0a647e3e1749ad523da00a045c61aed9f4db2b6890"
+},
+{
+"path": "klines_1h/ADMSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/AEHRSTOCK_USDT.parquet",
+"bytes": 31521,
+"sha256": "b63ce7ff9d1f47750ebf656ce492bfb15913b36dd25062f5a9f4378429c9573f"
+},
+{
+"path": "klines_1h/AKAMSTOCK_USDT.parquet",
+"bytes": 30271,
+"sha256": "bf1bb19fb390b575efd977b73d75da936046323933af699c154ce472e4cadc70"
+},
+{
+"path": "klines_1h/ALABSTOCK_USDT.parquet",
+"bytes": 33101,
+"sha256": "4bfb6fb21bd00c61b9d2fb2104ce5de7638ee4f9788d8c99a9e525844b7a42e9"
+},
+{
+"path": "klines_1h/ALLSTOCK_USDT.parquet",
+"bytes": 26247,
+"sha256": "4d3d0cdb2eed82ff6d1e280f02124de13d9c015d43f505091aaf115990133907"
+},
+{
+"path": "klines_1h/ALNYSTOCK_USDT.parquet",
+"bytes": 4990,
+"sha256": "adcb5b95b57d153a6ac7a6ad933519f3ffa51117c48c897f99fab37ff61eefdf"
+},
+{
+"path": "klines_1h/AMCSTOCK_USDT.parquet",
+"bytes": 37044,
+"sha256": "d85d2960355e9bc319ec19ac067e07157520c83e5b9532415116158d8712f899"
+},
+{
+"path": "klines_1h/AMDSTOCK_USDT.parquet",
+"bytes": 34554,
+"sha256": "2286c1ceb9f998e3e992c9998d85409190be10daff95d25f56d499b7d05c520f"
+},
+{
+"path": "klines_1h/AMGNSTOCK_USDT.parquet",
+"bytes": 30936,
+"sha256": "d58530482091e828063ef26691515fa1e89f2730809afa9d5530757c3618fb8c"
+},
+{
+"path": "klines_1h/AMKRSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/AMTSTOCK_USDT.parquet",
+"bytes": 31365,
+"sha256": "2970260a59401999fcc33b198710277b581408167a214ee5a37b4da95a2b9877"
+},
+{
+"path": "klines_1h/AMZNSTOCK_USDT.parquet",
+"bytes": 32201,
+"sha256": "8b21f6f803513eb6980eb49f61e63e25180dc68aa232f51a1cff6ba5b89c13a1"
+},
+{
+"path": "klines_1h/ANETSTOCK_USDT.parquet",
+"bytes": 31224,
+"sha256": "72df984b9e4e27ecd0eaefb4cdc7a98752f231d3d4831f6167cb8ba8278712fd"
+},
+{
+"path": "klines_1h/AONSTOCK_USDT.parquet",
+"bytes": 31361,
+"sha256": "5706825cbccbdc0e7f3a4ffb6c191f5f8443833e4350ea87865dae1136ef28fe"
+},
+{
+"path": "klines_1h/APDSTOCK_USDT.parquet",
+"bytes": 28264,
+"sha256": "2b1896ccebfe74ac578f8618a41393ab2fdabecfbff90bae26818bb7d216696b"
+},
+{
+"path": "klines_1h/APHSTOCK_USDT.parquet",
+"bytes": 28697,
+"sha256": "5a83049d1cb64bf5d813f6c3fc3ff1de631706338e818da20bb71504dea9aed5"
+},
+{
+"path": "klines_1h/APPSTOCK_USDT.parquet",
+"bytes": 32565,
+"sha256": "0aa092cb1b075bc26ee749e150d83bb2e09474356a68ff1cb7071afa9cae33cd"
+},
+{
+"path": "klines_1h/ASTSSTOCK_USDT.parquet",
+"bytes": 30522,
+"sha256": "5ad9251faa39f7b835f0ffef3be44dea6f5c2fbb01e180477a116c9984d7e00e"
+},
+{
+"path": "klines_1h/AXONSTOCK_USDT.parquet",
+"bytes": 31066,
+"sha256": "566c45972de51fe51d5750b426c9bf5790696906e4e266baa4b7a45a7e3a78b3"
+},
+{
+"path": "klines_1h/AXPSTOCK_USDT.parquet",
+"bytes": 28556,
+"sha256": "cf642667c1348edfcfa6ececa7700d2479ba0210eead790b1716f83bb55d07cb"
+},
+{
+"path": "klines_1h/AXTISTOCK_USDT.parquet",
+"bytes": 32772,
+"sha256": "b634843740a1fc6af8e702bef162fd2b0e0da4f1b7623c007f0369fe1b6273d3"
+},
+{
+"path": "klines_1h/BASTOCK_USDT.parquet",
+"bytes": 29748,
+"sha256": "a1fc23fdb9430a0afc63fa888139da12db1b0b04af6056d8f48a47b815f52bfa"
+},
+{
+"path": "klines_1h/BESTOCK_USDT.parquet",
+"bytes": 33648,
+"sha256": "a1b5423978e1e2e1959f18eed9293b19185b13220c2f6d3807ef281f2214db07"
+},
+{
+"path": "klines_1h/BIIBSTOCK_USDT.parquet",
+"bytes": 30671,
+"sha256": "5559e870c415fa981bc501a8de92b3c7c5d626467a171fa45af17360373984fd"
+},
+{
+"path": "klines_1h/BKNGSTOCK_USDT.parquet",
+"bytes": 29366,
+"sha256": "b124ed7958dbdf7ab2ff012922617d5bf2e286802f0767da005810c57a2a684b"
+},
+{
+"path": "klines_1h/BMYSTOCK_USDT.parquet",
+"bytes": 29013,
+"sha256": "329cbb855625938c5ccfbac0cd0706787e2afb83ca00f5f8091271d41db11908"
+},
+{
+"path": "klines_1h/BSXSTOCK_USDT.parquet",
+"bytes": 27393,
+"sha256": "8175ab4a4e453e075d3dd6834732f1f45489d09d6f7b4f634777a3c35811308c"
+},
+{
+"path": "klines_1h/BXSTOCK_USDT.parquet",
+"bytes": 29493,
+"sha256": "e22f59d4c03aadd61f48c2273e6873df101be6cd0d8b32d3d20af6fcd04f6906"
+},
+{
+"path": "klines_1h/CAHSTOCK_USDT.parquet",
+"bytes": 30307,
+"sha256": "19bbcfa86a286f04a73bfabc44256a479c77333fe805742fad2d89dc971ea328"
+},
+{
+"path": "klines_1h/CATSTOCK_USDT.parquet",
+"bytes": 33605,
+"sha256": "5d32f6c8c8c0327c8c8463344e1241ff3dbba9cd9dd77ea210b7407311259de1"
+},
+{
+"path": "klines_1h/CCISTOCK_USDT.parquet",
+"bytes": 30332,
+"sha256": "f9850cbbc53d0d5f1ea2bf6b45f0fc54f0738b6f24bdcd28d65da53901c3d1fa"
+},
+{
+"path": "klines_1h/CDESTOCK_USDT.parquet",
+"bytes": 23232,
+"sha256": "253e5660066750d4e41a4ea18b8b6b8f0860fa36dbff62e597c46cb97cc19321"
+},
+{
+"path": "klines_1h/CDNSSTOCK_USDT.parquet",
+"bytes": 30343,
+"sha256": "d9cb417cc12f71f58e4c026f08b13eea2cdd879de1ee005036cc93ca2791bef9"
+},
+{
+"path": "klines_1h/CEGSTOCK_USDT.parquet",
+"bytes": 31621,
+"sha256": "1093c59ea323661a5101c60392dd4d531e3a59a78cd3790e3974efbccecb18fc"
+},
+{
+"path": "klines_1h/CIFRSTOCK_USDT.parquet",
+"bytes": 28076,
+"sha256": "49eb251b5813d24f1637acd6753ab088c63f5ddacd579d893375b617edc059a0"
+},
+{
+"path": "klines_1h/CLSSTOCK_USDT.parquet",
+"bytes": 33208,
+"sha256": "73f581c5bfd48f02d092e4bcabc6734cc63e6bdaa30c97c8be997bff4371bf48"
+},
+{
+"path": "klines_1h/CMCSASTOCK_USDT.parquet",
+"bytes": 32523,
+"sha256": "7c87bb3abd84c10b2676a73d855f59f40c6bfad213df1fb757e2ecd3dace0d4c"
+},
+{
+"path": "klines_1h/CMESTOCK_USDT.parquet",
+"bytes": 29609,
+"sha256": "a8b7aa5991407e1b3955eafe407cd94f2a3e94003dffee3f87adeb20c5c3cb6e"
+},
+{
+"path": "klines_1h/COHRSTOCK_USDT.parquet",
+"bytes": 33564,
+"sha256": "6b3b4dac3494ecd80e9957201ddb94d981ac92e303655572bb26c428fdc18db0"
+},
+{
+"path": "klines_1h/COINBASE_USDT.parquet",
+"bytes": 33443,
+"sha256": "58ee4336cdf3c6827bd6dcc4c589a468c88e63487766b4de91399a551c115385"
+},
+{
+"path": "klines_1h/COPSTOCK_USDT.parquet",
+"bytes": 29385,
+"sha256": "8d90eec136ec3b92ee6107c4a63e74576cb477805d540befaceccfb578027c3d"
+},
+{
+"path": "klines_1h/CRCLSTOCK_USDT.parquet",
+"bytes": 33075,
+"sha256": "99ee100e8d1eff507701a6edca1f1c1a07b806dff2169d29766e0fcdcf249a67"
+},
+{
+"path": "klines_1h/CVSSTOCK_USDT.parquet",
+"bytes": 29762,
+"sha256": "e052cce2a3001fd907af19105cd7e8a2d9e2250ab8f396fd029f00d34b5ef665"
+},
+{
+"path": "klines_1h/CVXSTOCK_USDT.parquet",
+"bytes": 30346,
+"sha256": "dbfc47421b942a1d75a1b5252063ad8bee6861c3d8e80314e97b95b5fd3f1341"
+},
+{
+"path": "klines_1h/DASHSTOCK_USDT.parquet",
+"bytes": 30900,
+"sha256": "0024d06bfd863fe51df860bdef2769c010ed16a3692fce74c4d6d47e15106f9f"
+},
+{
+"path": "klines_1h/DDOGSTOCK_USDT.parquet",
+"bytes": 31948,
+"sha256": "3cddb2befb96debfc1b643d1eaf9987ef284f61a7afc552e3275d65a3f2d3d05"
+},
+{
+"path": "klines_1h/DJTSTOCK_USDT.parquet",
+"bytes": 33295,
+"sha256": "85d579c99f67bcf00c47b1a77a1a2b76578282b5b21958af1dbfc49d57170d7b"
+},
+{
+"path": "klines_1h/DKNGSTOCK_USDT.parquet",
+"bytes": 24728,
+"sha256": "322db4ce7acec41027a36550232ade356f5b03872e2afcdeabd25ada4321ba9d"
+},
+{
+"path": "klines_1h/DVNSTOCK_USDT.parquet",
+"bytes": 26019,
+"sha256": "b8ff85b3184dcf16946bb8295ed51fe13878e5a69a07bb443abfdea7a6bbe35f"
+},
+{
+"path": "klines_1h/EBAYSTOCK_USDT.parquet",
+"bytes": 27611,
+"sha256": "bdf9ad28f4c1d074c5de689b6a9c4c040cb8d7fbb68703e8523ba0d2d1489f44"
+},
+{
+"path": "klines_1h/ELSTOCK_USDT.parquet",
+"bytes": 11799,
+"sha256": "f07064016397effe31173a2bb3c088260bdc991bd3a795e2ad0e3c1fcd6743fe"
+},
+{
+"path": "klines_1h/ENPHSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/EOGSTOCK_USDT.parquet",
+"bytes": 26397,
+"sha256": "0c9f0ff533adc6dc651e0cbd00f9b917d96b70a7dbf7ad30f9ec7a87837178fb"
+},
+{
+"path": "klines_1h/ETNSTOCK_USDT.parquet",
+"bytes": 30164,
+"sha256": "77f96e6b21ac7039546c135dabc6b153aeadc6cd17d2a6b4aa6bd8c12211bb92"
+},
+{
+"path": "klines_1h/EXPESTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/FCXSTOCK_USDT.parquet",
+"bytes": 28979,
+"sha256": "8a962b96b0225da690e6abafd12719437d9585ca05c91ce2d702bd12b8af932a"
+},
+{
+"path": "klines_1h/FICOSTOCK_USDT.parquet",
+"bytes": 33859,
+"sha256": "7e40d0adb2feaf94d035b28e723bb4c29aa68fb6d0f85943094525f423ee28f2"
+},
+{
+"path": "klines_1h/FIGSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/FIXSTOCK_USDT.parquet",
+"bytes": 31945,
+"sha256": "722d7113e5612ece32b8f12e0174aa7db07e930d26a6a6342cb2e2e8bc912215"
+},
+{
+"path": "klines_1h/FLEXSTOCK_USDT.parquet",
+"bytes": 31758,
+"sha256": "c4ba469115ac237d08106508e85fa93f3b45ef580d96ace8ac5f578b443790a6"
+},
+{
+"path": "klines_1h/FOXASTOCK_USDT.parquet",
+"bytes": 26927,
+"sha256": "72513708b3c39ac22ad87b910857b7a64303504b37207e815459b86aeac84cd4"
+},
+{
+"path": "klines_1h/FTNTSTOCK_USDT.parquet",
+"bytes": 29747,
+"sha256": "dba21dd7532b8c4b674b89a4eb6d00d8bfdea53ad9992e23eff6efe63fb844c7"
+},
+{
+"path": "klines_1h/GEVSTOCK_USDT.parquet",
+"bytes": 29372,
+"sha256": "1379a261def65e97bea2df432bf52bc67bdfcd706bb281d15ca476f31ca80776"
+},
+{
+"path": "klines_1h/GILDSTOCK_USDT.parquet",
+"bytes": 30096,
+"sha256": "e5011bc507bbdd8d1bf349d99819d0ea2dddb985bb21255b11417e8fbdb8cf4f"
+},
+{
+"path": "klines_1h/GLWSTOCK_USDT.parquet",
+"bytes": 32324,
+"sha256": "5ce46a071420ca8c3c4e1218ea80776098e3eb018c550af831d5e5be02333b89"
+},
+{
+"path": "klines_1h/GLXYSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/GOOGLSTOCK_USDT.parquet",
+"bytes": 33729,
+"sha256": "3cbe523ef742d7f05fddb7e068cc91a40bcfb9eeb260510357324924bae2ad1d"
+},
+{
+"path": "klines_1h/HCASTOCK_USDT.parquet",
+"bytes": 33342,
+"sha256": "034fb74c88aba3af871eeee89e987434c15d8ae9740c7cb098985a3c53a105ff"
+},
+{
+"path": "klines_1h/HIMSSTOCK_USDT.parquet",
+"bytes": 26152,
+"sha256": "608a04f5d0e79d807cf6edd70b00a04778e5f4697542e73860d403cb4ccbc60b"
+},
+{
+"path": "klines_1h/HLSTOCK_USDT.parquet",
+"bytes": 26005,
+"sha256": "120ea020f6b34e6db626dd478c1b57c9a080a87e33c66cf0591a0206c1ae3ad3"
+},
+{
+"path": "klines_1h/HONASTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/HTZSTOCK_USDT.parquet",
+"bytes": 20519,
+"sha256": "e1352038e01efd6b9a8f9bf2a02ba2d8d4ddf2a2898f801172629eeb41c95eb7"
+},
+{
+"path": "klines_1h/HUTSTOCK_USDT.parquet",
+"bytes": 32064,
+"sha256": "985ed04ebc3a19b73d0511ab7ead0e6602217c9e9e704982e1919cf40789eda8"
+},
+{
+"path": "klines_1h/IBMSTOCK_USDT.parquet",
+"bytes": 31471,
+"sha256": "f736ef0275f5ab475b3d26ad2704353dcc051468f1d5900fce6c15c787f21b64"
+},
+{
+"path": "klines_1h/ILMNSTOCK_USDT.parquet",
+"bytes": 33061,
+"sha256": "66990d2e2234e79a0f284a4e6829b982ed9e9c6ccbd81f423dc192fa7fd6ca77"
+},
+{
+"path": "klines_1h/INTCSTOCK_USDT.parquet",
+"bytes": 33679,
+"sha256": "afe3e1ef73f785cbc6901bc46c06769d0aac7b255d66cf99a9105bf1a20e0502"
+},
+{
+"path": "klines_1h/IONQSTOCK_USDT.parquet",
+"bytes": 29046,
+"sha256": "cdfafebb3334fa67fe80c8e6a5773d6d907bf6f7608b6f66be0a8744037a9e26"
+},
+{
+"path": "klines_1h/IRENSTOCK_USDT.parquet",
+"bytes": 31054,
+"sha256": "5d29e21fcd3b4489a550961a0f39d5dd708a4553230fb724438fce891d422aae"
+},
+{
+"path": "klines_1h/JMKESTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/KHCSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/KKRSTOCK_USDT.parquet",
+"bytes": 29710,
+"sha256": "86b845d800ee2528acf896109524aacb9e4212b0b0dae55b3e117ca19f1c69b1"
+},
+{
+"path": "klines_1h/KLACSTOCK_USDT.parquet",
+"bytes": 33327,
+"sha256": "5ccd3a4e3cab3c4660b3cf3d0aecc2500be0b21d1cfe094ce94c1881eb6ba0d9"
+},
+{
+"path": "klines_1h/KMBSTOCK_USDT.parquet",
+"bytes": 26739,
+"sha256": "378b9de7ceb9d5db12484dfcf4b441d8b78f1b3feb939aa5f791c7d3b8c70b07"
+},
+{
+"path": "klines_1h/KMISTOCK_USDT.parquet",
+"bytes": 22275,
+"sha256": "d4b24519ea792b4b0fcd4dd11b343c3061ad083e0dbbfc78d33d71c8bb8f08d3"
+},
+{
+"path": "klines_1h/KOSTOCK_USDT.parquet",
+"bytes": 27708,
+"sha256": "80131fc374f920db5776fd769499f5e85401be228f199ef56a6bdb5272d7e37a"
+},
+{
+"path": "klines_1h/LHXSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/LINSTOCK_USDT.parquet",
+"bytes": 31659,
+"sha256": "97aecd4862fbbc8b08911cd2f368b8f032e491b4c8f9d6361cde6c9adc1ab8de"
+},
+{
+"path": "klines_1h/LITESTOCK_USDT.parquet",
+"bytes": 34842,
+"sha256": "d21341dcb94aa71b5489586ebeebf66e351e38e4ac65a6e055a005e7c177b8e0"
+},
+{
+"path": "klines_1h/LLYSTOCK_USDT.parquet",
+"bytes": 33232,
+"sha256": "6f4cf7538ef7ac18f1efa27b469a5da32a570313b83420b88a0c669a3e88d395"
+},
+{
+"path": "klines_1h/LMTSTOCK_USDT.parquet",
+"bytes": 32112,
+"sha256": "0a360a1bdee2983d07ef46cd0cbd422d702f2dc5469055f20d3d2fd175071a81"
+},
+{
+"path": "klines_1h/LRCXSTOCK_USDT.parquet",
+"bytes": 32897,
+"sha256": "355cb72ed228de0f7b92d4dca94b89074062380e71ec9c5b3b4ea891b810f0b4"
+},
+{
+"path": "klines_1h/MARASTOCK_USDT.parquet",
+"bytes": 24218,
+"sha256": "4a369b7a2afd91ae8aaeb2ff4bc7c15a608a6e3ea4a044960e188513fdb5cb3f"
+},
+{
+"path": "klines_1h/MARSTOCK_USDT.parquet",
+"bytes": 30603,
+"sha256": "f82369d188629a1a788fbc1c8db33ce59a4c358fe64ca9d2a66e3ed8a6cf3775"
+},
+{
+"path": "klines_1h/MASTOCK_USDT.parquet",
+"bytes": 31964,
+"sha256": "185598c257b05ca951ca87b5baa423fa7b04b1ed3d8c91ae9cc5422e707b0ca9"
+},
+{
+"path": "klines_1h/MCDSTOCK_USDT.parquet",
+"bytes": 31524,
+"sha256": "137733d1af0318dc11d067497bd3652b602d5c75579405820331a198d256454e"
+},
+{
+"path": "klines_1h/MCKSTOCK_USDT.parquet",
+"bytes": 31702,
+"sha256": "de65517e90ed6cf68b070dcd01d576bffd1bb4bff92f9d5abe0f24cb514e14f5"
+},
+{
+"path": "klines_1h/MDLZSTOCK_USDT.parquet",
+"bytes": 23574,
+"sha256": "bcb0868f21803567371ff5279a0dffea8ad5fcbe2353a5c3c74e9af2d46ce8da"
+},
+{
+"path": "klines_1h/MELISTOCK_USDT.parquet",
+"bytes": 30002,
+"sha256": "8066db0b46ec77c98c41185d9c594e204bc29686df85b74bf479d17e13b87b3e"
+},
+{
+"path": "klines_1h/METASTOCK_USDT.parquet",
+"bytes": 34085,
+"sha256": "16bb0498d3a8fa5a1ac9de88692e02a64ab845d8290a1e7c5aa61d3b3bc13c61"
+},
+{
+"path": "klines_1h/MNSTSTOCK_USDT.parquet",
+"bytes": 27844,
+"sha256": "13c26eb4e13661b374cb3b030ae76fd10cbdb201c26230261cc7c379013d629d"
+},
+{
+"path": "klines_1h/MOSTOCK_USDT.parquet",
+"bytes": 27299,
+"sha256": "0c46c68d703561993364c114d9050900975962baf3fbd40b97c0d138837ed6f7"
+},
+{
+"path": "klines_1h/MPCSTOCK_USDT.parquet",
+"bytes": 31459,
+"sha256": "d460af5edc8f168065a2676047ec52c94bf04eb5681ae8f5b9f566eac2967a5b"
+},
+{
+"path": "klines_1h/MPSTOCK_USDT.parquet",
+"bytes": 29280,
+"sha256": "d1b53e57002f055b427e85f8b98d64b78245e7cd22ce7474734da3df06e1af18"
+},
+{
+"path": "klines_1h/MPWRSTOCK_USDT.parquet",
+"bytes": 32207,
+"sha256": "712aabb751daa65298c1890bd8b6927af76bbe733097474c800c8a2d3346f2b0"
+},
+{
+"path": "klines_1h/MRKSTOCK_USDT.parquet",
+"bytes": 30174,
+"sha256": "0f3a1a9dfd3625255201a8a5aa1d1ac81039e51d53aac1a15ed1cf6aeae00dd4"
+},
+{
+"path": "klines_1h/MRNASTOCK_USDT.parquet",
+"bytes": 34451,
+"sha256": "2b2f803a32baa9c2bb07d729dfc8fa9c33cb1ec75e346f1d111cc45f31172085"
+},
+{
+"path": "klines_1h/MRVLSTOCK_USDT.parquet",
+"bytes": 34385,
+"sha256": "2956eb73a36b13c9f7a69cfc78fb8fca10ca7067b5b90cc2232addb93f732d5d"
+},
+{
+"path": "klines_1h/MSFTSTOCK_USDT.parquet",
+"bytes": 32419,
+"sha256": "2de2c870bb49d3e27b42eb13740df30e998468f53e755ad07c488e1bd298579b"
+},
+{
+"path": "klines_1h/MSTRSTOCK_USDT.parquet",
+"bytes": 33515,
+"sha256": "75862b3c593a8a944da9a979798df4c35afb710a40d5bfee4c6a82a0c580d725"
+},
+{
+"path": "klines_1h/MTSISTOCK_USDT.parquet",
+"bytes": 32376,
+"sha256": "8a5e1b0e3c799035befb1b9f9d821eab2ab062ab19196b27c6d5d763642ba01f"
+},
+{
+"path": "klines_1h/NEMSTOCK_USDT.parquet",
+"bytes": 29463,
+"sha256": "da6439681774a570cdae1f2357645d644cb0c5ea5081d33af5b56b6ff7503017"
+},
+{
+"path": "klines_1h/NETSTOCK_USDT.parquet",
+"bytes": 32347,
+"sha256": "7ce48642dcbfcf6d72eec42be029bfbd2c42439db50181b8d55018bb97d437dc"
+},
+{
+"path": "klines_1h/NOWSTOCK_USDT.parquet",
+"bytes": 31930,
+"sha256": "d780ee044dd3c473e6842834d82b77cc7d5c057d38481d56627477eb5ab2cce0"
+},
+{
+"path": "klines_1h/NVTSSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/NXPISTOCK_USDT.parquet",
+"bytes": 26704,
+"sha256": "bb23048f7cebbb31204432b8bfd716a0bb153d3977508888d8f564395acb365b"
+},
+{
+"path": "klines_1h/ONSTOCK_USDT.parquet",
+"bytes": 29601,
+"sha256": "a3289e86d04ef521a80383ce027286ebc01635296bcaca226123e1bacb5bf8fc"
+},
+{
+"path": "klines_1h/OPENSTOCK_USDT.parquet",
+"bytes": 21980,
+"sha256": "fcc2e012bec68eb322a628c47448dec6c300f7e4380b2495ff884c47a47a48f7"
+},
+{
+"path": "klines_1h/OUSTSTOCK_USDT.parquet",
+"bytes": 26951,
+"sha256": "83adc2b0f7b59a8c72889337f090dc4c0e4f75e39ba2e684ac600d5c7e0573be"
+},
+{
+"path": "klines_1h/OXYSTOCK_USDT.parquet",
+"bytes": 27574,
+"sha256": "fc199f0c8b932ec853692f9b6ba5b310e1d2824474d154dd36bc7f97b38ef5fa"
+},
+{
+"path": "klines_1h/PCVXSTOCK_USDT.parquet",
+"bytes": 34701,
+"sha256": "4cb84957b87c9371c5d6664acda44aebd502b71dccb607156105f2ee0f7d000e"
+},
+{
+"path": "klines_1h/PFESTOCK_USDT.parquet",
+"bytes": 25009,
+"sha256": "730a78c1739ebb143762694bdf0e46bf8cd6069a497cce46f079e2a2a27d9f05"
+},
+{
+"path": "klines_1h/PGSTOCK_USDT.parquet",
+"bytes": 27175,
+"sha256": "51c5ad935b2ec3693c6992cdbafc6744ebe86102db86702efa7eda549184d603"
+},
+{
+"path": "klines_1h/PHSTOCK_USDT.parquet",
+"bytes": 25762,
+"sha256": "2bf8dd3f084ed1b585693308930481dbd2ec08e6ca547cb2f86a7d6d369bf5c6"
+},
+{
+"path": "klines_1h/PLTRSTOCK_USDT.parquet",
+"bytes": 33007,
+"sha256": "6b31780da9b318f52a3e47c45fbef9f21814670409afd67ceb2fb3dd5c570e06"
+},
+{
+"path": "klines_1h/PMSTOCK_USDT.parquet",
+"bytes": 31241,
+"sha256": "4728e90c5c95dcaf4d3c8e1b0c3150cc48a9c4aecfe6da6337190fc7d5591160"
+},
+{
+"path": "klines_1h/PSXSTOCK_USDT.parquet",
+"bytes": 32607,
+"sha256": "e604f3fb9f7e68ad4e8ca5607ca4e85dfd43fbf595bb16cd1fbfc905fdb5832e"
+},
+{
+"path": "klines_1h/PURRSTOCK_USDT.parquet",
+"bytes": 32868,
+"sha256": "b321ff6847c96efebcc69b5066c80a652e8ffb0fe0d59375caa42515c8c5d255"
+},
+{
+"path": "klines_1h/PWRSTOCK_USDT.parquet",
+"bytes": 34280,
+"sha256": "ab0c72704fcdb872ebf350e789f777885945ca7aacfc6de37aba803db2d0b415"
+},
+{
+"path": "klines_1h/PYPLSTOCK_USDT.parquet",
+"bytes": 26575,
+"sha256": "3dd97ae382a9ab41d9e97fd63ba4a33daf39dec419f507ff4344f575d365d4f4"
+},
+{
+"path": "klines_1h/QCOMSTOCK_USDT.parquet",
+"bytes": 31563,
+"sha256": "39b5ef18ef1b2131e08d7c28b8a54612229d104c33418076222ca0867d1a2cb8"
+},
+{
+"path": "klines_1h/QNTSTOCK_USDT.parquet",
+"bytes": 29687,
+"sha256": "51bca31d08883548d8279a86579ecaca3c65e818c54e71f0cad1879e21e52d0d"
+},
+{
+"path": "klines_1h/RBLXSTOCK_USDT.parquet",
+"bytes": 29827,
+"sha256": "84cd0513e43d5da0625e6d170d0d8eb07556cb657d945c5df051aadef80e2161"
+},
+{
+"path": "klines_1h/RDDTSTOCK_USDT.parquet",
+"bytes": 31919,
+"sha256": "bd238badd68f7e8547b4ab75aaceaeedd19c811a2818a4cc9af96a0efcd5e79e"
+},
+{
+"path": "klines_1h/RDWSTOCK_USDT.parquet",
+"bytes": 31879,
+"sha256": "c2f18aa057b5162b345fec50871dcb91dd1f1a5e7847c5ebcc76dbf4dd5783a9"
+},
+{
+"path": "klines_1h/REGNSTOCK_USDT.parquet",
+"bytes": 32916,
+"sha256": "cecab4e13725c584c63639c63e73a71c9d1a62438fdc6bb5966a48a647c370d1"
+},
+{
+"path": "klines_1h/RIOTSTOCK_USDT.parquet",
+"bytes": 26534,
+"sha256": "b90ad96acb039eb4b2790217ec714fab362ff0effd49a3536e523f8be6375242"
+},
+{
+"path": "klines_1h/RIVNSTOCK_USDT.parquet",
+"bytes": 23856,
+"sha256": "d18911de614af800aab11316edbee865855f50d4ffdffadf2ae0d1b218c02b98"
+},
+{
+"path": "klines_1h/RKLBSTOCK_USDT.parquet",
+"bytes": 31009,
+"sha256": "209c3fe3ac4092f455497c1d8eb6553556f622cf00c419bbc1c1fac8791fecdc"
+},
+{
+"path": "klines_1h/ROBINHOOD_USDT.parquet",
+"bytes": 32687,
+"sha256": "2cb87b6b75b3d01bd56341908779a5ed5f5f1a6192f0260754f8cb5a95439150"
+},
+{
+"path": "klines_1h/ROKSTOCK_USDT.parquet",
+"bytes": 29474,
+"sha256": "52dd7f158467a1d244c50aecf61b393f31b87bb1c5153332aad4ec85084f63f3"
+},
+{
+"path": "klines_1h/SBUXSTOCK_USDT.parquet",
+"bytes": 28143,
+"sha256": "3a64d6898fdfc4261bc94041655f4e8007d5a40d5c516a4a1207d87f162ac44f"
+},
+{
+"path": "klines_1h/SCCOSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/SHOPSTOCK_USDT.parquet",
+"bytes": 30897,
+"sha256": "4c2184d4aa0ee760637f54ece8d63c561f5b1ed05720e68843b5fa4e6c11ab82"
+},
+{
+"path": "klines_1h/SITMSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/SLBSTOCK_USDT.parquet",
+"bytes": 27613,
+"sha256": "1037bbb8cb51e42848e8ec3baec119b0c4509765c545dfc5e66356ac305117c6"
+},
+{
+"path": "klines_1h/SMCISTOCK_USDT.parquet",
+"bytes": 27949,
+"sha256": "26a27b8c12c7ddb8c46c71ee700fbb93415500386097463b551d317cae34ffa9"
+},
+{
+"path": "klines_1h/SMRSTOCK_USDT.parquet",
+"bytes": 32447,
+"sha256": "937b001fc12940f9f82b1a8bd380b9ddc9443ec736e27d8efe236a3e8627a96f"
+},
+{
+"path": "klines_1h/SNDKSTOCK_USDT.parquet",
+"bytes": 35549,
+"sha256": "0cf2b081a8121c5e2974b342d22c053683285d289ae3cb4476a4ea370b4f3886"
+},
+{
+"path": "klines_1h/SOFISTOCK_USDT.parquet",
+"bytes": 24514,
+"sha256": "283c8709a97733cb390c2529a0cd06f2c89dae8e74fb3034cf30ee9456d0d1e8"
+},
+{
+"path": "klines_1h/SPX500_USDT.parquet",
+"bytes": 33571,
+"sha256": "59b8771b54771d100a2e95f8895638a58f0392395d6b19b59f3352acaa0ed5eb"
+},
+{
+"path": "klines_1h/STRCSTOCK_USDT.parquet",
+"bytes": 25005,
+"sha256": "95f1059b6d5a245c6da8e648159b3a9fc51eddb501a41a49360c160897f49a92"
+},
+{
+"path": "klines_1h/STXSTOCK_USDT.parquet",
+"bytes": 32957,
+"sha256": "e264a8b7a61b9073151b8d0b460be180e981d578017c585582ffa01cb72ba882"
+},
+{
+"path": "klines_1h/SWKSSTOCK_USDT.parquet",
+"bytes": 3292,
+"sha256": "7ef6bfdc710f03a49602e96c89260794afdcc73ef9a53710c7b2ec542ddb16d2"
+},
+{
+"path": "klines_1h/TEAMSTOCK_USDT.parquet",
+"bytes": 33082,
+"sha256": "c0aa1ed2bd4c77bc346215ba0036a0447c3edf7868a6c128121fcaaaf43c6584"
+},
+{
+"path": "klines_1h/TEMSTOCK_USDT.parquet",
+"bytes": 30726,
+"sha256": "b54c0e6789b4f2589ad9f77c45d61b05a8ff1252715cce3fa923b9ca549ec2af"
+},
+{
+"path": "klines_1h/TERSTOCK_USDT.parquet",
+"bytes": 32958,
+"sha256": "c89e5e34f680d91c74db5aa9d76f58a3828d04990a2b2b44550537d3df042cce"
+},
+{
+"path": "klines_1h/TESLA_USDT.parquet",
+"bytes": 34241,
+"sha256": "adb7c240f35098c2ec36600ddfa34e209c5d9681df1ab751b409c8169287b4f2"
+},
+{
+"path": "klines_1h/TLNSTOCK_USDT.parquet",
+"bytes": 32054,
+"sha256": "3cef7103c01ef45b0b0721eb58384cdf1ed0dff9bf3ff22fc233563740490ef9"
+},
+{
+"path": "klines_1h/TMOSTOCK_USDT.parquet",
+"bytes": 33122,
+"sha256": "c2825dd4abc87f1f52723c5f2f55608790ed2015d60f34b099713ea48db1bde9"
+},
+{
+"path": "klines_1h/TMUSSTOCK_USDT.parquet",
+"bytes": 30852,
+"sha256": "99c5fd3d53e590f823e1458bcba37cd50d61006842b98a07aaef246aeb330112"
+},
+{
+"path": "klines_1h/TSTOCK_USDT.parquet",
+"bytes": 24927,
+"sha256": "c318997c4c4134e27d6641cf4900e70778c30d5a27e7b702af1965d1cb04eca0"
+},
+{
+"path": "klines_1h/TTWOSTOCK_USDT.parquet",
+"bytes": 31169,
+"sha256": "b7160b5ac41f5fcc7f1766da9d8efe63caf600fa159fd9fba3538317c3056ccd"
+},
+{
+"path": "klines_1h/TWLOSTOCK_USDT.parquet",
+"bytes": 32050,
+"sha256": "c67d1b9e576f2d2b54b5cdbd99ac482c0e3cd21022ff3b0bd777dda2a6d0fb21"
+},
+{
+"path": "klines_1h/TXNSTOCK_USDT.parquet",
+"bytes": 30861,
+"sha256": "20fddf3b69a1608259305821b7d4a11b5deb682aafef3fbdc185f7c0c4ef178e"
+},
+{
+"path": "klines_1h/UBERSTOCK_USDT.parquet",
+"bytes": 27899,
+"sha256": "e7d863975e3bfee75735d303694f3d978fa6967933863ede92c8e6acca9e2366"
+},
+{
+"path": "klines_1h/UNPSTOCK_USDT.parquet",
+"bytes": 30208,
+"sha256": "fa0726232b43f3b047f092d5fd921e0fac1bb6f7a90bad2cbaf622b302fc5c06"
+},
+{
+"path": "klines_1h/URISTOCK_USDT.parquet",
+"bytes": 30867,
+"sha256": "8113c95095378f41f6be0fe948952044ce1c7f27398e0b745ee6a770995475c6"
+},
+{
+"path": "klines_1h/USARSTOCK_USDT.parquet",
+"bytes": 25593,
+"sha256": "af7cd8b291343bc0fc4e43cab0730ab4ce1c4d96c4f292587ab52c7d24c6c87f"
+},
+{
+"path": "klines_1h/USTOCK_USDT.parquet",
+"bytes": 6086,
+"sha256": "1136cfbad0b87d31b2d948774d52d09b6cc1dae00b24e7bc9ba1fc64bd6670aa"
+},
+{
+"path": "klines_1h/VEEVSTOCK_USDT.parquet",
+"bytes": 29447,
+"sha256": "6fd2c0b44961691765e0f1b3d1694570b1e40841e0c0c2b100e80264252f23ce"
+},
+{
+"path": "klines_1h/VKTXSTOCK_USDT.parquet",
+"bytes": 27402,
+"sha256": "3d324277bcac1ce40ca6963e32a8cdf2579b817ee370ddfa8713c9fb8d9e18b8"
+},
+{
+"path": "klines_1h/VLOSTOCK_USDT.parquet",
+"bytes": 30053,
+"sha256": "c8d10b2bf37c15d3b8c2613779dd8904cb6f127c5d33ca6f23648254f8d46d1c"
+},
+{
+"path": "klines_1h/VRTSTOCK_USDT.parquet",
+"bytes": 32398,
+"sha256": "a501abe4008d26b1fab4621b1c944d1852a198f328f753c19796d296084db030"
+},
+{
+"path": "klines_1h/VRTXSTOCK_USDT.parquet",
+"bytes": 30771,
+"sha256": "e3318aec19a68350be3bd581fe76b9815b567d6dad1eb2334a6bcee62e26f271"
+},
+{
+"path": "klines_1h/VSTOCK_USDT.parquet",
+"bytes": 30651,
+"sha256": "8a0d1754e95ca43884b66a712e53207e501cd7d66b07190e29753cafaea682a4"
+},
+{
+"path": "klines_1h/VSTSTOCK_USDT.parquet",
+"bytes": 31972,
+"sha256": "184c95164aa3df43e718cde62c0155b62ecd052a4c88c78da01b4db11df0a125"
+},
+{
+"path": "klines_1h/VZSTOCK_USDT.parquet",
+"bytes": 24465,
+"sha256": "672d8c2beb1b235874945b5ccd4360e71b1811040833bb8a056f5f086bf5c528"
+},
+{
+"path": "klines_1h/WDCSTOCK_USDT.parquet",
+"bytes": 33602,
+"sha256": "68df8df4e92d47ca08476e5fc6a4cf7dcbc3a66791c1025d4f0926f9f3db6878"
+},
+{
+"path": "klines_1h/WENSTOCK_USDT.parquet",
+"bytes": 31460,
+"sha256": "6a608ab12bdb71e985f201ebb8902c71f22ef73a4366c5d90a50fb590b093b59"
+},
+{
+"path": "klines_1h/WMBSTOCK_USDT.parquet",
+"bytes": 30160,
+"sha256": "30e3c5e1c91c4315e506d83c5cf42c43af930be69f0f56d8bce439f3ab93fe0c"
+},
+{
+"path": "klines_1h/WMSTOCK_USDT.parquet",
+"bytes": 24974,
+"sha256": "309161665206f94af6b704bb9f6f4198bc8a7424364f111b8c4d8eb771c47ef6"
+},
+{
+"path": "klines_1h/XOMSTOCK_USDT.parquet",
+"bytes": 29956,
+"sha256": "f1454488273edbc36df72bd0c0e3e8f26a6a13daf5bc21d3ebe9f09dd8873fc3"
+},
+{
+"path": "manifest.json",
+"bytes": 32680,
+"sha256": "bb6fc0c473730e9e96abe76f2eff789711de5dd8a02ed7fc04f7362eb9579126"
+},
+{
+"path": "receipts.jsonl",
+"bytes": 45663,
+"sha256": "97f53c77ad8e09a0c946361283c1edcc381e4684cef21f7e36b4c6c40d29f30e"
+}
+]
+}

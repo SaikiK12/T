@@ -1,0 +1,159 @@
+{
+"folder": "data/cboe",
+"source": "Cboe daily index history CSVs (cdn-api.cboe.com, public)",
+"script": "scripts/fetch_cboe.py",
+"recorded_utc": "2026-10-21T10:13:51Z",
+"excluded": [],
+"files": 27,
+"bytes": 4093419,
+"combined_sha256": "047ddf6cb98ea56676c78a7197cc4497f28394aa0f36d7c2229d73f4a837eee1",
+"subfolders": {
+".": {
+"files": 14,
+"bytes": 1497371
+},
+"raw": {
+"files": 13,
+"bytes": 2596048
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "GVZ.parquet",
+"bytes": 73331,
+"sha256": "a29c31f0f2379ec39f0d85b30fbb80d3467ec25362d50f0c02db7de6b82208e5"
+},
+{
+"path": "OVX.parquet",
+"bytes": 78437,
+"sha256": "0235ad77cfb13b6b6e3758b35084c207e185ba3df83809996fd7222c9828fa4a"
+},
+{
+"path": "RVX.parquet",
+"bytes": 118130,
+"sha256": "a30370506ef59e1d6ea15068a85fc3babc682b848f2d310788e396256a36e4d8"
+},
+{
+"path": "SKEW.parquet",
+"bytes": 156850,
+"sha256": "a64e2e9a4cc8ebd09535a08fb65c44c75b15791c65970aabd2d072b4c2a45e6e"
+},
+{
+"path": "VIX.parquet",
+"bytes": 228201,
+"sha256": "6c5a1e1ad3982bd90928f92968b65e62b0771874c17de77f7191c685ced11c91"
+},
+{
+"path": "VIX1D.parquet",
+"bytes": 38133,
+"sha256": "8e8081c79ee61348a8423ae0c5e209052fb28dc593836415db58c8ce101f1d6c"
+},
+{
+"path": "VIX1Y.parquet",
+"bytes": 129260,
+"sha256": "99f9da3bdffc1a48dd0f14093884578c0b86b0dd1c7976e284528944eb334ce9"
+},
+{
+"path": "VIX3M.parquet",
+"bytes": 113879,
+"sha256": "9ac7d90d075ad1bd889716d9029ef9047806a0e42bdffb13e1ef87637485e0fe"
+},
+{
+"path": "VIX6M.parquet",
+"bytes": 124881,
+"sha256": "a120fea53772df2d97ec2dd7266a118351924ac7e7c38cee58488cfbc5f0bf82"
+},
+{
+"path": "VIX9D.parquet",
+"bytes": 108195,
+"sha256": "798a877115f959d089aa8513f2c21ccfc67a677413f0c7d197d6b2a75ee77424"
+},
+{
+"path": "VVIX.parquet",
+"bytes": 93862,
+"sha256": "1f8d48471b5c9478563d5220c7cf547082a284db20e3840c7c78313db93c7bb2"
+},
+{
+"path": "VXD.parquet",
+"bytes": 113736,
+"sha256": "e996630a921bffdf0c281ad013f11c8f04ff88fc267a6dcddb4046a9a983c9a4"
+},
+{
+"path": "VXN.parquet",
+"bytes": 117108,
+"sha256": "37cbe3374afb27e320eb94da789e1ac773f5888dcbda6fa48c4fcd851b617edb"
+},
+{
+"path": "manifest.json",
+"bytes": 3368,
+"sha256": "52a517ae8eb534a8f1ecbcce06b88e7691a53362e14a8755494a9293c27ef6fc"
+},
+{
+"path": "raw/GVZ_History.csv",
+"bytes": 90165,
+"sha256": "93b7733e58b315ed4083de3257aa138884fe24686de5a8151ed062f8757c22a6"
+},
+{
+"path": "raw/OVX_History.csv",
+"bytes": 90272,
+"sha256": "6365164f9b13dac40fae266c08de316668de606ceaf41d8329c47275ae4b17b3"
+},
+{
+"path": "raw/RVX_History.csv",
+"bytes": 219070,
+"sha256": "cedaeaad0dda457d7f93a81718012707a1607e676d226b6d266a8f3859e24911"
+},
+{
+"path": "raw/SKEW_History.csv",
+"bytes": 203554,
+"sha256": "080f09e9ebe6db6bd0c5ea8bc5e74423b76fe9e726439371253441183a7945f1"
+},
+{
+"path": "raw/VIX1D_History.csv",
+"bytes": 55482,
+"sha256": "e611b6c81b24865cf11e3d0256368a7d461fb312a7ffc38d860a1060d930dd2e"
+},
+{
+"path": "raw/VIX1Y_History.csv",
+"bytes": 253750,
+"sha256": "93d392f6b6805687997a873fcb59c5fa0bda2bedfbfa8e2624a4f8378132ede5"
+},
+{
+"path": "raw/VIX3M_History.csv",
+"bytes": 219223,
+"sha256": "2ccde0d71a3d8a8efefaf2d5e80bb6a7c605715ff48c81efc2da5c4c63f8e7e3"
+},
+{
+"path": "raw/VIX6M_History.csv",
+"bytes": 241255,
+"sha256": "9950780e500dc1894d6ff419e476540dde7aec24aa077a72cee1222951a571d4"
+},
+{
+"path": "raw/VIX9D_History.csv",
+"bytes": 201764,
+"sha256": "5bc8d10c8d1e62a2eeca3321d67603908f0b7be4e16630ca517d29e256204b6b"
+},
+{
+"path": "raw/VIX_History.csv",
+"bytes": 473941,
+"sha256": "711ef828d5ffc293500c07d25c181de7a7110420d9ad7bf701013616fb58ad24"
+},
+{
+"path": "raw/VVIX_History.csv",
+"bytes": 109152,
+"sha256": "0150e205e424cff2daf4d5cadcc11c644d4958b76b1c6a052544b99effb65c87"
+},
+{
+"path": "raw/VXD_History.csv",
+"bytes": 218898,
+"sha256": "de759d6d0676f361cf027a6b49482f7a530347f6e168a900f31599363d2eee08"
+},
+{
+"path": "raw/VXN_History.csv",
+"bytes": 219522,
+"sha256": "0b272200642f654f8ba6544f12c3a1439ac1dd9584620c4268529ac510602278"
+}
+]
+}

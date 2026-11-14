@@ -1,0 +1,18 @@
+03:22:11 BTC {'flow_rows': 4926124, 'hours_with_trades': 50370, 'hours_with_blocks': 32216, 'amount_without_delta_share': 0.0019908664726986276, 'block_amount_share': 0.374020358684459, 'price_instants_missing': 5}
+03:22:14 ETH {'flow_rows': 3827847, 'hours_with_trades': 50369, 'hours_with_blocks': 24258, 'amount_without_delta_share': 0.0015321468629977558, 'block_amount_share': 0.2672378999410301, 'price_instants_missing': 4}
+03:22:19   block_delta h1  disc t 2.4794883120257047  valid t 0.6187056257684177  pass False
+03:22:19   block_delta h4  disc t 1.2708283174217767  valid t 1.2723585164165916  pass False
+03:22:19   block_delta h24 disc t 1.4280128831353243  valid t 0.816163345860076  pass False
+03:22:19  screen_delta h1  disc t -0.0398270578799857  valid t 1.1119743275739675  pass False
+03:22:19  screen_delta h4  disc t -0.8177499482803317  valid t 3.018123942592138  pass False
+03:22:19  screen_delta h24 disc t -0.39215235302510304  valid t -0.3173911794488604  pass False
+03:22:19         drift h1  disc t 1.6620309294970976  valid t 1.3054762337483308  pass False
+03:22:19         drift h4  disc t -0.45292914441083365  valid t 2.1545208576706436  pass False
+03:22:19         drift h24 disc t 0.3228793038437166  valid t -0.10347817339819337  pass False
+03:22:19     drift_otm h1  disc t 1.6773140214757705  valid t 0.9801058661656704  pass False
+03:22:19     drift_otm h4  disc t -1.287615194310979  valid t 0.2987301895732503  pass False
+03:22:19     drift_otm h24 disc t -0.28198417456703356  valid t -0.997522492967511  pass False
+03:22:19  drift_screen h1  disc t 0.19988326348276575  valid t 1.2263367361566448  pass False
+03:22:19  drift_screen h4  disc t -0.8172670721012885  valid t 2.447271010433823  pass False
+03:22:19  drift_screen h24 disc t -1.2407803498595613  valid t -0.6392914559641963  pass False
+03:22:19 verdict NULL passes [] against []

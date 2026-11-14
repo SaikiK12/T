@@ -1,0 +1,43 @@
+{
+  "capital_per_wallet": "5000",
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "depth_profiles": [
+    "full",
+    "top_only"
+  ],
+  "fee_controls": [
+    "zero_charge",
+    "advertised_quote_fee"
+  ],
+  "fixed_control_cells": 36,
+  "fixed_cost_tier_slots": 108,
+  "fixed_pair_slots": 9,
+  "perp_fields": [
+    "symbol",
+    "type",
+    "settleCoin",
+    "contractSize",
+    "volUnit",
+    "minVol",
+    "maxVol",
+    "apiAllowed",
+    "state",
+    "takerFeeRate",
+    "marketOrderMaxLevel"
+  ],
+  "predictive_trials": 0,
+  "quote_arithmetic_tolerance": "1e-8",
+  "reference_mid_leg_budget": "250",
+  "registry_id": "R325",
+  "samples_per_symbol": 3,
+  "symbols": [
+    "BTC",
+    "WIF",
+    "SKR"
+  ],
+  "total_capital": "10000"
+}

@@ -1,0 +1,38 @@
+{
+  "canonical_M244_before": {
+    "cheap": "2",
+    "data_held": "P small COIN-M futures history; matched alt spot history incomplete",
+    "id": "M244",
+    "method": "Dated-futures cash-and-carry: buy spot and short matched future on positive net basis, close near convergence/expiry or roll",
+    "note": "Related to M047/M134 but dated-futures settlement/roll differs; M170 trades basis against USD-M perps. Need matched contracts, settlement, entry hurdle, roll, financing, fees and executable cost.",
+    "rid": "-",
+    "source": "Deribit official cash-and-carry example",
+    "status": "BLOCKED"
+  },
+  "market_input_identity": "NewCURRENTevidence/capture plus file inventory and frozen code/spec digest; raw and data_inputs.json MUST be committed before economic report. No old quote outcome replay.",
+  "prior_commit": "1f8a480d223795ed9d03120ed3c15ea40b2e1834",
+  "registry_id": "R327",
+  "sha256": {
+    "docs/GATES.md": "e7dd02fa43747598959838677cb413578ce8f7cfee59704bd20e4fdfca15a926",
+    "experiments/dated_carry_v1/api_mechanisms.json": "ee432c2d73d473c22a1a9227fb87da45bf9d31f0f9d52f86f064a2f5bf81019c",
+    "experiments/dated_carry_v1/api_receipts.json": "c1e179b254e77c684eb93904ec90bf4c06c3b77f60585507efb98bd38fff443d",
+    "experiments/dated_carry_v1/api_source_review.md": "300a93bd4b3aeaf28d6c3de73f72a185aa7c59ee0147b1c40ac80a61010d8a42",
+    "experiments/dated_carry_v1/contract.json": "bbd4ebcb8f1466ff3204efbedccbfcaf56a5a6a75f7ad4a8f81994766e5255f3",
+    "experiments/dated_carry_v1/dated_handchecks_final.json": "bf847546230d2162669dccbd8db5124da6913a14c4ddeb7981117705c20ae34b",
+    "experiments/dated_carry_v1/dated_review.md": "8debf8e4f0a72a29ac942206ca0664b14c4256085faea102970e3a5d28b760e7",
+    "experiments/dated_carry_v1/fixtures.json": "5e8981912896e9a188f71da1691a893faa2153a00f3dbca25fd221e73fae7327",
+    "experiments/dated_carry_v1/formal_mechanisms.json": "a98e23533ed588ef0840447b651563f8031f99f43dacee3f2c6ef8196292b98e",
+    "experiments/dated_carry_v1/formal_receipts.json": "dbaaf735a851a15af9ae1211e9a7e21c1fc657b63ad2d88d2dc42242cc2b7388",
+    "experiments/dated_carry_v1/formal_source_review.md": "b8594a0242927e1c1ecbe5e7c023600f403656023833c9d519ae8aa411e602b2",
+    "experiments/dated_carry_v1/legacy_formula_failure_mechanisms.json": "4313a83d2d63eaad8d37218999267f301ea3139c349276215f0c036591686d69",
+    "experiments/dated_carry_v1/legacy_formula_failure_receipts.json": "6f9b6b9dfb519bf26f2ae0fb5f7c7dbbfcd9eadac4768ea595d292d61edc2767",
+    "experiments/dated_carry_v1/legacy_formula_failure_source_review.md": "efb3e2363a9cb28b7cd724c2869ec46d37785c672ad87c75f5ffa7bde82f7438",
+    "experiments/dated_carry_v1/math_handchecks_final.json": "df5c301e8be2e9f67cc4c691a9fbcc5dcf9b4adec4d5b186688e89ba62959447",
+    "experiments/dated_carry_v1/math_review.md": "8f1b4eea56ca111d75cae8555a6eb9fb7f00372d63234c095d8bee92aa6ff7eb",
+    "experiments/dated_carry_v1/sources.json": "9e67cc5c0427de05b7835ce8574949129e6a63ec617cb794b6c716cb1f29a3a8",
+    "experiments/dated_carry_v1/tests_before_freeze.json": "73682316d83ff3138938d5c5b23958c221c95d82138813ae29fe03bf7425782a",
+    "experiments/equations_v1/FINDINGS.md": "7febb262d3f9ec9fe1fe7b86856a499010778cca0efb13442c153a0dbe0c3630",
+    "experiments/equations_v2/FINDINGS.md": "383bada4c2daccd8db3a8bb19b7e1c4230bbbfe38a7bd1f74ce4c6a293e7c5c7",
+    "experiments/spot_perp_costs_v2/FINDINGS.md": "5f804a334d6e153ff8f1df89b0a0cb86e7cc3edc667e5b559de0ece063069f38"
+  }
+}

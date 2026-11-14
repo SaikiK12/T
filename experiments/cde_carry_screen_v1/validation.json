@@ -1,0 +1,32 @@
+{
+  "round": "R424",
+  "full_tests": 2563,
+  "skipped": 3,
+  "seconds": "373.575",
+  "result": "OK",
+  "new_synthetic_tests": 12,
+  "independent_checker_invented_cases": 6,
+  "independent_checker_invented_decimal_identities": 48,
+  "full_log_sha256": "70bd7fd6013a719c2828519a6b4e6b29cdf7dc81b27a9b7836d0a83e4f601fcf",
+  "prereg_sha256": "7f07dddd39592cecb76e66b5bd09579eabc71c58b321b3054e2e13fb328cecbd",
+  "frozen_inputs": 241,
+  "registry_trials": 4,
+  "program_trials": 9784349,
+  "integrity_errors": 0,
+  "legacy_warnings": 14,
+  "catalog_matches_staged_index": true,
+  "source_prices_or_rate_spreads_measured_before_commit": false,
+  "native_forward_ticks": 0,
+  "tested_sha256": {
+    "lab/cde_carry_screen.py": "dec8e8e1b6c37c53b368234d38a9ef92d2521b6e91ee5a3cac008f92fc424562",
+    "scripts/run_cde_carry_screen.py": "ed7d6f748d34ebdc71c316c2871bd1f74cc39c19b259db957a0c40ddbd55ebc0",
+    "scripts/check_cde_carry_screen.py": "614ebde3e3a5409116df69ff963083d93a7e2dc32352ec157d54cc5a22c00fae",
+    "tests/test_cde_carry_screen.py": "26da759566a936a9b855327fd6814898d30e7f5ef4ffc51cc4e6056b6af847bb",
+    "scripts/acquire_cde_candle_probe.py": "12417ca69a66ca29b14d4db85967637d9c276db4d2aeb93da8435a91bda683c0",
+    "scripts/acquire_cde_carry_bars.py": "f42b5820286ad1cd8769173472ab530a69f4588154a52bbaf14a3da7338a9a3e",
+    "scripts/acquire_cde_bar_edges.py": "30478ca7c90516f70e7692207b5ba73720217c769744a476052f0756c4642384"
+  },
+  "source_acquisition_calls": 10,
+  "source_acquisition_client_bytes": 142468,
+  "original_accumulated_allowance_renewed": false
+}

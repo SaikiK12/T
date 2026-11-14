@@ -1,0 +1,2717 @@
+{
+"folder": "data/bithumb_hist",
+"source": "https://api.bithumb.com (public)",
+"script": "scripts/fetch_venue_history.py",
+"recorded_utc": "2026-10-21T02:44:14Z",
+"excluded": [],
+"files": 537,
+"bytes": 25111954,
+"combined_sha256": "3895ffc69b26e9a4f29a8567e299bbf40a8d546c8e4158e2099cc3252a325a52",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 39083
+},
+"open": {
+"files": 367,
+"bytes": 17309022
+},
+"raw": {
+"files": 1,
+"bytes": 52727
+},
+"reserved": {
+"files": 167,
+"bytes": 7711122
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "contracts.csv",
+"bytes": 18536,
+"sha256": "ae0c7ae04232a47a634a09fed99abe837820e587c275f91d5b4e0e264773dfa0"
+},
+{
+"path": "manifest.json",
+"bytes": 20547,
+"sha256": "8f6fb340b0aa201531351a88a9fadd1e2d671a11af972161c24e89e6c96c30a7"
+},
+{
+"path": "open/candles_1d/KRW-0G.parquet",
+"bytes": 21936,
+"sha256": "3082af21f15289396c0cf540b8f81add9e058dcc04c1704622bda48bc4fcc438"
+},
+{
+"path": "open/candles_1d/KRW-1INCH.parquet",
+"bytes": 76434,
+"sha256": "d6d5282b296a69fc0bf5ce38b1892e65050db1e80295aa47cf70b255a506e8e7"
+},
+{
+"path": "open/candles_1d/KRW-2Z.parquet",
+"bytes": 20188,
+"sha256": "fa25a5212327fa6d70d0414f49199261683ea7b798738cd348162d421d6d3487"
+},
+{
+"path": "open/candles_1d/KRW-A.parquet",
+"bytes": 97001,
+"sha256": "69f59f8dd0a95f804b91cd3e955999cb91cf9344dc6c6b036edb12b723934002"
+},
+{
+"path": "open/candles_1d/KRW-AAVE.parquet",
+"bytes": 101020,
+"sha256": "4aed5ec4cf53226a4ea006827da3bdf55e1c6891853d00e6dbc05050d843e19d"
+},
+{
+"path": "open/candles_1d/KRW-ACE.parquet",
+"bytes": 50269,
+"sha256": "1923693c99049afd0a2bf8e1c1f981a0902444443fb4d27dfa8604e035061350"
+},
+{
+"path": "open/candles_1d/KRW-ACH.parquet",
+"bytes": 82696,
+"sha256": "3f9cb8be08ae626ac12edec2fed3134b09ce3d5c1c0fdaf3b6283cf50647de22"
+},
+{
+"path": "open/candles_1d/KRW-ACU.parquet",
+"bytes": 4689,
+"sha256": "6240009f5a210d6f76f0e147ee464bc57be038586ba4b32f8b108616c956c409"
+},
+{
+"path": "open/candles_1d/KRW-ACX.parquet",
+"bytes": 30651,
+"sha256": "c2c0894bdc0af0753c7cf019a35ce5ecdbca59fbb13872885d9dd5807edd31ab"
+},
+{
+"path": "open/candles_1d/KRW-ADA.parquet",
+"bytes": 97631,
+"sha256": "00a3a789be62e0f18a3da55856f334940c9d21a75c6fdd095909703a4bc123cd"
+},
+{
+"path": "open/candles_1d/KRW-AERO.parquet",
+"bytes": 31696,
+"sha256": "693e95b38ffb5f2d2216a982d7a32729044af20ac2143f0622198900f9fe639d"
+},
+{
+"path": "open/candles_1d/KRW-AGLD.parquet",
+"bytes": 31431,
+"sha256": "376247593f6da16af63560c9b9f5af65c1eaf5d88a0017c7f387f31e30486670"
+},
+{
+"path": "open/candles_1d/KRW-AI.parquet",
+"bytes": 12111,
+"sha256": "f21e9bb6ccd341d513dc5add6efa7273657d2a3072952738cf2ac6aac95a0857"
+},
+{
+"path": "open/candles_1d/KRW-AIA.parquet",
+"bytes": 5015,
+"sha256": "42164c990dbb8835fc7789b782f273f438393ca33bb258704340713e37acafa0"
+},
+{
+"path": "open/candles_1d/KRW-AKT.parquet",
+"bytes": 45244,
+"sha256": "45f3f41540843d07ac7c2406c47b4783d8db7887a9c15041399d6a1b7cfbcee4"
+},
+{
+"path": "open/candles_1d/KRW-ALGO.parquet",
+"bytes": 93244,
+"sha256": "7d745136f6c5e8f336849f143b8a8a4977cfcf83dfb9a6daf2eb4d966da79601"
+},
+{
+"path": "open/candles_1d/KRW-ALICE.parquet",
+"bytes": 92967,
+"sha256": "53db5620881bcf967b8a3f847fded1f84726bdce08e5ab8e53e43b67d5950d34"
+},
+{
+"path": "open/candles_1d/KRW-ALLO.parquet",
+"bytes": 17198,
+"sha256": "10a3b3705c753ecb5b53f9d9ac85317dd5971bc735027d1e743a1c79d0095737"
+},
+{
+"path": "open/candles_1d/KRW-ALT.parquet",
+"bytes": 38981,
+"sha256": "e26fa6558506805e19148b28fcb2aab909db1041e4c2b22d3d777b604dba4d8b"
+},
+{
+"path": "open/candles_1d/KRW-ANIME.parquet",
+"bytes": 35994,
+"sha256": "3d4502029bb115345c3af069c20e487fc0b1e8999e2427141fd6e12aee912212"
+},
+{
+"path": "open/candles_1d/KRW-ANKR.parquet",
+"bytes": 107134,
+"sha256": "4ebe48d02b07f880abd2fea6ab6020fa57d6ca5f6c631bc962b9ce1d0469caa8"
+},
+{
+"path": "open/candles_1d/KRW-APE.parquet",
+"bytes": 55004,
+"sha256": "519bc7fe8de61bd7db0861c65a1e57f31cc2f22859bf0bff5f870a1430945b58"
+},
+{
+"path": "open/candles_1d/KRW-API3.parquet",
+"bytes": 52324,
+"sha256": "6031f6f6ec19cdef4a4174876c044efdbc59c04e44ecc607aa1942780250f1c9"
+},
+{
+"path": "open/candles_1d/KRW-APT.parquet",
+"bytes": 64113,
+"sha256": "4538c8edf40b687c1143048353eb4aab6b7eb983c8bd9f0da215bb4001ae76fe"
+},
+{
+"path": "open/candles_1d/KRW-AR.parquet",
+"bytes": 45127,
+"sha256": "1571a331125e872a4e20862de4fb63d4fae0311aac2b48a1b3582d76666564bd"
+},
+{
+"path": "open/candles_1d/KRW-ARB.parquet",
+"bytes": 59424,
+"sha256": "d8b7e8b4f329a1091ed3699b72bc2d6d471749e0ee134d058cea0384e99ff26b"
+},
+{
+"path": "open/candles_1d/KRW-ARK.parquet",
+"bytes": 44948,
+"sha256": "4216577cc695e06d25def30cc3db0923fdde315c4115a63d560ecd3cede25523"
+},
+{
+"path": "open/candles_1d/KRW-ARKM.parquet",
+"bytes": 52219,
+"sha256": "081307521e6b8fdcd84b0bc0f59e1f527c95c9b4a7950e86f509d55f95dc4b73"
+},
+{
+"path": "open/candles_1d/KRW-ARPA.parquet",
+"bytes": 105042,
+"sha256": "fd70e4e4941e50d2245ebe1f9352a19bb12f4c2a4c077630fd8981312c550fd8"
+},
+{
+"path": "open/candles_1d/KRW-ARX.parquet",
+"bytes": 9384,
+"sha256": "df6c2e9fa289bce53bed119d2511755c4d936be41c56b1ba3625f974530943a1"
+},
+{
+"path": "open/candles_1d/KRW-ASTER.parquet",
+"bytes": 19508,
+"sha256": "2447d604c5552825cbe291d7116ecf51893a320f4c231a3916bdeb9eb1fb3380"
+},
+{
+"path": "open/candles_1d/KRW-ASTR.parquet",
+"bytes": 57360,
+"sha256": "ffe80a2abc64f899cf5d657f1dde34531575dcc361d61e1763953c7339ea5ac8"
+},
+{
+"path": "open/candles_1d/KRW-ATH.parquet",
+"bytes": 44025,
+"sha256": "eb03e3299516c0c207c886c3b9d83198330c64b9f04c70cf98c23a9e3438908b"
+},
+{
+"path": "open/candles_1d/KRW-ATOM.parquet",
+"bytes": 99963,
+"sha256": "04f7830a60131ca6e4b59d56da7a274da57c1f1e2d0278d0a812672046ae1fd0"
+},
+{
+"path": "open/candles_1d/KRW-AUCTION.parquet",
+"bytes": 37640,
+"sha256": "b557ea45032066058c8bbbc18803637a94cbb0b882fab830aaabca6fb46a9a15"
+},
+{
+"path": "open/candles_1d/KRW-AUDIO.parquet",
+"bytes": 50352,
+"sha256": "27819e92db63a1f4ccfc14166b93d9c197965a1eaa0c589b558beabe2d0bf246"
+},
+{
+"path": "open/candles_1d/KRW-AVA.parquet",
+"bytes": 5887,
+"sha256": "b16e4b5a020729ae66bf8b99bb5de8e09d51af9130dbf79dcc1d8d43b6a2cbd9"
+},
+{
+"path": "open/candles_1d/KRW-AVAX.parquet",
+"bytes": 82971,
+"sha256": "833691c28a08e7b36fa9be59f696b7afb2e87d2134bd932c9927e121118974eb"
+},
+{
+"path": "open/candles_1d/KRW-AVNT.parquet",
+"bytes": 20869,
+"sha256": "5b5818fee4384d75b0e540198bd78f33c56ccfbc7f04efec987043a70add63e7"
+},
+{
+"path": "open/candles_1d/KRW-AWE.parquet",
+"bytes": 63674,
+"sha256": "f8c9d14ad462ed4c04c94377246881c331529323aa3f398835c63fafcb8f1203"
+},
+{
+"path": "open/candles_1d/KRW-AXS.parquet",
+"bytes": 91178,
+"sha256": "fffef75c4c4635606b5401aa105229e0951d9eee47e6e4e5ca5bc2710437583e"
+},
+{
+"path": "open/candles_1d/KRW-AZTEC.parquet",
+"bytes": 16026,
+"sha256": "c095fa5c7514a76815146a68e0419d1dad45c1cc72d8638047d1d8b9c71b4b0b"
+},
+{
+"path": "open/candles_1d/KRW-B3.parquet",
+"bytes": 31658,
+"sha256": "0d67619b752f6422904dd285887ede8c073c6ef0bb69e60dceaef88b2961e9e6"
+},
+{
+"path": "open/candles_1d/KRW-BABY.parquet",
+"bytes": 30820,
+"sha256": "600cfb4c72e58316761ac61bbecc79baf15bed4ee7bcfb5274bae2e8eb19b185"
+},
+{
+"path": "open/candles_1d/KRW-BANK.parquet",
+"bytes": 8855,
+"sha256": "a4ef8823a345804816a6a04eccda09438a5a7082127f33a916ece6495a4c4003"
+},
+{
+"path": "open/candles_1d/KRW-BARD.parquet",
+"bytes": 21212,
+"sha256": "dd1071aba2bed6fe43a42642b3ec89c676456930f93f1ba85f1cef25eaa05de2"
+},
+{
+"path": "open/candles_1d/KRW-BASED.parquet",
+"bytes": 12198,
+"sha256": "f90a2c4aa7f196415832b8490aeaf8959ae28408c3be1bca62e112544a3e6897"
+},
+{
+"path": "open/candles_1d/KRW-BAT.parquet",
+"bytes": 93988,
+"sha256": "3050a099e37fdd7f3cd0c1eef5bb5261e890e5a7d7a1fe7bdd63d8a06998117b"
+},
+{
+"path": "open/candles_1d/KRW-BB.parquet",
+"bytes": 34957,
+"sha256": "478559d4b08b90b08e8f9ff03a35b5919ed6c313e59a076d9c611f57121a8fdf"
+},
+{
+"path": "open/candles_1d/KRW-BCH.parquet",
+"bytes": 102431,
+"sha256": "23d5892fed5511a41888827f88da2f9e156650607acb414157411f6c2ce628a2"
+},
+{
+"path": "open/candles_1d/KRW-BEL.parquet",
+"bytes": 95498,
+"sha256": "e570f7257fce096f62444db4fb350f7734fdd4b1093ee0f9eacd99cdc7f35ddf"
+},
+{
+"path": "open/candles_1d/KRW-BERA.parquet",
+"bytes": 32678,
+"sha256": "0b0af826440506f251a9fb0aa1c706c5a4909bb94523dfb0e3a7c1e17f995a48"
+},
+{
+"path": "open/candles_1d/KRW-BICO.parquet",
+"bytes": 35211,
+"sha256": "2abd32681732c1d154481e3e9fc4e5c238405a322e7ab751bb4f1296f32ed887"
+},
+{
+"path": "open/candles_1d/KRW-BIGTIME.parquet",
+"bytes": 52791,
+"sha256": "7d3d77088c032f8aeda5574272424ef4b9d1a7be1e959be2817a6529b4afeb1e"
+},
+{
+"path": "open/candles_1d/KRW-BILL.parquet",
+"bytes": 11727,
+"sha256": "a57381bf43aa0afaaa97b10ccc717590212282a3b97fc92d58e0fbb2a896d143"
+},
+{
+"path": "open/candles_1d/KRW-BIO.parquet",
+"bytes": 24773,
+"sha256": "9021682f994c342dc5b36b3f11113457c6b99a9e58f31301c6b434372aa226c9"
+},
+{
+"path": "open/candles_1d/KRW-BIRB.parquet",
+"bytes": 15976,
+"sha256": "a65902aa04a83a2311483a3264f5bd0b8f7b0f2af6738bc88e4a39bb091cab9d"
+},
+{
+"path": "open/candles_1d/KRW-BLUR.parquet",
+"bytes": 64989,
+"sha256": "ec240593850b9384b494c4a9cbe43874b4eb8a2ce856fa48f6f02a00b24af01f"
+},
+{
+"path": "open/candles_1d/KRW-BMT.parquet",
+"bytes": 30873,
+"sha256": "b4aa416052f1debbf24402940c323c596260989b49644180ca257ea1154e4270"
+},
+{
+"path": "open/candles_1d/KRW-BNB.parquet",
+"bytes": 95002,
+"sha256": "875c9cab2c30cd35a6d0d18998df412b02788306239b012f86bba5b1c7b52643"
+},
+{
+"path": "open/candles_1d/KRW-BNT.parquet",
+"bytes": 87828,
+"sha256": "de3e09b05a49db45bd2419c4ae2c3069de063bd2f4669d6564e1377029b07879"
+},
+{
+"path": "open/candles_1d/KRW-BOB.parquet",
+"bytes": 21022,
+"sha256": "4f423232554abaa2f3e5c9ca8058c51cc60a55e923c389d3a65d5eee2ca9b84b"
+},
+{
+"path": "open/candles_1d/KRW-BONK.parquet",
+"bytes": 41776,
+"sha256": "b05e103b7515af3ede9581fb55ef37d60a996fc702a165cf3255ab355a45991b"
+},
+{
+"path": "open/candles_1d/KRW-BR.parquet",
+"bytes": 5108,
+"sha256": "4878a709c4260e5a443553395bf346eace8293836315f99b4c0e41fad8c33859"
+},
+{
+"path": "open/candles_1d/KRW-BRETT.parquet",
+"bytes": 44033,
+"sha256": "ac74d64dac3f5fc947aacc311b4d5f8558960809e07e6ed092eebf38e8da02a4"
+},
+{
+"path": "open/candles_1d/KRW-BREV.parquet",
+"bytes": 15724,
+"sha256": "fb6b42b826330664cf8c03e727d45bfc7b821029b17952cfdf833cd077020c43"
+},
+{
+"path": "open/candles_1d/KRW-BSB.parquet",
+"bytes": 7377,
+"sha256": "2d110b9fb56ed1f0ad387b48e3fc24b86724b7d902f0c0cde87cc139d5bd3ce5"
+},
+{
+"path": "open/candles_1d/KRW-BSV.parquet",
+"bytes": 104311,
+"sha256": "98ec76cbe1f26f7696c479a600a5652b057ef6cd866ad5f8681cdca62f8a54d9"
+},
+{
+"path": "open/candles_1d/KRW-BTC.parquet",
+"bytes": 120855,
+"sha256": "0f9cebe1cca9af43bb2cdd19da0b9a5ba995e47ef384aa1bdee2d53baa4aaf52"
+},
+{
+"path": "open/candles_1d/KRW-BTR.parquet",
+"bytes": 23083,
+"sha256": "e656bf08f75263a1fa2ef5a1e7d45b18146281250b7ba09d0916736dfa2b3799"
+},
+{
+"path": "open/candles_1d/KRW-BTT.parquet",
+"bytes": 54883,
+"sha256": "b8e1a88aeecf4a6100da51aa91abb310354c09bb3aa01b629935bd1aaed139a8"
+},
+{
+"path": "open/candles_1d/KRW-C.parquet",
+"bytes": 22411,
+"sha256": "4cd6c4e5fe8f2045b87d897c4c9dc76d56d125d00d67795b6013a003986c9b2d"
+},
+{
+"path": "open/candles_1d/KRW-C98.parquet",
+"bytes": 83641,
+"sha256": "4cad4ad54656f718e20762919c71a01d60eed5ca5e6a65929c03496ac350f468"
+},
+{
+"path": "open/candles_1d/KRW-CAKE.parquet",
+"bytes": 92565,
+"sha256": "08a20684e6fa3e7ed092a2b61e02e334e42f58addf84dccf61235a786f8f4fb1"
+},
+{
+"path": "open/candles_1d/KRW-CAP.parquet",
+"bytes": 10105,
+"sha256": "510b56c9855b597015871f4b5b82f8d9d426164e260eb20787fc26f647f06845"
+},
+{
+"path": "open/candles_1d/KRW-CARV.parquet",
+"bytes": 37369,
+"sha256": "4c1149bc84d9eca5f818af2b673cb800f9e209b69a17b9d352475d90f760c298"
+},
+{
+"path": "open/candles_1d/KRW-CC.parquet",
+"bytes": 9020,
+"sha256": "3215ad7d65126dff04162f3c7514f481bf1e2c430d2017253086adcf9fdb289c"
+},
+{
+"path": "open/candles_1d/KRW-CELO.parquet",
+"bytes": 54033,
+"sha256": "c270f9ac664fceb52cf6686ea85e2db1ac27d94847ea848e743c6b3a407e6811"
+},
+{
+"path": "open/candles_1d/KRW-CELR.parquet",
+"bytes": 97738,
+"sha256": "215d470b3e8e4e3b8472e19c6bf9b5e1e6f1eeddfd04da5f23c16827761727bc"
+},
+{
+"path": "open/candles_1d/KRW-CFG.parquet",
+"bytes": 13865,
+"sha256": "2bff722f825d77d2ec9507d04d81a82a81e399356b24f95211c682152b1f6349"
+},
+{
+"path": "open/candles_1d/KRW-CFX.parquet",
+"bytes": 56017,
+"sha256": "ce7777e2d04887b45b66b65b4156ec6e6acb3ed25ae07caeea6fee1723847156"
+},
+{
+"path": "open/candles_1d/KRW-CHIP.parquet",
+"bytes": 13536,
+"sha256": "374c502c8a285aaba1c9cc559b93e2b3f28c6c596e65c531edf9bf413d4ed4d6"
+},
+{
+"path": "open/candles_1d/KRW-CHR.parquet",
+"bytes": 98916,
+"sha256": "1c2491189e7f934178b0f078ebaaf5815613a8c1ad14c5574f916e718237b5f0"
+},
+{
+"path": "open/candles_1d/KRW-CHZ.parquet",
+"bytes": 95975,
+"sha256": "2fb4027d4475f1e2b55eb146db08b8e38028443afdfb0d9a8a5d5f4a8fbc7d1d"
+},
+{
+"path": "open/candles_1d/KRW-CKB.parquet",
+"bytes": 100586,
+"sha256": "d8eeba20e8b50eb0cdc61c5f0e647ecadc3263d3d7388d1cdbea2b1e5a94ae47"
+},
+{
+"path": "open/candles_1d/KRW-COMP.parquet",
+"bytes": 98663,
+"sha256": "625096ffd639c720e8e4e20d29594f6dc08bb11252672a2117b0653b96731805"
+},
+{
+"path": "open/candles_1d/KRW-COOKIE.parquet",
+"bytes": 32168,
+"sha256": "3e12c11379a29021543806c8d20e061dde8912efba5f2d59b7287552b911c0a7"
+},
+{
+"path": "open/candles_1d/KRW-COS.parquet",
+"bytes": 109370,
+"sha256": "1a2cd77d45a2cf745683259f9968e98ded13ea88d6ccf5c3eea48682aa12b592"
+},
+{
+"path": "open/candles_1d/KRW-COTI.parquet",
+"bytes": 84027,
+"sha256": "1a281e20abae66430baaa6c1b974384e63128820a4b38f962ed8ddf8e05dcefe"
+},
+{
+"path": "open/candles_1d/KRW-COW.parquet",
+"bytes": 27662,
+"sha256": "d5fcd0db86e9445b456dd8ebc07576329c015c71960a2f95ea121fa17ceb84a1"
+},
+{
+"path": "open/candles_1d/KRW-CRV.parquet",
+"bytes": 55165,
+"sha256": "194be5eb51b6f0507b29a983133cd30ead5c6e910f9644727cf2137e410d5748"
+},
+{
+"path": "open/candles_1d/KRW-CTK.parquet",
+"bytes": 86246,
+"sha256": "268f9ad769c6bb1b670d9e605f4dc324bbd274e68d40d6dc080911c1b1444b79"
+},
+{
+"path": "open/candles_1d/KRW-CTR.parquet",
+"bytes": 10892,
+"sha256": "70690c548e1dc175483723a2da349e86b42a567f8e26d8d61ad676728e3d2a0f"
+},
+{
+"path": "open/candles_1d/KRW-CTSI.parquet",
+"bytes": 90832,
+"sha256": "4c1e81da643dea9959f3711b890eae305d07b97efe5fd1a41f5d943e408d7d19"
+},
+{
+"path": "open/candles_1d/KRW-CUDIS.parquet",
+"bytes": 24040,
+"sha256": "9a8a0ebe86dd2819b6d1c1ed21a0f3f14de0f5b071df89ec60ecd42d9597fb95"
+},
+{
+"path": "open/candles_1d/KRW-CVC.parquet",
+"bytes": 43187,
+"sha256": "587b36cd95c43ff25a216463e994cb0620a84b592d0f66d0cb9e03294e1265a4"
+},
+{
+"path": "open/candles_1d/KRW-CYBER.parquet",
+"bytes": 56675,
+"sha256": "94d5b3ecefd71888db625558189cd61e6c20b18645661714d2236b061655fc79"
+},
+{
+"path": "open/candles_1d/KRW-CYS.parquet",
+"bytes": 14180,
+"sha256": "3c3f8b04332ce2b148430798613d7828f183e71cddd18b117c0c956b722b4ed4"
+},
+{
+"path": "open/candles_1d/KRW-D.parquet",
+"bytes": 65731,
+"sha256": "a009af801d96ff648e41c90fc5b1ffb3eeb565fd8e96a1f66cdfb244db441274"
+},
+{
+"path": "open/candles_1d/KRW-DEEP.parquet",
+"bytes": 33524,
+"sha256": "65c10637adcbbbc23a806a3a8a24de778a229bc757fb777f9523433f91cf740b"
+},
+{
+"path": "open/candles_1d/KRW-DEXE.parquet",
+"bytes": 18984,
+"sha256": "4ebe8626239a01b2aec029a0a1b999e23f118a327f0ad80e24e57d0dc5c489c0"
+},
+{
+"path": "open/candles_1d/KRW-DOGE.parquet",
+"bytes": 86163,
+"sha256": "8903a6573efbe0adfedab048c5782731f0f2d200b0a2cb72fb148b9b1e4eb956"
+},
+{
+"path": "open/candles_1d/KRW-DOOD.parquet",
+"bytes": 23430,
+"sha256": "bc013a345924e804057ec4960244faf54af3a2fbb3785d29aa06dfc1a7641974"
+},
+{
+"path": "open/candles_1d/KRW-DOS.parquet",
+"bytes": 7415,
+"sha256": "8a435ae1ac599eab37321890de101e3a6d7ccfdd273a7f5aebaa0f654d627418"
+},
+{
+"path": "open/candles_1d/KRW-DOT.parquet",
+"bytes": 99966,
+"sha256": "b159f4c6884b6334378bfee55d866b90a8e7a531a19671ec1e19570673e5d664"
+},
+{
+"path": "open/candles_1d/KRW-DYDX.parquet",
+"bytes": 59611,
+"sha256": "d2b30f74f679b73ab6dbf80a138807e49c6c0708b163e17aa980c94f64a38ec0"
+},
+{
+"path": "open/candles_1d/KRW-EDEN.parquet",
+"bytes": 19506,
+"sha256": "a5a3f922b742df01215da1671fe2d30e8845f4b8e5c87020e23929335706055b"
+},
+{
+"path": "open/candles_1d/KRW-EDGE.parquet",
+"bytes": 14282,
+"sha256": "ee77b0e126f8c7adf6fc26b2f062f39c94631a03e58cb93643536b80a63c093b"
+},
+{
+"path": "open/candles_1d/KRW-EDU.parquet",
+"bytes": 51899,
+"sha256": "b1fcf271e7febee628d81c810ef195e411decf64de534c0024045759a4cb5063"
+},
+{
+"path": "open/candles_1d/KRW-EGLD.parquet",
+"bytes": 85296,
+"sha256": "703cb9d5d21378a33ec0d43e5e35cc721ffb962fb739495fa813c4bc1b122240"
+},
+{
+"path": "open/candles_1d/KRW-EIGEN.parquet",
+"bytes": 36927,
+"sha256": "43ed53c35866f7a8f1d0875ee35ffc32529c20a1d853e76e2c0a83fc7a29907b"
+},
+{
+"path": "open/candles_1d/KRW-ELSA.parquet",
+"bytes": 16314,
+"sha256": "e4c5604db0a438549860fa5a66d9cbe6a056fe1efba9315eedcb6666432cb943"
+},
+{
+"path": "open/candles_1d/KRW-ENA.parquet",
+"bytes": 29065,
+"sha256": "47cf5e5b5de8a2fe69a29b8d0079f534999c4972322b73254511cac9c9118297"
+},
+{
+"path": "open/candles_1d/KRW-ENJ.parquet",
+"bytes": 102088,
+"sha256": "ac462579d1b9cc925eceb87dc663af2be2f48e56cbaa224684609cf4bded414f"
+},
+{
+"path": "open/candles_1d/KRW-ENS.parquet",
+"bytes": 45732,
+"sha256": "2a6b0591f5b98568ee8aae01583ee94f5c2f44bccc28d20a5d2bf2f76a20d90c"
+},
+{
+"path": "open/candles_1d/KRW-ENSO.parquet",
+"bytes": 20155,
+"sha256": "4d999d1df47466c7e95edc2f846e5589770b5995d41b223bd99085c6cba929d6"
+},
+{
+"path": "open/candles_1d/KRW-EPT.parquet",
+"bytes": 32424,
+"sha256": "988040419b424e20cc74c5c03af574dee162cdf3d5706a19080a784e7a160fc1"
+},
+{
+"path": "open/candles_1d/KRW-ERA.parquet",
+"bytes": 24359,
+"sha256": "d088a6a0531b85256e67ed48f044609f1f6d9c311f614bd7dce172a24fd875e8"
+},
+{
+"path": "open/candles_1d/KRW-ESP.parquet",
+"bytes": 13728,
+"sha256": "61092a66576562a62edf5132d7ce90116647b391af85cda322a07195f4875712"
+},
+{
+"path": "open/candles_1d/KRW-ETC.parquet",
+"bytes": 102333,
+"sha256": "dcafc4ef2af3a549122432e7b6c4a6c687ad9c73083d9881e3d90ed006ccbde9"
+},
+{
+"path": "open/candles_1d/KRW-ETH.parquet",
+"bytes": 104851,
+"sha256": "85f5dc45ba3c182f0f21d0f97ea367f36a098446f25b817a13ed781164a6908a"
+},
+{
+"path": "open/candles_1d/KRW-ETHFI.parquet",
+"bytes": 38893,
+"sha256": "5fb49b72e9a2bc4ff6f6bf48d3febc53281741a71f5de8843d2d47d37e77e953"
+},
+{
+"path": "open/candles_1d/KRW-EUL.parquet",
+"bytes": 22987,
+"sha256": "86599ee926cf67269a5e5c71d8ab53fd0578e8ecb3884825c6266eee4fcd1708"
+},
+{
+"path": "open/candles_1d/KRW-F.parquet",
+"bytes": 38219,
+"sha256": "11809c657f4c4be0e26e4f73d2d6523513ed82592f1409279f0220e9243ebfdf"
+},
+{
+"path": "open/candles_1d/KRW-FET.parquet",
+"bytes": 57958,
+"sha256": "84520e10a2463962cc580f6a8b6a96b31275f8aa11cda66cafc3567f0d63493f"
+},
+{
+"path": "open/candles_1d/KRW-FF.parquet",
+"bytes": 19249,
+"sha256": "667fb2f5f20e2fcb3449f5cdf155a718b05f32568d489d8f01436c876937a093"
+},
+{
+"path": "open/candles_1d/KRW-FIL.parquet",
+"bytes": 34099,
+"sha256": "121315f97a30be2c8a03c9ddc014bacdee630d3cc8d2ab18eabfc4c6e1dde191"
+},
+{
+"path": "open/candles_1d/KRW-FLOCK.parquet",
+"bytes": 27423,
+"sha256": "dcfd32e4cfb1d945a350fc97e593e0e5e30c3545d95aaf1d1aea4efe3765be74"
+},
+{
+"path": "open/candles_1d/KRW-FLOKI.parquet",
+"bytes": 66698,
+"sha256": "4581ee04a576f27435431c7e024a4a57c3c28261be7e0b5b0839fb8a65143ee5"
+},
+{
+"path": "open/candles_1d/KRW-FLUID.parquet",
+"bytes": 22324,
+"sha256": "c4105cc6c8bbd22f75fb4ff3d81b90360d97a7b9eee9a3a1376edbb264cc136c"
+},
+{
+"path": "open/candles_1d/KRW-FLUX.parquet",
+"bytes": 54407,
+"sha256": "56c8c384e3e13b8908b42b03333d7916d2d2a74b90c32cd3f052bb6755a8ce14"
+},
+{
+"path": "open/candles_1d/KRW-FRAX.parquet",
+"bytes": 56546,
+"sha256": "ae8f32979d7324624a981f16a2fca55d6fcc2a514c784ec29dc7a59c8c369e56"
+},
+{
+"path": "open/candles_1d/KRW-G.parquet",
+"bytes": 44798,
+"sha256": "64ecff68e6a5bd6f7ed105a8fad6ddb8b734b27c316f74396bf7638f65539a51"
+},
+{
+"path": "open/candles_1d/KRW-GAS.parquet",
+"bytes": 49215,
+"sha256": "0d72c25215872b9dda738f66d253b88f5c8dc5d732d560f5039977f2bb96cbec"
+},
+{
+"path": "open/candles_1d/KRW-GLM.parquet",
+"bytes": 93413,
+"sha256": "723ec235b4eac3ce60b81f97bf6d5e9c5b45339fa0862652211f997dd3badceb"
+},
+{
+"path": "open/candles_1d/KRW-GMT.parquet",
+"bytes": 79964,
+"sha256": "ed95a58696f45fbb658fb0e988c1b3cc1618b5853fde00ec028ee4ad364be175"
+},
+{
+"path": "open/candles_1d/KRW-GMX.parquet",
+"bytes": 64486,
+"sha256": "e224af51debda67181385e6b8d7333c33f65f2ed3c4b33bf6000c1a40effb906"
+},
+{
+"path": "open/candles_1d/KRW-GPS.parquet",
+"bytes": 15142,
+"sha256": "724de07887e2f9a11e5c43eb875e1ff28e0b86f1714449b52c7a4b7284969117"
+},
+{
+"path": "open/candles_1d/KRW-GRAM.parquet",
+"bytes": 36026,
+"sha256": "615268dd3449d205b3c11df8792c880bf216e48a21b05f0415480ceadf395d49"
+},
+{
+"path": "open/candles_1d/KRW-GRASS.parquet",
+"bytes": 27583,
+"sha256": "9b3ebd18e26d594c7c607557fbd07e3ebc0375cd775302bd50ff5f231a0c3f47"
+},
+{
+"path": "open/candles_1d/KRW-GRT.parquet",
+"bytes": 96544,
+"sha256": "ce071715dd79e8672c1b15f91689103c94c77967fa03a2e404472d335cbe962d"
+},
+{
+"path": "open/candles_1d/KRW-GRVT.parquet",
+"bytes": 8017,
+"sha256": "7b534a4cf2e2c0b1c6779fddcbcaf64e3139d4db421ace9f6e52b5d9d5d823b1"
+},
+{
+"path": "open/candles_1d/KRW-GTC.parquet",
+"bytes": 45445,
+"sha256": "a2574aeb59e77db66c67221c3760a08743ac7fc2373e6cf48f3ed384ab0a067a"
+},
+{
+"path": "open/candles_1d/KRW-GWEI.parquet",
+"bytes": 15529,
+"sha256": "8416ec2fb0f4b31996807be3f2244c97fc40d2a06f5c6c5a51795836927f5a58"
+},
+{
+"path": "open/candles_1d/KRW-HAEDAL.parquet",
+"bytes": 28797,
+"sha256": "cde5c90316c94020c1c383afb6099eee2cf12c1ba8c33c974bf0834c9df1e564"
+},
+{
+"path": "open/candles_1d/KRW-HBAR.parquet",
+"bytes": 49270,
+"sha256": "fd6bfc7893ed8dbd22a54b5ec1fbe5ab786125a64e0963ee702bb92dca631ecf"
+},
+{
+"path": "open/candles_1d/KRW-HEMI.parquet",
+"bytes": 23972,
+"sha256": "9e94faccc724edf41c545f6a0684d589953d512ba0f8d17a59b2860c51cfb816"
+},
+{
+"path": "open/candles_1d/KRW-HFT.parquet",
+"bytes": 56479,
+"sha256": "1b2b7f0e9ea4423cf9da1f1951f07eb30e304b632ca3e9115bfd910e2aedb526"
+},
+{
+"path": "open/candles_1d/KRW-HIVE.parquet",
+"bytes": 98286,
+"sha256": "94a6d67f22bad52b386af1f875cc5cb275e901288def23a9515bb764228e4e3f"
+},
+{
+"path": "open/candles_1d/KRW-HNT.parquet",
+"bytes": 10663,
+"sha256": "0d6e11ca6383e827e37f289f4600ebe0639fb6a3ae5a9f819515f9f743eeb466"
+},
+{
+"path": "open/candles_1d/KRW-HOLO.parquet",
+"bytes": 21895,
+"sha256": "84eb5d3e08cf3028bf5403abd06cee79b602c2561e309fee5ceca5c4d3b9a232"
+},
+{
+"path": "open/candles_1d/KRW-HOME.parquet",
+"bytes": 28386,
+"sha256": "fb32f0d5e9e1d5204ff303423fc35d0c5adb2977f752ba1a2e1012f77b2bd340"
+},
+{
+"path": "open/candles_1d/KRW-HOOK.parquet",
+"bytes": 63680,
+"sha256": "5760229c315bb17d1800a1d9202959cfd354d0044eee7c3a9bdf528a8cb2f031"
+},
+{
+"path": "open/candles_1d/KRW-HUMA.parquet",
+"bytes": 27655,
+"sha256": "c2002cf67d109e45ac2048cfdde3b8f5e42967b2fd67f1fbe84b3f850c717e82"
+},
+{
+"path": "open/candles_1d/KRW-HYPER.parquet",
+"bytes": 23895,
+"sha256": "d3db55e39455fdc70c2454c6a9cc4c337d78d5f4dd0e39a368560d66ef1476ea"
+},
+{
+"path": "open/candles_1d/KRW-ICNT.parquet",
+"bytes": 8748,
+"sha256": "6c8a07904b025a719e87ac1656a861e323b663fa274c98dea75a58b9f6c5d1db"
+},
+{
+"path": "open/candles_1d/KRW-ICP.parquet",
+"bytes": 43358,
+"sha256": "f3fdccd1c933511689235f76b868a813ae87cb2b928dc165d88be7c21224a875"
+},
+{
+"path": "open/candles_1d/KRW-ID.parquet",
+"bytes": 54604,
+"sha256": "cd89ce063f5da2c342c2f36b0928ecff4d9d88567236f9e2f7d76109dac77a17"
+},
+{
+"path": "open/candles_1d/KRW-ILV.parquet",
+"bytes": 59352,
+"sha256": "386cf5c98ac32ced6c70907e9f73327e2dc8944debe0d58935175c0df4e3a84a"
+},
+{
+"path": "open/candles_1d/KRW-IMX.parquet",
+"bytes": 57525,
+"sha256": "aa65f0f8687373a39d2bf728868a2eda0b328ab72f0452a57047b6274423acf0"
+},
+{
+"path": "open/candles_1d/KRW-IN.parquet",
+"bytes": 20844,
+"sha256": "e84cd75b95e616d5fdafe9e76da8b41ca778cc3ee0138fa1720fff7d4c129458"
+},
+{
+"path": "open/candles_1d/KRW-INIT.parquet",
+"bytes": 25664,
+"sha256": "fcfa3eaadc32ddf2d03eef61ddf155991529ac7ca99aad2984513610d006494a"
+},
+{
+"path": "open/candles_1d/KRW-INJ.parquet",
+"bytes": 65267,
+"sha256": "36bfb0af93c2238f7ff390b138065b9f133e7d7b636390c91be18f107d1efa56"
+},
+{
+"path": "open/candles_1d/KRW-IO.parquet",
+"bytes": 38484,
+"sha256": "dca1b648806daf33688912e8c919fc1c73def141452902494f62fdfc0f437061"
+},
+{
+"path": "open/candles_1d/KRW-IOST.parquet",
+"bytes": 106995,
+"sha256": "a88458c0fdbc90ca2d0f85dc22f6004f86d03978939fb90496c895fc26562916"
+},
+{
+"path": "open/candles_1d/KRW-IOTA.parquet",
+"bytes": 32075,
+"sha256": "193f87363d5a7ebfbbac4e4ef536562908c4f6a37b4569e18acf8f44b1bf8ae8"
+},
+{
+"path": "open/candles_1d/KRW-IOTX.parquet",
+"bytes": 56398,
+"sha256": "1bd5f6f4bd912e4fd19d122e0967e59fce8817fd01e59839e8677af88438f4df"
+},
+{
+"path": "open/candles_1d/KRW-IRYS.parquet",
+"bytes": 20358,
+"sha256": "fa2a0b7003fbd0a12502a5865fcbe9c5734a664546ca79da230ac0a21fa43f5f"
+},
+{
+"path": "open/candles_1d/KRW-JOE.parquet",
+"bytes": 55131,
+"sha256": "70086717984067163a787775ab8d2bf663bd0dbdb4791663120295c2ae0c8d28"
+},
+{
+"path": "open/candles_1d/KRW-JST.parquet",
+"bytes": 102090,
+"sha256": "179f935e2aa3ff0e068d02163f09e4448f23c22499e73d06dcdc1763acf22ed3"
+},
+{
+"path": "open/candles_1d/KRW-JTO.parquet",
+"bytes": 39117,
+"sha256": "2a1a4aa300fe560a02d3fcf4ffb467e467486697fc8b425ceb40bf217a0a4ed8"
+},
+{
+"path": "open/candles_1d/KRW-JUP.parquet",
+"bytes": 45835,
+"sha256": "870a33ed707fc325896485ed53b07e4b860528efb842b9e102af972e45a3997d"
+},
+{
+"path": "open/candles_1d/KRW-KAIA.parquet",
+"bytes": 89810,
+"sha256": "37b7981b210a602072ee50d08e0e8a0e23c20f5cf9722f9124c9cca3ee4422dd"
+},
+{
+"path": "open/candles_1d/KRW-KAITO.parquet",
+"bytes": 31404,
+"sha256": "763c63befeec5155207665373f93d74935b2f2fa9718256fbfbfde26514b2e9a"
+},
+{
+"path": "open/candles_1d/KRW-KAT.parquet",
+"bytes": 15353,
+"sha256": "c98564ce0e7d32dee7e272b9759cb2da6afe7ec0eac86b3631ed229a23fc9fc5"
+},
+{
+"path": "open/candles_1d/KRW-KAVA.parquet",
+"bytes": 47897,
+"sha256": "7f26b13412608cf3fbd4b536aea4aae1abbdeea264c7e5557dd48213b8779b8b"
+},
+{
+"path": "open/candles_1d/KRW-KERNEL.parquet",
+"bytes": 27553,
+"sha256": "38c74ce3baf611e54b4d208274f4817981106d0b2308793348175adecf8403bb"
+},
+{
+"path": "open/candles_1d/KRW-KGEN.parquet",
+"bytes": 4852,
+"sha256": "ca1262ae2258937ac2b75d10bcde51817d67a63732a4a869c440aef90066c6bf"
+},
+{
+"path": "open/candles_1d/KRW-KITE.parquet",
+"bytes": 17766,
+"sha256": "d6a263e8b59e06fb5b01ec11a8b1dd11e6e3bb1f30e99071219f20ee209eb7a3"
+},
+{
+"path": "open/candles_1d/KRW-KMNO.parquet",
+"bytes": 23557,
+"sha256": "b0c7e12d1ae49062887d6f4b91765c1f6c7a37d30e21d5a233f0a9a87c8a00a9"
+},
+{
+"path": "open/candles_1d/KRW-KNC.parquet",
+"bytes": 96437,
+"sha256": "d19a36eee6b7eb0ed155275c2cd211b6875309aad0a8b7a80be500ab94faceac"
+},
+{
+"path": "open/candles_1d/KRW-KSM.parquet",
+"bytes": 98785,
+"sha256": "b879f429e1b47084feb713768606ab53f1417cfb8fa61c790d34c010da61ccec"
+},
+{
+"path": "open/candles_1d/KRW-LA.parquet",
+"bytes": 26382,
+"sha256": "ac4c3f6ba034e82d59e581884ca13a1cb8324d526130ba8fbaef4eca59cdfbfe"
+},
+{
+"path": "open/candles_1d/KRW-LAYER.parquet",
+"bytes": 31085,
+"sha256": "8a2601e1922f92e8eae4de2f289b357abdea50fbc0bf9988d3fdab9a3c640617"
+},
+{
+"path": "open/candles_1d/KRW-LDO.parquet",
+"bytes": 60328,
+"sha256": "9039d611097083ea9548293a56e5be53149712f00abb523a7b354edb1084b750"
+},
+{
+"path": "open/candles_1d/KRW-LINEA.parquet",
+"bytes": 24838,
+"sha256": "d7a0e4af9a9d2d8fac08c13cf8fd68fa4c03d82fe384fc302430442801ccc77c"
+},
+{
+"path": "open/candles_1d/KRW-LINK.parquet",
+"bytes": 99731,
+"sha256": "c4ddeee6897b081a50d2ee912ea28f8144dd9b4b33be0d4ffa89e7b96eb24f42"
+},
+{
+"path": "open/candles_1d/KRW-LISTA.parquet",
+"bytes": 23429,
+"sha256": "59241e6e15f46bd979fe7889b9397073d992faf3ca56708139d49725547cce25"
+},
+{
+"path": "open/candles_1d/KRW-LIT.parquet",
+"bytes": 15645,
+"sha256": "75bb76834133849eba80e54cf14cfa343441a162c00a2bc410c6ec38bd0c83dc"
+},
+{
+"path": "open/candles_1d/KRW-LPT.parquet",
+"bytes": 95552,
+"sha256": "728e53e1824e981c5b4bcef607038195ccc0690b0581b0f6dd989e9c15d13b45"
+},
+{
+"path": "open/candles_1d/KRW-LSK.parquet",
+"bytes": 46248,
+"sha256": "93fbc785954820789c0a7f45006d18cd13ee3a5fc4a47ea84a011e4060e9c412"
+},
+{
+"path": "open/candles_1d/KRW-MAGIC.parquet",
+"bytes": 48362,
+"sha256": "3e1d57039ed3620e6aabfbe2a8c5b06e2f96e45d545e0a93f59f67ba30ef2efe"
+},
+{
+"path": "open/candles_1d/KRW-MANA.parquet",
+"bytes": 91402,
+"sha256": "347487a61ca9db1f9a62efa60fd40543c659ef96e331380b23d85230bb8eea4e"
+},
+{
+"path": "open/candles_1d/KRW-MANTA.parquet",
+"bytes": 47965,
+"sha256": "d13b5f256c72fc438e8f9536cbbee2b0706d2103f5883fb5aae8d07fea0dff68"
+},
+{
+"path": "open/candles_1d/KRW-MANTRA.parquet",
+"bytes": 16113,
+"sha256": "678c4ba3f884bbce1b34bbd8e8d898ed5542f99198bf2a37ef112d245990d34a"
+},
+{
+"path": "open/candles_1d/KRW-MASK.parquet",
+"bytes": 57080,
+"sha256": "c16cc6e869bb226bea664d294aa255526e5f5802e9f36355aec28d68f5456bba"
+},
+{
+"path": "open/candles_1d/KRW-MAV.parquet",
+"bytes": 59250,
+"sha256": "4c7f501deb39caf37fcb59b3871e52f564d71565a24d468af17e4b2bfb817997"
+},
+{
+"path": "open/candles_1d/KRW-MBL.parquet",
+"bytes": 106329,
+"sha256": "9dd675479165d51f15a45468ccfe27efbaed811fceaa9feb81897ad7a72f8e4b"
+},
+{
+"path": "open/candles_1d/KRW-ME.parquet",
+"bytes": 35155,
+"sha256": "57df54fa9a790c11809b9943be6003b12905f0a953619331eb5658363ca4bb51"
+},
+{
+"path": "open/candles_1d/KRW-MEGA.parquet",
+"bytes": 13012,
+"sha256": "c497b50639170c8550b4430d05c28a077919db7fee2a0c356f7dea560ce6b6dd"
+},
+{
+"path": "open/candles_1d/KRW-MERL.parquet",
+"bytes": 25481,
+"sha256": "f7225062f37a47bfd2e782e805c510b4aeaaec67d5086a33b3e4b37ba0e295bd"
+},
+{
+"path": "open/candles_1d/KRW-MET.parquet",
+"bytes": 17811,
+"sha256": "e6e73eb377eb45710068c933d3fe77d17180e48153053237cb6fc27a50e5df62"
+},
+{
+"path": "open/candles_1d/KRW-META.parquet",
+"bytes": 104034,
+"sha256": "bb9e4c94e273a07e9884744fdf32db4b7b00e3f9043778e29f04ead69ddac907"
+},
+{
+"path": "open/candles_1d/KRW-METIS.parquet",
+"bytes": 37470,
+"sha256": "7484caefa61b07ee3e533c522bde8d6a2edb2b56306978f7da9af879551ce117"
+},
+{
+"path": "open/candles_1d/KRW-MEW.parquet",
+"bytes": 49991,
+"sha256": "5e2fc0cce1eb98e1f3b065058872c48f81832e1401d5dd5d80a582c62bc6b7e0"
+},
+{
+"path": "open/candles_1d/KRW-MINA.parquet",
+"bytes": 52075,
+"sha256": "92c810ed97f3479ed1c9dbd7d46042b2f5a9bf7208108874201e554b6dac4610"
+},
+{
+"path": "open/candles_1d/KRW-MIRA.parquet",
+"bytes": 21269,
+"sha256": "c9680a34d946a96f0a8dc98d0648632a5681be5deb784b4f2df67dfec9132da3"
+},
+{
+"path": "open/candles_1d/KRW-MMT.parquet",
+"bytes": 17824,
+"sha256": "8e832bfdfd2189baa263f96882ca55dfc479fc38d034c61bc8f8d23f56dbc61a"
+},
+{
+"path": "open/candles_1d/KRW-MOCA.parquet",
+"bytes": 34564,
+"sha256": "58395310985f474a1000ceefd9a3c1211e8372806af9765ca156dde884e9cb4b"
+},
+{
+"path": "open/candles_1d/KRW-MON.parquet",
+"bytes": 20132,
+"sha256": "66783f8cf12a9d61722f3321f0f7d569fdc24b41e84cb542b0ae451338a3c0c9"
+},
+{
+"path": "open/candles_1d/KRW-MOODENG.parquet",
+"bytes": 34963,
+"sha256": "dca107e4edf45721a95d818830542182aa68d863e45530f0ba054b6151309364"
+},
+{
+"path": "open/candles_1d/KRW-MORPHO.parquet",
+"bytes": 35239,
+"sha256": "c2a4c7a18a5a164cf59f379a29b7c1154de2545fe676b650f212b2135f0e8c89"
+},
+{
+"path": "open/candles_1d/KRW-MOVE.parquet",
+"bytes": 36081,
+"sha256": "2b6338fa06a9edbe0cef39113439ae357667bc339085b4dc334d740e91588c4b"
+},
+{
+"path": "open/candles_1d/KRW-MTL.parquet",
+"bytes": 96634,
+"sha256": "54f88ce14c4672c5cd7618738e455030afaeab4f7c12360b21494cd26953b11b"
+},
+{
+"path": "open/candles_1d/KRW-NEAR.parquet",
+"bytes": 45280,
+"sha256": "3eb19764221fffda7e288b8d3f2a54a4668809e78768ab8aa60b4dec4eb2e1a6"
+},
+{
+"path": "open/candles_1d/KRW-NEO.parquet",
+"bytes": 50078,
+"sha256": "094d7b053485904f9f5fd452f681c8e70532ea2bc7bab10619c3866bd3fa98db"
+},
+{
+"path": "open/candles_1d/KRW-NEWT.parquet",
+"bytes": 25355,
+"sha256": "9079fe9f437c8fcb72785afeedbcbb9a2d00836c7bcdf2346108bfadb16187af"
+},
+{
+"path": "open/candles_1d/KRW-NIL.parquet",
+"bytes": 30162,
+"sha256": "6abc7064a1cc83c4df9fac870aa9456fabf72112e7bbc48dc2bffe272152ec8b"
+},
+{
+"path": "open/candles_1d/KRW-NMR.parquet",
+"bytes": 89298,
+"sha256": "c8f99c3cecac937b27b17be3f38a719bcd3e2117445c5f4983ca91f38320e66d"
+},
+{
+"path": "open/candles_1d/KRW-NXPC.parquet",
+"bytes": 26638,
+"sha256": "30b919f9726512319d2fc6e412ce6b2eaa8821b8f349597efa1068423260d124"
+},
+{
+"path": "open/candles_1d/KRW-O.parquet",
+"bytes": 8052,
+"sha256": "d0bcd9dea56df06a9a7a09ed526cbedad54b01e3d5e14d9968b4d0c2ebba23cb"
+},
+{
+"path": "open/candles_1d/KRW-OGN.parquet",
+"bytes": 77141,
+"sha256": "8384b197f4fb854b62a888ee0b5335affa232d405e45d9ee4b05dd5884995b7d"
+},
+{
+"path": "open/candles_1d/KRW-ONDO.parquet",
+"bytes": 43301,
+"sha256": "0bf2585ef4cd47f094e18328fc9f5347b68a17e2dacf73872cc17994b4faaa8e"
+},
+{
+"path": "open/candles_1d/KRW-ONG.parquet",
+"bytes": 97219,
+"sha256": "0e00ccb1fae6c03870f721e0690233fd2e8a6d750d4f14de29b5d7983a26b7ad"
+},
+{
+"path": "open/candles_1d/KRW-ONT.parquet",
+"bytes": 97426,
+"sha256": "81f7a9abfdd9aa249d75b740a86e69113f8ec2854c4e57d492ff0dbce3e6ea51"
+},
+{
+"path": "open/candles_1d/KRW-OP.parquet",
+"bytes": 60610,
+"sha256": "f72c5500b36af1ad2d9d88089ec6c6517d6e1b995b41b375bcd9452bf5918063"
+},
+{
+"path": "open/candles_1d/KRW-OPEN.parquet",
+"bytes": 20271,
+"sha256": "96fc55197dae5386922a74301b010af39b8c1d3f47ff4de769ac36cdb680531f"
+},
+{
+"path": "open/candles_1d/KRW-OPG.parquet",
+"bytes": 10300,
+"sha256": "b46bdc307ae7de6725ca8cec243cf211db8d731f374233c77b441127350e45c3"
+},
+{
+"path": "open/candles_1d/KRW-ORBS.parquet",
+"bytes": 105309,
+"sha256": "75a780d2959f4189736ed240846377f9877d0c73da76acdbf314bb559175fa1b"
+},
+{
+"path": "open/candles_1d/KRW-ORCA.parquet",
+"bytes": 30142,
+"sha256": "e048a8ef730442c4a8caa99909bbfe92e3afa84d8d51c692eeb5b2f4558d12e5"
+},
+{
+"path": "open/candles_1d/KRW-ORDER.parquet",
+"bytes": 34094,
+"sha256": "07386674b477987bd19f2f9c27641e151c9fb10cf1e99e78fc295d1501c7fd87"
+},
+{
+"path": "open/candles_1d/KRW-PARTI.parquet",
+"bytes": 27448,
+"sha256": "e09a202e524a6fd9401529bd6148fce381f7976450a9b99528a11ffba9698603"
+},
+{
+"path": "open/candles_1d/KRW-PAXG.parquet",
+"bytes": 32263,
+"sha256": "c57c0b15e03c5f7809e5e8a5d6e94c698b16b089c942866b8ba60a728101512d"
+},
+{
+"path": "open/candles_1d/KRW-PENDLE.parquet",
+"bytes": 52780,
+"sha256": "be6922ca2aa1084ff7159eed691707eca77d587f01c82906c9d1d6523e7d0d29"
+},
+{
+"path": "open/candles_1d/KRW-PENGU.parquet",
+"bytes": 37007,
+"sha256": "1ae4c482f15ecc4cba5aafc88903989b9b088d41e4e8a0fae6858a5414a4d725"
+},
+{
+"path": "open/candles_1d/KRW-PEPE.parquet",
+"bytes": 48026,
+"sha256": "3c9cc687776311dcc207df988d7c37da5c89bf9b7d7c75dff6e4e844f02fa5c5"
+},
+{
+"path": "open/candles_1d/KRW-PHA.parquet",
+"bytes": 14918,
+"sha256": "6cf88e899add3dd0dedf9a98dec1004b291d810847e300bf2f91600032bb19c0"
+},
+{
+"path": "open/candles_1d/KRW-PIEVERSE.parquet",
+"bytes": 19151,
+"sha256": "ef9238e923a18f7306b6da7937c87cbfc08e9b1b2ff6c28f583767b62b49a631"
+},
+{
+"path": "open/candles_1d/KRW-PLUME.parquet",
+"bytes": 30576,
+"sha256": "f9f10c50ef42a2f73efb762d97289e40a6c2811786b4cb329bda07713379f165"
+},
+{
+"path": "open/candles_1d/KRW-POL.parquet",
+"bytes": 87174,
+"sha256": "38addf2b9554bc114ea30920ddadabdcb9ecc76ee4d0ee9f638ff126a0c785f5"
+},
+{
+"path": "open/candles_1d/KRW-POLYX.parquet",
+"bytes": 40332,
+"sha256": "26f91d906bcca4ab6c6eb719df75a7a8537f578d84915dfc4f0646b3efad1cd2"
+},
+{
+"path": "open/candles_1d/KRW-PONKE.parquet",
+"bytes": 35915,
+"sha256": "64dd4a2746dff3ac24c2ead4017524bc9ce3babcca9c6426ec86372d3c3e08c7"
+},
+{
+"path": "open/candles_1d/KRW-PONS.parquet",
+"bytes": 5026,
+"sha256": "e79032c1520f865370e0c42032c15b3e47a7cfe86c35036285343e2e8245694c"
+},
+{
+"path": "open/candles_1d/KRW-POPCAT.parquet",
+"bytes": 22447,
+"sha256": "c462ba9538566e714ccef80049f718e848509bb399f7cfe59bbaae8b247a09f9"
+},
+{
+"path": "open/candles_1d/KRW-POWR.parquet",
+"bytes": 97072,
+"sha256": "42126d8d146bc5cdfc52bad89407b985e38ffd7fa2a7d213a909fe6aab1430e8"
+},
+{
+"path": "open/candles_1d/KRW-PRL.parquet",
+"bytes": 11731,
+"sha256": "4490372bdf08cb55ff71d2210a4cc73ee2d8033508128dad11a73ee9e882d7f5"
+},
+{
+"path": "open/candles_1d/KRW-PROM.parquet",
+"bytes": 7051,
+"sha256": "d1645f0c60a89425816080ed76c877a7e82d4525d2dbb44eb0c03daa29eb1a3d"
+},
+{
+"path": "open/candles_1d/KRW-PROMPT.parquet",
+"bytes": 28508,
+"sha256": "0c39f688e635ad89e1bc2babbcca7bd71a6797ae50c61d064b2056978a7a6937"
+},
+{
+"path": "open/candles_1d/KRW-PROVE.parquet",
+"bytes": 23143,
+"sha256": "b4c11151ed0ffc1217aa5f1bed9a1ee5375498b53f20802b0f9951ef698186af"
+},
+{
+"path": "open/candles_1d/KRW-PUFFER.parquet",
+"bytes": 36025,
+"sha256": "d7a5b301354681d247cf5ca431d03d4f3e4f1369a83b101e1cfd543200c6b1b2"
+},
+{
+"path": "open/candles_1d/KRW-PUMP.parquet",
+"bytes": 24738,
+"sha256": "bf5ab95a1ad6bced094d272cddb103237e72c64d0d18c27c465129a64dc9d342"
+},
+{
+"path": "open/candles_1d/KRW-PUMPBTC.parquet",
+"bytes": 30617,
+"sha256": "4bd4d5aaa51867eb18707e711e2f38bf586e10d60e3d922d76b359d3530b782f"
+},
+{
+"path": "open/candles_1d/KRW-PUNDIX.parquet",
+"bytes": 90879,
+"sha256": "cb3afe03ac369e45314ed1443344e89c04e79a31020b2da5386134efcc0ef7d2"
+},
+{
+"path": "open/candles_1d/KRW-PYTH.parquet",
+"bytes": 46207,
+"sha256": "1332e7d4d8dd1ba4300452c473b3d3c9f3f2a7d8ce5ae7ca9bbc61d5a8569014"
+},
+{
+"path": "open/candles_1d/KRW-Q.parquet",
+"bytes": 5634,
+"sha256": "23672ab0a2f071e211159df82be64b2b65b17aa5a2e25dcead8da6af56a8a9cb"
+},
+{
+"path": "open/candles_1d/KRW-QTUM.parquet",
+"bytes": 100323,
+"sha256": "9fba8440d7944701efc9587c7b1ecf9a0279bf653f0a8d863e0a4e5c5b062f63"
+},
+{
+"path": "open/candles_1d/KRW-RAD.parquet",
+"bytes": 47426,
+"sha256": "3bbe0d9d0b0d477db7494e6e24bf78437116040d36fb16465903dde607da9b31"
+},
+{
+"path": "open/candles_1d/KRW-RAY.parquet",
+"bytes": 36206,
+"sha256": "2ebc3f4afa7eedc8d7d738f01f1f8d89c5d25f001d1906de225eae7893e0a193"
+},
+{
+"path": "open/candles_1d/KRW-RE.parquet",
+"bytes": 9788,
+"sha256": "1b9cf25ac81c4524a168527fa43ffdf59637aab295142e15e3e0137e9991c622"
+},
+{
+"path": "open/candles_1d/KRW-RECALL.parquet",
+"bytes": 21717,
+"sha256": "fb081410b415f88470db7460e7b839cdbcba4eba5fe5b48c5ee3c3f5b49c59c1"
+},
+{
+"path": "open/candles_1d/KRW-RED.parquet",
+"bytes": 27554,
+"sha256": "b30b114170e3b67c971d99cb67ac332081fe80cab54af1444735837c44115a81"
+},
+{
+"path": "open/candles_1d/KRW-REI.parquet",
+"bytes": 84923,
+"sha256": "7d887ae4686a26aff06841d4412a8222f042766787b091b711bbe6949d5ec92f"
+},
+{
+"path": "open/candles_1d/KRW-RENDER.parquet",
+"bytes": 57957,
+"sha256": "08a13564424d2da388ef9499613bdf0e2ac325000718bf816f3cd1e9380f4d48"
+},
+{
+"path": "open/candles_1d/KRW-REZ.parquet",
+"bytes": 32809,
+"sha256": "b003d0cc934a2d8e171359099c1aa863b95ba582e145dd6cb417ad178f31ae94"
+},
+{
+"path": "open/candles_1d/KRW-RLC.parquet",
+"bytes": 92116,
+"sha256": "4e63fd334b34ffd56b54001bc11719cbd9530057a52696447ee4098fceed22fe"
+},
+{
+"path": "open/candles_1d/KRW-ROBO.parquet",
+"bytes": 14992,
+"sha256": "b9b968329625412b1ae27df08d337a13a2b21232dc20a8c5650664dd0ae927ac"
+},
+{
+"path": "open/candles_1d/KRW-RPL.parquet",
+"bytes": 65366,
+"sha256": "e09051c9cfd2d561ac7280dcef51f736462637761a954ef9e9bcade02b7d44b1"
+},
+{
+"path": "open/candles_1d/KRW-RSR.parquet",
+"bytes": 99094,
+"sha256": "40886bee961942dad809e63bf99933bc7bbea7f79037c33ec2c32422e59bcb30"
+},
+{
+"path": "open/candles_1d/KRW-S.parquet",
+"bytes": 58120,
+"sha256": "9b57a9939af7a08ba9091f36d4bb24e28ab688b5f2d367468a3eee12f763b82d"
+},
+{
+"path": "open/candles_1d/KRW-SAFE.parquet",
+"bytes": 30043,
+"sha256": "02b4f2d90e539cec69a3b991cee54dd158da35e46118e29ff578a24009a67359"
+},
+{
+"path": "open/candles_1d/KRW-SAHARA.parquet",
+"bytes": 25432,
+"sha256": "bee60536372ee65ff28a983b14ba0e57915ffd4f45eb963f66fbc898c58b3d91"
+},
+{
+"path": "open/candles_1d/KRW-SAND.parquet",
+"bytes": 99326,
+"sha256": "2e80edccbd32051e194ad2774c53f82eca2d6f7eaf36f47ba70e78d25f930f8f"
+},
+{
+"path": "open/candles_1d/KRW-SAPIEN.parquet",
+"bytes": 15964,
+"sha256": "bd2d38f89baf242fc7b5bc82335416ec08ed1e5e766556e493adaa5b0312141a"
+},
+{
+"path": "open/candles_1d/KRW-SC.parquet",
+"bytes": 51630,
+"sha256": "a816366b5cd7a54bc459d36b0497743a3db50f8071e43294144b0f3844f03efe"
+},
+{
+"path": "open/candles_1d/KRW-SCR.parquet",
+"bytes": 35232,
+"sha256": "3275b2272cf481c2bfdef9935cb8497c6e2076733b18e534a37aaca90adecad9"
+},
+{
+"path": "open/candles_1d/KRW-SEI.parquet",
+"bytes": 55282,
+"sha256": "39357a55b0e4604e3fcbbb6d7a1e7e7cd878f2d19774da2187d5bdfc20ea49a9"
+},
+{
+"path": "open/candles_1d/KRW-SENT.parquet",
+"bytes": 17125,
+"sha256": "21d62f65eecb22eaedd81afe2191b315720e9f99d994721206cec2355b57db58"
+},
+{
+"path": "open/candles_1d/KRW-SFP.parquet",
+"bytes": 60743,
+"sha256": "7d5c19e47a46e6b5cb470c5490224612808f5ed91d2f11e759f3ae1ff7479b82"
+},
+{
+"path": "open/candles_1d/KRW-SHELL.parquet",
+"bytes": 31492,
+"sha256": "b7bd1869b983f461ed073112e141bf0138eb9b50ebc6bab70f5b5d37eb920dbd"
+},
+{
+"path": "open/candles_1d/KRW-SHIB.parquet",
+"bytes": 54143,
+"sha256": "1cf08d2d956cefb1fae6dcb3048a065b7479cf0077b816d27aae9f7fe30d4251"
+},
+{
+"path": "open/candles_1d/KRW-SIGN.parquet",
+"bytes": 29649,
+"sha256": "28de3f48275c62fdc4eda0804b8b341bfbf5e9e0f1060d839c1d0fc8285ba0de"
+},
+{
+"path": "open/candles_1d/KRW-SKL.parquet",
+"bytes": 39106,
+"sha256": "f7b6608f5681f42e04cc3a6db649872ffada28580c1cf45652066c1387b47166"
+},
+{
+"path": "open/candles_1d/KRW-SKR.parquet",
+"bytes": 17711,
+"sha256": "d97e8d321c3feb9b661d9a19b4084c69bc2fa9e76a940bc92f50675c7bf7a1bd"
+},
+{
+"path": "open/candles_1d/KRW-SKY.parquet",
+"bytes": 35565,
+"sha256": "85ba314e9ee1c188fed209a3040804e561ead5499f83d4f9e20ef69fbb40413d"
+},
+{
+"path": "open/candles_1d/KRW-SLX.parquet",
+"bytes": 11220,
+"sha256": "d8802a24895e9831ca6eb3defc9ae3a30f727ab315ed29ef95fcd0f1abf64eae"
+},
+{
+"path": "open/candles_1d/KRW-SNT.parquet",
+"bytes": 104605,
+"sha256": "14469b2fcf7d3b5dff6981bad9cbf7c5ffbeebc350176875903051f160eb85b6"
+},
+{
+"path": "open/candles_1d/KRW-SOL.parquet",
+"bytes": 93221,
+"sha256": "f87619bbe449bba894795f692e3ff27b4a61e0425401bb300c06ceaca2baf898"
+},
+{
+"path": "open/candles_1d/KRW-SOLV.parquet",
+"bytes": 36164,
+"sha256": "b773cf70a3c407948cf330a4bb77883033fa1a99a2ad47dad941a1c190d1941d"
+},
+{
+"path": "open/candles_1d/KRW-SOMI.parquet",
+"bytes": 19666,
+"sha256": "ee30ff6bf9aadceb7d6772eed245901b1614901826904c4021397b930d117061"
+},
+{
+"path": "open/candles_1d/KRW-SONIC.parquet",
+"bytes": 33448,
+"sha256": "57a4340859d25151bc8f5eb91ab5063f9dbb8d0ee4ca6eeafe04ee42f1cfeb18"
+},
+{
+"path": "open/candles_1d/KRW-SOON.parquet",
+"bytes": 25095,
+"sha256": "68310c47b87fa0471ea8fe31e0b290d1b95dd7c3327be432916fca3a00aa522c"
+},
+{
+"path": "open/candles_1d/KRW-SOPH.parquet",
+"bytes": 29299,
+"sha256": "808a31cdaa4fd59436a5fc0968ff79ad6551b0dab1049005801f279096123316"
+},
+{
+"path": "open/candles_1d/KRW-SPACE.parquet",
+"bytes": 11327,
+"sha256": "973ea5d06fcc00f2710aa7abd409d95386b7cffe752958ec6a671f05f7c524a9"
+},
+{
+"path": "open/candles_1d/KRW-SPK.parquet",
+"bytes": 28009,
+"sha256": "e30363388f3dc8d69c16e6be57b0c39aeceea802c227b0752f2ccafba15c6727"
+},
+{
+"path": "open/candles_1d/KRW-SPX.parquet",
+"bytes": 9808,
+"sha256": "7272905d06b425e3aa9782c71b808d7141d5078278dc42bb88eef2077c191d92"
+},
+{
+"path": "open/candles_1d/KRW-STABLE.parquet",
+"bytes": 19603,
+"sha256": "a7baee508829ff72ffa82fad1b82d0723d5df66ca78dc2b72407544870d01869"
+},
+{
+"path": "open/candles_1d/KRW-STEEM.parquet",
+"bytes": 96799,
+"sha256": "a8055830f348b9390d76a7f01b2c9d5d32f6ee9c511e4e9588ff579ff69109f0"
+},
+{
+"path": "open/candles_1d/KRW-STRAX.parquet",
+"bytes": 47840,
+"sha256": "3ecfcf81c4b1caf23412646c5374a7b38d657aa2be537a8b861d57a5423fb31f"
+},
+{
+"path": "open/candles_1d/KRW-STRK.parquet",
+"bytes": 46975,
+"sha256": "b85cc0bfe58d266ea3d22566adf1ec2fc450c8d54ebe8a4b01999d716f375c7a"
+},
+{
+"path": "open/candles_1d/KRW-STX.parquet",
+"bytes": 59671,
+"sha256": "600154fccaa199e0ca173ae342624ac4dff1c2510fb6e09674159a0a109e2711"
+},
+{
+"path": "open/candles_1d/KRW-SUI.parquet",
+"bytes": 62247,
+"sha256": "82ce6c35db2e3fadf82b46cc103f9dac3602e61ccf44a22b60f15f6b2daced3f"
+},
+{
+"path": "open/candles_1d/KRW-SUN.parquet",
+"bytes": 95976,
+"sha256": "802da799940a4a45d2a43fe42276eba30187e2a840a63841e9a206705641f107"
+},
+{
+"path": "open/candles_1d/KRW-SUPER.parquet",
+"bytes": 19207,
+"sha256": "edaa365daa64f480c094f58b47f52cc4e4445b6291dbbbe95328591e8c1615b6"
+},
+{
+"path": "open/candles_1d/KRW-SUSHI.parquet",
+"bytes": 93856,
+"sha256": "4e0ea3ad2cdac3f09a9a9f462e1e47ecc74b759e0b5571248710391147ba0c98"
+},
+{
+"path": "open/candles_1d/KRW-SWELL.parquet",
+"bytes": 39504,
+"sha256": "47781c20eda349b0376a95fb7ce79d500e1c4fa452626710ff8d7f6cc0dd726e"
+},
+{
+"path": "open/candles_1d/KRW-SXT.parquet",
+"bytes": 28769,
+"sha256": "d0b786686e51f6257f230175c4c8df7f0ce722607ebf311f7cc83146016dcd30"
+},
+{
+"path": "open/candles_1d/KRW-SYRUP.parquet",
+"bytes": 23956,
+"sha256": "7c18752f8623a326e4d2c35600fab1abe8a7fc7dbc7e86352498c54834e5c25f"
+},
+{
+"path": "open/candles_1d/KRW-T.parquet",
+"bytes": 85171,
+"sha256": "da164dfeee4ad846c20981b8b8fa3be3d417e183f263e76363aa505c957f3396"
+},
+{
+"path": "open/candles_1d/KRW-TAIKO.parquet",
+"bytes": 40141,
+"sha256": "cf0700953f1f14c31c053c3da24912fb799cbd6268bba960d4de376992159777"
+},
+{
+"path": "open/candles_1d/KRW-TAO.parquet",
+"bytes": 23825,
+"sha256": "9fcd8d1ea6ac5939fe8cee2861187f8efbbf39c429f02172aeb804dee263f0c0"
+},
+{
+"path": "open/candles_1d/KRW-THE.parquet",
+"bytes": 30606,
+"sha256": "d112ab66c48988c777d662d6d70af13fe53720bf7ad200a98309186a919e4edd"
+},
+{
+"path": "open/candles_1d/KRW-THETA.parquet",
+"bytes": 98568,
+"sha256": "200015987cb3f4d63eba9b2393fd44989f72a00ed183cee056b5fd39d1fd4229"
+},
+{
+"path": "open/candles_1d/KRW-TIA.parquet",
+"bytes": 53580,
+"sha256": "66af0b957d405266005978f0fe6ce9aef2e6e1b99586885522516b653f096f8d"
+},
+{
+"path": "open/candles_1d/KRW-TOSHI.parquet",
+"bytes": 26714,
+"sha256": "0aa2334d33646b5901d7d766333826da60b0afe3c24b175b802946336938006a"
+},
+{
+"path": "open/candles_1d/KRW-TOWNS.parquet",
+"bytes": 26386,
+"sha256": "7ac34fa86ea24ca60ce7fa9cccf070ce3da126fe93bd88b903770c11fbe1fda7"
+},
+{
+"path": "open/candles_1d/KRW-TRB.parquet",
+"bytes": 7693,
+"sha256": "6352ba825c8d1bda2dc902541fa9ac99d9b06c476da5313152ace5b2a6fc7383"
+},
+{
+"path": "open/candles_1d/KRW-TREE.parquet",
+"bytes": 24035,
+"sha256": "a38ad8231f0dfc6459267283551d58c73037adc6fb8eb1e429c66c8d1101cfdd"
+},
+{
+"path": "open/candles_1d/KRW-TRUMP.parquet",
+"bytes": 34031,
+"sha256": "4ca64bd42ed3f7a407bc4ac5fc3739840c4f7d85e93ee7250b73fb1d1136daf3"
+},
+{
+"path": "open/candles_1d/KRW-TRUST.parquet",
+"bytes": 19704,
+"sha256": "e92f62b6b89da2f54a66897628eb2aca0690bf8c23af97a9c6dda87f068b7dad"
+},
+{
+"path": "open/candles_1d/KRW-TRX.parquet",
+"bytes": 92781,
+"sha256": "c644dd56641e07f7398ff7e2af0c9cbe0722f16ad7924b1c91f375a5ce0b31e3"
+},
+{
+"path": "open/candles_1d/KRW-TURBO.parquet",
+"bytes": 39782,
+"sha256": "521a4a75e96dc4a9eace3a2f4b45b840a78177ab82f5577e8acace4d7cb12223"
+},
+{
+"path": "open/candles_1d/KRW-UB.parquet",
+"bytes": 7274,
+"sha256": "3f9cc36781cd356fef056cce0538a70b2c8681b3dcfd6a7b9a28bcf936bca2b1"
+},
+{
+"path": "open/candles_1d/KRW-UMA.parquet",
+"bytes": 101084,
+"sha256": "1cb6b7da935b3d7ba26a3862d892936c3312164aa343c2446cf6b5258fbda690"
+},
+{
+"path": "open/candles_1d/KRW-UNI.parquet",
+"bytes": 97693,
+"sha256": "25a90e2d8872eb18e4a97b6a67c61ebdc5719d797cee2728f45705307d93155b"
+},
+{
+"path": "open/candles_1d/KRW-US.parquet",
+"bytes": 5486,
+"sha256": "361e103fb69a8fdb44336b3c861c540c8cc6cfc729fa26bfc8eb502b254b140f"
+},
+{
+"path": "open/candles_1d/KRW-USDC.parquet",
+"bytes": 39497,
+"sha256": "ffa14a9d8b82e1478e514a6a78a251d7595ba5659b38ffe1008c568478ef14ea"
+},
+{
+"path": "open/candles_1d/KRW-USELESS.parquet",
+"bytes": 6353,
+"sha256": "a15d172c411b614b8c2358dda9e31e98713a0ecaf939d3eba421562ccaae2a23"
+},
+{
+"path": "open/candles_1d/KRW-VANA.parquet",
+"bytes": 34770,
+"sha256": "45c1a1bcce8f212acccc8783e029872b3c85f759f5a813429fc7cc0818a5d5e3"
+},
+{
+"path": "open/candles_1d/KRW-VET.parquet",
+"bytes": 105108,
+"sha256": "bccff654419aa6c9b1ffd965a2cb5ee93c6b1f65fbefa3477d4c614148ef0111"
+},
+{
+"path": "open/candles_1d/KRW-VIRTUAL.parquet",
+"bytes": 35000,
+"sha256": "18f01a86d2eacbdc1e37ff7a8faf301ae0ed7c513357145b602fd2ed90904497"
+},
+{
+"path": "open/candles_1d/KRW-VTHO.parquet",
+"bytes": 37750,
+"sha256": "c3cc93aeff509c7ea136d3a299db34c8640d014d80ba7a75c59feca073f88f89"
+},
+{
+"path": "open/candles_1d/KRW-VVV.parquet",
+"bytes": 14042,
+"sha256": "8fe291920422b279b2f5ed613a87e0309103139f39d318dee6e2b36d7db2023b"
+},
+{
+"path": "open/candles_1d/KRW-W.parquet",
+"bytes": 45028,
+"sha256": "73c556f177fb6135ccbf06808375bce34af1180706b3c4e02abbda73e449da8e"
+},
+{
+"path": "open/candles_1d/KRW-WAL.parquet",
+"bytes": 29216,
+"sha256": "dd75cd20aee5dac50b5071db6d523e46c67e92e2e01f0b4bbc87a3677133456d"
+},
+{
+"path": "open/candles_1d/KRW-WAVES.parquet",
+"bytes": 101495,
+"sha256": "6c0abf28a5a4b30f4566dc1a1aa1f41af412532816c6a9839291da13ade6240a"
+},
+{
+"path": "open/candles_1d/KRW-WAXP.parquet",
+"bytes": 107668,
+"sha256": "6ac869a03ffa6b473b45fa339f29670b73857afd07f1dc9ef5a27fe00d995207"
+},
+{
+"path": "open/candles_1d/KRW-WCT.parquet",
+"bytes": 29525,
+"sha256": "d5af8828a518241e8548b4ea0f53adbe4d965195bcaece262f61369b63b3f1e3"
+},
+{
+"path": "open/candles_1d/KRW-WET.parquet",
+"bytes": 17817,
+"sha256": "691cb098d0f17452bf71294a5eaa07cdbe05471335e56d2b1d464c37ccea5a72"
+},
+{
+"path": "open/candles_1d/KRW-WIF.parquet",
+"bytes": 24909,
+"sha256": "e4b5653ba9a85e9010e9433cd0524fba2ca4e6b43a0ccfce27098e2623bfece5"
+},
+{
+"path": "open/candles_1d/KRW-WLD.parquet",
+"bytes": 58001,
+"sha256": "212cb635cae5054c45bb131fd4f3c0f97c5695947411724000ead5ecea294208"
+},
+{
+"path": "open/candles_1d/KRW-WLFI.parquet",
+"bytes": 22374,
+"sha256": "d7c4bac0418008823c2bf16ff5172ef66cda020a3014cd71b683b2a8e5a104d1"
+},
+{
+"path": "open/candles_1d/KRW-WOO.parquet",
+"bytes": 82313,
+"sha256": "2de27aa8373c6b5618ea67acf745d458f79ce3d5d4925e0637fdaaa15c83438b"
+},
+{
+"path": "open/candles_1d/KRW-XAI.parquet",
+"bytes": 44802,
+"sha256": "c624edfef25c557ad3c2e4585ddcdfa13209d257c2c852a02e28536f8747dcee"
+},
+{
+"path": "open/candles_1d/KRW-XAN.parquet",
+"bytes": 22416,
+"sha256": "87e99e7585ad43b9c8d344bb6caa31fbc028b770856090900312271a0374dce8"
+},
+{
+"path": "open/candles_1d/KRW-XAUT.parquet",
+"bytes": 18684,
+"sha256": "51f4e22e72e87b0c3c4c13821b6f7c6cd3f236eb007f37d8a78bdfac3cd12aca"
+},
+{
+"path": "open/candles_1d/KRW-XCN.parquet",
+"bytes": 76355,
+"sha256": "0f7486f3ea5a69a52a15300dc3bd44b3ba215bf94c2ce2dfc3cf9181f50b4976"
+},
+{
+"path": "open/candles_1d/KRW-XEC.parquet",
+"bytes": 83083,
+"sha256": "5b8128931c2cd02c035808b1a62953f5da6f6d4262ad770654f2827bb6ec49f3"
+},
+{
+"path": "open/candles_1d/KRW-XLM.parquet",
+"bytes": 92962,
+"sha256": "130515d951d73dfa0026eb386b8ccaa9b09e3c41b37b63ec6a59f94f65103ff0"
+},
+{
+"path": "open/candles_1d/KRW-XPL.parquet",
+"bytes": 19017,
+"sha256": "53b3c5ed84de6485fbd9d890ceb63184d549339c2ec9ec83413536bc2146baf4"
+},
+{
+"path": "open/candles_1d/KRW-XRP.parquet",
+"bytes": 100242,
+"sha256": "f7476d32e914263e91d72d955ce97c331c6ac3224138ff6e650d5943985f5c8c"
+},
+{
+"path": "open/candles_1d/KRW-XTZ.parquet",
+"bytes": 97371,
+"sha256": "b804c3cec74447dfa236d859f89eae5023bea76274f8baa150469c12b358e552"
+},
+{
+"path": "open/candles_1d/KRW-XVS.parquet",
+"bytes": 90805,
+"sha256": "7faedaefa13fda6c96fca62edc5d66d2185e3f9c169d8cc65cd5ccd1a4667d2e"
+},
+{
+"path": "open/candles_1d/KRW-YB.parquet",
+"bytes": 19313,
+"sha256": "a16744a89da02a4a6dcf0894e14a160af647fc3075ce5b2e84f0e43791007a98"
+},
+{
+"path": "open/candles_1d/KRW-YFI.parquet",
+"bytes": 112843,
+"sha256": "89b6356bd72e12e49205456e99cb0fdd64a917c342685b60a4e7c36a218ea29d"
+},
+{
+"path": "open/candles_1d/KRW-YGG.parquet",
+"bytes": 49393,
+"sha256": "4d5bc53f5bf54cbadb896ed1413c81ef5d29401449d7e0600c61f301e5e47644"
+},
+{
+"path": "open/candles_1d/KRW-ZAMA.parquet",
+"bytes": 13606,
+"sha256": "b63b8c195f16c46832387be51be6a147b92149bbe9fea3e26e4aa71e669299b1"
+},
+{
+"path": "open/candles_1d/KRW-ZBT.parquet",
+"bytes": 18154,
+"sha256": "b1345f866940933c4d35157531518357282a63532e2e2e8ed1844c3f574aa55b"
+},
+{
+"path": "open/candles_1d/KRW-ZEST.parquet",
+"bytes": 4813,
+"sha256": "903d1db79ed5cfb6bb3b4da707b443c05a8f3df4e70e719472e3739fb2912eeb"
+},
+{
+"path": "open/candles_1d/KRW-ZETA.parquet",
+"bytes": 43964,
+"sha256": "8b23a230634afe21da62555026fe1f9698bd4496242d2aa1a0f6b0422e91774d"
+},
+{
+"path": "open/candles_1d/KRW-ZIL.parquet",
+"bytes": 106582,
+"sha256": "097e731995a786b2e8b4149fd5d25f102e49ec5ff9aa32826b915c94ef8c18f8"
+},
+{
+"path": "open/candles_1d/KRW-ZK.parquet",
+"bytes": 43520,
+"sha256": "49c81fbd93c6ceda70f4746f25d58cd4de1517af0f67b609820c99cc72e203c6"
+},
+{
+"path": "open/candles_1d/KRW-ZKC.parquet",
+"bytes": 22035,
+"sha256": "8e647cbd51be7a36baad0d2c0259c3e131aaaad7d7ae4f3224ed57006934ad7c"
+},
+{
+"path": "open/candles_1d/KRW-ZKP.parquet",
+"bytes": 17431,
+"sha256": "cfb0066f3c0bfa25efb080ff2527a3179f79fa47396b3ee09df2e10f43300dd0"
+},
+{
+"path": "open/candles_1d/KRW-ZORA.parquet",
+"bytes": 22633,
+"sha256": "e2aafcb6c55d9bb626234c9595b1bc00126f36d5181afc0b3676eb572ff6548f"
+},
+{
+"path": "open/candles_1d/KRW-ZRC.parquet",
+"bytes": 36898,
+"sha256": "9f09550852b7f7a5c3f9361d7e984a0be4ad90cbbf2774cdd8acfc0cc0e8f6ce"
+},
+{
+"path": "open/candles_1d/KRW-ZRO.parquet",
+"bytes": 43158,
+"sha256": "699434d32eff9fa5e7f06bc9208ff7a3ca1279881714c6ccce65ce4ec6c994c2"
+},
+{
+"path": "open/candles_1d/KRW-ZRX.parquet",
+"bytes": 95531,
+"sha256": "8d8ee5c1c6286cfc3085eae2b5ad5820d26e4ca72737e6ac974a44efd5a4839a"
+},
+{
+"path": "raw/contracts.json",
+"bytes": 52727,
+"sha256": "116c7c4a2d1f116f631416237654d616432f4d8cb7a6d611bea640977567150f"
+},
+{
+"path": "reserved/README.md",
+"bytes": 108,
+"sha256": "e24ee1bf25a59765b9af0e5897380cce9264c75dcdaa7eff5766ae81f3ff0e6e"
+},
+{
+"path": "reserved/candles_1d/KRW-A.parquet",
+"bytes": 54595,
+"sha256": "095cf7a8027bb9fb87e06889621abf5d8e837e4d29544cb986fe138d700ff2e5"
+},
+{
+"path": "reserved/candles_1d/KRW-A8.parquet",
+"bytes": 33708,
+"sha256": "1f6bc465268b1b32685f9220efbfec5db833df84cbd290083cf95ed975c47974"
+},
+{
+"path": "reserved/candles_1d/KRW-ACS.parquet",
+"bytes": 65369,
+"sha256": "5c1aaa39a223624e1a556ed7f492536967da9a52130868bb900b379323e78962"
+},
+{
+"path": "reserved/candles_1d/KRW-ADA.parquet",
+"bytes": 44688,
+"sha256": "9809e62a30e83c6e906c810923ecaa71d6d86efab3855b5dc25ca13f332d687a"
+},
+{
+"path": "reserved/candles_1d/KRW-ADP.parquet",
+"bytes": 109702,
+"sha256": "c6bdc87c060037ebe50e2245ae8605d8d780f82f5b4790e77e7c655fc60f4df4"
+},
+{
+"path": "reserved/candles_1d/KRW-AEON.parquet",
+"bytes": 8718,
+"sha256": "51864f875594a6da6949b69d6a6adb5c3258918d6947090ba6f335bcc0b3e383"
+},
+{
+"path": "reserved/candles_1d/KRW-AGI.parquet",
+"bytes": 58170,
+"sha256": "ff379fa51b290aee8baa8b968059dc9c88754f46e3e6929e7e14d89d2478814a"
+},
+{
+"path": "reserved/candles_1d/KRW-AHT.parquet",
+"bytes": 36692,
+"sha256": "2265aa33619036054aaf4c50ad74dc045daac72429a2f436cd471fbd9a3d2f06"
+},
+{
+"path": "reserved/candles_1d/KRW-AIOZ.parquet",
+"bytes": 43631,
+"sha256": "5d86584e5cf630f30a3690dc61489c51073df9ebd12b7f10710d784eb84f917c"
+},
+{
+"path": "reserved/candles_1d/KRW-AL.parquet",
+"bytes": 66780,
+"sha256": "730ef82d41d0105b4a9dd630a06609c841d54955975dc324b763fb653ff6cd6a"
+},
+{
+"path": "reserved/candles_1d/KRW-ALGO.parquet",
+"bytes": 11804,
+"sha256": "3ab4c38082f9f433073d1381a745b858a7da34b790b9cb8254854b45672c2e54"
+},
+{
+"path": "reserved/candles_1d/KRW-AMO.parquet",
+"bytes": 141015,
+"sha256": "16d4e5580f33079131d906e092eb03a1526ddddd67a67ce9f1ff80deecef8519"
+},
+{
+"path": "reserved/candles_1d/KRW-AMP.parquet",
+"bytes": 34303,
+"sha256": "c29147919ec4461074708fc34b11d0b5a6e947710978ea85d7c1442583d17abe"
+},
+{
+"path": "reserved/candles_1d/KRW-ANKR.parquet",
+"bytes": 33269,
+"sha256": "74c07fd58d0552629afaf51c775ee0183f726a694c4c0d8018fca7aafd78678f"
+},
+{
+"path": "reserved/candles_1d/KRW-ARDR.parquet",
+"bytes": 32006,
+"sha256": "96168adb6f12ffae25dd64c7138c2a7a7be1ca11e1eb1de81ceb0669ab2a6d8b"
+},
+{
+"path": "reserved/candles_1d/KRW-ARPA.parquet",
+"bytes": 15637,
+"sha256": "d583facdac1288295301fd108ec9c433f6ffebcdfe2144260854e8691ffeb03c"
+},
+{
+"path": "reserved/candles_1d/KRW-ATOM.parquet",
+"bytes": 6057,
+"sha256": "94443c5e47775aa5b09dff49deb9160252148d82638055af6237ac576c7f5e48"
+},
+{
+"path": "reserved/candles_1d/KRW-AVAIL.parquet",
+"bytes": 42886,
+"sha256": "74ca6e19a4944e44ee4973d1eed5c70c847ac9b4c0d54aaa5ee6b031eeec5f80"
+},
+{
+"path": "reserved/candles_1d/KRW-AVL.parquet",
+"bytes": 30686,
+"sha256": "fb8514bba88944042db0734760a03499ff72c6591a598eeed708da8a75231dc0"
+},
+{
+"path": "reserved/candles_1d/KRW-AZIT.parquet",
+"bytes": 72859,
+"sha256": "8e9a64c11da6307fafa6f49b48a43a6e1735b28ed11f4b3cbb791e62ae4de4fb"
+},
+{
+"path": "reserved/candles_1d/KRW-BAT.parquet",
+"bytes": 36917,
+"sha256": "54af46132bba7b4742428a541aa673f8d345cfab01ccab7aae8583c92c4eb1bd"
+},
+{
+"path": "reserved/candles_1d/KRW-BCH.parquet",
+"bytes": 65623,
+"sha256": "563e3f833fb79d43c1b7a5a891ce4caf3d0d3b17f3d33f0474b09b87bfdf0eff"
+},
+{
+"path": "reserved/candles_1d/KRW-BEAM.parquet",
+"bytes": 40453,
+"sha256": "7bd2d97b2790d658be2c1e2e13d1dd7926b6622c2d747995423eef51b3493d55"
+},
+{
+"path": "reserved/candles_1d/KRW-BFC.parquet",
+"bytes": 93714,
+"sha256": "d636a17aebc9cef4e3648fe8acedb1ff330adb99ceacb189ba1fb10b7044f8b0"
+},
+{
+"path": "reserved/candles_1d/KRW-BIOT.parquet",
+"bytes": 105753,
+"sha256": "f1ad45771df8d8a8d48271afab0131ee81e5aa7ad9532f380dffd0b7a65f1c32"
+},
+{
+"path": "reserved/candles_1d/KRW-BLAST.parquet",
+"bytes": 48602,
+"sha256": "d3585d326558b459e4910e003833448b7a2687db22b0824ad08ef9f89799bc03"
+},
+{
+"path": "reserved/candles_1d/KRW-BLEND.parquet",
+"bytes": 12748,
+"sha256": "7555322952b525560380842161cef4387e929d6bbdfb68fcd0b6f2521d6f31aa"
+},
+{
+"path": "reserved/candles_1d/KRW-BLUE.parquet",
+"bytes": 27937,
+"sha256": "0196ecddb5337210ee2102bd3198b1fa31746c73f4c0cd035d39a3d8b1f570c2"
+},
+{
+"path": "reserved/candles_1d/KRW-BOBA.parquet",
+"bytes": 81840,
+"sha256": "81c4845de186c23bd4552cdadaffa7271141f7c9eab9ad0887301c47173c137c"
+},
+{
+"path": "reserved/candles_1d/KRW-BORA.parquet",
+"bytes": 103535,
+"sha256": "d103720643c8fa53a2ec8a878868fb05149893afb10ed2f97d35ad9bc354314f"
+},
+{
+"path": "reserved/candles_1d/KRW-BOUNTY.parquet",
+"bytes": 35071,
+"sha256": "52e1c1dfffc6d2a1a5ad335d3aa5d7d58187ffc6854155f1c058ef7171a3c1fd"
+},
+{
+"path": "reserved/candles_1d/KRW-BSV.parquet",
+"bytes": 41327,
+"sha256": "0de0d585ab723c2f75d645e409d7cc4183b40d692561bdc8d519abb35c760518"
+},
+{
+"path": "reserved/candles_1d/KRW-BTC.parquet",
+"bytes": 120521,
+"sha256": "7fcf1903230d86262163315e3d40e10dd1a6cf53e524488c541d8a8024706d87"
+},
+{
+"path": "reserved/candles_1d/KRW-CAMP.parquet",
+"bytes": 26492,
+"sha256": "567f8f7704a4047ca8d9ee548830dca35c8a271db93dc66d35e3af1163a769e7"
+},
+{
+"path": "reserved/candles_1d/KRW-CASHCAT.parquet",
+"bytes": 4980,
+"sha256": "cd185ca4db1bbad6c5e60bd9aeb2b652a171e6297e2fc413ba7efe8df4fb7a7f"
+},
+{
+"path": "reserved/candles_1d/KRW-CBK.parquet",
+"bytes": 30456,
+"sha256": "9d4a755c667c4b1c1bf45af380748d400f53822560fb418389f77e7ff2b324e9"
+},
+{
+"path": "reserved/candles_1d/KRW-CHECK.parquet",
+"bytes": 8936,
+"sha256": "34d763c9bf85c56f44bea5cd8012f23e13b1e0370d8fbac3bfec5f415135df10"
+},
+{
+"path": "reserved/candles_1d/KRW-CHR.parquet",
+"bytes": 26733,
+"sha256": "5e7d73ea7094c8d4180a8dd06f09159b1f26bea0cf4bb36df9de0a33a72366c1"
+},
+{
+"path": "reserved/candles_1d/KRW-CORE.parquet",
+"bytes": 42783,
+"sha256": "2278ca2eb0665a975b9f7bd7f01e0796128aa0b157202f3dcc283aa390d02fc8"
+},
+{
+"path": "reserved/candles_1d/KRW-COS.parquet",
+"bytes": 19333,
+"sha256": "03c0921ae63846358f8f7e273f77e53d8320e839d5aa6def17c8b748d10f2b26"
+},
+{
+"path": "reserved/candles_1d/KRW-CP.parquet",
+"bytes": 6640,
+"sha256": "f7a00a63b925b1384313470493fce58e61ead526d567b3d3220ad81e495423a9"
+},
+{
+"path": "reserved/candles_1d/KRW-CPOOL.parquet",
+"bytes": 21954,
+"sha256": "4b65d92948e2eb8d90f9c33bbe3dd2084cebb263d7e80347097bef98102cd634"
+},
+{
+"path": "reserved/candles_1d/KRW-CRO.parquet",
+"bytes": 116798,
+"sha256": "a92e011333b86643782f653027333850c03363addd6312087e094b886d2c4538"
+},
+{
+"path": "reserved/candles_1d/KRW-CRTS.parquet",
+"bytes": 75481,
+"sha256": "913ac1bf25aee420fefa92622521002ed0182116ab98e5ec91b1c191b74f1917"
+},
+{
+"path": "reserved/candles_1d/KRW-CSPR.parquet",
+"bytes": 85160,
+"sha256": "99eb3549a17b70f53c529ff18a42af292b484e234c7900943345facd279890bb"
+},
+{
+"path": "reserved/candles_1d/KRW-CT.parquet",
+"bytes": 4512,
+"sha256": "3c5e791ad58a739be82da9258d884e26712cdeff52f875e6ea6c5208bcc304b3"
+},
+{
+"path": "reserved/candles_1d/KRW-CTC.parquet",
+"bytes": 81249,
+"sha256": "e8474e8589ebca08469054874525646db8c79940638a9cd7a6ebfd60eedd96f6"
+},
+{
+"path": "reserved/candles_1d/KRW-DAO.parquet",
+"bytes": 81584,
+"sha256": "a334ae3f6f5300ff476b4154d4d50ad32b4698fa232a72b783071b7f6d2d2ceb"
+},
+{
+"path": "reserved/candles_1d/KRW-DATA.parquet",
+"bytes": 32404,
+"sha256": "1a91be326dd6fe790917d3a1f0379777e5ab929dee6f8a2354c8fd9f9c9e6983"
+},
+{
+"path": "reserved/candles_1d/KRW-DBR.parquet",
+"bytes": 35763,
+"sha256": "7001cc73ad7b604d67cc7b460708ff472a690bb6f705e87aa71e223ae64ae68b"
+},
+{
+"path": "reserved/candles_1d/KRW-DEBIT.parquet",
+"bytes": 6324,
+"sha256": "d2c051fc0843ee6fdcd832c83ffe72ec6f7f7a849d7aebd8263cc1c923b168d6"
+},
+{
+"path": "reserved/candles_1d/KRW-DKA.parquet",
+"bytes": 36261,
+"sha256": "d649caf88b45acd5260714b3e6ef6f0d02ddc614b0a351a6f6f4ab6c239c78af"
+},
+{
+"path": "reserved/candles_1d/KRW-DOT.parquet",
+"bytes": 8366,
+"sha256": "be89bfe4fa8b93d08987df8ef61f7af40a47c87a26b99435af00f2245dccb67a"
+},
+{
+"path": "reserved/candles_1d/KRW-DRV.parquet",
+"bytes": 8695,
+"sha256": "26d0f725c0c7ba019764a570123fc25950356d4ecc38fd0523b1aafc64454848"
+},
+{
+"path": "reserved/candles_1d/KRW-EDGEX.parquet",
+"bytes": 11794,
+"sha256": "4059af672e92efb68307850744e06c1dde8ad043af9d22cf07134d35305e6736"
+},
+{
+"path": "reserved/candles_1d/KRW-EGG.parquet",
+"bytes": 119488,
+"sha256": "6b5a39593c83f5c05a524743f7d1d31aa6ef0f5139fbf9600a8da225d74a2112"
+},
+{
+"path": "reserved/candles_1d/KRW-EL.parquet",
+"bytes": 117707,
+"sha256": "000d13647c84c12dfccb206979893d2fa78e1a6a4622f845e69695e5740091c6"
+},
+{
+"path": "reserved/candles_1d/KRW-ELF.parquet",
+"bytes": 137418,
+"sha256": "afb0edb47304289cad2652e706f8f81917060053251c7ed25a19962a33a47972"
+},
+{
+"path": "reserved/candles_1d/KRW-ENJ.parquet",
+"bytes": 40454,
+"sha256": "fc043cd1c8b5920e59977be49324a4ecb49bc16d4032313b700c805822fdc12e"
+},
+{
+"path": "reserved/candles_1d/KRW-ETC.parquet",
+"bytes": 64355,
+"sha256": "3027e78fe65d2516d5fd450dc7ef83e07d8c6d5b483e7bcd6bb5fc7a82e15f9c"
+},
+{
+"path": "reserved/candles_1d/KRW-ETH.parquet",
+"bytes": 78744,
+"sha256": "431d78db1469c43043d9ae689df3abda0461f1f2658ab0e1f26d0d5d8080d5c9"
+},
+{
+"path": "reserved/candles_1d/KRW-EURC.parquet",
+"bytes": 6640,
+"sha256": "8fc37e1d78ffe139ab5601e8d4effd564bf54db2a7f5622ff31e27a51857a5c7"
+},
+{
+"path": "reserved/candles_1d/KRW-FANC.parquet",
+"bytes": 70342,
+"sha256": "d8a5cc9bb3ebd2eba0ac943fc71c5acf2570c58d7d823a4bb9fffd40a07c6333"
+},
+{
+"path": "reserved/candles_1d/KRW-FCT2.parquet",
+"bytes": 125873,
+"sha256": "cec90147f5926f6a4015b9d8773b4c0d2195c42692826983145c8ee295f5a302"
+},
+{
+"path": "reserved/candles_1d/KRW-FLR.parquet",
+"bytes": 69979,
+"sha256": "a6359bebd4de9cf95d1afa8ad72c9343f5af9537ba871a8306506b71b688f9d4"
+},
+{
+"path": "reserved/candles_1d/KRW-FOLD.parquet",
+"bytes": 7173,
+"sha256": "a0c1eea794a97b0ff1cec678b5047a17d5f6f664a1703fce685349fc2cab1370"
+},
+{
+"path": "reserved/candles_1d/KRW-FORT.parquet",
+"bytes": 27438,
+"sha256": "acbe829ba279445f1181181b62dfc53e38a6c007fd8f19401957bf0afaf57a78"
+},
+{
+"path": "reserved/candles_1d/KRW-GAME2.parquet",
+"bytes": 36697,
+"sha256": "9ce455ddc82585bb0fbc5efc9673f2cc9301aae6b59605ef4c85c80fcf2468ed"
+},
+{
+"path": "reserved/candles_1d/KRW-GEOD.parquet",
+"bytes": 8039,
+"sha256": "d1ce1baaa032e277a5a93afc6a35ad6536baca7b98397908833b6f1c060d26f1"
+},
+{
+"path": "reserved/candles_1d/KRW-GHX.parquet",
+"bytes": 96466,
+"sha256": "3cc255e578aea39704b3c928e1e1407eb24b935eb66e5e7834aca8fd396ef63b"
+},
+{
+"path": "reserved/candles_1d/KRW-GLM.parquet",
+"bytes": 47231,
+"sha256": "e795de48f62dea9b7d37f4de928fc2112c2d1bc1a76372e4dfad11ab2f079c8b"
+},
+{
+"path": "reserved/candles_1d/KRW-GNO.parquet",
+"bytes": 31577,
+"sha256": "f421ed68b2daae1f05c7db88813df61624067fef184355c271d1e37c7b9bcc71"
+},
+{
+"path": "reserved/candles_1d/KRW-GRND.parquet",
+"bytes": 58127,
+"sha256": "3430486642b2703bd20b901d9a903e922d65c826d313ad063879f95c9cb776d1"
+},
+{
+"path": "reserved/candles_1d/KRW-HIVE.parquet",
+"bytes": 10598,
+"sha256": "5c50a8387d3dd1405e30b19cd16ce73d748725f46ca02c9425ec34f662891d81"
+},
+{
+"path": "reserved/candles_1d/KRW-HP.parquet",
+"bytes": 35659,
+"sha256": "8b0e3f3f49eddf910c04c4f93fdc3c628434f2e08dd7414fe90b7dadbe9d59f1"
+},
+{
+"path": "reserved/candles_1d/KRW-HPP.parquet",
+"bytes": 11610,
+"sha256": "dd784eef07d45042d8104134bd15f4fa501354aba275891f8ec1c6d606604fa1"
+},
+{
+"path": "reserved/candles_1d/KRW-HUNT.parquet",
+"bytes": 39400,
+"sha256": "942dfa1657090ef06fab76915318617b285406f942d35eb715c274428ce00789"
+},
+{
+"path": "reserved/candles_1d/KRW-IOST.parquet",
+"bytes": 39273,
+"sha256": "2631a8a6a26dca9466d6c2f76e57581fb3e32596383dd3c0693c4293a18547ba"
+},
+{
+"path": "reserved/candles_1d/KRW-IQ.parquet",
+"bytes": 51773,
+"sha256": "203106707338c3f584123d34eb50fa27d6af928e254dc9573cfea72da9457311"
+},
+{
+"path": "reserved/candles_1d/KRW-JST.parquet",
+"bytes": 6067,
+"sha256": "8d452c294f26775f5970b0b4e7fbe2d2dc55afbebde8fd1464a2dcb4e5c95d61"
+},
+{
+"path": "reserved/candles_1d/KRW-KNC.parquet",
+"bytes": 46181,
+"sha256": "cd915b20f9e40b6d38a02968ff4b80f2966b15cc6ba64b0dc65ae2cd9e154e9b"
+},
+{
+"path": "reserved/candles_1d/KRW-LINK.parquet",
+"bytes": 42537,
+"sha256": "34bbd28cd10d3f9e832ac543227fcfd70172d46059ef4fa18f389e8b7f7d5c1c"
+},
+{
+"path": "reserved/candles_1d/KRW-LM.parquet",
+"bytes": 71000,
+"sha256": "74de1f99705ea3b502d2928e09f4b1d31c2be80b7c4c2172226d4258f4fa9166"
+},
+{
+"path": "reserved/candles_1d/KRW-LWP.parquet",
+"bytes": 68260,
+"sha256": "ba17d6453025a05ca22960d54d6582c77fe29b0b71805a153d952fd9f4bba3a0"
+},
+{
+"path": "reserved/candles_1d/KRW-MAPO.parquet",
+"bytes": 97605,
+"sha256": "00e5c18864b89bcd9a2aa42c2377f1172bc1e4431c0a5468eef68bb797f3c9db"
+},
+{
+"path": "reserved/candles_1d/KRW-MAY.parquet",
+"bytes": 83092,
+"sha256": "a84ac04be03c99805d8e9a1362e02dd8550963a3939d0f09a4e0bb446b4634b3"
+},
+{
+"path": "reserved/candles_1d/KRW-MBL.parquet",
+"bytes": 23261,
+"sha256": "92b379cd5e3c621f50561628b5bfdf45fd7d307324ccbb8c568bcc43c5060056"
+},
+{
+"path": "reserved/candles_1d/KRW-MBX.parquet",
+"bytes": 77454,
+"sha256": "bc0379d3a125fe18064ba209d3e795f7af4fd3a22e9c0a6e111279bab00501a8"
+},
+{
+"path": "reserved/candles_1d/KRW-MED.parquet",
+"bytes": 85927,
+"sha256": "ffacfefefe253c210b095a152669b4d90dcd77059de33c0b31708d9b9f3347d9"
+},
+{
+"path": "reserved/candles_1d/KRW-META.parquet",
+"bytes": 16227,
+"sha256": "c1e1bdcf03cda08f19fc1dcdbda4d45ca74b67a0ae52851dffcabb1616301bf3"
+},
+{
+"path": "reserved/candles_1d/KRW-META2.parquet",
+"bytes": 7978,
+"sha256": "1904113c21ffd6138f86cd2cf51a3bc7d65b6e094aa83b23519b95afef4d3d9b"
+},
+{
+"path": "reserved/candles_1d/KRW-MEV.parquet",
+"bytes": 119529,
+"sha256": "98597017d119f1a2a9f8fe09fec7b299a78428e6e529a168f5c1d2d9dfb62dc5"
+},
+{
+"path": "reserved/candles_1d/KRW-MLK.parquet",
+"bytes": 102582,
+"sha256": "d841ea5501b571426f618ca79eca50a8c4382ed9d292473d9269d28228aaa2a3"
+},
+{
+"path": "reserved/candles_1d/KRW-MNT.parquet",
+"bytes": 45813,
+"sha256": "b9b29add8d9ea50e144abbfa322a0e5adbd72e3053be1af7bfeab556005f37a1"
+},
+{
+"path": "reserved/candles_1d/KRW-MOC.parquet",
+"bytes": 50542,
+"sha256": "1520a2484959c4152885ce5fc4bbb3462c47e65fc1a3003c679528a61ca98036"
+},
+{
+"path": "reserved/candles_1d/KRW-MPLX.parquet",
+"bytes": 9946,
+"sha256": "05a228fca38d546683f562aec049b3291182c27e6515b6dd11ee22f60baf941d"
+},
+{
+"path": "reserved/candles_1d/KRW-MTL.parquet",
+"bytes": 36161,
+"sha256": "2c9f0dc417f5b7bbcbdd5a4402e1935d429a8b054076548a03c732b56d97e2e7"
+},
+{
+"path": "reserved/candles_1d/KRW-MVC.parquet",
+"bytes": 102153,
+"sha256": "545da0de6870971b6da1ec84f577150c35334b46aa886f02c259319cdc3c0e2b"
+},
+{
+"path": "reserved/candles_1d/KRW-MVL.parquet",
+"bytes": 39812,
+"sha256": "541a6218f480e28051775ab3b64a61c72fa66862f8c67dc0f98dbcc9ca320765"
+},
+{
+"path": "reserved/candles_1d/KRW-NCT.parquet",
+"bytes": 61369,
+"sha256": "e6857bdf19bcb82204dcad11895a2fe47e72da4689f99b0c7c7d7c85c801e5e2"
+},
+{
+"path": "reserved/candles_1d/KRW-NEX.parquet",
+"bytes": 8141,
+"sha256": "50a2fb3e3159aab1e403bf2fa224e14f6efeaf1500758c4e90674b810f762687"
+},
+{
+"path": "reserved/candles_1d/KRW-NEXO.parquet",
+"bytes": 6932,
+"sha256": "d53393656806b0b87e44e72621f923c80ad21d9b4f199cfb18c9286b6a7410bf"
+},
+{
+"path": "reserved/candles_1d/KRW-NFT.parquet",
+"bytes": 53903,
+"sha256": "dac67f5ede1ea5fe42dc309169effad0db5bcf0e348fada96841f3066ba3d60e"
+},
+{
+"path": "reserved/candles_1d/KRW-OBSR.parquet",
+"bytes": 107066,
+"sha256": "be1c96c5b6b7727361d8cd06a70d3a0d1aa696ff81ce7c3526238f054582af3e"
+},
+{
+"path": "reserved/candles_1d/KRW-OBT.parquet",
+"bytes": 35534,
+"sha256": "69bfef2ca8fd953a359965cc85fc6f4ab6616a23a93dd101e1b9e3c714d19637"
+},
+{
+"path": "reserved/candles_1d/KRW-ONG.parquet",
+"bytes": 9767,
+"sha256": "d1b3f1dd6f218661b108c305c6315f407fddc52a20e69b4d6e8a647d637f32cf"
+},
+{
+"path": "reserved/candles_1d/KRW-ONT.parquet",
+"bytes": 9838,
+"sha256": "f79cd01f8a7a586d56e5e656414bad868e74fc1c5e7cf4b3df74023ea9d22d01"
+},
+{
+"path": "reserved/candles_1d/KRW-ORBS.parquet",
+"bytes": 31864,
+"sha256": "2d47767d8fda3b757750f9fc1b0537a76ebb045db6e63e1bb3eb1a67faef66d1"
+},
+{
+"path": "reserved/candles_1d/KRW-OSMO.parquet",
+"bytes": 50780,
+"sha256": "3f900402eeae50e204c038b248f910e349a03c52efbe517687b9cf04a21ef2c9"
+},
+{
+"path": "reserved/candles_1d/KRW-PCI.parquet",
+"bytes": 37259,
+"sha256": "bbabccee820c656fd821a2e7cc606149bcb6c4eadb4dac1e6b418ef18471ab41"
+},
+{
+"path": "reserved/candles_1d/KRW-PEAQ.parquet",
+"bytes": 34610,
+"sha256": "c64ea709297bca4719edc278bc82a14c1c0289a2c9e3b3b11f456ccd905bacc2"
+},
+{
+"path": "reserved/candles_1d/KRW-POD.parquet",
+"bytes": 5106,
+"sha256": "66fe34baeba9782fe00991260932b104aa1bfd4e4c3a3fe81f10d9dae75071f9"
+},
+{
+"path": "reserved/candles_1d/KRW-POKT.parquet",
+"bytes": 28105,
+"sha256": "11421662f65225063fdfebc2592d11101d77c74df3a34c66ef4369a799fa3a32"
+},
+{
+"path": "reserved/candles_1d/KRW-POWR.parquet",
+"bytes": 46498,
+"sha256": "110b2fc11244479c1e179a5ed026938cf320e64b5d4400e6917eb678d7dd8a11"
+},
+{
+"path": "reserved/candles_1d/KRW-PROS.parquet",
+"bytes": 11630,
+"sha256": "4447e89bf0e8c658356e5aaea4536557e0a2a669da243e9bd21ddc14821d643f"
+},
+{
+"path": "reserved/candles_1d/KRW-PYR.parquet",
+"bytes": 54928,
+"sha256": "579aa19e8c491d8ab0c6ca9a5c470ae21938bd8e7c69f81d02c7d154c944bc1a"
+},
+{
+"path": "reserved/candles_1d/KRW-PYUSD.parquet",
+"bytes": 5318,
+"sha256": "dd834c04a79572ca29f3b08f6eee08832c141b6e9838529c6864e5f7d5baa2c5"
+},
+{
+"path": "reserved/candles_1d/KRW-QKC.parquet",
+"bytes": 35817,
+"sha256": "81aa2bb23a5e0c30b232627d487da9920f20229936897b2f657f27614d9f2c27"
+},
+{
+"path": "reserved/candles_1d/KRW-QTUM.parquet",
+"bytes": 57737,
+"sha256": "a7faf00906d512deee604da3d435e15ae9129a621d6672e012e7db51b64a0b92"
+},
+{
+"path": "reserved/candles_1d/KRW-QUID.parquet",
+"bytes": 8315,
+"sha256": "a48ff1a4e9cd410e3dd8a39260e8fcf94b77392bfde39a8fc03be65dc621ac94"
+},
+{
+"path": "reserved/candles_1d/KRW-REQ.parquet",
+"bytes": 67368,
+"sha256": "f3de857ecae9330cad4a510b3bb0fd2fd6e0b4322e1f1b64f24231061c3c49fa"
+},
+{
+"path": "reserved/candles_1d/KRW-RLUSD.parquet",
+"bytes": 7693,
+"sha256": "87cd879e8873557e28212d40ad19ac61c3ca073ccb2a41cd96b2bc3505a8a9a9"
+},
+{
+"path": "reserved/candles_1d/KRW-ROA.parquet",
+"bytes": 57727,
+"sha256": "6be2f96f3a7619dd4323b15fe11b4e3076bc3d658435271c7a4d9985a8d0dc32"
+},
+{
+"path": "reserved/candles_1d/KRW-RON.parquet",
+"bytes": 34129,
+"sha256": "4dd683813f12dd6e0a9a0902ac502605f38b4295f2c462499133f75253dd51d3"
+},
+{
+"path": "reserved/candles_1d/KRW-SAND.parquet",
+"bytes": 7093,
+"sha256": "1fd808063f7a49cf1795aa7650afaeb930e97f2f48f57d2e356fc3cb4f0c50d2"
+},
+{
+"path": "reserved/candles_1d/KRW-SD.parquet",
+"bytes": 20804,
+"sha256": "f3416e005155e770ea34605b2a1cc292c8a784260a0287db5f6d4048c177590c"
+},
+{
+"path": "reserved/candles_1d/KRW-SIX.parquet",
+"bytes": 82382,
+"sha256": "b5aa7d5243154d6614f020ca7aefcad22c7daa1add0430dc35f8b757583af8d7"
+},
+{
+"path": "reserved/candles_1d/KRW-SNT.parquet",
+"bytes": 44459,
+"sha256": "3f3b204a4c0d088d645c485914cc753adfb8ac4b12430acfa70f5d5927eee24a"
+},
+{
+"path": "reserved/candles_1d/KRW-STAT.parquet",
+"bytes": 63292,
+"sha256": "d2242aef2b69c853fab9a6854c009a5442ee723b19fb3dd1170136c7a14322b9"
+},
+{
+"path": "reserved/candles_1d/KRW-STEEM.parquet",
+"bytes": 46228,
+"sha256": "3464b27fc6792605b2c86a59817e778eec9c8a503cc7e5bd1e185b25ee83930e"
+},
+{
+"path": "reserved/candles_1d/KRW-SWAP.parquet",
+"bytes": 73480,
+"sha256": "c5be952f19bfd21c19d991964d5ac67972b246138ca082dc928082ce07c926d9"
+},
+{
+"path": "reserved/candles_1d/KRW-TAVA.parquet",
+"bytes": 80928,
+"sha256": "22fa72268c0bf0b4bee28c2d6b6927d964302e25d6206f5dadc6f8c908204140"
+},
+{
+"path": "reserved/candles_1d/KRW-TDROP.parquet",
+"bytes": 89313,
+"sha256": "7995d162f70be20b0e14e5fc28f24ad2055a9219d7c6099950ff7619ff8ec08e"
+},
+{
+"path": "reserved/candles_1d/KRW-TEMCO.parquet",
+"bytes": 104783,
+"sha256": "2ed126038fa39787eeba9f64fcae710b02cad32a65176600c6d3fd8326190602"
+},
+{
+"path": "reserved/candles_1d/KRW-TFUEL.parquet",
+"bytes": 99650,
+"sha256": "28909c865e67b037587e6524077bb909768df08314d7f547d02f95e6c6780289"
+},
+{
+"path": "reserved/candles_1d/KRW-THETA.parquet",
+"bytes": 40510,
+"sha256": "e6eabd6d7d0ec3f4775e737a1d4577f7072c187ec9434681e218d972112c0354"
+},
+{
+"path": "reserved/candles_1d/KRW-THQ.parquet",
+"bytes": 19038,
+"sha256": "6543b105605e3f6b261b689ec0f7718a6e34e5b7dc0089cfb6ad9848d9d5dfc0"
+},
+{
+"path": "reserved/candles_1d/KRW-TOKAMAK.parquet",
+"bytes": 35599,
+"sha256": "d546ddfe4d42ced404548829f16fb5c3399ae7018ddd1cbf629ab059cbb723bc"
+},
+{
+"path": "reserved/candles_1d/KRW-TRAC.parquet",
+"bytes": 17265,
+"sha256": "3b932ee6b027624d7646cae0bc81329bde43e6e75d06998567d8f613bc8b6f41"
+},
+{
+"path": "reserved/candles_1d/KRW-TRX.parquet",
+"bytes": 44826,
+"sha256": "c062e7d614cb0ec6b3edf83dee081dcde164a10de7809e435050dcad818e2845"
+},
+{
+"path": "reserved/candles_1d/KRW-UMA.parquet",
+"bytes": 5259,
+"sha256": "5ce205e1b56101f1f53f6a11f6cd1990b160d9f4995e423507ac354e279422ae"
+},
+{
+"path": "reserved/candles_1d/KRW-UNI.parquet",
+"bytes": 8090,
+"sha256": "2d6c266fc0cff76f5149ea03267fd2fe5fda442ebc0b332f6d6f72eaacb1cef7"
+},
+{
+"path": "reserved/candles_1d/KRW-UOS.parquet",
+"bytes": 90608,
+"sha256": "e8393d96de251c79a85dcec4b84c54ef5ded0d8048e61e17d504b19f079a7589"
+},
+{
+"path": "reserved/candles_1d/KRW-UP.parquet",
+"bytes": 12189,
+"sha256": "c38d8c43f119138bb5d0287d581034ca956119e0f2400f4074a7039ce0527dd6"
+},
+{
+"path": "reserved/candles_1d/KRW-USD1.parquet",
+"bytes": 19117,
+"sha256": "61aedfd317b2a7093f6fccce59237af81a509f5605854db4de6c502961083c63"
+},
+{
+"path": "reserved/candles_1d/KRW-USDE.parquet",
+"bytes": 14518,
+"sha256": "4fed419274aeb8c790281d187561c7e77b6299ac4b841c5244b111ff6efec945"
+},
+{
+"path": "reserved/candles_1d/KRW-USDG.parquet",
+"bytes": 7393,
+"sha256": "04e4621f2ef3835af2041bd23d38be96531dd9a76b5dadebab012fbaa4d2c23a"
+},
+{
+"path": "reserved/candles_1d/KRW-USDS.parquet",
+"bytes": 70811,
+"sha256": "2fb6a49cec47063a88450615494ec3318d7ad2eb7582e8914771174c394e23c3"
+},
+{
+"path": "reserved/candles_1d/KRW-USDT.parquet",
+"bytes": 39586,
+"sha256": "b938a3369e8de3dbd8dfc7bb183034f510911756969d71d5282b778b04ecf4a8"
+},
+{
+"path": "reserved/candles_1d/KRW-VERONA.parquet",
+"bytes": 16678,
+"sha256": "bf1667d3b077b5bb82c35d465082919d368df12ec01bc69a93a217a00a992733"
+},
+{
+"path": "reserved/candles_1d/KRW-VET.parquet",
+"bytes": 42070,
+"sha256": "1925819bce02ffe74f56f5d32835501c44840afc92d783a421434af94c0efbdf"
+},
+{
+"path": "reserved/candles_1d/KRW-WAVES.parquet",
+"bytes": 42350,
+"sha256": "1f07a9d03ffe043bc6441b1f08a3d7cf1f8e2ec3a2786f278188eb3e48b4314d"
+},
+{
+"path": "reserved/candles_1d/KRW-WAXL.parquet",
+"bytes": 49984,
+"sha256": "0f9977c9bb90552eab0ca8781a530f1b8773d33f1d848683802d09d954af33d3"
+},
+{
+"path": "reserved/candles_1d/KRW-WAXP.parquet",
+"bytes": 47043,
+"sha256": "0bc3766a19a5ce4050eff010059645601aca4ac0ab5567c0babaf8f48efaa647"
+},
+{
+"path": "reserved/candles_1d/KRW-WNCG.parquet",
+"bytes": 62767,
+"sha256": "7963a518f06a54d935cedf0db56e9a3964b42678034c5970c892eefbeab70472"
+},
+{
+"path": "reserved/candles_1d/KRW-XDP.parquet",
+"bytes": 5097,
+"sha256": "f957d8fbfe06169bd350096d7febeda6625af39d36363d413de240e6ed65bcbd"
+},
+{
+"path": "reserved/candles_1d/KRW-XLM.parquet",
+"bytes": 38512,
+"sha256": "e01411cce5efc369bbe4084b4c6d57d113a834fa8038be44aba439c0f6d0e3bd"
+},
+{
+"path": "reserved/candles_1d/KRW-XPLA.parquet",
+"bytes": 64300,
+"sha256": "a202845c77abc9e8f2ae610e79f60b7a4b835de05c1f172ddd69c8009884e12a"
+},
+{
+"path": "reserved/candles_1d/KRW-XPR.parquet",
+"bytes": 118318,
+"sha256": "e9686ed013c455df5bbfc4b713168824c71148a27a666446572036707a7e0d55"
+},
+{
+"path": "reserved/candles_1d/KRW-XRP.parquet",
+"bytes": 58027,
+"sha256": "b91d77a4cb2b2420ab2d645d7c481207c54bfe2187ebee506f7808a99c739a7e"
+},
+{
+"path": "reserved/candles_1d/KRW-XTER.parquet",
+"bytes": 27629,
+"sha256": "e527bdb48955646280d6e6db1a827457da343968d06cac388bfea0247e17c734"
+},
+{
+"path": "reserved/candles_1d/KRW-XTZ.parquet",
+"bytes": 10455,
+"sha256": "2c3a1628929b5ad256627d45d7a65b65102e8c9fe3c84c34e99b2f547735ed97"
+},
+{
+"path": "reserved/candles_1d/KRW-XYO.parquet",
+"bytes": 31336,
+"sha256": "424bdc5ac5d0b38a0ef90a4e35788e550aefb1a5d393655fcae06f53e76f7260"
+},
+{
+"path": "reserved/candles_1d/KRW-YFI.parquet",
+"bytes": 7081,
+"sha256": "b0a6a5a22a905f5c43cd2f0973506875f9817d1fc45db3f3ff00d73d8ee49f04"
+},
+{
+"path": "reserved/candles_1d/KRW-ZIL.parquet",
+"bytes": 45948,
+"sha256": "c322ecf0f1341972caab31503bc70f7db8fe2a9edd8b40c2e0e9c05b9e3aadb9"
+},
+{
+"path": "reserved/candles_1d/KRW-ZRX.parquet",
+"bytes": 45262,
+"sha256": "1339ce2c5c57bc5ef3e6a8b644989fd540cb8653a1a35a769f66c20af02ed40e"
+}
+]
+}

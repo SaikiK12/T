@@ -1,0 +1,9 @@
+14:26:23 PREREG verified 6b0a819da02d; 11 inputs match; 221 tick files match their provenance
+14:26:26 in15_out30: 221 hops, gross +0.4 bp, net1 -16.6 (t -6.94), net2 -33.6, net3 -50.6; unseen -19.0
+14:26:26 in15_out60: 221 hops, gross +5.4 bp, net1 -11.6 (t -2.93), net2 -28.6, net3 -45.6; unseen -20.6
+14:26:26 in15_out120: 221 hops, gross +14.1 bp, net1 -2.9 (t -0.49), net2 -19.9, net3 -36.9; unseen -11.9
+14:26:26 in15_out300: 221 hops, gross +19.5 bp, net1 +2.5 (t 0.25), net2 -14.5, net3 -31.5; unseen -9.9
+14:26:26 in1_out60: 221 hops, gross +45.7 bp, net1 +28.7 (t 5.75), net2 +11.7, net3 -5.3; unseen +9.7
+14:26:26 in2_out60: 221 hops, gross +24.0 bp, net1 +7.0 (t 1.58), net2 -10.0, net3 -27.0; unseen -4.3
+14:26:26 in5_out60: 221 hops, gross +17.7 bp, net1 +0.7 (t 0.15), net2 -16.3, net3 -33.3; unseen -10.4
+14:26:26 verdict NULL {'t1': False, 'net2_positive': False, 'both_halves': False, 'without_best_coin': False, 'unseen_positive': False}; family {'bonferroni_t': 2.24, 't1_at_or_above': 0, 't1_at_or_above_2': 0, 'decided': 4, 'trials': 7}

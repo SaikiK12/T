@@ -1,0 +1,218 @@
+{
+"folder": "data/asiaclose",
+"source": "https://api.hyperliquid.xyz/info (candleSnapshot, fundingHistory; public) and https://mainnet.zklighter.elliot.ai/api/v1 (candles, fundings; public)",
+"script": "scripts/fetch_asiaclose.py",
+"recorded_utc": "2026-11-11T22:21:45Z",
+"excluded": [],
+"files": 38,
+"bytes": 2079265,
+"combined_sha256": "53181cef4d193697339eaf4a285b7c7fa5a291765378f7b511e43dd40ab157e4",
+"subfolders": {
+"lighter": {
+"files": 18,
+"bytes": 835953
+},
+".": {
+"files": 2,
+"bytes": 40746
+},
+"xyz": {
+"files": 18,
+"bytes": 1202566
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "lighter/funding/HYUNDAIUSD.parquet",
+"bytes": 47804,
+"sha256": "12bd0735727d31ce83e3711486f69d91d1d3f3fbe829b9a03b2cc5ae91b36e1f"
+},
+{
+"path": "lighter/funding/KIOXIA.parquet",
+"bytes": 18701,
+"sha256": "2383632fd6d988881ccb13fa97e017348739374cf4969089cfcda01564f80e1b"
+},
+{
+"path": "lighter/funding/MINIMAX.parquet",
+"bytes": 31481,
+"sha256": "8874e687e31d59f88b7d5800ec8c3cf1665d0ca3a609e0f233c13972c25850f9"
+},
+{
+"path": "lighter/funding/SAMSUNGUSD.parquet",
+"bytes": 52126,
+"sha256": "eef6fcca94061b7388df115c896251d6953ca7ba39eab2a53a86c70bb991d14d"
+},
+{
+"path": "lighter/funding/SKHYNIXUSD.parquet",
+"bytes": 53202,
+"sha256": "bfee6c0136c058ea3f54340ca3fb0c8f7bccbc0892545b985a3ef5929774de81"
+},
+{
+"path": "lighter/funding/SMIC.parquet",
+"bytes": 29139,
+"sha256": "e17c2856f821af444d415b55711e81c1a7199e2cfaed74f2c87b18b94852f8a4"
+},
+{
+"path": "lighter/funding/TENCENT.parquet",
+"bytes": 29547,
+"sha256": "6c73f1d5782d5ea30b7e03ecf685cf0a2123e555967395de8788d5deebf81457"
+},
+{
+"path": "lighter/funding/XIAOMI.parquet",
+"bytes": 28672,
+"sha256": "bad534019f1beb78b838ad1df3836c37fcf52fd36a89746f5a3a2e0d4ea5ee08"
+},
+{
+"path": "lighter/funding/ZHIPU.parquet",
+"bytes": 32459,
+"sha256": "ae349134e738f3e04898864b27eaa6a916911768a82302aaff47a00390d0b45a"
+},
+{
+"path": "lighter/klines_1h/HYUNDAIUSD.parquet",
+"bytes": 72492,
+"sha256": "e8d8aef04fa6d308a064e2df60140f485d1bd61293ad104fbd8ba9f899ff64e8"
+},
+{
+"path": "lighter/klines_1h/KIOXIA.parquet",
+"bytes": 4463,
+"sha256": "1949d0b2e634ff606a6ccc465b2e96ad50c5f6909d95a799fca993361fb25e39"
+},
+{
+"path": "lighter/klines_1h/MINIMAX.parquet",
+"bytes": 54372,
+"sha256": "e5f579ba2d768c1b9ffc3f70cf8cb37659ad6f788a9a8ce67e94e39cbd5db1ce"
+},
+{
+"path": "lighter/klines_1h/SAMSUNGUSD.parquet",
+"bytes": 102129,
+"sha256": "6fad82e90e3ee270dec70cac44305912b0f8e7fa700a81c4317fcc051721b5a8"
+},
+{
+"path": "lighter/klines_1h/SKHYNIXUSD.parquet",
+"bytes": 106562,
+"sha256": "ed703dea684a28eed81400aed15b7f7ea0ebddb735c112dde62de19f5d0d0d5e"
+},
+{
+"path": "lighter/klines_1h/SMIC.parquet",
+"bytes": 33426,
+"sha256": "6e4132bd54343029107dc6f3c8c5ec47e3b6644376c369215e1c11edcfdd2ec5"
+},
+{
+"path": "lighter/klines_1h/TENCENT.parquet",
+"bytes": 37505,
+"sha256": "7baece53fa38e951f3c098c074f8bee006560d82d2f0099ac4508fb435125a40"
+},
+{
+"path": "lighter/klines_1h/XIAOMI.parquet",
+"bytes": 47411,
+"sha256": "f7b44813b92cc80300e22a87549c1a8125b6215684d2bd7f71c2d2b953745457"
+},
+{
+"path": "lighter/klines_1h/ZHIPU.parquet",
+"bytes": 54462,
+"sha256": "ff3fd5679c9330c5ac65511dc5d91fb74659979089d3d98974eff82441fabb80"
+},
+{
+"path": "manifest.json",
+"bytes": 5200,
+"sha256": "1f011b06993ba1a9dddf897c23f4397b3edd9a28e30942471dff3ef6e95d8750"
+},
+{
+"path": "receipts.jsonl",
+"bytes": 35546,
+"sha256": "827993ad244b63c3bf2dabda000af45782430819bb8b47e72bf5c9165dd2f7e3"
+},
+{
+"path": "xyz/funding/CAMBRICON.parquet",
+"bytes": 12350,
+"sha256": "0fa3830cab5bd58556e09da69a5bfc29d9c36718a283f10e672e82aad3d8da3e"
+},
+{
+"path": "xyz/funding/GIGADEV.parquet",
+"bytes": 46299,
+"sha256": "c3f2882fbc44f595432c54eb66be7a12790a73548943f3affbd26a62684e2fec"
+},
+{
+"path": "xyz/funding/HYUNDAI.parquet",
+"bytes": 90361,
+"sha256": "8b9792cb85895edfcd24a17e62914ccc7b00e7c6fb2487dfb49b4b059904ce5f"
+},
+{
+"path": "xyz/funding/KIOXIA.parquet",
+"bytes": 56007,
+"sha256": "2c0273ef35e8dcb4e56a5e05e83bf325eac209374013f12dd0ef56529c35ba9f"
+},
+{
+"path": "xyz/funding/MINIMAX.parquet",
+"bytes": 58107,
+"sha256": "28a7e6f6f3c4b50b8e30351c626096d8473853592d4a64102959ad2d4bc0d80c"
+},
+{
+"path": "xyz/funding/SKHX.parquet",
+"bytes": 89706,
+"sha256": "69c1fbb497cb5d0f0ce014d2c8ef0a9f4453f52772f7766d25d7d9b72e7f055d"
+},
+{
+"path": "xyz/funding/SMSN.parquet",
+"bytes": 89760,
+"sha256": "b419a17975e9f442c35063dde9afb49d8373c05de16c8c99fd5ea7a2c6932f89"
+},
+{
+"path": "xyz/funding/SOFTBANK.parquet",
+"bytes": 56639,
+"sha256": "60b8f7b7ff1357f2f8cb0d7ed5460a6e6160e5b45652ef0e5dda7aa0b5028cb0"
+},
+{
+"path": "xyz/funding/ZHIPU.parquet",
+"bytes": 56594,
+"sha256": "88dde9b5a79e3240ccbf16c4baf9e44f83d429a006b067b7025f2a4415d839d3"
+},
+{
+"path": "xyz/klines_1h/CAMBRICON.parquet",
+"bytes": 10715,
+"sha256": "d70c0110d2142ff5ddd4a78db03315ae58c889e04775fe6936b1082ce9cb5050"
+},
+{
+"path": "xyz/klines_1h/GIGADEV.parquet",
+"bytes": 53983,
+"sha256": "e418bad419376129e686a3972588f92703dc88ae5fba27d85ead806b8367e9d5"
+},
+{
+"path": "xyz/klines_1h/HYUNDAI.parquet",
+"bytes": 97652,
+"sha256": "26c9753363260b4ca4219033e6233f24039b0aa0684d6e04fb7536d9bc008f96"
+},
+{
+"path": "xyz/klines_1h/KIOXIA.parquet",
+"bytes": 70293,
+"sha256": "1104df6735374ddb2961f9f5df0394266397194e20909bd5e0b7243efbe140ad"
+},
+{
+"path": "xyz/klines_1h/MINIMAX.parquet",
+"bytes": 73551,
+"sha256": "dcc23efd1c3e6236fce86fb0be1125f014795bae4e2f4ee8ca3166c98ddc4ac6"
+},
+{
+"path": "xyz/klines_1h/SKHX.parquet",
+"bytes": 101004,
+"sha256": "923475fc9bec9020b297a0dafeab3352829b774c744436230e10085cecbe6c61"
+},
+{
+"path": "xyz/klines_1h/SMSN.parquet",
+"bytes": 100906,
+"sha256": "9c57158ca10e90b3ee0768095dcaed914703653edaa0368e478a112fb8e104b9"
+},
+{
+"path": "xyz/klines_1h/SOFTBANK.parquet",
+"bytes": 66570,
+"sha256": "7d76de1d6f2a10bec5f97876bd745f4e25a10763bd62a4fe866a6bc763acf897"
+},
+{
+"path": "xyz/klines_1h/ZHIPU.parquet",
+"bytes": 72069,
+"sha256": "b9ec0feec2f7800bf3a49e08196e12dbda40ffec85ce1c5658823d20a6aa0b45"
+}
+]
+}

@@ -1,0 +1,63 @@
+14:57:07 prereg sha 52b33054e2d1
+14:57:16 leaders per hour (mean): 4.81 alts: 43.7
+14:57:25 F1 slopes done
+14:57:30 F2 betas done
+14:57:45 F1_H1 discovery net -334.3 bp/day t -30.67 gross +35.3 cost 369.6 stop
+14:57:53 F1_H4 discovery net -77.8 bp/day t -16.53 gross +14.7 cost 92.5 stop
+14:58:01 F2_L1_H4 discovery net -109.9 bp/day t -16.03 gross +24.2 cost 134.1 stop
+14:58:09 F2_L4_H4 discovery net -135.7 bp/day t -14.98 gross -0.7 cost 135.0 stop
+14:58:18 F2_L24_H24 discovery net -29.7 bp/day t -3.89 gross -7.1 cost 22.6 stop
+14:58:18 
+   variant     K    window  cmult  delay_h  days  mean_bp_day  t_nw10    total  max_dd  gross_bp_day  cost_bp_day  long_gross_bp_day  short_gross_bp_day
+     F1_H1 8.541 discovery    1.0        0  1095     -334.305 -30.666  -36.606  36.606        35.286      369.591             35.969               0.126
+     F1_H1 8.541 discovery    2.0        0  1095     -703.896 -47.221  -77.077  77.077        35.286      739.182             35.969               0.126
+     F1_H1 8.541 discovery    3.0        0  1095    -1073.488 -53.605 -117.547 117.547        35.286     1108.773             35.969               0.126
+     F1_H4 8.541 discovery    1.0        0  1095      -77.810 -16.533   -8.520   8.524        14.663       92.473             23.868              -8.473
+     F1_H4 8.541 discovery    2.0        0  1095     -170.283 -31.929  -18.646  18.646        14.663      184.946             23.868              -8.473
+     F1_H4 8.541 discovery    3.0        0  1095     -262.756 -41.831  -28.772  28.772        14.663      277.418             23.868              -8.473
+  F2_L1_H4 8.541 discovery    1.0        0  1095     -109.890 -16.028  -12.033  12.197        24.242      134.132             30.808              -5.837
+  F2_L1_H4 8.541 discovery    2.0        0  1095     -244.022 -31.986  -26.720  26.720        24.242      268.264             30.808              -5.837
+  F2_L1_H4 8.541 discovery    3.0        0  1095     -378.154 -42.760  -41.408  41.408        24.242      402.395             30.808              -5.837
+  F2_L4_H4 8.541 discovery    1.0        0  1095     -135.693 -14.984  -14.858  14.954        -0.654      135.039             18.287             -18.210
+  F2_L4_H4 8.541 discovery    2.0        0  1095     -270.732 -28.162  -29.645  29.704        -0.654      270.078             18.287             -18.210
+  F2_L4_H4 8.541 discovery    3.0        0  1095     -405.771 -38.376  -44.432  44.475        -0.654      405.118             18.287             -18.210
+F2_L24_H24 8.536 discovery    1.0        0  1095      -29.739  -3.887   -3.256   3.478        -7.134       22.605             10.648             -16.900
+F2_L24_H24 8.536 discovery    2.0        0  1095      -52.344  -6.836   -5.732   5.940        -7.134       45.210             10.648             -16.900
+F2_L24_H24 8.536 discovery    3.0        0  1095      -74.949  -9.760   -8.207   8.402        -7.134       67.815             10.648             -16.900
+14:58:18 
+   variant     window  next_hour_spread_bp
+     F1_H1  discovery                1.454
+     F1_H1 validation                0.925
+     F1_H4  discovery                1.454
+     F1_H4 validation                0.925
+  F2_L1_H4  discovery                4.872
+  F2_L1_H4 validation                0.004
+  F2_L4_H4  discovery                2.373
+  F2_L4_H4 validation               -0.651
+F2_L24_H24  discovery                0.839
+F2_L24_H24 validation               -0.019
+14:58:18 {
+ "stages": {
+  "F1_H1": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "F1_H4": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "F2_L1_H4": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "F2_L4_H4": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "F2_L24_H24": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "confirmed": []
+}

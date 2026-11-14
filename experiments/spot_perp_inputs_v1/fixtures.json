@@ -1,0 +1,120 @@
+{
+  "base_fee": "0.001",
+  "capital_per_wallet": "5000",
+  "cases": [
+    {
+      "entry_fee_asset": "USDT",
+      "funding_quote_per_base": "0",
+      "hedge": "net_owned",
+      "id": "unchanged_basis",
+      "mid_prices": [
+        "100",
+        "102",
+        "100",
+        "102"
+      ]
+    },
+    {
+      "entry_fee_asset": "USDT",
+      "funding_quote_per_base": "0.25",
+      "hedge": "net_owned",
+      "id": "basis_converges",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    },
+    {
+      "entry_fee_asset": "USDT",
+      "funding_quote_per_base": "0.25",
+      "hedge": "net_owned",
+      "id": "basis_widens",
+      "mid_prices": [
+        "100",
+        "102",
+        "100",
+        "105"
+      ]
+    },
+    {
+      "entry_fee_asset": "BTC",
+      "funding_quote_per_base": "0.25",
+      "hedge": "net_owned",
+      "id": "base_fee_net_hedged",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    },
+    {
+      "entry_fee_asset": "BTC",
+      "funding_quote_per_base": "0.25",
+      "hedge": "gross",
+      "id": "base_fee_gross_hedged",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    },
+    {
+      "entry_fee_asset": "USDT",
+      "funding_quote_per_base": null,
+      "hedge": "net_owned",
+      "id": "unknown_funding",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    },
+    {
+      "entry_fee_asset": "UNKNOWN",
+      "funding_quote_per_base": "0.25",
+      "hedge": "net_owned",
+      "id": "unknown_spot_fee",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    },
+    {
+      "entry_fee_asset": "MX",
+      "funding_quote_per_base": "0.25",
+      "hedge": "net_owned",
+      "id": "third_fee_asset",
+      "mid_prices": [
+        "100",
+        "102",
+        "101",
+        "101"
+      ]
+    }
+  ],
+  "cost_multiples": [
+    1,
+    2,
+    3
+  ],
+  "expected_account_paths": 24,
+  "fee_rate": "0.001",
+  "half_spread": "0.05",
+  "known_by_design": true,
+  "price_and_funding_source": "constructed exact decimal inputs, no fitted forecast or market truth",
+  "quote_unit": "invented common USDT, no FX conversion",
+  "registry_id": "R324",
+  "symbols": [
+    "BTC",
+    "WIF",
+    "SKR"
+  ],
+  "third_fee": "0.01"
+}

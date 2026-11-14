@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "origin": "Exact owner-supplied numbered100 requirements, received2026-10-25; user-owned text",
+  "objective": "Gagner en moyenne après tous les coûts, puis confirmer en simulation en direct.",
+  "scope": "Implementation acceptance evidence only; registry/methods.csv remains the single methods queue. Code/tests/research are separate from verified market evidence.",
+  "requirements": [
+    {
+      "id": 1,
+      "text": "Relier les composants au même compte simulé : prix, positions, frais et financement doivent produire un PnL commun.",
+      "priority": true
+    },
+    {
+      "id": 2,
+      "text": "Décomposer chaque résultat : mouvement de prix, frais, financement et coût d’exécution, sans compter deux fois le spread.",
+      "priority": true
+    },
+    {
+      "id": 3,
+      "text": "Séparer les gains réalisés des gains encore ouverts, avec une valeur de sortie prudente.",
+      "priority": true
+    },
+    {
+      "id": 4,
+      "text": "Rapporter les gains à tout le capital immobilisé, y compris celui déposé sur la deuxième plateforme.",
+      "priority": true
+    },
+    {
+      "id": 5,
+      "text": "Prévoir l’import de justificatifs de frais fournis par le propriétaire, sans clé d’accès ni secret.",
+      "priority": true
+    },
+    {
+      "id": 6,
+      "text": "Suivre les promotions de frais : conditions, volume restant et expiration.",
+      "priority": true
+    },
+    {
+      "id": 7,
+      "text": "Ajouter des scénarios de sortie défavorables, puisque le carnet actuel ne garantit pas le prix de sortie futur.",
+      "priority": true
+    },
+    {
+      "id": 8,
+      "text": "Mesurer le coût des petites positions : minimums, arrondis et montants réellement accessibles avec notre capital.",
+      "priority": true
+    },
+    {
+      "id": 9,
+      "text": "Mesurer comment le coût augmente avec la taille, lorsque la position consomme plusieurs niveaux du carnet.",
+      "priority": true
+    },
+    {
+      "id": 10,
+      "text": "Comparer les stratégies à capital et risque comparables, avec les mêmes hypothèses de coûts.",
+      "priority": true
+    },
+    {
+      "id": 11,
+      "text": "Raccorder les collecteurs récents au compte simulé, avec leurs vrais horaires de réception.",
+      "priority": true
+    },
+    {
+      "id": 12,
+      "text": "Obtenir le prix de référence réellement utilisé pour le financement Lighter, lié au bon événement.",
+      "priority": true
+    },
+    {
+      "id": 13,
+      "text": "Mesurer la disponibilité simultanée des deux marchés, plutôt que leur disponibilité séparée.",
+      "priority": true
+    },
+    {
+      "id": 14,
+      "text": "Distinguer délai de collecte et délai d’exécution, puis conserver les parties encore inconnues.",
+      "priority": true
+    },
+    {
+      "id": 15,
+      "text": "Vérifier les heures et conditions d’accès de chaque marché, notamment les contrats liés aux marchés traditionnels.",
+      "priority": true
+    },
+    {
+      "id": 16,
+      "text": "Identifier correctement chaque instrument : crypto, métal, indice, monnaie de règlement et taille du contrat.",
+      "priority": true
+    },
+    {
+      "id": 17,
+      "text": "Relier les taux de financement annoncés aux taux finalement appliqués, pour mesurer l’erreur de prévision.",
+      "priority": true
+    },
+    {
+      "id": 18,
+      "text": "Tester les redémarrages après coupure réseau, en conservant les trous et les changements de connexion.",
+      "priority": true
+    },
+    {
+      "id": 19,
+      "text": "Maintenir un compteur commun des budgets de collecte, sans remettre les autorisations à zéro.",
+      "priority": true
+    },
+    {
+      "id": 20,
+      "text": "Appliquer les mêmes règles de données manquantes à toutes les simulations, y compris les anciennes via des adaptations séparées.",
+      "priority": true
+    },
+    {
+      "id": 21,
+      "text": "Reprendre le carry avec des données exécutables complètes, en conservant les règles et résultats historiques.",
+      "priority": false
+    },
+    {
+      "id": 22,
+      "text": "Tester la stratégie limitée aux périodes de financement, avec les vrais horaires et conditions d’inclusion.",
+      "priority": false
+    },
+    {
+      "id": 23,
+      "text": "Étudier le couple spot + contrat perpétuel, en comptant achats, ventes, financement et capital nécessaire.",
+      "priority": false
+    },
+    {
+      "id": 24,
+      "text": "Tester les variantes exactes de retour à l’équilibre encore ouvertes, tout en conservant les anciens résultats négatifs.",
+      "priority": false
+    },
+    {
+      "id": 25,
+      "text": "Construire une décision “conserver, réduire ou fermer”, selon le gain futur attendu, les coûts et une sortie obligatoire.",
+      "priority": false
+    },
+    {
+      "id": 26,
+      "text": "Tester la pression des transactions acheteuses et vendeuses, après les coûts et les délais observés.",
+      "priority": false
+    },
+    {
+      "id": 27,
+      "text": "Tester le déséquilibre des quantités dans le carnet, séparément du signal provenant des transactions.",
+      "priority": false
+    },
+    {
+      "id": 28,
+      "text": "Évaluer les entrées maker avec des hypothèses prudentes de remplissage, d’attente et de couverture.",
+      "priority": false
+    },
+    {
+      "id": 29,
+      "text": "Compléter les données d’annonces, pour tester les réactions après leur véritable publication.",
+      "priority": false
+    },
+    {
+      "id": 30,
+      "text": "Comparer des durées de position plus longues aux durées courtes, avec un choix fixé avant les résultats.",
+      "priority": false
+    },
+    {
+      "id": 31,
+      "text": "Créer un seuil minimal de gain attendu, couvrant les coûts et une marge pour l’erreur de prévision.",
+      "priority": false
+    },
+    {
+      "id": 32,
+      "text": "Valider le modèle de volatilité déjà codé, face à des prévisions simples.",
+      "priority": false
+    },
+    {
+      "id": 33,
+      "text": "Comparer notre indice de stress maison à des indicateurs simples, pour mesurer son utilité réelle.",
+      "priority": false
+    },
+    {
+      "id": 34,
+      "text": "Mesurer l’erreur de chaque prévision et l’intégrer dans la taille ou le refus d’une position.",
+      "priority": false
+    },
+    {
+      "id": 35,
+      "text": "Tenir compte du nombre de variantes essayées, afin de réduire les faux gagnants obtenus par hasard.",
+      "priority": false
+    },
+    {
+      "id": 36,
+      "text": "Réserver des périodes réellement jamais analysées, avec des règles fixées avant leur observation.",
+      "priority": false
+    },
+    {
+      "id": 37,
+      "text": "Adapter les mesures d’incertitude aux jours qui se ressemblent, au lieu de les considérer indépendants.",
+      "priority": false
+    },
+    {
+      "id": 38,
+      "text": "Inclure les actifs disparus et les changements de cotation, pour éviter un historique trop favorable.",
+      "priority": false
+    },
+    {
+      "id": 39,
+      "text": "Vérifier si les gains dépendent de quelques journées ou coins exceptionnels, sans les retirer pour embellir les résultats.",
+      "priority": false
+    },
+    {
+      "id": 40,
+      "text": "Ajouter des références simples, dont une position passive et du cash, à capital et risque comparables.",
+      "priority": false
+    },
+    {
+      "id": 41,
+      "text": "Creuser une partie publique encore non étudiée de Quantpedia, avec règles, données nécessaires et limites.",
+      "priority": false
+    },
+    {
+      "id": 42,
+      "text": "Auditer des stratégies officielles QuantConnect/LEAN, jusqu’au comportement réel de leur code.",
+      "priority": false
+    },
+    {
+      "id": 43,
+      "text": "Étudier des articles encore non lus de QuantStart et Financial Hacker, avec une question précise par lecture.",
+      "priority": false
+    },
+    {
+      "id": 44,
+      "text": "Poursuivre l’extraction QuantInsti/Blueshift, en vérifiant les différences entre explication et code.",
+      "priority": false
+    },
+    {
+      "id": 45,
+      "text": "Lire des chapitres et articles légalement accessibles sur le financement, les coûts, l’inventaire et les sorties.",
+      "priority": false
+    },
+    {
+      "id": 46,
+      "text": "Approfondir les sources officielles sur le règlement du financement, jusqu’aux unités et à l’ordre des opérations.",
+      "priority": false
+    },
+    {
+      "id": 47,
+      "text": "Vérifier les documentations des plateformes sur les frais, les délais, les sessions et les types d’ordres.",
+      "priority": false
+    },
+    {
+      "id": 48,
+      "text": "Chercher des données publiques utilisables pour les méthodes bloquées : annonces, macroéconomie et événements de marché.",
+      "priority": false
+    },
+    {
+      "id": 49,
+      "text": "Extraire des pratiques applicables des publications publiques de Jane Street et Citadel, concernant recherche, risque et exécution.",
+      "priority": false
+    },
+    {
+      "id": 50,
+      "text": "Compléter l’extraction des vidéos reçues, avec transcription accessible, règles précises, source et mécanique manquante.",
+      "priority": false
+    },
+    {
+      "id": 51,
+      "text": "Profiler le projet pour savoir quelles opérations consomment réellement le temps et la mémoire.",
+      "priority": false
+    },
+    {
+      "id": 52,
+      "text": "Comparer DuckDB ou Polars au traitement actuel, sur les mêmes données et avec vérification des résultats.",
+      "priority": false
+    },
+    {
+      "id": 53,
+      "text": "Porter en Rust un calcul coûteux mesuré, si le gain justifie le travail et la complexité.",
+      "priority": false
+    },
+    {
+      "id": 54,
+      "text": "Comparer notre simulation de carnet à hftbacktest, sur des cas connus et ses limites documentées.",
+      "priority": false
+    },
+    {
+      "id": 55,
+      "text": "Vérifier l’équivalence des calculs Python et Rust, sur les positions, frais, arrondis et résultats.",
+      "priority": false
+    },
+    {
+      "id": 56,
+      "text": "Réduire les chargements répétés des mêmes données, avec un cache lié à leur contenu exact.",
+      "priority": false
+    },
+    {
+      "id": 57,
+      "text": "Étendre l’initialisation avant échéance aux autres collecteurs concernés, après mesure de leur retard.",
+      "priority": false
+    },
+    {
+      "id": 58,
+      "text": "Créer des exports Parquet vérifiés pour accélérer les lectures, en conservant les anciens fichiers et leur provenance.",
+      "priority": false
+    },
+    {
+      "id": 59,
+      "text": "Mesurer les temps de chaque groupe de tests, pour corriger les lenteurs réellement identifiées.",
+      "priority": false
+    },
+    {
+      "id": 60,
+      "text": "Accélérer les tests lourds en conservant la validation complète exigée, notamment sur la comptabilité.",
+      "priority": false
+    },
+    {
+      "id": 61,
+      "text": "Raccorder les études restantes à l’orchestrateur partagé, avec des états de fonctionnement explicites.",
+      "priority": false
+    },
+    {
+      "id": 62,
+      "text": "Vérifier automatiquement les réservations de fichiers, pour éviter les conflits entre agents.",
+      "priority": false
+    },
+    {
+      "id": 63,
+      "text": "Éviter de recalculer un résultat identique, sauf changement d’entrée, de code ou problème identifié.",
+      "priority": false
+    },
+    {
+      "id": 64,
+      "text": "Donner à chaque agent une question bornée, un budget et un livrable vérifiable.",
+      "priority": false
+    },
+    {
+      "id": 65,
+      "text": "Faire vérifier indépendamment les calculs financiers importants, avant de figer leur protocole.",
+      "priority": false
+    },
+    {
+      "id": 66,
+      "text": "Produire une transmission courte après chaque travail : résultat, limite, blocage et prochaine vérification.",
+      "priority": false
+    },
+    {
+      "id": 67,
+      "text": "Repérer le travail abandonné ou interrompu, avec des règles de reprise qui respectent les autres auteurs.",
+      "priority": false
+    },
+    {
+      "id": 68,
+      "text": "Détecter les observations prospectives manquées, sans les remplacer par des résultats reconstruits.",
+      "priority": false
+    },
+    {
+      "id": 69,
+      "text": "Uniformiser la gestion des erreurs et quotas, avec des arrêts bornés et des raisons compréhensibles.",
+      "priority": false
+    },
+    {
+      "id": 70,
+      "text": "Choisir la prochaine tâche selon le blocage économique principal, le coût du travail et la preuve attendue.",
+      "priority": false
+    },
+    {
+      "id": 71,
+      "text": "Faire respecter les autorités existantes : queue pour les méthodes, registre pour les essais, résultats pour les preuves.",
+      "priority": false
+    },
+    {
+      "id": 72,
+      "text": "Signaler les notes historiques depuis l’index, avec un lien vers l’état actuel.",
+      "priority": false
+    },
+    {
+      "id": 73,
+      "text": "Fusionner les documents modifiables qui se recouvrent, après vérification des faits uniques et des références.",
+      "priority": false
+    },
+    {
+      "id": 74,
+      "text": "Simplifier les noms visibles des axes et études, en conservant les identifiants et chemins nécessaires.",
+      "priority": false
+    },
+    {
+      "id": 75,
+      "text": "Définir ce que signifie “terminé” pour chaque tâche, avec une preuve attendue.",
+      "priority": false
+    },
+    {
+      "id": 76,
+      "text": "Rendre visible la différence entre “codé”, “testé” et “validé sur le marché”.",
+      "priority": false
+    },
+    {
+      "id": 77,
+      "text": "Conserver les conditions d’accès et licences des sources, ainsi que ce qui a été reçu ou reste illisible.",
+      "priority": false
+    },
+    {
+      "id": 78,
+      "text": "Raccorder les modules utiles encore peu employés, et expliquer le rôle des autres.",
+      "priority": false
+    },
+    {
+      "id": 79,
+      "text": "Relier automatiquement méthodes, données, code et résultats, depuis les informations déjà enregistrées.",
+      "priority": false
+    },
+    {
+      "id": 80,
+      "text": "Vérifier la reprise complète des anciennes PR avant toute supersession, en regroupant les travaux liés.",
+      "priority": false
+    },
+    {
+      "id": 81,
+      "text": "Afficher une vue centrale du capital et du PnL simulé, avec la période et les limites des données.",
+      "priority": false
+    },
+    {
+      "id": 82,
+      "text": "Comparer chaque stratégie à sa référence, avec les mêmes coûts et contraintes.",
+      "priority": false
+    },
+    {
+      "id": 83,
+      "text": "Afficher séparément prix, frais, financement et coût d’exécution, en montants simples.",
+      "priority": false
+    },
+    {
+      "id": 84,
+      "text": "Montrer le capital disponible et immobilisé sur chaque plateforme simulée, sans le compter deux fois.",
+      "priority": false
+    },
+    {
+      "id": 85,
+      "text": "Afficher le gain attendu face au coût prévu, avec l’erreur de prévision lorsqu’elle est mesurée.",
+      "priority": false
+    },
+    {
+      "id": 86,
+      "text": "Afficher la fraîcheur et les retards des données, avec des états faciles à lire.",
+      "priority": false
+    },
+    {
+      "id": 87,
+      "text": "Expliquer précisément pourquoi une étude ou position simulée est bloquée, avec l’entrée manquante.",
+      "priority": false
+    },
+    {
+      "id": 88,
+      "text": "Catégoriser les logs : données, recherche, simulation, risque et fonctionnement.",
+      "priority": false
+    },
+    {
+      "id": 89,
+      "text": "Permettre de reproduire un résultat enregistré depuis l’interface, avec ses entrées et son code exacts.",
+      "priority": false
+    },
+    {
+      "id": 90,
+      "text": "Présenter les décisions en langage simple : résultat prometteur, négatif, incomplet ou encore inconnu.",
+      "priority": false
+    },
+    {
+      "id": 91,
+      "text": "Préparer un protocole prospectif pour les candidats qui remplissent les préconditions, avant les nouvelles observations.",
+      "priority": false
+    },
+    {
+      "id": 92,
+      "text": "Compter uniquement les observations reçues à temps comme preuves prospectives, avec les retards affichés séparément.",
+      "priority": false
+    },
+    {
+      "id": 93,
+      "text": "Faire tourner les candidats admissibles dans un compte fictif commun, avec leurs coûts et capitaux séparés.",
+      "priority": false
+    },
+    {
+      "id": 94,
+      "text": "Simuler une couverture incomplète, lorsqu’une plateforme accepte une jambe et l’autre échoue.",
+      "priority": false
+    },
+    {
+      "id": 95,
+      "text": "Simuler les pannes, fermetures de marché et changements de règles, sans inventer un prix de sortie.",
+      "priority": false
+    },
+    {
+      "id": 96,
+      "text": "Prévoir des arrêts automatiques de simulation lorsque les données ou le risque dépassent les limites.",
+      "priority": false
+    },
+    {
+      "id": 97,
+      "text": "Fixer des limites de perte et de concentration, pour éviter qu’un seul coin ou événement domine le compte.",
+      "priority": false
+    },
+    {
+      "id": 98,
+      "text": "Compléter les tests de liquidation avec les prix et règles de marge pertinents, avant d’envisager du levier.",
+      "priority": false
+    },
+    {
+      "id": 99,
+      "text": "Étudier les prop firms depuis leurs règles officielles, avec produits/API autorisés, frais, pertes maximales et conditions de paiement.",
+      "priority": false
+    },
+    {
+      "id": 100,
+      "text": "Fixer des critères de réussite et un budget maximal d’essais par méthode, pour décider de poursuivre, corriger ou abandonner sur des preuves.",
+      "priority": false
+    }
+  ]
+}

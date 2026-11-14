@@ -1,0 +1,126 @@
+name: OKX X-Perp lane reads (Claude)
+# Weekly reads of R441 (scripts/run_xperp_carry.py), R442 (scripts/run_xperp_stock_carry.py), R443
+# (scripts/run_xperp_hl.py), R444 (scripts/run_hlspot_carry.py), R445 (scripts/run_hlspot_pm.py), R446
+# (scripts/run_dexvault.py) and R447 (scripts/run_llpstake.py) on the recorded data branch claude/okx-xperp-data:
+# a status read (no decision) for each, and the frozen 90- and 180-day decisions of the lanes marked `looks` once a
+# look date has passed (--until the look date, written once to results/look90 or results/look180). R442 and R444
+# stopped at gate 0 (NULL), so they get status reads only. Also R453 (scripts/run_flow_hlstock_mc.py): R451's books
+# re-priced at the costs recorded on claude/xyz-books-data; its 90- and 365-day decisions follow R451's own counted
+# days, so each weekly read writes the status and, once reached, the decision (results/forward). Also R454
+# (scripts/run_hlpinv.py): HLP's inventory books on the hlp/ snapshots of the same branch; each weekly read appends
+# the complete days' tickets to its journal and fetches Hyperliquid's hourly closes and funding into journal/hl/.
+# Also R455 (scripts/run_llpinv.py): R454's rule on Lighter LLP's llp/ snapshots, with Lighter's closes and funding in
+# journal/px/. Also R456 (scripts/run_invcost.py): R454's and R455's books at the book costs recorded on the same
+# branch (main/, lighter/). Also R458 (scripts/run_flow_hl_mc.py): R448's books at Hyperliquid's fee and the main/
+# slippage. Single writer of these lanes' results folders and of R454's and R455's journals. Paper only.
+on:
+  schedule:
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-xperp-reads-single-writer
+  cancel-in-progress: false
+jobs:
+  read:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout the default branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 50
+      - name: Checkout the data branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: claude/okx-xperp-data
+          path: .okx-data
+      - name: Checkout the xyz book data (R453)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: claude/xyz-books-data
+          path: .xyz-data
+          fetch-depth: 1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-test.lock
+      - name: Install locked runtime
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Read the lanes
+        id: reads
+        run: |
+          set -uo pipefail
+          today=$(date -u +%F)
+          fail=0
+          # R442 and R444 stopped at gate 0 (NULL): status reads only, never a look decision.
+          for pair in "xperp_carry_v1 run_xperp_carry.py looks" "xperp_stock_v1 run_xperp_stock_carry.py status" \
+                      "xperp_hl_v1 run_xperp_hl.py looks" "hlspot_carry_v1 run_hlspot_carry.py status" \
+                      "hlspot_pm_v1 run_hlspot_pm.py looks" "dexvault_v1 run_dexvault.py looks" \
+                      "llpstake_v1 run_llpstake.py looks"; do
+            set -- $pair
+            lane=$1; script=scripts/$2; mode=$3
+            echo "== $lane status"
+            .venv/bin/python "$script" --data .okx-data --window forward --status \
+              --out "experiments/$lane/results/forward_status" | tail -n 12 || fail=1
+            [ "$mode" = looks ] || continue
+            for look in "90 2027-02-08" "180 2027-05-09"; do
+              set -- $look
+              out="experiments/$lane/results/look$1"
+              if [[ "$today" > "$2" && ! -f "$out/report.json" ]]; then
+                echo "== $lane look $1 (until $2)"
+                .venv/bin/python "$script" --data .okx-data --window forward --until "$2" --out "$out" \
+                  | tail -n 5 || fail=1
+              fi
+            done
+          done
+          echo "== flow_hlstock_mc_v1 (R453)"
+          if [ -f experiments/flow_hlstock_mc_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_flow_hlstock_mc.py --books .xyz-data | tail -n 20 || fail=1
+          fi
+          echo "== hlpinv_v1 (R454)"
+          if [ -f experiments/hlpinv_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_hlpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
+          echo "== llpinv_v1 (R455)"
+          if [ -f experiments/llpinv_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_llpinv.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
+          echo "== invcost_v1 (R456)"
+          if [ -f experiments/invcost_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_invcost.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
+          echo "== flow_hl_mc_v1 (R458)"
+          if [ -f experiments/flow_hl_mc_v1/PREREG.sha256 ]; then
+            .venv/bin/python scripts/run_flow_hl_mc.py --snapshots .xyz-data | tail -n 20 || fail=1
+          fi
+          exit $fail
+      - name: Commit the reads
+        if: always() && steps.reads.outcome != 'skipped'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          lanes="xperp_carry_v1 xperp_stock_v1 xperp_hl_v1 hlspot_carry_v1 hlspot_pm_v1 dexvault_v1 llpstake_v1"
+          lanes="$lanes flow_hlstock_mc_v1 invcost_v1 flow_hl_mc_v1"
+          for lane in $lanes; do
+            if [ -d "experiments/$lane/results" ]; then git add -A "experiments/$lane/results"; fi
+          done
+          for lane in hlpinv_v1 llpinv_v1; do
+            if [ -d "experiments/$lane/journal" ]; then git add -A "experiments/$lane/journal"; fi
+          done
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -q -m "X-Perp, Hyperliquid and vault lane weekly reads ${GITHUB_RUN_ID}"
+          br="${{ github.event.repository.default_branch }}"
+          for i in 1 2 3 4 5; do
+            if git pull -q --rebase --autostash origin "$br" && git push -q origin "HEAD:$br"; then echo "pushed"; exit 0; fi
+            sleep $((i * 10))
+          done
+          echo "push failed after 5 tries"; exit 1

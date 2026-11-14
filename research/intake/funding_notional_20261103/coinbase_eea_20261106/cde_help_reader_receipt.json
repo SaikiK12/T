@@ -1,0 +1,28 @@
+{
+  "accessed_utc": "2026-11-07T02:18:21.703935+00:00",
+  "publication_dates": "undated",
+  "retrieval": "web reader primary source text; no full HTML snapshot retained",
+  "direct_urllib_funding_page_status": 403,
+  "denial_action": "stopped; no retry, auth, alternate host or spoofing",
+  "sources": [
+    {
+      "url": "https://help.coinbase.com/en/derivatives/perpetual-style-futures/funding-rate",
+      "read": "relevant mechanics, clearing and example, lines8..67",
+      "material_facts": "0.1% produces1USD for0.01BTC at100000USD; FCM posting once/twice daily; hourly rate may not publish during full closed hour"
+    },
+    {
+      "url": "https://help.coinbase.com/en/derivatives/perpetual-style-futures/examples",
+      "read": "both funding examples and PnL explanation, lines7..21",
+      "material_facts": "page states0.010% produces1USD and1000USD price move produces100USD on0.01BTC; both disagree by10x with their own factors"
+    },
+    {
+      "url": "https://help.coinbase.com/en/prime/derivatives/funding-payments-for-us-perpetual-style-futures",
+      "read": "hourly accrual versus17:00ET cash posting, lines8..28"
+    },
+    {
+      "url": "https://help.coinbase.com/en/derivatives/perpetual-style-futures/margin-and-clearing",
+      "read": "two daily clearing cycles, lines8..30"
+    }
+  ],
+  "scope": "Documentation arithmetic/source check only; no market statistic, account or measured funding payment"
+}

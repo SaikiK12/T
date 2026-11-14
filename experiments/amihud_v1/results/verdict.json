@@ -1,0 +1,29 @@
+{
+ "stages": {
+  "illiq/H": {
+   "reached": "validation",
+   "passed": false
+  },
+  "illiq/L": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "by_year_1x": {
+  "illiq/H/discovery": {
+   "2021": 19.453453238499304,
+   "2022": 6.738880312504171,
+   "2023": 9.405169974294978
+  },
+  "illiq/H/validation": {
+   "2024": -4.172322065062408,
+   "2025": -19.415603862255406
+  },
+  "illiq/L/discovery": {
+   "2021": -20.96527694859639,
+   "2022": -8.302319555623907,
+   "2023": -11.05511899467232
+  }
+ },
+ "validation_passers": []
+}

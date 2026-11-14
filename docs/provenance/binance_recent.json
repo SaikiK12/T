@@ -1,0 +1,215 @@
+{
+"folder": "data/binance_recent",
+"source": "https://data.binance.vision futures/um monthly+daily klines 1h (SHA-256 strict)",
+"script": "scripts/fetch_binance_recent.py --end 2026-10-20 --unlock-post-archive",
+"recorded_utc": "2026-10-21T06:57:58Z",
+"excluded": [
+"raw"
+],
+"files": 17,
+"bytes": 24915672,
+"combined_sha256": "d91780e46b82edf854eef123c610ef670b0ff0e02278ac95704279750ce61185",
+"subfolders": {
+"klines_1h": {
+"files": 17,
+"bytes": 24915672
+}
+},
+"hourly_coverage": {
+"klines_1h": {
+"files": 16,
+"bars": 368883,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1577836800000,
+"last": 1792450800000
+}
+},
+"coverage": {
+"klines_1h": {
+"2ZUSDT": {
+"first": 1759406400000,
+"last": 1792450800000,
+"bars": 9180,
+"holes": 0
+},
+"AGTUSDT": {
+"first": 1747735200000,
+"last": 1792450800000,
+"bars": 12422,
+"holes": 0
+},
+"BBUSDT": {
+"first": 1715601600000,
+"last": 1792450800000,
+"bars": 21348,
+"holes": 0
+},
+"BTCUSDT": {
+"first": 1577836800000,
+"last": 1792450800000,
+"bars": 59616,
+"holes": 0
+},
+"CARVUSDT": {
+"first": 1754582400000,
+"last": 1792450800000,
+"bars": 10520,
+"holes": 0
+},
+"EIGENUSDT": {
+"first": 1727762400000,
+"last": 1792450800000,
+"bars": 17970,
+"holes": 0
+},
+"LINKUSDT": {
+"first": 1579248000000,
+"last": 1792450800000,
+"bars": 59224,
+"holes": 0
+},
+"MAVUSDT": {
+"first": 1688040000000,
+"last": 1792450800000,
+"bars": 29004,
+"holes": 0
+},
+"MOVEUSDT": {
+"first": 1733752800000,
+"last": 1792450800000,
+"bars": 16306,
+"holes": 0
+},
+"NOMUSDT": {
+"first": 1759305600000,
+"last": 1792450800000,
+"bars": 9208,
+"holes": 0
+},
+"SEIUSDT": {
+"first": 1692237600000,
+"last": 1792450800000,
+"bars": 27838,
+"holes": 0
+},
+"SOLVUSDT": {
+"first": 1737115200000,
+"last": 1792450800000,
+"bars": 15372,
+"holes": 0
+},
+"STOUSDT": {
+"first": 1744466400000,
+"last": 1792450800000,
+"bars": 13330,
+"holes": 0
+},
+"STRKUSDT": {
+"first": 1708448400000,
+"last": 1792450800000,
+"bars": 23335,
+"holes": 0
+},
+"ZETAUSDT": {
+"first": 1706860800000,
+"last": 1792450800000,
+"bars": 23776,
+"holes": 0
+},
+"ZROUSDT": {
+"first": 1718892000000,
+"last": 1792450800000,
+"bars": 20434,
+"holes": 0
+}
+}
+},
+"file_hashes": [
+{
+"path": "klines_1h/2ZUSDT.parquet",
+"bytes": 676266,
+"sha256": "a12ffe4883ac980602ba8a1e8277d14f400de2f836d0a3ce5996fa65d951c1f0"
+},
+{
+"path": "klines_1h/AGTUSDT.parquet",
+"bytes": 916802,
+"sha256": "139a76dbe8ac3d6a0bdabc2f65d27932d2f0217c2311e7cc9f89c42813dcc372"
+},
+{
+"path": "klines_1h/BBUSDT.parquet",
+"bytes": 1484874,
+"sha256": "defbdc336838a8176c42a2df32c1bd5a9909967a928c2fe7d5e26211a8a71dd3"
+},
+{
+"path": "klines_1h/BTCUSDT.parquet",
+"bytes": 4568687,
+"sha256": "208dab292b2388287b0a071d9385482daf3493fa26a5bd6d7a07a6f0357ebd53"
+},
+{
+"path": "klines_1h/CARVUSDT.parquet",
+"bytes": 660256,
+"sha256": "2bd13a6c37772291d51bd6f57f643d7d8fd51746806739fc630891fba585ded5"
+},
+{
+"path": "klines_1h/EIGENUSDT.parquet",
+"bytes": 1216822,
+"sha256": "f69f71afbbd717fc824f8be12a2b2897e279035bfad3c10c7d96b61efa231376"
+},
+{
+"path": "klines_1h/LINKUSDT.parquet",
+"bytes": 3780485,
+"sha256": "c8913ec7972b798fe2c7c7bbb81e096ed9a0f231a85a54ec99d977da5823b7d1"
+},
+{
+"path": "klines_1h/MAVUSDT.parquet",
+"bytes": 1905166,
+"sha256": "aa6c6781ef75c4451d817d5ee3fc828093d27207e09fcd98b19e28211894276a"
+},
+{
+"path": "klines_1h/MOVEUSDT.parquet",
+"bytes": 1058397,
+"sha256": "cd288388a415ede4bf6cede5ff6244e92f66f7d77a97d5888297211192faa9d2"
+},
+{
+"path": "klines_1h/NOMUSDT.parquet",
+"bytes": 636565,
+"sha256": "29c796c838ff1df736cb05f2f74a8a61cf2bd399a37c177b1546e816def8fc21"
+},
+{
+"path": "klines_1h/SEIUSDT.parquet",
+"bytes": 1709782,
+"sha256": "1dbc0a3b4c0c3f0c8407c6e5e4c45e20ea522964198089ab044823decef331e6"
+},
+{
+"path": "klines_1h/SOLVUSDT.parquet",
+"bytes": 945018,
+"sha256": "9f31e2ba6b72756b01819c9c482d655ace11877e3666e900d0d6994535aac855"
+},
+{
+"path": "klines_1h/STOUSDT.parquet",
+"bytes": 899754,
+"sha256": "1d99953f54c47fdd26044737ce24c6bb948a2438cea9c23312f8ded63c0f809b"
+},
+{
+"path": "klines_1h/STRKUSDT.parquet",
+"bytes": 1508721,
+"sha256": "5a6a736a46a654e1f3bc4bc180849a63d6ecf25f3278e3dec38c681408a48eff"
+},
+{
+"path": "klines_1h/ZETAUSDT.parquet",
+"bytes": 1503889,
+"sha256": "42ef778715239966593210a2dff4665bc14a332c142c7498c5981f4b7c8810db"
+},
+{
+"path": "klines_1h/ZROUSDT.parquet",
+"bytes": 1441290,
+"sha256": "efa8b0c467d5f43d996ebffec5fcd8e241f0547228fa95f4ca28aebcf29ce862"
+},
+{
+"path": "klines_1h/manifest.json",
+"bytes": 2898,
+"sha256": "6a4aca094ca556f844ed4c08a7af76d9c1f440d7228a4dd10db3ce5e463ecd34"
+}
+]
+}

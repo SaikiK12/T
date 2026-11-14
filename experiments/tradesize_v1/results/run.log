@@ -1,0 +1,59 @@
+20:00:41 prereg sha 1c1b0264a830
+20:02:20 coverage (discovery + validation): {"size_lvl": {"rank_1_20": 0.9980307935455913, "rank_21_50": 0.9989769473263826, "age_lt_180d": 0.9995104034430442, "age_ge_180d": 0.9982723032772247, "all": 0.9985984858140661}, "size_chg": {"rank_1_20": 0.9376800326289225, "rank_21_50": 0.9291119664873775, "age_lt_180d": 0.7963549246060005, "age_ge_180d": 0.9812507527524784, "all": 0.9325391929439956}, "count_chg": {"rank_1_20": 0.9376800326289225, "rank_21_50": 0.9291119664873775, "age_lt_180d": 0.7963549246060005, "age_ge_180d": 0.9812507527524784, "all": 0.9325391929439956}, "qv_lvl": {"rank_1_20": 0.9980307935455913, "rank_21_50": 0.9989769473263826, "age_lt_180d": 0.9995104034430442, "age_ge_180d": 0.9982723032772247, "all": 0.9985984858140661}, "qv_chg": {"rank_1_20": 0.9376800326289225, "rank_21_50": 0.9291119664873775, "age_lt_180d": 0.7963549246060005, "age_ge_180d": 0.9812507527524784, "all": 0.9325391929439956}}
+20:02:33 reference qv_lvl discovery: mean -1.4 bp/day t -0.31
+20:02:40 size_lvl/H discovery mean -4.6 bp/day t -0.97 resid -3.7 t -1.01 stop
+20:02:44 size_lvl/L discovery mean +1.7 bp/day t +0.36 resid +0.8 t +0.23 stop
+20:02:45 reference qv_chg discovery: mean +5.9 bp/day t +1.10
+20:02:50 size_chg/H discovery mean +3.3 bp/day t +0.77 resid -0.5 t -0.17 stop
+20:02:53 size_chg/L discovery mean -9.2 bp/day t -2.14 resid -5.4 t -1.95 stop
+20:03:00 count_chg/H discovery mean +6.1 bp/day t +1.13 resid +0.3 t +0.24 stop
+20:03:05 count_chg/L discovery mean -12.0 bp/day t -2.21 resid -6.1 t -5.46 stop
+20:03:05 
+       book reference      K    window  cmult  gross_bp_day  cost_bp_day  days  total  mean_bp_day  t_nw10  sharpe  max_dd  corr_ref  beta_ref  resid_bp_day  resid_t_nw10
+ size_lvl/H    qv_lvl 12.902 discovery    1.0        -3.141        1.437  1095 -0.501       -4.579  -0.967  -0.558   0.674     0.652     0.611        -3.695        -1.014
+ size_lvl/H    qv_lvl 12.902 discovery    2.0        -3.141        2.875  1095 -0.659       -6.016  -1.270  -0.733   0.789     0.652     0.611        -5.133        -1.408
+ size_lvl/H    qv_lvl 12.902 discovery    3.0        -3.141        4.312  1095 -0.816       -7.453  -1.573  -0.908   0.929     0.652     0.611        -6.570        -1.800
+ size_lvl/L    qv_lvl 12.902 discovery    1.0         3.141        1.437  1095  0.187        1.704   0.360   0.208   0.517    -0.652    -0.611         0.821         0.226
+ size_lvl/L    qv_lvl 12.902 discovery    2.0         3.141        2.875  1095  0.029        0.267   0.056   0.033   0.625    -0.652    -0.610        -0.616        -0.170
+ size_lvl/L    qv_lvl 12.902 discovery    3.0         3.141        4.312  1095 -0.128       -1.171  -0.248  -0.143   0.751    -0.651    -0.610        -2.053        -0.565
+ size_chg/H    qv_chg 11.798 discovery    1.0         6.254        2.947  1095  0.362        3.307   0.768   0.393   0.606     0.814     0.640        -0.469        -0.168
+ size_chg/H    qv_chg 11.798 discovery    2.0         6.254        5.894  1095  0.039        0.360   0.084   0.043   0.800     0.814     0.639        -3.416        -1.219
+ size_chg/H    qv_chg 11.798 discovery    3.0         6.254        8.840  1095 -0.283       -2.586  -0.600  -0.307   1.012     0.814     0.639        -6.362        -2.263
+ size_chg/L    qv_chg 11.798 discovery    1.0        -6.254        2.947  1095 -1.007       -9.201  -2.140  -1.093   1.205    -0.815    -0.640        -5.424        -1.947
+ size_chg/L    qv_chg 11.798 discovery    2.0        -6.254        5.894  1095 -1.330      -12.148  -2.825  -1.443   1.436    -0.815    -0.640        -8.370        -3.009
+ size_chg/L    qv_chg 11.798 discovery    3.0        -6.254        8.840  1095 -1.653      -15.094  -3.511  -1.793   1.747    -0.815    -0.640       -11.316        -4.071
+count_chg/H    qv_chg 11.798 discovery    1.0         9.050        2.926  1095  0.671        6.124   1.128   0.567   0.600     0.986     0.992         0.263         0.236
+count_chg/H    qv_chg 11.798 discovery    2.0         9.050        5.852  1095  0.350        3.198   0.589   0.296   0.744     0.986     0.993        -2.664        -2.389
+count_chg/H    qv_chg 11.798 discovery    3.0         9.050        8.777  1095  0.030        0.272   0.050   0.025   0.929     0.986     0.993        -5.591        -4.992
+count_chg/L    qv_chg 11.798 discovery    1.0        -9.050        2.926  1095 -1.311      -11.975  -2.209  -1.109   1.415    -0.986    -0.992        -6.117        -5.464
+count_chg/L    qv_chg 11.798 discovery    2.0        -9.050        5.852  1095 -1.632      -14.901  -2.750  -1.381   1.723    -0.986    -0.992        -9.043        -8.021
+count_chg/L    qv_chg 11.798 discovery    3.0        -9.050        8.777  1095 -1.952      -17.827  -3.292  -1.652   2.032    -0.986    -0.992       -11.970       -10.513
+20:03:05 {
+ "stages": {
+  "size_lvl/H": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "size_lvl/L": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "size_chg/H": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "size_chg/L": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "count_chg/H": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "count_chg/L": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "confirmed": []
+}

@@ -1,0 +1,13 @@
+{
+  "byte_identical": {
+    "requirements_coverage.json": true,
+    "results.json": true,
+    "risk_controls.jsonl": true,
+    "risk_journal_example.jsonl": true,
+    "risk_predictions.jsonl.gz": true,
+    "verified_input.parquet": true
+  },
+  "freeze_commit": "90910875fb637935130634ffc1b0b956e6915d6d",
+  "independent_audits_equal": true,
+  "performance_bytes_not_expected_identical": true
+}

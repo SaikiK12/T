@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "family_max_p_le_005": false,
+    "paired_mean_lower95_positive": false,
+    "validation_2x_mean_positive": true,
+    "validation_drawdown_no_worse": false,
+    "validation_sharpe_gain_ge_015": false
+  },
+  "evidence": "Exploratory mixed-target screen on six surviving spot coins and spent dates",
+  "selected_candidate": "btc_ret56_p75_cash",
+  "selected_control": "trend",
+  "trials": 36,
+  "verdict": "NULL"
+}

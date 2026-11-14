@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "assumptions": [
+    "One invented bid price level; strict FIFO, displayed positive integer quantities.",
+    "Our accepted order is present in displayed depth in BOTH worlds; this is not counterfactual insertion into an unchanged historical tape.",
+    "Identical initial acceptance/queue, individual ten-unit adds/cancels, per-match print sizes and every intervening depth; only hidden order identities differ. No trade aggregation is needed.",
+    "No latency, hidden liquidity, pro-rata, price changes, fees or market data."
+  ],
+  "initial_queue": "Ten distinct A orders of 10 units, then our accepted 10-unit order.",
+  "public_trace": [
+    {
+      "step": 0,
+      "event": "bid_depth",
+      "quantity": 110
+    },
+    {
+      "step": 1,
+      "event": "bid_depth",
+      "quantity": 120
+    },
+    {
+      "step": 2,
+      "event": "bid_depth",
+      "quantity": 130
+    },
+    {
+      "step": 3,
+      "event": "bid_depth",
+      "quantity": 140
+    },
+    {
+      "step": 4,
+      "event": "bid_depth",
+      "quantity": 150
+    },
+    {
+      "step": 5,
+      "event": "bid_depth",
+      "quantity": 160
+    },
+    {
+      "step": 6,
+      "event": "bid_depth",
+      "quantity": 150
+    },
+    {
+      "step": 7,
+      "event": "bid_depth",
+      "quantity": 140
+    },
+    {
+      "step": 8,
+      "event": "bid_depth",
+      "quantity": 130
+    },
+    {
+      "step": 9,
+      "event": "bid_depth",
+      "quantity": 120
+    },
+    {
+      "step": 10,
+      "event": "bid_depth",
+      "quantity": 110
+    },
+    {
+      "step": 11,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 11,
+      "event": "bid_depth",
+      "quantity": 100
+    },
+    {
+      "step": 12,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 12,
+      "event": "bid_depth",
+      "quantity": 90
+    },
+    {
+      "step": 13,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 13,
+      "event": "bid_depth",
+      "quantity": 80
+    },
+    {
+      "step": 14,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 14,
+      "event": "bid_depth",
+      "quantity": 70
+    },
+    {
+      "step": 15,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 15,
+      "event": "bid_depth",
+      "quantity": 60
+    },
+    {
+      "step": 16,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 16,
+      "event": "bid_depth",
+      "quantity": 50
+    },
+    {
+      "step": 17,
+      "event": "sell_trade",
+      "quantity": 10
+    },
+    {
+      "step": 17,
+      "event": "bid_depth",
+      "quantity": 40
+    },
+    {
+      "step": 18,
+      "event": "sell_trade",
+      "quantity": 5
+    },
+    {
+      "step": 18,
+      "event": "bid_depth",
+      "quantity": 35
+    }
+  ],
+  "hidden_histories": [
+    {
+      "cancelled_orders": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "cancelled_quantity": 50,
+      "fills": [
+        {
+          "order": "A6",
+          "quantity": 10
+        },
+        {
+          "order": "A7",
+          "quantity": 10
+        },
+        {
+          "order": "A8",
+          "quantity": 10
+        },
+        {
+          "order": "A9",
+          "quantity": 10
+        },
+        {
+          "order": "A10",
+          "quantity": 10
+        },
+        {
+          "order": "ours",
+          "quantity": 10
+        },
+        {
+          "order": "B1",
+          "quantity": 10
+        },
+        {
+          "order": "B2",
+          "quantity": 5
+        }
+      ],
+      "our_filled": 10,
+      "remaining": [
+        {
+          "order": "B2",
+          "quantity": 5
+        },
+        {
+          "order": "B3",
+          "quantity": 10
+        },
+        {
+          "order": "B4",
+          "quantity": 10
+        },
+        {
+          "order": "B5",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "cancelled_orders": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5"
+      ],
+      "cancelled_quantity": 50,
+      "fills": [
+        {
+          "order": "A1",
+          "quantity": 10
+        },
+        {
+          "order": "A2",
+          "quantity": 10
+        },
+        {
+          "order": "A3",
+          "quantity": 10
+        },
+        {
+          "order": "A4",
+          "quantity": 10
+        },
+        {
+          "order": "A5",
+          "quantity": 10
+        },
+        {
+          "order": "A6",
+          "quantity": 10
+        },
+        {
+          "order": "A7",
+          "quantity": 10
+        },
+        {
+          "order": "A8",
+          "quantity": 5
+        }
+      ],
+      "our_filled": 0,
+      "remaining": [
+        {
+          "order": "A8",
+          "quantity": 5
+        },
+        {
+          "order": "A9",
+          "quantity": 10
+        },
+        {
+          "order": "A10",
+          "quantity": 10
+        },
+        {
+          "order": "ours",
+          "quantity": 10
+        }
+      ]
+    }
+  ],
+  "conclusion": "The same aggregate depth and trades can imply a full own fill or no own fill. Any deterministic estimator using only these public observations must give the same answer in both worlds and cannot identify both exactly.",
+  "limits": [
+    "Not a test of an installed HftBacktest model or MEXC matching rules.",
+    "Private execution receipts or sufficiently detailed order-identified events would distinguish the worlds. Probabilistic/conservative queue models remain testable assumptions, not observed queue truth.",
+    "No strategy selection, trading edge, real fill rate or PnL measured."
+  ],
+  "market_trials": 0,
+  "cost_sensitivity": "Not applicable to this fill-identifiability example; future strategy evidence still needs complete 1x/2x/3x costs and prospective paper days."
+}

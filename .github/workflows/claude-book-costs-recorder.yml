@@ -1,0 +1,173 @@
+name: R404 book-cost recorder (Claude)
+# Single writer of R404 (experiments/book_costs_v1) from its first run here, after the local forward task graph
+# stopped with the Claude container (last local snapshot in the 2026-11-10 06 UTC slot). It runs the unchanged
+# scripts/record_book_costs.py: one snapshot of the public dYdX v4, KuCoin futures and MEXC futures order books per
+# 3-hour UTC slot, then the unchanged scripts/record_digest.py. The parquet files (gitignored on the default branch)
+# are kept on the data branch claude/book-costs-data; only experiments/recorders/journal/digests.csv and
+# experiments/book_costs_v1/journal/status.json are committed to the default branch. R404's window ends
+# 2026-11-18 00:00 UTC; a run at or after that instant does nothing. The second cron minute in each slot and the
+# run in the slot's second hour are catch-ups: the recorder writes at most one file per slot, so a later run in a
+# slot that already has its file writes nothing. claude-clock.yml also dispatches it at :20 in both hours of each
+# slot, because GitHub starts crons late and drops some. A run fails (red) when its new file lacks a venue, and the
+# default-branch journals are committed only after the parquet file is on the data branch. The local task graph's
+# R404 task must not run while this workflow is the writer. Its REC_DIGEST task digests every local recorder and may
+# run, provided no local data/recorders/book_costs tree exists (it would digest those files too).
+# experiments/book_costs_v1/DEVIATIONS.md records the writer change. Public endpoints, no key, no order.
+on:
+  schedule:
+    - cron: '11,47 0,3,6,9,12,15,18,21 * * *'
+    - cron: '29 1,4,7,10,13,16,19,22 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-book-costs-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Stop after R404's window
+        id: window
+        run: |
+          set -eu
+          now=$(date -u +%s)
+          end=$(date -u -d '2026-11-18T00:00:00Z' +%s)
+          if [ "$now" -ge "$end" ]; then
+            echo "R404 window closed at 2026-11-18T00:00:00Z; nothing to do"
+            echo "open=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "open=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Checkout the default branch
+        if: steps.window.outputs.open == 'true'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 50
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        if: steps.window.outputs.open == 'true'
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-test.lock
+      - name: Install locked runtime
+        if: steps.window.outputs.open == 'true'
+        run: |
+          python -m pip install uv==0.12.23
+          uv venv --python 3.12.14 .venv
+          uv pip sync --require-hashes --python .venv/bin/python requirements-test.lock
+      - name: Check out the data branch, or start it
+        if: steps.window.outputs.open == 'true'
+        run: |
+          set -eu
+          # Start an orphan branch only when origin answers that the branch does not exist (exit 2). Any other error
+          # stops the run, so a transient fetch failure cannot replace the kept snapshots with a one-file branch.
+          rc=1
+          for i in 1 2 3; do
+            rc=0; git ls-remote --exit-code --heads origin claude/book-costs-data > /dev/null || rc=$?
+            if [ "$rc" -eq 0 ] || [ "$rc" -eq 2 ]; then break; fi
+            sleep $((i * 10))
+          done
+          if [ "$rc" -eq 0 ]; then
+            git fetch -q --depth 1 origin claude/book-costs-data
+            git worktree add -q -B claude/book-costs-data .book-costs-data FETCH_HEAD
+          elif [ "$rc" -eq 2 ]; then
+            echo "claude/book-costs-data does not exist yet; starting it"
+            git worktree add -q --orphan -b claude/book-costs-data .book-costs-data
+          else
+            echo "::error::cannot read origin's branches (git ls-remote exit $rc)"; exit 1
+          fi
+          # The unchanged scripts read data/recorders (lab/data.py fixes the data root to <repo>/data). Copy the
+          # snapshots kept on the data branch in, so the recorder skips a slot already written, status.json covers
+          # every snapshot on that branch, and digests keep the path form book_costs/<YYYY-MM-DD>/<HH>.parquet.
+          # A copy, not a symlink: the worktree's .git file must not be digested, and Python 3.12's rglob does not
+          # descend into symlinked directories.
+          if [ -e data/recorders ]; then echo "data/recorders already exists"; exit 1; fi
+          mkdir -p .book-costs-data/book_costs data/recorders
+          cp -a .book-costs-data/book_costs data/recorders/
+      - name: Record
+        id: rec
+        if: steps.window.outputs.open == 'true'
+        run: |
+          set -euo pipefail
+          .venv/bin/python scripts/record_book_costs.py 2>&1 | tee "$RUNNER_TEMP/record.log"
+      - name: Check that every venue answered
+        # The frozen recorder logs a venue that fails and exits 0, and a slot file without all three venues does not
+        # count toward DATA_PASS. This step fails the job (after the commits below still run) when the file this run
+        # wrote lacks dydx, kucoin or mexc rows, or when the recorder read nothing, so a venue block shows up within
+        # a slot. It only reads.
+        if: always() && steps.window.outputs.open == 'true' && steps.rec.outcome != 'skipped'
+        run: |
+          set -euo pipefail
+          if grep -q 'book costs: nothing read' "$RUNNER_TEMP/record.log"; then
+            echo "::error::the recorder read no book from any venue"; exit 1
+          fi
+          .venv/bin/python - <<'EOF'
+          import sys
+          from pathlib import Path
+          import pandas as pd
+          rec, kept = Path("data/recorders"), Path(".book-costs-data")
+          new = [p for p in sorted((rec / "book_costs").glob("*/*.parquet")) if not (kept / p.relative_to(rec)).exists()]
+          if not new:
+              print("no new slot file in this run")
+              sys.exit(0)
+          bad = 0
+          for p in new:
+              n = pd.read_parquet(p, columns=["venue"]).venue.value_counts()
+              counts = {v: int(n.get(v, 0)) for v in ("dydx", "kucoin", "mexc")}
+              print(p.relative_to(rec), counts)
+              missing = [v for v, c in counts.items() if c == 0]
+              if missing:
+                  print(f"::error::{p.relative_to(rec)} has no rows from {', '.join(missing)}; "
+                        "this slot does not count toward R404's DATA_PASS")
+                  bad = 1
+          sys.exit(bad)
+          EOF
+      - name: Digest
+        id: dig
+        if: always() && steps.window.outputs.open == 'true' && steps.rec.outcome != 'skipped'
+        run: |
+          set -euo pipefail
+          .venv/bin/python scripts/record_digest.py
+      - name: Commit the snapshot to the data branch
+        id: data
+        if: always() && steps.window.outputs.open == 'true' && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          if [ -d data/recorders/book_costs ]; then cp -a data/recorders/book_costs/. .book-costs-data/book_costs/; fi
+          cd .book-costs-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          find . -name '*.part' -delete
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "R404 book_costs_v1: snapshot ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:claude/book-costs-data; then echo "pushed"; exit 0; fi
+            git pull -q --rebase origin claude/book-costs-data || true
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1
+      - name: Commit digests and status to the default branch
+        # Only after the parquet files are on claude/book-costs-data: a digest row must describe a file that exists.
+        if: always() && steps.window.outputs.open == 'true' && steps.rec.outcome != 'skipped' && steps.data.outcome == 'success'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for f in experiments/recorders/journal/digests.csv experiments/book_costs_v1/journal/status.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
+          git commit -q -m "R404 book_costs_v1: snapshot ${GITHUB_RUN_ID}"
+          br="${{ github.event.repository.default_branch }}"
+          for i in 1 2 3 4 5; do
+            if git pull -q --rebase --autostash origin "$br" && git push -q origin "HEAD:$br"; then
+              echo "pushed"; exit 0
+            fi
+            sleep $((i * 10))
+          done
+          echo "push failed after 5 tries"; exit 1

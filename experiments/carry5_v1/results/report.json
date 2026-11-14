@@ -1,0 +1,103 @@
+{
+ "rid": "R439",
+ "trials": 1,
+ "books": [
+  {
+   "tag": "book5",
+   "book": "binance+gate+hyperliquid+mexc+kucoin L14d th10% K20",
+   "days": 2078,
+   "ann_1x_pct": 18.46475430043383,
+   "ann_2x_pct": 17.017576725842886,
+   "ann_3x_pct": 15.570399151251932,
+   "mean_2x": 0.0004662349787902161,
+   "nw_t_1x": 8.708165757989972,
+   "half1_bp": 3.610455458288166,
+   "half2_bp": 6.50721813099065,
+   "recent_bp": 6.898863391917794,
+   "max_dd_pct": -4.412948067529243,
+   "top10_share": 0.18487239316720544,
+   "funding_pct": 22.053822727353023,
+   "funding_const_notional_pct": 18.240578191590494,
+   "price_pct": -2.14189085232823,
+   "cost_pct": 1.4471775745909528,
+   "trades": 1177,
+   "avg_held": 19.81953801732435,
+   "exits": {
+    "spread": 1117,
+    "dead": 25,
+    "end": 20,
+    "blowout": 15
+   },
+   "pairs_by_venues": {
+    "binance/gate": 293,
+    "kucoin/gate": 189,
+    "gate/binance": 152,
+    "gate/kucoin": 121,
+    "binance/kucoin": 119,
+    "gate/hyperliquid": 49,
+    "kucoin/binance": 47,
+    "kucoin/mexc": 37,
+    "hyperliquid/gate": 33,
+    "kucoin/hyperliquid": 25,
+    "gate/mexc": 24,
+    "mexc/kucoin": 21,
+    "binance/hyperliquid": 18,
+    "mexc/gate": 17,
+    "hyperliquid/kucoin": 15,
+    "mexc/binance": 6,
+    "hyperliquid/binance": 5,
+    "mexc/hyperliquid": 5,
+    "binance/mexc": 1
+   },
+   "survives": true,
+   "kucoin_leg_share": 0.4876805437553101,
+   "paired_vs_ref4": {
+    "days": 2078,
+    "mean_bp_day": 0.4045039950160066,
+    "ann_pct": 1.4764395818084242,
+    "nw_t": 0.5361358524589142
+   }
+  },
+  {
+   "tag": "ref4",
+   "book": "binance+gate+hyperliquid+mexc L14d th10% K20",
+   "days": 2078,
+   "ann_1x_pct": 16.988314718625414,
+   "ann_2x_pct": 15.40834599870241,
+   "ann_3x_pct": 13.828377278779408,
+   "mean_2x": 0.00042214646571787424,
+   "nw_t_1x": 4.770376804129076,
+   "half1_bp": 2.8858781560862186,
+   "half2_bp": 6.4227874431605825,
+   "recent_bp": 6.761404249744858,
+   "max_dd_pct": -5.87606334888684,
+   "top10_share": 0.3282919099353556,
+   "funding_pct": 17.278600256099235,
+   "funding_const_notional_pct": 15.002973507371426,
+   "price_pct": 1.2896831824491788,
+   "cost_pct": 1.5799687199230033,
+   "trades": 1285,
+   "avg_held": 19.293551491819056,
+   "exits": {
+    "spread": 1203,
+    "dead": 40,
+    "blowout": 22,
+    "end": 20
+   },
+   "pairs_by_venues": {
+    "binance/gate": 560,
+    "gate/binance": 331,
+    "gate/hyperliquid": 105,
+    "gate/mexc": 68,
+    "hyperliquid/gate": 63,
+    "binance/hyperliquid": 54,
+    "mexc/gate": 49,
+    "hyperliquid/binance": 23,
+    "mexc/hyperliquid": 12,
+    "mexc/binance": 11,
+    "binance/mexc": 8,
+    "hyperliquid/mexc": 1
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m unittest discover -s tests -t .",
+  "full_log_sha256": "fdaab952f7d475e194ee5ba2b4f825e8665f0b85d4b5f01fb115ce77d64b9a18",
+  "new_test_methods": 10,
+  "peer_literal_checks": 26,
+  "peer_reviewed_component_sha256": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+  "scope": "Full suite beforelabcommit; final independentchecker strengthened afterward withoutchangingfinancialmodule/runner and new10tests rerun. Peer scope narrow; notwholeframework/profitabilitycertification.",
+  "seconds": 191.605,
+  "skipped": 2,
+  "state": "PASS",
+  "tests": 1404
+}

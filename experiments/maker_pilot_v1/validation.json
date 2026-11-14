@@ -1,0 +1,24 @@
+{
+  "round": "R426",
+  "prereg_sha256": "67b52c8b7cb8e9255ce4775b34a5fe0599324020f6dc7e63200ce06f805e34d0",
+  "frozen_inputs": 50,
+  "full_tests": 2575,
+  "skipped": 3,
+  "seconds": "493.882",
+  "result": "OK",
+  "new_synthetic_tests": 12,
+  "full_log_sha256": "6c2124e73648ff5ee9a7367333978442fd3f29fbbce868afc2941f73fb236ee5",
+  "integrity_errors": 0,
+  "legacy_warnings": 14,
+  "catalog_matches_staged_index": true,
+  "market_fill_or_pnl_measured_before_commit": false,
+  "native_ticks": 0,
+  "tests_read_ignored_data": false,
+  "tested_sha256": {
+    "lab/maker_pilot.py": "e1631e34a97c58d965654ae54309b9e05759ff33ffb3029de7a3ec2de27b20ea",
+    "scripts/run_maker_pilot.py": "88dbec0be0163ae3ebf67837fb03b4c9e89c2912b5aab8d00b4dc206b9bc381b",
+    "scripts/check_maker_pilot.py": "af849a64887018de1b42abcd6089b708786df3a38ab99123ab55af3c470f0a48",
+    "scripts/check_atomic_source.py": "2696a3dc44a71685edae03d47944624fcc2557a435c48269fdbbc0c156ca8562",
+    "tests/test_maker_pilot.py": "2a32aec52942a7085817feef70c56c55f263f68ff51fbd4d017665d3dffcc084"
+  }
+}

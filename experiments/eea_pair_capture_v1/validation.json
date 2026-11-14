@@ -1,0 +1,60 @@
+{
+  "full_suite": {
+    "receipt": {
+      "started_utc": "2026-11-07T02:15:23.098313+00:00",
+      "command": [
+        "/workspace/T/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "."
+      ],
+      "tested_sha256": {
+        "lab/eea_pair_capture.py": "87d1a58310d11f2f14e8f0233f949c076e452984935bfca7a0d76c2485a4f167",
+        "scripts/record_eea_pair.py": "87e7242b883b97e9cc05764fe60a1a798b9e524025e2ebbd148a907e72a463fc",
+        "tests/test_eea_pair_capture.py": "325fb4f744d4a8f00c5ff69c25c28be9d45572100c7ddc394ebf061ad1fc2890"
+      },
+      "completed_utc": "2026-11-07T02:22:10.949187+00:00",
+      "returncode": 0,
+      "log_sha256": "088ed4062e9a85777615bb54fffd8c2542eee1dbef15cb7545eef2bf50ab2c14"
+    },
+    "tests": 2475,
+    "skipped": 3,
+    "seconds": "404.237",
+    "exit_code": 0
+  },
+  "targeted_synthetic_tests": 20,
+  "source_preflight_shapes": 9,
+  "closed_input_files": 36,
+  "campaign_recorder_invocations": 0,
+  "campaign_packets": 0,
+  "economic_or_depth_statistic_runs": 0,
+  "predictive_trials": 0,
+  "program_trials": 9784345,
+  "cost_sensitivity": {
+    "1x": "N/A; no economic strategy",
+    "2x": "N/A; no economic strategy",
+    "3x": "N/A; no economic strategy"
+  },
+  "prereg_sha256": "8adce2d3ca9534c854ffa0cb805143f3460c2db03276e35ff8adabe7b1ddf14f",
+  "integrity": {
+    "exit_code": 0,
+    "errors": 0,
+    "legacy_warnings": 14,
+    "checked_utc": "2026-11-07T02:23:30.202146+00:00"
+  },
+  "catalog": {
+    "exit_code": 0,
+    "matches": "Git index; regenerated three maintained views"
+  },
+  "preservation": {
+    "parent_R417_R418_frozen_inputs": "exact byte hashes checked before freeze",
+    "prior_rounds_prefix_sha256": "aeb8d4e9675d8fbe122ebb2f38ad5d03f63ac5d3390c407e5f57eabd48b50fee",
+    "prior_methods_prefix_sha256": "4e4dac2ec3870093eef8fb287709a5fc360eb79425246887ca6ef14b815c5d8d",
+    "prior_rows_preserved": true
+  },
+  "earlier_validation": "2473 tests passed before adding delayed-book cases; superseded by the 2475-test final suite; no test suppressed"
+}

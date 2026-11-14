@@ -1,0 +1,70 @@
+{
+"folder": "data/klines_1m_tape",
+"source": "https://data.binance.vision USD-M 1m klines, 2021-01..2026-09 (public monthly zips, each checked against its published SHA-256 and kept in memory only; every archive key and digest is in manifest.json)",
+"script": "python scripts/fetch_klines_stream.py --symbols BNBUSDT,XRPUSDT,TRXUSDT,AVAXUSDT,LINKUSDT,DOGEUSDT,SUIUSDT,ADAUSDT,LTCUSDT --interval 1m --start 2021-01-01 --end 2026-09-30 --out data/klines_1m_tape",
+"recorded_utc": "2026-10-27T14:57:21Z",
+"excluded": [],
+"files": 10,
+"bytes": 525612862,
+"combined_sha256": "9677c7eb2d933c57cf5685f03fc95c36a8ae8912b0f4d56b5382d335d349cd0a",
+"subfolders": {
+".": {
+"files": 10,
+"bytes": 525612862
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "ADAUSDT.parquet",
+"bytes": 58693339,
+"sha256": "ba174cae3cbd17a9f80a7a255e214541aed6611c5acae7bcd7cbb28c96e6e1bb"
+},
+{
+"path": "AVAXUSDT.parquet",
+"bytes": 52719038,
+"sha256": "d74f57c781c3c73078c1bbbdca6fa11d96d011508bb29b454efb21eecfdc667d"
+},
+{
+"path": "BNBUSDT.parquet",
+"bytes": 62606859,
+"sha256": "40898910305c12f524c541e1413da04838939e1a5f585b35f461f1fb6da90d5f"
+},
+{
+"path": "DOGEUSDT.parquet",
+"bytes": 63963079,
+"sha256": "a11b79f5334757108c299336637248dba41dcb7ad16fb487e0899e6370b6aa15"
+},
+{
+"path": "LINKUSDT.parquet",
+"bytes": 63853102,
+"sha256": "5c3db56d32b8693fcc765371056039a64437032cfc52a768e13e39826d39666f"
+},
+{
+"path": "LTCUSDT.parquet",
+"bytes": 63644687,
+"sha256": "2590251cb7f8de210e36643af3713465027b15b57e6730766c4ad52092d4cc4a"
+},
+{
+"path": "SUIUSDT.parquet",
+"bytes": 38988043,
+"sha256": "c7dcdf637f207945b7fdb717519007bd8afea0c09ab60d77c52dfed712c5562f"
+},
+{
+"path": "TRXUSDT.parquet",
+"bytes": 56225338,
+"sha256": "9ce27636c171ca4d32870f537bbf66ed9988c4cd21380d1c20554fa4a43fe3ee"
+},
+{
+"path": "XRPUSDT.parquet",
+"bytes": 64813030,
+"sha256": "c7c45ead41d71f36ba6df5b023d2c197e5c723bdc171fdc97ce1b843896f6337"
+},
+{
+"path": "manifest.json",
+"bytes": 106347,
+"sha256": "8438a5e31d85a31de85ea9b9c94f2ab3da2b8a564a84dfcedb5423fda8a9f02c"
+}
+]
+}

@@ -1,0 +1,8 @@
+14:29:15 PREREG verified d381b1a24611; 15 inputs match; 221 minute files match their provenance
+14:29:17 in0_out1 unseen: 134 hops, price +40.1 fund -12.9 net1 +23.4 (t 4.34) net2 +19.6 net3 +15.8
+14:29:17 in0_out2 unseen: 134 hops, price +47.2 fund -12.9 net1 +30.5 (t 4.47) net2 +26.7 net3 +22.9
+14:29:17 in0_out5 unseen: 134 hops, price +45.0 fund -12.9 net1 +28.3 (t 3.02) net2 +24.5 net3 +20.7
+14:29:17 in5_out1 unseen: 128 hops, price +59.7 fund -12.9 net1 +43.0 (t 4.23) net2 +39.2 net3 +35.3
+14:29:17 in5_out2 unseen: 128 hops, price +66.9 fund -12.9 net1 +50.2 (t 4.31) net2 +46.4 net3 +42.5
+14:29:17 in5_out5 unseen: 128 hops, price +63.8 fund -12.9 net1 +47.1 (t 3.53) net2 +43.3 net3 +39.4
+14:29:18 verdict PASS {'t1': True, 'net2_positive': True, 'both_halves': True, 'without_best_coin': True, 'trimmed_positive': True}; family {'bonferroni_t': 2.39, 't1_at_or_above': 6, 't1_at_or_above_2': 6, 'trials': 6}

@@ -1,0 +1,48 @@
+06:55:59 prereg sha 63082fdf983d
+06:56:17 WEEKOPEN discovery +4.37 bp/day t +0.54 (2x +0.49), beta -0.20 alpha +7.09 t +0.82 stop
+06:56:20 FOMC discovery +0.50 bp/day t +0.38 (2x +0.18), beta +0.01 alpha +0.35 t +0.27 stop
+06:56:24 ETHBTC discovery -1.77 bp/day t -0.50 (2x -2.55), beta +0.06 alpha -2.56 t -0.74 stop
+06:56:28 VOLTREND discovery +5.98 bp/day t +2.07 (2x +5.43), beta -0.03 alpha +6.43 t +2.21 PASS
+06:56:29 VOLTREND validation +1.99 bp/day t +0.52 (2x +1.38), beta -0.04 alpha +1.67 t +0.43 stop
+06:56:29 
+    rule     window  cmult  gross_bp_day  cost_bp_day  gross_exposure  net_exposure  days  total  mean_bp_day  t_nw10  sharpe  max_dd  corr_ref  beta_ref  resid_bp_day  resid_t_nw10  trimmed_bp_day
+WEEKOPEN  discovery    1.0         8.248        3.878           0.848        -0.041  1095  0.479        4.370   0.538   0.255   0.843    -0.304    -0.199         7.090         0.824           4.150
+WEEKOPEN  discovery    2.0         8.248        7.756           0.848        -0.041  1095  0.054        0.492   0.060   0.029   0.984    -0.303    -0.199         3.208         0.371             NaN
+WEEKOPEN  discovery    3.0         8.248       11.634           0.848        -0.041  1095 -0.371       -3.386  -0.414  -0.197   1.196    -0.302    -0.198        -0.673        -0.078             NaN
+    FOMC  discovery    1.0         0.815        0.317           0.022         0.022  1095  0.055        0.498   0.377   0.171   0.098     0.095     0.011         0.354         0.266          -0.003
+    FOMC  discovery    2.0         0.815        0.634           0.022         0.022  1095  0.020        0.181   0.137   0.062   0.106     0.093     0.010         0.040         0.030             NaN
+    FOMC  discovery    3.0         0.815        0.951           0.022         0.022  1095 -0.015       -0.136  -0.103  -0.047   0.113     0.091     0.010        -0.274        -0.206             NaN
+  ETHBTC  discovery    1.0        -0.992        0.781           0.944        -0.000  1095 -0.194       -1.772  -0.498  -0.240   0.547     0.204     0.058        -2.559        -0.737          -0.624
+  ETHBTC  discovery    2.0        -0.992        1.562           0.944        -0.000  1095 -0.280       -2.553  -0.713  -0.345   0.609     0.203     0.057        -3.336        -0.955             NaN
+  ETHBTC  discovery    3.0        -0.992        2.342           0.944        -0.000  1095 -0.365       -3.334  -0.926  -0.450   0.671     0.201     0.057        -4.112        -1.169             NaN
+VOLTREND  discovery    1.0         6.534        0.551           0.367        -0.022  1095  0.655        5.982   2.069   1.096   0.176    -0.157    -0.033         6.430         2.210           5.578
+VOLTREND  discovery    2.0         6.534        1.103           0.367        -0.022  1095  0.595        5.431   1.875   0.995   0.181    -0.157    -0.033         5.878         2.016             NaN
+VOLTREND  discovery    3.0         6.534        1.654           0.367        -0.022  1095  0.534        4.880   1.681   0.893   0.186    -0.157    -0.033         5.326         1.823             NaN
+VOLTREND validation    1.0         2.604        0.611           0.359        -0.010   547  0.109        1.992   0.524   0.393   0.189    -0.201    -0.043         1.673         0.427           1.220
+VOLTREND validation    2.0         2.604        1.223           0.359        -0.010   547  0.076        1.381   0.362   0.272   0.198    -0.200    -0.043         1.061         0.270             NaN
+VOLTREND validation    3.0         2.604        1.834           0.359        -0.010   547  0.042        0.770   0.201   0.152   0.208    -0.200    -0.043         0.450         0.114             NaN
+06:56:29 {
+ "stages": {
+  "WEEKOPEN": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "FOMC": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "ETHBTC": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "VOLTREND": {
+   "reached": "validation",
+   "passed": false
+  }
+ },
+ "validation_passers": [],
+ "fomc_events": {
+  "discovery": 24,
+  "validation": 12
+ }
+}

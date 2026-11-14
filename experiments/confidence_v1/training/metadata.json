@@ -1,0 +1,39 @@
+{
+  "actual_order_allowed": false,
+  "calibration_validation_used": false,
+  "class_payoffs": [
+    1.3235211868836707,
+    -1.1905859156548173,
+    -0.05713653334852299
+  ],
+  "classes": [
+    16,
+    26,
+    74
+  ],
+  "config_sha256": "0040bc752072b2f1ea40c395267a4aca6099e69e3d170a1625e3d023bd41968c",
+  "data_sha256": "2f648c9bd5c8e44430461d00a6f7a18433e6fd1a2fbd45b0b1b6868611a61a87",
+  "features": [
+    "level_distance",
+    "return1",
+    "return6",
+    "return24",
+    "rv6_ratio",
+    "volume_shock",
+    "body_direction",
+    "wick_asymmetry",
+    "btc_residual24",
+    "level_side"
+  ],
+  "n": 116,
+  "prior": [
+    0.14285714285714285,
+    0.226890756302521,
+    0.6302521008403361
+  ],
+  "registry_id": "R331",
+  "source_window": [
+    "2025-05-01",
+    "2025-09-01"
+  ]
+}

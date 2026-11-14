@@ -1,0 +1,31 @@
+{
+  "data_held": false,
+  "direct_html_capture": "not archived; direct HTML exceeded the bounded response size; targeted web extraction used instead",
+  "documentation_read_scope": "Get Funding Rate History section only, response field definitions and pagination notes; web open/find retrieval on 2026-11-03",
+  "documented_fields": [
+    "symbol",
+    "fundingRate",
+    "fundingTime",
+    "markPrice",
+    "rateType"
+  ],
+  "documented_rate_types": [
+    "Regular",
+    "Special"
+  ],
+  "historical_field_coverage_verified": false,
+  "historical_response_shape_verified": false,
+  "mark_value_role": "mark price associated with a particular funding fee charge",
+  "market_outcomes_computed": false,
+  "official_documentation": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History",
+  "research_trial_added": 0,
+  "resolved_documentation": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+  "rest_probe": {
+    "error": "public endpoint did not return a source body; no alternate access attempted",
+    "http_status": 451,
+    "kind": "one_seen_settlement_schema",
+    "requested_at_local_utc": "2026-11-03T22:54:34.881491+00:00",
+    "scope": "source schema/availability only; no returns or PnL computation",
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1746172800000&endTime=1746172800000&limit=1"
+  }
+}

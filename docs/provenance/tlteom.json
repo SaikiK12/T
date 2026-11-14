@@ -1,0 +1,49 @@
+{
+"folder": "data/tlteom",
+"source": "Yahoo chart (TLT, IEF daily)",
+"script": "scripts/fetch_tlteom.py",
+"recorded_utc": "2026-11-12T04:02:39Z",
+"excluded": [],
+"files": 5,
+"bytes": 1815289,
+"combined_sha256": "489cea11b053982fbe8ab54baef9bf5733d1d5fb08347a3d3ca3d859d4e36712",
+"subfolders": {
+".": {
+"files": 1,
+"bytes": 645
+},
+"yahoo": {
+"files": 4,
+"bytes": 1814644
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "manifest.json",
+"bytes": 645,
+"sha256": "9a929cf95a326a9af2c80274ba24b2d46978c22b9633b0243e7979f4ea14b8f8"
+},
+{
+"path": "yahoo/IEF.json",
+"bytes": 670933,
+"sha256": "896c7c02b5dc2a1ee29543acfded73844b6baeb13970fc30e65da6aaf02979d0"
+},
+{
+"path": "yahoo/IEF.parquet",
+"bytes": 222477,
+"sha256": "f52ea4d50d92c4fbbbc67933db9c4c3de454ff964e4c49c803cf20dcaf1fbcd2"
+},
+{
+"path": "yahoo/TLT.json",
+"bytes": 676252,
+"sha256": "2a7de7801544d7d5646a488084fc84acf5086e8d68e54c48c1d30e92fb505591"
+},
+{
+"path": "yahoo/TLT.parquet",
+"bytes": 244982,
+"sha256": "430233cdee8e2dd080d55d4a1d06d638811d66938fc2826d8e49607fc17d440b"
+}
+]
+}

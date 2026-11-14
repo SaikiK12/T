@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "byte_equal": true,
+      "bytes": 452706,
+      "path": "results.json",
+      "sha256": "2f051f2de883f068b13ac8d9c38deeb273ed59b2a7e3dec4c95af99ebf423afa"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 13631,
+      "path": "journals.json.gz",
+      "sha256": "2c4dd11f65208b0002c506a46bad7bc7b3ab2797e503c7b731a667c9ac0988cc"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 420,
+      "path": "audit.json",
+      "sha256": "c9536668a0bac6447a186580c3bd0299b43515034e729d2fd90ec6337e634e21"
+    }
+  ],
+  "native_journals_preserved": true,
+  "new_network_requests": 0
+}

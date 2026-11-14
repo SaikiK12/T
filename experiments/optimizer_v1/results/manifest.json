@@ -1,0 +1,74 @@
+{
+  "claim": "Exploratory spent-date static-sleeve allocation; no MEXC fills or prospective evidence",
+  "dependencies": {
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34",
+    "scripts/run_allocation.py": "2e0bd37ec44587b3e152418e7925183d688278fbaf0d4550624125b0f3d854f9",
+    "scripts/run_weekly_rotation.py": "9084d30faa615d8e02a0b482f60d774537adc868c90cd13f95f23486cda7e8c3"
+  },
+  "incumbent_weights": {
+    "A_C0": 0.0,
+    "B_C0": 0.3,
+    "X2": 0.7
+  },
+  "research_gate": 0,
+  "runner_sha256": "3323df8a7eb3bbb75811654f1c13d943fb71fa20e0b568e9dc558e6cb12884cc",
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "source_verification": {
+    "bootstrap": {
+      "blocks": [
+        30,
+        10,
+        60
+      ],
+      "method": "paired circular moving-block, ordinary percentile",
+      "replicates": 5000,
+      "seed": "20261019228 + block_length"
+    },
+    "claims": "exploratory spent-sample diagnostic; no fresh holdout or execution claim",
+    "dates": {
+      "first": "2021-01-01",
+      "last": "2026-09-30",
+      "source": "reconstructed from frozen source"
+    },
+    "inputs_sha256": {
+      "experiments/sizing_v1/results/daily.npz": "3ea686670c35c9946a560cc29cd1087b79cbeef40a78208840ab3b3e86aa0ec5",
+      "experiments/sizing_v1/results/results.csv": "f0c37dcd37b1b850586dbc4da504282b2370d2cb2369d8ab67228709f023a64e",
+      "scripts/run_sizing.py": "bd728f138ecc40aaf650c4c2688b22b500b8229fd9f672c2a60e3ae511110c76"
+    },
+    "runner_sha256": "2e0bd37ec44587b3e152418e7925183d688278fbaf0d4550624125b0f3d854f9",
+    "software": {
+      "byteorder": "little",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "python": "3.12.14"
+    },
+    "source_prereg_sha256": "3d04ff8b992e5f24bf4ff9ffb164e774cef013538b1eabec436fd96242253ef1",
+    "spec_sha256": "4627ac3649db6f7be4d02e1af3edcbee037a47e93fdbf66bb41a10b564656bd8",
+    "support_code_sha256": {
+      "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+      "lab/stats.py": "bc323ae56d57077dcace41ea9e0af02dfc03c0d954cf7eb736979350a537ca34"
+    },
+    "trials": 30,
+    "windows": {
+      "discovery": [
+        0,
+        1095
+      ],
+      "holdout": [
+        1642,
+        2099
+      ],
+      "validation": [
+        1095,
+        1642
+      ]
+    }
+  },
+  "spec_sha256": "7c05a75c5a20665b116b4828b383ce1297c9749452df864e2db625dc0e2fb0aa",
+  "trials": 3,
+  "weights_sha256": "04f76b3e293998d318f413455985c073691cf6d7ed053fe39e5898218fb053ad"
+}

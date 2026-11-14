@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "result_sha256": "fde4f43a553940583734dcf73496f229d47085d2ea7fd3a8b38809e96899da7f",
+  "ticket_checks": 14,
+  "trade_account_checks": 114,
+  "exact_rational_terminal_equity": {
+    "parent_1x": "197593873914581/100000000000",
+    "vwap_1x": "197593873914581/100000000000",
+    "volume_1x": "19787837191473/10000000000",
+    "joint_1x": "19787837191473/10000000000",
+    "parent_2x": "194797151390811/100000000000",
+    "vwap_2x": "194797151390811/100000000000",
+    "volume_2x": "24610322705777/12500000000",
+    "joint_2x": "24610322705777/12500000000",
+    "parent_3x": "19200174771081/10000000000",
+    "vwap_3x": "19200174771081/10000000000",
+    "volume_3x": "97943548663923/50000000000",
+    "joint_3x": "97943548663923/50000000000"
+  },
+  "scope": "same frozen conditional model only; no market authenticity, fills, inference or new trials"
+}

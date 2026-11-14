@@ -1,0 +1,66 @@
+{
+ "verdict": "NULL",
+ "trials": 6,
+ "pick": "btc30_gate",
+ "first_half_sharpe_1x": {
+  "own7_scale": 3.113832151457174,
+  "own30_scale": 4.383706581547438,
+  "btc7_scale": 2.8556766154419533,
+  "btc30_scale": 4.304986400445024,
+  "btc7_gate": 4.197535848648298,
+  "btc30_gate": 4.432424010800957
+ },
+ "second_half_2x": {
+  "pick": {
+   "n": 989,
+   "mean_bp": 4.069966821031345,
+   "pct_yr": 14.85537889676441,
+   "sharpe": 6.371022751147792
+  },
+  "base": {
+   "n": 989,
+   "mean_bp": 4.410316336703741,
+   "pct_yr": 16.097654628968655,
+   "sharpe": 6.879247402190745
+  },
+  "sharpe_diff": -0.5082246510429531,
+  "boot_p": 0.9354
+ },
+ "checks": {
+  "sharpe_2x_beats_base": false,
+  "mean_2x_beats_base": false,
+  "p_le_0.05": false
+ },
+ "sample": {
+  "first": [
+   "2021-05-03",
+   "2024-01-16"
+  ],
+  "second": [
+   "2024-01-17",
+   "2026-10-01"
+  ],
+  "n_eval": 1978
+ },
+ "vol_nan_after_warmup": {
+  "own7_scale": 0,
+  "own30_scale": 0,
+  "btc7_scale": 1,
+  "btc30_scale": 1,
+  "btc7_gate": 1,
+  "btc30_gate": 1
+ },
+ "reps": 5000,
+ "block": 10,
+ "seed": 382,
+ "inputs": {
+  "experiments/xfund_kd_v1/results/daily.csv": "0ab7db847cb9e0e51c93d59ad205a64888664a067fb8255a4093494c48d6b7ab",
+  "experiments/xfund_kd_v1/PREREG.sha256": "c626c79d3eaa8b3309ddc307731929892d766638ebaa0806ccf72ce15413d8d8",
+  "data/klines_1h/BTCUSDT.parquet": "ee2577fa45bdbb6b8582ab86c63958bf53717db638ae2fe4a76d32000f45cb3b",
+  "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+  "lab/inference.py": "96053b6a8ba4e22469acfa4da4fb59f1d56e610e5b18460a50e40e82da8d4a6f",
+  "scripts/run_clockflow.py": "3eb47ec2ae78a6531a71f4f564ceac71987d1616097c50cdd8d2913009bd5dba",
+  "scripts/run_fundvol.py": "a2d87278873ca6737d3cc71ed628e6519511973ae380041d62a941c258cc1613",
+  "tests/test_run_fundvol.py": "0b6b5e9c5ef2a94d42924033af979890b10fcee0155afe2239ddfe455a9efbd0"
+ }
+}

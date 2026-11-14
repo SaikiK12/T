@@ -1,0 +1,36 @@
+08:45:59 prereg sha 706b6ca4ab62
+08:45:59 announce_v1: qx events on {'window': 'archive'} 2021-01-01..2026-09-30, kinds ['earn_add', 'prelist']
+08:48:45 C09 {"strategy": "prelist short 168h", "n": 45, "mean_1x_pct": 11.479534142666665, "t": 2.0304825360296106}
+08:48:45 C10 {"strategy": "earn_add short 168h", "n": 143, "mean_1x_pct": 3.8540055067342656, "t": 1.7452586800412753}
+08:48:45 fundext_v1: qx events on {'window': 'archive'} 2021-01-01..2026-09-30, kinds ['neg1', 'neg2']
+08:49:20 C12a {"strategy": "neg2 long 72h", "n": 350, "mean_1x_pct": 7.31681779925238, "t": 2.388911088545064}
+08:49:20 C12b {"strategy": "neg2 long 24h", "n": 350, "mean_1x_pct": 4.597380860357143, "t": 2.0274196824296817}
+08:49:20 C12c {"strategy": "neg1 long 24h", "n": 860, "mean_1x_pct": 1.2584560545463177, "t": 1.162538147627692}
+08:49:20 squeeze_v1: qx events on {'window': 'archive'} 2021-01-01..2026-09-30, kinds ['bn_neg0.3']
+08:49:50 C12d {"strategy": "bn_neg0.3 short 168h stop10%", "n": 2278, "mean_1x_pct": 0.1133131900546208, "t": 0.32849037934346315}
+08:50:28 C01 {"n": 422, "mean_1x_pct": 3.238819205155028, "t": 3.187022901281028, "by_window": {"archive": 422}}
+08:50:28 C14: qx spread 2021-01-01..2026-09-30
+08:52:42 C14 {"days": 2078, "ann_1x_pct": 10.05, "t": 5.9616, "l2co_mean_bp": 2.272437624879692}
+/home/user/T/scripts/run_reserved_batch.py:466: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  dt = pd.to_datetime(x["days"], unit="ms", utc=True).to_period("M")
+/home/user/T/scripts/run_reserved_batch.py:545: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  per = dt.to_period("M")
+08:54:42 announce_v1: qx events on {'window': 'reserved_2020'} 2020-01-01..2021-01-08, kinds ['earn_add', 'prelist']
+08:54:53 C09 {"strategy": "prelist short 168h", "n": 0}
+08:54:53 C10 {"strategy": "earn_add short 168h", "n": 11, "mean_1x_pct": -1.2815193813636372, "t": -0.35906508457648983}
+08:54:53 fundext_v1: qx events on {'window': 'reserved_2020'} 2020-01-01..2021-01-08, kinds ['neg1', 'neg2']
+08:54:54 C12a {"strategy": "neg2 long 72h", "n": 0}
+08:54:54 C12b {"strategy": "neg2 long 24h", "n": 0}
+08:54:54 C12c {"strategy": "neg1 long 24h", "n": 0}
+08:54:54 squeeze_v1: qx events on {'window': 'reserved_2020'} 2020-01-01..2021-01-08, kinds ['bn_neg0.3']
+08:54:54 C12d {"strategy": "bn_neg0.3 short 168h stop10%", "n": 90, "mean_1x_pct": -2.933151873, "t": -1.6622223920420904}
+08:54:59 C01 {"n": 57, "mean_1x_pct": -3.454621611008531, "t": -0.872753300353688, "by_window": {"reserved_mexc": 38, "post_archive": 15, "reserved_2020": 4}}
+08:54:59 C14: qx spread 2020-01-01..2020-12-31
+08:55:01 C14 {"days": 345, "ann_1x_pct": 2.8636, "t": 4.0267, "l2co_mean_bp": 0.5876394507246376}
+/home/user/T/scripts/run_reserved_batch.py:466: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  dt = pd.to_datetime(x["days"], unit="ms", utc=True).to_period("M")
+/home/user/T/scripts/run_reserved_batch.py:545: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  per = dt.to_period("M")
+/home/user/T/scripts/run_reserved_batch.py:466: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  dt = pd.to_datetime(x["days"], unit="ms", utc=True).to_period("M")
+08:57:58 decisions {'C14': 'PASS', 'C01': 'FAIL', 'C09': 'UNREADABLE', 'C10': 'FAIL', 'C11a': 'FAIL', 'C11b': 'FAIL', 'C12a': 'UNREADABLE', 'C12b': 'UNREADABLE', 'C12c': 'UNREADABLE', 'C12d': 'FAIL'}

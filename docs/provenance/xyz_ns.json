@@ -1,0 +1,274 @@
+{
+"folder": "data/xyz_ns",
+"source": "https://api.hyperliquid.xyz/info candleSnapshot 1h + fundingHistory (public, no key), xyz:<coin> for the 14 markets of experiments/xyzns_wknd_v1/universe.csv, 2026-04-01..2026-11-10 00:00 UTC; generic client name",
+"script": "scripts/fetch_xyz_ns.py",
+"recorded_utc": "2026-11-11T16:44:39Z",
+"excluded": [],
+"files": 30,
+"bytes": 4507970,
+"combined_sha256": "6465289ca888907138c2b66d14b17b575b1f3ef9515c64f4a787068823d92e4d",
+"subfolders": {
+"funding": {
+"files": 14,
+"bytes": 1634771
+},
+"klines_1h": {
+"files": 14,
+"bytes": 2831839
+},
+".": {
+"files": 2,
+"bytes": 41360
+}
+},
+"hourly_coverage": {
+"klines_1h": {
+"files": 14,
+"bars": 64709,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1776402000000,
+"last": 1794265200000
+}
+},
+"coverage": {
+"klines_1h": {
+"BRENTOIL": {
+"first": 1776405600000,
+"last": 1794265200000,
+"bars": 4962,
+"holes": 0
+},
+"CL": {
+"first": 1776402000000,
+"last": 1794265200000,
+"bars": 4963,
+"holes": 0
+},
+"COPPER": {
+"first": 1776402000000,
+"last": 1794265200000,
+"bars": 4963,
+"holes": 0
+},
+"EUR": {
+"first": 1776402000000,
+"last": 1794265200000,
+"bars": 4963,
+"holes": 0
+},
+"GBP": {
+"first": 1779116400000,
+"last": 1794265200000,
+"bars": 4209,
+"holes": 0
+},
+"GOLD": {
+"first": 1776412800000,
+"last": 1794265200000,
+"bars": 4960,
+"holes": 0
+},
+"HO": {
+"first": 1790816400000,
+"last": 1794265200000,
+"bars": 959,
+"holes": 0
+},
+"JPY": {
+"first": 1776416400000,
+"last": 1794265200000,
+"bars": 4959,
+"holes": 0
+},
+"NATGAS": {
+"first": 1776405600000,
+"last": 1794265200000,
+"bars": 4962,
+"holes": 0
+},
+"PALLADIUM": {
+"first": 1776405600000,
+"last": 1794265200000,
+"bars": 4962,
+"holes": 0
+},
+"PLATINUM": {
+"first": 1776405600000,
+"last": 1794265200000,
+"bars": 4962,
+"holes": 0
+},
+"SILVER": {
+"first": 1776402000000,
+"last": 1794265200000,
+"bars": 4963,
+"holes": 0
+},
+"SP500": {
+"first": 1776405600000,
+"last": 1794265200000,
+"bars": 4962,
+"holes": 0
+},
+"XYZ100": {
+"first": 1776412800000,
+"last": 1794265200000,
+"bars": 4960,
+"holes": 0
+}
+}
+},
+"file_hashes": [
+{
+"path": "funding/BRENTOIL.parquet",
+"bytes": 134008,
+"sha256": "d1018efd66ecd3140fe16e98d9ab87b8ca9203c5f1b12700310e6c6a6a0919cf"
+},
+{
+"path": "funding/CL.parquet",
+"bytes": 133000,
+"sha256": "fdbcbee2169398569a07a039db7badf7c210a5b63355b61dda3a5397ed432abd"
+},
+{
+"path": "funding/COPPER.parquet",
+"bytes": 128836,
+"sha256": "a153615d6195328849c26d940824ed11291fa28d7964ecc7865bb89045093763"
+},
+{
+"path": "funding/EUR.parquet",
+"bytes": 122364,
+"sha256": "c0fa401d0f7453373754467497d4fd5b58ee7b5d11dbb24e17c89cca62aa6d3a"
+},
+{
+"path": "funding/GBP.parquet",
+"bytes": 93537,
+"sha256": "d05fd2833258a7107cb001c1903a40ef989f74e7fad2054e35518eb6a6a108b2"
+},
+{
+"path": "funding/GOLD.parquet",
+"bytes": 117155,
+"sha256": "658f0255f674e55963473cc0b26d4e92a01a8295d6f676f7f0e9d5cecc8d76e4"
+},
+{
+"path": "funding/HO.parquet",
+"bytes": 26790,
+"sha256": "dd006e970b991fb9ec7ed13a7dbd15e95e6308fca86058a0d01a1672a6c09014"
+},
+{
+"path": "funding/JPY.parquet",
+"bytes": 124406,
+"sha256": "fc08764bbc982a0737dd5e44001a48f77ecd66f6384b31bdd807c243c1a68570"
+},
+{
+"path": "funding/NATGAS.parquet",
+"bytes": 128676,
+"sha256": "520ea290356ff8ab44b9416cdb74aa3a262495ecec412bed5294e9b323fb3adf"
+},
+{
+"path": "funding/PALLADIUM.parquet",
+"bytes": 134479,
+"sha256": "add77e8a6fe4da5b2a1f8d07441f0ff7f7196fa979b5346f0662b6e67159da6b"
+},
+{
+"path": "funding/PLATINUM.parquet",
+"bytes": 127539,
+"sha256": "815f5eab8a58073a3a728d9e0bddfccdd0139311e44f46017305f86c18f9e227"
+},
+{
+"path": "funding/SILVER.parquet",
+"bytes": 121186,
+"sha256": "336203bec737789ede346fe102e80aef70dd68a928a3d64d6ac9b140dbd8bd7b"
+},
+{
+"path": "funding/SP500.parquet",
+"bytes": 126999,
+"sha256": "e30b55da263edd532127d0dbe41f4b92572e5a20a988a1090a1a08e1061f21af"
+},
+{
+"path": "funding/XYZ100.parquet",
+"bytes": 115796,
+"sha256": "6961559881edebabd32a77a074a413e9a4585fad20e1e34e11e9cedbb6db14d1"
+},
+{
+"path": "klines_1h/BRENTOIL.parquet",
+"bytes": 245580,
+"sha256": "5300e504d894f1dfb990cae076b599029b90b61e7a008d5ea82d8c8dc014595c"
+},
+{
+"path": "klines_1h/CL.parquet",
+"bytes": 260746,
+"sha256": "77d2c346d9a17b168cda64af54614e10a9db00073d28a4fc26230ff52fbd5b56"
+},
+{
+"path": "klines_1h/COPPER.parquet",
+"bytes": 251442,
+"sha256": "154b2f6db2679aaa7eb9ef1c96c19caed920bc02610dc68d3633b81193c770ef"
+},
+{
+"path": "klines_1h/EUR.parquet",
+"bytes": 168657,
+"sha256": "23d44a8a886c3044cf30e0fdaed1423d57b7b5b2250d5fd9eab8bdb52199790e"
+},
+{
+"path": "klines_1h/GBP.parquet",
+"bytes": 122306,
+"sha256": "085efdc7805f5e83bd5ef6a6003cf697e510657d757c3df6169340c5ee96ab6f"
+},
+{
+"path": "klines_1h/GOLD.parquet",
+"bytes": 223796,
+"sha256": "7fd26728fcb5a113518642cd9530c07a9454d0f0215c67328679cfa99b7afd43"
+},
+{
+"path": "klines_1h/HO.parquet",
+"bytes": 49264,
+"sha256": "953c44a9303188e083b65679cebb27dba222424ef063bf86b1411c3fcfde3f49"
+},
+{
+"path": "klines_1h/JPY.parquet",
+"bytes": 162505,
+"sha256": "e30f00d7654c6f0bdb1208509c3a25c02309dcaad861b16070fe1816b9f42cb9"
+},
+{
+"path": "klines_1h/NATGAS.parquet",
+"bytes": 238138,
+"sha256": "40b9eceb977cd3481f9537f8ec4bfb9b33019027806856c046b65e5d31bdcc7d"
+},
+{
+"path": "klines_1h/PALLADIUM.parquet",
+"bytes": 199169,
+"sha256": "ec89aecab3022f6fee2e6e0d22833576927eca2607bf7d56299014ef733795e5"
+},
+{
+"path": "klines_1h/PLATINUM.parquet",
+"bytes": 207992,
+"sha256": "ba432804bd16de83205193662a3c193b923e5b168ab6ac1fa55cefbf39b13076"
+},
+{
+"path": "klines_1h/SILVER.parquet",
+"bytes": 256685,
+"sha256": "3ddf04ee38411202957d763cb3908e772ae95e3f30a0cdef375e041efc230473"
+},
+{
+"path": "klines_1h/SP500.parquet",
+"bytes": 221610,
+"sha256": "2797e42bc975e9e80ec50f85254883e6d23a2af8be2675caffd74b1687971930"
+},
+{
+"path": "klines_1h/XYZ100.parquet",
+"bytes": 223949,
+"sha256": "69e685ce0cad0214116fce76d40555457bf810c20b497353c8b8e8a76d1249f4"
+},
+{
+"path": "manifest.json",
+"bytes": 3873,
+"sha256": "9daa7bd22bc7882623826ec246d21d7d1ce8e0411f923414214b58df82374554"
+},
+{
+"path": "receipts.jsonl",
+"bytes": 37487,
+"sha256": "0dc7f765b7322c49d726edc5c84c10a4462de25b40c343f2610099b694b8a8dc"
+}
+]
+}

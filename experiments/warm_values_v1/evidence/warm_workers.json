@@ -1,0 +1,88 @@
+{
+  "workers": {
+    "BTC": {
+      "closed_mono_ns": 66984962993212,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918825684782,
+      "ready_received_utc_ns": 1792912979793435105,
+      "started_mono_ns": 66917806367035,
+      "symbol": "BTC",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/BTC_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918825500601,
+        "utc_ns": 1792912979793250534
+      }
+    },
+    "MEGA": {
+      "closed_mono_ns": 66984963075964,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918958013600,
+      "ready_received_utc_ns": 1792912979925762441,
+      "started_mono_ns": 66917816108548,
+      "symbol": "MEGA",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/MEGA_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918948965166,
+        "utc_ns": 1792912979916714688
+      }
+    },
+    "ROBO": {
+      "closed_mono_ns": 66984963054803,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918958003124,
+      "ready_received_utc_ns": 1792912979925751986,
+      "started_mono_ns": 66917807470026,
+      "symbol": "ROBO",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/ROBO_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918945822926,
+        "utc_ns": 1792912979913572538
+      }
+    },
+    "SKR": {
+      "closed_mono_ns": 66984963036115,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918957987672,
+      "ready_received_utc_ns": 1792912979925736513,
+      "started_mono_ns": 66917807125179,
+      "symbol": "SKR",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/SKR_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918889224697,
+        "utc_ns": 1792912979856974009
+      }
+    },
+    "WIF": {
+      "closed_mono_ns": 66984963014494,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918957888746,
+      "ready_received_utc_ns": 1792912979925638639,
+      "started_mono_ns": 66917806808915,
+      "symbol": "WIF",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/WIF_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918957698827,
+        "utc_ns": 1792912979925448339
+      }
+    },
+    "XPD": {
+      "closed_mono_ns": 66984963095953,
+      "error": null,
+      "network_commands": 6,
+      "ready_received_mono_ns": 66918958033499,
+      "ready_received_utc_ns": 1792912979925782330,
+      "started_mono_ns": 66917816592469,
+      "symbol": "XPD",
+      "url": "https://contract.mexc.com/api/v1/contract/fair_price/XPD_USDT",
+      "worker_ready_clock": {
+        "mono_ns": 66918955147721,
+        "utc_ns": 1792912979922896963
+      }
+    }
+  }
+}

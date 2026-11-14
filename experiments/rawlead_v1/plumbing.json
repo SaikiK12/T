@@ -1,0 +1,614 @@
+{
+ "trials": 148,
+ "days": {
+  "2026-10-29": {
+   "rtt_ms": 252.695,
+   "rtt_rows": 467,
+   "floor_minutes": 240,
+   "BTC": {
+    "rows_usdt": 8345508,
+    "rows_usdc": 2853587,
+    "hours": 4.0,
+    "queue_ms_usdt_q50_q90_q99": [
+     25.0,
+     160.0,
+     12176.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     19.0,
+     137.0,
+     10565.1
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.1627,
+    "share_usdt_rows_queued_over_1s": 0.0406
+   },
+   "ETH": {
+    "rows_usdt": 11138229,
+    "rows_usdc": 4739677,
+    "hours": 4.0,
+    "queue_ms_usdt_q50_q90_q99": [
+     19.0,
+     126.0,
+     8132.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     13.0,
+     90.0,
+     6574.0
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.1241,
+    "share_usdt_rows_queued_over_1s": 0.0377
+   }
+  },
+  "2026-10-30": {
+   "rtt_ms": 248.788,
+   "rtt_rows": 319,
+   "floor_minutes": 166,
+   "BTC": {
+    "rows_usdt": 9856284,
+    "rows_usdc": 2973114,
+    "hours": 2.762,
+    "queue_ms_usdt_q50_q90_q99": [
+     25.0,
+     159.0,
+     10173.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     20.0,
+     138.0,
+     10098.0
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.159,
+    "share_usdt_rows_queued_over_1s": 0.0436
+   },
+   "ETH": {
+    "rows_usdt": 9793918,
+    "rows_usdc": 3930630,
+    "hours": 2.762,
+    "queue_ms_usdt_q50_q90_q99": [
+     21.0,
+     132.0,
+     10158.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     14.0,
+     96.0,
+     9593.0
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.1272,
+    "share_usdt_rows_queued_over_1s": 0.0456
+   }
+  },
+  "2026-11-05": {
+   "rtt_ms": 248.552,
+   "rtt_rows": 125,
+   "floor_minutes": 69,
+   "BTC": {
+    "rows_usdt": 10136014,
+    "rows_usdc": 3461821,
+    "hours": 1.13,
+    "queue_ms_usdt_q50_q90_q99": [
+     1108.0,
+     15208.2,
+     34436.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     748.0,
+     15103.0,
+     34259.0
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.6863,
+    "share_usdt_rows_queued_over_1s": 0.5052
+   },
+   "ETH": {
+    "rows_usdt": 9419147,
+    "rows_usdc": 4586038,
+    "hours": 1.13,
+    "queue_ms_usdt_q50_q90_q99": [
+     25.0,
+     3694.0,
+     13816.0
+    ],
+    "queue_ms_usdc_q50_q90_q99": [
+     15.0,
+     4080.0,
+     14141.0
+    ],
+    "share_usdt_rows_queued_over_100ms": 0.3216,
+    "share_usdt_rows_queued_over_1s": 0.1538
+   }
+  }
+ },
+ "filters": {
+  "2026-10-29/BTC/1.0/drained": {
+   "crossings": 1616,
+   "after_refractory": 624,
+   "stall": 33,
+   "queued": 73,
+   "path": 0,
+   "unread_at_trigger": 524,
+   "kept": 537,
+   "kept_unread": 453
+  },
+  "2026-10-29/BTC/1.0/naive": {
+   "crossings": 1569,
+   "after_refractory": 607,
+   "stall": 34,
+   "queued": 72,
+   "path": 0,
+   "unread_at_trigger": 442,
+   "kept": 521,
+   "kept_unread": 387
+  },
+  "2026-10-29/BTC/2.0/drained": {
+   "crossings": 63,
+   "after_refractory": 27,
+   "stall": 4,
+   "queued": 9,
+   "path": 0,
+   "unread_at_trigger": 15,
+   "kept": 14,
+   "kept_unread": 8
+  },
+  "2026-10-29/BTC/2.0/naive": {
+   "crossings": 79,
+   "after_refractory": 35,
+   "stall": 4,
+   "queued": 11,
+   "path": 0,
+   "unread_at_trigger": 21,
+   "kept": 20,
+   "kept_unread": 14
+  },
+  "2026-10-29/BTC/4.0/drained": {
+   "crossings": 5,
+   "after_refractory": 3,
+   "stall": 1,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 1,
+   "kept": 1,
+   "kept_unread": 1
+  },
+  "2026-10-29/BTC/4.0/naive": {
+   "crossings": 8,
+   "after_refractory": 3,
+   "stall": 1,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 1,
+   "kept": 1,
+   "kept_unread": 1
+  },
+  "2026-10-29/BTC/8.0/drained": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 1,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-10-29/BTC/8.0/naive": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 1,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-10-29/ETH/1.0/drained": {
+   "crossings": 3022,
+   "after_refractory": 1021,
+   "stall": 62,
+   "queued": 123,
+   "path": 0,
+   "unread_at_trigger": 579,
+   "kept": 865,
+   "kept_unread": 518
+  },
+  "2026-10-29/ETH/1.0/naive": {
+   "crossings": 2840,
+   "after_refractory": 966,
+   "stall": 58,
+   "queued": 115,
+   "path": 0,
+   "unread_at_trigger": 430,
+   "kept": 821,
+   "kept_unread": 389
+  },
+  "2026-10-29/ETH/2.0/drained": {
+   "crossings": 105,
+   "after_refractory": 46,
+   "stall": 8,
+   "queued": 17,
+   "path": 0,
+   "unread_at_trigger": 12,
+   "kept": 27,
+   "kept_unread": 7
+  },
+  "2026-10-29/ETH/2.0/naive": {
+   "crossings": 110,
+   "after_refractory": 50,
+   "stall": 9,
+   "queued": 18,
+   "path": 0,
+   "unread_at_trigger": 15,
+   "kept": 29,
+   "kept_unread": 9
+  },
+  "2026-10-29/ETH/4.0/drained": {
+   "crossings": 9,
+   "after_refractory": 5,
+   "stall": 2,
+   "queued": 2,
+   "path": 0,
+   "unread_at_trigger": 3,
+   "kept": 3,
+   "kept_unread": 2
+  },
+  "2026-10-29/ETH/4.0/naive": {
+   "crossings": 9,
+   "after_refractory": 5,
+   "stall": 2,
+   "queued": 2,
+   "path": 0,
+   "unread_at_trigger": 2,
+   "kept": 3,
+   "kept_unread": 1
+  },
+  "2026-10-29/ETH/8.0/drained": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 1,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-10-29/ETH/8.0/naive": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 1,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-10-30/BTC/1.0/drained": {
+   "crossings": 2213,
+   "after_refractory": 780,
+   "stall": 42,
+   "queued": 96,
+   "path": 1,
+   "unread_at_trigger": 675,
+   "kept": 662,
+   "kept_unread": 568
+  },
+  "2026-10-30/BTC/1.0/naive": {
+   "crossings": 2101,
+   "after_refractory": 741,
+   "stall": 39,
+   "queued": 93,
+   "path": 2,
+   "unread_at_trigger": 525,
+   "kept": 625,
+   "kept_unread": 439
+  },
+  "2026-10-30/BTC/2.0/drained": {
+   "crossings": 50,
+   "after_refractory": 32,
+   "stall": 1,
+   "queued": 6,
+   "path": 0,
+   "unread_at_trigger": 25,
+   "kept": 26,
+   "kept_unread": 20
+  },
+  "2026-10-30/BTC/2.0/naive": {
+   "crossings": 55,
+   "after_refractory": 36,
+   "stall": 2,
+   "queued": 6,
+   "path": 0,
+   "unread_at_trigger": 26,
+   "kept": 30,
+   "kept_unread": 23
+  },
+  "2026-10-30/BTC/4.0/drained": {
+   "crossings": 7,
+   "after_refractory": 3,
+   "stall": 0,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 1,
+   "kept": 2,
+   "kept_unread": 0
+  },
+  "2026-10-30/BTC/4.0/naive": {
+   "crossings": 8,
+   "after_refractory": 3,
+   "stall": 0,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 2,
+   "kept": 2,
+   "kept_unread": 1
+  },
+  "2026-10-30/BTC/8.0/drained": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 0,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 1,
+   "kept_unread": 0
+  },
+  "2026-10-30/BTC/8.0/naive": {
+   "crossings": 1,
+   "after_refractory": 1,
+   "stall": 0,
+   "queued": 0,
+   "path": 0,
+   "unread_at_trigger": 0,
+   "kept": 1,
+   "kept_unread": 0
+  },
+  "2026-10-30/ETH/1.0/drained": {
+   "crossings": 5752,
+   "after_refractory": 1347,
+   "stall": 75,
+   "queued": 121,
+   "path": 1,
+   "unread_at_trigger": 799,
+   "kept": 1181,
+   "kept_unread": 730
+  },
+  "2026-10-30/ETH/1.0/naive": {
+   "crossings": 5423,
+   "after_refractory": 1280,
+   "stall": 69,
+   "queued": 118,
+   "path": 0,
+   "unread_at_trigger": 560,
+   "kept": 1125,
+   "kept_unread": 513
+  },
+  "2026-10-30/ETH/2.0/drained": {
+   "crossings": 315,
+   "after_refractory": 94,
+   "stall": 6,
+   "queued": 27,
+   "path": 0,
+   "unread_at_trigger": 43,
+   "kept": 64,
+   "kept_unread": 31
+  },
+  "2026-10-30/ETH/2.0/naive": {
+   "crossings": 329,
+   "after_refractory": 100,
+   "stall": 6,
+   "queued": 28,
+   "path": 0,
+   "unread_at_trigger": 41,
+   "kept": 69,
+   "kept_unread": 30
+  },
+  "2026-10-30/ETH/4.0/drained": {
+   "crossings": 60,
+   "after_refractory": 10,
+   "stall": 1,
+   "queued": 6,
+   "path": 0,
+   "unread_at_trigger": 5,
+   "kept": 3,
+   "kept_unread": 2
+  },
+  "2026-10-30/ETH/4.0/naive": {
+   "crossings": 68,
+   "after_refractory": 12,
+   "stall": 1,
+   "queued": 6,
+   "path": 0,
+   "unread_at_trigger": 7,
+   "kept": 5,
+   "kept_unread": 4
+  },
+  "2026-10-30/ETH/8.0/drained": {
+   "crossings": 15,
+   "after_refractory": 2,
+   "stall": 1,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 2,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-10-30/ETH/8.0/naive": {
+   "crossings": 15,
+   "after_refractory": 2,
+   "stall": 1,
+   "queued": 1,
+   "path": 0,
+   "unread_at_trigger": 2,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-11-05/BTC/1.0/drained": {
+   "crossings": 7238,
+   "after_refractory": 905,
+   "stall": 62,
+   "queued": 575,
+   "path": 2,
+   "unread_at_trigger": 811,
+   "kept": 324,
+   "kept_unread": 287
+  },
+  "2026-11-05/BTC/1.0/naive": {
+   "crossings": 7051,
+   "after_refractory": 878,
+   "stall": 61,
+   "queued": 561,
+   "path": 2,
+   "unread_at_trigger": 642,
+   "kept": 311,
+   "kept_unread": 235
+  },
+  "2026-11-05/BTC/2.0/drained": {
+   "crossings": 300,
+   "after_refractory": 118,
+   "stall": 7,
+   "queued": 102,
+   "path": 0,
+   "unread_at_trigger": 101,
+   "kept": 15,
+   "kept_unread": 14
+  },
+  "2026-11-05/BTC/2.0/naive": {
+   "crossings": 332,
+   "after_refractory": 138,
+   "stall": 12,
+   "queued": 120,
+   "path": 0,
+   "unread_at_trigger": 112,
+   "kept": 16,
+   "kept_unread": 15
+  },
+  "2026-11-05/BTC/4.0/drained": {
+   "crossings": 46,
+   "after_refractory": 10,
+   "stall": 1,
+   "queued": 8,
+   "path": 0,
+   "unread_at_trigger": 8,
+   "kept": 2,
+   "kept_unread": 2
+  },
+  "2026-11-05/BTC/4.0/naive": {
+   "crossings": 54,
+   "after_refractory": 11,
+   "stall": 2,
+   "queued": 9,
+   "path": 0,
+   "unread_at_trigger": 9,
+   "kept": 2,
+   "kept_unread": 2
+  },
+  "2026-11-05/BTC/8.0/drained": {
+   "crossings": 5,
+   "after_refractory": 2,
+   "stall": 0,
+   "queued": 2,
+   "path": 0,
+   "unread_at_trigger": 1,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-11-05/BTC/8.0/naive": {
+   "crossings": 8,
+   "after_refractory": 3,
+   "stall": 1,
+   "queued": 3,
+   "path": 0,
+   "unread_at_trigger": 2,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-11-05/ETH/1.0/drained": {
+   "crossings": 16337,
+   "after_refractory": 1094,
+   "stall": 73,
+   "queued": 291,
+   "path": 2,
+   "unread_at_trigger": 691,
+   "kept": 778,
+   "kept_unread": 496
+  },
+  "2026-11-05/ETH/1.0/naive": {
+   "crossings": 14853,
+   "after_refractory": 1069,
+   "stall": 71,
+   "queued": 271,
+   "path": 2,
+   "unread_at_trigger": 575,
+   "kept": 771,
+   "kept_unread": 410
+  },
+  "2026-11-05/ETH/2.0/drained": {
+   "crossings": 2347,
+   "after_refractory": 340,
+   "stall": 27,
+   "queued": 155,
+   "path": 1,
+   "unread_at_trigger": 144,
+   "kept": 179,
+   "kept_unread": 80
+  },
+  "2026-11-05/ETH/2.0/naive": {
+   "crossings": 2873,
+   "after_refractory": 386,
+   "stall": 29,
+   "queued": 190,
+   "path": 1,
+   "unread_at_trigger": 183,
+   "kept": 186,
+   "kept_unread": 81
+  },
+  "2026-11-05/ETH/4.0/drained": {
+   "crossings": 350,
+   "after_refractory": 58,
+   "stall": 1,
+   "queued": 50,
+   "path": 0,
+   "unread_at_trigger": 15,
+   "kept": 8,
+   "kept_unread": 5
+  },
+  "2026-11-05/ETH/4.0/naive": {
+   "crossings": 875,
+   "after_refractory": 130,
+   "stall": 7,
+   "queued": 111,
+   "path": 0,
+   "unread_at_trigger": 86,
+   "kept": 17,
+   "kept_unread": 13
+  },
+  "2026-11-05/ETH/8.0/drained": {
+   "crossings": 63,
+   "after_refractory": 17,
+   "stall": 1,
+   "queued": 17,
+   "path": 0,
+   "unread_at_trigger": 1,
+   "kept": 0,
+   "kept_unread": 0
+  },
+  "2026-11-05/ETH/8.0/naive": {
+   "crossings": 331,
+   "after_refractory": 60,
+   "stall": 3,
+   "queued": 56,
+   "path": 0,
+   "unread_at_trigger": 44,
+   "kept": 3,
+   "kept_unread": 3
+  }
+ },
+ "kept_by_theta": {
+  "1.0/drained": 4347,
+  "1.0/naive": 4174,
+  "2.0/drained": 325,
+  "2.0/naive": 350,
+  "4.0/drained": 19,
+  "4.0/naive": 30,
+  "8.0/drained": 1,
+  "8.0/naive": 4
+ }
+}

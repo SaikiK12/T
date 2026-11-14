@@ -1,0 +1,1456 @@
+{
+ "folder": "data/settle_ticks",
+ "source": "https://data.binance.vision USD-M daily aggTrades (each zip checked against its .CHECKSUM sha256; the zips are not kept)",
+ "script": "python -I scripts/fetch_settle_ticks.py",
+ "recorded_utc": "2026-10-28T14:19:17Z",
+ "hops": "experiments/settlehop_pred_v1/results/hops.csv.gz book 'binance+lighter th0.3%': 221 hops",
+ "window": "[T - 10 min, T + 15 min) of each hop's settlement T",
+ "zips": 139,
+ "zip_bytes": 1228689398,
+ "binance_zips": {
+  "0GUSDT/2025-12-25": {
+   "sha256": "164cd61af32b5ca26cb56767cd3d66c992ddbc30f4955a043983d3fa031a57f8",
+   "bytes": 13382708
+  },
+  "0GUSDT/2025-12-26": {
+   "sha256": "e6bfe3f9e45d7eaa5159b198273bea4d571d1ab4515c1dbe389273f64abc4e61",
+   "bytes": 14080937
+  },
+  "0GUSDT/2025-12-27": {
+   "sha256": "fcd94b6820abc748bed1304f832d579bad3f0c0faaf92a548f214d680cba6524",
+   "bytes": 5107793
+  },
+  "0GUSDT/2025-12-29": {
+   "sha256": "5e968efaf0cc9bc3374551803d4756225c0307c590d1155a0a459c1e457a7270",
+   "bytes": 5203261
+  },
+  "0GUSDT/2025-12-30": {
+   "sha256": "61826401513e2e45d8a716fa8f9dfdf9d3221d749374b05ae7b3bbe31ccdb058",
+   "bytes": 2983626
+  },
+  "0GUSDT/2026-01-22": {
+   "sha256": "f0fd8189948720644416f34cc7c81224a8894588bb498f49c48e9e36dc4f1918",
+   "bytes": 4262137
+  },
+  "0GUSDT/2026-01-23": {
+   "sha256": "dacf907e80e6df21886fc17893c441c1c3fb6709be21e1074d9233f6175c866d",
+   "bytes": 11885245
+  },
+  "0GUSDT/2026-01-24": {
+   "sha256": "3c2eb66a2f0ce7db7da6ce43a70d20a299f89c5befaf4e7f34f30ce998df2b6b",
+   "bytes": 12276698
+  },
+  "0GUSDT/2026-01-30": {
+   "sha256": "e96b651d3baeb441e9fb8fa3e26fa26b0cb96c1d814bad50be508af39f5fe8a2",
+   "bytes": 6956834
+  },
+  "0GUSDT/2026-01-31": {
+   "sha256": "ddf019f4faa618e0038d5d03515911f497d5297d22ca133214bd316318170e00",
+   "bytes": 4088290
+  },
+  "0GUSDT/2026-02-01": {
+   "sha256": "06ca2b8253fd76ecbee559773bff1142d28f92b07366f890001d9e087ba54153",
+   "bytes": 2544896
+  },
+  "0GUSDT/2026-02-12": {
+   "sha256": "f6794f6b607df2961b552579f06c21daa8f7e868b1ba8d3ae54192490921b40f",
+   "bytes": 9821473
+  },
+  "0GUSDT/2026-04-12": {
+   "sha256": "6b2d3548358f6fd370ad2a115429458d97c82df47c6abe50f604f0875286af55",
+   "bytes": 3521907
+  },
+  "0GUSDT/2026-04-27": {
+   "sha256": "3d363fd41a943f9c46065c767ab8dc98604b5b393e8736a247392025e5182ca2",
+   "bytes": 3324242
+  },
+  "1000BONKUSDT/2026-07-16": {
+   "sha256": "819a48062e457415591cc6071b3405824f45dd7b9366032a4be85b72dfce9442",
+   "bytes": 2004934
+  },
+  "2ZUSDT/2025-11-21": {
+   "sha256": "941b7d636f3c451c38cdeb0b1b9b72b4eb3de69cf4ff414ed78b95737de9ff51",
+   "bytes": 10990001
+  },
+  "AEROUSDT/2025-10-10": {
+   "sha256": "965df943ca70b54b07ccd2d87ebbd0126ecd3490c2281e758e2b42eb7e9822c9",
+   "bytes": 4002392
+  },
+  "AEROUSDT/2025-10-11": {
+   "sha256": "1fda58764938026332ad21b60b3efa0530ae759da021e27846efdc4e96f1132e",
+   "bytes": 2771405
+  },
+  "APTUSDT/2025-10-11": {
+   "sha256": "98343a7d84e93d7638c6d89dd7c806f8933ade50e39bb7e576c55c8175a90f77",
+   "bytes": 16030349
+  },
+  "APTUSDT/2025-11-07": {
+   "sha256": "1d5ae1e9aa1dfdbffc7111cfcc4fae007527c2d530207ace024123ec27d9da91",
+   "bytes": 15336093
+  },
+  "ARCUSDT/2026-04-15": {
+   "sha256": "d6cd6c0811d217fc4c7d6132bf4609e68cb89865aff48a7bad170da83c53cd77",
+   "bytes": 2272466
+  },
+  "AVNTUSDT/2025-10-10": {
+   "sha256": "f6d60d911e1fda0ac9d0dd2dbdd26e1149b819d78e3d7c2376bf52c073c120d8",
+   "bytes": 6691183
+  },
+  "AVNTUSDT/2025-10-11": {
+   "sha256": "fdfe1f522849a2e23fecedd38d8d8d26d7cb1aeb82c9db3638bc4f29440cca0f",
+   "bytes": 6478993
+  },
+  "AVNTUSDT/2025-10-21": {
+   "sha256": "53327b325791bf3274f6aa2b9fcafe96fd225dc86cf4f287d0135796be545a08",
+   "bytes": 16287017
+  },
+  "AVNTUSDT/2025-10-22": {
+   "sha256": "f5dd6e121b3f9768c9f88a9acecfa57579a7b750aea7056461f0b4dd18726558",
+   "bytes": 8952606
+  },
+  "AVNTUSDT/2025-10-23": {
+   "sha256": "36070cbeaece2c517d73b7dedb83011edad05a2dbd68a0e79dfe98cca241547a",
+   "bytes": 5394001
+  },
+  "AVNTUSDT/2025-10-24": {
+   "sha256": "00cd1194d1ae90cc4c19aad5f7db2d3d7c2a9b4491d21f6670c9be253a399502",
+   "bytes": 10724695
+  },
+  "AVNTUSDT/2025-12-24": {
+   "sha256": "e3b8807f73e5cad83625fc8dea8e4377dea769de1d3aea5ea5c6e53256c845a6",
+   "bytes": 8387328
+  },
+  "AVNTUSDT/2025-12-25": {
+   "sha256": "42ac4f31e50a92c5f977af3d503f1b567ac4fbaa3f2b207966a1ec648c1f6af4",
+   "bytes": 4291470
+  },
+  "AVNTUSDT/2026-01-10": {
+   "sha256": "1efc5ce86b2645545fd0261ce4a90f49e494105d510da950aefb3856ebbe7428",
+   "bytes": 1902740
+  },
+  "AVNTUSDT/2026-01-25": {
+   "sha256": "8b517f8cd87c8989dbef8268c4d0e0a052c71c296235957c70f3d3655edfc137",
+   "bytes": 5967662
+  },
+  "AXSUSDT/2026-02-17": {
+   "sha256": "8f8e0e984eca5b8fd77ee47a966a0440251f6e795a9af4a0236320b36568d590",
+   "bytes": 1104767
+  },
+  "AXSUSDT/2026-02-18": {
+   "sha256": "b2c8879113e1afc3555d8ada33f8c00159129819d965a5e4f77a8476abf8bf02",
+   "bytes": 955194
+  },
+  "AXSUSDT/2026-02-19": {
+   "sha256": "bf1c20f073437d26da8224749d5c61cdd8c1f2a0d1d75b403f4e0f18d16029ff",
+   "bytes": 1010757
+  },
+  "AXSUSDT/2026-02-20": {
+   "sha256": "8564cede58f8531d4b3196e328717cfb753368d7511bc91381d63759659a44fb",
+   "bytes": 1707485
+  },
+  "BERAUSDT/2026-01-14": {
+   "sha256": "9ccaabe27a1dfc39717b6a201a1365875074afd40a21b9df0fece61584f58d77",
+   "bytes": 14499899
+  },
+  "BERAUSDT/2026-01-17": {
+   "sha256": "c1c2c1817ea8081a48de4647ef9f6d06fda65c199b1cd0a9fc96db9c77bf9713",
+   "bytes": 11858065
+  },
+  "BERAUSDT/2026-01-18": {
+   "sha256": "5a097b0a64fcab1b3a994c7927a0a931fae6aa3fca1b3b085992dc4c991e9042",
+   "bytes": 14162339
+  },
+  "BERAUSDT/2026-01-19": {
+   "sha256": "2485464cb575172cdbb735b73a7203d1c56143d2662429791e3d1503b7ca2065",
+   "bytes": 11532238
+  },
+  "BERAUSDT/2026-01-20": {
+   "sha256": "891a6c606449860760839ebba10edbb7556cf0ecca90155ca5fa889553650af9",
+   "bytes": 11261023
+  },
+  "BERAUSDT/2026-01-21": {
+   "sha256": "90ae96ca05a653bf882d5b10936d072e82014f5167b67e4567c5178ed506ec9c",
+   "bytes": 6127448
+  },
+  "BERAUSDT/2026-02-06": {
+   "sha256": "d788bc695f5138a855f980ed7f4c478ad333a425ca99b99f206c830ea1b10252",
+   "bytes": 9672287
+  },
+  "BERAUSDT/2026-02-07": {
+   "sha256": "df12cb30023ecbc87e3a0300ed08778eac2971981ba1122047501960182a02c2",
+   "bytes": 6688961
+  },
+  "BERAUSDT/2026-02-08": {
+   "sha256": "99586bd8156c57b7a5d8d43a38e298e3d48f74bbdb91cfe384eaf4ea41d88f76",
+   "bytes": 4504934
+  },
+  "BERAUSDT/2026-02-09": {
+   "sha256": "eb81d30748d2ddb13f0275f76b118952215ab7ee5ec800a4a67b813da3cfbb88",
+   "bytes": 5411001
+  },
+  "BERAUSDT/2026-02-11": {
+   "sha256": "0182b88ec3851f4c3d513c4f4b38cca03daab7ea1f0a1f858354ea6e97745ac0",
+   "bytes": 37300831
+  },
+  "BERAUSDT/2026-02-12": {
+   "sha256": "1d1b1589f4c7b2e522d8f3cfce9a0b68f5d1be5d12970a1aa27cc81d941c7065",
+   "bytes": 26454581
+  },
+  "BERAUSDT/2026-02-13": {
+   "sha256": "46f81b64848812fdf096eb591424b7bbc5ef840525b75d02138bbdd4c9e6207c",
+   "bytes": 6380040
+  },
+  "BERAUSDT/2026-04-04": {
+   "sha256": "a8d9f13df8b53887bb8f90d8a4b9ad62def3b4cc8e894ae69d7b19823d0c3dae",
+   "bytes": 3374739
+  },
+  "DUSKUSDT/2026-02-19": {
+   "sha256": "2935316312e74952c9b4b4986cf1c5789bbe909ed870b22e998f3e491cb0d238",
+   "bytes": 3632108
+  },
+  "DUSKUSDT/2026-02-20": {
+   "sha256": "ec5b572cd944c8403858902e238f4fa52f4ffa9201d57a58fd1795fa84962bfc",
+   "bytes": 2459075
+  },
+  "DUSKUSDT/2026-02-21": {
+   "sha256": "e22a142fd0768253c4d11df5fdfa8819ecf584ad772a28fd95dc386a20fbba9a",
+   "bytes": 1864993
+  },
+  "DUSKUSDT/2026-02-22": {
+   "sha256": "8a617d5d2b8bfb99a56cc8099dcc791e4fd424168e205f1879a0df58ea78964e",
+   "bytes": 2513763
+  },
+  "DUSKUSDT/2026-02-23": {
+   "sha256": "8ac20b46803b2298bc24e59d7a33b0ac3d23d17d3c8c12418eea382932604042",
+   "bytes": 2284304
+  },
+  "EIGENUSDT/2025-10-10": {
+   "sha256": "bf74a9142b8e76b005f0ad9a26c860ef0f58d6217b3c4e47544712c214d6edb3",
+   "bytes": 7176982
+  },
+  "EIGENUSDT/2025-10-11": {
+   "sha256": "7831b548825c8b351985b5034bb63ac28fff5ad17780173b319b882ad7ff5227",
+   "bytes": 6226441
+  },
+  "ETHFIUSDT/2026-03-19": {
+   "sha256": "6d44ad58c3c272a2bb7bf3d54a55fe096a3af180556bdd4fb2653969820e1cb4",
+   "bytes": 3287632
+  },
+  "FFUSDT/2026-04-10": {
+   "sha256": "963b093fafe60ab525d63c064ab932f61e2ccb8fad01983f7bbc1ac0bcb0927c",
+   "bytes": 24918000
+  },
+  "FOGOUSDT/2026-02-24": {
+   "sha256": "cf9b0dd68df2318ab9101247bd57509f4a099bde51e4841ad5d2dcaf630a21bf",
+   "bytes": 2838018
+  },
+  "FOGOUSDT/2026-06-25": {
+   "sha256": "7d47239d561aed2d4bf6b1402b346be2f8bcd2f326ffa6ae7a5c167bd92e89ed",
+   "bytes": 1864494
+  },
+  "FOGOUSDT/2026-06-26": {
+   "sha256": "d3966dd75750bc8ddbc7188cf183f40965bc6cb0506db74b3af7e673ae9d4f17",
+   "bytes": 1187685
+  },
+  "ICPUSDT/2026-03-11": {
+   "sha256": "3c3f71e7ed7fe642146f08c1a150790cd8e687c55a2cf97b1037511556b8150e",
+   "bytes": 4065368
+  },
+  "KAITOUSDT/2025-09-10": {
+   "sha256": "aab02672b33820f671e90cf761495e01453ba6a009b88275c945e3a94b2716ee",
+   "bytes": 9210073
+  },
+  "KAITOUSDT/2025-09-27": {
+   "sha256": "809cb6e167afaf768d71e6d40b488d50ac75769fe5ec9d7653c09872ca2160e3",
+   "bytes": 12445753
+  },
+  "KAITOUSDT/2025-09-28": {
+   "sha256": "19b0e27fae4e00d6b91668965d241cdca7556514e887b256ada33e0871ee9009",
+   "bytes": 24550609
+  },
+  "KAITOUSDT/2025-11-17": {
+   "sha256": "56d0283c5b4f518b6b99573c22173cbff2cd708a10c9dd63684e61208189ab94",
+   "bytes": 7254946
+  },
+  "KAITOUSDT/2025-11-18": {
+   "sha256": "c6e995b82d731e20036675a8892ce43e7a4dcf13da6d4666f0c5f1fa460d2492",
+   "bytes": 4096875
+  },
+  "KAITOUSDT/2025-11-25": {
+   "sha256": "098bd2b74ca718c8bc7e21fe3ad05a2e32b2cbb0cd5c6618f2de30af48103c67",
+   "bytes": 5037713
+  },
+  "KAITOUSDT/2025-12-27": {
+   "sha256": "da0a70daa2e8bd81681f9866e897fc22d1906be785a9742033870ca0f8c6bad8",
+   "bytes": 8058624
+  },
+  "KAITOUSDT/2026-01-15": {
+   "sha256": "d6519a9b48d645aab48656a726863a9abefe3a28d10ab317584c7b84fbd6b376",
+   "bytes": 7585012
+  },
+  "KAITOUSDT/2026-08-08": {
+   "sha256": "a1165a54e2b37d5814c422d7659c604b038a61a72b66a98972dc1643dd9f3663",
+   "bytes": 9679793
+  },
+  "KAITOUSDT/2026-08-09": {
+   "sha256": "4f35f18502d5ab551ab0940c12eebe5c0a8de33e2981f71c8a11f8406ad1e8d6",
+   "bytes": 6727937
+  },
+  "KAITOUSDT/2026-08-10": {
+   "sha256": "f337d0f6dc295f103de4c155dcd0c3e20c8650eb48e9e315e47cd3fa176d4c39",
+   "bytes": 5810789
+  },
+  "KAITOUSDT/2026-08-11": {
+   "sha256": "c6945e78faf333425e111d59502081e0e66e142744552ab38944187dc78f8f7c",
+   "bytes": 3791734
+  },
+  "KAITOUSDT/2026-08-12": {
+   "sha256": "09a0a938b9220c865b1bfb9a332c9c5dfc6b5032bf565e432247d8df77e69bb2",
+   "bytes": 7506624
+  },
+  "KAITOUSDT/2026-08-13": {
+   "sha256": "bef9290fea112aa4ee5387d604e2c0f7872a39ea91104c3dffafa00b77ee0607",
+   "bytes": 3714428
+  },
+  "LINEAUSDT/2026-02-12": {
+   "sha256": "df53c668353cdddbd7b9a9968ce8816a6ec4c81826c6de620fa078c860061ed2",
+   "bytes": 4270271
+  },
+  "METUSDT/2025-11-18": {
+   "sha256": "b1603e72d3099478f789f1a64320c9c54f9fc7f494bd5c38250d7e38eb34e48c",
+   "bytes": 6228850
+  },
+  "METUSDT/2026-04-22": {
+   "sha256": "75a59b1e5ba33cd00337046d39532e43ecc59d2b6307e53dea5fe352b21b4504",
+   "bytes": 6498887
+  },
+  "NMRUSDT/2025-09-23": {
+   "sha256": "6c737267d73e5ff5abe805f4a97bc7a7d74fb9a5150cd1280966320d770413c6",
+   "bytes": 13846556
+  },
+  "NMRUSDT/2025-10-11": {
+   "sha256": "bcb0ee8159b1473d9b86b19a1cdf1eecb8e80a904ce960ab75c985c126345e07",
+   "bytes": 4109059
+  },
+  "NMRUSDT/2025-10-16": {
+   "sha256": "cba7cc2e4b7112a977f351d7cb6f1cc66b06e7203c6a6c4c43c7db1901447694",
+   "bytes": 4207796
+  },
+  "NMRUSDT/2025-11-03": {
+   "sha256": "47dd4159c4656ec906c8ee24a659a650fd44a41f60079a7cb39af3ec421c3656",
+   "bytes": 5113719
+  },
+  "NMRUSDT/2025-11-17": {
+   "sha256": "8a7805ddff9c5e3ecf19a9b7ff3c00d4c019fadd9aa5ccaa66f3d3e0e50c9b09",
+   "bytes": 6782777
+  },
+  "NMRUSDT/2025-11-20": {
+   "sha256": "4ded32eaae3d8cf110629c986a6e644ee373ec54b366dbaf6e52714631da91a4",
+   "bytes": 14819521
+  },
+  "NMRUSDT/2026-01-10": {
+   "sha256": "fc7abd50f4841de799d4d0e556ead0e030c730f390ceae83e74dbeca0168fa61",
+   "bytes": 2137172
+  },
+  "NMRUSDT/2026-01-11": {
+   "sha256": "afb0020c322f8ffe20ca42a0abf355637d90e49de5be9dff3c03827ddc6b6fbb",
+   "bytes": 870959
+  },
+  "ONDOUSDT/2025-10-10": {
+   "sha256": "9b6e75416b096a3e1dc3c2c49a0f7e2d1f6f2a12e999fd12b9e164794f0d6cec",
+   "bytes": 7576653
+  },
+  "ONDOUSDT/2025-10-11": {
+   "sha256": "f7a2c83cf5d8a9abe796abc5c0b1e782f74080fb3f6882e716d15af33bf80f3e",
+   "bytes": 4675052
+  },
+  "PIPPINUSDT/2026-03-04": {
+   "sha256": "6ff70162cc7c59fba96f39a57613a5b70c29ecf6f659991b6f04284f283c7696",
+   "bytes": 37724816
+  },
+  "PIPPINUSDT/2026-03-16": {
+   "sha256": "a7c456aa799332aa0fe9bee46529e5cf84db2339fd35ad66a5f6f7a855c923c8",
+   "bytes": 41753971
+  },
+  "PIPPINUSDT/2026-03-27": {
+   "sha256": "ce482956799d6dc00cdf6942a2bd2af76ab0460774d06b731556e55edbb2e5c0",
+   "bytes": 9924124
+  },
+  "PIPPINUSDT/2026-04-03": {
+   "sha256": "913707ab7288902ecb995f8a08b90a1ea98f00131e37db3ecc4a1aea2a1c5250",
+   "bytes": 21749287
+  },
+  "POLUSDT/2025-02-22": {
+   "sha256": "db8d0c88bec2068f3d97216eadf4964a64219ec27553287996d1baebd64278bd",
+   "bytes": 1529953
+  },
+  "POLUSDT/2025-04-02": {
+   "sha256": "1003d02f7333ba40800abd34d10f93465a2597e603842907f1fd67acbb10d9ef",
+   "bytes": 2111073
+  },
+  "POLUSDT/2025-04-03": {
+   "sha256": "96316d0ccb7ba475769484e9b474f765342d606e44fbbd728e61148960fb9824",
+   "bytes": 1555555
+  },
+  "PROVEUSDT/2025-10-12": {
+   "sha256": "a5df76d2095c2e5c0216c95c7bd2b671cbb211a373b31f6a7a956ededbe196c0",
+   "bytes": 3201319
+  },
+  "PROVEUSDT/2026-02-06": {
+   "sha256": "74ff87dffcd827d782cfda1ff01919b6a3f1b6adf3bea7847b99739c0f114752",
+   "bytes": 3049505
+  },
+  "PROVEUSDT/2026-03-25": {
+   "sha256": "95a961832ed48afbf809a6c63bde0b6a7d79a51d05b7f8a901ea467b2fe249f1",
+   "bytes": 3426133
+  },
+  "PROVEUSDT/2026-03-26": {
+   "sha256": "da938a600c534fff14032faa2de653ca7f3e374146c6b44dbbe841c968c5d748",
+   "bytes": 5262803
+  },
+  "PROVEUSDT/2026-03-27": {
+   "sha256": "a18c69a5d9d16dd27ccee22c173818ee54cc030f279af16d951a43131f3c6fbe",
+   "bytes": 1535742
+  },
+  "RIVERUSDT/2026-02-12": {
+   "sha256": "f9619c3b5cf908cb0c73cea948150e40fddb4b58bece06bda018675ea4a01a75",
+   "bytes": 29201747
+  },
+  "RIVERUSDT/2026-02-13": {
+   "sha256": "17cdde21943c0f4dcbee9aa2915c91cd83384fd9bfa19a6ba144f86bea80e120",
+   "bytes": 22248792
+  },
+  "RIVERUSDT/2026-02-14": {
+   "sha256": "dae365ed5e2fa4a5473fb862339bec4af7f5a6c62a87574c17705aaa1ac6acdf",
+   "bytes": 28124014
+  },
+  "RIVERUSDT/2026-02-15": {
+   "sha256": "108353a674964eb7d9350b0075fef1032a3b7a01f421339e1420c7d87b0dc567",
+   "bytes": 14351460
+  },
+  "RIVERUSDT/2026-02-16": {
+   "sha256": "c8ab36147afde2f8b99634ad525f3123be699f6914861913ab71ced0aeb9208f",
+   "bytes": 8523392
+  },
+  "RIVERUSDT/2026-02-17": {
+   "sha256": "a10873dd3580e9642e607676fb07023cdb1a66ca8713e21eec46ca5167e79f51",
+   "bytes": 14310988
+  },
+  "RIVERUSDT/2026-02-18": {
+   "sha256": "77e2f8933de197e7bb4c92d3374c3681823edcbad8c7b58cfe2ca80740b13e57",
+   "bytes": 19026801
+  },
+  "RIVERUSDT/2026-02-19": {
+   "sha256": "ceb2c2deb6fbb95855bf05193e9a46366bdd0ec2f1dbf06d25582821d2c7a8f9",
+   "bytes": 13083028
+  },
+  "RIVERUSDT/2026-02-20": {
+   "sha256": "b402ed8b523a11e3e664abe191d2e244bb881d41eb80a7b8a20c15fe3a7f61e2",
+   "bytes": 7534573
+  },
+  "RIVERUSDT/2026-03-08": {
+   "sha256": "c9623b7419b124e0d7f0190946b4f59dfd5d66b9484da11796a7cafe0d09f068",
+   "bytes": 17498436
+  },
+  "RIVERUSDT/2026-03-25": {
+   "sha256": "f650eff759dd4b48b0540596ea617f3c880d23bf8b4c91aec0aba51db507f6e2",
+   "bytes": 21024694
+  },
+  "SEIUSDT/2025-10-10": {
+   "sha256": "4a6604da8eac88fc3f098d3affa7505170c3f8ebb15d32aac3e615d6ea614fea",
+   "bytes": 3098732
+  },
+  "SEIUSDT/2025-10-11": {
+   "sha256": "4710c7ae1acd4ba7852b1e1059fe9aab5b78447a776bf6b9e4525bdc6e2fbccc",
+   "bytes": 1468693
+  },
+  "SKRUSDT/2026-02-24": {
+   "sha256": "c94faca378a0f5c833458ba6b57a4f9c5f01b750950f91405cf1c0568fbb716b",
+   "bytes": 21689753
+  },
+  "SKRUSDT/2026-03-07": {
+   "sha256": "f1d781151b2c0445cb4556b192e131e63966794c742302e927a4d33a56d5ff41",
+   "bytes": 7677907
+  },
+  "SPXUSDT/2026-06-16": {
+   "sha256": "b3d649fb18b0f3a5c4ee363a0bbd0e68e68f21fb9917c840f0960799b0d54824",
+   "bytes": 3422958
+  },
+  "STABLEUSDT/2026-04-01": {
+   "sha256": "c986606e9e5a18a8421bf5866c13255d65fecfa883f691d7a468997cbe05a6d3",
+   "bytes": 8053637
+  },
+  "STABLEUSDT/2026-04-02": {
+   "sha256": "a30eb25e16818a7adbc8ef6a44397d6770aeb75ec99d3a72186296a0a69b05a0",
+   "bytes": 29490440
+  },
+  "STABLEUSDT/2026-04-13": {
+   "sha256": "2b6487de1209bf645b1811a092c99734eee6a59077ad48cb7188f63de6b6974c",
+   "bytes": 3162095
+  },
+  "STABLEUSDT/2026-04-24": {
+   "sha256": "4bc2331fb73592e15332a44b454d563f32935bde06631a70f05aa3bc10f5561c",
+   "bytes": 6445353
+  },
+  "TOSHIUSDT/2025-11-23": {
+   "sha256": "4870cdb7351b3643fea210c7173bdc8114885623ec9b6db778744013fb5de8cb",
+   "bytes": 4978022
+  },
+  "TOSHIUSDT/2025-11-24": {
+   "sha256": "c155e2b3bd32767591295ab17b673adfd1c269da4687f7675cca18c069990486",
+   "bytes": 1264311
+  },
+  "TOSHIUSDT/2025-12-28": {
+   "sha256": "546a91136d9b859c84a15a6b47fdb5fab58a69a86793303964aa972df362d35f",
+   "bytes": 1032042
+  },
+  "TOSHIUSDT/2026-02-12": {
+   "sha256": "c882d7be89e2db0d4bf125122ff8cfaa4937c4c0da4ca3e1fb133f0f6a9489b1",
+   "bytes": 2951166
+  },
+  "VVVUSDT/2026-02-15": {
+   "sha256": "9bb7605a0f6b1ba1a79d2e81450baa452f51330c1ebf734eac92cc38590c5990",
+   "bytes": 15174287
+  },
+  "VVVUSDT/2026-02-16": {
+   "sha256": "e2e57aba0c4fc93b86a93a9ae098aae0f7d89812ec5b06f3fe439949a2e8be41",
+   "bytes": 10447334
+  },
+  "WIFUSDT/2026-05-06": {
+   "sha256": "44055e55ee4dbb1bad841e92ed44ad8ba83fc03e7b81c614c57ae0e7b7abb4c2",
+   "bytes": 4859402
+  },
+  "ZECUSDT/2025-11-06": {
+   "sha256": "58a17083b798b2d2c46ff68c606712cdc9bde3caf1ceb93bacde921d0aae573e",
+   "bytes": 33547664
+  },
+  "ZKUSDT/2025-11-01": {
+   "sha256": "5255313db3b0505db5459f90f8a867146f040ef342002a21ffaed13694149cd1",
+   "bytes": 11872091
+  },
+  "ZKUSDT/2026-02-01": {
+   "sha256": "fef1104ec44f5df8738dfe508c4a4f34f9a6b26ec1f91b980f9f3cd5deff87a7",
+   "bytes": 11574591
+  },
+  "ZORAUSDT/2025-10-17": {
+   "sha256": "fe1b5609757f8b06f255502b6e4841ec01294524ace1512af7f6bdd8785a8565",
+   "bytes": 16241919
+  },
+  "ZORAUSDT/2025-10-18": {
+   "sha256": "080d0f4b70641e0486f7772ba8708950ffa1748472c2f2945c3bbbc4efdf2d77",
+   "bytes": 4706279
+  },
+  "ZORAUSDT/2025-10-19": {
+   "sha256": "c613d6293416a6230c772266dc859c68dde0596cbca4bd2698cab56faeb6ab01",
+   "bytes": 3724485
+  },
+  "ZORAUSDT/2025-11-13": {
+   "sha256": "219cdb244bf28e768adef761efa19f0b9891ab9f0c7ae8d8796e291f83669b20",
+   "bytes": 7901607
+  },
+  "ZORAUSDT/2025-11-16": {
+   "sha256": "e70b00a7e85fafdcedc79e420bee0074a5128b53933dc7fc5aaeaceb6e65cde8",
+   "bytes": 2579226
+  },
+  "ZORAUSDT/2025-11-20": {
+   "sha256": "e95436c65a0a46a580302545610f2ab26a2900a31517d5a2884f5a0b61bcd09c",
+   "bytes": 4158694
+  },
+  "ZORAUSDT/2026-02-01": {
+   "sha256": "d4f1fe67a4f15be9ef10e3bfe84c4124fe5ca1abc14e1c7d39e43b0201b2a756",
+   "bytes": 13048114
+  },
+  "ZORAUSDT/2026-02-02": {
+   "sha256": "7f20f56f713c7f00e2a2be7363a8bf47440ec8c49a1c503e86110018461bf1f1",
+   "bytes": 3507374
+  }
+ },
+ "files": 221,
+ "bytes": 75432431,
+ "file_hashes": [
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766678400000.parquet",
+   "sha256": "02bd42dcda0a4424bdd12dc0088b3ef8a4b0bb28d3a23d475406d4224e43b934"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766721600000.parquet",
+   "sha256": "5abf02962a73afd7d5d70f84ccd770d022e8f5b4b94e6493ba9530efaab34daf"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766736000000.parquet",
+   "sha256": "2fa9002a36e1425ebe4d3679817343775803d637443a715690ef85de0bb1a918"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766750400000.parquet",
+   "sha256": "4373d6209569654196b86b8cf1ea0aa8cf63d527cd4ffac392cd0b149ac8bc8e"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766764800000.parquet",
+   "sha256": "5b231ee17adda29298b39959c22745566bf2b9e73ada07243881d853599e3d96"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766779200000.parquet",
+   "sha256": "59cb9e9207905a00da5b3354d8f944ffb44db5e622e1a3e938048cea3fe19db7"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766793600000.parquet",
+   "sha256": "0611e4bf57b070d3c4c3be960dbac3f54a7e845b3f19eeffb642c64a78ed2109"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766808000000.parquet",
+   "sha256": "970861b1caf017e5f73ab7671c1eff0131ae8ec0156271eaae2b141b70c70988"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766822400000.parquet",
+   "sha256": "06dcffab5eef92c785da555a066790f735f32fa6d481b541468bf1c3be341520"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766836800000.parquet",
+   "sha256": "7bf2f67cd34128b27a772546a9a9f3fe7c38e249e35e01f75522d94b2aff2339"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1766995200000.parquet",
+   "sha256": "2819c8b0332a9749bd69b483082d0b086606d2f1ecde248ca401f4072e62c165"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1767067200000.parquet",
+   "sha256": "e31820b97373586512e55c3004974510c797148605325dbacdc191bbe204439d"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769097600000.parquet",
+   "sha256": "4dad1de26a6a9ab17f9b7d32a7d907a9f3865aa825fe9c1d815d94b7a6f55d3b"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769169600000.parquet",
+   "sha256": "6c0937221503bc4260837529e9d2f229e93ce79ef993506b4632bf4811670e2d"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769184000000.parquet",
+   "sha256": "600ec4a6123d8c537328ffb9ab96b97e5e63614976aaaf664102b2e7ffbc66fb"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769198400000.parquet",
+   "sha256": "ccaa6968ffd0cfc12137d8b8b977387d08ad64a0f27739e9a240d544001f88a5"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769212800000.parquet",
+   "sha256": "5aa06b28deb4a4e2e175acdfec6cb09caf90ed154d60152ce3884f7f51057297"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769227200000.parquet",
+   "sha256": "10650c6e6b75e5b8b58a68a4912bc0b9eb0d8ac0c318d32e0807f7c17816c02b"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769256000000.parquet",
+   "sha256": "62b7fa54ad3ff3b3a59b8c0472b76b695c46ac6b300c9143ec2336ae1620b95d"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769760000000.parquet",
+   "sha256": "bbcc59583a3c460eb53ec207d1f8a49816ea3183f49e3a16c71b95d986b46cdf"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769889600000.parquet",
+   "sha256": "ff2e1e73106538a1e1fd5136990e244f5a0835e1402245f4cbd532595b50f822"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1769904000000.parquet",
+   "sha256": "722e464cfe1d8edaa7210a4f9fe24ed00ae0152a2514f30f23aa8d363510699b"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1770868800000.parquet",
+   "sha256": "dfe086926fc9de29114fe4b4c6a1d756d31dde995fa9e17eb760e9a1f80e1b3c"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1770883200000.parquet",
+   "sha256": "7329056897ab38616031c317ea5f6000b9ff79042d61f25a08d11e0e3ff36cbf"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1776024000000.parquet",
+   "sha256": "616968c5fc920f204e8082454973a7c315f9c507a1490c1cfe713c6e542c3eee"
+  },
+  {
+   "path": "data/settle_ticks/binance/0GUSDT/1777305600000.parquet",
+   "sha256": "352b7bbd09f7afff4977a8f029e4feb4666e9ca446cd07debc25e3ff780c0fc6"
+  },
+  {
+   "path": "data/settle_ticks/binance/1000BONKUSDT/1784232000000.parquet",
+   "sha256": "e658dfac8889cd0a92ecd48f2e028eb3c1f2a719c52837c1c61f63cb8f125f8e"
+  },
+  {
+   "path": "data/settle_ticks/binance/2ZUSDT/1763755200000.parquet",
+   "sha256": "1a73d0f8c89558b0677e22df97d8f4a80e510706223762ab012c5a9d01064429"
+  },
+  {
+   "path": "data/settle_ticks/binance/AEROUSDT/1760140800000.parquet",
+   "sha256": "3474bf5f2eeaee9f7bc6c87d728056044bafa042c2290045ef5c6633e7371069"
+  },
+  {
+   "path": "data/settle_ticks/binance/APTUSDT/1760169600000.parquet",
+   "sha256": "7d8ea5dae7d16c9883462f2624f86f0d675d70cd7762bf64d8a0b3e822b083df"
+  },
+  {
+   "path": "data/settle_ticks/binance/APTUSDT/1762502400000.parquet",
+   "sha256": "f60f616ecf6a1251242d6557f758afd0a383ceaf1de54ef630559a3c80a842b7"
+  },
+  {
+   "path": "data/settle_ticks/binance/ARCUSDT/1776283200000.parquet",
+   "sha256": "c35f010e0012f950273ac1dc1593243033f39d253420470a8ccb521da0e60537"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1760140800000.parquet",
+   "sha256": "30aefdbcecda4849209c13e351c475daba5c337208057addd2880d62b63434b1"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1760169600000.parquet",
+   "sha256": "deec849521c04c35834d5a382b4747733febf4ab4479becfd489617046ebdbcd"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761019200000.parquet",
+   "sha256": "b9bac9fa5b9d14e469213a73f886f2374397f32627fd654ba674fa8b7a9bd869"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761062400000.parquet",
+   "sha256": "28344d1a1f5222b84494f467fdaad4f8bb5fe973867d4666ddc3f0312fb08446"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761076800000.parquet",
+   "sha256": "97ab8ad1fcb37dd0f112e22aedbe0ba13bad5c2c1cbcf7ef2f26f47d864f067e"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761105600000.parquet",
+   "sha256": "319ecfb5b84014b6a38cec9f098b90e473f2649505e0a91378fc5f00da351074"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761120000000.parquet",
+   "sha256": "062fa10d0f7857e3cb9f5b832ff602f3d7ab7429c5a3106a8628c236d02ac6a9"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761134400000.parquet",
+   "sha256": "16b13c59091b2461615dd7869de21bfe11e782adfc099a128c783a12454b83fe"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761148800000.parquet",
+   "sha256": "a06ad5cdaebab8868ead813cdea9f3a600a6d70fec17bdfca1e82fd032b36874"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761177600000.parquet",
+   "sha256": "9067c38aa8b3492fe27093e61e64a90def81d5f8c6a85053eba8ad0bb666bad8"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1761264000000.parquet",
+   "sha256": "03902d4a85d186390763a4ffe23f43c7d5a9b96ea001afed15395b0c70116711"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1766548800000.parquet",
+   "sha256": "4b1ddcecf16b385eedf8cb7a4a736e31e4e474d49912e65d929658dfe824d9a6"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1766563200000.parquet",
+   "sha256": "38054332effda9c7d6f9a1d6439cd7091c68a0b21b77cda11507c91e67095de6"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1766635200000.parquet",
+   "sha256": "08a428e4636fe5c4becfd05031f0df66fa8428a5d0d256fa0c201c56d1b0606a"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1768032000000.parquet",
+   "sha256": "1da985c01aecacec47b2f0660737c1256c883512f70e86115329c72c2d08cfb4"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1769313600000.parquet",
+   "sha256": "59534cfddb8db7abb3695d55ca2907c778abea4a8556b66eb50423672b3f7f52"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1769328000000.parquet",
+   "sha256": "2bc20230d056e3d1bde22a57be5440594950ee7edb778b635164d8dfcf4afb89"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1769342400000.parquet",
+   "sha256": "0067a31eaf24fc8c008f80653313700bf31b49686172d2a3fb15e3936506505d"
+  },
+  {
+   "path": "data/settle_ticks/binance/AVNTUSDT/1769356800000.parquet",
+   "sha256": "5c963da282dc2d24d38e5fb7b5b28271fef11896993e649b16e81dc8b9ad6a6c"
+  },
+  {
+   "path": "data/settle_ticks/binance/AXSUSDT/1771300800000.parquet",
+   "sha256": "54250328ad542116704a922cd91e4a11ab49e2d28e54ddba9ee836e2ae9a1fca"
+  },
+  {
+   "path": "data/settle_ticks/binance/AXSUSDT/1771372800000.parquet",
+   "sha256": "e5adca3d70486af1fc63bfb38395b032aa854d024225e403dfefba0a332ad31f"
+  },
+  {
+   "path": "data/settle_ticks/binance/AXSUSDT/1771545600000.parquet",
+   "sha256": "c37545a356b2d7e06aac7e8649b85c59bcaf64d3cbf043f75da1d0028a0542ac"
+  },
+  {
+   "path": "data/settle_ticks/binance/AXSUSDT/1771560000000.parquet",
+   "sha256": "b4efa31bae3dfe439c736b3f52d6eaaac5b8b242539767a420a7c24acdf85555"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768363200000.parquet",
+   "sha256": "c5119c29c945f8996c2426161a513e7823728da9369e74787679a0143b9d8cc0"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768406400000.parquet",
+   "sha256": "2d9d115afc99cfae652210f7bc1347ddd9869fa327905922313c8dba5b0d780b"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768622400000.parquet",
+   "sha256": "0e717ba845e4824fddd96db8cda5a4bdcfe8ca0d5b6df87c21b20e74962793f5"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768636800000.parquet",
+   "sha256": "e6170e2410ccd79a8f3da04748e493724149b1ba943fa98528fc0f3537a6e4c5"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768651200000.parquet",
+   "sha256": "6632b0b2a97b692587ccfff29291ec7f19c3a2c8095f48c4777ce22407e7da59"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768665600000.parquet",
+   "sha256": "659152b0898741468598ce71649a4c902e5dd0fa79748fb3c026e88ff20f51d7"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768708800000.parquet",
+   "sha256": "17495b77d6a818e309211ad3dee7bdf5e3a12118ce2ca5da7dde181aa46992da"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768795200000.parquet",
+   "sha256": "f3bfbeb618acb53ae4d2b9e430ab206267036193d4f369c734f64d939214c15c"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768809600000.parquet",
+   "sha256": "2946b5a4c44e95f0454e98147df1ac4c877d9da766caf48eececcb6e72105eba"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768824000000.parquet",
+   "sha256": "db0eac70c2b8f5d5d8d3bfabd774562a1545175300d179896ee1e17aa9774dc8"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768838400000.parquet",
+   "sha256": "c85af4a7823fb40b21ecdc6ca00525fa9d5f72276fd9df95de6bca23ea885698"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768852800000.parquet",
+   "sha256": "b8d28f18842033488fabd2d5430438404c6ca68c03dde8d9ab9d21dd7e5e81d0"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768867200000.parquet",
+   "sha256": "b42564351aa9e891ac9e07ad945f132ae1980ffaeb495c75ecb899b5b4de8451"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768953600000.parquet",
+   "sha256": "b8e1dab266c6677bb37f488bfdfd6b9e43313bd6865c029ad567074144df9336"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1768968000000.parquet",
+   "sha256": "a6592b3c46adacd534ee7f93b747b06596a64d5162bb319af0f625ea4ac88653"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1769011200000.parquet",
+   "sha256": "80685cd2896cd881a24e12bf99c57ca9e9eb75a1f8ac6eb2caa8e66d85da3823"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1769025600000.parquet",
+   "sha256": "04bc10ac47d3620cc14f82662ad5b63e71b445b8c1898428a7ccfc9f81088adc"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770408000000.parquet",
+   "sha256": "88500d5c67763927ace2a729643258c9cf3e90e18732a0eaaf658b48842e95db"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770422400000.parquet",
+   "sha256": "4bd064387c84499d973ab6e49a9704287c8e55640bb6b5e56c74da379859d32a"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770580800000.parquet",
+   "sha256": "18353d0ac4fe5da5b332539317ca573f870aeffb888346b07b7d518087aa0dba"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770595200000.parquet",
+   "sha256": "fd1319e509aeba483ef9c2392ea04d693e934d686d837349e1491fcbfa3d3f25"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770811200000.parquet",
+   "sha256": "df09ad0f3d43022e9ee4783f335aff24925eb29b39354cff5e9ff296b8c2937d"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770854400000.parquet",
+   "sha256": "c9ec3788e2ec564eda9cb51e6e5deebc6ca0febbddbec55826dbd943a2d08c88"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770912000000.parquet",
+   "sha256": "6eb7200b43841acd2aa3f5be16fde78fab287f7ae7b1f80b7907c3157ff8b81d"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1770940800000.parquet",
+   "sha256": "46a00bd2174f02b50452042b288e0271dd8bd2d041191d181e164f43fc88ac35"
+  },
+  {
+   "path": "data/settle_ticks/binance/BERAUSDT/1775304000000.parquet",
+   "sha256": "3da0026936f47f1d1000a0e6ffa141b5997a0b429d2b655cc5600d8eee3debe7"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771488000000.parquet",
+   "sha256": "89d3a0e11cb5193580965f99bf337a3f0948f8bfc517766be6b57c3f7d0f7d16"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771516800000.parquet",
+   "sha256": "6125f38c4c4abecce62bf3f81f03ff663e7cf639e9415e4b0c51dc78632a9699"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771531200000.parquet",
+   "sha256": "092b0885d674419dc8bf76d1a5889967bdf9d4e4312e3f42e6f689ce8c08c15b"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771545600000.parquet",
+   "sha256": "a279885bdabde3bdc5e5c699632a3ffc7cf2f12d0338bdfb2adaf5c919c3b601"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771704000000.parquet",
+   "sha256": "39c07b09d7a52548b4b62bbab048dce3f8a0f45e6ff3b7adf23640c0f472b8ab"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771804800000.parquet",
+   "sha256": "107d2a7f1b04a0c00fbc23403d50f5a14c424b49aac2b7d010139af8eda9739a"
+  },
+  {
+   "path": "data/settle_ticks/binance/DUSKUSDT/1771833600000.parquet",
+   "sha256": "6500567dd6cd19b7f177e6c35dff096529ceadd00652100600ab11a87dd52002"
+  },
+  {
+   "path": "data/settle_ticks/binance/EIGENUSDT/1760140800000.parquet",
+   "sha256": "f02b3c4d6b960867c0993e6fad4c5ec78eb5d3045f7f8c64ebf5370664f18a46"
+  },
+  {
+   "path": "data/settle_ticks/binance/ETHFIUSDT/1773892800000.parquet",
+   "sha256": "3574b5da0d4b7b1e3749c64a261df897998fe1a3e4b52d2fa05dff539855008b"
+  },
+  {
+   "path": "data/settle_ticks/binance/FFUSDT/1775851200000.parquet",
+   "sha256": "1537483b70cea985b427c3157b518e0d9801a5f35b5b96834e611994ad8731c1"
+  },
+  {
+   "path": "data/settle_ticks/binance/FOGOUSDT/1771934400000.parquet",
+   "sha256": "c0ccad64db61fc35cbde1a64c11273517de7340912f33598dd6aba222bae86df"
+  },
+  {
+   "path": "data/settle_ticks/binance/FOGOUSDT/1782432000000.parquet",
+   "sha256": "502b10c9427f6002af0c4a8bc691bf03275a31279b0f5e892a0b5cbd7aef50db"
+  },
+  {
+   "path": "data/settle_ticks/binance/ICPUSDT/1773216000000.parquet",
+   "sha256": "a830741309d7ca98cc83f61c306f20c1094f8b200b81f3e2a05656489158f6fe"
+  },
+  {
+   "path": "data/settle_ticks/binance/ICPUSDT/1773244800000.parquet",
+   "sha256": "e1f1543a35c8f88812a053bd9160c78d1dacdf47dc062e5f1262d30801d51b29"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1757476800000.parquet",
+   "sha256": "1fa25663d4f8bb8707510dbad07ab96da8e963558e3ef0a669f42a7adb81f8a9"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1758988800000.parquet",
+   "sha256": "ed3701f5d491d0cec7bd8eebad27bea08e4d8603bcef61d411289968074c8e21"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1759003200000.parquet",
+   "sha256": "250253bc18cddfa731a7412d4475278070c00cec6658b0522b178b71848f73b1"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1759046400000.parquet",
+   "sha256": "84b98a050359161d3b9cdc7762115603c8f1912ce399531cf2f1fe1c17f746cf"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1759060800000.parquet",
+   "sha256": "e02ef31b00d4bd991ef9d1c413f83576d110a8f79cc061b61d7f0374f72dd5be"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1763409600000.parquet",
+   "sha256": "364e0699a905559d6ae4f0c5f9b57746097a44a5b5b71372102c8eec6ee90483"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1763424000000.parquet",
+   "sha256": "8a53a67970cb772626e3af20e5990281f0ea5bad435da15eebd3301b80aea097"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1764100800000.parquet",
+   "sha256": "cc968075f9641d47ea7e88df1d01253423ae70f0040d6f27af7fbda6a58ed74b"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1766808000000.parquet",
+   "sha256": "e9eece782cc358b6542bc936a0e50452f3a57df1a32355003e4e4e0e7a192572"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1766822400000.parquet",
+   "sha256": "15e0c8023e1bb42a55faaf352ace45e25e5108b5c018d06f4102bc722b4ea073"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1766836800000.parquet",
+   "sha256": "9b33e410b5cbd46fb7e9dac0cd1355823cffdba5ea4a7e4580f27cf16db524aa"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1768507200000.parquet",
+   "sha256": "c41c55666a4c791f129997dae48bf42212c4c9175646e597087c3bd16b5e7d63"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786204800000.parquet",
+   "sha256": "fe914975baf1ef229af8949d359a4b30b62c904e0b48f0c5d1f9b56d71db9a24"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786219200000.parquet",
+   "sha256": "79ad99afec2e6fead25648d485d184f53029545b0d311186aeea0358cafeb819"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786233600000.parquet",
+   "sha256": "ecc93e98bbc19053b6a61d6a0f7f853072b8c8d20e261976514a9cc19240d66a"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786248000000.parquet",
+   "sha256": "730a5d743492f08c9005d0598cd9ee0ae07731282d970a9208f4b21669881290"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786262400000.parquet",
+   "sha256": "001a8e16ddd21465e019a73cab2190a4be02a7793ffcec0f864b46952fe14d6c"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786276800000.parquet",
+   "sha256": "f8c9dc6bb5d060c86bda23038ee8b92d010542ebdfefa6edb00f14bbd7454dea"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786291200000.parquet",
+   "sha256": "1dbe31d5c3aff2bf7169e90ca74e98fe7dd304d69e82ce28be4e615918c488a6"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786305600000.parquet",
+   "sha256": "6e8791c7b4a234188a290f692f6eb57a3bd4e1a6ec4c84f8848b9162fb95fbb0"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786320000000.parquet",
+   "sha256": "0de53fe40e1197a796dec0e07ea2aea76b77f110232f2f14d847979c2871a89c"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786348800000.parquet",
+   "sha256": "c541db51f4982134650d13b8236cdabefffba5a75b2e9953248b26f6aed9c0bf"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786363200000.parquet",
+   "sha256": "a316fba28ad909a56ac160766eaf503d9b1998679c9adb4ec74ad5f22a2c05f4"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786377600000.parquet",
+   "sha256": "5a0ca58778f2939c0a2d21d521e45fc0a9950eacf1bb5e6adda5d0145794dcdd"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786392000000.parquet",
+   "sha256": "1c286d426bff28401d78475460b0b6abf57252c6c90d6b3051228905cc2cdc80"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786406400000.parquet",
+   "sha256": "57afef4744a8d00a338da56a88482f46e708c8b99a359b191699c5999cf4d106"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786420800000.parquet",
+   "sha256": "9d2d3028bee48ac5f1ff5e45a4c77e3916208f81a17570cc9277de4cee39ef31"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786435200000.parquet",
+   "sha256": "95ab17f577709ba9de745a515d5c9221383ed59a88f49796f747fc13ece3cd9c"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786449600000.parquet",
+   "sha256": "df1ae6952a1373e56a35e75d2277281d180575e8defbbf1e480ec33aaf358ba3"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786464000000.parquet",
+   "sha256": "76d5b39050bd922b8c3b6a2605cfb1baa89743641e598a328082e500bb9e9e27"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786492800000.parquet",
+   "sha256": "7670c327f9da8b84edd07ab06862fe206b0315bf4fdea1c6e0c4fb4e2449aa02"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786507200000.parquet",
+   "sha256": "b4f6f77e497341fbaeeeaa9f48a0f6bc795e6d6dee0d4206200cd662d70ab90b"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786521600000.parquet",
+   "sha256": "0a15ffd2696a5ba68601ead7eb7e294fa8aa1aca2fd220301817a81ba574f2b2"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786536000000.parquet",
+   "sha256": "2eb7f2b0d34336cd3bf390439fad2c84517967da9c7138d052e9f8ae79cbdd8c"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786550400000.parquet",
+   "sha256": "908a77fde98d5f5a87be775d56da96cf34a6f4cdf9a2108164a4f30bf8ae9c4c"
+  },
+  {
+   "path": "data/settle_ticks/binance/KAITOUSDT/1786579200000.parquet",
+   "sha256": "abdc63326c1cb64b00fc821470d0702acaeaff16170f09006e4c9a7a6166ac1f"
+  },
+  {
+   "path": "data/settle_ticks/binance/LINEAUSDT/1770868800000.parquet",
+   "sha256": "2d9c8e7eb07b40d8cb8575bd175ab1d1abb6afebdd9ab2c7e9630ccd17a13b17"
+  },
+  {
+   "path": "data/settle_ticks/binance/METUSDT/1763452800000.parquet",
+   "sha256": "0a35fb766d7c0af7da4d4ff82f92a1a00d6dd2d4e6ca0ccaf1b5cf0bba6a7516"
+  },
+  {
+   "path": "data/settle_ticks/binance/METUSDT/1776830400000.parquet",
+   "sha256": "14ebb0085710b18a2e4e47ca904439b4d955ec2d44bc85dea10e1a09488d42e5"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1758628800000.parquet",
+   "sha256": "7f09d0f829855fc344d658b2d20d2809644b7f59f0d9296e77e70e8f73108379"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1760184000000.parquet",
+   "sha256": "7beaba5021acd1d5c0dd1c4b10b8ced8ca4f2c1b7b1dd51a82ef80cde97299f5"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1760198400000.parquet",
+   "sha256": "a5ffbe9024c7151593c191a3ae091264b8a7881a71e31ebc264f087583b8fca0"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1760212800000.parquet",
+   "sha256": "2be433af38f0bc6275805164bf73b309ae0b6d3f01f7a48342778f6981167366"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1760587200000.parquet",
+   "sha256": "a14d04a5d3b06e4278f18b572c1fb697b809f2705e23129c274475938e8b8e6d"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1762185600000.parquet",
+   "sha256": "900266f456d679ab57fcbb58c7918067b10635c78dc95618a49e4d61179f5d24"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1763380800000.parquet",
+   "sha256": "b67da997f5adf6c7a5220af028c67b04be8dd81b6427df32f4368e7b662b9bd9"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1763395200000.parquet",
+   "sha256": "54a9934d654175bd44a37e28400dc8eac600e4060523e33631518c36fc546a8f"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1763668800000.parquet",
+   "sha256": "d8d61328e65cc7ccc884aa2e3bf65a09c4d21ed1110c6ee01aa23d85bb7bd9d7"
+  },
+  {
+   "path": "data/settle_ticks/binance/NMRUSDT/1768089600000.parquet",
+   "sha256": "84131e9e9bde22990bc325c28d9fae1e0ea4e594239bf4e2f768a053bae42742"
+  },
+  {
+   "path": "data/settle_ticks/binance/ONDOUSDT/1760140800000.parquet",
+   "sha256": "ef12cc9e057f79e926fc55997ce38d6347c88f3cae4437b723d76bfca8a69b7e"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1772596800000.parquet",
+   "sha256": "62ef336aaaa5b71441abe3886b28f9c86e5c91113dd4e9bc5b048b0cc55ce43d"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1773662400000.parquet",
+   "sha256": "5c301815b9aca014f88b4d92a42f9c23e5206595aea21daf5bf20dc83d1ebcad"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1773676800000.parquet",
+   "sha256": "c38b108e4b1c9a447380bb2803279b951d08d346c43e44e4d28c6a4da9cbc2d4"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1773691200000.parquet",
+   "sha256": "5af6f09600be174602f7a33fc44d0f4132273cd7e67b65d19a7a2ecbe012d43d"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1774627200000.parquet",
+   "sha256": "37dcc9f8ec26128fc1a51cbd113d6f4b5f3968ead268f9ec24a16c3625f247c3"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1775217600000.parquet",
+   "sha256": "1be97a5d41a97723b0ce5e1118d217825c3448eb03fd5c656b3e31b6d76dfa77"
+  },
+  {
+   "path": "data/settle_ticks/binance/PIPPINUSDT/1775232000000.parquet",
+   "sha256": "891791851217f6d6c34259205a21d89c6ced253a4edd1ef2920335b1342f5f8a"
+  },
+  {
+   "path": "data/settle_ticks/binance/POLUSDT/1740254400000.parquet",
+   "sha256": "34a5d5132bfba3dc932be96d539d9a1860507a895ab0d2c89d02d3453c994be7"
+  },
+  {
+   "path": "data/settle_ticks/binance/POLUSDT/1743638400000.parquet",
+   "sha256": "3827bd50a4ae61ce7798e8556fd548ae21ba36db170c68821d7ef6e795d21a24"
+  },
+  {
+   "path": "data/settle_ticks/binance/PROVEUSDT/1760241600000.parquet",
+   "sha256": "d95dca9ce3ca3543ece811b76be21cb09eaa204006dd4cf6e78198abac8c9a22"
+  },
+  {
+   "path": "data/settle_ticks/binance/PROVEUSDT/1770393600000.parquet",
+   "sha256": "db791622a4e8048856abd42897f25b49ad94d3fd6cc4a2090d83e54531737821"
+  },
+  {
+   "path": "data/settle_ticks/binance/PROVEUSDT/1774483200000.parquet",
+   "sha256": "aef5a4816c9f0fc3ff46cee4fcaf724a2a20c5729dd8851da1a30113ac02e214"
+  },
+  {
+   "path": "data/settle_ticks/binance/PROVEUSDT/1774569600000.parquet",
+   "sha256": "eb40b6783a6da5ba1eb168e669f5e0267eeaeec9cc71a3360890eabc00bc1d6a"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1770868800000.parquet",
+   "sha256": "d5da2df850e3104e80a6d3a71c178636e4911254677ecf5754e8774b785194ba"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1770883200000.parquet",
+   "sha256": "45c5b41289817ceac81b341e3429b089d8f790121694011495d441abfce9a1be"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1770969600000.parquet",
+   "sha256": "8a73f7e65563593f2feb742f2f710a391486ad4a2397dad3b5687ae517cf35dd"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1770998400000.parquet",
+   "sha256": "6d4b7f37bfb3bbc06c5c0c1b05e199b2c890a0762ac2e3fb014894b2da3b2695"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771012800000.parquet",
+   "sha256": "7d092209a0ca5e1caf706eef484f89553d4a85e6540c9f451e6b64d8be5776e6"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771056000000.parquet",
+   "sha256": "5e8341465902e88aa88d72d50c48d2f0251419a34ea23262fdacd0debb9120f1"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771070400000.parquet",
+   "sha256": "4050cc9c21f1a1747dbdd2884bcac5d659b7a8416258d52ebb752d7e1b4b9ea1"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771084800000.parquet",
+   "sha256": "e88cca71c84dd6398c13f4eade5974da3a424d2abdf79f4e5cd6dab1298fce4c"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771099200000.parquet",
+   "sha256": "680120a32536cb37843bcab3fb88a6b49f2923def30fdd6e919d655fa5fdba7c"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771113600000.parquet",
+   "sha256": "8959d02908c74290108f70b4a8bc0e118c85dfd248d31b4e906899de675497f0"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771128000000.parquet",
+   "sha256": "ca41f672a00833ae28af6a8d902757958f25bade91498feed84f7cd01dc7eab2"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771156800000.parquet",
+   "sha256": "d4ee988f8c46ae4ca83f8f6174db65457ee2ee72aedb0d8bd96ba5ed5dd8a791"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771171200000.parquet",
+   "sha256": "dd03a51bae01dd9bcf5912f6159d99cce1479825917c6319d343108aa223371a"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771185600000.parquet",
+   "sha256": "7b749e9ba10a4ea4c806f15ee012a6161cdbd8f64692253624872d98b983e57c"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771257600000.parquet",
+   "sha256": "c561bec0ea379ea9bd7ec3f17455910f4f758c6f5480e122f0668c14b3c69f21"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771300800000.parquet",
+   "sha256": "cf501ebe322ccaa5ad50e3f1891ff7da18fcc20d4f4bbab4452e76c04449d76c"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771315200000.parquet",
+   "sha256": "1ea2f97c66d33a9ca3860d6ff5a531cc85beb16c850e7e2dfa6ad783b5882676"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771329600000.parquet",
+   "sha256": "51fcc28699885e92a65f6ec9c63bd058c786ca4b485d5b8a37203a305bff40a8"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771344000000.parquet",
+   "sha256": "6a5c8f47f20f09f89c302e2e7b2d76b7c20a54ae454ed26f412532dee36aff96"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771372800000.parquet",
+   "sha256": "f702978fa285f00404ffdd75f48f9b5e676860c4aca547daec066a242ac90692"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771401600000.parquet",
+   "sha256": "697d6bb56c70d6bbb68b62ecb1557bb9d9101b91d93d979090a08ad87570a9fb"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771430400000.parquet",
+   "sha256": "a3b257006fbd52a568e45cf4621e252d3b55796192555d4776de6f56d0a98ae7"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771444800000.parquet",
+   "sha256": "54b55380d578d625013e2590de1b63f568f6009f82e131ac6f5983235f050ea2"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771459200000.parquet",
+   "sha256": "1880af6ffb6b241d9215e56f695434b559a63f11293c83514d7b74d45bec469f"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771502400000.parquet",
+   "sha256": "46b91208f1bcb1bb2d58bb2fdd3ebb38a32dc683e2dd2c3d183a251a9ec5815e"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1771603200000.parquet",
+   "sha256": "4bfe85b09c7878fb0bd211e7c7933e45476a82b001aeb1e2769d60b4bd09ef86"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1772971200000.parquet",
+   "sha256": "793eb57f28766512b20bfd33e0528b0b5ddd7c72906623ba3dcf0bc68ab9adaa"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1772985600000.parquet",
+   "sha256": "c314d0cae2e9ed224137f15ecb26d620eb33a61ee7da416099fefe0340ab78d0"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1774454400000.parquet",
+   "sha256": "ef244fc2f5b1f5faddd5afd2fd2b10740ce6f7b14e72dbca840e2e8136e706d3"
+  },
+  {
+   "path": "data/settle_ticks/binance/RIVERUSDT/1774468800000.parquet",
+   "sha256": "219595a4e715f1842741c5f4de551cdcda06552ca36dc5ce29106d7eae9de67b"
+  },
+  {
+   "path": "data/settle_ticks/binance/SEIUSDT/1760140800000.parquet",
+   "sha256": "184e6423d3535f011ba05746b53a7266b597c8b4ba62ecc2ed010b0120bd6910"
+  },
+  {
+   "path": "data/settle_ticks/binance/SKRUSDT/1771920000000.parquet",
+   "sha256": "cefe6e076e7119ac562e67cb38b7295e0a888ea2c0cf4be194ad3872943e2d50"
+  },
+  {
+   "path": "data/settle_ticks/binance/SKRUSDT/1772856000000.parquet",
+   "sha256": "de2fc1afa7ebe346928630a959f25ca6d70a0a5348169ec1cb676139b40facc0"
+  },
+  {
+   "path": "data/settle_ticks/binance/SPXUSDT/1781582400000.parquet",
+   "sha256": "a7b54e1b4b7045042bceba6f7aa6229c866d74f502f0698d83558f46e7a5c6a6"
+  },
+  {
+   "path": "data/settle_ticks/binance/STABLEUSDT/1775016000000.parquet",
+   "sha256": "ccf2b6df740d37551c1d5c1bee4a0dc8930800897fe30d1d6899df90fec29dc4"
+  },
+  {
+   "path": "data/settle_ticks/binance/STABLEUSDT/1775131200000.parquet",
+   "sha256": "9999165a440c1a61ab438af2aadacd836f7ef9671260577b57cd7e0af08d591a"
+  },
+  {
+   "path": "data/settle_ticks/binance/STABLEUSDT/1776096000000.parquet",
+   "sha256": "ae505e49849c734a06267ef232ec9b2a641c73c1f2e099fa455934af5e4f4a10"
+  },
+  {
+   "path": "data/settle_ticks/binance/STABLEUSDT/1777003200000.parquet",
+   "sha256": "15b37871f4f868c9272402f5d4277bb2cf0e21be7e274d8a1ac4254fd617c022"
+  },
+  {
+   "path": "data/settle_ticks/binance/TOSHIUSDT/1763884800000.parquet",
+   "sha256": "a2f084b5794a868eb29d8b02ab12b8bf01bf9967db098bb407bb3af5fe02b45f"
+  },
+  {
+   "path": "data/settle_ticks/binance/TOSHIUSDT/1763956800000.parquet",
+   "sha256": "c17c700115474d207fc1d8cd911f718fe35945586b72c7d3cc92d5831eff30e5"
+  },
+  {
+   "path": "data/settle_ticks/binance/TOSHIUSDT/1766937600000.parquet",
+   "sha256": "d4b8c378bb6c203b46e3448f23fd1956ce17fa89bca67dff9d0699693f3ee129"
+  },
+  {
+   "path": "data/settle_ticks/binance/TOSHIUSDT/1770912000000.parquet",
+   "sha256": "6459a607001e6da3d0416863cd3b2e287b90e790c36545bca006b1ccfb40f746"
+  },
+  {
+   "path": "data/settle_ticks/binance/VVVUSDT/1771142400000.parquet",
+   "sha256": "7359243092b425b028cbcce069792b228bea276d4c32d74569ca8cff3b050810"
+  },
+  {
+   "path": "data/settle_ticks/binance/VVVUSDT/1771156800000.parquet",
+   "sha256": "7e75b3f87bb0e7fcaf6a00cbfdb28a9b18725527b01e03f1686d4012c228f5c8"
+  },
+  {
+   "path": "data/settle_ticks/binance/VVVUSDT/1771200000000.parquet",
+   "sha256": "a581bc459c49b156ef44a87954881f063a10bd68ca973c33c40a68f145160cdc"
+  },
+  {
+   "path": "data/settle_ticks/binance/VVVUSDT/1771228800000.parquet",
+   "sha256": "ebe4b3dc90feac07fee2201e33e9b33943c3453d732fb586d421253fedf07b84"
+  },
+  {
+   "path": "data/settle_ticks/binance/WIFUSDT/1778054400000.parquet",
+   "sha256": "342435756538bbe5471b25c908517ac7d67db2d244929e920d0a97d2a792b3f0"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZECUSDT/1762444800000.parquet",
+   "sha256": "52cf1ca258450dd5b0dec511a186dab3bb942877ca2335ba601a726c06453292"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZKUSDT/1762012800000.parquet",
+   "sha256": "ce07dca25bf1aaf15f07960645e21eaaa21f5f2b978014426615d59b57450b03"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZKUSDT/1769918400000.parquet",
+   "sha256": "5e94cb9f3808b03ba6c6f098c19b7b7ff1450e37ef29d569159d81414a5c6609"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZKUSDT/1769947200000.parquet",
+   "sha256": "3c78b437c2248c88070733c4241021bd65c8fd67d08893517d92b304d50e1a51"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1760731200000.parquet",
+   "sha256": "e366be1b98b0321b7cb746660dd91b342acb82229edf0ec4670d99c7aea734fe"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1760832000000.parquet",
+   "sha256": "8f1ab3879199a8cc306e4114a55284036babd30c12950773e676b015561f12c8"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1763006400000.parquet",
+   "sha256": "53c36bd0033d71761f14c827619953921922064e9667ad72f398ab3d516beb73"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1763020800000.parquet",
+   "sha256": "373b636c51aa98cfd63c68309e0762e3dfac2f85ccd7c09baa9ea5fa4f174def"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1763035200000.parquet",
+   "sha256": "72a938eade526aac38f430f1214a26b005af02e73dd73c2d33e76f1ba638931c"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1763265600000.parquet",
+   "sha256": "c0c7810892a5a943b7a15349ebe5f30257f14327ec8940fefeaa6eb5f70c5d1a"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1763654400000.parquet",
+   "sha256": "bf1e9d4a00bd2fae63317cdbbb32730fba49307d1446a205371d3a1443eafceb"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1769932800000.parquet",
+   "sha256": "825d77b3a4fdf6b57d3899d430e3fba217946428312032475e583768a8ff3b9b"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1769947200000.parquet",
+   "sha256": "ec8ac327a6ffc3c689ef4ebb11baaa8c7e6aecced3767ae6726885a3d92814f7"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1769961600000.parquet",
+   "sha256": "909f2c4eb34ec2be1dd9e630eec8b5c940cbc69b8ed5e34cb799b35da2301fc6"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1770004800000.parquet",
+   "sha256": "abae64437bda3d541e526a266b39743ac9dd6489302ccb338cc025aee8ef6d22"
+  },
+  {
+   "path": "data/settle_ticks/binance/ZORAUSDT/1770019200000.parquet",
+   "sha256": "e79777c37105431632aab4849ccd43b3e23e44520b8c4c243031c275ab8f8613"
+  }
+ ]
+}

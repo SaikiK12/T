@@ -1,0 +1,18 @@
+# R439 carry5_v1: R275's all-four carry rule (L14d th10% K20) run on one book over five venues: R275's four plus KuCoin
+# (R277's venue). Symbols: R275's frozen manifest with R277's KuCoin column joined on key. Frozen with PREREG.md.
+name = "carry5_v1"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/carry5_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/open/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/open/funding_applies", bar_h = 1 },
+  { name = "hyperliquid", prices = "hyperliquid/candles_1d", vol = "volume", funding = "hyperliquid/funding", bar_h = 24 },
+  { name = "mexc", prices = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding", bar_h = 1 },
+  { name = "kucoin", prices = "kucoin_hist/open/candles_1d", vol = "volume", funding = "kucoin_hist/open/funding", bar_h = 24 },
+]
+costs = [0.0007, 0.0014, 0.0021]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+recent_from = "2025-01-01"

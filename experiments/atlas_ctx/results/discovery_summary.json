@@ -1,0 +1,373 @@
+{
+ "trials": 8320806,
+ "families": {
+  "clock": {
+   "excess|1": {
+    "tau": 4.0,
+    "tau_cond": 3.75,
+    "cells": 60856,
+    "cl": 22,
+    "cl_placebo": 2,
+    "cce": 1,
+    "cce_placebo": 0
+   },
+   "excess|4": {
+    "tau": 4.5,
+    "tau_cond": 4.0,
+    "cells": 60855,
+    "cl": 13,
+    "cl_placebo": 1,
+    "cce": 7,
+    "cce_placebo": 0
+   },
+   "excess|12": {
+    "tau": 4.5,
+    "tau_cond": 3.25,
+    "cells": 60855,
+    "cl": 34,
+    "cl_placebo": 2,
+    "cce": 17,
+    "cce_placebo": 1
+   },
+   "excess|24": {
+    "tau": Infinity,
+    "tau_cond": 4.5,
+    "cells": 60856,
+    "cl": 0,
+    "cl_placebo": 0,
+    "cce": 0,
+    "cce_placebo": 0
+   },
+   "excess|72": {
+    "tau": Infinity,
+    "tau_cond": Infinity,
+    "cells": 60845,
+    "cl": 0,
+    "cl_placebo": 0,
+    "cce": 0,
+    "cce_placebo": 0
+   },
+   "raw|1": {
+    "tau": Infinity,
+    "tau_cond": 5.0,
+    "cells": 60856,
+    "cl": 0,
+    "cl_placebo": 0,
+    "cce": 0,
+    "cce_placebo": 0
+   },
+   "raw|4": {
+    "tau": 3.0,
+    "tau_cond": 3.5,
+    "cells": 60855,
+    "cl": 2727,
+    "cl_placebo": 189,
+    "cce": 215,
+    "cce_placebo": 74
+   },
+   "raw|12": {
+    "tau": 3.0,
+    "tau_cond": 3.5,
+    "cells": 60855,
+    "cl": 4751,
+    "cl_placebo": 236,
+    "cce": 107,
+    "cce_placebo": 27
+   },
+   "raw|24": {
+    "tau": 2.25,
+    "tau_cond": 3.25,
+    "cells": 60856,
+    "cl": 7511,
+    "cl_placebo": 500,
+    "cce": 58,
+    "cce_placebo": 5
+   },
+   "raw|72": {
+    "tau": 3.0,
+    "tau_cond": 4.0,
+    "cells": 60845,
+    "cl": 2129,
+    "cl_placebo": 129,
+    "cce": 0,
+    "cce_placebo": 0
+   }
+  },
+  "crowd": {
+   "excess|1": {
+    "tau": 3.0,
+    "tau_cond": 3.0,
+    "cells": 96477,
+    "cl": 3898,
+    "cl_placebo": 237,
+    "cce": 89,
+    "cce_placebo": 0
+   },
+   "excess|4": {
+    "tau": 2.75,
+    "tau_cond": 3.0,
+    "cells": 96479,
+    "cl": 6384,
+    "cl_placebo": 496,
+    "cce": 531,
+    "cce_placebo": 9
+   },
+   "excess|12": {
+    "tau": 2.75,
+    "tau_cond": 3.25,
+    "cells": 96483,
+    "cl": 6055,
+    "cl_placebo": 553,
+    "cce": 764,
+    "cce_placebo": 35
+   },
+   "excess|24": {
+    "tau": 2.75,
+    "tau_cond": 3.5,
+    "cells": 96499,
+    "cl": 7090,
+    "cl_placebo": 537,
+    "cce": 688,
+    "cce_placebo": 25
+   },
+   "excess|72": {
+    "tau": 3.0,
+    "tau_cond": 4.25,
+    "cells": 96502,
+    "cl": 2839,
+    "cl_placebo": 255,
+    "cce": 42,
+    "cce_placebo": 4
+   },
+   "raw|1": {
+    "tau": 2.0,
+    "tau_cond": 2.25,
+    "cells": 96477,
+    "cl": 58668,
+    "cl_placebo": 3638,
+    "cce": 9649,
+    "cce_placebo": 116
+   },
+   "raw|4": {
+    "tau": 2.0,
+    "tau_cond": 2.5,
+    "cells": 96479,
+    "cl": 75143,
+    "cl_placebo": 4087,
+    "cce": 21141,
+    "cce_placebo": 821
+   },
+   "raw|12": {
+    "tau": 2.0,
+    "tau_cond": 2.5,
+    "cells": 96483,
+    "cl": 83766,
+    "cl_placebo": 2694,
+    "cce": 23747,
+    "cce_placebo": 1182
+   },
+   "raw|24": {
+    "tau": 2.0,
+    "tau_cond": 3.0,
+    "cells": 96499,
+    "cl": 83698,
+    "cl_placebo": 4506,
+    "cce": 19580,
+    "cce_placebo": 1039
+   },
+   "raw|72": {
+    "tau": 2.0,
+    "tau_cond": 3.5,
+    "cells": 96502,
+    "cl": 80591,
+    "cl_placebo": 2655,
+    "cce": 3736,
+    "cce_placebo": 15
+   }
+  },
+  "flow": {
+   "excess|1": {
+    "tau": 4.0,
+    "tau_cond": 3.75,
+    "cells": 444494,
+    "cl": 398,
+    "cl_placebo": 18,
+    "cce": 38,
+    "cce_placebo": 0
+   },
+   "excess|4": {
+    "tau": 3.75,
+    "tau_cond": 4.0,
+    "cells": 444488,
+    "cl": 926,
+    "cl_placebo": 78,
+    "cce": 192,
+    "cce_placebo": 5
+   },
+   "excess|12": {
+    "tau": 3.75,
+    "tau_cond": 4.5,
+    "cells": 444482,
+    "cl": 1210,
+    "cl_placebo": 87,
+    "cce": 125,
+    "cce_placebo": 6
+   },
+   "excess|24": {
+    "tau": 3.75,
+    "tau_cond": 4.5,
+    "cells": 444464,
+    "cl": 1069,
+    "cl_placebo": 87,
+    "cce": 96,
+    "cce_placebo": 6
+   },
+   "excess|72": {
+    "tau": 5.5,
+    "tau_cond": Infinity,
+    "cells": 444328,
+    "cl": 5,
+    "cl_placebo": 0,
+    "cce": 0,
+    "cce_placebo": 0
+   },
+   "raw|1": {
+    "tau": 3.0,
+    "tau_cond": 3.0,
+    "cells": 444494,
+    "cl": 16096,
+    "cl_placebo": 578,
+    "cce": 854,
+    "cce_placebo": 5
+   },
+   "raw|4": {
+    "tau": 2.75,
+    "tau_cond": 3.25,
+    "cells": 444488,
+    "cl": 25770,
+    "cl_placebo": 1466,
+    "cce": 7381,
+    "cce_placebo": 121
+   },
+   "raw|12": {
+    "tau": 2.75,
+    "tau_cond": 3.75,
+    "cells": 444482,
+    "cl": 29219,
+    "cl_placebo": 1791,
+    "cce": 5594,
+    "cce_placebo": 34
+   },
+   "raw|24": {
+    "tau": 2.75,
+    "tau_cond": 4.25,
+    "cells": 444464,
+    "cl": 28161,
+    "cl_placebo": 1962,
+    "cce": 1925,
+    "cce_placebo": 9
+   },
+   "raw|72": {
+    "tau": 3.25,
+    "tau_cond": Infinity,
+    "cells": 444328,
+    "cl": 12599,
+    "cl_placebo": 514,
+    "cce": 0,
+    "cce_placebo": 0
+   }
+  },
+  "market": {
+   "excess|1": {
+    "tau": 3.5,
+    "tau_cond": 3.5,
+    "cells": 230389,
+    "cl": 834,
+    "cl_placebo": 76,
+    "cce": 13,
+    "cce_placebo": 0
+   },
+   "excess|4": {
+    "tau": 3.5,
+    "tau_cond": 3.75,
+    "cells": 230308,
+    "cl": 903,
+    "cl_placebo": 69,
+    "cce": 58,
+    "cce_placebo": 1
+   },
+   "excess|12": {
+    "tau": 3.75,
+    "tau_cond": 3.75,
+    "cells": 230305,
+    "cl": 560,
+    "cl_placebo": 39,
+    "cce": 90,
+    "cce_placebo": 1
+   },
+   "excess|24": {
+    "tau": 3.5,
+    "tau_cond": 4.0,
+    "cells": 230258,
+    "cl": 927,
+    "cl_placebo": 90,
+    "cce": 114,
+    "cce_placebo": 4
+   },
+   "excess|72": {
+    "tau": 4.0,
+    "tau_cond": 4.75,
+    "cells": 230180,
+    "cl": 215,
+    "cl_placebo": 14,
+    "cce": 2,
+    "cce_placebo": 0
+   },
+   "raw|1": {
+    "tau": 2.25,
+    "tau_cond": 3.0,
+    "cells": 230389,
+    "cl": 55139,
+    "cl_placebo": 4212,
+    "cce": 5310,
+    "cce_placebo": 107
+   },
+   "raw|4": {
+    "tau": 2.5,
+    "tau_cond": 3.25,
+    "cells": 230308,
+    "cl": 61237,
+    "cl_placebo": 3811,
+    "cce": 8692,
+    "cce_placebo": 404
+   },
+   "raw|12": {
+    "tau": 2.5,
+    "tau_cond": 3.75,
+    "cells": 230305,
+    "cl": 66459,
+    "cl_placebo": 4457,
+    "cce": 5178,
+    "cce_placebo": 364
+   },
+   "raw|24": {
+    "tau": 2.5,
+    "tau_cond": 3.5,
+    "cells": 230258,
+    "cl": 64969,
+    "cl_placebo": 3776,
+    "cce": 5121,
+    "cce_placebo": 56
+   },
+   "raw|72": {
+    "tau": 2.25,
+    "tau_cond": 4.25,
+    "cells": 230180,
+    "cl": 70189,
+    "cl_placebo": 5683,
+    "cce": 18,
+    "cce_placebo": 0
+   }
+  }
+ }
+}

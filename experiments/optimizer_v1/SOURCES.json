@@ -1,0 +1,27 @@
+{
+  "retrieved_utc_date": "2026-10-20",
+  "sources": [
+    {
+      "title": "Building Diversified Portfolios that Outperform Out-of-Sample",
+      "author": "Marcos Lopez de Prado",
+      "version": "2016-05-23; Journal of Portfolio Management 42(4)",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2708678",
+      "received_scope": "Author publication page and SSRN abstract inspected; full original paper not downloaded. Exact three-leaf implementation is specified in PREREG."
+    },
+    {
+      "title": "PyPortfolioOpt hierarchical_portfolio.py",
+      "url": "https://raw.githubusercontent.com/robertmartin8/PyPortfolioOpt/master/pypfopt/hierarchical_portfolio.py",
+      "version": "master response retrieved 2026-10-20, identified by content digest",
+      "bytes": 7897,
+      "sha256": "ecd610fec721240831eeb3c5dd2e807734e4f245d898df81b1879fea5c925956",
+      "received_scope": "Primary project implementation: correlation-distance single linkage, tree preorder, inverse-variance cluster risk and recursive bisection. Inspected; code reimplemented for exactly three sleeves rather than copied."
+    },
+    {
+      "title": "On the Properties of Equally-Weighted Risk Contributions Portfolios",
+      "authors": "Sebastien Maillard, Thierry Roncalli, Jerome Teiletche",
+      "version": "2008-09-22 working paper; 2010 JPM publication",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1271972",
+      "received_scope": "Primary SSRN abstract inspected. Author PDF https://www.thierry-roncalli.com/download/erc.pdf returned HTTP 503; full paper was not read. Equal-contribution objective and the numerical solver are explicitly specified and verified synthetically."
+    }
+  ]
+}

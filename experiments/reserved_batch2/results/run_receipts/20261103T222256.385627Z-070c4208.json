@@ -1,0 +1,133 @@
+{
+  "binary_archived": false,
+  "binary_sha256": "4ed87dccc9d99e81dbb28bb7b216344c77079eb0c881c45c0460187411728ace",
+  "build_receipt": {
+    "binary_sha256": "4ed87dccc9d99e81dbb28bb7b216344c77079eb0c881c45c0460187411728ace",
+    "cargo": "cargo 1.90.0 (840b83a10 2025-07-30)",
+    "command": [
+      "cargo",
+      "build",
+      "--locked",
+      "--release",
+      "--manifest-path",
+      "engine/Cargo.toml",
+      "--target-dir",
+      "engine/target"
+    ],
+    "finished_at": "2026-11-03T22:20:52.704615+00:00",
+    "rustc": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+    "scope": "build source/binary identity, not historical result reproduction or hermetic compilation",
+    "sources": {
+      "engine/Cargo.lock": "9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f",
+      "engine/Cargo.toml": "af64b8d2d3aa9b9e179615432249a058b5669c2e4c79b9fe4bc9a2a64b3c8d2c",
+      "engine/src/data.rs": "4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146",
+      "engine/src/events.rs": "47e4160e525fadc15dc5ec9d53c713a0d07e92397c9ddd07f779ad1896ddb58d",
+      "engine/src/factors.rs": "636eaef71ea28cedac413e728ba71470933b9f719a3ac40880b80a19ed65c31f",
+      "engine/src/main.rs": "2e523e2bd1d251096b10ee92bd9bca002a8afc1300aa8c0d3aa8281a5e107f45",
+      "engine/src/reserved.rs": "02397aa28548fea14eaac24d311b0f658f74055eadab5cf6b3712375732d4ee6",
+      "engine/src/spread.rs": "3f49b5c545fdaf0c03185d15da8b6c0adc0fec417463e5f4e93b80d8f22414d5",
+      "engine/src/stats.rs": "bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47",
+      "rust-toolchain.toml": "9cbde07377abdce69bc9580adb0315d52e2a09d6494a2005550a7e6733d9688b"
+    },
+    "started_at": "2026-11-03T22:19:01.985520+00:00",
+    "status": "SUCCESS"
+  },
+  "build_receipt_sha256": "fddfc78f1cb84ee818e16e51b88697d92fa4c7d3decc34e0520b121ad5838a73",
+  "data_sources": {
+    "data/dydx_hist": {
+      "bytes": 184484988,
+      "combined_sha256": "90a18b3d9b23bb337f81e2568f0f3fab4c5f94555075c992389e517c83bfab5e",
+      "file_state_sha256": "9c395afef1667ed6d37bf8b5e30505c7fa090e0648f7fcd696397aafb16937f0",
+      "files": 892,
+      "folder": "data/dydx_hist",
+      "manifest": "docs/provenance/dydx_hist.json",
+      "manifest_sha256": "ebedb4c8f8297c602c9e095764f4c7d728bed40d4cfe8297c5b350c2f80e3a8b"
+    },
+    "data/kucoin_hist": {
+      "bytes": 51743321,
+      "combined_sha256": "3d1b69c4b1189f4579234c1717ec9425c81f4c47473a84dd5f5c7195fc9fce29",
+      "file_state_sha256": "9deb39f127c760400fa8811ecee201a50a682ecb0fc97d9977853fa804884b9c",
+      "files": 1450,
+      "folder": "data/kucoin_hist",
+      "manifest": "docs/provenance/kucoin_hist.json",
+      "manifest_sha256": "bc5abe62d763042bd2e01fe88f7b5bf367bdda263200c1cec67486fed19a4b13"
+    },
+    "data/lighter_hist": {
+      "bytes": 111905534,
+      "combined_sha256": "76e7c18843649cb2381c819ac7c639daed52cc0117079ed28f4bce15887c7fee",
+      "file_state_sha256": "53e1ae8b64015887479589cbb53baf7f66d2ed5ce158635473199a47f01558c1",
+      "files": 724,
+      "folder": "data/lighter_hist",
+      "manifest": "docs/provenance/lighter_hist.json",
+      "manifest_sha256": "b630601c1374fc6ff1c9f7b3cb678a3013a324c764d16e0f572bb8a77e657577"
+    },
+    "data/mexc_hist": {
+      "bytes": 454321301,
+      "combined_sha256": "f40c28647bf744819de022fa228437b39c5868d685156e7ae9ec33b772a857bf",
+      "file_state_sha256": "12e37309fcced29ed30afac395a351af81862466798adc5510901fa25b8d4d00",
+      "files": 1823,
+      "folder": "data/mexc_hist",
+      "manifest": "docs/provenance/mexc_hist.json",
+      "manifest_sha256": "5fb2f74b0ffbfde94f9a73830b728e22387bce12475802fba01ac42fb7898c55"
+    }
+  },
+  "engine_invocation": [
+    "qx",
+    "spread",
+    "experiments/reserved_batch2/spec.toml"
+  ],
+  "engine_sources": {
+    "engine/Cargo.lock": "9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f",
+    "engine/Cargo.toml": "af64b8d2d3aa9b9e179615432249a058b5669c2e4c79b9fe4bc9a2a64b3c8d2c",
+    "engine/src/data.rs": "4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146",
+    "engine/src/events.rs": "47e4160e525fadc15dc5ec9d53c713a0d07e92397c9ddd07f779ad1896ddb58d",
+    "engine/src/factors.rs": "636eaef71ea28cedac413e728ba71470933b9f719a3ac40880b80a19ed65c31f",
+    "engine/src/main.rs": "2e523e2bd1d251096b10ee92bd9bca002a8afc1300aa8c0d3aa8281a5e107f45",
+    "engine/src/reserved.rs": "02397aa28548fea14eaac24d311b0f658f74055eadab5cf6b3712375732d4ee6",
+    "engine/src/spread.rs": "3f49b5c545fdaf0c03185d15da8b6c0adc0fec417463e5f4e93b80d8f22414d5",
+    "engine/src/stats.rs": "bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47",
+    "rust-toolchain.toml": "9cbde07377abdce69bc9580adb0315d52e2a09d6494a2005550a7e6733d9688b"
+  },
+  "error": null,
+  "execution_binary_sha256": "4ed87dccc9d99e81dbb28bb7b216344c77079eb0c881c45c0460187411728ace",
+  "finished_at": "2026-11-03T22:22:59.339126+00:00",
+  "frozen_inputs": {
+    "data/dydx_hist/contracts.csv": "1bfe30b536324749ede88b488a290b2d3869ddbd2130008058d6be659ed93b1a",
+    "data/kucoin_hist/contracts.csv": "40305369e6d881fcc5c66a2964b57048aa1d12d63fbe5861fc3ffc14d13e2695",
+    "data/lighter_hist/contracts.csv": "bd040f363ec869ffc6aeacd58f66bece070471b56b7fcf122269319a6df2e398",
+    "docs/provenance/dydx_hist.json": "ebedb4c8f8297c602c9e095764f4c7d728bed40d4cfe8297c5b350c2f80e3a8b",
+    "docs/provenance/kucoin_hist.json": "bc5abe62d763042bd2e01fe88f7b5bf367bdda263200c1cec67486fed19a4b13",
+    "docs/provenance/lighter_hist.json": "b630601c1374fc6ff1c9f7b3cb678a3013a324c764d16e0f572bb8a77e657577",
+    "docs/provenance/mexc_hist.json": "5fb2f74b0ffbfde94f9a73830b728e22387bce12475802fba01ac42fb7898c55",
+    "engine/Cargo.lock": "9fc3e3a75a0275d0f3af29e1bfd901d358977e47fc9fe3413ef3318be791e11f",
+    "engine/Cargo.toml": "af64b8d2d3aa9b9e179615432249a058b5669c2e4c79b9fe4bc9a2a64b3c8d2c",
+    "engine/src/data.rs": "4f4ea1ae3047da42db6c248bee0aeb192ac2eb9fb0709cbfa43a96005fb3a146",
+    "engine/src/events.rs": "47e4160e525fadc15dc5ec9d53c713a0d07e92397c9ddd07f779ad1896ddb58d",
+    "engine/src/factors.rs": "636eaef71ea28cedac413e728ba71470933b9f719a3ac40880b80a19ed65c31f",
+    "engine/src/main.rs": "2e523e2bd1d251096b10ee92bd9bca002a8afc1300aa8c0d3aa8281a5e107f45",
+    "engine/src/reserved.rs": "02397aa28548fea14eaac24d311b0f658f74055eadab5cf6b3712375732d4ee6",
+    "engine/src/spread.rs": "3f49b5c545fdaf0c03185d15da8b6c0adc0fec417463e5f4e93b80d8f22414d5",
+    "engine/src/stats.rs": "bbf7615e3fee7f523e5984f83cee841316f2fb77d465d2ea2afa42f3b0724c47",
+    "experiments/reserved_batch2/RESERVED.md": "98e962a03960ea3bf37792e43b86f52f3a65d9b244e94b8bc70951dac92bd2e2",
+    "experiments/reserved_batch2/spec.toml": "93793406675618dc0db5231bd633a3393d50ea9bf4f8b3abdb92100299fd88a2",
+    "experiments/reserved_batch2/symbols.csv": "5ebfaec83a5c2c47831ec5fbf9b0e683ac3bdf0e88562caf99bfbb834c9ed748",
+    "experiments/unlocks_v1/events.csv": "24cd0d052bea6dcab1e4f862dad3227348644fb887ba61d14ca56cdb00cd794e",
+    "rust-toolchain.toml": "9cbde07377abdce69bc9580adb0315d52e2a09d6494a2005550a7e6733d9688b",
+    "scripts/build_engine.py": "93cacf172fc0f88da4e4cdbdb4b1b0cfe097aa15cdcebbe55959ebdb0c7f1d70",
+    "scripts/decide_reserved_batch2.py": "f98d4c52cdb3e350b39495f2fd9459cc90af0a541367bc1e25c6f05411ac0f27",
+    "scripts/qx_run.py": "37d95b72580f5f91ab272d1223bc30b0235d1b8e9c4cce1e9d53c9b9607b9cef",
+    "scripts/qx_run_verified.py": "0eda951060e2df881f6af9807b37ffaad658e8fc1d1b999b16282cea8dda4362",
+    "scripts/reserved_venue_table.py": "c778e3354b1e7f73d8188d47b7f16e633f059f8c10680630acaea18e19bbccc8"
+  },
+  "lane": "experiments/reserved_batch2",
+  "prereg_sha256": "74cfb3e096cab28f705a445b8f5dcc1e300ee2583876214dc3a5303d3244e486",
+  "receipt_version": 2,
+  "register_requested": false,
+  "report_sha256": "62729d14d52b47fb3dcca64a88b962c2b70da5ffdfdf90f65bae8f94b33bd7a8",
+  "run_id": "20261103T222256.385627Z-070c4208",
+  "scope": "Source and data identity; the binary itself is not archived, and compilation host flags and ABI are not hermetic.",
+  "started_at": "2026-11-03T22:22:56.385732+00:00",
+  "status": "SUCCESS",
+  "status_meaning": "calculation and output verification only; see registration_receipts when register_requested is true",
+  "summary_sha256": "20e0ead5e920c00fcc3aa635a201874ea285fefed4315af2680c59ab06312320"
+}

@@ -1,0 +1,2056 @@
+{
+ "lane": "stock_tugofwar_v1",
+ "registry": "R435",
+ "trials": 20,
+ "program_trials": 9784969,
+ "primary": {
+  "book": "B1",
+  "L": 20,
+  "proxy": "o+30"
+ },
+ "verdict": "NULL",
+ "n_sessions": 249,
+ "first": "2025-10-17",
+ "last": "2026-10-20",
+ "net1x": {
+  "n": 249,
+  "mean": -0.000347947550142914,
+  "lo": -0.002807837817300752,
+  "hi": 0.0020880476882138878,
+  "p_le0": 0.6088,
+  "blocks": 50
+ },
+ "net2x_mean_bp": -25.77605034513312,
+ "net3x_mean_bp": -48.0726251888371,
+ "api_net_mean_bp": -27.479475501429135,
+ "gross_mean_bp": 18.550104697027187,
+ "halves_net1x_bp": [
+  3.045777768687587,
+  -9.952526745384937
+ ],
+ "bonferroni_p": 0.0025,
+ "primary_p_le0": 0.6088,
+ "median_leg_names": 6.0,
+ "median_leg_quote_volume_usd": 642773.3778825,
+ "universe_median": 30.0,
+ "half_spread_median_bp": 14.050105748417344,
+ "half_spread_fill_bp": 58.75130106958752,
+ "us_names": 320,
+ "classified": {
+  "AALSTOCK_USDT": {
+   "us_share": 0.6209641714114371,
+   "asia_share": 0.10017878616555329,
+   "us": true
+  },
+  "AAOISTOCK_USDT": {
+   "us_share": 0.5400560564205172,
+   "asia_share": 0.11661495965472364,
+   "us": true
+  },
+  "AAPLSTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "ABNBSTOCK_USDT": {
+   "us_share": 0.5789973164458848,
+   "asia_share": 0.015693537580846927,
+   "us": true
+  },
+  "ABTSTOCK_USDT": {
+   "us_share": 0.6155407273550847,
+   "asia_share": 0.0028432878518447366,
+   "us": true
+  },
+  "ACNSTOCK_USDT": {
+   "us_share": 0.5426999797424654,
+   "asia_share": 0.05738925513192408,
+   "us": true
+  },
+  "ADBESTOCK_USDT": {
+   "us_share": 0.5398663877556389,
+   "asia_share": 0.13908790786819364,
+   "us": true
+  },
+  "ADISTOCK_USDT": {
+   "us_share": 0.5632765181607925,
+   "asia_share": 0.08001018347784167,
+   "us": true
+  },
+  "ADMSTOCK_USDT": {
+   "us_share": 0.3070715746442362,
+   "asia_share": 0.30347410150357357,
+   "us": true
+  },
+  "ADVANTESTSTOCK_USDT": {
+   "us_share": 0.06546273222328204,
+   "asia_share": 0.8332941402875411,
+   "us": false
+  },
+  "AEHRSTOCK_USDT": {
+   "us_share": 0.5118474347094483,
+   "asia_share": 0.12978830769043928,
+   "us": true
+  },
+  "AGPUSTOCK_USDT": {
+   "us_share": 0.5495824329750987,
+   "asia_share": 0.1046746376267558,
+   "us": true
+  },
+  "AJINOMOTOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.863918795000793,
+   "us": false
+  },
+  "AKAMSTOCK_USDT": {
+   "us_share": 0.6354794641643492,
+   "asia_share": 0.07278994191178162,
+   "us": true
+  },
+  "AKESOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8045014272073207,
+   "us": false
+  },
+  "ALABSTOCK_USDT": {
+   "us_share": 0.5024856489280435,
+   "asia_share": 0.18913073161066693,
+   "us": true
+  },
+  "ALCHIPSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "ALLSTOCK_USDT": {
+   "us_share": 0.5952637575813989,
+   "asia_share": 0.05310549001158327,
+   "us": true
+  },
+  "ALNYSTOCK_USDT": {
+   "us_share": 0.7355782527132064,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "AMATSTOCK_USDT": {
+   "us_share": 0.4517434478396714,
+   "asia_share": 0.1309238811368429,
+   "us": true
+  },
+  "AMCSTOCK_USDT": {
+   "us_share": 0.6675290343531739,
+   "asia_share": 0.03795754575612475,
+   "us": true
+  },
+  "AMDSTOCK_USDT": {
+   "us_share": 0.4709693413582916,
+   "asia_share": 0.11437265504869262,
+   "us": true
+  },
+  "AMGNSTOCK_USDT": {
+   "us_share": 0.5364358648184024,
+   "asia_share": 0.04796284832041591,
+   "us": true
+  },
+  "AMKRSTOCK_USDT": {
+   "us_share": 0.47390806090829934,
+   "asia_share": 0.121937723609791,
+   "us": true
+  },
+  "AMTSTOCK_USDT": {
+   "us_share": 0.5560092909325807,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "AMZNSTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "ANETSTOCK_USDT": {
+   "us_share": 0.5369569735783757,
+   "asia_share": 0.18188934253338324,
+   "us": true
+  },
+  "AONSTOCK_USDT": {
+   "us_share": 0.6041260381722953,
+   "asia_share": 0.016198469387429474,
+   "us": true
+  },
+  "APDSTOCK_USDT": {
+   "us_share": 0.3271176168563753,
+   "asia_share": 0.22424147144483467,
+   "us": true
+  },
+  "APHSTOCK_USDT": {
+   "us_share": 0.4815706504728413,
+   "asia_share": 0.009128910944007914,
+   "us": true
+  },
+  "APLDSTOCK_USDT": {
+   "us_share": 0.5924347126348312,
+   "asia_share": 0.06702169731346716,
+   "us": true
+  },
+  "APPSTOCK_USDT": {
+   "us_share": 0.6584986831051063,
+   "asia_share": 0.06134265596288389,
+   "us": true
+  },
+  "ARMSTOCK_USDT": {
+   "us_share": 0.5726133236752641,
+   "asia_share": 0.12693707344455973,
+   "us": true
+  },
+  "ARWRSTOCK_USDT": {
+   "us_share": 0.3708921406576363,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "ASESTOCK_USDT": {
+   "us_share": 0.030067035757968416,
+   "asia_share": 0.932867649734256,
+   "us": false
+  },
+  "ASMLSTOCK_USDT": {
+   "us_share": 0.4669234345591797,
+   "asia_share": 0.12834622772455803,
+   "us": true
+  },
+  "ASTSSTOCK_USDT": {
+   "us_share": 0.5086190781077682,
+   "asia_share": 0.17336098328429228,
+   "us": true
+  },
+  "ASXSTOCK_USDT": {
+   "us_share": 0.3780445729678224,
+   "asia_share": 0.272698711025834,
+   "us": true
+  },
+  "AVAVSTOCK_USDT": {
+   "us_share": 0.6157519327701027,
+   "asia_share": 0.025473742390966423,
+   "us": true
+  },
+  "AVCSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "AVGOSTOCK_USDT": {
+   "us_share": 0.5973497434109142,
+   "asia_share": 0.08498880259560222,
+   "us": true
+  },
+  "AXONSTOCK_USDT": {
+   "us_share": 0.6837088246689808,
+   "asia_share": 0.021370731047671346,
+   "us": true
+  },
+  "AXPSTOCK_USDT": {
+   "us_share": 0.4551611481730831,
+   "asia_share": 0.22146652320622984,
+   "us": true
+  },
+  "AXTISTOCK_USDT": {
+   "us_share": 0.4815881903506166,
+   "asia_share": 0.15689580361296893,
+   "us": true
+  },
+  "AZNSTOCK_USDT": {
+   "us_share": 0.25065078444999467,
+   "asia_share": 0.29844047389460737,
+   "us": false
+  },
+  "AZOSTOCK_USDT": {
+   "us_share": 0.5828759462757209,
+   "asia_share": 0.00020732023498472307,
+   "us": true
+  },
+  "BABAHKSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8374185205901312,
+   "us": false
+  },
+  "BABASTOCK_USDT": {
+   "us_share": 0.37056835229382534,
+   "asia_share": 0.3108142510220164,
+   "us": true
+  },
+  "BACSTOCK_USDT": {
+   "us_share": 0.6119538390644582,
+   "asia_share": 0.11800050700393268,
+   "us": true
+  },
+  "BASTOCK_USDT": {
+   "us_share": 0.5845176797251588,
+   "asia_share": 0.15104569894967348,
+   "us": true
+  },
+  "BBSTOCK_USDT": {
+   "us_share": 0.42080100661696124,
+   "asia_share": 0.16853196086387023,
+   "us": true
+  },
+  "BESTOCK_USDT": {
+   "us_share": 0.49981380486006716,
+   "asia_share": 0.12220276224732904,
+   "us": true
+  },
+  "BIIBSTOCK_USDT": {
+   "us_share": 0.579958634621554,
+   "asia_share": 0.009027782731290993,
+   "us": true
+  },
+  "BIZLINKSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "BKNGSTOCK_USDT": {
+   "us_share": 0.5147750052017345,
+   "asia_share": 0.22076257424447548,
+   "us": true
+  },
+  "BLKSTOCK_USDT": {
+   "us_share": 0.39424783406350866,
+   "asia_share": 0.18088544562053369,
+   "us": true
+  },
+  "BMNRSTOCK_USDT": {
+   "us_share": 0.492761905935008,
+   "asia_share": 0.17715542239672183,
+   "us": true
+  },
+  "BMYSTOCK_USDT": {
+   "us_share": 0.6431771053637739,
+   "asia_share": 0.008759903287442472,
+   "us": true
+  },
+  "BNCSTOCK_USDT": {
+   "us_share": 0.38169029014122097,
+   "asia_share": 0.1502154909009877,
+   "us": true
+  },
+  "BNTXSTOCK_USDT": {
+   "us_share": 0.6002001085864064,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "BOTSTOCK_USDT": {
+   "us_share": 0.48669172250450216,
+   "asia_share": 0.15777153286683135,
+   "us": true
+  },
+  "BPSTOCK_USDT": {
+   "us_share": 0.474078352076214,
+   "asia_share": 0.04586114522869286,
+   "us": true
+  },
+  "BRKBSTOCK_USDT": {
+   "us_share": 0.3359324504651941,
+   "asia_share": 0.09441113402755551,
+   "us": true
+  },
+  "BSPSTOCK_USDT": {
+   "us_share": 0.42516733817932545,
+   "asia_share": 0.11543819641225225,
+   "us": true
+  },
+  "BSXSTOCK_USDT": {
+   "us_share": 0.6871020728368348,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "BXSTOCK_USDT": {
+   "us_share": 0.42804767349197864,
+   "asia_share": 0.17112741778719204,
+   "us": true
+  },
+  "CAHSTOCK_USDT": {
+   "us_share": 0.9423454879370499,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CATSTOCK_USDT": {
+   "us_share": 0.48647151401247796,
+   "asia_share": 0.10586000874170359,
+   "us": true
+  },
+  "CBRSSTOCK_USDT": {
+   "us_share": 0.5243434690775305,
+   "asia_share": 0.12154106885781726,
+   "us": true
+  },
+  "CBSTOCK_USDT": {
+   "us_share": 0.6393594001780187,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CCISTOCK_USDT": {
+   "us_share": 0.6324057995873068,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CCJSTOCK_USDT": {
+   "us_share": 0.46029408726821447,
+   "asia_share": 0.26378462335904596,
+   "us": true
+  },
+  "CCLSTOCK_USDT": {
+   "us_share": 0.6953427072870653,
+   "asia_share": 0.015194754962232314,
+   "us": true
+  },
+  "CDESTOCK_USDT": {
+   "us_share": 0.5812798491441759,
+   "asia_share": 0.009515979699571001,
+   "us": true
+  },
+  "CDNSSTOCK_USDT": {
+   "us_share": 0.5427599285161899,
+   "asia_share": 0.0023483821099349704,
+   "us": true
+  },
+  "CEGSTOCK_USDT": {
+   "us_share": 0.6726584131851111,
+   "asia_share": 0.0008509848393177448,
+   "us": true
+  },
+  "CIENSTOCK_USDT": {
+   "us_share": 0.5919582721750407,
+   "asia_share": 0.09208638826517261,
+   "us": true
+  },
+  "CIFRSTOCK_USDT": {
+   "us_share": 0.5261463768808607,
+   "asia_share": 0.09938291577437129,
+   "us": true
+  },
+  "CLSKSTOCK_USDT": {
+   "us_share": 0.6283711513194186,
+   "asia_share": 0.12051371958260511,
+   "us": true
+  },
+  "CLSSTOCK_USDT": {
+   "us_share": 0.5931851406649931,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CMCSASTOCK_USDT": {
+   "us_share": 0.6272419728609901,
+   "asia_share": 0.01934603753778415,
+   "us": true
+  },
+  "CMESTOCK_USDT": {
+   "us_share": 0.5823436756862219,
+   "asia_share": 0.0013995328821721448,
+   "us": true
+  },
+  "COFSTOCK_USDT": {
+   "us_share": 0.30628750387624204,
+   "asia_share": 0.29701972927837866,
+   "us": true
+  },
+  "COHRSTOCK_USDT": {
+   "us_share": 0.5098818625053707,
+   "asia_share": 0.16792136709235075,
+   "us": true
+  },
+  "COINBASE_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "COPSTOCK_USDT": {
+   "us_share": 0.4023364195800221,
+   "asia_share": 0.09611932394948801,
+   "us": true
+  },
+  "COSTSTOCK_USDT": {
+   "us_share": 0.5535041331996674,
+   "asia_share": 0.12539998280287332,
+   "us": true
+  },
+  "CRCLSTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CRDOSTOCK_USDT": {
+   "us_share": 0.5055483550442164,
+   "asia_share": 0.17034328302874158,
+   "us": true
+  },
+  "CRMLSTOCK_USDT": {
+   "us_share": 0.5799201026713002,
+   "asia_share": 0.11102168075614505,
+   "us": true
+  },
+  "CRMSTOCK_USDT": {
+   "us_share": 0.5752266860291334,
+   "asia_share": 0.10113996806673294,
+   "us": true
+  },
+  "CRWDSTOCK_USDT": {
+   "us_share": 0.5149137221284732,
+   "asia_share": 0.12916502562761656,
+   "us": true
+  },
+  "CRWVSTOCK_USDT": {
+   "us_share": 0.5665131267080828,
+   "asia_share": 0.1211471020881219,
+   "us": true
+  },
+  "CSCOSTOCK_USDT": {
+   "us_share": 0.5194651681531287,
+   "asia_share": 0.1577064810777021,
+   "us": true
+  },
+  "CSTOCK_USDT": {
+   "us_share": 0.4450816361948501,
+   "asia_share": 0.1569901812231197,
+   "us": true
+  },
+  "CVSSTOCK_USDT": {
+   "us_share": 0.6166010545280484,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "CVXSTOCK_USDT": {
+   "us_share": 0.4114935946576515,
+   "asia_share": 0.23470759767086727,
+   "us": true
+  },
+  "CXMTSTOCK_USDT": {
+   "us_share": 0.18035072217209927,
+   "asia_share": 0.303567478360648,
+   "us": false
+  },
+  "CYPHSTOCK_USDT": {
+   "us_share": 0.4424319853074718,
+   "asia_share": 0.17260009210520902,
+   "us": true
+  },
+  "DALSTOCK_USDT": {
+   "us_share": 0.6106009777881786,
+   "asia_share": 9.632297467564857e-05,
+   "us": true
+  },
+  "DASHSTOCK_USDT": {
+   "us_share": 0.7453923997676186,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "DDOGSTOCK_USDT": {
+   "us_share": 0.4593289848015674,
+   "asia_share": 0.20722968012776458,
+   "us": true
+  },
+  "DELLSTOCK_USDT": {
+   "us_share": 0.4137214944212205,
+   "asia_share": 0.1505668048287183,
+   "us": true
+  },
+  "DELTAELECSTOCK_USDT": {
+   "us_share": 0.015580509681264692,
+   "asia_share": 0.9534236341587978,
+   "us": false
+  },
+  "DESTOCK_USDT": {
+   "us_share": 0.6898798123427629,
+   "asia_share": 0.051038247758749614,
+   "us": true
+  },
+  "DHRSTOCK_USDT": {
+   "us_share": 0.6538762385069871,
+   "asia_share": 0.0022038016022486065,
+   "us": true
+  },
+  "DISCOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9154683439472165,
+   "us": false
+  },
+  "DISSTOCK_USDT": {
+   "us_share": 0.3477587786871893,
+   "asia_share": 0.1753605322024985,
+   "us": true
+  },
+  "DJTSTOCK_USDT": {
+   "us_share": 0.5533409571069209,
+   "asia_share": 0.10993801377924846,
+   "us": true
+  },
+  "DKNGSTOCK_USDT": {
+   "us_share": 0.5266021352589316,
+   "asia_share": 0.1370681223034909,
+   "us": true
+  },
+  "DOCUSTOCK_USDT": {
+   "us_share": 0.541345256001945,
+   "asia_share": 0.003626406248658365,
+   "us": true
+  },
+  "DPZSTOCK_USDT": {
+   "us_share": 0.699168332320195,
+   "asia_share": 0.009098270709842045,
+   "us": true
+  },
+  "DVNSTOCK_USDT": {
+   "us_share": 0.6048953445078306,
+   "asia_share": 0.02608253196755742,
+   "us": true
+  },
+  "EBAYSTOCK_USDT": {
+   "us_share": 0.27627606395600773,
+   "asia_share": 0.304291413504823,
+   "us": false
+  },
+  "ELITEMATSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "ELSTOCK_USDT": {
+   "us_share": 0.6056282677187036,
+   "asia_share": 0.004150027725110607,
+   "us": true
+  },
+  "ENPHSTOCK_USDT": {
+   "us_share": 0.6872460504651225,
+   "asia_share": 0.018512295352161375,
+   "us": true
+  },
+  "EOGSTOCK_USDT": {
+   "us_share": 0.6026675497972416,
+   "asia_share": 0.0024879418798984324,
+   "us": true
+  },
+  "ETNSTOCK_USDT": {
+   "us_share": 0.5173641853663222,
+   "asia_share": 0.11978126354216735,
+   "us": true
+  },
+  "EXPESTOCK_USDT": {
+   "us_share": 0.5991017682350394,
+   "asia_share": 0.011088377433778995,
+   "us": true
+  },
+  "FANUCSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9058548440805486,
+   "us": false
+  },
+  "FASTRETAILSTOCK_USDT": {
+   "us_share": 0.00988452578871556,
+   "asia_share": 0.8803201486943061,
+   "us": false
+  },
+  "FASTSTOCK_USDT": {
+   "us_share": 0.43984118359505736,
+   "asia_share": 0.03049739181701124,
+   "us": true
+  },
+  "FCXSTOCK_USDT": {
+   "us_share": 0.4776067803206226,
+   "asia_share": 0.19596748085266913,
+   "us": true
+  },
+  "FICOSTOCK_USDT": {
+   "us_share": 0.7287984149482077,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "FIGSTOCK_USDT": {
+   "us_share": 0.6493637308617584,
+   "asia_share": 0.0014058741327652067,
+   "us": true
+  },
+  "FIXSTOCK_USDT": {
+   "us_share": 0.4858069741193141,
+   "asia_share": 1.811709656552253e-05,
+   "us": true
+  },
+  "FLEXSTOCK_USDT": {
+   "us_share": 0.4726864117127145,
+   "asia_share": 0.10053191891510008,
+   "us": true
+  },
+  "FLNCSTOCK_USDT": {
+   "us_share": 0.45119049544507445,
+   "asia_share": 0.1335097071364318,
+   "us": true
+  },
+  "FOXASTOCK_USDT": {
+   "us_share": 0.660118318873385,
+   "asia_share": 0.052645767825326296,
+   "us": true
+  },
+  "FRMISTOCK_USDT": {
+   "us_share": 0.6142109448958902,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "FTNTSTOCK_USDT": {
+   "us_share": 0.6206956204849828,
+   "asia_share": 0.00267685937601522,
+   "us": true
+  },
+  "FUJIKURASTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9443794982569772,
+   "us": false
+  },
+  "FURUKAWASTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.93857933624543,
+   "us": false
+  },
+  "FUTUSTOCK_USDT": {
+   "us_share": 0.5517972496430734,
+   "asia_share": 0.1623673420376576,
+   "us": true
+  },
+  "FWDISTOCK_USDT": {
+   "us_share": 0.37001559463001504,
+   "asia_share": 0.061535999721555115,
+   "us": true
+  },
+  "GENSCRIPTSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8435166193053913,
+   "us": false
+  },
+  "GESTOCK_USDT": {
+   "us_share": 0.5120336181495035,
+   "asia_share": 0.1418535879713113,
+   "us": true
+  },
+  "GEVSTOCK_USDT": {
+   "us_share": 0.49283349241503954,
+   "asia_share": 0.17197605605433317,
+   "us": true
+  },
+  "GFSSTOCK_USDT": {
+   "us_share": 0.5174103585427476,
+   "asia_share": 0.05766934745634428,
+   "us": true
+  },
+  "GIGADEVSTOCK_USDT": {
+   "us_share": 0.18385364520373695,
+   "asia_share": 0.42082182667323204,
+   "us": false
+  },
+  "GILDSTOCK_USDT": {
+   "us_share": 0.4375677569496555,
+   "asia_share": 0.07279957148361837,
+   "us": true
+  },
+  "GLOBALWFRSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "GLWSTOCK_USDT": {
+   "us_share": 0.3490161068261518,
+   "asia_share": 0.16103818031857564,
+   "us": true
+  },
+  "GLXYSTOCK_USDT": {
+   "us_share": 0.5887067525233591,
+   "asia_share": 0.017325898018272085,
+   "us": true
+  },
+  "GMESTOCK_USDT": {
+   "us_share": 0.3991202240458675,
+   "asia_share": 0.1339617796750781,
+   "us": true
+  },
+  "GMSTOCK_USDT": {
+   "us_share": 0.5996188852685204,
+   "asia_share": 0.014615906386085176,
+   "us": true
+  },
+  "GOLDCIRSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "GOOGLSTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "GPROSTOCK_USDT": {
+   "us_share": 0.4902508313859187,
+   "asia_share": 0.10193479500744564,
+   "us": true
+  },
+  "GRABSTOCK_USDT": {
+   "us_share": 0.5531093696390361,
+   "asia_share": 0.16177838366767094,
+   "us": true
+  },
+  "GSSTOCK_USDT": {
+   "us_share": 0.5641026201980528,
+   "asia_share": 0.1309071119524214,
+   "us": true
+  },
+  "GTLBSTOCK_USDT": {
+   "us_share": 0.4787807045737397,
+   "asia_share": 0.10230768732542549,
+   "us": true
+  },
+  "GUCSTOCK_USDT": {
+   "us_share": 0.006756549061764309,
+   "asia_share": 0.9854679864610433,
+   "us": false
+  },
+  "HALSTOCK_USDT": {
+   "us_share": 0.42707094024285713,
+   "asia_share": 0.19292927972406013,
+   "us": true
+  },
+  "HANMISTOCK_USDT": {
+   "us_share": 0.09296795500502952,
+   "asia_share": 0.47327117618913683,
+   "us": false
+  },
+  "HANWHAAEROSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8813547332586632,
+   "us": false
+  },
+  "HCASTOCK_USDT": {
+   "us_share": 0.6230170261370878,
+   "asia_share": 0.0004635269185862605,
+   "us": true
+  },
+  "HDSTOCK_USDT": {
+   "us_share": 0.3338816246554657,
+   "asia_share": 0.12833685929158556,
+   "us": true
+  },
+  "HIMSSTOCK_USDT": {
+   "us_share": 0.5628170650684866,
+   "asia_share": 0.1191321844338526,
+   "us": true
+  },
+  "HITACHISTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9256399663304423,
+   "us": false
+  },
+  "HLSTOCK_USDT": {
+   "us_share": 0.5442688075988005,
+   "asia_share": 0.00508523300351102,
+   "us": true
+  },
+  "HONASTOCK_USDT": {
+   "us_share": 0.7254991301852515,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "HPESTOCK_USDT": {
+   "us_share": 0.34789455101836453,
+   "asia_share": 0.15556454870682504,
+   "us": true
+  },
+  "HPQSTOCK_USDT": {
+   "us_share": 0.6821985394911749,
+   "asia_share": 0.0443366026596019,
+   "us": true
+  },
+  "HTZSTOCK_USDT": {
+   "us_share": 0.6352852724109682,
+   "asia_share": 0.020025780622791818,
+   "us": true
+  },
+  "HUTSTOCK_USDT": {
+   "us_share": 0.540188475028503,
+   "asia_share": 0.11484942815799631,
+   "us": true
+  },
+  "HYUNDAISTOCK_USDT": {
+   "us_share": 0.16563328432323896,
+   "asia_share": 0.3940403960017183,
+   "us": false
+  },
+  "IBIDENSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9192226115821328,
+   "us": false
+  },
+  "IBKRSTOCK_USDT": {
+   "us_share": 0.5601282420791768,
+   "asia_share": 0.1918873908981939,
+   "us": true
+  },
+  "IBMSTOCK_USDT": {
+   "us_share": 0.5645227040939833,
+   "asia_share": 0.12672572810097266,
+   "us": true
+  },
+  "ILMNSTOCK_USDT": {
+   "us_share": 0.7508963231850326,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "INFQSTOCK_USDT": {
+   "us_share": 0.5734820807269017,
+   "asia_share": 0.07333436749781345,
+   "us": true
+  },
+  "INNOLUXSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "INNOVENTSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8081856138410339,
+   "us": false
+  },
+  "INTCSTOCK_USDT": {
+   "us_share": 0.4321877827411898,
+   "asia_share": 0.21540499657130757,
+   "us": true
+  },
+  "INTUSTOCK_USDT": {
+   "us_share": 0.5088300529485533,
+   "asia_share": 0.13472081298614333,
+   "us": true
+  },
+  "IONQSTOCK_USDT": {
+   "us_share": 0.5631139894944494,
+   "asia_share": 0.09799153565030799,
+   "us": true
+  },
+  "IRENSTOCK_USDT": {
+   "us_share": 0.516583651146017,
+   "asia_share": 0.16349447870295236,
+   "us": true
+  },
+  "ISRGSTOCK_USDT": {
+   "us_share": 0.6460080516782595,
+   "asia_share": 0.017112527271263493,
+   "us": true
+  },
+  "JBLSTOCK_USDT": {
+   "us_share": 0.662791444457785,
+   "asia_share": 0.007863825435369124,
+   "us": true
+  },
+  "JDSTOCK_USDT": {
+   "us_share": 0.4354347479699452,
+   "asia_share": 0.26953387070533336,
+   "us": true
+  },
+  "JMKESTOCK_USDT": {
+   "us_share": 0.7019612046424555,
+   "asia_share": 0.006487619542572309,
+   "us": true
+  },
+  "JPMSTOCK_USDT": {
+   "us_share": 0.5708207546918872,
+   "asia_share": 0.12495693424146387,
+   "us": true
+  },
+  "KBFINSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8469374851407288,
+   "us": false
+  },
+  "KBLAMSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8410866673125061,
+   "us": false
+  },
+  "KEYENCESTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9162537010322521,
+   "us": false
+  },
+  "KEYSSTOCK_USDT": {
+   "us_share": 0.646250064583933,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "KHCSTOCK_USDT": {
+   "us_share": 0.5340544072537363,
+   "asia_share": 0.16073567677893325,
+   "us": true
+  },
+  "KINSUSSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "KIOXIASTOCK_USDT": {
+   "us_share": 0.16910462224379766,
+   "asia_share": 0.5040526691978566,
+   "us": false
+  },
+  "KKRSTOCK_USDT": {
+   "us_share": 0.5868065485600015,
+   "asia_share": 0.011296196429467064,
+   "us": true
+  },
+  "KLACSTOCK_USDT": {
+   "us_share": 0.4178294590183614,
+   "asia_share": 0.21570896345711116,
+   "us": true
+  },
+  "KMBSTOCK_USDT": {
+   "us_share": 0.44547909020342125,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "KMISTOCK_USDT": {
+   "us_share": 0.3076650982137168,
+   "asia_share": 0.008277004767732696,
+   "us": true
+  },
+  "KODSTOCK_USDT": {
+   "us_share": 0.6947412249596756,
+   "asia_share": 0.03838173159476947,
+   "us": true
+  },
+  "KOKUSAISTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9269446796450295,
+   "us": false
+  },
+  "KOSTOCK_USDT": {
+   "us_share": 0.5705404281130626,
+   "asia_share": 0.11041278097301563,
+   "us": true
+  },
+  "KRSTOCK_USDT": {
+   "us_share": 0.48374074067447925,
+   "asia_share": 0.004783962052151677,
+   "us": true
+  },
+  "KUAISHOUSTOCK_USDT": {
+   "us_share": 0.13184389696387847,
+   "asia_share": 0.49794415208458975,
+   "us": false
+  },
+  "LARGANSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "LASERTECSTOCK_USDT": {
+   "us_share": 0.11631825208097336,
+   "asia_share": 0.7626796058451284,
+   "us": false
+  },
+  "LHXSTOCK_USDT": {
+   "us_share": 0.6564823936728315,
+   "asia_share": 0.016259793774028995,
+   "us": true
+  },
+  "LINSTOCK_USDT": {
+   "us_share": 0.4025781842632165,
+   "asia_share": 0.17721146703422344,
+   "us": true
+  },
+  "LITESTOCK_USDT": {
+   "us_share": 0.5115738390228851,
+   "asia_share": 0.12119872903050177,
+   "us": true
+  },
+  "LLYSTOCK_USDT": {
+   "us_share": 0.5234472016531951,
+   "asia_share": 0.15600834215817883,
+   "us": true
+  },
+  "LMTSTOCK_USDT": {
+   "us_share": 0.40775719085494094,
+   "asia_share": 0.1941678288859048,
+   "us": true
+  },
+  "LRCXSTOCK_USDT": {
+   "us_share": 0.5458590041661932,
+   "asia_share": 0.05682721123954063,
+   "us": true
+  },
+  "LULUSTOCK_USDT": {
+   "us_share": 0.6053485013217541,
+   "asia_share": 0.0031426492536958148,
+   "us": true
+  },
+  "LUNRSTOCK_USDT": {
+   "us_share": 0.4229147858020613,
+   "asia_share": 0.14241069456432148,
+   "us": true
+  },
+  "MARASTOCK_USDT": {
+   "us_share": 0.6533680255512955,
+   "asia_share": 0.12097729520869462,
+   "us": true
+  },
+  "MARSTOCK_USDT": {
+   "us_share": 0.649933359731592,
+   "asia_share": 0.027397546389838996,
+   "us": true
+  },
+  "MASTOCK_USDT": {
+   "us_share": 0.4266670724972994,
+   "asia_share": 0.18347265878395222,
+   "us": true
+  },
+  "MCDSTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MCKSTOCK_USDT": {
+   "us_share": 0.8396826948128178,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MDBSTOCK_USDT": {
+   "us_share": 0.6337024350712301,
+   "asia_share": 0.08903976167566995,
+   "us": true
+  },
+  "MDLZSTOCK_USDT": {
+   "us_share": 0.6798203376815268,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MDTSTOCK_USDT": {
+   "us_share": 0.6034854062243867,
+   "asia_share": 0.026791006654943852,
+   "us": true
+  },
+  "MEDIATEKSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "MEITUANSTOCK_USDT": {
+   "us_share": 0.13239056184231496,
+   "asia_share": 0.47254040619712967,
+   "us": false
+  },
+  "MELCOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8944475668802672,
+   "us": false
+  },
+  "MELISTOCK_USDT": {
+   "us_share": 0.6983596471009359,
+   "asia_share": 0.0334374023814142,
+   "us": true
+  },
+  "METASTOCK_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MINIMAXSTOCK_USDT": {
+   "us_share": 0.1842202953430594,
+   "asia_share": 0.4163408249135626,
+   "us": false
+  },
+  "MITSUBISHISTOCK_USDT": {
+   "us_share": 0.020614168055548374,
+   "asia_share": 0.9080349322197836,
+   "us": false
+  },
+  "MNSTSTOCK_USDT": {
+   "us_share": 0.3670657420185215,
+   "asia_share": 0.16617519507567874,
+   "us": true
+  },
+  "MOSTOCK_USDT": {
+   "us_share": 0.4681935661394807,
+   "asia_share": 0.1513943833763404,
+   "us": true
+  },
+  "MPCSTOCK_USDT": {
+   "us_share": 0.6161915859425354,
+   "asia_share": 0.005604341805488459,
+   "us": true
+  },
+  "MPSTOCK_USDT": {
+   "us_share": 0.5930630930893181,
+   "asia_share": 0.08962757945997005,
+   "us": true
+  },
+  "MPWRSTOCK_USDT": {
+   "us_share": 0.5931055632020384,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MRKSTOCK_USDT": {
+   "us_share": 0.5339420820106,
+   "asia_share": 0.11372384211682446,
+   "us": true
+  },
+  "MRNASTOCK_USDT": {
+   "us_share": 0.559854724833743,
+   "asia_share": 0.09596323204999634,
+   "us": true
+  },
+  "MRSHSTOCK_USDT": {
+   "us_share": 0.6152348565036753,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "MRVLSTOCK_USDT": {
+   "us_share": 0.529138885260304,
+   "asia_share": 0.14650481824770037,
+   "us": true
+  },
+  "MSCISTOCK_USDT": {
+   "us_share": 0.7274230260297168,
+   "asia_share": 0.07095071909652714,
+   "us": true
+  },
+  "MSFTSTOCK_USDT": {
+   "us_share": 0.5332044796554889,
+   "asia_share": 0.1012391421457994,
+   "us": true
+  },
+  "MSSTOCK_USDT": {
+   "us_share": 0.5934271666573644,
+   "asia_share": 0.005328068279958441,
+   "us": true
+  },
+  "MSTRSTOCK_USDT": {
+   "us_share": 0.5981372472077641,
+   "asia_share": 0.13147582217512285,
+   "us": true
+  },
+  "MTSISTOCK_USDT": {
+   "us_share": 0.45611935997448116,
+   "asia_share": 0.0050915917132308116,
+   "us": true
+  },
+  "MUFGSTOCK_USDT": {
+   "us_share": 0.2652268981218341,
+   "asia_share": 0.24303645803889093,
+   "us": true
+  },
+  "MURATASTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9375221148059664,
+   "us": false
+  },
+  "MUSTOCK_USDT": {
+   "us_share": 0.4676118254527843,
+   "asia_share": 0.17501016794852095,
+   "us": true
+  },
+  "NANYAPCBSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "NANYAPLSTSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "NANYATECHSTOCK_USDT": {
+   "us_share": 0.014527429663731788,
+   "asia_share": 0.9654101091563385,
+   "us": false
+  },
+  "NAVERSTOCK_USDT": {
+   "us_share": 0.10748226341678313,
+   "asia_share": 0.46308563834936767,
+   "us": false
+  },
+  "NBISSTOCK_USDT": {
+   "us_share": 0.5950863900047931,
+   "asia_share": 0.129929937419883,
+   "us": true
+  },
+  "NECSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9356273238807037,
+   "us": false
+  },
+  "NEMSTOCK_USDT": {
+   "us_share": 0.38786716413475447,
+   "asia_share": 0.2667415864040409,
+   "us": true
+  },
+  "NETSTOCK_USDT": {
+   "us_share": 0.4789587938034404,
+   "asia_share": 0.06099093656264831,
+   "us": true
+  },
+  "NFLXSTOCK_USDT": {
+   "us_share": 0.5412779441237787,
+   "asia_share": 0.09616475914244553,
+   "us": true
+  },
+  "NINTENDOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9455253387717983,
+   "us": false
+  },
+  "NIOSTOCK_USDT": {
+   "us_share": 0.4436369638518082,
+   "asia_share": 0.2195729334804168,
+   "us": true
+  },
+  "NKESTOCK_USDT": {
+   "us_share": 0.7288931366960022,
+   "asia_share": 0.022577881349829212,
+   "us": true
+  },
+  "NOCSTOCK_USDT": {
+   "us_share": 0.683591626589069,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "NOKSTOCK_USDT": {
+   "us_share": 0.36893378525462833,
+   "asia_share": 0.1801449667024965,
+   "us": true
+  },
+  "NOWSTOCK_USDT": {
+   "us_share": 0.41005782335209195,
+   "asia_share": 0.13489708119562993,
+   "us": true
+  },
+  "NTAPSTOCK_USDT": {
+   "us_share": 0.6201861570947198,
+   "asia_share": 0.0733772499378172,
+   "us": true
+  },
+  "NUSTOCK_USDT": {
+   "us_share": 0.5857190976841268,
+   "asia_share": 0.13276437993685694,
+   "us": true
+  },
+  "NVIDIA_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "NVOSTOCK_USDT": {
+   "us_share": 0.3565720344349826,
+   "asia_share": 0.1195144712188732,
+   "us": true
+  },
+  "NVTSSTOCK_USDT": {
+   "us_share": 0.5026924319307252,
+   "asia_share": 0.18460433673961904,
+   "us": true
+  },
+  "NXPISTOCK_USDT": {
+   "us_share": 0.6463567507682484,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "OKLOSTOCK_USDT": {
+   "us_share": 0.6299879794684932,
+   "asia_share": 0.07021704063027671,
+   "us": true
+  },
+  "OKTASTOCK_USDT": {
+   "us_share": 0.642587451099407,
+   "asia_share": 0.04842582303311485,
+   "us": true
+  },
+  "ONDSSTOCK_USDT": {
+   "us_share": 0.6453848776588538,
+   "asia_share": 0.03499577724386683,
+   "us": true
+  },
+  "ONSTOCK_USDT": {
+   "us_share": 0.33727894162816835,
+   "asia_share": 0.14748167661762837,
+   "us": true
+  },
+  "OPENSTOCK_USDT": {
+   "us_share": 0.604591662827702,
+   "asia_share": 0.11379863138400279,
+   "us": true
+  },
+  "ORCLSTOCK_USDT": {
+   "us_share": 0.5240030777407501,
+   "asia_share": 0.11237380715917389,
+   "us": true
+  },
+  "OUSTSTOCK_USDT": {
+   "us_share": 0.6729688390282923,
+   "asia_share": 0.06176087178763096,
+   "us": true
+  },
+  "OXYSTOCK_USDT": {
+   "us_share": 0.4479757847752048,
+   "asia_share": 0.08893678116601217,
+   "us": true
+  },
+  "PANASONICSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9302960647586366,
+   "us": false
+  },
+  "PANWSTOCK_USDT": {
+   "us_share": 0.4583497572773156,
+   "asia_share": 0.1709766633676453,
+   "us": true
+  },
+  "PATHSTOCK_USDT": {
+   "us_share": 0.628503808651118,
+   "asia_share": 0.05660921796270926,
+   "us": true
+  },
+  "PAYPSTOCK_USDT": {
+   "us_share": 0.4403545453379162,
+   "asia_share": 0.21599547083652587,
+   "us": true
+  },
+  "PBRSTOCK_USDT": {
+   "us_share": 0.37374894762619215,
+   "asia_share": 0.0846732858995914,
+   "us": true
+  },
+  "PCVXSTOCK_USDT": {
+   "us_share": 0.607002040517462,
+   "asia_share": 0.06087654712643869,
+   "us": true
+  },
+  "PDDSTOCK_USDT": {
+   "us_share": 0.5059761064856989,
+   "asia_share": 0.18499100510115454,
+   "us": true
+  },
+  "PENGSTOCK_USDT": {
+   "us_share": 0.4770632058942757,
+   "asia_share": 0.1798190915705553,
+   "us": true
+  },
+  "PEPSTOCK_USDT": {
+   "us_share": 0.5027930241700233,
+   "asia_share": 0.1579712165393383,
+   "us": true
+  },
+  "PFESTOCK_USDT": {
+   "us_share": 0.7178286583019468,
+   "asia_share": 0.0014467624441522327,
+   "us": true
+  },
+  "PGRSTOCK_USDT": {
+   "us_share": 0.7106737207896542,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "PGSTOCK_USDT": {
+   "us_share": 0.4683034607377043,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "PHSTOCK_USDT": {
+   "us_share": 0.8455493719913433,
+   "asia_share": 0.0008384632927285041,
+   "us": true
+  },
+  "PLDSTOCK_USDT": {
+   "us_share": 0.7384348690146592,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "PLSTOCK_USDT": {
+   "us_share": 0.6662994713176603,
+   "asia_share": 0.038290827628331615,
+   "us": true
+  },
+  "PLTRSTOCK_USDT": {
+   "us_share": 0.616906029691044,
+   "asia_share": 0.07183733628317787,
+   "us": true
+  },
+  "PMSTOCK_USDT": {
+   "us_share": 0.6307450718163857,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "POETSTOCK_USDT": {
+   "us_share": 0.5803407462833664,
+   "asia_share": 0.07511963196806946,
+   "us": true
+  },
+  "POPMARTSTOCK_USDT": {
+   "us_share": 0.17014673325056995,
+   "asia_share": 0.41138447205311973,
+   "us": false
+  },
+  "POWERCHIPSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "PSTOCK_USDT": {
+   "us_share": 0.5441465798817238,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "PSXSTOCK_USDT": {
+   "us_share": 0.6003084921528707,
+   "asia_share": 0.0008883772004167964,
+   "us": true
+  },
+  "PURRSTOCK_USDT": {
+   "us_share": 0.43642623434260064,
+   "asia_share": 0.13971487177769187,
+   "us": true
+  },
+  "PWRSTOCK_USDT": {
+   "us_share": 0.7043437536195393,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "PYPLSTOCK_USDT": {
+   "us_share": 0.5282426622512216,
+   "asia_share": 0.1775838632591938,
+   "us": true
+  },
+  "QBTSSTOCK_USDT": {
+   "us_share": 0.6536461045066506,
+   "asia_share": 0.036994943324529427,
+   "us": true
+  },
+  "QCOMSTOCK_USDT": {
+   "us_share": 0.48524166295250104,
+   "asia_share": 0.15268955372479154,
+   "us": true
+  },
+  "QNTSTOCK_USDT": {
+   "us_share": 0.43419690526750293,
+   "asia_share": 0.1323948673197051,
+   "us": true
+  },
+  "RBLXSTOCK_USDT": {
+   "us_share": 0.7207443189800234,
+   "asia_share": 0.003842737758672067,
+   "us": true
+  },
+  "RBRKSTOCK_USDT": {
+   "us_share": 0.5196743725607663,
+   "asia_share": 0.001768962954604254,
+   "us": true
+  },
+  "RDDTSTOCK_USDT": {
+   "us_share": 0.643908178112396,
+   "asia_share": 0.10548639963592794,
+   "us": true
+  },
+  "RDWSTOCK_USDT": {
+   "us_share": 0.5110758887881575,
+   "asia_share": 0.13458648532508252,
+   "us": true
+  },
+  "RECRUITSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9029953846371853,
+   "us": false
+  },
+  "REGNSTOCK_USDT": {
+   "us_share": 0.37993229596008393,
+   "asia_share": 0.10904544415879835,
+   "us": true
+  },
+  "RENESASSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9221278365684586,
+   "us": false
+  },
+  "RGTISTOCK_USDT": {
+   "us_share": 0.6527661409390147,
+   "asia_share": 0.05955339221511655,
+   "us": true
+  },
+  "RIOTSTOCK_USDT": {
+   "us_share": 0.5705430024781271,
+   "asia_share": 0.043011416544120176,
+   "us": true
+  },
+  "RIVNSTOCK_USDT": {
+   "us_share": 0.5534233215125468,
+   "asia_share": 0.1130366607812146,
+   "us": true
+  },
+  "RKLBSTOCK_USDT": {
+   "us_share": 0.5955801498570974,
+   "asia_share": 0.13036045311795336,
+   "us": true
+  },
+  "ROBINHOOD_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "ROKSTOCK_USDT": {
+   "us_share": 0.6738254495040146,
+   "asia_share": 0.03260374477108762,
+   "us": true
+  },
+  "ROSTSTOCK_USDT": {
+   "us_share": 0.7728767602693769,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "RTXSTOCK_USDT": {
+   "us_share": 0.5210735741414374,
+   "asia_share": 0.07823891373365031,
+   "us": true
+  },
+  "SAMSUNGEMSTOCK_USDT": {
+   "us_share": 0.11968312630894112,
+   "asia_share": 0.4273799094595154,
+   "us": false
+  },
+  "SAMSUNGSTOCK_USDT": {
+   "us_share": 0.25278401425805025,
+   "asia_share": 0.26888300834330375,
+   "us": false
+  },
+  "SBUXSTOCK_USDT": {
+   "us_share": 0.48863559581032234,
+   "asia_share": 0.20136493780670964,
+   "us": true
+  },
+  "SCCOSTOCK_USDT": {
+   "us_share": 0.5885321440754034,
+   "asia_share": 0.00847769250555964,
+   "us": true
+  },
+  "SHAZSTOCK_USDT": {
+   "us_share": 0.5268866753597236,
+   "asia_share": 0.11971598556614173,
+   "us": true
+  },
+  "SHEINSTOCK_USDT": {
+   "us_share": 0.20405439762969957,
+   "asia_share": 0.3233212590774072,
+   "us": false
+  },
+  "SHELSTOCK_USDT": {
+   "us_share": 0.4416033091684086,
+   "asia_share": 0.03250104055628871,
+   "us": true
+  },
+  "SHINETSUSTOCK_USDT": {
+   "us_share": 0.014849540520908923,
+   "asia_share": 0.7999782875879948,
+   "us": false
+  },
+  "SHOPSTOCK_USDT": {
+   "us_share": 0.5797195558191023,
+   "asia_share": 0.11992273883995537,
+   "us": true
+  },
+  "SITMSTOCK_USDT": {
+   "us_share": 0.6390729064291345,
+   "asia_share": 0.051245876993318125,
+   "us": true
+  },
+  "SKHYNIXSTOCK_USDT": {
+   "us_share": 0.25360766518119815,
+   "asia_share": 0.2895291064634477,
+   "us": false
+  },
+  "SKHYSTOCK_USDT": {
+   "us_share": 0.3565715624192943,
+   "asia_share": 0.23292251591520158,
+   "us": true
+  },
+  "SKINNOVSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9247070546751408,
+   "us": false
+  },
+  "SKSQUARESTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.9418844174355856,
+   "us": false
+  },
+  "SLBSTOCK_USDT": {
+   "us_share": 0.4080436278394379,
+   "asia_share": 0.22113839482203557,
+   "us": true
+  },
+  "SMCISTOCK_USDT": {
+   "us_share": 0.5926305943741154,
+   "asia_share": 0.11468788118433848,
+   "us": true
+  },
+  "SMICSTOCK_USDT": {
+   "us_share": 0.04495503436045495,
+   "asia_share": 0.6853967502553036,
+   "us": false
+  },
+  "SMRSTOCK_USDT": {
+   "us_share": 0.6438651945091203,
+   "asia_share": 0.05225298588817582,
+   "us": true
+  },
+  "SNDKSTOCK_USDT": {
+   "us_share": 0.4977748423795094,
+   "asia_share": 0.17789796419428638,
+   "us": true
+  },
+  "SNOWSTOCK_USDT": {
+   "us_share": 0.4788806470814895,
+   "asia_share": 0.14962918282059962,
+   "us": true
+  },
+  "SNPSSTOCK_USDT": {
+   "us_share": 0.5988509645511315,
+   "asia_share": 0.0025452351780381856,
+   "us": true
+  },
+  "SOFISTOCK_USDT": {
+   "us_share": 0.5769595799604295,
+   "asia_share": 0.11204292983254228,
+   "us": true
+  },
+  "SOFTBANKSTOCK_USDT": {
+   "us_share": 0.09115012666562528,
+   "asia_share": 0.6687757100041791,
+   "us": false
+  },
+  "SONYSTOCK_USDT": {
+   "us_share": 0.22462037112694935,
+   "asia_share": 0.31952138499093335,
+   "us": false
+  },
+  "SPCXSTOCK_USDT": {
+   "us_share": 0.3295413366332348,
+   "asia_share": 0.18371151450738507,
+   "us": true
+  },
+  "SPOTSTOCK_USDT": {
+   "us_share": 0.5160565064078725,
+   "asia_share": 0.14766900287146045,
+   "us": true
+  },
+  "STRCSTOCK_USDT": {
+   "us_share": 0.46391479737344476,
+   "asia_share": 0.1602667119443567,
+   "us": true
+  },
+  "STXSTOCK_USDT": {
+   "us_share": 0.48641106555024477,
+   "asia_share": 0.16134179471733262,
+   "us": true
+  },
+  "SUMIELECSTOCK_USDT": {
+   "us_share": 0.13608955109356932,
+   "asia_share": 0.70709509729031,
+   "us": false
+  },
+  "SWKSSTOCK_USDT": {
+   "us_share": 0.7812078285539263,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TAIYOYUDENSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8953990676318611,
+   "us": false
+  },
+  "TAKEDASTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.8907343930424189,
+   "us": false
+  },
+  "TEAMSTOCK_USDT": {
+   "us_share": 0.5305785936887851,
+   "asia_share": 0.07619478484822874,
+   "us": true
+  },
+  "TEMSTOCK_USDT": {
+   "us_share": 0.6066403894734385,
+   "asia_share": 0.13003554987747898,
+   "us": true
+  },
+  "TENCENTSTOCK_USDT": {
+   "us_share": 0.1538130523472392,
+   "asia_share": 0.4793371477843727,
+   "us": false
+  },
+  "TERSTOCK_USDT": {
+   "us_share": 0.47177784925730304,
+   "asia_share": 0.15621335093714744,
+   "us": true
+  },
+  "TESLA_USDT": {
+   "us_share": 1.0,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TGTSTOCK_USDT": {
+   "us_share": 0.7604901661911099,
+   "asia_share": 0.003464140131844097,
+   "us": true
+  },
+  "TJXSTOCK_USDT": {
+   "us_share": 0.6897799378933334,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TLNSTOCK_USDT": {
+   "us_share": 0.6051855598201973,
+   "asia_share": 0.0005607796203451088,
+   "us": true
+  },
+  "TMOSTOCK_USDT": {
+   "us_share": 0.8018862778477358,
+   "asia_share": 0.0002930174738673764,
+   "us": true
+  },
+  "TMUSSTOCK_USDT": {
+   "us_share": 0.6159221295644424,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TOKYOELSTOCK_USDT": {
+   "us_share": 0.06313435550367869,
+   "asia_share": 0.801291611430031,
+   "us": false
+  },
+  "TOYOTASTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.926646365003164,
+   "us": false
+  },
+  "TSEMSTOCK_USDT": {
+   "us_share": 0.49824584401008504,
+   "asia_share": 0.13749832850137791,
+   "us": true
+  },
+  "TSMCSTOCK_USDT": {
+   "us_share": 0.023064203516304126,
+   "asia_share": 0.9213390782662443,
+   "us": false
+  },
+  "TSMSTOCK_USDT": {
+   "us_share": 0.3891752204319693,
+   "asia_share": 0.23027631958259817,
+   "us": true
+  },
+  "TSTOCK_USDT": {
+   "us_share": 0.5579978298247082,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TTWOSTOCK_USDT": {
+   "us_share": 0.4427533260684577,
+   "asia_share": 0.10011857435301214,
+   "us": true
+  },
+  "TUCSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "TWLOSTOCK_USDT": {
+   "us_share": 0.35324387805954893,
+   "asia_share": 0.12100384637978621,
+   "us": true
+  },
+  "TWSTSTOCK_USDT": {
+   "us_share": 0.6949327164552775,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "TXNSTOCK_USDT": {
+   "us_share": 0.5139520406683294,
+   "asia_share": 0.054828799106130914,
+   "us": true
+  },
+  "UBERSTOCK_USDT": {
+   "us_share": 0.5871861488459625,
+   "asia_share": 0.11019435015706944,
+   "us": true
+  },
+  "UMCSTOCK_USDT": {
+   "us_share": 0.028092754973399983,
+   "asia_share": 0.9371510468807572,
+   "us": false
+  },
+  "UNHSTOCK_USDT": {
+   "us_share": 0.6328291023020376,
+   "asia_share": 0.1364214613113191,
+   "us": true
+  },
+  "UNIMICRONSTOCK_USDT": {
+   "us_share": 0.0007419229357450226,
+   "asia_share": 0.9985161541285099,
+   "us": false
+  },
+  "UNPSTOCK_USDT": {
+   "us_share": 0.8912878280746102,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "URISTOCK_USDT": {
+   "us_share": 0.8409198932428579,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "USARSTOCK_USDT": {
+   "us_share": 0.5057691559098414,
+   "asia_share": 0.1327773442935848,
+   "us": true
+  },
+  "USDESTOCK_USDT": {
+   "us_share": 0.4298718944151769,
+   "asia_share": 0.21798803922868676,
+   "us": true
+  },
+  "USTOCK_USDT": {
+   "us_share": 0.6293679617472681,
+   "asia_share": 0.005566602251506609,
+   "us": true
+  },
+  "VEEVSTOCK_USDT": {
+   "us_share": 0.6049346754226566,
+   "asia_share": 0.005911222642058,
+   "us": true
+  },
+  "VICRSTOCK_USDT": {
+   "us_share": 0.504774490834184,
+   "asia_share": 0.07238746664416015,
+   "us": true
+  },
+  "VKTXSTOCK_USDT": {
+   "us_share": 0.6405333089125869,
+   "asia_share": 0.07975998268600078,
+   "us": true
+  },
+  "VLOSTOCK_USDT": {
+   "us_share": 0.6137053590703975,
+   "asia_share": 0.02551607353720405,
+   "us": true
+  },
+  "VRTSTOCK_USDT": {
+   "us_share": 0.4766919600518807,
+   "asia_share": 0.16448439403827259,
+   "us": true
+  },
+  "VRTXSTOCK_USDT": {
+   "us_share": 0.48815680592793587,
+   "asia_share": 0.008048449520984166,
+   "us": true
+  },
+  "VSTOCK_USDT": {
+   "us_share": 0.4749539013619238,
+   "asia_share": 0.1739850816467959,
+   "us": true
+  },
+  "VSTSTOCK_USDT": {
+   "us_share": 0.5300965558264042,
+   "asia_share": 0.16436257286895103,
+   "us": true
+  },
+  "VZSTOCK_USDT": {
+   "us_share": 0.5809263500800634,
+   "asia_share": 0.011531075014596093,
+   "us": true
+  },
+  "WDAYSTOCK_USDT": {
+   "us_share": 0.5667753662570978,
+   "asia_share": 0.004265414438964912,
+   "us": true
+  },
+  "WDCSTOCK_USDT": {
+   "us_share": 0.5290561573168187,
+   "asia_share": 0.16720174494924475,
+   "us": true
+  },
+  "WENSTOCK_USDT": {
+   "us_share": 0.43041056753173634,
+   "asia_share": 0.11456650316744307,
+   "us": true
+  },
+  "WFCSTOCK_USDT": {
+   "us_share": 0.6930038145248232,
+   "asia_share": 0.0077785171135338815,
+   "us": true
+  },
+  "WINBONDSTOCK_USDT": {
+   "us_share": 0.02982806556815508,
+   "asia_share": 0.9133371286803769,
+   "us": false
+  },
+  "WMBSTOCK_USDT": {
+   "us_share": 0.650246162592252,
+   "asia_share": 0.0,
+   "us": true
+  },
+  "WMSTOCK_USDT": {
+   "us_share": 0.33055558807319757,
+   "asia_share": 0.0026244345091989106,
+   "us": true
+  },
+  "WMTSTOCK_USDT": {
+   "us_share": 0.5755218979658654,
+   "asia_share": 0.14227507489786342,
+   "us": true
+  },
+  "WUXIBIOSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 0.7737407513328173,
+   "us": false
+  },
+  "XIAOMISTOCK_USDT": {
+   "us_share": 0.04223161794279607,
+   "asia_share": 0.6915064552400223,
+   "us": false
+  },
+  "XOMSTOCK_USDT": {
+   "us_share": 0.4304742723873327,
+   "asia_share": 0.22603166457786494,
+   "us": true
+  },
+  "XPSTOCK_USDT": {
+   "us_share": 0.427838563436026,
+   "asia_share": 0.09371299403903545,
+   "us": true
+  },
+  "YAGEOSTOCK_USDT": {
+   "us_share": 0.005743984523398357,
+   "asia_share": 0.981567366335249,
+   "us": false
+  },
+  "ZHENDINGSTOCK_USDT": {
+   "us_share": 0.0,
+   "asia_share": 1.0,
+   "us": false
+  },
+  "ZHIPUSTOCK_USDT": {
+   "us_share": 0.15504562760436194,
+   "asia_share": 0.4758107045239575,
+   "us": false
+  },
+  "ZHONGJISTOCK_USDT": {
+   "us_share": 0.16089018613695832,
+   "asia_share": 0.47986190110306776,
+   "us": false
+  },
+  "ZMSTOCK_USDT": {
+   "us_share": 0.33870380754384927,
+   "asia_share": 0.2572317340690317,
+   "us": true
+  },
+  "ZSSTOCK_USDT": {
+   "us_share": 0.5416140448479888,
+   "asia_share": 0.06789761035551174,
+   "us": true
+  }
+ }
+}

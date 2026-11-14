@@ -1,0 +1,123 @@
+{
+"folder": "data/ltroll",
+"source": "mainnet.zklighter.elliot.ai/api/v1 (candles, fundings) + query1.finance.yahoo.com chart (NG=F, CL=F, BZ=F, HG=F 60m; ^IRX 1d); public, no key",
+"script": "scripts/fetch_ltroll.py",
+"recorded_utc": "2026-11-12T14:12:15Z",
+"excluded": [],
+"files": 19,
+"bytes": 3439808,
+"combined_sha256": "d795fc5fa84124a02f8031133753d32a62df1d5b02dcbfffbae374637c4631d2",
+"subfolders": {
+"lighter": {
+"files": 8,
+"bytes": 1117022
+},
+".": {
+"files": 1,
+"bytes": 2339
+},
+"yahoo": {
+"files": 10,
+"bytes": 2320447
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "lighter/BRENTOIL_1h.csv",
+"bytes": 149988,
+"sha256": "c5e12a450d96eb05cf8a8effebe52b2e2f6c88eb9f81bf6b0bc18127bc2bc7eb"
+},
+{
+"path": "lighter/BRENTOIL_funding.csv",
+"bytes": 111581,
+"sha256": "5c3a315cfb3a5007921f5a0297745daac15e96bb1e0adcb46700e21a50b9e20f"
+},
+{
+"path": "lighter/NATGAS_1h.csv",
+"bytes": 140969,
+"sha256": "6f122e72b90bd92ca4a75ad5a5bfe6c1e2fa7514a7016c8a708726b068358b1a"
+},
+{
+"path": "lighter/NATGAS_funding.csv",
+"bytes": 105902,
+"sha256": "5039c624d183ccc305df0e185332bfe65bc75c2a4a60b003eabee2dec1606ed7"
+},
+{
+"path": "lighter/WTI_1h.csv",
+"bytes": 176535,
+"sha256": "98dcbfa05ab52a3b4e2bec4f0d0b3bd8790591388c3b771099f5201cb6613600"
+},
+{
+"path": "lighter/WTI_funding.csv",
+"bytes": 132752,
+"sha256": "b35e5ceb502b91c77a012e6ab05dd0d1532a0ff803af39576b191f19c99cf9ed"
+},
+{
+"path": "lighter/XCU_1h.csv",
+"bytes": 168003,
+"sha256": "a53d1c0959d13f65588d4b1ff8f1d70175efe746561767f5944ad1a29f017fd5"
+},
+{
+"path": "lighter/XCU_funding.csv",
+"bytes": 131292,
+"sha256": "3edb46244b45071f298708c16e3019ad667e35e59fe0efe24d954a8220db3c07"
+},
+{
+"path": "manifest.json",
+"bytes": 2339,
+"sha256": "22c16243e27d529b3f2f248ea8b421a21bc4d0fc2e8ef29eb49562b1a0730bfc"
+},
+{
+"path": "yahoo/BZ_F_60m.csv",
+"bytes": 135640,
+"sha256": "6b000453a526d43b3e0d351b57c407c6f943101618c81665ea848e9bd9b6a6bc"
+},
+{
+"path": "yahoo/BZ_F_60m.json",
+"bytes": 429101,
+"sha256": "e4fc5a3b5d31de186ae641bceb5fad4720dda730b83cf1ca3754d3981b96b7e2"
+},
+{
+"path": "yahoo/CL_F_60m.csv",
+"bytes": 135795,
+"sha256": "2395f1eb7233cf01c6bdd7e2ef90b9d48b0802fe972d24aeab0a2f8d7b5ff1fd"
+},
+{
+"path": "yahoo/CL_F_60m.json",
+"bytes": 431508,
+"sha256": "431502bccfcafa5bf770deecfdc92512544dcde9a1d644ef670d712c802a9234"
+},
+{
+"path": "yahoo/HG_F_60m.csv",
+"bytes": 137496,
+"sha256": "2d561162b5e8b5c0c0ef475c7c6768465682f23abcbe2bf84ed6d8819a807bf8"
+},
+{
+"path": "yahoo/HG_F_60m.json",
+"bytes": 436391,
+"sha256": "e70e45203903ad35f161d33e449e896c2d263478495f4656d6d251da89794d40"
+},
+{
+"path": "yahoo/IRX.csv",
+"bytes": 5585,
+"sha256": "651d247cfc7f7770b10f074a7baf69cf929f24c3d3b7d3795a4b07045970b02f"
+},
+{
+"path": "yahoo/IRX.json",
+"bytes": 21079,
+"sha256": "6572ffd5b9ea5a81727af11ccff7c5807f093fc35c15c5acfb2fa1e2571c1ac0"
+},
+{
+"path": "yahoo/NG_F_60m.csv",
+"bytes": 140252,
+"sha256": "427f63d7cbbe00a591bcb958275fa197676df828ff9fbb554cd43db908c7f225"
+},
+{
+"path": "yahoo/NG_F_60m.json",
+"bytes": 447600,
+"sha256": "985f3084eab6090aad0b9babdc583858c8d64a38bcf007748f2737ac95738d35"
+}
+]
+}

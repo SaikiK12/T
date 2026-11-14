@@ -1,0 +1,51 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "collect_cycle_hours": 8,
+  "funding_fair_price": 0.07936,
+  "funding_index_price": 0.07939,
+  "funding_rate_ceiling_fraction": 0.03,
+  "funding_rate_floor_fraction": -0.03,
+  "funding_rate_fraction": 2.2e-05,
+  "funding_system_timestamp_ms": 1792499025826,
+  "next_settle_time_ms": 1792512000000,
+  "request_metadata": [
+    {
+      "body_truncated": false,
+      "end_ms": 1792499026089,
+      "end_utc": "2026-10-20T12:23:46.089603Z",
+      "http_status": 200,
+      "kind": "funding",
+      "raw_file": "DOGE_USDT_funding.raw",
+      "retained_bytes": 236,
+      "sha256": "478556d45bf277c2f1fded5f152c9ff0fd330092356629ef9936b67809b1da50",
+      "start_ms": 1792499025468,
+      "start_utc": "2026-10-20T12:23:45.468141Z",
+      "symbol": "DOGE_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/funding_rate/DOGE_USDT"
+    },
+    {
+      "body_truncated": false,
+      "end_ms": 1792499027519,
+      "end_utc": "2026-10-20T12:23:47.519602Z",
+      "http_status": 200,
+      "kind": "ticker",
+      "raw_file": "DOGE_USDT_ticker.raw",
+      "retained_bytes": 577,
+      "sha256": "8cb94274feaf7dfb9e673a76b23a07c78007ba6d1ca52096025dd7f2055f9b43",
+      "start_ms": 1792499026091,
+      "start_utc": "2026-10-20T12:23:46.091016Z",
+      "symbol": "DOGE_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/ticker?symbol=DOGE_USDT"
+    }
+  ],
+  "symbol": "DOGE_USDT",
+  "ticker_best_ask": 0.07937,
+  "ticker_best_bid": 0.07936,
+  "ticker_fair_price": 0.07936,
+  "ticker_index_price": 0.07939,
+  "ticker_last_price": 0.07934,
+  "ticker_trade_age_ms_at_capture_end": 1593,
+  "ticker_trade_timestamp_ms": 1792499025926
+}

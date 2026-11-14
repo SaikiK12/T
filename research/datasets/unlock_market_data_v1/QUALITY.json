@@ -1,0 +1,36 @@
+{
+ "acquisition_end_utc": "2026-10-20T14:50:40.246885+00:00",
+ "acquisition_start_utc": "2026-10-20T14:39:43.227710+00:00",
+ "archives": {
+  "fundingRate": 3058,
+  "markPriceKlines": 3125
+ },
+ "bundle": {
+  "auxiliary_manifest_sha256": "5b71f3e4f34cee4b5b186880737710937353aff5fc48b20028518d6024913cbd",
+  "bytes": 15464492,
+  "file": "market-data.tar.gz",
+  "files": 18914,
+  "meaning": "Public acquisition/schema validation only; no return, funding PnL or liquidation computation",
+  "price_manifest_sha256": "707e413d5a8ae5f07360299dfd8ddd9d5a4790c97af063e601426d73e94f11c9",
+  "protocol_sha256": "e9614d37d7b9ccb1830af55b973a6808fc3991d8df6a2555d20867f950bc7dd7",
+  "sha256": "c55dd46019719db709e1a887626b418fb9f9c75ccc15a227f384c0c070a71998",
+  "unpacked_payload_bytes": 29047854
+ },
+ "interpretation": "All finite publisher objects validated; record counts and gaps do not prove complete settlement schedules or executable trading PnL.",
+ "series": {
+  "fundingRate": {
+   "gaps_over_one_day": 1,
+   "rows": 427752,
+   "series": 98,
+   "series_with_gaps_over_one_day": 1
+  },
+  "markPriceKlines": {
+   "gaps_over_one_day": 146,
+   "rows": 93606,
+   "series": 98,
+   "series_with_gaps_over_one_day": 98
+  }
+ },
+ "source_bytes": 11395410,
+ "status": "COMPLETE"
+}

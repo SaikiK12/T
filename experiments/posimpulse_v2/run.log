@@ -1,0 +1,35 @@
+06:51:05 prereg sha 5788743ce613
+06:51:18 level book K 6.000
+06:51:21 imp24/H K 12.990
+06:51:23 imp24/H discovery: +10.2 bp/day t +2.39 resid +10.2 t +2.40 PASS
+06:51:25 imp24/H validation: -0.7 bp/day t -0.22 resid -0.8 t -0.27 stop
+06:51:30 imp72/H K 12.984
+06:51:32 imp72/H discovery: +10.6 bp/day t +1.62 resid +8.2 t +1.26 PASS
+06:51:35 imp72/H validation: +6.6 bp/day t +1.33 resid +4.8 t +0.97 stop
+06:51:36 
+   book     window  cmult      K  gross_bp_day  cost_bp_day  days  total  mean_bp_day  t_nw10  sharpe  max_dd  corr_ref  beta_ref  resid_bp_day  resid_t_nw10  trimmed_bp_day
+imp24/H  discovery    1.0 12.990        14.333        4.178   365  0.371       10.155   2.393   2.795   0.075    -0.003    -0.001        10.176         2.397           8.593
+imp24/H  discovery    2.0 12.990        14.333        8.355   365  0.218        5.978   1.408   1.644   0.094    -0.002    -0.001         5.995         1.412             NaN
+imp24/H  discovery    3.0 12.990        14.333       12.533   365  0.066        1.800   0.424   0.495   0.153    -0.002    -0.001         1.815         0.427             NaN
+imp24/H validation    1.0 12.990         3.485        4.182   547 -0.038       -0.698  -0.223  -0.170   0.135     0.031     0.014        -0.848        -0.272          -0.712
+imp24/H validation    2.0 12.990         3.485        8.364   547 -0.267       -4.880  -1.562  -1.191   0.320     0.031     0.014        -5.031        -1.613             NaN
+imp24/H validation    3.0 12.990         3.485       12.547   547 -0.496       -9.062  -2.901  -2.212   0.530     0.031     0.014        -9.214        -2.955             NaN
+imp72/H  discovery    1.0 12.984        15.070        4.422   365  0.389       10.649   1.617   1.716   0.130     0.200     0.161         8.204         1.263           7.856
+imp72/H  discovery    2.0 12.984        15.070        8.843   365  0.227        6.227   0.944   1.003   0.161     0.200     0.161         3.783         0.582             NaN
+imp72/H  discovery    3.0 12.984        15.070       13.265   365  0.066        1.806   0.274   0.291   0.219     0.200     0.161        -0.639        -0.098             NaN
+imp72/H validation    1.0 12.984        11.097        4.472   547  0.362        6.625   1.330   0.967   0.142     0.224     0.169         4.783         0.971           5.114
+imp72/H validation    2.0 12.984        11.097        8.944   547  0.118        2.153   0.432   0.314   0.192     0.224     0.169         0.311         0.063             NaN
+imp72/H validation    3.0 12.984        11.097       13.416   547 -0.127       -2.319  -0.465  -0.338   0.359     0.224     0.169        -4.161        -0.843             NaN
+06:51:36 {
+ "stages": {
+  "imp24/H": {
+   "reached": "validation",
+   "passed": false
+  },
+  "imp72/H": {
+   "reached": "validation",
+   "passed": false
+  }
+ },
+ "validation_passers": []
+}

@@ -1,0 +1,42 @@
+# R288 xfund_lt_v1: R275's best book (gate+hyperliquid L14d th5% K20) replicated, unchanged, on venue sets that pair
+# Lighter (0/0 fees on its Standard account) with each venue the lab holds. Frozen with PREREG.md; never edited
+# afterwards. Costs are per leg at 1x / 2x / 3x: a two-venue book trades one leg on each venue, so the engine's uniform
+# cost per leg is the mean of 7 bp (R275's leg) and 4 bp (Lighter's $10k median, docs/VENUE_STRUCTURE.md).
+name = "xfund_lt_v1"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/xfund_lt_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/open/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/open/funding_applies", bar_h = 1 },
+  { name = "hyperliquid", prices = "hyperliquid/candles_1d", vol = "volume", funding = "hyperliquid/funding", bar_h = 24 },
+  { name = "mexc", prices = "mexc_hist/klines_1h", vol = "vol", funding = "mexc_hist/funding", bar_h = 1 },
+  { name = "kucoin", prices = "kucoin_hist/open/candles_1d", vol = "volume", funding = "kucoin_hist/open/funding", bar_h = 24 },
+  { name = "dydx", prices = "dydx_hist/open/candles_1h", vol = "volume", funding = "dydx_hist/open/funding", bar_h = 1 },
+  { name = "lighter", prices = "lighter_hist/open/candles_1h", vol = "volume", funding = "lighter_hist/open/funding", bar_h = 1 },
+]
+sets = [
+  ["binance", "lighter"],
+  ["gate", "lighter"],
+  ["hyperliquid", "lighter"],
+  ["mexc", "lighter"],
+  ["kucoin", "lighter"],
+  ["dydx", "lighter"],
+]
+lookbacks = [14]
+thresholds = [0.05]
+slots = [20]
+costs = [0.00055, 0.0011, 0.00165]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
+block_days = 10
+reps = 2000
+seed = 288
+alpha = 0.05
+recent_from = "2025-01-01"
+trim = 0.01
+nw_lags = 10
+keep_daily = 6
+hurdle_ann_pct = 4.13
+out = "experiments/xfund_lt_v1/results"

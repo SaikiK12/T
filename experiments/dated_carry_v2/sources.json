@@ -1,0 +1,20 @@
+{
+  "canonical_method": "M244",
+  "existing_alias": "YT26-04-DATED-CASH-CARRY",
+  "missing_mechanics_unchanged": [
+    "deployed reciprocal payoff and fee serialization/rounding",
+    "actual owner fees/assets/permissions",
+    "actual spot units and lot/tick increment",
+    "cross-venue collateral availability/transfer/network costs",
+    "source matching age/fill probability",
+    "actual delivery TWAP and subsequent executable spot USDT exit",
+    "margin/liquidation/insurance/socialized-loss and counterparty risk",
+    "prospective strategy protocol/on-time evidence"
+  ],
+  "new_source_methods": 0,
+  "new_static_market_history_account_requests": 0,
+  "parent_sha256": "9e67cc5c0427de05b7835ce8574949129e6a63ec617cb794b6c716cb1f29a3a8",
+  "parent_source_manifest": "experiments/dated_carry_v1/sources.json",
+  "registry_id": "R328",
+  "scope": "Exact-ratio protocol bridge on SAME7currentresponses/2pairs after originalR327 driver failed at firstterminalratio. All46receivedsource scopes/errors/versions retained in parent; no source/data reacquisition."
+}

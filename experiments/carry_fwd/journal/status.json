@@ -1,0 +1,171 @@
+{
+ "last_scored_hour": "2026-11-14T15:00:00+00:00",
+ "days_ticketed": 44,
+ "BIN": {
+  "coverage": {
+   "symbols": 72,
+   "with_spot_pair": 35
+  },
+  "held_now": [],
+  "market_mean_apr_now": -0.1881363758771044,
+  "top_apr_now": [
+   {
+    "symbol": "AGTUSDT",
+    "apr": 0.663365594870508,
+    "spot": false
+   },
+   {
+    "symbol": "JCTUSDT",
+    "apr": 0.4598793179926967,
+    "spot": false
+   },
+   {
+    "symbol": "NVDAUSDT",
+    "apr": 0.2592960003191062,
+    "spot": false
+   },
+   {
+    "symbol": "NBISUSDT",
+    "apr": 0.19817188616192047,
+    "spot": false
+   },
+   {
+    "symbol": "SNXXUSDT",
+    "apr": 0.12561718484600232,
+    "spot": false
+   }
+  ],
+  "replay": {
+   "days": 19,
+   "days_invested": 0,
+   "total": 0.0,
+   "total_2x": 0.0,
+   "total_3x": 0.0,
+   "total_spot5": 0.0,
+   "total_r191_timing": 0.0,
+   "funding": 0.0,
+   "basis": 0.0,
+   "cost": 0.0,
+   "avg_open": 0.0,
+   "go_real_invested": null
+  },
+  "ontime": {
+   "days": 25,
+   "days_invested": 0,
+   "total": 0.0,
+   "total_2x": 0.0,
+   "total_3x": 0.0,
+   "total_spot5": 0.0,
+   "total_r191_timing": 0.0,
+   "funding": 0.0,
+   "basis": 0.0,
+   "cost": 0.0,
+   "avg_open": 0.0,
+   "go_real_invested": null
+  }
+ },
+ "MEXC": {
+  "coverage": {
+   "symbols": 72,
+   "with_spot_pair": 42,
+   "mapped": 43,
+   "spot_taker_mean": 0.0005809523809523809
+  },
+  "held_now": [
+   {
+    "symbol": "AGTUSDT",
+    "apr": 0.6559050007369176
+   },
+   {
+    "symbol": "JCTUSDT",
+    "apr": 0.45929166280984646
+   }
+  ],
+  "market_mean_apr_now": -0.4147140587948767,
+  "top_apr_now": [
+   {
+    "symbol": "AGTUSDT",
+    "apr": 0.6559050007369176,
+    "spot": true
+   },
+   {
+    "symbol": "JCTUSDT",
+    "apr": 0.45929166280984646,
+    "spot": true
+   },
+   {
+    "symbol": "QUSDT",
+    "apr": 0.10949999723379733,
+    "spot": true
+   },
+   {
+    "symbol": "NEARUSDT",
+    "apr": 0.10852666445619738,
+    "spot": true
+   },
+   {
+    "symbol": "ZECUSDT",
+    "apr": 0.08954666644058307,
+    "spot": true
+   }
+  ],
+  "replay": {
+   "days": 19,
+   "days_invested": 19,
+   "total": -0.00014989025682154414,
+   "total_2x": -0.0012298902446956105,
+   "total_3x": -0.0023098902325697102,
+   "total_spot5": 0.00015010974317833386,
+   "total_r191_timing": 0.00014379374891581014,
+   "funding": 0.0010545999921303282,
+   "basis": -0.00012449026107788077,
+   "cost": 0.001079999987874,
+   "avg_open": 1.348684210526316,
+   "go_real_invested": {
+    "n": 19,
+    "mean": -7.888960885344428e-06,
+    "hit": 0.5789473684210527,
+    "worst": -0.0004200810205977,
+    "invalid_n": 0,
+    "n_clusters": null,
+    "checks": {
+     "finite_returns": true,
+     "enough_scored": false,
+     "mean_positive": false,
+     "hit_rate": true,
+     "no_tail_event": true
+    },
+    "pass": false
+   }
+  },
+  "ontime": {
+   "days": 25,
+   "days_invested": 17,
+   "total": 0.0029334333642113933,
+   "total_2x": 0.0016734333783585175,
+   "total_3x": 0.00041343339250530164,
+   "total_spot5": 0.003283433364211353,
+   "total_r191_timing": 0.0036734386464163894,
+   "funding": 0.0037105999645966935,
+   "basis": 0.0004828333854672664,
+   "cost": 0.0012599999858529999,
+   "avg_open": 1.1849999999999998,
+   "go_real_invested": {
+    "n": 17,
+    "mean": 0.00017255490377714077,
+    "hit": 0.7058823529411765,
+    "worst": -0.0010449266377487,
+    "invalid_n": 0,
+    "n_clusters": null,
+    "checks": {
+     "finite_returns": true,
+     "enough_scored": false,
+     "mean_positive": true,
+     "hit_rate": true,
+     "no_tail_event": true
+    },
+    "pass": false
+   }
+  }
+ }
+}

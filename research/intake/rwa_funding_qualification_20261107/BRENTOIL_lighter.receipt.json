@@ -1,0 +1,38 @@
+{
+  "name": "BRENTOIL_lighter",
+  "url": "https://mainnet.zklighter.elliot.ai/api/v1/fundings?market_id=159&resolution=1h&start_timestamp=1792800000&end_timestamp=1794009600&count_back=0",
+  "organization": "Lighter",
+  "symbol": "BRENTOIL",
+  "publication_date": "undated public historical API",
+  "started_utc": "2026-11-07T18:23:52.204379+00:00",
+  "scope": "schema/identity/time counts only; no rate summary or price/PnL",
+  "user_agent": "Python urllib default",
+  "redirects": false,
+  "auth": false,
+  "cap": 65536,
+  "counts_only": {
+    "rows": 335,
+    "unique_timestamps": 335,
+    "oldest": 1792803600,
+    "newest": 1794006000,
+    "envelope_fields": [
+      "code",
+      "fundings",
+      "resolution"
+    ],
+    "row_fields": [
+      "direction",
+      "rate",
+      "timestamp",
+      "value"
+    ]
+  },
+  "status": 200,
+  "received_utc": "2026-11-07T18:23:52.756793+00:00",
+  "bytes_read": 27292,
+  "charged_bytes": 27292,
+  "response_complete": true,
+  "sha256": "0a9ccb6b7c79155588d0ce244996b4cdc499fd6a92da9f1d98053dbac4d1c9ed",
+  "body": "BRENTOIL_lighter.body.gz",
+  "error": null
+}

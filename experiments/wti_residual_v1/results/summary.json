@@ -1,0 +1,188 @@
+{
+ "verdict": "NULL",
+ "primary": {
+  "instrument": "WTI",
+  "scope": "pooled",
+  "k": 2.0,
+  "hold": 60,
+  "stratum": "open"
+ },
+ "primary_cell": {
+  "instrument": "WTI",
+  "scope": "pooled",
+  "k": 2.0,
+  "hold": 60,
+  "stratum": "open",
+  "n": 468,
+  "blocks": 55,
+  "gross": -0.18791868251602326,
+  "cost": 0.974600842064932,
+  "lo_1x": -1.83985269060594,
+  "hi_1x": -0.5200258248099637,
+  "p_le0_1x": 0.9998,
+  "mde80_1x": 0.9356550987718816,
+  "thin": 0.7905982905982906,
+  "net_1x": -1.1625195245809554,
+  "net_2x": -2.1371203666458873,
+  "net_3x": -3.111721208710819
+ },
+ "trials": 228,
+ "plumbing": {
+  "WTI": {
+   "grid_s": 184541,
+   "closed_s": 8868,
+   "venues": {
+    "lighter": {
+     "valid_s": 169589,
+     "median_spread_bp": 0.8820459551667215,
+     "triggers": {
+      "2.0": 8196,
+      "3.0": 7843
+     }
+    },
+    "hl": {
+     "valid_s": 169816,
+     "median_spread_bp": 0.9726207273130881,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    },
+    "kraken": {
+     "valid_s": 165008,
+     "median_spread_bp": 4.09077535874256,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    },
+    "binance": {
+     "valid_s": 169775,
+     "median_spread_bp": 0.9817878364373399,
+     "triggers": {
+      "2.0": 4,
+      "3.0": 0
+     }
+    }
+   }
+  },
+  "BRENT": {
+   "grid_s": 184541,
+   "closed_s": 8868,
+   "venues": {
+    "lighter": {
+     "valid_s": 169589,
+     "median_spread_bp": 1.7927572654675037,
+     "triggers": {
+      "2.0": 15471,
+      "3.0": 10948
+     }
+    },
+    "hl": {
+     "valid_s": 169816,
+     "median_spread_bp": 0.9034647880745209,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    },
+    "kraken": {
+     "valid_s": 165008,
+     "median_spread_bp": 19.952845364406418,
+     "triggers": {
+      "2.0": 508,
+      "3.0": 0
+     }
+    },
+    "binance": {
+     "valid_s": 169775,
+     "median_spread_bp": 0.9038730968325474,
+     "triggers": {
+      "2.0": 63,
+      "3.0": 0
+     }
+    }
+   }
+  },
+  "NATGAS": {
+   "grid_s": 184541,
+   "closed_s": 8868,
+   "venues": {
+    "lighter": {
+     "valid_s": 168722,
+     "median_spread_bp": 4.7923870427382065,
+     "triggers": {
+      "2.0": 12042,
+      "3.0": 7186
+     }
+    },
+    "hl": {
+     "valid_s": 169816,
+     "median_spread_bp": 1.3733198315848043,
+     "triggers": {
+      "2.0": 45,
+      "3.0": 45
+     }
+    },
+    "kraken": {
+     "valid_s": 165008,
+     "median_spread_bp": 12.029766526616298,
+     "triggers": {
+      "2.0": 1571,
+      "3.0": 881
+     }
+    },
+    "binance": {
+     "valid_s": 169775,
+     "median_spread_bp": 3.4193879628781136,
+     "triggers": {
+      "2.0": 47,
+      "3.0": 45
+     }
+    }
+   }
+  },
+  "GOLD": {
+   "grid_s": 171673,
+   "closed_s": 8612,
+   "venues": {
+    "hl": {
+     "valid_s": 159023,
+     "median_spread_bp": 0.24887694280916078,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    },
+    "kraken": {
+     "valid_s": 159023,
+     "median_spread_bp": 3.1569619351133866,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    },
+    "binance": {
+     "valid_s": 159023,
+     "median_spread_bp": 0.02483845688579712,
+     "triggers": {
+      "2.0": 0,
+      "3.0": 0
+     }
+    }
+   }
+  }
+ },
+ "primary_diag": {
+  "n": 468,
+  "by_venue": {
+   "lighter": 465,
+   "binance": 3
+  },
+  "closed_share_median": 0.8462421943682527,
+  "venue_move_median": 0.0,
+  "others_toward_median": 3.386160341518618,
+  "quote_age_median_s": 0.06134200096130371,
+  "quote_age_over_5s": 0.021367521367521368
+ }
+}

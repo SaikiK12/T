@@ -1,0 +1,2842 @@
+[
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "16327118e00891ae9e78591f0d152e4eed10c74776c53992d8f712b0a4e2b212",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "28c865a9a24589fcf613f7c6ce5d8acc4aa36156d4515cddc34e906ab577e66a",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "zero_edge"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "16327118e00891ae9e78591f0d152e4eed10c74776c53992d8f712b0a4e2b212",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "5cba6c7c7e1bf9d1fe7283f0409562134e3bbb134ee530bcc9d3eca13814ba11",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "zero_edge"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "16327118e00891ae9e78591f0d152e4eed10c74776c53992d8f712b0a4e2b212",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "851f4a6ac095b1fd99d2727da5fe39ba55f90b2623ff18e070576df72fc3c634",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "zero_edge"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "-9/25",
+        "conditional_terminal_equity": "249991/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "16327118e00891ae9e78591f0d152e4eed10c74776c53992d8f712b0a4e2b212",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "f560bc5a962e57285e39d885fe72d3907537a08a97f76334570617188b0f39d7",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "zero_edge"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "6/25",
+        "conditional_terminal_equity": "250006/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "3d3c75e4c6ca6f042458d4524d3c96b2ffe6bc97fc386629cc5eec64f23d2145",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312508751/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312521251/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312533751/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "2683ed67b45c198bbae8743ca8d81d1b8bbd15713b75d63c0fba252f6616f5b9",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "persistent_carry"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "3d3c75e4c6ca6f042458d4524d3c96b2ffe6bc97fc386629cc5eec64f23d2145",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "0e8a1b1ad243bcfda6aa56e5f335843948251aedc6bde75aaadee00fe98cf088",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "persistent_carry"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "3d3c75e4c6ca6f042458d4524d3c96b2ffe6bc97fc386629cc5eec64f23d2145",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "abd3587e0b1a3d9c6729e760e83cdfb2af7d2ef89ad729a20598f880f8fb09b7",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "persistent_carry"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "6/25",
+        "conditional_terminal_equity": "250006/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "3d3c75e4c6ca6f042458d4524d3c96b2ffe6bc97fc386629cc5eec64f23d2145",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312508751/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312521251/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312533751/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "7a541952c4fc71346b6c860e3572f6476d999e4ea20320a2c0de8213c2cb7064",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "persistent_carry"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "1/25",
+        "conditional_terminal_equity": "250001/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "c45f51f72ab80f67b0490ee4ac8efdd059483b3b0231bed9cbe7476069d58ada",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312508751/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312521251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "afb016c634611e9db970e2167d0277f0ffd2c32b65cabedc151b50c900441573",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "delayed_closure"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "c45f51f72ab80f67b0490ee4ac8efdd059483b3b0231bed9cbe7476069d58ada",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "76525dbaa6b7d6cac0623a715fc06d0f953f917a75cf84d88f2254fbc21d8a6b",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "delayed_closure"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "c45f51f72ab80f67b0490ee4ac8efdd059483b3b0231bed9cbe7476069d58ada",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "af6f337a4c73e725a530c445933357743162ede94926ebeeed4d8870ca6882b6",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "delayed_closure"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "1/25",
+        "conditional_terminal_equity": "250001/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "c45f51f72ab80f67b0490ee4ac8efdd059483b3b0231bed9cbe7476069d58ada",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312508751/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312521251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "f25d882752a7b50ad3afdce568fbc528e819201ddffb2957425efce32c51a76d",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "delayed_closure"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "59/100",
+        "conditional_terminal_equity": "1000059/100",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "3a8157e501682e04e5fa527e57f67927eed68f6ab38adb774bea5400d843df7b",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312527501/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "78131094/15625"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "156277813/31250"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "d4575f9a85ecaaedfabba33d496e4d4b9f3c26e6284a86d0885a6c8d92d68d6f",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "funding_reversal"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "7/25",
+        "conditional_terminal_equity": "250007/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "3a8157e501682e04e5fa527e57f67927eed68f6ab38adb774bea5400d843df7b",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312527501/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "124994/25",
+            "250019/50"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124990999/25000",
+            "312551251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "1e89a880c4862915fad7e4d4f21f884d29419bb66cec988a7188175b47ced45c",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "funding_reversal"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "3a8157e501682e04e5fa527e57f67927eed68f6ab38adb774bea5400d843df7b",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "363888b114f1fc68d3eeeb244c71f142e62cf85c8f5c9395706c492afcdb695c",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "funding_reversal"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "59/100",
+        "conditional_terminal_equity": "1000059/100",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "3a8157e501682e04e5fa527e57f67927eed68f6ab38adb774bea5400d843df7b",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312527501/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "78131094/15625"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "156277813/31250"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "6c937fe583af268392da5a3f860f7bdf77c04dd474c4c65644119348ea213354",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "funding_reversal"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "1/25",
+        "conditional_terminal_equity": "250001/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "34fcc96e17dee350899ed7bf36df1e5b4ebeb0fd8819d73c1281811e04993040",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": -2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": -2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": -2,
+          "reference_equity": [
+            "125001981/25000",
+            "312496249/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": -2,
+          "reference_equity": [
+            "125006981/25000",
+            "312496249/62500"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "125002019/25000",
+            "312496251/62500"
+          ]
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "125007019/25000",
+            "312496251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "4f5df1c9ea9a1deb7fa42c99a81c0df1501dce3e3fc1509848ac564f16d1697c",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "basis_reversion"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "34fcc96e17dee350899ed7bf36df1e5b4ebeb0fd8819d73c1281811e04993040",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "66aab2d1979e211cc83c2be83ad002a5d4a4b645c801f9128c792cce88ad3855",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "basis_reversion"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "34fcc96e17dee350899ed7bf36df1e5b4ebeb0fd8819d73c1281811e04993040",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "53a83773d5df82b6c47f85fbdc843606548ed4a6da5de25fe924396a3e83e872",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "basis_reversion"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "-9/25",
+        "conditional_terminal_equity": "249991/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "34fcc96e17dee350899ed7bf36df1e5b4ebeb0fd8819d73c1281811e04993040",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "125006999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "125001999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124986999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124991999/25000",
+            "312496251/62500"
+          ]
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312496251/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "b489f4dd39f0d5233026a1266d07f7f6c7c5d45691ad2e980e47a64040bbb676",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "basis_reversion"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "b0270f754b3d9cccb5882b28dea9116b63ef83d9586183534caf8993f7a741c6",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "86ca27331b44eb546e011d11b55cd37b9576e6452c963fa61332f0224d47c9dd",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unbalanced_capital"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "b0270f754b3d9cccb5882b28dea9116b63ef83d9586183534caf8993f7a741c6",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "dca13caccc8c1730e1781d0ca1dd252c5e76ed380ea7b0c8e36b3129c876c253",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unbalanced_capital"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "b0270f754b3d9cccb5882b28dea9116b63ef83d9586183534caf8993f7a741c6",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "0821b21db78b98075f79b7e935e7f36756ae6017d837e2221c9f061103cca84a",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unbalanced_capital"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": null,
+        "conditional_terminal_equity": null,
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": null,
+        "new_prospective_paper_days": 0,
+        "reasons": [
+          "trade_cost_session_or_segregated_risk"
+        ],
+        "state": "INFEASIBLE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "b0270f754b3d9cccb5882b28dea9116b63ef83d9586183534caf8993f7a741c6",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "local_fixed_control_cannot_execute"
+            ],
+            "state": "INFEASIBLE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "10",
+            "9990"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "f899ce661143b5f26a3dd8a32d36efd0e0e74cd7c6f6d06f316a0502ad7154e1",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unbalanced_capital"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": null,
+        "conditional_terminal_equity": null,
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": null,
+        "new_prospective_paper_days": 0,
+        "reasons": [
+          "a_required_candidate_value_is_unknown"
+        ],
+        "state": "UNKNOWN"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "437c85302e622a2c1fcf06b24cdb6872871edc672510c94f78a631df358fb473",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "a_required_candidate_value_is_unknown"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "45867357a8994e74071c71af5cd277b69394119b2d4c5404765a0a6d6ba6a136",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unknown_funding_tail"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": null,
+        "conditional_terminal_equity": null,
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": null,
+        "new_prospective_paper_days": 0,
+        "reasons": [
+          "a_required_candidate_value_is_unknown"
+        ],
+        "state": "UNKNOWN"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "437c85302e622a2c1fcf06b24cdb6872871edc672510c94f78a631df358fb473",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": null
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "a_required_candidate_value_is_unknown"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "acb270ceb302b4e7010f53d22cdb6eb8096cdceb5b0dfde58de5c648d1e7a675",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unknown_funding_tail"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "437c85302e622a2c1fcf06b24cdb6872871edc672510c94f78a631df358fb473",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "b97df6f2781e8406b38a42a2670d09622ba920b1722344cd79aaee07ae216759",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unknown_funding_tail"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": null,
+        "conditional_terminal_equity": null,
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": null,
+        "new_prospective_paper_days": 0,
+        "reasons": [
+          "positive_probability_branch_unknown"
+        ],
+        "state": "UNKNOWN"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "437c85302e622a2c1fcf06b24cdb6872871edc672510c94f78a631df358fb473",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312508751/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312521251/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312533751/62500"
+          ]
+        },
+        "b1s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 2,
+          "reference_equity": null
+        },
+        "b1s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 2,
+          "reference_equity": null
+        },
+        "b1s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "reference_parent_state_unscored"
+            ],
+            "state": "UNKNOWN"
+          },
+          "old_q": 2,
+          "reference_equity": null
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "64f414094483ee022ba35ab0135764eefd8c23c922594080476ec11d0aeceeaa",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "unknown_funding_tail"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "6/25",
+        "conditional_terminal_equity": "250006/25",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "dynamic",
+        "model_action_units": 2,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "dynamic",
+      "model_identity": "4031f3b8b13ba9adab99b3f8108c8e2b508d9a4965f40c9ae8c371c15e5c43fd",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312515001/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312533751/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "124994/25",
+            "125012/25"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "6294492c1bafcd54f98af6940e1e6ce90dff448d6baba10ee586fe4127e84167",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "terminal_session_closed"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "myopic",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "myopic",
+      "model_identity": "4031f3b8b13ba9adab99b3f8108c8e2b508d9a4965f40c9ae8c371c15e5c43fd",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "c037dc0173edbbf5b6c43c90a9ab6fa872b24489d995d8ffb27da3efdcaff0fa",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "terminal_session_closed"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": "0",
+        "conditional_terminal_equity": "10000",
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "cash",
+        "model_action_units": 0,
+        "new_prospective_paper_days": 0,
+        "reasons": [],
+        "state": "VALUE"
+      },
+      "market_admissible": false,
+      "mode": "cash",
+      "model_identity": "4031f3b8b13ba9adab99b3f8108c8e2b508d9a4965f40c9ae8c371c15e5c43fd",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 0,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "d954999dab756f28b0d6ef8bda406de4b7cb670d46c905e0b325067d57c818a2",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "terminal_session_closed"
+  },
+  {
+    "plan": {
+      "assessment": {
+        "actual_order_allowed": false,
+        "calibrated_forecasts_verified": false,
+        "conditional_expected_net": null,
+        "conditional_terminal_equity": null,
+        "cost_multiple": 2,
+        "executable_market_expectancy_verified": false,
+        "input_scope": "invented_scenario_fixture",
+        "mode": "hold_long",
+        "model_action_units": null,
+        "new_prospective_paper_days": 0,
+        "reasons": [
+          "positive_probability_branch_infeasible"
+        ],
+        "state": "INFEASIBLE"
+      },
+      "market_admissible": false,
+      "mode": "hold_long",
+      "model_identity": "4031f3b8b13ba9adab99b3f8108c8e2b508d9a4965f40c9ae8c371c15e5c43fd",
+      "nodes": {
+        "b0s1": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312515001/62500"
+          ]
+        },
+        "b0s2": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312533751/62500"
+          ]
+        },
+        "b0s3": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": null,
+            "reasons": [
+              "terminal_close_or_risk_unavailable"
+            ],
+            "state": "INFEASIBLE"
+          },
+          "old_q": 2,
+          "reference_equity": [
+            "124996999/25000",
+            "312552501/62500"
+          ]
+        },
+        "root": {
+          "decision": {
+            "actual_order_allowed": false,
+            "model_action_units": 2,
+            "reasons": [],
+            "state": "VALUE"
+          },
+          "old_q": 0,
+          "reference_equity": [
+            "5000",
+            "5000"
+          ]
+        }
+      },
+      "planning_cost_multiple": 2,
+      "policy_sha256": "2b72e5f0c353af80a7e93ca6730244ba4b80f0ccf867ea554b6f198265414da0",
+      "scope": "Conditional2x reference-state policy, same node actions at1x/2x/3x; not a validation winner"
+    },
+    "scenario": "terminal_session_closed"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests -t .",
+  "full_eight_scenario_family_executed": false,
+  "log_sha256": "4a7b31a7c444daabd2410efd39994c77317072cabf056941f6bae2655161d11b",
+  "new_hand_fixture_tests": 22,
+  "scope": "Functional hand fixtures before freeze; skipped entries not claimed executed. CLI help checked; full-family replay/audit/reproduction still pending freeze.",
+  "seconds": 187.544,
+  "skip_entries": 2,
+  "success": true,
+  "test_count": 1326
+}

@@ -1,0 +1,18 @@
+# R276 xvfac_v1: cross-venue factor report (qx factors). Frozen with PREREG.md; never edited afterwards.
+name = "xvfac_v1"
+factors = "experiments/xvfac_v1/factors.parquet"
+prices = "klines_1h"
+vol = "volume"
+funding = "fundingRate"
+start = "2021-01-01"
+end = "2026-09-30"
+horizons = [24, 72, 168]
+step_h = 24
+quantiles = 5
+min_names = 30
+cost = 0.0007
+reps = 2000
+seed = 276
+min_block = 7
+alpha = 0.05
+out = "experiments/xvfac_v1/results"

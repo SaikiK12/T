@@ -1,0 +1,143 @@
+{
+  "cached_sources": [
+    {
+      "access": "cached R314 receipt; zero new GETs",
+      "bytes": 400785,
+      "date_modified": "2026-10-18",
+      "read_scope": "Market Stats field prose/schema: estimated current_funding_rate versus last paid funding_rate/funding_timestamp; present index and separate publication timestamp",
+      "sha256": "861d70b16479e9303a42826aece613a06d7ab15d9456566f80e39c8f8ff16c5c",
+      "unread_or_missing_scope": "No full-page diff, SDK/account audit, value-age/cadence SLA, API scaling or settlement asset proof",
+      "url": "https://apidocs.lighter.xyz/docs/websocket-reference"
+    }
+  ],
+  "mechanics_received": [
+    "MEXC stablecoin linear fair-notional cash",
+    "MEXC separate inverse coin-notional cash",
+    "MEXC pair-varying schedule and up-to15-second batch inclusion uncertainty",
+    "Lighter hourly index-notional cash; estimate versus last-settled rate and current versus settlement index",
+    "REST system/publication versus fair-change WS and trade-time-labelled ticker clocks",
+    "Single-trade-conditioned and two-second all-ticker alternatives retained with missing mechanics",
+    "Market active/reduce-only/session fields; empty trading_hours remains unknown"
+  ],
+  "registry_id": "R315",
+  "retained_prior_sources": [
+    "experiments/depth_quotes_v1/sources.json",
+    "experiments/stream_quotes_v1/sources.json"
+  ],
+  "retrieved_utc_date": "2026-10-25",
+  "scope": "Funding/value mechanics, not new alpha or certified settlement cash. Each distinct mechanism is reconciled into the existing intake after this diagnostic.",
+  "sources": [
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 603220,
+      "error": null,
+      "name": "mexc_funding",
+      "read_scope": "Funding sign/notional, pair-varying schedules and up-to15s batch eligibility; guide sections4\u20135.",
+      "sha256": "6d68961cd8c811dae7cd196efe019ee93c631242cc745e7e93b1648f0b30db5f",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Not a historical schedule/account inclusion or fee attestation.",
+      "url": "https://www.mexc.com/support/article/mexc-futures-funding-rate-305432020820705280",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 692349,
+      "error": null,
+      "name": "mexc_calculation",
+      "read_scope": "Funding subsection: linear and inverse notional formula and worked examples.",
+      "sha256": "77bd8ba27b6de216cad226723b13d2117b56ac853e1dc17ddb4b1006308f3d2b",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Other calculation-guide sections not extracted as methods; no account cash observed.",
+      "url": "https://www.mexc.com/support/article/mexc-futures-calculation-guide-312060306409668608",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 6920,
+      "error": null,
+      "name": "lighter_funding",
+      "read_scope": "Hourly index-notional cash/timing; rate-construction context received.",
+      "sha256": "19d8250454f4ac429146dc39e64b174f4e9a5e5afab75a6aa791ca3cc15b889c",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Premium/clamp model not rederived; API rate scale and settlement asset not established.",
+      "url": "https://docs.lighter.xyz/trading/funding",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 23029,
+      "error": null,
+      "name": "mexc_fair_rest",
+      "read_scope": "REST fair response schema, own data.timestamp labelled System timestamp.",
+      "sha256": "784fadbecc082b4cd58799ec6ceae76af625baf638367925b534046cc37c6be4",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "No effective-value-age, cache, clock-accuracy or settlement-value guarantee.",
+      "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-fair-price",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 18374,
+      "error": null,
+      "name": "mexc_ws_index",
+      "read_scope": "WebSocket navigation only.",
+      "sha256": "dcba5bddf0265064401fd41587e8293b01da839230cf29a9658e310ac0b6df54",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Not a full extraction of all WebSocket channels.",
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 35927,
+      "error": null,
+      "name": "mexc_ticker_rest",
+      "read_scope": "REST ticker fields and trade-time timestamp definition.",
+      "sha256": "a6a63adaf138d97cd613680f92bd5238ef8fc5136430cea72fca64dccce30095",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "No idle-heartbeat/effective-value/settlement certification.",
+      "url": "https://www.mexc.com/api-docs/futures/market-endpoints/get-ticker-contract-market-data",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 33940,
+      "error": null,
+      "name": "mexc_ws_tickers",
+      "read_scope": "All-ticker cadence, schema and sample; two-second advertised cadence, trade timestamp.",
+      "sha256": "32eb16741436824693c9a88c833d0364002975c5ce6afbe62b43169e779289d4",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Trade clock retained; sample field omissions unresolved; no new market collection.",
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/tickers",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    },
+    {
+      "access": "ordinary public HTTP200; no redirects/retries or login; raw body kept only in ignored cache",
+      "bytes": 34210,
+      "error": null,
+      "name": "mexc_ws_single_ticker",
+      "read_scope": "Single-ticker one-second trade-conditioned cadence, schema and trade-time clock.",
+      "sha256": "d83bac1d1eb8d8962f583fdfe86cd614f54c14aac1d3c1cfb6c3b150684bd385",
+      "status": 200,
+      "truncated": false,
+      "unread_or_missing_scope": "Not an idle valuation heartbeat; not collected in R315.",
+      "url": "https://www.mexc.com/api-docs/futures/websocket-api/get-a-single-ticker",
+      "version": "unversioned public page; exact response SHA-256 pins this inspection"
+    }
+  ],
+  "static_read_budget": {
+    "actual_body_bytes": 1447969,
+    "attempts": 8,
+    "max_body_bytes": 6291456,
+    "max_gets": 8,
+    "max_seconds": 120,
+    "network_seconds": 5.237
+  }
+}

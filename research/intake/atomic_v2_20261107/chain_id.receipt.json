@@ -1,0 +1,22 @@
+{
+  "url": "https://ethereum-rpc.publicnode.com",
+  "method": "eth_chainId",
+  "params": [],
+  "organization": "PublicNode / Ethereum public chain",
+  "publication_date": "current RPC, undated",
+  "started_utc": "2026-11-07T16:07:08.449659+00:00",
+  "request_body_sha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+  "request_body_bytes": 59,
+  "user_agent": "Python urllib default",
+  "auth": false,
+  "redirects": false,
+  "content_type": "text/plain; charset=UTF-8",
+  "status": 403,
+  "received_utc": "2026-11-07T16:07:08.648797+00:00",
+  "bytes_read": 17,
+  "charged_bytes": 17,
+  "response_complete": true,
+  "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+  "body": "chain_id.body.gz",
+  "error": "ValueError: unavailable source; stop without retry"
+}

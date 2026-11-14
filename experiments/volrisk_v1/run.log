@@ -1,0 +1,43 @@
+06:52:18 prereg sha c4e7a1d3a1fa
+06:52:18 SVXY-CONTANGO discovery net +21.61 bp/day, test +21.61 t +2.39 (2x +21.46), invested 0.95, max dd 0.66 PASS
+06:52:18 SVXY-CONTANGO validation net +15.23 bp/day, test +15.23 t +1.82 (2x +15.05), invested 0.91, max dd 0.45 PASS
+06:52:18 SVXY-CONTANGO holdout net +7.52 bp/day, test +7.52 t +1.70 (2x +7.40), invested 0.93, max dd 0.50 stop
+06:52:18 SVXY-CALM discovery net +7.81 bp/day, test +7.81 t +1.16 (2x +7.50), invested 0.59, max dd 0.82 stop
+06:52:18 VIXREV-QQQ validation net +0.66 bp/day, test -0.02 t -0.05 (2x -0.03), invested 0.02, max dd 0.07 stop
+06:52:18 
+     strategy     window  cmult  days  mean_bp_day  ann_return  ann_vol  sharpe  max_dd  invested  beta  alpha_bh_bp_day  alpha_bh_t  alpha_trimmed_bp_day  beta_spy  test_mean_bp_day  test_t  trimmed_bp_day  worst_day  worst_5d  bh_mean_bp_day  bh_max_dd
+SVXY-CONTANGO  discovery    1.0  1319       21.615       0.545    0.579   0.940   0.662     0.948 0.815            1.390       0.328                 0.214     3.186            21.615   2.387          25.803     -0.201    -0.276          24.825      0.912
+SVXY-CONTANGO  discovery    2.0  1319       21.458       0.541    0.579   0.933   0.664     0.948 0.815            1.234       0.291                 0.076     3.186            21.458   2.367          25.643     -0.201    -0.276          24.825      0.912
+SVXY-CONTANGO  discovery    3.0  1319       21.301       0.537    0.579   0.927   0.667     0.948 0.815            1.078       0.253                -0.061     3.185            21.301   2.347          25.484     -0.201    -0.276          24.825      0.912
+SVXY-CONTANGO validation    1.0   754       15.230       0.384    0.381   1.008   0.454     0.910 0.331           14.063       2.337                14.115     1.715            15.230   1.824          20.871     -0.191    -0.227           3.529      1.617
+SVXY-CONTANGO validation    2.0   754       15.047       0.379    0.381   0.996   0.457     0.910 0.331           13.880       2.301                13.929     1.716            15.047   1.799          20.683     -0.191    -0.227           3.529      1.617
+SVXY-CONTANGO validation    3.0   754       14.864       0.375    0.381   0.984   0.460     0.910 0.331           13.697       2.266                13.744     1.716            14.864   1.774          20.495     -0.191    -0.227           3.529      1.617
+SVXY-CONTANGO    holdout    1.0  1708        7.524       0.190    0.329   0.576   0.498     0.930 0.746            2.437       0.840                 1.129     0.927             7.524   1.705          11.299     -0.215    -0.381           6.816      0.903
+SVXY-CONTANGO    holdout    2.0  1708        7.405       0.187    0.329   0.567   0.502     0.930 0.746            2.318       0.798                 1.019     0.927             7.405   1.675          11.187     -0.215    -0.382           6.816      0.903
+SVXY-CONTANGO    holdout    3.0  1708        7.285       0.184    0.329   0.558   0.507     0.930 0.746            2.199       0.755                 0.910     0.927             7.285   1.644          11.075     -0.216    -0.382           6.816      0.903
+    SVXY-CALM  discovery    1.0  1319        7.813       0.197    0.396   0.498   0.824     0.586 0.381           -1.651      -0.320                -1.050     1.311             7.813   1.163          10.347     -0.172    -0.262          24.825      0.912
+    SVXY-CALM  discovery    2.0  1319        7.497       0.189    0.396   0.477   0.842     0.586 0.381           -1.968      -0.380                -1.373     1.311             7.497   1.113          10.028     -0.172    -0.263          24.825      0.912
+    SVXY-CALM  discovery    3.0  1319        7.181       0.181    0.396   0.457   0.859     0.586 0.381           -2.286      -0.440                -1.696     1.311             7.181   1.063           9.710     -0.172    -0.264          24.825      0.912
+   VIXREV-QQQ validation    1.0  1762        0.658       0.017    0.050   0.331   0.068     0.019 0.089              NaN         NaN                   NaN       NaN            -0.024  -0.053          -0.318        NaN       NaN             NaN        NaN
+   VIXREV-QQQ validation    2.0  1762        0.653       0.016    0.050   0.328   0.068     0.019 0.089              NaN         NaN                   NaN       NaN            -0.029  -0.063          -0.320        NaN       NaN             NaN        NaN
+   VIXREV-QQQ validation    3.0  1762        0.649       0.016    0.050   0.326   0.068     0.019 0.089              NaN         NaN                   NaN       NaN            -0.033  -0.073          -0.322        NaN       NaN             NaN        NaN
+06:52:18 {
+ "stages": {
+  "SVXY-CONTANGO": {
+   "reached": "holdout",
+   "passed": false
+  },
+  "SVXY-CALM": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "VIXREV-QQQ": {
+   "reached": "validation",
+   "passed": false
+  }
+ },
+ "holdout_passers": [],
+ "vixrev_qqq_triggers": {
+  "2013": 11
+ }
+}

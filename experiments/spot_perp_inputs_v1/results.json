@@ -1,0 +1,252 @@
+{
+  "actual_order_allowed": false,
+  "capture": {
+    "actual_order_allowed": false,
+    "anchor": {
+      "mono_ns": 146421015555183,
+      "utc_ns": 1792992481983303042
+    },
+    "budget": {
+      "authorization_verified": false,
+      "baseline": {
+        "body_bytes_upper_bound": 0,
+        "requests_used": 0,
+        "reserved_duration_ns": 0
+      },
+      "body_bytes_charged_upper_bound": 8388608,
+      "dispatch_block_reasons": [
+        "request_allowance_exhausted",
+        "body_allowance_exhausted",
+        "duration_allowance_exhausted"
+      ],
+      "duration_ns_charged_upper_bound": 50000000000,
+      "limits": {
+        "max_attempt_duration_ns": 25000000000,
+        "max_body_bytes": 8388608,
+        "max_requests": 2,
+        "max_reserved_duration_ns": 50000000000
+      },
+      "new_dispatch_blocked": true,
+      "pending": [],
+      "remaining_body_bytes": 0,
+      "remaining_requests": 0,
+      "requests_charged": 2,
+      "scope": "R324/current-spot-perp/one-attempt",
+      "violations": []
+    },
+    "connections": [
+      {
+        "accepted_payload_bytes": 24174,
+        "actual_order_allowed": false,
+        "closed_mono_ns": 146434821675361,
+        "elapsed_ns": 13802002367,
+        "endpoint": "wss://wbs-api.mexc.com/ws",
+        "handshake_attempts": 1,
+        "messages": 73,
+        "opened_mono_ns": 146421818606677,
+        "outcome": "success",
+        "reason": "window_completed",
+        "subscriptions_sent": 1,
+        "transport_and_handshake_wire_bytes_known": false,
+        "venue": "spot"
+      },
+      {
+        "accepted_payload_bytes": 19691,
+        "actual_order_allowed": false,
+        "closed_mono_ns": 146435075534068,
+        "elapsed_ns": 14047372309,
+        "endpoint": "wss://contract.mexc.com/edge",
+        "handshake_attempts": 1,
+        "messages": 66,
+        "opened_mono_ns": 146422072500647,
+        "outcome": "success",
+        "reason": "window_completed",
+        "subscriptions_sent": 3,
+        "transport_and_handshake_wire_bytes_known": false,
+        "venue": "perp"
+      }
+    ],
+    "historical_requests_spent_unchanged": 7757,
+    "metadata_requests": 0,
+    "registry_id": "R324",
+    "reported_historical_mib_spent_unchanged": "229.85",
+    "source_units_and_executable_quote_contract_verified": false,
+    "strict_prospective_strategy_days": 0,
+    "symbols": [
+      "BTC",
+      "WIF",
+      "SKR"
+    ]
+  },
+  "code_inputs_sha256": "27c92a5a582bdda8dd731ba463b740066deb2f88a1a0ca48bd229ff73b112629",
+  "cost_sensitivity": [
+    {
+      "conditional_account_cases": [
+        {
+          "id": "unchanged_basis",
+          "net": "-151/250"
+        },
+        {
+          "id": "basis_converges",
+          "net": "823/500"
+        },
+        {
+          "id": "basis_widens",
+          "net": "-3357/1000"
+        },
+        {
+          "id": "base_fee_net_hedged",
+          "net": "32885079/20000000"
+        },
+        {
+          "id": "base_fee_gross_hedged",
+          "net": "32904019/20000000"
+        },
+        {
+          "id": "unknown_funding",
+          "net": null
+        },
+        {
+          "id": "unknown_spot_fee",
+          "net": null
+        },
+        {
+          "id": "third_fee_asset",
+          "net": null
+        }
+      ],
+      "market_net_return": null,
+      "multiple": 1
+    },
+    {
+      "conditional_account_cases": [
+        {
+          "id": "unchanged_basis",
+          "net": "-151/125"
+        },
+        {
+          "id": "basis_converges",
+          "net": "521/500"
+        },
+        {
+          "id": "basis_widens",
+          "net": "-991/250"
+        },
+        {
+          "id": "base_fee_net_hedged",
+          "net": "2598789/2500000"
+        },
+        {
+          "id": "base_fee_gross_hedged",
+          "net": "2602009/2500000"
+        },
+        {
+          "id": "unknown_funding",
+          "net": null
+        },
+        {
+          "id": "unknown_spot_fee",
+          "net": null
+        },
+        {
+          "id": "third_fee_asset",
+          "net": null
+        }
+      ],
+      "market_net_return": null,
+      "multiple": 2
+    },
+    {
+      "conditional_account_cases": [
+        {
+          "id": "unchanged_basis",
+          "net": "-453/250"
+        },
+        {
+          "id": "basis_converges",
+          "net": "219/500"
+        },
+        {
+          "id": "basis_widens",
+          "net": "-4571/1000"
+        },
+        {
+          "id": "base_fee_net_hedged",
+          "net": "8715693/20000000"
+        },
+        {
+          "id": "base_fee_gross_hedged",
+          "net": "8736153/20000000"
+        },
+        {
+          "id": "unknown_funding",
+          "net": null
+        },
+        {
+          "id": "unknown_spot_fee",
+          "net": null
+        },
+        {
+          "id": "third_fee_asset",
+          "net": null
+        }
+      ],
+      "market_net_return": null,
+      "multiple": 3
+    }
+  ],
+  "counts": {
+    "account_paths": 24,
+    "model_journals": 48,
+    "wire_messages": 139
+  },
+  "data_inputs_sha256": "c6464e6f150bd3f41e980d5a688b6cfd3c7852704d9e978c7b6ec6648f8e62e4",
+  "decode_failures": {},
+  "market_net_return": null,
+  "new_prospective_paper_days": 0,
+  "old_market_results_reclassified": false,
+  "output_sha256": {
+    "journals.json.gz": "17f054eb3e4fdea7d2d5d016b421c4cf08e2eb3d7d9ce3c3fefbb575f868be7d",
+    "observations.json.gz": "13141091c91740ead0368312d0df3ac97e04f49165e6c5ea177bea21eebf4eda"
+  },
+  "predictive_strategy_trials": 0,
+  "registry_id": "R324",
+  "structural_perp_packets": 63,
+  "structural_spot_packets": 72,
+  "symbols": {
+    "BTC": {
+      "both_streams_received": true,
+      "executable_synchronized_pairs": 0,
+      "market_availability_certified": false,
+      "net_market_return": null,
+      "perp_structural_depth_packets": 43,
+      "spot_structural_depth_packets": 24
+    },
+    "SKR": {
+      "both_streams_received": true,
+      "executable_synchronized_pairs": 0,
+      "market_availability_certified": false,
+      "net_market_return": null,
+      "perp_structural_depth_packets": 12,
+      "spot_structural_depth_packets": 24
+    },
+    "WIF": {
+      "both_streams_received": true,
+      "executable_synchronized_pairs": 0,
+      "market_availability_certified": false,
+      "net_market_return": null,
+      "perp_structural_depth_packets": 8,
+      "spot_structural_depth_packets": 24
+    }
+  },
+  "unresolved": [
+    "spot_source_timestamp_unit",
+    "spot_quantity_asset_and_snapshot_semantics",
+    "spot_and_perp_lot_tick_minimum_status_metadata",
+    "actual_owner_fees_and_fee_asset",
+    "synchronized_executable_exit_depth",
+    "actual_funding_event_cash_and_reference_notional",
+    "calibrated_positive_expectancy_and_prospective_protocol"
+  ],
+  "verdict": "PARTIAL"
+}

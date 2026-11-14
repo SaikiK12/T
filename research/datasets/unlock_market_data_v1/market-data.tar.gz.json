@@ -1,0 +1,1581 @@
+{
+ "auxiliary_manifest_sha256": "5b71f3e4f34cee4b5b186880737710937353aff5fc48b20028518d6024913cbd",
+ "bytes": 15464492,
+ "coverage": [
+  {
+   "first_ms": 1759406400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2181,
+   "symbol": "2ZUSDT"
+  },
+  {
+   "first_ms": 1733500800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1786089600000,
+   "rows": 3652,
+   "symbol": "ACXUSDT"
+  },
+  {
+   "first_ms": 1747742400003,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2990,
+   "symbol": "AGTUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1758614400001,
+   "rows": 5180,
+   "symbol": "ALPHAUSDT"
+  },
+  {
+   "first_ms": 1706198400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5875,
+   "symbol": "ALTUSDT"
+  },
+  {
+   "first_ms": 1647532800004,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 4975,
+   "symbol": "APEUSDT"
+  },
+  {
+   "first_ms": 1645459200005,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 8889,
+   "symbol": "API3USDT"
+  },
+  {
+   "first_ms": 1679558400001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3863,
+   "symbol": "ARBUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "AVAXUSDT"
+  },
+  {
+   "first_ms": 1743868800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3307,
+   "symbol": "BABYUSDT"
+  },
+  {
+   "first_ms": 1715616000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5221,
+   "symbol": "BBUSDT"
+  },
+  {
+   "first_ms": 1738857600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3607,
+   "symbol": "BERAUSDT"
+  },
+  {
+   "first_ms": 1695888000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3296,
+   "symbol": "BICOUSDT"
+  },
+  {
+   "first_ms": 1682611200005,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4347,
+   "symbol": "BLURUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "BTCUSDT"
+  },
+  {
+   "first_ms": 1754582400002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2515,
+   "symbol": "CARVUSDT"
+  },
+  {
+   "first_ms": 1692201600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6701,
+   "symbol": "CYBERUSDT"
+  },
+  {
+   "first_ms": 1745323200001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3158,
+   "symbol": "DEEPUSDT"
+  },
+  {
+   "first_ms": 1746057600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3107,
+   "symbol": "DOLOUSDT"
+  },
+  {
+   "first_ms": 1731081600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4297,
+   "symbol": "DRIFTUSDT"
+  },
+  {
+   "first_ms": 1727769600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4377,
+   "symbol": "EIGENUSDT"
+  },
+  {
+   "first_ms": 1638201600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 5299,
+   "symbol": "ENSUSDT"
+  },
+  {
+   "first_ms": 1760356800001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2114,
+   "symbol": "EULUSDT"
+  },
+  {
+   "first_ms": 1759147200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2198,
+   "symbol": "FFUSDT"
+  },
+  {
+   "first_ms": 1644422400001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6285,
+   "symbol": "FLOWUSDT"
+  },
+  {
+   "first_ms": 1695657600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1750320000003,
+   "rows": 1899,
+   "symbol": "GLMRUSDT"
+  },
+  {
+   "first_ms": 1647273600002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5866,
+   "symbol": "GMTUSDT"
+  },
+  {
+   "first_ms": 1676620800016,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3965,
+   "symbol": "GMXUSDT"
+  },
+  {
+   "first_ms": 1731081600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4147,
+   "symbol": "GRASSUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "GRTUSDT"
+  },
+  {
+   "first_ms": 1743436800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3289,
+   "symbol": "GUNUSDT"
+  },
+  {
+   "first_ms": 1615968000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6071,
+   "symbol": "HBARUSDT"
+  },
+  {
+   "first_ms": 1680710400004,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1786089600000,
+   "rows": 3667,
+   "symbol": "HFTUSDT"
+  },
+  {
+   "first_ms": 1750852800003,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3190,
+   "symbol": "HUSDT"
+  },
+  {
+   "first_ms": 1661990400012,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 4473,
+   "symbol": "ICPUSDT"
+  },
+  {
+   "first_ms": 1644566400009,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 8331,
+   "symbol": "IMXUSDT"
+  },
+  {
+   "first_ms": 1660665600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 4519,
+   "symbol": "INJUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "IOTAUSDT"
+  },
+  {
+   "first_ms": 1702036800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6164,
+   "symbol": "JTOUSDT"
+  },
+  {
+   "first_ms": 1706760000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5836,
+   "symbol": "JUPUSDT"
+  },
+  {
+   "first_ms": 1739289600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5694,
+   "symbol": "LAYERUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "LINKUSDT"
+  },
+  {
+   "first_ms": 1718899200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4993,
+   "symbol": "LISTAUSDT"
+  },
+  {
+   "first_ms": 1678377600002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3904,
+   "symbol": "LQTYUSDT"
+  },
+  {
+   "first_ms": 1705593600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5917,
+   "symbol": "MANTAUSDT"
+  },
+  {
+   "first_ms": 1687968000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3571,
+   "symbol": "MAVUSDT"
+  },
+  {
+   "first_ms": 1737374400002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3710,
+   "symbol": "MELANIAUSDT"
+  },
+  {
+   "first_ms": 1699027200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6373,
+   "symbol": "MEMEUSDT"
+  },
+  {
+   "first_ms": 1710172800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5597,
+   "symbol": "METISUSDT"
+  },
+  {
+   "first_ms": 1733846400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5198,
+   "symbol": "MEUSDT"
+  },
+  {
+   "first_ms": 1732723200001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4033,
+   "symbol": "MORPHOUSDT"
+  },
+  {
+   "first_ms": 1733760000001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3997,
+   "symbol": "MOVEUSDT"
+  },
+  {
+   "first_ms": 1751889600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3632,
+   "symbol": "MUSDT"
+  },
+  {
+   "first_ms": 1609459200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 6297,
+   "symbol": "NEARUSDT"
+  },
+  {
+   "first_ms": 1759305600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2390,
+   "symbol": "NOMUSDT"
+  },
+  {
+   "first_ms": 1705766400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5905,
+   "symbol": "ONDOUSDT"
+  },
+  {
+   "first_ms": 1771689600005,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 1327,
+   "symbol": "OPNUSDT"
+  },
+  {
+   "first_ms": 1654070400011,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 4748,
+   "symbol": "OPUSDT"
+  },
+  {
+   "first_ms": 1733500800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4997,
+   "symbol": "ORCAUSDT"
+  },
+  {
+   "first_ms": 1758888000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 1712,
+   "symbol": "ORDERUSDT"
+  },
+  {
+   "first_ms": 1690300800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3490,
+   "symbol": "PENDLEUSDT"
+  },
+  {
+   "first_ms": 1677859200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1763712000000,
+   "rows": 5295,
+   "symbol": "PERPUSDT"
+  },
+  {
+   "first_ms": 1742572800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3977,
+   "symbol": "PLUMEUSDT"
+  },
+  {
+   "first_ms": 1744473600000,
+   "gaps_over_one_day": 1,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3092,
+   "symbol": "PUMPUSDT"
+  },
+  {
+   "first_ms": 1700668800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6259,
+   "symbol": "PYTHUSDT"
+  },
+  {
+   "first_ms": 1723737600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4657,
+   "symbol": "RAREUSDT"
+  },
+  {
+   "first_ms": 1680624000008,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1774339200000,
+   "rows": 3311,
+   "symbol": "RDNTUSDT"
+  },
+  {
+   "first_ms": 1749556800005,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3641,
+   "symbol": "RESOLVUSDT"
+  },
+  {
+   "first_ms": 1714492800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5299,
+   "symbol": "REZUSDT"
+  },
+  {
+   "first_ms": 1760716800003,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3122,
+   "symbol": "RIVERUSDT"
+  },
+  {
+   "first_ms": 1729872000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4231,
+   "symbol": "SAFEUSDT"
+  },
+  {
+   "first_ms": 1712620800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5428,
+   "symbol": "SAGAUSDT"
+  },
+  {
+   "first_ms": 1692201600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3424,
+   "symbol": "SEIUSDT"
+  },
+  {
+   "first_ms": 1739822400001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3540,
+   "symbol": "SHELLUSDT"
+  },
+  {
+   "first_ms": 1745841600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4708,
+   "symbol": "SIGNUSDT"
+  },
+  {
+   "first_ms": 1780300800001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 920,
+   "symbol": "SLXUSDT"
+  },
+  {
+   "first_ms": 1737129600008,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3727,
+   "symbol": "SOLVUSDT"
+  },
+  {
+   "first_ms": 1750161600001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2822,
+   "symbol": "SPKUSDT"
+  },
+  {
+   "first_ms": 1744473600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3339,
+   "symbol": "STOUSDT"
+  },
+  {
+   "first_ms": 1708444800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5719,
+   "symbol": "STRKUSDT"
+  },
+  {
+   "first_ms": 1683129600011,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3739,
+   "symbol": "SUIUSDT"
+  },
+  {
+   "first_ms": 1746547200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3071,
+   "symbol": "SYRUPUSDT"
+  },
+  {
+   "first_ms": 1732723200001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4033,
+   "symbol": "THEUSDT"
+  },
+  {
+   "first_ms": 1698782400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6390,
+   "symbol": "TIAUSDT"
+  },
+  {
+   "first_ms": 1712606400001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 6219,
+   "symbol": "TNSRUSDT"
+  },
+  {
+   "first_ms": 1737216000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3721,
+   "symbol": "TRUMPUSDT"
+  },
+  {
+   "first_ms": 1678118400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1776758400004,
+   "rows": 3426,
+   "symbol": "TRUUSDT"
+  },
+  {
+   "first_ms": 1734537600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3907,
+   "symbol": "USUALUSDT"
+  },
+  {
+   "first_ms": 1738137600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3657,
+   "symbol": "VVVUSDT"
+  },
+  {
+   "first_ms": 1743091200002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 3313,
+   "symbol": "WALUSDT"
+  },
+  {
+   "first_ms": 1765353600002,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2091,
+   "symbol": "WETUSDT"
+  },
+  {
+   "first_ms": 1690214400000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790784000002,
+   "rows": 3493,
+   "symbol": "WLDUSDT"
+  },
+  {
+   "first_ms": 1712160000000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5461,
+   "symbol": "WUSDT"
+  },
+  {
+   "first_ms": 1755864000001,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2426,
+   "symbol": "XPLUSDT"
+  },
+  {
+   "first_ms": 1706860800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5829,
+   "symbol": "ZETAUSDT"
+  },
+  {
+   "first_ms": 1718625600000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 5057,
+   "symbol": "ZKUSDT"
+  },
+  {
+   "first_ms": 1753444800000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 2594,
+   "symbol": "ZORAUSDT"
+  },
+  {
+   "first_ms": 1718899200000,
+   "gaps_over_one_day": 0,
+   "kind": "fundingRate",
+   "last_ms": 1790798400000,
+   "rows": 4993,
+   "symbol": "ZROUSDT"
+  },
+  {
+   "first_ms": 1759363200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 363,
+   "symbol": "2ZUSDT"
+  },
+  {
+   "first_ms": 1733443200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 663,
+   "symbol": "ACXUSDT"
+  },
+  {
+   "first_ms": 1747699200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 498,
+   "symbol": "AGTUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2096,
+   "symbol": "ALPHAUSDT"
+  },
+  {
+   "first_ms": 1706140800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 979,
+   "symbol": "ALTUSDT"
+  },
+  {
+   "first_ms": 1647475200000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1656,
+   "symbol": "APEUSDT"
+  },
+  {
+   "first_ms": 1645401600000,
+   "gaps_over_one_day": 4,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1679,
+   "symbol": "API3USDT"
+  },
+  {
+   "first_ms": 1679529600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1287,
+   "symbol": "ARBUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 6,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2090,
+   "symbol": "AVAXUSDT"
+  },
+  {
+   "first_ms": 1743811200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 543,
+   "symbol": "BABYUSDT"
+  },
+  {
+   "first_ms": 1715558400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 870,
+   "symbol": "BBUSDT"
+  },
+  {
+   "first_ms": 1738800000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 601,
+   "symbol": "BERAUSDT"
+  },
+  {
+   "first_ms": 1695859200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1098,
+   "symbol": "BICOUSDT"
+  },
+  {
+   "first_ms": 1682553600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1252,
+   "symbol": "BLURUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 6,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2090,
+   "symbol": "BTCUSDT"
+  },
+  {
+   "first_ms": 1754524800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 419,
+   "symbol": "CARVUSDT"
+  },
+  {
+   "first_ms": 1692576000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1136,
+   "symbol": "CYBERUSDT"
+  },
+  {
+   "first_ms": 1745280000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 526,
+   "symbol": "DEEPUSDT"
+  },
+  {
+   "first_ms": 1746057600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 517,
+   "symbol": "DOLOUSDT"
+  },
+  {
+   "first_ms": 1731024000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 691,
+   "symbol": "DRIFTUSDT"
+  },
+  {
+   "first_ms": 1727740800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 729,
+   "symbol": "EIGENUSDT"
+  },
+  {
+   "first_ms": 1638144000000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1764,
+   "symbol": "ENSUSDT"
+  },
+  {
+   "first_ms": 1760313600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 352,
+   "symbol": "EULUSDT"
+  },
+  {
+   "first_ms": 1759104000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 366,
+   "symbol": "FFUSDT"
+  },
+  {
+   "first_ms": 1644364800000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1692,
+   "symbol": "FLOWUSDT"
+  },
+  {
+   "first_ms": 1695600000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1101,
+   "symbol": "GLMRUSDT"
+  },
+  {
+   "first_ms": 1647216000000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1659,
+   "symbol": "GMTUSDT"
+  },
+  {
+   "first_ms": 1676592000000,
+   "gaps_over_one_day": 2,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1320,
+   "symbol": "GMXUSDT"
+  },
+  {
+   "first_ms": 1731024000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 691,
+   "symbol": "GRASSUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2096,
+   "symbol": "GRTUSDT"
+  },
+  {
+   "first_ms": 1743379200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 548,
+   "symbol": "GUNUSDT"
+  },
+  {
+   "first_ms": 1615939200000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2021,
+   "symbol": "HBARUSDT"
+  },
+  {
+   "first_ms": 1680652800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1274,
+   "symbol": "HFTUSDT"
+  },
+  {
+   "first_ms": 1750809600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 462,
+   "symbol": "HUSDT"
+  },
+  {
+   "first_ms": 1620691200000,
+   "gaps_over_one_day": 4,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1965,
+   "symbol": "ICPUSDT"
+  },
+  {
+   "first_ms": 1644537600000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1690,
+   "symbol": "IMXUSDT"
+  },
+  {
+   "first_ms": 1660608000000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1504,
+   "symbol": "INJUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2096,
+   "symbol": "IOTAUSDT"
+  },
+  {
+   "first_ms": 1701993600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1027,
+   "symbol": "JTOUSDT"
+  },
+  {
+   "first_ms": 1706659200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 973,
+   "symbol": "JUPUSDT"
+  },
+  {
+   "first_ms": 1739232000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 596,
+   "symbol": "LAYERUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 6,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2090,
+   "symbol": "LINKUSDT"
+  },
+  {
+   "first_ms": 1718841600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 832,
+   "symbol": "LISTAUSDT"
+  },
+  {
+   "first_ms": 1678320000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1301,
+   "symbol": "LQTYUSDT"
+  },
+  {
+   "first_ms": 1705536000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 986,
+   "symbol": "MANTAUSDT"
+  },
+  {
+   "first_ms": 1687910400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1190,
+   "symbol": "MAVUSDT"
+  },
+  {
+   "first_ms": 1737331200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 618,
+   "symbol": "MELANIAUSDT"
+  },
+  {
+   "first_ms": 1698969600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1062,
+   "symbol": "MEMEUSDT"
+  },
+  {
+   "first_ms": 1710201600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 932,
+   "symbol": "METISUSDT"
+  },
+  {
+   "first_ms": 1733788800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 659,
+   "symbol": "MEUSDT"
+  },
+  {
+   "first_ms": 1732665600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 672,
+   "symbol": "MORPHOUSDT"
+  },
+  {
+   "first_ms": 1733702400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 660,
+   "symbol": "MOVEUSDT"
+  },
+  {
+   "first_ms": 1751846400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 450,
+   "symbol": "MUSDT"
+  },
+  {
+   "first_ms": 1609459200000,
+   "gaps_over_one_day": 5,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 2091,
+   "symbol": "NEARUSDT"
+  },
+  {
+   "first_ms": 1759276800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 364,
+   "symbol": "NOMUSDT"
+  },
+  {
+   "first_ms": 1705708800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 984,
+   "symbol": "ONDOUSDT"
+  },
+  {
+   "first_ms": 1771632000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 221,
+   "symbol": "OPNUSDT"
+  },
+  {
+   "first_ms": 1654041600000,
+   "gaps_over_one_day": 3,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1580,
+   "symbol": "OPUSDT"
+  },
+  {
+   "first_ms": 1733443200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 663,
+   "symbol": "ORCAUSDT"
+  },
+  {
+   "first_ms": 1758844800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 369,
+   "symbol": "ORDERUSDT"
+  },
+  {
+   "first_ms": 1690416000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1161,
+   "symbol": "PENDLEUSDT"
+  },
+  {
+   "first_ms": 1677801600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1307,
+   "symbol": "PERPUSDT"
+  },
+  {
+   "first_ms": 1742515200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 558,
+   "symbol": "PLUMEUSDT"
+  },
+  {
+   "first_ms": 1744416000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 536,
+   "symbol": "PUMPUSDT"
+  },
+  {
+   "first_ms": 1700611200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1043,
+   "symbol": "PYTHUSDT"
+  },
+  {
+   "first_ms": 1723680000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 776,
+   "symbol": "RAREUSDT"
+  },
+  {
+   "first_ms": 1680566400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1275,
+   "symbol": "RDNTUSDT"
+  },
+  {
+   "first_ms": 1749513600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 477,
+   "symbol": "RESOLVUSDT"
+  },
+  {
+   "first_ms": 1714435200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 883,
+   "symbol": "REZUSDT"
+  },
+  {
+   "first_ms": 1760659200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 348,
+   "symbol": "RIVERUSDT"
+  },
+  {
+   "first_ms": 1729814400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 705,
+   "symbol": "SAFEUSDT"
+  },
+  {
+   "first_ms": 1712620800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 904,
+   "symbol": "SAGAUSDT"
+  },
+  {
+   "first_ms": 1692144000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1141,
+   "symbol": "SEIUSDT"
+  },
+  {
+   "first_ms": 1739750400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 590,
+   "symbol": "SHELLUSDT"
+  },
+  {
+   "first_ms": 1745798400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 520,
+   "symbol": "SIGNUSDT"
+  },
+  {
+   "first_ms": 1780272000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 121,
+   "symbol": "SLXUSDT"
+  },
+  {
+   "first_ms": 1737072000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 621,
+   "symbol": "SOLVUSDT"
+  },
+  {
+   "first_ms": 1750118400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 470,
+   "symbol": "SPKUSDT"
+  },
+  {
+   "first_ms": 1744416000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 536,
+   "symbol": "STOUSDT"
+  },
+  {
+   "first_ms": 1708387200000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 953,
+   "symbol": "STRKUSDT"
+  },
+  {
+   "first_ms": 1683072000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1246,
+   "symbol": "SUIUSDT"
+  },
+  {
+   "first_ms": 1746576000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 511,
+   "symbol": "SYRUPUSDT"
+  },
+  {
+   "first_ms": 1732665600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 672,
+   "symbol": "THEUSDT"
+  },
+  {
+   "first_ms": 1698710400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1065,
+   "symbol": "TIAUSDT"
+  },
+  {
+   "first_ms": 1712534400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 905,
+   "symbol": "TNSRUSDT"
+  },
+  {
+   "first_ms": 1737158400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 620,
+   "symbol": "TRUMPUSDT"
+  },
+  {
+   "first_ms": 1678060800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1304,
+   "symbol": "TRUUSDT"
+  },
+  {
+   "first_ms": 1734480000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 651,
+   "symbol": "USUALUSDT"
+  },
+  {
+   "first_ms": 1738108800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 609,
+   "symbol": "VVVUSDT"
+  },
+  {
+   "first_ms": 1743033600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 552,
+   "symbol": "WALUSDT"
+  },
+  {
+   "first_ms": 1765324800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 294,
+   "symbol": "WETUSDT"
+  },
+  {
+   "first_ms": 1690156800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 1164,
+   "symbol": "WLDUSDT"
+  },
+  {
+   "first_ms": 1712102400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 910,
+   "symbol": "WUSDT"
+  },
+  {
+   "first_ms": 1755820800000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 404,
+   "symbol": "XPLUSDT"
+  },
+  {
+   "first_ms": 1706832000000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 971,
+   "symbol": "ZETAUSDT"
+  },
+  {
+   "first_ms": 1718582400000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 835,
+   "symbol": "ZKUSDT"
+  },
+  {
+   "first_ms": 1753401600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 432,
+   "symbol": "ZORAUSDT"
+  },
+  {
+   "first_ms": 1718841600000,
+   "gaps_over_one_day": 1,
+   "kind": "markPriceKlines",
+   "last_ms": 1790726400000,
+   "rows": 832,
+   "symbol": "ZROUSDT"
+  }
+ ],
+ "file": "market-data.tar.gz",
+ "files": 18914,
+ "meaning": "Public acquisition/schema validation only; no return, funding PnL or liquidation computation",
+ "price_manifest_sha256": "707e413d5a8ae5f07360299dfd8ddd9d5a4790c97af063e601426d73e94f11c9",
+ "protocol_sha256": "e9614d37d7b9ccb1830af55b973a6808fc3991d8df6a2555d20867f950bc7dd7",
+ "sha256": "c55dd46019719db709e1a887626b418fb9f9c75ccc15a227f384c0c070a71998",
+ "unpacked_payload_bytes": 29047854
+}

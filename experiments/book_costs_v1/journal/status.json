@@ -1,0 +1,145 @@
+{
+ "snapshots": 4,
+ "first_ms": 1794639523993,
+ "last_ms": 1794669636658,
+ "symbols": {
+  "dydx": 57,
+  "kucoin": 715,
+  "mexc": 577
+ },
+ "by_venue_band": [
+  {
+   "venue": "dydx",
+   "band_usd": "0-50000",
+   "symbols": 52,
+   "median_half_spread_bp": 134.96264565755118,
+   "median_side_1k_bp": 148.21159641996803,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 182.61793595015368,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 205.65737279292853,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "dydx",
+   "band_usd": "50000-500000",
+   "symbols": 2,
+   "median_half_spread_bp": 17.56783385979139,
+   "median_side_1k_bp": 17.954167816817552,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 23.71858148112152,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 24.783057544123384,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "dydx",
+   "band_usd": "500000-5e+06",
+   "symbols": 1,
+   "median_half_spread_bp": 2.3133584379241148,
+   "median_side_1k_bp": 2.31335843792424,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 2.313358437924795,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 2.3858760488681963,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "dydx",
+   "band_usd": "5e+06-inf",
+   "symbols": 2,
+   "median_half_spread_bp": 3.8022858690096752,
+   "median_side_1k_bp": 3.9805118328360702,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 3.9955147631109966,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 3.9975400378261527,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "kucoin",
+   "band_usd": "0-50000",
+   "symbols": 193,
+   "median_half_spread_bp": 16.572050941009657,
+   "median_side_1k_bp": 30.701620905450312,
+   "unfilled_share_1k": 0.0051813471502590676,
+   "median_side_5k_bp": 103.66187660531406,
+   "unfilled_share_5k": 0.03626943005181347,
+   "median_side_10k_bp": 317.0305333037976,
+   "unfilled_share_10k": 0.10362694300518134
+  },
+  {
+   "venue": "kucoin",
+   "band_usd": "50000-500000",
+   "symbols": 197,
+   "median_half_spread_bp": 11.732500888218636,
+   "median_side_1k_bp": 23.65395576173851,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 64.63838646128345,
+   "unfilled_share_5k": 0.030456852791878174,
+   "median_side_10k_bp": 188.47508304862316,
+   "unfilled_share_10k": 0.07614213197969544
+  },
+  {
+   "venue": "kucoin",
+   "band_usd": "500000-5e+06",
+   "symbols": 245,
+   "median_half_spread_bp": 8.617718284264397,
+   "median_side_1k_bp": 24.97306048097392,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 72.11940274611666,
+   "unfilled_share_5k": 0.08571428571428572,
+   "median_side_10k_bp": 275.044552834508,
+   "unfilled_share_10k": 0.13877551020408163
+  },
+  {
+   "venue": "kucoin",
+   "band_usd": "5e+06-inf",
+   "symbols": 80,
+   "median_half_spread_bp": 3.7505663444282407,
+   "median_side_1k_bp": 6.050426648469137,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 10.617470104358762,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 14.201096962082744,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "mexc",
+   "band_usd": "50000-500000",
+   "symbols": 440,
+   "median_half_spread_bp": 3.056232726507117,
+   "median_side_1k_bp": 5.219514018918876,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 8.878666531817181,
+   "unfilled_share_5k": 0.0022727272727272726,
+   "median_side_10k_bp": 12.707047244980007,
+   "unfilled_share_10k": 0.0022727272727272726
+  },
+  {
+   "venue": "mexc",
+   "band_usd": "500000-5e+06",
+   "symbols": 96,
+   "median_half_spread_bp": 1.6899450466868322,
+   "median_side_1k_bp": 2.4476740004714115,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 4.328301687788749,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 5.48735638645173,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "mexc",
+   "band_usd": "5e+06-inf",
+   "symbols": 41,
+   "median_half_spread_bp": 0.722067804626607,
+   "median_side_1k_bp": 0.7837604827964917,
+   "unfilled_share_1k": 0.0,
+   "median_side_5k_bp": 1.2472314255779215,
+   "unfilled_share_5k": 0.0,
+   "median_side_10k_bp": 1.8160587667115369,
+   "unfilled_share_10k": 0.0
+  }
+ ],
+ "files": 4
+}

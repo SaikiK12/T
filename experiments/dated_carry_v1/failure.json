@@ -1,0 +1,18 @@
+{
+  "cash_or_economic_null_claimed": false,
+  "cause": "Frozen fixtures encode exit_conversion_ratios as rational strings399/400 and401/400; report passes string to terminal_conversion.rational, which accepts decimal strings or exact Fraction, not ratio strings.",
+  "command": ".venv/bin/python -m lab account --dated",
+  "exception": "ValueError: finite decimal required",
+  "freeze_commit": "eec39c3d5005ad622ee393f8707b9fe72af1e0e5",
+  "frozen_input_unchanged": true,
+  "native_model_journals_exist": false,
+  "next": "Separate frozen version parses already registered rational ratio literals as exact Fraction; no policy/size/guard/cost/input change, no new network.",
+  "planned_scenario_slots": 216,
+  "raw_commit": "cc7c4bf",
+  "registry_id": "R327",
+  "results_json_exists": false,
+  "same_raw_body_bytes": 5945,
+  "same_raw_requests": 7,
+  "status": "report_failed_before_first_terminal_scenario",
+  "terminal_scenarios_persisted": 0
+}

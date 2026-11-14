@@ -3,3 +3,9 @@
 PREREG.md -text
 FORWARD.md -text
 *.sha256 -text
+# These immutable experiment tables are bound by byte hashes in their manifest.
+experiments/allocation_v1/results/*.csv -text
+experiments/optimizer_v1/results/*.csv -text whitespace=cr-at-eol
+experiments/usdtmint_v1/events.csv -text
+# R483's imported DefiLlama bodies and CRLF response headers are bound by byte hashes in raw/import_receipt.json.
+experiments/carryhurdle_v1/raw/* -text

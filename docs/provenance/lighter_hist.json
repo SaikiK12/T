@@ -1,0 +1,4795 @@
+{
+"folder": "data/lighter_hist",
+"source": "https://mainnet.zklighter.elliot.ai (public REST, fetched 2026-10-21; reserved/ is the long tail, docs/GATES.md)",
+"script": "scripts/fetch_venue_history.py",
+"recorded_utc": "2026-11-03T22:20:10Z",
+"excluded": [],
+"files": 724,
+"bytes": 111905534,
+"combined_sha256": "76e7c18843649cb2381c819ac7c639daed52cc0117079ed28f4bce15887c7fee",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 31983
+},
+"open": {
+"files": 585,
+"bytes": 100075574
+},
+"raw": {
+"files": 1,
+"bytes": 437806
+},
+"reserved": {
+"files": 136,
+"bytes": 11360171
+}
+},
+"hourly_coverage": {
+"open/candles_1h": {
+"files": 195,
+"bars": 1545933,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1737100800000,
+"last": 1792616400000
+}
+},
+"coverage": {
+"open/candles_1h": {
+"0G": {
+"first": 1758726000000,
+"last": 1792616400000,
+"bars": 9415,
+"holes": 0
+},
+"1000BONK": {
+"first": 1738357200000,
+"last": 1792594800000,
+"bars": 15067,
+"holes": 0
+},
+"1000FLOKI": {
+"first": 1738357200000,
+"last": 1792616400000,
+"bars": 15073,
+"holes": 0
+},
+"1000NOT": {
+"first": 1778529600000,
+"last": 1792616400000,
+"bars": 3914,
+"holes": 0
+},
+"1000PEPE": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"1000SHIB": {
+"first": 1738357200000,
+"last": 1792616400000,
+"bars": 15073,
+"holes": 0
+},
+"1000TOSHI": {
+"first": 1758189600000,
+"last": 1792594800000,
+"bars": 9558,
+"holes": 0
+},
+"2Z": {
+"first": 1759420800000,
+"last": 1792616400000,
+"bars": 9222,
+"holes": 0
+},
+"AAOI": {
+"bars": 0
+},
+"AAPL": {
+"first": 1764342000000,
+"last": 1792616400000,
+"bars": 7855,
+"holes": 0
+},
+"AAVE": {
+"first": 1741190400000,
+"last": 1792594800000,
+"bars": 14280,
+"holes": 0
+},
+"ADA": {
+"first": 1747324800000,
+"last": 1792609200000,
+"bars": 12580,
+"holes": 0
+},
+"AERO": {
+"first": 1755187200000,
+"last": 1792594800000,
+"bars": 10392,
+"holes": 0
+},
+"AI": {
+"first": 1788372000000,
+"last": 1792616400000,
+"bars": 1180,
+"holes": 0
+},
+"AI16Z": {
+"first": 1739638800000,
+"last": 1792609200000,
+"bars": 14715,
+"holes": 0
+},
+"AMD": {
+"first": 1770667200000,
+"last": 1792616400000,
+"bars": 6098,
+"holes": 0
+},
+"AMZN": {
+"first": 1764342000000,
+"last": 1792609200000,
+"bars": 7853,
+"holes": 0
+},
+"ANTHROPIC": {
+"first": 1780840800000,
+"last": 1792594800000,
+"bars": 3266,
+"holes": 0
+},
+"APT": {
+"first": 1741982400000,
+"last": 1792594800000,
+"bars": 14060,
+"holes": 0
+},
+"ARB": {
+"first": 1753714800000,
+"last": 1792616400000,
+"bars": 10807,
+"holes": 0
+},
+"ARC": {
+"first": 1770318000000,
+"last": 1792609200000,
+"bars": 6193,
+"holes": 0
+},
+"ARM": {
+"bars": 0
+},
+"ASML": {
+"first": 1772571600000,
+"last": 1792616400000,
+"bars": 5569,
+"holes": 0
+},
+"ASTER": {
+"first": 1758207600000,
+"last": 1792616400000,
+"bars": 9559,
+"holes": 0
+},
+"AVAX": {
+"first": 1737147600000,
+"last": 1792612800000,
+"bars": 15408,
+"holes": 0
+},
+"AVGO": {
+"bars": 0
+},
+"AVNT": {
+"first": 1758189600000,
+"last": 1792616400000,
+"bars": 9564,
+"holes": 0
+},
+"AXS": {
+"first": 1769187600000,
+"last": 1792612800000,
+"bars": 6508,
+"holes": 0
+},
+"AXTI": {
+"bars": 0
+},
+"AZTEC": {
+"first": 1770883200000,
+"last": 1792616400000,
+"bars": 6038,
+"holes": 0
+},
+"BABA": {
+"first": 1779472800000,
+"last": 1792616400000,
+"bars": 3652,
+"holes": 0
+},
+"BB": {
+"first": 1782478800000,
+"last": 1792594800000,
+"bars": 2811,
+"holes": 0
+},
+"BCH": {
+"first": 1754665200000,
+"last": 1792616400000,
+"bars": 10543,
+"holes": 0
+},
+"BE": {
+"bars": 0
+},
+"BERA": {
+"first": 1739638800000,
+"last": 1792616400000,
+"bars": 14717,
+"holes": 0
+},
+"BIO": {
+"first": 1778536800000,
+"last": 1792609200000,
+"bars": 3910,
+"holes": 0
+},
+"BIRB": {
+"first": 1770318000000,
+"last": 1792616400000,
+"bars": 6195,
+"holes": 0
+},
+"BMNR": {
+"first": 1767812400000,
+"last": 1792612800000,
+"bars": 6890,
+"holes": 0
+},
+"BNB": {
+"first": 1740427200000,
+"last": 1792616400000,
+"bars": 14498,
+"holes": 0
+},
+"BOT": {
+"first": 1780513200000,
+"last": 1792594800000,
+"bars": 3357,
+"holes": 0
+},
+"BTC": {
+"first": 1737100800000,
+"last": 1792594800000,
+"bars": 15416,
+"holes": 0
+},
+"BYD": {
+"bars": 0
+},
+"CAP": {
+"first": 1782338400000,
+"last": 1792609200000,
+"bars": 2854,
+"holes": 0
+},
+"CBRS": {
+"first": 1778781600000,
+"last": 1792616400000,
+"bars": 3844,
+"holes": 0
+},
+"CC": {
+"first": 1762182000000,
+"last": 1792594800000,
+"bars": 8449,
+"holes": 0
+},
+"CHIP": {
+"first": 1776801600000,
+"last": 1792616400000,
+"bars": 4394,
+"holes": 0
+},
+"COIN": {
+"first": 1764093600000,
+"last": 1792616400000,
+"bars": 7924,
+"holes": 0
+},
+"CRCL": {
+"first": 1767812400000,
+"last": 1792609200000,
+"bars": 6889,
+"holes": 0
+},
+"CRV": {
+"first": 1745442000000,
+"last": 1792616400000,
+"bars": 13105,
+"holes": 0
+},
+"CRWV": {
+"first": 1778090400000,
+"last": 1792594800000,
+"bars": 4030,
+"holes": 0
+},
+"CTR": {
+"first": 1779753600000,
+"last": 1792609200000,
+"bars": 3572,
+"holes": 0
+},
+"CXMT": {
+"first": 1784124000000,
+"last": 1792616400000,
+"bars": 2360,
+"holes": 0
+},
+"DASH": {
+"first": 1769094000000,
+"last": 1792616400000,
+"bars": 6535,
+"holes": 0
+},
+"DELL": {
+"first": 1780322400000,
+"last": 1792594800000,
+"bars": 3410,
+"holes": 0
+},
+"DIA": {
+"first": 1772571600000,
+"last": 1792616400000,
+"bars": 5569,
+"holes": 0
+},
+"DOGE": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"DOLO": {
+"first": 1756479600000,
+"last": 1792594800000,
+"bars": 10033,
+"holes": 0
+},
+"DOT": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"DRAM": {
+"first": 1781197200000,
+"last": 1792594800000,
+"bars": 3167,
+"holes": 0
+},
+"DUSK": {
+"first": 1769094000000,
+"last": 1792609200000,
+"bars": 6533,
+"holes": 0
+},
+"DYDX": {
+"first": 1755187200000,
+"last": 1792616400000,
+"bars": 10398,
+"holes": 0
+},
+"EDEN": {
+"first": 1759420800000,
+"last": 1792616400000,
+"bars": 9222,
+"holes": 0
+},
+"EDGE": {
+"first": 1774033200000,
+"last": 1792616400000,
+"bars": 5163,
+"holes": 0
+},
+"EIGEN": {
+"first": 1753714800000,
+"last": 1792616400000,
+"bars": 10807,
+"holes": 0
+},
+"ENA": {
+"first": 1741190400000,
+"last": 1792616400000,
+"bars": 14286,
+"holes": 0
+},
+"ETH": {
+"first": 1737100800000,
+"last": 1792616400000,
+"bars": 15422,
+"holes": 0
+},
+"ETHFI": {
+"first": 1755187200000,
+"last": 1792594800000,
+"bars": 10392,
+"holes": 0
+},
+"EWY": {
+"first": 1777633200000,
+"last": 1792616400000,
+"bars": 4163,
+"holes": 0
+},
+"FARTCOIN": {
+"first": 1739638800000,
+"last": 1792594800000,
+"bars": 14711,
+"holes": 0
+},
+"FF": {
+"first": 1759161600000,
+"last": 1792616400000,
+"bars": 9294,
+"holes": 0
+},
+"FIL": {
+"first": 1762624800000,
+"last": 1792616400000,
+"bars": 8332,
+"holes": 0
+},
+"FOGO": {
+"first": 1768485600000,
+"last": 1792616400000,
+"bars": 6704,
+"holes": 0
+},
+"FOLKS": {
+"first": 1784041200000,
+"last": 1792594800000,
+"bars": 2377,
+"holes": 0
+},
+"GEV": {
+"first": 1784664000000,
+"last": 1792594800000,
+"bars": 2204,
+"holes": 0
+},
+"GME": {
+"bars": 0
+},
+"GMX": {
+"first": 1755187200000,
+"last": 1792616400000,
+"bars": 10398,
+"holes": 0
+},
+"GOOGL": {
+"first": 1764342000000,
+"last": 1792616400000,
+"bars": 7855,
+"holes": 0
+},
+"GRAM": {
+"first": 1737147600000,
+"last": 1792594800000,
+"bars": 15403,
+"holes": 0
+},
+"GRASS": {
+"first": 1753808400000,
+"last": 1792594800000,
+"bars": 10775,
+"holes": 0
+},
+"HANMI": {
+"first": 1771437600000,
+"last": 1792616400000,
+"bars": 5884,
+"holes": 0
+},
+"HBAR": {
+"first": 1754665200000,
+"last": 1792594800000,
+"bars": 10537,
+"holes": 0
+},
+"HOOD": {
+"first": 1764093600000,
+"last": 1792609200000,
+"bars": 7922,
+"holes": 0
+},
+"HYPE": {
+"first": 1740427200000,
+"last": 1792616400000,
+"bars": 14498,
+"holes": 0
+},
+"HYUNDAI": {
+"first": 1770825600000,
+"last": 1792616400000,
+"bars": 6054,
+"holes": 0
+},
+"IBM": {
+"first": 1780322400000,
+"last": 1792594800000,
+"bars": 3410,
+"holes": 0
+},
+"ICP": {
+"first": 1762624800000,
+"last": 1792616400000,
+"bars": 8332,
+"holes": 0
+},
+"INTC": {
+"first": 1770667200000,
+"last": 1792616400000,
+"bars": 6098,
+"holes": 0
+},
+"IWM": {
+"first": 1772571600000,
+"last": 1792616400000,
+"bars": 5569,
+"holes": 0
+},
+"JTO": {
+"first": 1770318000000,
+"last": 1792616400000,
+"bars": 6195,
+"holes": 0
+},
+"JUP": {
+"first": 1740427200000,
+"last": 1792616400000,
+"bars": 14498,
+"holes": 0
+},
+"KAITO": {
+"first": 1743181200000,
+"last": 1792616400000,
+"bars": 13733,
+"holes": 0
+},
+"KORU": {
+"bars": 0
+},
+"LDO": {
+"first": 1753264800000,
+"last": 1792616400000,
+"bars": 10932,
+"holes": 0
+},
+"LINEA": {
+"first": 1756724400000,
+"last": 1792616400000,
+"bars": 9971,
+"holes": 0
+},
+"LINK": {
+"first": 1737147600000,
+"last": 1792609200000,
+"bars": 15407,
+"holes": 0
+},
+"LIT": {
+"first": 1767373200000,
+"last": 1792616400000,
+"bars": 7013,
+"holes": 0
+},
+"LITE": {
+"first": 1779814800000,
+"last": 1792609200000,
+"bars": 3555,
+"holes": 0
+},
+"LTC": {
+"first": 1743181200000,
+"last": 1792616400000,
+"bars": 13733,
+"holes": 0
+},
+"MEGA": {
+"first": 1761166800000,
+"last": 1792616400000,
+"bars": 8737,
+"holes": 0
+},
+"MET": {
+"first": 1761321600000,
+"last": 1792594800000,
+"bars": 8688,
+"holes": 0
+},
+"META": {
+"first": 1764342000000,
+"last": 1792616400000,
+"bars": 7855,
+"holes": 0
+},
+"MINIMAX": {
+"first": 1782259200000,
+"last": 1792616400000,
+"bars": 2878,
+"holes": 0
+},
+"MKR": {
+"first": 1741194000000,
+"last": 1792594800000,
+"bars": 14279,
+"holes": 0
+},
+"MON": {
+"first": 1759917600000,
+"last": 1792616400000,
+"bars": 9084,
+"holes": 0
+},
+"MORPHO": {
+"first": 1755709200000,
+"last": 1792616400000,
+"bars": 10253,
+"holes": 0
+},
+"MRNA": {
+"first": 1787169600000,
+"last": 1792616400000,
+"bars": 1514,
+"holes": 0
+},
+"MRVL": {
+"first": 1778691600000,
+"last": 1792616400000,
+"bars": 3869,
+"holes": 0
+},
+"MSFT": {
+"first": 1764342000000,
+"last": 1792616400000,
+"bars": 7855,
+"holes": 0
+},
+"MSTR": {
+"first": 1767812400000,
+"last": 1792616400000,
+"bars": 6891,
+"holes": 0
+},
+"MU": {
+"first": 1777914000000,
+"last": 1792616400000,
+"bars": 4085,
+"holes": 0
+},
+"MYX": {
+"first": 1758189600000,
+"last": 1792616400000,
+"bars": 9564,
+"holes": 0
+},
+"NATGAS": {
+"first": 1774357200000,
+"last": 1792616400000,
+"bars": 5073,
+"holes": 0
+},
+"NBIS": {
+"first": 1781020800000,
+"last": 1792594800000,
+"bars": 3216,
+"holes": 0
+},
+"NEAR": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"NMR": {
+"first": 1756479600000,
+"last": 1792616400000,
+"bars": 10039,
+"holes": 0
+},
+"NOK": {
+"bars": 0
+},
+"NOW": {
+"first": 1780596000000,
+"last": 1792616400000,
+"bars": 3340,
+"holes": 0
+},
+"NVDA": {
+"first": 1764165600000,
+"last": 1792616400000,
+"bars": 7904,
+"holes": 0
+},
+"ONDO": {
+"first": 1745442000000,
+"last": 1792594800000,
+"bars": 13099,
+"holes": 0
+},
+"OP": {
+"first": 1753808400000,
+"last": 1792609200000,
+"bars": 10779,
+"holes": 0
+},
+"OPENAI": {
+"first": 1780664400000,
+"last": 1792616400000,
+"bars": 3321,
+"holes": 0
+},
+"ORCL": {
+"first": 1777993200000,
+"last": 1792609200000,
+"bars": 4061,
+"holes": 0
+},
+"OURA": {
+"first": 1790182800000,
+"last": 1792616400000,
+"bars": 677,
+"holes": 0
+},
+"PAXG": {
+"first": 1753714800000,
+"last": 1792616400000,
+"bars": 10807,
+"holes": 0
+},
+"PENDLE": {
+"first": 1745442000000,
+"last": 1792616400000,
+"bars": 13105,
+"holes": 0
+},
+"PENGU": {
+"first": 1753264800000,
+"last": 1792594800000,
+"bars": 10926,
+"holes": 0
+},
+"PIPPIN": {
+"first": 1770318000000,
+"last": 1792609200000,
+"bars": 6193,
+"holes": 0
+},
+"PLTR": {
+"first": 1764165600000,
+"last": 1792594800000,
+"bars": 7898,
+"holes": 0
+},
+"POL": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"PONS": {
+"first": 1788372000000,
+"last": 1792616400000,
+"bars": 1180,
+"holes": 0
+},
+"POPCAT": {
+"first": 1739638800000,
+"last": 1792609200000,
+"bars": 14715,
+"holes": 0
+},
+"POPMART": {
+"bars": 0
+},
+"PRL": {
+"first": 1790686800000,
+"last": 1792616400000,
+"bars": 537,
+"holes": 0
+},
+"PROVE": {
+"first": 1754413200000,
+"last": 1792594800000,
+"bars": 10607,
+"holes": 0
+},
+"PUMP": {
+"first": 1752512400000,
+"last": 1792616400000,
+"bars": 11141,
+"holes": 0
+},
+"PYTH": {
+"first": 1757336400000,
+"last": 1792616400000,
+"bars": 9801,
+"holes": 0
+},
+"QCOM": {
+"bars": 0
+},
+"QNT": {
+"first": 1790701200000,
+"last": 1792616400000,
+"bars": 533,
+"holes": 0
+},
+"QQQ": {
+"first": 1769097600000,
+"last": 1792616400000,
+"bars": 6534,
+"holes": 0
+},
+"RAY": {
+"first": 1789142400000,
+"last": 1792612800000,
+"bars": 965,
+"holes": 0
+},
+"RESOLV": {
+"first": 1753808400000,
+"last": 1792594800000,
+"bars": 10775,
+"holes": 0
+},
+"RIVER": {
+"first": 1769094000000,
+"last": 1792616400000,
+"bars": 6535,
+"holes": 0
+},
+"RKLB": {
+"first": 1780074000000,
+"last": 1792616400000,
+"bars": 3485,
+"holes": 0
+},
+"ROBO": {
+"first": 1772568000000,
+"last": 1792616400000,
+"bars": 5570,
+"holes": 0
+},
+"S": {
+"first": 1747324800000,
+"last": 1792616400000,
+"bars": 12582,
+"holes": 0
+},
+"SAMSUNG": {
+"first": 1770825600000,
+"last": 1792594800000,
+"bars": 6048,
+"holes": 0
+},
+"SEI": {
+"first": 1741982400000,
+"last": 1792616400000,
+"bars": 14066,
+"holes": 0
+},
+"SKHY": {
+"first": 1784052000000,
+"last": 1792594800000,
+"bars": 2374,
+"holes": 0
+},
+"SKHYNIX": {
+"first": 1770825600000,
+"last": 1792616400000,
+"bars": 6054,
+"holes": 0
+},
+"SKR": {
+"first": 1769187600000,
+"last": 1792612800000,
+"bars": 6508,
+"holes": 0
+},
+"SKY": {
+"first": 1758189600000,
+"last": 1792616400000,
+"bars": 9564,
+"holes": 0
+},
+"SNDK": {
+"first": 1770667200000,
+"last": 1792616400000,
+"bars": 6098,
+"holes": 0
+},
+"SOL": {
+"first": 1737100800000,
+"last": 1792609200000,
+"bars": 15420,
+"holes": 0
+},
+"SOXL": {
+"first": 1782226800000,
+"last": 1792616400000,
+"bars": 2887,
+"holes": 0
+},
+"SOXS": {
+"bars": 0
+},
+"SPCX": {
+"first": 1781272800000,
+"last": 1792616400000,
+"bars": 3152,
+"holes": 0
+},
+"SPX": {
+"first": 1749841200000,
+"last": 1792616400000,
+"bars": 11883,
+"holes": 0
+},
+"SPY": {
+"first": 1769097600000,
+"last": 1792609200000,
+"bars": 6532,
+"holes": 0
+},
+"STABLE": {
+"first": 1765483200000,
+"last": 1792616400000,
+"bars": 7538,
+"holes": 0
+},
+"STBL": {
+"first": 1758726000000,
+"last": 1792594800000,
+"bars": 9409,
+"holes": 0
+},
+"STRC": {
+"first": 1773946800000,
+"last": 1792616400000,
+"bars": 5187,
+"holes": 0
+},
+"STRK": {
+"first": 1762624800000,
+"last": 1792594800000,
+"bars": 8326,
+"holes": 0
+},
+"SUI": {
+"first": 1738357200000,
+"last": 1792616400000,
+"bars": 15073,
+"holes": 0
+},
+"SYRUP": {
+"first": 1751385600000,
+"last": 1792594800000,
+"bars": 11448,
+"holes": 0
+},
+"TAO": {
+"first": 1737147600000,
+"last": 1792609200000,
+"bars": 15407,
+"holes": 0
+},
+"TENCENT": {
+"first": 1784653200000,
+"last": 1792594800000,
+"bars": 2207,
+"holes": 0
+},
+"TIA": {
+"first": 1755709200000,
+"last": 1792616400000,
+"bars": 10253,
+"holes": 0
+},
+"TRUMP": {
+"first": 1738256400000,
+"last": 1792594800000,
+"bars": 15095,
+"holes": 0
+},
+"TRX": {
+"first": 1751385600000,
+"last": 1792594800000,
+"bars": 11448,
+"holes": 0
+},
+"TSLA": {
+"first": 1764165600000,
+"last": 1792616400000,
+"bars": 7904,
+"holes": 0
+},
+"TSM": {
+"first": 1778090400000,
+"last": 1792616400000,
+"bars": 4036,
+"holes": 0
+},
+"TTWO": {
+"first": 1790866800000,
+"last": 1792609200000,
+"bars": 485,
+"holes": 0
+},
+"UNI": {
+"first": 1741190400000,
+"last": 1792594800000,
+"bars": 14280,
+"holes": 0
+},
+"UNITREE": {
+"first": 1785942000000,
+"last": 1792616400000,
+"bars": 1855,
+"holes": 0
+},
+"USELESS": {
+"first": 1755709200000,
+"last": 1792616400000,
+"bars": 10253,
+"holes": 0
+},
+"VIRTUAL": {
+"first": 1749841200000,
+"last": 1792616400000,
+"bars": 11883,
+"holes": 0
+},
+"VVV": {
+"first": 1755709200000,
+"last": 1792594800000,
+"bars": 10247,
+"holes": 0
+},
+"WDC": {
+"bars": 0
+},
+"WEN": {
+"first": 1783346400000,
+"last": 1792609200000,
+"bars": 2574,
+"holes": 0
+},
+"WIF": {
+"first": 1737147600000,
+"last": 1792594800000,
+"bars": 15403,
+"holes": 0
+},
+"WLD": {
+"first": 1737147600000,
+"last": 1792612800000,
+"bars": 15408,
+"holes": 0
+},
+"WLFI": {
+"first": 1756224000000,
+"last": 1792616400000,
+"bars": 10110,
+"holes": 0
+},
+"XAG": {
+"first": 1760986800000,
+"last": 1792616400000,
+"bars": 8787,
+"holes": 0
+},
+"XAU": {
+"first": 1760986800000,
+"last": 1792616400000,
+"bars": 8787,
+"holes": 0
+},
+"XLM": {
+"first": 1765486800000,
+"last": 1792594800000,
+"bars": 7531,
+"holes": 0
+},
+"XMR": {
+"first": 1757336400000,
+"last": 1792616400000,
+"bars": 9801,
+"holes": 0
+},
+"XPD": {
+"first": 1771437600000,
+"last": 1792609200000,
+"bars": 5882,
+"holes": 0
+},
+"XPL": {
+"first": 1756224000000,
+"last": 1792616400000,
+"bars": 10110,
+"holes": 0
+},
+"XPT": {
+"first": 1771437600000,
+"last": 1792616400000,
+"bars": 5884,
+"holes": 0
+},
+"XRP": {
+"first": 1737147600000,
+"last": 1792616400000,
+"bars": 15409,
+"holes": 0
+},
+"ZEC": {
+"first": 1759485600000,
+"last": 1792594800000,
+"bars": 9198,
+"holes": 0
+},
+"ZHIPU": {
+"first": 1782259200000,
+"last": 1792616400000,
+"bars": 2878,
+"holes": 0
+},
+"ZK": {
+"first": 1753808400000,
+"last": 1792616400000,
+"bars": 10781,
+"holes": 0
+},
+"ZORA": {
+"first": 1753808400000,
+"last": 1792616400000,
+"bars": 10781,
+"holes": 0
+},
+"ZRO": {
+"first": 1754665200000,
+"last": 1792616400000,
+"bars": 10543,
+"holes": 0
+}
+}
+},
+"file_hashes": [
+{
+"path": "contracts.csv",
+"bytes": 11722,
+"sha256": "bd040f363ec869ffc6aeacd58f66bece070471b56b7fcf122269319a6df2e398"
+},
+{
+"path": "manifest.json",
+"bytes": 20261,
+"sha256": "bc61fe7ff3c13ba6aa50a5333eeef317d5b7ede56833dad9b2f0c610562d9b66"
+},
+{
+"path": "open/candles_1d/0G.parquet",
+"bytes": 14775,
+"sha256": "82071b4d02e10897c9d72231b11f3260d60aae9f8df0dd5dfd911e85c3e39392"
+},
+{
+"path": "open/candles_1d/1000BONK.parquet",
+"bytes": 42444,
+"sha256": "9aff867e8970879878f5b636efef251e594fa3a50c8d2f7d4bdfafcaa178834f"
+},
+{
+"path": "open/candles_1d/1000FLOKI.parquet",
+"bytes": 42378,
+"sha256": "0e9a1138212790ddefaeb709fa878fcecb19520cc7e539ff1350babc0009af5e"
+},
+{
+"path": "open/candles_1d/1000NOT.parquet",
+"bytes": 13944,
+"sha256": "bde9850943d9b56d44bc2aae9d3742a7b5757104293739f29b414e491b070b2e"
+},
+{
+"path": "open/candles_1d/1000PEPE.parquet",
+"bytes": 42943,
+"sha256": "89505caa40668f56ed53d81136ef257564599576e3f71d6a3c867eda44c6b648"
+},
+{
+"path": "open/candles_1d/1000SHIB.parquet",
+"bytes": 42242,
+"sha256": "b48340f74d3c1961075f01ec995e186e63fcd720e395654d1cf261c27445e66d"
+},
+{
+"path": "open/candles_1d/1000TOSHI.parquet",
+"bytes": 8052,
+"sha256": "02c7171f92a427fb105f0a30a6f29522c6195098de47c1be2ad4ed431d676a7f"
+},
+{
+"path": "open/candles_1d/2Z.parquet",
+"bytes": 14888,
+"sha256": "7046e09a9f814c083611bb518b5466af1e53271585526dab8ee1a1af924dff02"
+},
+{
+"path": "open/candles_1d/AAOI.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/AAPL.parquet",
+"bytes": 14271,
+"sha256": "7abfbf54e4df6622592de473fc41769f3c893d2abd85502eda122c94381a5850"
+},
+{
+"path": "open/candles_1d/AAVE.parquet",
+"bytes": 35429,
+"sha256": "3197c39b508d72c05eaa5df6daaf5debfda2d2a0d9d956dfb99ed1819ed23708"
+},
+{
+"path": "open/candles_1d/ADA.parquet",
+"bytes": 36365,
+"sha256": "423bc3af20eabc8bfbb93e4ec72c0bbfa769ab3b924740d3ee3601a90ecce504"
+},
+{
+"path": "open/candles_1d/AERO.parquet",
+"bytes": 15045,
+"sha256": "59989959df2444a0212c3e3fdd99192de5caf3402949cb41b1ace2ab2cd7c031"
+},
+{
+"path": "open/candles_1d/AI.parquet",
+"bytes": 7313,
+"sha256": "46d4b5356ba7594f6ab571b1f1b30d5834ea594574b71bfb39da86524ba418fc"
+},
+{
+"path": "open/candles_1d/AI16Z.parquet",
+"bytes": 23066,
+"sha256": "d5f5fc52f2d25d368cfda04f5bef44fc6462faa0b1565b6c951a33b807126b91"
+},
+{
+"path": "open/candles_1d/AMD.parquet",
+"bytes": 13340,
+"sha256": "eb8f798d123d01f6a5f53a003592c53644f51acb8d39b8b4d0e52aea4ad2c4db"
+},
+{
+"path": "open/candles_1d/AMZN.parquet",
+"bytes": 14167,
+"sha256": "d4b8c9e4f61837423187ebf70e3e33c9f8d7eee886dad08a4bf3e048c06e34c5"
+},
+{
+"path": "open/candles_1d/ANTHROPIC.parquet",
+"bytes": 10823,
+"sha256": "40fa398ee5eb59e1b5741a56b40a7088e229e0daa9e9c449552e574039474c0f"
+},
+{
+"path": "open/candles_1d/APT.parquet",
+"bytes": 38467,
+"sha256": "b18ca72c656fa37222a7032ee8de518f259fa49b6ac4467017a9a8f00a047bda"
+},
+{
+"path": "open/candles_1d/ARB.parquet",
+"bytes": 15130,
+"sha256": "dcccdd51a970635d7ea8e2c3821fb8acbaa57ffc4fa7b29b1b73f7ae9db4ea73"
+},
+{
+"path": "open/candles_1d/ARC.parquet",
+"bytes": 14890,
+"sha256": "47b9a2747aa2965fb39a6da2dd264b9406cacc2e6e1a9840208d14ab77e1d0b7"
+},
+{
+"path": "open/candles_1d/ARM.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/ASML.parquet",
+"bytes": 12496,
+"sha256": "8dcf2bad32816718f7ede526872daa716a39433882df676ac2eb0ca0a570bb14"
+},
+{
+"path": "open/candles_1d/ASTER.parquet",
+"bytes": 15015,
+"sha256": "ac11a4aa1304c515bb43ebb402c2b589aef783c307c9ac1e6cc19cb2dcd7c134"
+},
+{
+"path": "open/candles_1d/AVAX.parquet",
+"bytes": 42262,
+"sha256": "58cefb3b7af63bcb47e1c47bd7abaacf376f2119f18a75dcca5cfdb73054d414"
+},
+{
+"path": "open/candles_1d/AVGO.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/AVNT.parquet",
+"bytes": 14955,
+"sha256": "cd52afff9b633202452b3cc348a426b09ae016a500c6651705f0e5a908841382"
+},
+{
+"path": "open/candles_1d/AXS.parquet",
+"bytes": 14743,
+"sha256": "b83724c69badc86b760807ac66768a103bbc7275f11fe37d5694f872ea844276"
+},
+{
+"path": "open/candles_1d/AXTI.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/AZTEC.parquet",
+"bytes": 14846,
+"sha256": "0f7cce4fa9137fe2f1427e8d333b6f799004b95a6c167293d3d0d43252bd1928"
+},
+{
+"path": "open/candles_1d/BABA.parquet",
+"bytes": 11918,
+"sha256": "e4164c4db6a4fa12d9fe8b1283b618ba4f63075f6653baad059d11be0c263403"
+},
+{
+"path": "open/candles_1d/BB.parquet",
+"bytes": 11211,
+"sha256": "275de7b9fe8f772b54735d28e06ac08b6a9a6576f678b86abffc15fdebb88d20"
+},
+{
+"path": "open/candles_1d/BCH.parquet",
+"bytes": 14305,
+"sha256": "f50bf87bda7e7cf726fac66a3df036b3c1ae8b4d56d6d76a126b8d380c5c89bc"
+},
+{
+"path": "open/candles_1d/BE.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/BERA.parquet",
+"bytes": 41733,
+"sha256": "94fb14a71e10da36d286eba7619e79d22c5e1c923f0171bddf906c5b72e94820"
+},
+{
+"path": "open/candles_1d/BIO.parquet",
+"bytes": 13961,
+"sha256": "47b90a9810ed345c09ea9958bdf87a6f538850a7230ddebbddebe93b902dd7c7"
+},
+{
+"path": "open/candles_1d/BIRB.parquet",
+"bytes": 8134,
+"sha256": "d872da6cd7cd1d1c28b084e487ee2f0728d8310841e6ffd074ea8b76699383b7"
+},
+{
+"path": "open/candles_1d/BMNR.parquet",
+"bytes": 14001,
+"sha256": "bfd0eedc03d40871dbc085f2a7ae563bb9c8bdbd704a6850c0892f3952a7e67c"
+},
+{
+"path": "open/candles_1d/BNB.parquet",
+"bytes": 40909,
+"sha256": "d4d822aa2daa315c9524fd7d46c0c8cc336b2b1a64bb7455440f9344aa0266da"
+},
+{
+"path": "open/candles_1d/BOT.parquet",
+"bytes": 11898,
+"sha256": "8f540bfaafeb5c9efca0785b76ee36ba908602e05329d27949e2621b0fdc6acb"
+},
+{
+"path": "open/candles_1d/BTC.parquet",
+"bytes": 37513,
+"sha256": "56dafa5ef119d2a14f570bfffc0f639a957449a3157f6a9f7d8c5531870a61ce"
+},
+{
+"path": "open/candles_1d/BYD.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/CAP.parquet",
+"bytes": 11386,
+"sha256": "d50a5057043e3ae7f46f06e14c3e79c1f86cdc579034fe63b038124c814cc876"
+},
+{
+"path": "open/candles_1d/CBRS.parquet",
+"bytes": 12460,
+"sha256": "399cf98e463a0f391ed766ad62c88bfecee9c8fff0f3a91fbd5b816a2e130077"
+},
+{
+"path": "open/candles_1d/CC.parquet",
+"bytes": 15047,
+"sha256": "9f8fa8d8034631ada99c1cd6db38cffa14e03058e66569636cfbcf6e56fe4d66"
+},
+{
+"path": "open/candles_1d/CHIP.parquet",
+"bytes": 14958,
+"sha256": "67eb3f374eda3c698777cdf00807b866234d5fd16106a016660c1c60e5e4bd3a"
+},
+{
+"path": "open/candles_1d/COIN.parquet",
+"bytes": 14227,
+"sha256": "2d946842c607dffd69d9e0b3e0a2caf1cf99d8e9dfea7f96866e2dadfdee45cb"
+},
+{
+"path": "open/candles_1d/CRCL.parquet",
+"bytes": 14304,
+"sha256": "214c4dfdbecaed038a2cfbcfa920448b597002a3eaa1897c03fbc83aeeab9e8c"
+},
+{
+"path": "open/candles_1d/CRV.parquet",
+"bytes": 37809,
+"sha256": "8b33183dcad4a51f357f2ef69532b6adb0bb5119fe6de9552dd6ac948009d85b"
+},
+{
+"path": "open/candles_1d/CRWV.parquet",
+"bytes": 12784,
+"sha256": "f34b9c06c7b45dca8d3ea0d7758a15210e07bfcfcfaf14603a263fec06bf0748"
+},
+{
+"path": "open/candles_1d/CTR.parquet",
+"bytes": 12961,
+"sha256": "8ccb49db40741603b4badb77adfcdd52ad4f077813e1d9e638c46cc4bbe1f63e"
+},
+{
+"path": "open/candles_1d/CXMT.parquet",
+"bytes": 10209,
+"sha256": "94637ddec6f1b33c4ec1c12b5a0d27778cfd02197b9b6c53fcd6e4ac7b679635"
+},
+{
+"path": "open/candles_1d/DASH.parquet",
+"bytes": 14281,
+"sha256": "5ec5338c9a53de501de0ec1a681fab195ac8bafae89c456dae511c08016d51b9"
+},
+{
+"path": "open/candles_1d/DELL.parquet",
+"bytes": 11599,
+"sha256": "38d7a1b7f804ee3eb9994f310b7b21874c0c4475c10c6064dfdaddc528b1da5f"
+},
+{
+"path": "open/candles_1d/DIA.parquet",
+"bytes": 7065,
+"sha256": "36ce861ef01a60e1633f7b6731d9e3a87ba50bf39bec34106e77156f359157df"
+},
+{
+"path": "open/candles_1d/DOGE.parquet",
+"bytes": 43623,
+"sha256": "8c7aea980cd1ef3a6cf28e73583c853cf3063677f091724019770d15526aaf6f"
+},
+{
+"path": "open/candles_1d/DOLO.parquet",
+"bytes": 12988,
+"sha256": "0d38624cdd58f65336129b272dd3f08929ef88054eac744b79f0f4fcb134f2c9"
+},
+{
+"path": "open/candles_1d/DOT.parquet",
+"bytes": 43472,
+"sha256": "26137caffd6869a2d9bb7f26d6627dfab5022a0bb39afd9a520bacb1e0e8fc70"
+},
+{
+"path": "open/candles_1d/DRAM.parquet",
+"bytes": 11869,
+"sha256": "d839d9984403b313117e166f13a8c2b34fb0ed74c87bc60096f134983ed10c28"
+},
+{
+"path": "open/candles_1d/DUSK.parquet",
+"bytes": 8087,
+"sha256": "96f6a4b0b4619509b1299c00ea105d1eb1e5dff0e6bc7f468928ef289f1178f4"
+},
+{
+"path": "open/candles_1d/DYDX.parquet",
+"bytes": 14924,
+"sha256": "678ae1696edbca6e010bbcee899a40db5a7f446cd233c18368717736e1119447"
+},
+{
+"path": "open/candles_1d/EDEN.parquet",
+"bytes": 13311,
+"sha256": "701f3160507d0654b2b987c6993c997d41dd2e705f4812d3576edb757bc8ea0b"
+},
+{
+"path": "open/candles_1d/EDGE.parquet",
+"bytes": 15016,
+"sha256": "6b7a151e1df3b67542e5ed112e94124799e7e284f125ccff933da73bb7bcd333"
+},
+{
+"path": "open/candles_1d/EIGEN.parquet",
+"bytes": 15019,
+"sha256": "7f765b1318790e9561d157aff116cc836f82ca94f10cadb4cc328fdbdffa00f1"
+},
+{
+"path": "open/candles_1d/ENA.parquet",
+"bytes": 40993,
+"sha256": "1d470f9acfed4c1cc051b0abf1a7cdbbd7887e50222f0ee128806edb4e672632"
+},
+{
+"path": "open/candles_1d/ETH.parquet",
+"bytes": 37746,
+"sha256": "2c955a423aef1e619bca016ae60a14645a4acf6acaf0062b26520937cbee53ca"
+},
+{
+"path": "open/candles_1d/ETHFI.parquet",
+"bytes": 15036,
+"sha256": "27611b683158b75586ee7de1508d0bf03bc1c52f3afb14d39210baed49a4813e"
+},
+{
+"path": "open/candles_1d/EWY.parquet",
+"bytes": 12941,
+"sha256": "c7dd3680c01fc9500fef8be47dc4b841c5cfb40fcec272ea8e16b83e044b509f"
+},
+{
+"path": "open/candles_1d/FARTCOIN.parquet",
+"bytes": 42058,
+"sha256": "8fbfbe32e41e1f0226a058a7f96b6b7306e41fa5945aa734ff6f31a2e7bae084"
+},
+{
+"path": "open/candles_1d/FF.parquet",
+"bytes": 14776,
+"sha256": "239fc86b9d605cad1f60a45f71b3e8922541828c16978fa901a85a21950eee2f"
+},
+{
+"path": "open/candles_1d/FIL.parquet",
+"bytes": 15036,
+"sha256": "db6a9699fb4112c564e77f3156261926651de91e8038d6bfc81969b82680fd76"
+},
+{
+"path": "open/candles_1d/FOGO.parquet",
+"bytes": 13534,
+"sha256": "ea7308c093da2eea988e4461caae5e0465b790630fcbd6d479ddc82f76595b38"
+},
+{
+"path": "open/candles_1d/FOLKS.parquet",
+"bytes": 9635,
+"sha256": "8fb01187c3a003a18d86c336bf8ad50b8b7d832bdd50817560c2716e65cfb93f"
+},
+{
+"path": "open/candles_1d/GEV.parquet",
+"bytes": 8306,
+"sha256": "9829dd8247c9bfd55102499443bb1e4ee0fadab9d91492c003ad4d156fe0cdae"
+},
+{
+"path": "open/candles_1d/GME.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/GMX.parquet",
+"bytes": 14800,
+"sha256": "37634f7f56f4ec85d9369916c7327abbdc01dad0bff3f8d46e70e11c38f34157"
+},
+{
+"path": "open/candles_1d/GOOGL.parquet",
+"bytes": 13114,
+"sha256": "926462cb885aa005559f21e4826ec8c189d1c6068f7eec44f53a9ad412fd44ce"
+},
+{
+"path": "open/candles_1d/GRAM.parquet",
+"bytes": 43671,
+"sha256": "4351e659141c2a86f2f13d78c58cc416de6914f3e86062ef32f6f139a5a1d0aa"
+},
+{
+"path": "open/candles_1d/GRASS.parquet",
+"bytes": 15009,
+"sha256": "64db2d57e12f7e35ad98ea8b64d2b0d3eb682ed7ffdc6b964f81781673d4d821"
+},
+{
+"path": "open/candles_1d/HANMI.parquet",
+"bytes": 5754,
+"sha256": "7a45751e608ccef21fd2ba76d2505e28bb9a9d6fcd6a0ae4f3aa4478bf239a47"
+},
+{
+"path": "open/candles_1d/HBAR.parquet",
+"bytes": 14971,
+"sha256": "ce74d1e472d12405c9fe57f06e4be15c023fae2d34a5199925357d76dd5d7547"
+},
+{
+"path": "open/candles_1d/HOOD.parquet",
+"bytes": 14228,
+"sha256": "fe2db0d0122a0096d53f3688e95efb1a78678314bdfbec2defc6d3190aa6ed22"
+},
+{
+"path": "open/candles_1d/HYPE.parquet",
+"bytes": 40910,
+"sha256": "6de97489478f2b72c9cdcb3b17bfed10444888832c47d7214fbbab52edad9a8a"
+},
+{
+"path": "open/candles_1d/HYUNDAI.parquet",
+"bytes": 5754,
+"sha256": "ad22531898dc693cda537183643067fe9df16615a680517a16782806b275a60c"
+},
+{
+"path": "open/candles_1d/IBM.parquet",
+"bytes": 11563,
+"sha256": "f2612c86ccd7e2ad3c3114d43152a25e4ac5d1fe9db7fed4939a08187f90fe51"
+},
+{
+"path": "open/candles_1d/ICP.parquet",
+"bytes": 14954,
+"sha256": "902a9868d3b4e79b825fea1e47ec980b862dae1707d400c372e04441f6d913fc"
+},
+{
+"path": "open/candles_1d/INTC.parquet",
+"bytes": 14258,
+"sha256": "f370ba111d5e7518a83cd6414b55a661301fde755b93cfeee15ac3ee57874c35"
+},
+{
+"path": "open/candles_1d/IWM.parquet",
+"bytes": 12659,
+"sha256": "bf73e8fc89d3cd80b683ee38ae0701f95509a488b950537d2278bfc6769ee630"
+},
+{
+"path": "open/candles_1d/JTO.parquet",
+"bytes": 14996,
+"sha256": "5f43eb2570bb095591b92958d8b4eb19bc4153fc53f010e646138a5546648925"
+},
+{
+"path": "open/candles_1d/JUP.parquet",
+"bytes": 41292,
+"sha256": "43dd612aef95b2b312841104fdd9752d0d03dccb239cf9319285aea80b708127"
+},
+{
+"path": "open/candles_1d/KAITO.parquet",
+"bytes": 39305,
+"sha256": "98f0e735c8a493afaa3d4fd2d7fdbe703f6258509fec9090b174c0817a2b8723"
+},
+{
+"path": "open/candles_1d/KORU.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/LDO.parquet",
+"bytes": 15031,
+"sha256": "c95462454a90a55e98f8ac75e92c44c39eb9848e79e57b6196194a2e573ec588"
+},
+{
+"path": "open/candles_1d/LINEA.parquet",
+"bytes": 14548,
+"sha256": "27d24668f3bd7a51173390dd76a12667b6f46c5a1ed7a8644a244808a911a364"
+},
+{
+"path": "open/candles_1d/LINK.parquet",
+"bytes": 43397,
+"sha256": "6eedbc22181cb62d2825471302fe067ad771d05c04d99ffe3e2de1c91cebbe6c"
+},
+{
+"path": "open/candles_1d/LIT.parquet",
+"bytes": 15167,
+"sha256": "a4fd041183d394ebd47291d1eab14baa7dfdd20aaa66401ee422b10b44631863"
+},
+{
+"path": "open/candles_1d/LITE.parquet",
+"bytes": 11886,
+"sha256": "26e07eff4736a70d3339ffb2a5f501e0ecf7b039c7c2c6d61c8e9b3eac51f5a7"
+},
+{
+"path": "open/candles_1d/LTC.parquet",
+"bytes": 34547,
+"sha256": "4628b28e2033af17d4252181d7ff8dd5ddc49dae69fffc25f5322b168a4c5a4f"
+},
+{
+"path": "open/candles_1d/MEGA.parquet",
+"bytes": 14951,
+"sha256": "db3e65991a1381ae54eab7e4af8cdb8f51b0bf11596816c918afaeb217edd144"
+},
+{
+"path": "open/candles_1d/MET.parquet",
+"bytes": 15010,
+"sha256": "f6a6e3a638fd79c674f89b714f71b5e6b999c5f2ff45becf0d00ff4c65e24a18"
+},
+{
+"path": "open/candles_1d/META.parquet",
+"bytes": 13237,
+"sha256": "0f8788d41b421969b7d2f1125d7c4b023243c09ee3c28f478e40da74450c04ca"
+},
+{
+"path": "open/candles_1d/MINIMAX.parquet",
+"bytes": 10985,
+"sha256": "17082da8fd5dcf796682d33a2b51db92edb5eaa9d802cba9e4389abf843bef57"
+},
+{
+"path": "open/candles_1d/MKR.parquet",
+"bytes": 16950,
+"sha256": "3a20b51f2bc4b65ea8b505da70578d764a7ae0b6ebfcd8eb320ef277753a61ce"
+},
+{
+"path": "open/candles_1d/MON.parquet",
+"bytes": 14731,
+"sha256": "eec0b01bdd4f555d33fd429b6a8d132ee3a81a65e9a1d10b96228bde989e141b"
+},
+{
+"path": "open/candles_1d/MORPHO.parquet",
+"bytes": 14991,
+"sha256": "882787e37dafa6684aa468b0abdfd0f5e412675fc59ece8185907f919ea5eb54"
+},
+{
+"path": "open/candles_1d/MRNA.parquet",
+"bytes": 7630,
+"sha256": "3bbf5872e80c1f36489511f5c31e14e38d6be7d99c6ab4064f246bd75bf7c752"
+},
+{
+"path": "open/candles_1d/MRVL.parquet",
+"bytes": 12589,
+"sha256": "3eb0ca78f5da6d4c42d9d7e3b6365d7040d9ac958aca1eb9a6d5b1143a2860a7"
+},
+{
+"path": "open/candles_1d/MSFT.parquet",
+"bytes": 13297,
+"sha256": "f8aa0a4fe733736d5b87921ed476083fe8476e34cd4ff3c289552dddd452b61f"
+},
+{
+"path": "open/candles_1d/MSTR.parquet",
+"bytes": 13375,
+"sha256": "aa01677d23a0038421c959ba12aeb6609703adc11d5342a0a7870676652d9bd4"
+},
+{
+"path": "open/candles_1d/MU.parquet",
+"bytes": 12950,
+"sha256": "1c78e6038daeaaa56c3364703425a3433252b8e7366301f21786f6b9c151c9ff"
+},
+{
+"path": "open/candles_1d/MYX.parquet",
+"bytes": 12949,
+"sha256": "be11ff5916bcc03407c5855c15ca78c2855349604572babd3bf68c69a3a73dab"
+},
+{
+"path": "open/candles_1d/NATGAS.parquet",
+"bytes": 15010,
+"sha256": "2f7df764ab7b4b4fe7dcd6ae910d1c98b04a775bf73b72fa7c3e78979ecac2f8"
+},
+{
+"path": "open/candles_1d/NBIS.parquet",
+"bytes": 11251,
+"sha256": "cf8788a1b4d162af69b6a498883ab1e35521b7b49a68cacd5d2579377a675f5b"
+},
+{
+"path": "open/candles_1d/NEAR.parquet",
+"bytes": 43542,
+"sha256": "64733eaa22e83a895fa48a0578b8ec94135cd517395d96d57bff20e6eda64144"
+},
+{
+"path": "open/candles_1d/NMR.parquet",
+"bytes": 14912,
+"sha256": "68198f8323ebef418acc0587fd34ccbbbfc86cd59eaf2c0a28107febd5e80cad"
+},
+{
+"path": "open/candles_1d/NOK.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/NOW.parquet",
+"bytes": 11307,
+"sha256": "0f0ef1a23bdf4c25c39a974b521988b0a59eac9b5954f8154b538dca2c26f8b2"
+},
+{
+"path": "open/candles_1d/NVDA.parquet",
+"bytes": 14264,
+"sha256": "2d9b7783c9f96a8b3c23f3fb9832924811d30d0292c2d6a68b5a79ca1e6d2c61"
+},
+{
+"path": "open/candles_1d/ONDO.parquet",
+"bytes": 37745,
+"sha256": "e6cd5748469418f3a3ae39d2042505b09236f3bd5c20c9ff54f81a0c0344f2cd"
+},
+{
+"path": "open/candles_1d/OP.parquet",
+"bytes": 15064,
+"sha256": "57300ba1928115c942550c58e7147522e77b0d4bffae8c881172f018112bb72d"
+},
+{
+"path": "open/candles_1d/OPENAI.parquet",
+"bytes": 11401,
+"sha256": "664afd0b39001cf68269a7cbcf7ba873900f1330378b24046dfa2f3e16e12919"
+},
+{
+"path": "open/candles_1d/ORCL.parquet",
+"bytes": 12860,
+"sha256": "471cbdffe775482a06bf42ee72d8eae2842f4fc48f115acb216582b004b6c1b4"
+},
+{
+"path": "open/candles_1d/OURA.parquet",
+"bytes": 6026,
+"sha256": "fbfab00e22d5243b1dd2c5c653200ab01613386b79a3a1d4f61c3456ee3a7323"
+},
+{
+"path": "open/candles_1d/PAXG.parquet",
+"bytes": 13621,
+"sha256": "a590abd3429ebf74753046b8b84ec654c9b01183415b0e23f36bc3e67568089a"
+},
+{
+"path": "open/candles_1d/PENDLE.parquet",
+"bytes": 36085,
+"sha256": "c4353e6237804be1faf22ef774c54f8f4f12778ca2f0804d1a5e04228b9b2add"
+},
+{
+"path": "open/candles_1d/PENGU.parquet",
+"bytes": 14975,
+"sha256": "0b0307c81456d4ded10f412e157422a19541e61399d56b5c56e49b927e17fa7c"
+},
+{
+"path": "open/candles_1d/PIPPIN.parquet",
+"bytes": 8124,
+"sha256": "c1cb996f0b5931aa33aad48344d863983dc919c25bce4a5cb067e5c3f6c4a0a8"
+},
+{
+"path": "open/candles_1d/PLTR.parquet",
+"bytes": 14228,
+"sha256": "50d95e0b4ce68568e4fdffc51301e4e93906da7c321a4a223a20c3b621a8ad84"
+},
+{
+"path": "open/candles_1d/POL.parquet",
+"bytes": 43487,
+"sha256": "2a943333be3175ad204fa6cb8cc3d993ce3d9650ad33cf5ce5ffac6d5b5c6af5"
+},
+{
+"path": "open/candles_1d/PONS.parquet",
+"bytes": 7324,
+"sha256": "8f2e82a58f21213c78fb322edde980c6c72e065e8aa44a6d00d3d2e3ca60cac3"
+},
+{
+"path": "open/candles_1d/POPCAT.parquet",
+"bytes": 41469,
+"sha256": "ebb71577a066cfdce50a7883f69e07db04febdaf301517863390d0e8d27c69c7"
+},
+{
+"path": "open/candles_1d/POPMART.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/PRL.parquet",
+"bytes": 5719,
+"sha256": "99c2b16a26fc8a65254974879ad58b54e70452aed30e7e7b3dcd9440c7e0bff7"
+},
+{
+"path": "open/candles_1d/PROVE.parquet",
+"bytes": 14898,
+"sha256": "8dca029bdf18e0dbdcd6efab456cd02858633c8e2cdd9dcb3e19904511f2fe79"
+},
+{
+"path": "open/candles_1d/PUMP.parquet",
+"bytes": 14931,
+"sha256": "98d1eac0e14b5c2b754a5796c996ef3978ae6d6a10d45b4f77a74031328dd9b1"
+},
+{
+"path": "open/candles_1d/PYTH.parquet",
+"bytes": 14958,
+"sha256": "0bfe8f35eae4a62471731c4e6f7ab9ddf1b39d24ce69a822e7b66398bd3bc2e3"
+},
+{
+"path": "open/candles_1d/QCOM.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/QNT.parquet",
+"bytes": 5697,
+"sha256": "d0b9c2f91bbf838f8655e82584836de1c7e9072728f476554bbe0eef440aed64"
+},
+{
+"path": "open/candles_1d/QQQ.parquet",
+"bytes": 13044,
+"sha256": "f84e92afad3c415118a3fcbe3ab77d828ca2f113d4bd8cb27a5a834d4d8ddd89"
+},
+{
+"path": "open/candles_1d/RAY.parquet",
+"bytes": 6755,
+"sha256": "98ad81129aad9cb98311abcf50ba03b3f94c81b757f4a413f3801c00c1919fe1"
+},
+{
+"path": "open/candles_1d/RESOLV.parquet",
+"bytes": 13437,
+"sha256": "b02b6eb54cf4b17b18dd0bafe642fdc0e5de3853f69b922b38a419a48f676213"
+},
+{
+"path": "open/candles_1d/RIVER.parquet",
+"bytes": 13965,
+"sha256": "c705246fd8ad23398d975a7588101a4d564b5dfeb6c2b537d99689bdb9a5681a"
+},
+{
+"path": "open/candles_1d/RKLB.parquet",
+"bytes": 11746,
+"sha256": "d8b8c1231d7cee583c6fab17fe785ebc91ab83221a6531cfccc2edf3c8be7cf3"
+},
+{
+"path": "open/candles_1d/ROBO.parquet",
+"bytes": 14863,
+"sha256": "613e4fe676d551e610a04d6e51750a2fd41311180f7117286c7b858c893371da"
+},
+{
+"path": "open/candles_1d/S.parquet",
+"bytes": 35884,
+"sha256": "e218319f97b7678ab0c9c5544513f726d700c47d13d467b3d23af794a1237ad2"
+},
+{
+"path": "open/candles_1d/SAMSUNG.parquet",
+"bytes": 5754,
+"sha256": "88eee654319ec1bf57bff32c53bb2040220337b1e70270cb16b433df3512ff2b"
+},
+{
+"path": "open/candles_1d/SEI.parquet",
+"bytes": 40071,
+"sha256": "65c521e5395270804bca888f760969b4a7d77a604d37afbf73d4b908fb5b7b79"
+},
+{
+"path": "open/candles_1d/SKHY.parquet",
+"bytes": 9488,
+"sha256": "0d38d0926e7f5acd20753bed4b59f02901e9ef035ab04aa8569e187f4b04a438"
+},
+{
+"path": "open/candles_1d/SKHYNIX.parquet",
+"bytes": 5754,
+"sha256": "74e4c996f3ca2c060a94f56dd47daf475aa4df7c54be0788bc9e113c41cf0c46"
+},
+{
+"path": "open/candles_1d/SKR.parquet",
+"bytes": 15021,
+"sha256": "f043cf9c00c4e94bf3be2e7e643b7f36dc3e02ce5615118829f4975298f03aea"
+},
+{
+"path": "open/candles_1d/SKY.parquet",
+"bytes": 14897,
+"sha256": "d6b98e7d3b9f19ced19eb6a0ea5cb24c9013206f8e7ca8547caa45aa879744b7"
+},
+{
+"path": "open/candles_1d/SNDK.parquet",
+"bytes": 13482,
+"sha256": "d345427cc9792a73759d1f5718054945a591756851db4a768cdc7fa9bf3b2cdb"
+},
+{
+"path": "open/candles_1d/SOL.parquet",
+"bytes": 38125,
+"sha256": "f55a75be5f2425eb1abe1e98cd2a9b9e8214930b1d56f0eb93a87ba75fcf62ff"
+},
+{
+"path": "open/candles_1d/SOXL.parquet",
+"bytes": 10463,
+"sha256": "4c0f3681b7c277e067cde94039e6b47bb184188fe5fbbdc51796da06977ea934"
+},
+{
+"path": "open/candles_1d/SOXS.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/SPCX.parquet",
+"bytes": 11101,
+"sha256": "4a66fd8d22c42530e554ac4181d3d58f034b0f960e5c058b2b393d872dd6542c"
+},
+{
+"path": "open/candles_1d/SPX.parquet",
+"bytes": 34143,
+"sha256": "1c7467ab7bd57bdb262697b35030106aa5f8aecef3bc759eff994d5926feafa0"
+},
+{
+"path": "open/candles_1d/SPY.parquet",
+"bytes": 13036,
+"sha256": "e1a3cb9d202277dc51bdeab42f6441dbd2ddd86dcf6bd0cb03d6cd11ca0273f3"
+},
+{
+"path": "open/candles_1d/STABLE.parquet",
+"bytes": 14904,
+"sha256": "d320b508f10a877ba6485e2596b5de56aa05b379472db32edfae7d77f967401c"
+},
+{
+"path": "open/candles_1d/STBL.parquet",
+"bytes": 14428,
+"sha256": "025abba739b4f15cc6f23508882e9fa3a6ac3ca074e8a091e9057440dc173bb1"
+},
+{
+"path": "open/candles_1d/STRC.parquet",
+"bytes": 13731,
+"sha256": "e67f9a00e63701468f5b05e42fc4df536c270c464ec7f364ec4edd12163df911"
+},
+{
+"path": "open/candles_1d/STRK.parquet",
+"bytes": 14983,
+"sha256": "4d9ecc70acae30c6436dce2f41fbd1fd7aaf53c78f1e515aef8a503c8aa1417f"
+},
+{
+"path": "open/candles_1d/SUI.parquet",
+"bytes": 42810,
+"sha256": "bc809a63f64b5d1e7129455e6543651df966579f377b580f84b14c634f5953b5"
+},
+{
+"path": "open/candles_1d/SYRUP.parquet",
+"bytes": 14993,
+"sha256": "f4aea5305bc896c6fef493ab20d3a16f39be5c24c14f299175809724594b9f1a"
+},
+{
+"path": "open/candles_1d/TAO.parquet",
+"bytes": 37769,
+"sha256": "32207ac1613aebfbc5d31db722421e28615f011c73987bd2fd4e9bc4f6a6ab57"
+},
+{
+"path": "open/candles_1d/TENCENT.parquet",
+"bytes": 9549,
+"sha256": "385018aa7b1e898ddb692bcf58a948b9f0609578ec4342021287bff7cc083453"
+},
+{
+"path": "open/candles_1d/TIA.parquet",
+"bytes": 15051,
+"sha256": "0d46436ac872fa387e8bad82c25080ff43d0fb326a4277845ec08973143d3f0d"
+},
+{
+"path": "open/candles_1d/TRUMP.parquet",
+"bytes": 41534,
+"sha256": "df903c8a8ba95759b3fa3a3f30fd4c8a9aaa8b852056f5981f81dee8726ab6b7"
+},
+{
+"path": "open/candles_1d/TRX.parquet",
+"bytes": 14926,
+"sha256": "3623b7917d130c2cf3d33cabd50e94c7e85fce1ff132165ff6e016b41fdd4802"
+},
+{
+"path": "open/candles_1d/TSLA.parquet",
+"bytes": 13315,
+"sha256": "b6bec0a577167b4dbea087bd91ae95f6227ad6fc9ac54cf1b5e515c323f948fb"
+},
+{
+"path": "open/candles_1d/TSM.parquet",
+"bytes": 12654,
+"sha256": "6803a00e4b804c8645873b5613e8bff21c55c3c7366b8433f138548c92217630"
+},
+{
+"path": "open/candles_1d/TTWO.parquet",
+"bytes": 5449,
+"sha256": "ce6ce1fb6b81cc3c878f7eec23c715d081e657aa53c6664d030c144aa0d36d46"
+},
+{
+"path": "open/candles_1d/UNI.parquet",
+"bytes": 39722,
+"sha256": "fcd50264dbdebc78803978b483b0c796bd4df552dfba271fa854594f4f464f4d"
+},
+{
+"path": "open/candles_1d/UNITREE.parquet",
+"bytes": 8985,
+"sha256": "28217318ab7a0ca8f00a58032ee104857b804ee60863e8b0a33dce53932e15aa"
+},
+{
+"path": "open/candles_1d/USELESS.parquet",
+"bytes": 15143,
+"sha256": "42daf5255b0f46f5d9b58af9477bf6ceeacf2197c3e031a0c75ced6678891cb7"
+},
+{
+"path": "open/candles_1d/VIRTUAL.parquet",
+"bytes": 34119,
+"sha256": "fce9718b794a3fd4ff697264468a159f3ef927fa0ce0e18c186737b23f88f561"
+},
+{
+"path": "open/candles_1d/VVV.parquet",
+"bytes": 15005,
+"sha256": "84e629e22f0a4fb7ace46ad4f1ac84aa35b8cef66f4b6b5c14b0c7bfdee72290"
+},
+{
+"path": "open/candles_1d/WDC.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1d/WEN.parquet",
+"bytes": 10269,
+"sha256": "760821fbc8e58a3e365ecbad503ea2c28e73f028127c171b0bd425850a4a2b05"
+},
+{
+"path": "open/candles_1d/WIF.parquet",
+"bytes": 43563,
+"sha256": "b184887adc5d8b3a0699ec7e4e39679f02a71a8cd8689f496b67d4d379f3d4dd"
+},
+{
+"path": "open/candles_1d/WLD.parquet",
+"bytes": 43765,
+"sha256": "64b661af1c1e3172117b9b70bcc3ce87d7c6151b39d0aad12f4e368360300ed5"
+},
+{
+"path": "open/candles_1d/WLFI.parquet",
+"bytes": 14717,
+"sha256": "9f849816ef523a64bd03c4a7f21ab1acc93344c5b4a6c93ff13186914a8450b4"
+},
+{
+"path": "open/candles_1d/XAG.parquet",
+"bytes": 15139,
+"sha256": "6a60f79feef3994bce7769c82816274e6fa070dfb2afb9489137c52dac2ae75c"
+},
+{
+"path": "open/candles_1d/XAU.parquet",
+"bytes": 13636,
+"sha256": "c3e65a3ad3ebd755424c2fdd29a68873a300657b61e4c2b7c9044a04c44e6683"
+},
+{
+"path": "open/candles_1d/XLM.parquet",
+"bytes": 15056,
+"sha256": "7c02102059f34b7cafc8a8d639fd7c5ec66e72790d9cb2978ce06e48ee4e68e5"
+},
+{
+"path": "open/candles_1d/XMR.parquet",
+"bytes": 14292,
+"sha256": "082d44411104b4a9a8f23401c6b95bf34584571e1c916653f20c6d6b7fcae56f"
+},
+{
+"path": "open/candles_1d/XPD.parquet",
+"bytes": 12666,
+"sha256": "8c415c8b3e08ea4a8375e9a8d25c0343cc05e1ee086585504c121c7a046b7a06"
+},
+{
+"path": "open/candles_1d/XPL.parquet",
+"bytes": 15036,
+"sha256": "215c7546b80325e922cd6e8d11c05d218ade02d08039315dea3eb5c0c4cbebd7"
+},
+{
+"path": "open/candles_1d/XPT.parquet",
+"bytes": 12675,
+"sha256": "e4081ec359eeccc2c4f2a4077ba897b200be75e8086f423e3653a83c64c688b6"
+},
+{
+"path": "open/candles_1d/XRP.parquet",
+"bytes": 43423,
+"sha256": "ee50c61a991258fbfa64ec14e4f997c9c7b3398946744aefe3eb7a58ef180564"
+},
+{
+"path": "open/candles_1d/ZEC.parquet",
+"bytes": 14423,
+"sha256": "d3aae515e92fc57178aa3bdbbf35631aaaac5278a145ff84fcb7e16a69987058"
+},
+{
+"path": "open/candles_1d/ZHIPU.parquet",
+"bytes": 10416,
+"sha256": "db159f4aba11587451172fc4c9866fcd8bd0e45da491ea3bb71156c35d0422f5"
+},
+{
+"path": "open/candles_1d/ZK.parquet",
+"bytes": 14980,
+"sha256": "8221070222a869d849fd876c97b29bf2046814bb34714ecaaa33c285860d8353"
+},
+{
+"path": "open/candles_1d/ZORA.parquet",
+"bytes": 14920,
+"sha256": "44b770b1af1f4b0f1ed8897f473d81366ca637a1c104d89c921ff801fae2ceb2"
+},
+{
+"path": "open/candles_1d/ZRO.parquet",
+"bytes": 15061,
+"sha256": "cd89af75f22af24f4a29726e6c73f14ce2fa69167f774f71bf7dda2174323a1b"
+},
+{
+"path": "open/candles_1h/0G.parquet",
+"bytes": 390454,
+"sha256": "94e0b41aa48eadcdc04bbe88cc1d84dabad7561ef8f4a9fbfc4d69377b4b82cd"
+},
+{
+"path": "open/candles_1h/1000BONK.parquet",
+"bytes": 803994,
+"sha256": "b68de42863bf9cdafb534796e49f4476f276a416704eb81821f0a46c269b333f"
+},
+{
+"path": "open/candles_1h/1000FLOKI.parquet",
+"bytes": 804507,
+"sha256": "8e59dcb81a38bce60e974042cc1ded296ed0b0a3f92cf1418b41aaccdb61945f"
+},
+{
+"path": "open/candles_1h/1000NOT.parquet",
+"bytes": 135319,
+"sha256": "b5e21f3f70c7c8b1f20b167601f1db4d4cc53109c80db951e2e60e02c6ea5675"
+},
+{
+"path": "open/candles_1h/1000PEPE.parquet",
+"bytes": 723935,
+"sha256": "ee8c50dfec2e6f30e7301e567bfc68112795ff7e333bb53c3c077c8e303b1a1c"
+},
+{
+"path": "open/candles_1h/1000SHIB.parquet",
+"bytes": 707219,
+"sha256": "4dcff2b068d00bd35bdfbeb942d282a88667e273117bd4bd38808afdf1d50e4a"
+},
+{
+"path": "open/candles_1h/1000TOSHI.parquet",
+"bytes": 278062,
+"sha256": "e44eed067bd56c4a0463620aebcfd2d4bb98aab35cbba7c02cab91e737857a8b"
+},
+{
+"path": "open/candles_1h/2Z.parquet",
+"bytes": 430250,
+"sha256": "4d716dbb3b72fb459d8de778b16cf66c8ebb3d011cca2102266d4421557fe4a6"
+},
+{
+"path": "open/candles_1h/AAOI.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/AAPL.parquet",
+"bytes": 322509,
+"sha256": "dd2af0b1da69b67c3c45c556563136efe2a92300da41d24b73583627d63dc8b7"
+},
+{
+"path": "open/candles_1h/AAVE.parquet",
+"bytes": 725692,
+"sha256": "139fb812a8c84b60061106b07d4deda8af30358e2f0c0d67bb545431fac257d6"
+},
+{
+"path": "open/candles_1h/ADA.parquet",
+"bytes": 733559,
+"sha256": "e7bb98be3b4936e44a947f5ac27b80aeb2c497f4db213ab605d6e151fe50c10c"
+},
+{
+"path": "open/candles_1h/AERO.parquet",
+"bytes": 587224,
+"sha256": "0b22e231fa1e7d1c1220126475fd21ff4d98b478a6287b63f9515534d7ec61f5"
+},
+{
+"path": "open/candles_1h/AI.parquet",
+"bytes": 75115,
+"sha256": "3825d88e46e79f8e97946547dcd24e007df0b6f9c234a97ae26ec9cb87060c1a"
+},
+{
+"path": "open/candles_1h/AI16Z.parquet",
+"bytes": 433227,
+"sha256": "0ce94352d50f50e7d1d3d52d0db01c91902ab6b42ee048be6d4b1ce0e460c654"
+},
+{
+"path": "open/candles_1h/AMD.parquet",
+"bytes": 256870,
+"sha256": "a2ec6485c4ab9abac8861797ab831dbe6e6b915995ea1088aeeaf6c31251dd47"
+},
+{
+"path": "open/candles_1h/AMZN.parquet",
+"bytes": 331939,
+"sha256": "5b36a4842cf9cc1f53583063f5894bb5324c99ca15ad0bfaed7657d685a3dccc"
+},
+{
+"path": "open/candles_1h/ANTHROPIC.parquet",
+"bytes": 120747,
+"sha256": "da02e3db53843b9cabc13f1702ae68f246737e268a6a0bbaf2fd0ba672cdd71c"
+},
+{
+"path": "open/candles_1h/APT.parquet",
+"bytes": 684365,
+"sha256": "cba3e50c5e1af1e919b320c6f576db14f830dfe087aec93582f4bdf4306cdd80"
+},
+{
+"path": "open/candles_1h/ARB.parquet",
+"bytes": 601754,
+"sha256": "aed3ae51e53b1ef96621196849d3cc0bdbad3e8cf8e7e2aeaf70cf4aa753a52a"
+},
+{
+"path": "open/candles_1h/ARC.parquet",
+"bytes": 307575,
+"sha256": "6dbfb1747d8145cc22d78ac4b291f0acfcd379a7a8dc5e0486a0156135c741c5"
+},
+{
+"path": "open/candles_1h/ARM.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/ASML.parquet",
+"bytes": 133165,
+"sha256": "edac96e566380c772a7a55432d222291d4d77e37c1b9b8fba0bfe0727bacb2d5"
+},
+{
+"path": "open/candles_1h/ASTER.parquet",
+"bytes": 501245,
+"sha256": "77028fbd5fb61cf3c831bb3f64c73a010bbfa105e37acbd381382f7b7900a310"
+},
+{
+"path": "open/candles_1h/AVAX.parquet",
+"bytes": 830389,
+"sha256": "6bb0dc529263a6ebe0328d12620bdce136ac4c3fc3cf7cb542c27a4080226fbb"
+},
+{
+"path": "open/candles_1h/AVGO.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/AVNT.parquet",
+"bytes": 471768,
+"sha256": "b0a2adf8be3387f67a1870b15cf6097706e93342dbe7194ce7c0233bff7bc47a"
+},
+{
+"path": "open/candles_1h/AXS.parquet",
+"bytes": 241712,
+"sha256": "2997d7b402a7bab60da9417385bb448829361858fc36cbf3608ba27055508d6a"
+},
+{
+"path": "open/candles_1h/AXTI.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/AZTEC.parquet",
+"bytes": 262161,
+"sha256": "b10c203e7882f0960e1f5c824dff8921722c0401c2628b9412feb94daf0ae3e7"
+},
+{
+"path": "open/candles_1h/BABA.parquet",
+"bytes": 126700,
+"sha256": "c4ba04c98545403ba261db8bc68fdce13ae53fc8fbc4a5baa3cde54a9c561008"
+},
+{
+"path": "open/candles_1h/BB.parquet",
+"bytes": 107655,
+"sha256": "18741042b2f3dd6a5b6a83c0977aeeee35aa346ebb3f5afc6ad0a967aa0eb695"
+},
+{
+"path": "open/candles_1h/BCH.parquet",
+"bytes": 527251,
+"sha256": "192d941b345e303fa4b740788d0361db93f7223148025d6da27773df77077e3a"
+},
+{
+"path": "open/candles_1h/BE.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/BERA.parquet",
+"bytes": 853787,
+"sha256": "b3fba80c977e304241bc905f40633d12d0234bab15eeb1bb15a64048c183e078"
+},
+{
+"path": "open/candles_1h/BIO.parquet",
+"bytes": 153976,
+"sha256": "67df1147759e0a996c5d22c5393e08036dcc7e688ec1be0f00996e7b42f6c461"
+},
+{
+"path": "open/candles_1h/BIRB.parquet",
+"bytes": 168594,
+"sha256": "50c4f8e49caacc513d322a0d35275cf4bfd5818d1fb7b2b10d0403f5f31ed7ee"
+},
+{
+"path": "open/candles_1h/BMNR.parquet",
+"bytes": 230287,
+"sha256": "52c4c00fb869ad49a254abbfb78d52084fbb73da8c3c55ca1d24a52f4db57d5d"
+},
+{
+"path": "open/candles_1h/BNB.parquet",
+"bytes": 819166,
+"sha256": "6751a89901e0f0215d715eb5766323e2a06e9cc8706438f57a36dcfc937a0d89"
+},
+{
+"path": "open/candles_1h/BOT.parquet",
+"bytes": 106997,
+"sha256": "18d0b33392562633485e09c1040cd56c6cefe5c416ee1960298ad52cbc0ee622"
+},
+{
+"path": "open/candles_1h/BTC.parquet",
+"bytes": 830377,
+"sha256": "e400c4aa687bdcf7be9d4c8ab2d2697c5f72f361d545eb9eee49e12720bb647c"
+},
+{
+"path": "open/candles_1h/BYD.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/CAP.parquet",
+"bytes": 144959,
+"sha256": "3b7ae0dd3895a6437a395f436289a93837cc5979761a55c88340a0ba422b798b"
+},
+{
+"path": "open/candles_1h/CBRS.parquet",
+"bytes": 168829,
+"sha256": "57506ef43d7aa76ea0f5e728174288b6f69ee8c717dcd7bca363827486417875"
+},
+{
+"path": "open/candles_1h/CC.parquet",
+"bytes": 411142,
+"sha256": "304809ba9c06328d611c8cd7ab08ab5adce933e3bdba4e473e533c4f9ef0310c"
+},
+{
+"path": "open/candles_1h/CHIP.parquet",
+"bytes": 206826,
+"sha256": "27ed3aad0540dff3887d50640532061048aaa9e4a2cc46690bdb3100a44d2802"
+},
+{
+"path": "open/candles_1h/COIN.parquet",
+"bytes": 351222,
+"sha256": "e5ec2ae6618f809bb68e0bb85fa07c0bc9a18566683479d211c20984c7753aa3"
+},
+{
+"path": "open/candles_1h/CRCL.parquet",
+"bytes": 325129,
+"sha256": "2dbf4cb4d6b52ce4af44efcea11773e514a9363f708122974ceb0510c0ad9dbf"
+},
+{
+"path": "open/candles_1h/CRV.parquet",
+"bytes": 767243,
+"sha256": "aea26582839d0b22ebcb003c2cb1ad7d1f1f8d7f11e9c311914032f86e624343"
+},
+{
+"path": "open/candles_1h/CRWV.parquet",
+"bytes": 144514,
+"sha256": "a48284911d5634c693972a5e729765bcb8eada3778b34bad6e0bf688b22956db"
+},
+{
+"path": "open/candles_1h/CTR.parquet",
+"bytes": 115065,
+"sha256": "340c4ef8d05bdf858911abfd7fba8e5a5ca009dfa8895b682ea474cfe74a5416"
+},
+{
+"path": "open/candles_1h/CXMT.parquet",
+"bytes": 99827,
+"sha256": "bb38241ddd6b7be83927eab4c28c3c85c674bc272676d0404cf2cfc4ebcf9514"
+},
+{
+"path": "open/candles_1h/DASH.parquet",
+"bytes": 275707,
+"sha256": "f1469b9190f6b60345292cdc909f78dfaa45da305a5092f742b3154dba4c8507"
+},
+{
+"path": "open/candles_1h/DELL.parquet",
+"bytes": 126781,
+"sha256": "e73abc2ab21a65d239276b52a989613847c192d7c5e3836c9997f935a6f54c2a"
+},
+{
+"path": "open/candles_1h/DIA.parquet",
+"bytes": 70793,
+"sha256": "031fddb017bb54e989a70118ceb0a1de1a9054b0d8dd48fa8c208a9c5b6102b2"
+},
+{
+"path": "open/candles_1h/DOGE.parquet",
+"bytes": 955403,
+"sha256": "e0a00aa424e48a37bf37e4bb670a368eaf97ded03828f0893a58af92af28b817"
+},
+{
+"path": "open/candles_1h/DOLO.parquet",
+"bytes": 388840,
+"sha256": "9bb82b8abc47a636a18cc1248f59d5b46f38ca77fb4a4f5702b55a6ac25870cb"
+},
+{
+"path": "open/candles_1h/DOT.parquet",
+"bytes": 926467,
+"sha256": "fe700a99aee6d05e224e3bd115f5f9cab416a3d8a5ba14ace2e8b7f3f709c6b2"
+},
+{
+"path": "open/candles_1h/DRAM.parquet",
+"bytes": 154647,
+"sha256": "18cbef008b99625dda0d3c33d891a82b82b22fa7a4596dfd29f857401cd1d44b"
+},
+{
+"path": "open/candles_1h/DUSK.parquet",
+"bytes": 174451,
+"sha256": "b88180762e962713c06e87575f85ddbcf5afc48ac3c69549b19648ffe0ca991c"
+},
+{
+"path": "open/candles_1h/DYDX.parquet",
+"bytes": 547747,
+"sha256": "dfeac80a4314490c53a8cb3a88b232598a9148cffbe30ec7c7d90b10e98c9618"
+},
+{
+"path": "open/candles_1h/EDEN.parquet",
+"bytes": 392930,
+"sha256": "51d4af24bc79ffe99f5289910d4f9df68aae87d40db610a1a8f8c4b59c231618"
+},
+{
+"path": "open/candles_1h/EDGE.parquet",
+"bytes": 262919,
+"sha256": "206daa51e7f5d30c0c5ab3089da10518521a2df8ffea64b1bbbbbafefe6f7866"
+},
+{
+"path": "open/candles_1h/EIGEN.parquet",
+"bytes": 614355,
+"sha256": "aa7c697b878b06b1eaa56f3ed8ae6d4e4aa5bdf9cd5a169489513fe1860592b8"
+},
+{
+"path": "open/candles_1h/ENA.parquet",
+"bytes": 783211,
+"sha256": "c3fae9309c96d034145672c9cf13a1f668532bd23fb01500270ab009fae04dde"
+},
+{
+"path": "open/candles_1h/ETH.parquet",
+"bytes": 797637,
+"sha256": "4fdd5651d05148f0d25f48abc489b1ac52aa27f540355fbcea07fa1d84ae3ae4"
+},
+{
+"path": "open/candles_1h/ETHFI.parquet",
+"bytes": 606184,
+"sha256": "66c16b84529f3ed499b498a102d5aebf82426c8a719ee0c0229c74b959afb4a3"
+},
+{
+"path": "open/candles_1h/EWY.parquet",
+"bytes": 168244,
+"sha256": "0c56fce9ed0bc4653c8981db77ebec22fae64480a5f394e3c8c0c98ca8712da9"
+},
+{
+"path": "open/candles_1h/FARTCOIN.parquet",
+"bytes": 863306,
+"sha256": "87c0f5c365eb0cb4fda8fe4ce3d6796bb5acc450d66c65817095f4bf1087f668"
+},
+{
+"path": "open/candles_1h/FF.parquet",
+"bytes": 419963,
+"sha256": "00377f39acbe4570150c67ec9a213b24397066dd7450fe7a70241a91582bbba1"
+},
+{
+"path": "open/candles_1h/FIL.parquet",
+"bytes": 490600,
+"sha256": "51d9381721384e3b6e2215ba1708e9c67ba28f57229d2ce13c88789cc6f4cc81"
+},
+{
+"path": "open/candles_1h/FOGO.parquet",
+"bytes": 293220,
+"sha256": "1a58dd76035b4e2e84a17702d3997924d792a87953d03ccd25bc2f56f936483b"
+},
+{
+"path": "open/candles_1h/FOLKS.parquet",
+"bytes": 79539,
+"sha256": "8a9fccfcc6289c6ae7f463acd9ba4fdc0a4de53e20a3326f115c0850b12ed9ac"
+},
+{
+"path": "open/candles_1h/GEV.parquet",
+"bytes": 37551,
+"sha256": "656625a2391391bea4ab945ab01216b263f9a0d3db45a33f7f84b6d0adcb7214"
+},
+{
+"path": "open/candles_1h/GME.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/GMX.parquet",
+"bytes": 462844,
+"sha256": "605e78935b552f4dbaf062b89959bcc2ba137cdf6791890c2eefe2ae3a725b98"
+},
+{
+"path": "open/candles_1h/GOOGL.parquet",
+"bytes": 305670,
+"sha256": "f2caa667528ed70f03c57e99363a6e031e24a00dc7f49f769c09b76554e51735"
+},
+{
+"path": "open/candles_1h/GRAM.parquet",
+"bytes": 935929,
+"sha256": "5b2c72c76135aa966771e6c1ed5cf5e78c94d94076c05237648b3b9e5b8c785f"
+},
+{
+"path": "open/candles_1h/GRASS.parquet",
+"bytes": 579094,
+"sha256": "3043d1d8a818b71d055af9f2e94b9f59160f84c2f37d90fbdc69f7f9ac5e9ebf"
+},
+{
+"path": "open/candles_1h/HANMI.parquet",
+"bytes": 72929,
+"sha256": "ea3c0c5f0c2af8e5267fb5caf3bf482c6fd4d81b6c69e4c4f626fed2702e55a6"
+},
+{
+"path": "open/candles_1h/HBAR.parquet",
+"bytes": 532495,
+"sha256": "71d8550b3406bea82f949216312cba6517bb6224f5e9b40457b8162b7e974564"
+},
+{
+"path": "open/candles_1h/HOOD.parquet",
+"bytes": 356044,
+"sha256": "5f51fcbfbdd1ade076bada9dfb25a127388aef26a68dd87355dc5a36176e36f8"
+},
+{
+"path": "open/candles_1h/HYPE.parquet",
+"bytes": 831208,
+"sha256": "ada33fe480d41835f28f37e979a1c9fdd2d5e65f20c114a29a138123f2912f61"
+},
+{
+"path": "open/candles_1h/HYUNDAI.parquet",
+"bytes": 85161,
+"sha256": "0b5646f74491078fa33acb4b3d7955ba0f726be5ed3dc661c9df7f76538cebf3"
+},
+{
+"path": "open/candles_1h/IBM.parquet",
+"bytes": 121975,
+"sha256": "56ce890610809e8c2fbd1c2d083d88b61cc8ff501c3a0165579c09419d75d38c"
+},
+{
+"path": "open/candles_1h/ICP.parquet",
+"bytes": 397232,
+"sha256": "b2c52d31276972f212f1cdc0bd6ebf32c9cf0f807cc1d76b69ae92af13ecc0bb"
+},
+{
+"path": "open/candles_1h/INTC.parquet",
+"bytes": 288807,
+"sha256": "b2ddabd03a0c0434aa3f877efa6671b28644587f61f206acd2df9209a8848862"
+},
+{
+"path": "open/candles_1h/IWM.parquet",
+"bytes": 130558,
+"sha256": "606d30edcf3f78395cc5dfbbee589907c8312259d7a256e4f24352cc3ef19f85"
+},
+{
+"path": "open/candles_1h/JTO.parquet",
+"bytes": 347450,
+"sha256": "363f857661b1b4bfa766be846dbe763fab4ff2af39a73697da0e80a4ff009301"
+},
+{
+"path": "open/candles_1h/JUP.parquet",
+"bytes": 814093,
+"sha256": "cafe969f5612ce31374ced80bf5a5ac974e5c3c3f1c341a52c3365548c811c69"
+},
+{
+"path": "open/candles_1h/KAITO.parquet",
+"bytes": 770404,
+"sha256": "847b1bb91ba453adf211329846605c27eb0d37e1f54e489a845b3d793c7227b2"
+},
+{
+"path": "open/candles_1h/KORU.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/LDO.parquet",
+"bytes": 644114,
+"sha256": "207fd5408d77a58c308decd7b5a8e12a2f484c7cdcdb7296e7b595a11fc7d4ef"
+},
+{
+"path": "open/candles_1h/LINEA.parquet",
+"bytes": 433741,
+"sha256": "fead167047603764c58b98e04b68a6888c96b63074f3555c80130261e5daaa06"
+},
+{
+"path": "open/candles_1h/LINK.parquet",
+"bytes": 942644,
+"sha256": "ee794517a070a52efd456652e78ce2ae74a1a4fc429c8dbacd1cd6ff0ed159ff"
+},
+{
+"path": "open/candles_1h/LIT.parquet",
+"bytes": 357433,
+"sha256": "2c2f5335d9d03a5cd0c690729a761c40c1a1540775f4d1ee8d2291ec85182e65"
+},
+{
+"path": "open/candles_1h/LITE.parquet",
+"bytes": 137158,
+"sha256": "9a7de50c9b994744cbaf945787ebc45c016b735874172562a8ff24a201ee9167"
+},
+{
+"path": "open/candles_1h/LTC.parquet",
+"bytes": 667987,
+"sha256": "8962a54fed99be299246e71302b27cae1bc69d9799ddabf36cca0ee0d58fecbe"
+},
+{
+"path": "open/candles_1h/MEGA.parquet",
+"bytes": 416816,
+"sha256": "b3b8708b9a66870bb2fdd94b6147b2621d114c65cf58aaa4c73bdcb9d73edf80"
+},
+{
+"path": "open/candles_1h/MET.parquet",
+"bytes": 446173,
+"sha256": "dfd90ec0b6dc58be451f72c47ad1519dc3b98f45e9fde2918208783834434aa3"
+},
+{
+"path": "open/candles_1h/META.parquet",
+"bytes": 306494,
+"sha256": "826cb842e5356e8c629f78f11c5edc98d392691a55a9bec1fb028b19b7e81724"
+},
+{
+"path": "open/candles_1h/MINIMAX.parquet",
+"bytes": 104266,
+"sha256": "b0cebf30391a88309207d52f4acddf30985b82be553ba9edf26344e53d449a07"
+},
+{
+"path": "open/candles_1h/MKR.parquet",
+"bytes": 298872,
+"sha256": "74b302705b6b6c02617a699fd007a71a3ab38bec8ffbb970fb6e9f1ae2bad491"
+},
+{
+"path": "open/candles_1h/MON.parquet",
+"bytes": 375751,
+"sha256": "97cf472672b9d17cea1a668a51bf03acafaf2c4dbe86cc7d7d8ba80fd74d9b49"
+},
+{
+"path": "open/candles_1h/MORPHO.parquet",
+"bytes": 596851,
+"sha256": "e6cc8b85bbc2237c7a8ae3c9c005324a1261b99322ef391ebc16c8c24fd7f84f"
+},
+{
+"path": "open/candles_1h/MRNA.parquet",
+"bytes": 69805,
+"sha256": "e4cc00bd07e9d530bbd193d263f49d67d7176c4d85c21a5db83e9abd94e544bb"
+},
+{
+"path": "open/candles_1h/MRVL.parquet",
+"bytes": 166014,
+"sha256": "5bd16fa819b652c93894f01809e47468496119b50877d8cdd5fd084b24bd2aa7"
+},
+{
+"path": "open/candles_1h/MSFT.parquet",
+"bytes": 302706,
+"sha256": "eb42ffae9298d3941912f10cdb1f32c7a92031edde24a642453f7ab4fb811bff"
+},
+{
+"path": "open/candles_1h/MSTR.parquet",
+"bytes": 290901,
+"sha256": "10465a8d3540ae3d9c387d62543321fbe7c64e79f530aa854703baef406b71da"
+},
+{
+"path": "open/candles_1h/MU.parquet",
+"bytes": 195388,
+"sha256": "469e2297d2da3f7ac46608b0abe05194788a62d949664db9b9f3804dfc819aab"
+},
+{
+"path": "open/candles_1h/MYX.parquet",
+"bytes": 388522,
+"sha256": "f71754d6c45db847ab55cc2bfe72d207935ef1c94f7e245ccd6ed1ec07f11939"
+},
+{
+"path": "open/candles_1h/NATGAS.parquet",
+"bytes": 234864,
+"sha256": "46dfbc92a26566f8872789a646eeab18e5bff5b6ec863c356cb55dbc0c3b508f"
+},
+{
+"path": "open/candles_1h/NBIS.parquet",
+"bytes": 146414,
+"sha256": "7f5f5560b2a367adb7168788a58e91b94554efa5212afe3baa4d4df731c00f31"
+},
+{
+"path": "open/candles_1h/NEAR.parquet",
+"bytes": 958419,
+"sha256": "e1efb9caabcd4188e8ca7a4f043a63d4629f54ed3d145a207fbdb53c025148fe"
+},
+{
+"path": "open/candles_1h/NMR.parquet",
+"bytes": 461459,
+"sha256": "215f189ef7ba9c66ede9ec6d7d1fb06a5410affd4ccf073e53196e1fc2de15b3"
+},
+{
+"path": "open/candles_1h/NOK.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/NOW.parquet",
+"bytes": 94678,
+"sha256": "70b749867e3ec80095427f7956737439a725084378db3a3f7da970d0331c0abc"
+},
+{
+"path": "open/candles_1h/NVDA.parquet",
+"bytes": 357975,
+"sha256": "393313287e959025bf3a948781f3b3256a4c62c95a606c71355f7515ce74673f"
+},
+{
+"path": "open/candles_1h/ONDO.parquet",
+"bytes": 772223,
+"sha256": "e3c256749d7848e0a472fe5042ec812d0abeb611f12a235f17d4a6c126dac457"
+},
+{
+"path": "open/candles_1h/OP.parquet",
+"bytes": 576250,
+"sha256": "48cac6bb2e391d60229e031334c49035440604557a620e7e91257c8d795280c3"
+},
+{
+"path": "open/candles_1h/OPENAI.parquet",
+"bytes": 130743,
+"sha256": "5fc93662c85aa94097fbc67b0fc5b31279deb7e2dee425aef5dfc0bef2299a68"
+},
+{
+"path": "open/candles_1h/ORCL.parquet",
+"bytes": 157103,
+"sha256": "ebc440d7c1d34d28d0e5b7426086616f5b71c9fb1dd3353eba9c5c790180a076"
+},
+{
+"path": "open/candles_1h/OURA.parquet",
+"bytes": 29512,
+"sha256": "2ce6303e1e661b7f5873ad7c885a19892933f8fc62689c136efd1b47e0e3c23a"
+},
+{
+"path": "open/candles_1h/PAXG.parquet",
+"bytes": 545685,
+"sha256": "2852e1f7afeceafec9c411b1675cff9f23c8c7db575406841b52d0eebda36c5c"
+},
+{
+"path": "open/candles_1h/PENDLE.parquet",
+"bytes": 651463,
+"sha256": "aa9021169b29b775aa230167f7b2b1eaed9e5374b40e28209360c37db56cee4e"
+},
+{
+"path": "open/candles_1h/PENGU.parquet",
+"bytes": 566705,
+"sha256": "c6326c21c131553b7974e91b45a8c928b8f2df2c73c5fbc72694e89ba8278d4b"
+},
+{
+"path": "open/candles_1h/PIPPIN.parquet",
+"bytes": 185043,
+"sha256": "6166497a7248e259964ce377c5aadb38a18a328172964d747410e8e864d66dc8"
+},
+{
+"path": "open/candles_1h/PLTR.parquet",
+"bytes": 335379,
+"sha256": "3063d17a51a0d141a4a3b2c49235729c1fb75fdcf600f697f84e4f2be345af8a"
+},
+{
+"path": "open/candles_1h/POL.parquet",
+"bytes": 940597,
+"sha256": "7bbe6b202ce161bc72d4daec939ce5809608bfe75ea16c4f5b9416441580d3e0"
+},
+{
+"path": "open/candles_1h/PONS.parquet",
+"bytes": 76187,
+"sha256": "bda7590f6236e76349bac49fc902ad3180b6f6443711f9f67da4526f3e48cdc5"
+},
+{
+"path": "open/candles_1h/POPCAT.parquet",
+"bytes": 714926,
+"sha256": "b7e6a1c6db9010acdf3ec0d1aec1145ae58d421337d7035452649f13df358b01"
+},
+{
+"path": "open/candles_1h/POPMART.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/PRL.parquet",
+"bytes": 32949,
+"sha256": "c4cd9c1b02dbecbec91d66438bea01d39214901e046c4ed1f55329f144ea3002"
+},
+{
+"path": "open/candles_1h/PROVE.parquet",
+"bytes": 520702,
+"sha256": "9e1bc3101c75886cc48e64f5d297bffcce7b11fe9403e53ce63d0e7b635f1eda"
+},
+{
+"path": "open/candles_1h/PUMP.parquet",
+"bytes": 492354,
+"sha256": "c2f8e442a2a954fe157aec3ad874465612da5d3a482d8d5a5d973999f63b166a"
+},
+{
+"path": "open/candles_1h/PYTH.parquet",
+"bytes": 469410,
+"sha256": "1d9281036ab072a94c53c57d38c1ba15d464c7da4f4b4cd0fb518909d7b669c7"
+},
+{
+"path": "open/candles_1h/QCOM.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/QNT.parquet",
+"bytes": 31790,
+"sha256": "f68a95cb7075fa865c7c0fb0cd47a65bf08fe60bdd995302fb18cd7a49ba3be6"
+},
+{
+"path": "open/candles_1h/QQQ.parquet",
+"bytes": 277598,
+"sha256": "35a606f917a5a64b3db57b98445cc73fcc2c30d8a05b75e24d149c9afd5e872e"
+},
+{
+"path": "open/candles_1h/RAY.parquet",
+"bytes": 52371,
+"sha256": "552ae1bc7bdab2a672a22b31ba5cf58c793abc7534dd3f69dbeb0184df152bbc"
+},
+{
+"path": "open/candles_1h/RESOLV.parquet",
+"bytes": 547192,
+"sha256": "94871f55eb3ce596192f219eba0408ef83970e2c85d63f3a6679476fb225ff9e"
+},
+{
+"path": "open/candles_1h/RIVER.parquet",
+"bytes": 266245,
+"sha256": "2f61494b975d2e6f999153d87edf08664d327aba7ea2dc7fe0e9c058e2a97171"
+},
+{
+"path": "open/candles_1h/RKLB.parquet",
+"bytes": 121031,
+"sha256": "ca7f2fbdb1114e9d82c7cd39077873ace02d35aaf15716210f1342e3fbd3d300"
+},
+{
+"path": "open/candles_1h/ROBO.parquet",
+"bytes": 239126,
+"sha256": "52e0bc78f5724ac58f989e28d3fa77d2e5db9ce304a09027a28191799ae711cc"
+},
+{
+"path": "open/candles_1h/S.parquet",
+"bytes": 632970,
+"sha256": "5edac5b762289c734ae5e32b3210991548b6310beba5220f41e3a0a861d31591"
+},
+{
+"path": "open/candles_1h/SAMSUNG.parquet",
+"bytes": 94548,
+"sha256": "1a3a6736b5ae82e7df49329ddfc840eef36831ca3ce6e3c97190875cea00aadc"
+},
+{
+"path": "open/candles_1h/SEI.parquet",
+"bytes": 717741,
+"sha256": "94005d214207bb6a124c9579bd42c43a81ec4dceb6610ed0638af2e841ba54cc"
+},
+{
+"path": "open/candles_1h/SKHY.parquet",
+"bytes": 109772,
+"sha256": "9f63972eb92f680b964a117337330e479292939c3d0dfde65b1682805c13b53a"
+},
+{
+"path": "open/candles_1h/SKHYNIX.parquet",
+"bytes": 97953,
+"sha256": "8d0a972e42c97eb381d0034dad171d2bc8eda7dcefb79f46c9d0abe2c34af596"
+},
+{
+"path": "open/candles_1h/SKR.parquet",
+"bytes": 327715,
+"sha256": "d5b48486e7db22bbd0f7536b4e530f21edfca421d9dd02a28d5ff33ba19beaf2"
+},
+{
+"path": "open/candles_1h/SKY.parquet",
+"bytes": 531843,
+"sha256": "275bcd3a62df431d9c45617ac5a48494a666328ca9e9a36d95419d9c787d8f7f"
+},
+{
+"path": "open/candles_1h/SNDK.parquet",
+"bytes": 281283,
+"sha256": "b79f6b9201cb614f6473c776682c4a81f4281efe7fb7a74a12458946e68cbed2"
+},
+{
+"path": "open/candles_1h/SOL.parquet",
+"bytes": 784771,
+"sha256": "8cb72cad3889efce1d5faa4074e02198b19ad98fa8e482a569921145d0efb4a9"
+},
+{
+"path": "open/candles_1h/SOXL.parquet",
+"bytes": 134166,
+"sha256": "f39b99882b2d0cf389fb380120e9dbe65ea6f9daf738c769879f6da064dc9384"
+},
+{
+"path": "open/candles_1h/SOXS.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/SPCX.parquet",
+"bytes": 145931,
+"sha256": "8d75a0c5012171de44108e3b29732b823e2d459d5308453458eef25e3d11138d"
+},
+{
+"path": "open/candles_1h/SPX.parquet",
+"bytes": 669016,
+"sha256": "d62df020e9c72c786bc06c09525e28e3ece1ed69fd6104e2bb54433a59d8f483"
+},
+{
+"path": "open/candles_1h/SPY.parquet",
+"bytes": 274518,
+"sha256": "9812404fa587c09866a71ccd28245fb88406f082de1b34127cc0f319ca38925b"
+},
+{
+"path": "open/candles_1h/STABLE.parquet",
+"bytes": 386603,
+"sha256": "2eb880b2757c649c6ef40785b02f0081567a65a85ded43dfaed9da7ecdd5e17f"
+},
+{
+"path": "open/candles_1h/STBL.parquet",
+"bytes": 380150,
+"sha256": "a00978b874382f88829185f994db8e2fe307c9183e60b09a3738189d56cd057f"
+},
+{
+"path": "open/candles_1h/STRC.parquet",
+"bytes": 165905,
+"sha256": "352ec51a77c71f4061be7f26d0d7c9429f83c8fcc925e329b292a2a43b6d8d11"
+},
+{
+"path": "open/candles_1h/STRK.parquet",
+"bytes": 389983,
+"sha256": "677868eec79602261fb00f56db59a73e79d1cafd151fad3567f9d40a7f3718c1"
+},
+{
+"path": "open/candles_1h/SUI.parquet",
+"bytes": 911978,
+"sha256": "9deb421e4c11a2faf856c15503f498cab1b4edcc4b78bbdc6bbcb26b748bc3a5"
+},
+{
+"path": "open/candles_1h/SYRUP.parquet",
+"bytes": 636373,
+"sha256": "502209e473461944508c029e1cbb0e46b40bd3101e3288a0d5f5cbfa27b7a391"
+},
+{
+"path": "open/candles_1h/TAO.parquet",
+"bytes": 778254,
+"sha256": "112b516d78739122ff0ea5c71721146b6dd7385feae232324e3d30b5e67fcfbe"
+},
+{
+"path": "open/candles_1h/TENCENT.parquet",
+"bytes": 60736,
+"sha256": "30084eeca523e3ad3391857a1ca638b0570602d520da63fb4dd9984d4fbbf479"
+},
+{
+"path": "open/candles_1h/TIA.parquet",
+"bytes": 592336,
+"sha256": "a1c47902be28c8e9b2c7ed1873235bcc141748baf70e6da14bc9c365d8fe7bd3"
+},
+{
+"path": "open/candles_1h/TRUMP.parquet",
+"bytes": 796744,
+"sha256": "fa99e16bed1729636347a33ba0dd05690ec3c31eb8af3e43a0d69d55f9f470ba"
+},
+{
+"path": "open/candles_1h/TRX.parquet",
+"bytes": 546497,
+"sha256": "cd117f00a4d5921b18b3ba0a26c2348b8dfc40c02f5af146ac76660ac029220d"
+},
+{
+"path": "open/candles_1h/TSLA.parquet",
+"bytes": 328266,
+"sha256": "701ee6cd4da80328aabaa7fcb223ade4a4a822c6cde8b73002deed6bffa03f8e"
+},
+{
+"path": "open/candles_1h/TSM.parquet",
+"bytes": 155302,
+"sha256": "edcaa6dae1a8472007feecdb063d5ad18dc681684adaf063034d8f1a7449e5fb"
+},
+{
+"path": "open/candles_1h/TTWO.parquet",
+"bytes": 15206,
+"sha256": "0a21817634b94c7955cfdab3747b53b35c0b97191218f5c6300c43ea7d300b82"
+},
+{
+"path": "open/candles_1h/UNI.parquet",
+"bytes": 747331,
+"sha256": "fda70fde2ae08f251593ff7db5663dcc059be05b95a1a999e4657df270650cd9"
+},
+{
+"path": "open/candles_1h/UNITREE.parquet",
+"bytes": 74920,
+"sha256": "aa7dcf2583de4b4989034a35a36341b4d7689ec0bf3485b6cc89e5dac082d03c"
+},
+{
+"path": "open/candles_1h/USELESS.parquet",
+"bytes": 551345,
+"sha256": "38575b9927f9d87cf08c6aab70ece996e9b2eb0bae6ec1f9c3c85807b771be4a"
+},
+{
+"path": "open/candles_1h/VIRTUAL.parquet",
+"bytes": 701039,
+"sha256": "f5f39c4e0717474390b505998d252d3c9b6ced4c902b212d6308427a606b04b1"
+},
+{
+"path": "open/candles_1h/VVV.parquet",
+"bytes": 555013,
+"sha256": "b9501cd6bde2912872d0d469459e9d8e2ba5a2993ff122c8e1761998e2ed3966"
+},
+{
+"path": "open/candles_1h/WDC.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "open/candles_1h/WEN.parquet",
+"bytes": 57729,
+"sha256": "00d15f136ee360eb5f9cd30419989a6b834b772bcfe1ff8e8c10cae511040c0c"
+},
+{
+"path": "open/candles_1h/WIF.parquet",
+"bytes": 868320,
+"sha256": "3e97b11ab22431141e450d3de58308d94d2d25d824c1b2575a8d4c35aa044418"
+},
+{
+"path": "open/candles_1h/WLD.parquet",
+"bytes": 926515,
+"sha256": "18e19be2f7a641012452bffd9e706b7f939918969d3ba749221db0a695f9e3c1"
+},
+{
+"path": "open/candles_1h/WLFI.parquet",
+"bytes": 498641,
+"sha256": "cecd98bcaae59777b5ca1ac2e7c5712800859436c3700c5b165064f83c01bb3e"
+},
+{
+"path": "open/candles_1h/XAG.parquet",
+"bytes": 469154,
+"sha256": "8a7826778e1368804125be8d11c83d3b561e21f17fb6fcf9c95ded37732e060a"
+},
+{
+"path": "open/candles_1h/XAU.parquet",
+"bytes": 437413,
+"sha256": "efa698b4edaf44adaf91c87d2b871f75a9914247ae0b58dad735ee8588fd5b78"
+},
+{
+"path": "open/candles_1h/XLM.parquet",
+"bytes": 390911,
+"sha256": "40462f301edec0573490b7eb83997dcd924fc84201c7bcff30e3523a7dcf04e3"
+},
+{
+"path": "open/candles_1h/XMR.parquet",
+"bytes": 498138,
+"sha256": "7253a9e604b70c328bb4acd237650648f1a27078ba4ad9dac2bd1589bdd721cc"
+},
+{
+"path": "open/candles_1h/XPD.parquet",
+"bytes": 224373,
+"sha256": "3f609dc7d25c05af03375439e3dadf8fa6ca717e38d9d208b9cca09e755af76a"
+},
+{
+"path": "open/candles_1h/XPL.parquet",
+"bytes": 515148,
+"sha256": "194c4c1319dd8967a4bc149d4ee0f9fd3524732a9cb184c5e5cccc2952ce2200"
+},
+{
+"path": "open/candles_1h/XPT.parquet",
+"bytes": 241791,
+"sha256": "7563fe795bf1b32c28011bfb1152486fa75806a18448840cd6a481e0e5d2d3c5"
+},
+{
+"path": "open/candles_1h/XRP.parquet",
+"bytes": 972914,
+"sha256": "dd63cb034762b811e35e48fd6be8a8a1cc5ba6366f88329caec45eaa1c853768"
+},
+{
+"path": "open/candles_1h/ZEC.parquet",
+"bytes": 485111,
+"sha256": "a1fb1a46eff6b00231fc450e458e47888f9b1c507875fbd7cb28741a68f97f6e"
+},
+{
+"path": "open/candles_1h/ZHIPU.parquet",
+"bytes": 96985,
+"sha256": "65f5c0b80e605d400a564cb1823d02fa9c39421b559c959cd55fd20b410a6675"
+},
+{
+"path": "open/candles_1h/ZK.parquet",
+"bytes": 585152,
+"sha256": "a08ff7b93891220da5437d6c68769d4499d62c9980d84f598c56969fcbd9f909"
+},
+{
+"path": "open/candles_1h/ZORA.parquet",
+"bytes": 566355,
+"sha256": "1816f700b5034ef16f795fda9e80e27cfedca23ad2e03452583a774560c1f572"
+},
+{
+"path": "open/candles_1h/ZRO.parquet",
+"bytes": 654268,
+"sha256": "0c9079a880619edd2e1da06bc4a90520af6d125741cb7b57d76fc71129d7a6c7"
+},
+{
+"path": "open/funding/0G.parquet",
+"bytes": 174353,
+"sha256": "25fe27cccf16938f5a9855b8cf9d2e7a82a32752e2eaef8e7ee27fe86b16bb7e"
+},
+{
+"path": "open/funding/1000BONK.parquet",
+"bytes": 152674,
+"sha256": "650155d9101eac677698cf2607c18fe4e11c67da101880af2445e22c2e817e39"
+},
+{
+"path": "open/funding/1000FLOKI.parquet",
+"bytes": 163411,
+"sha256": "a67e382b8d50cbed4e7976f3f03f58ecb9a7528a166021caebe95e6aae17a13b"
+},
+{
+"path": "open/funding/1000NOT.parquet",
+"bytes": 40075,
+"sha256": "26bd125f5ca13fdc7178f0ec8abd544eb664cb2c40466e0ae5931fff1d794abd"
+},
+{
+"path": "open/funding/1000PEPE.parquet",
+"bytes": 151677,
+"sha256": "55e9ef7ce76057b27bce394e59d29616a87320162c82daf8d4d932521dd68dc6"
+},
+{
+"path": "open/funding/1000SHIB.parquet",
+"bytes": 151879,
+"sha256": "d132d1603dcb04844b63aa283bbd7aa1be4036d0e53a827e5350b5625dc320d1"
+},
+{
+"path": "open/funding/1000TOSHI.parquet",
+"bytes": 107284,
+"sha256": "8064e93f5bb6617220ed42753a510bfd150e8a51ae6a0627954b6bf419fa5cf4"
+},
+{
+"path": "open/funding/2Z.parquet",
+"bytes": 119458,
+"sha256": "c0ad9905360e4ae48b00ba67d52d80ed05a543b0c23e85c3d1fd4d5e9ec0c765"
+},
+{
+"path": "open/funding/AAOI.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/AAPL.parquet",
+"bytes": 129113,
+"sha256": "310fd102812cd33849697802c991fed41fde2c74ecb5cc795c9d98f3d5630824"
+},
+{
+"path": "open/funding/AAVE.parquet",
+"bytes": 263778,
+"sha256": "52d5c219944211e21fa468f2a9bd99e792b65c4eeb344da1719f484bf3c6d78d"
+},
+{
+"path": "open/funding/ADA.parquet",
+"bytes": 146353,
+"sha256": "1c0fc051302047701616ec66361bca177519a756f1e22c356a4c0bea5848a3d4"
+},
+{
+"path": "open/funding/AERO.parquet",
+"bytes": 145951,
+"sha256": "ad4f66310a4ca9764377186956c1d49e75b8a4e5594f0b7b007003eda14a74ac"
+},
+{
+"path": "open/funding/AI.parquet",
+"bytes": 31367,
+"sha256": "9e0f57465ef02a70376e29329075583d221d5668352cfab1165f920fb142c8a2"
+},
+{
+"path": "open/funding/AI16Z.parquet",
+"bytes": 79753,
+"sha256": "bc7aa0760cd025f47139083f6ff1ebe1e760698ee90d147ccc7588d9e2c2185f"
+},
+{
+"path": "open/funding/AMD.parquet",
+"bytes": 109161,
+"sha256": "7c52967ded09603f62cd7f1585f77777cd2085f9e7a3cec9488278f204d3c478"
+},
+{
+"path": "open/funding/AMZN.parquet",
+"bytes": 132390,
+"sha256": "b181cc7900c9b0c84ae455418f79b306f4d80afb149e77e885d320738e43e1f9"
+},
+{
+"path": "open/funding/ANTHROPIC.parquet",
+"bytes": 52743,
+"sha256": "df3b4f90fe01302e54ff30f32064efb3d60e7ba3e35ed7b912b32e6bf221f426"
+},
+{
+"path": "open/funding/APT.parquet",
+"bytes": 211409,
+"sha256": "27ba7bacf469461ae068ca13c086cb07b6dc3bc9db21e7b80fad6751ab1aff2e"
+},
+{
+"path": "open/funding/ARB.parquet",
+"bytes": 125023,
+"sha256": "747ac0b023644dafaa3d3e635927fea68c60ceea47e7fef5029e06d95d9bbe60"
+},
+{
+"path": "open/funding/ARC.parquet",
+"bytes": 81624,
+"sha256": "b8af9cd59f53633c9cbc6fa28d7c7a54e10f21bef6e59ce7807c08413e53d944"
+},
+{
+"path": "open/funding/ARM.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/ASML.parquet",
+"bytes": 81654,
+"sha256": "c0f203097b3617a6282fee7ef47b665b2a71aad73116c3e2893e2bfaf42b0b64"
+},
+{
+"path": "open/funding/ASTER.parquet",
+"bytes": 124646,
+"sha256": "d29c7a3185994ae140764af5c21748eb40ce652b3035f9cf30b4934c94f12efb"
+},
+{
+"path": "open/funding/AVAX.parquet",
+"bytes": 270911,
+"sha256": "c8628b217d15692af58f17977db4a226e25a02f882cc6c0b00c42f68120e5c56"
+},
+{
+"path": "open/funding/AVGO.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/AVNT.parquet",
+"bytes": 144315,
+"sha256": "9fcbcf97a218c1fae64cb24816aad1f9b30def141276ef5f3cba746397802277"
+},
+{
+"path": "open/funding/AXS.parquet",
+"bytes": 107768,
+"sha256": "0a37a807d5332f1bbcbecd1efbc2a07bb87370abb0cebc93c3e176b9f88f7341"
+},
+{
+"path": "open/funding/AXTI.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/AZTEC.parquet",
+"bytes": 75314,
+"sha256": "a60cb0e76568b4cb53b8be34a2c8a73affc199fe296c7f66829e26fcda8c5990"
+},
+{
+"path": "open/funding/BABA.parquet",
+"bytes": 56888,
+"sha256": "981d96b282032f1490e180d60969efb87ae7d285f8393a066e0942e5833a4217"
+},
+{
+"path": "open/funding/BB.parquet",
+"bytes": 45754,
+"sha256": "b40c5331cd832b15d2c26f239190629fe30377be2d6c7823838dc47c3a788520"
+},
+{
+"path": "open/funding/BCH.parquet",
+"bytes": 198468,
+"sha256": "10e24bf52911ebf6a782e9365a63abbefe92bc99fae43167d2ebd0281f541a3f"
+},
+{
+"path": "open/funding/BE.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/BERA.parquet",
+"bytes": 248176,
+"sha256": "1775502a8d788d91a02cea436ff3b356b936cef2960d6cdf0072cbaa4496aa6f"
+},
+{
+"path": "open/funding/BIO.parquet",
+"bytes": 38161,
+"sha256": "7025f19cb743eefd246a38cdcf4aacc225d7ef35c50dd7a51a32ae61be069114"
+},
+{
+"path": "open/funding/BIRB.parquet",
+"bytes": 42950,
+"sha256": "6b39759ac744e3866b27598542bb7045032a0f0a5e88f6416d196985e099a762"
+},
+{
+"path": "open/funding/BMNR.parquet",
+"bytes": 99938,
+"sha256": "6d44462f282813bb9421a4333f39bc3e3b2890bb59ba64b2fe96dceb7ed09cdf"
+},
+{
+"path": "open/funding/BNB.parquet",
+"bytes": 275245,
+"sha256": "42070e7e158809c6c3b57a3fb5298564c1167c8530c099c14f1ceacb949450b0"
+},
+{
+"path": "open/funding/BOT.parquet",
+"bytes": 65011,
+"sha256": "ea1255f1884f9957d0a3aaa520988e23cc78828516bca49a6ba5d0c9b30fc858"
+},
+{
+"path": "open/funding/BTC.parquet",
+"bytes": 290868,
+"sha256": "9676ff7fdffb8fa1d5fc3a7850f53dec4080e505e14de6c55fddc73079cd947d"
+},
+{
+"path": "open/funding/BYD.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/CAP.parquet",
+"bytes": 41517,
+"sha256": "f5ee1a1b5095942b4eb74577722c20cb9291d7edb109d356ee45d83f18da6f78"
+},
+{
+"path": "open/funding/CBRS.parquet",
+"bytes": 73230,
+"sha256": "1f33120c18575f073a0443e3cd73980c23948a95eb881cb4d8026675323cc7e2"
+},
+{
+"path": "open/funding/CC.parquet",
+"bytes": 107766,
+"sha256": "8827055d4754122ddf6084c2bf486c8c80a2f2e889cce2c08ce4150630aae783"
+},
+{
+"path": "open/funding/CHIP.parquet",
+"bytes": 59419,
+"sha256": "f3223d5d2a5c5c546d8dc35980118560bb331c437f2b7c8e1e6767c658697293"
+},
+{
+"path": "open/funding/COIN.parquet",
+"bytes": 142581,
+"sha256": "b4084224df4d59c75290ecc6a0da0b977cd88cd98e2b36f12611fc80cd73404a"
+},
+{
+"path": "open/funding/CRCL.parquet",
+"bytes": 129684,
+"sha256": "e61f3c5c42a664d68b9b92a04ad05fb9d4cebaa57900a2d4f7b99f6953e6b014"
+},
+{
+"path": "open/funding/CRV.parquet",
+"bytes": 151600,
+"sha256": "7473eddb83250f45c704c3772c5d0f2a8bde77ed95e6922fb02ed167d21cbd49"
+},
+{
+"path": "open/funding/CRWV.parquet",
+"bytes": 67535,
+"sha256": "4fee0e3e27b05bad9c8e3cc9ce174d9f2ab0ceb74d802c6a2a7cac0db3f752be"
+},
+{
+"path": "open/funding/CTR.parquet",
+"bytes": 42382,
+"sha256": "8604396666e40d10dfa4f89c571a8fa399e7725a2733c24a7bc4dd5c71b4e32f"
+},
+{
+"path": "open/funding/CXMT.parquet",
+"bytes": 44604,
+"sha256": "afbe8b9bf654893e81bdd38e642a943c95f73de058504c9d52daf1287a623b64"
+},
+{
+"path": "open/funding/DASH.parquet",
+"bytes": 117537,
+"sha256": "80724c01c0651ea80d4b65ebc1ad6752222b89f4f9a4fedd6e4f25fc0c136a1e"
+},
+{
+"path": "open/funding/DELL.parquet",
+"bytes": 62149,
+"sha256": "73e95e46e317b1b56ae73030a67dc271f73ecedb1a1066cb0367cb721a1302ab"
+},
+{
+"path": "open/funding/DIA.parquet",
+"bytes": 36509,
+"sha256": "0eec79fbc6df049002406e0647a2a0ccc946fa307ba0bed98d9bee5902329378"
+},
+{
+"path": "open/funding/DOGE.parquet",
+"bytes": 176697,
+"sha256": "a730f78c88cb5b1b946dd339714fdf7fe528e5def28958fb539dd7ccad9fc096"
+},
+{
+"path": "open/funding/DOLO.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/DOT.parquet",
+"bytes": 227910,
+"sha256": "248e2f3cdb4ae63e911ca1d851823c27d9975df997323adf34c82fdb9facf2e8"
+},
+{
+"path": "open/funding/DRAM.parquet",
+"bytes": 63828,
+"sha256": "1872381bd3fa05f7aa1f939cdda00911e046ec41e8099647e7b39f896f3ee43b"
+},
+{
+"path": "open/funding/DUSK.parquet",
+"bytes": 58330,
+"sha256": "554248e484af9dfc39be339869afcf23dafcab8388ef319a37c04c8b4df03525"
+},
+{
+"path": "open/funding/DYDX.parquet",
+"bytes": 121418,
+"sha256": "bdc7d1226325cb3df09569a29e4ed07ab31e0c0ced2ffd018857f86292317849"
+},
+{
+"path": "open/funding/EDEN.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/EDGE.parquet",
+"bytes": 73852,
+"sha256": "18bb52475d5928723d1a2f9e453bff93639c62f9688f4232253165c683fe508c"
+},
+{
+"path": "open/funding/EIGEN.parquet",
+"bytes": 134603,
+"sha256": "6ee8b805d7f77cb92d42f87eafdc59055badd1c4388023ed55a97c4be2c7e7b6"
+},
+{
+"path": "open/funding/ENA.parquet",
+"bytes": 176718,
+"sha256": "0501ffa1126a14f9c39bd0baed982853b323e1a10da9f68583966704fe85f432"
+},
+{
+"path": "open/funding/ETH.parquet",
+"bytes": 292821,
+"sha256": "e77b0ec5e48ff42afd15b588a6897ed75f4ff8a9369bfb87097b88b6ff743f37"
+},
+{
+"path": "open/funding/ETHFI.parquet",
+"bytes": 127590,
+"sha256": "50c341d0372cf64dd916e8f5524e1d9111ccc4306354a459ba3605273976d29a"
+},
+{
+"path": "open/funding/EWY.parquet",
+"bytes": 73779,
+"sha256": "526c094fd55f093c5af1d482b93da06fdcf7d1892fd837939b55c0e6c55ab067"
+},
+{
+"path": "open/funding/FARTCOIN.parquet",
+"bytes": 190320,
+"sha256": "830a413503d4c00a59c5037d58d4dd24546a553f528e8c816022cbd09887d39a"
+},
+{
+"path": "open/funding/FF.parquet",
+"bytes": 108398,
+"sha256": "e2288fc0b081a9d8a9e7a2e41cfa84592b20d40b03d140adcc4464108786ae75"
+},
+{
+"path": "open/funding/FIL.parquet",
+"bytes": 110681,
+"sha256": "b56cef91b6ed656f4f4bce06ca9b99399d9a0518158f55cf45185fcb62c9e103"
+},
+{
+"path": "open/funding/FOGO.parquet",
+"bytes": 74197,
+"sha256": "94203c00a7ef7ee616d4c089edbe5c676683c9948a9984fdd5e3bbbe9bd54c05"
+},
+{
+"path": "open/funding/FOLKS.parquet",
+"bytes": 45888,
+"sha256": "c2e9707b3307b01b2fa1b895b3581da8ff6e6630357a17e043dc3e532be833da"
+},
+{
+"path": "open/funding/GEV.parquet",
+"bytes": 32285,
+"sha256": "1f9e4e5849f5e88d035f4c89736f2bd184fb5e3db5aaf6ffbc6b27cb2e630048"
+},
+{
+"path": "open/funding/GME.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/GMX.parquet",
+"bytes": 165375,
+"sha256": "123e7517a143eb440bf6942dd4d89a96d3036e03025130c22d88f0d4b0dd976c"
+},
+{
+"path": "open/funding/GOOGL.parquet",
+"bytes": 128122,
+"sha256": "34fedcf03a5ba68a7b99f459f5a19bffc207a208e9d5aeb76f1e875de366950a"
+},
+{
+"path": "open/funding/GRAM.parquet",
+"bytes": 216652,
+"sha256": "7e16db84b78705c11993cb795799d205068aa9a6eab0e927d8f152b8d9b73b62"
+},
+{
+"path": "open/funding/GRASS.parquet",
+"bytes": 133663,
+"sha256": "b3565f70467561c02eced403a1d13bb3d067f7d658bc551224512c7a1243bcf9"
+},
+{
+"path": "open/funding/HANMI.parquet",
+"bytes": 28001,
+"sha256": "f64ba6bd6a66db2050f1390ba15082f8f4c9d8daf7b97b273264091140f0faab"
+},
+{
+"path": "open/funding/HBAR.parquet",
+"bytes": 120841,
+"sha256": "dd4d3b32059e351fd40197796601c29a0e26ff60c2a3d60319217f5374bfd4b6"
+},
+{
+"path": "open/funding/HOOD.parquet",
+"bytes": 141093,
+"sha256": "043b9b41d9e52b552f95dc994eb83082cf81649ca16bfb7ac8b0d2e6c1d05ad2"
+},
+{
+"path": "open/funding/HYPE.parquet",
+"bytes": 275804,
+"sha256": "5a9fdaa83a1dc1ed3a1e9ae51c1130f681a8bae8b992b4b1798257cbdc66f44f"
+},
+{
+"path": "open/funding/HYUNDAI.parquet",
+"bytes": 32779,
+"sha256": "abef9b3f82a2255a739238a222f6a03823fd313667c01f68d30eff9f653f756e"
+},
+{
+"path": "open/funding/IBM.parquet",
+"bytes": 59264,
+"sha256": "619193317df580e383231fd571546cdfaf18a015c079952a87497f770b7d66e3"
+},
+{
+"path": "open/funding/ICP.parquet",
+"bytes": 126028,
+"sha256": "121b2f5ed5e4f349f10ee8d87dffb8c8fbfdf39130904754a12f77d86388aab0"
+},
+{
+"path": "open/funding/INTC.parquet",
+"bytes": 111631,
+"sha256": "8dfe9aeb755a4996cb292c79be7243c0c2b7ca76d7246e460af75c3566e09244"
+},
+{
+"path": "open/funding/IWM.parquet",
+"bytes": 81232,
+"sha256": "7d498a4c87eebbc163043f9a3d658fba7e5e99cfa3a952ee920929b17a9a6403"
+},
+{
+"path": "open/funding/JTO.parquet",
+"bytes": 84987,
+"sha256": "784dfa441bb3c37d517b505de1bc9f376c2e1f6f54c5c6a96fb19e7d50a321ee"
+},
+{
+"path": "open/funding/JUP.parquet",
+"bytes": 173231,
+"sha256": "4e94d5796ca161bb5a795175541e0b2e31079df38277556b66806697d0b8870e"
+},
+{
+"path": "open/funding/KAITO.parquet",
+"bytes": 211565,
+"sha256": "241c5b6cb4ed4f33f1c29843ee730b9d955d2cfced99847817ed0626d9c3b63f"
+},
+{
+"path": "open/funding/KORU.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/LDO.parquet",
+"bytes": 126214,
+"sha256": "25e968ebcf1f0dcfea1fd47796cd4cb90aeee383b9a9a70ec860c674ba827049"
+},
+{
+"path": "open/funding/LINEA.parquet",
+"bytes": 104047,
+"sha256": "8dbf34e5f6bb359a60ecb8f446f70e082196d0c008f7bef839f11d6b8d674fe0"
+},
+{
+"path": "open/funding/LINK.parquet",
+"bytes": 258077,
+"sha256": "57cef5b69e729a81cb60c8a9b400d74d447ba1c7a36f628b524f91c4a8bee197"
+},
+{
+"path": "open/funding/LIT.parquet",
+"bytes": 110017,
+"sha256": "b3cde7fca465ff09cfe52e1485ccfdd3cab7d23d91a88b84ea48ed34f3b4de49"
+},
+{
+"path": "open/funding/LITE.parquet",
+"bytes": 67671,
+"sha256": "7e6f34cf9c6cafcd02c0447942a9a0b274ee6259c9330fd1e527e78b831ae271"
+},
+{
+"path": "open/funding/LTC.parquet",
+"bytes": 249119,
+"sha256": "b3d78a428f1bffdc2ff3658c2c2ec3b15759c22bff7a12381bd242e4364f28a1"
+},
+{
+"path": "open/funding/MEGA.parquet",
+"bytes": 116590,
+"sha256": "c4f4d0d9ecf3fb52284f3a3b2ea69e750137339cdc46e856a06b53a9603e9a98"
+},
+{
+"path": "open/funding/MET.parquet",
+"bytes": 104329,
+"sha256": "60ae8dfe3f1a4eb5c1ebc14f8e57e9db945f8b50c5b6046b5fc10e7552742961"
+},
+{
+"path": "open/funding/META.parquet",
+"bytes": 127864,
+"sha256": "e8886a4b8823361bcb59379027b64aef1c87b44bcd8b37fa08d1da36789267d1"
+},
+{
+"path": "open/funding/MINIMAX.parquet",
+"bytes": 56346,
+"sha256": "edf488a017050b8bcc9fab61d834ada40a15a7550c650912d898bf28759397d3"
+},
+{
+"path": "open/funding/MKR.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/MON.parquet",
+"bytes": 106521,
+"sha256": "cbd8e3436489ebdd12ecd6f6454275dc1bf9019fdbb62d41c521f8b9a813bbdc"
+},
+{
+"path": "open/funding/MORPHO.parquet",
+"bytes": 147063,
+"sha256": "d6c69a45df41910f3eaab00ee47c600abb85042da9f840c95166ee56f1863a24"
+},
+{
+"path": "open/funding/MRNA.parquet",
+"bytes": 31943,
+"sha256": "78c8b4c4b815ecaba5aee08118b1b4adf266526ddda1fd8e2f0aa94117b3ae7c"
+},
+{
+"path": "open/funding/MRVL.parquet",
+"bytes": 73093,
+"sha256": "7960aba905e9c97f3b97f03b99c3ecf4eb6e9f34441455922e291b64c05c0556"
+},
+{
+"path": "open/funding/MSFT.parquet",
+"bytes": 126260,
+"sha256": "6f30eea3904429b8f4ba8a867c563a68966144826a0744f5a418e4de601d79a8"
+},
+{
+"path": "open/funding/MSTR.parquet",
+"bytes": 121978,
+"sha256": "e8e496a911ddfbaf5f45d1ffc462843804285db1e1a1816721a22515fae75e4d"
+},
+{
+"path": "open/funding/MU.parquet",
+"bytes": 81841,
+"sha256": "f3b8c8c2d0efacb49c1eac6bdb38d19b9b8101cd07a82c9efc7a0564c6580516"
+},
+{
+"path": "open/funding/MYX.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/NATGAS.parquet",
+"bytes": 73521,
+"sha256": "b3ccfeeacddf297d5dde9021c4dcaf601a5b2a21aebed2cd1b4ee43a4d500037"
+},
+{
+"path": "open/funding/NBIS.parquet",
+"bytes": 65130,
+"sha256": "1b5f8c82e76b3558f4acb58e83abd6bbf772617fcd80c6c32ecc13c51214548b"
+},
+{
+"path": "open/funding/NEAR.parquet",
+"bytes": 214369,
+"sha256": "2038a298f1d154d493313193aa5bebec559e17baa21a0bedc17ff48d12a61de2"
+},
+{
+"path": "open/funding/NMR.parquet",
+"bytes": 171545,
+"sha256": "c6fdbe44a048f888daa9d1b2e3a3df2256edba862adb9419ede3cba8c4f0cdef"
+},
+{
+"path": "open/funding/NOK.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/NOW.parquet",
+"bytes": 54895,
+"sha256": "cff4b4e4ffc69e683bc7eb125123c22e8459481873b94e6286da0e04e4b74863"
+},
+{
+"path": "open/funding/NVDA.parquet",
+"bytes": 138007,
+"sha256": "9f20dbba9a87e52ac8dd23cd00080a5f2f8a6509b05327f12163c5d19cf7bd1c"
+},
+{
+"path": "open/funding/ONDO.parquet",
+"bytes": 158363,
+"sha256": "9d88c230dbf391977b1c0d345e66312b61197681878d5726f666aaa12c0d6ec6"
+},
+{
+"path": "open/funding/OP.parquet",
+"bytes": 125833,
+"sha256": "967c4a13ecddf1d7996a341dffb2cc627fafd3c7e1f20c7c8c30025bc74137b6"
+},
+{
+"path": "open/funding/OPENAI.parquet",
+"bytes": 58939,
+"sha256": "5a8b8b601467d02a68490a511cfcee8bc50dcaa30ba670be8fb91ac46b1e8b31"
+},
+{
+"path": "open/funding/ORCL.parquet",
+"bytes": 69101,
+"sha256": "dab70ab366ff8e476c41ef521a8d1403ae48539cbbd6496b3b3f5468e9108818"
+},
+{
+"path": "open/funding/OURA.parquet",
+"bytes": 9354,
+"sha256": "fce18435ec2ffa6b3cb73ecad44d637a37238630d96c45ca0d95b1433cf70223"
+},
+{
+"path": "open/funding/PAXG.parquet",
+"bytes": 201893,
+"sha256": "4f38fdb57222d610b2c660aaf4049e04dcbc9aac019f5eb0d6de17b3c2219c8d"
+},
+{
+"path": "open/funding/PENDLE.parquet",
+"bytes": 181848,
+"sha256": "2f23a3068f4542fd161943431d0dffd60774a1d3bfe065ccd1b3666e15e67354"
+},
+{
+"path": "open/funding/PENGU.parquet",
+"bytes": 111788,
+"sha256": "4921a7b0ed20ef7183aca969626f46537ac551f67843aa037e65483ea090bb45"
+},
+{
+"path": "open/funding/PIPPIN.parquet",
+"bytes": 50365,
+"sha256": "a5b43238afed81da6b51a468b353312b2ddc81721eb053c0204c1415823f69e2"
+},
+{
+"path": "open/funding/PLTR.parquet",
+"bytes": 130969,
+"sha256": "8eab593e27afb317cc37be833bd0a1fcde8482557ac116158a19e2823612d73e"
+},
+{
+"path": "open/funding/POL.parquet",
+"bytes": 194203,
+"sha256": "f22fb5d4e67b4ba109e7a56efd6ea4beca910ff9885802fe575b5d82ec15d1a9"
+},
+{
+"path": "open/funding/PONS.parquet",
+"bytes": 26182,
+"sha256": "bff575b0db242f599ff7be70396df487237cce58c6842d5d4936c44a3b004ec0"
+},
+{
+"path": "open/funding/POPCAT.parquet",
+"bytes": 163226,
+"sha256": "e8dee5e8b4911ed45eb8d71ebf90fc009152ffb189d953b18f6defed3cb304c1"
+},
+{
+"path": "open/funding/POPMART.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/PRL.parquet",
+"bytes": 18308,
+"sha256": "aced16490dea59d468fd89ba919b894aede977ed830646280561eab97812b499"
+},
+{
+"path": "open/funding/PROVE.parquet",
+"bytes": 156741,
+"sha256": "be7620b0883e753573683b36e717776175a6f18918c78fd1f1f3bc84b2e6ec8b"
+},
+{
+"path": "open/funding/PUMP.parquet",
+"bytes": 109607,
+"sha256": "46cb1c682a19e038caabfef92b784c93d118c4339275a1a2958b6af4ed3d960b"
+},
+{
+"path": "open/funding/PYTH.parquet",
+"bytes": 109049,
+"sha256": "7beb2b9f193d48a94b1f4e9fd442b74dafd2f7045e91211f164e9ee132206566"
+},
+{
+"path": "open/funding/QCOM.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/QNT.parquet",
+"bytes": 14610,
+"sha256": "0ed869594e9908fcd531963ec09413dd5bdc7a8e00d57c5af3d3c431b11ff6b2"
+},
+{
+"path": "open/funding/QQQ.parquet",
+"bytes": 112880,
+"sha256": "0546e9b20bc88c96be2ad8cec537c83afc1c07d212226f368034435d00ff8321"
+},
+{
+"path": "open/funding/RAY.parquet",
+"bytes": 20840,
+"sha256": "d82cfb7ab7e3473c2645bd2366494e00e838f21bcec9d0f8719dcff1e481d667"
+},
+{
+"path": "open/funding/RESOLV.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/RIVER.parquet",
+"bytes": 131034,
+"sha256": "00b4992aa52de70c43cf2762cde271a820c4750daa319699e5f6b4a198c604ba"
+},
+{
+"path": "open/funding/RKLB.parquet",
+"bytes": 61656,
+"sha256": "17c1dc3a54940edc4e8965e07892ad65203cdee8914403aaf2ec58195c99ab1f"
+},
+{
+"path": "open/funding/ROBO.parquet",
+"bytes": 73551,
+"sha256": "d000c4d91ae067f80c13589d19b1bc7f756ae89f41a33eb9a4fb4278f54249e7"
+},
+{
+"path": "open/funding/S.parquet",
+"bytes": 140764,
+"sha256": "9a81da6094ea323315dd10c7d8b346944ef213c64f0b23fdf78e82818c5f5aca"
+},
+{
+"path": "open/funding/SAMSUNG.parquet",
+"bytes": 34491,
+"sha256": "898151354776f2fc8cc54c16594c931b8eeb71dfbd5b50e0d9ce8ae41bd49c55"
+},
+{
+"path": "open/funding/SEI.parquet",
+"bytes": 164702,
+"sha256": "99a8c2d4ad3a236720d8f00cd17bb50afd9864d4ef49e0d3799c64d610185947"
+},
+{
+"path": "open/funding/SKHY.parquet",
+"bytes": 46720,
+"sha256": "00bce83a09cb50134649d356a82a6a1c517e616725efb22af35baf6f6d46eda5"
+},
+{
+"path": "open/funding/SKHYNIX.parquet",
+"bytes": 35453,
+"sha256": "fb91b82f92f8d3cc89bc98f328c6689dcbe8f47aea63260e3a6ec30f09918d67"
+},
+{
+"path": "open/funding/SKR.parquet",
+"bytes": 86139,
+"sha256": "edee3e7bf20a991718d1d0a4240dc1e7e0a811452cbe7deaf14e011e45586210"
+},
+{
+"path": "open/funding/SKY.parquet",
+"bytes": 105127,
+"sha256": "f404b712fe71cd057efec6e9383aafa84defee98f9312dbb0a09aa2b985b5b14"
+},
+{
+"path": "open/funding/SNDK.parquet",
+"bytes": 118891,
+"sha256": "a27a56ba3c86888cfffd30a4162fd97a7700d752132b34f9142c5792702b18e2"
+},
+{
+"path": "open/funding/SOL.parquet",
+"bytes": 291845,
+"sha256": "76be19706df57db54e9074763e0665dc11596d9487b837f87f2ebe48f5f74eb4"
+},
+{
+"path": "open/funding/SOXL.parquet",
+"bytes": 60473,
+"sha256": "dc9140a5f8331121d97426f7a0a55f3d81baeaf1719ef3ea198f420beebc0d06"
+},
+{
+"path": "open/funding/SOXS.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/SPCX.parquet",
+"bytes": 55601,
+"sha256": "e01eb7baff35ca0c8524686e2e32b13bff69a7ac78a35372cfcec256c6018ab1"
+},
+{
+"path": "open/funding/SPX.parquet",
+"bytes": 149148,
+"sha256": "743c0c735d534e51e47ec37652e4370cf1b027c8ce825a8079b7152966670c73"
+},
+{
+"path": "open/funding/SPY.parquet",
+"bytes": 110787,
+"sha256": "f22a1389eac67b69f2d860be887bc52cb941a0c1717e6a37cd6348a8f0258dd2"
+},
+{
+"path": "open/funding/STABLE.parquet",
+"bytes": 100050,
+"sha256": "17b9da977e2ec8251446b538afba01f820831e08ab8ca627e2132074aa2b2a06"
+},
+{
+"path": "open/funding/STBL.parquet",
+"bytes": 104397,
+"sha256": "3e5e7c5c5b49bba7b478b9a4d78f009f5bad157990262a5f4aaeadb27ad2336e"
+},
+{
+"path": "open/funding/STRC.parquet",
+"bytes": 65540,
+"sha256": "495c17a38158927b49e5f2d0f7f4415cbcbf82959f68e22393b68ff6c864b460"
+},
+{
+"path": "open/funding/STRK.parquet",
+"bytes": 92760,
+"sha256": "9c02829119a4dcae146c74f3c08f7d705c3efdd9e16ed1173e3a88367576a2cc"
+},
+{
+"path": "open/funding/SUI.parquet",
+"bytes": 212102,
+"sha256": "54de3302c341d4153822dff427af9a4d372d0d21f3c199a135710b78d91e4643"
+},
+{
+"path": "open/funding/SYRUP.parquet",
+"bytes": 127848,
+"sha256": "8d905274c0bf62f4058a6f1a37fc5e850477661efa6711ce526eaa5c0bc8aa36"
+},
+{
+"path": "open/funding/TAO.parquet",
+"bytes": 293834,
+"sha256": "5376b20f39abc1f00ef16f0537c0b051158c1802a7c2b73ba0bdf1268af41a07"
+},
+{
+"path": "open/funding/TENCENT.parquet",
+"bytes": 38706,
+"sha256": "cd414d3868387b9564adbcf2886def0c119a2159b76d246f6b3de46f29c74255"
+},
+{
+"path": "open/funding/TIA.parquet",
+"bytes": 126789,
+"sha256": "19a0592ffa614187616d3069e92dd46df1932c75092dbbec877071475d10903c"
+},
+{
+"path": "open/funding/TRUMP.parquet",
+"bytes": 271784,
+"sha256": "17082a4cc838716b0e13d8705793d035b2bc2ed631213a75e734e3426a848c3a"
+},
+{
+"path": "open/funding/TRX.parquet",
+"bytes": 139568,
+"sha256": "77302cf345b0cf13136fb5324bceba8f3d7fbb1c5ea5b3403771df2118a5e755"
+},
+{
+"path": "open/funding/TSLA.parquet",
+"bytes": 130841,
+"sha256": "694f6cd6c789287896f5b966d723fd01d175a02c07270a564e77341a50ff965b"
+},
+{
+"path": "open/funding/TSM.parquet",
+"bytes": 70042,
+"sha256": "a0ed079b0aa3e3407e1908a14d6ca85fe9d2657b6722172e7203056aa63088c9"
+},
+{
+"path": "open/funding/TTWO.parquet",
+"bytes": 12038,
+"sha256": "4f98761b7f514995d3cab66941b2c161914916520a6893b0402ede4689410867"
+},
+{
+"path": "open/funding/UNI.parquet",
+"bytes": 213482,
+"sha256": "4c3af90e02805a1c9bc7e9d69889d6028a7de52f3203c2b1f1840a824d8ea620"
+},
+{
+"path": "open/funding/UNITREE.parquet",
+"bytes": 37661,
+"sha256": "4825ddff3557559623decf0150c3372b84b6a14cbee41cca6c8808f438e06349"
+},
+{
+"path": "open/funding/USELESS.parquet",
+"bytes": 130673,
+"sha256": "99e7dae7599b5384e42de77483a7dbf47532c25fafe193182723e4334511a767"
+},
+{
+"path": "open/funding/VIRTUAL.parquet",
+"bytes": 154642,
+"sha256": "70a6fa71434ac9674b24bdc4eee395771ba87a952a4b29cc45122f4c86a2270c"
+},
+{
+"path": "open/funding/VVV.parquet",
+"bytes": 193528,
+"sha256": "90740f406313cbccaddde2e1467db49c2b8a7f27f73588c754d6d04856521b69"
+},
+{
+"path": "open/funding/WDC.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "open/funding/WEN.parquet",
+"bytes": 34543,
+"sha256": "6992b4bb4efaedf1a702e5b0de1387307626a4b2f879e0b608e342faa40f7849"
+},
+{
+"path": "open/funding/WIF.parquet",
+"bytes": 191400,
+"sha256": "740e2daf1cecb86119c668e2f716918bf527b268ca0a8b8ee53bde5276016c12"
+},
+{
+"path": "open/funding/WLD.parquet",
+"bytes": 204513,
+"sha256": "7d512c7a3661cefd40902641ccd3f677e0e7702b2ab5b475494d7b4eaf3208c8"
+},
+{
+"path": "open/funding/WLFI.parquet",
+"bytes": 129561,
+"sha256": "bd4462a4cc59fa380c1ea1dda053e599c9ec55b4d2a37fd5b0d0c79387cc17e2"
+},
+{
+"path": "open/funding/XAG.parquet",
+"bytes": 159812,
+"sha256": "7212b2d183906e677c5fde41eabb247ff00f7e6cd6abb6ff6c83f4163816e83b"
+},
+{
+"path": "open/funding/XAU.parquet",
+"bytes": 164612,
+"sha256": "12953e094e5029680bf0c9c57c51b2c496313d766fdde18ce79b9e2465febe85"
+},
+{
+"path": "open/funding/XLM.parquet",
+"bytes": 88345,
+"sha256": "257c32ea735bf7b045a6ab0d38b0e2a9d01cd2535d0e8d1cf12171eefbf95beb"
+},
+{
+"path": "open/funding/XMR.parquet",
+"bytes": 191651,
+"sha256": "647f50fe68a2e12565d74b00ab5bc75c1e13f7bdfea81fa57bb1e12c958a972e"
+},
+{
+"path": "open/funding/XPD.parquet",
+"bytes": 105703,
+"sha256": "606a43157415a71491d35809f0db1fdf51f11e95864c18a4a136816ce32739fc"
+},
+{
+"path": "open/funding/XPL.parquet",
+"bytes": 130217,
+"sha256": "17159c7b2dee6696fdde49a893ac66168f8c67e2e19ab909590dbdcd939fa0c5"
+},
+{
+"path": "open/funding/XPT.parquet",
+"bytes": 106199,
+"sha256": "a90a63be9714ff608a6ec41a9e3d05f66e81b60370e7e55a169673481718dd28"
+},
+{
+"path": "open/funding/XRP.parquet",
+"bytes": 220107,
+"sha256": "cd73bb881a15162996a0b079d6bf5a9df35b3cc876d61b9e423488825d05148f"
+},
+{
+"path": "open/funding/ZEC.parquet",
+"bytes": 178095,
+"sha256": "ae40ad4d0fe9368ba29516d0bb67b6d57f20749e0cce78cd9e69e01c3e0a8960"
+},
+{
+"path": "open/funding/ZHIPU.parquet",
+"bytes": 58188,
+"sha256": "cb822d4c1e1c385a962c08ffe7c2369be2ae84381848ab56777c247aec0d8d4c"
+},
+{
+"path": "open/funding/ZK.parquet",
+"bytes": 111964,
+"sha256": "3db78f1d5c577663cbcb05453ca5d2ad6ca64c78d3ff7f3635917db734696627"
+},
+{
+"path": "open/funding/ZORA.parquet",
+"bytes": 140172,
+"sha256": "c6dd9ec9814813b110f6510eb6a6094f9a808999179649f9a0657eadb06da15f"
+},
+{
+"path": "open/funding/ZRO.parquet",
+"bytes": 153337,
+"sha256": "a115df85077b0b7d70c25ed92478e099d31f99843b839cb859fba249b6149da4"
+},
+{
+"path": "raw/contracts.json",
+"bytes": 437806,
+"sha256": "4c1182853bfb78e62553ff13a8e9ac7fce5d200b20f62589835c96fb7eb2b465"
+},
+{
+"path": "reserved/README.md",
+"bytes": 108,
+"sha256": "e24ee1bf25a59765b9af0e5897380cce9264c75dcdaa7eff5766ae81f3ff0e6e"
+},
+{
+"path": "reserved/candles_1d/ADI.parquet",
+"bytes": 5200,
+"sha256": "c83afc9a8cda7411aac9bef29f2e1d0311ed682caa49797aa3ca4ce5ccf14499"
+},
+{
+"path": "reserved/candles_1d/ANSEM.parquet",
+"bytes": 8465,
+"sha256": "4bc4c14236b874c94785db6f5a2036b383b5a39a51817144b515200881c22bfd"
+},
+{
+"path": "reserved/candles_1d/APEX.parquet",
+"bytes": 14593,
+"sha256": "cf5aa7016b9d4a3c64c1df87122f515ee35f9a4ac26f731d4d93f9bcf21b8678"
+},
+{
+"path": "reserved/candles_1d/AUDUSD.parquet",
+"bytes": 13503,
+"sha256": "fa56013bf8ea8d3f55ab00e188a85dd12b7e1aa7201714f7215e47ab3e019467"
+},
+{
+"path": "reserved/candles_1d/BOTZ.parquet",
+"bytes": 12135,
+"sha256": "fba153fe07d430cb8add7406ba3942709d35af6f4466fe3f0df906c8d37b2602"
+},
+{
+"path": "reserved/candles_1d/BRENTOIL.parquet",
+"bytes": 13229,
+"sha256": "7b7179f72e2f211c096fc26f645eb6926faf167f738b858c2510adab78c3939e"
+},
+{
+"path": "reserved/candles_1d/CASHCAT.parquet",
+"bytes": 8944,
+"sha256": "884540d6a1fe4a54c52caa45ae25cefd4248d37b64fcc0edfd5667a4963f1e1c"
+},
+{
+"path": "reserved/candles_1d/CRO.parquet",
+"bytes": 14734,
+"sha256": "08cea7a4db02eec9be74fbd59cce073b91a1bff63292c08e8fe86c405e431bbb"
+},
+{
+"path": "reserved/candles_1d/DATA.parquet",
+"bytes": 38619,
+"sha256": "69575c2651e4d04e16c5c93831f0117188a85a3be8dc4261b27b9bb09f9d4c87"
+},
+{
+"path": "reserved/candles_1d/DRV.parquet",
+"bytes": 5165,
+"sha256": "d7f165e02adb61cfac58d8e8f90d4af90d50f85dfcc1d055c0b413c7e78f97e3"
+},
+{
+"path": "reserved/candles_1d/EURUSD.parquet",
+"bytes": 14984,
+"sha256": "96042883df1f1b01454d487d4f2044b5289ce33d0e44e72002d84eea2442ceef"
+},
+{
+"path": "reserved/candles_1d/GBPUSD.parquet",
+"bytes": 14678,
+"sha256": "08ccee6340092904282302cc81d56df338e49b852054e04333dd7c45dbb80d4a"
+},
+{
+"path": "reserved/candles_1d/H100.parquet",
+"bytes": 13038,
+"sha256": "4a2098c92497952b3ed6c88d687af291810b6dbbad551db7736e57eabb5e2be1"
+},
+{
+"path": "reserved/candles_1d/HYUNDAIUSD.parquet",
+"bytes": 13941,
+"sha256": "f7b9359a5c864715ca218728d460d2f5edb45c08d12e892b88b38fcbb88865b9"
+},
+{
+"path": "reserved/candles_1d/KIOXIA.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1d/KRCOMP.parquet",
+"bytes": 5754,
+"sha256": "d9a93bb001558bc21fff7cb4cd695cdc34f60b80eb13c57089d32b586e606ed2"
+},
+{
+"path": "reserved/candles_1d/LAUNCHCOIN.parquet",
+"bytes": 5754,
+"sha256": "ce940f53d5fb5998adc24757573fe02216f7260c5bd3393361d0e293c5ce4d6a"
+},
+{
+"path": "reserved/candles_1d/MAGS.parquet",
+"bytes": 7714,
+"sha256": "0fd2f26f0f35d20085fc3ca65bcb792d22f22b5d9c93771a3658efff1a5a7881"
+},
+{
+"path": "reserved/candles_1d/MNT.parquet",
+"bytes": 15021,
+"sha256": "b8733fbb5a16c36e8d6610545a885d3bc1562306d931e9d51377a380c4074275"
+},
+{
+"path": "reserved/candles_1d/NZDUSD.parquet",
+"bytes": 12628,
+"sha256": "0a980cca18e4d0bf00de81e6890913dbf571d5a8cbeb50e826cae6442939f0b4"
+},
+{
+"path": "reserved/candles_1d/RAIL.parquet",
+"bytes": 12716,
+"sha256": "da5b7e5a7953911c46999f94172bf007fa294df80d71ecf791874fbfe40b007c"
+},
+{
+"path": "reserved/candles_1d/SAMSUNGUSD.parquet",
+"bytes": 14481,
+"sha256": "6802d62d13898cf193cbf6c434022b62d81c1cdd13b56e315a0360bf1cf9638a"
+},
+{
+"path": "reserved/candles_1d/SHEIN.parquet",
+"bytes": 7564,
+"sha256": "366c3b78b39f277056708d5ec5c6f301ef422d44116cbc9767755019fa0b3b81"
+},
+{
+"path": "reserved/candles_1d/SKHYNIXUSD.parquet",
+"bytes": 14465,
+"sha256": "fd4c405c10efb5405bb3e371a0adc101cb10fb4c3d59d6cbea4af1a8be36b21a"
+},
+{
+"path": "reserved/candles_1d/SMIC.parquet",
+"bytes": 8129,
+"sha256": "b58d5b043428390838f3e1ca5927238e0da04701bd21627a05d49d6757331302"
+},
+{
+"path": "reserved/candles_1d/SOXX.parquet",
+"bytes": 7320,
+"sha256": "6340b6d0085d815bded793a59615553ff3e2eb5c7b233a87cd2820a115131f64"
+},
+{
+"path": "reserved/candles_1d/SPACEX.parquet",
+"bytes": 7375,
+"sha256": "68e947f2664e3f26b03844d4a88a5958c3abe0e643b750b793009c70dbf58d7b"
+},
+{
+"path": "reserved/candles_1d/STABLECOINX.parquet",
+"bytes": 7487,
+"sha256": "507ee21576b7f30062f254e90dd8e46b6f59c8aae241d28d6cf0325c6163b5b2"
+},
+{
+"path": "reserved/candles_1d/STONK.parquet",
+"bytes": 6541,
+"sha256": "e02263712e8a5d5282d6313b07299b647ac2dc8557bca1147783652ba87d958a"
+},
+{
+"path": "reserved/candles_1d/TUR30.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1d/URA.parquet",
+"bytes": 12279,
+"sha256": "34d99a451ab131e918f496e4089573eb5e8b701020d4ed1900c3693f45d54e9e"
+},
+{
+"path": "reserved/candles_1d/US100.parquet",
+"bytes": 11842,
+"sha256": "454de71aa1568850ac5580383df0ea6382b8ed0e558db36ef79b574aeb208fc7"
+},
+{
+"path": "reserved/candles_1d/US10Y.parquet",
+"bytes": 7394,
+"sha256": "3c19ce192b72b3ba8a30b9541f59593a58c0114325f4af2b146331016aa5c55c"
+},
+{
+"path": "reserved/candles_1d/US500.parquet",
+"bytes": 11916,
+"sha256": "6462667a81d18e5c57e1240a8298e7eaf09ad6fb791a6d4961bc884bcf659952"
+},
+{
+"path": "reserved/candles_1d/USDCAD.parquet",
+"bytes": 14475,
+"sha256": "ab80a7e0f2622cca7a828cadb441a5eb6e993867cfab475a1502def1752289b2"
+},
+{
+"path": "reserved/candles_1d/USDCHF.parquet",
+"bytes": 14114,
+"sha256": "11743d07063a09a59f2478517fbbdebeb96b689e22e9a795cd210ccd4fb1be51"
+},
+{
+"path": "reserved/candles_1d/USDHKD.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1d/USDJPY.parquet",
+"bytes": 14034,
+"sha256": "3253886444ad79eb5146b677a6ad08341aeed9c410ec6e9657fa39fbb2dbd337"
+},
+{
+"path": "reserved/candles_1d/USDKRW.parquet",
+"bytes": 12779,
+"sha256": "6c4f9a3c1701ebe47e62cd3ecb45da7ab4cbe63d7307ec717316b790e7109ee3"
+},
+{
+"path": "reserved/candles_1d/VARIATIONAL.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1d/WHEAT.parquet",
+"bytes": 11971,
+"sha256": "ed810f6c946006d324f3a0361f5fee75ad96ded9e494fb741f2233960a55d1a9"
+},
+{
+"path": "reserved/candles_1d/WTI.parquet",
+"bytes": 14306,
+"sha256": "36ed37226a78e93ffa22b3b5473b9af8d36571a34826d7f638061c74c64389b1"
+},
+{
+"path": "reserved/candles_1d/XCU.parquet",
+"bytes": 14936,
+"sha256": "8b27aba6c820d634bbdea7ffbe0d5af1d8b877dd2720ea99f849d4d6a1c01118"
+},
+{
+"path": "reserved/candles_1d/XIAOMI.parquet",
+"bytes": 9722,
+"sha256": "75a7eb98126cb373cc0605187d57f1ee3804f748d60349d167b4ab472c2b57eb"
+},
+{
+"path": "reserved/candles_1d/YZY.parquet",
+"bytes": 6238,
+"sha256": "f4e8db8eb7dff23370597de0d6058c3a19b7f2a274547da5eb73fbee6d8e5431"
+},
+{
+"path": "reserved/candles_1h/ADI.parquet",
+"bytes": 18769,
+"sha256": "ede281fb1fb677e43919d3a2601796b0710877cc1ea3ec526fecdf34d5b61e01"
+},
+{
+"path": "reserved/candles_1h/ANSEM.parquet",
+"bytes": 100296,
+"sha256": "9952018883221c636d5b5b85227c3031f24a1bc876872a8321b7bc40ed0bfbcb"
+},
+{
+"path": "reserved/candles_1h/APEX.parquet",
+"bytes": 411523,
+"sha256": "adb1aa0ef3bed7233beda064b49d626ce97b75aab0f57f039707216cfbf326bc"
+},
+{
+"path": "reserved/candles_1h/AUDUSD.parquet",
+"bytes": 214674,
+"sha256": "3d6ceef0805ce0244cb19f4108850ee541d90cd2ed80aad4fcc65124a4b76cf4"
+},
+{
+"path": "reserved/candles_1h/BOTZ.parquet",
+"bytes": 108582,
+"sha256": "fe4456dea953eb0aae3d2039b66a3db69fc31437aa0bc93a7c933688c10c39bb"
+},
+{
+"path": "reserved/candles_1h/BRENTOIL.parquet",
+"bytes": 217820,
+"sha256": "98bc69ac8410aa19215da43c41531ff33d918565b5fb78f4c250b825e7c1a0c2"
+},
+{
+"path": "reserved/candles_1h/CASHCAT.parquet",
+"bytes": 110327,
+"sha256": "7f8dc1f0690b9c68bf045e7fbadbe66cf4c02ba60dbe08e8cac9bbd600355441"
+},
+{
+"path": "reserved/candles_1h/CRO.parquet",
+"bytes": 449480,
+"sha256": "c436300874c93e1a9dfd1beb5572aebba648216857b5a3734dca12f8a5aae173"
+},
+{
+"path": "reserved/candles_1h/DATA.parquet",
+"bytes": 666440,
+"sha256": "a9d65cc658424f7db8d51f6f4151e73e2842748e62e8b8040361ab3d6803878a"
+},
+{
+"path": "reserved/candles_1h/DRV.parquet",
+"bytes": 23640,
+"sha256": "4758502fe564bc7425440325feead23df20a0a892015bb9e562181c0b3ca3b09"
+},
+{
+"path": "reserved/candles_1h/EURUSD.parquet",
+"bytes": 382912,
+"sha256": "fb3dc16dfa4853fa09918a95d431381fdccb9ea5a38f2528370a770bf818fdad"
+},
+{
+"path": "reserved/candles_1h/GBPUSD.parquet",
+"bytes": 322688,
+"sha256": "f382239414ca504b750d0f18b4f02b4d22e57ccb52926e5019331f2178b0cf8a"
+},
+{
+"path": "reserved/candles_1h/H100.parquet",
+"bytes": 136305,
+"sha256": "013abdf5b9c8c3d046ad4eb9a8b1bd59a8cfab07ab9d6c0e1852b5d3a120f821"
+},
+{
+"path": "reserved/candles_1h/HYUNDAIUSD.parquet",
+"bytes": 145961,
+"sha256": "f7b52ffd60dba899d6ca2aefb15ef636c466e31ac3e6916042b6c3af739de459"
+},
+{
+"path": "reserved/candles_1h/KIOXIA.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1h/KRCOMP.parquet",
+"bytes": 85728,
+"sha256": "ff48d9ad18850fce1bf1012be4998b200c8af26012380418d1e19c9cc2e63393"
+},
+{
+"path": "reserved/candles_1h/LAUNCHCOIN.parquet",
+"bytes": 204042,
+"sha256": "b1834f1714920ea1ce899b87c13a390cc0e175b1258148ada69bff776ed51d2b"
+},
+{
+"path": "reserved/candles_1h/MAGS.parquet",
+"bytes": 80813,
+"sha256": "752e87c4b97b8f527286355829c11bd2cd84f7e16139209ebaeb1c51ed5977b5"
+},
+{
+"path": "reserved/candles_1h/MNT.parquet",
+"bytes": 591571,
+"sha256": "0c2de997e29bee90f55c7ff095a0020378f153b2d512a33fb3beb9a25a7e10b7"
+},
+{
+"path": "reserved/candles_1h/NZDUSD.parquet",
+"bytes": 191886,
+"sha256": "0e6f71734e147731111679006a6613dcd4f3f21d04eff78e1267ee9d775d06d6"
+},
+{
+"path": "reserved/candles_1h/RAIL.parquet",
+"bytes": 96145,
+"sha256": "5560d213e617630c8d186e507664613ec814ad61dfad664e9becd276b45aea0b"
+},
+{
+"path": "reserved/candles_1h/SAMSUNGUSD.parquet",
+"bytes": 211601,
+"sha256": "c26103406af54963998be3bcdfa465c47ebe1a533eda1cd6d0c75f0d0fb14ec9"
+},
+{
+"path": "reserved/candles_1h/SHEIN.parquet",
+"bytes": 55675,
+"sha256": "b48795b90ec323c4dafc69da539c102515a79b0b657c7408f72257ac04d4a9a1"
+},
+{
+"path": "reserved/candles_1h/SKHYNIXUSD.parquet",
+"bytes": 229506,
+"sha256": "d76eef2e705325a9a75d042e6f1b2f84de8b955422beaed7e7b1b82c4a2a9d2c"
+},
+{
+"path": "reserved/candles_1h/SMIC.parquet",
+"bytes": 54940,
+"sha256": "24603c06ccd4940bc374e891e7d1670adf45af33180f9b449272bb0b82610356"
+},
+{
+"path": "reserved/candles_1h/SOXX.parquet",
+"bytes": 58542,
+"sha256": "f75d47bfb3a14ecb496c69bc49d58370747ffe59f036951366406f91e63c1007"
+},
+{
+"path": "reserved/candles_1h/SPACEX.parquet",
+"bytes": 69252,
+"sha256": "b7e038570aaa23a5c0f262c3dae17969ef6a376cef66d0192adfe73ab241994d"
+},
+{
+"path": "reserved/candles_1h/STABLECOINX.parquet",
+"bytes": 51042,
+"sha256": "7bf2e71bf024f4ccddec4fefd1965f9147f31c2eb3aab3f1517411be99ad87dd"
+},
+{
+"path": "reserved/candles_1h/STONK.parquet",
+"bytes": 56588,
+"sha256": "525253adbb9b5628bd96e8c652d29f4e1a3bace9e1a8af99a7d7e315d26cbac6"
+},
+{
+"path": "reserved/candles_1h/TUR30.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1h/URA.parquet",
+"bytes": 119377,
+"sha256": "bec560fef8b8e4b5e7fe613618e229feab85866f2ced1afdbb5c98815ba1ab32"
+},
+{
+"path": "reserved/candles_1h/US100.parquet",
+"bytes": 154095,
+"sha256": "d14612b7c0ee5d254dd821e499a186649cec6b3b38802f71c3c88055349798f0"
+},
+{
+"path": "reserved/candles_1h/US10Y.parquet",
+"bytes": 28633,
+"sha256": "e2b95f3fe7476dfa1134fa345386eca35e2494729284f5337cda4f8c6736db5b"
+},
+{
+"path": "reserved/candles_1h/US500.parquet",
+"bytes": 166103,
+"sha256": "5393654456813c223c43db1ef47e309861b4a1c60b6aa778827d752a32710d0e"
+},
+{
+"path": "reserved/candles_1h/USDCAD.parquet",
+"bytes": 304248,
+"sha256": "59c8d1287276064b871c32733ff4bbd5d528beea2305e20a2fd015a9aa9ddd3a"
+},
+{
+"path": "reserved/candles_1h/USDCHF.parquet",
+"bytes": 279147,
+"sha256": "963bf2a45f937e69ed0618f3e4cca2fd508846308cf64a28db1b3fcb14bb03f0"
+},
+{
+"path": "reserved/candles_1h/USDHKD.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1h/USDJPY.parquet",
+"bytes": 307319,
+"sha256": "4b26b8e795ec7cadf9d212f318080127d85f87f0ba64724e5d9dbecc24d38499"
+},
+{
+"path": "reserved/candles_1h/USDKRW.parquet",
+"bytes": 237779,
+"sha256": "ee67f01c78139eb15816f82a20988524b14fd3f04f5466cf1e9fe3abfc418e34"
+},
+{
+"path": "reserved/candles_1h/VARIATIONAL.parquet",
+"bytes": 3418,
+"sha256": "46783b147077d7ae2266dc319ca22ee452c9a5bc4ee235fb7788881dff7e3dd7"
+},
+{
+"path": "reserved/candles_1h/WHEAT.parquet",
+"bytes": 91136,
+"sha256": "32fb81e0c2bddf9f5c1ab9ecb0c7e2784403c8207bb301177724dd52606e2ee2"
+},
+{
+"path": "reserved/candles_1h/WTI.parquet",
+"bytes": 291638,
+"sha256": "78542078e3f756cf24da805075101b8a03893b9c861698cf105d73f5df400786"
+},
+{
+"path": "reserved/candles_1h/XCU.parquet",
+"bytes": 283281,
+"sha256": "dd62ab5bba95db23ad8c66fa1b9b7d9c74b4bbeda11fcc2f7cbe3d1bc71e3cdb"
+},
+{
+"path": "reserved/candles_1h/XIAOMI.parquet",
+"bytes": 80481,
+"sha256": "226a81416440989ca373bb59f3b73adaba1b25f258062a42a7b5142ad948a372"
+},
+{
+"path": "reserved/candles_1h/YZY.parquet",
+"bytes": 342619,
+"sha256": "f90668787143e01a554af073b5950ae507ef75373ba8e1d3cb1773324bf3fc72"
+},
+{
+"path": "reserved/funding/ADI.parquet",
+"bytes": 16061,
+"sha256": "5e737c31801d23ad34c2e19d1bbf2ff7b3b082fc18967a9c290faceda426e065"
+},
+{
+"path": "reserved/funding/ANSEM.parquet",
+"bytes": 31060,
+"sha256": "f68cd3e59f07a3c7c7b461f42a2fa708c35a7c9534d5109d604cd6c5eb66ecb1"
+},
+{
+"path": "reserved/funding/APEX.parquet",
+"bytes": 124267,
+"sha256": "8798eef296f67d006fc4123f5bcaa30c15c1683f0d1895979a9b21f0a95c14d0"
+},
+{
+"path": "reserved/funding/AUDUSD.parquet",
+"bytes": 72970,
+"sha256": "60548df7906359d845ba7397c7293cff7f00ae59f5d37e0e2b9559b8ba9770f8"
+},
+{
+"path": "reserved/funding/BOTZ.parquet",
+"bytes": 61427,
+"sha256": "b4057221062d19526dfd7f8281943249c5928056ad6faa824e8e2180e2e990fe"
+},
+{
+"path": "reserved/funding/BRENTOIL.parquet",
+"bytes": 97782,
+"sha256": "63c4967e54eee38b28850c4f3342f922a7dfae37aedbb026e377eed50a4eb637"
+},
+{
+"path": "reserved/funding/CASHCAT.parquet",
+"bytes": 38934,
+"sha256": "b7f06a14d1ff43460735f5ca24a350e79ce1afce3f3a641524f61fd0b780f749"
+},
+{
+"path": "reserved/funding/CRO.parquet",
+"bytes": 111297,
+"sha256": "a06aec3c656edc43112759bc3c404c74da7424390326cb3fc14bc3a1961a8430"
+},
+{
+"path": "reserved/funding/DATA.parquet",
+"bytes": 234955,
+"sha256": "0c85e57a3bb4efeeeb74fe0e75d4b94e59309539450837ddb32cbbc1496cc489"
+},
+{
+"path": "reserved/funding/DRV.parquet",
+"bytes": 10400,
+"sha256": "fd179a7266d5d671537bbb5cb01bfd679cbd070449f9afcde90eb3a01370a8a9"
+},
+{
+"path": "reserved/funding/EURUSD.parquet",
+"bytes": 84646,
+"sha256": "ca328bda35e42ec2c3a6cc5b5a101a3769e0cadf1ddbfdc05041e9c2497d31d1"
+},
+{
+"path": "reserved/funding/GBPUSD.parquet",
+"bytes": 73000,
+"sha256": "fa7dc95b1ce416f9fd392598b435a724f10781ddbfd806d8a17c513ad180baa5"
+},
+{
+"path": "reserved/funding/H100.parquet",
+"bytes": 83602,
+"sha256": "313da18417ea2410e09813a136ea996f9e70c35ea1fec63ae97141c105dc965f"
+},
+{
+"path": "reserved/funding/HYUNDAIUSD.parquet",
+"bytes": 89288,
+"sha256": "0c810c2ecd53716782079aca7d661dd4eebd03bae8025f3def2b84b7088e6c16"
+},
+{
+"path": "reserved/funding/KIOXIA.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "reserved/funding/KRCOMP.parquet",
+"bytes": 32231,
+"sha256": "5a1686d776a061e104d8cb1af059fbe2cb9163a01ca83aa98ea0537932c3c543"
+},
+{
+"path": "reserved/funding/LAUNCHCOIN.parquet",
+"bytes": 36638,
+"sha256": "7093c6f88a978cee0cb79a6e36babef08cb7734a24700336aa805aaca77a3ba4"
+},
+{
+"path": "reserved/funding/MAGS.parquet",
+"bytes": 36450,
+"sha256": "8b11575def40c1bba9441da8213113771320afa0d0c568f3ff6d2c46bfb93a14"
+},
+{
+"path": "reserved/funding/MNT.parquet",
+"bytes": 135824,
+"sha256": "09befcf427fa3877939ce6f112cbba1212bddbdbd8aa73174b0f464e54fb408b"
+},
+{
+"path": "reserved/funding/NZDUSD.parquet",
+"bytes": 70415,
+"sha256": "e78817a965188356f06848a296906fc237cd9abbc10b6f943eff0f841b4310f0"
+},
+{
+"path": "reserved/funding/RAIL.parquet",
+"bytes": 63429,
+"sha256": "fdc9afd164d42e12994900d8dab03e9a10482752920b9bf354ff30d01b4d6a2f"
+},
+{
+"path": "reserved/funding/SAMSUNGUSD.parquet",
+"bytes": 96999,
+"sha256": "821137aa94d59b885e87c87c80abeb8e28a494075cc6a1cbee1329e8950891ea"
+},
+{
+"path": "reserved/funding/SHEIN.parquet",
+"bytes": 21165,
+"sha256": "01f8cf8ca1806b8ba45c8012a95687ccc198274f5e4fdb569b75067a119c5de8"
+},
+{
+"path": "reserved/funding/SKHYNIXUSD.parquet",
+"bytes": 99970,
+"sha256": "bdb2dc500f8c98cbd4a8aaf99ca110b7c6e1f7f052033097ff13bac9bd33fcab"
+},
+{
+"path": "reserved/funding/SMIC.parquet",
+"bytes": 23101,
+"sha256": "e257c9502efa8150131ebde5f9e13920187840fd7a0e1a2387fdcd43c3ebb17a"
+},
+{
+"path": "reserved/funding/SOXX.parquet",
+"bytes": 16054,
+"sha256": "0905eb873999298e994a8bc247098ab18efbe4aeef347d4db479e5c86f324e7c"
+},
+{
+"path": "reserved/funding/SPACEX.parquet",
+"bytes": 25412,
+"sha256": "e023b26bf29d12d3afb4fb3a3a08280fd5610ad95a0f447b181590a4b38fed87"
+},
+{
+"path": "reserved/funding/STABLECOINX.parquet",
+"bytes": 27264,
+"sha256": "583370e9bc10c569fe5da63b2cd5f5d715838b9aa0d845b7b6ab76570b308998"
+},
+{
+"path": "reserved/funding/STONK.parquet",
+"bytes": 20145,
+"sha256": "9655fe6c7fe521a91f246d3da76d6bb73fb34c4bc4c9dd32bab1ba50a4b7d611"
+},
+{
+"path": "reserved/funding/TUR30.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "reserved/funding/URA.parquet",
+"bytes": 78665,
+"sha256": "32d66013716017deabae177123deb62b5fd87cb28d39330621ffda126ac6dbb3"
+},
+{
+"path": "reserved/funding/US100.parquet",
+"bytes": 57069,
+"sha256": "1b18d1c1cb44b6e7037d4cd4e001fde13e226044624203ab20138e5fccb3dee2"
+},
+{
+"path": "reserved/funding/US10Y.parquet",
+"bytes": 18183,
+"sha256": "bd643fc45bdd3d2ed705948cab9b2e352ee6cd4991614bf8d19f8b7926aed9f6"
+},
+{
+"path": "reserved/funding/US500.parquet",
+"bytes": 62175,
+"sha256": "26f620e409cabb79c1d73db2639aa4294ef029d4b9bfa5db5a4db6501689dd6a"
+},
+{
+"path": "reserved/funding/USDCAD.parquet",
+"bytes": 82940,
+"sha256": "3266302f6ec9b3b120a8a37c4c8f0190f4141c196a0892294304d49eba1c0a52"
+},
+{
+"path": "reserved/funding/USDCHF.parquet",
+"bytes": 87994,
+"sha256": "829477f2908c73e2a2eab5b78d5df4a0cb7031d00e600c313a7ec44163d2af7f"
+},
+{
+"path": "reserved/funding/USDHKD.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "reserved/funding/USDJPY.parquet",
+"bytes": 89519,
+"sha256": "80df867be3eb17f47b26a35254f870a5c7fd83117124fe95618782d0f18eb543"
+},
+{
+"path": "reserved/funding/USDKRW.parquet",
+"bytes": 89739,
+"sha256": "4d2faa333b96ec09d780a5ee06b2877ed6db98bdc5e879cc3bdc77e8f869f4e1"
+},
+{
+"path": "reserved/funding/VARIATIONAL.parquet",
+"bytes": 2654,
+"sha256": "b02c9e801090844842b633226f0be0c5a7f0e5d26052863b92a72347105e75de"
+},
+{
+"path": "reserved/funding/WHEAT.parquet",
+"bytes": 46959,
+"sha256": "70205e71bdb7bb017de5a1dcf14be6f8b3e1513c1fcc09708cf9f0cdcf8bb0d2"
+},
+{
+"path": "reserved/funding/WTI.parquet",
+"bytes": 120981,
+"sha256": "d4b0fc1c52b9645312a59594330620e03f3642fdda1fb524d292afb3d905de54"
+},
+{
+"path": "reserved/funding/XCU.parquet",
+"bytes": 92251,
+"sha256": "a1bd588824e08b6770c1e93ac8a70c9e0a33761f60f1645d6b9cd923bdef5a60"
+},
+{
+"path": "reserved/funding/XIAOMI.parquet",
+"bytes": 27503,
+"sha256": "dd3ff4ad036ae166f117b4e9430dfdb551646a72f4c046b7ec616a8d0247e4d9"
+},
+{
+"path": "reserved/funding/YZY.parquet",
+"bytes": 120552,
+"sha256": "3e5b9ea17bb80162dd24a83a1eb07cf8b3be11c46d98156628531056a6de3758"
+}
+]
+}

@@ -1,0 +1,197 @@
+{
+ "prereg_sha": "5fa103e2fc04e24e2efb8f386063773f1effcf6cf3c39fa70c9f8201ef319876",
+ "raw_manifest_sha256": "9b53b0779a99e65c1e56cb38e6a0d26c886038a2e341aaa49d232fd76b9abffe",
+ "counts": {
+  "archive_events": 15,
+  "archive_by_label": {
+   "pure": 9,
+   "with_cliff": 6
+  },
+  "no_market_by_label": {
+   "pure": 5,
+   "with_cliff": 1
+  },
+  "priced_by_label": {
+   "with_cliff": 5,
+   "pure": 4
+  },
+  "exit_early": 0,
+  "other_windows": {
+   "forward": 5,
+   "pre_window": 1
+  }
+ },
+ "primary": {
+  "1x": {
+   "n": 4,
+   "mean_pct": 14.919410289348559,
+   "median_pct": 15.45260049763877,
+   "hit": 0.75,
+   "week_cluster_t": 1.9776848174056605
+  },
+  "2x": {
+   "n": 4,
+   "mean_pct": 14.71941028934856,
+   "median_pct": 15.252600497638769,
+   "hit": 0.75,
+   "week_cluster_t": 1.951173249199542
+  },
+  "3x": {
+   "n": 4,
+   "mean_pct": 14.519410289348558,
+   "median_pct": 15.052600497638768,
+   "hit": 0.75,
+   "week_cluster_t": 1.9246616809934232
+  },
+  "gross": {
+   "n": 4,
+   "mean_pct": 15.11941028934856,
+   "median_pct": 15.652600497638769,
+   "hit": 0.75,
+   "week_cluster_t": 2.0041963856117793
+  }
+ },
+ "null": {
+  "reps": 2000,
+  "seed": 485,
+  "admissible_days": {
+   "ETHFI-USDT-SWAP": 882,
+   "SHELL-USDT-SWAP": 536,
+   "SOPH-USDT-SWAP": 446,
+   "DATA-USDT-SWAP": 46
+  },
+  "swaps_without_admissible_day": [],
+  "mean_pct": 7.345388317697742,
+  "p95_pct": 24.616535503158506,
+  "p": 0.2588705647176412
+ },
+ "gates": {
+  "G1_cluster_t_ge_2": false,
+  "G2_null_p_lt_0.05": false,
+  "G3_mean_net_2x_gt_0": true,
+  "G4_both_halves_positive": true,
+  "G5_positive_without_top3": false
+ },
+ "gate_detail": {
+  "t_1x": 1.9776848174056605,
+  "half1_mean_pct": 6.983001726669741,
+  "half2_mean_pct": 22.855818852027376,
+  "half_split_day": "2026-05-28",
+  "top3": [
+   "SOPH-USDT-SWAP",
+   "ETHFI-USDT-SWAP",
+   "DATA-USDT-SWAP"
+  ],
+  "without_top3_n": 1,
+  "without_top3_mean_pct": -3.9164487267721926
+ },
+ "verdict": "INSUFFICIENT",
+ "min_n": 20,
+ "reported": {
+  "all_archive": {
+   "1x": {
+    "n": 9,
+    "mean_pct": 13.655288389194023,
+    "median_pct": 16.875141395098304,
+    "hit": 0.6666666666666666,
+    "week_cluster_t": 1.810517018030349
+   },
+   "2x": {
+    "n": 9,
+    "mean_pct": 13.45528838919402,
+    "median_pct": 16.675141395098304,
+    "hit": 0.6666666666666666,
+    "week_cluster_t": 1.7839995697505584
+   },
+   "3x": {
+    "n": 9,
+    "mean_pct": 13.255288389194023,
+    "median_pct": 16.4751413950983,
+    "hit": 0.6666666666666666,
+    "week_cluster_t": 1.7574821214707688
+   }
+  },
+  "with_cliff": {
+   "1x": {
+    "n": 5,
+    "mean_pct": 12.643990869070393,
+    "median_pct": 16.875141395098304,
+    "hit": 0.6,
+    "week_cluster_t": 0.9695670776589059
+   },
+   "2x": {
+    "n": 5,
+    "mean_pct": 12.443990869070394,
+    "median_pct": 16.675141395098304,
+    "hit": 0.6,
+    "week_cluster_t": 0.954230668645346
+   },
+   "3x": {
+    "n": 5,
+    "mean_pct": 12.243990869070394,
+    "median_pct": 16.4751413950983,
+    "hit": 0.6,
+    "week_cluster_t": 0.9388942596317861
+   }
+  },
+  "dose_bands_primary_1x": {
+   "0.25-0.5pct": {
+    "n": 3,
+    "mean_pct": 13.931729659094186,
+    "median_pct": 13.022748815165864,
+    "hit": 0.6666666666666666,
+    "week_cluster_t": 1.3171945377497065
+   },
+   "0.5-1pct": {
+    "n": 1,
+    "mean_pct": 17.882452180111674,
+    "median_pct": 17.882452180111674,
+    "hit": 1.0,
+    "week_cluster_t": NaN
+   },
+   "ge_1pct": {
+    "n": 0
+   }
+  },
+  "funding": {
+   "events_with_funding": 0,
+   "net1x_incl_funding": {
+    "n": 0
+   },
+   "funding_mean_pct": null
+  },
+  "forward_instances": [
+   {
+    "day": "2026-12-29",
+    "inst_id": "LIT-USDT-SWAP",
+    "frac_max_supply": 0.003194,
+    "label": "pure"
+   },
+   {
+    "day": "2027-04-16",
+    "inst_id": "CHIP-USDT-SWAP",
+    "frac_max_supply": 0.003224,
+    "label": "with_cliff"
+   },
+   {
+    "day": "2027-04-28",
+    "inst_id": "PROS-USDT-SWAP",
+    "frac_max_supply": 0.002554,
+    "label": "pure"
+   },
+   {
+    "day": "2027-04-29",
+    "inst_id": "AI-USDT-SWAP",
+    "frac_max_supply": 0.005228,
+    "label": "pure"
+   },
+   {
+    "day": "2027-06-22",
+    "inst_id": "ARX-USDT-SWAP",
+    "frac_max_supply": 0.0051073,
+    "label": "pure"
+   }
+  ]
+ },
+ "trials": 1
+}

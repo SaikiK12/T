@@ -1,0 +1,58 @@
+09:37:25 prereg sha d701ea897729
+09:37:33 mtf {'excess|1': (1877, 164, 354, 0), 'excess|4': (2085, 191, 677, 6), 'excess|12': (1217, 91, 247, 23), 'excess|24': (914, 71, 227, 21), 'excess|72': (50, 5, 6, 0), 'raw|1': (8079, 482, 2172, 2), 'raw|4': (12438, 1168, 5015, 240), 'raw|12': (11140, 765, 3034, 124), 'raw|24': (14412, 1345, 3239, 247), 'raw|72': (3380, 233, 6, 0)}
+09:37:33 trials 643736 lists {'placebo': 4515, 'real': 55592}
+09:37:33 prereg sha d701ea897729
+09:37:33 frozen discovery lists b065f24ea9db
+09:37:44 validation ret[7]@24h/z30
+09:37:51 validation ret[30]@24h/z30
+09:37:57 validation ema_ratio[21]@24h/z30
+09:38:04 validation ema_ratio[55]@24h/z30
+09:38:10 validation ema_cross[21,55]@24h/z30
+09:38:17 validation donch[50]@24h/fix
+09:38:23 validation rsi[14]@24h/fix
+09:38:25 validation struct[5,state]@24h/fix
+09:38:29 validation atrp[14]@24h/z30
+09:38:34 validation volz[24]@24h/z30
+09:38:38 validation fund[0]@24h/z30
+09:38:43 validation prem[0]@24h/z30
+09:38:48 validation ret[30]@4h/z180
+09:38:53 validation ema_ratio[55]@4h/z180
+09:38:58 validation ema_cross[21,55]@4h/z180
+09:39:03 validation donch[50]@4h/fix
+09:39:08 validation rsi[14]@4h/fix
+09:39:10 validation struct[5,state]@4h/fix
+09:39:10 done
+09:39:11 prereg sha d701ea897729
+09:39:13 
+                   cl    rep      rate    cce  cce_rep_1x  cce_rep_2x  cce_rep_3x
+family kind                                                                      
+mtf    placebo   4515    304  0.067331    663          19          13           7
+       real     55592  30211  0.543442  14977        7995        5738        3847
+09:39:13 
+                    size   sum      mean
+family h  measure                       
+mtf    1  excess    1877   675  0.359616
+          raw       8079  4279  0.529645
+       4  excess    2085   705  0.338129
+          raw      12438  7260  0.583695
+       12 excess    1217   338  0.277732
+          raw      11140  7014  0.629623
+       24 excess     914   208  0.227571
+          raw      14412  7771  0.539203
+       72 excess      50    18  0.360000
+          raw       3380  1943  0.574852
+09:39:13 
+                   size    sum      mean
+family amplifies                        
+mtf    False      28208  15674  0.555658
+       True       27384  14537  0.530857
+09:39:13 {
+ "mtf": {
+  "cl": 55592,
+  "rep": 30211,
+  "rate": 0.5434415023744423,
+  "baseline": 0.06733111849390919,
+  "placebo_cl": 4515,
+  "signal": true
+ }
+}

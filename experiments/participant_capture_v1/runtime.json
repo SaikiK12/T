@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "websockets": "16.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0"
+  },
+  "dependency_lock": "requirements-test.lock",
+  "source_clock": "future actual GHA UTC/monotonic receipt, not calibrated exchange latency"
+}

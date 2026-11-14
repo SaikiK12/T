@@ -1,0 +1,18 @@
+{
+  "round": "R421",
+  "method": "M488",
+  "source_packet": "20261107T04",
+  "instruments": {
+    "btc": {"cde": "BIP-20DEC30-CDE", "kraken": "PF_XBTUSD", "contract_size": "0.01"},
+    "eth": {"cde": "ETP-20DEC30-CDE", "kraken": "PF_ETHUSD", "contract_size": "0.1"}
+  },
+  "targets_per_leg": ["5000", "10000", "12500", "25000", "50000", "100000"],
+  "owner_total_cash_levels": ["10000", "25000", "50000", "100000"],
+  "capital_scope": "Initial cash is target per venue, total2N; no implicit transfer, margin offset, leverage, funding or currency conversion. N100000 is a200000USD capital stress outside the owner range.",
+  "cde_size_units": ["contracts", "base"],
+  "unit_scope": "Quantity hypotheses, not certified API semantics; no best-convention selection. Native CDE whole-contract increments required under both.",
+  "fees": {"cde_notional_fee": "0.0002", "cde_contract_fee": "0.12", "kraken_fee": "0.0005"},
+  "fee_scope": "CFSE regular fee scheduleSep30 and Kraken Tier1 taker, frozen current terms for this packet; no maker credit, VIP assumption or liquidation fee used for regular fills.",
+  "decision": "No alpha/capacity admission. Report all144 coin/unit/phase/notional/cost cases and both entry directions, including unqualified/partial cases.",
+  "cost_scope": "R417 sweep sensitivity multiplies deviation from own-venue mid and proportional fee at stressed fill quote by1/2/3; fixed CDE per-filled-contract fee also multiplied. No cross-venue basis profit, future-exit claim or absent-depth extrapolation."
+}

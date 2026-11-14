@@ -1,0 +1,17 @@
+03:15:21 R392 --run: PREREG aea63caf4b6b, 47 frozen inputs verified, alpha {'C17': 0.001, 'M319': 0.001, 'GLT': 0.048}
+03:15:26 prereg sha aea63caf4b6b
+03:15:26 47 inputs match the frozen hashes
+[    0.0s] gate: 31 coins with prices and funding
+[    0.0s] mexc: 31 coins with prices and funding
+[    0.0s] gate+mexc L14d: window from 2025-05-12, 23 coins ever eligible
+[    0.1s] reality check: family max-t 95th pct 1.48 over 1 strategies
+[    0.1s] gate+mexc L14d th5% K20            from 2025-05-12   +0.73%/yr t  2.07 nw  2.26 p_rc 0.0150 halves +0.1/+0.3 bp 2x   +0.11%/yr fund 1.07 held 5.0
+[    0.1s] VERDICT PASS (gate 0); survivors ["gate+mexc L14d th5% K20"]
+03:15:26 R392 PASS (gate 0); survivors ['gate+mexc L14d th5% K20']; summary in /home/user/T/experiments/reserved_batch3/results/SUMMARY.md
+verified qx run receipt experiments/reserved_batch3/results/run_receipts/20261110T031526.746901Z-beb6a9b3.json sha256=117307d3a740de88431ccdd0262c48c89111ca1c838ea7c0b32422afd140cbb0
+03:15:32 grid 2020-01-01..2020-12-31: 69 columns, digest 1cabb56d26e3
+03:15:32 C17 {"n": 128, "mean_1x_bp": 86.21855071440592, "t": 3.0364173113312325, "mean_2x_bp": 52.21855071440593, "trimmed_mean_bp": 67.64948373143903, "l2co_mean_bp": 44.37799675593093}
+03:15:32 M319 {"n": 183, "mean_1x_bp": 56.48832154312441, "t": 1.7973614588118023, "mean_2x_bp": 22.48832154312439, "trimmed_mean_bp": 37.53865594828903, "l2co_mean_bp": 26.93283916240443}
+03:15:32 GLT {"n": 507, "ann_1x_pct": 0.7341, "t": 2.2572, "mean_2x_bp": 0.0313032761341223, "trimmed_mean_bp": 0.2559735380835382, "l2co_mean_bp": 0.08373653057199212}
+03:15:32 decision {"C17": "FAIL", "M319": "FAIL", "GLT": "PASS"}
+exit 0

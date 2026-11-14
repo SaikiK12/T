@@ -1,0 +1,58 @@
+{
+  "actual_order_allowed": false,
+  "calibrated": false,
+  "cells": {
+    "approach": {
+      "counts": [
+        16,
+        26,
+        73
+      ],
+      "n": 115,
+      "probability": [
+        0.13968253968253969,
+        0.22620603797074385,
+        0.6341114223467165
+      ]
+    },
+    "recede": {
+      "counts": [
+        0,
+        0,
+        1
+      ],
+      "n": 1,
+      "probability": null
+    }
+  },
+  "class_payoff_means": [
+    1.3235211868836707,
+    -1.1905859156548173,
+    -0.05713653334852299
+  ],
+  "classes": [
+    "break",
+    "rebound",
+    "timeout"
+  ],
+  "config_sha256": "741a8a5a9fd752837d418605a65e61cc058bb44118e49c98394ad61aaf3e5f6d",
+  "counts": [
+    16,
+    26,
+    74
+  ],
+  "data_inputs_sha256": "26272ea3d5e2b438731521f6da16ccc68a24adaed90c055e6379b3402863d4a2",
+  "n": 116,
+  "probability": [
+    0.14285714285714285,
+    0.226890756302521,
+    0.6302521008403361
+  ],
+  "registry_id": "R330",
+  "selection": "none: fixed before training; calibration/validation rows filtered out of fit_stage; full input bytes hashed only",
+  "training_records_sha256": "d31c13b5b37c6aa7091d50fdfc3f8ecff5443f7363e72438c5be2b9381c65231",
+  "window": [
+    "2025-05-01",
+    "2025-09-01"
+  ]
+}

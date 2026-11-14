@@ -1,0 +1,25 @@
+name = "fundext_v1"
+events = "/home/user/T/experiments/reserved_batch1/work/legs/fundext_legs.csv"
+filter = { window = "reserved_2020" }
+venues = [
+  { name = "perp", col = "perp", klines = "klines_1h", funding = "fundingRate" },
+]
+horizons = [1, 8, 24, 72]
+directions = ["long", "short"]
+lines = ["net"]
+costs = [0.004, 0.008, 0.012]
+hedge = "BTCUSDT"
+hedge_cost = 0.001
+min_clusters = 10
+reps = 2000
+seed = 273
+alpha = 0.05
+g3_min = 3
+null_for = "rc_pass"
+winsor = 0.05
+max_bar_jump = 20
+start = "2020-01-01"
+end = "2021-01-08"
+out = "/home/user/T/experiments/reserved_batch1/work/fundext_v1/results"
+kinds = ["neg1", "neg2"]
+reserved_prereg = "/home/user/T/experiments/reserved_batch1/PREREG.md"

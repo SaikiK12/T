@@ -1,0 +1,74 @@
+{
+ "registry": "R487",
+ "day": "2025-10-10",
+ "decides": "S1",
+ "scenarios": {
+  "S1": [
+   "hyperliquid"
+  ],
+  "S1B": [
+   "hyperliquid",
+   "binance"
+  ],
+  "S2": [
+   "binance",
+   "gate",
+   "hyperliquid",
+   "kucoin",
+   "mexc"
+  ]
+ },
+ "raw_manifest_sha256": "7c55072891a8716f086619105f274c98e6ec1f700f1db735513b7df5e26c6921",
+ "alignment": {
+  "binance": {
+   "daily_legs": 64,
+   "aligned_legs": 64
+  },
+  "gate": {
+   "daily_legs": 53,
+   "aligned_legs": 53
+  },
+  "hyperliquid": {
+   "daily_legs": 40,
+   "aligned_legs": 40
+  },
+  "kucoin": {
+   "daily_legs": 31,
+   "aligned_legs": 31
+  },
+  "mexc": {
+   "daily_legs": 49,
+   "aligned_legs": 49
+  }
+ },
+ "exposed_pairs": 174,
+ "inclusive_pairs": 177,
+ "deciders": {
+  "binance+gate L14d th10% K20": {
+   "forward": "R390 A",
+   "call": "SURVIVES"
+  },
+  "binance+kucoin L14d th5% K20": {
+   "forward": "R279 B",
+   "call": "SURVIVES"
+  },
+  "binance+mexc L14d th10% K20": {
+   "forward": "R278 B",
+   "call": "SURVIVES"
+  },
+  "gate+hyperliquid L14d th5% K20": {
+   "forward": "R278 A",
+   "call": "EXPOSED"
+  },
+  "gate+kucoin L14d th5% K20": {
+   "forward": "R279 A",
+   "call": "SURVIVES"
+  },
+  "gate+mexc L7d th10% K20": {
+   "forward": "R278 C",
+   "call": "SURVIVES"
+  }
+ },
+ "verdict": "PARTIAL",
+ "registry_verdict": "PARTIAL"
+}

@@ -1,0 +1,105 @@
+{
+  "bootstrap_repetitions": 400,
+  "bootstrap_seed": 2321000,
+  "burn_in": 128,
+  "calibration_alpha": 0.05,
+  "calibration_paths": 500,
+  "calibration_profiles": [
+    {
+      "id": "gaussian_rho0",
+      "kind": "stationary",
+      "rho": 0.0,
+      "tail": "gaussian"
+    },
+    {
+      "id": "gaussian_rho0.3",
+      "kind": "stationary",
+      "rho": 0.3,
+      "tail": "gaussian"
+    },
+    {
+      "id": "gaussian_rho0.6",
+      "kind": "stationary",
+      "rho": 0.6,
+      "tail": "gaussian"
+    },
+    {
+      "id": "gaussian_rho0.9",
+      "kind": "stationary",
+      "rho": 0.9,
+      "tail": "gaussian"
+    },
+    {
+      "id": "t5_rho0",
+      "kind": "stationary",
+      "rho": 0.0,
+      "tail": "t5"
+    },
+    {
+      "id": "t5_rho0.3",
+      "kind": "stationary",
+      "rho": 0.3,
+      "tail": "t5"
+    },
+    {
+      "id": "t5_rho0.6",
+      "kind": "stationary",
+      "rho": 0.6,
+      "tail": "t5"
+    },
+    {
+      "id": "t5_rho0.9",
+      "kind": "stationary",
+      "rho": 0.9,
+      "tail": "t5"
+    }
+  ],
+  "calibration_seed": 321000,
+  "criteria": {
+    "exact_power_interval_family": 96,
+    "exact_size_interval_family": 40,
+    "maximum_exact_size_upper": 0.05,
+    "maximum_size_point_estimate": 0.05,
+    "minimum_positive_detection_power": 0.2,
+    "no_market_method_selection_or_old_result_reclassification": true,
+    "power_profile": "gaussian_rho0.6",
+    "power_shift": 0.5
+  },
+  "effect_shifts": [
+    0.0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "family_size": 3,
+  "innovation_coordinate_correlation": 0.5,
+  "joint_calibration_confidence": 0.99,
+  "market_outcomes_read": false,
+  "methods": [
+    "iid_gaussian",
+    "circular14",
+    "calibrated_obm14",
+    "calibrated_obm28"
+  ],
+  "n": 273,
+  "new_prospective_paper_days": 0,
+  "power_paths": 200,
+  "strategy_trials": 0,
+  "stress_profiles": [
+    {
+      "id": "gaussian_rho0.6_variance_step",
+      "kind": "variance_step",
+      "rho": 0.6,
+      "tail": "gaussian"
+    },
+    {
+      "id": "jump_rho0.6",
+      "kind": "rare_jump",
+      "rho": 0.6,
+      "tail": "jump"
+    }
+  ],
+  "trials": 152,
+  "validation_paths": 500,
+  "validation_seed": 1321000
+}

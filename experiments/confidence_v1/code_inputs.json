@@ -1,0 +1,34 @@
+{
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0"
+  },
+  "python_version": [
+    3,
+    12,
+    14
+  ],
+  "scope": "Recursive local source/test/import closure; sharedCLI excluded. Pinned public package1.8.0 API used forourfixedlearners, not sourcepaperstrategies/privateinstitutionalcode.",
+  "sha256": {
+    "lab/__init__.py": "da4d03db9b753aa99ad4ce309fa20b767963ab714f97018ecfaf9693b1498487",
+    "lab/acquisition_budget.py": "0a5da0a741d8fa1280f0a8a5b2e08f1e4ced787565de8260bb0d53c101ea98bb",
+    "lab/confidence_models.py": "12bb7b0627e18ada2e7c392cdf431301f9c518aecd53a86aad2bc67b13df4ef9",
+    "lab/executable_quotes.py": "8b71cc4e1922fdb40399ca162e7bcf91ab41d835cbaa8ba2ce9b9ec5fd46688d",
+    "lab/funding_values.py": "47cdafb63f4104c96760f8cf5778a25670e285bec8125201e573a33c5a7ec864",
+    "lab/level_features.py": "9f06cbaaebc662b393b77a0dcabb04f0a3c84690c1f2365d6f822337fa399062",
+    "lab/level_probability.py": "aed8c36a6defd0c70143e42930e1be881d26367483aef3d4269c4bc54a8cbdc2",
+    "lab/mexc_depth.py": "3d6d7084f45b01e9e24669ec9914673cde56ca04cadea5cfe01ef22072f404bb",
+    "lab/microstructure.py": "80e67c0a2a508e1c662050dc1fa3f923408584e6e653ac7858c381f56fa5f11f",
+    "lab/paper_account.py": "b862ac3cc3b7012f1768b55e179165ed36ef46684ee6edf931efc357c7c9f0f2",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/stream_quotes.py": "8402a10afdc15bafca31dc5eddab017a8cfd2e7ba673b5917e77330801a4fcf9",
+    "scripts/check_confidence.py": "d40f6d6f90c0b4b8da3b772044fbc728a18f3d4c1c0d17c8622fcd34616cd0aa",
+    "scripts/run_confidence.py": "90cbd30174e3dc07b8d59ea5096d7ec4fdda678d6a5cef1906ec5f5bf8703f67",
+    "scripts/run_level_probability.py": "6c9a3da7a4386c22c57783fbffbf1119340d023dca7611af1042420716c9a28d",
+    "tests/test_confidence_models.py": "2bac0c5c005ed027fe06b8ecbff2aaf949a9344dbaca91d393ca3c0ccd755cee",
+    "tests/test_confidence_pipeline.py": "819a8e3d180dcf2558564e5b1a034d7aefa45d16efae8cf7e0fc680aaea65060"
+  }
+}

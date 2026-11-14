@@ -1,0 +1,3028 @@
+{
+"folder": "data/coinm_1h",
+"source": "https://data.binance.vision (public monthly/daily klines zips)",
+"script": "scripts/fetch_coinm.py",
+"recorded_utc": "2026-10-20T16:57:12Z",
+"files": 273,
+"bytes": 153561927,
+"combined_sha256": "87f2b9f86395cade13805bff8cbc32d985a330d316ac4623883e8a59c49f9b6c",
+"subfolders": {
+".": {
+"files": 273,
+"bytes": 153561927
+}
+},
+"hourly_coverage": {
+"": {
+"files": 272,
+"bars": 2785261,
+"files_with_holes": 62,
+"holes": 5976,
+"first": 1591840800000,
+"last": 1790809200000
+}
+},
+"coverage": {
+"": {
+"AAVEUSD_PERP": {
+"first": 1640746800000,
+"last": 1790809200000,
+"bars": 41589,
+"holes": 96
+},
+"ADAUSD_200925": {
+"first": 1595235600000,
+"last": 1610431200000,
+"bars": 4222,
+"holes": 0
+},
+"ADAUSD_201225": {
+"first": 1599357600000,
+"last": 1610431200000,
+"bars": 3077,
+"holes": 0
+},
+"ADAUSD_210326": {
+"first": 1601020800000,
+"last": 1616745600000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"ADAUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"ADAUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"ADAUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"ADAUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"ADAUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"ADAUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"ADAUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"ADAUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"ADAUSD_240628": {
+"first": 1703836800000,
+"last": 1719561600000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_250328": {
+"first": 1727427600000,
+"last": 1743148800000,
+"bars": 4368,
+"holes": 0
+},
+"ADAUSD_250627": {
+"first": 1735290000000,
+"last": 1751011200000,
+"bars": 4368,
+"holes": 0
+},
+"ADAUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"ADAUSD_PERP": {
+"first": 1598425200000,
+"last": 1790809200000,
+"bars": 53345,
+"holes": 96
+},
+"ALGOUSD_PERP": {
+"first": 1647313200000,
+"last": 1773824400000,
+"bars": 35047,
+"holes": 96
+},
+"APEUSD_PERP": {
+"first": 1648436400000,
+"last": 1782687600000,
+"bars": 37197,
+"holes": 96
+},
+"APTUSD_PERP": {
+"first": 1666663200000,
+"last": 1774429200000,
+"bars": 29840,
+"holes": 96
+},
+"ATOMUSD_PERP": {
+"first": 1640228400000,
+"last": 1773824400000,
+"bars": 37015,
+"holes": 96
+},
+"AVAXUSD_PERP": {
+"first": 1637722800000,
+"last": 1790809200000,
+"bars": 42429,
+"holes": 96
+},
+"AXSUSD_PERP": {
+"first": 1641956400000,
+"last": 1762506000000,
+"bars": 33391,
+"holes": 96
+},
+"BCHUSD_201225": {
+"first": 1606978800000,
+"last": 1610431200000,
+"bars": 960,
+"holes": 0
+},
+"BCHUSD_210326": {
+"first": 1606978800000,
+"last": 1616745600000,
+"bars": 2714,
+"holes": 0
+},
+"BCHUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"BCHUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"BCHUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"BCHUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"BCHUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"BCHUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"BCHUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"BCHUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"BCHUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"BCHUSD_240628": {
+"first": 1703847600000,
+"last": 1719561600000,
+"bars": 4366,
+"holes": 0
+},
+"BCHUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_250328": {
+"first": 1727424000000,
+"last": 1743148800000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_250627": {
+"first": 1735297200000,
+"last": 1751011200000,
+"bars": 4366,
+"holes": 0
+},
+"BCHUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"BCHUSD_PERP": {
+"first": 1599548400000,
+"last": 1790809200000,
+"bars": 53033,
+"holes": 96
+},
+"BNBUSD_201225": {
+"first": 1604473200000,
+"last": 1610431200000,
+"bars": 1656,
+"holes": 0
+},
+"BNBUSD_210326": {
+"first": 1604473200000,
+"last": 1616745600000,
+"bars": 3410,
+"holes": 0
+},
+"BNBUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"BNBUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"BNBUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"BNBUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"BNBUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"BNBUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"BNBUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"BNBUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"BNBUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"BNBUSD_240628": {
+"first": 1703836800000,
+"last": 1719561600000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_250328": {
+"first": 1727427600000,
+"last": 1743148800000,
+"bars": 4368,
+"holes": 0
+},
+"BNBUSD_250627": {
+"first": 1735290000000,
+"last": 1751011200000,
+"bars": 4368,
+"holes": 0
+},
+"BNBUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_251226": {
+"first": 1751011200000,
+"last": 1766736000000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_260327": {
+"first": 1758873600000,
+"last": 1774598400000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_260626": {
+"first": 1766739600000,
+"last": 1782460800000,
+"bars": 4368,
+"holes": 0
+},
+"BNBUSD_260925": {
+"first": 1774598400000,
+"last": 1790323200000,
+"bars": 4369,
+"holes": 0
+},
+"BNBUSD_261225": {
+"first": 1782460800000,
+"last": 1790809200000,
+"bars": 2320,
+"holes": 0
+},
+"BNBUSD_PERP": {
+"first": 1597996800000,
+"last": 1790809200000,
+"bars": 53464,
+"holes": 96
+},
+"BTCUSD_200925": {
+"first": 1591840800000,
+"last": 1610431200000,
+"bars": 5165,
+"holes": 0
+},
+"BTCUSD_201225": {
+"first": 1593594000000,
+"last": 1610431200000,
+"bars": 4678,
+"holes": 0
+},
+"BTCUSD_210326": {
+"first": 1601020800000,
+"last": 1616745600000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"BTCUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"BTCUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"BTCUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"BTCUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"BTCUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"BTCUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"BTCUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"BTCUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"BTCUSD_240628": {
+"first": 1703836800000,
+"last": 1719561600000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_250328": {
+"first": 1727424000000,
+"last": 1743148800000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_250627": {
+"first": 1735286400000,
+"last": 1751011200000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_251226": {
+"first": 1751011200000,
+"last": 1766736000000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_260327": {
+"first": 1758873600000,
+"last": 1774598400000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_260626": {
+"first": 1766736000000,
+"last": 1782460800000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_260925": {
+"first": 1774598400000,
+"last": 1790323200000,
+"bars": 4369,
+"holes": 0
+},
+"BTCUSD_261225": {
+"first": 1782460800000,
+"last": 1790809200000,
+"bars": 2320,
+"holes": 0
+},
+"BTCUSD_PERP": {
+"first": 1597129200000,
+"last": 1790809200000,
+"bars": 53705,
+"holes": 96
+},
+"CHZUSD_PERP": {
+"first": 1660824000000,
+"last": 1761040800000,
+"bars": 27743,
+"holes": 96
+},
+"CRVUSD_PERP": {
+"first": 1641438000000,
+"last": 1656579600000,
+"bars": 4207,
+"holes": 0
+},
+"DOGEUSD_PERP": {
+"first": 1612249200000,
+"last": 1790809200000,
+"bars": 49505,
+"holes": 96
+},
+"DOGSUSD_PERP": {
+"first": 1725962400000,
+"last": 1761642000000,
+"bars": 9912,
+"holes": 0
+},
+"DOTUSD_201225": {
+"first": 1604473200000,
+"last": 1610431200000,
+"bars": 1656,
+"holes": 0
+},
+"DOTUSD_210326": {
+"first": 1604473200000,
+"last": 1616745600000,
+"bars": 3410,
+"holes": 0
+},
+"DOTUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"DOTUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"DOTUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"DOTUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"DOTUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"DOTUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"DOTUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"DOTUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"DOTUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"DOTUSD_240628": {
+"first": 1703840400000,
+"last": 1719561600000,
+"bars": 4368,
+"holes": 0
+},
+"DOTUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_250328": {
+"first": 1727427600000,
+"last": 1743148800000,
+"bars": 4368,
+"holes": 0
+},
+"DOTUSD_250627": {
+"first": 1735290000000,
+"last": 1751011200000,
+"bars": 4368,
+"holes": 0
+},
+"DOTUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"DOTUSD_PERP": {
+"first": 1598338800000,
+"last": 1790809200000,
+"bars": 53369,
+"holes": 96
+},
+"EGLDUSD_PERP": {
+"first": 1608534000000,
+"last": 1763024400000,
+"bars": 42819,
+"holes": 96
+},
+"ENSUSD_PERP": {
+"first": 1659441600000,
+"last": 1773824400000,
+"bars": 31678,
+"holes": 96
+},
+"EOSUSD_201225": {
+"first": 1606892400000,
+"last": 1610431200000,
+"bars": 984,
+"holes": 0
+},
+"EOSUSD_210326": {
+"first": 1606892400000,
+"last": 1610431200000,
+"bars": 984,
+"holes": 0
+},
+"EOSUSD_PERP": {
+"first": 1599447600000,
+"last": 1747818000000,
+"bars": 41119,
+"holes": 96
+},
+"ETCUSD_201225": {
+"first": 1607410800000,
+"last": 1610431200000,
+"bars": 840,
+"holes": 0
+},
+"ETCUSD_210326": {
+"first": 1607410800000,
+"last": 1610431200000,
+"bars": 840,
+"holes": 0
+},
+"ETCUSD_PERP": {
+"first": 1599634800000,
+"last": 1790809200000,
+"bars": 52985,
+"holes": 120
+},
+"ETHUSD_200925": {
+"first": 1595574000000,
+"last": 1610431200000,
+"bars": 4128,
+"holes": 0
+},
+"ETHUSD_201225": {
+"first": 1596610800000,
+"last": 1610431200000,
+"bars": 3840,
+"holes": 0
+},
+"ETHUSD_210326": {
+"first": 1601020800000,
+"last": 1616745600000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"ETHUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"ETHUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"ETHUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"ETHUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"ETHUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"ETHUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"ETHUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"ETHUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"ETHUSD_240628": {
+"first": 1703836800000,
+"last": 1719561600000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_250328": {
+"first": 1727424000000,
+"last": 1743148800000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_250627": {
+"first": 1735286400000,
+"last": 1751011200000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_251226": {
+"first": 1751011200000,
+"last": 1766736000000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_260327": {
+"first": 1758873600000,
+"last": 1774598400000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_260626": {
+"first": 1766739600000,
+"last": 1782460800000,
+"bars": 4368,
+"holes": 0
+},
+"ETHUSD_260925": {
+"first": 1774598400000,
+"last": 1790323200000,
+"bars": 4369,
+"holes": 0
+},
+"ETHUSD_261225": {
+"first": 1782460800000,
+"last": 1790809200000,
+"bars": 2320,
+"holes": 0
+},
+"ETHUSD_PERP": {
+"first": 1597734000000,
+"last": 1790809200000,
+"bars": 53537,
+"holes": 96
+},
+"FILUSD_201225": {
+"first": 1607497200000,
+"last": 1610431200000,
+"bars": 816,
+"holes": 0
+},
+"FILUSD_210326": {
+"first": 1607497200000,
+"last": 1616745600000,
+"bars": 2570,
+"holes": 0
+},
+"FILUSD_PERP": {
+"first": 1603436400000,
+"last": 1790809200000,
+"bars": 51953,
+"holes": 96
+},
+"FTMUSD_PERP": {
+"first": 1635994800000,
+"last": 1736154000000,
+"bars": 27727,
+"holes": 96
+},
+"GALAUSD_PERP": {
+"first": 1638414000000,
+"last": 1782687600000,
+"bars": 39981,
+"holes": 96
+},
+"GMTUSD_PERP": {
+"first": 1651028400000,
+"last": 1761642000000,
+"bars": 30631,
+"holes": 96
+},
+"ICXUSD_PERP": {
+"first": 1647226800000,
+"last": 1782687600000,
+"bars": 37533,
+"holes": 96
+},
+"KNCUSD_PERP": {
+"first": 1649905200000,
+"last": 1782687600000,
+"bars": 36789,
+"holes": 96
+},
+"LINKUSD_200925": {
+"first": 1595401200000,
+"last": 1610431200000,
+"bars": 4176,
+"holes": 0
+},
+"LINKUSD_201225": {
+"first": 1599361200000,
+"last": 1610431200000,
+"bars": 3076,
+"holes": 0
+},
+"LINKUSD_210326": {
+"first": 1601020800000,
+"last": 1616745600000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"LINKUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"LINKUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"LINKUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"LINKUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"LINKUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"LINKUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"LINKUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"LINKUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"LINKUSD_240628": {
+"first": 1703847600000,
+"last": 1719561600000,
+"bars": 4366,
+"holes": 0
+},
+"LINKUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_241227": {
+"first": 1719572400000,
+"last": 1735286400000,
+"bars": 4366,
+"holes": 0
+},
+"LINKUSD_250328": {
+"first": 1727434800000,
+"last": 1743148800000,
+"bars": 4366,
+"holes": 0
+},
+"LINKUSD_250627": {
+"first": 1735286400000,
+"last": 1751011200000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"LINKUSD_PERP": {
+"first": 1597820400000,
+"last": 1790809200000,
+"bars": 53513,
+"holes": 96
+},
+"LTCUSD_201225": {
+"first": 1606806000000,
+"last": 1610431200000,
+"bars": 1008,
+"holes": 0
+},
+"LTCUSD_210326": {
+"first": 1606806000000,
+"last": 1616745600000,
+"bars": 2762,
+"holes": 0
+},
+"LTCUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"LTCUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"LTCUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"LTCUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"LTCUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"LTCUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"LTCUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"LTCUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"LTCUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"LTCUSD_240628": {
+"first": 1703844000000,
+"last": 1719561600000,
+"bars": 4367,
+"holes": 0
+},
+"LTCUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_250328": {
+"first": 1727427600000,
+"last": 1743148800000,
+"bars": 4368,
+"holes": 0
+},
+"LTCUSD_250627": {
+"first": 1735286400000,
+"last": 1751011200000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"LTCUSD_PERP": {
+"first": 1599548400000,
+"last": 1790809200000,
+"bars": 53033,
+"holes": 96
+},
+"LUNAUSD_PERP": {
+"first": 1630638000000,
+"last": 1652421600000,
+"bars": 6052,
+"holes": 0
+},
+"MANAUSD_PERP": {
+"first": 1637118000000,
+"last": 1763024400000,
+"bars": 34879,
+"holes": 96
+},
+"MATICUSD_PERP": {
+"first": 1638932400000,
+"last": 1726045200000,
+"bars": 24103,
+"holes": 96
+},
+"NEARUSD_PERP": {
+"first": 1639537200000,
+"last": 1790809200000,
+"bars": 41925,
+"holes": 96
+},
+"OPUSD_PERP": {
+"first": 1659096000000,
+"last": 1774429200000,
+"bars": 31942,
+"holes": 96
+},
+"ROSEUSD_PERP": {
+"first": 1642474800000,
+"last": 1782687600000,
+"bars": 38853,
+"holes": 96
+},
+"RUNEUSD_PERP": {
+"first": 1648004400000,
+"last": 1763542800000,
+"bars": 31999,
+"holes": 96
+},
+"SANDUSD_PERP": {
+"first": 1636513200000,
+"last": 1773824400000,
+"bars": 38047,
+"holes": 96
+},
+"SOLUSD_240927": {
+"first": 1723636800000,
+"last": 1727424000000,
+"bars": 1053,
+"holes": 0
+},
+"SOLUSD_241227": {
+"first": 1723636800000,
+"last": 1735286400000,
+"bars": 3237,
+"holes": 0
+},
+"SOLUSD_250328": {
+"first": 1727427600000,
+"last": 1743148800000,
+"bars": 4368,
+"holes": 0
+},
+"SOLUSD_250627": {
+"first": 1735286400000,
+"last": 1751011200000,
+"bars": 4369,
+"holes": 0
+},
+"SOLUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"SOLUSD_251226": {
+"first": 1751011200000,
+"last": 1766736000000,
+"bars": 4369,
+"holes": 0
+},
+"SOLUSD_260327": {
+"first": 1758873600000,
+"last": 1774598400000,
+"bars": 4369,
+"holes": 0
+},
+"SOLUSD_260626": {
+"first": 1766739600000,
+"last": 1782460800000,
+"bars": 4368,
+"holes": 0
+},
+"SOLUSD_260925": {
+"first": 1774598400000,
+"last": 1790323200000,
+"bars": 4369,
+"holes": 0
+},
+"SOLUSD_261225": {
+"first": 1782460800000,
+"last": 1790809200000,
+"bars": 2320,
+"holes": 0
+},
+"SOLUSD_PERP": {
+"first": 1630551600000,
+"last": 1790809200000,
+"bars": 44421,
+"holes": 96
+},
+"SUIUSD_PERP": {
+"first": 1726653600000,
+"last": 1790809200000,
+"bars": 17822,
+"holes": 0
+},
+"THETAUSD_PERP": {
+"first": 1618383600000,
+"last": 1762506000000,
+"bars": 39939,
+"holes": 96
+},
+"TRXUSD_201225": {
+"first": 1607324400000,
+"last": 1610431200000,
+"bars": 864,
+"holes": 0
+},
+"TRXUSD_210326": {
+"first": 1607324400000,
+"last": 1610431200000,
+"bars": 864,
+"holes": 0
+},
+"TRXUSD_PERP": {
+"first": 1599444000000,
+"last": 1790809200000,
+"bars": 53062,
+"holes": 96
+},
+"UNIUSD_PERP": {
+"first": 1618297200000,
+"last": 1790809200000,
+"bars": 47825,
+"holes": 96
+},
+"VETUSD_PERP": {
+"first": 1648609200000,
+"last": 1782687600000,
+"bars": 37149,
+"holes": 96
+},
+"WIFUSD_PERP": {
+"first": 1721736000000,
+"last": 1775725200000,
+"bars": 14998,
+"holes": 0
+},
+"WLDUSD_PERP": {
+"first": 1727863200000,
+"last": 1775725200000,
+"bars": 13296,
+"holes": 0
+},
+"XLMUSD_PERP": {
+"first": 1618556400000,
+"last": 1790809200000,
+"bars": 47753,
+"holes": 96
+},
+"XMRUSD_PERP": {
+"first": 1650510000000,
+"last": 1707987600000,
+"bars": 15871,
+"holes": 96
+},
+"XRPUSD_201225": {
+"first": 1606726800000,
+"last": 1610431200000,
+"bars": 1030,
+"holes": 0
+},
+"XRPUSD_210326": {
+"first": 1606726800000,
+"last": 1616745600000,
+"bars": 2784,
+"holes": 0
+},
+"XRPUSD_210625": {
+"first": 1608883200000,
+"last": 1624618800000,
+"bars": 4372,
+"holes": 0
+},
+"XRPUSD_210924": {
+"first": 1616745600000,
+"last": 1632470400000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_211231": {
+"first": 1624608000000,
+"last": 1640937600000,
+"bars": 4537,
+"holes": 0
+},
+"XRPUSD_220325": {
+"first": 1632470400000,
+"last": 1648195200000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_220624": {
+"first": 1640937600000,
+"last": 1656057600000,
+"bars": 4201,
+"holes": 0
+},
+"XRPUSD_220930": {
+"first": 1648195200000,
+"last": 1664524800000,
+"bars": 4537,
+"holes": 0
+},
+"XRPUSD_221230": {
+"first": 1656057600000,
+"last": 1672387200000,
+"bars": 4537,
+"holes": 0
+},
+"XRPUSD_230331": {
+"first": 1664524800000,
+"last": 1680253200000,
+"bars": 4370,
+"holes": 0
+},
+"XRPUSD_230630": {
+"first": 1672387200000,
+"last": 1688112000000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_230929": {
+"first": 1680249600000,
+"last": 1696496400000,
+"bars": 4418,
+"holes": 96
+},
+"XRPUSD_231229": {
+"first": 1688112000000,
+"last": 1704776400000,
+"bars": 4534,
+"holes": 96
+},
+"XRPUSD_240329": {
+"first": 1695985200000,
+"last": 1711699200000,
+"bars": 4366,
+"holes": 0
+},
+"XRPUSD_240628": {
+"first": 1703847600000,
+"last": 1719561600000,
+"bars": 4366,
+"holes": 0
+},
+"XRPUSD_240927": {
+"first": 1711699200000,
+"last": 1727424000000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_241227": {
+"first": 1719561600000,
+"last": 1735286400000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_250328": {
+"first": 1727431200000,
+"last": 1743148800000,
+"bars": 4367,
+"holes": 0
+},
+"XRPUSD_250627": {
+"first": 1735290000000,
+"last": 1751011200000,
+"bars": 4368,
+"holes": 0
+},
+"XRPUSD_250926": {
+"first": 1743148800000,
+"last": 1758873600000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_251226": {
+"first": 1751011200000,
+"last": 1766736000000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_260327": {
+"first": 1758884400000,
+"last": 1774598400000,
+"bars": 4366,
+"holes": 0
+},
+"XRPUSD_260626": {
+"first": 1766739600000,
+"last": 1782460800000,
+"bars": 4368,
+"holes": 0
+},
+"XRPUSD_260925": {
+"first": 1774598400000,
+"last": 1790323200000,
+"bars": 4369,
+"holes": 0
+},
+"XRPUSD_261225": {
+"first": 1782460800000,
+"last": 1790809200000,
+"bars": 2320,
+"holes": 0
+},
+"XRPUSD_PERP": {
+"first": 1599634800000,
+"last": 1790809200000,
+"bars": 53009,
+"holes": 96
+},
+"XTZUSD_PERP": {
+"first": 1644807600000,
+"last": 1782687600000,
+"bars": 38205,
+"holes": 96
+},
+"ZILUSD_PERP": {
+"first": 1649300400000,
+"last": 1782687600000,
+"bars": 36957,
+"holes": 96
+}
+}
+},
+"file_hashes": [
+{
+"path": "AAVEUSD_PERP.parquet",
+"bytes": 2243969,
+"sha256": "b6ebce197b6fccab05ec1766d097fd1a0fd5b201f98f82796a664ee722a88862"
+},
+{
+"path": "ADAUSD_200925.parquet",
+"bytes": 143904,
+"sha256": "8dd1a0db7ba1cf95b7206be2fd6a35371ca062d4be5c11113deafbbbff59d87d"
+},
+{
+"path": "ADAUSD_201225.parquet",
+"bytes": 194587,
+"sha256": "bda7a278ae17efed224b47fe4d520c4d9970fa803dcb2ab3ca87a62620d4eaf0"
+},
+{
+"path": "ADAUSD_210326.parquet",
+"bytes": 326121,
+"sha256": "448aca53d8116e97087dbd00d5d169bc893e24a0e017d9f3a83b7eb96e9104fe"
+},
+{
+"path": "ADAUSD_210625.parquet",
+"bytes": 351661,
+"sha256": "94f2b9737151b850f2ba5c37abf9059e4c3194aeec4febd96aaa389b9c2e9e21"
+},
+{
+"path": "ADAUSD_210924.parquet",
+"bytes": 354799,
+"sha256": "a2be895ff6c5d4eab2740cbed2a397d2ea7652a6f9055515e59d2bba60e2f2cb"
+},
+{
+"path": "ADAUSD_211231.parquet",
+"bytes": 367352,
+"sha256": "1abba915794fe73a4e314c2d99edfc424c10dff13a830a7a1ece75caae559927"
+},
+{
+"path": "ADAUSD_220325.parquet",
+"bytes": 355401,
+"sha256": "d96a44d77400a950990e7fd43fdabffe1ac0f5607cf32907794a6a556dd2c172"
+},
+{
+"path": "ADAUSD_220624.parquet",
+"bytes": 324678,
+"sha256": "e7973b7149f7482d7dcfb3975f836f5fb965950d8cc40a4f9f5d5ff63b4f068b"
+},
+{
+"path": "ADAUSD_220930.parquet",
+"bytes": 334160,
+"sha256": "c90c6701880f5770a5ab22566f7bbb86c3bbe8e3099df8a22fe8f82cafb9e6fa"
+},
+{
+"path": "ADAUSD_221230.parquet",
+"bytes": 332217,
+"sha256": "2b6c26b1be8c2772b4125caf64f9a859c83f6094ce1257f2824191e6ea9ec63c"
+},
+{
+"path": "ADAUSD_230331.parquet",
+"bytes": 294703,
+"sha256": "834329d338d94b461619e1a3073914554a200d501a0dc7f0ddc8c9c155e8a16b"
+},
+{
+"path": "ADAUSD_230630.parquet",
+"bytes": 257437,
+"sha256": "ceeced2daf58909931dce7f23f9c9b4df26485244c48ee76ec14fd08bd931548"
+},
+{
+"path": "ADAUSD_230929.parquet",
+"bytes": 217582,
+"sha256": "385ad8f1d7fc8ce7229a0e20d735aa07b3f7fafded0b2a841ece7fd18a966a0a"
+},
+{
+"path": "ADAUSD_231229.parquet",
+"bytes": 219178,
+"sha256": "afacb5af039abd91473c97cf50b903b2636001e76ee695f8bafd0897efba40d9"
+},
+{
+"path": "ADAUSD_240329.parquet",
+"bytes": 250026,
+"sha256": "8ad90baf8b93875a5c6980cb26350540c3ad6efe700010700b5522ea9cba7843"
+},
+{
+"path": "ADAUSD_240628.parquet",
+"bytes": 247577,
+"sha256": "7b33c414fb4ef15f964ad561884c6970644bffaf50b42880bb82e57065f1b264"
+},
+{
+"path": "ADAUSD_240927.parquet",
+"bytes": 240341,
+"sha256": "fdb1ce20570aacc02c462150493f5d642405cceea46af9d3a1ebbd255418361a"
+},
+{
+"path": "ADAUSD_241227.parquet",
+"bytes": 237600,
+"sha256": "f23f4e0eb44f0fa900a755ae8e852036c084780a9b47b6c06873f5658c79b6e7"
+},
+{
+"path": "ADAUSD_250328.parquet",
+"bytes": 259623,
+"sha256": "2651619190f3a228bbeac024a35fd2ec427042c129c6730897f6fc77c83e8e1a"
+},
+{
+"path": "ADAUSD_250627.parquet",
+"bytes": 256202,
+"sha256": "5c21fec1bc1fe49073944e592d1a242a486a679733c932dc28acabc0830bb26a"
+},
+{
+"path": "ADAUSD_250926.parquet",
+"bytes": 228391,
+"sha256": "d4699611004873643b2c8c01c6ca7d390f68174da15a13f308a8702f74bed8e5"
+},
+{
+"path": "ADAUSD_PERP.parquet",
+"bytes": 3497850,
+"sha256": "f11ad847cf83f2ad22ffdfa4d9882d74c1088792c60646af7ed852ee11298dd8"
+},
+{
+"path": "ALGOUSD_PERP.parquet",
+"bytes": 1641503,
+"sha256": "77d88c7513b2584e2dab55edf15cd5afd57dda337bfa1c239fd69a955937ca6d"
+},
+{
+"path": "APEUSD_PERP.parquet",
+"bytes": 1138442,
+"sha256": "ce2f125423c1589d022fea5af82d76e38f78636d95146008b2068df770994526"
+},
+{
+"path": "APTUSD_PERP.parquet",
+"bytes": 1641682,
+"sha256": "54f5b83c559bdef2225f6fd807a136534511e265d68d98d998f435ec84c36397"
+},
+{
+"path": "ATOMUSD_PERP.parquet",
+"bytes": 1982490,
+"sha256": "39c339bc4e1ef6dcf8f26c9d50aca1914656a49799ccd538d4d256bb59b87e0f"
+},
+{
+"path": "AVAXUSD_PERP.parquet",
+"bytes": 2130757,
+"sha256": "0fe448adc32846a3e14bd5323ae8bb321e8522bc4dc077cc3d9247d318540ecc"
+},
+{
+"path": "AXSUSD_PERP.parquet",
+"bytes": 1694485,
+"sha256": "58288681d7ffd257c125468285a42ac3d11dc08f344810b56bb623be9bdf0da1"
+},
+{
+"path": "BCHUSD_201225.parquet",
+"bytes": 42644,
+"sha256": "5b96335a330c624181a09227f32dec6209fe626436b5a82449a6da422afbca08"
+},
+{
+"path": "BCHUSD_210326.parquet",
+"bytes": 181458,
+"sha256": "da5f635897f96471322cbeb9bee015098e59c9bc2bb8bb9d7c69ab17f229acb7"
+},
+{
+"path": "BCHUSD_210625.parquet",
+"bytes": 289055,
+"sha256": "03ebf8fe768810384011477cc91f09b36863659cdc135b551cd0e85e4a5038ec"
+},
+{
+"path": "BCHUSD_210924.parquet",
+"bytes": 286571,
+"sha256": "68ab6bf2f6db941365cc77249d37519734df7ac2fd51e6986db5cf6ba0e2e618"
+},
+{
+"path": "BCHUSD_211231.parquet",
+"bytes": 292148,
+"sha256": "e6b491848a94dc0b3f21d59106bf08aa93e0cdcb68096cc769079f7db5033ab0"
+},
+{
+"path": "BCHUSD_220325.parquet",
+"bytes": 275188,
+"sha256": "f29657c0a01bfd70909dcd38ab3bdae8822f803e620ea5469cf64de655daf88d"
+},
+{
+"path": "BCHUSD_220624.parquet",
+"bytes": 255870,
+"sha256": "c078821ccb6c64ddc8d9dd67df93d59fdd4d7fe662d575a1532092147a510755"
+},
+{
+"path": "BCHUSD_220930.parquet",
+"bytes": 262431,
+"sha256": "4c92b6dcd79bce4e10b439f21590b3afab84f872c7d4c1cb18601661e7e91e62"
+},
+{
+"path": "BCHUSD_221230.parquet",
+"bytes": 232898,
+"sha256": "532c19ed6bee05afcb7382c7169358f8337ace850d9385acc65a1e4e4b1adfd4"
+},
+{
+"path": "BCHUSD_230331.parquet",
+"bytes": 226865,
+"sha256": "dadfb621d25362c31544ace48cc70caee29e6ce1e15e06f425a4bb3f82f9c540"
+},
+{
+"path": "BCHUSD_230630.parquet",
+"bytes": 230805,
+"sha256": "9d2957b4f6d28fb5a07be7723b1f1bff9c728a6edf3e86b9f3d9633f81f1d437"
+},
+{
+"path": "BCHUSD_230929.parquet",
+"bytes": 249676,
+"sha256": "4a8e812e5086e0339b6f63970905538bab75754bf28bc687fc294411a5e2404d"
+},
+{
+"path": "BCHUSD_231229.parquet",
+"bytes": 246037,
+"sha256": "3dab784100d5abb0131a9cbff5d1a6a74e41678e66d29b1ab3254942159f2794"
+},
+{
+"path": "BCHUSD_240329.parquet",
+"bytes": 253444,
+"sha256": "78bf78d9fde03e6a37e08749177b671e9992d3f43b278eac73c6410b8a52c837"
+},
+{
+"path": "BCHUSD_240628.parquet",
+"bytes": 259526,
+"sha256": "879d73fe53cdf6684aecdba29d154d4bf6debc430055e635ffba3d397c73e19f"
+},
+{
+"path": "BCHUSD_240927.parquet",
+"bytes": 245917,
+"sha256": "fa8c79ad5d6d0a1535270c7cbfd79d60f6d08ca52a058587dfc2b1ec14de2957"
+},
+{
+"path": "BCHUSD_241227.parquet",
+"bytes": 231750,
+"sha256": "6ab89c4128b05bb81d42667f3025c93085b680115d98e9f74d306ab80e19ed24"
+},
+{
+"path": "BCHUSD_250328.parquet",
+"bytes": 204843,
+"sha256": "6761d6a0616c0db3eef6f095b2415799118404c7cc233f881004c38b2be3e6e2"
+},
+{
+"path": "BCHUSD_250627.parquet",
+"bytes": 164073,
+"sha256": "3ef2cb6d18fc7bab0b5dc73d74669a79e5b5ace4e729f378d29613f076022b32"
+},
+{
+"path": "BCHUSD_250926.parquet",
+"bytes": 147637,
+"sha256": "1319113b21180442e33e1c8b42d4529dd92b1b867737ddcca4a1a96936f5be39"
+},
+{
+"path": "BCHUSD_PERP.parquet",
+"bytes": 3106030,
+"sha256": "0fc46b8e057381a1587ace844a50ae16b437785b24b9650b567911c02702b55c"
+},
+{
+"path": "BNBUSD_201225.parquet",
+"bytes": 87587,
+"sha256": "1137b47b4555cbef727aebad3a5c7752c253f8e549f73825d274efcab36b7a62"
+},
+{
+"path": "BNBUSD_210326.parquet",
+"bytes": 232114,
+"sha256": "c06ba70c40d37bed58c8e5b9e420a449f631e95276c812b4d656eb248d0d3fff"
+},
+{
+"path": "BNBUSD_210625.parquet",
+"bytes": 310275,
+"sha256": "f0d7961feee37224c7978695c9b6a07a36b7f2c10cfbfd385f2b8fa45a9032dc"
+},
+{
+"path": "BNBUSD_210924.parquet",
+"bytes": 309501,
+"sha256": "f816412d559cb74aab9508ca5ae6431e086052f2f0a9316aef98e88d7271b0d8"
+},
+{
+"path": "BNBUSD_211231.parquet",
+"bytes": 318085,
+"sha256": "c61ca8ba9553c344365a5c134457acddfe786487d9b5aef221bdf98a70c6d50a"
+},
+{
+"path": "BNBUSD_220325.parquet",
+"bytes": 302872,
+"sha256": "41d233e8a554b7bf58726f0d16caa1137a43d24cf6d828d6188b7473add5067d"
+},
+{
+"path": "BNBUSD_220624.parquet",
+"bytes": 287215,
+"sha256": "e581dd4a5b8448f6267dadd419d4b31924c384a72838f62e8724ebaff28f3a24"
+},
+{
+"path": "BNBUSD_220930.parquet",
+"bytes": 302647,
+"sha256": "d3273008a19d8749366e1f9245f270b54c68589dd77aa17481169941cb3afda6"
+},
+{
+"path": "BNBUSD_221230.parquet",
+"bytes": 295814,
+"sha256": "a8c7d5b0ef0794a3d2d9f995f78c0e394e9f0e1bdee6e50c853546f6c5cb0521"
+},
+{
+"path": "BNBUSD_230331.parquet",
+"bytes": 277861,
+"sha256": "9dbf983899568cc60675b8e5ed810853d70443ac00fdb91a65cdfdbda9bffa79"
+},
+{
+"path": "BNBUSD_230630.parquet",
+"bytes": 258723,
+"sha256": "8d27c66d3c9eb2f3c6a94551777ad8a3d2d9c909841aca7c8aa7aa08a2c07a20"
+},
+{
+"path": "BNBUSD_230929.parquet",
+"bytes": 241323,
+"sha256": "28f8e11fac1831ac987a2f886657ab06d258c0b1eb35133c6a09bd368945cd66"
+},
+{
+"path": "BNBUSD_231229.parquet",
+"bytes": 238726,
+"sha256": "dad63b23cb244b0e1f62fb954a35c5f67eb43c989236f5acae25c3e56a2f2284"
+},
+{
+"path": "BNBUSD_240329.parquet",
+"bytes": 260066,
+"sha256": "62d54283beef797ac73f5ba04bcbec623630ba0bfac9689cc10ac7d814e929fb"
+},
+{
+"path": "BNBUSD_240628.parquet",
+"bytes": 260407,
+"sha256": "fb0f272c7dfbf99e5bf99223c2b1833e5acc6d3270a283b15cb0b86403f73f5d"
+},
+{
+"path": "BNBUSD_240927.parquet",
+"bytes": 255692,
+"sha256": "b48051e5e6f62fafa6a0aa18d966d43656f08e81a5fdbc049c53018b16b8dd12"
+},
+{
+"path": "BNBUSD_241227.parquet",
+"bytes": 252810,
+"sha256": "725b1ef53d3184d468d1b3b79308144a6260a41187076cf60bc92c8ae25fe06e"
+},
+{
+"path": "BNBUSD_250328.parquet",
+"bytes": 251682,
+"sha256": "9fb1d1fa2cbff3e8eaafeb87601874874851c2f3b8bb9f20d4f2cb70f24085d8"
+},
+{
+"path": "BNBUSD_250627.parquet",
+"bytes": 240530,
+"sha256": "f349b4c59f6ebc364d0afa83d06f93b4f1968cd699a5fd51e20355f61ead6d55"
+},
+{
+"path": "BNBUSD_250926.parquet",
+"bytes": 232212,
+"sha256": "a7d1a868873349d73a4740d8c48c227efe7ac9b0d5388ae2ba1aa89cbda9cbac"
+},
+{
+"path": "BNBUSD_251226.parquet",
+"bytes": 239275,
+"sha256": "2b5e276ec254e193ceeaf87b614c117a237afc627575c8f461f15a604332d7cf"
+},
+{
+"path": "BNBUSD_260327.parquet",
+"bytes": 224060,
+"sha256": "78d29dba41dae9a9fe5030b44f47369468aa2c077a93632b548e959246732289"
+},
+{
+"path": "BNBUSD_260626.parquet",
+"bytes": 212622,
+"sha256": "04fabc598ea981f1856f51e49bab2400bd3902e477bc9a96089a0d19f5495fde"
+},
+{
+"path": "BNBUSD_260925.parquet",
+"bytes": 221656,
+"sha256": "8d0516c38ae1f58237d0ee16b75e899b02939e00901b227bdcb5ef1a7c9543a6"
+},
+{
+"path": "BNBUSD_261225.parquet",
+"bytes": 109088,
+"sha256": "ee04cf3228a3a2c8964e6d2e1d2d195ad81672bdf584d240849b480cbf6b30f2"
+},
+{
+"path": "BNBUSD_PERP.parquet",
+"bytes": 3531419,
+"sha256": "2062864ce00d1a3be94067a0d441495fd4e584e6dac440a41fd3df85d94bfc5a"
+},
+{
+"path": "BTCUSD_200925.parquet",
+"bytes": 195137,
+"sha256": "cf45928e1e6df405c7611c803a4db6e4a5031a6df643e955f8db0ab721a2bd3c"
+},
+{
+"path": "BTCUSD_201225.parquet",
+"bytes": 292305,
+"sha256": "5b6b314864caad22ae5cc652bc4291f026cbd2fa78633efecd42a0e7a10c1f90"
+},
+{
+"path": "BTCUSD_210326.parquet",
+"bytes": 310760,
+"sha256": "4ff05cf70d2075c4c578265a66319048fcd185b2354896722e3b6408d69768a0"
+},
+{
+"path": "BTCUSD_210625.parquet",
+"bytes": 316933,
+"sha256": "d699036ea7de35291a8f27cf7ea6fb98dbab7996c9dd2c6db813a72ba8a90ec1"
+},
+{
+"path": "BTCUSD_210924.parquet",
+"bytes": 314730,
+"sha256": "061cd93ac3b0c2ecd0aadb2e1c9d43e090fe0436164e9573f73dcb9d048c0db3"
+},
+{
+"path": "BTCUSD_211231.parquet",
+"bytes": 324814,
+"sha256": "801aff5f8c0bec7fc68655e2da77a236e865e11447397ce748ca89d6be6903b7"
+},
+{
+"path": "BTCUSD_220325.parquet",
+"bytes": 312161,
+"sha256": "771f6026de4b0b61e7e1e8fefb03c25826f2bb9a5aa13af57e5f7874b43d4269"
+},
+{
+"path": "BTCUSD_220624.parquet",
+"bytes": 299556,
+"sha256": "e9f74605fbe5b92d57ab37efd74b097b7c3f005d00a573664e2a689caf673e70"
+},
+{
+"path": "BTCUSD_220930.parquet",
+"bytes": 318096,
+"sha256": "6a088abf43e61e2f9ec196df769fd89217c3ebaf3f72de169703799b96c643ca"
+},
+{
+"path": "BTCUSD_221230.parquet",
+"bytes": 308765,
+"sha256": "e22ed28226b144936fb77ca65a7d33e9769f9186671025946efde2c17c75f7bf"
+},
+{
+"path": "BTCUSD_230331.parquet",
+"bytes": 296515,
+"sha256": "8df8d89ba8582d198b163103488681552cc5fa810dc021651de2615b76476d97"
+},
+{
+"path": "BTCUSD_230630.parquet",
+"bytes": 298942,
+"sha256": "3bf62df29ba0bc565bf9903086639889a2951ff0c86cb3915cb08a8c1108a875"
+},
+{
+"path": "BTCUSD_230929.parquet",
+"bytes": 283585,
+"sha256": "27c630153c8ea0e12140bcecee56ed282b45fce031419dd44967a7afb50c9495"
+},
+{
+"path": "BTCUSD_231229.parquet",
+"bytes": 286002,
+"sha256": "ea2a71b020cdfdc2214be1c9fd595b107b81456cc23af0d0ed4698cfe89dfca5"
+},
+{
+"path": "BTCUSD_240329.parquet",
+"bytes": 299666,
+"sha256": "b16c89a47bd91429410d5754a728501078f60d2ff78a700dec1649881c57ee94"
+},
+{
+"path": "BTCUSD_240628.parquet",
+"bytes": 304854,
+"sha256": "6ab6d1d96888b6f755c74ed5e26f449feecceb335687961162e9cb510628bce0"
+},
+{
+"path": "BTCUSD_240927.parquet",
+"bytes": 303076,
+"sha256": "71cb75305804de69b6e89105c5c8f67275bd6e1845517b224fb6d10372f6d9d2"
+},
+{
+"path": "BTCUSD_241227.parquet",
+"bytes": 301128,
+"sha256": "30ac79646b848a395f413fa034d15f08800cdf808c61b364d4fcc5a3783501ca"
+},
+{
+"path": "BTCUSD_250328.parquet",
+"bytes": 302317,
+"sha256": "237802fbdf23472fdcfae722f07f210984b30176540d7b479c06d8e54afd1c72"
+},
+{
+"path": "BTCUSD_250627.parquet",
+"bytes": 301036,
+"sha256": "9eb794f81f4dbd65df7dbd3100c7c6bba94cfdbc2961c273d766fdbce8ed9f2a"
+},
+{
+"path": "BTCUSD_250926.parquet",
+"bytes": 298639,
+"sha256": "78ab847f225a5b9f5193e2cfe1e0df1eda399b154ecd2659deb739b675a1491c"
+},
+{
+"path": "BTCUSD_251226.parquet",
+"bytes": 296148,
+"sha256": "a107df4fb96bb4e3f996299556bbb0ec73ad9446e6c639f1e95f366c1e91a27e"
+},
+{
+"path": "BTCUSD_260327.parquet",
+"bytes": 292987,
+"sha256": "10fe3d697a71e034ae35f04f5e70a37cf27f824b1a9ea87c346d9b4ce3b44f95"
+},
+{
+"path": "BTCUSD_260626.parquet",
+"bytes": 286719,
+"sha256": "59ddc949288f2b8f4b87abf50f5855cc487ceeb285f20dd863ee12ca1d251e4c"
+},
+{
+"path": "BTCUSD_260925.parquet",
+"bytes": 285298,
+"sha256": "8d995a142774c69256d7959b8545bbbe2b5868d2b5a35b618127c4f9631e2ae6"
+},
+{
+"path": "BTCUSD_261225.parquet",
+"bytes": 151681,
+"sha256": "bb9313a2afa779c9553c9fd2145b4fbbea3c9595782ab5beb427ae63d2c5a2f8"
+},
+{
+"path": "BTCUSD_PERP.parquet",
+"bytes": 3892835,
+"sha256": "a43622f38d9636cec444c595bb7ed0082173676111d947d155f649cf7e8c92cc"
+},
+{
+"path": "CHZUSD_PERP.parquet",
+"bytes": 1251303,
+"sha256": "a103b8df2fb64fe951ecbd65507885c9be27955410090ee7ae4632e8dc05b5a3"
+},
+{
+"path": "CRVUSD_PERP.parquet",
+"bytes": 238903,
+"sha256": "350e26454998d176493e7cb80e45da5e7921a654ead0c46614bb26a3fa06c903"
+},
+{
+"path": "DOGEUSD_PERP.parquet",
+"bytes": 3557295,
+"sha256": "414d37f1255b531cae26eea748d59a735276a9c484c7813cfaea5dbbcba3fb58"
+},
+{
+"path": "DOGSUSD_PERP.parquet",
+"bytes": 590598,
+"sha256": "69747fba1123eec52a3a90488d30b18c32b61530a7bb4ffd79cf856be5ef6779"
+},
+{
+"path": "DOTUSD_201225.parquet",
+"bytes": 82073,
+"sha256": "033b96672c123d3c3ff6b46b7adbad12fea1e2ae737f6fda4c1d55f57c64dd25"
+},
+{
+"path": "DOTUSD_210326.parquet",
+"bytes": 224937,
+"sha256": "447551a5158451cf37bb1cc29b63ab8f96cc3ee52e33b739ba8b2c5cbde939ac"
+},
+{
+"path": "DOTUSD_210625.parquet",
+"bytes": 301454,
+"sha256": "0f91e84479565d76cd0df31155579cd2520973dca6d4de5a369354a1af66f63c"
+},
+{
+"path": "DOTUSD_210924.parquet",
+"bytes": 302206,
+"sha256": "63c56aebfb6e222cdae04aa4395355c7c57ac40b93aca11cec8e3e566ac95a5a"
+},
+{
+"path": "DOTUSD_211231.parquet",
+"bytes": 314588,
+"sha256": "4a9a114a8b01ff33f5a5644a12982d41942ff50c7821ac34fb4d1b5fcf34221b"
+},
+{
+"path": "DOTUSD_220325.parquet",
+"bytes": 294221,
+"sha256": "3e2f07824dc5402df6dd4f3171c3f899ac42b3676301cfdffe8127a69db36571"
+},
+{
+"path": "DOTUSD_220624.parquet",
+"bytes": 269656,
+"sha256": "7584dc3b8b0241e9d977d641263abc038c1356f6eb6d64c4f6132ceb3a9874bd"
+},
+{
+"path": "DOTUSD_220930.parquet",
+"bytes": 267645,
+"sha256": "43c947856fe71bb10cefc10deca124f1abe9d9fb4d8c35447f079c0a0b0af89e"
+},
+{
+"path": "DOTUSD_221230.parquet",
+"bytes": 243516,
+"sha256": "3f94e8a5abbe98f2a5c7d39bc3364d9a198bd66c2cb0668be780377d5c2cdc20"
+},
+{
+"path": "DOTUSD_230331.parquet",
+"bytes": 220337,
+"sha256": "d7cc9e656380e0e83a55ba593e2e8d5fe0e32452c7d80c49620d8df39e2ed6f8"
+},
+{
+"path": "DOTUSD_230630.parquet",
+"bytes": 225858,
+"sha256": "2c20feecf1ec8597ced9e703c1bacd103e93daec52919db0c57055a1a4906169"
+},
+{
+"path": "DOTUSD_230929.parquet",
+"bytes": 198010,
+"sha256": "c7dd9ef8d96d19e38f0f5c33e475aab2db45f0bbae5583bfd5db03a8da874714"
+},
+{
+"path": "DOTUSD_231229.parquet",
+"bytes": 213285,
+"sha256": "d6def42b9172edb4cca7eb14ffbe9a73a794c0005072e065bc3d9b3a9dc414a5"
+},
+{
+"path": "DOTUSD_240329.parquet",
+"bytes": 242375,
+"sha256": "5438a965ab966beb0cd17bcfb176b4c6ed13af25b82d892d0ee6457fbd2df329"
+},
+{
+"path": "DOTUSD_240628.parquet",
+"bytes": 239850,
+"sha256": "7312d35512509dfe39d48bb313bbc49df28625356c9c425a490acd75d8315c84"
+},
+{
+"path": "DOTUSD_240927.parquet",
+"bytes": 223730,
+"sha256": "4dce3b636d5798887be9c59783dc2ed7ae2feb40b3dbf0582d153aac8755e13f"
+},
+{
+"path": "DOTUSD_241227.parquet",
+"bytes": 217085,
+"sha256": "cb75b561dda3a728d5f8f95d052ec64827c1973e74e2ac0abc8855db5976f297"
+},
+{
+"path": "DOTUSD_250328.parquet",
+"bytes": 214515,
+"sha256": "8b64bc932dddcef7f50ff78839fafcb24df12ebe279a9c245d0fcf17a291243f"
+},
+{
+"path": "DOTUSD_250627.parquet",
+"bytes": 188393,
+"sha256": "1ec7c7c7f91fdaa01d9bbb2deaa271fab78845d8c8f9373008595d757d856a53"
+},
+{
+"path": "DOTUSD_250926.parquet",
+"bytes": 186441,
+"sha256": "881140d987167a67b32af9e1cc0ee5a1bd3ee29c6739f6d6c2ba831387fbaa28"
+},
+{
+"path": "DOTUSD_PERP.parquet",
+"bytes": 3000471,
+"sha256": "d080cb971df94659571e268322dd644f46a9b484fff5f358f8e8c9c623112865"
+},
+{
+"path": "EGLDUSD_PERP.parquet",
+"bytes": 2679414,
+"sha256": "16adb577122c03b5d2e26f635ab0bff4dd36033c8512f69f687ee8f0c1cfc09d"
+},
+{
+"path": "ENSUSD_PERP.parquet",
+"bytes": 1819613,
+"sha256": "642c218bd8677c1c8a61ab68849699db7c27f9661d0aa4c863780f3088ec9f09"
+},
+{
+"path": "EOSUSD_201225.parquet",
+"bytes": 40649,
+"sha256": "06e9638473ee9838d4e4d997324886c84d5876f6903d81b8ec0ad40a7c4943e3"
+},
+{
+"path": "EOSUSD_210326.parquet",
+"bytes": 60438,
+"sha256": "b5889f0670b4d407f2e2c56f3b6bc30a720d626df737439125eb04fbd727adf3"
+},
+{
+"path": "EOSUSD_PERP.parquet",
+"bytes": 2064186,
+"sha256": "41b93c502c86acf44573511d4fb2b9dcf032d98eb578793e916266d92d1f37a4"
+},
+{
+"path": "ETCUSD_201225.parquet",
+"bytes": 35386,
+"sha256": "d30e98d707b624c410d4cc97912f4541c43b4e568861533a0f09c1a6b96cf21c"
+},
+{
+"path": "ETCUSD_210326.parquet",
+"bytes": 56647,
+"sha256": "1281f1f144015576df7bee3f70505243b4b2d24e0f6f8636c5a8d804e7441af3"
+},
+{
+"path": "ETCUSD_PERP.parquet",
+"bytes": 3111708,
+"sha256": "9ad875902dadf8ad0f87f08cdaa024cc299c9b6eac53aa08d009b9a1a43c8c09"
+},
+{
+"path": "ETHUSD_200925.parquet",
+"bytes": 125024,
+"sha256": "1eb3e20a8641f5920bc88f341d150418657ecc8728e66320246eba245ae76361"
+},
+{
+"path": "ETHUSD_201225.parquet",
+"bytes": 228197,
+"sha256": "dee87eae723388f6f95e78bd5770ff85b1d84151d0d37391c0329691f34b39dd"
+},
+{
+"path": "ETHUSD_210326.parquet",
+"bytes": 299969,
+"sha256": "3f25fe43fd6b48e617e9875af438bc85ee9d8206fa94d3201edf56e41f83a8d8"
+},
+{
+"path": "ETHUSD_210625.parquet",
+"bytes": 312023,
+"sha256": "d44efa592676a0d808b0e4219aa09d62ffd742859d5c6a281ef1994a6be510a8"
+},
+{
+"path": "ETHUSD_210924.parquet",
+"bytes": 314573,
+"sha256": "da0d185342fc93f0d5f26aab636de6f4d69514bc75373393035a80b8b9d21e06"
+},
+{
+"path": "ETHUSD_211231.parquet",
+"bytes": 326831,
+"sha256": "399f31baca5e5a42377dabd6d237331f0246fc59a52a34418e5869dc4f98d4d0"
+},
+{
+"path": "ETHUSD_220325.parquet",
+"bytes": 314267,
+"sha256": "4ebb45acd95f1d6a83cbbe38df3dbc47f4bd9dbb0c2102c0bbd8a3d1c05894fb"
+},
+{
+"path": "ETHUSD_220624.parquet",
+"bytes": 298853,
+"sha256": "25a9451877a2f79dbcddbe77c33910d58785398ccb45309c516f0d8cfaab3710"
+},
+{
+"path": "ETHUSD_220930.parquet",
+"bytes": 317203,
+"sha256": "5142187acd463db8f16bf5d2a62e892fb61e39be1310bd453321c43b1c6e7e59"
+},
+{
+"path": "ETHUSD_221230.parquet",
+"bytes": 308132,
+"sha256": "7def64c2172cc3b54355a2012e079e9317f6b4608a583a951564b9cb06b5333d"
+},
+{
+"path": "ETHUSD_230331.parquet",
+"bytes": 291997,
+"sha256": "47de96717e759abcd838c6cc06e1680fcef59f93a6e63db3ae16e9ffd92d97f6"
+},
+{
+"path": "ETHUSD_230630.parquet",
+"bytes": 291246,
+"sha256": "e941cd57afc807ccc1ec94812024620df878903c227ef485de57debd5d76ffd4"
+},
+{
+"path": "ETHUSD_230929.parquet",
+"bytes": 276219,
+"sha256": "91f26d3ee0b3660b3b5aacd4d0738188e18433bb5c2eebfa6d5d03ff1eb1f970"
+},
+{
+"path": "ETHUSD_231229.parquet",
+"bytes": 282412,
+"sha256": "fb1e1408c2c656471e678afbb31e46d5d102b9431f424983aa25ceb249a29a24"
+},
+{
+"path": "ETHUSD_240329.parquet",
+"bytes": 300603,
+"sha256": "47645d3c867bb1e48bd9acc92ce90c076ead73daac9772682e0ecf3125957768"
+},
+{
+"path": "ETHUSD_240628.parquet",
+"bytes": 305043,
+"sha256": "a421b244c6c70a6bfcf589e2b70350216ff678e25402ada5c05db1c7cf47883d"
+},
+{
+"path": "ETHUSD_240927.parquet",
+"bytes": 301848,
+"sha256": "3f4ea307fab8e2ce53fa5b7e30a6521ab6d86fa9572a1fa7f074295c182d4b48"
+},
+{
+"path": "ETHUSD_241227.parquet",
+"bytes": 297281,
+"sha256": "b0dc1b0e96de8ad779d58f37e31ade4b909fe6031af23205c9fcdc2d6e8d7fd9"
+},
+{
+"path": "ETHUSD_250328.parquet",
+"bytes": 297706,
+"sha256": "f0532d608f8ceb524b8f7579d7d93772e7f8e4a200e22b4f7e9c0ed4032b3733"
+},
+{
+"path": "ETHUSD_250627.parquet",
+"bytes": 295176,
+"sha256": "c015fc0fc2b1329aaaf8c1f6fb6b31fb25a374993b59b68da62635ff890fd077"
+},
+{
+"path": "ETHUSD_250926.parquet",
+"bytes": 297715,
+"sha256": "a505ce249d684041640d09589b15f719aee119fa8b581aa40030263db2e15c78"
+},
+{
+"path": "ETHUSD_251226.parquet",
+"bytes": 300982,
+"sha256": "fef1b5114390852dc4a935666abcb3d3f65690ac3ea3c0b34cd3a25fe5273f2e"
+},
+{
+"path": "ETHUSD_260327.parquet",
+"bytes": 292135,
+"sha256": "aca3bf25efb39dea899112ce20f41fd4d8702a5543cd489c5014dbd47b842124"
+},
+{
+"path": "ETHUSD_260626.parquet",
+"bytes": 283852,
+"sha256": "575957ca067a40cab5c40938458d5a3e3096ae46b37ddf94497a893b9661ca9c"
+},
+{
+"path": "ETHUSD_260925.parquet",
+"bytes": 279170,
+"sha256": "f71941070e1b1b394e29f07699894621e6c2be378e2ea38a78ca6bbe539a987d"
+},
+{
+"path": "ETHUSD_261225.parquet",
+"bytes": 147053,
+"sha256": "10c1492995a50ae290ecd9823babc91df917c39f9ca0933f0e5e51758e5b0205"
+},
+{
+"path": "ETHUSD_PERP.parquet",
+"bytes": 3794466,
+"sha256": "07c367d610a5649b98b9f417690d79c406da6cd315bb7c977412daf052eed51e"
+},
+{
+"path": "FILUSD_201225.parquet",
+"bytes": 34961,
+"sha256": "39bf31a95829f8107a755c4b4db5cce00e82e783a0000ef07942cea9bfa51263"
+},
+{
+"path": "FILUSD_210326.parquet",
+"bytes": 176357,
+"sha256": "f8a52bc1a8cf8addfe131ced8ef6c34d593512ff077aecffffe85c92b3390fe0"
+},
+{
+"path": "FILUSD_PERP.parquet",
+"bytes": 2975072,
+"sha256": "4d1f09ed326ac1e1f2d9f520ea02c3eafea7783850e78d66ef217e4d2b535449"
+},
+{
+"path": "FTMUSD_PERP.parquet",
+"bytes": 1559329,
+"sha256": "1ad2aaed925f55aba45204a1f759f21b2891a4919f5e5d615c6a17e6d039119c"
+},
+{
+"path": "GALAUSD_PERP.parquet",
+"bytes": 917244,
+"sha256": "316c1ad1ce8697f22e2bb908e289c3c82758c9adc7ed770563514080d09a251e"
+},
+{
+"path": "GMTUSD_PERP.parquet",
+"bytes": 1458791,
+"sha256": "963cf924f60f1455d03f2a4cc1f70206223bbfc66c903207fb4ffec422f946b3"
+},
+{
+"path": "ICXUSD_PERP.parquet",
+"bytes": 1028551,
+"sha256": "f5f38c280e08b74dda5a3e0e69e944892b585e0e7d5ba2f24d7886bce291d426"
+},
+{
+"path": "KNCUSD_PERP.parquet",
+"bytes": 1048461,
+"sha256": "4fb6daccdb0d46a1fc59c5bcb589c2d66966117f76cfa081a14bdca9b1cc85d6"
+},
+{
+"path": "LINKUSD_200925.parquet",
+"bytes": 130875,
+"sha256": "41fafb6586d46fb38ba4804bad452f8d3cbe5400fc953c91deac21dc9f83a47e"
+},
+{
+"path": "LINKUSD_201225.parquet",
+"bytes": 174667,
+"sha256": "eeb1155d2447ad379bd47baee7fb303cc4290698557f44d79b6aeaa021153448"
+},
+{
+"path": "LINKUSD_210326.parquet",
+"bytes": 284296,
+"sha256": "b26cd5b9e9f6feb82006794669bfcc7bf23b00ee93f9a2618ca78c0172491f4e"
+},
+{
+"path": "LINKUSD_210625.parquet",
+"bytes": 295273,
+"sha256": "056f7a2b5378efbabc237d56b178b0400995ba6e6ab322124e6ad6988a22dda5"
+},
+{
+"path": "LINKUSD_210924.parquet",
+"bytes": 292482,
+"sha256": "5f971ef9feb8ff1b4fb7da8628406cc7d907b1b073a9962e9cdf7c6a225c8950"
+},
+{
+"path": "LINKUSD_211231.parquet",
+"bytes": 299832,
+"sha256": "a0075ee15a69e42f996cd29aa6ff59ee32ea79843ca830967e7876d76c7bebd3"
+},
+{
+"path": "LINKUSD_220325.parquet",
+"bytes": 286821,
+"sha256": "2b6b4d6d658f25cce1c855b95811a3e30b147327c7a3fa8466f74dc2eac3fb7d"
+},
+{
+"path": "LINKUSD_220624.parquet",
+"bytes": 259681,
+"sha256": "16a07e3fcc5f8e064ee086e768d2742f33fcd3595600b7f8cefb7fc36baf431e"
+},
+{
+"path": "LINKUSD_220930.parquet",
+"bytes": 253200,
+"sha256": "8f7dc69d4ae7f3dd93b64d33de1b9a6329b50305ad2fab7d9671ce0f48d93adf"
+},
+{
+"path": "LINKUSD_221230.parquet",
+"bytes": 227773,
+"sha256": "d77855d05addbe02cf05028916eb1a076021131509d56164cbdd15f51061255a"
+},
+{
+"path": "LINKUSD_230331.parquet",
+"bytes": 225231,
+"sha256": "50bf281fdf3bcf92f01b7dab847dfa6640c12e7a50be93f479132d5d6f22cd56"
+},
+{
+"path": "LINKUSD_230630.parquet",
+"bytes": 218973,
+"sha256": "af159dce0d8ec6086602c126a1a938d5f2884430369f50530002edafe92c671e"
+},
+{
+"path": "LINKUSD_230929.parquet",
+"bytes": 216114,
+"sha256": "841d3e059719c7096efbe6836d9bfc01c5f054d45107a871ab0f79f0a54d8273"
+},
+{
+"path": "LINKUSD_231229.parquet",
+"bytes": 244934,
+"sha256": "cf89b80adb8e0982c9cf921359697fa12f4439e6b9aa918c613e990689bee58c"
+},
+{
+"path": "LINKUSD_240329.parquet",
+"bytes": 264184,
+"sha256": "730f8a3e3eeddf25eef455bf85eb5100cd49822e6f614e8e712b16e4d521b40e"
+},
+{
+"path": "LINKUSD_240628.parquet",
+"bytes": 260284,
+"sha256": "cf32d9d6e03d16e0d34c4ad7e64eeac114f38a5c55487d34ad5e67e0b4ac1e7c"
+},
+{
+"path": "LINKUSD_240927.parquet",
+"bytes": 253083,
+"sha256": "36b93fc4ac5756463d4fc8459982d1b602ea0ad2b735c118005bcbc5b2edb8c9"
+},
+{
+"path": "LINKUSD_241227.parquet",
+"bytes": 250753,
+"sha256": "6ecc4f4bf097067983673d5c9c232299be13d7d423ec141059f1fa0b3b40ccb5"
+},
+{
+"path": "LINKUSD_250328.parquet",
+"bytes": 264352,
+"sha256": "97b442a19485e29cefdedb847d7c44391bca5b501e769ae17dc8a11061e46ec7"
+},
+{
+"path": "LINKUSD_250627.parquet",
+"bytes": 237633,
+"sha256": "88699af5e92bb64a8f8c3ce6615e92cf858fdcc9104ecf6822fde5a58c592c3d"
+},
+{
+"path": "LINKUSD_250926.parquet",
+"bytes": 212841,
+"sha256": "11b16a77432a957d0c4b7b697b52638706407cc1987070a0bf3943be38f520f4"
+},
+{
+"path": "LINKUSD_PERP.parquet",
+"bytes": 3069157,
+"sha256": "de1ae5da6f7d2f208a9654305d73aaa8aa8d924255aff982bdfd88157770ee22"
+},
+{
+"path": "LTCUSD_201225.parquet",
+"bytes": 46139,
+"sha256": "b83ccf57f35eb03a58663c55e781e260eda91a8dac1bc584e65de62f10042feb"
+},
+{
+"path": "LTCUSD_210326.parquet",
+"bytes": 185316,
+"sha256": "a3b895aa89f820fa1dc6fc0b697192d79761f189212063421354ca80c3d9e856"
+},
+{
+"path": "LTCUSD_210625.parquet",
+"bytes": 289384,
+"sha256": "28aaad66814ad8af7af47df6b2ffbdd02f6865d7baec5560d97caf64e9010e46"
+},
+{
+"path": "LTCUSD_210924.parquet",
+"bytes": 282192,
+"sha256": "c3386b8b8cb98e6fd81fb2e2967106ccac3c88cb07fb8c892ebd919b45dcd1ba"
+},
+{
+"path": "LTCUSD_211231.parquet",
+"bytes": 288070,
+"sha256": "880778ac11c84e25dba9a0eda5dc0ed89368c6ee3d2b21da2f9991c3c6d7b4e7"
+},
+{
+"path": "LTCUSD_220325.parquet",
+"bytes": 275584,
+"sha256": "aa8befbc1ea5f2665bd0231e1c9b9482395118de94003580ad1ca75e2ec220cd"
+},
+{
+"path": "LTCUSD_220624.parquet",
+"bytes": 252230,
+"sha256": "060391b23491d042a5eac68b9184ba61d32d0f91bdad288b9ab29dd93ef1a229"
+},
+{
+"path": "LTCUSD_220930.parquet",
+"bytes": 253985,
+"sha256": "d4c1878c66c6e4f138f7b1fed80bab9a17dc32eb8e02b0c5ae1980a127c87fda"
+},
+{
+"path": "LTCUSD_221230.parquet",
+"bytes": 234822,
+"sha256": "41fbbec89515ce52ee71b071185eb61e43cd256da43143d89f1d5f5c68629a31"
+},
+{
+"path": "LTCUSD_230331.parquet",
+"bytes": 247762,
+"sha256": "48dcf0a94e8d28a0fb94bd3a5f1197a219119029cdf1c591979c6e53d1b5c026"
+},
+{
+"path": "LTCUSD_230630.parquet",
+"bytes": 241183,
+"sha256": "dafc998da8affbdcde7b1ca8454b2f204fdb72003d2af4dd8615d37a28470b70"
+},
+{
+"path": "LTCUSD_230929.parquet",
+"bytes": 232438,
+"sha256": "d53d27311e22fd29c40a577854a51d5b315b455663fa2f15dbb737d33331e53a"
+},
+{
+"path": "LTCUSD_231229.parquet",
+"bytes": 226800,
+"sha256": "1e2d9a4ee30766d8096cc4a09682018a620f9d68debad629f75e704acec0d0b4"
+},
+{
+"path": "LTCUSD_240329.parquet",
+"bytes": 225846,
+"sha256": "ced8591de3e684eb6d06780d05fee8eaff71347645a3403bf6f1f0eada2be4d7"
+},
+{
+"path": "LTCUSD_240628.parquet",
+"bytes": 235798,
+"sha256": "cd8fda5b4b89e68aa28bbee3115ebe9b24e052122b16db2d41321c6e69af01e3"
+},
+{
+"path": "LTCUSD_240927.parquet",
+"bytes": 230507,
+"sha256": "ca09f89a7ebe6b338a13b7b13bd453a599e5c0f874a5c06b40f0907d1b886a45"
+},
+{
+"path": "LTCUSD_241227.parquet",
+"bytes": 231386,
+"sha256": "a1988709055bf1d4770b0e75988ed5bea5432d2850ac93a42ee2a924ac4e7762"
+},
+{
+"path": "LTCUSD_250328.parquet",
+"bytes": 246685,
+"sha256": "3f6733911ab49ac72c42ae31a229860927d3a28aff6da740211313052a1c0177"
+},
+{
+"path": "LTCUSD_250627.parquet",
+"bytes": 236894,
+"sha256": "ca1f164215e4dd15965962856ab5e8fc0f374f50df18f27bcf10586b909eecb9"
+},
+{
+"path": "LTCUSD_250926.parquet",
+"bytes": 212929,
+"sha256": "44ffed53e1351242b8c969c6de99d367d5337d57d7ba240b09ac027ddb3320d4"
+},
+{
+"path": "LTCUSD_PERP.parquet",
+"bytes": 2910415,
+"sha256": "cad5cb531d3d16b2150b4b99b3e914700759b981a0e93bd3ab6dd9f078e0171f"
+},
+{
+"path": "LUNAUSD_PERP.parquet",
+"bytes": 429610,
+"sha256": "82662a82af5163a6fb800041b0370236e1255e848d9ed62cc1b63445e1721d16"
+},
+{
+"path": "MANAUSD_PERP.parquet",
+"bytes": 1811742,
+"sha256": "dadd1d86385a3bef7cc7df3769fd8db1aa46f671ee8354bd8c48ab94427c1310"
+},
+{
+"path": "MATICUSD_PERP.parquet",
+"bytes": 1398038,
+"sha256": "dc372fd590c38f75e75d8231f19d36fa0ff4c0d3eb81199349a6b2f1eae1f4a8"
+},
+{
+"path": "NEARUSD_PERP.parquet",
+"bytes": 2165006,
+"sha256": "325227ed31fb80db3504cf111e3d9103d0bbe950777592415a6f7af056303771"
+},
+{
+"path": "OPUSD_PERP.parquet",
+"bytes": 1941468,
+"sha256": "e5f31cbf447093e2f0c62cc2dfd6c80ee5af789fb0335147c1d17f8ffac0a5d8"
+},
+{
+"path": "ROSEUSD_PERP.parquet",
+"bytes": 1373164,
+"sha256": "e2c603d64e27dbdf54cda9cfab9ba06e8f203fc97efd016638326895084d6e90"
+},
+{
+"path": "RUNEUSD_PERP.parquet",
+"bytes": 1549682,
+"sha256": "d77abb4cd7910ca0d978bf5f10f9716b0861c0579c407d4f9c321b77f9978e88"
+},
+{
+"path": "SANDUSD_PERP.parquet",
+"bytes": 2054928,
+"sha256": "3e6bb7bc032c6a6cf01139fe64a48fba46a2ef94c905dccdbc190bf2e4ea22c0"
+},
+{
+"path": "SOLUSD_240927.parquet",
+"bytes": 72328,
+"sha256": "cbc9f29c892e0cd3c6e8f5683992c80945449dd0d91001608ff62d5a99d05519"
+},
+{
+"path": "SOLUSD_241227.parquet",
+"bytes": 200231,
+"sha256": "2a8a062f9d6985e6a0c541c0bb9e369ead09ed7bab4639a7111d92a9cc6f8b62"
+},
+{
+"path": "SOLUSD_250328.parquet",
+"bytes": 258933,
+"sha256": "ed13ccc852b1d6e0cf3d96ecd3609253e56b1f4adecdad2e9f16661b5bbb554f"
+},
+{
+"path": "SOLUSD_250627.parquet",
+"bytes": 252259,
+"sha256": "1e752a9632be6175b897638493a2b90d7122666d29ef78109de7aa60c424f256"
+},
+{
+"path": "SOLUSD_250926.parquet",
+"bytes": 242030,
+"sha256": "7c195d22e495433df79c9a6d15a8bcf4f2232cd8ffb81367b048559239d903e4"
+},
+{
+"path": "SOLUSD_251226.parquet",
+"bytes": 247292,
+"sha256": "5491b6e2e87b6f49d0c007c46358af8d0fa40c3e0b37d573af4ddbf6445298ae"
+},
+{
+"path": "SOLUSD_260327.parquet",
+"bytes": 227642,
+"sha256": "de1eee1914a3d65c27974488ad614045d1b2faa4ed7f23a7abcb772f54ba64bd"
+},
+{
+"path": "SOLUSD_260626.parquet",
+"bytes": 208459,
+"sha256": "4b51e8bc90e1313e3736bd6202987875da99ef8876615d7c3376af0c7cb85530"
+},
+{
+"path": "SOLUSD_260925.parquet",
+"bytes": 218363,
+"sha256": "1fe61a4c00c39f92fdfc4fa111c0a51597be3fd9f44f3003119932598752a447"
+},
+{
+"path": "SOLUSD_261225.parquet",
+"bytes": 99634,
+"sha256": "99f3fd174ff8907f91f5ec8c2933f42b6cac2999fec422f96477aba2916f5f70"
+},
+{
+"path": "SOLUSD_PERP.parquet",
+"bytes": 2953534,
+"sha256": "02967df0fe38fc3a46eeac88f644cd04dd4aa838162ba03d04098e58449f6f53"
+},
+{
+"path": "SUIUSD_PERP.parquet",
+"bytes": 1182642,
+"sha256": "5dfcc51681aa0e45f814eb03bbb62d368fa8d673a7bbfb97afe916c14c81e63f"
+},
+{
+"path": "THETAUSD_PERP.parquet",
+"bytes": 1896512,
+"sha256": "c6aa7bc63cf68f976d0c680cff8ee5bbe5889069aecc7cd6deec28bf90347c7f"
+},
+{
+"path": "TRXUSD_201225.parquet",
+"bytes": 37466,
+"sha256": "6f1045f3693f98d5f5ec3b892cc344e00375334eccfac05320c39ad91c54fb44"
+},
+{
+"path": "TRXUSD_210326.parquet",
+"bytes": 59177,
+"sha256": "a66db53553e14e4823e82692ff91a4b7705aad14e3a2cc616b872c547d22cae8"
+},
+{
+"path": "TRXUSD_PERP.parquet",
+"bytes": 3062500,
+"sha256": "a00319aeeadf1b7d46dccbd67ebdab7b939fe764c25b27322e769880a5a9c6c3"
+},
+{
+"path": "UNIUSD_PERP.parquet",
+"bytes": 2594029,
+"sha256": "e94e2a7940a0ec0fda5e0eef6bb77f7163d89a375e368e1bc3867cc0e368edfd"
+},
+{
+"path": "VETUSD_PERP.parquet",
+"bytes": 620667,
+"sha256": "b1be1c808e8e5cbf13cfbb0f9127cb840738d49eebb49aff38b55bd71f131081"
+},
+{
+"path": "WIFUSD_PERP.parquet",
+"bytes": 960163,
+"sha256": "a05892bc9ffb056a26afa78784cc61a4d6373d2ff1f6729c085f672ddd5b7401"
+},
+{
+"path": "WLDUSD_PERP.parquet",
+"bytes": 847678,
+"sha256": "8ff04983509b3ec74d65662f0ae7c91d9ab2c0755b128073fc7f63ebf0b8e002"
+},
+{
+"path": "XLMUSD_PERP.parquet",
+"bytes": 2904007,
+"sha256": "4b099282bf3fadd6ac934d81cb70707efde8018f1628ae1214f49b05680cab4a"
+},
+{
+"path": "XMRUSD_PERP.parquet",
+"bytes": 786770,
+"sha256": "981d1b9a6bb931512684f51a6adc163b785cab14916d242f024364608dd310be"
+},
+{
+"path": "XRPUSD_201225.parquet",
+"bytes": 53357,
+"sha256": "a5eb890c473c889d27826c4792a284f83e5de1ce5f1afddbda6283f6b41e3622"
+},
+{
+"path": "XRPUSD_210326.parquet",
+"bytes": 181868,
+"sha256": "eaa65a0b971601fcf7a5ceea96c4eb5d7a1ec4be39183730efde3f979f81001e"
+},
+{
+"path": "XRPUSD_210625.parquet",
+"bytes": 289122,
+"sha256": "0240c0cec796ba45b0949ea7b829ccee712b775189e4fea3c803da72b1721046"
+},
+{
+"path": "XRPUSD_210924.parquet",
+"bytes": 294758,
+"sha256": "9560892a4042da94e13ad38553b97a3887cf2f1e23dfb6da725ab46dc124a486"
+},
+{
+"path": "XRPUSD_211231.parquet",
+"bytes": 298928,
+"sha256": "20aeb76d82e8eb7ec38e54dec554b7ae6b0eb8012ff094366c855aa374d04b80"
+},
+{
+"path": "XRPUSD_220325.parquet",
+"bytes": 282737,
+"sha256": "68214e1caf67ba5e959d74ab461eb27e9e14d4a940a4991fc1bfc2ce8f6fd3ff"
+},
+{
+"path": "XRPUSD_220624.parquet",
+"bytes": 262861,
+"sha256": "0aa0d563c282dd8810d352bbcb81c69d927c1d5caa7dff51a0e423610ce0d3fb"
+},
+{
+"path": "XRPUSD_220930.parquet",
+"bytes": 259704,
+"sha256": "479f389ec681485951e693f2bf9a02fbe51e39fb5c721d53c603e6f09b824ec5"
+},
+{
+"path": "XRPUSD_221230.parquet",
+"bytes": 240250,
+"sha256": "f953c0e38a9958cfde559d0c01e7794fb1c5b288dc11012d78fdd4d0a0b7a423"
+},
+{
+"path": "XRPUSD_230331.parquet",
+"bytes": 234906,
+"sha256": "e247e82f38e8828548f2cbdf01202ba275da775ecd2fd7bfd1ddb0fa5c078054"
+},
+{
+"path": "XRPUSD_230630.parquet",
+"bytes": 229895,
+"sha256": "96c9b7c8e0a02e279f663a776df7744c71196c7d506e8fcd59106668cb57e89b"
+},
+{
+"path": "XRPUSD_230929.parquet",
+"bytes": 230388,
+"sha256": "c675f2d2a83f85b70d2b245e3e32488d1d1b28f327906146d7e63b22f13e8243"
+},
+{
+"path": "XRPUSD_231229.parquet",
+"bytes": 235495,
+"sha256": "3b3ca07ac2e5bb65183ab09fe323c07ef79f19d31ff9a4c99e1d0cc27fbe5972"
+},
+{
+"path": "XRPUSD_240329.parquet",
+"bytes": 238307,
+"sha256": "057efb17af25fd6f77f12ae45306e742a032e230460cbc4e0db90b18c1a4c810"
+},
+{
+"path": "XRPUSD_240628.parquet",
+"bytes": 232293,
+"sha256": "f5dc6e15283c2aa239a6e4000de8b0045dd2ab47555d1af874c7bb15be725775"
+},
+{
+"path": "XRPUSD_240927.parquet",
+"bytes": 226459,
+"sha256": "87732372a43895f259750433fd14629003eb39d8dee4306628cd5bd8cb99141b"
+},
+{
+"path": "XRPUSD_241227.parquet",
+"bytes": 246276,
+"sha256": "0c4ce5cc8f5dc19b5c18104ac9447b2d42124d592a4988f633aa2ea08011f019"
+},
+{
+"path": "XRPUSD_250328.parquet",
+"bytes": 271156,
+"sha256": "9bc21481b6ae0a298b5319b08e77e55570ace165709e99fbe432ee4f7e0da07e"
+},
+{
+"path": "XRPUSD_250627.parquet",
+"bytes": 278885,
+"sha256": "677e6eb4cdadcf3e0c70ffca79b2e096b4ebeef56cced1d02a1954bd10601b33"
+},
+{
+"path": "XRPUSD_250926.parquet",
+"bytes": 266074,
+"sha256": "d821ea4d1aaa25ad166e75918804e21d2be0adfcd2d6af1eeddacc9c2194b2bc"
+},
+{
+"path": "XRPUSD_251226.parquet",
+"bytes": 274559,
+"sha256": "682bb43bfc74c44a98916313ddf2f41c5cfac641bf5f3fdb5ab7084c6ca9087c"
+},
+{
+"path": "XRPUSD_260327.parquet",
+"bytes": 265620,
+"sha256": "e555fb3f959ce676b7c3883c8280e0587fe703e3f8881cb8ace58832b8d29398"
+},
+{
+"path": "XRPUSD_260626.parquet",
+"bytes": 237515,
+"sha256": "3043e9b42efc521e7fd33c7467851e46b0f8cca115e8e2d2a2c0a0c81401489f"
+},
+{
+"path": "XRPUSD_260925.parquet",
+"bytes": 224832,
+"sha256": "deb63960a1037aead7b17c79a42744b1f0d9aeb1788d7602f093e38e3b143ed5"
+},
+{
+"path": "XRPUSD_261225.parquet",
+"bytes": 102270,
+"sha256": "09b9cf996de6eea0d4c328d7e626b67f328840927e68b97a4d1958c0f852e14a"
+},
+{
+"path": "XRPUSD_PERP.parquet",
+"bytes": 3120966,
+"sha256": "a21658cd4fe60e6af06d283dad2ba2f7456947ce3d04d8835e2f8a0b3f772a79"
+},
+{
+"path": "XTZUSD_PERP.parquet",
+"bytes": 1133512,
+"sha256": "9ac4df3eed190ef2080682f78d4eff5e7e84bb459410b84f9b7245dfe166e764"
+},
+{
+"path": "ZILUSD_PERP.parquet",
+"bytes": 641278,
+"sha256": "116c6a27b9ca7d478e702407ceb7dc0fcb1a22c863b42c738720f5b9922799bb"
+},
+{
+"path": "manifest.json",
+"bytes": 8839,
+"sha256": "88d9f914de1caf1a3c97d75ca1a3b33bca4ac3508bd7338a81a1bc87c9c3d7b7"
+}
+]
+}

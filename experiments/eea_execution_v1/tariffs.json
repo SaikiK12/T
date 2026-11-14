@@ -1,0 +1,29 @@
+{
+  "accessed_utc": "2026-11-07",
+  "sources": [
+    {
+      "organization": "Coinbase Financial Services Europe Ltd",
+      "publication_date": "2026-09-30",
+      "url": "https://assets.ctfassets.net/o10es7wu5gm1/3fVuEIOKaXOxfN2P31zfwM/349ad352b7f35706bdd25d07b9f0cb1d/Coinbase_Financial_Services_Europe_Ltd_Fees_and_Charges_v1.4-1__1_.pdf",
+      "read_scope": "full two-page tariff, web reader",
+      "regular_notional_fraction": "0.0002",
+      "regular_usd_per_contract_per_side": "0.12",
+      "source_quote": "Regular trades: 2 basis points (0.02%) of Notional Value + $0.12 per contract"
+    },
+    {
+      "organization": "Kraken",
+      "publication_date": "2026-10-30",
+      "accessed_utc": "2026-11-06",
+      "url": "https://support.kraken.com/articles/cross-platform-fee-tier-changes",
+      "read_scope": "frozen R418 primary-source note; Tier1 futures taker column",
+      "futures_taker_fraction": "0.0005",
+      "source_note": "research/intake/funding_notional_20261103/kraken_eea_sources_20261106.md"
+    }
+  ],
+  "limits": [
+    "Published regular tariff ceiling used; no owner tier or order preview",
+    "No liquidation fee added to regular trades",
+    "CDE book size unit is not certified; both hypotheses reported",
+    "No collateral conversion or funding assumption in execution-only cases"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputs_sha256": "33a9e57d06c1e4521cab30cf5765a7c2fdeaee8710141ae1eb9014a49b4f894f",
+  "market_mode": "historical close-price/funding-notional proxy; no gate admission",
+  "numpy": "2.3.5",
+  "outputs": {
+    "coin_pnl.npz": "d178534d7a990a7397f2f07bbf2398d605e135dc5d70ad47c40ad4f8ab22d00d",
+    "coverage.json": "fa441f7c12c9a25700473a2902f5d224b021b1edd856c2aca81584a3bc0d394f",
+    "daily.csv.gz": "b6c50b188da2d9b25232eac11b7dea76dcdd93ffa19fe96cdabc947f70e01e8a",
+    "forecast_schema.json": "7b856db042313a7aec3e27476ad03c4a3dcf829b94bdf3b8a27ac54b4d970a60",
+    "forecasts.npz": "afb4b6039fe0378516c0527a9425e81359c44487d8ebbf439f33ba3c0154e9a6",
+    "legacy_rule_replay.csv.gz": "2c97e79f1974a4f326166b14e4325868c94b81d34b8d73591e20ca38f5622a22",
+    "selection.json": "0c429ed4cd8cb00309a817c088d8bda6b982de545a2023e5d0623fe1e72ce1e4",
+    "summary.csv": "0471ec00c4024f2491cedbf3e946f23153820d8c872a5cc6ff6431e44be6e4e2",
+    "tickets.csv.gz": "44dd931108d4f7d663d3e346364008d4df5ee21c7f397e12bf98452c164fe311",
+    "verdict.json": "0546ad13a52ea7397807a649b6039ec8e7fd637c153203bce49075efbe6c8151"
+  },
+  "pandas": "2.2.3",
+  "prereg_sha256": "ad89c67ec5eb7508cdbc46175d31235b94e8a6c854a1df18aa3eae0847dce663",
+  "python": "3.12.14"
+}

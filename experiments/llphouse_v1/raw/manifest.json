@@ -1,0 +1,694 @@
+{
+ "source": "https://api.hyperliquid.xyz/info (candleSnapshot 1d, fundingHistory); public, no key",
+ "fetched_utc": "2026-11-13T08:52:18Z",
+ "requests": [
+  {
+   "file": "hl/BTC_candles_1d.json",
+   "body": {
+    "type": "candleSnapshot",
+    "req": {
+     "coin": "BTC",
+     "interval": "1d",
+     "startTime": 1735689600000,
+     "endTime": 1794355199999
+    }
+   }
+  },
+  {
+   "file": "hl/BTC_funding_000.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1735689600000,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_001.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1737486000043,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_002.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1739286000040,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_003.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1741086000049,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_004.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1742886000041,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_005.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1744686000006,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_006.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1746486000054,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_007.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1748286000185,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_008.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1750086000039,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_009.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1751886000046,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_010.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1753686000077,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_011.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1755486000030,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_012.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1757286000037,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_013.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1759086000128,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_014.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1760886000069,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_015.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1762686000047,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_016.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1764486000046,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_017.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1766286000020,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_018.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1768086000048,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_019.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1769886000119,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_020.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1771686000012,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_021.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1773486000048,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_022.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1775286000052,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_023.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1777086000064,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_024.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1778886000061,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_025.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1780686000013,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_026.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1782486000037,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_027.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1784286000021,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_028.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1786086000039,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_029.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1787886000002,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_030.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1789686000019,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_031.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1791486000035,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/BTC_funding_032.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "BTC",
+    "startTime": 1793286000075,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_candles_1d.json",
+   "body": {
+    "type": "candleSnapshot",
+    "req": {
+     "coin": "ETH",
+     "interval": "1d",
+     "startTime": 1735689600000,
+     "endTime": 1794355199999
+    }
+   }
+  },
+  {
+   "file": "hl/ETH_funding_000.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1735689600000,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_001.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1737486000043,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_002.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1739286000040,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_003.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1741086000049,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_004.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1742886000041,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_005.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1744686000006,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_006.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1746486000054,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_007.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1748286000185,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_008.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1750086000039,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_009.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1751886000046,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_010.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1753686000077,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_011.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1755486000030,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_012.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1757286000037,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_013.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1759086000128,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_014.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1760886000069,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_015.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1762686000047,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_016.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1764486000046,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_017.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1766286000020,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_018.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1768086000048,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_019.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1769886000119,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_020.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1771686000012,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_021.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1773486000048,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_022.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1775286000052,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_023.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1777086000064,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_024.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1778886000061,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_025.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1780686000013,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_026.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1782486000037,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_027.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1784286000021,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_028.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1786086000039,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_029.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1787886000002,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_030.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1789686000019,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_031.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1791486000035,
+    "endTime": 1794355200000
+   }
+  },
+  {
+   "file": "hl/ETH_funding_032.json",
+   "body": {
+    "type": "fundingHistory",
+    "coin": "ETH",
+    "startTime": 1793286000075,
+    "endTime": 1794355200000
+   }
+  }
+ ],
+ "files": {
+  "hl/BTC_candles_1d.json": "ae274445f9b66afcc81fc5f06fa182cf9d8d3b5a4746e5aa397504ac3029a60f",
+  "hl/BTC_funding_000.json": "0c92f616e1ea439a7842d39b2f18b9053037565a021d49bef5be2d875eb9b02a",
+  "hl/BTC_funding_001.json": "f8ca71976ad63531918579354154867654f01ce31c3ec0bf2c429baa3d821a41",
+  "hl/BTC_funding_002.json": "2a552f936ac75d3a3698b0de946c90c35d884618f0a2baa4ffd4819a4aea6f4d",
+  "hl/BTC_funding_003.json": "9b62a0069f4d0130a7a0da38ebc4a934010ae5181c72a283b8423ef5e048ec83",
+  "hl/BTC_funding_004.json": "60884c93272aee604389afef355c3746226ee292606188c072847ed156e94051",
+  "hl/BTC_funding_005.json": "7c85b1773eb65912f127fae27d25d83535bdeda79e1672c412ec5469ad9fdc76",
+  "hl/BTC_funding_006.json": "c8c4f0dc0550d62988ddcd17676964aa031876fe3f9f9a55f26be6fc6b625c79",
+  "hl/BTC_funding_007.json": "6f88c97e7f837cbc145de5ec30db7d157059c1289c84995a5bcfb229ab53dfb9",
+  "hl/BTC_funding_008.json": "eb82d59b1a15e66e322468db55dafcc00b064a3ee9b8e5a0369f33740affdcbd",
+  "hl/BTC_funding_009.json": "e7cc97ea8ab882de43d88f4864e166e58baadcebff8ab79c09ca71ff2c121347",
+  "hl/BTC_funding_010.json": "0de1e06cd40f4aa16e9e326cbb7b324bdea4e50fa121b7ed30258cb5c6f67a18",
+  "hl/BTC_funding_011.json": "17845a0a4402d4128563d74538a52ace350014043a28e917bf905299e95fd464",
+  "hl/BTC_funding_012.json": "6fa8a070a4bb0283df24e26980729caf06fd6bd6ebe77a2d6ae8569cb29fd914",
+  "hl/BTC_funding_013.json": "d7d299a2dcab2435f16b478d219b9765242505fd24235c0c8be0de255b330e45",
+  "hl/BTC_funding_014.json": "c55a653a7f05295c6d4d4cbdf40ad724d30246f6b4077e6891cf7ba0e31ce313",
+  "hl/BTC_funding_015.json": "2234ebc3c3780e6da214e2a720f32e7c49a5f81d7b4b4e8d7606beb11a035194",
+  "hl/BTC_funding_016.json": "a3893bc57a90ee1c9716e0f8920f458faf80b0b9f559f8b6fd31ff28339cd321",
+  "hl/BTC_funding_017.json": "d85c2244903272132833205b4a146a7e2b8fcddfb926dfe8c4563159b1a4dfb3",
+  "hl/BTC_funding_018.json": "7e732a765fa31d22d28e5f6994f565cd0f530a6266211dc7a25bc562fa1bf121",
+  "hl/BTC_funding_019.json": "082b94d50240bb6a92bfe29e1fcd0b9ca7bc90369f4ce1c8a3778ead5bebd9b5",
+  "hl/BTC_funding_020.json": "062badcb22041544823fa10a1320ced413eab083ba2277620793fc11999c5fe8",
+  "hl/BTC_funding_021.json": "b89797aaa4f6d91f7fecda490c6cedf081b9f94988a463791f37c13bcc4c9fa4",
+  "hl/BTC_funding_022.json": "05ed7d43be0e6a44101d07a0185471bf47fe47d981975f1b3837527205533465",
+  "hl/BTC_funding_023.json": "49900a8d35e9238fe28a0fe84a9f8fe9838c30d0b46a9b28837bcb1a41346ee0",
+  "hl/BTC_funding_024.json": "2b4037c0f8bb7df251e099bb170af28488bd4beae9343ba969acd6a4b2a2a8dc",
+  "hl/BTC_funding_025.json": "26ee8edc34500b655c8193bee70660b54b45d599cbc5da173b59e1a79eb62cd7",
+  "hl/BTC_funding_026.json": "560ad2376b5990ed8bd2e365cb83447d01e1660deee670e78062c4b5bbbc83d0",
+  "hl/BTC_funding_027.json": "524643238c3c8e874308531c63869e167f41d973baf5fedabbcdd2fd545c4d03",
+  "hl/BTC_funding_028.json": "cce82bb9e335a58773b5ca0f0e3a6da81321022bc52f2912015b327bd12250a7",
+  "hl/BTC_funding_029.json": "567ab86685d55ce3b19dab880682b4237569ddd9afc30a3ee600863e8d8d60c5",
+  "hl/BTC_funding_030.json": "cf8ce2e3c3398e738e4a39a2b1d447c80659102cfe868d95fa3caffb811fee35",
+  "hl/BTC_funding_031.json": "e40489c1c7d40075c2dbeaa03342aebc30bb4c5fe54cf8e4618da79c5df58d11",
+  "hl/BTC_funding_032.json": "5b16ff57435d04e15e5305282e481ad2a14cd55603925ad0b41ef8991b079097",
+  "hl/ETH_candles_1d.json": "c792b1d9333f63c5a15904cbe0dd6a6a9594ec711144dd9d03f3180c573f8938",
+  "hl/ETH_funding_000.json": "882d8a4851d079d843d384da92f08cb3ff2bb5da45894abe32d3d48db6326f3f",
+  "hl/ETH_funding_001.json": "2c07882a913038709d104a535dec0c93ce5620e67ad12ce7dfe8797c6bb496b9",
+  "hl/ETH_funding_002.json": "a681ae519c10bb2d218ae5cc13406ab51554f5d3108e8bb7ac79a8d7d4777551",
+  "hl/ETH_funding_003.json": "5d16e1d5a0296b45bca2f0e3019394373c9a2a21b62d270b45fae05b31bca7d6",
+  "hl/ETH_funding_004.json": "66050dea61064201a104ca2f6e7a75031323e78ae7da48e4b20897ba4bbb3caf",
+  "hl/ETH_funding_005.json": "d0805aec4309318337f5557a45f7eabae1ed0a81a76c43ea55bcef2d317835ac",
+  "hl/ETH_funding_006.json": "112e21c78a392e7aa1368ce0528644fa9ab9fd4ce02684369d4c7057ad1e2543",
+  "hl/ETH_funding_007.json": "2ecda937b55767e8cf01f18b62968ceee4e4459551e1127fd12a531b2f79f7e7",
+  "hl/ETH_funding_008.json": "8d3fb0265c7b89dee5e571361f8a4b3888ab09a26c231cc3d39120817841d029",
+  "hl/ETH_funding_009.json": "e0064a4d9cde84314f2b8b12841e8093d3d8696a659783608b63d18979a07ccb",
+  "hl/ETH_funding_010.json": "0573734af19aadb6ba8d5eb51fccc11f03fed4923f3c9c9eb5a606c99f9a28c5",
+  "hl/ETH_funding_011.json": "afe264aa3c424cd04fb035fcdf6fcce9536004167587d8f04bb48e9c5b6bb5e5",
+  "hl/ETH_funding_012.json": "1d14f8c7c4a4338bfae495e916ef0e562820f8d32781540064418d886c178faa",
+  "hl/ETH_funding_013.json": "74f8a875e13e19fb9b368a31c353cf7cd92b8faa7a404b74d3e2ac5d350340d5",
+  "hl/ETH_funding_014.json": "7d8294f22735138dcc4f04a434d5ba17f13cb503cc6883933983b865270189b2",
+  "hl/ETH_funding_015.json": "39a3cb3d917dad169a41e65e6fa1ae524b3648109c8c19df03465c6c062b17de",
+  "hl/ETH_funding_016.json": "f07b62c5f041dac393896ba47098d3c4b86ab6f09ce042f775d3c7d752f14f76",
+  "hl/ETH_funding_017.json": "16677b1993471c6fd66bdf75d3b8dcc9fc4119762e35ae66c42d931429051d62",
+  "hl/ETH_funding_018.json": "ea2b23dbba494748b7efb29a0c81ee91562ec334e515c22e7b1b907e20b439a0",
+  "hl/ETH_funding_019.json": "4bef1cb3264ab4edb20e58f88bbaa68e501d70dbcef81f536bbe7d6e0884cdcd",
+  "hl/ETH_funding_020.json": "bff2a4a52386f84468b9ffb900ff7a8e84fd27d00bee82f5d3f608c9f1a68c2d",
+  "hl/ETH_funding_021.json": "85805a410826cd2ef77ea8b91a226c4925db84806aa77a943047906c4094e6e1",
+  "hl/ETH_funding_022.json": "fb103d1f28a40542dcafc538cf334fe647c38bddb8bfbf620f1c9f1e274f4420",
+  "hl/ETH_funding_023.json": "25470f95358825da2a8921eca657b6b266c7196884a0201c1e2b766f714b9ba3",
+  "hl/ETH_funding_024.json": "e690bd4de35526edcb28a1d983c6a018673b393b6b2dea6a8ef28a7bb404e87c",
+  "hl/ETH_funding_025.json": "38ef46cd26f05f3efafbf8903c4fcd7b99994add284b70c58db19edc105a8ea6",
+  "hl/ETH_funding_026.json": "28beb630301de8a35b8f1df0d0f62873c4a169bf1dc4a38b4e8aedb1e1849bf1",
+  "hl/ETH_funding_027.json": "251242d59e66f392086f5c6b53fc13e8c17c175e8798bbd621bb21b87a4ffbe7",
+  "hl/ETH_funding_028.json": "3bb58f507f0dd97232573131a8fb8e9f44cb67e99526583c487db0dac1b55050",
+  "hl/ETH_funding_029.json": "0ef72c62b27faa260c71923901a186c756629e6e5e34b2ab9836838ba7c4bf37",
+  "hl/ETH_funding_030.json": "752982bdf69a74b95bbd8809dc6977290c0f9d14141ae9f420a8c7566e6d4390",
+  "hl/ETH_funding_031.json": "c101774f7758364469a7979359c6cbd436c26e7b6060f3eae09d8c5ccfc0d5b4",
+  "hl/ETH_funding_032.json": "047d096733270faf3b0bee6fde338b11c1a1d04afc7a609b4bd401cc9a73aa51"
+ }
+}

@@ -1,0 +1,14 @@
+07:51:56 prereg sha b92f7cc58427
+07:52:34 discovery_posthoc {"cascade_hours": 42, "by_year": {"2021": 2, "2022": 12, "2023": 28}, "mkt_fwd_1h_bp": 12.844579289681148, "uncond_fwd_1h_bp": 0.5695068595542156, "mkt_fwd_4h_bp": 42.35321514024673, "uncond_fwd_4h_bp": 2.2721106715646293, "mkt_fwd_24h_bp": 56.13822123510415, "uncond_fwd_24h_bp": 13.780031068030816}
+07:52:34 validation {"cascade_hours": 15, "by_year": {"2024": 15, "2025": 0}, "mkt_fwd_1h_bp": -5.2123831148492465, "uncond_fwd_1h_bp": -0.3109785974801163, "mkt_fwd_4h_bp": 116.27919286392515, "uncond_fwd_4h_bp": -1.2453713139247262, "mkt_fwd_24h_bp": 186.41435192907528, "uncond_fwd_24h_bp": -8.150326942369022}
+07:52:36 discovery_posthoc +0.568 bp/day t +0.23 (2x +0.027), gross +1.109 cost 0.541, invested 0.037, alpha +0.225 t +0.09 beta 0.03 (post hoc, not decided)
+07:52:37 validation +5.639 bp/day t +1.03 (2x +5.283), gross +5.995 cost 0.356, invested 0.024, alpha +5.819 t +1.08 beta 0.02 fail
+07:52:37 
+    book            window  cmult  gross_bp_day  cost_bp_day  gross_exposure  invested_hours  days   total  mean_bp_day  t_nw10  sharpe  max_dd  corr_ref  beta_ref  resid_bp_day  resid_t_nw10  trimmed_bp_day
+CASC3/24 discovery_posthoc    1.0        1.1087       0.5410          0.0365          0.0365  1095  0.0622       0.5677  0.2303  0.1309  0.2873    0.1514    0.0251        0.2248        0.0932          2.3033
+CASC3/24 discovery_posthoc    2.0        1.1087       1.0820          0.0365          0.0365  1095  0.0029       0.0267  0.0108  0.0062  0.2962    0.1544    0.0255       -0.3225       -0.1342             NaN
+CASC3/24 discovery_posthoc    3.0        1.1087       1.6230          0.0365          0.0365  1095 -0.0563      -0.5143 -0.2095 -0.1188  0.3124    0.1573    0.0260       -0.8698       -0.3628             NaN
+CASC3/24        validation    1.0        5.9954       0.3564          0.0239          0.0239   547  0.3085       5.6389  1.0280  1.2608  0.1136    0.1278    0.0241        5.8186        1.0801          1.7658
+CASC3/24        validation    2.0        5.9954       0.7128          0.0239          0.0239   547  0.2890       5.2825  0.9753  1.1873  0.1181    0.1304    0.0244        5.4649        1.0281             NaN
+CASC3/24        validation    3.0        5.9954       1.0693          0.0239          0.0239   547  0.2695       4.9261  0.9211  1.1127  0.1228    0.1330    0.0248        5.1112        0.9743             NaN
+07:52:37 {"window": "validation", "passed": false}

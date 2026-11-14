@@ -1,0 +1,137 @@
+{
+  "state": "SELECTED_NATIVE_RECEIPTS_AUDITED",
+  "accessed_utc": "2026-11-08T15:36:25.852900+00:00",
+  "state_commit": "62236577d946755e435533ae8bad95afc567379c",
+  "manifest_sha256": "9608872b851276271aa51356d7356a60b5bf2ec2346e94789a69c753edd92ee7",
+  "active_contract": "R429",
+  "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
+  "verified_manifest_hashes": 1298,
+  "inherited_aux_baseline_sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48",
+  "inherited_prefix_preserved": true,
+  "all_requests_paired": true,
+  "cumulative_aux_calls": 793,
+  "cumulative_aux_charged_bytes": 16384014,
+  "remaining_original_aux_bytes": 393202,
+  "original_aux_max_bytes": 16777216,
+  "original_aux_max_calls": 4096,
+  "no_reset": true,
+  "new_wire_content_pairs_verified": 0,
+  "new_encoded_body_bytes": 0,
+  "quote_view_receipts": [],
+  "native_journal_prefixes_verified": 6,
+  "native_status": {
+    "R413": {
+      "updated": "2026-11-08T05:25:39Z",
+      "ticks": 21,
+      "locks": 4,
+      "settled": 0
+    },
+    "R406": {
+      "updated": "2026-11-08T04:29:38Z",
+      "ticks": 23,
+      "locks": 2,
+      "settled": 0
+    }
+  },
+  "native_dispatch": {
+    "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
+    "run_id": "gha_42495486811_1",
+    "hour": "20261108T15",
+    "tasks": [
+      {
+        "id": "R419",
+        "started_utc": "2026-11-08T15:34:55.515877+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      },
+      {
+        "id": "R413",
+        "started_utc": "2026-11-08T15:34:56.554039+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      },
+      {
+        "id": "R406",
+        "started_utc": "2026-11-08T15:34:57.234804+00:00",
+        "state": "PROCESS_OK",
+        "returncode": 0
+      }
+    ],
+    "health": [
+      {
+        "rid": "R415",
+        "path": "experiments/paperacct_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 49.2,
+        "source_updated": "2026-11-06T14:23Z"
+      },
+      {
+        "rid": "R285",
+        "path": "experiments/xbook_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 49.0,
+        "source_updated": "2026-11-06T14:35:10Z"
+      },
+      {
+        "rid": "R278",
+        "path": "experiments/xfund_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 61.83,
+        "source_updated": "2026-11-06T01:45:16.934297+00:00"
+      },
+      {
+        "rid": "R279",
+        "path": "experiments/xfund_kc_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 61.73,
+        "source_updated": "2026-11-06T01:51:18.164460+00:00"
+      },
+      {
+        "rid": "R390",
+        "path": "experiments/xfund_bg_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 61.43,
+        "source_updated": "2026-11-06T02:09:01.468084+00:00"
+      },
+      {
+        "rid": "R413",
+        "path": "experiments/boroslock_fwd/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 10.16,
+        "source_updated": "2026-11-08T05:25:39Z"
+      },
+      {
+        "rid": "R406",
+        "path": "experiments/lockcarry_fwd2/journal/status.json",
+        "status": "STALE_OR_CLOCK",
+        "hours_old": 11.09,
+        "source_updated": "2026-11-08T04:29:38Z"
+      }
+    ]
+  },
+  "latest_r419_packet": {
+    "path": "data/recorders/eea_pair_capture_v1/packets/20261108T15/packet.json",
+    "sha256": "aa7e72007fd9b3dbbb2e247e70d3d46984f8a20cef08f28a2e134fe3a59f9c98",
+    "state": "CAPTURED",
+    "source_http_requests": 12,
+    "body_bytes": 173257
+  },
+  "r428_source_block_unchanged": true,
+  "source_http_requests_by_this_audit": 0,
+  "predictive_trials": 0,
+  "costs": {
+    "1x": "N/A",
+    "2x": "N/A",
+    "3x": "N/A"
+  },
+  "settled_income_proven": false,
+  "code_pr": 91,
+  "reviewed_code_head": "c6998877c0c1fd5ca712766a25e2652e80e1cb45",
+  "reviewed_code_merge": "c51336691411620f60b21c0dbbdad58e84ceeb00",
+  "reviewed_tree": "db4df52eb2fa05613609b3ea2e6ba1cadba4aa84",
+  "ci_run": 42494500508,
+  "migration_workflow": 42495486811,
+  "migration_comment": 6723421811,
+  "native_recovery_observed": false,
+  "same_hour_skip_not_fresh_evidence": true
+}

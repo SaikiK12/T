@@ -1,0 +1,205 @@
+{
+  "batch_id": "reels_tradingview_code_review_20261029",
+  "date": "2026-10-29",
+  "base_commit": "d64ae8b573386a09a4a2b906415ef4a443d890aa",
+  "query_tracks": [
+    "Exact owner reel identity and ordinary public media",
+    "Author-linked IV wall and ORB rules versus promotional claims",
+    "Exact QQQ ORB paper entry and cost scope",
+    "TradingView open community ORB/VWAP/volume code",
+    "Transparent IV expected-move proxy versus proprietary walls",
+    "Official TradingView broker emulator, defaults and realtime/historical differences"
+  ],
+  "source_records": [
+    {
+      "source_id": "SRC26-041",
+      "record_id": "SOC29-IV-WALLS",
+      "url": "https://www.instagram.com/reel/DdTNtTLNSLU/",
+      "read_scope": "Public page/embed metadata and cover; video copyright-blocked, no video URL; no audio. Related public TradeWellX/Fractal written bodies read, not linked/paid videos.",
+      "unread_or_unverified": "Exact wall model and event/trade denominator unavailable; related material is not authenticated reel mechanics."
+    },
+    {
+      "source_id": "SRC26-042",
+      "record_id": "SOC29-TRADEX-ORB",
+      "url": "https://www.instagram.com/reel/DZvAMYZA1ae/",
+      "read_scope": "Caption/embed, full 108.017-second public media received; 16 spaced frames plus 41/77-second frames inspected. No verified full speech. Author links, product copy and public QuantORB description/release notes read.",
+      "unread_or_unverified": "Invite-only code, exact reel revision/settings and costed trade ledger unavailable; no independent live verification."
+    },
+    {
+      "source_id": "SRC26-043",
+      "record_id": "SOC29-QQQ-ORB-PAPER",
+      "url": "https://doi.org/10.2139/ssrn.4416622",
+      "read_scope": "Author-hosted September 22 2025 PDF indexed pages 1-6 and page-14 slippage discussion read; local direct fetch exceeded 2.5MB cap and was discarded.",
+      "unread_or_unverified": "No data reproduction, complete grid review or independently verified later holdout."
+    },
+    {
+      "source_id": "SRC26-044",
+      "record_id": "TV29-ORB-VWAP-ATR",
+      "url": "https://www.tradingview.com/script/b7IJ7mmW-NQ-Scalping-ORB-VWAP-Bias-ATR-Brackets/",
+      "read_scope": "All 155 lines of public Pine revision 1.0 read; public open_no_auth source receipt. Bounded official TradingView emulator, cost and realtime/historical documentation read.",
+      "unread_or_unverified": "No compilation or chart/market test; default costs, mutable ATR exits, VWAP/session and wide-window logic need explicit treatment."
+    },
+    {
+      "source_id": "SRC26-045",
+      "record_id": "TV29-ORB-VWAP-VOLUME",
+      "url": "https://www.tradingview.com/script/SStGDNGv-Opening-Range-Breakout-VWAP-Volume/",
+      "read_scope": "All 117 lines of public Pine revision 1.0 read; public open_no_auth source receipt.",
+      "unread_or_unverified": "Indicator has no sizing/exit/account; intrabar alert and session/VWAP definitions need a causal contract."
+    },
+    {
+      "source_id": "SRC26-046",
+      "record_id": "TV29-IV-RAILS",
+      "url": "https://www.tradingview.com/script/E5iEoXKs-Expected-Move-Rails-IV-based/",
+      "read_scope": "All 98 lines of public Pine revision 5.0 read; public open_no_auth source receipt.",
+      "unread_or_unverified": "Single manual IV, latest-day display and close-time anchors do not provide historical forecasts or exact Fractal walls."
+    }
+  ],
+  "public_receipts": [
+    {
+      "file": "DdTNtTLNSLU-page.html",
+      "url": "https://www.instagram.com/reel/DdTNtTLNSLU/",
+      "bytes": 554938,
+      "sha256": "7c873a8cd7866608403a503279433d86d9e59df4e4d6530ad20c5822b28520a9"
+    },
+    {
+      "file": "DdTNtTLNSLU-embed.html",
+      "url": "https://www.instagram.com/reel/DdTNtTLNSLU/embed/captioned/",
+      "bytes": 223502,
+      "sha256": "5f1cac0044ac13efc6e2c3bc42c6c836be85187e004c02dade0cdb869b1026b3"
+    },
+    {
+      "file": "DZvAMYZA1ae-page.html",
+      "url": "https://www.instagram.com/reel/DZvAMYZA1ae/",
+      "bytes": 555594,
+      "sha256": "aadf1f03d1af6358dd33469be774cb6da85c378aeb25585b2b69790abaf368f2"
+    },
+    {
+      "file": "DZvAMYZA1ae-embed.html",
+      "url": "https://www.instagram.com/reel/DZvAMYZA1ae/embed/captioned/",
+      "bytes": 229996,
+      "sha256": "6c4f7fed3fcb4536200871c68ba72e3b013cdc0ad824489a3616c1e6fcb3138b"
+    },
+    {
+      "url": "https://www.tradingview.com/script/b7IJ7mmW-NQ-Scalping-ORB-VWAP-Bias-ATR-Brackets/",
+      "bytes": 328800,
+      "sha256": "c1cd22f8b3d1540a5403bb903807109735b59d53ded89f307ef89e37bff096bc",
+      "content_type": "text/html; charset=utf-8",
+      "file": "tv_orb_vwap.html"
+    },
+    {
+      "url": "https://www.tradingview.com/script/SStGDNGv-Opening-Range-Breakout-VWAP-Volume/",
+      "bytes": 303944,
+      "sha256": "5d79f5b892aa61a0280e94c97cc11a52f8910568ef79c190a164d9e89d4ab2fe",
+      "content_type": "text/html; charset=utf-8",
+      "file": "tv_orb_volume.html"
+    },
+    {
+      "url": "https://www.tradingview.com/script/E5iEoXKs-Expected-Move-Rails-IV-based/",
+      "bytes": 444668,
+      "sha256": "879eccf2e9ccba9d24388133707b50eb944a3a0f53a9506a06aae7936b9b80ab",
+      "content_type": "text/html; charset=utf-8",
+      "file": "tv_iv_rails.html"
+    },
+    {
+      "url": "https://www.tradingview.com/script/SNGWf27F-TradeX-QuantORB/",
+      "bytes": 553841,
+      "sha256": "5245ff3e97b26ba937f60c1d4b765372e7923ed8fbc5eb26a0b03fa8c953b015",
+      "content_type": "text/html; charset=utf-8",
+      "file": "tv_quantorb.html"
+    },
+    {
+      "file": "tv_orb_vwap.source-response.json",
+      "url": "https://pine-facade.tradingview.com/pine-facade/get/PUB%3B647f7238de38435db78f4011ad325474/1",
+      "bytes": 9102,
+      "sha256": "f6fc331a913f8ad86719fa920351db792d05019f49ed7cd3a15711c8019fe2c0",
+      "script_name": "NQ Scalping ORB + VWAP Bias (ATR Brackets)",
+      "script_access": "open_no_auth",
+      "version": "1.0",
+      "created": "2026-02-27T21:23:09.908342Z",
+      "updated": "2026-02-27T21:23:09.908342Z",
+      "extracted_source": {
+        "file": "tv_orb_vwap.pine",
+        "bytes": 8435,
+        "sha256": "43d3980928a472a2feeb38e10afd81d5fc827d38197653db5da49400bca7e428",
+        "lines": 155,
+        "read_scope": "All source lines; not compiled or run."
+      }
+    },
+    {
+      "file": "tv_orb_volume.source-response.json",
+      "url": "https://pine-facade.tradingview.com/pine-facade/get/PUB%3Baf01f569d79f42bd83eea3475f380240/1",
+      "bytes": 5823,
+      "sha256": "370ebc2fe9a5f30eb6218ff75111b184f6228aadd1c95f7c0b9d15f8079003b2",
+      "script_name": "Opening Range Breakout (ORB) + VWAP + Volume",
+      "script_access": "open_no_auth",
+      "version": "1.0",
+      "created": "2026-05-26T04:10:46.328888Z",
+      "updated": "2026-05-26T04:10:46.328888Z",
+      "extracted_source": {
+        "file": "tv_orb_volume.pine",
+        "bytes": 5106,
+        "sha256": "33e662b37ef16ba565a7a334a1f648788ac93ef6ebff042c79a8a7b6367cd999",
+        "lines": 117,
+        "read_scope": "All source lines; not compiled or run."
+      }
+    },
+    {
+      "file": "tv_iv_rails.source-response.json",
+      "url": "https://pine-facade.tradingview.com/pine-facade/get/PUB%3B93db6cfcf11d4b4fbb8af0113c9e6758/5",
+      "bytes": 6264,
+      "sha256": "a168247570ffa971a2d334469622de4966665dda72ea0c5e6adf5e9756af2f41",
+      "script_name": "Expected Move Rails (IV-based)",
+      "script_access": "open_no_auth",
+      "version": "5.0",
+      "created": "2026-04-11T15:06:03.172645Z",
+      "updated": "2026-04-11T15:06:03.172645Z",
+      "extracted_source": {
+        "file": "tv_iv_rails.pine",
+        "bytes": 5544,
+        "sha256": "39206906664704d1d63a86177c1abf1198d982c18f6525aa892a7debdac327c1",
+        "lines": 98,
+        "read_scope": "All source lines; not compiled or run."
+      }
+    },
+    {
+      "file": "DZvAMYZA1ae.mp4",
+      "source_url": "https://www.instagram.com/reel/DZvAMYZA1ae/embed/captioned/",
+      "bytes": 8240252,
+      "sha256": "56f5a8299e5fca80685adb2f369d1d4e40190db472ee9dfe742ab663023b7126",
+      "duration_seconds": 108.017,
+      "read_scope": "16 frames at 0,7,...,105 seconds plus 41/77-second frames inspected; no verified audio transcript."
+    }
+  ],
+  "related_primary_urls": [
+    "https://linktr.ee/bennnytrades",
+    "https://www.tradexlabs.io/orb",
+    "https://www.tradingview.com/script/SNGWf27F-TradeX-QuantORB/",
+    "https://tradewellx.substack.com/p/iv-walls-peaks-density-graph-hacks",
+    "https://thefractalexchange.substack.com/p/new-system-update-spread-monster",
+    "https://www.tradingview.com/pine-script-docs/concepts/strategies/",
+    "https://concretumgroup.com/wp-content/uploads/2026/02/Can-Day-Trading-Really-Be-Profitable.pdf"
+  ],
+  "scope_notice": "Receipts identify bytes separately received in scratch, not independent validation of creator claims, market-feed authentication or complete corpus reading. No third-party source code or media is republished. No metadata count is a new strategy trial.",
+  "access_failures": [
+    "Web reader throttled Instagram; ordinary public page/embed fetch succeeded.",
+    "First reel embed reports copyright_blocked:true and provides no video URL; no bypass or alternate-media request.",
+    "No verified speech transcription; noisy second-reel subtitle OCR was not used as a transcript.",
+    "QQQ direct PDF fetch stopped at bounded 2.5MB receipt cap and was discarded; bounded indexed sections were read.",
+    "TradeX source is invite-only (has_access:false); no source endpoint request."
+  ],
+  "proposed_own_family": {
+    "status": "design_only_not_preregistered",
+    "arms": [
+      "same first ORB parent ticket",
+      "parent plus session VWAP",
+      "parent plus 1.5x OR per-minute volume",
+      "parent plus both"
+    ],
+    "calibration_inputs": "Authenticated index instrument, one-minute bars and executable quotes/costs not verified in this workspace.",
+    "trial_count_notice": "Zero trials now; all four arms and actually searched alternatives belong in the eventual registered family and program disclosure."
+  },
+  "strategy_trials_added": 0,
+  "market_outcomes_added": 0,
+  "prospective_days_added": 0,
+  "reserved_rows_read": 0
+}

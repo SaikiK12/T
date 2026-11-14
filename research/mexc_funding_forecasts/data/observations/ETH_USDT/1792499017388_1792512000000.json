@@ -1,0 +1,51 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "collect_cycle_hours": 8,
+  "funding_fair_price": 2391.97,
+  "funding_index_price": 2393.15,
+  "funding_rate_ceiling_fraction": 0.0018,
+  "funding_rate_floor_fraction": -0.0018,
+  "funding_rate_fraction": 9e-06,
+  "funding_system_timestamp_ms": 1792499017388,
+  "next_settle_time_ms": 1792512000000,
+  "request_metadata": [
+    {
+      "body_truncated": false,
+      "end_ms": 1792499017651,
+      "end_utc": "2026-10-20T12:23:37.651084Z",
+      "http_status": 200,
+      "kind": "funding",
+      "raw_file": "ETH_USDT_funding.raw",
+      "retained_bytes": 239,
+      "sha256": "d1e93bce6db1a62c57249c9db355b3e82d87d80d757a77b7396b74e9f1a04153",
+      "start_ms": 1792499016131,
+      "start_utc": "2026-10-20T12:23:36.131385Z",
+      "symbol": "ETH_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/funding_rate/ETH_USDT"
+    },
+    {
+      "body_truncated": false,
+      "end_ms": 1792499019191,
+      "end_utc": "2026-10-20T12:23:39.191619Z",
+      "http_status": 200,
+      "kind": "ticker",
+      "raw_file": "ETH_USDT_ticker.raw",
+      "retained_bytes": 583,
+      "sha256": "5f30aed23999d41d164b5d0e9526634fe5c2dcfaed46ea666b8c0e932d97dccd",
+      "start_ms": 1792499017652,
+      "start_utc": "2026-10-20T12:23:37.652564Z",
+      "symbol": "ETH_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/ticker?symbol=ETH_USDT"
+    }
+  ],
+  "symbol": "ETH_USDT",
+  "ticker_best_ask": 2392.18,
+  "ticker_best_bid": 2392.08,
+  "ticker_fair_price": 2391.97,
+  "ticker_index_price": 2392.92,
+  "ticker_last_price": 2392.0,
+  "ticker_trade_age_ms_at_capture_end": 2331,
+  "ticker_trade_timestamp_ms": 1792499016860
+}

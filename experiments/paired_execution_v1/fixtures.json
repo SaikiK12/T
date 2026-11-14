@@ -1,0 +1,958 @@
+{
+  "anchor": {
+    "mono_ns": 10000000000,
+    "utc_ns": 1790000000000000000
+  },
+  "cases": [
+    {
+      "name": "inactive",
+      "receipts": []
+    },
+    {
+      "name": "acknowledged_without_fills",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "ack",
+          0,
+          "m",
+          1.2,
+          {}
+        ],
+        [
+          "ack",
+          1,
+          "l",
+          1.3,
+          {}
+        ]
+      ]
+    },
+    {
+      "name": "both_legs_then_exit",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "101",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "l-open"
+          }
+        ],
+        [
+          "submit",
+          0,
+          "mc",
+          2,
+          {
+            "purpose": "close",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "lc",
+          2.1,
+          {
+            "purpose": "close",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "mc",
+          2.2,
+          {
+            "fee": ".1",
+            "price": "99",
+            "purpose": "close",
+            "quantity_base": "1",
+            "trade_id": "m-close"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "lc",
+          2.3,
+          {
+            "fee": ".1",
+            "price": "102",
+            "purpose": "close",
+            "quantity_base": "1",
+            "trade_id": "l-close"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "first_leg_rejected",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "rejected",
+          0,
+          "m",
+          1.2,
+          {
+            "cumulative_filled_base": "0"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "101",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "l-open"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "partial_hedge_rejected",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "rejected",
+          1,
+          "l",
+          1.4,
+          {
+            "cumulative_filled_base": ".4"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "cancel_race",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "cancel_request",
+          1,
+          "l",
+          1.4,
+          {}
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.5,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".2",
+            "trade_id": "l-late"
+          }
+        ],
+        [
+          "cancelled",
+          1,
+          "l",
+          1.6,
+          {
+            "cumulative_filled_base": ".6"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "residual_retry",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "cancel_request",
+          1,
+          "l",
+          1.4,
+          {}
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.5,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".2",
+            "trade_id": "l-late"
+          }
+        ],
+        [
+          "cancelled",
+          1,
+          "l",
+          1.6,
+          {
+            "cumulative_filled_base": ".6"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l2",
+          2,
+          {
+            "purpose": "open",
+            "quantity_base": ".4"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l2",
+          2.1,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-rest"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "oversized_retry",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "cancel_request",
+          1,
+          "l",
+          1.4,
+          {}
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.5,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".2",
+            "trade_id": "l-late"
+          }
+        ],
+        [
+          "cancelled",
+          1,
+          "l",
+          1.6,
+          {
+            "cumulative_filled_base": ".6"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l2",
+          2,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "terminal_total_missing",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "cancelled",
+          1,
+          "l",
+          1.4,
+          {}
+        ]
+      ]
+    },
+    {
+      "name": "source_gap",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "101",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "l-open"
+          }
+        ],
+        [
+          "gap",
+          1,
+          "l",
+          2,
+          {}
+        ]
+      ]
+    },
+    {
+      "name": "duplicate_trade",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "101",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "l-open"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.4,
+          {
+            "fee": ".1",
+            "occurred_ns": 1790000001200000000,
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "unknown_fee",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.1,
+          {
+            "fee": null,
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "unknown-fee"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "fill_without_order",
+      "receipts": [
+        [
+          "fill",
+          0,
+          "m",
+          1,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "unmatched"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "fill_after_terminal",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "cancelled",
+          0,
+          "m",
+          1.1,
+          {
+            "cumulative_filled_base": "0"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "contradiction"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "entry_timeout",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".4",
+            "trade_id": "l-part"
+          }
+        ],
+        [
+          "cancel_request",
+          1,
+          "l",
+          1.4,
+          {}
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.5,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": ".2",
+            "trade_id": "l-late"
+          }
+        ],
+        [
+          "cancelled",
+          1,
+          "l",
+          1.6,
+          {
+            "cumulative_filled_base": ".6"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l2",
+          11,
+          {
+            "purpose": "open",
+            "quantity_base": ".4"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "partially_closed",
+      "receipts": [
+        [
+          "submit",
+          0,
+          "m",
+          1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "submit",
+          1,
+          "l",
+          1.1,
+          {
+            "purpose": "open",
+            "quantity_base": "1"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "m",
+          1.2,
+          {
+            "fee": ".1",
+            "price": "100",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "m-open"
+          }
+        ],
+        [
+          "fill",
+          1,
+          "l",
+          1.3,
+          {
+            "fee": ".1",
+            "price": "101",
+            "purpose": "open",
+            "quantity_base": "1",
+            "trade_id": "l-open"
+          }
+        ],
+        [
+          "submit",
+          0,
+          "mc",
+          2,
+          {
+            "purpose": "close",
+            "quantity_base": ".4"
+          }
+        ],
+        [
+          "fill",
+          0,
+          "mc",
+          2.1,
+          {
+            "fee": ".1",
+            "price": "99",
+            "purpose": "close",
+            "quantity_base": ".4",
+            "trade_id": "m-close-part"
+          }
+        ]
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scope": "ALL INVENTED lifecycle receipts, not real order or strategy evidence"
+}

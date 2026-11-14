@@ -1,0 +1,91 @@
+name: xyz book-cost recorder (Claude)
+# Single writer of the data branch claude/xyz-books-data: hourly order-book snapshots of every market on trade.xyz's
+# HIP-3 dex on Hyperliquid (scripts/record_xyz_books.py): spread, depth and the cost in bp of a $1k-$25k market order
+# by side, with each market's fee settings by day. Why: R451 prices R200's stock-perp flow books on xyz at assumed
+# costs; these snapshots let a registered read put measured costs on the same tickets (R453). Also:
+# - main/: the same book costs on Hyperliquid's main-dex perps (record_xyz_books.py --dex ""), for R448 and R454;
+# - hip3/: the same book costs on the other live HIP-3 dexes, Paragon (para) and EntropyIO (io), from 2026-11-12,
+#   for measured-cost reads of R479;
+# - hlp/: HLP's child-vault positions and every main-dex perp's context (scripts/record_hlp_positions.py, M510, R454);
+# - llp/: Lighter's LLP positions and every Lighter perp's open interest (scripts/record_llp_positions.py, M511);
+# - lighter/: the cost of a $1k and $10k market order on every active Lighter perp (scripts/record_lighter_costs.py),
+#   for measured-cost reads of R455 and later Lighter lanes.
+# Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
+# the branch. GitHub drops or delays some scheduled runs, so scheduled runs also fire at :27 and :47; a scheduled
+# run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour, as before).
+# claude-clock.yml also dispatches it at :07 and :35 each hour with if_due (the same check); a plain dispatch records.
+on:
+  schedule:
+    - cron: '7,27,47 * * * *'
+  workflow_dispatch:
+    inputs:
+      if_due:
+        description: 'Record only if the data branch has no recording in the current UTC hour (as a scheduled run)'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: claude-xyz-books-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout the default branch (code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Check out the data branch, or start it
+        run: |
+          set -eu
+          if git fetch -q --depth 1 origin claude/xyz-books-data; then
+            git worktree add -q -B claude/xyz-books-data .xyz-data FETCH_HEAD
+          else
+            git worktree add -q --orphan -b claude/xyz-books-data .xyz-data
+          fi
+      - name: Is this hour not yet recorded
+        id: due
+        run: |
+          set -u
+          last=$(git -C .xyz-data log -1 --format=%ct 2>/dev/null || echo 0)
+          hour=$(( $(date +%s) / 3600 * 3600 ))
+          guarded=0
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.if_due }}" = "true" ]; then guarded=1; fi
+          if [ $guarded -eq 1 ] && [ "${last:-0}" -ge "$hour" ]; then
+            echo "already recorded this hour (last commit $last)"; echo "due=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "last recording $last, hour $hour: record"; echo "due=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Record
+        id: rec
+        if: steps.due.outputs.due == '1'
+        run: |
+          set -u
+          fail=0
+          python3 scripts/record_xyz_books.py --out .xyz-data || fail=1
+          python3 scripts/record_hlp_positions.py --out .xyz-data || fail=1
+          python3 scripts/record_llp_positions.py --out .xyz-data || fail=1
+          python3 scripts/record_xyz_books.py --out .xyz-data/main --dex "" || fail=1
+          python3 scripts/record_xyz_books.py --out .xyz-data/hip3 --dex para --dex io || fail=1
+          python3 scripts/record_lighter_costs.py --out .xyz-data || fail=1
+          exit $fail
+      - name: Commit recordings
+        if: always() && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          cd .xyz-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          find . -name '*.tmp' -delete
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "xyz/main/Lighter books, HLP and LLP snapshots ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:claude/xyz-books-data; then echo "pushed"; exit 0; fi
+            git pull -q --rebase origin claude/xyz-books-data || true
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1

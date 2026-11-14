@@ -1,0 +1,54 @@
+name: xyz COPPER and HO contracts recorder (Claude)
+# Single writer of the data branch claude/cuho-data. scripts/record_cuho.py saves the COMEX copper (HG) and NYMEX
+# ULSD (HO) contracts that trade.xyz's COPPER and HO perps reference (Yahoo 60-minute bars, the last 60 days) and the
+# perps' own 1-hour candles and funding (the last 10 days), merged by bar start. No lane reads it yet: it keeps the
+# option of a frozen forward lane for M532 on these markets (Yahoo drops a contract at expiry, the venue keeps only
+# ~208 days of 1-hour candles). Values stay unread until such a lane is frozen.
+# Twice a day; missed runs lose nothing until 10 days pass. Public endpoints, no key, no order.
+on:
+  schedule:
+    - cron: '29 4,16 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: claude-cuho-recorder-single-writer
+  cancel-in-progress: false
+jobs:
+  record:
+    if: github.repository == 'SaikiK12/T'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the default branch (code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Check out the data branch, or start it
+        run: |
+          set -eu
+          if git fetch -q --depth 1 origin claude/cuho-data; then
+            git worktree add -q -B claude/cuho-data .cuho-data FETCH_HEAD
+          else
+            git worktree add -q --orphan -b claude/cuho-data .cuho-data
+          fi
+      - name: Record
+        id: rec
+        run: python3 scripts/record_cuho.py --out .cuho-data
+      - name: Commit recordings
+        if: always() && steps.rec.outcome != 'skipped'
+        run: |
+          set -eu
+          cd .cuho-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          find . -name '*.tmp' -delete
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "xyz COPPER and HO contracts ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            if git push -q origin HEAD:claude/cuho-data; then echo "pushed"; exit 0; fi
+            git pull -q --rebase origin claude/cuho-data || true
+            sleep $((i * 10))
+          done
+          echo "push failed"; exit 1

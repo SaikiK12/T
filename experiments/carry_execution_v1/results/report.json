@@ -1,0 +1,5641 @@
+{
+  "current_capacity": null,
+  "expected_return": null,
+  "fee_scope": "published-rate scenarios, not owner entitlement",
+  "frozen_commit": "1114da2a6fb9f330fd2b06ca4ef41a417f271eae",
+  "historical_stress_pnl": null,
+  "inputs": {
+    ".python-version": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc",
+    "experiments/carry_execution_v1/cases.json": "594faa3cb9cca10399971539fc3d2c91b7deb3409177a5e9494698e77a563e76",
+    "experiments/carry_execution_v1/gates_at_registration.md": "e7dd02fa43747598959838677cb413578ce8f7cfee59704bd20e4fdfca15a926",
+    "experiments/pair_quotes_v1/evidence/BTC_lighter_book_0.json.gz": "2b7294e5acdf35cec263577307fd16f0c5e641be4b7f17f3babd9ab9302d1c25",
+    "experiments/pair_quotes_v1/evidence/BTC_lighter_book_1.json.gz": "ba16d15bececac4f4254c05f2f1b8e2f8b744d64faa750b4c88779418f04e722",
+    "experiments/pair_quotes_v1/evidence/BTC_lighter_meta.json.gz": "5d2c14227ed982cc2646fde6f8482f4ffae689aa5449298f842ef74888cc3b5e",
+    "experiments/pair_quotes_v1/evidence/BTC_mexc_book_0.json.gz": "24b6dbb0244b55af265c85abecf705a82b8a6450ba9e0b60fdfa6a3732084faf",
+    "experiments/pair_quotes_v1/evidence/BTC_mexc_book_1.json.gz": "a3d787430d46de7ae1bc2e6f3dc383cb5ec63a613eb69bcff03320ecba230a0c",
+    "experiments/pair_quotes_v1/evidence/BTC_mexc_meta.json.gz": "072d01fd1e20f1537a5d4cdfd7719cb3a52e83347b96f7902be12c5897f41d23",
+    "experiments/pair_quotes_v1/evidence/receipts.json": "3ef4104f8f8d603f24b5c5e59e44a8c4b69bed5866fab58b6603542beecc60bd",
+    "lab/carry_execution.py": "9d2e218698050583bc081bb24df69154a8ece1744dd66c482c70a383dee695ad",
+    "lab/prereg.py": "3574d23d3218e86f32305e670c492091bc2d6aa65d2e8a72675be3971b66c508",
+    "lab/registry.py": "8f24ac21c3dbf3073b9fc9b9c3421e6105464166f2bbf23477cc9b1ff26f62ce",
+    "lab/stress.py": "49acc5ddc694d6ee28192faa90ce1d75d0bb19f5fd20ce57ec166d5a030c4f6e",
+    "requirements-test.lock": "4cf65930e08965601cefe33b1785271bb024d22f39eac22582e5fd393bb2b466",
+    "scripts/check_carry_execution.py": "a4320bb261fdb56e1aa3063efd1aae384882ad9b5cc729a9446570c3633645fe",
+    "scripts/run_carry_execution.py": "d999d18ad3aba927f6128c53611b24f9af1aa585cd9357e9abdc7514e913b3f9"
+  },
+  "measured_scope": "two old BTC MEXC/Lighter snapshots only; new sizes are gate-0 diagnostics",
+  "predictive_trials": 0,
+  "prereg_sha256": "503220858a4e28a77db784de63f3aaa50ff785b10c0055c0fddeb084e92f81f7",
+  "program_trials": 9784343,
+  "prospective_days": 0,
+  "quote_conversion": "USDT = USDC = USD assumed, not measured",
+  "registry_id": "R417",
+  "snapshot_sweeps": [
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "0.037770",
+          "buy": {
+            "book_cost": "0.006295",
+            "complete": true,
+            "fee": "7.9962917360",
+            "filled": "0.1259",
+            "quote": "9995.364670",
+            "requested": "0.1259",
+            "vwap": "79391.30"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "8.0340617360",
+          "fee": "7.9962917360",
+          "sell": {
+            "book_cost": "0.031475",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.1259",
+            "quote": "9998.109290",
+            "requested": "0.1259",
+            "vwap": "79413.10"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "0.3972080",
+          "buy": {
+            "book_cost": "0.3909130",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9998.5316780",
+            "requested": "0.1259",
+            "vwap": "79416.45494837172359015091342"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "8.3934896640",
+          "fee": "7.9962816640",
+          "sell": {
+            "book_cost": "0.006295",
+            "complete": true,
+            "fee": "7.9962816640",
+            "filled": "0.1259",
+            "quote": "9995.352080",
+            "requested": "0.1259",
+            "vwap": "79391.20"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "0.075540",
+          "buy": {
+            "book_cost": "0.012590",
+            "complete": true,
+            "fee": "15.9925935440",
+            "filled": "0.1259",
+            "quote": "9995.370965",
+            "requested": "0.1259",
+            "vwap": "79391.35"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "16.0681335440",
+          "fee": "15.9925935440",
+          "sell": {
+            "book_cost": "0.062950",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.1259",
+            "quote": "9998.077815",
+            "requested": "0.1259",
+            "vwap": "79412.85"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "0.7944160",
+          "buy": {
+            "book_cost": "0.7818260",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9998.9225910",
+            "requested": "0.1259",
+            "vwap": "79419.55989674344718030182685"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "16.7869692560",
+          "fee": "15.9925532560",
+          "sell": {
+            "book_cost": "0.012590",
+            "complete": true,
+            "fee": "15.9925532560",
+            "filled": "0.1259",
+            "quote": "9995.345785",
+            "requested": "0.1259",
+            "vwap": "79391.15"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "0.113310",
+          "buy": {
+            "book_cost": "0.018885",
+            "complete": true,
+            "fee": "23.9889054240",
+            "filled": "0.1259",
+            "quote": "9995.377260",
+            "requested": "0.1259",
+            "vwap": "79391.40"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "24.1022154240",
+          "fee": "23.9889054240",
+          "sell": {
+            "book_cost": "0.094425",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.1259",
+            "quote": "9998.046340",
+            "requested": "0.1259",
+            "vwap": "79412.60"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "1.1916240",
+          "buy": {
+            "book_cost": "1.1727390",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9999.3135040",
+            "requested": "0.1259",
+            "vwap": "79422.66484511517077045274027"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "25.1804387760",
+          "fee": "23.9888147760",
+          "sell": {
+            "book_cost": "0.018885",
+            "complete": true,
+            "fee": "23.9888147760",
+            "filled": "0.1259",
+            "quote": "9995.339490",
+            "requested": "0.1259",
+            "vwap": "79391.10"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "0.094440",
+          "buy": {
+            "book_cost": "0.015740",
+            "complete": true,
+            "fee": "19.9939049920",
+            "filled": "0.3148",
+            "quote": "24992.381240",
+            "requested": "0.3148",
+            "vwap": "79391.30"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "20.0883449920",
+          "fee": "19.9939049920",
+          "sell": {
+            "book_cost": "0.078700",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.3148",
+            "quote": "24999.243880",
+            "requested": "0.3148",
+            "vwap": "79413.10"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "1.0205780",
+          "buy": {
+            "book_cost": "1.0048380",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31480",
+            "quote": "25000.3274180",
+            "requested": "0.3148",
+            "vwap": "79416.54198856416772554002541"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "21.0144578080",
+          "fee": "19.9938798080",
+          "sell": {
+            "book_cost": "0.015740",
+            "complete": true,
+            "fee": "19.9938798080",
+            "filled": "0.3148",
+            "quote": "24992.349760",
+            "requested": "0.3148",
+            "vwap": "79391.20"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.3148",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "0.188880",
+          "buy": {
+            "book_cost": "0.031480",
+            "complete": true,
+            "fee": "39.9878351680",
+            "filled": "0.3148",
+            "quote": "24992.396980",
+            "requested": "0.3148",
+            "vwap": "79391.35"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "40.1767151680",
+          "fee": "39.9878351680",
+          "sell": {
+            "book_cost": "0.157400",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.3148",
+            "quote": "24999.165180",
+            "requested": "0.3148",
+            "vwap": "79412.85"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "2.0411560",
+          "buy": {
+            "book_cost": "2.0096760",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31480",
+            "quote": "25001.3322560",
+            "requested": "0.3148",
+            "vwap": "79419.73397712833545108005083"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "42.0288904320",
+          "fee": "39.9877344320",
+          "sell": {
+            "book_cost": "0.031480",
+            "complete": true,
+            "fee": "39.9877344320",
+            "filled": "0.3148",
+            "quote": "24992.334020",
+            "requested": "0.3148",
+            "vwap": "79391.15"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.3148",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "0.283320",
+          "buy": {
+            "book_cost": "0.047220",
+            "complete": true,
+            "fee": "59.9817905280",
+            "filled": "0.3148",
+            "quote": "24992.412720",
+            "requested": "0.3148",
+            "vwap": "79391.40"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "60.2651105280",
+          "fee": "59.9817905280",
+          "sell": {
+            "book_cost": "0.236100",
+            "complete": true,
+            "fee": "0.000000",
+            "filled": "0.3148",
+            "quote": "24999.086480",
+            "requested": "0.3148",
+            "vwap": "79412.60"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.0000"
+        },
+        {
+          "book_cost": "3.0617340",
+          "buy": {
+            "book_cost": "3.0145140",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31480",
+            "quote": "25002.3370940",
+            "requested": "0.3148",
+            "vwap": "79422.92596569250317662007624"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "63.0432978720",
+          "fee": "59.9815638720",
+          "sell": {
+            "book_cost": "0.047220",
+            "complete": true,
+            "fee": "59.9815638720",
+            "filled": "0.3148",
+            "quote": "24992.318280",
+            "requested": "0.3148",
+            "vwap": "79391.10"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.3148",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "0.2020290",
+          "buy": {
+            "book_cost": "0.042600",
+            "complete": true,
+            "fee": "39.9878188800",
+            "filled": "0.6296",
+            "quote": "49984.773600",
+            "requested": "0.6296",
+            "vwap": "79391.31766200762388818297332"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "40.1898478800",
+          "fee": "39.9878188800",
+          "sell": {
+            "book_cost": "0.1594290",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "49998.4857310",
+            "requested": "0.6296",
+            "vwap": "79413.09677731893265565438374"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "2.0594180",
+          "buy": {
+            "book_cost": "2.0279380",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "50000.6730980",
+            "requested": "0.6296",
+            "vwap": "79416.57099428208386277001271"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "42.0471776160",
+          "fee": "39.9877596160",
+          "sell": {
+            "book_cost": "0.031480",
+            "complete": true,
+            "fee": "39.9877596160",
+            "filled": "0.6296",
+            "quote": "49984.699520",
+            "requested": "0.6296",
+            "vwap": "79391.20"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.6296",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "0.4040580",
+          "buy": {
+            "book_cost": "0.085200",
+            "complete": true,
+            "fee": "79.9757059200",
+            "filled": "0.6296",
+            "quote": "49984.816200",
+            "requested": "0.6296",
+            "vwap": "79391.38532401524777636594663"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "80.3797639200",
+          "fee": "79.9757059200",
+          "sell": {
+            "book_cost": "0.3188580",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "49998.3263020",
+            "requested": "0.6296",
+            "vwap": "79412.84355463786531130876747"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "4.1188360",
+          "buy": {
+            "book_cost": "4.0558760",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "50002.7010360",
+            "requested": "0.6296",
+            "vwap": "79419.79198856416772554002541"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "84.0943048640",
+          "fee": "79.9754688640",
+          "sell": {
+            "book_cost": "0.062960",
+            "complete": true,
+            "fee": "79.9754688640",
+            "filled": "0.6296",
+            "quote": "49984.668040",
+            "requested": "0.6296",
+            "vwap": "79391.15"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.6296",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "0.6060870",
+          "buy": {
+            "book_cost": "0.127800",
+            "complete": true,
+            "fee": "119.9636611200",
+            "filled": "0.6296",
+            "quote": "49984.858800",
+            "requested": "0.6296",
+            "vwap": "79391.45298602287166454891995"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "120.5697481200",
+          "fee": "119.9636611200",
+          "sell": {
+            "book_cost": "0.4782870",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "49998.1668730",
+            "requested": "0.6296",
+            "vwap": "79412.59033195679796696315121"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "6.1782540",
+          "buy": {
+            "book_cost": "6.0838140",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62960",
+            "quote": "50004.7289740",
+            "requested": "0.6296",
+            "vwap": "79423.01298284625158831003812"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "126.1413817440",
+          "fee": "119.9631277440",
+          "sell": {
+            "book_cost": "0.094440",
+            "complete": true,
+            "fee": "119.9631277440",
+            "filled": "0.6296",
+            "quote": "49984.636560",
+            "requested": "0.6296",
+            "vwap": "79391.10"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "0.6296",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "2.3607550",
+          "buy": {
+            "book_cost": "0.160580",
+            "complete": true,
+            "fee": "79.9756980640",
+            "filled": "1.2592",
+            "quote": "99969.622580",
+            "requested": "1.2592",
+            "vwap": "79391.37752541296060991105464"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "82.3364530640",
+          "fee": "79.9756980640",
+          "sell": {
+            "book_cost": "2.2001750",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "99995.0901450",
+            "requested": "1.2592",
+            "vwap": "79411.60271998094027954256671"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "4.1612230",
+          "buy": {
+            "book_cost": "4.0982630",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "100001.3885830",
+            "requested": "1.2592",
+            "vwap": "79416.60465613087674714104193"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "84.1367422320",
+          "fee": "79.9755192320",
+          "sell": {
+            "book_cost": "0.062960",
+            "complete": true,
+            "fee": "79.9755192320",
+            "filled": "1.2592",
+            "quote": "99969.399040",
+            "requested": "1.2592",
+            "vwap": "79391.20"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "1.2592",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "4.7215100",
+          "buy": {
+            "book_cost": "0.321160",
+            "complete": true,
+            "fee": "159.9516530560",
+            "filled": "1.2592",
+            "quote": "99969.783160",
+            "requested": "1.2592",
+            "vwap": "79391.50505082592121982210928"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "164.6731630560",
+          "fee": "159.9516530560",
+          "sell": {
+            "book_cost": "4.4003500",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "99992.8899700",
+            "requested": "1.2592",
+            "vwap": "79409.85543996188055908513342"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "8.3224460",
+          "buy": {
+            "book_cost": "8.1965260",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "100005.4868460",
+            "requested": "1.2592",
+            "vwap": "79419.85931226175349428208386"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "168.2733837280",
+          "fee": "159.9509377280",
+          "sell": {
+            "book_cost": "0.125920",
+            "complete": true,
+            "fee": "159.9509377280",
+            "filled": "1.2592",
+            "quote": "99969.336080",
+            "requested": "1.2592",
+            "vwap": "79391.15"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "1.2592",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 95.549029,
+        "received_utc_ns": [
+          1792856636825541436,
+          1792856636729992467
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "7.0822650",
+          "buy": {
+            "book_cost": "0.481740",
+            "complete": true,
+            "fee": "239.9278649760",
+            "filled": "1.2592",
+            "quote": "99969.943740",
+            "requested": "1.2592",
+            "vwap": "79391.63257623888182973316391"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "247.0101299760",
+          "fee": "239.9278649760",
+          "sell": {
+            "book_cost": "6.6005250",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "99990.6897950",
+            "requested": "1.2592",
+            "vwap": "79408.10815994282083862770013"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "12.4836690",
+          "buy": {
+            "book_cost": "12.2947890",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25920",
+            "quote": "100009.5851090",
+            "requested": "1.2592",
+            "vwap": "79423.11396839263024142312579"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "252.4099244880",
+          "fee": "239.9262554880",
+          "sell": {
+            "book_cost": "0.188880",
+            "complete": true,
+            "fee": "239.9262554880",
+            "filled": "1.2592",
+            "quote": "99969.273120",
+            "requested": "1.2592",
+            "vwap": "79391.10"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 0,
+      "quantity": "1.2592",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "0.2259300",
+          "buy": {
+            "book_cost": "0.006295",
+            "complete": true,
+            "fee": "7.9972385040",
+            "filled": "0.1259",
+            "quote": "9996.548130",
+            "requested": "0.1259",
+            "vwap": "79400.70"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "8.2231685040",
+          "fee": "7.9972385040",
+          "sell": {
+            "book_cost": "0.2196350",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9998.8779700",
+            "requested": "0.1259",
+            "vwap": "79419.20548054011119936457506"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "0.3577930",
+          "buy": {
+            "book_cost": "0.3514980",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9999.4491030",
+            "requested": "0.1259",
+            "vwap": "79423.74188244638602065131056"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "8.3550214320",
+          "fee": "7.9972284320",
+          "sell": {
+            "book_cost": "0.006295",
+            "complete": true,
+            "fee": "7.9972284320",
+            "filled": "0.1259",
+            "quote": "9996.535540",
+            "requested": "0.1259",
+            "vwap": "79400.60"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "0.4518600",
+          "buy": {
+            "book_cost": "0.012590",
+            "complete": true,
+            "fee": "15.9944870800",
+            "filled": "0.1259",
+            "quote": "9996.554425",
+            "requested": "0.1259",
+            "vwap": "79400.75"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "16.4463470800",
+          "fee": "15.9944870800",
+          "sell": {
+            "book_cost": "0.4392700",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9998.6583350",
+            "requested": "0.1259",
+            "vwap": "79417.46096108022239872915012"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "0.7155860",
+          "buy": {
+            "book_cost": "0.7029960",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9999.8006010",
+            "requested": "0.1259",
+            "vwap": "79426.53376489277204130262113"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "16.7100327920",
+          "fee": "15.9944467920",
+          "sell": {
+            "book_cost": "0.012590",
+            "complete": true,
+            "fee": "15.9944467920",
+            "filled": "0.1259",
+            "quote": "9996.529245",
+            "requested": "0.1259",
+            "vwap": "79400.55"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "0.6777900",
+          "buy": {
+            "book_cost": "0.018885",
+            "complete": true,
+            "fee": "23.9917457280",
+            "filled": "0.1259",
+            "quote": "9996.560720",
+            "requested": "0.1259",
+            "vwap": "79400.80"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "24.6695357280",
+          "fee": "23.9917457280",
+          "sell": {
+            "book_cost": "0.6589050",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "9998.4387000",
+            "requested": "0.1259",
+            "vwap": "79415.71644162033359809372518"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "1.0733790",
+          "buy": {
+            "book_cost": "1.0544940",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.12590",
+            "quote": "10000.1520990",
+            "requested": "0.1259",
+            "vwap": "79429.32564733915806195393169"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "25.0650340800",
+          "fee": "23.9916550800",
+          "sell": {
+            "book_cost": "0.018885",
+            "complete": true,
+            "fee": "23.9916550800",
+            "filled": "0.1259",
+            "quote": "9996.522950",
+            "requested": "0.1259",
+            "vwap": "79400.50"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.1259",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "10000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "0.6900850",
+          "buy": {
+            "book_cost": "0.015735",
+            "complete": true,
+            "fee": "19.9899202320",
+            "filled": "0.3147",
+            "quote": "24987.400290",
+            "requested": "0.3147",
+            "vwap": "79400.70"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "20.6800052320",
+          "fee": "19.9899202320",
+          "sell": {
+            "book_cost": "0.6743500",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24993.0986150",
+            "requested": "0.3147",
+            "vwap": "79418.80716555449634572608834"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "1.0140000",
+          "buy": {
+            "book_cost": "0.9982650",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24994.7712300",
+            "requested": "0.3147",
+            "vwap": "79424.12211630123927550047664"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "21.0038950560",
+          "fee": "19.9898950560",
+          "sell": {
+            "book_cost": "0.015735",
+            "complete": true,
+            "fee": "19.9898950560",
+            "filled": "0.3147",
+            "quote": "24987.368820",
+            "requested": "0.3147",
+            "vwap": "79400.60"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.3147",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "1.3801700",
+          "buy": {
+            "book_cost": "0.031470",
+            "complete": true,
+            "fee": "39.9798656400",
+            "filled": "0.3147",
+            "quote": "24987.416025",
+            "requested": "0.3147",
+            "vwap": "79400.75"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "41.3600356400",
+          "fee": "39.9798656400",
+          "sell": {
+            "book_cost": "1.3487000",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24992.4242650",
+            "requested": "0.3147",
+            "vwap": "79416.66433110899269145217668"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "2.0280000",
+          "buy": {
+            "book_cost": "1.9965300",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24995.7694950",
+            "requested": "0.3147",
+            "vwap": "79427.29423260247855100095329"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "42.0077649360",
+          "fee": "39.9797649360",
+          "sell": {
+            "book_cost": "0.031470",
+            "complete": true,
+            "fee": "39.9797649360",
+            "filled": "0.3147",
+            "quote": "24987.353085",
+            "requested": "0.3147",
+            "vwap": "79400.55"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.3147",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "2.0702550",
+          "buy": {
+            "book_cost": "0.047205",
+            "complete": true,
+            "fee": "59.9698362240",
+            "filled": "0.3147",
+            "quote": "24987.431760",
+            "requested": "0.3147",
+            "vwap": "79400.80"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "62.0400912240",
+          "fee": "59.9698362240",
+          "sell": {
+            "book_cost": "2.0230500",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24991.7499150",
+            "requested": "0.3147",
+            "vwap": "79414.52149666348903717826501"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "3.0420000",
+          "buy": {
+            "book_cost": "2.9947950",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.31470",
+            "quote": "24996.7677600",
+            "requested": "0.3147",
+            "vwap": "79430.46634890371782650142993"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "63.0116096400",
+          "fee": "59.9696096400",
+          "sell": {
+            "book_cost": "0.047205",
+            "complete": true,
+            "fee": "59.9696096400",
+            "filled": "0.3147",
+            "quote": "24987.337350",
+            "requested": "0.3147",
+            "vwap": "79400.50"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.3147",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "25000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "2.5301230",
+          "buy": {
+            "book_cost": "0.031475",
+            "complete": true,
+            "fee": "39.9861925200",
+            "filled": "0.6295",
+            "quote": "49982.740650",
+            "requested": "0.6295",
+            "vwap": "79400.70"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "42.5163155200",
+          "fee": "39.9861925200",
+          "sell": {
+            "book_cost": "2.4986480",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "49992.9893770",
+            "requested": "0.6295",
+            "vwap": "79416.98074185861795075456712"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "2.1158000",
+          "buy": {
+            "book_cost": "2.0843250",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "49997.5723500",
+            "requested": "0.6295",
+            "vwap": "79424.26108022239872915011914"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "42.1019421600",
+          "fee": "39.9861421600",
+          "sell": {
+            "book_cost": "0.031475",
+            "complete": true,
+            "fee": "39.9861421600",
+            "filled": "0.6295",
+            "quote": "49982.677700",
+            "requested": "0.6295",
+            "vwap": "79400.60"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.6295",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "5.0602460",
+          "buy": {
+            "book_cost": "0.062950",
+            "complete": true,
+            "fee": "79.9724354000",
+            "filled": "0.6295",
+            "quote": "49982.772125",
+            "requested": "0.6295",
+            "vwap": "79400.75"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "85.0326814000",
+          "fee": "79.9724354000",
+          "sell": {
+            "book_cost": "4.9972960",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "49990.4907290",
+            "requested": "0.6295",
+            "vwap": "79413.01148371723590150913423"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "4.2316000",
+          "buy": {
+            "book_cost": "4.1686500",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "49999.6566750",
+            "requested": "0.6295",
+            "vwap": "79427.57216044479745830023828"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "84.2038339600",
+          "fee": "79.9722339600",
+          "sell": {
+            "book_cost": "0.062950",
+            "complete": true,
+            "fee": "79.9722339600",
+            "filled": "0.6295",
+            "quote": "49982.646225",
+            "requested": "0.6295",
+            "vwap": "79400.55"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.6295",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "7.5903690",
+          "buy": {
+            "book_cost": "0.094425",
+            "complete": true,
+            "fee": "119.9587286400",
+            "filled": "0.6295",
+            "quote": "49982.803600",
+            "requested": "0.6295",
+            "vwap": "79400.80"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "127.5490976400",
+          "fee": "119.9587286400",
+          "sell": {
+            "book_cost": "7.4959440",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "49987.9920810",
+            "requested": "0.6295",
+            "vwap": "79409.04222557585385226370135"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "6.3474000",
+          "buy": {
+            "book_cost": "6.2529750",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "0.62950",
+            "quote": "50001.7410000",
+            "requested": "0.6295",
+            "vwap": "79430.88324066719618745035743"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "126.3056754000",
+          "fee": "119.9582754000",
+          "sell": {
+            "book_cost": "0.094425",
+            "complete": true,
+            "fee": "119.9582754000",
+            "filled": "0.6295",
+            "quote": "49982.614750",
+            "requested": "0.6295",
+            "vwap": "79400.50"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "0.6295",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "50000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 1,
+      "directions": [
+        {
+          "book_cost": "6.8453940",
+          "buy": {
+            "book_cost": "0.062955",
+            "complete": true,
+            "fee": "79.9787370960",
+            "filled": "1.2591",
+            "quote": "99973.421370",
+            "requested": "1.2591",
+            "vwap": "79400.70"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "86.8241310960",
+          "fee": "79.9787370960",
+          "sell": {
+            "book_cost": "6.7824390",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "99992.1357060",
+            "requested": "1.2591",
+            "vwap": "79415.56326423635930426495116"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "4.8807500",
+          "buy": {
+            "book_cost": "4.8177950",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "100003.7359400",
+            "requested": "1.2591",
+            "vwap": "79424.77637995393535064728775"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "84.8593863680",
+          "fee": "79.9786363680",
+          "sell": {
+            "book_cost": "0.062955",
+            "complete": true,
+            "fee": "79.9786363680",
+            "filled": "1.2591",
+            "quote": "99973.295460",
+            "requested": "1.2591",
+            "vwap": "79400.60"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "1.2591",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 2,
+      "directions": [
+        {
+          "book_cost": "13.6907880",
+          "buy": {
+            "book_cost": "0.125910",
+            "complete": true,
+            "fee": "159.9575749200",
+            "filled": "1.2591",
+            "quote": "99973.484325",
+            "requested": "1.2591",
+            "vwap": "79400.75"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "173.6483629200",
+          "fee": "159.9575749200",
+          "sell": {
+            "book_cost": "13.5648780",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "99985.3532670",
+            "requested": "1.2591",
+            "vwap": "79410.17652847271860852990231"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "9.7615000",
+          "buy": {
+            "book_cost": "9.6355900",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "100008.5537350",
+            "requested": "1.2591",
+            "vwap": "79428.60275990787070129457549"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "169.7186720080",
+          "fee": "159.9571720080",
+          "sell": {
+            "book_cost": "0.125910",
+            "complete": true,
+            "fee": "159.9571720080",
+            "filled": "1.2591",
+            "quote": "99973.232505",
+            "requested": "1.2591",
+            "vwap": "79400.55"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "1.2591",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    },
+    {
+      "clocks": {
+        "actual_arrival_or_fills_observed": false,
+        "receive_skew_ms": 272.23292,
+        "received_utc_ns": [
+          1792856637503055769,
+          1792856637775288920
+        ],
+        "source_clock_authenticated": false
+      },
+      "common_lot": "0.0001",
+      "cost_multiple": 3,
+      "directions": [
+        {
+          "book_cost": "20.5361820",
+          "buy": {
+            "book_cost": "0.188865",
+            "complete": true,
+            "fee": "239.9365134720",
+            "filled": "1.2591",
+            "quote": "99973.547280",
+            "requested": "1.2591",
+            "vwap": "79400.80"
+          },
+          "buyer": 0,
+          "complete_entry_cost": "260.4726954720",
+          "fee": "239.9365134720",
+          "sell": {
+            "book_cost": "20.3473170",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "99978.5708280",
+            "requested": "1.2591",
+            "vwap": "79404.78979270907791279485347"
+          },
+          "seller": 1,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        },
+        {
+          "book_cost": "14.6422500",
+          "buy": {
+            "book_cost": "14.4533850",
+            "complete": true,
+            "fee": "0E-7",
+            "filled": "1.25910",
+            "quote": "100013.3715300",
+            "requested": "1.2591",
+            "vwap": "79432.42913986180605194186324"
+          },
+          "buyer": 1,
+          "complete_entry_cost": "254.5778569200",
+          "fee": "239.9356069200",
+          "sell": {
+            "book_cost": "0.188865",
+            "complete": true,
+            "fee": "239.9356069200",
+            "filled": "1.2591",
+            "quote": "99973.169550",
+            "requested": "1.2591",
+            "vwap": "79400.50"
+          },
+          "seller": 0,
+          "state": "SHOWN_DEPTH",
+          "unmatched_base": "0.00000"
+        }
+      ],
+      "observation": 1,
+      "quantity": "1.2591",
+      "state": "CONDITIONAL_SNAPSHOT",
+      "target_per_leg": "100000"
+    }
+  ],
+  "synthetic_stress": [
+    {
+      "account_capital": "10000",
+      "case": "flat",
+      "cost_multiple": 1,
+      "final_net": "-24.000000000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "9987.999500000",
+          "label": "ordinary",
+          "net": "-12.000500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "4993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "4997.001500000",
+              "equity": "4994.501500000",
+              "ever_insolvent": false,
+              "fees": "2.998500000",
+              "funding": "0",
+              "quantity": "-50.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "9976.000000000",
+          "label": "terminal",
+          "net": "-24.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4987.000000000",
+              "equity": "4987.000000000",
+              "ever_insolvent": false,
+              "fees": "8.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5.00000"
+            },
+            "short": {
+              "cash": "4989.000000000",
+              "equity": "4989.000000000",
+              "ever_insolvent": false,
+              "fees": "6.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "flat",
+      "cost_multiple": 2,
+      "final_net": "-48.000000000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "9975.998000000",
+          "label": "ordinary",
+          "net": "-24.002000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "4986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "4994.006000000",
+              "equity": "4989.006000000",
+              "ever_insolvent": false,
+              "fees": "5.994000000",
+              "funding": "0",
+              "quantity": "-50.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "9952.000000000",
+          "label": "terminal",
+          "net": "-48.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4974.000000000",
+              "equity": "4974.000000000",
+              "ever_insolvent": false,
+              "fees": "16.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-10.00000"
+            },
+            "short": {
+              "cash": "4978.000000000",
+              "equity": "4978.000000000",
+              "ever_insolvent": false,
+              "fees": "12.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-10.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "flat",
+      "cost_multiple": 3,
+      "final_net": "-72.000000000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "9963.995500000",
+          "label": "ordinary",
+          "net": "-36.004500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "4980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "4991.013500000",
+              "equity": "4983.513500000",
+              "ever_insolvent": false,
+              "fees": "8.986500000",
+              "funding": "0",
+              "quantity": "-50.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "9928.000000000",
+          "label": "terminal",
+          "net": "-72.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4961.000000000",
+              "equity": "4961.000000000",
+              "ever_insolvent": false,
+              "fees": "24.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-15.00000"
+            },
+            "short": {
+              "cash": "4967.000000000",
+              "equity": "4967.000000000",
+              "ever_insolvent": false,
+              "fees": "18.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-15.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "flat",
+      "cost_multiple": 1,
+      "final_net": "-60.000000000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "24969.998750000",
+          "label": "ordinary",
+          "net": "-30.001250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "12483.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "12492.503750000",
+              "equity": "12486.253750000",
+              "ever_insolvent": false,
+              "fees": "7.496250000",
+              "funding": "0",
+              "quantity": "-125.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "24940.000000000",
+          "label": "terminal",
+          "net": "-60.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12467.500000000",
+              "equity": "12467.500000000",
+              "ever_insolvent": false,
+              "fees": "20.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-12.50000"
+            },
+            "short": {
+              "cash": "12472.500000000",
+              "equity": "12472.500000000",
+              "ever_insolvent": false,
+              "fees": "15.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-12.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "flat",
+      "cost_multiple": 2,
+      "final_net": "-120.000000000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "24939.995000000",
+          "label": "ordinary",
+          "net": "-60.005000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "12467.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "12485.015000000",
+              "equity": "12472.515000000",
+              "ever_insolvent": false,
+              "fees": "14.985000000",
+              "funding": "0",
+              "quantity": "-125.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "24880.000000000",
+          "label": "terminal",
+          "net": "-120.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12435.000000000",
+              "equity": "12435.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "12445.000000000",
+              "equity": "12445.000000000",
+              "ever_insolvent": false,
+              "fees": "30.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "flat",
+      "cost_multiple": 3,
+      "final_net": "-180.000000000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "24909.988750000",
+          "label": "ordinary",
+          "net": "-90.011250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "12451.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "12477.533750000",
+              "equity": "12458.783750000",
+              "ever_insolvent": false,
+              "fees": "22.466250000",
+              "funding": "0",
+              "quantity": "-125.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "24820.000000000",
+          "label": "terminal",
+          "net": "-180.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12402.500000000",
+              "equity": "12402.500000000",
+              "ever_insolvent": false,
+              "fees": "60.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-37.50000"
+            },
+            "short": {
+              "cash": "12417.500000000",
+              "equity": "12417.500000000",
+              "ever_insolvent": false,
+              "fees": "45.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-37.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "flat",
+      "cost_multiple": 1,
+      "final_net": "-120.000000000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "49939.997500000",
+          "label": "ordinary",
+          "net": "-60.002500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "24967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "24985.007500000",
+              "equity": "24972.507500000",
+              "ever_insolvent": false,
+              "fees": "14.992500000",
+              "funding": "0",
+              "quantity": "-250.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "49880.000000000",
+          "label": "terminal",
+          "net": "-120.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24935.000000000",
+              "equity": "24935.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "24945.000000000",
+              "equity": "24945.000000000",
+              "ever_insolvent": false,
+              "fees": "30.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "flat",
+      "cost_multiple": 2,
+      "final_net": "-240.000000000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "49879.990000000",
+          "label": "ordinary",
+          "net": "-120.010000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "24934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "24970.030000000",
+              "equity": "24945.030000000",
+              "ever_insolvent": false,
+              "fees": "29.970000000",
+              "funding": "0",
+              "quantity": "-250.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "49760.000000000",
+          "label": "terminal",
+          "net": "-240.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24870.000000000",
+              "equity": "24870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "24890.000000000",
+              "equity": "24890.000000000",
+              "ever_insolvent": false,
+              "fees": "60.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "flat",
+      "cost_multiple": 3,
+      "final_net": "-360.000000000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "49819.977500000",
+          "label": "ordinary",
+          "net": "-180.022500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "24902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "24955.067500000",
+              "equity": "24917.567500000",
+              "ever_insolvent": false,
+              "fees": "44.932500000",
+              "funding": "0",
+              "quantity": "-250.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "49640.000000000",
+          "label": "terminal",
+          "net": "-360.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24805.000000000",
+              "equity": "24805.000000000",
+              "ever_insolvent": false,
+              "fees": "120.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-75.00000"
+            },
+            "short": {
+              "cash": "24835.000000000",
+              "equity": "24835.000000000",
+              "ever_insolvent": false,
+              "fees": "90.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-75.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "flat",
+      "cost_multiple": 1,
+      "final_net": "-240.000000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "99879.995000000",
+          "label": "ordinary",
+          "net": "-120.005000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "49934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "49970.015000000",
+              "equity": "49945.015000000",
+              "ever_insolvent": false,
+              "fees": "29.985000000",
+              "funding": "0",
+              "quantity": "-500.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "99760.000000000",
+          "label": "terminal",
+          "net": "-240.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49870.000000000",
+              "equity": "49870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "49890.000000000",
+              "equity": "49890.000000000",
+              "ever_insolvent": false,
+              "fees": "60.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "flat",
+      "cost_multiple": 2,
+      "final_net": "-480.000000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "99759.980000000",
+          "label": "ordinary",
+          "net": "-240.020000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "49869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "49940.060000000",
+              "equity": "49890.060000000",
+              "ever_insolvent": false,
+              "fees": "59.940000000",
+              "funding": "0",
+              "quantity": "-500.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "99520.000000000",
+          "label": "terminal",
+          "net": "-480.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49740.000000000",
+              "equity": "49740.000000000",
+              "ever_insolvent": false,
+              "fees": "160.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-100.00000"
+            },
+            "short": {
+              "cash": "49780.000000000",
+              "equity": "49780.000000000",
+              "ever_insolvent": false,
+              "fees": "120.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-100.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "flat",
+      "cost_multiple": 3,
+      "final_net": "-720.000000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": null,
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [],
+          "equity": "99639.955000000",
+          "label": "ordinary",
+          "net": "-360.045000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "49804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "49910.135000000",
+              "equity": "49835.135000000",
+              "ever_insolvent": false,
+              "fees": "89.865000000",
+              "funding": "0",
+              "quantity": "-500.000",
+              "realized": "0"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED",
+            "short_CLOSED"
+          ],
+          "equity": "99280.000000000",
+          "label": "terminal",
+          "net": "-720.000000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49610.000000000",
+              "equity": "49610.000000000",
+              "ever_insolvent": false,
+              "fees": "240.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-150.00000"
+            },
+            "short": {
+              "cash": "49670.000000000",
+              "equity": "49670.000000000",
+              "ever_insolvent": false,
+              "fees": "180.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-150.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 1,
+      "final_net": "-5579.812500000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-6573.314500000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "9926.685500000",
+          "label": "gap",
+          "net": "-73.314500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "10493.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-566.812500000",
+              "equity": "-566.812500000",
+              "ever_insolvent": true,
+              "fees": "61.812500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5505.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "3426.685500000",
+          "label": "before_recovery",
+          "net": "-6573.314500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "3993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-566.812500000",
+              "equity": "-566.812500000",
+              "ever_insolvent": true,
+              "fees": "61.812500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5505.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "4426.685500000",
+          "label": "recovery",
+          "net": "-5573.314500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "4993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-566.812500000",
+              "equity": "-566.812500000",
+              "ever_insolvent": true,
+              "fees": "61.812500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5505.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "4420.187500000",
+          "label": "terminal",
+          "net": "-5579.812500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4987.000000000",
+              "equity": "4987.000000000",
+              "ever_insolvent": false,
+              "fees": "8.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5.00000"
+            },
+            "short": {
+              "cash": "-566.812500000",
+              "equity": "-566.812500000",
+              "ever_insolvent": true,
+              "fees": "61.812500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5505.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 2,
+      "final_net": "-5659.650000000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-6646.658000000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "9853.342000000",
+          "label": "gap",
+          "net": "-146.658000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "10486.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-633.650000000",
+              "equity": "-633.650000000",
+              "ever_insolvent": true,
+              "fees": "123.650000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5510.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "3353.342000000",
+          "label": "before_recovery",
+          "net": "-6646.658000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "3986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-633.650000000",
+              "equity": "-633.650000000",
+              "ever_insolvent": true,
+              "fees": "123.650000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5510.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "4353.342000000",
+          "label": "recovery",
+          "net": "-5646.658000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "4986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-633.650000000",
+              "equity": "-633.650000000",
+              "ever_insolvent": true,
+              "fees": "123.650000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5510.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "4340.350000000",
+          "label": "terminal",
+          "net": "-5659.650000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4974.000000000",
+              "equity": "4974.000000000",
+              "ever_insolvent": false,
+              "fees": "16.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-10.00000"
+            },
+            "short": {
+              "cash": "-633.650000000",
+              "equity": "-633.650000000",
+              "ever_insolvent": true,
+              "fees": "123.650000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5510.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 3,
+      "final_net": "-5739.512500000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-6720.030500000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "9779.969500000",
+          "label": "gap",
+          "net": "-220.030500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "10480.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-700.512500000",
+              "equity": "-700.512500000",
+              "ever_insolvent": true,
+              "fees": "185.512500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5515.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "3279.969500000",
+          "label": "before_recovery",
+          "net": "-6720.030500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "3980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-700.512500000",
+              "equity": "-700.512500000",
+              "ever_insolvent": true,
+              "fees": "185.512500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5515.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "4279.969500000",
+          "label": "recovery",
+          "net": "-5720.030500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "4980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-700.512500000",
+              "equity": "-700.512500000",
+              "ever_insolvent": true,
+              "fees": "185.512500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5515.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "4260.487500000",
+          "label": "terminal",
+          "net": "-5739.512500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4961.000000000",
+              "equity": "4961.000000000",
+              "ever_insolvent": false,
+              "fees": "24.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-15.00000"
+            },
+            "short": {
+              "cash": "-700.512500000",
+              "equity": "-700.512500000",
+              "ever_insolvent": true,
+              "fees": "185.512500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5515.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 1,
+      "final_net": "-13949.531250000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-16433.286250000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "24816.713750000",
+          "label": "gap",
+          "net": "-183.286250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "26233.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1417.031250000",
+              "equity": "-1417.031250000",
+              "ever_insolvent": true,
+              "fees": "154.531250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13762.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "8566.713750000",
+          "label": "before_recovery",
+          "net": "-16433.286250000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "9983.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1417.031250000",
+              "equity": "-1417.031250000",
+              "ever_insolvent": true,
+              "fees": "154.531250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13762.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "11066.713750000",
+          "label": "recovery",
+          "net": "-13933.286250000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "12483.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1417.031250000",
+              "equity": "-1417.031250000",
+              "ever_insolvent": true,
+              "fees": "154.531250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13762.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "11050.468750000",
+          "label": "terminal",
+          "net": "-13949.531250000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12467.500000000",
+              "equity": "12467.500000000",
+              "ever_insolvent": false,
+              "fees": "20.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-12.50000"
+            },
+            "short": {
+              "cash": "-1417.031250000",
+              "equity": "-1417.031250000",
+              "ever_insolvent": true,
+              "fees": "154.531250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13762.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 2,
+      "final_net": "-14149.125000000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-16616.645000000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "24633.355000000",
+          "label": "gap",
+          "net": "-366.645000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "26217.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1584.125000000",
+              "equity": "-1584.125000000",
+              "ever_insolvent": true,
+              "fees": "309.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13775.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "8383.355000000",
+          "label": "before_recovery",
+          "net": "-16616.645000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "9967.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1584.125000000",
+              "equity": "-1584.125000000",
+              "ever_insolvent": true,
+              "fees": "309.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13775.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "10883.355000000",
+          "label": "recovery",
+          "net": "-14116.645000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "12467.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1584.125000000",
+              "equity": "-1584.125000000",
+              "ever_insolvent": true,
+              "fees": "309.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13775.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "10850.875000000",
+          "label": "terminal",
+          "net": "-14149.125000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12435.000000000",
+              "equity": "12435.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "-1584.125000000",
+              "equity": "-1584.125000000",
+              "ever_insolvent": true,
+              "fees": "309.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13775.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 3,
+      "final_net": "-14348.781250000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-16800.076250000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "24449.923750000",
+          "label": "gap",
+          "net": "-550.076250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "26201.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1751.281250000",
+              "equity": "-1751.281250000",
+              "ever_insolvent": true,
+              "fees": "463.781250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13787.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "8199.923750000",
+          "label": "before_recovery",
+          "net": "-16800.076250000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "9951.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1751.281250000",
+              "equity": "-1751.281250000",
+              "ever_insolvent": true,
+              "fees": "463.781250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13787.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "10699.923750000",
+          "label": "recovery",
+          "net": "-14300.076250000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "12451.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-1751.281250000",
+              "equity": "-1751.281250000",
+              "ever_insolvent": true,
+              "fees": "463.781250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13787.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "10651.218750000",
+          "label": "terminal",
+          "net": "-14348.781250000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12402.500000000",
+              "equity": "12402.500000000",
+              "ever_insolvent": false,
+              "fees": "60.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-37.50000"
+            },
+            "short": {
+              "cash": "-1751.281250000",
+              "equity": "-1751.281250000",
+              "ever_insolvent": true,
+              "fees": "463.781250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-13787.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 1,
+      "final_net": "-27899.062500000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-32866.572500000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "49633.427500000",
+          "label": "gap",
+          "net": "-366.572500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "52467.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-2834.062500000",
+              "equity": "-2834.062500000",
+              "ever_insolvent": true,
+              "fees": "309.062500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27525.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "17133.427500000",
+          "label": "before_recovery",
+          "net": "-32866.572500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "19967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-2834.062500000",
+              "equity": "-2834.062500000",
+              "ever_insolvent": true,
+              "fees": "309.062500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27525.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "22133.427500000",
+          "label": "recovery",
+          "net": "-27866.572500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "24967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-2834.062500000",
+              "equity": "-2834.062500000",
+              "ever_insolvent": true,
+              "fees": "309.062500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27525.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "22100.937500000",
+          "label": "terminal",
+          "net": "-27899.062500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24935.000000000",
+              "equity": "24935.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "-2834.062500000",
+              "equity": "-2834.062500000",
+              "ever_insolvent": true,
+              "fees": "309.062500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27525.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 2,
+      "final_net": "-28298.250000000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-33233.290000000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "49266.710000000",
+          "label": "gap",
+          "net": "-733.290000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "52434.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3168.250000000",
+              "equity": "-3168.250000000",
+              "ever_insolvent": true,
+              "fees": "618.250000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27550.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "16766.710000000",
+          "label": "before_recovery",
+          "net": "-33233.290000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "19934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3168.250000000",
+              "equity": "-3168.250000000",
+              "ever_insolvent": true,
+              "fees": "618.250000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27550.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "21766.710000000",
+          "label": "recovery",
+          "net": "-28233.290000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "24934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3168.250000000",
+              "equity": "-3168.250000000",
+              "ever_insolvent": true,
+              "fees": "618.250000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27550.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "21701.750000000",
+          "label": "terminal",
+          "net": "-28298.250000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24870.000000000",
+              "equity": "24870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "-3168.250000000",
+              "equity": "-3168.250000000",
+              "ever_insolvent": true,
+              "fees": "618.250000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27550.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 3,
+      "final_net": "-28697.562500000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-33600.152500000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "48899.847500000",
+          "label": "gap",
+          "net": "-1100.152500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "52402.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3502.562500000",
+              "equity": "-3502.562500000",
+              "ever_insolvent": true,
+              "fees": "927.562500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27575.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "16399.847500000",
+          "label": "before_recovery",
+          "net": "-33600.152500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "19902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3502.562500000",
+              "equity": "-3502.562500000",
+              "ever_insolvent": true,
+              "fees": "927.562500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27575.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "21399.847500000",
+          "label": "recovery",
+          "net": "-28600.152500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "24902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-3502.562500000",
+              "equity": "-3502.562500000",
+              "ever_insolvent": true,
+              "fees": "927.562500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27575.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "21302.437500000",
+          "label": "terminal",
+          "net": "-28697.562500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24805.000000000",
+              "equity": "24805.000000000",
+              "ever_insolvent": false,
+              "fees": "120.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-75.00000"
+            },
+            "short": {
+              "cash": "-3502.562500000",
+              "equity": "-3502.562500000",
+              "ever_insolvent": true,
+              "fees": "927.562500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-27575.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 1,
+      "final_net": "-55798.125000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-65733.145000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "99266.855000000",
+          "label": "gap",
+          "net": "-733.145000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "104934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-5668.125000000",
+              "equity": "-5668.125000000",
+              "ever_insolvent": true,
+              "fees": "618.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55050.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "34266.855000000",
+          "label": "before_recovery",
+          "net": "-65733.145000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "39934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-5668.125000000",
+              "equity": "-5668.125000000",
+              "ever_insolvent": true,
+              "fees": "618.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55050.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "44266.855000000",
+          "label": "recovery",
+          "net": "-55733.145000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "49934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-5668.125000000",
+              "equity": "-5668.125000000",
+              "ever_insolvent": true,
+              "fees": "618.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55050.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "44201.875000000",
+          "label": "terminal",
+          "net": "-55798.125000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49870.000000000",
+              "equity": "49870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "-5668.125000000",
+              "equity": "-5668.125000000",
+              "ever_insolvent": true,
+              "fees": "618.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55050.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 2,
+      "final_net": "-56596.500000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-66466.580000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "98533.420000000",
+          "label": "gap",
+          "net": "-1466.580000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "104869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-6336.500000000",
+              "equity": "-6336.500000000",
+              "ever_insolvent": true,
+              "fees": "1236.500000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55100.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "33533.420000000",
+          "label": "before_recovery",
+          "net": "-66466.580000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "39869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-6336.500000000",
+              "equity": "-6336.500000000",
+              "ever_insolvent": true,
+              "fees": "1236.500000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55100.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "43533.420000000",
+          "label": "recovery",
+          "net": "-56466.580000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "49869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-6336.500000000",
+              "equity": "-6336.500000000",
+              "ever_insolvent": true,
+              "fees": "1236.500000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55100.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "43403.500000000",
+          "label": "terminal",
+          "net": "-56596.500000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49740.000000000",
+              "equity": "49740.000000000",
+              "ever_insolvent": false,
+              "fees": "160.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-100.00000"
+            },
+            "short": {
+              "cash": "-6336.500000000",
+              "equity": "-6336.500000000",
+              "ever_insolvent": true,
+              "fees": "1236.500000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55100.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "one_leg_liquidation",
+      "cost_multiple": 3,
+      "final_net": "-57395.125000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-67200.305000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "TRANSFER_BLOCKED_OUTAGE",
+            "short_LIQUIDATED"
+          ],
+          "equity": "97799.695000000",
+          "label": "gap",
+          "net": "-2200.305000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "104804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-7005.125000000",
+              "equity": "-7005.125000000",
+              "ever_insolvent": true,
+              "fees": "1855.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55150.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "32799.695000000",
+          "label": "before_recovery",
+          "net": "-67200.305000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "39804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-7005.125000000",
+              "equity": "-7005.125000000",
+              "ever_insolvent": true,
+              "fees": "1855.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55150.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "42799.695000000",
+          "label": "recovery",
+          "net": "-57200.305000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "49804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "-7005.125000000",
+              "equity": "-7005.125000000",
+              "ever_insolvent": true,
+              "fees": "1855.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55150.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "42604.875000000",
+          "label": "terminal",
+          "net": "-57395.125000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49610.000000000",
+              "equity": "49610.000000000",
+              "ever_insolvent": false,
+              "fees": "240.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-150.00000"
+            },
+            "short": {
+              "cash": "-7005.125000000",
+              "equity": "-7005.125000000",
+              "ever_insolvent": true,
+              "fees": "1855.125000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-55150.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 1,
+      "final_net": "981.501500000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-2012.000500000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "9987.999500000",
+          "label": "adl",
+          "net": "-12.000500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "3993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5994.501500000",
+              "equity": "5994.501500000",
+              "ever_insolvent": false,
+              "fees": "2.998500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "997.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "7987.999500000",
+          "label": "before_recovery",
+          "net": "-2012.000500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "1993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5994.501500000",
+              "equity": "5994.501500000",
+              "ever_insolvent": false,
+              "fees": "2.998500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "997.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "10987.999500000",
+          "label": "recovery",
+          "net": "987.999500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4995.998000000",
+              "equity": "4993.498000000",
+              "ever_insolvent": false,
+              "fees": "4.002000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5994.501500000",
+              "equity": "5994.501500000",
+              "ever_insolvent": false,
+              "fees": "2.998500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "997.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "10981.501500000",
+          "label": "terminal",
+          "net": "981.501500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4987.000000000",
+              "equity": "4987.000000000",
+              "ever_insolvent": false,
+              "fees": "8.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-5.00000"
+            },
+            "short": {
+              "cash": "5994.501500000",
+              "equity": "5994.501500000",
+              "ever_insolvent": false,
+              "fees": "2.998500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "997.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 2,
+      "final_net": "963.006000000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-2024.002000000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "9975.998000000",
+          "label": "adl",
+          "net": "-24.002000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "3986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5989.006000000",
+              "equity": "5989.006000000",
+              "ever_insolvent": false,
+              "fees": "5.994000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "995.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "7975.998000000",
+          "label": "before_recovery",
+          "net": "-2024.002000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "1986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5989.006000000",
+              "equity": "5989.006000000",
+              "ever_insolvent": false,
+              "fees": "5.994000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "995.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "10975.998000000",
+          "label": "recovery",
+          "net": "975.998000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4991.992000000",
+              "equity": "4986.992000000",
+              "ever_insolvent": false,
+              "fees": "8.008000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5989.006000000",
+              "equity": "5989.006000000",
+              "ever_insolvent": false,
+              "fees": "5.994000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "995.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "10963.006000000",
+          "label": "terminal",
+          "net": "963.006000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4974.000000000",
+              "equity": "4974.000000000",
+              "ever_insolvent": false,
+              "fees": "16.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-10.00000"
+            },
+            "short": {
+              "cash": "5989.006000000",
+              "equity": "5989.006000000",
+              "ever_insolvent": false,
+              "fees": "5.994000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "995.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "10000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 3,
+      "final_net": "944.513500000",
+      "initial_capital": "10000",
+      "initial_quantity": "50.000",
+      "loss_before_recovery": "-2036.004500000",
+      "notional_per_leg": "5000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "9963.995500000",
+          "label": "adl",
+          "net": "-36.004500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "3980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5983.513500000",
+              "equity": "5983.513500000",
+              "ever_insolvent": false,
+              "fees": "8.986500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "992.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "7963.995500000",
+          "label": "before_recovery",
+          "net": "-2036.004500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "1980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5983.513500000",
+              "equity": "5983.513500000",
+              "ever_insolvent": false,
+              "fees": "8.986500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "992.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "10963.995500000",
+          "label": "recovery",
+          "net": "963.995500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "4987.982000000",
+              "equity": "4980.482000000",
+              "ever_insolvent": false,
+              "fees": "12.018000000",
+              "funding": "0",
+              "quantity": "50.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "5983.513500000",
+              "equity": "5983.513500000",
+              "ever_insolvent": false,
+              "fees": "8.986500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "992.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "10944.513500000",
+          "label": "terminal",
+          "net": "944.513500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "4961.000000000",
+              "equity": "4961.000000000",
+              "ever_insolvent": false,
+              "fees": "24.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-15.00000"
+            },
+            "short": {
+              "cash": "5983.513500000",
+              "equity": "5983.513500000",
+              "ever_insolvent": false,
+              "fees": "8.986500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "992.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 1,
+      "final_net": "2453.753750000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-5030.001250000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "24969.998750000",
+          "label": "adl",
+          "net": "-30.001250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "9983.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14986.253750000",
+              "equity": "14986.253750000",
+              "ever_insolvent": false,
+              "fees": "7.496250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2493.75000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "19969.998750000",
+          "label": "before_recovery",
+          "net": "-5030.001250000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "4983.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14986.253750000",
+              "equity": "14986.253750000",
+              "ever_insolvent": false,
+              "fees": "7.496250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2493.75000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "27469.998750000",
+          "label": "recovery",
+          "net": "2469.998750000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12489.995000000",
+              "equity": "12483.745000000",
+              "ever_insolvent": false,
+              "fees": "10.005000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14986.253750000",
+              "equity": "14986.253750000",
+              "ever_insolvent": false,
+              "fees": "7.496250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2493.75000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "27453.753750000",
+          "label": "terminal",
+          "net": "2453.753750000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12467.500000000",
+              "equity": "12467.500000000",
+              "ever_insolvent": false,
+              "fees": "20.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-12.50000"
+            },
+            "short": {
+              "cash": "14986.253750000",
+              "equity": "14986.253750000",
+              "ever_insolvent": false,
+              "fees": "7.496250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2493.75000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 2,
+      "final_net": "2407.515000000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-5060.005000000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "24939.995000000",
+          "label": "adl",
+          "net": "-60.005000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "9967.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14972.515000000",
+              "equity": "14972.515000000",
+              "ever_insolvent": false,
+              "fees": "14.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2487.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "19939.995000000",
+          "label": "before_recovery",
+          "net": "-5060.005000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "4967.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14972.515000000",
+              "equity": "14972.515000000",
+              "ever_insolvent": false,
+              "fees": "14.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2487.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "27439.995000000",
+          "label": "recovery",
+          "net": "2439.995000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12479.980000000",
+              "equity": "12467.480000000",
+              "ever_insolvent": false,
+              "fees": "20.020000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14972.515000000",
+              "equity": "14972.515000000",
+              "ever_insolvent": false,
+              "fees": "14.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2487.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "27407.515000000",
+          "label": "terminal",
+          "net": "2407.515000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12435.000000000",
+              "equity": "12435.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "14972.515000000",
+              "equity": "14972.515000000",
+              "ever_insolvent": false,
+              "fees": "14.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2487.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "25000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 3,
+      "final_net": "2361.283750000",
+      "initial_capital": "25000",
+      "initial_quantity": "125.000",
+      "loss_before_recovery": "-5090.011250000",
+      "notional_per_leg": "12500",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "24909.988750000",
+          "label": "adl",
+          "net": "-90.011250000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "9951.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14958.783750000",
+              "equity": "14958.783750000",
+              "ever_insolvent": false,
+              "fees": "22.466250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2481.25000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "19909.988750000",
+          "label": "before_recovery",
+          "net": "-5090.011250000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "4951.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14958.783750000",
+              "equity": "14958.783750000",
+              "ever_insolvent": false,
+              "fees": "22.466250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2481.25000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "27409.988750000",
+          "label": "recovery",
+          "net": "2409.988750000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "12469.955000000",
+              "equity": "12451.205000000",
+              "ever_insolvent": false,
+              "fees": "30.045000000",
+              "funding": "0",
+              "quantity": "125.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "14958.783750000",
+              "equity": "14958.783750000",
+              "ever_insolvent": false,
+              "fees": "22.466250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2481.25000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "27361.283750000",
+          "label": "terminal",
+          "net": "2361.283750000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "12402.500000000",
+              "equity": "12402.500000000",
+              "ever_insolvent": false,
+              "fees": "60.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-37.50000"
+            },
+            "short": {
+              "cash": "14958.783750000",
+              "equity": "14958.783750000",
+              "ever_insolvent": false,
+              "fees": "22.466250000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "2481.25000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 1,
+      "final_net": "4907.507500000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-10060.002500000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "49939.997500000",
+          "label": "adl",
+          "net": "-60.002500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "19967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29972.507500000",
+              "equity": "29972.507500000",
+              "ever_insolvent": false,
+              "fees": "14.992500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4987.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "39939.997500000",
+          "label": "before_recovery",
+          "net": "-10060.002500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "9967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29972.507500000",
+              "equity": "29972.507500000",
+              "ever_insolvent": false,
+              "fees": "14.992500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4987.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "54939.997500000",
+          "label": "recovery",
+          "net": "4939.997500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24979.990000000",
+              "equity": "24967.490000000",
+              "ever_insolvent": false,
+              "fees": "20.010000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29972.507500000",
+              "equity": "29972.507500000",
+              "ever_insolvent": false,
+              "fees": "14.992500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4987.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "54907.507500000",
+          "label": "terminal",
+          "net": "4907.507500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24935.000000000",
+              "equity": "24935.000000000",
+              "ever_insolvent": false,
+              "fees": "40.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-25.00000"
+            },
+            "short": {
+              "cash": "29972.507500000",
+              "equity": "29972.507500000",
+              "ever_insolvent": false,
+              "fees": "14.992500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4987.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 2,
+      "final_net": "4815.030000000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-10120.010000000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "49879.990000000",
+          "label": "adl",
+          "net": "-120.010000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "19934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29945.030000000",
+              "equity": "29945.030000000",
+              "ever_insolvent": false,
+              "fees": "29.970000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4975.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "39879.990000000",
+          "label": "before_recovery",
+          "net": "-10120.010000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "9934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29945.030000000",
+              "equity": "29945.030000000",
+              "ever_insolvent": false,
+              "fees": "29.970000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4975.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "54879.990000000",
+          "label": "recovery",
+          "net": "4879.990000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24959.960000000",
+              "equity": "24934.960000000",
+              "ever_insolvent": false,
+              "fees": "40.040000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29945.030000000",
+              "equity": "29945.030000000",
+              "ever_insolvent": false,
+              "fees": "29.970000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4975.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "54815.030000000",
+          "label": "terminal",
+          "net": "4815.030000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24870.000000000",
+              "equity": "24870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "29945.030000000",
+              "equity": "29945.030000000",
+              "ever_insolvent": false,
+              "fees": "29.970000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4975.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "50000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 3,
+      "final_net": "4722.567500000",
+      "initial_capital": "50000",
+      "initial_quantity": "250.000",
+      "loss_before_recovery": "-10180.022500000",
+      "notional_per_leg": "25000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "49819.977500000",
+          "label": "adl",
+          "net": "-180.022500000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "19902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29917.567500000",
+              "equity": "29917.567500000",
+              "ever_insolvent": false,
+              "fees": "44.932500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4962.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "39819.977500000",
+          "label": "before_recovery",
+          "net": "-10180.022500000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "9902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29917.567500000",
+              "equity": "29917.567500000",
+              "ever_insolvent": false,
+              "fees": "44.932500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4962.50000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "54819.977500000",
+          "label": "recovery",
+          "net": "4819.977500000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "24939.910000000",
+              "equity": "24902.410000000",
+              "ever_insolvent": false,
+              "fees": "60.090000000",
+              "funding": "0",
+              "quantity": "250.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "29917.567500000",
+              "equity": "29917.567500000",
+              "ever_insolvent": false,
+              "fees": "44.932500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4962.50000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "54722.567500000",
+          "label": "terminal",
+          "net": "4722.567500000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "24805.000000000",
+              "equity": "24805.000000000",
+              "ever_insolvent": false,
+              "fees": "120.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-75.00000"
+            },
+            "short": {
+              "cash": "29917.567500000",
+              "equity": "29917.567500000",
+              "ever_insolvent": false,
+              "fees": "44.932500000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "4962.50000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 1,
+      "final_net": "9815.015000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-20120.005000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "99879.995000000",
+          "label": "adl",
+          "net": "-120.005000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "39934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59945.015000000",
+              "equity": "59945.015000000",
+              "ever_insolvent": false,
+              "fees": "29.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9975.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "79879.995000000",
+          "label": "before_recovery",
+          "net": "-20120.005000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "19934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59945.015000000",
+              "equity": "59945.015000000",
+              "ever_insolvent": false,
+              "fees": "29.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9975.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "109879.995000000",
+          "label": "recovery",
+          "net": "9879.995000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49959.980000000",
+              "equity": "49934.980000000",
+              "ever_insolvent": false,
+              "fees": "40.020000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59945.015000000",
+              "equity": "59945.015000000",
+              "ever_insolvent": false,
+              "fees": "29.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9975.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "109815.015000000",
+          "label": "terminal",
+          "net": "9815.015000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49870.000000000",
+              "equity": "49870.000000000",
+              "ever_insolvent": false,
+              "fees": "80.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-50.00000"
+            },
+            "short": {
+              "cash": "59945.015000000",
+              "equity": "59945.015000000",
+              "ever_insolvent": false,
+              "fees": "29.985000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9975.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 2,
+      "final_net": "9630.060000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-20240.020000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "99759.980000000",
+          "label": "adl",
+          "net": "-240.020000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "39869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59890.060000000",
+              "equity": "59890.060000000",
+              "ever_insolvent": false,
+              "fees": "59.940000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9950.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "79759.980000000",
+          "label": "before_recovery",
+          "net": "-20240.020000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "19869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59890.060000000",
+              "equity": "59890.060000000",
+              "ever_insolvent": false,
+              "fees": "59.940000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9950.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "109759.980000000",
+          "label": "recovery",
+          "net": "9759.980000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49919.920000000",
+              "equity": "49869.920000000",
+              "ever_insolvent": false,
+              "fees": "80.080000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59890.060000000",
+              "equity": "59890.060000000",
+              "ever_insolvent": false,
+              "fees": "59.940000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9950.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "109630.060000000",
+          "label": "terminal",
+          "net": "9630.060000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49740.000000000",
+              "equity": "49740.000000000",
+              "ever_insolvent": false,
+              "fees": "160.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-100.00000"
+            },
+            "short": {
+              "cash": "59890.060000000",
+              "equity": "59890.060000000",
+              "ever_insolvent": false,
+              "fees": "59.940000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9950.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    },
+    {
+      "account_capital": "100000",
+      "case": "adl_then_further_drop",
+      "cost_multiple": 3,
+      "final_net": "9445.135000000",
+      "initial_capital": "100000",
+      "initial_quantity": "500.000",
+      "loss_before_recovery": "-20360.045000000",
+      "notional_per_leg": "50000",
+      "rows": [
+        {
+          "actions": [
+            "short_ADL_CLOSED"
+          ],
+          "equity": "99639.955000000",
+          "label": "adl",
+          "net": "-360.045000000",
+          "time_ms": 1760131020000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "39804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59835.135000000",
+              "equity": "59835.135000000",
+              "ever_insolvent": false,
+              "fees": "89.865000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9925.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "79639.955000000",
+          "label": "before_recovery",
+          "net": "-20360.045000000",
+          "time_ms": 1760131800000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "19804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59835.135000000",
+              "equity": "59835.135000000",
+              "ever_insolvent": false,
+              "fees": "89.865000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9925.00000"
+            }
+          }
+        },
+        {
+          "actions": [],
+          "equity": "109639.955000000",
+          "label": "recovery",
+          "net": "9639.955000000",
+          "time_ms": 1760133000000,
+          "wallets": {
+            "long": {
+              "cash": "49879.820000000",
+              "equity": "49804.820000000",
+              "ever_insolvent": false,
+              "fees": "120.180000000",
+              "funding": "0",
+              "quantity": "500.000",
+              "realized": "0"
+            },
+            "short": {
+              "cash": "59835.135000000",
+              "equity": "59835.135000000",
+              "ever_insolvent": false,
+              "fees": "89.865000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9925.00000"
+            }
+          }
+        },
+        {
+          "actions": [
+            "long_CLOSED"
+          ],
+          "equity": "109445.135000000",
+          "label": "terminal",
+          "net": "9445.135000000",
+          "time_ms": 1760133060000,
+          "wallets": {
+            "long": {
+              "cash": "49610.000000000",
+              "equity": "49610.000000000",
+              "ever_insolvent": false,
+              "fees": "240.000000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "-150.00000"
+            },
+            "short": {
+              "cash": "59835.135000000",
+              "equity": "59835.135000000",
+              "ever_insolvent": false,
+              "fees": "89.865000000",
+              "funding": "0",
+              "quantity": "0.000",
+              "realized": "9925.00000"
+            }
+          }
+        }
+      ],
+      "state": "CONDITIONAL_CLOSED"
+    }
+  ]
+}

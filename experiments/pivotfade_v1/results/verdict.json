@@ -1,0 +1,116 @@
+{
+ "stages": {
+  "PIVOT_FADE/FX": {
+   "reached": "validation",
+   "passed": false
+  },
+  "PIVOT_FADE/IDX": {
+   "reached": "validation",
+   "passed": false
+  },
+  "PIVOT_FADE/CRYPTO-4h": {
+   "reached": "validation",
+   "passed": false
+  },
+  "PIVOT_FADE/CRYPTO-1d": {
+   "reached": "validation",
+   "passed": false
+  }
+ },
+ "data_sha256": {
+  "EURUSD=X": "313504b8a38c925da3720d35b61a94b55c050782f446587a96c5b72118352daf",
+  "GBPUSD=X": "79bd17caeabc0b993b12e8140e5b2ca9e5b6ca36ffb780bc91aa34123355b8db",
+  "AUDUSD=X": "8fd49882c0447c70fa2ef846b036bfce4f0efa9fe661843002958ad3a3b4a945",
+  "NZDUSD=X": "204bfd0e412e74b91796fe81b7bd5f1cc4c05dbde8865fa6ef17aa2cbe8488f7",
+  "USDJPY=X": "821153305d8c79ac3a90fb649e0ffe71c2af0558eeec822525d732c781ed8731",
+  "USDCAD=X": "2d886cd9befb807bff49d2c1d6650a0ae154004dd4eff229b02816617b1633b8",
+  "USDCHF=X": "a38a76fa25621a77af4a662c12bb22a83b8f6b72da1d353a8bd5e148b5e75a4a",
+  "EURGBP=X": "2e555a4e317d7ff504eb9cbfc5773388183bcc157a4526ec5e07656c92f3a5b5",
+  "EURJPY=X": "ded6b7d9a838c55bb6a01dd7bb12b9a91ba138c0725e253bd7f32df2ddd6a485",
+  "GBPJPY=X": "ea221d3dbb184fd4438a2a1c13df0eefe3ce062d6162428ae2a135344ad8fc59",
+  "AUDJPY=X": "a223300595436df957da504e062e1ec748cd8f36ac48f5fc782c852016aae95c",
+  "^GSPC": "0ba25c12abc476704c782fb9c4100d4708cfb92acd9299446cf6c220848578ed",
+  "^NDX": "7d076a3505971aec584b453aa4ae99b9b757524b812ada13301557bef8de43d5",
+  "^DJI": "b00557a9adc7840e2116dd0a4a686de19148c514f9176521efad1c284a2e46a3",
+  "^RUT": "65bef04ba45ef20ee0e47ac1c34161e62ede333460c9dfc3e530fab3c8cfdced",
+  "^GDAXI": "6ac2a5a7de4244ca05d481e1220bb0b3b5c8bd525156e7766bad7bb0c7cd468a",
+  "^FTSE": "7c89ad9d755a087427130575256ddc5b0890f03eb4e6d3c4d2eadaa83d2cd2ad",
+  "^N225": "f07044a434fce73b23140cdb75429ceade6564940a1b3e99a9fc87c43b121241",
+  "^HSI": "0ba59a95b8b67e20860e058bdc5c62a152a28330f7bb83634a7f6f05b3c44cb8",
+  "^STOXX50E": "f651426c57c627c6626344c148b9abb04457f0b07f2ef6ed2909c07c89ba0185",
+  "^AXJO": "9c5126fb7d89cf074d360fdc69bf055103e0cd19d346edc233eb4b24e457c86a"
+ },
+ "pivot_minus_rev1d": {
+  "FX/validation": {
+   "alpha_diff_bp_day": -0.34162071333276817,
+   "t_nw10": -0.919893741717413
+  },
+  "IDX/validation": {
+   "alpha_diff_bp_day": 0.5549159425784363,
+   "t_nw10": 0.9779965209375969
+  },
+  "CRYPTO-4h/validation": {
+   "net_diff_bp_day": 23.45727296022946,
+   "t_nw10": 1.8541707973589807
+  },
+  "CRYPTO-1d/validation": {
+   "net_diff_bp_day": -7.17359913454552,
+   "t_nw10": -1.2330031840128104
+  }
+ },
+ "by_year_1x": {
+  "PIVOT_FADE/FX/validation": {
+   "2013": 2.4805817632188725,
+   "2014": 0.9725433902152336,
+   "2015": -0.7210521229786019,
+   "2016": -0.2542400873025359,
+   "2017": 1.5158436813165403,
+   "2018": 0.21640479780349386,
+   "2019": -0.9905757839409507
+  },
+  "REV1D/FX/validation": {
+   "2013": 3.9177718313057444,
+   "2014": 1.697477880017852,
+   "2015": -1.9060891976913654,
+   "2016": 1.0485914420559328,
+   "2017": 2.296224397477352,
+   "2018": -0.6867783323139944,
+   "2019": -0.75298524357455
+  },
+  "PIVOT_FADE/IDX/validation": {
+   "2013": 1.0901917666316137,
+   "2014": -0.828334334489189,
+   "2015": -2.5801593581619215,
+   "2016": 0.8891206123468043,
+   "2017": 0.04245523213535244,
+   "2018": -0.9404278025070345,
+   "2019": -1.6842063767682502
+  },
+  "REV1D/IDX/validation": {
+   "2013": 0.3511745154953449,
+   "2014": 0.3454159870441923,
+   "2015": -3.2266522050540822,
+   "2016": 0.5750483958010487,
+   "2017": -2.315603444195479,
+   "2018": -0.5274995520854383,
+   "2019": -3.097655555867268
+  },
+  "PIVOT_FADE/CRYPTO-4h/validation": {
+   "2024": -10.491091712944078,
+   "2025": -8.680867435602087
+  },
+  "REV1D/CRYPTO-4h/validation": {
+   "2024": -18.806122142133205,
+   "2025": -62.757260651968345
+  },
+  "PIVOT_FADE/CRYPTO-1d/validation": {
+   "2024": -10.504560635739061,
+   "2025": -3.743595427576526
+  },
+  "REV1D/CRYPTO-1d/validation": {
+   "2024": -2.285496368299183,
+   "2025": 1.315969239348355
+  }
+ },
+ "passers": []
+}

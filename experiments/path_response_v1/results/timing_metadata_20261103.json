@@ -1,0 +1,123 @@
+{
+  "instruments": {
+    "BTCUSDT": {
+      "combined_offset_span_us": {
+        "max": 8062.0,
+        "p50": 56.0,
+        "p95": 423.1999999999996,
+        "p99": 1185.04
+      },
+      "counts": {
+        "future_any_timing_or_id_failure": 110,
+        "future_entry_wait": 37,
+        "future_exit_wait": 62,
+        "future_nonincreasing_id": 0,
+        "future_offset_span": 19,
+        "past_boundary": 18,
+        "past_offset_span": 16,
+        "past_stale": 161,
+        "timing_past_eligible": 1225
+      },
+      "denominator": "timing-past eligible, not full R400 price/size-qualified decisions",
+      "entry_wait_us": {
+        "max": 6731125.0,
+        "p50": 10918.0,
+        "p95": 77061.19999999995,
+        "p99": 202348.3599999998
+      },
+      "exit_wait_us": {
+        "max": 9825678.0,
+        "p50": 10801.0,
+        "p95": 100744.99999999994,
+        "p99": 4639247.279999997
+      },
+      "gate_eligible": false,
+      "grid_decisions": 1420,
+      "market_fit": false,
+      "price_columns_loaded": false,
+      "r400_resumed": false,
+      "raw": {
+        "book_backwards_receive": 0,
+        "book_nonincreasing_ids": 0,
+        "book_receive_gap_us": {
+          "max": 18868798.0,
+          "p50": 24.0,
+          "p95": 7811.699999999255,
+          "p99": 38016.0
+        },
+        "book_rows": 8345508,
+        "trade_backwards_receive": 0,
+        "trade_nonincreasing_ids": 0,
+        "trade_receive_gap_us": {
+          "max": 18894469.0,
+          "p50": 24.0,
+          "p95": 169694.25,
+          "p99": 413133.25
+        },
+        "trade_rows": 391477
+      },
+      "returns_computed": false,
+      "status": "TIMING_METADATA_ONLY"
+    },
+    "ETHUSDT": {
+      "combined_offset_span_us": {
+        "max": 8989.0,
+        "p50": 73.0,
+        "p95": 555.2999999999977,
+        "p99": 1522.8000000000006
+      },
+      "counts": {
+        "future_any_timing_or_id_failure": 82,
+        "future_entry_wait": 18,
+        "future_exit_wait": 46,
+        "future_nonincreasing_id": 0,
+        "future_offset_span": 22,
+        "past_boundary": 18,
+        "past_offset_span": 23,
+        "past_stale": 196,
+        "timing_past_eligible": 1183
+      },
+      "denominator": "timing-past eligible, not full R400 price/size-qualified decisions",
+      "entry_wait_us": {
+        "max": 6730861.0,
+        "p50": 7821.0,
+        "p95": 57212.5,
+        "p99": 141105.0400000001
+      },
+      "exit_wait_us": {
+        "max": 9826440.0,
+        "p50": 6945.0,
+        "p95": 85891.39999999992,
+        "p99": 4742108.600000003
+      },
+      "gate_eligible": false,
+      "grid_decisions": 1420,
+      "market_fit": false,
+      "price_columns_loaded": false,
+      "r400_resumed": false,
+      "raw": {
+        "book_backwards_receive": 0,
+        "book_nonincreasing_ids": 0,
+        "book_receive_gap_us": {
+          "max": 18869733.0,
+          "p50": 23.0,
+          "p95": 5571.0,
+          "p99": 28017.0
+        },
+        "book_rows": 11138229,
+        "trade_backwards_receive": 0,
+        "trade_nonincreasing_ids": 0,
+        "trade_receive_gap_us": {
+          "max": 18894322.0,
+          "p50": 36.0,
+          "p95": 209560.9499999999,
+          "p99": 509434.7599999998
+        },
+        "trade_rows": 312671
+      },
+      "returns_computed": false,
+      "status": "TIMING_METADATA_ONLY"
+    }
+  },
+  "prereg_sha256": "434da0877206e1f6c1d41284fbc7dca365e51d1ef27e6620f79344e37ed82893"
+}

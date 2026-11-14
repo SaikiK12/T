@@ -1,0 +1,90 @@
+{
+ "stages": {
+  "RN_CROSS": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "RN_REJECT": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SMT_FADE/24": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SMT_FOLLOW/24": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SMT_FADE/168": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "SMT_FOLLOW/168": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "AM8_FADE": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "AM8_FOLLOW": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "discovery_triggers": {
+  "RN_CROSS": 382066,
+  "RN_REJECT": 286895,
+  "SMT_FADE/24": 125088,
+  "SMT_FOLLOW/24": 125088,
+  "SMT_FADE/168": 41045,
+  "SMT_FOLLOW/168": 41045,
+  "AM8_FADE": 35685,
+  "AM8_FOLLOW": 35685
+ },
+ "by_year_1x": {
+  "RN_CROSS/discovery": {
+   "2021": -123.81516002307042,
+   "2022": -62.95589129878403,
+   "2023": -67.5076043999889
+  },
+  "RN_REJECT/discovery": {
+   "2021": -54.61161172744829,
+   "2022": -35.20918784262025,
+   "2023": -30.8781073415608
+  },
+  "SMT_FADE/24/discovery": {
+   "2021": -1.4484540217628024,
+   "2022": 15.006411474783441,
+   "2023": -7.684019674828374
+  },
+  "SMT_FOLLOW/24/discovery": {
+   "2021": -16.058176084504957,
+   "2022": -34.06526076683801,
+   "2023": -11.883322761827165
+  },
+  "SMT_FADE/168/discovery": {
+   "2021": -8.325478499575853,
+   "2022": -2.166231572466184,
+   "2023": -2.9934570486640126
+  },
+  "SMT_FOLLOW/168/discovery": {
+   "2021": 3.065862071469955,
+   "2022": -3.774590339188681,
+   "2023": -3.0374470507577422
+  },
+  "AM8_FADE/discovery": {
+   "2021": 6.457306365186227,
+   "2022": -21.113905769846383,
+   "2023": -6.2757714891844065
+  },
+  "AM8_FOLLOW/discovery": {
+   "2021": -25.421032373854363,
+   "2022": 2.5008646893757156,
+   "2023": -12.738146300903532
+  }
+ },
+ "discovery_passers": [],
+ "validation_passers": []
+}

@@ -1,0 +1,252 @@
+{
+  "batch_id": "web_deep_20261103",
+  "date": "2026-11-03",
+  "base_commit": "4cdbb6b",
+  "query_tracks": [
+    "public ledgers of winners (Hyperliquid, Lighter, dYdX; persistence literature)",
+    "exchange rulebooks and changelogs (funding caps, interval switches, settlement, roll, delisting)",
+    "forensic and non-English primary sources (SEC/DOJ, Korean FSC, Upbit/Bithumb, post-mortems)",
+    "2025-26 research frontier and prediction markets (arXiv/SSRN, legality for France)"
+  ],
+  "method": "Four bounded lens agents (about 30 calls each), then one independent verifier per lens (15-17 fetches each) that re-fetched every claim that would create or change a queue row. Only confirmed claims were integrated; the lead was the single writer.",
+  "agent_tokens": {
+    "lens1": 148000,
+    "lens2": 164000,
+    "lens3": 144000,
+    "lens4": 158000,
+    "verify1": 92000,
+    "verify2": 88000,
+    "verify3": 84000,
+    "verify4": 94000
+  },
+  "source_records": [
+    {
+      "source_id": "SRC1103-001",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint",
+      "read_scope": "Info endpoint page and llms.txt (perps/spot subpages not opened): no leaderboard request type; userFills at most 2000 most recent; userFillsByTime 2000 per response and only the 10,000 most recent; historicalOrders at most 2000. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-002",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits",
+      "read_scope": "Full page: aggregated weight 1200 per minute; weight 2 for l2Book/allMids/clearinghouseState and similar, 20 for other info requests, 60 for userRole, fills add weight per 20 items; at most 10 unique users in websocket user subscriptions. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-003",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults",
+      "read_scope": "Vault pages marked legacy: 10% leader profit share, leader keeps at least 5%, lockup 4 days HLP and 1 day user vaults, 10k USDC creation fee, no spot or HIP-3. Probe of HLP vaultDetails: leaderFraction 0.0024, commission 0. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-004",
+      "url": "https://stats-data.hyperliquid.xyz/Mainnet/leaderboard",
+      "read_scope": "Probed 2026-11-03: leaderboard 39,600,872 bytes, rows ethAddress/accountValue/displayName/prize/windowPerformances (day, week, month, allTime pnl, roi, vlm), keeps dead accounts; /Mainnet/vaults 14.2 MB with Range support, isClosed and createTimeMillis (87 of the first 133 entries closed). Portfolio allTime for HLP: 102 points from 2023-05-10, about one per 12-13 days. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-005",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/pnl",
+      "read_scope": "Probed 2026-11-03 without a key: pnl?by=index&resolution=1d returns daily points (account 1483: 599 days from 2025-03-16); trades?account_index is public and cursor-paged with each side's position before the fill; publicPools 403; leaderboard returns points with masked addresses. Verifier re-fetched on 2026-11-03: CONFIRMED. Whether pnl is cumulative is unverified."
+    },
+    {
+      "source_id": "SRC1103-006",
+      "url": "https://docs.lighter.xyz/developers/reference/rate-limits.md",
+      "read_scope": "Full page: standard accounts 60 requests per rolling minute; Premium 24,000 and Builder 240,000 weighted per minute; weights trades 200, recentTrades 600, other 300; per IP and per L1 address. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-007",
+      "url": "https://docs.dydx.xyz/indexer-client/http",
+      "read_scope": "Indexer docs and probes: per-address fills and historical-pnl; /v4/leaderboard/pnl 404; no address listing; megavault historicalPnl daily. Lens agent only; not verifier-checked because no queue row depends on it."
+    },
+    {
+      "source_id": "SRC1103-008",
+      "url": "https://arxiv.org/abs/2608.04373",
+      "read_scope": "Abstract only: 14.3M aggressive orders by 147,113 wallets; informativeness rank correlation 0.52 between adjacent 10-day windows; one-second out-of-sample R2 12.31% (+13.2%, t 9.2). Verifier re-fetched on 2026-11-03: CONFIRMED. Period and exchange not stated in the abstract; body unread."
+    },
+    {
+      "source_id": "SRC1103-009",
+      "url": "https://econpapers.repec.org/RePEc:eee:finmar:v:18:y:2014:i:c:p:1-24",
+      "read_scope": "RePEc abstract only: Taiwan 1992-2006; top 500 by prior-year performance earn 61.3 (37.9) bp/day before (after) fees; fewer than 1% predictably profitable net of fees. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-010",
+      "url": "https://www.binance.com/en/support/announcement/3243c81a35bd4f0c86a37315c3dc96cc",
+      "read_scope": "Full announcement: published 2025-04-25 12:30, effective 2025-05-02 08:00 UTC; a settlement at the cap or floor moves the contract to hourly within about 15 minutes; not reverted by the rule; cap unchanged (BTC example 0.3%). Lab archive counts re-computed by the verifier (events only, no prices): 292 drops to 1 h on 214 symbols since the rule, 220 cap-triggered (216 floors), 72 manual; 217 + 69 manual reversions to 4 h / 8 h. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-011",
+      "url": "https://www.okx.com/en-us/help/okx-to-enable-automatic-updates-for-funding-fee-settlement-period",
+      "read_scope": "Full page: one step up a level (8 to 4 to 2 to 1 h) per cap or floor print; reverts when every settlement in the prior 12 h is within 0.20%; TradFi excluded; dated and effective 2026-04-14. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-012",
+      "url": "https://www.kucoin.com/announcement/en-kucoin-futures-to-launch-automatic-funding-fee-settlement-interval-adjustment-mechanism-2026-08-17",
+      "read_scope": "Full announcement: a cap or floor print moves the contract to 1 h from the next period; back to 4 h from the 17th period after 16 consecutive hourly settlements within 0.025%; published 2026-08-05, effective 2026-08-17 08:00 UTC; USDT and USDC margined. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-013",
+      "url": "https://www.kucoin.com/announcement/en-revision-of-the-funding-rate-formula-for-kucoin-perpetual-futures-2026-07-24",
+      "read_scope": "Full announcement: rate = clamp[(P + clamp(I - P, 0.05%)) / (8/N), cap, floor], effective 2026-07-24 08:00 UTC; the cap applies after the scaling. Lens probe: 717 contracts (433 on 4 h, 281 on 8 h, 2 on 1 h). Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-014",
+      "url": "https://docs.lighter.xyz/trading/real-world-assets-rwas/futures-contract-price-rolling-mechanism",
+      "read_scope": "Full page: BRENTOIL and GASOIL roll in five 20% steps on business days 5-9 at 23:59 London; November BRENTOIL row 2026-11-06 7:00 PM to 2026-11-12 7:00 PM ET, F27 to G27, reference only; no GASOIL row; WTI/NATGAS/XCU table historical (RedStone). Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-015",
+      "url": "https://docs.lighter.xyz/trading/funding",
+      "read_scope": "Full page: premium sampled once a minute at a random second, TWAP of 60; small clamp 0.05%, big clamp 4%/8 h (0.5%/h), divided by 8, interest 0.01%/8 h; settles hourly. Verifier re-fetched on 2026-11-03: CONFIRMED. The sign convention was not confirmed."
+    },
+    {
+      "source_id": "SRC1103-016",
+      "url": "https://www.gate.com/announcements/article/50645",
+      "read_scope": "Full announcement: a 1 h market moves to 4 h after 16 consecutive settlements below a threshold that is not stated; back to 1 h at either limit; effective 2026-04-13 01:00 UTC. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-017",
+      "url": "https://fsc.go.kr/no010101/84387",
+      "read_scope": "Release (Korean): \"racehorse\" buying around the daily change-rate reset hour, which differs by exchange (00:00, 09:00, 11:00), then orders 1-2 a second over 20-30 minutes; \"cage pumping\" of thin coins under a caution designation with deposits and withdrawals stopped, up to 10x+ above other exchanges, then back. Names no exchange. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-018",
+      "url": "https://api.upbit.com/v1/market/all?is_details=true",
+      "read_scope": "Live call 2026-11-03 (248,873 bytes): 875 markets, market_event with warning and five caution flags; at about 09:07 UTC 299 KRW markets, 5 with a warning, 15 with any caution flag. Current state only. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-019",
+      "url": "https://api.upbit.com/v1/candles/minutes/60",
+      "read_scope": "Live calls: KRW-BTC ticker opening_price equals the day candle opened 2026-11-03T00:00 UTC (09:00 KST); KRW-XRP hourly candles back to at least 2022-12-23 (earliest not checked). Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-020",
+      "url": "https://api.bithumb.com/public/assetsstatus/ALL",
+      "read_scope": "Live call 2026-11-03: 523 assets, 59 with deposits off, 3 with withdrawals off, 60 with either. Current state only. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-021",
+      "url": "https://www.sec.gov/files/litigation/complaints/2024/comp-pr2024-166-gotbit.pdf",
+      "read_scope": "Pages 2-3, 8-9, 11-12 and 15-16 of 36 (allegations): self-trades sometimes exceeding 90% of volume; Gotbit offered to liquidate clients' tokens for a share of proceeds once the public trades. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-022",
+      "url": "https://www.galaxy.com/insights/research/cryptos-flash-crash-liquidation-binance-adl-auto-deleveraging",
+      "read_scope": "Full article (Galaxy discloses interests): USDe about 0.65 on Binance 21:42-21:51 UTC on 2025-10-10; wBETH and BNSOL fell 80-90%; Binance redemption-based pricing not completed in time; ADL fired on several venues. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-023",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps",
+      "read_scope": "Full page (undated): mark capped at 3x the 8-hour mark EMA and 1.5x the median external perp when one exists; oracle an 8-hour EWMA of minute marks, capped at 4x the initial mark and 4x the one-month average. The 10x cap in a news summary is CONTRADICTED. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-024",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+      "read_scope": "Full page: F = P + clamp(I - P, 0.0005); premium sampled every 5 s; paid hourly at 1/8; capped at 0.5%/hour. A 4%/h figure is CONTRADICTED. Verifier re-fetched on 2026-11-03: CONFIRMED. Cap history not available (Wayback unreachable)."
+    },
+    {
+      "source_id": "SRC1103-025",
+      "url": "https://arxiv.org/abs/2610.22839",
+      "read_scope": "Abstract, section 6 and Table 1 (HTML): Binance funding atom -D/(Mark-D) at ex-1 20:00 ET; HL and OKX none; Bitget snapshot credit; 12 ex-dates over 7 names, 5 Binance rows 6.0-21.8 bp; \"not an arbitrage net of fees\"; low-powered. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-026",
+      "url": "https://www.bitgetapp.com/support/articles/12560603885597",
+      "read_scope": "Full notice: META, UNH, VRT ex 06-15; longs credited and shorts debited through funding fee adjustments on a snapshot at 2026-06-13 08:00 UTC+8; netted per user. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-027",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals",
+      "read_scope": "Full page: silent on dividends; the deployer defines the contract. Trade[XYZ] docs not read. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-028",
+      "url": "https://anj.fr/promotion-dune-offre-de-jeux-dargent-illegale-blocage-du-site-polymarket",
+      "read_scope": "Full notice: ISPs ordered on 2026-07-16 to block Polymarket; operator geoblock circumvented in practice; 578,751 French visits in June; EUR 100k fine for advertising. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-029",
+      "url": "https://kalshi-public-docs.s3.amazonaws.com/kalshi-member-agreement.pdf",
+      "read_scope": "Restricted Jurisdictions clause: France listed with the UK, Poland and Monaco. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-030",
+      "url": "https://arxiv.org/abs/2607.26245",
+      "read_scope": "Abstract: the model does not beat the probability implied by Polymarket's own book; -0.116 normalized payoff units a trade; 347 ms median reaction to Binance. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-031",
+      "url": "https://arxiv.org/abs/2609.12878",
+      "read_scope": "Abstract: 588M trades; contracts under 10c lose 19.3c per dollar, at or above 90c earn +0.83c; grouped by event longshots gain 4.1c; no effect in sports. Verifier re-fetched on 2026-11-03: CONFIRMED."
+    },
+    {
+      "source_id": "SRC1103-032",
+      "url": "https://arxiv.org/abs/2512.01112",
+      "read_scope": "Abstract: Hyperliquid ADL closed $2.1B in 12 minutes on 2025-10-10 and overshot, costing traders $45-52M. Lens agent only; not verifier-checked because no queue row depends on it."
+    },
+    {
+      "source_id": "SRC1103-033",
+      "url": "https://arxiv.org/abs/2607.27070",
+      "read_scope": "Abstract: no early-warning signal works across all events; compression of taker-flow variance survives a placebo across 7 cascades as a group, not as a per-event alarm. Lens agent only; not verifier-checked because no queue row depends on it."
+    },
+    {
+      "source_id": "SRC1103-034",
+      "url": "https://arxiv.org/abs/2608.03616",
+      "read_scope": "Abstract: subcritical cascade (branching ratio 0.1-0.2); 88% of forced selling within 30 minutes; 63% absorbed off the book. Lens agent only; not verifier-checked because no queue row depends on it."
+    },
+    {
+      "source_id": "SRC1103-035",
+      "url": "https://arxiv.org/abs/2608.25348",
+      "read_scope": "Abstract: on Binance BTCUSDT archives the holdout IC is positive but the net Sharpe negative. Lens agent only; not verifier-checked because no queue row depends on it."
+    }
+  ],
+  "small_document_receipts": [
+    {
+      "file": "gotbit.pdf",
+      "url": "https://www.sec.gov/files/litigation/complaints/2024/comp-pr2024-166-gotbit.pdf",
+      "bytes": 12579751,
+      "sha256": "14645472e6cf2c20a7075dfd80eb99f18a4977bace8db3b150ecd03066fa1c24",
+      "content_type": "application/pdf"
+    },
+    {
+      "file": "market_all.json",
+      "url": "https://api.upbit.com/v1/market/all?is_details=true",
+      "bytes": 248873,
+      "sha256": "b4fabc55c0653bad8a7910afb03c520241f962619714256c204d67c09e542921",
+      "content_type": "application/json"
+    }
+  ],
+  "receipt_notice": "Hashes identify the separately received public bodies; they stay in the session scratchpad, outside git. Only the stated sections were reviewed.",
+  "contradicted": [
+    "Hyperliquid funding cap 4%/h (docs: 0.5%/h)",
+    "Hyperliquid hyperp mark cap 10x (docs: 3x the 8 h EMA and 1.5x the external median)",
+    "Binance hourly switch never reverts (archive: 217 + 69 manual reversions)"
+  ],
+  "not_found": [
+    "Coval, Hirshleifer and Shumway persistence result (verifier budget)",
+    "Shek, SSRN 7520320 (403; no paper of this title found)",
+    "Binance dividend FAQ (bot challenge)",
+    "MEXC dividend notice (403; snippet only)"
+  ],
+  "unverified_not_integrated": [
+    "TechFlow/Minara Hyperliquid leaderboard blog",
+    "Basel working paper on copy-trading persistence",
+    "KuCoin copy-trading study (97% leads profitable, 43.61% followers)",
+    "FDUSD depeg profits",
+    "The Block MOVE market-maker sale and token-loan structures",
+    "trade.xyz roll timing",
+    "Bybit dynamic settlement frequency",
+    "SSRN abstracts 7321823 and 6185958",
+    "Prediction-market arbitrage papers 2508.03474, 2608.00666, 2610.23517, 2610.13593, 2602.19520"
+  ],
+  "excluded_access": [
+    "DOJ press release (bot check)",
+    "Zhihu (403)",
+    "Upbit announcements API (403)",
+    "Hyperliquid terms of use (bot check)",
+    "SSRN bodies (403)",
+    "OpenAlex and Semantic Scholar (429): no citation chains",
+    "Lighter publicPools (403)"
+  ],
+  "event_counts_computed": "Archive event counts only (Binance interval switches and trigger rates; Binance and MEXC dividend funding atoms). No price, return or P&L was read.",
+  "source_only": true,
+  "new_market_statistics": 0,
+  "new_strategy_trials": 0,
+  "new_prospective_days": 0
+}

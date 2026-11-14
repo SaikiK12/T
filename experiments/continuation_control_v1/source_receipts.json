@@ -1,0 +1,100 @@
+{
+  "task": "R323 continuation-value bounded primary reading",
+  "review_date_utc": "2026-10-26",
+  "output_scope": ["source_review.md", "receipts.json"],
+  "limits": {
+    "static_gets": 4,
+    "combined_body_bytes": 2097152,
+    "single_body_bytes": 1048576,
+    "acquisition_wall_seconds": 90,
+    "redirects": 0,
+    "retries": 0,
+    "market_history_account_rpc_requests": 0,
+    "model_dataset_requests": 0
+  },
+  "usage": {
+    "static_gets": 1,
+    "combined_body_bytes": 756268,
+    "largest_body_bytes": 756268,
+    "acquisition_wall_seconds": 1.105996,
+    "market_history_account_rpc_requests": 0,
+    "model_dataset_requests": 0
+  },
+  "network_context": {
+    "runtime_observations_current": true,
+    "http_policy": "unrestricted",
+    "http_policy_state": "enforced",
+    "proxy": "inherited normal proxy",
+    "tls_verification": true,
+    "vpn_configured": false,
+    "credential_values_inspected": false,
+    "access_restrictions": "No redirects, retry, login, paywall bypass or credential access. Author-hosted public primary PDF only."
+  },
+  "sources": [
+    {
+      "name": "Boyd et al. Multi-Period Trading via Convex Optimization",
+      "primary_url": "https://web.stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf",
+      "version": "Author-hosted final, cover Vol3(1)(2016), copyright2017; DOI10.1561/2400000023",
+      "method": "GET",
+      "acquisition_started_utc": "2026-10-26T00:28:46Z",
+      "status": 200,
+      "body_bytes": 756268,
+      "body_sha256": "e7bda0c607fcac4c431cba010f6bfd9ef92f6357f3aa3c71f9023b160bf7ac67",
+      "complete": true,
+      "pdf_pages_received": 79,
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Content-Length": "756268",
+        "ETag": "\"b8a2c-651155a0983c0\"",
+        "Last-Modified": "Tue, 05 May 2026 17:26:47 GMT"
+      },
+      "matches_prior_recorded_body_sha256": true,
+      "body_retention": "Parsed in memory; no new full-text mirror retained",
+      "previous_close_read": "Sections2.3/2.5/2.7/4.1/4.3",
+      "new_close_read": "Printedp45 section5.1 first page; printedpp49-50 selected section5.2 passages including Eqs5.1-5.2; printedpp52-53 sections5.4-5.5",
+      "incidental_context_viewed": "PDFpp1-12 cover/contents/abstract/introduction and beginning Chapter2",
+      "unread": "Printedpp46-48/51; Chapter5 not fully read; sections4.4/4.5; Chapters6-7; software; cited primary literature",
+      "access_restrictions": "Public author-hosted200; verifiedTLS, inheritedproxy, no redirects or retries"
+    },
+    {
+      "name": "Garleanu-Pedersen Dynamic Trading",
+      "primary_url": "https://nbgarleanu.github.io/DynTrad.pdf",
+      "version": "March2012 author manuscript",
+      "cached_body_path": ".cache/research_batch_20261024/gp.pdf",
+      "prior_receipt_path": ".cache/research_batch_20261024/root_source_receipts.json",
+      "prior_received_utc": "2026-10-24T18:52:01Z",
+      "prior_status": 200,
+      "body_bytes": 525150,
+      "body_sha256": "30584d6dbf7c8443573ecf9fa93f199a681ff59aa607e4c48e7f61c8fededc3d",
+      "complete": true,
+      "pdf_pages_received": 69,
+      "matches_prior_receipt": true,
+      "new_network_requests": 0,
+      "previous_close_read": "Sections2-3, printedpp7-14, Eqs1-17",
+      "new_close_read": "Printedpp15-16 and first paragraphp17, section4 persistent-impact continuation, Eqs18-21/Proposition6",
+      "incidental_context_viewed": "Printedpp17-18 beginning section5, Eqs22-26",
+      "location_scan": "Full-document keyword location check for finite horizon/terminal/Bellman/resource/constraint/uncertainty; not full reading",
+      "unread": "Remaining theory/examples, empirical sections and appendix proofs",
+      "access_restrictions": "Reused prior public author-hosted body; no new acquisition"
+    },
+    {
+      "name": "de Lataillade et al. Optimal Trading with Linear Costs",
+      "primary_url": "https://arxiv.org/pdf/1203.5957v1",
+      "version": "arXiv1203.5957v1, 2012-03-27",
+      "new_network_requests": 0,
+      "body_available_in_task_cache": false,
+      "body_sha256": null,
+      "previous_close_read": "Section2 and sections3.1-3.4, from existing primary-equations/cost-control reading ledger",
+      "new_close_read": "None",
+      "unread": "No later primary sections acquired/read for R323; OU/cube-root sections unadopted",
+      "weak_alternative": "Terminal trading date is not forced liquidation; do not import stationary proportional-cost threshold into a mandatory-close two-wallet controller"
+    }
+  ],
+  "claims_excluded": [
+    "Executable profitability or alpha from source models or invented scenarios",
+    "New prospective paper evidence",
+    "Exact model uncertainty calibration",
+    "Private Jane Street or Citadel strategies",
+    "Whole-paper, whole-book or full-corpus reading"
+  ]
+}

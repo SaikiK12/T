@@ -1,0 +1,6 @@
+21:35:13 PREREG verified; 46 inputs match
+21:35:14 zero-fee contracts 74, coins with events 55, events 19405
+21:35:14 PZ_SUM {"gross": {"trades": 15327, "bp_per_day": 186.12, "t": 3.58, "bp_per_trade": 21.06}, "1x": {"trades": 15327, "bp_per_day": 147.81, "t": 2.85, "bp_per_trade": 16.72}, "2x": {"trades": 15327, "bp_per_day": 109.5, "t": 2.11, "bp_per_trade": 12.39}, "3x": {"trades": 15327, "bp_per_day": 71.19, "t": 1.38, "bp_per_trade": 8.05}}
+21:35:14 PZ_CAP7 {"gross": {"trades": 9617, "bp_per_day": 101.42, "t": 2.64, "bp_per_trade": 18.29}, "1x": {"trades": 9617, "bp_per_day": 77.62, "t": 2.02, "bp_per_trade": 13.99}, "2x": {"trades": 9617, "bp_per_day": 53.82, "t": 1.4, "bp_per_trade": 9.7}, "3x": {"trades": 9617, "bp_per_day": 30.02, "t": 0.78, "bp_per_trade": 5.41}}
+21:35:14 P1_TRADES {"gross": {"trades": 9071, "bp_per_day": 183.25, "t": 4.09, "bp_per_trade": 35.03}, "1x": {"trades": 9071, "bp_per_day": 146.82, "t": 3.29, "bp_per_trade": 28.07}, "2x": {"trades": 9071, "bp_per_day": 110.39, "t": 2.48, "bp_per_trade": 21.1}, "3x": {"trades": 9071, "bp_per_day": 73.97, "t": 1.66, "bp_per_trade": 14.14}}
+21:35:15 verdict PARTIAL {"t_1x_ge_2": true, "mean_2x_gt_0": true, "wo_best10_1x_gt_0": true, "both_halves_1x_gt_0": true, "wo_best_coin_1x_gt_0": true}

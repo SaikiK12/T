@@ -1,0 +1,12 @@
+20:39:12 PREREG verified e935f54b288e; 10 inputs match
+Traceback (most recent call last):
+  File "/home/user/T/scripts/run_vrpsell.py", line 227, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/T/scripts/run_vrpsell.py", line 206, in main
+    st = {f"{m}x": series_stats([w[f"m{m}"]["r"] for w in out], dates) for m in CMULTS}
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/T/scripts/run_vrpsell.py", line 147, in series_stats
+    return {"weeks": int(len(x)), "mean_bp": float(x.mean() * 1e4), "t_nw": float(stats.newey_west_t(x, NW_LAG)),
+                                                                            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'tuple'

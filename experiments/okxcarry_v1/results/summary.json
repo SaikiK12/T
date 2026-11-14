@@ -1,0 +1,94 @@
+{
+ "prereg_sha256": "3df8f986d3f918426eb6ee864890ba9e714ecbc94469bd1864cabf585a3241c2",
+ "window": [
+  "2026-08-06 16:00:00+00:00",
+  "2026-11-09 16:00:00+00:00"
+ ],
+ "coins": {
+  "BTC": {
+   "inst": "BTC-USD_UM_XPERP-310404",
+   "index": "BTC-USD",
+   "prints": 285,
+   "fallback_prints": 0,
+   "first_print": "2026-08-07 00:00:00+00:00",
+   "last_print": "2026-11-09 16:00:00+00:00",
+   "days": 95.0,
+   "mark_entry": 64513.2,
+   "mark_exit": 75460.5,
+   "index_entry": 64575.5,
+   "index_exit": 75440.7,
+   "funding_sum": 0.003939548967144897,
+   "funding_annual_on_notional": 0.015136161821135656,
+   "basis_pnl": -0.0014350913303344814,
+   "tbill_mean": 0.03915368421052632,
+   "thirds_mean_rate": [
+    -9.14774066506221e-05,
+    5.719315658121053e-06,
+    0.00012722702748876313
+   ],
+   "negative_share": 0.3087719298245614,
+   "baseline_share": 0.4245614035087719,
+   "max_rise": 0.3541662791490736,
+   "max_drawdown_L2_1x": -0.007536067815719472,
+   "static_quantity_funding_sum": 0.006191809548669565,
+   "daily_funding_nw_t": 0.4399354686937845,
+   "checks": {
+    "excess_1x_L2_ge_2pct": false,
+    "excess_2x_L2_gt_0": false,
+    "each_third_mean_rate_gt_0": false,
+    "negative_share_le_20pct": false,
+    "max_rise_lt_40pct": true
+   },
+   "verdict": "NULL"
+  },
+  "ETH": {
+   "inst": "ETH-USD_UM_XPERP-310404",
+   "index": "ETH-USD",
+   "prints": 285,
+   "fallback_prints": 0,
+   "first_print": "2026-08-07 00:00:00+00:00",
+   "last_print": "2026-11-09 16:00:00+00:00",
+   "days": 95.0,
+   "mark_entry": 1907.27,
+   "mark_exit": 2144.13,
+   "index_entry": 1909.09,
+   "index_exit": 2145.11,
+   "funding_sum": 0.01642600941059,
+   "funding_annual_on_notional": 0.06311045720910895,
+   "basis_pnl": -0.0005583928025285623,
+   "tbill_mean": 0.03915368421052632,
+   "thirds_mean_rate": [
+    1.204664649284421e-05,
+    6.331322841061159e-05,
+    9.754548731328104e-05
+   ],
+   "negative_share": 0.12280701754385964,
+   "baseline_share": 0.5263157894736842,
+   "max_rise": 0.4710187860135169,
+   "max_drawdown_L2_1x": -0.002322983944329171,
+   "static_quantity_funding_sum": 0.021429478549618394,
+   "daily_funding_nw_t": 4.857522419674278,
+   "checks": {
+    "excess_1x_L2_ge_2pct": false,
+    "excess_2x_L2_gt_0": false,
+    "each_third_mean_rate_gt_0": true,
+    "negative_share_le_20pct": true,
+    "max_rise_lt_40pct": false
+   },
+   "verdict": "NULL"
+  }
+ },
+ "xsection": {
+  "instruments": 167,
+  "with_at_least_90_prints": 166,
+  "quantiles_annual_on_notional": {
+   "0.1": -0.098857,
+   "0.25": 0.043384,
+   "0.5": 0.056507,
+   "0.75": 0.090741,
+   "0.9": 0.108679
+  },
+  "share_with_mean_below_baseline_annual": 0.9096385542168675
+ },
+ "lane_verdict": "NULL"
+}

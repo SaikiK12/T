@@ -1,0 +1,51 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "collect_cycle_hours": 8,
+  "funding_fair_price": 104.41,
+  "funding_index_price": 104.46,
+  "funding_rate_ceiling_fraction": 0.0075,
+  "funding_rate_floor_fraction": -0.0075,
+  "funding_rate_fraction": 2.2e-05,
+  "funding_system_timestamp_ms": 1792499020439,
+  "next_settle_time_ms": 1792512000000,
+  "request_metadata": [
+    {
+      "body_truncated": false,
+      "end_ms": 1792499020700,
+      "end_utc": "2026-10-20T12:23:40.700441Z",
+      "http_status": 200,
+      "kind": "funding",
+      "raw_file": "SOL_USDT_funding.raw",
+      "retained_bytes": 237,
+      "sha256": "7cf63fc792b732c0d22547919ed342dd037c1e35def8987115737b2ec4ac0d5c",
+      "start_ms": 1792499019193,
+      "start_utc": "2026-10-20T12:23:39.193012Z",
+      "symbol": "SOL_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/funding_rate/SOL_USDT"
+    },
+    {
+      "body_truncated": false,
+      "end_ms": 1792499022554,
+      "end_utc": "2026-10-20T12:23:42.554935Z",
+      "http_status": 200,
+      "kind": "ticker",
+      "raw_file": "SOL_USDT_ticker.raw",
+      "retained_bytes": 565,
+      "sha256": "19759abbf39b00b0b9ed5fc685a81a22dd89ad16c073f71c63a76625825a1e13",
+      "start_ms": 1792499020701,
+      "start_utc": "2026-10-20T12:23:40.701727Z",
+      "symbol": "SOL_USDT",
+      "transport_error": null,
+      "url": "https://contract.mexc.com/api/v1/contract/ticker?symbol=SOL_USDT"
+    }
+  ],
+  "symbol": "SOL_USDT",
+  "ticker_best_ask": 104.42,
+  "ticker_best_bid": 104.41,
+  "ticker_fair_price": 104.41,
+  "ticker_index_price": 104.46,
+  "ticker_last_price": 104.41,
+  "ticker_trade_age_ms_at_capture_end": 2602,
+  "ticker_trade_timestamp_ms": 1792499019952
+}

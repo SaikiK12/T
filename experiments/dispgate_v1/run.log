@@ -1,0 +1,64 @@
+11:43:47 prereg sha 8d45ae971a4f
+/home/user/T/scripts/run_regime.py:57: RuntimeWarning: Mean of empty slice
+  idx = np.nanmean(np.where(e0, r, np.nan), axis=1)
+11:44:33 parity A vs R217 A_C0: max |diff| 0.00e+00
+11:44:33 parity B vs R217 B_C0: max |diff| 0.00e+00
+11:44:33 parity X2 vs R217 X2: max |diff| 0.00e+00
+/usr/local/lib/python3.13/dist-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/user/T/scripts/run_dispgate.py:38: RuntimeWarning: Mean of empty slice
+  a = np.nanmean(np.where(alts, r, np.nan), axis=1)
+11:44:33 discovery half-size days 2.2% (top tercile 8.2%, alt 90d down 49.1%), episodes 2: [('2022-05-17', '2022-05-18', 2), ('2022-05-20', '2022-06-10', 22)]
+11:44:33 validation half-size days 18.6% (top tercile 47.7%, alt 90d down 42.4%), episodes 6: [('2024-10-18', '2024-10-18', 1), ('2024-10-20', '2024-10-20', 1), ('2024-10-26', '2024-10-28', 3), ('2025-01-29', '2025-01-29', 1), ('2025-02-03', '2025-05-08', 95), ('2025-06-01', '2025-06-01', 1)]
+11:44:42 G-A discovery Sharpe 1.76 vs 1.81; validation Sharpe 1.34 vs 1.39, 2x +6.9 bp/day, DD 0.265 vs 0.261; control on gated days +11.5 vs other +14.1 bp NULL
+11:44:48 G-B discovery Sharpe 1.28 vs 1.28; validation Sharpe 1.18 vs 1.20, 2x +5.2 bp/day, DD 0.156 vs 0.156; control on gated days +5.0 vs other +7.5 bp NULL
+11:44:55 G-X2 discovery Sharpe 1.91 vs 1.96; validation Sharpe 1.64 vs 1.68, 2x +11.5 bp/day, DD 0.275 vs 0.275; control on gated days +14.0 vs other +21.0 bp NULL
+11:44:55 
+variant     window  cmult  days  mean_bp_day  t_nw10  sharpe  max_dd  share_traded  control_sharpe  control_max_dd  control_mean_bp_day  control_mean_on_gated_days_bp  control_mean_other_days_bp  diff_bp_day  diff_t_nw10
+    G-A  discovery    1.0  1095      10.6690  2.7809  1.7573  0.2400        0.0219          1.8122          0.2400              11.1887                        44.0615                     10.4521      -0.5197      -1.2812
+    G-A  discovery    2.0  1095       7.7012  2.0343  1.2702  0.3432        0.0219          1.3302          0.3432               8.2011                        38.9022                      7.5131      -0.5000      -1.3122
+    G-A  discovery    3.0  1095       4.7333  1.2618  0.7814  0.4463        0.0219          0.8463          0.4463               5.2135                        33.7429                      4.5742      -0.4802      -1.3433
+    G-A validation    1.0   547      12.2219  1.7881  1.3374  0.2650        0.1865          1.3893          0.2607              13.5986                        11.5198                     14.0751      -1.3766      -0.9479
+    G-A validation    2.0   547       6.8543  1.0024  0.7496  0.3666        0.1865          0.8172          0.3554               8.0013                         5.8115                      8.5032      -1.1470      -0.8128
+    G-A validation    3.0   547       1.4867  0.2172  0.1625  0.4682        0.1865          0.2455          0.4502               2.4040                         0.1032                      2.9314      -0.9173      -0.6568
+    G-B  discovery    1.0  1095       3.8690  2.0806  1.2782  0.1082        0.0219          1.2821          0.1082               3.9010                         2.5329                      3.9317      -0.0321      -0.6198
+    G-B  discovery    2.0  1095       3.3264  1.7984  1.0995  0.1145        0.0219          1.1029          0.1145               3.3541                         1.7407                      3.3903      -0.0277      -0.5897
+    G-B  discovery    3.0  1095       2.7839  1.5114  0.9204  0.1219        0.0219          0.9234          0.1219               2.8072                         0.9486                      2.8489      -0.0233      -0.5432
+    G-B validation    1.0   547       6.4284  1.6669  1.1794  0.1557        0.1865          1.2008          0.1557               6.9935                         4.9782                      7.4554      -0.5651      -0.6713
+    G-B validation    2.0   547       5.2213  1.3532  0.9576  0.1605        0.1865          0.9897          0.1605               5.7666                         3.6840                      6.2440      -0.5454      -0.6498
+    G-B validation    3.0   547       4.0142  1.0396  0.7359  0.1863        0.1865          0.7788          0.1758               4.5398                         2.3898                      5.0326      -0.5256      -0.6252
+   G-X2  discovery    1.0  1095      14.8871  2.9044  1.9101  0.2456        0.0219          1.9585          0.2456              15.4673                        49.6849                     14.7006      -0.5802      -1.2366
+   G-X2  discovery    2.0  1095      11.3024  2.2373  1.4528  0.3658        0.0219          1.5036          0.3658              11.8533                        43.7470                     11.1386      -0.5509      -1.2549
+   G-X2  discovery    3.0  1095       7.7178  1.5446  0.9934  0.4859        0.0219          1.0465          0.4859               8.2393                        37.8091                      7.5767      -0.5216      -1.2730
+   G-X2 validation    1.0   547      18.0761  2.0967  1.6411  0.2747        0.1865          1.6811          0.2747              19.6822                        14.0170                     20.9807      -1.6061      -1.0437
+   G-X2 validation    2.0   547      11.4966  1.3347  1.0437  0.3948        0.1865          1.0893          0.3828              12.7532                         7.0586                     14.0585      -1.2566      -0.8426
+   G-X2 validation    3.0   547       4.9172  0.5710  0.4463  0.5227        0.1865          0.4975          0.5043               5.8242                         0.1002                      7.1363      -0.9070      -0.6148
+11:44:55 {
+ "variants": {
+  "G-A": {
+   "passed": false,
+   "discovery_sharpe_gain": -0.05493612509678325,
+   "validation_sharpe_gain": -0.051861175940536075,
+   "validation_mean_2x_bp": 6.854306501124148,
+   "validation_max_dd": 0.2649760100029678,
+   "validation_control_max_dd": 0.2607011427132526
+  },
+  "G-B": {
+   "passed": false,
+   "discovery_sharpe_gain": -0.003832469896716706,
+   "validation_sharpe_gain": -0.02137947218512637,
+   "validation_mean_2x_bp": 5.221292656558219,
+   "validation_max_dd": 0.15572312923559212,
+   "validation_control_max_dd": 0.15572312923559217
+  },
+  "G-X2": {
+   "passed": false,
+   "discovery_sharpe_gain": -0.04847119489949181,
+   "validation_sharpe_gain": -0.03997619846320277,
+   "validation_mean_2x_bp": 11.496632985500668,
+   "validation_max_dd": 0.27465573035686086,
+   "validation_control_max_dd": 0.27465573035686086
+  }
+ },
+ "passers": []
+}

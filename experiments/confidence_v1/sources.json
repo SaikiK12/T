@@ -1,0 +1,627 @@
+{
+  "acquisition": {
+    "acquisition_completed_utc": "2026-10-26T14:30:28.217000+00:00",
+    "acquisition_script_seconds": 1.742227091017412,
+    "acquisition_started_utc": "2026-10-26T14:29:52.145615+00:00",
+    "network_closed": true,
+    "no_market_history_account_or_weights_requests": true,
+    "not_lifetime_or_reset_budget": true,
+    "overall_acquisition_wall_seconds_approx": 36.072,
+    "received_body_bytes": 1945479,
+    "requests": [
+      {
+        "access": "Ordinary unauthenticated public GET; no retries/redirect/login/subscription bypass; raw PDF/text cache only, no tracked full-paper mirror.",
+        "authors": "Meelis Kull et al.",
+        "body_bytes": 375419,
+        "body_cap": 1048576,
+        "complete": true,
+        "content_length": "375419",
+        "content_type": "application/pdf",
+        "date": "Mon, 26 Oct 2026 14:30:26 GMT",
+        "elapsed_seconds": 0.7175810269836802,
+        "error": null,
+        "last_modified": null,
+        "location": null,
+        "name": "dirichlet",
+        "pdf_sha256_verified": true,
+        "read_scope": "Main sections1–5, including all calibration definitions, formulas6–8, identity/temperature/beta relationship, ODIR objective, fitting/clipping, non-neural and neural experimental protocols and textual results/conclusion. Numeric table entries not independently re-audited.",
+        "sha256": "9af5e506f4c7baf03a24a3951a93bfee1af3f1b77b49d51adeef7842b3826921",
+        "source_version": "NeurIPS2019 main proceedings paper, hash pinned; supplemental not acquired",
+        "start_utc": "2026-10-26T14:30:26.482438+00:00",
+        "status": 200,
+        "text_sha256": "f827450a54be722aad38373ef39774bfb86d10dacf59fdfe5c227c06996d0746",
+        "title": "Beyond temperature scaling: Obtaining well-calibrated multiclass probabilities with Dirichlet calibration",
+        "unread_scope": "Supplemental proofs, exact code/hyperparameter grids/datasets/model checkpoints and linked references unreceived/unexecuted. Authors experiments not reproduced.",
+        "url": "https://papers.nips.cc/paper_files/paper/2019/file/8ca01ea920679a0fe3728441494041b9-Paper.pdf"
+      },
+      {
+        "access": "Ordinary unauthenticated public GET; no retries/redirect/login/subscription bypass; raw PDF/text cache only, no tracked full-paper mirror.",
+        "authors": "Rama Cont, Arseniy Kukanov, Sasha Stoikov",
+        "body_bytes": 741640,
+        "body_cap": 1048576,
+        "complete": true,
+        "content_length": "741640",
+        "content_type": "application/pdf",
+        "date": "Mon, 26 Oct 2026 14:30:27 GMT",
+        "elapsed_seconds": 0.49378588001127355,
+        "error": null,
+        "last_modified": "Sat, 30 Nov 2024 00:52:30 GMT",
+        "location": null,
+        "name": "ofi",
+        "pdf_sha256_verified": true,
+        "read_scope": "Abstract,section1summary,sections2.1–2.3 equations/event/depth model,section3.1TAQdata contract,section4.1 comparison/trade-imbalance definition and textual robustness,section4.2 aggregate-volume scaling assumptions/equations and qualitative conclusion.",
+        "sha256": "40d1d5f0baf7944a1b9f4c12d3644038e657acf4a3dfb500b2057c2269edd25f",
+        "source_version": "arXiv1011.6402v3 [q-fin.TR],13April2011; manuscript dateMarch2011; HTTP LastModified2024-11-30 is transport metadata, not paper revisiondate",
+        "start_utc": "2026-10-26T14:30:27.200020+00:00",
+        "status": 200,
+        "text_sha256": "40826eb67c0e02ca8990364a0797b97edd3f470f3f0fe6fe335e4a2001097c61",
+        "title": "The price impact of order book events",
+        "unread_scope": "Most detailed section3 regression/seasonality tables and appendixTAQ processing, proofs/details in remaining4.2,full section5/references not read as full-extraction. No rawTAQ/WRDS data,code,crypto data or executable strategy acquired.",
+        "url": "https://arxiv.org/pdf/1011.6402"
+      },
+      {
+        "access": "Ordinary unauthenticated public GET; no retries/redirect/login/subscription bypass; raw PDF/text cache only, no tracked full-paper mirror.",
+        "authors": "Chuan Guo, Geoff Pleiss, Yu Sun, Kilian Q. Weinberger",
+        "body_bytes": 828420,
+        "body_cap": 980093,
+        "complete": true,
+        "content_length": "828420",
+        "content_type": "application/pdf",
+        "date": "Mon, 26 Oct 2026 14:30:28 GMT",
+        "elapsed_seconds": 0.523043127002893,
+        "error": null,
+        "last_modified": "Sun, 04 Oct 2026 20:59:31 GMT",
+        "location": null,
+        "name": "temperature",
+        "pdf_sha256_verified": true,
+        "read_scope": "Main paper sections1–6: definitions, reliability/ECE/MCE/NLL, architectural observation caveats, binary/multiclass calibration formulas, textual findings/complexity and limitations. Figures/tables inspected as context, not numerically re-audited. Related methods enumerated from discussion.",
+        "sha256": "df7c93f97204f8a3c2b10f6d5bf5265baac25f00c1ae3b473a3e1dbc102dacb2",
+        "source_version": "PMLR70:1321–1330, ICML2017; received PDF hash/date retained, LastModified2026-10-04 not asserted as original2017 byteversion",
+        "start_utc": "2026-10-26T14:30:27.693812+00:00",
+        "status": 200,
+        "text_sha256": "d6863367d7543c1a571d03054db9932d63592ddbd946a9aa872b3001c4e3debc",
+        "title": "On Calibration of Modern Neural Networks",
+        "unread_scope": "Supplement S1–S4, linked references, source code and all original datasets/models/weights unreceived/unexecuted. Reference list is not full-paper reading of cited work.",
+        "url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf"
+      }
+    ],
+    "scope": "R331 primary source acquisition; max2searchqueries+3GETs/2MiBcombined/1MiBbody/120s acquisitionwall; no retries/redirects/loginbypass",
+    "search_queries": 2
+  },
+  "canonical_reconciliation": {
+    "calibration": "ExistingM412/owner-level-probability family; controls/submethods,notnew independent strategyclaims",
+    "ofi": "Root must reconcile exactexisting flow/book method IDs; donotcollapseOFIwithunsignedvolume/pricewickproxies"
+  },
+  "core_recommendations": [
+    "Choosefinitefamilies and temporaldisjoint basefit/calibratorfit/modelselection beforelaterdiagnostic.",
+    "Judgeclasswise probabilities andproperloss againstprior;confidence/ECEalone canhide rarebreakout errors.",
+    "No100sample/20sample theoreticalminimum or guaranteedcalibration found; oursareprotocolchoices.",
+    "Labelidentityregularization asournewvariant ifused; paperODIR isdifferent.",
+    "No primarysource privateinstitutionalstrategy orprofitguarantee."
+  ],
+  "enumerated_records": 40,
+  "new_market_or_history_requests": 0,
+  "new_strategy_trials": 0,
+  "our_implementation": {
+    "canonical_method": "M412",
+    "feature_source": "28oldMEXCrawpages;50112OHLCrows exactlymatch existingclose/vol/amount; no rawfields claim signedflow.",
+    "models": "Fixedridge C.1 andshallowHGB32; raw/temperature/OURidentityDirichlet, prior and oldreferences; selection via disjointNovDec2025NLL. No paper source model/code/reportedoutcomes replicated.",
+    "new_aliases": 0,
+    "new_market_requests": 0,
+    "old_history_budget": {
+      "cap_mib": 250,
+      "cap_requests": 8000,
+      "exact_remaining_bytes": null,
+      "reported_spent_mib": "229.85",
+      "reset": false,
+      "spent_requests": 7757
+    },
+    "ownvariant": "softmax(Wlogp+b), meanNLL+||W-I||²/6+||b||²/6, parametersbounded[-5,5]; NOT paperODIR.",
+    "read_unread": "Full receivedscope in40enumeratedrecords; sourcepapers selectedmainsections only, appendices/code/supplements/data/weights generally unread/unexecuted.",
+    "sample_requirements": "50train/5eachclass,30cal/3eachclass,30selection are OUR fixed practicalminimums, not source guarantees.",
+    "source_only_related_methods": [
+      "M084",
+      "M264"
+    ],
+    "temporal_protocol": "MayAugtrain;SepOctcalibrationfit;NovDecselection;JanSep2026diagnostic. Each learnedartifact committed before later labels."
+  },
+  "records": [
+    {
+      "id": "CAL-PROPER-NLL",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Scores also depend on discrimination/refinement; no profit guarantee."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Minimize negative log probability of actualclass on calibration data; logloss and Brier assess predictive distributions, not calibration alone.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-RELIABILITY",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Binning is an approximation; empty/sparse/dependent bins prevent strong coverage claims."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Bin predicted confidence and compare empirical accuracy with meanconfidence; retain bin samplecounts.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-ECE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Only maxclass confidence, not full classwise/multiclass calibration; scalar goodscore can hide rareclass error."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Confidence-ECE is sampleweighted absolute accuracy-minus-confidence gap over fixedbins; MCE is the largest such gap.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-HIST-WIDTH",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Weak model retained; sparsebins and multiclassrenormalization not calibrated guarantees."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Disjoint calibration predictions+labels"
+      ],
+      "rule": "Fixed equal-width probability bins map to mean positiveclass frequency, minimizing bin squaredloss.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-HIST-FREQ",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Learned bins must not use future test labels."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Disjoint calibration predictions+labels"
+      ],
+      "rule": "Equal-frequency quantile bin variant of histogram calibration.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-ISOTONIC",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Small samples may overfit; creates ties; no theorem giving safe20/50sampleminimum in read sources."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Fit a nondecreasing step map minimizing squared calibration loss; jointly learns partition and outputs.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-BBQ",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Full referenced algorithm/code not received; higher complexity and no financial evidence."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Bayesian average over binning schemes with scheme posteriorweights and Beta-binomial marginal likelihood.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-PLATT",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Related binarycalibrator, not automatically a native3class map."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Binary sigmoid map sigma(a*z+b), base classifier fixed, parameters fit NLL on held-out calibration.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-OVR-NORMALIZE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Renormalization is explicitly NOT guaranteed to preserve classwise calibration."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Fit one binarycalibrator perclass then normalize class probabilities.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-MATRIX",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "K²+K rawparameters; small calibration sets may overfit; observed benchmark effects not universal."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Apply softmax(W*z+b) to logits; fit W,b by calibration NLL.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-VECTOR",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Differentinput variants must not be silently aliased."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Restrict W to diagonal; originalGuo useslogits, Kullnon-neuralcomparison applies to logprobabilities.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-TEMPERATURE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Guo explicitly assumes train/cal/test same distribution; singleT cannot correct distinct class biases; no newlycreated predictive information."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Logits OR positive class probabilities wherelogp can act aslogits",
+        "Disjoint calibrationlabels"
+      ],
+      "rule": "For T>0 use softmax(z/T); optimize held-out NLL with base model fixed. T=1identity,T>1softens,T<1sharpens; argmax unchanged.",
+      "source": "temperature+dirichlet"
+    },
+    {
+      "id": "CAL-DIR-GENERATIVE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Derivation doesnot require actual predictedvectors truly followDirichlet to fit the discriminative map."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Derive classconditional Dirichlet likelihood map from classpriors and predictedprobability vector; normalize posterior classscores.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-LINEAR",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Twelve rawparameters for3classes, with softmax nonidentifiability; small sample risk."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Strictpositive normalizedprobabilities or preregistered zero clipping",
+        "Frozen classordering"
+      ],
+      "rule": "Native multiclass map softmax(W*log(p)+b), fitted by multinomial logloss; identity W=I,b=0 belongsfamily.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-CANONICAL",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Supplementaryequivalence proof not read/rederived; not an independentlyexecuted implementation."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Equivalent uniqueparameterization uses nonnegative matrix columns each with a zero and central-simplex probabilityvector.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-L2",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Ordinary L2towardzero is NOT shrinkage towardidentity; exact penalty convention andbias handling must be declared in ourprotocol."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Fit Dirichletlinear map with L2regularization; mainpaper mentions multinomialNewton/gradient/Hessian fitting.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-ODIR",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Penalty of||W−I||² would be OURdifferentregularizer, notpaperODIR; sum-vs-mean loss changeslambda scaling."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Meanlogloss + lambda/[K(K−1)]*sum(offdiagonalW²) + mu/K*sum(b²). Diagonalweights unpenalized; hyperparameters internallyvalidated in paper.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-ZERO-CLIP",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Ourclip/renormalization/numericalbounds must be frozen separately and regressionchecked."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Paper clips exactlyzero inputprobabilities to2.2e−308 beforelog, usingfloat64.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-DIR-TEMP-SUBFAMILY",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Relation offamilies doesnot mean equal fitted models or safeoutcomechoices."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Temperature is Dirichletlinear subfamily W=(1/T)I,b=0; binaryDirichlet family coincides with betacalibration.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-MULTICLASS-DEFINITIONS",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Confidence-calibrated doesnot imply classwise/fullcalibrated; sourcegivescounterexample."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Fullcalibration conditions on the completeprobabilityvector; classwiseconditions on oneclassprobability; confidenceconditions only onmaxprobability/argmax.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-CLASSWISE-ECE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Depends onbins/samplecounts; dominanttimeoutclass mustnot hide breakout/rebounderrors."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Average sampleweighted absolute observed-vs-predicted gaps over everyclass/bin, notjustargmaxclass.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-PSEUDOLABEL-TEST",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Not transferred asvalidpvalue for temporally/crossassetdependentcryptoevents."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Source compares actualECE to categorical-pseudolabel MonteCarloECE under calibration.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-PRIOR-CONTROL",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Calibration alone is not an edge."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "A constant overallclassdistribution can be almostperfectlycalibrated while carrying no useful instanceinformation; retain properloss/discrimination and economiccontrols.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-NESTED-ENSEMBLE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Randomfold sourceprotocol not directly suitable for overlapping time-serieslabels; chronologicaldisjoint/purgedsplits needed in oursetting."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Non-neuralexperiments use repeatednestedCV and average internalcalibration maps; hyperparameters selected with logloss. Neuralexperiments use5000/6000calibrationexamples and internal5foldmaps.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-MS-ODIR",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Requireslogits; not identical to Dirichlet onlogp."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Matrixscaling on original logits plusODIR regularization; retains information lost bylogsoftmaxprobability transformation.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-MS-ODIR-ZERO",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "A distinct ablation, not a freefix selected aftertestoutcomes."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Postfit ablation sets offdiagonal matrixscaling weights tozero toassess pairwiseclass effects.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-ARCH-OBSERVATIONS",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Authors explicitly do not claim causality; not a prescription to increase ourmodelcomplexity."
+      ],
+      "read_scope": "Mainobservational discussion read",
+      "requires": [],
+      "rule": "Study observes depth,width,BatchNorm andweightdecay associations withcalibration and a divergence betweenclassificationerror andNLL.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-RELATED-BAYES",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Originalalgorithms/papers/code not read, no private ortrading implication."
+      ],
+      "read_scope": "Related-work mentions only",
+      "requires": [],
+      "rule": "Bayesianneuralnet posterioroutput, MCdropout, mean/variancepredictiveuncertainty anddeepensembles mentioned as relateduncertainty families.",
+      "source": "temperature"
+    },
+    {
+      "id": "CAL-RELATED-REGULARIZATION",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "No fullmechanics/code/datasets received; retained asunreadalternative families, notimplementedmethods."
+      ],
+      "read_scope": "Related-work mentions only",
+      "requires": [],
+      "rule": "Nearisotonic,Bayesianisotonic,MMCEkernel+logloss training,SWAGweightposterior,GaussianProcessclassification-to-regression andisotonicquantilemethods are mentioned.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "CAL-BASE-CLASSIFIER-COMPARATORS",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "All11originaltrainedmodels/results unexecuted andnottransferred toMEXC."
+      ],
+      "read_scope": "Experimentalcomparatorlist received",
+      "requires": [],
+      "rule": "Sourcebenchmarkslogistic,naiveBayes,randomforest,adaboost,LDA,QDA,decisiontree,kNN,MLP,linearSVC,RBFSVC; these arebenchmarkcontext, notourtestedvariants.",
+      "source": "dirichlet"
+    },
+    {
+      "id": "OFI-EVENT",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Atunchangedprices both>=and<=terms apply. OHLCVcannotidentifythis. Print/cancelremovedbid quantities are notseparatelyidentified byOFI."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Orderedbidprice/size andaskprice/size updates",
+        "Quotequantityunits",
+        "Oldbookstate andactualupdateclocks"
+      ],
+      "rule": "e_n=I[bid_n>=bid_prev]qbid_n−I[bid_n<=bid_prev]qbid_prev−I[ask_n<=ask_prev]qask_n+I[ask_n>=ask_prev]qask_prev.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-AGGREGATE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Snapshotintervals withunseenupdates mayloseinformation; totals are notaggressorsignedvolume."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "No omitted/mergedunknownupdatepaths",
+        "Declaredtimegrid andgapsemantics"
+      ],
+      "rule": "Sum eventcontributions over the declared timeinterval; includeslimitadditions,cancellations and marketorders through quotechanges.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-CONCURRENT-PRICE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Contemporaneousexplanation is NOT forecastability or an executablebreakoutedge."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Midquotes attimeboundaries",
+        "Ticksize",
+        "Causaleventalignment"
+      ],
+      "rule": "Regress SAMEinterval midquote tickchange onOFI plusintercept/noise.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-STYLIZED-DEPTH",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Realbook hiddenliquidity,depthgaps,nonbestupdates andfluctuatingdepth violateassumptions."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Strong stylizedassumptions"
+      ],
+      "rule": "FlatdepthD atlevels andbest-onlyorderactivity gives approximateDeltaMid=OFI/(2D)+roundingerror.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-DEPTH-IMPACT",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Printedaveragedepthdenominator/transcription shouldbecheckedbeforeadoption; noverifiedvenueunit/calibration."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Observedimpactcoefficient beta_i modeledas c/(averageDepth_i)^lambda +noise;lambda1 correspondsflatdepthstylization.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-TRADE-IMBALANCE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Appendixclassificationprocessing unread; barvolume isunsigned and cannot reconstructTI."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Tradesigns/quotealignment",
+        "Tradequantityunits"
+      ],
+      "rule": "TI=sum buyerinitiatedtradesizes−sum sellerinitiatedtradesizes; compareOFI-only,TI-only andjoint SAMEintervalprice regressions.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-TRADE-TIME-ROBUSTNESS",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Samplingattradetimes maycreateconcavity/selectionbias; not afuture signaltest."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "CompareL=2/5/10tradetimepricechanges and quadraticOFI|OFI| orTI|TI| terms asrobustness/selectiontimingchecks.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-VOLUME-SCALING",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Sourcecalls unsignedvolume relationship noisy/aggregation-sensitive; assumptionsnotverifiedforourdata."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [],
+      "rule": "Under iidfinitevarianceeventcontributions,eventratelimit andiidfinitetradesizemean, aCLT/LLN aggregation linksOFI tosqrt(volume).",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-DATA-SCOPE",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Reported65percentR2 is not crypto forecastaccuracy, ours, orprofit; noTAQdata downloaded."
+      ],
+      "read_scope": "main method/definition read",
+      "requires": [
+        "Dataset/licence/accessnotpossessed"
+      ],
+      "rule": "50randomSP500stocks,April2010 TAQ viaWRDS, orderedLevel1quoteupdates andtrades; explanatory10second midchangeswithinhalf-hours.",
+      "source": "ofi"
+    },
+    {
+      "id": "OFI-BAR-PROXY-BOUNDARY",
+      "implementation_status": "SOURCE_ONLY; not executed, not market/alpha validation",
+      "limitations": [
+        "Neededquotepath/first-seen timestamps/sizeunits missing fromhourlybars."
+      ],
+      "read_scope": "Ourinput-inference fromread eventdefinitions",
+      "requires": [],
+      "rule": "Ourinference: OHLCwick,closeposition andvolume ratios may be declared barfeatures butmustnot be calledOFI,absorption orcancellationflow.",
+      "source": "ofi"
+    }
+  ],
+  "restrictions": "No subscriptions,logins/APIlimits bypassed. Three public PDFs cached only, notmirrored intrackedrepo. Acquisitionscopeclosed,norenewal.",
+  "scope": "R331 bounded primary source extraction; source-only,no market/modeloutcomes read",
+  "searches": {
+    "count": 2,
+    "discovery_only": [
+      {
+        "not_received": "Full paper, equations, code, reported results, transfer to trading",
+        "received": "Search title and partial abstract metadata only",
+        "status": "unread discovery; no method implementation or project evidence",
+        "title": "Sample Margin-Aware Recalibration of Temperature Scaling",
+        "url": "https://proceedings.mlr.press/v306/guo26s.html"
+      }
+    ],
+    "other_primary_pdf": "https://arxiv.org/pdf/1011.6402",
+    "other_primary_pdf_basis": "Known paper identifier, not located by an extra search; its title/authors/version verified from received PDF.",
+    "primary_links_received": [
+      "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+      "https://papers.nips.cc/paper_files/paper/2019/file/8ca01ea920679a0fe3728441494041b9-Paper.pdf"
+    ],
+    "queries": [
+      "site.proceedings.mlr.press Guo 2017 On Calibration Modern Neural Networks temperature scaling pdf",
+      "Kull 2019 beyond temperature scaling Dirichlet calibration NeurIPS pdf Cont Kukanov Stoikov order book events 1011.6402"
+    ]
+  },
+  "unread_scope": [
+    "Allthreesupplemental/linkedpapers/code/datasets",
+    "DetailedOFIsection3regression/seasonality/appendix",
+    "Search-only2026SMARTpaper"
+  ]
+}

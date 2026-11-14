@@ -1,20 +1,286 @@
 # T
 
-A structured foundation for a crypto-perps research program. The goal is positive PnL, and the rule is that nothing counts as an edge until it survives pre-registration, a null, held-out data and a forward paper test.
+A pre-registered strategy-discovery lab for crypto perpetual futures. The goal is the best net PnL the owner can trade
+(MEXC perps first), proven on data the search never saw and handed over through the gates in
+[`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
+check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
-**Status:** a scaffold. It was built from reading an earlier Claude Code session, not from the original code and data, which stay on the owner's machine. Start with [`docs/FOUNDATION.md`](docs/FOUNDATION.md) for the conventions and [`docs/AUDIT.md`](docs/AUDIT.md) for the weak points found.
+[Guide de lecture en français](docs/guides/START_HERE.fr.md) · [Operator guide](docs/guides/OPERATIONS.md) · [Complete document index](#docs)
+
+## Start here
+
+| I want to… | Open |
+|---|---|
+| Understand the project and the identifiers | [Human reading guide](docs/guides/START_HERE.fr.md) |
+| See priorities and existing ideas | [Working direction](docs/DIRECTION.md), then the [live methods queue](registry/methods.csv) |
+| Read an experiment's actual scope and result | [Experiment catalog](experiments/README.md), then its PREREG and FINDINGS |
+| Find a source or a research design | [Research folder guide](research/README.md) |
+| Set up, inspect or run the software | [Operator guide](docs/guides/OPERATIONS.md) |
+| Make a change | [AGENTS.md](AGENTS.md), then fresh writer claims in [issue #7](https://github.com/SaikiK12/T/issues/7) |
+
+## Current status
+
+The [current paper runtime](docs/OPERATIONS.md) records the 2026-11-07 transfer
+to Codex, the single scheduled writer, canonical saved state and unresolved
+operational dependencies. The operator guide above covers local setup.
+
+The [panel](docs/PANEL.md) is a generated snapshot: check its build timestamp.
+[Issue #7](https://github.com/SaikiK12/T/issues/7) holds fresh writer claims and
+operational handoffs; [room #71](https://github.com/SaikiK12/T/issues/71) holds
+bounded Codex/subagent triage. The [live methods queue](registry/methods.csv),
+[round registry](registry/rounds.csv) and each lane's native PREREG/FINDINGS
+remain the authorities for ideas, registered work and exact tested scope.
+
+Process success, complete on-time data and admission through the
+[research gates](docs/GATES.md) are separate states. This page does not copy
+changing returns, observation counts or process-health claims.
+
+## Where things are
+
+| Folder | Purpose and entry point |
+|---|---|
+| [docs/](docs/README.md) | Reading guides, operating rules, topic notes, provenance and dated reviews |
+| [registry/](registry/README.md) | The canonical method queue, rounds, aliases and data manifest |
+| [experiments/](experiments/README.md) | Frozen protocols, native findings and lane evidence |
+| [research/](research/README.md) | Received sources, research designs, grouped reviews and bounded prototypes |
+| [reports/](reports/README.md) | Preserved narrative reviews and owner briefings |
+| [research_notes/](research_notes/README.md) | Supporting evidence for narrative reviews |
+| [lab/](lab/README.md) | Python research and paper-account library |
+| [scripts/](scripts/README.md) | Acquisition, recorders, runners, checks and navigation commands |
+| [engine/](engine/README.md) | The locked Rust qx execution engine |
+| [dashboard/](dashboard/README.md) | Control Room view and its data-publication contract |
+| [templates/](templates/README.md) | Starting a lane or a source card |
+| [tests/](tests/README.md) | Validation commands and test conventions |
+| data/ | Local market inputs and recordings; bulk data is excluded from Git |
 
 ## Use
 
-```
-python3 -m unittest discover -s tests -t .     # needs numpy
+Reading documents on GitHub needs no environment setup. After following the
+[operator setup](docs/guides/OPERATIONS.md#setup-inspection-and-explicit-execution),
+these commands inspect existing metadata without starting a research run:
+
+```sh
+.venv/bin/python -m lab find funding
+.venv/bin/python -m lab find --trace M290
+.venv/bin/python -m lab find R400
+.venv/bin/python -m lab status --state-dir /absolute/external/paper-runs --strict
+.venv/bin/python -m lab integrity
 ```
 
-```python
-from lab import prereg, registry, gate
-prereg.freeze("experiments/<lane>/PREREG.md")                  # once, before any statistic
-registry.append("registry/rounds.csv", lane="<lane>", title="...", status="REGISTERED", verdict="PENDING")
-gate.go_real(scored_returns, entry_days=entry_days)            # forward tickets, unlevered
-```
+The operator guide holds environment installation, complete test commands,
+explicit execution, paper-account examples and dashboard-publication details.
+Read [AGENTS.md](AGENTS.md) before writing; run the relevant checks and the full
+suite before a code commit. Generated folder catalogs come from
+`scripts/catalog.py`; stage intended registry/source changes before regenerating.
+`python scripts/catalog.py --check` reports stale views without rewriting them.
 
-Rules for contributors: [`AGENTS.md`](AGENTS.md). New lane: copy `templates/lane/`.
+## Docs
+
+The maintained complete topic index is below. Folder READMEs explain where to
+look; they do not maintain separate method queues or changing result counts.
+
+<details>
+<summary>Open the full document index: rules, data, methods, execution and reviews</summary>
+
+Read by task instead of loading this entire list. The authority for current method status is
+[`registry/methods.csv`](registry/methods.csv), and for recorded round status/trials/verdicts it is
+[`registry/rounds.csv`](registry/rounds.csv). Read the linked lane's PREREG and FINDINGS for exact scope. The panel
+is a timestamped generated snapshot; consult fresh claims in [issue #7](https://github.com/SaikiK12/T/issues/7)
+for active writers. Dated proposals, audits and source notes below retain history, not a second current queue.
+
+**Start here**
+- [`HANDOVER.md`](docs/HANDOVER.md): how to get everything back without Claude: what is in git, what is not, the data
+  manifest and archive commands, the keys (names only), and the scheduled checks ([`handover/`](docs/handover/SCHEDULED_CHECKS.md)).
+- [`PANEL.md`](docs/PANEL.md): timestamped generated snapshot (check its build timestamp).
+- [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
+- [`MAP.md`](docs/MAP.md): what is known, lane by lane.
+- [`EDGE_SCOREBOARD.md`](docs/EDGE_SCOREBOARD.md): the evidence for each edge.
+- [`EDGE_MAP.md`](docs/EDGE_MAP.md): every method and round placed in one of 32 edge families, each with who pays,
+  its net P&L equation, the fake-edge checks, the gaps and the next refinement (generated by `scripts/edge_map.py`).
+- [`loop/PROMPT.md`](docs/loop/PROMPT.md): the edge loop's self-edited instructions, run by a scheduled task every
+  3 hours. Its working memory is [`loop/STATE.md`](docs/loop/STATE.md). [`INFRA_GAP.md`](docs/INFRA_GAP.md) explains
+  why fast firms win, what their infrastructure would change, and keeps a ledger of edges only scale would flip.
+
+**Rules and process**
+- [`FOUNDATION.md`](docs/FOUNDATION.md): conventions.
+- [`GATES.md`](docs/GATES.md): gates and reserved samples.
+- [`ROOM.md`](docs/ROOM.md): the Claude and Codex protocol, issue #7.
+
+**Data**
+- [`DATA_SOURCES.md`](docs/DATA_SOURCES.md): every folder, its source and digests; `docs/provenance/` holds the records.
+- [`DATA_PROVENANCE_AUDIT.md`](docs/DATA_PROVENANCE_AUDIT.md).
+- [`BENCHMARK.md`](docs/BENCHMARK.md): the lab against the best open-source quant projects and free data.
+- [`WEB_SEARCH.md`](docs/WEB_SEARCH.md): the web search protocol; searches are logged in the append-only [`registry/web_searches.csv`](registry/web_searches.csv).
+- [`FREE_AI_AGENT.md`](docs/FREE_AI_AGENT.md): running an AI coding agent from a phone through GitHub Actions.
+
+**Methods and research notes**
+
+- [Original equation discovery workbench](research/discovery/README.md): fourteen observation/equation lenses linked to the canonical edge map, source capabilities, declaration checks, bounded grammar and the protocol for a future market test. The canonical methods queue remains authoritative.
+- [R400 path-response experiment](experiments/path_response_v1/FINDINGS.md): frozen raw-event equation search and its terminal source-coverage refusal; [timestamp-only diagnosis](scripts/audit_path_timing.py) reads no price or size columns.
+- [Leading-strategy hybrid review](research/HYBRID_REVIEW_20261029.md): source reviews and the latest deep-batch decisions, ranked work paths, prior nulls, comparison controls and current data blockers.
+- Queue and claims: [`METHODS_QUEUE.md`](docs/METHODS_QUEUE.md), [`CLAIMS.md`](docs/CLAIMS.md),
+  [`OLD_SESSION_EDGES.md`](docs/OLD_SESSION_EDGES.md).
+- Sources and literature: [`SOURCES.md`](docs/SOURCES.md),
+  [`PRIMARY_EQUATIONS.md`](docs/PRIMARY_EQUATIONS.md) (bounded primary reading, exact equations and execution prerequisites),
+  [`QUANTPEDIA_RESEARCH_REVIEW.md`](docs/QUANTPEDIA_RESEARCH_REVIEW.md),
+  [HFT corpus intake note](research/intake/hft_corpus_20261028.md) (46 indexed sources, exact read scope),
+  [`CRYPTO_CROSS_SECTION_EVIDENCE.md`](docs/CRYPTO_CROSS_SECTION_EVIDENCE.md), [`CONCEPTS.md`](docs/CONCEPTS.md).
+- Dated proposals and coverage reviews: [`NEXT_SEARCH_SPACE.md`](docs/NEXT_SEARCH_SPACE.md),
+  [`RESEARCH_FRONTIER.md`](docs/RESEARCH_FRONTIER.md),
+  [`RESEARCH_COVERAGE_LEDGER.md`](docs/RESEARCH_COVERAGE_LEDGER.md),
+  [`RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md),
+  [`IMPROVEMENTS_20261105.md`](docs/IMPROVEMENTS_20261105.md) (100 improvements, ten picked to start; M477-M481).
+- Owner digest of the best leads and what is left to read: [`LEADS.md`](docs/LEADS.md) (dated 2026-11-02).
+- Topic briefs: [`ALTCOIN_LEADS.md`](docs/ALTCOIN_LEADS.md), [`FOREX_AND_INDICES.md`](docs/FOREX_AND_INDICES.md),
+  [`MARKET_DIRECTION_AND_REGIME.md`](docs/MARKET_DIRECTION_AND_REGIME.md),
+  [`VOLATILITY_AND_TAIL_RISK_FORECASTS.md`](docs/VOLATILITY_AND_TAIL_RISK_FORECASTS.md),
+  [`QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md`](docs/QUARTER_HOUR_AGGRESSOR_FLOW_PROPOSAL.md),
+  [`REELS_TRANSCRIPT.md`](docs/REELS_TRANSCRIPT.md), [`VIDEO_DIG.md`](docs/VIDEO_DIG.md) (the owner's TikToks and
+  practitioner podcasts: what to trade, news recording, the cross-family book),
+  [`COMMENT_DIG.md`](docs/COMMENT_DIG.md) (Hacker News, Reddit, Stack Exchange, YouTube and TikTok comments and podcast
+  transcripts: ideas M288+ and what the lab already tested),
+  [`AUCTION_AND_FLOW.md`](docs/AUCTION_AND_FLOW.md) (the owner's 21 terms: auction market theory, order flow, dealer
+  gamma/delta/vanna/charm exposure; critique, our own terminal, the AI council, questions for the owner),
+  [`QUANTDATA.md`](docs/QUANTDATA.md) (QuantData's options-flow metrics mapped to crypto data we hold; VPIN tested,
+  R291 NULL), [`TRADER_TALKS.md`](docs/TRADER_TALKS.md) (received practitioner talks and their extraction scope).
+
+**Trading, execution and capital**
+- The owner's venue: [`MEXC_EDGES.md`](docs/MEXC_EDGES.md). Other venues and their fees (Lighter's zero-fee API,
+  Paradex, Hyperliquid) and the prop trader's three edges: [`VENUE_STRUCTURE.md`](docs/VENUE_STRUCTURE.md).
+- Execution and carry: [`PERP_EXECUTION_AND_RISK.md`](docs/PERP_EXECUTION_AND_RISK.md),
+  [`PERP_CARRY_ACCOUNTING.md`](docs/PERP_CARRY_ACCOUNTING.md), [`OPERATIONAL_API_RISK.md`](docs/OPERATIONAL_API_RISK.md).
+- Paper and sizing: [`PAPER_REFINEMENT.md`](docs/PAPER_REFINEMENT.md), [`SIZING_EVIDENCE.md`](docs/SIZING_EVIDENCE.md).
+- New paper consumers can combine the frozen risk engine with the external
+  [`PaperSolvencyGuard`](lab/paper_solvency.py); the read-only
+  [`snapshot capacity check`](scripts/check_paper_solvency.py) never admits entries by itself.
+- For loss at the proposed size, [`PaperSession`](lab/paper_session.py) accepts a
+  persistent [`EntryLossPolicy`](lab/paper_entry_risk.py), exact-size price/fee/funding
+  scenarios and native loss/drawdown headroom. See the [scope and formulas](docs/PAPER_REFINEMENT.md#7-loss-at-the-proposed-size-engineering-2026-11-05)
+  and [invented demo](scripts/demo_paper_entry_risk.py). These are paper vetoes,
+  not profitable-strategy or real-order approval.
+- Capital: [`CAPITAL_GATE_REVIEW.md`](docs/CAPITAL_GATE_REVIEW.md), [`PROP_FIRMS.md`](docs/PROP_FIRMS.md).
+- Capital-level carry/spot comparison: [R309 findings](experiments/capital_mix_v1/FINDINGS.md), with fixed
+  initial allocations, parent/passive/cash controls and all three cost tiers. Historical model evidence;
+  `lab.capital` combines accounts with explicit capital denominators.
+- Inverse carry mechanics: [R407 findings](experiments/locked_carry_mechanics_v1/FINDINGS.md)
+  and [`locked_carry`](lab/locked_carry.py) size fixed orders after fees, model
+  grid exits and retain unsold coin. Conditional cash bounds require explicit
+  exit assumptions; the invented-input audit establishes no market edge.
+
+**Audits and reviews**
+
+- [Venue access from France, 2026-11-10](docs/reviews/venue_access_fr_20261110.md): Binance, Gate, MEXC and
+  KuCoin do not serve French residents with perps; every forward carry lane has a leg on one of them. The
+  DEX-only book (hyperliquid+lighter) earned below the T-bill on seen rows. OKX's own guide puts France in scope
+  for OKX Europe X-Perps (all 30 EEA countries), so R441 (crypto X-Perps vs spot), R442 (stock X-Perps vs the
+  stock at a broker) and R443 (OKX X-Perps against Hyperliquid perps) test that route on recorded data; R444 tests
+  long spot against short perp on Hyperliquid alone, and R445 the same on HYPE and BTC, fully deployed under
+  portfolio margin (forward to 2027). R446 holds deposits in Hyperliquid's HLP and Lighter's LLP vaults: about
+  +10.7%/yr each in 2026, short the venue's tail; LLP needs staked LIT. R447 holds LLP with that stake hedged by a
+  LIT perp short: +10.04%/yr on all capital in 2026, t 3.94 on seen LLP returns (both forward to 2027). R448 prices
+  the flow books on Hyperliquid: the same as Binance on the coins both list, but the crypto gain sat in coins
+  Hyperliquid does not list (book A +4.9 bp/day, t 0.91; B stopped). R449 holds Jupiter's JLP and GMX's GM
+  ETH-USDC pool tokens with their crypto exposure shorted on Hyperliquid: hedged JLP earned +43.9%/yr in 2024 but
+  +5.6% in 2026, GM +7.2% in 2026, below the vaults (forward to 2027). R451 prices R200's stock-perp flow books on
+  Hyperliquid's xyz (HIP-3) markets: they match Binance's to a daily correlation of 0.9998 (A +13.4% over 41 seen
+  days), so the TradFi part can execute from France; R200's forward decides the signal. R452 picked Lighter's
+  operator pools by past record: NULL; the average pool lost 5.2%/yr after fees while LLP made +10.7%
+  ([vault competitors](research/intake/perp_vaults_20261111.md)). R450 picked Hyperliquid's steadiest user vaults:
+  NULL, −23.2%/yr net (t −2.26 against the hurdle); several picks blew up in the 2025-10-10 crash. R453 re-prices
+  R451's books at xyz's measured costs (growth-mode fee 0.9 bp plus recorded slippage), for real money equal to paper
+  ([HIP-3 venues](research/intake/hip3_venues_20261111.md): 7 of 10 HIP-3 dexes are fully delisted). R454 tests
+  HLP's own inventory, recorded hourly from 2026-11-11, as a signal: short where HLP is most net short (F) or long
+  (R), hedged, forward from 2026-11-12 ([lane](experiments/hlpinv_v1/README.md)). R455 applies the same frozen rule
+  to Lighter's LLP pool on Lighter's markets ([lane](experiments/llpinv_v1/README.md)); R456 re-prices both at the
+  book costs recorded hourly on each venue ([lane](experiments/invcost_v1/README.md)). R457 trades R371's US-open
+  picks (C17, the strongest blind read) on Lighter and Hyperliquid at their own prices and book costs, from
+  2026-11-12 ([lane](experiments/usopen_dex_fwd/README.md)). R458 re-prices R448's crypto flow books at
+  Hyperliquid's 4.5 bp fee plus the main-dex slippage recorded hourly ([lane](experiments/flow_hl_mc_v1/README.md)). R459
+  tests R432's oil lead, a fade of the WTI/Brent weekend move through the CME reopen, on Lighter from 2026-11-13
+  ([lane](experiments/oilwknd_fwd/README.md)). R463 trades R462's trade.xyz US-stock weekend fade forward from
+  2026-11-13, at recorded fees and book costs, with point-in-time tickets that walk the live book
+  ([lane](experiments/xyzwknd_fwd/README.md)). R464 found that the fade does not carry over to trade.xyz's index,
+  commodity and FX perps (NULL; [findings](experiments/xyzns_wknd_v1/FINDINGS.md), idea wave 6
+  [intake](research/intake/idea_wave6_20261111.md)). R465 replicates the stock-perp fade on Lighter at zero fee
+  (A +45 bp, B +36 bp; the unseen February-April weekends gave it back only on Monday morning; PARTIAL,
+  [findings](experiments/ltwknd_v1/FINDINGS.md)). R466 found the xyz-versus-Lighter Sunday gap too small to trade
+  (INCONCLUSIVE, [findings](experiments/xvwknd_v1/FINDINGS.md), idea wave 7
+  [intake](research/intake/idea_wave7_20261111.md)). R467 trades R465's Lighter fade forward from 2026-11-13, at the
+  recorded Lighter book cost, with live book-walk tickets ([lane](experiments/ltwknd_fwd/README.md)).
+  R468 tested the same fade on Asian single-stock perps over the home exchange's weekday-night closure
+  (xyz and Lighter): A +88 bp (p 0.03), but B +9 bp with a zero median, so the effect did not carry into
+  September-November (frozen PASS, recorded PARTIAL; [findings](experiments/asiaclose_v1/FINDINGS.md)).
+  R469 reads R468's frozen rule once on openings no lane has seen (2026-11-12 to 2027-01-29), by workflow on
+  2027-02-01 ([lane](experiments/asiaclose_c/README.md)).
+  R470 found the funding carry between xyz and Lighter on the same stock perp too thin: A's excess over a 4%/yr
+  hurdle is -2.6 points at 1x and +0.3 before costs (NULL, [findings](experiments/xvfund_v1/FINDINGS.md)).
+  R471 found that Bitcoin-linked stocks (MSTR, COIN, MARA, RIOT) open with Bitcoin's weekend move already priced
+  and then neither follow nor fade it during Monday's session (slope +0.06, t 0.48; NULL,
+  [findings](experiments/cryptomon_v1/FINDINGS.md), idea wave 8 [intake](research/intake/idea_wave8_20261112.md)).
+  R472 rebuilt Harvey, Mazzoleni and Melone's balanced-fund rebalancing rule on SPY/IEF closes: it earned
+  +2.7 bp a day net in their published span, but only one of their two slopes reproduces at the bar, and after
+  2023 it earns +0.05 bp a day net (NULL, [findings](experiments/rebalfront_v1/FINDINGS.md)).
+  R473 found the end-of-month Treasury rally (Hartley and Schwarz) still positive on TLT after 2018 before costs
+  (+24.7 bp a month, t 1.79), but only +13.0 bp (t 0.95) net of xyz's TLT perp cost, and xyz:TLT longs have paid
+  about 20%/yr funding since listing (PARTIAL, no lane; [findings](experiments/tlteom_v1/FINDINGS.md)).
+  R474 turns that funding into a forward paper lane: hold the UCITS 20+ year Treasury ETF (DTLA) and short
+  xyz:TLT, keeping the coupons and the funding, judged against the T-bill on 2027-02-13 and 2027-05-15 (frozen;
+  [lane](experiments/tltcarry_fwd/README.md)).
+  R475 shorted trade.xyz US-stock perps whose longs pay high funding and held the same stocks: +11.2 points a
+  year over the T-bill in January-July (t 2.03), but about half of it is one liquidation day on one name, and the
+  funding carry alone fell below the bill from August (frozen PASS, recorded PARTIAL;
+  [findings](experiments/hip3stock_v1/FINDINGS.md)). The same rule earned +3.1 points of nearly pure carry on the
+  other HIP-3 deployers, but in only nine trades on venues that have since closed (R476,
+  [findings](experiments/hip3other_v1/FINDINGS.md)). On xyz index, ETF and metal perps hedged with London-listed
+  twins it earned +1.6 points with too much hedge noise to tell from zero (R477,
+  [findings](experiments/xyztwin_v1/FINDINGS.md)). Shorting xyz's natural-gas perp against UNG, funding beat the
+  contango roll in January-July (+10.5 points, t 1.68) but not after (R478,
+  [findings](experiments/rollcarry_v1/FINDINGS.md)); all three are PARTIAL. R480 runs the natural-gas trade
+  forward with the NYMEX contracts the perp references, rolled on its own days, read on 2027-05-15 and 2027-11-13
+  (frozen; [lane](experiments/futroll_fwd/README.md)). R479 runs the stock and twin carry
+  forward from 2026-11-16 at measured costs, read on 2027-02-13 and 2027-05-15 (frozen;
+  [lane](experiments/hip3carry_fwd/README.md)).
+- [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
+  (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
+  venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
+  pool tokens (JLP, GM) decayed from +44%/yr in 2024 to about +6% in 2026; R451 shows the stock-perp flow books
+  execute on Hyperliquid's xyz as on Binance, and R452 and R450 that operator pools and user vaults do worse
+  than LLP and HLP.
+- [False-null audit, 2026-11-10](docs/reviews/false_null_audit_20261110.md): could errors have hidden real
+  edges? Engines mostly clean (listing cost tier and R271's unpriced legs move no verdict); most NULLs were
+  underpowered; one second-writer incident on Codex's forward lanes.
+- [Hidden-edge audit, 2026-11-04](docs/reviews/hidden_edge_audit_20261104.md): six checkers on units, costs,
+  timing, data, statistics and the qx engine; more inflated gains than hidden ones.
+- [Repository execution batch, 2026-11-04](docs/reviews/project_execution_20261104.md):
+  new paper-session bridge, segmented recovery, independent dashboard bundle,
+  funding schema evidence and bounded R401/R402 source qualification; the report
+  separates shipped engineering from missing inputs and prospective dates.
+- [Funding-notional audit](lab/funding_notional.py) and [invented sign-flip demo](scripts/audit_funding_notional.py):
+  [R388's funding approximation](experiments/forcedswitch_v1/FINDINGS.md#engineering-clarification-funding-notional-2026-11-03-no-market-rerun)
+  and [R333's fee/weighting clarification](experiments/level_probability_v2/FINDINGS.md#reporting-clarification-2026-11-03-no-new-market-statistic)
+  preserve the frozen verdicts while narrowing claims to their actual scope.
+- [Event-recorder review](docs/reviews/event_recorders_20261102.md): receipt-time semantics,
+  calendar error handling and safe integration around active writers.
+- [Room actions, 2026-11-03](docs/reviews/room_actions_20261103.md): external paper-capital veto,
+  BLS schedule access/capture and native-findings navigation, coordinated in [issue #71](https://github.com/SaikiK12/T/issues/71).
+- [Historical project-direction review](reports/Project%20direction%20from%20quant%20evidence.md)
+  and [repository hygiene review](reports/Repo%20hygiene%20plan.md): preserved 2026-10-20/26 snapshots,
+  with original-revision links; their numerical status and recommendations require current evidence.
+- Program-level: [`AUDIT.md`](docs/AUDIT.md), [`CRITIQUE.md`](docs/CRITIQUE.md),
+  [`SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md`](docs/SELECTION_AND_TRIAL_ACCOUNTING_AUDIT.md),
+  [`CONFIDENCE_REVIEW.md`](docs/CONFIDENCE_REVIEW.md),
+  [`CONFIDENCE_AND_SIZING_AUDIT.md`](docs/CONFIDENCE_AND_SIZING_AUDIT.md).
+- Data and code integrity: [`IMPLEMENTATION_INTEGRITY_REVIEW.md`](docs/IMPLEMENTATION_INTEGRITY_REVIEW.md),
+  [`FEATURE_VINTAGE_INTEGRITY.md`](docs/FEATURE_VINTAGE_INTEGRITY.md),
+  [`TARGET_INTEGRITY_FIX.md`](docs/TARGET_INTEGRITY_FIX.md),
+  [`CONTRACT_LIFECYCLE_INTEGRITY.md`](docs/CONTRACT_LIFECYCLE_INTEGRITY.md),
+  [`POSITIONING_AND_ORDERFLOW_VALIDITY.md`](docs/POSITIONING_AND_ORDERFLOW_VALIDITY.md).
+- Forecast evaluation: [`FORECAST_EVALUATION_PLAYBOOK.md`](docs/FORECAST_EVALUATION_PLAYBOOK.md),
+  [`ADAPTIVE_SELECTION_AND_DRIFT.md`](docs/ADAPTIVE_SELECTION_AND_DRIFT.md).
+
+Docs stay at their paths because frozen PREREGs link to them. Topic overlap alone does not establish duplication:
+source receipts, proposed mechanics, a frozen test and its verdict answer different questions. Add new facts to the
+existing intake, lane or process document before creating another review. Generated folder catalogs come from
+`scripts/catalog.py`; edit their registry/docstring sources, not the generated text.
+
+</details>

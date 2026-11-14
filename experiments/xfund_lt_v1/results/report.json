@@ -1,0 +1,659 @@
+{
+  "name": "xfund_lt_v1",
+  "trials": 6,
+  "coins": 195,
+  "coins_by_venue": {
+    "binance": 195,
+    "dydx": 91,
+    "gate": 194,
+    "hyperliquid": 100,
+    "kucoin": 186,
+    "lighter": 195,
+    "mexc": 117
+  },
+  "rc_null_p95": 2.002620369130859,
+  "verdict": "PASS (gate 0)",
+  "survivors": [
+    "mexc+lighter L14d th5% K20",
+    "gate+lighter L14d th5% K20",
+    "kucoin+lighter L14d th5% K20",
+    "binance+lighter L14d th5% K20"
+  ],
+  "sets": [
+    {
+      "set": "binance+lighter",
+      "lookback": 14,
+      "window_from": "2025-02-07",
+      "coins_ever": 152,
+      "mean_candidates": {
+        "0.05": 40.05823627287854
+      }
+    },
+    {
+      "set": "gate+lighter",
+      "lookback": 14,
+      "window_from": "2025-02-07",
+      "coins_ever": 150,
+      "mean_candidates": {
+        "0.05": 41.24126455906822
+      }
+    },
+    {
+      "set": "hyperliquid+lighter",
+      "lookback": 14,
+      "window_from": "2025-02-07",
+      "coins_ever": 97,
+      "mean_candidates": {
+        "0.05": 30.532445923460898
+      }
+    },
+    {
+      "set": "mexc+lighter",
+      "lookback": 14,
+      "window_from": "2025-05-12",
+      "coins_ever": 106,
+      "mean_candidates": {
+        "0.05": 39.50887573964497
+      }
+    },
+    {
+      "set": "kucoin+lighter",
+      "lookback": 14,
+      "window_from": "2025-02-07",
+      "coins_ever": 150,
+      "mean_candidates": {
+        "0.05": 47.02828618968386
+      }
+    },
+    {
+      "set": "dydx+lighter",
+      "lookback": 14,
+      "window_from": "2025-02-07",
+      "coins_ever": 36,
+      "mean_candidates": {
+        "0.05": 9.445923460898502
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "label": "mexc+lighter L14d th5% K20",
+      "strat": {
+        "set": "mexc+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-05-12",
+      "stats": [
+        {
+          "days": 507,
+          "mean_bp": 1.6999597622475784,
+          "ann_pct": 6.204853132203661,
+          "vol_pct": 1.0634675483240033,
+          "sharpe": 5.834548634777192,
+          "t": 6.876458269290312,
+          "t_nw": 6.769384640529395,
+          "half1_bp": 1.9438048166756787,
+          "half2_bp": 1.457074727718802,
+          "recent_bp": 1.6999597622475784,
+          "recent_days": 507,
+          "trimmed_bp": 1.6010927178348804,
+          "max_dd_pct": -0.20807301473717565,
+          "top10_share": 0.25628439035865097,
+          "total_pct": 8.991784229691579
+        },
+        {
+          "days": 507,
+          "mean_bp": 1.3690919121489593,
+          "ann_pct": 4.9971854793437025,
+          "vol_pct": 1.0773078605341324,
+          "sharpe": 4.638586296832627,
+          "t": 5.466925908980707,
+          "t_nw": 5.311470939866176,
+          "half1_bp": 1.6242395992843728,
+          "half2_bp": 1.1149487434668335,
+          "recent_bp": 1.3690919121489593,
+          "recent_days": 507,
+          "trimmed_bp": 1.2739764376451261,
+          "max_dd_pct": -0.23952133454481217,
+          "top10_share": 0.31425873191388426,
+          "total_pct": 7.178752077752648
+        },
+        {
+          "days": 507,
+          "mean_bp": 1.0382240620503398,
+          "ann_pct": 3.78951782648374,
+          "vol_pct": 1.1001151770751627,
+          "sharpe": 3.4446555283045877,
+          "t": 4.059787907376185,
+          "t_nw": 3.894454720259277,
+          "half1_bp": 1.3046743818930697,
+          "half2_bp": 0.7728227592148651,
+          "recent_bp": 1.0382240620503398,
+          "recent_days": 507,
+          "trimmed_bp": 0.9530508843252072,
+          "max_dd_pct": -0.4167534128477923,
+          "top10_share": 0.4096944596883445,
+          "total_pct": 5.395673989677818
+        }
+      ],
+      "funding_share": 0.935274685678708,
+      "avg_held": 19.976331360946745,
+      "trades": 305,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "gate+lighter L14d th5% K20",
+      "strat": {
+        "set": "gate+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-02-07",
+      "stats": [
+        {
+          "days": 601,
+          "mean_bp": 1.3101029733529823,
+          "ann_pct": 4.781875852738385,
+          "vol_pct": 0.9355998191848991,
+          "sharpe": 5.111026909885882,
+          "t": 6.5584161636744,
+          "t_nw": 7.619622878623862,
+          "half1_bp": 1.6479342041423488,
+          "half2_bp": 0.9733941054566014,
+          "recent_bp": 1.3101029733529823,
+          "recent_days": 601,
+          "trimmed_bp": 1.3244214877175207,
+          "max_dd_pct": -0.42537489350078506,
+          "top10_share": 0.23694350578228196,
+          "total_pct": 8.183654176607714
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.9769914924877566,
+          "ann_pct": 3.566018947580312,
+          "vol_pct": 0.9523708033043907,
+          "sharpe": 3.7443597968432925,
+          "t": 4.804723247833173,
+          "t_nw": 5.486696766301834,
+          "half1_bp": 1.3124342041423485,
+          "half2_bp": 0.6426632084466339,
+          "recent_bp": 0.9769914924877566,
+          "recent_days": 601,
+          "trimmed_bp": 0.9966132179222856,
+          "max_dd_pct": -0.5269973416152762,
+          "top10_share": 0.31023735859015994,
+          "total_pct": 6.039319595975745
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.6438800116225324,
+          "ann_pct": 2.350162042422243,
+          "vol_pct": 0.9793746440887987,
+          "sharpe": 2.3996557973060586,
+          "t": 3.079213169053423,
+          "t_nw": 3.45179253970221,
+          "half1_bp": 0.9769342041423497,
+          "half2_bp": 0.3119323114366676,
+          "recent_bp": 0.6438800116225324,
+          "recent_days": 601,
+          "trimmed_bp": 0.6725665894817907,
+          "max_dd_pct": -0.8057595410148166,
+          "top10_share": 0.4596961378323649,
+          "total_pct": 3.9372438062384996
+        }
+      ],
+      "funding_share": 1.0398577192542657,
+      "avg_held": 19.772046589018302,
+      "trades": 364,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "kucoin+lighter L14d th5% K20",
+      "strat": {
+        "set": "kucoin+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-02-07",
+      "stats": [
+        {
+          "days": 601,
+          "mean_bp": 1.5249351688383057,
+          "ann_pct": 5.566013366259816,
+          "vol_pct": 1.1367385620709047,
+          "sharpe": 4.896476245267584,
+          "t": 6.283106999475311,
+          "t_nw": 6.706332245811853,
+          "half1_bp": 1.681115230988299,
+          "half2_bp": 1.369273977326682,
+          "recent_bp": 1.5249351688383057,
+          "recent_days": 601,
+          "trimmed_bp": 1.5068854968222225,
+          "max_dd_pct": -0.4551074358811191,
+          "top10_share": 0.278308169165359,
+          "total_pct": 9.585563526052443
+        },
+        {
+          "days": 601,
+          "mean_bp": 1.15155746501135,
+          "ann_pct": 4.203184747291427,
+          "vol_pct": 1.148336042497358,
+          "sharpe": 3.660239330423261,
+          "t": 4.696780746963562,
+          "t_nw": 4.866801175600682,
+          "half1_bp": 1.3217818976549658,
+          "half2_bp": 0.9818985620442896,
+          "recent_bp": 1.15155746501135,
+          "recent_days": 601,
+          "trimmed_bp": 1.138973782051425,
+          "max_dd_pct": -0.6465756126226574,
+          "top10_share": 0.36059902631231644,
+          "total_pct": 7.153936583173248
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.7781797611843935,
+          "ann_pct": 2.8403561283230365,
+          "vol_pct": 1.168503941019488,
+          "sharpe": 2.4307629855701665,
+          "t": 3.119129587009114,
+          "t_nw": 3.140178209331363,
+          "half1_bp": 0.9624485643216316,
+          "half2_bp": 0.5945231467618983,
+          "recent_bp": 0.7781797611843935,
+          "recent_days": 601,
+          "trimmed_bp": 0.7710620672806279,
+          "max_dd_pct": -0.8376920200820481,
+          "top10_share": 0.5227112848831571,
+          "total_pct": 4.7760036764678215
+        }
+      ],
+      "funding_share": 1.0368730637270944,
+      "avg_held": 19.78702163061564,
+      "trades": 408,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "binance+lighter L14d th5% K20",
+      "strat": {
+        "set": "binance+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-02-07",
+      "stats": [
+        {
+          "days": 601,
+          "mean_bp": 1.2415790535378144,
+          "ann_pct": 4.531763545413022,
+          "vol_pct": 1.0472032237258957,
+          "sharpe": 4.32749197361066,
+          "t": 5.552992345433195,
+          "t_nw": 6.545890547230772,
+          "half1_bp": 1.4471386249614253,
+          "half2_bp": 1.0367024042784037,
+          "recent_bp": 1.2415790535378144,
+          "recent_days": 601,
+          "trimmed_bp": 1.2393355004991007,
+          "max_dd_pct": -0.871181442061697,
+          "top10_share": 0.2869145236844577,
+          "total_pct": 7.7371387071786035
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.909382714103539,
+          "ann_pct": 3.319246906477917,
+          "vol_pct": 1.0749756779063349,
+          "sharpe": 3.0877414016869786,
+          "t": 3.9621574049827655,
+          "t_nw": 4.5037840508398235,
+          "half1_bp": 1.1373052916280921,
+          "half2_bp": 0.6822173544445166,
+          "recent_bp": 0.909382714103539,
+          "recent_days": 601,
+          "trimmed_bp": 0.9167742470165777,
+          "max_dd_pct": -0.953096203726056,
+          "top10_share": 0.38669781631934785,
+          "total_pct": 5.60721060471423
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.5771863746692624,
+          "ann_pct": 2.1067302675428077,
+          "vol_pct": 1.1120676918094277,
+          "sharpe": 1.894426286330628,
+          "t": 2.4309079557238857,
+          "t_nw": 2.668175989913732,
+          "half1_bp": 0.8274719582947592,
+          "half2_bp": 0.32773230461063,
+          "recent_bp": 0.5771863746692624,
+          "recent_days": 601,
+          "trimmed_bp": 0.6020883386973914,
+          "max_dd_pct": -1.1907270331333653,
+          "top10_share": 0.6029174618302696,
+          "total_pct": 3.5191327579468856
+        }
+      ],
+      "funding_share": 1.0271707352098047,
+      "avg_held": 19.767054908485857,
+      "trades": 363,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": true,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": true
+    },
+    {
+      "label": "hyperliquid+lighter L14d th5% K20",
+      "strat": {
+        "set": "hyperliquid+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-02-07",
+      "stats": [
+        {
+          "days": 601,
+          "mean_bp": 0.9673745346883951,
+          "ann_pct": 3.530917051612642,
+          "vol_pct": 0.9670738074563777,
+          "sharpe": 3.651135026497874,
+          "t": 4.685098199585897,
+          "t_nw": 7.341444589901119,
+          "half1_bp": 1.0096992078939415,
+          "half2_bp": 0.9251904750150929,
+          "recent_bp": 0.9673745346883951,
+          "recent_days": 601,
+          "trimmed_bp": 0.9640194988361781,
+          "max_dd_pct": -0.26517018106820833,
+          "top10_share": 0.3157959666478209,
+          "total_pct": 5.977810146927731
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.5509851836068643,
+          "ann_pct": 2.011095920165055,
+          "vol_pct": 0.9861809035627233,
+          "sharpe": 2.0392768840885838,
+          "t": 2.6167787246326113,
+          "t_nw": 3.755786102544868,
+          "half1_bp": 0.5898658745606079,
+          "half2_bp": 0.5122336643838639,
+          "recent_bp": 0.5509851836068643,
+          "recent_days": 601,
+          "trimmed_bp": 0.5462739641221995,
+          "max_dd_pct": -0.5924973999015481,
+          "top10_share": 0.5511267861009823,
+          "total_pct": 3.3585033776461826
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.13459583252533353,
+          "ann_pct": 0.49127478871746744,
+          "vol_pct": 1.015898373163992,
+          "sharpe": 0.4835865492996149,
+          "t": 0.6205331917403142,
+          "t_nw": 0.8170216652101839,
+          "half1_bp": 0.17003254122727485,
+          "half2_bp": 0.09927685375263443,
+          "recent_bp": 0.13459583252533353,
+          "recent_days": 601,
+          "trimmed_bp": 0.1350479918500396,
+          "max_dd_pct": -0.9473375838974452,
+          "top10_share": 2.2468996451165335,
+          "total_pct": 0.8036454640582225
+        }
+      ],
+      "funding_share": 0.9712720902941603,
+      "avg_held": 19.53910149750416,
+      "trades": 455,
+      "forced_exits": 1,
+      "p_rc": 0.0004997501249375312,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": false,
+        "NW": true,
+        "RC": true,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": false
+    },
+    {
+      "label": "dydx+lighter L14d th5% K20",
+      "strat": {
+        "set": "dydx+lighter",
+        "lookback": 14,
+        "threshold": 0.05,
+        "slots": 20
+      },
+      "window_from": "2025-02-07",
+      "stats": [
+        {
+          "days": 601,
+          "mean_bp": 0.7267455846135091,
+          "ann_pct": 2.6526213838393082,
+          "vol_pct": 10.050790986701392,
+          "sharpe": 0.26392165426075404,
+          "t": 0.33866150066622586,
+          "t_nw": 1.1086722721232427,
+          "half1_bp": 1.109504887772148,
+          "half2_bp": 0.34525790704675874,
+          "recent_bp": 0.7267455846135091,
+          "recent_days": 601,
+          "trimmed_bp": 0.7010000654209336,
+          "max_dd_pct": -9.030902816978392,
+          "top10_share": 2.6899258824844647,
+          "total_pct": 3.5986535106778517
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.5373113084071861,
+          "ann_pct": 1.9611862756862293,
+          "vol_pct": 10.036421758595708,
+          "sharpe": 0.19540692119744452,
+          "t": 0.2507441132810988,
+          "t_nw": 0.820854662128062,
+          "half1_bp": 0.858338221105482,
+          "half2_bp": 0.21735093030257277,
+          "recent_bp": 0.5373113084071861,
+          "recent_days": 601,
+          "trimmed_bp": 0.5137759567621929,
+          "max_dd_pct": -9.035908149141846,
+          "top10_share": 3.622956477363824,
+          "total_pct": 2.428161912706961
+        },
+        {
+          "days": 601,
+          "mean_bp": 0.34787703220086347,
+          "ann_pct": 1.2697511675331516,
+          "vol_pct": 10.022423397744163,
+          "sharpe": 0.12669103241227525,
+          "t": 0.16256860498193215,
+          "t_nw": 0.5316355896817473,
+          "half1_bp": 0.6071715544388151,
+          "half2_bp": 0.08944395355838679,
+          "recent_bp": 0.34787703220086347,
+          "recent_days": 601,
+          "trimmed_bp": 0.3265518481034502,
+          "max_dd_pct": -9.04091348130529,
+          "top10_share": 5.572139097578799,
+          "total_pct": 1.2708089432093672
+        }
+      ],
+      "funding_share": 0.899086776312955,
+      "avg_held": 12.913477537437604,
+      "trades": 207,
+      "forced_exits": 0,
+      "p_rc": 0.7041479260369815,
+      "gates": {
+        "COST2X": true,
+        "HALVES": true,
+        "HURDLE": false,
+        "NW": false,
+        "RC": false,
+        "RECENT": true,
+        "TRIM": true
+      },
+      "pass": false
+    }
+  ],
+  "spec": {
+    "name": "xfund_lt_v1",
+    "start": "2021-01-01",
+    "end": "2026-09-30",
+    "symbols": "experiments/xfund_lt_v1/symbols.csv",
+    "venues": [
+      {
+        "name": "binance",
+        "prices": "klines_1h",
+        "vol": "volume",
+        "funding": "fundingRate",
+        "bar_h": 1
+      },
+      {
+        "name": "gate",
+        "prices": "gate_hist/open/candlesticks_1h",
+        "vol": "vol_contracts",
+        "funding": "gate_hist/open/funding_applies",
+        "bar_h": 1
+      },
+      {
+        "name": "hyperliquid",
+        "prices": "hyperliquid/candles_1d",
+        "vol": "volume",
+        "funding": "hyperliquid/funding",
+        "bar_h": 24
+      },
+      {
+        "name": "mexc",
+        "prices": "mexc_hist/klines_1h",
+        "vol": "vol",
+        "funding": "mexc_hist/funding",
+        "bar_h": 1
+      },
+      {
+        "name": "kucoin",
+        "prices": "kucoin_hist/open/candles_1d",
+        "vol": "volume",
+        "funding": "kucoin_hist/open/funding",
+        "bar_h": 24
+      },
+      {
+        "name": "dydx",
+        "prices": "dydx_hist/open/candles_1h",
+        "vol": "volume",
+        "funding": "dydx_hist/open/funding",
+        "bar_h": 1
+      },
+      {
+        "name": "lighter",
+        "prices": "lighter_hist/open/candles_1h",
+        "vol": "volume",
+        "funding": "lighter_hist/open/funding",
+        "bar_h": 1
+      }
+    ],
+    "reserved_prereg": null,
+    "sets": [
+      [
+        "binance",
+        "lighter"
+      ],
+      [
+        "gate",
+        "lighter"
+      ],
+      [
+        "hyperliquid",
+        "lighter"
+      ],
+      [
+        "mexc",
+        "lighter"
+      ],
+      [
+        "kucoin",
+        "lighter"
+      ],
+      [
+        "dydx",
+        "lighter"
+      ]
+    ],
+    "lookbacks": [
+      14
+    ],
+    "thresholds": [
+      0.05
+    ],
+    "slots": [
+      20
+    ],
+    "costs": [
+      0.00055,
+      0.0011,
+      0.00165
+    ],
+    "corr_days": 30,
+    "corr_min": 0.9,
+    "corr_obs": 20,
+    "block_days": 10,
+    "reps": 2000,
+    "seed": 288,
+    "out": "experiments/xfund_lt_v1/results",
+    "alpha": 0.05,
+    "recent_from": "2025-01-01",
+    "trim": 0.01,
+    "nw_lags": 10,
+    "keep_daily": 6,
+    "hurdle_ann_pct": 4.13
+  }
+}

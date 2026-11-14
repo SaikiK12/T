@@ -1,0 +1,50 @@
+{
+  "purpose": "Independent raw CSV/Decimal check of the extreme STO diagnostic; not another strategy trial",
+  "perp": "STOUSDT",
+  "day": "2026-04-03",
+  "publisher_sha256_verified": [
+    {
+      "path": "STOUSDT-1d-2026-03.zip",
+      "kind": "unlocks_daily_v1",
+      "sha256": "05df7c4d4ff43a1416de9f286f7062db14380d8bc8b9a3e120198ceddbeb46c5"
+    },
+    {
+      "path": "STOUSDT-1d-2026-03.zip",
+      "kind": "markPriceKlines",
+      "sha256": "98dbf336b98813b9b29ef52977dcf3cb2d8c1036edbefc30e2fba84f933d4ad1"
+    },
+    {
+      "path": "STOUSDT-fundingRate-2026-03.zip",
+      "kind": "fundingRate",
+      "sha256": "0be7f8ddd06cdc1ffc920eba9297ca05aeade98e353c365e5d2ce2950555e662"
+    },
+    {
+      "path": "STOUSDT-1d-2026-04.zip",
+      "kind": "unlocks_daily_v1",
+      "sha256": "b5ac3151b0246d46f6a082b0a1f22dc00bb408e991c47221ebeca8506be41596"
+    },
+    {
+      "path": "STOUSDT-1d-2026-04.zip",
+      "kind": "markPriceKlines",
+      "sha256": "c16321ff43a7a31b218f5c259f32725426c9f2528de9ade88c73bce862b78080"
+    },
+    {
+      "path": "STOUSDT-fundingRate-2026-04.zip",
+      "kind": "fundingRate",
+      "sha256": "b252b3e1cf39c8b25f1683dcb29a3ff750a9bc3d8ec5210b512230940384126f"
+    }
+  ],
+  "decimal_recalculation": {
+    "entry": "0.1083500",
+    "exit": "0.1424500",
+    "mark_peak": "1.84143000",
+    "funding_lower": "-2.200515300916895246885094600",
+    "funding_upper": "-0.2459974556114748500230733733",
+    "net_lower_1x": "-2.517550833911819104753114905",
+    "net_upper_1x": "-0.5630329886063987078910936783",
+    "optimistic_collateral_floor_1x": "15.99533112519131333640978311"
+  },
+  "settlements": 70,
+  "optional_settlements": 2,
+  "matched_frozen_runner_abs_error_lt_1e-12": true
+}

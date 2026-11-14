@@ -1,0 +1,40 @@
+06:36:32 prereg sha ac33a409ba44
+06:36:32 series 23 first dates {'SPY': '2000-01-03', 'QQQ': '2000-01-03', 'IWM': '2000-05-26', 'DIA': '2000-01-03', 'EURUSD=X': '2003-12-01', 'GBPUSD=X': '2003-12-01', 'USDJPY=X': '2000-01-03', 'AUDUSD=X': '2006-05-16', 'USDCAD=X': '2003-09-17', 'USDCHF=X': '2003-09-17', 'NZDUSD=X': '2003-12-01', 'EURJPY=X': '2003-01-23', 'GBPJPY=X': '2003-12-01', 'EURGBP=X': '2000-01-03', 'AUDJPY=X': '2003-12-01', 'USDMXN=X': '2003-12-01', 'USDZAR=X': '2003-12-01', 'USDTRY=X': '2005-01-03', 'GC=F': '2000-08-30', 'SI=F': '2000-08-30', 'HG=F': '2000-08-30', 'ZN=F': '2000-09-21', 'ZB=F': '2000-09-21'}
+06:36:33 TS12 discovery +0.53 bp/day (+1.3%/yr, vol 4.9%) t +1.00, 2x +0.50 stop
+06:36:34 BLEND discovery +0.49 bp/day (+1.2%/yr, vol 4.8%) t +0.93, 2x +0.43 stop
+06:36:34 
+strategy    window  cmult  days  mean_bp_day  ann_return  ann_vol  t_nw10  sharpe_252  max_dd  beta_spy  alpha_bp_day  alpha_t_nw10  trimmed_bp_day  gross_bp_day  cost_bp_day  turnover_per_year
+    TS12 discovery    1.0  3131        0.534       0.013    0.049   1.004       0.276   0.091    -0.051         0.628         1.204           0.514         0.568        0.034              3.907
+    TS12 discovery    2.0  3131        0.500       0.013    0.049   0.941       0.259   0.091    -0.051         0.594         1.139           0.480         0.568        0.068              3.907
+    TS12 discovery    3.0  3131        0.466       0.012    0.049   0.877       0.241   0.092    -0.051         0.560         1.074           0.446         0.568        0.102              3.907
+   BLEND discovery    1.0  3131        0.492       0.012    0.048   0.930       0.258   0.090    -0.062         0.606         1.193           0.449         0.550        0.059              7.233
+   BLEND discovery    2.0  3131        0.433       0.011    0.048   0.819       0.228   0.093    -0.062         0.547         1.079           0.390         0.550        0.117              7.233
+   BLEND discovery    3.0  3131        0.374       0.009    0.048   0.709       0.197   0.095    -0.062         0.489         0.964           0.331         0.550        0.176              7.233
+06:36:34 {
+ "stages": {
+  "TS12": {
+   "reached": "discovery",
+   "passed": false
+  },
+  "BLEND": {
+   "reached": "discovery",
+   "passed": false
+  }
+ },
+ "holdout_passers": [],
+ "by_class_1x_bp_day": {
+  "TS12/discovery": {
+   "equity": 0.42200061853342025,
+   "fx": -0.09771273238753016,
+   "metals": 0.29126563904194447,
+   "bonds": -0.047923058168358755
+  },
+  "BLEND/discovery": {
+   "equity": 0.45450360810372337,
+   "fx": 0.13826976801497343,
+   "metals": 0.10385517477367207,
+   "bonds": -0.14627134467366396
+  }
+ }
+}
+exit 0

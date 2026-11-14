@@ -1,0 +1,30 @@
+{
+"folder": "data/edgar_earnings",
+"source": "SEC EDGAR (www.sec.gov/files/company_tickers.json; data.sec.gov/submissions/CIK##########.json), 8-K with Item 2.02 filed from 2025-06-01, for the US single stocks with a MEXC TradFi perp; generic client name",
+"script": "scripts/fetch_edgar_earnings.py",
+"recorded_utc": "2026-11-11T12:44:09Z",
+"excluded": [],
+"files": 2,
+"bytes": 151486,
+"combined_sha256": "512032318ed5be8be8af249101a2e038edb869323139627355a2d8820a2a2e1d",
+"subfolders": {
+".": {
+"files": 2,
+"bytes": 151486
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "events.csv",
+"bytes": 149731,
+"sha256": "4b235017a007d9f263b2e7402e49b8463c0c7f0b02ba76610b72bbcd79b8fbcd"
+},
+{
+"path": "manifest.json",
+"bytes": 1755,
+"sha256": "8d977757a5c6eb0bcac296fa9e51f0f1c1639e4189313c7271e7dd4ca8d68705"
+}
+]
+}

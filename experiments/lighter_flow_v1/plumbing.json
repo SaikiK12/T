@@ -1,0 +1,72 @@
+{
+ "trades": 114416,
+ "by_filter": {
+  "liq": 253,
+  "replay": 3086,
+  "queued": 2957,
+  "eligible": 111310
+ },
+ "seen_fragment_trades": 94,
+ "eligible_by_day_market": {
+  "2026-10-28": {
+   "BRENTOIL": 86,
+   "NATGAS": 6,
+   "WTI": 413
+  },
+  "2026-10-29": {
+   "BRENTOIL": 15759,
+   "NATGAS": 619,
+   "WTI": 32486
+  },
+  "2026-10-30": {
+   "BRENTOIL": 10270,
+   "NATGAS": 538,
+   "WTI": 25440
+  },
+  "2026-11-02": {
+   "BRENTOIL": 2239,
+   "NATGAS": 184,
+   "WTI": 3586
+  },
+  "2026-11-03": {
+   "BRENTOIL": 1456,
+   "NATGAS": 286,
+   "WTI": 4205
+  },
+  "2026-11-04": {
+   "BRENTOIL": 1128,
+   "NATGAS": 109,
+   "WTI": 3330
+  },
+  "2026-11-05": {
+   "BRENTOIL": 1854,
+   "NATGAS": 627,
+   "WTI": 3991
+  },
+  "2026-11-06": {
+   "BRENTOIL": 822,
+   "NATGAS": 145,
+   "WTI": 1731
+  }
+ },
+ "train_taker_accounts": 1585,
+ "train_accounts_ge_nmin": 101,
+ "test_taker_accounts": 2289,
+ "test_trades_by_train_accounts_ge_nmin": 49866,
+ "test_covered_share": {
+  "h10s_d300ms": 0.9944,
+  "h10s_d1300ms": 0.9937,
+  "h10s_d5300ms": 0.9919,
+  "h60s_d300ms": 0.9716,
+  "h60s_d1300ms": 0.9713,
+  "h60s_d5300ms": 0.97,
+  "h300s_d300ms": 0.8727,
+  "h300s_d1300ms": 0.8721,
+  "h300s_d5300ms": 0.8704
+ },
+ "quotes": {
+  "WTI": 1554276,
+  "BRENTOIL": 1508282,
+  "NATGAS": 192665
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "round": "R391",
+ "prereg_sha256": "74cfb3e096cab28f705a445b8f5dcc1e300ee2583876214dc3a5303d3244e486",
+ "candidate": "kucoin+dydx+lighter+mexc L14d th5% K20",
+ "alpha": 0.05,
+ "verdict": "PASS",
+ "checks": {
+  "p_le_alpha": true,
+  "mean_2x_pos": true,
+  "trimmed_pos": true,
+  "l2co_pos": true
+ },
+ "n": 526,
+ "days": 526,
+ "window_from": "2025-05-12",
+ "ann_1x_pct": 2.4769,
+ "ann_2x_pct": 1.9281,
+ "ann_3x_pct": 1.3792,
+ "t_nw_1x": 3.9018,
+ "avg_held": 5.331,
+ "trades": 113,
+ "half_bp": [
+  0.4072,
+  0.95
+ ],
+ "max_dd_pct": -0.4292,
+ "top10_share": 0.9485,
+ "funding_share": 0.8296,
+ "mean_1x_bp": 0.6786148802281368,
+ "p_one_sided": 4.774001653464385e-05,
+ "trimmed_mean_bp": 0.5109303199052134,
+ "mean_2x_bp": 0.5282346520912549,
+ "mean_3x_bp": 0.3778544239543727,
+ "by_coin_bp_per_day": {
+  "STONK": -0.007688730988593155,
+  "NES": -0.0006495389733840293,
+  "DATA": -0.0005876045627376428,
+  "NIULAI": 0.0009039971482889735,
+  "CP": 0.003087124524714829,
+  "APEX": 0.006502718631178705,
+  "ANSEM": 0.00795972433460076,
+  "CASHCAT": 0.011769268060836502,
+  "HAJIMI": 0.011928060836501901,
+  "NEX": 0.014801383079847909,
+  "LONGXIA": 0.01721906844106464,
+  "BLEND": 0.03288309410646388,
+  "MNT": 0.03896300380228137,
+  "CRO": 0.06033669676806084,
+  "NEIROCTO": 0.06622260456273764,
+  "BP": 0.07960453897338404,
+  "WOTAMALAILE": 0.16082676806083654,
+  "CTC": 0.1745327091254753
+ },
+ "by_long_venue_trades": {
+  "mexc": 55,
+  "kucoin": 46,
+  "lighter": 12
+ },
+ "by_short_venue_trades": {
+  "mexc": 52,
+  "kucoin": 41,
+  "lighter": 20
+ },
+ "l2co_dropped": [
+  "CTC",
+  "WOTAMALAILE"
+ ],
+ "l2co_mean_bp": 0.34325540304182495
+}

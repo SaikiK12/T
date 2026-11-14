@@ -1,0 +1,1245 @@
+{
+  "all100_implemented": false,
+  "all100_market_validated": false,
+  "counts": {
+    "blocked": 15,
+    "not_selected": 3,
+    "partial": 36,
+    "verified": 46
+  },
+  "items": [
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_account.py",
+        "lab/paired_execution.py",
+        "lab/paper_controls.py"
+      ],
+      "id": 1,
+      "priority": true,
+      "reason": "Le compte R318 re\u00e7oit positions,prix,frais et financement ; R319 y ajoute les ex\u00e9cutions partielles, R320 y raccorde les limites. Cas invent\u00e9s uniquement.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Relier les composants au m\u00eame compte simul\u00e9 : prix, positions, frais et financement doivent produire un PnL commun."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/audit.json",
+        "tests/test_paper_account.py"
+      ],
+      "id": 2,
+      "priority": true,
+      "reason": "Prix r\u00e9alis\u00e9,financement,frais et co\u00fbt implicite du carnet sont s\u00e9par\u00e9s ; le spread embarqu\u00e9 dans les prix ne devient pas une seconde charge.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "D\u00e9composer chaque r\u00e9sultat : mouvement de prix, frais, financement et co\u00fbt d\u2019ex\u00e9cution, sans compter deux fois le spread."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_account.py"
+      ],
+      "id": 3,
+      "priority": true,
+      "reason": "Gain r\u00e9alis\u00e9 et valeur de liquidation ouverte sont s\u00e9par\u00e9s ; prix de sortie/frais manquants restent inconnus.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "S\u00e9parer les gains r\u00e9alis\u00e9s des gains encore ouverts, avec une valeur de sortie prudente."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 4,
+      "priority": true,
+      "reason": "Le capital initial immobilis\u00e9 est explicite par plateforme/devise. Aucun netting USDT/USDC ou gain de d\u00e9p\u00f4t ; le retour global avec FX inconnu reste inconnu.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Rapporter les gains \u00e0 tout le capital immobilis\u00e9, y compris celui d\u00e9pos\u00e9 sur la deuxi\u00e8me plateforme."
+    },
+    {
+      "evidence": [
+        "lab/fee_evidence.py",
+        "tests/test_fee_evidence.py"
+      ],
+      "id": 5,
+      "priority": true,
+      "reason": "Import local typ\u00e9 de justificatifs de frais pr\u00e9vu et test\u00e9 ; aucune cl\u00e9 ni valeur secr\u00e8te. Authenticit\u00e9 des justificatifs fournis reste au propri\u00e9taire.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Pr\u00e9voir l\u2019import de justificatifs de frais fournis par le propri\u00e9taire, sans cl\u00e9 d\u2019acc\u00e8s ni secret."
+    },
+    {
+      "evidence": [
+        "lab/fee_evidence.py",
+        "tests/test_fee_evidence.py",
+        "experiments/paper_account_v1/FINDINGS.md"
+      ],
+      "id": 6,
+      "priority": true,
+      "reason": "Les contrats de preuve de frais conservent port\u00e9e,dates,conditions et quota consomm\u00e9 ; une promotion non \u00e9tay\u00e9e ne devient pas z\u00e9ro frais.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Suivre les promotions de frais : conditions, volume restant et expiration."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/FINDINGS.md"
+      ],
+      "id": 7,
+      "priority": true,
+      "reason": "Stress de sortie fixes R318/R319 avec taille,capital et co\u00fbts1x/2x/3x identiques ; prix futurs non observ\u00e9s conserv\u00e9s comme hypoth\u00e8ses.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Ajouter des sc\u00e9narios de sortie d\u00e9favorables, puisque le carnet actuel ne garantit pas le prix de sortie futur."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paper_account_v1/audit.json"
+      ],
+      "id": 8,
+      "priority": true,
+      "reason": "Petites tailles et arrondis/minimums v\u00e9rifi\u00e9s sur les contrats et carnets d\u00e9j\u00e0 d\u00e9tenus. Port\u00e9e contemporaine limit\u00e9e, aucune conformit\u00e9 historique suppos\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Mesurer le co\u00fbt des petites positions : minimums, arrondis et montants r\u00e9ellement accessibles avec notre capital."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/execution_envelope.py"
+      ],
+      "id": 9,
+      "priority": true,
+      "reason": "Balayage de plusieurs niveaux et limites maxVol compar\u00e9s \u00e0 tailles fixes ; capacit\u00e9 affich\u00e9e seulement conditionnelle aux vieux carnets.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Mesurer comment le co\u00fbt augmente avec la taille, lorsque la position consomme plusieurs niveaux du carnet."
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "experiments/equations_v2/FINDINGS.md"
+      ],
+      "id": 10,
+      "priority": true,
+      "reason": "Comparaisons R318/R319 \u00e0 quantit\u00e9/capital/co\u00fbts fixes disponibles. Comparaison universelle entre strat\u00e9gies \u00e0 risque comparable bloqu\u00e9e sans comptes et donn\u00e9es ex\u00e9cutables compl\u00e8tes.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Comparer les strat\u00e9gies \u00e0 capital et risque comparables, avec les m\u00eames hypoth\u00e8ses de co\u00fbts."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/market_readiness.py"
+      ],
+      "id": 11,
+      "priority": true,
+      "reason": "Le pont R318 r\u00e9utilise les clocks de r\u00e9ception et carnets R313-R316 ; aucune capture ancienne ne devient une simulation \u00e0 temps. Des entr\u00e9es exploitables compl\u00e8tes manquent.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Raccorder les collecteurs r\u00e9cents au compte simul\u00e9, avec leurs vrais horaires de r\u00e9ception."
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 12,
+      "priority": true,
+      "reason": "Prix index Lighter effectivement utilis\u00e9 au bon \u00e9v\u00e9nement non acquis ; inspecter le code du protocole ne fournit pas une preuve de valeur de r\u00e8glement.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Obtenir le prix de r\u00e9f\u00e9rence r\u00e9ellement utilis\u00e9 pour le financement Lighter, li\u00e9 au bon \u00e9v\u00e9nement."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "lab/market_readiness.py"
+      ],
+      "id": 13,
+      "priority": true,
+      "reason": "Disponibilit\u00e9 simultan\u00e9e test\u00e9e sur72\u00e9ch\u00e9ances d\u00e9j\u00e0 observ\u00e9es ; acc\u00e8s/sessions historiques complets des deux march\u00e9s encore inconnus.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Mesurer la disponibilit\u00e9 simultan\u00e9e des deux march\u00e9s, plut\u00f4t que leur disponibilit\u00e9 s\u00e9par\u00e9e."
+    },
+    {
+      "evidence": [
+        "experiments/stream_quotes_v1/FINDINGS.md",
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 14,
+      "priority": true,
+      "reason": "\u00c2ges,skew et d\u00e9lais de collecte sont conserv\u00e9s. Le d\u00e9lai r\u00e9el soumission\u2192ex\u00e9cution reste inconnu ; pas de remplacement par le d\u00e9lai HTTP.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Distinguer d\u00e9lai de collecte et d\u00e9lai d\u2019ex\u00e9cution, puis conserver les parties encore inconnues."
+    },
+    {
+      "evidence": [
+        "lab/market_readiness.py",
+        "experiments/funding_values_v1/sources.json"
+      ],
+      "id": 15,
+      "priority": true,
+      "reason": "Les contrats de sessions exigent une preuve explicite ; l\u2019existence d\u2019un ticker m\u00e9tal/indice ne certifie pas une session ouverte. Calendriers applicables encore absents.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier les heures et conditions d\u2019acc\u00e8s de chaque march\u00e9, notamment les contrats li\u00e9s aux march\u00e9s traditionnels."
+    },
+    {
+      "evidence": [
+        "lab/market_readiness.py",
+        "experiments/equations_v2/input_quality.json"
+      ],
+      "id": 16,
+      "priority": true,
+      "reason": "Identit\u00e9s/base/quote/multiplicateur et restrictions des instruments d\u00e9tenus sont conserv\u00e9s ; certification point-in-time de tout l\u2019univers et des indices traditionnels encore ouverte.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Identifier correctement chaque instrument : crypto, m\u00e9tal, indice, monnaie de r\u00e8glement et taille du contrat."
+    },
+    {
+      "evidence": [
+        "lab/funding_values.py",
+        "registry/methods.csv"
+      ],
+      "id": 17,
+      "priority": true,
+      "reason": "Pas de s\u00e9rie compl\u00e8te annonc\u00e9e\u2192appliqu\u00e9e avec prix notionnels li\u00e9s aux \u00e9v\u00e9nements ; aucune erreur de pr\u00e9vision de financement invent\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Relier les taux de financement annonc\u00e9s aux taux finalement appliqu\u00e9s, pour mesurer l\u2019erreur de pr\u00e9vision."
+    },
+    {
+      "evidence": [
+        "lab/stream_recovery.py",
+        "tests/test_stream_recovery.py"
+      ],
+      "id": 18,
+      "priority": true,
+      "reason": "Reconnexion,reset de s\u00e9quence,trous et journal apr\u00e8s reprise test\u00e9s sur \u00e9v\u00e9nements invent\u00e9s ; les trous conserv\u00e9s ne sont pas interpol\u00e9s.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Tester les red\u00e9marrages apr\u00e8s coupure r\u00e9seau, en conservant les trous et les changements de connexion."
+    },
+    {
+      "evidence": [
+        "lab/acquisition_budget.py",
+        "tests/test_acquisition_budget.py",
+        "./results.json"
+      ],
+      "id": 19,
+      "priority": true,
+      "reason": "Budget cumulatif persistant ;7757requ\u00eates et229.85MiB pr\u00e9c\u00e9demment rapport\u00e9s non remis \u00e0 z\u00e9ro. Octets restants exacts inconnus \u00e0 partir du seul arrondi.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Maintenir un compteur commun des budgets de collecte, sans remettre les autorisations \u00e0 z\u00e9ro."
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "tests/test_paper_admission.py"
+      ],
+      "id": 20,
+      "priority": true,
+      "reason": "Adaptateur s\u00e9par\u00e9 des anciens journaux : figures natives intactes, argent manquant jamais z\u00e9ro,\u00e9tiquettes ontime/net insuffisantes pour la preuve stricte.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Appliquer les m\u00eames r\u00e8gles de donn\u00e9es manquantes \u00e0 toutes les simulations, y compris les anciennes via des adaptations s\u00e9par\u00e9es."
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "registry/methods.csv"
+      ],
+      "id": 21,
+      "priority": false,
+      "reason": "R311 reste224/273jours,choix initial perdant \u00e02x/3x ; ne pas relancer ce jeu incomplet. Quotes/sessions/notionnels exacts requis.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Reprendre le carry avec des donn\u00e9es ex\u00e9cutables compl\u00e8tes, en conservant les r\u00e8gles et r\u00e9sultats historiques."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "docs/PRIMARY_EQUATIONS.md"
+      ],
+      "id": 22,
+      "priority": false,
+      "reason": "Cr\u00e9neau de financement testable conserv\u00e9 ; inclusion/entr\u00e9e/sortie ne peuvent \u00eatre scor\u00e9es avec quotes et r\u00e8glement incomplets.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Tester la strat\u00e9gie limit\u00e9e aux p\u00e9riodes de financement, avec les vrais horaires et conditions d\u2019inclusion."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "experiments/paired_execution_v1/sources.json"
+      ],
+      "id": 23,
+      "priority": false,
+      "reason": "Spot+perp conserv\u00e9 dans la queue ; pas de prix spot ex\u00e9cutables synchronis\u00e9s ni preuve de co\u00fbt/capital complet. Ne pas r\u00e9utiliser la comptabilit\u00e9 futures comme cash spot.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "\u00c9tudier le couple spot + contrat perp\u00e9tuel, en comptant achats, ventes, financement et capital n\u00e9cessaire."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "experiments/pairs_v1/FINDINGS.md"
+      ],
+      "id": 24,
+      "priority": false,
+      "reason": "Les variantes exactes de retour \u00e0 la moyenne restent ouvertes avec leurs r\u00e9sultats n\u00e9gatifs pr\u00e9c\u00e9dents ; R320 ne choisit pas un gagnant de validation.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Tester les variantes exactes de retour \u00e0 l\u2019\u00e9quilibre encore ouvertes, tout en conservant les anciens r\u00e9sultats n\u00e9gatifs."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "docs/PRIMARY_EQUATIONS.md"
+      ],
+      "id": 25,
+      "priority": false,
+      "reason": "M410 et le parent carry ont un horizon et une sortie terminale ; \u00e9tat conserver/r\u00e9duire/fermer non valid\u00e9 faute des entr\u00e9es ex\u00e9cutables fiables.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Construire une d\u00e9cision \u201cconserver, r\u00e9duire ou fermer\u201d, selon le gain futur attendu, les co\u00fbts et une sortie obligatoire."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "lab/microstructure.py"
+      ],
+      "id": 26,
+      "priority": false,
+      "reason": "Pression des transactions distincte du carnet conserv\u00e9e ; flux exhaustif horodat\u00e9 et d\u00e9lais d\u2019ex\u00e9cution insuffisants pour un test net.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Tester la pression des transactions acheteuses et vendeuses, apr\u00e8s les co\u00fbts et les d\u00e9lais observ\u00e9s."
+    },
+    {
+      "evidence": [
+        "registry/methods.csv",
+        "lab/microstructure.py"
+      ],
+      "id": 27,
+      "priority": false,
+      "reason": "D\u00e9s\u00e9quilibre des quantit\u00e9s conserv\u00e9 s\u00e9par\u00e9ment ;72\u00e9ch\u00e9ances anciennes ne constituent pas un historique pr\u00e9dictif complet.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Tester le d\u00e9s\u00e9quilibre des quantit\u00e9s dans le carnet, s\u00e9par\u00e9ment du signal provenant des transactions."
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/sources.json"
+      ],
+      "id": 28,
+      "priority": false,
+      "reason": "Lifecycle maker\u2192hedge et remplissages partiels sont test\u00e9s ; aucune probabilit\u00e9 de remplissage/position dans la file ni gain maker net n\u2019est valid\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "\u00c9valuer les entr\u00e9es maker avec des hypoth\u00e8ses prudentes de remplissage, d\u2019attente et de couverture."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "registry/methods.csv"
+      ],
+      "id": 29,
+      "priority": false,
+      "reason": "Calendrier primaire FOMC2026/2027 et dates des minutes localis\u00e9s ; annonces/minutes doivent avoir leurs propres clocks de premi\u00e8re publication avant r\u00e9action de prix.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Compl\u00e9ter les donn\u00e9es d\u2019annonces, pour tester les r\u00e9actions apr\u00e8s leur v\u00e9ritable publication."
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "registry/methods.csv"
+      ],
+      "id": 30,
+      "priority": false,
+      "reason": "Les horizons pr\u00e9fix\u00e9s R310/R311 restent conserv\u00e9s. Pas de nouveau choix de dur\u00e9e sur la validation ni comparaison pr\u00e9tendument ex\u00e9cutable sans donn\u00e9es fiables.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Comparer des dur\u00e9es de position plus longues aux dur\u00e9es courtes, avec un choix fix\u00e9 avant les r\u00e9sultats."
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py",
+        "./results.json"
+      ],
+      "id": 31,
+      "priority": false,
+      "reason": "Seuil gross\u2212co\u00fbts1x/2x/3x\u2212r\u00e9serve\u2212erreur calibr\u00e9e test\u00e9. Variance ou erreur inconnue ne peut \u00eatre d\u00e9guis\u00e9e en gain pr\u00e9vu en devise.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Cr\u00e9er un seuil minimal de gain attendu, couvrant les co\u00fbts et une marge pour l\u2019erreur de pr\u00e9vision."
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "./risk_predictions.jsonl.gz",
+        "scripts/check_owner_acceptance.py"
+      ],
+      "id": 32,
+      "priority": false,
+      "reason": "R320 compare causalement le composant EWMA72h existant aux moyennes RV1/7/30sur BTC d\u00e9tenu. HAR/GARCH et panier point-in-time restent non valid\u00e9s.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Valider le mod\u00e8le de volatilit\u00e9 d\u00e9j\u00e0 cod\u00e9, face \u00e0 des pr\u00e9visions simples."
+    },
+    {
+      "evidence": [
+        "lab/apsi.py",
+        "registry/methods.csv"
+      ],
+      "id": 33,
+      "priority": false,
+      "reason": "APSI complet top20 \u00e0 quote-volume point-in-time non impl\u00e9ment\u00e9/mesur\u00e9. Un test BTC univari\u00e9 ne valide pas son utilit\u00e9 de panier ou un VIX maison.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Comparer notre indice de stress maison \u00e0 des indicateurs simples, pour mesurer son utilit\u00e9 r\u00e9elle."
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "lab/paper_controls.py"
+      ],
+      "id": 34,
+      "priority": false,
+      "reason": "Erreurs RV et incertitude locale mesur\u00e9es ; elles ne sont pas des erreurs de PnL en devise. Le filtre d\u2019entr\u00e9e reste bloqu\u00e9 sans calibration de gain net.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Mesurer l\u2019erreur de chaque pr\u00e9vision et l\u2019int\u00e9grer dans la taille ou le refus d\u2019une position."
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "registry/rounds.csv"
+      ],
+      "id": 35,
+      "priority": false,
+      "reason": "Quatre mod\u00e8les compt\u00e9s,r\u00e9f\u00e9rence fix\u00e9e,multiplicit\u00e9 locale des trois comparaisons et total du programme conserv\u00e9s. Pas de garantie globale apr\u00e8s la recherche adaptative pass\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Tenir compte du nombre de variantes essay\u00e9es, afin de r\u00e9duire les faux gagnants obtenus par hasard."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "./results.json"
+      ],
+      "id": 36,
+      "priority": false,
+      "reason": "Les dates BTC et R311 sont d\u00e9j\u00e0 vues. Z\u00e9ro observation prospective nouvellement scor\u00e9e ; r\u00e9serve future exige protocole admissible fig\u00e9 avant r\u00e9ception.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "R\u00e9server des p\u00e9riodes r\u00e9ellement jamais analys\u00e9es, avec des r\u00e8gles fix\u00e9es avant leur observation."
+    },
+    {
+      "evidence": [
+        "lab/volatility_validation.py",
+        "./results.json"
+      ],
+      "id": 37,
+      "priority": false,
+      "reason": "Blocs contigus7/14jours et diagnostic nul AR1 d\u00e9pendant fix\u00e9s avant r\u00e9sultats. Limites de calibration et incertitude Monte-Carlo affich\u00e9es,aucune iid suppos\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Adapter les mesures d\u2019incertitude aux jours qui se ressemblent, au lieu de les consid\u00e9rer ind\u00e9pendants."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "docs/CONTRACT_LIFECYCLE_INTEGRITY.md"
+      ],
+      "id": 38,
+      "priority": false,
+      "reason": "Univers du carry conditionn\u00e9 aux survivants et historique des disparitions incomplet. La source des27crypto exige explicitement actifs disparus et actions de cotation.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Inclure les actifs disparus et les changements de cotation, pour \u00e9viter un historique trop favorable."
+    },
+    {
+      "evidence": [
+        "./results.json",
+        "lab/stress.py"
+      ],
+      "id": 39,
+      "priority": false,
+      "reason": "Tous les jours et nulls sont conserv\u00e9s ; contributions extr\u00eames RV examin\u00e9es sans les retirer. Rapports de stress historiques disponibles,mais pas tout PnL ex\u00e9cutable valid\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier si les gains d\u00e9pendent de quelques journ\u00e9es ou coins exceptionnels, sans les retirer pour embellir les r\u00e9sultats."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "experiments/paper_account_v1/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 40,
+      "priority": false,
+      "reason": "R\u00e9f\u00e9rences simples conserv\u00e9es,RV7jours pr\u00e9choisi et cash/comptes fictifs s\u00e9par\u00e9s. Un portefeuille passif \u00e0 capital/risque r\u00e9ellement comparables demeure \u00e0 valider.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Ajouter des r\u00e9f\u00e9rences simples, dont une position passive et du cash, \u00e0 capital et risque comparables."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json"
+      ],
+      "id": 41,
+      "priority": false,
+      "reason": "Deux pages publiques Quantpedia lues avec r\u00e8gles/co\u00fbts/taille,ambigu\u00eft\u00e9s et liens exacts ; papiers SSRN et abonnements non re\u00e7us,aucune preuve alpha import\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Creuser une partie publique encore non \u00e9tudi\u00e9e de Quantpedia, avec r\u00e8gles, donn\u00e9es n\u00e9cessaires et limites."
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 42,
+      "priority": false,
+      "reason": "Intake officiel LEAN/QC conserv\u00e9 avec scopes exacts et \u00e9carts ; ex\u00e9cution compl\u00e8te des strat\u00e9gies/source environnements non r\u00e9alis\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Auditer des strat\u00e9gies officielles QuantConnect/LEAN, jusqu\u2019au comportement r\u00e9el de leur code."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 43,
+      "priority": false,
+      "reason": "QuantStart cibl\u00e9 r\u00e9pond503,article non re\u00e7u ; aucun contournement. Anciennes extractions restent s\u00e9par\u00e9es de corpus Financial Hacker non lus.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "\u00c9tudier des articles encore non lus de QuantStart et Financial Hacker, avec une question pr\u00e9cise par lecture."
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "registry/methods_aliases.csv"
+      ],
+      "id": 44,
+      "priority": false,
+      "reason": "Extraction Blueshift d\u00e9j\u00e0 r\u00e9concili\u00e9e en neuf experts/allocations/contr\u00f4les ; diff\u00e9rences explication/code et limites des deux portages synth\u00e9tiques conserv\u00e9es.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Poursuivre l\u2019extraction QuantInsti/Blueshift, en v\u00e9rifiant les diff\u00e9rences entre explication et code."
+    },
+    {
+      "evidence": [
+        "docs/PRIMARY_EQUATIONS.md",
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 45,
+      "priority": false,
+      "reason": "Lectures l\u00e9gales born\u00e9es/abstraits/citations re\u00e7us conserv\u00e9s ; pas de revendication d\u2019avoir lu les livres ou papiers li\u00e9s en entier.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Lire des chapitres et articles l\u00e9galement accessibles sur le financement, les co\u00fbts, l\u2019inventaire et les sorties."
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "lab/funding_values.py"
+      ],
+      "id": 46,
+      "priority": false,
+      "reason": "Unit\u00e9s/r\u00e8gle notionnelle/ordre financement puis oracle et limites du SDK/protocole document\u00e9s ; prix index effectif li\u00e9 \u00e0 l\u2019\u00e9v\u00e9nement encore absent.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Approfondir les sources officielles sur le r\u00e8glement du financement, jusqu\u2019aux unit\u00e9s et \u00e0 l\u2019ordre des op\u00e9rations."
+    },
+    {
+      "evidence": [
+        "experiments/fee_routes_v1/sources.json",
+        "experiments/owner_acceptance_v1/sources.json"
+      ],
+      "id": 47,
+      "priority": false,
+      "reason": "Docs officielles frais/types/latences/sessions extraites jusqu\u2019\u00e0 la port\u00e9e re\u00e7ue ; conditions du compte,API et sessions non certifi\u00e9es globalement.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier les documentations des plateformes sur les frais, les d\u00e9lais, les sessions et les types d\u2019ordres."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "registry/methods.csv"
+      ],
+      "id": 48,
+      "priority": false,
+      "reason": "Calendrier Fed primaire avec versions et dates de minutes ; pas de pr\u00e9tendue heure de premi\u00e8re publication ni ensemble CPI/NFP/EIA complet.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Chercher des donn\u00e9es publiques utilisables pour les m\u00e9thodes bloqu\u00e9es : annonces, macro\u00e9conomie et \u00e9v\u00e9nements de march\u00e9."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "lab/paper_controls.py"
+      ],
+      "id": 49,
+      "priority": false,
+      "reason": "Pages publiques Jane Street/Citadel lues : recherche/risque/ex\u00e9cution int\u00e9gr\u00e9s appliqu\u00e9s \u00e0 notre compte commun. Ni \u00e9quation priv\u00e9e ni capital/latence institutionnels suppos\u00e9s.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Extraire des pratiques applicables des publications publiques de Jane Street et Citadel, concernant recherche, risque et ex\u00e9cution."
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "docs/REELS_TRANSCRIPT.md"
+      ],
+      "id": 50,
+      "priority": false,
+      "reason": "P\u00e9rim\u00e8tre re\u00e7u des vid\u00e9os d\u00e9j\u00e0 \u00e9num\u00e9r\u00e9 dans l\u2019intake ; transcriptions priv\u00e9es/indisponibles non invent\u00e9es. Acc\u00e8s manquant reste explicite.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Compl\u00e9ter l\u2019extraction des vid\u00e9os re\u00e7ues, avec transcription accessible, r\u00e8gles pr\u00e9cises, source et m\u00e9canique manquante."
+    },
+    {
+      "evidence": [
+        "./performance.json"
+      ],
+      "id": 51,
+      "priority": false,
+      "reason": "Co\u00fbt temps/m\u00e9moire Python des lectures mesur\u00e9 sur un fichier402923octets ; limites m\u00e9moire native et port\u00e9e unique explicites. Pas de profil pr\u00e9tendument complet de toutes les \u00e9tudes.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Profiler le projet pour savoir quelles op\u00e9rations consomment r\u00e9ellement le temps et la m\u00e9moire."
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "experiments/owner_acceptance_v1/benchmark_environment.json"
+      ],
+      "id": 52,
+      "priority": false,
+      "reason": "Pandas/Arrow/DuckDB1.4.1/cache compar\u00e9s sur valeurs,types,NaN et ordre identiques avec cinq passages chauds fix\u00e9s. Aucun changement de moteur global pr\u00e9sum\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Comparer DuckDB ou Polars au traitement actuel, sur les m\u00eames donn\u00e9es et avec v\u00e9rification des r\u00e9sultats."
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "scripts/benchmark_evaluation.py"
+      ],
+      "id": 53,
+      "priority": false,
+      "reason": "Pas de port Rust sans calcul CPU co\u00fbteux d\u00e9montr\u00e9 et b\u00e9n\u00e9fice mesur\u00e9 ; la comparaison porte sur lecture/hash et utilise d\u00e9j\u00e0 des noyaux natifs. Complexit\u00e9 \u00e9vit\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "not_selected",
+      "text": "Porter en Rust un calcul co\u00fbteux mesur\u00e9, si le gain justifie le travail et la complexit\u00e9."
+    },
+    {
+      "evidence": [
+        "research/intake/source_methods_20261020.json",
+        "lab/microstructure.py"
+      ],
+      "id": 54,
+      "priority": false,
+      "reason": "hftbacktest non install\u00e9/ex\u00e9cut\u00e9 dans cette \u00e9tude ; une lecture de documentation ou nos fixtures ne prouve pas une \u00e9quivalence de simulation de file.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Comparer notre simulation de carnet \u00e0 hftbacktest, sur des cas connus et ses limites document\u00e9es."
+    },
+    {
+      "evidence": [
+        "tests/test_qx_parity.py",
+        "experiments/lotcap_v1/parity_check.py"
+      ],
+      "id": 55,
+      "priority": false,
+      "reason": "Parit\u00e9 Python/Rust du moteur d\u00e9j\u00e0 test\u00e9e ; nouveaux comptes Decimal restent Python et ne sont pas pr\u00e9tendus \u00e9quivalents \u00e0 une comptabilit\u00e9 Rust inexistante.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier l\u2019\u00e9quivalence des calculs Python et Rust, sur les positions, frais, arrondis et r\u00e9sultats."
+    },
+    {
+      "evidence": [
+        "lab/artifact_io.py",
+        "tests/test_artifact_io.py",
+        "./results.json"
+      ],
+      "id": 56,
+      "priority": false,
+      "reason": "M\u00eame parse de table r\u00e9utilis\u00e9 par risque/export,cl\u00e9 incluant le contenu exact rehash\u00e9 \u00e0 chaque acc\u00e8s,versions et colonnes. Copie ind\u00e9pendante,aucun cache de verdict de test.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "R\u00e9duire les chargements r\u00e9p\u00e9t\u00e9s des m\u00eames donn\u00e9es, avec un cache li\u00e9 \u00e0 leur contenu exact."
+    },
+    {
+      "evidence": [
+        "experiments/warm_values_v1/FINDINGS.md"
+      ],
+      "id": 57,
+      "priority": false,
+      "reason": "Pr\u00e9-d\u00e9marrage R316 d\u00e9j\u00e0 r\u00e9utilisable ; pas de nouvel autre collecteur \u00e0 lancer sans retard mesur\u00e9 \u00e0 corriger ni budget distinct. Pas de collecte en doublon.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "not_selected",
+      "text": "\u00c9tendre l\u2019initialisation avant \u00e9ch\u00e9ance aux autres collecteurs concern\u00e9s, apr\u00e8s mesure de leur retard."
+    },
+    {
+      "evidence": [
+        "./performance.json",
+        "./verified_input.parquet",
+        "tests/test_artifact_io.py"
+      ],
+      "id": 58,
+      "priority": false,
+      "reason": "Export Parquet neuf v\u00e9rifi\u00e9 bit-\u00e0-valeur/types/NaN avec identit\u00e9 source et r\u00f4les prix/horloge ; ancien fichier intact.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Cr\u00e9er des exports Parquet v\u00e9rifi\u00e9s pour acc\u00e9l\u00e9rer les lectures, en conservant les anciens fichiers et leur provenance."
+    },
+    {
+      "evidence": [
+        "scripts/check.py",
+        "tests/test_check.py",
+        "experiments/owner_acceptance_v1/test_profile.json"
+      ],
+      "id": 59,
+      "priority": false,
+      "reason": "Profil complet requis ex\u00e9cut\u00e9 avec temps par test et d\u00e9couverte s\u00e9par\u00e9e ; fixtures de classe/skips distingu\u00e9s. Le profil rapide ne remplace pas le complet.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Mesurer les temps de chaque groupe de tests, pour corriger les lenteurs r\u00e9ellement identifi\u00e9es."
+    },
+    {
+      "evidence": [
+        "scripts/check.py",
+        "experiments/owner_acceptance_v1/test_profile.json"
+      ],
+      "id": 60,
+      "priority": false,
+      "reason": "Retour cibl\u00e9 rapide maintenu et suite compl\u00e8te conserv\u00e9e ; aucun retrait de test financier pour acc\u00e9l\u00e9rer artificiellement. Nouvelle optimisation d\u2019un test lourd non revendiqu\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Acc\u00e9l\u00e9rer les tests lourds en conservant la validation compl\u00e8te exig\u00e9e, notamment sur la comptabilit\u00e9."
+    },
+    {
+      "evidence": [
+        "scripts/project_status.py",
+        "scripts/paper_account.py",
+        "lab/operations.py"
+      ],
+      "id": 61,
+      "priority": false,
+      "reason": "Statut partag\u00e9/commande account raccordent le nouveau r\u00e9sultat ; des \u00e9tudes restantes ne sont pas des jobs actifs et aucun nouveau cycle autonome n\u2019est promis.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Raccorder les \u00e9tudes restantes \u00e0 l\u2019orchestrateur partag\u00e9, avec des \u00e9tats de fonctionnement explicites."
+    },
+    {
+      "evidence": [
+        "lab/paired_execution.py",
+        "lab/runtime.py",
+        "docs/ROOM.md"
+      ],
+      "id": 62,
+      "priority": false,
+      "reason": "Verrous fichiers/coordinator/runtime existants \u00e9vitent plusieurs writers locaux ; r\u00e9servations GitHub fra\u00eeches v\u00e9rifi\u00e9es manuellement,non certifi\u00e9es automatiquement.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier automatiquement les r\u00e9servations de fichiers, pour \u00e9viter les conflits entre agents."
+    },
+    {
+      "evidence": [
+        "scripts/run_owner_acceptance.py",
+        "lab/artifact_io.py"
+      ],
+      "id": 63,
+      "priority": false,
+      "reason": "Le runner refuse de recalculer par d\u00e9faut sur un r\u00e9sultat existant ; reproduction exige nouveau chemin explicite. Cache lie chaque entr\u00e9e au SHA,ne r\u00e9utilise pas une r\u00e9ussite de test.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "\u00c9viter de recalculer un r\u00e9sultat identique, sauf changement d\u2019entr\u00e9e, de code ou probl\u00e8me identifi\u00e9."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/financial_review.md",
+        "docs/ROOM.md"
+      ],
+      "id": 64,
+      "priority": false,
+      "reason": "Une seule relecture financi\u00e8re avec question,15appels puis5de recheck,budget et livrable ; pas de masse d\u2019agents ni d\u00e9l\u00e9gation ouverte.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Donner \u00e0 chaque agent une question born\u00e9e, un budget et un livrable v\u00e9rifiable."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/financial_review.md",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 65,
+      "priority": false,
+      "reason": "Relecture ind\u00e9pendante born\u00e9e des seuils/pertes et deux contre-exemples corrig\u00e9s puis rev\u00e9rifi\u00e9s avant gel. Ne couvre pas sourceauthenticit\u00e9,bootstrap ni tout risque.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Faire v\u00e9rifier ind\u00e9pendamment les calculs financiers importants, avant de figer leur protocole."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "docs/ROOM.md"
+      ],
+      "id": 66,
+      "priority": false,
+      "reason": "Appels/r\u00e9sultats et limites dans issue7,PR49unique ; chaque source et r\u00e9sultat garde son p\u00e9rim\u00e8tre. Transmission de cette \u00e9tude dans son FINDINGS.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Produire une transmission courte apr\u00e8s chaque travail : r\u00e9sultat, limite, blocage et prochaine v\u00e9rification."
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "docs/ROOM.md"
+      ],
+      "id": 67,
+      "priority": false,
+      "reason": "Travail Claude absent repris sur consolidation en respectant claims ; aucun processus tiers tu\u00e9. D\u00e9tection automatis\u00e9e de tout travail abandonn\u00e9 encore limit\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Rep\u00e9rer le travail abandonn\u00e9 ou interrompu, avec des r\u00e8gles de reprise qui respectent les autres auteurs."
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "tests/test_paper_admission.py",
+        "./results.json"
+      ],
+      "id": 68,
+      "priority": false,
+      "reason": "Projection stricte refuse de convertir les anciennes observations \u00e9tiquet\u00e9es \u00e0 temps en nouvelles preuves ex\u00e9cutables ; aucun replay ne remplace une observation manqu\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "D\u00e9tecter les observations prospectives manqu\u00e9es, sans les remplacer par des r\u00e9sultats reconstruits."
+    },
+    {
+      "evidence": [
+        "lab/acquisition_budget.py",
+        "experiments/owner_acceptance_v1/sources.json",
+        "scripts/paper_status.py"
+      ],
+      "id": 69,
+      "priority": false,
+      "reason": "Bornes requ\u00eates/octets/dur\u00e9e,refus de drift et \u00e9tats inconnu/erreur conserv\u00e9s. Les anciens collecteurs n\u2019ont pas tous une gestion identique des quotas.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Uniformiser la gestion des erreurs et quotas, avec des arr\u00eats born\u00e9s et des raisons compr\u00e9hensibles."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "experiments/equations_v2/FINDINGS.md"
+      ],
+      "id": 70,
+      "priority": false,
+      "reason": "Choix ancr\u00e9 sur quotes/session/index/frais manquants et risque de fausse comptabilit\u00e9 ; aucun indicateur choisi pour sauver les pertes2x/3x de R311.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Choisir la prochaine t\u00e2che selon le blocage \u00e9conomique principal, le co\u00fbt du travail et la preuve attendue."
+    },
+    {
+      "evidence": [
+        "AGENTS.md",
+        "scripts/repository_index.py",
+        "experiments/owner_acceptance_v1/requirements.json"
+      ],
+      "id": 71,
+      "priority": false,
+      "reason": "Queue m\u00e9thodes,registre essais et preuves PREREG/FINDINGS gardent leur autorit\u00e9 ; les100 exigences re\u00e7ues sont une acceptation,pas une autre queue.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Faire respecter les autorit\u00e9s existantes : queue pour les m\u00e9thodes, registre pour les essais, r\u00e9sultats pour les preuves."
+    },
+    {
+      "evidence": [
+        "README.md",
+        "scripts/repository_index.py",
+        "docs/RESEARCH_HANDOFF.md"
+      ],
+      "id": 72,
+      "priority": false,
+      "reason": "Index README et cat\u00e9gories du finder conservent notes/handoffs historiques avec l\u2019autorit\u00e9 actuelle ; METHODS_QUEUE explicitement historique.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Signaler les notes historiques depuis l\u2019index, avec un lien vers l\u2019\u00e9tat actuel."
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "scripts/repository_index.py"
+      ],
+      "id": 73,
+      "priority": false,
+      "reason": "Pas de fusion documentaire justifi\u00e9e sans preuve de faits uniques et liens conserv\u00e9s. Les notes dat\u00e9es et sp\u00e9cifications gel\u00e9es ne sont pas des doublons jetables.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "not_selected",
+      "text": "Fusionner les documents modifiables qui se recouvrent, apr\u00e8s v\u00e9rification des faits uniques et des r\u00e9f\u00e9rences."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/repository_index.py"
+      ],
+      "id": 74,
+      "priority": false,
+      "reason": "Vue compte en mots simples,identifiants R/M et chemins conserv\u00e9s. Aucune op\u00e9ration de renommage qui casserait les r\u00e9f\u00e9rences gel\u00e9es.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Simplifier les noms visibles des axes et \u00e9tudes, en conservant les identifiants et chemins n\u00e9cessaires."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/requirements_evidence.json",
+        "experiments/owner_acceptance_v1/PREREG.md"
+      ],
+      "id": 75,
+      "priority": false,
+      "reason": "Chaque exigence re\u00e7ue a un \u00e9tat,une preuve et une limite ; protocole fini avec crit\u00e8res d\u2019acceptation/\u00e9chec et refus de100validations fictives.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "D\u00e9finir ce que signifie \u201ctermin\u00e9\u201d pour chaque t\u00e2che, avec une preuve attendue."
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 76,
+      "priority": false,
+      "reason": "Vue affiche code test\u00e9,march\u00e9 inconnu,montants invent\u00e9s et z\u00e9ro nouvelles preuves ; autorisation r\u00e9elle toujoursfalse.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Rendre visible la diff\u00e9rence entre \u201ccod\u00e9\u201d, \u201ctest\u00e9\u201d et \u201cvalid\u00e9 sur le march\u00e9\u201d."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "research/intake/source_methods_20261020.json"
+      ],
+      "id": 77,
+      "priority": false,
+      "reason": "Versions SHA,acc\u00e8s,licence,copies limit\u00e9es et re\u00e7u/lu/non re\u00e7u sont explicit\u00e9s par source. Aucun login/abonnement contourn\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Conserver les conditions d\u2019acc\u00e8s et licences des sources, ainsi que ce qui a \u00e9t\u00e9 re\u00e7u ou reste illisible."
+    },
+    {
+      "evidence": [
+        "scripts/run_owner_acceptance.py",
+        "docs/RESEARCH_HANDOFF.md"
+      ],
+      "id": 78,
+      "priority": false,
+      "reason": "Composant APSI et modules comptabilit\u00e9/risque/cache raccord\u00e9s ; aides microstructure et autres besoins non branch\u00e9s restent explicitement ouverts.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Raccorder les modules utiles encore peu employ\u00e9s, et expliquer le r\u00f4le des autres."
+    },
+    {
+      "evidence": [
+        "scripts/repository_index.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 79,
+      "priority": false,
+      "reason": "lab find --trace M/R suit queue\u2192registre\u2192PREREG/manifests code et donn\u00e9es ; hashes sont des pointeurs rapport\u00e9s,pas une certification de leur v\u00e9rit\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Relier automatiquement m\u00e9thodes, donn\u00e9es, code et r\u00e9sultats, depuis les informations d\u00e9j\u00e0 enregistr\u00e9es."
+    },
+    {
+      "evidence": [
+        "docs/RESEARCH_HANDOFF.md",
+        "docs/IMPLEMENTATION_INTEGRITY_REVIEW.md"
+      ],
+      "id": 80,
+      "priority": false,
+      "reason": "Pas de nouvelle PR ni fermeture/merge ; PR49regroupe. PR32reste non compl\u00e8tement repris,\u00e9carts legacy conserv\u00e9s. Autres PR non d\u00e9clar\u00e9es supers\u00e9d\u00e9es.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "V\u00e9rifier la reprise compl\u00e8te des anciennes PR avant toute supersession, en regroupant les travaux li\u00e9s."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 81,
+      "priority": false,
+      "reason": "Onglet central compte montre capital/PnL fictifs,p\u00e9riode mod\u00e8le,origines et PnL observ\u00e9 inconnu. Vue r\u00e9utilis\u00e9e,pas nouvelle application.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Afficher une vue centrale du capital et du PnL simul\u00e9, avec la p\u00e9riode et les limites des donn\u00e9es."
+    },
+    {
+      "evidence": [
+        "scripts/dashboard_data.py",
+        "./results.json"
+      ],
+      "id": 82,
+      "priority": false,
+      "reason": "Comparateurs des \u00e9tudes sont conserv\u00e9s dans leurs scopes ; pas de leaderboard universel \u00e0 capital/risque strictement identiques lorsque donn\u00e9es/ex\u00e9cution manquent.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Comparer chaque strat\u00e9gie \u00e0 sa r\u00e9f\u00e9rence, avec les m\u00eames co\u00fbts et contraintes."
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html",
+        "experiments/paper_account_v1/audit.json"
+      ],
+      "id": 83,
+      "priority": false,
+      "reason": "Prix,financement,frais et frais de sortie sont des colonnes s\u00e9par\u00e9es en devise. Valeur de sortie contient d\u00e9j\u00e0 le spread,non double-soustrait.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Afficher s\u00e9par\u00e9ment prix, frais, financement et co\u00fbt d\u2019ex\u00e9cution, en montants simples."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "lab/paper_account.py"
+      ],
+      "id": 84,
+      "priority": false,
+      "reason": "Capital disponible/immobilis\u00e9 s\u00e9par\u00e9 par venue et devise,mark inconnu visible. Pas de double comptage ou conversion USDT/USDC invent\u00e9e.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Montrer le capital disponible et immobilis\u00e9 sur chaque plateforme simul\u00e9e, sans le compter deux fois."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py",
+        "lab/paper_controls.py"
+      ],
+      "id": 85,
+      "priority": false,
+      "reason": "Gain attendu,co\u00fbt pr\u00e9vu1x/2x/3x,erreur calibr\u00e9e et marge prudente affich\u00e9s. Valeurs absentes restent inconnu,volatilit\u00e9 non d\u00e9guis\u00e9e en gain.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Afficher le gain attendu face au co\u00fbt pr\u00e9vu, avec l\u2019erreur de pr\u00e9vision lorsqu\u2019elle est mesur\u00e9e."
+    },
+    {
+      "evidence": [
+        "scripts/paper_status.py",
+        "dashboard/index.html"
+      ],
+      "id": 86,
+      "priority": false,
+      "reason": "Origine historique/invent\u00e9e et r\u00e9ception r\u00e9elle inconnue affich\u00e9es sans horloge d\u2019export substitu\u00e9e. Latence d\u2019ex\u00e9cution r\u00e9elle et affichage live complet encore absents.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Afficher la fra\u00eecheur et les retards des donn\u00e9es, avec des \u00e9tats faciles \u00e0 lire."
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "scripts/paper_status.py",
+        "dashboard/index.html"
+      ],
+      "id": 87,
+      "priority": false,
+      "reason": "Vue pr\u00e9cise les entr\u00e9es manquantes et \u00e9tat bloqu\u00e9 ; anciennes s\u00e9ries gardent la liste des six preuves ex\u00e9cutables non certifi\u00e9es.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Expliquer pr\u00e9cis\u00e9ment pourquoi une \u00e9tude ou position simul\u00e9e est bloqu\u00e9e, avec l\u2019entr\u00e9e manquante."
+    },
+    {
+      "evidence": [
+        "scripts/dashboard_jobs.py",
+        "lab/paper_controls.py",
+        "lab/operations.py"
+      ],
+      "id": 88,
+      "priority": false,
+      "reason": "Op\u00e9rations existantes cat\u00e9goris\u00e9es,arr\u00eats nouveaux pr\u00e9fix\u00e9s data/risk. Pas de migration destructive de tous les journaux historiques.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Cat\u00e9goriser les logs : donn\u00e9es, recherche, simulation, risque et fonctionnement."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/run_owner_acceptance.py",
+        "tests/test_owner_integration.py"
+      ],
+      "id": 89,
+      "priority": false,
+      "reason": "Interface donne commande de reproduction et identit\u00e9s d\u2019entr\u00e9es/rapport ; commande v\u00e9rifie le code fig\u00e9 avant calcul. Elle est \u00e0 copier,la page ne lance ni shell ni ordre.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Permettre de reproduire un r\u00e9sultat enregistr\u00e9 depuis l\u2019interface, avec ses entr\u00e9es et son code exacts."
+    },
+    {
+      "evidence": [
+        "dashboard/index.html",
+        "scripts/paper_status.py"
+      ],
+      "id": 90,
+      "priority": false,
+      "reason": "Demandes class\u00e9es v\u00e9rifi\u00e9/partiel/bloqu\u00e9/\u00e9cart\u00e9 avec raison ; PnL observ\u00e9 inconnu et compte de test clairement s\u00e9par\u00e9s.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Pr\u00e9senter les d\u00e9cisions en langage simple : r\u00e9sultat prometteur, n\u00e9gatif, incomplet ou encore inconnu."
+    },
+    {
+      "evidence": [
+        "experiments/equations_v2/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 91,
+      "priority": false,
+      "reason": "Aucun candidat admissible sur quotes/frais/r\u00e8glements complets ; pas de protocole activ\u00e9 pour faire para\u00eetre R311positif. Protocole futur doit pr\u00e9c\u00e9der les nouvelles observations.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Pr\u00e9parer un protocole prospectif pour les candidats qui remplissent les pr\u00e9conditions, avant les nouvelles observations."
+    },
+    {
+      "evidence": [
+        "lab/paper_admission.py",
+        "./results.json"
+      ],
+      "id": 92,
+      "priority": false,
+      "reason": "Z\u00e9ro nouveau jour prospectif revendiqu\u00e9 ; adaptateur conserve anciennes lignes et ne compte aucun replay ou clock insuffisant comme preuve ex\u00e9cutable nouvelle.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Compter uniquement les observations re\u00e7ues \u00e0 temps comme preuves prospectives, avec les retards affich\u00e9s s\u00e9par\u00e9ment."
+    },
+    {
+      "evidence": [
+        "experiments/paper_account_v1/FINDINGS.md",
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "./results.json"
+      ],
+      "id": 93,
+      "priority": false,
+      "reason": "Compte commun et lifecycle pr\u00eats pour validation mod\u00e8le ; pas de candidat admissible \u00e0 y faire tourner sur le march\u00e9 avec les preuves requises.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "blocked",
+      "text": "Faire tourner les candidats admissibles dans un compte fictif commun, avec leurs co\u00fbts et capitaux s\u00e9par\u00e9s."
+    },
+    {
+      "evidence": [
+        "experiments/paired_execution_v1/FINDINGS.md",
+        "./risk_controls.jsonl"
+      ],
+      "id": 94,
+      "priority": false,
+      "reason": "48chemins d\u00e9pendants R319(16cas\u00d73co\u00fbts) pr\u00e9servent jambe orpheline,partiel,retry/r\u00e9siduel et source inconnue ; R320 applique les contr\u00f4les dessus.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Simuler une couverture incompl\u00e8te, lorsqu\u2019une plateforme accepte une jambe et l\u2019autre \u00e9choue."
+    },
+    {
+      "evidence": [
+        "tests/test_paper_controls.py",
+        "lab/paper_controls.py",
+        "experiments/paired_execution_v1/FINDINGS.md"
+      ],
+      "id": 95,
+      "priority": false,
+      "reason": "Panne,gap,session ferm\u00e9e et r\u00e8gles modifi\u00e9es bloquent les nouvelles entr\u00e9es sans effacer positions ou inventer une sortie. Cas invent\u00e9s uniquement.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Simuler les pannes, fermetures de march\u00e9 et changements de r\u00e8gles, sans inventer un prix de sortie."
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py",
+        "./risk_journal_example.jsonl"
+      ],
+      "id": 96,
+      "priority": false,
+      "reason": "Arr\u00eats persistants si donn\u00e9es/r\u00e8gles/risque d\u00e9pass\u00e9s ; aucune cl\u00f4ture suppos\u00e9e. Red\u00e9marrer ne remet pas le risque \u00e0 z\u00e9ro.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Pr\u00e9voir des arr\u00eats automatiques de simulation lorsque les donn\u00e9es ou le risque d\u00e9passent les limites."
+    },
+    {
+      "evidence": [
+        "lab/paper_controls.py",
+        "tests/test_paper_controls.py"
+      ],
+      "id": 97,
+      "priority": false,
+      "reason": "Perte,drawdown,exposition brute par venue et concentration par coin born\u00e9s ; hedge oppos\u00e9 ne gomme pas le brut,d\u00e9p\u00f4ts ne gomment pas les pertes.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "verified",
+      "text": "Fixer des limites de perte et de concentration, pour \u00e9viter qu\u2019un seul coin ou \u00e9v\u00e9nement domine le compte."
+    },
+    {
+      "evidence": [
+        "lab/mexc_margin.py",
+        "registry/methods.csv",
+        "experiments/levcarry_v1/FINDINGS.md"
+      ],
+      "id": 98,
+      "priority": false,
+      "reason": "Noyau marge MEXC existant test\u00e9 sur exemples fournis ; vraies s\u00e9ries fair/mark,tier/compte et liquidations dynamiques encore manquantes. Aucun levier ajout\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Compl\u00e9ter les tests de liquidation avec les prix et r\u00e8gles de marge pertinents, avant d\u2019envisager du levier."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/sources.json",
+        "docs/PROP_FIRMS.md"
+      ],
+      "id": 99,
+      "priority": false,
+      "reason": "Docs FTMO officielles distinguent1-Step,2-Step,Instant et r\u00e8gle2026-10-12;EA ne signifie pas API MEXC compatible. Tarifs,payout,produits pr\u00e9cis/API/conditions locales encore non re\u00e7us.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "\u00c9tudier les prop firms depuis leurs r\u00e8gles officielles, avec produits/API autoris\u00e9s, frais, pertes maximales et conditions de paiement."
+    },
+    {
+      "evidence": [
+        "experiments/owner_acceptance_v1/PREREG.md",
+        "./results.json",
+        "registry/methods.csv"
+      ],
+      "id": 100,
+      "priority": false,
+      "reason": "R320g\u00e8le quatre mod\u00e8les,trois comparaisons,blocs/erreurs/cas et budgets finis sans s\u00e9lection de gagnant ; budget global par chaque m\u00e9thode de la queue encore non attribu\u00e9.",
+      "scope": "Preuve born\u00e9e du besoin re\u00e7u ; ni profit garanti ni validation r\u00e9elle des donn\u00e9es absentes.",
+      "state": "partial",
+      "text": "Fixer des crit\u00e8res de r\u00e9ussite et un budget maximal d\u2019essais par m\u00e9thode, pour d\u00e9cider de poursuivre, corriger ou abandonner sur des preuves."
+    }
+  ],
+  "owner_requirements_sha256": "8fee48fd33fdd6234b2579467e8e544076d381432b04dd78f031c975220a1856",
+  "priority_counts": {
+    "blocked": 2,
+    "partial": 6,
+    "verified": 12
+  },
+  "scope": "Exact owner requirements and bounded proof acceptance; no second methods queue, no market-validation or100-completed claim."
+}

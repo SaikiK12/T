@@ -1,0 +1,896 @@
+{
+ "folder": "data/settlelit_1m",
+ "source": "https://mainnet.zklighter.elliot.ai/api/v1/candles resolution 1m (lab.carrylane)",
+ "script": "python -I scripts/fetch_settlelit_1m.py",
+ "recorded_utc": "2026-10-28T14:25:14Z",
+ "hops": "experiments/settlehop_pred_v1/results/hops.csv.gz book 'binance+lighter th0.3%': 221 hops",
+ "window": "Lighter 1-minute bars opening in [T - 10 min, T + 10 min), closed when fetched",
+ "files": 221,
+ "bytes": 1208156,
+ "file_hashes": [
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766678400000.parquet",
+   "sha256": "7290bc95a8cbae46abc9dd1b1386d957315e9522dc98075528298670af81ea1d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766721600000.parquet",
+   "sha256": "ee91bb221e651f9dc7d817dac925ef3715c495bf1e41332ce35e2452a94ea370"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766736000000.parquet",
+   "sha256": "d495100e8f1cf23c5ba3876fc4a67034ec95cc6e45eb0629b9b8165bbf0dbf47"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766750400000.parquet",
+   "sha256": "b92e5e97d34ae4f732dfb94f3ab8c7b71d53b1a09af0b3b8c62947f29ee4acc6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766764800000.parquet",
+   "sha256": "059ea72abe080f730a6c74fdcdad88623c669b22a07c33271d01f47071aa6a66"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766779200000.parquet",
+   "sha256": "886b7d97e16736eb8308b14d1e488748ac3c7eb863b57e8075e07bc7932c27a3"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766793600000.parquet",
+   "sha256": "db012fc466ee9461d35b1c94561c2279606ba0e773fc9ba0ab87ac6e3635b7af"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766808000000.parquet",
+   "sha256": "6eeb406762fe82c768c2a992f1d5caa3d134b57797dbb202c04aabea62f67842"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766822400000.parquet",
+   "sha256": "5d6555fa691b2e047e94aa84691fdae1e71a8bda00c2f92d7e192480563c4b5e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766836800000.parquet",
+   "sha256": "01e0201ed7c35834770038f5e3bbe575478eed840736d72552bfdf172cb92050"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1766995200000.parquet",
+   "sha256": "7599d026c09dc39b7277955cc15ade021cec76428ac2347b08ee0a9d82e233c0"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1767067200000.parquet",
+   "sha256": "1f982fe758dc4a5ad1af353adc57f86fc34883cf78ad9e225f2bd7c4fbc293c2"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769097600000.parquet",
+   "sha256": "295afe3509e89a23beba20a3ce29881ccf732f39a130574734a4776a3d759648"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769169600000.parquet",
+   "sha256": "6ab31fb172e1fee4e0fe9b2ef2161d59c25cfc6967aa255a158a51f853a98f3c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769184000000.parquet",
+   "sha256": "a0e5969d77f8e839fdb1dedce9e0b79038344ba0c0f00b634a02cbe4813a2dc1"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769198400000.parquet",
+   "sha256": "abba37bc4c4ed3f3e88a1b88ca811b20abfe633b456445e5b9058ca7783b316e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769212800000.parquet",
+   "sha256": "993473c4f75593b52a67b00971fcbe28a786e88a4d08f59b83c912ebedcd4c91"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769227200000.parquet",
+   "sha256": "10a3ab22093cf553bc217c90bcaa187aeb846912d5575918149533fc740c157c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769256000000.parquet",
+   "sha256": "f838050cc02bdb253f4fafd3c101db600d9767a4651dd90968f99683bfd89b89"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769760000000.parquet",
+   "sha256": "1452655ab350dc975a7d4447da2719740357f512f15d266826c06fe661947506"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769889600000.parquet",
+   "sha256": "93a188db6238d50e7fce20ae17735f8303e810166473b508d4c7cb3a9a554964"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1769904000000.parquet",
+   "sha256": "459b22ae9b03a84589b97e15367a30c19b8c475f5bdb5c826fc4a99a04fcab12"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1770868800000.parquet",
+   "sha256": "80d2a6f0095e7d5fc012493968d99040b1496de2715979faf1fb50d2aefc0939"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1770883200000.parquet",
+   "sha256": "0d1b2b1828189919bb8947166ef45d4bcce6fe4d227cb6feccac53c2d271bf2b"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1776024000000.parquet",
+   "sha256": "bd627173bd01b9cc60fd085ea4e2198a279ae8b2545ef7cfaaf674391e70556c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/0G/1777305600000.parquet",
+   "sha256": "61e2de2b1cbb70c0b24a5f072ecc589ae47734cdd74f20a7c31d36d4452909d4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/1000BONK/1784232000000.parquet",
+   "sha256": "6825897bfa20b041bb1ed34bae75ed6d6c82d8a0c20351779727e6ba977a8f76"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/1000TOSHI/1763884800000.parquet",
+   "sha256": "f1a190f8e693ead8dd61566928a9f60324e55c0ecd22654483301e767d71e138"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/1000TOSHI/1763956800000.parquet",
+   "sha256": "946c6a6aadb8a3686233d5ef96cf73282c8b2977c2d8ff48e843ba2ce851a405"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/1000TOSHI/1766937600000.parquet",
+   "sha256": "1cd50abbcefa1441bcdb677fdc49a1927cfba69d48799aef3fbf63123d5b473b"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/1000TOSHI/1770912000000.parquet",
+   "sha256": "ee4d4ed602fd741ddd0737cfc2efc62db79f420253d42824c28a745ee6026295"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/2Z/1763755200000.parquet",
+   "sha256": "0478a9fa43ab1fb0910711e5c8e471c6a6acb7d357f1435bb2844ccc80111547"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AERO/1760140800000.parquet",
+   "sha256": "5eee54feb79688f4042b00ffc9afe5e562bec1bdaf32eeca5dadeb5dffcc9c31"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/APT/1760169600000.parquet",
+   "sha256": "2866fb14651b97d7fc453c060ee3569ce3938e14d07b98c0d0d2ef5f413b32c8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/APT/1762502400000.parquet",
+   "sha256": "e5b0521bebc25b8e441a5abff768c005030688943d267f0404ff3b212c7f3958"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ARC/1776283200000.parquet",
+   "sha256": "85957be650d9964de428d4174f4bd42631fdaf632c9f83a0417092e6d99a3208"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1760140800000.parquet",
+   "sha256": "1ef12491b91d6ab627de112c0edb0074e4fcdb9ba8d8a4c702f5996c4becd806"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1760169600000.parquet",
+   "sha256": "51de6758d0de45a454a88040d8bf1900b9b9c91575b5c8e1377df25978238713"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761019200000.parquet",
+   "sha256": "d0b493cf7b97ec30582d14863babb7c402cb646b1cedf49779db2609875bb253"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761062400000.parquet",
+   "sha256": "bebb200410bdca7090978af267c99fe6aa157b2ebc74c05dcf3a8e90174dd70c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761076800000.parquet",
+   "sha256": "37f53a69fd03aa81a1674ed7a07d3912a4033a82099355ac96731c97d21b9565"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761105600000.parquet",
+   "sha256": "ca4af503bf1fd26e5c55358d567167158aa52ccd6a6b48fd745e7631ad51525e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761120000000.parquet",
+   "sha256": "d2ae9c423088bd36c19f5f26be79e414a2c83d4dc6942e76f9d750586d65612d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761134400000.parquet",
+   "sha256": "f2f4a742beac34d6e380660ad730474a809581fabe75ad398c786f77f3d3dfbb"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761148800000.parquet",
+   "sha256": "e738a2aced4f1994b63416d7c68055a160a9e4c8136498672767031b700ea4a8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761177600000.parquet",
+   "sha256": "da8e8d90f6f1c8b07175705a04723270d3fbebaac2dd4d71fa76023972fae182"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1761264000000.parquet",
+   "sha256": "fe3343badcc23792b477f9290a34a9156b056bc36992a67a0fccefb098f112d6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1766548800000.parquet",
+   "sha256": "14adc2aff3f54ed158ffdb5ac6b1fa30f63bdb08468f2355c10ba2fa1b8b8e2c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1766563200000.parquet",
+   "sha256": "05b9b86e50c7b5ec7654cae78396f56ab0bfb18cf2b0a85da5ad1386452f6a67"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1766635200000.parquet",
+   "sha256": "2ef5d7b9cb6f9cc0c59bcf7d18d875645fad56597907dbde85fc4555f494ab42"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1768032000000.parquet",
+   "sha256": "eae6ba3cc9c40ceca5a3f58005068b943db2524b50a3f43fac8ae963d64bc5fc"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1769313600000.parquet",
+   "sha256": "df5ea006283b1995ab692fa66729fb2175e127f6819e79acd31a8bc348c02d2d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1769328000000.parquet",
+   "sha256": "5119aa8bc8ec0a091a6727f3c61ade892eed69c3d2b343e2e3aa0f4aa439c452"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1769342400000.parquet",
+   "sha256": "78b5b93c4a3ea7901d76a00f77b6c2599d72d262f77c66ce3d7229239ffca743"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AVNT/1769356800000.parquet",
+   "sha256": "8fd90d7d6124e762096e4b5385d9c7dc4c1aa68d21568f927ac588f65b5630dd"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AXS/1771300800000.parquet",
+   "sha256": "4c9a277f21a474e758c27ce7085b1455699ca93e88870c69539b79e565b419ee"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AXS/1771372800000.parquet",
+   "sha256": "63d527b2d8c5c53c6b845c14a30af532f5399b352b0ffe8d379e8fd47905664c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AXS/1771545600000.parquet",
+   "sha256": "2d9e51d59efd15dcc180acbce06a8fcd7d0c9aebba437ef24364487fc381bdd2"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/AXS/1771560000000.parquet",
+   "sha256": "d2ce3559174747c3e6417ec303bb626370eb9c7b040122c8f5582d5069ab7280"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768363200000.parquet",
+   "sha256": "db5f09ef1433b7fa1fc2e4ead71563065649b2467b4efc7b9e3874ae10e5e7f4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768406400000.parquet",
+   "sha256": "748c8f28091a625a14edefc33be7babd7e8b15b8f7235ab4200a2899116ce266"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768622400000.parquet",
+   "sha256": "30a01fe2569958bf6183fe42c5ac97af71a44310c6bddcb30789c77372e612ec"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768636800000.parquet",
+   "sha256": "5b179bdff1eb1e064f5fbbbff8a8f622c9a3cd28b655cf16b3b21df1b0f9c764"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768651200000.parquet",
+   "sha256": "2850748ba11fffbb1e19b219b57bf7f64020de0b37eef72c509fe9a828719715"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768665600000.parquet",
+   "sha256": "60b2bc5958bbbcd87c92bf8cd294c33aed8fd233b2f6702a55f3d1b140efc270"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768708800000.parquet",
+   "sha256": "2814a7acb42463cf73c144fcd65caf0a2ea2761b55c931b132ace6e4bf616c92"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768795200000.parquet",
+   "sha256": "0324a216ac70b8ea9a5c87d92353171d8d9d8484de6b52ff190f6f62e736a5a6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768809600000.parquet",
+   "sha256": "ceeb87164ed8f65436162220143926adc0e4c8d50ed81ae58b4bfe5e816731e7"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768824000000.parquet",
+   "sha256": "726195e0bcd9f997712b054bb2c018c78384165b9ceb272b46c91956caeccc82"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768838400000.parquet",
+   "sha256": "9bdafdbf382daf74f7851d5ccf2e70683387be0de32e1f8273343d69079fdae8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768852800000.parquet",
+   "sha256": "46aef8e5fa1190fd02d322a711420b502ab84b9fb9ecc1732a34e9710b6db65d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768867200000.parquet",
+   "sha256": "2c0259e69af00e5618377724f894d6affc960416506c8f305b001b10987c463e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768953600000.parquet",
+   "sha256": "34e4695a0fdeba3f704d02d2fb8959effe0bfcdabb2848598e2b44720d551f72"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1768968000000.parquet",
+   "sha256": "e2fe9357f30598f61c306f9f489246a915a614dfc1503e5722aac025f2cd9274"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1769011200000.parquet",
+   "sha256": "b881873143d91cfd7cb8a087c1a784e346b2ad4786cc66684d51b796081eb3a0"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1769025600000.parquet",
+   "sha256": "b05255eeb3489e4f11564305a2bcdd4ed3804f2b30de8b1668f11141e2f876b5"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770408000000.parquet",
+   "sha256": "95464f1db11c9bbca5cc1afea98b60be37aa9071ff51e3ec7cc730d9a3201d60"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770422400000.parquet",
+   "sha256": "06c7aa268a5f5c5d9f873304a09a447a871f00ff9978e2262c70a42ce33fef44"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770580800000.parquet",
+   "sha256": "89489aca4c47aef63bc84c36f0fd9a0765c72728d4a4c54338673a68748632ed"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770595200000.parquet",
+   "sha256": "0395d8d1ce7079bb1f33069228198f96d3c8548cea5a7f112cfe2d8124fb7311"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770811200000.parquet",
+   "sha256": "47bf27672750d6ce8d8cf2c39a0fd0efa6bae88595f99152a3374c32af9f7fdb"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770854400000.parquet",
+   "sha256": "cb41e537be65baf50b43698e23eeb5abe0d9e6e9deb98660fe7383286b0218ed"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770912000000.parquet",
+   "sha256": "db886298c5bb7cb084547de7f52d8593816018cde0b5f12fdfa109cff1ca3908"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1770940800000.parquet",
+   "sha256": "fed19b4f5ffba3da80cce1a73b115d244ee914cf56b2848edc14a6e7c0b99fd1"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/BERA/1775304000000.parquet",
+   "sha256": "8a9ce178db31f14391af1d996739a185ae6ec3de05a0218533f189999a3d4144"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771488000000.parquet",
+   "sha256": "03481e4c53d39a458749ff2b7782ee9b3457dd42f768760eb71157c292775111"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771516800000.parquet",
+   "sha256": "6ca51410d3200284f6f351694f86646e1f2c39346b48b89ecb8b1a971676c5ca"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771531200000.parquet",
+   "sha256": "c33c5362ac9c938f20d7e0f8a29b93a372f397f30bce7ed6900a8367ddbf946a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771545600000.parquet",
+   "sha256": "12bf1bbdc088e8c6fd17dd5a6c1f45c8973a852f87ddc2e84a0ccc7a1de54033"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771704000000.parquet",
+   "sha256": "71ecbc147e7e6d427e80d82cd66d304a5a4ea77e8ffaacf4b3754b4745c8334a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771804800000.parquet",
+   "sha256": "1825fb2f826ab3c3f5dd19fd900c2fa39aca2f2b59f90e579d2c6696b01f8a1d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/DUSK/1771833600000.parquet",
+   "sha256": "8475963892bca6a1dc1dc7e620eaf436dc55decb81f02db33f14a6232374d3b4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/EIGEN/1760140800000.parquet",
+   "sha256": "886f03a691c48cfb5d8121838fa8b6c7c4482c3e2d7f2335f65f28e6e388a60b"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ETHFI/1773892800000.parquet",
+   "sha256": "25917d2637ea895f179486015afefe54776d6d774fc6b941b7ebe7cb2b281b1c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/FF/1775851200000.parquet",
+   "sha256": "9a81103caac139abd3b7d0f04efa6af495fcd8222922076ab04e2c8a82fdc821"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/FOGO/1771934400000.parquet",
+   "sha256": "6e6fb20ff9ee1f2f3696e5ab696470ec7c9538e7201a182a2e439f29ed9e044c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/FOGO/1782432000000.parquet",
+   "sha256": "68e3f40fdee24376f6f3a4d7325d96f3e0268e4f3e2b23936f24d4bec45ab925"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ICP/1773216000000.parquet",
+   "sha256": "7c832e3fd13c35b2b8d856ecf7ceeb8f66e6425a680dc6067e5a5b3153a2b7e3"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ICP/1773244800000.parquet",
+   "sha256": "c4ea68a54c731fb9b669c49c534bff14bc6e141d779730c98382512cba8c018c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1757476800000.parquet",
+   "sha256": "c7eb2c2d27ac2fa3457ecbc1726e8e5163aeb90f537b7498cbcfa2db3ae97436"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1758988800000.parquet",
+   "sha256": "b7a9ef17dac92de66c8508aeee67c0196fc496133008c1a61749bdd5fc563e29"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1759003200000.parquet",
+   "sha256": "14fec230dd46a9ebc1e211ac6e40157f97810d353546098ec29d5f6457e2e8c6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1759046400000.parquet",
+   "sha256": "1f980ed9eac7fcd3b31323acca34bee6998ac62b817fcc2bc8ba9608d91ea40d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1759060800000.parquet",
+   "sha256": "30b75082cefbdf80c7e3df30087e017a1dc535fb1cb04b679dd1ce0ec75b4166"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1763409600000.parquet",
+   "sha256": "a58c41158802f1744e6d3d789e158d994ce6560094efdaf35600243a7a02d04f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1763424000000.parquet",
+   "sha256": "ddc960617a591622ea6573c020c017ad6dc81dcd1827c4bf2501c631d156edcd"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1764100800000.parquet",
+   "sha256": "bea00078702b8d88ba7d5554c733fc85c7144dfce007b3f0b1e71f735d41f4d4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1766808000000.parquet",
+   "sha256": "e54a9ba5d303bb2276941893060b2e67f13470c5ea0bac1a306c6ed6037bf26f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1766822400000.parquet",
+   "sha256": "eebf7503e1a402fc9a9d0c5aff227499a22f12ee07bd5c700bf61093845f25db"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1766836800000.parquet",
+   "sha256": "9be7828c1743028e3d9a7f2c08c8329da90f886889d704517c6046cb16aa1d63"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1768507200000.parquet",
+   "sha256": "d13423b994ef86dc4db90a2383317eb805174bc1b4d356a902dd0eb085eee7f8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786204800000.parquet",
+   "sha256": "1ea2367ac19e3b2c2e4790b1238db229a05dda04e998fc47780b6420995c3103"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786219200000.parquet",
+   "sha256": "1815c3bd2bba0e58e9e5bbe0a403bcded765c9a23dcc9eb0699136fa4b845553"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786233600000.parquet",
+   "sha256": "154c07648e83b22f51be291d490b2eca8a8606f69ba18bf72e1ceec8fb658ba8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786248000000.parquet",
+   "sha256": "08e0a35f2f3da7dd97141ee709960dbdfc09f31f485bbdfb104fd2c1b1e131e1"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786262400000.parquet",
+   "sha256": "4e2041386edf78b5931ba7b5bfd4049f5ec5614dc9c42e717b8f170c3bbce166"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786276800000.parquet",
+   "sha256": "05dec29fb6b558a0a7891bfa2e69be0e16d4c979bedcf41f980c75c35402d145"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786291200000.parquet",
+   "sha256": "6c388886a903cf2ab8e7e1b0699dbe6caad48b6795fc9a162dcb636cacdce0ef"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786305600000.parquet",
+   "sha256": "22aeaa859e97212fb74dd85e7aba57f277c82f1f5910cb2719c5cf1d11d856e6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786320000000.parquet",
+   "sha256": "bca090e5923e409d2eaa712305d4a533f54bc8caef66a704daa5115143b6b7c5"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786348800000.parquet",
+   "sha256": "cda6ee35d2df02c2845ed4986c097122a73326677222cb89c026950de52dfa5a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786363200000.parquet",
+   "sha256": "88f940305fe12916355621a07a5cf577712a97aff90d8b5753176a45b8f606fa"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786377600000.parquet",
+   "sha256": "625f6435ac6a4605183d27f1113c7b179a945136abbdf4c35298a196edb4b7e6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786392000000.parquet",
+   "sha256": "d79f99e2357accc082a2492482c7e163522b8a0e58eda32c708cc5f93ea796ef"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786406400000.parquet",
+   "sha256": "ebe0308d495ac1ee91dd40894ddfec35734bbec92f366e79018dc9bfca751e1e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786420800000.parquet",
+   "sha256": "9ee50811544d6503f2db481ee4ff8c3802baf46b0911f9d5710f5ec1083498a4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786435200000.parquet",
+   "sha256": "25d4f8d5fb24d721d0a0889e6149b741c6de74af5f325bfd34bdc64e9dc03a5a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786449600000.parquet",
+   "sha256": "b42a4fa4ec30c22e1c83d30f47895cc0926d20ce71c22bd280205abd31ecfce2"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786464000000.parquet",
+   "sha256": "40baa8106cecb18eebf16fdc5099aa4bd22faaca5d123c8204ffc13a6236d67c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786492800000.parquet",
+   "sha256": "a0637ccef5caff7bcca0c930658ca19cce11252792630fbd5ce5da8fc600092d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786507200000.parquet",
+   "sha256": "1fdd8bcb0aa777e03b0cf2f71e45bb825e76d748abf244ad026b4ee5b42739fe"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786521600000.parquet",
+   "sha256": "da3dc3657ed1ecd8071147414e45670b84d2bdc0baa82c3fb6462905e75be7e4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786536000000.parquet",
+   "sha256": "b9d1f7452c353c41ce95bb19421ef750c91976f2e5a191c27058200bb754dc9f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786550400000.parquet",
+   "sha256": "9b7605d6e197d8a44df92d2ee5b43758ce77b578f0bb7d25b99624c23dcbf6c0"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/KAITO/1786579200000.parquet",
+   "sha256": "45a9740af7b8151da598466a326f8974812a493ea50ec13b25133984ffb9bfbf"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/LINEA/1770868800000.parquet",
+   "sha256": "f98605ba7eaa06fee90426bf2ded711153a82bb2dbb4328b5b6f00921b2d64eb"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/MET/1763452800000.parquet",
+   "sha256": "36637f69453dea7a2fc55293164894c011d7a178f342ac5fc004f09cfc42f304"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/MET/1776830400000.parquet",
+   "sha256": "e9b88629ffc2328646877feb74a339928c3d4b186c3386e396098bdc5b157a55"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1758628800000.parquet",
+   "sha256": "14cb78df3bc655e5a6cdc0b7d33be0e755faa6273c4db65a515d6d4c175f4926"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1760184000000.parquet",
+   "sha256": "e8a47016d71e4951addf9ae5bc586156caa1b71cb39188c03805d564f89f9ced"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1760198400000.parquet",
+   "sha256": "8f62d2fb7df29d62f1d5eef3a146eb941a92daf6530d9b9e77966af5fc2c9f86"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1760212800000.parquet",
+   "sha256": "48bb05477bd46ae2943dc42344655e440524b21edec9b1ab01916c82b29bb2fc"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1760587200000.parquet",
+   "sha256": "9b9459ab7927aa3743c632794aa4389470ee259803fe7d87c921e8c9c9459629"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1762185600000.parquet",
+   "sha256": "8f75550faa7f20a7d5d347c96895aeb32a303bf8b32ca3b3d31fc3f81d0873eb"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1763380800000.parquet",
+   "sha256": "a3caea0585ac59ec2f7260daab49f3080d4ebef165dcbdf172fb9beb4ee736a8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1763395200000.parquet",
+   "sha256": "32a30ddc6ce6cfadbd5ac289a20e7f6a49cce62d9a6106ddf7a341002631e4d8"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1763668800000.parquet",
+   "sha256": "def3bf1c290845208e7e2aa1b5faee636f3c66de41a81e007ae3b5effafdd565"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/NMR/1768089600000.parquet",
+   "sha256": "79f2030052c9f66827a14224c8347cd2a3521b312633e4a241eb4fde2a1dbcb9"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ONDO/1760140800000.parquet",
+   "sha256": "6727dec6075c405f8be16a63bb9aba40cb77a88eaf38d1cb45b5e42b8986b4c7"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1772596800000.parquet",
+   "sha256": "d9e55adcd22c06c4daa08b846186e4a7dbbb2f9247895575faad268623cec541"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1773662400000.parquet",
+   "sha256": "d7da54925ea1f60f7f505d0abf1ae66327b1a7995a781dea6ec546fb1a94a438"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1773676800000.parquet",
+   "sha256": "bd98f0ea6a1b8674622a9bcb8c22c78fdfd267c86e8e4acff8052787879af7c3"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1773691200000.parquet",
+   "sha256": "c672444bc641249707c888a0bbeeb610cd1abb7c863a0dc19a2b12381958fd3e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1774627200000.parquet",
+   "sha256": "734c23efd2f447868c1d9e4cef87ffcf1cf58a39f8d327e2dbb3fd34eb63342a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1775217600000.parquet",
+   "sha256": "c05059a756df6465a2e8a08087ed5f7d657872318534ece433b3f1a77337bce2"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PIPPIN/1775232000000.parquet",
+   "sha256": "30e2455ac5984332e77243f8cbeb5690353a614c006e66c562eabd0e710bd63e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/POL/1740254400000.parquet",
+   "sha256": "640ec98bbbf1f1cf0f71987144f47c1ba24d647a18cb924cb1acf9fd1cbfe357"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/POL/1743638400000.parquet",
+   "sha256": "92b09d40b04239b6de5b763927c3541cdca8964403dde30b380faa80a202389b"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PROVE/1760241600000.parquet",
+   "sha256": "33468ae5b1f01eac3cd22f1216f3173791fb60ff133f2a0a77c0593f3ffc1f8c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PROVE/1770393600000.parquet",
+   "sha256": "2dd7f78e925852c574e0ab8ab4c11fd513a771337ba4f4344a0934b2a8443458"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PROVE/1774483200000.parquet",
+   "sha256": "8ed0a74a85cd9d4c37d09ec845ee5407138315acc6789cd0bfd07868a2a39441"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/PROVE/1774569600000.parquet",
+   "sha256": "789d0ac9841c45e475f7bb4304d8de8eaab81d0e207bc444da3f903309b91677"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1770868800000.parquet",
+   "sha256": "bf25fccfaa74f8ae6bb10382793dede4df878b3c904108d2da13932c0311800f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1770883200000.parquet",
+   "sha256": "a080fcbcce7838391670ed613fa13edc00b606d3c793d63bf2a0409207108bdc"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1770969600000.parquet",
+   "sha256": "7efd7889efdf49f5320f91eac24f35563e32f7f11b9116cc3db737f4560333f0"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1770998400000.parquet",
+   "sha256": "0b051e7696ec0e869dd12c5bca65f6b50aa8f80c858dd3dda67ea14e1b124689"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771012800000.parquet",
+   "sha256": "180671f4bb2c82d693d8a68b6382938a6c5a0b94b63498675ee5d7a9dd8ec774"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771056000000.parquet",
+   "sha256": "2daadf825b41e822547e2ee559654053b3c27f8a5c4f35221af0e41705023f39"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771070400000.parquet",
+   "sha256": "b0e13627b101ff0364b59c7602527d50c699986f843e3ec093d23532489bb6c4"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771084800000.parquet",
+   "sha256": "bdfe73b3410f57f20fa725048a462f569dc72071b07731cdeaf01e9bbd871029"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771099200000.parquet",
+   "sha256": "3a2c089ec1f4191844d0aea81b48371d90ab093cf67ecc9371195cacc7fd0622"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771113600000.parquet",
+   "sha256": "ef98f72d78a586444548a5510aa725e59f95993bc4eb4392abb6b81960f8ca1a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771128000000.parquet",
+   "sha256": "47987e4fe0a57cd6a910ace8d758ec0fbddf486b25991fe3af56dadc2a1cafac"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771156800000.parquet",
+   "sha256": "8c2b27392d049fb03288e01a08dc520ba3b02a1bf3658ee1254ce13235d9bf9b"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771171200000.parquet",
+   "sha256": "91c91f54e60dc8579bf85bdf6b093bca6f8af04cea659f4f9ebebc1dbcf0ffff"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771185600000.parquet",
+   "sha256": "83dffd262c3988deb61208745549f3be9c3e53cdc8bbb37109135a855b052276"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771257600000.parquet",
+   "sha256": "d3b5120b9acda6f217399f827232c893177f493ee7ae91a41cdd983cfdde8c18"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771300800000.parquet",
+   "sha256": "3b32f1863d4bc3a6d4879281822173f6d04df40c750a145d9263819772872ca5"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771315200000.parquet",
+   "sha256": "f85da68f7d89c01b9d656ada666377a34029f0e9594d72e71a7bf01efcc1b76f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771329600000.parquet",
+   "sha256": "43f4f51d245af6e278d5b4b96fc65eca456433c617f0deee3efd7f6ae3cb4071"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771344000000.parquet",
+   "sha256": "eebca70cc64a0e47b9965727b057fff0ea792d466cdb860bf88fdb85d3431472"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771372800000.parquet",
+   "sha256": "d85e44aadb805c68f3be674f4a1865f6b96193b7cf942a669ad8e3700c294eec"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771401600000.parquet",
+   "sha256": "76d8721c2d72349ac0c34d0acf2b0f7e9ff48c97cc578e4595ea187737970d87"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771430400000.parquet",
+   "sha256": "0dbbf1583f95666fb81414f950cc21ee7c66a6c28b3a4fd289ae3877c0616a15"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771444800000.parquet",
+   "sha256": "e807a25235d44b6f59a4f90d90d895bd0a075c720cdf5a8af4ac7f0d19c09c2d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771459200000.parquet",
+   "sha256": "7b54f126919f2a81adf0e3859fa373774dac273967e48f1fecd58c27121cde8d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771502400000.parquet",
+   "sha256": "c458f8e97b66a530a3174f3ce08093df178cef1db372979281798de9017b0c67"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1771603200000.parquet",
+   "sha256": "2aa2a6d50bd8ba6a2bb818a9e49fa62fdc3b53e807a786ed413c3bb1618cda2a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1772971200000.parquet",
+   "sha256": "ce648f57df29a20695f69b3faa7c4ae041e933b9209590cc68961398a9813b7f"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1772985600000.parquet",
+   "sha256": "a73a77016cc51984bb39bb29328307ad25cdd14c53e783335c129d18e13914c3"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1774454400000.parquet",
+   "sha256": "13b9abddf1e3ebc3b24078141907d3e8559689207a7a14c6705ebd0ed796517d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/RIVER/1774468800000.parquet",
+   "sha256": "5aa840f94abedf601f55c43c22212a425de77c86bbdaeca00fc2bc4ba9fbe73d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/SEI/1760140800000.parquet",
+   "sha256": "ceb0af06a2979695a9056abe25c8fedb2537bb1032a962a7b8b7ae48a9c9be27"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/SKR/1771920000000.parquet",
+   "sha256": "7008979e4b9b28158f3e3ad1f25b6083fc550c0d42ade1218ae7612e33499462"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/SKR/1772856000000.parquet",
+   "sha256": "9e58b834a125110ce003d2c79f7dd9e4686a33446b4ed497f764bcdd3bb48c67"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/SPX/1781582400000.parquet",
+   "sha256": "54f24f1375a3c53407d64b9148b629cad56b3679a819ce81ac5f333c2b439899"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/STABLE/1775016000000.parquet",
+   "sha256": "4dc04769d8b355d966ece45d168443eccc7f035ce9d2e808f6297eca9b2b820c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/STABLE/1775131200000.parquet",
+   "sha256": "9cca10dbf835e68a751ac876ff9c1e3c22048bf8f6e18d34fdfb648d443224f6"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/STABLE/1776096000000.parquet",
+   "sha256": "cd7288e28ddecbcc24ba5c758da8873da5ba86dcbf85a817bca72443184f4f59"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/STABLE/1777003200000.parquet",
+   "sha256": "ee739fa7982c73e24b0126899256b6ba720d024e5b8116b7307ab131fb020131"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/VVV/1771142400000.parquet",
+   "sha256": "8ebe19ad14ac1b0d05d6ed935cfb6d344a540d04c69b35e9031d96cffad0b801"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/VVV/1771156800000.parquet",
+   "sha256": "3d856531dc6fb82526256a710875fd6036d3d65c858f6a8ea51ba36228e9498e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/VVV/1771200000000.parquet",
+   "sha256": "fb345ee76bd8dd94bdd0574f897a03d41cc48b02b7e55ab20916bb7379ca7893"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/VVV/1771228800000.parquet",
+   "sha256": "cb3569e6f7050d1e3e914089b9225cf1b79e603abf7390bfc0699e561a626089"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/WIF/1778054400000.parquet",
+   "sha256": "80f546071e6a51ebfcb5df6fb76da2be1c3452c64fe436cfa6676edc2cd79e1a"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZEC/1762444800000.parquet",
+   "sha256": "a4c3b4aa2c8abb9e9118b0f1c243eaa843fbae3d4be3c788ee9683a8c1432995"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZK/1762012800000.parquet",
+   "sha256": "bb7a8955b041d50079470c438c8c9e9101602d71e81c5b56690079440093469c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZK/1769918400000.parquet",
+   "sha256": "ea7b1528a1cc2584ca80124b9af71b99b9a2fa5d379048fb3367e643af35ebb2"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZK/1769947200000.parquet",
+   "sha256": "e38a8e5d7259c3394c15f9a8bdc185f5f072506b59b8f50756b54d38e8e8e7a9"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1760731200000.parquet",
+   "sha256": "9c715cfb9e17a809bbb33823a6a8612e5a45c83d7fa813783533df44f8accdac"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1760832000000.parquet",
+   "sha256": "1be5b64b61a734006c8150d90a2832682b3f28cdef68a4ab0e1a0c60ae43b651"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1763006400000.parquet",
+   "sha256": "d79d85d0ca02fc55c0f7e14ceeed9e2c4ea36d83199b02780f7415a132c8fa7e"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1763020800000.parquet",
+   "sha256": "50eb37d91b8aafbea1613743ab04c9cd1cf9f9d472862c94c2a6d919f1898b0d"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1763035200000.parquet",
+   "sha256": "78379d3384017c4309bce280128378f7a0bf7f2f6368816e8132b575d2158227"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1763265600000.parquet",
+   "sha256": "9046ab6fd3eec62fde4d7ca9f639d7390db3965a3cc0fe4e8a6ef803e8be0460"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1763654400000.parquet",
+   "sha256": "ae8c2a02823d2f4ae7ff5b05b3eb220da864e48f6bfca5685ac3dcc8b49d1b3c"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1769932800000.parquet",
+   "sha256": "308415b9933a409f3100440ac49870539e979dee4a9c4631a6660dc93b8dba46"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1769947200000.parquet",
+   "sha256": "f846f60eb7a24968017e1b14992c57cd53f637f0637cc86659a427fad1f67ee0"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1769961600000.parquet",
+   "sha256": "07cd692c826025513400b00ecb279039928a8e8b805c06a8e79771512e7753ab"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1770004800000.parquet",
+   "sha256": "979c856e36189938776edb5ac84c83590762aec1afcccbdfb0ec75547b88ea77"
+  },
+  {
+   "path": "data/settlelit_1m/lighter/ZORA/1770019200000.parquet",
+   "sha256": "8545b18f98a916243b5f69a21fb7383965a9762da816a2059f877e9745c14a55"
+  }
+ ]
+}

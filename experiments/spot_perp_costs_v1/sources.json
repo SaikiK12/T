@@ -1,0 +1,77 @@
+{
+  "existing_aliases": [
+    "C09-BASISCARRY72",
+    "CARRY-ORIGINAL72",
+    "FORWARD-CARRY",
+    "SRC-PERP-NOARB",
+    "YT26-05-VARIABLE-CARRY",
+    "HB24-C7-SPOT-PERP-CARRY"
+  ],
+  "existing_queue_ids": [
+    "M047",
+    "M134"
+  ],
+  "independent_read_scope": "experiments/spot_perp_costs_v1/ws_source_review.md",
+  "mechanics": [
+    {
+      "id": "public_market_access",
+      "rule": "Market module endpoints require no authentication; read main index only, not whole API corpus."
+    },
+    {
+      "id": "exchange_info_query",
+      "rule": "symbol or comma-separated symbols query; weightIP25, symbol identity and online/pause/offline/API side permission fields."
+    },
+    {
+      "id": "minimum_is_not_step",
+      "rule": "baseSizePrecision min quantity; quoteAmountPrecisionMarket min MARKET amount; maxQuoteAmountMarket cap. Decimal precision is not proof of a lot or price increment."
+    },
+    {
+      "id": "public_commission",
+      "rule": "makerCommission/takerCommission appear in public response, no owner-specific/asset/tier settlement proof."
+    },
+    {
+      "id": "mexc_price_band",
+      "rule": "Published LIMIT buy orderPrice<=lastPrice*(1+bidMultiplierUp), sell>=lastPrice*(1-askMultiplierDown). Not adopted as a MARKET rule or Binance-style multiplier."
+    },
+    {
+      "id": "rest_depth",
+      "rule": "GET /api/v3/depth symbol/limit default100 max5000,weightIP3; price/quantity pairs and lastUpdateId, no source quote timestamp. Crossed bid15/ask14 toy response is invalid input."
+    },
+    {
+      "id": "enum_scope",
+      "rule": "All received enum main content read; MARKET/order/status types contextual, withdrawal/deposit enums not account API access or new strategies."
+    },
+    {
+      "id": "wrapper_ms_example",
+      "rule": "Official Java serialization example uses System.currentTimeMillis for shared sendTime. Example-level ms evidence, not deployed quote-clock guarantee."
+    },
+    {
+      "id": "official_proto_link",
+      "rule": "Official protocol docs hyperlink mexcdevelop/websocket-proto; link provenance closes, tree/commit/deployment identity distinct."
+    },
+    {
+      "id": "aggregate_bootstrap",
+      "rule": "fromVersion/toVersion cache+RESTsnapshot algorithm applies aggregate depth, not303limit-depth. Overlap/bootstrap/reinit/zero-delete ambiguities retained."
+    },
+    {
+      "id": "finite_depth_limit",
+      "rule": "Official aggregate warning: unmodified levels outside5000snapshot may remain absent. No full-depth/executable-fill certification."
+    }
+  ],
+  "new_methods_or_aliases": 0,
+  "previous_futures_contracts": "experiments/pair_quotes_v1/sources.json; lab/mexc_depth.py and experiments/mexc_costs/REVIEW.md retain qty-versus-order-count source contradiction",
+  "received_body_bytes": 184953,
+  "registry_id": "R325",
+  "root_read_scope": "experiments/spot_perp_costs_v1/source_review.md",
+  "source_access": "ordinary public static pages only; no paywall/login bypass, account/RPC access, downloaded foreign-code execution, book/corpus mirror; exact bodies retained ignored cache",
+  "source_receipts_path": "experiments/spot_perp_costs_v1/source_receipts.json",
+  "static_gets": 6,
+  "unread": [
+    "trade quantity and commission-asset contract",
+    "actual spot lot/tick increment and rounding",
+    "aggregate schema code and deployed correspondence",
+    "signed owner fees/account permissions",
+    "effective funding event/fair notional and settlement cash",
+    "current source book age/execution/fill/session proof"
+  ]
+}

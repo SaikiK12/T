@@ -1,0 +1,142 @@
+[
+  {
+    "path": "data/hft/_parts/book/2026-10-29/013556-260.parquet",
+    "size": "442896",
+    "mtime_ns": "1793237756564155337",
+    "sha256": "0f2cde1e30f8ece56e54ace8b8f95fcaf032a1d683034268c12e2453e5d62338",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/hft/_parts/fills/2026-10-29/013556-260.parquet",
+    "size": "104924",
+    "mtime_ns": "1793237756592155337",
+    "sha256": "a90a4c85b76d81d2751aff4576e225643a0b682f939169532a963b77a4dc24de",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/hft/_parts/trades/2026-10-29/013556-260.parquet",
+    "size": "57662",
+    "mtime_ns": "1793237756580155337",
+    "sha256": "22dadb1eced5935a83d6d93f6605aed10357984eb7b2f8d0699738710cc0a806",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/lighter_trades/quote/BRENTOIL/2026-10-29/013600-293.parquet",
+    "size": "57906",
+    "mtime_ns": "1793237760252155253",
+    "sha256": "6d9f7b76bc15c6353c764392d04125d769058e6d3da94324c9d575e23fb13a40",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/lighter_trades/quote/NATGAS/2026-10-29/013600-293.parquet",
+    "size": "6851",
+    "mtime_ns": "1793237760276257784",
+    "sha256": "a5f09759d3b018ddb7a2f3fea0b943aac3e7babafec9ca57404100802b365fb3",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/lighter_trades/quote/WTI/2026-10-29/013600-293.parquet",
+    "size": "54050",
+    "mtime_ns": "1793237760268155253",
+    "sha256": "17323ab8db2e10ace82a0ba72ce7ede1c7a9d5b9e2475f345cd2cd0e1758b309",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/lighter_trades/trade/BRENTOIL/2026-10-29/013600-293.parquet",
+    "size": "14034",
+    "mtime_ns": "1793237760284155252",
+    "sha256": "ebaab2c3f9ac0acd667e694c6dac5ee6e16117cf7186238dedda82ea8af2f26b",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/lighter_trades/trade/WTI/2026-10-29/013600-293.parquet",
+    "size": "18243",
+    "mtime_ns": "1793237760293219169",
+    "sha256": "302becec70718b52b1d7833225860aa9ba7c2c30ca9aac03a915532efe75b37d",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/bticker/BTCUSDT/2026-10-29/013557-271.parquet",
+    "size": "8503",
+    "mtime_ns": "1793237757758769355",
+    "sha256": "ded05355e6b8fe9b92ffeef75159929189bdfbf6baeba52d7bbb1231967dc286",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/bticker/ETHUSDT/2026-10-29/013557-271.parquet",
+    "size": "7633",
+    "mtime_ns": "1793237757764987510",
+    "sha256": "ff29909569b719b7ffc64339c974fd34f06aa3328315504fe3ea4d3b3a2beaff",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/clock/all/2026-10-29/013557-271.parquet",
+    "size": "2756",
+    "mtime_ns": "1793237757753545734",
+    "sha256": "2f5bb34fa4c1953398505bca5047085bea422b57e409092a7b90bb649a040232",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/liq/BTCUSDT/2026-10-29/013557-271.parquet",
+    "size": "3772",
+    "mtime_ns": "1793237757772155310",
+    "sha256": "07f3586de5a110a375b0a6f0dfd016ea6c5cf56113835892916c13be8a4ab2e0",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/liq/ETHUSDT/2026-10-29/013557-271.parquet",
+    "size": "3761",
+    "mtime_ns": "1793237757777333900",
+    "sha256": "2dbde652b2e839093e1c4e1f538ffc0393636179bfbec65faf6edb0193a28670",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/rawtape/_parts/rtt/all/2026-10-29/013557-271.parquet",
+    "size": "2542",
+    "mtime_ns": "1793237757769263149",
+    "sha256": "2969f158740f43e43ed96bce1dfe6f1b71f9024ac6ad513794f1c6989c49f48e",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/binance/book/2026-10-29/013558-249.parquet",
+    "size": "172497",
+    "mtime_ns": "1793237758592155291",
+    "sha256": "9414d1079c479140add09248d30e253d5bfc8a20e9d1d08cd39eaedf91907615",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/binance/trades/2026-10-29/013558-249.parquet",
+    "size": "136584",
+    "mtime_ns": "1793237758616155290",
+    "sha256": "ae10d15f0728aa68f5ce0d911a2b0f4a70e67a79323374dbec4d7cdf3a424abd",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/lighter/book/2026-10-29/013558-249.parquet",
+    "size": "138789",
+    "mtime_ns": "1793237758644155290",
+    "sha256": "ed3e9e5cfbae33954e1ca6659e7f41a3e1f5fe80e6aae0d1f71ef2765dd9caf8",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/lighter/trades/2026-10-29/013558-249.parquet",
+    "size": "63553",
+    "mtime_ns": "1793237758664155289",
+    "sha256": "182cd2af87d4df4876a604be5f95932e7647fc424bb462727a90b6be0bc7bcda",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/mexc/book/2026-10-29/013558-249.parquet",
+    "size": "155633",
+    "mtime_ns": "1793237758692155289",
+    "sha256": "6ba076fec82af3ae984dab0606d8ca4d06f8966eb2ba9414b6fc7a0bc69c02ed",
+    "chunk": "chunk-00006.tar.gz"
+  },
+  {
+    "path": "data/tape/_parts/mexc/trades/2026-10-29/013558-249.parquet",
+    "size": "71686",
+    "mtime_ns": "1793237758705828967",
+    "sha256": "1a0afb23a3899fd150ac2729e48743d55c8144191f2385121dbc8f4326232a7d",
+    "chunk": "chunk-00006.tar.gz"
+  }
+]

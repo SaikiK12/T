@@ -1,0 +1,14 @@
+[    1.7s] binance: 873 coins with prices and funding
+[    1.7s] gate: 860 coins with prices and funding
+[    1.7s] kucoin: 642 coins with prices and funding
+[    1.7s] dydx: 231 coins with prices and funding
+[    2.1s] binance+kucoin L14d: window from 2021-01-22, 617 coins ever eligible
+[    2.1s] binance+dydx L14d: window from 2023-12-06, 71 coins ever eligible
+[    2.2s] gate+kucoin L14d: window from 2021-01-22, 597 coins ever eligible
+[    2.2s] kucoin+dydx L14d: window from 2023-12-06, 66 coins ever eligible
+[    2.3s] reality check: family max-t 95th pct 2.11 over 4 strategies
+[    2.3s] gate+kucoin L14d th5% K20          from 2021-01-22  +11.76%/yr t 14.51 nw 11.41 p_rc 0.0005 halves +1.6/+4.8 bp 2x  +10.34%/yr fund 1.02 held 19.6
+[    2.3s] binance+kucoin L14d th5% K20       from 2021-01-22  +10.80%/yr t 12.56 nw 11.17 p_rc 0.0005 halves +1.4/+4.5 bp 2x   +9.36%/yr fund 1.04 held 19.6
+[    2.3s] kucoin+dydx L14d th5% K20          from 2023-12-06   +6.78%/yr t  1.16 nw  2.13 p_rc 0.2444 halves +1.7/+2.0 bp 2x   +5.61%/yr fund 0.64 held 15.4
+[    2.3s] binance+dydx L14d th5% K20         from 2023-12-06   +8.34%/yr t  0.83 nw  1.44 p_rc 0.3568 halves +1.3/+3.2 bp 2x   +7.44%/yr fund 0.41 held 15.5
+[    2.3s] VERDICT PASS (gate 0); survivors ["gate+kucoin L14d th5% K20", "binance+kucoin L14d th5% K20"]

@@ -1,0 +1,73 @@
+{
+  "scope": "identity/schema/time counts only, no quantity/position/side consistency or price statistic",
+  "markets": {
+    "WTI": {
+      "source": "research/intake/maker_pilot_20261107/source/data/lighter_trades/trade/WTI/2026-10-29/013600-293.parquet",
+      "sha256": "302becec70718b52b1d7833225860aa9ba7c2c30ca9aac03a915532efe75b37d",
+      "rows": 102,
+      "schema": "t: int64\ntrade_id: int64\nT: int64\ntx_us: int64\nblock: int64\nliq: int64\npx: double\nsz: double\nask_acct: int64\nbid_acct: int64\nmaker_ask: int64\ntfee: int64\nmfee: int64\ntpos: double\ntentry: double\ntimf: int64\ntsign: int64\nmpos: double\nmentry: double\nmimf: int64\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 2243",
+      "unique_trade_ids": 102,
+      "consecutive_id_steps": 14,
+      "id_gap_steps": 87,
+      "duplicate_ids": 0,
+      "receipt_min_us": 1793237466142032,
+      "receipt_max_us": 1793237756445671,
+      "missing_or_negative_transaction_clocks": 0,
+      "unique_account_ids": 35,
+      "field_availability_only": {
+        "tpos": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "mpos": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "sz": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "maker_ask": {
+          "invalid_boolean_encoding": 0
+        },
+        "liq": {
+          "invalid_boolean_encoding": 0
+        }
+      }
+    },
+    "BRENTOIL": {
+      "source": "research/intake/maker_pilot_20261107/source/data/lighter_trades/trade/BRENTOIL/2026-10-29/013600-293.parquet",
+      "sha256": "ebaab2c3f9ac0acd667e694c6dac5ee6e16117cf7186238dedda82ea8af2f26b",
+      "rows": 32,
+      "schema": "t: int64\ntrade_id: int64\nT: int64\ntx_us: int64\nblock: int64\nliq: int64\npx: double\nsz: double\nask_acct: int64\nbid_acct: int64\nmaker_ask: int64\ntfee: int64\nmfee: int64\ntpos: double\ntentry: double\ntimf: int64\ntsign: int64\nmpos: double\nmentry: double\nmimf: int64\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 2243",
+      "unique_trade_ids": 32,
+      "consecutive_id_steps": 0,
+      "id_gap_steps": 31,
+      "duplicate_ids": 0,
+      "receipt_min_us": 1793237463703049,
+      "receipt_max_us": 1793237748352953,
+      "missing_or_negative_transaction_clocks": 0,
+      "unique_account_ids": 14,
+      "field_availability_only": {
+        "tpos": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "mpos": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "sz": {
+          "nonfinite_or_missing": 0,
+          "off_current_grid": 0
+        },
+        "maker_ask": {
+          "invalid_boolean_encoding": 0
+        },
+        "liq": {
+          "invalid_boolean_encoding": 0
+        }
+      }
+    }
+  }
+}

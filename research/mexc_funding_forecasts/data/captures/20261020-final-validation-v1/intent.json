@@ -1,0 +1,26 @@
+{
+  "capture_id": "20261020-final-validation-v1",
+  "capture_start_utc": "2026-10-20T12:23:32.634781Z",
+  "collector_sha256": "a7d68b0e3016c43040e14a9b55f41322e3dc189f3909453d33bd1e986dee60cd",
+  "max_body_bytes": 65536,
+  "protocol_sha256": "49cb7693c61bcc6e0c1837fa19c6cdf19ebc35a5caffe278cc61afa31c3af215",
+  "request_limit": 12,
+  "schema_version": 1,
+  "sources": {
+    "funding_schema": "https://www.mexc.io/api-docs/futures/market-endpoints/get-funding-rate",
+    "mechanism": "https://www.mexc.com/announcements/article/funding-rate-mechanism-13322295212313",
+    "mechanism_version": "2024-09-06 as displayed; inspected 2026-10-20",
+    "retrieved_utc_date": "2026-10-20",
+    "settlement_rules": "https://www.mexc.com/support/article/mexc-futures-funding-rate-305432020820705280",
+    "settlement_rules_version": "2026-06-01 13:48:50 as displayed; inspected 2026-10-20",
+    "ticker_schema": "https://www.mexc.io/api-docs/futures/market-endpoints/get-ticker-contract-market-data"
+  },
+  "symbols": [
+    "BTC_USDT",
+    "ETH_USDT",
+    "SOL_USDT",
+    "XRP_USDT",
+    "DOGE_USDT",
+    "ADA_USDT"
+  ]
+}

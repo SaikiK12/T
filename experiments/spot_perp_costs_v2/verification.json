@@ -1,0 +1,40 @@
+{
+  "base_commit": "2f7f04b70c00a5e266fc96bb843f2ff515580eaa",
+  "full_suite_passed": true,
+  "full_tests": 1366,
+  "intake": {
+    "aliases": 407,
+    "errors": 0,
+    "providers": 54,
+    "queue_rows": 328,
+    "source_manifests": 18,
+    "source_methods": 407,
+    "warnings": 0
+  },
+  "new_R325_current_requests": 22,
+  "new_R326_requests": 0,
+  "new_current_accepted_body_bytes": 13970,
+  "new_prospective_strategy_days": 0,
+  "old_alias_bytes_preserved": true,
+  "old_calculation_inputs_changed": [],
+  "old_round_prefixes_preserved": true,
+  "old_source_method_objects_preserved": 407,
+  "only_queue_rows_supplemented": [
+    "M047",
+    "M134"
+  ],
+  "original_historical_reported_mib_spent": "229.85",
+  "original_historical_requests_spent": 7757,
+  "owner100_frozen_coverage_unchanged": true,
+  "parent_failed_results_preserved": true,
+  "registry_id": "R326",
+  "research_integrity": {
+    "errors": 0,
+    "frozen": 139,
+    "legacy_warnings": 13,
+    "local_specs": 140,
+    "planned": 1,
+    "registry_rows": 146
+  },
+  "skips": 2
+}

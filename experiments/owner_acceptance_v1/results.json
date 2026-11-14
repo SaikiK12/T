@@ -1,0 +1,426 @@
+{
+  "activation_allowed": false,
+  "cache_integration": {
+    "export_consumer": {
+      "cache_hit": true,
+      "cache_hits": 1,
+      "cache_misses": 1,
+      "resident_frame_bytes": 401028,
+      "scope": "table cache only; no outcome/test/gate cache",
+      "source_sha256": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9"
+    },
+    "first": {
+      "cache_hit": false,
+      "cache_hits": 0,
+      "cache_misses": 1,
+      "resident_frame_bytes": 401028,
+      "scope": "table cache only; no outcome/test/gate cache",
+      "source_sha256": "fa51ba0038084a3c79ad757402d21129535a37c2c683886f91d78bb53ebb2aa9"
+    }
+  },
+  "code_identity_sha256": "8dff3f3bde4ff178f584c2029ebd0a19e2b14edbbcd72fe489803a89ee1425c0",
+  "data_identity_sha256": "8b592585011215addb7ecf62904d1d17d38e98456ec4da0b588a7222fc7f6777",
+  "entry_thresholds": {
+    "1": {
+      "actual_order_allowed": false,
+      "asset": "USDT",
+      "cost_multiple": 1,
+      "expected_net_lower_quote": null,
+      "model_entry_allowed": false,
+      "reasons": [
+        "forecast_error_not_calibrated",
+        "forecast_cost_error_or_reserve_unknown"
+      ],
+      "required_gross_quote": null,
+      "state": "unknown"
+    },
+    "2": {
+      "actual_order_allowed": false,
+      "asset": "USDT",
+      "cost_multiple": 2,
+      "expected_net_lower_quote": null,
+      "model_entry_allowed": false,
+      "reasons": [
+        "forecast_error_not_calibrated",
+        "forecast_cost_error_or_reserve_unknown"
+      ],
+      "required_gross_quote": null,
+      "state": "unknown"
+    },
+    "3": {
+      "actual_order_allowed": false,
+      "asset": "USDT",
+      "cost_multiple": 3,
+      "expected_net_lower_quote": null,
+      "model_entry_allowed": false,
+      "reasons": [
+        "forecast_error_not_calibrated",
+        "forecast_cost_error_or_reserve_unknown"
+      ],
+      "required_gross_quote": null,
+      "state": "unknown"
+    }
+  },
+  "historical_allowance": {
+    "approved_mib": 250,
+    "approved_requests": 8000,
+    "exact_remaining_bytes": null,
+    "reported_mib_spent": "229.85",
+    "requests_spent": 7757,
+    "rounded_prior_wire_total_is_not_exact": true
+  },
+  "new_market_requests": 0,
+  "new_prospective_days": 0,
+  "paper_snapshot": {
+    "accounts": [
+      {
+        "asset": "USDC",
+        "available_capital": "4998.8",
+        "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+        "cash": "4998.8",
+        "estimated_future_exit_fees": "0",
+        "execution_drag_diagnostic_not_additive": "0",
+        "external_capital_flows": "0",
+        "fees_paid": "0.2",
+        "funding_pnl": "0",
+        "initial_cash": "5000",
+        "known_cash_component": "4998.8",
+        "known_realized_net_component": "-1.2",
+        "locked_capital": "0",
+        "model_net_return": "-0.00024",
+        "nav": "4998.8",
+        "nav_state": "known_simulated_liquidation",
+        "positions": [],
+        "realized_net_pnl": "-1.2",
+        "realized_price_pnl": "-1",
+        "reasons": [],
+        "reconciliation_required": [],
+        "unrealized_liquidation_pnl": "0",
+        "unresolved_events": [],
+        "venue": "lighter"
+      },
+      {
+        "asset": "USDT",
+        "available_capital": "4998.8",
+        "capital_basis": "simulated1x entry-notional reservation, not exchange margin availability",
+        "cash": "4998.8",
+        "estimated_future_exit_fees": "0",
+        "execution_drag_diagnostic_not_additive": "0",
+        "external_capital_flows": "0",
+        "fees_paid": "0.2",
+        "funding_pnl": "0",
+        "initial_cash": "5000",
+        "known_cash_component": "4998.8",
+        "known_realized_net_component": "-1.2",
+        "locked_capital": "0",
+        "model_net_return": "-0.00024",
+        "nav": "4998.8",
+        "nav_state": "known_simulated_liquidation",
+        "positions": [],
+        "realized_net_pnl": "-1.2",
+        "realized_price_pnl": "-1",
+        "reasons": [],
+        "reconciliation_required": [],
+        "unrealized_liquidation_pnl": "0",
+        "unresolved_events": [],
+        "venue": "mexc"
+      }
+    ],
+    "activation_allowed": false,
+    "asof_mono_ns": 22000000000,
+    "certified_net_return": null,
+    "pair": {
+      "all_order_totals_reconciled": true,
+      "execution_ready": false,
+      "known_received_delta_base": "0",
+      "known_received_positions_base": [
+        "0",
+        "0"
+      ],
+      "net_delta_base": "0",
+      "orders": [
+        {
+          "cancel_requested": false,
+          "filled": "1",
+          "id": "m",
+          "leg": 0,
+          "purpose": "open",
+          "reported_final": "1",
+          "requested": "1",
+          "stage": "filled",
+          "terminal": true,
+          "terminal_ns": 1790000001200000000
+        },
+        {
+          "cancel_requested": false,
+          "filled": "1",
+          "id": "l",
+          "leg": 1,
+          "purpose": "open",
+          "reported_final": "1",
+          "requested": "1",
+          "stage": "filled",
+          "terminal": true,
+          "terminal_ns": 1790000001300000000
+        },
+        {
+          "cancel_requested": false,
+          "filled": "1",
+          "id": "mc",
+          "leg": 0,
+          "purpose": "close",
+          "reported_final": "1",
+          "requested": "1",
+          "stage": "filled",
+          "terminal": true,
+          "terminal_ns": 1790000002200000000
+        },
+        {
+          "cancel_requested": false,
+          "filled": "1",
+          "id": "lc",
+          "leg": 1,
+          "purpose": "close",
+          "reported_final": "1",
+          "requested": "1",
+          "stage": "filled",
+          "terminal": true,
+          "terminal_ns": 1790000002300000000
+        }
+      ],
+      "pair_id": "both_legs_then_exit",
+      "paired_target_fully_filled": false,
+      "positions_base": [
+        "0",
+        "0"
+      ],
+      "possible_delta_base": [
+        "0",
+        "0"
+      ],
+      "reasons": [],
+      "recovery_quantities": [
+        {
+          "actual_order_allowed": false,
+          "leg": 0,
+          "new_entry_model_allowed": false,
+          "observed_position_to_reduce_base": "0",
+          "remaining_entry_base": "0"
+        },
+        {
+          "actual_order_allowed": false,
+          "leg": 1,
+          "new_entry_model_allowed": false,
+          "observed_position_to_reduce_base": "0",
+          "remaining_entry_base": "0"
+        }
+      ],
+      "source_reports_authenticated": false,
+      "state": "flat",
+      "terminal_cash_known": true,
+      "unapplied_fill_ids": []
+    },
+    "prospective_days": 0,
+    "schema_version": 1,
+    "scope": "supplied paper pair receipts and linear account only; no source/fill/order authentication or strategy activation",
+    "simulation_only": true
+  },
+  "performance_is_nondeterministic": true,
+  "performance_report": "performance.json",
+  "registry_id": "R320",
+  "risk_forecasts": {
+    "activation_allowed": false,
+    "common_scored_days": 273,
+    "comparators": [
+      "mean1",
+      "mean30",
+      "ewma72"
+    ],
+    "cost_sensitivity": [
+      {
+        "multiple": 1,
+        "net_pnl": null,
+        "scope": "Variance loss is not money; fixed cost tiers apply to paper controls, not QLIKE."
+      },
+      {
+        "multiple": 2,
+        "net_pnl": null,
+        "scope": "Variance loss is not money; fixed cost tiers apply to paper controls, not QLIKE."
+      },
+      {
+        "multiple": 3,
+        "net_pnl": null,
+        "scope": "Variance loss is not money; fixed cost tiers apply to paper controls, not QLIKE."
+      }
+    ],
+    "dependent_null_calibration": [
+      {
+        "binomial_standard_error": 0.03249615361854384,
+        "block_days": 7,
+        "family_false_exclusions": 12,
+        "fraction": 0.12,
+        "null": "three zero-mean AR1(.6) series after128 burn-in; not a universal coverage guarantee",
+        "paths": 100,
+        "wilson_95_interval": [
+          0.06999337365267776,
+          0.19812268002908368
+        ]
+      },
+      {
+        "binomial_standard_error": 0.030000000000000002,
+        "block_days": 14,
+        "family_false_exclusions": 10,
+        "fraction": 0.1,
+        "null": "three zero-mean AR1(.6) series after128 burn-in; not a universal coverage guarantee",
+        "paths": 100,
+        "wilson_95_interval": [
+          0.05522854161313613,
+          0.1743673043676654
+        ]
+      }
+    ],
+    "influence": [
+      {
+        "all_day_difference_sum": 96.60952505198513,
+        "days_retained": [
+          "2026-02-23",
+          "2026-07-20",
+          "2026-09-18",
+          "2026-01-18",
+          "2026-04-05"
+        ],
+        "largest_five_absolute_contribution": 49.08490388698781,
+        "model_vs_mean7": "mean1",
+        "total_absolute_contribution": 182.57997703647595
+      },
+      {
+        "all_day_difference_sum": 12.799936391811471,
+        "days_retained": [
+          "2026-08-19",
+          "2026-08-21",
+          "2026-06-05",
+          "2026-02-06",
+          "2026-02-05"
+        ],
+        "largest_five_absolute_contribution": 23.350657247114626,
+        "model_vs_mean7": "mean30",
+        "total_absolute_contribution": 80.03943545350754
+      },
+      {
+        "all_day_difference_sum": -2.3669346226755517,
+        "days_retained": [
+          "2026-08-21",
+          "2026-06-05",
+          "2026-02-23",
+          "2026-06-25",
+          "2026-06-04"
+        ],
+        "largest_five_absolute_contribution": 5.296940470799202,
+        "model_vs_mean7": "ewma72",
+        "total_absolute_contribution": 26.07633825263885
+      }
+    ],
+    "intervals": [
+      {
+        "block_days": 7,
+        "lower": [
+          0.16629660304846605,
+          -0.045823368393094234,
+          -0.04236525616512985
+        ],
+        "mean": [
+          0.3538810441464657,
+          0.046886213889419305,
+          -0.008670090192950739
+        ],
+        "repetitions": 2000,
+        "scope": "circular block percentile intervals; Bonferroni within this fixed family, not program-wide adaptation control",
+        "seed": 320,
+        "upper": [
+          0.593070804221857,
+          0.16227008956771294,
+          0.019803082965586864
+        ]
+      },
+      {
+        "block_days": 14,
+        "lower": [
+          0.14948610179583022,
+          -0.03182876505717932,
+          -0.04178809143238134
+        ],
+        "mean": [
+          0.3538810441464657,
+          0.046886213889419305,
+          -0.008670090192950739
+        ],
+        "repetitions": 2000,
+        "scope": "circular block percentile intervals; Bonferroni within this fixed family, not program-wide adaptation control",
+        "seed": 320,
+        "upper": [
+          0.5694941754437701,
+          0.14707593863388096,
+          0.020257865641601727
+        ]
+      }
+    ],
+    "models": [
+      {
+        "available_scored_days": 273,
+        "common_mean_qlike": -6.2797511198871145,
+        "common_mean_squared_error": 4.1743051185089923e-07,
+        "mean_forecast_rv": 0.0005075904141254372,
+        "model": "mean1"
+      },
+      {
+        "available_scored_days": 273,
+        "common_mean_qlike": -6.63363216403358,
+        "common_mean_squared_error": 3.563023644425591e-07,
+        "mean_forecast_rv": 0.0005082519806643965,
+        "model": "mean7"
+      },
+      {
+        "available_scored_days": 273,
+        "common_mean_qlike": -6.58674595014416,
+        "common_mean_squared_error": 3.6988609115605104e-07,
+        "mean_forecast_rv": 0.0005141853580751769,
+        "model": "mean30"
+      },
+      {
+        "available_scored_days": 273,
+        "common_mean_qlike": -6.6423022542265295,
+        "common_mean_squared_error": 3.2893220225974563e-07,
+        "mean_forecast_rv": 0.0005099737963828129,
+        "model": "ewma72"
+      }
+    ],
+    "new_prospective_days": 0,
+    "observations_sha256": "0f7655db4dd45ff74cdf1b8b6246b215ebfc3e0d1772bcfd83b91c01e282d2d4",
+    "paired_difference_sign": "negative means lower QLIKE loss than the preselected mean7 reference",
+    "reference": "mean7",
+    "scope": "Already-seen BTC univariate EWMA risk forecast; no PIT top20 APSI, implied volatility, direction, market strategy or net-PnL test.",
+    "state": "COMPONENT_ASSESSED",
+    "trial_count": 4,
+    "uncertainty_scope": "Fixed local family only; neither historical adaptive search nor unknown future regimes are controlled.",
+    "unscored_days": 0,
+    "validation_days": 273,
+    "winner_selected": false
+  },
+  "risk_model_variants": 4,
+  "risk_summary": {
+    "by_state": {
+      "HALTED": 24,
+      "MODEL_WITHIN_LIMITS": 24
+    },
+    "historical_state": "HALTED",
+    "historical_stops": [
+      "data:historical_capture_is_not_live"
+    ],
+    "journal_sha256": "a5e7baf59bca239d23a02cb4ac5f148d6a03c3272e2f3c02070fa5769538398b",
+    "lifecycle_paths": 48,
+    "scope": "Supplied invented lifecycle states; not authenticated account/session/fee/market evidence."
+  },
+  "scope": "Owner100 integration acceptance plus finite historical risk-component and measured tools; no positive net-alpha claim.",
+  "simulation_only": true,
+  "strategy_variants": 0
+}

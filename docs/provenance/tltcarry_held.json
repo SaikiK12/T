@@ -1,0 +1,63 @@
+{
+"folder": "data/tltcarry/held",
+"source": "api.hyperliquid.xyz/info (fundingHistory, candleSnapshot for xyz:TLT) and query1.finance.yahoo.com/v8/finance/chart (DTLA.L, ^IRX); public, no key",
+"script": "scripts/fetch_tltcarry.py",
+"recorded_utc": "2026-11-12T05:18:00Z",
+"excluded": [],
+"files": 7,
+"bytes": 107061,
+"combined_sha256": "73911fbde49696d0fbd93a36c56e8239de31d36f3fb90052b629bae25f483361",
+"subfolders": {
+".": {
+"files": 1,
+"bytes": 894
+},
+"xyz": {
+"files": 2,
+"bytes": 89383
+},
+"yahoo": {
+"files": 4,
+"bytes": 16784
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "manifest.json",
+"bytes": 894,
+"sha256": "0bd8f45dff2805c9c82275aa609e2ef8d9e38373c46baee6342db9b5d1e4c9b5"
+},
+{
+"path": "xyz/candles_1h.csv",
+"bytes": 36600,
+"sha256": "49a3914e9aa9adce0c89a238d9bd387d07d3b48b36fb0f39650c979e9bd21e4c"
+},
+{
+"path": "xyz/funding.csv",
+"bytes": 52783,
+"sha256": "377f3416a4eda405a5e72b5542936450e4a91b145c5197bd52b4815ece3d6a01"
+},
+{
+"path": "yahoo/DTLA.json",
+"bytes": 5536,
+"sha256": "0c30d91c1ad0a054ecb5d80a44daae749a3580c5b45cb47da94ea6c9e9769479"
+},
+{
+"path": "yahoo/DTLA.parquet",
+"bytes": 3006,
+"sha256": "ca88c9169e55df66f2e4e21b7a845d9195f8cd5cde3becbc3b9cd191d02fc0e2"
+},
+{
+"path": "yahoo/IRX.json",
+"bytes": 5312,
+"sha256": "399045158cb5e645a4baffbf0ce8a9ae6c496a265a1bd919bdfd87b5b62e9260"
+},
+{
+"path": "yahoo/IRX.parquet",
+"bytes": 2930,
+"sha256": "4f7535a14df4924078059201578905558e70e449e61ad76808ea8b468cdb211c"
+}
+]
+}
