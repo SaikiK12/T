@@ -91,7 +91,7 @@ for active writers. Dated proposals, audits and source notes below retain histor
 **Start here**
 - [`HANDOVER.md`](docs/HANDOVER.md): how to get everything back without Claude: what is in git, what is not, the data
   manifest and archive commands, the keys (names only), and the scheduled checks ([`handover/`](docs/handover/SCHEDULED_CHECKS.md)).
-- [`PANEL.md`](docs/PANEL.md): live status.
+- [`PANEL.md`](docs/PANEL.md): timestamped generated snapshot (check its build timestamp).
 - [`DIRECTION.md`](docs/DIRECTION.md): the plan the owner approved.
 - [`MAP.md`](docs/MAP.md): what is known, lane by lane.
 - [`EDGE_SCOREBOARD.md`](docs/EDGE_SCOREBOARD.md): the evidence for each edge.

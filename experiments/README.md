@@ -63,7 +63,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (222)
+## Other registered rounds (done, registered or planned) (223)
 
 - **[usdeflow_v1](usdeflow_v1/)** R488, DONE NULL, 2 trials. M535 gate 0: does the weekly log change in USDe circulating supply (DefiLlama id 146, end-of-ISO-week stamp) rank-correlate with the change in Hyperliquid mean hourly funding from week t to t+1 for BTC and ETH (both decide), circular-shift null excluding shifts within +/-4 weeks; weeks from the first with supply > $100m to target weeks ending 2026-11-08; six forward carry books' week-ahead net reported at 1x/2x/3x ([PREREG](usdeflow_v1/PREREG.md), [FINDINGS](usdeflow_v1/FINDINGS.md))
 - **[adlstress_v1](adlstress_v1/)** R487, DONE PARTIAL, 6 trials. M534 gate 0: worst-case ADL stress bound on 2025-10-10 for the nine audited carry books (six forward decide): each exposed pair's profitable leg on a documented ADL venue (S1 {hyperliquid}) closed, the other leg naked from the day's best to worst print plus one extra round trip at 7/14/21 bp; SURVIVES if the S1 bound at 2x < one month of the book's v2 2x net; S1B {hyperliquid, binance} and S2 (all five venues) reported ([PREREG](adlstress_v1/PREREG.md), [FINDINGS](adlstress_v1/FINDINGS.md))
@@ -159,6 +159,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[locked_carry_v1](locked_carry_v1/)** R335, DONE DATA_PASS, 6 trials. The guarantee engine: coin-margined cash-and-carry locked to expiry on Binance BTC/ETH quarterlies vs the 3-month T-bill (M244), hurdles 0/3/6%/yr, measurement ([PREREG](locked_carry_v1/PREREG.md), [FINDINGS](locked_carry_v1/FINDINGS.md))
 - **[level_probability_v2](level_probability_v2/)** R333, DONE NULL, 11 trials. The owner's break-or-rebound model (M412) at scale: R330's levels/barriers on the point-in-time Binance top 100, every hour 2021-01..2026-09, quarterly-refit gradient boosting, V0-V4 + controls ([PREREG](level_probability_v2/PREREG.md), [FINDINGS](level_probability_v2/FINDINGS.md))
 - **[mlrank_v3](mlrank_v3/)** R332, DONE NULL, 7 trials. R304's ML rankers (ridge/IC/GBM x hold 1/7 d, 24 clean features, top 150 Binance perps, API costs) re-run on a panel with complete Binance metrics, plus the presence book on R304's panel ([PREREG](mlrank_v3/PREREG.md), [FINDINGS](mlrank_v3/FINDINGS.md))
+- **[confidence_v1](confidence_v1/)** R331, REGISTERED PENDING, 14 trials. Frozen confidence family paused after training and calibration-fit; later stages unread ([PREREG](confidence_v1/PREREG.md))
 - **[level_probability_v1](level_probability_v1/)** R330, DONE PARTIAL, 6 trials. Causal close-level probability, payoff and shared-capital cost diagnostic ([PREREG](level_probability_v1/PREREG.md), [FINDINGS](level_probability_v1/FINDINGS.md))
 - **[dated_carry_v2](dated_carry_v2/)** R328, DONE PARTIAL, 0 trials. Same-data exact-ratio dated carry: small conditional margin, actual net unknown ([PREREG](dated_carry_v2/PREREG.md), [FINDINGS](dated_carry_v2/FINDINGS.md))
 - **[dated_carry_v1](dated_carry_v1/)** R327, DONE PARTIAL, 0 trials. Inverse dated-carry source/account component; terminal driver ratio-format failure ([PREREG](dated_carry_v1/PREREG.md), [FINDINGS](dated_carry_v1/FINDINGS.md))
@@ -307,9 +308,7 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (1)
+## Unregistered folders (0)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
-
-- **[confidence_v1](confidence_v1/)** No registry row; scope unclassified.

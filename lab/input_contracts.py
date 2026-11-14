@@ -142,7 +142,7 @@ def check_input_contracts(records, requirements, *, decision_ns,
     rows = {}
     for index, record in enumerate(records):
         if index >= 128:
-            issue("input_limit", None, "at most128 input/ancestor records are supported")
+            issue("input_limit", None, "at most 128 input/ancestor records are supported")
             break
         if not isinstance(record, InputRecord):
             issue("invalid_record", None, "expected InputRecord metadata")
