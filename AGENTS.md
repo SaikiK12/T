@@ -57,3 +57,10 @@ book — always split by `(book, engine)` and sort by date before treating a str
 `mexc_seq` (R221) is a fixed 3-look Bonferroni design (90/182/365 d) and cannot be read between
 looks; the monitor complements it with a daily read of the same R215/R218 books without spending
 R221's alpha.
+
+Live research leads (2026-11-14 read-only scans; the queue is authoritative, not this line): **M539**
+session-decomposed MAX (new edge; Binance Vision klines the lab already builds) and **M540**
+reserved-batch-4 gate+dydx long tail (gate-1 confirmation/futility screen, R490 reserved for it).
+Details in `research/intake/{new_edge_scan,reserved_batch4_plan,vault_inventory_archive}_20261114.md`.
+The lab is saturated: recent papers mostly map onto existing methods, so check `registry/methods.csv`
+before treating a source as new.
