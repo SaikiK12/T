@@ -1,29 +1,35 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-13T01:44:18.261359+00:00",
+ "updated": "2026-11-14T01:38:41.367545+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.001,
-  "gate": 0.918,
+  "binance": 1.0,
+  "gate": 1.035,
   "hyperliquid": 0.989,
-  "mexc": 1.0
+  "mexc": 0.986
  },
  "data": {
   "hyperliquid": {
    "files": 216,
-   "failed": 2,
+   "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
-    "SAND",
-    "SKR"
+    "ME",
+    "VINE",
+    "WCT"
    ]
   },
   "mexc": {
    "files": 520,
-   "failed": 0,
+   "failed": 4,
    "changed_on_overlap": 0,
-   "failed_some": []
+   "failed_some": [
+    "MARSCOIN_USDT",
+    "MAVIA_USDT",
+    "MELANIA_USDT",
+    "MOVR_USDT"
+   ]
   },
   "gate": {
    "files": 860,
@@ -122,12 +128,6 @@
     "spread_in": 0.1339
    },
    {
-    "coin": "SOPHUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.2681
-   },
-   {
     "coin": "IOUSDT",
     "long": "hyperliquid",
     "short": "gate",
@@ -168,15 +168,21 @@
     "long": "hyperliquid",
     "short": "gate",
     "spread_in": 0.209
+   },
+   {
+    "coin": "1000LUNCUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.2469
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": 0.0026005817,
-  "total_2x": 0.0009205817,
-  "total_3x": -0.0007594183000000005,
-  "total_close": 0.0033779917000000006,
-  "nw_t": 1.6156511671435567,
+  "total": 0.0026453806,
+  "total_2x": 0.0009653805999999999,
+  "total_3x": -0.0007146194000000006,
+  "total_close": 0.0034227906000000004,
+  "nw_t": 1.6806205153672762,
   "max_drawdown": -0.0008053798,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -249,13 +255,13 @@
     "spread_in": 0.1184
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": 0.007302773900000001,
-  "total_2x": 0.006637773900000001,
-  "total_3x": 0.005972773900000001,
-  "total_close": 0.007676728700000002,
-  "nw_t": 1.467334885011933,
+  "total": 0.007345709800000001,
+  "total_2x": 0.006645709800000001,
+  "total_3x": 0.0059457098000000016,
+  "total_close": 0.007719664600000002,
+  "nw_t": 1.4603108914833522,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -388,16 +394,16 @@
     "spread_in": 10.7864
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": 0.0052682097,
-  "total_2x": 0.0025382097000000003,
-  "total_3x": -0.0001917903000000005,
-  "total_close": 0.0056415106,
-  "nw_t": 3.1641461466187466,
+  "total": 0.0059447583,
+  "total_2x": 0.0032147583000000004,
+  "total_3x": 0.0004847582999999995,
+  "total_close": 0.0063180592,
+  "nw_t": 3.1501015661348455,
   "max_drawdown": -0.0015282559999999995,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-13"
+ "last_day": "2026-11-14"
 }

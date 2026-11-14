@@ -1,38 +1,16 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-13T02:23:28.733779+00:00",
+ "updated": "2026-11-14T02:15:01.019900+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.001,
-  "gate": 0.918,
-  "hyperliquid": 0.983,
-  "mexc": 1.0,
+  "binance": 1.0,
+  "gate": 1.035,
+  "hyperliquid": 0.971,
+  "mexc": 0.994,
   "kucoin": 1.0
  },
  "data": {
-  "kucoin": {
-   "files": 633,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 3,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "INIT",
-    "INJ",
-    "SKY"
-   ]
-  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -42,6 +20,30 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "kucoin": {
+   "files": 633,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 5,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "GOAT",
+    "GRIFFAIN",
+    "RENDER",
+    "RESOLV",
+    "REZ"
+   ]
+  },
+  "mexc": {
+   "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   },
   "gate": {
    "files": 860,
@@ -64,12 +66,6 @@
     "spread_in": 0.6114
    },
    {
-    "coin": "LYNUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.571
-   },
-   {
     "coin": "SPORTFUNUSDT",
     "long": "kucoin",
     "short": "binance",
@@ -86,12 +82,6 @@
     "long": "binance",
     "short": "gate",
     "spread_in": 0.6206
-   },
-   {
-    "coin": "AINUSDT",
-    "long": "kucoin",
-    "short": "mexc",
-    "spread_in": 0.5846
    },
    {
     "coin": "TRADOORUSDT",
@@ -176,18 +166,30 @@
     "long": "kucoin",
     "short": "gate",
     "spread_in": 1.0758
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "hyperliquid",
+    "short": "kucoin",
+    "spread_in": 0.7413
+   },
+   {
+    "coin": "ALPINEUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.6978
    }
   ],
-  "scored_days": 2,
+  "scored_days": 3,
   "late_days": 0,
-  "total": 0.0031466371,
-  "total_2x": 0.0024466371,
-  "total_3x": 0.0017466371000000001,
-  "total_close": 0.0012526356,
-  "nw_t": null,
+  "total": 0.0049366061,
+  "total_2x": 0.0042366061,
+  "total_3x": 0.0035366061,
+  "total_close": 0.0030426046,
+  "nw_t": 9.040838462946878,
   "max_drawdown": 0.0,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-13"
+ "last_day": "2026-11-14"
 }

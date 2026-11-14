@@ -1,20 +1,14 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-11-13T01:53:35.200012+00:00",
+ "updated": "2026-11-14T01:47:24.740544+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.001,
-  "gate": 0.918,
+  "binance": 1.0,
+  "gate": 1.035,
   "kucoin": 1.0
  },
  "data": {
-  "kucoin": {
-   "files": 642,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "gate": {
    "files": 860,
    "failed": 0,
@@ -30,6 +24,12 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "kucoin": {
+   "files": 642,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -112,12 +112,6 @@
     "spread_in": 0.3333
    },
    {
-    "coin": "BMTUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.3822
-   },
-   {
     "coin": "BERAUSDT",
     "long": "kucoin",
     "short": "gate",
@@ -158,15 +152,21 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.6641
+   },
+   {
+    "coin": "ALPINEUSDT",
+    "long": "gate",
+    "short": "kucoin",
+    "spread_in": 0.6978
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": 0.0032033853999999997,
-  "total_2x": 0.0012433854000000002,
-  "total_3x": -0.0007166146000000001,
-  "total_close": 0.0028052881,
-  "nw_t": 1.2619054424972855,
+  "total": 0.0025918877999999996,
+  "total_2x": 0.0006318878000000002,
+  "total_3x": -0.0013281122,
+  "total_close": 0.0021937905,
+  "nw_t": 1.061488553294922,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -178,12 +178,6 @@
   "slots": 20,
   "why": "R277's other replicating set (NW t 11.17)",
   "held_now": [
-   {
-    "coin": "LYNUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.571
-   },
    {
     "coin": "SPORTFUNUSDT",
     "long": "kucoin",
@@ -213,12 +207,6 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.3785
-   },
-   {
-    "coin": "AINUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.445
    },
    {
     "coin": "BLURUSDT",
@@ -297,18 +285,30 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 0.4611
+   },
+   {
+    "coin": "INITUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 1.6356
+   },
+   {
+    "coin": "HUMAUSDT",
+    "long": "binance",
+    "short": "kucoin",
+    "spread_in": 0.6248
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": 0.0026856238999999997,
-  "total_2x": 0.0010056238999999996,
-  "total_3x": -0.0006743761000000009,
-  "total_close": 0.0036514253,
-  "nw_t": 2.2654326869010624,
+  "total": 0.003579158,
+  "total_2x": 0.0018991579999999997,
+  "total_3x": 0.00021915799999999914,
+  "total_close": 0.0045449594,
+  "nw_t": 2.6163218461052473,
   "max_drawdown": -0.0011970589,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-11-13"
+ "last_day": "2026-11-14"
 }

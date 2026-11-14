@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-13T02:04:58.547167+00:00",
+ "updated": "2026-11-14T01:57:32.803186+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 1.0,
-  "lighter": 0.979
+  "mexc": 0.983,
+  "lighter": 0.986
  },
  "data": {
   "mexc": {
@@ -89,12 +89,6 @@
     "spread_in": 0.0883
    },
    {
-    "coin": "ICPUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.0743
-   },
-   {
     "coin": "CCUSDT",
     "long": "mexc",
     "short": "lighter",
@@ -147,18 +141,24 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0722
+   },
+   {
+    "coin": "WLFIUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0796
    }
   ],
-  "scored_days": 21,
+  "scored_days": 22,
   "late_days": 15,
-  "total": -0.0006880199000000002,
-  "total_2x": -0.0022280199000000002,
-  "total_3x": -0.0037680199,
-  "total_close": -3.8771999999999635e-06,
-  "nw_t": -0.6664765795626661,
+  "total": -0.0013920983000000001,
+  "total_2x": -0.0030970983,
+  "total_3x": -0.0048020983,
+  "total_close": -0.0005900539,
+  "nw_t": -1.1928697419142074,
   "max_drawdown": -0.0026059508,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-13"
+ "last_day": "2026-11-14"
 }
