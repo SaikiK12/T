@@ -145,7 +145,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (216)
+## Run: one lane's frozen measurement (217)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -217,6 +217,7 @@ line is the first line of the script's own docstring.
 - [`run_fred_quote_scope.py`](run_fred_quote_scope.py): R429 sole frozen, offline DTB3 source-view identity measurement; default is an inactive plan.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
 - [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
+- [`run_fundrev.py`](run_fundrev.py): fundrev_v1 (R491, M172): does a coin's within-cycle premium index forecast the next settled funding rate better than a no-change forecast, on Binance USDT perpetuals? Frozen in ...
 - [`run_fundvol.py`](run_fundvol.py): R382 fundvol_v1 (M455): does trailing volatility sizing improve a funding-carry book's net return at executable cost?.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_futroll.py`](run_futroll.py): R480 futroll_fwd: M532 forward.

@@ -63,8 +63,9 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (225)
+## Other registered rounds (done, registered or planned) (226)
 
+- **[fundrev_v1](fundrev_v1/)** R491, DONE NULL, 10 trials. M172 next-funding revision: does the within-cycle premium index forecast the next settled rate ([PREREG](fundrev_v1/PREREG.md), [FINDINGS](fundrev_v1/FINDINGS.md))
 - **[sessionmax_v1](sessionmax_v1/)** R490, DONE NULL, 18 trials. Session-decomposed MAX on crypto perps (M539): S-INTRA/S-OVER vs the 24h MAX control ([PREREG](sessionmax_v1/PREREG.md), [FINDINGS](sessionmax_v1/FINDINGS.md))
 - **[anytime_monitor_v1](anytime_monitor_v1/)** R489, DONE NULL, 66 trials. M479 anytime-valid e-process monitor: daily reads of forward lanes without inflating error ([PREREG](anytime_monitor_v1/PREREG.md), [FINDINGS](anytime_monitor_v1/FINDINGS.md))
 - **[usdeflow_v1](usdeflow_v1/)** R488, DONE NULL, 2 trials. M535 gate 0: does the weekly log change in USDe circulating supply (DefiLlama id 146, end-of-ISO-week stamp) rank-correlate with the change in Hyperliquid mean hourly funding from week t to t+1 for BTC and ETH (both decide), circular-shift null excluding shifts within +/-4 weeks; weeks from the first with supply > $100m to target weeks ending 2026-11-08; six forward carry books' week-ahead net reported at 1x/2x/3x ([PREREG](usdeflow_v1/PREREG.md), [FINDINGS](usdeflow_v1/FINDINGS.md))
