@@ -145,7 +145,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (215)
+## Run: one lane's frozen measurement (216)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -307,6 +307,7 @@ line is the first line of the script's own docstring.
 - [`run_rollcarry.py`](run_rollcarry.py): rollcarry_v1 (M532), frozen in experiments/rollcarry_v1/PREREG.md: does the funding on trade.xyz's futures-priced perps exceed the futures roll its oracle passes to longs?.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
+- [`run_sessionmax.py`](run_sessionmax.py): sessionmax_v1 (R490, M539): session-decomposed MAX on 24/7 crypto perps, as frozen in experiments/sessionmax_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
 - [`run_settlehop.py`](run_settlehop.py): R353 settlehop_v1: M267's settlement-window hop on hourly bars, frozen in experiments/settlehop_v1/PREREG.md.
 - [`run_settlehop_exit.py`](run_settlehop_exit.py): R356 settlehop_exit_v1: R354's settlement hops closed minutes after the settlement, frozen in experiments/settlehop_exit_v1/PREREG.md.
