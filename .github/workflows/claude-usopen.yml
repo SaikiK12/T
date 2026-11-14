@@ -1,7 +1,7 @@
 name: R371 US-open paper lane (Claude)
 # Single writer, from 2026-11-11, of experiments/usopen_fwd/journal/ (R371, scripts/forward_usopen.py). The lane decides
-# at 10:00 New York each NYSE trading day and scores a ticket after its 24:00 UTC exit. The Claude container that ran
-# the daemon is reclaimed while idle, which left most days since 2026-11-02 missed or unscored.
+# at 10:00 New York each NYSE trading day and scores a ticket after its 24:00 UTC exit. The Claude container that runs
+# the daemon is reclaimed while idle.
 # Paper only: public endpoints, no key, no order.
 on:
   schedule:

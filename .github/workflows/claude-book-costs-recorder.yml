@@ -1,6 +1,5 @@
 name: R404 book-cost recorder (Claude)
-# Single writer of R404 (experiments/book_costs_v1) from its first run here, after the local forward task graph
-# stopped with the Claude container (last local snapshot in the 2026-11-10 06 UTC slot). It runs the unchanged
+# Single writer of R404 (experiments/book_costs_v1). It runs the unchanged
 # scripts/record_book_costs.py: one snapshot of the public dYdX v4, KuCoin futures and MEXC futures order books per
 # 3-hour UTC slot, then the unchanged scripts/record_digest.py. The parquet files (gitignored on the default branch)
 # are kept on the data branch claude/book-costs-data; only experiments/recorders/journal/digests.csv and

@@ -55,5 +55,3 @@ Data come from `QX_DATA` (default `data/`). Rows before a spec's `start` are dro
 - That PREREG must hold the token for each sample it reads: `RESERVED-2020-READ`, `RESERVED-GATE-READ`,
   `RESERVED-VENUE-READ`.
 - Its PREREG.sha256 sidecar must match its bytes; the engine computes the SHA-256 itself.
-- Before 2026-10-21 only `events` refused 2020 starts. `spread` and `factors` relied on their specs; no frozen spec
-  started before 2021.

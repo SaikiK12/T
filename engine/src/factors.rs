@@ -282,7 +282,6 @@ pub fn run(spec: Spec, log: &dyn Fn(String)) -> Result<Report> {
     let v = VenueSpec { name: "venue", klines: &spec.prices, vol: &spec.vol, funding: spec.funding.as_deref() };
     let src = data::load(&data::data_root(), &v, &syms, ax)?;
     log(format!("{} rows, {} factors, {} coins ({} with prices)", tb.t.len(), tb.names.len(), syms.len(), src.idx.len()));
-    // rows by date, ordered by coin
     let mut by_date: BTreeMap<i64, Vec<usize>> = BTreeMap::new();
     for (i, &t) in tb.t.iter().enumerate() {
         let r0 = ax.row(t);
