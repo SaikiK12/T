@@ -45,3 +45,23 @@ Carried over from the owner's rules in the original project (**S**, see `docs/FO
 Operational entry point: `python -m lab`; shared task/lane descriptors are in `lab/operations.py`.
 Use `python -m lab check --suite fast` for feedback and the full suite before a code commit.
 Fast/simulation selection never changes the full validation requirement above.
+
+Anytime-valid monitoring (M479, R489): `lab/sequential.lane_monitor(net, lo, hi, mode=...)` is an
+e-process that is valid at every stopping time (Ville's inequality), so a forward lane can be read
+on any day at a fixed alpha without inflating the type-I error. Modes: `bet` (raw daily),
+`mixture`, and `block` (5-day means; use when the series is autocorrelated — the raw daily mode's
+martingale property is only approximate under dependence). It is a monitoring/futility device: it
+prices no execution risk and replaces no frozen fixed look. `scripts/forward_monitor.py` prints the
+table read-only. Carry-audit daily files (`carry_v2_audit*`) interleave engine v1 and v2 rows per
+book — always split by `(book, engine)` and sort by date before treating a stream as one series.
+`mexc_seq` (R221) is a fixed 3-look Bonferroni design (90/182/365 d) and cannot be read between
+looks; the monitor complements it with a daily read of the same R215/R218 books without spending
+R221's alpha.
+
+Live research leads (2026-11-14 read-only scans; the queue is authoritative, not this line): **M539**
+session-decomposed MAX was run and is **NULL** (R490), and **M172** funding revision was run and is **NULL** twice
+(R491 naive premium mean, R492 funding formula). The one remaining open lead is **M540** reserved-batch-4 gate+dydx
+long tail (gate-1 confirmation/futility screen; R493 reserved for it).
+Details in `research/intake/{new_edge_scan,reserved_batch4_plan,vault_inventory_archive}_20261114.md`.
+The lab is saturated: recent papers mostly map onto existing methods, so check `registry/methods.csv`
+before treating a source as new.

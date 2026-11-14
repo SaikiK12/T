@@ -4,8 +4,11 @@
 Historical intake status may differ from the live queue: that is not an error.
 QUEUED is a pending draft state, not evidence that a lane is frozen or complete.
 Missing or changed source versions remain explicit; no file is repaired, imported,
-frozen or promoted. This checks provenance structure, not the truth of a source,
-complete corpus coverage, profitable evidence or permission to acquire a dataset.
+frozen or promoted. A queue row's `rid` cell must cite rounds that exist in
+registry/rounds.csv, unless the citation marks it legacy (an old-session round or
+a reserved id); an unmarked missing id is a dangling claim. This checks provenance
+structure, not the truth of a source, complete corpus coverage, profitable evidence
+or permission to acquire a dataset.
 """
 
 import argparse
@@ -22,8 +25,22 @@ from urllib.parse import urlsplit
 QUEUE = "registry/methods.csv"
 ALIASES = "registry/methods_aliases.csv"
 INTAKE = "research/intake/source_methods_20261020.json"
+ROUNDS = "registry/rounds.csv"
 QUEUE_STATES = {"UNTESTED", "BLOCKED", "PARTIAL", "TESTED", "N/A", "QUEUED"}
 INTAKE_STATES = {"untested", "blocked", "partial", "null", "forward", "confirmed_original"}
+# A method row may cite a round that has no rounds.csv row: an old-session result (docs/OLD_SESSION_EDGES.md) or a
+# reserved id (R227 Kronos). Such a citation has to say so; any other missing id is a dangling claim.
+_LEGACY_CLAUSE = "old "          # e.g. "old R178 NULL" — the same clause marks the id as an old-session round
+_LEGACY_CELL = "no registry row"  # e.g. "...; no registry row; ..." — a cell-level statement over its cited ids
+_LEGACY_AFTER = "reserved"        # e.g. "R227 reserved" — the id is a reservation, not a round
+_RID = re.compile(r"\bR[0-9]+\b")
+
+
+def _rid_is_legacy(cell, match):
+    """Whether one cited id is explicitly marked as having no rounds.csv row (old-session or reserved)."""
+    clause = cell[:match.start()].rsplit(";", 1)[-1]
+    return (_LEGACY_CLAUSE in clause or _LEGACY_CELL in cell
+            or cell[match.end():].lstrip().startswith(_LEGACY_AFTER))
 
 
 def audit(root):
@@ -101,6 +118,19 @@ def audit(root):
             issue('error', 'QUEUE_STATUS_INVALID', 'Unknown live queue status', QUEUE, identifier)
         if not row['method'].strip():
             issue('error', 'METHOD_TITLE_EMPTY', 'Live queue method is unnamed', QUEUE, identifier)
+    # A `rid` cell names the rounds a method was tested by. Every named round must have a rounds.csv row, unless the
+    # citation itself marks it legacy (old-session or reserved): those deliberately have no row. A citation with no
+    # row and no marker is a claim about a round that does not exist.
+    rounds = {row.get('id', '').strip() for row in table(ROUNDS, ['id'])}
+    rounds_readable = not any(i['path'] == ROUNDS and i['code'] == 'TABLE_INVALID' for i in report['issues'])
+    if rounds_readable:
+        for identifier, row in queue.items():
+            for match in _RID.finditer(row['rid']):
+                if match.group() in rounds or _rid_is_legacy(row['rid'], match):
+                    continue
+                issue('error', 'RID_UNKNOWN',
+                      f"Cites {match.group()}, which has no {ROUNDS} row and is not marked legacy",
+                      QUEUE, identifier)
     # IDs need uniqueness, not continuity: writers can reserve separate blocks.
     alias_rows = table(ALIASES, ['rec_id', 'title', 'intake_status', 'queue_id', 'also'])
     aliases = unique(alias_rows, 'rec_id', ALIASES)

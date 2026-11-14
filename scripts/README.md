@@ -110,7 +110,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (31)
+## Forward: paper lanes and the loops that run them (32)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -125,6 +125,7 @@ line is the first line of the script's own docstring.
 - [`forward_loop.sh`](forward_loop.sh): Optional scheduler: the full tick at minute 15 of every hour, and R200 alone at minute 45.
 - [`forward_mexc.py`](forward_mexc.py): mexc_fwd (R215): R200's forward signals traded one bar late on MEXC hourly closes and MEXC funding, as set out in experiments/mexc_fwd/PREREG.md.
 - [`forward_mexc_sq.py`](forward_mexc_sq.py): mexc_fwd_sq (R218): the agreement-squared flow book on MEXC prices and funding, one bar late, as set out in experiments/mexc_fwd_sq/PREREG.md.
+- [`forward_monitor.py`](forward_monitor.py): Print the M479 anytime-valid monitor for every live forward paper series (read-only).
 - [`forward_montag.py`](forward_montag.py): R270 montag_fwd: the Monitoring Tag short at +24 h, forward on MEXC paper (experiments/montag_fwd/PREREG.md).
 - [`forward_paperacct.py`](forward_paperacct.py): paperacct_fwd (R415): a $10,000 paper account run like a real one, as set out in experiments/paperacct_fwd/PREREG.md.
 - [`forward_seq.py`](forward_seq.py): mexc_seq (R221): the sequential decision for the MEXC flow books A, X2 and B, as set out in experiments/mexc_seq/PREREG.md.
@@ -144,7 +145,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (214)
+## Run: one lane's frozen measurement (218)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -152,6 +153,7 @@ line is the first line of the script's own docstring.
 - [`run_adlstress.py`](run_adlstress.py): adlstress_v1 (R487, M534, gate 0): a worst-case auto-deleveraging (ADL) stress bound on 2025-10-10 for the audited cross-venue carry books.
 - [`run_allocation.py`](run_allocation.py): R228: a frozen, descriptive allocation diagnostic on previously seen books.
 - [`run_amihud.py`](run_amihud.py): amihud_v1 (R236): 30-day Amihud illiquidity as one-week spread books, as set out in experiments/amihud_v1/PREREG.md.
+- [`run_anytime_monitor.py`](run_anytime_monitor.py): anytime_monitor_v1 (R489, M479, gate 0 diagnostic): can a forward paper lane be read every day at a fixed level without inflating the type-I error, and what does the e-process monitor say about ...
 - [`run_asiaclose.py`](run_asiaclose.py): R468 asiaclose_v1 runner, frozen in experiments/asiaclose_v1/PREREG.md: Asian single-stock perps on trade.xyz and Lighter across the daily closure of their local exchange (M526).
 - [`run_asiaclose_c.py`](run_asiaclose_c.py): R469 asiaclose_c, frozen in experiments/asiaclose_c/PREREG.md: R468's frozen rule (scripts/asiaclose_rule.py) and universe (experiments/asiaclose_v1/universe.csv) read once on openings that no ...
 - [`run_atlas.py`](run_atlas.py): atlas_v1 (R185): the gross-edge atlas, as set out in experiments/atlas_v1/PREREG.md.
@@ -213,8 +215,10 @@ line is the first line of the script's own docstring.
 - [`run_flow_hlstock_mc.py`](run_flow_hlstock_mc.py): flow_hlstock_mc_v1 (R453): R451's books (R200's flow signals on stock/commodity perps traded on Hyperliquid's xyz) re-priced at measured costs, as set out in experiments/flow_hlstock_mc_v1/PREREG.md.
 - [`run_forcedswitch.py`](run_forcedswitch.py): R388 forcedswitch_v1: Binance's forced hourly switch as a natural experiment (M461, web-deep SRC1103-010).
 - [`run_fred_quote_scope.py`](run_fred_quote_scope.py): R429 sole frozen, offline DTB3 source-view identity measurement; default is an inactive plan.
+- [`run_fundform.py`](run_fundform.py): fundform_v1 (R492, M172): the funding-formula forecast.
 - [`run_fundgate.py`](run_fundgate.py): fundgate_v1 (R297): does the market's funding response to up days time the crypto market? As set out in experiments/fundgate_v1/PREREG.md (M295, from a Bankless guest's remark, docs/COMMENT_DIG.md).
 - [`run_funding_prefix.py`](run_funding_prefix.py): R322 finite source-arithmetic/account fixtures; no market collection or policy.
+- [`run_fundrev.py`](run_fundrev.py): fundrev_v1 (R491, M172): does a coin's within-cycle premium index forecast the next settled funding rate better than a no-change forecast, on Binance USDT perpetuals? Frozen in ...
 - [`run_fundvol.py`](run_fundvol.py): R382 fundvol_v1 (M455): does trailing volatility sizing improve a funding-carry book's net return at executable cost?.
 - [`run_fundxs.py`](run_fundxs.py): fundxs_v1 (R302): the Binance funding level as a cross-sectional signal, net of the funding each leg pays (M263).
 - [`run_futroll.py`](run_futroll.py): R480 futroll_fwd: M532 forward.
@@ -305,6 +309,7 @@ line is the first line of the script's own docstring.
 - [`run_rollcarry.py`](run_rollcarry.py): rollcarry_v1 (M532), frozen in experiments/rollcarry_v1/PREREG.md: does the funding on trade.xyz's futures-priced perps exceed the futures roll its oracle passes to longs?.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
+- [`run_sessionmax.py`](run_sessionmax.py): sessionmax_v1 (R490, M539): session-decomposed MAX on 24/7 crypto perps, as frozen in experiments/sessionmax_v1/PREREG.md.
 - [`run_settle.py`](run_settle.py): settle_v1 (R223): hold across one funding settlement to collect an extreme rate, as set out in experiments/settle_v1/PREREG.md.
 - [`run_settlehop.py`](run_settlehop.py): R353 settlehop_v1: M267's settlement-window hop on hourly bars, frozen in experiments/settlehop_v1/PREREG.md.
 - [`run_settlehop_exit.py`](run_settlehop_exit.py): R356 settlehop_exit_v1: R354's settlement hops closed minutes after the settlement, frozen in experiments/settlehop_exit_v1/PREREG.md.

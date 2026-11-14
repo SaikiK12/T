@@ -1,0 +1,343 @@
+{
+ "results": {
+  "CONTROL|discovery": {
+   "alpha_t": -0.47618052298873964,
+   "beta_btc": 0.11873945288756041,
+   "days": 1095,
+   "mean_bp_day": -2.7394411314105636
+  },
+  "CONTROL|validation": {
+   "alpha_t": -0.364772461310953,
+   "beta_btc": 0.019791348195131533,
+   "days": 547,
+   "mean_bp_day": -3.256815079928005
+  },
+  "S-INTRA|discovery": {
+   "alpha_t": -0.6133397869860607,
+   "beta_btc": 0.12784454740842652,
+   "days": 1095,
+   "mean_bp_day": -3.2252079709969546
+  },
+  "S-INTRA|validation": {
+   "alpha_t": -0.1612727298425194,
+   "beta_btc": 0.016294788849426745,
+   "days": 547,
+   "mean_bp_day": -1.4017317558821742
+  },
+  "S-OVER|discovery": {
+   "alpha_t": 0.2435122891008621,
+   "beta_btc": 0.10695146431694749,
+   "days": 1095,
+   "mean_bp_day": 2.1333635948245413
+  },
+  "S-OVER|validation": {
+   "alpha_t": -0.6655122101870883,
+   "beta_btc": 0.01578261527945088,
+   "days": 547,
+   "mean_bp_day": -5.968682498417619
+  }
+ },
+ "rows": [
+  {
+   "book": "S-INTRA",
+   "cmult": 1.0,
+   "cost_bp_day": 2.7673774142099257,
+   "days": 1095,
+   "gross_bp_day": -0.4578305567870318,
+   "mean_bp_day": -3.2252079709969546,
+   "t_nw": -0.5227172228038722,
+   "total": -0.3531602728241665,
+   "window": "discovery"
+  },
+  {
+   "book": "S-INTRA",
+   "cmult": 2.0,
+   "cost_bp_day": 5.534754828419851,
+   "days": 1095,
+   "gross_bp_day": -0.4578305567870318,
+   "mean_bp_day": -5.992585385206881,
+   "t_nw": -0.9705481571949969,
+   "total": -0.6561880996801535,
+   "window": "discovery"
+  },
+  {
+   "book": "S-INTRA",
+   "cmult": 3.0,
+   "cost_bp_day": 8.302132242629776,
+   "days": 1095,
+   "gross_bp_day": -0.4578305567870318,
+   "mean_bp_day": -8.759962799416806,
+   "t_nw": -1.4177036874209041,
+   "total": -0.9592159265361404,
+   "window": "discovery"
+  },
+  {
+   "book": "S-INTRA",
+   "cmult": 1.0,
+   "cost_bp_day": 2.660330199910133,
+   "days": 547,
+   "gross_bp_day": 1.2585984440279603,
+   "mean_bp_day": -1.4017317558821742,
+   "t_nw": -0.18449196039801516,
+   "total": -0.07667472704675493,
+   "window": "validation"
+  },
+  {
+   "book": "S-INTRA",
+   "cmult": 2.0,
+   "cost_bp_day": 5.320660399820266,
+   "days": 547,
+   "gross_bp_day": 1.2585984440279603,
+   "mean_bp_day": -4.062061955792306,
+   "t_nw": -0.5345490439153485,
+   "total": -0.22219478898183914,
+   "window": "validation"
+  },
+  {
+   "book": "S-INTRA",
+   "cmult": 3.0,
+   "cost_bp_day": 7.980990599730398,
+   "days": 547,
+   "gross_bp_day": 1.2585984440279603,
+   "mean_bp_day": -6.722392155702438,
+   "t_nw": -0.8844691647785862,
+   "total": -0.36771485091692335,
+   "window": "validation"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 1.0,
+   "cost_bp_day": 2.8423399115223607,
+   "days": 1095,
+   "gross_bp_day": 4.9757035063469015,
+   "mean_bp_day": 2.1333635948245413,
+   "t_nw": 0.2915805278158618,
+   "total": 0.23360331363328726,
+   "window": "discovery"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 2.0,
+   "cost_bp_day": 5.684679823044721,
+   "days": 1095,
+   "gross_bp_day": 4.9757035063469015,
+   "mean_bp_day": -0.7089763166978206,
+   "t_nw": -0.09684390758666,
+   "total": -0.07763290667841136,
+   "window": "discovery"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 3.0,
+   "cost_bp_day": 8.527019734567082,
+   "days": 1095,
+   "gross_bp_day": 4.9757035063469015,
+   "mean_bp_day": -3.551316228220181,
+   "t_nw": -0.48480645513092646,
+   "total": -0.38886912699010984,
+   "window": "discovery"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 1.0,
+   "cost_bp_day": 2.666359587055616,
+   "days": 547,
+   "gross_bp_day": -3.3023229113620056,
+   "mean_bp_day": -5.968682498417619,
+   "t_nw": -0.6868699242827329,
+   "total": -0.3264869326634438,
+   "window": "validation"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 2.0,
+   "cost_bp_day": 5.332719174111232,
+   "days": 547,
+   "gross_bp_day": -3.3023229113620056,
+   "mean_bp_day": -8.635042085473236,
+   "t_nw": -0.9931853525642196,
+   "total": -0.472336802075386,
+   "window": "validation"
+  },
+  {
+   "book": "S-OVER",
+   "cmult": 3.0,
+   "cost_bp_day": 7.999078761166847,
+   "days": 547,
+   "gross_bp_day": -3.3023229113620056,
+   "mean_bp_day": -11.30140167252885,
+   "t_nw": -1.2991504179235083,
+   "total": -0.6181866714873282,
+   "window": "validation"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 1.0,
+   "cost_bp_day": 2.7872455650120727,
+   "days": 1095,
+   "gross_bp_day": 0.04780443360150818,
+   "mean_bp_day": -2.7394411314105636,
+   "t_nw": -0.40796414178911566,
+   "total": -0.2999688038894567,
+   "window": "discovery"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 2.0,
+   "cost_bp_day": 5.574491130024145,
+   "days": 1095,
+   "gross_bp_day": 0.04780443360150818,
+   "mean_bp_day": -5.526686696422636,
+   "t_nw": -0.8225160434909364,
+   "total": -0.6051721932582786,
+   "window": "discovery"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 3.0,
+   "cost_bp_day": 8.36173669503622,
+   "days": 1095,
+   "gross_bp_day": 0.04780443360150818,
+   "mean_bp_day": -8.313932261434708,
+   "t_nw": -1.2364984878704288,
+   "total": -0.9103755826271005,
+   "window": "discovery"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 1.0,
+   "cost_bp_day": 2.63259502320661,
+   "days": 547,
+   "gross_bp_day": -0.6242200567213966,
+   "mean_bp_day": -3.256815079928005,
+   "t_nw": -0.3908561710658313,
+   "total": -0.1781477848720619,
+   "window": "validation"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 2.0,
+   "cost_bp_day": 5.26519004641322,
+   "days": 547,
+   "gross_bp_day": -0.6242200567213966,
+   "mean_bp_day": -5.889410103134615,
+   "t_nw": -0.7067399333587114,
+   "total": -0.32215073264146343,
+   "window": "validation"
+  },
+  {
+   "book": "CONTROL",
+   "cmult": 3.0,
+   "cost_bp_day": 7.89778506961983,
+   "days": 547,
+   "gross_bp_day": -0.6242200567213966,
+   "mean_bp_day": -8.522005126341227,
+   "t_nw": -1.0225551504172081,
+   "total": -0.46615368041086513,
+   "window": "validation"
+  }
+ ],
+ "verdict": {
+  "R490": "sessionmax_v1",
+  "best_book": "S-OVER",
+  "bootstrap": {
+   "best_book": "S-OVER",
+   "block": 10,
+   "null_95pct": 1.6081349195734143,
+   "obs_alpha_t": 0.2435122891008621,
+   "reps": 2000,
+   "seed": 20261114,
+   "signal": false
+  },
+  "diagnostics": {
+   "CONTROL": {
+    "base_1x_bp_day": -2.7394411314105636,
+    "l2co_frac_positive": 0.013877551020408163,
+    "l2co_mean_bp_day": -2.71340004579362,
+    "l2co_min_bp_day": -8.689151523516058,
+    "l2co_pairs": 1225,
+    "trimmed_1x_bp_day": -9.206764281226315
+   },
+   "S-INTRA": {
+    "base_1x_bp_day": -3.2252079709969546,
+    "l2co_frac_positive": 0.0016326530612244899,
+    "l2co_mean_bp_day": -3.1785625118081424,
+    "l2co_min_bp_day": -5.563323707194919,
+    "l2co_pairs": 1225,
+    "trimmed_1x_bp_day": -9.276223380050526
+   },
+   "S-OVER": {
+    "base_1x_bp_day": 2.1333635948245413,
+    "l2co_frac_positive": 0.9657142857142857,
+    "l2co_mean_bp_day": 1.960046491941598,
+    "l2co_min_bp_day": -1.4092286668899972,
+    "l2co_pairs": 1225,
+    "trimmed_1x_bp_day": -5.2436713443073435
+   }
+  },
+  "permutation": {
+   "S-INTRA": {
+    "p_ge_real": 0.975,
+    "perm_mean_bp_day": 2.243616436463597,
+    "perm_sd_bp_day": 1.530988315464314,
+    "real_bp_day": -0.48576683958639344
+   },
+   "S-OVER": {
+    "p_ge_real": 0.025,
+    "perm_mean_bp_day": 2.0876733287911615,
+    "perm_sd_bp_day": 1.5314913339515153,
+    "real_bp_day": 4.872804726235103
+   }
+  },
+  "stage": {
+   "CONTROL": {
+    "discovery": {
+     "alpha_t": -0.47618052298873964,
+     "net_bp_day": -2.7394411314105636,
+     "passed": false
+    },
+    "validation": {
+     "alpha_t": -0.364772461310953,
+     "net_bp_day": -3.256815079928005,
+     "passed": false
+    }
+   },
+   "S-INTRA": {
+    "discovery": {
+     "alpha_t": -0.6133397869860607,
+     "net_bp_day": -3.2252079709969546,
+     "passed": false
+    },
+    "validation": {
+     "alpha_t": -0.1612727298425194,
+     "net_bp_day": -1.4017317558821742,
+     "passed": false
+    }
+   },
+   "S-OVER": {
+    "discovery": {
+     "alpha_t": 0.2435122891008621,
+     "net_bp_day": 2.1333635948245413,
+     "passed": false
+    },
+    "validation": {
+     "alpha_t": -0.6655122101870883,
+     "net_bp_day": -5.968682498417619,
+     "passed": false
+    }
+   }
+  },
+  "vs_control": {
+   "S-INTRA": {
+    "days": 1095,
+    "t_nw": -0.10903486585660833,
+    "vs_control_mean_bp_day": -0.48576683958639344
+   },
+   "S-OVER": {
+    "days": 1095,
+    "t_nw": 1.3311422591534858,
+    "vs_control_mean_bp_day": 4.872804726235103
+   }
+  }
+ }
+}

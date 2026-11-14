@@ -61,5 +61,14 @@ across adaptive batches: ___. Within-batch Bonferroni alone is not a program-wid
 Report the frozen lane-native verdict separately from current gate admissibility; missing admission evidence blocks
 that admission. This section cannot authorize reserved reads or real orders by itself.
 
+## Anytime-valid monitor (M479, optional; for lanes registered after R489)
+Leave blank unless this lane wants a daily read that does not inflate the type-I error. The monitor
+(`lab.sequential.lane_monitor`) is a futility/monitoring device; the frozen fixed-look decision above
+remains the decision. Fill:
+- Support bound `[lo, hi]` (source and safety factor; re-register if a day falls outside, never clip): ___
+- Mode: `block` (block = ___ days; use when the daily series is autocorrelated) or `mixture`: ___
+- Threshold: reject H0: mean <= 0 the first day the running max capital reaches `1/alpha` = ___ (alpha = ___)
+- Reconciliation: how the monitor's early crossing relates to the frozen fixed look: ___
+
 ## Stop rules
 What ends the lane, and what is not allowed after seeing results (no new features, no new splits).

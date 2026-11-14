@@ -37,6 +37,7 @@ jobs:
         run: |
           .venv/bin/python -m lab integrity
           .venv/bin/python scripts/catalog.py --check
+          .venv/bin/python scripts/handover.py status
       - name: Preserve diagnostic receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

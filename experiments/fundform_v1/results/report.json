@@ -1,0 +1,83 @@
+{
+ "curve": {
+  "0": {
+   "days": 2462,
+   "mae_formula_bp": 1.40618065874641,
+   "mae_nochange_bp": 1.125176513698848,
+   "n": 345759,
+   "nw_t": -0.8212835138675171,
+   "reduction_bp": -0.10445912116335485
+  },
+  "1": {
+   "days": 2462,
+   "mae_formula_bp": 1.0462621015308065,
+   "mae_nochange_bp": 1.1074776101881514,
+   "n": 342437,
+   "nw_t": 1.4204060070304763,
+   "reduction_bp": 0.11772279846991307
+  },
+  "2": {
+   "days": 2462,
+   "mae_formula_bp": 1.1921545660039687,
+   "mae_nochange_bp": 1.104282161197413,
+   "n": 342338,
+   "nw_t": -0.49354114381030467,
+   "reduction_bp": -0.039561108426699125
+  },
+  "3": {
+   "days": 2462,
+   "mae_formula_bp": 1.3710882902862083,
+   "mae_nochange_bp": 1.104282161197413,
+   "n": 342338,
+   "nw_t": -2.7822039211608884,
+   "reduction_bp": -0.22366183500625675
+  },
+  "4": {
+   "days": 2462,
+   "mae_formula_bp": 1.3527072505487034,
+   "mae_nochange_bp": 1.0805645138473587,
+   "n": 329413,
+   "nw_t": -3.426655665392844,
+   "reduction_bp": -0.2628663991372954
+  },
+  "6": {
+   "days": 2462,
+   "mae_formula_bp": 1.815712610006284,
+   "mae_nochange_bp": 1.0805645138473587,
+   "n": 329413,
+   "nw_t": -9.365503746076117,
+   "reduction_bp": -0.7487860414168579
+  }
+ },
+ "diagnostic": {
+  "full_cycle_formula_bias_bp": -0.7206480248164182,
+  "full_cycle_formula_mae_bp": 1.40618065874641,
+  "share_at_clamp": 0.0
+ },
+ "null": {
+  "p5_t": -1.3471059726920007,
+  "p95_t": 3.1108029018179355
+ },
+ "verdict": {
+  "R492": "fundform_v1",
+  "adds_information": false,
+  "diagnostic": {
+   "full_cycle_formula_bias_bp": -0.7206480248164182,
+   "full_cycle_formula_mae_bp": 1.40618065874641,
+   "share_at_clamp": 0.0
+  },
+  "events": 345759,
+  "null_p5_t": -1.3471059726920007,
+  "null_p95_t": 3.1108029018179355,
+  "primary": {
+   "days": 2462,
+   "mae_formula_bp": 1.0462621015308065,
+   "mae_nochange_bp": 1.1074776101881514,
+   "n": 342437,
+   "nw_t": 1.4204060070304763,
+   "reduction_bp": 0.11772279846991307
+  },
+  "primary_k_hours": 1,
+  "symbols": 50
+ }
+}

@@ -125,7 +125,7 @@ def build(t, symbols, elig, spec_list, out, log=print, root=None):
     names = []
     for i, (name, norm) in enumerate(spec_list):
         x = f.get(name)
-        out[i] = -1 if x is None else binned(x, norm, elig)
+        out[i] = np.full((len(t), len(symbols)), -1, np.int8) if x is None else binned(x, norm, elig)
         names.append(spec_name(name, norm))
         log(" ", names[-1], "cells with a value:", f"{(np.asarray(out[i]) >= 0)[elig].mean():.2f}")
     return names
