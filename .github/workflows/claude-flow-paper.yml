@@ -1,16 +1,15 @@
 name: Flow paper lanes (Claude)
 # Single writer, from 2026-11-11, of the journals of the forward flow-book lanes R200 (Binance), R214 (one bar late),
 # R215 (MEXC prices), R218 (X2 on MEXC), R220 (funding carry, R191 rule), R221 (sequential decision on R215/R218) and
-# R225 (volatility target). They stopped on 2026-11-06 13:00 UTC with the container and had no other writer. Also the
+# R225 (volatility target). Also the
 # single writer of R448 (flow_hl_v1: the same signals on Hyperliquid's prices, scripts/run_flow_hl.py) from 2026-11-12,
 # of R449's hedge tickets (jlphedge_v1: scripts/run_jlphedge.py, one per book and day, written the day before), and
 # of R451 (flow_hlstock_v1: R200's signals on stock/commodity perps priced on Hyperliquid's xyz) from 2026-11-12.
 # Hourly at :17, so R200 computes each hour within 60 minutes of its close (docs/GATES.md's strict on-time clock).
-# GitHub drops or delays some scheduled runs (06:17 and 08:17 UTC on 2026-11-11 never fired; hours 02:00 and 05:00
-# were computed 75 and 94 minutes after their close), so scheduled runs also fire at :32 and :47. A scheduled run
+# GitHub drops or delays some scheduled runs, so scheduled runs also fire at :32 and :47. A scheduled run
 # ticks only if R200 has an hour not yet computed that closed 12 minutes ago (R200's own margin); otherwise it stops
-# after the checkout and touches no API. GitHub then started no run of this file from 08:53 to 09:56 UTC, so
-# claude-clock.yml dispatches it at :14 and :40 each hour with if_due (the same check); a plain dispatch always ticks.
+# after the checkout and touches no API. claude-clock.yml dispatches it at :14 and :40 each hour with if_due
+# (the same check); a plain dispatch always ticks.
 # Each run computes every closed hour not yet journaled (Binance keeps 5-minute ratio history for 30 days), so a missed
 # run is caught up by the next one; the frozen scripts are run unchanged, in their task order (lab/operations.py).
 # Paper only: public market data, no key, no order. The local loop must not tick these lanes while this workflow owns
@@ -109,10 +108,8 @@ jobs:
               run R451 scripts/run_flow_hlstock.py --window forward || true
             fi
             run R214 scripts/forward_delayed.py || true
-            # R215 met the same 510 refusal (run 42980224484: RLC_USDT funding, no tickets) and writes nothing on a
-            # failed fetch, so it gets R220's wrapper and attempts below. R218 fetches MEXC klines itself through
-            # forward_mexc's client (run 42990781696: 510 on five klines, no tickets), so it gets the same; R221 and
-            # R225 read R215's and R218's files only.
+            # R215 and R218 both hit MEXC's 510 refusals and write nothing on a failed fetch, so both get R220's
+            # wrapper and attempts below; R221 and R225 read R215's and R218's files only.
             r215=1
             for i in 1 2 3; do
               [ $i -gt 1 ] && { sleep 180; fail="${fail/ R215/}"; }
@@ -128,10 +125,9 @@ jobs:
               done
               run R225 scripts/forward_vt.py || true
             fi
-            # MEXC refuses bursts by IP (510) on shared runners: neither one 120 s wait (run 42933784241) nor four
-            # attempts 3 minutes apart (run 42939724639) got through. scripts/run_paced_mexc.py runs the frozen script
-            # unchanged with MEXC requests spaced 0.25 s and each 510 retried after 5, 15 and 45 s. Up to 3 attempts;
-            # R220 writes nothing on a failed fetch.
+            # MEXC refuses bursts by IP (510) on shared runners, so a plain wait or a few spaced attempts does not get
+            # through. scripts/run_paced_mexc.py runs the frozen script unchanged with MEXC requests spaced 0.25 s and
+            # each 510 retried after 5, 15 and 45 s. Up to 3 attempts; R220 writes nothing on a failed fetch.
             for i in 1 2 3; do
               [ $i -gt 1 ] && { sleep 180; fail="${fail/ R220/}"; }
               run R220 scripts/run_paced_mexc.py scripts/forward_carry.py && break
