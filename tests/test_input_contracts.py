@@ -50,7 +50,9 @@ class InputContractTests(unittest.TestCase):
                      "historical_availability_proven", "causal_identification_established",
                      "actual_order_allowed", "activation_allowed"):
             self.assertIs(getattr(report, flag), False)
-        with self.assertRaises(ValueError):
+        # CPython raises ValueError through 3.12 and TypeError from 3.13 for a replace() on an
+        # init=False field; either way the flag cannot be set.
+        with self.assertRaises((ValueError, TypeError)):
             replace(report, actual_order_allowed=True)
 
     def test_default_age_is_zero_without_an_invented_venue_latency(self):
