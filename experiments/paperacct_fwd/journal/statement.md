@@ -1,6 +1,6 @@
 # Relevé du compte papier (R415)
 
-Mis à jour : 2026-11-14T04:16Z. Capital de départ : 10 000 $ fictifs, ouvert le 2026-11-07.
+Mis à jour : 2026-11-14T05:15Z. Capital de départ : 10 000 $ fictifs, ouvert le 2026-11-07.
 Aucun ordre réel. Chaque poche reprend le résultat papier net des lanes, à leurs coûts mesurés.
 
 ## Solde provisoire (jours récents, peut changer)
