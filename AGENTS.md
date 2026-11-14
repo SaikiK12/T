@@ -60,7 +60,7 @@ R221's alpha.
 
 Live research leads (2026-11-14 read-only scans; the queue is authoritative, not this line): **M539**
 session-decomposed MAX (new edge; Binance Vision klines the lab already builds) and **M540**
-reserved-batch-4 gate+dydx long tail (gate-1 confirmation/futility screen; R492 reserved for it).
+reserved-batch-4 gate+dydx long tail (gate-1 confirmation/futility screen; R493 reserved for it).
 Details in `research/intake/{new_edge_scan,reserved_batch4_plan,vault_inventory_archive}_20261114.md`.
 The lab is saturated: recent papers mostly map onto existing methods, so check `registry/methods.csv`
 before treating a source as new.
