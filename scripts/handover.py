@@ -10,7 +10,8 @@
   SCRATCH   logs, locks and third-party text; not worth keeping
 
 usage:
-  python scripts/handover.py status                       # sizes per class; unclassified entries; what is absent
+  python scripts/handover.py status                       # sizes per class; unclassified entries; what is absent;
+                                                          # and provenance receipts no manifest row reaches (UNLISTED)
   python scripts/handover.py commands [--missing]         # the commands that restore REFETCH / DERIVED folders
   python scripts/handover.py pack --out DIR [--max-chunk-mb 50] [--budget-mb N] [--min-age-min 15] [--public] [--exclude data/x]
   python scripts/handover.py restore --src DIR [--force]  # put a packed archive back into data/
@@ -26,6 +27,7 @@ import argparse
 import csv
 import hashlib
 import io
+import json
 import os
 import sys
 import tarfile
@@ -109,6 +111,46 @@ def status(root, rows):
             totals[c][1] += size
     absent = [r["path"] for r in rows if not (Path(root) / r["path"]).exists()]
     return totals, unclassified, absent
+
+
+def provenance_folders(record):
+    """The data/ folders a provenance record claims to cover: its `folder`, its `folders`, and the parent of every
+    file in `file_hashes` (a secondary receipt, such as deribit_atm_windows.json, records files inside an already
+    listed folder and names no folder of its own)."""
+    out = []
+    if record.get("folder"):
+        out.append(record["folder"])
+    if isinstance(record.get("folders"), list):
+        out += record["folders"]
+    for f in record.get("file_hashes") or []:
+        p = f.get("path") if isinstance(f, dict) else None
+        if p and p.startswith("data/"):
+            out.append(str(Path(p).parent))
+    return [f.rstrip("/") for f in out if f and f.startswith("data/")]
+
+
+def unlinked_provenance(root=ROOT, rows=None):
+    """Provenance receipts that no manifest row reaches: a receipt is linked when a row names it in its
+    `provenance` column, or when every folder it covers is under a manifest path. Returns (name, folders) pairs.
+    `registry/data_manifest.csv` is the authority for what data/ holds (see HANDOVER.md); a receipt with no row is
+    data the manifest forgot, which `status` cannot see because the folder is absent from this checkout."""
+    rows = load_manifest() if rows is None else rows
+    listed = [r["path"].rstrip("/") for r in rows]
+    named = {os.path.basename(r["provenance"].strip()) for r in rows if r["provenance"].strip()}
+
+    def covered(f):
+        return any(f == m or f.startswith(m + "/") or m.startswith(f + "/") for m in listed)
+
+    out = []
+    for path in sorted((Path(root) / "docs" / "provenance").glob("*.json")):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        folders = provenance_folders(record)
+        if path.name in named:
+            continue
+        if folders and all(covered(f) for f in folders):
+            continue
+        out.append((path.name, folders))
+    return out
 
 
 def read_csv(path, cols):
@@ -291,7 +333,10 @@ def main(argv=None):
         for r in rows:
             if r["path"] in absent:
                 print(f"absent  {r['class']:9} {r['path']}")
-        return 1 if unclassified else 0
+        orphans = unlinked_provenance(ROOT, rows)
+        for name, folders in orphans:
+            print(f"UNLISTED docs/provenance/{name}: {', '.join(folders) or 'no data/ folder'} is not in the manifest")
+        return 1 if (unclassified or orphans) else 0
     if a.cmd == "commands":
         for r in rows:
             if r["class"] in ("RECORDED", "SCRATCH"):

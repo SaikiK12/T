@@ -1,5 +1,6 @@
 import csv
 import io
+import json
 import os
 import re
 import sys
@@ -51,6 +52,38 @@ class ManifestFile(unittest.TestCase):
         by = {r["path"]: r["class"] for r in h.load_manifest()}
         self.assertEqual(by["data/databento"], "LICENSED")
         self.assertEqual(by["data/tape"], "RECORDED")
+
+    def test_every_provenance_receipt_is_reachable_from_a_manifest_row(self):
+        """A committed receipt for a folder the manifest does not list is data the manifest forgot: 17 such folders
+        (the 2026-11 trade.xyz/HIP-3 and macro-event inputs) were invisible to `status` because `data/` is empty here."""
+        self.assertEqual(h.unlinked_provenance(ROOT), [])
+
+
+class UnlinkedProvenance(unittest.TestCase):
+    def test_a_folder_the_manifest_forgets_is_reported(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "docs" / "provenance").mkdir(parents=True)
+            (root / "docs" / "provenance" / "orphan.json").write_text(
+                json.dumps({"folder": "data/orphan", "script": "scripts/fetch_x.py"}))
+            self.assertEqual(h.unlinked_provenance(root, ROWS), [("orphan.json", ["data/orphan"])])
+
+    def test_a_named_receipt_is_linked_even_with_no_folder_field(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "docs" / "provenance").mkdir(parents=True)
+            (root / "docs" / "provenance" / "receipt.json").write_text(json.dumps({"files": []}))
+            rows = [dict(ROWS[0], provenance="docs/provenance/receipt.json")]
+            self.assertEqual(h.unlinked_provenance(root, rows), [])
+
+    def test_a_secondary_receipt_for_a_listed_folder_is_linked(self):
+        """deribit_atm_windows.json names no folder: its file_hashes sit inside the listed data/deribit_trades."""
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "docs" / "provenance").mkdir(parents=True)
+            (root / "docs" / "provenance" / "secondary.json").write_text(json.dumps(
+                {"file_hashes": [{"path": "data/klines_1h/BTCUSDT.parquet", "sha256": "x"}]}))
+            self.assertEqual(h.unlinked_provenance(root, ROWS), [])
 
 
 class Classify(unittest.TestCase):

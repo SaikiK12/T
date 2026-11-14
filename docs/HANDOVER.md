@@ -126,6 +126,12 @@ is needed only for the browser test.
 ## 3. Data: five classes, one manifest
 `registry/data_manifest.csv` lists every `data/` entry with its class and how to restore it, and
 `python scripts/handover.py status` checks the disk against it (an unlisted entry is an error).
+The same command also checks the reverse direction: every committed receipt in `docs/provenance/`
+must be reachable from a manifest row, either because a row names it or because every folder it
+covers is listed. A receipt with no row is data the manifest forgot, and `status` reports it as an
+`UNLISTED` line and exits non-zero, because a folder absent from this checkout cannot show up as
+`UNCLASSIFIED` on disk. On 2026-11-14 this found 17 folders (the trade.xyz/HIP-3, Lighter-weekend
+and macro-event inputs of R460-R481) that had committed receipts but no manifest row.
 
 The sizes in this table are historical estimates, not this checkout's inventory.
 
