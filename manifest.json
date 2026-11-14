@@ -3008,12 +3008,12 @@
       "sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48"
     },
     "data/operations/quant_quote_scope_v1/dispatch.jsonl": {
-      "mtime_ns": 1794676627642978250,
-      "sha256": "f17c8850b185ff05e3d192a171eb8c857df655b59cabeb7460e85175ac85e5ac"
+      "mtime_ns": 1794676632478462985,
+      "sha256": "147e0ed24e5b1178c32716ced09ee7010bbe0ddedcb2e9257f386879abc61ac2"
     },
     "data/operations/quant_quote_scope_v1/latest.json": {
-      "mtime_ns": 1794673117115848740,
-      "sha256": "3641fd1a2d2f5e67974bd059d7dc694674ccf1fa403a25d84310766e0e205bcb"
+      "mtime_ns": 1794676632478462985,
+      "sha256": "da49ad8dece54053a4d687d7551a83dc254ceb6c9a47760223d55e228a63f796"
     },
     "data/operations/quant_quote_scope_v1/migrations/gha_42495486811_1.json": {
       "mtime_ns": 1794152086005433044,
@@ -6974,6 +6974,18 @@
     "data/operations/quant_quote_scope_v1/runs/20261114T16/reservation.json": {
       "mtime_ns": 1794673107836881130,
       "sha256": "511c28c0d3b14bbf31563b481115b94f4fef908184782f1fd4d0a108d927533e"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261114T17/R406.log": {
+      "mtime_ns": 1794676632247016647,
+      "sha256": "c4f18929a5a4abe3d829536580339271c6a918f67ac31a582126edaacc64b392"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261114T17/R413.log": {
+      "mtime_ns": 1794676631543017169,
+      "sha256": "30e9f2602a98b931e1ff0825de8997c4c58aebd04285dbc65530890cc21157e9"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261114T17/report.json": {
+      "mtime_ns": 1794676632478233142,
+      "sha256": "da49ad8dece54053a4d687d7551a83dc254ceb6c9a47760223d55e228a63f796"
     },
     "data/operations/quant_quote_scope_v1/runs/20261114T17/reservation.json": {
       "mtime_ns": 1794676627642978250,
@@ -11756,7 +11768,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_quote_scope_v1/runs/20261114T17/reservation.json",
+  "last_report": "data/operations/quant_quote_scope_v1/latest.json",
   "meaning": "R429 selected; same native paper rules, scoped DTB3 data and all original limits",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -11767,5 +11779,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-14T17:17:08.378144+00:00"
+  "updated_utc": "2026-11-14T17:17:14.213064+00:00"
 }
