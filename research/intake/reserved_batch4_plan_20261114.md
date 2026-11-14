@@ -15,7 +15,7 @@ Cross-venue funding carry (M059 family) gate-1 reads already taken:
 The open-coin reads (R275 `xfund_v1`, R277 `xfund_kd_v1`, R288 `xfund_lt_v1`) cover all venues' `open/` lists.
 So a fresh carry read must use a reserved cell **no carry lane has decided on**, and that cell is small.
 
-## M540 — `reserved_batch4`: gate+dydx long tail (R490, NOT YET REGISTERED)
+## M540 — `reserved_batch4`: gate+dydx long tail (R492, NOT YET REGISTERED)
 - **Sample:** dYdX `reserved/` long tail paired with the Gate `reserved/` long tail. 31 bases; **25 fresh**, 6 named
   overlaps (`AURORA CORE CRO MNT PI XDC`). Largest fresh-with-partner set; alternatives are smaller
   (gate+kucoin 25/13 fresh; gate+lighter 20/13). Tokens: `RESERVED-VENUE-READ` + `RESERVED-GATE-READ`.
@@ -34,7 +34,7 @@ So a fresh carry read must use a reserved cell **no carry lane has decided on**,
   confirmation and a *candidate* forward lane — no money, no order, no key, not gate 2.
 - **Runner when frozen:** `scripts/fetch_venue_history.py dydx` + `scripts/fetch_gate_history.py`, an extended
   `reserved_venue_table.py`, then `scripts/qx_run_verified.py experiments/reserved_batch4` and
-  `scripts/decide_reserved_batch2.py`. Freeze the PREREG and append the R490 row *before* the run.
+  `scripts/decide_reserved_batch2.py`. Freeze the PREREG and append the R492 row *before* the run.
 
 ## Read / unread
 READ (repo, read-only): GATES/LEADS/SOURCES/DIRECTION/DATA_SOURCES docs; `templates/lane/PREREG.md`;
