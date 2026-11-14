@@ -1,6 +1,6 @@
 # Panel
 
-Rebuilt 2026-11-14 05:02 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
+Rebuilt 2026-11-14 06:15 UTC by `scripts/panel.py` at the end of each tick. Do not edit by hand.
 
 **Objective.** Net executable MEXC altcoin-perpetual strategies, followed by genuinely new prospective paper evidence. Independent research axes share the canonical methods queue, provenance and gates. Real-money decisions remain with the owner.
 
@@ -21,11 +21,11 @@ Screen (gate 0, exploratory) → research on unseen days (gate 1) → execution 
 
 | stage | now |
 |---|---|
-| Ideas in the queue, untested | 51 |
+| Ideas in the queue, untested | 50 |
 | Ideas partly tested | 72 |
 | Ideas blocked (data, download, compute) | 120 |
-| Rounds in the registry | 275 (NULL 128, PENDING 76, PARTIAL 48, CONFIRMED 13, DATA_PASS 10) |
-| Program trials | 9,785,313 |
+| Rounds in the registry | 276 (NULL 129, PENDING 76, PARTIAL 48, CONFIRMED 13, DATA_PASS 10) |
+| Program trials | 9,785,379 |
 | Paper lanes registered RUNNING/ARMED (process activity unverified) | 17 |
 | Strict on-time paper days so far | 1 |
 | Gate eligibility | not assessed by this panel; see frozen lane evidence and GATES |
@@ -145,7 +145,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 
 | id | lane | status | verdict | trials |
 |---|---|---|---|---|
-| R482 | xvroll_fwd | RUNNING | PENDING | 3 |
 | R483 | carryhurdle_v1 | DONE | CONFIRMED | 12 |
 | R484 | llphouse_v1 | DONE | NULL | 2 |
 | R485 | linstart_v1 | DONE | NULL | 1 |
@@ -153,5 +152,6 @@ The canonical queue is [`registry/methods.csv`](../registry/methods.csv). This v
 | R487 | adlstress_v1 | DONE | PARTIAL | 6 |
 | R488 | usdeflow_v1 | DONE | NULL | 2 |
 | R331 | confidence_v1 | REGISTERED | PENDING | 14 |
+| R489 | anytime_monitor_v1 | DONE | NULL | 66 |
 
 Details: [MAP](MAP.md), [EDGE_SCOREBOARD](EDGE_SCOREBOARD.md), [canonical methods registry](../registry/methods.csv), [GATES](GATES.md), [CRITIQUE](CRITIQUE.md), [room #7](https://github.com/SaikiK12/T/issues/7).

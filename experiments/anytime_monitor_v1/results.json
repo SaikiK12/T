@@ -1,0 +1,3123 @@
+{
+  "alpha": 0.05,
+  "block": 5,
+  "bounds": [
+    -0.3,
+    0.3
+  ],
+  "calibration": {
+    "bet|ar1_phi0.7": {
+      "ok": true,
+      "size": 0.0175,
+      "slack": 0.03269174207655505
+    },
+    "bet|iid": {
+      "ok": true,
+      "size": 0.0,
+      "slack": 0.03269174207655505
+    },
+    "block|ar1_phi0.7": {
+      "ok": true,
+      "size": 0.0,
+      "slack": 0.03269174207655505
+    },
+    "block|iid": {
+      "ok": true,
+      "size": 0.0,
+      "slack": 0.03269174207655505
+    },
+    "mixture|ar1_phi0.7": {
+      "ok": true,
+      "size": 0.0,
+      "slack": 0.03269174207655505
+    },
+    "mixture|iid": {
+      "ok": true,
+      "size": 0.0,
+      "slack": 0.03269174207655505
+    }
+  },
+  "cells": [
+    {
+      "cost": "net_1x",
+      "e_value": 2.9632256918690274,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.2432098398198854,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.164093692211089,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 2.5928853593441197,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.2105162103543987,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.138059223695146,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 2.2687083950412,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1786766775255264,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1140023501507852,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 3.8511498699116866,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.3101266736050576,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.2218496146848086,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 3.3675035256981927,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.2754946556373934,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1911481005972073,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 2.944458452472218,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.2417720801299357,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1628729415038428,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+hyperliquid L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 2.619603256060115,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.2125154634096256,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.1399186376347572,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 2.1929703818811648,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1702912724964052,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1081171364625786,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.8392893113146878,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1298121100243417,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0797204276176648,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 3.1664894051763213,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.259471659071382,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.177811402798964,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 2.6493907350093995,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.2151265568988507,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1421091777161494,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 2.2168674109915965,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1727839011537824,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.110017311560039,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+hyperliquid L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.3397020556620514,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.0601360167236853,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.0349580000420244,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.259176425996844,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0470762127687983,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.027099401342622,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.183460300376882,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0341745335272263,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0194939595676955,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.3220222475942058,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.0573989662357883,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.0332846600243983,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.241979346342666,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0442755211147257,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.025423143619383,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.166752227262107,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0313121783875938,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0178162000801032,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 11.805084482468276,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.6447147223750294,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.6236455715868618,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 8.868106413297905,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.5536455270573553,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4921403768403196,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 6.660996404398216,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.4675995857421673,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.38407555015814,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 21.28108046117188,
+      "mode": "bet",
+      "reject": true,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.8848708187784482,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 2.0174386861195894,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 15.826403275783212,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.776297459868532,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.8076858386581915,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 11.76835352485605,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.6739555225969465,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.6383209277821267,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 2.17884763442731,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.163592980631279,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.1072080591038984,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.8745558685550812,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1293216028394222,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0828156189769302,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.6126197644979652,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.096047867841802,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.060407531455398,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 2.343623500768236,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.1825171754824344,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.1204548314313092,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 2.015435076558751,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.147160699660356,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0949085972372148,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.733052327134966,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.11284929471528,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.071467989905505,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+mexc L7d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 6.534831352944306,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.4602912881308219,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.3772102637490171,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 4.726717956279084,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.3690351758976258,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.2786322332793423,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 3.4184135129930113,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.2834620337641611,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1985270123541987,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 10.662593938777444,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.6454666352078762,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.591727626595774,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 7.612306630074183,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.5381510486951198,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4472852405771068,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 5.43382521107784,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.4378109883573325,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.3321965458195943,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+gate L14d th10% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.4565650451627519,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.0783684984365947,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.046121751340151,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1763675663042925,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0330432814394948,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.018886041287396,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0000346635190145,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.4635502489503356,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.079669511924308,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.046859588000114,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.170243221455236,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.03264581768606,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0183326958611851,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "mixture",
+      "reject": false,
+      "series": "hyperliquid+mexc L3d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 9.341718115221076,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.5614224597681279,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.5083925189492282,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 7.162470113136795,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4807273625932103,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4044339349111856,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 5.490983478937537,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.404186545072944,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.3174630663143871,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 16.840015900810613,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.7606899959277993,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.8238588081041944,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 12.954268963653586,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.6706784881357413,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.668070925238968,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 9.964016469280912,
+      "mode": "bet",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.5853774418907223,
+      "mode": "block",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.5388092232663142,
+      "mode": "mixture",
+      "reject": false,
+      "series": "gate+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 7.723550433202156,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.5084130876853212,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.432266313010783,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 5.8982391705094,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4292518004599508,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.3395670857131738,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 4.503760770574282,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.3542290846544682,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.2619257859623054,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v1"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 8.46356233744024,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.5371781178894905,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_1x",
+      "e_value": 1.4687184155542266,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 6.454434849750714,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.4561034945284268,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.3695680910067327,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 4.921649915976863,
+      "mode": "bet",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.3792888099219223,
+      "mode": "block",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.2867465389064052,
+      "mode": "mixture",
+      "reject": false,
+      "series": "binance+kucoin L14d th5% K20|v2"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0,
+      "mode": "mixture",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0,
+      "mode": "mixture",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "mixture",
+      "reject": false,
+      "series": "BIN"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0092628559527086,
+      "mode": "bet",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0008056900164366,
+      "mode": "block",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0010242582460078,
+      "mode": "mixture",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0014841179283631,
+      "mode": "bet",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0001669207362038,
+      "mode": "mixture",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "bet",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "block",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0,
+      "mode": "mixture",
+      "reject": false,
+      "series": "MEXC"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.2212398519794334,
+      "mode": "bet",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.051205597077617,
+      "mode": "block",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.034204240183246,
+      "mode": "mixture",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.1849373837006756,
+      "mode": "bet",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0399855891024712,
+      "mode": "block",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.026270410455378,
+      "mode": "mixture",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.1571393823378242,
+      "mode": "bet",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0314810782872428,
+      "mode": "block",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0185913287992496,
+      "mode": "mixture",
+      "reject": false,
+      "series": "A"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0968799318961506,
+      "mode": "bet",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.0099231583552035,
+      "mode": "block",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net",
+      "e_value": 1.010800837530392,
+      "mode": "mixture",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0877736153920425,
+      "mode": "bet",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.008455198833882,
+      "mode": "block",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_2x",
+      "e_value": 1.0098348242380224,
+      "mode": "mixture",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0787404701563998,
+      "mode": "bet",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0069890087822038,
+      "mode": "block",
+      "reject": false,
+      "series": "B"
+    },
+    {
+      "cost": "net_3x",
+      "e_value": 1.0088728476617181,
+      "mode": "mixture",
+      "reject": false,
+      "series": "B"
+    }
+  ],
+  "lane": "anytime_monitor_v1",
+  "method": "M479",
+  "modes": [
+    "bet",
+    "block",
+    "mixture"
+  ],
+  "n_bet_only": 1,
+  "n_null": 65,
+  "n_reject": 0,
+  "n_series_cells": 66,
+  "program_trials_before": 9785313,
+  "reads": [
+    {
+      "bet": {
+        "e_value": 2.9632256918690274,
+        "first_reject_index": null,
+        "p_anytime": 0.337470076188918,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2432098398198854,
+        "first_reject_index": null,
+        "p_anytime": 0.8043694378616555,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.164093692211089,
+        "first_reject_index": null,
+        "p_anytime": 0.8590373839244777,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.5928853593441197,
+        "first_reject_index": null,
+        "p_anytime": 0.38567073410949176,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2105162103543987,
+        "first_reject_index": null,
+        "p_anytime": 0.8260938527268737,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.138059223695146,
+        "first_reject_index": null,
+        "p_anytime": 0.8786888934945901,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.2687083950412,
+        "first_reject_index": null,
+        "p_anytime": 0.44077943299620925,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1786766775255264,
+        "first_reject_index": null,
+        "p_anytime": 0.8484090837356397,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1140023501507852,
+        "first_reject_index": null,
+        "p_anytime": 0.8976641744648434,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 3.8511498699116866,
+        "first_reject_index": null,
+        "p_anytime": 0.25966270692626453,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.3101266736050576,
+        "first_reject_index": null,
+        "p_anytime": 0.7632849709473617,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.2218496146848086,
+        "first_reject_index": null,
+        "p_anytime": 0.8184313257388575,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 3.3675035256981927,
+        "first_reject_index": null,
+        "p_anytime": 0.29695588805439116,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2754946556373934,
+        "first_reject_index": null,
+        "p_anytime": 0.7840095570610427,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1911481005972073,
+        "first_reject_index": null,
+        "p_anytime": 0.839526167651721,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.944458452472218,
+        "first_reject_index": null,
+        "p_anytime": 0.3396210257816281,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2417720801299357,
+        "first_reject_index": null,
+        "p_anytime": 0.8053007601003259,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1628729415038428,
+        "first_reject_index": null,
+        "p_anytime": 0.8599391767657666,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "gate+hyperliquid L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.619603256060115,
+        "first_reject_index": null,
+        "p_anytime": 0.38173719538889284,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2125154634096256,
+        "first_reject_index": null,
+        "p_anytime": 0.8247317499671085,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1399186376347572,
+        "first_reject_index": null,
+        "p_anytime": 0.8772555926227529,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.1929703818811648,
+        "first_reject_index": null,
+        "p_anytime": 0.4560025106869816,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1702912724964052,
+        "first_reject_index": null,
+        "p_anytime": 0.8544881291533957,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1081171364625786,
+        "first_reject_index": null,
+        "p_anytime": 0.9024316717926419,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.8392893113146878,
+        "first_reject_index": null,
+        "p_anytime": 0.5436882571155811,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1298121100243417,
+        "first_reject_index": null,
+        "p_anytime": 0.8851029220942367,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0797204276176648,
+        "first_reject_index": null,
+        "p_anytime": 0.9261656762449489,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 3.1664894051763213,
+        "first_reject_index": null,
+        "p_anytime": 0.3158071517199081,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.259471659071382,
+        "first_reject_index": null,
+        "p_anytime": 0.7939837254752581,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.177811402798964,
+        "first_reject_index": null,
+        "p_anytime": 0.849032364284799,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.6493907350093995,
+        "first_reject_index": null,
+        "p_anytime": 0.37744526950512347,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2151265568988507,
+        "first_reject_index": null,
+        "p_anytime": 0.8229595463308121,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1421091777161494,
+        "first_reject_index": null,
+        "p_anytime": 0.8755730358455555,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.2168674109915965,
+        "first_reject_index": null,
+        "p_anytime": 0.4510869685042209,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1727839011537824,
+        "first_reject_index": null,
+        "p_anytime": 0.8526720046346151,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.110017311560039,
+        "first_reject_index": null,
+        "p_anytime": 0.9008868506695463,
+        "reject": false
+      },
+      "n": 1225,
+      "series": "binance+hyperliquid L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.3397020556620514,
+        "first_reject_index": null,
+        "p_anytime": 0.7464346238580801,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0601360167236853,
+        "first_reject_index": null,
+        "p_anytime": 0.9432751875466568,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0349580000420244,
+        "first_reject_index": null,
+        "p_anytime": 0.9662227838805005,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.259176425996844,
+        "first_reject_index": null,
+        "p_anytime": 0.7941698870421089,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0470762127687983,
+        "first_reject_index": null,
+        "p_anytime": 0.9550403187516657,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.027099401342622,
+        "first_reject_index": null,
+        "p_anytime": 0.9736156000994668,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.183460300376882,
+        "first_reject_index": null,
+        "p_anytime": 0.8449797595082339,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0341745335272263,
+        "first_reject_index": null,
+        "p_anytime": 0.9669547717340627,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0194939595676955,
+        "first_reject_index": null,
+        "p_anytime": 0.9808787885550968,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.3220222475942058,
+        "first_reject_index": null,
+        "p_anytime": 0.7564169224986822,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0573989662357883,
+        "first_reject_index": null,
+        "p_anytime": 0.9457168315190229,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0332846600243983,
+        "first_reject_index": null,
+        "p_anytime": 0.9677875213751722,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.241979346342666,
+        "first_reject_index": null,
+        "p_anytime": 0.805166368462376,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0442755211147257,
+        "first_reject_index": null,
+        "p_anytime": 0.9576016863179334,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.025423143619383,
+        "first_reject_index": null,
+        "p_anytime": 0.9752071681065747,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.166752227262107,
+        "first_reject_index": null,
+        "p_anytime": 0.8570800009069564,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0313121783875938,
+        "first_reject_index": null,
+        "p_anytime": 0.9696385061247421,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0178162000801032,
+        "first_reject_index": null,
+        "p_anytime": 0.9824956607305906,
+        "reject": false
+      },
+      "n": 507,
+      "series": "binance+mexc L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 11.805084482468276,
+        "first_reject_index": null,
+        "p_anytime": 0.08470926247796866,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.6447147223750294,
+        "first_reject_index": null,
+        "p_anytime": 0.6080081769779276,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.6236455715868618,
+        "first_reject_index": null,
+        "p_anytime": 0.6158979628926373,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 8.868106413297905,
+        "first_reject_index": null,
+        "p_anytime": 0.11276364461532394,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5536455270573553,
+        "first_reject_index": null,
+        "p_anytime": 0.6436474617823705,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.4921403768403196,
+        "first_reject_index": null,
+        "p_anytime": 0.6701782322368013,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 6.660996404398216,
+        "first_reject_index": null,
+        "p_anytime": 0.15012768950598832,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4675995857421673,
+        "first_reject_index": null,
+        "p_anytime": 0.681384765786983,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.38407555015814,
+        "first_reject_index": null,
+        "p_anytime": 0.7225039123664478,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 21.28108046117188,
+        "first_reject_index": 2059,
+        "p_anytime": 0.04699009534899025,
+        "reject": true
+      },
+      "block": {
+        "e_value": 1.8848708187784482,
+        "first_reject_index": null,
+        "p_anytime": 0.5305403373203489,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 2.0174386861195894,
+        "first_reject_index": null,
+        "p_anytime": 0.4956780133543658,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2",
+      "state": "MONITOR_BET_ONLY"
+    },
+    {
+      "bet": {
+        "e_value": 15.826403275783212,
+        "first_reject_index": null,
+        "p_anytime": 0.06318555028419824,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.776297459868532,
+        "first_reject_index": null,
+        "p_anytime": 0.5629687721751359,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.8076858386581915,
+        "first_reject_index": null,
+        "p_anytime": 0.5531934690279366,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 11.76835352485605,
+        "first_reject_index": null,
+        "p_anytime": 0.08497365395149718,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.6739555225969465,
+        "first_reject_index": null,
+        "p_anytime": 0.59738743742045,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.6383209277821267,
+        "first_reject_index": null,
+        "p_anytime": 0.6103810206183155,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate+hyperliquid+mexc L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.17884763442731,
+        "first_reject_index": null,
+        "p_anytime": 0.45895820533721754,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.163592980631279,
+        "first_reject_index": null,
+        "p_anytime": 0.8594070406453246,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1072080591038984,
+        "first_reject_index": null,
+        "p_anytime": 0.9031726167251116,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.8745558685550812,
+        "first_reject_index": null,
+        "p_anytime": 0.5334596939865046,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1293216028394222,
+        "first_reject_index": null,
+        "p_anytime": 0.8854873558477298,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0828156189769302,
+        "first_reject_index": null,
+        "p_anytime": 0.9235182633815567,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.6126197644979652,
+        "first_reject_index": null,
+        "p_anytime": 0.6201089816800778,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.096047867841802,
+        "first_reject_index": null,
+        "p_anytime": 0.912368911377085,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.060407531455398,
+        "first_reject_index": null,
+        "p_anytime": 0.9430336642625602,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.343623500768236,
+        "first_reject_index": null,
+        "p_anytime": 0.4266896963920193,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.1825171754824344,
+        "first_reject_index": null,
+        "p_anytime": 0.8456536790613867,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1204548314313092,
+        "first_reject_index": null,
+        "p_anytime": 0.8924947012121534,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 2.015435076558751,
+        "first_reject_index": null,
+        "p_anytime": 0.49617078298917333,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.147160699660356,
+        "first_reject_index": null,
+        "p_anytime": 0.8717174501323778,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0949085972372148,
+        "first_reject_index": null,
+        "p_anytime": 0.913318246402761,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.733052327134966,
+        "first_reject_index": null,
+        "p_anytime": 0.5770166222581243,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.11284929471528,
+        "first_reject_index": null,
+        "p_anytime": 0.8985942703552217,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.071467989905505,
+        "first_reject_index": null,
+        "p_anytime": 0.9332989967233571,
+        "reject": false
+      },
+      "n": 514,
+      "series": "gate+mexc L7d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 6.534831352944306,
+        "first_reject_index": null,
+        "p_anytime": 0.15302613732325995,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4602912881308219,
+        "first_reject_index": null,
+        "p_anytime": 0.6847948817663657,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.3772102637490171,
+        "first_reject_index": null,
+        "p_anytime": 0.7261055383640679,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 4.726717956279084,
+        "first_reject_index": null,
+        "p_anytime": 0.21156328963347099,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.3690351758976258,
+        "first_reject_index": null,
+        "p_anytime": 0.730441421524715,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.2786322332793423,
+        "first_reject_index": null,
+        "p_anytime": 0.7820857115695209,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 3.4184135129930113,
+        "first_reject_index": null,
+        "p_anytime": 0.29253336268392066,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.2834620337641611,
+        "first_reject_index": null,
+        "p_anytime": 0.7791426420828216,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.1985270123541987,
+        "first_reject_index": null,
+        "p_anytime": 0.8343574985729831,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 10.662593938777444,
+        "first_reject_index": null,
+        "p_anytime": 0.09378580913254382,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.6454666352078762,
+        "first_reject_index": null,
+        "p_anytime": 0.6077303414138612,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.591727626595774,
+        "first_reject_index": null,
+        "p_anytime": 0.6282481897601405,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 7.612306630074183,
+        "first_reject_index": null,
+        "p_anytime": 0.13136622690017083,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5381510486951198,
+        "first_reject_index": null,
+        "p_anytime": 0.6501312084065758,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.4472852405771068,
+        "first_reject_index": null,
+        "p_anytime": 0.6909487998379978,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 5.43382521107784,
+        "first_reject_index": null,
+        "p_anytime": 0.1840324193647816,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4378109883573325,
+        "first_reject_index": null,
+        "p_anytime": 0.6955017092632447,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.3321965458195943,
+        "first_reject_index": null,
+        "p_anytime": 0.7506399886247864,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+gate L14d th10% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.4565650451627519,
+        "first_reject_index": null,
+        "p_anytime": 0.6865467514279551,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0783684984365947,
+        "first_reject_index": null,
+        "p_anytime": 0.927326791769036,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.046121751340151,
+        "first_reject_index": null,
+        "p_anytime": 0.955911679227522,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.1763675663042925,
+        "first_reject_index": null,
+        "p_anytime": 0.8500744398637464,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0330432814394948,
+        "first_reject_index": null,
+        "p_anytime": 0.968013652444987,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.018886041287396,
+        "first_reject_index": null,
+        "p_anytime": 0.9814640298108974,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0000346635190145,
+        "first_reject_index": null,
+        "p_anytime": 0.9999653376825034,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.4635502489503356,
+        "first_reject_index": null,
+        "p_anytime": 0.6832700146217762,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.079669511924308,
+        "first_reject_index": null,
+        "p_anytime": 0.926209352913641,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.046859588000114,
+        "first_reject_index": null,
+        "p_anytime": 0.9552379435243719,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.170243221455236,
+        "first_reject_index": null,
+        "p_anytime": 0.8545232150599147,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.03264581768606,
+        "first_reject_index": null,
+        "p_anytime": 0.9683862393795267,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0183326958611851,
+        "first_reject_index": null,
+        "p_anytime": 0.9819973414035562,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "n": 518,
+      "series": "hyperliquid+mexc L3d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 9.341718115221076,
+        "first_reject_index": null,
+        "p_anytime": 0.10704668966307539,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5614224597681279,
+        "first_reject_index": null,
+        "p_anytime": 0.6404416650625742,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.5083925189492282,
+        "first_reject_index": null,
+        "p_anytime": 0.6629574115738899,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 7.162470113136795,
+        "first_reject_index": null,
+        "p_anytime": 0.13961663842280958,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4807273625932103,
+        "first_reject_index": null,
+        "p_anytime": 0.6753437704080052,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.4044339349111856,
+        "first_reject_index": null,
+        "p_anytime": 0.7120306446192776,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 5.490983478937537,
+        "first_reject_index": null,
+        "p_anytime": 0.18211673807357592,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.404186545072944,
+        "first_reject_index": null,
+        "p_anytime": 0.7121560903064005,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.3174630663143871,
+        "first_reject_index": null,
+        "p_anytime": 0.7590345608681901,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 16.840015900810613,
+        "first_reject_index": null,
+        "p_anytime": 0.059382366732317865,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.7606899959277993,
+        "first_reject_index": null,
+        "p_anytime": 0.5679591536913617,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.8238588081041944,
+        "first_reject_index": null,
+        "p_anytime": 0.5482880558278782,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 12.954268963653586,
+        "first_reject_index": null,
+        "p_anytime": 0.07719463003321515,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.6706784881357413,
+        "first_reject_index": null,
+        "p_anytime": 0.5985592123807552,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.668070925238968,
+        "first_reject_index": null,
+        "p_anytime": 0.5994948924948978,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 9.964016469280912,
+        "first_reject_index": null,
+        "p_anytime": 0.10036113479769955,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5853774418907223,
+        "first_reject_index": null,
+        "p_anytime": 0.6307646201950491,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.5388092232663142,
+        "first_reject_index": null,
+        "p_anytime": 0.6498531363604485,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "gate+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 7.723550433202156,
+        "first_reject_index": null,
+        "p_anytime": 0.12947413351522633,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5084130876853212,
+        "first_reject_index": null,
+        "p_anytime": 0.6629483714799322,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.432266313010783,
+        "first_reject_index": null,
+        "p_anytime": 0.6981941772392096,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 5.8982391705094,
+        "first_reject_index": null,
+        "p_anytime": 0.16954212453776019,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4292518004599508,
+        "first_reject_index": null,
+        "p_anytime": 0.699666776475767,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.3395670857131738,
+        "first_reject_index": null,
+        "p_anytime": 0.7465098319190253,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 4.503760770574282,
+        "first_reject_index": null,
+        "p_anytime": 0.22203666023594948,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.3542290846544682,
+        "first_reject_index": null,
+        "p_anytime": 0.7384275019134965,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.2619257859623054,
+        "first_reject_index": null,
+        "p_anytime": 0.7924396276896989,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v1",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 8.46356233744024,
+        "first_reject_index": null,
+        "p_anytime": 0.11815355758370236,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.5371781178894905,
+        "first_reject_index": null,
+        "p_anytime": 0.6505426979229815,
+        "reject": false
+      },
+      "cost": "net_1x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.4687184155542266,
+        "first_reject_index": null,
+        "p_anytime": 0.680865705372562,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 6.454434849750714,
+        "first_reject_index": null,
+        "p_anytime": 0.15493223237641363,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.4561034945284268,
+        "first_reject_index": null,
+        "p_anytime": 0.6867643706355225,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.3695680910067327,
+        "first_reject_index": null,
+        "p_anytime": 0.7301571981462615,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 4.921649915976863,
+        "first_reject_index": null,
+        "p_anytime": 0.20318389504986098,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.3792888099219223,
+        "first_reject_index": null,
+        "p_anytime": 0.7250113194615182,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "mixture": {
+        "e_value": 1.2867465389064052,
+        "first_reject_index": null,
+        "p_anytime": 0.7771538292614265,
+        "reject": false
+      },
+      "n": 2078,
+      "series": "binance+kucoin L14d th5% K20|v2",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "n": 44,
+      "series": "BIN",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "n": 44,
+      "series": "BIN",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "n": 44,
+      "series": "BIN",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0092628559527086,
+        "first_reject_index": null,
+        "p_anytime": 0.9908221570841773,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0008056900164366,
+        "first_reject_index": null,
+        "p_anytime": 0.9991949585973843,
+        "reject": false
+      },
+      "cost": "net",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0010242582460078,
+        "first_reject_index": null,
+        "p_anytime": 0.9989767897854918,
+        "reject": false
+      },
+      "n": 44,
+      "series": "MEXC",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0014841179283631,
+        "first_reject_index": null,
+        "p_anytime": 0.9985180814135793,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0001669207362038,
+        "first_reject_index": null,
+        "p_anytime": 0.9998331071216783,
+        "reject": false
+      },
+      "n": 44,
+      "series": "MEXC",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/carry_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0,
+        "first_reject_index": null,
+        "p_anytime": 1.0,
+        "reject": false
+      },
+      "n": 44,
+      "series": "MEXC",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.2212398519794334,
+        "first_reject_index": null,
+        "p_anytime": 0.8188399669230911,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.051205597077617,
+        "first_reject_index": null,
+        "p_anytime": 0.9512886944095711,
+        "reject": false
+      },
+      "cost": "net",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.034204240183246,
+        "first_reject_index": null,
+        "p_anytime": 0.9669269967630517,
+        "reject": false
+      },
+      "n": 44,
+      "series": "A",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.1849373837006756,
+        "first_reject_index": null,
+        "p_anytime": 0.8439264502541914,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0399855891024712,
+        "first_reject_index": null,
+        "p_anytime": 0.961551785407931,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.026270410455378,
+        "first_reject_index": null,
+        "p_anytime": 0.974402057988088,
+        "reject": false
+      },
+      "n": 44,
+      "series": "A",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.1571393823378242,
+        "first_reject_index": null,
+        "p_anytime": 0.8642001259862507,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0314810782872428,
+        "first_reject_index": null,
+        "p_anytime": 0.9694797326388996,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0185913287992496,
+        "first_reject_index": null,
+        "p_anytime": 0.9817480001315486,
+        "reject": false
+      },
+      "n": 44,
+      "series": "A",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0968799318961506,
+        "first_reject_index": null,
+        "p_anytime": 0.9116768124942567,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0099231583552035,
+        "first_reject_index": null,
+        "p_anytime": 0.9901743431932339,
+        "reject": false
+      },
+      "cost": "net",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.010800837530392,
+        "first_reject_index": null,
+        "p_anytime": 0.9893145740195657,
+        "reject": false
+      },
+      "n": 44,
+      "series": "B",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0877736153920425,
+        "first_reject_index": null,
+        "p_anytime": 0.9193089314265007,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.008455198833882,
+        "first_reject_index": null,
+        "p_anytime": 0.9916156921560234,
+        "reject": false
+      },
+      "cost": "net_2x",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0098348242380224,
+        "first_reject_index": null,
+        "p_anytime": 0.9902609575328882,
+        "reject": false
+      },
+      "n": 44,
+      "series": "B",
+      "state": "NULL"
+    },
+    {
+      "bet": {
+        "e_value": 1.0787404701563998,
+        "first_reject_index": null,
+        "p_anytime": 0.9270070305742921,
+        "reject": false
+      },
+      "block": {
+        "e_value": 1.0069890087822038,
+        "first_reject_index": null,
+        "p_anytime": 0.9930594984441231,
+        "reject": false
+      },
+      "cost": "net_3x",
+      "file": "experiments/mexc_fwd/journal/tickets.csv",
+      "mixture": {
+        "e_value": 1.0088728476617181,
+        "first_reject_index": null,
+        "p_anytime": 0.9912051873709528,
+        "reject": false
+      },
+      "n": 44,
+      "series": "B",
+      "state": "NULL"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "experiments/carry_v2_audit_v1/results/daily.csv",
+      "present": true,
+      "sha256": "3de6b7f29a3a3d786474b3e48444b004357c6cf2e78715e1d963f9ffe6f5fa08"
+    },
+    {
+      "path": "experiments/carry_v2_audit_kc_v1/results/daily.csv",
+      "present": true,
+      "sha256": "8a803454b473f2fdfdbf41eff19085f053c9f208518b928cf21561a17b47004e"
+    },
+    {
+      "path": "experiments/carry_fwd/journal/tickets.csv",
+      "present": true,
+      "sha256": "11e723e00853f119bddd59f90c19abef8242defa44ca1779eafc21ad76978bde"
+    },
+    {
+      "path": "experiments/mexc_fwd/journal/tickets.csv",
+      "present": true,
+      "sha256": "4f05d6923c94c6938b31ad677ca3b506fa1ceb54c413b0f745145367e1aca471"
+    },
+    {
+      "path": "experiments/xfund_fwd/journal/tickets.csv",
+      "present": true,
+      "sha256": "8c862d23437747b1052179d25ac057341ccb05cacb8f44e07f3fb161f7e374f0"
+    }
+  ],
+  "registry": "R489",
+  "runtime_s": 4.391,
+  "strategy_trials_added": 0,
+  "verdict": "METHOD_VALID"
+}
