@@ -79,7 +79,19 @@ waiting for forward days. Each is spent in scheduled batches, never by a single 
 **Reads so far**
 | Batch | Round | Frozen | Reads | Candidates | Read on |
 |---|---|---|---|---|---|
-| 1 | R286 `experiments/reserved_batch1` | 2026-10-21 | 2020 1/4, Gate 1/4, MEXC-only 1/4 (KuCoin and dYdX 0/4) | 10 | on or after 2026-11-03 |
+| 1 | R286 `experiments/reserved_batch1` | 2026-10-21 | 2020 1/4, Gate 1/4, MEXC-only 1/4 (KuCoin and dYdX 0/4) | 10 | 2026-11-03 08:45 UTC |
+| 2 | R391 `experiments/reserved_batch2` | 2026-11-03 | KuCoin, dYdX and Lighter long tail 1/4 | 1 | 2026-11-03 |
+| 3 | R392 `experiments/reserved_batch3` | 2026-11-10 | 2020 2/4, Gate 2/4 | 3 | 2026-11-10 03:15 UTC |
+
+**Budget remaining after batch 3:** 2020 **2 of 4**, Gate **2 of 4**, MEXC-only **3 of 4**,
+KuCoin / dYdX / Lighter long tail **3 of 4**. Reconciled 2026-11-15 from the three lanes' own PREREGs
+and registry rows; this table previously listed only batch 1, which understated the spend.
+
+**Verdicts so far:** batch 1 — 1 PASS (C14 binance+gate carry, +2.86%/yr at 1x, NW t 4.03), 5 FAIL,
+4 UNREADABLE; the unlock short C01 **FAILED** on 57 reserved events (-3.45%, week-cluster t -0.87,
+leave-two-coins-out -4.59%). Batch 2 — PASS (+2.48%/yr at 1x, NW t 3.90; top 10 days are 95% of the
+sum, costs not measured on those coins). Batch 3 — GLT PASS at 1x only (+0.73%/yr, NW t 2.26; 2x
++0.11%, 3x -0.51%), C17 and M319 did not pass.
 
 ## Rules for gate 2
 - `go_real()` at the PREREG's day count, never earlier. It leaves NaNs unscored, blocks on infinite returns, and

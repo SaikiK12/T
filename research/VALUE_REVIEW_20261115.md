@@ -1,5 +1,18 @@
 # Where the value is: a ranked read of the program, 2026-11-15
 
+> **CORRECTION, same day, after reading `experiments/reserved_batch1/FINDINGS.md` (R286).**
+> The ranking below put the unlock short first on the strength of its gate-0 archive numbers. That
+> was wrong: **R286 already read it on reserved samples and it FAILED** — 57 fresh events, mean
+> **-3.45%**, week-cluster t **-0.87**, leave-two-coins-out **-4.59%**, 2x **-3.65%**. Four 2020
+> events lost **-55.7%** on average. The one reserved-sample **PASS is C14, cross-venue funding
+> carry binance+gate** (+2.86%/yr at 1x, NW t 4.03, p 2.8e-5, trimmed +0.68 bp, L2CO +0.59 bp,
+> 2x +1.86%/yr) — at about a quarter of its archive size.
+> I had read `docs/EDGE_SCOREBOARD.md` (as of R363) and the lane's own FINDINGS, but not R286's
+> decision table. The scoreboard's "largest per-event edge on file, in-sample only" line is what
+> misled me. **R494's sizing work is still valid as a risk description, but it sizes a book that has
+> failed its one out-of-sample test.** See `research/EDGE_HUNT_20261115.md` for the corrected read.
+> The original text is kept below, unedited, so the error is visible rather than buried.
+
 Coordinator synthesis after a four-worker independent review (different models, one shared
 evidence pack, no worker wrote to the repo). Every number below was recomputed by the coordinator
 from committed files; worker claims that failed verification are marked as rejected.
