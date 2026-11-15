@@ -1,5 +1,18 @@
 # Edge scoreboard: the evidence for each edge, and how far it can go
 
+> **Read the reserved-batch decision tables before ranking anything from this file.**
+> This scoreboard is current through **R363 (2026-10-28)**. Three reserved-sample batches ran after
+> it — **R286** (`reserved_batch1`), **R391** (`reserved_batch2`), **R392** (`reserved_batch3`) — and
+> they change the ranking. Most importantly the **unlock short FAILED** on its reserved events:
+> 57 events, mean **-3.45%**, week-cluster t **-0.87**, leave-two-coins-out **-4.59%**, 2x **-3.65%**,
+> four 2020 events averaging **-55.7%**. Its row below still says "largest per-event edge on file,
+> in-sample only", which is true of the archive but is **not** the current state of the evidence.
+> What the reserved samples confirmed is **carry**: C14 binance+gate +2.86%/yr (NW t 4.03, forward
+> lane R390), R391 long tail +2.48%/yr (t 3.90), R392 GLT +0.73%/yr at 1x only. Each of those PASSes
+> is blocked on measured book cost — see `research/RESERVED_COST_CHECK_20261115.md`.
+> Added 2026-11-15 after this file's stale ranking misled a session into ranking the unlock short
+> first. The rows are left as they were; this banner is the correction.
+
 As of 2026-10-22, after R293; rows and the ranked list updated through R363 on 2026-10-28 (program trials 9,479,106 on
 this branch). Every number comes from the cited lane's FINDINGS or journal.
 The draft was checked line by line against the files by a verifier subagent, and its 11 mismatches and 12
