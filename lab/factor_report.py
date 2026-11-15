@@ -89,7 +89,9 @@ def quantile_returns(factor, fwd, elig=None, *, q=5, min_obs=None):
 
     Returns (means [D, q], counts [D, q]); row d is NaN where fewer than q eligible observations
     exist (min_obs defaults to q). Quantile 0 is the lowest factor value, q-1 the highest.
-    Symbols are assigned by average rank so ties never straddle a boundary silently."""
+    Buckets are floor(rank * q / n) on ordinal ranks, so when n is not divisible by q the extra
+    names land in the lowest buckets (pandas.qcut spreads them differently); ties never straddle a
+    boundary silently."""
     factor, fwd, elig = _check_panel(factor, fwd, elig)
     if q < 2:
         raise ValueError("q must be at least 2")

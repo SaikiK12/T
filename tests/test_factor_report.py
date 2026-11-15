@@ -1,6 +1,7 @@
 import unittest
 
 import numpy as np
+import pandas as pd
 
 from lab import factor_report as fr
 
@@ -82,6 +83,23 @@ class QuantileTests(unittest.TestCase):
         fwd = np.arange(10.0).reshape(1, 10)
         means, counts = fr.quantile_returns(f, fwd, q=5)
         np.testing.assert_array_equal(counts, 2)  # ordinal ranks split ties deterministically
+
+    def test_indivisible_n_puts_remainder_in_the_lowest_buckets(self):
+        rng = np.random.default_rng(42)
+        f = rng.normal(size=(1, 23))
+        fwd = rng.normal(size=(1, 23))
+        _, counts = fr.quantile_returns(f, fwd, q=5)
+        np.testing.assert_array_equal(counts[0], [5, 5, 4, 5, 4])
+
+    def test_divisible_n_matches_pandas_qcut(self):
+        rng = np.random.default_rng(5)
+        f = rng.normal(size=(4, 25))
+        fwd = rng.normal(scale=0.02, size=(4, 25))
+        means, _ = fr.quantile_returns(f, fwd, q=5)
+        for i in range(4):
+            d = pd.DataFrame({"f": f[i], "r": fwd[i]})
+            d["q"] = pd.qcut(d["f"].rank(method="first"), 5, labels=False)
+            np.testing.assert_allclose(means[i], d.groupby("q")["r"].mean().to_numpy(), atol=1e-12)
 
 
 class BookTests(unittest.TestCase):
