@@ -1,0 +1,219 @@
+{
+ "round": "R495",
+ "method": "M543",
+ "lane": "bgcosts_v1",
+ "prereg_sha256": "4a7d68d667d5d76dfeb2d4123e46db50a1e3f4e4246ef76878542281729a5152",
+ "started_utc": "2026-11-15T14:40:36.579579+00:00",
+ "completed_utc": "2026-11-15T14:53:17.484861+00:00",
+ "trials": 0,
+ "contracts_requested": 860,
+ "rows": 1400,
+ "finite_10k_by_venue": {
+  "binance": 701,
+  "gate": 666
+ },
+ "verdict": "PRICEABLE",
+ "c14_cost_1x_bp_leg_side": 7.0,
+ "multiple_of_c14_1x": {
+  "binance": 2.609458583304985,
+  "gate": 9.38749945653675
+ },
+ "by_venue": [
+  {
+   "venue": "binance",
+   "contracts": 701,
+   "median_half_spread_bp": 2.3679848448973067,
+   "median_side_1k_bp": 7.165335796696648,
+   "median_side_5k_bp": 13.433677037230085,
+   "median_side_10k_bp": 18.266210083134894,
+   "unfilled_share_1k": 0.0,
+   "unfilled_share_5k": 0.0,
+   "unfilled_share_10k": 0.0
+  },
+  {
+   "venue": "gate",
+   "contracts": 699,
+   "median_half_spread_bp": 8.92743272541687,
+   "median_side_1k_bp": 17.12412408759134,
+   "median_side_5k_bp": 37.51996536812297,
+   "median_side_10k_bp": 65.71249619575725,
+   "unfilled_share_1k": 0.0,
+   "unfilled_share_5k": 0.011444921316165951,
+   "unfilled_share_10k": 0.04721030042918455
+  }
+ ],
+ "errors": [
+  {
+   "venue": "binance",
+   "symbol": "AERGOUSDT",
+   "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+   "venue": "binance",
+   "symbol": "AKROUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "ANCUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "ANTUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "AUDIOUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "BDXNUSDT",
+   "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+   "venue": "binance",
+   "symbol": "BTSUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "BTTUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "COCOSUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "DODOUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "EOSUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "FRONTUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "GALUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "HNTUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "KEEPUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "LUNAUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "MATICUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "MBLUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "RNDRUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "SRMUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "SXPUSDT",
+   "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+   "venue": "binance",
+   "symbol": "TOMOUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "YFIIUSDT",
+   "error": "KeyError: 'bids'"
+  },
+  {
+   "venue": "binance",
+   "symbol": "\u54c8\u57fa\u7c73USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 26-28: ordinal not in range(128)"
+  },
+  {
+   "venue": "binance",
+   "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 26-29: ordinal not in range(128)"
+  },
+  {
+   "venue": "gate",
+   "symbol": "\u54c8\u57fa\u7c73_USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 35-37: ordinal not in range(128)"
+  },
+  {
+   "venue": "gate",
+   "symbol": "\u5e01\u5b89\u4eba\u751f_USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 35-38: ordinal not in range(128)"
+  },
+  {
+   "venue": "binance",
+   "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 26-30: ordinal not in range(128)"
+  },
+  {
+   "venue": "binance",
+   "symbol": "\u725b\u6765USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 26-27: ordinal not in range(128)"
+  },
+  {
+   "venue": "gate",
+   "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86_USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 35-39: ordinal not in range(128)"
+  },
+  {
+   "venue": "gate",
+   "symbol": "\u725b\u6765_USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 35-36: ordinal not in range(128)"
+  },
+  {
+   "venue": "binance",
+   "symbol": "\u9f99\u867eUSDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 26-27: ordinal not in range(128)"
+  },
+  {
+   "venue": "gate",
+   "symbol": "\u9f99\u867e_USDT",
+   "error": "UnicodeEncodeError: 'ascii' codec can't encode characters in position 35-36: ordinal not in range(128)"
+  }
+ ],
+ "error_count": 33,
+ "limits": [
+  "one snapshot; R224 needed 102 to call a cost surface stable",
+  "current listings only: delisted contracts cannot be measured",
+  "shown book only: no queue, no latency, no impact beyond the displayed levels",
+  "no strategy test and no reserved read; C14's and R390's frozen rules are unchanged"
+ ]
+}
