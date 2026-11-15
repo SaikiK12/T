@@ -1,0 +1,213 @@
+{
+ "source": "experiments/book_costs_v1/journal/status.json",
+ "source_sha256": "a4c965f8b3cc73b3c8408ee38ff7a5a6685d8653c26a9ee5f15f05dd2c3446c9",
+ "recorder_snapshots": 7,
+ "recorder_symbols": {
+  "dydx": 57,
+  "kucoin": 715,
+  "mexc": 577
+ },
+ "recorder_last_ms": 1794702039574,
+ "limits": [
+  "band medians, not the book's own per-contract cost: R404's per-symbol files are gitignored",
+  "a venue with no recorded band (binance, gate, lighter) is NOT priced here",
+  "no strategy test, no new signal, no reserved read; this prices already-published nets"
+ ],
+ "books": {
+  "R286_C14_binance_gate": {
+   "lane": "experiments/reserved_batch1",
+   "verdict": "PASS",
+   "net_1x_pct_yr": 2.86,
+   "net_2x_pct_yr": 1.86,
+   "net_3x_pct_yr": 0.85,
+   "cost_1x_bp_leg_side": 7.0,
+   "cost_source": "experiments/reserved_batch1/carry.toml costs = [0.0007, 0.0014, 0.0021]",
+   "note": "2020 sample; R390 xfund_bg_fwd is its earned forward lane (RUNNING)",
+   "venues": [
+    "binance",
+    "gate"
+   ],
+   "bp_per_day_on_book_capital_1x": 0.7835616438356164,
+   "measured_bands": [],
+   "bands_above_3x": 0,
+   "bands_priced": 0,
+   "survives_3x_on_every_priced_band": false,
+   "unpriced_venues": [
+    "binance",
+    "gate"
+   ]
+  },
+  "R391_kucoin_dydx_lighter_mexc": {
+   "lane": "experiments/reserved_batch2",
+   "verdict": "PASS",
+   "net_1x_pct_yr": 2.48,
+   "net_2x_pct_yr": 1.93,
+   "net_3x_pct_yr": 1.38,
+   "cost_1x_bp_leg_side": 7.0,
+   "note": "526 days from 2025-05-12; 5.3 of 20 slots held; top 10 days 95% of the sum",
+   "venues": [
+    "kucoin",
+    "dydx",
+    "lighter",
+    "mexc"
+   ],
+   "bp_per_day_on_book_capital_1x": 0.6794520547945205,
+   "measured_bands": [
+    {
+     "venue": "kucoin",
+     "band_usd": "0-50000",
+     "symbols": 179,
+     "median_half_spread_bp": 17.48251748251753,
+     "median_side_10k_bp": 337.169484674123,
+     "unfilled_share_10k": 0.10614525139664804,
+     "multiple_of_assumed_1x": 48.167069239160426
+    },
+    {
+     "venue": "kucoin",
+     "band_usd": "50000-500000",
+     "symbols": 213,
+     "median_half_spread_bp": 11.820330969267685,
+     "median_side_10k_bp": 196.04440676354528,
+     "unfilled_share_10k": 0.07511737089201878,
+     "multiple_of_assumed_1x": 28.00634382336361
+    },
+    {
+     "venue": "kucoin",
+     "band_usd": "500000-5e+06",
+     "symbols": 243,
+     "median_half_spread_bp": 9.256402344954516,
+     "median_side_10k_bp": 276.1148464272878,
+     "unfilled_share_10k": 0.13580246913580246,
+     "multiple_of_assumed_1x": 39.44497806104111
+    },
+    {
+     "venue": "kucoin",
+     "band_usd": "5e+06-inf",
+     "symbols": 80,
+     "median_half_spread_bp": 4.339757780172871,
+     "median_side_10k_bp": 14.881072306063558,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 2.125867472294794
+    },
+    {
+     "venue": "dydx",
+     "band_usd": "0-50000",
+     "symbols": 52,
+     "median_half_spread_bp": 115.54468688378478,
+     "median_side_10k_bp": 165.34706027161116,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 23.621008610230167
+    },
+    {
+     "venue": "dydx",
+     "band_usd": "50000-500000",
+     "symbols": 2,
+     "median_half_spread_bp": 24.44313995057159,
+     "median_side_10k_bp": 25.58219744396656,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 3.654599634852366
+    },
+    {
+     "venue": "dydx",
+     "band_usd": "500000-5e+06",
+     "symbols": 1,
+     "median_half_spread_bp": 2.7654867256641493,
+     "median_side_10k_bp": 2.7654867256626803,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.3950695322375258
+    },
+    {
+     "venue": "dydx",
+     "band_usd": "5e+06-inf",
+     "symbols": 2,
+     "median_half_spread_bp": 3.5565338423410457,
+     "median_side_10k_bp": 3.55684438846815,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.5081206269240214
+    },
+    {
+     "venue": "mexc",
+     "band_usd": "50000-500000",
+     "symbols": 439,
+     "median_half_spread_bp": 3.2051282051286307,
+     "median_side_10k_bp": 13.25618774096704,
+     "unfilled_share_10k": 0.002277904328018223,
+     "multiple_of_assumed_1x": 1.8937411058524343
+    },
+    {
+     "venue": "mexc",
+     "band_usd": "500000-5e+06",
+     "symbols": 94,
+     "median_half_spread_bp": 1.7499001062985233,
+     "median_side_10k_bp": 5.806893234037297,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.8295561762910424
+    },
+    {
+     "venue": "mexc",
+     "band_usd": "5e+06-inf",
+     "symbols": 44,
+     "median_half_spread_bp": 0.8085488918824932,
+     "median_side_10k_bp": 2.1890511634981014,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.31272159478544304
+    }
+   ],
+   "bands_above_3x": 5,
+   "bands_priced": 11,
+   "survives_3x_on_every_priced_band": false,
+   "unpriced_venues": [
+    "lighter"
+   ]
+  },
+  "R392_GLT_gate_mexc": {
+   "lane": "experiments/reserved_batch3",
+   "verdict": "PASS at 1x only",
+   "net_1x_pct_yr": 0.73,
+   "net_2x_pct_yr": 0.11,
+   "net_3x_pct_yr": -0.51,
+   "cost_1x_bp_leg_side": 7.0,
+   "note": "Gate long tail, 31 bases; already negative at 3x",
+   "venues": [
+    "gate",
+    "mexc"
+   ],
+   "bp_per_day_on_book_capital_1x": 0.2,
+   "measured_bands": [
+    {
+     "venue": "mexc",
+     "band_usd": "50000-500000",
+     "symbols": 439,
+     "median_half_spread_bp": 3.2051282051286307,
+     "median_side_10k_bp": 13.25618774096704,
+     "unfilled_share_10k": 0.002277904328018223,
+     "multiple_of_assumed_1x": 1.8937411058524343
+    },
+    {
+     "venue": "mexc",
+     "band_usd": "500000-5e+06",
+     "symbols": 94,
+     "median_half_spread_bp": 1.7499001062985233,
+     "median_side_10k_bp": 5.806893234037297,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.8295561762910424
+    },
+    {
+     "venue": "mexc",
+     "band_usd": "5e+06-inf",
+     "symbols": 44,
+     "median_half_spread_bp": 0.8085488918824932,
+     "median_side_10k_bp": 2.1890511634981014,
+     "unfilled_share_10k": 0.0,
+     "multiple_of_assumed_1x": 0.31272159478544304
+    }
+   ],
+   "bands_above_3x": 0,
+   "bands_priced": 3,
+   "survives_3x_on_every_priced_band": true,
+   "unpriced_venues": [
+    "gate"
+   ]
+  }
+ }
+}

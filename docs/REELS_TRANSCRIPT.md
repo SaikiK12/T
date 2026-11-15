@@ -524,3 +524,95 @@ keeps parent, single filters and combined filters on common tickets and dates. I
     every cell counts as a trial (`registry.program_trials()`).
   - **What the reel does not cover.** It omits costs at 1x/2x/3x, the number of trials, a placebo or shifted-signal
     null, and survivorship. Most of our nulls failed on those points, which these three tests do not check.
+
+## The owner's two TikToks of 2026-11-15 (deltatrendtrading, aleks_rosme)
+
+Read on 2026-11-15. **Method:** `yt-dlp` 2026.10.26 with no login, `--skip-download`, English
+auto-captions (`eng-US` VTT) plus the `info.json` description. **No audio was transcribed and no frames
+were extracted** — the platform supplied captions, so the speech below is TikTok's own automatic
+transcript, not a Whisper pass. Auto-captions contain recognition errors (e.g. "2,025" for 2025,
+"volatility Smile" where the speaker says smirk); they are quoted as delivered. Files stayed in the
+session scratchpad and were not committed.
+
+### Reel A: vm.tiktok.com/ZN85sA5Qm — @deltatrendtrading, 2026-11-10, 89 s
+Video id `7706385270282669342`. Caption: *"I've spoken for a long time about how the idea of 'learning
+to trade' is fundamentally nonsensical. This study vindicates those assertions. #quant #trading"*
+
+- **Claim:** a 2020 paper regressed day traders' daily profits on their trading experience and found
+  **a slope of zero** — practice does not improve results.
+- **Speech (auto-captions, excerpted):** *"A 2020 research paper regressed the daily profits of day
+  traders against how long they'd been trading for, and they found that the slope of that regression
+  was zero… There is no learning to trade. Trading isn't a skill… You build and test strategies and
+  deploy them when they're shown to be profitable. The relevant statistical tests to minimize the
+  chances of you fooling yourself… already exists."*
+- **It is also an advertisement.** The speaker pivots to his own product: *"that's what Quant PAT is
+  for… Market data, which is private and extremely expensive, is all there for you."* Treat the
+  product claims as marketing, not evidence.
+- **Lab: nothing new to test, and the argument is already this repo's method.** Pre-registration,
+  frozen discovery, one validation read, a null family, costs at 1x/2x/3x and a program trial count
+  are exactly `docs/GATES.md`. The reel's own conclusion — validate before deploying — is what the
+  lab does; it offers no rule, no instrument and no number to test.
+- **Unverified:** the "2020 paper" is not named in the video or the caption. The likely reference is
+  the Brazilian day-trader literature (Chague & De-Losso and related work), but **no paper was
+  fetched or read this session**, so the zero-slope claim is recorded as an attributed claim, not a
+  checked result.
+
+### Reel B: vm.tiktok.com/ZN85por96 — @aleks_rosme, 2026-11-15, 55 s
+Video id `7708361485973589270`. Caption: *"How to Trade w IV & Vol Smirk #gamma #orderflow #nasdaq"*
+
+- **Claim:** when the put/call implied-vol **smirk gets extreme**, customers are buying downside
+  protection, and that precedes crashes. One example: *"On November 4th, PUT's IV was significantly
+  larger than calls and combined with other factors… that resulted in a biggest market drop since
+  April 2,025."*
+- **Mechanism stated:** post-1987 investors permanently overpay for out-of-the-money puts, so OTM put
+  IV exceeds call IV; an extreme reading is a tail-hedging-demand signal.
+- **This is one hindsight example, not a test.** No entry, exit, size, threshold, cost, sample or
+  hit rate is given, and "combined with other factors" is unspecified. The author is already in the
+  queue for a similar narrated setup (M235, the QQQ 723 GEX short of 2026-10-28).
+- **Lab: already queued, and the crypto version is already NULL.**
+  - **M500** — *"Cboe SKEW as an overnight signal on the MEXC SPX500/NAS100 index perps… fixed sign"*,
+    status QUEUED, data held (`data/cboe/SKEW` 1990..2026-10-20 in `docs/provenance/cboe.json`, and
+    `data/mexc_tradfi` index perps 2026-01-29..10-22). This is the reel's mechanism, already
+    registered with a named payer (tail-hedging demand).
+  - **M499** — the DIX sibling, same window and costs; its note recommends running the two **pooled as
+    one family** rather than alone.
+  - **R307 `rrskew_v1` is NULL (24 trials):** the 25-delta risk reversal — the smirk — built from every
+    Deribit option trade did **not** time BTC or ETH by the week. That is the crypto version of this
+    exact idea. The equity-index version (M500) is a different market and is not closed by it.
+  - **GEX is closed:** R292 (dealer gamma is 0.13% of perp ADV) and R416 (SPX GEX adds ≤0.003 to R²).
+    The reel's `#gamma` tag adds nothing testable beyond those nulls.
+- **Blocker before M500 can be registered, from its own queue note:** *"Publication time to verify
+  before registration."* Cboe publishes SKEW on a daily close basis; an overnight entry after the US
+  close must use a value already published at that moment, or the test leaks. That is a one-line
+  check against Cboe's own documentation, and it is the next action for this family — not a new lane
+  invented from a reel.
+- **Power, already stated in the queue:** SPX500 overnight SD 58 bp, ~12 bp detectable over all nights
+  and ~24 bp on a top-quintile rule, against ~16 bp round trip at MEXC API taker. The reel's single
+  example cannot resolve an effect that size.
+
+**Net:** neither reel adds a testable rule that the lab does not already hold. Reel A restates the
+lab's own method and sells a product. Reel B points at M500, which is queued with data held and one
+named blocker. No new method id was created from these two videos.
+
+### M500's blocker, resolved (2026-11-15)
+
+The queue note said *"Publication time to verify before registration."* Checked against two sources:
+
+1. **In-repo, authoritative:** `scripts/fetch_cboe.py`'s own header states *"A day's close is the 16:15
+   ET settlement, so it is public from about 21:15 UTC that day: a lane must not act on day D's close
+   before then."* That is the rule the fetcher was written under.
+2. **Live fetch:** `GET https://cdn-api.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv`
+   → HTTP 200, 203,950 bytes, columns **`DATE,SKEW` only** — one value per day, **no intraday
+   timestamp**, 1990-01-02 through 2026-11-13. (The `cdn.cboe.com` host answers 307; `cdn-api.cboe.com`
+   is the working host the script uses.)
+
+**Consequence for M500/M499:** the signal is a daily close published ~21:15 UTC. An overnight rule
+that enters **after** that time on day D and exits before the next cash open is point-in-time valid;
+one that enters at the 16:00 ET cash close using day D's SKEW would leak by about five hours. The
+frozen PREREG must state the entry clock as **>= 21:15 UTC**, and the date-only file means there is no
+way to recover an earlier intraday value — so the constraint cannot be engineered around.
+
+This removes the named blocker. It does **not** register the lane: M499's note asks for the two to be
+run **pooled as one family**, and the power is already known to be marginal (~12 bp detectable over
+all nights, ~24 bp on a top-quintile rule, against ~16 bp round trip). Registration is the owner's or
+the canonical writer's next call, not something to slip in from a reel.
