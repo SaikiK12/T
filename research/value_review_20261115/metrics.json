@@ -1,0 +1,93 @@
+{
+ "source": "experiments/unlocks_v1/results/events_priced.csv",
+ "source_sha256": "0aeb33d4cce29fd97a8077e6934180881411b5893f0a76346de5d59791ec2535",
+ "robustness_net1x": {
+  "n": 422,
+  "mean_pct": 3.2388207874407584,
+  "median_pct": 4.6118,
+  "sd_pct": 16.724961956594157,
+  "skew": -1.6628219114888703,
+  "kurtosis": 11.90640306906914,
+  "hit_pct": 63.507109004739334,
+  "sign_test_p": 1.5705003492078012e-08,
+  "trimmed_mean_10pct": 4.056343705029586
+ },
+ "week_bootstrap": {
+  "reps": 4000,
+  "seed": 7,
+  "ci95_low_pct": 1.21033194927242,
+  "ci95_high_pct": 5.2417015834351375,
+  "p_mean_le_zero": 0.001
+ },
+ "tail_vs_adv": {
+  "n_with_V": 415,
+  "n_worse_than_-40pct": 6,
+  "all_worse_are_low_adv": true,
+  "contingency_low_high_x_bad_ok": [
+   [
+    6,
+    278
+   ],
+   [
+    0,
+    131
+   ]
+  ],
+  "fisher_one_sided_p": 0.10099527458785584,
+  "high_adv_worst_pct": -32.8478,
+  "low_adv_worst_pct": -132.292,
+  "note": "the tail/ADV association was seen AFTER R265 ran; p>0.05, so it is not a filter"
+ },
+ "sizing_sequential_no_stop": {
+  "0.020": {
+   "terminal_equity_x": 1.2858808875515746,
+   "max_drawdown_pct": -4.038262446847174,
+   "worst_single_event_equity_pct": -3.5501300000000002
+  },
+  "0.038": {
+   "terminal_equity_x": 1.604989271768489,
+   "max_drawdown_pct": -7.557958318476421,
+   "worst_single_event_equity_pct": -6.745247
+  },
+  "0.050": {
+   "terminal_equity_x": 1.8559995608995656,
+   "max_drawdown_pct": -9.84531323194796,
+   "worst_single_event_equity_pct": -8.875325
+  }
+ },
+ "concurrency": {
+  "mean_open": 1.4652777777777777,
+  "max_open": 9,
+  "days_ge5_open": 169,
+  "calendar_days": 2016,
+  "worst_cluster_sum_pct": -179.538001,
+  "worst_cluster_day": "2026-01-17",
+  "worst_week_sum_pct": -124.60409999999999,
+  "worst_week_events": 5,
+  "peak_gross_pct_at_cap": {
+   "0.020": 18.0,
+   "0.038": 34.199999999999996,
+   "0.050": 45.0
+  },
+  "cluster_equity_hit_pct_at_cap": {
+   "0.020": -3.5907600200000003,
+   "0.038": -6.822444038,
+   "0.050": -8.976900050000001
+  }
+ },
+ "events_per_year": {
+  "2021": 11,
+  "2022": 16,
+  "2023": 41,
+  "2024": 52,
+  "2025": 134,
+  "2026": 168
+ },
+ "has_intrabar_path": false,
+ "limits": [
+  "gate 0 description of an existing lane; no new signal, no selection",
+  "sequential sizing assumes one event resolves at a time; see concurrency for the cluster bound",
+  "no stop is simulated: the committed file has no intrabar path",
+  "the ADV tail filter is post-hoc and is NOT adopted"
+ ]
+}
