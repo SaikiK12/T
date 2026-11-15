@@ -1,5 +1,6 @@
 """Pure-logic tests for the sessionpersist_v1 runner: no network, no repo data, no frozen file read."""
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -65,20 +66,75 @@ class FactorTests(unittest.TestCase):
         f, ret = rsp.build_factors(close, sess, hours)
         for name in rsp.FACTORS:
             self.assertTrue(np.isnan(f[name][:rsp.LOOKBACK - 1]).all())
-        self.assertTrue(np.isnan(ret[0]).all())
-        # a missing session hour voids that day's session sum
+        self.assertTrue(np.isnan(ret[-1]).all())   # the last day has no forward close
+        # a missing session day reduces the hour count and can void the window
         sess["A"][100, 0] = np.nan
+        hours["A"][100, 0] = 0.0
         f2, _ = rsp.build_factors(close, sess, hours)
-        self.assertTrue(np.isnan(f2["S_A"][100:100 + rsp.LOOKBACK, 0]).all())
+        self.assertTrue(np.isnan(f2["S_A"][100 + rsp.LOOKBACK - 1, 0]))
 
     def test_session_factors_sum_to_the_unsplit_control_when_complete(self):
         days, close, sess, hours, qvol = panel()
         ret = np.full_like(close, np.nan)
-        ret[1:] = np.log(close[1:] / close[:-1])
+        ret[:-1] = np.log(close[1:] / close[:-1])   # ret[d] is earned on day d
         sess = {"A": ret * 0.6, "B": ret * 0.4}
+        hours = {"A": np.full_like(close, float(rsp.SESSION_HOURS_A)),
+                 "B": np.full_like(close, float(rsp.SESSION_HOURS_B))}
         f, _ = rsp.build_factors(close, sess, hours)
         ok = np.isfinite(f["S_A"]) & np.isfinite(f["S_B"]) & np.isfinite(f["MOM24"])
         np.testing.assert_allclose((f["S_A"] + f["S_B"])[ok], f["MOM24"][ok], atol=1e-12)
+
+
+    def test_factor_never_overlaps_its_own_target(self):
+        """f[d] may use returns earned through day d, never the target return earned on day d+1."""
+        days, close, sess, hours, qvol = panel(seed=3)
+        f, ret = rsp.build_factors(close, sess, hours)
+        i = 40
+        np.testing.assert_allclose(ret[i], np.log(close[i + 1] / close[i]), atol=1e-15)
+        # The target earned on day i+1 depends on close[i+2]; moving it must not touch f[i].
+        c2 = close.copy()
+        c2[i + 2] *= 1.05
+        f2, ret2 = rsp.build_factors(c2, {k: v.copy() for k, v in sess.items()}, hours)
+        for name in rsp.FACTORS:
+            np.testing.assert_allclose(f[name][i], f2[name][i], atol=1e-12)
+        self.assertFalse(np.allclose(ret[i + 1], ret2[i + 1]))
+        # and the runner's scoring aligns f[d] with ret[d+1]
+        fwd = np.full_like(ret, np.nan)
+        fwd[:-1] = ret[1:]
+        np.testing.assert_allclose(fwd[i], np.log(close[i + 2] / close[i + 1]), atol=1e-15)
+
+
+class PanelAccumulationTests(unittest.TestCase):
+    """np.add.at on a NaN-initialised array stays NaN, which silently voided a whole panel once."""
+
+    def test_session_and_volume_accumulators_produce_observations(self):
+        rows = []
+        base = rsp.ms(rsp.FIRST_DAY)
+        for k in range(24 * 12):
+            t = base + k * rsp.HOUR_MS
+            px = 100.0 + k * 0.01
+            prev = 100.0 + (k - 1) * 0.01 if k else px   # a continuous book: open == prior close
+            rows.append({"t": t, "open": prev, "high": px, "low": prev, "close": px,
+                         "volume": 1.0, "quote_volume": 1000.0, "count": 5,
+                         "taker_buy_volume": 0.5, "taker_buy_quote_volume": 500.0})
+        with tempfile.TemporaryDirectory() as d:
+            raw = Path(d)
+            (raw / "klines_1h").mkdir()
+            pd.DataFrame(rows).to_parquet(raw / "klines_1h" / "TESTUSDT.parquet", index=False)
+            orig = rsp.RAW
+            try:
+                rsp.RAW = raw
+                days, close, sess, hours, qvol, cov = rsp.load_panel(["TESTUSDT"])
+            finally:
+                rsp.RAW = orig
+        self.assertGreater(np.isfinite(qvol).sum(), 0, "quote volume must accumulate, not stay NaN")
+        self.assertGreater(np.isfinite(sess["A"]).sum(), 0, "session A sums must accumulate")
+        self.assertGreater(np.isfinite(sess["B"]).sum(), 0, "session B sums must accumulate")
+        self.assertGreater(np.isfinite(close).sum(), 0)
+        # a complete day's two session sums equal its full-day log return
+        i = 5
+        full = np.log(close[i + 1, 0] / close[i, 0])
+        self.assertAlmostEqual(sess["A"][i, 0] + sess["B"][i, 0], full, places=10)
 
 
 class StatTests(unittest.TestCase):

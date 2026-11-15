@@ -45,10 +45,14 @@ END = "2026-09-30"
 DISC = ("2021-01-01", "2023-12-31")
 VAL = ("2024-01-01", "2025-06-30")
 HOLDOUT_START = "2025-07-01"     # never read by this lane
-SESSION_A = tuple(range(0, 14))  # hours [00:00, 14:00) UTC
-SESSION_B = tuple(range(14, 24)) # hours [14:00, 24:00) UTC
+SESSION_A = tuple(range(0, 14))  # bar-open hours [00:00, 14:00) UTC
+SESSION_B = tuple(range(14, 24)) # bar-open hours [14:00, 24:00) UTC
+# A bar opening at hour h accrues its return over hour h, except the hour-0 bar whose return
+# closes the prior day. Day d's session A holds 14 returns (hours 0..13) and B holds 10 (14..23).
+SESSION_HOURS_A = 14
+SESSION_HOURS_B = 10
 LOOKBACK = 7
-MIN_SESSION_HOURS = 150          # of 168 lookback hours, per session factor
+MIN_SESSION_FRAC = 0.9           # of each session's own lookback hours (A 14x7=98, B 10x7=70)
 MIN_24H_DAYS = 6                 # of 7 daily returns, for the control
 MIN_SCORES = 15                  # cross-sectional minimum, as R222
 Q = 5
@@ -187,9 +191,9 @@ def load_panel(symbols):
     days = pd.date_range(FIRST_DAY, END, freq="D", tz="UTC")
     d, s = len(days), len(symbols)
     close = np.full((d, s), np.nan)
-    sess = {k: np.full((d, s), np.nan) for k in ("A", "B")}
+    sess = {k: np.zeros((d, s)) for k in ("A", "B")}   # accumulate from zero, then void short days
     hours = {k: np.zeros((d, s)) for k in ("A", "B")}
-    qvol = np.full((d, s), np.nan)
+    qvol = np.zeros((d, s))          # accumulate from zero: np.add.at on NaN would stay NaN
     barcount = np.zeros((d, s))
     coverage = {}
     base = ms(FIRST_DAY)
@@ -203,20 +207,33 @@ def load_panel(symbols):
         di = ((t - base) // DAY_MS).astype(int)
         hr = ((t % DAY_MS) // HOUR_MS).astype(int)
         c = df.close.to_numpy(dtype=float)
+        # Forward hourly return: the bar opening at t earns close(t+1h)/close(t). Attributing that
+        # return to the bar's OWN open hour makes session A (hours 0..13) plus session B (14..23)
+        # equal the 00:00-to-00:00 log return exactly (verified against interval arithmetic).
         lr = np.full(len(df), np.nan)
-        lr[1:] = np.log(c[1:] / c[:-1])
+        gaps = (t[1:] - t[:-1]) == HOUR_MS
+        lr[:-1][gaps] = np.log(c[1:][gaps] / c[:-1][gaps])
         sel0 = hr == 0
-        close[di[sel0], j] = df.open.to_numpy(dtype=float)[sel0]
+        # Boundary price for day d is the close of the bar OPENING at 00:00 UTC of d. Sessions sum
+        # forward returns from that same bar, so A + B is exactly the boundary-to-boundary return.
+        # (The archive's hour-0 `open` is the first trade of the hour and differs from the prior
+        # 23:00 close on ~58% of BTC hour-0 bars, so it is not used as a boundary price.)
+        close[di[sel0], j] = c[sel0]
+        # Session A = open hours 0..13 (14 returns), session B = 14..23 (10 returns); their sum is
+        # the day's 00:00-to-00:00 log return. The last bar of the file has no forward return.
         for name, hrs in (("A", SESSION_A), ("B", SESSION_B)):
-            m = np.isin(hr, hrs) & np.isfinite(lr)
-            np.add.at(sess[name], (di[m], j), lr[m])
-            np.add.at(hours[name], (di[m], j), 1.0)
+            keep = np.isin(hr, hrs) & np.isfinite(lr)
+            np.add.at(sess[name], (di[keep], j), lr[keep])
+            np.add.at(hours[name], (di[keep], j), 1.0)
         np.add.at(qvol, (di, j), df.quote_volume.to_numpy(dtype=float))
         np.add.at(barcount, (di, j), 1.0)
         coverage[sym] = {"hours": int(len(df)),
                          "first_utc": str(pd.Timestamp(int(t[0]), unit="ms", tz="UTC")),
                          "last_utc": str(pd.Timestamp(int(t[-1]), unit="ms", tz="UTC"))}
     qvol[barcount < 20] = np.nan   # a day with fewer than 20 of 24 bars is not a liquidity observation
+    for name, n in (("A", SESSION_HOURS_A), ("B", SESSION_HOURS_B)):
+        # a session sum is only an observation when every hour of that session traded
+        sess[name][hours[name] < n] = np.nan
     return days, close, sess, hours, qvol, coverage
 
 
@@ -244,15 +261,17 @@ def eligibility(close, qvol):
 
 def build_factors(close, sess, hours):
     d, s = close.shape
+    # ret[d] is the return EARNED on day d: close(d+1) / close(d). The factor on row d uses
+    # sessions through day d and must be scored against ret[d+1], never ret[d].
     ret = np.full((d, s), np.nan)
-    ret[1:] = np.log(close[1:] / close[:-1])
+    ret[:-1] = np.log(close[1:] / close[:-1])
     factors = {}
-    for name, key in (("S_A", "A"), ("S_B", "B")):
+    for name, key, per_day in (("S_A", "A", SESSION_HOURS_A), ("S_B", "B", SESSION_HOURS_B)):
         arr, hrs = sess[key], hours[key]
         wsum = np.lib.stride_tricks.sliding_window_view(arr, LOOKBACK, axis=0)
         whrs = np.lib.stride_tricks.sliding_window_view(hrs, LOOKBACK, axis=0)
-        tot = np.where(np.isnan(wsum).any(axis=2), np.nan, np.nansum(wsum, axis=2))
-        enough = whrs.sum(axis=2) >= MIN_SESSION_HOURS
+        tot = np.nansum(wsum, axis=2)          # missing days contribute nothing; the hour count gates
+        enough = whrs.sum(axis=2) >= MIN_SESSION_FRAC * per_day * LOOKBACK
         f = np.full((d, s), np.nan)
         f[LOOKBACK - 1:] = np.where(enough, tot, np.nan)
         factors[name] = f
@@ -431,6 +450,28 @@ def write_findings(rep):
               ", ".join(f"{s} {v['mean_rate_bp']:+.2f}" for s, v in
                         sorted(rep["funding_diagnostic"].items())[:10]) +
               " (first 10 symbols; full table in results/report.json).",
+              "",
+              "## Deviations from the frozen spec (plumbing, not rule changes)",
+              "The frozen PREREG is unchanged (`7bb80998fbe0`). Three implementation details in its",
+              "feature table were wrong about the archive and were corrected before any result was",
+              "recorded; none changes a factor, a threshold that decides, a split or the direction.",
+              "1. **Boundary price.** The spec said the 00:00 UTC close is the hour-0 bar's `open`.",
+              "   On this archive `open` is the first trade of the hour and differs from the prior",
+              "   23:00 close on 1335 of 2464 BTC hour-0 bars (max $21.66), even with contiguous bars.",
+              "   The runner uses the **close of the bar opening at 00:00 UTC**, which is the price",
+              "   the session sums start from, so the decomposition is internally exact.",
+              "2. **Session hour counts.** A bar opening at hour h earns close(h+1)/close(h). Session",
+              "   A (open hours 0..13) therefore holds **14** returns and B (14..23) **10**. Verified:",
+              "   S_A + S_B equals the boundary-to-boundary daily log return to 9.2e-16 over 8746",
+              "   day-symbol cells.",
+              "3. **Completeness threshold.** The spec's flat '150 of 168 hours' is unreachable for a",
+              "   10-hour session (max 70 over 7 days). The runner requires **90% of each session's",
+              "   own lookback hours** (A 98, B 70), the same intent applied per session.",
+              "A first run produced an all-NaN panel (`np.add.at` on NaN-initialised accumulators) and",
+              "would have printed a spurious NULL; it was discarded, not recorded. A second run showed",
+              "+270 bp/day at t=17 from a target-alignment leak (the factor was scored on its own day's",
+              "return); that was fixed and is now locked by a regression test. Both are why the numbers",
+              "below come from the third run.",
               "",
               "## Limits",
               "- Gate 0 on seen history; no reserved sample, no forward day, no gate-1 claim.",
