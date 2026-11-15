@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROLES = {
     "value": (
-        "qwen3.7-max",
+        "qwen4-max-preview",
         "You are a quant portfolio strategist. Given ONLY the evidence pack, rank the candidate "
         "work items by expected value to the owner, whose goal is a reproducible positive NET "
         "return at executable costs. The owner has ~50 recorded nulls and one edge confirmed out "
@@ -27,7 +27,7 @@ ROLES = {
         "Do not invent numbers; cite the pack. Max 500 words.",
     ),
     "referee": (
-        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
         "You are a hostile statistical referee. Given ONLY the evidence pack, find the ways the "
         "proposed next work could produce a false positive. Focus on: post-hoc conditioning, "
         "selection on the same sample, tail risk masquerading as edge, and multiplicity. The pack "
@@ -35,7 +35,7 @@ ROLES = {
         "losses. Say exactly how that must be handled to be admissible. Max 450 words.",
     ),
     "risk": (
-        "qwen3.7-plus",
+        "qwen3.8-max",
         "You are a risk engineer for a small crypto book. Given ONLY the evidence pack, design the "
         "sizing and squeeze-protection model that the strongest per-event edge is explicitly "
         "blocked on. Per-event sd is 16.7%, worst short squeeze -132% gross plus -45% funding. "
@@ -44,7 +44,7 @@ ROLES = {
         "State which rules need data the pack does not contain. Max 500 words.",
     ),
     "prop": (
-        "qwen3.7-plus",
+        "qwen3.8-flash",
         "You are a prop-firm evaluation specialist. Given ONLY the evidence pack, assess whether "
         "any listed edge can pass a funded-account challenge (typical: 10% profit target, 5% daily "
         "loss, 10% max drawdown, min trading days). Carry is ~1%/yr with 0.07% max DD; the event "

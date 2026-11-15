@@ -1,6 +1,6 @@
 # FINDINGS: unlockrisk_v1 (R494, M542)
 
-Run 2026-11-15T13:30:11.385576+00:00 by `scripts/run_unlockrisk.py`. PREREG `f8b3bf3e7d98` verified before and after; events sha `0aeb33d4cce2`, 422 events. No download, no new signal, no filter, no grid search.
+Run 2026-11-15T13:33:46.161177+00:00 by `scripts/run_unlockrisk.py`. PREREG `f8b3bf3e7d98` verified before and after; events sha `0aeb33d4cce2`, 422 events. No download, no new signal, no filter, no grid search.
 
 **Verdict: SURVIVABLE.** One frozen rule, c=2% per event (the owner's Gate-4 proposal) with a 10% portfolio gross cap, no stop, no funding veto, no ADV filter.
 

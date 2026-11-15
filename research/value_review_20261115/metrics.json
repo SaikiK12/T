@@ -75,6 +75,26 @@
    "0.050": -8.976900050000001
   }
  },
+ "cluster_stress_beyond_archive": {
+  "cap": 0.02,
+  "gross_cap": 0.1,
+  "worst_open_positions": 4,
+  "sized_weight": 0.02,
+  "scenarios": {
+   "as_archived": {
+    "cluster_return": -1.7953800100000001,
+    "equity_hit": -0.0359076002
+   },
+   "plus_one_river_funding_shock": {
+    "cluster_return": -2.2453800100000003,
+    "equity_hit": -0.04490760020000001
+   },
+   "plus_100pt_stress": {
+    "cluster_return": -2.79538001,
+    "equity_hit": -0.055907600200000004
+   }
+  }
+ },
  "events_per_year": {
   "2021": 11,
   "2022": 16,

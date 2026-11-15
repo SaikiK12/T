@@ -104,6 +104,32 @@ def concurrency(df):
             "cluster_equity_hit_pct_at_cap": {f"{c:.3f}": 100 * c * worst for c in CAPS}}
 
 
+def cluster_stress(df, cap=0.02, gross=0.10):
+    """The worst concurrent cluster with an EXTRA shock beyond anything archived.
+
+    Suggested by a worker (qwen3.8-max) so the archived maximum is not trusted as a bound. This is
+    a description of R494's frozen rule, not a new gate; it lives here rather than in the frozen
+    runner so the lane's input hash stays valid.
+    """
+    d = df.copy()
+    d["day"] = pd.to_datetime(d.day)
+    d["entry"] = d.day - pd.Timedelta(days=HOLD_DAYS)
+    d["tot"] = d.gross + d.funding
+    worst, n_at = 0.0, 1
+    for t in pd.date_range(d.entry.min(), d.day.max(), freq="D"):
+        op = d[(d.entry <= t) & (d.day > t)]
+        if len(op):
+            s = float(op.tot.sum())
+            if s < worst:
+                worst, n_at = s, len(op)
+    w = min(cap, gross / n_at)
+    return {"cap": cap, "gross_cap": gross, "worst_open_positions": n_at, "sized_weight": w,
+            "scenarios": {label: {"cluster_return": worst + shock, "equity_hit": (worst + shock) * w}
+                          for label, shock in (("as_archived", 0.0),
+                                               ("plus_one_river_funding_shock", -0.45),
+                                               ("plus_100pt_stress", -1.0))}}
+
+
 def main():
     df = pd.read_csv(EVENTS)
     rep = {
@@ -114,6 +140,7 @@ def main():
         "tail_vs_adv": tail_vs_adv(df),
         "sizing_sequential_no_stop": sizing(df),
         "concurrency": concurrency(df),
+        "cluster_stress_beyond_archive": cluster_stress(df),
         "events_per_year": {k: int(v) for k, v in df.groupby(df.day.str[:4]).size().items()},
         "has_intrabar_path": any(c in df.columns for c in ("high", "low", "mfe", "mae")),
         "limits": [

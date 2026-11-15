@@ -54,6 +54,20 @@ class ValueReviewTests(unittest.TestCase):
         self.assertFalse(self.saved["has_intrabar_path"])
         self.assertTrue(any("no stop" in s for s in self.saved["limits"]))
 
+    def test_cluster_stress_uses_the_worst_cluster_day_not_peak_concurrency(self):
+        got = self.vr.cluster_stress(self.df)
+        saved = self.saved["cluster_stress_beyond_archive"]
+        self.assertEqual(got["worst_open_positions"], saved["worst_open_positions"])
+        # the worst-cluster day is NOT the peak-concurrency day
+        self.assertLess(got["worst_open_positions"], self.saved["concurrency"]["max_open"])
+        for k, v in saved["scenarios"].items():
+            self.assertAlmostEqual(got["scenarios"][k]["equity_hit"], v["equity_hit"], places=9)
+
+    def test_a_large_enough_stress_breaches_the_daily_limit(self):
+        s = self.vr.cluster_stress(self.df)["scenarios"]
+        self.assertGreater(s["as_archived"]["equity_hit"], -0.05)
+        self.assertLess(s["plus_100pt_stress"]["equity_hit"], -0.05)  # a stated limit, not hidden
+
 
 if __name__ == "__main__":
     unittest.main()
