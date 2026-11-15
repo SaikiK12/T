@@ -1,4 +1,18 @@
-# Capacity-optimal sizing: an equation the lab has not had (2026-11-15)
+# Capacity-optimal sizing: an equation new to this repo, not to the literature (2026-11-15)
+
+> **CORRECTION — the novelty claim was wrong and is withdrawn.** An earlier version of this note and
+> its PR/room posts implied this was "a thing nobody has done". A prior-art search (OpenAlex, run
+> 2026-11-15 after an audit flagged the missing check) found **Almgren (2003), "Optimal execution
+> with nonlinear impact functions and trading-enhanced risk", *Applied Mathematical Finance*,
+> DOI `10.1080/135048602100056`**. Its abstract, read in full: *"The market impact cost per share is
+> taken to be a power law function of the trading rate, with an arbitrary positive exponent. This
+> includes, for example, the square root law that has been proposed based on market microstructure
+> theory."* That is this equation's setting. Related: Almgren-Chriss optimal execution, and
+> "Optimal execution with nonlinear transient market impact" (arXiv 1412.4839).
+> **`n* = (g/(a(1+β)))^(1/β)` is standard power-law-impact optimal sizing.** What is new here is
+> only: (a) it had never been applied in this repo, where every lane fixes size, and (b) the
+> **measured per-venue exponents** β=0.4036 / 0.5670 from R495's own book walk. The closed form and
+> the `1/(1+β)` invariant are textbook consequences, not discoveries.
 
 `lab/capacity.py` · 12 tests in `tests/test_capacity.py` · derived from R495's measured books.
 
