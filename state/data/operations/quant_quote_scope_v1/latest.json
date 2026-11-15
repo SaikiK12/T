@@ -1,10 +1,10 @@
 {
   "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
-  "run_id": "gha_43762875148_1",
-  "hour": "20261115T21",
-  "started_utc": "2026-11-15T21:18:18.571123+00:00",
+  "run_id": "gha_43768396427_1",
+  "hour": "20261115T22",
+  "started_utc": "2026-11-15T22:17:27.200638+00:00",
   "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
-  "code_commit": "6f0d3767b85c9eb5c050260801766c18fa2f84fd",
+  "code_commit": "f0ce15a7b5ba7f2dc6b9ec1a76a33a9ad5fa6f9f",
   "inventory": [
     {
       "id": "R200",
@@ -269,13 +269,13 @@
     },
     {
       "id": "R413",
-      "started_utc": "2026-11-15T21:18:18.602073+00:00",
+      "started_utc": "2026-11-15T22:17:27.238919+00:00",
       "state": "FAILED",
       "returncode": 42
     },
     {
       "id": "R406",
-      "started_utc": "2026-11-15T21:18:19.601462+00:00",
+      "started_utc": "2026-11-15T22:17:27.949885+00:00",
       "state": "FAILED",
       "returncode": 42
     }
@@ -287,55 +287,55 @@
     "2x": "N/A",
     "3x": "N/A"
   },
-  "finished_utc": "2026-11-15T21:18:20.600199+00:00",
+  "finished_utc": "2026-11-15T22:17:28.662565+00:00",
   "health": [
     {
       "rid": "R415",
       "path": "experiments/paperacct_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 13.74,
+      "hours_old": 14.72,
       "source_updated": "2026-11-15T07:34Z"
     },
     {
       "rid": "R285",
       "path": "experiments/xbook_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 13.74,
+      "hours_old": 14.72,
       "source_updated": "2026-11-15T07:34:09Z"
     },
     {
       "rid": "R278",
       "path": "experiments/xfund_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 19.54,
+      "hours_old": 20.53,
       "source_updated": "2026-11-15T01:45:38.941015+00:00"
     },
     {
       "rid": "R279",
       "path": "experiments/xfund_kc_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 19.4,
+      "hours_old": 20.38,
       "source_updated": "2026-11-15T01:54:31.525858+00:00"
     },
     {
       "rid": "R390",
       "path": "experiments/xfund_bg_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 19.08,
+      "hours_old": 20.07,
       "source_updated": "2026-11-15T02:13:33.138303+00:00"
     },
     {
       "rid": "R413",
       "path": "experiments/boroslock_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 167.03,
+      "hours_old": 168.02,
       "source_updated": "2026-11-08T22:16:32Z"
     },
     {
       "rid": "R406",
       "path": "experiments/lockcarry_fwd2/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 166.04,
+      "hours_old": 167.02,
       "source_updated": "2026-11-08T23:16:03Z"
     }
   ],
