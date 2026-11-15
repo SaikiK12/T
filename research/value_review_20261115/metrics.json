@@ -19,6 +19,32 @@
   "ci95_high_pct": 5.2417015834351375,
   "p_mean_le_zero": 0.001
  },
+ "cluster_bootstrap_by_dependence": {
+  "week": {
+   "clusters": 170,
+   "ci95_low_pct": 1.1852365337857238,
+   "ci95_high_pct": 5.1824201892531825,
+   "p_mean_le_zero": 0.00175
+  },
+  "month": {
+   "clusters": 58,
+   "ci95_low_pct": 1.3376889162025403,
+   "ci95_high_pct": 5.165008315475748,
+   "p_mean_le_zero": 0.00075
+  },
+  "quarter": {
+   "clusters": 22,
+   "ci95_low_pct": 1.0723727246835721,
+   "ci95_high_pct": 5.142574480843861,
+   "p_mean_le_zero": 0.002
+  },
+  "perp": {
+   "clusters": 69,
+   "ci95_low_pct": 1.1483208395305196,
+   "ci95_high_pct": 5.52944143279327,
+   "p_mean_le_zero": 0.00075
+  }
+ },
  "tail_vs_adv": {
   "n_with_V": 415,
   "n_worse_than_-40pct": 6,

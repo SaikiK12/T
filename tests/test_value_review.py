@@ -68,6 +68,19 @@ class ValueReviewTests(unittest.TestCase):
         self.assertGreater(s["as_archived"]["equity_hit"], -0.05)
         self.assertLess(s["plus_100pt_stress"]["equity_hit"], -0.05)  # a stated limit, not hidden
 
+    def test_edge_survives_every_clustering_scheme(self):
+        got = self.vr.cluster_bootstrap(self.df)
+        for name, v in self.saved["cluster_bootstrap_by_dependence"].items():
+            self.assertEqual(got[name]["clusters"], v["clusters"])
+            self.assertGreater(v["ci95_low_pct"], 0.0, f"{name} CI must exclude zero")
+            self.assertAlmostEqual(got[name]["ci95_low_pct"], v["ci95_low_pct"], places=6)
+
+    def test_no_outcome_filter_was_applied_to_the_robustness_numbers(self):
+        # a symmetric trimmed mean is not an outcome-dependent filter
+        r = self.saved["robustness_net1x"]
+        self.assertEqual(r["n"], len(self.df))
+        self.assertGreaterEqual(r["trimmed_mean_10pct"], r["mean_pct"])
+
 
 if __name__ == "__main__":
     unittest.main()

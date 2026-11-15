@@ -130,6 +130,36 @@ def cluster_stress(df, cap=0.02, gross=0.10):
                                                ("plus_100pt_stress", -1.0))}}
 
 
+def cluster_bootstrap(df, col="net1x"):
+    """The mean's CI under several dependence structures, not just calendar weeks.
+
+    A referee (qwen4-max-preview) objected that unlocks cluster by token, sector and date, so a
+    week bootstrap may understate dependence. Recomputed under month, quarter and per-token
+    clusters as well; the edge must survive all of them, not the friendliest one.
+    """
+    x = df[col].to_numpy()
+    keys = {
+        "week": df.week.to_numpy(),
+        "month": df.day.str[:7].to_numpy(),
+        "quarter": (df.day.str[:4] + "Q"
+                    + ((df.day.str[5:7].astype(int) - 1) // 3 + 1).astype(str)).to_numpy(),
+        "perp": df.perp.to_numpy(),
+    }
+    rng = np.random.default_rng(SEED + 4)
+    out = {}
+    for name, k in keys.items():
+        groups = {u: x[k == u] for u in np.unique(k)}
+        uk = np.unique(k)
+        means = np.empty(N_BOOT)
+        for b in range(N_BOOT):
+            pick = rng.choice(uk, size=len(uk), replace=True)
+            means[b] = np.concatenate([groups[u] for u in pick]).mean()
+        lo, hi = np.percentile(means, [2.5, 97.5])
+        out[name] = {"clusters": int(len(uk)), "ci95_low_pct": 100 * float(lo),
+                     "ci95_high_pct": 100 * float(hi), "p_mean_le_zero": float((means <= 0).mean())}
+    return out
+
+
 def main():
     df = pd.read_csv(EVENTS)
     rep = {
@@ -137,6 +167,7 @@ def main():
         "source_sha256": __import__("hashlib").sha256(EVENTS.read_bytes()).hexdigest(),
         "robustness_net1x": robustness(df.net1x.to_numpy()),
         "week_bootstrap": week_bootstrap(df),
+        "cluster_bootstrap_by_dependence": cluster_bootstrap(df),
         "tail_vs_adv": tail_vs_adv(df),
         "sizing_sequential_no_stop": sizing(df),
         "concurrency": concurrency(df),
