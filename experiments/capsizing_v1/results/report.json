@@ -1,0 +1,90 @@
+{
+ "round": "R496",
+ "method": "M545",
+ "lane": "capsizing_v1",
+ "prereg_sha256": "07b313b4187a4576018f14d300745c8c9582a51fcfba052ebe20296794b3a818",
+ "inputs_checked": 6,
+ "completed_utc": "2026-11-15T18:31:37.038868+00:00",
+ "program_trials_before": 9785318,
+ "trials": 1,
+ "discovery_trades": 1445,
+ "validation_trades": 1711,
+ "fitted_on_discovery_only": {
+  "k": 0.6791197664359794,
+  "median_hold_days": 18.0
+ },
+ "curves": {
+  "binance": {
+   "a_bp": 0.43881622156034283,
+   "beta": 0.4036119249590819,
+   "r2": 0.9990891000480739,
+   "depth_usd": 50809.862528
+  },
+  "gate": {
+   "a_bp": 0.3308960079780988,
+   "beta": 0.567011980991821,
+   "r2": 0.9832022080297264,
+   "depth_usd": 7846.336000000001
+  },
+  "dydx": {
+   "a_bp": 27.18907331159395,
+   "beta": 0.15969657005803192,
+   "r2": 0.9521852718175398,
+   "depth_usd": 599.8008
+  },
+  "kucoin": {
+   "a_bp": 0.06703381973290265,
+   "beta": 0.8280306484709841,
+   "r2": 0.9325779264818657,
+   "depth_usd": 5748.44329
+  }
+ },
+ "sizing_bindings": {
+  "depth": 844,
+  "interior": 826,
+  "nonpositive_forecast": 41
+ },
+ "chosen_size_median": 3492.525632595928,
+ "validation": {
+  "1": {
+   "rule_total": 209574.50329440745,
+   "base_total": 332655.118891362,
+   "diff_total": -123080.61559695461,
+   "diff_mean_per_trade": -71.93490099179112,
+   "ci95_low": -107.13504122037617,
+   "ci95_high": -41.92020271643767,
+   "p_diff_le_zero": 1.0,
+   "rule_hit": 0.47574517825832846,
+   "base_hit": 0.39684395090590296
+  },
+  "2": {
+   "rule_total": 159514.54363971052,
+   "base_total": 103795.48928272401,
+   "diff_total": 55719.05435698654,
+   "diff_mean_per_trade": 32.56519833839073,
+   "ci95_low": -3.1347490586982545,
+   "ci95_high": 62.93813177638215,
+   "p_diff_le_zero": 0.038,
+   "rule_hit": 0.3652834599649328,
+   "base_hit": 0.29514903565166567
+  },
+  "3": {
+   "rule_total": 109454.58398501368,
+   "base_total": -125064.14032591411,
+   "diff_total": 234518.72431092773,
+   "diff_mean_per_trade": 137.0652976685726,
+   "ci95_low": 100.56738008551214,
+   "ci95_high": 167.746635118737,
+   "p_diff_le_zero": 0.0,
+   "rule_hit": 0.3033313851548802,
+   "base_hit": 0.22735242548217416
+  }
+ },
+ "verdict": "NULL",
+ "limits": [
+  "gate 0: a split of R277's already-published archive, not a fresh sample",
+  "one cost snapshot per venue; delisted contracts scored at their venue median curve",
+  "size uses the ENTRY spread only; realised PnL never selects a size",
+  "tests sizing WITHIN R277's frozen entry rule, not a new entry signal"
+ ]
+}

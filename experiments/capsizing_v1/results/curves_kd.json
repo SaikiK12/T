@@ -1,0 +1,229 @@
+{
+ "prereg_sha256": "07b313b4187a4576018f14d300745c8c9582a51fcfba052ebe20296794b3a818",
+ "utc": "2026-11-15T18:30:50.451755+00:00",
+ "coins_requested": 364,
+ "rows": 428,
+ "by_venue": [
+  {
+   "venue": "dydx",
+   "contracts": 75,
+   "median_half_spread_bp": 75.64494257192842,
+   "median_side_1k_bp": 83.11965849153391,
+   "median_side_5k_bp": 101.02899906454633,
+   "median_side_10k_bp": 122.35514317642193,
+   "median_depth_ask_usd": 599.8008
+  },
+  {
+   "venue": "kucoin",
+   "contracts": 353,
+   "median_half_spread_bp": 11.363636363636164,
+   "median_side_1k_bp": 22.339880239520824,
+   "median_side_5k_bp": 57.62523770845546,
+   "median_side_10k_bp": 169.14665027753296,
+   "median_depth_ask_usd": 5748.44329
+  }
+ ],
+ "error_count": 222,
+ "errors": [
+  {
+   "venue": "dydx",
+   "symbol": "1000000MOG-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "0G-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000BONK-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000CHEEMS-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "kucoin",
+   "symbol": "1000FLOKIUSDTM",
+   "error": "KeyError: 'data'"
+  },
+  {
+   "venue": "kucoin",
+   "symbol": "1000LUNCUSDTM",
+   "error": "KeyError: 'data'"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000FLOKI-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000LUNC-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "kucoin",
+   "symbol": "1000PEPEUSDTM",
+   "error": "KeyError: 'data'"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000PEPE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "kucoin",
+   "symbol": "1000SHIBUSDTM",
+   "error": "KeyError: 'data'"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000RATS-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "kucoin",
+   "symbol": "1000XECUSDTM",
+   "error": "KeyError: 'data'"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000SHIB-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "1000XEC-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "4-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ACH-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ACE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ADBE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AGLD-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AGT-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AIGENSYN-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AIN-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AIOT-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AIO-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AKE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ALICE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ALPINE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ANKR-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ARIA-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ARK-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ARPA-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "ASR-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AVAAI-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AUCTION-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AVGO-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "AWE-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "BAND-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "BANK-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+   "venue": "dydx",
+   "symbol": "BAN-USD",
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  }
+ ]
+}
