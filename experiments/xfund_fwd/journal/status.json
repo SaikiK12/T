@@ -1,41 +1,30 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-14T01:38:41.367545+00:00",
+ "updated": "2026-11-15T01:45:38.941015+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.035,
-  "hyperliquid": 0.989,
-  "mexc": 0.986
+  "gate": 1.011,
+  "hyperliquid": 0.983,
+  "mexc": 0.969
  },
  "data": {
-  "hyperliquid": {
-   "files": 216,
-   "failed": 3,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "ME",
-    "VINE",
-    "WCT"
-   ]
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 4,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "MARSCOIN_USDT",
-    "MAVIA_USDT",
-    "MELANIA_USDT",
-    "MOVR_USDT"
-   ]
-  },
   "gate": {
    "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "POLYX",
+    "PONS",
+    "kFLOKI"
+   ]
   },
   "binance": {
    "files": 867,
@@ -45,6 +34,23 @@
     "AERGOUSDT",
     "BDXNUSDT",
     "SXPUSDT"
+   ]
+  },
+  "mexc": {
+   "files": 520,
+   "failed": 12,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "BANK_USDT",
+    "DOS_USDT",
+    "DOT_USDT",
+    "DYM_USDT",
+    "ERA_USDT",
+    "GRASS_USDT",
+    "GRIFFAIN_USDT",
+    "HANA_USDT",
+    "MUBARAK_USDT",
+    "NIGHT_USDT"
    ]
   }
  },
@@ -140,12 +146,6 @@
     "spread_in": 0.2146
    },
    {
-    "coin": "ETCUSDT",
-    "long": "hyperliquid",
-    "short": "gate",
-    "spread_in": 0.1772
-   },
-   {
     "coin": "SUSDT",
     "long": "hyperliquid",
     "short": "gate",
@@ -174,16 +174,22 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.2469
+   },
+   {
+    "coin": "MORPHOUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.195
    }
   ],
-  "scored_days": 23,
+  "scored_days": 24,
   "late_days": 15,
-  "total": 0.0026453806,
-  "total_2x": 0.0009653805999999999,
-  "total_3x": -0.0007146194000000006,
-  "total_close": 0.0034227906000000004,
-  "nw_t": 1.6806205153672762,
-  "max_drawdown": -0.0008053798,
+  "total": -0.0025351057,
+  "total_2x": -0.0042851057,
+  "total_3x": -0.006035105700000001,
+  "total_close": -0.0017423455,
+  "nw_t": -0.5572770337948043,
+  "max_drawdown": -0.005410314100000001,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
  },
@@ -255,13 +261,13 @@
     "spread_in": 0.1184
    }
   ],
-  "scored_days": 23,
+  "scored_days": 24,
   "late_days": 15,
-  "total": 0.007345709800000001,
-  "total_2x": 0.006645709800000001,
-  "total_3x": 0.0059457098000000016,
-  "total_close": 0.007719664600000002,
-  "nw_t": 1.4603108914833522,
+  "total": 0.0077850014999999995,
+  "total_2x": 0.0070850015,
+  "total_3x": 0.006385001500000001,
+  "total_close": 0.008158956299999999,
+  "nw_t": 1.5528611996808785,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -376,12 +382,6 @@
     "spread_in": 0.5113
    },
    {
-    "coin": "EPICUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 2.8901
-   },
-   {
     "coin": "BULLAUSDT",
     "long": "mexc",
     "short": "gate",
@@ -392,18 +392,24 @@
     "long": "mexc",
     "short": "gate",
     "spread_in": 10.7864
+   },
+   {
+    "coin": "JCTUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.7418
    }
   ],
-  "scored_days": 23,
+  "scored_days": 24,
   "late_days": 15,
-  "total": 0.0059447583,
-  "total_2x": 0.0032147583000000004,
-  "total_3x": 0.0004847582999999995,
-  "total_close": 0.0063180592,
-  "nw_t": 3.1501015661348455,
-  "max_drawdown": -0.0015282559999999995,
+  "total": 6.127600000000073e-06,
+  "total_2x": -0.002723872399999999,
+  "total_3x": -0.0054538724,
+  "total_close": 0.0003794284999999991,
+  "nw_t": 0.0012406803333225433,
+  "max_drawdown": -0.0059386307,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-14"
+ "last_day": "2026-11-15"
 }

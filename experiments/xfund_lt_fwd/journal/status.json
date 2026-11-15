@@ -1,24 +1,35 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-14T01:57:32.803186+00:00",
+ "updated": "2026-11-15T02:04:42.630479+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 0.983,
-  "lighter": 0.986
+  "mexc": 0.904,
+  "lighter": 1.087
  },
  "data": {
-  "mexc": {
-   "files": 117,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "lighter": {
    "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "mexc": {
+   "files": 117,
+   "failed": 11,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "DOGE_USDT",
+    "DOLO_USDT",
+    "DOT_USDT",
+    "DYDX_USDT",
+    "EDGE_USDT",
+    "FOGO_USDT",
+    "GMX_USDT",
+    "GRAM_USDT",
+    "KAITO_USDT",
+    "LDO_USDT"
+   ]
   }
  },
  "A": {
@@ -69,12 +80,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1268
-   },
-   {
-    "coin": "QNTUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.106
    },
    {
     "coin": "EIGENUSDT",
@@ -147,18 +152,24 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.0796
+   },
+   {
+    "coin": "LTCUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0904
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 15,
-  "total": -0.0013920983000000001,
-  "total_2x": -0.0030970983,
-  "total_3x": -0.0048020983,
-  "total_close": -0.0005900539,
-  "nw_t": -1.1928697419142074,
+  "total": -0.0005084099000000001,
+  "total_2x": -0.0022684099,
+  "total_3x": -0.0040284099,
+  "total_close": 0.00027605710000000005,
+  "nw_t": -0.4477675519755562,
   "max_drawdown": -0.0026059508,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-14"
+ "last_day": "2026-11-15"
 }
