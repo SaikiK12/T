@@ -1,0 +1,128 @@
+{
+ "round": "R494",
+ "method": "M542",
+ "lane": "unlockrisk_v1",
+ "prereg_sha256": "f8b3bf3e7d98db2b86b4e4cbf04df3fbe1452e9b9cac4f80ffd5ad09f45a32da",
+ "inputs_checked": 2,
+ "events_sha256": "0aeb33d4cce29fd97a8077e6934180881411b5893f0a76346de5d59791ec2535",
+ "n_events": 422,
+ "completed_utc": "2026-11-15T13:30:11.385576+00:00",
+ "program_trials_before": 9785317,
+ "trials": 1,
+ "primary_rule": {
+  "per_event_cap": 0.02,
+  "gross_cap": 0.1,
+  "stop": null,
+  "funding_veto": false,
+  "adv_filter": false
+ },
+ "primary_lump": {
+  "terminal_equity_x": 1.2567692773852686,
+  "max_drawdown": -0.046165614620303774,
+  "worst_day": -0.035501300000000006,
+  "peak_gross": 0.1,
+  "days_cap_binds": 98,
+  "calendar_days": 2016,
+  "annualised_return": 0.042246333193513896,
+  "daily_sharpe_ann": 1.3621596483017857
+ },
+ "primary_spread": {
+  "terminal_equity_x": 1.2623994737921815,
+  "max_drawdown": -0.03784971799844261,
+  "worst_day": -0.005129657171428572,
+  "peak_gross": 0.1,
+  "days_cap_binds": 98,
+  "calendar_days": 2016,
+  "annualised_return": 0.04309014473465367,
+  "daily_sharpe_ann": 3.143487487772945
+ },
+ "primary_drag_mean_net_per_event": {
+  "net1x": 0.0006072057504355676,
+  "net2x": 0.0005695306287241405,
+  "net3x": 0.00053185552532235
+ },
+ "uncapped_mean_net_per_event": {
+  "net1x": 0.03238820787440758,
+  "net2x": 0.030388206613744077,
+  "net3x": 0.028388206130331755
+ },
+ "survival": {
+  "S1_max_dd_better_than_-10pct": true,
+  "S2_worst_day_better_than_-5pct": true,
+  "verdict": "SURVIVABLE"
+ },
+ "worst_cluster_unsized": {
+  "sum_of_open_event_returns": -1.7953800100000001,
+  "day": "2026-01-17"
+ },
+ "sensitivity_not_deciding": [
+  {
+   "c": 0.01,
+   "G": 0.1,
+   "lump": {
+    "terminal_equity_x": 1.126920648743255,
+    "max_drawdown": -0.023309767392533987,
+    "worst_day": -0.017750650000000003,
+    "peak_gross": 0.09,
+    "days_cap_binds": 0,
+    "calendar_days": 2016,
+    "annualised_return": 0.021869344979686955,
+    "daily_sharpe_ann": 1.3900596653870507
+   }
+  },
+  {
+   "c": 0.03,
+   "G": 0.1,
+   "lump": {
+    "terminal_equity_x": 1.3565918856758914,
+    "max_drawdown": -0.06751161526035032,
+    "worst_day": -0.044376625,
+    "peak_gross": 0.1,
+    "days_cap_binds": 265,
+    "calendar_days": 2016,
+    "annualised_return": 0.056769184262410954,
+    "daily_sharpe_ann": 1.3315069829795283
+   }
+  },
+  {
+   "c": 0.02,
+   "G": 0.2,
+   "lump": {
+    "terminal_equity_x": 1.2682104200444384,
+    "max_drawdown": -0.04616561462030355,
+    "worst_day": -0.035501300000000006,
+    "peak_gross": 0.18,
+    "days_cap_binds": 0,
+    "calendar_days": 2016,
+    "annualised_return": 0.043957819889519634,
+    "daily_sharpe_ann": 1.3900596653870507
+   }
+  },
+  {
+   "c": 0.02,
+   "G": 0.3,
+   "lump": {
+    "terminal_equity_x": 1.2682104200444384,
+    "max_drawdown": -0.04616561462030355,
+    "worst_day": -0.035501300000000006,
+    "peak_gross": 0.18,
+    "days_cap_binds": 0,
+    "calendar_days": 2016,
+    "annualised_return": 0.043957819889519634,
+    "daily_sharpe_ann": 1.3900596653870507
+   }
+  }
+ ],
+ "owner_stop_conflict": {
+  "gate4_stop_fraction_of_stake": 0.25,
+  "stop_in_equity_at_cap": -0.005,
+  "worst_event_in_equity_at_cap": -0.035501300000000006,
+  "note": "the proposed 25%-of-stake stop is breached by the archived tail; it cannot be tested without intrabar bars. The owner decides; this lane does not."
+ },
+ "limits": [
+  "gate 0 description of R265's already-seen events; no confirmation, no new signal",
+  "no intrabar path: LUMP and SPREAD bracket the marking assumption, neither is a path",
+  "no stop, no funding veto, no ADV filter (see PREREG for why each is excluded)",
+  "sizing uses concurrency at each day; the sequential number is not the portfolio path"
+ ]
+}
