@@ -1,7 +1,7 @@
 # T
 
 A pre-registered strategy-discovery lab for crypto perpetual futures. The goal is the best net PnL the owner can trade
-(MEXC perps first), proven on data the search never saw and handed over through the gates in
+(on venues usable from France: MEXC, Binance, Gate and KuCoin do not serve French residents with perps), proven on data the search never saw and handed over through the gates in
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
@@ -12,7 +12,7 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 | I want to… | Open |
 |---|---|
 | Understand the project and the identifiers | [Human reading guide](docs/guides/START_HERE.fr.md) |
-| See priorities and existing ideas | [Working direction](docs/DIRECTION.md), then the [live methods queue](registry/methods.csv) |
+| See what is true now and what is next | [Status](docs/STATUS.md), then the [live methods queue](registry/methods.csv); [direction](docs/DIRECTION.md) keeps dated owner decisions |
 | Read an experiment's actual scope and result | [Experiment catalog](experiments/README.md), then its PREREG and FINDINGS |
 | Find a source or a research design | [Research folder guide](research/README.md) |
 | Set up, inspect or run the software | [Operator guide](docs/guides/OPERATIONS.md) |
@@ -20,14 +20,15 @@ check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
 ## Current status
 
-The [current paper runtime](docs/OPERATIONS.md) records the 2026-11-07 transfer
-to Codex, the single scheduled writer, canonical saved state and unresolved
-operational dependencies. The operator guide above covers local setup.
+**What is true now is one page: [docs/STATUS.md](docs/STATUS.md)** (money, what runs, dates, and the charter of
+2026-11-16 for how the project runs). It is rewritten in place; check its date. Why it exists:
+[the 2026-11-16 step-back review](docs/reviews/stepback_20261116.md).
 
-The [panel](docs/PANEL.md) is a generated snapshot: check its build timestamp.
-[Issue #7](https://github.com/SaikiK12/T/issues/7) holds fresh writer claims and
-operational handoffs; [room #71](https://github.com/SaikiK12/T/issues/71) holds
-bounded Codex/subagent triage. The [live methods queue](registry/methods.csv),
+Codex has been unavailable since 2026-11-09; its R420 runtime ends its dispatch by design on 2026-11-19.
+[Operations](docs/OPERATIONS.md) keeps that runtime's details; the operator guide above covers local setup.
+The [panel](docs/PANEL.md) is a generated snapshot whose builder ran in a container tick (last build 2026-11-14).
+[Issue #7](https://github.com/SaikiK12/T/issues/7) holds writer claims and handoffs; [room #71](https://github.com/SaikiK12/T/issues/71)
+held Codex's subagent triage (historical). The [live methods queue](registry/methods.csv),
 [round registry](registry/rounds.csv) and each lane's native PREREG/FINDINGS
 remain the authorities for ideas, registered work and exact tested scope.
 

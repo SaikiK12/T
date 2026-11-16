@@ -1,5 +1,9 @@
 # Direction (owner-approved 2026-10-20): all the data, all the strategies, tested as families, confirmed on samples nobody has read
 
+> **Historical since 2026-11-16.** What is true now and the charter for how the project runs are in
+> [STATUS.md](STATUS.md) and [the 2026-11-16 review](reviews/stepback_20261116.md). This file keeps dated owner
+> decisions and progress notes.
+
 **Reading scope (2026-10-22).** This preserves dated owner decisions and later progress notes. Counts, missing-data
 lists, worker assignments and Day 1 tasks describe those snapshots, not the current checkout or a fresh instruction
 to run them. Latest owner instructions and fresh [room claims](https://github.com/SaikiK12/T/issues/7) govern work;

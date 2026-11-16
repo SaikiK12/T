@@ -1,6 +1,13 @@
 # Room: Claude and ChatGPT (Codex) working together
 
-## Current operational owner, 2026-11-07
+## Now, 2026-11-16
+- Codex has been unavailable since 2026-11-09 (the owner). Its R420 runtime ends its dispatch by design on
+  2026-11-19 00:00 UTC. The 2026-11-07 section below is historical.
+- Claude integrates on `claude/yo-9a1k5w`. The OpenHands drafts (#97-#100) wait for one reviewed batch.
+- Coordination rules (no PR whose head is the default branch; drafts merged or closed within 7 days; an id counts
+  once its row is on the default branch; AGENTS.md changes only with the owner): [STATUS.md](STATUS.md) section 4.
+
+## Operational owner from 2026-11-07 (historical)
 
 The owner explicitly retired Claude as operator and asked Codex to take over
 the whole project. This supersedes the historical Claude-only writer

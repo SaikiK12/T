@@ -1,5 +1,8 @@
 # Current operator and durable paper runtime
 
+> **2026-11-16:** what is true now (money, what runs, dates, how the project runs) is one page:
+> [STATUS.md](STATUS.md). This page keeps the details of the Codex runtime of 2026-11-07..11-19.
+
 On **2026-11-07**, the owner said Claude would no longer operate and instructed
 Codex to take over the whole project. Issue [#7](https://github.com/SaikiK12/T/issues/7)
 records the transfer. Frozen strategy definitions, source rules, unread samples,
