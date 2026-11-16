@@ -13,6 +13,7 @@ Classes:
 - workflow-quiet: named by a workflow with an open schedule, but no commit within --stale-days;
 - codex: no workflow names it and its PREREG owner is Codex;
 - writer-lost-noted: no writer, and its README/FINDINGS carries the "**Writer lost" note;
+- no-folder: no writer and no experiments/<lane> folder in this repo (old-session rows such as R180);
 - no-writer-recent / no-writer: no workflow, a commit within --stale-days or not.
 
     python scripts/lane_census.py               # table to stdout
@@ -50,13 +51,15 @@ def owner(prereg_text):
     return m.group(1).strip() if m else ""
 
 
-def classify(row, wf, own, last, today, stale_days, dated=False, noted=False):
+def classify(row, wf, own, last, today, stale_days, dated=False, noted=False, folder=True):
     """One of the classes in the module docstring."""
     age = (today - last).days if last else None
     if wf:
         if age is not None and age <= stale_days:
             return "workflow"
         return "workflow-dated" if dated else "workflow-quiet"
+    if not folder:
+        return "no-folder"
     if "codex" in own.lower():
         return "codex"
     if noted:
@@ -90,7 +93,8 @@ def census(root=ROOT, today=None, stale_days=7, last=last_commit):
         out.append({"id": r["id"], "status": r["status"], "lane": lane, "writer": ",".join(wf) or "-",
                     "last_commit": lc.isoformat() if lc else "", "owner": own[:60],
                     "class": classify(r, wf, own, lc, today, stale_days,
-                                      dated=dated_only(workflows[w] for w in wf), noted="**Writer lost" in notes)})
+                                      dated=dated_only(workflows[w] for w in wf), noted="**Writer lost" in notes,
+                                      folder=(root / "experiments" / lane).is_dir())})
     return out
 
 
@@ -102,7 +106,7 @@ def render(rows, today):
              + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())) + ".", "",
              "| id | status | lane | class | writer | last commit |", "|---|---|---|---|---|---|"]
     order = {"no-writer": 0, "workflow-quiet": 1, "codex": 2, "no-writer-recent": 3, "writer-lost-noted": 4,
-             "workflow-dated": 5, "workflow": 6}
+             "no-folder": 5, "workflow-dated": 6, "workflow": 7}
     for r in sorted(rows, key=lambda r: (order.get(r["class"], 9), r["id"])):
         lines.append(f"| {r['id']} | {r['status']} | {r['lane']} | {r['class']} | {r['writer']} | {r['last_commit']} |")
     return "\n".join(lines) + "\n"

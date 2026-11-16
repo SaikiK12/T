@@ -33,6 +33,8 @@ class Parts(unittest.TestCase):
         self.assertEqual(c([], "Claude", None), "no-writer")
         self.assertEqual(lc.classify({}, ["w.yml"], "", date(2026, 10, 1), TODAY, 10, dated=True), "workflow-dated")
         self.assertEqual(lc.classify({}, [], "Claude", date(2026, 11, 1), TODAY, 10, noted=True), "writer-lost-noted")
+        self.assertEqual(lc.classify({}, [], "", None, TODAY, 10, folder=False), "no-folder")
+        self.assertEqual(lc.classify({}, ["w.yml"], "", None, TODAY, 10, folder=False), "workflow-quiet")
 
     def test_dated_only(self):
         self.assertTrue(lc.dated_only(["on:\n  schedule:\n    - cron: '41 6 13-16 2 *'\n    - cron: '41 6 15-18 5 *'\n"]))
@@ -51,7 +53,8 @@ class Census(unittest.TestCase):
                 "R1,2026-11-01,live_fwd,t,RUNNING,PENDING,1,,,\n"
                 "R2,2026-11-01,dead_fwd,t,RUNNING,PENDING,1,,,\n"
                 "R3,2026-11-01,cx_v1,t,REGISTERED,PENDING,1,,,\n"
-                "R4,2026-11-01,done_v1,t,DONE,NULL,1,,,\n")
+                "R4,2026-11-01,done_v1,t,DONE,NULL,1,,,\n"
+                "R5,2026-10-12,old_sf,t,ARMED,PENDING,,,,\n")
             (root / ".github" / "workflows" / "w.yml").write_text("lane: live_fwd\n")
             (root / "experiments" / "dead_fwd").mkdir(parents=True)
             (root / "experiments" / "dead_fwd" / "README.md").write_text("# dead\n")
@@ -61,12 +64,12 @@ class Census(unittest.TestCase):
                     "experiments/cx_v1": date(2026, 11, 7)}
             rows = lc.census(root, TODAY, 7, last=lambda p: last.get(p))
             got = {r["id"]: r["class"] for r in rows}
-            self.assertEqual(got, {"R1": "workflow", "R2": "no-writer", "R3": "codex"})
+            self.assertEqual(got, {"R1": "workflow", "R2": "no-writer", "R3": "codex", "R5": "no-folder"})
             (root / "experiments" / "dead_fwd" / "README.md").write_text("# dead\n**Writer lost (2026-11-16).**\n")
             self.assertEqual({r["id"]: r["class"] for r in lc.census(root, TODAY, 7, last=lambda p: last.get(p))}["R2"],
                              "writer-lost-noted")
             text = lc.render(rows, TODAY)
-            self.assertIn("3 open rows", text)
+            self.assertIn("4 open rows", text)
             self.assertLess(text.index("| R2 "), text.index("| R1 "))     # lost writers listed first
 
 

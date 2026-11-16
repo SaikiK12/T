@@ -1,0 +1,3 @@
+# settlehop_fwd (R355): Settlement hop forward (MEXC + Lighter paper)
+
+**Writer lost (2026-11-16).** Last commit e5107fb9 (2026-11-06). `scripts/forward_settlehop.py` ran as a container daemon and stopped with the container on 2026-11-06: 123 decisions, 0 scored on-time hops, 0 tickets (`journal/status.json`). The registry row stays RUNNING / PENDING. A restart needs a writer that acts within 10 minutes of T-1h and T+1h at every settlement; a GitHub cron can start late by more than that, so it needs an always-on host. MEXC is back in research scope since the owner's 2026-11-16 decision (docs/STATUS.md), so a restart is allowed; it still needs its own decision, because no hop qualified in nine days.

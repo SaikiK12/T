@@ -1,0 +1,3 @@
+# unlocks_fwd (R266): Unlock short forward on MEXC paper
+
+**Writer lost (2026-11-16).** Last commit d27a88e8 (2026-11-06). `scripts/forward_unlocks.py` and `scripts/record_unlocks.py` ran on the container's hourly loop and stopped with it on 2026-11-06: 2 tickets open, 0 of the 120 scored events its decision needs (`tick.log`). The registry row stays RUNNING / PENDING. A restart needs a scheduled writer for the daily unlock snapshot, the MEXC history fetch and the hourly forward tick, and a decision on the two open tickets as its PREREG scores them. MEXC is back in research scope since the owner's 2026-11-16 decision (docs/STATUS.md), so a restart is allowed; it still needs its own decision, because at about 2 tickets in three weeks the 120-event decision is years away.

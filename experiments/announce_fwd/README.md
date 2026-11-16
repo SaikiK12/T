@@ -1,0 +1,3 @@
+# announce_fwd (R272): Announcement family forward on MEXC paper
+
+**Writer lost (2026-11-16).** Last commit 9c054f66 (2026-11-06). `scripts/forward_announce.py` ran every 5 minutes after the notice recorder (`scripts/notice_loop.sh`) and stopped with the container on 2026-11-06. In its life it saw 0 qualifying notices and wrote 0 tickets (`journal/status.json`). The registry row stays RUNNING / PENDING. A restart needs the 5-minute notice loop on a writer that keeps that cadence. MEXC is back in research scope since the owner's 2026-11-16 decision (docs/STATUS.md), so a restart is allowed; it still needs its own decision, because each arm needs 12 scored notices.

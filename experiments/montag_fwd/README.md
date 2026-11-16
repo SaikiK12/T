@@ -1,0 +1,3 @@
+# montag_fwd (R270): Monitoring Tag short forward on MEXC paper
+
+**Writer lost (2026-11-16).** Last commit e5107fb9 (2026-11-06). `scripts/forward_montag.py` with `scripts/record_notices.py` ran on the container loop and stopped with it on 2026-11-06. In its life it saw 0 Monitoring Tag notices and wrote 0 tickets (`journal/status.json`). The registry row stays RUNNING / PENDING. A restart needs a scheduled notice recorder and forward tick that enter at the first hourly open after detection. MEXC is back in research scope since the owner's 2026-11-16 decision (docs/STATUS.md), so a restart is allowed; it still needs its own decision, because it needs 12 scored notices.

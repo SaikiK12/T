@@ -1,0 +1,3 @@
+# mexc_costs (R224): MEXC order-book cost recorder
+
+**Writer lost (2026-11-16).** Last commit 32fabff3 (2026-11-06). `scripts/record_mexc_depth.py` ran as a container daemon and stopped with the container on 2026-11-06: 102 snapshots of 37 coins from 2026-10-19 to 2026-11-06 (`journal/status.json`). The registry row stays RUNNING / PENDING. The report its PREREG schedules from 2026-11-03 was never written; the snapshots held here are enough for that one read, which needs no restart. A restart needs a scheduled writer (a GitHub workflow) running the recorder; MEXC's fees have changed since the PREREG (MEXC 0/0 is web-only, `research/intake/fee_map_20261116.md`), and a new cost read would be a new lane.

@@ -11,3 +11,7 @@ on Binance at once.
   - Hedged-maker cost = 2 bp fee − 5 s markout.
   - Taker cost = effective half-spread + 7.5 bp fee.
 - **Run:** `python scripts/run_gatemaker.py`, once. Results go in `results/`, and the reading in FINDINGS.md.
+
+**Result (2026-11-16):** LEVER_HOLDS in all four volume bands, at a 2 bp and at a 4 bp maker fee, under the
+touch-fill assumption ([FINDINGS](FINDINGS.md)). Queue position, time to fill and the chase cost are not measured
+here; they are the job of the forward execution lane this result earns.

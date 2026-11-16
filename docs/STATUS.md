@@ -15,8 +15,11 @@
   reste ton geste.
 - **Frais.** Il existe des routes à 0 frais même par API (Lighter, et Paradex « retail »). Ce qui coûte encore,
   c'est l'écart entre prix d'achat et de vente. Sur Binance + Gate, le portage C14 ne couvre ses coûts qu'à
-  1 000 $ par jambe. Le levier non testé : un ordre posé sur Gate, couvert aussitôt sur Binance
-  ([carte des frais](../research/intake/fee_map_20261116.md)).
+  1 000 $ par jambe en ordres au marché ([carte des frais](../research/intake/fee_map_20261116.md)). Le levier :
+  un ordre posé sur Gate, couvert aussitôt sur Binance. Mesuré le 16-11 sur deux semaines de transactions (R497), il
+  coûte au plus la moitié d'un ordre au marché dans toutes les tranches de volume, si chaque transaction au meilleur
+  prix remplit l'ordre. La file d'attente et le temps de remplissage restent à mesurer, en papier, avant d'y croire
+  ([résultat](../experiments/gatemaker_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
@@ -39,8 +42,11 @@
     C14 Binance + Gate, R440 five venues) are forward on paper already.
   - **Measured cost** ([fee map](../research/intake/fee_map_20261116.md)): with venue fees added to R495's book walk,
     C14 pays 18.4 bp a leg a side at $1k (inside its 26.9 bp break-even) and 31.7 at $5k (outside). At zero cost it
-    would earn about +3.9%/yr on total capital, near the bill. The untested lever is a hedged maker on the Gate
-    leg (M546).
+    would earn about +3.9%/yr on total capital, near the bill.
+  - **Lever M546, a hedged maker on the Gate leg:** R497 measured it on Gate's tape (2026-11-02..15). Verdict
+    LEVER_HOLDS: in every volume band it cost at most half of a taker, at a 2 bp and at a 4 bp maker fee. That rests on
+    a touch-fill assumption; queue position, fill time and the chase are next, in a forward execution lane on R390's
+    Gate contracts ([FINDINGS](../experiments/gatemaker_v1/FINDINGS.md)).
   - On venues usable from France, a DEX-only carry book (Hyperliquid + Lighter) earned below the bill on seen rows
     ([venue access review](reviews/venue_access_fr_20261110.md)).
 - **Under forward test now, on venues usable from France.** These are candidates, not results:
@@ -66,19 +72,22 @@
   |---|---|---|
   | workflow | 38 | named by a workflow and committed within 7 days (not proof that every run succeeded) |
   | codex | 16 | Codex lanes (see below) |
-  | no-writer | 13 | no workflow and no commit for more than 7 days (listed below) |
+  | writer-lost-noted | 12 | no writer; each lane's README says since when and what a restart needs (listed below) |
+  | no-folder | 1 | R180, an old-session row with no code or folder in this repo |
   | no-writer-recent | 2 | R406, R413: read by a session when their locks settle, or on 2027-10-01 |
 
   - **Codex lanes.** Codex has been unavailable since 2026-11-09. Its R420 runtime ends its dispatch on 2026-11-19
     00:00 UTC by design, then only reports health.
-  - **Rows with no writer:**
+  - **Rows whose writer is gone** (notes written 2026-11-16):
     - daemons that stopped with the container on 2026-11-06: R224, R266, R268, R270, R272, R355, R364;
-    - R369, registered with a container daemon;
-    - R286, reserved batch 1, last commit 2026-11-03;
-    - R419, a Codex lane meant for Claude's container, never run;
-    - older ARMED/PLANNED/REGISTERED rows: R180, R184, R199.
+    - R369, whose tick recorders stopped then; missed EIA releases cannot be recorded later;
+    - R286 and R199, whose rows lag their FINDINGS (R286 read once on 2026-11-03; R199 abandoned);
+    - R419, run by Codex's R420 takeover until its own end on 2026-11-14, with no read written yet;
+    - R184, a draft never frozen;
+    - R180, an old-session row; its forward was replaced here by R266.
   - **Rows change status only with their frozen read.** A lane whose writer is gone gets a dated "**Writer lost**" note
-    in its README instead; the census then counts it as `writer-lost-noted`.
+    in its README instead; the census then counts it as `writer-lost-noted`. `registry/rounds.csv` is append-only, so a
+    row that lags its FINDINGS stays as written and its README points to the result.
 - **Agents:**
   - Claude works in cloud sessions, with no always-on host.
   - Its hourly self-wake-up was paused by the owner on 2026-11-13 and stays off. A weekly version is prepared but
