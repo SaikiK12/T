@@ -141,3 +141,10 @@ digests are in `experiments/recorders/journal/digests.csv`.
     - COT and macro series, partly held already in `data/macro`, as a cross-check.
   - **Code:** the client is read-only reference. Its code is not run here; a fetcher would call the REST API
     directly.
+  - **2026-11-16, from an owner's reel (a paid ad):**
+    - The README now lists Level 3 Nasdaq TotalView and CME Globex, and Level 2 Nasdaq TotalView, as paid feeds. It
+      claims over 76,000 instruments.
+    - A paid plan shown in the ad costs $300 a month for one year of L2/L3 history. The free plan gives 50 GB a month.
+    - The data is not open: only the client is MIT-licensed. No upstream vendor or exchange licence is named.
+    - Not bought. Read against the lab in
+      [reels_20261116.md](../research/intake/reels_20261116.md).
