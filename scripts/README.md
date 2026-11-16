@@ -110,7 +110,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (31)
+## Forward: paper lanes and the loops that run them (32)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -119,6 +119,7 @@ line is the first line of the script's own docstring.
 - [`forward_carry.py`](forward_carry.py): carry_fwd (R220): the R191 funding carry rule forward on paper, entered one bar late, on Binance and on MEXC, as set out in experiments/carry_fwd/PREREG.md.
 - [`forward_delayed.py`](forward_delayed.py): flow72_fwd3 (R214): R200's forward books with each slice entered one bar after its signal bar, as set out in experiments/flow72_fwd3/PREREG.md.
 - [`forward_delist.py`](forward_delist.py): R268 delist_fwd: the spot delisting-notice short, forward on MEXC paper (experiments/delist_fwd/PREREG.md).
+- [`forward_gatefill.py`](forward_gatefill.py): gatefill_fwd (R498): forward paper measurement of a resting order on Gate's wide leg of R390's C14 carry book, hedged on Binance, against crossing both legs at once (M546, lever 2 of ...
 - [`forward_lag.py`](forward_lag.py): Processing lag of the forward lanes: how long after each hour's bar closed R200 computed its signal, and which on-time days were scored from hours computed late (a backfill after the container or ...
 - [`forward_lockcarry.py`](forward_lockcarry.py): lockcarry_fwd (R405): R335's locked cash-and-carry, forward on paper on Deribit, as set out in experiments/lockcarry_fwd/PREREG.md.
 - [`forward_lockcarry2.py`](forward_lockcarry2.py): lockcarry_fwd2 (R406): R335's locked cash-and-carry, forward on paper on Deribit, as set out in experiments/lockcarry_fwd2/PREREG.md.
