@@ -1,34 +1,34 @@
 {
  "window": "forward",
  "start": "2026-11-11",
- "end": "2026-11-11",
- "days": 1,
+ "end": "2026-11-16",
+ "days": 6,
  "first": "2026-11-11",
- "last": "2026-11-11",
+ "last": "2026-11-16",
  "1x": {
-  "net_ann": -1.3146837666666664,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.1153829705313462,
+  "excess_ann": -0.15538297053134617,
+  "nw_t_excess": -1.4103845026338413
  },
  "2x": {
-  "net_ann": -2.629367533333333,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.3620159038646795,
+  "excess_ann": -0.4020159038646795,
+  "nw_t_excess": -1.8782265249893724
  },
  "3x": {
-  "net_ann": -3.9440513,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.6086488371980128,
+  "excess_ann": -0.6486488371980129,
+  "nw_t_excess": -2.0278320156066
  },
  "max_dd": -0.003601873333333333,
  "top10_day_share": null,
- "funding_ann": 0.0,
- "price_ann": 0.0,
+ "funding_ann": 0.06298052859434786,
+ "price_ann": 0.06826943420763926,
  "avg_held": 10.0,
  "forced_exits": 0,
- "sd_daily": NaN,
+ "sd_daily": 0.001754950079603287,
  "detectable_ann": {
-  "90": NaN,
-  "180": NaN
+  "90": 0.22551884769562466,
+  "180": 0.1594659064909524
  }
 }

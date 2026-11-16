@@ -1,0 +1,63 @@
+{
+ "data_commit": "c8dbed6575483ba10616980aaa9266afaee7a94a",
+ "last_snapshot": "2026-11-16T05:08:29.896000+00:00",
+ "runs": 102,
+ "rows": 100,
+ "rows_opened": 90,
+ "complete_days": 4,
+ "coins_ever_eligible": 31,
+ "F": {
+  "days": 1,
+  "total": 0.0125158364414334,
+  "mean_bp_day": 125.15836441433399,
+  "ann_pct": 456.8280301123191,
+  "t_nw10": null,
+  "hit": 1.0,
+  "worst_day": 0.0125158364414334,
+  "max_dd": 0.0,
+  "trimmed_mean_bp_day": 125.15836441433399,
+  "mean_2x_bp_day": 119.554197747668,
+  "mean_3x_bp_day": 113.95003108100101,
+  "leave_two_coins_out_gross_bp_day": -284.1486028097119,
+  "decision": "pending (1 counted days of 90)",
+  "stop_rule_hit": false,
+  "all_days": {
+   "days": 4,
+   "total": 0.0171184800502221,
+   "mean_bp_day": 42.796200125555245,
+   "ann_pct": 156.20613045827665,
+   "t_nw10": 3.1147432588486867,
+   "hit": 0.75,
+   "worst_day": -0.0012425474564959,
+   "max_dd": 0.0012425474564959,
+   "trimmed_mean_bp_day": 42.796200125555245
+  }
+ },
+ "R": {
+  "days": 1,
+  "total": 0.0048163532982143,
+  "mean_bp_day": 48.163532982143,
+  "ann_pct": 175.79689538482194,
+  "t_nw10": null,
+  "hit": 1.0,
+  "worst_day": 0.0048163532982143,
+  "max_dd": 0.0,
+  "trimmed_mean_bp_day": 48.163532982143,
+  "mean_2x_bp_day": 42.663532982143,
+  "mean_3x_bp_day": 37.163532982142996,
+  "leave_two_coins_out_gross_bp_day": -375.2064625590714,
+  "decision": "pending (1 counted days of 90)",
+  "stop_rule_hit": false,
+  "all_days": {
+   "days": 4,
+   "total": 0.0051440563450263,
+   "mean_bp_day": 12.86014086256575,
+   "ann_pct": 46.93951414836499,
+   "t_nw10": 2.4656664388517116,
+   "hit": 0.75,
+   "worst_day": -0.0012973927859576,
+   "max_dd": 0.0012973927859576,
+   "trimmed_mean_bp_day": 12.86014086256575
+  }
+ }
+}

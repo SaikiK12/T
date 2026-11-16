@@ -1,68 +1,68 @@
 {
  "window": "forward",
  "start": "2026-11-11",
- "end": "2026-11-10",
+ "end": "2026-11-15",
  "hlp": {
-  "days": 0,
-  "first": null,
-  "last": null,
+  "days": 5,
+  "first": "2026-11-11",
+  "last": "2026-11-15",
   "1x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.06930975229887495,
+   "excess_ann": 0.029309752298874947,
+   "nw_t_excess": 7.947763996816833
   },
   "2x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.06830975229887494,
+   "excess_ann": 0.028309752298874943,
+   "nw_t_excess": 7.676599508090602
   },
   "3x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.06730975229887495,
+   "excess_ann": 0.027309752298874945,
+   "nw_t_excess": 7.4054350193643765
   },
-  "max_dd": null,
-  "top10_day_share": null,
-  "funding_ann": null,
-  "price_ann": null,
-  "avg_held": null,
+  "max_dd": 0.0,
+  "top10_day_share": 0.9999999999999999,
+  "funding_ann": 0.07030975229887494,
+  "price_ann": 0.0,
+  "avg_held": 1.0,
   "forced_exits": 0,
-  "sd_daily": NaN,
+  "sd_daily": 4.3563295642934656e-05,
   "detectable_ann": {
-   "90": NaN,
-   "180": NaN
+   "90": 0.005598076178576703,
+   "180": 0.0039584376274704606
   },
   "missing_days": 0
  },
  "llp": {
-  "days": 0,
-  "first": null,
-  "last": null,
+  "days": 5,
+  "first": "2026-11-11",
+  "last": "2026-11-15",
   "1x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.2401838873485229,
+   "excess_ann": 0.2001838873485229,
+   "nw_t_excess": 3.7902731927539492
   },
   "2x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.23918388734852292,
+   "excess_ann": 0.1991838873485229,
+   "nw_t_excess": 3.771339235366283
   },
   "3x": {
-   "net_ann": null,
-   "excess_ann": null,
-   "nw_t_excess": NaN
+   "net_ann": 0.23818388734852292,
+   "excess_ann": 0.19818388734852294,
+   "nw_t_excess": 3.752405277978617
   },
-  "max_dd": null,
-  "top10_day_share": null,
-  "funding_ann": null,
-  "price_ann": null,
-  "avg_held": null,
+  "max_dd": -0.0003871301048784711,
+  "top10_day_share": 0.9999999999999999,
+  "funding_ann": 0.24118388734852295,
+  "price_ann": 0.0,
+  "avg_held": 1.0,
   "forced_exits": 0,
-  "sd_daily": NaN,
+  "sd_daily": 0.0008478448766986883,
   "detectable_ann": {
-   "90": NaN,
-   "180": NaN
+   "90": 0.10895181682942785,
+   "180": 0.07704056850268305
   },
   "missing_days": 0
  }

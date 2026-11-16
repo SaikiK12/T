@@ -1,0 +1,38 @@
+{
+ "books_commit": "c8dbed6575483ba10616980aaa9266afaee7a94a",
+ "complete_days": 4,
+ "A_traded_share_measured": 1.0,
+ "A": {
+  "ontime_days": 4,
+  "measured_1x_bp_day": -14.322830888604956,
+  "assumed_1x_bp_day": -18.207964689242818,
+  "gap_bp_day": 3.8851338006378584,
+  "meas_1000_1x_bp_day": -14.322830888604956,
+  "meas_1000_2x_bp_day": -15.583414133909532,
+  "meas_1000_3x_bp_day": -16.84399737921412,
+  "meas_5000_1x_bp_day": -14.621513249240271,
+  "meas_5000_2x_bp_day": -16.180778855180204,
+  "meas_5000_3x_bp_day": -17.740044461120124,
+  "meas_10000_1x_bp_day": -14.83651129261388,
+  "meas_10000_2x_bp_day": -16.61077494192741,
+  "meas_10000_3x_bp_day": -18.385038591240928,
+  "decision": "pending (4 strict on-time days of 90)"
+ },
+ "B_traded_share_measured": 1.0,
+ "B": {
+  "ontime_days": 4,
+  "measured_1x_bp_day": -14.047709502289832,
+  "assumed_1x_bp_day": -16.08917006253495,
+  "gap_bp_day": 2.0414605602451186,
+  "meas_1000_1x_bp_day": -14.047709502289832,
+  "meas_1000_2x_bp_day": -14.64955078833067,
+  "meas_1000_3x_bp_day": -15.25139207437151,
+  "meas_5000_1x_bp_day": -14.217005960216204,
+  "meas_5000_2x_bp_day": -14.988143704183429,
+  "meas_5000_3x_bp_day": -15.759281448150643,
+  "meas_10000_1x_bp_day": -14.33922696654457,
+  "meas_10000_2x_bp_day": -15.232585716840148,
+  "meas_10000_3x_bp_day": -16.125944467135728,
+  "decision": "pending (4 strict on-time days of 90)"
+ }
+}

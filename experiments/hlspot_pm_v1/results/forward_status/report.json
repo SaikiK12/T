@@ -1,65 +1,65 @@
 {
  "window": "forward",
  "start": "2026-11-11",
- "end": "2026-11-11",
- "days": 1,
+ "end": "2026-11-16",
+ "days": 6,
  "first": "2026-11-11",
- "last": "2026-11-11",
+ "last": "2026-11-16",
  "1x": {
-  "net_ann": -0.8793181818181818,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.04278861747428173,
+  "excess_ann": -0.0827886174742817,
+  "nw_t_excess": -0.8697330192735602
  },
  "2x": {
-  "net_ann": -1.7586363636363636,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.189341647777312,
+  "excess_ann": -0.22934164777731209,
+  "nw_t_excess": -1.332264209455824
  },
  "3x": {
-  "net_ann": -2.637954545454545,
-  "excess_ann": NaN,
-  "nw_t_excess": NaN
+  "net_ann": -0.33589467808034223,
+  "excess_ann": -0.3758946780803423,
+  "nw_t_excess": -1.5079454597312203
  },
  "max_dd": -0.002409090909090909,
  "top10_day_share": null,
- "funding_ann": 0.0,
- "price_ann": 0.0,
+ "funding_ann": 0.05547237924242424,
+ "price_ann": 0.04829203358632433,
  "avg_held": 1.0,
  "forced_exits": 0,
- "sd_daily": NaN,
+ "sd_daily": 0.0011544229600584288,
  "detectable_ann": {
-  "90": NaN,
-  "180": NaN
+  "90": 0.14834845659233836,
+  "180": 0.10489819963500065
  },
  "reported_no_pm": {
-  "days": 1,
+  "days": 6,
   "first": "2026-11-11",
-  "last": "2026-11-11",
+  "last": "2026-11-16",
   "1x": {
-   "net_ann": -0.6448333333333333,
-   "excess_ann": NaN,
-   "nw_t_excess": NaN
+   "net_ann": -0.031378319481139914,
+   "excess_ann": -0.07137831948113993,
+   "nw_t_excess": -1.0225397997763803
   },
   "2x": {
-   "net_ann": -1.2896666666666665,
-   "excess_ann": NaN,
-   "nw_t_excess": NaN
+   "net_ann": -0.1388505417033621,
+   "excess_ann": -0.17885054170336215,
+   "nw_t_excess": -1.4167599331457126
   },
   "3x": {
-   "net_ann": -1.9344999999999997,
-   "excess_ann": NaN,
-   "nw_t_excess": NaN
+   "net_ann": -0.24632276392558436,
+   "excess_ann": -0.28632276392558437,
+   "nw_t_excess": -1.566296251643355
   },
   "max_dd": -0.0017666666666666664,
   "top10_day_share": null,
-  "funding_ann": 0.0,
-  "price_ann": 0.0,
+  "funding_ann": 0.040679744777777783,
+  "price_ann": 0.0354141579633045,
   "avg_held": 1.0,
   "forced_exits": 0,
-  "sd_daily": NaN,
+  "sd_daily": 0.0008465768373761812,
   "detectable_ann": {
-   "90": NaN,
-   "180": NaN
+   "90": 0.10878886816771481,
+   "180": 0.07692534639900048
   }
  }
 }
