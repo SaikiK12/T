@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-11-15T22:00:00+00:00",
- "days_ticketed": 45,
+ "last_scored_hour": "2026-11-15T23:00:00+00:00",
+ "days_ticketed": 46,
  "BIN": {
   "coverage": {
    "symbols": 73,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.44781280582215566,
+  "market_mean_apr_now": -0.31236880237513365,
   "top_apr_now": [
    {
     "symbol": "JCTUSDT",
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 26,
+   "days": 27,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -81,7 +81,7 @@
     "apr": 0.44761166062623187
    }
   ],
-  "market_mean_apr_now": -0.8547336773751528,
+  "market_mean_apr_now": -0.5927758665507017,
   "top_apr_now": [
    {
     "symbol": "JCTUSDT",
@@ -139,21 +139,21 @@
    }
   },
   "ontime": {
-   "days": 26,
-   "days_invested": 18,
-   "total": 0.0023479041924282934,
-   "total_2x": 0.0009079042085964174,
-   "total_3x": -0.0005320957752357983,
-   "total_spot5": 0.002747904192428253,
-   "total_r191_timing": 0.0033044233467798894,
-   "funding": 0.0030106000037442935,
-   "basis": 0.0007773041725155664,
+   "days": 27,
+   "days_invested": 19,
+   "total": 0.0022653921457085084,
+   "total_2x": 0.0008253921618766323,
+   "total_3x": -0.0006146078219555834,
+   "total_spot5": 0.002665392145708468,
+   "total_r191_timing": 0.0032219113000601044,
+   "funding": 0.0031494000030754935,
+   "basis": 0.0005559921264645664,
    "cost": 0.0014399999838319998,
-   "avg_open": 1.237179487179487,
+   "avg_open": 1.265432098765432,
    "go_real_invested": {
-    "n": 18,
-    "mean": 0.00013043912180157186,
-    "hit": 0.6666666666666666,
+    "n": 19,
+    "mean": 0.00011923116556360571,
+    "hit": 0.631578947368421,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
