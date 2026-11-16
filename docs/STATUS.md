@@ -18,8 +18,8 @@
   1 000 $ par jambe en ordres au marché ([carte des frais](../research/intake/fee_map_20261116.md)). Le levier :
   un ordre posé sur Gate, couvert aussitôt sur Binance. Mesuré le 16-11 sur deux semaines de transactions (R497), il
   coûte au plus la moitié d'un ordre au marché dans toutes les tranches de volume, si chaque transaction au meilleur
-  prix remplit l'ordre. La file d'attente et le temps de remplissage restent à mesurer, en papier, avant d'y croire
-  ([résultat](../experiments/gatemaker_v1/FINDINGS.md)).
+  prix remplit l'ordre ([résultat](../experiments/gatemaker_v1/FINDINGS.md)). La file d'attente et le temps de
+  remplissage se mesurent maintenant en papier, sur les contrats de C14, jusqu'au 1er décembre (R498).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
@@ -45,8 +45,14 @@
     would earn about +3.9%/yr on total capital, near the bill.
   - **Lever M546, a hedged maker on the Gate leg:** R497 measured it on Gate's tape (2026-11-02..15). Verdict
     LEVER_HOLDS: in every volume band it cost at most half of a taker, at a 2 bp and at a 4 bp maker fee. That rests on
-    a touch-fill assumption; queue position, fill time and the chase are next, in a forward execution lane on R390's
-    Gate contracts ([FINDINGS](../experiments/gatemaker_v1/FINDINGS.md)).
+    a touch-fill assumption ([FINDINGS](../experiments/gatemaker_v1/FINDINGS.md)).
+  - **R498 `gatefill_fwd`** (frozen 2026-11-16, GitHub every 2 h, read after 2026-12-01) measures that assumption on
+    R390's own Gate contracts:
+    - the queue ahead;
+    - fills by trade-through;
+    - the Binance hedge 5 s after each fill;
+    - crossing the rest at 60 min.
+    It is reported beside R390, never changing it.
   - On venues usable from France, a DEX-only carry book (Hyperliquid + Lighter) earned below the bill on seen rows
     ([venue access review](reviews/venue_access_fr_20261110.md)).
 - **Under forward test now, on venues usable from France.** These are candidates, not results:
@@ -66,11 +72,11 @@
   - Paper journals are committed to the default branch `claude/yo-9a1k5w`, about 44 bot commits a day.
 - **No PR may have the default branch as its head.** PR #1 did, and every bot commit e-mailed the owner. It was closed
   on 2026-11-16 for that reason; the owner can also mute pushes under the repository's Watch settings.
-- **Open registry rows** (`python scripts/lane_census.py`, 2026-11-16, 69 in all):
+- **Open registry rows** (`python scripts/lane_census.py`, 2026-11-16, 70 in all):
 
   | class | rows | meaning |
   |---|---|---|
-  | workflow | 38 | named by a workflow and committed within 7 days (not proof that every run succeeded) |
+  | workflow | 39 | named by a workflow and committed within 7 days (not proof that every run succeeded) |
   | codex | 16 | Codex lanes (see below) |
   | writer-lost-noted | 12 | no writer; each lane's README says since when and what a restart needs (listed below) |
   | no-folder | 1 | R180, an old-session row with no code or folder in this repo |

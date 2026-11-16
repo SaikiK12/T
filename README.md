@@ -246,7 +246,8 @@ for active writers. Dated proposals, audits and source notes below retain histor
   snapshot of taker cost by zero-fee route (Lighter is cheapest on most coins; Paradex retail is 0/0 through the API
   too), five cost levers in the order they pay, and C14's Binance + Gate carry re-priced with venue fees (a $1k-per-leg
   book at taker cost). Its lever, a hedged maker on Gate, held on Gate's tape under a touch-fill assumption
-  ([R497](experiments/gatemaker_v1/FINDINGS.md); queue and fill time are next).
+  ([R497](experiments/gatemaker_v1/FINDINGS.md)); [R498](experiments/gatefill_fwd/README.md) measures queue and fill
+  time on paper until 2026-12-01.
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged
