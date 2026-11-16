@@ -10,6 +10,13 @@
 - **Argent.** Aucun argent réel n'est engagé. Aucune stratégie n'a encore réussi l'épreuve du papier sur des jours
   nouveaux. La règle par défaut est donc : pas de trade.
 - **Ce qu'on a appris.** La plupart des idées étaient réelles mais plus petites que les frais pour les exécuter.
+- **Plateformes (décision du 16-11-2026).** Tu as remis Binance, Gate, KuCoin et MEXC dans le périmètre, à ton
+  risque d'accès (gel possible d'un compte ou des retraits pour un résident d'un pays non servi). L'argent réel
+  reste ton geste.
+- **Frais.** Il existe des routes à 0 frais même par API (Lighter, et Paradex « retail »). Ce qui coûte encore,
+  c'est l'écart entre prix d'achat et de vente. Sur Binance + Gate, le portage C14 ne couvre ses coûts qu'à
+  1 000 $ par jambe. Le levier non testé : un ordre posé sur Gate, couvert aussitôt sur Binance
+  ([carte des frais](../research/intake/fee_map_20261116.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
@@ -28,6 +35,12 @@
   registered rounds.
 - **Funding carry is the one premium that held on data nobody had read**, but only on venues that do not serve French
   residents with perpetuals (Binance, Gate, KuCoin, MEXC).
+  - **On 2026-11-16 the owner put those venues back in research scope, at their own access risk.** Their lanes (R390
+    C14 Binance + Gate, R440 five venues) are forward on paper already.
+  - **Measured cost** ([fee map](../research/intake/fee_map_20261116.md)): with venue fees added to R495's book walk,
+    C14 pays 18.4 bp a leg a side at $1k (inside its 26.9 bp break-even) and 31.7 at $5k (outside). At zero cost it
+    would earn about +3.9%/yr on total capital, near the bill. The untested lever is a hedged maker on the Gate
+    leg (M546).
   - On venues usable from France, a DEX-only carry book (Hyperliquid + Lighter) earned below the bill on seen rows
     ([venue access review](reviews/venue_access_fr_20261110.md)).
 - **Under forward test now, on venues usable from France.** These are candidates, not results:

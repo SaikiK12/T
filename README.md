@@ -1,7 +1,8 @@
 # T
 
 A pre-registered strategy-discovery lab for crypto perpetual futures. The goal is the best net PnL the owner can trade
-(on venues usable from France: MEXC, Binance, Gate and KuCoin do not serve French residents with perps), proven on data the search never saw and handed over through the gates in
+(on 2026-11-16 the owner put MEXC, Binance, Gate and KuCoin, which do not serve French residents with perps, back in
+scope at their own access risk; [status](docs/STATUS.md)), proven on data the search never saw and handed over through the gates in
 [`docs/GATES.md`](docs/GATES.md). Nothing counts as an edge until it survives pre-registration, its family's reality
 check, an unread sample or forward paper days, and costs at 1x, 2x and 3x.
 
@@ -241,6 +242,10 @@ for active writers. Dated proposals, audits and source notes below retain histor
   (frozen; [lane](experiments/futroll_fwd/README.md)). R479 runs the stock and twin carry
   forward from 2026-11-16 at measured costs, read on 2027-02-13 and 2027-05-15 (frozen;
   [lane](experiments/hip3carry_fwd/README.md)).
+- [Fee map and cost method, 2026-11-16](research/intake/fee_map_20261116.md): fees from official pages, one
+  snapshot of taker cost by zero-fee route (Lighter is cheapest on most coins; Paradex retail is 0/0 through the API
+  too), five cost levers in the order they pay, and C14's Binance + Gate carry re-priced with venue fees (a $1k-per-leg
+  book at taker cost; a hedged maker on Gate is the untested lever, M546).
 - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md): every method ranked by net return and evidence
   (forward, blind, seen) with France access; the high returns are concentrated in a few coins or stock perps, on
   venues closed to France, R448 shows the flow books earn little on Hyperliquid's coins, and R449 shows hedged

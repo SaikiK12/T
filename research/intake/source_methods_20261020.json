@@ -17538,6 +17538,131 @@
         }
       ],
       "evidence_refs": []
+    },
+    {
+      "id": "FM16-PARADEX-RETAIL-API",
+      "parent_claim_id": "FM16-20261116",
+      "title": "Paradex retail 0/0 through the API (interactive token), RPI book",
+      "method_type": "source_refinement",
+      "hypothesis": "Paradex retail 0/0 through the API (interactive token), RPI book (fee-method intake 2026-11-16; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M292; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "Official trader-profiles and fee pages read; live markets fee_config read; one interactive and one API book snapshot (2026-11-16 16:13 UTC).",
+      "unrun_scope": "Retail taker fills after the 300 ms delay; book stability over time; any strategy routed to Paradex.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M292."
+      ],
+      "blockers": [
+        "The queue row M292 states what is missing."
+      ],
+      "next_action": "Follow live queue row M292; a recorder lane before routing any family to Paradex.",
+      "source_refs": [
+        {
+          "path": "research/intake/fee_map_20261116.md",
+          "label": "Fee map and cost method, 2026-11-16"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "FM16-ROUTE-SNAPSHOT",
+      "parent_claim_id": "FM16-20261116",
+      "title": "Taker cost by zero-fee route: Lighter, Paradex retail, Hyperliquid (one snapshot)",
+      "method_type": "source_refinement",
+      "hypothesis": "Taker cost by zero-fee route: Lighter, Paradex retail, Hyperliquid (one snapshot) (fee-method intake 2026-11-16; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M292; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "One descriptive snapshot of shown books for Paradex's 65 perps on three routes; no strategy test.",
+      "unrun_scope": "Costs over time; fills; any verdict.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M292."
+      ],
+      "blockers": [
+        "The queue row M292 states what is missing."
+      ],
+      "next_action": "Follow live queue row M292.",
+      "source_refs": [
+        {
+          "path": "research/intake/fee_map_20261116.md",
+          "label": "Fee map and cost method, 2026-11-16"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "FM16-C14-FEE-ADDED",
+      "parent_claim_id": "FM16-20261116",
+      "title": "C14 pair cost with venue fees added to R495's walk",
+      "method_type": "source_refinement",
+      "hypothesis": "C14 pair cost with venue fees added to R495's walk (fee-method intake 2026-11-16; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M546; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "Arithmetic on R495's published medians (PR #100) and C14's published 1x/2x/3x nets; no new data read.",
+      "unrun_scope": "Per-contract re-score of R390 tickets; measured fees per contract; Gate maker fee.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M546."
+      ],
+      "blockers": [
+        "The queue row M546 states what is missing."
+      ],
+      "next_action": "Carry into R495's FINDINGS at PR #100's integration; follow M546.",
+      "source_refs": [
+        {
+          "path": "research/intake/fee_map_20261116.md",
+          "label": "Fee map and cost method, 2026-11-16"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "FM16-HEDGED-MAKER",
+      "parent_claim_id": "FM16-20261116",
+      "title": "Hedged maker on the wide carry leg",
+      "method_type": "source_refinement",
+      "hypothesis": "Hedged maker on the wide carry leg (fee-method intake 2026-11-16; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M546; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "No new project strategy test in this intake.",
+      "unrun_scope": "Fill rates, adverse move to the hedge and the resulting cost per leg on Gate.",
+      "status": "untested",
+      "required_inputs": [
+        "See live queue row M546."
+      ],
+      "blockers": [
+        "The queue row M546 states what is missing."
+      ],
+      "next_action": "Follow live queue row M546: a 0-trial measurement lane frozen before any Gate trade is read.",
+      "source_refs": [
+        {
+          "path": "research/intake/fee_map_20261116.md",
+          "label": "Fee map and cost method, 2026-11-16"
+        }
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "FM16-FEE-PROGRAMMES",
+      "parent_claim_id": "FM16-20261116",
+      "title": "Token discounts, referral codes and VIP tiers for a small account",
+      "method_type": "source_refinement",
+      "hypothesis": "Token discounts, referral codes and VIP tiers for a small account (fee-method intake 2026-11-16; see the intake note for read scopes).",
+      "testable_rule": "See live queue row M475; nothing is tested until a PREREG is frozen.",
+      "exact_tested_scope": "Official pages read by three agents with Claude's checks on decisive rows; no account opened, no code used.",
+      "unrun_scope": "Collateral yield; programme changes after 2026-11-16.",
+      "status": "partial",
+      "required_inputs": [
+        "See live queue row M475."
+      ],
+      "blockers": [
+        "The queue row M475 states what is missing."
+      ],
+      "next_action": "Follow live queue row M475.",
+      "source_refs": [
+        {
+          "path": "research/intake/fee_map_20261116.md",
+          "label": "Fee map and cost method, 2026-11-16"
+        }
+      ],
+      "evidence_refs": []
     }
   ],
   "sources": [
@@ -22049,6 +22174,30 @@
       "reconciliation": "Live queue: new M536 and M537 (UNTESTED); the rest map to M518, M057 or M506 as aliases.",
       "source_version_path": "research/intake/hlp_llp_lit_20261113.md",
       "source_version_sha256": "637797de1f2a504a5ff7e7eac45a0741e571aa46a83a6998db946407be035ffc",
+      "strategy_trials_added": 0,
+      "prospective_days_added": 0,
+      "market_outcomes_added": 0
+    },
+    {
+      "intake_id": "fee_map_20261116",
+      "records_added": [
+        "FM16-PARADEX-RETAIL-API",
+        "FM16-ROUTE-SNAPSHOT",
+        "FM16-C14-FEE-ADDED",
+        "FM16-HEDGED-MAKER",
+        "FM16-FEE-PROGRAMMES"
+      ],
+      "base_method_objects_before": 495,
+      "method_objects_after": 500,
+      "source_records_added": [],
+      "source_catalog_paths": [
+        "research/intake/fee_map_20261116_venues.csv",
+        "research/intake/fee_map_20261116_books.csv"
+      ],
+      "received_scope": "Three research agents (two Sonnet, one Haiku) read official fee pages on 2026-11-16; Claude re-checked Paradex (trader profiles, fees, RPI, live markets endpoint), Aster, and the lab's MEXC contract snapshots; one book snapshot by scripts/snapshot_route_costs.py. Binance live table, Bybit pages and edgeX docs were not readable. No complete-corpus claim.",
+      "reconciliation": "Live queue: new M546 (UNTESTED); notes added to M292, M475 and M227. R495's fee omission is recorded for PR #100's integration.",
+      "source_version_path": "research/intake/fee_map_20261116.md",
+      "source_version_sha256": "1f99799cac9032016494eff037d7c765cc553c45101feeb86ad97c4b65f48049",
       "strategy_trials_added": 0,
       "prospective_days_added": 0,
       "market_outcomes_added": 0

@@ -1,0 +1,20 @@
+venue,route,maker_bp,taker_bp,zero_or_negative,speed_bump,account,status,source,retrieved
+Lighter,Standard (default),0,0,whole account,taker 300 ms; cancel/modify 300 ms; maker 0 ms,wallet,checked,https://docs.lighter.xyz/trading/trading-fees.md,2026-11-16
+Lighter,Premium (opt-in),0.40 (0.28 with 500k LIT),2.80 (1.96 with 500k LIT),none,taker 140 ms; cancels and post-only exempt,wallet,agent read,https://docs.lighter.xyz/trading/trading-fees.md,2026-11-16
+Lighter,Plus (opt-in),0.5,0.5,none,taker 300 ms,wallet,agent read,https://docs.lighter.xyz/trading/trading-fees.md,2026-11-16
+Paradex,"Retail (web, or API with interactive token)",0,0,all products; RPI liquidity reachable,"300 ms orders and cancels; 3/s, 30/min, 300/h, 1000/24h",wallet,checked,https://docs.paradex.trade/trading/trader-profiles; https://api.prod.paradex.trade/v1/markets (fee_config.interactive_fee),2026-11-16
+Paradex,Pro (plain API),0 (fee_config); 0.3 (docs),2 (fee_config); 4.5 at Pro 0 (docs); floor 1.75,none,none,wallet,checked; sources differ,https://docs.paradex.trade/trading/trading-fees; https://api.prod.paradex.trade/v1/markets,2026-11-16
+Hyperliquid,tier 0,1.5,4.5,maker 0 from $500M 14d; rebate -0.1 to -0.3 bp above 0.5% maker share,none stated,wallet,agent read,https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees,2026-11-16
+Hyperliquid HIP-3,growth mode,,0.45-0.9 all-in baseline,at least 90% off all-in fees,none stated,wallet,agent read,https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals,2026-11-16
+Aster,perps,0,4 (BTC ETH SOL); 1.25 stock perps from 2026-09-07,maker 0 on crypto,none stated,wallet,checked,https://docs.asterdex.com/trading/perpetuals/fees-and-specs/fees.md,2026-11-16
+dYdX v4,tier 1 (<$1M 30d),1.0,5.0,maker 0 from $25M; rebates at tier 6-7,none stated,wallet,agent read,https://docs.dydx.xyz/concepts/trading/rewards#fees,2026-11-16
+MEXC,web and app orders,0 (default group),2 or 4 by day; 0 on 108-143 contracts,0/0 contracts rotate daily (lab snapshots),none,account,"checked (lab snapshots data/mexc/contracts 11-03, 11-06, 11-10)",https://contract.mexc.com/api/v1/contract/detail,2026-11-16
+MEXC,API,6,8,none: API fees override promotions,none,account with KYC for futures API,lab record,docs/MEXC_EDGES.md; https://www.mexc.com/api-docs/futures/integration-guide,2026-11-16
+Binance,USDS-M regular,2,5,none current; BNB 10% off,none,account,agent read (FAQ example; live table did not render),https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231,2026-11-16
+Gate,USDT perps,2 (announcement snippet),7.5 (public contract field); 5 (announcement snippet),market-maker tiers only,none,account,contract field read by R495; page UNVERIFIED,https://www.gate.com/help/futures/futures-logic/22079,2026-11-16
+OKX,regular,2,5,negative maker from VIP7,none,account,agent read,https://www.okx.com/en-us/help/updates-to-global-fee-framework,2026-11-16
+Bitget,non-VIP,2,6,none for retail,none,account,agent read,https://www.bitget.com/support/articles/12560603892734,2026-11-16
+KuCoin,VIP 0,2,6,none,none,account,agent read,https://www.kucoin.com/support/48142946141635,2026-11-16
+Bybit,non-VIP,2,5.5,none found,none,account,UNVERIFIED (official pages 503),https://www.bybit.com/en/help-center/article/Perpetual-Futures-Contract-Fees-Explained,2026-11-16
+BingX,perps,2,5,none found,none,account,agent read,https://bingx.com/en/support/articles/360046487573,2026-11-16
+edgeX,VIP,,,,,wallet,UNVERIFIED (docs host did not resolve),https://edgex-1.gitbook.io/edgeX-documentation/trading/trading-fees,2026-11-16
