@@ -10,11 +10,14 @@ et une preuve sur des jours nouveaux correspondent à des étapes différentes.
 
 | Je veux… | Où regarder |
 |---|---|
-| Comprendre les priorités | [Direction du projet](../DIRECTION.md) |
+| Savoir ce qui est vrai aujourd'hui (argent, ce qui tourne, dates) | [Statut](../STATUS.md), avec son résumé en français en tête |
+| Comprendre les priorités et mes décisions passées | [Direction du projet](../DIRECTION.md) |
 | Retrouver une piste précise | [Liste vivante des méthodes](../../registry/methods.csv) |
 | Voir ce qu'une expérience a réellement testé | [Catalogue des expériences](../../experiments/README.md), puis ses fichiers PREREG et FINDINGS |
 | Lire les sources et les hypothèses | [Dossier research](../../research/README.md) |
-| Voir l'activité et les blocages récents | [Panel](../PANEL.md), avec sa date, puis [room #7](https://github.com/SaikiK12/T/issues/7) |
+| Voir l'activité et les blocages récents | [Room #7](https://github.com/SaikiK12/T/issues/7) ; le [panel](../PANEL.md) est un instantané daté |
+| Retrouver un reel ou une vidéo que j'ai envoyé, et ce qu'on en a conclu | [Tableau des reels et vidéos](../../research/intake/README.md#owner-sent-reels-and-videos) |
+| Trouver n'importe quel document | [Index des documents, classé par rôle](../../README.md#docs) |
 | Comprendre un ancien rapport | [Dossier reports](../../reports/README.md) et ses notes d'appui |
 | Installer ou lancer quelque chose | [Guide technique](OPERATIONS.md) |
 

@@ -1,23 +1,37 @@
 # Documentation
 
-[Repository home](../README.md) · [Complete topic index](../README.md#docs)
+[Repository home](../README.md) · [Document index, grouped by role](../README.md#docs)
 
-Choose a reading path before opening individual notes:
+**Open these first:**
 
 | Need | Start here |
 |---|---|
+| What is true now | [STATUS](STATUS.md), rewritten in place |
 | Understand the project without running code | [Guide en français](guides/START_HERE.fr.md) |
-| Install, inspect, test or explicitly run the software | [Operator guide](guides/OPERATIONS.md) |
-| Restore a machine or understand data retention | [HANDOVER](HANDOVER.md) |
-| Understand the research rules | [GATES](GATES.md) and [AGENTS.md](../AGENTS.md) |
-| Find a topic, method note or audit | [Maintained document index](../README.md#docs) |
+| Install, inspect, test or run the software | [Operator guide](guides/OPERATIONS.md) |
+| The research rules | [GATES](GATES.md), [FOUNDATION](FOUNDATION.md) and [AGENTS.md](../AGENTS.md) |
+| Get everything back without Claude | [HANDOVER](HANDOVER.md) |
+| Any other note, audit or review | [The grouped index](../README.md#docs) |
 
-`guides/` holds human walkthroughs; `reviews/` holds dated engineering reviews;
-`provenance/` records dataset identities; `handover/` preserves operational
-handoffs. Established topic and process documents keep their existing paths.
-Some of those paths are referenced by frozen protocols.
-
-The panel is a timestamped view. Current methods live in
-[`registry/methods.csv`](../registry/methods.csv); registered rounds live in
-[`registry/rounds.csv`](../registry/rounds.csv). Read a lane's own PREREG and
-FINDINGS for the exact result. This folder guide does not duplicate their status.
+**How this folder is laid out:**
+- **The top level is flat on purpose.** Frozen PREREGs, pinned inputs and the source intake link to these paths, so
+  files here are not moved or renamed. The [root index](../README.md#docs) groups them by role instead:
+  - live rules;
+  - venues and costs;
+  - data;
+  - evidence;
+  - methods;
+  - what the owner sent;
+  - audits;
+  - history.
+- **Subfolders, for new writing:**
+  - `guides/`: how-tos for people;
+  - `reviews/`: dated reviews and audits, named `<topic>_<yyyymmdd>.md`;
+  - `provenance/`: dataset identities;
+  - `handover/`: operational handoffs;
+  - `loop/`: the edge loop, paused since 2026-11-13.
+- **Authorities:**
+  - [`registry/methods.csv`](../registry/methods.csv) for current methods;
+  - [`registry/rounds.csv`](../registry/rounds.csv) for registered rounds;
+  - each lane's own PREREG and FINDINGS for its exact result.
+  - This guide does not copy their status.

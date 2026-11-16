@@ -1,4 +1,84 @@
-# Received-source extraction for the single methods queue
+# Received sources: what was read, and where it went
+
+[Repository home](../../README.md) · [Research guide](../README.md) · [Live methods queue](../../registry/methods.csv)
+
+Each file here records a source that was read: what it is, how it was retrieved, and the exact scope read.
+- **These are inputs, not results.** The live queue is [`registry/methods.csv`](../../registry/methods.csv), and a
+  lane's result is in its own FINDINGS.
+- **Some notes are frozen inputs of a lane** (their PREREG pins them by hash). The note says so; never edit one.
+  Add a dated follow-up note instead.
+- **New notes:** name them `<topic>_<yyyymmdd>.md` and add a row to the index below.
+  - A reel or video the owner sent goes in a `reels_<yyyymmdd>.md` note and in the
+    [owner table](#owner-sent-reels-and-videos).
+  - Web searches are logged in [`registry/web_searches.csv`](../../registry/web_searches.csv), following
+    [`docs/WEB_SEARCH.md`](../../docs/WEB_SEARCH.md).
+- **Check before publishing:** run `python scripts/check_method_intake.py` and `python -m lab integrity`.
+
+## Index, newest first
+
+| Date | Note | What it is |
+|---|---|---|
+| 2026-11-16 | [fee_map_20261116.md](fee_map_20261116.md), with its [venue](fee_map_20261116_venues.csv) and [book](fee_map_20261116_books.csv) tables | Fees from official pages; taker cost by zero-fee route; five cost levers; C14 re-priced. Frozen R497 input |
+| 2026-11-16 | [reels_20261116.md](reels_20261116.md) | Owner reel: an ad for the LSE data vault. No test |
+| 2026-11-13 | [hlp_llp_lit_20261113.md](hlp_llp_lit_20261113.md), its [folder](hlp_llp_lit_20261113/) and [catalog](source_catalog_websearch_20261113.csv) | HLP, LLP and LIT mechanics; large moves in R446/R447; M536, M537 |
+| 2026-11-13 | [lit_hype_unlocks_20261113.md](lit_hype_unlocks_20261113.md) and its [catalog](source_catalog_linstart_20261113.csv) | LIT and HYPE unlocks against R265's rule; M538. Frozen R484 input |
+| 2026-11-13 | [adl_venues_20261113.md](adl_venues_20261113.md) | Auto-deleveraging on 2025-10-10/11 by venue, for R487 (M534) |
+| 2026-11-13 | [usde_flow_20261113.md](usde_flow_20261113.md) | USDe supply flow and perp funding: prior art for R488 (M535) |
+| 2026-11-12 | [websearch_wave_20261112.md](websearch_wave_20261112.md) and its [catalog](source_catalog_websearch_20261112.csv) | Carry red team, and the passive-yield hurdle for R483 |
+| 2026-11-12 | [m532_hedge_20261112.md](m532_hedge_20261112.md) | How to hedge the roll carry of M532 |
+| 2026-11-12 | [idea_wave8_20261112.md](idea_wave8_20261112.md) | Three shelved rows (M521-M523) read again on the web |
+| 2026-11-11 | [idea_wave4](idea_wave4_20261111.md), [5](idea_wave5_20261111.md), [6](idea_wave6_20261111.md), [7](idea_wave7_20261111.md) | Web-research lenses on edges reachable from France |
+| 2026-11-11 | [hip3_venues_20261111.md](hip3_venues_20261111.md) | Hyperliquid HIP-3 dexes: fees, funding, listings |
+| 2026-11-11 | [perp_vaults_20261111.md](perp_vaults_20261111.md) | Perp-DEX vaults beyond HLP and LLP |
+| 2026-11-11 | [lp_pools_20261111.md](lp_pools_20261111.md) | JLP, GMX GM/GLP and Aster ALP pools |
+| 2026-11-09 | [edge_loop_20261109.md](edge_loop_20261109.md) | The edge loop's first tick: one new row, three ideas dropped before any data |
+| 2026-11-09 | [reels_20261109.md](reels_20261109.md) | Owner reels of 11-09, 11-10 and 11-12 |
+| 2026-11-08 | [crash_data_access_20261108.md](crash_data_access_20261108.md) | M485 crash-data sources: documented, not acquired |
+| 2026-11-08 | [treasury_benchmark_20261108.md](treasury_benchmark_20261108.md) | Treasury quotes are not cash-account returns |
+| 2026-11-08 | [fred_scope_20261108/](fred_scope_20261108/README.md) | DTB3 source-scope plumbing |
+| 2026-11-08 | [reels_20261108/](reels_20261108/REVIEW.md) | Three owner reels |
+| 2026-11-07 | [reels_20261107.md](reels_20261107.md) and its [receipts](reels_20261107_receipts.json) | Two owner reels on spoofing (read by Codex) |
+| 2026-11-07 | [atomic_v2_20261107/](atomic_v2_20261107/SOURCES.md) | Atomic on-chain route: source qualification |
+| 2026-11-07 | [lighter_contract_20261107/](lighter_contract_20261107/SOURCES.md) | Lighter roles and a closed accounting hypothesis, for R427 |
+| 2026-11-07 | [maker_pilot_20261107/](maker_pilot_20261107/SOURCES.md) | M474 maker pilot: restored source, not a new forward sample |
+| 2026-11-07 | [rwa_funding_qualification_20261107/](rwa_funding_qualification_20261107/SOURCES.md) | M449: WTI/Brent funding history exists; its cash units are unqualified |
+| 2026-11-04 | [market_inputs_20261104/](market_inputs_20261104/README.md) | Market input capabilities and the equation map |
+| 2026-11-03 | [web_deep_20261103.json](web_deep_20261103.json), its [catalog](source_catalog_webdeep_20261103.csv) and cards SRC1103-* | Web-deep wave: 35 public sources, four lenses; M460-M467 |
+| 2026-11-03 | [bls_schedule_20261103/](bls_schedule_20261103/) | BLS release-schedule capture and receipt |
+| 2026-11-03 | [funding_notional_20261103/](funding_notional_20261103/README.md) | Funding settlement-value source check |
+| 2026-11-02 | [m090_content_v2/](m090_content_v2/README.md) | M090 content-proof trust material |
+| 2026-10-29 | [deep_leads_batch_20261029.json](deep_leads_batch_20261029.json) | Nine primary-source refinements (SRC26-032-040) |
+| 2026-10-29 | [reels_tradingview_batch_20261029.json](reels_tradingview_batch_20261029.json) | Owner reels and three TradingView Pine sources (SRC26-041-046) |
+| 2026-10-28 | [hft_corpus_20261028.md](hft_corpus_20261028.md) and its [catalog](source_catalog_hft_20261028.csv) | The owner's HFT corpus: 46 sources; M434-M439 |
+| 2026-10-20 | [source_methods_20261020.json](source_methods_20261020.json) | The source-method bundle, checked by `scripts/check_method_intake.py` |
+| 2026-10-20 | [owner_scope_20261020.json](owner_scope_20261020.json) | Four owner messages kept verbatim, with their concepts |
+| 2026-10-20 | [providers](source_catalog_20261020.csv) and [tooling](source_catalog_tooling_20261020.csv) catalogs | Data providers and engineering tools reviewed |
+| ongoing | [cards/](cards/) | Source cards, from [`templates/research_card.md`](../../templates/research_card.md) |
+
+## Owner-sent reels and videos
+Every link the owner sent, where it was read, and what came of it. "Not read" means Instagram showed a login page;
+no login or workaround is used. The owner can paste the caption or the account name instead.
+
+| Sent or read | Reel or video | Read in | Verdict |
+|---|---|---|---|
+| 2026-10-19 to 11-03 | About twenty Instagram reels | [`docs/REELS_TRANSCRIPT.md`](../../docs/REELS_TRANSCRIPT.md) | Each one is mapped to the queue there; several led to lanes (for example R306, R307, M320) |
+| 2026-10-21 to 10-29 | The owner's TikToks | [`docs/VIDEO_DIG.md`](../../docs/VIDEO_DIG.md) | Led to R283 and R284, among others |
+| 2026-10-29 | `DZvAMYZA1ae`, `DdTNtTLNSLU` (IV Walls, TradeX ORB) | [reels_tradingview_batch_20261029.json](reels_tradingview_batch_20261029.json) | Source refinements only; no test |
+| 2026-11-07 | `DcLxgVqzv9T` (Sarao and the flash crash), `DbrjiwqT3FS` (spoofing) | [reels_20261107.md](reels_20261107.md) | Context: displayed orders are not trades. Already covered by M437 and M439 |
+| 2026-11-08 | `DfVJWnfMysj` (prop-firm compounding), `DfdWYmkv6Cy` (QQQ options flow), `Dc7BZU2hqaC` (iFVG) | [reels_20261108/REVIEW.md](reels_20261108/REVIEW.md) | Grade D each: simulated or selected results |
+| 2026-11-09 | `DcJ9DLDB9qr` (a direction bot from thousands of simulations) | [reels_20261109.md](reels_20261109.md) | Grade D: a sales funnel. The lab measured that pattern (R263 and R332, NULL) |
+| 2026-11-09 | `DecTVbPop3a` (finding startup ideas) | [reels_20261109.md](reels_20261109.md) | Not about trading |
+| 2026-11-10 | `Dfgamuvo3WE` (US personal finance) | [reels_20261109.md](reels_20261109.md) | Grade D: no trading method |
+| 2026-11-10 | `Db-_4UqI_iq` | [reels_20261109.md](reels_20261109.md) | Not read |
+| 2026-11-12 | `DfnLTPTCILu` (a tier list of quant models) | [reels_20261109.md](reels_20261109.md) | Grade C: education, no rule |
+| 2026-11-12 | `DeoTlhAs0FE`, `DfnDCP9xLKi` | [reels_20261109.md](reels_20261109.md) | Not read |
+| 2026-11-15 | Two TikToks (`ZN85sA5Qm`, `ZN85por96`) | Draft PR #100 (OpenHands), not merged yet | No rule; the second maps to M500 (Cboe SKEW) |
+| 2026-11-16 | `Dft1L9kyuhA` (an ad for the LSE data vault) | [reels_20261116.md](reels_20261116.md) | Grade D: no purchase, no test |
+
+## Pass history
+The text below is the guide as it was written pass by pass, from 2026-10-20 to 2026-11-13. It keeps facts not
+repeated elsewhere: counts at each pass, read scopes, and limits. Read it for history; the index above is current.
+
 
 The [2026-11-04 market-input supplement](market_inputs_20261104/README.md) links
 the existing discovery guide's fourteen cross-family observation/equation lenses to
