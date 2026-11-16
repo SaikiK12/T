@@ -1,53 +1,27 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-15T02:22:32.373545+00:00",
+ "updated": "2026-11-16T02:38:21.746699+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.011,
-  "hyperliquid": 0.989,
-  "mexc": 0.971,
+  "gate": 1.0,
+  "hyperliquid": 0.977,
+  "mexc": 0.994,
   "kucoin": 1.0
  },
  "data": {
+  "mexc": {
+   "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "kucoin": {
    "files": 633,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 11,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "BIRB_USDT",
-    "BSB_USDT",
-    "C98_USDT",
-    "CAT_USDT",
-    "CGPT_USDT",
-    "COMP_USDT",
-    "COW_USDT",
-    "PENGU_USDT",
-    "PEPE_USDT",
-    "PROVE_USDT"
-   ]
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 2,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "SPX",
-    "STABLE"
-   ]
   },
   "binance": {
    "files": 867,
@@ -58,6 +32,23 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 4,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "GRASS",
+    "HBAR",
+    "RESOLV",
+    "REZ"
+   ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -188,16 +179,16 @@
     "spread_in": 0.6934
    }
   ],
-  "scored_days": 4,
+  "scored_days": 5,
   "late_days": 0,
-  "total": -0.00021239199999999962,
-  "total_2x": -0.001052392,
-  "total_3x": -0.0018923919999999997,
-  "total_close": -0.0022243895999999996,
-  "nw_t": -0.07394449569389339,
+  "total": 0.0013271178000000003,
+  "total_2x": 0.0003471177999999999,
+  "total_3x": -0.0006328821999999996,
+  "total_close": -0.0006672313999999996,
+  "nw_t": 0.5447414403589915,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-15"
+ "last_day": "2026-11-16"
 }

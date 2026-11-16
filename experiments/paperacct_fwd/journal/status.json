@@ -1,25 +1,41 @@
 {
- "updated": "2026-11-15T07:34Z",
+ "updated": "2026-11-16T02:38Z",
  "prereg_sha256": "55309b37fca3085fb905b8e78371d7158a2240be42522c1251bdde573a3813ad",
  "open": "2026-11-07",
  "capital": 10000.0,
- "official": null,
+ "official": {
+  "days": 1,
+  "last": "2026-11-07",
+  "balance": 9980.44,
+  "return_pct": -0.196,
+  "balance_2x": 9979.34,
+  "balance_3x": 9978.23,
+  "max_dd_pct": -0.196,
+  "best_day": -19.56,
+  "worst_day": -19.56,
+  "pots": {
+   "carry": 3332.59,
+   "flow": 3314.52,
+   "events": 3333.33
+  },
+  "hit_days_pct": 0.0
+ },
  "provisional": {
-  "days": 8,
-  "last": "2026-11-14",
-  "balance": 9793.51,
-  "return_pct": -2.065,
-  "balance_2x": 9785.59,
-  "balance_3x": 9777.69,
+  "days": 9,
+  "last": "2026-11-15",
+  "balance": 9804.94,
+  "return_pct": -1.951,
+  "balance_2x": 9795.83,
+  "balance_3x": 9786.74,
   "max_dd_pct": -3.145,
   "best_day": 152.88,
   "worst_day": -234.81,
   "pots": {
-   "carry": 3338.39,
-   "flow": 3121.79,
+   "carry": 3334.22,
+   "flow": 3137.39,
    "events": 3333.33
   },
-  "hit_days_pct": 37.5
+  "hit_days_pct": 44.4
  },
  "closed": {
   "carry": null,
