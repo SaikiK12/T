@@ -145,7 +145,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (221)
+## Run: one lane's frozen measurement (222)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -186,6 +186,7 @@ line is the first line of the script's own docstring.
 - [`run_cmelead.py`](run_cmelead.py): R370 cmelead_v1 runner, frozen in experiments/cmelead_v1/PREREG.md: after an EIA release moves CME's crude or gas future, does Binance's TradFi perp lag it long enough for a taker to earn the ...
 - [`run_cmeterm.py`](run_cmeterm.py): R503 cmeterm_v1 (M549): commodity term-structure carry on CME futures, 2010-09..2026-10, at daily settlements.
 - [`run_cmeterm_v2.py`](run_cmeterm_v2.py): R504 cmeterm_v2 (supersedes R503 for data plumbing only; R503's fetch could not finish): commodity term-structure carry on 13 CME futures roots, 2010-09..2026-10, at daily settlements.
+- [`run_cmeterm_v3.py`](run_cmeterm_v3.py): R505 cmeterm_v3 (supersedes R504, whose frozen fetch crashed on 2010 definition rows without a unit of measure, before any settlement was pulled): commodity term-structure carry on 13 CME futures ...
 - [`run_confidence.py`](run_confidence.py): R331 four committed stages: train, calibrate, select, evaluate.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_continuation_control.py`](run_continuation_control.py): R323 fixed conditional continuation policies and common-account replay.
