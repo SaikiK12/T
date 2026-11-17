@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 43 | 8 | 5 | 5 | 11 | 14 |
+| [Portage de financement crypto entre plateformes](#carry) | 44 | 8 | 5 | 5 | 11 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **284** | **13** | **47** | **126** | **47** | **51** |
+| **Total** | **285** | **13** | **47** | **126** | **47** | **52** |
 
 <a id="carry"></a>
 
@@ -89,6 +89,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R503 | [`cmeterm_v1`](../../experiments/cmeterm_v1) | M549 gate 1 on history: commodity term-structure carry on 13 CME futures roots (CL HO RB NG GC SI HG PL ZC ZS… | enregistré |
 | R504 | [`cmeterm_v2`](../../experiments/cmeterm_v2) | M549 gate 1 on history (supersedes R503, whose 16-year definition streams were cut before any statistic): R50… | enregistré |
 | R505 | [`cmeterm_v3`](../../experiments/cmeterm_v3) | M549 gate 1 on history (supersedes R504, whose fetch stopped on 2010 definitions without a unit of measure be… | enregistré |
+| R506 | [`cmeterm_grid_v1`](../../experiments/cmeterm_grid_v1) | M551 gate 1 on history: 432 pre-registered cost- and confidence-aware variants of commodity carry on R505's C… | enregistré |
 
 <a id="carry-tradfi"></a>
 
