@@ -430,7 +430,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (105)
+## Tools and everything else (106)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -473,6 +473,7 @@ line is the first line of the script's own docstring.
 - [`hftlead_rule.py`](hftlead_rule.py): R367 hftlead_v1 rule: does a cross-venue lead make a passive quote on Binance's USDC perp worth posting?.
 - [`inspect_funding_schema.py`](inspect_funding_schema.py): Inspect one funding ZIP header or Parquet schema; never decode observation rows.
 - [`lane_census.py`](lane_census.py): Census of open registry rows: which RUNNING/REGISTERED/ARMED/PLANNED lanes still have a writer.
+- [`lane_scan.py`](lane_scan.py): Cross-lane scan: every committed lane summary table normalized into one table of cells, to choose what to refine.
 - [`lighter_table.py`](lighter_table.py): qx spread symbol table with a Lighter column, for the Lighter carry lane (docs/VENUE_STRUCTURE.md, plan item 4).
 - [`linstart_events.py`](linstart_events.py): Linear-vesting start events for linstart_v1 (R485, M538) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py) and OKX's public swap list.
 - [`lockcarry_rule.py`](lockcarry_rule.py): lockcarry_fwd (R405) rule: the locked cash-and-carry of R335 priced on Deribit's live books.
