@@ -1,12 +1,20 @@
 # Status: what is true now
 
-**Rewritten in place, never appended. Last rewrite: 2026-11-16 by Claude.**
+**Rewritten in place, never appended. Last rewrite: 2026-11-17 by Claude.**
 - If this date is more than two weeks old, trust `registry/rounds.csv` and `python scripts/lane_census.py` over this
   page.
-- Why this page exists: [reviews/stepback_20261116.md](reviews/stepback_20261116.md).
+- Why this page exists: [reviews/stepback_20261116.md](reviews/stepback_20261116.md). The plan it follows:
+  [reviews/plan_20261117.md](reviews/plan_20261117.md).
 - The owner's reading guide: [START_HERE.fr.md](guides/START_HERE.fr.md).
 
 ## En bref (pour le propriétaire)
+- **Le plan (17-11-2026).** Une seule question jusqu'en mai 2027 : faut-il mettre une petite mise réelle sur le
+  portage de financement entre plateformes, et sur quel livre ?
+  - Huit livres sur papier y répondent, chacun avec sa règle figée avant ses premiers jours.
+  - Tout le reste devient de la surveillance, lue à sa date, sans travail entre-temps.
+  - Priorité n°1 : que ces huit livres tournent à l'heure. R278, R279 et R294 ont perdu des jours pendant l'arrêt du
+    conteneur début novembre ; il ne leur reste que 3 jours de retard permis avant leur lecture de janvier.
+  - Le détail et les raisons : [le plan](reviews/plan_20261117.md).
 - **Argent.** Aucun argent réel n'est engagé. Aucune stratégie n'a encore réussi l'épreuve du papier sur des jours
   nouveaux. La règle par défaut est donc : pas de trade.
 - **Ce qu'on a appris.** La plupart des idées étaient réelles mais plus petites que les frais pour les exécuter.
@@ -24,10 +32,16 @@
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
   - quelques règles de week-end ou d'ouverture US.
-- **Calendrier.** Premières lectures d'arrêt en février 2027. Première réussite possible en mai 2027.
+- **Calendrier.** Les données décisives arrivent entre le 20 janvier et le 9 février 2027 : premières lectures
+  des huit livres de portage. Les deuxièmes lectures (réussite ou échec, sans « on continue ») tombent du 20 avril au
+  10 mai 2027.
 - **Ce qui tourne.** Tout tourne seul sur GitHub, sans e-mail.
 - **Ce qu'on te demandera.** Uniquement les décisions qui sont les tiennes : argent, comptes, gros téléchargements,
-  budget, ou rallumer le réveil hebdomadaire.
+  budget, ou rallumer le réveil hebdomadaire. Avant le 15 janvier 2027, deux réponses rendront une réussite
+  utilisable tout de suite :
+  - sur quelles plateformes tu peux tenir un compte de contrats perpétuels, selon leurs propres règles (Binance,
+    Gate, KuCoin, MEXC ; Hyperliquid et Lighter ne demandent qu'un portefeuille) ;
+  - la perte maximale que tu acceptes sur un premier essai réel.
 
 ## 1. Money
 - **No real money is engaged.**
@@ -106,13 +120,20 @@
 |---|---|
 | 2026-11-18 00:00 UTC | R404 `book_costs_v1` closes (cost snapshots; its writer is the workflow) |
 | 2026-11-19 00:00 UTC | Codex's R420 dispatch ends by design. At the next session, confirm the four `quant-*` workflows only report health, then retire them by the runtime's `active_contract` route |
+| 2026-12-01..07 | R498 `gatefill_fwd`: read the queue and fills of a resting Gate order (it changes no lane) |
+| before 2027-01-15 | Owner: which venues you can hold, and the stake you would risk on a first real trial ([plan](reviews/plan_20261117.md) section 5); the small-stake plan is frozen with them before 2027-01-20 |
+| 2027-01-20 / 01-21 | First looks of carry books R278 (A, B, C) and R279 (A, B), then R294 |
 | 2027-02-01 | R469 `asiaclose_c`, its one read |
+| 2027-02-02 | R390 C14 Binance + Gate, first look |
 | 2027-02-08 | first frozen look of the R441-R447 reads (`claude-xperp-reads.yml`) |
+| 2027-02-09 | R440 five-venue carry, first look |
 | 2027-02-13 | R474 and R479 futility reads (a NULL stops them; no PASS is possible here) |
+| 2027-04-20 / 04-21 | Second looks (PASS or FAIL) of R278, R279, R294 |
+| 2027-05-03 / 05-10 | Second looks of R390 and R440 |
 | 2027-05-09 / 05-15 | second R441-R447 look; R474 and R479 final; R415 `paperacct_fwd`; R480 and R482 futility |
 | 2027-10-01 | R406 and R413 latest read |
 | 2027-11-13 | R480 and R482 final |
-| count-based | R371/R457 (125, then 500 scored days), weekend lanes R459/R463/R467, carry books R390/R440, R454/R455 (90, then 365 counted days): see each PREREG |
+| count-based | R371/R457 (125, then 500 scored days), weekend lanes R459/R463/R467, R454/R455 (90, then 365 counted days): see each PREREG |
 
 ## 4. How the project runs (charter of 2026-11-16; reasons in the review)
 1. **Decision first.** A new lane names the decision it feeds and its date. If it cannot decide within about a year
@@ -143,7 +164,39 @@
 
 **Upkeep check** (at each session, or weekly if the owner turns the weekly task on). Each item is bounded to one
 session; an item that needs the owner stops and asks:
-1. Run `python scripts/lane_census.py`.
-2. Any `workflow-quiet` row means a writer that stopped: read its last run.
-3. Read any decision that falls due.
-4. Rewrite this page if anything changed.
+1. Run `python scripts/carry_timing.py`. It counts the late-day budget of the eight deciding carry books from
+   `decisions.csv` only, never their returns. A failed `claude-carry-paper.yml` run is fixed before any other work.
+2. Run `python scripts/lane_census.py`.
+3. Any `workflow-quiet` row means a writer that stopped: read its last run.
+4. Read any decision that falls due.
+5. Rewrite this page if anything changed.
+
+## 5. The plan to 2027-05 (from 2026-11-17; reasons in [the plan](reviews/plan_20261117.md))
+1. **One decision.** Should the owner put a small real stake into cross-venue funding carry, on which book, at what
+   size, with which orders? The archive supports the premium (R437, R191, R286, R391). Its open doubts concern
+   execution: blowout exits whose prices may not be tradable, and gains concentrated in a few days. Only live data
+   settle them.
+2. **Eight forward books answer it**, each by its own frozen rule. First looks fall on 2027-01-20..02-09, second looks
+   (PASS or FAIL) on 2027-04-20..05-10.
+3. **First priority: keep them on time.** On 2026-11-17, R278, R279 and R294 can take only 3 more `late` days before
+   their January verdict is labelled degraded timing. R390 can take 12, R440 18.
+4. **A PASS is made actionable in advance.**
+   - The owner answers two questions before 2027-01-15: which venues they can hold, and the stake they would risk.
+   - A small-stake plan, with its own registry row, is frozen before 2027-01-20. It covers:
+     - gates 2 and 3 for these venues: market orders inside each leg's measured cost, caps, stops, and a margin
+       replay;
+     - the operations paper does not model;
+     - the paired real-against-paper measurement.
+   - **A book qualifies only if:**
+     - it PASSes by its own rule;
+     - it is one of the seven pre-committed books (never R278 C);
+     - no more than 3 of those seven are FAIL (a look FAIL or the kill switch).
+   - That rule only adds caution; no lane's verdict changes. The cross-lane bar is reported beside every PASS: z 2.69
+     for 7 books × 2 looks.
+5. **Everything else is monitoring**, read on its date with no interim work.
+   - A new forward lane needs at least 80% power within six months at half the archive effect; otherwise the idea
+     goes to the queue with its power note.
+   - Zero-trial cost or fidelity measurements for the carry decision are exempt.
+   - The charter's three rows a week still applies.
+6. **If every carry book FAILs,** carry is closed for real money on these venues. The France-reachable reads
+   (2027-02..05) decide the fallback, and a new step back comes before any new family.

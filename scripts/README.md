@@ -422,7 +422,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (103)
+## Tools and everything else (104)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -436,6 +436,7 @@ line is the first line of the script's own docstring.
 - [`boroslock_fwd_rule.py`](boroslock_fwd_rule.py): The rule of R413 boroslock_fwd: Boros funding locks on paper, priced from the live order book (pure functions only).
 - [`calib_settlelit_fwd.py`](calib_settlelit_fwd.py): R364 settlelit_fwd: the look bounds' size and power, from R363's frozen hops, before the freeze.
 - [`capture_mexc_funding_forecasts.py`](capture_mexc_funding_forecasts.py): One-shot public MEXC next-funding capture.
+- [`carry_timing.py`](carry_timing.py): Timing budget of the forward carry books: how many more `late` days each can take before its frozen read is labelled "degraded timing".
 - [`catalog.py`](catalog.py): Plain-language catalogs of the repository's folders, rebuilt from what the files already say.
 - [`check.py`](check.py): One offline unittest entry point: full release gate or bounded feedback.
 - [`clock_check.py`](clock_check.py): Local clock check against three public exchange clocks, and a gradual correction (data collection support only).

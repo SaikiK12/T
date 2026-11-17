@@ -30,6 +30,7 @@ A pre-registered strategy-discovery lab for crypto perpetual futures.
 - It covers money, what runs, dates, and the charter of 2026-11-16 for how the project runs.
 - It is rewritten in place; check its date.
 - Why it exists: [the 2026-11-16 step-back review](docs/reviews/stepback_20261116.md).
+- The plan it follows to 2027-05: [plan of 2026-11-17](docs/reviews/plan_20261117.md).
 
 Coordination:
 - [Issue #7](https://github.com/SaikiK12/T/issues/7) holds writer claims and handoffs.
@@ -197,6 +198,8 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Plan, 2026-11-17](docs/reviews/plan_20261117.md): one decision (a small real stake in funding carry) and the
+    eight forward books that can settle it in 2027-01..05; what agents do until then.
   - [Step back, 2026-11-16](docs/reviews/stepback_20261116.md): how the project should run; the source of the
     charter.
   - [PnL ranking, 2026-11-11](docs/reviews/pnl_ranking_20261111.md).
