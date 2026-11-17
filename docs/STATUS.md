@@ -48,6 +48,14 @@
   - **Ce que ça veut dire.** Le coût ne tue pas C14. Ce qui le fragilise, c'est que 2025 porte l'essentiel : sans
     2025, environ +4,5 %/an, à peine au-dessus des bons du Trésor
     ([résultat](../experiments/carrycost_hist_v2/FINDINGS.md)).
+- **Le même portage avec un contrat CME (R502, 17-11, cinq ans d'historique pour 0,25 $ de données).**
+  - **Méthode.** Le future bitcoin du CME contre le perpétuel Binance : on parie que l'écart entre le financement du
+    perpétuel et la prime du future se referme.
+  - **Résultat. Faible :** +2,89 %/an net en micro (MBT), t = 3,2, sous le seuil de 4,13 %. Négatif à coûts doublés.
+    L'éther (MET) est négatif.
+  - **Pourquoi.** L'écart existe (6,97 %/an brut), mais les frais fixes du micro-contrat en prennent environ 3 points.
+    L'écart s'est aussi resserré depuis 2024 : presque rien en 2025. Pas de voie papier méritée
+    ([résultat](../experiments/cmecarry_v2/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
