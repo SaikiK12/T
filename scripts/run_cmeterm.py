@@ -1,5 +1,4 @@
-"""Draft for M549, not yet registered (cmeterm_v1): commodity term-structure carry on CME futures, 2010-09..2026-10,
-at daily settlements. Blocked on a Databento key; register and freeze a PREREG before any in-window pull.
+"""R503 cmeterm_v1 (M549): commodity term-structure carry on CME futures, 2010-09..2026-10, at daily settlements.
 
 The book (Gorton-Hayashi-Rouwenhorst backwardation, Koijen-Moskowitz-Pedersen-Vrugt carry), with CME specifics:
 

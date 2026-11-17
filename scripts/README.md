@@ -184,7 +184,7 @@ line is the first line of the script's own docstring.
 - [`run_cmecarry.py`](run_cmecarry.py): R501 cmecarry_v1: CME bitcoin (and ether) futures against the Binance perp, a funding-versus-basis carry.
 - [`run_cmecarry_v2.py`](run_cmecarry_v2.py): R502 cmecarry_v2 (R501's rule; R501 crashed at its first summary before any statistic): CME bitcoin (and ether) futures against the Binance perp, a funding-versus-basis carry.
 - [`run_cmelead.py`](run_cmelead.py): R370 cmelead_v1 runner, frozen in experiments/cmelead_v1/PREREG.md: after an EIA release moves CME's crude or gas future, does Binance's TradFi perp lag it long enough for a taker to earn the ...
-- [`run_cmeterm.py`](run_cmeterm.py): Draft for M549, not yet registered (cmeterm_v1): commodity term-structure carry on CME futures, 2010-09..2026-10, at daily settlements.
+- [`run_cmeterm.py`](run_cmeterm.py): R503 cmeterm_v1 (M549): commodity term-structure carry on CME futures, 2010-09..2026-10, at daily settlements.
 - [`run_confidence.py`](run_confidence.py): R331 four committed stages: train, calibrate, select, evaluate.
 - [`run_context_atlas.py`](run_context_atlas.py): atlas_ctx (R192): context lifts of the atlas signals, as set out in experiments/atlas_ctx/PREREG.md.
 - [`run_continuation_control.py`](run_continuation_control.py): R323 fixed conditional continuation policies and common-account replay.
