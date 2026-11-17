@@ -3008,8 +3008,8 @@
       "sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48"
     },
     "data/operations/quant_quote_scope_v1/dispatch.jsonl": {
-      "mtime_ns": 1794886320219476156,
-      "sha256": "4cecd2fef3d77141fddf7734b0ef22956c737b486682d74f5d9243bfdb49edf5"
+      "mtime_ns": 1794890331606782079,
+      "sha256": "09dafaeb5457eefa664426683fac7e5d8c8eb5db38f3950a025cb83d22d83f21"
     },
     "data/operations/quant_quote_scope_v1/latest.json": {
       "mtime_ns": 1794886320219476156,
@@ -7710,6 +7710,10 @@
     "data/operations/quant_quote_scope_v1/runs/20261117T03/reservation.json": {
       "mtime_ns": 1794886311478826495,
       "sha256": "76b159fb3090481e1c862c1456759457da3e57d26c90bbcbc034e84da22bd835"
+    },
+    "data/operations/quant_quote_scope_v1/runs/20261117T04/reservation.json": {
+      "mtime_ns": 1794890331606782079,
+      "sha256": "7d170d21b3a1adfa2310e68d69e0b0fc159f41bc9f345fe1296c96762606c1a6"
     },
     "data/operations/quant_takeover_v1/dispatch.jsonl": {
       "mtime_ns": 1794059802320170768,
@@ -12488,7 +12492,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_quote_scope_v1/latest.json",
+  "last_report": "data/operations/quant_quote_scope_v1/runs/20261117T04/reservation.json",
   "meaning": "R429 selected; same native paper rules, scoped DTB3 data and all original limits",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -12499,5 +12503,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-17T03:32:04.436941+00:00"
+  "updated_utc": "2026-11-17T04:38:52.383103+00:00"
 }
