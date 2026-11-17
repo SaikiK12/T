@@ -1,0 +1,703 @@
+{
+ "events": 2544,
+ "window": [
+  "2021-07-01",
+  "2026-09-30"
+ ],
+ "fees_bp": {
+  "gate": 7.5,
+  "binance": 5.0
+ },
+ "flat_bp": 7.0,
+ "hurdle_pct": 4.13,
+ "median_250": {
+  "measured": {
+   "gate": 2471,
+   "binance": 1960
+  },
+  "imputed": {
+   "gate": 73,
+   "binance": 584
+  },
+  "gate_allin_mean_bp": 16.654,
+  "gate_allin_median_bp": 13.577,
+  "binance_allin_mean_bp": 7.504,
+  "binance_allin_median_bp": 6.822,
+  "per_leg_side_mean_bp": 12.079,
+  "multiple_of_flat": 1.726,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.3462,
+   "ann_pct": 8.564
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 2.2457,
+    "ann_pct": 8.197
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.8664,
+    "ann_pct": 6.812
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.4134,
+    "ann_pct": 1.509
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 1.1589,
+    "ann_pct": 4.23
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.3758,
+    "ann_pct": 23.272
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.8442,
+    "ann_pct": 6.731
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 3.2418,
+   "ann_pct": 11.833
+  }
+ },
+ "median_1000": {
+  "measured": {
+   "gate": 2470,
+   "binance": 1959
+  },
+  "imputed": {
+   "gate": 74,
+   "binance": 585
+  },
+  "gate_allin_mean_bp": 20.427,
+  "gate_allin_median_bp": 15.413,
+  "binance_allin_mean_bp": 8.708,
+  "binance_allin_median_bp": 7.613,
+  "per_leg_side_mean_bp": 14.567,
+  "multiple_of_flat": 2.081,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.1823,
+   "ann_pct": 7.965
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 1.9444,
+    "ann_pct": 7.097
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.7693,
+    "ann_pct": 6.458
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.3328,
+    "ann_pct": 1.215
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 1.0531,
+    "ann_pct": 3.844
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.1981,
+    "ann_pct": 22.623
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.5125,
+    "ann_pct": 5.521
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 3.0485,
+   "ann_pct": 11.127
+  },
+  "net_walk_2x": {
+   "days": 1918,
+   "mean_bp_day": 1.6321,
+   "ann_pct": 5.957
+  },
+  "net_walk_3x": {
+   "days": 1918,
+   "mean_bp_day": 1.082,
+   "ann_pct": 3.949
+  }
+ },
+ "median_5000": {
+  "measured": {
+   "gate": 2466,
+   "binance": 1878
+  },
+  "imputed": {
+   "gate": 78,
+   "binance": 666
+  },
+  "gate_allin_mean_bp": 36.191,
+  "gate_allin_median_bp": 20.976,
+  "binance_allin_mean_bp": 11.924,
+  "binance_allin_median_bp": 9.977,
+  "per_leg_side_mean_bp": 24.058,
+  "multiple_of_flat": 3.437,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 1.5563,
+   "ann_pct": 5.681
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 0.4727,
+    "ann_pct": 1.725
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.4899,
+    "ann_pct": 5.438
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.0631,
+    "ann_pct": 0.23
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 0.63,
+    "ann_pct": 2.299
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 5.5737,
+    "ann_pct": 20.344
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 0.2425,
+    "ann_pct": 0.885
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 2.3219,
+   "ann_pct": 8.475
+  }
+ },
+ "snap0_250": {
+  "measured": {
+   "gate": 2475,
+   "binance": 1960
+  },
+  "imputed": {
+   "gate": 69,
+   "binance": 584
+  },
+  "gate_allin_mean_bp": 19.239,
+  "gate_allin_median_bp": 13.684,
+  "binance_allin_mean_bp": 7.71,
+  "binance_allin_median_bp": 6.97,
+  "per_leg_side_mean_bp": 13.474,
+  "multiple_of_flat": 1.925,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.2557,
+   "ann_pct": 8.233
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 1.8357,
+    "ann_pct": 6.7
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.8272,
+    "ann_pct": 6.669
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.3427,
+    "ann_pct": 1.251
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 1.1118,
+    "ann_pct": 4.058
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.3036,
+    "ann_pct": 23.008
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.791,
+    "ann_pct": 6.537
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 3.1839,
+   "ann_pct": 11.621
+  }
+ },
+ "snap0_1000": {
+  "measured": {
+   "gate": 2473,
+   "binance": 1958
+  },
+  "imputed": {
+   "gate": 71,
+   "binance": 586
+  },
+  "gate_allin_mean_bp": 24.489,
+  "gate_allin_median_bp": 15.727,
+  "binance_allin_mean_bp": 8.899,
+  "binance_allin_median_bp": 7.746,
+  "per_leg_side_mean_bp": 16.694,
+  "multiple_of_flat": 2.385,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.0443,
+   "ann_pct": 7.462
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 1.3284,
+    "ann_pct": 4.849
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.7196,
+    "ann_pct": 6.277
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.2889,
+    "ann_pct": 1.055
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 0.9212,
+    "ann_pct": 3.363
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.0771,
+    "ann_pct": 22.182
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.4212,
+    "ann_pct": 5.188
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 2.9316,
+   "ann_pct": 10.7
+  }
+ },
+ "snap0_5000": {
+  "measured": {
+   "gate": 2462,
+   "binance": 1862
+  },
+  "imputed": {
+   "gate": 82,
+   "binance": 682
+  },
+  "gate_allin_mean_bp": 43.383,
+  "gate_allin_median_bp": 21.737,
+  "binance_allin_mean_bp": 12.104,
+  "binance_allin_median_bp": 10.126,
+  "per_leg_side_mean_bp": 27.743,
+  "multiple_of_flat": 3.963,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 1.3189,
+   "ann_pct": 4.814
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 0.3969,
+    "ann_pct": 1.449
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.2144,
+    "ann_pct": 4.433
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": -0.1087,
+    "ann_pct": -0.397
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 0.3344,
+    "ann_pct": 1.221
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 5.3629,
+    "ann_pct": 19.574
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": -0.0983,
+    "ann_pct": -0.359
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 2.0448,
+   "ann_pct": 7.464
+  }
+ },
+ "best_250": {
+  "measured": {
+   "gate": 2471,
+   "binance": 1960
+  },
+  "imputed": {
+   "gate": 73,
+   "binance": 584
+  },
+  "gate_allin_mean_bp": 11.678,
+  "gate_allin_median_bp": 9.699,
+  "binance_allin_mean_bp": 6.637,
+  "binance_allin_median_bp": 5.954,
+  "per_leg_side_mean_bp": 9.157,
+  "multiple_of_flat": 1.308,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.5439,
+   "ann_pct": 9.285
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 2.6075,
+    "ann_pct": 9.517
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 2.0634,
+    "ann_pct": 7.531
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.5438,
+    "ann_pct": 1.985
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 1.2982,
+    "ann_pct": 4.738
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.5699,
+    "ann_pct": 23.98
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 2.1047,
+    "ann_pct": 7.682
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 3.434,
+   "ann_pct": 12.534
+  }
+ },
+ "best_1000": {
+  "measured": {
+   "gate": 2470,
+   "binance": 1959
+  },
+  "imputed": {
+   "gate": 74,
+   "binance": 585
+  },
+  "gate_allin_mean_bp": 13.655,
+  "gate_allin_median_bp": 10.522,
+  "binance_allin_mean_bp": 7.135,
+  "binance_allin_median_bp": 6.251,
+  "per_leg_side_mean_bp": 10.395,
+  "multiple_of_flat": 1.485,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.462,
+   "ann_pct": 8.986
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 2.4599,
+    "ann_pct": 8.979
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.9909,
+    "ann_pct": 7.267
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.5098,
+    "ann_pct": 1.861
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 1.2402,
+    "ann_pct": 4.527
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.5126,
+    "ann_pct": 23.771
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.9261,
+    "ann_pct": 7.03
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 3.3434,
+   "ann_pct": 12.204
+  }
+ },
+ "best_5000": {
+  "measured": {
+   "gate": 2466,
+   "binance": 1878
+  },
+  "imputed": {
+   "gate": 78,
+   "binance": 666
+  },
+  "gate_allin_mean_bp": 22.113,
+  "gate_allin_median_bp": 13.966,
+  "binance_allin_mean_bp": 9.152,
+  "binance_allin_median_bp": 7.531,
+  "per_leg_side_mean_bp": 15.633,
+  "multiple_of_flat": 2.233,
+  "net": {
+   "days": 1918,
+   "mean_bp_day": 2.1146,
+   "ann_pct": 7.718
+  },
+  "flat": {
+   "1x": {
+    "days": 1918,
+    "mean_bp_day": 2.6824,
+    "ann_pct": 9.791
+   },
+   "2x": {
+    "days": 1918,
+    "mean_bp_day": 2.2145,
+    "ann_pct": 8.083
+   },
+   "3x": {
+    "days": 1918,
+    "mean_bp_day": 1.7466,
+    "ann_pct": 6.375
+   }
+  },
+  "by_year": {
+   "2021": {
+    "days": 184,
+    "mean_bp_day": 2.005,
+    "ann_pct": 7.318
+   },
+   "2022": {
+    "days": 365,
+    "mean_bp_day": 1.8836,
+    "ann_pct": 6.875
+   },
+   "2023": {
+    "days": 365,
+    "mean_bp_day": 0.3388,
+    "ann_pct": 1.237
+   },
+   "2024": {
+    "days": 366,
+    "mean_bp_day": 0.9377,
+    "ann_pct": 3.423
+   },
+   "2025": {
+    "days": 365,
+    "mean_bp_day": 6.1553,
+    "ann_pct": 22.467
+   },
+   "2026": {
+    "days": 273,
+    "mean_bp_day": 1.0466,
+    "ann_pct": 3.82
+   }
+  },
+  "since_2024": {
+   "days": 1004,
+   "mean_bp_day": 2.8641,
+   "ann_pct": 10.454
+  }
+ },
+ "verdict": "COST_OK",
+ "share_events_missing_primary": {
+  "gate": 0.0291,
+  "binance": 0.23
+ }
+}

@@ -201,6 +201,8 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Room 2, 2026-11-17 evening](docs/reviews/room2_20261117.md): longer samples, freer agents, days instead of
+    months; recorded order books for C14's costs (R500) and a CME lane (R501).
   - [Haiku room, 2026-11-17](docs/reviews/room_haiku_20261117.md), in French: can history suffice without live paper,
     and how to organise the folders. It revised the plan (section 9).
   - [Plan, 2026-11-17](docs/reviews/plan_20261117.md): one decision (a small real stake in funding carry) and the
