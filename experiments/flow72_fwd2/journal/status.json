@@ -1,14 +1,14 @@
 {
- "last_hour": "2026-11-16T23:00:00+00:00",
- "days_scored": 46,
+ "last_hour": "2026-11-17T00:00:00+00:00",
+ "days_scored": 47,
  "short_now": {
   "tvc": [
    "KORUUSDT",
    "NVDAUSDT",
+   "SNXXUSDT",
    "SPCXUSDT",
    "TQQQUSDT",
-   "TSLAUSDT",
-   "XAGUSDT"
+   "TSLAUSDT"
   ],
   "t24": [
    "BTCUSDT",
@@ -19,23 +19,23 @@
    "SNXXUSDT"
   ],
   "t4": [
-   "BTCUSDT",
    "JCTUSDT",
    "NVDAUSDT",
+   "SAMSUNGUSDT",
+   "SKHYNIXUSDT",
    "SNDKUSDT",
-   "SNXXUSDT",
-   "SOLUSDT"
+   "SNXXUSDT"
   ]
  },
  "A": {
-  "days": 46,
-  "total": 0.19630870234818726,
-  "total_2x": 0.16682877524927014,
-  "total_3x": 0.13734884815035248,
+  "days": 47,
+  "total": 0.22921874669052966,
+  "total_2x": 0.19916096070751194,
+  "total_3x": 0.16910317472449357,
   "go_real": {
-   "n": 46,
-   "mean": 0.004267580485830158,
-   "hit": 0.5652173913043478,
+   "n": 47,
+   "mean": 0.004876994610436802,
+   "hit": 0.574468085106383,
    "worst": -0.1072537748171812,
    "invalid_n": 0,
    "n_clusters": null,
@@ -48,9 +48,9 @@
    },
    "pass": true
   },
-  "ann": 1.5576668773280078,
-  "sharpe": 1.9817416194034638,
-  "t_nw": 0.8277177637133617,
+  "ann": 1.7801030328094327,
+  "sharpe": 2.277787205073463,
+  "t_nw": 1.022996301500139,
   "max_dd": 0.1818745574396799,
   "prereg": {
    "pass_now": false,
@@ -60,14 +60,14 @@
   }
  },
  "B": {
-  "days": 46,
-  "total": 0.11266330495520499,
-  "total_2x": 0.1074157022226665,
-  "total_3x": 0.1021680994901285,
+  "days": 47,
+  "total": 0.1420297012990765,
+  "total_2x": 0.1366881741343749,
+  "total_3x": 0.1313466469696739,
   "go_real": {
-   "n": 46,
-   "mean": 0.002449202281634891,
-   "hit": 0.5434782608695652,
+   "n": 47,
+   "mean": 0.0030219085382782234,
+   "hit": 0.5531914893617021,
    "worst": -0.03223418510261,
    "invalid_n": 0,
    "n_clusters": null,
@@ -75,14 +75,14 @@
     "finite_returns": true,
     "enough_scored": true,
     "mean_positive": true,
-    "hit_rate": false,
+    "hit_rate": true,
     "no_tail_event": true
    },
-   "pass": false
+   "pass": true
   },
-  "ann": 0.8939588327967352,
-  "sharpe": 2.7303948820625292,
-  "t_nw": 1.002235228190548,
+  "ann": 1.1029966164715514,
+  "sharpe": 3.31822187722476,
+  "t_nw": 1.3535334338563927,
   "max_dd": 0.058476987739244035,
   "prereg": {
    "pass_now": false,
