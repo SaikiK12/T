@@ -145,7 +145,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (216)
+## Run: one lane's frozen measurement (217)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -170,6 +170,7 @@ line is the first line of the script's own docstring.
 - [`run_carry_v2_audit.py`](run_carry_v2_audit.py): R437 carry_v2_audit_v1: R275's seven headline carry books re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_v1/PREREG.md.
 - [`run_carry_v2_audit_kc.py`](run_carry_v2_audit_kc.py): R438 carry_v2_audit_kc_v1: R277's two KuCoin carry books (forward on paper as R279 A and B) re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_kc_v1/PREREG.md.
 - [`run_carrycost_hist.py`](run_carrycost_hist.py): R499 carrycost_hist_v1: what R390's C14 book (binance+gate, R275's v1 engine) would have paid at each of its real entries and exits, 2021-07..2026-09, on the venues' recorded order books instead ...
+- [`run_carrycost_hist_v2.py`](run_carrycost_hist_v2.py): R500 carrycost_hist_v2 (R499's question, costs derived at fetch time): what R390's C14 book (binance+gate, R275's v1 engine) would have paid at each of its real entries and exits, ...
 - [`run_carrycrash.py`](run_carrycrash.py): carrycrash_v1 (R207): high market-wide carry as a BTC crash signal, as set out in experiments/carrycrash_v1/PREREG.md.
 - [`run_carryhurdle.py`](run_carryhurdle.py): carryhurdle_v1 (R483, M478/M481, gate 0): do the lab's audited cross-venue carry books beat the passive stablecoin yields that harvest the same payer (Ethena sUSDe) or lend the same dollars (Aave ...
 - [`run_cascmkt.py`](run_cascmkt.py): cascmkt_v1 (R253): buy the equal-weight market for 24 h after an hour in which at least 3 top-50 perps show R252's long-cascade trigger, as set out in experiments/cascmkt_v1/PREREG.md.

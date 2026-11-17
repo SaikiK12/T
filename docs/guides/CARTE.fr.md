@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 37 | 8 | 5 | 5 | 11 | 8 |
+| [Portage de financement crypto entre plateformes](#carry) | 38 | 8 | 5 | 5 | 11 | 9 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **278** | **13** | **47** | **126** | **47** | **45** |
+| **Total** | **279** | **13** | **47** | **126** | **47** | **46** |
 
 <a id="carry"></a>
 
@@ -83,6 +83,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R445 | [`hlspot_pm_v1`](../../experiments/hlspot_pm_v1) | M504 R444's Hyperliquid spot-against-perp carry on HYPE and BTC only (the spot tokens with a listed portfolio… | en cours |
 | R483 | [`carryhurdle_v1`](../../experiments/carryhurdle_v1) | M478/M481 gate 0: do the six forward cross-venue carry books (R278 A/B/C, R390 A, R279 A/B; R437/R438 engine… | confirmé (historique) |
 | R499 | [`carrycost_hist_v1`](../../experiments/carrycost_hist_v1) | M547 measurement: R390's C14 book (binance+gate, R275 v1) with each real entry and exit 2021-07..2026-09 char… | enregistré |
+| R500 | [`carrycost_hist_v2`](../../experiments/carrycost_hist_v2) | M547 measurement (supersedes R499 before any cost was read): R390's C14 book (binance+gate, R275 v1) with eac… | enregistré |
 
 <a id="carry-tradfi"></a>
 
