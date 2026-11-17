@@ -1,5 +1,5 @@
 {
- "last_scored_hour": "2026-11-17T06:00:00+00:00",
+ "last_scored_hour": "2026-11-17T07:00:00+00:00",
  "days_ticketed": 47,
  "BIN": {
   "coverage": {
@@ -7,8 +7,13 @@
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.20396701511737475,
+  "market_mean_apr_now": -0.18108981247134662,
   "top_apr_now": [
+   {
+    "symbol": "EVAAUSDT",
+    "apr": 1.0511416054881315,
+    "spot": false
+   },
    {
     "symbol": "KORUUSDT",
     "apr": 0.4846214313389889,
@@ -27,11 +32,6 @@
    {
     "symbol": "NBISUSDT",
     "apr": 0.31741738722606294,
-    "spot": false
-   },
-   {
-    "symbol": "SNXXUSDT",
-    "apr": 0.3131079588355116,
     "spot": false
    }
   ],
@@ -77,8 +77,13 @@
     "apr": 0.42753666489564546
    }
   ],
-  "market_mean_apr_now": -0.5335347808160221,
+  "market_mean_apr_now": -0.4838154321538468,
   "top_apr_now": [
+   {
+    "symbol": "EVAAUSDT",
+    "apr": 1.0533900091528874,
+    "spot": true
+   },
    {
     "symbol": "JCTUSDT",
     "apr": 0.42753666489564546,
@@ -97,11 +102,6 @@
    {
     "symbol": "HYPEUSDT",
     "apr": 0.09270999785712775,
-    "spot": true
-   },
-   {
-    "symbol": "NEARUSDT",
-    "apr": 0.08747833273901051,
     "spot": true
    }
   ],
