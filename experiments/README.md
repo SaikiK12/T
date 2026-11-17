@@ -64,8 +64,10 @@ batch or a measurement; this heading does not turn them into forward paper evide
 - **[mexc_fwd](mexc_fwd/)** R215, RUNNING PENDING, 2 trials. R200 forward signals traded on MEXC prices and funding, one bar late (owner venue) ([PREREG](mexc_fwd/PREREG.md), [journal](mexc_fwd/journal/))
 - **[flow72_fwd3](flow72_fwd3/)** R214, RUNNING PENDING, 3 trials. R200 forward books entered one bar after the signal bar (Codex timing finding) ([PREREG](flow72_fwd3/PREREG.md), [journal](flow72_fwd3/journal/))
 
-## Other registered rounds (done, registered or planned) (225)
+## Other registered rounds (done, registered or planned) (227)
 
+- **[cmecarry_v1](cmecarry_v1/)** R501, REGISTERED PENDING, 1 trial. M548 gate 1 on history: CME bitcoin futures (MBT costs) against the Binance perp, s = 7-day funding - basis to the held contract's expiry, +1 long future/short perp at s>=10%/yr, -1 at s<=-10, out at |s|<5, front month while 14+ days to expiry, CME settlement marks, fees per contract and measured top-of-book spread; 2021-05-03..2026-09-30; PASS = net >= 4.13%/yr and NW t >= 2 ([PREREG](cmecarry_v1/PREREG.md))
+- **[carrycost_hist_v2](carrycost_hist_v2/)** R500, REGISTERED PENDING, 0 trials. M547 measurement (supersedes R499 before any cost was read): R390's C14 book (binance+gate, R275 v1) with each real entry and exit 2021-07..2026-09 charged the recorded book cost at 00:00-01:00 UTC (Gate public hourly order-book archive, exact hour, reduced at fetch; Binance Tardis free first-day-of-month book, first 15 minutes, as proxy), walk + taker fee at $250/$1k/$5k, against the flat 7 bp; verdict COST_OK/BINDS/KILLS vs R275's 4.13%/yr hurdle at $1k ([PREREG](carrycost_hist_v2/PREREG.md))
 - **[carrycost_hist_v1](carrycost_hist_v1/)** R499, REGISTERED PENDING, 0 trials. M547 measurement: R390's C14 book (binance+gate, R275 v1) with each real entry and exit 2021-07..2026-09 charged the recorded book cost at 00:00-01:00 UTC (Gate public hourly order-book archive, exact hour; Binance Tardis free first-day-of-month book as proxy), walk + taker fee at $250/$1k/$5k, against the flat 7 bp; verdict COST_OK/BINDS/KILLS vs R275's 4.13%/yr hurdle at $1k ([PREREG](carrycost_hist_v1/PREREG.md))
 - **[gatemaker_v1](gatemaker_v1/)** R497, DONE DATA_PASS, 0 trials. M546 measurement: what a resting order at the touch earns or loses on Gate's USDT perps (5-second markout) against a taker's effective half-spread plus the 7.5 bp fee, from Gate's public trade tape 2026-11-02..15 (60 sampled contracts, 28 one-hour windows); lever 2 of the 2026-11-16 fee method for C14's Gate leg ([PREREG](gatemaker_v1/PREREG.md), [FINDINGS](gatemaker_v1/FINDINGS.md))
 - **[usdeflow_v1](usdeflow_v1/)** R488, DONE NULL, 2 trials. M535 gate 0: does the weekly log change in USDe circulating supply (DefiLlama id 146, end-of-ISO-week stamp) rank-correlate with the change in Hyperliquid mean hourly funding from week t to t+1 for BTC and ETH (both decide), circular-shift null excluding shifts within +/-4 weeks; weeks from the first with supply > $100m to target weeks ending 2026-11-08; six forward carry books' week-ahead net reported at 1x/2x/3x ([PREREG](usdeflow_v1/PREREG.md), [FINDINGS](usdeflow_v1/FINDINGS.md))
@@ -311,9 +313,7 @@ it is neither a null result nor permission to recreate the round. Paths below ar
 - **[propsim_v1](propsim_v1/)** Edge map used by the prop-firm simulation (R202 propfirm_v1)
 - **[recorders](recorders/)** Point-in-time recorders: MEXC tickers, Binance notices, unlock calendar; digests of what was recorded
 
-## Unregistered folders (1)
+## Unregistered folders (0)
 
 These have no registry row and are not classified as collection folders. Inspect their scope and freeze
 state before use; their presence does not establish a registered or completed study.
-
-- **[carrycost_hist_v2](carrycost_hist_v2/)** No registry row; scope unclassified.
