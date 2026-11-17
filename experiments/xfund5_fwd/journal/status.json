@@ -1,51 +1,51 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-16T02:38:21.746699+00:00",
+ "updated": "2026-11-17T02:29:11.626953+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.0,
-  "hyperliquid": 0.977,
-  "mexc": 0.994,
+  "gate": 0.977,
+  "hyperliquid": 0.994,
+  "mexc": 1.0,
   "kucoin": 1.0
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "mexc": {
    "files": 520,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "kucoin": {
-   "files": 633,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
-   "failed": 3,
+   "failed": 4,
    "changed_on_overlap": 0,
    "failed_some": [
     "AERGOUSDT",
+    "ANTUSDT",
     "BDXNUSDT",
     "SXPUSDT"
    ]
   },
   "hyperliquid": {
    "files": 216,
-   "failed": 4,
+   "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
-    "GRASS",
-    "HBAR",
-    "RESOLV",
-    "REZ"
+    "LOOM",
+    "USUAL",
+    "VINE"
    ]
   },
-  "gate": {
-   "files": 860,
+  "kucoin": {
+   "files": 633,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -131,12 +131,6 @@
     "spread_in": 0.6314
    },
    {
-    "coin": "AKEUSDT",
-    "long": "binance",
-    "short": "kucoin",
-    "spread_in": 0.6648
-   },
-   {
     "coin": "ERAUSDT",
     "long": "gate",
     "short": "binance",
@@ -177,18 +171,24 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.6934
+   },
+   {
+    "coin": "KAVAUSDT",
+    "long": "kucoin",
+    "short": "binance",
+    "spread_in": 1.0251
    }
   ],
-  "scored_days": 5,
+  "scored_days": 6,
   "late_days": 0,
-  "total": 0.0013271178000000003,
-  "total_2x": 0.0003471177999999999,
-  "total_3x": -0.0006328821999999996,
-  "total_close": -0.0006672313999999996,
-  "nw_t": 0.5447414403589915,
+  "total": 0.0024795687000000004,
+  "total_2x": 0.0014995687,
+  "total_3x": 0.0005195687000000004,
+  "total_close": 0.00048521950000000045,
+  "nw_t": 1.0733975455961564,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-16"
+ "last_day": "2026-11-17"
 }
