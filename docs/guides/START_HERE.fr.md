@@ -11,7 +11,8 @@ et une preuve sur des jours nouveaux correspondent à des étapes différentes.
 | Je veux… | Où regarder |
 |---|---|
 | Savoir ce qui est vrai aujourd'hui (argent, ce qui tourne, dates) | [Statut](../STATUS.md), avec son résumé en français en tête |
-| Comprendre le plan jusqu'en mai 2027 et ce qu'on attend de moi | [Le plan du 17-11-2026](../reviews/plan_20261117.md) (en anglais) ; son résumé en français est en tête du [Statut](../STATUS.md) |
+| Comprendre le plan jusqu'en mai 2027 et ce qu'on attend de moi | [Le plan du 17-11-2026](../reviews/plan_20261117.md) (en anglais, section 9 pour la révision) ; son résumé en français est en tête du [Statut](../STATUS.md) |
+| Savoir ce que veut dire un numéro R, ou voir toutes les expériences d'un même genre | [Carte par familles](CARTE.fr.md) |
 | Comprendre les priorités et mes décisions passées | [Direction du projet](../DIRECTION.md) |
 | Retrouver une piste précise | [Liste vivante des méthodes](../../registry/methods.csv) |
 | Voir ce qu'une expérience a réellement testé | [Catalogue des expériences](../../experiments/README.md), puis ses fichiers PREREG et FINDINGS |

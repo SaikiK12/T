@@ -5,16 +5,26 @@
   page.
 - Why this page exists: [reviews/stepback_20261116.md](reviews/stepback_20261116.md). The plan it follows:
   [reviews/plan_20261117.md](reviews/plan_20261117.md).
-- The owner's reading guide: [START_HERE.fr.md](guides/START_HERE.fr.md).
+- The owner's reading guide: [START_HERE.fr.md](guides/START_HERE.fr.md). Every experiment, by family, in French:
+  [CARTE.fr.md](guides/CARTE.fr.md).
 
 ## En bref (pour le propriétaire)
-- **Le plan (17-11-2026).** Une seule question jusqu'en mai 2027 : faut-il mettre une petite mise réelle sur le
-  portage de financement entre plateformes, et sur quel livre ?
-  - Huit livres sur papier y répondent, chacun avec sa règle figée avant ses premiers jours.
-  - Tout le reste devient de la surveillance, lue à sa date, sans travail entre-temps.
-  - Priorité n°1 : que ces huit livres tournent à l'heure. R278, R279 et R294 ont perdu des jours pendant l'arrêt du
-    conteneur début novembre ; il ne leur reste que 3 jours de retard permis avant leur lecture de janvier.
-  - Le détail et les raisons : [le plan](reviews/plan_20261117.md).
+- **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
+  portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
+  [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
+  - **En semaines.** Trois choses :
+    - la mesure des ordres posés sur Gate (R498), lue du 1er au 7 décembre ;
+    - une réplique du portage sur une plateforme jamais lue (Bitfinex répond depuis ici), avec ses règles figées avant
+      le téléchargement ;
+    - un **pilote de mesure** réel et petit, si tu ajoutes une exception à la règle 6 (voir plus bas).
+  - **En mois.** Les huit livres sur papier, lus de janvier à mai 2027. Ils décident d'**augmenter** la mise, plus de la
+    première petite mise.
+  - **À attendre.** Les répliques à l'aveugle gagnent +0,7 à +2,5 %/an, loin des +10 % des meilleurs livres choisis
+    sur le passé. Il faut compter quelques % par an, et payer les transferts.
+  - Le détail : [le plan](reviews/plan_20261117.md), section 9.
+- **Les numéros R.** R390, par exemple, est le numéro d'une expérience ; son dossier est dans `experiments/`. La
+  [carte](guides/CARTE.fr.md) range les 277 expériences en 14 familles, avec un verdict en un mot. Aucun dossier
+  n'est déplacé, parce que les règles figées pointent vers leurs chemins.
 - **Argent.** Aucun argent réel n'est engagé. Aucune stratégie n'a encore réussi l'épreuve du papier sur des jours
   nouveaux. La règle par défaut est donc : pas de trade.
 - **Ce qu'on a appris.** La plupart des idées étaient réelles mais plus petites que les frais pour les exécuter.
@@ -32,9 +42,9 @@
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
   - quelques règles de week-end ou d'ouverture US.
-- **Calendrier.** Les données décisives arrivent entre le 20 janvier et le 9 février 2027 : premières lectures
-  des huit livres de portage. Les deuxièmes lectures (réussite ou échec, sans « on continue ») tombent du 20 avril au
-  10 mai 2027.
+- **Calendrier.** Pour augmenter la mise, les données décisives arrivent entre le 20 janvier et le 9 février 2027 :
+  ce sont les premières lectures des huit livres de portage. Les deuxièmes lectures (réussite ou échec, sans « on
+  continue ») tombent du 20 avril au 10 mai 2027.
 - **Ce qui tourne.** Tout tourne seul sur GitHub, sans e-mail.
 - **Ce qu'on te demandera.** Uniquement les décisions qui sont les tiennes : argent, comptes, gros téléchargements,
   budget, ou rallumer le réveil hebdomadaire. Avant le 15 janvier 2027, deux réponses rendront une réussite
@@ -42,6 +52,14 @@
   - sur quelles plateformes tu peux tenir un compte de contrats perpétuels, selon leurs propres règles (Binance,
     Gate, KuCoin, MEXC ; Hyperliquid et Lighter ne demandent qu'un portefeuille) ;
   - la perte maximale que tu acceptes sur un premier essai réel.
+- **La règle 6 est la tienne** (« de l'argent réel seulement après que le papier a prouvé un gain net »). Deux options :
+  - **A. La garder.** Le premier essai réel attend une réussite sur papier, au plus tôt le 20 janvier 2027.
+  - **B. Ajouter une exception pour un pilote de mesure.** Texte proposé, à ajouter à la règle 6 d'AGENTS.md :
+    > *Exception (propriétaire, date) : un seul pilote de mesure, d'au plus X $ de capital, peut commencer avant une
+    > réussite sur papier. Son plan est figé et enregistré d'abord. Le propriétaire place les ordres. Le pilote est
+    > jugé sur l'exécution seulement, et n'augmente jamais sans une réussite sur papier.*
+
+    Dis-moi A ou B, et le montant X si B. Je n'écris pas dans AGENTS.md sans ton accord.
 
 ## 1. Money
 - **No real money is engaged.**
@@ -121,6 +139,7 @@
 | 2026-11-18 00:00 UTC | R404 `book_costs_v1` closes (cost snapshots; its writer is the workflow) |
 | 2026-11-19 00:00 UTC | Codex's R420 dispatch ends by design. At the next session, confirm the four `quant-*` workflows only report health, then retire them by the runtime's `active_contract` route |
 | 2026-12-01..07 | R498 `gatefill_fwd`: read the queue and fills of a resting Gate order (it changes no lane) |
+| owner, any time | Rule 6: keep it (A) or add a measurement-pilot exception (B) ([plan](reviews/plan_20261117.md) section 9). With B, the pilot's plan is frozen and registered before any order |
 | before 2027-01-15 | Owner: which venues you can hold, and the stake you would risk on a first real trial ([plan](reviews/plan_20261117.md) section 5); the small-stake plan is frozen with them before 2027-01-20 |
 | 2027-01-20 / 01-21 | First looks of carry books R278 (A, B, C) and R279 (A, B), then R294 |
 | 2027-02-01 | R469 `asiaclose_c`, its one read |
@@ -172,6 +191,18 @@ session; an item that needs the owner stops and asks:
 5. Rewrite this page if anything changed.
 
 ## 5. The plan to 2027-05 (from 2026-11-17; reasons in [the plan](reviews/plan_20261117.md))
+**Revised the same evening** ([plan](reviews/plan_20261117.md) section 9, [room](reviews/room_haiku_20261117.md)).
+Where it differs from items 1-6 below, the revision wins:
+- **History has established the premium as well as it can; forward paper cannot prove the return.** At 90 days the
+  expected t is about 1.2-1.3. Paper tests mechanics and regime.
+- **Execution is the gap.** Real fills, credited funding, transfers, delistings and outages show only live. Two tracks:
+  - *Weeks:* R498's read (12-01..07); a replication on a venue never read for carry, frozen before its fetch; and,
+    only if the owner takes option B for rule 6, one small measurement pilot, frozen and registered first, placed by
+    the owner, judged on execution.
+  - *Months:* the eight forward books gate **scaling**, no longer the first small stake.
+- **Expect a few percent a year.** Blind replications earned +0.7 to +2.5%/yr (R391, R392). Fixed costs, meaning
+  transfers, withdrawals and collateral moves, are priced in any small-stake plan.
+
 1. **One decision.** Should the owner put a small real stake into cross-venue funding carry, on which book, at what
    size, with which orders? The archive supports the premium (R437, R191, R286, R391). Its open doubts concern
    execution: blowout exits whose prices may not be tradable, and gains concentrated in a few days. Only live data
