@@ -38,6 +38,16 @@
   coûte au plus la moitié d'un ordre au marché dans toutes les tranches de volume, si chaque transaction au meilleur
   prix remplit l'ordre ([résultat](../experiments/gatemaker_v1/FINDINGS.md)). La file d'attente et le temps de
   remplissage se mesurent maintenant en papier, sur les contrats de C14, jusqu'au 1er décembre (R498).
+- **Coût réel sur cinq ans d'historique (R500, 17-11, en quelques heures au lieu de mois de papier).**
+  - **Méthode.** Chacune des 2 544 entrées et sorties réelles de C14, de 2021-07 à 2026-09, a été facturée au
+    prix des carnets d'ordres enregistrés à cette heure-là :
+    - Gate par son archive publique horaire, à l'heure exacte ;
+    - Binance par le 1er du mois, faute de mieux.
+  - **Résultat.** **+7,97 %/an à 1 000 $ par jambe, +8,56 % à 250 $** (la taille d'un livre de 10 k$), contre
+    +9,79 % au coût forfaitaire. Le coût moyen est de 14,6 pb par jambe et par côté, deux fois l'hypothèse.
+  - **Ce que ça veut dire.** Le coût ne tue pas C14. Ce qui le fragilise, c'est que 2025 porte l'essentiel : sans
+    2025, environ +4,5 %/an, à peine au-dessus des bons du Trésor
+    ([résultat](../experiments/carrycost_hist_v2/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
