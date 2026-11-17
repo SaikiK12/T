@@ -7,5 +7,7 @@ FORWARD.md -text
 experiments/allocation_v1/results/*.csv -text
 experiments/optimizer_v1/results/*.csv -text whitespace=cr-at-eol
 experiments/usdtmint_v1/events.csv -text
+# R499's Gate multiplier table is hashed byte for byte in its frozen PREREG (written with CRLF rows).
+experiments/carrycost_hist_v1/gate_multipliers.csv -text
 # R483's imported DefiLlama bodies and CRLF response headers are bound by byte hashes in raw/import_receipt.json.
 experiments/carryhurdle_v1/raw/* -text
