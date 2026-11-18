@@ -25,3 +25,16 @@ Written during the fetch, before any in-window Bitfinex price or funding was rea
 **Why not keep them.** Gold, silver, platinum, palladium and a dominance index carry funding of a different kind
 (TradFi hours, index construction). The PREREG excluded them before any data, and its stated question is about crypto
 perps.
+
+## 2026-11-18 04:45 UTC: the fetch runs as three parallel workers (execution only)
+- **Why.** The sequential fetch managed about 28 status requests a minute: 1.2 s per reply plus the frozen 0.9 s pause.
+  That projected to about 20 hours, with container restarts about every 30 minutes. Bitfinex allows 90 a minute.
+- **What changed.** `run_xfund_bfx.py fetch` ran the frozen discovery to completion (`pairs_all.csv`: 59 listed and 17
+  found pairs). Its sequential fetch was then stopped after AAVE (receipt written) and part of ADA. The fetch now
+  runs as three processes, `fetch_worker.py k 3` for k = 0, 1, 2:
+  - each calls the frozen `fetch_bitfinex_history.fetch` with the frozen window, pace and `pairs_all.csv`;
+  - each takes the subset `k::3` of the pairs that still have no receipt, so no pair has two writers;
+  - after a container restart, all three are relaunched together, never alongside an old one.
+- **What did not change.** Requests, reductions, files and receipts are those of the frozen code. A pair's
+  half-finished progress file is resumed by whichever worker gets it.
+- The combined rate is about 84 requests a minute. A rate-limit reply makes the frozen code wait 60 s.
