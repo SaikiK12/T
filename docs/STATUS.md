@@ -56,6 +56,17 @@
   - **Pourquoi.** L'écart existe (6,97 %/an brut), mais les frais fixes du micro-contrat en prennent environ 3 points.
     L'écart s'est aussi resserré depuis 2024 : presque rien en 2025. Pas de voie papier méritée
     ([résultat](../experiments/cmecarry_v2/FINDINGS.md)).
+- **Le portage des matières premières au CME (R505 et R506, 18-11, seize ans de cours de règlement pour 2,9 $).**
+  - **Méthode.** 13 contrats (énergie, métaux, céréales, bétail) : on achète les courbes les plus en déport et on vend
+    les plus en report. R505 teste la règle des manuels. R506 teste 432 variantes (signal, concentration, poids par
+    confiance, fréquence, bande, filtre de coût), choisies chaque année sur le seul passé.
+  - **Résultat. Nul pour la règle des manuels :** −0,76 %/an net (R505). **Faible pour la grille :** +2,42 %/an hors
+    échantillon, t = 0,8 ; le meilleur des 432 ne bat pas zéro une fois la recherche comptée (SPA p = 0,13).
+  - **Ce qui compte.** Les coûts ne pèsent que 0,4 %/an : les gérer ne change presque rien. Les pertes viennent de
+    l'énergie lors des krachs pétroliers (2014, 2018, 2020). Le seul motif stable est un portage lent et
+    désaisonnalisé (3-5 %/an), à tester sur des données jamais lues. Il faut environ 1 M$ pour tenir ce livre : hors
+    de portée de toute façon ([R505](../experiments/cmeterm_v3/FINDINGS.md),
+    [R506](../experiments/cmeterm_grid_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
