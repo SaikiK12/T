@@ -1,13 +1,13 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-17T02:29:11.626953+00:00",
+ "updated": "2026-11-18T02:31:18.830416+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.977,
-  "hyperliquid": 0.994,
-  "mexc": 1.0,
+  "gate": 1.037,
+  "hyperliquid": 0.983,
+  "mexc": 0.976,
   "kucoin": 1.0
  },
  "data": {
@@ -19,17 +19,33 @@
   },
   "mexc": {
    "files": 520,
+   "failed": 12,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "SYRUP_USDT",
+    "S_USDT",
+    "TAO_USDT",
+    "TIA_USDT",
+    "TLM_USDT",
+    "TNSR_USDT",
+    "WLD_USDT",
+    "WOO_USDT",
+    "XAN_USDT",
+    "ZBT_USDT"
+   ]
+  },
+  "kucoin": {
+   "files": 633,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
   "binance": {
    "files": 867,
-   "failed": 4,
+   "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
     "AERGOUSDT",
-    "ANTUSDT",
     "BDXNUSDT",
     "SXPUSDT"
    ]
@@ -39,16 +55,10 @@
    "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
-    "LOOM",
-    "USUAL",
-    "VINE"
+    "HEMI",
+    "SPX",
+    "STABLE"
    ]
-  },
-  "kucoin": {
-   "files": 633,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -179,16 +189,16 @@
     "spread_in": 1.0251
    }
   ],
-  "scored_days": 6,
+  "scored_days": 7,
   "late_days": 0,
-  "total": 0.0024795687000000004,
-  "total_2x": 0.0014995687,
-  "total_3x": 0.0005195687000000004,
-  "total_close": 0.00048521950000000045,
-  "nw_t": 1.0733975455961564,
+  "total": 0.0036433172,
+  "total_2x": 0.0025933172,
+  "total_3x": 0.0015433172000000005,
+  "total_close": 0.0016204862000000005,
+  "nw_t": 1.5900077524587841,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-17"
+ "last_day": "2026-11-18"
 }

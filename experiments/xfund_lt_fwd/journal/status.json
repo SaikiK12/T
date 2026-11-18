@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-17T02:10:44.640724+00:00",
+ "updated": "2026-11-18T02:13:49.939131+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.0
+  "lighter": 1.021
  },
  "data": {
   "lighter": {
@@ -71,22 +71,10 @@
     "spread_in": 0.1027
    },
    {
-    "coin": "METUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.1251
-   },
-   {
     "coin": "TIAUSDT",
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.1173
-   },
-   {
-    "coin": "HBARUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.1086
    },
    {
     "coin": "AEROUSDT",
@@ -147,18 +135,30 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.0787
+   },
+   {
+    "coin": "JUPUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0872
+   },
+   {
+    "coin": "GRAMUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0655
    }
   ],
-  "scored_days": 25,
+  "scored_days": 26,
   "late_days": 15,
-  "total": -0.0012110703000000002,
-  "total_2x": -0.0031360703,
-  "total_3x": -0.0050610703,
-  "total_close": -0.0009249688,
-  "nw_t": -1.078763090585808,
-  "max_drawdown": -0.0026059508,
+  "total": -0.0014557974000000001,
+  "total_2x": -0.0034907974,
+  "total_3x": -0.0055257974,
+  "total_close": -0.001281705,
+  "nw_t": -1.2433439820319285,
+  "max_drawdown": -0.0026590484,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-17"
+ "last_day": "2026-11-18"
 }
