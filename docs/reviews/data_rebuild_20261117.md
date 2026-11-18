@@ -29,6 +29,9 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
 | `mexc_hist` | `scripts/fetch_mexc_history.py --end 2026-10-20T11:00:00Z` | 672 files: same coverage; 434: the record has 4 more hours (note 3); 54 contracts no longer served, 13 new |
 | `coinmetrics` | `scripts/fetch_coinmetrics.py` | all 1,229 recorded files present, plus completion receipts; latest vintage, so values can differ |
 | `defillama` | `scripts/fetch_fundamentals.py` | latest vintage; BOND and CC not served, AERO and INJ new |
+| `coinm_1h` | a scratch writer that repeats the legacy layout (note 4) | 272 of 272 contract files: same coverage |
+| `cboe` | `scripts/fetch_cboe.py` | the same 13 indices and raw CSVs; daily, so no hourly record; history now runs to 2026-11-17 |
+| `upbit_hist` | `scripts/fetch_venue_history.py upbit` | daily candles, so no hourly record; 4 files no longer served (KRW-SOPH, KRW-ZIL, reserved KRW-BLAST and KRW-ZIL), 6 new |
 | `research` | `scripts/build_views.py` (feature bins 7.1 GB) | no provenance record |
 | `data-archive` recordings | `scripts/handover.py restore` | 39,265 files, every sha256 checked (2026-11-17) |
 
@@ -45,14 +48,21 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
    - The rebuild ends at 10:00 for all files. Every file is either identical in coverage or a 4-hour-shorter prefix of
      the record.
    - An earlier pull to 17:00 is kept at `data/mexc_hist_end18_rebuild`.
+4. **`coinm_1h`.** The current `scripts/fetch_coinm.py` writes only `coinm_1h_v2` and refuses the legacy folder by
+   design. The legacy folder is what `lab/daily.py` and three frozen lanes read.
+   - It was rebuilt by a scratch writer that repeats the recorded layout: monthly 1h kline zips through `data.END`,
+     `lab.data.parse(..., "klines")` with its generic column names, deduplicated on `t` and sorted.
+   - All 272 contract files match their recorded hourly coverage. The writer's `manifest.json` says how it was made.
 
-## Not rebuilt, or still running (2026-11-18 05:00 UTC)
-- **Running:** `hyperliquid` (about 1 coin a minute at the API's pace), then Cboe, Upbit, Bithumb and Lighter.
-- **`coinm_1h`.** `scripts/fetch_coinm.py` now writes `coinm_1h_v2`. It stops on archive files whose header names
-  field 7 `quote_volume` (23 among the files cached here), where its schema check wants base-asset volume.
-  - This is Binance's labelling for COIN-M files, and the check is deliberate. Whether to accept that header is the
-    script owner's call.
-  - Until then there is no COIN-M folder. The daily panel's COIN-M columns are empty.
+## Not rebuilt, or still running (2026-11-18 06:10 UTC)
+- **Running:** `hyperliquid` (106 of 235 coins at 06:00 UTC), Bithumb, then Lighter.
+  - Hyperliquid serves only the latest 5,000 hourly candles. The recorded 1h files run 2026-03-26..10-20; the
+    rebuilt ones run 2026-04-23..11-18 (BTC). Those four weeks of hourly history are gone from the source. Daily
+    candles and funding come back from their start (BTC funding: hourly from 2023-05-12).
+- **`coinm_1h_v2`.** `scripts/fetch_coinm.py` stops on archive files whose header names field 7 `quote_volume`, where
+  its schema check wants base-asset volume. This is Binance's labelling for COIN-M files, and the check is
+  deliberate; whether to accept that header is the script owner's call. The legacy `coinm_1h` above does not depend
+  on it.
 - **`macro`.** FRED is not contacted again, by the owner's earlier rule, so `scripts/fetch_macro.py` was not run.
 - **`daily`** (the point-in-time panel) and **`metrics_full`.** They wait for the venue folders above. They also lack
-  `macro` and `coinm_1h`, so a panel built now would differ from the recorded one in those columns.
+  `macro`, so a panel built now would differ from the recorded one in those columns.
