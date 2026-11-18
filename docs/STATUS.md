@@ -1,6 +1,6 @@
 # Status: what is true now
 
-**Rewritten in place, never appended. Last rewrite: 2026-11-17 by Claude.**
+**Rewritten in place, never appended. Last rewrite: 2026-11-18 by Claude.**
 - If this date is more than two weeks old, trust `registry/rounds.csv` and `python scripts/lane_census.py` over this
   page.
 - Why this page exists: [reviews/stepback_20261116.md](reviews/stepback_20261116.md). The plan it follows:
@@ -15,7 +15,7 @@
   - **En semaines.** Trois choses :
     - la mesure des ordres posés sur Gate (R498), lue du 1er au 7 décembre ;
     - une réplique du portage sur une plateforme jamais lue (Bitfinex répond depuis ici), avec ses règles figées avant
-      le téléchargement ;
+      le téléchargement : **faite le 18-11, réussie** (R507, ci-dessous) ;
     - un **pilote de mesure** réel et petit, si tu ajoutes une exception à la règle 6 (voir plus bas).
   - **En mois.** Les huit livres sur papier, lus de janvier à mai 2027. Ils décident d'**augmenter** la mise, plus de la
     première petite mise.
@@ -67,6 +67,18 @@
     désaisonnalisé (3-5 %/an), à tester sur des données jamais lues. Il faut environ 1 M$ pour tenir ce livre : hors
     de portée de toute façon ([R505](../experiments/cmeterm_v3/FINDINGS.md),
     [R506](../experiments/cmeterm_grid_v1/FINDINGS.md)).
+- **Le portage entre plateformes répliqué sur Bitfinex (R507, 18-11, jamais lu avant, règles figées avant le
+  téléchargement).**
+  - **Méthode.** Le livre de R275, inchangé, sur Binance + Bitfinex, de 2021 à septembre 2026. Bitfinex ne verse aucun
+    financement tant que la prime reste dans ±0,05 % : c'était la vraie question.
+  - **Résultat. Réussi :** +5,21 %/an net à 1x, +4,17 % à 2x, +3,13 % à 3x, t = 11,9 sur 2 078 jours. Chaque année est
+    positive aux trois niveaux de coûts ; la pire baisse cumulée est de 0,94 %.
+  - **D'où vient le gain.** Presque tout vient du financement. Binance verse son plancher de 0,01 % par 8 h ; Bitfinex
+    est à zéro la plupart du temps. Le livre achète sur Bitfinex et vend sur Binance.
+  - **Les limites.** C'est la moitié du livre Binance + KuCoin (+10,8 %/an). Il tombe à environ +3 %/an en 2025-2026,
+    à peu près le rendement du cash. Surtout, **l'accès à Bitfinex depuis la France n'est pas établi** : pas
+    d'agrément MiCA selon des sources secondaires. Il n'y a donc pas de voie papier. C'est une preuve de plus que la
+    prime se généralise, pas de l'argent ([résultat](../experiments/xfund_bfx_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

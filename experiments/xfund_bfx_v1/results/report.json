@@ -1,0 +1,652 @@
+{
+ "symbols": 69,
+ "bitfinex_codes_with_receipt": 71,
+ "window": [
+  "2021-01-01",
+  "2026-09-30"
+ ],
+ "primary": {
+  "n": 2078,
+  "first_day": 21,
+  "avg_held": 17.170837343599615,
+  "trades": 845,
+  "mean_1x_bp": 1.4261465658185808,
+  "ann_1x_pct": 5.20543496523782,
+  "t_nw_1x": 11.940995069847254,
+  "p_one_sided": 3.6176191963344015e-33,
+  "trimmed_mean_bp": 1.3898490258971194,
+  "mean_2x_bp": 1.141497865144856,
+  "ann_2x_pct": 4.166467207778724,
+  "mean_3x_bp": 0.8568491644711311,
+  "ann_3x_pct": 3.127499450319629,
+  "halves_bp": [
+   1.6369649026316333,
+   1.2153282290055283
+  ],
+  "max_dd_pct": -0.9406494589585285,
+  "top10_share": 0.1648460344692834,
+  "funding_share": 0.9976389200041236,
+  "by_coin_bp_per_day": {
+   "ANC": -0.0439676235320811,
+   "APE": -0.0023399393415335654,
+   "SUI": -0.0006621519915192923,
+   "HYPE": -8.299339088889251e-05,
+   "ENA": 0.00012122587511437283,
+   "TAO": 0.0009034269370436178,
+   "PEPE": 0.0009558298825282769,
+   "APT": 0.003711561920799521,
+   "POL": 0.005058866040271627,
+   "LUNA": 0.005835123589855907,
+   "AVAX": 0.007636286399073721,
+   "FTM": 0.008032591785757647,
+   "ARB": 0.008752677375055223,
+   "XRP": 0.009248078879017407,
+   "MATIC": 0.010945979470522742,
+   "ALG": 0.012442405307833356,
+   "DOGE": 0.012544204485438823,
+   "MKR": 0.013078558171223898,
+   "BNB": 0.013919482630508115,
+   "GALA": 0.017644915291357824,
+   "XTZ": 0.01869797065169894,
+   "TRX": 0.019404740027191638,
+   "EGLD": 0.02049028002670178,
+   "ADA": 0.02260734561399479,
+   "DOT": 0.024765229861303792,
+   "AAVE": 0.024828999615102213,
+   "SAND": 0.02547178260358042,
+   "NEO": 0.025741248928574913,
+   "KNC": 0.025841451518396,
+   "ICP": 0.02677105650772792,
+   "ETC": 0.02697830766581061,
+   "SOL": 0.028224913444785896,
+   "XLM": 0.029113179804443196,
+   "SUSHI": 0.02924741115516558,
+   "CRV": 0.030784149225418073,
+   "NEAR": 0.030948611711505678,
+   "WLD": 0.031008357813242148,
+   "EOS": 0.031009951122599515,
+   "COMP": 0.031155398231836003,
+   "SHIB": 0.03272478487180524,
+   "WAVES": 0.03278869808252395,
+   "OMG": 0.035701876572477795,
+   "JASMY": 0.036128752387322105,
+   "XMR": 0.03806533530034265,
+   "FIL": 0.03878891095984211,
+   "BTC": 0.041437370029964005,
+   "LTC": 0.04881231363086001,
+   "LINK": 0.05512617999340672,
+   "UNI": 0.061260080961386805,
+   "ETH": 0.06358903991836905,
+   "IOT": 0.07338149038712694,
+   "STG": 0.08257398765703741,
+   "ZEC": 0.09496168064633322,
+   "AXS": 0.10393717310532426
+  },
+  "l2co_dropped": [
+   "AXS",
+   "ZEC"
+  ],
+  "l2co_mean_bp": 1.2272477120669232,
+  "by_long_venue_trades": {
+   "bitfinex": 522,
+   "binance": 323
+  },
+  "by_year_1x": {
+   "2021": {
+    "days": 344,
+    "ann_pct": 7.7642786116615445
+   },
+   "2022": {
+    "days": 365,
+    "ann_pct": 5.478756642790855
+   },
+   "2023": {
+    "days": 365,
+    "ann_pct": 5.520194686096215
+   },
+   "2024": {
+    "days": 366,
+    "ann_pct": 5.774308134443388
+   },
+   "2025": {
+    "days": 365,
+    "ann_pct": 3.236593461594217
+   },
+   "2026": {
+    "days": 273,
+    "ann_pct": 3.064510584691088
+   }
+  },
+  "first_date": "2021-01-22"
+ },
+ "verdict": "PASS",
+ "checks": {
+  "p_le_alpha": true,
+  "mean_2x_pos": true,
+  "trimmed_pos": true,
+  "l2co_pos": true
+ },
+ "secondary_th10": {
+  "n": 2078,
+  "first_day": 21,
+  "avg_held": 13.72810394610202,
+  "trades": 785,
+  "mean_1x_bp": 1.3697884541223109,
+  "ann_1x_pct": 4.999727857546434,
+  "t_nw_1x": 11.465933829596102,
+  "p_one_sided": 9.781890345707333e-31,
+  "trimmed_mean_bp": 1.2783093493471416,
+  "mean_2x_bp": 1.1053514955082588,
+  "ann_2x_pct": 4.034532958605145,
+  "mean_3x_bp": 0.840914536894207,
+  "ann_3x_pct": 3.0693380596638553,
+  "halves_bp": [
+   1.6390912852259365,
+   1.1004856230186852
+  ],
+  "max_dd_pct": -1.022883109955032,
+  "top10_share": 0.16658179549500451,
+  "funding_share": 1.0020670868251198,
+  "by_coin_bp_per_day": {
+   "ANC": -0.0410586854322071,
+   "APE": -0.0013814993058785415,
+   "TAO": -0.0010010393775379566,
+   "SUI": -0.0006621519915192923,
+   "PEPE": -0.0006611341747188111,
+   "ENA": 0.00043343119720292203,
+   "APT": 0.0010892097807429404,
+   "XRP": 0.004769939305979268,
+   "POL": 0.005134466501727649,
+   "AVAX": 0.00562746115814283,
+   "MATIC": 0.005946670353664972,
+   "FTM": 0.007695242988766673,
+   "ARB": 0.009755747626552326,
+   "LUNA": 0.009773153069834128,
+   "GALA": 0.012659191750741651,
+   "BNB": 0.012859189380735263,
+   "MKR": 0.01294259246805288,
+   "DOGE": 0.015104286697536952,
+   "XTZ": 0.02046829080908441,
+   "DOT": 0.020632750857036305,
+   "ETC": 0.020706573034352485,
+   "ALG": 0.020729669818002134,
+   "ADA": 0.021489156554802814,
+   "TRX": 0.02162301898902562,
+   "AAVE": 0.02265331665179505,
+   "SUSHI": 0.02285539601232785,
+   "ICP": 0.02341069475879488,
+   "SAND": 0.024512319339518703,
+   "EGLD": 0.02484696728317936,
+   "NEAR": 0.026759584815418368,
+   "KNC": 0.02799904187520034,
+   "FIL": 0.028977074048221696,
+   "SHIB": 0.030570726990885238,
+   "COMP": 0.030701634031963916,
+   "EOS": 0.03071104056803231,
+   "NEO": 0.03100347206440505,
+   "WLD": 0.031008357813242148,
+   "CRV": 0.03138984620801333,
+   "JASMY": 0.03161195357763316,
+   "XLM": 0.03227955571593281,
+   "XMR": 0.033856049506290384,
+   "OMG": 0.03391675466994238,
+   "WAVES": 0.03439677832045376,
+   "SOL": 0.03623876844958735,
+   "LTC": 0.037037096430976094,
+   "BTC": 0.039422479626952,
+   "UNI": 0.0503203721931728,
+   "LINK": 0.050543298643660556,
+   "ETH": 0.05811890691114048,
+   "IOT": 0.07849893046063501,
+   "STG": 0.0849572145203918,
+   "ZEC": 0.09264713864475838,
+   "AXS": 0.10386815192966317
+  },
+  "l2co_dropped": [
+   "AXS",
+   "ZEC"
+  ],
+  "l2co_mean_bp": 1.1732731635478892,
+  "by_long_venue_trades": {
+   "bitfinex": 494,
+   "binance": 291
+  },
+  "by_year_1x": {
+   "2021": {
+    "days": 344,
+    "ann_pct": 7.725554291339718
+   },
+   "2022": {
+    "days": 365,
+    "ann_pct": 5.651441306714071
+   },
+   "2023": {
+    "days": 365,
+    "ann_pct": 5.404239008093276
+   },
+   "2024": {
+    "days": 366,
+    "ann_pct": 5.52151526795073
+   },
+   "2025": {
+    "days": 365,
+    "ann_pct": 2.6709103746893734
+   },
+   "2026": {
+    "days": 273,
+    "ann_pct": 2.5668997143749395
+   }
+  },
+  "first_date": "2021-01-22"
+ },
+ "funding_profile": {
+  "AAVE": {
+   "bitfinex_periods": 5467,
+   "bitfinex_zero_share": 0.6797146515456375,
+   "bitfinex_ann_pct": 3.965625836992317,
+   "binance_ann_pct": 7.647416495609222
+  },
+  "ADA": {
+   "bitfinex_periods": 6196,
+   "bitfinex_zero_share": 0.7916397675919948,
+   "bitfinex_ann_pct": 3.90492801937046,
+   "binance_ann_pct": 10.714729307506055
+  },
+  "ALG": {
+   "bitfinex_periods": 5518,
+   "bitfinex_zero_share": 0.6092787241754258,
+   "bitfinex_ann_pct": 2.429131367591082,
+   "binance_ann_pct": 6.8804568134855915
+  },
+  "ALLO": {
+   "bitfinex_periods": 112,
+   "bitfinex_zero_share": 0.42857142857142855,
+   "bitfinex_ann_pct": 4.613382972972972,
+   "binance_ann_pct": 8.254040945945947
+  },
+  "ANC": {
+   "bitfinex_periods": 739,
+   "bitfinex_zero_share": 0.18403247631935046,
+   "bitfinex_ann_pct": -27.60691447154471,
+   "binance_ann_pct": -5.88233406504065
+  },
+  "APE": {
+   "bitfinex_periods": 4957,
+   "bitfinex_zero_share": 0.49021585636473675,
+   "bitfinex_ann_pct": -7.425040338983051,
+   "binance_ann_pct": -5.15334618038741
+  },
+  "APT": {
+   "bitfinex_periods": 4327,
+   "bitfinex_zero_share": 0.5685232262537555,
+   "bitfinex_ann_pct": -3.5830179438280174,
+   "binance_ann_pct": -1.0022748127600556
+  },
+  "ARB": {
+   "bitfinex_periods": 3847,
+   "bitfinex_zero_share": 0.5960488692487653,
+   "bitfinex_ann_pct": 3.2471533151326066,
+   "binance_ann_pct": 8.660055198907955
+  },
+  "AVAX": {
+   "bitfinex_periods": 5563,
+   "bitfinex_zero_share": 0.7168793816286176,
+   "bitfinex_ann_pct": 2.5006134250269687,
+   "binance_ann_pct": 4.095573257820927
+  },
+  "AXS": {
+   "bitfinex_periods": 5458,
+   "bitfinex_zero_share": 0.3464639061927446,
+   "bitfinex_ann_pct": -34.666970200659705,
+   "binance_ann_pct": -38.876498345244634
+  },
+  "BNB": {
+   "bitfinex_periods": 3382,
+   "bitfinex_zero_share": 0.6082199881726789,
+   "bitfinex_ann_pct": 2.8659343345164157,
+   "binance_ann_pct": -0.9260561712511088
+  },
+  "BTC": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.5324015247776366,
+   "bitfinex_ann_pct": 4.983138698173153,
+   "binance_ann_pct": 10.765369953931692
+  },
+  "CHZ": {
+   "bitfinex_periods": 1950,
+   "bitfinex_zero_share": 0.44769230769230767,
+   "bitfinex_ann_pct": -9.014353499230376,
+   "binance_ann_pct": -1.2753879066187792
+  },
+  "COMP": {
+   "bitfinex_periods": 5458,
+   "bitfinex_zero_share": 0.4946866984243313,
+   "bitfinex_ann_pct": -2.4549201704233097,
+   "binance_ann_pct": -2.0933612836723468
+  },
+  "CRV": {
+   "bitfinex_periods": 5191,
+   "bitfinex_zero_share": 0.5280292814486611,
+   "bitfinex_ann_pct": -4.578238462427746,
+   "binance_ann_pct": 2.602752549132948
+  },
+  "DEXE": {
+   "bitfinex_periods": 112,
+   "bitfinex_zero_share": 0.2767857142857143,
+   "bitfinex_ann_pct": 13.550565810810811,
+   "binance_ann_pct": -15.545419054054054
+  },
+  "DOGE": {
+   "bitfinex_periods": 5884,
+   "bitfinex_zero_share": 0.7578178110129163,
+   "bitfinex_ann_pct": 3.963908934217236,
+   "binance_ann_pct": 8.658234054054056
+  },
+  "DOT": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.6923443456162643,
+   "bitfinex_ann_pct": 4.587988074662432,
+   "binance_ann_pct": 6.719812872915014
+  },
+  "EGLD": {
+   "bitfinex_periods": 5467,
+   "bitfinex_zero_share": 0.652643131516371,
+   "bitfinex_ann_pct": 0.9836447502744239,
+   "binance_ann_pct": 5.586992897914381
+  },
+  "ENA": {
+   "bitfinex_periods": 499,
+   "bitfinex_zero_share": 0.6372745490981964,
+   "bitfinex_ann_pct": 5.954895843373493,
+   "binance_ann_pct": 3.731797379518073
+  },
+  "EOS": {
+   "bitfinex_periods": 4811,
+   "bitfinex_zero_share": 0.6934109332779048,
+   "bitfinex_ann_pct": 5.853682188149688,
+   "binance_ann_pct": 15.152872253638256
+  },
+  "ETC": {
+   "bitfinex_periods": 4876,
+   "bitfinex_zero_share": 0.7372846595570139,
+   "bitfinex_ann_pct": 0.932292209230769,
+   "binance_ann_pct": 5.224448276923077
+  },
+  "ETH": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.7231575603557815,
+   "bitfinex_ann_pct": -1.8115175552025415,
+   "binance_ann_pct": 11.466150471803015
+  },
+  "FET": {
+   "bitfinex_periods": 337,
+   "bitfinex_zero_share": 0.6172106824925816,
+   "bitfinex_ann_pct": 4.775620892857145,
+   "binance_ann_pct": 1.4452012053571428
+  },
+  "FIL": {
+   "bitfinex_periods": 5563,
+   "bitfinex_zero_share": 0.605608484630595,
+   "bitfinex_ann_pct": 0.8980007982740018,
+   "binance_ann_pct": 7.826280782092772
+  },
+  "FTM": {
+   "bitfinex_periods": 3623,
+   "bitfinex_zero_share": 0.7074247860888766,
+   "bitfinex_ann_pct": 2.709766147156268,
+   "binance_ann_pct": 9.033691047763668
+  },
+  "GALA": {
+   "bitfinex_periods": 4957,
+   "bitfinex_zero_share": 0.6181157958442607,
+   "bitfinex_ann_pct": 2.1302626240920106,
+   "binance_ann_pct": 6.658615239104117
+  },
+  "HBAR": {
+   "bitfinex_periods": 985,
+   "bitfinex_zero_share": 0.39593908629441626,
+   "bitfinex_ann_pct": 25.329546676829267,
+   "binance_ann_pct": 1.065519573170732
+  },
+  "HYPE": {
+   "bitfinex_periods": 337,
+   "bitfinex_zero_share": 0.8427299703264095,
+   "bitfinex_ann_pct": 1.4120676785714286,
+   "binance_ann_pct": 6.207502857142857
+  },
+  "ICP": {
+   "bitfinex_periods": 5083,
+   "bitfinex_zero_share": 0.5907928388746803,
+   "bitfinex_ann_pct": -1.567599371310507,
+   "binance_ann_pct": 4.620880608028336
+  },
+  "INJ": {
+   "bitfinex_periods": 211,
+   "bitfinex_zero_share": 0.47393364928909953,
+   "bitfinex_ann_pct": -12.296891714285717,
+   "binance_ann_pct": -2.301575285714285
+  },
+  "IOT": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.46918678526048285,
+   "bitfinex_ann_pct": 0.22394933042096937,
+   "binance_ann_pct": 10.450095188244637
+  },
+  "JASMY": {
+   "bitfinex_periods": 4837,
+   "bitfinex_zero_share": 0.4972090138515609,
+   "bitfinex_ann_pct": -3.4544489857320095,
+   "binance_ann_pct": 0.9879334088089328
+  },
+  "JTO": {
+   "bitfinex_periods": 211,
+   "bitfinex_zero_share": 0.6018957345971564,
+   "bitfinex_ann_pct": -4.632986714285715,
+   "binance_ann_pct": 6.240597928571429
+  },
+  "KAITO": {
+   "bitfinex_periods": 112,
+   "bitfinex_zero_share": 0.38392857142857145,
+   "bitfinex_ann_pct": 10.361659459459457,
+   "binance_ann_pct": 2.321242162162162
+  },
+  "KNC": {
+   "bitfinex_periods": 2533,
+   "bitfinex_zero_share": 0.5677062771417292,
+   "bitfinex_ann_pct": -6.1398180924170624,
+   "binance_ann_pct": 5.300038287914693
+  },
+  "LDO": {
+   "bitfinex_periods": 499,
+   "bitfinex_zero_share": 0.43687374749499,
+   "bitfinex_ann_pct": 13.04835641566265,
+   "binance_ann_pct": 4.426572680722892
+  },
+  "LINK": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.7858958068614994,
+   "bitfinex_ann_pct": 1.9969658506751389,
+   "binance_ann_pct": 14.119772080222399
+  },
+  "LTC": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.7719186785260482,
+   "bitfinex_ann_pct": 3.138282350277998,
+   "binance_ann_pct": 12.964111515488483
+  },
+  "LUNA": {
+   "bitfinex_periods": 1060,
+   "bitfinex_zero_share": 0.5924528301886792,
+   "bitfinex_ann_pct": -5.520468866855523,
+   "binance_ann_pct": -1.3426933427762022
+  },
+  "MATIC": {
+   "bitfinex_periods": 3199,
+   "bitfinex_zero_share": 0.7183494842138168,
+   "bitfinex_ann_pct": 0.5020164118198875,
+   "binance_ann_pct": 6.596971651031894
+  },
+  "MKR": {
+   "bitfinex_periods": 3581,
+   "bitfinex_zero_share": 0.660430047472773,
+   "bitfinex_ann_pct": 4.341350476256984,
+   "binance_ann_pct": 9.210913659217878
+  },
+  "NEAR": {
+   "bitfinex_periods": 5083,
+   "bitfinex_zero_share": 0.5768247098170372,
+   "bitfinex_ann_pct": -0.8413879161747337,
+   "binance_ann_pct": 4.707851877213696
+  },
+  "NEO": {
+   "bitfinex_periods": 5272,
+   "bitfinex_zero_share": 0.5015174506828528,
+   "bitfinex_ann_pct": -1.6506166277746168,
+   "binance_ann_pct": 5.400882979510531
+  },
+  "OMG": {
+   "bitfinex_periods": 2863,
+   "bitfinex_zero_share": 0.6873908487600419,
+   "bitfinex_ann_pct": -3.303485681341719,
+   "binance_ann_pct": 7.66761277253669
+  },
+  "ONDO": {
+   "bitfinex_periods": 985,
+   "bitfinex_zero_share": 0.3868020304568528,
+   "bitfinex_ann_pct": 15.184499649390244,
+   "binance_ann_pct": 0.17484835365853696
+  },
+  "PEPE": {
+   "bitfinex_periods": 1950,
+   "bitfinex_zero_share": 0.5907692307692308,
+   "bitfinex_ann_pct": 4.574954946126219,
+   "binance_ann_pct": 1.8392898717290926
+  },
+  "POL": {
+   "bitfinex_periods": 1950,
+   "bitfinex_zero_share": 0.39794871794871794,
+   "bitfinex_ann_pct": -5.902359566444332,
+   "binance_ann_pct": -3.908079158542842
+  },
+  "SAND": {
+   "bitfinex_periods": 4753,
+   "bitfinex_zero_share": 0.5453397853986955,
+   "bitfinex_ann_pct": -0.7693206849747473,
+   "binance_ann_pct": 4.1675676957070715
+  },
+  "SEI": {
+   "bitfinex_periods": 499,
+   "bitfinex_zero_share": 0.3527054108216433,
+   "bitfinex_ann_pct": 9.909461957831327,
+   "binance_ann_pct": -3.664155843373494
+  },
+  "SHIB": {
+   "bitfinex_periods": 5317,
+   "bitfinex_zero_share": 0.6592063193530187,
+   "bitfinex_ann_pct": -0.19965829571106097,
+   "binance_ann_pct": 5.067299531602709
+  },
+  "SOL": {
+   "bitfinex_periods": 5656,
+   "bitfinex_zero_share": 0.7800565770862801,
+   "bitfinex_ann_pct": -2.381822119363396,
+   "binance_ann_pct": -2.8253129973474804
+  },
+  "STG": {
+   "bitfinex_periods": 4624,
+   "bitfinex_zero_share": 0.3040657439446367,
+   "bitfinex_ann_pct": 9.1025109312135,
+   "binance_ann_pct": -11.518808799480857
+  },
+  "SUI": {
+   "bitfinex_periods": 1950,
+   "bitfinex_zero_share": 0.7215384615384616,
+   "bitfinex_ann_pct": 2.4095230605438682,
+   "binance_ann_pct": 2.8080272139558757
+  },
+  "SUSHI": {
+   "bitfinex_periods": 5584,
+   "bitfinex_zero_share": 0.6710243553008596,
+   "bitfinex_ann_pct": 0.6488130951101555,
+   "binance_ann_pct": 8.456730306286943
+  },
+  "TAO": {
+   "bitfinex_periods": 985,
+   "bitfinex_zero_share": 0.3979695431472081,
+   "bitfinex_ann_pct": -0.6914424237804868,
+   "binance_ann_pct": -2.047937103658536
+  },
+  "TON": {
+   "bitfinex_periods": 1950,
+   "bitfinex_zero_share": 0.538974358974359,
+   "bitfinex_ann_pct": -8.163838514622883,
+   "binance_ann_pct": 0.38360170343766054
+  },
+  "TRX": {
+   "bitfinex_periods": 5458,
+   "bitfinex_zero_share": 0.7068523268596556,
+   "bitfinex_ann_pct": -1.7194724601429359,
+   "binance_ann_pct": -3.864614381528311
+  },
+  "UNI": {
+   "bitfinex_periods": 6296,
+   "bitfinex_zero_share": 0.7148983481575604,
+   "bitfinex_ann_pct": 3.163480222398729,
+   "binance_ann_pct": 14.158018455917395
+  },
+  "WAVES": {
+   "bitfinex_periods": 2422,
+   "bitfinex_zero_share": 0.5264244426094137,
+   "bitfinex_ann_pct": -10.223057044609664,
+   "binance_ann_pct": -11.185480631970254
+  },
+  "WLD": {
+   "bitfinex_periods": 295,
+   "bitfinex_zero_share": 0.1288135593220339,
+   "bitfinex_ann_pct": 21.37336086734694,
+   "binance_ann_pct": 11.056013877551022
+  },
+  "XLM": {
+   "bitfinex_periods": 6196,
+   "bitfinex_zero_share": 0.7085216268560361,
+   "bitfinex_ann_pct": 3.1841431646489107,
+   "binance_ann_pct": 10.216886983050847
+  },
+  "XMR": {
+   "bitfinex_periods": 4351,
+   "bitfinex_zero_share": 0.6761663985290738,
+   "bitfinex_ann_pct": 3.698831210344828,
+   "binance_ann_pct": 7.149423906896551
+  },
+  "XPL": {
+   "bitfinex_periods": 337,
+   "bitfinex_zero_share": 0.5222551928783383,
+   "bitfinex_ann_pct": -13.813343526785715,
+   "binance_ann_pct": 7.199589151785715
+  },
+  "XRP": {
+   "bitfinex_periods": 5542,
+   "bitfinex_zero_share": 0.7064236737639841,
+   "bitfinex_ann_pct": 4.1859632728749325,
+   "binance_ann_pct": 6.1986665484569565
+  },
+  "XTZ": {
+   "bitfinex_periods": 5458,
+   "bitfinex_zero_share": 0.5672407475265665,
+   "bitfinex_ann_pct": -3.6839871385376575,
+   "binance_ann_pct": 2.1902801209455767
+  },
+  "ZEC": {
+   "bitfinex_periods": 5272,
+   "bitfinex_zero_share": 0.5402124430955993,
+   "bitfinex_ann_pct": -12.635773793397837,
+   "binance_ann_pct": 2.3763546243597053
+  },
+  "ZRO": {
+   "bitfinex_periods": 211,
+   "bitfinex_zero_share": 0.6350710900473934,
+   "bitfinex_ann_pct": -2.093321928571429,
+   "binance_ann_pct": 9.480687285714287
+  }
+ }
+}

@@ -32,6 +32,9 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
 | `coinm_1h` | a scratch writer that repeats the legacy layout (note 4) | 272 of 272 contract files: same coverage |
 | `cboe` | `scripts/fetch_cboe.py` | the same 13 indices and raw CSVs; daily, so no hourly record; history now runs to 2026-11-17 |
 | `upbit_hist` | `scripts/fetch_venue_history.py upbit` | daily candles, so no hourly record; 4 files no longer served (KRW-SOPH, KRW-ZIL, reserved KRW-BLAST and KRW-ZIL), 6 new |
+| `bithumb_hist` | `scripts/fetch_venue_history.py bithumb` | daily candles, so no hourly record; 13 files no longer served, 7 new |
+| `hyperliquid` | `scripts/fetch_hyperliquid_history.py` (resumed twice) | all 234 recorded coins plus XTEN; 1h candles: 56 files with the same coverage, 178 shifted by the source's 5,000-hour limit (note 5) |
+| `bitfinex_hist` | R507's frozen fetch (`experiments/xfund_bfx_v1`) | new, no earlier record; 76 pairs with receipts, no funding gap |
 | `research` | `scripts/build_views.py` (feature bins 7.1 GB) | no provenance record |
 | `data-archive` recordings | `scripts/handover.py restore` | 39,265 files, every sha256 checked (2026-11-17) |
 
@@ -53,12 +56,13 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
    - It was rebuilt by a scratch writer that repeats the recorded layout: monthly 1h kline zips through `data.END`,
      `lab.data.parse(..., "klines")` with its generic column names, deduplicated on `t` and sorted.
    - All 272 contract files match their recorded hourly coverage. The writer's `manifest.json` says how it was made.
+5. **`hyperliquid`.** The API serves only the latest 5,000 hourly candles.
+   - The recorded 1h files run 2026-03-26..10-20; the rebuilt ones run 2026-04-23..11-18 (BTC). Those four weeks of
+     hourly history are gone from the source.
+   - Daily candles and funding come back from their start (BTC funding: hourly from 2023-05-12).
 
-## Not rebuilt, or still running (2026-11-18 06:10 UTC)
-- **Running:** `hyperliquid` (106 of 235 coins at 06:00 UTC), Bithumb, then Lighter.
-  - Hyperliquid serves only the latest 5,000 hourly candles. The recorded 1h files run 2026-03-26..10-20; the
-    rebuilt ones run 2026-04-23..11-18 (BTC). Those four weeks of hourly history are gone from the source. Daily
-    candles and funding come back from their start (BTC funding: hourly from 2023-05-12).
+## Not rebuilt, or still running (2026-11-18 09:30 UTC)
+- **Running:** Lighter, at the source's pace (143 contracts written; the record has 240).
 - **`coinm_1h_v2`.** `scripts/fetch_coinm.py` stops on archive files whose header names field 7 `quote_volume`, where
   its schema check wants base-asset volume. This is Binance's labelling for COIN-M files, and the check is
   deliberate; whether to accept that header is the script owner's call. The legacy `coinm_1h` above does not depend
