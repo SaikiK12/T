@@ -165,7 +165,7 @@
 ## 3. Dates
 | when | what |
 |---|---|
-| 2026-11-18 00:00 UTC | R404 `book_costs_v1` closes (cost snapshots; its writer is the workflow) |
+| 2026-11-18 00:00 UTC | R404 `book_costs_v1` closed: PARTIAL, 29 snapshots with all three venues out of the 40 required ([FINDINGS](../experiments/book_costs_v1/FINDINGS.md)) |
 | 2026-11-19 00:00 UTC | Codex's R420 dispatch ends by design. At the next session, confirm the four `quant-*` workflows only report health, then retire them by the runtime's `active_contract` route |
 | 2026-12-01..07 | R498 `gatefill_fwd`: read the queue and fills of a resting Gate order (it changes no lane) |
 | owner, any time | Rule 6: keep it (A) or add a measurement-pilot exception (B) ([plan](reviews/plan_20261117.md) section 9). With B, the pilot's plan is frozen and registered before any order |
