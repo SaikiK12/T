@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 45 | 8 | 5 | 5 | 12 | 15 |
+| [Portage de financement crypto entre plateformes](#carry) | 46 | 8 | 5 | 5 | 13 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **286** | **13** | **47** | **126** | **48** | **52** |
+| **Total** | **287** | **13** | **47** | **126** | **49** | **52** |
 
 <a id="carry"></a>
 
@@ -91,6 +91,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R505 | [`cmeterm_v3`](../../experiments/cmeterm_v3) | M549 gate 1 on history (supersedes R504, whose fetch stopped on 2010 definitions without a unit of measure be… | enregistré |
 | R506 | [`cmeterm_grid_v1`](../../experiments/cmeterm_grid_v1) | M551 gate 1 on history: 432 pre-registered cost- and confidence-aware variants of commodity carry on R505's C… | enregistré |
 | R507 | [`xfund_bfx_v1`](../../experiments/xfund_bfx_v1) | M552 gate 1 another venue: R275's cross-venue funding carry book (L14d th5% K20) on Binance + Bitfinex, a pai… | en cours |
+| R508 | [`xfund_eea_v1`](../../experiments/xfund_eea_v1) | M553 gate 1 on a pair reachable from France: R275's cross-venue funding carry book (L14d th5% K20) on Kraken… | en cours |
 
 <a id="carry-tradfi"></a>
 
