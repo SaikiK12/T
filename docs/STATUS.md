@@ -79,6 +79,18 @@
     à peu près le rendement du cash. Surtout, **l'accès à Bitfinex depuis la France n'est pas établi** : pas
     d'agrément MiCA selon des sources secondaires. Il n'y a donc pas de voie papier. C'est une preuve de plus que la
     prime se généralise, pas de l'argent ([résultat](../experiments/xfund_bfx_v1/FINDINGS.md)).
+- **La même brèche entre deux plateformes utilisables depuis la France (R508, 18-11, à ta demande).**
+  - **Méthode.** Hyperliquid a le même plancher de financement que Binance ; Kraken (offert dans l'EEE) n'en a pas.
+    Le livre de R275, inchangé, sur Kraken + Hyperliquid, 111 pièces, sur la seule année que Kraken fournit.
+  - **Résultat. Réussi et fort :** +24,3 %/an net à 1x, +22,5 % à 2x, +20,7 % à 3x, t = 7,4 sur 343 jours. Tous les
+    mois sont positifs, mais en baisse : +4,5 % en janvier, +0,9 % en octobre.
+  - **D'où vient le gain.** 97 % viennent de petites pièces qui échangent moins de 100 000 $ par jour sur Kraken.
+    Leur financement y est extrême (par exemple +187 %/an sur NEIRO) et personne ne l'arbitre à grande taille. C'est
+    une prime d'illiquidité : elle est réelle sur ces données, mais limitée à environ 40 000-100 000 $ de capital.
+  - **Coûts réels.** Mesurés sur les carnets du 18-11 : 2 à 3 fois ce que le test suppose, un niveau encore très
+    positif. Les écarts de financement existent toujours aujourd'hui.
+  - **Suite.** Une voie papier en direct sur ces deux plateformes, avec les vrais carnets. Avant tout ordre réel :
+    vérifier ton accès aux dérivés de Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

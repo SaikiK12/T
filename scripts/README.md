@@ -434,7 +434,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (106)
+## Tools and everything else (107)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -526,6 +526,7 @@ line is the first line of the script's own docstring.
 - [`score_lighter_roll.py`](score_lighter_roll.py): R389 lighter_roll_fwd: does Lighter's BRENTOIL book lag the documented index roll steps? (M462, SRC1103-014).
 - [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`settlelit_fwd_rule.py`](settlelit_fwd_rule.py): R364 settlelit_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
+- [`snapshot_eea_books.py`](snapshot_eea_books.py): R508 diagnostic (after the frozen read): one snapshot of Kraken Futures and Hyperliquid order books for R508's 111 coins.
 - [`snapshot_route_costs.py`](snapshot_route_costs.py): One descriptive snapshot of what a taker order costs on the zero-fee and low-fee perp routes, for every coin Paradex lists: Paradex's retail (interactive) book, Paradex's public API book, Lighter ...
 - [`speed_test.py`](speed_test.py): Timing check for lab.search on the research universe: how long the condition catalog, the single-condition rules and a 512-rule evaluation take on the discovery rows.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
