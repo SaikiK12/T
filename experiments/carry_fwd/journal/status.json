@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-11-17T22:00:00+00:00",
- "days_ticketed": 47,
+ "last_scored_hour": "2026-11-17T23:00:00+00:00",
+ "days_ticketed": 48,
  "BIN": {
   "coverage": {
    "symbols": 74,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.1388312559482993,
+  "market_mean_apr_now": -0.13766405899808373,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 28,
+   "days": 29,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -81,7 +81,7 @@
     "apr": 0.4304566689825151
    }
   ],
-  "market_mean_apr_now": -0.46363463674453403,
+  "market_mean_apr_now": -0.4610902166324983,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -139,21 +139,21 @@
    }
   },
   "ontime": {
-   "days": 28,
-   "days_invested": 20,
-   "total": 0.002194205400247781,
-   "total_2x": 0.0005742054184369323,
-   "total_3x": -0.0010457945633742835,
-   "total_spot5": 0.0026442054002477405,
-   "total_r191_timing": 0.0035545281415592044,
-   "funding": 0.0032976000048612936,
-   "basis": 0.0005166053771969881,
-   "cost": 0.0016199999818109997,
-   "avg_open": 1.269345238095238,
+   "days": 29,
+   "days_invested": 21,
+   "total": 0.002150846385960656,
+   "total_2x": 0.0003508464061708323,
+   "total_3x": -0.0014491535736193834,
+   "total_spot5": 0.002650846385960615,
+   "total_r191_timing": 0.0038038262436418044,
+   "funding": 0.0034365000045900934,
+   "basis": 0.0005143463611600008,
+   "cost": 0.0017999999797899996,
+   "avg_open": 1.2830459770114941,
    "go_real_invested": {
-    "n": 20,
-    "mean": 0.00010971027001238905,
-    "hit": 0.6,
+    "n": 21,
+    "mean": 0.00010242125647431695,
+    "hit": 0.5714285714285714,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
