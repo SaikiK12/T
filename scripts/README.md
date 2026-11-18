@@ -7,12 +7,13 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (58)
+## Fetch: download archives and public history (59)
 
 - [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
 - [`fetch_binance_options.py`](fetch_binance_options.py): Binance European options history from data.binance.vision (docs/AUCTION_AND_FLOW.md): the only free archive of option positioning the lab has found, for gamma, delta, vanna and charm exposure ...
 - [`fetch_binance_recent.py`](fetch_binance_recent.py): Binance USD-M hourly klines past the archive's end (lab.data.END, 2026-09-30) for named perps.
+- [`fetch_bitfinex_history.py`](fetch_bitfinex_history.py): Bitfinex USDt-margined perpetuals (the `F0` pairs): hourly trade candles and the funding rate of every 8 h event.
 - [`fetch_boros_history.py`](fetch_boros_history.py): Public Boros (Pendle) funding-rate swap history for R412 boroslock_v1: the market list from the open API and, for every BTC/ETH single-venue funding market, the monthly hourly market snapshots ...
 - [`fetch_carryhurdle.py`](fetch_carryhurdle.py): Inputs for carryhurdle_v1 (R483, M478/M481): import the sealed DefiLlama /chart bodies.
 - [`fetch_cboe.py`](fetch_cboe.py): Cboe volatility index history (free daily CSVs, no key): the term structure (VIX1D, VIX9D, VIX, VIX3M, VIX6M, VIX1Y), vol of vol (VVIX), tail pricing (SKEW) and the other asset classes' vol ...
@@ -145,7 +146,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (223)
+## Run: one lane's frozen measurement (224)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -356,6 +357,7 @@ line is the first line of the script's own docstring.
 - [`run_weekendlink.py`](run_weekendlink.py): weekendlink_v1 (R244): BTC's weekend move sets long/short on QQQ and SPY for the first session of the week, as set out in experiments/weekendlink_v1/PREREG.md.
 - [`run_weekly_rotation.py`](run_weekly_rotation.py): R230: finite, registered weekly spot rotation search; no network access.
 - [`run_wti_residual.py`](run_wti_residual.py): R434 wti_residual_v1 (M443): cross-venue residual on the 24/7 commodity perps, CME open versus closed.
+- [`run_xfund_bfx.py`](run_xfund_bfx.py): xfund_bfx_v1: R275's cross-venue funding carry book on a venue pair never read for carry, Binance + Bitfinex.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
 - [`run_xperp_carry.py`](run_xperp_carry.py): xperp_carry_v1 (R441, M490): OKX Europe alt X-Perp carry book, short the X-Perp and long OKX EEA spot, picked each day by trailing realized funding.
 - [`run_xperp_hl.py`](run_xperp_hl.py): xperp_hl_v1 (R443, M502): cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps, the two perp venues found reachable from France.
