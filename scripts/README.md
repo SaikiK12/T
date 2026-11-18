@@ -412,7 +412,7 @@ line is the first line of the script's own docstring.
 - [`check_spot_perp_account.py`](check_spot_perp_account.py): Independent literal cash-flow oracle for R324's fixed constructed accounts.
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
-## Build: tables, views and symbol maps (9)
+## Build: tables, views and symbol maps (10)
 
 - [`build_daily.py`](build_daily.py): Build the daily point-in-time panel (lab/daily.py): one row per (day, Binance perp) from every source the lab holds, plus the market-wide series, into data/daily/.
 - [`build_daily_v2.py`](build_daily_v2.py): Build the daily panel again with the complete Binance metrics (data/metrics_full/metrics_1h, from scripts/fetch_metrics_full.py) in place of data/metrics_1h, into data/daily_v2/. Same code ...
@@ -420,6 +420,7 @@ line is the first line of the script's own docstring.
 - [`build_engine.py`](build_engine.py): Build qx from the locked dependency graph and bind binary/source/toolchain.
 - [`build_extra_views.py`](build_extra_views.py): Extra feature tensors next to data/research/bins.npy, same [V, T, S] int8 layout and binning conventions.
 - [`build_views.py`](build_views.py): Build the point-in-time research universe and the int8 feature-bin tensor, and save them under data/research/.
+- [`make_spot_pairs.py`](make_spot_pairs.py): Rebuild data/spot_pairs.json, the perp -> Binance spot USDT pair map read by scripts/fetch_spot.py, lab/daily.py and scripts/run_carry.py: {perp: {"spot": SPOT, "months": [first YYYY-MM, last ...
 - [`venue_symbols.py`](venue_symbols.py): Cross-venue symbol table: one row per Binance USD-M perp, with the file stem of the same coin on Gate, Hyperliquid and MEXC (empty where it is not listed or has no history file).
 - [`venue_symbols_kd.py`](venue_symbols_kd.py): Symbol table for the KuCoin / dYdX venue replication of R275 and R276: one row per Binance USD-M perp with the file stem of the same coin on Gate, KuCoin and dYdX (empty where it is not listed or ...
 - [`venue_table.py`](venue_table.py): Write a qx spread symbol table from lab.venues: one row per Binance perp found on at least one of the venues asked for, columns `key`, `binance` and one per venue (the venue's symbol, '' where it ...
