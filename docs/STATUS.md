@@ -89,8 +89,11 @@
     une prime d'illiquidité : elle est réelle sur ces données, mais limitée à environ 40 000-100 000 $ de capital.
   - **Coûts réels.** Mesurés sur les carnets du 18-11 : 2 à 3 fois ce que le test suppose, un niveau encore très
     positif. Les écarts de financement existent toujours aujourd'hui.
-  - **Suite.** Une voie papier en direct sur ces deux plateformes, avec les vrais carnets. Avant tout ordre réel :
-    vérifier ton accès aux dérivés de Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md)).
+  - **Suite : la voie papier R509 démarre le 19-11.** Elle tourne seule sur GitHub et paie à chaque décision les vrais
+    coûts des carnets (ordre de 1 000 $ par jambe, frais compris). Lectures vers le 17-02-2027 (90 jours) et le
+    18-05-2027 (180 jours) ; arrêt immédiat à −3 %. Avant tout ordre réel : vérifier ton accès aux dérivés de
+    Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
+    [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

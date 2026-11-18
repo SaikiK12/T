@@ -1,5 +1,6 @@
 name: Carry paper lanes (Claude)
-# Single writer, from 2026-11-10, of the journals of the forward carry paper lanes R278, R279, R294, R390 and R440,
+# Single writer, from 2026-11-10, of the journals of the forward carry paper lanes R278, R279, R294, R390 and R440
+# (and R509 from 2026-11-19),
 # and of R285/R415, which read only those journals. Paper only: public market data, no key, no order.
 # Each lane's data root (data/<lane>/, gitignored) lives in the Actions cache. If the cache is lost, the lane rebuilds
 # it from the public APIs from its warm day (2026-08-01), exactly as a lane without an archive does.
@@ -27,7 +28,7 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       NUMBA_NUM_THREADS: '1'
-      LANES: xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xbook_fwd paperacct_fwd
+      LANES: xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xfund_eea_fwd xbook_fwd paperacct_fwd
     steps:
       - name: Checkout the default branch
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -54,6 +55,7 @@ jobs:
             data/xfund_lt_fwd
             data/xfund_bg_fwd
             data/xfund5_fwd
+            data/xfund_eea_fwd
           key: carry-paper-data-${{ github.run_id }}
           restore-keys: carry-paper-data-
       - name: Mark the data roots before the run
@@ -83,9 +85,10 @@ jobs:
           run R294 scripts/forward_xfund_lt.py
           run R390 scripts/forward_xfund_bg.py
           run R440 scripts/forward_xfund5.py
+          run R509 scripts/forward_xfund_eea.py
           run R285 scripts/forward_xbook.py
           run R415 scripts/forward_paperacct.py
-          for l in xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd; do
+          for l in xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xfund_eea_fwd; do
             n=$(find "data/$l" -name '*.parquet' 2>/dev/null | wc -l)
             last=$(tail -n 1 "experiments/$l/journal/days.csv" | cut -d, -f1-3)
             echo "$l: $n data files; last journal day: $last"
@@ -95,7 +98,7 @@ jobs:
         id: changed
         if: always()
         run: |
-          n=$(find data/xfund_fwd data/xfund_kc_fwd data/xfund_lt_fwd data/xfund_bg_fwd data/xfund5_fwd \
+          n=$(find data/xfund_fwd data/xfund_kc_fwd data/xfund_lt_fwd data/xfund_bg_fwd data/xfund5_fwd data/xfund_eea_fwd \
                 -newer data/.carry_paper_marker -type f 2>/dev/null | wc -l)
           echo "data files written this run: $n"
           echo "n=$n" >> "$GITHUB_OUTPUT"
@@ -109,6 +112,7 @@ jobs:
             data/xfund_lt_fwd
             data/xfund_bg_fwd
             data/xfund5_fwd
+            data/xfund_eea_fwd
           key: carry-paper-data-${{ github.run_id }}
       - name: Commit journals
         if: always() && steps.tick.outcome != 'skipped'
@@ -118,7 +122,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for l in $LANES; do git add -A "experiments/$l/journal"; done
           if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
-          git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R285 R415)" \
+          git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R509 R285 R415)" \
             -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
           br="${{ github.event.repository.default_branch }}"
           for i in 1 2 3 4 5; do

@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (49)
+## Running or armed registered rounds (50)
 
+- **[xfund_eea_fwd](xfund_eea_fwd/)** R509, RUNNING PENDING, 1 trial. M553 gate 2 forward paper: R508's Kraken + Hyperliquid carry book (L14d th5% K20) from 2026-11-19, the decided series charged measured book costs ($1,000 walk plus taker fees) on every leg-side ([PREREG](xfund_eea_fwd/PREREG.md))
 - **[xfund_eea_v1](xfund_eea_v1/)** R508, RUNNING PENDING, 1 trial. M553 gate 1 on a pair reachable from France: R275's cross-venue funding carry book (L14d th5% K20) on Kraken + Hyperliquid; Hyperliquid's funding has a 0.01%/8 h interest floor, Kraken's none (R507's design gap) ([PREREG](xfund_eea_v1/PREREG.md), [FINDINGS](xfund_eea_v1/FINDINGS.md))
 - **[xfund_bfx_v1](xfund_bfx_v1/)** R507, RUNNING PENDING, 1 trial. M552 gate 1 another venue: R275's cross-venue funding carry book (L14d th5% K20) on Binance + Bitfinex, a pair never read for carry; Bitfinex funding from its derivatives status history (dead zone +-5 bp) ([PREREG](xfund_bfx_v1/PREREG.md), [FINDINGS](xfund_bfx_v1/FINDINGS.md))
 - **[gatefill_fwd](gatefill_fwd/)** R498, RUNNING PENDING, 0 trials. M546 forward on paper: R390's C14 Gate leg as a resting order (inside the spread when there is room, else at the touch; queue ahead counted, fills by trade-through or volume beyond the queue) hedged on Binance 5 s after each fill and crossed after 60 min, against crossing both legs at once; $1k/$5k bids and asks every 2 h on R390's open contracts until 2026-12-01 ([PREREG](gatefill_fwd/PREREG.md), [journal](gatefill_fwd/journal/))

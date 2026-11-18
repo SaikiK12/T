@@ -57,6 +57,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`inference`](inference.py): Honest statistics for a program that tries thousands of strategies.
 - [`input_contracts`](input_contracts.py): Check consistency of caller-declared equation-input metadata, without values.
 - [`inverse_cash`](inverse_cash.py): Exact simulated inverse-futures COIN cash, separate from linear futures.
+- [`kraken`](kraken.py): Kraken Futures public clients for forward carry lanes (linear `PF_*` perps), plus order-book walking.
 - [`kraken_carry`](kraken_carry.py): Fixed-quantity spot/perp carry screen with funded cash and unknown funding intervals.
 - [`levcarry`](levcarry.py): Leverage and liquidation on cross-venue carry books (method M265): R275's rule, run with lab.xfund, where each leg sits on its venue at leverage L and can be liquidated by an intraday move.
 - [`level_features`](level_features.py): Receipt-bound retained candle features; no invented order-flow inputs.
