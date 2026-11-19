@@ -1,13 +1,19 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-18T02:22:30.186206+00:00",
+ "updated": "2026-11-19T02:45:17.080144+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.037
+  "gate": 0.988
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -17,12 +23,6 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -32,12 +32,6 @@
   "slots": 20,
   "why": "R286 C14: R275's binance+gate book, gate-1 PASS on 2020 (NW t 4.03)",
   "held_now": [
-   {
-    "coin": "STARUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.6114
-   },
    {
     "coin": "SWARMSUSDT",
     "long": "gate",
@@ -111,12 +105,6 @@
     "spread_in": 0.3789
    },
    {
-    "coin": "ERAUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.6032
-   },
-   {
     "coin": "RPLUSDT",
     "long": "gate",
     "short": "binance",
@@ -151,18 +139,30 @@
     "long": "gate",
     "short": "binance",
     "spread_in": 0.8158
+   },
+   {
+    "coin": "BULLAUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 0.7411
+   },
+   {
+    "coin": "PLAYUSDT",
+    "long": "gate",
+    "short": "binance",
+    "spread_in": 0.5299
    }
   ],
-  "scored_days": 14,
+  "scored_days": 15,
   "late_days": 6,
-  "total": 0.0035828206,
-  "total_2x": 0.0024628206000000003,
-  "total_3x": 0.0013428206,
-  "total_close": 0.0038335151,
-  "nw_t": 2.026767203440004,
+  "total": 0.0043352654,
+  "total_2x": 0.0032152654000000003,
+  "total_3x": 0.0020952654,
+  "total_close": 0.0045859599000000004,
+  "nw_t": 2.1451116824982703,
   "max_drawdown": -0.0006159814,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-18"
+ "last_day": "2026-11-19"
 }

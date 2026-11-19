@@ -1,41 +1,18 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-18T02:31:18.830416+00:00",
+ "updated": "2026-11-19T02:54:34.598707+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.037,
-  "hyperliquid": 0.983,
-  "mexc": 0.976,
-  "kucoin": 1.0
+  "gate": 0.988,
+  "hyperliquid": 0.989,
+  "mexc": 1.0,
+  "kucoin": 0.998
  },
  "data": {
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "mexc": {
    "files": 520,
-   "failed": 12,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "SYRUP_USDT",
-    "S_USDT",
-    "TAO_USDT",
-    "TIA_USDT",
-    "TLM_USDT",
-    "TNSR_USDT",
-    "WLD_USDT",
-    "WOO_USDT",
-    "XAN_USDT",
-    "ZBT_USDT"
-   ]
-  },
-  "kucoin": {
-   "files": 633,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -50,15 +27,26 @@
     "SXPUSDT"
    ]
   },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "hyperliquid": {
    "files": 216,
-   "failed": 3,
+   "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "HEMI",
-    "SPX",
-    "STABLE"
+    "HYPE",
+    "SNX"
    ]
+  },
+  "kucoin": {
+   "files": 633,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -68,12 +56,6 @@
   "slots": 20,
   "why": "R439: R275's all-four rule over five venues, CONFIRMED on M468 (NW t 8.71)",
   "held_now": [
-   {
-    "coin": "STARUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.6114
-   },
    {
     "coin": "SPORTFUNUSDT",
     "long": "kucoin",
@@ -141,12 +123,6 @@
     "spread_in": 0.6314
    },
    {
-    "coin": "ERAUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 1.1088
-   },
-   {
     "coin": "INITUSDT",
     "long": "mexc",
     "short": "gate",
@@ -187,18 +163,30 @@
     "long": "kucoin",
     "short": "binance",
     "spread_in": 1.0251
+   },
+   {
+    "coin": "SAGAUSDT",
+    "long": "kucoin",
+    "short": "hyperliquid",
+    "spread_in": 1.0261
+   },
+   {
+    "coin": "DODOUSDT",
+    "long": "kucoin",
+    "short": "mexc",
+    "spread_in": 0.7742
    }
   ],
-  "scored_days": 7,
+  "scored_days": 8,
   "late_days": 0,
-  "total": 0.0036433172,
-  "total_2x": 0.0025933172,
-  "total_3x": 0.0015433172000000005,
-  "total_close": 0.0016204862000000005,
-  "nw_t": 1.5900077524587841,
+  "total": 0.003274577,
+  "total_2x": 0.0022245769999999997,
+  "total_3x": 0.0011745770000000004,
+  "total_close": 0.0012517460000000002,
+  "nw_t": 1.4018193989902694,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-18"
+ "last_day": "2026-11-19"
 }
