@@ -147,7 +147,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (225)
+## Run: one lane's frozen measurement (226)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -360,6 +360,7 @@ line is the first line of the script's own docstring.
 - [`run_wti_residual.py`](run_wti_residual.py): R434 wti_residual_v1 (M443): cross-venue residual on the 24/7 commodity perps, CME open versus closed.
 - [`run_xfund_bfx.py`](run_xfund_bfx.py): xfund_bfx_v1: R275's cross-venue funding carry book on a venue pair never read for carry, Binance + Bitfinex.
 - [`run_xfund_eea.py`](run_xfund_eea.py): xfund_eea_v1 (R508): R275's cross-venue funding carry book on Kraken + Hyperliquid, two venues reachable from France whose funding rules differ.
+- [`run_xfund_kaster.py`](run_xfund_kaster.py): xfund_kaster_v1 (R511): R275's cross-venue funding carry book on Kraken + Aster, a pair never read.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
 - [`run_xperp_carry.py`](run_xperp_carry.py): xperp_carry_v1 (R441, M490): OKX Europe alt X-Perp carry book, short the X-Perp and long OKX EEA spot, picked each day by trailing realized funding.
 - [`run_xperp_hl.py`](run_xperp_hl.py): xperp_hl_v1 (R443, M502): cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps, the two perp venues found reachable from France.
