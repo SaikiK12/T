@@ -98,7 +98,11 @@
     ne nomment pas la France), décidée sur 31 petites pièces jamais lues : **+13,5 %/an à 1x, +10,3 % à 3x, t = 4,8**.
     Avec les trois plateformes ensemble : +25 %/an. Le mécanisme se confirme sur des pièces nouvelles ; la capacité
     ajoutée reste petite (pièces encore plus minces), et Aster n'est autorisée nulle part
-    ([résultat](../experiments/xfund_kaster_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
+    ([résultat](../experiments/xfund_kaster_v1/FINDINGS.md)).
+  - **Voie papier à trois plateformes (R512, dès le 20-11), décidée chaque jour.** Après une lecture approfondie de
+    la statistique « valide à tout instant », R512 se décide dès que la preuve suffit (au plus tôt au jour 30,
+    médiane simulée vers 40-47 jours si l'avantage tient) au lieu d'attendre une date fixe
+    ([règles](../experiments/xfund_eea3_fwd/PREREG.md), [lecture](../research/intake/anytime_valid_20261119.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :

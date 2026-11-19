@@ -9,6 +9,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 
 - [`__main__`](__main__.py): Common entry point over existing tools; default is help, never a live tick.
 - [`acquisition_budget`](acquisition_budget.py): Durable conservative acquisition reservations; no network or permission grant.
+- [`anytime`](anytime.py): Sequential monitoring of a daily P&L mean, checked every day without a fixed sample size.
 - [`apsi`](apsi.py): A project-specific volatility/cost diagnostic for the MEXC alt-perp universe.
 - [`artifact_io`](artifact_io.py): Content-bound local table cache and verified immutable Parquet export.
 - [`aster`](aster.py): Aster (asterdex.com) public clients for forward carry lanes: USDT perpetuals, Binance-style API.
