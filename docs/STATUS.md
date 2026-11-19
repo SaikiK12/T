@@ -93,7 +93,12 @@
     coûts des carnets (ordre de 1 000 $ par jambe, frais compris). Lectures vers le 17-02-2027 (90 jours) et le
     18-05-2027 (180 jours) ; arrêt immédiat à −3 %. **Lecture rapide R510** : le financement encaissé moins les
     coûts réels se lit en 30 jours (vers le 19-12, puis le 03-01) ; une réussite permet une petite mise anticipée
-    (2 000 $ au plus). Avant tout ordre réel : vérifier ton accès aux dérivés de
+    (2 000 $ au plus).
+  - **Réplication indépendante (R511, 19-11).** Même règle sur Kraken + Aster (Aster a le plancher ; ses conditions
+    ne nomment pas la France), décidée sur 31 petites pièces jamais lues : **+13,5 %/an à 1x, +10,3 % à 3x, t = 4,8**.
+    Avec les trois plateformes ensemble : +25 %/an. Le mécanisme se confirme sur des pièces nouvelles ; la capacité
+    ajoutée reste petite (pièces encore plus minces), et Aster n'est autorisée nulle part
+    ([résultat](../experiments/xfund_kaster_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :

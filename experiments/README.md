@@ -16,7 +16,7 @@ batch or a measurement; this heading does not turn them into forward paper evide
 
 ## Running or armed registered rounds (52)
 
-- **[xfund_kaster_v1](xfund_kaster_v1/)** R511, RUNNING PENDING, 1 trial. M554 gate 1: R275's carry book (L14d th5% K20) on Kraken + Aster (floored, terms do not name France), decided on the 31 Kraken coins outside R508's table, whose funding was never read ([PREREG](xfund_kaster_v1/PREREG.md))
+- **[xfund_kaster_v1](xfund_kaster_v1/)** R511, RUNNING PENDING, 1 trial. M554 gate 1: R275's carry book (L14d th5% K20) on Kraken + Aster (floored, terms do not name France), decided on the 31 Kraken coins outside R508's table, whose funding was never read ([PREREG](xfund_kaster_v1/PREREG.md), [FINDINGS](xfund_kaster_v1/FINDINGS.md))
 - **[xfund_eea_fast](xfund_eea_fast/)** R510, RUNNING PENDING, 1 trial. M553 gate 2 early read of R509's journal: the funding the held pairs earn net of measured book costs (Sharpe 16.9 on R508 against 7.1 for the whole net), looks at 30 and 45 scored days, guard cumulative net > 0 ([PREREG](xfund_eea_fast/PREREG.md))
 - **[xfund_eea_fwd](xfund_eea_fwd/)** R509, RUNNING PENDING, 1 trial. M553 gate 2 forward paper: R508's Kraken + Hyperliquid carry book (L14d th5% K20) from 2026-11-19, the decided series charged measured book costs ($1,000 walk plus taker fees) on every leg-side ([PREREG](xfund_eea_fwd/PREREG.md), [journal](xfund_eea_fwd/journal/))
 - **[xfund_eea_v1](xfund_eea_v1/)** R508, RUNNING PENDING, 1 trial. M553 gate 1 on a pair reachable from France: R275's cross-venue funding carry book (L14d th5% K20) on Kraken + Hyperliquid; Hyperliquid's funding has a 0.01%/8 h interest floor, Kraken's none (R507's design gap) ([PREREG](xfund_eea_v1/PREREG.md), [FINDINGS](xfund_eea_v1/FINDINGS.md))
