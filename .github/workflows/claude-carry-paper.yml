@@ -55,9 +55,17 @@ jobs:
             data/xfund_lt_fwd
             data/xfund_bg_fwd
             data/xfund5_fwd
-            data/xfund_eea_fwd
           key: carry-paper-data-${{ github.run_id }}
           restore-keys: carry-paper-data-
+      # R509's root has its own cache: a cache's version is its path list, so adding a path to the shared one would
+      # orphan every earlier save (it did on 2026-11-19).
+      - name: Restore R509's data root
+        id: restore_eea
+        uses: actions/cache/restore@v4
+        with:
+          path: data/xfund_eea_fwd
+          key: carry-eea-data-${{ github.run_id }}
+          restore-keys: carry-eea-data-
       - name: Mark the data roots before the run
         run: mkdir -p data && touch data/.carry_paper_marker
       - name: Prefetch data only
@@ -98,10 +106,12 @@ jobs:
         id: changed
         if: always()
         run: |
-          n=$(find data/xfund_fwd data/xfund_kc_fwd data/xfund_lt_fwd data/xfund_bg_fwd data/xfund5_fwd data/xfund_eea_fwd \
+          n=$(find data/xfund_fwd data/xfund_kc_fwd data/xfund_lt_fwd data/xfund_bg_fwd data/xfund5_fwd \
                 -newer data/.carry_paper_marker -type f 2>/dev/null | wc -l)
-          echo "data files written this run: $n"
+          n_eea=$(find data/xfund_eea_fwd -newer data/.carry_paper_marker -type f 2>/dev/null | wc -l)
+          echo "data files written this run: $n (R509: $n_eea)"
           echo "n=$n" >> "$GITHUB_OUTPUT"
+          echo "n_eea=$n_eea" >> "$GITHUB_OUTPUT"
       - name: Save lane data roots
         if: always() && steps.changed.outputs.n != '0'
         uses: actions/cache/save@v4
@@ -112,8 +122,13 @@ jobs:
             data/xfund_lt_fwd
             data/xfund_bg_fwd
             data/xfund5_fwd
-            data/xfund_eea_fwd
           key: carry-paper-data-${{ github.run_id }}
+      - name: Save R509's data root
+        if: always() && steps.changed.outputs.n_eea != '0'
+        uses: actions/cache/save@v4
+        with:
+          path: data/xfund_eea_fwd
+          key: carry-eea-data-${{ github.run_id }}
       - name: Commit journals
         if: always() && steps.tick.outcome != 'skipped'
         run: |
