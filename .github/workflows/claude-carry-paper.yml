@@ -75,7 +75,7 @@ jobs:
             name=$1; shift
             echo "::group::$name"
             start=$(date +%s)
-            timeout 2400 .venv/bin/python "$@"; rc=$?
+            rc=0; timeout 2400 .venv/bin/python "$@" || rc=$?     # the step shell runs with -e
             echo "$name exit $rc after $(( $(date +%s) - start )) s"
             echo "::endgroup::"
             [ $rc -eq 0 ] || fail="$fail $name"
@@ -120,7 +120,9 @@ jobs:
           set -eu
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for l in $LANES; do git add -A "experiments/$l/journal"; done
+          for l in $LANES; do
+            if [ -d "experiments/$l/journal" ]; then git add -A "experiments/$l/journal"; fi   # a new lane has none yet
+          done
           if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
           git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R509 R285 R415)" \
             -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
