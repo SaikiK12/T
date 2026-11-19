@@ -11,6 +11,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`acquisition_budget`](acquisition_budget.py): Durable conservative acquisition reservations; no network or permission grant.
 - [`apsi`](apsi.py): A project-specific volatility/cost diagnostic for the MEXC alt-perp universe.
 - [`artifact_io`](artifact_io.py): Content-bound local table cache and verified immutable Parquet export.
+- [`aster`](aster.py): Aster (asterdex.com) public clients for forward carry lanes: USDT perpetuals, Binance-style API.
 - [`atlas`](atlas.py): Edge atlas: what each feature bin says about future returns BEFORE fees, at several horizons, split by a grouping (market session, liquidity tier, BTC regime), with a placebo to say how much of it ...
 - [`auction`](auction.py): Auction-market levels from bars: anchored VWAP with standard-deviation bands, volume and TPO profiles, the point of control and value area, high- and low-volume nodes, and the initial balance ...
 - [`capital`](capital.py): Capital accounting for segregated, unrebalanced spot and carry sleeves.

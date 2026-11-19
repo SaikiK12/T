@@ -111,7 +111,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (33)
+## Forward: paper lanes and the loops that run them (34)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -141,6 +141,7 @@ line is the first line of the script's own docstring.
 - [`forward_xfund5.py`](forward_xfund5.py): xfund5_fwd (R440): R439's five-venue carry book forward on paper, as set out in experiments/xfund5_fwd/PREREG.md.
 - [`forward_xfund_bg.py`](forward_xfund_bg.py): xfund_bg_fwd (R390): the binance+gate cross-venue carry book that passed reserved batch 1 (R286 C14), forward on paper, as set out in experiments/xfund_bg_fwd/PREREG.md.
 - [`forward_xfund_eea.py`](forward_xfund_eea.py): xfund_eea_fwd (R509): R508's carry book (Kraken + Hyperliquid, L14d th5% K20) forward on paper, as set out in experiments/xfund_eea_fwd/PREREG.md.
+- [`forward_xfund_eea3.py`](forward_xfund_eea3.py): xfund_eea3_fwd (R512): R511's three-venue carry book (Kraken + Hyperliquid + Aster, L14d th5% K20) forward on paper, as set out in experiments/xfund_eea3_fwd/PREREG.md.
 - [`forward_xfund_kc.py`](forward_xfund_kc.py): xfund_kc_fwd (R279): R277's two replicating KuCoin carry books forward on paper, as set out in experiments/xfund_kc_fwd/PREREG.md.
 - [`forward_xfund_lt.py`](forward_xfund_lt.py): xfund_lt_fwd (R294): R288's mexc+lighter carry book forward on paper, as set out in experiments/xfund_lt_fwd/PREREG.md.
 - [`live_parity.py`](live_parity.py): Live vs archive parity: are the live public endpoints the same data as the archive the lanes were built on?.
