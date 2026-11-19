@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-19 | [large_scale_inference_20261119.md](large_scale_inference_20261119.md) | Deep reading on large-scale inference (Efron's papers, Harvey-Liu-Zhu, deflated Sharpe), exact scopes; the 9.8M-trial bar as the wrong family for confirmations; R511's program-level posterior |
 | 2026-11-19 | [anytime_valid_20261119.md](anytime_valid_20261119.md) | Deep reading on anytime-valid inference (Ramdas et al., Waudby-Smith & Ramdas, Howard et al., Ge & Liu), exact scopes; the HAC mixture monitor in `lab/anytime.py`, R512's rule |
 | 2026-11-16 | [fee_map_20261116.md](fee_map_20261116.md), with its [venue](fee_map_20261116_venues.csv) and [book](fee_map_20261116_books.csv) tables | Fees from official pages; taker cost by zero-fee route; five cost levers; C14 re-priced. Frozen R497 input |
 | 2026-11-16 | [reels_20261116.md](reels_20261116.md) | Owner reel: an ad for the LSE data vault. No test |
