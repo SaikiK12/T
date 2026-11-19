@@ -91,7 +91,9 @@
     positif. Les écarts de financement existent toujours aujourd'hui.
   - **Suite : la voie papier R509 démarre le 19-11.** Elle tourne seule sur GitHub et paie à chaque décision les vrais
     coûts des carnets (ordre de 1 000 $ par jambe, frais compris). Lectures vers le 17-02-2027 (90 jours) et le
-    18-05-2027 (180 jours) ; arrêt immédiat à −3 %. Avant tout ordre réel : vérifier ton accès aux dérivés de
+    18-05-2027 (180 jours) ; arrêt immédiat à −3 %. **Lecture rapide R510** : le financement encaissé moins les
+    coûts réels se lit en 30 jours (vers le 19-12, puis le 03-01) ; une réussite permet une petite mise anticipée
+    (2 000 $ au plus). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
