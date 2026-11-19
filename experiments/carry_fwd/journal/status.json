@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-11-18T22:00:00+00:00",
- "days_ticketed": 48,
+ "last_scored_hour": "2026-11-18T23:00:00+00:00",
+ "days_ticketed": 49,
  "BIN": {
   "coverage": {
    "symbols": 75,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.06148610082957476,
+  "market_mean_apr_now": -0.06064470285314958,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 29,
+   "days": 30,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -81,7 +81,7 @@
     "apr": 0.38860333608681685
    }
   ],
-  "market_mean_apr_now": -0.41308598451851447,
+  "market_mean_apr_now": -0.4112941665348668,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -139,21 +139,25 @@
    }
   },
   "ontime": {
-   "days": 29,
-   "days_invested": 21,
-   "total": 0.002150846385960656,
-   "total_2x": 0.0003508464061708323,
-   "total_3x": -0.0014491535736193834,
-   "total_spot5": 0.002650846385960615,
-   "total_r191_timing": 0.0038038262436418044,
-   "funding": 0.0034365000045900934,
-   "basis": 0.0005143463611600008,
+   "days": 30,
+   "days_invested": 22,
+   "total": 0.0021370906223853376,
+   "total_2x": 0.00033709064259551403,
+   "total_3x": -0.0014629093371947017,
+   "total_spot5": 0.002637090622385297,
+   "total_r191_timing": 0.003790070480066486,
+   "funding": 0.0035850000050222934,
+   "basis": 0.00035209059715250084,
    "cost": 0.0017999999797899996,
-   "avg_open": 1.2830459770114941,
+   "avg_open": 1.3069444444444442,
+   "ann": 0.02600126923902161,
+   "sharpe": 2.4983900675411452,
+   "t_nw": 0.5168058119847667,
+   "max_dd": 0.0027393937607531,
    "go_real_invested": {
-    "n": 21,
-    "mean": 0.00010242125647431695,
-    "hit": 0.5714285714285714,
+    "n": 22,
+    "mean": 9.714048283569716e-05,
+    "hit": 0.5454545454545454,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
@@ -161,10 +165,10 @@
      "finite_returns": true,
      "enough_scored": true,
      "mean_positive": true,
-     "hit_rate": true,
+     "hit_rate": false,
      "no_tail_event": true
     },
-    "pass": true
+    "pass": false
    }
   }
  }
