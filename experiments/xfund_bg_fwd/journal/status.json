@@ -1,11 +1,11 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-19T02:45:17.080144+00:00",
+ "updated": "2026-11-20T08:10:57.226334+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.988
+  "gate": 0.97
  },
  "data": {
   "gate": {
@@ -117,12 +117,6 @@
     "spread_in": 0.3809
    },
    {
-    "coin": "CSOPSKHYNIX2LUSDT",
-    "long": "binance",
-    "short": "gate",
-    "spread_in": 0.4403
-   },
-   {
     "coin": "INITUSDT",
     "long": "binance",
     "short": "gate",
@@ -151,18 +145,24 @@
     "long": "gate",
     "short": "binance",
     "spread_in": 0.5299
+   },
+   {
+    "coin": "COLLECTUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 0.4779
    }
   ],
-  "scored_days": 15,
+  "scored_days": 16,
   "late_days": 6,
-  "total": 0.0043352654,
-  "total_2x": 0.0032152654000000003,
-  "total_3x": 0.0020952654,
-  "total_close": 0.0045859599000000004,
-  "nw_t": 2.1451116824982703,
+  "total": 0.0044631448,
+  "total_2x": 0.0032031447999999996,
+  "total_3x": 0.0019431447999999998,
+  "total_close": 0.004639448900000001,
+  "nw_t": 2.289641545844787,
   "max_drawdown": -0.0006159814,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-19"
+ "last_day": "2026-11-20"
 }

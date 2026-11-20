@@ -1,31 +1,26 @@
 {
  "lane": "xfund_eea_fwd",
  "rid": "R509",
- "updated": "2026-11-19T02:58:09.445104+00:00",
+ "updated": "2026-11-20T08:21:14.753142+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
-  "hyperliquid": 1.0
+  "hyperliquid": 0.991
  },
  "data": {
-  "hyperliquid": {
-   "files": 111,
-   "failed": 6,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "MEW",
-    "MON",
-    "STX",
-    "SUI",
-    "kFLOKI",
-    "kPEPE"
-   ]
-  },
   "kraken": {
    "files": 111,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 111,
+   "failed": 1,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "SEI"
+   ]
   }
  },
  "A": {
@@ -82,12 +77,6 @@
     "long": "hyperliquid",
     "short": "kraken",
     "spread_in": 0.5231
-   },
-   {
-    "coin": "USUAL",
-    "long": "hyperliquid",
-    "short": "kraken",
-    "spread_in": 0.5782
    },
    {
     "coin": "IMX",
@@ -154,18 +143,24 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.536
+   },
+   {
+    "coin": "MON",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.7921
    }
   ],
-  "scored_days": 0,
+  "scored_days": 1,
   "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
+  "total": -0.0002211662,
+  "total_2x": -0.0009211662,
+  "total_3x": -0.0016211662,
+  "total_close": 0.0015730067,
   "nw_t": null,
-  "max_drawdown": 0.0,
+  "max_drawdown": -0.0002211662,
   "replay_days": 28,
   "replay_total": 0.0007422842
  },
- "last_day": "2026-11-19"
+ "last_day": "2026-11-20"
 }

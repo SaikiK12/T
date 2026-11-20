@@ -1,21 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-19T02:36:06.556803+00:00",
+ "updated": "2026-11-20T08:01:45.300910+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.02
+  "lighter": 0.96
  },
  "data": {
-  "mexc": {
-   "files": 117,
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "lighter": {
-   "files": 195,
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -69,12 +69,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1027
-   },
-   {
-    "coin": "TIAUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.1173
    },
    {
     "coin": "AEROUSDT",
@@ -147,18 +141,24 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0655
+   },
+   {
+    "coin": "VIRTUALUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.0789
    }
   ],
-  "scored_days": 27,
+  "scored_days": 28,
   "late_days": 15,
-  "total": -0.0012658503,
-  "total_2x": -0.0034108503,
-  "total_3x": -0.0055558503,
-  "total_close": -0.0011595391999999999,
-  "nw_t": -1.1224436498626569,
+  "total": -0.0011321389,
+  "total_2x": -0.0032771389,
+  "total_3x": -0.0054221389,
+  "total_close": -0.0010258277999999998,
+  "nw_t": -1.0000792015815836,
   "max_drawdown": -0.0026590484,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-19"
+ "last_day": "2026-11-20"
 }

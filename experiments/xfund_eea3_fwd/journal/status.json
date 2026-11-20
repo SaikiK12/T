@@ -1,0 +1,179 @@
+{
+ "lane": "xfund_eea3_fwd",
+ "rid": "R512",
+ "updated": "2026-11-20T08:25:09.544317+00:00",
+ "waiting": false,
+ "ready": {
+  "kraken": 1.0,
+  "hyperliquid": 1.0,
+  "aster": 0.992
+ },
+ "data": {
+  "hyperliquid": {
+   "files": 101,
+   "failed": 7,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "AVAX",
+    "BNB",
+    "JTO",
+    "SAND",
+    "SEI",
+    "ZEN",
+    "ZK"
+   ]
+  },
+  "kraken": {
+   "files": 132,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "aster": {
+   "files": 132,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  }
+ },
+ "A": {
+  "set": "kraken+hyperliquid+aster",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R511's three-venue book (+25.04%/yr, NW t 6.23)",
+  "held_now": [
+   {
+    "coin": "FLOKI",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 1.3807
+   },
+   {
+    "coin": "ALICE",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.8189
+   },
+   {
+    "coin": "JASMY",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.634
+   },
+   {
+    "coin": "MOVR",
+    "long": "aster",
+    "short": "kraken",
+    "spread_in": 0.5113
+   },
+   {
+    "coin": "TURBO",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.4968
+   },
+   {
+    "coin": "SAND",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.4476
+   },
+   {
+    "coin": "ROSE",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.3829
+   },
+   {
+    "coin": "IOTX",
+    "long": "aster",
+    "short": "kraken",
+    "spread_in": 1.2446
+   },
+   {
+    "coin": "BB",
+    "long": "aster",
+    "short": "kraken",
+    "spread_in": 1.195
+   },
+   {
+    "coin": "ORDI",
+    "long": "aster",
+    "short": "kraken",
+    "spread_in": 0.5524
+   },
+   {
+    "coin": "MOODENG",
+    "long": "hyperliquid",
+    "short": "kraken",
+    "spread_in": 0.5231
+   },
+   {
+    "coin": "CFG",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.5245
+   },
+   {
+    "coin": "WLFI",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.4621
+   },
+   {
+    "coin": "ARC",
+    "long": "aster",
+    "short": "kraken",
+    "spread_in": 1.1723
+   },
+   {
+    "coin": "PNUT",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 1.1595
+   },
+   {
+    "coin": "CHZ",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.8003
+   },
+   {
+    "coin": "MELANIA",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 1.131
+   },
+   {
+    "coin": "ZBT",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.9167
+   },
+   {
+    "coin": "SAGA",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 1.2281
+   },
+   {
+    "coin": "YFI",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.9391
+   }
+  ],
+  "scored_days": 0,
+  "late_days": 0,
+  "total": 0.0,
+  "total_2x": 0.0,
+  "total_3x": 0.0,
+  "total_close": 0.0,
+  "nw_t": null,
+  "max_drawdown": 0.0,
+  "replay_days": 29,
+  "replay_total": 0.007991831399999998
+ },
+ "last_day": "2026-11-20"
+}
