@@ -201,6 +201,8 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Sizing the carry books for a small stake, 2026-11-20](docs/reviews/sizing_20261120.md): risk-constrained Kelly
+    against per-venue liquidation (`lab/sizing.py`); cross margin caps R508 near 6.5x, isolated legs near 0.6x.
   - [Data rebuild, 2026-11-17..18](docs/reviews/data_rebuild_20261117.md): each `data/` folder rebuilt after the
     container replacement, compared with its provenance record (coverage, missing and new contracts, what is not rebuilt).
   - [Cross-lane scan, 2026-11-17](docs/reviews/lane_scan_20261117.md): 72 lanes and 5,855 cells sorted into robust,

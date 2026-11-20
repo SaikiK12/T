@@ -110,6 +110,7 @@ Imported as `from lab import <module>`. Tests are in `tests/test_<module>.py`; r
 - [`search`](search.py): Staged beam search over conditions on feature bins, with a placebo to calibrate what counts as a find.
 - [`sessions`](sessions.py): Market clocks: where each decision time sits against the hours of other markets and scheduled events.
 - [`sizecarry`](sizecarry.py): Confidence-sized cross-venue carry (method M266): R275's books with the same pairs, entered and exited by the same rule (lab.xfund), but each open pair sized by a score instead of one equal slot.
+- [`sizing`](sizing.py): Leverage for a small market-neutral carry book: risk-constrained Kelly, capped by each leg's liquidation risk.
 - [`slices`](slices.py): Overlapping-slice books (the Jegadeesh-Titman construction): every hour a symbol is in the signal state, open a slice of fixed size and close it `hold` hours later.
 - [`spot_cash`](spot_cash.py): Append-only simulated SPOT cash/inventory, separate from futures collateral.
 - [`spot_input_bridge`](spot_input_bridge.py): R326 finite compatibility bridge; original R325 source and failures stay intact.
