@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (53)
+## Running or armed registered rounds (54)
 
+- **[passive_kraken_v1](passive_kraken_v1/)** R513, RUNNING PENDING, 1 trial. M555 gate 0 cost measurement: a resting order at the carry book's decision time (00:00 UTC) on Kraken's thin perps against a taker order, conservative fill by a 5-minute print through the limit, taker fallback at 6 h with the drift charged ([PREREG](passive_kraken_v1/PREREG.md))
 - **[xfund_eea3_fwd](xfund_eea3_fwd/)** R512, RUNNING PENDING, 1 trial. M554 gate 2 forward paper: R511's three-venue carry book (Kraken + Hyperliquid + Aster, L14d th5% K20, 132 coins) from 2026-11-20, measured book costs, decided by a daily HAC mixture sequential monitor (E >= 40 from day 30 to 180) ([PREREG](xfund_eea3_fwd/PREREG.md))
 - **[xfund_kaster_v1](xfund_kaster_v1/)** R511, RUNNING PENDING, 1 trial. M554 gate 1: R275's carry book (L14d th5% K20) on Kraken + Aster (floored, terms do not name France), decided on the 31 Kraken coins outside R508's table, whose funding was never read ([PREREG](xfund_kaster_v1/PREREG.md), [FINDINGS](xfund_kaster_v1/FINDINGS.md))
 - **[xfund_eea_fast](xfund_eea_fast/)** R510, RUNNING PENDING, 1 trial. M553 gate 2 early read of R509's journal: the funding the held pairs earn net of measured book costs (Sharpe 16.9 on R508 against 7.1 for the whole net), looks at 30 and 45 scored days, guard cumulative net > 0 ([PREREG](xfund_eea_fast/PREREG.md))

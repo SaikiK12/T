@@ -148,7 +148,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (226)
+## Run: one lane's frozen measurement (227)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -299,6 +299,7 @@ line is the first line of the script's own docstring.
 - [`run_pairs.py`](run_pairs.py): pairs_v1 (R250): weekly-formed pairs on the top-50 perps, distance (Gatev) and Engle-Granger selection, z-score entry 2 and exit 0, as set out in experiments/pairs_v1/PREREG.md.
 - [`run_paper_account.py`](run_paper_account.py): R318 offline account integration, on invented fixtures and sealed seen books.
 - [`run_partial_execution.py`](run_partial_execution.py): R231: pre-registered partial adjustment of the unchanged R229 spot target.
+- [`run_passive_kraken.py`](run_passive_kraken.py): passive_kraken_v1 (R513): what a passive entry costs on Kraken's perps, against a taker entry, at the carry book's decision time.
 - [`run_path_response.py`](run_path_response.py): R400 frozen raw-tape equation discovery, then one delayed forward evaluation.
 - [`run_pcares.py`](run_pcares.py): pcares_v1 (R287): Avellaneda-Lee PCA residual reversion on the top-50 Binance perps at hourly scale, as set out in experiments/pcares_v1/PREREG.md (M298).
 - [`run_pivotfade.py`](run_pivotfade.py): pivotfade_v1 (R248): fade a close beyond the prior day's floor pivot R1/S1 (the mirror of R243/R247's PIVOT_BREAK) on daily world indices and forex (validation 2013-19, then the 2020-26 holdout ...
