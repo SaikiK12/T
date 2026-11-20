@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (59)
+## Fetch: download archives and public history (60)
 
 - [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
@@ -31,6 +31,7 @@ line is the first line of the script's own docstring.
 - [`fetch_gate.py`](fetch_gate.py): Gate.io USDT-perp hourly contract stats (top-trader and all-account long/short ratios, taker sizes, liquidations, open interest) for the coins of the Binance research universe.
 - [`fetch_gate_history.py`](fetch_gate_history.py): Gate.io's public bulk archive (gateio-public-data on S3, no keys): hourly candles and settled funding for every USDT perp, delisted ones included, from 2020-01 to the last complete month.
 - [`fetch_hip3carry.py`](fetch_hip3carry.py): Inputs for R479 hip3carry_fwd (forward reads of R475-R477's funding carry).
+- [`fetch_hip3list.py`](fetch_hip3list.py): Inputs for R517 hip3list_v1: funding and 4-hour candles of every HIP-3 market whose ticker is listed on two or more HIP-3 dexes.
 - [`fetch_hip3other.py`](fetch_hip3other.py): Inputs for R476 hip3other_v1: R475's frozen rule on the US-stock perps of every other HIP-3 deployer.
 - [`fetch_hip3stock.py`](fetch_hip3stock.py): Inputs for R475 hip3stock_v1 (short trade.xyz US-stock perps with high trailing funding, long the stock).
 - [`fetch_hl_vaults.py`](fetch_hl_vaults.py): Hyperliquid user-vault histories for M466 (vault persistence; edge map family F4).
@@ -149,7 +150,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (229)
+## Run: one lane's frozen measurement (230)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -237,6 +238,7 @@ line is the first line of the script's own docstring.
 - [`run_gexfilter.py`](run_gexfilter.py): R416 gexfilter_v1: does the S&P 500 dealer gamma exposure (SqueezeMetrics' free daily GEX) known after the US close predict BTC and ETH volatility over the next US session, beyond VIX and the ...
 - [`run_hftlead.py`](run_hftlead.py): R367 hftlead_v1 runner, frozen in experiments/hftlead_v1/PREREG.md: does the Binance USDT or Bybit mid, when it has moved away from the Binance USDC mid, make a one-second passive quote on the ...
 - [`run_hip3carry.py`](run_hip3carry.py): R479 hip3carry_fwd, frozen in experiments/hip3carry_fwd/PREREG.md: R475-R477's funding carry, forward from 2026-11-16, read twice (futility after 13 weeks, final after 26).
+- [`run_hip3list.py`](run_hip3list.py): R517 hip3list_v1: R516's listing-phase carry rule, unchanged, between HIP-3 dexes that list the same ticker.
 - [`run_hip3other.py`](run_hip3other.py): R476 hip3other_v1, frozen in experiments/hip3other_v1/PREREG.md: R475's rule on the other HIP-3 deployers.
 - [`run_hip3stock.py`](run_hip3stock.py): R475 hip3stock_v1, frozen in experiments/hip3stock_v1/PREREG.md: funding carry on trade.xyz's US-stock perps.
 - [`run_hlpinv.py`](run_hlpinv.py): hlpinv_v1 (R454): HLP's inventory as a cross-sectional signal on Hyperliquid's main-dex perps (M510), as set out in experiments/hlpinv_v1/PREREG.md.
