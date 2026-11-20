@@ -33,8 +33,23 @@
     (BIS WP 1087, abstract page only; the PDF did not extract).
   - With no interest term, the perpetual's deviation grows with the interest spread and shrinks with the premium's
     anchoring strength (Ackerer, Hugonnier & Jermann, p. 12).
-- **What it earns.** The lab measures persistence itself, on data it holds: an AR(1) half-life of the Kraken-Hyperliquid
-  and Kraken-Aster funding spreads per coin, and the decline against open interest. Not done yet.
+- **What it earns:** the lab measures persistence itself, on data it holds.
+- **Measured by the session, 2026-11-20** (descriptive, no decision). Kraken-Hyperliquid daily funding spread
+  (Hyperliquid minus Kraken), 111 coins of R508's table, 2025-11-17..2026-11-15:
+  - **Around each coin's own mean, the spread reverts fast.**
+    - Daily AR(1) median 0.38-0.42: a half-life under 1 day.
+    - Weekly means: AR(1) about 0.3, a half-life of about 4 days.
+  - **A coin's mean level is only weakly persistent.**
+    - Half 1 against half 2 (split at 2026-05-17): rank correlation 0.47 (thin coins 0.34). The slope of the second
+      half's mean on the first's is 0.10.
+    - Coins with |spread| above 20%/yr in half 1 kept the sign in 57% of cases.
+    - 76% of all coins kept the sign, mostly through the structural floor (Hyperliquid above Kraken).
+  - **What it means.**
+    - The carry book's edge is a persistent structural baseline (the floor gap) plus a stream of short-lived extremes
+      that the 14-day signal catches and rotates out of. It is not a stable property of particular coins.
+    - Its forward return depends on extremes continuing to arrive, which the literature read ties to retail leverage
+      demand.
+    - A coin's past extreme is no reason to hold it.
 
 ## Q3. Venue failure (serves sizing)
 - **Answer.**
