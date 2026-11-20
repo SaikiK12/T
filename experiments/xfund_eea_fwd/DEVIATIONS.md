@@ -8,3 +8,8 @@
   (`tests/test_forward_xfund_eea.py`, Read).
 - **What is done.** The fixed file is left as frozen. R510's fast read (`scripts/read_xfund_eea_fast.py`) treats that
   error as "no scored day".
+
+## 2026-11-20: day 2026-11-20 decided late (execution only)
+- The carry workflow's cron fired once, at 07:32 UTC. R509 decided at 08:20, so the day is `late`.
+- Its 1 entry and 1 exit have no book record and are charged 21 bp a leg-side, as the frozen read says.
+- From 2026-11-21 the clock chain dispatches the workflow at 00:31 and 02:31 UTC (commit 59499b2).

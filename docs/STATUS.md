@@ -102,7 +102,11 @@
   - **Voie papier à trois plateformes (R512, dès le 20-11), décidée chaque jour.** Après une lecture approfondie de
     la statistique « valide à tout instant », R512 se décide dès que la preuve suffit (au plus tôt au jour 30,
     médiane simulée vers 40-47 jours si l'avantage tient) au lieu d'attendre une date fixe
-    ([règles](../experiments/xfund_eea3_fwd/PREREG.md), [lecture](../research/intake/anytime_valid_20261119.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
+    ([règles](../experiments/xfund_eea3_fwd/PREREG.md), [lecture](../research/intake/anytime_valid_20261119.md)).
+  - **Les coûts baissent avec des ordres passifs (R513, 20-11).** Sur les petites pièces Kraken, un ordre passif posé
+    à l'heure de décision, avec repli agressif au bout d'1 h, coûte environ 12 bp par côté au lieu de 20 (gain
+    8,2 bp, t = 9,5 ; décidé à 6 h : gain 4,9 bp, t = 3,0). Attendre 24 h n'aide plus. C'est le levier principal sur
+    les coûts du portage ([résultat](../experiments/passive_kraken_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
