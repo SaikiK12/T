@@ -12,6 +12,9 @@ name: Clock for time-bound paper runs (Claude)
 #                          tickets; each run sleeps to 19:00 or 22:00, and a run with nothing due exits at once)
 #   claude-book-costs-recorder.yml at :20 in the first two hours of each 3-hour UTC slot until 2026-11-18 00:00 UTC
 #                          (R404; the recorder writes at most one file per slot, so a second run writes nothing)
+#   claude-carry-paper.yml at 00:31 and 02:31 UTC (from 2026-11-20): its own cron at :29 fired once a day, often
+#                          after 07:00, when the carry lanes count a day as late (no live fills, and for R509/R512
+#                          no book records). A lane with its day already decided exits at once.
 # and then dispatches itself; the next run waits in the concurrency group until this one ends. The cron restarts the
 # chain if a run is lost. The dispatched workflows keep their own guarded crons as a second path. This job reads and
 # writes no journal, calls no market API and needs only the right to start workflows (and to read the repository).
@@ -61,6 +64,10 @@ jobs:
             if [ "$(date -u +%s)" -lt "$r404_end" ] && [ $((10#$(date -u +%H) % 3)) -le 1 ] \
               && [ $m -ge 20 ] && [ $m -lt 25 ]; then
               fire "b$h" claude-book-costs-recorder.yml
+            fi
+            hh=$(date -u +%H)
+            if { [ "$hh" = "00" ] || [ "$hh" = "02" ]; } && [ $m -ge 31 ] && [ $m -lt 36 ]; then
+              fire "c$h" claude-carry-paper.yml
             fi
             ny=$((10#$(TZ=America/New_York date +%H%M))); wd=$(TZ=America/New_York date +%u)
             if [ "$wd" -le 5 ] && [ $ny -ge 920 ] && [ $ny -lt 930 ]; then
