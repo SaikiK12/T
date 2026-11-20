@@ -137,3 +137,56 @@ What it means for the stake:
   on Kraken's pages. The owner's written question to Kraken EEA settles it.
 - Either way, the stake plan stays at 2x or less.
 - **Liquidation comes without a warning,** so the book needs its own margin buffer and alerts.
+
+## Third wave, the same day (Q7)
+- **Q7. What did published studies of funding-rate arbitrage measure, and which risks do our books miss?**
+- **Cost:** about 98k tokens. One Haiku reader read 5 sources by the locator; a sixth (BIS WP 1087) was read as its
+  HTML abstract page only.
+
+### Checked by the session
+Borri, Liu, Tsyvinski & Wu, "Cryptocurrency as an Investable Asset Class: Coming of Age", arXiv:2510.14435v4
+(printed pp. 26-27, re-read through the locator):
+- **The carry measured.** Schmeling-Schrimpf-Todorov's carry is short the BTC perp and long spot, against Tether, from
+  2020-08-01 to 2025-05-31.
+- **Its Sharpe ratio:** 6.45 over the full sample. From 2024 it falls to 4.06, and in 2025 (five months) it turns negative.
+- **Its funding leg:** a mean of "approximately 8%", with a volatility of 0.8%.
+- **The authors' conclusion:** "funding-rate premia are neither guaranteed nor permanent."
+
+### Reader's cards, not checked
+- **BIS WP 1087** (abstract page only; the PDF link served HTML):
+  - carry averages above 10%/yr and reaches up to 60%/yr;
+  - interest differentials explain little of it;
+  - high carry predicts crashes. No coefficient, horizon or loss size was on the page read.
+- **arXiv:2605.05089, spot-perp basis with dynamic collateral** (pp. 6, 13, 14):
+  - **Backtests** (BTC, ETH, LINK, DOGE):
+    - Hyperliquid funding paid about twice Binance's, for example BTC at 21.4 vs 10.3%/yr funding APY;
+    - drawdowns print near zero, which is not a usable risk estimate.
+  - **A live vault on Arbitrum** (2025-04..12):
+    - spot-leg execution median 28.9 bp over 1,924 trades;
+    - 22.1 bp on trades of at least $10k;
+    - sells cost more than buys (38.9 vs 18.2 bp).
+- **arXiv:2607.27070, early-warning signals across seven BTC liquidation cascades, 2022-25** (p. 1 in full, others in
+  part):
+  - no leading variable holds across events;
+  - 8-hour funding is too coarse for an intraday warning.
+- **arXiv:2605.29309, CME vs ETF-implied carry:** context only (segmented margin, no cross-margining).
+
+### Answer
+- **Single-venue carry (perp against spot) has compressed hard since 2024,** to below zero in early 2025 for BTC.
+- **The lab's cross-venue books held up better:**
+  - R507 made +2.7%/yr in 2025 and +2.6%/yr in 2026 at 1x, about half its earlier years.
+  - R508/R511's Kraken books ride the design gap and the thin-book extremes, not the level of funding.
+- **For forward expectations:**
+  - assume compression continues;
+  - judge R509-R512 against cash, not against 2021-24.
+- **Predictors of extremes:** none validated in any source read. One event study warns that leverage-based triggers do
+  not transfer across events. So any open-interest or funding trigger needs a placebo and event-invariance check before
+  use.
+
+### Still unknown, and could not read
+- **Still unknown:** net Sharpe and drawdowns of a perp-perp cross-venue book after fees in stress; losses in
+  BIS-style crashes; whether unlocks predict funding.
+- **Could not read:**
+  - BIS WP 1087's PDF;
+  - "The Two-Tiered Structure of Cryptocurrency Funding Rate Markets" (MDPI Mathematics 14(2):346; 403);
+  - Chitra's auto-deleveraging study (a snippet only).
