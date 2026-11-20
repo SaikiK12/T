@@ -82,3 +82,13 @@
 - **Earned:** a forward variant (a new id) on Kraken + Hyperliquid + Aster listings, recording daily. It would count
   Kraken listing events from 2026 before registering it.
 - **Not worth more history tests on this pair:** the supply of events is the binding fact, and it is already measured.
+
+## Addendum, the same day: the Kraken count
+- **What was counted.** Kraken contracts whose funding starts at least 7 days after Kraken's data start (2025-11-17),
+  on coins Hyperliquid already lists. Counted from first funding timestamps only.
+- **Result:**
+  - 2 such listings in the served year, among 178 open contracts;
+  - only 1 of them had Hyperliquid at least 30 days ahead (December 2025).
+- **Decision:** no forward variant for now. At one or two events a year per venue pair, it could not be read in any
+  useful time.
+- **What would reopen it:** a venue that lists many coins late, counted from listing dates before any spread is read.
