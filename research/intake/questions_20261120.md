@@ -80,3 +80,15 @@ to scout. A reader follows `reading_protocol.md`.
   - which contracts are offered to EEA clients.
 - **Zones:** Kraken support and legal pages for Payward Europe Digital Solutions (CY) Ltd, Kraken futures
   documentation, CySEC's register entry.
+
+### Q7. What did published studies of funding-rate arbitrage measure, and which risks do our books miss?
+- **Serves:** external validity of R507-R515's PASSes, the stake's risk list, and sizing's stress case.
+- **An answer looks like:**
+  - measured returns, Sharpe, drawdowns and capacity of funding or cross-venue carry, with venues, period and costs;
+  - failure modes the studies saw: liquidation of one leg, venue outages, depegs, auto-deleveraging, fee changes;
+  - whether high carry predicts crashes, and how large the losses were;
+  - anything that predicts funding extremes in advance (open interest, leverage, listings, unlocks).
+- **Zones:**
+  - arXiv and SSRN papers on funding-rate arbitrage across centralised and decentralised venues (2023-2026);
+  - BIS WP 1087 "Crypto carry" (the full text; its PDF did not extract on 2026-11-20);
+  - free exchange and data-vendor research on funding-arbitrage performance.
