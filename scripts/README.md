@@ -150,7 +150,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (230)
+## Run: one lane's frozen measurement (231)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -238,6 +238,7 @@ line is the first line of the script's own docstring.
 - [`run_gexfilter.py`](run_gexfilter.py): R416 gexfilter_v1: does the S&P 500 dealer gamma exposure (SqueezeMetrics' free daily GEX) known after the US close predict BTC and ETH volatility over the next US session, beyond VIX and the ...
 - [`run_hftlead.py`](run_hftlead.py): R367 hftlead_v1 runner, frozen in experiments/hftlead_v1/PREREG.md: does the Binance USDT or Bybit mid, when it has moved away from the Binance USDC mid, make a one-second passive quote on the ...
 - [`run_hip3carry.py`](run_hip3carry.py): R479 hip3carry_fwd, frozen in experiments/hip3carry_fwd/PREREG.md: R475-R477's funding carry, forward from 2026-11-16, read twice (futility after 13 weeks, final after 26).
+- [`run_hip3gap.py`](run_hip3gap.py): R518 hip3gap_v1: R275's cross-venue carry book between HIP-3 dexes that list the same ticker, where the dexes' funding designs differ.
 - [`run_hip3list.py`](run_hip3list.py): R517 hip3list_v1: R516's listing-phase carry rule, unchanged, between HIP-3 dexes that list the same ticker.
 - [`run_hip3other.py`](run_hip3other.py): R476 hip3other_v1, frozen in experiments/hip3other_v1/PREREG.md: R475's rule on the other HIP-3 deployers.
 - [`run_hip3stock.py`](run_hip3stock.py): R475 hip3stock_v1, frozen in experiments/hip3stock_v1/PREREG.md: funding carry on trade.xyz's US-stock perps.
