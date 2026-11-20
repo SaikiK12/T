@@ -1,0 +1,1638 @@
+{
+"folder": "data/hip3list",
+"source": "https://api.hyperliquid.xyz/info (public: perpDexs, meta, fundingHistory, candleSnapshot 4h)",
+"script": "scripts/fetch_hip3list.py",
+"recorded_utc": "2026-11-20T15:25:19Z",
+"excluded": [],
+"files": 322,
+"bytes": 10330538,
+"combined_sha256": "e64f6f4d022bea7788d65c8ff3547a9bd1e04447d80f126ad1fd348f903550ab",
+"subfolders": {
+"funding": {
+"files": 160,
+"bytes": 7697907
+},
+".": {
+"files": 2,
+"bytes": 36556
+},
+"prices": {
+"files": 160,
+"bytes": 2596075
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "funding/abcd_USA500.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/cash_AMZN.parquet",
+"bytes": 77604,
+"sha256": "20d1823cdc9768917c472504644c5857e68da1ea0ee65ab780ccdbaf44a0191f"
+},
+{
+"path": "funding/cash_BTC.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/cash_ETH.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/cash_EWY.parquet",
+"bytes": 68914,
+"sha256": "f79072cb0d2276d8737a30900a099c74f10542927481e550734dacf06d8e9d14"
+},
+{
+"path": "funding/cash_GOLD.parquet",
+"bytes": 70087,
+"sha256": "f74d1280cfdff0018c5850c196a73d317a86d963509289ad6a162d4594f34fb6"
+},
+{
+"path": "funding/cash_GOOGL.parquet",
+"bytes": 74927,
+"sha256": "d22e1e0c9a9c63fda4f2771ad49d9f3f75dc3134328d98b8dff2a51ce51189cd"
+},
+{
+"path": "funding/cash_HOOD.parquet",
+"bytes": 74167,
+"sha256": "6bd53ad388e9a974b1f19290c124a1aff5c69c8b72eb1609b1f7ebc5a71d35c4"
+},
+{
+"path": "funding/cash_INTC.parquet",
+"bytes": 74793,
+"sha256": "73da545da9f78de46a00f19aaf2e08f69c54ba764ebd5490e33f2438ef7a7787"
+},
+{
+"path": "funding/cash_META.parquet",
+"bytes": 83592,
+"sha256": "db88594becb390a772f54234ad28232f0e2ff0d16fc710d894bf542b9a2b5dff"
+},
+{
+"path": "funding/cash_MSFT.parquet",
+"bytes": 68829,
+"sha256": "70ae41b06e1da55cd63a543a655deed27dfef3a7aae44723d2bbac3036e08a99"
+},
+{
+"path": "funding/cash_NVDA.parquet",
+"bytes": 75023,
+"sha256": "747bcca60d545d49a38d0b7f71c6e31b7e35e95afe56c886095909ae3e100515"
+},
+{
+"path": "funding/cash_SILVER.parquet",
+"bytes": 69983,
+"sha256": "d9ba48be3ff363a3c776bf7e051e110a46aef8c6ba35593680097fe9fccad746"
+},
+{
+"path": "funding/cash_TSLA.parquet",
+"bytes": 70625,
+"sha256": "6aadc7dfa8fa54d1832289f4ebaf1d66f8b4dfc27d00b9aa428544c8a7130885"
+},
+{
+"path": "funding/cash_USA500.parquet",
+"bytes": 81629,
+"sha256": "4b86ff553fda4ffa3a8232514586a6623ad4f424e29d356cf87656de7aef969c"
+},
+{
+"path": "funding/flx_BTC.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/flx_COIN.parquet",
+"bytes": 81378,
+"sha256": "4ea053e2dcb9e48901aa8eab5f5a93d19c1de781dc508b9a75b386588db89ee5"
+},
+{
+"path": "funding/flx_COPPER.parquet",
+"bytes": 67985,
+"sha256": "348cabd5db193417be5ea910e0c1f2c688462f64b818c5eec8ec8d5feae2759f"
+},
+{
+"path": "funding/flx_CRCL.parquet",
+"bytes": 85262,
+"sha256": "adda557242c3ef9e11eb12ca1f7185de3caa591fd9f28021301a1749f63dcc96"
+},
+{
+"path": "funding/flx_GOLD.parquet",
+"bytes": 75746,
+"sha256": "e8514ede78ee15621fd2effe773d092a6f53391e1a73ee7c2c64886e25e69240"
+},
+{
+"path": "funding/flx_NVDA.parquet",
+"bytes": 61411,
+"sha256": "c0df21ce4bca234d222b89214d84e2e9f175411e6574c64bc77a0fd025b32080"
+},
+{
+"path": "funding/flx_PALLADIUM.parquet",
+"bytes": 67291,
+"sha256": "93db8aa40bdcc40f4ecca73a5e3a6a29660dea0eb6f2960cc3ecdc52b7c5fbaf"
+},
+{
+"path": "funding/flx_PLATINUM.parquet",
+"bytes": 71202,
+"sha256": "9715db26967e5c2ff95cc53dc2028f871cf3ab3903c8d703a83f3cbe4e4d64db"
+},
+{
+"path": "funding/flx_SILVER.parquet",
+"bytes": 75805,
+"sha256": "ed4bae540e5b62a97ac9d114ec72c6f86fba7af403881f1cca1e911ea0ce063e"
+},
+{
+"path": "funding/flx_TSLA.parquet",
+"bytes": 84778,
+"sha256": "47d5d6028b76fa55f43a5dcf966f94dff7b4f0de1c090a796fc08f1f4ea53ce6"
+},
+{
+"path": "funding/flx_USA500.parquet",
+"bytes": 61021,
+"sha256": "e2c448ac211516bfb4d34c6ee034a988387656cdcd4754038d75daf4e64c744f"
+},
+{
+"path": "funding/flx_XMR.parquet",
+"bytes": 99138,
+"sha256": "edd620b209b8fae565bdbd6f76df61bea2c53f6f8d5d453a8d9501744da5a396"
+},
+{
+"path": "funding/hyna_BTC.parquet",
+"bytes": 102842,
+"sha256": "e73a6d663936d257e028c77887f0d46ac3ee686063e7f5f43eecfa5630c27750"
+},
+{
+"path": "funding/hyna_ETH.parquet",
+"bytes": 99198,
+"sha256": "a97f036382497a9510cff5a8bdd9fb48b340286cab22348fe7734c15348f2790"
+},
+{
+"path": "funding/hyna_GOLD.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/hyna_SILVER.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/hyna_XMR.parquet",
+"bytes": 87273,
+"sha256": "5ec752a7bce2f7b4a20766b567cfa4a11265ed1cda0f548a538bdd93bad85156"
+},
+{
+"path": "funding/io_AAPL.parquet",
+"bytes": 6747,
+"sha256": "24f547ee6e3858f4b59c82927859cef18589520f0a16e03874c73c47c3ab921c"
+},
+{
+"path": "funding/io_AMD.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/io_ANTH.parquet",
+"bytes": 36690,
+"sha256": "52d15b37625a9d166e3df0aec1a646774c0af7649147f7097dee19353f3b7d1e"
+},
+{
+"path": "funding/io_CRCL.parquet",
+"bytes": 6973,
+"sha256": "2418388b2715e825bb6875d9e212f68bc5a79ea59cc1070b30e2e56b6be8ce6b"
+},
+{
+"path": "funding/io_DRAM.parquet",
+"bytes": 23819,
+"sha256": "22c79a54313954a2f5997032eada31edc950a6ef93b0446c80b71f18c3bd801b"
+},
+{
+"path": "funding/io_EWY.parquet",
+"bytes": 22614,
+"sha256": "088127402e919138ec55f20d222a42255a5939017e1c8926f54a98bc312c8549"
+},
+{
+"path": "funding/io_GOOGL.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/io_H100.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/io_INTC.parquet",
+"bytes": 2479,
+"sha256": "3ff62612cae2835f42b809f2428e8f3b7b2962721118377d7f2e344343325547"
+},
+{
+"path": "funding/io_META.parquet",
+"bytes": 2065,
+"sha256": "990b6b1c25dc2ddbf43c2d11427cc255227ed35a78a3d7cb5ae5b1d81a2c7674"
+},
+{
+"path": "funding/io_MU.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/io_NBIS.parquet",
+"bytes": 32342,
+"sha256": "69ebc44ea547d80be20df0f212ca9d35605f8bbe5273493a17cd98981256728c"
+},
+{
+"path": "funding/io_NVDA.parquet",
+"bytes": 9584,
+"sha256": "2db9996cf7859d225301678cb60835a6b0e480914d51cf5476ae1ffdf8d80848"
+},
+{
+"path": "funding/io_SKHX.parquet",
+"bytes": 4998,
+"sha256": "015626ca4e73cfcbc1c05c62f5ed5e553387a700262c2e4d4044b144382a0e92"
+},
+{
+"path": "funding/io_SNDK.parquet",
+"bytes": 32812,
+"sha256": "667088e0efba01838d6f6566d8f9748e233fc3cf138c444b373f8cc798c8ffb7"
+},
+{
+"path": "funding/io_XIAOMI.parquet",
+"bytes": 15835,
+"sha256": "28d5c6472f613d9a97133c563c96a8abde506442accb2169388f1a2d36ba9d8d"
+},
+{
+"path": "funding/km_AAPL.parquet",
+"bytes": 65896,
+"sha256": "934228b9a14e211d12422de45038fc3405e97c97e35bfa8db4852b76f27f9c4b"
+},
+{
+"path": "funding/km_BABA.parquet",
+"bytes": 72333,
+"sha256": "54cbdccfac58077e3dfdf34e29d319f650f30733ef0dbbbd8f9c034738ae8a2f"
+},
+{
+"path": "funding/km_BMNR.parquet",
+"bytes": 62638,
+"sha256": "a1ea2c49f5403aa9e853fd2735934d2bbd804d0e9015499bd19723e12fafc7e1"
+},
+{
+"path": "funding/km_EUR.parquet",
+"bytes": 44300,
+"sha256": "1102bd78f0dacf356e7e3ed6a53044f6de010c4b94c03bf692b5940dd0945676"
+},
+{
+"path": "funding/km_GLDMINE.parquet",
+"bytes": 63357,
+"sha256": "0b5563c4026b470de0b57ecd2a421ff0304147d57825932d4d9055e7893779b8"
+},
+{
+"path": "funding/km_GOLD.parquet",
+"bytes": 72747,
+"sha256": "c0c2b2e2c4bfbfd7368bed9c972624516f8cf985ab63429ba51e3e684b0b3d8a"
+},
+{
+"path": "funding/km_GOOGL.parquet",
+"bytes": 68874,
+"sha256": "5d3eff5851e0693c571464125f88824d625540f34f9cfabf470eb841ffb59289"
+},
+{
+"path": "funding/km_JPN225.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/km_MU.parquet",
+"bytes": 61972,
+"sha256": "26144c6a70e2b3c7a6a6b00865bad49f58a283824ea019713d43eeaf3724de7f"
+},
+{
+"path": "funding/km_NVDA.parquet",
+"bytes": 64174,
+"sha256": "1c46983d5bcbacfb3c9e73cb72b27379fd7a92ebd7435270ae7bdbff12dec3bc"
+},
+{
+"path": "funding/km_PLTR.parquet",
+"bytes": 61448,
+"sha256": "c0539b1de9a471ea730388fa07cd4e179b0ed6dba98353925e6d0ef4c7b59c84"
+},
+{
+"path": "funding/km_RTX.parquet",
+"bytes": 64468,
+"sha256": "730815592e2e71db33008de1e1c301e4f1c08cd1a7bfb37d3881209d478e2856"
+},
+{
+"path": "funding/km_SEMI.parquet",
+"bytes": 61113,
+"sha256": "235b9d16cb3279ee9ee99a7356ee868b03a5c8382011b087a42b4ff28d4fa0b6"
+},
+{
+"path": "funding/km_SILVER.parquet",
+"bytes": 75501,
+"sha256": "1bbb505c48fbe3fd007fc756f9c32350fcf65af59c77aaf8c0fdcbc69b4385e9"
+},
+{
+"path": "funding/km_SMALL2000.parquet",
+"bytes": 69806,
+"sha256": "64478b4de25e6a7cb31f546ede161e1723d643b783df3c16b08b6b42c709865c"
+},
+{
+"path": "funding/km_TENCENT.parquet",
+"bytes": 56094,
+"sha256": "26b328cfdfcbd246936561a86a5dc3abe45f113597d4efbcc7aa1b5e1b4b58c3"
+},
+{
+"path": "funding/km_TSLA.parquet",
+"bytes": 70005,
+"sha256": "c99af9785087b3b9451fb0ebd0381b4ee22ea8382e360f04370b8f85ea942699"
+},
+{
+"path": "funding/km_US500.parquet",
+"bytes": 74629,
+"sha256": "c8db20235d9a617f407db8f94be93e8b9e93d85b07b2edacb8b3837a17d54864"
+},
+{
+"path": "funding/km_USBOND.parquet",
+"bytes": 66535,
+"sha256": "653c825038814b736a0e2c9e0ce8490c021bd8e3b10a5c77c9c8609f9e0e2098"
+},
+{
+"path": "funding/km_USENERGY.parquet",
+"bytes": 68416,
+"sha256": "1dd3c6b5abd8bb7168e1e541edbf24a703938fa7b86c8516ef69a9f6dbc17dd4"
+},
+{
+"path": "funding/km_USOIL.parquet",
+"bytes": 78465,
+"sha256": "95f452d7f64940a5bbe9b78a3c24ce2f1a135337b1eb12f6be388f42bea3b6f9"
+},
+{
+"path": "funding/km_USTECH.parquet",
+"bytes": 67529,
+"sha256": "a066043eff841f43a1f5788a27e8a8ad03121a069472f1e728274adcbd5836a3"
+},
+{
+"path": "funding/km_XIAOMI.parquet",
+"bytes": 56117,
+"sha256": "60b4dd9eddcfbf5fda35456eeaa3c75b6ec00df503d30bc7894aac3f7531ea17"
+},
+{
+"path": "funding/mkts_AAPL.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_BABA.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_BMNR.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_EUR.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_GLDMINE.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_GOLD.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_GOOGL.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_JPN225.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_MU.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_NVDA.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_PLTR.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_RTX.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_SEMI.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_SILVER.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_SMALL2000.parquet",
+"bytes": 24261,
+"sha256": "0671dc92768da8d502bd6d66dd8253cb311e8508c035dcd60611efbe964920f1"
+},
+{
+"path": "funding/mkts_TENCENT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_TSLA.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_US500.parquet",
+"bytes": 36964,
+"sha256": "391822740650cfe3a8195a82db1760276b02aecad85981fbe35955c98f9bcfc4"
+},
+{
+"path": "funding/mkts_USBOND.parquet",
+"bytes": 26263,
+"sha256": "2a4cc57cd7a0211bb07001cd795b87bff8945acf275fa2673bd0b720856cbdb0"
+},
+{
+"path": "funding/mkts_USENERGY.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_USOIL.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/mkts_USTECH.parquet",
+"bytes": 38921,
+"sha256": "31628266cb9ab0ae16f862c69990b4328d56d73e49531ba9587e3b7e717d7c78"
+},
+{
+"path": "funding/mkts_XIAOMI.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/para_AAOI.parquet",
+"bytes": 42059,
+"sha256": "e25252d1586ca162248d409884e09b46256e8c16a7dc39545708f500001a806c"
+},
+{
+"path": "funding/para_ANTH.parquet",
+"bytes": 11034,
+"sha256": "777ef09db377fa0e3f819dc8b303f797570970fe96e98c122726b2ba3ca49ff6"
+},
+{
+"path": "funding/para_AVGO.parquet",
+"bytes": 68477,
+"sha256": "ab32fe5869c1749d20896f167c7b675d8548b014411bc1d172f3ab3f3ae9470c"
+},
+{
+"path": "funding/para_CAMBRICON.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/para_CRWD.parquet",
+"bytes": 36606,
+"sha256": "99ecdc64b3ebc5542e19a7f00777cf4dc0549ce29ce634661eafc0dfa9c91568"
+},
+{
+"path": "funding/para_GLW.parquet",
+"bytes": 43903,
+"sha256": "9da9c8203517d0a90712c1ce9f540a868a619c1b0bd803316b56ee63dd4d5957"
+},
+{
+"path": "funding/para_H100.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/para_INNOLIGHT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/para_IREN.parquet",
+"bytes": 41771,
+"sha256": "2f71a363335e4fcfcf7d8112f430a9965b901e019b8a46b3d2c37e533e13637f"
+},
+{
+"path": "funding/para_LRCX.parquet",
+"bytes": 43557,
+"sha256": "b0055aa45af3832c45fad93054870d2fb3c871a9816bd1aeefeaef7831c406ac"
+},
+{
+"path": "funding/para_MELI.parquet",
+"bytes": 31942,
+"sha256": "7624f56228c3ddf933919905ef766c3cf86b09bf75037e934bce5d7665b11c31"
+},
+{
+"path": "funding/para_NET.parquet",
+"bytes": 39316,
+"sha256": "3bd97806cd39411556c85af3e30a0aa84d3a2efeabafe45233dc0938e07229d5"
+},
+{
+"path": "funding/para_RDDT.parquet",
+"bytes": 41637,
+"sha256": "9c551e9e43f462e5ee897b51e82ea22b754eeff23fef0ff31ba4b058c8fbf447"
+},
+{
+"path": "funding/para_SMCI.parquet",
+"bytes": 35119,
+"sha256": "deb2257050854e99606b8d0d5e1ce4b7fee6d50b637b53d6d6b2eea89c997f4e"
+},
+{
+"path": "funding/para_SMH.parquet",
+"bytes": 18031,
+"sha256": "054228d53c8217eee9392fed903c11bc83753b27bbe8673b36fd81e8275ccfa4"
+},
+{
+"path": "funding/para_STX.parquet",
+"bytes": 42855,
+"sha256": "2d2416bdd0e793a6cd55466e75f4dce1d1e1d1232f4cf082832db05982d8ce63"
+},
+{
+"path": "funding/para_TENCENT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/para_TTWO.parquet",
+"bytes": 30773,
+"sha256": "4f6f0508f6a39c53be25b02ef5b89b917e01adb19d5262e067d556fb579a4745"
+},
+{
+"path": "funding/para_UNITREE.parquet",
+"bytes": 44823,
+"sha256": "f7d1634015ece483b0fe379b09ea05d8991048931a1e6b4e58873946fbe0c8d0"
+},
+{
+"path": "funding/vntl_WHEAT.parquet",
+"bytes": 50008,
+"sha256": "4d34b58755c5d62351fb1cb890843d72a726e9ae501da5fec376ea9a18585946"
+},
+{
+"path": "funding/xyz_AAOI.parquet",
+"bytes": 35454,
+"sha256": "674361623d3aa9153965878da97edbe40c4e3a769fff306a1deb11ed7bc0286a"
+},
+{
+"path": "funding/xyz_AAPL.parquet",
+"bytes": 115919,
+"sha256": "2960bf51a4fdc475b19f6461c241dc34e7b2643858d0a8bb80213ebbda7613ac"
+},
+{
+"path": "funding/xyz_AMD.parquet",
+"bytes": 114115,
+"sha256": "e9b77586f9ce73cb7b360af8db851c59a48618c1a5947c757e686e5d727856a1"
+},
+{
+"path": "funding/xyz_AMZN.parquet",
+"bytes": 113183,
+"sha256": "ac93c915b397221fc6f8a7ede550e063a8aa4bc48537613be122f94d1d3043ee"
+},
+{
+"path": "funding/xyz_AVGO.parquet",
+"bytes": 57389,
+"sha256": "3e3321b8d57d9bce4d675c1e23109cf969d9d4a539b57461a4f142b45538a8c6"
+},
+{
+"path": "funding/xyz_BABA.parquet",
+"bytes": 107078,
+"sha256": "d6e461cb1dd4a043f97515f5f1db3bb60a4a43f98ffa0ab4ce3291be6ca00012"
+},
+{
+"path": "funding/xyz_BMNR.parquet",
+"bytes": 30673,
+"sha256": "fa0b497a40f1d07749abdac81b72bc1bdff51188c007eb06bb26eb793ae3e1df"
+},
+{
+"path": "funding/xyz_CAMBRICON.parquet",
+"bytes": 15955,
+"sha256": "a9a711e01246186ac9fc5bc8636e2e3cadb1dbc303dd55df90ff42c9ee1be4a3"
+},
+{
+"path": "funding/xyz_COIN.parquet",
+"bytes": 118434,
+"sha256": "2f6266795f4c59db80ac5d0dfdf6b32685871d58cd043c50e07ace3c880c2638"
+},
+{
+"path": "funding/xyz_COPPER.parquet",
+"bytes": 109006,
+"sha256": "ebd078df1a8376adf6903f743edfa816fdb2d7ee3557f7958223ec02692fb05f"
+},
+{
+"path": "funding/xyz_CRCL.parquet",
+"bytes": 122263,
+"sha256": "6fa614bcd6913497f72768e9f8d5a708f7531f83b3d5b6e4f9cb5af0e3fef820"
+},
+{
+"path": "funding/xyz_CRWD.parquet",
+"bytes": 34356,
+"sha256": "fda41fe228cc7e83ec07cebd82d1180b893cc12df4cd561f16c79abdff4b663b"
+},
+{
+"path": "funding/xyz_DRAM.parquet",
+"bytes": 71506,
+"sha256": "fb34b6e11f2ed6383f94f8a1a58963ecd251bdf2cdfd5ab8481e39bb1b695cf5"
+},
+{
+"path": "funding/xyz_EUR.parquet",
+"bytes": 98250,
+"sha256": "4c7e32176903070e608195c253bafa7a9d2870c382b0cb1dcb6579de255aa56a"
+},
+{
+"path": "funding/xyz_EWY.parquet",
+"bytes": 88078,
+"sha256": "d818e4876863b7ca8d5415528309888a2614dc7648fea30f99eb58e53a967e80"
+},
+{
+"path": "funding/xyz_GLW.parquet",
+"bytes": 17405,
+"sha256": "61d4c116ef8763b1dc629d282261febe8d3ff3d1976bc58d78d98d49be96f563"
+},
+{
+"path": "funding/xyz_GOLD.parquet",
+"bytes": 101215,
+"sha256": "2d2d47eba4f9b515ac90fe4a8697ef2f496f11a04ca5cfdfc5a3cbf6942f7028"
+},
+{
+"path": "funding/xyz_GOOGL.parquet",
+"bytes": 119397,
+"sha256": "a4b634803d4ae244b8f9d5502dfbc79aadf154c5010cb97368b04405f11139d7"
+},
+{
+"path": "funding/xyz_H100.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_HOOD.parquet",
+"bytes": 124187,
+"sha256": "3e638b64503ff63ab2b45a65946ac282feb7a253e2ca4634e714ffd019ce6402"
+},
+{
+"path": "funding/xyz_INNOLIGHT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_INTC.parquet",
+"bytes": 122985,
+"sha256": "e21cdcfdb098f604524e4dcef43d8ab7ae3a8d32911493d69c3ea920baedb5f9"
+},
+{
+"path": "funding/xyz_IREN.parquet",
+"bytes": 35991,
+"sha256": "19ad51bfc1de4473ec8ce022b1274b5812f6064dc102458f81f8bfa99af1dc66"
+},
+{
+"path": "funding/xyz_LRCX.parquet",
+"bytes": 17562,
+"sha256": "ffa5f750cb65da8e56d5b8a06fc97a9b1417b53420bc3a036273563f686fb5ce"
+},
+{
+"path": "funding/xyz_MELI.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_META.parquet",
+"bytes": 112418,
+"sha256": "d446665bff65cec36fa9cc6ea2fdb89913adb5b30cc68c097fa0252152a23a9e"
+},
+{
+"path": "funding/xyz_MSFT.parquet",
+"bytes": 116042,
+"sha256": "92ed3754fad59248576465d410ea5da8ddfac5148437b6595c12e510b1093234"
+},
+{
+"path": "funding/xyz_MU.parquet",
+"bytes": 121070,
+"sha256": "e8488748765586f904aa23f14b7a2b76ed0f8dd269a815f8e8752e6c1d665d61"
+},
+{
+"path": "funding/xyz_NBIS.parquet",
+"bytes": 59226,
+"sha256": "202b82bf2759ea6b020c21714eddffd3e75b873b28a9624a964ca2024c94c56a"
+},
+{
+"path": "funding/xyz_NET.parquet",
+"bytes": 35578,
+"sha256": "788a83fdccdcecd01637b57688f6aa7928c602c6f21549281cd13aa3abf0a331"
+},
+{
+"path": "funding/xyz_NVDA.parquet",
+"bytes": 119467,
+"sha256": "8626e7f56c014ccaa2a3280e4a757b993142604bfd491d9a2d4e6ee72170c207"
+},
+{
+"path": "funding/xyz_PALLADIUM.parquet",
+"bytes": 96476,
+"sha256": "eb4d2b6d3f2499dca1eadd71d94ddf28430af1b3caa79f9916687f6aadc6532a"
+},
+{
+"path": "funding/xyz_PLATINUM.parquet",
+"bytes": 102091,
+"sha256": "936dde783b9d206c8687b3a369f792ea629fff330c89d79f64059fce1204d97b"
+},
+{
+"path": "funding/xyz_PLTR.parquet",
+"bytes": 123184,
+"sha256": "da77bf51d051ae2f95c85ff48c2afed1d2c7bee386c8edbcbd5b22eb2d981883"
+},
+{
+"path": "funding/xyz_RDDT.parquet",
+"bytes": 36406,
+"sha256": "8eaf4df2a4050f92c5e2c07043f3c8526eaec5dbd7b22058350f14d66ae20906"
+},
+{
+"path": "funding/xyz_SILVER.parquet",
+"bytes": 103358,
+"sha256": "0a05841b2ae90a104b79e9c166736b79dedb851d0b8349012c639d9242ca52d1"
+},
+{
+"path": "funding/xyz_SKHX.parquet",
+"bytes": 109479,
+"sha256": "794efc8ee8fb69df9b5f4e393b48a51e5f477e9b67c75a189f0c429726e7b0a4"
+},
+{
+"path": "funding/xyz_SMCI.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_SMH.parquet",
+"bytes": 59761,
+"sha256": "d89b79e2026df2b5ef4ab47a9b061e417e5ea9c78fe1a0472dcda677a89c8517"
+},
+{
+"path": "funding/xyz_SNDK.parquet",
+"bytes": 112771,
+"sha256": "299e43aa5d1fdbb57b410adca0d67f83b2d6b5da0efc4c6c20b903acacfedd02"
+},
+{
+"path": "funding/xyz_STX.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_TENCENT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "funding/xyz_TSLA.parquet",
+"bytes": 114724,
+"sha256": "cb7681355e95f528e6daf6aa524066a7373023c3c24741b6d4cd28520851aba2"
+},
+{
+"path": "funding/xyz_TTWO.parquet",
+"bytes": 5356,
+"sha256": "19e7586ded658989563083a3abd0cd70b6722f7507a3bd68650f0695489807bc"
+},
+{
+"path": "funding/xyz_UNITREE.parquet",
+"bytes": 40173,
+"sha256": "c078a888cdcb9d60b204ddc9d1e712f4b1b20dd174bff4f6e350b0bede09c68e"
+},
+{
+"path": "funding/xyz_WHEAT.parquet",
+"bytes": 1408,
+"sha256": "0843295750091d98d99616ce0f6d611a115796c776684d83fede433aee79ce9c"
+},
+{
+"path": "manifest.json",
+"bytes": 31725,
+"sha256": "44207eb8ed108417cbdc2dcfc2adc900c66742ea5b9e5f89d423716fd44ffc3c"
+},
+{
+"path": "prices/abcd_USA500.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/cash_AMZN.parquet",
+"bytes": 20476,
+"sha256": "08e2c335f64b812212957d4c448e28cadb821f90fdaf14a0c2bdd3d32e6ea861"
+},
+{
+"path": "prices/cash_BTC.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/cash_ETH.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/cash_EWY.parquet",
+"bytes": 16317,
+"sha256": "d280cbbd947b554dcf858e9cab3920c200caf34c874d268750ab1b7eeaf20ab1"
+},
+{
+"path": "prices/cash_GOLD.parquet",
+"bytes": 20485,
+"sha256": "2c54e1f4a1b20d414fd5db5d7f358f66892b8eac47cbf8f1e6b39c91bcfae275"
+},
+{
+"path": "prices/cash_GOOGL.parquet",
+"bytes": 20828,
+"sha256": "de9d08591027a060eee4384627ca8fe946006b591bd5130a110302f38c248775"
+},
+{
+"path": "prices/cash_HOOD.parquet",
+"bytes": 22027,
+"sha256": "3422049c446f388fcfbdaf202fcfb0dfbe80da9c14ae8462028255383c42a85d"
+},
+{
+"path": "prices/cash_INTC.parquet",
+"bytes": 21703,
+"sha256": "4f9303a25e782421a131cbb48baf8f3dc39859223f48204d56aa6de41190da3b"
+},
+{
+"path": "prices/cash_META.parquet",
+"bytes": 20320,
+"sha256": "5c91ba417137847e898bf86861cbfca1e7b78a30e0aae9c9cd7ac357c0efb3bd"
+},
+{
+"path": "prices/cash_MSFT.parquet",
+"bytes": 20204,
+"sha256": "956a749f6c85cc1fc5afd33d39ca97444032b5b3c2f008aff58d62f8c6aa8233"
+},
+{
+"path": "prices/cash_NVDA.parquet",
+"bytes": 21215,
+"sha256": "48efd63df084370fb2627055e7cf77528da7b322bf0ad4d0ed40915ab12a0a2a"
+},
+{
+"path": "prices/cash_SILVER.parquet",
+"bytes": 20284,
+"sha256": "04161ac707a12a865f601e6e5672804dd37b55d4ad7c00ce165aa4dfac917fcb"
+},
+{
+"path": "prices/cash_TSLA.parquet",
+"bytes": 21446,
+"sha256": "f76f79534965659cbf93e534101a78c73e0c99124d0c2401301934a650790969"
+},
+{
+"path": "prices/cash_USA500.parquet",
+"bytes": 21692,
+"sha256": "95f9316af02b60fd16586363e04d3e5dcd6abc221e0864726d2101600c990a33"
+},
+{
+"path": "prices/flx_BTC.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/flx_COIN.parquet",
+"bytes": 24936,
+"sha256": "adc70fa605c5ce04b7ad66be6b89971811702c9b0150fc3b8518d845fd083b32"
+},
+{
+"path": "prices/flx_COPPER.parquet",
+"bytes": 20902,
+"sha256": "0e3f0ad16466c5c22e26c512c7838d230cc2c7c12fab40fecf8d10382c5959e9"
+},
+{
+"path": "prices/flx_CRCL.parquet",
+"bytes": 26115,
+"sha256": "ab36a1c9d316a573442829d28643804bf8c2f0b60f360425cc4088276597c82e"
+},
+{
+"path": "prices/flx_GOLD.parquet",
+"bytes": 23050,
+"sha256": "93a2c2e913759987cccca71ca1529407cb36f2c53e1002aaf9dda3ef9dadd95c"
+},
+{
+"path": "prices/flx_NVDA.parquet",
+"bytes": 18212,
+"sha256": "df6fd5fa7f0cc734e3e17b631a7db06e2484bf609e1f9f03669dc2cf1e861287"
+},
+{
+"path": "prices/flx_PALLADIUM.parquet",
+"bytes": 16358,
+"sha256": "36115d29a291ef3bc9f0e153f01a723a68e28c15db65fef80b3bc1f6c4843120"
+},
+{
+"path": "prices/flx_PLATINUM.parquet",
+"bytes": 17357,
+"sha256": "2292e5f877c655627ddc846744e64a9ce1afc0b7cbd74d17b745cea3032b28d1"
+},
+{
+"path": "prices/flx_SILVER.parquet",
+"bytes": 24771,
+"sha256": "eee131f64fdb01f12d2bc7b136e4e98d6ff51b929fbfd62522ac06ad8ec7aa5c"
+},
+{
+"path": "prices/flx_TSLA.parquet",
+"bytes": 26665,
+"sha256": "1da3881f9ab18333384491d281cd42a76fadb1f1da60ee664d5cc520b827638a"
+},
+{
+"path": "prices/flx_USA500.parquet",
+"bytes": 13367,
+"sha256": "b27d93aba2b445bcf84fdcc294fb3d05778e1d5c10451608cf8d484fe03c0f3b"
+},
+{
+"path": "prices/flx_XMR.parquet",
+"bytes": 20997,
+"sha256": "eeb1f617f7f4215c7be2d114071d506409d09e9ca72c5cd39046f4a661d312e8"
+},
+{
+"path": "prices/hyna_BTC.parquet",
+"bytes": 38848,
+"sha256": "6b61938418a7b19d8b876a1d42264a109f283ee04043de7bd8984f25636ac5f7"
+},
+{
+"path": "prices/hyna_ETH.parquet",
+"bytes": 35457,
+"sha256": "74062364ca5b6b95c3cd8629c75edf0ba9916ebd9c9c95e5bcc29c45ab348106"
+},
+{
+"path": "prices/hyna_GOLD.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/hyna_SILVER.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/hyna_XMR.parquet",
+"bytes": 20051,
+"sha256": "fdb7c3948931bc8b0fd774892a1d11f396d2691976b956bc2ec93da33b491b8a"
+},
+{
+"path": "prices/io_AAPL.parquet",
+"bytes": 4457,
+"sha256": "20fc4fb7af151710f8207f9f4a10f3d7d508b56cf46d2281bfb22a2941610c93"
+},
+{
+"path": "prices/io_AMD.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/io_ANTH.parquet",
+"bytes": 13177,
+"sha256": "65a4b224f377e989a4eb3456bbcf9b942168a497bb2fc0a12ecac7c84ea808a3"
+},
+{
+"path": "prices/io_CRCL.parquet",
+"bytes": 4635,
+"sha256": "aaf2b6df3bcae0934211803a85931497226e5cb62bbfd7eab0628744d81666b3"
+},
+{
+"path": "prices/io_DRAM.parquet",
+"bytes": 10252,
+"sha256": "5ebdf78d2482207e14bda37a43e46e655d69d2244ba2b7e468dc07cfb39ea6c8"
+},
+{
+"path": "prices/io_EWY.parquet",
+"bytes": 9343,
+"sha256": "2ae259d179b57a8089bbc355c68aa9434b55a185efc8f33c12c0e376cafbd715"
+},
+{
+"path": "prices/io_GOOGL.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/io_H100.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/io_INTC.parquet",
+"bytes": 2599,
+"sha256": "e289cb5889bd250875c66a67762dc2a9a7de6f94c9992e1fc9b2efe82cdf5a98"
+},
+{
+"path": "prices/io_META.parquet",
+"bytes": 2495,
+"sha256": "da7a37a92e4411df04290b9d4e7900c2bd26060cbbee37ea5bf2e3b71830460d"
+},
+{
+"path": "prices/io_MU.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/io_NBIS.parquet",
+"bytes": 12026,
+"sha256": "cb65cd105ec8f0e771abeaf256ff7b05a956f8e2898fa94e2b5237806eb92800"
+},
+{
+"path": "prices/io_NVDA.parquet",
+"bytes": 5331,
+"sha256": "95b1eef5a3a76af70db992e549323e23ac9b7735f6ddc869cd0cb577e51395f3"
+},
+{
+"path": "prices/io_SKHX.parquet",
+"bytes": 3426,
+"sha256": "6d787a206407e577d42a2acf8f56de18b042e31aa8096d94732bea36a54f61ee"
+},
+{
+"path": "prices/io_SNDK.parquet",
+"bytes": 14341,
+"sha256": "2a36e7096f48792a8fe94d044683e94e3eb2ff7f3548862aa27769dae017441d"
+},
+{
+"path": "prices/io_XIAOMI.parquet",
+"bytes": 7488,
+"sha256": "121378034c37bc525063ae6671c68860de4fc429beba35311d99c4b643c4e60f"
+},
+{
+"path": "prices/km_AAPL.parquet",
+"bytes": 17404,
+"sha256": "ee4fd028e1c6a02d2c795873092a5acad9c9bfcfce1345d3f0fe85a21955fc58"
+},
+{
+"path": "prices/km_BABA.parquet",
+"bytes": 18914,
+"sha256": "7d8dff1511d00763b4de5c5a9a2b719b66c1067baca26681154c5aaa94fa1118"
+},
+{
+"path": "prices/km_BMNR.parquet",
+"bytes": 13235,
+"sha256": "ba180c728745ac092fd25c4e87867d499e7f067c092bb625a9b6faf600cd349d"
+},
+{
+"path": "prices/km_EUR.parquet",
+"bytes": 7468,
+"sha256": "a402558a08ace9bb50f9f2f68bf709028b2b8709ac47501b8d1c57bf9361133d"
+},
+{
+"path": "prices/km_GLDMINE.parquet",
+"bytes": 12169,
+"sha256": "8a08d839f96722ac83e30b7f5d69d05bd3f675f1c6a63b863896ed8d0ba8c955"
+},
+{
+"path": "prices/km_GOLD.parquet",
+"bytes": 20493,
+"sha256": "15d38655f5ccde197653084c56e79400bb2c64b3e3fb439329c0a0b75e0151b1"
+},
+{
+"path": "prices/km_GOOGL.parquet",
+"bytes": 17490,
+"sha256": "cd56101762a1633a61a2cbc50262c755e1d9ca31d905e464ee8a88764afd2c25"
+},
+{
+"path": "prices/km_JPN225.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/km_MU.parquet",
+"bytes": 15751,
+"sha256": "6a8cf8087392d1d9c71b74c3d612875d70e869f019096b06a740a89531ca691d"
+},
+{
+"path": "prices/km_NVDA.parquet",
+"bytes": 16817,
+"sha256": "88eb6dfe8ef37e41bd9fde29fc8d19e40f7598ee046ca9011897a944ad605e66"
+},
+{
+"path": "prices/km_PLTR.parquet",
+"bytes": 14454,
+"sha256": "edb2ff1e90558c8793c77372cc0ec74cefb199aa893a542fd7c23aaf470500cc"
+},
+{
+"path": "prices/km_RTX.parquet",
+"bytes": 10631,
+"sha256": "22b9cbea108c786b6b468b873295e1dc16d20fe8a707f9fec934c3566038ae1e"
+},
+{
+"path": "prices/km_SEMI.parquet",
+"bytes": 12525,
+"sha256": "225afbeded4ea157ff43151515e32976ac715ca1485cc507cde4e969baf77e26"
+},
+{
+"path": "prices/km_SILVER.parquet",
+"bytes": 19893,
+"sha256": "823fbc508f01f4191a8063ca24217981a42081cc91ab580eb3e6414d48516f3e"
+},
+{
+"path": "prices/km_SMALL2000.parquet",
+"bytes": 19885,
+"sha256": "cc57a72d4e9611bf9e4c59ff564bf9082744b8c213b4c23bc9f889b2bddf71be"
+},
+{
+"path": "prices/km_TENCENT.parquet",
+"bytes": 8559,
+"sha256": "9a76186dc17f3cd2e46686b945343987c74a076ef6e6c8ee1c0152dc7b1503c6"
+},
+{
+"path": "prices/km_TSLA.parquet",
+"bytes": 19207,
+"sha256": "ea56fc253fb267134231b23142e029c1adfd45ba0bd1e08db57314b9e92bbb76"
+},
+{
+"path": "prices/km_US500.parquet",
+"bytes": 20953,
+"sha256": "3c097855c85441b91a7e01e21b0cc4db20867f4481b3c86a2f76c9352619e217"
+},
+{
+"path": "prices/km_USBOND.parquet",
+"bytes": 18688,
+"sha256": "b690a792367cc509a8c6d27b246e62c07369b8a4499ebcbb959ccc5158188c7a"
+},
+{
+"path": "prices/km_USENERGY.parquet",
+"bytes": 17479,
+"sha256": "465aebe914ddbb68bad6c07baf3b98a02aac975e0af1c6bfc76cf239380faf4e"
+},
+{
+"path": "prices/km_USOIL.parquet",
+"bytes": 20078,
+"sha256": "5c7aceebd4ed6eb6f75010358a26dccb80b0a4b254f6987aaa44bab2560503b9"
+},
+{
+"path": "prices/km_USTECH.parquet",
+"bytes": 20348,
+"sha256": "587f9e91dbe028df7b8b7cb85037857c9d600b61947f1c749fd72953769a8506"
+},
+{
+"path": "prices/km_XIAOMI.parquet",
+"bytes": 9385,
+"sha256": "7e36aedc1e7c824888cc9fb5fadd4e1db925d545bc21f5c5a4e994f0d7c0f74f"
+},
+{
+"path": "prices/mkts_AAPL.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_BABA.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_BMNR.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_EUR.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_GLDMINE.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_GOLD.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_GOOGL.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_JPN225.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_MU.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_NVDA.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_PLTR.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_RTX.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_SEMI.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_SILVER.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_SMALL2000.parquet",
+"bytes": 9480,
+"sha256": "a1b39cfdca07913196c5e2b8828c7cb2b8fb2da108077eac5039329e019d6d30"
+},
+{
+"path": "prices/mkts_TENCENT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_TSLA.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_US500.parquet",
+"bytes": 16155,
+"sha256": "7de8728cfbcbbaeda9aa6fe6c11b023eea7f9c0a99c49d593d9e8c1eff2d40fb"
+},
+{
+"path": "prices/mkts_USBOND.parquet",
+"bytes": 10052,
+"sha256": "39c8b478c8bd7e72887d208ab1f681e66d6e77e0805422276de3c87d166ed668"
+},
+{
+"path": "prices/mkts_USENERGY.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_USOIL.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/mkts_USTECH.parquet",
+"bytes": 16325,
+"sha256": "e6721646bbfa3c3b8bc8f538afc405bbb4127b7cf94f56fe43483cdd38cfa289"
+},
+{
+"path": "prices/mkts_XIAOMI.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/para_AAOI.parquet",
+"bytes": 15126,
+"sha256": "1ac91b40833462febd5b53ca6a3ce9550ad3dfc919b89edd58d01ca569d821f2"
+},
+{
+"path": "prices/para_ANTH.parquet",
+"bytes": 4989,
+"sha256": "695ecee5be43d48dfcef9ae7995cc633412dc35e31f15e02c070b63862a945c6"
+},
+{
+"path": "prices/para_AVGO.parquet",
+"bytes": 20326,
+"sha256": "3be080a009ace21347245d019cfc1e855ced0772b64ac5169428e028b52b3749"
+},
+{
+"path": "prices/para_CAMBRICON.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/para_CRWD.parquet",
+"bytes": 12653,
+"sha256": "6fd436b6f8688f19cad8f469981594a6d4a5aa15c4f3e86d4ec0b413431464b8"
+},
+{
+"path": "prices/para_GLW.parquet",
+"bytes": 15099,
+"sha256": "f98c6c6cca880095f2d500b04bf95a1200878cb849e63f30e6ceb002f437d004"
+},
+{
+"path": "prices/para_H100.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/para_INNOLIGHT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/para_IREN.parquet",
+"bytes": 16331,
+"sha256": "01b6e0c13aa40f2f9bc3b6372c57e4bb86346dc12a2b97f2b4d670d527b1ec3e"
+},
+{
+"path": "prices/para_LRCX.parquet",
+"bytes": 14599,
+"sha256": "b9414302daa290a567af5ececd2cec46d229f00506883322fc477568730c4ef5"
+},
+{
+"path": "prices/para_MELI.parquet",
+"bytes": 10224,
+"sha256": "b2d9d4ea0a19806acb70de9424dfc0004302d262714a815d92e4598dfc683dab"
+},
+{
+"path": "prices/para_NET.parquet",
+"bytes": 12806,
+"sha256": "db5c61c4ca78aa49d8d0d3e4f68fd0f09819ace807a4d9cde96e458cb19a3fa1"
+},
+{
+"path": "prices/para_RDDT.parquet",
+"bytes": 13296,
+"sha256": "e50b16cd2d548ca3b694542407428726e7e48b571866789f61701b7c63d7ae77"
+},
+{
+"path": "prices/para_SMCI.parquet",
+"bytes": 12889,
+"sha256": "be9d7faf29e254536fb9a68b8a1597dfce4d7da80bfb1ff87afd3f344a4410dc"
+},
+{
+"path": "prices/para_SMH.parquet",
+"bytes": 7173,
+"sha256": "f4dfcadba185ea82f9f39d78fa17f7035aefeade8334c87e33045ba0e2badd8d"
+},
+{
+"path": "prices/para_STX.parquet",
+"bytes": 15468,
+"sha256": "065d44211300df92f957abd4a33945f81f97ef2c107c55ba7f58aef468dac485"
+},
+{
+"path": "prices/para_TENCENT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/para_TTWO.parquet",
+"bytes": 10573,
+"sha256": "8b9e83edd422c31b2089ca1fec16b9abdd4a5915c169a49d27ee682e56d9610c"
+},
+{
+"path": "prices/para_UNITREE.parquet",
+"bytes": 15462,
+"sha256": "b983995f577ef61f021e648706be27f1b77649045f93f7eafd0d80140fb976e8"
+},
+{
+"path": "prices/vntl_WHEAT.parquet",
+"bytes": 10264,
+"sha256": "82baa03350e33d597205ee8b526dc1c427137a5e7308d5fad439206511a0dd26"
+},
+{
+"path": "prices/xyz_AAOI.parquet",
+"bytes": 13651,
+"sha256": "0432d360171c2269e0f102f28900af191fda9617e40b623efe169d89fecdf2a8"
+},
+{
+"path": "prices/xyz_AAPL.parquet",
+"bytes": 45488,
+"sha256": "3c181c5c7c89a24ffc4d3a889063149e0cbb897f9eab56bb2cb15d79862f0f97"
+},
+{
+"path": "prices/xyz_AMD.parquet",
+"bytes": 45041,
+"sha256": "a1e1562b6e396c025f4f7ade7e88c6101371c5e57cac285da94c2f084dd7e775"
+},
+{
+"path": "prices/xyz_AMZN.parquet",
+"bytes": 45816,
+"sha256": "7275ea62e5f60da3184e4181db119543b85c41e01f63c7d7ed5628ca4320ef5b"
+},
+{
+"path": "prices/xyz_AVGO.parquet",
+"bytes": 21481,
+"sha256": "8cabafb25087b2ef3d4826a8fc70524eabc293ca2d9b358af2faf02c2cf5db61"
+},
+{
+"path": "prices/xyz_BABA.parquet",
+"bytes": 39028,
+"sha256": "b284cd0d89f660f377cebd16de1784ff7bc15d58cc30a5afc6233496d012853f"
+},
+{
+"path": "prices/xyz_BMNR.parquet",
+"bytes": 11690,
+"sha256": "36c50c06d7f81f7f8fc7a2ed9431113c29661ee8d2a5f0b4d253458ae80bc2ab"
+},
+{
+"path": "prices/xyz_CAMBRICON.parquet",
+"bytes": 5970,
+"sha256": "326ed269c661354cf13b7531d48466697d904db5abc4f170c40fa6e4805027a9"
+},
+{
+"path": "prices/xyz_COIN.parquet",
+"bytes": 45890,
+"sha256": "06638dd36e82f66aa5bc267fc8cb19621ed963f5465260f5b4bf31fc71af28bc"
+},
+{
+"path": "prices/xyz_COPPER.parquet",
+"bytes": 42678,
+"sha256": "b2aba287cba2921045a64e5f8176ed210ee3fd9b4f8ebfbb652f16bef40543fa"
+},
+{
+"path": "prices/xyz_CRCL.parquet",
+"bytes": 45451,
+"sha256": "40be7ed9fed8f61797e1d8d6bc068d6348dd30c6260383859f555f340194776b"
+},
+{
+"path": "prices/xyz_CRWD.parquet",
+"bytes": 13038,
+"sha256": "5041b5c99c6a6f7ac7dded2e2b5217f64d768dcb94b8f2b32468f00a1dd97d18"
+},
+{
+"path": "prices/xyz_DRAM.parquet",
+"bytes": 27187,
+"sha256": "5259dac2d91ad3660b2f99bdcfee555e8c94d4da4f251d1d05fec737d88da889"
+},
+{
+"path": "prices/xyz_EUR.parquet",
+"bytes": 38525,
+"sha256": "7a9519e3478667a73b301f13ab49f750174cd9dc4d0668afea9130e074648e06"
+},
+{
+"path": "prices/xyz_EWY.parquet",
+"bytes": 34230,
+"sha256": "6769607e4341cd17c8e2239add73e0943c0293f79f3d94a62268da0eceb6ec2c"
+},
+{
+"path": "prices/xyz_GLW.parquet",
+"bytes": 7349,
+"sha256": "6a13b5f7281991ea7a575ce83bda09fc8b220598a7d778e0e8423d9e41b3c5ab"
+},
+{
+"path": "prices/xyz_GOLD.parquet",
+"bytes": 44387,
+"sha256": "b1d1bf780849965902d66db230ed86f2a57de56334c8956588004a8ead040251"
+},
+{
+"path": "prices/xyz_GOOGL.parquet",
+"bytes": 46410,
+"sha256": "cf556652e7ee1beb5486c2951707582512901bb6b436127efffa3354b3fdb7d3"
+},
+{
+"path": "prices/xyz_H100.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_HOOD.parquet",
+"bytes": 47369,
+"sha256": "6ceb6827b148671dad709d5fe727e0f372b14d513b3defb1824acd4c6ce58d0c"
+},
+{
+"path": "prices/xyz_INNOLIGHT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_INTC.parquet",
+"bytes": 46427,
+"sha256": "058af32b317b599b316e2e2ab578dfbe8d9c5195fdeebdab23823f59ddf2e1e4"
+},
+{
+"path": "prices/xyz_IREN.parquet",
+"bytes": 13728,
+"sha256": "eab7410d022c6110211e50b705488e7980e17ac3b638d1de689ad978a61a27c0"
+},
+{
+"path": "prices/xyz_LRCX.parquet",
+"bytes": 7136,
+"sha256": "13074705009b4751334d93c05cbe7ab02f0cd0b7d6d432afedebb594fb99e53c"
+},
+{
+"path": "prices/xyz_MELI.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_META.parquet",
+"bytes": 46039,
+"sha256": "7a72d44b696afa62db7672cb62f3148361a786af0c3d8439565b8f03d3f5f438"
+},
+{
+"path": "prices/xyz_MSFT.parquet",
+"bytes": 46233,
+"sha256": "b3ee0815f6fc6dcd87b79b3d8b267a8f8847d7b1141933a57a23f0f75b67d991"
+},
+{
+"path": "prices/xyz_MU.parquet",
+"bytes": 43330,
+"sha256": "c5a4db022eb019c7c9fee2c65bc20e60b62dced6024d5b0f893bd9c2a7ed14e3"
+},
+{
+"path": "prices/xyz_NBIS.parquet",
+"bytes": 21821,
+"sha256": "5da0ab2b9e2d43fd3c1f1a47948d612055cef9359c86e40388651aee1f7d485a"
+},
+{
+"path": "prices/xyz_NET.parquet",
+"bytes": 12920,
+"sha256": "bb4a981fa1789f2d86664119e97211e26b70feddce13c554b76c521a3ba1c96a"
+},
+{
+"path": "prices/xyz_NVDA.parquet",
+"bytes": 47314,
+"sha256": "7a7f1d45f57ed6fb98a1ed435ee6de13e007c9692d7193d7694cb79fbbfe19a2"
+},
+{
+"path": "prices/xyz_PALLADIUM.parquet",
+"bytes": 33860,
+"sha256": "1df94b0dc5fe8577a896d6e4f16cc1c5ad21c30f9644a10ee72c83b616124b77"
+},
+{
+"path": "prices/xyz_PLATINUM.parquet",
+"bytes": 40543,
+"sha256": "928cd4f26b269989a21f6dae620503950f0a39383f5ebbb9532f441a8bc74086"
+},
+{
+"path": "prices/xyz_PLTR.parquet",
+"bytes": 46909,
+"sha256": "ff6ed72dea7e64f4ac4d2becc99f84147b833d61cc8f0be47752f3c2cac47af0"
+},
+{
+"path": "prices/xyz_RDDT.parquet",
+"bytes": 12926,
+"sha256": "8a45a14902404720c8cf1282b18090c95c8295c7d9841c67020b498f3f365991"
+},
+{
+"path": "prices/xyz_SILVER.parquet",
+"bytes": 43929,
+"sha256": "1d72efe8d610166e46631ece405613b57a6fcc882f4848f72e857ff8912a60b5"
+},
+{
+"path": "prices/xyz_SKHX.parquet",
+"bytes": 35267,
+"sha256": "64336acdde6ea2a10db90dcf46305cf3edb9e9c13b53aef0d6198756495d19d8"
+},
+{
+"path": "prices/xyz_SMCI.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_SMH.parquet",
+"bytes": 20656,
+"sha256": "b84699b86b4060620689ee7dfce860034b0943cbc1ca0ee1cba36e30f16f1a45"
+},
+{
+"path": "prices/xyz_SNDK.parquet",
+"bytes": 40150,
+"sha256": "1606ba5348dabb45ab00b9983619be9d2841702b3f847be9ff6ef5a784662b36"
+},
+{
+"path": "prices/xyz_STX.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_TENCENT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "prices/xyz_TSLA.parquet",
+"bytes": 47563,
+"sha256": "121414ba32182a8e3ecfeb159f6188fce8270256ee54118b2dc2b23366c4c0bc"
+},
+{
+"path": "prices/xyz_TTWO.parquet",
+"bytes": 3577,
+"sha256": "576b88575bdfb695ae1dcc07d7c4927405c9547614e654c52cc436ca9575644c"
+},
+{
+"path": "prices/xyz_UNITREE.parquet",
+"bytes": 15638,
+"sha256": "c3aedbad65447d5bd3dd346b949fc5ef8fdb49df3db7c7afc757f3fec04eefce"
+},
+{
+"path": "prices/xyz_WHEAT.parquet",
+"bytes": 1821,
+"sha256": "47cff8c44fb5d0f97c76bb598c7f5e1356037e91f44344e11882c88a59937677"
+},
+{
+"path": "universe.csv",
+"bytes": 4831,
+"sha256": "35ce7a4522088756ba1671e7e3eb6d0e2aa3fa27992f7834b1eab7c6dd9c0fe9"
+}
+]
+}

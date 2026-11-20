@@ -11,6 +11,28 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L009 · 2026-11-20 · Plumbing found a real gap, and arithmetic I had already written killed it
+- **Choose.**
+  - Lenses: "change the scale" first (a lab-wide McLean-Pontiff decay), then "follow the plumbing".
+  - The decay could not be measured cleanly: forward interims are sealed until their reads, and only about ten
+    finished pairs exist.
+  - **What the registry does show:** carry replicated five times on new venues, while price-pattern passes failed
+    their confirmations (R192→R201, R462→R464, R188→R189). That is why I stayed in carry, in writing.
+- **Read myself.** Hyperliquid's HIP-3 deployer actions let each deployer set a funding multiplier, an interest rate
+  and a clamp per asset. `perpDexs` shows them differing for the same ticker: Felix 0, Dreamcash ~0, xyz 0.5, mkts
+  the default.
+- **Make.** Two lanes, both frozen before the data existed:
+  - **R517**, R516's listing phase on HIP-3: FAIL. 18 trades, t 1.31; stock-perp premia are small and turn.
+  - **R518**, the design gap: FAIL. Funding +0.32% a trade, costs 0.28% a trade, net about 0.
+- **Surprise.** R518's PREREG already said the gap was 2.5-5.5%/yr on capital before costs, and that a PASS needed
+  more. I wrote the break-even and froze anyway.
+- **What I do differently.** Before the freeze, compare edge per trade with cost per trade. If my own arithmetic
+  says thin, change the rule to fit the edge (a static hold for a constant gap) or do not spend the trial.
+- **Also learned.** A mechanism travels only with its cause. R516's extremes came from free-floating premia on thin
+  crypto books; HIP-3 stocks are pinned to an oracle every 3 seconds.
+- **Instruction changed: promoted.** With R470 (the same thin stock carry) this is the second time, so `CLAUDE.md`
+  step 4 now asks for the break-even before the freeze.
+
 ## L008 · 2026-11-20 · The first session run by the chain
 - **Open.** The lessons pointed away from Kraken and from subagents.
 - **Choose.**

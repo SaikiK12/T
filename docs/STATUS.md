@@ -125,6 +125,11 @@
     Binance + Hyperliquid (2023-26) passe le test (t = 5,8) : +1,8 % net par transaction en moyenne, environ 16 %/an
     sur le capital engagé. Mais les occasions ont presque disparu (43 en 2023, 6 en 2026, et ces 6 ont perdu). À
     suivre seulement sur les cotations tardives de Kraken ([résultat](../experiments/xfund_listing_v1/FINDINGS.md)).
+  - **Les plateformes HIP-3 d'Hyperliquid (R517, R518, 20-11) : deux échecs.** La règle de R516 entre plateformes
+    qui cotent la même action ne trouve pas d'écarts assez grands (18 transactions, t = 1,3). L'écart de conception,
+    où chaque plateforme fixe son propre financement (Felix et Dreamcash à zéro, xyz à moitié), existe bien : environ
+    7 %/an sur une jambe. Mais la règle tourne trop et les coûts l'avalent : net ≈ 0
+    ([R517](../experiments/hip3list_v1/FINDINGS.md), [R518](../experiments/hip3gap_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

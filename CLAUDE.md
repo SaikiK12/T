@@ -32,6 +32,8 @@ not to add process.
    - When a book is the answer, read the whole chapter, from a legal copy only.
 4. **Make.** Turn the reading into a test, a tool or a measurement in the same session.
    - Before the freeze, count the supply of chances per year, not only in total.
+   - Before the freeze, write the break-even: expected edge per trade against cost per trade. If it is thin, fit
+     the rule to the edge or skip the trial.
    - Then freeze, run once, and read the by-year table before the headline.
    - Report costs at 1x/2x/3x, and compare with cash.
    - A null goes in with the same care as a hit.
