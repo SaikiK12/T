@@ -106,7 +106,14 @@
   - **Les coûts baissent avec des ordres passifs (R513, 20-11).** Sur les petites pièces Kraken, un ordre passif posé
     à l'heure de décision, avec repli agressif au bout d'1 h, coûte environ 12 bp par côté au lieu de 20 (gain
     8,2 bp, t = 9,5 ; décidé à 6 h : gain 4,9 bp, t = 3,0). Attendre 24 h n'aide plus. C'est le levier principal sur
-    les coûts du portage ([résultat](../experiments/passive_kraken_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
+    les coûts du portage ([résultat](../experiments/passive_kraken_v1/FINDINGS.md)).
+  - **Vérification en direct (R514, dès le 21-11).** Chaque décision Kraken de R509/R512 relève le vrai meilleur prix ;
+    6 h plus tard, on vérifie si l'ordre passif aurait été servi et à quel coût. Décision après 30 jours.
+  - **Taille des positions ([note](reviews/sizing_20261120.md)).** En marge isolée, un pic sur une petite pièce
+    liquide une jambe dès 0,6x ; en marge croisée par plateforme, le plafond monte vers 6,5x. Proposition pour la
+    première mise : 2 000 $ au plus, marge croisée, levier 2x au plus, arrêt à −3 %.
+  - **Lancement à l'heure.** GitHub ne lançait le portage qu'une fois par jour, souvent après 7 h (jour compté « en
+    retard ») ; l'horloge le relance désormais à 00:31 et 02:31 UTC. Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
