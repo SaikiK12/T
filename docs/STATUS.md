@@ -120,6 +120,11 @@
     ([résultat](../experiments/xfund_kokx_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
+  - **Les premières semaines après une cotation (R516, 20-11).** La règle de portage n'entre jamais sur une pièce
+    pendant ses ~3 premières semaines sur une plateforme, là où les écarts sont les plus larges. Une règle dédiée sur
+    Binance + Hyperliquid (2023-26) passe le test (t = 5,8) : +1,8 % net par transaction en moyenne, environ 16 %/an
+    sur le capital engagé. Mais les occasions ont presque disparu (43 en 2023, 6 en 2026, et ces 6 ont perdu). À
+    suivre seulement sur les cotations tardives de Kraken ([résultat](../experiments/xfund_listing_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
