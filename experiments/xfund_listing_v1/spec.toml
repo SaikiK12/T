@@ -1,0 +1,14 @@
+# R516 xfund_listing_v1: cross-venue funding carry in the listing phase on Binance USD-M + Hyperliquid.
+# Symbols: R275's frozen manifest as carried by R439 (experiments/carry5_v1/symbols.csv); only two venues are read.
+name = "xfund_listing_v1"
+start = "2022-01-01"
+end = "2026-09-30"
+book_start = "2023-06-01"
+symbols = "experiments/carry5_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "hyperliquid", prices = "hyperliquid/candles_1d", vol = "volume", funding = "hyperliquid/funding", bar_h = 24 },
+]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20

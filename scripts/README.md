@@ -149,7 +149,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (228)
+## Run: one lane's frozen measurement (229)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -365,6 +365,7 @@ line is the first line of the script's own docstring.
 - [`run_xfund_eea.py`](run_xfund_eea.py): xfund_eea_v1 (R508): R275's cross-venue funding carry book on Kraken + Hyperliquid, two venues reachable from France whose funding rules differ.
 - [`run_xfund_kaster.py`](run_xfund_kaster.py): xfund_kaster_v1 (R511): R275's cross-venue funding carry book on Kraken + Aster, a pair never read.
 - [`run_xfund_kokx.py`](run_xfund_kokx.py): xfund_kokx_v1 (R515): R275's cross-venue funding carry book on Kraken + OKX Europe X-Perps, both MiFID-regulated venues open to EEA retail.
+- [`run_xfund_listing.py`](run_xfund_listing.py): xfund_listing_v1 (R516): cross-venue funding carry in the listing phase, the days R275's book cannot trade.
 - [`run_xfundint.py`](run_xfundint.py): xfundint_v1 (R384): is R277's KuCoin carry an artifact of settlement intervals? As set out in experiments/xfundint_v1/PREREG.md.
 - [`run_xperp_carry.py`](run_xperp_carry.py): xperp_carry_v1 (R441, M490): OKX Europe alt X-Perp carry book, short the X-Perp and long OKX EEA spot, picked each day by trailing realized funding.
 - [`run_xperp_hl.py`](run_xperp_hl.py): xperp_hl_v1 (R443, M502): cross-venue funding carry between OKX Europe crypto X-Perps and Hyperliquid perps, the two perp venues found reachable from France.
