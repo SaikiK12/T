@@ -113,7 +113,11 @@
     liquide une jambe dès 0,6x ; en marge croisée par plateforme, le plafond monte vers 6,5x. Proposition pour la
     première mise : 2 000 $ au plus, marge croisée, levier 2x au plus, arrêt à −3 %.
   - **Lancement à l'heure.** GitHub ne lançait le portage qu'une fois par jour, souvent après 7 h (jour compté « en
-    retard ») ; l'horloge le relance désormais à 00:31 et 02:31 UTC. Avant tout ordre réel : vérifier ton accès aux dérivés de
+    retard ») ; l'horloge le relance désormais à 00:31 et 02:31 UTC.
+  - **La version entièrement régulée (R515, 20-11) : Kraken + OKX Europe.** Elle passe le test (t = 2,7 sur 77 jours)
+    mais rapporte peu : +5,2 %/an à 1x, +3,0 % à 2x, +0,7 % à 3x, soit la moitié de Kraken + Hyperliquid sur les mêmes
+    jours. Avec des entrées passives sur Kraken, on viserait 3-5 %/an : proche du rendement du cash
+    ([résultat](../experiments/xfund_kokx_v1/FINDINGS.md)). Avant tout ordre réel : vérifier ton accès aux dérivés de
     Kraken EEE ([résultat](../experiments/xfund_eea_v1/FINDINGS.md),
     [règles de la voie](../experiments/xfund_eea_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
