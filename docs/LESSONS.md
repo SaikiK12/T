@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L008 · 2026-11-20 · The first session run by the chain
+- **Open.** The lessons pointed away from Kraken and from subagents.
+- **Choose.**
+  - Binding constraint: the carry books earn about the cash rate.
+  - Lens: "who pays, and why must they?"
+- **Two candidates.**
+  - Forced sellers (family E2) was my first pick. Checking the registry first showed five earlier rounds (R206, R252,
+    R255, R303, R308), mostly NULL. Skipped, and that saved a trial.
+  - V1 (collateral yield, incentives) was the one family never measured. Chosen.
+- **Read myself.** Five pages of venue docs, plus one API call.
+  - Hyperliquid's portfolio margin pays idle USDC 2.65%/yr today, and the live state matches its formula.
+  - Aster's USDF trading rewards need $50k of volume a week
+    ([venue_yield_20261120.md](../research/intake/venue_yield_20261120.md)).
+- **Surprise.** The binding fact was eligibility (a $10k account; $50k a week of volume), not the rate.
+- **What I do differently.** For any incentive, read who qualifies before reading what it pays.
+- **Instruction changed:** none yet. It becomes one if it happens again.
+
 ## L007 · 2026-11-20 · The owner: stop the subagents, stop the venue tunnel
 - **What happened.** For three days most rounds turned around Kraken (R508-R515), because a regulated venue looked
   like the shortest path to a stake. Readers were Haiku subagents.

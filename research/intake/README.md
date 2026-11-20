@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-20 | [venue_yield_20261120.md](venue_yield_20261120.md) | Collateral yield and incentives on the owner's venues, read by Claude directly (M475, family V1): Hyperliquid portfolio margin pays 2.65%/yr on idle USDC (live, formula checked) above a $10k account; Aster USDF trading rewards need $50k weekly volume |
 | 2026-11-20 | [reading_round_20261120.md](reading_round_20261120.md) | First round by the protocol: four Haiku readers at 85-89k tokens each (about 55% less than 2026-11-19); fills on thin books, funding persistence (no measured half-life found), venue failure base rates, EU retail rules (2:1 crypto cap checked on ESMA's site) |
 | 2026-11-20 | [reading_protocol.md](reading_protocol.md) and [questions_20261120.md](questions_20261120.md) | How to read: question first, locate pages with `scripts/read_source.py`, mini-cards; the four questions the carry books need answered now |
 | 2026-11-19 | [library_digest_20261119.md](library_digest_20261119.md), with the five readers' notes in [library_20261119/](library_20261119/) | Five Haiku readers, about 100 legally free sources in five domains (targeted reads, scopes in the notes); ranked against cost, sizing and inference |
