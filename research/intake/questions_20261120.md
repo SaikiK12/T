@@ -55,3 +55,28 @@ to scout. A reader follows `reading_protocol.md`.
   - ESMA's CFD product-intervention measures;
   - the AMF's CFD measure;
   - Kraken EEA derivatives documentation.
+
+## Added later on 2026-11-20
+### Q5. What creates the funding extremes on thin perps, and what makes them stop?
+- **Serves:** forward expectations for R509-R515. The 2026-11-20 measurement found the edge is a stream of short-lived
+  extremes (half-life of days), not a property of particular coins.
+- **An answer looks like:**
+  - drivers with evidence: new listings, open-interest build-ups, leverage-limit changes, squeezes, airdrops or
+    unlocks, index-construction quirks on thin books;
+  - which of them a public-data signal could see in advance.
+- **Zones:**
+  - papers on funding-rate determinants and on listing and unlock effects in crypto derivatives;
+  - Kraken's and Hyperliquid's funding and index methodology pages;
+  - exchange research notes (BitMEX, Kaiko and others, free).
+
+### Q6. What exactly does Kraken EEA offer a French retail client in perpetuals?
+- **Serves:** the first stake.
+- **An answer looks like:**
+  - leverage per contract, and whether the products are treated as CFDs;
+  - margin and close-out rules, negative-balance protection;
+  - insurance fund and auto-deleveraging rules;
+  - fees for EEA futures;
+  - the KID and the appropriateness test;
+  - which contracts are offered to EEA clients.
+- **Zones:** Kraken support and legal pages for Payward Europe Digital Solutions (CY) Ltd, Kraken futures
+  documentation, CySEC's register entry.
