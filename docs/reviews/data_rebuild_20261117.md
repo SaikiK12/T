@@ -34,6 +34,7 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
 | `upbit_hist` | `scripts/fetch_venue_history.py upbit` | daily candles, so no hourly record; 4 files no longer served (KRW-SOPH, KRW-ZIL, reserved KRW-BLAST and KRW-ZIL), 6 new |
 | `bithumb_hist` | `scripts/fetch_venue_history.py bithumb` | daily candles, so no hourly record; 13 files no longer served, 7 new |
 | `hyperliquid` | `scripts/fetch_hyperliquid_history.py` (resumed twice) | all 234 recorded coins plus XTEN; 1h candles: 56 files with the same coverage, 178 shifted by the source's 5,000-hour limit (note 5) |
+| `lighter_hist` | `scripts/fetch_venue_history.py lighter --workers 1 --pause 2` (resumed three times, done 2026-11-20 14:14 UTC) | all 724 recorded files plus 12 new markets; 1h candles: 182 of 195 recorded files start at the recorded hour and run on from the record's 2026-11-03 to 2026-11-18 with no new holes; the other 13 were empty in the record (6 now have bars) |
 | `bitfinex_hist` | R507's frozen fetch (`experiments/xfund_bfx_v1`) | new, no earlier record; 76 pairs with receipts, no funding gap |
 | `research` | `scripts/build_views.py` (feature bins 7.1 GB) | no provenance record |
 | `data-archive` recordings | `scripts/handover.py restore` | 39,265 files, every sha256 checked (2026-11-17) |
@@ -61,12 +62,15 @@ folder, what was rebuilt and how it compares with its record in `docs/provenance
      hourly history are gone from the source.
    - Daily candles and funding come back from their start (BTC funding: hourly from 2023-05-12).
 
-## Not rebuilt, or still running (2026-11-18 09:30 UTC)
-- **Running:** Lighter, at the source's pace (143 contracts written; the record has 240).
+## Not rebuilt (updated 2026-11-20 14:30 UTC)
+- **Lighter** finished on 2026-11-20 (row above). No venue fetch is running.
 - **`coinm_1h_v2`.** `scripts/fetch_coinm.py` stops on archive files whose header names field 7 `quote_volume`, where
   its schema check wants base-asset volume. This is Binance's labelling for COIN-M files, and the check is
   deliberate; whether to accept that header is the script owner's call. The legacy `coinm_1h` above does not depend
   on it.
 - **`macro`.** FRED is not contacted again, by the owner's earlier rule, so `scripts/fetch_macro.py` was not run.
-- **`daily`** (the point-in-time panel) and **`metrics_full`.** They wait for the venue folders above. They also lack
-  `macro`, so a panel built now would differ from the recorded one in those columns.
+- **`daily`** (the point-in-time panel) and **`metrics_full`.**
+  - Their venue inputs are now all back, but `macro` is still missing. So a panel built now would differ from the
+    recorded one in those columns.
+  - No running or registered lane reads them, so they are built on demand, by the lane that needs them, and recorded
+    then.
