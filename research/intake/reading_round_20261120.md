@@ -84,3 +84,56 @@
   - Plan the first stake at no more than 2:1 on the Kraken leg, as `docs/reviews/sizing_20261120.md` proposes.
   - Ask Kraken EEA in writing which cap and protections apply.
   - Expect a key information document (KID) and an appropriateness test at account opening.
+
+## Second wave, the same day (Q5, Q6)
+- **Cost:** about 87k tokens for Q5; Q6 was a similar size (6 pages of Kraken docs, read through web-fetch summaries).
+
+### Q5. What creates the funding extremes
+- **Mechanism, published.** He, Manela, Ross & von Wachter, pp. 12, 14, 64-65:
+  - Funding is the averaged impact-price premium passed through a clamp around the interest term. Beyond the clamp,
+    funding moves one-for-one with the premium, so thin books make the premium large and jumpy.
+  - Cross-venue arbitrage is capital-limited, because each leg needs its own margin. So a thin venue can stay
+    mispriced, and divergence peaks in liquidity stress.
+- **Predictors.** No source read tests listings, unlocks, open-interest build-ups or squeezes as predictors.
+  - A BitMEX Q1 2025 report, seen only as a snippet, puts the median post-listing funding peak at about 6 days.
+- **Measured by the session** (descriptive, R508's coins and window). The absolute Kraken-Hyperliquid daily funding
+  spread, by days since the Kraken contract's listing:
+
+  | Days since listing | Coin-days | Median, %/yr | Share above 100%/yr |
+  |---|---|---|---|
+  | under 30 | 31 | 128 | 84% |
+  | 30-90 | 151 | 41 | 24% |
+  | 90-180 | 415 | 18 | 13% |
+  | 180-365 | 1,816 | 27 | 19% |
+  | over a year | 37,773 | 18 | 11% |
+
+  - New listings give the largest spreads. Means stay high later (54-99%/yr) from occasional spikes.
+  - The first-month sample is small. A listing-age signal could be tested as a new, registered variant (not done).
+
+### Q6. What Kraken EEA offers a French retail client
+Read through web-fetch summaries of Kraken's own support pages:
+- "Perpetual contract specifications for clients in the EEA", updated 13 November 2026;
+- the Liquidation FAQ;
+- the Equity Protection Process page;
+- "What are derivatives (EEA)";
+- the EEA questionnaire page;
+- "Unlock derivatives (EEA)".
+
+What those pages say:
+- **Leverage:** up to 10x on most perps (two at 20x). Initial margin as low as 10%; maintenance at half the initial.
+- **Liquidation:** partial in 10% steps, then full. "No margin calls or any warnings."
+- **Negative balances:** the account "can never go below zero"; the equity-protection page names no region beyond
+  "outside of the U.S.".
+- **Shortfalls:** no insurance fund. A derivatives liquidity pool covers them; auto-deleveraging is not mentioned.
+- **Funding:** capped at ±0.5% an hour.
+- **Onboarding:** an appropriateness questionnaire and a tax number are required.
+- **Not found:**
+  - no KID;
+  - nothing on CFD classification or on ESMA's 2026 statement.
+- **Contract count:** about 327 perps listed for the EEA.
+
+What it means for the stake:
+- Kraken publishes 10x, while ESMA's 2026 statement makes retail perps likely CFDs (2:1). The conflict is unresolved
+  on Kraken's pages. The owner's written question to Kraken EEA settles it.
+- Either way, the stake plan stays at 2x or less.
+- **Liquidation comes without a warning,** so the book needs its own margin buffer and alerts.
