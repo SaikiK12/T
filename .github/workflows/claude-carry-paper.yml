@@ -1,6 +1,6 @@
 name: Carry paper lanes (Claude)
 # Single writer, from 2026-11-10, of the journals of the forward carry paper lanes R278, R279, R294, R390 and R440
-# (and R509 from 2026-11-19, R512 from 2026-11-20),
+# (and R509 from 2026-11-19, R512 from 2026-11-20, R514 from 2026-11-21),
 # and of R285/R415, which read only those journals. Paper only: public market data, no key, no order.
 # Each lane's data root (data/<lane>/, gitignored) lives in the Actions cache. If the cache is lost, the lane rebuilds
 # it from the public APIs from its warm day (2026-08-01), exactly as a lane without an archive does.
@@ -28,7 +28,7 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       NUMBA_NUM_THREADS: '1'
-      LANES: xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xfund_eea_fwd xfund_eea3_fwd xbook_fwd paperacct_fwd
+      LANES: xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xfund_eea_fwd xfund_eea3_fwd passive_kraken_fwd xbook_fwd paperacct_fwd
     steps:
       - name: Checkout the default branch
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -102,6 +102,7 @@ jobs:
           run R440 scripts/forward_xfund5.py
           run R509 scripts/forward_xfund_eea.py
           run R512 scripts/forward_xfund_eea3.py
+          run R514 scripts/forward_passive_kraken.py
           run R285 scripts/forward_xbook.py
           run R415 scripts/forward_paperacct.py
           for l in xfund_fwd xfund_kc_fwd xfund_lt_fwd xfund_bg_fwd xfund5_fwd xfund_eea_fwd xfund_eea3_fwd; do
@@ -156,7 +157,7 @@ jobs:
             if [ -d "experiments/$l/journal" ]; then git add -A "experiments/$l/journal"; fi   # a new lane has none yet
           done
           if git diff --cached --quiet; then echo "no journal change"; exit 0; fi
-          git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R509 R512 R285 R415)" \
+          git commit -q -m "Carry paper lanes: GitHub tick ${GITHUB_RUN_ID} (R278 R279 R294 R390 R440 R509 R512 R514 R285 R415)" \
             -m "failed: ${{ steps.tick.outputs.failed || 'none' }}"
           br="${{ github.event.repository.default_branch }}"
           for i in 1 2 3 4 5; do

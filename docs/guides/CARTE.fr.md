@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 51 | 8 | 5 | 5 | 18 | 15 |
+| [Portage de financement crypto entre plateformes](#carry) | 52 | 8 | 5 | 5 | 19 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **292** | **13** | **47** | **126** | **54** | **52** |
+| **Total** | **293** | **13** | **47** | **126** | **55** | **52** |
 
 <a id="carry"></a>
 
@@ -97,6 +97,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R511 | [`xfund_kaster_v1`](../../experiments/xfund_kaster_v1) | M554 gate 1: R275's carry book (L14d th5% K20) on Kraken + Aster (floored, terms do not name France), decided… | en cours |
 | R512 | [`xfund_eea3_fwd`](../../experiments/xfund_eea3_fwd) | M554 gate 2 forward paper: R511's three-venue carry book (Kraken + Hyperliquid + Aster, L14d th5% K20, 132 co… | en cours |
 | R513 | [`passive_kraken_v1`](../../experiments/passive_kraken_v1) | M555 gate 0 cost measurement: a resting order at the carry book's decision time (00:00 UTC) on Kraken's thin… | en cours |
+| R514 | [`passive_kraken_fwd`](../../experiments/passive_kraken_fwd) | M555 forward cost measurement: R513's passive-entry saving on the Kraken legs R509 and R512 trade, from the l… | en cours |
 
 <a id="carry-tradfi"></a>
 
