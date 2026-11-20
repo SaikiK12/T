@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-11-19T22:00:00+00:00",
- "days_ticketed": 49,
+ "last_scored_hour": "2026-11-19T23:00:00+00:00",
+ "days_ticketed": 50,
  "BIN": {
   "coverage": {
    "symbols": 75,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.1982369281907874,
+  "market_mean_apr_now": -0.197823577911034,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 30,
+   "days": 31,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -81,7 +81,7 @@
     "apr": 0.24661833405237607
    }
   ],
-  "market_mean_apr_now": -0.5241787072197275,
+  "market_mean_apr_now": -0.5232440859728713,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -139,25 +139,25 @@
    }
   },
   "ontime": {
-   "days": 30,
-   "days_invested": 22,
-   "total": 0.0021370906223853376,
-   "total_2x": 0.00033709064259551403,
-   "total_3x": -0.0014629093371947017,
-   "total_spot5": 0.002637090622385297,
-   "total_r191_timing": 0.003790070480066486,
-   "funding": 0.0035850000050222934,
-   "basis": 0.00035209059715250084,
+   "days": 31,
+   "days_invested": 23,
+   "total": 0.0025518746356498374,
+   "total_2x": 0.000751874655860014,
+   "total_3x": -0.0010481253239302017,
+   "total_spot5": 0.0030518746356497967,
+   "total_r191_timing": 0.004204854493330986,
+   "funding": 0.0038641000049200935,
+   "basis": 0.00048777461051910083,
    "cost": 0.0017999999797899996,
-   "avg_open": 1.3069444444444442,
-   "ann": 0.02600126923902161,
-   "sharpe": 2.4983900675411452,
-   "t_nw": 0.5168058119847667,
+   "avg_open": 1.329301075268817,
+   "ann": 0.03004626587136099,
+   "sharpe": 2.9171224273087044,
+   "t_nw": 0.6215634853958292,
    "max_dd": 0.0027393937607531,
    "go_real_invested": {
-    "n": 22,
-    "mean": 9.714048283569716e-05,
-    "hit": 0.5454545454545454,
+    "n": 23,
+    "mean": 0.00011095107111521032,
+    "hit": 0.5652173913043478,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
@@ -165,10 +165,10 @@
      "finite_returns": true,
      "enough_scored": true,
      "mean_positive": true,
-     "hit_rate": false,
+     "hit_rate": true,
      "no_tail_event": true
     },
-    "pass": false
+    "pass": true
    }
   }
  }
