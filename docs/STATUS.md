@@ -136,6 +136,9 @@
     année (2023-26). Le test décidé a pourtant échoué : ma règle « détention stable » avait figé le mauvais sens en 2023.
     Le prochain pas est une piste en papier, à vérifier aussi : l'accès à Deribit depuis la France
     ([résultat](../experiments/deribitgap_v1/FINDINGS.md)).
+  - **Piste en papier Deribit + Hyperliquid (R520, dès le 22-11).** La règle de carry R275 sur 89 pièces, avec les
+    vrais carnets relevés à chaque décision. Deux lectures fixes : 90 jours (t ≥ 2,5) et 180 jours (t ≥ 2,0) ; arrêt
+    d'urgence à −3 % ([règles](../experiments/xfund_dhl_fwd/PREREG.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

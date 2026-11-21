@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (60)
+## Running or armed registered rounds (61)
 
+- **[xfund_dhl_fwd](xfund_dhl_fwd/)** R520, RUNNING PENDING, 1 trial. M560 gate 2 forward paper: R275's carry book (L14d th5% K20) on Deribit + Hyperliquid (89 coins) from 2026-11-22, measured book costs; two fixed looks (90 d NW t>=2.5, 180 d t>=2.0), kill switch -3% ([PREREG](xfund_dhl_fwd/PREREG.md))
 - **[deribitgap_v1](deribitgap_v1/)** R519, RUNNING PENDING, 2 trials. M560 gate 0: static design-gap carry, long Deribit linear USDC perps (no interest term, ±0.025%/8h dead zone) against Hyperliquid (0.01%/8h floor), StaticBook L30 th0 K20 held until a dead leg or blowout; R275's book reported; 2023-05..2026-11 ([PREREG](deribitgap_v1/PREREG.md), [FINDINGS](deribitgap_v1/FINDINGS.md))
 - **[hip3gap_v1](hip3gap_v1/)** R518, RUNNING PENDING, 1 trial. M559 gate 0: R275's carry book (L14d th5% K20, xfund_v2) between HIP-3 dexes listing the same ticker, whose deployers set different funding designs (xyz 0.5, Felix 0, Dreamcash ~0, Kinetiq ~5%/yr interest, mkts default); R517's data ([PREREG](hip3gap_v1/PREREG.md), [FINDINGS](hip3gap_v1/FINDINGS.md))
 - **[hip3list_v1](hip3list_v1/)** R517, RUNNING PENDING, 1 trial. M558 gate 0: R516's listing-phase carry (ListingBook, th20% K10, LAUNCH_GAP 0) between HIP-3 dexes listing the same ticker, one Hyperliquid wallet, 2025-11-15..2026-11-20; data fetched after the freeze ([PREREG](hip3list_v1/PREREG.md), [FINDINGS](hip3list_v1/FINDINGS.md))

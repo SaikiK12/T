@@ -11,6 +11,20 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L012 · 2026-11-21 · The power check saved a forward lane from a rule that could not pass
+- **Choose.**
+  - Lens: "the owner's reach". A forward lane on venues the owner can use.
+  - The binding constraint: time to evidence for R519's gap.
+- **Make.** R520 runs R275's book on Deribit + Hyperliquid forward, with a new `lab/deribit.py` (hourly bars, closes at
+  00:00 UTC, per L011). A scratch dry run on 3 coins passed end to end before the freeze.
+- **Surprise.** I was about to reuse R512's anytime rule (E >= 40 by day 180). At R519's daily Sharpe ratio of about
+  0.20, it needs about 300 days, so it would have FAILed a true edge at 180.
+  - Two fixed looks have about 30% power at 90 days and about 75% at 180.
+- **What I do differently.** Before freezing any decision rule, write the expected t (or crossing day) at each look
+  from the in-sample effect. If power by the last look is under about 50%, change the rule or the horizon.
+- **Instruction changed: promoted.** With L009's break-even, this is the second "do the arithmetic before the
+  freeze" lesson. `CLAUDE.md` step 4 now names power next to the break-even.
+
 ## L011 · 2026-11-21 · The owner asked for a faille: the gap is real on liquid coins, and I locked the wrong sign
 - **Choose.** The binding constraint: R508's faille has little capacity.
   - Lens: "follow the plumbing", scanning venues' funding rules.
