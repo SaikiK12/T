@@ -11,3 +11,11 @@
   late that day.
 - **Fix (plumbing).** From 2026-11-20 the clock chain (`claude-clock.yml`, commit 59499b2) dispatches the carry
   workflow at 00:31 and 02:31 UTC, so later days are decided on time. Nothing in R512's rule, read or code changed.
+
+## 2026-11-21: the clock fix holds
+- The clock chain dispatched the carry workflow at 00:31 UTC (run 44856336907's predecessor 44844345655, success).
+  The 2026-11-21 decisions were made at 01:18-01:19 UTC, `ontime`.
+- **One label to read carefully.** The day row labelled 2026-11-21 scores the interval decided on 2026-11-20, so it
+  carries that decision's `late` kind (`lab/carrylane.py`, the day row takes the previous decision's kind). From the
+  row labelled 2026-11-22 on, days decided on time are scored `ontime`.
+- No result was read for this check: only the `day`, `kind` and `run` columns.
