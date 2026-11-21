@@ -11,6 +11,17 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L010 · 2026-11-21 · A check-in: read what a label means before calling a day late
+- **What happened.** The 00:31 UTC clock dispatch decided 2026-11-21 on time for R509 and R512 (01:18-01:19 UTC).
+  The day row labelled 2026-11-21 still says `late`.
+- **Why.** `lab/carrylane.py` gives a day row the kind of the previous day's decision, and the 2026-11-20 decision
+  was late.
+- **Surprise.** I nearly read a fixed pipeline as broken.
+- **What I do differently.** For any status flag, find the line that sets it before acting on it. I checked only
+  `day`, `kind` and `run`, never results, as the sealed-interim rule asks.
+- **Also.** A reminder is set for R510's first look (about 2026-12-20).
+- **Instruction changed:** none.
+
 ## L009 · 2026-11-20 · Plumbing found a real gap, and arithmetic I had already written killed it
 - **Choose.**
   - Lenses: "change the scale" first (a lab-wide McLean-Pontiff decay), then "follow the plumbing".
