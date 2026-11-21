@@ -11,6 +11,8 @@ chain below.
 - "Know what data you need to know… the best thing you've done was Reading books."
 - "Ne reste pas bloqué à Kraken ou autre et arrête de lancer des subagents. Fais ta propre chaîne d'amélioration dans
   le repo et personnelle via des instructions plus créatives et humaines… comme la lecture que je t'ai ordonnée."
+- "We need a breakthrough… have réflexion really deep… all axes." Then: access to venues is the owner's to arrange,
+  "pas besoin d'avoir autant de critère" (2026-11-21).
 
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.

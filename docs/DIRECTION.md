@@ -10,6 +10,13 @@ to run them. Latest owner instructions and fresh [room claims](https://github.co
 use [the live queue](../registry/methods.csv), [round registry](../registry/rounds.csv) and timestamped [panel](PANEL.md)
 for current recorded scope. Recheck actual inputs and authorization before any acquisition or execution.
 
+## Owner decision, 2026-11-21: venue access is the owner's
+- The owner: "Ok sen fou je peux faire devenir de l'argent absolument partout pas besoin d'avoir autant de critère je
+  sais que deribit acceptera ou autre crypto."
+- So access no longer ranks lanes. Every crypto venue is in scope for research and paper lanes.
+- Opening accounts within each venue's own rules is the owner's part. AGENTS.md's money rules are unchanged: real
+  money only after paper proves a net gain, through `lab.gate.go_real()`, placed by the owner.
+
 ## Now (2026-10-28, 20:15 UTC)
 - **Added 2026-11-02: the container was off from about 2026-10-30 15:45 to 2026-11-02 17:29 UTC (about 3.1 days).** Every recorder and forward lane has a gap for it (R371's 11-02 ticket is `missed`; R367 has only 2026-10-29 as a usable day, so its run moves to on or after 2026-11-05 00:30 UTC and ends INCONCLUSIVE if 3 usable days are not there by 11-08). `restart_all.sh` brought all 12 daemons back at 17:36. The owner asked to finish what is open and summarise the leads: see [LEADS](LEADS.md). Four lead rows from the owner's 2026-11-02 literature paste are queued as M455-M458 (none started). A second restart came at about 19:37 UTC the same day (last activity before it about 19:10, so up to 25 minutes of gaps); `restart_all.sh` and the three manual `ensure` runs brought the 11 daemons and both loops back, and the session's hourly cron was recreated.
 - **Added 2026-11-02: R332 `mlrank_v3` is NULL, and R304's +58.9 bp/day was a data leak.** With complete Binance metrics
