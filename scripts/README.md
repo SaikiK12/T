@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (60)
+## Fetch: download archives and public history (61)
 
 - [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
@@ -23,6 +23,7 @@ line is the first line of the script's own docstring.
 - [`fetch_cryptomon.py`](fetch_cryptomon.py): Inputs for R471 cryptomon_v1 (does a Bitcoin-linked US stock keep moving after Monday's open in the direction of Bitcoin's weekend move?).
 - [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
 - [`fetch_deribit_atm_windows.py`](fetch_deribit_atm_windows.py): Raw Deribit trades of the two at-the-money legs R410 (vrpexec_v1) trades each Friday: for every Friday D of 2021-01-01..2026-09-18 and BTC/ETH, the call and the put of the strike ...
+- [`fetch_deribit_perps.py`](fetch_deribit_perps.py): Inputs for R519 deribitgap_v1: Deribit's linear USDC perpetuals, funding history and daily candles.
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
 - [`fetch_edgar_earnings.py`](fetch_edgar_earnings.py): Earnings-release filings (8-K with Item 2.02, "Results of Operations and Financial Condition") from SEC EDGAR, timed by EDGAR's acceptance time, for the US single stocks that have a MEXC TradFi ...
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
@@ -150,7 +151,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (231)
+## Run: one lane's frozen measurement (232)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -205,6 +206,7 @@ line is the first line of the script's own docstring.
 - [`run_delay.py`](run_delay.py): delay_v1 (R213): the flow books with entry delayed d hours after the signal bar, as set out in experiments/delay_v1/PREREG.md.
 - [`run_delist.py`](run_delist.py): R267 delist_v1: the Binance delisting-notice short on the hourly archive (experiments/delist_v1/PREREG.md).
 - [`run_dependent_null.py`](run_dependent_null.py): R321 registered null-only size/power study; no market outcome is read.
+- [`run_deribit_gap.py`](run_deribit_gap.py): R519 deribitgap_v1: the funding-design gap between Deribit's linear USDC perps and Hyperliquid, held statically.
 - [`run_dexvault.py`](run_dexvault.py): dexvault_v1 (R446, M505): a deposit in each of two public liquidity vaults on perp DEXes that do not exclude France, Hyperliquid's HLP and Lighter's LLP, read as a return on capital against the 4% ...
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.

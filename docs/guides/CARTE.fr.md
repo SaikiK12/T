@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 56 | 8 | 5 | 5 | 23 | 15 |
+| [Portage de financement crypto entre plateformes](#carry) | 57 | 8 | 5 | 5 | 24 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **297** | **13** | **47** | **126** | **59** | **52** |
+| **Total** | **298** | **13** | **47** | **126** | **60** | **52** |
 
 <a id="carry"></a>
 
@@ -102,6 +102,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R516 | [`xfund_listing_v1`](../../experiments/xfund_listing_v1) | M557 gate 0: cross-venue funding carry in the listing phase (younger venue's age 3-21 days, older venue 30+ d… | en cours |
 | R517 | [`hip3list_v1`](../../experiments/hip3list_v1) | M558 gate 0: R516's listing-phase carry (ListingBook, th20% K10, LAUNCH_GAP 0) between HIP-3 dexes listing th… | en cours |
 | R518 | [`hip3gap_v1`](../../experiments/hip3gap_v1) | M559 gate 0: R275's carry book (L14d th5% K20, xfund_v2) between HIP-3 dexes listing the same ticker, whose d… | en cours |
+| R519 | [`deribitgap_v1`](../../experiments/deribitgap_v1) | M560 gate 0: static design-gap carry, long Deribit linear USDC perps (no interest term, ±0.025%/8h dead zone)… | en cours |
 
 <a id="carry-tradfi"></a>
 
