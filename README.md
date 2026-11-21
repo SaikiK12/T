@@ -202,6 +202,9 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Where a breakthrough can come from, 2026-11-21](docs/reviews/breakthrough_20261121.md): a step back over every axis.
+    Patterns fail and the funding-design gap replicates. The bet is leverage on that high-Sharpe gap (Deribit+Hyperliquid),
+    a faster forward read, make-and-hedge on thin books, and hedged incentive capture.
   - [Sizing the carry books for a small stake, 2026-11-20](docs/reviews/sizing_20261120.md): risk-constrained Kelly
     against per-venue liquidation (`lab/sizing.py`); cross margin caps R508 near 6.5x, isolated legs near 0.6x.
   - [Data rebuild, 2026-11-17..18](docs/reviews/data_rebuild_20261117.md): each `data/` folder rebuilt after the
