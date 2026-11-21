@@ -7,7 +7,7 @@ Source: tracked and staged Git-index metadata; untracked files and unstaged edit
 Everything here is run from the repository root, e.g. `python scripts/<name>.py --help`. Each
 line is the first line of the script's own docstring.
 
-## Fetch: download archives and public history (61)
+## Fetch: download archives and public history (62)
 
 - [`fetch_adlstress.py`](fetch_adlstress.py): Inputs for adlstress_v1 (R487, M534): public daily candles (and 1h candles of 2025-10-09/10) for every (venue, coin) leg of the carry pairs open on 2025-10-10.
 - [`fetch_asiaclose.py`](fetch_asiaclose.py): Inputs for R468 asiaclose_v1 (Asian single-stock perps across the daily local closure, on trade.xyz and Lighter).
@@ -24,6 +24,7 @@ line is the first line of the script's own docstring.
 - [`fetch_databento.py`](fetch_databento.py): Bounded Databento historical pulls (CME Globex futures ticks) into data/databento/<name>/.
 - [`fetch_deribit_atm_windows.py`](fetch_deribit_atm_windows.py): Raw Deribit trades of the two at-the-money legs R410 (vrpexec_v1) trades each Friday: for every Friday D of 2021-01-01..2026-09-18 and BTC/ETH, the call and the put of the strike ...
 - [`fetch_deribit_perps.py`](fetch_deribit_perps.py): Inputs for R519 deribitgap_v1: Deribit's linear USDC perpetuals, funding history and daily candles.
+- [`fetch_deribit_perps_open.py`](fetch_deribit_perps_open.py): R519's fetch, run through the frozen `fetch_deribit_perps` functions, skipping instruments that Deribit's funding endpoint calls "not open".
 - [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
 - [`fetch_edgar_earnings.py`](fetch_edgar_earnings.py): Earnings-release filings (8-K with Item 2.02, "Results of Operations and Financial Condition") from SEC EDGAR, timed by EDGAR's acceptance time, for the US single stocks that have a MEXC TradFi ...
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
