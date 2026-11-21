@@ -120,3 +120,14 @@ PREREG and FINDINGS stay the authority for its own numbers.
 - **Bet 3 is now part of Bet 2.** Run the make-and-hedge book on a zero-fee venue that pays points, with points
   counted at zero in every decision.
 - **Order of work:** item 2 is done; item 3 (the thin-venue book and trade recorder) is next.
+- **Item 3 needs no recorder for Deribit** (checked 2026-11-21, counts and field names only):
+  - `www.deribit.com`'s trade-history call serves only the last few days;
+  - `history.deribit.com/api/v2/public/get_last_trades_by_instrument_and_time` serves full history, back past 90
+    days on AAVE_USDC-PERPETUAL. Each trade carries `price`, `amount`, `direction`, `index_price` and `mark_price`.
+  - So the make-and-hedge book can be simulated on Deribit's thin new perps from history:
+    - quote at index ± k bp;
+    - a fill when a trade prints through the quote;
+    - hedge at the index plus Hyperliquid's cost;
+    - adverse selection measured by the index's mark-out after the fill.
+  - Its PREREG must write the fills per day per coin, the break-even (k against 1.5 bp maker + 4.5 bp hedge taker +
+    the hedge spread) and the power before any fill is computed.
