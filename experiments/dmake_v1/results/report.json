@@ -1,0 +1,158 @@
+{
+ "coins": 67,
+ "files_verified": 67,
+ "primary_k15": {
+  "fills": 205771,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -26.672550162080334,
+  "median_edge_bp": -15.642985450215141,
+  "share_positive": 0.10844579654081479,
+  "usd_total": -274655.36597007164,
+  "usd_per_day": -3018.190834835952,
+  "fills_per_coin_day": 33.749548958504185,
+  "nw_t_daily_usd": -6.593077749941753,
+  "halves_usd_per_day": [
+   -1375.9837003984762,
+   -4624.697814176962
+  ],
+  "l2co_dropped": [
+   "WLFI",
+   "CFX"
+  ],
+  "l2co_usd_per_day": -2992.7775566894466
+ },
+ "primary_k15_2x_cost": {
+  "fills": 205771,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -34.67251748195561,
+  "median_edge_bp": -23.642760845279607,
+  "share_positive": 0.028074898795262693,
+  "usd_total": -357196.92973897443,
+  "usd_per_day": -3925.2409861425763,
+  "fills_per_coin_day": 33.749548958504185,
+  "nw_t_daily_usd": -6.330605172433027,
+  "halves_usd_per_day": [
+   -1657.7091748523574,
+   -6143.4786276221375
+  ],
+  "l2co_dropped": [
+   "WLFI",
+   "CFX"
+  ],
+  "l2co_usd_per_day": -3895.634547851925
+ },
+ "primary_k15_3x_cost": {
+  "fills": 205771,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -42.672484801830315,
+  "median_edge_bp": -31.6414821507625,
+  "share_positive": 0.009369639064785612,
+  "usd_total": -439738.4935078713,
+  "usd_per_day": -4832.291137449135,
+  "fills_per_coin_day": 33.749548958504185,
+  "nw_t_daily_usd": -6.159797517506713,
+  "halves_usd_per_day": [
+   -1939.4346493062185,
+   -7662.259441067205
+  ],
+  "l2co_dropped": [
+   "CFX",
+   "WLFI"
+  ],
+  "l2co_usd_per_day": -4798.491539014341
+ },
+ "verdict": "FAIL",
+ "checks": {
+  "t_ge_3": false,
+  "positive_at_2x_cost": false,
+  "l2co_pos": false,
+  "both_halves_pos": false
+ },
+ "secondary_k5": {
+  "fills": 333060,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -25.29756641812082,
+  "median_edge_bp": -15.682039812025277,
+  "share_positive": 0.04362877559598871,
+  "usd_total": -421495.37356096605,
+  "usd_per_day": -4631.817291878748,
+  "fills_per_coin_day": 54.62686567164179,
+  "nw_t_daily_usd": -6.135678528728547,
+  "halves_usd_per_day": [
+   -1846.8784773310947,
+   -7356.21395828406
+  ],
+  "l2co_dropped": [
+   "WLFI",
+   "CFX"
+  ],
+  "l2co_usd_per_day": -4599.85148648547
+ },
+ "secondary_k10": {
+  "fills": 261997,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -25.752671384406543,
+  "median_edge_bp": -15.457278187837636,
+  "share_positive": 0.08063832791978534,
+  "usd_total": -337574.632235018,
+  "usd_per_day": -3709.611343241956,
+  "fills_per_coin_day": 42.97146137444645,
+  "nw_t_daily_usd": -6.352695829290223,
+  "halves_usd_per_day": [
+   -1579.8166383953107,
+   -5793.106163200631
+  ],
+  "l2co_dropped": [
+   "WLFI",
+   "CFX"
+  ],
+  "l2co_usd_per_day": -3681.2088900485605
+ },
+ "secondary_k25": {
+  "fills": 130688,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -29.140086081886167,
+  "median_edge_bp": -16.71705803303017,
+  "share_positive": 0.1426909892262488,
+  "usd_total": -190645.97849347696,
+  "usd_per_day": -2095.010752675571,
+  "fills_per_coin_day": 21.43480400196818,
+  "nw_t_daily_usd": -7.068777466339729,
+  "halves_usd_per_day": [
+   -1081.2567723300438,
+   -3086.7266030135866
+  ],
+  "l2co_dropped": [
+   "WLFI",
+   "ETC"
+  ],
+  "l2co_usd_per_day": -2075.1038320065427
+ },
+ "secondary_k40": {
+  "fills": 72651,
+  "coins_with_fills": 67,
+  "days": 91,
+  "mean_edge_bp": -33.27612372618498,
+  "median_edge_bp": -18.521540103505234,
+  "share_positive": 0.1673067129151698,
+  "usd_total": -121110.68324155321,
+  "usd_per_day": -1330.8866290280573,
+  "fills_per_coin_day": 11.915860259143841,
+  "nw_t_daily_usd": -7.5248793526885205,
+  "halves_usd_per_day": [
+   -805.0595864746211,
+   -1845.2826489172883
+  ],
+  "l2co_dropped": [
+   "ATOM",
+   "WLFI"
+  ],
+  "l2co_usd_per_day": -1320.3409091449319
+ }
+}

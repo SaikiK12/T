@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L014 · 2026-11-21 · A conservative fill rule can be the most adverse-selected one
+- **Choose.** Lens "invert". Bet 2: make on thin books, hedge on the liquid venue.
+- **Make.** R522 was frozen before the data, with the break-even written (adverse selection under about 7 bp). It
+  FAILed hard: −27 bp a fill, every k loses, NW t −6.6.
+- **Surprise.** "Fill only when a trade prints through the quote" is conservative about how many fills happen, but it
+  keeps exactly the toxic ones: the takers who sweep the book because the price is moving.
+  - The rule also used a stale index between trades.
+  - Even 2-5 second fresh fills lost 5 bp.
+- **What I do differently.** For any passive-fill study, ask which fills the rule keeps, not only how many. If the
+  rule keeps the most informed side of the flow, the result is a lower bound and is labelled one. Touch fills need
+  book data.
+- **Instruction changed:** none yet. It joins the break-even and power checks if it happens again.
+
 ## L013 · 2026-11-21 · A "breakthrough" story becomes a number when it is written per unit of what earns it
 - **Choose.**
   - Lens: "who pays, and why must they?" New venues buy volume with tokens.

@@ -131,3 +131,9 @@ PREREG and FINDINGS stay the authority for its own numbers.
     - adverse selection measured by the index's mark-out after the fill.
   - Its PREREG must write the fills per day per coin, the break-even (k against 1.5 bp maker + 4.5 bp hedge taker +
     the hedge spread) and the power before any fill is computed.
+- **Item 3 read (R522, 2026-11-21): FAIL.**
+  - Quoting around the index on Deribit's thin new perps lost 27 bp a fill (205,771 fills, every k from 5 to
+    40 bp), because trade-through fills are adversely selected.
+  - It is a lower bound: touch-level fills need book data.
+  - Bet 2 drops below Bet 1. A Kraken queue reconstruction from order events is the one open way to test it, and it is
+    lower priority than proving and levering the design gap.
