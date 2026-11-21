@@ -1,19 +1,13 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-20T08:10:57.226334+00:00",
+ "updated": "2026-11-21T01:09:28.155474+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.97
+  "gate": 1.002
  },
  "data": {
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -23,6 +17,12 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -105,12 +105,6 @@
     "spread_in": 0.3789
    },
    {
-    "coin": "RPLUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.412
-   },
-   {
     "coin": "ESPORTSUSDT",
     "long": "gate",
     "short": "binance",
@@ -151,18 +145,24 @@
     "long": "binance",
     "short": "gate",
     "spread_in": 0.4779
+   },
+   {
+    "coin": "BMTUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 0.4753
    }
   ],
-  "scored_days": 16,
-  "late_days": 6,
-  "total": 0.0044631448,
-  "total_2x": 0.0032031447999999996,
-  "total_3x": 0.0019431447999999998,
-  "total_close": 0.004639448900000001,
-  "nw_t": 2.289641545844787,
-  "max_drawdown": -0.0006159814,
+  "scored_days": 17,
+  "late_days": 7,
+  "total": 0.0037892214,
+  "total_2x": 0.0024592213999999994,
+  "total_3x": 0.0011292213999999998,
+  "total_close": 0.003965525500000001,
+  "nw_t": 2.087352716297028,
+  "max_drawdown": -0.0006739234,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-20"
+ "last_day": "2026-11-21"
 }

@@ -1,28 +1,14 @@
 {
  "lane": "xfund_eea3_fwd",
  "rid": "R512",
- "updated": "2026-11-20T08:25:09.544317+00:00",
+ "updated": "2026-11-21T01:20:26.057418+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
-  "hyperliquid": 1.0,
-  "aster": 0.992
+  "hyperliquid": 0.99,
+  "aster": 1.015
  },
  "data": {
-  "hyperliquid": {
-   "files": 101,
-   "failed": 7,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "AVAX",
-    "BNB",
-    "JTO",
-    "SAND",
-    "SEI",
-    "ZEN",
-    "ZK"
-   ]
-  },
   "kraken": {
    "files": 132,
    "failed": 0,
@@ -34,6 +20,15 @@
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 101,
+   "failed": 2,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "JTO",
+    "JUP"
+   ]
   }
  },
  "A": {
@@ -60,12 +55,6 @@
     "long": "kraken",
     "short": "aster",
     "spread_in": 0.634
-   },
-   {
-    "coin": "MOVR",
-    "long": "aster",
-    "short": "kraken",
-    "spread_in": 0.5113
    },
    {
     "coin": "TURBO",
@@ -162,18 +151,24 @@
     "long": "kraken",
     "short": "aster",
     "spread_in": 0.9391
+   },
+   {
+    "coin": "BIO",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.8676
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
+  "scored_days": 1,
+  "late_days": 1,
+  "total": -0.0015399559,
+  "total_2x": -0.0022399559,
+  "total_3x": -0.0029399559,
+  "total_close": -0.0009099559,
   "nw_t": null,
-  "max_drawdown": 0.0,
+  "max_drawdown": -0.0015399559,
   "replay_days": 29,
   "replay_total": 0.007991831399999998
  },
- "last_day": "2026-11-20"
+ "last_day": "2026-11-21"
 }
