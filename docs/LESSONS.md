@@ -11,6 +11,20 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L013 · 2026-11-21 · A "breakthrough" story becomes a number when it is written per unit of what earns it
+- **Choose.**
+  - Lens: "who pays, and why must they?" New venues buy volume with tokens.
+  - The binding constraint: an idea with a large tail (Bet 3).
+- **Read myself.** Hyperliquid's $1.2B and Lighter's $675M sound like a breakthrough.
+  - Divided by the volume that earned them, they are about 3 bp and 1 bp or less.
+  - That is a rebate, and it matters only to a strategy that trades real volume.
+- **Surprise.** Twenty minutes of division moved Bet 3 from "asymmetric jackpot" to "a fee rebate inside Bet 2".
+- **What I do differently.** For any large headline payout, compute it per unit of the input that earned it (volume,
+  capital-month, event) before ranking it.
+- **Instruction changed:** none yet. It belongs with the break-even step if it happens again.
+- **Also:** the owner asked for continuous work. The existing weekly task is re-enabled every 2 hours as one chain
+  cycle per wake. No second loop was created.
+
 ## L012 · 2026-11-21 · The power check saved a forward lane from a rule that could not pass
 - **Choose.**
   - Lens: "the owner's reach". A forward lane on venues the owner can use.

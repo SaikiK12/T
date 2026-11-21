@@ -112,3 +112,11 @@ PREREG and FINDINGS stay the authority for its own numbers.
 4. **Money readiness:** a margin and liquidation monitor, a rebalancing rule, and the owner's two access answers
    (Deribit, Kraken).
 5. **The first reads** (R510 around 2026-12-20, then R512, R514, R520): a stake via `go_real()` only on a PASS.
+
+## Addendum, the same day: Bet 3 measured, and folded into Bet 2
+- **Measured** (`research/intake/points_value_20261121.md`, order of magnitude): realized points value was about 3 bp
+  of volume on Hyperliquid and 1 bp or less on Lighter, at launch prices.
+- **For a hedged carry book,** which trades little volume, that is noise.
+- **Bet 3 is now part of Bet 2.** Run the make-and-hedge book on a zero-fee venue that pays points, with points
+  counted at zero in every decision.
+- **Order of work:** item 2 is done; item 3 (the thin-venue book and trade recorder) is next.
