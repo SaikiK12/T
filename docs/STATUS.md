@@ -130,6 +130,12 @@
     où chaque plateforme fixe son propre financement (Felix et Dreamcash à zéro, xyz à moitié), existe bien : environ
     7 %/an sur une jambe. Mais la règle tourne trop et les coûts l'avalent : net ≈ 0
     ([R517](../experiments/hip3list_v1/FINDINGS.md), [R518](../experiments/hip3gap_v1/FINDINGS.md)).
+  - **La faille sur des pièces liquides (R519, 21-11) : Deribit contre Hyperliquid.** Deribit n'a pas de plancher
+    d'intérêt (financement nul dans une zone de ±0,025 % par 8 h) ; Hyperliquid fait payer environ 11 %/an. La règle
+    de carry habituelle (R275) gagne +4,5 %/an sans levier sur 49 pièces, BTC compris, avec t = 7,0 et des gains chaque
+    année (2023-26). Le test décidé a pourtant échoué : ma règle « détention stable » avait figé le mauvais sens en 2023.
+    Le prochain pas est une piste en papier, à vérifier aussi : l'accès à Deribit depuis la France
+    ([résultat](../experiments/deribitgap_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;

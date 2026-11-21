@@ -1,12 +1,12 @@
 {
 "folder": "data/deribit_perps",
-"source": "https://www.deribit.com/api/v2/public (get_instruments, get_funding_rate_history, get_tradingview_chart_data 1D)",
-"script": "scripts/fetch_deribit_perps_open.py",
-"recorded_utc": "2026-11-21T12:10:00Z",
+"source": "https://www.deribit.com/api/v2/public (get_instruments, get_funding_rate_history, get_tradingview_chart_data 1D and 60)",
+"script": "scripts/fetch_deribit_perps_open.py; scripts/fetch_deribit_h1.py",
+"recorded_utc": "2026-11-21T12:18:42Z",
 "excluded": [],
-"files": 305,
-"bytes": 16143218,
-"combined_sha256": "39d39215ebffd17670aff0a95e8be50127fdf338f05b5f6ba78411ba2ff3f2df",
+"files": 457,
+"bytes": 29495700,
+"combined_sha256": "34fb046ffe3bad696a9e7e47fdd525590d4903362477f5f56924a319d0d1f693",
 "subfolders": {
 "funding": {
 "files": 151,
@@ -19,10 +19,932 @@
 "prices": {
 "files": 151,
 "bytes": 1069807
+},
+"prices_1h": {
+"files": 152,
+"bytes": 13352482
 }
 },
-"hourly_coverage": {},
-"coverage": {},
+"hourly_coverage": {
+"prices_1h": {
+"files": 151,
+"bars": 850480,
+"files_with_holes": 0,
+"holes": 0,
+"first": 1646830800000,
+"last": 1795046400000
+}
+},
+"coverage": {
+"prices_1h": {
+"1000BONK": {
+"first": 1789477200000,
+"last": 1795046400000,
+"bars": 1548,
+"holes": 0
+},
+"1000MOG": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"1000PEPE": {
+"first": 1789041600000,
+"last": 1795046400000,
+"bars": 1669,
+"holes": 0
+},
+"1000SHIB": {
+"first": 1789056000000,
+"last": 1795046400000,
+"bars": 1665,
+"holes": 0
+},
+"AAOI": {
+"first": 1794506400000,
+"last": 1795046400000,
+"bars": 151,
+"holes": 0
+},
+"AAPL": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"AAVE": {
+"first": 1787115600000,
+"last": 1795046400000,
+"bars": 2204,
+"holes": 0
+},
+"ADA": {
+"first": 1647867600000,
+"last": 1795046400000,
+"bars": 40884,
+"holes": 0
+},
+"AERO": {
+"first": 1789747200000,
+"last": 1795046400000,
+"bars": 1473,
+"holes": 0
+},
+"ALGO": {
+"first": 1651154400000,
+"last": 1795046400000,
+"bars": 39971,
+"holes": 0
+},
+"ALT": {
+"first": 1790006400000,
+"last": 1795046400000,
+"bars": 1401,
+"holes": 0
+},
+"AMD": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"AMZN": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"ANT": {
+"first": 1794823200000,
+"last": 1795046400000,
+"bars": 63,
+"holes": 0
+},
+"APE": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"APT": {
+"first": 1789383600000,
+"last": 1795046400000,
+"bars": 1574,
+"holes": 0
+},
+"ARB": {
+"first": 1789380000000,
+"last": 1795046400000,
+"bars": 1575,
+"holes": 0
+},
+"ARM": {
+"first": 1789646400000,
+"last": 1795046400000,
+"bars": 1501,
+"holes": 0
+},
+"ASTER": {
+"first": 1787220000000,
+"last": 1795046400000,
+"bars": 2175,
+"holes": 0
+},
+"ATOM": {
+"first": 1789736400000,
+"last": 1795046400000,
+"bars": 1476,
+"holes": 0
+},
+"AVAX": {
+"first": 1647522000000,
+"last": 1795046400000,
+"bars": 40980,
+"holes": 0
+},
+"AVGO": {
+"first": 1791201600000,
+"last": 1795046400000,
+"bars": 1069,
+"holes": 0
+},
+"AVNT": {
+"first": 1789772400000,
+"last": 1795046400000,
+"bars": 1466,
+"holes": 0
+},
+"BASED1": {
+"first": 1789754400000,
+"last": 1795046400000,
+"bars": 1471,
+"holes": 0
+},
+"BCH": {
+"first": 1651150800000,
+"last": 1795046400000,
+"bars": 39972,
+"holes": 0
+},
+"BE": {
+"first": 1789646400000,
+"last": 1795046400000,
+"bars": 1501,
+"holes": 0
+},
+"BERA": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"BILL": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"BMNR": {
+"first": 1794492000000,
+"last": 1795046400000,
+"bars": 155,
+"holes": 0
+},
+"BNB": {
+"first": 1727780400000,
+"last": 1795046400000,
+"bars": 18686,
+"holes": 0
+},
+"BOME": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"BRENTOIL": {
+"first": 1789642800000,
+"last": 1795046400000,
+"bars": 1502,
+"holes": 0
+},
+"BTC": {
+"first": 1646830800000,
+"last": 1795046400000,
+"bars": 41172,
+"holes": 0
+},
+"CASHCAT": {
+"first": 1792058400000,
+"last": 1795046400000,
+"bars": 831,
+"holes": 0
+},
+"CBRS": {
+"first": 1789646400000,
+"last": 1795046400000,
+"bars": 1501,
+"holes": 0
+},
+"CFX": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"CHIP": {
+"first": 1789502400000,
+"last": 1795046400000,
+"bars": 1541,
+"holes": 0
+},
+"COIN50": {
+"first": 1789995600000,
+"last": 1795046400000,
+"bars": 1404,
+"holes": 0
+},
+"COMP": {
+"first": 1789815600000,
+"last": 1795046400000,
+"bars": 1454,
+"holes": 0
+},
+"CRCL": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"CRV": {
+"first": 1787220000000,
+"last": 1795046400000,
+"bars": 2175,
+"holes": 0
+},
+"CRWV": {
+"first": 1791975600000,
+"last": 1795046400000,
+"bars": 854,
+"holes": 0
+},
+"DASH": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"DELL": {
+"first": 1791982800000,
+"last": 1795046400000,
+"bars": 852,
+"holes": 0
+},
+"DOGE": {
+"first": 1651154400000,
+"last": 1795046400000,
+"bars": 39971,
+"holes": 0
+},
+"DOT": {
+"first": 1647954000000,
+"last": 1795046400000,
+"bars": 40860,
+"holes": 0
+},
+"DRAM": {
+"first": 1789653600000,
+"last": 1795046400000,
+"bars": 1499,
+"holes": 0
+},
+"DYDX": {
+"first": 1790082000000,
+"last": 1795046400000,
+"bars": 1380,
+"holes": 0
+},
+"EDGEX": {
+"first": 1789488000000,
+"last": 1795046400000,
+"bars": 1545,
+"holes": 0
+},
+"EIGEN": {
+"first": 1789729200000,
+"last": 1795046400000,
+"bars": 1478,
+"holes": 0
+},
+"ENA": {
+"first": 1786975200000,
+"last": 1795046400000,
+"bars": 2243,
+"holes": 0
+},
+"ETC": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"ETH": {
+"first": 1647262800000,
+"last": 1795046400000,
+"bars": 41052,
+"holes": 0
+},
+"ETHFI": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"EURC": {
+"first": 1790071200000,
+"last": 1795046400000,
+"bars": 1383,
+"holes": 0
+},
+"EWY": {
+"first": 1789675200000,
+"last": 1795046400000,
+"bars": 1493,
+"holes": 0
+},
+"FARTCOIN": {
+"first": 1787220000000,
+"last": 1795046400000,
+"bars": 2175,
+"holes": 0
+},
+"FET": {
+"first": 1789488000000,
+"last": 1795046400000,
+"bars": 1545,
+"holes": 0
+},
+"FIL": {
+"first": 1787230800000,
+"last": 1795046400000,
+"bars": 2172,
+"holes": 0
+},
+"GOLD": {
+"first": 1789642800000,
+"last": 1795046400000,
+"bars": 1502,
+"holes": 0
+},
+"GOOGL": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"GRAM": {
+"first": 1794585600000,
+"last": 1795046400000,
+"bars": 129,
+"holes": 0
+},
+"GRASS": {
+"first": 1794589200000,
+"last": 1795046400000,
+"bars": 128,
+"holes": 0
+},
+"HBAR": {
+"first": 1786975200000,
+"last": 1795046400000,
+"bars": 2243,
+"holes": 0
+},
+"HOOD": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"HYPE": {
+"first": 1781600400000,
+"last": 1795046400000,
+"bars": 3736,
+"holes": 0
+},
+"ICP": {
+"first": 1789491600000,
+"last": 1795046400000,
+"bars": 1544,
+"holes": 0
+},
+"INJ": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"INTC": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"INX": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"JASMY": {
+"first": 1790247600000,
+"last": 1795046400000,
+"bars": 1334,
+"holes": 0
+},
+"JTO": {
+"first": 1789747200000,
+"last": 1795046400000,
+"bars": 1473,
+"holes": 0
+},
+"JUP": {
+"first": 1789383600000,
+"last": 1795046400000,
+"bars": 1574,
+"holes": 0
+},
+"KORU": {
+"first": 1791198000000,
+"last": 1795046400000,
+"bars": 1070,
+"holes": 0
+},
+"LDO": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"LINK": {
+"first": 1651154400000,
+"last": 1795046400000,
+"bars": 39971,
+"holes": 0
+},
+"LIT": {
+"first": 1789491600000,
+"last": 1795046400000,
+"bars": 1544,
+"holes": 0
+},
+"LITE": {
+"first": 1789646400000,
+"last": 1795046400000,
+"bars": 1501,
+"holes": 0
+},
+"LTC": {
+"first": 1651150800000,
+"last": 1795046400000,
+"bars": 39972,
+"holes": 0
+},
+"MEGA": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"MERL": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"META": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"MON": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"MORPHO": {
+"first": 1789743600000,
+"last": 1795046400000,
+"bars": 1474,
+"holes": 0
+},
+"MRVL": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"MSFT": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"MSTR": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"MU": {
+"first": 1789650000000,
+"last": 1795046400000,
+"bars": 1500,
+"holes": 0
+},
+"NBIS": {
+"first": 1789642800000,
+"last": 1795046400000,
+"bars": 1502,
+"holes": 0
+},
+"NEAR": {
+"first": 1651150800000,
+"last": 1795046400000,
+"bars": 39972,
+"holes": 0
+},
+"NIGHT": {
+"first": 1789754400000,
+"last": 1795046400000,
+"bars": 1471,
+"holes": 0
+},
+"NVDA": {
+"first": 1789570800000,
+"last": 1795046400000,
+"bars": 1522,
+"holes": 0
+},
+"ONDO": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"OP": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"OPENAI": {
+"first": 1789988400000,
+"last": 1795046400000,
+"bars": 1406,
+"holes": 0
+},
+"OPG": {
+"first": 1790823600000,
+"last": 1795046400000,
+"bars": 1174,
+"holes": 0
+},
+"OPN": {
+"first": 1790053200000,
+"last": 1795046400000,
+"bars": 1388,
+"holes": 0
+},
+"ORCL": {
+"first": 1791982800000,
+"last": 1795046400000,
+"bars": 852,
+"holes": 0
+},
+"PAXG": {
+"first": 1733137200000,
+"last": 1795046400000,
+"bars": 17198,
+"holes": 0
+},
+"PEARL": {
+"first": 1794798000000,
+"last": 1795046400000,
+"bars": 70,
+"holes": 0
+},
+"PENDLE": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"PENGU": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"PLTR": {
+"first": 1791990000000,
+"last": 1795046400000,
+"bars": 850,
+"holes": 0
+},
+"PNUT": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"POL": {
+"first": 1790650800000,
+"last": 1795046400000,
+"bars": 1222,
+"holes": 0
+},
+"PONS": {
+"first": 1792083600000,
+"last": 1795046400000,
+"bars": 824,
+"holes": 0
+},
+"PRL": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"PUMP": {
+"first": 1787234400000,
+"last": 1795046400000,
+"bars": 2171,
+"holes": 0
+},
+"PYTH": {
+"first": 1789790400000,
+"last": 1795046400000,
+"bars": 1461,
+"holes": 0
+},
+"QNT": {
+"first": 1794585600000,
+"last": 1795046400000,
+"bars": 129,
+"holes": 0
+},
+"QQQ": {
+"first": 1789563600000,
+"last": 1795046400000,
+"bars": 1524,
+"holes": 0
+},
+"RENDER": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"RESOLV": {
+"first": 1790006400000,
+"last": 1795046400000,
+"bars": 1401,
+"holes": 0
+},
+"RKLB": {
+"first": 1794492000000,
+"last": 1795046400000,
+"bars": 155,
+"holes": 0
+},
+"ROBO": {
+"first": 1789480800000,
+"last": 1795046400000,
+"bars": 1547,
+"holes": 0
+},
+"RUNE": {
+"first": 1789833600000,
+"last": 1795046400000,
+"bars": 1449,
+"holes": 0
+},
+"S": {
+"first": 1789732800000,
+"last": 1795046400000,
+"bars": 1477,
+"holes": 0
+},
+"SAGA": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"SEI": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"SILVER": {
+"first": 1789642800000,
+"last": 1795046400000,
+"bars": 1502,
+"holes": 0
+},
+"SKHY": {
+"first": 1789650000000,
+"last": 1795046400000,
+"bars": 1500,
+"holes": 0
+},
+"SNDK": {
+"first": 1789650000000,
+"last": 1795046400000,
+"bars": 1500,
+"holes": 0
+},
+"SNXX": {
+"first": 1791975600000,
+"last": 1795046400000,
+"bars": 854,
+"holes": 0
+},
+"SOL": {
+"first": 1647349200000,
+"last": 1795046400000,
+"bars": 41028,
+"holes": 0
+},
+"SOXL": {
+"first": 1789650000000,
+"last": 1795046400000,
+"bars": 1500,
+"holes": 0
+},
+"SOXS": {
+"first": 1791979200000,
+"last": 1795046400000,
+"bars": 853,
+"holes": 0
+},
+"SPCX": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"SPY": {
+"first": 1789552800000,
+"last": 1795046400000,
+"bars": 1527,
+"holes": 0
+},
+"STRK": {
+"first": 1789754400000,
+"last": 1795046400000,
+"bars": 1471,
+"holes": 0
+},
+"SUI": {
+"first": 1787169600000,
+"last": 1795046400000,
+"bars": 2189,
+"holes": 0
+},
+"TAO": {
+"first": 1787151600000,
+"last": 1795046400000,
+"bars": 2194,
+"holes": 0
+},
+"TIA": {
+"first": 1789394400000,
+"last": 1795046400000,
+"bars": 1571,
+"holes": 0
+},
+"TOWNS": {
+"first": 1790334000000,
+"last": 1795046400000,
+"bars": 1310,
+"holes": 0
+},
+"TRUMP": {
+"first": 1737712800000,
+"last": 1795046400000,
+"bars": 15927,
+"holes": 0
+},
+"TRX": {
+"first": 1651154400000,
+"last": 1795046400000,
+"bars": 39971,
+"holes": 0
+},
+"TSLA": {
+"first": 1789567200000,
+"last": 1795046400000,
+"bars": 1523,
+"holes": 0
+},
+"TSM": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"UNI": {
+"first": 1651154400000,
+"last": 1795046400000,
+"bars": 39971,
+"holes": 0
+},
+"VIRTUAL": {
+"first": 1789574400000,
+"last": 1795046400000,
+"bars": 1521,
+"holes": 0
+},
+"VVV": {
+"first": 1789387200000,
+"last": 1795046400000,
+"bars": 1573,
+"holes": 0
+},
+"W": {
+"first": 1789513200000,
+"last": 1795046400000,
+"bars": 1538,
+"holes": 0
+},
+"WDC": {
+"first": 1794492000000,
+"last": 1795046400000,
+"bars": 155,
+"holes": 0
+},
+"WIF": {
+"first": 1787220000000,
+"last": 1795046400000,
+"bars": 2175,
+"holes": 0
+},
+"WLD": {
+"first": 1789041600000,
+"last": 1795046400000,
+"bars": 1669,
+"holes": 0
+},
+"WLFI": {
+"first": 1789470000000,
+"last": 1795046400000,
+"bars": 1550,
+"holes": 0
+},
+"WTIOIL": {
+"first": 1789642800000,
+"last": 1795046400000,
+"bars": 1502,
+"holes": 0
+},
+"XLM": {
+"first": 1787144400000,
+"last": 1795046400000,
+"bars": 2196,
+"holes": 0
+},
+"XPL": {
+"first": 1789383600000,
+"last": 1795046400000,
+"bars": 1574,
+"holes": 0
+},
+"XRP": {
+"first": 1647435600000,
+"last": 1795046400000,
+"bars": 41004,
+"holes": 0
+},
+"ZEC": {
+"first": 1787212800000,
+"last": 1795046400000,
+"bars": 2177,
+"holes": 0
+},
+"ZRO": {
+"first": 1794578400000,
+"last": 1795046400000,
+"bars": 131,
+"holes": 0
+}
+}
+},
 "file_hashes": [
 {
 "path": "funding/1000BONK.parquet",
@@ -1543,6 +2465,766 @@
 "path": "prices/ZRO.parquet",
 "bytes": 2383,
 "sha256": "1b43e316a5ed3b1dfd3cd92c227f58e2cd20ab1411ec09365a938c51519b9dc8"
+},
+{
+"path": "prices_1h/1000BONK.parquet",
+"bytes": 29783,
+"sha256": "9a8385d33e8415a3d49aa414917b4712e61cff006bfac1c163c48a1ca4ee385f"
+},
+{
+"path": "prices_1h/1000MOG.parquet",
+"bytes": 19614,
+"sha256": "50285076dde07b370712ebcb2e01168f9ebdaec6a891c1d7f978910ff411ebcf"
+},
+{
+"path": "prices_1h/1000PEPE.parquet",
+"bytes": 34454,
+"sha256": "cb9b21aac714847a6b12bda5087652cd500029eb4fcec71aa4791317cfc3f459"
+},
+{
+"path": "prices_1h/1000SHIB.parquet",
+"bytes": 32505,
+"sha256": "72d1ae931f7e9734d7a85538c84109b133c65717ed93a3cfab1e92b19864d94f"
+},
+{
+"path": "prices_1h/AAOI.parquet",
+"bytes": 4483,
+"sha256": "c87f6cfd73bbae9b27aff0f4f4d84ea015774e6f3f96ba0794ee55e9cbeb3277"
+},
+{
+"path": "prices_1h/AAPL.parquet",
+"bytes": 25965,
+"sha256": "9dc782bc9c3f8a54db560204652a1242145589a283e1516ebc82290d1e7e3bbd"
+},
+{
+"path": "prices_1h/AAVE.parquet",
+"bytes": 39831,
+"sha256": "fcc2f22ccc8740275013e3d0522c8edbd1ed96645730436104f1b30b3643f4f1"
+},
+{
+"path": "prices_1h/ADA.parquet",
+"bytes": 606171,
+"sha256": "9dc6f877a5e5bd6156a0e2b80ca2d067fd4795b139b9bb4df900a2e854d56e01"
+},
+{
+"path": "prices_1h/AERO.parquet",
+"bytes": 27632,
+"sha256": "7c0ed128100b30cae7530b379bce34ee4db3ac8d2443a02368ec4de558b849a0"
+},
+{
+"path": "prices_1h/ALGO.parquet",
+"bytes": 492287,
+"sha256": "9c732c5ea7d1c2cf01968fc6f9dac2f710d58bbfe583bd7657f8627aa27ebe16"
+},
+{
+"path": "prices_1h/ALT.parquet",
+"bytes": 23419,
+"sha256": "eacba20bed4f49dd64b63ae3473f03d6ab0968b62014bdecdde18c3ed45c2d9e"
+},
+{
+"path": "prices_1h/AMD.parquet",
+"bytes": 29252,
+"sha256": "5977084b055a4f73d3726cdc56454314ebfcf83e4f64b3470143c2fa884e65f3"
+},
+{
+"path": "prices_1h/AMZN.parquet",
+"bytes": 26749,
+"sha256": "391ec79f87528c6a7b93ce24b944464a6c6b760089503ba072a1780841cccfb6"
+},
+{
+"path": "prices_1h/ANT.parquet",
+"bytes": 3531,
+"sha256": "53932ac7048013421c8099df5f245ec51f87da5193924572777b375d687e5d73"
+},
+{
+"path": "prices_1h/APE.parquet",
+"bytes": 30872,
+"sha256": "89fc5471fee5bcf551afd597994031260083b6c18c2e5a237f82bcb88e4d4bff"
+},
+{
+"path": "prices_1h/APT.parquet",
+"bytes": 32197,
+"sha256": "23e04e4cad420082ab187e0d405f1cce2f0fba30e0fd1d01eb137ad2211076df"
+},
+{
+"path": "prices_1h/ARB.parquet",
+"bytes": 35033,
+"sha256": "2078cfdbe16ce85fe5b6fae3ee0a9436f4c51c76e1a937240b9a958ac9d3c880"
+},
+{
+"path": "prices_1h/ARM.parquet",
+"bytes": 29131,
+"sha256": "733257ea3877ed97b8a78c58e6c78d33b659b1caa8221955cc7039fc06abd19e"
+},
+{
+"path": "prices_1h/ASTER.parquet",
+"bytes": 38910,
+"sha256": "cbf4c2c7b51f231cb46ec3037ad3574b758be3f02a939bcfb3c720a60e139f7d"
+},
+{
+"path": "prices_1h/ATOM.parquet",
+"bytes": 26261,
+"sha256": "c5c9d6c702c58ac1af6e1ceafdfbefcd4c14a7097afa4df858845561255fc615"
+},
+{
+"path": "prices_1h/AVAX.parquet",
+"bytes": 597267,
+"sha256": "6814002939beab085b5cb954a39706be19ba199841b0df4cb67632012af93c46"
+},
+{
+"path": "prices_1h/AVGO.parquet",
+"bytes": 20163,
+"sha256": "d21ea9868d83b028ccff67f81f91287f857c4dfa97b6b871f51e901a1d4386e2"
+},
+{
+"path": "prices_1h/AVNT.parquet",
+"bytes": 23616,
+"sha256": "3af6f5351e9d2e6156973eda7b5627f980a8ca83fa38f9810e1872588190f64e"
+},
+{
+"path": "prices_1h/BASED1.parquet",
+"bytes": 18815,
+"sha256": "6956c2d3db71bf10f0506a29ef901db7504c960e28cd08ffec5b6d0f30a33a37"
+},
+{
+"path": "prices_1h/BCH.parquet",
+"bytes": 591602,
+"sha256": "a63ad156daf1d01d11f2cacbf8c9e0bf2459b958c6ee6c5a8e72aa5f689fda10"
+},
+{
+"path": "prices_1h/BE.parquet",
+"bytes": 27613,
+"sha256": "3f32d995e4f356a2f3e348a7a37c35d6f7b12c20dbe1f05de5daed6d190d61d5"
+},
+{
+"path": "prices_1h/BERA.parquet",
+"bytes": 32259,
+"sha256": "7c148b334a474984cf4c403431156cc7f032458187f215b6e7088b14398c0a74"
+},
+{
+"path": "prices_1h/BILL.parquet",
+"bytes": 31358,
+"sha256": "02254bda8b051a8df3b4aa9682783b37ed3ae1c061d2e7545012456bb5a3b3ba"
+},
+{
+"path": "prices_1h/BMNR.parquet",
+"bytes": 4619,
+"sha256": "66c8efeea3c3653cfa9f9fd83f51194c80eefd1e27be41bbbd2eb75ff7b89eff"
+},
+{
+"path": "prices_1h/BNB.parquet",
+"bytes": 287257,
+"sha256": "c8c402f621f3d557148b9899addde3e7a64b942fe539211d9a252bdb520e68e9"
+},
+{
+"path": "prices_1h/BOME.parquet",
+"bytes": 23821,
+"sha256": "a904404f4fdc14d50d81b8182ea791236ef5760bc7c9e9bd656de0ae6aafed2a"
+},
+{
+"path": "prices_1h/BRENTOIL.parquet",
+"bytes": 29161,
+"sha256": "386611ed7a7b311f6aab006e01302ec05b9e302e18dcba8a958b22e2160672cf"
+},
+{
+"path": "prices_1h/BTC.parquet",
+"bytes": 768801,
+"sha256": "2963372ae4f762520564bf63ea488ecec13d7c98f0331f5493e06805074ecfd9"
+},
+{
+"path": "prices_1h/CASHCAT.parquet",
+"bytes": 17129,
+"sha256": "2aa1ef1358e0c0f564bcc31660e87c7313c2b6695ef3ddbfa702566c759c885c"
+},
+{
+"path": "prices_1h/CBRS.parquet",
+"bytes": 28164,
+"sha256": "53d56ff1132f153e0f8975a495b92ec13b73c247c6e45e6c345178e83eed41fe"
+},
+{
+"path": "prices_1h/CFX.parquet",
+"bytes": 20661,
+"sha256": "8ee09a1ccae7aa5f206bd10937f308e83c7e4fc44330d722890e220b885cc775"
+},
+{
+"path": "prices_1h/CHIP.parquet",
+"bytes": 31054,
+"sha256": "50a5b1ade6280da8b5657af9e31e613af486a17a31c40e7d031cbe636d5c48b8"
+},
+{
+"path": "prices_1h/COIN50.parquet",
+"bytes": 23749,
+"sha256": "91f687d643cdd8b39984a36f25eaf6d4cd32747eca08b334669cf858f19d8619"
+},
+{
+"path": "prices_1h/COMP.parquet",
+"bytes": 20645,
+"sha256": "44fb1696efe8db9f5f40861b701058954afe6fb04b74dd54fda0a36537a6214b"
+},
+{
+"path": "prices_1h/CRCL.parquet",
+"bytes": 29249,
+"sha256": "629946e5c5919850c9ee1db16755a470b0738d80d19fd64106c4e0264ccf947d"
+},
+{
+"path": "prices_1h/CRV.parquet",
+"bytes": 39030,
+"sha256": "d072b8c685c2a4fee56147cd5f87ee88a2ab65a2d51e6f4f5f00303ea7b13bf4"
+},
+{
+"path": "prices_1h/CRWV.parquet",
+"bytes": 17134,
+"sha256": "0cf33fd318c9ab889412862c605fbbb8f1797aa2e412e0fe61d0bdccab444dc6"
+},
+{
+"path": "prices_1h/DASH.parquet",
+"bytes": 25401,
+"sha256": "c07588ea74e19bd5932d87fd495001720753c1d45bde3a80c21785f8a5216ac2"
+},
+{
+"path": "prices_1h/DELL.parquet",
+"bytes": 17189,
+"sha256": "71f681579638fa1cbf632d16b4342d7965107cc528f81123e82ff86555314c54"
+},
+{
+"path": "prices_1h/DOGE.parquet",
+"bytes": 607390,
+"sha256": "dfcff960e8a0ffee94a21fd29d409bfb00ce3648f92b77d6a5808cddadfdb29b"
+},
+{
+"path": "prices_1h/DOT.parquet",
+"bytes": 565595,
+"sha256": "7208f505b97a67b96aba5a6a3aee1c9227d9c324abc3cd276267cd516cb3a7d1"
+},
+{
+"path": "prices_1h/DRAM.parquet",
+"bytes": 26742,
+"sha256": "949c52ac58590397630b4c5664b769a137a7054f2ae9493062ce14f371232646"
+},
+{
+"path": "prices_1h/DYDX.parquet",
+"bytes": 22675,
+"sha256": "d0b8839ba0682952e7dd33508587ca34e428be4020178d336926fd3d1d3776d4"
+},
+{
+"path": "prices_1h/EDGEX.parquet",
+"bytes": 21047,
+"sha256": "492819d421612ef10b435799870397e39526bf1dd2daaea311893ef524f4eb7a"
+},
+{
+"path": "prices_1h/EIGEN.parquet",
+"bytes": 27184,
+"sha256": "e25bcba003708ec021d0c281c575be0733f0c5fba44a4a5f04fad9210f7a99fa"
+},
+{
+"path": "prices_1h/ENA.parquet",
+"bytes": 50595,
+"sha256": "e2f6be9ab1f8895c9ef07d86f646df5b627e950165abc415e44ff390c33b2904"
+},
+{
+"path": "prices_1h/ETC.parquet",
+"bytes": 23045,
+"sha256": "d27a22d3bbaba4a5ca11082327a5a9a59a944ba5b2b8db3ccef3818636508061"
+},
+{
+"path": "prices_1h/ETH.parquet",
+"bytes": 733347,
+"sha256": "d9e71e71257de1091b3ba4f86ce2bb37c62cead2b0822c67a81c04fc983723f4"
+},
+{
+"path": "prices_1h/ETHFI.parquet",
+"bytes": 29292,
+"sha256": "6386f70a5eec36ff58ecb1821ee137603c965d857bb1273feda8e728044690c2"
+},
+{
+"path": "prices_1h/EURC.parquet",
+"bytes": 21709,
+"sha256": "b8605a15fa2a3a480456daf7251aab37b0e7410ab68f040dfc7c837c5d0ad9bb"
+},
+{
+"path": "prices_1h/EWY.parquet",
+"bytes": 25678,
+"sha256": "63401f686e744fc00390b275e1bf06d0af509a82be92e51b2a0f7ccba704efdc"
+},
+{
+"path": "prices_1h/FARTCOIN.parquet",
+"bytes": 45492,
+"sha256": "7353a83464104422e21dea7769ed515e73fe1ebe7f2cb4199948a8c2ea144365"
+},
+{
+"path": "prices_1h/FET.parquet",
+"bytes": 35343,
+"sha256": "3669a808677105a6808db37461e01aee91e1f1d395a96bfb93ab3863a469dd23"
+},
+{
+"path": "prices_1h/FIL.parquet",
+"bytes": 37944,
+"sha256": "3e37dc870d73570c6c8dcd332805a844ea671b69c84688b5d2f1573c81f09d1e"
+},
+{
+"path": "prices_1h/GOLD.parquet",
+"bytes": 30076,
+"sha256": "16b80f41254821bfa691ce4e3417709268fa02aee35729d5db9126a65bfe3226"
+},
+{
+"path": "prices_1h/GOOGL.parquet",
+"bytes": 27596,
+"sha256": "a776338841594c9169b9dd8ab7200321552af57bc6b580c701532cfc24bbff14"
+},
+{
+"path": "prices_1h/GRAM.parquet",
+"bytes": 4093,
+"sha256": "283745328a33f0df9a3d8f73aceee8345f59deb4cbf829f740ccf5f7cd1b2d45"
+},
+{
+"path": "prices_1h/GRASS.parquet",
+"bytes": 3675,
+"sha256": "06a3d8a8c22c85ff31efab18c60b7e50645623779dc7296bdca43340d478fc85"
+},
+{
+"path": "prices_1h/HBAR.parquet",
+"bytes": 44934,
+"sha256": "5ea6d178bc191418f6bf307e825881cd72741c10a48d3d5b0a496d002b2819dd"
+},
+{
+"path": "prices_1h/HOOD.parquet",
+"bytes": 29113,
+"sha256": "a3c463b8fc04c155aea0cc90582fc09ed281b6627a8915d1fde4b8b39b9270e7"
+},
+{
+"path": "prices_1h/HYPE.parquet",
+"bytes": 77875,
+"sha256": "edd9b93b9165ce8106ce1686f77e12517ede74680c655f6f77b08798ff768f6f"
+},
+{
+"path": "prices_1h/ICP.parquet",
+"bytes": 25467,
+"sha256": "42a2f4f64e7f701d0a98e0cdcedacc42f324723a8609b12d91a5e09a2326eec6"
+},
+{
+"path": "prices_1h/INJ.parquet",
+"bytes": 28609,
+"sha256": "a3bbc210afee515f0454966e28c51bb8ba91102be9ea67f14995077714dd5565"
+},
+{
+"path": "prices_1h/INTC.parquet",
+"bytes": 29683,
+"sha256": "aa6a08e4ff1829cbf7d0a8c8cc594fee455024e7af036c9e5730d35b2d6b71d1"
+},
+{
+"path": "prices_1h/INX.parquet",
+"bytes": 27687,
+"sha256": "458fc8cbc502c3dff94264428e422798626243d760d05be5f74df73c3e47dd6a"
+},
+{
+"path": "prices_1h/JASMY.parquet",
+"bytes": 19417,
+"sha256": "0126c9a630d0f1488c134fe1c88ad6cb7b7af9609de2b66c10bbf37371bbb0e5"
+},
+{
+"path": "prices_1h/JTO.parquet",
+"bytes": 25273,
+"sha256": "893f05889f0ec69eefd7a46fe7766970568276015a068d30bdab5dd285f53718"
+},
+{
+"path": "prices_1h/JUP.parquet",
+"bytes": 29656,
+"sha256": "7168e653dec909c2c81282466f9652e7910ac99a945a819cf923919a0b5cc98b"
+},
+{
+"path": "prices_1h/KORU.parquet",
+"bytes": 21462,
+"sha256": "a3e70db1a87e2286584f48785fb79b69a098a596345d38d45860aba466d27e50"
+},
+{
+"path": "prices_1h/LDO.parquet",
+"bytes": 26482,
+"sha256": "cdc0154c03dc00a7ac794bd07f00683c70981fcd77ee734e4f83be4c6d72e2ac"
+},
+{
+"path": "prices_1h/LINK.parquet",
+"bytes": 530884,
+"sha256": "7daf97bcfed96e97ea06899df7c8dd9b91b51bea085f9105a4f26fed391e16f3"
+},
+{
+"path": "prices_1h/LIT.parquet",
+"bytes": 34018,
+"sha256": "10a1cdddf73181451b395b2de3f9d7008d172a10d08b1072de798ac2845fe076"
+},
+{
+"path": "prices_1h/LITE.parquet",
+"bytes": 28369,
+"sha256": "b1ba4cf14c872f454e78c612ed67d088b56b8ac56fd37d28cbf99bb9ed6891e3"
+},
+{
+"path": "prices_1h/LTC.parquet",
+"bytes": 522496,
+"sha256": "77ab2f1802337fa45e30af3d394def81a4693c6cc1eebc9a2d6adc5d88b9a930"
+},
+{
+"path": "prices_1h/MEGA.parquet",
+"bytes": 24785,
+"sha256": "12943eaac69586e6ab7f6409b4e1c56d15d84aa400a529070a89c3cc66b10fb0"
+},
+{
+"path": "prices_1h/MERL.parquet",
+"bytes": 34192,
+"sha256": "f16662221d3551c05b432df81b152e68352150e8964261aacc26b22fd7abc9fd"
+},
+{
+"path": "prices_1h/META.parquet",
+"bytes": 29403,
+"sha256": "4ba2f60366942aa03acb86ac64f4353715ce77428bfa0dc098e33bb2ffda26e1"
+},
+{
+"path": "prices_1h/MON.parquet",
+"bytes": 36290,
+"sha256": "296aededd5c27abe95f3f1ffde996f0a7ae684d7bd4e5866ed65a7618f34516b"
+},
+{
+"path": "prices_1h/MORPHO.parquet",
+"bytes": 23866,
+"sha256": "7c50799b008ae9fb3b63e7c342556ad261feee3f2c9df26b0d88b6c4bd48d2c9"
+},
+{
+"path": "prices_1h/MRVL.parquet",
+"bytes": 29424,
+"sha256": "3e6bd2fc0f7c2bdbf3f07825ac3a868989db504a9fc2997d7cf21e0702dffec6"
+},
+{
+"path": "prices_1h/MSFT.parquet",
+"bytes": 26656,
+"sha256": "635af837c7bb928ceeffd1c8a6f73449b303a815a20686d5bd22339d120bc93e"
+},
+{
+"path": "prices_1h/MSTR.parquet",
+"bytes": 29998,
+"sha256": "b912a65f39e2b980973f59901553e7228b8664ecf794e00d1e59965bd134c5b1"
+},
+{
+"path": "prices_1h/MU.parquet",
+"bytes": 30148,
+"sha256": "1f50259e288b4fef542db3c28610bc98f43c58d21cbe7b792d70e55eadd3cc3b"
+},
+{
+"path": "prices_1h/NBIS.parquet",
+"bytes": 29950,
+"sha256": "fd374f50e2e7fce5eedbcf367b2390e855d67f25a85134390512e997e1c083eb"
+},
+{
+"path": "prices_1h/NEAR.parquet",
+"bytes": 530087,
+"sha256": "11c1b1a53f614dadd9f8a20740cac06ac405881c24269c067358f8417f5fabf8"
+},
+{
+"path": "prices_1h/NIGHT.parquet",
+"bytes": 25707,
+"sha256": "ceb2f9ea6437c1ea519cc1b549f5e19d8d9130f6805a7eef264c186c9d84a067"
+},
+{
+"path": "prices_1h/NVDA.parquet",
+"bytes": 30211,
+"sha256": "8ce642253396b98b1d550e95ecc054dd96db21fe77c3bf6a862dfefdfbc36a43"
+},
+{
+"path": "prices_1h/ONDO.parquet",
+"bytes": 31352,
+"sha256": "601df873ae0fc7c05a65dce53b45f83c9d8221ea9162cb302f338baba59d5b95"
+},
+{
+"path": "prices_1h/OP.parquet",
+"bytes": 32272,
+"sha256": "f209160506fd2b5c9ab163188964685e66f34ed86d2825d0dec26556ad6b3840"
+},
+{
+"path": "prices_1h/OPENAI.parquet",
+"bytes": 23664,
+"sha256": "2eb6918ffd26ceb40c5cbeec7f0145bd27a9885f10396abdb35eb324493eecbc"
+},
+{
+"path": "prices_1h/OPG.parquet",
+"bytes": 18449,
+"sha256": "d532847d44453500dab4e7c838125eaf81116d8c98cb75677bd325d76f7cd180"
+},
+{
+"path": "prices_1h/OPN.parquet",
+"bytes": 19338,
+"sha256": "181ef1641994579e717d8a7fe66377fe16e5376368089881326c1b10d59d9425"
+},
+{
+"path": "prices_1h/ORCL.parquet",
+"bytes": 16584,
+"sha256": "815d3a5a31677ca8432052556fa67a8d3bbb0e43b5d2630fb6b26be4098225ce"
+},
+{
+"path": "prices_1h/PAXG.parquet",
+"bytes": 265847,
+"sha256": "1e4a34f3f41f7810370138269e1bb263c02a33ce3c9ca721952446155199b1b4"
+},
+{
+"path": "prices_1h/PEARL.parquet",
+"bytes": 3395,
+"sha256": "795c417fbee43e31227557295a901b10799fdefe75f90ea04c2df789b4d386d3"
+},
+{
+"path": "prices_1h/PENDLE.parquet",
+"bytes": 25075,
+"sha256": "18e71af55058915cc39c88ff765d582dee997569b67ca5b3b6d569c1a2967ace"
+},
+{
+"path": "prices_1h/PENGU.parquet",
+"bytes": 29432,
+"sha256": "649e2b514ea5b2d0af2d7a199eb49a2893f51e9f82030273dd07b59938b99a52"
+},
+{
+"path": "prices_1h/PLTR.parquet",
+"bytes": 16370,
+"sha256": "fe4239f99010d2ef0227687884bd30d3cebd0f09877116a1464b178dc9c75a3c"
+},
+{
+"path": "prices_1h/PNUT.parquet",
+"bytes": 24977,
+"sha256": "2ce8d87c33a515ed2b0388c1abaa7bd9e1a143d9d813f57eafbc364bba6f9307"
+},
+{
+"path": "prices_1h/POL.parquet",
+"bytes": 22857,
+"sha256": "b0d4be6588ef52e4e46f8d95a7ee173b963946ec80ff8ef8e499bdebe9068de3"
+},
+{
+"path": "prices_1h/PONS.parquet",
+"bytes": 16672,
+"sha256": "9a660193cf15b24f055cbd51db7e3e4c04094ee31e8ed313debeebde68b4eeb7"
+},
+{
+"path": "prices_1h/PRL.parquet",
+"bytes": 21420,
+"sha256": "6048245c4fd3ac674004c3e4db01ca92b3ec0cfd6ca47a5c86a45531c2e557e1"
+},
+{
+"path": "prices_1h/PUMP.parquet",
+"bytes": 45322,
+"sha256": "c680ef0750d6b30c850939f6bcd69fef2c46f9f148a820c72b188cdca8aab202"
+},
+{
+"path": "prices_1h/PYTH.parquet",
+"bytes": 25759,
+"sha256": "180ac479e24ca36cf2551e3c01dbba0dcab37262762ed367e1441c2aaff08f89"
+},
+{
+"path": "prices_1h/QNT.parquet",
+"bytes": 4033,
+"sha256": "1dcebb1b2dcd99358222497bf53baf19927bda59155a36060ca9e33f22b77c9d"
+},
+{
+"path": "prices_1h/QQQ.parquet",
+"bytes": 29380,
+"sha256": "678a2f32e415c29682e62003c9ba11fa332c35661ae1d0fe52a32d0788d7738f"
+},
+{
+"path": "prices_1h/RENDER.parquet",
+"bytes": 32458,
+"sha256": "2a5921ef154c3a59984e1e42b2f4780c32ee086923494f82e1faa812aac9fc21"
+},
+{
+"path": "prices_1h/RESOLV.parquet",
+"bytes": 21760,
+"sha256": "55b43231c7fe712ae32335ceafa7979a630d9419aaa0bd61be6b68e190fb65ff"
+},
+{
+"path": "prices_1h/RKLB.parquet",
+"bytes": 4646,
+"sha256": "72ec27c130af6ccf04531eccfb29e18dd0614c13409b71a230504993896ce2d7"
+},
+{
+"path": "prices_1h/ROBO.parquet",
+"bytes": 22417,
+"sha256": "2e3f37124b134ce19502c88c18900e5aca9c48f19921c7d857e438ab618fd25c"
+},
+{
+"path": "prices_1h/RUNE.parquet",
+"bytes": 20733,
+"sha256": "9da385b4c666536a2d3e3195c996d93ee6d7df138a6d010f792b78e0270518e3"
+},
+{
+"path": "prices_1h/S.parquet",
+"bytes": 26764,
+"sha256": "763e3484cbc15af5bda7d7e72efbfcc110ef2d69104faf80822f5cce94250393"
+},
+{
+"path": "prices_1h/SAGA.parquet",
+"bytes": 21613,
+"sha256": "11e4341ef65afd52d84c3eb736b65120716d0e48f1a7106350549b04fbe6e953"
+},
+{
+"path": "prices_1h/SEI.parquet",
+"bytes": 25394,
+"sha256": "f7e032b8b2d31962135545b2475ae77bf6b2ba02ec586a2039079df06cc13740"
+},
+{
+"path": "prices_1h/SILVER.parquet",
+"bytes": 28408,
+"sha256": "5d100b1d874701dd714f9e36c582fc88001c157fb7f095fad59ce2ac3c326b86"
+},
+{
+"path": "prices_1h/SKHY.parquet",
+"bytes": 29787,
+"sha256": "b5ffaf657bf72cbb66d1f6403cb95455bb1f966bcfffacd09f8a6ca385b874a5"
+},
+{
+"path": "prices_1h/SNDK.parquet",
+"bytes": 31563,
+"sha256": "39e8394f99f9072c128a1364888db4ef71abf7872ea094fc16dae535e63166c0"
+},
+{
+"path": "prices_1h/SNXX.parquet",
+"bytes": 17031,
+"sha256": "30fcae21b801bb925a279e81963b8fcdd90e20a48234526051b3c2f4c9d0e4d8"
+},
+{
+"path": "prices_1h/SOL.parquet",
+"bytes": 713767,
+"sha256": "fb575da12cd9a187344727d090793d33a67e21c79bef78c896092f26de728dcf"
+},
+{
+"path": "prices_1h/SOXL.parquet",
+"bytes": 31676,
+"sha256": "8d2fd77565fc1a1acd4e0949cd1ff9dd0272de746f0b06c3a142f44222c1a2ee"
+},
+{
+"path": "prices_1h/SOXS.parquet",
+"bytes": 17648,
+"sha256": "2ba4bd3263ecb5fb607f006201ff7d300905f21402de8b3f502ee11921aa0c9b"
+},
+{
+"path": "prices_1h/SPCX.parquet",
+"bytes": 32445,
+"sha256": "cd729b9dfc8606e7887ce1ab8801326ca7ac6ef28ce208d64110a32d0947b0ee"
+},
+{
+"path": "prices_1h/SPY.parquet",
+"bytes": 28125,
+"sha256": "8645b257e7004899f777eb56450721c5e4c3cc87929b1bf67638c1a45783323a"
+},
+{
+"path": "prices_1h/STRK.parquet",
+"bytes": 31530,
+"sha256": "770854724675eac25bac42732ebfdff9770f30b85c84fea3eba130adefc2bfc1"
+},
+{
+"path": "prices_1h/SUI.parquet",
+"bytes": 44587,
+"sha256": "572d2d5469d267ea4d630b7740a28b8ef9273e15de76ec14aefff42285135b13"
+},
+{
+"path": "prices_1h/TAO.parquet",
+"bytes": 43000,
+"sha256": "609c501e64ca29414fc5934473f1e08766668e8bd5dd8e0dff2306a582d7616d"
+},
+{
+"path": "prices_1h/TIA.parquet",
+"bytes": 30176,
+"sha256": "8daad2192c56b8b4a6786fe4cf87285dd5ef3a0dd9ff0b95ff74aeaf7f97a3b8"
+},
+{
+"path": "prices_1h/TOWNS.parquet",
+"bytes": 17035,
+"sha256": "763cef55a3c6a34ac4a619b2dffe4e7ebc9ea3d7368020341f88a47d79872171"
+},
+{
+"path": "prices_1h/TRUMP.parquet",
+"bytes": 258620,
+"sha256": "b98933938b65ceaf1d3223d000250fede4fa8b25761299c27fd4d7d9cc18ef42"
+},
+{
+"path": "prices_1h/TRX.parquet",
+"bytes": 528337,
+"sha256": "5345390170da2b2f14254b8b4c43c91c3a5a1be02aa0c8c7ebd061dcb6ed9f32"
+},
+{
+"path": "prices_1h/TSLA.parquet",
+"bytes": 27434,
+"sha256": "4124ac2592381c11bf99a625008f3ad51361ffb98b1c710d497fa931ade34390"
+},
+{
+"path": "prices_1h/TSM.parquet",
+"bytes": 27960,
+"sha256": "beb424a9fc935f9ec487bd65ecca796b1c141bd2bc75e3588935ca3fae7a88ff"
+},
+{
+"path": "prices_1h/UNI.parquet",
+"bytes": 519634,
+"sha256": "467e233a9e822d3cb636c7a23a2af3d33af219c6c521290aea069eab6e965256"
+},
+{
+"path": "prices_1h/VIRTUAL.parquet",
+"bytes": 26984,
+"sha256": "f49d8427d1fde0ee73179e47d39ef2095c6ad2ba3c7e9afd76dadf992da974a7"
+},
+{
+"path": "prices_1h/VVV.parquet",
+"bytes": 32920,
+"sha256": "d53391c7c58da9dc898dc79d5fc665a7555ac8aa9a2102e51f4bea44fcb29044"
+},
+{
+"path": "prices_1h/W.parquet",
+"bytes": 28773,
+"sha256": "9e718ea2e27b8a60a254f9fc8e662de4fd5c28ee648cdc2851e8c56c9398055d"
+},
+{
+"path": "prices_1h/WDC.parquet",
+"bytes": 4472,
+"sha256": "ba756cf4f91722d5e03686dd3324f6c7a1a334f78ab1dfb4b52e2463a0e2da07"
+},
+{
+"path": "prices_1h/WIF.parquet",
+"bytes": 41839,
+"sha256": "b29241a1ffc3203032dbacc7a3dfdc1f4bdbf61f3ae36fca9ef88e89b9cdd0c6"
+},
+{
+"path": "prices_1h/WLD.parquet",
+"bytes": 36906,
+"sha256": "3f7fc97880a7476cfc479e9467a9679f6b6a2e34c0cba16beff8737f7115798a"
+},
+{
+"path": "prices_1h/WLFI.parquet",
+"bytes": 22653,
+"sha256": "5198c72cef1e5e6bf71be28e89554b0a69365d123c4735cf55b617a59fbf0d52"
+},
+{
+"path": "prices_1h/WTIOIL.parquet",
+"bytes": 29157,
+"sha256": "196cfbfea4451951477aca1202e0c4bb20f5a7dd563ddb9726c3c7e6585d8c9b"
+},
+{
+"path": "prices_1h/XLM.parquet",
+"bytes": 46498,
+"sha256": "f5210455c9ef43b56f6fbb22a8016973268fc9d4d517bb106d47c557f74b24c2"
+},
+{
+"path": "prices_1h/XPL.parquet",
+"bytes": 30733,
+"sha256": "11fd11b8040d0d1477384fc3215ac0b7ccacb75537d53d32ba8e6b35e99addcb"
+},
+{
+"path": "prices_1h/XRP.parquet",
+"bytes": 647171,
+"sha256": "6887ebaf28975e811e7bddaec1e964abf87d21caf9971b8c9f3dfc5cc0ef1297"
+},
+{
+"path": "prices_1h/ZEC.parquet",
+"bytes": 45226,
+"sha256": "ae34e0d6528469e86222cb234bddb18d9bed8cf75353e40c64f588ea05a47e3c"
+},
+{
+"path": "prices_1h/ZRO.parquet",
+"bytes": 4847,
+"sha256": "b1dbc71670dc21cafc135de9938437b7dd5856cdbc357feda2afdafc0ba4120c"
+},
+{
+"path": "prices_1h/manifest.json",
+"bytes": 13060,
+"sha256": "4e32e0df67da6f45eeaaeece00005aa20e3f5bebb2cc9f2dd363a724394108f5"
 },
 {
 "path": "skipped_not_open.json",

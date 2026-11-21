@@ -34,6 +34,8 @@ not to add process.
    - Before the freeze, count the supply of chances per year, not only in total.
    - Before the freeze, write the break-even: expected edge per trade against cost per trade. If it is thin, fit
      the rule to the edge or skip the trial.
+   - For a design gap, the sign comes from the design (long the floorless venue), never from a short window. Check
+     where each venue's day starts before trusting a loader.
    - Then freeze, run once, and read the by-year table before the headline.
    - Report costs at 1x/2x/3x, and compare with cash.
    - A null goes in with the same care as a hit.

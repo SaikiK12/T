@@ -11,6 +11,24 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L011 · 2026-11-21 · The owner asked for a faille: the gap is real on liquid coins, and I locked the wrong sign
+- **Choose.** The binding constraint: R508's faille has little capacity.
+  - Lens: "follow the plumbing", scanning venues' funding rules.
+  - **dYdX** is floorless on its cross markets, but nearly dead ($18.7M a day; median market $1.3k).
+  - **Drift** added a 10.95% floor.
+  - **Deribit** has a ±0.025%/8 h dead zone and no interest term.
+- **Make.** R519 was frozen with the break-even written. Two plumbing bugs came up before any result: a "not open"
+  perp, and Deribit's day starting at 08:00 UTC.
+  - **The decided static book failed.** Its 30-day entry window chose the sign in June 2023, when Deribit's premia were
+    high, and held the wrong side for 3.4 years.
+  - **The reported R275 book passed every check:** +4.5%/yr, t 7.0, 49 coins.
+- **Surprise.** Applying L009 ("fit the rule to the edge"), I fixed the holding but not the sign. A design asymmetry
+  gives its own sign.
+- **What I do differently:**
+  - when the edge is a design gap, hard-code its direction;
+  - before freezing a loader, check where each venue's day starts.
+- **Instruction changed.** Step 4 of `CLAUDE.md` is extended: fit the rule to the edge, including its sign.
+
 ## L010 · 2026-11-21 · A check-in: read what a label means before calling a day late
 - **What happened.** The 00:31 UTC clock dispatch decided 2026-11-21 on time for R509 and R512 (01:18-01:19 UTC).
   The day row labelled 2026-11-21 still says `late`.
