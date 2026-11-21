@@ -26,7 +26,7 @@ line is the first line of the script's own docstring.
 - [`fetch_deribit_h1.py`](fetch_deribit_h1.py): R519 fix: Deribit hourly candles for the perps in data/deribit_perps, so that daily closes sit at 00:00 UTC like Hyperliquid's (Deribit's 1D bars run 08:00 to 08:00 UTC).
 - [`fetch_deribit_perps.py`](fetch_deribit_perps.py): Inputs for R519 deribitgap_v1: Deribit's linear USDC perpetuals, funding history and daily candles.
 - [`fetch_deribit_perps_open.py`](fetch_deribit_perps_open.py): R519's fetch, run through the frozen `fetch_deribit_perps` functions, skipping instruments that Deribit's funding endpoint calls "not open".
-- [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Every Deribit BTC and ETH option trade, from Deribit's public history server, reduced to signed hourly flow per option plus every block trade kept whole (docs/AUCTION_AND_FLOW.md).
+- [`fetch_deribit_trades.py`](fetch_deribit_trades.py): Inputs for R522 dmake_v1: every trade of Deribit's linear USDC perps created 2026-08-01..10-31 whose base is on Hyperliquid, from each instrument's creation to --end.
 - [`fetch_edgar_earnings.py`](fetch_edgar_earnings.py): Earnings-release filings (8-K with Item 2.02, "Results of Operations and Financial Condition") from SEC EDGAR, timed by EDGAR's acceptance time, for the US single stocks that have a MEXC TradFi ...
 - [`fetch_equation_history.py`](fetch_equation_history.py): Bounded public input restoration for equations_v1.
 - [`fetch_extra.py`](fetch_extra.py): Small public histories for lanes outside the Binance archive: Deribit's hourly implied-volatility index (DVOL, BTC and ETH, from 2021-03), Coinbase hourly spot candles (BTC-USD, ETH-USD, USDT-USD) ...
@@ -154,7 +154,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (233)
+## Run: one lane's frozen measurement (234)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -213,6 +213,7 @@ line is the first line of the script's own docstring.
 - [`run_deribit_gap_h1.py`](run_deribit_gap_h1.py): R519's read with Deribit prices from hourly bars (closes at 00:00 UTC), everything else from the frozen `run_deribit_gap.py`. See experiments/deribitgap_v1/DEVIATIONS.md.
 - [`run_dexvault.py`](run_dexvault.py): dexvault_v1 (R446, M505): a deposit in each of two public liquidity vaults on perp DEXes that do not exclude France, Hyperliquid's HLP and Lighter's LLP, read as a return on capital against the 4% ...
 - [`run_dispgate.py`](run_dispgate.py): dispgate_v1 (R260): flow books A, B and X2 at half size on days when 30-day cross-sectional dispersion is in its top tercile and the alt index's 90-day return is negative (docs/SIZING_EVIDENCE.md ...
+- [`run_dmake.py`](run_dmake.py): R522 dmake_v1: make on Deribit's thin new perps, hedge on Hyperliquid.
 - [`run_dow.py`](run_dow.py): dow_v1 (R254): day-of-week books on SPY, world indices, the US dollar, BTC and crypto.
 - [`run_dvolbeta.py`](run_dvolbeta.py): R385 dvolbeta_v1 (M456, the sort half): each coin's trailing 90-day return beta to daily Deribit DVOL changes as a cross-sectional sort on the top-150 Binance perps, held 7 days, as set out in ...
 - [`run_dvolvrp.py`](run_dvolvrp.py): R411 dvolvrp_v1 (M477, item 41): Deribit's 30-day implied volatility index (DVOL) against the realized volatility of the next 30 days, BTC and ETH, as set out in experiments/dvolvrp_v1/PREREG.md.

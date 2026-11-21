@@ -31,12 +31,12 @@
 | [Graphiques, niveaux et tendances](#charts) | 24 | 0 | 2 | 21 | 0 | 1 |
 | [Week-ends, sessions et calendrier](#calendar) | 20 | 0 | 4 | 9 | 5 | 2 |
 | [Options, volatilité et signaux de marché](#options) | 16 | 0 | 0 | 14 | 0 | 2 |
-| [Très court terme (secondes, minutes)](#micro) | 12 | 0 | 1 | 7 | 0 | 4 |
+| [Très court terme (secondes, minutes)](#micro) | 13 | 0 | 1 | 7 | 1 | 4 |
 | [Coffres et pools des plateformes décentralisées](#vaults) | 11 | 0 | 1 | 4 | 6 | 0 |
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **300** | **13** | **47** | **126** | **62** | **52** |
+| **Total** | **301** | **13** | **47** | **126** | **63** | **52** |
 
 <a id="carry"></a>
 
@@ -359,6 +359,7 @@ Aller plus vite que le carnet d'ordres. Presque tout est nul : le délai de cett
 | R431 | [`rawlead_v1`](../../experiments/rawlead_v1) | M430+M431 gate 0: does a taker on Binance's USDC perp book, triggered when the USDT book moves >= 2 bp away,… | nul |
 | R433 | [`lighter_flow_v1`](../../experiments/lighter_flow_v1) | M441 gate 1 on unread tape: do Lighter commodity-perp taker accounts' signed markouts persist from train days… | nul |
 | R434 | [`wti_residual_v1`](../../experiments/wti_residual_v1) | M443 gate 0: cross-venue residual on 24/7 commodity perps (WTI/Brent/natgas/gold on Lighter, Hyperliquid xyz,… | nul |
+| R522 | [`dmake_v1`](../../experiments/dmake_v1) | M561 gate 0: make on Deribit's thin new linear perps (67 coins created 2026-08..10, also on Hyperliquid), hed… | en cours |
 
 <a id="vaults"></a>
 
