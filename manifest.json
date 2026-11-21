@@ -3008,12 +3008,12 @@
       "sha256": "8787ffb565b794159a7ba49e356c6b6430e1d3b789200b29d045a6baedfbfa48"
     },
     "data/operations/quant_quote_scope_v1/dispatch.jsonl": {
-      "mtime_ns": 1795295403192931744,
-      "sha256": "322b506328612ea573f1150646dd1649b960662d8eceb6df17996fbebfa81c0e"
+      "mtime_ns": 1795295409407547510,
+      "sha256": "0e281bbc49787f7bcb02ff574d59157ed35d8f779e27e97573f5af88b3fb8362"
     },
     "data/operations/quant_quote_scope_v1/latest.json": {
-      "mtime_ns": 1795275500424299810,
-      "sha256": "d3ee1412c457316f757ae4b4293a872cca474b8d341b0d0f1dd8a97f5bd31611"
+      "mtime_ns": 1795295409407547510,
+      "sha256": "138ad27794b8c89feae0f67c577e02365b98cf1e453613c82a75642796ca74cd"
     },
     "data/operations/quant_quote_scope_v1/migrations/gha_42495486811_1.json": {
       "mtime_ns": 1794152086005433044,
@@ -8135,6 +8135,10 @@
       "mtime_ns": 1795275494476637411,
       "sha256": "716a78b1513eccb0bd4093d5dfe24689edc747325fb231563e84f3487ea6dd3e"
     },
+    "data/operations/quant_quote_scope_v1/runs/20261121T21/report.json": {
+      "mtime_ns": 1795295409407300250,
+      "sha256": "138ad27794b8c89feae0f67c577e02365b98cf1e453613c82a75642796ca74cd"
+    },
     "data/operations/quant_quote_scope_v1/runs/20261121T21/reservation.json": {
       "mtime_ns": 1795295403192931744,
       "sha256": "256fa0b207779be572424efc73fac22761f41d3462d4e7cfa0471bf8bbad1ab0"
@@ -12916,7 +12920,7 @@
       "sha256": "6b69b291234f2c13d3a7e528b1586ae150270fedc8cf058c8105f2cbbe0001f2"
     }
   },
-  "last_report": "data/operations/quant_quote_scope_v1/runs/20261121T21/reservation.json",
+  "last_report": "data/operations/quant_quote_scope_v1/latest.json",
   "meaning": "R429 selected; same native paper rules, scoped DTB3 data and all original limits",
   "owner": "github-actions",
   "participant_prereg_sha256": "634cc63e3fac021a2dc142304021789c127ab916718a0c6da70e78a3e36067b5",
@@ -12927,5 +12931,5 @@
   "schema": 1,
   "seed_commit": "8af66710ae3d7cb4a4a04aac32dfeb3b00b46456",
   "source_code_commit": "878fddbb65159616014f3b9bbd6ca5076259cd70",
-  "updated_utc": "2026-11-21T21:10:03.980179+00:00"
+  "updated_utc": "2026-11-21T21:10:11.259901+00:00"
 }
