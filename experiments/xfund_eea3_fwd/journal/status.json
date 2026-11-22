@@ -1,21 +1,15 @@
 {
  "lane": "xfund_eea3_fwd",
  "rid": "R512",
- "updated": "2026-11-21T01:20:26.057418+00:00",
+ "updated": "2026-11-22T01:20:16.187159+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
-  "hyperliquid": 0.99,
-  "aster": 1.015
+  "hyperliquid": 0.98,
+  "aster": 1.0
  },
  "data": {
   "kraken": {
-   "files": 132,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "aster": {
    "files": 132,
    "failed": 0,
    "changed_on_overlap": 0,
@@ -26,9 +20,15 @@
    "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "JTO",
-    "JUP"
+    "OP",
+    "ORDI"
    ]
+  },
+  "aster": {
+   "files": 132,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -159,16 +159,16 @@
     "spread_in": 0.8676
    }
   ],
-  "scored_days": 1,
+  "scored_days": 2,
   "late_days": 1,
-  "total": -0.0015399559,
-  "total_2x": -0.0022399559,
-  "total_3x": -0.0029399559,
-  "total_close": -0.0009099559,
+  "total": -0.0010095895000000001,
+  "total_2x": -0.0017795895,
+  "total_3x": -0.0025495895000000003,
+  "total_close": -0.0003207616,
   "nw_t": null,
   "max_drawdown": -0.0015399559,
   "replay_days": 29,
   "replay_total": 0.007991831399999998
  },
- "last_day": "2026-11-21"
+ "last_day": "2026-11-22"
 }

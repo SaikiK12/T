@@ -1,27 +1,15 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-21T00:40:40.361209+00:00",
+ "updated": "2026-11-22T00:40:45.868755+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 1.002,
-  "hyperliquid": 0.989,
+  "binance": 0.997,
+  "gate": 0.9,
+  "hyperliquid": 0.994,
   "mexc": 1.0
  },
  "data": {
-  "mexc": {
-   "files": 520,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -32,14 +20,25 @@
     "SXPUSDT"
    ]
   },
+  "mexc": {
+   "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "hyperliquid": {
    "files": 216,
-   "failed": 2,
+   "failed": 1,
    "changed_on_overlap": 0,
    "failed_some": [
-    "SKY",
-    "SOPH"
+    "SAGA"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -170,13 +169,13 @@
     "spread_in": 0.2903
    }
   ],
-  "scored_days": 30,
+  "scored_days": 31,
   "late_days": 16,
-  "total": -0.0007630642,
-  "total_2x": -0.0027230641999999995,
-  "total_3x": -0.0046830642000000025,
-  "total_close": -0.0001618048999999998,
-  "nw_t": -0.23545197182367894,
+  "total": -0.0003100049,
+  "total_2x": -0.0023400048999999996,
+  "total_3x": -0.004370004900000003,
+  "total_close": 0.0003370730000000002,
+  "nw_t": -0.09748590449431628,
   "max_drawdown": -0.005410314100000001,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -243,13 +242,13 @@
     "spread_in": 0.1089
    }
   ],
-  "scored_days": 30,
+  "scored_days": 31,
   "late_days": 16,
-  "total": 0.007974198499999998,
-  "total_2x": 0.0070991985,
-  "total_3x": 0.006224198500000001,
-  "total_close": 0.008323826799999998,
-  "nw_t": 1.534569033337734,
+  "total": 0.008147620099999997,
+  "total_2x": 0.0072726201,
+  "total_3x": 0.006397620100000001,
+  "total_close": 0.008497248399999997,
+  "nw_t": 1.5649491132863242,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -382,16 +381,16 @@
     "spread_in": 0.3946
    }
   ],
-  "scored_days": 30,
+  "scored_days": 31,
   "late_days": 16,
-  "total": 0.0013447181000000002,
-  "total_2x": -0.0021552818999999988,
-  "total_3x": -0.0056552819,
-  "total_close": 0.001980915799999999,
-  "nw_t": 0.32890656204110036,
+  "total": 0.0020101453,
+  "total_2x": -0.0014898546999999988,
+  "total_3x": -0.0049898547,
+  "total_close": 0.002646342999999999,
+  "nw_t": 0.509944892450152,
   "max_drawdown": -0.0059386307,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-21"
+ "last_day": "2026-11-22"
 }

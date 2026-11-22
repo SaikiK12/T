@@ -1,24 +1,31 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-21T01:18:42.489899+00:00",
+ "updated": "2026-11-22T01:18:05.617565+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.0,
-  "gate": 1.002,
-  "hyperliquid": 0.994,
+  "binance": 0.997,
+  "gate": 0.9,
+  "hyperliquid": 0.989,
   "mexc": 1.0,
   "kucoin": 1.0
  },
  "data": {
   "hyperliquid": {
    "files": 216,
-   "failed": 2,
+   "failed": 3,
    "changed_on_overlap": 0,
    "failed_some": [
-    "SOPH",
-    "STRAX"
+    "IOTA",
+    "IP",
+    "STRK"
    ]
+  },
+  "mexc": {
+   "files": 520,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   },
   "kucoin": {
    "files": 633,
@@ -28,12 +35,6 @@
   },
   "gate": {
    "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "mexc": {
-   "files": 520,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -177,16 +178,16 @@
     "spread_in": 0.7742
    }
   ],
-  "scored_days": 10,
+  "scored_days": 11,
   "late_days": 1,
-  "total": 0.0042654647,
-  "total_2x": 0.0030754646999999998,
-  "total_3x": 0.0018854647000000006,
-  "total_close": 0.0021328040000000003,
-  "nw_t": 1.8009388563708943,
+  "total": 0.0046288772,
+  "total_2x": 0.0034388772,
+  "total_3x": 0.0022488772000000008,
+  "total_close": 0.0024962165000000005,
+  "nw_t": 1.946989883940435,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-21"
+ "last_day": "2026-11-22"
 }
