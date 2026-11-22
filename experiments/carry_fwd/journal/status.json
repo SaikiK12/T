@@ -1,13 +1,13 @@
 {
- "last_scored_hour": "2026-11-21T22:00:00+00:00",
- "days_ticketed": 51,
+ "last_scored_hour": "2026-11-21T23:00:00+00:00",
+ "days_ticketed": 52,
  "BIN": {
   "coverage": {
-   "symbols": 76,
+   "symbols": 77,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.31215590861760256,
+  "market_mean_apr_now": -0.3170414334612085,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 32,
+   "days": 33,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -66,10 +66,10 @@
  },
  "MEXC": {
   "coverage": {
-   "symbols": 76,
-   "with_spot_pair": 44,
-   "mapped": 45,
-   "spot_taker_mean": 0.0005909090909090908
+   "symbols": 77,
+   "with_spot_pair": 45,
+   "mapped": 46,
+   "spot_taker_mean": 0.0005955555555555556
   },
   "held_now": [
    {
@@ -81,7 +81,7 @@
     "apr": 0.17288833432151782
    }
   ],
-  "market_mean_apr_now": -0.8750788039453926,
+  "market_mean_apr_now": -0.8874250733714913,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -139,25 +139,25 @@
    }
   },
   "ontime": {
-   "days": 32,
-   "days_invested": 24,
-   "total": 0.002624573374963474,
-   "total_2x": 0.0008245733951736507,
-   "total_3x": -0.000975426584616565,
-   "total_spot5": 0.0031245733749634343,
-   "total_r191_timing": 0.004277553232644622,
-   "funding": 0.004132600002320794,
-   "basis": 0.00029197335243200074,
+   "days": 33,
+   "days_invested": 25,
+   "total": 0.0034468662267714742,
+   "total_2x": 0.0016468662469816507,
+   "total_3x": -0.00015313373280856498,
+   "total_spot5": 0.003946866226771434,
+   "total_r191_timing": 0.005099846084452622,
+   "funding": 0.004377300004397294,
+   "basis": 0.0008695662021634007,
    "cost": 0.00179999997979,
-   "avg_open": 1.3502604166666665,
-   "ann": 0.029936540058177127,
-   "sharpe": 2.9544982855240334,
-   "t_nw": 0.6391682479133174,
+   "avg_open": 1.3699494949494948,
+   "ann": 0.03812442947792691,
+   "sharpe": 3.711366016343759,
+   "t_nw": 0.8380792939363171,
    "max_dd": 0.0027393937607531,
    "go_real_invested": {
-    "n": 24,
-    "mean": 0.00010935722395681145,
-    "hit": 0.5833333333333334,
+    "n": 25,
+    "mean": 0.00013787464907085898,
+    "hit": 0.6,
     "worst": -0.0010449266377487,
     "invalid_n": 0,
     "n_clusters": null,
