@@ -12,7 +12,7 @@ name: xyz book-cost recorder (Claude)
 #   for measured-cost reads of R455 and later Lighter lanes.
 # Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
 # the branch. GitHub drops or delays some scheduled runs, so scheduled runs also fire at :27 and :47; a scheduled
-# run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour, as before).
+# run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour).
 # claude-clock.yml also dispatches it at :07 and :35 each hour with if_due (the same check); a plain dispatch records.
 on:
   schedule:

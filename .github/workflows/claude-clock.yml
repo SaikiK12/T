@@ -1,6 +1,5 @@
 name: Clock for time-bound paper runs (Claude)
-# GitHub starts this repository's scheduled runs 40 to 90 minutes late and drops some: no run of
-# claude-flow-paper.yml or claude-xyz-books.yml started from 08:53 to 09:56 UTC on 2026-11-11, while a
+# GitHub starts this repository's scheduled runs 40 to 90 minutes late and drops some, while a
 # workflow_dispatch starts within seconds. R200 must compute each hour within 60 minutes of its close for R448, R451,
 # R453 and R458 to count a day, and R371's daemon must be up before 10:00 New York. This job keeps one runner awake
 # for about 5 h 45 min and dispatches, on the clock:
