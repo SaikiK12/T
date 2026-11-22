@@ -1,6 +1,6 @@
 # Relevé du compte papier (R415)
 
-Mis à jour : 2026-11-22T01:21Z. Capital de départ : 10 000 $ fictifs, ouvert le 2026-11-07.
+Mis à jour : 2026-11-22T02:32Z. Capital de départ : 10 000 $ fictifs, ouvert le 2026-11-07.
 Aucun ordre réel. Chaque poche reprend le résultat papier net des lanes, à leurs coûts mesurés.
 
 ## Solde officiel (jours définitifs)
@@ -12,9 +12,9 @@ Aucun ordre réel. Chaque poche reprend le résultat papier net des lanes, à le
 
 ## Solde provisoire (jours récents, peut changer)
 
-- Au 2026-11-21 : **9,927.24 $** (-0.73 %), sur 15 jours.
-- Avec des frais doublés : 9,913.37 $ ; triplés : 9,899.54 $.
+- Au 2026-11-21 : **9,916.25 $** (-0.84 %), sur 15 jours.
+- Avec des frais doublés : 9,901.55 $ ; triplés : 9,886.90 $.
 - Pire baisse depuis un sommet : -3.15 %. Meilleur jour +152.88 $, pire jour -234.81 $.
-- Poches : carry 3,338.46 $, flow 3,255.45 $, events 3,333.33 $.
+- Poches : carry 3,338.46 $, flow 3,244.46 $, events 3,333.33 $.
 
 Prochaine lecture : à 180 jours officiels.

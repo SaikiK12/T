@@ -1,11 +1,11 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-22T01:21:13.221661+00:00",
+ "updated": "2026-11-22T02:32:17.352727+00:00",
  "waiting": true,
  "ready": {
   "deribit": 0.759,
-  "hyperliquid": 0.978
+  "hyperliquid": 1.0
  },
  "data": {
   "deribit": {
@@ -16,12 +16,9 @@
   },
   "hyperliquid": {
    "files": 89,
-   "failed": 2,
+   "failed": 0,
    "changed_on_overlap": 0,
-   "failed_some": [
-    "FIL",
-    "GRAM"
-   ]
+   "failed_some": []
   }
  }
 }
