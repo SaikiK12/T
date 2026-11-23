@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-23 | [reels_20261123.md](reels_20261123.md) | Owner reels: an NQ order-flow day-trading funnel (caption only; tested families R349/R211/R226 NULL; R522 explains whale prints on thin books) and one post that would not open. No test |
 | 2026-11-21 | [points_value_20261121.md](points_value_20261121.md) | What venue points programs paid per dollar of volume (Hyperliquid about 3 bp, Lighter 1 bp or less, at launch prices; order of magnitude): noise for a carry book, a rebate for a make-and-hedge book (Bet 3 joins Bet 2) |
 | 2026-11-20 | [venue_yield_20261120.md](venue_yield_20261120.md) | Collateral yield and incentives on the owner's venues, read by Claude directly (M475, family V1): Hyperliquid portfolio margin pays 2.65%/yr on idle USDC (live, formula checked) above a $10k account; Aster USDF trading rewards need $50k weekly volume |
 | 2026-11-20 | [reading_round_20261120.md](reading_round_20261120.md) | First round by the protocol: four Haiku readers at 85-89k tokens each (about 55% less than 2026-11-19); fills on thin books, funding persistence (no measured half-life found), venue failure base rates, EU retail rules (2:1 crypto cap checked on ESMA's site) |
@@ -68,6 +69,7 @@ no login or workaround is used. The owner can paste the caption or the account n
 
 | Sent or read | Reel or video | Read in | Verdict |
 |---|---|---|---|
+| 2026-11-23 | [Df-njzUqrZn](https://www.instagram.com/reel/Df-njzUqrZn/) (@trademello) and [DgApQfVO-dy](https://www.instagram.com/reel/DgApQfVO-dy/) | [reels_20261123.md](reels_20261123.md) | Caption read for the first (an NQ order-flow funnel, grade D, no test); the second would not open |
 | 2026-10-19 to 11-03 | About twenty Instagram reels | [`docs/REELS_TRANSCRIPT.md`](../../docs/REELS_TRANSCRIPT.md) | Each one is mapped to the queue there; several led to lanes (for example R306, R307, M320) |
 | 2026-10-21 to 10-29 | The owner's TikToks | [`docs/VIDEO_DIG.md`](../../docs/VIDEO_DIG.md) | Led to R283 and R284, among others |
 | 2026-10-29 | `DZvAMYZA1ae`, `DdTNtTLNSLU` (IV Walls, TradeX ORB) | [reels_tradingview_batch_20261029.json](reels_tradingview_batch_20261029.json) | Source refinements only; no test |
