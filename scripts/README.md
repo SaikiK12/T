@@ -116,7 +116,7 @@ line is the first line of the script's own docstring.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
 - [`scrape_leaderboards.py`](scrape_leaderboards.py): Daily snapshots of public copy-trading leaderboards (Binance, OKX) for a forward persistence test (docs/CLAIMS.md C02, C21, C22).
 
-## Forward: paper lanes and the loops that run them (36)
+## Forward: paper lanes and the loops that run them (37)
 
 - [`archive_recordings.sh`](archive_recordings.sh): Pack the live recordings into the `data-archive` branch and push it (the owner chose this place on 2026-10-29).
 - [`forward_all.sh`](forward_all.sh): Compatibility entry point: task graph/locks/timeouts live in lab/operations.py.
@@ -145,6 +145,7 @@ line is the first line of the script's own docstring.
 - [`forward_xbook.py`](forward_xbook.py): xbook_fwd (R285): the cross-family forward book (M281), as set out in experiments/xbook_fwd/PREREG.md.
 - [`forward_xfund.py`](forward_xfund.py): xfund_fwd (R278): R275's cross-venue funding carry books forward on paper, as set out in experiments/xfund_fwd/PREREG.md.
 - [`forward_xfund5.py`](forward_xfund5.py): xfund5_fwd (R440): R439's five-venue carry book forward on paper, as set out in experiments/xfund5_fwd/PREREG.md.
+- [`forward_xfund_bfx.py`](forward_xfund_bfx.py): xfund_bfx_fwd (R524): R507's carry book on Binance + Bitfinex (L14d th5% K20) forward on paper, as set out in experiments/xfund_bfx_fwd/PREREG.md.
 - [`forward_xfund_bg.py`](forward_xfund_bg.py): xfund_bg_fwd (R390): the binance+gate cross-venue carry book that passed reserved batch 1 (R286 C14), forward on paper, as set out in experiments/xfund_bg_fwd/PREREG.md.
 - [`forward_xfund_dhl.py`](forward_xfund_dhl.py): xfund_dhl_fwd (R520): R275's carry book on Deribit + Hyperliquid (L14d th5% K20) forward on paper, as set out in experiments/xfund_dhl_fwd/PREREG.md.
 - [`forward_xfund_eea.py`](forward_xfund_eea.py): xfund_eea_fwd (R509): R508's carry book (Kraken + Hyperliquid, L14d th5% K20) forward on paper, as set out in experiments/xfund_eea_fwd/PREREG.md.
@@ -452,7 +453,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (115)
+## Tools and everything else (116)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -538,6 +539,7 @@ line is the first line of the script's own docstring.
 - [`quant_runtime_v4.py`](quant_runtime_v4.py): R429 selected paper runtime with the same native 400-day DTB3 view and inherited limits.
 - [`read_combined_gap_fast.py`](read_combined_gap_fast.py): Combined fast read of two independent design-gap forward lanes (R523), as experiments/gap_combo_fast/PREREG.md decides: R509 (Kraken + Hyperliquid) and R520 (Deribit + Hyperliquid), equal weight ...
 - [`read_source.py`](read_source.py): Cheap, targeted reading of long sources (books, papers, docs): locate the pages that matter, then read only those.
+- [`read_xfund_bfx_fwd.py`](read_xfund_bfx_fwd.py): Read of xfund_bfx_fwd (R524), as its PREREG decides.
 - [`read_xfund_dhl_fast.py`](read_xfund_dhl_fast.py): Fast read of R520's journal (R521 xfund_dhl_fast), as experiments/xfund_dhl_fast/PREREG.md decides.
 - [`read_xfund_dhl_fwd.py`](read_xfund_dhl_fwd.py): Read of xfund_dhl_fwd (R520), as its PREREG decides.
 - [`read_xfund_eea3_fwd.py`](read_xfund_eea3_fwd.py): Read of xfund_eea3_fwd (R512), as its PREREG decides: the daily net with measured book costs, monitored every scored day by lab.anytime's HAC mixture rule.

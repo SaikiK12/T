@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (64)
+## Running or armed registered rounds (65)
 
+- **[xfund_bfx_fwd](xfund_bfx_fwd/)** R524, RUNNING PENDING, 1 trial. M552 forward paper: R507's carry book (L14d th5% K20) on Binance + Bitfinex (69 coins) from 2026-11-25, measured book costs; fund_book looks at 90/180 scored days (NW t >= 2.5 with cumulative net > 0), kill switch -3% ([PREREG](xfund_bfx_fwd/PREREG.md))
 - **[gap_combo_fast](gap_combo_fast/)** R523, RUNNING PENDING, 1 trial. M560+M553 combined fast read: R509 (Kraken+HL) and R520 (Deribit+HL) at equal weight on common scored days; NW t (lag 5) of fund_book >= 3.0 with cumulative net_book > 0 at 20 or 30 common days; FAIL on mean <= 0 or a lane's -3% kill switch ([PREREG](gap_combo_fast/PREREG.md))
 - **[dmake_v1](dmake_v1/)** R522, RUNNING PENDING, 5 trials. M561 gate 0: make on Deribit's thin new linear perps (67 coins created 2026-08..10, also on Hyperliquid), hedge at once on Hyperliquid; quotes at index(t-2s) ± 15 bp, fill on trade-through, 1 fill/side/min, cap ±10 units; costs 1.5 bp maker + 6.5 bp hedge; from full trade history ([PREREG](dmake_v1/PREREG.md), [FINDINGS](dmake_v1/FINDINGS.md))
 - **[xfund_dhl_fast](xfund_dhl_fast/)** R521, RUNNING PENDING, 1 trial. M560 fast read of R520 (Deribit + Hyperliquid): fund_book (funding net of measured costs) NW t >= 2.5 with cumulative net_book > 0 at 30 or 45 scored days; FAIL on mean <= 0 or R520's kill switch ([PREREG](xfund_dhl_fast/PREREG.md))
