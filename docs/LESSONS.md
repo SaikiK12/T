@@ -11,6 +11,21 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L015 · 2026-11-23 · Readiness rules built for liquid venues misread thin ones; and a restart loop can eat a day
+- **What happened.**
+  - **A restart loop.** The worker restarted for about 38 hours, so 20 scheduled cycles queued and none ran. The
+    forward lanes kept running on GitHub. They live outside this container, and that is why they survived.
+  - **R520's first scored Sunday was late.** Carrylane's readiness ratio (fresh coins today over yesterday, at least
+    0.9) fell to 0.759 on Deribit's thin perps on a quiet day.
+- **Surprise.** I checked bar times (L011), but not how "fresh" behaves when coins can go a day without a trade.
+- **What I do differently.**
+  - For a new venue, run the lane's readiness and freshness rules on a week of its real data before the freeze, and
+    note weekend behaviour.
+  - Keep every lane that must not stop on GitHub, not in this container.
+- **Instruction changed:** none yet. The first half joins L011's loader check if it happens again.
+- **Owner reels 2026-11-23:** caption-only (Instagram answered 429). An order-flow funnel on families already NULL;
+  no test.
+
 ## L014 · 2026-11-21 · A conservative fill rule can be the most adverse-selected one
 - **Choose.** Lens "invert". Bet 2: make on thin books, hedge on the liquid venue.
 - **Make.** R522 was frozen before the data, with the break-even written (adverse selection under about 7 bp). It
