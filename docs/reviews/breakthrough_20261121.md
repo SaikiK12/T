@@ -153,6 +153,12 @@ PREREG and FINDINGS stay the authority for its own numbers.
      - Kraken's +31%/yr: split it into floor, premium extremes and price legs, and by coin liquidity.
      - A one-day decision delay as a lookahead check.
      - Reproduce R507 and R508 exactly under R525's engine before trusting the new pairs.
+     - **Done 2026-11-23:**
+       - the delay check (11 of 12 pairs keep 82-105%);
+       - the tail, priced by R526: two entry filters remove it at no cost;
+       - Kraken decomposed: funding is 113-122% of gross, price legs lose; 96% of gross is on coins under $100k a
+         day; without the top 5 coins, +10-22%/yr.
+       - R507 and R508 differ under the new engine for known reasons (marks and notional at entry).
   1. **Forward sleeves, one per floorless venue,** each R275's book across all held floor venues:
      - kraken + binance + gate + kucoin + hyperliquid;
      - deribit + the same four;
