@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 59 | 8 | 5 | 5 | 26 | 15 |
+| [Portage de financement crypto entre plateformes](#carry) | 60 | 8 | 5 | 5 | 27 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **301** | **13** | **47** | **126** | **63** | **52** |
+| **Total** | **302** | **13** | **47** | **126** | **64** | **52** |
 
 <a id="carry"></a>
 
@@ -105,6 +105,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R519 | [`deribitgap_v1`](../../experiments/deribitgap_v1) | M560 gate 0: static design-gap carry, long Deribit linear USDC perps (no interest term, ±0.025%/8h dead zone)… | en cours |
 | R520 | [`xfund_dhl_fwd`](../../experiments/xfund_dhl_fwd) | M560 gate 2 forward paper: R275's carry book (L14d th5% K20) on Deribit + Hyperliquid (89 coins) from 2026-11… | en cours |
 | R521 | [`xfund_dhl_fast`](../../experiments/xfund_dhl_fast) | M560 fast read of R520 (Deribit + Hyperliquid): fund_book (funding net of measured costs) NW t >= 2.5 with cu… | en cours |
+| R523 | [`gap_combo_fast`](../../experiments/gap_combo_fast) | M560+M553 combined fast read: R509 (Kraken+HL) and R520 (Deribit+HL) at equal weight on common scored days; N… | en cours |
 
 <a id="carry-tradfi"></a>
 

@@ -451,7 +451,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (114)
+## Tools and everything else (115)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -535,6 +535,7 @@ line is the first line of the script's own docstring.
 - [`quant_runtime_v2.py`](quant_runtime_v2.py): R422 priority paper runtime; immutable R420 state primitives, new frozen adapter.
 - [`quant_runtime_v3.py`](quant_runtime_v3.py): R428 serialized participant-source composition; preserve old paper journals, budgets and windows.
 - [`quant_runtime_v4.py`](quant_runtime_v4.py): R429 selected paper runtime with the same native 400-day DTB3 view and inherited limits.
+- [`read_combined_gap_fast.py`](read_combined_gap_fast.py): Combined fast read of two independent design-gap forward lanes (R523), as experiments/gap_combo_fast/PREREG.md decides: R509 (Kraken + Hyperliquid) and R520 (Deribit + Hyperliquid), equal weight ...
 - [`read_source.py`](read_source.py): Cheap, targeted reading of long sources (books, papers, docs): locate the pages that matter, then read only those.
 - [`read_xfund_dhl_fast.py`](read_xfund_dhl_fast.py): Fast read of R520's journal (R521 xfund_dhl_fast), as experiments/xfund_dhl_fast/PREREG.md decides.
 - [`read_xfund_dhl_fwd.py`](read_xfund_dhl_fwd.py): Read of xfund_dhl_fwd (R520), as its PREREG decides.

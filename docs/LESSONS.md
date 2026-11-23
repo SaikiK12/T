@@ -11,6 +11,20 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L018 · 2026-11-23 · Breadth also buys time: a combined read is due a week before either lane's
+- **Choose.**
+  - Lens: "the owner's reach". Money arrives sooner if evidence does.
+  - The binding constraint: time to evidence.
+- **Make.** R523 reads R509 and R520 together (independent pairs; funding-net correlation −0.04 in sample).
+  - Calibrated before the freeze at threshold 3.0: power 0.78 at 20 common days and 0.92 at 30, against about 0.8 at
+    20 days for either lane alone at the looser 2.5. Size 0.046 / 0.038.
+  - Look 1 falls about 2026-12-13, a week before R510.
+- **Surprise.** At 2.5 the combined read over-rejected (size 0.06-0.08) on short windows. NW with lag 5 on 20-30
+  autocorrelated days is liberal. Checking size on demeaned history caught it.
+- **What I do differently.** Calibrate every early-look threshold for size on demeaned history, not only for power.
+- **Instruction changed:** none yet. With L012's power check, this is the same family ("do the arithmetic before the
+  freeze"), so it joins that line if it recurs.
+
 ## L017 · 2026-11-23 · The owner's "higher than strategies" was right, in a measurable form
 - **Question.** Are frameworks better than strategies?
 - **Answer, measured.** The four design-gap books are almost uncorrelated, so equal weight lifts Sharpe to 8.5 and
