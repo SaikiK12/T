@@ -137,3 +137,22 @@ PREREG and FINDINGS stay the authority for its own numbers.
   - It is a lower bound: touch-level fills need book data.
   - Bet 2 drops below Bet 1. A Kraken queue reconstruction from order events is the one open way to test it, and it is
     lower priority than proving and levering the design gap.
+
+## Addendum, 2026-11-23: the breakthrough widened (R525), and the next order of work
+- **R525: PASS.** All 12 floorless × floor pairs pay after 3x costs. Their equal-weight portfolio earned +7.8%/yr
+  at Sharpe 5.5 with a −0.73% max drawdown over 2021-2026, every year positive
+  ([FINDINGS](../../experiments/gap_breadth_v1/FINDINGS.md)).
+- **Forward evidence running:**
+  - R509 and R512: Kraken + Hyperliquid (+ Aster);
+  - R520: Deribit + Hyperliquid, with R521 (fast) and R523 (combined) reading it;
+  - R524: Bitfinex + Binance, warm-up on GitHub done 2026-11-23, scored from 11-25.
+- **Next, in order** (standing rule 1: never wait while these run):
+  1. **Forward sleeves, one per floorless venue,** each R275's book across all held floor venues:
+     - kraken + binance + gate + kucoin + hyperliquid;
+     - deribit + the same four;
+     - bitfinex + the same four.
+     The widest pair is chosen per coin, as in R439. Each sleeve gets a new id, its own cache and the margin plan.
+  2. **A combined portfolio read** over all forward sleeves, under a new id. It is calibrated for size on demeaned
+     history before its freeze (L018).
+  3. **Money:** the owner's accounts on the floorless venues (Kraken, Deribit, Bitfinex) and one or two floor venues;
+     `lab/margin.py` sizing at about 2.5x with daily rebalancing; `go_real()` only after a PASS.
