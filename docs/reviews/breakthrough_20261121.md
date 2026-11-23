@@ -147,6 +147,12 @@ PREREG and FINDINGS stay the authority for its own numbers.
   - R520: Deribit + Hyperliquid, with R521 (fast) and R523 (combined) reading it;
   - R524: Bitfinex + Binance, warm-up on GitHub done 2026-11-23, scored from 11-25.
 - **Next, in order** (standing rule 1: never wait while these run):
+  0. **A Millikan audit of R525** (Feynman: hunt bugs in a pleasing result as hard as in a failing one).
+     - Funding timestamp conventions per venue (period start or end), and whether a decision at day d can collect
+       funding settled before d.
+     - Kraken's +31%/yr: split it into floor, premium extremes and price legs, and by coin liquidity.
+     - A one-day decision delay as a lookahead check.
+     - Reproduce R507 and R508 exactly under R525's engine before trusting the new pairs.
   1. **Forward sleeves, one per floorless venue,** each R275's book across all held floor venues:
      - kraken + binance + gate + kucoin + hyperliquid;
      - deribit + the same four;

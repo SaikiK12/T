@@ -37,6 +37,18 @@ not to add process.
    increment.
 10. **Self-improve for real.** When the owner corrects me, the correction becomes a rule here in the same turn.
 
+## Principles from the masters (passages in [docs/METHOD_LIBRARY.md](docs/METHOD_LIBRARY.md))
+- **Feynman: "You must not fool yourself, and you are the easiest person to fool."**
+  - Hunt bugs as hard when a result pleases as when it fails (Millikan's oil drop).
+  - Every FINDINGS lists what could invalidate it.
+  - Reproduce the baseline before testing a variation.
+- **Hamming: work on the important problem that has an attack, and solve the class, not the instance.**
+  - Keep the lab's three to five important problems and their attacks in the review the open step reads.
+  - Believe enough to act, doubt enough to audit.
+- **López de Prado: "backtesting is not a research tool."**
+  - Explain why an edge pays (decompose by source, coin, venue, regime) before running another backtest.
+  - Treat the lab as stations, each with a measured quality: data, mechanism, test, costs, portfolio, money.
+
 ## The chain: five steps, every session
 1. **Open (five minutes, not a corpus read).**
    - Read the newest ten lessons in [docs/LESSONS.md](docs/LESSONS.md).
@@ -68,6 +80,9 @@ not to add process.
    - what I will do differently;
    - which line of this file it changes, if any.
    - When the same lesson appears twice, promote it into this file and say so in the entry.
+   - **Every fourth cycle,** read the next unread source in `docs/METHOD_LIBRARY.md`, copy its key passage, and change
+     this file only if the passage improves a concrete decision. Each rule here cites its source: an owner quote, a
+     lesson or a passage. A rule that has changed no decision in ten cycles is pruned.
 
 ## Lenses (rotate them; each has found something here)
 - **Who pays, and why must they?** Find the counterparty's constraint: leverage demand, a mandate, a deadline, a

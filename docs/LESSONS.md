@@ -11,6 +11,25 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L022 · 2026-11-23 · Better rules come from the best sources, not only from my mistakes
+- **The owner.** My advice must improve too, and the best moments came from precise passages of good books. Find ways
+  to improve constantly.
+- **Read myself:**
+  - Feynman's "Cargo Cult Science" (in full);
+  - Hamming's "You and Your Research" (in full);
+  - López de Prado's "10 Reasons" (pp. 4-5 and 18).
+- **Surprise.** Feynman's Millikan story describes what I did with R519: I hunted the loader bug only because the
+  result was bad. R525's pass got no such hunt.
+- **What I do differently:**
+  - audit good results as hard as bad ones;
+  - explain an edge before re-backtesting it;
+  - keep the important-problems list;
+  - every fourth cycle, read one method source and keep only rules that change decisions.
+- **Instruction changed:**
+  - `CLAUDE.md` gains "Principles from the masters" and the reading cadence in step 5;
+  - `docs/METHOD_LIBRARY.md` holds the passages and the reading queue.
+- **Next, by Feynman's rule:** a Millikan audit of R525 before more forward lanes (breakthrough review, item 0).
+
 ## L021 · 2026-11-23 · Digging at once (rule 2) produced the lab's broadest result
 - **What happened.** Instead of waiting on R524's workflow, I widened the framework result at once. R525 ran all 12
   floorless × floor pairs, and all pass.

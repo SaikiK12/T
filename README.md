@@ -23,7 +23,7 @@ A pre-registered strategy-discovery lab for crypto perpetual futures.
 | Find a source, a reel or a research design | [Research folder guide](research/README.md) and the [intake guide](research/intake/README.md) |
 | Set up, inspect or run the software | [Operator guide](docs/guides/OPERATIONS.md) |
 | Make a change | [AGENTS.md](AGENTS.md), then fresh writer claims in [issue #7](https://github.com/SaikiK12/T/issues/7) |
-| See how Claude chooses, reads and improves | [CLAUDE.md](CLAUDE.md) (its working chain) and [docs/LESSONS.md](docs/LESSONS.md) (one lesson per session) |
+| See how Claude chooses, reads and improves | [CLAUDE.md](CLAUDE.md) (its working chain) and [docs/LESSONS.md](docs/LESSONS.md) (one lesson per session); [docs/METHOD_LIBRARY.md](docs/METHOD_LIBRARY.md) (method passages from Feynman, Hamming, López de Prado and the queue) |
 
 ## Current status
 
