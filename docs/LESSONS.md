@@ -11,6 +11,17 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L021 · 2026-11-23 · Digging at once (rule 2) produced the lab's broadest result
+- **What happened.** Instead of waiting on R524's workflow, I widened the framework result at once. R525 ran all 12
+  floorless × floor pairs, and all pass.
+  - The portfolio earned +7.8%/yr, Sharpe 5.5, max drawdown −0.73% over 5.7 years.
+  - The whole round took about 40 minutes, including the freeze.
+- **Surprise.** Kraken against Binance, Gate or KuCoin earns more (+31%/yr) than Kraken against Hyperliquid (+22%).
+  The thin side is the source, and any floor venue harvests it.
+- **What I do differently.** When a mechanism replicates, map its whole space (every venue pair, every coin set) in
+  one registered round before building lanes one by one.
+- **Instruction changed:** none. Standing rules 1 and 2 already say it; this is the evidence they work.
+
 ## L020 · 2026-11-23 · I waited on a workflow after a breakthrough, though the owner had told me not to wait
 - **What happened.**
   - After the framework result (four design-gap books nearly uncorrelated; Sharpe 8.5 together), I built R524 and

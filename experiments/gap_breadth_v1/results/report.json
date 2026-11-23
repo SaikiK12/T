@@ -1,0 +1,440 @@
+{
+ "pairs": {
+  "kraken+binance": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 304,
+   "ann_1x_pct": 32.433497288489015,
+   "ann_2x_pct": 30.651720972699536,
+   "ann_3x_pct": 28.869944656910068,
+   "t_nw_1x": 7.335252662237321,
+   "max_dd_pct": -1.6609011123284099,
+   "trades": 212,
+   "first_day": 1795,
+   "first_date": "2025-12-01"
+  },
+  "kraken+gate": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 304,
+   "ann_1x_pct": 31.429830942492575,
+   "ann_2x_pct": 29.66486383722941,
+   "ann_3x_pct": 27.899896731966255,
+   "t_nw_1x": 7.585879435661715,
+   "max_dd_pct": -1.4351366145908762,
+   "trades": 210,
+   "first_day": 1795,
+   "first_date": "2025-12-01"
+  },
+  "kraken+hyperliquid": {
+   "new": false,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 304,
+   "ann_1x_pct": 21.96192310074192,
+   "ann_2x_pct": 20.230574416531397,
+   "ann_3x_pct": 18.499225732320873,
+   "t_nw_1x": 7.053068962326679,
+   "max_dd_pct": -0.6897332639293758,
+   "trades": 206,
+   "first_day": 1795,
+   "first_date": "2025-12-01"
+  },
+  "kraken+kucoin": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 304,
+   "ann_1x_pct": 30.98983209203819,
+   "ann_2x_pct": 29.208055776248713,
+   "ann_3x_pct": 27.42627946045924,
+   "t_nw_1x": 9.451007614851774,
+   "max_dd_pct": -1.0279753807728689,
+   "trades": 212,
+   "first_day": 1795,
+   "first_date": "2025-12-01"
+  },
+  "bitfinex+binance": {
+   "new": false,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 2078,
+   "ann_1x_pct": 3.53638667106583,
+   "ann_2x_pct": 2.3351186248675613,
+   "ann_3x_pct": 1.1338505786692936,
+   "t_nw_1x": 2.9480427228578123,
+   "max_dd_pct": -6.845978994350743,
+   "trades": 977,
+   "first_day": 21,
+   "first_date": "2021-01-22"
+  },
+  "bitfinex+gate": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 2078,
+   "ann_1x_pct": 4.32853233572953,
+   "ann_2x_pct": 3.306778245257923,
+   "ann_3x_pct": 2.285024154786314,
+   "t_nw_1x": 5.111405967571566,
+   "max_dd_pct": -8.063596791136662,
+   "trades": 831,
+   "first_day": 21,
+   "first_date": "2021-01-22"
+  },
+  "bitfinex+hyperliquid": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 1225,
+   "ann_1x_pct": 5.277839589573877,
+   "ann_2x_pct": 4.234982446716735,
+   "ann_3x_pct": 3.1921253038595916,
+   "t_nw_1x": 4.017081162183698,
+   "max_dd_pct": -5.7959268720777475,
+   "trades": 500,
+   "first_day": 874,
+   "first_date": "2023-05-25"
+  },
+  "bitfinex+kucoin": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 2078,
+   "ann_1x_pct": 6.697150919074773,
+   "ann_2x_pct": 5.477439658247054,
+   "ann_3x_pct": 4.257728397419335,
+   "t_nw_1x": 7.268256633281716,
+   "max_dd_pct": -3.7881475752026885,
+   "trades": 992,
+   "first_day": 21,
+   "first_date": "2021-01-22"
+  },
+  "deribit+binance": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 1646,
+   "ann_1x_pct": 6.8036230859634905,
+   "ann_2x_pct": 5.771378249997512,
+   "ann_3x_pct": 4.739133414031534,
+   "t_nw_1x": 6.532679774052101,
+   "max_dd_pct": -1.0611033597637585,
+   "trades": 665,
+   "first_day": 453,
+   "first_date": "2022-03-30"
+  },
+  "deribit+gate": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 1646,
+   "ann_1x_pct": 7.015615823226671,
+   "ann_2x_pct": 5.953878277661665,
+   "ann_3x_pct": 4.89214073209666,
+   "t_nw_1x": 6.528971766855527,
+   "max_dd_pct": -0.9903085103703024,
+   "trades": 684,
+   "first_day": 453,
+   "first_date": "2022-03-30"
+  },
+  "deribit+hyperliquid": {
+   "new": false,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 1225,
+   "ann_1x_pct": 4.428303643136773,
+   "ann_2x_pct": 3.345817928851058,
+   "ann_3x_pct": 2.2633322145653443,
+   "t_nw_1x": 6.6867812490970255,
+   "max_dd_pct": -0.8471984151910888,
+   "trades": 519,
+   "first_day": 874,
+   "first_date": "2023-05-25"
+  },
+  "deribit+kucoin": {
+   "new": true,
+   "verdict": "PASS",
+   "checks": {
+    "p_le_alpha": true,
+    "mean_2x_pos": true,
+    "trimmed_pos": true,
+    "l2co_pos": true
+   },
+   "n": 1646,
+   "ann_1x_pct": 6.042045809959778,
+   "ann_2x_pct": 4.874755408987726,
+   "ann_3x_pct": 3.707465008015672,
+   "t_nw_1x": 6.325739279466199,
+   "max_dd_pct": -1.0754837420354844,
+   "trades": 752,
+   "first_day": 453,
+   "first_date": "2022-03-30"
+  }
+ },
+ "portfolio_equal_pairs": {
+  "days": 2078,
+  "ann_pct": 7.768079087897675,
+  "sharpe": 5.5014064619627945,
+  "nw_t": 11.96109600265435,
+  "max_dd_pct": -0.7307334654075515,
+  "halves_ann_pct": [
+   8.67229579678413,
+   6.863862379011222
+  ],
+  "ann_2x_pct": 6.695503694891581,
+  "by_year_ann_pct": {
+   "2021": 13.659177436001167,
+   "2022": 4.067544582568111,
+   "2023": 9.427655452141627,
+   "2024": 8.554876245694743,
+   "2025": 2.190763084809882,
+   "2026": 9.475641253179608
+  },
+  "pairs_live_mean": 7.140519730510106
+ },
+ "portfolio_floorless_sleeves": {
+  "days": 2078,
+  "ann_pct": 7.768079087897675,
+  "sharpe": 5.5014064619627945,
+  "nw_t": 11.96109600265435,
+  "max_dd_pct": -0.7307334654075515,
+  "halves_ann_pct": [
+   8.67229579678413,
+   6.863862379011222
+  ]
+ },
+ "corr_overlap": {
+  "kraken+binance": {
+   "kraken+binance": 1.0,
+   "kraken+gate": 0.753,
+   "kraken+hyperliquid": 0.51,
+   "kraken+kucoin": 0.633,
+   "bitfinex+binance": 0.009,
+   "bitfinex+gate": -0.025,
+   "bitfinex+hyperliquid": -0.006,
+   "bitfinex+kucoin": -0.017,
+   "deribit+binance": 0.029,
+   "deribit+gate": 0.027,
+   "deribit+hyperliquid": 0.052,
+   "deribit+kucoin": 0.033
+  },
+  "kraken+gate": {
+   "kraken+binance": 0.753,
+   "kraken+gate": 1.0,
+   "kraken+hyperliquid": 0.492,
+   "kraken+kucoin": 0.719,
+   "bitfinex+binance": 0.041,
+   "bitfinex+gate": 0.025,
+   "bitfinex+hyperliquid": 0.068,
+   "bitfinex+kucoin": -0.006,
+   "deribit+binance": 0.017,
+   "deribit+gate": 0.023,
+   "deribit+hyperliquid": 0.049,
+   "deribit+kucoin": 0.03
+  },
+  "kraken+hyperliquid": {
+   "kraken+binance": 0.51,
+   "kraken+gate": 0.492,
+   "kraken+hyperliquid": 1.0,
+   "kraken+kucoin": 0.484,
+   "bitfinex+binance": 0.012,
+   "bitfinex+gate": -0.014,
+   "bitfinex+hyperliquid": -0.039,
+   "bitfinex+kucoin": -0.03,
+   "deribit+binance": -0.041,
+   "deribit+gate": -0.007,
+   "deribit+hyperliquid": -0.047,
+   "deribit+kucoin": -0.048
+  },
+  "kraken+kucoin": {
+   "kraken+binance": 0.633,
+   "kraken+gate": 0.719,
+   "kraken+hyperliquid": 0.484,
+   "kraken+kucoin": 1.0,
+   "bitfinex+binance": 0.037,
+   "bitfinex+gate": -0.011,
+   "bitfinex+hyperliquid": 0.057,
+   "bitfinex+kucoin": -0.015,
+   "deribit+binance": 0.034,
+   "deribit+gate": 0.032,
+   "deribit+hyperliquid": 0.043,
+   "deribit+kucoin": 0.038
+  },
+  "bitfinex+binance": {
+   "kraken+binance": 0.009,
+   "kraken+gate": 0.041,
+   "kraken+hyperliquid": 0.012,
+   "kraken+kucoin": 0.037,
+   "bitfinex+binance": 1.0,
+   "bitfinex+gate": 0.86,
+   "bitfinex+hyperliquid": 0.73,
+   "bitfinex+kucoin": 0.7,
+   "deribit+binance": 0.226,
+   "deribit+gate": 0.251,
+   "deribit+hyperliquid": 0.292,
+   "deribit+kucoin": 0.206
+  },
+  "bitfinex+gate": {
+   "kraken+binance": -0.025,
+   "kraken+gate": 0.025,
+   "kraken+hyperliquid": -0.014,
+   "kraken+kucoin": -0.011,
+   "bitfinex+binance": 0.86,
+   "bitfinex+gate": 1.0,
+   "bitfinex+hyperliquid": 0.719,
+   "bitfinex+kucoin": 0.722,
+   "deribit+binance": 0.161,
+   "deribit+gate": 0.198,
+   "deribit+hyperliquid": 0.244,
+   "deribit+kucoin": 0.169
+  },
+  "bitfinex+hyperliquid": {
+   "kraken+binance": -0.006,
+   "kraken+gate": 0.068,
+   "kraken+hyperliquid": -0.039,
+   "kraken+kucoin": 0.057,
+   "bitfinex+binance": 0.73,
+   "bitfinex+gate": 0.719,
+   "bitfinex+hyperliquid": 1.0,
+   "bitfinex+kucoin": 0.603,
+   "deribit+binance": 0.239,
+   "deribit+gate": 0.229,
+   "deribit+hyperliquid": 0.338,
+   "deribit+kucoin": 0.23
+  },
+  "bitfinex+kucoin": {
+   "kraken+binance": -0.017,
+   "kraken+gate": -0.006,
+   "kraken+hyperliquid": -0.03,
+   "kraken+kucoin": -0.015,
+   "bitfinex+binance": 0.7,
+   "bitfinex+gate": 0.722,
+   "bitfinex+hyperliquid": 0.603,
+   "bitfinex+kucoin": 1.0,
+   "deribit+binance": 0.253,
+   "deribit+gate": 0.309,
+   "deribit+hyperliquid": 0.316,
+   "deribit+kucoin": 0.26
+  },
+  "deribit+binance": {
+   "kraken+binance": 0.029,
+   "kraken+gate": 0.017,
+   "kraken+hyperliquid": -0.041,
+   "kraken+kucoin": 0.034,
+   "bitfinex+binance": 0.226,
+   "bitfinex+gate": 0.161,
+   "bitfinex+hyperliquid": 0.239,
+   "bitfinex+kucoin": 0.253,
+   "deribit+binance": 1.0,
+   "deribit+gate": 0.942,
+   "deribit+hyperliquid": 0.764,
+   "deribit+kucoin": 0.922
+  },
+  "deribit+gate": {
+   "kraken+binance": 0.027,
+   "kraken+gate": 0.023,
+   "kraken+hyperliquid": -0.007,
+   "kraken+kucoin": 0.032,
+   "bitfinex+binance": 0.251,
+   "bitfinex+gate": 0.198,
+   "bitfinex+hyperliquid": 0.229,
+   "bitfinex+kucoin": 0.309,
+   "deribit+binance": 0.942,
+   "deribit+gate": 1.0,
+   "deribit+hyperliquid": 0.743,
+   "deribit+kucoin": 0.901
+  },
+  "deribit+hyperliquid": {
+   "kraken+binance": 0.052,
+   "kraken+gate": 0.049,
+   "kraken+hyperliquid": -0.047,
+   "kraken+kucoin": 0.043,
+   "bitfinex+binance": 0.292,
+   "bitfinex+gate": 0.244,
+   "bitfinex+hyperliquid": 0.338,
+   "bitfinex+kucoin": 0.316,
+   "deribit+binance": 0.764,
+   "deribit+gate": 0.743,
+   "deribit+hyperliquid": 1.0,
+   "deribit+kucoin": 0.794
+  },
+  "deribit+kucoin": {
+   "kraken+binance": 0.033,
+   "kraken+gate": 0.03,
+   "kraken+hyperliquid": -0.048,
+   "kraken+kucoin": 0.038,
+   "bitfinex+binance": 0.206,
+   "bitfinex+gate": 0.169,
+   "bitfinex+hyperliquid": 0.23,
+   "bitfinex+kucoin": 0.26,
+   "deribit+binance": 0.922,
+   "deribit+gate": 0.901,
+   "deribit+hyperliquid": 0.794,
+   "deribit+kucoin": 1.0
+  }
+ },
+ "verdict": "PASS",
+ "checks": {
+  "nw_t_ge_3": true,
+  "positive_at_2x": true,
+  "both_halves_pos": true
+ }
+}

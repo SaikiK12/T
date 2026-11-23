@@ -139,6 +139,12 @@
   - **Piste en papier Deribit + Hyperliquid (R520, dès le 22-11).** La règle de carry R275 sur 89 pièces, avec les
     vrais carnets relevés à chaque décision. Deux lectures fixes : 90 jours (t ≥ 2,5) et 180 jours (t ≥ 2,0) ; arrêt
     d'urgence à −3 % ([règles](../experiments/xfund_dhl_fwd/PREREG.md)).
+  - **La faille se généralise (R525, 23-11).** Les 12 paires « plateforme sans plancher (Kraken, Bitfinex, Deribit) ×
+    plateforme avec plancher (Binance, Gate, Hyperliquid, KuCoin) » paient toutes après des coûts triplés. Leur
+    portefeuille à parts égales : +7,8 %/an sans levier, Sharpe 5,5, perte maximale −0,73 % sur 2021-2026, chaque
+    année positive. Les paires Kraken font environ +31 %/an, mais sur seulement 10 mois et avec une petite capacité.
+    Ces chiffres sont dans l'échantillon ; les pistes en papier doivent confirmer
+    ([résultat](../experiments/gap_breadth_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
