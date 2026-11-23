@@ -11,6 +11,18 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L023 · 2026-11-23 · Auditing the pleasing result found its tail at once
+- **What happened.** Applying Feynman's rule (L022) to R525, a one-day decision delay kept 82-105% of 11 pairs'
+  returns, so there is no lookahead.
+  - It also exposed LUNA, May 2022: one delayed entry lost about 34x a leg's notional as the hedge broke between
+    venues.
+  - It showed stale-looking Bitfinex legs (−64 to −84% price moves on one coin across two venues).
+- **Surprise.** The robustness check found the risk that matters for money: the broken hedge, at a speed no daily
+  check sees. The base run had missed LUNA by one day.
+- **What I do differently.** Every passing carry result gets a delay test and a worst-trade review, and the worst
+  trade sets a risk limit. The stake note now requires an hourly divergence stop and a per-coin cap.
+- **Instruction changed:** none. Feynman's line in `CLAUDE.md` already says it; this is its first payoff.
+
 ## L022 · 2026-11-23 · Better rules come from the best sources, not only from my mistakes
 - **The owner.** My advice must improve too, and the best moments came from precise passages of good books. Find ways
   to improve constantly.

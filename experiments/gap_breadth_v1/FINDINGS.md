@@ -61,3 +61,39 @@
 - **Venue risk:** five venues to fund and watch. MEXC was not in the map.
 - **Correlated legs.** Pairs sharing a floorless venue are near-duplicates, so the effective breadth is closer to the
   three floorless venues than to 12 pairs.
+
+## Addendum, the same day: a Millikan audit of this pass (post hoc, descriptive; the verdict stands)
+- **Why.** Feynman, read 2026-11-23 (`docs/METHOD_LIBRARY.md`): hunt bugs in a pleasing result as hard as in a
+  failing one.
+- **Lookahead check.** Every pair was rerun with a one-day decision delay: decide on day d−1's windows, act at day d.
+
+  | Pair | Base %/yr | With a one-day delay | Kept |
+  |---|---|---|---|
+  | kraken+binance | +32.4 | +30.6 | 94% |
+  | kraken+gate | +31.4 | +28.4 | 90% |
+  | kraken+kucoin | +31.0 | +26.0 | 84% |
+  | kraken+hyperliquid | +22.0 | +21.1 | 96% |
+  | deribit+binance / gate / hyperliquid / kucoin | +6.8 / +7.0 / +4.4 / +6.0 | +6.3 / +6.4 / +4.0 / +5.3 | 87-93% |
+  | bitfinex+binance / hyperliquid / kucoin | +3.5 / +5.3 / +6.7 | +2.9 / +5.6 / +6.6 | 82-105% |
+  | **bitfinex+gate** | +4.3 | **−11.4** | — |
+
+  - 11 of 12 pairs keep 82-105%, so there is no sign of lookahead.
+- **What broke bitfinex+gate under the delay: LUNA, May 2022.**
+  - The delayed book entered LUNA (long Gate, short Bitfinex) on day 499. The legs diverged by about 34x before the
+    daily blowout check closed it the next day. One trade lost −3,449% of a leg's notional, and the worst day was
+    −85.9% of book capital.
+  - The undelayed book missed LUNA by one day. That is luck, not design.
+- **Bitfinex's thin pairs also show stale-looking legs.** SAND, COMP and ALGO lost 64-84% of a leg's notional on
+  price, which two live venues on one coin cannot do. A Bitfinex series probably stopped printing while Gate's moved.
+- **What it means.**
+  - The design gap's return is robust to timing.
+  - Its tail is the hedge breaking on a collapsing or halted coin, which a daily check cannot catch. The live book
+    needs:
+    1. an hourly divergence stop on each pair (close both legs if the ratio moves more than about 10% from entry);
+    2. a cap of about 5% of book capital per coin;
+    3. no entry on a coin with a venue halt, delisting notice or a dead series;
+    4. a minimum printing activity on both venues before entry.
+  - Bitfinex's numbers are the least trustworthy of the three floorless venues. R524 (Bitfinex + Binance forward)
+    should be read with that in mind.
+- **Not yet done** (breakthrough review, item 0): a funding timestamp-convention check per venue, a PnL decomposition
+  of Kraken's +31%/yr by liquidity, and an exact reproduction of R507/R508 under this engine.
