@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L025 · 2026-11-23 · Price a risk control against the clean base, on the prices I would trade
+- **What surprised me** (R526):
+  - **The cheapest check removed the tail.** "Do the two legs show the same price at entry?" blocked LUNA (legs 5x
+    apart) and ANC, at no cost.
+  - **The hourly stop passed my frozen rule while doubling drawdowns.** The rule compared each limit with the
+    *delayed* base, which holds LUNA's −86% day. Any limit looked good against that.
+  - **On Bitfinex's last-trade closes, 92% of stops reverted within a day.** Some "filled" at outlier prints (−166% of
+    a leg). The simulated stop measured data quality, not the control.
+- **What I will do differently:**
+  - A rule for a control compares it with the clean base on Sharpe and drawdown, as well as with the stressed base.
+  - Simulate a control on the prices it would execute at (book mids), or say that it was not.
+  - Try the simplest invariant check first (prices agree, a leg prints) before a dynamic rule.
+- **Beat the plan, first use.** The planned forward sleeves would have added pairs that correlate up to 0.94. The
+  three-lane combined read (R527) adds the one independent piece, with power 0.86 against 0.74, and it had to be
+  frozen before 2026-11-25.
+- **Instruction changed:** none yet. The first point joins the pre-mortem in `CLAUDE.md` step 4 if it recurs.
+
 ## L024 · 2026-11-23 · Treating my own choices as data
 - **The owner.** "Tu dois t'améliorer et voir les choses qui seraient encore mieux à faire par toi-même."
 - **Measured** ([self-review](reviews/self_review_20261123.md)):

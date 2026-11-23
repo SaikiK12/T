@@ -1,6 +1,6 @@
 # Status: what is true now
 
-**Rewritten in place, never appended. Last rewrite: 2026-11-18 by Claude.**
+**Rewritten in place, never appended. Last rewrite: 2026-11-18 by Claude; the summary's head updated 2026-11-23.**
 - If this date is more than two weeks old, trust `registry/rounds.csv` and `python scripts/lane_census.py` over this
   page.
 - Why this page exists: [reviews/stepback_20261116.md](reviews/stepback_20261116.md). The plan it follows:
@@ -9,6 +9,26 @@
   [CARTE.fr.md](guides/CARTE.fr.md).
 
 ## En bref (pour le propriétaire)
+- **Où on en est (23-11-2026).**
+  - **La faille :** les plateformes sans plancher de financement (Kraken, Deribit, Bitfinex) contre celles qui
+    font payer un plancher (Binance, Gate, Hyperliquid, KuCoin). Les 12 paires paient sur 2021-2026, dans
+    l'échantillon (R525).
+  - **Le risque est maîtrisé à l'entrée (R526).** Deux filtres suppriment la seule grosse perte trouvée (LUNA, mai
+    2022) sans rien coûter :
+    - les deux jambes doivent afficher le même prix à l'entrée ;
+    - elles doivent coter régulièrement.
+
+    Le stop horaire est abandonné : sur Bitfinex il coupait à tort (92 % des cas revenus en un jour).
+  - **La preuve en papier arrive en décembre.** Une piste tourne par plateforme sans plancher : R509 Kraken, R520
+    Deribit, R524 Bitfinex (dès le 25-11). Lectures rapides :
+    - R523 (Kraken + Deribit) vers le 13-12 ;
+    - R527 (les trois) vers le 15-12 puis le 25-12 ;
+    - R510 vers le 20-12 ;
+    - R521 vers le 22-12.
+  - **Une réussite permet une petite mise** : 2 000 $ au plus, levier 2,5 au plus, placée par toi via
+    `lab.gate.go_real()`.
+  - **Ce qu'il te faut d'ici là :** des comptes sur les plateformes sans plancher (Kraken, Deribit, Bitfinex) et sur
+    une ou deux plateformes à plancher.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
@@ -145,6 +165,14 @@
     année positive. Les paires Kraken font environ +31 %/an, mais sur seulement 10 mois et avec une petite capacité.
     Ces chiffres sont dans l'échantillon ; les pistes en papier doivent confirmer
     ([résultat](../experiments/gap_breadth_v1/FINDINGS.md)).
+  - **Les limites de risque chiffrées (R526, 23-11).** Deux filtres à l'entrée suppriment la grosse perte de
+    l'audit :
+    - même prix sur les deux jambes à l'entrée ;
+    - cotations régulières.
+
+    Avec un jour de retard sur les décisions, le portefeuille passe de +4,6 à +7,2 %/an et son pire jour de −14,3 % à
+    −0,4 %. À l'heure normale, ils ne coûtent rien. Le stop horaire sur les derniers prix coupait à tort et n'est pas
+    retenu ([résultat](../experiments/risk_limits_v1/FINDINGS.md)).
 - **Ce qui est encore testé, sur des plateformes utilisables depuis la France.** Des rendements de type « portage » :
   - dépôts dans les coffres HLP/LLP ;
   - financement des perpétuels sur trade.xyz, Lighter et OKX Europe ;
@@ -246,6 +274,9 @@
 | 2026-11-18 00:00 UTC | R404 `book_costs_v1` closed: PARTIAL, 29 snapshots with all three venues out of the 40 required ([FINDINGS](../experiments/book_costs_v1/FINDINGS.md)) |
 | 2026-11-19 00:00 UTC | Codex's R420 dispatch ends by design. At the next session, confirm the four `quant-*` workflows only report health, then retire them by the runtime's `active_contract` route |
 | 2026-12-01..07 | R498 `gatefill_fwd`: read the queue and fills of a resting Gate order (it changes no lane) |
+| about 2026-12-13 / 12-23 | R523 combined fast read (R509 + R520), looks at 20 / 30 common scored days |
+| about 2026-12-15 / 12-25 | R527 combined fast read of the three floorless lanes (R509 + R520 + R524), looks at 20 / 30 common days |
+| about 2026-12-20 / 12-22 | R510 (R509's fast read) and R521 (R520's fast read) |
 | owner, any time | Rule 6: keep it (A) or add a measurement-pilot exception (B) ([plan](reviews/plan_20261117.md) section 9). With B, the pilot's plan is frozen and registered before any order |
 | before 2027-01-15 | Owner: which venues you can hold, and the stake you would risk on a first real trial ([plan](reviews/plan_20261117.md) section 5); the small-stake plan is frozen with them before 2027-01-20 |
 | 2027-01-20 / 01-21 | First looks of carry books R278 (A, B, C) and R279 (A, B), then R294 |
