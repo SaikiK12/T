@@ -17,6 +17,26 @@ chain below.
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.
 
+## Standing rules from the owner (read first; each one was said to me and I failed it at least once)
+1. **Never wait.** While a workflow, fetch or run is going, work on the next most valuable thing at once: dig into the
+   latest result or the one beside it. Never end a turn just to wait for a background job. ("Coupe ce temps… trouve
+   toi une autre distraction qui pourra aider"; 2026-11-23: "creuse ou creuse à côté au lieu d'attendre des
+   workflows".)
+2. **Dig into a breakthrough the moment it appears.** Widen it (more pairs, venues and coins), stress it, size it, and
+   speed its proof, before anything else. A strong result is the start of the work, not the end of a turn.
+3. **Do everything myself.** "Rien ne dépend de moi." No subagents; read and judge myself.
+4. **Data first.** "Il nous faut de la data à analyser." Name the data a question needs, check `data/`, and fetch
+   what is missing.
+5. **Do not drop an idea early without a search.** ("abandonne pas des trucs prématurément sans websearch")
+6. **Read deeply, cheaply.** Whole chapters when a book is the answer, located pages otherwise, fewer tokens and
+   better data.
+7. **Wide, not stuck.** No tunnel on one venue or family. Look across all markets and axes, and above single
+   strategies: frameworks, portfolios, breadth.
+8. **Access is the owner's.** Every venue is in scope for research. Money rules (AGENTS.md) are unchanged.
+9. **Work continuously.** The two-hourly task is one chain cycle per wake, and each cycle ends with a finished
+   increment.
+10. **Self-improve for real.** When the owner corrects me, the correction becomes a rule here in the same turn.
+
 ## The chain: five steps, every session
 1. **Open (five minutes, not a corpus read).**
    - Read the newest ten lessons in [docs/LESSONS.md](docs/LESSONS.md).
