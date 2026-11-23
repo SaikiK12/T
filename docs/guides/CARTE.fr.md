@@ -22,7 +22,7 @@
 
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
-| [Portage de financement crypto entre plateformes](#carry) | 63 | 8 | 5 | 5 | 30 | 15 |
+| [Portage de financement crypto entre plateformes](#carry) | 64 | 8 | 5 | 5 | 31 | 15 |
 | [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **305** | **13** | **47** | **126** | **67** | **52** |
+| **Total** | **306** | **13** | **47** | **126** | **68** | **52** |
 
 <a id="carry"></a>
 
@@ -109,6 +109,7 @@ Tenir un achat sur la plateforme où le financement est bas et une vente là où
 | R524 | [`xfund_bfx_fwd`](../../experiments/xfund_bfx_fwd) | M552 forward paper: R507's carry book (L14d th5% K20) on Binance + Bitfinex (69 coins) from 2026-11-25, measu… | en cours |
 | R525 | [`gap_breadth_v1`](../../experiments/gap_breadth_v1) | M552 widened: R275's carry book on every floorless (Kraken, Bitfinex, Deribit) x floor (Binance, Gate, Hyperl… | en cours |
 | R526 | [`risk_limits_v1`](../../experiments/risk_limits_v1) | M552 risk overlay: R525's book with live limits (agree: legs within 2% at entry; active: 20 of 24 hourly prin… | en cours |
+| R527 | [`gap_combo3_fast`](../../experiments/gap_combo3_fast) | M553+M560+M552 combined fast read: R509 (Kraken+HL), R520 (Deribit+HL) and R524 (Bitfinex+Binance) at equal w… | en cours |
 
 <a id="carry-tradfi"></a>
 
