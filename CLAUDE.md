@@ -59,6 +59,9 @@ not to add process.
    - Pick the work that moves it.
    - Pick a lens from the list below that I did not use last session.
    - No venue and no family three sessions in a row unless I write why it still binds.
+   - **Beat the plan.** Name one unasked item with higher expected value than the planned one (for real money,
+     speed of proof or risk), and do it if it wins. Lenses with a measured yield come first
+     (`docs/reviews/self_review_*.md`).
 3. **Read myself.** I read; I do not send a reader.
    - Question first, then `scripts/read_source.py locate`, then at most 12 pages of a source.
    - Copy the one equation or table that matters in my own words, and check it against the page.
@@ -72,6 +75,8 @@ not to add process.
      look, change the rule or the horizon.
    - For a design gap, the sign comes from the design (long the floorless venue), never from a short window. Check
      where each venue's day starts before trusting a loader.
+   - **Pre-mortem before the freeze.** Write five lines: "it failed because…". If a reason is likely, fix the design.
+     Four of my five FAILs in R507-R525 were foreseeable this way.
    - Then freeze, run once, and read the by-year table before the headline.
    - Report costs at 1x/2x/3x, and compare with cash.
    - A null goes in with the same care as a hit.
@@ -80,6 +85,8 @@ not to add process.
    - what I will do differently;
    - which line of this file it changes, if any.
    - When the same lesson appears twice, promote it into this file and say so in the entry.
+   - **Every tenth cycle,** write a self-review: outcomes by lens, failure modes, what a better researcher would have
+     done, and unasked work worth more than the plan (`docs/reviews/self_review_20261123.md` is the first).
    - **Every fourth cycle,** read the next unread source in `docs/METHOD_LIBRARY.md`, copy its key passage, and change
      this file only if the passage improves a concrete decision. Each rule here cites its source: an owner quote, a
      lesson or a passage. A rule that has changed no decision in ten cycles is pruned.

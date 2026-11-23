@@ -11,6 +11,20 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L024 · 2026-11-23 · Treating my own choices as data
+- **The owner.** "Tu dois t'améliorer et voir les choses qui seraient encore mieux à faire par toi-même."
+- **Measured** ([self-review](reviews/self_review_20261123.md)):
+  - plumbing and scale lenses earned;
+  - transfers without the cause failed;
+  - 4 of 5 FAILs had a design flaw a pre-mortem would have named;
+  - 6 plumbing bugs; 5 process misses the owner had to correct.
+- **What I do differently:**
+  - each choice names one unasked, higher-value item;
+  - a pre-mortem before each freeze;
+  - a self-review every tenth cycle, with lenses ranked by yield.
+- **First unasked item, started now:** pricing the risk limits (divergence stop, per-coin cap) on R525's pairs.
+- **Instruction changed:** `CLAUDE.md` steps 2, 4 and 5.
+
 ## L023 · 2026-11-23 · Auditing the pleasing result found its tail at once
 - **What happened.** Applying Feynman's rule (L022) to R525, a one-day decision delay kept 82-105% of 11 pairs'
   returns, so there is no lookahead.
