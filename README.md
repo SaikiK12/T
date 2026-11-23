@@ -202,6 +202,9 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Frameworks above strategies, 2026-11-23](docs/reviews/framework_20261123.md): the four design-gap books are nearly
+    uncorrelated (−0.26 to +0.15); equal weight gives Sharpe 8.5 and a −0.19% drawdown in sample. Breadth on the one
+    replicating mechanism is the framework.
   - [Leverage and margin for a Deribit + Hyperliquid stake, 2026-11-23](docs/reviews/stake_dhl_20261123.md): worst moves
     measured on 15 liquid coins (24 h basket −24% / +21%) and a proposed leverage cap of 2.5 with daily rebalancing
     (`lab/margin.py`).

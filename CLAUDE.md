@@ -58,7 +58,9 @@ not to add process.
 - **Count the chances before falling in love.** Ask how many events a year, and whether they are still coming.
   - R516 passed and was already drying up.
 - **Invert.** Write how the idea loses money before testing how it makes it. Read the failures first.
-- **Change the scale.** Hour to week, one coin to the whole market, one venue to the spread between venues.
+- **Change the scale.** Hour to week, one coin to the whole market, one venue to the spread between venues, one
+  replication to the portfolio of replications.
+  - The design-gap books are nearly uncorrelated: equal weight gave Sharpe 8.5 (2026-11-23).
 - **Borrow a field.** Equities, rates, insurance, betting markets, energy: find their old anomalies with crypto
   plumbing.
 - **Follow the plumbing.** Index rules, settlement clocks, liquidation engines and listing rules make flows that do

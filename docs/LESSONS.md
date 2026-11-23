@@ -11,6 +11,18 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L017 · 2026-11-23 · The owner's "higher than strategies" was right, in a measurable form
+- **Question.** Are frameworks better than strategies?
+- **Answer, measured.** The four design-gap books are almost uncorrelated, so equal weight lifts Sharpe to 8.5 and
+  cuts the drawdown to a third ([note](reviews/framework_20261123.md)).
+- **Surprise.** I had treated the pairs as replications, evidence for one claim. They are also diversifiers, and the
+  combination is the product.
+- **What I do differently.**
+  - When an edge replicates, measure the cross-correlation of its replications before anything else.
+  - Plan forward evidence and sizing at the portfolio level.
+- **Instruction changed: added to `CLAUDE.md`'s lenses.** "Change the scale" now names "from one replication to the
+  portfolio of replications".
+
 ## L016 · 2026-11-23 · Money readiness is measurement too
 - **Choose.** Item 4 of the breakthrough review. Lens "invert": how does a hedged, levered book die? By one venue's
   account being liquidated on a market-wide move before the other venue's gain can be moved across.
