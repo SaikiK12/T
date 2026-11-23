@@ -1,7 +1,7 @@
 {
  "lane": "xfund_eea3_fwd",
  "rid": "R512",
- "updated": "2026-11-22T01:20:16.187159+00:00",
+ "updated": "2026-11-23T00:59:07.264747+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
@@ -9,7 +9,7 @@
   "aster": 1.0
  },
  "data": {
-  "kraken": {
+  "aster": {
    "files": 132,
    "failed": 0,
    "changed_on_overlap": 0,
@@ -20,11 +20,11 @@
    "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "OP",
-    "ORDI"
+    "AAVE",
+    "ACE"
    ]
   },
-  "aster": {
+  "kraken": {
    "files": 132,
    "failed": 0,
    "changed_on_overlap": 0,
@@ -159,16 +159,16 @@
     "spread_in": 0.8676
    }
   ],
-  "scored_days": 2,
+  "scored_days": 3,
   "late_days": 1,
-  "total": -0.0010095895000000001,
-  "total_2x": -0.0017795895,
-  "total_3x": -0.0025495895000000003,
-  "total_close": -0.0003207616,
-  "nw_t": null,
+  "total": -0.0001676904000000001,
+  "total_2x": -0.0009376904,
+  "total_3x": -0.0017076904000000001,
+  "total_close": 0.0005211375,
+  "nw_t": -0.22673406949333366,
   "max_drawdown": -0.0015399559,
   "replay_days": 29,
   "replay_total": 0.007991831399999998
  },
- "last_day": "2026-11-22"
+ "last_day": "2026-11-23"
 }

@@ -1,26 +1,26 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-22T07:11:07.263295+00:00",
+ "updated": "2026-11-23T01:00:11.638453+00:00",
  "waiting": false,
  "ready": {
-  "deribit": 0.759,
-  "hyperliquid": 1.0
+  "deribit": 1.175,
+  "hyperliquid": 0.989
  },
  "data": {
-  "deribit": {
-   "files": 89,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "hyperliquid": {
    "files": 89,
    "failed": 1,
    "changed_on_overlap": 0,
    "failed_some": [
-    "XRP"
+    "SAGA"
    ]
+  },
+  "deribit": {
+   "files": 89,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -77,12 +77,6 @@
     "long": "deribit",
     "short": "hyperliquid",
     "spread_in": 0.3435
-   },
-   {
-    "coin": "ARB",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0735
    },
    {
     "coin": "VVV",
@@ -149,18 +143,24 @@
     "long": "deribit",
     "short": "hyperliquid",
     "spread_in": 0.1371
+   },
+   {
+    "coin": "MEGA",
+    "long": "deribit",
+    "short": "hyperliquid",
+    "spread_in": 0.173
    }
   ],
-  "scored_days": 0,
-  "late_days": 0,
-  "total": 0.0,
-  "total_2x": 0.0,
-  "total_3x": 0.0,
-  "total_close": 0.0,
+  "scored_days": 1,
+  "late_days": 1,
+  "total": -0.0002838509,
+  "total_2x": -0.0009838509,
+  "total_3x": -0.0016838509,
+  "total_close": 0.0004161491,
   "nw_t": null,
-  "max_drawdown": 0.0,
+  "max_drawdown": -0.0002838509,
   "replay_days": 31,
   "replay_total": 0.0006646258000000004
  },
- "last_day": "2026-11-22"
+ "last_day": "2026-11-23"
 }

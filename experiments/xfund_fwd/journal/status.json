@@ -1,15 +1,48 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-22T00:40:45.868755+00:00",
+ "updated": "2026-11-23T00:35:21.103387+00:00",
  "waiting": false,
  "ready": {
-  "binance": 0.997,
-  "gate": 0.9,
-  "hyperliquid": 0.994,
-  "mexc": 1.0
+  "binance": 1.003,
+  "gate": 1.052,
+  "hyperliquid": 0.989,
+  "mexc": 0.976
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "GMT",
+    "TST",
+    "TURBO"
+   ]
+  },
+  "mexc": {
+   "files": 520,
+   "failed": 12,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "FLOKI_USDT",
+    "FLUX_USDT",
+    "GALA_USDT",
+    "INIT_USDT",
+    "KAT_USDT",
+    "KITE_USDT",
+    "KNC_USDT",
+    "MAGMA_USDT",
+    "MTL_USDT",
+    "NEO_USDT"
+   ]
+  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -19,26 +52,6 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 1,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "SAGA"
-   ]
-  },
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -115,12 +128,6 @@
     "spread_in": 0.2196
    },
    {
-    "coin": "SUSDT",
-    "long": "hyperliquid",
-    "short": "gate",
-    "spread_in": 0.1872
-   },
-   {
     "coin": "GOATUSDT",
     "long": "gate",
     "short": "hyperliquid",
@@ -167,15 +174,21 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.2903
+   },
+   {
+    "coin": "ACEUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.5431
    }
   ],
-  "scored_days": 31,
+  "scored_days": 32,
   "late_days": 16,
-  "total": -0.0003100049,
-  "total_2x": -0.0023400048999999996,
-  "total_3x": -0.004370004900000003,
-  "total_close": 0.0003370730000000002,
-  "nw_t": -0.09748590449431628,
+  "total": -2.2029000000000232e-05,
+  "total_2x": -0.0020520290000000004,
+  "total_3x": -0.004082029000000001,
+  "total_close": 0.0006250489000000003,
+  "nw_t": -0.0068811942663967555,
   "max_drawdown": -0.005410314100000001,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -242,13 +255,13 @@
     "spread_in": 0.1089
    }
   ],
-  "scored_days": 31,
+  "scored_days": 32,
   "late_days": 16,
-  "total": 0.008147620099999997,
-  "total_2x": 0.0072726201,
-  "total_3x": 0.006397620100000001,
-  "total_close": 0.008497248399999997,
-  "nw_t": 1.5649491132863242,
+  "total": 0.0081178103,
+  "total_2x": 0.0072428103,
+  "total_3x": 0.0063678103,
+  "total_close": 0.0084674386,
+  "nw_t": 1.5500691555084551,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -297,12 +310,6 @@
     "spread_in": 0.7664
    },
    {
-    "coin": "LSKUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.5943
-   },
-   {
     "coin": "POWRUSDT",
     "long": "gate",
     "short": "mexc",
@@ -319,18 +326,6 @@
     "long": "mexc",
     "short": "gate",
     "spread_in": 10.7864
-   },
-   {
-    "coin": "KAVAUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 1.2861
-   },
-   {
-    "coin": "ONEUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.7036
    },
    {
     "coin": "TRUSTUSDT",
@@ -375,22 +370,40 @@
     "spread_in": 0.4186
    },
    {
-    "coin": "ORCAUSDT",
+    "coin": "ACEUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.936
+   },
+   {
+    "coin": "SENTUSDT",
     "long": "gate",
     "short": "mexc",
-    "spread_in": 0.3946
+    "spread_in": 0.5664
+   },
+   {
+    "coin": "YBUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5167
+   },
+   {
+    "coin": "COLLECTUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.4953
    }
   ],
-  "scored_days": 31,
+  "scored_days": 32,
   "late_days": 16,
-  "total": 0.0020101453,
-  "total_2x": -0.0014898546999999988,
-  "total_3x": -0.0049898547,
-  "total_close": 0.002646342999999999,
-  "nw_t": 0.509944892450152,
+  "total": 0.0032080103000000004,
+  "total_2x": -0.0002919897000000001,
+  "total_3x": -0.0037919897000000006,
+  "total_close": 0.003844207999999999,
+  "nw_t": 0.8081398659061346,
   "max_drawdown": -0.0059386307,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-22"
+ "last_day": "2026-11-23"
 }

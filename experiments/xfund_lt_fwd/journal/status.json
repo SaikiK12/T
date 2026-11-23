@@ -1,18 +1,29 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-22T01:00:00.765449+00:00",
+ "updated": "2026-11-23T00:50:07.961464+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 1.0,
-  "lighter": 0.93
+  "mexc": 0.913,
+  "lighter": 1.053
  },
  "data": {
   "mexc": {
    "files": 117,
-   "failed": 0,
+   "failed": 10,
    "changed_on_overlap": 0,
-   "failed_some": []
+   "failed_some": [
+    "JTO_USDT",
+    "JUP_USDT",
+    "KAITO_USDT",
+    "LTC_USDT",
+    "MEGA_USDT",
+    "MET_USDT",
+    "MYX_USDT",
+    "NMR_USDT",
+    "OP_USDT",
+    "PIPPIN_USDT"
+   ]
   },
   "lighter": {
    "files": 195,
@@ -69,12 +80,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1027
-   },
-   {
-    "coin": "AEROUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1066
    },
    {
     "coin": "AVAXUSDT",
@@ -147,18 +152,24 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0789
+   },
+   {
+    "coin": "VVVUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1976
    }
   ],
-  "scored_days": 30,
+  "scored_days": 31,
   "late_days": 16,
-  "total": -0.0007565860000000001,
-  "total_2x": -0.0029565859999999998,
-  "total_3x": -0.005156586,
-  "total_close": -0.0006502748999999998,
-  "nw_t": -0.5860567437926019,
-  "max_drawdown": -0.0026590484,
+  "total": -0.0033503035,
+  "total_2x": -0.005550303499999999,
+  "total_3x": -0.0077503035,
+  "total_close": -0.0032439923999999995,
+  "nw_t": -1.556636678120633,
+  "max_drawdown": -0.0045535545,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-22"
+ "last_day": "2026-11-23"
 }
