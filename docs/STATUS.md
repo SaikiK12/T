@@ -25,8 +25,12 @@
     - R527 (les trois) vers le 15-12 puis le 25-12 ;
     - R510 vers le 20-12 ;
     - R521 vers le 22-12.
-  - **Une réussite permet une petite mise** : 2 000 $ au plus, levier 2,5 au plus, placée par toi via
+  - **Une réussite permet une petite mise** : 2 000 $ au plus, levier 2 au plus, placée par toi via
     `lab.gate.go_real()`.
+    - Le jour venu, `scripts/stake_ticket.py` donne la liste exacte des ordres par plateforme (quantités, dépôts,
+      contrôles).
+    - Le levier est descendu de 2,5 à 2. Les règles « retail » publiques de Kraken demandent 50 % de marge initiale
+      sur la plupart des pièces.
   - **Ce qu'il te faut d'ici là :** des comptes sur les plateformes sans plancher (Kraken, Deribit, Bitfinex) et sur
     une ou deux plateformes à plancher.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le

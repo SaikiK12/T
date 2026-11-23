@@ -11,6 +11,25 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L026 · 2026-11-23 · A field name is not a fact; a live ticket finds what a model hides
+- **What surprised me:**
+  - **An API label nearly gave a false access verdict.** Kraken's instrument list gives 8 of R509's 20 held coins a
+    `dlt` margin schedule and no `europa` one. I read that as "not offered to EU clients": 54-63% of the Kraken
+    pairs' in-sample gross sat on such coins.
+    - Kraken's own EEA contract list (323 contracts, updated 2026-06-29) includes every one of them.
+    - Standing rule 5 (no conclusion without a search) caught it before anything was written.
+  - **The ticket found constraints the margin model did not:**
+    - Kraken's retail schedule (50% initial on most alts) binds at 2.5x;
+    - Binance's minimum orders exclude BTC and ZEC at $42 a leg;
+    - lot steps can leave a hedge 7% off.
+    The first stake's leverage drops to 2.0.
+- **What I will do differently:**
+  - Treat an access or rule inference from a field name as a hypothesis, and check it against the venue's own
+    published page before it changes a number.
+  - Build the concrete artifact (the order ticket on live specs) early. It tests the plan against the venue's real
+    rules.
+- **Instruction changed:** none. Standing rule 5 already covers the search; this is its first recorded save.
+
 ## L025 · 2026-11-23 · Price a risk control against the clean base, on the prices I would trade
 - **What surprised me** (R526):
   - **The cheapest check removed the tail.** "Do the two legs show the same price at entry?" blocked LUNA (legs 5x
