@@ -1,0 +1,17 @@
+# R525 gap_breadth_v1: every floorless x floor venue pair the lab holds, R275's book on lab.xfund_v2.
+name = "gap_breadth_v1"
+start = "2021-01-01"
+end = "2026-09-30"
+symbols = "experiments/gap_breadth_v1/symbols.csv"
+venues = [
+  { name = "binance", prices = "klines_1h", vol = "volume", funding = "fundingRate", bar_h = 1 },
+  { name = "gate", prices = "gate_hist/open/candlesticks_1h", vol = "vol_contracts", funding = "gate_hist/open/funding_applies", bar_h = 1 },
+  { name = "hyperliquid", prices = "hyperliquid/candles_1d", vol = "volume", funding = "hyperliquid/funding", bar_h = 24 },
+  { name = "kucoin", prices = "kucoin_hist/open/candles_1d", vol = "volume", funding = "kucoin_hist/open/funding", bar_h = 24 },
+  { name = "kraken", prices = "kraken_hist/open/candles_1d", vol = "volume", funding = "kraken_hist/open/funding", bar_h = 24 },
+  { name = "bitfinex", prices = "bitfinex_hist/candles_1h", vol = "volume", funding = "bitfinex_hist/funding", bar_h = 1 },
+  { name = "deribit", prices = "deribit_perps/prices_1h", vol = "volume", funding = "deribit_perps/funding", bar_h = 1 },
+]
+corr_days = 30
+corr_min = 0.9
+corr_obs = 20
