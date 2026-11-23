@@ -202,6 +202,9 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Leverage and margin for a Deribit + Hyperliquid stake, 2026-11-23](docs/reviews/stake_dhl_20261123.md): worst moves
+    measured on 15 liquid coins (24 h basket −24% / +21%) and a proposed leverage cap of 2.5 with daily rebalancing
+    (`lab/margin.py`).
   - [Where a breakthrough can come from, 2026-11-21](docs/reviews/breakthrough_20261121.md): a step back over every axis.
     Patterns fail and the funding-design gap replicates. The bet is leverage on that high-Sharpe gap (Deribit+Hyperliquid),
     a faster forward read, make-and-hedge on thin books, and hedged incentive capture.

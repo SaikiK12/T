@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L016 · 2026-11-23 · Money readiness is measurement too
+- **Choose.** Item 4 of the breakthrough review. Lens "invert": how does a hedged, levered book die? By one venue's
+  account being liquidated on a market-wide move before the other venue's gain can be moved across.
+- **Make.**
+  - `lab/margin.py`: liquidation move, the equalising split and the rebalance transfer, all tested.
+  - `scripts/stress_dhl.py`: worst 24 h basket moves of −24% / +21% over 2023-26.
+  - So leverage is capped at about 2.5 with daily rebalancing ([note](reviews/stake_dhl_20261123.md)).
+- **Surprise.** Single-coin spikes (+86% on TRX in 24 h) look scary, but on 20 slots of cross margin they are a few
+  percent of the account. The binding risk is the market-wide move and the transfer delay.
+- **What I do differently.** Size leverage from measured worst moves and the rebalance cadence. Never from a venue's
+  maximum leverage.
+- **Instruction changed:** none.
+
 ## L015 · 2026-11-23 · Readiness rules built for liquid venues misread thin ones; and a restart loop can eat a day
 - **What happened.**
   - **A restart loop.** The worker restarted for about 38 hours, so 20 scheduled cycles queued and none ran. The
