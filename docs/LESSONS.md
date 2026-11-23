@@ -11,6 +11,21 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L019 · 2026-11-23 · A silent overwrite broke a hard rule; the full suite caught it
+- **What happened.**
+  - I wrote R522's fetcher with `cat > scripts/fetch_deribit_trades.py`. A script of that name already existed: the
+    options-flow fetcher that five older lanes name.
+  - The provenance step overwrote its record too.
+  - Two days later the full test suite, run before adding `lab/bitfinex.py`, failed on that file's tests.
+- **Repair.** The original and its provenance are restored. R522's fetcher is kept byte-identical under a new name,
+  and its data moved to its own folder ([DEVIATIONS](../experiments/dmake_v1/DEVIATIONS.md)). The result is
+  unchanged.
+- **What I do differently.** Check that a path is new before writing it, and prefer the file tools, which refuse to
+  overwrite an unread file.
+- **Instruction changed: added at once to `CLAUDE.md`'s habits.** It breaks AGENTS.md's "frozen files are never
+  edited", so it does not wait for a second time.
+- **Also:** one frozen R520 test assumed an empty journal; it now fails by design (noted in R520's DEVIATIONS).
+
 ## L018 · 2026-11-23 · Breadth also buys time: a combined read is due a week before either lane's
 - **Choose.**
   - Lens: "the owner's reach". Money arrives sooner if evidence does.

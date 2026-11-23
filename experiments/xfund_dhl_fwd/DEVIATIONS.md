@@ -15,3 +15,9 @@
   - Expect more late days on weekends and holidays.
 - **Not changed.** The lane, the read and `carrylane.py` are frozen or pinned. Checked: only the `day`, `kind`, `run`
   and `ready` columns, and `status.json`. No result was read.
+
+## 2026-11-23: one frozen test is time-dependent
+- `tests/test_forward_xfund_dhl.py::test_read_on_an_empty_journal` asserts zero scored days. It was true at the
+  freeze; it fails since R520 scored its first day on 2026-11-23.
+- The file is a frozen input, so it is not edited. The failure is expected from now on, and it says nothing about the
+  lane.

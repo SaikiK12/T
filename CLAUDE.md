@@ -75,3 +75,5 @@ not to add process.
   `data/` folders and provenance before fetching anything.
 - **Tools are not goals.** A venue, a library or an engine is a means. When one has taken three sessions, step back.
 - **No subagents** unless the owner asks for them again. Reading and judging are my own work.
+- **Never write over a path I have not checked.** Before creating a file, test that the path is new (`git ls-files`,
+  `test -e`). A shell heredoc overwrites silently (L019).
