@@ -23,7 +23,7 @@
 | Famille | Expériences | confirmé (historique) | partiel | nul | en cours | autre |
 |---|---|---|---|---|---|---|
 | [Portage de financement crypto entre plateformes](#carry) | 64 | 8 | 5 | 5 | 31 | 15 |
-| [Portage sur actions, obligations et matières premières](#carry-tradfi) | 13 | 0 | 4 | 4 | 4 | 1 |
+| [Portage sur actions, obligations et matières premières](#carry-tradfi) | 14 | 0 | 4 | 4 | 5 | 1 |
 | [Autour de l'heure de paiement du financement](#settle) | 10 | 0 | 3 | 5 | 2 | 0 |
 | [Événements et annonces](#events) | 23 | 1 | 3 | 12 | 4 | 3 |
 | [Flux d'ordres et positionnement des traders](#flow) | 26 | 1 | 0 | 14 | 8 | 3 |
@@ -36,7 +36,7 @@
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **307** | **13** | **47** | **126** | **69** | **52** |
+| **Total** | **308** | **13** | **47** | **126** | **70** | **52** |
 
 <a id="carry"></a>
 
@@ -132,6 +132,7 @@ Le même principe sur des perpétuels d'actions, d'obligations et de gaz ou de p
 | R480 | [`futroll_fwd`](../../experiments/futroll_fwd) | M532 forward: short trade.xyz's NATGAS perp (decides; CL and BRENTOIL reported) hedged with the NYMEX contrac… | en cours |
 | R481 | [`ltroll_v1`](../../experiments/ltroll_v1) | M532 on Lighter, gate 0: short Lighter's futures-priced perps (NATGAS decides; WTI, BRENTOIL, XCU reported) h… | nul |
 | R482 | [`xvroll_fwd`](../../experiments/xvroll_fwd) | M533 forward: short trade.xyz's NATGAS perp and long Lighter's at equal notional (decides; WTI and BRENTOIL r… | en cours |
+| R529 | [`roll_frontrun_v1`](../../experiments/roll_frontrun_v1) | Front-running the commodity index roll: long the next contract, short the one expiring in m+1, from the last… | en cours |
 
 <a id="settle"></a>
 

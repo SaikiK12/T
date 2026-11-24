@@ -156,7 +156,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (237)
+## Run: one lane's frozen measurement (238)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -332,6 +332,7 @@ line is the first line of the script's own docstring.
 - [`run_reserved_batch3.py`](run_reserved_batch3.py): R392 reserved batch 3 (docs/GATES.md): three pre-committed candidates, read once, as set out in experiments/reserved_batch3/PREREG.md.
 - [`run_risk_limits.py`](run_risk_limits.py): R526 risk_limits_v1: what the live risk limits cost R525's design-gap books, and whether they remove the tail, as set out in experiments/risk_limits_v1/PREREG.md.
 - [`run_rnfade.py`](run_rnfade.py): rnfade_v1 (R249): fade the day's first close through a round-number level (two- or one-significant-figure grid), held 4 h or 24 h, against the same book on a half-step-shifted grid, on the crypto ...
+- [`run_roll_frontrun.py`](run_roll_frontrun.py): R529 roll_frontrun_v1: front-running the commodity index roll in CME energy calendar spreads, as set out in experiments/roll_frontrun_v1/PREREG.md.
 - [`run_rollcarry.py`](run_rollcarry.py): rollcarry_v1 (M532), frozen in experiments/rollcarry_v1/PREREG.md: does the funding on trade.xyz's futures-priced perps exceed the futures roll its oracle passes to longs?.
 - [`run_rrskew.py`](run_rrskew.py): R307 rrskew_v1: does the Deribit 25-delta risk reversal time BTC and ETH perps week by week (M174), as set out in experiments/rrskew_v1/PREREG.md.
 - [`run_seesaw.py`](run_seesaw.py): seesaw_v1 (R219): do the five most liquid coins' last hours predict the altcoins (lead-lag and catch-up), as set out in experiments/seesaw_v1/PREREG.md.
