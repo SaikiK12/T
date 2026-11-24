@@ -11,6 +11,29 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L040 · 2026-11-24 · The lab's own record is the first primary source of the mechanism map
+- **What surprised me:**
+  - To leave the design-gap family (three cycles in a row), I went looking for a "new" class: 24/7 stock perps while
+    the stock market is closed. The registry already held eleven rounds on it and two forward lanes. My three-cycle
+    map had marked the row "not mapped".
+  - **Read by mechanism, those rounds tell one story.** Single-name weekend moves overshoot where market makers cannot
+    hedge: R462, R465, and R468 in sample A. Index perps, which are hedgeable and quoted everywhere, do not (R464, R432).
+    So R464 was the mechanism's control, not the failed replication that L009 had counted.
+  - **The venue's changelog shows it moving the transfer on purpose.** The oracle constant went from 8 hours to
+    30 minutes, which removed the funding that had paid faders (by the venue's own figure, a trader right on a gap
+    move now keeps 87% of it, against 10% before).
+  - **The decisive number was capacity, and it was cheap:** the recorded books.
+    - The entry hour has the week's thinnest book.
+    - About $5k a trade is the useful size: about $7k a year at half the edge, $23k at full.
+    - R463 is likely underpowered if the edge is only half its in-sample size.
+- **What I will do differently:**
+  - Read the lab's past as evidence about mechanisms, not as a list of verdicts.
+  - Start every map row from the registry, then go to the venue's rules.
+  - Classify a family by what forces the transfer, not by the test's name.
+  - When a refined mechanism is written after a failure, name its new prediction and test it only on fresh data.
+- **Instruction changed:** none in `CLAUDE.md`. The approach page gains section 4c, the "solve the class" step
+  applied to the lab's own history.
+
 ## L039 · 2026-11-24 · Turn a paper's lens on my own book before hunting a new strategy
 - **What surprised me:**
   - The paper's decomposition (returns come mostly from price convergence) did more for us than its headline.

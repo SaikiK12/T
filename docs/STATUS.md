@@ -46,6 +46,14 @@
       déclarent sur le formulaire 3916-bis.
     - L'objectif de « percée » est de 10 000 €/an au-dessus du cash après impôt.
     - Le plan de capital est en trois paliers ([détail](reviews/answers_20261124.md)).
+  - **Seconde famille à suivre (24-11) : le retour du week-end sur les perps d'actions** (xyz et Lighter, R463 et
+    R467 en papier depuis le 13-11).
+    - Le carnet est le plus mince de la semaine à l'heure d'entrée (dimanche 19 h, heure de New York). La taille utile
+      est d'environ 5 000 $ par trade.
+    - Cela vaut environ 7 000 $/an si l'avantage réel vaut la moitié de celui mesuré sur le passé, et 23 000 $/an s'il
+      le vaut entier.
+    - R463 ne pourra sans doute confirmer qu'un avantage entier. Une piste plus rapide (le livre neutre au marché)
+      est à préparer avant le dimanche 29-11 ([détail](reviews/reflection_20261124_closed.md)).
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :

@@ -397,7 +397,7 @@ line is the first line of the script's own docstring.
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
 - [`run_xyzwknd_fwd.py`](run_xyzwknd_fwd.py): xyzwknd_fwd (R463): R462's weekend fade of trade.xyz US-stock perps, tested forward on fresh weekends from 2026-11-13, as set out in experiments/xyzwknd_fwd/PREREG.md.
 
-## Check: parity, audits and integrity (38)
+## Check: parity, audits and integrity (39)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -436,6 +436,7 @@ line is the first line of the script's own docstring.
 - [`check_spot_costs.py`](check_spot_costs.py): Independent exact-rational audit of R325 raw quote cash and capital costs.
 - [`check_spot_costs_v2.py`](check_spot_costs_v2.py): R326 scope over the frozen raw rational oracle; no input acquisition.
 - [`check_spot_perp_account.py`](check_spot_perp_account.py): Independent literal cash-flow oracle for R324's fixed constructed accounts.
+- [`check_wknd_depth.py`](check_wknd_depth.py): Weekend book depth of 24/7 stock perps: capacity of the closed-market fade class (descriptive, costs only).
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
 ## Build: tables, views and symbol maps (10)
