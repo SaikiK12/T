@@ -38,6 +38,8 @@ to scout. A reader follows `reading_protocol.md`.
     date; QuadrigaCX under 30%.
   - Read next: the hazard models of Moore & Christin (2013) and Moore, Christin & Szurdi (2018, "Revisiting the
     risks of Bitcoin currency exchange closure"). Then the court and administrator figures for each failure.
+  - **Partly answered 2026-11-24:** [venue_failure_20261124.md](venue_failure_20261124.md) gives closure rates by
+    venue type and a 47% recovery. Not yet read: court records, and Hyperliquid's own failure modes.
 - **An answer looks like:**
   - base rates of exchange closure or loss, and loss given failure;
   - how insurance funds, auto-deleveraging and liquidation engines behave in stress;

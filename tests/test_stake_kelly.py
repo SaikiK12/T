@@ -44,6 +44,14 @@ class Kelly(unittest.TestCase):
             self.assertEqual(len(rows), 3 * 2 * 3 * 2)
             self.assertTrue(all(0 <= r["phi_star"] <= 1 for r in rows))
 
+    def test_venue_hazards(self):
+        self.assertAlmostEqual(sk.venue_hazard(16, False, False), 0.10)
+        self.assertLess(sk.LAM_VENUE["binance"], sk.LAM_VENUE["deribit"])          # more coins, fiat
+        self.assertAlmostEqual(sk.venue_hazard(16, True, True), 0.10 * 1.39 * 1.52)
+        g1 = sk.growth(0.5, 2, 0.05, 0.02, sk.LAM_VENUE, sk.SHARES)
+        g2 = sk.growth(0.5, 2, 0.05, 0.02, 0.0, sk.SHARES)
+        self.assertLess(g1, g2)
+
     def test_one_scenario(self):
         out = sk.main(["--m", "0.04", "--s", "0.02", "--L", "2", "--lam", "0.02"])
         self.assertAlmostEqual(out["break_even_lam_pct"], 100 * (0.08 - sk.R_CASH))

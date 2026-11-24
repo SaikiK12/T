@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L029 · 2026-11-24 · Borrowing credit risk: venue failure costs about as much as half the edge
+- **What surprised me:**
+  - Ordinary credit arithmetic (default rate × loss given default), fed by the published exchange-closure models,
+    costs the stake about 2% a year. That is the same size as the gap between the in-sample edge and a halved one.
+  - The models put Deribit at 9% a year (crypto only, few coins), yet Coinbase has owned it since 2025. A fitted
+    model is blind to facts outside its variables.
+  - I had made five web searches over two cycles without logging them.
+- **What I will do differently:**
+  - Write a counterparty's default rate and recovery next to every edge that leaves money on a venue.
+  - Check a model's output against facts it cannot see (owner, age, regulation) before using it.
+  - Log each search when it is made: `python -m lab websearch add`.
+- **Instruction changed:** none. A stake's rule now needs a forward edge of at least about 5%/yr (stake note).
+
 ## L028 · 2026-11-24 · An odd number in my own tool was a bug in my own model (second Millikan save)
 - **What surprised me:**
   - The two-account simulation showed **more** liquidations at 1.5x than at 2x on Kraken + Hyperliquid.

@@ -30,13 +30,14 @@ SHARES = {"hyperliquid": 0.377, "binance": 0.178, "bitfinex": 0.156, "kraken": 0
 
 
 def growth(phi, L, m, s, lam, shares, rec=0.0, r=R_CASH):
-    """Log growth a year of wealth with a fraction phi staked; -inf if a failure could take everything."""
+    """Log growth a year of wealth with a fraction phi staked; -inf if a failure could take everything.
+    lam: failures a year, one number for every venue or {venue: rate}."""
     jump = 0.0
-    for d in shares.values():
+    for v, d in shares.items():
         x = 1.0 - phi * d * (1.0 - rec)
         if x <= 0:
             return -math.inf
-        jump += lam * math.log(x)
+        jump += (lam.get(v, 0.0) if isinstance(lam, dict) else lam) * math.log(x)
     return r + phi * (L * m - r) - (phi * L * s) ** 2 / 2 + jump
 
 
@@ -46,6 +47,29 @@ def best(L, m, s, lam, shares, rec=0.0, r=R_CASH, grid=2001):
     g = np.array([growth(p, L, m, s, lam, shares, rec, r) for p in phis])
     i = int(np.argmax(g))
     return float(phis[i]), float(g[i])
+
+
+# Venue closure rates a year, from the exchange-closure hazard models (Mukherjee & Moore 2022; Moore, Christin &
+# Szurdi 2018): a median exchange (16 coins) closes about 10% a year (75% survive 3 years, median life about 7);
+# the Cox hazard ratio is 0.995 per coin traded, 1.39 for crypto-only (no fiat) and 1.52 for allowing US customers.
+# Coins traded here are rough counts on 2026-11-24; Hyperliquid (an on-chain venue) is outside the models and is given
+# the crypto-only rate of a 200-coin venue. Recovery given closure: about 47% where known (6 of 16 closures paid
+# nothing, 5 in full, 5 in part).
+BASE_HAZARD, HR_COIN, HR_CRYPTO_ONLY, HR_US = 0.10, 0.995, 1.39, 1.52
+VENUES = {"kraken": (350, False, True), "binance": (400, False, False), "bitfinex": (200, False, False),
+          "deribit": (100, True, False), "hyperliquid": (200, True, False)}    # (coins, crypto only, US customers)
+RECOVERY = 0.47
+
+
+def venue_hazard(coins, crypto_only, us, base=BASE_HAZARD, median_coins=16):
+    return base * HR_COIN ** (coins - median_coins) * (HR_CRYPTO_ONLY if crypto_only else 1.0) * (HR_US if us else 1.0)
+
+
+LAM_VENUE = {v: venue_hazard(*x) for v, x in VENUES.items()}
+# The models know neither age, owner nor regulation. Deribit has been Coinbase's since 2025-08-14 (Coinbase's release),
+# so the adjusted set gives it Kraken's rate. Hyperliquid's on-chain risks (contracts, validators, oracle) are not
+# modelled anywhere here.
+LAM_ADJUSTED = {**LAM_VENUE, "deribit": LAM_VENUE["kraken"]}
 
 
 def break_even_lam(L, m, rec=0.0, r=R_CASH):
@@ -76,15 +100,18 @@ def main(argv=None):
     ap.add_argument("--m", type=float, help="one scenario: drift a year at 1x (e.g. a forward estimate, 0.04)")
     ap.add_argument("--s", type=float, help="its volatility a year at 1x")
     ap.add_argument("--L", type=float, default=2.0)
-    ap.add_argument("--lam", type=float, default=0.03, help="failures a year per venue")
+    ap.add_argument("--lam", default="0.03", help="failures a year per venue, or 'models' / 'adjusted' for the per-venue rates")
     ap.add_argument("--rec", type=float, default=0.0, help="share of a failed venue's deposit recovered")
     a = ap.parse_args(argv)
+    lam = {"models": LAM_VENUE, "adjusted": LAM_ADJUSTED}.get(a.lam) or float(a.lam)
     if a.m is not None:
         s = a.s if a.s is not None else BASES[a.base]["s"]
-        phi, g = best(a.L, a.m, s, a.lam, SHARES, a.rec)
+        phi, g = best(a.L, a.m, s, lam, SHARES, a.rec)
         out = {"phi_star": phi, "half_kelly": phi / 2, "gain_over_cash_pct_at_half": 100 * (
-            growth(phi / 2, a.L, a.m, s, a.lam, SHARES, a.rec) - R_CASH),
-            "break_even_lam_pct": 100 * break_even_lam(a.L, a.m, a.rec)}
+            growth(phi / 2, a.L, a.m, s, lam, SHARES, a.rec) - R_CASH),
+            "break_even_lam_pct": 100 * break_even_lam(a.L, a.m, a.rec),
+            "expected_loss_pct_a_year_at_phi_1": 100 * sum((lam.get(v, 0) if isinstance(lam, dict) else lam) * d
+                                                          for v, d in SHARES.items()) * (1 - a.rec)}
         print(out)
         return out
     rows = table(a.base)

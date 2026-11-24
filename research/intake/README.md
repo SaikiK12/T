@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-24 | [venue_failure_20261124.md](venue_failure_20261124.md) | Venue failure base rates (Q3): 822 exchanges, 40% closed, about 10%/yr; hazard ratios by coins traded, fiat and US customers; 47% recovery where known; per-venue rates for `scripts/stake_kelly.py` |
 | 2026-11-23 | [reels_20261123.md](reels_20261123.md) | Owner reels: an NQ order-flow day-trading funnel (caption only; tested families R349/R211/R226 NULL; R522 explains whale prints on thin books) and one post that would not open. No test |
 | 2026-11-21 | [points_value_20261121.md](points_value_20261121.md) | What venue points programs paid per dollar of volume (Hyperliquid about 3 bp, Lighter 1 bp or less, at launch prices; order of magnitude): noise for a carry book, a rebate for a make-and-hedge book (Bet 3 joins Bet 2) |
 | 2026-11-20 | [venue_yield_20261120.md](venue_yield_20261120.md) | Collateral yield and incentives on the owner's venues, read by Claude directly (M475, family V1): Hyperliquid portfolio margin pays 2.65%/yr on idle USDC (live, formula checked) above a $10k account; Aster USDF trading rewards need $50k weekly volume |

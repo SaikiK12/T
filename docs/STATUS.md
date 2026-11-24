@@ -35,6 +35,9 @@
       levier de 2, la mise ne paie que si les plateformes font faillite moins de 2,5 à 5 % des années. Il faut donc
       répartir les dépôts : Hyperliquid porte aujourd'hui 38 % des dépôts. Miser au plus la moitié de la taille
       optimale ([détail](reviews/stake_dhl_20261123.md)).
+    - **Risque de faillite des plateformes, mesuré (24-11).** Les études sur 822 plateformes donnent, pour les
+      nôtres, 1,5 à 5,5 % de fermeture par an et la moitié récupérée. Cela coûte environ 2 % par an de la mise. On
+      ne mise que si la lecture papier confirme au moins environ 5 %/an d'avantage.
   - **Ce qu'il te faut d'ici là :** des comptes sur les plateformes sans plancher (Kraken, Deribit, Bitfinex) et sur
     une ou deux plateformes à plancher.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
