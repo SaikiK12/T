@@ -11,6 +11,24 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L030 · 2026-11-24 · Going wide starts in the registry, and a data budget shapes the design
+- **What surprised me:**
+  - The registry had already closed most of the "obvious" other families:
+    - prediction markets: illegal for the owner in France;
+    - the crypto variance premium: NULL and shrinking;
+    - the overnight drift: R235 NULL.
+  - The one structural payer left untested in its basic form was the close (leveraged-ETF and dealer hedging flow).
+  - Minute bars would have cost $21, beyond everything the lab has spent ($2.78). Hourly bars ($0.97) keep the
+    literature's exact predictor and change only the target (the last hour instead of the last half hour). Writing
+    that dilution in the PREREG was cheaper than asking for money.
+  - Databento's API crawled (timeouts, minutes a pull). A detached, resumable loop with retries is needed for any
+    pull over a few files.
+- **What I will do differently:**
+  - Before a wide cycle, run the family keywords through `registry/methods.csv` and choose among the gaps.
+  - Price data with the free quote before designing. Fit the design to the cheapest data that keeps the predictor
+    exact, and write the cost of that choice into the pre-mortem.
+- **Instruction changed:** none.
+
 ## L029 · 2026-11-24 · Borrowing credit risk: venue failure costs about as much as half the edge
 - **What surprised me:**
   - Ordinary credit arithmetic (default rate × loss given default), fed by the published exchange-closure models,
