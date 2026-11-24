@@ -11,6 +11,20 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L032 · 2026-11-24 · A public payer is paid first by someone else; the first forecast, scored
+- **What surprised me** (R529, NULL):
+  - Index funds must roll on announced dates, and CFTC economists see the spread move with their holdings. Yet a
+    trader starting at the last month-end and holding to the 9th day earned about 3 bp gross a month, nothing, in
+    2010-2026.
+  - The forecast written before the freeze said 15%. The outcome is a miss, consistent with it. One forecast scores
+    nothing alone; the self-review will score them together.
+- **What I will do differently:**
+  - Ask a second question after "who pays": can anyone with cheaper capital be paid first?
+  - A public calendar, one exchange and spread margining mean yes: arbitrage capital is there before me.
+  - The design gap pays because each leg needs its own margin on venues institutions avoid. Look for payers behind
+    that kind of friction (separate margins, venue access, mandates that forbid the arbitrageur).
+- **Instruction changed:** none yet. If this recurs, add the second question to the "Who pays" lens.
+
 ## L031 · 2026-11-24 · The outside view, measured: payers pass, patterns do not
 - **Read:** Ioannidis (2005), pp. 1-3, in place of Tetlock (his page is behind a Cloudflare challenge; no
   workaround).
