@@ -29,14 +29,14 @@
 | [Flux d'ordres et positionnement des traders](#flow) | 26 | 1 | 0 | 14 | 8 | 3 |
 | [Classements de cryptos et chasse aux signaux](#xsec) | 29 | 3 | 4 | 22 | 0 | 0 |
 | [Graphiques, niveaux et tendances](#charts) | 24 | 0 | 2 | 21 | 0 | 1 |
-| [Week-ends, sessions et calendrier](#calendar) | 20 | 0 | 4 | 9 | 5 | 2 |
+| [Week-ends, sessions et calendrier](#calendar) | 21 | 0 | 4 | 9 | 6 | 2 |
 | [Options, volatilité et signaux de marché](#options) | 16 | 0 | 0 | 14 | 0 | 2 |
 | [Très court terme (secondes, minutes)](#micro) | 13 | 0 | 1 | 7 | 1 | 4 |
 | [Coffres et pools des plateformes décentralisées](#vaults) | 11 | 0 | 1 | 4 | 6 | 0 |
 | [Portefeuilles, comptes papier et règles de gestion](#portfolio) | 16 | 0 | 3 | 8 | 3 | 2 |
 | [Lectures à l'aveugle d'échantillons mis de côté](#reserved) | 2 | 0 | 1 | 0 | 1 | 0 |
 | [Mesures de coûts, de données et outils (sans pari)](#infra) | 39 | 0 | 16 | 1 | 3 | 19 |
-| **Total** | **306** | **13** | **47** | **126** | **68** | **52** |
+| **Total** | **307** | **13** | **47** | **126** | **69** | **52** |
 
 <a id="carry"></a>
 
@@ -318,6 +318,7 @@ Effets de week-end, d'ouverture de séance, de clôture asiatique, de fin de moi
 | R471 | [`cryptomon_v1`](../../experiments/cryptomon_v1) | M521 gate 0: Bitcoin's weekend return W (P 16:00 to S 09:00 New York) against the Monday session move D (open… | nul |
 | R472 | [`rebalfront_v1`](../../experiments/rebalfront_v1) | M522 gate 0: front-running balanced-fund rebalancing (Harvey, Mazzoleni and Melone) on SPY/IEF closes: positi… | nul |
 | R473 | [`tlteom_v1`](../../experiments/tlteom_v1) | M528 gate 0: end-of-month Treasury rally (Hartley and Schwarz 2019) as a long TLT position over the last 3 tr… | partiel |
+| R528 | [`closing_momentum_v1`](../../experiments/closing_momentum_v1) | M523 on CME: intraday momentum into the cash close on ES.v.0 hourly bars (Databento), A = sign(prev close->10… | en cours |
 
 <a id="options"></a>
 

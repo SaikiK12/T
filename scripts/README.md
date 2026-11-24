@@ -156,7 +156,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (236)
+## Run: one lane's frozen measurement (237)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -192,6 +192,7 @@ line is the first line of the script's own docstring.
 - [`run_chartist.py`](run_chartist.py): chartist_v1 (R243): seven classic chart rules on 4 h and 1 d bars of the top-50 perps, directional books, as set out in experiments/chartist_v1/PREREG.md.
 - [`run_chartxm.py`](run_chartxm.py): chartxm_v1 (R247): R243's seven chart rules (run_chartist.states, unchanged) on daily bars of 11 forex pairs and 10 world equity indices, equal-weight books per group, as set out in ...
 - [`run_clockflow.py`](run_clockflow.py): clockflow_v1 (R289): fixed-clock flows on 1-minute bars of the BTC, ETH and SOL perps, as set out in experiments/clockflow_v1/PREREG.md.
+- [`run_closing_momentum.py`](run_closing_momentum.py): R528 closing_momentum_v1: intraday momentum into the US cash close on E-mini S&P 500 futures, as set out in experiments/closing_momentum_v1/PREREG.md.
 - [`run_cmecarry.py`](run_cmecarry.py): R501 cmecarry_v1: CME bitcoin (and ether) futures against the Binance perp, a funding-versus-basis carry.
 - [`run_cmecarry_v2.py`](run_cmecarry_v2.py): R502 cmecarry_v2 (R501's rule; R501 crashed at its first summary before any statistic): CME bitcoin (and ether) futures against the Binance perp, a funding-versus-basis carry.
 - [`run_cmelead.py`](run_cmelead.py): R370 cmelead_v1 runner, frozen in experiments/cmelead_v1/PREREG.md: after an EIA release moves CME's crude or gas future, does Binance's TradFi perp lag it long enough for a taker to earn the ...
