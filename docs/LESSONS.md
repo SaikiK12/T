@@ -11,6 +11,21 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L039 · 2026-11-24 · Turn a paper's lens on my own book before hunting a new strategy
+- **What surprised me:**
+  - The paper's decomposition (returns come mostly from price convergence) did more for us than its headline.
+  - Turned on our book, it shows the price legs are not noise. The entry price gap closes with a slope of about −1
+    (Kraken −1.25, Deribit −1.19, Bitfinex −1.06), so we lose it whenever we buy the dearer perp.
+  - Meanwhile the new strategy I had planned (Kraken spot-perp convergence) died on arithmetic: Kraken's retail spot
+    fees.
+- **What I will do differently:**
+  - After reading a paper, ask first what it says about the edge I already have, and only then what new strategy it
+    suggests.
+  - Do the fee arithmetic for the owner's actual venue before counting supply on a venue they cannot use.
+- **Not yet known:** whether the slope survives executable prices. Stale last trades on thin coins may inflate it. The
+  next observation uses Kraken marks and Hyperliquid mids.
+- **Instruction changed:** none.
+
 ## L038 · 2026-11-24 · Read the theory of the market before reasoning alone
 - **What surprised me:**
   - A paper I had listed in the intake on 2026-11-20 and never read (He, Manela, Ross & von Wachter) answers in its
