@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L037 · 2026-11-24 · My questions were mine to answer
+- **The owner.** "Toutes tes questions, réponds-les toi-même… même pour lire les arXiv etc., fais-le en profondeur."
+- **What surprised me** when I answered them myself from primary sources
+  ([answers_20261124.md](reviews/answers_20261124.md)):
+  - **Kraken EU's maintenance for our coins is 5%** (EEA margin schedule, Class E, Level I). I had asked the owner for
+    it twice. It sets the Kraken lane at 1.5x.
+  - **Gains are taxed under art. 150 ter CGI** (BOFiP 70-10 and 70-20) on the year's net across contracts: about 31.4%
+    in 2026, with losses carried ten years.
+  - **The owner's hurdle is euro cash after tax (about 1.5%), not the US bill (4.13%).** Dollar collateral is a
+    currency position that I had never counted.
+  - "Breakthrough" became a number I can steer by: €10,000 a year of after-tax excess, made of several capacity rents.
+- **What I will do differently:**
+  - I do not ask the owner anything I can find or decide. I research it, decide, write what I assumed, and leave only
+    the acts that are legally theirs.
+  - A paper that bears on the work is read in full.
+- **Instruction changed:** `CLAUDE.md`:
+  - the owner's quote;
+  - rule 6 (read in depth, no page cap);
+  - rule 12 (answer my own questions);
+  - chain step 3.
+
 ## L036 · 2026-11-24 · Rule first, then the data the rule names (first reflection cycle)
 - **What surprised me:**
   - Asking "on which price does each venue liquidate?" before measuring changed the answer:

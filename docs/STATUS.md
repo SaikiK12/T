@@ -40,6 +40,12 @@
       ne mise que si la lecture papier confirme au moins environ 5 %/an d'avantage.
   - **Ce qu'il te faut d'ici là :** des comptes sur les plateformes sans plancher (Kraken, Deribit, Bitfinex) et sur
     une ou deux plateformes à plancher.
+  - **Réponses trouvées moi-même (24-11) :**
+    - Kraken UE applique 5 % de marge de maintenance sur nos pièces, d'où un levier de 1,5 pour la piste Kraken.
+    - Les gains relèvent de l'article 150 ter du CGI, environ 31,4 % sur le net de l'année ; les comptes étrangers se
+      déclarent sur le formulaire 3916-bis.
+    - L'objectif de « percée » est de 10 000 €/an au-dessus du cash après impôt.
+    - Le plan de capital est en trois paliers ([détail](reviews/answers_20261124.md)).
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
