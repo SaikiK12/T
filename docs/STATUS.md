@@ -25,7 +25,7 @@
     - R527 (les trois) vers le 15-12 puis le 25-12 ;
     - R510 vers le 20-12 ;
     - R521 vers le 22-12.
-  - **Une réussite permet une petite mise** : 2 000 $ au plus, levier 1,5 sur Kraken et 2 ailleurs, placée par toi via
+  - **Une réussite permet une petite mise** : 2 000 $ au plus, **sans levier sur les comptes acheteurs d'altcoins** (24-11 : les chutes dans la journée, comme le 10-10-2025, auraient liquidé un compte à levier 1,5 ou 2), placée par toi via
     `lab.gate.go_real()`.
     - Le jour venu, `scripts/stake_ticket.py` donne la liste exacte des ordres par plateforme (quantités, dépôts,
       contrôles).

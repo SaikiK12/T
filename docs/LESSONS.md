@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L034 · 2026-11-24 · The resolution of the data is part of the risk model
+- **What surprised me** (self-review 2, then its first unasked item):
+  - Five cycles of margin work (ticket, Kelly, two accounts) used daily closes and found no liquidation at 1.5-2x.
+  - Binance's hourly bars show basket drops within a day of −44% (2021-05-19). Each coin's hourly low fell about −65%
+    on 2025-10-10. A 1.5-2x long-alt account would not have survived that.
+  - Money-station work changed a money decision in 5 of 5 cycles. Wide pattern tests paid 0 of 2.
+- **What I will do differently:**
+  - A risk number names its data resolution. Before it sets leverage, it is checked at the finest resolution the lab
+    holds, and against the venue's own liquidation price when known.
+  - Self-reviews choose the next work by measured yield (money station first while a stake is near).
+- **Instruction changed:** none yet. If a coarse-resolution risk number misleads again, "name the resolution" joins
+  the "Say what was not checked" habit in `CLAUDE.md`.
+
 ## L033 · 2026-11-24 · Ten minutes on the venue's own API before a lane
 - **What surprised me:**
   - My notes called dYdX a possible fourth floorless venue. The venue's indexer says three things:
