@@ -1,0 +1,195 @@
+{
+"folder": "data/databento/es_1h",
+"source": "Databento GLBX.MDP3 ohlcv-1h, ES.v.0, stype continuous (owner's paid account; each pull quoted first by the free metadata.get_cost)",
+"script": "scripts/fetch_databento.py",
+"recorded_utc": "2026-11-24T07:22:19Z",
+"excluded": [],
+"files": 35,
+"bytes": 1932403,
+"combined_sha256": "ccccf4662a425180fb7ea3fc7a309d7b3cda2d4bdc38c0e86025fd655c8e7c9d",
+"subfolders": {
+".": {
+"files": 35,
+"bytes": 1932403
+}
+},
+"hourly_coverage": {},
+"coverage": {},
+"file_hashes": [
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2010-06-06T000000Z_2010-07-01T000000Z.csv.zst",
+"bytes": 8925,
+"sha256": "b6fcafde29137a09af1fe508d5b0366cdb376511911db163d5dae063703b3638"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2010-07-01T000000Z_2011-01-01T000000Z.csv.zst",
+"bytes": 58222,
+"sha256": "f5019d854b99043b38c5a938e5fecc6a39b71a4bc344302cf7a6ac38b7066fcb"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2011-01-01T000000Z_2011-07-01T000000Z.csv.zst",
+"bytes": 56475,
+"sha256": "6e0482a05d4d7168d7c0e7f61ebf701ff62eaf8f4e1a7467754b47343f0535d9"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2011-07-01T000000Z_2012-01-01T000000Z.csv.zst",
+"bytes": 58868,
+"sha256": "d1b45f482c50839e480815def7f05bba554c2a70d69006d07738e55115f5b0fe"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2012-01-01T000000Z_2012-07-01T000000Z.csv.zst",
+"bytes": 56676,
+"sha256": "0e7520ab8e2541246930297371215b808f064fea5ffe3c63e274cf902eb8dd1d"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2012-07-01T000000Z_2013-01-01T000000Z.csv.zst",
+"bytes": 55794,
+"sha256": "863cc1b63bb9fe10afe100e50b1f79e7b938c1bcf4a1c6c7144dfafbdc86ff7a"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2013-01-01T000000Z_2013-07-01T000000Z.csv.zst",
+"bytes": 55147,
+"sha256": "e3a7de8b70a0f911c9cf74b56df9d7e9eb2e40f8d9a5dae42c00895f17c97eb9"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2013-07-01T000000Z_2014-01-01T000000Z.csv.zst",
+"bytes": 55926,
+"sha256": "9e2ea6730f478ec55548bfa7fe3df7f51448395baf1b20d8c8df1de6c58cb0ea"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2014-01-01T000000Z_2014-07-01T000000Z.csv.zst",
+"bytes": 53972,
+"sha256": "d9e9828e72347fd5440c6867c589a5226c327fc2416e4f3bd6a7edd413978133"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2014-07-01T000000Z_2015-01-01T000000Z.csv.zst",
+"bytes": 56460,
+"sha256": "873027ba0b67582251482e83b484495a2830dc1410179d1ac49ad5dfb4e724fc"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2015-01-01T000000Z_2015-07-01T000000Z.csv.zst",
+"bytes": 56563,
+"sha256": "aac862571da3d38ab191d9f3c1ef1f10adf4916f68d1909f235890204b180fad"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2015-07-01T000000Z_2016-01-01T000000Z.csv.zst",
+"bytes": 58792,
+"sha256": "79a00a390e44105da8883d9ba5dbc0936ce7bd3dd002e7c5dd37b0cae3bb39e0"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2016-01-01T000000Z_2016-07-01T000000Z.csv.zst",
+"bytes": 57104,
+"sha256": "8a72cd673123dcc667a7c7be9285216225114939029da707aecb49d46e63e826"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2016-07-01T000000Z_2017-01-01T000000Z.csv.zst",
+"bytes": 55951,
+"sha256": "d706402033b715888ddee3ec08858c02f3586594c89429ef5263adc9ac0bd812"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2017-01-01T000000Z_2017-07-01T000000Z.csv.zst",
+"bytes": 54283,
+"sha256": "f1bfbaad14b40ca49016c136a4dd88424a86f307f058624c595614249c339d15"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2017-07-01T000000Z_2018-01-01T000000Z.csv.zst",
+"bytes": 54333,
+"sha256": "fc0bd4381a4288f1dcef43f0f8b0cc6dfc3f6df4edeeff3a80852a6cc75a597b"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2018-01-01T000000Z_2018-07-01T000000Z.csv.zst",
+"bytes": 57705,
+"sha256": "38f904707f13fc7be83bec038f19206a030f0c02fcff36ab5d64c78c59576a41"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2018-07-01T000000Z_2019-01-01T000000Z.csv.zst",
+"bytes": 58333,
+"sha256": "113ee0a3000f6152e3aca9fd1cc0a66f9db455422f9818e5b9d60ed71a0de47d"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2019-01-01T000000Z_2019-07-01T000000Z.csv.zst",
+"bytes": 56779,
+"sha256": "4087638fa71cd4eb85e4ee3fb97d960c9cf6e564cd80c8ac794a65603b552c26"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2019-07-01T000000Z_2020-01-01T000000Z.csv.zst",
+"bytes": 58466,
+"sha256": "154fc62ae560fa6081f3ffcc7af985d34b2e308ad2211b1a4c4021f262dd1137"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2020-01-01T000000Z_2020-07-01T000000Z.csv.zst",
+"bytes": 62559,
+"sha256": "37305e57addea098d04323c760eab7196faafee146098cd064098d317501ab8c"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2020-07-01T000000Z_2021-01-01T000000Z.csv.zst",
+"bytes": 60938,
+"sha256": "32477c22a435360c5ebfe0c193df5798cdfb43fcdf503b28f57b128d26a93e44"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2021-01-01T000000Z_2021-07-01T000000Z.csv.zst",
+"bytes": 58489,
+"sha256": "e1dad3f4e9ba3b5d304e8e70d886f597ed534d5a84a173f2f9e31236848a6baa"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2021-07-01T000000Z_2022-01-01T000000Z.csv.zst",
+"bytes": 61142,
+"sha256": "6859dc09cb7f3c35949987a04b1e94b508f2dd60e3c158f3ac425d02ed50666e"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2022-01-01T000000Z_2022-07-01T000000Z.csv.zst",
+"bytes": 62246,
+"sha256": "151468cf83f38d6fa236cc9d5f18dbe4dd3cc9840f45b29163bf6ab23ae91674"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2022-07-01T000000Z_2023-01-01T000000Z.csv.zst",
+"bytes": 62250,
+"sha256": "6ae6614ee5dc88893e0d933701dc65db5b63c91eede85a235e8deec8bff8675b"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2023-01-01T000000Z_2023-07-01T000000Z.csv.zst",
+"bytes": 59488,
+"sha256": "f2020c749e967b82400067cdacc5e75dacdec50e0b5bc55f02583d34a1755cf1"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2023-07-01T000000Z_2024-01-01T000000Z.csv.zst",
+"bytes": 59766,
+"sha256": "501dc084be15398be8419865488ae815d351285ed7ae70045e7bc215d5b773fa"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2024-01-01T000000Z_2024-07-01T000000Z.csv.zst",
+"bytes": 58777,
+"sha256": "637cfa7cf84fcf2c1a79a61a5c56ede8e10626479e9181c4462ab07187570c45"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2024-07-01T000000Z_2025-01-01T000000Z.csv.zst",
+"bytes": 60956,
+"sha256": "9098c5d859b89ed6d698ce85f236ff596b49587b0e164ea5d97947c71d5a56f3"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2025-01-01T000000Z_2025-07-01T000000Z.csv.zst",
+"bytes": 61405,
+"sha256": "8027f3cf4c91a04f8fad2f1bf3cc0e3a69e09aa5af4a12ac1be6a9947ce3a56c"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2025-07-01T000000Z_2026-01-01T000000Z.csv.zst",
+"bytes": 60321,
+"sha256": "4a2bebf0531ee72b95a76b976cffe30e7002048fe7efb8edcbe76649f164014d"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2026-01-01T000000Z_2026-07-01T000000Z.csv.zst",
+"bytes": 61587,
+"sha256": "79b79e6354203698e76c1a71f42dc1d9f534b315da6013631074e9cd1abe3238"
+},
+{
+"path": "GLBX.MDP3_ES.v.0_ohlcv-1h_2026-07-01T000000Z_2026-11-21T000000Z.csv.zst",
+"bytes": 49055,
+"sha256": "9dc63ee80f13f7f1e2c2b5b06fb22dc1e1ee1eac7b0277c384ec6001cb1c5e24"
+},
+{
+"path": "manifest.csv",
+"bytes": 8650,
+"sha256": "a7d647423d3630bd2b3d666d3c7519cbb4d080454f063c6d7a9cdf09e2492352"
+}
+]
+}

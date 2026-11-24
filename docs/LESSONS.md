@@ -27,6 +27,9 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
   - Before a wide cycle, run the family keywords through `registry/methods.csv` and choose among the gaps.
   - Price data with the free quote before designing. Fit the design to the cheapest data that keeps the predictor
     exact, and write the cost of that choice into the pre-mortem.
+- **Result, the same cycle:** R528 FAIL (NULL). The sign of the day's move does not predict ES's last hour (sign
+  correlation 0.003 and 0.033). The return correlation (0.08-0.11) comes from large-move days, and halved after 2018.
+  Regression evidence in a paper (an R²) is not a tradable sign rule; check that before buying data.
 - **Instruction changed:** none.
 
 ## L029 · 2026-11-24 · Borrowing credit risk: venue failure costs about as much as half the edge

@@ -285,7 +285,6 @@
 | 2026-11-18 00:00 UTC | R404 `book_costs_v1` closed: PARTIAL, 29 snapshots with all three venues out of the 40 required ([FINDINGS](../experiments/book_costs_v1/FINDINGS.md)) |
 | 2026-11-19 00:00 UTC | Codex's R420 dispatch ends by design. At the next session, confirm the four `quant-*` workflows only report health, then retire them by the runtime's `active_contract` route |
 | 2026-12-01..07 | R498 `gatefill_fwd`: read the queue and fills of a resting Gate order (it changes no lane) |
-| 2026-11-24 (data arriving) | R528 `closing_momentum_v1`: intraday momentum into the US cash close on ES hourly bars, run once when the Databento pulls finish |
 | about 2026-12-13 / 12-23 | R523 combined fast read (R509 + R520), looks at 20 / 30 common scored days |
 | about 2026-12-15 / 12-25 | R527 combined fast read of the three floorless lanes (R509 + R520 + R524), looks at 20 / 30 common days |
 | about 2026-12-20 / 12-22 | R510 (R509's fast read) and R521 (R520's fast read) |
