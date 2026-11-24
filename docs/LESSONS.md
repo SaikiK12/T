@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L035 · 2026-11-24 · The owner: I work too much and reflect too little
+- **The owner.** "Tu travailles trop et tu réfléchis peu sur toi-même… c'est ça qui nous sépare terriblement des
+  breakthroughs… tu dois passer le plus clair de ton temps à faire ça."
+- **What I see when I look:**
+  - The only breakthrough came from understanding a rule (funding formulas) and comparing it across venues.
+  - My loop rewarded two-hour increments, so I chose tools, notes and cheap tests.
+  - My self-improvement added rules after each mistake. It did not change how I think.
+  - The wide cycles tested other people's published ideas instead of mechanisms we uniquely see.
+- **What I will do differently** ([approach_20261124.md](reviews/approach_20261124.md)):
+  - Most of each cycle is written reflection: the one-page approach (question, mechanism, barrier, Fermi size, our
+    edge, cheapest decisive observation).
+  - The map of venue design mechanisms, filled from primary sources.
+  - A review of how I approached the last subject.
+  - A test only when the reflection names it.
+- **Instruction changed:** `CLAUDE.md`:
+  - the owner's quote;
+  - a new section "How I approach a subject" at the top;
+  - rule 11 (reflect more than I produce);
+  - rules 1 and 9 amended (a reflection is the default increment);
+  - chain step 2 is now "Think".
+
 ## L034 · 2026-11-24 · The resolution of the data is part of the risk model
 - **What surprised me** (self-review 2, then its first unasked item):
   - Five cycles of margin work (ticket, Kelly, two accounts) used daily closes and found no liquidation at 1.5-2x.
