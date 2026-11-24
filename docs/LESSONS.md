@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L036 · 2026-11-24 · Rule first, then the data the rule names (first reflection cycle)
+- **What surprised me:**
+  - Asking "on which price does each venue liquidate?" before measuring changed the answer:
+    - Kraken liquidates on a spot-index mark, which fell −44% on 2025-10-10;
+    - Binance's prints fell −65% to −69%.
+  - The reflection also split the design gap in two:
+    - a risk premium on liquid pairs, which is why funds leave it;
+    - a capacity rent on thin coins, which is where a small account has an edge.
+  - The clamp band in the floor formula explains why the gap persists: arbitrage cannot move the floor.
+- **What I will do differently:**
+  - Read the rule that produces a number (formula, liquidation price, margin schedule) before choosing the data.
+  - Look for the next edges as capacity rents behind thin books, not as published anomalies.
+- **The way of thinking changed:** measure → mechanism → measure the right thing. Recorded in
+  `docs/reviews/mechanism_map.md`, the living map.
+- **Instruction changed:** none. The approach section of `CLAUDE.md` already says it; this cycle is the first time I
+  followed it.
+
 ## L035 · 2026-11-24 · The owner: I work too much and reflect too little
 - **The owner.** "Tu travailles trop et tu réfléchis peu sur toi-même… c'est ça qui nous sépare terriblement des
   breakthroughs… tu dois passer le plus clair de ton temps à faire ça."
