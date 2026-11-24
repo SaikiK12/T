@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L031 · 2026-11-24 · The outside view, measured: payers pass, patterns do not
+- **Read:** Ioannidis (2005), pp. 1-3, in place of Tetlock (his page is behind a Cloudflare challenge; no
+  workaround).
+- **What surprised me** (`scripts/base_rates.py` on 244 FINDINGS):
+  - Families with a structural payer pass most of their decided tests: carry 64%, settle 43%.
+  - Charts, options, micro, portfolio and vaults have never passed one.
+  - My wide cycle (R528, calendar family) went where past passes had not survived. An honest forecast would have
+    been about 5-10%. I did not write one.
+- **What I will do differently:**
+  - Every PREREG writes a forecast (the family's share, the prior, the power, P(PASS)).
+  - Under about 10%, I write why the test is still worth a cycle.
+  - Self-reviews score the forecasts.
+- **"Wide" should mean new payers, not new patterns.** Rule 7 (wide, not stuck) is best served by looking for
+  structural payers in other markets, the families with a measured yield.
+- **Instruction changed:** `CLAUDE.md` step 4 (forecast before the freeze) and "Principles from the masters"
+  (Ioannidis); the PREREG template gains a "Forecast" section.
+
 ## L030 · 2026-11-24 · Going wide starts in the registry, and a data budget shapes the design
 - **What surprised me:**
   - The registry had already closed most of the "obvious" other families:

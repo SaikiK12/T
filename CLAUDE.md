@@ -32,6 +32,8 @@ not to add process.
    better data.
 7. **Wide, not stuck.** No tunnel on one venue or family. Look across all markets and axes, and above single
    strategies: frameworks, portfolios, breadth.
+   - Wide means new structural payers in other markets, not new price patterns (L031: payer families pass 43-64%
+     of decided tests, pattern families 0-23%).
 8. **Access is the owner's.** Every venue is in scope for research. Money rules (AGENTS.md) are unchanged.
 9. **Work continuously.** The two-hourly task is one chain cycle per wake, and each cycle ends with a finished
    increment.
@@ -48,6 +50,10 @@ not to add process.
 - **López de Prado: "backtesting is not a research tool."**
   - Explain why an edge pays (decompose by source, coin, venue, regime) before running another backtest.
   - Treat the lab as stations, each with a measured quality: data, mechanism, test, costs, portfolio, money.
+- **Ioannidis: "the greater the number and the lesser the selection of tested relationships… the less likely the
+  research findings are to be true."**
+  - PPV = (1 − β)R/(R − βR + α). This lab tests at scale, so priors come from its own base rates by family, not from
+    the paper that proposed the idea.
 - **Thorp: "assume mt < me and choose f < fe* by enough to prevent g ⩽ 0."**
   - Size a stake by the shrunk edge (at most half the in-sample level) and the jump that can happen (here, a venue
     failing), never by the in-sample variance.
@@ -79,6 +85,11 @@ not to add process.
      look, change the rule or the horizon.
    - For a design gap, the sign comes from the design (long the floorless venue), never from a short window. Check
      where each venue's day starts before trusting a loader.
+   - **Forecast before the freeze (Ioannidis).** Write the family's pass share (`scripts/base_rates.py`), the prior,
+     the power and P(PASS) = π·power + (1 − π)·α in the PREREG.
+     - Outside carry, past passes rarely survived confirmation (0% in charts, options, micro and portfolio), so the
+       prior there is low.
+     - Under about 10%, write why the test is still worth a cycle. R528 would have read about 5-10%.
    - **Pre-mortem before the freeze.** Write five lines: "it failed because…". If a reason is likely, fix the design.
      Four of my five FAILs in R507-R525 were foreseeable this way.
    - Then freeze, run once, and read the by-year table before the headline.

@@ -79,11 +79,35 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
     (L m − r)/(1 − recovery).
   - Stake at most half the growth-optimal fraction.
 
+### John P. A. Ioannidis, "Why Most Published Research Findings Are False" (PLoS Medicine, 2005)
+- **Read 2026-11-24:** pp. 1-3 of 6 (the framework, the bias model, the corollaries, Tables 1-3, Figure 1). Open
+  access: https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124.
+- **Taken in place of Tetlock.** Good Judgment's commandments page sits behind a Cloudflare challenge, and no
+  workaround is used. Ioannidis answers the same question with an equation.
+- **The equation** (Table 1, checked against the page):
+  - with prior odds R, power 1 − β and size α, PPV = (1 − β)R / (R − βR + α);
+  - a finding is more likely true than false only if (1 − β)R > α;
+  - with bias u, PPV = ([1 − β]R + uβR) / (R + α − βR + u − uα + uβR), which falls as u rises.
+- **The passage that matters.** "Corollary 3: The greater the number and the lesser the selection of tested
+  relationships in a scientific field, the less likely the research findings are to be true." Hypothesis-generating
+  fields "should have extremely low PPV". At 9.8 million trials, this lab is one.
+- **Measured here** (`scripts/base_rates.py`, 244 FINDINGS):
+  - decided pass share: carry 64%, settle 43%, carry_tradfi 33%, cross-section 23%, calendar 23%, flow 17%,
+    events 14%;
+  - charts, options, micro, portfolio and vaults: 0%;
+  - all families: 26%.
+  - Past passes outside carry mostly failed their confirmations, so their share overstates the prior.
+- **Rules it gave:**
+  - Every PREREG writes a forecast: the family's pass share, the prior, the power, and P(PASS) (template section
+    "Forecast").
+  - A test under about 10% P(PASS) needs a written reason.
+  - The self-review scores those forecasts.
+
 ## Next to read (legal copies only; one every fourth cycle)
-1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters" (Good Judgment's
-   public page). Base rates, Fermi-izing, incremental updates.
+1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters". Good Judgment's
+   page was behind a Cloudflare challenge on 2026-11-24; a library or publisher copy is needed. Base rates,
+   Fermi-izing, incremental updates.
 2. **Gary Klein, "Performing a Project Premortem"** (HBR, 2007): imagine the stake failed, then list why.
-3. **John Ioannidis, "Why Most Published Research Findings Are False"** (PLoS Medicine, 2005, open access).
 4. **Bailey, Borwein, López de Prado and Zhu, "Pseudo-Mathematics and Financial Charlatanism"** (Notices of the AMS,
    2014, free).
 5. **Campbell Harvey, "The Scientific Outlook in Financial Economics"** (AFA presidential address, 2017): the

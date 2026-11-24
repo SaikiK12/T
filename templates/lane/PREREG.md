@@ -49,6 +49,15 @@ All generated, failed, skipped and retained variants in this decision family, pl
 trials so far: ___. The raw program sum is bookkeeping, not an effective independent-test count or a cross-family
 correction.
 
+## Forecast (outside view, written before the freeze)
+- **The family's decided pass share:** from `python scripts/base_rates.py --family <family> --power <power>`.
+  - In families whose past passes did not survive their confirmations, the share overstates the prior.
+- **Prior that the effect is real (pi), and why.**
+- **Power at the decided look.**
+- **P(PASS) = pi·power + (1 − pi)·alpha,** and the PPV = pi·power / (pi·power + (1 − pi)·alpha) (Ioannidis 2005).
+- **Under about 10% P(PASS):** say why the test is still worth its cost (a cheap, decisive null; a payer no one
+  tested).
+
 ## Evidence lineage and admission (future lanes only)
 Canonical method ids: ___. Parent rounds, variants and previous inspected outputs: ___.
 One decision group this signal feeds (shared diagnostics are not new chances): ___.

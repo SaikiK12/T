@@ -456,7 +456,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (120)
+## Tools and everything else (121)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -465,6 +465,7 @@ line is the first line of the script's own docstring.
 - [`announce_events.py`](announce_events.py): Legs for the announcement-family scan (R271) from Binance's three notice catalogs (data/recorders/notices/binance_{news,delisting,listing}.csv, scripts/record_notices.py).
 - [`asiaclose_rule.py`](asiaclose_rule.py): R468 asiaclose_v1 rule, frozen in experiments/asiaclose_v1/PREREG.md: Asian single-stock perps on trade.xyz and Lighter trade every hour, but their reference exchange (KRX, TSE, HKEX, SSE) is shut ...
 - [`atlas_replication.py`](atlas_replication.py): atlas_v1 (R185): score the frozen discovery lists on validation (same sign and |t| >= 2), as the PREREG says.
+- [`base_rates.py`](base_rates.py): The lab's outside view: how often a registered test in each family passed, from every experiment's FINDINGS, and the prior chance that the next one passes (Ioannidis 2005, "Why most published ...
 - [`benchmark_evaluation.py`](benchmark_evaluation.py): Bounded synthetic engineering benchmark, never an edge/outcome search.
 - [`bls_calendar.py`](bls_calendar.py): Restricted BLS iCalendar reader: announced schedules, not actual releases.
 - [`boroslock_fwd_rule.py`](boroslock_fwd_rule.py): The rule of R413 boroslock_fwd: Boros funding locks on paper, priced from the live order book (pure functions only).
