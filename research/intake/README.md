@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-24 | [perp_fundamentals_20261124.md](perp_fundamentals_20261124.md) | He, Manela, Ross & von Wachter (arXiv 2212.06888, read in full): funding = cash rate under unlimited arbitrage; the gap is the price of leverage bounded by arbitrage capacity W/m; clamp-correct convergence at retail costs; our supply count for 2025-26 |
 | 2026-11-24 | [venue_failure_20261124.md](venue_failure_20261124.md) | Venue failure base rates (Q3): 822 exchanges, 40% closed, about 10%/yr; hazard ratios by coins traded, fiat and US customers; 47% recovery where known; per-venue rates for `scripts/stake_kelly.py` |
 | 2026-11-23 | [reels_20261123.md](reels_20261123.md) | Owner reels: an NQ order-flow day-trading funnel (caption only; tested families R349/R211/R226 NULL; R522 explains whale prints on thin books) and one post that would not open. No test |
 | 2026-11-21 | [points_value_20261121.md](points_value_20261121.md) | What venue points programs paid per dollar of volume (Hyperliquid about 3 bp, Lighter 1 bp or less, at launch prices; order of magnitude): noise for a carry book, a rebate for a make-and-hedge book (Bet 3 joins Bet 2) |

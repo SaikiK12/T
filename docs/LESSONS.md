@@ -11,6 +11,21 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L038 · 2026-11-24 · Read the theory of the market before reasoning alone
+- **What surprised me:**
+  - A paper I had listed in the intake on 2026-11-20 and never read (He, Manela, Ross & von Wachter) answers in its
+    first 37 pages what my own reasoning had half-found. Funding above cash is the price of leverage, bounded by
+    arbitrage capacity W/m. With unlimited capacity every venue's funding equals the cash rate, so our design gap is
+    a limits-of-arbitrage rent, protected by the absence of cross-venue netting and decaying as capital grows.
+  - It also showed that the lab's premium tests used the wrong target (premium = 0). The clamp-correct one is about
+    −0.046% per 8 h, and on our data the supply for that trade is still large in 2025-26.
+- **What I will do differently:**
+  - Before reasoning about a market from scratch, read its best theory paper in full. The intake list is a reading
+    queue, not a catalogue.
+  - Search for capacity rents with the three measurable conditions: demand θ, capacity W/m, our access.
+- **Instruction changed:** none. Rule 6 (read in depth) already says it; this is the first time I applied it to the
+  core market.
+
 ## L037 · 2026-11-24 · My questions were mine to answer
 - **The owner.** "Toutes tes questions, réponds-les toi-même… même pour lire les arXiv etc., fais-le en profondeur."
 - **What surprised me** when I answered them myself from primary sources
