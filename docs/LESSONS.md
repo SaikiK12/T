@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L033 · 2026-11-24 · Ten minutes on the venue's own API before a lane
+- **What surprised me:**
+  - My notes called dYdX a possible fourth floorless venue. The venue's indexer says three things:
+    - cross markets are floorless, but premium-driven (their funding ran above Binance's in 2024-25);
+    - isolated markets (180 of 296) carry a 10.95%/yr floor;
+    - the whole venue trades $42M a day.
+  - The queued test (M469) would have spent a registered round on a venue with no capacity.
+- **What I will do differently:**
+  - Before a lane on a venue, pull its own market list. Check the design field (here `defaultFundingRate1H`), the
+    24 h volume per market, and the sign of the funding gap by year.
+  - The design is a necessary condition. The gap and the volume decide.
+- **Second occurrence?** Close to L026 (an API field read wrongly), but the other way round: here the venue's field
+  corrected my notes. The shared lesson is to read the venue's own data before believing a summary. If it recurs, it
+  joins the "Data I need" habit in `CLAUDE.md`.
+- **Instruction changed:** none.
+
 ## L032 · 2026-11-24 · A public payer is paid first by someone else; the first forecast, scored
 - **What surprised me** (R529, NULL):
   - Index funds must roll on announced dates, and CFTC economists see the spread move with their holdings. Yet a

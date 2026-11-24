@@ -202,6 +202,8 @@ Read by task, not the whole list.
 
 ### 7. Audits and reviews
 - **Dated reviews in `docs/reviews/`, newest first:**
+  - [Is dYdX a fourth floorless venue? 2026-11-24](docs/reviews/dydx_premise_20261124.md): no. Cross markets are
+    floorless but premium-driven, isolated markets have a floor, and the venue trades $42M a day.
   - [Self-review of my research choices, 2026-11-23](docs/reviews/self_review_20261123.md): outcomes by lens for R507-R525,
     failure modes, and the unasked work worth more than the plan.
   - [Frameworks above strategies, 2026-11-23](docs/reviews/framework_20261123.md): the four design-gap books are nearly
