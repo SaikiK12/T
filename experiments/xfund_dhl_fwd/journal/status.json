@@ -1,26 +1,26 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-23T01:00:11.638453+00:00",
+ "updated": "2026-11-24T01:20:10.115460+00:00",
  "waiting": false,
  "ready": {
-  "deribit": 1.175,
+  "deribit": 1.054,
   "hyperliquid": 0.989
  },
  "data": {
-  "hyperliquid": {
-   "files": 89,
-   "failed": 1,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "SAGA"
-   ]
-  },
   "deribit": {
    "files": 89,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 89,
+   "failed": 1,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "MORPHO"
+   ]
   }
  },
  "A": {
@@ -35,12 +35,6 @@
     "long": "deribit",
     "short": "hyperliquid",
     "spread_in": 0.2194
-   },
-   {
-    "coin": "AAVE",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0785
    },
    {
     "coin": "ZEC",
@@ -109,12 +103,6 @@
     "spread_in": 0.2024
    },
    {
-    "coin": "BERA",
-    "long": "hyperliquid",
-    "short": "deribit",
-    "spread_in": 0.2055
-   },
-   {
     "coin": "VIRTUAL",
     "long": "deribit",
     "short": "hyperliquid",
@@ -149,18 +137,30 @@
     "long": "deribit",
     "short": "hyperliquid",
     "spread_in": 0.173
+   },
+   {
+    "coin": "STRK",
+    "long": "deribit",
+    "short": "hyperliquid",
+    "spread_in": 0.1648
+   },
+   {
+    "coin": "PAXG",
+    "long": "hyperliquid",
+    "short": "deribit",
+    "spread_in": 0.1485
    }
   ],
-  "scored_days": 1,
+  "scored_days": 2,
   "late_days": 1,
-  "total": -0.0002838509,
-  "total_2x": -0.0009838509,
-  "total_3x": -0.0016838509,
-  "total_close": 0.0004161491,
+  "total": -0.0008372053,
+  "total_2x": -0.0016072053,
+  "total_3x": -0.0023772053,
+  "total_close": -0.0001565548,
   "nw_t": null,
-  "max_drawdown": -0.0002838509,
+  "max_drawdown": -0.0008372053,
   "replay_days": 31,
   "replay_total": 0.0006646258000000004
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

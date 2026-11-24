@@ -1,24 +1,27 @@
 {
  "lane": "xfund_eea_fwd",
  "rid": "R509",
- "updated": "2026-11-23T00:57:34.740582+00:00",
+ "updated": "2026-11-24T01:18:01.750105+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
-  "hyperliquid": 1.0
+  "hyperliquid": 0.981
  },
  "data": {
-  "hyperliquid": {
-   "files": 111,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
   "kraken": {
    "files": 111,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 111,
+   "failed": 2,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "XLM",
+    "ZK"
+   ]
   }
  },
  "A": {
@@ -65,12 +68,6 @@
     "spread_in": 0.2576
    },
    {
-    "coin": "ORDI",
-    "long": "hyperliquid",
-    "short": "kraken",
-    "spread_in": 0.525
-   },
-   {
     "coin": "MOODENG",
     "long": "hyperliquid",
     "short": "kraken",
@@ -89,12 +86,6 @@
     "spread_in": 0.5843
    },
    {
-    "coin": "PNUT",
-    "long": "kraken",
-    "short": "hyperliquid",
-    "spread_in": 1.0445
-   },
-   {
     "coin": "BIO",
     "long": "kraken",
     "short": "hyperliquid",
@@ -111,12 +102,6 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.7053
-   },
-   {
-    "coin": "PEOPLE",
-    "long": "kraken",
-    "short": "hyperliquid",
-    "spread_in": 0.6948
    },
    {
     "coin": "SAGA",
@@ -147,18 +132,36 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.7921
+   },
+   {
+    "coin": "MORPHO",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.7365
+   },
+   {
+    "coin": "SYRUP",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.6794
+   },
+   {
+    "coin": "ENS",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.6527
    }
   ],
-  "scored_days": 4,
+  "scored_days": 5,
   "late_days": 1,
-  "total": 0.0018677324000000001,
-  "total_2x": 0.0010977323999999998,
-  "total_3x": 0.0003277324000000001,
-  "total_close": 0.0036619052999999997,
-  "nw_t": 6.038521876418211,
+  "total": 0.0026776961000000003,
+  "total_2x": 0.0019076961,
+  "total_3x": 0.0011376961000000001,
+  "total_close": 0.004471869,
+  "nw_t": 6.83113497974721,
   "max_drawdown": -0.0002211662,
   "replay_days": 28,
   "replay_total": 0.0007422842
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

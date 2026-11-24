@@ -1,28 +1,23 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-23T00:50:07.961464+00:00",
+ "updated": "2026-11-24T00:59:27.329041+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 0.913,
-  "lighter": 1.053
+  "mexc": 0.965,
+  "lighter": 0.957
  },
  "data": {
   "mexc": {
    "files": 117,
-   "failed": 10,
+   "failed": 5,
    "changed_on_overlap": 0,
    "failed_some": [
-    "JTO_USDT",
-    "JUP_USDT",
-    "KAITO_USDT",
-    "LTC_USDT",
-    "MEGA_USDT",
-    "MET_USDT",
-    "MYX_USDT",
-    "NMR_USDT",
-    "OP_USDT",
-    "PIPPIN_USDT"
+    "GRAM_USDT",
+    "HBAR_USDT",
+    "ICP_USDT",
+    "LDO_USDT",
+    "LTC_USDT"
    ]
   },
   "lighter": {
@@ -124,22 +119,10 @@
     "spread_in": 0.0847
    },
    {
-    "coin": "SKRUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.0866
-   },
-   {
     "coin": "XAUUSDT",
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.0787
-   },
-   {
-    "coin": "JUPUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0872
    },
    {
     "coin": "GRAMUSDT",
@@ -158,18 +141,30 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1976
+   },
+   {
+    "coin": "METUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.2178
+   },
+   {
+    "coin": "AAVEUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.0945
    }
   ],
-  "scored_days": 31,
+  "scored_days": 32,
   "late_days": 16,
-  "total": -0.0033503035,
-  "total_2x": -0.005550303499999999,
-  "total_3x": -0.0077503035,
-  "total_close": -0.0032439923999999995,
-  "nw_t": -1.556636678120633,
+  "total": -0.0022236785000000004,
+  "total_2x": -0.0044786784999999996,
+  "total_3x": -0.0067336785000000005,
+  "total_close": -0.0020577929,
+  "nw_t": -1.5770063712083444,
   "max_drawdown": -0.0045535545,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

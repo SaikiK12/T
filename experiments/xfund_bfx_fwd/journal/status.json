@@ -1,20 +1,20 @@
 {
  "lane": "xfund_bfx_fwd",
  "rid": "R524",
- "updated": "2026-11-23T21:16:06.591422+00:00",
+ "updated": "2026-11-24T01:23:04.334544+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "bitfinex": 0.889
+  "bitfinex": 1.562
  },
  "data": {
-  "bitfinex": {
+  "binance": {
    "files": 69,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "binance": {
+  "bitfinex": {
    "files": 69,
    "failed": 0,
    "changed_on_overlap": 0,
@@ -47,22 +47,10 @@
     "spread_in": 0.1133
    },
    {
-    "coin": "XRP",
-    "long": "bitfinex",
-    "short": "binance",
-    "spread_in": 0.0558
-   },
-   {
     "coin": "AVAX",
     "long": "bitfinex",
     "short": "binance",
     "spread_in": 0.0521
-   },
-   {
-    "coin": "DOT",
-    "long": "bitfinex",
-    "short": "binance",
-    "spread_in": 0.0572
    },
    {
     "coin": "HYPE",
@@ -103,8 +91,8 @@
   "total_close": 0.0,
   "nw_t": null,
   "max_drawdown": 0.0,
-  "replay_days": 32,
-  "replay_total": -0.00014162810000000023
+  "replay_days": 33,
+  "replay_total": 0.00015490449999999977
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

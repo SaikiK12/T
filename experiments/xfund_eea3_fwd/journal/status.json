@@ -1,12 +1,12 @@
 {
  "lane": "xfund_eea3_fwd",
  "rid": "R512",
- "updated": "2026-11-23T00:59:07.264747+00:00",
+ "updated": "2026-11-24T01:19:13.240688+00:00",
  "waiting": false,
  "ready": {
   "kraken": 1.0,
-  "hyperliquid": 0.98,
-  "aster": 1.0
+  "hyperliquid": 1.0,
+  "aster": 0.992
  },
  "data": {
   "aster": {
@@ -15,17 +15,14 @@
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "hyperliquid": {
-   "files": 101,
-   "failed": 2,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "AAVE",
-    "ACE"
-   ]
-  },
   "kraken": {
    "files": 132,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 101,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -81,12 +78,6 @@
     "spread_in": 1.2446
    },
    {
-    "coin": "BB",
-    "long": "aster",
-    "short": "kraken",
-    "spread_in": 1.195
-   },
-   {
     "coin": "ORDI",
     "long": "aster",
     "short": "kraken",
@@ -117,12 +108,6 @@
     "spread_in": 1.1723
    },
    {
-    "coin": "PNUT",
-    "long": "kraken",
-    "short": "hyperliquid",
-    "spread_in": 1.1595
-   },
-   {
     "coin": "CHZ",
     "long": "kraken",
     "short": "aster",
@@ -133,12 +118,6 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 1.131
-   },
-   {
-    "coin": "ZBT",
-    "long": "kraken",
-    "short": "aster",
-    "spread_in": 0.9167
    },
    {
     "coin": "SAGA",
@@ -157,18 +136,36 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.8676
+   },
+   {
+    "coin": "BAT",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.9356
+   },
+   {
+    "coin": "MORPHO",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.7365
+   },
+   {
+    "coin": "SPX",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.7212
    }
   ],
-  "scored_days": 3,
+  "scored_days": 4,
   "late_days": 1,
-  "total": -0.0001676904000000001,
-  "total_2x": -0.0009376904,
-  "total_3x": -0.0017076904000000001,
-  "total_close": 0.0005211375,
-  "nw_t": -0.22673406949333366,
+  "total": 0.0017294475,
+  "total_2x": 0.0009594475,
+  "total_3x": 0.00018944749999999988,
+  "total_close": 0.0024182754000000002,
+  "nw_t": 1.3125552559660285,
   "max_drawdown": -0.0015399559,
   "replay_days": 29,
   "replay_total": 0.007991831399999998
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

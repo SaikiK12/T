@@ -1,46 +1,24 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-23T00:35:21.103387+00:00",
+ "updated": "2026-11-24T00:40:40.335498+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.003,
-  "gate": 1.052,
-  "hyperliquid": 0.989,
-  "mexc": 0.976
+  "binance": 1.0,
+  "gate": 1.023,
+  "hyperliquid": 0.977,
+  "mexc": 0.992
  },
  "data": {
-  "gate": {
-   "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 3,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "GMT",
-    "TST",
-    "TURBO"
-   ]
-  },
   "mexc": {
    "files": 520,
-   "failed": 12,
+   "failed": 4,
    "changed_on_overlap": 0,
    "failed_some": [
-    "FLOKI_USDT",
-    "FLUX_USDT",
-    "GALA_USDT",
-    "INIT_USDT",
-    "KAT_USDT",
-    "KITE_USDT",
-    "KNC_USDT",
-    "MAGMA_USDT",
-    "MTL_USDT",
-    "NEO_USDT"
+    "PAXG_USDT",
+    "PENGU_USDT",
+    "PLUME_USDT",
+    "POLYX_USDT"
    ]
   },
   "binance": {
@@ -52,6 +30,23 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 4,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "LDO",
+    "LINEA",
+    "TRB",
+    "TRUMP"
+   ]
   }
  },
  "A": {
@@ -61,12 +56,6 @@
   "slots": 20,
   "why": "R275's best passing book by 1x t",
   "held_now": [
-   {
-    "coin": "ZROUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.109
-   },
    {
     "coin": "WUSDT",
     "long": "gate",
@@ -128,18 +117,6 @@
     "spread_in": 0.2196
    },
    {
-    "coin": "GOATUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.2315
-   },
-   {
-    "coin": "AEROUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.2032
-   },
-   {
     "coin": "MELANIAUSDT",
     "long": "hyperliquid",
     "short": "gate",
@@ -150,12 +127,6 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.2469
-   },
-   {
-    "coin": "MORPHOUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.195
    },
    {
     "coin": "SOPHUSDT",
@@ -176,19 +147,43 @@
     "spread_in": 0.2903
    },
    {
-    "coin": "ACEUSDT",
+    "coin": "RUNEUSDT",
     "long": "hyperliquid",
     "short": "gate",
-    "spread_in": 0.5431
+    "spread_in": 0.3199
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.2862
+   },
+   {
+    "coin": "YGGUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.2585
+   },
+   {
+    "coin": "IMXUSDT",
+    "long": "hyperliquid",
+    "short": "gate",
+    "spread_in": 0.25
+   },
+   {
+    "coin": "GMXUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.2222
    }
   ],
-  "scored_days": 32,
+  "scored_days": 33,
   "late_days": 16,
-  "total": -2.2029000000000232e-05,
-  "total_2x": -0.0020520290000000004,
-  "total_3x": -0.004082029000000001,
-  "total_close": 0.0006250489000000003,
-  "nw_t": -0.0068811942663967555,
+  "total": 0.0066847465,
+  "total_2x": 0.0045847464999999995,
+  "total_3x": 0.0024847464999999992,
+  "total_close": 0.011771200400000001,
+  "nw_t": 0.8645076439250828,
   "max_drawdown": -0.005410314100000001,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -255,13 +250,13 @@
     "spread_in": 0.1089
    }
   ],
-  "scored_days": 32,
+  "scored_days": 33,
   "late_days": 16,
-  "total": 0.0081178103,
-  "total_2x": 0.0072428103,
-  "total_3x": 0.0063678103,
-  "total_close": 0.0084674386,
-  "nw_t": 1.5500691555084551,
+  "total": 0.0081238628,
+  "total_2x": 0.0072488628,
+  "total_3x": 0.0063738628,
+  "total_close": 0.0084734911,
+  "nw_t": 1.5428872888312637,
   "max_drawdown": -0.0002094371,
   "replay_days": 61,
   "replay_total": 0.0087474903
@@ -316,12 +311,6 @@
     "spread_in": 0.9999
    },
    {
-    "coin": "AKEUSDT",
-    "long": "gate",
-    "short": "mexc",
-    "spread_in": 0.5113
-   },
-   {
     "coin": "INITUSDT",
     "long": "mexc",
     "short": "gate",
@@ -370,12 +359,6 @@
     "spread_in": 0.4186
    },
    {
-    "coin": "ACEUSDT",
-    "long": "mexc",
-    "short": "gate",
-    "spread_in": 0.936
-   },
-   {
     "coin": "SENTUSDT",
     "long": "gate",
     "short": "mexc",
@@ -392,18 +375,30 @@
     "long": "mexc",
     "short": "gate",
     "spread_in": 0.4953
+   },
+   {
+    "coin": "KAVAUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 0.5801
+   },
+   {
+    "coin": "SAFEUSDT",
+    "long": "gate",
+    "short": "mexc",
+    "spread_in": 0.4327
    }
   ],
-  "scored_days": 32,
+  "scored_days": 33,
   "late_days": 16,
-  "total": 0.0032080103000000004,
-  "total_2x": -0.0002919897000000001,
-  "total_3x": -0.0037919897000000006,
-  "total_close": 0.003844207999999999,
-  "nw_t": 0.8081398659061346,
+  "total": 0.0108955694,
+  "total_2x": 0.0071155694,
+  "total_3x": 0.0033355693999999993,
+  "total_close": 0.016056804299999998,
+  "nw_t": 1.2017481724053847,
   "max_drawdown": -0.0059386307,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }

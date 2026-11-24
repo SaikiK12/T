@@ -1,16 +1,22 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-23T00:56:55.230422+00:00",
+ "updated": "2026-11-24T01:16:53.430658+00:00",
  "waiting": false,
  "ready": {
-  "binance": 1.003,
-  "gate": 1.052,
-  "hyperliquid": 0.989,
-  "mexc": 0.992,
+  "binance": 1.0,
+  "gate": 1.023,
+  "hyperliquid": 0.988,
+  "mexc": 0.96,
   "kucoin": 1.0
  },
  "data": {
+  "gate": {
+   "files": 860,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "binance": {
    "files": 867,
    "failed": 3,
@@ -21,11 +27,15 @@
     "SXPUSDT"
    ]
   },
-  "gate": {
-   "files": 860,
-   "failed": 0,
+  "hyperliquid": {
+   "files": 216,
+   "failed": 3,
    "changed_on_overlap": 0,
-   "failed_some": []
+   "failed_some": [
+    "IMX",
+    "INJ",
+    "STBL"
+   ]
   },
   "kucoin": {
    "files": 633,
@@ -35,22 +45,19 @@
   },
   "mexc": {
    "files": 520,
-   "failed": 4,
+   "failed": 20,
    "changed_on_overlap": 0,
    "failed_some": [
-    "YGG_USDT",
-    "ZAMA_USDT",
-    "ZIL_USDT",
-    "ZKP_USDT"
-   ]
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 2,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "STABLE",
-    "STBL"
+    "ARK_USDT",
+    "ASTR_USDT",
+    "ATOM_USDT",
+    "AUCTION_USDT",
+    "BANK_USDT",
+    "BAN_USDT",
+    "BASED_USDT",
+    "BEL_USDT",
+    "BIO_USDT",
+    "CHIP_USDT"
    ]
   }
  },
@@ -61,12 +68,6 @@
   "slots": 20,
   "why": "R439: R275's all-four rule over five venues, CONFIRMED on M468 (NW t 8.71)",
   "held_now": [
-   {
-    "coin": "SPORTFUNUSDT",
-    "long": "kucoin",
-    "short": "binance",
-    "spread_in": 0.4831
-   },
    {
     "coin": "HANMIUSDT",
     "long": "binance",
@@ -96,12 +97,6 @@
     "long": "mexc",
     "short": "kucoin",
     "spread_in": 0.6189
-   },
-   {
-    "coin": "UNITREEUSDT",
-    "long": "binance",
-    "short": "gate",
-    "spread_in": 0.6476
    },
    {
     "coin": "SOPHUSDT",
@@ -176,22 +171,34 @@
     "spread_in": 0.7742
    },
    {
-    "coin": "ACEUSDT",
-    "long": "hyperliquid",
+    "coin": "CYBERUSDT",
+    "long": "mexc",
+    "short": "gate",
+    "spread_in": 1.0772
+   },
+   {
+    "coin": "ARIAUSDT",
+    "long": "gate",
     "short": "kucoin",
-    "spread_in": 1.053
+    "spread_in": 1.0635
+   },
+   {
+    "coin": "ACEUSDT",
+    "long": "binance",
+    "short": "hyperliquid",
+    "spread_in": 0.6345
    }
   ],
-  "scored_days": 12,
+  "scored_days": 13,
   "late_days": 1,
-  "total": 0.0050862044,
-  "total_2x": 0.0038962044,
-  "total_3x": 0.002706204400000001,
-  "total_close": 0.0029535437000000006,
-  "nw_t": 2.143712935732727,
+  "total": 0.0024220273,
+  "total_2x": 0.0011620273,
+  "total_3x": -9.797269999999936e-05,
+  "total_close": 0.0005866254000000005,
+  "nw_t": 0.682072142217602,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-23"
+ "last_day": "2026-11-24"
 }
