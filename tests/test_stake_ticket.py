@@ -46,7 +46,16 @@ class Ticket(unittest.TestCase):
     def test_split_equalises_liquidation_moves(self):
         a, b = st.split(1000, [(1250, 0.05)], [(-1250, 0.05)])
         self.assertAlmostEqual(a + b, 1000)
-        self.assertAlmostEqual(margin.liq_move(a, [(1250, 0.05)]), margin.liq_move(b, [(-1250, 0.05)]), places=6)
+        self.assertAlmostEqual(st.worst_move(a, [(1250, 0.05)]), st.worst_move(b, [(-1250, 0.05)]), places=6)
+
+    def test_worst_move_is_well_posed_for_a_mixed_account(self):
+        mixed = [(500, 0.1), (-500, 0.1)]                        # net zero: the uniform move reads infinite
+        self.assertEqual(margin.liq_move(200, mixed), math.inf)
+        self.assertAlmostEqual(st.worst_move(200, mixed), (200 - 100) / (1000 + 100))
+        self.assertEqual(st.worst_move(50, mixed), 0.0)
+        a, b = st.split(1000, mixed, [(-1000, 0.05)])
+        self.assertGreater(a, 100)                               # the mixed account keeps a real buffer
+        self.assertAlmostEqual(st.worst_move(a, mixed), st.worst_move(b, [(-1000, 0.05)]), places=6)
         self.assertEqual(st.split(100, [], []), (50, 50))
 
     def test_ticket_filters_and_sizes(self):

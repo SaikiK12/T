@@ -10,7 +10,8 @@ For each lane (R509 Kraken + Hyperliquid, R520 Deribit + Hyperliquid, R524 Bitfi
   - depth: both books are two-sided and a market order of the leg notional fills, at a cost in bp of mid.
   A pair that fails is listed as SKIP with the reason.
 - **Margin:** each lane's capital is split across its two venues so that both cross-margin accounts are the same move
-  from liquidation (`lab/margin.py`'s model, signed legs per venue). Rebalance below 30%, cut both legs pro rata if a
+  from liquidation, measured as the move against every leg at once (`worst_move`). `lab/margin.py`'s uniform move
+  nets an account's long and short legs, which reads near-infinite for a mixed account. Rebalance below 30%, cut both legs pro rata if a
   transfer cannot restore 25% (`docs/reviews/stake_dhl_20261123.md`).
 
 The header reads DRY RUN unless `--passed RID` names a read that has PASSED on its date. This tool never runs a read.
@@ -26,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from lab import kraken, margin  # noqa: E402
+from lab import kraken  # noqa: E402
 
 K = 20
 AGREE = 0.02
@@ -70,8 +71,19 @@ def mm_of(coin):
     return MM.get(base, MM_ALT)
 
 
+def worst_move(equity, legs):
+    """The move against every leg at once (longs down, shorts up) that brings the account to its maintenance:
+    (equity - sum |N| mm) / sum |N| (1 + mm). Conservative, and well posed for an account with legs in both
+    directions, where `margin.liq_move`'s uniform move nets them and reads near-infinite. math.inf with no legs."""
+    gross = sum(abs(n) for n, _ in legs)
+    if gross == 0:
+        return math.inf
+    gmm = sum(abs(n) * m for n, m in legs)
+    return max(0.0, (equity - gmm) / (gross + gmm))
+
+
 def split(capital, legs_a, legs_b):
-    """Equities (venue a, venue b) that equalise both accounts' liquidation moves; legs are [(signed notional, mm)]."""
+    """Equities (venue a, venue b) that equalise both accounts' worst moves; legs are [(signed notional, mm)]."""
     if not legs_a and not legs_b:
         return capital / 2, capital / 2
     if not legs_a:
@@ -81,7 +93,7 @@ def split(capital, legs_a, legs_b):
     lo, hi = 0.0, capital
     for _ in range(100):
         e = (lo + hi) / 2
-        lo, hi = (e, hi) if margin.liq_move(e, legs_a) < margin.liq_move(capital - e, legs_b) else (lo, e)
+        lo, hi = (e, hi) if worst_move(e, legs_a) < worst_move(capital - e, legs_b) else (lo, e)
     return e, capital - e
 
 
@@ -216,7 +228,7 @@ def ticket_lane(rid, lane, books, capital, leverage, offline=False, spec_by_venu
         ea, eb = capital - b_need, b_need
     acct = {}
     for v, e in zip(venues, (ea, eb)):
-        lm = margin.liq_move(e, legs[v]) if legs[v] else math.inf
+        lm = worst_move(e, legs[v])
         acct[v] = {"equity": e, "legs": len(legs[v]), "gross": sum(abs(x) for x, _ in legs[v]), "liq_move": lm,
                    "initial_margin": im_need[v], "short_of_initial": e + 1e-9 < im_need[v]}
     return rows, acct

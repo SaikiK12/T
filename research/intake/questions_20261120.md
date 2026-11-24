@@ -32,6 +32,12 @@ to scout. A reader follows `reading_protocol.md`.
 ## Q3. How often do crypto venues fail or freeze, and what is lost when they do?
 - **Serves:** sizing (`docs/reviews/sizing_20261120.md` leaves venue failure out), and how much capital to keep on
   each venue.
+- **Now binding (2026-11-24).** It is the input that decides the stake's size in `scripts/stake_kelly.py`.
+  - At leverage 2 with a halved edge, the stake beats cash only below about 2.5-5% venue failures a year.
+  - A first search found only secondary, conflicting recovery figures: FTX at 9-142% depending on the valuation
+    date; QuadrigaCX under 30%.
+  - Read next: the hazard models of Moore & Christin (2013) and Moore, Christin & Szurdi (2018, "Revisiting the
+    risks of Bitcoin currency exchange closure"). Then the court and administrator figures for each failure.
 - **An answer looks like:**
   - base rates of exchange closure or loss, and loss given failure;
   - how insurance funds, auto-deleveraging and liquidation engines behave in stress;

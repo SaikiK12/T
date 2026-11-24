@@ -11,6 +11,21 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L028 · 2026-11-24 · An odd number in my own tool was a bug in my own model (second Millikan save)
+- **What surprised me:**
+  - The two-account simulation showed **more** liquidations at 1.5x than at 2x on Kraken + Hyperliquid.
+  - Looking at those days found the cause in my margin model, not in the market.
+    - The uniform-move distance nets an account's long and short legs, so a mixed account reads safe at any
+      equity.
+    - The equalising split then funded it at its bare maintenance.
+  - Last night's ticket figures (64-67% from liquidation at 2x) rested on that flaw. The corrected Kraken lane is at
+    29% at 2x, so it gets 1.5x.
+- **What I will do differently:**
+  - Every new risk measure gets a mixed-direction case in its tests.
+  - An outcome that moves the wrong way with its cause (more risk at less leverage) is a bug until shown otherwise.
+- **Second occurrence** of L023's lesson (audit an odd or pleasing result at once). `CLAUDE.md` already carries it
+  (Feynman: Millikan's oil drop), so this entry confirms that rule and adds no new one.
+
 ## L027 · 2026-11-24 · Thorp: the edge is smaller than measured, and the jump sets the size
 - **Read:** Thorp 2006, section 7 (`docs/METHOD_LIBRARY.md`). It was overdue: four cycles had passed since the last
   method reading.
