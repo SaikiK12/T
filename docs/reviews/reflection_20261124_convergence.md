@@ -48,3 +48,28 @@ Does our book lose on its price legs because it enters at a price gap that then 
 - **The paper's decomposition table** (where its returns come from) mattered more than its headline Sharpe.
 - **Turning the paper's lens on our own book** found more than looking for a new strategy did. A mechanism that pays
   someone (convergence) is first a cost we may be paying.
+
+## 7. The decisive observation, made the same cycle (`scripts/check_exec_gap.py`)
+- **Data.** R525's 103 kraken+hyperliquid trades entered from 2026-04-26, re-valued on executable prices: Kraken's
+  hourly mark (index-anchored) and Hyperliquid's hourly close.
+
+  | Entry-gap quartile (executable prices) | Mean gap | Price PnL, executable | Price PnL, engine (daily last trade) |
+  |---|---|---|---|
+  | 1 (long leg cheapest) | −0.41% | +0.26% | −0.28% |
+  | 2 | −0.06% | +0.11% | −0.21% |
+  | 3 | +0.06% | −0.04% | −0.20% |
+  | 4 (long leg dearest) | +0.31% | −0.26% | −0.34% |
+
+- **Convergence is real on executable prices:** slope −0.86, corr −0.46.
+- **The gaps are small:** 0.21% at entry on average. Timing entries to a non-positive gap is worth roughly +0.2% a
+  trade, about +1%/yr on the Kraken pairs' capital. That is not the +6% that daily last trades suggested.
+- **A second finding.** On the same trades, the engine's daily last-trade valuation shows a price loss of −0.2% to −0.34%
+  a trade in every quartile, while executable prices average about zero.
+  - Part of the book's price-leg loss (funding at 113-122% of gross) may be a valuation artifact of stale last trades.
+  - If so, the true book is slightly better than measured.
+  - The sample is small (103 trades, five months, one pair); not yet a claim.
+- **What it changes:**
+  - Entries at a non-positive executable gap are a small, mechanistic improvement. They belong in the live ticket's
+    checks once tested forward.
+  - The bigger lesson is that backtest valuation on last trades misstates thin-coin books in both directions. A
+    forward lane on executable prices (the lanes already walk the books) is the reference.

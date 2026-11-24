@@ -22,8 +22,11 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
   - After reading a paper, ask first what it says about the edge I already have, and only then what new strategy it
     suggests.
   - Do the fee arithmetic for the owner's actual venue before counting supply on a venue they cannot use.
-- **Not yet known:** whether the slope survives executable prices. Stale last trades on thin coins may inflate it. The
-  next observation uses Kraken marks and Hyperliquid mids.
+- **Measured the same cycle on executable prices:**
+  - the slope is still −0.86, but the gaps are small (0.21%), so the gain is about +1%/yr, not +6%;
+  - the engine's last-trade valuation showed price losses that executable prices do not.
+  - The first, larger number was mostly the stale-price artifact I had named as the weak point. Naming the weak link
+    before trusting a number is what caught it.
 - **Instruction changed:** none.
 
 ## L038 · 2026-11-24 · Read the theory of the market before reasoning alone
