@@ -48,6 +48,10 @@ not to add process.
 - **López de Prado: "backtesting is not a research tool."**
   - Explain why an edge pays (decompose by source, coin, venue, regime) before running another backtest.
   - Treat the lab as stations, each with a measured quality: data, mechanism, test, costs, portfolio, money.
+- **Thorp: "assume mt < me and choose f < fe* by enough to prevent g ⩽ 0."**
+  - Size a stake by the shrunk edge (at most half the in-sample level) and the jump that can happen (here, a venue
+    failing), never by the in-sample variance.
+  - Stake at most half Kelly (`scripts/stake_kelly.py`).
 
 ## The chain: five steps, every session
 1. **Open (five minutes, not a corpus read).**

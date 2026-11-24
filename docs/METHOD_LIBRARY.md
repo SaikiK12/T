@@ -57,6 +57,28 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
   - explain why an edge pays (decompose its PnL by source, coin, venue and regime) before running another backtest;
   - run the lab as stations (data, mechanism, test, costs, portfolio, money), each with a measured quality.
 
+### Edward O. Thorp, "The Kelly Criterion in Blackjack, Sports Betting, and the Stock Market" (2006)
+- **Read 2026-11-24:** section 7 (7.1-7.4, pp. 405-415 of the *Handbook of Asset and Liability Management*,
+  chapter 9). Source: the copy at https://www.gwern.net/doc/statistics/decision/2006-thorp.pdf. The 1997 conference
+  version is also posted at https://sites.oxy.edu/lengyel/M330/thorp/paper.htm. Sections 1-6 and 8-10 are not read.
+- **Taken ahead of the queue order.** The next decision is the stake's size, and Thorp bears on it directly.
+- **The formulas** (checked against the page):
+  - f* = (m − r)/s², and g(f*) = S²/2 + r: the best growth depends only on the Sharpe ratio;
+  - g(c f*)/g(f*) = c(2 − c): half Kelly keeps 3/4 of the growth;
+  - the chance of ever falling to a fraction x of the start is x^(2/c − 1): losing half is 1/2 at full Kelly and
+    1/8 at half.
+- **The passage that matters.** "To the extent me is an uncertain estimate of mt, it is wise to assume mt < me and
+  to choose f < fe* by enough to prevent g ⩽ 0." With m_t = m_e/2, full Kelly grows at zero. Systems "may be partly
+  or entirely based on data mining", and "systems that do work attract capital".
+- **Jumps limit leverage below f*.** In October 1987 the index fell 23% in a day. For Berkshire, Kelly said 6.2x and
+  Thorp chose 2.0, the maximum allowed.
+- **Rules it gave:**
+  - Size by the shrunk edge (at most half the in-sample level) and by the jump that can happen, never by the
+    in-sample variance.
+  - For the design gap the jump is a venue failing. `scripts/stake_kelly.py` gives the break-even failure rate,
+    (L m − r)/(1 − recovery).
+  - Stake at most half the growth-optimal fraction.
+
 ## Next to read (legal copies only; one every fourth cycle)
 1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters" (Good Judgment's
    public page). Base rates, Fermi-izing, incremental updates.
@@ -68,4 +90,3 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
    chapters on p-hacking and Bayesianised p-values.
 6. **George Pólya, *How to Solve It*:** the heuristics list. Related problems, working backwards, specialising and
    generalising.
-7. **Edward Thorp:** papers on the Kelly criterion in practice (free on his site). Sizing a proven edge.

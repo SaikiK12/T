@@ -31,6 +31,10 @@
       contrôles).
     - Le levier est descendu de 2,5 à 2. Les règles « retail » publiques de Kraken demandent 50 % de marge initiale
       sur la plupart des pièces.
+    - **Combien miser (Thorp, 24-11).** Sans levier, la moitié de l'avantage mesuré ne bat pas le cash. Avec un
+      levier de 2, la mise ne paie que si les plateformes font faillite moins de 2,5 à 5 % des années. Il faut donc
+      répartir les dépôts : Hyperliquid porte aujourd'hui 38 % des dépôts. Miser au plus la moitié de la taille
+      optimale ([détail](reviews/stake_dhl_20261123.md)).
   - **Ce qu'il te faut d'ici là :** des comptes sur les plateformes sans plancher (Kraken, Deribit, Bitfinex) et sur
     une ou deux plateformes à plancher.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le

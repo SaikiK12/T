@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L027 · 2026-11-24 · Thorp: the edge is smaller than measured, and the jump sets the size
+- **Read:** Thorp 2006, section 7 (`docs/METHOD_LIBRARY.md`). It was overdue: four cycles had passed since the last
+  method reading.
+- **What surprised me:**
+  - **Variance-Kelly is useless here** (about 390x). The size is set by a jump, a venue failing, which no backtest
+    of mine models.
+  - **At leverage 1, half the in-sample edge of the three forward pairs is below cash.** At leverage 2, the stake
+    pays only while venues fail less than 2.5-5% a year. That is the same order as the real risk.
+  - **R524's own pair** (Bitfinex + Binance) earned −5.9%/yr in 2026 on R525's engine, from the stale legs R526's
+    filters remove.
+- **What I will do differently:**
+  - Size every stake by the shrunk edge and the worst plausible jump, at most half Kelly.
+  - Write the venue concentration next to the edge. Hyperliquid holds 38% of the deposits; spreading the short legs
+    is a free reduction of risk.
+- **Instruction changed:** `CLAUDE.md`, "Principles from the masters" (Thorp).
+
 ## L026 · 2026-11-23 · A field name is not a fact; a live ticket finds what a model hides
 - **What surprised me:**
   - **An API label nearly gave a false access verdict.** Kraken's instrument list gives 8 of R509's 20 held coins a
