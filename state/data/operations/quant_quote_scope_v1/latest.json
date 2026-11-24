@@ -1,10 +1,10 @@
 {
   "state": "FINISHED_WITH_RESEARCH_BLOCKERS",
-  "run_id": "gha_45398380039_1",
-  "hour": "20261124T12",
-  "started_utc": "2026-11-24T12:57:06.255515+00:00",
+  "run_id": "gha_45508577378_1",
+  "hour": "20261124T23",
+  "started_utc": "2026-11-24T23:17:18.892013+00:00",
   "prereg_sha256": "91dcb412605b89b45ab62c8468dfd0f10b118f5259976d9fa03d32398be2013a",
-  "code_commit": "fdd52c551ade676079fb79d21838bd9f669d129f",
+  "code_commit": "2d8269a85111b5982d5b2eb0469ac985f8a850ff",
   "inventory": [
     {
       "id": "R200",
@@ -283,55 +283,55 @@
     "2x": "N/A",
     "3x": "N/A"
   },
-  "finished_utc": "2026-11-24T12:57:06.261627+00:00",
+  "finished_utc": "2026-11-24T23:17:18.968157+00:00",
   "health": [
     {
       "rid": "R415",
       "path": "experiments/paperacct_fwd/journal/status.json",
-      "status": "FRESH",
-      "hours_old": 2.8,
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 13.14,
       "source_updated": "2026-11-24T10:09Z"
     },
     {
       "rid": "R285",
       "path": "experiments/xbook_fwd/journal/status.json",
-      "status": "FRESH",
-      "hours_old": 2.8,
+      "status": "STALE_OR_CLOCK",
+      "hours_old": 13.14,
       "source_updated": "2026-11-24T10:09:11Z"
     },
     {
       "rid": "R278",
       "path": "experiments/xfund_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 12.27,
+      "hours_old": 22.61,
       "source_updated": "2026-11-24T00:40:40.335498+00:00"
     },
     {
       "rid": "R279",
       "path": "experiments/xfund_kc_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 12.13,
+      "hours_old": 22.47,
       "source_updated": "2026-11-24T00:49:22.864726+00:00"
     },
     {
       "rid": "R390",
       "path": "experiments/xfund_bg_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 11.82,
+      "hours_old": 22.15,
       "source_updated": "2026-11-24T01:08:06.785973+00:00"
     },
     {
       "rid": "R413",
       "path": "experiments/boroslock_fwd/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 374.68,
+      "hours_old": 385.01,
       "source_updated": "2026-11-08T22:16:32Z"
     },
     {
       "rid": "R406",
       "path": "experiments/lockcarry_fwd2/journal/status.json",
       "status": "STALE_OR_CLOCK",
-      "hours_old": 373.68,
+      "hours_old": 384.02,
       "source_updated": "2026-11-08T23:16:03Z"
     }
   ],
