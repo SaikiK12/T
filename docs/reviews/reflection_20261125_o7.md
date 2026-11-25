@@ -128,6 +128,27 @@ Little, except that we measured the closure year and can screen every book's wee
   - ETH prices it at 0.79 (49.2% against 62.1%). Its 2026 realized ratio is 0.67, so ETH's Saturday looks rich.
   - One snapshot, so a direction to check, not a result (L054).
 
+### Which books could be younger? (reader `room_20261125c/weekend_venues.md`, the OKX line checked by me at 20:32 UTC)
+- **Weekend daily expiries exist only for BTC and ETH,** on Deribit, OKX and Aevo:
+  - Bybit and Binance list dailies but refused this container (403/451);
+  - Derive was unreachable;
+  - CME has no weekend expiries.
+- **SOL has a Saturday expiry on OKX but no Sunday one,** so its Saturday cannot be isolated. Deribit's alts list
+  only Thursday and Friday.
+- **The weekend weight is one model, not several:**
+
+| Book, 2026-11-25 ~20:30 UTC | BTC Sat→Sun / Fri→Sat forward vol | ETH |
+|---|---|---|
+| Deribit | 34.0 / 56.7 = **0.60** | 49.2 / 62.1 = **0.79** |
+| OKX (checked by me) | 33.2 / 56.5 = **0.59** | 50.2 / 62.4 = **0.80** |
+| Aevo | equals Deribit to 0.1 vol point (reader) | same |
+
+- **So O7's first answer is no.** There is no independent younger book with weekend dailies to screen today. The
+  convention rent, if it reopens, will reopen everywhere at once, and the place to watch is the shared weight
+  against each coin's realized weekend.
+- **French retail access to options is unclear on every venue** (the reader's AMF findings are search summaries,
+  unverified). Access is the owner's question (rule 8), and nothing here asks for it yet.
+
 ### The registered read for ETH (written and committed before the ETH data is opened; a measurement, 0 trials)
 - **The rule.** It is the O3b rule unchanged (`reflection_20261125_greeks.md` §3), with ETH options, ETHUSDT hourly
   closes, and a minimum of 100 ETH traded in the set. The 5-BTC floor is about $400k; 100 ETH is about $300k.

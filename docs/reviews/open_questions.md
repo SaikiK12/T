@@ -29,10 +29,11 @@
 - **Post hoc, checked:** Saturday takers were mostly sellers (44% buys; 35% in 2022). Sell-side IV was 29.9% against 31.0% for buys, so a taker seller at the bid earned the gap.
 - **Audited** (`room_20261125c/audit_o3b.md`): reproduced exactly. At ±0.5% moneyness the Saturday gap is −32 bp (t −4.6), with the same pattern by year |
 | O7b | ETH on Deribit: did its Saturday rent close when BTC's did? (O3b rule, `--coin ETH --min-amount 100`) | `reflection_20261125_o7.md` §6 | **data fetching** (ETH 2022-01.., started 2026-11-25 20:30) | Saturday 2022-26 ≤ −30 bp with t ≤ −3: P ≈ 0.75. 2026 within ±20 bp: P ≈ 0.55. Sunday not beyond costs: P ≈ 0.75 | — |
-| O7 | Is the weekend gap Deribit closed in 2026 still open on younger option books (Deribit's SOL/XRP/HYPE dailies; OKX, Bybit, Binance, Derive)? | O3b read | open | Saturday one-day IV above 0.55 × the weekday IV on at least one younger book: P ≈ 0.4 | **Snapshot 2026-11-25 18:37 UTC (Deribit, public):**
+| O7 | Is the weekend gap Deribit closed in 2026 still open on younger option books (Deribit's SOL/XRP/HYPE dailies; OKX, Bybit, Binance, Derive)? | O3b read | **answered: no independent younger book** (2026-11-25) | Saturday one-day IV above 0.55 × the weekday IV on at least one younger book: P ≈ 0.4 | **Snapshot 2026-11-25 18:37 UTC (Deribit, public):**
 - BTC prices Sat→Sun at 33% forward against 59% for Fri→Sat (0.56), consistent with a closed gap.
 - SOL, XRP, HYPE, AVAX and TRX list Thursday and Friday dailies and weeklies only, with no Saturday or Sunday expiry. Their weekend sits inside the weekly, and one snapshot cannot separate it from the term structure.
-- Next: implied-vs-realized on their weeklies from trade history. The fetcher holds BTC/ETH only, so it needs a USDC-options extension, or other venues' weekend dailies |
+- Next: implied-vs-realized on their weeklies from trade history. The fetcher holds BTC/ETH only, so it needs a USDC-options extension, or other venues' weekend dailies.
+- **Reader + my check:** only BTC and ETH have weekend dailies (Deribit, OKX, Aevo), and OKX's weekend weight equals Deribit's (BTC 0.59 against 0.60; ETH 0.80 against 0.79). One shared model, so no younger independent book |
 | O4 | Crypto vanna (M310): does an IV fall after FOMC push perps up? | §4 | **closed at Fermi** | Null: R292's dealer book is 0.13% of perp volume per 1% move, and its vanna scales with it | not tested |
 | O5 | Vomma: does DVOL's own variance forecast realized vol beyond HAR? | room Q10 | open, low priority (a sizing input, not a payer) | — | — |
 | O6 | Mix: do single stocks pinned at a strike on Friday move away from it on xyz over the weekend? | §4 | idea; waits for O2's ratio | — | — |
