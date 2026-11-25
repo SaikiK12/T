@@ -61,3 +61,41 @@ Every forecast is timestamped in git before its outcome, so the score cannot be 
 - **A change in how I write, not a new check (rule 11).** A status word (answered, killed, alive, closed) may follow
   only the decisive observation that the page names. Before that, the word is "leaning", with the side and a
   probability that enters the ledger.
+
+## Result: the first score (`registry/forecasts.csv`, `scripts/score_forecasts.py`)
+- **The ledger.**
+  - 19 forecasts, all with an explicit number written before the outcome (the room's extractor, checked by me).
+    Excluded:
+    - power statements and priors;
+    - the cmeterm "65% if… 35% after decay", which is conditional.
+  - 7 resolved, 12 pending: the December reads, R530, Q01, O2, O7d.
+- **Brier 0.249 on 7, against 0.204 for always forecasting the hit rate (0.29).** My numbers did worse than a
+  constant.
+
+| p bin | n | mean p | hit rate |
+|---|---|---|---|
+| under 0.3 | 2 | 0.17 | 0.00 |
+| 0.3-0.6 | 1 | 0.55 | 1.00 |
+| 0.6 and above | 4 | 0.70 | 0.25 |
+
+- **The high bin is the problem.**
+  - R472 at 0.70 and R473 at 0.60 were written on 11-12 for a family whose decided pass share is 23%, before the
+    Ioannidis rule (11-24).
+  - R529, written after the rule at 0.15, resolved as a FAIL: a good forecast.
+  - The one ETH miss (Sunday at 0.75) came from anchoring on BTC.
+- **Seven is noise.** The direction matches the seven first-draft corrections: my high numbers and my status words
+  both run ahead of the evidence.
+- **Checked:**
+  - O3b's definition (t ≥ 2) was committed in 428def4e at 17:58 UTC, before the read, so its outcome is 0.
+  - The extractor had scored 1 from the register row's shorter wording.
+- **Found on the way:** R528 and R529 still read RUNNING/PENDING in `registry/rounds.csv` although their FINDINGS are
+  NULL/FAIL. Listed in `room_20261125/label_caveats.md`, since rows are never hand-edited.
+
+## The change in how I write (rule 11: change the thinking, not add a check)
+- **A status word follows only the decisive observation the page names:** answered, killed, closed, alive, priced
+  right.
+  - Before that, I write "leaning", with the side and a probability.
+  - That probability goes into `registry/forecasts.csv` the same hour, and the ledger scores it.
+- **Every P(PASS) above the family's base rate carries the one piece of evidence that lifts it,** or it is written
+  at the base rate.
+

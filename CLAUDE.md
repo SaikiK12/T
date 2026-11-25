@@ -157,6 +157,9 @@ not to add process.
      - Outside carry, past passes rarely survived confirmation (0% in charts, options, micro and portfolio), so the
        prior there is low.
      - Under about 10%, write why the test is still worth a cycle. R528 would have read about 5-10%.
+     - Every written probability goes into `registry/forecasts.csv` the same hour, and `scripts/score_forecasts.py`
+       scores it. A P(PASS) above the family's base rate names the one piece of evidence that lifts it. First score:
+       Brier 0.249 against 0.204 for a constant; my high numbers ran high (L056).
    - **Pre-mortem before the freeze.** Write five lines: "it failed because…". If a reason is likely, fix the design.
      Four of my five FAILs in R507-R525 were foreseeable this way.
    - Then freeze, run once, and read the by-year table before the headline.
@@ -197,6 +200,9 @@ not to add process.
 - **Describe a book by what it holds and earns, measured,** not by the mechanism that found it: its daily positions
   (net share, legs, largest leg) for risk, and the quantity it harvests for return (L043, L047).
 - **Small before big.** A cheap measurement first; a full lane only when the measurement earns it.
+- **A status word follows the decisive observation, never a snapshot.** Answered, killed, closed, alive and priced
+  right come only after the observation the page names as decisive. Before it, write "leaning", with a probability in
+  the ledger. Seven first-draft corrections on 2026-11-25 all came from a status word written early (L056).
 - **Before naming why a rent opened or closed, measure both sides by year:** the incumbents' quoted value and the
   world's realized value. Twice a closure story was half wrong until both series were on the page (L054, L055).
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the

@@ -1,0 +1,27 @@
+row_id,kind,forecast_id,written_utc,event,p,source,outcome,note
+F001,forecast,R472-pass,2026-11-12,R472 rebalfront_v1 passes its frozen rule,0.70,experiments/rebalfront_v1/PREREG.md:100,,
+F002,forecast,R473-pass,2026-11-12,R473 tlteom_v1 passes its frozen rule (U 1x net t >= 1.0 and 2x > 0),0.60,experiments/tlteom_v1/PREREG.md:96,,
+F003,forecast,R529-pass,2026-11-24,R529 roll_frontrun_v1 passes its frozen rule,0.15,experiments/roll_frontrun_v1/PREREG.md:70,,
+F004,forecast,O3b-sun-under,2026-11-25,BTC Sunday one-day straddle underpriced beyond costs (mean move - premium > 16 bp with t >= 2; registered read in reflection_20261125_greeks.md section 3),0.20,docs/reviews/open_questions.md:24,,
+F005,forecast,O7b-sat,2026-11-25,ETH Saturday 2022-26 move - premium <= -30 bp with t <= -3,0.75,docs/reviews/open_questions.md:31,,
+F006,forecast,O7b-2026,2026-11-25,ETH Saturday 2026 within +-20 bp of zero,0.55,docs/reviews/open_questions.md:31,,
+F007,forecast,O7b-sun-not,2026-11-25,ETH Sunday not underpriced beyond costs (<= 16 bp or t < 2),0.75,docs/reviews/open_questions.md:31,,
+F008,forecast,R510-pass,2026-11-24,R510 passes at its read,0.60,docs/reviews/december_decision_20261125.md:66,,event = the round's own PASS rule (december_decision section 2)
+F009,forecast,R509-pass,2026-11-24,R509 passes at its read,0.45,docs/reviews/december_decision_20261125.md:66,,
+F010,forecast,R512-pass,2026-11-24,R512 passes at its read,0.40,docs/reviews/december_decision_20261125.md:66,,
+F011,forecast,R523-pass,2026-11-24,R523 passes at its read,0.45,docs/reviews/december_decision_20261125.md:66,,
+F012,forecast,R527-pass,2026-11-24,R527 passes at its read,0.40,docs/reviews/december_decision_20261125.md:66,,
+F013,forecast,R521-pass,2026-11-24,R521 passes at its read,0.30,docs/reviews/december_decision_20261125.md:66,,
+F014,forecast,R520-pass,2026-11-24,R520 passes at its read,0.10,docs/reviews/december_decision_20261125.md:66,,
+F015,forecast,R524-pass,2026-11-24,R524 passes at its read,0.10,docs/reviews/december_decision_20261125.md:66,,
+F016,forecast,R530-pass,2026-11-25,R530 xyzbal_fwd passes (PREREG forecast; a later dated note revised it to about 0.23),0.36,experiments/xyzbal_fwd/PREREG.md:149,,
+F017,forecast,Q01-frozen,2026-11-25,Variational quotes stay near its frozen index over a weekend,0.25,docs/reviews/open_questions.md:19,,
+F018,forecast,O2-ratio,2026-11-25,TSLA gamma ratio above 2% on at least half of expiry Fridays,0.50,docs/reviews/open_questions.md:22,,numerator to be fixed before scoring (gross or net; L053)
+F019,forecast,O7d-sun,2026-11-25,BTC Sunday 2027 H1 mean move - premium <= -16 bp at +-0.5%,0.35,docs/reviews/open_questions.md:38,,
+F020,resolve,R472-pass,2026-11-12,,,registry/rounds.csv (R472 DONE NULL),0,
+F021,resolve,R473-pass,2026-11-12,,,experiments/tlteom_v1/FINDINGS.md:3,0,PARTIAL: U 1x net t 0.95 below the 1.0 bar
+F022,resolve,R529-pass,2026-11-24,,,experiments/roll_frontrun_v1/FINDINGS.md:3,0,FAIL; rounds.csv row stale (label_caveats.md)
+F023,resolve,O3b-sun-under,2026-11-25,,,docs/reviews/o3b_daily_vrp.md (Sun +21.00 bp t 1.83),0,mean above 16 bp but t below 2 under the registered definition; the extractor scored 1 on the register row's shorter wording
+F024,resolve,O7b-sat,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (Sat -40.57 t -3.88),1,
+F025,resolve,O7b-2026,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (2026 Sat +7.8),1,
+F026,resolve,O7b-sun-not,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (Sun +52.11 t 2.99),0,

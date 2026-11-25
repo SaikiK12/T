@@ -11,6 +11,8 @@ it is listed here.
 | R304 mlrank_v2 | PARTIAL | superseded by R332 (NULL): the pick nets −16.5 bp/day on complete metrics; a metrics-presence rule alone earns +50.3 | `experiments/mlrank_v3/FINDINGS.md:1-5` |
 | R299 mlrank_v1 | PARTIAL | "INVALIDATED BY AUDIT" in its own notes | registry notes |
 | R462, R468, R349 | PARTIAL | gate-0 PASSes recorded as PARTIAL by convention | each FINDINGS |
+| R528 closing_momentum_v1 | RUNNING / PENDING | **done: NULL** (both rules FAIL), read once 2026-11-24 | `experiments/closing_momentum_v1/FINDINGS.md:1-3` |
+| R529 roll_frontrun_v1 | RUNNING / PENDING | **done: FAIL (NULL)** | `experiments/roll_frontrun_v1/FINDINGS.md:1-3` |
 
 - **From now on, every FINDINGS states which of these it is:** in sample, out of sample (with the holdout id),
   measurement, or null.

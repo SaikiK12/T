@@ -11,6 +11,7 @@ connect an idea, its source and the experiments that examined it.
 | [rounds.csv](rounds.csv) | Registered experiments; `R…` identifiers, trial counts and recorded verdicts | Append through registry code; retain history |
 | [methods_aliases.csv](methods_aliases.csv) | Source records and aliases mapped to existing methods | Reuse the existing method before adding another |
 | [candidates.csv](candidates.csv) | Candidate records and their gates | Read alongside native lane evidence |
+| [forecasts.csv](forecasts.csv) | Every written probability forecast (`forecast` rows) and its outcome (`resolve` rows), scored by `scripts/score_forecasts.py` | Append only; a forecast row the hour it is written, a resolve row when the outcome is known |
 | [data_manifest.csv](data_manifest.csv) | Dataset inventory and source paths | Inventory is not proof of complete/live data |
 | `method_id_reassignment_*.json` | Explicit historical identifier corrections | Preserve provenance |
 

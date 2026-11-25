@@ -11,6 +11,31 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L056 · 2026-11-25 · My status words and my high probabilities both run ahead of the evidence; a ledger now scores them
+- **What happened** (`docs/reviews/reflection_20261125_calibration.md`; `registry/forecasts.csv`):
+  - **Seven first drafts were corrected in one day,** each toward a cleaner story. Five came from a status word
+    written before the decisive observation:
+    - O3a "answered" from two snapshots;
+    - O1 "closed at Fermi" without measuring the window;
+    - O2 "alive at Fermi" on a gross-to-net comparison;
+    - "priced right";
+    - "closed in 2026" on two Saturdays.
+  - **The first forecast score:** Brier 0.249 on 7 resolved forecasts, against 0.204 for a constant. My p ≥ 0.6
+    forecasts hit 1 in 4.
+- **What surprised me:**
+  - The two errors are one error. I write the end of the story while the data is half in, whether as a word or as a
+    number.
+  - The one post-Ioannidis P(PASS) (R529, 0.15) was well placed. The rule works when I follow it.
+- **What I will do differently:**
+  - "Leaning" plus a ledgered probability until the decisive observation. The status word comes after it.
+  - Every number goes into the ledger the same hour.
+  - A P(PASS) above the base rate names its evidence.
+- **Instruction changed:** `CLAUDE.md`
+  - step 4 (the ledger, the score, evidence for above-base-rate numbers);
+  - the habits (a status word follows the decisive observation).
+  - Rule 11's "change the thinking, not add a check" is met by changing the word I am allowed to write, not by adding
+    a review step.
+
 ## L055 · 2026-11-25 · Twice I named why a rent closed without measuring both sides; promoted
 - **What happened** (`docs/reviews/reflection_20261125_o7.md`; ETH read `o7_eth_daily_vrp.md`):
   - On ETH, the weekend gap ran in 2022-25 and closed in 2026, as on BTC. Saturday was −41 bp (t −3.9) and Sunday
