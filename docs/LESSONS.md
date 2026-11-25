@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L048 · 2026-11-25 · Write the decision before the result, and the money before the decision
+- **What surprised me:**
+  - Writing the arithmetic of the first stake before any read changed what the stake is. At the autumn level,
+    halved, levered 1.5x, net of venue risk, tax and euro cash, €2,000 earns about €65 a year. The first stake is a
+    calibration of fills, funding and paperwork, not an income.
+  - With the decision table fixed now, a December pass cannot be read as more than it is. A fast funding-only pass on
+    Deribit or Bitfinex triggers nothing, because their 2026 net was about zero.
+  - **The pre-listing class:** the mechanism fired exactly as designed. Anthropic's Lighter/xyz spread of −1.4%
+    closed on its 2026-11-19 listing. But the size was small, and Oura's venues sat within ±0.1%: cross-venue
+    capital is already there.
+  - The lab's own recorder answered that in minutes. Step 0's "data no question has used" paid at once.
+- **What I will do differently:**
+  - Before any read that can move money, write the outcome-to-action table and the money arithmetic, dated.
+  - For a rule-forced convergence, measure today's spread first. It shows how much capital already crosses the
+    barrier, and so the size of what is left.
+- **Instruction changed:** none.
+
 ## L047 · 2026-11-25 · Check a risk rule on what the account actually holds
 - **What surprised me:**
   - The feared risk was real but smaller than I expected. The Kraken account of the sign-agnostic book is 46% short.
