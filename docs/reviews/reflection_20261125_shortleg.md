@@ -78,3 +78,11 @@ worst loss within a day on Kraken's own mark? Does 1.5x keep a safe distance fro
     rule);
   - the hours of an actual crash on a long-heavy day, which the window lacks;
   - auto-deleveraging.
+
+## Correction (room critic, 2026-11-25)
+- The daily table resets each leg to the day's open. Legs are held a median of about 19 days, and liquidation
+  depends on the cumulative move since entry unless margin is topped up.
+- The critic's cumulative-from-entry figure is **8.7% of notional at worst**, still far inside 59% at 1.5x (5%
+  maintenance). The rule stands.
+- The stake's daily check should track the cumulative move per leg since its entry, not only the day's move.
+

@@ -65,7 +65,7 @@
     - Une réussite côté Kraken (R510, R523 ou R527) mène à une **mise 1 de 2 000 €** sur Kraken + Hyperliquid
       uniquement.
     - Une réussite côté Deribit ou Bitfinex ne suffit pas : leur résultat net est d'environ 0 en 2026.
-    - Cette mise rapporterait environ 65 €/an. C'est une mesure du réel (exécutions, financement, impôts), pas un
+    - Cette mise rapporterait environ 40-50 €/an (corrigé le 25-11 : coûts réels 2-3 fois l'hypothèse). C'est une mesure du réel (exécutions, financement, impôts), pas un
       revenu.
   - **Recensement des règles de financement (25-11).** J'ai lu les documents de 7 nouvelles plateformes : toutes copient
     le plancher (Drift l'a même relevé en 2026). Il n'y aura donc pas de nouvelle plateforme « sans plancher », et la

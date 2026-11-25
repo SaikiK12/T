@@ -20,6 +20,8 @@
   - after the 31.4% flat tax, about 4.8%;
   - minus euro cash after tax (about 1.5%), **about +3.3% a year over cash.**
 - **On €2,000 that is about €65 a year.**
+  - **Corrected the same day** (room critic, verified on `experiments/xfund_eea_v1/FINDINGS.md:85`): R508's real costs are
+    2-3x its 1x assumption, so the figure is about **€40-50 a year**. The decision is unchanged.
 - **The first stake is a calibration, not an income.** It measures:
   - real fills against paper;
   - real funding against the recorded funding;

@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L051 · 2026-11-25 · Verification is work I can build, and memory is a file, not my context
+- **The owner.** "Pose-toi des questions sur les choses où tu ne peux pas savoir si c'est acquis… raffine-les… si
+  c'est la vérif qui limite, débloque-la… souviens-toi de ce que j'ai dit avant tes compressions."
+- **What surprised me:**
+  - **Re-reading all 27 of the owner's messages** (extracted verbatim from the transcript into
+    `docs/OWNER_LEDGER.md`) showed instructions my summaries had lost. On 11-19 the owner asked for whole books read by
+    Haiku, one message per part, with me understanding the key parts.
+  - **A mechanical citation checker** (`scripts/verify_citations.py`) cut the first room's 129 citations to 21 that
+    need my eyes. One of the 21 was a claim I would otherwise have repeated (KuCoin +20-24%/yr).
+  - **The critic found a money number I had to correct** (the December stake's costs, verified in R508's own
+    FINDINGS).
+  - **It also produced a figure I could not reproduce** (a lag correlation). Both outcomes are what verification is
+    for.
+- **What I will do differently:**
+  - Room claims come with exact quotes, the checker runs on every report, and my reading goes to the failures and to
+    what moves money.
+  - The owner's words are read from the ledger at each open step.
+  - Open questions go in a register and are refined before any test.
+- **Instruction changed:** `CLAUDE.md` gains rules 13 (open-question register), 14 (verification as work) and 15 (the
+  owner ledger). Step 3 gains whole-book Haiku reading.
+
 ## L050 · 2026-11-25 · The owner: think together with a Haiku room, always. Its best output came from comparing rules
 - **The owner.** "Vois des façons de t'améliorer x100… re-vérifie tout le repo… invente… lance des subagents,
   toujours Haiku, pour penser ensemble, toujours." `CLAUDE.md` rule 3, chain step 3 and the habits were changed the

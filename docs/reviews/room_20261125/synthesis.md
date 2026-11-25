@@ -118,5 +118,36 @@ report is a lead. Below, each claim that would move a rule, a lane or money is m
   - Felix's funding multiplier is 0.0 for NVDA/TSLA;
   - xyz's funding cap text conflicts (4%/h against 0.5%/h).
 
-## Critic
-- (pending)
+## Critic (`critic.md`)
+- **Verified, and it changes a number: the December stake's base used R508's 1x cost** (7 bp a leg).
+  - R508's own FINDINGS (`experiments/xfund_eea_v1/FINDINGS.md:85`): "costs about 15-20 bp on average, about 2-3x the
+    test's 7 bp".
+  - At 2-3x costs the stake's excess falls from about €65 to about €40-50 a year on €2,000. The decision is unchanged
+    (a calibration stake), and the memo is corrected.
+- **Accepted: the forecast prior for R530 was too high.**
+  - The family's "3 of 5" are gate-0 screens, not confirmed passes; the registry holds no closed-market PASS.
+  - The R530 PREREG is frozen, so its forecast stays as written. A dated revision is recorded here: π ≈ 0.20, so
+    P(PASS) ≈ 0.20 × 0.92 + 0.80 × 0.06 ≈ 0.23. R530's read will be scored against both.
+- **Accepted as known limits** (already in R530's "Known limits", now weighted more heavily):
+  - last-trade returns may carry bid-ask bounce (Nagel: about 40% of a closing-price reversal);
+  - the balanced design was selected after R462's `rel` cell.
+  - What R463's B tickets show on executable mids will be read beside R530.
+- **Accepted: the Kraken short-leg risk is 8.7% cumulative,** not 4.4% (the script resets legs daily; legs are held
+  about 19 days). It is still far inside 59%. The rule holds. The short-leg note is corrected.
+- **Not reproduced: the lag correlation of 0.45.** With returns December to October against the previous month's
+  dispersion, I get 0.27 (same-month 0.915, which the critic reproduces). The difference is the month alignment. I
+  keep 0.27 with the alignment stated.
+- **Reproduced by the critic:**
+  - the −30%/yr trend, which survives dropping 2021 (−32%) and 2022 (−32%);
+  - the 0.91 correlation;
+  - the weekend capacity table;
+  - R530's input hashes.
+- **Disclosure from the critic:** one recursive grep may have read journal files; nothing was quoted. Noted. Future
+  room prompts forbid recursive greps over `experiments/`.
+
+## Mechanical citation check (`scripts/verify_citations.py`, new today)
+- **Over the first room's reports, 129 citations:** 11 verified verbatim, 87 located (the file and lines exist, no
+  quote), 21 failed (16 quotes not found at the cited place, 5 found elsewhere), and 8 unresolvable paths to scratch
+  files.
+- **The failures are where my attention goes.** For example, the carry auditor's "+20-24%/yr in 2025-26" for KuCoin
+  is not in the files it cites, so that claim stays open.

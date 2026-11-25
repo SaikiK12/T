@@ -20,6 +20,11 @@ chain below.
 - "Vois des façons de t'améliorer x100, ce n'est pas exagéré… continue sur le framework, ou re-vérifie tout le repo avec
   tes nouvelles connaissances, ou trouve des choses nouvelles, invente… lance des subagents, toujours Haiku, pour penser
   ensemble, toujours." (2026-11-25; this supersedes "arrête de lancer des subagents")
+- "Réfléchis à des choses que toi tu peux créer… le gamma, le vanna, le vomma et d'autres trucs à mixer… pose-toi des
+  questions sur les choses où tu ne peux pas savoir si c'est acquis, qui ont besoin d'expérimentation, ça peut être
+  absolument tout, mais tu dois les raffiner… si c'est la vérif qui limite, débloque-la en bossant dessus. Tu ne connais
+  pas tout : souviens-toi de tout ça et de ce que j'ai dit avant tes compressions." (2026-11-25; every message is kept
+  verbatim in [docs/OWNER_LEDGER.md](docs/OWNER_LEDGER.md))
 
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.
@@ -73,6 +78,23 @@ not to add process.
 12. **Answer my own questions** (2026-11-24). I do not ask the owner what I can find or decide myself (a target, a
     venue's margin rule, a tax rule, a capital plan). I research it from primary sources, decide, write the reasoning,
     and say what I assumed. Only acts that are legally the owner's stay theirs: accounts, orders, money movement.
+13. **Keep a register of open questions that only an experiment can settle** (2026-11-25). They can be about anything:
+    mechanisms, Greeks and their mixes, execution, risk, the lab's own methods. Each is refined into:
+    - a hypothesis and its opposite;
+    - why it is not already known;
+    - the mechanism;
+    - the data (held or which API);
+    - the cheapest experiment;
+    - the result that kills it;
+    - the value if true.
+    The register is `docs/reviews/open_questions.md`, and each cycle picks from it by value × probability ÷ cost.
+14. **Verification is work, not a bottleneck to accept** (2026-11-25).
+    - Every room claim carries a path:line and an exact short quote.
+    - `scripts/verify_citations.py` checks them mechanically.
+    - A Haiku verifier cross-checks the meaning of the rest.
+    - I read myself only what fails, and what moves money or a rule.
+15. **Remember the owner's words.** At the open step, `scripts/owner_ledger.py` refreshes `docs/OWNER_LEDGER.md`, and I
+    read its newest entries. A summary of my context is not a memory of what the owner said.
 
 ## Principles from the masters (passages in [docs/METHOD_LIBRARY.md](docs/METHOD_LIBRARY.md))
 - **Feynman: "You must not fool yourself, and you are the easiest person to fool."**
@@ -96,6 +118,7 @@ not to add process.
 
 ## The chain: five steps, every session
 1. **Open (five minutes, not a corpus read).**
+   - Refresh and read the newest owner messages ([docs/OWNER_LEDGER.md](docs/OWNER_LEDGER.md), rule 15).
    - Read the newest ten lessons in [docs/LESSONS.md](docs/LESSONS.md).
    - Read the fresh claims in issue #7 and the top of [docs/STATUS.md](docs/STATUS.md).
    - Ask: what did the last session learn that changes what I do today?
@@ -109,8 +132,8 @@ not to add process.
    - **Beat the plan.** Name one unasked item with higher expected value than the planned one (for real money,
      speed of proof or risk), and do it if it wins. Lenses with a measured yield come first
      (`docs/reviews/self_review_*.md`).
-3. **Read, with the room.** Haiku readers extract and summarize; I read the passage that matters myself and check it
-   on the page.
+3. **Read, with the room.** Haiku readers extract and summarize, whole books included, one message per part (owner
+   2026-11-19); I read the passage that matters myself and check it on the page.
    - Question first, then the whole source when it bears on the work (rule 6); `scripts/read_source.py locate` for
      long books.
    - Copy the one equation or table that matters in my own words, and check it against the page.

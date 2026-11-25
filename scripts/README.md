@@ -399,7 +399,7 @@ line is the first line of the script's own docstring.
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
 - [`run_xyzwknd_fwd.py`](run_xyzwknd_fwd.py): xyzwknd_fwd (R463): R462's weekend fade of trade.xyz US-stock perps, tested forward on fresh weekends from 2026-11-13, as set out in experiments/xyzwknd_fwd/PREREG.md.
 
-## Check: parity, audits and integrity (43)
+## Check: parity, audits and integrity (44)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -443,6 +443,7 @@ line is the first line of the script's own docstring.
 - [`check_spot_perp_account.py`](check_spot_perp_account.py): Independent literal cash-flow oracle for R324's fixed constructed accounts.
 - [`check_wknd_depth.py`](check_wknd_depth.py): Weekend book depth of 24/7 stock perps: capacity of the closed-market fade class (descriptive, costs only).
 - [`check_wknd_power.py`](check_wknd_power.py): Power of the weekend fade, raw against a balanced (market-neutral) book, on R462's own weekends (descriptive).
+- [`verify_citations.py`](verify_citations.py): Mechanical check of a report's citations: does each cited file and line exist, and does the quoted text appear there? It turns verification of a Haiku room report from reading into a table, so the ...
 - [`xfund_parity.py`](xfund_parity.py): lab.xfund (the Python twin of qx spread) against a frozen engine run's output on the archive.
 
 ## Build: tables, views and symbol maps (10)
@@ -466,7 +467,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (121)
+## Tools and everything else (122)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -521,6 +522,7 @@ line is the first line of the script's own docstring.
 - [`m322_signal_rule.py`](m322_signal_rule.py): Prospective M322 signal and fixed-capital ticket construction.
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
+- [`owner_ledger.py`](owner_ledger.py): Rebuild docs/OWNER_LEDGER.md: every message the owner typed in this session, verbatim, from the session transcript, with secrets redacted and notifications, hooks, summaries and subagent reports ...
 - [`panel.py`](panel.py): The project's one panel: docs/PANEL.md, rebuilt from the registry, the methods queue and the forward lanes' status files at the end of every tick.
 - [`paper_account.py`](paper_account.py): One offline account command: account, lifecycle, controls or funding component.
 - [`paper_account_view.py`](paper_account_view.py): Offline French view of an explicit simulated-account report; no calculations or orders.
