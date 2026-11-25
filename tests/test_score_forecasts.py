@@ -25,3 +25,11 @@ def test_check_catches_bad_rows():
     rows = [row("1", "forecast", "a", "1.3"), row("1", "resolve", "z", outcome="1"), row("3", "resolve", "a", outcome="2")]
     errs = " ".join(sf.check(rows))
     assert "not in [0, 1]" in errs and "duplicate row_id" in errs and "no earlier forecast" in errs and "0 or 1" in errs
+
+
+def test_erratum_and_void():
+    rows = [row("1", "forecast", "a", "0.8"), row("2", "forecast", "b", "0.3"), row("3", "resolve", "a", outcome="0"),
+            row("4", "erratum", "a"), row("5", "void", "b"), row("6", "resolve", "b", outcome="1")]
+    assert sf.check(rows) == []
+    assert [f for f, _, _ in sf.pairs(rows)] == ["a"]
+    assert "no earlier forecast" in " ".join(sf.check([row("1", "void", "zz")]))

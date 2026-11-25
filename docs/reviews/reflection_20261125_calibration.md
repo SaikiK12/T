@@ -99,3 +99,32 @@ Every forecast is timestamped in git before its outcome, so the score cannot be 
 - **Every P(PASS) above the family's base rate carries the one piece of evidence that lifts it,** or it is written
   at the base rate.
 
+## Corrections after the room's critic (`room_20261125c/critic_calibration.md`; each checked by me)
+1. **"Worse than a constant" is not established.** At n = 7:
+   - the in-sample hit-rate reference (0.204) is optimistic;
+   - the leave-one-out reference is 0.278 and a constant 0.5 scores 0.250, against my 0.249;
+   - the critic's bootstrap 95% interval of my Brier minus the reference is [−0.13, +0.26].
+   - Only the high bin's direction (mean p 0.70, hit 0.25) is worth acting on, and only as a lean.
+   - `score_forecasts.py` now prints all three references.
+2. **The status-word rule fixes fewer errors than I claimed.** By the critic's count, it clearly prevents one of the
+   seven corrections (SPX "closed") and partly prevents two (the TSLA "alive" and its ratio). It does not prevent
+   four:
+   - the assumed $40bn input;
+   - the "fit";
+   - "priced right";
+   - the causal and "chase" claims.
+   These need three habits I already have or now add: an **"assumed" label on any input not fetched**, a
+   **same-numerator comparison** (L053), and **both sides measured before a cause** (L055).
+3. **"Every time toward a cleaner story" was itself too clean.** The volume fix made the TSLA story more striking
+   (about 6% became 18%). Six of seven went toward a cleaner story.
+4. **"Timestamped in git before the outcome" fails for two rows.** The repository's first commit is 2026-11-17
+   (`deae1dc9`), so R472's 0.70 and R473's 0.60 (11-12) cannot be dated by git. They stay in the ledger, flagged.
+   R529's 0.15 was committed before its results, but its data was already held.
+5. **Ledger repairs** (appended, never edited):
+   - erratum rows for line numbers that drifted after an insert;
+   - O3b's definition now cited at its commit;
+   - R509's event made precise;
+   - Q01's event defined before its first weekend;
+   - O2 voided as undefined;
+   - R530's revised 0.23 added as its own forecast.
+

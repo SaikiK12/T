@@ -8,6 +8,8 @@ Columns: row_id, kind (forecast|resolve), forecast_id, written_utc, event, p, so
   history dates it).
 - resolve: forecast_id of an earlier forecast, outcome 1 (the event happened) or 0, source = where the outcome is
   written.
+- erratum: a correction to an earlier row's source or event wording, in `note` (rows are never edited).
+- void: an earlier forecast that cannot be scored as written (its event is undefined); excluded from the score.
 
 Prints: counts, the Brier score of resolved forecasts, the Brier score of always forecasting their hit rate (the
 base-rate reference), and a calibration table by bin.
@@ -59,6 +61,9 @@ def check(rows):
             resolved.add(fid)
             if r["outcome"] not in ("0", "1"):
                 errs.append(f"resolve {fid}: outcome {r['outcome']!r} must be 0 or 1")
+        elif r["kind"] in ("erratum", "void"):
+            if fid not in forecasts:
+                errs.append(f"{r['kind']} {fid} has no earlier forecast row")
         else:
             errs.append(f"row {r['row_id']}: kind {r['kind']!r}")
     return errs
@@ -68,7 +73,8 @@ def pairs(rows):
     """[(forecast_id, p, outcome)] for resolved forecasts, in forecast order."""
     p = {r["forecast_id"]: float(r["p"]) for r in rows if r["kind"] == "forecast"}
     o = {r["forecast_id"]: int(r["outcome"]) for r in rows if r["kind"] == "resolve"}
-    return [(f, p[f], o[f]) for f in p if f in o]
+    void = {r["forecast_id"] for r in rows if r["kind"] == "void"}
+    return [(f, p[f], o[f]) for f in p if f in o and f not in void]
 
 
 def score(prs):
@@ -78,12 +84,15 @@ def score(prs):
     brier = sum((p - o) ** 2 for _, p, o in prs) / n
     hit = sum(o for _, _, o in prs) / n
     ref = sum((hit - o) ** 2 for _, _, o in prs) / n
+    # leave-one-out reference: each outcome forecast by the hit rate of the others (the in-sample one is optimistic)
+    tot = sum(o for _, _, o in prs)
+    loo = sum((((tot - o) / (n - 1)) - o) ** 2 for _, _, o in prs) / n if n > 1 else float("nan")
     bins = []
     for lo, hi in BINS:
         b = [(p, o) for _, p, o in prs if lo <= p < hi]
         if b:
             bins.append((lo, min(hi, 1.0), len(b), sum(p for p, _ in b) / len(b), sum(o for _, o in b) / len(b)))
-    return {"n": n, "brier": brier, "hit_rate": hit, "brier_base_rate": ref, "bins": bins}
+    return {"n": n, "brier": brier, "hit_rate": hit, "brier_base_rate": ref, "brier_loo_base_rate": loo, "bins": bins}
 
 
 def main():
@@ -96,11 +105,12 @@ def main():
         print("\n".join(errs))
         return 1
     n_f = sum(r["kind"] == "forecast" for r in rows)
+    n_v = len({r["forecast_id"] for r in rows if r["kind"] == "void"})
     s = score(pairs(rows))
-    print(f"forecasts {n_f}, resolved {s['n']}, pending {n_f - s['n']}")
+    print(f"forecasts {n_f}, resolved {s['n']}, void {n_v}, pending {n_f - s['n'] - n_v}")
     if s["n"]:
-        print(f"Brier {s['brier']:.3f} against {s['brier_base_rate']:.3f} for always forecasting the hit rate "
-              f"({s['hit_rate']:.2f}); lower is better")
+        print(f"Brier {s['brier']:.3f}; references: always the hit rate {s['brier_base_rate']:.3f} (in sample, "
+              f"optimistic), leave-one-out {s['brier_loo_base_rate']:.3f}, always 0.5 0.250; lower is better")
         print("| p bin | n | mean p | hit rate |\n|---|---|---|---|")
         for lo, hi, n, mp, hr in s["bins"]:
             print(f"| {lo:.1f}-{hi:.1f} | {n} | {mp:.2f} | {hr:.2f} |")

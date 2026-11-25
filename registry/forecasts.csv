@@ -25,3 +25,13 @@ F023,resolve,O3b-sun-under,2026-11-25,,,docs/reviews/o3b_daily_vrp.md (Sun +21.0
 F024,resolve,O7b-sat,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (Sat -40.57 t -3.88),1,
 F025,resolve,O7b-2026,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (2026 Sat +7.8),1,
 F026,resolve,O7b-sun-not,2026-11-25,,,docs/reviews/o7_eth_daily_vrp.md (Sun +52.11 t 2.99),0,
+F027,erratum,O3b-sun-under,2026-11-25,,,,,"source line drifted after a row was inserted: O3b is the register row with id O3b; the event's definition (mean > 16 bp with t >= 2) is docs/reviews/reflection_20261125_greeks.md:144 at commit 428def4e (17:58 UTC), before the read"
+F028,erratum,O7b-sat,2026-11-25,,,,,"source: the register row with id O7b (line drifted by one after an insert)"
+F029,erratum,O7b-2026,2026-11-25,,,,,"source: the register row with id O7b"
+F030,erratum,O7b-sun-not,2026-11-25,,,,,"source: the register row with id O7b"
+F031,erratum,O7d-sun,2026-11-25,,,,,"source: the register row with id O7d"
+F032,erratum,R524-pass,2026-11-25,,,,,"source: docs/reviews/december_decision_20261125.md:67 (not :66)"
+F033,erratum,R509-pass,2026-11-25,,,,,"event made precise: R509's own PASS rule at its decision look (full looks at 90 and 180 scored days, Feb-May 2027, per its PREREG)"
+F034,erratum,Q01-frozen,2026-11-25,,,,,"event made precise before the first recorded weekend: on 2026-11-29 at 18:00 New York, the median over Variational's US-equity perps of |$1k mid / that listing's Friday 16:00 New York mark - 1| is below 25 bp"
+F035,void,O2-ratio,2026-11-25,,,,,"undefined as written: the decisive quantity is the dealer net (L053), which open interest does not give; the gross ratio is already 18% on one Friday"
+F036,forecast,R530-pass-rev,2026-11-25,R530 xyzbal_fwd passes (revised after the critic's cost correction),0.23,docs/reviews/room_20261125/synthesis.md:130,,"a revision is scored as its own forecast"

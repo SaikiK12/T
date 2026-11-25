@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L057 · 2026-11-25 · Correction to L056: the calibration verdict and the rule's reach were both overstated
+- **What happened.** The room's critic (`docs/reviews/room_20261125c/critic_calibration.md`, checked by me) found
+  three overstatements in L056:
+  - "worse than a constant" at n = 7: the leave-one-out reference is 0.278 against my 0.249, and the bootstrap
+    interval spans zero;
+  - "five of seven from a status word": the rule alone prevents about three;
+  - "every time toward a cleaner story": six of seven.
+- **What surprised me.** The page about my overstatements overstated. The habit is deeper than a word list.
+- **What I will do differently.** A small-n score is reported with its leave-one-out reference and an interval. A
+  rule's reach is counted case by case before I claim it.
+- **Instruction changed.** The `CLAUDE.md` habit and step 4 now carry the corrected numbers. This corrects L056; it
+  does not rewrite it.
+
 ## L056 · 2026-11-25 · My status words and my high probabilities both run ahead of the evidence; a ledger now scores them
 - **What happened** (`docs/reviews/reflection_20261125_calibration.md`; `registry/forecasts.csv`):
   - **Seven first drafts were corrected in one day,** each toward a cleaner story. Five came from a status word
