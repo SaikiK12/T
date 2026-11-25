@@ -11,6 +11,25 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L046 · 2026-11-25 · Self-review 3: my first estimates are optimistic every time
+- **What surprised me** ([self_review_20261125.md](reviews/self_review_20261125.md)):
+  - Under rule 11, five of nine cycles changed the money plan. The changes came from deep reads of the lab's own
+    data and of venue rules, not from new tests (none were run).
+  - **Every first Fermi size I gave the owner was cut by 2 to 10 times within two days:** Kraken sleeve, weekend
+    fade, the "sell-off" claim.
+  - Each first estimate used the measurement just made, and left out the binding constraint and the decay.
+  - **Half of R508's trades are short Kraken and earned 63% of the funding,** yet the stake's leverage rule was
+    argued for long Kraken accounts only.
+- **What I will do differently:**
+  - The first Fermi size names the binding constraint and the decay. That is now step 4 of the one-page approach in
+    `CLAUDE.md` (promoted).
+  - Claims made to the owner go in a scoreboard that each self-review updates.
+  - Next cycle: check the stake rule for short Kraken legs (up-spikes) before anything else.
+- **Instruction changed:** `CLAUDE.md` step 4 of "How I approach a subject" (capacity = min(market, owner under the
+  margin rule), net of decay). Flagged, not pruned: "the sign comes from the design".
+- **Method reading** (Bailey et al. 2014, read in full): no change. The lab already counts trials and halves
+  in-sample edges.
+
 ## L045 · 2026-11-25 · Ask whether a class can grow before searching for its next member
 - **What surprised me:**
   - Cycle 8 said the product is a pipeline of new design gaps. A census of the funding rules of seven new perp venues

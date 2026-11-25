@@ -30,7 +30,8 @@ not to add process.
   1. the economic question;
   2. the mechanism (who must trade, under which constraint, at a price set by which rule);
   3. the barrier that keeps others out (none means someone faster is paid first);
-  4. a Fermi size and the capacity;
+  4. a Fermi size and the capacity: the smaller of the market's and the owner's (capital under the venue's margin
+     rule), net of the measured decay (L042, L044; self-review 3);
   5. what we see or reach that others do not;
   6. the cheapest decisive observation.
 - **Solve the class:** the map of venue design mechanisms in the reflection. Its rows come from primary sources.

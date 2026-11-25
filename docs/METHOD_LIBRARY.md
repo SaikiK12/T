@@ -128,13 +128,36 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
     and which recorded data no question has used.
   - Promoted per the chain's rule.
 
+### Bailey, Borwein, López de Prado & Zhu, "Pseudo-Mathematics and Financial Charlatanism" (Notices of the AMS, 2014)
+- **Read 2026-11-25, in full:** sections 1-9 and the proofs in appendices 10.1-10.4; the Python listing in 10.5 was
+  skimmed.
+  - Legal copy: the authors' own `davidhbailey.com/dhbpapers/backtest-pseudo.pdf` (April 2014 version).
+  - The AMS copy returned 403 and was not bypassed.
+- **The equations, checked against the page:**
+  - expected best in-sample Sharpe of N skill-less configurations:
+    E[max_N] ≈ (1 − γ)Z⁻¹(1 − 1/N) + γZ⁻¹(1 − 1/(Ne)), with γ ≈ 0.5772 (Prop. 2.1);
+  - minimum backtest length: MinBTL ≈ (that expression / E[max_N])² < 2 ln N / E[max_N]² years (Th. 3.1).
+  - With 5 years of data, no more than about 45 independent trials before a Sharpe of 1 is expected from noise.
+- **The passage that matters.** "A researcher that does not report the number of trials N used to identify the
+  selected backtest configuration makes it impossible to assess the risk of overfitting."
+  - Also, under compensation effects (a global constraint, or serial dependence, Props. 6.1-6.3), "good backtest
+    performance is an indicator of negative future results".
+- **Checked against this lab:**
+  - **R530's balanced book.** The `rel` variant was picked from R462's 32 cells. SE of the A weekend mean is about
+    27.7/√17 ≈ 6.7 bp, and E[max_32] ≈ 2.0, so the selection haircut is about 14 bp of +52. Thorp's halving (26 bp)
+    is the larger haircut, and it is the one the power calculation used.
+  - **Its SD reduction is a property of the design, not a selected statistic,** so it is not shrunk.
+  - **Compensation effects bear on the carry family.** Cycles 7-8 found dispersion is regime-driven. A pair selected
+    for its strong recent months (the Kraken pairs, +31%/yr in their first ten months) may have been selected at a
+    peak, and so may do worse than the family's average. The dated forecasts (cycle 8) already lean that way.
+- **Decision changed: none.** The lab already counts trials per round and across the program, halves in-sample
+  edges, and forward-tests selected variants. Read, no change.
+
 ## Next to read (legal copies only; one every fourth cycle)
 1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters". Good Judgment's
    page was behind a Cloudflare challenge on 2026-11-24; a library or publisher copy is needed. Base rates,
    Fermi-izing, incremental updates.
 2. **Gary Klein, "Performing a Project Premortem"** (HBR, 2007): imagine the stake failed, then list why.
-4. **Bailey, Borwein, López de Prado and Zhu, "Pseudo-Mathematics and Financial Charlatanism"** (Notices of the AMS,
-   2014, free).
 5. **Campbell Harvey, "The Scientific Outlook in Financial Economics"** (AFA presidential address, 2017): the
    chapters on p-hacking and Bayesianised p-values.
 6. **George Pólya, *How to Solve It*, the book's own chapters:** read the foreword and the table of contents on
