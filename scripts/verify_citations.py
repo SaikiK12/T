@@ -11,7 +11,12 @@ is text in "..." or “...” on the same line as the citation. Statuses:
 - bad line: the line number is past the end of the file;
 - no file: the path does not exist.
 
-usage: python scripts/verify_citations.py REPORT.md [REPORT.md ...] [--fails]
+External sources (papers) have no repo path. With `--corpus DIR`, every quote on a line with no path:line citation is
+searched in the .txt files under DIR (text extracted from the PDFs, e.g. `pdftotext` without `-layout`, so sentences
+keep their reading order). Ligatures, hyphenation at line ends, curly quotes and the Unicode minus are normalized.
+Statuses: in corpus (with the file), not in corpus.
+
+usage: python scripts/verify_citations.py REPORT.md [REPORT.md ...] [--fails] [--corpus DIR]
 """
 import argparse
 import re
@@ -24,8 +29,37 @@ QUOTE = re.compile(r"[\"“]([^\"”]{8,})[\"”]")
 NEAR = 8
 
 
+LIGATURES = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl", "−": "-", "–": "-", "—": "-", "∗": "*",
+             "“": '"', "”": '"'}
+
+
 def norm(s):
     return re.sub(r"\s+", " ", s.replace("’", "'").replace("‘", "'")).strip().lower()
+
+
+def norm_pdf(s):
+    """Normalize extracted PDF text: ligatures, dashes, hyphenation at line ends, then norm()."""
+    for k, v in LIGATURES.items():
+        s = s.replace(k, v)
+    s = re.sub(r"(\w)-\s*\n\s*(\w)", r"\1\2", s)
+    return norm(s)
+
+
+def load_corpus(d):
+    """{file name: normalized text} for every .txt under d."""
+    return {str(f.relative_to(d)): norm_pdf(f.read_text(errors="ignore")) for f in sorted(Path(d).rglob("*.txt"))}
+
+
+def check_corpus(line, corpus):
+    """Quotes on a line without a repo citation, looked up in the corpus: [(status, file, quote)]."""
+    if CITE.search(line):
+        return []
+    out = []
+    for q in QUOTE.findall(line):
+        q2 = norm_pdf(q)[:120]
+        hit = next((name for name, text in corpus.items() if q2 in text), None)
+        out.append(("in corpus", hit, q2[:80]) if hit else ("not in corpus", "", q2[:80]))
+    return out
 
 
 def resolve(p):
@@ -69,7 +103,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("reports", nargs="+")
     ap.add_argument("--fails", action="store_true", help="list the citations that are not verified or located")
+    ap.add_argument("--corpus", help="directory of .txt files extracted from the cited papers")
     a = ap.parse_args()
+    corpus = load_corpus(a.corpus) if a.corpus else None
     total = {}
     for r in a.reports:
         rp = Path(r)
@@ -80,6 +116,11 @@ def main():
                 total[st] = total.get(st, 0) + 1
                 if st not in ("verified", "located"):
                     fails.append(f"  {rp.name}:{i}  {path}:{s}-{e}  {st}  {q}")
+            for st, name, q in (check_corpus(line, corpus) if corpus is not None else []):
+                counts[st] = counts.get(st, 0) + 1
+                total[st] = total.get(st, 0) + 1
+                if st == "not in corpus":
+                    fails.append(f"  {rp.name}:{i}  {st}  {q}")
         print(f"{rp.name}: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())))
         if a.fails:
             print("\n".join(fails[:60]))
