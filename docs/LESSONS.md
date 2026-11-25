@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L047 · 2026-11-25 · Check a risk rule on what the account actually holds
+- **What surprised me:**
+  - The feared risk was real but smaller than I expected. The Kraken account of the sign-agnostic book is 46% short.
+  - Its largest single moves are up-spikes on short legs (ACE +88% in a day).
+  - But on Kraken's own mark the account lost at most 4.4% of notional in a day (upper bound 12.6%), against 59% of
+    room at 1.5x.
+  - The risk that binds is the account's net long/short imbalance in a market-wide move: a 2025-10-10 crash on the
+    most long-heavy day costs about 26%. A long-alt account loses the full move.
+  - The rule survives. The way it was argued (for a long-only account) was wrong, and only luck made it
+    conservative.
+- **What I will do differently:**
+  - Describe a book's risk from its daily positions (net share, number of legs, the largest leg) before reusing a
+    rule argued for another composition.
+- **Promoted:** this is the second time (L043: describe a book by what it earns, not by the story that found it).
+  `CLAUDE.md`'s habits gain "describe a book by what it holds and earns, measured".
+
 ## L046 · 2026-11-25 · Self-review 3: my first estimates are optimistic every time
 - **What surprised me** ([self_review_20261125.md](reviews/self_review_20261125.md)):
   - Under rule 11, five of nine cycles changed the money plan. The changes came from deep reads of the lab's own

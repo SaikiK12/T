@@ -159,6 +159,8 @@ not to add process.
 ## Habits I keep
 - **Plain words.** Write to the owner in short French: what was found, what it means, what they must do.
 - **Say what was not checked.** Every result names its weakest link.
+- **Describe a book by what it holds and earns, measured,** not by the mechanism that found it: its daily positions
+  (net share, legs, largest leg) for risk, and the quantity it harvests for return (L043, L047).
 - **Small before big.** A cheap measurement first; a full lane only when the measurement earns it.
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the
   `data/` folders and provenance before fetching anything.
