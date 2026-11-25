@@ -71,13 +71,20 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
 
 | Channel | Forced trade | Liquidity in the window | Ratio | Lab result |
 |---|---|---|---|---|
-| Crypto gamma (BTC, 2024-26) | −$20M per 1% (R292) | BTC perp daily volume | 0.13% | R292 NULL |
+| Crypto gamma (BTC, 2024-26) | **dealer net** −$20M per 1% (R292, from taker flow); **gross** open-interest gamma $633M per 1% (snapshot 2026-10-21, M308) | BTC perp daily volume (about $330M per median hour) | **net 0.13%; gross about 8%** | R292 NULL |
 | Crypto charm at Deribit 08:00 UTC | gamma expiring within 2% of spot | 07:30-08:00 perp volume | small; R289 saw a 15-20 bp reversal, too small | R296 NULL |
-| SPX charm into the 3rd-Friday SOQ | $280-306M overnight (paper) | ES overnight notional, measured here (16:00-09:00 New York, median): $29bn (2018), $45bn (2021), $53bn (2024), $82bn (2026) | 0.4-1.0% | never tested |
+| SPX charm into the 3rd-Friday SOQ | $280-306M overnight (paper; a dealer-net estimate from the CBOE residual) | ES overnight notional, measured here (16:00-09:00 New York, median): $29bn (2018), $45bn (2021), $53bn (2024), $82bn (2026) | 0.4-1.0% of the overnight; larger if the flow lands in the opening auction | never tested |
 | SPX gamma (dealers short) | billions per 1% | ES day session $150-420bn (measured here) | about 1% | R528 NULL on the simple form |
 
+- **Correction after the room's critic** (`room_20261125b/critic_greeks.md`, checked by me on `registry/methods.csv:280`
+  and Yahoo's daily TSLA volume):
+  - The first version of this table compared **gross** TSLA gamma with crypto's **dealer net**. That is two different
+    numerators.
+  - Crypto's gross open-interest gamma is about 8% of perp volume (one snapshot). Its dealer net is 0.13%, about 1/60
+    of the gross, because customers sit on both sides and most of the open interest nets out.
+  - **The quantity that decides is the dealer's net forced trade,** and open interest alone does not give it.
 - **What the table says:**
-  - Crypto option hedging is an order of magnitude too small to move crypto prices. Every crypto Greek-flow round was
+  - Crypto option hedging, net of what offsets, is an order of magnitude too small to move crypto prices. Every crypto Greek-flow round was
     NULL, and this is why. A crypto vanna round (M310) would face the same ratio. I do not test it (O4).
   - SPX charm has the larger ratio. The square-root impact law (impact ≈ σ_window × √(Q/V), σ overnight ≈ 70 bp)
     predicts 4-6 bp now, not the paper's 18 bp. Overnight ES volume has nearly tripled since 2018.
@@ -85,17 +92,24 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
     - The full 18 bp would be worth about 2%/yr.
     - The 2022-26 holdout has about 59 events with an SD near 70 bp, so its standard error is about 9 bp. It cannot
       tell 5 bp from zero.
-    - Killed at Fermi: worth less than its cycle (O1). The prediction is written in the register in case it is ever
-      measured.
+    - **Parked, not killed (corrected).** The critic is right that the paper places the price spike in the a.m.
+      settlement window. That flow lands in the constituents' opening auction, which is thinner than the whole night,
+      so my overnight ratio may understate it.
+      - On a Sharpe basis: per trade about 0.05 at 5 bp and 0.24 at 18 bp; about 0.85 a year at the full effect.
+      - The value is still small at 12 chances a year. The cheapest decisive observation would be ES minute bars,
+        08:00-09:30 New York, on 3rd Fridays (O1).
   - **Where the ratio is large is single stocks with heavy short-dated option open interest** (TSLA, NVDA and other
     0DTE and weekly names). There, dealer gamma per 1% can be several percent of the stock's daily volume, by
-    order-of-magnitude reasoning not yet measured. That is where Ni-Pearson-Poteshman pinning and gamma squeezes live.
+    order-of-magnitude reasoning. That is where Ni-Pearson-Poteshman pinning and gamma squeezes live.
     The owner can reach those names on trade.xyz single-stock perps. This is O2.
     - **Measured the same day for $0.077** (Databento OPRA, TSLA open interest 2026-11-13 and the series
       definitions):
       - $2.3-2.5bn of gamma per 1% move, gross; $0.8-0.9bn calls-minus-puts.
-      - That is about 6% gross and 2% net of an assumed $40bn of daily stock volume.
-      - **TSLA's ratio is 15-45 times crypto's.**
+      - **Corrected volume:** TSLA traded $13.2bn a day over the last 20 sessions (Yahoo daily volume × close, 34.8M
+        shares; $13.7bn over 3 months), not the $40bn I first assumed. So gross gamma is about 18% of daily volume,
+        and calls-minus-puts about 6.5%.
+      - **Compared like for like, gross with gross, TSLA is about 2× crypto** (18% against about 8%), not "15-45×" as
+        first written. The dealer's net is unknown for TSLA. Crypto shows that the net can be 1/60 of the gross.
       - The dealer's sign is the open part. Retail buys TSLA calls, which would make dealers short calls, the
         opposite of the GEX convention.
       - **What the ratio buys.** The literature's single-stock effect is on volatility: Barbon-Buraschi Table II gives
@@ -103,13 +117,14 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
         1% of an SD (room S2, S3). Direction needs the dealer's sign. So O2 is alive as a mechanism, but not yet as a
         trade. I buy no more data until a sign source or a volatility use is named.
 - **The general rule (already step 4's Fermi, made concrete for this class).** Before any Greek idea:
-  - write the forced notional and the window's volume;
+  - write the dealer's **net** forced notional (not open interest) and the window's volume;
   - below about 0.5%, stop;
   - then ask whether the professionals' own quotes already price it (section 3).
 
 ## 3. The weekend clock: a convention gap that the incumbents already price
-- **The question.** Deribit quotes implied vol in calendar time. Crypto realized vol is lower at weekends (CME:
-  weekend vol is about 75% of weekdays). If market makers priced a Saturday like a Tuesday, buying Tuesday variance
+- **The question.** Deribit quotes implied vol in calendar time. Crypto realized vol is lower at weekends:
+  - CME, via the Haiku reader, gives weekend daily vol at about 75% of weekdays (spot, Parkinson, 2020-2026);
+  - in my own windows below, Saturday is about 55% of the weekday mean and Sunday about 100%. If market makers priced a Saturday like a Tuesday, buying Tuesday variance
   and selling Saturday's would be a design gap: a rule others had not compared (approach, 4c).
 - **The cheapest decisive observation was in our own files.** The minute chain (`data/option_expiry`) holds full
   term structures with bid and ask. Implied forward vols from the mark IVs of the dailies:
@@ -128,12 +143,17 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
 | Close-to-close vol 2025-26, % | 49.4 | 38.5 | 43.7 | 52.2 | 41.5 | **24.9** | 45.7 |
 
 - **Reading:**
-  - A one-day ATM straddle at 18-21% costs 75-88 bp. A Saturday's mean absolute move is 77-81 bp.
-  - **Market makers already price Saturday at about half a weekday's vol, and they are about right.** There is no
-    gross gap left to harvest, and costs are about 16 bp a straddle:
+  - A one-day ATM straddle at 18-21% costs 75-86 bp. A Saturday's mean absolute move is 77-81 bp.
+  - **For a straddle held to expiry, market makers price Saturday about right** (at about half a weekday's vol).
+  - **The variance test disagrees** (critic E5). Saturday's close-to-close vol is 24.9% against 18-21% implied: a
+    variance ratio of about 1.4-1.9.
+    - The gap is in the tails: a mean move of 81 bp is below the 104 bp a normal distribution at 24.9% would give.
+    - A delta-hedged long-gamma Saturday might earn the tails, but only after hedging costs, and that is not shown.
+  - **Status: provisional,** from two snapshots. The O3b read on 2022-26 measures every weekday, Saturday included.
+  - Costs are about 16 bp a straddle:
     - a measured half-spread of 7.5-10 bp on the dailies;
     - fees of about 6 bp.
-  - The strong form of the idea is dead, settled in ten minutes with held data and no download.
+  - The strong form (Saturday priced like a weekday) is dead: the term structure shows the discount.
 - **What remains (O3b).** On the Friday snapshot, Sun→Mon forward vol is 32.4%, which costs about 134 bp. The
   Sunday-window mean move was 169-176 bp in 2023-26, though only 120 bp in the last 13 weeks.
   - That is one snapshot, so it is a question, not a finding.
@@ -151,8 +171,11 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
     profit: -0.9224 BTC (-92.24%) … APR: -17.7%". The author: "every other day generated at least a small profit".
     - Buying it instead: "after fees and slippage, the APR was only 2.1%, and the results included a 0.45 BTC
       drawdown".
-    - So the Sunday-to-Tuesday window is underpriced gross and roughly fair net. That fits my O3b prediction (no
-      underpricing beyond costs), which was committed (428def4e) before I read this page.
+    - So the Sunday-to-Tuesday window is underpriced gross and roughly fair net, for a 0.35-delta strangle.
+    - **Correction (critic E1).** I first wrote that this "fits" my O3b prediction. It does not settle it. The
+      instrument and window differ, and my own Friday snapshot (Sun→Mon premium 135 bp against a mean move of
+      169-176 bp, a ratio of 0.77-0.80) points against my prediction, which needs at least 0.90.
+    - The prediction stays as committed in 428def4e; the read decides.
   - **The reader's quotes, checked mechanically** (`verify_citations.py --corpus` on the page text I fetched):
   - 31 found and 27 not.
   - Most of the 27 come from pages outside my corpus (CME, arXiv HTML).
@@ -191,14 +214,21 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
 - **Gamma × closed market (new, O6):** pinned single stocks close Friday at a strike, and the pin releases over the
   weekend while xyz perps trade. This is a mix of O2 and R530's class. It is an idea only, until O2's ratio is
   measured.
-- **Variance premium × clock (O3):** Saturday is fairly priced. Sunday→Monday is open.
+- **Variance premium × clock (O3):** Saturday is fairly priced for a straddle to expiry, but cheap on variance
+  (provisional). Sunday→Monday is open.
 
 ## 5. How I approached this subject, and what I would change
 - **What went right:**
   - I verified the room's central numbers in the PDFs before using them.
   - I extended the checker so the next paper report verifies itself.
   - I let a Fermi ratio kill two ideas (O1, O4) instead of running them.
-  - I found the weekend answer in data we already had.
+  - I found the weekend term structure in data we already had. The critic showed that it answers the straddle
+    question, not the variance question.
+- **What the critic caught (verified):**
+  - I compared a gross ratio (TSLA) with a net one (crypto), though R292's own row held both numbers.
+  - I assumed TSLA's volume instead of fetching it: $13bn, not $40bn.
+  - I called a snapshot that contradicts my prediction a "fit".
+  - Three errors in one page, all in the direction of a cleaner story.
 - **What I would change:**
   - I spent the first part of the cycle verifying figures before asking which figure decides the subject. R292's
     0.13% was in the archive all along, and it decides most of the Greek class.

@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L053 · 2026-11-25 · Correction to L052: I compared a gross ratio with a net one, and the room's critic caught it
+- **What happened.** L052's "Fermi kept one idea… TSLA 15-45 times crypto" was wrong. Evidence:
+  `docs/reviews/room_20261125b/critic_greeks.md`, checked by me.
+  - TSLA's figure was gross open-interest gamma over an assumed volume.
+  - Crypto's 0.13% is the dealer's net from taker flow.
+  - The same registry row (`registry/methods.csv:280`) gives crypto's gross at about 8% of perp volume. Gross with
+    gross, TSLA is about 2× crypto (18% of a measured $13.2bn a day), and its dealer net is unknown.
+  - **Same page, two more slips:**
+    - an assumed volume ($40bn) where a free fetch gave $13bn;
+    - a snapshot that contradicts my O3b prediction, which I called a "fit".
+- **What surprised me.** All three errors pushed toward a cleaner story. A Haiku critic with a checklist found them in
+  five minutes. My own re-reading had not.
+- **What I will do differently:**
+  - **Numerator discipline.** A ratio is compared only with the same numerator (gross with gross, net with net), and
+    the decisive quantity is named before the comparison.
+  - **No assumed input** when a free fetch gives the number.
+  - **A critic reads every reflection page before it reaches the owner.** This is rule 3's room used as a gate, not
+    as a decoration.
+- **Instruction changed.** `CLAUDE.md` approach item 4 now says the dealer's **net** forced trade. This entry corrects
+  L052; it does not rewrite it.
+
 ## L052 · 2026-11-25 · One ratio decides the Greek class, and the incumbents' quotes come before the world's data
 - **The owner.** "Réfléchis à des choses que toi tu peux créer… le gamma, le vanna, le vomma… pose-toi des questions…
   si c'est la vérif qui limite, débloque-la." Evidence: `docs/reviews/reflection_20261125_greeks.md` and register

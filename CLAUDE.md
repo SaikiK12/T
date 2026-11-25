@@ -41,8 +41,9 @@ not to add process.
   3. the barrier that keeps others out (none means someone faster is paid first). Read the incumbents' own quotes
      first: a gap they already price is no gap (L052);
   4. a Fermi size and the capacity: the smaller of the market's and the owner's (capital under the venue's margin
-     rule), net of the measured decay (L042, L044; self-review 3). For a forced flow, the size is the forced trade
-     divided by the liquidity in the window where it must trade. Below about 0.5%, stop (L052);
+     rule), net of the measured decay (L042, L044; self-review 3). For a forced flow, the size is the net forced trade
+     (after the positions that offset, not the gross open interest) divided by the liquidity in the window where it
+     must trade. Below about 0.5%, stop (L052, L053);
   5. what we see or reach that others do not;
   6. the cheapest decisive observation.
 - **Solve the class:** the map of venue design mechanisms in the reflection. Its rows come from primary sources.
@@ -59,6 +60,8 @@ not to add process.
 3. **Think together with a Haiku room, always; decide and verify myself** (owner 2026-11-25). Every cycle launches
    Haiku subagents (model `haiku`) as a room: auditors, critics, inventors, readers. I set their questions, check every
    claim that moves money or a rule against the page, and decide. "Rien ne dépend de moi": the judgment stays mine.
+   A Haiku critic reads every reflection page before it reaches the owner. Twice it found errors I had missed, all
+   in the direction of a cleaner story (L051, L053).
 4. **Data first.** "Il nous faut de la data à analyser." Name the data a question needs, check `data/`, and fetch
    what is missing.
 5. **Do not drop an idea early without a search.** ("abandonne pas des trucs prématurément sans websearch")

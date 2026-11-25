@@ -91,20 +91,25 @@
         c'est environ 1 000 $ par trade, soit environ 2 000 $/an si l'avantage réel vaut la moitié du passé.
   - **Les Greeks (gamma, charm, vanna, vomma), réflexion du 25-11** ([détail](reviews/reflection_20261125_greeks.md),
     questions O1-O6 dans [le registre](reviews/open_questions.md)).
-    - **Un seul chiffre décide :** le flux forcé du dealer divisé par le volume au moment où il doit trader.
-      - En crypto, il vaut 0,13 % (mesuré par R292). C'est pourquoi nos 14 essais sur les options crypto sont nuls,
-        et un essai vanna crypto le serait aussi.
-      - Pour le charm du S&P avant l'expiration du 3e vendredi, il vaut 0,4 à 1 %. Cela donne environ 5 bp, 12 fois
-        par an : trop petit pour un test.
-      - **Pour TSLA, il vaut environ 6 %** (mesuré pour 0,08 $ sur une journée d'open interest). Les actions
-        individuelles sont donc le seul terrain où les Greeks peuvent bouger le prix. Tu peux les atteindre via les
-        perps xyz.
-      - Mais l'effet mesuré dans les études porte sur la **volatilité** (environ 12 % du mouvement absolu), pas sur
-        la direction. Pour trader une direction, il faudrait savoir de quel côté sont les dealers, et l'open interest
-        ne le dit pas. Je n'achète donc pas plus de données pour l'instant (environ 17 $ par action et par an).
-    - **Le week-end des options crypto est déjà bien pricé.** Les market makers de Deribit comptent le samedi pour
-      environ la moitié d'un jour de semaine, et c'est juste. Le backtest de Deribit le confirme : vendre le dimanche
-      perd, acheter le dimanche rapporte à peine 2 %/an après frais.
+    - **Un seul chiffre décide :** le flux **net** que les dealers doivent trader, divisé par le volume au moment où
+      ils doivent le faire.
+      - En crypto, ce net vaut 0,13 % du volume perp (mesuré par R292). Le gamma brut des options vaut, lui, environ
+        8 %, mais les positions se compensent. C'est pourquoi nos 14 essais sur les options crypto sont nuls, et un
+        essai vanna crypto le serait aussi.
+      - Pour le charm du S&P avant l'expiration du 3e vendredi : environ 5 bp attendus, 12 fois par an. C'est mis de
+        côté, pas tué : l'effet se joue à l'ouverture, et je n'ai pas mesuré ce créneau.
+      - **Pour TSLA, le gamma brut vaut environ 18 % du volume de l'action** (13 Md$/jour, mesuré ; open interest à
+        0,08 $). C'est environ 2 fois la crypto en brut, mais le net des dealers y est inconnu. Je l'avais d'abord
+        comparé, à tort, au net de la crypto ; le critique de la salle Haiku l'a vu.
+      - Les études mesurent un effet sur la **volatilité** des actions, pas sur leur direction. Je n'achète pas plus
+        de données tant qu'on n'a pas de source pour le côté des dealers.
+    - **Le week-end des options crypto.** Les market makers de Deribit comptent le samedi pour environ la moitié d'un
+      jour de semaine.
+      - Pour un straddle gardé jusqu'à l'échéance, c'est juste. Sur la variance, c'est trop bon marché, à cause des
+        queues de distribution. Les deux sont provisoires : deux instantanés seulement.
+      - Le dimanche → lundi semble sous-pricé. Le backtest de Deribit va dans ce sens : vendre le dimanche perd,
+        acheter rapporte environ 2 %/an après frais.
+      - La lecture enregistrée sur 2022-2026 tranchera ; sa prédiction est écrite d'avance.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
