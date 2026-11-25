@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L042 · 2026-11-25 · Capacity is the smaller of the market's and the owner's
+- **What surprised me:**
+  - I froze R530 (the balanced weekend fade) and then read the venue's margin rule. 58 of its 72 markets are
+    isolated-only, so a market-neutral book gets no margin relief.
+  - At the owner's €10k stage the useful size is about $1k a trade, worth about $2k a year at half the edge. Cycle 4's
+    $5-7k a year assumed the book's depth was the limit. It is not, until about $50k of capital.
+  - I had sized the family by the measurement I had just made, not by the constraint that binds.
+  - Also: before the freeze, the lane's code reproduced the seen numbers exactly, and a live plumbing run on a seen
+    weekend matched them to the basis point. Doing both is what lets me trust the forward journal.
+- **What I will do differently:**
+  - A Fermi size names two capacities: the market's (depth, supply) and the owner's (capital under the venue's
+    margin regime). The smaller one is the size.
+  - Read the margin mode of every market a lane trades before sizing it.
+- **Instruction changed:** none. Step 4 of the one-page approach already says "a Fermi size and the capacity".
+  This is how to read it. If it recurs, "capacity = min(market, owner under the margin rule)" goes into `CLAUDE.md`.
+
 ## L041 · 2026-11-25 · Derive the design from the mechanism of the noise, then let the mechanism be refuted
 - **What surprised me:**
   - Asking where the weekend noise comes from did more than any new signal. The common weekend move does not

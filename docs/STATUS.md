@@ -58,8 +58,11 @@
       les week-ends passés (25-11).
       - À la moitié de l'avantage, il serait décidé avec 92 % de chances, contre 32 % pour R463, en 20 week-ends
         environ.
-      - Sa piste en papier doit être figée avant le dimanche 6-12, le prochain week-end compté (Thanksgiving, Noël et
-        le Nouvel An sont exclus) ([détail](reviews/reflection_20261125_power.md)).
+      - **Piste R530, figée le 25-11.** Elle compte dès le week-end du 4-12 ; décision au 20e week-end compté
+        (vers fin avril 2027) ou au 30e (vers juillet). Thanksgiving, Noël et le Nouvel An sont exclus
+        ([détail](reviews/reflection_20261125_power.md)).
+      - **Taille pour toi :** sur xyz, la plupart de ces marchés ont une marge isolée par position. Avec 10 000 €,
+        c'est environ 1 000 $ par trade, soit environ 2 000 $/an si l'avantage réel vaut la moitié du passé.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :

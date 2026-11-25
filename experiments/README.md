@@ -14,8 +14,9 @@ Verdict: CONFIRMED, PARTIAL, NULL, DATA_PASS (a measurement), PENDING.
 These are recorded statuses, not process-health or freshness checks. Running rounds can include a reserved
 batch or a measurement; this heading does not turn them into forward paper evidence.
 
-## Running or armed registered rounds (70)
+## Running or armed registered rounds (71)
 
+- **[xyzbal_fwd](xyzbal_fwd/)** R530, RUNNING PENDING, 1 trial. M563 forward: the balanced weekend fade of trade.xyz US-stock perps (R462's 76 markets): rel W = Fri 20:00->Sun 19:00 ET move minus the weekend median; buy rel W <= -50 bp, sell >= +50 bp, equal notional per side, exit Sun 22:00 ET; weekend net at that day's fees + recorded $1k book costs (fallback 10 bp); from the 2026-12-04 weekend. Futility at 15 traded weekends; PASS at 20 (p < 0.01) or 30 (p < 0.04) with 2x mean > 0 and mean without best 3 > 0 ([PREREG](xyzbal_fwd/PREREG.md))
 - **[roll_frontrun_v1](roll_frontrun_v1/)** R529, RUNNING PENDING, 1 trial. Front-running the commodity index roll: long the next contract, short the one expiring in m+1, from the last settlement before month m to the 9th settlement day, 13 CME roots (R505's settlements), 2010-08..2026-10; monthly mean over roots decided: NW t >= 2.8 at 2 bp, 4 bp mean > 0, both halves > 0 ([PREREG](roll_frontrun_v1/PREREG.md), [FINDINGS](roll_frontrun_v1/FINDINGS.md))
 - **[closing_momentum_v1](closing_momentum_v1/)** R528, RUNNING PENDING, 2 trials. M523 on CME: intraday momentum into the cash close on ES.v.0 hourly bars (Databento), A = sign(prev close->10:00), B = sign(prev close->15:00), held 15:00->16:00 New York; decided 2018-01..2026-11 at 1 bp: NW t >= 2.8, 2 bp mean > 0, both halves > 0 ([PREREG](closing_momentum_v1/PREREG.md), [FINDINGS](closing_momentum_v1/FINDINGS.md))
 - **[gap_combo3_fast](gap_combo3_fast/)** R527, RUNNING PENDING, 1 trial. M553+M560+M552 combined fast read: R509 (Kraken+HL), R520 (Deribit+HL) and R524 (Bitfinex+Binance) at equal weight on common scored days; NW t (lag 5) of fund_book >= 3.0 with cumulative net_book > 0 at 20 or 30 common days; FAIL on mean <= 0 or a lane's -3% kill switch ([PREREG](gap_combo3_fast/PREREG.md))

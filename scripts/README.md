@@ -156,7 +156,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (238)
+## Run: one lane's frozen measurement (239)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -392,6 +392,7 @@ line is the first line of the script's own docstring.
 - [`run_xvfund.py`](run_xvfund.py): R470 xvfund_v1, frozen in experiments/xvfund_v1/PREREG.md: cross-venue funding carry on the same US stock perp, trade.xyz (Hyperliquid HIP-3) against Lighter.
 - [`run_xvroll.py`](run_xvroll.py): xvroll_fwd (R482, M533): forward paper pair on the same futures-priced commodity perp on two venues.
 - [`run_xvwknd.py`](run_xvwknd.py): R466 xvwknd_v1 runner, frozen in experiments/xvwknd_v1/PREREG.md: the Sunday-evening gap between trade.xyz's and Lighter's perp on the same US stock, traded as a pair (sell the dearer venue, buy ...
+- [`run_xyzbal_fwd.py`](run_xyzbal_fwd.py): xyzbal_fwd (R530): the balanced (market-neutral) weekend fade of trade.xyz US-stock perps, tested forward on fresh weekends from Friday 2026-12-04, as set out in experiments/xyzbal_fwd/PREREG.md.
 - [`run_xyzns.py`](run_xyzns.py): R464 xyzns_wknd_v1 runner, frozen in experiments/xyzns_wknd_v1/PREREG.md: fade the weekend move of trade.xyz index, commodity and FX perps (Hyperliquid HIP-3) from an hour before their reference ...
 - [`run_xyztwin.py`](run_xyztwin.py): R477 xyztwin_v1, frozen in experiments/xyztwin_v1/PREREG.md: R475's carry rule on xyz index, ETF and metal perps, each hedged with a USD UCITS ETF or ETC twin on the London Stock Exchange.
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...

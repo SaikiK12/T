@@ -160,3 +160,32 @@ design, derived from the mechanism, cut that number?
 - **Bootstrap power from 23 weekends** understates tail weekends that have not happened yet.
 - **Beta mismatch:** dollar-neutral is not beta-neutral. After a broad weekend move the book is short the high-beta
   names. That is reported forward, not fixed in sample.
+
+## 10. Cycle 6 (2026-11-25, 02:24): the lane is frozen, and what the Fermi table missed
+- **Why the same family a third session in a row** (`CLAUDE.md` asks for a written reason):
+  - the binding constraint is time to evidence for the lab's strongest payer outside carry;
+  - the freeze had to precede the next tradable weekend, 12-04;
+  - nothing else on the list moves money or proof as much.
+- **What was done.** R530 (`experiments/xyzbal_fwd`) was frozen with PREREG sha `4803b21a`. It has a daily scorer
+  (`claude-xyzbal.yml`), and its decision follows R463's schedule.
+- **Two checks before the freeze:**
+  - on R462's weekends, the lane's own code reproduces the balanced numbers exactly (A gross +59.9 bp, SD 27.7);
+  - a live-fetch plumbing run on the 11-06 weekend (R462's B, seen) gives the same weekend as R462's data: 76
+    markets, 29 long, 27 short, +84.89 bp gross.
+- **What the Fermi table of cycle 4 missed: margin, not depth, sets the owner's size.**
+  - Primary source: the trade.xyz Specification Index and "Margin Modes". 58 of R462's 72 listed markets are
+    "Normal Isolated" (10x or 20x); only 12 allow cross margin. Each position carries its own margin, so a balanced
+    book gets no margin relief from being market-neutral.
+  - At 3x per position (an adverse move of about 25% before liquidation), a $1k trade needs about $333 of margin.
+    Thirty trades a weekend tie up about $10k for three hours.
+  - **At the owner's €10k stage that is about $1k a trade.** That gives about $2k a year at half the edge, or about
+    20% a year on that capital. $5k a trade needs about $50k. Capacity in the books (about $5k a trade) binds only
+    above that.
+  - Open, to answer from Hyperliquid's docs: whether a HIP-3 dex's margin comes from the same USDC balance as the
+    validator perps that carry the design-gap legs. Capital that serves the weekend book for three hours could then
+    serve carry the rest of the week.
+- **How I approached the last subject, and what I would change.**
+  - In cycle 4 I sized the family by the book's depth, because depth was the measurement I had just made. The
+    owner's size is set first by their capital and the venue's margin regime.
+  - The one-page approach asks for "a Fermi size and the capacity". The capacity that binds is the smaller of the
+    market's depth and the owner's capital under the venue's margin rules. I now compute both.
