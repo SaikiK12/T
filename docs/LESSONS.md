@@ -11,6 +11,31 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L058 · 2026-11-25 · "Nothing to trade" is not "nothing to research"; one sweep in four families took about an hour
+- **The owner, 23:13:** "Donc y a rien à rechercher… ou juste à rechercher de manière efficace mais extensive, genre
+  savoir se varier dans ses recherches." They had read my "rien à trader… tu n'as rien à faire" as the end of the
+  search.
+- **What happened** (`docs/reviews/room_20261125d/triage.md`):
+  - Four Haiku scouts (Korea, prediction markets, rates, supply and index) and my own L1 read produced:
+    - about 12 candidates;
+    - 2 closed with data within the hour: L1, no rent between funding and basis; the Boros fixed-floating spread,
+      already answered by R412;
+    - 2 new register rows (K1, K2);
+    - one fact nobody had measured: Korea's capital-control premium sits in USDT/KRW against the official rate
+      (median +1.4% in 2024-25) and collapsed to about 0 in 2026.
+  - Access killed one family for money: France is close-only on Polymarket, verified on its geoblock page.
+- **What surprised me:**
+  - Breadth was cheap and fast: about an hour for the sweep.
+  - The depth cycles of the day (Greeks, O3b, O7) had each taken two or three hours, on one family.
+  - The held-but-unused data (Upbit, Bithumb, COIN-M basis) answered questions in minutes.
+- **What I will do differently:**
+  - One breadth sweep a day before any deep cycle.
+  - Every message to the owner lists the open leads.
+  - I never close with "nothing to do" when the register has open rows.
+- **Instruction changed.** `CLAUDE.md` rule 7 gains the research portfolio: a daily sweep in at least four families,
+  triaged into the register. "Nothing to trade" is never "nothing to research". The owner's words were added the same
+  turn (rule 10).
+
 ## L057 · 2026-11-25 · Correction to L056: the calibration verdict and the rule's reach were both overstated
 - **What happened.** The room's critic (`docs/reviews/room_20261125c/critic_calibration.md`, checked by me) found
   three overstatements in L056:
