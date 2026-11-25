@@ -467,7 +467,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (123)
+## Tools and everything else (124)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -569,6 +569,7 @@ line is the first line of the script's own docstring.
 - [`repository_index.py`](repository_index.py): Query tracked repository metadata without importing runners or reading outcomes.
 - [`reserved_legs.py`](reserved_legs.py): Funding-onset event legs on the reserved 2020 rows, for reserved batch 1's R273 and R274 candidates (docs/GATES.md).
 - [`reserved_venue_table.py`](reserved_venue_table.py): qx spread symbol table for reserved batch 2 (R391): the long-tail contracts in the KuCoin, dYdX and Lighter `reserved/` folders (docs/GATES.md), matched with each other and with MEXC by base name.
+- [`score_forecasts.py`](score_forecasts.py): Score the lab's written probability forecasts (register Q25; docs/reviews/reflection_20261125_calibration.md).
 - [`score_lighter_roll.py`](score_lighter_roll.py): R389 lighter_roll_fwd: does Lighter's BRENTOIL book lag the documented index roll steps? (M462, SRC1103-014).
 - [`settlehop_rule.py`](settlehop_rule.py): R355 settlehop_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.
 - [`settlelit_fwd_rule.py`](settlelit_fwd_rule.py): R364 settlelit_fwd's rule, accounting and decision: constants and pure functions, fixed at the freeze.

@@ -43,6 +43,7 @@ Saturday straddles earns more than costs and tails? Can the owner reach it?
 - **The incumbents' quotes come first (L052):** the snapshot of weekend dailies on each book, now.
 
 ## 4. Fermi
+- **(Corrected after the critic, below: this Fermi overstated the size; see the corrections section.)**
 - **The size, if a book is open at the 2022-25 average.** About 45 bp a Saturday at the bid on the straddle's
   notional, minus about 16 bp of costs: about 30 bp. Over 52 Saturdays, about 15% a year on notional, before tails.
 - **The tails are real.** One −15% Saturday costs about 14% of notional against a 1.2% premium. The by-year means
@@ -79,7 +80,8 @@ Little, except that we measured the closure year and can screen every book's wee
 
 - **The honest at-the-money size is about −32 bp a Saturday** over 2022-26, before about 16 bp of cost. The pattern
   by year is unchanged.
-  - Weekdays sit at −7 bp in every band, so the Saturday gap is not a band artefact.
+  - The pooled five weekdays sit at −7 to −8 bp in every band; single days vary (Tuesday is −19.7 at ±0.5%). The
+    Saturday gap is not a band artefact.
   - Median −61 bp; 21% of Saturdays had a move above the premium.
 - **Not checked:** minute data (none held), and costs beyond the 16 bp reference.
 
@@ -143,7 +145,9 @@ Little, except that we measured the closure year and can screen every book's wee
 | OKX (checked by me) | 33.2 / 56.5 = **0.59** | 50.2 / 62.4 = **0.80** |
 | Aevo | equals Deribit to 0.1 vol point (reader) | same |
 
-- **So O7's first answer is no.** There is no independent younger book with weekend dailies to screen today. The
+- **So O7's first answer is no.** There is no younger book that is both reachable and independent (N = 2: Deribit and
+  OKX; Aevo mirrors Deribit). Equal weekend ratios do not prove one model, since arbitrage also binds quotes, but the
+  conclusion holds either way. The
   convention rent, if it reopens, will reopen everywhere at once, and the place to watch is the shared weight
   against each coin's realized weekend.
 - **French retail access to options is unclear on every venue** (the reader's AMF findings are search summaries,
@@ -201,8 +205,41 @@ Little, except that we measured the closure year and can screen every book's wee
   - **An estimator that moves slowly, against a ratio that jumps year to year** (BTC Saturday 0.31, 0.29, 0.48, 0.31, 0.70) will
     keep making errors of both signs. Whether they can be predicted is the open question. One year ahead, the last
     year's realized ratio would have been the makers' own mistake.
-- **What follows (O7c, a tripwire, no lane).** Extend both reads each month with the new month of public trades. If
-  the pooled BTC+ETH Saturday mean (move − premium) over the last three months is ≤ −30 bp with t ≤ −2, or the
-  Sunday one is ≥ +30 bp with t ≥ 2, register a forward paper lane: the Saturday-sell / Sunday-buy pair on Deribit
-  one-day straddles, at measured bid and ask.
+- **What follows (O7c, redesigned after the critic).** The first tripwire (3 months, t ≤ −2) had about 20% power
+  against a −32 bp gap and about 61% odds of a false trip over two years. It is replaced:
+  - a rolling 12-month window, read once a quarter;
+  - a stated power target, at least 60% against a −30 bp gap, computed before the first look from the 2022-26
+    residual SD.
+  - The rule is written in the register before the first quarterly read.
 
+## Corrections after the room's critic (`room_20261125c/critic_o7.md`; each checked by me, in code where marked)
+1. **Fermi (§4) overstated.** "About 45 bp… 2022-25 average" mixed samples: the pooled 2022-25 figure at ±2% is
+   about −60. More important, at the money (±0.5%) the 2024-26 pooled gross is about 12 bp a Saturday, **about −4 bp
+   after 16 bp of cost** (checked: −15, −33 and +21 bp by year). **At recent levels there is no net rent to size.**
+2. **Margin:** €10k at 10-20% margin carries €50-100k, not €30-50k. This is moot after item 1.
+3. **Capacity:** the critic measured a median of about 99 BTC traded per Saturday in O3b's set, not my "about 25".
+   Not re-checked by me, and moot at the owner's scale.
+4. **"Halved then vanished":** wrong shape. By year −118, −57, −22, −40 (2025 rebounded), then +15.
+5. **2026 is not "about zero on both coins"** (checked, robust statistics: mean, median, 5% trimmed, without the two
+   largest moves):
+   - **BTC Saturday 2026:** about zero in every statistic (ex-top-2 −1 to −6 bp). Closed.
+   - **ETH Saturday 2026:** still rich without the two outliers (−10 to −25 bp), below cost at the money. Half open.
+   - **BTC Sunday 2026: the sign flipped. Sunday is now rich**, −35 to −49 bp in every statistic, on 38-39 Sundays.
+     The makers raised Sunday's weight to 0.91 just as Sundays calmed. ETH Sunday leans the same way (ex-top-2 −24 to
+     −29).
+   - **The "2026 closure" was partly two Saturdays.** On BTC, 2026-01-31 (−642 bp) and 2026-02-28 (+508). Without
+     them, 2026 Saturdays were not busier than 2024 (the critic: mean move 94 bp against 102). My "Saturdays became
+     busier" story rests on two days.
+6. **The pair "60-90 bp before 2026"** mixed samples. On 2022-25 the critic measured 91 (BTC) and 112 (ETH) gross.
+7. **O3a's result text** ("priced right") is superseded by O3b: rich over 2022-25, about fair on BTC in 2026.
+8. **"Makers chase last year"** is description only. With n = 4, "last year's weight" predicts the weight 2-3× better
+   than "last year's realized" (the critic's mean absolute errors: 0.06-0.08 against 0.13-0.20).
+9. **The snapshot ratio** (forward-vol ratio against a mean-move ratio) was not like with like. Levels, with and
+   without outliers, are the comparison to use.
+
+**What the cycle now says.** The weekend weight is a slowly adjusted estimate shared by the books, and it errs
+for years at a time:
+- Saturday rich in 2022-25;
+- Sunday rich in 2026 on BTC.
+- At the money and after costs, the recent Saturday rent is gone. The BTC Sunday error of 2026 is the live one:
+  in-sample, post hoc, from the critic's prompt. **O7d** registers it as a forward question before any lane.
