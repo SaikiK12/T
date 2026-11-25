@@ -89,6 +89,21 @@
         ([détail](reviews/reflection_20261125_power.md)).
       - **Taille pour toi :** sur xyz, la plupart de ces marchés ont une marge isolée par position. Avec 10 000 €,
         c'est environ 1 000 $ par trade, soit environ 2 000 $/an si l'avantage réel vaut la moitié du passé.
+  - **Les Greeks (gamma, charm, vanna, vomma), réflexion du 25-11** ([détail](reviews/reflection_20261125_greeks.md),
+    questions O1-O6 dans [le registre](reviews/open_questions.md)).
+    - **Un seul chiffre décide :** le flux forcé du dealer divisé par le volume au moment où il doit trader.
+      - En crypto, il vaut 0,13 % (mesuré par R292). C'est pourquoi nos 14 essais sur les options crypto sont nuls,
+        et un essai vanna crypto le serait aussi.
+      - Pour le charm du S&P avant l'expiration du 3e vendredi, il vaut 0,4 à 1 %. Cela donne environ 5 bp, 12 fois
+        par an : trop petit pour un test.
+      - **Pour TSLA, il vaut environ 6 %** (mesuré pour 0,08 $ sur une journée d'open interest). Les actions
+        individuelles sont donc le seul terrain où les Greeks peuvent bouger le prix. Tu peux les atteindre via les
+        perps xyz.
+      - La suite coûte environ 17 $ par action et par an de données, au-delà de mon plafond de 2 $ : **dis-moi si tu
+        veux la payer.**
+    - **Le week-end des options crypto est déjà bien pricé.** Les market makers de Deribit comptent le samedi pour
+      environ la moitié d'un jour de semaine, et c'est juste. Le backtest de Deribit le confirme : vendre le dimanche
+      perd, acheter le dimanche rapporte à peine 2 %/an après frais.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :

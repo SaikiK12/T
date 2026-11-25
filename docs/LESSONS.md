@@ -11,6 +11,35 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L052 · 2026-11-25 · One ratio decides the Greek class, and the incumbents' quotes come before the world's data
+- **The owner.** "Réfléchis à des choses que toi tu peux créer… le gamma, le vanna, le vomma… pose-toi des questions…
+  si c'est la vérif qui limite, débloque-la." Evidence: `docs/reviews/reflection_20261125_greeks.md` and register
+  O1-O6.
+- **What surprised me:**
+  - **The deciding number was already in the lab.** R292 measured crypto dealer gamma at 0.13% of perp volume per 1%
+    move. That explains all of the lab's NULL crypto Greek rounds, and the room's literature reader did not know it.
+  - I spent the first part of the cycle verifying paper figures, all of which held, before asking which figure
+    decides the subject.
+  - **Fermi ended three ideas without a test:**
+    - SPX charm before the SOQ: $300M against $29-82bn of overnight ES volume, which I measured. The square-root law
+      predicts 4-6 bp, worth under 2%/yr at 12 chances a year.
+    - Crypto vanna: the same 0.13% ratio.
+  - **Fermi kept one idea for $0.08.** TSLA option gamma is about 6% of the stock's daily volume, 15-45 times
+    crypto's ratio.
+  - **The weekend clock was settled in ten minutes from our own Deribit snapshots.**
+    - Market makers already price Saturday at about half a weekday's vol, and they are right: a 75-88 bp straddle
+      against a 77-81 bp mean move.
+    - The field's best evidence agrees: Deribit's own backtest, read on the page after my prediction was committed.
+      Selling on Sunday loses, and buying on Sunday nets 2.1%/yr.
+- **What I will do differently:**
+  - Before a class of ideas, I find the one ratio that decides it, and I look for it in the lab's own results first.
+  - For a forced flow, that ratio is the forced trade over the liquidity in the window where it must trade.
+  - For a pricing-convention gap, I read the incumbents' quotes (their term structure, their book) before measuring
+    realized data. A gap they already price is no gap.
+- **Instruction changed.** `CLAUDE.md`, "How I approach a subject":
+  - item 3 gains "read the incumbents' own quotes first";
+  - item 4 gains the forced-flow ratio, with a stop below about 0.5%.
+
 ## L051 · 2026-11-25 · Verification is work I can build, and memory is a file, not my context
 - **The owner.** "Pose-toi des questions sur les choses où tu ne peux pas savoir si c'est acquis… raffine-les… si
   c'est la vérif qui limite, débloque-la… souviens-toi de ce que j'ai dit avant tes compressions."
