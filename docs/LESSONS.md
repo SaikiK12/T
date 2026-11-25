@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L045 · 2026-11-25 · Ask whether a class can grow before searching for its next member
+- **What surprised me:**
+  - Cycle 8 said the product is a pipeline of new design gaps. A census of the funding rules of seven new perp venues
+    (their own docs) found none without the floor.
+  - Drift even raised its floor to the standard 10.95% in 2026.
+  - Floorless designs survive only at legacy venues (Kraken, Deribit, Bitfinex, dYdX cross).
+  - My reading of why: the floor subsidizes the liquidity providers a new venue needs. So the class has a fixed
+    membership, and its rent decays with no replacement.
+  - The new rents are where demand is new: 24/7 equities, pre-listing perps, outcome markets. That is not where an
+    old rule is copied.
+- **What I will do differently:**
+  - When a lesson says "find more like this", first ask who sets the rule that makes it pay, and whether anyone has a
+    reason to set it again.
+  - If not, the search goes to where demand is growing faster than arbitrage capital, not to more copies of the
+    rule.
+- **Instruction changed:** none in `CLAUDE.md`. The approach page gains the line.
+
 ## L044 · 2026-11-25 · Test a conclusion on the longest series before telling the owner
 - **What surprised me:**
   - Cycle 7 told the owner the carry sleeve "pays most in sell-offs", from R508's single year.

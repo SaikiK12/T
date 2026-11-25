@@ -60,6 +60,11 @@
     - **Ce que ça change.** La valeur est dans la découverte rapide des nouveaux écarts (nouvelles plateformes,
       nouvelles cotations), pas dans un seul écart. Mes prévisions écrites pour les lectures de décembre : Kraken
       environ 1 chance sur 2, Deribit et Bitfinex environ 1 sur 10 ([détail](reviews/reflection_20261125_trend.md)).
+  - **Recensement des règles de financement (25-11).** J'ai lu les documents de 7 nouvelles plateformes : toutes copient
+    le plancher (Drift l'a même relevé en 2026). Il n'y aura donc pas de nouvelle plateforme « sans plancher », et la
+    faille ne s'agrandira pas. Les nouvelles rentes sont à chercher là où la demande est neuve : actions 24 h/24,
+    contrats avant cotation (avant une introduction en bourse ou un lancement de jeton), marchés de paris
+    ([détail](reviews/reflection_20261125_census.md)).
   - **Seconde famille à suivre (24-11) : le retour du week-end sur les perps d'actions** (xyz et Lighter, R463 et
     R467 en papier depuis le 13-11).
     - Le carnet est le plus mince de la semaine à l'heure d'entrée (dimanche 19 h, heure de New York). La taille utile
