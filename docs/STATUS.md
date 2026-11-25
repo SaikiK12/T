@@ -52,8 +52,14 @@
       est d'environ 5 000 $ par trade.
     - Cela vaut environ 7 000 $/an si l'avantage réel vaut la moitié de celui mesuré sur le passé, et 23 000 $/an s'il
       le vaut entier.
-    - R463 ne pourra sans doute confirmer qu'un avantage entier. Une piste plus rapide (le livre neutre au marché)
-      est à préparer avant le dimanche 29-11 ([détail](reviews/reflection_20261124_closed.md)).
+    - R463 ne pourra sans doute confirmer qu'un avantage entier.
+    - **Le livre équilibré** (on achète les actions qui ont le plus baissé par rapport aux autres, on vend celles qui
+      ont le plus monté, à montants égaux) **réduit le bruit d'un week-end à l'autre de moitié aux deux tiers** sur
+      les week-ends passés (25-11).
+      - À la moitié de l'avantage, il serait décidé avec 92 % de chances, contre 32 % pour R463, en 20 week-ends
+        environ.
+      - Sa piste en papier doit être figée avant le dimanche 6-12, le prochain week-end compté (Thanksgiving, Noël et
+        le Nouvel An sont exclus) ([détail](reviews/reflection_20261125_power.md)).
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :

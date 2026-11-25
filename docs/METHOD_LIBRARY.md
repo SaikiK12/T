@@ -103,6 +103,31 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
   - A test under about 10% P(PASS) needs a written reason.
   - The self-review scores those forecasts.
 
+### George Pólya, *How to Solve It* (1945; Penguin edition with a foreword by Ian Stewart)
+- **Read 2026-11-25:** the publisher's official sample (Penguin, `9780140124996-sample.pdf`): Stewart's foreword in
+  full and the book's table of contents, which lists the dictionary of heuristics. The book's own chapters were not
+  read; there is no legal free copy, and course PDFs of the whole book were not used.
+- **The four phases** (Stewart's summary of Pólya's opening list): understand the problem; "try to use experience
+  from related problems to plan an attack"; carry out the attack; "ask yourself whether you really believe the
+  answer you've got".
+- **The dictionary entries** that the table of contents names include "Have you seen it before?", "Do you know a
+  related problem?", "Look at the unknown", "Working backwards", "Specialization", "Generalization" and "Auxiliary
+  problem".
+- **The passages that matter:**
+  - "Pólya places a great deal of emphasis on the consideration of related problems whose solution is already known
+    and on reasoning by analogy."
+  - "Did you use all the data? Does the statement of the problem involve information that you haven't used?"
+  - Schoenfeld, quoted by Stewart: competent problem-solving is largely "the ability to monitor and assess what one
+    does while working problems", the "resource allocation during thinking".
+  - Stewart: "someone has to have the two pieces of the puzzle… in his or her head at the same time, otherwise
+    nobody will spot the possible connection."
+- **The decision it changes.** It is the second time the same lesson has reached me (L040 was the first): in cycle 4
+  I nearly re-derived a class the lab had studied in eleven rounds, and the LLP's inventory had been recorded for two
+  weeks without a question.
+  - The one-page approach in `CLAUDE.md` gains a step 0: what the lab already knows (its rounds on the mechanism)
+    and which recorded data no question has used.
+  - Promoted per the chain's rule.
+
 ## Next to read (legal copies only; one every fourth cycle)
 1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters". Good Judgment's
    page was behind a Cloudflare challenge on 2026-11-24; a library or publisher copy is needed. Base rates,
@@ -112,5 +137,5 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
    2014, free).
 5. **Campbell Harvey, "The Scientific Outlook in Financial Economics"** (AFA presidential address, 2017): the
    chapters on p-hacking and Bayesianised p-values.
-6. **George Pólya, *How to Solve It*:** the heuristics list. Related problems, working backwards, specialising and
-   generalising.
+6. **George Pólya, *How to Solve It*, the book's own chapters:** read the foreword and the table of contents on
+   2026-11-25 (above); the chapters need a library copy.

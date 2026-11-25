@@ -11,6 +11,29 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L041 · 2026-11-25 · Derive the design from the mechanism of the noise, then let the mechanism be refuted
+- **What surprised me:**
+  - Asking where the weekend noise comes from did more than any new signal. The common weekend move does not
+    reverse (R464), so a book with equal notional long and short drops it.
+  - On R462's own weekends the balanced book's SD per weekend fell to 34-56% of the raw book's, with a higher mean.
+    Power at half the edge went from 32% to 92%.
+  - The theory was already written (Nagel 2012). The textbook reversal book is exactly this: market-adjusted,
+    $1 long and $1 short, beta-hedged.
+  - **My second prediction failed.** I fixed the set of crypto-proxy names before computing and predicted they fade
+    less, because they are hedgeable. In sample A they faded more. Writing the falsification criterion first kept me
+    from explaining it away. Part of the refined mechanism is not supported.
+  - **The baseline reproduced first** (B exactly; A within one weekend), and that is why the variation can be
+    trusted.
+- **What I will do differently:**
+  - Before designing a test, decompose the noise by its mechanism (which part is common, which part is paid) and
+    build the book that keeps only the paid part.
+  - State every refinement's prediction with its failure criterion before computing, and record a failed one as
+    plainly as a confirmed one.
+  - Pólya's "Have you seen it before?" and "Did you use all the data?" are the same lesson as L040, heard a second
+    time.
+- **Instruction changed: promoted.** `CLAUDE.md`'s one-page approach gains step 0: what the lab already knows, and
+  the recorded data no question has used yet (Pólya; L040).
+
 ## L040 · 2026-11-24 · The lab's own record is the first primary source of the mechanism map
 - **What surprised me:**
   - To leave the design-gap family (three cycles in a row), I went looking for a "new" class: 24/7 stock perps while
