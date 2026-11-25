@@ -28,3 +28,39 @@
    and the Boros fixed-floating spread (R412).
 - **Closed tonight with data:** L1 (funding against basis, no rent); the rates scout's candidate 1 (R412 already
   answers it).
+
+## Corrections after the room's critic (`critic_triage.md`; checked by me where marked)
+1. **L1's level depends on the bars.** The critic's independent run gives +1.77, −0.53, −1.72 and −0.30 %/yr by year
+   and a mean of −0.19, against my −0.03.
+   - Read it as **"about −0.2 to 0.0%/yr; positive in 1 of 4 years"**. The verdict (no rent, forecast 0) is unchanged.
+   - "Arbitraged" is my reading of a spread near zero, not an observed arbitrage.
+   - The test used Binance's clamp, not Hyperliquid's floor. Binance's realized BTC funding had a median of 6.55%
+     and a 5th percentile of −2.13%.
+2. **The Boros item is closed too cleanly.** R412 also shows the Hyperliquid lock at +2.07 points over the T-bill
+   (`experiments/boroslock_v1/FINDINGS.md:51`). The fixed-floating spread (+0.73) carries no cost line, and the
+   scout's floor-band split was not tested. **Status: largely answered, not closed.**
+3. **The Korean USDT premium.** The 2026 near-zero median comes from one source (Yahoo KRW=X), which was not saved
+   in `data/` and was not checked for a break.
+   - The timing mismatch (Upbit candles at 00:00 UTC against Yahoo's close) is hours and zero-mean. It widens the
+     bands but cannot create a 1.4-point shift.
+   - Drop the first candle (2024-06-07, +7.69%).
+   - Write "**a 2026 level near zero, one source, unchecked**", not "collapse".
+4. **K1 is ranked too high.**
+   - The family has a NULL (M060/R267) and a running forward lane (R268, a MEXC spot delisting short on notices).
+   - No delisted Korean market is held.
+   - The aggregator's terms are unchecked.
+   - **K1 moves below O7d.**
+5. **Claims used here and not verified by me:**
+   - the FX act's 2026-12-03 date (statute not opened);
+   - the Upbit policy quotes;
+   - the ANJ order;
+   - Kalshi's France restriction;
+   - arXiv 2601.01706's "2-4%".
+   - The Polymarket France page I did read.
+
+**The ranking, corrected:**
+1. Q01, Variational (read 2026-11-29).
+2. Q20, venue halts.
+3. O7d / O7c (forward).
+4. K1, with R268 named as its sibling.
+5. Parked: prediction markets (close-only in France), the Korean USDT premium (K2 watches it), Boros (largely answered).
