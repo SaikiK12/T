@@ -11,6 +11,24 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L044 · 2026-11-25 · Test a conclusion on the longest series before telling the owner
+- **What surprised me:**
+  - Cycle 7 told the owner the carry sleeve "pays most in sell-offs", from R508's single year.
+  - One cycle later, R525's 5.7-year, 12-pair panel said the opposite: the family pays after BTC rallies (past
+    120-day return t +4.9) and in volatile months.
+  - It also decays about 30% of its mean level a year (regime-adjusted t −5.2). Every long pair is negative. Outside
+    Kraken it earns nothing in 2026.
+  - The data for the right answer sat in the lab's own results folder the whole time. My step 0 was applied to
+    "which rounds touched this", not to "which is the longest series that can test this claim".
+- **What I will do differently:**
+  - Before a claim about when or why an edge pays leaves the lab, check it on the longest panel the lab holds, with
+    the regime measured rather than matched by eye.
+  - Write dated forecasts for the coming reads, so the self-review can score my calibration rather than my
+    stories.
+- **Instruction changed:** none. Step 0 of the one-page approach already asks what the lab knows. This adds "the
+  longest series that can test the claim" to how I read it. If a one-window claim misleads again, it goes into the
+  step's text.
+
 ## L043 · 2026-11-25 · Decompose a book by what it actually earns, not by the story that found it
 - **What surprised me:**
   - I asked why the design gap's return fell through 2026 and predicted the floorless side was being arbitraged.

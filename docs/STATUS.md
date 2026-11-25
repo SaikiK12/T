@@ -52,8 +52,14 @@
       comparable (novembre 2025 contre novembre 2026), il a été à peu près divisé par 2 : il y a donc aussi une
       usure de fond.
     - À attendre pour la mise : environ 1 % par mois au niveau de l'automne. Après la décote de prudence, l'impôt et
-      le cash en euros, cela fait environ +2,5 %/an de mieux que le cash à levier 1. C'est mince ; la piste paie
-      surtout dans les baisses ([détail](reviews/reflection_20261125_decay.md)).
+      le cash en euros, cela fait environ +2,5 %/an de mieux que le cash à levier 1. C'est mince
+      ([détail](reviews/reflection_20261125_decay.md)).
+    - **Correction (25-11, sur 5,7 ans et 12 paires).** La famille paie surtout **après les hausses**, pas dans les
+      baisses. Elle s'use d'environ 30 % de son niveau par an. Hors Kraken (Bitfinex, Deribit), elle ne gagne plus
+      rien en 2026. Seules les petites pièces de Kraken paient encore, et elles s'useront aussi.
+    - **Ce que ça change.** La valeur est dans la découverte rapide des nouveaux écarts (nouvelles plateformes,
+      nouvelles cotations), pas dans un seul écart. Mes prévisions écrites pour les lectures de décembre : Kraken
+      environ 1 chance sur 2, Deribit et Bitfinex environ 1 sur 10 ([détail](reviews/reflection_20261125_trend.md)).
   - **Seconde famille à suivre (24-11) : le retour du week-end sur les perps d'actions** (xyz et Lighter, R463 et
     R467 en papier depuis le 13-11).
     - Le carnet est le plus mince de la semaine à l'heure d'entrée (dimanche 19 h, heure de New York). La taille utile

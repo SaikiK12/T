@@ -120,7 +120,7 @@ moved through a phase in which it pays less (passing, so it comes back)?
   - That is thin against the stake note's bar ("forward edge of at least about 5%/yr").
   - Answer 4's figures (+11-15%/yr halved, €3-8k/yr) were built on the whole year, winter included. They overstate
     the current level by about two to three times.
-- **The sleeve pays most in sell-offs.** Its best months came with falling markets, when Hyperliquid's alt perps
+- **(Corrected in cycle 8: over 5.7 years the family pays after rallies, see `reflection_20261125_trend.md`.)** The sleeve pays most in sell-offs. Its best months came with falling markets, when Hyperliquid's alt perps
   sank below their floor. For an owner with long crypto exposure elsewhere, that is a useful shape. It also means
   the forward reads due in December, which cover November's sell-off, may look better than autumn did.
 - **The quarterly reassessment gets a number:** the live top-20 |gap| across the book's pairs. It is observable
