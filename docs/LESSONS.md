@@ -11,6 +11,29 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L050 · 2026-11-25 · The owner: think together with a Haiku room, always. Its best output came from comparing rules
+- **The owner.** "Vois des façons de t'améliorer x100… re-vérifie tout le repo… invente… lance des subagents,
+  toujours Haiku, pour penser ensemble, toujours." `CLAUDE.md` rule 3, chain step 3 and the habits were changed the
+  same turn. The two-hourly task now launches the room every cycle.
+- **What surprised me** (eight Haiku members, about five minutes each; `docs/reviews/room_20261125/`):
+  - **The auditors found what my memory had lost:**
+    - R304's PARTIAL is superseded by R332's presence leak;
+    - R197 is labelled CONFIRMED although its holdout R198 is NULL;
+    - isolated margin liquidates carry books even at 1x (R280). I then checked that none of R509's Hyperliquid coins
+      is isolated-only.
+  - **The framework member found a risk larger than the edge:** euro-dollar swings on a dollar principal.
+  - **The best lead came from the rules-matrix readers, not the inventor.** Variational freezes its equity index on
+    weekends while xyz moves; a public API exists, so it is now recorded. The inventor's own ideas were worth €10-100
+    a year. Comparing rules beats imagining them, the same lesson as the original design gap.
+  - **Verification was needed:**
+    - the framework member's "inconsistent figures" were consistent (costs grow with size);
+    - an auditor's suggested 20:30 entry would miss the reversal (R465's hourly table).
+- **What I will do differently:**
+  - Generation is now cheap and verification is the bottleneck. Every room claim that moves something gets a
+    source check, and the checks go in the synthesis.
+  - The rules matrix (venues × mechanisms) is the room's standing job.
+- **Instruction changed:** `CLAUDE.md` rule 3, chain step 3, and the habit (owner 2026-11-25).
+
 ## L049 · 2026-11-25 · The field's best paper belongs before the design, not after it
 - **What surprised me:**
   - Once the weekend family became the best capacity × edge candidate, I searched for its literature. An arXiv
