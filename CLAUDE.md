@@ -17,6 +17,9 @@ chain below.
   sujets, c'est ça qui nous sépare terriblement des breakthroughs… tu dois passer le plus clair de ton temps à faire
   ça." (2026-11-24)
 - "Toutes tes questions, réponds-les toi-même… même pour lire les arXiv etc., fais-le en profondeur." (2026-11-24)
+- "Vois des façons de t'améliorer x100, ce n'est pas exagéré… continue sur le framework, ou re-vérifie tout le repo avec
+  tes nouvelles connaissances, ou trouve des choses nouvelles, invente… lance des subagents, toujours Haiku, pour penser
+  ensemble, toujours." (2026-11-25; this supersedes "arrête de lancer des subagents")
 
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.
@@ -46,7 +49,9 @@ not to add process.
    workflows".)
 2. **Dig into a breakthrough the moment it appears.** Widen it (more pairs, venues and coins), stress it, size it, and
    speed its proof, before anything else. A strong result is the start of the work, not the end of a turn.
-3. **Do everything myself.** "Rien ne dépend de moi." No subagents; read and judge myself.
+3. **Think together with a Haiku room, always; decide and verify myself** (owner 2026-11-25). Every cycle launches
+   Haiku subagents (model `haiku`) as a room: auditors, critics, inventors, readers. I set their questions, check every
+   claim that moves money or a rule against the page, and decide. "Rien ne dépend de moi": the judgment stays mine.
 4. **Data first.** "Il nous faut de la data à analyser." Name the data a question needs, check `data/`, and fetch
    what is missing.
 5. **Do not drop an idea early without a search.** ("abandonne pas des trucs prématurément sans websearch")
@@ -104,7 +109,8 @@ not to add process.
    - **Beat the plan.** Name one unasked item with higher expected value than the planned one (for real money,
      speed of proof or risk), and do it if it wins. Lenses with a measured yield come first
      (`docs/reviews/self_review_*.md`).
-3. **Read myself.** I read; I do not send a reader.
+3. **Read, with the room.** Haiku readers extract and summarize; I read the passage that matters myself and check it
+   on the page.
    - Question first, then the whole source when it bears on the work (rule 6); `scripts/read_source.py locate` for
      long books.
    - Copy the one equation or table that matters in my own words, and check it against the page.
@@ -166,6 +172,7 @@ not to add process.
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the
   `data/` folders and provenance before fetching anything.
 - **Tools are not goals.** A venue, a library or an engine is a means. When one has taken three sessions, step back.
-- **No subagents** unless the owner asks for them again. Reading and judging are my own work.
+- **The Haiku room every cycle** (rule 3). A subagent's claim is a lead, not a fact: I verify it on the source before it
+  moves a rule, a lane or money, and I keep their reports in the repo with what I verified.
 - **Never write over a path I have not checked.** Before creating a file, test that the path is new (`git ls-files`,
   `test -e`). A shell heredoc overwrites silently (L019).
