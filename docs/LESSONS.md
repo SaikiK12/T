@@ -11,6 +11,28 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L059 · 2026-11-26 · Precise cards and ML done directly; the ML failed for a reason that points at the next question
+- **The owner:** "Non, sois plus précise dans les stratégies, framework directement ou ML etc., t'es pas assez
+  travailleur." They had read a list of "pistes" with no rules, sizes or numbers.
+- **What happened:**
+  - **The strategy book** (`docs/strategies/STRATEGY_BOOK.md`). 14 lanes as cards: exact entry and exit, size, costs,
+    measured net by year, decision date, weakest link. The framework layer covers how the books combine, size and
+    stop. Main numbers were checked on their FINDINGS.
+  - **The lab's first ML round on a payer family** (R531, registered, frozen and run once within about two hours):
+    a meta-label filter on R275's carry book, purged quarterly walk-forward. **It failed:** −0.35%/yr against the
+    rule at 2x (t −0.97). It wins only at 3x, by trading less.
+- **What surprised me:**
+  - Only 44% of the rule's trades pay at 2x. The best 10% earn 123% of the net.
+  - The book is a fat right tail, and entry features cannot see it, so a selection model mostly removes turnover.
+  - The useful output of a failed ML test was its diagnosis. It produced two precise questions: S1, cost-aware
+    thresholds, and S2, ML on the exit.
+- **What I will do differently:**
+  - Every lead is a card with rules and numbers.
+  - ML goes where the profit lives. Before designing a model, measure the payoff's shape (hit rate, tail share),
+    because a model can only select what the features can see.
+- **Instruction changed:** `CLAUDE.md` rule 7 gains "precise strategies, frameworks and ML directly" and names the
+  book, with the owner's words added the same turn.
+
 ## L058 · 2026-11-25 · "Nothing to trade" is not "nothing to research"; one sweep in four families took about an hour
 - **The owner, 23:13:** "Donc y a rien à rechercher… ou juste à rechercher de manière efficace mais extensive, genre
   savoir se varier dans ses recherches." They had read my "rien à trader… tu n'as rien à faire" as the end of the
