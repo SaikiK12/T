@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L043 · 2026-11-25 · Decompose a book by what it actually earns, not by the story that found it
+- **What surprised me:**
+  - I asked why the design gap's return fell through 2026 and predicted the floorless side was being arbitraged.
+  - The decomposition showed something else. In the winter sell-off, Hyperliquid's alt funding sat below its own
+    floor, so the design-signed gap was negative in four of five months.
+  - R508 earned anyway, because R275's rule is sign-agnostic: it harvests cross-venue dispersion. Its monthly return
+    follows the realized top-20 dispersion (same-month corr 0.91).
+  - The dispersion fell about threefold, and about twofold at a matched sell-off month a year apart.
+  - For three cycles I had described this book by the mechanism that led to it (the floor). What it earns is a
+    broader, regime-driven dispersion.
+  - The forward edge at the autumn level is thin after tax and cash (about +2.5%/yr at 1x). My earlier €3-8k a year
+    used the whole year.
+- **What I will do differently:**
+  - Before sizing or forecasting a book, decompose its return by the quantity it actually harvests, measured month
+    by month, and compare it with the story that found it.
+  - Name the state variable (here, live dispersion) to watch.
+  - A mechanism explains why an edge exists. It does not say how much of the PnL comes from it.
+- **Instruction changed:** none. López de Prado's line in `CLAUDE.md` ("decompose by source, coin, venue, regime
+  before another backtest") already says it. This is the first time I ran it on the money case, and it changed the
+  money plan.
+
 ## L042 · 2026-11-25 · Capacity is the smaller of the market's and the owner's
 - **What surprised me:**
   - I froze R530 (the balanced weekend fade) and then read the venue's margin rule. 58 of its 72 markets are

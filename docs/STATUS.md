@@ -46,6 +46,14 @@
       déclarent sur le formulaire 3916-bis.
     - L'objectif de « percée » est de 10 000 €/an au-dessus du cash après impôt.
     - Le plan de capital est en trois paliers ([détail](reviews/answers_20261124.md)).
+  - **Pourquoi le portage a baissé en 2026 (25-11).** Le livre Kraken + Hyperliquid (R508) gagne sur l'écart de
+    financement entre les deux plateformes, dans les deux sens.
+    - Cet écart était énorme pendant la baisse de l'hiver et a été divisé par environ 3 depuis. Pour une baisse
+      comparable (novembre 2025 contre novembre 2026), il a été à peu près divisé par 2 : il y a donc aussi une
+      usure de fond.
+    - À attendre pour la mise : environ 1 % par mois au niveau de l'automne. Après la décote de prudence, l'impôt et
+      le cash en euros, cela fait environ +2,5 %/an de mieux que le cash à levier 1. C'est mince ; la piste paie
+      surtout dans les baisses ([détail](reviews/reflection_20261125_decay.md)).
   - **Seconde famille à suivre (24-11) : le retour du week-end sur les perps d'actions** (xyz et Lighter, R463 et
     R467 en papier depuis le 13-11).
     - Le carnet est le plus mince de la semaine à l'heure d'entrée (dimanche 19 h, heure de New York). La taille utile

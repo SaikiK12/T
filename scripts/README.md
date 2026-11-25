@@ -398,7 +398,7 @@ line is the first line of the script's own docstring.
 - [`run_xyzwknd.py`](run_xyzwknd.py): R462 xyzwknd_v1 runner, frozen in experiments/xyzwknd_v1/PREREG.md: fade the weekend move of trade.xyz US-equity perps (Hyperliquid HIP-3) from Sunday 19:00 New York to Sunday 22:00 (X1) or Monday ...
 - [`run_xyzwknd_fwd.py`](run_xyzwknd_fwd.py): xyzwknd_fwd (R463): R462's weekend fade of trade.xyz US-stock perps, tested forward on fresh weekends from 2026-11-13, as set out in experiments/xyzwknd_fwd/PREREG.md.
 
-## Check: parity, audits and integrity (40)
+## Check: parity, audits and integrity (41)
 
 - [`audit_fee_routes.py`](audit_fee_routes.py): R317 fixed fee-route decomposition on already-seen sealed R316 books.
 - [`audit_funding_notional.py`](audit_funding_notional.py): Run an invented funding-notional sign-flip demo; never reads market files.
@@ -420,6 +420,7 @@ line is the first line of the script's own docstring.
 - [`check_exec_gap.py`](check_exec_gap.py): Post hoc diagnostic (2026-11-24, reflection cycle 3): the entry price gap of R525's kraken+hyperliquid trades, re-measured on executable prices (Kraken hourly mark, Hyperliquid hourly close), ...
 - [`check_fred_quote_scope.py`](check_fred_quote_scope.py): R429 independent source identity check using csv.reader and exact Fractions; offline only.
 - [`check_funding_prefix.py`](check_funding_prefix.py): Literal rational audit of R322 saved component fixtures; no market validation.
+- [`check_gap_decay.py`](check_gap_decay.py): Why did the design gap's return fall through 2026? Decompose R508's seen window by leg (descriptive).
 - [`check_intraday_wicks.py`](check_intraday_wicks.py): Descriptive (2026-11-24): intraday vs daily adverse moves of an equal-weight basket of the forward lanes' coins, from Binance hourly closes (lower bound) and each coin's hourly low on the worst ...
 - [`check_kraken_carry.py`](check_kraken_carry.py): Independently check saved R418 cash, funding ranges and displayed depth with rational arithmetic.
 - [`check_level_probability.py`](check_level_probability.py): Independent R330 raw-close/label and Fraction cash oracle; zero network.
