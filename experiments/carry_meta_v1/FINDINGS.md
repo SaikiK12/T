@@ -51,3 +51,29 @@
   threshold would keep more trades. It was not run, and doing so now would be a new, post-hoc trial.
 - **Seven features, one model.** A richer model could do better. The lab's prior for that is low (0 of 4 ML rounds).
 - **Costs are flat per leg,** not measured per coin. The 3x row is the closest to R508's real costs.
+
+## Corrections after the room's critic (2026-11-26; `docs/reviews/room_20261126/critic_r531_book.md`, checked by me)
+1. **"The entry features cannot separate the winners" was a story, not a result.** My own trade-level replay of the
+   walk-forward (11 test quarters, 4,725 test trades of the unfiltered books) gives:
+   - AUC 0.531 (the critic's replay: 0.586, a different setup);
+   - 26% of trades at p ≥ 0.5;
+   - mean net at 2x: +180 bp at p ≥ 0.5 against **+77 bp at p < 0.5**;
+   - by p quintile, +180, +69, +23, +52 and +195 bp: U-shaped, barely ranked.
+   **The mechanism:** the filter skips trades that still pay on average, so the book loses carry. That the model
+   "cannot see the tail" is not shown. That a sizing use (more weight on high p) would help is not shown either.
+2. **"Kept 5,465 of 169,782" counts candidate-days, not trades,** and "the ML book traded less" was not measured (the
+   report holds no trade count for the filtered books).
+3. **Train and test populations differ:** the model is trained on executed trades and scores every candidate.
+4. **12 models were fitted and 11 used** (the last quarter starts 2026-10-01, after the data).
+5. **s14 is a fraction a year, not %/yr** as the PREREG wrote. A label of units only; the model is unaffected.
+6. **An inherited engine look-ahead affects both books:**
+   - `lab/xfund.py` sets `last_fresh` as the series' global last fresh day;
+   - `xfund_v2` exits on the day after a leg's final trade, so delisted coins exit one day earlier than a live book
+     (which waits three stale days) could.
+   It is the same in both books and was not measured. It is listed here for every R525-based result.
+7. **The equivalence check** (the unfiltered `FilterBook` equals `v2.Book` on Kraken+Hyperliquid: rows equal, 206
+   trades) was run before the freeze from a scratch script. It is not in the tests.
+8. **The cash and tax inputs:**
+   - the 31.4% flat tax: `docs/reviews/answers_20261124.md` (CGI art. 150 ter);
+   - euro cash about 1.5% after tax: an assumption carried from that note.
+

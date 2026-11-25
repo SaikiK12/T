@@ -11,6 +11,19 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L060 · 2026-11-26 · Correction to L059: the ML diagnosis was a story; the critic's replay found the real mechanism
+- **What happened.** L059 said "entry features cannot see the tail". The room's critic, then my own trade-level
+  replay of R531's walk-forward, showed something else (`experiments/carry_meta_v1/FINDINGS.md`, corrections):
+  - the model ranks trades only weakly (AUC 0.53-0.59, U-shaped by quintile);
+  - the trades it skips still earn +77 bp at 2x, so filtering them costs carry.
+  - Two strategy-book figures were also wrong: A3's "t 11.94" matched no pair (the current engine gives +3.5%/yr,
+    t 2.95), and A2 mixed two sources.
+- **What surprised me.** A failed test invites a tidy explanation, and I wrote one in the same hour.
+- **What I will do differently.** A diagnosis of a failure is itself a claim: it gets the same replay before it
+  enters a lesson or the book.
+- **Instruction changed:** none new; this is the status-word habit (L056) applied to explanations. It corrects L059;
+  it does not rewrite it.
+
 ## L059 · 2026-11-26 · Precise cards and ML done directly; the ML failed for a reason that points at the next question
 - **The owner:** "Non, sois plus précise dans les stratégies, framework directement ou ML etc., t'es pas assez
   travailleur." They had read a list of "pistes" with no rules, sizes or numbers.

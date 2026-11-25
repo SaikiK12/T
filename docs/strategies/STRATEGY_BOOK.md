@@ -3,8 +3,10 @@
 - **Pourquoi ce livre.** Le propriétaire, 2026-11-25 : « sois plus précise dans les stratégies, framework directement
   ou ML ». Chaque stratégie est une fiche : instrument, plateforme, règle d'entrée et de sortie, taille, coût, résultat
   net mesuré, capacité, statut, date de décision, maillon faible.
-- **Sources.** Les PREREG et FINDINGS de chaque piste. Les chiffres principaux ont été revérifiés sur la page
-  (brouillon de la salle : `docs/reviews/room_20261126/strategy_cards_draft.md`).
+- **Sources.** Les PREREG et FINDINGS de chaque piste ; brouillon de la salle :
+  `docs/reviews/room_20261126/strategy_cards_draft.md`.
+- **Revérifiés sur la page :** A1, A4, B et C. A2 et A3 ont été corrigés le 26-11 après le critique
+  (`docs/reviews/room_20261126/critic_r531_book.md`).
 - **Les journaux scellés des pistes en papier ne sont jamais ouverts avant leur date** : « en cours » veut dire qu'aucun
   résultat n'est lu.
 
@@ -14,7 +16,9 @@
   - **B. le retour du week-end** sur les perps d'actions 24 h/24 ;
   - **C. une surcouche ML** sur A (R531).
 - **Corrélations mesurées :**
-  - entre les livres A de plateformes différentes : −0,04 (R508 contre R519, 343 jours) ;
+  - entre les livres A : −0,04 entre les séries de financement net de R508 et R519 (343 jours, PREREG de R523) ;
+    la médiane des corrélations des 12 paires sur les jours communs est de 0,17 (R525). Les paires qui partagent
+    une plateforme sans plancher bougent ensemble ;
   - en mois de crise, entre paires A : environ 0,35 en moyenne (Q26) ;
   - A et B n'ont aucun marché en commun.
 - **Taille (Thorp) :** au plus la moitié du Kelly, calculée sur l'avantage rétréci (la moitié du niveau mesuré) et sur
@@ -23,7 +27,9 @@
 - **Filtres de risque à l'entrée (R526, adoptés) :**
   - **agree** : pas d'entrée si les deux jambes diffèrent de plus de 2 % en prix ;
   - **active** : chaque jambe a coté dans au moins 20 des 24 dernières heures.
-  - Le stop horaire est rejeté : il double les pertes maximales sur des prix de dernière transaction.
+  - **Le stop horaire est contesté.** La règle figée de R526 l'adopte, et les FINDINGS de R525 le recommandent (fermer
+    si le ratio bouge de plus de 10 %). Mais les FINDINGS de R526 le déconseillent sur des prix de dernière transaction
+    (il double les pertes maximales, et coupait à tort sur Bitfinex). La mise 1 ne l'utilise pas.
 - **Ce qui décide l'argent :** les lectures de décembre, et rien d'autre, fixées d'avance dans
   `docs/reviews/december_decision_20261125.md`.
 
@@ -50,7 +56,7 @@
 |---|---|
 | Règle | celle de A1 (14 jours, 5 %, sortie sous la moitié, 20 cases) ; 89 pièces |
 | Coûts | carnets mesurés à 1 000 / 2 500 $ + Deribit 3,5 bp, HL 4,5 bp |
-| Preuve (historique, 2023-06..2026-11) | **+4,52 %/an à 1x, t 7,02**. Le net de 2026 est d'environ 0 une fois les jambes de prix comptées |
+| Preuve (historique) | **+4,4 %/an à 1x, t 6,69** (2023-05..2026-09, moteur actuel, R525) ; +4,52 %, t 7,02 sur R519 cité par le PREREG de R520. Le net de 2026 est d'environ 0 une fois les jambes de prix comptées |
 | Décision | R521 vers le 22-12 et le 06-01 ; R520 à 90 et 180 jours notés ; coupe-circuit à −3 % |
 | Si réussite | pas de mise sur R521 seul (décision de décembre) |
 
@@ -58,7 +64,7 @@
 | Champ | Valeur |
 |---|---|
 | Règle | celle de A1 ; 69 pièces ; Binance 5 bp, Bitfinex 6,5 bp + carnets mesurés |
-| Preuve (historique, 2 078 jours) | **+5,21 %/an à 1x, t 11,94** ; environ +3,1 %/an en 2025-26 |
+| Preuve (historique) | **+3,5 %/an à 1x, t 2,95** (2021-01..2026-09, moteur actuel, R525). R507 donnait +5,2 % sur l'ancien moteur, et le t 11,94 que j'avais écrit d'abord ne correspond à aucune paire : erreur corrigée. Environ +3,1 %/an en 2025-26 |
 | Décision | 90 et 180 jours notés, à partir du 25-11-2026 |
 | Maillon faible | les données Bitfinex sont les moins fiables des trois plateformes sans plancher |
 
@@ -105,11 +111,11 @@
 |---|---|
 | Idée | méta-labeling (López de Prado) : la règle de A choisit les candidats, un second modèle apprend lesquels ne paieront pas |
 | Modèle | régression logistique (L2) sur 7 variables calculées au jour d'entrée, sans futur : écart 14 j, sa variation sur 14 j, volatilité de l'écart de financement, base entre les deux jambes, part de jours cotés, plateforme sans plancher |
-| Validation | walk-forward trimestriel purgé, embargo de 14 jours ; test 2024-01..2026-09 (12 trimestres, environ 4 700 entrées) |
+| Validation | walk-forward trimestriel purgé, embargo de 14 jours ; test 2024-01..2026-09 (11 trimestres utilisés, environ 4 700 entrées) |
 | Filtre | un candidat sous p = 0,5 est sauté, sa case reste libre |
 | Décision | réussite si le gain (ML − règle figée) à 2x a un t ≥ 2,5, est positif chaque année, et que le livre ML est positif à 2x |
 | Prévision écrite | P(réussite) 0,07 : une surcouche sur une règle déjà sélective rapporte rarement |
-| **Résultat (26-11, lu une fois)** | **ÉCHEC.** À 2x, le ML fait −0,35 %/an face à la règle figée (t −0,97). Il ne garde que 3,2 % des candidats et perd du portage : −1,17 %/an à 1x. Il ne gagne qu'à 3x (+0,48 %/an, t 1,27), en tradant moins. Seuls 44 % des trades de la règle paient : le livre vit d'une minorité de gros gains, imprévisibles à l'entrée. **On garde la règle.** Prochaine question ML possible : prédire la sortie, pas l'entrée. (`experiments/carry_meta_v1/FINDINGS.md`) |
+| **Résultat (26-11, lu une fois)** | **ÉCHEC.** À 2x : −0,35 %/an face à la règle figée (t −0,97) ; à 1x −1,17 (t −3,4) ; à 3x +0,48 (t 1,27, non significatif). **Diagnostic, corrigé après le critique :** le modèle classe à peine les trades (AUC 0,53 dans ma reconstruction, 0,59 dans celle du critique ; relation en U par quintile). Les trades qu'il fait sauter gagnent encore +77 bp en moyenne à 2x, donc les sauter coûte du portage. Le modèle n'est pas « aveugle à la queue » ; il est trop faible pour qu'un filtre rapporte. Tout reste en échantillon pour la règle principale. Ce qui décide l'argent reste les lectures de décembre. (`experiments/carry_meta_v1/FINDINGS.md`) |
 
 ## D. Candidates (pas encore des pistes ; les questions sont dans `docs/reviews/open_questions.md`)
 | Id | Stratégie précise | État | Pourquoi pas encore |
