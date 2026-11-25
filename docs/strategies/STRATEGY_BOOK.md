@@ -62,6 +62,11 @@
 | Décision | 90 et 180 jours notés, à partir du 25-11-2026 |
 | Maillon faible | les données Bitfinex sont les moins fiables des trois plateformes sans plancher |
 
+### A0. Robustesse du paramètre (S1, mesuré le 26-11)
+- Entrer à 10 %/an (sortie 5 %) au lieu de 5 % (sortie 2,5 %) ne change rien sur 2024-2026 : +0,06 %/an à 3x (t 0,41),
+  −0,06 % à 2x.
+- La règle n'est donc pas fragile à son seuil, et monter le seuil n'économise pas les coûts.
+
 ### A4. Les 12 paires en portefeuille (R525, historique)
 | Champ | Valeur |
 |---|---|
