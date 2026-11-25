@@ -194,9 +194,11 @@ Little, except that we measured the closure year and can screen every book's wee
     lower (0.29-0.48), so the gap persisted.
   - **In 2026 realized Saturday jumped** (BTC 0.70) past the weight (0.59). On BTC the 2026 gap has flipped sign:
     Saturday cheap by +15-21 bp, Sunday rich by −35.
-  - **On Sunday the makers raised the weight in 2026** (0.91-0.94) just as BTC's realized Sunday fell (0.72). They
-    seem to chase the previous year's realized ratio (2025: 1.28).
-  - **A lagging estimator against a ratio that jumps year to year** (BTC Saturday 0.31, 0.29, 0.48, 0.31, 0.70) will
+  - **On Sunday the makers raised the weight in 2026** (0.91-0.94) just as BTC's realized Sunday fell (0.72). That
+    fits chasing the previous year's realized ratio (2025: 1.28). **Saturday does not fit:** the 2026 weight rose
+    (0.51 → 0.59) although 2025's realized ratio was low (0.31). "Chasing last year" is not established; it is one
+    story among others, such as makers reacting to 2026's events directly.
+  - **An estimator that moves slowly, against a ratio that jumps year to year** (BTC Saturday 0.31, 0.29, 0.48, 0.31, 0.70) will
     keep making errors of both signs. Whether they can be predicted is the open question. One year ahead, the last
     year's realized ratio would have been the makers' own mistake.
 - **What follows (O7c, a tripwire, no lane).** Extend both reads each month with the new month of public trades. If

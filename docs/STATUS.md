@@ -114,7 +114,7 @@
       - **Même chose sur ETH (25-11, soir)** : samedi trop cher (−41 bp, t −3,9), dimanche trop bon marché (+52 bp,
         t 3,0) de 2022 à 2025 ; les deux à environ zéro en 2026.
         - Les makers ont appris lentement (poids du samedi de 0,77 à 0,51), puis le samedi réel s'est agité en 2026.
-          C'est une course entre un estimateur en retard et un monde qui saute : l'écart peut se rouvrir, dans un sens
+          C'est une course entre des makers qui s'ajustent lentement et un monde qui saute : l'écart peut se rouvrir, dans un sens
           ou dans l'autre.
         - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
           n'y a donc pas de carnet plus jeune à exploiter.
