@@ -112,13 +112,23 @@
         plateformes, nouvelles cryptos) : c'est O7.
       - Mes prédictions écrites d'avance : 1 juste sur 4.
       - **Même chose sur ETH (25-11, soir)** : samedi trop cher (−41 bp, t −3,9), dimanche trop bon marché (+52 bp,
-        t 3,0) de 2022 à 2025 ; les deux à environ zéro en 2026.
+        t 3,0) de 2022 à 2025.
+      - **2026, corrigé après le critique** (mesures robustes, sans les deux samedis extrêmes) :
+        - samedi BTC refermé ;
+        - samedi ETH encore un peu cher, mais sous les coûts ;
+        - **dimanche BTC devenu trop cher** (−35 à −49 bp). C'est une question pour 2027 (O7d), pas une piste.
+      - **À la monnaie et après frais, le loyer récent du samedi est d'environ −4 bp** : rien à trader.
         - Les makers ont appris lentement (poids du samedi de 0,77 à 0,51), puis le samedi réel s'est agité en 2026.
           C'est une course entre des makers qui s'ajustent lentement et un monde qui saute : l'écart peut se rouvrir, dans un sens
           ou dans l'autre.
         - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
           n'y a donc pas de carnet plus jeune à exploiter.
         - Je surveille chaque mois (O7c) : si l'écart revient au-delà de 30 bp, j'ouvre une piste papier.
+  - **Ma calibration (25-11).** Toutes mes probabilités écrites vont maintenant dans `registry/forecasts.csv` (20
+    prévisions, 7 tranchées).
+    - Score de Brier 0,249, autant qu'un 50/50 constant : rien n'est établi à 7 cas.
+    - Mes chiffres hauts (vers 0,70) ne se sont réalisés qu'une fois sur 4.
+    - Règle nouvelle : pas de mot comme « réglé » ou « mort » avant l'observation décisive.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
