@@ -103,13 +103,14 @@
         comparé, à tort, au net de la crypto ; le critique de la salle Haiku l'a vu.
       - Les études mesurent un effet sur la **volatilité** des actions, pas sur leur direction. Je n'achète pas plus
         de données tant qu'on n'a pas de source pour le côté des dealers.
-    - **Le week-end des options crypto.** Les market makers de Deribit comptent le samedi pour environ la moitié d'un
-      jour de semaine.
-      - Pour un straddle gardé jusqu'à l'échéance, c'est juste. Sur la variance, c'est trop bon marché, à cause des
-        queues de distribution. Les deux sont provisoires : deux instantanés seulement.
-      - Le dimanche → lundi semble sous-pricé. Le backtest de Deribit va dans ce sens : vendre le dimanche perd,
-        acheter rapporte environ 2 %/an après frais.
-      - La lecture enregistrée sur 2022-2026 tranchera ; sa prédiction est écrite d'avance.
+    - **Le week-end des options crypto : un écart a existé, il s'est refermé** (lecture enregistrée, 2022-2026,
+      1 733 jours).
+      - L'option BTC à 1 jour du samedi était trop chère d'environ 48 bp par samedi (t −7,3) : −118 bp en 2022,
+        puis −57, −22, −40. En 2026, l'écart a disparu (+15).
+      - Le dimanche → lundi n'est pas sous-pricé au-delà des frais (+21 bp contre environ 16 de coût).
+      - **Rien à trader aujourd'hui.** La suite est de chercher le même écart sur des carnets plus jeunes (autres
+        plateformes, nouvelles cryptos) : c'est O7.
+      - Mes prédictions écrites d'avance : 1 juste sur 4.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :

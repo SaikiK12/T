@@ -200,6 +200,35 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
     plain t across days.
   - **Underpriced** means the mean of (move − premium) is above 16 bp, with t ≥ 2.
   - **Reported:** by year, and the same read with the Monday 08:00 exit replaced by 00:00, to isolate Sunday evening.
+- **The read (2026-11-25, run once; `docs/reviews/o3b_daily_vrp.md`).** One-day BTC options, 2022-01..2026-10, 1,733
+  days, by weekday: mean premium (trade IV near the money, 08:00-10:00) against the next day's absolute move.
+
+| | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|---|
+| IV % | 48.5 | 48.6 | 51.1 | 49.4 | 48.6 | **30.5** | 39.1 |
+| Premium / move | 0.94 | 1.10 | 1.08 | 0.97 | 1.14 | **1.62** | 0.88 |
+| Move − premium, bp (t) | +11.5 (0.9) | −18.8 (−1.7) | −15.5 (−1.3) | +7.1 (0.6) | −24.0 (−2.2) | **−47.8 (−7.3)** | +21.0 (1.8) |
+| Saturday by year, bp | | | | | | 2022 −118.5, 2023 −56.6, 2024 −21.5, 2025 −40.1, **2026 +14.6** | |
+
+- **What it means:**
+  - **There was a weekend design gap, and it closed.** Market makers discounted Saturday (30.5% against about 49%
+    on weekdays) but not enough: Saturday's realized move is about 39% of a weekday's, and they priced about 62%.
+    - A seller of the Saturday straddle at the bid earned about 45 bp a Saturday before fees, every year from 2022
+      to 2025, shrinking: 118, 57, 22, 40.
+    - In 2026 the gap is gone: +15 bp ± about 15 on about 43 Saturdays.
+    - My October snapshot saw today's correct pricing, and the history shows how it became correct. This is the
+      lab's decay pattern again (L044): a rent visible in history, priced away by the time we look.
+  - **Sunday is not underpriced beyond costs** (+21 bp against about 16 of cost, t 1.8). The 15-hour variant puts the
+    excess in Monday 00:00-08:00 UTC (Asia's Monday): Sunday 09:00 → Monday 00:00 is fair (+1.9 bp).
+  - **Nothing to trade now.** The question for the pipeline (L044) is where the same convention gap is younger:
+    - newer option venues with daily expiries (OKX, Bybit, Binance, Derive);
+    - newer underlyings on Deribit (SOL, XRP, HYPE, AVAX and TRX dailies, listed 2025-26).
+    - Their makers may price weekends as Deribit did in 2022. That is O7.
+- **Caveats:**
+  - The refetched trade files are not byte-identical to the 2026-10-22 provenance, probably from the writer,
+    unproven.
+  - Trade IV is an average of executed trades, not a quote.
+  - The move uses Binance hourly closes.
 - **Lesson.** A convention gap shows up first in the incumbents' quotes, not in realized data. I read their term
   structure before measuring the world.
 

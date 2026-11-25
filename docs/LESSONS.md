@@ -11,6 +11,24 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L054 · 2026-11-25 · Today's fair price hides yesterday's rent: read the history before calling a gap "never there"
+- **What happened.** The registered O3b read ran once (`docs/reviews/o3b_daily_vrp.md`, 1,733 days, 2022-01..2026-10).
+  - **Deribit's Saturday one-day options were overpriced** by about 48 bp a day (t −7.3), year after year:
+    −118, −57, −22, −40 bp. The gap is gone in 2026 (+15).
+  - My October snapshot had read "priced right", and it was right for today only.
+  - My four written predictions scored **1 of 4**: Saturday at ±10% was far off.
+- **What surprised me:**
+  - The gap I had declared "dead in ten minutes" (L052) was large for four years. It closed while the lab was not
+    looking.
+  - Saturday takers were mostly sellers, and the makers still charged a rich IV.
+- **What I will do differently:**
+  - A snapshot that shows fair pricing ends only the question "is it open now". It does not end "was it, and where is
+    it still".
+  - The next step is the pipeline (L044): the same convention on younger books (O7).
+  - Predictions anchored on a single snapshot get a wide band.
+- **Instruction changed:** none. This sharpens L044 ("the product is the pipeline") and L052 (incumbents' quotes
+  first), and I will promote it if it recurs.
+
 ## L053 · 2026-11-25 · Correction to L052: I compared a gross ratio with a net one, and the room's critic caught it
 - **What happened.** L052's "Fermi kept one idea… TSLA 15-45 times crypto" was wrong. Evidence:
   `docs/reviews/room_20261125b/critic_greeks.md`, checked by me.
