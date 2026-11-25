@@ -85,5 +85,38 @@ report is a lead. Below, each claim that would move a rule, a lane or money is m
   - Paradex's insurance fund takes 70% of the liquidation penalty.
   - Vault yields were measured small in R446 (HLP, LLP). The new ones are noted, not pursued.
 
-## Critic and the closed-market reader
+## Rules-matrix reader, closed-market pricing (`matrix_closed_market.md`)
+- **Verified on the source:** Variational's equity perps freeze their index on weekends and holidays.
+  - Quote: "Fixed Mode (Daily Maintenance, Holidays and Weekends): Fixed Mode is applied on Equity-based RWA Perps.
+    No recalculation occurs, the Price Index remains fixed at the last available value" (`docs.variational.io`
+    `llms-full.txt`, Index Smoothing).
+  - trade.xyz and Lighter instead run a book-driven EMA (cycles 4-5).
+- **Verified: Variational has a public read-only API** (`/metadata/v2/stats`, 10 requests per 10 s). It gives each
+  listing's mark and indicative quotes at $1k, $100k and $1m.
+  - On 2026-11-25 it listed 597 markets, including US stock perps with real volume: NVDA about $15.9M a day, QQQ
+    $9.8M, AMD $3.1M. Base spreads were 4-9 bp (MSTR 31 bp).
+- **Why this disagreement could matter (the one-page approach, short):**
+  - **Mechanism.** If Variational's OLP (its only market maker) quotes around a frozen index over a weekend, while
+    xyz moves by W, then at the reopen both venues reference the same cash price.
+  - **The pair:** long the venue that is cheaper on Sunday, short the dearer. Its P&L is the whole cross-venue spread,
+    whatever the open does. With Variational frozen at Friday's close, that spread is about W.
+  - **Barrier:** the OLP's last look and risk limits, weekend sizes, split margin across two venues, and access
+    (Variational's restricted persons).
+  - **Fermi, if it held:** tens of bp to several % a market-weekend on the names with large W. Capacity is set by the
+    OLP's quotes ($100k size quoted).
+- **Prediction, written before any weekend is recorded:**
+  - P(the OLP's weekend quotes stay within 20 bp of Friday's index while xyz moves by more than 100 bp) ≈ 0.25.
+  - A professional sole maker with last look is more likely to move or widen its quotes.
+  - If they do stay, the gap is a rule-forced convergence with weekly supply. If not, the row is closed.
+- **The cheapest decisive observation is now recording.** `scripts/record_variational.py` runs hourly in
+  `claude-xyz-books.yml` (folder `variational/` on `claude/xyz-books-data`) from 2026-11-25.
+  - The first chances are Thanksgiving (Thursday 11-26, a US market holiday) and the 11-28/29 weekend.
+  - A read of those weekends is registered before it is looked at.
+- **Open (reported, not verified):**
+  - Paradex's closing-hours index is about 79% peer weight;
+  - Lighter removed caps for NVDA on 2026-07-10;
+  - Felix's funding multiplier is 0.0 for NVDA/TSLA;
+  - xyz's funding cap text conflicts (4%/h against 0.5%/h).
+
+## Critic
 - (pending)

@@ -10,6 +10,9 @@ name: xyz book-cost recorder (Claude)
 # - llp/: Lighter's LLP positions and every Lighter perp's open interest (scripts/record_llp_positions.py, M511);
 # - lighter/: the cost of a $1k and $10k market order on every active Lighter perp (scripts/record_lighter_costs.py),
 #   for measured-cost reads of R455 and later Lighter lanes.
+# - variational/: every Variational Omni listing's mark and indicative quotes ($1k, $100k, $1m) from its public
+#   read-only API (scripts/record_variational.py), from 2026-11-25: Variational freezes its equity index on weekends
+#   and holidays, xyz and Lighter do not (room 2026-11-25, docs/reviews/room_20261125/synthesis.md).
 # Neither venue keeps a history of a pool's positions. Public data only: no key, no order. The first run creates
 # the branch. GitHub drops or delays some scheduled runs, so scheduled runs also fire at :27 and :47; a scheduled
 # run records only if the data branch has no recording yet in the current UTC hour (one snapshot an hour, as before).
@@ -71,6 +74,7 @@ jobs:
           python3 scripts/record_xyz_books.py --out .xyz-data/main --dex "" || fail=1
           python3 scripts/record_xyz_books.py --out .xyz-data/hip3 --dex para --dex io || fail=1
           python3 scripts/record_lighter_costs.py --out .xyz-data || fail=1
+          python3 scripts/record_variational.py --out .xyz-data || fail=1
           exit $fail
       - name: Commit recordings
         if: always() && steps.rec.outcome != 'skipped'

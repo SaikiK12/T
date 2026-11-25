@@ -74,7 +74,7 @@ line is the first line of the script's own docstring.
 - [`fetch_xyz_wknd.py`](fetch_xyz_wknd.py): Inputs for R462 xyzwknd_v1 (trade.xyz US-equity perps over the weekend).
 - [`fetch_xyztwin.py`](fetch_xyztwin.py): Inputs for R477 xyztwin_v1: xyz index, ETF and metal perps against a USD UCITS ETF or ETC twin on the LSE. Keyless.
 
-## Record: point-in-time collectors (cannot be backfilled) (39)
+## Record: point-in-time collectors (cannot be backfilled) (40)
 
 - [`record_book_costs.py`](record_book_costs.py): book_costs_v1 (R404): what a taker order costs on dYdX v4, KuCoin futures and MEXC futures for every listed perp, measured from the public order books, as set out in ...
 - [`record_cboe_chain.py`](record_cboe_chain.py): Twice-daily snapshot of the Cboe delayed option chains for QQQ, SPY and SPX: open interest, volume, implied volatility, delta, gamma, bid and ask of every listed option, from Cboe's free public ...
@@ -111,6 +111,7 @@ line is the first line of the script's own docstring.
 - [`record_tape.py`](record_tape.py): Order-flow tape recorder (M264): Binance USD-M, MEXC and Lighter perps' best bid/ask and trades for `COINS`, bucketed to the second by lab/tape.py, into data/tape/. Paper only: it reads public ...
 - [`record_tradfi_calendar.py`](record_tradfi_calendar.py): TradFi event stamper: public schedules and halt feeds that move stock, index and rates perps, each key stamped with the time this recorder first saw it and every later revision.
 - [`record_unlocks.py`](record_unlocks.py): Daily point-in-time snapshot of the DefiLlama unlock calendar: the emissions index (every token's documented past and upcoming unlock events, circulating and max supply, price, market cap) as ...
+- [`record_variational.py`](record_variational.py): Hourly snapshot of every Variational Omni listing (public read-only API), for the closed-market rule comparison (room 2026-11-25, docs/reviews/room_20261125/synthesis.md).
 - [`record_wallets.py`](record_wallets.py): Hourly record of which coins can be deposited and withdrawn on Bithumb, Gate, KuCoin, HTX and Bitget (M294).
 - [`record_xyz_books.py`](record_xyz_books.py): Hourly recorder of order-book costs on Hyperliquid's HIP-3 markets (trade.xyz's `xyz` dex by default): what a market order of a given size would pay against the book, by side.
 - [`scrape_hyperliquid.py`](scrape_hyperliquid.py): Forward collector of on-chain trader data from Hyperliquid, for docs/CLAIMS.md C04 (do top on-chain traders keep winning; does mirroring their positions pay).
