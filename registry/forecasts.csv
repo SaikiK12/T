@@ -36,3 +36,4 @@ F034,erratum,Q01-frozen,2026-11-25,,,,,"event made precise before the first reco
 F035,void,O2-ratio,2026-11-25,,,,,"undefined as written: the decisive quantity is the dealer net (L053), which open interest does not give; the gross ratio is already 18% on one Friday"
 F036,forecast,R530-pass-rev,2026-11-25,R530 xyzbal_fwd passes (revised after the critic's cost correction),0.23,docs/reviews/room_20261125/synthesis.md:130,,"a revision is scored as its own forecast"
 F037,forecast,L1-spread,2026-11-25,"BTC 2023-26 mean (Binance USD-M funding - next-quarterly annualized basis) >= +2%/yr with >= 3 of 4 years positive",0.40,docs/reviews/open_questions.md (row L1),,
+F038,resolve,L1-spread,2026-11-25,,,docs/reviews/open_questions.md (row L1 result),0,"BTC 2023-26 mean spread -0.03%/yr, 1 of 4 years positive"
