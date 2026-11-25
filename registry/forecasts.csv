@@ -41,3 +41,5 @@ F039,forecast,K1-delist,2026-11-26,"Upbit/Bithumb delisting notices: global perp
 F040,forecast,K2-fxact,2026-11-26,"USDT/KRW premium over official USD/KRW leaves its 2026 5-95% band on more than half the days within 2 weeks either side of 2026-12-03",0.25,docs/reviews/open_questions.md (row K2),,
 F041,forecast,R531-pass,2026-11-26,"R531 carry_meta_v1 passes its frozen rule",0.07,experiments/carry_meta_v1/PREREG.md (Forecast),,
 F042,resolve,R531-pass,2026-11-26,,,experiments/carry_meta_v1/FINDINGS.md:3,0,"FAIL: diff at 2x -0.35%/yr (t -0.97)"
+F043,forecast,S1-th10,2026-11-26,"R275 book entry 10%/exit 5% beats entry 5%/exit 2.5% at 3x costs on R525 pairs 2024-26 by >= 0.5%/yr with NW t >= 2",0.30,docs/reviews/open_questions.md (row S1),,
+F044,forecast,S2-exit-ml,2026-11-26,"Exit-side ML: OOS AUC >= 0.60 and positive book-level lift at 2x",0.15,docs/reviews/open_questions.md (row S2),,
