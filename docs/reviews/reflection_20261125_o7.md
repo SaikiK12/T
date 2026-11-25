@@ -158,3 +158,32 @@ Little, except that we measured the closure year and can screen every book's wee
   - 2026 Saturday within ±20 bp of zero (closed, as on BTC): P ≈ 0.55.
   - Sunday not underpriced beyond costs (move − premium ≤ 16 bp, or t < 2): P ≈ 0.75.
   - A wide band, after L054.
+
+## The ETH read (run once at 22:24 UTC; `docs/reviews/o7_eth_daily_vrp.md`, 1,725 days)
+
+| | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|---|
+| IV % | 61.9 | 61.9 | 63.9 | 62.4 | 61.2 | **40.6** | 49.6 |
+| Move − premium, bp (t) | −1.9 (−0.1) | −6.6 (−0.5) | +18.3 (1.1) | +20.9 (1.3) | −23.5 (−1.6) | **−40.6 (−3.9)** | **+52.1 (3.0)** |
+| Saturday by year | | | | | | 2022 −109, 2023 −44, 2024 −3, 2025 −42, **2026 +8** | |
+| Sunday by year | | | | | | | 2022 +77, 2023 +9, 2024 +38, 2025 +128, **2026 −2** |
+
+- **Predictions:** 2 of 3 right.
+  - Saturday ≤ −30 bp with t ≤ −3: yes.
+  - 2026 within ±20 bp: yes.
+  - Sunday not beyond costs: **no**. ETH's Sunday was underpriced by 52 bp (t 3.0), well beyond about 16 bp of cost.
+- **The pattern is the same on both coins.** The one weight the makers share priced Saturday too rich and Sunday too
+  cheap for four years:
+  - BTC Saturday −48 and Sunday +21;
+  - ETH Saturday −41 and Sunday +52.
+  - A Saturday-sell / Sunday-buy pair earned about 60-90 bp a weekend gross before 2026, against about 32 bp of cost
+    for two straddles.
+  - **In 2026 both gaps are about zero on both coins.**
+- **Why it closed: mostly the world, not the quotes.** The realized side moved toward the makers' weight: Saturdays
+  busier (BTC 81 → 119 bp), Sundays calmer (176 → 128). It did not need the weight to move. If the world moves back,
+  the rent reopens, everywhere at once (one shared model).
+- **What follows (O7c, a tripwire, no lane).** Extend both reads each month with the new month of public trades. If
+  the pooled BTC+ETH Saturday mean (move − premium) over the last three months is ≤ −30 bp with t ≤ −2, or the
+  Sunday one is ≥ +30 bp with t ≥ 2, register a forward paper lane: the Saturday-sell / Sunday-buy pair on Deribit
+  one-day straddles, at measured bid and ask.
+
