@@ -27,6 +27,7 @@
 - **Weekdays:** implied above realized on 3 of 5.
 - **Score of my four predictions: 1 right** (Sunday not beyond costs); 3 wrong (the 90% line, 4 of 5 weekdays, Saturday ±10%).
 - **Post hoc, checked:** Saturday takers were mostly sellers (44% buys; 35% in 2022). Sell-side IV was 29.9% against 31.0% for buys, so a taker seller at the bid earned the gap |
+| O7b | ETH on Deribit: did its Saturday rent close when BTC's did? (O3b rule, `--coin ETH --min-amount 100`) | `reflection_20261125_o7.md` §6 | **data fetching** (ETH 2022-01.., started 2026-11-25 20:30) | Saturday 2022-26 ≤ −30 bp with t ≤ −3: P ≈ 0.75. 2026 within ±20 bp: P ≈ 0.55. Sunday not beyond costs: P ≈ 0.75 | — |
 | O7 | Is the weekend gap Deribit closed in 2026 still open on younger option books (Deribit's SOL/XRP/HYPE dailies; OKX, Bybit, Binance, Derive)? | O3b read | open | Saturday one-day IV above 0.55 × the weekday IV on at least one younger book: P ≈ 0.4 | **Snapshot 2026-11-25 18:37 UTC (Deribit, public):**
 - BTC prices Sat→Sun at 33% forward against 59% for Fri→Sat (0.56), consistent with a closed gap.
 - SOL, XRP, HYPE, AVAX and TRX list Thursday and Friday dailies and weeklies only, with no Saturday or Sunday expiry. Their weekend sits inside the weekly, and one snapshot cannot separate it from the term structure.

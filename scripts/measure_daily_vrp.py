@@ -10,7 +10,8 @@ For each date D (2022-01-01..2026-10-31):
 Reported by weekday of D: mean premium, mean move, their ratio, mean (move - premium) and a plain t; by year; and the
 move to D+1 00:00 against the 15-hour premium (Sunday evening alone).
 
-usage: python scripts/measure_daily_vrp.py [--out docs/reviews/o3b_daily_vrp.md]
+usage: python scripts/measure_daily_vrp.py [--coin BTC|ETH] [--min-amount 5] [--out docs/reviews/o3b_daily_vrp.md]
+(O7 widening, 2026-11-25: --coin ETH --min-amount 100 reads ETH with the same rule; BTC defaults unchanged.)
 """
 import argparse
 import math
@@ -32,7 +33,7 @@ def straddle_bp(iv_pct, hours):
     return 0.7979 * iv_pct / 100 * math.sqrt(hours / 8760) * 1e4
 
 
-def implied_by_day(flow):
+def implied_by_day(flow, min_amount=None):
     """{D (UTC midnight): (iv %, btc traded)} from hourly flow rows (columns t, expiry_ms, strike, index_price, buy,
     sell, iv)."""
     f = flow.copy()
@@ -45,7 +46,7 @@ def implied_by_day(flow):
     f = f.assign(amt=f["buy"] + f["sell"])
     g = f.groupby("D").apply(lambda x: pd.Series({"iv": np.average(x["iv"], weights=x["amt"]) if x["amt"].sum() > 0
                                                   else np.nan, "btc": x["amt"].sum()}), include_groups=False)
-    return g[g["btc"] >= MIN_BTC]
+    return g[g["btc"] >= (MIN_BTC if min_amount is None else min_amount)]
 
 
 def moves(closes):
@@ -87,12 +88,13 @@ def table(df):
     return pd.DataFrame(rows)
 
 
-def run(out):
-    files = [f for f in sorted(FLOW.glob("*.parquet"))]
+def run(out, coin="BTC", min_amount=None):
+    flow_dir = ROOT / "data" / "deribit_trades" / coin / "flow"
+    files = [f for f in sorted(flow_dir.glob("*.parquet"))]
     flow = pd.concat([pd.read_parquet(f, columns=["t", "expiry_ms", "strike", "index_price", "buy", "sell", "iv"])
                       for f in files], ignore_index=True)
-    imp = implied_by_day(flow)
-    k = pd.read_parquet(KLINES)
+    imp = implied_by_day(flow, min_amount)
+    k = pd.read_parquet(ROOT / "data" / "klines_1h" / f"{coin}USDT.parquet")
     closes = pd.Series(k["close"].astype(float).values, index=pd.to_datetime(k["t"], unit="ms", utc=True))
     mv = moves(closes)
     df = imp.join(mv, how="inner")
@@ -103,8 +105,8 @@ def run(out):
     t = table(df)
     by_year = df.assign(y=df.index.year, e=df["move"] - df["prem"]).pivot_table(index="y", columns="wd", values="e",
                                                                                 aggfunc="mean")[DAYS]
-    lines = ["# O3b read: one-day BTC option premium against the next day's move, by weekday (2022-01..2026-10)", "",
-             f"Files: {len(files)} months of `data/deribit_trades/BTC/flow` ({files[0].stem}..{files[-1].stem}); "
+    lines = [f"# O3b read: one-day {coin} option premium against the next day's move, by weekday (2022-01..2026-10)", "",
+             f"Files: {len(files)} months of `data/deribit_trades/{coin}/flow` ({files[0].stem}..{files[-1].stem}); "
              f"days kept: {len(df)}. Cost of a straddle round trip, for reference: about {COST_BP:.0f} bp.", "",
              md(t), "", "## Mean (move - premium) by year, bp", "",
              md(by_year, "{:.1f}", index=True)]
@@ -115,10 +117,12 @@ def run(out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "docs" / "reviews" / "o3b_daily_vrp.md"))
+    ap.add_argument("--coin", default="BTC")
+    ap.add_argument("--min-amount", type=float, default=None)
     a = ap.parse_args()
     if Path(a.out).exists():
         sys.exit(f"{a.out} exists: the registered read runs once")
-    run(a.out)
+    run(a.out, a.coin, a.min_amount)
 
 
 if __name__ == "__main__":
