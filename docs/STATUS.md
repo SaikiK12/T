@@ -99,8 +99,9 @@
       - **Pour TSLA, il vaut environ 6 %** (mesuré pour 0,08 $ sur une journée d'open interest). Les actions
         individuelles sont donc le seul terrain où les Greeks peuvent bouger le prix. Tu peux les atteindre via les
         perps xyz.
-      - La suite coûte environ 17 $ par action et par an de données, au-delà de mon plafond de 2 $ : **dis-moi si tu
-        veux la payer.**
+      - Mais l'effet mesuré dans les études porte sur la **volatilité** (environ 12 % du mouvement absolu), pas sur
+        la direction. Pour trader une direction, il faudrait savoir de quel côté sont les dealers, et l'open interest
+        ne le dit pas. Je n'achète donc pas plus de données pour l'instant (environ 17 $ par action et par an).
     - **Le week-end des options crypto est déjà bien pricé.** Les market makers de Deribit comptent le samedi pour
       environ la moitié d'un jour de semaine, et c'est juste. Le backtest de Deribit le confirme : vendre le dimanche
       perd, acheter le dimanche rapporte à peine 2 %/an après frais.

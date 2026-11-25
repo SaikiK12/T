@@ -24,7 +24,8 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
   GEX is −$20M per 1% move, which is **0.13% of BTC perp daily volume** (`registry/methods.csv`, M308 result).
   "The hedge is a rounding error next to perp volume" (`experiments/dealerflow_v1/FINDINGS.md:55`).
 - **The variance premium is real gross and dies on costs and tails.**
-  - DVOL exceeds the next 30 days' realized vol by +8.15 vol points (R411, t 5).
+  - DVOL exceeds the next 30 days' realized vol by +8.15 vol points (R411, NW t 5.50). The premium is shrinking:
+    +3.8 over 2024-26, and +0.7 in 2026 (`registry/rounds.csv`, R411).
   - A weekly short straddle earns +44 bp a week gross (t 4.66). It nets −12 bp at 1x, and the hedge is 69% of the
     cost (R409).
   - A banded maker hedge cuts the hedge fee from 39 to 9 bp a week, but the best cell is +15.6 bp (t 1.30), and the
@@ -97,6 +98,10 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
       - **TSLA's ratio is 15-45 times crypto's.**
       - The dealer's sign is the open part. Retail buys TSLA calls, which would make dealers short calls, the
         opposite of the GEX convention.
+      - **What the ratio buys.** The literature's single-stock effect is on volatility: Barbon-Buraschi Table II gives
+        about −12 bp of |R| per SD against a mean of 109 bp, and Table VI's 30-minute autocorrelation effect is about
+        1% of an SD (room S2, S3). Direction needs the dealer's sign. So O2 is alive as a mechanism, but not yet as a
+        trade. I buy no more data until a sign source or a volatility use is named.
 - **The general rule (already step 4's Fermi, made concrete for this class).** Before any Greek idea:
   - write the forced notional and the window's volume;
   - below about 0.5%, stop;
