@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L049 · 2026-11-25 · The field's best paper belongs before the design, not after it
+- **What surprised me:**
+  - Once the weekend family became the best capacity × edge candidate, I searched for its literature. An arXiv
+    preprint of August 2026 (Seo et al.) gives in its fixed-point model the formal reason for the design I had reached
+    empirically over three cycles (R530's balanced book): the common component tracks live index futures; the
+    idiosyncratic part is network noise that the reopen removes.
+  - It also names a mechanism the lab had not mapped, the oracle network echo. OKX's index imports Hyperliquid's
+    oracle at a weight of 0.343, so damped venues should lag xyz over a weekend and snap at the open.
+  - Reading it took about 40 minutes. Designing without it took three cycles.
+- **What I will do differently:**
+  - When a family becomes a candidate for money or for a lane, read the field's best recent paper on its mechanism in
+    full before designing, not after freezing.
+- **Promoted:** this is the second time (L038: read the theory of the market before reasoning alone). Step 0 of the
+  one-page approach in `CLAUDE.md` now adds "what the field knows: the best paper on the mechanism, read in full
+  before designing anything".
+
 ## L048 · 2026-11-25 · Write the decision before the result, and the money before the decision
 - **What surprised me:**
   - Writing the arithmetic of the first stake before any read changed what the stake is. At the autumn level,

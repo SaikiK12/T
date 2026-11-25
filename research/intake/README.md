@@ -18,6 +18,7 @@ Each file here records a source that was read: what it is, how it was retrieved,
 
 | Date | Note | What it is |
 |---|---|---|
+| 2026-11-25 | [oracle_frontiers_20261125.md](oracle_frontiers_20261125.md) | Seo et al., 24/7 equity-perpetual oracles (arXiv 2608.09188, read in full): closed-window marks are oracle-network fixed points; funding sets speed, not target; the reopen decomposition; OKX imports Hyperliquid's oracle (0.343); what it means for R530 and R466 |
 | 2026-11-25 | [nagel_evaporating_20261125.md](nagel_evaporating_20261125.md) | Nagel, "Evaporating Liquidity" (NBER w17653, read in full): short-term reversal = return of liquidity provision, (1/γ)σx; about 40% of closing-price reversal is bounce; hedge conditional beta; common-factor reversals pay only at high VIX; what it means for the weekend fade |
 | 2026-11-24 | [perp_fundamentals_20261124.md](perp_fundamentals_20261124.md) | He, Manela, Ross & von Wachter (arXiv 2212.06888, read in full): funding = cash rate under unlimited arbitrage; the gap is the price of leverage bounded by arbitrage capacity W/m; clamp-correct convergence at retail costs; our supply count for 2025-26 |
 | 2026-11-24 | [venue_failure_20261124.md](venue_failure_20261124.md) | Venue failure base rates (Q3): 822 exchanges, 40% closed, about 10%/yr; hazard ratios by coins traded, fiat and US customers; 47% recovery where known; per-venue rates for `scripts/stake_kelly.py` |

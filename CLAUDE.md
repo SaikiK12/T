@@ -26,7 +26,8 @@ not to add process.
   testing. Testing was the cheap last step.
 - **Before any test, I write one page:**
   0. what the lab already knows: the rounds that touched this mechanism, and the recorded data no question has used
-     yet (Pólya: "Have you seen it before?", "Did you use all the data?"; L040);
+     yet (Pólya: "Have you seen it before?", "Did you use all the data?"; L040). And what the field knows: the best
+     paper on the mechanism, read in full before designing anything (L038, L049);
   1. the economic question;
   2. the mechanism (who must trade, under which constraint, at a price set by which rule);
   3. the barrier that keeps others out (none means someone faster is paid first);
