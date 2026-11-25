@@ -13,6 +13,8 @@ it is listed here.
 | R462, R468, R349 | PARTIAL | gate-0 PASSes recorded as PARTIAL by convention | each FINDINGS |
 | R528 closing_momentum_v1 | RUNNING / PENDING | **done: NULL** (both rules FAIL), read once 2026-11-24 | `experiments/closing_momentum_v1/FINDINGS.md:1-3` |
 | R529 roll_frontrun_v1 | RUNNING / PENDING | **done: FAIL (NULL)** | `experiments/roll_frontrun_v1/FINDINGS.md:1-3` |
+| R531 carry_meta_v1 | prereg_sha empty | the row was appended before the freeze; the digest is `1dbea2232ef1f7b1dcc6eee3f440caad0efb4dfe6f0d61d4b58c5f94e3a4fcdb` (`experiments/carry_meta_v1/PREREG.sha256`, commit fd85d439) | integrity warning REGISTRY_SHA_MISSING |
+| R531 carry_meta_v1 | REGISTERED / PENDING | **done: FAIL (NULL)**, run once 2026-11-26 | `experiments/carry_meta_v1/FINDINGS.md:1-3` |
 
 - **From now on, every FINDINGS states which of these it is:** in sample, out of sample (with the holdout id),
   measurement, or null.
