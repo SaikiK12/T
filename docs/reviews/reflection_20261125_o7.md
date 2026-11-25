@@ -63,6 +63,26 @@ Little, except that we measured the closure year and can screen every book's wee
 2. **ETH's history on Deribit:** the same read as O3b, for ETH. Did the ETH rent close at the same time? If it closed
    later, or not at all, the makers learn by book, not all at once, and younger books are likely still open.
 
+### O3b audited (Haiku auditor `room_20261125c/audit_o3b.md`, independent code; band figures re-run by me)
+- **The result is reproduced exactly:** Saturday −47.8 bp (t −7.3), n 248.
+  - Expiry alignment is clean: all expiries fall at 08:00 UTC, and the same-day expiry is excluded.
+  - The Deribit index against Binance changes nothing.
+  - Seller-side IV changes nothing (−47.3).
+- **The moneyness band is the one sensitivity.** The smile lifts IV away from the money, so the ±2% band overstates
+  the at-the-money premium:
+
+| Band | Saturday mean (move − premium) | t | By year 2022 / 23 / 24 / 25 / 26 |
+|---|---|---|---|
+| ±0.5% | **−32.3 bp** | −4.6 | −102 / −50 / −15 / −33 / +21 |
+| ±1% | −41.6 | −6.3 | −115 / −51 / −16 / −35 / +21 |
+| ±2% (registered) | −47.8 | −7.3 | −118 / −57 / −22 / −40 / +15 |
+
+- **The honest at-the-money size is about −32 bp a Saturday** over 2022-26, before about 16 bp of cost. The pattern
+  by year is unchanged.
+  - Weekdays sit at −7 bp in every band, so the Saturday gap is not a band artefact.
+  - Median −61 bp; 21% of Saturdays had a move above the premium.
+- **Not checked:** minute data (none held), and costs beyond the 16 bp reference.
+
 ### The realized side, measured (Binance hourly, 09:00 → 08:00 UTC; mean absolute move, Saturday and Sunday over the weekday mean)
 
 | Coin | 2023-24 Sat / Sun | 2025-26 Sat / Sun | Weekday mean move 2025-26 |
