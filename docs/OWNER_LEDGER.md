@@ -123,3 +123,7 @@
 
 > Donc ya rien a rechercher aucune idée a voir ou juste a rechercher de manière efficace mais extensive genre savoir se varier dans ses recherches
 
+## 2026-11-25 23:40 UTC
+
+> Non soit plus précise dans les stratégies framework directement ou ml etc tes pas assez travailleur
+

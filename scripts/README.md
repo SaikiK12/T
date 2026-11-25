@@ -157,7 +157,7 @@ line is the first line of the script's own docstring.
 - [`notice_loop.sh`](notice_loop.sh): Every 5 minutes: record Binance's notice catalogs, then ticket R272 announce_fwd, so an event ticket is written minutes after a notice and enters at the next full hour.
 - [`restart_all.sh`](restart_all.sh): Bring the forward loop, the notice loop and every recorder/forward daemon back after a container or machine restart.
 
-## Run: one lane's frozen measurement (239)
+## Run: one lane's frozen measurement (240)
 
 - [`qx_run.py`](qx_run.py): Run a family lane on the qx engine, end to end: verify, check inputs, run, summarise, register.
 - [`qx_run_verified.py`](qx_run_verified.py): Run a qx lane only with a source-matched build, then retain an immutable run receipt.
@@ -179,6 +179,7 @@ line is the first line of the script's own docstring.
 - [`run_carry5.py`](run_carry5.py): R439 carry5_v1: R275's all-four carry rule (L14d th10% K20) on one book over five venues (Binance, Gate, Hyperliquid, MEXC, KuCoin), on the M468 engine (lab/xfund_v2), as set out in ...
 - [`run_carry_execution.py`](run_carry_execution.py): R417: one offline, frozen depth/cash diagnostic; no network or forward tick.
 - [`run_carry_holdout.py`](run_carry_holdout.py): carry_holdout (R191): one-shot holdout of the R190 primary, as set out in experiments/carry_holdout/PREREG.md.
+- [`run_carry_meta.py`](run_carry_meta.py): R531 carry_meta_v1: an ML meta-label filter on R275's carry book, across R525's 12 floorless x floor venue pairs.
 - [`run_carry_v2_audit.py`](run_carry_v2_audit.py): R437 carry_v2_audit_v1: R275's seven headline carry books re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_v1/PREREG.md.
 - [`run_carry_v2_audit_kc.py`](run_carry_v2_audit_kc.py): R438 carry_v2_audit_kc_v1: R277's two KuCoin carry books (forward on paper as R279 A and B) re-run on the M468 engine (lab/xfund_v2), as set out in experiments/carry_v2_audit_kc_v1/PREREG.md.
 - [`run_carrycost_hist.py`](run_carrycost_hist.py): R499 carrycost_hist_v1: what R390's C14 book (binance+gate, R275's v1 engine) would have paid at each of its real entries and exits, 2021-07..2026-09, on the venues' recorded order books instead ...

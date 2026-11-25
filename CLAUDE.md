@@ -27,6 +27,8 @@ chain below.
   verbatim in [docs/OWNER_LEDGER.md](docs/OWNER_LEDGER.md))
 - "Donc y a rien à rechercher, aucune idée à voir ? Ou juste à rechercher de manière efficace mais extensive, genre
   savoir se varier dans ses recherches." (2026-11-25, after I wrote "rien à trader… tu n'as rien à faire")
+- "Non, sois plus précise dans les stratégies, framework directement ou ML etc., t'es pas assez travailleur."
+  (2026-11-25 23:3x, after a message of vague "pistes")
 
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.
@@ -80,6 +82,13 @@ not to add process.
      - I verify them and triage them into the register by value × probability ÷ cost.
      - Deep work goes to the top of the register, never to the subject I happen to be in.
      - **"Nothing to trade" is never "nothing to research".** Every message to the owner names the open leads.
+   - **Precise strategies, frameworks and ML directly** (owner 2026-11-25 late).
+     - A lead is written as a **strategy card**: instrument and venue, entry and exit rule, size, cost, measured net
+       by year, capacity, status and the next test.
+     - The live cards are in `docs/strategies/STRATEGY_BOOK.md`.
+     - Frameworks (how the books combine, size and stop) and ML (with purged walk-forward validation, on the payer
+       families first) are worked on directly, not only mentioned.
+     - Precision is the output of reflection, not its opposite.
 8. **Access is the owner's.** Every venue is in scope for research. Money rules (AGENTS.md) are unchanged.
 9. **Work continuously.** The two-hourly task is one chain cycle per wake, and each cycle ends with a finished
    increment. A written reflection that changes how I approach a subject is an increment, and it is the default.
