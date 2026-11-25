@@ -89,8 +89,14 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
   - **Where the ratio is large is single stocks with heavy short-dated option open interest** (TSLA, NVDA and other
     0DTE and weekly names). There, dealer gamma per 1% can be several percent of the stock's daily volume, by
     order-of-magnitude reasoning not yet measured. That is where Ni-Pearson-Poteshman pinning and gamma squeezes live.
-    The owner can reach those names on trade.xyz single-stock perps. This is O2, and its first step is a data quote,
-    not a test.
+    The owner can reach those names on trade.xyz single-stock perps. This is O2.
+    - **Measured the same day for $0.077** (Databento OPRA, TSLA open interest 2026-11-13 and the series
+      definitions):
+      - $2.3-2.5bn of gamma per 1% move, gross; $0.8-0.9bn calls-minus-puts.
+      - That is about 6% gross and 2% net of an assumed $40bn of daily stock volume.
+      - **TSLA's ratio is 15-45 times crypto's.**
+      - The dealer's sign is the open part. Retail buys TSLA calls, which would make dealers short calls, the
+        opposite of the GEX convention.
 - **The general rule (already step 4's Fermi, made concrete for this class).** Before any Greek idea:
   - write the forced notional and the window's volume;
   - below about 0.5%, stop;
@@ -129,6 +135,29 @@ My verification is in section 1. The questions this page produced are O1-O6 in `
   - The Sunday window holds the CME reopen and Asia's Monday, a closed-market clock like our xyz class.
   - The decisive history is the daily options' trade IVs (`data/deribit_trades`, public). I started refetching BTC
     2022-01.. on 2026-11-25. The prediction is written in the register before the data arrives.
+- **The field's best evidence** (Deribit Insights, "Option Backtest – Selling Weekend Vol, Revisited", read on the
+  page by me after the Haiku reader's report `room_20261125b/weekend_vrp_reading.md`):
+  - **The rule.** "At 16:00 UTC every Friday, sell a 0.35 delta strangle that expires on Sunday at 08:00 UTC, and
+    hold the options to expiry."
+  - **Results.** "Number of trades: 212 (169 wins, 43 losses) Net profit: 1.2485 BTC (+124.85%) … APR: 27.4%"
+    (2020-01..2024-08). The strangle is unhedged and its returns are negatively skewed. The sample ends 2025-04, so it
+    does not hold the 2025-10-10 Friday-night crash, which falls inside its window.
+  - **"Bloody Sunday."** Selling the 2-day strangle on Sundays: "Number of trades: 251 (153 wins, 98 losses) Net
+    profit: -0.9224 BTC (-92.24%) … APR: -17.7%". The author: "every other day generated at least a small profit".
+    - Buying it instead: "after fees and slippage, the APR was only 2.1%, and the results included a 0.45 BTC
+      drawdown".
+    - So the Sunday-to-Tuesday window is underpriced gross and roughly fair net. That fits my O3b prediction (no
+      underpricing beyond costs), which was committed (428def4e) before I read this page.
+  - **The reader's quotes, checked mechanically** (`verify_citations.py --corpus` on the page text I fetched):
+  - 31 found and 27 not.
+  - Most of the 27 come from pages outside my corpus (CME, arXiv HTML).
+  - Two are attributed to the Deribit pages but are not on them: "hedging will be covered in future pieces" and
+    "drawdowns may be underestimated because only hourly data was used". The reader's fetch tool summarized pages,
+    so these two are not to be cited.
+  - Every Deribit figure used above I read on the page myself.
+- **Checked and not a lever:** "Zero Fees On Hedge Legs" (Deribit, 2025-12-16, until the end of 2026). The fee is
+    waived only on a futures leg "added to an option structure in a block trade", so it does not apply to
+    R409/R410's hourly rebalancing, which was the binding cost.
 - **The registered read for O3b** (written and committed before the refetched data is opened; a measurement, no
   money, 0 trials):
   - **Days:** every date D from 2022-01-01 to 2026-10-31.

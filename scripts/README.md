@@ -467,7 +467,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (122)
+## Tools and everything else (123)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -520,6 +520,7 @@ line is the first line of the script's own docstring.
 - [`m322_account_rule.py`](m322_account_rule.py): Synthetic-safe cash and inventory primitives for a proposed M322 paper book.
 - [`m322_calendar_rule.py`](m322_calendar_rule.py): Calendar coverage gate for a proposed M322 paper comparison.
 - [`m322_signal_rule.py`](m322_signal_rule.py): Prospective M322 signal and fixed-capital ticket construction.
+- [`measure_daily_vrp.py`](measure_daily_vrp.py): Register O3b (docs/reviews/open_questions.md): is a one-day BTC option underpriced on some weekday, Sunday above all? The registered read is in docs/reviews/reflection_20261125_greeks.md section ...
 - [`montag_events.py`](montag_events.py): Legs for the Monitoring Tag short (R269) from Binance's news and delisting catalogs (data/recorders/notices/binance_{news,delisting}.csv, scripts/record_notices.py; one tag notice was filed under ...
 - [`orchestrate_forward.py`](orchestrate_forward.py): Plan or run the existing paper collectors with explicit dependencies.
 - [`owner_ledger.py`](owner_ledger.py): Rebuild docs/OWNER_LEDGER.md: every message the owner typed in this session, verbatim, from the session transcript, with secrets redacted and notifications, hooks, summaries and subagent reports ...
