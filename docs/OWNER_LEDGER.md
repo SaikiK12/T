@@ -119,3 +119,7 @@
 
 > Mais réfléchi ducoup a des choses que toi tu peux créer ou avoir une réflexion sur leurs faisabilité genre le gamma mais vamma ou vanna je crois et autre truc a mixé genre voilà pose toi des questions sur les choses ou tu peux pas savoir si c'est acquis ou non qui ont besoin d'expérimentation et ça peut être absolument tout mais tu dois les refine et ducoup plein d'autres trucs si c'est la vérif qui limite bah débloque la en bossant dessus ? Tu connais pas tout souviens toi de tout ça et autre truc que j'ai déjà dit avant tes compression
 
+## 2026-11-25 23:13 UTC
+
+> Donc ya rien a rechercher aucune idée a voir ou juste a rechercher de manière efficace mais extensive genre savoir se varier dans ses recherches
+

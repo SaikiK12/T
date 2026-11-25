@@ -25,6 +25,8 @@ chain below.
   absolument tout, mais tu dois les raffiner… si c'est la vérif qui limite, débloque-la en bossant dessus. Tu ne connais
   pas tout : souviens-toi de tout ça et de ce que j'ai dit avant tes compressions." (2026-11-25; every message is kept
   verbatim in [docs/OWNER_LEDGER.md](docs/OWNER_LEDGER.md))
+- "Donc y a rien à rechercher, aucune idée à voir ? Ou juste à rechercher de manière efficace mais extensive, genre
+  savoir se varier dans ses recherches." (2026-11-25, after I wrote "rien à trader… tu n'as rien à faire")
 
 What they want: a net gain that real money can match, found fast and honestly. They want me to grow as a researcher,
 not to add process.
@@ -72,6 +74,12 @@ not to add process.
    strategies: frameworks, portfolios, breadth.
    - Wide means new structural payers in other markets, not new price patterns (L031: payer families pass 43-64%
      of decided tests, pattern families 0-23%).
+   - **Vary, with a portfolio of research** (owner 2026-11-25: "efficace mais extensive… savoir se varier").
+     - Every day, one breadth sweep: Haiku scouts in at least four different families, each returning candidate
+       questions with a primary source, the data held or its API, and the cheapest observation.
+     - I verify them and triage them into the register by value × probability ÷ cost.
+     - Deep work goes to the top of the register, never to the subject I happen to be in.
+     - **"Nothing to trade" is never "nothing to research".** Every message to the owner names the open leads.
 8. **Access is the owner's.** Every venue is in scope for research. Money rules (AGENTS.md) are unchanged.
 9. **Work continuously.** The two-hourly task is one chain cycle per wake, and each cycle ends with a finished
    increment. A written reflection that changes how I approach a subject is an increment, and it is the default.
