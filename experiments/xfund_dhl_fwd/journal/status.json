@@ -1,11 +1,11 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-24T01:20:10.115460+00:00",
- "waiting": false,
+ "updated": "2026-11-25T01:20:08.898360+00:00",
+ "waiting": true,
  "ready": {
-  "deribit": 1.054,
-  "hyperliquid": 0.989
+  "deribit": 0.885,
+  "hyperliquid": 0.978
  },
  "data": {
   "deribit": {
@@ -16,151 +16,12 @@
   },
   "hyperliquid": {
    "files": 89,
-   "failed": 1,
+   "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "MORPHO"
+    "JTO",
+    "LDO"
    ]
   }
- },
- "A": {
-  "set": "deribit+hyperliquid",
-  "lookback": 14,
-  "threshold": 0.05,
-  "slots": 20,
-  "why": "R519's reported R275 book (+4.52%/yr, NW t 7.02)",
-  "held_now": [
-   {
-    "coin": "CRV",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.2194
-   },
-   {
-    "coin": "ZEC",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0748
-   },
-   {
-    "coin": "RENDER",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1545
-   },
-   {
-    "coin": "LTC",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0818
-   },
-   {
-    "coin": "ENA",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0818
-   },
-   {
-    "coin": "UNI",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0763
-   },
-   {
-    "coin": "MON",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.3435
-   },
-   {
-    "coin": "VVV",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0664
-   },
-   {
-    "coin": "TAO",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.0626
-   },
-   {
-    "coin": "1000SHIB",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.153
-   },
-   {
-    "coin": "PONS",
-    "long": "hyperliquid",
-    "short": "deribit",
-    "spread_in": 0.5553
-   },
-   {
-    "coin": "ETHFI",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.2024
-   },
-   {
-    "coin": "VIRTUAL",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1937
-   },
-   {
-    "coin": "XLM",
-    "long": "hyperliquid",
-    "short": "deribit",
-    "spread_in": 0.1632
-   },
-   {
-    "coin": "BOME",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1748
-   },
-   {
-    "coin": "INJ",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1347
-   },
-   {
-    "coin": "FET",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1371
-   },
-   {
-    "coin": "MEGA",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.173
-   },
-   {
-    "coin": "STRK",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1648
-   },
-   {
-    "coin": "PAXG",
-    "long": "hyperliquid",
-    "short": "deribit",
-    "spread_in": 0.1485
-   }
-  ],
-  "scored_days": 2,
-  "late_days": 1,
-  "total": -0.0008372053,
-  "total_2x": -0.0016072053,
-  "total_3x": -0.0023772053,
-  "total_close": -0.0001565548,
-  "nw_t": null,
-  "max_drawdown": -0.0008372053,
-  "replay_days": 31,
-  "replay_total": 0.0006646258000000004
- },
- "last_day": "2026-11-24"
+ }
 }

@@ -1,27 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-24T00:59:27.329041+00:00",
+ "updated": "2026-11-25T00:59:28.206965+00:00",
  "waiting": false,
  "ready": {
-  "mexc": 0.965,
-  "lighter": 0.957
+  "mexc": 1.0,
+  "lighter": 1.06
  },
  "data": {
-  "mexc": {
-   "files": 117,
-   "failed": 5,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "GRAM_USDT",
-    "HBAR_USDT",
-    "ICP_USDT",
-    "LDO_USDT",
-    "LTC_USDT"
-   ]
-  },
   "lighter": {
    "files": 195,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -69,12 +63,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1268
-   },
-   {
-    "coin": "EIGENUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.1027
    },
    {
     "coin": "AVAXUSDT",
@@ -153,18 +141,24 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.0945
+   },
+   {
+    "coin": "PYTHUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1006
    }
   ],
-  "scored_days": 32,
+  "scored_days": 33,
   "late_days": 16,
-  "total": -0.0022236785000000004,
-  "total_2x": -0.0044786784999999996,
-  "total_3x": -0.0067336785000000005,
-  "total_close": -0.0020577929,
-  "nw_t": -1.5770063712083444,
+  "total": -0.0024822383000000004,
+  "total_2x": -0.0048472383,
+  "total_3x": -0.007212238300000001,
+  "total_close": -0.0020398014,
+  "nw_t": -1.681927985926967,
   "max_drawdown": -0.0045535545,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-24"
+ "last_day": "2026-11-25"
 }

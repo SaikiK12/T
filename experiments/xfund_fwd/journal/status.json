@@ -1,24 +1,40 @@
 {
  "lane": "xfund_fwd",
  "rid": "R278",
- "updated": "2026-11-24T00:40:40.335498+00:00",
+ "updated": "2026-11-25T00:40:38.956680+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.023,
-  "hyperliquid": 0.977,
-  "mexc": 0.992
+  "gate": 1.008,
+  "hyperliquid": 0.983,
+  "mexc": 0.932
  },
  "data": {
   "mexc": {
    "files": 520,
-   "failed": 4,
+   "failed": 36,
    "changed_on_overlap": 0,
    "failed_some": [
-    "PAXG_USDT",
-    "PENGU_USDT",
-    "PLUME_USDT",
-    "POLYX_USDT"
+    "CVX_USDT",
+    "CYBER_USDT",
+    "C_USDT",
+    "DEEP_USDT",
+    "DIA_USDT",
+    "DOLO_USDT",
+    "EDGE_USDT",
+    "ENA_USDT",
+    "ETH_USDT",
+    "ID_USDT"
+   ]
+  },
+  "hyperliquid": {
+   "files": 216,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "MON",
+    "VIRTUAL",
+    "XRP"
    ]
   },
   "binance": {
@@ -36,17 +52,6 @@
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 4,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "LDO",
-    "LINEA",
-    "TRB",
-    "TRUMP"
-   ]
   }
  },
  "A": {
@@ -123,12 +128,6 @@
     "spread_in": 0.209
    },
    {
-    "coin": "1000LUNCUSDT",
-    "long": "gate",
-    "short": "hyperliquid",
-    "spread_in": 0.2469
-   },
-   {
     "coin": "SOPHUSDT",
     "long": "gate",
     "short": "hyperliquid",
@@ -175,15 +174,21 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.2222
+   },
+   {
+    "coin": "PROVEUSDT",
+    "long": "gate",
+    "short": "hyperliquid",
+    "spread_in": 0.237
    }
   ],
-  "scored_days": 33,
+  "scored_days": 34,
   "late_days": 16,
-  "total": 0.0066847465,
-  "total_2x": 0.0045847464999999995,
-  "total_3x": 0.0024847464999999992,
-  "total_close": 0.011771200400000001,
-  "nw_t": 0.8645076439250828,
+  "total": 0.0078087719,
+  "total_2x": 0.0053587719,
+  "total_3x": 0.002908771899999999,
+  "total_close": 0.0117065059,
+  "nw_t": 0.9171825016628931,
   "max_drawdown": -0.005410314100000001,
   "replay_days": 61,
   "replay_total": 0.0053871618999999996
@@ -250,14 +255,14 @@
     "spread_in": 0.1089
    }
   ],
-  "scored_days": 33,
+  "scored_days": 34,
   "late_days": 16,
-  "total": 0.0081238628,
-  "total_2x": 0.0072488628,
-  "total_3x": 0.0063738628,
-  "total_close": 0.0084734911,
-  "nw_t": 1.5428872888312637,
-  "max_drawdown": -0.0002094371,
+  "total": 0.007255465399999999,
+  "total_2x": 0.0063804654,
+  "total_3x": 0.0055054654,
+  "total_close": 0.007605093699999999,
+  "nw_t": 1.3232486468602112,
+  "max_drawdown": -0.0008921547000000016,
   "replay_days": 61,
   "replay_total": 0.0087474903
  },
@@ -389,16 +394,16 @@
     "spread_in": 0.4327
    }
   ],
-  "scored_days": 33,
+  "scored_days": 34,
   "late_days": 16,
-  "total": 0.0108955694,
-  "total_2x": 0.0071155694,
-  "total_3x": 0.0033355693999999993,
-  "total_close": 0.016056804299999998,
-  "nw_t": 1.2017481724053847,
+  "total": 0.0118349493,
+  "total_2x": 0.0079149493,
+  "total_3x": 0.003994949299999999,
+  "total_close": 0.0164250941,
+  "nw_t": 1.2359182450947974,
   "max_drawdown": -0.0059386307,
   "replay_days": 61,
   "replay_total": 0.014154120300000003
  },
- "last_day": "2026-11-24"
+ "last_day": "2026-11-25"
 }
