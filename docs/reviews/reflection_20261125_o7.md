@@ -63,6 +63,51 @@ Little, except that we measured the closure year and can screen every book's wee
 2. **ETH's history on Deribit:** the same read as O3b, for ETH. Did the ETH rent close at the same time? If it closed
    later, or not at all, the makers learn by book, not all at once, and younger books are likely still open.
 
+### The realized side, measured (Binance hourly, 09:00 → 08:00 UTC; mean absolute move, Saturday and Sunday over the weekday mean)
+
+| Coin | 2023-24 Sat / Sun | 2025-26 Sat / Sun | Weekday mean move 2025-26 |
+|---|---|---|---|
+| BTC | 0.40 / 0.88 | 0.47 / 1.04 | 165 bp |
+| ETH | 0.50 / 0.87 | 0.53 / 1.14 | 252 bp |
+| SOL | 0.64 / 0.90 | 0.63 / 1.08 | 296 bp |
+| XRP | 0.57 / 0.85 | 0.63 / 1.24 | 264 bp |
+| HYPE | n/a | 0.72 / 0.94 | 376 bp |
+| AVAX | 0.70 / 0.82 | 0.81 / 1.12 | 316 bp |
+| TRX | 0.74 / 0.83 | 0.78 / 1.06 | 122 bp |
+| DOGE | 0.77 / 0.87 | 0.63 / 1.14 | 310 bp |
+| BNB | 0.58 / 0.98 | 0.80 / 1.18 | 178 bp |
+
+- **The weekend discount is a BTC property, weaker in alts.** Alt moves are crypto-native, not TradFi-driven.
+- **BTC's Saturday got relatively busier:** 0.40 → 0.47. Part of the 2026 closure may be the world changing, with
+  weekend news such as tariff posts and 2025-10-10, not only the makers learning.
+- **Consequence for O7.** A maker who copies BTC's learned weight (about 0.5-0.6) to an alt book would *underprice*
+  alt Saturdays, whose ratio is 0.63-0.81. On a young alt book the rent may have the **opposite sign**: buy
+  Saturday, not sell.
+  - The snapshot test must therefore compare each book's implied weekend weight with **that coin's** realized ratio,
+    never with BTC's.
+- **Sunday is a full day everywhere** (0.94-1.24 in 2025-26). The Sunday-evening reopen and Asia's Monday make it
+  so. A book that discounts Sunday like Saturday underprices it.
+
+### The world changed in 2026, not only the makers (measured, 08:00 → 08:00 UTC mean move)
+
+| | Fri→Sat | Sat→Sun | Sun→Mon | Sat/Fri | Sun/Fri |
+|---|---|---|---|---|---|
+| BTC 2025-26 | 150 bp | 81 | 176 | 0.54 | 1.18 |
+| **BTC 2026** | 165 | **119** | 128 | **0.72** | 0.78 |
+| ETH 2025-26 | 238 | 132 | 290 | 0.56 | 1.22 |
+| **ETH 2026** | 222 | **150** | 213 | **0.67** | 0.96 |
+
+- **Saturdays became busier in 2026,** and Sundays calmer. O3b's 2026 "closure" (+15 bp) is in large part this shift
+  in realized moves. The makers' weight may have moved less than I wrote in L054.
+- **A hypothesis to keep, not a finding.** 24/7 equity perps (trade.xyz from 2025; the lab's closed-market class)
+  now carry equity price discovery into crypto's weekend. That would couple crypto Saturdays to equity news, the
+  clock shift that makes a fixed weekend weight wrong in a new direction.
+- **Snapshot 2026-11-25 20:28 UTC (Deribit mark IV; Thanksgiving week):**
+  - BTC prices Sat→Sun forward vol at 0.60 of Fri→Sat (34.0% against 56.7%). Its 2026 realized ratio is 0.72, so
+    BTC's Saturday looks cheap.
+  - ETH prices it at 0.79 (49.2% against 62.1%). Its 2026 realized ratio is 0.67, so ETH's Saturday looks rich.
+  - One snapshot, so a direction to check, not a result (L054).
+
 ### The registered read for ETH (written and committed before the ETH data is opened; a measurement, 0 trials)
 - **The rule.** It is the O3b rule unchanged (`reflection_20261125_greeks.md` §3), with ETH options, ETHUSDT hourly
   closes, and a minimum of 100 ETH traded in the set. The 5-BTC floor is about $400k; 100 ETH is about $300k.
