@@ -13,8 +13,8 @@
 | Id | Question (short) | Source | Status | Prediction (written first) | Result |
 |---|---|---|---|---|---|
 | Q26 | Do the gap books become correlated in crash months? | room Q26 | **answered 2026-11-25** | Mean pairwise correlation in stress months about 0.35: above the full-period median, below the 0.6 that would change sizing | **0.35 on average; H1 (>0.6) not supported.** Sizing unchanged; shared-venue pairs move together |
-| Q19 | Does the euro P&L of the dollar legs move with EUR/USD? | room Q19 | open | — | — |
-| Q16 | Does lot rounding leave hedges more than 2% off on R509's coins at €1-5k? | room Q16 | open | — | — |
+| Q19 | Does the euro P&L of the dollar legs move with EUR/USD? | room Q19 | **answered by reasoning** | — | The exposure is on the **principal**, not the P&L. A dollar collateral moves one for one in euros, and the strategy's dollar P&L is a few % of it. Use euro collateral where accepted (Kraken); count Hyperliquid's USDC principal as currency risk |
+| Q16 | Does lot rounding leave hedges more than 2% off on R509's coins at €1-5k? | room Q16 | **answered 2026-11-25** | (none written: answered the same hour) | Legs of $50 / $100 / $250: 9% / 4% / 0% of 107 coins have a hedge more than 2% off. At stake 1's about $150 a leg, about 3%, and `stake_ticket.py` already skips any hedge more than 5% off. H1 (at least 10%) not supported |
 | Q20 | Do venue deposit and withdrawal halts precede 10%+ gaps? | room Q20 | open | — | — |
 | Q01 | Variational's frozen weekend index: is the gap to xyz above 100 bp on at least 20% of weekends, and closed by the open? | room Q01; `room_20261125/synthesis.md` | **recording** (from 2026-11-25) | P ≈ 0.25 that its quotes stay near the frozen index | first weekend 11-28/29 |
 | L1 | Does a floor venue's perp funding (about 10.95%/yr in calm markets) exceed the same coin's dated-futures or options-implied rate by more than costs, with convergence forced at expiry? | lead researcher, 2026-11-25 (cf. M170, M244: neighbours, not this pair) | open | — | — |
@@ -42,4 +42,16 @@
   - in-sample nets on R525's engine, with last-trade valuation;
   - daily, not intraday;
   - five events.
+
+### Q16 (2026-11-25; Kraken and Hyperliquid instrument lists, live; Hyperliquid mids)
+- 107 of R508/R509's coins have both lot rules. Each leg is rounded down to its venue's step at the same dollar size.
+
+  | Leg size | Coins more than 2% off | Worst |
+  |---|---|---|
+  | $50 | 10 (9%) | XMR 7.2% |
+  | $100 | 4 (4%) | BTC 3.6% |
+  | $250 | 0 | — |
+
+- **Limit:** the 1000x-unit coins (PEPE, BONK) use one mid for both venues, so their flags may be a unit artifact.
+  The ticket handles units per venue.
 
