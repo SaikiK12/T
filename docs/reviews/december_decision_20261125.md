@@ -47,6 +47,8 @@
   - Kraken account 1.5x only at the EEA 5% maintenance, otherwise 1x;
   - Hyperliquid account at most 1.5x.
   - Checked on the real mixed account (cycle 11): worst intraday loss 4.4% of notional, against 59% room.
+- **Margin mode:** cross on both accounts, never isolated per leg (R280: isolated legs are liquidated by single-coin
+  pumps even at 1x). Checked 2026-11-25: none of R508/R509's coins is isolated-only on Hyperliquid.
 - **Daily checks:**
   - each account's net long share (above 60% of gross, apply the long-alt distance);
   - distance to liquidation on each venue's mark;
