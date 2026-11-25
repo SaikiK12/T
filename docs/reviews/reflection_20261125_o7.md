@@ -179,9 +179,26 @@ Little, except that we measured the closure year and can screen every book's wee
   - A Saturday-sell / Sunday-buy pair earned about 60-90 bp a weekend gross before 2026, against about 32 bp of cost
     for two straddles.
   - **In 2026 both gaps are about zero on both coins.**
-- **Why it closed: mostly the world, not the quotes.** The realized side moved toward the makers' weight: Saturdays
-  busier (BTC 81 → 119 bp), Sundays calmer (176 → 128). It did not need the weight to move. If the world moves back,
-  the rent reopens, everywhere at once (one shared model).
+- **Why it closed: both sides moved.** I first wrote "mostly the world, not the quotes". I then measured the makers'
+  weight (mean trade IV on that day over the weekday mean) and that sentence was wrong:
+
+| Year | BTC implied / realized, Saturday | BTC Sunday | ETH Saturday | ETH Sunday |
+|---|---|---|---|---|
+| 2022 | 0.77 / 0.31 | 0.81 / 0.89 | 0.78 / 0.42 | 0.80 / 0.97 |
+| 2023 | 0.62 / 0.29 | 0.74 / 0.86 | 0.64 / 0.39 | 0.77 / 0.81 |
+| 2024 | 0.54 / 0.48 | 0.73 / 0.90 | 0.57 / 0.58 | 0.74 / 0.94 |
+| 2025 | 0.51 / 0.31 | 0.83 / 1.28 | 0.61 / 0.46 | 0.79 / 1.23 |
+| **2026** | **0.59 / 0.70** | **0.91 / 0.72** | 0.61 / 0.67 | **0.94 / 0.96** |
+
+  - **The makers learned Saturday slowly,** from 0.77 to 0.51 over 2022-25 on BTC, but realized Saturdays stayed
+    lower (0.29-0.48), so the gap persisted.
+  - **In 2026 realized Saturday jumped** (BTC 0.70) past the weight (0.59). On BTC the 2026 gap has flipped sign:
+    Saturday cheap by +15-21 bp, Sunday rich by −35.
+  - **On Sunday the makers raised the weight in 2026** (0.91-0.94) just as BTC's realized Sunday fell (0.72). They
+    seem to chase the previous year's realized ratio (2025: 1.28).
+  - **A lagging estimator against a ratio that jumps year to year** (BTC Saturday 0.31, 0.29, 0.48, 0.31, 0.70) will
+    keep making errors of both signs. Whether they can be predicted is the open question. One year ahead, the last
+    year's realized ratio would have been the makers' own mistake.
 - **What follows (O7c, a tripwire, no lane).** Extend both reads each month with the new month of public trades. If
   the pooled BTC+ETH Saturday mean (move − premium) over the last three months is ≤ −30 bp with t ≤ −2, or the
   Sunday one is ≥ +30 bp with t ≥ 2, register a forward paper lane: the Saturday-sell / Sunday-buy pair on Deribit

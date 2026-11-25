@@ -197,6 +197,8 @@ not to add process.
 - **Describe a book by what it holds and earns, measured,** not by the mechanism that found it: its daily positions
   (net share, legs, largest leg) for risk, and the quantity it harvests for return (L043, L047).
 - **Small before big.** A cheap measurement first; a full lane only when the measurement earns it.
+- **Before naming why a rent opened or closed, measure both sides by year:** the incumbents' quoted value and the
+  world's realized value. Twice a closure story was half wrong until both series were on the page (L054, L055).
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the
   `data/` folders and provenance before fetching anything.
 - **Tools are not goals.** A venue, a library or an engine is a means. When one has taken three sessions, step back.

@@ -11,6 +11,28 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L055 · 2026-11-25 · Twice I named why a rent closed without measuring both sides; promoted
+- **What happened** (`docs/reviews/reflection_20261125_o7.md`; ETH read `o7_eth_daily_vrp.md`):
+  - On ETH, the weekend gap ran in 2022-25 and closed in 2026, as on BTC. Saturday was −41 bp (t −3.9) and Sunday
+    +52 bp (t 3.0). My predictions scored 2 of 3; the Sunday one was wrong.
+  - Explaining the closure, L054 said "the makers priced it away". My first O7 draft said "mostly the world, not the
+    quotes".
+  - Measured by year, both moved:
+    - the makers cut Saturday's weight slowly (BTC 0.77 → 0.51 over 2022-25);
+    - realized Saturdays jumped in 2026 (0.31 → 0.70), past the weight;
+    - the makers raised Sunday's weight in 2026 just as Sundays calmed.
+- **What surprised me:**
+  - **The closure is a race between a lagging estimator and a jumpy world,** not a one-time lesson learned. The same
+    rent can reopen with either sign.
+  - **The room's venue screen found one shared weekend model** across Deribit, OKX and Aevo, so there is no younger
+    independent book to harvest.
+- **What I will do differently:**
+  - Before naming why a rent opened or closed, I measure both sides by year: the incumbents' quoted value and the
+    world's realized value.
+  - A story about a cause is a hypothesis until both series are on the page.
+- **Instruction changed (promoted, seen twice: L054 and this entry).** `CLAUDE.md` habits gain "Before naming why a
+  rent opened or closed, measure both sides by year".
+
 ## L054 · 2026-11-25 · Today's fair price hides yesterday's rent: read the history before calling a gap "never there"
 - **What happened.** The registered O3b read ran once (`docs/reviews/o3b_daily_vrp.md`, 1,733 days, 2022-01..2026-10).
   - **Deribit's Saturday one-day options were overpriced** by about 48 bp a day (t −7.3), year after year:

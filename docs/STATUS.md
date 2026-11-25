@@ -111,6 +111,14 @@
       - **Rien à trader aujourd'hui.** La suite est de chercher le même écart sur des carnets plus jeunes (autres
         plateformes, nouvelles cryptos) : c'est O7.
       - Mes prédictions écrites d'avance : 1 juste sur 4.
+      - **Même chose sur ETH (25-11, soir)** : samedi trop cher (−41 bp, t −3,9), dimanche trop bon marché (+52 bp,
+        t 3,0) de 2022 à 2025 ; les deux à environ zéro en 2026.
+        - Les makers ont appris lentement (poids du samedi de 0,77 à 0,51), puis le samedi réel s'est agité en 2026.
+          C'est une course entre un estimateur en retard et un monde qui saute : l'écart peut se rouvrir, dans un sens
+          ou dans l'autre.
+        - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
+          n'y a donc pas de carnet plus jeune à exploiter.
+        - Je surveille chaque mois (O7c) : si l'écart revient au-delà de 30 bp, j'ouvre une piste papier.
 - **Le plan (17-11-2026, revu le soir même).** Une seule question : faut-il mettre une petite mise réelle sur le
   portage de financement entre plateformes, et sur quel livre ? Après ton objection et une
   [salle de réflexion](reviews/room_haiku_20261117.md), le plan avance à deux vitesses :
