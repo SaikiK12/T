@@ -107,10 +107,21 @@
   on Lighter, OPENAI.
 
 ## Addendum 2026-11-26 (written before any December read): tail rules for stake 1
-From `docs/reviews/reflection_20261126_tail.md` (strand 2).
-- **Venue failure is the binding risk.** Keep on Hyperliquid only the margin its legs need at 1.5x, plus 25%.
-- **Leverage:** Hyperliquid at 1.5x or less (ADL priority).
-- **On any ADL, forced settlement or Kraken delisting of one leg,** close the other leg within the same hour.
-- **Before the stake goes live, build the watch script (T1).** It reads the public Hyperliquid fills and Kraken's
-  instrument list hourly.
+From `docs/reviews/reflection_20261126_tail.md`, as corrected by the room's critic the same night.
+- **Venue failure costs about 2% of the stake a year** (Kraken 2.9%, Hyperliquid 5.5% a year per venue). That is
+  about €40 a year, already subtracted in §1's net.
+  - It is linear in the deposits. **Hold on each venue only the margin its legs need**, with the buffer at the stake
+    note's 30%/35% triggers (`stake_dhl_20261123.md:37-38`). Move surplus collateral off-venue.
+- **Leverage:** Hyperliquid at 1.5x or less, since ADL ranks "by unrealized pnl and leverage used".
+- **Entry rule:** no new position on a coin that is named on Kraken's suspensions and delistings page, flagged
+  delisted on Hyperliquid, or on Hyperliquid's thinnest books (T1 checks the first two).
+- **Watch:** `scripts/stake_watch.py` (T1, built 2026-11-26) runs every hour while the stake is live.
+- **Action list on an ALERT:**
+  1. **ADL or liquidation of one leg on Hyperliquid:** close the Kraken leg at once (Kraken is the liquid side for
+     the book's coins).
+  2. **Kraken delisting announced:** close both legs before the announced time, Hyperliquid first. Kraken settles at
+     its own 60-minute spot TWAP, so the hedge should not be left to it.
+  3. **Kraken post-only:** no close is possible there. Close nothing on Hyperliquid either until Kraken trades.
+  4. **Hyperliquid coin delisted or force-settled:** close the Kraken leg at once.
+- **Assumed, not measured:** that an owner acting on an alert within an hour or two closes near the alert's prices.
 - The mapping in §2 is unchanged.

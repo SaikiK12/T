@@ -131,3 +131,36 @@ Each pair's own price ratio and funding, every day, across both venues.
    watch script also flags any held PF_ contract that leaves the tradeable list; the Hyperliquid leg is closed within
    the same hour.
 4. **The coin-level tail is already handled** by R509's live 3-day stale exit (strand 1).
+
+## Corrections after the room's critic (`room_20261126/critic_tail.md`; each checked by me)
+1. **The venue-failure Fermi was wrong in size and already counted.**
+   - The per-venue rates are Kraken 2.9% and Hyperliquid 5.5% a year (`stake_dhl_20261123.md:170-171`; Binance's
+     1.5% is not a stake venue).
+   - Weighted by the deposits, the expected loss is **about 2% of the stake a year, about €40 on €2,000**, and it is
+     **already subtracted** in the €40-50 net (`december_decision_20261125.md:19`).
+   - So venue failure costs about as much as the stake is expected to earn after it. The point stands (it is the
+     binding risk), but my €8-28 understated it.
+   - **"Diversifying lowers it" was wrong:** the expected loss is linear in the deposits. Splitting shrinks any one
+     jump. **Holding less on each venue** lowers the expected loss.
+2. **R509 is a forward paper lane (gate 2), not a live book.** "R509's live rule" should read "the rule R509 runs, and
+   the stake would follow".
+3. **SYRUP's "about −1% to −5%" is a historical mark, not an exit price.**
+   - The trace: cumulative price P&L −1.3% on 2025-12-11, the third stale day, and −4.9% on 12-13 (from the trace
+     printed this cycle).
+   - A real exit on a stale leg happens at the first print after the stale run, which is unknown in advance.
+   - The 20% blowout is checked at the day's close, so a gap goes far past it: SYRUP exited by blowout at −36.5%.
+   - **"Bounded near 20%" and "handled" are withdrawn.** The 3-day stale exit lowers the tail; it does not bound it.
+4. **"No public signal leads" was a misreading.** 3 of 8 events had a bridge-TVL fall of 1% or more the day before,
+   against an 11.9% base rate; P(3 or more of 8) ≈ 0.06. This is **weak evidence of a lead at n = 8**, not a lag.
+   It is not usable as a rule yet.
+5. **Sources:**
+   - ADL ranks "by unrealized pnl and leverage used" (`room_20261126/hl_incidents.md:58`); Kraken ranks the same way
+     (`kraken_incidents.md:77-78`).
+   - The "about 3 hours" post-only figure comes from an unverified aggregator.
+   - "PF_SSV/PF_BB settled 2026-11-23" was a delisting batch, not a settlement.
+   - "EU-regulated entity" is unsourced here.
+6. **The addendum's rules needed more than a deadline** (corrected in `december_decision_20261125.md`):
+   - an alert (T1, now built);
+   - entry rules: no new position on a coin named on Kraken's delistings page or flagged by T1;
+   - an ordered action list for an ADL or a delisting.
+   - A Kraken post-only period can block the close, and the 25% buffer must follow the stake note's 30%/35% triggers.
