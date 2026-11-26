@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L064 · 2026-11-26 · Self-review 4: my errors have a direction, and the direction reached money
+- **What happened** (`docs/reviews/self_review_20261126.md`; the room's audit `room_20261126/audit_corrections.md`):
+  - Across seven pages, the critics raised 144 findings, and I accepted 102 as errors: about 15 a page.
+  - 29 changed a number told to the owner, and 6 changed a money rule.
+  - Of the errors with a direction, 60 of 67 (90%) leaned toward a cleaner or more favorable story.
+  - The last one reached money. My corrected Harvey table let the Kraken reads through only because their prior was
+    my own P(PASS). Under a skeptical prior (π/2), the same passes leave a 20-26% floor.
+- **What surprised me.** Each error alone looked like a slip. Counted, they are one bias with a measurable size, and
+  I had been correcting instances while the bias stayed.
+- **What I will do differently (a change of thinking, rule 11, not a new check):**
+  - numbers before narrative: the table first, the critic on the table, prose last;
+  - my own probabilities halved when they feed money, until the ledger shows calibration;
+  - stake 1 stays a calibration stake, and any scaling needs the skeptical floor below 10%.
+- **Instruction changed.** `CLAUDE.md` habits: the status-word bullet is folded into "Numbers before narrative, and a
+  skeptical prior for money". The December decision gains addendum c, written before the reads.
+
 ## L063 · 2026-11-26 · Correction to L062: I used P(PASS) as the prior and read a floor as a licence
 - **What happened.** The room's critic (`docs/reviews/room_20261126/critic_harvey.md`, recomputed by me):
   - Harvey's prior is the probability that the effect is real (π), not the ledger's P(PASS).
