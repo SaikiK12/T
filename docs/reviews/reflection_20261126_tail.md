@@ -98,3 +98,36 @@ Each pair's own price ratio and funding, every day, across both venues.
   - no margin calls ("does not offer margin calls or any warnings");
   - the balance "can never go below zero";
   - post-only halts of 15 minutes to about 3 hours, during which "no executions or liquidations can occur".
+
+## Strand 2, Hyperliquid (reader `room_20261126/hl_incidents.md`; the JELLY page read by me)
+- **Nine incidents, 2025-03..2026-07.** The reader found none in 2024; one blog claim was not counted. They include:
+  - **JELLY, 2025-03-26.** Validators voted to delist, and "All JELLY positions were settled at the opening price of
+    $0.0095". Longs were later "refunded by Foundation at advantageous settlement price (0.037555)". Source: a wiki
+    page quoting the platform, `hyperliquid-co.gitbook.io`, read by me.
+  - **The 2025-10-10 crash:** about $2.1bn closed by auto-deleveraging (ADL) in about 12 minutes (reader's sources).
+  - HLP losses on ETH (2025-03), POPCAT (2025-11, with the Arbitrum bridge paused for hours) and FARTCOIN (2026-04);
+    deployer-oracle errors on HIP-3 markets (2026-05, 2026-07).
+- **No public signal leads.** The bridge's daily TVL (DefiLlama, free endpoint) fell by 1% or more the day before
+  3 of 8 events, against a base rate of 11.9% of days, and its falls come after the events. Treat it as a lag.
+- **What breaks a hedge on Hyperliquid, instantly:**
+  - a **forced settlement** at a price unlike the other venue's (JELLY-type, on thin manipulated coins: the kind the
+    Kraken book holds);
+  - an **ADL** that closes the profitable leg at the previous mark in a crash, leaving the Kraken leg unhedged until
+    someone acts.
+  - Neither is caught by a daily rule. The 20 slots cap one coin at about 5% of the book, but ADL can hit many slots
+    at once.
+
+## What this changes for stake 1 (written 2026-11-26, before any December read; an addendum, not a new mapping row)
+1. **The binding risk is a venue failing** (about €8-28 a year expected, against €40-50 of expected gain).
+   **Rule:** hold on Hyperliquid only the margin its legs need at 1.5x, plus a 25% buffer. Keep any surplus
+   collateral on Kraken (an EU-regulated derivatives entity) or off-venue.
+2. **ADL and forced settlements are instant.** **Rule:**
+   - keep Hyperliquid at 1.5x or less (ADL ranks by profit and leverage);
+   - check both accounts at least every few hours on a day when the market falls more than 10%;
+   - on any ADL or forced close of one leg, close the other leg the same hour.
+   - A watch script that reads the account's public fills on Hyperliquid (no key needed) and Kraken's instrument list
+     is the tool to build before the stake goes live. It is registered as task T1 in `open_questions.md`.
+3. **Kraken delistings come without guaranteed notice** and settle at Kraken's 60-minute spot TWAP. **Rule:** the
+   watch script also flags any held PF_ contract that leaves the tradeable list; the Hyperliquid leg is closed within
+   the same hour.
+4. **The coin-level tail is already handled** by R509's live 3-day stale exit (strand 1).
