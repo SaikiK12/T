@@ -468,7 +468,7 @@ line is the first line of the script's own docstring.
 - [`dig_videos.py`](dig_videos.py): Dig YouTube for deep, little-watched practitioner videos and keep their captions as searchable text.
 - [`transcribe_audio.py`](transcribe_audio.py): One audio file to plain text with faster-whisper on CPU (used by scripts/dig_podcasts.py).
 
-## Tools and everything else (125)
+## Tools and everything else (126)
 
 - [`acquire_cde_bar_edges.py`](acquire_cde_bar_edges.py): Four leading candle-page fragments omitted by the actual300-row response cap; counts only.
 - [`acquire_cde_candle_probe.py`](acquire_cde_candle_probe.py): One fixed public CDE candle-schema probe; counts only, never prices or returns.
@@ -581,6 +581,7 @@ line is the first line of the script's own docstring.
 - [`squeeze_events.py`](squeeze_events.py): Negative-funding onsets on two venues, as event legs for the qx engine (R274 squeeze_v1).
 - [`stake_kelly.py`](stake_kelly.py): How much of the owner's investable money a design-gap stake should take, by Thorp's growth-optimal (Kelly) rule with the jump that matters here: a venue failing and keeping its deposit.
 - [`stake_ticket.py`](stake_ticket.py): Order ticket for a small stake on the design-gap lanes: what the owner would place, venue by venue, after a forward PASS. Paper only: nothing here can place an order, move money or read a key.
+- [`stake_watch.py`](stake_watch.py): Stake 1 watch (register T1; docs/reviews/reflection_20261126_tail.md): the tail events a daily check cannot catch.
 - [`stress_dhl.py`](stress_dhl.py): Stress for a levered Deribit + Hyperliquid design-gap book (R520's coins): worst 24-hour and 72-hour moves from Deribit's hourly closes, per coin and for an equal-weight basket, and the leverage ...
 - [`unlock_events.py`](unlock_events.py): Unlock events for the unlock-short lane (E01, docs/OLD_SESSION_EDGES.md S1) from a DefiLlama emissions snapshot (scripts/fetch_unlocks.py).
 - [`unlock_market_data.py`](unlock_market_data.py): Immutable public funding/mark archive acquisition and portable data bundle; no PnL.
