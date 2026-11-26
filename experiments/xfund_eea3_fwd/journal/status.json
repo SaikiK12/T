@@ -1,21 +1,19 @@
 {
  "lane": "xfund_eea3_fwd",
  "rid": "R512",
- "updated": "2026-11-25T01:19:10.887598+00:00",
+ "updated": "2026-11-26T01:20:14.100662+00:00",
  "waiting": false,
  "ready": {
-  "kraken": 0.955,
+  "kraken": 1.0,
   "hyperliquid": 0.99,
-  "aster": 0.992
+  "aster": 0.985
  },
  "data": {
-  "hyperliquid": {
-   "files": 101,
-   "failed": 1,
+  "kraken": {
+   "files": 132,
+   "failed": 0,
    "changed_on_overlap": 0,
-   "failed_some": [
-    "PUMP"
-   ]
+   "failed_some": []
   },
   "aster": {
    "files": 132,
@@ -23,11 +21,13 @@
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "kraken": {
-   "files": 132,
-   "failed": 0,
+  "hyperliquid": {
+   "files": 101,
+   "failed": 1,
    "changed_on_overlap": 0,
-   "failed_some": []
+   "failed_some": [
+    "MELANIA"
+   ]
   }
  },
  "A": {
@@ -78,18 +78,6 @@
     "long": "aster",
     "short": "kraken",
     "spread_in": 1.2446
-   },
-   {
-    "coin": "ORDI",
-    "long": "aster",
-    "short": "kraken",
-    "spread_in": 0.5524
-   },
-   {
-    "coin": "MOODENG",
-    "long": "hyperliquid",
-    "short": "kraken",
-    "spread_in": 0.5231
    },
    {
     "coin": "CFG",
@@ -156,18 +144,30 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.7212
+   },
+   {
+    "coin": "BICO",
+    "long": "kraken",
+    "short": "aster",
+    "spread_in": 0.8492
+   },
+   {
+    "coin": "SYRUP",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.8162
    }
   ],
-  "scored_days": 5,
+  "scored_days": 6,
   "late_days": 1,
-  "total": 0.004842981200000001,
-  "total_2x": 0.0038629812,
-  "total_3x": 0.0028829812,
-  "total_close": 0.005656517,
-  "nw_t": 2.108240103802309,
+  "total": 0.004034361900000001,
+  "total_2x": 0.0030543619,
+  "total_3x": 0.0020743618999999997,
+  "total_close": 0.0048478977,
+  "nw_t": 2.210123734423568,
   "max_drawdown": -0.0015399559,
   "replay_days": 29,
   "replay_total": 0.007991831399999998
  },
- "last_day": "2026-11-25"
+ "last_day": "2026-11-26"
 }

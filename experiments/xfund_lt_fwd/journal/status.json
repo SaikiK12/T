@@ -1,11 +1,11 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-25T00:59:28.206965+00:00",
+ "updated": "2026-11-26T01:00:09.623741+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
-  "lighter": 1.06
+  "lighter": 1.007
  },
  "data": {
   "lighter": {
@@ -63,12 +63,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1268
-   },
-   {
-    "coin": "AVAXUSDT",
-    "long": "lighter",
-    "short": "mexc",
-    "spread_in": 0.1154
    },
    {
     "coin": "LINKUSDT",
@@ -147,18 +141,24 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.1006
+   },
+   {
+    "coin": "ICPUSDT",
+    "long": "lighter",
+    "short": "mexc",
+    "spread_in": 0.1355
    }
   ],
-  "scored_days": 33,
+  "scored_days": 34,
   "late_days": 16,
-  "total": -0.0024822383000000004,
-  "total_2x": -0.0048472383,
-  "total_3x": -0.007212238300000001,
-  "total_close": -0.0020398014,
-  "nw_t": -1.681927985926967,
+  "total": -0.0015904245000000004,
+  "total_2x": -0.0040104245,
+  "total_3x": -0.0064304245,
+  "total_close": -0.0012473951000000001,
+  "nw_t": -1.1272946959889374,
   "max_drawdown": -0.0045535545,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-25"
+ "last_day": "2026-11-26"
 }

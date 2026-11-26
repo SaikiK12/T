@@ -1,26 +1,27 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-25T08:56:14.183674+00:00",
+ "updated": "2026-11-26T01:21:20.574956+00:00",
  "waiting": false,
  "ready": {
-  "deribit": 0.885,
-  "hyperliquid": 1.0
+  "deribit": 1.101,
+  "hyperliquid": 0.978
  },
  "data": {
+  "hyperliquid": {
+   "files": 89,
+   "failed": 2,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "LDO",
+    "LINK"
+   ]
+  },
   "deribit": {
    "files": 89,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
-  },
-  "hyperliquid": {
-   "files": 89,
-   "failed": 1,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "WIF"
-   ]
   }
  },
  "A": {
@@ -151,16 +152,16 @@
     "spread_in": 0.1485
    }
   ],
-  "scored_days": 3,
-  "late_days": 1,
-  "total": -0.00026563850000000007,
-  "total_2x": -0.0011756385,
-  "total_3x": -0.0020856385,
-  "total_close": 0.00040145960000000005,
-  "nw_t": -0.9049658401254022,
-  "max_drawdown": -0.0008372053,
+  "scored_days": 4,
+  "late_days": 2,
+  "total": -0.0010154105000000002,
+  "total_2x": -0.0019254105,
+  "total_3x": -0.0028354105,
+  "total_close": -0.00034831239999999996,
+  "nw_t": -3.994482209234331,
+  "max_drawdown": -0.0010154105000000002,
   "replay_days": 31,
   "replay_total": 0.0006646258000000004
  },
- "last_day": "2026-11-25"
+ "last_day": "2026-11-26"
 }

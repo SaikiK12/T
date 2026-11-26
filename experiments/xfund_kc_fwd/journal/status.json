@@ -1,22 +1,16 @@
 {
  "lane": "xfund_kc_fwd",
  "rid": "R279",
- "updated": "2026-11-25T00:49:24.621641+00:00",
+ "updated": "2026-11-26T00:49:36.359973+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.008,
-  "kucoin": 1.0
+  "gate": 1.016,
+  "kucoin": 0.998
  },
  "data": {
   "gate": {
    "files": 860,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
-  },
-  "kucoin": {
-   "files": 642,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -30,6 +24,12 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
+  },
+  "kucoin": {
+   "files": 642,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
   }
  },
  "A": {
@@ -80,12 +80,6 @@
     "long": "gate",
     "short": "kucoin",
     "spread_in": 0.4815
-   },
-   {
-    "coin": "BIRBUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.401
    },
    {
     "coin": "STARUSDT",
@@ -158,15 +152,21 @@
     "long": "kucoin",
     "short": "gate",
     "spread_in": 0.5558
+   },
+   {
+    "coin": "SKDDUSDT",
+    "long": "kucoin",
+    "short": "gate",
+    "spread_in": 0.585
    }
   ],
-  "scored_days": 34,
+  "scored_days": 35,
   "late_days": 16,
-  "total": 0.007426490700000001,
-  "total_2x": 0.0049764907,
-  "total_3x": 0.0025264907,
-  "total_close": 0.0067226593,
-  "nw_t": 2.307970141850695,
+  "total": 0.006485295100000001,
+  "total_2x": 0.0039652951,
+  "total_3x": 0.0014452951,
+  "total_close": 0.0058506086,
+  "nw_t": 2.1675166544352966,
   "max_drawdown": -0.0017469192000000003,
   "replay_days": 61,
   "replay_total": 0.014157526699999999
@@ -299,16 +299,16 @@
     "spread_in": 0.4058
    }
   ],
-  "scored_days": 34,
+  "scored_days": 35,
   "late_days": 16,
-  "total": 0.003636512600000001,
-  "total_2x": 0.0013965126,
-  "total_3x": -0.0008434874000000001,
-  "total_close": 0.003938622100000001,
-  "nw_t": 1.633375930351442,
+  "total": 0.0026603235000000006,
+  "total_2x": 0.0002803234999999998,
+  "total_3x": -0.0020996765,
+  "total_close": 0.003105956000000001,
+  "nw_t": 0.9445783290089916,
   "max_drawdown": -0.0031965692,
   "replay_days": 61,
   "replay_total": 0.0146265184
  },
- "last_day": "2026-11-25"
+ "last_day": "2026-11-26"
 }

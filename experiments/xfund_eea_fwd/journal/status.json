@@ -1,11 +1,11 @@
 {
  "lane": "xfund_eea_fwd",
  "rid": "R509",
- "updated": "2026-11-25T01:18:08.152918+00:00",
+ "updated": "2026-11-26T01:19:05.678032+00:00",
  "waiting": false,
  "ready": {
-  "kraken": 0.964,
-  "hyperliquid": 0.981
+  "kraken": 1.0,
+  "hyperliquid": 0.991
  },
  "data": {
   "hyperliquid": {
@@ -13,8 +13,8 @@
    "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "TRX",
-    "WIF"
+    "WIF",
+    "XLM"
    ]
   },
   "kraken": {
@@ -66,12 +66,6 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.2576
-   },
-   {
-    "coin": "MOODENG",
-    "long": "hyperliquid",
-    "short": "kraken",
-    "spread_in": 0.5231
    },
    {
     "coin": "IMX",
@@ -150,18 +144,24 @@
     "long": "kraken",
     "short": "hyperliquid",
     "spread_in": 0.6527
+   },
+   {
+    "coin": "FLOKI",
+    "long": "kraken",
+    "short": "hyperliquid",
+    "spread_in": 0.6849
    }
   ],
-  "scored_days": 6,
+  "scored_days": 7,
   "late_days": 1,
-  "total": 0.0036804974000000006,
-  "total_2x": 0.0027004973999999998,
-  "total_3x": 0.0017204974000000002,
-  "total_close": 0.005774843,
-  "nw_t": 6.618259740460959,
-  "max_drawdown": -0.0002211662,
+  "total": 0.0026093074000000005,
+  "total_2x": 0.0016293073999999997,
+  "total_3x": 0.0006493074000000001,
+  "total_close": 0.004703653,
+  "nw_t": 3.3707783486645617,
+  "max_drawdown": -0.00107119,
   "replay_days": 28,
   "replay_total": 0.0007422842
  },
- "last_day": "2026-11-25"
+ "last_day": "2026-11-26"
 }
