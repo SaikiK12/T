@@ -127,3 +127,7 @@
 
 > Non soit plus précise dans les stratégies framework directement ou ml etc tes pas assez travailleur
 
+## 2026-11-26 08:17 UTC
+
+> https://www.tiktok.com/@vince.quant?_r=1&_t=ZN-9BipPTmMoOE is tiktok talk about many researches papers so hé Can help because you Can efficiently search for them https://www.instagram.com/reel/DgL5rhoJnDF/?lqvp=bTd2MHpld3d1OGk2 and for this why dont we have maps like those ? Unefficient?
+

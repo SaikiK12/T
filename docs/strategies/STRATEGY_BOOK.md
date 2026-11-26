@@ -66,7 +66,7 @@
 | Règle | celle de A1 ; 69 pièces ; Binance 5 bp, Bitfinex 6,5 bp + carnets mesurés |
 | Preuve (historique) | **+3,5 %/an à 1x, t 2,95** (2021-01..2026-09, moteur actuel, R525). R507 donnait +5,2 % sur l'ancien moteur, et le t 11,94 que j'avais écrit d'abord ne correspond à aucune paire : erreur corrigée. Environ +3,1 %/an en 2025-26 |
 | Décision | 90 et 180 jours notés, à partir du 25-11-2026 |
-| Maillon faible | les données Bitfinex sont les moins fiables des trois plateformes sans plancher |
+| Maillon faible | les données Bitfinex sont les moins fiables des trois plateformes sans plancher ; t 2,95 est sous le seuil t > 3,0 de Harvey, Liu et Zhu (2016) pour une découverte faite parmi beaucoup de tests (NBER w20592 ; `docs/reviews/reflection_20261126_maps.md` §6). Repère seulement. Aucune règle ne change : la piste R524 est déjà bloquée à sa première lecture par le plancher de Harvey (54 %, addendum b de la décision de décembre) |
 
 ### A0. Robustesse du paramètre (S1, mesuré le 26-11)
 - Entrer à 10 %/an (sortie 5 %) au lieu de 5 % (sortie 2,5 %) ne change rien sur 2024-2026 : +0,06 %/an à 3x (t 0,41),

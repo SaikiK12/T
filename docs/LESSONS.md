@@ -11,6 +11,27 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L065 · 2026-11-26 · "Have you seen it before?" answered the owner's map in minutes; the owner could not see ours
+- **What happened** (`docs/reviews/reflection_20261126_maps.md`):
+  - The owner sent QuantPad's reel (a CME level-3 map of "big levels") and asked why we have no maps like it.
+  - The lab had tested such levels five times, on crypto price levels and proxies, never on a level-3 book. Round
+    numbers, pivots and liquidation proxies were all NULL after costs (charts family 0 of 15, flow 2 of 12).
+    QuantPad's own demo hit 36.7% against a 50.2% break-even; its +$10,128 is $9.86 a trade, under one tick.
+  - The lab does have maps (EDGE_MAP, MAP, CARTE.fr, the control room), but in text or on a local page. The owner
+    reads the lab only through my messages, and the funding board recorder stopped on 11-06.
+  - Of six @vince.quant numbers checked against the papers, one matched exactly.
+- **What surprised me.**
+  - I nearly called QuantPad's demo a loss from its hit rate alone. The net was positive, and only the "neither"
+    column (831 of 1,027 trades) explains it: read the whole panel before naming a result.
+  - The critic found five errors that all leaned the cleaner way, again. One was a base rate quoted for the wrong
+    family (micro 0 of 6 instead of flow 2 of 12). A base rate starts from the lane's row in
+    `registry/lane_families.csv`.
+- **What I will do differently:**
+  - a resting order is optional and a forced one is not, so a map is only worth building when it maps forced orders;
+  - a video is an index to a paper, never a source;
+  - the owner gets one page to open, refreshed at each money read.
+- **Instruction changed.** `CLAUDE.md` rule 6 (a video is an index) and the habit "Plain words" (the lab map).
+
 ## L064 · 2026-11-26 · Self-review 4: my errors have a direction, and the direction reached money
 - **What happened** (`docs/reviews/self_review_20261126.md`; the room's audit `room_20261126/audit_corrections.md`):
   - Across seven pages, the critics raised 144 findings, and I accepted 102 as errors: about 15 a page.

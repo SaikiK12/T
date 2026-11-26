@@ -1,0 +1,238 @@
+<title>Carte du lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a nautical-chart sheet. One column of charted sections, each with a legend of status marks; dates run down a margin rule. */
+:root {
+  --sea: #eaf0f1;
+  --sheet: #f7fafa;
+  --ink: #13293d;
+  --ink-soft: #4a5d6c;
+  --rule: #c9d6da;
+  --ochre: #a8681a;
+  --ok: #2c7552;
+  --run: #2b6596;
+  --small: #6b7a84;
+  --bad: #a83f35;
+  --open: #7a5aa6;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sea: #0c1720; --sheet: #12212c; --ink: #e2ebee; --ink-soft: #9fb2bc; --rule: #284050;
+    --ochre: #e0a24f; --ok: #5fbf8e; --run: #6fa8de; --small: #93a3ad; --bad: #e27b70; --open: #b79be0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --sea: #0c1720; --sheet: #12212c; --ink: #e2ebee; --ink-soft: #9fb2bc; --rule: #284050;
+  --ochre: #e0a24f; --ok: #5fbf8e; --run: #6fa8de; --small: #93a3ad; --bad: #e27b70; --open: #b79be0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--sea); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+.wrap { max-width: 880px; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 8px; border-bottom: 2px solid var(--ink); padding-bottom: 16px; }
+.eyebrow { font-family: var(--f-data); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ochre); }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(32px, 7vw, 48px); line-height: 1.05; margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--ink-soft); }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 24px; margin: 0; text-wrap: balance; }
+section { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 18px; display: grid; gap: 14px; min-width: 0; }
+.sub { margin: 0; color: var(--ink-soft); max-width: 65ch; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 13px; color: var(--ink-soft); }
+.mark { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.ok { background: var(--ok); } .run { background: var(--run); } .small { background: var(--small); }
+.bad { background: var(--bad); } .open { background: var(--open); }
+.ring { background: transparent; border: 2px solid var(--small); }
+.src { font-family: var(--f-data); font-size: 11.5px; color: var(--ink-soft); word-break: break-word; }
+
+/* mechanism map */
+.mech { display: grid; gap: 0; }
+.mrow { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 4px 10px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.mrow:first-child { border-top: 0; }
+.mrow .dot { margin-top: 6px; }
+.mname { font-weight: 600; }
+.mdesc { color: var(--ink-soft); font-size: 14px; grid-column: 2; }
+
+/* strategy cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.card { border: 1px solid var(--rule); border-radius: 4px; padding: 14px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.card .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.tag { font-family: var(--f-data); font-size: 12px; color: var(--ochre); }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 18px; margin: 0; }
+.num { font-family: var(--f-data); font-variant-numeric: tabular-nums; font-size: 20px; font-weight: 500; }
+.note { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
+.chip { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 9px; white-space: nowrap; border: 1px solid currentColor; }
+.chip.ok { color: var(--ok); background: transparent; } .chip.run { color: var(--run); background: transparent; }
+.chip.bad { color: var(--bad); background: transparent; } .chip.small { color: var(--small); background: transparent; }
+
+/* calendar */
+.cal { list-style: none; margin: 0; padding: 0; display: grid; }
+.cal li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-top: 1px dashed var(--rule); }
+.cal li:first-child { border-top: 0; }
+.date { font-family: var(--f-data); font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ochre); padding-top: 2px; }
+.cal b { font-weight: 600; }
+.money { border-left: 3px solid var(--ochre); padding: 10px 12px; background: var(--sea); border-radius: 2px; font-size: 14px; }
+
+/* levels answer */
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px 8px 0; border-top: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--f-data); font-size: 12px; font-weight: 500; color: var(--ink-soft); letter-spacing: .04em; text-transform: uppercase; border-top: 0; }
+td.n { font-family: var(--f-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.leads { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.leads li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; }
+.lid { font-family: var(--f-data); font-weight: 500; color: var(--open); }
+footer { font-size: 13px; color: var(--ink-soft); display: grid; gap: 6px; }
+a { color: var(--run); }
+@media (max-width: 480px) { .cal li { grid-template-columns: 74px minmax(0, 1fr); } section { padding: 16px 14px; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Lab · état au 26 novembre 2026</div>
+    <h1>Carte du lab</h1>
+    <p class="lede">Où l'argent peut venir, ce qui est prouvé, et à quelles dates l'argent se décide. Chaque chiffre renvoie à son fichier dans le dépôt. Aucune lecture intermédiaire d'une piste papier n'est montrée ici.</p>
+  </header>
+
+  <section aria-labelledby="h-mech">
+    <h2 id="h-mech">Qui paie : les règles des plateformes</h2>
+    <p class="sub">Le gain du lab vient d'une règle qui diffère d'une plateforme à l'autre et qui force quelqu'un à payer. Chaque ligne est un type de règle.</p>
+    <div class="legend">
+      <span class="mark"><span class="dot ok"></span>prouvé en échantillon</span>
+      <span class="mark"><span class="dot run"></span>en test papier</span>
+      <span class="mark"><span class="dot small"></span>mesuré petit ou partiel</span>
+      <span class="mark"><span class="dot ring"></span>pas encore cartographié</span>
+    </div>
+    <div class="mech">
+      <div class="mrow"><span class="dot ok"></span><span class="mname">Formule de financement des perps</span><span class="mdesc">Plateformes avec plancher d'intérêt (0,01 % / 8 h) contre plateformes sans plancher : le « design gap ». Prouvé en échantillon (R525), pistes papier en cours.</span></div>
+      <div class="mrow"><span class="dot run"></span><span class="mname">Oracle des marchés fermés</span><span class="mdesc">Perps d'actions 24 h/24 pendant que Wall Street est fermée : retour du week-end (onze rounds). Pistes papier R463, R467, R530 ; capacité d'environ 5 000 $ par trade.</span></div>
+      <div class="mrow"><span class="dot small"></span><span class="mname">Règlement et échéance</span><span class="mdesc">Fenêtres de moyenne, livraison (CME, Deribit, trimestriels). Famille « settle » : 43 % de réussite sur les tests tranchés.</span></div>
+      <div class="mrow"><span class="dot small"></span><span class="mname">Frais et rabais</span><span class="mdesc">Plateformes à zéro frais (Lighter), rabais, paliers. Cartographié en partie.</span></div>
+      <div class="mrow"><span class="dot small"></span><span class="mname">Cotation et retrait</span><span class="mdesc">Plafonds de financement des nouvelles cotations (R516), délistages (K1, Corée).</span></div>
+      <div class="mrow"><span class="dot small"></span><span class="mname">Prêt au comptant contre financement</span><span class="mdesc">Taux de prêt des plateformes et de la DeFi face au financement des perps (R412). Partiel.</span></div>
+      <div class="mrow"><span class="dot small"></span><span class="mname">Incitations et points</span><span class="mdesc">Récompenses de volume ou de positions ouvertes. Mesuré petit.</span></div>
+      <div class="mrow"><span class="dot ring"></span><span class="mname">Moteur de liquidation, fonds d'assurance, ADL</span><span class="mdesc">Qui absorbe une mèche, à quel prix. Suivi pour le risque de la mise (outil T1) ; comme source de gain, seulement la nouvelle question P1 (plus bas).</span></div>
+      <div class="mrow"><span class="dot ring"></span><span class="mname">Régimes de marge</span><span class="mdesc">Croisée, isolée, retail contre pro (Kraken retail : 50 % de marge initiale). Utilisé pour la mise, pas comme source de gain.</span></div>
+      <div class="mrow"><span class="dot ring"></span><span class="mname">Stablecoins : émission et rachat</span><span class="mdesc">Émission réservée aux clients vérifiés contre marché secondaire.</span></div>
+    </div>
+    <div class="src">docs/reviews/approach_20261124.md §4 ; scripts/base_rates.py</div>
+  </section>
+
+  <section aria-labelledby="h-strat">
+    <h2 id="h-strat">Les stratégies</h2>
+    <p class="sub">Chiffres en échantillon sauf mention. Un chiffre en échantillon ne suffit pas pour l'argent : seules les lectures papier de décembre décident.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="top"><span class="tag">A1</span><span class="chip run">papier</span></div>
+        <h3>Kraken + Hyperliquid</h3>
+        <div class="num">+24,28 %/an · t 7,39</div>
+        <p class="note">À 1x, 343 jours (déc. 2025 à nov. 2026), chaque mois positif. Les coûts réels sont 2 à 3 fois l'hypothèse ; 97 % du rendement vient de pièces à moins de 100 k$ de volume par jour.</p>
+        <div class="src">STRATEGY_BOOK.md A1 · xfund_eea_v1/FINDINGS.md:19-23</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">A2</span><span class="chip run">papier</span></div>
+        <h3>Deribit + Hyperliquid</h3>
+        <div class="num">+4,4 %/an · t 6,69</div>
+        <p class="note">2023-05 à 2026-09. En 2026, le net est d'environ 0 une fois les jambes de prix comptées. Pas de mise sur sa lecture seule.</p>
+        <div class="src">STRATEGY_BOOK.md A2 · R525</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">A3</span><span class="chip run">papier</span></div>
+        <h3>Bitfinex + Binance</h3>
+        <div class="num">+3,5 %/an · t 2,95</div>
+        <p class="note">2021 à 2026. Juste sous le repère t &gt; 3,0 de Harvey, Liu et Zhu (2016) pour une découverte faite parmi beaucoup de tests. Données Bitfinex les moins fiables.</p>
+        <div class="src">STRATEGY_BOOK.md:67 · NBER w20592</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">A4</span><span class="chip small">historique</span></div>
+        <h3>Les 12 paires ensemble</h3>
+        <div class="num">+7,77 %/an · t 11,96</div>
+        <p class="note">Sharpe 5,5, perte max −0,73 % (2021-2026). Risque : LUNA (mai 2022), −85,9 % du livre en un jour sans les filtres d'entrée.</p>
+        <div class="src">gap_breadth_v1/FINDINGS.md:14-15</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">B1 · B2</span><span class="chip run">papier</span></div>
+        <h3>Retour du week-end, directionnel</h3>
+        <div class="num">+42,4 bp / week-end</div>
+        <p class="note">Par marché, avant coûts, sur trade.xyz (R462). Sur Lighter, −1,3 bp sur l'échantillon jamais vu (fév. à avr. 2026).</p>
+        <div class="src">STRATEGY_BOOK.md B1</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">B3</span><span class="chip run">papier dès le 04-12</span></div>
+        <h3>Retour du week-end, équilibré</h3>
+        <div class="num">+52,0 bp / week-end</div>
+        <p class="note">Échantillon A ; +22,2 bp sur B. Probabilité de réussite écrite d'avance : 0,23. Environ 1 000 $ par trade avec 10 000 €.</p>
+        <div class="src">STRATEGY_BOOK.md B3</div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="tag">C</span><span class="chip bad">échec</span></div>
+        <h3>Filtre ML sur A</h3>
+        <div class="num">−0,35 %/an · t −0,97</div>
+        <p class="note">Méta-labeling, walk-forward trimestriel purgé, à 2x les coûts. Le modèle classe à peine les trades (AUC 0,53 à 0,59).</p>
+        <div class="src">carry_meta_v1/FINDINGS.md</div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-cal">
+    <h2 id="h-cal">Le calendrier de l'argent</h2>
+    <p class="sub">Dates approximatives des lectures fixées d'avance. Rien ne s'ouvre avant sa date.</p>
+    <ol class="cal">
+      <li><span class="date">29-11</span><span><b>Q01</b> : écart entre l'indice gelé de Variational et trade.xyz pendant le week-end. Première lecture, règle écrite d'avance.</span></li>
+      <li><span class="date">04-12</span><span><b>B3</b> commence (R530) : arrêt pour futilité à 15 week-ends, réussite possible à 20 (fin avril 2027).</span></li>
+      <li><span class="date">≈ 13-12</span><span><b>R523</b> : Kraken + HL et Deribit + HL ensemble. Seconde lecture vers le 23-12.</span></li>
+      <li><span class="date">≈ 15-12</span><span><b>R527</b> : les trois plateformes sans plancher. Seconde lecture vers le 25-12.</span></li>
+      <li><span class="date">≈ 19-12</span><span><b>R510</b> : Kraken + HL, lecture rapide. Seconde lecture vers le 03-01.</span></li>
+      <li><span class="date">≈ 22-12</span><span><b>R521</b> : Deribit + HL. Pas de mise sur cette lecture seule. Seconde vers le 06-01.</span></li>
+      <li><span class="date">17-02-2027</span><span><b>R509</b> : piste papier Kraken + HL, 90 jours. Puis le 18-05-2027 à 180 jours.</span></li>
+    </ol>
+    <div class="money"><b>Ce qu'une réussite déclenche.</b> Une lecture réussie de R510, R523 ou R527 propose la mise 1 : 2 000 € sur Kraken + Hyperliquid, levier au plus 1,5, euros en collatéral sur Kraken, arrêt à −25 %. Toute mise au-delà demande bien plus de preuves : un plancher de probabilité d'erreur sous 10 % même avec un a priori sceptique.</div>
+    <div class="src">docs/reviews/december_decision_20261125.md §2 et addenda · STRATEGY_BOOK.md A1</div>
+  </section>
+
+  <section aria-labelledby="h-levels">
+    <h2 id="h-levels">Les « niveaux » du reel QuantPad</h2>
+    <p class="sub">Le reel montre les gros ordres en attente dans le carnet CME. Un ordre en attente peut être annulé avant que le prix arrive : personne n'est obligé de traiter à ce niveau. Le lab a testé des niveaux de prix et des liquidations sur la crypto, jamais un carnet CME de niveau 3.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Test</th><th>Ce qui a été testé</th><th>Résultat</th></tr></thead>
+        <tbody>
+          <tr><td class="n">R246</td><td>Chiffres ronds comme aimants (franchissement)</td><td class="n">−84,8 bp/jour · t −9,93</td></tr>
+          <tr><td class="n">R249</td><td>Chiffres ronds, reproduits sur données neuves</td><td>Nul : le livre fait +0,2 bp/jour. Une variante montre un petit écart (+4,8 bp/jour, t 2,53), de signe opposé à R246</td></tr>
+          <tr><td class="n">R243</td><td>Points pivots</td><td class="n">−14,5 bp/jour · t −1,99</td></tr>
+          <tr><td class="n">R206</td><td>Cascades de liquidation (Gate)</td><td class="n">−36 bp/jour · t −1,96</td></tr>
+          <tr><td class="n">R252</td><td>Proxy de liquidation (chute d'OI et mèche)</td><td>Nul ; le rebond est surtout celui du marché</td></tr>
+          <tr><td class="n">QuantPad</td><td>Son propre exemple : cassure de l'ouverture ES, 1 027 trades</td><td>36,7 % de cibles touchées contre 50,2 % nécessaires. Le net de +10 128 $ fait 9,86 $ par trade, moins d'un tick ; il vient des 831 trades sans cible ni stop, portés par la hausse de l'ES (+50 %)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="src">registry/methods.csv:12, :204 · registry/rounds.csv R206, R249, R252 · image du reel · data/databento/es_1h</div>
+  </section>
+
+  <section aria-labelledby="h-leads">
+    <h2 id="h-leads">Pistes ouvertes</h2>
+    <p class="sub">Questions qu'une expérience peut trancher, triées par valeur × probabilité ÷ coût. Aucune n'est encore une stratégie.</p>
+    <ul class="leads">
+      <li><span class="lid">O7d</span><span>Le straddle BTC d'un jour du dimanche sur Deribit est-il encore trop cher après 2026 ? (−35 à −49 bp en 2026, constat après coup.)</span></li>
+      <li><span class="lid">L2</span><span>Conversion des pré-IPO sur trade.xyz : le mouvement de l'heure de conversion suit-il l'écart avec la première cotation, puis revient-il ?</span></li>
+      <li><span class="lid">K1</span><span>Délistage Upbit ou Bithumb : le perp mondial de la pièce dérive-t-il à la baisse pendant les 30 jours ?</span></li>
+      <li><span class="lid">S2</span><span>ML sur la sortie plutôt que l'entrée : les 10 % meilleurs trades font 123 % du net, peut-on les garder plus longtemps ?</span></li>
+      <li><span class="lid">P1</span><span>Nouveau. Sur Hyperliquid, toutes les positions et leurs prix de liquidation sont publics. Les gros niveaux de liquidation attirent-ils le prix, puis le prix revient-il (Brunnermeier et Pedersen, 2005) ? À mesurer d'abord en taille ; a priori faible (famille « flow » : 2 réussites sur 12).</span></li>
+    </ul>
+    <div class="src">docs/reviews/open_questions.md</div>
+  </section>
+
+  <footer>
+    <span>Mise à jour à chaque lecture d'argent. Source : dépôt du lab, branche de travail.</span>
+  </footer>
+</div>
