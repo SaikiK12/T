@@ -145,15 +145,21 @@ From `docs/reviews/reflection_20261126_tail.md`, as corrected by the room's crit
   calibration stake, sized to measure, not to earn.
 - The PREREGs are unchanged; this only maps their outcome to money.
 
-## Addendum 2026-11-26c (written before any December read): a skeptical prior for scaling (self-review 4)
-- **Why.** The room's audit of seven pages found 102 accepted errors, 90% of the directional ones in the favorable
-  direction. My P(PASS) numbers run high (ledger: p ≥ 0.6 hit 1 in 4).
-- **The sensitivity.** With π halved, a pass at the bar leaves an SD-MBF floor (Student-t) of 20-26% for R510, R523
-  and R509 look 1 (5.3-7.4% at my own π).
-- **Stake 1 is unchanged:** §2's rows decide it. It is a calibration stake (€2,000, loss bounded by the 25% stop),
-  bought for its measurements, not for its edge.
-- **Any step beyond stake 1** (scaling toward €10,000) **needs the floor below 10% under the skeptical prior (π/2)**.
-  - In practice that means R509's later look well above its bar, or several independent passes, together with
-    measured live costs.
-  - The halving lapses only when the forecast ledger shows calibration: Brier clearly below its leave-one-out
-    reference at 30 or more resolved forecasts.
+## Addendum 2026-11-26c (written before any December read): robust priors for scaling (self-review 4, corrected)
+- **Why.** The room's audit of seven pages found 102 accepted errors, 60 of the 67 directional ones favorable.
+  No lane-pass forecast has resolved yet, so the size of my bias on lane passes is unknown. The "1 in 4" rests on
+  four non-lane forecasts.
+- **The sensitivity.** A pass exactly at the bar leaves an SD-MBF floor (Student-t, two-sided):
+  - 5.3-7.4% at my own π for R510, R523 and R509 look 1;
+  - 20-27% at π/2;
+  - about 5-12% at the carry family's base rate (0.43-0.64; the critic's computation).
+  - Evidence at one pass is therefore not decisive; the answer depends on the prior.
+- **Rule for any step beyond stake 1:** the floor must be below 10% under all three priors (mine, mine halved, and
+  the family base rate), each with its α written beside its π. In practice that needs several independent passes,
+  or R509's later look well above its bar, together with measured live costs.
+- **Stake 1, an exception written now and priced:**
+  - If the edge is null, stake 1 loses about €60-100 a year: costs at 2-3x, plus the venue-failure cost of about 2%
+    of the stake. That is bounded by the spec's 25% stop (§3, a stop of the stake spec; its gate-4 origin is noted
+    there).
+  - It buys live fills, live funding and the tax paperwork, which any scaling decision needs and paper cannot give.
+  - The exception is for that measurement, not for the edge. It does not extend to any larger amount.

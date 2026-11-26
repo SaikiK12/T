@@ -230,8 +230,9 @@ not to add process.
     "assumed". The critic reads the table before any conclusion is written, and prose interprets only rows that exist.
   - A status word (answered, killed, closed, alive, priced right) follows only the observation the page names as
     decisive. Before it, write "leaning", with a probability in the ledger.
-  - My own probabilities are halved when they feed a money rule, until the ledger shows calibration (L056, L057,
-    L063; self-review 4).
+  - A money rule must hold under three priors: my own, my own halved, and the family's base rate, each with its α.
+    No lane-pass forecast has resolved yet, so my bias on lane passes is unmeasured (L056, L057, L063, L064;
+    self-review 4).
 - **Before naming why a rent opened or closed, measure both sides by year:** the incumbents' quoted value and the
   world's realized value. Twice a closure story was half wrong until both series were on the page (L054, L055).
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the

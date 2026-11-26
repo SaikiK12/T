@@ -76,3 +76,19 @@
   template for every reflection page would let it check rows, not prose.
 - **The forecast ledger now prices my bias.** Score it at every resolution, and let the halving rule lapse only when
   the data says so.
+
+## Corrections after the room's critic (`room_20261126/critic_self_review4.md`; checked by me)
+1. **"The critic was right two thirds of the time"** should read "102 of 144 findings (71%) were accepted by me as
+   errors". Acceptance is my own judgment. The audit's counts are its own enumeration, each with a quote.
+2. **The ledger's "1 in 4" rests on four non-lane forecasts.** No lane-pass forecast has resolved, so "my lane
+   P(PASS) runs high" is a lean, not a measurement. The in-sample reference (0.160) also beats my 0.199.
+3. **Halving was a crude correction.** It is replaced by robustness across three priors: mine, mine halved, and the
+   family base rate (addendum c, corrected). Under the base rate, R523's floor is about 5-12%.
+4. **The exemption for stake 1 read as a rationalization.** It is now priced: about €60-100 a year at worst against
+   the measurements it buys. It is written before the read, and limited to stake 1.
+5. **Row errors in my own table:**
+   - cycle 2's −47.8 bp (t −7.3) is the 2022-26 sample, not 2022-25;
+   - cycle 1 put crypto's net 0.13% beside TSLA's gross 18% (like for like, about 2×);
+   - cycle 3's "BTC Sunday rich in 2026" is post hoc (O7d is a forward question).
+   - Five errors in the review of my errors: the bias is not fixed by naming it.
+
