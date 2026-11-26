@@ -125,3 +125,14 @@ From `docs/reviews/reflection_20261126_tail.md`, as corrected by the room's crit
   4. **Hyperliquid coin delisted or force-settled:** close the Kraken leg at once.
 - **Assumed, not measured:** that an owner acting on an alert within an hour or two closes near the alert's prices.
 - The mapping in §2 is unchanged.
+
+## Addendum 2026-11-26b (written before any December read): Bayesianized passes (Harvey 2017)
+- A pass exactly at a lane's bar leaves a probability that the null is true. The bound is P(null) ≥ MBF·PO/(1 + MBF·PO),
+  with MBF = exp(−t²/2), PO the prior odds from the forecast ledger (§4), and the less generous SD-MBF beside it.
+  The full table is in `docs/METHOD_LIBRARY.md` (Harvey).
+- **Kraken reads (R510, R523, R527):** 1-3% under the MBF, 5-9% under the SD-MBF. The mapping in §2 stands.
+- **R520, R521, R524 and R530:** 9-55% under the MBF, 26-78% under the SD-MBF. **A pass of any of these buys a second
+  forward period of the same length, not a stake,** even where §2 or the lane's PREREG would allow more. §2 already
+  gives no stake on R521, R520 or R524 alone, so this binds mostly R530 (April 2027).
+- The PREREGs are unchanged; this only maps their outcome to money.
+

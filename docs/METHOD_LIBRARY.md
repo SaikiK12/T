@@ -153,12 +153,38 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
 - **Decision changed: none.** The lab already counts trials per round and across the program, halves in-sample
   edges, and forward-tests selected variants. Read, no change.
 
+### Campbell R. Harvey, "Presidential Address: The Scientific Outlook in Financial Economics" (Journal of Finance 72(4), 2017)
+- **Read 2026-11-26:** sections V-VI (the minimum Bayes factor, Tables II-III) and IX (recommendations). Author's copy:
+  https://people.duke.edu/~charvey/Research/Published_Papers/P131_The_scientific_outlook.pdf.
+- **The passage that matters** (p. 1424): "If a test is based on a normal approximation and the z-score is given by
+  Z, then the MBF is simply exp(–Z2/2)… a z-score of 2.0, which has a p-value of 5%, corresponds to an MBF of 0.14."
+  - With prior odds PO (null : alternative), P(null | data) ≥ MBF·PO / (1 + MBF·PO).
+  - The "symmetric-descending" version, SD-MBF = −e·p·ln(p), is the less generous one.
+  - Table III: for a 5% chance that the null is true, t must reach 2.43 at even odds and 2.94 at 4:1. I reproduced
+    both.
+- **Decision changed** (written before any December read; `docs/reviews/december_decision_20261125.md`, addendum
+  2026-11-26b). With the ledger's priors, a pass exactly at the bar leaves P(null):
+
+| Read (bar t, prior) | MBF | SD-MBF |
+|---|---|---|
+| R510 (2.5, 0.60) | 2.8% | 9.0% |
+| R523 (3.0, 0.45) | 1.3% | 5.0% |
+| R527 (3.0, 0.40) | 1.6% | 6.1% |
+| R509 look 1 (2.5, 0.45) | 5.1% | 15% |
+| R521 (2.5, 0.30) | 9.3% | 26% |
+| R530 (about 2.33, 0.23) | 18% | 41% |
+| R524 (2.5, 0.10) | 28% | 57% |
+| R520 look 2 (2.0, 0.10) | 55% | 78% |
+
+  - **Rule:** a pass that leaves P(null) above 10% under the SD-MBF buys a second forward period, not money.
+  - That holds the Kraken reads as decisive and turns R520, R521, R524 and R530 into confirmation steps.
+
 ## Next to read (legal copies only; one every fourth cycle)
 1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters". Good Judgment's
    page was behind a Cloudflare challenge on 2026-11-24; a library or publisher copy is needed. Base rates,
    Fermi-izing, incremental updates.
 2. **Gary Klein, "Performing a Project Premortem"** (HBR, 2007): imagine the stake failed, then list why.
-5. **Campbell Harvey, "The Scientific Outlook in Financial Economics"** (AFA presidential address, 2017): the
+5. ~~Campbell Harvey~~ (read 2026-11-26, above). Was: **Campbell Harvey, "The Scientific Outlook in Financial Economics"** (AFA presidential address, 2017): the
    chapters on p-hacking and Bayesianised p-values.
 6. **George Pólya, *How to Solve It*, the book's own chapters:** read the foreword and the table of contents on
    2026-11-25 (above); the chapters need a library copy.

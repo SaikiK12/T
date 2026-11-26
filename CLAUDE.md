@@ -134,6 +134,11 @@ not to add process.
   research findings are to be true."**
   - PPV = (1 − β)R/(R − βR + α). This lab tests at scale, so priors come from its own base rates by family, not from
     the paper that proposed the idea.
+- **Harvey: "the MBF is simply exp(–Z2/2)."**
+  - With the ledger's prior odds PO, a pass at t leaves P(null) ≥ MBF·PO/(1 + MBF·PO); the SD-MBF (−e·p·ln p) is the
+    stricter bound.
+  - A pass that leaves P(null) above 10% under the SD-MBF buys a second forward period, not money (2026-11-26, before
+    the December reads).
 - **Thorp: "assume mt < me and choose f < fe* by enough to prevent g ⩽ 0."**
   - Size a stake by the shrunk edge (at most half the in-sample level) and the jump that can happen (here, a venue
     failing), never by the in-sample variance.
