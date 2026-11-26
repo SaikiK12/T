@@ -58,3 +58,43 @@ Each pair's own price ratio and funding, every day, across both venues.
   - Hyperliquid (`room_20261126/hl_incidents.md`): manipulations, forced settlements, ADL, bridge, halts;
   - Kraken Futures (`room_20261126/kraken_incidents.md`): delistings, notice, halts, margin rules.
   Then: did anything observable precede them?
+
+## Strand 1, read (replay of the frozen book on R525's panel; scratch code, descriptive, 0 trials)
+- **Kraken+Hyperliquid, the stake's pair: 206 trades, mean +383 bp at 1x.** The worst trades:
+
+| Coin | Entry → exit | Days | Exit | Price P&L | Funding |
+|---|---|---|---|---|---|
+| SYRUP | 2025-12-01 → 12-20 | 19 (11 with a stale leg) | blowout | −36.5% | +6.1% |
+| MORPHO | 2025-12-01 → 2026-06-03 | 184 | spread | −23.9% | +18.5% |
+| CAKE | 2025-12-12 → 2026-04-06 | 115 | spread | −13.9% | +8.2% |
+| PEOPLE | 2026-02-20 → 03-04 | 12 | spread | −6.1% | −1.4% |
+
+- **SYRUP, traced day by day.**
+  - The Kraken leg was stale on 4 Dec, and again from 9 Dec. Its stale run reached 3 days on 11 Dec, when the cumulative
+    price P&L was −1.3%.
+  - **R509's live rule** exits a leg stale for 3 days (`experiments/xfund_eea_fwd/PREREG.md`). It would have closed
+    there, at about −1% to −5%, where the historical engine (no stale exit) rode to −36.5%.
+  - The engine also books only adverse moves while a leg is stale, so the historical tail is partly an accounting
+    choice.
+- **The Bitfinex 2026 tail** (COMP, JASMY, SAND, ALGO, CRV: −40% to −86% of a leg) comes from long Bitfinex legs that
+  were stale on 46-85 of their 66-206 days.
+  - This is a liquidity and data artefact under the losses-only rule. It is a warning that Bitfinex's thin books
+    cannot be exited, not a measured hedge loss.
+  - R524 (Bitfinex+Binance, forward) must watch staleness.
+- **Conclusion for the stake (leaning; one pair's history).** Coin-level tails on Kraken+Hyperliquid are bounded
+  near a slot's 20% blowout, and the live 3-day stale exit cuts the worst historical case to a few percent of a slot.
+  On a €2,000 book with 20 slots of about €100, that is about €1-5 per event.
+
+## Strand 2, Kraken (reader `room_20261126/kraken_incidents.md`; the delisting rule read on the page by me)
+- **Delisting notice: none guaranteed.** Kraken: "When possible, we will notify clients in advance via platform
+  notification. We reserve the right to take these actions without advance notice in extenuating circumstances."
+- **Settlement:** "A fair and reasonable settlement price will be determined by Kraken at our sole discretion", by a
+  "volume-weighted and time-segmented TWAP… in a 60-minute observation period" of spot on the constituent exchanges.
+  The hedge leg on Hyperliquid must be closed by hand at about the same time; the risk is the TWAP-to-Hyperliquid gap.
+- **Frequent delistings in the stake's universe.** PF_SSVUSD and PF_BBUSD were settled on 2026-11-23, and PF_ACEUSD
+  (in R508/R509's universe, `symbols.csv:87`) is delisted on 2026-11-27. The reader's tally of about 310 delisted PF_
+  symbols since 2022 is unverified.
+- **Margin (reader's quotes, not re-read):**
+  - no margin calls ("does not offer margin calls or any warnings");
+  - the balance "can never go below zero";
+  - post-only halts of 15 minutes to about 3 hours, during which "no executions or liquidations can occur".
