@@ -124,6 +124,12 @@
         - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
           n'y a donc pas de carnet plus jeune à exploiter.
         - Je surveille chaque mois (O7c) : si l'écart revient au-delà de 30 bp, j'ouvre une piste papier.
+  - **Seuil de preuve avant l'argent (26-11, lecture de Harvey 2017).** Même réussie, une lecture peut rester du bruit.
+    J'ai calculé, pour chaque lecture, la probabilité minimale que l'effet soit nul si elle passe juste au seuil.
+    - Kraken (R510, R523, R509) : 5 à 7 %. La réussite compte.
+    - R527 à 20 jours, R521, Deribit (R520), Bitfinex (R524), week-end xyz (R530) : 11 à 78 %. Une réussite y
+      achète une seconde période de papier, pas de l'argent.
+    - Écrit avant les lectures ([détail](reviews/december_decision_20261125.md)).
   - **Les risques de queue de la mise 1 (26-11)** ([détail](reviews/reflection_20261126_tail.md)).
     - **Le risque principal est la faillite d'une plateforme** : environ 2 % de la mise par an (Kraken 2,9 %,
       Hyperliquid 5,5 %), soit à peu près autant que ce que la mise doit rapporter net. Ce coût est déjà déduit des
