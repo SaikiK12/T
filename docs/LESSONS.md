@@ -11,6 +11,23 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L062 · 2026-11-26 · A reading cycle changed a money decision: Harvey's minimum Bayes factor on our own priors
+- **What happened.**
+  - The every-fourth-cycle reading was Harvey's AFA address (2017), from the author's copy, sections V-VI and IX.
+  - The minimum Bayes factor, exp(−t²/2), turns a lane's bar into a probability that the null is true, given the
+    prior.
+  - The prior was already in the forecast ledger. With it, the Kraken reads stay decisive: 1-3% null at their bars,
+    5-9% under the stricter SD-MBF.
+  - But a pass of R520, R521, R524 or R530 would leave 9-55%, or 26-78% under the SD-MBF.
+  - The decision, written before the reads: such a pass buys a second forward period, not money.
+- **The day's breadth sweep** (liquidation engines, stablecoins, listing clocks, equity events) found nothing above
+  0.2 and registered L2 (pre-IPO conversions).
+- **What surprised me.** The ledger, started for calibration, became the input that turns a t-bar into a money rule.
+  Two tools built for self-improvement combined into a decision rule.
+- **What I will do differently.** Every lane's money mapping states the Bayesianized P(null) at its bar, from the
+  ledger's prior, before its read.
+- **Instruction changed:** `CLAUDE.md` principles gain Harvey (the MBF bound and the 10% SD-MBF rule).
+
 ## L061 · 2026-11-26 · I re-estimated a number the lab had already measured, again; promoted
 - **What happened** (`docs/reviews/reflection_20261126_tail.md`, corrections):
   - My tail Fermi put venue failure at €8-28 a year on "€1,000 on one venue".
