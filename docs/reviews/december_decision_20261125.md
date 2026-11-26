@@ -105,3 +105,12 @@
 - **Kept as a watch, not a lane.** The recorder already captures every pre-IPO name on four venues. A cross-venue
   spread above about 2% on a name with a dated listing is the trigger to look again. The next names are OURA and,
   on Lighter, OPENAI.
+
+## Addendum 2026-11-26 (written before any December read): tail rules for stake 1
+From `docs/reviews/reflection_20261126_tail.md` (strand 2).
+- **Venue failure is the binding risk.** Keep on Hyperliquid only the margin its legs need at 1.5x, plus 25%.
+- **Leverage:** Hyperliquid at 1.5x or less (ADL priority).
+- **On any ADL, forced settlement or Kraken delisting of one leg,** close the other leg within the same hour.
+- **Before the stake goes live, build the watch script (T1).** It reads the public Hyperliquid fills and Kraken's
+  instrument list hourly.
+- The mapping in §2 is unchanged.
