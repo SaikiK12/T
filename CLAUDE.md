@@ -47,7 +47,8 @@ not to add process.
   4. a Fermi size and the capacity: the smaller of the market's and the owner's (capital under the venue's margin
      rule), net of the measured decay (L042, L044; self-review 3). For a forced flow, the size is the net forced trade
      (after the positions that offset, not the gross open interest) divided by the liquidity in the window where it
-     must trade. Below about 0.5%, stop (L052, L053);
+     must trade. Below about 0.5%, stop (L052, L053). A number the lab has already measured is quoted from its file
+     with path:line, never re-estimated; anything else is labelled "assumed" (L052, L061);
   5. what we see or reach that others do not;
   6. the cheapest decisive observation.
 - **Solve the class:** the map of venue design mechanisms in the reflection. Its rows come from primary sources.

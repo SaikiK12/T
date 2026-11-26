@@ -11,6 +11,24 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L061 · 2026-11-26 · I re-estimated a number the lab had already measured, again; promoted
+- **What happened** (`docs/reviews/reflection_20261126_tail.md`, corrections):
+  - My tail Fermi put venue failure at €8-28 a year on "€1,000 on one venue".
+  - The lab's own stake note already had the per-venue rates (Kraken 2.9%, Hyperliquid 5.5%), about 2% of the stake
+    a year (about €40), and that figure is already netted in the stake's €40-50.
+  - The room's critic found it in two minutes. In L052 it was R292's 0.13% that I had not looked up.
+- **The cycle's other results stand, corrected:**
+  - on Kraken+Hyperliquid, the worst historical trade (SYRUP) is cut early by the 3-day stale exit, at a mark, not a
+    measured exit;
+  - Hyperliquid's hedge-breakers (forced settlement, ADL) are instant;
+  - a watch script (T1) now flags them, and Kraken's delistings, hourly.
+- **What surprised me.** The fast path (estimate, then write) beat the right path (look up, then write), even inside
+  a page whose step 0 is "what the lab already knows".
+- **What I will do differently.** Every Fermi input is either quoted from a lab file with its path:line or labelled
+  "assumed".
+- **Instruction changed (promoted, seen twice: L052 and L061).** `CLAUDE.md` approach item 4 gains "a number the lab
+  has measured is quoted from its file, never re-estimated".
+
 ## L060 · 2026-11-26 · Correction to L059: the ML diagnosis was a story; the critic's replay found the real mechanism
 - **What happened.** L059 said "entry features cannot see the tail". The room's critic, then my own trade-level
   replay of R531's walk-forward, showed something else (`experiments/carry_meta_v1/FINDINGS.md`, corrections):

@@ -124,6 +124,17 @@
         - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
           n'y a donc pas de carnet plus jeune à exploiter.
         - Je surveille chaque mois (O7c) : si l'écart revient au-delà de 30 bp, j'ouvre une piste papier.
+  - **Les risques de queue de la mise 1 (26-11)** ([détail](reviews/reflection_20261126_tail.md)).
+    - **Le risque principal est la faillite d'une plateforme** : environ 2 % de la mise par an (Kraken 2,9 %,
+      Hyperliquid 5,5 %), soit à peu près autant que ce que la mise doit rapporter net. Ce coût est déjà déduit des
+      40-50 €/an. Règle : ne laisser sur chaque plateforme que la marge nécessaire.
+    - **Hyperliquid peut casser une couverture d'un coup**, sans qu'aucune règle journalière ne l'arrête :
+      - un règlement forcé à un prix hors marché (JELLY, mars 2025) ;
+      - un auto-deleveraging en krach (10-10-2025).
+    - **Kraken délise sans préavis garanti**, au prix moyen du spot sur 60 minutes qu'il fixe lui-même.
+    - **Outil prêt : `scripts/stake_watch.py`.** Lancé chaque heure pendant la mise, il signale un délistage ou un ADL.
+      À la première exécution, il a déjà signalé PF_ACEUSD, délisté le 27-11. Une liste d'actions dit quoi fermer
+      dans l'heure ([addendum](reviews/december_decision_20261125.md)).
   - **Ma calibration (25-11).** Toutes mes probabilités écrites vont maintenant dans `registry/forecasts.csv` (20
     prévisions, 7 tranchées).
     - Score de Brier 0,249, autant qu'un 50/50 constant : rien n'est établi à 7 cas.
