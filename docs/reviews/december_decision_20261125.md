@@ -144,3 +144,16 @@ From `docs/reviews/reflection_20261126_tail.md`, as corrected by the room's crit
   the same €2,000. The chance of a false stake is therefore higher than any single floor. Stake 1 stays a
   calibration stake, sized to measure, not to earn.
 - The PREREGs are unchanged; this only maps their outcome to money.
+
+## Addendum 2026-11-26c (written before any December read): a skeptical prior for scaling (self-review 4)
+- **Why.** The room's audit of seven pages found 102 accepted errors, 90% of the directional ones in the favorable
+  direction. My P(PASS) numbers run high (ledger: p ≥ 0.6 hit 1 in 4).
+- **The sensitivity.** With π halved, a pass at the bar leaves an SD-MBF floor (Student-t) of 20-26% for R510, R523
+  and R509 look 1 (5.3-7.4% at my own π).
+- **Stake 1 is unchanged:** §2's rows decide it. It is a calibration stake (€2,000, loss bounded by the 25% stop),
+  bought for its measurements, not for its edge.
+- **Any step beyond stake 1** (scaling toward €10,000) **needs the floor below 10% under the skeptical prior (π/2)**.
+  - In practice that means R509's later look well above its bar, or several independent passes, together with
+    measured live costs.
+  - The halving lapses only when the forecast ledger shows calibration: Brier clearly below its leave-one-out
+    reference at 30 or more resolved forecasts.
