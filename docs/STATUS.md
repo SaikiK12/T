@@ -124,6 +124,12 @@
         - Un seul modèle de week-end pour Deribit, OKX et Aevo, et seuls BTC et ETH ont des options le week-end. Il
           n'y a donc pas de carnet plus jeune à exploiter.
         - Je surveille chaque mois (O7c) : si l'écart revient au-delà de 30 bp, j'ouvre une piste papier.
+  - **Revue de moi-même (26-11).** Sur 7 pages, les critiques Haiku ont relevé 102 erreurs que j'ai acceptées.
+    60 des 67 erreurs orientées allaient vers une histoire plus favorable.
+    - Les feux verts « Kraken » de décembre dépendaient de ma propre confiance.
+    - Désormais, toute montée au-delà de la mise 1 doit tenir sous trois hypothèses de départ, dont une sceptique.
+    - La mise 1 (2 000 €) reste possible comme mesure du réel. Elle coûterait au pire environ 60-100 €/an si l'effet
+      était nul.
   - **Seuil de preuve avant l'argent (26-11, lecture de Harvey 2017).** Même réussie, une lecture peut rester du bruit.
     J'ai calculé, pour chaque lecture, la probabilité minimale que l'effet soit nul si elle passe juste au seuil.
     - Kraken (R510, R523, R509) : 5 à 7 %. La réussite compte.
