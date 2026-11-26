@@ -224,10 +224,14 @@ not to add process.
 - **Describe a book by what it holds and earns, measured,** not by the mechanism that found it: its daily positions
   (net share, legs, largest leg) for risk, and the quantity it harvests for return (L043, L047).
 - **Small before big.** A cheap measurement first; a full lane only when the measurement earns it.
-- **A status word follows the decisive observation, never a snapshot.** Answered, killed, closed, alive and priced
-  right come only after the observation the page names as decisive. Before it, write "leaning", with a probability in
-  the ledger. With it: an "assumed" label on any input not fetched, and like-for-like numerators. Of seven
-  first-draft corrections on 2026-11-25, the status-word rule alone would have prevented about three (L056, L057).
+- **Numbers before narrative, and a skeptical prior for money** (self-review 4: 102 accepted errors on seven pages,
+  90% of the directional ones favorable).
+  - A page's numbers table comes first, built from code or quoted lines with path:line; anything else is labelled
+    "assumed". The critic reads the table before any conclusion is written, and prose interprets only rows that exist.
+  - A status word (answered, killed, closed, alive, priced right) follows only the observation the page names as
+    decisive. Before it, write "leaning", with a probability in the ledger.
+  - My own probabilities are halved when they feed a money rule, until the ledger shows calibration (L056, L057,
+    L063; self-review 4).
 - **Before naming why a rent opened or closed, measure both sides by year:** the incumbents' quoted value and the
   world's realized value. Twice a closure story was half wrong until both series were on the page (L054, L055).
 - **Data I need, named before the search.** For every idea, write the columns and dates it needs, and check the
