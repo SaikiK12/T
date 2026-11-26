@@ -163,21 +163,29 @@ https://www.garp.org/hubfs/Whitepapers/a1Z1W0000054x6lUAA.pdf. Pitfalls 3-10 are
   - Table III: for a 5% chance that the null is true, t must reach 2.43 at even odds and 2.94 at 4:1. I reproduced
     both.
 - **Decision changed** (written before any December read; `docs/reviews/december_decision_20261125.md`, addendum
-  2026-11-26b). With the ledger's priors, a pass exactly at the bar leaves P(null):
+  2026-11-26b, corrected the same night after the room's critic, `docs/reviews/room_20261126/critic_harvey.md`).
+  - **The prior is π, the probability that the effect is real,** not the ledger's P(PASS). It is recovered as
+    π = (P(PASS) − α)/(power − α), with each lane's stated power and size.
+  - **The reference is Student's t** with the look's days − 1, because the lanes' NW t on 20-90 overlapping days is
+    not normal. P(null) floors at a pass exactly at the bar:
 
-| Read (bar t, prior) | MBF | SD-MBF |
-|---|---|---|
-| R510 (2.5, 0.60) | 2.8% | 9.0% |
-| R523 (3.0, 0.45) | 1.3% | 5.0% |
-| R527 (3.0, 0.40) | 1.6% | 6.1% |
-| R509 look 1 (2.5, 0.45) | 5.1% | 15% |
-| R521 (2.5, 0.30) | 9.3% | 26% |
-| R530 (about 2.33, 0.23) | 18% | 41% |
-| R524 (2.5, 0.10) | 28% | 57% |
-| R520 look 2 (2.0, 0.10) | 55% | 78% |
+| Read (bar, df) | P(PASS) | power | π | MBF (normal) | SD-MBF (normal) | **SD-MBF (Student-t)** |
+|---|---|---|---|---|---|---|
+| R510, 30 days (t 2.5, 29) | 0.60 | 0.84 | 0.71 | 1.7% | 5.6% | **7.4%** |
+| R523, 20 days (t 3.0, 19) | 0.45 | 0.78 | 0.55 | 0.9% | 3.4% | **7.4%** |
+| R527, 20 days (t 3.0, 19) | 0.40 | 0.86 | 0.44 | 1.4% | 5.1% | **10.9%** |
+| R509 look 1 (t 2.5, 89) | 0.45 | 0.60 (assumed) | 0.75 | 1.5% | 4.8% | **5.3%** |
+| R521, 30 days (t 2.5, 29) | 0.30 | 0.67 | 0.42 | 5.7% | 16.9% | **21.4%** |
+| R520 look 1 (t 2.5, 89) | 0.10 | 0.30 | 0.31 | 8.9% | 24.8% | **26.8%** |
+| R520 look 2 (t 2.0, 179) | 0.10 | 0.75 | 0.10 | 55.7% | 78.0% | **78.4%** |
+| R524 look 1 (t 2.5, 89) | 0.10 | 0.77 | 0.12 | 23.7% | 51.1% | **53.7%** |
+| R530, 20 weekends (p < 0.01 one-sided) | — | — | 0.20 | 21.1% | 46.0% | (bootstrap) |
+| R530, 30 weekends (p < 0.04) | — | — | 0.20 | 46.4% | 68.7% | (bootstrap) |
 
-  - **Rule:** a pass that leaves P(null) above 10% under the SD-MBF buys a second forward period, not money.
-  - That holds the Kraken reads as decisive and turns R520, R521, R524 and R530 into confirmation steps.
+  - **The rule is a block only.** If the SD-MBF floor (Student-t) is above 10%, a pass buys a second forward
+    period of the same length, not money. Below 10% the floor licenses nothing; the lane's own mapping decides.
+  - **Harvey's own example is inconsistent.** His t 2.6 with p 0.014 (p. 1424) does not match the normal two-sided
+    p of 0.0093. Do not copy it.
 
 ## Next to read (legal copies only; one every fourth cycle)
 1. **Tetlock and Gardner, *Superforecasting*:** the "Ten Commandments for Aspiring Superforecasters". Good Judgment's

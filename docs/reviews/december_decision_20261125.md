@@ -126,13 +126,21 @@ From `docs/reviews/reflection_20261126_tail.md`, as corrected by the room's crit
 - **Assumed, not measured:** that an owner acting on an alert within an hour or two closes near the alert's prices.
 - The mapping in §2 is unchanged.
 
-## Addendum 2026-11-26b (written before any December read): Bayesianized passes (Harvey 2017)
-- A pass exactly at a lane's bar leaves a probability that the null is true. The bound is P(null) ≥ MBF·PO/(1 + MBF·PO),
-  with MBF = exp(−t²/2), PO the prior odds from the forecast ledger (§4), and the less generous SD-MBF beside it.
-  The full table is in `docs/METHOD_LIBRARY.md` (Harvey).
-- **Kraken reads (R510, R523, R527):** 1-3% under the MBF, 5-9% under the SD-MBF. The mapping in §2 stands.
-- **R520, R521, R524 and R530:** 9-55% under the MBF, 26-78% under the SD-MBF. **A pass of any of these buys a second
-  forward period of the same length, not a stake,** even where §2 or the lane's PREREG would allow more. §2 already
-  gives no stake on R521, R520 or R524 alone, so this binds mostly R530 (April 2027).
+## Addendum 2026-11-26b (written before any December read): Bayesianized passes (Harvey 2017), corrected
+- **The method.** The table is in `docs/METHOD_LIBRARY.md` (Harvey).
+  - It uses the effect prior π, recovered from the ledger's P(PASS) with each lane's power and size.
+  - The reference is Student's t at the look's days.
+  - The floor is the SD-MBF: P(null) ≥ BF·PO/(1 + BF·PO).
+- **The rule, a block only:** if a pass exactly at the bar leaves a floor above 10%, it buys a second forward period
+  of the same length, not money. Below 10% the lane's own row in §2 decides; the floor licenses nothing.
+- **What it does to §2** (corrected: R520 and R524 are scale decisions in §2, not "no stake"):
+  - **R510 (7.4%), R523 (7.4%), R509 look 1 (5.3%): not blocked;** §2 decides.
+  - **R527 at 20 days (10.9%):** blocked; at 30 days its own row decides.
+  - **R521 (21%):** already "no stake on this pass alone" in §2.
+  - **R520 (27% at look 1, 78% at look 2) and R524 (54%): blocked.** A pass buys a second forward period, not a
+    scaling step.
+  - **R530 (46% at 20 weekends, 69% at 30): blocked.** A pass buys a second forward period.
+- **Correlated reads.** R509, R510, R523 and R527 read the same Kraken+Hyperliquid book, and the first pass releases
+  the same €2,000. The chance of a false stake is therefore higher than any single floor. Stake 1 stays a
+  calibration stake, sized to measure, not to earn.
 - The PREREGs are unchanged; this only maps their outcome to money.
-

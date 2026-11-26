@@ -11,6 +11,22 @@ How this file works ([CLAUDE.md](../CLAUDE.md), step 5):
 - **Promotion.** A lesson seen twice moves into `CLAUDE.md`.
 - **What does not belong here:** lane facts. Those stay in each lane's FINDINGS and in the registry.
 
+## L063 · 2026-11-26 · Correction to L062: I used P(PASS) as the prior and read a floor as a licence
+- **What happened.** The room's critic (`docs/reviews/room_20261126/critic_harvey.md`, recomputed by me):
+  - Harvey's prior is the probability that the effect is real (π), not the ledger's P(PASS).
+  - The lanes' NW t on 20-90 days needs a Student-t reference.
+  - A lower bound on P(null) can block a decision but never license one.
+  - I had also misread §2 of the December decision for R520 and R524.
+- **Corrected** (`docs/METHOD_LIBRARY.md`, December addendum b):
+  - R510, R523 and R509 look 1 are not blocked (5.3-7.4%).
+  - R527 at 20 days, R521, R520, R524 and R530 are blocked (10.9-78%).
+- **What surprised me.** I applied a formula from a paper in the same hour I read it, and I mapped its inputs to the
+  nearest number I had rather than to its definition.
+- **What I will do differently.** Before using a formula from a reading, write each input's definition next to the
+  number that fills it.
+- **Instruction changed.** `CLAUDE.md`'s Harvey bullet is corrected (π, Student-t, block only). This corrects L062;
+  it does not rewrite it.
+
 ## L062 · 2026-11-26 · A reading cycle changed a money decision: Harvey's minimum Bayes factor on our own priors
 - **What happened.**
   - The every-fourth-cycle reading was Harvey's AFA address (2017), from the author's copy, sections V-VI and IX.
