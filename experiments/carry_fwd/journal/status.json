@@ -1,22 +1,17 @@
 {
- "last_scored_hour": "2026-11-26T22:00:00+00:00",
- "days_ticketed": 56,
+ "last_scored_hour": "2026-11-26T23:00:00+00:00",
+ "days_ticketed": 57,
  "BIN": {
   "coverage": {
    "symbols": 77,
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.04279104259646546,
+  "market_mean_apr_now": -0.0873143769662467,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
     "apr": 0.5011802845304677,
-    "spot": false
-   },
-   {
-    "symbol": "SKHYNIXUSDT",
-    "apr": 0.27636582165996515,
     "spot": false
    },
    {
@@ -32,6 +27,11 @@
    {
     "symbol": "JCTUSDT",
     "apr": 0.1613640633816734,
+    "spot": false
+   },
+   {
+    "symbol": "SOXLUSDT",
+    "apr": 0.11820159993173245,
     "spot": false
    }
   ],
@@ -50,7 +50,7 @@
    "go_real_invested": null
   },
   "ontime": {
-   "days": 37,
+   "days": 38,
    "days_invested": 0,
    "total": 0.0,
    "total_2x": 0.0,
@@ -81,7 +81,7 @@
     "apr": 0.16047832967766834
    }
   ],
-  "market_mean_apr_now": -0.1445168255450531,
+  "market_mean_apr_now": -0.14055976197801284,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
@@ -139,25 +139,25 @@
    }
   },
   "ontime": {
-   "days": 37,
-   "days_invested": 29,
-   "total": 0.0026079635020945743,
-   "total_2x": 0.00044796352634665073,
-   "total_3x": -0.0017120364494016653,
-   "total_spot5": 0.0032079635020945347,
-   "total_r191_timing": 0.005152646727009022,
-   "funding": 0.005304899999372094,
-   "basis": -0.0005369365215304994,
+   "days": 38,
+   "days_invested": 30,
+   "total": 0.003160933272527774,
+   "total_2x": 0.0010009332967798508,
+   "total_3x": -0.0011590666789684653,
+   "total_spot5": 0.003760933272527735,
+   "total_r191_timing": 0.005705616497442222,
+   "funding": 0.005455299998992294,
+   "basis": -0.00013436675071759938,
    "cost": 0.002159999975748,
-   "avg_open": 1.519144144144144,
-   "ann": 0.025727207520662695,
-   "sharpe": 2.303290127160705,
-   "t_nw": 0.6248795199337392,
+   "avg_open": 1.5317982456140349,
+   "ann": 0.03036159590717467,
+   "sharpe": 2.7306545989849993,
+   "t_nw": 0.7600484130651196,
    "max_dd": 0.0027393937607531,
    "go_real_invested": {
-    "n": 29,
-    "mean": 8.992977593429568e-05,
-    "hit": 0.5862068965517241,
+    "n": 30,
+    "mean": 0.0001053644424175925,
+    "hit": 0.6,
     "worst": -0.001506209626657,
     "invalid_n": 0,
     "n_clusters": null,
