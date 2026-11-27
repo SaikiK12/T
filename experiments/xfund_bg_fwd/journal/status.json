@@ -1,11 +1,11 @@
 {
  "lane": "xfund_bg_fwd",
  "rid": "R390",
- "updated": "2026-11-26T01:08:59.505065+00:00",
+ "updated": "2026-11-27T01:10:05.823577+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.016
+  "gate": 0.923
  },
  "data": {
   "binance": {
@@ -87,12 +87,6 @@
     "spread_in": 5.4387
    },
    {
-    "coin": "POWRUSDT",
-    "long": "gate",
-    "short": "binance",
-    "spread_in": 0.8012
-   },
-   {
     "coin": "KAVAUSDT",
     "long": "gate",
     "short": "binance",
@@ -151,18 +145,24 @@
     "long": "binance",
     "short": "gate",
     "spread_in": 0.6271
+   },
+   {
+    "coin": "MOVEUSDT",
+    "long": "binance",
+    "short": "gate",
+    "spread_in": 0.9156
    }
   ],
-  "scored_days": 22,
+  "scored_days": 23,
   "late_days": 7,
-  "total": 0.003945418799999999,
-  "total_2x": 0.0021954187999999996,
-  "total_3x": 0.0004454187999999999,
-  "total_close": 0.0045898732000000005,
-  "nw_t": 1.837180367626939,
+  "total": 0.004567126899999999,
+  "total_2x": 0.0027471268999999998,
+  "total_3x": 0.0009271268999999999,
+  "total_close": 0.005061801,
+  "nw_t": 2.341142776503476,
   "max_drawdown": -0.0006788140000000002,
   "replay_days": 74,
   "replay_total": 0.012552786799999998
  },
- "last_day": "2026-11-26"
+ "last_day": "2026-11-27"
 }

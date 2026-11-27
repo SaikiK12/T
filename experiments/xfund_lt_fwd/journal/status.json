@@ -1,21 +1,21 @@
 {
  "lane": "xfund_lt_fwd",
  "rid": "R294",
- "updated": "2026-11-26T01:00:09.623741+00:00",
+ "updated": "2026-11-27T01:00:57.918685+00:00",
  "waiting": false,
  "ready": {
   "mexc": 1.0,
   "lighter": 1.007
  },
  "data": {
-  "lighter": {
-   "files": 195,
+  "mexc": {
+   "files": 117,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "mexc": {
-   "files": 117,
+  "lighter": {
+   "files": 195,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -39,12 +39,6 @@
     "long": "mexc",
     "short": "lighter",
     "spread_in": 0.0899
-   },
-   {
-    "coin": "POLUSDT",
-    "long": "mexc",
-    "short": "lighter",
-    "spread_in": 0.0911
    },
    {
     "coin": "1000PEPEUSDT",
@@ -147,18 +141,24 @@
     "long": "lighter",
     "short": "mexc",
     "spread_in": 0.1355
+   },
+   {
+    "coin": "CCUSDT",
+    "long": "mexc",
+    "short": "lighter",
+    "spread_in": 0.1553
    }
   ],
-  "scored_days": 34,
+  "scored_days": 35,
   "late_days": 16,
-  "total": -0.0015904245000000004,
-  "total_2x": -0.0040104245,
-  "total_3x": -0.0064304245,
-  "total_close": -0.0012473951000000001,
-  "nw_t": -1.1272946959889374,
+  "total": -0.0018377278000000004,
+  "total_2x": -0.0043127278,
+  "total_3x": -0.006787727800000001,
+  "total_close": -0.0012672111000000001,
+  "nw_t": -1.3440313431786872,
   "max_drawdown": -0.0045535545,
   "replay_days": 62,
   "replay_total": 0.0068659169
  },
- "last_day": "2026-11-26"
+ "last_day": "2026-11-27"
 }

@@ -1,10 +1,10 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-26T01:21:20.574956+00:00",
+ "updated": "2026-11-27T01:22:15.731408+00:00",
  "waiting": false,
  "ready": {
-  "deribit": 1.101,
+  "deribit": 0.947,
   "hyperliquid": 0.978
  },
  "data": {
@@ -13,8 +13,8 @@
    "failed": 2,
    "changed_on_overlap": 0,
    "failed_some": [
-    "LDO",
-    "LINK"
+    "FIL",
+    "GRAM"
    ]
   },
   "deribit": {
@@ -134,12 +134,6 @@
     "spread_in": 0.1371
    },
    {
-    "coin": "MEGA",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.173
-   },
-   {
     "coin": "STRK",
     "long": "deribit",
     "short": "hyperliquid",
@@ -150,18 +144,24 @@
     "long": "hyperliquid",
     "short": "deribit",
     "spread_in": 0.1485
+   },
+   {
+    "coin": "TIA",
+    "long": "deribit",
+    "short": "hyperliquid",
+    "spread_in": 0.1597
    }
   ],
-  "scored_days": 4,
+  "scored_days": 5,
   "late_days": 2,
-  "total": -0.0010154105000000002,
-  "total_2x": -0.0019254105,
-  "total_3x": -0.0028354105,
-  "total_close": -0.00034831239999999996,
-  "nw_t": -3.994482209234331,
+  "total": 0.0005984270999999997,
+  "total_2x": -0.00031157290000000007,
+  "total_3x": -0.0012215729000000003,
+  "total_close": 0.0012655252,
+  "nw_t": 0.7066291530791037,
   "max_drawdown": -0.0010154105000000002,
   "replay_days": 31,
   "replay_total": 0.0006646258000000004
  },
- "last_day": "2026-11-26"
+ "last_day": "2026-11-27"
 }

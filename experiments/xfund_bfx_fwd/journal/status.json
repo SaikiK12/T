@@ -1,20 +1,20 @@
 {
  "lane": "xfund_bfx_fwd",
  "rid": "R524",
- "updated": "2026-11-26T08:43:23.096246+00:00",
+ "updated": "2026-11-27T01:24:54.782528+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "bitfinex": 0.75
+  "bitfinex": 1.556
  },
  "data": {
-  "binance": {
+  "bitfinex": {
    "files": 69,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "bitfinex": {
+  "binance": {
    "files": 69,
    "failed": 0,
    "changed_on_overlap": 0,
@@ -83,16 +83,16 @@
     "spread_in": 0.0677
    }
   ],
-  "scored_days": 1,
-  "late_days": 0,
-  "total": -0.0007005855,
-  "total_2x": -0.0010155855,
-  "total_3x": -0.0013305855,
-  "total_close": -0.0004400512,
+  "scored_days": 2,
+  "late_days": 1,
+  "total": -0.00038134050000000004,
+  "total_2x": -0.0006963405,
+  "total_3x": -0.0010113405,
+  "total_close": -0.00012080620000000001,
   "nw_t": null,
   "max_drawdown": -0.0007005855,
   "replay_days": 34,
   "replay_total": 0.0004750859999999998
  },
- "last_day": "2026-11-26"
+ "last_day": "2026-11-27"
 }

@@ -1,16 +1,31 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-26T01:17:57.215712+00:00",
+ "updated": "2026-11-27T01:19:25.286114+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 1.016,
-  "hyperliquid": 0.983,
-  "mexc": 0.958,
-  "kucoin": 0.998
+  "gate": 0.923,
+  "hyperliquid": 0.994,
+  "mexc": 1.0,
+  "kucoin": 1.0
  },
  "data": {
+  "hyperliquid": {
+   "files": 216,
+   "failed": 2,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "ILV",
+    "INIT"
+   ]
+  },
+  "kucoin": {
+   "files": 633,
+   "failed": 0,
+   "changed_on_overlap": 0,
+   "failed_some": []
+  },
   "gate": {
    "files": 860,
    "failed": 0,
@@ -27,38 +42,11 @@
     "SXPUSDT"
    ]
   },
-  "hyperliquid": {
-   "files": 216,
-   "failed": 3,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "DYM",
-    "RUNE",
-    "SAGA"
-   ]
-  },
-  "kucoin": {
-   "files": 633,
+  "mexc": {
+   "files": 520,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 22,
-   "changed_on_overlap": 0,
-   "failed_some": [
-    "GOAT_USDT",
-    "HYPER_USDT",
-    "ICNT_USDT",
-    "INJ_USDT",
-    "JELLYJELLY_USDT",
-    "JOE_USDT",
-    "JUP_USDT",
-    "KAT_USDT",
-    "LTC_USDT",
-    "LUNC_USDT"
-   ]
   }
  },
  "A": {
@@ -129,12 +117,6 @@
     "spread_in": 0.6978
    },
    {
-    "coin": "POWRUSDT",
-    "long": "gate",
-    "short": "kucoin",
-    "spread_in": 0.8047
-   },
-   {
     "coin": "EVAAUSDT",
     "long": "gate",
     "short": "kucoin",
@@ -187,18 +169,24 @@
     "long": "gate",
     "short": "hyperliquid",
     "spread_in": 0.7944
+   },
+   {
+    "coin": "MOVEUSDT",
+    "long": "mexc",
+    "short": "hyperliquid",
+    "spread_in": 1.2656
    }
   ],
-  "scored_days": 15,
+  "scored_days": 16,
   "late_days": 1,
-  "total": 0.005289920199999999,
-  "total_2x": 0.0037499201999999995,
-  "total_3x": 0.0022099202000000007,
-  "total_close": 0.0027094506000000006,
-  "nw_t": 1.7098517059745857,
+  "total": 0.007671625399999999,
+  "total_2x": 0.0060616253999999994,
+  "total_3x": 0.004451625399999999,
+  "total_close": 0.0049553776,
+  "nw_t": 2.425408493007821,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-26"
+ "last_day": "2026-11-27"
 }
