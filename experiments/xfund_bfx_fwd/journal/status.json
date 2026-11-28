@@ -1,8 +1,8 @@
 {
  "lane": "xfund_bfx_fwd",
  "rid": "R524",
- "updated": "2026-11-28T02:45:04.844889+00:00",
- "waiting": true,
+ "updated": "2026-11-28T08:13:06.403400+00:00",
+ "waiting": false,
  "ready": {
   "binance": 1.0,
   "bitfinex": 0.821
@@ -20,5 +20,79 @@
    "changed_on_overlap": 0,
    "failed_some": []
   }
- }
+ },
+ "A": {
+  "set": "binance+bitfinex",
+  "lookback": 14,
+  "threshold": 0.05,
+  "slots": 20,
+  "why": "R507's book (+5.21%/yr, NW t 11.94, 2,078 days)",
+  "held_now": [
+   {
+    "coin": "NEAR",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.1531
+   },
+   {
+    "coin": "ETC",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.0746
+   },
+   {
+    "coin": "ZRO",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.1133
+   },
+   {
+    "coin": "AVAX",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.0521
+   },
+   {
+    "coin": "HYPE",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.0757
+   },
+   {
+    "coin": "ZEC",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.3668
+   },
+   {
+    "coin": "INJ",
+    "long": "bitfinex",
+    "short": "binance",
+    "spread_in": 0.0686
+   },
+   {
+    "coin": "BTC",
+    "long": "binance",
+    "short": "bitfinex",
+    "spread_in": 0.1683
+   },
+   {
+    "coin": "ETH",
+    "long": "binance",
+    "short": "bitfinex",
+    "spread_in": 0.0677
+   }
+  ],
+  "scored_days": 3,
+  "late_days": 1,
+  "total": -0.00044206000000000003,
+  "total_2x": -0.00075706,
+  "total_3x": -0.0010720600000000001,
+  "total_close": -0.0001815257,
+  "nw_t": -1.8513752115240554,
+  "max_drawdown": -0.0007005855,
+  "replay_days": 34,
+  "replay_total": 0.0004750859999999998
+ },
+ "last_day": "2026-11-28"
 }
