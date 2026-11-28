@@ -1,5 +1,5 @@
 {
- "last_scored_hour": "2026-11-28T11:00:00+00:00",
+ "last_scored_hour": "2026-11-28T12:00:00+00:00",
  "days_ticketed": 58,
  "BIN": {
   "coverage": {
@@ -7,16 +7,21 @@
    "with_spot_pair": 36
   },
   "held_now": [],
-  "market_mean_apr_now": -0.03564234903091877,
+  "market_mean_apr_now": -0.03342945136959845,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
-    "apr": 0.3783176339857164,
+    "apr": 0.3770960998493441,
+    "spot": false
+   },
+   {
+    "symbol": "SAMSUNGUSDT",
+    "apr": 0.19774970253517193,
     "spot": false
    },
    {
     "symbol": "JCTUSDT",
-    "apr": 0.1745746308733942,
+    "apr": 0.17726833093547611,
     "spot": false
    },
    {
@@ -27,11 +32,6 @@
    {
     "symbol": "EWYUSDT",
     "apr": 0.1470998628550054,
-    "spot": false
-   },
-   {
-    "symbol": "SAMSUNGUSDT",
-    "apr": 0.143369568001314,
     "spot": false
    }
   ],
@@ -74,23 +74,23 @@
   "held_now": [
    {
     "symbol": "EVAAUSDT",
-    "apr": 0.3754633272122495
+    "apr": 0.3731516606482425
    },
    {
     "symbol": "JCTUSDT",
-    "apr": 0.17483499987671774
+    "apr": 0.1783633330766558
    }
   ],
-  "market_mean_apr_now": -0.025237143058207255,
+  "market_mean_apr_now": -0.023232539868905368,
   "top_apr_now": [
    {
     "symbol": "EVAAUSDT",
-    "apr": 0.3754633272122495,
+    "apr": 0.3731516606482425,
     "spot": true
    },
    {
     "symbol": "JCTUSDT",
-    "apr": 0.17483499987671774,
+    "apr": 0.1783633330766558,
     "spot": true
    },
    {
@@ -100,7 +100,7 @@
    },
    {
     "symbol": "HYPEUSDT",
-    "apr": 0.08845166468669656,
+    "apr": 0.09149333127652426,
     "spot": true
    },
    {
