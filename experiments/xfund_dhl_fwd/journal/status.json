@@ -1,21 +1,18 @@
 {
  "lane": "xfund_dhl_fwd",
  "rid": "R520",
- "updated": "2026-11-27T01:22:15.731408+00:00",
+ "updated": "2026-11-28T01:20:16.853157+00:00",
  "waiting": false,
  "ready": {
-  "deribit": 0.947,
-  "hyperliquid": 0.978
+  "deribit": 0.903,
+  "hyperliquid": 1.0
  },
  "data": {
   "hyperliquid": {
    "files": 89,
-   "failed": 2,
+   "failed": 0,
    "changed_on_overlap": 0,
-   "failed_some": [
-    "FIL",
-    "GRAM"
-   ]
+   "failed_some": []
   },
   "deribit": {
    "files": 89,
@@ -122,12 +119,6 @@
     "spread_in": 0.1748
    },
    {
-    "coin": "INJ",
-    "long": "deribit",
-    "short": "hyperliquid",
-    "spread_in": 0.1347
-   },
-   {
     "coin": "FET",
     "long": "deribit",
     "short": "hyperliquid",
@@ -150,18 +141,24 @@
     "long": "deribit",
     "short": "hyperliquid",
     "spread_in": 0.1597
+   },
+   {
+    "coin": "DYDX",
+    "long": "deribit",
+    "short": "hyperliquid",
+    "spread_in": 0.3269
    }
   ],
-  "scored_days": 5,
+  "scored_days": 6,
   "late_days": 2,
-  "total": 0.0005984270999999997,
-  "total_2x": -0.00031157290000000007,
-  "total_3x": -0.0012215729000000003,
-  "total_close": 0.0012655252,
-  "nw_t": 0.7066291530791037,
-  "max_drawdown": -0.0010154105000000002,
+  "total": -0.0012717517000000002,
+  "total_2x": -0.0022517517,
+  "total_3x": -0.0032317517000000004,
+  "total_close": 0.00022423340000000003,
+  "nw_t": -1.6964705079129516,
+  "max_drawdown": -0.0018701788,
   "replay_days": 31,
   "replay_total": 0.0006646258000000004
  },
- "last_day": "2026-11-27"
+ "last_day": "2026-11-28"
 }

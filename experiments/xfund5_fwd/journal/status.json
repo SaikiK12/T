@@ -1,33 +1,49 @@
 {
  "lane": "xfund5_fwd",
  "rid": "R440",
- "updated": "2026-11-27T01:19:25.286114+00:00",
+ "updated": "2026-11-28T01:17:08.247590+00:00",
  "waiting": false,
  "ready": {
   "binance": 1.0,
-  "gate": 0.923,
-  "hyperliquid": 0.994,
-  "mexc": 1.0,
+  "gate": 0.99,
+  "hyperliquid": 0.983,
+  "mexc": 0.984,
   "kucoin": 1.0
  },
  "data": {
-  "hyperliquid": {
-   "files": 216,
-   "failed": 2,
+  "mexc": {
+   "files": 520,
+   "failed": 8,
    "changed_on_overlap": 0,
    "failed_some": [
-    "ILV",
-    "INIT"
+    "LAB_USDT",
+    "MASK_USDT",
+    "MAVIA_USDT",
+    "MEME_USDT",
+    "NEAR_USDT",
+    "OPG_USDT",
+    "WIF_USDT",
+    "XAU_USDT"
    ]
   },
-  "kucoin": {
-   "files": 633,
+  "hyperliquid": {
+   "files": 216,
+   "failed": 3,
+   "changed_on_overlap": 0,
+   "failed_some": [
+    "FOGO",
+    "SAGA",
+    "SEI"
+   ]
+  },
+  "gate": {
+   "files": 860,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
   },
-  "gate": {
-   "files": 860,
+  "kucoin": {
+   "files": 633,
    "failed": 0,
    "changed_on_overlap": 0,
    "failed_some": []
@@ -41,12 +57,6 @@
     "BDXNUSDT",
     "SXPUSDT"
    ]
-  },
-  "mexc": {
-   "files": 520,
-   "failed": 0,
-   "changed_on_overlap": 0,
-   "failed_some": []
   }
  },
  "A": {
@@ -177,16 +187,16 @@
     "spread_in": 1.2656
    }
   ],
-  "scored_days": 16,
+  "scored_days": 17,
   "late_days": 1,
-  "total": 0.007671625399999999,
-  "total_2x": 0.0060616253999999994,
-  "total_3x": 0.004451625399999999,
-  "total_close": 0.0049553776,
-  "nw_t": 2.425408493007821,
+  "total": 0.006905960299999999,
+  "total_2x": 0.0052259603,
+  "total_3x": 0.003545960299999999,
+  "total_close": 0.0043459112,
+  "nw_t": 2.2561411892851897,
   "max_drawdown": -0.0051489981,
   "replay_days": 81,
   "replay_total": 0.0322341922
  },
- "last_day": "2026-11-27"
+ "last_day": "2026-11-28"
 }
